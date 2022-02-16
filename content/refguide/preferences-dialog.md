@@ -112,7 +112,7 @@ You need to restart Studio Pro for changes to these settings to take effect.
 
 ### 7.1 Dark Mode Preview {#dark-mode}
 
-The **Dark mode** option allows you to switch to the dark theme of Studio Pro. 
+The **Dark mode** option allows you to preview to the dark mode of the Studio Pro user interface. 
 
 {{% alert type="info" %}}
 Not all screens of Studio Pro support the dark mode yet.

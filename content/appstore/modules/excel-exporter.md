@@ -53,7 +53,7 @@ On the template details page, you can define the template with the following ite
 
 * **Filename**: the name of the template
 
-* **Input object **(optional)
+* **Input object **(optional): an entity associated to your entity to be exported
 
 * **Description** (optional): the description of the template
 
@@ -115,7 +115,7 @@ On the template details page, you can define the template with the following ite
       * **Format**: **General** or **Number**
       
         * When **Number** is selected, **Decimal places** becomes visible
-          * **Decimal places**
+          * **Decimal places**: defines how numbers are displayed (for instance, 0.010 has 3 decimal places, and 0.2 has 1 decimal place)
       
    * **Edit**: opens the **Edit style** dialog box where you can make changes to the selected style
    
@@ -138,9 +138,9 @@ On the sheet details page, you can define sheets with the following items:
 
 * **Row object**: the object data used for the rows
 
-* **Reference to template input object **(optional)
+* **Reference to template input object **(optional): the reference to the template input object (if input object is used)
 
-* **Sheet input object**
+* **Sheet input object**: the object that is the input for this sheet
 
 * **Start retrieved data at row**: the row where the header is
 
@@ -151,15 +151,18 @@ On the sheet details page, you can define sheets with the following items:
   
 * **Use static data**: when selected, the [Static data tab](#static-data-tab) becomes visible
 
-* **Column default width**
+* **Column default width**:
+
+  * When selected, the default column width is used
+  * When unselected, you can set a new default row height in the **Default column height in pixels** field
 
 * **Default text style**: the default style of the text when no style is applied
 
 * **Row default height**
-  
+
   * When selected, the default row height is used
   * When unselected, you can set a new default row height in the **Default column height in points** field
-  
+
 * **Default header text style**: the default style of the header text
 
 #### 3.3.1 Static Data Tab {#static-data-tab}
@@ -226,7 +229,7 @@ On the **Column data** tab, you can define column data with the following items:
 
     {{% alert type="info" %}}If you use **Upload existing excel file** on the [template details page](#template-details), the column name defined in your Excel template file will be used, and the **Name** you enter here will not be used.{{% /alert %}}
 
-  * **Use name as column header**:
+  * **Use name as column header**: if selected, the name
 
   * **Retrieve type**: the type of the data which is retrieved for the column
 
@@ -282,7 +285,7 @@ On the **Associations, constraints and sorting** tab, you can define the associa
   * **Delete**: deletes the selected association
   * **Association**: the reference that is used
   * **Join type**: the type of JOIN
-* **Constaints**: contains the following items that you can use to define constraints:
+* **Constraints**: contains the following items that you can use to define constraints:
   * **New**: opens the **Edit Mx Constant** dialog box that contains the following items:
     * **Sheet row object**: the object of the rows
     * **Retrieve type**: type of the data used as a constraint2

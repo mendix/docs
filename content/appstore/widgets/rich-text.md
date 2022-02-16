@@ -32,6 +32,68 @@ The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget ena
 
 Place the widget in a data view, list view, or template grid with a data source that has a string attribute. Then, select the **Value attribute** that contains the editable text.
 
+### 2.1 General tab
+
+* **Editor style** - choose wheater you want it to be as a toolbar or inline
+	* Defatult: **Toolbar**
+	![Example of toolbar](attachments/ckeditor/basic_toolbar.png)
+	* Inline
+	![Example of toolbar](attachments/ckeditor/inline_toolbar.png)
+* **Data source** - should be a string value
+* **Sanitize content** - clean your content from untrusted strings
+	* Default: **Yes**
+* **Read-only style** - defines how you want your editor look when the value is disabled (works when *editablity* set to *never* or *condition* returns false)
+	* Rich text - only text will be visible
+	* Bordered - text will be visible within a frame
+	* Bordered toolbar - editor will be visible as normal but editing actions and content will be disabled
+
+### 2.2 Toolbar tab
+
+* **Presets** - select which editor preset you want to show
+	* Basic
+	![Example of toolbar](attachments/ckeditor/basic_toolbar.png)
+	* Standard
+	![Example of toolbar](attachments/ckeditor/standard_toolbar.png)
+	* Full
+	![Example of toolbar](attachments/ckeditor/full_toolbar.png)
+	* Custom - when custom you can choose between *basic* and *advanced* configurations
+		* Basic - allows you to use groups defined in [Toolbar group](https://ckeditor.com/docs/ckeditor4/latest/features/toolbarconcepts.html#toolbar-groups-configuration)
+		* Advanced - allows you to use groups configured ["Item by Item"](https://ckeditor.com/docs/ckeditor4/latest/features/toolbarconcepts.html#item-by-item-configuration)
+
+### 2.3 Advanced tab
+
+* **Enter mode** - allows you to configure how your content will be wrapped when you press *return* button
+	* Paragraph (`<p>`)
+	* Break lines (`<br>`)
+	* Blocks (`<div>`)
+* **Shift enter mode** - same as **enter mode** only valid when you use *shift* + *return*
+* **Spellchecker** - provides inline spelling and grammar checking
+* **Enable code highlight** - allows you to configure your *code sections* in the text
+* **Advanced content filtering** - define your own configuration for html sanitization
+	* Default: **Auto** - editor will take care of that
+	* Custom - define which tags you want to allow or disallow
+		* Allowed content - put tags here which you want to allow
+		* Disallowed content - put tags here which you want to remove
+
+## 3 Usage
+
+All the hot keys defined in previous documentation work here as well
+
+## 4 Previous Versions' Documentation
+
+### Widgets below v2.0.0
+
+### 1.1 Features
+
+* Format selected text
+* HTML output of formatted text
+* Show editor options either on a toolbar or as a bubble
+* Input and display text is sanitized
+
+## 2 Configuration
+
+Place the widget in a data view, list view, or template grid with a data source that has a string attribute. Then, select the **Value attribute** that contains the editable text.
+
 The input and output is sanitized. All unsupported HTML tags and JavaScript is removed for security reasons. The following are supported:
 
 * Tags: `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `br`, `a`, `ul`, `li`, `ol`, `s`, `u`, `em`, `pre`, `strong`, `blockquote`, `span`

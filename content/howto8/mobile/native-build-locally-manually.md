@@ -168,7 +168,7 @@ The Native Template does not yet support the ARM 64 Simulator architecture. For 
 
 1. Ensure you have Rosetta installed on your system (for more information, see this [Apple documentation](https://support.apple.com/en-us/HT211861)).
 1. Run `arch -x86_64 pod install` to install the correct type of pods.
-1. Right click on the **XCode.app** icon and select **Get info**.
+1. Right-click on the **XCode.app** icon and select **Get info**.
 1. Select the check box **Open using Rosetta**.
 1. Start XCode.
 

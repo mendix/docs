@@ -83,6 +83,8 @@ The **MediaDocument** entity is a conceptual entity that inherits from the **Sys
 | `Transcript`   | String | The base64-encoded audio data string.     |
 | `LanguageCode` | String | The language code of this media document. |
 
+If you need more detail about LanguageCode, please see the [Supported Language](#supported-language)
+
 ### 4.2 Constants {#constants}
 
 #### 4.2.1 License Token
@@ -138,6 +140,47 @@ The only core widget required is the **Microphone** widget. You can make the fol
    *  **Arguments** – the captured arguments in a transcript as a comma-separated list that are passed to **Actions**
    *  **Fallback message** – the message to notify users when no action is matched
 
+### 4.5 Supported Language {#supported-language}
+
+| Language | Language Code |
+| --- | --- |
+| Arabic, Gulf|ar-AE |
+| Arabic, Modern Standard|ar-SA |
+| Chinese, Simplified|zh-CN |
+| Chinese, Traditional|zh-TW |
+| Danish|da-DK |
+| Dutch|nl-NL |
+| English, Australian|en-AU |
+| English, British|en-GB |
+| English, Indian|en-IN |
+| English, Irish|en-IE |
+| English, New Zealand|en-NZ |
+| English, Scottish|en-AB |
+| English, South African|en-ZA |
+| English, US|en-US |
+| English, Welsh|en-WL |
+| French|fr-FR |
+| French, Canadian|fr-CA |
+| Farsi|fa-IR |
+| German|de-DE |
+| German, Swiss|de-CH |
+| Hebrew|he-IL |
+| Hindi, Indian|hi-IN |
+| Indonesian|id-ID |
+| Italian|it-IT |
+| Japanese|ja-JP |
+| Korean|ko-KR |
+| Malay|ms-MY |
+| Portuguese|pt-PT |
+| Portuguese, Brazilian|pt-BR |
+| Russian|ru-RU |
+| Spanish|es-ES |
+| Spanish, US|es-US |
+| Tamil|ta-IN |
+| Telugu|te-IN |
+| Thai|th-TH |
+| Turkish|tr-T |
+
 ## 5 Obtaining the service mpk and License Token to use the service in Your App {#obtain}
 
 Speech To Text is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in an app, you need to complete either a trial order or a subscription order to get access to download the service mpk and get a valid **LicenseToken**. Then import the mpk and configure **LicenseToken** as an environment variable in the settings of your app. Follow below steps to get the mpk, license token, import the mpk and configure **LicenseToken** in your app.
@@ -150,9 +193,9 @@ On the [Speech To Text](https://marketplace.mendix.com/link/component/118408) pa
 
 1. Click **Try for free** button, you will be directed to the confirmation page, by ticking "Agree to Terms & Conditions" and clicking **Enable trial**, you will see a page saying your Trial order is confirmed, meaning you have one month access to the service.
 
-2. You will then be redirected to product page automatically, if not, go to product page again, you will see **Download** button is available for you to download the mpk. 
+2. You will then be redirected to product page automatically, if not, go to product page again, you will see **Download** button is available for you to download the mpk.
 
-3. You will receive a Trial confirmation email with the trial details
+3. You will receive a Trial confirmation email with the trial details, as a reminder the trial version of Speech To Text service has limitation with data usage up to 300 mins.
 
 #### 5.1.2 Completing a subscription order
 
@@ -237,11 +280,11 @@ Below are the steps to build an example web app which can convert speech to text
    3. **Select** the **CreateMicrophoneObject** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings.
 5. Inside the **Data view** widget, add a [Microphone](#microphone) widget.
-6.  Change the settings of the **Microphone** widget as follows:
+6. Change the settings of the **Microphone** widget as follows:
     1. Double-click the **Microphone** widget to open the **Edit Microphone** dialog box. 
     2. Go to the **Events** tab. 
     3. For **transcript**, **Select** the **NewTranscript** attribute. In this way, the app will pick up the result of speech conversion. For more information, see the [On Transcript](#on-transcript) section below.
-7. For **Arguments**, **Select** the **Arguments** attribute.
+7. Add a **Text area** widget to the **Data view** created in step 3. Double click, open the **Text area** widget, set **Data Source** attribute as **NewTranscript** from Microphone object.
 8. Make sure your follow the section [Obtaining the service mpk and License Token to use the service in Your App](#obtain) get a valid license token and configure **SpeechToText.LicenseToken** correctly.
 9. Run your app locally. Your app should be able to convert voice to text and trigger the related actions that you set up.
 
@@ -277,7 +320,7 @@ For example, you can set up the Action to make the app show a pop-up window to s
 
 ### 6.3 Add Speech-Triggered Actions to your App {#actions}
 
-This app service allows you to set up rules of speech recognition that trigger actions. In Microphone widget, go to the **Voice to Action** tab. For each action, you can set up an **Utterance**, an **Action** and a **Voice Feedback**. If the transcript received by the **Microphone** widget matches an utterance that you have specified, the app will run the action and give users the voice feedback.
+This app service allows you to set up rules of speech recognition that trigger actions. In Microphone widget, go to the **Voice to Action** tab. For **Arguments**, **Select** the **Arguments** attribute. For each action, you can set up an **Utterance**, an **Action** and a **Voice Feedback**. If the transcript received by the **Microphone** widget matches an utterance that you have specified, the app will run the action and give users the voice feedback.
 
 You can use **New**, **Delete**, and **Edit** to manage all the **Actions**.
 

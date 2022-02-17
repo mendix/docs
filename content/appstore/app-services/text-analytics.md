@@ -86,6 +86,8 @@ The **Language** entity is a conceptual entity that incorporates all the informa
 | `Name` | String | The name of the language. |
 | `Code` | String |The code of the language. |
 
+If you need more detail about LanguageCode, please see the [Supported Language](#supported-language)
+
 The **Detector** entity is a conceptual entity that incorporates all the information of the supported detector object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
 ![detector](attachments/text-analytics/detector.png)
@@ -288,6 +290,23 @@ The **PiiEntityType** is an enumeration that incorporates all the information of
 | MAC Address | MAC_Address |
 | All | All |
 
+### 3.6 Supported Language {#supported-language}
+
+| Language | Code |
+| --- | --- |
+| German | de |
+| English | en |
+| Spanish | es |
+| Italian | it |
+| Portuguese | pt |
+| French | fr |
+| Japanese | ja |
+| Korean | ko |
+| Hindi | hi |
+| Arabic | ar |
+| Chinese (simplified) | zh |
+| Chinese (traditional) | zh-TW |
+
 ## 4 Obtaining the service mpk and License Token to use the service in Your App {#obtain}
 
 Text Analytics is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in an app, you need to complete either a trial order or a subscription order to get access to download the service mpk and get a valid **LicenseToken**. Then import the mpk and configure **LicenseToken** as an environment variable in the settings of your app. Follow below steps to get the mpk, license token, import the mpk and configure **LicenseToken** in your app.
@@ -302,7 +321,7 @@ On the [Text Analytics](https://marketplace.mendix.com/link/component/118412) pa
 
 2. You will then be redirected to product page automatically, if not, go to product page again, you will see **Download** button is available for you to download the mpk. 
 
-3. You will receive a Trial confirmation email with the trial details
+3. You will receive a Trial confirmation email with the trial details, as a reminder the trial version of Text Analytics service has limitation with data usage up to 1500 mins.
 
 #### 4.1.2 Completing a subscription order
 

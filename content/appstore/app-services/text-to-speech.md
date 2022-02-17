@@ -88,6 +88,8 @@ The **Voice** entity is an entity referenced from **SpeechSynthesizer** that inc
 
 There is a many-to-many association between SpeechSynthesizer and Voice entities.
 
+If you need more detail about LanguageCode, please see the [Supported Language](#supported-language)
+
 ### 3.2 Constants {#constants}
 
 #### 3.2.1 License Token
@@ -124,6 +126,42 @@ The core widget required is the **AudioPlayer** widget. You can make the followi
 	* **Source**  – the value of the **Audio** attribute of a **speechSynthesizer** object
 	* **Controls**  – determines if it offers controls to allow the end user to control audio playback, including volume, seeking, and pause/resume playback; this accepts a Boolean value
 
+### 3.6 Supported Language {#supported-language}
+
+| Language | Language Code |
+| ---- | -----------|
+| Arabic | arb |
+| Chinese, Mandarin | cmn-CN |
+| Danish | da-DK |
+| Dutch |nl-NL |
+| English, Australian |en-AU |
+| English, British |en-GB |
+| English, Indian |en-IN |
+| English, New Zealand |en-NZ |
+| English, South African |en-ZA |
+| English, US |en-US |
+| English, Welsh | en-GB-WLS |
+| French |fr-FR |
+| French, Canadian |fr-CA |
+| Hindi |hi-IN |
+| German |de-DE |
+| Icelandic |is-IS |
+| Italian |it-IT |
+| Japanese |ja-JP |
+| Korean |ko-KR |
+| Norwegian |nb-NO |
+| Polish |pl-PL |
+| Portuguese, Brazilian |pt-BR |
+| Portuguese, European |pt-PT |
+| Romanian |ro-RO |
+| Russian |ru-RU |
+| Spanish, European |es-ES |
+| Spanish, Mexican |es-MX |
+| Spanish, US |es-US |
+| Swedish |sv-SE |
+| Turkish |tr-TR |
+| Welsh |cy-GB |
+
 
 ## 4 Obtaining the service mpk and License Token to use the service in Your App {#obtain}
 
@@ -139,7 +177,7 @@ On the [Text To Speech](https://marketplace.mendix.com/link/component/118409) pa
 
 2. You will then be redirected to product page automatically, if not, go to product page again, you will see **Download** button is available for you to download the mpk. 
 
-3. You will receive a Trial confirmation email with the trial details
+3. You will receive a Trial confirmation email with the trial details, as a reminder the trial version of Text To Speech service has limitation with data usage up to 2500 mins.
 
 #### 4.1.2 Completing a subscription order
 
@@ -207,6 +245,8 @@ Follow these steps to configure the text-to-speech conversion:
         ![call-createspeechsynthesizer-microflow](attachments/text-to-speech/call-createspeechsynthesizer-microflow.png)
       
         For instance, here we set **languageCode** as `''`, which means using default language option `en-US`. You can also set to other languages, details refer to the **CreateSpeechSynthesizer** microflow, [Microflows](#microflows).
+
+        If you need more detail about LanguageCode, please see the [Supported Language](#supported-language)
 
     4.  Right-click the **CreateSpeechSynthesizer** microflow and select **Set $speechSynthesizer as return value** in the pop-up menu.
     

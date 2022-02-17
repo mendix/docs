@@ -96,11 +96,93 @@ The **CreateTranslator** microflow takes **inputText**, **inputLanguageCode**, a
 
 ![createtranslator](attachments/translation/createtranslator.png)
 
+If you need more detail about LanguageCode, please see the [Supported Language](#supported-language)
+
 ### 3.4 Nanoflows {#nanoflows}
 
 The **TranslatorText** microflow takes the **translator** object as an input parameter, performs text translation actions in the back-end service, and eventually updates the output text string of the **translator** object.
 
 ![translatortext](attachments/translation/translatortext.png)
+
+### 3.5 Supported Language {#supported-language}
+
+| Language | Language Code |
+| ---- | -----------|
+| Afrikaans	|af |
+| Albanian	|sq |
+| Amharic	|am |
+| Arabic	|ar |
+| Armenian	|hy |
+| Azerbaijani	|az |
+| Bengali	|bn |
+| Bosnian	|bs |
+| Bulgarian	|bg |
+| Catalan	|ca |
+| Chinese (Simplified)	|zh |
+| Chinese (Traditional)	|zh-TW |
+| Croatian	|hr |
+| Czech	|cs |
+| Danish	|da |
+| Dari	|fa-AF |
+| Dutch	|nl |
+| English	|en |
+| Estonian	|et |
+| Farsi (Persian)	|fa |
+| Filipino, Tagalog	|tl |
+| Finnish	|fi |
+| French	|fr |
+| French (Canada)	|fr-CA |
+| Georgian	|ka |
+| German	|de |
+| Greek	|el |
+| Gujarati	|gu |
+| Haitian Creole	|ht |
+| Hausa	|ha |
+| Hebrew	|he |
+| Hindi	|hi |
+| Hungarian	|hu |
+| Icelandic	|is |
+| Indonesian	|id |
+| Irish	|ga |
+| Italian	|it |
+| Japanese	|ja |
+| Kannada	|kn |
+| Kazakh	|kk |
+| Korean	|ko |
+| Latvian	|lv |
+| Lithuanian	|lt |
+| Macedonian	|mk |
+| Malay	|ms |
+| Malayalam	|ml |
+| Maltese	|mt |
+| Marathi	|mr |
+| Mongolian	|mn |
+| Norwegian	|no |
+| Pashto	|ps |
+| Polish	|pl |
+| Portuguese	|pt |
+| Portuguese (Portugal)	|pt-PT |
+| Punjabi	|pa |
+| Romanian	|ro |
+| Russian	|ru |
+| Serbian	|sr |
+| Sinhala	|si |
+| Slovak	|sk |
+| Slovenian	|sl |
+| Somali	|so |
+| Spanish	|es |
+| Spanish (Mexico)	|es-MX |
+| Swahili	|sw |
+| Swedish	|sv |
+| Tamil	|ta |
+| Telugu	|te |
+| Thai	|th |
+| Turkish	|tr |
+| Ukrainian	|uk |
+| Urdu	|ur |
+| Uzbek	|uz |
+| Vietnamese	|vi |
+| Welsh	|cy |
 
 ## 4 Obtaining the service mpk and License Token to use the service in Your App {#obtain}
 
@@ -116,7 +198,7 @@ On the [Translation](https://marketplace.mendix.com/link/component/118411) page,
 
 2. You will then be redirected to product page automatically, if not, go to product page again, you will see **Download** button is available for you to download the mpk. 
 
-3. You will receive a Trial confirmation email with the trial details
+3. You will receive a Trial confirmation email with the trial details, as a reminder the trial version of Translation service has limitation with data usage up to 2500 mins.
 
 #### 4.1.2 Completing a subscription order
 
@@ -184,6 +266,8 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
         ![call-createtranslator-microflow](attachments/translation/call-createtranslator-microflow.png)
 
         For instance, here we set **inputLanguageCode** as 'en' and **outputLanguageCode** as 'zh', so the default translation will translate from english to chinese. You can also set to other languages, refer to **CreateTranslator** microflow, [Microflows](#microflows).
+
+        If you need more detail about LanguageCode, please see the [Supported Language](#supported-language)
 
     4.  Right-click the create object activity and select **Set $translator as return value** in the pop-up menu. 
 

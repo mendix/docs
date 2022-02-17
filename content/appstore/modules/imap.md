@@ -33,7 +33,7 @@ The [IMAP/POP3 Incoming Email](https://marketplace.mendix.com/link/component/104
 
 The basic setup and reception of emails can be done using the **EmailAccount_Overview** example page.
 
-Set **Sanitize email to prevent XSS attacks** option in case it is enabled, malicious scripts would be removed to prevent XSS attacks. More details here(https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer). By default emails are not sanitized
+Select the **Sanitize email to prevent XSS attacks** option to enable the removal of malicious scripts to prevent XSS attacks. This option is unselected by default. To learn more about this option, see [Sanitize untrusted HTML (to prevent XSS)](https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer).
 
 To invoke receiving emails from an account, call the **RetrieveEmailMessages** Java action.
 

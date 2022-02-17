@@ -29,7 +29,7 @@ These settings influence the behavior of the Runtime when running your applicati
 
 If this option is enabled, the static resources for your mobile application are downloaded as soon as you open your application rather than bit by bit as you navigate through the app. This can drastically cut down the number of network requests, as the files can be retrieved from the disk rather than from the server.
 
-The resources are downloaded to the device once for each deployment and are reused for subsequent runs of your app. This affects a number of files, including: your theme; the JavaScript client; CSS files; and pages.
+The resources are downloaded to the device once for each deployment and are reused for subsequent runs of your app. This affects a number of files, including your theme, the JavaScript client, CSS files, and pages.
 
 ### 3.2 Optimize Network Calls {#optimize-network-calls}
 
@@ -44,7 +44,7 @@ Here you can select a microflow that is automatically executed immediately after
 {{% alert type="warning" %}}
 There is a timeout of *11 minutes* on the after startup microflow. If your after startup microflow takes longer than 11 minutes your whole app will fail to start.
 
-After startup is designed to initialize the app and therefore runs *before* the app is able to respond to incoming service requests (for example, published REST services).
+**After startup** is designed to initialize the app and therefore runs *before* the app is able to respond to incoming service requests (for example, published REST services).
 {{% /alert %}}
 
 ### 3.4 Before Shutdown
@@ -67,26 +67,26 @@ The health check microflow is specific to the [Mendix Cloud](/developerportal/de
 
 ### 3.6 First Day of the Week {#first-day-of-the-week}
 
-The first day of the week setting determines the first day of the week in the date picker widget.
+The **First day of the week** setting determines the first day of the week in the date picker widget.
 
 | Option | Description |
 | --- | --- |
-| Default (based on locale)  *(default)* | The first day of the week in date picker widgets is based on the locale of the user. |
-| Sunday | Use Sunday as first day of the week in date picker widgets. |
-| Monday | Use Monday as first day of the week in date picker widgets. |
-| Tuesday | Use Tuesday as first day of the week in date picker widgets. |
-| Wednesday | Use Wednesday as first day of the week in date picker widgets. |
-| Thursday | Use Thursday as first day of the week in date picker widgets. |
-| Friday | Use Friday as first day of the week in date picker widgets. |
-| Saturday | Use Saturday as first day of the week in date picker widgets. |
+| **Default (based on locale)**  *(default)* | The first day of the week in date picker widgets is based on the locale of the user. |
+| **Sunday** | Use Sunday as first day of the week in date picker widgets. |
+| **Monday** | Use Monday as first day of the week in date picker widgets. |
+| **Tuesday** | Use Tuesday as first day of the week in date picker widgets. |
+| **Wednesday** | Use Wednesday as first day of the week in date picker widgets. |
+| **Thursday** | Use Thursday as first day of the week in date picker widgets. |
+| **Friday** | Use Friday as first day of the week in date picker widgets. |
+| **Saturday** | Use Saturday as first day of the week in date picker widgets. |
 
 ### 3.7 Default Time Zone
 
-The default time zone determines the time zone for newly created users. If your application is only used in one time zone, setting this default will make sure that users of your application never have to worry about setting their time zone.
+The **Default time zone** determines the time zone for newly created users. If your application is only used in one time zone, setting this default will make sure that users of your application never have to worry about setting their time zone.
 
 ### 3.8 Scheduled Event Time Zone {#scheduled}
 
-The scheduled event time zone defines under which timezone scheduled events run. The default is UTC and this has been the case since 3.0. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the app default timezone), you can select it here.
+The **Scheduled event time zone** defines under which timezone scheduled events run. The default is UTC. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the app default timezone), you can select it here.
 
 This affects time zone-related operations, such as parsing and formatting dates from/to strings and obtaining the beginning of the current day.
 
@@ -94,7 +94,7 @@ If you run on-premises, then you can select the time zone to which the server is
 
 ### 3.9 Hash Algorithm{#hash-algorithm}
 
-The hash algorithm is used to generate hash values for attributes of the **Hashed string** type, such as the password of a user. Mendix offers two recommended hashing algorithms:
+The **Hash algorithm** is used to generate hash values for attributes of the hashed string type, such as the password of a user. Mendix offers two recommended hashing algorithms:
 
 | Option | Description |
 | --- | --- |
@@ -177,7 +177,7 @@ For more information about using different languages in your app, see [Language 
 
 ### 4.1 Default Language
 
-The default language indicates the language that is used when a user has not chosen a language. The default language is also used as a fall-back language when a certain text is not translated to another language.
+The **Default language** indicates the language that is used when a user has not chosen a language. The default language is also used as a fall-back language when a certain text is not translated to another language.
 
 ### 4.2 Languages {#languages}
 

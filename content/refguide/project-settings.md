@@ -105,11 +105,11 @@ Mendix believes both algorithms are secure enough to store passwords within Mend
 
 #### 3.9.1 BCrypt Cost
 
-This value is used to specify the cost for the BCrypt algorithm. This is 10 by default. The higher this value is, the slower the process of hashing values, see the next paragraphs.
+The BCrypt cost value is used to specify the cost of the BCrypt algorithm. This value is 10 by default, and can go up to 30. The higher the value is, the slower the process of hashing values. For more information, see the subsections below.
 
 #### 3.9.2 Performance
 
-If the BCrypt cost is not so high, this performance difference is hardly noticeable to a single user when signing in (the password you enter when signing in is hashed using the selected algorithm), so in general the performance alone is not a reason to choose SSHA256 over BCrypt. This situation can change when dealing with high concurrency of hashing operations. A common example of an area where this occurs is published web services exposing operations that compute quickly, like short-running microflows.
+If the BCrypt cost is low, the performance difference is hardly noticeable to a single user when signing in (meaning, the password you enter when signing in is hashed using the selected algorithm). This means performance alone is not a reason to choose SSHA256 over BCrypt. The situation can change when dealing with high concurrency of hashing operations, for example, published web services exposing operations that compute quickly, like short-running microflows.
 
 #### 3.9.3 Performance Tests
 
@@ -135,7 +135,7 @@ So 80 milliseconds per operation is not that much, right? Well, that depends on 
 The difference is noticeable when the operation takes less time. So if you expect a very high amount of concurrency in operations where hashing takes place (most commonly any place where login operations are involved), you might want to consider changing your hashing algorithm.
 
 {{% alert type="info" %}}
-It is important to remember when changing hashing algorithms is that any hashed attribute (like the System$User password attribute) has its algorithm set on hashing. In other words, for the hashing type to take effect, any existing hashed attribute will have to be reset using the new hashing type.
+It is important to remember when changing hashing algorithms that any hashed attribute (like the System$User password attribute) has its algorithm set on hashing. In other words, for the hashing type to take effect, any existing hashed attribute will have to be reset using the new hashing type.
 {{% /alert %}}
 
 ### 3.10 Rounding Numbers{#rounding}

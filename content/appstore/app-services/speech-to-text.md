@@ -212,7 +212,7 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
 
 ### 6.1 Converting Speech into Text in Your Browser
 
-To let the [Microphone](#microphone) widget convert speech to text and trigger a custom action, set these data source attributes: **transcript**, **Actions** and **Arguments**. 
+To let the [Microphone](#microphone) widget convert speech to text, set these data source attributes: **transcript**, **Actions** and **Arguments**.
 
 Below are the steps to build an example web app which can convert speech to text and triggers actions:
 
@@ -242,7 +242,8 @@ Below are the steps to build an example web app which can convert speech to text
     2. Go to the **Events** tab. 
     3. For **transcript**, **Select** the **NewTranscript** attribute. In this way, the app will pick up the result of speech conversion. For more information, see the [On Transcript](#on-transcript) section below.
 7. For **Arguments**, **Select** the **Arguments** attribute.
-8. Run your app locally. Your app should be able to convert voice to text and trigger the related actions that you set up.
+8. Make sure your follow the section [Obtaining the service mpk and License Token to use the service in Your App](#obtain) get a valid license token and configure **SpeechToText.LicenseToken** correctly.
+9. Run your app locally. Your app should be able to convert voice to text and trigger the related actions that you set up.
 
 ### 6.2 Handling Microphone Events
 

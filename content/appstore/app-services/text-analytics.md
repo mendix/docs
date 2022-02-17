@@ -411,7 +411,8 @@ Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLan
     2. Set **Data source** to **ConfidenceScore** from **Template grid**.
     3. For **Label caption**, enter *Score*.
     4. Click **OK** to save the settings.
-14.  Run your app locally. You can perform language detection directly in the browser:
+14. Make sure your follow the section [Obtaining the service mpk and License Token to use the service in Your App](#obtain) get a valid license token and configure **TextAnalytics.LicenseToken** correctly.
+15. Run your app locally. You can perform language detection directly in the browser:
 
      ![runlocally-language-detection](attachments/text-analytics/runlocally-language-detection.png)
 
@@ -485,7 +486,8 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
     2. Set **Entity (path)** to **TextAnalytics.Sentiment_SentimentScore/TextAnalytics.SentimentScore**.
     3. Click **OK** to save the settings.  
     4. When the **Question** dialog box asks if you want to automatically fill the contents of the data view, click **Yes**.
-15.  Run your app locally. You can perform sentiment detection directly in the browser:
+14. Make sure your follow the section [Obtaining the service mpk and License Token to use the service in Your App](#obtain) get a valid license token and configure **TextAnalytics.LicenseToken** correctly.
+15. Run your app locally. You can perform sentiment detection directly in the browser:
 
      ![runlocally-sentiment-detection](attachments/text-analytics/runlocally-sentiment-detection.png)
 
@@ -540,8 +542,9 @@ Use the **CreateKeyPhraseDetector** microflow and the **DetectKeyPhrases** nanof
     4. Set **Entity (path)** to **TextAnalytics.KeyPhraseDetector_KeyPhrases/TextAnalytics.KeyPhrase**.
     5. Click **OK** to save the settings.
     6.  When the **Question** dialog box asks if you want to automatically fill the contents of the data view, click **Yes**.
-    7. If needed, drag a column in the data grid to move it to a different place.   
-12.  Run your app locally. You can perform key phrase detection directly in the browser:
+    7. If needed, drag a column in the data grid to move it to a different place.
+12. Make sure your follow the section [Obtaining the service mpk and License Token to use the service in Your App](#obtain) get a valid license token and configure **TextAnalytics.LicenseToken** correctly. 
+13. Run your app locally. You can perform key phrase detection directly in the browser:
 
      ![runlocally-keyphrase-detection](attachments/text-analytics/runlocally-keyphrase-detection.png)
 
@@ -589,7 +592,7 @@ Use the **CreateEntityDetector** microflow and the **DetectEntities** nanoflow t
    4. For **Nanoflow**, select the **DetectEntities** nanoflow from the **TextAnalytics** > **USE_ME** folder.
    5. Click **OK** to save the settings.
 10.  Inside the **Data view** widget, add a **Data grid** widget below the **Button** widget.
-11.  Change the settings of the **Data grid** widget as follows:
+11. Change the settings of the **Data grid** widget as follows:
     1. Double-click the **Data grid** widget to open the **Edit Data Grid** dialog box.
     2. Go to the **Data source** tab.
     3. For the **Type** of the **Data source**, select **Association**.
@@ -597,7 +600,8 @@ Use the **CreateEntityDetector** microflow and the **DetectEntities** nanoflow t
     5. Click **OK** to save the settings.
     6. When the **Question** dialog box asks if you want to automatically fill the contents of the data view, click **Yes**.
     7. If needed, drag a column in the data grid to move it to a different place.
-12.  Run your app locally. You can perform entity detection directly in the browser:
+12. Make sure your follow the section [Obtaining the service mpk and License Token to use the service in Your App](#obtain) get a valid license token and configure **TextAnalytics.LicenseToken** correctly.
+13. Run your app locally. You can perform entity detection directly in the browser:
 
      ![runlocally-entities-detection](attachments/text-analytics/runlocally-entities-detection.png)
 
@@ -653,7 +657,8 @@ Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nano
     5. Click **OK** to save the settings.
     6. When the **Question** dialog box asks if you want to automatically fill the contents of the data view, click **Yes**.
     7. If needed, drag a column in the data grid to move it to a different place.
-12.  Run your app locally. You can perform PII entity detection directly in the browser:
+12. Make sure your follow the section [Obtaining the service mpk and License Token to use the service in Your App](#obtain) get a valid license token and configure **TextAnalytics.LicenseToken** correctly.
+13. Run your app locally. You can perform PII entity detection directly in the browser:
 
      ![runlocally-pii-entities-detection](attachments/text-analytics/runlocally-pii-entities-detection.png)
 
@@ -709,6 +714,7 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
     5. Click **OK** to save the settings.
     6. When the **Question** dialog box asks if you want to automatically fill the contents of the data view, click **Yes**.
     7. If needed, drag a column in the data grid to move it to a different place.
-12.  Run your app locally. You can perform syntax detection directly in the browser:
+12. Make sure your follow the section [Obtaining the service mpk and License Token to use the service in Your App](#obtain) get a valid license token and configure **TextAnalytics.LicenseToken** correctly.
+13. Run your app locally. You can perform syntax detection directly in the browser:
 
      ![runlocally-syntax-detection](attachments/text-analytics/runlocally-syntax-detection.png)

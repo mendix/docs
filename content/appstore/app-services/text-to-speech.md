@@ -265,7 +265,7 @@ Follow these steps to configure the text-to-speech conversion:
     3. In the **Event** section, set **On click** to **Call a nanoflow**.
     4. For **Nanoflow**, **Select** the **SynthesizeSpeech** nanoflow from the **TextToSpeech** > **USE_ME **folder.
     5. Click **OK** to save the settings. 
-13. Make sure your follow the section 6 [Obtaining the service mpk and License Token to use the service in Your App](#obtain) get a valid license token and configure **TextToSpeech.LicenseToken** correctly.
+13. Make sure your follow the section [Obtaining the service mpk and License Token to use the service in Your App](#obtain) get a valid license token and configure **TextToSpeech.LicenseToken** correctly.
 14. Run your app locally. You can convert text to speech directly in the browser:
 
     ![runlocally-text-to-speech](attachments/text-to-speech/runlocally-text-to-speech.png)

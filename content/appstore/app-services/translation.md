@@ -264,7 +264,7 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
     4. For **Nanoflow**, **Select** the **TranslateText** nanoflow from the **Translation** > **USE_ME** folder.
     5. Click **OK** to save the settings.  
 
-19. Make sure you have valid license token and configure it correctly, add reference to get and configure license token section.
+19. Make sure your follow the section [Obtaining the service mpk and License Token to use the service in Your App](#obtain) get a valid license token and configure **TextToSpeech.LicenseToken** correctly.
 
 20. Run your app locally. You can perform text translation directly in the browser:
 

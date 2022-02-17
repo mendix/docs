@@ -42,32 +42,78 @@ This app service enables doing the following:
 
 This app service can only be used with Studio Pro 9 versions starting with [9.4.0](/releasenotes/studio-pro/9.4).
 
-## 2 Installation
+## 2 Obtaining a License Token {#obtain-license-token}
 
-1. Go to the [Text Analytics](https://marketplace.mendix.com/link/component/118412) component page in the Marketplace, complete **Try for free** or **Subscribe**, then download the *TextAnalytics.mpk* file.
+Text Analytics is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in an app, you need to start a subscription or a trial to get a license token:
 
-For more information about How to **Try for free** or **Subscribe**, see the [Obtaining the service mpk and License Token to use the service in Your App](#obtain) section below.
+1. Go to the [Text Analytics](https://marketplace.mendix.com/link/component/118412) page in the marketplace.
 
-2.  To add the Text Analytics app service to your app in Mendix Studio Pro, follow these steps:
+2. Click **Subscribe** to start a subscription or click **Try for Free** to start a trial. The trial gives you one-month access to the app service.
+
+3. To start a subscription, fill in [Technical Contact](https://docs.mendix.com/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
+
+   For the trial, you do not need to fill in this information.
+
+4. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](https://docs.mendix.com/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+
+5. Click **Speech to Text** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
+
+6. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
+
+## 3 Installation
+
+1. Go to the [Text Analytics](https://marketplace.mendix.com/link/component/118408) page in the marketplace.
+2. **Download** the *TextAnalytics.mpk* file.
+3.  To add the Text Analytics app service to your app in Mendix Studio Pro, follow these steps:
     1.  In the **App Explorer**, right-click the app.
     2.  Click **Import module package** and then select *TextAnalytics.mpk*. 
 
         In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project.
 
         ![import-text-analytics](attachments/text-analytics/import-text-analytics.png)
-
+    
         {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
-
-   4. In the **Import Module** dialog box, click **Import**. 
-   5. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
-   6. Open the **App Explorer**  to view the **TextAnalytics** module. You can also find the app service in the **Cognitive AI widgets** category in the **Toolbox**.
-3. After importing, you need to map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
+    
+    3. In the **Import Module** dialog box, click **Import**. 
+    4. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
+    5. Open the **App Explorer**  to view the **TextAnalytics** module. You can also find the app service in the **Cognitive AI widgets** category in the **Toolbox**.
+4. After importing, you need to map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
 You have successfully added the Text Analytics resources to your app.
 
-## 3 Configuration
+## 4 Configuring the License Token {#configure-license-token}
 
-### 3.1 Predefined Entities {#predefined-entities}
+### 4.1 In Studio Pro
+
+1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
+
+2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
+
+3. On the **Constants** tab, create a new constant with the predefined constant **TextAnalytics.LicenseToken**.
+
+4. Fill in the **Value** with the license token that you [obtained](#obtain-license-token).
+
+5. Click **OK** to save the settings.
+
+   ![licensetoken-inmendix](attachments/text-analytics/licensetoken-inmendix.png)
+
+6. When you finish building the app, click **Run** to deploy your app to the cloud.
+
+### 4.2 In the Developer Portal
+
+Alternatively, you can add or update LicenseToken as a constant in the [Developer Portal](/developerportal/deploy/environments-details).
+
+Before you deploy your app, configure the app **Constants** in the deployment package.
+
+![licensetoken-cloudportal](attachments/text-analytics/licensetoken-cloudportal.png)
+
+If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app:
+
+![licensetoken-envdetails](attachments/text-analytics/licensetoken-envdetails.png)
+
+## 5 Configuration
+
+### 5.1 Predefined Entities {#predefined-entities}
 
 The **DominantLanguage** entity is an entity referenced from **DominantLanguageDetector** and **Language** that incorporates all the information of the supported dominant language object to help you get a confident score of the dominant language from given text.
 
@@ -84,9 +130,7 @@ The **Language** entity is a conceptual entity that incorporates all the informa
 | Attribute | Data Type |Description |
 | --- | --- |---|
 | `Name` | String | The name of the language. |
-| `Code` | String |The code of the language. |
-
-If you need more detail about LanguageCode, please see the [Supported Language](#supported-language)
+| `Code` | String |The [language code](#supported-languages). |
 
 The **Detector** entity is a conceptual entity that incorporates all the information of the supported detector object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
@@ -155,17 +199,17 @@ The **Response** entity is a conceptual entity that incorporates all the informa
 | `EndOffset` | Integer |The zero-based offset from the beginning of the source text to the last character in the word. |
 | `ConfidenceScore` | Decimal |The level of confidence that the Text Analytics module has in the accuracy of the detection. |
 
-### 3.2 Constants {#constants}
+### 5.2 Constants {#constants}
 
 The **LicenseToken** constant is used to provide a valid Text Analytics license token for the app that uses Text Analytics to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As Text Analytics is a commercial product and subject to a subscription fee, to use the Text Analytics functionalities in a deployed app, you need a valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
 
-However, if you only plan to try how Text Analytics works  (meaning, build and run an app that uses Text Analytics locally in Studio Pro or deploy to a Mendix Free App environment), you do not need to subscribe to get a license token. Therefore, you do not need to set a value for the **LicenseToken** constant, just leave it empty.
+However, if you only plan to try how Text Analytics works (meaning, build and run an app that uses Text Analytics locally in Studio Pro or deploy to a Mendix Free App environment), you do not need to subscribe to get a license token. Therefore, you do not need to set a value for the **LicenseToken** constant, just leave it empty.
 
-For details on how to get and configure a license token, see the [Obtaining the service mpk and License Token to use the service in Your App](#obtain)section below.
+For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token).
 
 The **TokenEndpoint** constant provides a valid endpoint of security token service for the back-end authentication of the cognitive text analytics service. The constant comes with a default value which points to the production environment of the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
 
-### 3.3 Microflows {#microflows}
+### 5.3 Microflows {#microflows}
 
 The **CreateDominantLanguageDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create DominantLanguageDetector as a return object from the back-end service.
 
@@ -191,7 +235,7 @@ The **CreateSyntaxDetector** microflow takes **text** (String) and **languageCod
 
 ![createsyntaxdetector](attachments/text-analytics/createsyntaxdetector.png)
 
-### 3.4 Nanoflows {#nanoflows}
+### 5.4 Nanoflows {#nanoflows}
 
 The **DetectDominantLanguage** nanoflow takes the **languageDetector** object as an input parameter to get a list of dominant languages.
 
@@ -217,7 +261,7 @@ The **DetectSyntax** nanoflow takes the **syntaxDetector** object as an input pa
 
 ![detectsyntax](attachments/text-analytics/detectsyntax.png)
 
-### 3.5 Enumerations {#enumerations}
+### 5.5 Enumerations {#enumerations}
 
 The **SentimentType** is an enumeration that incorporates all the information of the supported sentiment type.
 
@@ -290,94 +334,28 @@ The **PiiEntityType** is an enumeration that incorporates all the information of
 | MAC Address | MAC_Address |
 | All | All |
 
-### 3.6 Supported Language {#supported-language}
+### 5.6 Supported Languages {#supported-languages}
 
-| Language | Code |
-| --- | --- |
-| German | de |
-| English | en |
-| Spanish | es |
-| Italian | it |
-| Portuguese | pt |
-| French | fr |
-| Japanese | ja |
-| Korean | ko |
-| Hindi | hi |
-| Arabic | ar |
-| Chinese (simplified) | zh |
+| Language              | Code  |
+| --------------------- | ----- |
+| German                | de    |
+| English               | en    |
+| Spanish               | es    |
+| Italian               | it    |
+| Portuguese            | pt    |
+| French                | fr    |
+| Japanese              | ja    |
+| Korean                | ko    |
+| Hindi                 | hi    |
+| Arabic                | ar    |
+| Chinese (simplified)  | zh    |
 | Chinese (traditional) | zh-TW |
 
-## 4 Obtaining the service mpk and License Token to use the service in Your App {#obtain}
-
-Text Analytics is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in an app, you need to complete either a trial order or a subscription order to get access to download the service mpk and get a valid **LicenseToken**. Then import the mpk and configure **LicenseToken** as an environment variable in the settings of your app. Follow below steps to get the mpk, license token, import the mpk and configure **LicenseToken** in your app.
-
-### 4.1  Completing a Trial Order or Subscription Order & Download Mpk
-
-On the [Text Analytics](https://marketplace.mendix.com/link/component/118412) page, you can see **Try for free** and **Subscribe** button.  **Try for free** will lead you to create a trial order, it grants you one month free access to the service, it's a simple flow.  **Subscribe** button will lead you to create a subscription order, it is more complex as it requires you to select plans, fill in billing information and pay to complete subscription. Based on your use case, click either button to complete an order, then you will get access to the service mpk and **LicenseToken**. 
-
-#### 4.1.1 Completing a trial order 
-
-1. Click **Try for free** button, you will be directed to the confirmation page, by ticking "Agree to Terms & Conditions" and clicking **Enable trial**, you will see a page saying your Trial order is confirmed, meaning you have one month access to the service.
-
-2. You will then be redirected to product page automatically, if not, go to product page again, you will see **Download** button is available for you to download the mpk. 
-
-3. You will receive a Trial confirmation email with the trial details, as a reminder the trial version of Text Analytics service has limitation with data usage up to 1500 mins.
-
-#### 4.1.2 Completing a subscription order
-
-1. Click click **Subscribe** to order a subscription. you will be direct to an order confirmation page.
-
-2. Select a plan, fill in [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. You will see a order confirmation page upon successful order placement. 
-
-3. You will be then be redirected to product page automatically, if not, go to product page again, you will see **Download** button is available for you to download the mpk. 
-
-4. The Technical Contact receives an order confirmation email.
-
-### 4.2 Get a LicenseToken 
-
-Now you have receive a Trial/Subscription confirmation email and can see the **Download** button download the mpk. Next step is to get a LicenseToken.
-
-Upon successful trial/subscription order, it takes a few minutes to provision your service instance. When your service instance is ready, you or the technical contact will receive a second email that notifying your service is ready to be used. When you or the technical contact receive this email: 
-
-1. Click the Subscription Management Overview link in the provisioning email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
-
-2. Click **TextAnalytics** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-
-3. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
-
-Note: Binding Keys and LicenseToken are used interchangeably across different app services but they are the same thing.
-
-### 4.3 Configuring the License Token 
-
-#### 4.3.1 Configuring the License Token in Studio Pro when running locally 
-
-1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
-2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
-3. On the **Constants** tab, create a new constant with the predefined constant **TextAnalytics.LicenseToken**.
-4. Fill in the **Value** with the license token that you obtained.
-5. Click **OK** to save the settings.
-
-    ![licensetoken-inmendix](attachments/text-analytics/licensetoken-inmendix.png)
-
-6. When you finish building the app, click **Run** to deploy your app to the cloud.
-
-#### 4.3.2 Configuring the License Token in Developer Portal when deploying to cloud
-
-Alternatively, you can add or update LicenseToken as a constant in the [Developer Portal](/developerportal/deploy/environments-details).
-
-Before you deploy your app, configure the app **Constants** in the deployment package.
-
-![licensetoken-cloudportal](attachments/text-analytics/licensetoken-cloudportal.png)
-
-If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app:
-
-![licensetoken-envdetails](attachments/text-analytics/licensetoken-envdetails.png)
-
-## 4 Using Text Analytics
+## 6 Using Text Analytics
 
 When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up customizable text analytics actions quickly.
 
-### 4.1 Performing Language Detection in Your Browser
+### 6.1 Performing Language Detection in Your Browser
 
 Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLanguage** nanoflow to perform language detection. Follow these steps to configure the language detection:
 
@@ -430,12 +408,12 @@ Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLan
     2. Set **Data source** to **ConfidenceScore** from **Template grid**.
     3. For **Label caption**, enter *Score*.
     4. Click **OK** to save the settings.
-14. Make sure your follow the section [Obtaining the service mpk and License Token to use the service in Your App](#obtain) get a valid license token and configure **TextAnalytics.LicenseToken** correctly.
-15. Run your app locally. You can perform language detection directly in the browser:
+14. Make sure you have [configured the license token](#configure-license-token).
+15.  Run your app locally. You can perform language detection directly in the browser:
 
      ![runlocally-language-detection](attachments/text-analytics/runlocally-language-detection.png)
 
-### 4.2 Performing Sentiment Detection in Your Browser
+### 6.2 Performing Sentiment Detection in Your Browser
 
 Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanoflow to perform sentiment detection. Follow these steps to configure the sentiment detection:
 
@@ -505,12 +483,12 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
     2. Set **Entity (path)** to **TextAnalytics.Sentiment_SentimentScore/TextAnalytics.SentimentScore**.
     3. Click **OK** to save the settings.  
     4. When the **Question** dialog box asks if you want to automatically fill the contents of the data view, click **Yes**.
-14. Make sure your follow the section [Obtaining the service mpk and License Token to use the service in Your App](#obtain) get a valid license token and configure **TextAnalytics.LicenseToken** correctly.
-15. Run your app locally. You can perform sentiment detection directly in the browser:
+14. Make sure you have [configured the license token](#configure-license-token).
+15.  Run your app locally. You can perform sentiment detection directly in the browser:
 
      ![runlocally-sentiment-detection](attachments/text-analytics/runlocally-sentiment-detection.png)
 
-### 4.3 Performing Key Phrase Detection in Your Browser
+### 6.3 Performing Key Phrase Detection in Your Browser
 
 Use the **CreateKeyPhraseDetector** microflow and the **DetectKeyPhrases** nanoflow to perform key phrase detection. Follow these steps to configure this key phrase detect action:
 
@@ -522,8 +500,8 @@ Use the **CreateKeyPhraseDetector** microflow and the **DetectKeyPhrases** nanof
         ![call-createkeyphrasedetector-microflow](attachments/text-analytics/call-createkeyphrasedetector-microflow.png)
     
     4.  Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
-   
-      ![createkeyphrasedetector-nanoflow](attachments/text-analytics/createkeyphrasedetector-nanoflow.png)
+      
+        ![createkeyphrasedetector-nanoflow](attachments/text-analytics/createkeyphrasedetector-nanoflow.png)
    
 2. Add a **Data view** widget to your page.
 3. Set the **CreateKeyPhraseDetector** nanoflow as the data source of the **Data view** widget as follows:
@@ -562,12 +540,12 @@ Use the **CreateKeyPhraseDetector** microflow and the **DetectKeyPhrases** nanof
     5. Click **OK** to save the settings.
     6.  When the **Question** dialog box asks if you want to automatically fill the contents of the data view, click **Yes**.
     7. If needed, drag a column in the data grid to move it to a different place.
-12. Make sure your follow the section [Obtaining the service mpk and License Token to use the service in Your App](#obtain) get a valid license token and configure **TextAnalytics.LicenseToken** correctly. 
-13. Run your app locally. You can perform key phrase detection directly in the browser:
+12. Make sure you have [configured the license token](#configure-license-token).
+13.  Run your app locally. You can perform key phrase detection directly in the browser:
 
      ![runlocally-keyphrase-detection](attachments/text-analytics/runlocally-keyphrase-detection.png)
 
-### 4.4 Performing Entity Detection in Your Browser
+### 6.4 Performing Entity Detection in Your Browser
 
 Use the **CreateEntityDetector** microflow and the **DetectEntities** nanoflow to perform entity detection. Follow these steps to configure this entity detect action:
 
@@ -619,12 +597,12 @@ Use the **CreateEntityDetector** microflow and the **DetectEntities** nanoflow t
     5. Click **OK** to save the settings.
     6. When the **Question** dialog box asks if you want to automatically fill the contents of the data view, click **Yes**.
     7. If needed, drag a column in the data grid to move it to a different place.
-12. Make sure your follow the section [Obtaining the service mpk and License Token to use the service in Your App](#obtain) get a valid license token and configure **TextAnalytics.LicenseToken** correctly.
-13. Run your app locally. You can perform entity detection directly in the browser:
+12. Make sure you have [configured the license token](#configure-license-token).
+13.  Run your app locally. You can perform entity detection directly in the browser:
 
      ![runlocally-entities-detection](attachments/text-analytics/runlocally-entities-detection.png)
 
-### 4.5 Performing PII Entity Detection in Your Browser
+### 6.5 Performing PII Entity Detection in Your Browser
 
 Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nanoflow to perform PII entity detection. Follow these steps to configure this PII entity detect action:
 
@@ -676,12 +654,12 @@ Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nano
     5. Click **OK** to save the settings.
     6. When the **Question** dialog box asks if you want to automatically fill the contents of the data view, click **Yes**.
     7. If needed, drag a column in the data grid to move it to a different place.
-12. Make sure your follow the section [Obtaining the service mpk and License Token to use the service in Your App](#obtain) get a valid license token and configure **TextAnalytics.LicenseToken** correctly.
-13. Run your app locally. You can perform PII entity detection directly in the browser:
+12. Make sure you have [configured the license token](#configure-license-token).
+13.  Run your app locally. You can perform PII entity detection directly in the browser:
 
      ![runlocally-pii-entities-detection](attachments/text-analytics/runlocally-pii-entities-detection.png)
 
-### 4.6 Performing Syntax Detection in Your Browser
+### 6.6 Performing Syntax Detection in Your Browser
 
 Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to perform syntax detection. Follow these steps to configure this syntax detect action:
 
@@ -733,7 +711,7 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
     5. Click **OK** to save the settings.
     6. When the **Question** dialog box asks if you want to automatically fill the contents of the data view, click **Yes**.
     7. If needed, drag a column in the data grid to move it to a different place.
-12. Make sure your follow the section [Obtaining the service mpk and License Token to use the service in Your App](#obtain) get a valid license token and configure **TextAnalytics.LicenseToken** correctly.
-13. Run your app locally. You can perform syntax detection directly in the browser:
+12. Make sure you have [configured the license token](#configure-license-token).
+13.  Run your app locally. You can perform syntax detection directly in the browser:
 
      ![runlocally-syntax-detection](attachments/text-analytics/runlocally-syntax-detection.png)

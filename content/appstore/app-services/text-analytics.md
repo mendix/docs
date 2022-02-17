@@ -115,6 +115,8 @@ If you have already deployed your app, change the existing **LicenseToken** cons
 
 ### 5.1 Predefined Entities {#predefined-entities}
 
+#### 5.1.1 DominantLanguage
+
 The **DominantLanguage** entity is an entity referenced from **DominantLanguageDetector** and **Language** that incorporates all the information of the supported dominant language object to help you get a confident score of the dominant language from given text.
 
 ![dominantlanguage](attachments/text-analytics/dominantlanguage.png)
@@ -122,6 +124,8 @@ The **DominantLanguage** entity is an entity referenced from **DominantLanguageD
 | Attribute | Data Type |Description |
 | --- | --- |---|
 | `ConfidenceScore` | Decimal |The confident score of dominant language. |
+
+#### 5.1.2 Language
 
 The **Language** entity is a conceptual entity that incorporates all the information of the supported language object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
@@ -132,6 +136,8 @@ The **Language** entity is a conceptual entity that incorporates all the informa
 | `Name` | String | The name of the language. |
 | `Code` | String |The [language code](#supported-languages). |
 
+#### 5.1.3 Detector
+
 The **Detector** entity is a conceptual entity that incorporates all the information of the supported detector object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
 ![detector](attachments/text-analytics/detector.png)
@@ -140,6 +146,8 @@ The **Detector** entity is a conceptual entity that incorporates all the informa
 | --- | --- |---|
 | `InputText` | String |The input text of target detector. |
 
+#### 5.1.4 Seniment
+
 The **Sentiment** entity is an entity referenced from **SentimentDetector** and **SentimentScore** that incorporates all the information of the supported sentiment object to help you perform sentiment analysis from given text.
 
 ![sentiment](attachments/text-analytics/sentiment.png)
@@ -147,6 +155,8 @@ The **Sentiment** entity is an entity referenced from **SentimentDetector** and 
 | Attribute | Data Type |Description |
 | --- | --- |---|
 | `SentimentType` | Enumeration | The customized sentiment type enumeration. |
+
+#### 5.1.5 SentimentScore
 
 The **SentimentScore** entity is a conceptual entity that incorporates all the information of the supported level of confidence of the sentiment score detector object.
 
@@ -159,6 +169,8 @@ The **SentimentScore** entity is a conceptual entity that incorporates all the i
 | `Neutral` | Decimal |The level of confidence that The detector has in the accuracy of its detection of the NEUTRAL sentiment. |
 | `Mixed` | Decimal |The level of confidence that the detector has in the accuracy of its detection of the MIXED sentiment. |
 
+#### 5.1.6 Entity
+
 The **Entity** entity is a conceptual entity that inherits from the **TextAnalytics.Response** entity and is referenced from **EntityDetector** that incorporates all the information of the supported entity object to help you perform entity detection from given text.
 
 ![entity](attachments/text-analytics/entity.png)
@@ -166,6 +178,8 @@ The **Entity** entity is a conceptual entity that inherits from the **TextAnalyt
 | Attribute | Data Type |Description |
 | --- | --- |---|
 | `EntityType` | Enumeration |The customized entity type. |
+
+#### 5.1.7 PiiEntity
 
 The **PiiEntity** entity is a conceptual entity that inherits from the **TextAnalytics.Response** entity and referenced from **PiiEntityDetector** that incorporates all the information of the supported PII entity object to help you perform PII entity detection from given text.
 
@@ -175,9 +189,13 @@ The **PiiEntity** entity is a conceptual entity that inherits from the **TextAna
 | --- | --- |---|
 | `PiiEntityType` | Enumeration | The customized PII entity type. |
 
+#### 5.1.8 KeyPhrase
+
 The **KeyPhrase** entity is a conceptual entity that inherits from **TextAnalytics.Response** entity and is referenced from **KeyPhraseDetector** that incorporates all the information of the supported key phrase object to help you perform key phrase detection from given text.
 
 ![keyphrase](attachments/text-analytics/keyphrase.png)
+
+#### 5.1.9 SyntaxToken
 
 The **SyntaxToken** entity is a conceptual entity that inherits from **TextAnalytics.Response** entity and is referenced from **SyntaxDetector** that incorporates all the information of the supported syntax token object to help you perform syntax token extraction from given text.
 
@@ -187,6 +205,8 @@ The **SyntaxToken** entity is a conceptual entity that inherits from **TextAnaly
 | --- | --- |---|
 | `Index` | Integer |The index of the token. |
 | `PartOfSpeech` | Enumeration |The part of speech tag enumeration for the token. |
+
+#### 5.1.10 Response
 
 The **Response** entity is a conceptual entity that incorporates all the information of the supported response data object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
@@ -201,6 +221,8 @@ The **Response** entity is a conceptual entity that incorporates all the informa
 
 ### 5.2 Constants {#constants}
 
+#### 5.2.1 LicenseToken
+
 The **LicenseToken** constant is used to provide a valid Text Analytics license token for the app that uses Text Analytics to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment.
 
 As Text Analytics is a commercial product, to use it in a deployed app, you need a long-term, valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
@@ -209,29 +231,43 @@ However, if you only plan to try how Text Analytics works, that is to say, you w
 
 For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token).
 
+#### 5.2.2 TokenEndpoint
+
 The **TokenEndpoint** constant provides a valid endpoint of security token service for the back-end authentication of the cognitive text analytics service. The constant comes with a default value which points to the production environment of the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
 
 ### 5.3 Microflows {#microflows}
+
+#### 5.3.1 CreateDominantLanguageDetector
 
 The **CreateDominantLanguageDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create DominantLanguageDetector as a return object from the back-end service.
 
 ![createdominantlanguagedetector](attachments/text-analytics/createdominantlanguagedetector.png)
 
+#### 5.3.2 CreateEntityDetector
+
 The **CreateEntityDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateEntityDetector as a return object from the back-end service.
 
 ![createentitydetector](attachments/text-analytics/createentitydetector.png)
+
+#### 5.3.3 CreateKeyPhraseDetector
 
 The **CreateKeyPhraseDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateKeyPhraseDetector as a return object from the back-end service.
 
 ![createkeyphrasedetector](attachments/text-analytics/createkeyphrasedetector.png)
 
+#### 5.3.4 CreatePiiEntityDetector
+
 The **CreatePiiEntityDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreatePiiEntityDetector as a return object from the back-end service.
 
 ![createpiientitydetector](attachments/text-analytics/createpiientitydetector.png)
 
+#### 5.3.5 CreateSentimentDetector
+
 The **CreateSentimentDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateSentimentDetector as a return object from the back-end service.
 
 ![createsentimentdetector](attachments/text-analytics/createsentimentdetector.png)
+
+#### 5.3.6 CreateSyntaxDetector
 
 The **CreateSyntaxDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateSyntaxDetector as a return object from the back-end service.
 
@@ -239,31 +275,45 @@ The **CreateSyntaxDetector** microflow takes **text** (String) and **languageCod
 
 ### 5.4 Nanoflows {#nanoflows}
 
+#### 5.4.1 DetectDominantLanguage
+
 The **DetectDominantLanguage** nanoflow takes the **languageDetector** object as an input parameter to get a list of dominant languages.
 
 ![detectdominantlanguage](attachments/text-analytics/detectdominantlanguage.png)
+
+#### 5.4.2 DetectEntities
 
 The **DetectEntities** nanoflow takes the **entityDetector** object as an input parameter to get a list of entities.
 
 ![detectentities](attachments/text-analytics/detectentities.png)
 
+#### 5.4.3 DetectKeyPhrases
+
 The **DetectKeyPhrases** nanoflow takes the **keyPhrasesDetector** object as an input parameter to get a list of key phrases.
 
 ![detectkeyphrases](attachments/text-analytics/detectkeyphrases.png)
+
+#### 5.4.4 DetectPiiEntities
 
 The **DetectPiiEntities** nanoflow takes the **piiEntitiesDetector** object as an input parameter to get a list of PII entities.
 
 ![detectpiientities](attachments/text-analytics/detectpiientities.png)
 
+#### 5.4.5 DetectPiiEntities
+
 The **DetectSentiment** nanoflow takes the **sentimentDetector** object as an input parameter to get a sentiment object.
 
 ![detectsentiment](attachments/text-analytics/detectsentiment.png)
+
+#### 5.4.6 DetectSyntax
 
 The **DetectSyntax** nanoflow takes the **syntaxDetector** object as an input parameter to get a list of syntax tokens.
 
 ![detectsyntax](attachments/text-analytics/detectsyntax.png)
 
 ### 5.5 Enumerations {#enumerations}
+
+#### 5.5.1 SentimentType
 
 The **SentimentType** is an enumeration that incorporates all the information of the supported sentiment type.
 
@@ -273,6 +323,8 @@ The **SentimentType** is an enumeration that incorporates all the information of
 | Negative | Negative |
 | Neutral | Neutral |
 | Mixed | Mixed |
+
+#### 5.5.2 EntityType
 
 The **EntityType** is an enumeration that incorporates all the information of the supported entity type.
 
@@ -287,6 +339,8 @@ The **EntityType** is an enumeration that incorporates all the information of th
 | Quantity | Neutral |
 | Title | Mixed |
 | Other | Mixed |
+
+#### 5.5.3 PartOfSpeechTag
 
 The **PartOfSpeechTag** is an enumeration that incorporates all the supported part of speech tags.
 
@@ -309,6 +363,8 @@ The **PartOfSpeechTag** is an enumeration that incorporates all the supported pa
 | Symbol | Symbol |
 | Verb | Verb |
 | Other | Other |
+
+#### 5.5.4 PiiEntityType
 
 The **PiiEntityType** is an enumeration that incorporates all the information of the supported Personally Identifiable Information (PII) types.
 

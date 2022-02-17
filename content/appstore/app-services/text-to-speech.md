@@ -110,6 +110,8 @@ If you have already deployed your app, change the existing **LicenseToken** cons
 
 ### 5.1 Predefined Entities {#predefined-entities}
 
+#### 5.1.1 SpeechSynthesizer
+
 The **SpeechSynthesizer** entity is a conceptual entity that incorporates all the information of the synthesized media document. It contains the text and synthesized audio string. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
 ![speechsynthesizer](attachments/text-to-speech/speechsynthesizer.png)
@@ -136,7 +138,7 @@ There is a many-to-many association between the **SpeechSynthesizer** entity and
 
 ### 5.2 Constants {#constants}
 
-#### 5.2.1 License Token
+#### 5.2.1 LicenseToken
 
 The **LicenseToken** constant is used to provide a valid Text To Speech license token for the app that uses Text To Speech to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment.
 
@@ -152,6 +154,8 @@ The **TokenEndpoint** constant is used to provide a valid endpoint of security t
 
 ### 5.3 Microflows {#microflows}
 
+#### 5.3.1 CreateSpeechSynthesizer
+
 The **CreateSpeechSynthesizer** microflow takes **text** and **languageCode** from a voice object as input parameters, and returns a **speechSynthesizer** object that contains the based64-encoded audio string and text string. For instance, **languageCode** can be set to `en-US`. 
 
 ![createspeechsynthesizer](attachments/text-to-speech/createspeechsynthesizer.png)
@@ -161,6 +165,8 @@ For more information about language codes, see the [Supported Languages](#suppor
 {{% /alert %}}
 
 ### 5.4 Nanoflows {#nanoflows}
+
+#### 5.4.1 SynthesizeSpeech
 
 The **SynthesizeSpeech** nanoflow takes a **speechSynthesizer** object as an input parameter, syntheizes audio string from the input parameter, and updates the **speechSynthesizer** audio string parameter.
 

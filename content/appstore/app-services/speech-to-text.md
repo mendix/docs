@@ -110,6 +110,8 @@ If you have already deployed your app, change the existing **LicenseToken** cons
 
 ### 5.1 Predefined Entities {#predefined-entities}
 
+#### 5.1.1 MediaDocument
+
 The **MediaDocument** entity is a conceptual entity that inherits from the **System.FileDocument** entity and incorporates all the information of media document. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
 ![mediadocument](attachments/speech-to-text/mediadocument.png)
@@ -121,7 +123,7 @@ The **MediaDocument** entity is a conceptual entity that inherits from the **Sys
 
 ### 5.2 Constants {#constants}
 
-#### 5.2.1 License Token
+#### 5.2.1 LicenseToken
 
 The **LicenseToken** constant offers a valid Speech To Text license token to the app that uses Speech To Text to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. 
 

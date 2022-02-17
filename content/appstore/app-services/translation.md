@@ -112,6 +112,8 @@ You have succesfully added the Translation resources to your app.
 
 ### 5.1 Predefined Entities {#predefined-entities}
 
+#### 5.1.1 Translator
+
 The **Translator** entity is a conceptual entity that incorporates all the information of the translator object. It contains both input and output text strings. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module. 
 
 ![translator](attachments/translation/translator.png)
@@ -120,6 +122,8 @@ The **Translator** entity is a conceptual entity that incorporates all the infor
 | --- | --- |
 | **InputText** | The input text string. |
 | **OutputText** | The output text string. |
+
+#### 5.1.2 Language
 
 The **Language** entity is an entity referenced from **Translator** that incorporates all the information of supported language object.
 
@@ -132,6 +136,8 @@ The **Language** entity is an entity referenced from **Translator** that incorpo
 
 ### 5.2 Constants {#constants}
 
+#### 5.2.1 Constants
+
 The **LicenseToken** constant is used to provide a valid Translation license token for the app that uses Translation to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment.
 
 As Translation is a commercial product, to use it in a deployed app, you will need a long-term, valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
@@ -140,9 +146,13 @@ However, if you only plan to try how Translation works, that is to say, you will
 
 For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and the [Configuring the License Token](#configure-license-token) section .
 
+#### 5.2.2 TokenEndpoint
+
 The **TokenEndpoint** constant is used to provide a valid endpoint of security token service for the back-end authentication of the cognitive translation service. The constant comes with default value which point to the production environment of deployed security token service. The security token service issue security tokens that authenticate user's identity. 
 
 ### 5.3 Microflows {#microflows}
+
+#### 5.3.1 CreateTranslator {#create-translator}
 
 The **CreateTranslator** microflow takes **inputText**, **inputLanguageCode**, and **outputLanguageCode** as input parameters and creates translator actions in the back-end service. For instance, the **inputLanguageCode**, and **outputLanguageCode** can be set to `en-US`.
 
@@ -153,6 +163,8 @@ For more information about the language codes, see the [Supported Languages](#su
 {{% /alert %}}
 
 ### 5.4 Nanoflows {#nanoflows}
+
+#### 5.4.1 TranslatorText
 
 The **TranslatorText** microflow takes the **translator** object as an input parameter, performs text translation actions in the back-end service, and eventually updates the output text string of the **translator** object.
 
@@ -249,7 +261,7 @@ The **TranslatorText** microflow takes the **translator** object as an input par
 
         ![call-createtranslator-microflow](attachments/translation/call-createtranslator-microflow.png)
 
-        In this example,  we set **inputLanguageCode** to *'en'* and **outputLanguageCode** to *'zh'*, so the default translation will be from English to Chinese. You can also set them to other [language codes](#supported-languages). For more information about the parameters, see the description of the [CreateTranslator microflow](#microflows).
+        In this example,  we set **inputLanguageCode** to *'en'* and **outputLanguageCode** to *'zh'*, so the default translation will be from English to Chinese. You can also set them to other [language codes](#supported-languages). For more information about the parameters, see  [CreateTranslator microflow](#create-translator).
 
     4.  Right-click the create object activity and select **Set $translator as return value** in the pop-up menu. 
 

@@ -232,7 +232,7 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
 
 ### 7.1 Converting Speech into Text in Your Browser
 
-To let the [Microphone](#microphone) widget convert speech to text and trigger a custom action, set these data source attributes: **transcript**, **Actions** and **Arguments**. 
+To let the [Microphone](#microphone) widget convert speech, set these data source attributes: **transcript**, **Actions** and **Arguments**. 
 
 Below are the steps to build an example web app which can convert speech to text and triggers actions:
 
@@ -241,6 +241,7 @@ Below are the steps to build an example web app which can convert speech to text
    * `AllTranscript` (String)
    * `Arguments` (String)
    * `Error` (String) 
+   
 2.  Create a nanoflow as follows:
     1. Name the nanoflow *CreateMicrophoneObject*.
     2. Add a create object activity to the nanoflow.
@@ -251,17 +252,30 @@ Below are the steps to build an example web app which can convert speech to text
         ![createmicrophoneentity-nanoflow](attachments/speech-to-text/createmicrophoneentity-nanoflow.png)
    
 3. Add a **Data view** widget to your page.
+
 4. Set the **CreateMicrophoneObject** nanoflow as the data source of the Data View widget as follows:
    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
    2. For **Data Source**, select **Nanoflow** as the **Type**.
    3. **Select** the **CreateMicrophoneObject** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings.
+   
 5. Inside the **Data view** widget, add a [Microphone](#microphone) widget.
+
 6.  Change the settings of the **Microphone** widget as follows:
     1. Double-click the **Microphone** widget to open the **Edit Microphone** dialog box. 
     2. Go to the **Events** tab. 
-    3. For **transcript**, **Select** the **NewTranscript** attribute. In this way, the app will pick up the result of speech conversion. For more information, see the [On Transcript](#on-transcript) section below.
-7. For **Arguments**, **Select** the **Arguments** attribute.
+    3. For **transcript**, **Select** the **NewTranscript** attribute. In this way, the app will pick up the result of speech conversion. For more information, see the [On Transcript](#on-transcript) section.
+    
+7. Inside the **Data view**, add a **Text area** widget.
+
+8. Change the settings of the **Text area** widget as follows:
+
+   1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
+   2. For **Data source**, select the **NewTranscript** attribute from **Data view**.
+   3. Click **OK** to save the settings. 
+
+9. Make sure that you have [configured the license token]((#configure-license-token))
+
 8. Run your app locally. Your app should be able to convert voice to text and trigger the related actions that you set up.
 
 ### 7.2 Handling Microphone Events
@@ -304,7 +318,7 @@ You can use **New**, **Delete**, and **Edit** to manage all the **Actions**.
 
 **Utterance** can be a string template following natural language syntax or a valid JavaScript regular expression. It is self-defined rules used for matching the transcripts on speech conversion. Some internal trie filters are implemented to extract the key point of short sentences. 
 
-For instance, you can set **Utterance** as `{rotate|move} the model {0:deg} degree around {1:x|y|z} direction`. Then if you say `rotate model 35 degree around x direction`, the **Microphone** widget will match the transcript to this utterance and trigger an action that you set. In **Utterance**, you can use multiple parameters like in JavaScript, for example `{order: name}`, so that it becomes more flexible.
+For instance, you can set **Utterance** as `{rotate|move} the model {0:deg} degree around {1:x|y|z} direction`. Then if you say `rotate model 35 degree around x direction`, the **Microphone** widget will match the transcript to this utterance and trigger an action that you set. In **Utterance**, you can use multiple parameters, similar to in JavaScript, for example `{order: name}`, so that it becomes more flexible.
 
 #### 7.3.2 Actions
 

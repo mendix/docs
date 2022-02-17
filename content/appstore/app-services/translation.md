@@ -37,7 +37,7 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
 
 ## 2 Obtaining a License Token {#obtain-license-token}
 
-Speech to Text is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in an app, you need to start a subscription or a trial to get a license token:
+Translation is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in an app, you need to start a subscription or a trial to get a license token:
 
 1. Go to the [Translation](https://marketplace.mendix.com/link/component/118411) page in the marketplace.
 
@@ -49,7 +49,7 @@ Speech to Text is a premium Mendix product that is subject to a purchase and sub
 
 4. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](https://docs.mendix.com/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
-5. Click **Speech to Text** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
+5. Click **Translation** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
 
 6. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
 
@@ -93,11 +93,11 @@ If you have already deployed your app, change the existing **LicenseToken** cons
     
     1.  In the **App Explorer**, right-click the app.
    2.  Click **Import module package** and then select the *Translation.mpk*. 
-    
+   
        In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project.
-    
+   
        ![import-translation](attachments/translation/import-translation.png)
-    
+   
        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
    
    3. In the **Import Module** dialog box, click **Import**. 
@@ -146,7 +146,7 @@ The **CreateTranslator** microflow takes **inputText**, **inputLanguageCode**, a
 
 ![createtranslator](attachments/translation/createtranslator.png)
 
-{{% alert type="warning" %}}
+{{% alert type="info" %}}
 For more information about the language codes, see the [Supported Languages](#supported-languages) section.
 {{% /alert %}}
 
@@ -247,9 +247,7 @@ The **TranslatorText** microflow takes the **translator** object as an input par
 
         ![call-createtranslator-microflow](attachments/translation/call-createtranslator-microflow.png)
 
-        For instance, here we set **inputLanguageCode** as 'en' and **outputLanguageCode** as 'zh', so the default translation will translate from english to chinese. You can also set to other languages, refer to **CreateTranslator** microflow, [Microflows](#microflows).
-
-        If you need more detail about LanguageCode, please see the [Supported Language](#supported-language)
+        In this example,  we set **inputLanguageCode** to *'en'* and **outputLanguageCode** to *'zh'*, so the default translation will be from English to Chinese. You can also set them to other [language codes](#supported-languages). For more information about the parameters, see the description of the [CreateTranslator microflow](#microflow).
 
     4.  Right-click the create object activity and select **Set $translator as return value** in the pop-up menu. 
 
@@ -330,7 +328,7 @@ The **TranslatorText** microflow takes the **translator** object as an input par
     4. For **Nanoflow**, **Select** the **TranslateText** nanoflow from the **Translation** > **USE_ME** folder.
     5. Click **OK** to save the settings.  
 
-19. Make sure your follow the section [Obtaining the service mpk and License Token to use the service in Your App](#obtain) get a valid license token and configure **TextToSpeech.LicenseToken** correctly.
+19. Make sure you have [configured the license token](#configure-license-token).
 
 20. Run your app locally. You can perform text translation directly in the browser:
 

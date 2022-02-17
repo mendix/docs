@@ -51,7 +51,7 @@ Text to Speech is a premium Mendix product that is subject to a purchase and sub
 
 4. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](https://docs.mendix.com/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
-5. Click **Speech to Text** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
+5. Click **Text to Speech** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
 
 6. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
 
@@ -221,7 +221,7 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
        
         ![call-createspeechsynthesizer-microflow](attachments/text-to-speech/call-createspeechsynthesizer-microflow.png)
       
-        In this example, we set **languageCode** as `''`, which means using the default language option `en-US`. You can also set it to a different [language code](#supported-language).
+        In this example, we set **languageCode** to `''`, which means using the default language option `en-US`. You can also set it to a different [language code](#supported-language).
 
     4.  Right-click the **CreateSpeechSynthesizer** microflow and select **Set $speechSynthesizer as return value** in the pop-up menu.
 

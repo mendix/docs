@@ -1,6 +1,7 @@
 ---
 title: "Cast Object"
 parent: "object-activities"
+tags: ["cast objects"]
 ---
 
 {{% alert type="info" %}}
@@ -14,9 +15,7 @@ The Cast Object activity can be used in a microflow after an [inheritance split]
 To read more about specialization and generalization, see [Entities](entities).
 
 {{% alert type="info" %}}
-
 For the properties that all the activities share (for example, a caption), see [Microflow Element Common Properties](microflow-element-common-properties). This page only describes the properties specific to the action.
-
 {{% /alert %}}
 
 ## 2 Output Properties

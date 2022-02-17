@@ -15,7 +15,7 @@ A scroll container is used to divide the layout in regions (for details on regio
 
 Scroll containers may be placed on navigation layouts as well as on pages.
 
-The scroll container example below divides the layout in three parts: a header containing a logo, a content part with a placeholder and a footer:
+The scroll container example below divides the layout in three parts: a header containing an image, a part in the middle with a long piece of text, and a footer. You can scroll the long text inside the container, without scrolling the page.
 
 ![Scroll Container](attachments/structure-widgets/scroll-container.PNG)
 
@@ -26,8 +26,7 @@ A scroll container can consist of several scroll container regions. For more inf
 
 An example of scroll container properties is represented in the image below:
 
-{{% image_container width="250" %}}![Scroll Container Properties](attachments/structure-widgets/scroll-container-properties.png)
-{{% /image_container %}}
+![Scroll Container Properties](attachments/structure-widgets/scroll-container-properties.png)
 
 Scroll container properties consist of the following sections:
 

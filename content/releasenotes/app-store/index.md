@@ -2,12 +2,44 @@
 title: "Marketplace"
 description: "Release notes for updates to the Mendix Marketplace"
 tags: ["marketplace", "connector", "module", "add on", "widget"]
+weight: 35
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
 These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
+## 2022
+
+### February 10th, 2022
+
+#### Improvements
+
+* When you onboard a component now, the maximum number of screenshots is restricted to ten.
+* You can use form validations now when you navigate between steps during onboarding.
+
+#### Fixes
+
+* We fixed an issue with the logo cropper. Now the ratio of a cropped image is 600 x 420 pixels.
+
 ## 2021
+
+### December 16th, 2021
+
+#### Improvements
+
+* We now support using rich text for your [component description](/appstore/general/share-app-store-content#general).
+
+### November 18th, 2021
+
+#### New Features
+
+* We released **Try for Free** for premium app services (like [Email Service](https://marketplace.mendix.com/link/component/118393)). This self-service experience helps to evaluate the capabilities offered and realize the value of premium content.
+* You can now provide key capabilities, a banner, external links, and industry cloud details when sharing new **Solution** and **Solution Template** [component types](/appstore/general/share-app-store-content#adding).
+
+#### Improvements
+
+* You can now add [release notes](/appstore/general/share-app-store-content#version) for your new component version without uploading a new source file.
+* You can now skip uploading a source file on the [Package](/appstore/general/share-app-store-content#version) page for **App Service** and **Solution Template** component types if your component is not downloadable.
 
 ### September 7th, 2021
 

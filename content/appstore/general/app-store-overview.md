@@ -38,6 +38,7 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 | [Connectors](/appstore/connectors/) | Connectors are for connecting data services. They have content that you can drag from the [Connector](/refguide/view-menu#connector) pane in Studio Pro into your app.|
 | [Modules](/appstore/modules/) | Modules are packages of functionality for your app. They consist of a domain model, security options, and other elements like microflows, pages, or Java actions. Modules are mostly used for complex functionality that needs business or Java logic. |
 | [Widgets](/appstore/widgets/) | Widgets are single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
+| **Platform Services** | These services for Mendix Platform integration accessible through the Marketplace include [Data Hub](/data-hub/). |
 
 The following filter options are also available:
 
@@ -63,8 +64,8 @@ The header for a component presents the following details:
 * **Download** – click this to download the component
 	* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
 	* The best practice is to download a component from the Marketplace that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
-* The **Premium** label is applied to components like [app services](#types) that require a subscription after a free trial of 30 days
-	* These components have a **Subscribe** button to start your subscription and a **Try for Free** button to start your 30-day free trial
+* The **Premium** label is applied to components like [app services](#types) that require a subscription; some premium services (like [Email Service](/appstore/app-services/email-service)) also offer a free trial based on a predefined quota/limit
+	* These components have a **Subscribe** button to start your subscription and a **Try for Free** button to start your free trial
 	* If you have an active trial or a subscription for a component, click **Check Status** to go to the [Subscriptions](#subscriptions) page
 	* These components also have a [Pricing](#tabs) tab
 * The **Request Demo** and **Contact Sales** buttons are only available for [industry solutions](#types)
@@ -150,7 +151,7 @@ This page contains private content shared with you by other companies who have m
 
 ### 4.3 Saved Content {#saved-components}
 
-This page presents the Marketplace content you have [saved](#saved). Click the bell icon in the bottom-right corner of the component's tile to receive email notifications on new versions of the component:
+This page presents the Marketplace content you have [saved](#saved). Click the bell icon in the lower-right corner of the component's tile to receive email notifications on new versions of the component:
 
 ![](attachments/app-store-overview/bell.png)
 
@@ -289,6 +290,6 @@ Refer to the documentation on specific [app services](/appstore/app-services/) f
 ## 5 Read More
 
 * [How to Use Marketplace Content in Studio Pro](app-store-content)
-* [How to Sell Your App Service in the Marketplace](sell) 
+* [How to Sell Your App Service in the Marketplace](/appstore/creating-content/as-sell) 
 * [How to Share Marketplace Content](share-app-store-content)
 * [Marketplace Content Support](app-store-content-support)

@@ -51,7 +51,7 @@ This is implemented using the following XPath constraint: `[QueryOver.Folder_Sub
 ![](attachments/associations/query-over-retrieve-normal.png)
 {{% /image_container %}}
 
-If the $ChosenFolder object has **Code** `202002141322015` and **Name** `SubFolder2` we have chosen the folder with **ID** `3`. The two folders in the left-hand table, highlighted in orange, will be returned. The platform applies the constraint by default on the right/parent side of the association and returns the relevant ChildFolder(s).
+If the $ChosenFolder object has **Code** `202002141355334` and **Name** `SubFolder2` we have chosen the folder with **ID** `3`. The two folders in the left-hand table, highlighted in orange, will be returned. The platform applies the constraint by default on the right/parent side of the association and returns the relevant ChildFolder(s).
 
 ![](attachments/associations/query-over-retrieve-normal-tables.png)
 
@@ -73,7 +73,7 @@ The `[reversed()]` expression can only be applied on self-references. When an as
 ![](attachments/associations/query-over-retrieve-reversed.png)
 {{% /image_container %}}
 
-If the $ChosenFolder object has **Code** `202002141322015` and **Name** `SubFolder2` we have chosen the folder with **ID** `3`. The folder in the right-hand table, highlighted in orange, will be returned. The platform applies the constraint in reverse, on the left/child side of the association and returns the relevant ParentFolder.
+If the $ChosenFolder object has **Code** `202002141355334` and **Name** `SubFolder2` we have chosen the folder with **ID** `3`. The folder in the right-hand table, highlighted in orange, will be returned. The platform applies the constraint in reverse, on the left/child side of the association and returns the relevant ParentFolder.
 
 ![](attachments/associations/query-over-retrieve-reversed-tables.png)
 

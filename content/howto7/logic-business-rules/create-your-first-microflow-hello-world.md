@@ -49,7 +49,7 @@ To edit the new microflow, follow these steps:
 
     ![](attachments/18448678/18580974.png)
 
-2.  Open the **Toolbox** in the bottom-right corner of the Modeler:
+2.  Open the **Toolbox** in the lower-right corner of the Modeler:
     
     ![](attachments/18448678/18580967.png)
 

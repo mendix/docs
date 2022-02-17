@@ -15,7 +15,7 @@ aliases:
 Your Mendix Profile is your main point of contact with members of the Mendix community. It displays your activities on the Mendix Platform and details about your background. 
 To get more involved in the Mendix community, your profile is the best way to start. 
 
-You can access your Mendix profile by clicking your picture in the top-right corner of the Developer Portal and then selecting **See Your Profile**.
+You can access your Mendix profile by clicking your picture in the upper-right corner of the Developer Portal and then selecting **See Your Profile**.
 
 ## 2 Header {#header}
 
@@ -128,7 +128,7 @@ These are points you can gain through activity in the [Mendix Marketplace](https
 | --- | --- | --- |
 | Publish an app | 50 | N/A |
 | Publish a new app version | 25 | N/A |
-| Add an app review | 5 | N/A |
+| Add an app review | 5 | 25 |
 | Download [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) | 5 | 5 |
 | Download an app from the Marketplace | 1 | 5 |
 
@@ -156,12 +156,10 @@ These are points you can gain through activity in the [Mendix Marketplace](https
 | Win a Mendix Hackathon! | 300 | N/A |
 | Reach the [Mendix MVP](https://www.mendix.com/mvp-program/) status | 300 | N/A |
 | Be the runner-up in a Mendix Hackathon | 150 | N/A |
-| Organize a [Mendix Meetup ](https://www.meetup.com/nl-NL/pro/mendix-maker-community/)  | 100 | N/A |
 | Complete your Mendix Profile | 50 | N/A |
 | Make your Mendix Profile public | 50 | N/A |
 | Attend a Mendix Hackathon | 50 | N/A |
 | Successfully refer a friend to Mendix | 25 | N/A |
-| Attend a Mendix Meetup | 25 | N/A |
 | Invite a friend to Mendix | 5 | 50 |
 | Have a user sign up via your referral URL | 5 | 50 |
 
@@ -239,7 +237,7 @@ Here you can tell the Mendix community about yourself and your work experience. 
 
 ### 10.3 Social {#social}
 
-Here you can connect your social accounts for **Meetup**, **Twitter**, and **LinkedIn**.
+Here you can connect your social accounts for **Twitter** and **LinkedIn**.
 
 ### 10.4 Security {#security}
 
@@ -352,7 +350,7 @@ Mendix has been tracking these data changes since November 2018.
 
 #### 10.7.4 Removing Your Account
 
-If you do not want to use Mendix anymore, you can remove your account from here.
+If you do not want to use Mendix anymore, you can remove your account from here. All of your personal and identifiable information is then removed and deleted from our servers.
 
 ## 11 Point Penalties
 

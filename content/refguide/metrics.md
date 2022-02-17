@@ -4,6 +4,10 @@ category: "Mendix Runtime"
 tags: ["studio pro", "metrics", "micrometer"]
 ---
 
+{{% alert type="warning" %}}
+Custom metrics were introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6#960).
+{{% /alert %}}
+
 ## 1 Introduction
 
 Mendix supports reporting metrics through [Micrometer](https://micrometer.io/docs).
@@ -275,7 +279,7 @@ The above filter discards metrics which starts with **"Unnamed."**, **"Invalid."
 The following should be taken into account when configuring the metrics registries.
 {{% /alert %}}
 
-1. There are also some internal metrics used by Mendix. Filters will also have an effect on them. For example metrics emitted by Mendix which starts with "com.mendix." or "mx.".
+1. There are also some internal metrics used by Mendix. Filters will also have an effect on them. For example metrics emitted by Mendix which start with "mx.".
 
 2. If you have a metric and another metric with the same name but with additional tags, these will be considered as different metrics. Example, Metric ("app.counter1") and ("app.counter1" with tag ("version" -> "1")) are different.
 
@@ -354,6 +358,17 @@ Counter counter2 = Core.metrics().createCounter("app.count").build();
 ```
 
 In the same way, we can also create a `gauge` and a `timer` using the `createGauge` and `createTimer` methods respectively.
+
+The name must adhere to the following rules:
+
+* The name can only contain alpha-numeric characters, dots or underscores.
+* The name must start with a letter.
+* The name cannot start with `mx`, because this prefix is reserved for Mendix internal metrics.
+* The name is case-insensitive.
+
+{{% alert type="info" %}}
+It is recommended to use a common prefix that uniquely defines your organisation and application.
+{{% /alert %}}
 
 ### 5.2 Deprecated usages
 

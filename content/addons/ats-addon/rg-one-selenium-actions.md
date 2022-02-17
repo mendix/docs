@@ -1,6 +1,6 @@
 ---
 title: "Selenium Actions"
-parent: "rg-one-standard-actions-reference"
+parent: "rg-one-std-actions-ref"
 ---
 
 **Selenium Actions** contains these documents:

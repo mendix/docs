@@ -1,9 +1,9 @@
 ---
-title: "Build Microflow Actions Using the Mendix Connector Kit"
+title: "Build Microflow Actions with Java"
 category: "Extensibility"
-description: "Describes creating custom Microflow actions using advanced Connector Kit options."
+description: "Describes creating custom Microflow actions using Java."
 menu_order: 80
-tags: ["java", "connector kit", "microflow action", "parameter type", "aws", "amazon web services"]
+tags: ["java", "connector kit", "microflow action", "parameter type", "generic actions", "type parameters", "mappings", "java action"]
 output:
   word_document: default
   html_document: default
@@ -12,9 +12,9 @@ output:
 
 ## 1 Introduction
 
-The goal of the Mendix [Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/) is to enable Java developers to easily add powerful and robust new microflow actions to their Mendix toolbox. These microflow actions can be shared in the Mendix Marketplace, so anyone can benefit from them without having to know Java.
+Mendix provides the tools to enable Java developers to easily add powerful and robust new microflow actions to their Mendix toolbox. These microflow actions can be shared in the Mendix Marketplace, so anyone can benefit from them without having to know Java. This is particularly useful when building connectors to services.
 
-To illustrate the power of the Connector Kit, here's a high-level design diagram for an application Mendix recently built: a Slack bot that enables users to determine things and people in pictures taken with a mobile Slack app:
+The diagram below illustrates the power of Mendix's integration with Java. It shows a Mendix Slack bot that enables users to determine things and people in pictures taken with a mobile Slack app:
 
 ![Slack Rekognition Bot design](attachments/how-to-connector-kit/slack-rekogition-bot-architecture.png)
 
@@ -24,7 +24,7 @@ This image shows what the microflow toolbox looks like after including all the m
 
  ![Slack Rekognition bot toolbox](attachments/how-to-connector-kit/slack-rekogition-bot-toolkit.png)
 
-For the basics of building toolbox actions, see the [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/) blog post. 
+For the basics of building toolbox actions, see the blog post [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/). 
 
 **This how-to will teach you how to do the following:**
 
@@ -111,11 +111,55 @@ The `executeAction` method is where all the magic happens:
 2. It has a for-loop to create the desired number of objects.
 3. The objects are created using `Core.instantiate()`. The entity name specified in the action is used as the input to specify what entity to instantiate.
 4. The system determines if a default object was specified. If so, it copies all the attribute values to the new object.
-5. The system executes the initialization microflow using `Core.execute()`.
-6. Add the newly instantiated and initialized object to the result list.
+5. The system executes the initialization microflow using `Core.microflowCall()`.
+6. The newly instantiated and initialized object is added to the result list.
 7. The list of new objects is returned.
 
-![Initialize list java implementation 2](attachments/how-to-connector-kit/initilialize_list_java_2.png)
+```java
+  @Override
+  public List<IMendixObject> executeAction() throws Exception {
+    // BEGIN USER CODE
+    var logger = Core.getLogger("MyLogNode");
+    logger.info(String.format("creating list of %d %s objects, initialized by %s",
+        this.ListSize, this.ResultEntity, this.InitializationMicroflow));
+
+    // Create a list to return with all the instantiated objects
+    var resultList = new ArrayList<IMendixObject>();
+
+    for (int i = 0; i < this.ListSize; i++) {
+      // create new object of type resultentity
+      var newObject = Core.instantiate(getContext(), this.ResultEntity);
+
+      if (this.DefaultObject != null) {
+        // copy values from default object
+        for (var entry : DefaultObject.getMembers(getContext()).entrySet()) {
+          var member = entry.getValue();
+
+          if (member.isVirtual() ||
+              member instanceof MendixObjectReference ||
+              member instanceof MendixObjectReferenceSet ||
+              member instanceof MendixAutoNumber) {
+            continue;
+          }
+
+          newObject.setValue(this.getContext(), entry.getKey(), member.getValue(this.getContext()));
+        }
+      }
+
+      // run the specified initialization microflow
+      Core.microflowCall(this.InitializationMicroflow)
+          .withParam("objectToInit", newObject)
+          .inTransaction(true)
+          .execute(getContext());
+
+      // add new object to list
+      resultList.add(newObject);
+    }
+
+    return resultList;
+    // END USER CODE
+  }
+```
 
 Microflow parameters are especially useful for handling events. For example, the community-supported [MQTT Client](https://marketplace.mendix.com/link/component/3066/Mendix/MQTT-Client) connector (via the [GitHub MQTTClient project](https://github.com/ako/MqttClient)) will execute a microflow when receiving an IoT sensor event so it can be handled using a user-specified microflow.
 

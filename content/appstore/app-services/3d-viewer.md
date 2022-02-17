@@ -2,6 +2,7 @@
 title: "3D Viewer"
 category: "App Services"
 menu_order: 1
+description: "Describes the configuration and usage of the 3D Viewer app service, which is available in the Mendix Marketplace."
 tags: ["3d visualization", "cad", "app store", "marketplace", "component", "platform support"]
 ---
 
@@ -76,7 +77,7 @@ First, download the *3DViewer.mpk* file for the [3D Viewer](https://marketplace.
 
 	![import-3dviewer](attachments/3d-viewer/import-3dviewer.jpg)
 	
-	{{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+	{{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
 3. Click **Import** on the **Import Module** dialog box, and a pop-up window stating that “The app was successfully imported into the project” will appear. Click **OK**.
 4. Open the **Project Explorer** to view the Viewer3D module. You can see a collection of ready to use items under the Viewer3D folder. Besides, if you go to Toolbox window, you will also notice a  collection of 3D widgets are added to Toolbox widget list, under the **Add-on widget** category. 
@@ -207,8 +208,8 @@ For this widget to visualize a model correctly, set the following properties:
 * On the **Transport** tab, make sure the **HttpEndpoint** is set to **@Viewer3D.HttpEndpoint** or **visualization**
 * On the **Appearance** tab, make sure the widget has a fixed height (for example, set **Style** to **height:600px**, or make sure height of its parent is fixed); otherwise, the viewer will expand indefinitely
 * On the **General** tab, there are some optional customization options for changing the widget's behavior:
-	* **Show coordinate system**  – determines if a coordinate system will appear at the bottom-left corner of the viewer 
-	* **Show navigation cube**  – determines if a navigation cube will appear at the top-right corner of the viewer
+	* **Show coordinate system**  – determines if a coordinate system will appear at the lower-left corner of the viewer 
+	* **Show navigation cube**  – determines if a navigation cube will appear at the upper-right corner of the viewer
 	* **Show tooltip** determines if a tooltip will appear when the end-user clicks a model part; this accepts a Boolean value
 	* **Automatically load parts** – determines if the model part will be loaded into the Viewer automatically; if set to **Yes**, the model will be automatically loaded as long as the Viewer receives the **Model ID** and **Model source type** values; if set to **No**, the model will only be loaded into the Viewer when triggered from the PS Tree part toggling (for this use case, add the [PS Tree](#ps-tree) widget so you can trigger the part loading by clicking the PS Tree)
 * On the **Events** tab, there are some optional customization options for changing the widget's behavior:
@@ -217,7 +218,7 @@ For this widget to visualize a model correctly, set the following properties:
 	* **On progress change** – by binding a String  attribute to the **Progress status** property, you can obtain the current model loading status; by binding a Decimal attribute to the **Progress percentage** property, you can obtain the current model loading percentage; you can also add custom actions triggered by this change
 	* **On load** – by binding a Boolean attribute to the **Loaded** property, you can obtain information about if the product structure is loaded; you can also add custom actions triggered by this change
 
-3D Viewer also exposes some APIs on the Viewer for you to invoke and implement custom logic that suits your needs. To receive information on how to use the Viewer APIs and other details, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for 3DViewer development team.
+3D Viewer also exposes some APIs on the Viewer for you to invoke and implement custom logic that suits your needs. For information on how to use the 3D Viewer APIs and other details, see [Use the 3D Viewer API](3d-viewer-api).
 
 #### 4.6.2 Panel Widgets {#panel-widgets}
 

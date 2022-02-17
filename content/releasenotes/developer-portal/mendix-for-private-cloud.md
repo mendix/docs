@@ -10,8 +10,91 @@ These release notes cover changes to deployment to [Mendix for Private Cloud](/d
 
 For information on the current status of deployment to Mendix for Private Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
+## 2022
+
+### February 10th, 2022
+
+#### Mendix Operator v2.4.0 and Mendix Gateway Agent v2.4.0
+
+* We have added an option to use "native" or "compatibility" metrics. The native mode is only available for Mendix versions 9.7 and above, while compatibility mode is for the Mendix versions 9.6 and below. See [Customize Runtime Metrics](/developerportal/deploy/private-cloud-cluster#customize-runtime-metrics) in *Creating a Private Cloud Cluster* for more information.
+
+#### Portal Improvement
+
+* We have improved the UX, and added a new button, **Save and Apply** to directly apply changes made in an environment. This button restarts the environment.
+* We have added the ability to add metrics configuration to a environment.
+  
+### January 13th, 2022
+
+#### Mendix Operator v2.3.0 and Mendix Gateway Agent v2.3.0
+
+* We have added a new field to set the kubernetes ingress class as an annotation in the installer.
+* We have added a new feature to customize your image names in the registry using a [custom imageNameTemplate](/developerportal/deploy/private-cloud-cluster#customize-registry-imagenametemplate).
+
+#### Portal Improvements
+
+* We have added a new field, **cluster owner**, on the cluster details page. A cluster owner is now also displayed as a cluster manager in the cluster managers tab.
+* We have updated the UX in the create environment flow and added a **more info** button to the environment details page.
+
+### January 12th, 2022
+
+#### Prometheus Metrics
+
+* We have updated the [Grafana dashboard](/developerportal/deploy/private-cloud-monitor#import-dashboard) to be compatible with version 2.5.1 of the `grafana/loki-stack` Helm chart. If you're planning to upgrade the `loki-stack` Helm chart in your cluster, you will need to use the updated dashboard.
+* The monitoring solution is now compatible with Kubernetes version 1.22.
 
 ## 2021
+
+### December 9th, 2021
+
+#### Portal Improvements
+
+* We have fixed an issue where the app URL is not editable when trying to deploy to an environment in a namespace with service-only ingress, type = ClusterIP.
+* We have replaced the placeholder app in environment creation with a deployment package. A valid deployment package is required to create a new environment.
+
+### December 6th, 2021
+
+#### Mendix Operator v2.2.0 and Mendix Gateway Agent v2.2.0
+
+* To improve the security score of all Mendix for Private Cloud images, we replaced a deprecated [operator-sdk v0.18.2](https://v0-18-x.sdk.operatorframework.io/docs/) dependency with a maintained version of [kubebuilder](https://book.kubebuilder.io/).
+  * This update allows us to address [CVE-2020-8565](https://access.redhat.com/security/cve/cve-2020-8565), [CVE-2020-26160](https://access.redhat.com/security/cve/cve-2020-26160) and [CVE-2020-29652](https://access.redhat.com/security/cve/cve-2020-29652). These CVEs do not affect previously released versions of Mendix for Private Cloud.
+  * This internal library change does not change the behavior of any Mendix for Private Cloud components.
+* When switching to the *Review and Apply* screen in `mxpc-cli`, previous results will be cleared.
+* We have fixed an issue where attempting to apply a custom TLS configuration in non-interactive mode with `mxpc-cli` failed with a panic error.
+
+### November 18th, 2021
+
+#### Portal Improvements
+
+* We have increased the deployment package size limit from 200MB to 512MB.
+* We have fixed an issue when the Runtime version was not visible on the transport package screen.
+* We have removed the restriction on the use of the `kubernetes.io/ingress.class` ingress annotation.
+* We have changed the left navigation panel to match the rest of the Developer Portal.
+
+### November 15th, 2021
+
+#### Supported Providers
+
+* We have completed validation of Kubernetes 1.22 and Postgres versions 11, 12 and 13.
+
+To see more details about supported databases and Kubernetes versions, see the [Supported Providers](/developerportal/deploy/private-cloud-supported-environments) document.
+
+### October 27th, 2021
+
+#### Prometheus Metrics
+
+* We have documented how to collect logs and metrics in Mendix for Private Cloud.
+* We have created a reference Grafana dashboard that offers a familiar experience for [Mendix Cloud V4 metrics](/developerportal/operate/trends-v4) users.
+
+To use Prometheus metrics, upgrade to Mendix Operator v2.1.0 (or above) and follow the [instructions](/developerportal/deploy/private-cloud-monitor).
+
+### October 25th, 2021
+
+#### mxpc-cli v2.1.2 for Mendix Operator v2.1.0 and Mendix Gateway Agent v2.1.0
+
+* We have added support for configuring Ceph Object Storage as a storage type.
+* We have added an option to prevent data deletion when using one of the storage plan types minio, amazon-s3, azure blob, google cloud, or ceph.
+
+    The new option prevents files being deleted from storage when an environment is removed.
 
 ### October 14th, 2021
 
@@ -24,7 +107,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 #### Data migration tool (preview)
 
 * We have added a data migration tool - that can be used to transfer data between Mendix for Private Cloud environments.
-* This tool is compatible with Mendix Cloud V4 [backup files](/developerportal/operate/restore-backup#5-format-of-a-backup-file).
+* This tool is compatible with Mendix Cloud V4 [backup files](/developerportal/operate/restore-backup#format-of-backup-file).
 
 This tool is available as a technical preview. For documentation and download links, see the [documentation](/developerportal/deploy/private-cloud-data-transfer).
 
@@ -44,7 +127,7 @@ This tool is available as a technical preview. For documentation and download li
 * We have fixed an issue where you get duplicate scheduled events and constants after renaming them in a mendix app.
 * We have improved the page to configure annotations (ingress, service, and pod) from the Developer Portal for connected clusters.
 
-### September 2nd, 2021
+### September 2nd, 2021{#20210902}
 
 #### Mendix Operator v2.1.0 and Mendix Gateway Agent v2.1.0
 

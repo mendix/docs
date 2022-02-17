@@ -17,6 +17,6 @@ If you want to start from a reference element, pass in the desired reference ele
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- | ---------------
-X Offset | Integer | Yes | The horizontal coordinate to move to, from the top-left corner of either the page or the given reference element.
-Y Offset | Integer | Yes | The vertical coordinate to move to, from the top-left corner of either the page or the given reference element.
+X Offset | Integer | Yes | The horizontal coordinate to move to, from the upper-left corner of either the page or the given reference element.
+Y Offset | Integer | Yes | The vertical coordinate to move to, from the upper-left corner of either the page or the given reference element.
 Reference Element | WebElement | No | If given, the reference element is used as point of origin for measuring the coordinates.

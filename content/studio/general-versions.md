@@ -13,7 +13,7 @@ The **Mendix Studio version** is a build number of the Studio user interface.
 
 The **Mendix version** is the version of the  you are editing. **Mendix version** correlates to **Mendix Studio Pro version**, but is broader, as the Mendix version is the version of the whole platform including Mendix Studio Pro and Mendix Runtime. 
 
-The **Mendix Studio version** and the **Mendix version** can be viewed by clicking the **More Options** icon > **About** in the top-right corner of Studio.
+The **Mendix Studio version** and the **Mendix version** can be viewed by clicking the **More Options** icon > **About** in the upper-right corner of Studio.
 
 {{% image_container width="500" %}}![](attachments/general-versions/about-dialog.png)
 {{% /image_container %}}
@@ -24,7 +24,7 @@ Studio supports a range of **Mendix versions**. For example, Studio supports Men
 
 Studio introduces a new range when there are breaking changes in a model that prevent your app from functioning properly without an upgrade.  An example of a breaking change is introduction of a new functionality. 
 
-## 3 Upgrading to the Next Version
+## 3 Upgrading to the Next Version{#upgrade}
 
 The *Studio version* is updated continuously (even daily), which will provide you with the latest user interface features for editing your app. No action is required from you, these updates are done automatically. However, when there is a new *Mendix version*, a top bar is displayed, informing you that you can upgrade your app to the next version.  
 
@@ -32,11 +32,11 @@ The *Studio version* is updated continuously (even daily), which will provide yo
 
 This means that when you upgrade, you upgrade your whole app to a new Mendix version. As Mendix version contains Mendix Studio Pro version, this also means that you or your team members need to install and use the new version for Studio Pro as well. 
 
-When you see the upgrade notification, you can either stay on the current version and continue working (although you might not have the newest Mendix Platform features and improvements), or you can upgrade to the newest version. When you upgrade, you will automatically be upgraded to the latest version possible, even if it is in a new Studio range. 
+When you see the upgrade notification, you can either stay on the current version and continue working (although you might not have the newest Mendix Platform features and improvements), or you can upgrade to the newest version. When you upgrade, you will automatically be upgraded to the latest version possible. Usually it is the latest version in the current Studio bundle. An upgrade from one Studio bundle to another can be done in Studio Pro. For example, if you want to upgrade from Mendix version 9.6 to Mendix version 9.10, you need to use Studio Pro.
 
 {{% alert type="info" %}} 
 
-Studio has a minimum supported Mendix Studio version. This means that if the Mendix version of your app is lower than the minimum supported version, the upgrade is obligatory; otherwise, you will not be able to work on your app in Studio.  
+Studio has a minimum supported Mendix Studio version. This means that if the Mendix version of your app is lower than the minimum supported version, the upgrade is obligatory; otherwise, you will not be able to work on your app in Studio. 
 
 {{% /alert %}}
 
@@ -47,8 +47,9 @@ The table below shows how Studio ranges relate to Mendix versions and what versi
 | 7.11–7.22    | The latest 7.23 version; mandatory upgrade when opening an  in Studio. |
 | 7.23         | The latest 7.23 version. <br />No automatic upgrade, only manual upgrade to Mendix 8. For details, see the [Upgrading to Mendix Version 8](/studio8/general-versions#upgrade-to-8) section in *Studio Ranges & Mendix Versions* in *Studio 8 Guide*. |
 | 8.0–8.6      | The latest 8.18 version; mandatory upgrade when opening an  in Studio. |
-| 8.7–8.17     | The latest 8.18 version.<br />No automatic upgrade to Mendix 9, only manual upgrade in Mendix Studio Pro. For details, see [Moving from Mendix Studio Pro 8 to 9](/refguide/moving-from-8-to-9). |
-| 9.0 & Above  | Latest available version of Mendix 9.                        |
+| 8.7–8.18     | The latest 8.18 version.<br />No automatic upgrade to Mendix 9, only manual upgrade in Mendix Studio Pro. For details, see [Moving from Mendix Studio Pro 8 to 9](/refguide/moving-from-8-to-9). |
+| 9.0-9.6      | Latest available version, but no lower than 9.5.1. Due to breaking changes, minimum Studio-supported version in this bundle is 9.5.1.  Apps below 9.5.1 will not open in Studio and an automatic upgrade will be suggested. |
+| 9.7 & above  | Latest available version from 9.7 and above.                 |
 
 {{% alert type="warning" %}} 
 

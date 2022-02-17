@@ -26,7 +26,7 @@ When Studio Pro is open, press <kbd>F1</kbd> to quickly jump to documentation.
 
 This document describes the user interface of Mendix Studio Pro:
 
-<img src="attachments/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram"  />
+![Studio Pro Diagram](attachments/studio-pro-overview/studio-pro-diagram.png)
 
 ## 2 Top Bar
 
@@ -52,7 +52,7 @@ For more information on deploying your app and versioning it, see  the [Versioni
 
 ### 2.3 Links to Developer Portal & Marketplace {#links}
 
-You can find links to the [Developer Portal](/developerportal/) and [Marketplace](/appstore/) in the top-right corner of Studio Pro.
+You can find links to the [Developer Portal](/developerportal/) and [Marketplace](/appstore/) in the upper-right corner of Studio Pro.
 
 Your account is displayed next to these buttons if you are signed in. Click the account name to navigate to your apps, the Developer Portal, your profile, or to sign out. 
 

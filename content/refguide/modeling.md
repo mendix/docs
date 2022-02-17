@@ -1,6 +1,7 @@
 ---
 title: "App Modeling"
 description: "Describes the various features used for modeling in Mendix Studio Pro, including document templates, the domain model, microflows, modules, pages, and security."
+weight: 20
 tags: ["Mendix", "Studio Pro", "Documents"]
 aliases:
     - /refguide/desktop-modeler.html

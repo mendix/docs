@@ -1,5 +1,5 @@
 ---
-title: "Publish a Mendix Hybrid Mobile App in Mobile s"
+title: "Publish a Mendix Hybrid Mobile App in Mobile App Stores"
 category: "Mobile Development"
 menu_order: 60
 tags: ["mobile", "marketplace", "phonegap"]
@@ -81,7 +81,7 @@ The **PhoneGap Build: Signing Key Required** page asks you to go to the PhoneGap
 
 1. Click **Log in to PhoneGap Build**. A new page will be opened on PhoneGap's [apps tab](https://build.phonegap.com/apps). Here you can see the PhoneGap Build app that was created by the Mendix Developer Portal for your app. The app is named as you defined it in the **App Info** in the [Starting the Packaging Process](#starting-the-packaging-process) section above.
 2. Set up the app signing key for your app in your account.
-3. Configure the app to be built by going to your PhoneGap Build account details. Click the avatar icon at the top-right of the page, and then click **Edit account**.
+3. Configure the app to be built by going to your PhoneGap Build account details. Click the avatar icon at the upper right of the page, and then click **Edit account**.
 
 For publishing to a specific platform, see the subsequent sections of this how-to:
 

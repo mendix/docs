@@ -83,7 +83,7 @@ Integer | A whole number that can be positive (maximum 2<sup>31</sup>-1, thus 21
 Long | A whole number that can be positive (maximum 2<sup>63</sup>-1), negative (minimum -2<sup>63</sup>), or zero. | Integer/Long |
 String *(default)* | A text containing letters, spaces, numbers and other characters. | String |
 
-<sup><small>[1]</small></sup>The maximum size that can approximately be stored in an attribute of type binary depends on the database:
+<sup><small>[1]</small></sup> The maximum size that can approximately be stored in an attribute of type binary depends on the database:
 
 | HSQLDB | PostgreSQL | SQL Server | Oracle |
 | --- | --- | --- | --- |
@@ -177,6 +177,10 @@ This property is shown if **Value** is set to **Stored**.
 {{% /alert %}}
 
 The **Default value** property defines the value of this attribute when an object is created. The default value should be compatible with the type of the attribute.
+
+{{% alert type="warning" %}}
+Default value property is not supported for offline-first apps created in Mendix 9.7 and below. For such an attribute the value specified under the "Default Value When Not Specified" column will be used.
+{{% /alert %}}
 
 | Type of Attribute | Default Value When Not Specified | Additional Comments |
 | --- | --- | --- |

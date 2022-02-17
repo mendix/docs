@@ -19,6 +19,8 @@ Pluggable widgets, like core widgets, can have properties which a Mendix develop
 
 Pluggable widgets can also include a preview component for when they are rendered in Studio or previewed in Studio Pro's Design mode.
 
+For information on which libraries Mendix supports when developing pluggable widgets, see the [Pluggable Widgets](/refguide/mendix-client#pluggable-widgets) section of *Mendix Client*.
+
 ## 2 Client Component {#client-component}
 
 The essential part of a pluggable widget is its client component: a React component rendered inside the end-user’s app. Creating this component requires some basic React knowledge. Read React's [tutorial](https://reactjs.org/tutorial/tutorial.html) if you have not worked with React before. Note that if you are building a widget to be used in [Native Mobile](/refguide/mobile#nativemobile) apps, you should use [React Native](https://facebook.github.io/react-native/) instead of React.
@@ -53,7 +55,9 @@ A widget package file is just a ZIP archive containing the following things:
 * Optionally, a widget preview for Studio and Studio Pro’s Design mode located in *{widgetName}.editorPreview.js*
 * Optionally, widget icons (which must be the PNG format):
     * *{widgetName}.icon.png* sets the widget icon inside the Studio Pro toolbox in list view (the ideal image size is 64x64 pixels, but other sizes will be resized to fit)
+    * *{widgetName}.icon.dark.png* sets the dark-mode equivalent to *{widgetName}.icon.png*
     * *{widgetName}.tile.png* sets the tile image inside the Studio Pro toolbox in tile view, as well as in Studio (the ideal image size is 256x192 pixels, but other sizes will be resized to fit)
+    * *{widgetName}.tile.dark.png* sets the dark-mode equivalent to *{widgetName}.tile.png*
 * Optionally, some widget-related resources, preferably located next to the file which contains the client component
 	* Note that all CSS files you add (except the one located in the **lib** sub-directory) will automatically be loaded in an app via the widget
 

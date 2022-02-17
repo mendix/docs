@@ -596,8 +596,8 @@ Each face object will contain the following:
 * AgeMax – Maximum age of this face
 * AgeScore – A confidence score for the detected ages, in the range 0 to 1
 * LocationHeight – Height of the detected face, in pixels
-* LocationLeft – X-position of the top-left pixel of the face region
-* LocationTop – Y-position of the top-left pixel of the face region
+* LocationLeft – X-position of the upper-left pixel of the face region
+* LocationTop – Y-position of the upper-left pixel of the face region
 * LocationWidth – Width of the detected face, in pixels
 * GenderName – The gender of the detected face
 * GenderScore – A confidence score for the detected gender, in the range 0 to 1

@@ -1,7 +1,7 @@
 ---
 title: "Consumed OData Service Requirements"
 parent: "consumed-odata-services"
-menu-order: 20
+menu_order: 20
 description: "Requirements on OData services consumed in Mendix."
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -44,6 +44,10 @@ Furthermore, an entity can only be used if it is uniquely identifiable with a ke
 This feature of using entities with keys that do not have a maximum length specified in the contract applies to version 9.3.0 and above. In previous versions of Studio Pro, you must change the contract to ensure that `MaxLength` is specified.
 {{% /alert %}}
 
+{{% alert type="info" %}}
+The list above for supported key fields does not include `Date` or `DateTime` data types.
+{{% /alert %}}
+
 ### 3.2 Attributes
 
 {{% alert type="warning" %}}
@@ -67,9 +71,7 @@ Attribute types have to be primitive (not complex, collections, or enumerations)
 When the OData endpoint contains operations, these are not imported in the consumed OData service. You can use a [Call REST service](call-rest-action) activity to call these operations.
 {{% /alert %}}
 
-<sup><small>[1]</small></sup>: In Mendix, Booleans cannot be null. If the service returns null, the value will be false in Mendix.
-
-<sup><small>[2]</small></sup>: Decimal values outside of the range of a [Mendix decimal](attributes#type) are currently not supported. If the service returns a value outside of the range, there will be an error.
+<small><sup>[1]</sup> In Mendix, Booleans cannot be null. If the service returns null, the value will be false in Mendix.<br /><sup>[2]</sup> Decimal values outside of the range of a [Mendix decimal](attributes#type) are currently not supported. If the service returns a value outside of the range, there will be an error.</small>
 
 ### 3.3 Generalizations
 

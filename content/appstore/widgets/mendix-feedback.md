@@ -24,6 +24,7 @@ The Mendix Feedback widget is easy to set up and automatically attaches addition
 ### 1.3 Limitations
 
 * Only usable in combination with Mendix apps
+* In native mobile apps certain feedback metadata such as usernames, email addresses, and document names will be hard-coded as they cannot be retrieved dynamically
 
 ## 2 Using the Widget
 
@@ -132,7 +133,7 @@ The result should look like this:
 If Mendix SSO is applied and the above **MendixSSO Authentication** settings are configured correctly, the end-user can leave feedback without having to enter their name and email address. If you are not using the Mendix SSO module and are using other SSO solutions instead, you should configure the settings in the **Custom Authentication** tab. In this tab, you can provide a microflow that should return a valid user name and email when the end-user is signed in with your authentication solution. The Feedback widget will then go directly into feedback mode. If the end-user is not signed in (meaning, the **User Object Provider** microflow returns an empty user name or an invalid email address), the end-user will have to manually enter their name and email address when they leave feedback.
 {{% /alert %}}
 
-The [app switcher](#app-switcher) feature requires the [Mendix SSO](/appstore/modules/mendix-sso) module to be implemented and the following property to be set:
+The [App Switcher](#app-switcher) feature requires the [Mendix SSO](/appstore/modules/mendix-sso) module to be implemented and the following property to be set:
 
 * **Advanced** tab > **Show App Switcher button** – set to **Yes**
 

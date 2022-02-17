@@ -74,8 +74,7 @@ The upload phase executes the following operations:
 1. <a name="upload-step-one"></a>As the local database can be modified only by committing or deleting an object, such an object can be either a new object created while offline or an existing object previously synced from the server. The upload phase detects which objects have been committed to the local database since the last sync. The detection logic differs per sync type. For **Synchronize all**, all committed objects in the local database are checked. For **Synchronize objects**, all committed objects from the list of selected objects are checked.
 2.  <a name="upload-step-two"></a>There might be objects deleted from the device database since the last sync. The upload phase checks which objects have been deleted.
    
-   {{% alert type="warning" %}}
-   Deleting an object from the device database is only supported in Studio Pro 9.7 and higher.
+   {{% alert type="warning" %}}Deleting an object from the device database is only supported in Studio Pro 9.7 and higher.
    {{% /alert %}}
    
 3. <a name="upload-step-three"></a>If there are any changed or new file objects their content is uploaded to the server and stored there temporarily. Each file is uploaded in a separate network request. If a file upload fails, the whole sync is aborted without causing any changes to the server or device database.

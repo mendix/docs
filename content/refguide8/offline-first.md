@@ -124,7 +124,7 @@ Synchronization requires a connection to the server, so during synchronization, 
 
 The synchronization is atomic, which means that either everything or nothing is synchronized. Exceptions are described in the [Model- or Data-Related Errors](#othererrors) section below.
 
-If a network error happens during the file upload (via [step 2 in the upload phase](#steptwo)), Mendix retries to upload the failed files. If there is an error for the second time, the synchronization is aborted. The changes at that moment are kept on the local device, so it can be retried later.
+If a network error happens during the file upload (via [step 2 in the upload phase](#steptwo)), Mendix tries to upload the failed files again. If there is an error for the second time, the synchronization is aborted. The changes at that moment are kept on the local device, so it can be retried later.
 
 If a network error occurs while uploading the data (via [step 3 in the upload phase](#stepthree)), the data is kept on the local device and no changes are made on the server. Any files uploaded in [step 2](#steptwo) will be uploaded again during the next synchronization.
 

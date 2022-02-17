@@ -138,7 +138,9 @@ There is a many-to-many association between the **SpeechSynthesizer** entity and
 
 #### 5.2.1 License Token
 
-The **LicenseToken** constant is used to provide a valid Text To Speech license token for the app that uses Text To Speech to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As Text To Speech is a commercial product, to use the Text To Speech functionalities in a deployed app, you need a long term valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
+The **LicenseToken** constant is used to provide a valid Text To Speech license token for the app that uses Text To Speech to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment.
+
+As Text To Speech is a commercial product, to use it in a deployed app, you need a long-term, valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
 
 However, if you only plan to try how Text To Speech works, that is to say, you will only build and run an app that uses Text To Speech locally in Studio Pro or deploy to a Mendix Free App environment, you need to subscribe a trial version, and set the value of the **LicenseToken** constant to that license token in the project environment setting.
 

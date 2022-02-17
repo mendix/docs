@@ -42,6 +42,7 @@ Synchronization is performed on the database level. This means if you synchroniz
 ### 2.1 Synchronization Types
 
 You can perform synchronization on two levels:
+
 * [Full synchronization](#full-sync)
 * [Selective synchronization](#selective-sync)
 

@@ -23,8 +23,8 @@ The [Range Slider](https://marketplace.mendix.com/link/component/52704/) widget 
 
 #### 2.1.1 Data source section
 
-- **Lower bound attribute** - defines value for lower bound of the range
-- **Upper bound attribute** - defines value for upper bound of the range
+- **Lower bound attribute** – defines value for lower bound of the range
+- **Upper bound attribute** – defines value for upper bound of the range
 
 #### 2.1.2 General section
 
@@ -35,9 +35,9 @@ The [Range Slider](https://marketplace.mendix.com/link/component/52704/) widget 
 - **Step size type** – type of value source for _Step size_ property
 - **Step size** – the difference between the two adjacent values of the slider
 - **Show tooltip** – when enabled, moving cursor over slider handle will show tooltip with current slider value
-- **Lower bound tooltip type** - defines tooltip type for _lower_ bound type
-- **Upper bound tooltip type** - defines tooltip type for _upper_ bound type
-- **Tooltip always** - if set to yes, then tooltip will be visible permanently
+- **Lower bound tooltip type** – defines tooltip type for _lower_ bound type
+- **Upper bound tooltip type** – defines tooltip type for _upper_ bound type
+- **Tooltip always** – if set to yes, then tooltip will be visible permanently
 - **Show label** – if enabled, show label for slider
 
 #### 2.1.3 Editability section
@@ -78,7 +78,7 @@ The step value determines the next point to shift to when sliding (meaning, the 
 
 ![](attachments/range-slider/step-value.png)
 
-For the step value, the difference between the maximum value and the minimum value should be divisible by 2 (as in, `(maximumValue - minimumValue) % 2 = 0`).
+For the step value, the difference between the maximum value and the minimum value should be divisible by 2 (as in, `(maximumValue – minimumValue) % 2 = 0`).
 
 ## Previous Versions' Documentation
 
@@ -120,4 +120,4 @@ The step value determines the next point to shift to when sliding (meaning, the 
 
 ![](attachments/range-slider/step-value.png)
 
-For the step value, the difference between the maximum value and the minimum value should be divisible by 2 (as in, `(maximumValue - minimumValue) % 2 = 0`).
+For the step value, the difference between the maximum value and the minimum value should be divisible by 2 (as in, `(maximumValue – minimumValue) % 2 = 0`).

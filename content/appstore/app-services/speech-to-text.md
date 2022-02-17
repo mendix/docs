@@ -274,7 +274,7 @@ Below are the steps to build an example web app which can convert speech to text
    2. For **Data source**, select the **NewTranscript** attribute from **Data view**.
    3. Click **OK** to save the settings. 
 
-9. Make sure that you have [configured the license token]((#configure-license-token))
+9. Make sure that you have [configured the license token](#configure-license-token)
 
 8. Run your app locally. Your app should be able to convert voice to text and trigger the related actions that you set up.
 

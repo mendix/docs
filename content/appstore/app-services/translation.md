@@ -247,7 +247,7 @@ The **TranslatorText** microflow takes the **translator** object as an input par
 
         ![call-createtranslator-microflow](attachments/translation/call-createtranslator-microflow.png)
 
-        In this example,  we set **inputLanguageCode** to *'en'* and **outputLanguageCode** to *'zh'*, so the default translation will be from English to Chinese. You can also set them to other [language codes](#supported-languages). For more information about the parameters, see the description of the [CreateTranslator microflow](#microflow).
+        In this example,  we set **inputLanguageCode** to *'en'* and **outputLanguageCode** to *'zh'*, so the default translation will be from English to Chinese. You can also set them to other [language codes](#supported-languages). For more information about the parameters, see the description of the [CreateTranslator microflow](#microflows).
 
     4.  Right-click the create object activity and select **Set $translator as return value** in the pop-up menu. 
 

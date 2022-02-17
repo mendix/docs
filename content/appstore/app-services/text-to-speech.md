@@ -174,7 +174,7 @@ The core widget required is the **AudioPlayer** widget. You can make the followi
 	* **Source**  – the value of the **Audio** attribute of a **speechSynthesizer** object
 	* **Controls**  – determines if it offers controls to allow the end user to control audio playback, including volume, seeking, and pause/resume playback; this accepts a Boolean value
 
-### 5.6 Supported Language {#supported-language}
+### 5.6 Supported Languages {#supported-languages}
 
 | Language               | Language Code |
 | ---------------------- | ------------- |

@@ -103,7 +103,7 @@ The hash algorithm is used to generate hash values for attributes of the **Hashe
 
 Mendix believes both algorithms are secure enough to store passwords within Mendix. The main difference between BCrypt and SSHA256 is that the BCrypt algorithm has been configured so that it is relatively slow on purpose, since it was designed specifically to stop brute force attacks. That's why this results in a slight performance difference with the SSHA256 algorithm.
 
-#### 3.9.1 BCrypt Cost
+#### 3.9.1 BCrypt Cost {#bcrypt-cost}
 
 The BCrypt cost value is used to specify the cost of the BCrypt algorithm. This value is 10 by default, and can go up to 30. The higher the value is, the slower the process of hashing values. For more information, see the subsections below.
 

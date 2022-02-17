@@ -33,6 +33,8 @@ The [IMAP/POP3 Incoming Email](https://marketplace.mendix.com/link/component/104
 
 The basic setup and reception of emails can be done using the **EmailAccount_Overview** example page.
 
+Set **Sanitize email to prevent XSS attacks** option in case it is enabled, malicious scripts would be removed to prevent XSS attacks. More details here(https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer). By default emails are not sanitized
+
 To invoke receiving emails from an account, call the **RetrieveEmailMessages** Java action.
 
 To subscribe to incoming email from an account, call the **SubscribeToIncomingEmail** Java action.

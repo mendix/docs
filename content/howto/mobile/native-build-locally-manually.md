@@ -74,14 +74,12 @@ The final step differs based on your machine:
 
 For a Windows machine building an Android app, do the following: 
 
-1. Run `npm i`  to install the required dependencies.
+1.  Run `npm i`  to install the required dependencies.
 
+	{{% alert type="info" %}}
+	When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and above), it will not apply changes directly to the app. To apply the changes when building locally check out your latest changes, run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`), then make sure to run `npm run configure`.{{% /alert %}}
 
-{{% alert type="info" %}}
-When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and above), it will not apply changes directly to the app. To apply the changes when building locally check out your latest changes, run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`), then make sure to run `npm run configure`.
-{{% /alert %}}
-
-2. Instances of the Native Template v5.1.9 and above include the Native Mobile Toolkit. Therefore, if you are using one of these versions you also must run the `npm run configure` command. This ensures that the changes from the Mendix Native Mobile Builder are applied to your app.
+1. Instances of the Native Template v5.1.9 and above include the Native Mobile Toolkit. Therefore, if you are using one of these versions you also must run the `npm run configure` command. This ensures that the changes from the Mendix Native Mobile Builder are applied to your app.
 
 For a Mac OS X machine building an iOS app, do the following:
 

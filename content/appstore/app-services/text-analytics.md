@@ -44,7 +44,10 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
 
 ## 2 Installation
 
-1. Go to the [Text Analytics](https://marketplace.mendix.com/link/component/118412) component page in the Marketplace, complete "try for free" or "subscribe", then download the *TextAnalytics.mpk* file.
+1. Go to the [Text Analytics](https://marketplace.mendix.com/link/component/118412) component page in the Marketplace, complete **Try for free** or **Subscribe**, then download the *TextAnalytics.mpk* file.
+
+For more information about How to **Try for free** or **Subscribe**, see the [Obtaining the service mpk and License Token to use the service in Your App](#obtain) section below.
+
 2.  To add the Text Analytics app service to your app in Mendix Studio Pro, follow these steps:
     1.  In the **App Explorer**, right-click the app.
     2.  Click **Import module package** and then select *TextAnalytics.mpk*. 
@@ -156,7 +159,7 @@ The **LicenseToken** constant is used to provide a valid Text Analytics license 
 
 However, if you only plan to try how Text Analytics works  (meaning, build and run an app that uses Text Analytics locally in Studio Pro or deploy to a Mendix Free App environment), you do not need to subscribe to get a license token. Therefore, you do not need to set a value for the **LicenseToken** constant, just leave it empty.
 
-For details on how to get a license token, see the [Obtaining a LicenseToken to Deploy Your App](#obtain) section below.
+For details on how to get and configure a license token, see the [Obtaining the service mpk and License Token to use the service in Your App](#obtain)section below.
 
 The **TokenEndpoint** constant provides a valid endpoint of security token service for the back-end authentication of the cognitive text analytics service. The constant comes with a default value which points to the production environment of the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
 
@@ -293,7 +296,7 @@ Text Analytics is a premium Mendix product that is subject to a purchase and sub
 
 On the [Text Analytics](https://marketplace.mendix.com/link/component/118412) page, you can see **Try for free** and **Subscribe** button.  **Try for free** will lead you to create a trial order, it grants you one month free access to the service, it's a simple flow.  **Subscribe** button will lead you to create a subscription order, it is more complex as it requires you to select plans, fill in billing information and pay to complete subscription. Based on your use case, click either button to complete an order, then you will get access to the service mpk and **LicenseToken**. 
 
-#### 4.1.1 Complete a trial order 
+#### 4.1.1 Completing a trial order 
 
 1. Click **Try for free** button, you will be directed to the confirmation page, by ticking "Agree to Terms & Conditions" and clicking **Enable trial**, you will see a page saying your Trial order is confirmed, meaning you have one month access to the service.
 
@@ -301,7 +304,7 @@ On the [Text Analytics](https://marketplace.mendix.com/link/component/118412) pa
 
 3. You will receive a Trial confirmation email with the trial details
 
-#### 4.1.2 Complete a subscription order
+#### 4.1.2 Completing a subscription order
 
 1. Click click **Subscribe** to order a subscription. you will be direct to an order confirmation page.
 
@@ -315,7 +318,7 @@ On the [Text Analytics](https://marketplace.mendix.com/link/component/118412) pa
 
 Now you have receive a Trial/Subscription confirmation email and can see the **Download** button download the mpk. Next step is to get a LicenseToken.
 
-Upon successful trial/subscription order, it takes a few minutes to provision your service instance. When you service instance is ready, you or the technical contact will receive a second email that notifying your service is ready to be used. When you or the technical contact receive this email: 
+Upon successful trial/subscription order, it takes a few minutes to provision your service instance. When your service instance is ready, you or the technical contact will receive a second email that notifying your service is ready to be used. When you or the technical contact receive this email: 
 
 1. Click the Subscription Management Overview link in the provisioning email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
@@ -370,7 +373,7 @@ Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLan
 
        ![createdominantlanguagedetector-nanoflow](attachments/text-analytics/createdominantlanguagedetector-nanoflow.png)
 
-2. From the **Toolbox**, add a **Data view** widget.
+2. From the **Toolbox**, add a **Data view** widget to your page.
 3. Set the **CreateDominantLanguageDetector** nanoflow as the data source of the **Data View** widget as follows:
    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
    2. For **Data source**, select **Nanoflow**.
@@ -448,7 +451,7 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
    2. For **Data source**, select **Nanoflow**.
    3. **Select** the **CreateSentimentDetector** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings. 
-5. Inside the **Data view **widget, add a **Reference selector** widget.
+5. Inside the **Data view** widget, add a **Reference selector** widget.
 6. Change the settings of the **Reference selector** widget as follows:
    1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.
    2. Go to the **Selectable objects** tab.
@@ -457,13 +460,13 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
    5. Go to the **General** tab.
    6. Set **Data source** to **TextAnalytics.Detector_InputLanguage/TextAnalytics.Language/TextAnalytics.Language.Name**.
    7. Click **OK** to save the settings. 
-7. Inside the **Data view **widget, add a **Text area** widget below the **Reference selector** widget.
+7. Inside the **Data view** widget, add a **Text area** widget below the **Reference selector** widget.
 8. Change the settings of the **Text area** widget as follows:
    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
    2. For **Data source**, select the **InputText** attribute from **Data view**.
    3. For **Label caption**, enter *Text*.
    4. Click **OK** to save the settings. 
-9. Inside the **Data view **widget, add a **Button** widget below the **Text area** widget.
+9. Inside the **Data view** widget, add a **Button** widget below the **Text area** widget.
 10. Change the settings of the **Button** widget as follows:
     1.  Double-click the **Button** widget to open the **Action Button** dialog box.
     2.  For Caption, enter *Detect Sentiment*.
@@ -497,7 +500,7 @@ Use the **CreateKeyPhraseDetector** microflow and the **DetectKeyPhrases** nanof
     
         ![call-createkeyphrasedetector-microflow](attachments/text-analytics/call-createkeyphrasedetector-microflow.png)
     
-   4.  Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
+    4.  Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
    
       ![createkeyphrasedetector-nanoflow](attachments/text-analytics/createkeyphrasedetector-nanoflow.png)
    
@@ -507,7 +510,7 @@ Use the **CreateKeyPhraseDetector** microflow and the **DetectKeyPhrases** nanof
    2. For **Data source**, select **Nanoflow**.
    3. **Select** the **CreateKeyPhraseDetector** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings. 
-4. Inside the **Data view **widget, add a **Reference selector** widget.
+4. Inside the **Data view** widget, add a **Reference selector** widget.
 5. Change the settings of the **Reference selector** widget as follows:
    1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.
    2. Go to the **Selectable objects** tab.
@@ -563,7 +566,7 @@ Use the **CreateEntityDetector** microflow and the **DetectEntities** nanoflow t
    2. For **Data source**, select **Nanoflow**.
    3. **Select** the **CreateEntityDetector** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings.   
-4. Inside the **Data view **widget, add a **Reference selector** widget.
+4. Inside the **Data view** widget, add a **Reference selector** widget.
 5. Change the settings of the **Reference selector** widget as follows:
    1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.
    2. Go to the **Selectable objects** tab.
@@ -619,7 +622,7 @@ Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nano
    2. For **Data source**, select **Nanoflow**.
    3. **Select** the **CreatePiiEntityDetector** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings.   
-4. Inside the **Data view **widget, add a **Reference selector** widget.
+4. Inside the **Data view** widget, add a **Reference selector** widget.
 5. Change the settings of the **Reference selector** widget as follows:
    1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.
    2. Go to the **Selectable objects** tab.
@@ -675,7 +678,7 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
    2. For **Data source**, select **Nanoflow**.
    3. **Select** the **CreateSyntaxDetector** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings. 
-4. Inside the **Data view **widget, add a **Reference selector** widget.
+4. Inside the **Data view** widget, add a **Reference selector** widget.
 5. Change the settings of the **Reference selector** widget as follows:
    1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.
    2. Go to the **Selectable objects** tab.
@@ -684,13 +687,13 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
    5. Go to the **General** tab.
    6. Set **Data source** to **TextAnalytics.Detector_InputLanguage/TextAnalytics.Language/TextAnalytics.Language.Name**.
    7. Click **OK** to save the settings.  
-6. Inside the **Data view **widget,  add a **Text area** widget below the **Reference selector** widget.
+6. Inside the **Data view** widget,  add a **Text area** widget below the **Reference selector** widget.
 7. Change the settings of the **Text area** widget as follows:
    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
    2. For **Data source**, select the **InputText** attribute from **Data view**.
    3. For **Label caption**, enter *Text*.
    4. Click **OK** to save the settings.   
-8. Inside the **Data view **widget, add a **Button** widget below the **Text area** widget.
+8. Inside the **Data view** widget, add a **Button** widget below the **Text area** widget.
 9. Change the settings of the **Button** widget as follows:
    1. Double-click the **Button** widget to open the **Action Button** dialog box.
    2. For Caption, enter *Detect Syntax*.

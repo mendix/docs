@@ -37,7 +37,10 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
 
 ## 2 Installation
 
-1. Go to the [Translation](https://marketplace.mendix.com/link/component/118411) component page in the Marketplace, complete "try for free" or "subscribe", then download the *Translation.mpk* file.
+1. Go to the [Translation](https://marketplace.mendix.com/link/component/118411) component page in the Marketplace, complete **Try for free** or **Subscribe**, then download the *Translation.mpk* file.
+
+For more information about How to **Try for free** or **Subscribe**, see the [Obtaining the service mpk and License Token to use the service in Your App](#obtain) section below.
+
 2.  To add the Translation app service to your app in Mendix Studio Pro, follow these steps:
     1.  In the **App Explorer**, right-click the app.
     2.  Click **Import module package** and then select the *Translation.mpk*. 
@@ -83,13 +86,13 @@ The **LicenseToken** constant is used to provide a valid Translation license tok
 
 However, if you only plan to try how Translation works  (meaning, build and run an app that uses Translation locally in Studio Pro or deploy to a Mendix Free App environment), you need to subscribe a trial version, and set the value of the **LicenseToken** constant to that license token in the project environment setting.
 
-For details on how to get a license token, see the [Obtaining a LicenseToken for Your App](#obtain) section below.
+For details on how to get and configure a license token, see the [Obtaining the service mpk and License Token to use the service in Your App](#obtain)section below.
 
 The **TokenEndpoint** constant is used to provide a valid endpoint of security token service for the back-end authentication of the cognitive translation service. The constant comes with default value which point to the production environment of deployed security token service. The security token service issue security tokens that authenticate user's identity. 
 
 ### 3.3 Microflows {#microflows}
 
-The **CreateTranslator** microflow takes **inputText**, **inputLanguageCode**, and **outputLanguageCode** as input parameters and creates translator actions in the back-end service.
+The **CreateTranslator** microflow takes **inputText**, **inputLanguageCode**, and **outputLanguageCode** as input parameters and creates translator actions in the back-end service. For instance, the **inputLanguageCode**, and **outputLanguageCode** can be set as `en-US`.
 
 ![createtranslator](attachments/translation/createtranslator.png)
 
@@ -107,7 +110,7 @@ Translation is a premium Mendix product that is subject to a purchase and subscr
 
 On the [Translation](https://marketplace.mendix.com/link/component/118411) page, you can see **Try for free** and **Subscribe** button.  **Try for free** will lead you to create a trial order, it grants you one month free access to the service, it's a simple flow.  **Subscribe** button will lead you to create a subscription order, it is more complex as it requires you to select plans, fill in billing information and pay to complete subscription. Based on your use case, click either button to complete an order, then you will get access to the service mpk and **LicenseToken**. 
 
-#### 4.1.1 Complete a trial order 
+#### 4.1.1 Completing a trial order 
 
 1. Click **Try for free** button, you will be directed to the confirmation page, by ticking "Agree to Terms & Conditions" and clicking **Enable trial**, you will see a page saying your Trial order is confirmed, meaning you have one month access to the service.
 
@@ -115,7 +118,7 @@ On the [Translation](https://marketplace.mendix.com/link/component/118411) page,
 
 3. You will receive a Trial confirmation email with the trial details
 
-#### 4.1.2 Complete a subscription order
+#### 4.1.2 Completing a subscription order
 
 1. Click click **Subscribe** to order a subscription. you will be direct to an order confirmation page.
 
@@ -129,7 +132,7 @@ On the [Translation](https://marketplace.mendix.com/link/component/118411) page,
 
 Now you have receive a Trial/Subscription confirmation email and can see the **Download** button download the mpk. Next step is to get a LicenseToken.
 
-Upon successful trial/subscription order, it takes a few minutes to provision your service instance. When you service instance is ready, you or the technical contact will receive a second email that notifying your service is ready to be used. When you or the technical contact receive this email: 
+Upon successful trial/subscription order, it takes a few minutes to provision your service instance. When your service instance is ready, you or the technical contact will receive a second email that notifying your service is ready to be used. When you or the technical contact receive this email: 
 
 1. Click the Subscription Management Overview link in the provisioning email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
@@ -176,9 +179,11 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
 1.  Create a nanoflow as follows:
     1.  Name the nanoflow *CreateTranslator*.
     2.  Add the **CreateTranslator** microflow from the **Translation** > **USE_ME** folder to the nanoflow.
-    3.  Double-click the **CreateTranslator** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
+    3.  Double-click the **CreateTranslator** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**. 
 
         ![call-createtranslator-microflow](attachments/translation/call-createtranslator-microflow.png)
+
+        For instance, here we set **inputLanguageCode** as 'en' and **outputLanguageCode** as 'zh', so the default translation will translate from english to chinese. You can also set to other languages, refer to **CreateTranslator** microflow, [Microflows](#microflows).
 
     4.  Right-click the create object activity and select **Set $translator as return value** in the pop-up menu. 
 
@@ -207,7 +212,7 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
    4. Click **OK** to save the settings. 
 5. Inside the **Data view** widget, add a **Group box** widget.
 6. Change the settings of the **Group box** widget as follows:
-   1. Double-click the **Reference selector** widget to open the **Edit Group Box** dialog box.
+   1. Double-click the **Group box** widget to open the **Edit Group Box** dialog box.
    2. For **Caption**, enter *Input*.
    3. Click **OK** to save the settings.
 7. Inside the **Group box** widget, add a **Reference selector **widget.
@@ -228,10 +233,10 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
    4. Click **OK** to save the settings. 
 11. Inside the **Data view** widget, add a second **Group box** widget.
 12. Change the settings of the **Group box** widget as follows:
-    1. Double-click the **Reference selector** widget to open the **Edit Group Box** dialog box.
+    1. Double-click the **Group box** widget to open the **Edit Group Box** dialog box.
     2. For **Caption**, enter *Output*.
     3. Click **OK** to save the settings.
-13. Inside the **Data view** widget, add a **Reference selector **widget.
+13. Inside the **Data view** widget, add a **Reference selector** widget.
 14. Change the settings of the **Reference selector** widget as follows:
     1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.
     2. Go to the **Selectable objects** tab.
@@ -259,6 +264,8 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
     4. For **Nanoflow**, **Select** the **TranslateText** nanoflow from the **Translation** > **USE_ME** folder.
     5. Click **OK** to save the settings.  
 
-19.  Run your app locally. You can perform text translation directly in the browser:
+19. Make sure you have valid license token and configure it correctly, add reference to get and configure license token section.
+
+20. Run your app locally. You can perform text translation directly in the browser:
 
      ![runlocally-translation](attachments/translation/runlocally-translation.png)

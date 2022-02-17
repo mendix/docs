@@ -39,7 +39,10 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
 
 ## 2 Installation
 
-1. Go to the [Text To Speech](https://marketplace.mendix.com/link/component/118593) component page in the Marketplace, complete "try for free" or "subscribe", then download the *TextToSpeech.mpk* file.
+1. Go to the [Text To Speech](https://marketplace.mendix.com/link/component/118593) component page in the Marketplace, complete **Try for free** or **Subscribe**, then download the *TextToSpeech.mpk* file.
+
+For more information about How to **Try for free** or **Subscribe**, see the [Obtaining the service mpk and License Token to use the service in Your App](#obtain) section below.
+
 2.  To add the Text To Speech app service to your app in Mendix Studio Pro, follow these steps:
     1.  In the **App Explorer**, right-click the app.
     2.  Click **Import module package** and then select *TextToSpeech.mpk* file.
@@ -93,7 +96,7 @@ The **LicenseToken** constant is used to provide a valid Text To Speech license 
 
 However, if you only plan to try how Text To Speech works, that is to say, you will only build and run an app that uses Text To Speech locally in Studio Pro or deploy to a Mendix Free App environment, you need to subscribe a trial version, and set the value of the **LicenseToken** constant to that license token in the project environment setting.
 
-For details on how to get a license token, see the [Obtaining a LicenseToken for Your App](#obtain) section below.
+For details on how to get and configure a license token, see the [Obtaining the service mpk and License Token to use the service in Your App](#obtain)section below.
 
 #### 3.2.2 TokenEndpoint
 
@@ -101,7 +104,7 @@ The **TokenEndpoint** constant is used to provide a valid endpoint of security t
 
 ### 3.3 Microflows {#microflows}
 
-The **CreateSpeechSynthesizer** microflow takes **text** and **languageCode** from a voice object as input parameters, and returns a **speechSynthesizer** object that contains the based64-encoded audio string and text string.
+The **CreateSpeechSynthesizer** microflow takes **text** and **languageCode** from a voice object as input parameters, and returns a **speechSynthesizer** object that contains the based64-encoded audio string and text string. For instance, **languageCode** can be set as `en-US`.
 
 ![createspeechsynthesizer](attachments/text-to-speech/createspeechsynthesizer.png)
 
@@ -130,7 +133,7 @@ Text To Speech is a premium Mendix product that is subject to a purchase and sub
 
 On the [Text To Speech](https://marketplace.mendix.com/link/component/118409) page, you can see **Try for free** and **Subscribe** button.  **Try for free** will lead you to create a trial order, it grants you one month free access to the service, it's a simple flow.  **Subscribe** button will lead you to create a subscription order, it is more complex as it requires you to select plans, fill in billing information and pay to complete subscription. Based on your use case, click either button to complete an order, then you will get access to the service mpk and **LicenseToken**. 
 
-#### 4.1.1 Complete a trial order 
+#### 4.1.1 Completing a trial order 
 
 1. Click **Try for free** button, you will be directed to the confirmation page, by ticking "Agree to Terms & Conditions" and clicking **Enable trial**, you will see a page saying your Trial order is confirmed, meaning you have one month access to the service.
 
@@ -138,7 +141,7 @@ On the [Text To Speech](https://marketplace.mendix.com/link/component/118409) pa
 
 3. You will receive a Trial confirmation email with the trial details
 
-#### 4.1.2 Complete a subscription order
+#### 4.1.2 Completing a subscription order
 
 1. Click click **Subscribe** to order a subscription. you will be direct to an order confirmation page.
 
@@ -152,7 +155,7 @@ On the [Text To Speech](https://marketplace.mendix.com/link/component/118409) pa
 
 Now you have receive a Trial/Subscription confirmation email and can see the **Download** button download the mpk. Next step is to get a LicenseToken.
 
-Upon successful trial/subscription order, it takes a few minutes to provision your service instance. When you service instance is ready, you or the technical contact will receive a second email that notifying your service is ready to be used. When you or the technical contact receive this email: 
+Upon successful trial/subscription order, it takes a few minutes to provision your service instance. When your service instance is ready, you or the technical contact will receive a second email that notifying your service is ready to be used. When you or the technical contact receive this email: 
 
 1. Click the Subscription Management Overview link in the provisioning email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
@@ -203,6 +206,8 @@ Follow these steps to configure the text-to-speech conversion:
        
         ![call-createspeechsynthesizer-microflow](attachments/text-to-speech/call-createspeechsynthesizer-microflow.png)
       
+        For instance, here we set **languageCode** as `''`, which means using default language option `en-US`. You can also set to other languages, details refer to the **CreateSpeechSynthesizer** microflow, [Microflows](#microflows).
+
     4.  Right-click the **CreateSpeechSynthesizer** microflow and select **Set $speechSynthesizer as return value** in the pop-up menu.
     
         ![createspeechsynthesizer](attachments/text-to-speech/createspeechsynthesizer-nanoflow.png)
@@ -252,7 +257,7 @@ Follow these steps to configure the text-to-speech conversion:
 
          ![audioplayer-datasource](attachments/text-to-speech/audioplayer-datasource.png)
 
-    4. Click **OK** to save the settings.
+     4. Click **OK** to save the settings.
 11. Inside the **Data view** widget, add a **Button** widget below the **Audio player** widget .
 12. Change the settings of the **Button** widget as follows:
     1. Double-click the **Button** widget to open the **Action Button** dialog box.
@@ -260,7 +265,8 @@ Follow these steps to configure the text-to-speech conversion:
     3. In the **Event** section, set **On click** to **Call a nanoflow**.
     4. For **Nanoflow**, **Select** the **SynthesizeSpeech** nanoflow from the **TextToSpeech** > **USE_ME **folder.
     5. Click **OK** to save the settings. 
-13. Run your app locally. You can convert text to speech directly in the browser:
+13. Make sure your follow the section 6 [Obtaining the service mpk and License Token to use the service in Your App](#obtain) get a valid license token and configure **TextToSpeech.LicenseToken** correctly.
+14. Run your app locally. You can convert text to speech directly in the browser:
 
     ![runlocally-text-to-speech](attachments/text-to-speech/runlocally-text-to-speech.png)
 

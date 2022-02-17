@@ -116,7 +116,7 @@ You need to create demo users for the newly created app roles to be able to test
 
 1. In the App Explorer, open **App** > **Security** > the **Demo users** tab and click **New**.
 2. In the **Add Demo User** dialog box, set the **User name** to **demo_facilities**.
-3. Set **Entity** to **MendixSSO.MendixSSOUser**.
+3. Set **Entity** to **Administration.Account**.
 4. Assign the corresponding user role in the **User roles** section: select the **Facilities** role. 
 5. Click **OK**.
 6. Repeat steps 2-4 to add the **demo_manager** demo user.
@@ -136,7 +136,7 @@ The next step in setting up security is to configure the entity access otherwise
 
     ![Entity Properties](attachments/workflow-how-to-configure/entity-properties.png) 
 
-4. In the **New Access rule** dialog box, do the following {{% todo %}}[Check if this is correct]{{% /todo %}}:
+4. In the **New Access rule** dialog box, do the following:
 
     1. In the **Create and delete rights** section, select **Allow creating new objects** and **Allow deleting existing objects**. 
 
@@ -241,7 +241,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
     3.  Select the **User Task Extended** template.
 
-    4. Click **OK**. A new page and a microflow are created.
+    4. Click **OK**. A new page is generated based on the template you selected. This page is exclusively for this task. When you generate the first task page also a microflow is generated that retrieves data of user tasks.
 
 11. Now you need to make sure that only the relevant information is displayed on the **SpecifyDeviceAndLocation_Workflow** page. In the App Explorer, double-click the **SpecifyDeviceAndLocation_Workflow** page to open it.
 
@@ -276,6 +276,8 @@ The manager of a new employee will get a task to specify devices for the new hir
 Great job! You have configured the user task for the Manager role:
 
 ![Workflow with Specify Device User Task](attachments/workflow-how-to-configure/workflow-with-task.png)
+
+This can be also a good time to test your app that now has the first user task. For more information, see the [Testing the Workflow](#test-workflow) section. 
 
 ## 7 Following Different Paths for the Hire's Location
 
@@ -392,8 +394,8 @@ To test your workflow, you need to switch between different user roles. Follow t
 
 5. Switch between different demo user roles to test the use case. Do can do the following:
 
-    1. Start the onboarding process.
-    2. Test the process: switch users, view inbox for each user, complete tasks, see how new inbox items are created for the user roles you configured at the next task in the process.
+    1. Start the onboarding process: select the HR demo user that has EmployeesToOnboard as the home page, add a new employee, and then click Start Onboarding. 
+    2. Test the process: switch users, view inbox for each user, complete tasks, see how new inbox items are created for the user roles you configured at the next task in the process. 
     3. Open the Workflow Admin Center.
     4. Open the Workflow Dashboard.
 

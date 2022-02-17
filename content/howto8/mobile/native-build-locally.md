@@ -85,7 +85,7 @@ In the sections below you can see the basic steps to get an app up and running o
 
 ### 4.1 Building an Android App with Android Studio
 
-1. Run `npm install` in the app root to install the required dependencies.
+1. Run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) in the app root to install the required dependencies.
 1. Open Android Studio.
 1. Select the `<Native Template root>/android` as the entry point for the app.
 1. After synchronizing the app your Android Studio should look something like this.**Do not accept any suggestions to update to latest Gradle or Kotlin version!**:
@@ -104,7 +104,7 @@ In the sections below you can see the basic steps to get an app up and running o
 
 ### 4.2 Building an iOS App with XCode
 
-1. If you have not ran it yet, run `npm install` in the app root to install the required dependencies.
+1. If you have not ran it yet, run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) in the app root to install the required dependencies.
 1. Change directory by running `cd ios` and run `pod install` to install the iOS dependencies.
 
 	The iOS project is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see CocoaPods [documentation](https://cocoapods.org/#install).
@@ -133,7 +133,7 @@ Mendix native mobile apps are build on top of React Native. Therefore, any React
 From Native Template v4.0.0 and above Mendix supports RN 0.6.x and therefore auto-linking. Auto linking is a React Native mechanism that allows React Native to link the native dependencies defined in the *package.json* file automatically with the native projects. To add dependencies for Native Template v4.0.0 and above, do the following:
 
 1. Add the dependency to the root *package.json* of your Native Template using `npm i -s <dependency name>`.
-1. If the dependency supports auto-linking when `npm install` is run it will automatically add itself correctly to the Android and iOS project. If the dependency does not support auto-linking or requires more configuration, follow its documentation to add the required entries manually.
+1. If the dependency supports auto-linking when `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) is run it will automatically add itself correctly to the Android and iOS project. If the dependency does not support auto-linking or requires more configuration, follow its documentation to add the required entries manually.
 
 ### 5.2 Adding Dependencies For Native Templates Below v4.0.0
 

@@ -70,12 +70,7 @@ In Studio Pro, place the widget in the context of an object that has attributes 
 
 When choosing the step value, the difference between the maximum value and the minimum value should be divisible by 2 (meaning, `(maximumValue - minimumValue) % 2 = 0`).
 
-## 4 Read More
-
-* [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide)
-
-
-## 5 Previous Version's Documentation
+## 4 Previous Version's Documentation
 
 ### Widgets below v2.0.0
 

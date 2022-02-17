@@ -89,7 +89,7 @@ Some pages and microflows are only used from Java code and will be listed as an 
 
    ![](attachments/find-and-find-advanced/mark-as-used-property.png)
 
-## 4 Find Usages Option
+## 4 Find Usages Option {#find-usages}
 
 The **Find Usages** option allows you to find where a certain element is used, for example, to find all buttons that open a certain page.
 

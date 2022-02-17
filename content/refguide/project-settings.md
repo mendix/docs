@@ -98,24 +98,24 @@ The hash algorithm is used to generate hash values for attributes of the **Hashe
 
 | Option | Description |
 | --- | --- |
-| BCrypt (default, recommended) | Resistant to brute-force search attacks. |
-| SSHA256 | Salted Secure Hash Algorithm 2, digest length 256 bits. |
+| **BCrypt** (default, recommended) | Resistant to brute-force search attacks. |
+| **SSHA256** | Salted Secure Hash Algorithm 2, digest length 256 bits. |
 
-Mendix believes both algorithms are secure enough to store passwords within Mendix. The main difference between BCrypt and SSHA256 is that the BCrypt algorithm has been configured so that it is relatively slow on purpose, since it was designed specifically to stop brute force attacks. That's why this results in a slight performance difference with the SSHA256 algorithm.
+Mendix believes both algorithms are secure enough to store passwords within Mendix. The main difference between **BCrypt** and **SSHA256** is that the BCrypt algorithm has been configured so that it is relatively slow on purpose, since it was designed specifically to stop brute force attacks. That's why this results in a slight performance difference with the SSHA256 algorithm.
 
 #### 3.9.1 BCrypt Cost {#bcrypt-cost}
 
-The BCrypt cost value is used to specify the cost of the BCrypt algorithm. This value is 10 by default, and can go up to 30. The higher the value is, the slower the process of hashing values. For more information, see the subsections below.
+The BCrypt cost value is used to specify the cost of the BCrypt algorithm. The default value is 10, and can go up to 30. The higher the value is, the slower the process of hashing values. For more information, see the subsections below.
 
 #### 3.9.2 Performance
 
-If the BCrypt cost is low, the performance difference is hardly noticeable to a single user when signing in (meaning, the password you enter when signing in is hashed using the selected algorithm). This means performance alone is not a reason to choose SSHA256 over BCrypt. The situation can change when dealing with high concurrency of hashing operations, for example, published web services exposing operations that compute quickly, like short-running microflows.
+If the BCrypt cost is low, the performance difference is hardly noticeable to a single user when signing in (meaning, the password you enter when signing in is hashed using the selected algorithm). This means performance alone is not a reason to choose **SSHA256** over **BCrypt**. The situation can change when dealing with high concurrency of hashing operations, for example, published web services exposing operations that compute quickly, like short-running microflows.
 
 #### 3.9.3 Performance Tests
 
 A (web service) user will sign in to execute a web service operation, wait for the operation to finish, and finally get the result back (if any).
 
-Imagine an empty microflow that returns nothing at all exposed as a published web service. We ask one user to execute this operation as many times as he can in one minute (simulated with SoapUI). First we set the hashing algorithm to BCrypt (with cost value 10), then we set it to SSHA256. Any extra overhead here (on top of establishing the connection, building the XML message and so forth) is basically the hashing algorithm, as the operation should take near zero milliseconds and there is no result. So that leaves only the login, or, more precisely, the hashing of the password.
+Imagine an empty microflow that returns nothing at all exposed as a published web service. We ask one user to execute this operation as many times as he can in one minute (simulated with SoapUI). First we set the hashing algorithm to **BCrypt** (with cost value 10), then we set it to **SSHA256**. Any extra overhead here (on top of establishing the connection, building the XML message and so forth) is basically the hashing algorithm, as the operation should take near zero milliseconds and there is no result. So that leaves only the login, or, more precisely, the hashing of the password.
 
 | Hashing Algorithm | Total Operations Executed | Operation per Second | Overhead in Milliseconds |
 | --- | --- | --- | --- |

@@ -94,38 +94,6 @@ A trial gives everyone in your company one-month access to the app service. To s
 
 You have succesfully added the Translation resources to your app.
 
-### 2.3 Configuring the License Token {#configure-license-token}
-
-#### 2.3.1 For an App Deployed Locally or in a Sandbox
-
-If you deploy your app locally or in a sandbox, configure the license token in Studio Pro. Perform the following steps:
-
-1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
-2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
-3. On the **Constants** tab, create a new constant with the predefined constant **Translation.LicenseToken**.
-4. Fill in the **Value** with the license token that you obtained.
-5.  Click **OK** to save the settings.
-
-    ![licensetoken-inmendix](attachments/translation/licensetoken-inmendix.png)
-
-6. When you finish building the app, click **Run** to deploy your app to the cloud.
-
-#### 2.3.2 For an App Deployed in the Mendix Cloud
-
-If you deploy your app in the Mendix Cloud, configure the license token in the Developer Portal:
-
-*  Before you deploy your app, configure the app **Constants** in the deployment package
-
-    ![licensetoken-cloudportal](attachments/translation/licensetoken-cloudportal.png)
-
-*  If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app
-
-    ![licensetoken-envdetails](attachments/translation/licensetoken-envdetails.png)
-
-#### 2.3.3 For an App Deployed in Your Own Environment
-
-If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](/developerportal/deploy/index).
-
 ## 3 Configuration
 
 ### 3.1 Predefined Entities {#predefined-entities}
@@ -261,6 +229,42 @@ The **TranslatorText** microflow takes the **translator** object as an input par
 | Uzbek	|uz |
 | Vietnamese	|vi |
 | Welsh	|cy |
+
+### 3.6 Configuring the License Token {#configure-license-token}
+
+#### 3.6.1 For an App Deployed Locally or in a Sandbox
+
+If you deploy your app locally or in a sandbox, configure the license token in Studio Pro. Perform the following steps:
+
+1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
+
+2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
+
+3. On the **Constants** tab, create a new constant with the predefined constant **Translation.LicenseToken**.
+
+4. Fill in the **Value** with the license token that you obtained.
+
+5. Click **OK** to save the settings.
+
+   ![licensetoken-inmendix](attachments/translation/licensetoken-inmendix.png)
+
+6. When you finish building the app, click **Run** to deploy your app to the cloud.
+
+#### 3.6.2 For an App Deployed in the Mendix Cloud
+
+If you deploy your app in the Mendix Cloud, configure the license token in the Developer Portal:
+
+* Before you deploy your app, configure the app **Constants** in the deployment package
+
+  ![licensetoken-cloudportal](attachments/translation/licensetoken-cloudportal.png)
+
+* If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app
+
+  ![licensetoken-envdetails](attachments/translation/licensetoken-envdetails.png)
+
+#### 3.6.3 For an App Deployed in Your Own Environment
+
+If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](/developerportal/deploy/index).
 
 ## 4 Usage
 

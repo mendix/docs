@@ -246,7 +246,7 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
        
         ![call-createspeechsynthesizer-microflow](attachments/text-to-speech/call-createspeechsynthesizer-microflow.png)
       
-        In this example, the **languageCode** is set to `''`, then the default language option `en-US` is used. You can also set it to a different [language code](#supported-language). For more information about the parameters, see [CreateSpeechSynthesizer](#createspeechsynthesizer)
+        In this example, the **languageCode** is set to `''`, then the default language option `en-US` is used. You can also set it to a different [language code](#supported-languages). For more information about the parameters, see [CreateSpeechSynthesizer](#createspeechsynthesizer)
 
     4.  Right-click the **CreateSpeechSynthesizer** microflow and select **Set $speechSynthesizer as return value** in the pop-up menu.
     

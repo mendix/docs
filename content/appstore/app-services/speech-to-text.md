@@ -237,6 +237,7 @@ To let the [Microphone](#microphone) widget convert speech, set these data sourc
 Below are the steps to build an example web app which can convert speech to text and triggers actions:
 
 1.  In your app module's domain model, create an entity and name it *Microphone*, with the following attributes:
+
    * `NewTranscript` (String)
    * `AllTranscript` (String)
    * `Arguments` (String)
@@ -252,30 +253,24 @@ Below are the steps to build an example web app which can convert speech to text
         ![createmicrophoneentity-nanoflow](attachments/speech-to-text/createmicrophoneentity-nanoflow.png)
    
 3. Add a **Data view** widget to your page.
-
 4. Set the **CreateMicrophoneObject** nanoflow as the data source of the Data View widget as follows:
    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
    2. For **Data Source**, select **Nanoflow** as the **Type**.
    3. **Select** the **CreateMicrophoneObject** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings.
-   
 5. Inside the **Data view** widget, add a [Microphone](#microphone) widget.
-
 6.  Change the settings of the **Microphone** widget as follows:
     1. Double-click the **Microphone** widget to open the **Edit Microphone** dialog box. 
     2. Go to the **Events** tab. 
-    3. For **transcript**, **Select** the **NewTranscript** attribute. In this way, the app will pick up the result of speech conversion. For more information, see the [On Transcript](#on-transcript) section.
-    
+    3. For **transcript**, **Select** the **NewTranscript** attribute. In this way, the app will pick up the result of speech conversion. For more information, see the [On Transcript](#on-transcript) section.   
 7. Inside the **Data view**, add a **Text area** widget.
-
 8. Change the settings of the **Text area** widget as follows:
 
    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
    2. For **Data source**, select the **NewTranscript** attribute from **Data view**.
    3. Click **OK** to save the settings. 
 
-9. Make sure that you have [configured the license token](#configure-license-token)
-
+9. Make sure that you have [configured the license token](#configure-license-token).
 8. Run your app locally. Your app should be able to convert voice to text and trigger the related actions that you set up.
 
 ### 7.2 Handling Microphone Events
@@ -286,13 +281,13 @@ There are two main types of events that can be picked up by the **Microphone** w
 
 #### 7.2.1 On Transcript {#on-transcript}
 
-By binding an attribute to the **transcript** event, the app can pick up the result of speech conversion. Upon successful transcription, this attribute will then store real-time speech to text transcription result of the natural speech segment, such as a change in speaker or a pause in the audio.
+By binding an attribute to the **transcript** event, the app can pick up the result of speech conversion. Upon successful transcription, this attribute will then store the real-time transcription result for each natural speech segment, which is identified by a change in speakers or a pause in the audio.
 
 **transcript** takes a string attribute. You can define an attribute and bind this attribute to **transcript**. This attribute stores the result of text converted from voice. The app can trigger an action after the transcript is received. You can select the custom **Action** from a list of actions.
 
 ![microphone-ontranscript-sample](attachments/speech-to-text/microphone-ontranscript-sample.png) 
 
-For example, you can set up the **Action** to append transcription result of each segment (sentence) and show the transcription results of the whole long speech input.
+For example, you can set up the **Action** to append the transcript of each segment, and show the transcript of the entire long speech input.
 
 ![show-transcript-history](attachments/speech-to-text/show-transcript-history.png)
 
@@ -308,27 +303,34 @@ For example, you can set up the **Action** to make the app show a pop-up window 
 
 ![microphone-event-onerror](attachments/speech-to-text/microphone-event-onerror.jpg)
 
-### 7.3 Adding Speech-Triggered Actions to Your App {#actions}
+### 7.3 Adding Speech-Triggered Actions to Your App
 
-This app service allows you to set up rules of speech recognition that trigger actions. You can do this on the **Voice to Action** tab of the **Microphone** widget. For each action, you can set up an **Utterance**, an **Action** and a **Feedback**. If the transcript received by the **Microphone** widget matches an utterance that you have specified, the app will run the action and give users the voice feedback.
+You an set up rules of speech recognition that trigger actions as follows:
 
-You can use **New**, **Delete**, and **Edit** to manage all the **Actions**.
+1. Double-click the **Microphone** widget. The **Edit Microphone** widget opens.
+3. Go to the **Voice to Action** tab.
+4. For **Arguments**, select **Arguments** from **Data view**.
+5.  For each action, set up an [Utterance](#utterance), an [Action](#actions), and a [Feedback](#feedback).
+    
+    {{% alert type="info" %}}You can use **New**, **Delete**, and **Edit** to manage all the **Actions**.{{% /alert %}}. 
 
-#### 7.3.1 Utterance
+If the transcript received by the **Microphone** widget matches an utterance that you have specified, the app will run the action and give users the voice feedback.
+
+#### 7.3.1 Utterance {#utterance}
 
 **Utterance** can be a string template following natural language syntax or a valid JavaScript regular expression. It is self-defined rules used for matching the transcripts on speech conversion. Some internal trie filters are implemented to extract the key point of short sentences. 
 
 For instance, you can set **Utterance** as `{rotate|move} the model {0:deg} degree around {1:x|y|z} direction`. Then if you say `rotate model 35 degree around x direction`, the **Microphone** widget will match the transcript to this utterance and trigger an action that you set. In **Utterance**, you can use multiple parameters, similar to in JavaScript, for example `{order: name}`, so that it becomes more flexible.
 
-#### 7.3.2 Actions
+#### 7.3.2 Actions {#actions}
 
 You can select an **Action** from a list of actions. This action is triggered when the received transcript matches an utterance.
 
-#### 7.3.3 Voice Feedback
+#### 7.3.3 Feedback {#feedback}
 
-**Voice feedback** is an optional configuration for set action items of voice-to-action, which can be a string template following natural language syntax, which is provided to users after an action is triggered.
+**Feedback** is an optional configuration. It can be a string template following natural language syntax, which is provided to users after an action is triggered.
 
-For instance, you can set **Voice feedback** as `model is rotated {0} degree around {1} direction`, with `{0}` and `{1}` being the parameters passed through **Arguments** in the **Microphone** widget.
+For instance, you can set **Feedback** as `model is rotated {0} degree around {1} direction`, with `{0}` and `{1}` being the parameters passed through **Arguments** in the **Microphone** widget.
 
 ![microphone-voicetoaction-sample](attachments/speech-to-text/microphone-voicetoaction-sample.png)
 

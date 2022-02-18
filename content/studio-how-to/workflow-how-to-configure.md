@@ -315,7 +315,7 @@ You need to configure navigation otherwise the user roles will not be able to re
 
     3. In the **Select Page** dialog box, switch from the current module to the Workflow Commons one using the drop-down menu in the upper-right corner:
 
-        {{% image_container width="400" %}}![Select Page](attachments/workflow-how-to-configure/select-page-for-navigation.png){{% /image_container %}}
+        {{% image_container width="450" %}}![Select Page](attachments/workflow-how-to-configure/select-page-for-navigation.png){{% /image_container %}}
 
     4. Find the **TaskInbox** page in the list and click **Select**.
 
@@ -350,7 +350,8 @@ To test your workflow, you need to switch between different user roles. Follow t
     {{% image_container width="300" %}}![Demo User Role](attachments/workflow-how-to-configure/user-roles.png){{% /image_container %}}
 
 3. You can switch between different demo user roles to test the use case. Do can do the following:
-    1. Select the HR user role, open the **EmployeesToOnboard** page and add a new onboarding request.
+    1. Select the demo_hr user role and start the onboarding process: add a new employee on the **EmployeesToOnboard** page, and then click **Start Onboarding**:
+       ![Start Onboarding Button](attachments/workflow-how-to-configure/demo_hr.png)
     2. Switch to the Manager role, see a new task in the inbox, open the task, add data to it, and complete the task.
     3. Switch to the Facilities user role and complete the process.
 

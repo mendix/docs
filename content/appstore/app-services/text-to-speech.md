@@ -284,7 +284,7 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
     1. Double-click the **Button** widget to open the **Action Button** dialog box.
     2. For **Caption**, enter *Synthesize Speech*.
     3. In the **Event** section, set **On click** to **Call a nanoflow**.
-    4. For **Nanoflow**, **Select** the **SynthesizeSpeech** nanoflow from the **TextToSpeech** > **USE_ME **folder.
+    4. For **Nanoflow**, **Select** the **SynthesizeSpeech** nanoflow from the **TextToSpeech** > **USE_ME** folder.
     5. Click **OK** to save the settings. 
 13. Make sure you have [configured the license token](#configure-license-token).
 14. Run your app locally. You can convert text to speech directly in the browser:

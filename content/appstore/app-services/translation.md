@@ -141,7 +141,7 @@ The **Language** entity is an entity referenced from **Translator** that incorpo
 The **LicenseToken** constant is used to provide a valid Translation license token for the app that uses Translation to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment.
 
 As Translation is a commercial product, whenever the app is deployed in the cloud or deployed locally in Studio Pro, you need a valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment settings.
-
+`
 For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and the [Configuring the License Token](#configure-license-token) section .
 
 #### 5.2.2 TokenEndpoint
@@ -291,7 +291,7 @@ The **TranslatorText** microflow takes the **translator** object as an input par
    1. Double-click the **Group box** widget to open the **Edit Group Box** dialog box.
    2. For **Caption**, enter *Input*.
    3. Click **OK** to save the settings.
-7. Inside the **Group box** widget, add a **Reference selector **widget.
+7. Inside the **Group box** widget, add a **Reference selector** widget.
 8. Change the settings of the **Reference selector** widget as follows:
    1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.
    2. Go to the **Selectable objects** tab.

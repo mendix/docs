@@ -113,7 +113,7 @@ The **LicenseToken** constant provides a valid license token for an app that use
 
 #### 3.2.2 TokenEndpoint
 
-The **TokenEndpoint** constant provides a valid endpoint of security token service for the back-end authentication of the cognitive speech-to-text service. The constant comes with a default value which points to the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
+The **TokenEndpoint** constant provides a valid endpoint of security token service for the back-end authentication of the app service. The constant comes with a default value which points to the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
 
 ### 3.3 Microflows{#microflows}
 
@@ -319,7 +319,7 @@ You an set up rules of speech recognition that trigger actions as follows:
 3. For **Arguments**, select **Arguments** from **Data view**.
 4.  For each action, set up an [Utterance](#utterance), an [Action](#actions) and a [Feedback](#feedback).
 
-    {{% alert type="info" %}}IYou can use **New**, **Delete**, and **Edit** to manage all the **Actions**.{{% /alert %}}. 
+    {{% alert type="info" %}}You can use **New**, **Delete**, and **Edit** to manage all the **Actions**.{{% /alert %}}
 
 If the transcript received by the **Microphone** widget matches an utterance that you have specified, the app will run the action and give users the voice feedback.
 

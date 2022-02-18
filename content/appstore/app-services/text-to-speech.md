@@ -127,7 +127,7 @@ The **LicenseToken** constant provides a valid license token for an app that use
 
 #### 3.2.2 TokenEndpoint
 
-The **TokenEndpoint** constant provides a valid endpoint of security token service for the back-end authentication of the cognitive text-to-speech service. The constant comes with a default value which points to the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
+The **TokenEndpoint** constant provides a valid endpoint of security token service for the back-end authentication of the app service. The constant comes with a default value which points to the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
 
 ### 3.3 Microflows {#microflows}
 

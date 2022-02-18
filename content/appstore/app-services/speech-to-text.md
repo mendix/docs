@@ -40,18 +40,31 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4]
 
 ## 2 Obtaining a License Token {#obtain-license-token}
 
-Speech to Text is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in an app, you need to start a subscription or a trial to get a license token:
+Speech to Text is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in your app, first you need to start a subscription or a trial to get a license token.
+
+### 2.1 Starting a Trial
+
+A trial gives everyone in your company one-month access to the app service. To start a trial, perform the following steps:
 
 1. Go to the [Speech to Text](https://marketplace.mendix.com/link/component/118408) page in the marketplace.
+2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
+3. Select the check box to agree to the **Terms & Conditions**.
+4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
+5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used. 
+6. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](https://docs.mendix.com/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+7. Click **Translation** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
 
-1. Click **Subscribe** to start a subscription or click **Try for Free** to start a trial. The trial gives you one-month access to the app service.
-2.  To start a subscription, fill in [Technical Contact](https://docs.mendix.com/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
+### 2.2 Subscribing to the App Service
 
-    For the trial, you do not need to fill in this information.
-
-3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](https://docs.mendix.com/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
-4. Click **Speech to Text** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
-5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
+1. Go to the [Speech to Text](https://marketplace.mendix.com/link/component/118408) page in the marketplace.
+2. Click **Subscribe** to start a subscription.
+3. Select your subscription plan.
+4. Fill in [Technical Contact](https://docs.mendix.com/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
+5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Contact will receive an email that says the app service is ready to be used. 
+6. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](https://docs.mendix.com/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+7. Click **Translation** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
 
 ## 3 Installation
 

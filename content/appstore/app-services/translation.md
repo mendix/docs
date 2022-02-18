@@ -37,82 +37,92 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
 
 ## 2 Obtaining a License Token {#obtain-license-token}
 
-Translation is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in an app, you need to start a subscription or a trial to get a license token:
+Translation is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in your app, first you need to start a subscription or a trial to get a license token.
+
+### 2.1 Starting a Trial
+
+A trial gives everyone in your company one-month access to the app service. To start a trial, perform the following steps:
 
 1. Go to the [Translation](https://marketplace.mendix.com/link/component/118411) page in the marketplace.
+2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
+3. Select the check box to agree to the **Terms & Conditions**.
+4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
+5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used. 
+6. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](https://docs.mendix.com/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+7. Click **Translation** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
 
-2. Click **Subscribe** to start a subscription or click **Try for Free** to start a trial. The trial gives you one-month access to the app service.
 
-3. To start a subscription, fill in [Technical Contact](https://docs.mendix.com/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
+### 2.2 Subscribing to the App Service
 
-   For the trial, you do not need to fill in this information.
-
-4. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](https://docs.mendix.com/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
-
-5. Click **Translation** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
-
+1. Go to the [Translation](https://marketplace.mendix.com/link/component/118411) page in the marketplace.
+2. Click **Subscribe** to start a subscription.
+3. Select your subscription plan.
+4. Fill in [Technical Contact](https://docs.mendix.com/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
+5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Contact will receive an email that says the app service is ready to be used. 
+6. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](https://docs.mendix.com/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+7. Click **Translation** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
 6. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
 
-## 3 Configuring the License Token {#configure-license-token}
+## 3 Installation {#install}
 
-### 3.1 For an App Deployed Locally or in a Sandbox
+1. Go to the [Translation](https://marketplace.mendix.com/link/component/118411) page in the Marketplace.
+
+2. **Download** the *Translation.mpk* file.
+
+3. To add the Translation app service to your app in Mendix Studio Pro, follow these steps: 
+
+   1. In the **App Explorer**, right-click the app.
+
+   2. Click **Import module package** and then select the *Translation.mpk*. 
+
+      In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project.
+
+      ![import-translation](attachments/translation/import-translation.png)
+
+      {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+
+   3. In the **Import Module** dialog box, click **Import**. 
+
+   4. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
+
+   5. Open the **App Explorer**  to view the **Translation** module. You can also find the app service in the **Cognitive AI widgets** category in the **Toolbox**.   
+
+4. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
+
+You have succesfully added the Translation resources to your app.
+
+## 4 Configuring the License Token {#configure-license-token}
+
+### 4.1 For an App Deployed Locally or in a Sandbox
 
 If you deploy your app locally or in a sandbox, configure the license token in Studio Pro. Perform the following steps:
 
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
-
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
-
 3. On the **Constants** tab, create a new constant with the predefined constant **Translation.LicenseToken**.
-
 4. Fill in the **Value** with the license token that you obtained.
+5.  Click **OK** to save the settings.
 
-5. Click **OK** to save the settings.
-
-   ![licensetoken-inmendix](attachments/translation/licensetoken-inmendix.png)
+    ![licensetoken-inmendix](attachments/translation/licensetoken-inmendix.png)
 
 6. When you finish building the app, click **Run** to deploy your app to the cloud.
 
-### 3.2 For an App Deployed in the Mendix Cloud
+### 4.2 For an App Deployed in the Mendix Cloud
 
 If you deploy your app in the Mendix Cloud, configure the license token in the Developer Portal:
 
-* Before you deploy your app, configure the app **Constants** in the deployment package
+*  Before you deploy your app, configure the app **Constants** in the deployment package
 
-![licensetoken-cloudportal](attachments/translation/licensetoken-cloudportal.png)
+    ![licensetoken-cloudportal](attachments/translation/licensetoken-cloudportal.png)
 
-* If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app
+*  If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app
 
-![licensetoken-envdetails](attachments/translation/licensetoken-envdetails.png)
+    ![licensetoken-envdetails](attachments/translation/licensetoken-envdetails.png)
 
-### 3.3 For an App Deployed in Your Own Environment
+### 4.3 For an App Deployed in Your Own Environment
 
 If you deploy your app in your own environment, you need to set up an environment variable for the license token and configure it there. For more information, see the documentation of your own environment.
-
-## 4 Installation
-
-1. Go to the [Translation](https://marketplace.mendix.com/link/component/118411) page in the Marketplace.
-
-2.  **Download** the *Translation.mpk* file.
-    
-2.  To add the Translation app service to your app in Mendix Studio Pro, follow these steps:
-    
-    1.  In the **App Explorer**, right-click the app.
-   2.  Click **Import module package** and then select the *Translation.mpk*. 
-   
-       In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project.
-   
-       ![import-translation](attachments/translation/import-translation.png)
-   
-       {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
-   
-   3. In the **Import Module** dialog box, click **Import**. 
-   4. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
-   5. Open the **App Explorer**  to view the **Translation** module. You can also find the app service in the **Cognitive AI widgets** category in the **Toolbox**.
-   
-3.  Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
-
-You have succesfully added the Translation resources to your app.
 
 ## 5 Configuration
 

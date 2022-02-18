@@ -55,9 +55,9 @@ Translation is a premium Mendix product that is subject to a purchase and subscr
 
 ## 3 Configuring the License Token {#configure-license-token}
 
-### 3.1 In Studio Pro
+### 3.1 For an App Deployed Locally or in a Sandbox
 
-If you run your app locally, configure the license token in Studio Pro. Perform the following steps:
+If you deploy your app locally or in a sandbox, configure the license token in Studio Pro. Perform the following steps:
 
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
 
@@ -73,9 +73,9 @@ If you run your app locally, configure the license token in Studio Pro. Perform 
 
 6. When you finish building the app, click **Run** to deploy your app to the cloud.
 
-### 3.2 In the Developer Portal
+### 3.2 For an App Deployed in the Mendix Cloud
 
-If you deploy your app in the cloud, configure the license token in the Developer Portal:
+If you deploy your app in the Mendix Cloud, configure the license token in the Developer Portal:
 
 * Before you deploy your app, configure the app **Constants** in the deployment package
 
@@ -84,6 +84,10 @@ If you deploy your app in the cloud, configure the license token in the Develope
 * If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app
 
 ![licensetoken-envdetails](attachments/translation/licensetoken-envdetails.png)
+
+### 3.3 For an App Deployed in Your Own Environment
+
+If you deploy your app in your own environment, you need to set up an environment variable for the license token and configure it there. For more information, see the documentation of your own environment.
 
 ## 4 Installation
 
@@ -140,11 +144,7 @@ The **Language** entity is an entity referenced from **Translator** that incorpo
 
 #### 5.2.1 Constants
 
-The **LicenseToken** constant is used to provide a valid Translation license token for the app that uses Translation to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment.
-
-As Translation is a commercial product, whenever the app is deployed in the cloud or deployed locally in Studio Pro, you need a valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment settings.
-`
-For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and the [Configuring the License Token](#configure-license-token) section .
+The **LicenseToken** constant provides a valid license token for an app that uses this app service. As Translation is a commercial product, no matter your app is deployed in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), your own environment, or locally in Studio Pro, you need a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token) section.
 
 #### 5.2.2 TokenEndpoint
 

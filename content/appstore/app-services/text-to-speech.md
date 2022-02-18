@@ -78,9 +78,9 @@ You have successfully added the Text To Speech resources to your app.
 
 ## 4  Configuring the License Token {#configure-license-token}
 
-### 4.1 In Studio Pro
+### 4.1 For an App Deployed Locally or in a Sandbox
 
-If you run your app locally, configure the license token in Studio Pro. Perform the following steps:
+If you deploy your app locally, configure the license token in Studio Pro. Perform the following steps:
 
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
 
@@ -96,9 +96,9 @@ If you run your app locally, configure the license token in Studio Pro. Perform 
 
 6. When you finish building the app, click **Run** to deploy your app to the cloud.
 
-### 4.2 In the Developer Portal
+### 4.2 For an App Deployed in the Mendix Cloud
 
-If you deploy your app in the cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details):
+If you deploy your app in the Mendix Cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details):
 
 * Before you deploy your app, configure the app **Constants** in the deployment package
 
@@ -107,6 +107,10 @@ If you deploy your app in the cloud, configure the license token in the [Develop
 * If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app
 
 ![licensetoken-envdetails](attachments/text-to-speech/licensetoken-envdetails.png)
+
+### 4.3 For an App Deployed in Your Own Environment
+
+If you deploy your app in your own environment, you need to set up an environment variable for the license token and configure it there. For more information, see the documentation of your own environment.
 
 ## 5 Configuration
 
@@ -142,15 +146,11 @@ There is a many-to-many association between the **SpeechSynthesizer** entity and
 
 #### 5.2.1 LicenseToken
 
-The **LicenseToken** constant is used to provide a valid Text To Speech license token for the app that uses Text To Speech to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment.
-
-As Text To Speech is a commercial product, whenever the app is deployed in the cloud or deployed locally in Studio Pro, you need a valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment settings.
-
-For details on how to get and configure a license token, see the [Obtaining a LicenseToken for Your App](#obtain-license-token) section and the [Configuring the License Token](#configure-license-token) section.
+The **LicenseToken** constant provides a valid license token for an app that uses this app service. As Text to Speech is a commercial product, no matter your app is deployed in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), your own environment, or locally in Studio Pro, you need a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token) section.
 
 #### 5.2.2 TokenEndpoint
 
-The **TokenEndpoint** constant is used to provide a valid endpoint of security token service for the back-end authentication of the cognitive text-to-speech service. The constant comes with a default value which points to the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
+The **TokenEndpoint** constant provides a valid endpoint of security token service for the back-end authentication of the cognitive text-to-speech service. The constant comes with a default value which points to the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
 
 ### 5.3 Microflows {#microflows}
 

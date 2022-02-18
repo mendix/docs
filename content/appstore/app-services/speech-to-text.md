@@ -78,9 +78,9 @@ You have successfully added the Speech To Text resources to your app.
 
 ## 4 Configuring the LicenseToken {#configure-license-token}
 
-### 4.1 In Studio Pro
+### 4.1 For an App Deployed Locally or in a Sandbox
 
-If you run your app locally, configure the license token in Studio Pro as follows:
+If you deploy your app locally, configure the license token in Studio Pro as follows:
 
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
 
@@ -96,9 +96,9 @@ If you run your app locally, configure the license token in Studio Pro as follow
 
 6. When you finish building the app, click **Run** to deploy your app to the cloud.
 
-### 4.2 In the Developer Portal
+### 4.2 For an App Deployed in the Mendix Cloud
 
-If you deploy your app in the cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details):
+If you deploy your app in the Mendix Cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details):
 
 * Before you deploy your app, configure the app **Constants** in the deployment package
 
@@ -107,6 +107,10 @@ If you deploy your app in the cloud, configure the license token in the [Develop
 * If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app
 
 ![licensetoken-envdetails](attachments/speech-to-text/licensetoken-envdetails.png)
+
+### 4.3 For an App Deployed in Your Own Environment
+
+If you deploy your app in your own environment, you need to set up an environment variable for the license token and configure it there. For more information, see the documentation of your own environment.
 
 ## 5 Configuration
 
@@ -127,13 +131,7 @@ The **MediaDocument** entity is a conceptual entity that inherits from the **Sys
 
 #### 5.2.1 LicenseToken
 
-The **LicenseToken** constant offers a valid Speech To Text license token to the app that uses Speech To Text to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. 
-
-As Speech To Text is a commercial product, to use it in an app, you need a long-term, valid license token. If you are working with Mendix Licensed Cloud Node, you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting. You also need to set the value of the **LicenseToken** constant to that license token in the project environment setting to make sure your app works in your local environment as well.
-
-However, if you only plan to try how Speech To Text works, that is to say, you will only build and run an app that uses Speech To Text locally in Studio Pro or deploy to a Mendix Free App environment, then you need a trial version, and set the value of the **LicenseToken** constant to that license token in the project environment setting.
-
-For details on how to get and configure a license token, see the [Obtaining a LicenseToken for Your App](#obtain-license-token) section and the [Configuring the License Token](#configure-license-token) section.
+The **LicenseToken** constant provides a valid license token for an app that uses this app service. As Speech to Text is a commercial product, no matter your app is deployed in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), your own environment, or locally in Studio Pro, you need a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token) section.
 
 #### 5.2.2 TokenEndpoint
 

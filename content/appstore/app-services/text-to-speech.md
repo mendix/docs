@@ -37,11 +37,13 @@ This app service enables doing the following:
 
 This app service can only be used with Studio Pro 9 versions starting with [9.4.0](/releasenotes/studio-pro/9.4).
 
-## 2 Obtaining a License Token {#obtain-license-token}
+## 2 Installation
+
+### 2.1 Obtaining a License Token {#obtain-license-token}
 
 Text to Speech is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in your app, first you need to start a subscription or a trial to get a license token.
 
-### 2.1 Starting a Trial
+#### 2.1.1 Starting a Trial
 
 A trial gives everyone in your company one-month access to the app service. To start a trial, perform the following steps:
 
@@ -55,7 +57,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
 
 
-### 2.2 Subscribing to the App Service
+#### 2.1.2 Subscribing to the App Service
 
 1. Go to the [Text To Speech](https://marketplace.mendix.com/link/component/118593) page in the marketplace.
 2. Click **Subscribe** to start a subscription.
@@ -66,7 +68,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 7. Click **Translation** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
 8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
 
-## 3 Installation
+### 2.2 Downloading the Component from the Marketplace
 
 1. Go to the [Text To Speech](https://marketplace.mendix.com/link/component/118593) page in the Marketplace.
 2.  **Download** the *TextToSpeech.mpk* file.
@@ -87,9 +89,9 @@ A trial gives everyone in your company one-month access to the app service. To s
 
 You have successfully added the Text To Speech resources to your app.
 
-## 4  Configuring the License Token {#configure-license-token}
+### 2.3 Configuring the License Token {#configure-license-token}
 
-### 4.1 For an App Deployed Locally or in a Sandbox
+#### 2.3.1 For an App Deployed Locally or in a Sandbox
 
 If you deploy your app locally, configure the license token in Studio Pro. Perform the following steps:
 
@@ -107,7 +109,7 @@ If you deploy your app locally, configure the license token in Studio Pro. Perfo
 
 6. When you finish building the app, click **Run** to deploy your app to the cloud.
 
-### 4.2 For an App Deployed in the Mendix Cloud
+#### 2.3.2 For an App Deployed in the Mendix Cloud
 
 If you deploy your app in the Mendix Cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details):
 
@@ -119,15 +121,15 @@ If you deploy your app in the Mendix Cloud, configure the license token in the [
 
 ![licensetoken-envdetails](attachments/text-to-speech/licensetoken-envdetails.png)
 
-### 4.3 For an App Deployed in Your Own Environment
+#### 2.3.3 For an App Deployed in Your Own Environment
 
-If you deploy your app in your own environment, you need to set up an environment variable for the license token and configure it there. For more information, see the documentation of your own environment.
+If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](/developerportal/deploy/index).
 
-## 5 Configuration
+## 3 Configuration
 
-### 5.1 Predefined Entities {#predefined-entities}
+### 3.1 Predefined Entities {#predefined-entities}
 
-#### 5.1.1 SpeechSynthesizer
+#### 3.1.1 SpeechSynthesizer
 
 The **SpeechSynthesizer** entity is a conceptual entity that incorporates all the information of the synthesized media document. It contains the text and synthesized audio string. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
@@ -153,19 +155,19 @@ The **Voice** entity is an entity referenced from **SpeechSynthesizer** that inc
 
 There is a many-to-many association between the **SpeechSynthesizer** entity and the **Voice** entity.
 
-### 5.2 Constants {#constants}
+### 3.2 Constants {#constants}
 
-#### 5.2.1 LicenseToken
+#### 3.2.1 LicenseToken
 
 The **LicenseToken** constant provides a valid license token for an app that uses this app service. As Text to Speech is a commercial product, no matter your app is deployed in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), your own environment, or locally in Studio Pro, you need a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token) section.
 
-#### 5.2.2 TokenEndpoint
+#### 3.2.2 TokenEndpoint
 
 The **TokenEndpoint** constant provides a valid endpoint of security token service for the back-end authentication of the cognitive text-to-speech service. The constant comes with a default value which points to the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
 
-### 5.3 Microflows {#microflows}
+### 3.3 Microflows {#microflows}
 
-#### 5.3.1 CreateSpeechSynthesizer
+#### 3.3.1 CreateSpeechSynthesizer
 
 The **CreateSpeechSynthesizer** microflow takes **text** and **languageCode** from a voice object as input parameters, and returns a **speechSynthesizer** object that contains the based64-encoded audio string and text string. For instance, **languageCode** can be set to `en-US`. 
 
@@ -175,17 +177,17 @@ The **CreateSpeechSynthesizer** microflow takes **text** and **languageCode** fr
 For more information about language codes, see the [Supported Languages](#supported-languages) section.
 {{% /alert %}}
 
-### 5.4 Nanoflows {#nanoflows}
+### 3.4 Nanoflows {#nanoflows}
 
-#### 5.4.1 SynthesizeSpeech
+#### 3.4.1 SynthesizeSpeech
 
 The **SynthesizeSpeech** nanoflow takes a **speechSynthesizer** object as an input parameter, syntheizes audio string from the input parameter, and updates the **speechSynthesizer** audio string parameter.
 
 ![synthesizespeech](attachments/text-to-speech/synthesizespeech.png)
 
-### 5.5 Widgets {#widgets}
+### 3.5 Widgets {#widgets}
 
-#### 5.5.1 AudioPlayer {#audioplayer}
+#### 3.5.1 AudioPlayer {#audioplayer}
 
 The core widget required is the **AudioPlayer** widget. You can make the following settings for the **AudioPlayer** widget:
 
@@ -193,7 +195,7 @@ The core widget required is the **AudioPlayer** widget. You can make the followi
 	* **Source**  – the value of the **Audio** attribute of a **speechSynthesizer** object
 	* **Controls**  – determines if it offers controls to allow the end user to control audio playback, including volume, seeking, and pause/resume playback; this accepts a Boolean value
 
-### 5.6 Supported Languages {#supported-languages}
+### 3.6 Supported Languages {#supported-languages}
 
 | Language               | Language Code |
 | ---------------------- | ------------- |
@@ -229,7 +231,9 @@ The core widget required is the **AudioPlayer** widget. You can make the followi
 | Turkish                | tr-TR         |
 | Welsh                  | cy-GB         |
 
-## 6 Converting Text to Speech in Your Browser
+## 4 Usage
+
+### 4.1 Converting Text to Speech in Your Browser
 
 When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up the text-to-speech conversion:
 
@@ -304,3 +308,10 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
 
     ![runlocally-text-to-speech](attachments/text-to-speech/runlocally-text-to-speech.png)
 
+### 4.2 Checking Statistics on the Usage Dashboard
+
+The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
+
+1. Log into the Marketplace.
+2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+3. Click **Speech to Text** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.

@@ -42,11 +42,13 @@ This app service enables doing the following:
 
 This app service can only be used with Studio Pro 9 versions starting with [9.4.0](/releasenotes/studio-pro/9.4).
 
-## 2 Obtaining a License Token {#obtain-license-token}
+## 2 Installation
+
+### 2.1 Obtaining a License Token {#obtain-license-token}
 
 Text Analytics is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in your app, first you need to start a subscription or a trial to get a license token.
 
-### 2.1 Starting a Trial
+#### 2.1.1 Starting a Trial
 
 A trial gives everyone in your company one-month access to the app service. To start a trial, perform the following steps:
 
@@ -59,7 +61,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 7. Click **Translation** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
 8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
 
-### 2.2 Subscribing to the App Service
+#### 2.1.2 Subscribing to the App Service
 
 1. Go to the [Text Analytics](https://marketplace.mendix.com/link/component/118412) page in the marketplace.
 2. Click **Subscribe** to start a subscription.
@@ -70,7 +72,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 7. Click **Translation** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
 8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
 
-## 3 Installation
+### 2.2 Downloading the Component from the Marketplace
 
 1. Go to the [Text Analytics](https://marketplace.mendix.com/link/component/118412) page in the marketplace.
 2. **Download** the *TextAnalytics.mpk* file.
@@ -91,9 +93,9 @@ A trial gives everyone in your company one-month access to the app service. To s
 
 You have successfully added the Text Analytics resources to your app.
 
-## 4 Configuring the License Token {#configure-license-token}
+### 2.3 Configuring the License Token {#configure-license-token}
 
-### 4.1 For an App Deployed Locally or in a Sandbox
+#### 2.3.1 For an App Deployed Locally or in a Sandbox
 
 If you deploy your app locally, configure the license token in Studio Pro. Perform the following steps:
 
@@ -111,7 +113,7 @@ If you deploy your app locally, configure the license token in Studio Pro. Perfo
 
 6. When you finish building the app, click **Run** to deploy your app to the cloud.
 
-### 4.2 For an App Deployed in the Mendix Cloud
+#### 2.3.2 For an App Deployed in the Mendix Cloud
 
 If you deploy your app in the Mendix Cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details):
 
@@ -123,15 +125,15 @@ If you deploy your app in the Mendix Cloud, configure the license token in the [
 
 ![licensetoken-envdetails](attachments/text-analytics/licensetoken-envdetails.png)
 
-### 4.3 For an App Deployed in Your Own Environment
+#### 2.3.3 For an App Deployed in Your Own Environment
 
-If you deploy your app in your own environment, you need to set up an environment variable for the license token and configure it there. For more information, see the documentation of your own environment.
+If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](/developerportal/deploy/index).
 
-## 5 Configuration
+## 3 Configuration
 
-### 5.1 Predefined Entities {#predefined-entities}
+### 3.1 Predefined Entities {#predefined-entities}
 
-#### 5.1.1 DominantLanguage
+#### 3.1.1 DominantLanguage
 
 The **DominantLanguage** entity is an entity referenced from **DominantLanguageDetector** and **Language** that incorporates all the information of the supported dominant language object to help you get a confident score of the dominant language from given text.
 
@@ -141,7 +143,7 @@ The **DominantLanguage** entity is an entity referenced from **DominantLanguageD
 | --- | --- |---|
 | `ConfidenceScore` | Decimal |The confident score of dominant language. |
 
-#### 5.1.2 Language
+#### 3.1.2 Language
 
 The **Language** entity is a conceptual entity that incorporates all the information of the supported language object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
@@ -152,7 +154,7 @@ The **Language** entity is a conceptual entity that incorporates all the informa
 | `Name` | String | The name of the language. |
 | `Code` | String |The [language code](#supported-languages). |
 
-#### 5.1.3 Detector
+#### 3.1.3 Detector
 
 The **Detector** entity is a conceptual entity that incorporates all the information of the supported detector object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
@@ -162,7 +164,7 @@ The **Detector** entity is a conceptual entity that incorporates all the informa
 | --- | --- |---|
 | `InputText` | String |The input text of target detector. |
 
-#### 5.1.4 Seniment
+#### 3.1.4 Seniment
 
 The **Sentiment** entity is an entity referenced from **SentimentDetector** and **SentimentScore** that incorporates all the information of the supported sentiment object to help you perform sentiment analysis from given text.
 
@@ -172,7 +174,7 @@ The **Sentiment** entity is an entity referenced from **SentimentDetector** and 
 | --- | --- |---|
 | `SentimentType` | Enumeration | The customized sentiment type enumeration. |
 
-#### 5.1.5 SentimentScore
+#### 3.1.5 SentimentScore
 
 The **SentimentScore** entity is a conceptual entity that incorporates all the information of the supported level of confidence of the sentiment score detector object.
 
@@ -185,7 +187,7 @@ The **SentimentScore** entity is a conceptual entity that incorporates all the i
 | `Neutral` | Decimal |The level of confidence that The detector has in the accuracy of its detection of the NEUTRAL sentiment. |
 | `Mixed` | Decimal |The level of confidence that the detector has in the accuracy of its detection of the MIXED sentiment. |
 
-#### 5.1.6 Entity
+#### 3.1.6 Entity
 
 The **Entity** entity is a conceptual entity that inherits from the **TextAnalytics.Response** entity and is referenced from **EntityDetector** that incorporates all the information of the supported entity object to help you perform entity detection from given text.
 
@@ -195,7 +197,7 @@ The **Entity** entity is a conceptual entity that inherits from the **TextAnalyt
 | --- | --- |---|
 | `EntityType` | Enumeration |The customized entity type. |
 
-#### 5.1.7 PiiEntity
+#### 3.1.7 PiiEntity
 
 The **PiiEntity** entity is a conceptual entity that inherits from the **TextAnalytics.Response** entity and referenced from **PiiEntityDetector** that incorporates all the information of the supported PII entity object to help you perform PII entity detection from given text.
 
@@ -205,13 +207,13 @@ The **PiiEntity** entity is a conceptual entity that inherits from the **TextAna
 | --- | --- |---|
 | `PiiEntityType` | Enumeration | The customized PII entity type. |
 
-#### 5.1.8 KeyPhrase
+#### 3.1.8 KeyPhrase
 
 The **KeyPhrase** entity is a conceptual entity that inherits from **TextAnalytics.Response** entity and is referenced from **KeyPhraseDetector** that incorporates all the information of the supported key phrase object to help you perform key phrase detection from given text.
 
 ![keyphrase](attachments/text-analytics/keyphrase.png)
 
-#### 5.1.9 SyntaxToken
+#### 3.1.9 SyntaxToken
 
 The **SyntaxToken** entity is a conceptual entity that inherits from **TextAnalytics.Response** entity and is referenced from **SyntaxDetector** that incorporates all the information of the supported syntax token object to help you perform syntax token extraction from given text.
 
@@ -222,7 +224,7 @@ The **SyntaxToken** entity is a conceptual entity that inherits from **TextAnaly
 | `Index` | Integer |The index of the token. |
 | `PartOfSpeech` | Enumeration |The part of speech tag enumeration for the token. |
 
-#### 5.1.10 Response
+#### 3.1.10 Response
 
 The **Response** entity is a conceptual entity that incorporates all the information of the supported response data object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
@@ -235,95 +237,95 @@ The **Response** entity is a conceptual entity that incorporates all the informa
 | `EndOffset` | Integer |The zero-based offset from the beginning of the source text to the last character in the word. |
 | `ConfidenceScore` | Decimal |The level of confidence that the Text Analytics module has in the accuracy of the detection. |
 
-### 5.2 Constants {#constants}
+### 3.2 Constants {#constants}
 
-#### 5.2.1 LicenseToken
+#### 3.2.1 LicenseToken
 
 The **LicenseToken** constant provides a valid license token for an app that uses this app service. As Text Analytics is a commercial product, no matter your app is deployed in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), your own environment, or locally in Studio Pro, you need a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token) section.
 
-#### 5.2.2 TokenEndpoint
+#### 3.2.2 TokenEndpoint
 
 The **TokenEndpoint** constant provides a valid endpoint of security token service for the back-end authentication of the cognitive text analytics service. The constant comes with a default value which points to the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
 
-### 5.3 Microflows {#microflows}
+### 3.3 Microflows {#microflows}
 
-#### 5.3.1 CreateDominantLanguageDetector
+#### 3.3.1 CreateDominantLanguageDetector
 
 The **CreateDominantLanguageDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create DominantLanguageDetector as a return object from the back-end service.
 
 ![createdominantlanguagedetector](attachments/text-analytics/createdominantlanguagedetector.png)
 
-#### 5.3.2 CreateEntityDetector
+#### 3.3.2 CreateEntityDetector
 
 The **CreateEntityDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateEntityDetector as a return object from the back-end service.
 
 ![createentitydetector](attachments/text-analytics/createentitydetector.png)
 
-#### 5.3.3 CreateKeyPhraseDetector
+#### 3.3.3 CreateKeyPhraseDetector
 
 The **CreateKeyPhraseDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateKeyPhraseDetector as a return object from the back-end service.
 
 ![createkeyphrasedetector](attachments/text-analytics/createkeyphrasedetector.png)
 
-#### 5.3.4 CreatePiiEntityDetector
+#### 3.3.4 CreatePiiEntityDetector
 
 The **CreatePiiEntityDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreatePiiEntityDetector as a return object from the back-end service.
 
 ![createpiientitydetector](attachments/text-analytics/createpiientitydetector.png)
 
-#### 5.3.5 CreateSentimentDetector
+#### 3.3.5 CreateSentimentDetector
 
 The **CreateSentimentDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateSentimentDetector as a return object from the back-end service.
 
 ![createsentimentdetector](attachments/text-analytics/createsentimentdetector.png)
 
-#### 5.3.6 CreateSyntaxDetector
+#### 3.3.6 CreateSyntaxDetector
 
 The **CreateSyntaxDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateSyntaxDetector as a return object from the back-end service.
 
 ![createsyntaxdetector](attachments/text-analytics/createsyntaxdetector.png)
 
-### 5.4 Nanoflows {#nanoflows}
+### 3.4 Nanoflows {#nanoflows}
 
-#### 5.4.1 DetectDominantLanguage
+#### 3.4.1 DetectDominantLanguage
 
 The **DetectDominantLanguage** nanoflow takes the **languageDetector** object as an input parameter to get a list of dominant languages.
 
 ![detectdominantlanguage](attachments/text-analytics/detectdominantlanguage.png)
 
-#### 5.4.2 DetectEntities
+#### 3.4.2 DetectEntities
 
 The **DetectEntities** nanoflow takes the **entityDetector** object as an input parameter to get a list of entities.
 
 ![detectentities](attachments/text-analytics/detectentities.png)
 
-#### 5.4.3 DetectKeyPhrases
+#### 3.4.3 DetectKeyPhrases
 
 The **DetectKeyPhrases** nanoflow takes the **keyPhrasesDetector** object as an input parameter to get a list of key phrases.
 
 ![detectkeyphrases](attachments/text-analytics/detectkeyphrases.png)
 
-#### 5.4.4 DetectPiiEntities
+#### 3.4.4 DetectPiiEntities
 
 The **DetectPiiEntities** nanoflow takes the **piiEntitiesDetector** object as an input parameter to get a list of PII entities.
 
 ![detectpiientities](attachments/text-analytics/detectpiientities.png)
 
-#### 5.4.5 DetectPiiEntities
+#### 3.4.5 DetectPiiEntities
 
 The **DetectSentiment** nanoflow takes the **sentimentDetector** object as an input parameter to get a sentiment object.
 
 ![detectsentiment](attachments/text-analytics/detectsentiment.png)
 
-#### 5.4.6 DetectSyntax
+#### 3.4.6 DetectSyntax
 
 The **DetectSyntax** nanoflow takes the **syntaxDetector** object as an input parameter to get a list of syntax tokens.
 
 ![detectsyntax](attachments/text-analytics/detectsyntax.png)
 
-### 5.5 Enumerations {#enumerations}
+### 3.5 Enumerations {#enumerations}
 
-#### 5.5.1 SentimentType
+#### 3.5.1 SentimentType
 
 The **SentimentType** is an enumeration that incorporates all the information of the supported sentiment type.
 
@@ -334,7 +336,7 @@ The **SentimentType** is an enumeration that incorporates all the information of
 | Neutral | Neutral |
 | Mixed | Mixed |
 
-#### 5.5.2 EntityType
+#### 3.5.2 EntityType
 
 The **EntityType** is an enumeration that incorporates all the information of the supported entity type.
 
@@ -350,7 +352,7 @@ The **EntityType** is an enumeration that incorporates all the information of th
 | Title | Mixed |
 | Other | Mixed |
 
-#### 5.5.3 PartOfSpeechTag
+#### 3.5.3 PartOfSpeechTag
 
 The **PartOfSpeechTag** is an enumeration that incorporates all the supported part of speech tags.
 
@@ -374,7 +376,7 @@ The **PartOfSpeechTag** is an enumeration that incorporates all the supported pa
 | Verb | Verb |
 | Other | Other |
 
-#### 5.5.4 PiiEntityType
+#### 3.5.4 PiiEntityType
 
 The **PiiEntityType** is an enumeration that incorporates all the information of the supported Personally Identifiable Information (PII) types.
 
@@ -402,7 +404,7 @@ The **PiiEntityType** is an enumeration that incorporates all the information of
 | MAC Address | MAC_Address |
 | All | All |
 
-### 5.6 Supported Languages {#supported-languages}
+### 3.6 Supported Languages {#supported-languages}
 
 | Language              | Code  |
 | --------------------- | ----- |
@@ -419,11 +421,9 @@ The **PiiEntityType** is an enumeration that incorporates all the information of
 | Chinese (simplified)  | zh    |
 | Chinese (traditional) | zh-TW |
 
-## 6 Using Text Analytics
+## 4 Usage
 
-When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up customizable text analytics actions quickly.
-
-### 6.1 Performing Language Detection in Your Browser
+### 4.1 Performing Language Detection in Your Browser
 
 Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLanguage** nanoflow to perform language detection. Follow these steps to configure the language detection:
 
@@ -481,7 +481,7 @@ Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLan
 
      ![runlocally-language-detection](attachments/text-analytics/runlocally-language-detection.png)
 
-### 6.2 Performing Sentiment Detection in Your Browser
+### 4.2 Performing Sentiment Detection in Your Browser
 
 Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanoflow to perform sentiment detection. Follow these steps to configure the sentiment detection:
 
@@ -556,7 +556,7 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
 
      ![runlocally-sentiment-detection](attachments/text-analytics/runlocally-sentiment-detection.png)
 
-### 6.3 Performing Key Phrase Detection in Your Browser
+### 4.3 Performing Key Phrase Detection in Your Browser
 
 Use the **CreateKeyPhraseDetector** microflow and the **DetectKeyPhrases** nanoflow to perform key phrase detection. Follow these steps to configure this key phrase detect action:
 
@@ -613,7 +613,7 @@ Use the **CreateKeyPhraseDetector** microflow and the **DetectKeyPhrases** nanof
 
      ![runlocally-keyphrase-detection](attachments/text-analytics/runlocally-keyphrase-detection.png)
 
-### 6.4 Performing Entity Detection in Your Browser
+### 4.4 Performing Entity Detection in Your Browser
 
 Use the **CreateEntityDetector** microflow and the **DetectEntities** nanoflow to perform entity detection. Follow these steps to configure this entity detect action:
 
@@ -670,7 +670,7 @@ Use the **CreateEntityDetector** microflow and the **DetectEntities** nanoflow t
 
      ![runlocally-entities-detection](attachments/text-analytics/runlocally-entities-detection.png)
 
-### 6.5 Performing PII Entity Detection in Your Browser
+### 4.5 Performing PII Entity Detection in Your Browser
 
 Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nanoflow to perform PII entity detection. Follow these steps to configure this PII entity detect action:
 
@@ -727,7 +727,7 @@ Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nano
 
      ![runlocally-pii-entities-detection](attachments/text-analytics/runlocally-pii-entities-detection.png)
 
-### 6.6 Performing Syntax Detection in Your Browser
+### 4.6 Performing Syntax Detection in Your Browser
 
 Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to perform syntax detection. Follow these steps to configure this syntax detect action:
 
@@ -783,3 +783,11 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
 13.  Run your app locally. You can perform syntax detection directly in the browser:
 
      ![runlocally-syntax-detection](attachments/text-analytics/runlocally-syntax-detection.png)
+
+### 4.7 Checking Statistics on the Usage Dashboard
+
+The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
+
+1. Log into the Marketplace.
+2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+3. Click **Text Analytics** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.

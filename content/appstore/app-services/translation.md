@@ -140,9 +140,7 @@ The **Language** entity is an entity referenced from **Translator** that incorpo
 
 The **LicenseToken** constant is used to provide a valid Translation license token for the app that uses Translation to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment.
 
-As Translation is a commercial product, to use it in a deployed app, you will need a long-term, valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
-
-However, if you only plan to try how Translation works, that is to say, you will only build and run an app that uses Translation locally in Studio Pro or deploy to a Mendix Free App environment, you need to subscribe a trial version, and set the value of the **LicenseToken** constant to that license token in the project environment setting.
+As Translation is a commercial product, whenever the app is deployed in the cloud or deployed locally in Studio Pro, you need a valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment settings.
 
 For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and the [Configuring the License Token](#configure-license-token) section .
 

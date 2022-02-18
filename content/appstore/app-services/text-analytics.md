@@ -392,16 +392,12 @@ The **PiiEntityType** is an enumeration that incorporates all the information of
 If you deploy your app locally, configure the license token in Studio Pro. Perform the following steps:
 
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
-
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
-
 3. On the **Constants** tab, create a new constant with the predefined constant **TextAnalytics.LicenseToken**.
-
 4. Fill in the **Value** with the license token that you [obtained](#obtain-license-token).
+5.  Click **OK** to save the settings.
 
-5. Click **OK** to save the settings.
-
-   ![licensetoken-inmendix](attachments/text-analytics/licensetoken-inmendix.png)
+    ![licensetoken-inmendix](attachments/text-analytics/licensetoken-inmendix.png)
 
 6. When you finish building the app, click **Run** to deploy your app to the cloud.
 

@@ -69,27 +69,20 @@ A trial gives everyone in your company one-month access to the app service. The 
 ### 2.2 Download the Component from the Marketplace
 
 1. Go to the [Translation](https://marketplace.mendix.com/link/component/118411) page in the Marketplace.
-
 2. **Download** the *Translation.mpk* file.
+3.  To add the Translation app service to your app in Mendix Studio Pro, follow these steps: 
+    1. In the **App Explorer**, right-click the app.
+    2.  Click **Import module package** and then select the *Translation.mpk*. 
 
-3. To add the Translation app service to your app in Mendix Studio Pro, follow these steps: 
+        In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project.
 
-   1. In the **App Explorer**, right-click the app.
+        ![import-translation](attachments/translation/import-translation.png)
 
-   2. Click **Import module package** and then select the *Translation.mpk*. 
-
-      In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project.
-
-      ![import-translation](attachments/translation/import-translation.png)
-
-      {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
    3. In the **Import Module** dialog box, click **Import**. 
-
    4. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
-
    5. Open the **App Explorer**  to view the **Translation** module. You can also find the app service in the **Cognitive AI widgets** category in the **Toolbox**.   
-
 4. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
 You have succesfully added the Translation resources to your app.
@@ -237,16 +230,12 @@ The **TranslatorText** microflow takes the **translator** object as an input par
 If you deploy your app locally or in a sandbox, configure the license token in Studio Pro. Perform the following steps:
 
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
-
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
-
 3. On the **Constants** tab, create a new constant with the predefined constant **Translation.LicenseToken**.
-
 4. Fill in the **Value** with the license token that you obtained.
+5.  Click **OK** to save the settings.
 
-5. Click **OK** to save the settings.
-
-   ![licensetoken-inmendix](attachments/translation/licensetoken-inmendix.png)
+    ![licensetoken-inmendix](attachments/translation/licensetoken-inmendix.png)
 
 6. When you finish building the app, click **Run** to deploy your app to the cloud.
 
@@ -344,7 +333,7 @@ If you deploy your app in your own environment, you need to configure the licens
     6. Set **Data source** to **Translation.Translator_OutputLanguage/Translation.Language/Translation.Language.Name**.
     7. For **Label caption**, enter *Language*.
     8. Click **OK** to save the settings.
-15. Inside the **Group box** widget, add a **Text area** widget below the **Reference selector** widget .
+15. Inside the **Group box** widget, add a **Text area** widget below the **Reference selector** widget.
 16.  Change the settings of the **Text area** widget as follows:
      1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
      2. For **Data source**, Select the **OutputText** attribute from **Data view**.
@@ -354,17 +343,14 @@ If you deploy your app in your own environment, you need to configure the licens
          ![data-view](attachments/translation/data-view.png)
 
 17. Inside the **Data view** widget, add a **Button** widget below the **Text area** widget.
-
 18. Change the settings of the **Button** widget as follows:
     1. Double-click the **Button** widget to open the **Action Button** dialog box.
     2. For **Caption**, enter *Translate*.
     3. In the **Event** section, set **On click** to **Call a nanoflow**.
     4. For **Nanoflow**, **Select** the **TranslateText** nanoflow from the **Translation** > **USE_ME** folder.
     5. Click **OK** to save the settings.  
-
 19. Make sure you have [configured the license token](#configure-license-token).
-
-20. Run your app locally. You can perform text translation directly in the browser:
+20.  Run your app locally. You can perform text translation directly in the browser:
 
      ![runlocally-translation](attachments/translation/runlocally-translation.png)
 
@@ -374,4 +360,4 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
 1. Log into the Marketplace.
 2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
-3. Click **Speech to Text** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
+3. Click **Translation** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.

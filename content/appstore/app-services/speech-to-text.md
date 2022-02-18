@@ -72,21 +72,20 @@ A trial gives everyone in your company one-month access to the app service. The 
 
 1. Go to the [Speech to Text](https://marketplace.mendix.com/link/component/118408) page in the marketplace.
 2. **Download** the *SpeechToText.mpk* file.
-3. To add the Speech to Text app service to your app in Mendix Studio Pro, follow these steps:
+3.  To add the Speech to Text app service to your app in Mendix Studio Pro, follow these steps:
 
-   1.  In the **App Explorer**, right-click the app.
-   2.  Click **Import module package** and then select *SpeechToText.mpk*.
+    1.  In the **App Explorer**, right-click the app.
+    2.  Click **Import module package** and then select *SpeechToText.mpk*.
 
-       In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
+        In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
-       ![import-speech-to-text](attachments/speech-to-text/import-speech-to-text.png)
+        ![import-speech-to-text](attachments/speech-to-text/import-speech-to-text.png)
 
-       {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
    3.  In the **Import Module** dialog box, click **Import**. 
    4.  Wait until a pop-up box states that the module was successfully imported. Click **OK**.
    5.  Open the **App Explorer**  to view the **SpeechToText** module. You can also find the app service in the **Cognitive AI widgets** category in the **Toolbox**.
-
 4. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
 You have successfully added the Speech To Text resources to your app.
@@ -203,16 +202,12 @@ The only core widget required is the **Microphone** widget. You can make the fol
 If you deploy your app locally, configure the license token in Studio Pro as follows:
 
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
-
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
-
 3. On the **Constants** tab, create a new constant with the predefined constant **SpeechToText.LicenseToken**.
-
 4. Fill in the **Value** with the license token that you [obtained](#obtain-license-token).
+5.  Click **OK** to save the settings.
 
-5. Click **OK** to save the settings.
-
-   ![licensetoken-inmendix](attachments/speech-to-text/licensetoken-inmendix.png)
+    ![licensetoken-inmendix](attachments/speech-to-text/licensetoken-inmendix.png)
 
 6. When you finish building the app, click **Run** to deploy your app to the cloud.
 
@@ -265,7 +260,6 @@ Below are the steps to build an example web app based on a blank app template wh
         ![createmicrophoneentity-nanoflow](attachments/speech-to-text/createmicrophoneentity-nanoflow.png)
    
 3. Add a **Data view** widget to your page.
-
 4. Set the **CreateMicrophoneObject** nanoflow as the data source of the Data View widget as follows:
    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
    2. For **Data Source**, select **Nanoflow** as the **Type**.
@@ -273,23 +267,18 @@ Below are the steps to build an example web app based on a blank app template wh
    4. Click **OK** to save the settings.
    
 5. Inside the **Data view** widget, add a [Microphone](#microphone) widget.
-
 6.  Change the settings of the **Microphone** widget as follows:
     1. Double-click the **Microphone** widget to open the **Edit Microphone** dialog box. 
     2. Go to the **Events** tab. 
     3. For **transcript**, **Select** the **NewTranscript** attribute. In this way, the app will pick up the result of speech conversion. For more information, see the [On Transcript](#on-transcript) section.
     
 7. Inside the **Data view**, add a **Text area** widget.
-
 8. Change the settings of the **Text area** widget as follows:
-
    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
    2. For **Data source**, select the **NewTranscript** attribute from **Data view**.
    3. Click **OK** to save the settings. 
-
 9. Make sure that you have [configured the license token](#configure-license-token).
-
-8. Run your app locally. Your app should be able to convert voice to text and trigger the related actions that you set up.
+10. Run your app locally. Your app should be able to convert voice to text and trigger the related actions that you set up.
 
 ### 4.3 Handling Microphone Events
 

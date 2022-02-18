@@ -80,6 +80,8 @@ You have successfully added the Speech To Text resources to your app.
 
 ### 4.1 In Studio Pro
 
+If you run your app locally, configure the license token in Studio Pro as follows:
+
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
 
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
@@ -96,13 +98,13 @@ You have successfully added the Speech To Text resources to your app.
 
 ### 4.2 In the Developer Portal
 
-Alternatively, you can add or update LicenseToken as a constant in the [Developer Portal](/developerportal/deploy/environments-details).
+If you deploy your app in the cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details):
 
-Before you deploy your app, configure the app **Constants** in the deployment package.
+* Before you deploy your app, configure the app **Constants** in the deployment package
 
 ![licensetoken-cloudportal](attachments/speech-to-text/licensetoken-cloudportal.png)
 
-If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app:
+* If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app
 
 ![licensetoken-envdetails](attachments/speech-to-text/licensetoken-envdetails.png)
 
@@ -127,7 +129,9 @@ The **MediaDocument** entity is a conceptual entity that inherits from the **Sys
 
 The **LicenseToken** constant offers a valid Speech To Text license token to the app that uses Speech To Text to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. 
 
-As Speech To Text is a commercial product, whenever the app is deployed in the cloud or deployed locally in Studio Pro, you need a valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment settings.
+As Speech To Text is a commercial product, to use it in an app, you need a long-term, valid license token. If you are working with Mendix Licensed Cloud Node, you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting. You also need to set the value of the **LicenseToken** constant to that license token in the project environment setting to make sure your app works in your local environment as well.
+
+However, if you only plan to try how Speech To Text works, that is to say, you will only build and run an app that uses Speech To Text locally in Studio Pro or deploy to a Mendix Free App environment, then you need a trial version, and set the value of the **LicenseToken** constant to that license token in the project environment setting.
 
 For details on how to get and configure a license token, see the [Obtaining a LicenseToken for Your App](#obtain-license-token) section and the [Configuring the License Token](#configure-license-token) section.
 
@@ -237,7 +241,6 @@ To let the [Microphone](#microphone) widget convert speech, set these data sourc
 Below are the steps to build an example web app which can convert speech to text and triggers actions:
 
 1.  In your app module's domain model, create an entity and name it *Microphone*, with the following attributes:
-
    * `NewTranscript` (String)
    * `AllTranscript` (String)
    * `Arguments` (String)
@@ -253,17 +256,22 @@ Below are the steps to build an example web app which can convert speech to text
         ![createmicrophoneentity-nanoflow](attachments/speech-to-text/createmicrophoneentity-nanoflow.png)
    
 3. Add a **Data view** widget to your page.
+
 4. Set the **CreateMicrophoneObject** nanoflow as the data source of the Data View widget as follows:
    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
    2. For **Data Source**, select **Nanoflow** as the **Type**.
    3. **Select** the **CreateMicrophoneObject** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings.
+   
 5. Inside the **Data view** widget, add a [Microphone](#microphone) widget.
+
 6.  Change the settings of the **Microphone** widget as follows:
     1. Double-click the **Microphone** widget to open the **Edit Microphone** dialog box. 
     2. Go to the **Events** tab. 
-    3. For **transcript**, **Select** the **NewTranscript** attribute. In this way, the app will pick up the result of speech conversion. For more information, see the [On Transcript](#on-transcript) section.   
+    3. For **transcript**, **Select** the **NewTranscript** attribute. In this way, the app will pick up the result of speech conversion. For more information, see the [On Transcript](#on-transcript) section.
+    
 7. Inside the **Data view**, add a **Text area** widget.
+
 8. Change the settings of the **Text area** widget as follows:
 
    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
@@ -271,6 +279,7 @@ Below are the steps to build an example web app which can convert speech to text
    3. Click **OK** to save the settings. 
 
 9. Make sure that you have [configured the license token](#configure-license-token).
+
 8. Run your app locally. Your app should be able to convert voice to text and trigger the related actions that you set up.
 
 ### 7.2 Handling Microphone Events
@@ -281,13 +290,13 @@ There are two main types of events that can be picked up by the **Microphone** w
 
 #### 7.2.1 On Transcript {#on-transcript}
 
-By binding an attribute to the **transcript** event, the app can pick up the result of speech conversion. Upon successful transcription, this attribute will then store the real-time transcription result for each natural speech segment, which is identified by a change in speakers or a pause in the audio.
+By binding an attribute to the **transcript** event, the app can pick up the result of speech conversion. Upon successful transcription, this attribute will then store real-time speech to text transcription result of the natural speech segment, such as a change in speaker or a pause in the audio.
 
 **transcript** takes a string attribute. You can define an attribute and bind this attribute to **transcript**. This attribute stores the result of text converted from voice. The app can trigger an action after the transcript is received. You can select the custom **Action** from a list of actions.
 
 ![microphone-ontranscript-sample](attachments/speech-to-text/microphone-ontranscript-sample.png) 
 
-For example, you can set up the **Action** to append the transcript of each segment, and show the transcript of the entire long speech input.
+For example, you can set up the **Action** to append the transcription result of each segment (sentence) and show the transcription results of the whole long speech input.
 
 ![show-transcript-history](attachments/speech-to-text/show-transcript-history.png)
 
@@ -308,11 +317,11 @@ For example, you can set up the **Action** to make the app show a pop-up window 
 You an set up rules of speech recognition that trigger actions as follows:
 
 1. Double-click the **Microphone** widget. The **Edit Microphone** widget opens.
-3. Go to the **Voice to Action** tab.
-4. For **Arguments**, select **Arguments** from **Data view**.
-5.  For each action, set up an [Utterance](#utterance), an [Action](#actions), and a [Feedback](#feedback).
-    
-    {{% alert type="info" %}}You can use **New**, **Delete**, and **Edit** to manage all the **Actions**.{{% /alert %}}. 
+2. Go to the **Voice to Action** tab.
+3. For **Arguments**, select **Arguments** from **Data view**.
+4.  For each action, set up an [Utterance](#utterance), an [Action](#actions) and a [Feedback](#feedback).
+
+    {{% alert type="info" %}}IYou can use **New**, **Delete**, and **Edit** to manage all the **Actions**.{{% /alert %}}. 
 
 If the transcript received by the **Microphone** widget matches an utterance that you have specified, the app will run the action and give users the voice feedback.
 
@@ -328,7 +337,7 @@ You can select an **Action** from a list of actions. This action is triggered wh
 
 #### 7.3.3 Feedback {#feedback}
 
-**Feedback** is an optional configuration. It can be a string template following natural language syntax, which is provided to users after an action is triggered.
+**Feedback** is an optional configuration for set action items of voice-to-action, which can be a string template following natural language syntax, which is provided to users after an action is triggered.
 
 For instance, you can set **Feedback** as `model is rotated {0} degree around {1} direction`, with `{0}` and `{1}` being the parameters passed through **Arguments** in the **Microphone** widget.
 

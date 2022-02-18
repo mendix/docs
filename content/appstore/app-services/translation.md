@@ -57,6 +57,8 @@ Translation is a premium Mendix product that is subject to a purchase and subscr
 
 ### 3.1 In Studio Pro
 
+If you run your app locally, configure the license token in Studio Pro. Perform the following steps:
+
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
 
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
@@ -73,13 +75,13 @@ Translation is a premium Mendix product that is subject to a purchase and subscr
 
 ### 3.2 In the Developer Portal
 
-Alternatively, you can add or update LicenseToken as a constant in the [Developer Portal](/developerportal/deploy/environments-details).
+If you deploy your app in the cloud, configure the license token in the Developer Portal:
 
-Before you deploy your app, configure the app **Constants** in the deployment package.
+* Before you deploy your app, configure the app **Constants** in the deployment package
 
 ![licensetoken-cloudportal](attachments/translation/licensetoken-cloudportal.png)
 
-If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app:
+* If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app
 
 ![licensetoken-envdetails](attachments/translation/licensetoken-envdetails.png)
 

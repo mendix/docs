@@ -50,7 +50,7 @@ Text Analytics is a premium Mendix product that is subject to a purchase and sub
 
 #### 2.1.1 Starting a Trial
 
-A trial gives everyone in your company one-month access to the app service. To start a trial, perform the following steps:
+A trial gives everyone in your company one-month access to the app service. The trial has a limitation with [data usage](#check-usage) up to 1500 minutes. To start a trial, perform the following steps:
 
 1. Go to the [Text Analytics](https://marketplace.mendix.com/link/component/118412) page in the marketplace.
 2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
@@ -205,7 +205,7 @@ The **Response** entity is a conceptual entity that incorporates all the informa
 
 #### 3.2.1 LicenseToken
 
-The **LicenseToken** constant provides a valid license token for an app that uses this app service. As Text Analytics is a commercial product, no matter your app is deployed in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), your own environment, or locally in Studio Pro, you need a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token) section.
+The **LicenseToken** constant provides a valid license token for an app that uses this app service. As Text Analytics is a commercial product, no matter your app is deployed in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), your own environment, or locally in Studio Pro, you need to have a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token) section.
 
 #### 3.2.2 TokenEndpoint
 
@@ -407,13 +407,13 @@ If you deploy your app locally, configure the license token in Studio Pro. Perfo
 
 #### 3.7.2 For an App Deployed in the Mendix Cloud
 
-If you deploy your app in the Mendix Cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details):
+If you deploy your app in the Mendix Cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details).
 
-* Before you deploy your app, configure the app **Constants** in the deployment package
+Before you deploy your app, configure the app **Constants** in the deployment package.
 
 ![licensetoken-cloudportal](attachments/text-analytics/licensetoken-cloudportal.png)
 
-* If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app
+If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app.
 
 ![licensetoken-envdetails](attachments/text-analytics/licensetoken-envdetails.png)
 
@@ -784,7 +784,7 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
 
      ![runlocally-syntax-detection](attachments/text-analytics/runlocally-syntax-detection.png)
 
-### 4.7 Checking Statistics on the Usage Dashboard
+### 4.7 Checking Statistics on the Usage Dashboard {#check-usage}
 
 The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 

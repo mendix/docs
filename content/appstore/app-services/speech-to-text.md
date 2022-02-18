@@ -46,7 +46,7 @@ Speech to Text is a premium Mendix product that is subject to a purchase and sub
 
 #### 2.1.1 Starting a Trial
 
-A trial gives everyone in your company one-month access to the app service. The trial has a limitation with data usage up to 300 minutes. To start a trial, perform the following steps:
+A trial gives everyone in your company one-month access to the app service. The trial has a limitation with [data usage](#check-usage) up to 300 minutes. To start a trial, perform the following steps:
 
 1. Go to the [Speech to Text](https://marketplace.mendix.com/link/component/118408) page in the marketplace.
 2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
@@ -110,7 +110,7 @@ The **MediaDocument** entity is a conceptual entity that inherits from the **Sys
 
 #### 3.2.1 LicenseToken
 
-The **LicenseToken** constant provides a valid license token for an app that uses this app service. As Speech to Text is a commercial product, no matter your app is deployed in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), your own environment, or locally in Studio Pro, you need a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token) section.
+The **LicenseToken** constant provides a valid license token for an app that uses this app service. As Speech to Text is a commercial product, no matter your app is deployed in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), your own environment, or locally in Studio Pro, you need to have a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token) section.
 
 #### 3.2.2 TokenEndpoint
 
@@ -218,13 +218,13 @@ If you deploy your app locally, configure the license token in Studio Pro as fol
 
 #### 3.6.2 For an App Deployed in the Mendix Cloud
 
-If you deploy your app in the Mendix Cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details):
+If you deploy your app in the Mendix Cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details).
 
-* Before you deploy your app, configure the app **Constants** in the deployment package
+Before you deploy your app, configure the app **Constants** in the deployment package.
 
 ![licensetoken-cloudportal](attachments/speech-to-text/licensetoken-cloudportal.png)
 
-* If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app
+If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app.
 
 ![licensetoken-envdetails](attachments/speech-to-text/licensetoken-envdetails.png)
 
@@ -247,7 +247,7 @@ It can be useful to run the Speech to Text service automatically when your app s
 
 You can use Speech To Text to convert voice into text and then trigger a customizable action. To let the [Microphone](#microphone) widget convert speech, set these data source attributes: **transcript**, **Actions** and **Arguments**. 
 
-Below are the steps to build an example web app from a blank app template which can convert speech to text and triggers actions:
+Below are the steps to build an example web app based on a blank app template which can convert speech to text and triggers actions:
 
 1.  In your app module's domain model, create an entity and name it *Microphone*, with the following attributes:
    * `NewTranscript` (String)
@@ -299,13 +299,13 @@ There are two main types of events that can be picked up by the **Microphone** w
 
 #### 4.3.1 On Transcript {#on-transcript}
 
-By binding an attribute to the **transcript** event, the app can pick up the result of speech conversion. Upon successful transcription, this attribute will then store real-time speech to text transcription result of the natural speech segment, such as a change in speaker or a pause in the audio.
+By binding an attribute to the **transcript** event, the app can pick up the result of speech conversion. Upon successful transcription, this attribute will store the transcript of the real-time natural speech segment, which is identified by a change in the speaker or a pause in the audio.
 
 **transcript** takes a string attribute. You can define an attribute and bind this attribute to **transcript**. This attribute stores the result of text converted from voice. The app can trigger an action after the transcript is received. You can select the custom **Action** from a list of actions.
 
 ![microphone-ontranscript-sample](attachments/speech-to-text/microphone-ontranscript-sample.png) 
 
-For example, you can set up the **Action** to append the transcription result of each segment (sentence) and show the transcription results of the whole long speech input.
+For example, you can set up the **Action** to append the transcript of each segment and show the transcript of the entire long speech input.
 
 ![show-transcript-history](attachments/speech-to-text/show-transcript-history.png)
 
@@ -338,7 +338,7 @@ If the transcript received by the **Microphone** widget matches an utterance tha
 
 **Utterance** can be a string template following natural language syntax or a valid JavaScript regular expression. It is self-defined rules used for matching the transcripts on speech conversion. Some internal trie filters are implemented to extract the key point of short sentences. 
 
-For instance, you can set **Utterance** as `{rotate|move} the model {0:deg} degree around {1:x|y|z} direction`. Then if you say `rotate model 35 degree around x direction`, the **Microphone** widget will match the transcript to this utterance and trigger an action that you set. In **Utterance**, you can use multiple parameters, similar to in JavaScript, for example `{order: name}`, so that it becomes more flexible.
+For instance, you can set **Utterance** as `{rotate|move} the model {0:deg} degree around {1:x|y|z} direction`. Then if you say `rotate model 35 degree around x direction`, the **Microphone** widget will match the transcript to this utterance and trigger an action that you set. In **Utterance**, you can use multiple parameters (similar to the parameters written in JavaScript), for example `{order: name}`, to make it more flexible.
 
 #### 4.4.2 Actions {#actions}
 
@@ -346,7 +346,7 @@ You can select an **Action** from a list of actions. This action is triggered wh
 
 #### 4.4.3 Feedback {#feedback}
 
-**Feedback** is an optional configuration for set action items of voice-to-action, which can be a string template following natural language syntax, which is provided to users after an action is triggered.
+**Feedback** is an optional configuration, which can be a string template following natural language syntax, which is provided to users after an action is triggered.
 
 For instance, you can set **Feedback** as `model is rotated {0} degree around {1} direction`, with `{0}` and `{1}` being the parameters passed through **Arguments** in the **Microphone** widget.
 
@@ -356,7 +356,7 @@ For instance, you can set **Feedback** as `model is rotated {0} degree around {1
 
 When you need to implement the speech conversion as a back-end service rather than in the user interface operation, batch transcription is your best option to convert any Mendix **mediaDocument** object into written text. In this case, use the [BatchTranscript microflow](#batchtranscript).
 
-### 4.6 Checking Statistics on the Usage Dashboard
+### 4.6 Checking Statistics on the Usage Dashboard {#check-usage}
 
 The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 

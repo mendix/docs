@@ -43,7 +43,7 @@ Translation is a premium Mendix product that is subject to a purchase and subscr
 
 #### 2.1.1 Starting a Trial
 
-A trial gives everyone in your company one-month access to the app service. To start a trial, perform the following steps:
+A trial gives everyone in your company one-month access to the app service. The trial has a limitation with [data usage](#check-usage) up to 2500 minutes. To start a trial, perform the following steps:
 
 1. Go to the [Translation](https://marketplace.mendix.com/link/component/118411) page in the marketplace.
 2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
@@ -124,7 +124,7 @@ The **Language** entity is an entity referenced from **Translator** that incorpo
 
 #### 3.2.1 Constants
 
-The **LicenseToken** constant provides a valid license token for an app that uses this app service. As Translation is a commercial product, no matter your app is deployed in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), your own environment, or locally in Studio Pro, you need a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token) section.
+The **LicenseToken** constant provides a valid license token for an app that uses this app service. As Translation is a commercial product, no matter your app is deployed in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), your own environment, or locally in Studio Pro, you need to have a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token) section.
 
 #### 3.2.2 TokenEndpoint
 
@@ -134,13 +134,13 @@ The **TokenEndpoint** constant provides a valid endpoint of security token servi
 
 #### 3.3.1 CreateTranslator {#create-translator}
 
-The **CreateTranslator** microflow takes **inputText**, **inputLanguageCode**, and **outputLanguageCode** as input parameters and creates translator actions in the back-end service. For instance, the **inputLanguageCode**, and **outputLanguageCode** can be set to `en-US`.
-
-![createtranslator](attachments/translation/createtranslator.png)
+The **CreateTranslator** microflow takes **inputText**, **inputLanguageCode**, and **outputLanguageCode** as input parameters and creates translator actions in the back-end service. For instance, **inputLanguageCode** and **outputLanguageCode** can be set to `en-US`.
 
 {{% alert type="info" %}}
 For more information about the language codes, see the [Supported Languages](#supported-languages) section.
 {{% /alert %}}
+
+![createtranslator](attachments/translation/createtranslator.png)
 
 ### 3.4 Nanoflows {#nanoflows}
 
@@ -252,15 +252,15 @@ If you deploy your app locally or in a sandbox, configure the license token in S
 
 #### 3.6.2 For an App Deployed in the Mendix Cloud
 
-If you deploy your app in the Mendix Cloud, configure the license token in the Developer Portal:
+If you deploy your app in the Mendix Cloud, configure the license token in the Developer Portal.
 
-* Before you deploy your app, configure the app **Constants** in the deployment package
+Before you deploy your app, configure the app **Constants** in the deployment package.
 
-  ![licensetoken-cloudportal](attachments/translation/licensetoken-cloudportal.png)
+![licensetoken-cloudportal](attachments/translation/licensetoken-cloudportal.png)
 
-* If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app
+If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app.
 
-  ![licensetoken-envdetails](attachments/translation/licensetoken-envdetails.png)
+![licensetoken-envdetails](attachments/translation/licensetoken-envdetails.png)
 
 #### 3.6.3 For an App Deployed in Your Own Environment
 
@@ -273,18 +273,20 @@ If you deploy your app in your own environment, you need to configure the licens
  When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up translation:
 
 1.  Create a nanoflow as follows:
-    1.  Name the nanoflow *CreateTranslator*.
-    2.  Add the **CreateTranslator** microflow from the **Translation** > **USE_ME** folder to the nanoflow.
+    1. Name the nanoflow *CreateTranslator*.
+    
+    2. Add the **CreateTranslator** microflow from the **Translation** > **USE_ME** folder to the nanoflow.
+
     3.  Double-click the **CreateTranslator** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**. 
 
         ![call-createtranslator-microflow](attachments/translation/call-createtranslator-microflow.png)
 
-        In this example,  we set **inputLanguageCode** to *'en'* and **outputLanguageCode** to *'zh'*, so the default translation will be from English to Chinese. You can also set them to other [language codes](#supported-languages). For more information about the parameters, see  [CreateTranslator microflow](#create-translator).
+        In this example,  **inputLanguageCode** is set to *'en'* and **outputLanguageCode** is set to *'zh'*, so the default translation will be from English to Chinese. You can also set them to other [language codes](#supported-languages). For more information about the parameters, see  [CreateTranslator microflow](#create-translator).
 
     4.  Right-click the create object activity and select **Set $translator as return value** in the pop-up menu. 
 
         ![createtranslator-nanoflow](attachments/translation/createtranslator-nanoflow.png)
-
+    
 2.  Create a microflow as follows:
     1. Name the microflow *GetTranslatorSupportedLanguages*. 
     2. Right-click the canvas and select **Add** > **Parameter** from the pop-up menu.
@@ -366,7 +368,7 @@ If you deploy your app in your own environment, you need to configure the licens
 
      ![runlocally-translation](attachments/translation/runlocally-translation.png)
 
-### 4.2 Checking Statistics on the Usage Dashboard
+### 4.2 Checking Statistics on the Usage Dashboard {#check-usage}
 
 The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 

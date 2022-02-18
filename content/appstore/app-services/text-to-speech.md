@@ -45,7 +45,7 @@ Text to Speech is a premium Mendix product that is subject to a purchase and sub
 
 #### 2.1.1 Starting a Trial
 
-A trial gives everyone in your company one-month access to the app service. To start a trial, perform the following steps:
+A trial gives everyone in your company one-month access to the app service. The trial has a limitation with [data usage](#check-usage) up to 2500 minutes. To start a trial, perform the following steps:
 
 1. Go to the [Text To Speech](https://marketplace.mendix.com/link/component/118593) page in the marketplace.
 2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
@@ -123,7 +123,7 @@ There is a many-to-many association between the **SpeechSynthesizer** entity and
 
 #### 3.2.1 LicenseToken
 
-The **LicenseToken** constant provides a valid license token for an app that uses this app service. As Text to Speech is a commercial product, no matter your app is deployed in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), your own environment, or locally in Studio Pro, you need a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token) section.
+The **LicenseToken** constant provides a valid license token for an app that uses this app service. As Text to Speech is a commercial product, no matter your app is deployed in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), your own environment, or locally in Studio Pro, you need to have a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token) section.
 
 #### 3.2.2 TokenEndpoint
 
@@ -131,7 +131,7 @@ The **TokenEndpoint** constant provides a valid endpoint of security token servi
 
 ### 3.3 Microflows {#microflows}
 
-#### 3.3.1 CreateSpeechSynthesizer
+#### 3.3.1 CreateSpeechSynthesizer {#createspeechsynthesizer}
 
 The **CreateSpeechSynthesizer** microflow takes **text** and **languageCode** from a voice object as input parameters, and returns a **speechSynthesizer** object that contains the based64-encoded audio string and text string. For instance, **languageCode** can be set to `en-US`. 
 
@@ -217,13 +217,13 @@ If you deploy your app locally, configure the license token in Studio Pro. Perfo
 
 #### 3.7.2 For an App Deployed in the Mendix Cloud
 
-If you deploy your app in the Mendix Cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details):
+If you deploy your app in the Mendix Cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details).
 
-* Before you deploy your app, configure the app **Constants** in the deployment package
+Before you deploy your app, configure the app **Constants** in the deployment package.
 
 ![licensetoken-cloudportal](attachments/text-to-speech/licensetoken-cloudportal.png)
 
-* If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app
+If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app.
 
 ![licensetoken-envdetails](attachments/text-to-speech/licensetoken-envdetails.png)
 
@@ -231,21 +231,25 @@ If you deploy your app in the Mendix Cloud, configure the license token in the [
 
 If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](/developerportal/deploy/index).4 Usage
 
+## 4 Usage
+
 ### 4.1 Converting Text to Speech in Your Browser
 
 When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up the text-to-speech conversion:
 
 1.  Create a nanoflow as follows:
-    1.  Name the nanoflow *CreateSpeechSynthesizer*.
-    2.  Add the **CreateSpeechSynthesizer** microflow from the **TextToSpeech** > **USE_ME** folder to the nanoflow.
+    1. Name the nanoflow *CreateSpeechSynthesizer*.
+    
+    2. Add the **CreateSpeechSynthesizer** microflow from the **TextToSpeech** > **USE_ME** folder to the nanoflow.
+    
     3.  Double-click the **CreateSpeechSynthesizer** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
        
         ![call-createspeechsynthesizer-microflow](attachments/text-to-speech/call-createspeechsynthesizer-microflow.png)
       
-        In this example, we set **languageCode** to `''`, which means using the default language option `en-US`. You can also set it to a different [language code](#supported-language).
+        In this example, the **languageCode** is set to `''`, then the default language option `en-US` is used. You can also set it to a different [language code](#supported-language). For more information about the parameters, see [CreateSpeechSynthesizer](#createspeechsynthesizer)
 
     4.  Right-click the **CreateSpeechSynthesizer** microflow and select **Set $speechSynthesizer as return value** in the pop-up menu.
-
+    
         ![createspeechsynthesizer](attachments/text-to-speech/createspeechsynthesizer-nanoflow.png)
     
 2.  Create a microflow as follows:
@@ -306,7 +310,7 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
 
     ![runlocally-text-to-speech](attachments/text-to-speech/runlocally-text-to-speech.png)
 
-### 4.2 Checking Statistics on the Usage Dashboard
+### 4.2 Checking Statistics on the Usage Dashboard {#check-usage}
 
 The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 

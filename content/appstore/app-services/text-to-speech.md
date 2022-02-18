@@ -148,7 +148,7 @@ For details on how to get and configure a license token, see the [Obtaining a Li
 
 #### 5.2.2 TokenEndpoint
 
-The **TokenEndpoint** constant is used to provide a valid endpoint of security token service for the back-end authentication of the cognitive text-to-speech service. The constant comes with a default value which points to the production environment of the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
+The **TokenEndpoint** constant is used to provide a valid endpoint of security token service for the back-end authentication of the cognitive text-to-speech service. The constant comes with a default value which points to the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
 
 ### 5.3 Microflows {#microflows}
 

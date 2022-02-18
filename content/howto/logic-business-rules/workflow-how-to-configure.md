@@ -277,7 +277,7 @@ Great job! You have configured the user task for the Manager role:
 
 ![Workflow with Specify Device User Task](attachments/workflow-how-to-configure/workflow-with-task.png)
 
-This can be also a good time to test your app that now has the first user task. For more information, see the [Testing the Workflow](#test-workflow) section. 
+This can be also a good time to test your app: you can create an employee, start the onboarding process, and test the first task for the Manager demo user. For more information, see the [Testing the Workflow](#test-workflow) section. 
 
 ## 7 Following Different Paths for the Hire's Location
 
@@ -394,9 +394,14 @@ To test your workflow, you need to switch between different user roles. Follow t
 
 5. Switch between different demo user roles to test the use case. Do can do the following:
 
-    1. Start the onboarding process: select the HR demo user that has EmployeesToOnboard as the home page, add a new employee, and then click Start Onboarding. 
+    1. Start the onboarding process: select the HR demo user that has EmployeesToOnboard as the home page, add a new employee, and then click Start Onboarding:
+    
+       ![EmployeeToOnboard Example](attachments/workflow-how-to-configure/demo_hr.png)
+    
     2. Test the process: switch users, view inbox for each user, complete tasks, see how new inbox items are created for the user roles you configured at the next task in the process. 
+    
     3. Open the Workflow Admin Center.
+    
     4. Open the Workflow Dashboard.
 
 Great job! You have deployed your app locally and tested your workflow from the perspective of different users. You can now work on adding more functionality to your app. 

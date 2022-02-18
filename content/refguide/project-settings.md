@@ -105,7 +105,7 @@ Mendix believes both algorithms are secure enough to store passwords within Mend
 
 #### 3.9.1 BCrypt Cost {#bcrypt-cost}
 
-The BCrypt cost value is used to specify the cost of the BCrypt algorithm. The default value is 10, and can go up to 30. The higher the value is, the slower the process of hashing values. For more information, see the subsections below.
+**BCrypt cost** is used to specify the cost of the BCrypt algorithm. The default value is 10, and can go up to 30. The higher the value is, the slower the process of hashing values. For more information, see the subsections below.
 
 #### 3.9.2 Performance
 

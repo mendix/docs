@@ -227,7 +227,7 @@ The **TranslatorText** microflow takes the **translator** object as an input par
 
 #### 3.6.1 For an App Run Locally or Deployed as a Mendix Free App
 
-If you run your app locally or deploy it as Mendix Free App, configure the license token in Studio Pro. Perform the following steps:
+If you run your app locally or deploy it as a Mendix Free App, configure the license token in Studio Pro. Perform the following steps:
 
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.

@@ -225,9 +225,9 @@ The **TranslatorText** microflow takes the **translator** object as an input par
 
 ### 3.6 Configuring the License Token {#configure-license-token}
 
-#### 3.6.1 For an App Run Locally or Deploy as a Mendix Free App
+#### 3.6.1 For an App Run Locally or Deployed as a Mendix Free App
 
-If you run your app locally or deploy as Mendix Free App, configure the license token in Studio Pro. Perform the following steps:
+If you run your app locally or deploy it as Mendix Free App, configure the license token in Studio Pro. Perform the following steps:
 
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
@@ -237,7 +237,7 @@ If you run your app locally or deploy as Mendix Free App, configure the license 
 
     ![licensetoken-inmendix](attachments/translation/licensetoken-inmendix.png)
 
-6. When you finish building the app, click **Run Locally** to see the service working in local running app or click **Run** to deploy a Mendix Free App.
+6. When you finish building the app, click **Run Locally** to run your app locally or click **Run** to deploy it as a Mendix Free App. Then you can see the app service in your app.
 
 #### 3.6.2 For an App Deployed in the Mendix Cloud
 
@@ -263,9 +263,7 @@ If you deploy your app in your own environment, you need to configure the licens
 
 1.  Create a nanoflow as follows:
     1. Name the nanoflow *CreateTranslator*.
-    
     2. Add the **CreateTranslator** microflow from the **Translation** > **USE_ME** folder to the nanoflow.
-
     3.  Double-click the **CreateTranslator** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**. 
 
         ![call-createtranslator-microflow](attachments/translation/call-createtranslator-microflow.png)

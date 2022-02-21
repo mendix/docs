@@ -139,8 +139,8 @@ The only core widget required is the **Microphone** widget. You can make the fol
    * **Enable language selection** – when set to **Yes**, your users can select different languages in your app
    * **language**  – sets the default language using a [language code](#supported-languages) (if empty, the default language is `en-US`)
 * **Events** tab
-  * **On transcript** – by binding a string attribute to the **transcript** property, this attribute will store real-time speech to text transcription result of a natural speech segment (such as a sentence), you can then set your custom action that is executed when a transcript is received. 
-     * **transcript**  – storing a real-time natural language segment transcription result upon successful speech to text conversion
+  * **On transcript** – by binding a string attribute to the **transcript** property, which stores the real-time speech-to-text transcription result of a natural speech segment (for example a sentence), you can then set your custom **Action** that is executed when a transcript is received
+     * **transcript**  – stores the transcription result of a real-time natural language segment (for example a sentence) upon successful speech-to-text conversion
      * **Action** – sets which action is executed when the transcript is received (if empty, no action is executed)
   * **On error** – by binding a string attribute to the **Error** property, you can obtain the error message raised by the back-end service and set a custom action that is executed when an error occurs
      * **Error** – sets a string attribute as the error message
@@ -197,9 +197,9 @@ The only core widget required is the **Microphone** widget. You can make the fol
 
 ### 3.6 Configuring the LicenseToken {#configure-license-token}
 
-#### 3.6.1 For an App Run Locally or Deploy as a Mendix Free App
+#### 3.6.1 For an App Run Locally or Deployed as a Mendix Free App
 
-If you run your app locally or deploy as Mendix Free App, configure the license token in Studio Pro. Perform the following steps:
+If you run your app locally or deploy it as Mendix Free App, configure the license token in Studio Pro. Perform the following steps:
 
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
@@ -209,7 +209,7 @@ If you run your app locally or deploy as Mendix Free App, configure the license 
 
     ![licensetoken-inmendix](attachments/speech-to-text/licensetoken-inmendix.png)
 
-6. When you finish building the app, click **Run Locally** to see the service working in local running app or click **Run** to deploy a Mendix Free App.
+6. When you finish building the app, click **Run Locally** to run your app locally or click **Run** to deploy it as a Mendix Free App. Then you can see the app service in your app.
 
 #### 3.6.2 For an App Deployed in the Mendix Cloud
 
@@ -242,7 +242,7 @@ It can be useful to run the Speech to Text service automatically when your app s
 
 You can use Speech To Text to convert voice into text and then trigger a customizable action. To let the [Microphone](#microphone) widget convert speech to text, you need to set **On Transcript** event.
 
-Below are steps to build a simple example web app based on a blank app template which can convert speech to text and display real-time transcription result:
+Below are the steps to build a simple example web app based on a blank app template which can convert speech to text and display real-time transcription result:
 
 1.  In your app module's domain model, create an entity and name it *Microphone*, with the following attributes:
    * `NewTranscript` (String)
@@ -255,7 +255,7 @@ Below are steps to build a simple example web app based on a blank app template 
     2. Add a create object activity to the nanoflow.
     3. Double-click the create object activity to open the **Create Object** dialog box. 
     4. **Select** the **Microphone** entity as the **Entity** and click **OK**. 
-    5. Right-click the create object activity and select **Set $NewMicrophone as return value** in the pop-up menu.
+    5.  Right-click the create object activity and select **Set $NewMicrophone as return value** in the pop-up menu.
 
         ![createmicrophoneentity-nanoflow](attachments/speech-to-text/createmicrophoneentity-nanoflow.png)
 
@@ -270,7 +270,7 @@ Below are steps to build a simple example web app based on a blank app template 
 6.  Change the settings of the **Microphone** widget as follows:
     1. Double-click the **Microphone** widget to open the **Edit Microphone** dialog box. 
     2. Go to the **Events** tab. 
-    3. For **transcript**, **Select** the **NewTranscript** attribute. In this way, the **NewTranscript** will contain the result of real-time speech to text conversion of a natural language segment (for example, a sentence). This value will be overwrite every time new transcript received.
+    3. For **transcript**, **Select** the **NewTranscript** attribute. In this way, the **NewTranscript** will contain the result of the real-time speech-to-text conversion of a natural language segment (for example a sentence). This value will be overwritten every time a new transcript is received.
     4. For **Action**, select **Save changes**, so the changed value of **NewTranscript** will be available across the app.
 7. Inside the **Data view**, add a **Text area** widget.
 8. Change the settings of the **Text area** widget as follows:
@@ -278,8 +278,9 @@ Below are steps to build a simple example web app based on a blank app template 
    2. For **Data source**, select the **NewTranscript** attribute from **Data view**.
    3. Click **OK** to save the settings. 
 9. Make sure that you have [configured the license token](#configure-license-token).
-10. Run your app locally. Click microphone, talk to it, the text area will show you the real-time transcript as you speak.
-11. While this simple example only display the transcript result of current speech segment, you can also configure actions to append all **NewTranscript** and display all your speech to text transcripts. For details, please see example screenshot in [On Transcript](#on-transcript).
+10. Run your app locally. Click the microphone icon, talk to it, and the text area will show you the real-time transcript as you speak.
+
+{{% alert type="info" %}}While this simple example only displays the transcript result of the current speech segment, you can also configure **Action** to append all **NewTranscript** and display all your speech-to-text transcripts. For details, see the example screenshot in the [On Transcript](#on-transcript) section.{{% /alert %}}
 
 ### 4.3 Handling Microphone Events
 

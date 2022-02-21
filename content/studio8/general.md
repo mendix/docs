@@ -22,7 +22,7 @@ You can open Mendix Studio via [Developer Portal](#opening-studio-via-dev-portal
 
 ### 2.1 Opening Studio via Developer Portal {#opening-studio-via-dev-portal}
 
-You can edit an app in Mendix Studio by opening your app in [Developer Portal](https://home.mendix.com) and clicking **Edit in Studio**:
+You can edit an app in Mendix Studio by opening your app in [Developer Portal](https://sprintr.home.mendix.com) and clicking **Edit in Studio**:
 
 {{% image_container width="350" %}}
 ![Edit in Studio](attachments/general/edit-app.jpg)
@@ -82,7 +82,7 @@ All items of the left menu bar are described in the table below:
 
 | Menu item                            | Shortcut     | Description                                                  |
 | ------------------------------------ | ------------ | ------------------------------------------------------------ |
-| Mx Logo                              | None         | The Mx logo is the return button to return to the [Developer Portal](https://home.mendix.com) of the app. |
+| Mx Logo                              | None         | The Mx logo is the return button to return to the [Developer Portal](https://sprintr.home.mendix.com) of the app. |
 | [Pages](page-editor)                 | 1            | Shows a list of all pages in the app. After you select a page, it opens in Studio. |
 | [Domain Models](domain-models)       | 2            | Shows the domain models of the app.                          |
 | [Microflows](microflows)             | 3            | Shows a list of all microflows in the app.  After clicking a microflow, it will open in Studio. |

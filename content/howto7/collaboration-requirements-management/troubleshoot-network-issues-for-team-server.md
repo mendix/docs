@@ -17,7 +17,7 @@ The Mendix Modeler needs to connect to Team Server, which is where all your proj
 
 ## 2 Troubleshooting Downloading a Team Server Project
 
-Being unable to download the Team Server project would indicate that the security configuration of your company network is blocking access to `https://home.mendix.com` and `https://teamserver.sprintr.com/`. If this solution does not work, please submit a request with Mendix Support at [support.mendix.com](https://support.mendix.com/).
+Being unable to download the Team Server project would indicate that the security configuration of your company network is blocking access to `https://sprintr.home.mendix.com` and `https://teamserver.sprintr.com/`. If this solution does not work, please submit a request with Mendix Support at [support.mendix.com](https://support.mendix.com/).
 
 ## 3 Enabling Firewall Access to Team Server
 

@@ -41,7 +41,7 @@ Please contact [Mendix Support](https://support.mendix.com/) or your Customer Su
 
 ## 2 Finding Your Answers
 
-We expect that many questions and issues can be solved by reading the [Mendix Documentation](https://docs.mendix.com/) and by exploring the [Mendix Forum](https://forum.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio and Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
+We expect that many questions and issues can be solved by reading the [Mendix Documentation](https://docs.mendix.com/) and by exploring the [Mendix Forum](https://forum.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio and Studio Pro, your applications, and the [Developer Portal](https://sprintr.home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
 
 ## 3 Feature Requests
 

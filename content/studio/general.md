@@ -25,7 +25,7 @@ You can open Mendix Studio via [Developer Portal](#opening-studio-via-dev-portal
 
 ### 2.1 Opening Studio via Developer Portal {#opening-studio-via-dev-portal}
 
-You can edit an app in Mendix Studio by opening it in the [Developer Portal](https://home.mendix.com) and clicking **Edit in Studio**:
+You can edit an app in Mendix Studio by opening it in the [Developer Portal](https://sprintr.home.mendix.com) and clicking **Edit in Studio**:
 
 {{% image_container width="350" %}}
 ![Edit in Studio](attachments/general/edit-app.jpg)

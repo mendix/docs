@@ -18,7 +18,7 @@ We like to work with our community, and we encourage you to create and contribut
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Have a [GitHub account](https://github.com/join)
-* Have a [Mendix account](https://home.mendix.com/)
+* Have a [Mendix account](https://sprintr.home.mendix.com/)
 * Fork a repository on GitHub (for details, see [Fork a Repo](https://help.github.com/articles/fork-a-repo/))
 
 ## 3 Making Changes to an Existing Repository

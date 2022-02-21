@@ -16,7 +16,7 @@ Mendix Studio Pro needs to connect to Team Server, which is where all your proje
 
 ## 2 Troubleshooting Team Server Project Network Settings
 
-Being unable to download the Team Server project can indicate that the security configuration of your company network is blocking access to `https://home.mendix.com` and `https://teamserver.sprintr.com/`.
+Being unable to download the Team Server project can indicate that the security configuration of your company network is blocking access to `https://sprintr.home.mendix.com` and `https://teamserver.sprintr.com/`.
 
 Team Server is implemented using Subversion and Mendix Studio Pro uses the HTTPS (TCP) protocol to communicate with that server. To access Team Server from within Studio Pro, the network at your location needs the following settings:
 

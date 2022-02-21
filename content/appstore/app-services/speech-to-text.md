@@ -240,45 +240,46 @@ It can be useful to run the Speech to Text service automatically when your app s
 
 ### 4.2 Converting Speech into Text in Your Browser
 
-You can use Speech To Text to convert voice into text and then trigger a customizable action. To let the [Microphone](#microphone) widget convert speech, set these data source attributes: **transcript**, **Actions** and **Arguments**. 
+You can use Speech To Text to convert voice into text and then trigger a customizable action. To let the [Microphone](#microphone) widget convert speech to text, you need to set **On Transcript** event.
 
-Below are the steps to build an example web app based on a blank app template which can convert speech to text and triggers actions:
+Below are steps to build a simple example web app based on a blank app template which can convert speech to text and display real-time transcription result:
 
 1.  In your app module's domain model, create an entity and name it *Microphone*, with the following attributes:
    * `NewTranscript` (String)
    * `AllTranscript` (String)
    * `Arguments` (String)
    * `Error` (String) 
-   
+
 2.  Create a nanoflow as follows:
     1. Name the nanoflow *CreateMicrophoneObject*.
     2. Add a create object activity to the nanoflow.
     3. Double-click the create object activity to open the **Create Object** dialog box. 
     4. **Select** the **Microphone** entity as the **Entity** and click **OK**. 
-    5.  Right-click the create object activity and select **Set $NewMicrophone as return value** in the pop-up menu.
-      
+    5. Right-click the create object activity and select **Set $NewMicrophone as return value** in the pop-up menu.
+
         ![createmicrophoneentity-nanoflow](attachments/speech-to-text/createmicrophoneentity-nanoflow.png)
-   
+
 3. Add a **Data view** widget to your page.
 4. Set the **CreateMicrophoneObject** nanoflow as the data source of the Data View widget as follows:
    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
    2. For **Data Source**, select **Nanoflow** as the **Type**.
    3. **Select** the **CreateMicrophoneObject** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings.
-   
+
 5. Inside the **Data view** widget, add a [Microphone](#microphone) widget.
 6.  Change the settings of the **Microphone** widget as follows:
     1. Double-click the **Microphone** widget to open the **Edit Microphone** dialog box. 
     2. Go to the **Events** tab. 
-    3. For **transcript**, **Select** the **NewTranscript** attribute. In this way, the app will pick up the result of speech conversion. For more information, see the [On Transcript](#on-transcript) section.
-    
+    3. For **transcript**, **Select** the **NewTranscript** attribute. In this way, the **NewTranscript** will contain the result of real-time speech to text conversion of a natural language segment (for example, a sentence). This value will be overwrite every time new transcript received.
+    4. For **Action**, select **Save changes**, so the changed value of **NewTranscript** will be available across the app.
 7. Inside the **Data view**, add a **Text area** widget.
 8. Change the settings of the **Text area** widget as follows:
    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
    2. For **Data source**, select the **NewTranscript** attribute from **Data view**.
    3. Click **OK** to save the settings. 
 9. Make sure that you have [configured the license token](#configure-license-token).
-10. Run your app locally. Your app should be able to convert voice to text and trigger the related actions that you set up.
+10. Run your app locally. Click microphone, talk to it, the text area will show you the real-time transcript as you speak.
+11. While this simple example only display the transcript result of current speech segment, you can also configure actions to append all **NewTranscript** and display all your speech to text transcripts. For details, please see example screenshot in [On Transcript](#on-transcript).
 
 ### 4.3 Handling Microphone Events
 

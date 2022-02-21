@@ -24,7 +24,7 @@ This how-to explains how to build an employee onboarding process using the workf
 
 The how-to describes the following use case: 
 
-You would like to build an employee onboarding process. At first, an HR specialist needs to initiate the onboarding process for a new employee. The employee's manager will then step in and select devices for the employee. The manager also needs to specify whether the new hire is working from the office or home. The Facilities department will then need to prepare a workspace. Depending on where the new hire works from (the office or home), the Facilities department will either prepare a desk or ship the devices to the employee's address. 
+You would like to build an employee onboarding process. At first, an HR specialist needs to initiate the onboarding process for a new employee. The employee's manager then steps in and select devices for the employee. The manager also needs to specify whether the new hire is working from the office or home. The Facilities department will then need to prepare a workspace. Depending on where the new hire works from (the office or home), the Facilities department will either prepare a desk or ship the devices to the employee's address. 
 
 ## 2 Prerequisites
 
@@ -101,7 +101,7 @@ Do the following:
 
       3. In the **Select Module Roles**, find the WorkflowCommons module and select the Administrator role:
 
-         ![Selecting Workflow Commons Administrator](attachments/workflow-how-to-configure/workflow-commons-admin.png)
+         {{% image_container width="450" %}}![Selecting Workflow Commons Administrator](attachments/workflow-how-to-configure/workflow-commons-admin.png){{% /image_container %}}
 
       4. Confirm your choice by clicking **OK**.
 
@@ -114,13 +114,13 @@ You have configured new app roles for Facilities, Manager, and HR, and enabled t
 
 You need to create demo users for the newly created app roles to be able to test your app later. For more information, see the [Testing Workflow](#test-workflow) section. Follow the steps below: 
 
-1. In the App Explorer, open **App** > **Security** > the **Demo users** tab and click **New**.
+1. In the App Explorer, open **App** > **Security** > the **Demo users** tab. 
+1. Click **New**.
 2. In the **Add Demo User** dialog box, set the **User name** to **demo_facilities**.
 3. Set **Entity** to **Administration.Account**.
-4. Assign the corresponding user role in the **User roles** section: select the **Facilities** role. 
-5. Click **OK**.
-6. Repeat steps 2-4 to add the **demo_manager** demo user.
-7. Repeat steps 2-4 to add the **demo_hr** demo user.
+4. Assign the corresponding user role in the **User roles** section: select the **Facilities** role and click **OK**.
+6. Repeat steps 2-5 to add the **demo_manager** demo user.
+7. Repeat steps 2-5 to add the **demo_hr** demo user.
 
 You have configured demo users for your app. 
 
@@ -223,13 +223,13 @@ The manager of a new employee will get a task to specify devices for the new hir
 
 4. Set the **Caption** property to **Manager: Specify Device and Location** to easily see who this task should be assigned to:
 
-    ![SpecifyDevice Properties](attachments/workflow-how-to-configure/specify-device-and-location-properties.png) 
+    {{% image_container width="400" %}}![SpecifyDevice Properties](attachments/workflow-how-to-configure/specify-device-and-location-properties.png){{% /image_container %}} 
 
-5. Now configure the user task to be assigned to the Manager role, as only managers should specify devices for the new employee. Make sure **Assign task using** is set to **Xpath** and click the ellipsis icon in the **XPath constraint** property.
+5. Now configure the user task to be assigned to the Manager role, as only managers should specify devices for the new employee. Make sure **Assign task using** is set to **XPath** and click the ellipsis icon in the **XPath constraint** property.
 
 7. In the **Edit XPath constraint** dialog box, type in the expression: `[System.UserRoles = '[%UserRole_Manager%]']` and click **OK**.
 
-8. To create a page where the manager will specify devices for the new employee, click the ellipsis icon in the **Page** property.
+8. To create a page where the manager specifies details for the new employee, click the ellipsis icon in the **Page** property.
 
 9. In the **Select web page** dialog box, click the **New** button.
 
@@ -267,7 +267,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
           ![Select Module Roles](attachments/workflow-how-to-configure/select-module-roles.png)
     
-13. A microflow was created together with the **SpecifyDeviceAndLocation_Workflow** page called **DS_WorkflowUserTask_GetEmployee_OnboardingContext**. This microflow retrieves data of user tasks. You need to set up security for this microflow. In the App Explorer, double-click the **DS_WorkflowUserTask_GetEmployee_OnboardingContext** microflow to open it.
+13. A microflow called **DS_WorkflowUserTask_GetEmployee_OnboardingContext** was created together with the **SpecifyDeviceAndLocation_Workflow** page. This microflow retrieves data of user tasks. You need to set up security for this microflow. In the App Explorer, double-click the **DS_WorkflowUserTask_GetEmployee_OnboardingContext** microflow to open it.
 
 14. Navigate to microflow properties and click **Allowed roles**.
 
@@ -275,7 +275,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
 Great job! You have configured the user task for the Manager role:
 
-![Workflow with Specify Device User Task](attachments/workflow-how-to-configure/workflow-with-task.png)
+{{% image_container width="500" %}}![Workflow with Specify Device User Task](attachments/workflow-how-to-configure/workflow-with-task.png){{% /image_container %}}
 
 This can be also a good time to test your app: you can create an employee, start the onboarding process, and test the first task for the Manager demo user. For more information, see the [Testing the Workflow](#test-workflow) section. 
 
@@ -287,7 +287,7 @@ Do the following:
 
 1. Open the workflow editor > **Toolbox** and drag and drop the **Decision** activity after the **Manager: Specify Device and Location** user task.
 
-2. Decision means that the workflow path can split and follow one of the outcomes depending on the condition of the decision. For more information, see [Decision](/refguide/decision). Open the decision properties and do the following:
+2. Decision means that the workflow path can split and follow one of the outcomes depending on the condition of the decision. For more information, see [Decision in Workflows](/refguide/decision-in-workflows). Open the decision properties and do the following:
 
     1. Set the **Caption** to **WFH?**.
     2. Click the ellipsis icon in the **Condition** property.
@@ -305,9 +305,9 @@ Do the following:
 
         ![Prepare Desk](attachments/workflow-how-to-configure/prepare-desk.png)
 
-    2. Configure the task to be assigned to the Facilities role only referring to steps 6 and 7 of the [Selecting a Device for the New Hire](#select-device) section and using the `[System.UserRoles = '[%UserRole_Facilities%]']` expression.
+    2. Configure the task to be assigned to the Facilities role only referring to steps 5 and 6 of the [Selecting a Device for the New Hire](#select-device) section and using the `[System.UserRoles = '[%UserRole_Facilities%]']` expression.
 
-    4. Set a new page called **PrepareDesk_Workflow** for the **Page** property it referring to steps 8-10 of the [Selecting a Device for the New Hire](#select-device) section.
+    4. Set a new page called **PrepareDesk_Workflow** for the **Page** property it referring to steps 7-9 of the [Selecting a Device for the New Hire](#select-device) section.
 
 5. You need to make sure that only the relevant information is displayed on the **PrepareDesk_Workflow** page. In the App Explorer, double-click the **PrepareDesk_Workflow** page to open it.
 
@@ -319,15 +319,15 @@ Do the following:
       
        ![Read-Only Form](attachments/workflow-how-to-configure/read-only-form.png)
     
-7. To restrict access to the page to the Facilities role only, follow the step 13 of the [Selecting a Device for the New Hire](#select-device) section.
+7. To restrict access to the page to the Facilities role only, follow the step 12 of the [Selecting a Device for the New Hire](#select-device) section.
 
 8. Now you need to create a user task for Facilities when the employee is working from home. Open the workflow editor.
 
 9. Open the **Toolbox**, drag and drop a **User task** activity to the **true** path, and do the following:
 
     1. Name the user task **Ship_Devices** and set its title to **Facilities: Ship Devices** referring to steps 2-4 of the [Selecting a Device for the New Hire](#select-device) section.
-    2. Configure the task to be assigned to the Facilities role only referring to steps 6 and 7 of the [Selecting a Device for the New Hire](#select-device) section and using the `[System.UserRoles = '[%UserRole_Facilities%]']` expression. 
-    4. Set a new page called **ShipDevices_Workflow** for the **Page** property it referring to steps 8-10 of the [Selecting a Device for the New Hire](#select-device) section.
+    2. Configure the task to be assigned to the Facilities role only referring to steps 5 and 6 of the [Selecting a Device for the New Hire](#select-device) section and using the `[System.UserRoles = '[%UserRole_Facilities%]']` expression. 
+    4. Set a new page called **ShipDevices_Workflow** for the **Page** property it referring to steps 7-9 of the [Selecting a Device for the New Hire](#select-device) section.
     
 10. You need to make sure that only relevant information is displayed on the **ShipDevices_Workflow** page and that this page can be accessed by the Facilities department only. In the App Explorer, double-click the **ShipDevices_Workflow** page to open it.
 
@@ -347,7 +347,7 @@ To call a microflow in your workflow, do the following:
 
 2. Open **Call microflow** properties and click the ellipsis icon in the **Microflow** property.
 
-3. In the **Select microflow** dialog box, select the **Assign_Desk** microflow and click **Select**. 
+3. In the **Select microflow** dialog box, select the **ACT_EmployeeOnboarding_Assign_Desk** microflow and click **Select**. 
 
 4. Change the **Caption** property to **Assign Desk**. 
 
@@ -384,17 +384,17 @@ To test your workflow, you need to switch between different user roles. Follow t
 
 1. In the top bar of Mendix Studio Pro, click **Run locally**.
 
-2. After your app is deployed, click **View**.
+2. After your app is deployed, click **View App**.
 
 3. In your browser, log in as an Admin user.
 
 4. Click the user icon on the right to switch to another user role:
 
-    ![User Icon](attachments/workflow-how-to-configure/user-icon.png)
+    {{% image_container width="500" %}}![User Icon](attachments/workflow-how-to-configure/user-icon.png){{% /image_container %}}
 
 5. Switch between different demo user roles to test the use case. Do can do the following:
 
-    1. Start the onboarding process: select the HR demo user that has EmployeesToOnboard as the home page, add a new employee, and then click Start Onboarding:
+    1. Start the onboarding process: select the HR demo user that has **EmployeesToOnboard** as the home page, add a new employee, and then click **Start Onboarding**:
     
        ![EmployeeToOnboard Example](attachments/workflow-how-to-configure/demo_hr.png)
     

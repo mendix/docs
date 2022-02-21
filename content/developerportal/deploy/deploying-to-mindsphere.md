@@ -415,21 +415,21 @@ To create a new app manually in the MindSphere launchpad, do the following:
       If your app is running on MindSphere on **AWS** use Region `eu1`:
 
       ```code
-      default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com sprintr.home.mendix.com;
+      default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
       font-src 'self' static.eu1.mindsphere.io fonts.gstatic.com;
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com sprintr.home.mendix.com;
-      style-src 'self' 'unsafe-inline' static.eu1.mindsphere.io feedback-static.mendix.com sprintr.home.mendix.com fonts.googleapis.com;
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
+      style-src 'self' 'unsafe-inline' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com fonts.googleapis.com;
       img-src * data:;
       connect-src 'self' 'unsafe-inline'  *;
       ```
       If your app is running on MindSphere on **Azure** use Region `eu2`:
 
       ```code
-      default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com sprintr.home.mendix.com;
+      default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
       font-src 'self' data: *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io fonts.gstatic.com;
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io feedback-static.mendix.com sprintr.home.mendix.com;
-      style-src 'self' 'unsafe-inline' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io feedback-static.mendix.com sprintr.home.mendix.com fonts.googleapis.com;
-      img-src 'self' static.eu1.mindsphere.io feedback-static.mendix.com sprintr.home.mendix.com sprintr.home.mendix.com data: uistorageaccountprod.blob.core.windows.net;
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
+      style-src 'self' 'unsafe-inline' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com fonts.googleapis.com;
+      img-src 'self' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com sprintr.home.mendix.com data: uistorageaccountprod.blob.core.windows.net;
       connect-src 'self' 'unsafe-inline' *;
       ```
 

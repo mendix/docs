@@ -238,7 +238,7 @@ It can be useful to run the Speech to Text service automatically when your app s
 3. Select the **StartService** microflow from the **SpeechToText** > **USE_ME** folder.
 4. Set **After startup** to the microflow that calls the **StartService** microflow.
 
-### 4.2 Converting Speech into Text in Your Browser
+### 4.2 Converting Speech into Text in Your Browser {#convert-speech-into-text}
 
 You can use Speech To Text to convert voice into text and then trigger a customizable action. To let the [Microphone](#microphone) widget convert speech to text, you need to set **On Transcript** event.
 
@@ -314,7 +314,7 @@ For example, you can set up the **Action** to make the app show a pop-up window 
 
 ### 4.4 Adding Speech-Triggered Actions to Your App
 
-On the **Voice to Action** tab of the **Microphone** widget, you can configure **Utterance**, **Action**, and **Feedback**. If a received transcript matches the **Utterance** that you specified, your app will execute the action and give the voice feedback that you configured. This is also known as a voice command. For example, you can set a rule that when a user speaks "open home page" to the microphone, the app opens the home page automatically, and gives user the voice feedback "the home page has been opened".
+Once your app can [convert speech into transcript text](#convert-speech-into-text), you can configure **Utterance**, **Action**, and **Feedback** to set up speech-triggered actions. If a received transcript matches the **Utterance** that you specified, your app will execute the action and give the voice feedback that you configured. This is also known as a voice command. For example, you can set a rule that when a user speaks "open home page" to the microphone, the app opens the home page automatically, and gives user the voice feedback "the home page has been opened".
 
 To set up speech-triggered actions, perform the following steps:
 

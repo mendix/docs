@@ -139,8 +139,8 @@ The only core widget required is the **Microphone** widget. You can make the fol
    * **Enable language selection** – when set to **Yes**, your users can select different languages in your app
    * **language**  – sets the default language using a [language code](#supported-languages) (if empty, the default language is `en-US`)
 * **Events** tab
-  * **On transcript** – by binding a string attribute to the **transcript** property, you can use this attribute as a voice input parameter sent to the back-end service and set a custom action that is executed when the transcript is received
-     * **transcript**  – sets a string attribute as the voice input parameter
+  * **On transcript** – by binding a string attribute to the **transcript** property, this attribute will store real-time speech to text transcription result of a natural speech segment (such as a sentence), you can then set your custom action that is executed when a transcript is received. 
+     * **transcript**  – storing a real-time natural language segment transcription result upon successful speech to text conversion
      * **Action** – sets which action is executed when the transcript is received (if empty, no action is executed)
   * **On error** – by binding a string attribute to the **Error** property, you can obtain the error message raised by the back-end service and set a custom action that is executed when an error occurs
      * **Error** – sets a string attribute as the error message
@@ -197,9 +197,9 @@ The only core widget required is the **Microphone** widget. You can make the fol
 
 ### 3.6 Configuring the LicenseToken {#configure-license-token}
 
-#### 3.6.1 For an App Deployed Locally or in a Sandbox
+#### 3.6.1 For an App Run Locally or Deploy as a Mendix Free App
 
-If you deploy your app locally, configure the license token in Studio Pro as follows:
+If you run your app locally or deploy as Mendix Free App, configure the license token in Studio Pro. Perform the following steps:
 
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
@@ -209,7 +209,7 @@ If you deploy your app locally, configure the license token in Studio Pro as fol
 
     ![licensetoken-inmendix](attachments/speech-to-text/licensetoken-inmendix.png)
 
-6. When you finish building the app, click **Run** to deploy your app to the cloud.
+6. When you finish building the app, click **Run** to deploy a Mendix Free App.
 
 #### 3.6.2 For an App Deployed in the Mendix Cloud
 

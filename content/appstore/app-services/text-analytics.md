@@ -387,9 +387,9 @@ The **PiiEntityType** is an enumeration that incorporates all the information of
 
 ### 3.7 Configuring the License Token {#configure-license-token}
 
-#### 3.7.1 For an App Deployed Locally or in a Sandbox
+#### 3.7.1 For an App Run Locally or Deploy as a Mendix Free App
 
-If you deploy your app locally, configure the license token in Studio Pro. Perform the following steps:
+If you run your app locally or deploy as Mendix Free App, configure the license token in Studio Pro. Perform the following steps:
 
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
@@ -399,7 +399,7 @@ If you deploy your app locally, configure the license token in Studio Pro. Perfo
 
     ![licensetoken-inmendix](attachments/text-analytics/licensetoken-inmendix.png)
 
-6. When you finish building the app, click **Run** to deploy your app to the cloud.
+6. When you finish building the app, click **Run** to deploy a Mendix Free App.
 
 #### 3.7.2 For an App Deployed in the Mendix Cloud
 

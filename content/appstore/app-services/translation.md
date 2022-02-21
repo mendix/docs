@@ -237,7 +237,7 @@ If you run your app locally or deploy as Mendix Free App, configure the license 
 
     ![licensetoken-inmendix](attachments/translation/licensetoken-inmendix.png)
 
-6. When you finish building the app, click **Run** to deploy a Mendix Free App.
+6. When you finish building the app, click **Run Locally** to see the service working in local running app or click **Run** to deploy a Mendix Free App.
 
 #### 3.6.2 For an App Deployed in the Mendix Cloud
 

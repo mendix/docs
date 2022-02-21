@@ -81,7 +81,7 @@ Since the Mendix Modeler only runs on Mendix, we need to make sure that your vir
 
 You can use PhoneGap Build to build the native application and tell it to intialize based on this new URL, rather than the default. Follow these steps to download a package, update it, and upload it to PhoneGap Build:
 
-1. Go to sprintr.home.mendix.com and open your app.
+1. Go to the [Mendix Developer Portal](https://sprintr.home.mendix.com) and open your app.
 2. Go to the **Mobile App** page.
 2. Configure this page as you normally would and then click **Publish for Mobile App Stores**.
 

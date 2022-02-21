@@ -314,7 +314,9 @@ For example, you can set up the **Action** to make the app show a pop-up window 
 
 ### 4.4 Adding Speech-Triggered Actions to Your App
 
-You an set up rules of speech recognition that trigger actions as follows:
+On the **Voice to Action** tab of the **Microphone** widget, you can configure **Utterance**, **Action**, and **Feedback**. If a received transcript matches the **Utterance** that you specified, your app will execute the action and give the voice feedback that you configured. This is also known as a voice command. For example, you can set a rule that when a user speaks "open home page" to the microphone, the app opens the home page automatically, and gives user the voice feedback "the home page has been opened".
+
+To set up speech-triggered actions, perform the following steps:
 
 1. Double-click the **Microphone** widget. The **Edit Microphone** widget opens.
 2. Go to the **Voice to Action** tab.
@@ -323,7 +325,7 @@ You an set up rules of speech recognition that trigger actions as follows:
 
     {{% alert type="info" %}}You can use **New**, **Delete**, and **Edit** to manage all the **Actions**.{{% /alert %}}
 
-If the transcript received by the **Microphone** widget matches an utterance that you have specified, the app will run the action and give users the voice feedback.
+If the transcript received by the **Microphone** widget matches an **Utterance** that you specified, the app will run the **Action** and give users the voice **Feedback** that you configured.
 
 #### 4.4.1 Utterance {#utterance}
 

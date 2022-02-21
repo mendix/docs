@@ -90,11 +90,7 @@ To add content to the Marketplace, follow the steps in each section below.
 
 ### 4.1 Getting Started
 
-To start, click **Add content** in the upper-right corner of the Marketplace home screen:
-
-![](attachments/share-app-store-content/add-content-button.jpg)
-
-Follow these steps to continue adding content:
+To start, click **Add content** in the top bar of the Marketplace home screen. Follow these steps to continue adding content:
 
 1.  On the **Upload Content** page, select the type of content you would like to publish (the available types correspond to the [Marketplace home page](app-store-overview#home)):
 
@@ -194,7 +190,7 @@ The editor comes with a set of basic formatting tools, such as bold, bullet list
 
 <a name="screenshot"></a>Click **Add Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
 
-![](attachments/share-app-store-content/enable.png)
+![](attachments/share-app-store-content/enable.jpg)
 	
 You can optionally add a **Video** and **Demo**.
 	

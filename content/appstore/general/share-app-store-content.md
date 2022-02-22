@@ -132,7 +132,7 @@ Follow these steps to describe your content:
 
 	* [Apache V2](https://www.apache.org/licenses/LICENSE-2.0)
 	* [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)
-	* [Mendix EULA](https://www.mendix.com/terms-of-use/)<
+	* [Mendix EULA](https://www.mendix.com/terms-of-use/)
 	* [MindSphere Development License Agreement](https://siemens.mindsphere.io/en/terms)
 	* [MIT](https://opensource.org/licenses/MIT)
 	* SDISW Development License Agreement for Mendix Sample Apps EXTERNAL

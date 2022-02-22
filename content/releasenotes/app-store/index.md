@@ -10,6 +10,14 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2022
 
+### February 24th, 2022
+
+#### New features
+
+* We released **User level Trial** for premium app services (such as [Email Service](https://marketplace.mendix.com/link/component/118393), [Cognitive AI Services](https://marketplace.mendix.com/link/tag/72
+) etc.). This self-service experience helps individual user to evaluate the capabilities offered and realize the value of premium content.
+* User level Trial subscriptions will be listed under ‘My Subscriptions’ and Company level Trial and Paid Subscriptions can be viewed under ‘Company Subscriptions’.
+
 ### February 10th, 2022
 
 #### Improvements
@@ -33,7 +41,8 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 #### New Features
 
-* We released **Try for Free** for premium app services (like [Email Service](https://marketplace.mendix.com/link/component/118393)). This self-service experience helps to evaluate the capabilities offered and realize the value of premium content.
+* We released **
+** for premium app services (like [Email Service](https://marketplace.mendix.com/link/component/118393)). This self-service experience helps to evaluate the capabilities offered and realize the value of premium content.
 * You can now provide key capabilities, a banner, external links, and industry cloud details when sharing new **Solution** and **Solution Template** [component types](/appstore/general/share-app-store-content#adding).
 
 #### Improvements

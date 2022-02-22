@@ -140,7 +140,7 @@ Follow these steps to describe your content:
 	* SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL
 	* SDISW End-User License Agreement for Mendix Sample Apps
 
-	![](attachments/share-app-store-content/general.png)
+	![](attachments/share-app-store-content/general.jpg)
 
 6. Click **Upload an Image** to upload an icon for the component.
 7. <a name="draft"></a>On each page of the upload flow, click one of the following buttons:
@@ -203,7 +203,8 @@ On the **Capabilities** page, you can provide the following details about a solu
 * One or more key features to leverage in the **Solution Capabilities** section (for each capability, enter a **Name** and **Description**)
 * **External links** relevant to the content
 
-![](attachments/share-app-store-content/capabilities.png)
+![](attachments/share-app-store-content/capabilities_1.jpg)
+![](attachments/share-app-store-content/capabilities_2.jpg)
 
 ### 4.6 Publish {#publish}
 

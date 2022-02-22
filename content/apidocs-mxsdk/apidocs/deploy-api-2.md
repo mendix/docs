@@ -87,7 +87,7 @@ Where:
 
 #### 3.2.1 Description
 
-Find the status of a Job using the `JobID` returned from an API call.
+Find the status of a job using the `JobID` returned from an API call.
 
 ```bash
 HTTP Method: GET
@@ -99,7 +99,7 @@ URL: https://deploy.mendix.com/api/v2/apps/<AppId>/jobs/<JobId>
 **Request Parameters**
 
 *   _AppId_ (String): Subdomain name of an app
-*   _JobID_ (String): the ID of a Job which was triggered by a previous API call
+*   _JobID_ (String): the ID of a job which was triggered by a previous API call
 
 **Example Request**
 

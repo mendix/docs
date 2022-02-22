@@ -92,9 +92,8 @@ To use the 3DViewer features, your app needs to be bound to the 3D Viewer servic
 If you app does not have an after-startup microflow set,  follow these steps:
 
 1. Create a **Startup** microflow and add the **Viewer3D/USE_ME/VisServerAction** Java action to it.
-2. Make sure the java action parameter **Http endpoint** is set to `Expression:@Viewer3D.HttpEndpoint`.
-3. Set the return type of the microflow to **Boolean** with a **Value** of **true**.
-4.  Set this microflow as the **After startup** step via **Project Settings** > **Runtime** > [After startup](/refguide8/project-settings#after-startup).
+2. Set the return type of the microflow to **Boolean** with a **Value** of **true**.
+3.  Set this microflow as the **After startup** step via **Project Settings** > **Runtime** > [After startup](/refguide8/project-settings#after-startup).
 
 If your project already has a microflow set to execute after startup, you need to extend it with the **Viewer3D/USE_ME/VisServerAction** Java action and configure it as described in the above steps. 
 
@@ -172,7 +171,7 @@ The **GetMarkupsFromMendix** nanoflow takes a **ModelDocument** object as an inp
 
 The **VisServerAction** Java action is used to set up a visualization server infrastructure, which is critical for realizing all the functions that 3D Viewer provides. It is exposed as microflow actions. 
 
-For 3D Viewer to work, you must set the app's after-startup microflow to call the **VisServerAction** Java action. Make sure the **Http endpoint** parameter of this java action is set to `Expression:@Viewer3D.HttpEndpoint`. 
+For 3D Viewer to work, you must set the app's after-startup microflow to call the **VisServerAction** Java action. 
 
 ### 4.6 Widgets {#widgets}
 

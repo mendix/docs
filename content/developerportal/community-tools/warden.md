@@ -18,7 +18,7 @@ The following Mendix services support usage of PATs:
 
 ## 2 What Is a Personal Access Token?
 
-Personal access tokens (PATs) are an alternative to using passwords. They are designed to be used in cases where the client application needs to get access on behalf of a specific platform user but the user is not ‘present’ at the time of access and so the user cannot login via a browser (Web SSO).  The client application can be any application; i.e. an application not built with mendix technology.
+Personal access tokens (PATs) are an alternative to using passwords. They are designed to be used in cases where the client application needs to get access on behalf of a specific platform user but the user is not ‘present’ at the time of access and so the user cannot login via a browser (Web SSO). The client application can be any application; i.e. an application not built with mendix technology.
 
 Platform users can create a PAT via the Mendix Warden app and are in control of what access is delegated via the PAT; the platform user selects the ‘scope’ while creating the PAT. The PAT itself is a ‘bearer’ token; anyone or anything that has access to the PAT can use it as if they were the associated platform user subject to the restrictions set up in the scope of the PAT.
 PATs are security tokens that don’t expire but cannot be used if the associated user has been deactivated on the Mendix platform or when the user has ‘deleted’ the PAT via the Warden app.
@@ -76,7 +76,7 @@ You can delete a PAT. This will prevent anyone who may have obtained the Token s
 You cannot obtain the Token secrets of these PATs. You can only see that they exist. 
 {{% /alert %}}
 
-## 5 How to use a Personal Access Token
+## 5 How to Use a Personal Access Token
 
 Use of a PAT depends on the API you are accessing.
 

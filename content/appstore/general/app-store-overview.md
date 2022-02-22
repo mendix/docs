@@ -69,7 +69,7 @@ The header for a component presents the following details:
 
 		{{% todo %}}[**Please verify below for "Buy More" button.**]{{% /todo %}}
 
-	* If you or your company has an active subscription, click **Buy More** to buy more instances on the same or different plan.
+	* If your company has an active subscription, click **Buy More** to buy more instances on the same or different plan.
 
 		{{% todo %}}[**Please verify below.**]{{% /todo %}}
 
@@ -150,13 +150,13 @@ Click **Delete** to delete a draft. You can also click **Withdraw** to withdraw 
 
 ### 4.2 My Subscriptions {#my-subscriptions}
 
-{{% todo %}}[**Please verify below. Does this page also include free trials? More details necessary?**]{{% /todo %}}
+{{% todo %}}[**Please verify below. Does this page only include free trials? Can you provide me with a screenshot with appropriate example data or acceptance credentials to take a new screenshot? More details necessary?**]{{% /todo %}}
 
-You can see all the Marketplace app services you have subscribed to on this page:
+You can see all the Marketplace app services you have trials for on this page:
 
 ![](attachments/app-store-overview/my-subscriptions.jpg)
 
-The table presents the **Product Names** you have subscribed to. Clicking a product name takes you to the [service management dashboard](#service-management-dashboard) for the component. 
+The table presents the **Product Names** you have trials for. Clicking a product name takes you to the [service management dashboard](#service-management-dashboard) for the component. 
 
 The table also presents the **Plan** and its **Status**, and the **Expires On** date for the subscription. Under **Usage Details** is a link to the [usage dashboard](#usage-dashboard) for the component.
 

@@ -1,7 +1,7 @@
 ---
 title: "Settings"
 description: "Describes the Settings menu in Mendix Studio."
-menu_order: 90
+weight: 110
 tags: ["studio", "settings", "widgets"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -13,7 +13,7 @@ tags: ["studio", "settings", "widgets"]
 **Settings** consist of the following:
 
 * [Roles and Permissions](settings-security) – you can manage access to your app and its documents via **Roles and Permissions**
-* [Widget Overview](settings-widget-overview) – contains information on Mendix App Store widgets and local widgets in your app
+* [Widget Overview](settings-widget-overview) – contains information on Mendix Marketplace widgets and local widgets in your app
 
 To open the **Settings**, click the gear icon at the left menu bar.
 

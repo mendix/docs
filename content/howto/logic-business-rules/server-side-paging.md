@@ -7,7 +7,7 @@ tags: [ "microflow", "Data Grid", "rest service", "server-side" ]
 
 ## 1 Introduction
 
-A data grid and a microflow can be a powerful way to retrieve and display data from another system. Here you will learn to use a microflow as a data source with sorting and paging enabled. Doing so will improve your app's UX and accelerate its performance.
+Using server-side paging and sorting for a microflow data source you can model out how you retrieve data to a single page and ensure it ends up in the correct sorting order. With this approach you do not need to return all the data to the client — you can just return a single page. This can be helpful for getting data from external sources like a REST service, but can also be useful for a regular retrieve action in a microflow. To do this however, you must model the logic for getting the correct data in the microflow itself.
 
 This how-to will teach you how to do the following:
 
@@ -27,7 +27,7 @@ In this section you will create a JSON structure and import mapping for a REST s
 
 You must complete these steps with *one crucial change*: you must use this REST service URL for your JSON snippet: `https://my-json-server.typicode.com/mendix/howto-api-data/airports`.
 
-Once successful, your project should have the following elements:
+Once successful, your app should have the following elements:
 
 * A JSON structure based on the airport data:
 
@@ -192,7 +192,7 @@ Deploy your app again and navigate to the page with your data grid. The data wil
 
 ## 7 Add Server-Side Searching
 
-If you are using Mendix 8.3 or above, generating controls also generates input fields for all your attributes of the entity the microflow returns. These inputs can be used by your user to enter search criteria, which can be used to filter the data set on the server. Any data entered in the input fields by the user is set in the **Paging** entity which is passed to the data source microflow. 
+Generating controls also generates input fields for all your attributes of the entity the microflow returns. These inputs can be used by your user to enter search criteria, which can be used to filter the data set on the server. Any data entered in the input fields by the user is set in the **Paging** entity which is passed to the data source microflow. 
 
 You only need to use this data in your microflow and pass the search criteria to your REST call to get a filtered set of data. As an example, follow the instructions below to filter the **Name** attribute:
 

@@ -3,6 +3,11 @@ title: "Collaborative Development"
 category: "Version Control"
 description: "Describes the process of collaborative development between the Mendix Desktop Modeler and the Mendix Web Modeler"
 tags: ["desktop modeler", "collaborative development", "sync"]
+aliases:
+    - /howto/web-modeler/syncing-webmodeler-desktop.html
+    - /refguide7/desktop-webmodeler.html
+    - /refguide7/sync-webmodeler-desktopmodeler.html
+    - /web-modeler/general-sync-webmodeler-desktopmodeler-wm.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -52,7 +57,7 @@ When the Desktop Modeler user wants to deploy the app to the cloud, they click t
 
 ## 3 Web Modeler Perspective
 
-For information on collaborative development from the Web Modeler perspective, see [Collaborative Development in the Web Modeler](/studio/general-collaborative-development) in the *Web Modeler Guide*. 
+For information on collaborative development from the Web Modeler perspective, see [Collaborative Development in the Web Modeler](/studio7/general-collaborative-development) in the *Web Modeler Guide*. 
 
 ## 4 Desktop Modeler Perspective
 
@@ -80,7 +85,7 @@ We recommend you update your project and commit changes often to avoid multiple 
 
 If your project has conflicts, the Web Modeler will be unlocked without receiving your changes. You need to resolve the conflicts in the Desktop Modeler first to be able to complete the merge and commit again. 
 
-Your changes will be sent to the Web Modeler automatically if there are no conflicts. For more information on the collaborative development process in the Web Modeler, see [Collaborative Development in the Web Modeler](/studio/general-collaborative-development) in the *Web Modeler Guide*.
+Your changes will be sent to the Web Modeler automatically if there are no conflicts. For more information on the collaborative development process in the Web Modeler, see [Collaborative Development in the Web Modeler](/studio7/general-collaborative-development) in the *Web Modeler Guide*.
 
 ### 4.3 Viewing History of Commits
 
@@ -169,4 +174,4 @@ You cannot delete the Web Modeler enabled branch. If you need to delete this bra
 
 * [Version Control](version-control)
 * [Troubleshooting Collaborative Development](collaborative-development-troubleshooting)
-* [Collaborative Development in the Web Modeler](/studio/general-collaborative-development)
+* [Collaborative Development in the Web Modeler](/studio7/general-collaborative-development)

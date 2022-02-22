@@ -6,6 +6,7 @@ parent: "backups"
 menu_order: 40
 description: "This page describes how to restore a backup."
 tags: ["Backup","Restore","Local","Developer Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -16,7 +17,7 @@ Restoring a backup locally can be useful if you want to test your cloud environm
 
 * Download a backup from your cloud environment
 * Create a new database
-* Configure the project settings of the app
+* Configure the settings of the app
 * Download and restore FileDocument (binary) objects in your Domain Model
 
 ## 2 Prerequisites
@@ -24,7 +25,7 @@ Restoring a backup locally can be useful if you want to test your cloud environm
 **Before starting this how-to, make sure you have completed the following prerequisites:**
 
 * [Download a backup](download-backup) that you want to restore locally
-* Install PostgreSQL on your local machine by downloading and running the [PostgreSQL Installer](https://www.postgresql.org/download/windows/); use the program defaults and choose a password:
+* Install PostgreSQL version 12 or above (as you need pgAdmin version 4.12 or above) on your local machine by downloading and running the [PostgreSQL Installer](https://www.postgresql.org/download/windows/); use the program defaults and choose a password:
 
     ![](attachments/restore-backup-locally/postgres-password.png)
 
@@ -45,7 +46,7 @@ If your backup came from Mendix Cloud v4, it will have been compressed as a *.gz
 If you have downloaded a full backup, this will also have been archived as a *.tar* file which you need to extract to get your .backup file containing the database backup. The .backup file is in the **db** folder of the archive.
 {{% /alert %}}
 
-1. Start **pgAdmin 4** from the Windows start menu.
+1. Start **pgAdmin 4** from the Windows start menu. 
 2. Click the **+** in the Browser pane to open the **Servers > PostgreSQL 9.6** menu.
 3. Right-click **Databases** and **Create** a new database.
 
@@ -71,9 +72,9 @@ If you have downloaded a full backup, this will also have been archived as a *.t
 After the backup has been restored as a local Postgres database, you have to link the database to Studio Pro. This tells Studio Pro to use the database that you have just created in PostgreSQL, rather than the database that was originally created with the app.
 
 1. Open your app in **Studio Pro**.
-2. Open **Project... > Settings** from the **Project Explorer**.
+2. Open **Project... > Settings** from the **App Explorer**.
 
-    ![](attachments/restore-backup-locally/modeler-settings.png)
+    ![](attachments/restore-backup-locally/app-settings.png)
 
 3. Under the tab **Configurations** click **New**.
 
@@ -88,7 +89,7 @@ After the backup has been restored as a local Postgres database, you have to lin
     * **Password**: *{password for database owner} (by default the password you provided for postgres when first setting up PostgreSQL)*
 
 5. Click **OK**.
-6. Run the app by clicking **Run Locally**.
+6. Run the app by clicking the play button (▶) or choosing the menu option **Run > Run Locally**.
 
 ## 5 Restoring Files
 
@@ -104,14 +105,14 @@ If you also want to restore the **FileDocuments**, you need to follow the follow
 
     ![](attachments/restore-backup-locally/backup-choice.png)
 
-2. Select **Project > Show Project Directory in Explorer** from the Studio Pro menu
+2. Select **Project > Show App Directory in Explorer** from the Studio Pro menu:
 
     ![](attachments/restore-backup-locally/project-directory.png)
 
-3. Navigate to the **deployment/data/files** folder within your project.
+3. Navigate to the **deployment/data/files** folder within your app.
 4. Extract the *{backup name}.tar* file from the *.gz* archive using a program like **7-zip**.
-5. Extract the entire **tree** folder from the backup archive to the  **deployment/data/files** folder within your project.
-6. Run the app by clicking **Run Locally**.
+5. Extract the entire **tree** folder from the backup archive to the  **deployment/data/files** folder within your app.
+6. Run the app by clicking the play button (▶) or choosing the menu option **Run > Run Locally**.
 
 ## 6 Read More
 

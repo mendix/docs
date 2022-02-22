@@ -57,5 +57,5 @@ Furthermore, a module can contain many different types of documents. Each type o
 
 | Document type | Description |
 | --- | --- |
-| [Published OData Services](published-odata-services) | Persistent entities can be exposed as an OData resource, so that they can be imported by third-party applications such as Excel. |
+| [Published OData Services](published-odata-services) | Persistable entities can be exposed as an OData resource, so that they can be imported by third-party applications such as Excel. |
 | [Published Web Services](published-web-services) | A microflow can be published as a web service operation so that it can be called by third-party applications. |

@@ -14,9 +14,9 @@ To see the results of this how-to it is necessary that you setup a test project 
 
 Before you continue, make sure that you know how to create:
 
-*   **Domain models**, if you need more info, take a look at this [how-to](../data-models/create-a-basic-data-layer).
-*   **Overview and detail pages**, if you need more info, take a look at this [how-to](../front-end/create-your-first-two-overview-and-detail-pages).
-*   **Menu items**, if you need more info, take a look at this [how-to](../general/setting-up-the-navigation-structure).
+*   **Domain models**, if you need more info, take a look at this [how-to](/howto7/data-models/create-a-basic-data-layer).
+*   **Overview and detail pages**, if you need more info, take a look at this [how-to](/howto7/front-end/create-your-first-two-overview-and-detail-pages).
+*   **Menu items**, if you need more info, take a look at this [how-to](/howto7/general/setting-up-the-navigation-structure).
 
 1.  Create the following domain model:
 
@@ -241,7 +241,6 @@ In the previous sections you filtered the list of orders from database on attrib
 ## 7 Read More
 
 *   [Defining access rules using XPath](define-access-rules-using-xpath)
-*   [Extending Your Application with Custom Java](extending-your-application-with-custom-java)
 *   [Working With Lists in a Microflow](working-with-lists-in-a-microflow)
 *   [Triggering Logic using Microflows](triggering-logic-using-microflows)
 *   [Creating a Custom Save Button](create-a-custom-save-button)

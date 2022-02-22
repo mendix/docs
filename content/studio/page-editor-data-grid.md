@@ -37,7 +37,7 @@ The **Data Source** section properties are described in the table below:
 
 | Data Source Property | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
-| Database             | A data source that determines that the object or objects shown are retrieved directly from the database. You need to select an **Entity** (that you have in the domain model), or create a new entity, if you set database as the data source. <br />When you select an existing entity, the [grid columns](#grid-columns) are automatically created for each attribute of this entity. However, if the entity has more than eight attributes, you can choose whether you want to generate columns for all of them or select only several attributes. <br/>**Filter** – limits data in the data grid. You can create a filter only after you specify an entity for the data grid. For more information on data filtering, see [Data Filters](filters).<br />**Sort Order** – the order in which rows in the data grid are shown. You can specify a sort order only after you select an entity for the data grid. You can add multiple sorting rules. For example, you can add two sorting rules: one is to sort item by name in ascending order, and the other one is to sort items by email in descending order. Unique items will be sorted by name in ascending order, but if two or more items have the same name, then these items will be sorted by email. |
+| Database             | A data source that determines that the object or objects shown are retrieved directly from the database. You need to select an **Entity** (that you have in the domain model), or create a new entity, if you set database as the data source. <br />When you select an existing entity, the [grid columns](#grid-columns) are automatically created for each attribute of this entity. However, if the entity has more than eight attributes, you can choose whether you want to generate columns for all of them or select only several attributes. <br/>**Filter** – limits data in the data grid. You can create a filter only after you specify an entity for the data grid. For more information on data filtering, see [Data Filters](data-filters).<br />**Sort Order** – the order in which rows in the data grid are shown. You can specify a sort order only after you select an entity for the data grid. You can add multiple sorting rules. For example, you can add two sorting rules: one is to sort item by name in ascending order, and the other one is to sort items by email in descending order. Unique items will be sorted by name in ascending order, but if two or more items have the same name, then these items will be sorted by email. |
 | Microflow            | A data source that runs a selected microflow and displays a return value (as in, a list of objects). |
 | XPath                | Currently, this data source can only be configured in Studio Pro. For more information, see [XPath Source](/refguide/xpath-source). |
 | Association          | Available to data grids placed inside a data view or a list view. The data grid is filled with the objects linked to a data view/list view object by an association. Sorting columns and searching is not possible in data widgets with an association data source. |
@@ -61,7 +61,8 @@ The **Columns** section properties are described in the table below:
 
 In the **Grid Column** properties, you can select the attribute, change the name, width, and editability of the data grid column. 
 
-![](attachments/page-editor-data-grid/grid-column-properties.png)
+{{% image_container width="300" %}}![](attachments/page-editor-data-grid/grid-column-properties.png)
+{{% /image_container %}}
 
 The properties are described in the table below:
 
@@ -147,9 +148,9 @@ A range search field has the following specific properties:
 
 * **Maximum Value** – determines which attribute of the entity the search term must fall below 
 
-  *  **Include Maximum Value** –  when enabled, the maximum value is included into the range
+    *  **Include Maximum Value** –  when enabled, the maximum value is included into the range
 
-      ![](attachments/page-editor-data-grid/range-search-field-properties.png)
+        ![](attachments/page-editor-data-grid/range-search-field-properties.png)
 
 ### 2.5 Control Bar {#grid-control-bar}
 
@@ -157,10 +158,14 @@ The control bar allows you to control the objects displayed in the data grid by 
 
 The **Control Bar** section properties are described below: 
 
-*  **Show Paging Controls** –  indicates if the buttons for paging through the data grid are visible. Hide these buttons if you are sure that the data grid will contain only one page
-
-    ![](attachments/page-editor-data-grid/control-bar-show-paging-controls.png)
-
+*  **Show Paging Controls** – indicates if the buttons for paging through the data grid are visible to the end-user and has the following options:
+   
+    * **Yes (with total count)** – paging buttons are shown, including the **Go to last page** button and the total count of objects
+    * **Yes (without total count)** – paging buttons are shown except for the **Go to last page** button. Also, the total count of objects is not shown, as page numbers are shown instead
+    * **No** – The paging buttons are not shown. Hide the buttons if you are sure that the data grid will contain only one page
+    
+        ![Show Paging Controls](attachments/page-editor-data-grid/control-bar-show-paging-controls.png)
+    
 * **Show Buttons** – determines whether the buttons defined in the **Buttons** section are shown. If disabled, none of the buttons will be accessible in any way, other than the one designated as the **On Click Action**. For more information, see sections [2.5.1 Grid Action Button](#grid-action-button) and [2.6 Events](#grid-events)
 
 *  **Buttons** – lists buttons in the control bar. A button set as **On Click Action** in the **Events** section will be indicated as *On Click Action.* This means that even if buttons are hidden, when the end-user clicks or double clicks (depending on settings in the [Events](#grid-events) section) the grid item, the default button (action) will be triggered
@@ -204,7 +209,7 @@ Data grid specific actions are the following ones:
 
 	*  **Date Export Format** – defines how dates will be exported. When *Date value* is selected, date values will be exported as real dates, allowing Excel functions on them. When *Text* is selected, date values will be exported exactly as shown in the data grid without allowing Excel to format them.
 
-      ![](attachments/page-editor-data-grid/grid-export-to-excel-button.png)
+        ![](attachments/page-editor-data-grid/grid-export-to-excel-button.png)
 
 #### 2.5.1.1 Grid Create Button {#grid-create-button}
 

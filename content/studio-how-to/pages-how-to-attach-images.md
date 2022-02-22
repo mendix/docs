@@ -4,6 +4,7 @@ category: "Pages"
 description: "Describes how to configure image uploader in Mendix Studio."
 menu_order: 60
 tags: ["studio", "pages", "image", "image uploader", "attachment", "attach image"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 
@@ -95,13 +96,13 @@ Follow the steps below:
 
 8. In the button properties, click the **Entity** property.
 
-9. In the **Select Entity** dialog box, choose the **Receipt** entity over **Receipt_Report** association (*Receipt_Report/Receipt*) and click **Select**: 
+9. In the **Select Entity** dialog box, choose the **Receipt** entity over **Receipt_Report** association and click **Select**: 
 
     {{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/image-report-association.png){{% /image_container %}}
 
 10. In the button properties, click **Page**.
 
-11. In the **Select Page** dialog box, click **New Page**.
+11. In the **Select Page** dialog box, click the plus icon in the top right corner.
 
 12. In the **Create new page** dialog box, do the following:
 
@@ -132,14 +133,14 @@ After users attach the images, it would be nice to display their attachments and
 
 1. Open the **New Report** page.
 
-2. In the **Building Blocks**, search for **List 4** and drag and drop it under the **Attach Images** button (*inside* the data view). A list view with widgets inside it is added to your page:
+2. In the **Building Blocks**, search for **List with image** and drag and drop it under the **Attach Images** button (*inside* the data view). A list view with widgets inside it is added to your page:
 
-    {{% image_container width="550" %}}![](attachments/pages-how-to-upload-images/list-4.png){{% /image_container %}}
+    ![](attachments/pages-how-to-upload-images/list-4.png)
 
 3. Open list view properties and do the following:
 
     1. Click the **Entity** property.
-    2. In the **Select Entity** dialog box, choose the **Select Entity** dialog box, choose the **Receipt** entity over **Receipt_Report** association (*Receipt_Report/Receipt*) and click **Select**:
+    2. In the **Select Entity** dialog box, choose the **Select Entity** dialog box, choose the **Receipt** entity over **Receipt_Report** association and click **Select**:
 
     	{{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/image-report-association.png){{% /image_container %}}
 
@@ -152,27 +153,34 @@ After users attach the images, it would be nice to display their attachments and
 
     	{{% image_container width="300" %}}![](attachments/pages-how-to-upload-images/image-properties.png){{% /image_container %}}
 
-5. Delete a subtitle in the list view saying *Here you can put a subtitle*.
+5. Delete a subtitle in the list view saying *Secondary text*.
 
-6. Select the **Name** text in the list view and open its properties.
+6. Select the **List item title** text in the list view and open its properties.
 
-    1. In the **Content** property, delete the *Name* text and click **Add attribute**.
+    1. In the **Content** property, delete the *List item title* text and click **Add**  > **Attribute**.
     2. In the **Select Attribute** dialog box, choose the **Name** attribute and click **Select** to display the name of the attached image.
 
     	{{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/select-attribute.png){{% /image_container %}}
 
-7. Select the **Details** button in the list view, open its properties, and do the following:
+7. Select the button in the list view, open its properties, and do the following:
 
     1. In the **Events** section > the **On Click Action** property, select **More**. 
+    
     2. In the **Action** property, select **Delete Object**. 
-    3. In the **General** section > the **Caption** property, change the button caption from *Details* to *Delete*. 
-    4. In the **Style** property, change **Default** to **Danger**. 
-
-    	{{% image_container width="250" %}}![](attachments/pages-how-to-upload-images/button-properties.png){{% /image_container %}}
+    
+    3. In the **General** section > the **Caption** property, set the button caption to *Delete*.
+    
+    4. Click the icon property and click **Clear** in the **Select icon** dialog box to delete the icon.
+    
+    5. Change the **Render Mode** from **Link** to **Button**.
+    
+    6. In the **Style** property, change **Default** to **Danger**. 
+    
+      ![](attachments/pages-how-to-upload-images/button-properties.png)
 
 Great job! Now you have the image list that shows attached images and your users will be able to delete images from the list if necessary:
 
-{{% image_container width="600" %}}![](attachments/pages-how-to-upload-images/configured-image-list.png){{% /image_container %}}
+![](attachments/pages-how-to-upload-images/configured-image-list.png)
 
 Congratulations! You have configured the report that allows your users to attach images and displays these images in the list.
 

@@ -100,7 +100,7 @@ After startup for the first time, a small wizard is started:
 
 *   If you have received a license request code for this app, you can enter this code in the license request code field.   
 *   Use the **Mail license request** button to send a mail with the license request.
-*   If a mail client does not open, is not configured, or fails otherwise, use the **Manual license request** button .This opens a dialog box so that you can copy-paste the text for the email to be sent to [apmtool@mansystems.nl](mailto:apmtool@mansystems.nl).
+*   If a mail client does not open, is not configured, or fails otherwise, use the **Manual license request** button .This opens a dialog box so that you can copy-paste the text for the email to be sent to [apmtool@clevr.com](mailto:apmtool@clevr.com).
 *   Upon receiving the license, copy-paste the license in the **License key** field.
 *   Select **Production** or **Non-Production**.
 *   Select **Save**.

@@ -14,7 +14,7 @@ With the log-message action you can create messages that appear in the log of yo
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (for example, caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
@@ -47,7 +47,7 @@ It is advised to use a [constant](constants) for the log node name. This prevent
 
 ### 2.3 Template
 
-Template defines the text of the message. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2 etcetera.
+Template defines the text of the message. The template can contain parameters that are written as a number between braces, for example, {1}. The first parameter has number 1, the second 2 etcetera.
 
 ### 2.4 Parameters
 

@@ -16,9 +16,9 @@ Mendix uses visual models called microflows to define the logic of your applicat
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
-* Create a basic data layer (for details, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* Create overview and detail pages for the customer object (for details, see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages))
-* Create a menu item to access the customer overview page (for details, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
+* Create a basic data layer (for details, see [How to Create a Basic Data Layer](/howto7/data-models/create-a-basic-data-layer))
+* Create overview and detail pages for the customer object (for details, see [How to Create Your First Two Overview & Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages))
+* Create a menu item to access the customer overview page (for details, see [How to Set Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure))
 
 ## 3 Replacing the Default Save Button with a Custom Save Button
 
@@ -48,7 +48,7 @@ To replace the default Save button with a custom one, follow these steps:
     
     ![](attachments/18448679/18580984.png)
 
-2. Open the **Toolbox** from the bottom-right corner of the Modeler:
+2. Open the **Toolbox** from the lower-right corner of the Modeler:
 
     ![](attachments/8784287/8946802.png)
 
@@ -82,7 +82,6 @@ To replace the default Save button with a custom one, follow these steps:
 
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)
-* [How to Extend Your Application with Custom Java](extending-your-application-with-custom-java)
 * [How to Work With Lists in a Microflow](working-with-lists-in-a-microflow)
 * [How to Optimize Retrieve Activities](optimizing-retrieve-activities)
 * [How to Configure Error Handling](set-up-error-handling)

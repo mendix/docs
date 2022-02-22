@@ -3,6 +3,7 @@ title: "Siemens"
 description: "Reference content for Siemens integrations."
 tags: ["Siemens", "MindSphere"]
 notoc: true
+weight: 10
 #layout: wide
 ---
 
@@ -12,4 +13,4 @@ This category includes reference content for integrating with Siemens products.
 
 ## 2 Main Sections in This Category
 
-* [MindSphere](mindsphere) – contains documentation around considerations and technical details of deploying Mendix apps to MindSphere, including documentation of the Siemens MindSphere Pump Asset Example app
+* [MindSphere](mindsphere) – contains documentation around considerations and technical details of the interaction between Mendix apps and MindSphere, including documentation of different Siemens MindSphere application examples. 

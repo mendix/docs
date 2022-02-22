@@ -3,6 +3,10 @@ title: "Search Bar"
 parent: "grids"
 menu_order: 40
 tags: ["studio pro", "search bar", "comparison search field", "drop down search field", "range search field", "grid"]
+aliases:
+    - /refguide/comparison-search-field.html
+    - /refguide/drop-down-search-field.html
+    - /refguide/range-search-field.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -18,14 +22,12 @@ To add a search field to the search bar, right-click within the search bar in yo
 
 There are three different types of search fields that can be used for different kinds of information:
 
-* **Comparison** – search results are filtered by comparing them to the given search term. If the search value matches the attribute value, this object will be a part of the search result. Possible attribute types: AutoNumber, Date and Time, Integer, Long, String, Decimal 
-* **Drop-down** – will apply a filter based on whether the search term falls between the values of two selected attributes. Possible attribute types: AutoNumber, Date and Time, Integer, Long, Decimal 
-* **Range** –  search results are filtered by comparing them to the given search term. If the search value matches the attribute value, this object will be a part of the search result. Possible attribute types: Boolean, Enumerations, Associations 
+* **Comparison** – Search results are filtered by comparing them to the given search term. If the search value matches the attribute value, this object will be a part of the search result. Possible attribute types: AutoNumber, Date and Time, Integer, Long, String, Decimal.
+* **Drop-down** – Search results are filtered by comparing them to the given search term. If the search value matches the attribute value, this object will be a part of the search result. Possible attribute types: Boolean, Enumerations, Associations.
+* **Range** –  This will apply a filter based on whether the search term falls between the values of two selected attributes. Possible attribute types: AutoNumber, Date and Time, Integer, Long, Decimal.
 
 {{% alert type="info" %}}
-
 You cannot change the type of a search field, you will need to delete it and then add a new one of a different type.
-
 {{% /alert %}}
 
 ## 3 Search Field Properties {#search-field-properties}
@@ -76,20 +78,14 @@ This property is available for **Comparison** and **Drop-down** search fields.
 
 {{% /alert %}}
 
-Many input widgets (like text boxes and drop-down widgets) can be connected to the following:
+Many input elements (like text boxes and drop-down widgets) can be connected to the following:
 
 * An attribute of the entity of the data view that contains the widget; in this case, the widget is connected to an attribute
 * An attribute of an entity associated with the data view entity by following one or more associations of the reference type through the domain model; in this case, the widget is connected to an attribute path
 
 In the first case, we say the widget is connected to an attribute, and in the second case it is connected to an attribute path.
 
-{{% alert type="warning" %}}
-
-In Mendix 8.0, an input widget connected to an attribute path must be read-only. Studio Pro will check this for you.
-
-In Mendix 8.1 and above, you can edit attributes presented in input widgets over a path.
-
-{{% /alert %}}
+You can edit attributes presented in input elements over a path.
 
 #### 3.2.2 Comparison
 

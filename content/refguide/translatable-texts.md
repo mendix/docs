@@ -23,7 +23,11 @@ These *translatable texts* include the following:
 
 You can see the language you are currently working in at the bottom right of the screen.
 
+{{% image_container width="350" %}}
+
 ![Language Status](attachments/language/language-status.png)
+
+{{% /image_container %}}
 
 When you have multiple languages set up in your app, you can choose a language to work in by doing one of the following:
 
@@ -45,8 +49,8 @@ If there is no text in the default language, the end-user will see `[no translat
 
 The **Language** menu allows you to manage additional languages and translations for your app. This includes features to help you to translate a text in all places where it appears with a single change instead of having to change each occurrence individually:
 
-{{% image_container width="300" %}}![Language Menu](attachments/language/language-menu.png)
-{{% /image_container %}}
+![Language Menu](attachments/language/language-menu.png)
+
 
 ### 3.1 Menu Items Overview
 
@@ -64,7 +68,14 @@ The **Language** menu items are described in the table below:
 
 ## 4 Setting the End-User's Language
 
-The language which is displayed to the end-user is determined by the **Language** object which is associated with the **User** object for the current end-user via the association **User_Language**. If the end-user is not associated with a language, or if the associated language is not one of those set in the app, then the end-user will see pages in the default language.
+The language which is displayed to the end-user is determined by the **Language** object which is associated with the **User** object for the current end-user via the association **User_Language**.
+
+If the associated language is not one of those set in the app, then the end-user will see pages in the default language.
+
+If the end-user is not associated with a language, for example they are an anonymous user, the language used depends on the user's browser or operating system settings. If the language requested is not present up in the app, then the app's default language will be used. The requested language will be as follows:
+
+* for web apps – the first language which matches a language set in the app based on the browser's preferred order of languages
+* for mobile apps – the operating system language
 
 ![System Domain Model for User and Language](attachments/language/user-language-domain-model.png)
 
@@ -76,13 +87,17 @@ There are two options to ensure that the language is changed:
     * sign out and sign in again
     * use their browser's refresh command
 2. Force Mendix to reload the page – for example by doing the following:
-    1. Add the platform supported widget [HTML / JavaScript Snippet](https://appstore.home.mendix.com/link/app/56/) to your app.
+    1. Add the platform supported widget [HTML / JavaScript Snippet](https://marketplace.mendix.com/link/component/56/) to your app.
     2. Create a pop-up page.
     3. Place the HTMLSnippet widget on the pop-up page.
     4. Add the **JavaScript** content `mx.reloadWithState();` to the widget.
     5. Open your new pop-up page from a microflow when you want to switch the user's language.
 
     ![System Domain Model for User and Language](attachments/language/reload-with-state.png)
+
+{{% alert type="info" %}}
+The above only applies to pages *within* your Mendix application (meaning, pages that are created in Studio Pro). The labels for static pages (such as the *index.html* and *login.html* pages in the **theme** folder of your app) are generated when you create a deployment package using the default language of your app. The labels on those pages will not change for different users, they will always be the same.
+{{% /alert %}}
 
 ## 5 Read More
 

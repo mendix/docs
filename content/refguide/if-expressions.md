@@ -1,6 +1,7 @@
 ---
 title: "If Expressions"
 parent: "expressions"
+menu_order: 60
 tags: ["studio pro", "if expression", "expression", "if statement", "expressions"]
 ---
 
@@ -15,7 +16,7 @@ if _`<condition>`_ then _`<a value>`_ else _`<other value>`_
 Using the following statement as the expression of a Change variable activity for a string value:
 
 ```java
-if 7 > 6 then "correct" else "incorrect"
+if 7 > 6 then 'correct' else 'incorrect'
 ```
 
 will set the value of the variable to `correct`.

@@ -4,7 +4,14 @@ category: "Deployment"
 description: "Describes the options for deploying a Mendix app on premises"
 menu_order: 80
 tags: ["Deployment", "On premises", "Environment"]
+aliases:
+    - /deployment/on-premises.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
+
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/on-premises-design.pdf).
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -42,11 +49,9 @@ You should avoid using this option if possible.
 
 ## 3 Load Balancing Support and Configuration
 
-The platform can handle a load balancer in front of the platform. The only additional requirement is that the load balancer uses sticky sessions. When a problem occurs on a single instance, the only thing an active user can lose is the data being working on. Everything that is only available in the memory of the failed instance will be gone, and all of the stored data will still be available for the user.
+The platform can handle a load balancer in front of the platform. When a problem occurs on a single instance, the only thing an active user can lose is the data being working on. Everything that is only available in the memory of the failed instance will be gone, and all of the stored data will still be available for the user.
 
 When updating the application, it is best to stop every instance. If the database structure has changed and a single instance updates the database structure, it can cause some strange behavior on all the running instances, since they are still expecting the old database structure.
-
-For more information, see [How to Configure High Availability](high-availability).
 
 ## 4 Read More
 

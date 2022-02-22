@@ -8,18 +8,18 @@ tags: ["studio", "page editor", "pages", "data view", "list view"]
 
 ## 1 Introduction 
 
-A *data view* is a starting point for showing the contents of one object on a page.  A data view typically contains input widgets like text boxes. 
+A *data view* is a starting point for showing the contents of one object on a page.  A data view typically contains input elements like text boxes. 
 
 For example, if you want to fill out the information on each customer, a data view is the best way to do that.
 
-{{% image_container width="400" %}}![](attachments/page-editor-data-view-list-view/data-view-example.png)
+{{% image_container width="300" %}}![](attachments/page-editor-data-view-list-view/data-view-example.png)
 {{% /image_container %}}
 
 In more complex templates, a data view can contain other data views for related objects, for example, showing customer details and showing customer payment status, if these are modeled as two different entities. 
 
 A *list view* is a starting point for showing a list of objects. For example, if you want to display a list of all customers, use a list view. 
 
-{{% image_container width="400" %}}![](attachments/page-editor-data-view-list-view/list-view-example.png)
+{{% image_container width="300" %}}![](attachments/page-editor-data-view-list-view/list-view-example.png)
 {{% /image_container %}}
 
 A data view and list view belong to the **Data Container** category of widgets. For more information on different widget categories, see [Widgets](page-editor-widgets). 
@@ -29,12 +29,16 @@ A data view and list view belong to the **Data Container** category of widgets. 
 Data view consists of the following properties:
 
 * [Data Source](#data-source-data-view)
+
 * [General](#general-section-data-view)
+
 * [Conditional Visibility](#visibility-data-view)
+
 * [Design](#design-section-data-view)
 
-{{% image_container width="300" %}}![](attachments/page-editor-data-view-list-view/data-view-properties.png)
-{{% /image_container %}}
+    
+    
+    {{% image_container width="250" %}}![](attachments/page-editor-data-view-list-view/data-view-properties.png){{% /image_container %}}
 
 ### 2.1 Data Source Section {#data-source-data-view} 
 
@@ -48,10 +52,14 @@ The data source determines which object will be shown in the data view. For gene
 
 ### 2.2 General Section {#general-section-data-view}
 
-In the **General** section, you can enable/disable the following options:
+The **General** section properties of are described in the table below:
 
-* **Read-Only** (disabled by default) – when enabled, all [input elements](page-editor-widgets-input-elements) (for example, a text area, a check box) in the data view will be in read-only mode
-* **Show Footer** (enabled by default) – a footer is an area at the bottom of the document, usually containing information common for all pages, such as copyrights  
+| General Section Property           | Description                                                  |
+| ---------------------------------- | ------------------------------------------------------------ |
+| Form Orientation                   | Determines the position of the [input element labels](page-editor-widgets-input-elements#show-label) inside the data view. You can choose the following orientation: <ul><li>**Horizontal** – the labels will be placed next to the input elements</li><li>**Vertical** – the labels will be placed above the input elements</li></ul> Note that a data view with a vertical orientation cannot be placed inside a data view with a horizontal orientation. In that case, the form will be rendered horizontally. |
+| Read-Only *(disabled by default)*  | When enabled, all [input elements](page-editor-widgets-input-elements) (for example, a text area, a check box) in the data view will be in read-only mode. |
+| Show Footer *(enabled by default)* | A footer is an area at the bottom of the document, usually containing information common for all pages, such as copyrights. |
+
 
 ### 2.3 Conditional Visibility {#visibility-data-view}
 
@@ -70,8 +78,7 @@ List view consists of the following properties:
 * [Conditional Visibility](#visibility-list-view)
 * [Design](#design-section-list-view)
 
-{{% image_container width="300" %}}![](attachments/page-editor-data-view-list-view/list-view-properties.png)
-{{% /image_container %}}
+    {{% image_container width="250" %}}![](attachments/page-editor-data-view-list-view/list-view-properties.png){{% /image_container %}}
 
 ### 3.1 Data Source Section {#data-source-list-view}
 
@@ -79,7 +86,7 @@ The data source determines which objects will be shown in the list view. For gen
 
 | Data Source Property | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
-| Database             | A data source that determines that the object or objects shown are retrieved directly from the database. You need to select an **Entity** (that you have in the domain model), or create a new entity, if you set database as the data source. For more technical information, see [Database Source](/refguide/database-source) in the *Studio Pro Guide*.<br />**Filter** – limits data in the list view. You can create a filter only after you specify an entity for the list view. For more information on data filtering, see [Data Filters](filters).<br />**Sort Order** – the order in which items in the list view are shown. You can specify a sort order only after you select an entity for the list view. You can add multiple sorting rules. For example, you can add two sorting rules: one is to sort item by name in ascending order, and the other one is to sort items by email in descending order. Unique items will be sorted by name in ascending order, but if two or more items have the same name, then these items will be sorted by email. |
+| Database             | A data source that determines that the object or objects shown are retrieved directly from the database. You need to select an **Entity** (that you have in the domain model), or create a new entity, if you set database as the data source. For more technical information, see [Database Source](/refguide/database-source) in the *Studio Pro Guide*.<br />**Filter** – limits data in the list view. You can create a filter only after you specify an entity for the list view. For more information on data filtering, see [Data Filters](data-filters).<br />**Sort Order** – the order in which items in the list view are shown. You can specify a sort order only after you select an entity for the list view. You can add multiple sorting rules. For example, you can add two sorting rules: one is to sort item by name in ascending order, and the other one is to sort items by email in descending order. Unique items will be sorted by name in ascending order, but if two or more items have the same name, then these items will be sorted by email. |
 | Microflow            | A data source that runs a selected microflow and displays a return value (as in, a list of objects). For more technical information, see [Microflow Source](/refguide/microflow-source) in the *Studio Pro Guide*. |
 | XPath                | Currently, this data source can only be configured in Studio Pro. For more information, see [XPath Source](/refguide/xpath-source). |
 | Nanoflow             | Currently, this data source can only be configured in Studio Pro. For more information, see [Nanoflows](/refguide/nanoflows). |

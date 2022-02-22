@@ -1,9 +1,9 @@
 ---
 title: "Implement Styles"
-category: "Front-End"
+category: "Front End"
 description: "Presents details on using class names for text colors, buttons, and other style elements."
 menu_order: 40
-tags: ["style", "class name", "user interface", "Front-End"]
+tags: ["style", "class name", "user interface", "front end"]
 ---
 
 ## 1 Introduction
@@ -156,5 +156,5 @@ Many of these classes are part of Bootstrap. For more information about classes 
 
 ## 11 Read More
 
-* [Mendix Atlas UI](https://atlas.mendix.com/)
+* [Mendix Atlas UI](https://atlas2.mendix.com/)
 

@@ -40,12 +40,6 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 The [Export Mapping](export-mappings) action defines in which way the data in the [domain model](domain-model) corresponds with the XML schema or JSON structure.
 
-{{% alert type="info" %}}
-
-Export mappings support flat JSON. You can select a JSON structure document in an export mapping, and you can select JSON elements that are at most one level deep. That means that you can export simple JSON objects like `{"Name":"John", "Age":46}`.
-
-{{% /alert %}}
-
 ### 3.2 Parameter Type
 
 If the [export mapping](export-mappings) requires an input, this field shows the type of the input.
@@ -68,7 +62,7 @@ Validation against schema is only applicable if an export mapping is selected th
 
 This determines whether the export action should validate the outgoing XML against the schema (XSD).
 
-Setting this to yes can ipmact performance!
+Setting this to yes can impact performance!
 
 Default: *No*
 

@@ -1,7 +1,7 @@
 ---
 title: "Input Elements"
 parent: "page-editor-widgets"
-description: "Describes input widgets in Mendix Studio."
+description: "Describes input elements in Mendix Studio."
 menu_order: 20
 tags: ["studio", "page editor", "input elements", "input widgets", "widgets"]
 ---
@@ -15,8 +15,7 @@ tags: ["studio", "page editor", "input elements", "input widgets", "widgets"]
 
 **Input Elements** can only function inside a data container (a data view, a list view, or a data grid). You can either place widget in an existing data container; or click **Wrap with a new data view** in **Properties** to create a data view and place an input element inside it automatically. 
 
-{{% image_container width="350" %}}![](attachments/page-editor-widgets-input-elements/wrap-in-data-view.png)
-{{% /image_container %}}
+![](attachments/page-editor-widgets-input-elements/wrap-in-data-view.png)
 
 ## 2 Input Elements Overview
 
@@ -33,7 +32,7 @@ You can find the description of input elements available in Studio in the table 
 
 {{% alert type="info" %}}
 
-Apart from the standard input widgets, you can also [download widgets from the Mendix App Store](https://appstore.home.mendix.com/index3.html) to your app. For more information, see the [Widgets by Origin](page-editor-widgets#widgets-by-origin) section in *Widgets*.
+Apart from the standard input elements, you can also [download widgets from the Mendix Marketplace](https://marketplace.mendix.com/) to your app. For more information, see the [Widgets by Origin](page-editor-widgets#widgets-by-origin) section in *Widgets*.
 
 {{% /alert %}}
 
@@ -41,6 +40,7 @@ Apart from the standard input widgets, you can also [download widgets from the M
 
 All input elements properties consist of the following sections:
 
+* [Type](#type)
 * [Data source](#input-elements-data-source)
 * [General](#input-elements-general)
 * [Input Validation](#validation)
@@ -49,7 +49,17 @@ All input elements properties consist of the following sections:
 
 A date picker has a specific [Format](#format) section.
 
-### 3.1 Data Source Section {#input-elements-data-source}
+### 3.1 Type Option {#type}
+
+{{% alert type="info" %}}
+This option is only available for **Text Box**, **Text Area**, **Radio Buttons**, **Check Box**, and **Drop-Down** widgets.
+{{% /alert %}}
+
+The **Type** option allows you to quickly change the type of one input element to a similar one: you can change a **Text Box** to a **Text Area** and vice versa, and change **Radio Buttons** to a **Check Box** or a **Drop-Down** and vice versa:
+
+![Type Option](attachments/page-editor-widgets-input-elements/input-widget-type.jpg)
+
+### 3.2 Data Source Section {#input-elements-data-source}
 
 **Input Elements** need to be linked to an attribute to show data and to allow end-users to edit it. Different input elements require different [types of attributes](domain-models-attributes). You can find the correspondence between the input elements and attribute types in the table below:
 
@@ -63,60 +73,53 @@ A date picker has a specific [Format](#format) section.
 | Check Box          | Boolean                                                      |
 | Radio Buttons      | Boolean, Enumeration                                         |
 
-### 3.2 General Section {#input-elements-general}
+### 3.3 General Section {#input-elements-general}
 
 The **General** section has common properties for every input element, but may also contain specific ones. 
 
-#### 3.2.1 Show Label
+#### 3.3.1 Show Label {#show-label}
 
 Enable this property if you want to show a label (name) of a widget to the end-user. *This property is enabled by default.*
 
-#### 3.2.2 Label
+#### 3.3.2 Label
 
 This property only appears if **Show Label** is enabled. Specify the name that will be displayed to end-users. When you select an attribute, the name of the attribute is shown in the label in braces. This means that instead of a static text, the value of the attribute is displayed to end-users.
 
-#### 3.2.3 Editability {#editability}
+#### 3.3.3 Editability {#editability}
 
 Editability indicates whether the end-user will be able to change the value displayed by the widget. Possible values are the following: 
 
-* **Editable** – the value displayed by the widget is editable.
+* **Editable** – The value displayed by the widget is editable.
 
-* **Read-only** – the value is in read-only mode.
+* **Read-Only** – The value is in read-only mode.
 
-* **Conditional** – the widget is editable only if specified conditions are met based on an attribute value (for more information, see  [Attribute-Based](#attribute-based) and [Attribute Values](#attribute-values) sections below) or based on an expression. You can create a condition based on an expression in Studio Pro only (for details, see the [Editability Section](/refguide/common-widget-properties#editability) in *Properties Common in the Page Editor*)
+* **Conditional** – The widget is editable only if specified conditions are met based on an attribute value or based on an expression. 
 
-	{{%alert type="info" %}}If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.
-	
-	{{%/alert %}}
-	
+	{{%alert type="info" %}} If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.{{%/alert %}}
 
-#### 3.2.4 Attribute-Based {#attribute-based}
 
-The **Attribute-Based** property is only shown when [Conditional Editability](#editability) is selected.
+##### 3.3.3.1 Condition Based on {#condition}
 
-**Attribute-Based** conditional editability allows you to show widgets only when they match a certain value of the selected attribute. 
+The **Condition Based on** property is only shown when [Conditional Editability](#editability) is selected. The following options are available:
 
-{{%alert type="info" %}}
+* **Attribute** – Defines whether the condition is based on the attribute value. In this case the widget will be editable only when it matches a certain value of the selected attribute. The attribute must be of the Boolean or enumeration type. 
+* **Expression** – Defines whether the condition is based on the expression. In this case the widget will be editable only when the expression returns the Boolean value `true`. For more information on expressions, see [Expressions](expressions).
 
-The attribute must be of the Boolean or enumeration type.
+##### 3.3.3.2 Attribute {#attribute}
 
-{{%/alert %}} 
+This property is shown only when the expression the [Condition Based on](#condition) is set to **Attribute**. Allows you to select the attribute the condition will be based on. The attribute must be of the Boolean or enumeration type.
 
-{{%alert type="info" %}}
+##### 3.3.3.3 Attribute Values {#attribute-values}
 
-You can only configure attribute-based conditional editability when a widget is placed in a data container: a data view or a list view. For more information on how to place widgets on a page, see [Adding Elements on a Page](page-editor#adding-elements) section in *Pages*. 
+This property is shown only when the attribute is selected for the [Attribute](#condition) property. The **Attribute Values** property allows you to select certain attribute values.
 
-{{%/alert %}}
+For example, you would like to make the **City** field editable only when users fill the **Country** field in, because you can deliver your products to a limited number of countries. So, you need to select *Country* in the **Attribute** property and *Netherlands*, *Belgium*, *Germany*, *France* in the **Attribute Value** property.
 
-#### 3.2.5 Attribute Values {#attribute-values}
+##### 3.3.3.4 Expression
 
-This property is shown only when an attribute in the [Attribute-Based](#attribute-based) property is selected. The **Attribute Values** property allows you to select certain attribute values.
+This property allows you to create an expression and shown only when the expression the [Condition Based on](#condition) is set to **Expression**. The expression should be of the Boolean type. For more information on how to create expressions, see [Expressions](expressions).
 
-For example, you would like to make the **City** field editable only when users fill the **Country** field in, because you can deliver your products to a limited number of countries. So, you need to select *Country* in the **Attribute-Based** property and *Netherlands*, *Belgium*, *Germany*, *France* in the **Attribute Value** property:
-
-![](attachments/page-editor-widgets-input-elements/attribute-based-editability.png)
-
-#### 3.2.6 Specific Properties
+#### 3.3.4 Specific Properties
 
 Specific properties of the input elements are described in the table below:
 
@@ -126,7 +129,7 @@ Specific properties of the input elements are described in the table below:
 | Text Area     | Number of Lines    | This property is only displayed when the **Grow Automatically** option is disabled.  The number of lines determine how many lines the text area shows at the same time. If the text in the text area contains more lines you will have to use a scrollbar to see it all. <br />Default value for the **Number of Lines** option: 5 |
 | Radio Buttons | Orientation        | This property defines whether the radio buttons are displayed in your app horizontally or vertically. <br />Default value for **Orientation**: Horizontal. |
 
-### 3.3 Format Section {#format}
+### 3.4 Format Section {#format}
 
 The **Format** section is specific for the **Date Picker** widget only. 
 
@@ -137,11 +140,14 @@ The **Format** section is specific for the **Date Picker** widget only.
 | Type           | Determines the way date and/or time is displayed to users. Possible values of this property are the following ones: <ul><li>**Date** – users can view or edit a date only</li>**Time** – users can view or edit time only<li></li><li>**Date & Time** – users can view or edit date and time</li><li>**Custom** – custom date and time format, can be configured in Studio Pro only</li></ul><br />Default value for **Type**: Date |
 | Format Example | Displays an example of the selected format type.             |
 
-### 3.4 Input Validation Section {#validation}
+### 3.5 Input Validation Section {#validation}
 
 In **Input Validation**, you can specify whether the widget's value should be validated. You can set a validation type for an input widget and specify an end-user message in case validation fails. For example, you can mark the **Full name** field as required for new customers and you can add a message saying: "Please specify your name to proceed".
 
+{{% image_container width="350" %}}
 ![](attachments/page-editor-widgets-input-elements/Validation-type-required.png)
+{{% /image_container %}}
+
 
 The **Input Validation** section properties are described in the table below:
 
@@ -150,11 +156,11 @@ The **Input Validation** section properties are described in the table below:
 | Validation Type                          | This property indicates whether a value filled in a widget should be validated. Possible options are the following:<br /><ul><li>**None** – a value is not required, the widget can be left empty</li><li>**Required** – the widget cannot be empty, end-users need to fill a value in it</li><li>**Custom** – can be set only in Studio Pro. However, if a custom validation has been set in Studio Pro, you can specify or change a [message](#validation-message) for the custom validation</li></ul> |
 | <a name="validation-message"></a>Message | A message that is shown to end-users when **Validation Type** is **Required** or **Custom** and when the validation has failed. |
 
-### 3.5 Conditional Visibility Section {#visibility}
+### 3.6 Conditional Visibility Section {#visibility}
 
 {{% snippet file="studio/visibility-section-link.md" %}}
 
-### 3.6 Design Section {#input-elements-design}
+### 3.7 Design Section {#input-elements-design}
 
 For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 

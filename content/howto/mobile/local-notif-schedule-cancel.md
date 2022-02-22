@@ -127,5 +127,4 @@ You will not see a notification at the end of the minute, proving your cancel ac
 
 ## 5 Read More
 
-* [Implement Push Notifications](implementation-guide)
 * [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)

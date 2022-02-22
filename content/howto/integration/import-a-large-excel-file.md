@@ -1,7 +1,7 @@
 ---
 title: "Import a Large Excel File"
 parent: "importing-excel-documents"
-tags: ["excel", "excel  importer", "app store", "sheet"]
+tags: ["excel", "excel  importer", "marketplace", "sheet"]
 ---
 
 ## 1 Introduction
@@ -22,7 +22,7 @@ We will use XML-to-domain mapping to create a new import entity from an Excel sh
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Have an app project with the [MxModel Reflection](/appstore/modules/model-reflection) and [Excel Importer](/appstore/modules/excel-importer) modules installed and configured from the Mendix App Store
+* Have an app with the [MxModel Reflection](/appstore/modules/model-reflection) and [Excel Importer](/appstore/modules/excel-importer) modules installed and configured from the Mendix Marketplace
 
 ## 3 Modifying Your Excel Sheet
 
@@ -108,9 +108,9 @@ To prepare your XSD file, follow these steps:
 
 ## 5 Importing into Your Application Project
 
-The XSD file is ready to be imported into . To import it, follow these steps:
+The XSD file is ready to be imported into. To import it, follow these steps:
 
-1. Open your app project and create a new XSD schema:
+1. Open your app and create a new XSD schema:
 
     ![](attachments/import-large/19398893.png)
 
@@ -136,6 +136,6 @@ The XSD file is ready to be imported into . To import it, follow these steps:
 
     ![](attachments/import-large/19398899.png)
 
-7. To keep your application clean, you can delete the XSD schema and XML-to-domain files from your project.
+7. To keep your application clean, you can delete the XSD schema and XML-to-domain files from your app.
 
 Happy modeling!

@@ -8,23 +8,67 @@ description: "Mendix Hybrid App Base & Hybrid App Template release notes."
 
 If you are building your hybrid mobile app using the regular PhoneGap Build approach from within the Mendix Developer Portal, you do not need to worry about these numbers. Downloading and building a new package will set you up with the latest version.
 
-If you are using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY**.
+If you are using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY**.
 
 For more information on hybrid mobile app development in Mendix, see the [Hybrid Mobile](/refguide/hybrid-mobile) section of the *Studio Pro 8 Guide* and the [Hybrid Mobile](/howto/mobile/hybrid-mobile) section of the *Studio Pro 8 How-to's*.
 
+## 2021
+
+### Hybrid App Base 5.0.6
+
+**Release date: June 17th, 2021**
+
+#### Improvements
+
+* Hybrid apps now include support for Android API 30.
+
+#### Fixes 
+
+* We updated the allowed navigation tags with the correct Mendix hosts.
+
+### Hybrid App Base 5.0.5
+
+**Release date: April 16th, 2021**
+
+* We upgraded the push notification library to fix an issue with iOS push notifications.
+
+### Hybrid App Base 5.0.4
+
+**Release date: March 16th, 2021**
+
+* We fixed an issue with file store that sometimes corrupted the runtime tokens.
+
+### Hybrid App Base 5.0.3
+
+**Release date: March 5th, 2021**
+
+* We fixed an issue where the database could close at the wrong moment.
+
 ## 2020
 
-### Hybrid App Base 5.0.0
+### Hybrid App Base 5.0.2
+
+**Release date: September 3rd, 2020**
+
+* We fixed the version number of the Hybrid App Base.
+
+### Hybrid App Base 5.0.1
+
+**Release date: September 3rd, 2020**
+
+* Android builds now target Android SDK level 29 by default. This version of the Native Template complies with the Google Play requirements. More info can be found at the [Android developer forum](https://support.google.com/googleplay/android-developer/answer/113469#targetsdk). 
+
+### Hybrid App Base 5.0.0 / Hybrid App Template 5.0.0
 
 **Release date: April 15th, 2020**
 
 With this release we updated all PhoneGap dependencies to the latest supported versions to comply with the Apple App Store guidelines for the deprecated UIWebView dependency:
 
-* We updated Cordova and PhoneGap to 9.0.0
-* We updated the Android Engine to 8.1.0
-* We updated the iOS Engine to 5.1.1
-* We updated cordova-plugin-inappbrowser to 3.2.0
-* We updated the NativepageTransitions to use our internal fork
+* We updated Cordova and PhoneGap to 9.0.0.
+* We updated the Android Engine to 8.1.0.
+* We updated the iOS Engine to 5.1.1.
+* We updated cordova-plugin-inappbrowser to 3.2.0.
+* We updated the NativepageTransitions to use our internal fork.
 
 ### Hybrid App Base 4.1.10
 
@@ -91,7 +135,7 @@ With this release we updated all PhoneGap dependencies to the latest supported v
 <resource-file src="config/build-extras.gradle" target="build-extras.gradle" />
 ```
 
-* We changed how the *build-extras.xml* file is included in your app project. Now PhoneGap Build properly includes that file.
+* We changed how the *build-extras.xml* file is included in your app. Now PhoneGap Build properly includes that file.
 * The build process no longer fails when you do not provide a *GoogleServices-Info.plist* file. This is useful if you use Firebase Cloud Messaging for push notifications on Android, but use the Apple Push Notification service for push notifications on iOS.
 
 ### Hybrid App Base 4.1.0 / Hybrid App Template 4.1.0
@@ -152,7 +196,7 @@ The latest release of the Mendix Push Notifications Connector supports FCM as th
 
 This upgrade of the hybrid app package includes an upgrade to v2 of the [Cordova Push Notifications plugin](https://github.com/phonegap/phonegap-plugin-push). As part of the plugin upgrade, some additional setup is required for push notifications (in connection with the Mendix Push Notifications Connector). Specifically, if your app supports push notifications, you are now required to set up a [Firebase](https://firebase.google.com/) account for your app and include Google service description files (*google-services.json* and *GoogleService-Info.plist*) in your hybrid app.
 
-As a result of this, Mendix hybrid apps that employ push notifications can no longer be built directly using the [Phonegap Build flow](/refguide7/customizing-phonegap-build-packages) in the Mendix Developer Portal. Instead, you will need to prepare the hybrid app package locally. You can use the generated hybrid app package to build your Android and iOS apps locally, or upload them to Phonegap Build manually.
+As a result of this, Mendix hybrid apps that employ push notifications can no longer be built directly using the Phonegap Build method. Instead, you will need to prepare the hybrid app package locally by following the [Do It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) section of the *Mobile App Guide*.
 
 If your app does not employ push notifications, you can still use the Phonegap Build workflow. Please make sure you clear the **Push Notifications** check box in the **Permissions** section of the **Deploy** > [Mobile App](/developerportal/deploy/mobileapp) page in the Developer Portal.
 
@@ -169,7 +213,7 @@ If your app does not employ push notifications, you can still use the Phonegap B
 
 {{% alert type="warning" %}}
 
-This is a major version upgrade of the hybrid app project.
+This is a major version upgrade of the hybrid app.
 
 {{% /alert %}}
 
@@ -240,7 +284,7 @@ The goal of this release is to upgrade all major dependencies to their latest ve
 | `@mendix/phonegap-plugin-push`                              | 1.5.3                | 1.11.1-mx.1.0.0      | Renamed from `phonegap-plugin-push`                          |
 | `@mendix/uk.co.workingedge.phonegap.plugin.launchnavigator` | 2.9.11               | 4.2.2-mx.1.0.0       | Renamed from `uk.co.workingedge.phonegap.plugin.launchnavigator` |
 
-We have tested extensively against real-life projects and commonly used widgets from the [Mendix App Store](https://appstore.home.mendix.com/index3.html).
+We have tested extensively against real-life projects and commonly used widgets from the [Mendix Marketplace](https://marketplace.mendix.com/).
 
 ### Hybrid App Base 2.3.2
 

@@ -1,7 +1,7 @@
 ---
 title: "XPath Source"
 parent: "data-sources"
-tags: ["studio pro", "xpath", "xpath source", "data source"]
+tags: ["studio pro", "xpath", "xpath source", "data source", "data filter"]
 menu_order: 20
 ---
 
@@ -13,14 +13,14 @@ The **XPath** data source is very similar to the [**Database** data source](data
 
 The data retrieved can also be limited by the following factors:
 
-1. The access rules defined in the security section of the project.
+1. The access rules defined in the **Security** section of the app.
 2. An association, if the widget is nested in another data widget and the data path described runs over an association.
 
 If you want to restrict data not for a single widget, but for several, you may want to apply [access rules](access-rules) for entities instead of XPath constraints. This way you know that the objects will always be constrained by these rules. Access rules will also be applied when executing microflows which saves you from repeating constraints.
 
 ## 2 Properties
 
-### 2.1 Entity (Path)
+### 2.1 Entity (Path) {#entity-path}
 
 The **Entity (path)** property specifies the target of the database query. If you have a top-level data widget, **Entity (path)** will get objects of the selected entity directly. If you have a nested data widget, you can also select an entity of a parent data container. In this case objects are retrieved following the association path and the association is parsed as an extra constraint in the database query. 
 
@@ -58,8 +58,24 @@ The [XPath constraint](xpath-constraints) allows for custom, hard-coded limitati
 XPath constraints are applied equally to all users and only apply to the data displayed in a single data widget. If the goal is to restrict access to a particular subset of the data for users then [access rules](access-rules) for entities should be used as they can be applied to an individual user role and they apply system-wide.
 {{% /alert %}}
 
+XPath constraints for data sources have access to objects and attributes from all surrounding data containers. To refer to the immediately surrounding data widget, use `$currentObject`. You can refer to other surrounding data containers by adding a `$` to their name:
+
+{{% image_container width="250" %}}![xpath variable constraint](attachments/xpath-source/xpath-variable-constraint.png){{% /image_container %}}
+
+For example `$customer/Name` would refer to the `Name` attribute of the surrounding data widget with the name `customer`.
+
+The data source will automatically update when an object or attribute used in an XPath constraint changes.
+
+{{% alert type="info" %}}
+The feature to use objects and attributes from surrounding data containers was introduced in [9.10.0](/releasenotes/studio-pro/9.10).
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+The feature to use objects and attributes can be used for [List view](list-view) widgets, [Data Grid 2](/appstore/modules/data-grid-2) modules, and many other widgets. However, it **cannot be used** for [Data Grid](/refguide/data-grid) and [Template Grid](/refguide/template-grid) containers.
+{{% /alert %}}
+
 ## 3 Read More
 
-* [Data Widgets](data-widgets)
+* [Data Containers](data-widgets)
 * [Data Grid](data-grid)
 

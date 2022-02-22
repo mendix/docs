@@ -1,14 +1,14 @@
 ---
 title: "Forgot Password"
 category: "Modules"
-description: "Describes the configuration and usage of the Forgot Password module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "forgot password", "password", "login", "credentials", "platform support"]
+description: "Describes the configuration and usage of the Forgot Password module, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "forgot password", "password", "login", "credentials", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Forgot Password](https://appstore.home.mendix.com/link/app/1296/) module works in conjunction with other modules and widgets to implement forgot-my-password functions. 
+The [Forgot Password](https://marketplace.mendix.com/link/component/1296/) module works in conjunction with other modules and widgets to implement forgot-my-password functions. 
 
 With this module, the end-user can enter their email address, and an email will be sent with a confirmation link. The end-user then opens the link and gets the option to reset their password. 
 
@@ -25,7 +25,7 @@ Once you have downloaded the required modules listed in the [Dependencies](#depe
 
 The configuration page allows you to create the email and deep link templates that are used by this module. You should NOT create your own templates through the configuration of the Email with Templates and Dep Link modules. By clicking **Create**, all the default settings will be there to allow you to reset the password. The only thing you need to do is configure or validate your SMTP settings. 
 
-Signup and password reset are included into this module. To disable the signup functionality, remove the **Sign up** button from the login snippet and emtpy the content of the **CreateNewUserFromSignUp** microflow.
+Signup and password reset are included into this module. To disable the signup functionality, remove the **Sign up** button from the login snippet and empty the content of the **CreateNewUserFromSignUp** microflow.
 
 The **ForgotPasswordConfiguration** page should be accessible to the administrator only. This snippet allows for configuring the email template and deep link, and it shows all the open password reset requests
 

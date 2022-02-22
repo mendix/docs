@@ -1,6 +1,7 @@
 ---
 title: "String Function Calls"
 parent: "expressions"
+menu_order: 80
 description: "Describes the functions for converting and inspecting strings in Mendix."
 tags: ["studio pro", "string function calls", "expression", "expressions"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -12,13 +13,24 @@ This document describes functions that are used to convert and inspect [strings]
 
 Strings are surrounded by quotes. If the string contains a quote, it should be escaped by another quote. For example: `'this isn''t funny'`.
 
+For a great deep-dive look into string functions call, check out this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/EpVivdyB4i1jGvc8J9yXkt.jpg"
+  data-uuid="EpVivdyB4i1jGvc8J9yXkt"
+  data-v="4"
+  data-type="inline"
+/>
+
 ## 2 toLowerCase
 
 Converts all characters in the string to lowercase.
 
 ### 2.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value             | Type   |
 | ----------------- | ------ |
@@ -34,7 +46,7 @@ The output is described in the table below:
 
 ### 2.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 toLowerCase('thisISmyString')
@@ -52,7 +64,7 @@ Converts all characters in the string to uppercase.
 
 ### 3.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value             | Type   |
 | ----------------- | ------ |
@@ -68,7 +80,7 @@ The output is described in the table below:
 
 ### 3.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 toUpperCase('thisISmyString')
@@ -86,11 +98,11 @@ Determines the length of a string.
 
 ### 4.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value             | Type   |
 | ----------------- | ------ |
-| String to convert | String |
+| String to find length of | String |
 
 ### 4.2 Output
 
@@ -100,27 +112,21 @@ The output is described in the table below:
 | -------------------- | ------- |
 | Length of the string | Integer |
 
-### 4.3 Example
+### 4.3 Examples
 
-If you type in the following input:
-
-```java
-length('thisismystring')
-```
-
-The output is the following:
-
-```java
-14
-```
+| Input | Output |
+| --- | --- |
+| `length('thisismystring')` | 14 |
+| `length($MyString)` and `MyString = 'qwer'` | 4 |
+| `length($MyString)` and `MyString` is empty | 0 |
 
 ## 5 substring
 
-Retrieves a substring of a string. Note that the first character of a string is located at position `'0'`, and the last character is located at position `length(string)-1`.
+Retrieves a substring of a string. Note that the first character of a string is located at position `0`, and the last character is located at position `length(string)-1`.
 
 ### 5.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                                       | Type    |
 | ------------------------------------------- | ------- |
@@ -138,7 +144,7 @@ The output is described in the table below:
 
 ### 5.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 substring('thisismystring', 6)
@@ -168,7 +174,7 @@ Finds the position of the first occurrence of the substring in the string.
 
 ### 6.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                                                  | Type    |
 | ------------------------------------------------------ | ------- |
@@ -182,11 +188,11 @@ The output is described in the table below:
 
 | Value                                                        | Type    |
 | ------------------------------------------------------------ | ------- |
-| The first location of the substring in the original string. Will return `'-1'` if the substring does not occur at all in the original string. | Integer |
+| The first location of the substring in the original string. Will return `-1` if the substring does not occur at all in the original string. | Integer |
 
 ### 6.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 find('thisismystring', 'my')
@@ -228,13 +234,13 @@ Finds the position of the last occurrence of a substring in the original string.
 
 ### 7.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                                                  | Type    |
 | ------------------------------------------------------ | ------- |
 | Original string, the string that you want to search in | String  |
 | Substring that you want to search for                  | String  |
-| Start location to begin the search from **(optional)** | Integer |
+| Last location to be searched **(optional)**            | Integer |
 
 ### 7.2 Output
 
@@ -242,11 +248,11 @@ The output is described in the table below:
 
 | Value                                                        | Type    |
 | ------------------------------------------------------------ | ------- |
-| The first location of the substring in the original string. Will return `'-1'` if the substring does not occur at all in the original string. | Integer |
+| The last location of the substring in the original string. Will return `-1` if the substring does not occur at all in the original string. | Integer |
 
 ### 7.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 findLast('thisismystring', 't')
@@ -282,6 +288,8 @@ The output is:
 4
 ```
 
+As the optional parameter is `5`, the string gets searched up to (and including) position `5`, which means searching the substring `'thisis'`. The last instance of `'i'` in that substring is at position `4`.
+
 ## 8 contains
 
 Determines whether the original string (first parameter) contains a substring (second parameter).
@@ -312,7 +320,7 @@ This function is case-sensitive.
 
 ### 8.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                                                  | Type   |
 | ------------------------------------------------------ | ------ |
@@ -329,7 +337,7 @@ The output is described in the table below:
 
 ### 8.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 contains('thisismystring', 'my')
@@ -347,7 +355,7 @@ Determines whether a string starts with the specified substring.
 
 ### 9.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                                                  | Type   |
 | ------------------------------------------------------ | ------ |
@@ -364,7 +372,7 @@ The output is described in the table below:
 
 ### 9.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 startsWith('thisismystring', 'this')
@@ -382,7 +390,7 @@ Determines whether a string ends with the specified substring.
 
 ### 10.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                                                  | Type   |
 | ------------------------------------------------------ | ------ |
@@ -399,7 +407,7 @@ The output is described in the table below:
 
 ### 10.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 endsWith('thisismystring', 'ring')
@@ -417,7 +425,7 @@ Removes all the whitespace at the beginning and end of a string.
 
 ### 11.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value    | Type   |
 | -------- | ------ |
@@ -429,11 +437,11 @@ The output is described in the table below:
 
 | Value                                                    | Type   |
 | -------------------------------------------------------- | ------ |
-| Same string but without spaces at the beginning and end. | String |
+| Same string, but without spaces at the beginning and end. | String |
 
 ### 11.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 trim(' this is my string     ')
@@ -451,7 +459,7 @@ Checks to see if a string matches a given regular expression.
 
 ### 12.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                       | Type   |
 | --------------------------- | ------ |
@@ -510,7 +518,7 @@ Replaces all occurrences of a regular expression with another string.
 
 ### 13.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                                                        | Type   |
 | ------------------------------------------------------------ | ------ |
@@ -541,7 +549,7 @@ The output is described in the table below:
 
 ### 13.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 replaceAll('this is a string with 75 some numbers 234 thrown in', '([0-9])', 'NUMBER')
@@ -571,13 +579,13 @@ Replaces the first occurrence of the regular expression with a replacement strin
 
 ### 14.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                                                        | Type   |
 | ------------------------------------------------------------ | ------ |
 | The string to search in                                      | String |
 | The regular expression to match; if you want to search for a literal string, enclose it between `\Q` and `\E` (for example, `\QPaul S. Mueller\E` will search for the string `Paul S. Mueller`, without interpreting the dot as a wildcard) | String |
-| The string to be substituted for each match (this does not support backreferences, substitutions, or captures) | String |
+| The string to be substituted for the first match (this does not support backreferences, substitutions, or captures) | String |
 
 {{% alert type="info" %}}
 The regular expression must be provided as a string. Although it uses the same format for regular expressions, you cannot use a [regular expression](regular-expressions) resource document in this function.
@@ -602,7 +610,7 @@ The output is described in the table below:
 
 ### 14.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 replaceFirst('this is a string with 75 some numbers 234 thrown in', '([0-9])', 'NUMBER')
@@ -620,7 +628,7 @@ The `+` operator can be used to concatenate two strings or a string and a number
 
 ### 15.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value            | Type                          |
 | ---------------- | ----------------------------- |
@@ -679,7 +687,7 @@ For example:
 
 ### 16.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value             | Type   |
 | ----------------- | ------ |
@@ -695,7 +703,7 @@ The output is described in the table below:
 
 ### 16.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 urlEncode('Hello, world!')
@@ -713,7 +721,7 @@ Converts a string back from a URL. The opposite of [urlEncode](#urlEncode).
 
 ### 17.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                           | Type   |
 | ------------------------------- | ------ |
@@ -729,7 +737,7 @@ The output is described in the table below:
 
 ### 17.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 urlDecode('Hello%2C+world%21')

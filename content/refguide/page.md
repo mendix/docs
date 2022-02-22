@@ -31,7 +31,7 @@ You can perform the following basic function when working in the page editor:
 
 To open a page in Studio Pro, do the following:
 
-1. In the [Project Explorer](project-explorer), open a module where this page is located. 
+1. In the [App Explorer](project-explorer), open a module where this page is located. 
 
 2. Navigate to the page's location inside the module. A page can be listed as an individual element or be included in the **Pages** folder:
 
@@ -45,11 +45,10 @@ The selected page is opened.
 
 To create a new page, do the following:
 
-1.  In the [Project Explorer](project-explorer), right-click the module or a folder you want to create a page in and select **Add page**:
+1.  In the [App Explorer](project-explorer), right-click the module or a folder you want to create a page in and select **Add page**:
 
-    {{% image_container width="350" %}}![](attachments/page/add-page.png)
-    {{% /image_container %}}
-
+    ![](attachments/page/add-page.png)
+    
 2.  In the **Create Page** dialog box, fill in the **Page name** and select a **Navigation layout**.
 
     ![](attachments/page/create-page.png)
@@ -62,7 +61,7 @@ A new page is created.
 
 To delete a page, do the following:
 
-1. In the [Project Explorer](project-explorer), select a page you would like to delete and right-click it.
+1. In the [App Explorer](project-explorer), select a page you would like to delete and right-click it.
 2. In the displayed list, select **Delete** and confirm your choice by clicking **Delete** in the pop-up dialog.
 
 The selected page is deleted. 
@@ -75,13 +74,10 @@ In **Structure mode**, there are several ways to add an element on a page:
 
 1.  Through the **Toolbox**:
 
-    1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there.
-    
-        ![](attachments/page/toolbox.png)
-      
+    1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there.   
     2. Select an element you would like to add and drag and drop this element on your page.
-   
-2. Though the menu at the top of the page:
+    
+2. Through the menu at the top of the page:
 
     1. Do one of the following:
 
@@ -157,17 +153,21 @@ Both modes allow you to edit your page by doing the following:
 
 In **Structure mode**, the page widgets are laid out so that it is easy to see the logical relationship between them. It has the following features which are not available in Design mode:
 
+* You can zoom a page in or out using the **Zoom** drop-down menu in the upper-right corner of a page
+
 * Widgets are shown with additional information easily visible – for example, data sources for data views and the width assigned to columns
 
 	![Frequently-used widgets](attachments/page/structure-mode-info.png)
 
 * Each widget has a drop-zone before/above and after/below it – this makes it easier to place widgets correctly when they appear close together in Design mode
+
 * Right-click a drop-zone allows you to insert a widget into it
-* There is a menu at the top of the page of data widgets – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget
+
+* There is a menu at the top of the page of data containers – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget
 
 	![Frequently-used widgets](attachments/page/frequently-used.png)
 
-* Widgets are shown without styling applied to them, but you can see which widgets do have styling applied via the class or style property by clicking the **Show styles** button.
+* Widgets are shown without styling applied to them, but you can see which widgets do have styling applied via the class or style property by clicking the **Show styles** button (available for Web page templates and layouts only).
 
     ![Show styles button](attachments/page/show-styles.png)
 
@@ -175,7 +175,7 @@ In **Structure mode**, the page widgets are laid out so that it is easy to see t
 
 In **Design mode**, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between the elements.
 
-For example, the example page shown in [Structure Mode](#structure-mode), above, will look like this in **Design mode** for a tablet:
+For example, the example page shown in [Structure Mode](#structure-mode), above, will look like this in **Design mode** for a desktop:
 
 ![Design mode page as displayed on a tablet](attachments/page/design-mode-example.png)
 

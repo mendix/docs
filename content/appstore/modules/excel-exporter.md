@@ -1,14 +1,14 @@
 ---
 title: "Excel Exporter"
 category: "Modules"
-description: "Describes the configuration and usage of the Excel Exporter module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "excel exporter", "excel", "filedocument", "platform support"]
+description: "Describes the configuration and usage of the Excel Exporter module, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "excel exporter", "excel", "filedocument", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-With the [Excel Exporter](https://appstore.home.mendix.com/link/app/726/) module, you can create templates that export data from your Mendix application to the Excel or CSV formats. 
+With the [Excel Exporter](https://marketplace.mendix.com/link/component/726/) module, you can create templates that export data from your Mendix application to the Excel or CSV formats. 
 
 ## 2 Usage
 
@@ -24,5 +24,5 @@ This version is compatible with the following components:
 
 ## 3 Read More
 
-* [How to Use the Excel Exporter](https://docs.mendix.com/howto/integration/using-the-excel-exporter)
+* [How to Export to Excel](/howto/integration/using-the-excel-exporter)
 

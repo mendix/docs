@@ -43,7 +43,7 @@ Any user can talk directly to the API by downloading a tool that can post messag
 
 ## 6 Best Practice 
 
-If you have anonymous access, you need to limit the access to as few entities as possible and never give full read access to all attributes if it is just for selecting items. For example, if an anonymous user is allowed to see a project name, then only give read access to the project name and not the full entity.
+If you have anonymous access, you need to limit the access to as few entities as possible and never give full read access to all attributes if it is just for selecting items. For example, if an anonymous user is allowed to see an app name, then only give read access to the app name and not the full entity.
 
 If you need to give an anonymous user access to change an object ALWAYS apply instance access as well. An anonymous user should NEVER have write access on all records in an entity. 
 

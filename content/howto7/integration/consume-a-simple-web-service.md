@@ -60,7 +60,7 @@ To create logic to call the web service, follow these steps:
 
     ![](attachments/18448738/18582081.png)
 
-4.  Open the **Toolbox** (from the bottom-right corner of the Modeler) and drag a **Create variable** activity to the line between the start and end event.
+4.  Open the **Toolbox** (from the lower-right corner of the Modeler) and drag a **Create variable** activity to the line between the start and end event.
 
     ![](attachments/8784287/8946802.png)
 
@@ -107,15 +107,15 @@ To create logic to call the web service, follow these steps:
 
     ![](attachments/18448738/18582070.png)
 
-21. Create a menu item that triggers this microflow. For details on how to create a menu item, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure).
+21. Create a menu item that triggers this microflow. For details on how to create a menu item, see [How to Set Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure).
 22. Deploy the application and trigger the microflow to call the web service operation. You should see a message with the converted temperature.
 
 ## 4 Read More
 
-* [How to Create a Secure App](../security/create-a-secure-app)
+* [How to Create a Secure App](/howto7/security/create-a-secure-app)
 * [How to Consume a Complex Web Service](consume-a-complex-web-service)
 * [How to Export XML Documents](export-xml-documents)
 * [How to Import Excel Documents](importing-excel-documents)
 * [How to Expose a Web Service](expose-a-web-service)
 * [How to Use Selenium Support](selenium-support)
-* [Security How-To's](../security/)
+* [Security How-To's](/howto7/security/)

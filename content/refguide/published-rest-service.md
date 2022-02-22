@@ -61,7 +61,7 @@ The public documentation is used in the service's [OpenAPI 2.0 (Swagger) Documen
 
 ### 2.5 Export swagger.json {#export-swagger-json}
 
-To save a service's [OpenAPI (Swagger) documentation](open-api) somewhere on your machine, simply right-click the service in the **Project Explorer** and select **Export swagger.json** (or just click the **Export swagger.json** button, depending on your Studio Pro version). This is a machine-readable file in the [OpenAPI 2.0 file format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md). Most API tools support this format.
+To save a service's [OpenAPI (Swagger) documentation](open-api) somewhere on your machine, simply right-click the service in the **App Explorer** and select **Export swagger.json** (or just click the **Export swagger.json** button, depending on your Studio Pro version). This is a machine-readable file in the [OpenAPI 2.0 file format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md). Most API tools support this format.
 
 When the app is running, this file is available under */rest-doc/servicename/swagger.json*.
 
@@ -110,7 +110,7 @@ There are three possible outcomes of the authentication microflow:
 * Otherwise, when the resulting User is not empty, the operation is executed in the context of that user
 * Otherwise, when the resulting User is empty, the next authentication method is attempted. When there are no other authentication methods, the result is **404 Not Found**.
 
-### 3.4 Allowed Roles
+### 3.4 Allowed Roles{#allowed-roles}
 
 The allowed roles define which [module role](module-security#module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
 
@@ -137,12 +137,6 @@ When you select a resource, you see the [operations](published-rest-operation) t
 Resources and Operations are appended to [Location](#location) to form a URL on which they can be accessed.
 
 ![](attachments/published-rest-service/example-location-url.png)
-
-## 7 Example
-
-**How to publish REST in Studio Pro 8**
-
-{{% youtube Ff_P84NOcZk %}}
 
 ## 8 Read More
 

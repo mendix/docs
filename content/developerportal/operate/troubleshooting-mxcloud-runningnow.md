@@ -4,6 +4,7 @@ parent: "metrics"
 menu_order: 30
 description: "How to troubleshoot the running now in your node."
 tags: ["App","Troubleshoot","Developer Portal","Running now","Mendix Cloud"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -27,7 +28,7 @@ Finally, the **Kill request** allows you to try and stop the action which, if su
 You can use the information displayed in the **Running now** tab for various purposes:
 
 * To see if any actions are currently running in your application – this can be useful if you want to shutdown the application to perform maintenance
-* If you fear two actions are blocking one another you might be able to prevent the deadlock by killing one of the two action using the **Kill request** button
+* If you fear two actions are blocking one another you might be able to prevent the deadlock by stopping one of the two actions using the **Kill request** button
 * If you have a performance or memory problem the listed actions (and their **Details** page(s)) might help you pinpoint the most likely cause of the problem
 * If the above alone is not enough, you can combine the information in this tab page with the information in the **Cache** tab page, the [Logs](logs) page, and the **Trends** tab page to gather more information
 

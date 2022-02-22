@@ -1,7 +1,7 @@
 ---
 title: "Use Translatable Validation Messages"
 category: "Logic & Business Rules"
-menu_order: 14
+menu_order: 140
 tags: ["validation", "microflow", "translate"]
 ---
 
@@ -9,7 +9,7 @@ tags: ["validation", "microflow", "translate"]
 
 Setting up validation rules should be relatively straight forward. Per object or per process step you want to have a single microflow that is in charge of the validation. That microflow has the required input parameters, validates all values. If a value is invalid the microflow will execute the validation feedback activity. When completing the microflow it will return a Boolean true/false whether or not the object has been successfully validated.
 
-These types of validation actions should be used throughout your project. 
+These types of validation actions should be used throughout your app. 
 
 ![](attachments/translatable/18581628.png)
 
@@ -21,7 +21,7 @@ Or if you need to differentiate between the different validation messages you ca
 
 ## 2 Simple Alternative for Translating Messages
 
-There is one big problem with this second solution, you loose the ability to translate your validation message. String variables or attributes can not be translated by the platform. If you only have a hand full of these types of validation rules you might want to consider modelling out all language combinations. For each validation message you have to add decisions and activities per language. This could become a lot of work, but as long as you only have to do this one a couple of places it might not be worth to use the more complicated solution described below. 
+There is one big problem with this second solution, you loose the ability to translate your validation message. String variables or attributes can not be translated by the platform. If you only have a hand full of these types of validation rules you might want to consider modeling out all language combinations. For each validation message you have to add decisions and activities per language. This could become a lot of work, but as long as you only have to do this one a couple of places it might not be worth to use the more complicated solution described below. 
 
 ![](attachments/translatable/18581626.png)
 
@@ -43,7 +43,7 @@ Reference the model below for messages you should store in the entity:
 
 ![](attachments//translatable/model2.jpg)
 
-The GetI18NText microflow validates and acquires the text like this. This is done to prevent any nullpointers in case of incorrect modelling.
+The GetI18NText microflow validates and acquires the text like this. This is done to prevent any nullpointers in case of incorrect modeling.
 
 ![](attachments//translatable/model3.jpg)
 

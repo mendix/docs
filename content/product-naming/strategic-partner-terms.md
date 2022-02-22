@@ -1,6 +1,6 @@
 ---
 title: "Strategic Partner Terms"
-menu_order: 3
+weight: 30
 draft: true
 ---
 
@@ -11,8 +11,8 @@ These are important terms used by Mendix's strategic partners.
 For more information on strategic partners, see:
 
 * [Strategic Partners](https://www.mendix.com/evaluation-guide/strategic-partners/) in the *Mendix Platform Evaluation Guide*
-* [Strategic Partners Guide](/partners/index)
-* [Quality Add-ons Guide](/addons/index)
+* [Strategic Partners Guide](/partners/)
+* [Quality Add-ons Guide](/addons/)
 
 ### Under Each Term
 
@@ -26,7 +26,7 @@ Guidelines for usage.
 Example usage.
 {{% /alert %}}
 
-## Mansystems (Add-ons)
+## CLEVR (Formerly Known as Mansystems) (Add-ons)
 
 ### ATS Helper
 
@@ -42,15 +42,17 @@ Use full name (with "ATS") and capitalize in all instances.
 
 ## SAP
 
-### SAP Cloud Platform Rapid Application Development by Mendix
+### SAP Rapid Application Development by Mendix
 
 This is the name of the Mendix product that SAP is selling.
 
-This can sometimes be shortened to "SAP Cloud Platform RAD by Mendix" or "SAP RAD by Mendix."
+This can sometimes be shortened to "SAP RAD by Mendix."
 
 {{% alert type="info" %}}
 Use the full name in the SAP context.
 {{% /alert %}}
+
+This was formerly *SAP Cloud Platform Rapid Application Development by Mendix* and was renamed in January 2021.
 
 ## Siemens
 

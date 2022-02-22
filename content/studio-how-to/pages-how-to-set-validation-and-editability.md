@@ -4,6 +4,7 @@ category: "Pages"
 description: "Describes how to set validation and editability in Mendix Studio."
 menu_order: 20
 tags: ["studio", "pages", "form", "how to", "validation", "required", "read-only", "editability"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 
@@ -56,7 +57,7 @@ To make a field read-only, do the following:
 
 3. In the **General** section, set the **Editability** property to read-only:
 
-    {{% image_container width="250" %}}![](attachments/pages-how-to-set-validation-and-editability/editability.png){{% /image_container %}}
+    ![](attachments/pages-how-to-set-validation-and-editability/editability.png)
 
 4. Select the **Employee number** field and open its properties.
 

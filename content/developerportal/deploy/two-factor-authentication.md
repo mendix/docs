@@ -4,11 +4,16 @@ parent: "general"
 menu_order: 20
 description: "What is Two-Factor Authentication and how to set up and change it."
 tags: ["Authenticator","Developer Portal","Cloud","Permissions", "Google", "2FA", "Two-factor authentication", "SMS"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
+
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/two-factor-authentication.pdf).
+{{% /alert %}}
 
 ## 1 Introduction
 
-In the **Deploy** and **Operate** categories of the [Developer Portal](http://home.mendix.com), there are several operations that require **Two-Factor Authentication** (2FA). In addition, Technical Contacts are required to use 2FA with their Mendix account when they access licensed cloud node details, specifically for transporting MDA files (deployment archives) to the production environment.
+When managing apps in the [Developer Portal](http://sprintr.home.mendix.com), there are several operations that require **Two-Factor Authentication** (2FA). In addition, Technical Contacts are required to use 2FA with their Mendix account when they access licensed cloud node details, specifically for transporting MDA files (deployment archives) to the production environment.
 
 This document describes the purpose and the functionality of two-factor authentication.
 
@@ -30,13 +35,13 @@ Once it is set up, you will receive an authentication code via your chosen route
 
 After successfully performing 2FA, your browser session is authorized for the next eight hours.
 
-![](attachments/two-factor-authentication/information.png)
+{{% image_container width="400" %}}![](attachments/two-factor-authentication/information.png){{% /image_container %}}
 
 To set it up, you first need to perform an action which required 2FA, such as **Transport to Production** on the **Environments** page of your app.
 
 Choose one of the two options and follow the relevant instructions, below.
 
-![](attachments/two-factor-authentication/sms-or-google.png)
+{{% image_container width="400" %}}![](attachments/two-factor-authentication/sms-or-google.png){{% /image_container %}}
 
 ### 3.1 SMS Authentication
 
@@ -45,19 +50,21 @@ For SMS authentication, you will need to have a phone number connected to a devi
 If you have chosen the SMS option, the first time you need to perform 2FA you will be asked for the phone number to which SMS messages can be sent.
 
 1. Click **Use SMS** in the dialog box that opens when you use 2FA for the first time.
-2. Enter your phone number and click **Validate**.
+2. Enter your phone number and click **Send text message**.
 
-    ![](attachments/two-factor-authentication/setup-sms.png)
+    {{% image_container width="400" %}}![](attachments/two-factor-authentication/setup-sms.png){{% /image_container %}}
 
-3. Enter the authentication code which is sent as an SMS to your device.
+3. Enter the authentication code which is sent as an SMS to your device and click **Activate**.
 
-    ![](attachments/two-factor-authentication/enter-sms.png)
+    {{% image_container width="400" %}}![](attachments/two-factor-authentication/enter-sms.png){{% /image_container %}}
 
-In future you will need to ask Mendix to send an SMS to your phone.
+In future you will need to ask Mendix to send a text message to your phone.
 
-![](attachments/two-factor-authentication/authentication-sms.png)
+{{% image_container width="400" %}}![](attachments/two-factor-authentication/authentication-sms.png){{% /image_container %}}
 
 You will need to enter the authentication code from the SMS message to unlock 2FA.
+
+{{% image_container width="400" %}}![](attachments/two-factor-authentication/please-authenticate.png){{% /image_container %}}
 
 ### 3.2 Google Authenticator
 
@@ -70,13 +77,13 @@ For more information on how Google Authenticator works, see Google's own documen
 5. Scan the barcode or enter the six-digit time-based code.
 6. Once Google Authenticator is set up you will be asked to confirm by entering the Google Authenticator code.
 
-    ![](attachments/two-factor-authentication/authenticator.png)
+    {{% image_container width="400" %}}![](attachments/two-factor-authentication/authenticator.png){{% /image_container %}}
 
 Your account is now secured with 2FA and ready to use.
 
 In future, You will get a six-digit number that expires every minute. You will need to enter that number to validate your account every time you performing an operation on the production environment.
 
-![](attachments/two-factor-authentication/google.png)
+{{% image_container width="400" %}}![](attachments/two-factor-authentication/google.png){{% /image_container %}}
 
 ## 4 Changing your Device or Phone Number
 
@@ -100,4 +107,3 @@ For more information, see [Node Permissions](node-permissions).
 
 * [Deploy and Manage](/developerportal/deploy)
 * [Settings](/developerportal/settings)
-* [Technical Contact](/developerportal/company-app-roles/technical-contact)

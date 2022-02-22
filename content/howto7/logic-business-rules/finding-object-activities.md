@@ -2,7 +2,7 @@
 title: "Find Object Activities"
 category: "Logic & Business Rules"
 menu_order: 14
-tags: ["object", "microflow"]
+tags: ["object", "microflow", "desktop modeller"]
 ---
 
 ## 1 Introduction
@@ -11,7 +11,7 @@ Mendix has comprehensive functionality to find changes made to several subjects 
 
 ## 2 Finding Object Activities
 
-The following steps will explain how to find certain activities that are used in microflows, to objects.
+The following steps will explain how to find certain activities that are used in microflow to objects:
 
 1.  In the top toolbar of the Desktop Modeler, click **Edit** > **Find** Advanced (or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>.
 2.  This dialog box will appear:

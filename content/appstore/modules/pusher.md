@@ -2,13 +2,13 @@
 title: "Pusher"
 category: "Modules"
 description: " "
-tags: ["app store", "app store component", "pusher", "platform support"]
+tags: ["marketplace", "marketplace component", "pusher", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Pusher](https://appstore.home.mendix.com/link/app/107957/) module allows you to trigger a microflow or nanoflow directly from the server on the client app. This means it is triggered from the other session, without waiting for end-users to interact with the page.
+The [Pusher](https://marketplace.mendix.com/link/component/107957/) module allows you to trigger a microflow or nanoflow directly from the server on the client app. This means it is triggered from the other session, without waiting for end-users to interact with the page.
 
 In the standard situation, updates in the client are triggered by a user interaction, by timed actions, or by data-grid refresh time. For information not created by the same user session that needs to be updated immediately in the client app, the Mendix core product does not support a viable option to accomplish this. As an alternative, you need need to refresh the page constantly with timers or constant clicking. This is not user-friendly, and it is not preferred when scaling.
 
@@ -51,14 +51,14 @@ To set up the necessary Pusher app, follow these steps:
 	* `cluster` – `Pusher_Cluster`
 
 {{% alert type="info" %}}
-Make sure you have different apps (keys) created for each app and environment (development, acceptance, and production). When the credentials are shared, messages could go across environments and have unwanted side effects. The configuration can also be set per developer via **Project settings** > **Edit** configuration > [Constants](https://docs.mendix.com/refguide/configuration#constants).
+Make sure you have different apps (keys) created for each app and environment (development, acceptance, and production). When the credentials are shared, messages could go across environments and have unwanted side effects. The configuration can also be set per developer via **App Settings** > **Edit** configuration > [Constants](/refguide/configuration#constants).
 {{% /alert %}}
 
 ## 3 Configuration
 
-To use this module after importing it from the App Store, follow these steps:
+To use this module after importing it from the Marketplace, follow these steps:
 
-1. Add the **Pusher User** [module role](/refguide/module-security#module-role) to the relevant app project security [user role](/refguide/security#user-role).
+1. Add the **Pusher User** [module role](/refguide/module-security#module-role) to the relevant app security [user role](/refguide/security#user-role).
 2. Update the constants in the **Configuration** folder with the keys of the app.
 3.  Create a microflow to execute the **Notify** action with the following input parameters:
 	* Key settings
@@ -86,4 +86,4 @@ The notify messages are sent to anybody who is listening.
 
 A message will contain limited data (entity name, ID, changed date, notifier user name). To send a notify message, it is required to have the private key that is stored on the server in the `NotifyListen.secret` constant. This secret should not be shared with anybody. The listening widget will use the public `NotifyListen.key` to receive a signal and perform the action as the logged-in user.
 
-An addition authentication request is made to the Mendix REST server vua `<host>/rest/pusher/key` and `<host>/rest/pusher/auth`. Only when successful is the user allowed to access the lists. The service will only allow a logged-in user with the **NotifyListen.User** module role to listen when the user has entity access to the object of the data in which the the widget is placed.
+An addition authentication request is made to the Mendix REST server via `<host>/rest/pusher/key` and `<host>/rest/pusher/auth`. Only when successful is the user allowed to access the lists. The service will only allow a logged-in user with the **NotifyListen.User** module role to listen when the user has entity access to the object of the data in which the the widget is placed.

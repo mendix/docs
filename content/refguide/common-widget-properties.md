@@ -2,7 +2,7 @@
 title: "Properties Common in the Page Editor"
 parent: "pages"
 menu_order: 120
-tags: ["studio pro", "widget properties", "properties", "common", "widget"]
+tags: ["studio pro", "widget properties", "properties", "common", "widget", "classes"]
 #Common Section and Visibility section anchors are used in links of common-section-link and visibility-section-link snippets. If moving or renaming them, do not forget to update snippets.
 ---
 
@@ -18,7 +18,7 @@ The Screen reader caption property allows information to be read by screen reade
 
 {{% alert type="info" %}}The Screen reader caption property is not supported on native mobile pages.{{% /alert %}}
 
-#### 2.1.1 Screen Reader Caption Input Widgets 
+#### 2.1.1 Screen Reader Caption Input Elements 
 
 The **Screen reader caption** property can be set on the following widgets:
 
@@ -50,12 +50,12 @@ Default: *0*
 
 ### 3.3 Class{#class}
 
-The class property allows you to specify one or more cascading style sheet (CSS) classes for the widget. The classes should be separated by a space. The classes will be applied to the widget in the browser and the widget will get the corresponding styling. The classes should be classes in the theme that is used in the project. It overrules the default styling of the widget.
+The class property allows you to specify one or more cascading style sheet (CSS) classes for the widget. The classes should be separated by a space. The classes will be applied to the widget in the browser and the widget will get the corresponding styling. The classes should be classes in the theme that is used in the app. It overrules the default styling of the widget.
 
 Styling is applied in the following order:
 
-1. The default styling defined by the theme the project uses.
-2. The `Class` property of the widget.
+1. The default styling defined by the theme the app uses.
+2. The `Class` combined with `Dynamic classes` properties of the widget.
 3. The `Style` property of the widget.
 
 You can see which widgets in a page have styling applied via the class or style property by clicking the <strong>Show styles</strong> button.
@@ -68,9 +68,19 @@ The style property allows you to specify additional CSS styling. If a class is a
 
 ![](attachments/common-widget-properties/style-example.png)
 
-You can see which widgets in a page have styling applied via the style or class property by clicking the <strong>Show styles</strong> button.
+### 3.5 Dynamic Classes{#dynamicclasses}
 
-### 3.5 Documentation{#documentation}
+The dynamic classes property allows you to specify one or more cascading stylesheet (CSS) class like the class property, but based on an [expression](expressions). This allows you to dynamically construct classes based on data from an enclosing data container. The dynamic classes constructed in the expression are appended to the classes defined in the [`Class`](#class) property.
+
+![](attachments/common-widget-properties/dynamic-classes.png)
+
+{{% alert type="info" %}}
+The dynamic classes property was introduced in Mendix Studio Pro v8.14.
+{{% /alert %}}
+
+You can see which widgets in a page have styling applied via the style or class property by clicking the **Show styles** button.
+
+### 3.6 Documentation{#documentation}
 
 Some widgets, for example snippets and building blocks, have a **Documentation** property which can be used to store developer documentation. This can be used to explain to other developers how to use these widgets. End-users will never see this documentation.
 
@@ -82,7 +92,7 @@ Some widgets, for example snippets and building blocks, have a **Documentation**
 
 This property identifies an attribute which is used in an input widget.
 
-#### 4.1.1 Attribute Input Widgets
+#### 4.1.1 Attribute Input Elements
 
 With the following widgets, the Attribute (Path) specifies the attribute which is being changed (or displayed) by the widget:
 
@@ -96,26 +106,16 @@ With the following widgets, the Attribute (Path) specifies the attribute which i
 The attribute can be one of the following:
 
 1. An attribute of the entity of the data container that contains the widget.
-2. An attribute of the entity of any enclosing data container that contains the widget. Available since Mendix 8.8.
+2. An attribute of the entity of any enclosing data container that contains the widget. 
 3. An attribute of an entity associated with the data container entity by following one or more associations of type reference through the domain model.
 
 In the first two cases we say the widget is connected to an **attribute** and in the third case to an **attribute path**.
 
-{{% alert type="info" %}}
-In Mendix 8.0, an input widget connected to an **attribute path** must be read-only. Studio Pro will check this for you.
-{{% /alert %}}
+You can edit attributes of any enclosing data container including grandparent data containers.
 
-{{% alert type="info" %}}
-In Mendix 8.1 and above, you can edit attributes presented in input widgets over a path.
-{{% /alert %}}
+#### 4.1.2 Association Input Elements
 
-{{% alert type="info" %}}
-In Mendix 8.8 and above, you can edit attributes of any enclosing data container including grandparent data containers.
-{{% /alert %}}
-
-#### 4.1.2 Association Input Widgets
-
-For widgets which manipulate associations, the Attribute (Path) specifies an attribute which is from an entity which is reachable from the current data container using an association. This applies to the following input widgets:
+For widgets which manipulate associations, the Attribute (Path) specifies an attribute which is from an entity which is reachable from the current data container using an association. This applies to the following input elements:
 
 *   [Reference Selector](reference-selector)
 *   [Reference Set Selector](reference-set-selector)
@@ -147,7 +147,8 @@ The editable property indicates whether the end-user will be able to change the 
 
 | Value       | Description                                                  |
 | ----------- | ------------------------------------------------------------ |
-| Default *(default)*    | The value is editable if security allows it (as in, if the user that is signed in has write access to the selected attribute). |
+| Default     | The value is editable if security allows it such as if the user that is signed in has write access to the selected attribute (default value for widgets outside a snippet). |
+| Inherited from snippet call | Set to **Default** or **Never** by the containing data container of the snippet call (default value for widgets inside a snippet). |
 | Never       | The value is never editable.                                 |
 | Conditionally | The value is editable if the specified condition holds (see below). |
 
@@ -235,7 +236,7 @@ There are three options, described below:
 This mode only applies to attributes of type Decimal.
 {{% /alert %}}
 
-If set to _Fixed_, the decimal part always will be displayed with the number of places specified in the [Decimal precision](#decimal-precision) property. The value will be rounded using the method defined in the [rounding](project-settings#rounding) section of *Project Settings*.
+If set to _Fixed_, the decimal part always will be displayed with the number of places specified in the [Decimal precision](#decimal-precision) property. The value will be rounded using the method defined in the [Rounding](project-settings#rounding) section of **App Settings**.
 
 If set to _Auto_, the whole decimal part of the attribute value will be displayed. No decimal part will be be displayed if the attribute value is an integer.
 
@@ -251,7 +252,7 @@ Default: *Fixed*
 | 19.9999  | 20.00<sup><small>*</small></sup> | 19.9999      | 19.9999  |
 | 19.99999 | 20.00<sup><small>*</small></sup> | 20.0000<sup><small>*</small></sup> | 19.99999 |
 
-<sup><small>*</small></sup>The value is rounded to the nearest decimal with the defined number of decimal places.
+<small><sup>*</sup> The value is rounded to the nearest decimal with the defined number of decimal places.</small>
 
 ### 7.2 Decimal Precision{#decimal-precision}
 
@@ -261,7 +262,7 @@ This only applies to attributes of type Decimal and is available only when the [
 
 The precision of a value describes the number of decimal places that are used to express that value. This property indicates the number of decimal places (the number of digits following the point).
 
-The way that the number is rounded when displayed is defined in the [rounding](project-settings#rounding) section of *Project Settings*.
+The way that the number is rounded when displayed is defined in the [Rounding](project-settings#rounding) section of **App Settings**.
 
 Default: *2*
 
@@ -283,7 +284,7 @@ For example, with **Group digits** set to `true`, the number `1100100.01` will b
 
 ![Validation Section](attachments/common-widget-properties/validation-section.png)
 
-Input widgets can include validation to ensure that data is correct before it is used by the app.
+Input elements can include validation to ensure that data is correct before it is used by the app.
 
 There are two settings in the validation section which are described below:
 
@@ -317,7 +318,7 @@ There are a number of variables you can use in your expression:
 * `$value` – the current member (attribute or association) value
 
 {{% alert type="info" %}}
-In **Mendix 8.1 and above**, the expression can access objects of **all** the data containers enclosing the input widget. The objects are given the name of the widget they originate from (for example, `$dataView1`).
+The expression can access objects of **all** the data containers enclosing the input widget. The objects are given the name of the widget they originate from (for example, `$dataView1`).
 {{% /alert %}}
 
 When a validation is set and it fails for this widget, the message you specify will be shown before the user can use the value in the app.
@@ -356,7 +357,11 @@ When selected, this shows the widget while a particular attribute has a certain 
 
 ##### 9.1.1.2 Based on Expression{#visibility-based-on-expression}
 
-When selected, this shows the widget while a provided [expression](expressions) evaluates to true. The object of the containing data container is available inside an expression as a `$currentObject` variable. In Mendix 8.1 and above, the expression can access objects of all the data containers enclosing that data container widget. These objects are available under the name of the widget they originate from (for example, `$dataView1`).
+When selected, this shows the widget while a provided [expression](expressions) evaluates to true. The object of the containing data container is available inside an expression as a `$currentObject` variable. The expression can access objects of all the data containers enclosing that data container widget. These objects are available under the name of the widget they originate from (for example, `$dataView1`).
+
+For example, you might want a button to only be visible if a condition is met. Assume the object has an attribute called `myAttribute`, and you want the button to be visible only if `myAttribute` actually has a value stored. To achieve this goal put this expression into the field: `$currentObject/myAttribute != empty`.
+
+![Visibility Example](attachments/common-widget-properties/visibility-example.png)
 
 Note that the expression is evaluated in the browser, and hence, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](constants). Also, client-side expressions currently do not support all the functions that are available in the microflows. Please refer to an autocomplete list to know what functions are supported in your version.
 

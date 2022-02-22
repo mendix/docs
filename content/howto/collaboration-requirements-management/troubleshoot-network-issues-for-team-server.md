@@ -1,24 +1,20 @@
 ---
-title: "Troubleshoot Network Issues for Connecting to Team Server"
+title: "Troubleshoot Network Issues for Connecting to the Team Server"
 category: "Collaboration"
 menu_order: 14
-description: "Describes troubleshooting connection issues as well as the permissions and settings required to connect to Team Server."
+description: "Describes troubleshooting connection issues as well as the permissions and settings required to connect to the Team Server."
 tags: ["Team Server", "network", "troubleshoot", "firewall"]
 ---
 
 ## 1 Introduction
 
-Mendix Studio Pro needs to connect to Team Server, which is where all your projects are stored.
+Mendix Studio Pro needs to connect to the Team Server, where all your apps are stored. This document describes which permissions and settings are required to connect to the Team Server.
 
-**This how-to explains the following:**
+## 2 Troubleshooting Team Server App Network Settings
 
-* Which permissions and settings are required to connect to Team Server
+Being unable to download the Team Server app can indicate that the security configuration of your company network is blocking access to `https://home.mendix.com` and `https://teamserver.sprintr.com/`.
 
-## 2 Troubleshooting Team Server Project Network Settings
-
-Being unable to download the Team Server project can indicate that the security configuration of your company network is blocking access to `https://home.mendix.com` and `https://teamserver.sprintr.com/`.
-
-Team Server is implemented using Subversion and Mendix Studio Pro uses the HTTPS (TCP) protocol to communicate with that server. To access Team Server from within Studio Pro, the network at your location needs the following settings:
+Team Server is implemented using Subversion and Mendix Studio Pro uses the HTTPS (TCP) protocol to communicate with that server. To access the Team Server from Studio Pro, the network at your location needs the following settings:
 
 * The HTTPS port (TCP 443) needs to be open
 * The HTTP port (TCP 80) needs to be open
@@ -35,9 +31,11 @@ Mendix reserves the right to change the IP address at any time and without notif
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Contact your network administrator and give them this information to allow them to configure your network (for example, firewall and proxy settings) correctly.
+Contact your network administrator and give them this information to allow them to configure your network (for example, firewall, and proxy settings) correctly.
 {{% /alert %}}
 
-## 3 Still Having Problems?
-
 If this solution does not work, submit a request to [Mendix Support](https://support.mendix.com/).
+
+## 3 Read More
+
+* [Team Server](/developerportal/collaborate/team-server)

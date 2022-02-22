@@ -10,6 +10,10 @@ tags: ["domain model", "association", "studio pro"]
 
 An association describes a relation between entities. In the domain model, an association is represented by a line or arrow between two entities.
 
+{{% alert type="info" %}}
+Associations between two external entities from the same data source are defined in the originating app and therefore automatically established when the entities are used in a model. For further details, see the [Associations](external-entities#properties) section of *External Entities*.
+{{% /alert %}}
+
 ### 1.1 Ownership {#ownership}
 
 The value of an association should be viewed and edited from the object of the entity that is the [owner](association-member-properties#owner) of the association. Ownership in an association is signified by an arrow (note that the arrow does not signify direction). Either one entity or both entities can be the owner of the association. If one entity is the owner, there is an arrow that points from the owner to the other entity. If both entities are owners, there is a line between the two entities but no arrow. This is the only way the arrow can be controlled.
@@ -28,11 +32,19 @@ In the example below, the arrow indicates that **Order** is the owner of the ass
 An association between a persistable entity and a non-persistable entity must start in the non-persistable entity and have the owner **Default**. For more information on persistable and non-persistable entities, see [Persistability](persistability).
 {{% /alert %}}
 
-## 2 Creating Associations
+## 2 Creating Associations {#creating}
 
 The quickest way to create an association is to draw the association between two entities in a [domain model](domain-model). By default this will create a one-to-many association starting at the owner/many side of the association and ending at the one side of the association. The association will be named by joining the names of the two entities with an underscore. You can then edit the association as discussed in the next section.
 
 You can also create associations between entities in different modules of your app. In this case it is not possible to draw the association. You can create an association to an entity in another module's domain model by creating a new association in the **Association** tab of the entity which owns the association. You can then choose any entity within your app as the target of the association. For more information see [Association Tab Properties](association-member-properties).
+
+{{% alert type="info" %}}
+You can create and edit associations only between an external entity and a local entity. However, an external entity cannot be the [owner](association-member-properties#owner) for an association with a local entity.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+If you need to connect two external entities, consider adding a local entity and connect this local entity with both external entities. The local entity must be the owner of both associations, in this case.
+{{% /alert %}}
 
 ## 3 Editing Associations
 
@@ -53,6 +65,16 @@ You can edit the associations as members of the entity. In this case you will de
 ![](attachments/associations/edit-entity-association.png)
 
 For more information see [Association Tab Properties](association-member-properties).
+
+### 3.3 Move the Association Arrow
+
+You can move the association arrow between two entities without deleting it. Click within the black dot on either side of the association arrow and drag it to the new desired location.
+
+{{% alert type="warning" %}}
+Your mouse pointer should not activate a white dot. This indicates the creation of a new association.
+{{% /alert %}}
+
+![](attachments/associations/association-move-arrow.png)
 
 ## 4 Association Examples {#examples}
 
@@ -136,14 +158,13 @@ In XML, instances of these entities and their associations look as follows (note
 
 ```
 
-### 4.4 Many-to-Many Association with Dual Ownership
+### 4.4 Many-to-Many Association with Dual Ownership {#many-to-many-both}
 
 A many-to-many association where both entities are owners is created by setting the owner property to `Both` and the type property to `Reference set`.
 
 In this example, an **Accountant** can have multiple **Groups** and a **Group** can have multiple **Accountants**. This is the same as having multiplicity set to `Multiple 'Group' objects are associated with multiple 'Accountant' objects` with Navigability set to `'Accountant' and 'Group' objects refer to each other`:
 
-{{% image_container width="500" %}}![](attachments/associations/association-accountant-group.png)
-{{% /image_container %}}
+![](attachments/associations/association-accountant-group.png)
 
 In XML, instances of these entities and their association look as follows (note that the association is stored both in the **Accountant** element and the **Group** element):
 

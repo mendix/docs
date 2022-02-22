@@ -4,17 +4,28 @@ parent: "oql-functions"
 tags: ["studio pro"]
 ---
 
+## 1 Description
 
-The ROUND function rounds a given numeric expression.
+The `ROUND` function rounds a given numeric expression.
 
-The syntax is as following:
+## 2 Syntax
 
-```
+The syntax is as follows:
+
+```sql
 ROUND ( numeric_expression , length )
 ```
 
-**numeric_expression**
-Specifies the expression which must be rounded. This expression must be a numeric expression.
+### 2.1 numeric_expression
 
-**length**
-Specifies the amount of decimals to which the expression must be rounded.
+`numeric_expression` specifies the expression which must be rounded. This expression must be a numeric expression.
+
+{{% alert type="info" %}}
+
+If `numeric_expression` is `NULL` (empty), the function will return `NULL`.
+
+{{% /alert %}}
+
+### 2.2 length
+
+`length` specifies the amount of decimals to which the expression must be rounded.

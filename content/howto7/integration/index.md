@@ -1,5 +1,6 @@
 ---
 title: "Integration"
+weight: 70
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -22,7 +23,6 @@ We want to create a large network of Mendix apps, so let's start integrating!
 * [Publish a REST Service](publish-rest-service)
 * [Version a REST Service](version-rest-service)
 * [Expose a Web Service](expose-a-web-service)
-* [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
 * [Publish Data to Other Mendix Apps Using an App Service](publish-data-to-other-mendix-apps-using-an-app-service)
 * [Configure Selenium Support](selenium-support)
 * [Execute an SQL Statement on an External Database](execute-an-sql-statement-on-an-external-database)

@@ -12,13 +12,9 @@ These activities can only be used in **Microflows**.
 
 When working with external services there are several microflow activities which enable you to call the service and perform mapping operations.
 
-The activities described in this document are in the **Integration Activities** section of the **Toolbox**:
+The activities described in this document are in the **Integration Activities** section of the **Toolbox**.
 
-{{% image_container width="40%" %}}
-![integration activities toolbox](attachments/integration-activities/integration-activities-toolbox.png)
-{{% /image_container %}}
-
-The following are the list activities you can use in your microflow:
+The following are the integration activities you can use in your microflow:
 
 * [Call REST Service](call-rest-action) – calls a REST endpoint
 * [Call Web Service](call-web-service-action) – calls an imported web service operation

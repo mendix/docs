@@ -2,7 +2,13 @@
 title: "Restore Database on SQL Server"
 parent: "mendix-on-windows-microsoft-sql-server"
 menu_order: 70
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
+
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/restoring-a-sql-server-database.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 In certain situations (for example, unwanted database updates or data corruption), it might be necessary to restore the Mendix database from a backup. This document describes the actions needed to perform a complete database restore and defines the prerequisites for restoring backups.
@@ -11,17 +17,28 @@ In certain situations (for example, unwanted database updates or data corruption
 
 * Restore the database
 
+For a deep-dive look into this action, check out this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://videoshare.mendix.com/watch/WZu7QtHZPjtYUTdcV58PKr?.jpg"
+  data-uuid="WZu7QtHZPjtYUTdcV58PKr?"
+  data-v="4"
+  data-type="inline"
+/>
+
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have sufficient rights on the DBMS (for details, see [3 Permissions](#Permissions))
+* Have sufficient rights on the DBMS (for details, see the [Permissions](#Permissions) section below)
 * Make sure the following points are true:
     * The Mendix database is maintained using maintenance plans as described in [How to Set Up Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
     * A valid database backup file exists for the Mendix database
     * Valid transaction log files exist for the Mendix database
 
-## 3 Permissions<a name="Permissions"></a>
+## 3 Permissions {#Permissions}
 
 If the database being restored does not exist, the user must have **CREATE DATABASE** permissions to be able to execute **RESTORE**. If the database exists, RESTORE permissions default to members of the `sysadmin` and `dbcreator` fixed server roles and the owner of the database (`dbo`).
 
@@ -34,12 +51,12 @@ To restore the database, follow these steps:
 1. After you connect to the appropriate instance of the Microsoft SQL Server Database Engine, click the server name to expand the server tree in **Object Explorer**.
 2. Expand **Databases**. Depending on the database, either select a user database or expand **System Databases** and select a system database.
 3. Right-click the database, select **Tasks** > **Restore** > **Database**, which will open the **Restore Database** dialog box.
-4. In the **Source** section of the **General** page, specify the source and the location of the backup sets to restore by selecting **Device** > **Add** and then locating the backup file:
+4. In the **Source** section of the **General Settings** page, specify the source and the location of the backup sets to restore by selecting **Device** > **Add** and then locating the backup file:
 
     ![](attachments/restoring-a-sql-server-database/18580646.jpg)
 
-5. In the **Destination** section of the **General** page, the **Database** field is automatically populated with the name of the database to be restored. To change the name of the database, enter the new name in this field.
-6. In the **Restore plan** section of the **General** page, leave the default as **To the last backup taken** or click **Timeline** to access the **Backup Timeline** dialog box where you can manually select a point in time to stop the recovery action.
+5. In the **Destination** section of the **General Settings** page, the **Database** field is automatically populated with the name of the database to be restored. To change the name of the database, enter the new name in this field.
+6. In the **Restore plan** section of the **General Settings** page, leave the default as **To the last backup taken** or click **Timeline** to access the **Backup Timeline** dialog box where you can manually select a point in time to stop the recovery action.
 7. In the **Backup sets to restore** grid, select the backups to restore. This grid displays the backups available for the specified location. By default, a recovery plan is suggested. To override the suggested recovery plan, change the selections in the grid. Backups that depend on the restoration of an earlier backup are automatically deselected when the earlier backup is deselected.
 
     {{% alert type="info" %}}Optionally, click "Files" in the "Select a page" pane to access the "Files" dialog box. From here, you can restore the database to a new location by specifying a new restore destination for each file in the "Restore the database files as" grid.{{% /alert %}}
@@ -73,6 +90,3 @@ To restore the database, follow these steps:
 * [How to Set Up a New SQL Server Database](setting-up-a-new-sql-server-database)
 * [How to Set Up Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
 * [How to Set Up a Security Checklist for Your On-Premises Installation](security-checklist-for-your-on-premises-installation)
-* [How to Use Mendix on Windows - Microsoft SQL Server](mendix-on-windows-microsoft-sql-server)
-* [How to Deploy Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows)
-* [U*ix Deployment](unix-like)

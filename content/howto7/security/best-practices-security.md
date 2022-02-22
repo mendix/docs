@@ -36,7 +36,7 @@ Injection occurs when (user) input can be misused to influence the behavior of a
 
 When using Mendix-native components, there are no concerns about the possibility of injection. Queries (like XPath) are parametrized and therefore always escaped, making SQL-injection impossible. For the other way around, retrieved data shown in the user interface is escaped to the HTML format.
 
-When you are building an application, you may use [Mendix App Store](https://appstore.home.mendix.com/index3.html) components and external interfaces. Remember that variables—whose value originates from user input or other systems—should be escaped to avoid injection (and for the proper display).
+When you are building an application, you may use [Mendix Marketplace](https://marketplace.mendix.com/) components and external interfaces. Remember that variables—whose value originates from user input or other systems—should be escaped to avoid injection (and for the proper display).
 
 These are the common cases and best practices:
 
@@ -87,7 +87,7 @@ Your application might require sensitive information that should be extra encryp
 * Connection information for consumed services (like credentials, service locations, or keys)
 * Personal information (like bank account numbers or social security numbers)
 
-This data is defined within the domain model and stored within the database of your application. To minimize the impact of this information when it is leaked, we recommend storing this data in a (symmetric) encrypted manner. The [Encryption](/appstore/modules/encryption) module available from the Mendix App Store provides a way to encrypt this sensitive information in a database record based on an encryption key that is stored at the Mendix application server.
+This data is defined within the domain model and stored within the database of your application. To minimize the impact of this information when it is leaked, we recommend storing this data in a (symmetric) encrypted manner. The [Encryption](/appstore/modules/encryption) module available from the Mendix Marketplace provides a way to encrypt this sensitive information in a database record based on an encryption key that is stored at the Mendix application server.
 
 ## 7 Using a Third-Party Identity Provider
 
@@ -164,4 +164,4 @@ Which users and roles are defined within an application is different per app and
 * Anonymous access should be disabled if it has no function within the application
   * Some applications have anonymous access enabled, solely to serve a custom login form – this can be replaced by modifying the default *login.html* within your theme (which will also help the user experience with an improved loading time)
 * Roles managing other user roles should be as strict as possible (configured via **User management** within the user role options)
-* The role of the app project’s administrator user (default **MxAdmin**) should only be able to create the actual administrative accounts (or configure SSO)
+* The role of the app'a administrator user (default **MxAdmin**) should only be able to create the actual administrative accounts (or configure SSO)

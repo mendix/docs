@@ -7,7 +7,7 @@ tags: ["Charts", "Widgets", "Studio Pro", "Chart Configuration", "Configuration"
 
 ## 1 Introduction
 
-This guide explains the options for configuring chart widgets. The chart widgets are included in Mendix app templates based on Atlas UI. They can be included in other Mendix apps by downloading them from the [Mendix App Store](https://appstore.home.mendix.com/link/app/105695/). For more documentation, see [Charts](/appstore/widgets/charts) in the *App Store Guide*.
+This guide explains the options for configuring chart widgets. Charts are included in Mendix app templates based on Atlas UI. They can be included in other Mendix apps by downloading them from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/105695/). For more documentation, see [Charts](/appstore/widgets/charts) in the *Marketplace Guide*.
 
 This guide covers the following widgets:
 
@@ -215,7 +215,7 @@ The properties above are common across the chart types. In this section, the pro
 
     * **Series name**: this will be displayed in any legend on the chart
 
-    * **Column color**: HTML color of the column e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+    * **Column color**: HTML color of the column, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
 ### 3.2 Line Chart
 
@@ -231,7 +231,7 @@ The properties above are common across the chart types. In this section, the pro
 
     * **Series name**: this will be displayed in any legend on the chart
 
-    * **Line color**: HTML color of the line e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+    * **Line color**: HTML color of the line, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
 ### 3.3 Pie Chart
 
@@ -241,7 +241,7 @@ The properties above are common across the chart types. In this section, the pro
 
 * **Show legend**: Displays a legend on the pie chart
 
-* **Colors**: Contains the color of each slice e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+* **Colors**: Contains the color of each slice, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
 * **Refresh interval (ms)**: Refresh the chart in intervals of milliseconds, when set to 0 refresh is disabled
 
@@ -261,9 +261,9 @@ The properties above are common across the chart types. In this section, the pro
 
 3. **Static series** Tab
 
-    * **Border color**: HTML color of the border e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+    * **Border color**: HTML color of the border, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-    * **Area color**: HTML color of the area within the border e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5). Default is the border color with transparency
+    * **Area color**: HTML color of the area within the border, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5). Default is the border color with transparency
 
 ### 3.5 Bar Chart
 
@@ -273,7 +273,7 @@ The properties above are common across the chart types. In this section, the pro
 
     * **Series name**: this will be displayed in any legend on the chart
     
-    * **Bar color**: HTML color of the bar e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+    * **Bar color**: HTML color of the bar, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
 ### 3.6 Time Series Chart
 
@@ -291,9 +291,9 @@ The properties above are common across the chart types. In this section, the pro
 
     * **Series name**: this will be displayed in any legend on the chart
 
-    * **Line color**: HTML color of the line e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+    * **Line color**: HTML color of the line, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-    * **Area color**: HTML color of the area within the border e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5). Default is the line color with transparency
+    * **Area color**: HTML color of the area within the border, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5). Default is the line color with transparency
 
 ### 3.7 Heat Map
 
@@ -305,7 +305,7 @@ The properties above are common across the chart types. In this section, the pro
 
 * **Show values**: Display data values on the chart: Yes , No
 
-* **Font value color**: HTML color of the values displayed on the heat map e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+* **Font value color**: HTML color of the values displayed on the heat map, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
 * **X-axis label**: Label to be displayed on the X-axis
 
@@ -325,7 +325,7 @@ The properties above are common across the chart types. In this section, the pro
 
 ## 4 Chart Theming
 
-Advanced JSON settings can also be added in a global context via the theme folder of your Mendix project root directory.
+Advanced JSON settings can also be added in a global context via the theme folder of your Mendix app root directory.
 
 To the theme folder, add a *.json* file named *com.mendix.charts*. The JSON should be in the following format:
 

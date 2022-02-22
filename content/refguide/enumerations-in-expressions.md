@@ -1,6 +1,7 @@
 ---
 title: "Enumerations in Expressions"
 parent: "expressions"
+menu_order: 170
 tags: ["studio pro", "expression", "enumeration", "expressions"]
 ---
 
@@ -22,7 +23,7 @@ Conditional statements are also possible:
 if 4>3 then
   OrderProcessing.Status.completed
 else
-  OrderProcessing.Status.completed
+  OrderProcessing.Status.started
 ```
 
 ## 2 getCaption
@@ -43,7 +44,7 @@ The output is described in the table below:
 
 ### 2.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 getCaption($Customer/Grade)
@@ -73,7 +74,7 @@ The output is described in the table below:
 
 ### 3.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 getKey($Customer/Grade)

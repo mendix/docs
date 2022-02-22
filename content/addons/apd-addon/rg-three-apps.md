@@ -5,7 +5,7 @@ parent: "rg-three-apd"
 
 ## 1 Apps Overview
 
-The homepage of APD displays the list of licensed applications from the Mendix [Developer Portal](/developerportal/index) in alphabetical order.
+The homepage of APD displays the list of licensed applications from the Mendix [Developer Portal](/developerportal) in alphabetical order.
 
 ![](attachments/rg-three/ProjectsDashboard.png)
 
@@ -35,7 +35,7 @@ When starting a tour, a tooltip will appear throughout the APD application with 
 
 ## 3 Profile Menu & User Settings
 
-In the profile menu, you can see links to your [Mendix Profile](/developerportal/mendix-profile/) and also the user settings for APD:
+In the profile menu, you can see links to your [Mendix Profile](/developerportal/community-tools/mendix-profile) and also the user settings for APD:
 
 ![](attachments/rg-three/profile_menu.png)
 

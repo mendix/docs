@@ -51,7 +51,7 @@ Note: impact = low means "some code might work now".
 | Low | Fixed several problems with moving an element around between containers. |
 | Low | Fixed a problem with not being able to fix unresolvable by-name references. |
 | Low | All NPM dependencies now have a caret version range, so that they can play along as peer dependencies of downstreams. |
-| None | Add support for Modeler version 7.0.0 (including betas). |
+| None | Add support for Modeler version 7.0.0. |
 | None | Added a `move(from, to)` method to properties containing multiple structures (such a `pages.VerticalFlow.widgets`). |
 | None | Added possibility of deleting model units (such as Pages). |
 | None | Fixed a problem with extraneous traffic to the Model API. |
@@ -60,7 +60,7 @@ Note: impact = low means "some code might work now".
 
 Note: impact = low means "some code might work now".
 
-Add "deleting model units": You do this by using `splice` on the container of a model unit; e.g.:
+Add "deleting model units": You do this by using `splice` on the container of a model unit; for example,:
 
 ```
 const deleteIndex = page.container.documents.indexOf(page);

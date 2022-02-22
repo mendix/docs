@@ -1,10 +1,16 @@
 ---
 title: "8"
+menu_order: 2
 parent: "metamodel" 
 ---
 
 These are the release notes for the Mendix Metamodel version 8:
 
+* [8.18](metamodel-8.18)
+* [8.16](metamodel-8.16)
+* [8.15](metamodel-8.15)
+* [8.14](metamodel-8.14)
+* [8.13](metamodel-8.13)
 * [8.12](metamodel-8.12)
 * [8.11](metamodel-8.11)
 * [8.10](metamodel-8.10)

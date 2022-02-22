@@ -6,7 +6,7 @@ tags: ["filter", "xpath"]
 
 ## 1 Introduction
 
-To filter data on your page, you can use the search bar functionality, or you can add an XPath constraint to your data grid. The search bar contains search fields that allow the end-user to quickly find the information he or she needs. XPath is a hard-coded constraint on your data grid that filters the data.
+To filter data on your page, use the search bar functionality, or you can add an XPath constraint to your data grid. The search bar contains search fields that allow the end-user to quickly find the information he or she needs. XPath is a hard-coded constraint on your data grid that filters the data.
 
 This how-to will start with preparing a data structure and some example data. After this setup, you will filter your data with a search bar. Then you will filter your data using different XPath constraints.
 
@@ -20,15 +20,15 @@ This how-to serves as a comparison for filtering data and emphasizes how to use 
 * Filter a list using the search bar
 * Filter a list using XPath
 
-## 2 Prerequisites - Preparing the Data Structure, GUI, and Example Data
+## 2 Prerequisites – Preparing the Data Structure, GUI & Example Data
 
 To see the results of this how-to, it is necessary that you set up a test project with test data.
 
 Before you continue, make sure that you know how to create the following:
 
-* Domain models (for more information, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* Overview and detail pages (for more information, see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages))
-* Menu items (for more information, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
+* Domain models (for more information, see [How to Create a Basic Data Layer](/howto7/data-models/create-a-basic-data-layer))
+* Overview and detail pages (for more information, see [How to Create Your First Two Overview & Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages))
+* Menu items (for more information, see [How to Set Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure))
 
 1.  Create the following domain model:
 

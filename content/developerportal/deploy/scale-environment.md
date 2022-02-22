@@ -4,6 +4,7 @@ parent: "mxcloudv4"
 menu_order: 20
 description: "Describes how to scale your environments in Mendix Cloud v4."
 tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -18,7 +19,7 @@ The scaling options on possible cloud versions are the following:
 
 | Cloud Version | Scaling Options | Limitations |
 | ------------- | --------------- | ----------- |
-| Mendix Cloud v3 | Vertical scaling | This needs to be done by raising a support ticket with [Mendix Support](https://support.mendix.com/) |
+| Mendix Cloud v3 | Vertical scaling | This needs to be done by raising a ticket with [Mendix Support](https://support.mendix.com/) |
 | Mendix Cloud v4 | Vertical and horizontal scaling | Horizontal scaling is only available for apps written in Mendix version 7.0 and above<br/>Scheduled events always run on the first instance |
 
 **This how-to will teach you how to do the following:**
@@ -43,7 +44,7 @@ Details of your plan are also displayed on the environment details page.
 
 If you want to scale your licensed app in Mendix Cloud v4, follow these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com) and select your licensed app.
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com) and select your licensed app.
 
 2. Click **Environments** to go to the environments page.
 
@@ -55,7 +56,7 @@ If you want to scale your licensed app in Mendix Cloud v4, follow these steps:
 
 6. Set the **Memory per instance** that you want to use.
 
-    {{% alert type="warning" %}}You cannot exceed the total memory provided by your plan. This is shown as the lower number in **Total Allocated Memory**.<br/>If you try to use scaling values which exceed the memory provided by your plan you will get the message `You do not have sufficient resources to configure this allocation`.{{% /alert %}}
+    {{% alert type="warning" %}}You cannot exceed the total memory provided by your plan. This is shown as the lower number in **Total Allocated Memory**.<br/>If you try to use scaling values which exceed the memory provided by your plan you will get the message `You do not have sufficient resources to configure this allocation`.{{% /alert %}}    
 
 7. Click **Apply**. This will restart your environment to apply the changes.
 
@@ -80,12 +81,10 @@ For example, you can use one instance with 4GiB RAM. The remaining 12GiB in your
 ## 5 Read More
 
 * [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
-* [Deployment](index)
+* [Deployment](/developerportal/deploy)
 * [Environment Details](environments-details)
-* [Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
 * [Mendix Cloud](mendix-cloud-deploy)
 * [Mendix Cloud v4](mxcloudv4)
 * [Migrate to Mendix Cloud v4](migrating-to-v4)
-* [Company & App Roles](/developerportal/company-app-roles/index)
+* [App Roles](/developerportal/collaborate/app-roles)
 * [Node Permissions](/developerportal/deploy/node-permissions)
-* [Technical Contact](/developerportal/company-app-roles/technical-contact)

@@ -30,7 +30,7 @@ You can find the description of input elements available in Studio in the table 
 
 {{% alert type="info" %}}
 
-Apart from the standard input widgets, you can also [download widgets from the Mendix App Store](https://appstore.home.mendix.com/index3.html) to your app. For more information, see section [4 Widgets by Origin](page-editor-widgets#widgets-by-origin) in *Widgets*.
+Apart from the standard input widgets, you can also [download widgets from the Mendix Marketplace](https://marketplace.mendix.com/) to your app. For more information, see section [4 Widgets by Origin](page-editor-widgets#widgets-by-origin) in *Widgets*.
 
 {{% /alert %}}
 

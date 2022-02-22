@@ -1,13 +1,19 @@
 ---
-title: "Studio 8 Guide"
+title: "Studio 9 Guide"
 tags: ["studio", "web modeler"]
+weight: 20
+cascade:
+    - space: "Studio 9 Guide"
+    - mendix_version: "9"
+    - sitemap:
+        priority: 0.8
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
 {{% alert type="warning" %}}
 
-The **Studio 8 Guide** describes Mendix Studio functionality that corresponds to Mendix 8 version. It describes the latest Studio functionality and features.
+The **Studio 9 Guide** describes Mendix Studio functionality that corresponds to Mendix version 9. It describes the latest Studio functionality and features.
 
 {{% /alert %}}
 
@@ -24,16 +30,16 @@ Studio enables you to do the following:
 
 ## 2 Guide Categories
 
-The *Studio 8 Guide* is divided into the following categories:
+The *Studio 9 Guide* is divided into the following categories:
 
 * [General Info](general) 
-* [Domain Model](domain-models)
 * [Pages](page-editor)
+* [Working with Data](work-with-data)
 * [Navigation Document](navigation)
 * [Microflows](microflows)
-* [Data Filters](filters)
+* [Workflows](workflows)
 * [Previewing & Publishing Your App](publishing-app)
 * [Checks](checks)
-* [Consistency Errors](consistency-errors)
 * [Theme Customizer](theme-customizer)
 * [Settings](settings)
+* [Collaboration](collaboration)

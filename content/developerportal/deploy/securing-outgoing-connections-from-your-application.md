@@ -1,17 +1,22 @@
 ---
-title: "Secure Outgoing Connections from your App"
+title: "Secure Outgoing Connections from Your App"
 parent: "general"
 menu_order: 10
 description: "Describes which methods are available for securing connections from your app to the outside world."
 tags: ["secure", "outgoing", "encryption", "TLS/HTTPS", "proxy", "SSH", "VPN"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/securing-outgoing-connections-from-your-application.pdf).
+{{% /alert %}}
 
 ## 1 Introduction
 
 While all inbound connections to apps in the Mendix Cloud are secured with TLS, your apps can also connect to other services over the Internet. Some of these services will be third-party services and you will have to match the security settings set up by the service owner. Sometimes the service may be owned by you, or someone else in your company, and you can control how connection security is implemented.
 
-There are various methods which are used for securing connections from *Backend services* to your *app* via the internet. This document sometimes refers to the Mendix Cloud, but the methods are applicable to all other set-ups, such as public cloud or on-premises deployments.
+There are various methods which are used for securing connections from *back end services* to your *app* via the internet. This document sometimes refers to the Mendix Cloud, but the methods are applicable to all other set-ups, such as public cloud or on-premises deployments.
 
 ## 2 Scenarios
 
@@ -23,7 +28,7 @@ In some cases, encryption and authentication on connections is unnecessary. In t
 
 ### Scenario 2 - TLS/HTTPS
 
-This is the most common scenario. The client app verifies the server certificate for the backend service and sets up an encrypted connection. Trust is verified via the chain of trust to a certificate authority in the client's trust store.
+This is the most common scenario. The client app verifies the server certificate for the back end service and sets up an encrypted connection. Trust is verified via the chain of trust to a certificate authority in the client's trust store.
 
 Using encryption, data sent and received over the connection cannot be decoded if it is intercepted by other parties, so to authenticate the client, a username/password or token can be used with, for example, HTTP headers. This can be used for services that natively support TLS.
 
@@ -41,7 +46,7 @@ The rest of the security features of scenario 2 can also be applied.
 
 ### Scenario 4 - Proxy Server for TLS Offloading
 
-If a backend service owned by you does not support HTTPS out of the box, you can add a HTTPS reverse proxy server such as NGINX or HAProxy in front of it. This HTTPS reverse proxy can optionally also act as a firewall and can be deployed in a highly available way.
+If a back end service owned by you does not support HTTPS out of the box, you can add a HTTPS reverse proxy server such as NGINX or HAProxy in front of it. This HTTPS reverse proxy can optionally also act as a firewall and can be deployed in a highly available way.
 
 Migrations of back-end services within your data center can be done transparently by decoupling it from the public address of your service. The app in the Mendix Cloud simply connects to an HTTPS endpoint.
 
@@ -88,4 +93,4 @@ Setting up an SSH enabled server and setting up a public/private keypair is a tr
 
 Client certificates can be added to your Mendix Cloud app from within the Developer Portal. See [Certificates](/developerportal/deploy/certificates) for more information.
 
-Scenarios 2 to 5 work best for HTTP based protocols, which will work out of the box from Mendix core functionality, but also for many AppStore modules and other content. However, by using Java actions, they can be applied to most TCP based connections which can be wrapped in TLS for added security.
+Scenarios 2 to 5 work best for HTTP based protocols, which will work out of the box from Mendix core functionality, but also for many Mendix Marketplace modules and other content. However, by using Java actions, they can be applied to most TCP based connections which can be wrapped in TLS for added security.

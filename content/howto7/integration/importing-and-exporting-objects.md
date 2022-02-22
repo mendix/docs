@@ -7,7 +7,7 @@ tags: ["mpk", "project package", "import", "export", "document", "project", "mod
 
 ## 1 Introduction
 
-In Mendix, you don't need to reinvent the wheel. You can save time by importing modules others have created and by exporting new modules for others to use. The App Store provides this functionality on a macro level. You can also use the Desktop Modeler's built-in import and export functions to share content between your own apps, import unofficial modules, and share entire projects.
+In Mendix, you don't need to reinvent the wheel. You can save time by importing modules others have created and by exporting new modules for others to use. The Marketplace provides this functionality on a macro level. You can also use the Desktop Modeler's built-in import and export functions to share content between your own apps, import unofficial modules, and share entire projects.
 
 {{% alert type="warning" %}}
 Please note throughout this how-to that Mendix packages are stored as Mendix package (*.mpk*) files. These are not compatible with each other; you cannot, for example, import individual *modules* from a *project* package.
@@ -152,9 +152,9 @@ To import widgets, follow these steps:
 
 4. Add your newly imported widget from the **Toolbox** or the **Add Widget** context menu.
 
-### 2.5 Importing Content from the App Store
+### 2.5 Importing Content from the Marketplace
 
-To learn more about importing content from the App Store, see [Use App Store Content](/appstore/general/app-store-content).
+To learn more about importing content from the Marketplace, see [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).
 
 ## 3 Exporting Objects
 
@@ -221,7 +221,6 @@ Mendix module documents can be exported as a Mendix package (*.mpk*) file.
 * [How to Configure Selenium Support](selenium-support)
 * [How to Import XML Documents](importing-xml-documents)
 * [How to Consume a REST Service](consume-a-rest-service)
-* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
 * [Modules](/refguide7/modules)
 * [Project](/refguide7/project)
 * [Common Widgets](/refguide7/common-widgets)

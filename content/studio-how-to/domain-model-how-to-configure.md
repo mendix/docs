@@ -1,7 +1,7 @@
 ---
 title: "Configure a Domain Model"
 description: "This how-to describes the process of configuring the domain model in Mendix Studio."
-menu_order: 30
+weight: 30
 tags: ["studio", "domain model", "decision", "domain model"]
 ---
 
@@ -139,7 +139,7 @@ Do the following:
       
 		{{% image_container width="450" %}}![Select Enumeration](attachments/domain-model-how-to-configure/select-enumeration.png){{% /image_container %}}
       
-    6. In the **Select enumeration** dialog box, click **New Enumeration**.
+    6. In the **Select enumeration** dialog box, click the plus icon in the top right corner to add a new enumeration.
       
     7. In the **Create new enumeration** dialog box, click **Add Item** (*Status* is filled out automatically for the **Name**).
       
@@ -151,7 +151,7 @@ Do the following:
       
 		{{% image_container width="450" %}}![Create Enumeration Items](attachments/domain-model-how-to-configure/create-enumeration-items.png){{% /image_container %}}
       
-    10. Click **Create** to close the dialog boxs and create the attribute.
+    10. Click **Create** to close the dialog box and create the attribute.
    
 3. Create the **Order_Line** entity to hold the order products and quantities. Use the same method as for creating the **Product** entity. For more information, see the [Defining the Product](#product) section. 
 
@@ -211,7 +211,7 @@ You created the **Customer** entity and its attributes:
 
 You have created all the entities and their attributes:
 
-<img src="attachments/domain-model-how-to-configure/entities.png" alt="Entities"  />
+![Entities](attachments/domain-model-how-to-configure/entities.png)
 
 Now you need to define how these entities are connected to each other and create associations. For more information on associations, see [Associations](/studio/domain-models-association-properties).  
 
@@ -259,11 +259,11 @@ Congratulations! You have now configured the domain model for the online shoppin
 
 ![Domain Model online shopping app](attachments/domain-model-how-to-configure/domain-model-online-shop.png)
 
-Now you can build [pages](/studio/page-editor) for it or use [Buzz](/studio/buzz) to collaborate with developers and designers from your team and build the app experience. 
+Now you can build [pages](/studio/page-editor) for it or use [Buzz](/studio/collaboration-buzz) to collaborate with developers and designers from your team and build the app experience. 
 
 ## 8 Read More
 
 * [Domain Model](/studio/domain-models)
 * [Pages](/studio/page-editor)
 * [Microflows](/studio/microflows)
-* [Buzz](/studio/buzz)
+* [Buzz](/studio/collaboration-buzz)

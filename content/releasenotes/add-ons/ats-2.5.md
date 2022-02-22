@@ -33,7 +33,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 
 ### Other Changes
 
-* When you open ATS, you will now see a new screen that requests your approval to share your Mendix Community Profile information with the ATS application. Every user has to confirm in order to continue using ATS. This needs to be done only once.
+* When you open ATS, you will now see a new screen that requests your approval to share your Mendix Profile information with the ATS application. Every user has to confirm in order to continue using ATS. This needs to be done only once.
 * On the dashboard report, we have changed the way the success rate is displayed. The success rate was previously displayed as percentages (from 0-100), but we replaced this with the exact numbers of **successfully executed test cases/total test cases**. For example, if a test suite has 10 test cases, of which 8 pass, previously this was displayed as "80 %", while now it is displayed as "8/10".
 
 ### Known Issues

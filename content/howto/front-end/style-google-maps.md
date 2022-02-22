@@ -1,6 +1,6 @@
 ---
 title: "Style Google Maps"
-category: "Front-End"
+category: "Front End"
 menu_order: 60
 tags: ["studio pro"]
 ---
@@ -22,7 +22,7 @@ Before you start this how-to, please make sure you have completed the following 
 *   Have the latest version of the [Google Maps](/appstore/widgets/google-maps) widget in your app
 
 {{% alert type="warning" %}}
-These instructions are for the Google Maps widget which you can download from the App Store. The Google Maps widget within the Atlas UI template has different options.
+These instructions are for the Google Maps widget which you can download from the Marketplace. The Google Maps widget within the Atlas UI template has different options.
 {{% /alert %}}
 
 ## 3 Adding the Style
@@ -76,14 +76,14 @@ Supporting communities is cool. Therefore I will also show you how to upload you
 
 1.  Go-to Snazzymaps and click **Create.**
     **![](attachments/19202780/19398964.png)** 
-2.  Now you will see the same sort of handy quick style method that Mendix provides at [https://ux.mendix.com/theme-creator.html](https://ux.mendix.com/theme-creator.html).
+2.  Now you will see the same sort of handy quick style method that Mendix provides at the [Atlas 3](https://atlas.mendix.com/) site.
     ![](attachments/19202780/19398965.png) 
 
-    Happy modelling!
+    Happy modeling!
 
 ## 4 Read More
 
 * [Atlas UI](atlas-ui)
 *   [Layouts and Snippets](layouts-and-snippets)
-*   [Setting Up the Navigation Structure](../general/setting-up-the-navigation-structure)
+*   [Setting Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure)
 *   [Creating your first two Overview and Detail pages](create-your-first-two-overview-and-detail-pages)

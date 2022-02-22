@@ -70,7 +70,7 @@ Now the application is ready to store redundant data, but you still need to keep
 
     ![](attachments/18448743/18582150.png)
 
-7.  Open the **Toolbox**, which should be docked in the bottom-right corner of Studio Pro. If you can't find the **Toolbox** there, you can open it from the **View** menu:
+7.  Open the **Toolbox**, which should be docked in the lower-right corner of Studio Pro. If you can't find the **Toolbox** there, you can open it from the **View** menu:
 
     ![](attachments/18448743/18582163.png)
 
@@ -146,9 +146,9 @@ Now the application is ready to store redundant data, but you still need to keep
 * [Work with Images & Files](working-with-images-and-files)
 * [Create a Basic Data Layer](create-a-basic-data-layer)
 * [Set Up Data Validation](setting-up-data-validation)
-* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Stories](/developerportal/collaborate/stories)
-* [Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)
+* [Define Access Rules Using XPath](/howto/logic-business-rules/define-access-rules-using-xpath)
 * [Attributes](/refguide/attributes)
 * [Event Handlers](/refguide/event-handlers)
 

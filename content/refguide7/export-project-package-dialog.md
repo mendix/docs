@@ -1,54 +1,48 @@
 ---
-title: "Export an App Project Package"
+title: "Export an App Package"
 parent: "dialogs"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
-In this how-to, you will learn how to export a Mendix project package (*.mpk*) from the Mendix Modeler. You can export a project package for backup purposes or to share it with other Mendix developers. This is useful if you want to give someone the entire app, or if you  need to provide a test app when submitting a ticket.
+With this dialog box, you can export a Mendix project package (*.mpk*) from the Mendix Modeler. You can export a project package for backup purposes or to share it with other Mendix developers. This is useful if you want to give someone the entire application, or if you need to provide a test app when submitting a ticket.
 
-Project packages can be imported again into a new app using the [Import Project Package dialog box](import-project-package-dialog).
+To open the **Export Project Package** dialog box, open your project in the Mendix Modeler and then go to **File > Export Project Package**.
 
-**This how-to will teach you how to do the following:**
+![](attachments/export-a-project-package/export-project-package-dialog.png)
 
-* Export a Mendix project to a Mendix package file
-* Exclude data from the export
-* Include data in the export
+## 2 Package Destination
 
-## 2 Exporting a Project Package
+In the **Package destination** field, enter the location of the package file. The default location is a folder named **packages** inside the project directory.
 
-Mendix project packages can be exported to a Mendix package file (*.mpk*). To download a project package, see the sections below.
+## 3 Export Data
 
-### 2.1 Exporting with No Data
+You can export a Mendix project package without data or with a database snapshot included. If you include a database snapshot, you need to select whether you include an existing snapshot or you include a new snapshot.
 
-You can choose to include data from the built-in database in the Mendix package. To download a package without data, follow these steps:
+### 3.1 No Data
 
-1. Open your project in the Mendix Modeler.
-2. Go to **File** and select **Export Project Package...**:
+If you select **No data**, the project package will be exported without data included. After you click **Export**, the package will be exported to the selected package destination.
 
-	![](attachments/export-a-project-package/exportpp.png)
+### 3.2 Existing Snapshot
 
-4. Select the **Package destination** (the default location is a folder named *packages* inside the project directory).
-5. In the **Export Data** section, select **No data**.
-6. Click **Export**.
+If you select **Existing snapshot**, the existing database snapshot will be included in the export. After you click **Export**, the package with the existing snapshot will be exported to the selected package destination.
 
-The package will be exported to the selected package destination.
+{{% alert type="info" %}}
 
-### 2.2 Exporting with a Snapshot
+This option is only available when a snapshot is already present. Snapshots can be created via **Project** > **More Versioning** > **Add Snapshot of Data**.
 
-There are two snapshot options in the export dialog box:
+{{% /alert %}}
 
-* **Existing snapshot** – will include the existing database snapshot in the export
-	* This option is only available when a snapshot is already present
-	* Snapshots can be created via **Project** > **More Versioning** > **Add Snapshot of Data**
-* **New snapshot from current database** – will create a new snapshot from the database and include it in the export
-	* This option becomes available after you run the app locally at least once, because a local database will be created when running the app for the first time.
+### 3.3 New Snapshot from Current Database 
 
-To export with a snapshot, follow these steps:
+If you select **New snapshot from current database**, a new snapshot will be created from the database and included in the export. After you click **Export**, the package with the new snapshot database will be exported to the selected package destination.
 
-1. In your app project in the Modeler, select **File** > **Export Project Package**:
-2. Select the **Package destination**.
-3. Select **New snapshot from current database**.
-4. Click **Export**.
+{{% alert type="info" %}}
 
-![](attachments/export-a-project-package/snapshotincluded.png)
+This option becomes available after you run the app locally at least once, because a local database will be created when running the app for the first time.
+
+{{% /alert %}}
+
+## 4 Read More
+
+* [Import Project Package](import-project-package-dialog)

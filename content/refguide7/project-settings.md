@@ -23,13 +23,13 @@ For the settings in a configuration, see [Configuration](configuration).
 
 These settings influence the behavior of the Runtime when running your application.
 
-### 3.1 Static Resources from Disk
+### 3.1 Static Resources from Disk {#static-resources-from-disk}
 
 If this option is enabled, the static resources for your mobile application are downloaded as soon as you open your application rather than bit by bit as you navigate through the app. This can drastically cut down the number of network requests, as the files can be retrieved from the disk rather than from the server.
 
 The resources are downloaded to the device once for each deployment and are reused for subsequent runs of your app. This affects a number of files, including: your theme; the JavaScript client; CSS files; and pages.
 
-### 3.2 Optimize Network Calls
+### 3.2 Optimize Network Calls {#optimize-network-calls}
 
 If this option is enabled (**true** by default), Mendix analyzes every microflow that can be triggered from the client to minimize the number of objects required to be sent. This speeds up your app significantly.
 
@@ -97,7 +97,7 @@ The hash algorithm is used to generate hash values for attributes of the HashStr
 | Option | Description |
 | --- | --- |
 | BCrypt (default, recommended) | Resistant to brute-force search attacks. |
-| SSHA256 | Seeded Secure Hash Algorithm 2, digest length 256 bits. |
+| SSHA256 | Salted Secure Hash Algorithm 2, digest length 256 bits. |
 
 Mendix believes both algorithms are secure enough to store passwords within Mendix. The main difference between BCrypt and SSHA256 is that the BCrypt algorithm has been configured so that it is relatively slow on purpose, since it was designed specifically to stop brute force attacks. That's why this results in a slight performance difference with the SSHA256 algorithm.
 

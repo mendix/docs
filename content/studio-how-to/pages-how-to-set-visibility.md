@@ -4,6 +4,7 @@ category: "Pages"
 description: "Describes how to set conditional visibility in Mendix Studio."
 menu_order: 30
 tags: ["studio", "pages", "how to", "visibility", "visible"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 
@@ -73,15 +74,14 @@ To set conditional visibility for the **Billing Address** field, do the followin
 
 2. Select the **Billing Address** field and go to its properties.
 
-3. In **Conditional Visibility** section, click the **Attribute-Based** property:
+3. In **Conditional Visibility** section, toggle the **Visible Based on Data** property and click the **Attribute** property:
 
-    {{% image_container width="250" %}}![Conditional Visibility Section](attachments/pages-how-to-set-visibility/conditional-visibility-section.png){{% /image_container %}}
+    ![Visible Based on Data](attachments/pages-how-to-set-visibility/visible-based-on-data.png)
 
-4. In the **Select Attribute** dialog box, choose the **BillingAddressSame** attribute and click **Select**.
+4. Click the In the **Select Attribute** dialog box, choose the **BillingAddressSame** attribute and click **Select**.
 
-5. The **Attribute Values** property is now displayed in properties. Untick the *True* value as it does not meet the conditions you would like to set, and leave the **False** value selected:
+5. The **Attribute Values** property is now displayed in properties. Untick the *True* value as it does not meet the conditions you would like to set, and leave the **False** value selected.
 
-    {{% image_container width="250" %}}![Attribute-Based Visibility](attachments/pages-how-to-set-visibility/attribute-based-visibility-set.png){{% /image_container %}}
 
 Good job! If you [preview your app](/studio/publishing-app), you will see that the billing address is only shown when you untick the  **Billing address is the same as delivery address** option.
 
@@ -95,13 +95,11 @@ To show an element only to a certain user role, do the following:
 
     {{% image_container width="450" %}}![List of Products](attachments/pages-how-to-set-visibility/list-of-products.png){{% /image_container %}}
 
-2. Open its properties and in **Conditional Visibility** section toggle the **Role-Based** property:
-
-    {{% image_container width="250" %}}![Role-Based Property](attachments/pages-how-to-set-visibility/role-based-property.png){{% /image_container %}}
+2. Open its properties and in **Conditional Visibility** section toggle the **Visible Based on Role** property.
 
 3. A list of roles available in your app is displayed in the **Roles** property. Untick the **Customer** role:
 
-    {{% image_container width="250" %}}![Unselected Roles](attachments/pages-how-to-set-visibility/unselected-roles.png){{% /image_container %}}
+    ![Unselected Roles](attachments/pages-how-to-set-visibility/unselected-roles.png)
 
 Well done! Now the **Edit** button will only be shown to **Administrator** and **Sales_Manager** user roles only.
 
@@ -111,7 +109,7 @@ To easily find which elements on your page have conditional visibility, you can 
 
 1. Open the page.
 
-2. Click the eye icon in the top-left corner of the page:
+2. Click the eye icon in the upper-left corner of the page:
 
     {{% image_container width="250" %}}![Eye Icon](attachments/pages-how-to-set-visibility/eye-icon.png){{% /image_container %}}
 

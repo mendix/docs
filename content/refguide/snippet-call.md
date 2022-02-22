@@ -1,6 +1,6 @@
 ---
 title: "Snippet Call"
-parent: "common-widgets"
+parent: "structure-widgets"
 menu_order: 40
 tags: ["studio pro", snippet call", "common widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -10,26 +10,30 @@ tags: ["studio pro", snippet call", "common widget"]
 
 The **Snippet call** widget allows you to use a [snippet](snippet) on a [page](page), a [layout](layout), or another snippet:
 
-![Snippet Call Example](attachments/common-widgets/snippet-call-example.png)
+![Snippet Call Example](attachments/structure-widgets/snippet-call-example.png)
 
 ## 2 Properties
 
 An example of snippet call properties is represented in the image below:
 
-{{% image_container width="300" %}}![Snippet Call Properties](attachments/common-widgets/snippet-call-properties.png)
+{{% image_container width="300" %}}![Snippet Call Properties](attachments/structure-widgets/snippet-call-properties.png)
 {{% /image_container %}}
 
 Snippet call properties consist of the following sections:
 
 * [Common](#common)
-* Design Properties
+* [Design Properties](#design-properties)
 * [General](#general)
 
 ### 2.1 Common Section {#common}
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 General Section {#general}
+### 2.2 Design Properties Section {#design-properties}
+
+{{% snippet file="refguide/design-section-link.md" %}} 
+
+### 2.3 General Section {#general}
 
 This section contains the **Snippet** property, it shows the name of an actual snippet that will be displayed here.
 
@@ -43,5 +47,5 @@ To perform actions on a snippet call, select it on a page and right-click it. Th
 ## 4 Read More
 
 * [Page](page)
-* [Common Widgets](common-widgets)
+* [Structure Widgets](structure-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)

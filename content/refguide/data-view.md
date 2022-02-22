@@ -61,13 +61,17 @@ The data view supports the following types of data source: context, microflow, n
 
 #### 3.4.1 Editable {#editable}
 
-The editable property indicates whether the data view as a whole is editable or not. If the data view is not editable, no widget inside the data view will be editable. On the other hand, if the data view is editable, each widget is determined to be editable based on its own editable property.
+The editable property indicates whether the data view as a whole is editable or not.
 
-Default: *True*
+| Value   | Description                                                  |
+| ------- | ------------------------------------------------------------ |
+| Yes     | The data view is editable: each widget is determined to be editable based on its own editable property (default value for data views outside a snippet). |
+| Inherited from snippet call | Set to **Yes** or **No** by the containing data container of the snippet call (default value for data views inside a snippet). |
+| No      | The data view is not editable: no widget inside the data view will be editable.|
 
 #### 3.4.2 Read-Only Style
 
-This property determines how input widgets are rendered if they are read-only. 
+This property determines how input elements are rendered if they are read-only. 
 
 | Value   | Description                                                  |
 | ------- | ------------------------------------------------------------ |
@@ -80,9 +84,9 @@ This property determines how input widgets are rendered if they are read-only.
 
 #### 3.5.1 Form Orientation
 
-With this property, you can specify the position of the input widget labels inside the data view. If the orientation is horizontal, the labels will be placed next to the input widgets. If the orientation is vertical, the labels will be placed above the input widgets.
+With this property, you can specify the position of the input widget labels inside the data view. If the orientation is horizontal, the labels will be placed next to the input elements. If the orientation is vertical, the labels will be placed above the input elements.
 
-Note that form groups are responsive and the labels may be placed above input widgets, even if the orientation is set to horizontal, depending on the viewport size. Also, note that a data view with a vertical orientation cannot be nested inside a data view with a horizontal orientation. In that case, the form groups will be rendered horizontally, regardless of the value of the orientation property.
+Note that form groups are responsive and the labels may be placed above input elements, even if the orientation is set to horizontal, depending on the viewport size. Also, note that a data view with a vertical orientation cannot be nested inside a data view with a horizontal orientation. In that case, the form groups will be rendered horizontally, regardless of the value of the orientation property.
 
 Default: *Horizontal*
 
@@ -100,7 +104,7 @@ Default: *True*
 
 #### 3.5.4 Empty Entity Message
 
-If this message is specified, a data view that receives no source data will show this message instead of its content. Otherwise, the data view will show its static content and disabled input widgets. This property is a translatable text. For more details, see [Language Menu](translatable-texts).
+If this message is specified, a data view that receives no source data will show this message instead of its content. Otherwise, the data view will show its static content and disabled input elements. This property is a translatable text. For more details, see [Language Menu](translatable-texts).
 
 There are a number of ways a data view can end up without source data. For instance, a data view with a **Listen to widget** data source will remain empty until an object is selected in the target grid. In this scenario, **Empty entity message** can be used to guide the user to select an item from the grid.
 
@@ -121,6 +125,6 @@ To perform actions on a data view, select it on a page and right-click it. The l
 ## 5 Read More
 
 * [Page](page)
-* [Data Widgets](data-widgets)
+* [Data Containers](data-widgets)
 * [Data Sources](data-sources)
 * [Properties Common in the Page Editor](common-widget-properties)

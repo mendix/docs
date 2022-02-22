@@ -1,8 +1,10 @@
 ---
 title: "Page Editor Consistency Errors"
 parent: "consistency-errors"
+menu_order: 10
 description: "Describes consistency errors in Mendix Studio Pro and the way to fix them."
 tags: ["Studio Pro", "consistency errors", "checks", "errors", "pages"]
+#To update screenshots in this document, use the Consistency Errors app.
 ---
 
 ## 1 Introduction 
@@ -74,8 +76,6 @@ However, the **Customer Details** page has a data view that expects an object *C
 ![Data View Expects the Customer Object](attachments/consistency-errors-pages/data-view-customer.png)
 
 As this object is not passed to it from the **Customers** page, you get a consistency error.
-
-![Example of Error When Context is Unavailable](attachments/consistency-errors-pages/object-error.png)
 
 As the **Details** button to the **Customers** page is outside a data container, it does not know which object to pass. The way of fixing this error depends on the following:
 
@@ -156,9 +156,7 @@ Some of the most common errors of this type are described in the table below:
 
 When you set a microflow or a nanoflow as an on-click event for a widget, and this microflow expects an argument (for example, an object) that is not available, this will result in an error. 
 
-For example, on a page named *Customers* you have a button that calls a microflow (that is an [**On click** event](on-click-event) of the button is set to *Microflow*):
-
- ![](attachments/consistency-errors-pages/on-click-event-button.png)
+For example, on a page named *Customers* you have a button that calls a microflow (that is an [On click event](on-click-event) of the button is set to *Microflow*).
 
 However, the microflow contains a parameter *Customer*:
 
@@ -182,9 +180,7 @@ Now the *Customer* object is available on the page and it matches the microflow 
 
 When you set a microflow or nanoflow as an on-click event for a widget, and this microflow/nanoflow expects a certain argument, but a different argument is available to the widget, this will result in an error. 
 
-For example, on a page named *Customers* you have a button that calls a microflow (that is an [On click event](on-click-event) of the button is set to *Microflow*):
-
- ![](attachments/consistency-errors-pages/on-click-event-button.png)
+For example, on a page named *Customers* you have a button that calls a microflow (that is an [On click event](on-click-event) of the button is set to *Microflow*).
 
 The microflow contains a parameter *Customer*:
 
@@ -200,11 +196,11 @@ The best way to fix this error is to either change the microflow to accept *Phot
 
 ## 6 Input Widget Consistency Errors
 
-The most common errors for input widgets, their causes, and ways to fix them are described in the table below. For more information on input widgets, see [Input Widgets](input-widgets). 
+The most common errors for input elements, their causes, and ways to fix them are described in the table below. For more information on input elements, see [Input Elements](input-widgets). 
 
 | Error Code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| CE0544     | This widget can only function inside a data container. Move it into a data view, list view or template grid. | You have added an input widget to a page, but it is not inside a data container. Input widgets need to refer to an attribute of a specific entity type. And entities are only available via data containers. For more information about input widgets, see [Input Widgets](input-widgets). | Place this widget into a data container: a data view, list view, or template grid. |
+| CE0544     | This widget can only function inside a data container. Move it into a data view, list view or template grid. | You have added an input widget to a page, but it is not inside a data container. Input elements need to refer to an attribute of a specific entity type. And entities are only available via data containers. For more information about input elements, see [Input Elements](input-widgets). | Place this widget into a data container: a data view, list view, or template grid. |
 | CE0545     | Select an attribute for this {widget name}.                  | You have added an input widget, and it is inside a data container, but an attribute is not selected for it. | Right-click the widget, click **Select Attribute** in the drop-down list, and set an attribute; or open widget's properties > the **Data source** section and set an attribute in the **Attribute (path)** field. |
 |            | Association {Name} must be a reference (not a reference set) | You have added a reference selector, and then you changed the association from reference type to reference set (from one-to-many or one-to-one to many-to-many). | Open your domain model, find the association you have selected for the reference selector, and change it to a one-to-many association. Note that changing the domain model can result in other errors. To avoid changing the domain model, you might want to use another widget instead of the reference selector.<br />For more information on how to fix this error for the reference selector, see the [Incorrect Multiplicity for a Reference Selector](#incorrect-multiplicity-reference) section |
 |            | Association {Name} must be a reference set (not a reference) | You have added an input reference set selector, and then you changed the association from reference set type to reference (from many-to-many to one-to-many or one-to-one). | Open your domain model, find the association you have selected for the input reference set selector, and change it to a many-to-many association. Note that changing the domain model can result in other errors. To avoid changing the domain model, you might want to use another widget instead of the reference set selector. <br />For more information on how to fix the consistency error for the reference set selector and input reference set selector, see the [Incorrect Multiplicity for a Reference Set Selector and an Input Reference Set Selector](#incorrect-multiplicity-reference-set) section. |
@@ -269,16 +265,16 @@ You have changed the association multiplicity and fixed the error.
 
 {{% /alert %}}
 
-## 7 File Widget Consistency Errors
+## 7 Images, Videos & Files Consistency Errors
 
-File widgets should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place a file widget in a snippet and configure the snippet. For more information on file widgets, see [File Widgets](file-widgets). 
+Images, videos & files should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place these widgets in a snippet and configure the snippet. For more information on images, videos and files , see [Images, Videos & Files](image-and-file-widgets). 
 
 | Error code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 |            | A [file manager](file-manager) must be placed in a data view or  snippet that is connected to the entity ‘System.FileDocument’ or a specialization. | You have added a file manager to a page, but it is not inside a data view or a snippet that is configured properly. | Place this widget into a data container. If you want to place it into a snippet, mind that you need to configure it properly: either set System.FileDocument (or its specialization) as an entity for this snippet or place the snippet in a data container. |
 |            | An [image uploader](image-uploader) must be placed in a data view or snippet that is connected to the entity ‘System.Image’ or a specialization. | You have added an image uploader to a page, but it is not inside a data view or a snippet that is configured properly. | Place this widget into a data container. If you want to place it into a snippet, mind that you need to configure it properly: set System.Image (or its specialization) as an entity for this snippet or place the snippet in a data container. |
-|            | Move this widget into a data container, for example a data view or list view. | You have added an [image viewer](image-viewer) to your page, but it is not inside a data view or a list view. | Place this widget inside a data view or a list view.         |
-| CE0489     | Select an entity for the data source of this [image viewer](image-viewer). | You have added an image viewer to a page, it is placed inside a data view or a list view, but an entity for the image viewer is not specified. | Open image viewer's properties > the **Data source** section and select an entity in the **Entity (path)** field. |
+|            | Move this widget into a data container, for example a data view or list view. | You have added a [dynamic image](image-viewer) to your page, but it is not inside a data view or a list view. | Place this widget inside a data view or a list view.         |
+| CE0489     | Select an entity for the data source of this [dynamic image](image-viewer). | You have added a dynamic image to a page, it is placed inside a data view or a list view, but an entity for the dynamic image is not specified. | Open dynamic image properties > the **Data source** section and select an entity in the **Entity (path)** field. |
 ## 8 Image Widget Consistency Errors
 
 A consistency error for an image widget is described in the table below:
@@ -289,13 +285,11 @@ A consistency error for an image widget is described in the table below:
 
 ## 9 On Click Event Consistency Errors 
 
-You can specify an **On Click Event** for different widgets, for example, for buttons or images. 
+You can specify an [On click event](on-click-event) for different widgets, for example, for buttons or images. 
 
 The most common consistency errors are connected with not configuring the on click event. 
 
-To fix the consistency errors, finish configuring the on click event (for example, for an on click event **Show a page**, select a particular page that should open), or change the on click action. 
-
-![On Click Event Example](attachments/consistency-errors-pages/on-click-event.png)
+To fix the consistency errors, finish configuring the on click event (for example, for an on click event **Show a page**, select a particular page that should open), or change the on click event. 
 
 ##  10 Read More
 

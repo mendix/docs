@@ -1,5 +1,6 @@
 ---
 title: "Widget Development"
+weight: 90
 tags: ["widget", "develop widget", "customize"]
 ---
 
@@ -65,7 +66,7 @@ This category of how-to's presents in-depth information on how to build your own
 
 ### 4.1 Learn by Example
 
-Most of the widgets in the [Mendix App Store](https://appstore.home.mendix.com/index3.html) are open-source and available on GitHub. You can find the **View on GitHub** link on the right side of the App Store screen:
+Most of the widgets in the [Mendix Marketplace](https://marketplace.mendix.com/) are open-source and available on GitHub. You can find the **View on GitHub** link on the right side of the Marketplace screen:
 
 ![](attachments/widget-development/appstore-github-link.png)
 
@@ -77,7 +78,7 @@ By debugging your widgets, you will quickly learn where you make mistakes and ho
 
 ### 4.3 Ask the Community
 
-Within the Mendix Community of developers, there are plenty of widget developers. The [Mendix Forum](https://forum.mendixcloud.com) is the place to go to when you have questions.
+Within the Mendix community of developers, there are plenty of widget developers. The [Mendix Forum](https://forum.mendixcloud.com) is the place to go to when you have questions.
 
 ## 5 Main Documents in This Category
 

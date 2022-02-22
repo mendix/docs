@@ -3,7 +3,7 @@ title: "Use Mendix Data Storage APIs to Build Reusable Microflow Actions"
 category: "Extensibility"
 menu_order: 90
 description: "Describes creating custom microflow actions using Data Storage APIs."
-tags: ["java", "connector kit", "microflow action", "parameter type", "sql", "xpath", "oql", "datastorage"]
+tags: ["java", "microflow action", "parameter type", "sql", "xpath", "oql", "datastorage"]
 output:
   word_document: default
   html_document: default
@@ -16,7 +16,7 @@ Mendix Studio Pro supports two query languages to retrieve data:
 * Xpath as an easy to use query language to retrieve objects
 * OQL is a SQL based language, more focused on powerful reporting facilities
 
-You can use these query languages in Mendix Studio Pro, but both languages are also available through a Java API. You can use these APIs to implement powerful reusable microflow actions through the Connector Kit. In addition to Xpath and OQL, the Mendix APIs also enable you to use standard SQL on your Mendix database.
+You can use these query languages in Mendix Studio Pro, but both languages are also available through a Java API. You can use these APIs to implement powerful reusable microflow actions. In addition to Xpath and OQL, the Mendix APIs also enable you to use standard SQL on your Mendix database.
 
 This how to describes how you can build the following microflow actions:
 
@@ -147,7 +147,7 @@ Below is the Java code to get the Dataset OQL, execute the OQL, and retrieve the
 
 ## 5 Retrieving Objects Using SQL
 
-An API is available to allow you to execute SQL queries on the application database. (This feature is currently in beta). Using this API, you can create a microflow action to execute SQL: similar to the action for OQL in the previous sections.
+An API is available to allow you to execute SQL queries on the application database. (This feature is currently in Beta). Using this API, you can create a microflow action to execute SQL: similar to the action for OQL in the previous sections.
 
 The definition of the Java action resembles the OQL action, but instead of an OQL parameter you have an SQL parameter.
 

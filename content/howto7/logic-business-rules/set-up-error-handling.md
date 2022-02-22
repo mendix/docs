@@ -3,7 +3,7 @@ title: "Set Up Error Handling"
 category: "Logic & Business Rules"
 menu_order: 8
 tags: ["error", "error handling", "rollback", "microflow", "logic"]
-#To update screenshots of these microflows in the Desktop Modeler, use the Microflow Screenshots app project.
+#To update screenshots of these microflows in the Desktop Modeler, use the Microflow Screenshots app.
 ---
 
 ## 1 Introduction
@@ -213,7 +213,6 @@ Consider the following best practices for error handling:
 * [Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [Trigger Logic Using Microflows](triggering-logic-using-microflows)
 * [Create a Custom Save Button](create-a-custom-save-button)
-* [Extend Your Application with Custom Java](extending-your-application-with-custom-java)
 * [Work with Lists in a Microflow](working-with-lists-in-a-microflow)
 * [Optimize Retrieve Activities](optimizing-retrieve-activities)
 * [Optimize Microflow Aggregates](optimizing-microflow-aggregates)

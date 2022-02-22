@@ -1,6 +1,6 @@
 ---
 title: "Table"
-parent: "container-widgets"
+parent: "structure-widgets"
 menu_order: 60
 tags: ["studio pro", "table", "container widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -15,7 +15,7 @@ Tables can be used to give structure to a page. They contain [rows](table#rows),
 
 For example, you can create a table with text widgets, a logo, and a data view information as a customer report:
 
-![](attachments/container-widgets/table.png)
+![](attachments/structure-widgets/table.png)
 
 ## 2 Components
 
@@ -92,19 +92,19 @@ You can perform the following actions:
 
 To merge cells to the right, left, up, or down, you can also click the corresponding icon:
 
-![Merge Icons](attachments/container-widgets/merge-icons.png)
+![Merge Icons](attachments/structure-widgets/merge-icons.png)
 
 ## 3 Properties
 
 An example of table properties is represented in the image below:
 
-{{% image_container width="300" %}}![Table Properties](attachments/container-widgets/table-properties.png)
+{{% image_container width="250" %}}![Table Properties](attachments/structure-widgets/table-properties.png)
 {{% /image_container %}}
 
 Table properties consist of the following sections:
 
 * [Common](#common)
-* Design Properties
+* [Design Properties](#design-properties)
 * [General](#general)
 * [Visibility](#visibility)
 
@@ -112,9 +112,13 @@ Table properties consist of the following sections:
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 3.2 General Section {#general}
+### 3.2 Design Properties Section {#design-properties}
 
-#### 3.2.1 Width Unit
+{{% snippet file="refguide/design-section-link.md" %}} 
+
+### 3.3 General Section {#general}
+
+#### 3.3.1 Width Unit
 
 The **Width Unit** defines whether the [Column widths](#column-widths) property is set in percentage or in pixels. 
 
@@ -123,11 +127,11 @@ The **Width Unit** defines whether the [Column widths](#column-widths) property 
 | Percentage  *(default)* | The **Column widths** property is specified in percentages. When resizing, columns will become wider/narrower while keeping the same relative widths. |
 | Pixels | The **Column widths** property is specified in pixels. When resizing, the pixel width columns will keep the same size; auto columns will become wider/narrower. |
 
-#### 3.2.2 Column Widths {#column-widths}
+#### 3.3.2 Column Widths {#column-widths}
 
 The **Column widths** property defines the widths of each column as a list of numbers separated by semi-colons. The **Width unit** (described above) determines if these numbers mean percentages or pixels. 
 
-![Width Unit and Column Widths](attachments/container-widgets/width-unit-and-column-widths.png)
+![Width Unit and Column Widths](attachments/structure-widgets/width-unit-and-column-widths.png)
 
 When **Width unit** is set to *Pixels*, you can set column width to the following:
 
@@ -136,14 +140,14 @@ When **Width unit** is set to *Pixels*, you can set column width to the followin
 
 For example, you can you can have three columns of which the first is 200 pixels wide (*Fixed* width), the second is 100 pixels (*Fixed* width), and the last one is set to *Auto* which means that it will take up the rest of the space in the row.
 
-### 3.3 Visibility Section {#visibility}
+### 3.4 Visibility Section {#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 
 ## 4 Read More
 
 * [Page](page)
-* [Container Widgets](container-widgets)
+* [Structure](structure-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)
 
 

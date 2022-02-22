@@ -26,7 +26,6 @@ For example, the image below shows an edit page derived from a layout with a hea
 {{% image_container width="350" %}}![](attachments/layout/header-page.png)
 {{% /image_container %}}
 
-
 ## 2 Properties
 
 An example of header properties is represented in the image below:

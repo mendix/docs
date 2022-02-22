@@ -66,7 +66,7 @@ If this property is set to *Yes*, items in the list view can be edited. The chan
 
 An on-click event defines what action is performed when a user clicks a list view row. For more information on on-click events, see [On Click Event](on-click-event). 
 
-#### 2.4.3 Page Size
+#### 2.4.3 Page Size {#page-size}
 
 the number of rows displayed on the page; after the indicated limit is reached, the **Load more...** button is displayed on the page.
 
@@ -121,6 +121,6 @@ To perform actions on a list view, select it on a page and right-click it. The l
 ## 4 Read More
 
 * [Page](page)
-* [Data Widgets](data-widgets)
+* [Data Containers](data-widgets)
 * [Data Sources](data-sources)
 * [Properties Common in the Page Editor](common-widget-properties)

@@ -1,6 +1,6 @@
 ---
 title: "Enumeration"
-category: "Domain Model"
+parent: "domain-models"
 description: "Describes enumerations in Mendix Studio."
 tags: ["studio", "domain model", "attributes", "enumeration"]
 ---
@@ -27,22 +27,22 @@ To create a new enumeration, do the following:
 
 1. Open your [domain model](domain-models).
 
-2. Select an entity you want to create the attribute for. For more information on how to create the entity, see section [3 Adding New Entities](domain-models#adding-new-entities) in *Domain Models Overview*.
+2. Select an entity you want to create the attribute for. For more information on how to create the entity, see the [Adding New Entities](domain-models#adding-new-entities) section in *Domain Models Overview*.
 
 3.  To create a new attribute of the enumeration type, click **New attribute** and do the following:<br />
     a. Set the attribute **Name**. In our example, the name of the attribute is *Grade*.<br />
     b. Set the [Type](domain-models-attributes) to **Enumeration**.<br />
-    c. Click **Select enumeration** to create a new enumeration.<br />d. In the **Select enumeration** dialog box, click **New**.<br/>
+    c. Click **Select enumeration**.<br />d. In the **Select enumeration** dialog box, click the plus icon in the top right corner.<br/>
     e. In the **Create new enumeration** dialog box, click **Add Item** to add possible options of the enumeration (**Name** is filled out automatically and is the same as the attribute name).<br />
 
     ![](attachments/domain-models-enumeration/new-enumeration-add-item.png)<br />
 
-    f. Fill out the name for the **Caption** (**Name** is filled out automatically). In our example, we first fill out  *Bronze*, as one of three possible items of the enumeration: Bronze, Silver, and Gold. <br />
+    f. Fill out the name for the **Caption** (**Name** is filled out automatically). In the example below, you need to fill out  *Bronze*, as one of three possible items of the enumeration: Bronze, Silver, and Gold. <br />
 
     ![](attachments/domain-models-enumeration/new-enumeration-add-item-bronze.png)<br />
 
     g. Click **Add Item** and repeat the step above to create other enumeration items.<br />
-    h. Click **Create** to close the dialog boxs and create the new attribute.
+    h. Click **Create** to close the dialog box and create the new attribute.
 
     ![](attachments/domain-models-enumeration/new-enumeration-bronze-silver-gold.png)
 
@@ -60,7 +60,7 @@ You can also set an existing enumeration for attributes of the enumeration type.
 
     a. Set the attribute **Name**. In our example, the name of the attribute is *Grade*.<br />
     b. Set the [Type](domain-models-attributes) to **Enumeration**.<br />
-    c. Click **Select enumeration** to create a new enumeration.<br />
+    c. Click **Select enumeration**.<br />
 
     ![](attachments/domain-models-enumeration/new-attribute-select-enumeration.png) <br/>
 
@@ -101,7 +101,27 @@ To duplicate an enumeration, follow the steps below:
 
     ![Duplicate Enumeration](attachments/domain-models-enumeration/duplicate.png)
 
+5. Close the dialog box.
+
 The enumeration is duplicated.
+
+#### 3.5 Deleting an Enumeration
+
+To delete an enumeration, follow the steps below:
+
+1. Open your [domain model](domain-models).
+
+2. Select the attribute of the enumeration type and click **Enumeration** in its properties.
+
+3. In the **Select Enumeration** dialog box, select the enumeration you would like to delete and click the ellipsis icon.
+
+4. Select the **Delete** option in the drop-down menu:
+
+    ![Delete Enumeration](attachments/domain-models-enumeration/delete-enumeration.png)
+
+5. Confirm your choice and close the dialog box.
+
+The enumeration is deleted.
 
 ## 4 Read More
 

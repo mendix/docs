@@ -1,6 +1,7 @@
 ---
 title: "Parse & Format Decimal Function Calls"
 parent: "expressions"
+menu_order: 150
 tags: ["studio pro", "expression", "parsing", "formatting"]
 ---
 
@@ -14,7 +15,7 @@ Parses a string value to a decimal value. Takes optional parameters for the form
 
 ### 2.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                                                        | Type             |
 | ------------------------------------------------------------ | ---------------- |
@@ -28,7 +29,7 @@ The output is described in the table below:
 
 | Value                                                        | Type    |
 | ------------------------------------------------------------ | ------- |
-| The output is a decimal value that matches the inputted string value. If the value cannot be parsed (meaning, it does not match the format parameter or contains illegal characters), the default value will be returned. If no default value is provided, an error occurs. | Decimal |
+| The output is a decimal value that matches the supplied string value. If the value cannot be parsed (meaning, it does not match the format parameter or contains illegal characters), the default value will be returned. If no default value is provided, an error occurs. | Decimal |
 
 ### 2.3 Example
 
@@ -38,6 +39,12 @@ The following examples demonstrate which output you get depending on input param
 * `parseDecimal('noDecimal', 5.05)` returns `5.05`
 * `parseDecimal('noDecimal', empty)` returns `empty`
 * `parseDecimal('3,241.98', '#,###.##')` returns `3241.98`
+
+Given a variable that is empty:
+
+* `parseDecimal($StringVariable)` will throw an error
+* `parseDecimal($StringVariable, empty)` returns an empty; the resulting variable may throw an error when used as a decimal (like in the expression `'$var > 0'`) 
+* `parseDecimal($StringVariable, 0)` returns `0`; the resulting variable will always be a decimal and never throw an exception
 
 ## 3 formatDecimal
 
@@ -49,7 +56,7 @@ The functionality of formatDecimal depends on whether it is used in a microflow 
 
 #### 3.1.1 Input Parameters in Microflows
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                                                        | Type    |
 | ------------------------------------------------------------ | ------- |
@@ -65,6 +72,10 @@ In nanoflows, this function only takes a single parameter described below:
 | ---------------- | ------- |
 | Value to convert | Decimal |
 
+{{% alert type="warning" %}}
+It is not possible to use `formatDecimal()` with the optional format string (for example, `'#.00'`) within a text parameter on a page. The text parameter works the same way as a nanoflow and is restricted to only using the system locale to specify the decimal format.
+{{% /alert %}}
+
 ### 3.2 Output
 
 The output is described in the table below:
@@ -77,7 +88,7 @@ The output is described in the table below:
 
 The examples below illustrate which value the expression returns:
 
-* If you type in the following input:
+* If you use the following input:
 
     ```java
     formatDecimal(1234.56, '#,###.#')
@@ -89,7 +100,7 @@ The examples below illustrate which value the expression returns:
     '1,234.5' or '1.234,5'
     ```
 
-* If you type in the following input:
+* If you use the following input:
 
     ```java
     formatDecimal(1234.56, '¤ #,##0.00')
@@ -101,7 +112,7 @@ The examples below illustrate which value the expression returns:
     '€ 1.234,50' or '$ 1,234.50'
     ```
 
-* If you type in the following input:
+* If you use the following input:
 
     ```java
     formatDecimal(0.56, '% ##0')

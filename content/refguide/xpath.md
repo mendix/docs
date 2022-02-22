@@ -2,7 +2,7 @@
 title: "XPath"
 category: "App Modeling"
 menu_order: 90
-description: "Describes how the XPath query langauge is used in Mendix by presenting functions and examples."
+description: "Describes how the XPath query language is used in Mendix by presenting functions and examples."
 tags: ["studio pro"]
 ---
 
@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations.
 
-XPath queries can be written both in Studio Pro, for example when you want to specify a constraint on the data retrieved in a Retrieve microflow activity, and directly in code in the .java files of you Java actions. Note that not all operators are supported by Studio Pro, and that the syntax of your query may differ between Studio Pro and Java environments.
+XPath queries can be written both in Studio Pro, for example when you want to specify a constraint on the data retrieved in a Retrieve microflow activity, and directly in code in the *.java* files of your Java actions. Note that not all operators are supported by Studio Pro, and that the syntax of your query may differ between Studio Pro and Java environments.
 
 Examples of XPath queries are:
 
@@ -49,8 +49,6 @@ Element D of a query is optional and specifies an attribute of the retrieved ent
 
 Element A of a query is optional and specifies an aggregation. Element A can be one of the following functions: [avg](xpath-avg), [count](xpath-count), [max](xpath-max), [min](xpath-min) and [sum](xpath-sum). With the exception of 'count', each of these functions require that a particular attribute is specified in element D.
 
-The exception to these basic guidelines is the ID query. See [XPath id](xpath-id) for more information.
-
 ## 3 Tokens
 
 For details, see [XPath Tokens](xpath-tokens).
@@ -81,5 +79,8 @@ The following XPath functions are available:
 
 **How to find the right path to XPath**
 
-{{% youtube sdabUY-w4ZU %}}
+{{% alert type="info" %}}
+This video was done with [Studio Pro 8](/refguide8/), but the concepts remain applicable.
+{{% /alert %}}
 
+{{% youtube sdabUY-w4ZU %}}

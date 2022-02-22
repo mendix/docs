@@ -1,5 +1,6 @@
 ---
 title: "Mendix Platform SDK"
+weight: 20
 ---
 
 ## 1 Introduction & FAQ
@@ -10,9 +11,9 @@ Before the [Mendix Platform SDK](https://apidocs.rnd.mendix.com/platformsdk/late
 
 Browse the reference documentation below about the Mendix Metamodel:
 
-* [Understanding the Mendix Metamodel](understanding-the-metamodel) – explains the basic components of the Mendix Metamodel as well as the domain model, microflows, pages, and app projects in the Mendix Metamodel
+* [Understanding the Mendix Metamodel](understanding-the-metamodel) – explains the basic components of the Mendix Metamodel as well as the domain model, microflows, pages, and apps in the Mendix Metamodel
 * [JavaScript & TypeScript Resources](javascript-typescript-resources) – summarizes TypeScript and provides links to useful resources for learning more
-* [Working with when.js and Promises in TypeScript](working-with-when.js-and-promises-in-typescript) – explains what promises are, how to use them, and how resolve common problems when using them
+* [Working with when.js and Promises in TypeScript](working-with-when-js-and-promises-in-typescript) – explains what promises are, how to use them, and how resolve common problems when using them
 
 ## 3 SDK How-to's
 

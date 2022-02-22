@@ -1,11 +1,12 @@
 ---
 title: "Mendix Runtime"
+weight: 40
 tags: ["runtime", "runtime server", "mendix client", "cluster leader"]
 ---
 
 ## 1 Introduction
 
-The runtime is effectively an interpreter which ‘runs’ a Mendix model and serves pages to the user.
+The Mendix Runtime is effectively an interpreter which "runs" a Mendix model and serves pages to the user.
 
 Each patch version of Mendix comes with its own version of the runtime which implements the features which are available in that version of Mendix. For example, runtimes for Mendix 8.4.1 and 8.4.2 are different and can only run Mendix apps built for that version.
 
@@ -84,10 +85,10 @@ You need a license to run an application in production mode. Without a license, 
 
 ## 4 APIs
 
-You can extend the functionality of the Runtime Server by writing Java actions. For more information,  see the [Runtime API](/apidocs-mxsdk/apidocs/index#runtime) section of *API Documentation*.
+You can extend the functionality of the Runtime Server by writing Java actions. For more information,  see the [Runtime API](/apidocs-mxsdk/apidocs/#runtime) section of *API Documentation*.
 
 {{% alert type="info" %}}
-Links to available API documentation such as WSDLs for published web services are available on the URL path `/api-doc` (for example: `http://localhost:8080/api-doc/`).
+If the app contains published services, links to available API documentation such as [OpenAPI documentation](open-api) for [published REST services](published-rest-services), links to [published OData services](published-odata-services), and WSDLs for [published web services](published-web-services), are available on the URL path `/api-doc` (for example: `https://myapp.mendixcloud.com/api-doc/`).
 {{% /alert %}}
 
 ## 5 Main Documents in This Category

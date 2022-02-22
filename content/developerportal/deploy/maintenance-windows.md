@@ -4,6 +4,9 @@ parent: "mendix-cloud-deploy"
 menu_order: 33
 description: "How to configure the maintenance windows for your node environment."
 tags: ["Deploy","App","Developer Portal", "maintenance"]
+aliases:
+    - /mendixcloud/maintenance-windows.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -30,11 +33,9 @@ To view maintenance windows, you need to have monitor or backup access to your M
 Maintenance windows and planned maintenance are defined in UTC time format. When selecting a time period, remember to convert to UTC from your local time.
 {{% /alert %}}
 
-### 3.1 Configuring the Maintenance Window for Your Application
-
 Follow the instructions below to configure a maintenance window:
 
-1. Go to the [Developer Portal](http://home.mendix.com).
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 
 2. Go to the **Environments** page for your app.
 
@@ -52,35 +53,18 @@ Follow the instructions below to configure a maintenance window:
 
 6. Choose one of the maintenance windows suggested.
 
-7. Click **Save** to confirm your new planned maintenance window.
+7. Click **Save** to confirm your new maintenance window.
 
 {{% alert type="info" %}}
-Changing your preferred maintenance window will not change the time of any planned maintenance which is already scheduled. You will need to reschedule planned maintenance separately.
+If planned maintenance is already scheduled for the current week it will be moved to the new planned maintenance window if this is still in the same week. However, if you move your maintenance window to before the current day and time the planned maintenance window will not be moved.
+
+For example: imagine today is Tuesday, your maintenance window is currently Thursday, and there is planned maintenance for Thursday this week.
+
+* If you change the maintenance window to Friday, the planned maintenance will move to Friday as it can still be done this week.
+* If you change the maintenance window to Monday, the planned maintenance remains on Thursday as it needs to be done this week and your next maintenance window is now next week.
 {{% /alert %}}
-
-### 3.2 Rescheduling Planned Maintenance for Your Application
-
-When a maintenance operation is planned, it will show up under **Planned Maintenance**. By default it will be planned in your preferred maintenance window.
-
-{{% alert type="info" %}}
-Planned maintenance windows are displayed in your local timezone, as indicated by the offset (for example `+02:00` in the image above).
-{{% /alert %}}
-
-You can reschedule planned maintenance up  to one hour before the beginning of the planned maintenance window by doing the following:
-
-1. Click **Reschedule** to override a planned maintenance window.
-
-2. Choose one of the maintenance windows suggested. It does not have to be in your preferred maintenance window.
-
-    {{% alert type="warning" %}}When rescheduling, the maintenance window options are in **UTC**. When you save a new planned maintenance window, it will be shown in the local timezone.{{% /alert %}}
-
-    ![](attachments/maintenance-windows/reschedule-maintenance.png)
-
-3. Click **Save** to confirm your new planned maintenance window. 
 
 ## 4 Read More
 
-* [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
-* [Company & App Roles](/developerportal/company-app-roles/index)
+* [App Roles](/developerportal/collaborate/app-roles)
 * [Node Permissions](/developerportal/deploy/node-permissions) 
-* [Technical Contact](/developerportal/company-app-roles/technical-contact)

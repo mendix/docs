@@ -1,7 +1,7 @@
 ---
 title: "Use the Java API"
 category: "Logic & Business Rules"
-menu_order: 13
+menu_order: 130
 tags: ["microflow", "logic", "java", "API"]
 ---
 
@@ -22,32 +22,40 @@ When you look at these examples, often an IContext will be used. This is the con
 
 There are cases in which you'd like to execute a microflow in a Java Action. This case will explain how to do this, including how to pass parameters and obtain the return value. Additionally, the result will be saved in an object and the object will be committed.
 
-First, we will introduce a helper method that we will place in the section `BEGIN EXTRA CODE` and `END EXTRA CODE`. The method will execute a microflow that is called FormatString and is part of the MyFirstModule module. It has an input parameter called inputString, which is a string. Its return value is also a string, which contains the formatted string.
+In this example, we want to execute a microflow that is called `FormatString` and is part of the `MyFirstModule` module. It has an input parameter called inputString, which is a string. Its return value is also a string, which contains the formatted string.
+
+You can invoke the microflow directly using its proxy:
 
 ```java
-private static String formatString(String inputString, IContext context) throws CoreException
-{
-	Map<String,Object> parameters = new HashMap<String, Object>();
-	parameters.put("inputString", inputString);
-	String formattedString = (String) Core.execute(context, "MyFirstModule.FormatString", parameters);
-	return formattedString;
-}
+myfirstmodule.proxies.microflows.Microflows.formatString(getContext(), "this is an unformatted string");
 ```
 
-| Line | Description |
-| --- | --- |
-| 1 | In this line, the method is defined. We'll need the input string, and we'll also need the context in which this microflow is executed. |
-| 3 | To pass parameters to a microflow, a map is used. A `HashMap` is being used here. The map consists of a string key, which holds the name of the parameter in the microflow, and an object value, which holds the value of the parameter. |
-| 4 | An entry is put in the `HashMap` containing the name of the parameter (`inputString`) and the value of the string. |
-| 5 | The core method executed is called. This executes the microflow. It has the following parameters: the context, the module name and microflow name, and the parameter map. The method always returns an object which can be cast to the type that the microflow returns, in this case a string. |
-| 6 | The microflow return value is returned by our helper method. |
-
-Once we have the value of the formatted string, we are going to store this in an object. This is the code between `BEGIN USER CODE` and `END USER CODE`.
+But you can make your code more readable by first importing the proxy before the class declaration, and then referring to the microflow directly. 
 
 ```java
-String formattedString = formatString("this is an unformatted string", context);
+import static myfirstmodule.proxies.microflows.Microflows.formatString;
+…
+public class …
+…
+String formattedString = formatString(getContext(), "this is an unformatted string");
+…
+```
+
+Once we have the value of the formatted string, we can store this in an object and then commit the object.
+
+The code below formats the string `"this is an unformatted string"` using the microflow `MyFirstModule.FormatString`, stores it in the `TestString` attribute of an object of entity `testObject`, and then commits the object. The code is placed between `BEGIN USER CODE` and `END USER CODE` of the Java action.
+
+```java
+import static myfirstmodule.proxies.microflows.Microflows.formatString;
+…
+public class …
+…
+// BEGIN USER CODE
+String formattedString = formatString(getContext(), "this is an unformatted string");
 testObject.setTestString(context, formattedString);
 Core.commit(context, testObject.getMendixObject());
+// END USER CODE
+…
 ```
 
 ## 3 Copying FileDocuments
@@ -113,12 +121,11 @@ After this, all `Attachments` belonging to one `GenericObject` have been copied 
 ## 4 Read More
 
 * [Create a Custom Save Button](create-a-custom-save-button)
-* [Create Your First Microflow: Hello World!](create-your-first-microflow-hello-world)
+* [Trigger a Microflow From a Menu Item](trigger-microflow-from-menu-item)
 * [Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [Extend Your Application with Custom Java](extending-your-application-with-custom-java)
 * [Extract & Use Sub-Microflows](extract-and-use-sub-microflows)
 * [Optimize Microflow Aggregates](optimizing-microflow-aggregates)
 * [Optimize Retrieve Activities](optimizing-retrieve-activities)
 * [Set Up Error Handling](set-up-error-handling)
-* [Trigger Logic Using Microflows](triggering-logic-using-microflows)
 * [Work with Lists in a Microflow](working-with-lists-in-a-microflow)

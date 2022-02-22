@@ -7,7 +7,7 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 
 ## 1 Introduction
 
-To make your custom UI resources easy to browse, you can create custom preview images for your building blocks and page templates. We’ve provided downloadable templates in the *.sketch* and *.psd* formats, which are available on the [Atlas UI site](https://atlas.mendix.com).
+To make your custom UI resources easy to browse, you can create custom preview images for your building blocks and page templates. We’ve provided downloadable templates in the *.sketch* and *.psd* formats, which are available on the [Atlas UI site](https://atlas2.mendix.com).
 
 **This how-to will teach you how to do the following:**
 
@@ -22,11 +22,11 @@ To make your custom UI resources easy to browse, you can create custom preview i
 
 To create a building block preview image in Sketch, follow these steps:
 
-1. Download the [Atlas UI image templates resources pack](https://atlas.mendix.com/index3.html#/resources/7881299347899269).
+1. Download the [Atlas UI image templates resources pack](https://atlas2.mendix.com/index3.html#/resources/7881299347899269).
 2. Open the Sketch file named **BB_previewimage.sketch**. This file contains two artboards. The first artboard shows an example of how custom preview images look in the Web Modeler's Toolbox. The second artboard is where you place your image.
 3. Hide the layer called **Template**, then insert your preview image into the **Building Block preview** folder.
 4. When you are happy with your image, select your artboard.
-5.  In the **Export** dialog box that appears in the bottom-right of your screen, make sure the preferences are set to the following:
+5.  In the **Export** dialog box that appears in the lower-right side of your screen, make sure the preferences are set to the following:
     * **Size**: 1x
     * **Format**: PNG
 
@@ -38,7 +38,7 @@ To create a building block preview image in Sketch, follow these steps:
 
 To create a building block preview image in Photoshop, follow these steps:
 
-1. Download the [Atlas UI image templates resources pack](https://atlas.mendix.com/index3.html#/resources/7881299347899269).
+1. Download the [Atlas UI image templates resources pack](https://atlas2.mendix.com/index3.html#/resources/7881299347899269).
 2. Open the Photoshop file named **BB_previewimage.psd**.
 3.  Double-click the smart object in the **Layers** panel.
 
@@ -52,7 +52,7 @@ To create a building block preview image in Photoshop, follow these steps:
 
 To create a building block preview image in Illustrator, follow these steps:
 
-1. Download the [Atlas UI image templates resources pack](https://atlas.mendix.com/index3.html#/resources/7881299347899269).
+1. Download the [Atlas UI image templates resources pack](https://atlas2.mendix.com/index3.html#/resources/7881299347899269).
 2. Open the Illustrator file named **BB_previewimage.ai**. This file contains two artboards. The first artboard shows an example of how custom preview images look in the Web Modeler's Toolbox. The second artboard is where you place your image.
 3. Hide the layer called **Template**, then insert your preview image into the **Building Block preview** folder.
 4. When you are happy with your image, select your artboard.
@@ -77,11 +77,11 @@ You can also create your building block preview image in a different image edito
 
 To create a page template preview image in Sketch, follow these steps:
 
-1. Download the [Atlas UI image templates resources pack](https://atlas.mendix.com/index3.html#/resources/7881299347899269).
+1. Download the [Atlas UI image templates resources pack](https://atlas2.mendix.com/index3.html#/resources/7881299347899269).
 2. Open the Sketch file named **PT_previewimage.sketch**. This file contains three artboards. The first two artboards show examples of how page template preview images look in the Web Modeler. The third artboard is where you place your image.
 3. Hide the layer called **Template**, then insert your preview image into the **Building Block preview** folder.
 4. When you are happy with your image, select your artboard
-5.  In the **Export** dialog box that appears in the bottom-right of your screen, make sure the preferences are set to the following:
+5.  In the **Export** dialog box that appears in the lower-right side of your screen, make sure the preferences are set to the following:
     * **Size**: 1x
     * **Format**: PNG
 
@@ -93,7 +93,7 @@ To create a page template preview image in Sketch, follow these steps:
 
 To create a page template preview image in Photoshop, follow these steps:
 
-1. Download the [Atlas UI image templates resources pack](https://atlas.mendix.com/index3.html#/resources/7881299347899269).
+1. Download the [Atlas UI image templates resources pack](https://atlas2.mendix.com/index3.html#/resources/7881299347899269).
 2. Open the Photoshop file named **PT_previewimage.psd**.
 3.  Double-click the smart object in the **Layers** panel.
 
@@ -106,7 +106,7 @@ To create a page template preview image in Photoshop, follow these steps:
 
 To create a page template preview image in Illustrator, follow these steps:
 
-1. Download the [Atlas UI image templates resources pack](https://atlas.mendix.com/index3.html#/resources/7881299347899269).
+1. Download the [Atlas UI image templates resources pack](https://atlas2.mendix.com/index3.html#/resources/7881299347899269).
 2. Open the Illustrator file named **PT_previewimage.ai**. This file contains three artboards. The first two artboards show examples of how page template preview images look in the Web Modeler. The third artboard is where you place your image.
 3. Hide the layer called **Template**, then insert your preview image into the **Page template preview** folder.
 4. When you are happy with your image, select your artboard
@@ -128,5 +128,5 @@ You can also create your page template preview image in a different image editor
 * [How to Get Started with Atlas UI](get-started-with-atlasui)
 * [How to Create Company Atlas UI Resources](create-company-atlas-ui-resources)
 * [How to Extend Design Properties to Customize the Web Modeler Experience](extend-design-properties-to-customize-the-web-modeler-experience)
-* [How to Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)
+* [How to Migrate Existing Apps to Atlas UI](migrate-existing-projects-to-atlasui)
 * [How to Share Company Atlas UI Resources](share-company-atlas-ui-resources)

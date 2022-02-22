@@ -1,7 +1,7 @@
 ---
 title: "Errors Pane"
 parent: view-menu
-menu_order: 40
+menu_order: 30
 description: "Describes the Errors pane in Mendix Studio Pro."
 tags: ["Studio Pro", "errors", "error list", "errors pane"]
 ---
@@ -43,7 +43,7 @@ For more information on types of messages, see the [Types of Messages](#message-
 
 ### 3.2 Check Now Option
 
-The **Check now** option initiates the check of your project on consistency failures. This is useful if you have set an auto-check delay in **Edit** > **Preferences**. If the auto-delay is not specified, the check is done immediately after each change. 
+The **Check now** option initiates the check of your app on consistency failures. This is useful if you have set an auto-check delay in **Edit** > **Preferences**. If the auto-delay is not specified, the check is done immediately after each change. 
 
 ### 3.3 Limit to Current Tab Option
 
@@ -55,7 +55,7 @@ To enable you to find your errors, deprecations, and warnings quickly, each mess
 
 * Icon – indicates the [type of the message](#message-types)
 * Index number – an index number assigned to each message 
-* **Error Code** – a unique code that is specific for the errors only; warning and deprecation do not have  error codes
+* **Code** – a unique code that is specific for the errors only; warning and deprecation do not have  error codes
 * **Message** –  description/explanation of the check failure
 * **Element** – an element causing the check failure
 * **Document** – the place where the element is
@@ -72,8 +72,8 @@ Right-clicking the message line opens a drop-down menu:
 The following actions are available in the drop-down menu:
 
 * **Go to {the name of the element}** – does the same as double-clicking the message, takes you to the element causing the check failure.
-* **View documentation about {an error code or the name of the element}** – opens the corresponding document that describes this check failure and gives instructions on how to fix it; if there is no documentation on the current message, the option is greyed-out
-* Message-specific actions – actions that depend on the message, in the example above, you can remove the microflow parameter that is not used in the project
+* **View documentation about {an error or the name of the element}** – opens the corresponding document that describes this check failure and gives instructions on how to fix it; if there is no documentation on the current message, the option is greyed-out
+* Message-specific actions – actions that depend on the message, in the example above, you can remove the microflow parameter that is not used in the app
 
 ##  4 Read More
 

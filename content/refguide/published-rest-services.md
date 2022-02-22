@@ -1,7 +1,7 @@
 ---
 title: "Published REST Services"
 parent: "integration"
-#menu_order: 
+menu_order: 20
 description: "An overview of published REST services from Mendix apps"
 tags: ["publish", "REST service", "overview", "configuration"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -40,14 +40,9 @@ For more details, see [Published REST Routing](published-rest-routing) and the [
 
 Every [published REST service](published-rest-service) is automatically documented. This documentation is available in the app under `http://yourapp.com/rest-doc/`. Each service has an interactive documentation page using [Swagger UI](https://swagger.io/swagger-ui/). You can interact with the service to see how it behaves.
 
-The documentation of the services is available in the [Open API 2.0](open-api) format, which is readable by many systems and tools. It contains [JSON Schemas](published-rest-service-json-schema) for the messages definitions.
+The documentation of the services is available in the [OpenAPI 2.0](open-api) format, which is readable by many systems and tools. It contains [JSON Schemas](published-rest-service-json-schema) for the messages definitions.
 
 ## 5 Logging
 
 To log detailed information about interaction with your published REST service, [set the log level](logging) of the **REST Publish** log node to **Trace**.
 
-## 6 Example
-
-**How to publish REST in Studio Pro 8**
-
-{{% youtube Ff_P84NOcZk %}}

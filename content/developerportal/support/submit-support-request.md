@@ -26,7 +26,7 @@ Before submitting a new Menix Support request, check these resources to make sur
 
 If you cannot find the answer to your question on the Mendix Forum or in the Mendix documentation, you can submit a support request. The Mendix Support Portal will walk you through the ticket creation by asking for relevant information based on the type of request. 
 
-## 3 Submitting a New Request
+## 3 Submitting a New Request {#submitting}
 
 You can access the Mendix Support Portal at [support.mendix.com](https://support.mendix.com).
 
@@ -35,11 +35,11 @@ This is the basic information required for a ticket:
 * A detailed description of the exact error
 * A detailed description of the action that was performed when the error was received
 * A description of the desired goal (optional)
-* The affected app (for more information, see [How to Prepare Your App Project for Support](prepare-your-project))
+* The affected app (for more information, see [How to Prepare Your App for Support](prepare-your-project))
 
 To submit a request with Mendix Support, follow these steps:
 
-1. Click **Submit a request** in the top-right corner of the portal.
+1. Click **Submit a request** in the upper-right corner of the portal.
 2.  Select an issue from the drop-down menu:
 
 	![](attachments/submit/issue.png)
@@ -54,23 +54,50 @@ To submit a request with Mendix Support, follow these steps:
 	* **Standard Change: Change Mendix Cloud Container Size** – all vertical scaling changes for a container that require downtime (for example, changing memory or database size) can be requested [here](https://resize.mendix.com/index.html)
 	* **Standard Change: Change Mendix Cloud File Storage** – increase or decrease the file storage size
 	* **Standard Change: Change Mendix Cloud URL** – change a *non-custom* Mendix URL (for example, *something.mendixcloud.com*)
-	* **Standard Change: Assign Company Admin** – make an existing Mendix user the [Company Admin](../company-app-roles/companyadmin-settings)
-	* **Standard Change: Request ATS License** – obtain a license to use ATS (for more information on this product, see [ATS](/addons/ats-addon/index))
-	* **Standard Change: Request APD License** – obtain a license to use APD (for more information on this product, see [APD](/addons/apd-addon/index))
+
+        {{% alert type="info" %}}This URL change will apply to *all* your environments for this app. For example, the production environment will be *something.mendixcloud.com* and the acceptance environment will be *something-accp.mendixcloud.com*.{{% /alert %}}
+
+	* **Standard Change: Assign Mendix Admin** – make an existing Mendix user the [Mendix Admin](/developerportal/control-center/#company)
+	* **Standard Change: Request ATS License** – obtain a license to use ATS (for more information on this product, see [ATS](/addons/ats-addon/))
+	* **Standard Change: Request APD License** – obtain a license to use APD (for more information on this product, see [APD](/addons/apd-addon/))
 	* **Standard Change: Reset Google authenticator** – reset the Google authenticator if you are using it for [2FA](/developerportal/deploy/two-factor-authentication) (for example, when you get a new phone)
 	* **Standard Change** – other changes which can be made on the platform, but for which you do not have access
 	* **Non-Standard Change** – any other changes not covered by other issues above
-  
-3. Fill in the fields for the issue type you selected.
-4. When you enter the **Subject** of the request, the Mendix Support Portal will suggest relevant documentation for you to read before you submit the request:
 
-	![](attachments/submit/suggestions.png)
+3. Fill in the fields for the issue type you selected, including [Priority](#request-priority).
+4.  When you select **Request for Information** or **Incident**, you then have to select the **Related Component** for the issue. The correct component will allow Mendix Support to help you more effectively. In some cases, you can also select the **Related Sub-Component** for your issue. Selecting the related sub-component is not required, but it will allow Mendix Support to help you more quickly and accurately. There are two main options for the related component:
+	* **App** – select one of these components when you have issues with designing, developing, building, deploying, or operating one of your own apps built on the Mendix Platform:
+		* **App - Development** – issues/questions regarding developing your app (for example, with your [domain model](/refguide/domain-model), [widgets](/refguide/data-widgets), or [logic](/refguide/application-logic))
+		* **App - Deployment** – issues/questions regarding deploying your app (for example, when the app cannot be [deployed](/developerportal/deploy/) or will not start)
+		* **App - Operations** – issues/questions regarding running a deployed app (for example, when the app crashes or shows errors in the [log](/developerportal/operate/logs))
+		* **App - Add-on** – issues/questions regarding one of the Mendix add-ons (such as [ATS](/addons/ats-addon/), [APD](/addons/apd-addon/), or [AQM](/addons/aqm-addon/))
+		* **App - Security** - issues/questions regarding the security of your Mendix app
+		* **App - Other** – any other issues/questions regarding your own app that you are developing on the Mendix Platform
+	* **Developer Platform** – select one of these components when you have issues with the Mendix Platform itself:
+		* **Developer Platform - Account** – issues/questions regarding your Mendix account (for example, when you have difficulties creating an account or signing in)
+		* **Developer Platform - Marketplace** - issues/questions regarding the [Mendix Marketplace](/appstore/) (for example, when you have difficulties uploading new modules to the Marketplace)
+		* **Developer Platform - Sprintr** – issues/questions regarding the [Developer Portal](/developerportal/) (for example, when you cannot create a [story](/developerportal/collaborate/stories) or start a Sprint)
+		* **Developer Platform - Academy** – issues/questions regarding the [Mendix Academy](https://academy.mendix.com/link/home) (for example, when you cannot open a learning path or you cannot find the attachments required for a module)
+		* **Developer Platform - Forum** – issues/questions regarding the [Mendix Forum](https://forum.mendixcloud.com/index3.html) (for example, when you cannot create a new question or add an answer)
+		* **Developer Platform - Cloud Portal** – issues/questions regarding [deploying in the Developer Portal](/developerportal/deploy/) (for example, when you cannot view your [log](/developerportal/operate/logs) files or [scale](/developerportal/deploy/scale-environment) your environment)
+		* **Developer Platform - Data Hub** – issues/questions regarding [Data Hub](/data-hub/) (for example, when you have difficulties accessing the Data Hub Catalog)
+		* **Developer Platform - Control Center** - issues/questions regarding [Control Center](/developerportal/control-center/index) (for example, when you have difficulties deactivating applications from the Control Center) 
+		* **Developer Platform - Studio** - issues/questions regarding [Mendix Studio](/studio/) (for example, when you have difficulties opening Mendix Studio)
+		* **Developer Platform - Support Portal** - issues/questions regarding the [Support Portal](https://support.mendix.com/hc) (for example, when you have difficulties creating Support tickets)
+		* **Developer Platform - Other** – any other issues/questions regarding the Mendix Platform itself
+	* **Licensing** – select this component when you have issues/questions regarding your Mendix licenses
 
-If investigating the documentation and searching the [Mendix Forum](https://forum.mendixcloud.com/index4.html) does not help you solve your issue, you can submit the Mendix Support request.
+5. Make sure all your attachments have finished uploading before clicking **Next**.
+
+The Mendix Support Portal will first suggest relevant documentation for you to read before you submit a request. Based on a complexity check, recommendations might be skipped to improve your experience. This complexity check takes your request priority and other factors into consideration.
+
+![](attachments/submit/recommendations.png)
+
+If investigating the documentation and searching the [Mendix Forum](https://forum.mendixcloud.com/index4.html) does not help you solve your issue, you can submit the Mendix Support request.	
 
 ## 4 Request Priority {#request-priority}
 
-You can select the priority that you feel the request should have. Please note the [SLA regulations](index#sla) for this priority.
+You can select the priority that you feel the request should have. Please note the [SLA regulations](/developerportal/support/#sla) for this priority.
 
 The priority is based on the combination of impact and urgency: 
 
@@ -112,24 +139,24 @@ You can add large attachments such as project files to the request. Please note 
 
 ### 5.3 Team Server Problems & Project Issues
 
-* [App ID](../settings/general-settings)
+* [App ID](/developerportal/settings/general-settings)
 
 ### 5.4 Studio & Studio Pro Problems
 
 * Mendix Studio type (Studio or Studio Pro)
 * Mendix version
-* Test project (for details, see [How To Export A Mendix Project Package](/refguide/export-project-package-dialog))
+* Test project (for details, see [How To Export A Mendix App Package](/refguide/export-project-package-dialog))
 * Reproducible steps
 
-### 5.5 App Store Content Problems & Module, Widget & Theme Issues
+### 5.5 Marketplace Content Problems & Module, Widget & Theme Issues
 
-* Name of the App Store component
+* Name of the Marketplace component
 * Mendix version
-* Test project (for details, see [How To Export A Mendix Project Package](/refguide/export-project-package-dialog))
+* Test project (for details, see [How To Export A Mendix App Package](/refguide/export-project-package-dialog))
 * Reproducible steps
 
 {{% alert type="info" %}}
-Not all App Store content is compatible with every version of Studio Pro, and not all App Store content is supported by Mendix. For more information, see [App Store Content Support](/appstore/general/app-store-content-support).
+Not all Marketplace content is compatible with every version of Studio Pro, and not all Marketplace content is supported by Mendix. For more information, see [Marketplace Content Support](/appstore/general/app-store-content-support).
 {{% /alert %}}
 
 ### 5.6 Mobile Problems
@@ -147,7 +174,7 @@ For Windows Phone, please contact Mendix Support for the current support conditi
 
 ## 6 Overview of Requests
 
-By clicking your name in the top-right side of  the screen, you can select **My activities** and see all the requests that you have submitted (**My requests**) as well as all the requests that have been submitted on the apps to which you have access:
+By clicking your name on the upper-right side of the screen, you can select **My activities** and see all the requests that you have submitted (**My requests**) as well as all the requests that have been submitted on the apps to which you have access:
 
 ![](attachments/submit/activities.png)
 

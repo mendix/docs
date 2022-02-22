@@ -10,8 +10,8 @@ To add custom logic to your Mendix application you can use microflows. Microflow
 
 Before starting this how-to make sure you complete the following prerequisites:
 
-*   [Creating a basic data layer](../data-models/create-a-basic-data-layer)
-*   [Creating your first two Overview and Detail pages](../front-end/create-your-first-two-overview-and-detail-pages)
+*   [Creating a basic data layer](/howto7/data-models/create-a-basic-data-layer)
+*   [Creating your first two Overview and Detail pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages)
 
 ## 2 Triggering Logic Using a Page Button
 
@@ -143,7 +143,6 @@ There are two more advanced settings:
 ## 3 Read More
 
 *   [Defining access rules using XPath](define-access-rules-using-xpath)
-*   [Extending Your Application with Custom Java](extending-your-application-with-custom-java)
 *   [Working With Lists in a Microflow](working-with-lists-in-a-microflow)
 *   [Triggering Logic using Microflows](triggering-logic-using-microflows)
 *   [Creating a Custom Save Button](create-a-custom-save-button)

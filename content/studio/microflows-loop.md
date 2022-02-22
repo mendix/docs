@@ -37,7 +37,7 @@ Make sure you have the following prerequisites:
 
 1. [Create an entity](domain-models#adding-new-entities) in your domain model and name it *Order*.
 2. [Create an attribute](domain-models#adding-new-attributes) of the Boolean type for this entity to indicate the status of an order and name this attribute *Processed*.
-3. [Create a microflow](microflows#creating-new-microflow).
+3. [Create a microflow](microflows#create).
 
 To start the use-case, do the following:
 

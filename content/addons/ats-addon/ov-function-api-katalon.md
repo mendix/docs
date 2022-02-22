@@ -6,7 +6,7 @@ menu_order: 3
 
 ## 1 Introduction
 
-Katalon is a popular graphical testing tool, which is why Mansystems decided to build an integration between ATS and Katalon. This integration allows testers to leverage the power of Katalon and combine it with the ease-of-use and Mendix-focus of ATS. With this integration, executing an ATS function is as simple as calling a custom keyword in Katalon.
+Katalon is a popular graphical testing tool, which is why CLEVR decided to build an integration between ATS and Katalon. This integration allows testers to leverage the power of Katalon and combine it with the ease-of-use and Mendix-focus of ATS. With this integration, executing an ATS function is as simple as calling a custom keyword in Katalon.
 
 {{% alert type="info" %}}
 Before you start writing tests, you need to import the ATS keywords library via *ats.jar*:<br />

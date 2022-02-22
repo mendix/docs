@@ -11,7 +11,7 @@ Result is of type Boolean.
 
 ### Input parameters
 
-The values be any of the following types, but the two values should be in the same category (e.g. both numbers):
+The values be any of the following types, but the two values should be in the same category (for example, both numbers):
 
 *   String
 *   Numeric (Integer/Long, Decimal, Float)
@@ -33,7 +33,7 @@ Result is of type Boolean.
 
 ### Input parameters
 
-The values be any of the following types, but the two values should be in the same category (e.g. both numbers):
+The values be any of the following types, but the two values should be in the same category (for example, both numbers):
 
 *   String
 *   Numeric (Integer/Long, Decimal, Float)
@@ -55,7 +55,7 @@ Result is of type Boolean.
 
 ### Input parameters
 
-The values be any of the following types, but the two values should be in the same category (e.g. both numbers):
+The values be any of the following types, but the two values should be in the same category (for example, both numbers):
 
 *   String
 *   Numeric (Integer/Long, Decimal, Float)
@@ -90,7 +90,7 @@ Result is of type Boolean.
 
 ### Input parameters
 
-The values be any of the following types, but the two values should be in the same category (e.g. both numbers):
+The values be any of the following types, but the two values should be in the same category (for example, both numbers):
 
 *   String
 *   Numeric (Integer/Long, Decimal, Float)
@@ -113,7 +113,7 @@ Result is of type Boolean.
 
 ### Input parameters
 
-The values be any of the following types, but the two values should be in the same category (e.g. both numbers):
+The values be any of the following types, but the two values should be in the same category (for example, both numbers):
 
 *   String
 *   Numeric (Integer/Long, Decimal, Float)
@@ -149,7 +149,7 @@ Result is of type Boolean.
 
 ### Input parameters
 
-The values be any of the following types, but the two values should be in the same category (e.g. both numbers):
+The values be any of the following types, but the two values should be in the same category (for example, both numbers):
 
 *   String
 *   Numeric (Integer/Long, Decimal, Float)

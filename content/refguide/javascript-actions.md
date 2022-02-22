@@ -17,7 +17,7 @@ With JavaScript actions, you can extend your application's functionality in ways
 
 {{% alert type="info" %}}
 
-Each JavaScript action defined in Mendix Studio Pro corresponds to a file *{JavaScript action name}.js* in the subdirectory **javascriptsource{module name}/actions/** in your project directory.
+Each JavaScript action defined in Mendix Studio Pro corresponds to a file *{JavaScript action name}.js* in the subdirectory **javascriptsource{module name}/actions/** in your app directory.
 
 The skeletons of these *.js* files are generated automatically when you save an action, and those JavaScript actions can immediately be edited in the embedded code editor.
 
@@ -27,7 +27,7 @@ To learn how to create, configure, and use a JavaScript action, see these [Build
 
 ## 2 General Settings
 
-After double-clicking a JavaScript action in your **Project Explorer** you will see the JavaScript action's settings: 
+After double-clicking a JavaScript action in your **App Explorer** you will see the JavaScript action's settings: 
 
 {{% image_container width="400" %}}![javascript settings](attachments/javascript-actions/javascript-action-settings-no-para.png){{% /image_container %}}
 
@@ -74,15 +74,25 @@ This setting handles the parameter's name. A name is required. Names must start 
 
 #### 2.2.3 Category
 
-Use categories to keep parameters apart in a [JavaScript Action Call](javascript-action-call). Categories are useful for making logical groups of parameters when your project has several parameters. If you do not specify a category, the parameter will appear in the **Input** group.
+Use categories to keep parameters apart in a [JavaScript Action Call](javascript-action-call). Categories are useful for making logical groups of parameters when your app has several parameters. If you do not specify a category, the parameter will appear in the **Input** group.
 
 #### 2.2.4 Description
 
-For projects with several parameters, descriptions serve as useful reminders of parameters' exact purposes. Descriptions also allow you to describe your parameters to project collaborators. Descriptions may contain both upper- and lower-case letters, numbers, and symbols.
+For apps with several parameters, descriptions serve as useful reminders of parameters' exact purposes. Descriptions also allow you to describe your parameters to app collaborators. Descriptions may contain both upper- and lower-case letters, numbers, and symbols.
 
 ### 2.3 Return Type
 
 The return parameter type determines the type of data a JavaScript action returns. Because many APIs are asynchronous, you can also return a `Promise` object which resolves to this type. The return value of the JavaScript action can be given a name and stored so it can be used in the nanoflow where it is called. For all types which you can use for parameters, you can also use a return type. In addition, you can use the return type 'Nothing' if no data should return from the action.
+
+### 2.4 Platform {#platform}
+
+JavaScript actions can be for a specific platform, they have an optional platform property with the following values:
+
+* All *(default)*
+* Web – can be used in a browser or hybrid mobile app
+* Native – can be used in a native mobile app
+
+When using a JavaScript action for a specific platform in a nanoflow, it will restrict the platform for that nanoflow. For example, only native pages can be opened in a nanoflow that contains a JavaScript action where the platform is set to **Native**.
 
 ## 3 Type Parameter
 
@@ -126,7 +136,7 @@ Documentation is visible in the **Code** tab. Your documentation also is copied 
 
 ## 6 Code
 
-In the **Code** tab, you can edit the JavaScript action code without leaving Studio Pro. The editor is based on the [Monaco Editor](https://microsoft.github.io/monaco-editor/index.html). It offers features such as syntax highlighting and code completion. From Mendix version 8.3 and above, the code can be written in modern JavaScript (ES8 / ES2017) and can use functions like `async` with `await` and `Promise`. The code will be transpiled and polyfilled for you to run (even on Internet Explorer 11). 
+In the **Code** tab, you can edit the JavaScript action code without leaving Studio Pro. The editor is based on the [Monaco Editor](https://microsoft.github.io/monaco-editor/index.html). It offers features such as syntax highlighting and code completion. The code can be written in modern JavaScript (ES8 / ES2017) and can use functions like `async` with `await` and `Promise`.
 
 The code has three sections: an import list, an extra code block, and a user code block. All code that is added should go in one of these blocks. Code outside the blocks will lost when re-generating the template code on deploy or update of the JavaScript action settings. 
 
@@ -139,7 +149,7 @@ Additional imports should start with `import` and be placed above `// BEGIN EXTR
 // - the import list
 // - the code between BEGIN USER CODE and END USER CODE
 // - the code between BEGIN EXTRA CODE and END EXTRA CODE
-// Other code you write will be lost the next time you deploy the project.
+// Other code you write will be lost the next time you deploy the app.
 import { Big } from "big.js";
 
 // BEGIN EXTRA CODE

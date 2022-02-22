@@ -35,7 +35,7 @@ If you made a simple and sound design of the app's domain models, consider the f
 	* Combine attributes in one entity and add an enum to determine its specialization.
 	* Add separate entities for specializations with a one-to-one relation. Depending on UI needs, this one-to-one relation might be a normal reference from specialization to generalization to save prefetching time.
 	* Add a non-persistent layer with inheritance that is populated by your business logic.
-* Don't use temporary associations on persistent entities. Use a non-persistent entity for your screen/UI logic here.
+* Don't use temporary associations on persistable entities. Use a non-persistable entity for your screen/UI logic here.
 
 {{% alert type="info" %}}
 
@@ -76,7 +76,7 @@ Indexes is a topic with a long history of best practices from the database world
 * Try to prevent multiple identical data sources, since they load the object multiple times.
 * Minimize conditional visibility.
 * Give the user feedback. If this takes more than a few seconds, provide a progress indication.
-* Do work asynchronously if the user does not have to wait for the result. For example, sending mails or updating other apps over an interface should never be something the user is waiting on in the UI. For running work asynchronously, there are options in the [Community Commons Function Library](/appstore/modules/community-commons-function-library) in the Mendix App Store to run microflows in the background or have a process queue to control the load and prevent peaks in background work.
+* Do work asynchronously if the user does not have to wait for the result. For example, sending mails or updating other apps over an interface should never be something the user is waiting on in the UI. For running work asynchronously, there are options in the [Community Commons Function Library](/appstore/modules/community-commons-function-library) in the Mendix Marketplace to run microflows in the background or have a process queue to control the load and prevent peaks in background work.
 
 ## 6 Infrastructure Best Practices
 
@@ -103,6 +103,6 @@ For OQL, many of the same best practices apply as for XPath.
 
 ## 10 Web Services & XML Best Practices
 
-* Use SHA256 instead of BCrypt.
+* Use SSHA256 instead of BCrypt.
 * Validating against schema slows down the processing.
 * Using sub-transactions for microflows slows down processing.

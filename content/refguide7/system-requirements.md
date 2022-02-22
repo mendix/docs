@@ -18,7 +18,7 @@ The following frameworks are automatically installed (if necessary):
 
 * Microsoft .NET Framework 4.6.2
 * Microsoft Visual C++ 2010 SP1 Redistributable Package
-* Microsoft Visual C++ 2013 Redistributable Package
+* Microsoft Visual C++ 2015 Redistributable Package (for [Mendix 7.23.17](/releasenotes/studio-pro/7.23#72317) and above) or Microsoft Visual C++ 2013 Redistributable Package (for [Mendix 7.23.16](/releasenotes/studio-pro/7.23#72316) and below)
 * AdoptOpenJDK 8 (installed automatically as of [Mendix 7.23.3](/releasenotes/studio-pro/7.23#7233) if you do not have this or Java Development Kit 1.8 already installed) or Java Development Kit 1.8
 
 {{% alert type="warning" %}}
@@ -37,7 +37,7 @@ The [Team Server](team-server) is implemented using Subversion, and the Modeler 
 
 ## 4 Web Modeler
 
-The [Mendix Web Modeler](/studio) is optimized for use with Google Chrome. While Chrome is the officially supported browser, you can also use the Web Modeler with other popular browsers like Mozilla Firefox, Apple Safari, and Microsoft Edge. 
+The [Mendix Web Modeler](/studio7) is optimized for use with Google Chrome. While Chrome is the officially supported browser, you can also use the Web Modeler with other popular browsers like Mozilla Firefox, Apple Safari, and Microsoft Edge. 
 
 {{% alert type="info" %}}
 The browser you use needs to have JavaScript turned on.
@@ -60,13 +60,13 @@ The browser you use needs to have JavaScript turned on.
 
 ### 5.3 Database Server
 
-* [IBM DB2](db2) 11.1 for Linux, Unix, and Windows
-* [MariaDB](mysql) 10.1, 10.2, 10.3
-* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2016, 2017, 2019
+* [IBM DB2](db2) 11.1, 11.5 for Linux, Unix, and Windows
+* [MariaDB](mysql) 10.2, 10.3, 10.4, 10.5
+* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2017, 2019
 * Azure SQL v12 (support is not independently verified and is available only through compatible versions of SQL Server)
 * [MySQL](mysql) 5.7, 8.0
-* [Oracle Database](oracle) 12c Release 2, 18, 19
-* PostgreSQL 9.5, 9.6, 10, 11, 12
+* [Oracle Database](oracle) 12c Release 2, 19
+* PostgreSQL 9.6, 10, 11, 12, 13, 14
 * [SAP HANA](saphana) 2.00.040.00.1545918182
 
 ### 5.4 Java

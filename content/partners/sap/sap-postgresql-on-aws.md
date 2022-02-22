@@ -1,14 +1,14 @@
 ---
-title: "PostgreSQL on Amazon (AWS) for SAP Cloud Platform"
+title: "PostgreSQL on Amazon (AWS) for SAP Business Technology Platform"
 category: "SAP"
 menu_order: 48
-description: "How to configure PostgreSQL on Amazon (AWS) for Mendix apps running on SAP Cloud Platform"
-tags: ["SAP", "PostreSQL", "Amazon", "AWS"]
+description: "How to configure PostgreSQL on Amazon (AWS) for Mendix apps running on SAP Business Technology Platform"
+tags: ["SAP", "PostreSQL", "Amazon", "AWS", "SAP BTP", "SAP Cloud Platform", "SAP Business Technology Platform"]
 ---
 
 ## 1 Introduction
 
-The **PostgreSQL on Amazon (AWS)** service for SAP Cloud Platform allows you to use a PostgreSQL database, hosted on Amazon Web Services (AWS) as the database for your Mendix app.
+The **PostgreSQL on Amazon (AWS)** service for SAP Business Technology Platform (SAP BTP) allows you to use a PostgreSQL database, hosted on Amazon Web Services (AWS) as the database for your Mendix app.
 
 ## 2 Binding PostgreSQL on Amazon (AWS){#binding}
 
@@ -24,7 +24,7 @@ You can choose the **AWS RDS PostgreSQL-development** standard database when you
 
 #### 2.1.2 Creating an SAP Environment for an App
 
-You can choose the **AWS RDS PostgreSQL-development** standard database when you are creating an environment from the Environments page for your app in the Developer Portal..
+You can choose the **AWS RDS PostgreSQL-development** standard database when you are creating an environment from the Environments page for your app in the Developer Portal.
 
 ![RDW AWS PostgreSQL-development option for environment](attachments/sap-postgresql-on-aws/database-new-environment.png)
 
@@ -51,7 +51,7 @@ Click **Open Editor** or **Configurator** to start the **PostgreSQL on Amazon (A
 The **PostgreSQL on Amazon (AWS) configurator** provide a user friendly interface to create the JSON required to configure PostgreSQL on Amazon (AWS).
 
 {{% alert type="info" %}}
-The configurator will only create a JSON file from scratch. It does not have access to your existing database settings on SAP Cloud Platform, and you cannot import any existing JSON files.
+The configurator will only create a JSON file from scratch. It does not have access to your existing database settings on SAP BTP, and you cannot import any existing JSON files.
 {{% /alert %}}
 
 ![PostgreSQL on Amazon (AWS) Configurator Options](attachments/sap-postgresql-on-aws/postgresql-for-aws.png)
@@ -68,6 +68,7 @@ You can also specify the **Database Instance Type**. The list of possible databa
 * Development – `db.t2.micro`
 * Production – `db.m4.large`
 
-When you have entered all the information, click **Generate Configuration File** to create a file containing the correct JSON for your database configuration.
+When you have entered all the information, you can do one of the following:
 
-You can then upload this file as the configuration of your PostgreSQL on Amazon (AWS) service.
+* Click **Upload Configuration To Service** to upload your database configuration directly to the PostgreSQL on Amazon (AWS) service.
+* Click **Download Configuration File** to create a file containing the correct JSON for your database configuration. You can then upload this file as the configuration of your PostgreSQL on Amazon (AWS) service.

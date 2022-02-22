@@ -48,15 +48,19 @@ This setting defines how changes are reflected in the pages presented to the end
 
 Default: *No*
 
+{{% alert type="info" %}}
+To make pages of a Mendix app efficient, many widgets display values from an attribute of an object which is cached on the page. Attributes in widgets which use cached data are *always* reflected in the client even if they are not committed and irrespective of the value of **Refresh in client**.
+
+If a widget is only updated when a [data source](data-sources) is loaded, then rollbacks will only be seen if they are committed and **Refresh in client** is set to *Yes*.
+
+When testing your app, ensure that the desired data is being displayed by the widgets you have chosen.
+{{% /alert %}}
+
 #### 3.2.1 Microflow Is Called from the Client in an Online App
 
 If **Refresh in client** is set to *No*, the rollback is not reflected in the client.
 
 If set to *Yes*, the object is refreshed across the client, which includes reloading the relevant [data sources](data-sources).
-
-{{% alert type="info" %}}
-Rolled back attribute values are always reflected in client. This includes updating their visibility and editability [properties](common-widget-properties). [Data sources](data-sources) are only reloaded if **Refresh in client** is set to *Yes*.
-{{% /alert %}}
 
 #### 3.2.2 Microflow Is Called in an Offline, Native, or Hybrid App
 
@@ -74,12 +78,19 @@ When inside a [nanoflow](nanoflows), the rollback object action reloads [data so
 
 ## 5 What Does Rollback Do?
 
-Pressing a **Cancel** button or triggering a rollback activity will initiate the rollback events. These actions are not triggered in the case of a rollback because of an error.
+{{% alert type="info" %}}
+A rollback action in a microflow or nanoflow is not the same as the rollback option on an [Error Event](error-event#errors-in-microflows) in a microflow.
 
-* Events: all before and after events are executed, and if any before-rollback event returns false, an exception can be thrown
+A rollback from an error event does not trigger any rollback events, and does not reflect whether changes to objects have been committed.
+{{% /alert %}}
+
+Pressing a **Cancel** button or triggering a rollback activity will initiate the rollback events.
+
+* **Events**: all before and after events are executed
+    * If any before-rollback event returns false, an exception can be thrown
 	* If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior
 	* Changes made prior to the rollback will be kept
-* Database: there is no database communication happening during this event unless it is specified in a before- or after-create event
-* Result: an object with the state **Instantiated** will be removed, and an object with any other state will be reverted back to the values it had during the last commit
+* **Database**: there is no database communication happening during this event unless it is specified in a before- or after-create event
+* **Result**: an object with the state **Instantiated** will be removed, and an object with any other state will be reverted back to the values it had during the last commit
 
 ![](attachments/object-activities/18582170.png)

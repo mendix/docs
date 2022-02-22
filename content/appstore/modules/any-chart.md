@@ -1,14 +1,14 @@
 ---
 title: "Any Chart"
 category: "Modules"
-description: "Describes the configuration and usage of the Any Chart module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "any chart", "plotly.js", "platform support"]
+description: "Describes the configuration and usage of the Any Chart module, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "any chart", "plotly.js", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
-The [Any Chart](https://appstore.home.mendix.com/link/app/106517/) module contains chart types supported in [plotly.js version 1.47.4](https://www.npmjs.com/package/plotly.js/v/1.47.4).
+The [Any Chart](https://marketplace.mendix.com/link/component/106517/) module contains chart types supported in [plotly.js version 1.47.4](https://www.npmjs.com/package/plotly.js/v/1.47.4).
 
 Further documentation on usage can be found in the following pages locations:
 

@@ -1,6 +1,7 @@
 ---
 title: "Message Definitions"
 parent: "integration"
+menu_order: 50
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -13,15 +14,13 @@ A message definition can be used for both JSON and XML, and it can be used for b
 
 ## 2 Adding a Message Definitions Document
 
-Message Definitions is a type of document you can add to modules in your app project.
+Message Definitions is a type of document you can add to modules in your app.
 
 To add a message definitions document do the following:
 
 1. Right-click your module or a folder within a module.
 
 2. Choose **Add other > Message definitions**.
-
-    ![Right-click menu - add Message definitions](attachments/message-definitions/add-definitions-document.png)
 
 3. Give your message definitions a name and click **OK**.
 
@@ -69,7 +68,7 @@ The name of the message definition.
 
 #### 4.1.2 Entity
 
-An entity in your app project domain model(s) on which to base the message definition. Using this message definition, you will be able to export and import individual objects and lists of objects of this entity type.
+An entity in your app domain model(s) on which to base the message definition. Using this message definition, you will be able to export and import individual objects and lists of objects of this entity type.
 
 #### 4.1.3 Structure
 

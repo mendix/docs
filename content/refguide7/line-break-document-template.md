@@ -1,6 +1,9 @@
 ---
 title: "Line break (Document Template)"
 parent: "document-templates"
+aliases:
+    - /refguide7/Line+Break+(document+template).html
+    - /refguide7/line-break-(document-template).html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

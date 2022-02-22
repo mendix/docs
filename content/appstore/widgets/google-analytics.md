@@ -1,14 +1,14 @@
 ---
 title: "Google Analytics"
 category: "Widgets"
-description: "Describes the configuration and usage of the Google Analytics widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "google analytics", "eventtracker", "webmaster", "platform support"]
+description: "Describes the configuration and usage of the Google Analytics widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "widget", "google analytics", "eventtracker", "webmaster", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Google Analytics](https://appstore.home.mendix.com/link/app/105/) widget enables tracking page views and custom events with Google Analytics. If you have an e-commerce application, you can also use this widget to keep track of your transactions.
+The [Google Analytics](https://marketplace.mendix.com/link/component/105/) widget enables tracking page views and custom events with Google Analytics. If you have an e-commerce application, you can also use this widget to keep track of your transactions.
 
 ### 1.1 Typical Usage Scenario
 
@@ -37,7 +37,7 @@ This widget combines a built-in microflow trigger with the [EventTracker](#event
 
 ### 3.3 MasterPageTracker
 
-Typically, you want to start with the MasterPageTracker widget by adding it to your master layout. By doing this, all the pages in your Mendix app will be tracked by Google Analytics. You will need to provide the widget with the tracker ID (`UA-XXX-XX`) that you should receive when configuring your Google Analytics account. The MasterPageTracker widget will use the combination of module name and page name in Mendix as the URL to be reported to Google Analytics (for examppe, a page in the X module that is named Y will be registered as /X/Y in Google Analytics. Note that you can also define a prefix for the URL).
+Typically, you want to start with the MasterPageTracker widget by adding it to your master layout. By doing this, all the pages in your Mendix app will be tracked by Google Analytics. You will need to provide the widget with the tracker ID (`UA-XXX-XX`) that you should receive when configuring your Google Analytics account. The MasterPageTracker widget will use the combination of module name and page name in Mendix as the URL to be reported to Google Analytics (for example, a page in the X module that is named Y will be registered as /X/Y in Google Analytics; note that you can also define a prefix for the URL).
 
 By having a MasterPageTracker widget in the master layout, you do not need to define the tracker ID (`UA-XXX-XX`) in each [AdvancedPageTracker](#advancedpagetracker) or [PageTracker](#pagetracker) anymore, since they will use the one from MasterPageTracker.
 
@@ -52,7 +52,7 @@ This widget must be inside a data view.
 {{% /alert %}}
 
 * **URL** – the URL that should be shown in the Google Analytics overview
-* **Title ** – the title that should be shown in the Google Analytics overview
+* **Title** – the title that should be shown in the Google Analytics overview
 
 For example, if the **Url** is */test/${name}*, then if the URL is parsed, *${name}* will be replaced by the value of the current object's attribute, which is defined in the **Data Source** tab. 
 
@@ -65,3 +65,7 @@ This is exactly the same as [AdvancedPageTracker](#advancedpagetracker), but wit
 These tools allow you to focus on the quality of your web application. For more information on what this means for your Mendix application, see [Google Search Console](https://search.google.com/search-console/about).
 
 This widget will place a `META` verification tag inside the `html` tag so that the webmaster tools can be activated and help with SEO on Mendix applications.
+
+## 4 Limitations
+
+If you are using an advertisement blocker (such as the AdBlocker browser extension) or have configured your browser to not allow tracking, it might result in your page being broken. This is because certain advertisement blockers and tracking restrictions can block this widget's files. 

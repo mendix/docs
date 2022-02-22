@@ -1,14 +1,14 @@
 ---
 title: "Database Replication"
 category: "Modules"
-description: "Describes the configuration and usage of the Database Replication module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "database replication", "platform support"]
+description: "Describes the configuration and usage of the Database Replication module, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "database replication", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-You can use the [Database Replication](https://appstore.home.mendix.com/link/app/160/) module to import data from existing databases into your Mendix application. You can configure how to map each table, column, and relation to your Mendix domain model. Complex mappings over multiple table joins are also possible. You can configured in the client or from Java.
+You can use the [Database Replication](https://marketplace.mendix.com/link/component/160/) module to import data from existing databases into your Mendix application. You can configure how to map each table, column, and relation to your Mendix domain model. Complex mappings over multiple table joins are also possible. You can configured in the client or from Java.
 
 ### 1.1 Typical Use Cases
 
@@ -35,7 +35,7 @@ You can use the [Database Replication](https://appstore.home.mendix.com/link/app
 
 ## 2 Configuration
 
-After downloading the module, you should place the **DatabaseMapping** page in the menu or put both the **Database_Overview** and **TableMapping_Overview** pages in your menu. With these pages, you can create database connections and table mappings. 
+After downloading the module, you should place the **DatabaseMapping** page in the menu. With this page, you can create database connections and table mappings. 
 
 To use this module, you need a database connection definition and a table mapping. The connection definition points to the location of the database you want to import. The table mapping determines how this database will be mapped to your domain model.
 
@@ -199,15 +199,23 @@ There are a number of settings that control the behavior of the table mapping as
 
 You can put a constraint on the rows that are imported from the database. Here, you can insert a custom SQL constraint that will be appended as a `WHERE` clause to all queries. This means that any database rows that do not satisfy this constraint will be ignored by the replication module.
 
+{{% alert type="info" %}}
+This feature is deprecated and might be removed in a future version. We recommend configuring constraints using [import calls](#import-call) instead.
+{{% /alert %}}
+
 ### 7.2 Print Statistics & Not Found Messages
 
 These control which kinds of messages are printed on the application console.
 
 ### 7.3 Remove Unsynced Objects
 
-This option causes objects that are not found in the imported database to be removed from your Mendix database. In other words, objects that are in your Mendix database that do not correspond to any imported database rows (anymore) are deleted. You can use this option if, for example, you want to mirror any changes to a target database and not just import new data.
+This option defines what to do to objects in your Mendix database with no corresponding entry in the imported database. There are three options:
 
-This functionality requires your Mendix objects to have an integer attribute that is used to keep track of which objects to remove. You can specify which attribute to use for this in the selector marked **Attribute**. This attribute must not be used by your application in any other way, because this will cause unexpected results. Also, note that objects created by your application (as in, not imported) will be removed on the next import if this option is used.
+* **Nothing** (default) – nothing is done to Mendix objects, whether they have corresponding entries or not
+* **Track changes** – keep track of which objects were synchronized, but do not remove them if they have no corresponding entries in the imported database
+* **Remove unchanged objects** – keep track of which objects were synchronized and remove those with no corresponding entries in the imported database; you can use this option if, for example, you want to mirror any changes to a target database and not just import new data
+
+This functionality requires your Mendix objects to have an integer attribute that is used to keep track of which objects to remove. If you select **Track changes** or **Remove unchanged objects**, an extra field to select this integer attribute will appear. This tracking attribute must not be used by your application in any other way, as this may cause unexpected results. Also, if you select **Remove unchanged objects**, note that objects created by your application (as in, not imported) will be removed on the next import.
 
 ### 7.4 Mode
 
@@ -220,7 +228,7 @@ Setting this to advanced reveals more options. These should only be modified by 
 * **Commit unchanged objects** – even if there are no changes to the object, this still commits the objects in order to execute the events
 * **Print not found messages for main object** – keeps track of all the object keys that could not be found; please note that this consumes a lot of memory, since all the values need to be remembered (this only works in combination with the "find ignore" sync option)
 
-## 8 Configuring an Import Call
+## 8 Configuring an Import Call {#import-call}
 
 With an import call, you can easily configure both static constraints (meaning, every call with the same value) and dynamic constraints (meaning, based on a value from an attribute).
 
@@ -263,7 +271,7 @@ Each import action is executed in a single transaction, which means it is able t
 
 ## 10 Importing & Exporting a File
 
-You can import and export table mappings to an XML file using the **Import/export file** tab.
+You can import and export table mappings to an XML file using the **Table mapping** tab.
 
 ## 11 Troubleshooting
 

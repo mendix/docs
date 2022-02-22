@@ -1,7 +1,7 @@
 ---
 title: "Pages"
 description: "Describes the page editor in Mendix Studio."
-menu_order: 30
+weight: 30
 tags: ["studio", "page editor", "pages"]
 ---
 
@@ -16,7 +16,7 @@ To view the **Pages** of your app in Mendix Studio, click the **Pages** icon in 
 
 {{% alert type="warning" %}}
 
-Studio supports apps based on the Atlas UI framework only. For details on Atlas UI, see [Atlas UI](../../howto/front-end/atlas-ui).
+Studio supports apps based on the Atlas UI framework only. For details on Atlas UI, see [Atlas UI](/howto/front-end/atlas-ui).
 
 {{% /alert %}}
 
@@ -29,7 +29,7 @@ Pages of Studio consist of the following components:
 * **Widgets** – single user-interface elements. For more information, see section [5.2. Widgets](#widgets) and [Widgets](page-editor-widgets).
 * **Building blocks** – pre-configured  set of elements that speeds up the process of building your page and styling it. For more information, see section [5.1 Building Blocks](#building-blocks). 
 
-The components described above are powered by Atlas UI. For more information, see [Atlas UI](../../howto/front-end/atlas-ui). 
+The components described above are powered by Atlas UI. For more information, see [Atlas UI](/howto/front-end/atlas-ui). 
 
 ## 3 Performing Basic Functions {#page-editor-basic-functions}
 

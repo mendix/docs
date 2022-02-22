@@ -1,7 +1,7 @@
 ---
 title: "Set Up Your Partner Profile"
 category: "Community Tools"
-menu_order: 60
+menu_order: 3
 description: "Describes how to configure the various parts of your Mendix Partner Profile, such as projects."
 tags: ["authorized", "expert", "professional", "4 p's"]
 ---
@@ -20,13 +20,13 @@ The purpose of the Partner Profile is to provide the Mendix community and custom
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Have a Mendix Profile (register [here](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup) and see [Mendix Profile](/developerportal/mendix-profile/index))
+* Have a Mendix Profile (register [here](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup) and see [Mendix Profile](/developerportal/community-tools/mendix-profile))
 
 ## 3 Signing In to the Partner Profile
 
 To sign in to the Partner Profile, edit it, and make it public, follow these steps:
 
-1. Sign in to your own Mendix Community Profile [here](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/ownprofile/). Now Mendix knows who you are and which company is attached to your account.
+1. Sign in to your own Mendix Profile [here](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/ownprofile/). Now Mendix knows who you are and which company is attached to your account.
 2. At the top of your Community Profile, you will see your role and company (for example, "Senior Developer at **Finaps**"). When your company is a partner, the company name is clickable. Click your company name to go to its Partner Profile. 
 3.  If you are authorized as a Partner Profile Editor, click **Edit Partner Profile** to edit the profile:
 
@@ -34,13 +34,13 @@ To sign in to the Partner Profile, edit it, and make it public, follow these ste
 
     If you are not authorized to edit the profile but your colleagues are, a list with their email addresses is shown. To gain access to editing the profile, you can contact them so that they can add you as an editor (for details, see the [Changing the Profile Editor](#editors) section). If none of your colleagues are authorized, click **Feedback** on the right side of the screen and submit a feedback item to gain access.<br>
 
-4.  Once you are in edit mode, click this icon to edit each field of the Partner Profile:
+4.  Once you are in edit mode, click the form field to edit the Partner Profile:
 
-    ![](attachments/how-to-set-up-your-partner-profile/icon.png)
+    ![](attachments/how-to-set-up-your-partner-profile/edit-profile-field.png)
     
     For details about editing, start with [5 Editing the Overview](#editing).<br>
     
-5.  After you have finished editing, you can make the profile public so that the Mendix community and customers can view it. To do this, simply click **Close Edit Mode**:
+5.  After you have finished editing, you can make the profile public so that the Mendix community and customers can view it. To do this, simply click **Save and Exit**:
 
     ![](attachments/how-to-set-up-your-partner-profile/close-edit.png)
 
@@ -54,7 +54,7 @@ The header of your Partner Profile has important contact details about your comp
 ![](attachments/how-to-set-up-your-partner-profile/header.png)
 {{% /image_container %}}
 
-You must complete the **Address** and **Email Address** fields before you can make your Partner Profile public. So, click the edit icon and add this information to the header (the email address will allow customers to contact you via the **Contact us** button): 
+You must complete the **Address** and **Email Address** fields before you can make your Partner Profile public (the email address will allow customers to contact you via the **Contact us** button). So, click **Edit Profile** and add this information to the header:
 
 {{% image_container width="550" %}}
 ![](attachments/how-to-set-up-your-partner-profile/address.png)
@@ -163,7 +163,7 @@ If you do not want to publish a project right away, click **Save as draft** in t
 
 ## 7 Editing Team Members {#team}
 
-This section presents information on adding the most valuable assets of your company: your certified Mendix developers. Before you can add a developer to the Partner Profile, their Mendix Profile needs to be set to public (for details on how to do this, see the [Selecting Your Profile Visibility](/developerportal/mendix-profile/index#public) section of *Mendix Profile*.
+This section presents information on adding the most valuable assets of your company: your certified Mendix developers. Before you can add a developer to the Partner Profile, their Mendix Profile needs to be set to public (for details on how to do this, see the [Selecting Your Profile Visibility](/developerportal/community-tools/mendix-profile#public) section of *Mendix Profile*.
 
 To add developers to the Partner Profile, follow these steps:
 
@@ -179,9 +179,7 @@ To add developers to the Partner Profile, follow these steps:
     Only the certifications and points of the added developers will be counted in the Partner Profile. The highest rank of certification will be added to the overview.
 
 {{% alert type="info" %}}
-
-Make sure you offboard the developers who no longer work at your company through the company administration in the Mendix Platform. These former employees will still be visible in the overview. It is important that you deactivate these developers in the Developers Portal so that they don’t have access to projects.
-
+Make sure you offboard and deactivate the developers who no longer work at your company through [Control Center](/developerportal/control-center/).
 {{% /alert %}}
 
 ## 8 Editing Testimonials
@@ -217,7 +215,3 @@ The [Meet Our Partners page](https://developer.mendixcloud.com/openid/login?imme
 * Whether your company is Expert (which will get the most weight in sorting), Professional, or Authorized (for more information, see the [Capability Tracks](#capability) section)
 * The total amount of certified developers (note that developers with multiple certifications count as one certified developer)
 * The total number of projects you have published on your Partner Profile
-
-## 11 Read More
-
-* [Mendix Jobs Board](mendix-job-board)

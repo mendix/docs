@@ -3,6 +3,17 @@ title: "Control Bar"
 parent: "grids"
 menu_order: 30
 tags: ["studio pro", "control bar", "add button", "deselect all button", "export to csv button", "grid action button", "grid new button", "remove button", "search button", "select button", "select all button", "data grid", "template grid", "reference set selector", "control bar buttons"]
+aliases:
+    - /refguide/add-button.html
+    - /refguide/deselect-all-button.html
+    - /refguide/export-to-csv-button.html
+    - /refguide/export-to-excel-button.html
+    - /refguide/grid-action-button.html
+    - /refguide/grid-new-button.html
+    - /refguide/remove-button.html
+    - /refguide/search-button.html
+    - /refguide/select-all-button.html
+    - /refguide/select-button.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -16,9 +27,24 @@ The control bar can also include a number of selection options and spreadsheet e
 
 ## 2 Control Bar Buttons
 
-Most properties of control bar buttons are the same as properties of button widgets. For more information on button properties, see [Button Properties](button-properties).
+Most properties of control bar buttons are the same as properties of buttons. For more information on button properties, see [Buttons](button-properties).
 
-Sections below describe the purpose of each control bar button and their specific properties if any. 
+To add additional buttons to the control bar, do the following:
+
+1. Right-click on the control bar while it is highlighed.
+1. Select **Add button**.
+1. Select the new type of button.
+1. Double click on the new button to customize.
+
+![Add Button to Control Bar](attachments/data-widgets/control-bar-add-button.png)
+
+{{% alert type="info" %}}
+It is not possible to add additional buttons by dragging them from the **Toolbox** into the control bar.
+
+When setting the visibility of control bar buttons, it is not possible to use currently selected objects for conditional visibility expressions, or visibility based on the selected objects' attributes.
+{{% /alert %}}
+
+Sections below describe the purpose of each control bar button and their specific properties if any.
 
 ### 2.1 Search Button {#search-button}
 
@@ -57,7 +83,7 @@ For example, you have an entity *Vehicle* and two specializations: *Bicycle* and
 
 ### 2.4 Action Button {#grid-action-button}
 
-An action button is a button that can perform various actions, such as calling a microflow or opening a page. The **Edit** and **Delete** buttons are action buttons created by default in a data grid and template grid control bar. For more information on action buttons, see [Button Widgets](button-widgets). 
+An action button is a button that can perform various actions, such as calling a microflow or opening a page. The **Edit** and **Delete** buttons are action buttons created by default in a data grid and template grid control bar. For more information on action buttons, see [Buttons](button-widgets). 
 
 ### 2.5 Remove Button {#remove-button}
 

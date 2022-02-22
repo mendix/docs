@@ -19,14 +19,14 @@ Mendix Studio Pro has a built-in debugger to solve errors on the microflow level
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install [Eclipse](https://eclipse.org/)
-* Add a Java action and open the project in Eclipse
-* Read [How to Extend Your Application with Custom Java](../logic-business-rules/extending-your-application-with-custom-java)
-* Deploy the application for Eclipse by selecting **Deploy for Eclipse** from the project menu in Studio Pro (you should redo this every time you make changes in Studio Pro):
+* Add a Java action and open the app in Eclipse
+* Read [How to Extend Your Application with Custom Java](/howto/logic-business-rules/extending-your-application-with-custom-java)
+* Deploy the application for Eclipse by selecting **Deploy for Eclipse** from the app menu in Studio Pro (you should redo this every time you make changes in Studio Pro):
     ![](attachments/18448685/18581045.png)
 
 ## 3 Setting Breakpoints
 
-1. Open Eclipse and locate the project in the **Package Explorer**.
+1. Open Eclipse and locate the app in the **Package Explorer**.
 2. Double-click **ReverseCustomerName.java**:
     ![](attachments/18448685/18581041.png)
 3. Place the cursor on the line that needs debugging, hold down **Ctrl+Shift**, and press **B** to enable a breakpoint. A blue dot in front of the line will appear: 
@@ -40,7 +40,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 4 Debugging in Eclipse
 
-1. Select the project root node in the package explorer and click the debug icon in the Eclipse toolbar:
+1. Select the app root node in the package explorer and click the debug icon in the Eclipse toolbar:
     ![](attachments/18448578/18580062.png)
 
     The application will now be started with Eclipse attached as debugger.
@@ -64,10 +64,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [Clear Warning Messages in Mendix](clear-warning-messages)
-* [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [Test Web Services Using SoapUI](/howto/testing/testing-web-services-using-soapui)
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
 * [Log Levels](log-levels)
-* [Debug Microflows](debug-microflows)
+* [Debug Microflows and Nanoflows](debug-microflows-and-nanoflows)
 * [Debug Microflows Remotely](debug-microflows-remotely)
 * [Java Actions](/refguide/java-actions)

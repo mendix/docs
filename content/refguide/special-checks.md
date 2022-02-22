@@ -1,13 +1,14 @@
 ---
 title: "Special Checks"
 parent: "expressions"
+menu_order: 40
 description: "Describes special checks in expressions in Mendix."
 tags: ["studio pro", "special checks", "special check", "expressions"]
 ---
 
 ## 1 Introduction
 
-This documents describes special checks in expressions, such as checking whether an object is empty, new, is synched. 
+This documents describes special checks in expressions, such as checking whether an object is empty, new, is synced. 
 
 ## 2 Checking for an Empty Object
 
@@ -15,7 +16,7 @@ Checks if an object is empty.
 
 ### 2.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value     | Type               |
 | --------- | ------------------ |
@@ -25,13 +26,13 @@ Input parameters are described in the table below:
 
 The output is described in the table below:
 
-| Value                                | Type    |
-| ------------------------------------ | ------- |
-| Returns whether the object is empty. | Boolean |
+| Value    | Type    |
+| ---------- | ------- |
+| Returns whether the object is empty | Boolean |
 
 ### 2.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 $object1 = empty
@@ -47,7 +48,7 @@ The same holds for when $object1 is a variable (such as Integer, String, etc).
 
 ### 3.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                                            | Type               |
 | ------------------------------------------------ | ------------------ |
@@ -59,7 +60,7 @@ The output is described in the table below:
 
 | Value                                   | Type    |
 | --------------------------------------- | ------- |
-| Returns whether the attribute is empty. | Boolean |
+| Returns whether the attribute is empty | Boolean |
 
 ### 3.3 Examples
 
@@ -82,7 +83,7 @@ Checks whether an object is new.
 
 ### 4.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value     | Type               |
 | --------- | ------------------ |
@@ -110,7 +111,7 @@ This function is available only in expressions for [conditional visibility or ed
 
 ### 5.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value     | Type               |
 | --------- | ------------------ |
@@ -130,4 +131,28 @@ An example of an input can be the following:
 
 ```java
 isSynced($currentObject)
+```
+
+## 6 Checking if a Synchronization is Running {#is-syncing}
+
+This function is available only in client-side expressions (expressions in [nanoflows](nanoflows) and [pages](pages)).
+
+### 6.1 Input Parameters
+
+No input parameter is required for this check.
+
+### 6.1 Output
+
+The output is described in the table below:
+
+| Value                                                        | Type    |
+| ------------------------------------------------------------ | ------- |
+| Returns `true` when there is a [synchronization](synchronize) process running, otherwise it returns `false`.| Boolean |
+
+### 6.3 Example
+
+An example of an input can be the following:
+
+```java
+isSyncing()
 ```

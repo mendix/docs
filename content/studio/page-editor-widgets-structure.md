@@ -208,7 +208,7 @@ The **Align Vertically** property overrides the [Align Columns Vertically](#alig
 
 ## 4 Container Overview {#container-overview}
 
-A **Container** is used as a layout element where you can place a widget or a group of widgets and simultaneously style, drag or delete them. For example, you can place a section title and input widgets for filling out program's details in one container, and subsequently reposition the whole container at once to a different location on the page. 
+A **Container** is used as a layout element where you can place a widget or a group of widgets and simultaneously style, drag or delete them. For example, you can place a section title and input elements for filling out program's details in one container, and subsequently reposition the whole container at once to a different location on the page. 
 
 {{% image_container width="300" %}}![Container Example](attachments/page-editor-widgets-structure/container.png)
 {{% /image_container %}}
@@ -284,7 +284,7 @@ For example, your team member in Studio Pro has created a snippet and added a cu
 While you can call (use) snippets on your pages in Studio, you cannot create, change, or delete them. For more information on snippets in Studio Pro, see [Snippet](/refguide/snippet).
 
 {{% alert type="info" %}}
-The **Snippet** widget is not displayed if your app project does not contain any snippets. 
+The **Snippet** widget is not displayed if your  does not contain any snippets. 
 {{% /alert %}}
 
 To call a snippet and add it to your page, do the following:

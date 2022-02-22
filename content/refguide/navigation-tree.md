@@ -20,7 +20,7 @@ The menu structure of a navigation tree can have three levels, that means that m
 
 An example of navigation tree properties is represented in the image below:
 
-{{% image_container width="300" %}}![Navigation Tree Properties](attachments/menu-widgets/navigation-tree-properties.png)
+{{% image_container width="250" %}}![Navigation Tree Properties](attachments/menu-widgets/navigation-tree-properties.png)
 {{% /image_container %}}
 
 Navigation tree properties consist of the following sections:
@@ -61,5 +61,5 @@ Only available when the [menu source](#menu-source) is set to **Menu document**.
 ## 3 Read More
 
 * [Page](page)
-* [Menu Widgets](menu-widgets)
+* [Menus & Navigation](menu-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)

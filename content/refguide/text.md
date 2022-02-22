@@ -1,6 +1,6 @@
 ---
 title: "Text"
-parent: "common-widgets"
+parent: "text-widgets"
 menu_order: 10
 tags: ["studio pro", "text", "text widget", "common widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -10,7 +10,7 @@ tags: ["studio pro", "text", "text widget", "common widget"]
 
 The text widget displays a text which can contain parameters if necessary. Every attribute is replaced with the value of this attribute. For example, you can show a greeting message to a user by placing a text widget in a [data view](data-view) and adding parameters to it.
 
-![Text Widget](attachments/common-widgets/text.png)
+![Text Widget](attachments/text-widgets/text.png)
 
 If you start typing in any empty container, Studio Pro will automatically generate a text widget to display your text.
 
@@ -18,13 +18,13 @@ If you start typing in any empty container, Studio Pro will automatically genera
 
 An example of text properties is represented in the image below:
 
-{{% image_container width="300" %}}![Text Properties](attachments/common-widgets/text-properties.png)
+{{% image_container width="300" %}}![Text Properties](attachments/text-widgets/text-properties.png)
 {{% /image_container %}}
 
 Text properties consist of the following sections:
 
 * [Common](#common)
-* Design Properties
+* [Design Properties](#design-properties)
 * [General](#general)
 * [Visibility](#visibility)
 
@@ -32,15 +32,19 @@ Text properties consist of the following sections:
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 General Section {#general}
+### 2.2 Design Properties Section {#design-properties}
 
-#### 2.2.1 Caption {#caption}
+{{% snippet file="refguide/design-section-link.md" %}} 
 
-**Caption** defines a text that will be shown. The caption can contain parameters that are written between braces, e.g. {1}.  
+### 2.3 General Section {#general}
 
-For more information on using parameters, see the [Parameters]() section below. 
+#### 2.3.1 Caption {#caption}
 
-#### 2.2.2 Parameters {#parameters}
+**Caption** defines a text that will be shown. The caption can contain parameters that are written between braces, for example, {1}.  
+
+For more information on using parameters, see the [Parameters](#parameters) section below. 
+
+#### 2.3.2 Parameters {#parameters}
 
 Parameters are attributes the value of which will be displayed. To view **Parameters**, do one of the following:
 
@@ -48,7 +52,7 @@ Parameters are attributes the value of which will be displayed. To view **Parame
 
 *  Double-click the text widget on the page and click **Edit** in the **General** section > **Caption**:
 
-    ![Opening Parameters](attachments/common-widgets/caption-edit-button.png) 
+    ![Opening Parameters](attachments/text-widgets/caption-edit-button.png) 
 
 Parameters have the following settings:
 
@@ -58,27 +62,27 @@ Parameters have the following settings:
 
 *  **Format** – a format in which an attribute value will be displayed
 
-    ![Parameter Settings](attachments/common-widgets/parameter-settings.png)
+    ![Parameter Settings](attachments/text-widgets/parameter-settings.png)
 
-##### 2.2.2.1 Adding New Parameters
+##### 2.3.2.1 Adding New Parameters
 
 To use parameters, do the following:
 
-1. Place the **Text** widget must be placed in a context of an entity, as in, inside a [data widget](data-widgets).
+1. Place the **Text** widget in a context of an entity, as in, inside a [data widget](data-widgets).
 
 2. Double-click the **Caption** setting in the text widget properties.
 
 3.  In the **Edit Caption** dialog box > **Parameters** section click **New**:
 
-    ![Adding New Parameter](attachments/common-widgets/adding-parameter.png)
+    ![Adding New Parameter](attachments/text-widgets/adding-parameter.png)
 
 4. In the **Edit Template Parameter** dialog box, click **Select**, choose an attribute and confirm your choice.
 
 5.  In the **Caption** setting, write the text you would like to display and type **Index** of the parameter you would like to include. In the example below, to include a full name of your customer and a number of unread messages, you need to use indexes {1} for the *FullName* attribute, and {2} for the *NrOfUnread* attribute:  
 
-    ![Parameter Example](attachments/common-widgets/parameters-example.png)
+    ![Parameter Example](attachments/text-widgets/parameters-example.png)
 
-##### 2.2.2.2 Performing Other Actions on Parameters
+##### 2.3.2.2 Performing Other Actions on Parameters
 
 In addition to adding new parameters, you can perform the following actions on parameters:
 
@@ -90,9 +94,9 @@ In addition to adding new parameters, you can perform the following actions on p
 
 *  **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
 
-    ![Parameter Actions](attachments/common-widgets/parameter-actions.png)
+    ![Parameter Actions](attachments/text-widgets/parameter-actions.png)
 
-#### 2.2.3 Render Mode
+#### 2.3.3 Render Mode
 
 The render mode determines how the text will be displayed. 
 
@@ -109,5 +113,5 @@ The render mode determines how the text will be displayed.
 ## 3 Read More
 
 * [Page](page)
-* [Common Widgets](common-widgets)
+* [Text Widgets](text-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)

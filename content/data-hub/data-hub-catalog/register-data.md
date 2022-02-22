@@ -65,7 +65,7 @@ The [Data Hub Registration API specification](https://datahub-spec.s3.eu-central
 
 #### 4.1.1 Creating a Data Hub Catalog API token {#create-token}
 
-You can create a Personal Access Token in the Mendix [Warden](/developerportal/collaborate/warden) application. Follow the steps below:
+You can create a Personal Access Token in the Mendix [Warden](/developerportal/community-tools/warden) application.
 
 #### 4.1.2 Registering an Application Through the Data Hub Catalog Registration API {#register-application}
 

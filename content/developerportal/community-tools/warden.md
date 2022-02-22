@@ -1,6 +1,6 @@
 ---
 title: "Create a Personal Access Token with Warden"
-parent: "account-settings"
+parent: "mendix-profile"
 menu_order: 10
 description: "Explains the concept of Personal Access Tokens (PATs) and how platform users can use these security tokens to give application access to Mendix platform services on their behalf."
 tags: ["Personal Access Token", "API", "PAT", "Warden", "Developer Portal"]
@@ -12,7 +12,7 @@ This document explains the concept of Personal Access Tokens (PATs), how platfor
 
 The following Mendix services support usage of PATs:
 
-* [DataHub Catalogue API](/apidocs-mxsdk/apidocs/data-hub-apis)
+* [Data Hub Catalog API](/apidocs-mxsdk/apidocs/data-hub-apis)
 * [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api)
 * [Projects API](/apidocs-mxsdk/apidocs/projects-api)
 
@@ -56,7 +56,7 @@ More details about the various scopes can be found in the documentation for the 
 
 Click **Create**
 
-A dialogue is shown with your **Token secret**, which is the PAT. You can copy the secret by clicking the ‘copy’ button on the right.
+A dialog is shown with your **Token secret**, which is the PAT. You can copy the secret by clicking the ‘copy’ button on the right.
 
 {{% alert type="warning" %}}
 You need to store this in a safe location as it will not be displayed again.

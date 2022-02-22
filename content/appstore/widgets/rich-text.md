@@ -19,14 +19,13 @@ The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget ena
   * **Basic** – a package that contains plugins suitable for quick input fields
   * **Standard** – a package that contains plugins that can be used for creating standards-compliant content
   * **Full** – a heavier package that contains plenty of plugins suitable for various different needs
-  * **Custom** – the simplest way to configure the toolbar as you want
-* Input and display text is sanitized
-* Use the **Enter** mode and the **Shift+Enter** mode to configure how you want to wrap your content:
+  * **Custom** – the simplest way to customize the toolbar as you want
+* Sanitize input and display text automatically or with advanced, customized filters 
+* Enable wrapping the following elements by pressing the <kbd>Enter<kbd> key or <kbd>Shift<kbd> + <kbd>Enter<kbd>:
 	* Paragraph (`<p>`)
 	* Break lines (`<br>`)
 	* Blocks (`<div>`)
-* Use highlight code feature to insert rich code fragments and have a live preview with highlighted syntax
-* Use advanced filter content to enable or disable elements in your rich text or use auto configuration
+* Support code highlight which enables inserting rich code fragments and having a live preview with highlighted syntax
 
 ## 2 Configuration
 
@@ -108,40 +107,48 @@ Place the Rich Text widget in a Data View, a List View, or a Template Grid with 
 
 ### 2.3 Dimensions Tab
 
-* **Width unit**
-  * **Percentage**
-  * **Pixels**
-* **Width**
-* **Heigh unit**
-  * **Percentage of width**
-  * **Pixels**
-  * **Percentage of parent**
-* **Height**
+* **Width unit** – the width of the widget
+  * **Percentage** – specifies the width in relation to the rest of the elements on the page
+  * **Pixels** – specifies the width in pixels
+* **Width** – used as an appropriate CSS value
+* **Height unit** – the height of the widget
+  * **Percentage of width** – specifies the height in relation to the width
+  * **Pixels** – specifies the height in pixels
+  * **Percentage of parent** – specifies the width in relation to the rest of the elements on the page
+* **Height** – used as an appropriate CSS value
 
 ### 2.5 Events Tab
 
 * **On key press**
-* **On change**
+* **On change**: specifies an action that will be executed when leaving the widget after the value has been changed
 
 ### 2.4 Advanced Tab
 
-* **Enter mode** – defines which of the following is wrapped when you press the <kbd>Enter<kbd> key:
+* **Enter mode** – defines which of the following element is wrapped when you press the <kbd>Enter<kbd> key:
 	* **Paragraph** (`<p>`)
 	* **Break lines** (`<br>`)
 	* **Blocks** (`<div>`)
-* **Shift enter mode** – defines which of the following is wrapped when you press the <kbd>Shift<kbd> + <kbd>Enter<kbd>:
+* **Shift enter mode** – defines which of the following element is wrapped when you press the <kbd>Shift<kbd> + <kbd>Enter<kbd>:
   * **Paragraph** (`<p>`)
   * **Break lines** (`<br>`)
   * **Blocks** (`<div>`)
 
 
-* **Spellchecker** – enables the inline spelling and grammar checker
-* **Enable code highlight** – allows you to configure your code in the text
-* **Advanced content filtering** – defines how the content is sanitized
-  * **Auto** (default) – editor will take care of that
-  * **Custom** – the following items become available which allow you to customize your filter:
+* **Spellchecker**
+
+  * **Yes** (default) – if selected, the inline spelling and grammar checker is enabled
+  * **No** – if selected, the inline spelling and grammar checker is disabled 
+
+* **Enable code highlight**
+
+  * **Yes ** – if selected, the syntax will be highlighted in the code in the text
+  * **No** (default) – if selected, the syntax will not be highlighted in the code in the text
+
+* **Advanced content filtering**
+  * **Auto** (default) – if selected, the content is sanitized automatically by the editor
+  * **Custom** – if selected, you can customize how content is sanitized with the following items:
   	* **Allowed content** – enter tags that are allowed
-  	* **Disallowed content** – enter tags that should be removed
+  	* **Disallowed content** – enter tags that get removed
 
 ## 3 Usage
 
@@ -154,8 +161,8 @@ The following keyboard shortcuts can be used when editing:
 * <kbd>Ctrl</kbd> + <kbd>Y</kbd> – redo
 * <kbd>Ctrl</kbd> + <kbd>C</kbd> – copy
 * <kbd>Ctrl</kbd> + <kbd>V</kbd> – paste
-* <kbd>-</kbd> + <kbd>space</kbd> – start list
-* <kbd>tab</kbd> – indent the content when <kbd>tab</kbd> is configured to indent from the widget XML; otherwise, move the focus to the next element
+* <kbd>-</kbd> + <kbd>space</kbd> – starts a list
+* <kbd>tab</kbd> – indents the content when <kbd>tab</kbd> is configured to indent from the widget XML; otherwise, move the focus to the next element
 
 ## 4 Widgets Below Version 2.0.0
 

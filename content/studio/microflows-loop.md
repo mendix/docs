@@ -73,13 +73,13 @@ To start the use-case, do the following:
 
     ![Change Object Properties in Loop Example](attachments/microflows-loop/change-object-properties.png)
 
-5. In the **Change value** dialogue window, do the following:<br />
+5. In the **Change value** dialog window, do the following:<br />
 
     a. Set **Select an Attribute or Association** to **Processed (Boolean)**.<br />
 
     b. In the **Expressions** tab, set the **New value** of this attribute by typing in *true*. <br />
 
-    ![Example of Change Value Dialogue Window](attachments/microflows-loop/change-value-dialogue-example.png)
+    ![Example of Change Value Dialog Window](attachments/microflows-loop/change-value-dialogue-example.png)
 
     c. Click **Add** to save the changes. 
 

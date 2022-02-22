@@ -660,7 +660,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Improvements
 
-* We added a confirmation dialogue when you delete Custom Headers.
+* We added a confirmation dialog when you delete Custom Headers.
 * We made general performance improvements.
 
 #### Fixes

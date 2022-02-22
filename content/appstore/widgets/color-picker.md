@@ -10,6 +10,60 @@ tags: ["marketplace", "marketplace component", "widget", "color picker", "react"
 
 The [Color Picker](https://marketplace.mendix.com/link/component/107044/) enables selecting and adjusting a color value.
 
+### 1.1 Features
+* Render using the button, input box, and inline modes
+* Execute an action after a color change using [Events](https://docs.mendix.com/studio/page-editor-widgets-events-section) section
+* Add a label
+* Choose when color picker should be editable
+* Choose when it should be visible 
+* Support the **hex**, **RGB**, or **RGBA** color formats
+
+## 2 Usage
+
+The widget requires a defined **Data source**.
+
+## 3 Configuration
+
+The following sections will describe the different available widget properties and how to configure the widget using them.
+
+### 3.1 Data source tab
+
+* **Data source** - the attribute containing a valid color
+
+### 3.2 General
+
+* **Display mode**
+    * Default - **Button**
+    * **Input**
+    * **Inline**
+* **Enable advanced options** - provides ability to choose
+    * **Picker type** - select one of the available picker from [React Color](https://casesandberg.github.io/react-color/)
+        * Block
+        * Chrome
+        * Circle
+        * Compact
+        * Github
+        * Hue
+        * Material
+        * Sketch
+        * Slider
+        * Swatches
+        * Twitter
+    * **Color format** - support the hex, RGB, or RGBA color formats
+    * **Default colors** - available only for Block, Sketch, Circle, Compact, Twitter
+* **Invalid format message** - message shown when user provides a wrong input
+
+
+### 3.3 Events
+
+* **On change** – executes an action when the attribute value changes
+
+## 4 Widgets Below Version 2.0.0
+
+## 1 Introduction
+
+The [Color Picker](https://marketplace.mendix.com/link/component/107044/) enables selecting and adjusting a color value.
+
 ### 1.1 Features 
 
 * Render using the button, input box, and inline modes

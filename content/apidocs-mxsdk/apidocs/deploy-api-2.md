@@ -104,7 +104,7 @@ URL: https://deploy.mendix.com/api/v2/apps/<AppId>/jobs/<JobId>
 **Example Request**
 
 ```bash
-POST /api/v2/apps/calc/jobs/66046953-ecf7-4550-a889-4b7e9f1e1705
+GET /api/v2/apps/calc/jobs/66046953-ecf7-4550-a889-4b7e9f1e1705
 Host: deploy.mendix.com
 
 Mendix-Username: richard.ford51@example.com

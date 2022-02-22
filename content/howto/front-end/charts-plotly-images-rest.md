@@ -19,7 +19,7 @@ The [Plotly API images endpoint](https://api.plot.ly/v2/images) turns a plot int
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Create an account on **plot.ly**: you can sign up to plot.ly here: https://plot.ly/accounts/login/?action=signup#/
+* Create an account on **plot.ly**: you can sign up to plot.ly here: [Plotly Sign Up](https://plot.ly/accounts/login/?action=signup#/)
 * Retrieve the plotly API key which goes with your account; your API key can be found on the settings page when you are logged in to the site
 
 ## 3 Setting up the Domain Model
@@ -70,7 +70,7 @@ To make a call to *Plotly API images* REST endpoint, follow these steps:
 
         ![HTTP Method](attachments/charts/plotly-api/charts-call-rest-method.png)
 
-    * In the tab **HTTP Headers**, Enter your plotly user name and API key (more information on plotly authentication can be found here: https://api.plot.ly/v2/#authentication)
+    * In the tab **HTTP Headers**, Enter your plotly user name and API key (more information on plotly authentication can be found here: [plotly Authentication](https://api.plot.ly/v2/#authentication))
 
         ![Authorization](attachments/charts/plotly-api/charts-call-rest-authorization.png)
 

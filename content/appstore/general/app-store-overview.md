@@ -65,7 +65,8 @@ The header for a component presents the following details:
 	* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
 	* The best practice is to download a component from the Marketplace that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
 * The **Premium** label is applied to components like [app services](#types) that require a subscription; some premium services (like [Email Service](/appstore/app-services/email-service)) also offer a free trial based on a predefined quota/limit
-	* These components have a **Subscribe** button to start your subscription and a **Try for Free** button to start your free trial
+
+	* These components have a **Subscribe** button to configure your subscription (by selecting a specific plan and setting a **Technical Owner**) and a **Try for Free** button to start your free trial
 
 		{{% todo %}}[**Please verify below for "Buy More" button.**]{{% /todo %}}
 
@@ -202,14 +203,20 @@ You can see all the Marketplace app services your company has subscribed to on t
 
 The table presents the **Product Names** your company has subscribed to. Clicking a product name takes you to the [service management dashboard](#service-management-dashboard) for the component. 
 
-The table also presents the **Technical Owner** you can contact with questions, the **Plan** and its **Status**, and the **Expires On** date for the subscription. Under **Usage Details** is a link to the [usage dashboard](#usage-dashboard) for the component.
+The table also presents the **Technical Owner** of the company subscription. When subscribing for a paid component, you can assign the **Technical Owner** role to a user in your company. The Technical Owner can create binding keys on the [service management dashboard](#service-management-dashboard) and do other tasks.
+
+Finally, the table presents, the **Plan**, the plan's **Status**, and the **Expires On** date for the subscription. Under **Usage Details** is a link to the [usage dashboard](#usage-dashboard) for the component.
 
 #### 4.7.1 Service Management Dashboard {#service-management-dashboard}
 
 This dashboard presents an overview of your service instances and binding keys. A service instance is what Mendix creates when you subscribe to an app service. After the service instance has been created, you need binding keys to use the app service in your app.
 
 {{% alert type="info" %}}
-Only [Technical Contacts](/developerportal/collaborate/app-roles#technical-contact) for apps can create binding keys, edit the instance name, and manage the instance’s settings on external platforms.
+Only a Technical Owner for the subscription can create binding keys. When a user from your company wants to request a free trial (and there is already a Technical Owner), they will not have separate unique binding keys. The Technical Owner has to provide the binding keys to the user.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+Only a Technical Owner for the subscription can edit the instance name and manage the instance’s settings on external platforms. 
 {{% /alert %}}
 
 This page presents the **Binding Key Names** that have been created as well as details on the user who created the binding keys (**Created By**) and when the binding keys were created (**Created At**). Click **Delete** to delete that group of binding keys.

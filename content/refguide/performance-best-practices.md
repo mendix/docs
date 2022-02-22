@@ -206,11 +206,11 @@ A microflow with a repeatedly committed variable may cause longer-running transa
 
 Refactor the microflow so that the variable is only committed once in the flow.
 
-## 13 Try to place Create/Update/Delete activities closer to the end of the microflow [MXP014] {#mxp014}
+## 13 Place Create/Update/Delete Activities Closer to the End Event of a Microflow [MXP014] {#mxp014}
 
-A microflow with Create/Update/Delete activities that are placed too near the start event, may cause the database to acquire locks or resources earlier than necessary.
-This may impact application performance.
+A microflow with Create/Update/Delete activities that are placed too close to the start event may cause the database to acquire locks or resources earlier than necessary.
+This may impact app performance.
 
 ### 13.1 Steps to Fix
 
-Refactor the microflow so that the Create/Update/Delete activities are towards the end of the microflow (closer to the end events).
+Refactor the microflow so that the Create/Update/Delete activities are closer the end event of the microflow.

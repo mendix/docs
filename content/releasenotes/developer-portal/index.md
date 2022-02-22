@@ -16,6 +16,11 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### February 24th, 2022
+
+#### Improvements
+* In all StudioPro versions older than 9.6, GIT enabled projects will not be available. In newer versions of StudioPro, both GIT and SVN projects are supported.
+
 ### February 10th, 2022
 
 #### New Features

@@ -195,9 +195,11 @@ On the **Capabilities** page, you can provide the following details about a solu
 * A category recommendation in the **Industry Cloud** section
 * A **Banner** that will be displayed on your content page
 * One or more key features to leverage in the **Solution Capabilities** section (for each capability, enter a **Name** and **Description**)
+* **Use Case** relevant to the content (enter a **Header** and **URL**)
 * **External links** relevant to the content
 
 ![](attachments/share-app-store-content/capabilities_1.jpg)
+
 ![](attachments/share-app-store-content/capabilities_2.jpg)
 
 ### 4.6 Publish {#publish}

@@ -11,6 +11,7 @@ tags: ["Personal Access Token", "API", "PAT", "Warden", "Developer Portal"]
 This document explains the concept of Personal Access Tokens (PATs), how platform users can obtain one using **Warden**, and how platform users can use these security tokens to give application access to Mendix platform services on their behalf.
 
 The following Mendix services support usage of PATs:
+
 * [DataHub Catalogue API](/apidocs-mxsdk/apidocs/data-hub-apis)
 * [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api)
 * [Projects API](/apidocs-mxsdk/apidocs/projects-api)
@@ -36,7 +37,7 @@ First step to create a PAT is to navigate to the separate [Warden](https://warde
 
 For first-time users, the Warden application will look like this:
 
-![](https://paper-attachments.dropbox.com/s_C02EA6FA34B65F39AD5F42555220D3A6F79779559F288D4ED4DE58BF17DBB423_1600976577826_file.png)
+![](attachments/warden/first-time-warden.png)
 
 ### 3.2 Define a new Personal Access Token
 
@@ -47,7 +48,7 @@ You now need to set the following characteristics of the PAT:
 * a name for the PAT — You may want to give it a name that reflects where/why you intend to use the PAT
 * the scopes (authorizations) that you want to delegate to your PAT
 
-    ![](https://paper-attachments.dropbox.com/s_691121B036D3B91C010B9206256B0D3EEE175BAA9162DBA13EF5A87D7BF0B101_1642416644958_image.png)
+    ![](attachments/warden/create-pat.png)
 
 More details about the various scopes can be found in the documentation for the specific services.
 
@@ -61,7 +62,7 @@ A dialogue is shown with your **Token secret**, which is the PAT. You can copy t
 You need to store this in a safe location as it will not be displayed again.
 {{% /alert %}}
 
-![](https://paper-attachments.dropbox.com/s_C02EA6FA34B65F39AD5F42555220D3A6F79779559F288D4ED4DE58BF17DBB423_1600976857368_image.png)
+![](attachments/warden/token-secret.png)
 
 ## 4 Manage your Personal Access Tokens
 
@@ -69,7 +70,7 @@ If you have previously created PATs, the Warden application shows you a list of 
 
 You can delete a PAT. This will prevent anyone who may have obtained the Token secret of the PAT from successfully using it.
 
-![](https://paper-attachments.dropbox.com/s_691121B036D3B91C010B9206256B0D3EEE175BAA9162DBA13EF5A87D7BF0B101_1642416938288_image.png)
+![](attachments/warden/manage-pat.png)
 
 {{% alert type="warning" %}}
 You cannot obtain the Token secrets of these PATs. You can only see that they exist. 

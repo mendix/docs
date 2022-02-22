@@ -92,23 +92,9 @@ To add content to the Marketplace, follow the steps in each section below.
 
 To start, click **Add content** in the top bar of the Marketplace home screen. Follow these steps to continue adding content:
 
-1.  On the **Upload Content** page, select the type of content you would like to publish (the available types correspond to the [Marketplace home page](app-store-overview#home)):
+On the **Upload Content** page, select the type of content you would like to publish (the available types correspond to the [Marketplace home page](app-store-overview#home)):
 
-	![](attachments/share-app-store-content/category.JPG)
-
-2.  Depending on the type you selected, you may be asked to select a sub-category for your component, for example:
-
-	![](attachments/share-app-store-content/sub-categories.jpg)
-	
-3.  Select the location where you want to publish your component:
-
-	* <a name="public-app-store"></a>**Public Marketplace (all Mendix users)** – your component will be available to the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
-	* <a name="private-app-store"></a>**Private Marketplace (your company only)** – your content will receive the **Company only** label and be available only via your [Company Content](app-store-overview#company-content) page; selected private content of a user group can also be made available to [user group guests](app-store-overview#guests) for download; this content will not be reviewed by Mendix
-	
-	![](attachments/share-app-store-content/public-private.jpg)
-	
-	{{% alert type="warning" %}}You can only set the location in the initial version of your content. You cannot change this setting by updating the Marketplace component later.
-	{{% /alert %}}
+![](attachments/share-app-store-content/category.JPG)
 	
 ### 4.2 General {#general}
 
@@ -117,18 +103,26 @@ On the **General** page,  you need to provide some details about your component.
 Follow these steps to describe your content:
 
 1. Enter a **Name** for your component.<br />
-2.  Enter a **Description** of your component.
+2. Enter a **Description** of your component.
 
 	{{% alert type="warning" %}}You can use rich text in the editor. However, using rich text at the beginning of the description is not recommended, as the rich text will not get rendered properly. You should add a few lines of regular text before using rich text.
 	{{% /alert %}}
 
-3. The **Category** you selected earlier will be listed here. You can change this if necessary.
+3. The **Category** you selected earlier will be listed here. You can change this if necessary by going back to previous screen.
 	
 	{{% alert type="warning" %}}You can only set the category in the initial version of your content. You cannot change this setting after the inital version is published.
 	{{% /alert %}}
 
-4. Select the **Studio Pro Version** on which you built the content.
-5.  <a name="license"></a>Select the type of **License** you want applied to your app (if applicable):
+4. Depending on the Category you selected, you may be asked to select a sub-category for your component.
+5. Select the location where you want to publish your component:
+
+	* <a name="public-app-store"></a>**Public Marketplace (all Mendix users)** – your component will be available to the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
+	* <a name="private-app-store"></a>**Private Marketplace (your company only)** – your content will receive the **Company only** label and be available only via your [Company Content](app-store-overview#company-content) page; selected private content of a user group can also be made available to [user group guests](app-store-overview#guests) for download; this content will not be reviewed by Mendix
+	
+	{{% alert type="warning" %}}You can only set the location in the initial version of your content. You cannot change this setting by updating the Marketplace component later.
+	{{% /alert %}}
+6. Select the **Studio Pro Version** on which you built the content.
+7. <a name="license"></a>Select the type of **License** you want applied to your app (if applicable):
 
 	* [Apache V2](https://www.apache.org/licenses/LICENSE-2.0)
 	* [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)

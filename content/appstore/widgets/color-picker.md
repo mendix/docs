@@ -8,88 +8,108 @@ tags: ["marketplace", "marketplace component", "widget", "color picker", "react"
 
 ## 1 Introduction
 
-The [Color Picker](https://marketplace.mendix.com/link/component/107044/) enables selecting and adjusting a color value.
+The [Color Picker](https://marketplace.mendix.com/link/component/107044/) enables selecting and adjusting a color value that is stored in a string attribute
 
 ### 1.1 Features
 * Render using the button, input box, and inline modes
-* Execute an action after a color change using [Events](https://docs.mendix.com/studio/page-editor-widgets-events-section) section
+* Execute an action after a color change using the [Events](/studio/page-editor-widgets-events-section) section
 * Add a label
-* Choose when color picker should be editable
-* Choose when it should be visible 
-* Support the **hex**, **RGB**, or **RGBA** color formats
-
-## 2 Usage
-
-The widget requires a defined **Data source**.
-
-## 3 Configuration
-
-The following sections will describe the different available widget properties and how to configure the widget using them.
-
-### 3.1 Data source tab
-
-* **Data source** - the attribute containing a valid color
-
-### 3.2 General
-
-* **Display mode**
-    * Default - **Button**
-    * **Input**
-    * **Inline**
-* **Enable advanced options** - provides ability to choose
-    * **Picker type** - select one of the available picker from [React Color](https://casesandberg.github.io/react-color/)
-        * Block
-        * Chrome
-        * Circle
-        * Compact
-        * Github
-        * Hue
-        * Material
-        * Sketch
-        * Slider
-        * Swatches
-        * Twitter
-    * **Color format** - support the hex, RGB, or RGBA color formats
-    * **Default colors** - available only for Block, Sketch, Circle, Compact, Twitter
-* **Invalid format message** - message shown when user provides a wrong input
-
-
-### 3.3 Events
-
-* **On change** – executes an action when the attribute value changes
-
-## 4 Widgets Below Version 2.0.0
-
-## 1 Introduction
-
-The [Color Picker](https://marketplace.mendix.com/link/component/107044/) enables selecting and adjusting a color value.
-
-### 1.1 Features 
-
-* Render using the button, input box, and inline modes
-* Execute an action after a color change via a microflow or nanoflow
-* Add a label and label width
+* Choose when the Color Picker should be editable
+* Choose when the Color Picker should be visible 
 * Support the hex, RGB, or RGBA color formats
-
-Supported color pickers are based on the [React Color](http://casesandberg.github.io/react-color/) library:
-
-* Sketch
-* Chrome
-* Block
-* Github
-* Twitter
-* Circle
-* Hue
-* Slider
-* Compact
-* Material
-* Swatches
 
 ## 2 Configuration
 
 To configure this widget, follow these steps:
 
-1. Create an entity with a string attribute for storing the color value.
-2. Place the widget in a data form within the context of the entity.
-3. Select the attribtue for the color.
-4. Optionally, change the rendering and appearance properties to your need.
+1. Create an entity with a String attribute for storing the color value.
+2. Place the Color Picker widget in a data container like a Data view, List view, or Template grid widget, with the entity you created as its data source.
+3. Double-click the Color Picker widget to open the **Edit Color Picker** dialog box.
+4. Configure the widget using the properties described in the sections below.
+
+### 2.1 Data source Tab
+
+* **Data source** (required) – a String attribute containing a valid color in hex, RGB or RGBA color formats
+
+### 2.2 General Tab
+
+* **Enable advanced options**
+
+    * **Yes** – if selected, the following advanced options become available:
+
+        * **Display mode**
+            * **Button** (default)
+            * **Input**
+            * **Inline**
+
+        * **Picker type** – select one of the following available pickers from the [React Color](https://casesandberg.github.io/react-color/) library:
+            
+            * **Block**
+            * **Chrome**
+            * **Circle**
+            * **Compact**
+            * **Github**
+            * **Hue**
+            * **Material**
+            * **Sketch**
+            * **Slider**
+            * **Swatches**
+            * **Twitter**
+            
+        * **Color format** – defines which color format to use
+            * **HEX**
+            * **RGB**
+            * **RGBA**
+            
+        *  **Default colors** – defines a list of pre-defined colours used with the color picker
+        	 
+        	 {{% alert type="info" %}}
+        	 This is option is only available if the Picker type is Block, Sketch, Circle, Compact, or Twitter
+        	 {{% /alert %}}
+        	 
+        	 * **New** – opens the **Edit Default Colors Item** dialog box where you can create a new default color
+        	   * **Color** – defines the default color in hex, RGB, or RGBA format
+        	 * **Delete** – deletes the selected default color
+        	 * **Edit** – opens the **Edit Default Colors Item** dialog box where you can make changes to the selected default color
+        	 * **Move up** – moves up the selected default color
+        	 * **Move down** – moves down the selected default color
+        	 * **Color** – the list of the existing default colors
+
+    * **No** (default) – if selected, the advanced options are disabled.
+
+* **Invalid format message** – defines the message that is shown when the user provides a wrong input
+
+* **Show label**
+
+    * **Yes** – if selected, the **Label caption** property becomes available
+        * **Label caption** – defines the label caption of the widget that is shown on the page
+
+    * **No** (default) – if selected, the **Label caption** property is unavailable
+
+
+
+### 2.3 Events Tab
+
+* **On change** – executes an action when the attribute value changes
+
+### 2.4 Edibility Tab
+
+For more information, see [Editability Section](/refguide/common-widget-properties.md/#editability) in the *Studio Pro 9 Guide*.
+
+### 2.5 Visibility Tab
+
+For more information, see [Visibility Section](/refguide/common-widget-properties.md/#visibility-properties) in the *Studio Pro 9 Guide*.
+
+### 2.6 Common Tab
+
+For more information, see [Common Section](/refguide/common-widget-properties.md/#common-properties) in the *Studio Pro 9 Guide*.
+
+## 4 Widgets Below Version 2.0.0
+
+Features
+
+* Render using the button, input box, and inline modes
+* Execute an action after a color change via a microflow or nanoflow
+* Add a label and label width
+* Support the hex, RGB, or RGBA color formats
+* Supported color pickers are based on the [React Color](http://casesandberg.github.io/react-color/) library

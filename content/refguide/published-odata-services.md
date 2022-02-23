@@ -2,7 +2,7 @@
 title: "Published OData Services"
 parent: "integration"
 menu_order: 10
-tags: ["studio pro"]
+tags: ["studio pro","OData","publish"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -31,7 +31,7 @@ The service name uniquely identifies the published OData service within the app.
 
 ### 2.2 Version
 
-Use the **version** field to assign a version number to the service. This number will be shown in the API documentation.
+Use the **Version** field to assign a version number to the service. This number will be shown in the API documentation.
 
 {{% alert type="info" %}}
 It is recommended to use [semantic versioning](https://semver.org/) for services that you publish.
@@ -39,7 +39,7 @@ It is recommended to use [semantic versioning](https://semver.org/) for services
 
 ### 2.3 Location
 
-The location where the service will be available. The part before `/odata/` may be different depending on where the app is running. You can specify the part after `/odata/` yourself. It is recommended to specify the service name and the major version in the location.
+The location denotes where the service will be available. The part before `/odata/` may be different depending on where the app is running. You can specify the part after `/odata/` yourself. It is recommended to specify the service name and the major version in the location.
 
 ### 2.4 Namespace
 
@@ -49,13 +49,13 @@ In OData, the namespace is used to refer to data types. You can customize this n
 
 This list gives an overview of all entities published as [OData resources](published-odata-resource).
 
-### 2.6 Entity details
+### 2.6 Entity Details
 
 This list gives an overview of all published attributes and associations.
 
 ## 3 Settings
 
-### 3.1 OData version
+### 3.1 OData Version
 
 You can choose between OData 4 (recommended) and OData 3. One of the main differences is that OData 4 services return results in JSON, and OData 3 services return results in XML.
 

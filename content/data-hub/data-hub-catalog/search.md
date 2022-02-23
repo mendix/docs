@@ -410,7 +410,7 @@ Technical owners can be [changed](curate#changing-owners).
 
 When a data source is registered, by default, it is **Discoverable** in the Data Hub Catalog. When this is set, all users in your company can find it, view the details, and consume it. The owners of an asset and curators can set a data source as **Non-discoverable**, which means it is not visible to users unless they are the owner or a curator.
 
-See [Curation Bar](#curation-bar) for changing **Discoverability** as the owner of the data source or curator.
+See the [Curation Bar](#curation-bar) section below for changing **Discoverability** as the owner of the data source or curator.
 
 The following discoverability values can be set:
 
@@ -419,7 +419,7 @@ The following discoverability values can be set:
 
 #### 3.6.5 Validated
 
-This indicates if the data source has been **Validated**. For details on changing **Validated** as an owner or curator, see the [Curate Bar](#curate-bar) section below.
+This indicates if the data source has been **Validated**. For details on changing **Validated** as an owner or curator, see the [Curation Bar](#curation-bar) section below.
 
 #### 3.6.6 Application
 
@@ -448,15 +448,15 @@ The data source URI is the location of the service contract of the data source, 
 
 ### 3.9 Download the Metadata Contract of a Data Source {#download-contract}
 
-For a selected data source, you can click **Download** to download the OData service contract that is located at the data source endpoint. A *.zip* file that includes the all the files that make up the full metadata contract is generated and downloaded.
+For a selected data source, you can click **Download** to download the OData service contract that is located at the data source endpoint. A ZIP file that includes the all the files that make up the full metadata contract is generated and downloaded.
 
-The resulting *.zip* file is named `DataHub_<service_name>_<service_version>_<technology>.zip` where the string `<technology>` identifies the OData version (`v3` or `v4`) in the file name.
+The resulting ZIP file is named `DataHub_<service_name>_<service_version>_<technology>.zip` where the string `<technology>` identifies the OData version (`v3` or `v4`) in the file name.
 
 Here is an example:
 
 ![download example](attachments/search/download_example.png)
 
-When you click **Download**, the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`. This *.zip* file has the folder `DataHub_SAP_Intelligence_1.0_OData4`, which contains the all the metadata files that define the service.
+When you click **Download**, the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`. This ZIP file has the folder `DataHub_SAP_Intelligence_1.0_OData4`, which contains the all the metadata files that define the service.
 
 ### 3.10 Viewing Search Results in the Data Hub Landscape
 

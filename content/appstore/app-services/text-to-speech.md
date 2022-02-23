@@ -1,5 +1,5 @@
 ---
-title: "Text To Speech"
+title: "Text to Speech"
 category: "App Services"
 description: " "
 tags: ["text to speech", "service", "app store", "marketplace", "component", "platform support"]
@@ -7,7 +7,7 @@ tags: ["text to speech", "service", "app store", "marketplace", "component", "pl
 
 ## 1 Introduction
 
-The [Text To Speech](https://marketplace.mendix.com/link/component/118409) app service enables you to easily convert written text into human voice in your web applications. With this app service, you can build an app to work with the state-of-the-art of text to voice conversion, without building your own text-to-speech app from the scratch. All you need to do is drag and drop items and configure them.
+The [Text to Speech](https://marketplace.mendix.com/link/component/118409) app service enables you to easily convert written text into human voice in your web applications. With this app service, you can build an app to work with the state-of-the-art of text to voice conversion, without building your own text-to-speech app from the scratch. All you need to do is drag and drop items and configure them.
 
 Here is an overview of what the Text To Speech contains:
 
@@ -55,7 +55,6 @@ A trial gives everyone in your company one-month access to the app service. The 
 6. Click the link in the email to go to the Marketplace [Subscriptions](https://docs.mendix.com/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 7. Click **Text to Speech** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
 8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
-
 
 #### 2.1.2 Subscribing to the App Service
 

@@ -245,7 +245,11 @@ You can change your password in this section. By default, you are requested to c
 
 ### 10.5 API Keys {#api-key}
 
-In this section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allow apps using it to act on behalf of the user who created the key, which means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password. 
+In this section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allow apps using it to act on behalf of the user who created the key, which means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password.
+
+{{% alert type="info" %}}
+Some platform APIs use *Personal Access Tokens (PATs)* rather than *API Keys*. For more information on PATs, and how to generate and manage them, see [Create a Personal Access Token with Warden](warden).
+{{% /alert %}}
 
 For example, you can use an API key to perform scripted operations on your application model with the SDK. 
 

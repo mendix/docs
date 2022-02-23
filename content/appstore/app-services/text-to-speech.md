@@ -1,5 +1,5 @@
 ---
-title: "Text To Speech"
+title: "Text to Speech"
 category: "App Services"
 description: " "
 tags: ["text to speech", "service", "app store", "marketplace", "component", "platform support"]
@@ -7,7 +7,7 @@ tags: ["text to speech", "service", "app store", "marketplace", "component", "pl
 
 ## 1 Introduction
 
-The [Text To Speech](https://marketplace.mendix.com/link/component/118409) app service enables you to easily convert written text into human voice in your web applications. With this app service, you can build an app to work with the state-of-the-art of text to voice conversion, without building your own text-to-speech app from the scratch. All you need to do is drag and drop items and configure them.
+The [Text to Speech](https://marketplace.mendix.com/link/component/118409) app service enables you to easily convert written text into human voice in your web applications. With this app service, you can build an app to work with the state-of-the-art of text to voice conversion, without building your own text-to-speech app from the scratch. All you need to do is drag and drop items and configure them.
 
 Here is an overview of what the Text To Speech contains:
 
@@ -47,7 +47,7 @@ Text to Speech is a premium Mendix product that is subject to a purchase and sub
 
 A trial gives everyone in your company one-month access to the app service. The trial has a limitation with [data usage](#check-usage) up to 2500 minutes. To start a trial, perform the following steps:
 
-1. Go to the [Text To Speech](https://marketplace.mendix.com/link/component/118593) page in the marketplace.
+1. Go to the [Text to Speech](https://marketplace.mendix.com/link/component/118593) page in the Marketplace.
 2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
 3. Select the check box to agree to the **Terms & Conditions**.
 4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
@@ -56,10 +56,9 @@ A trial gives everyone in your company one-month access to the app service. The 
 7. Click **Text to Speech** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
 8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
 
-
 #### 2.1.2 Subscribing to the App Service
 
-1. Go to the [Text To Speech](https://marketplace.mendix.com/link/component/118593) page in the marketplace.
+1. Go to the [Text to Speech](https://marketplace.mendix.com/link/component/118593) page in the Marketplace.
 2. Click **Subscribe** to start a subscription.
 3. Select your subscription plan.
 4. Fill in [Technical Contact](https://docs.mendix.com/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.

@@ -211,7 +211,7 @@ You created the **Customer** entity and its attributes:
 
 You have created all the entities and their attributes:
 
-<img src="attachments/domain-model-how-to-configure/entities.png" alt="Entities"  />
+![Entities](attachments/domain-model-how-to-configure/entities.png)
 
 Now you need to define how these entities are connected to each other and create associations. For more information on associations, see [Associations](/studio/domain-models-association-properties).  
 

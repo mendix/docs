@@ -32,7 +32,7 @@ The *Studio version* is updated continuously (even daily), which will provide yo
 
 This means that when you upgrade, you upgrade your whole app to a new Mendix version. As Mendix version contains Mendix Studio Pro version, this also means that you or your team members need to install and use the new version for Studio Pro as well. 
 
-When you see the upgrade notification, you can either stay on the current version and continue working (although you might not have the newest Mendix Platform features and improvements), or you can upgrade to the newest version. When you upgrade, you will automatically be upgraded to the latest version possible, even if it is in a new Studio range. 
+When you see the upgrade notification, you can either stay on the current version and continue working (although you might not have the newest Mendix Platform features and improvements), or you can upgrade to the newest version. When you upgrade, you will automatically be upgraded to the latest version possible. Usually it is the latest version in the current Studio bundle. An upgrade from one Studio bundle to another can be done in Studio Pro. For example, if you want to upgrade from Mendix version 9.6 to Mendix version 9.10, you need to use Studio Pro.
 
 {{% alert type="info" %}} 
 

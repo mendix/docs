@@ -13,7 +13,7 @@ Offline-first applications work regardless of the connection in order to provide
 It is important to understand that offline-first is an architectural concept and not an approach based on the network state of the device. Offline-first apps do not rely on a connection, but they can use connections (for example, you can call microflows, use a Google Maps widget, or use push notifications).
 {{% /alert %}}
 
-Mendix supports building offline-first applications for [native mobile](native-mobile) and [hybrid mobile](hybrid-mobile) apps. Both native and hybrid apps share the same core, and this gives them the same offline-first capabilities. Native mobile apps are always offline-first, but for hybrid mobile apps, it depends on the navigation profile that is configured. The data is stored on the device in a local database, and the files are stored on the file storage of the device.
+Mendix supports building offline-first applications for [native mobile](native-mobile) and hybrid apps. Both native and hybrid apps share the same core, and this gives them the same offline-first capabilities. Native mobile apps are always offline-first, but for hybrid mobile apps, it depends on the navigation profile that is configured. The data is stored on the device in a local database, and the files are stored on the file storage of the device.
 
 Mendix Studio Pro performs validations to make sure your app follows an offline-first approach and works even when there is no connection.
 
@@ -74,9 +74,7 @@ The upload phase executes the following operations:
 1. <a name="upload-step-one"></a>As the local database can be modified only by committing or deleting an object, such an object can be either a new object created while offline or an existing object previously synced from the server. The upload phase detects which objects have been committed to the local database since the last sync. The detection logic differs per sync type. For **Synchronize all**, all committed objects in the local database are checked. For **Synchronize objects**, all committed objects from the list of selected objects are checked.
 2.  <a name="upload-step-two"></a>There might be objects deleted from the device database since the last sync. The upload phase checks which objects have been deleted.
    
-   {{% alert type="warning" %}}
-   Deleting an object from the device database is only supported in Studio Pro 9.7 and higher.
-   {{% /alert %}}
+   {{% alert type="warning" %}}Deleting an object from the device database is only supported in Studio Pro 9.7 and higher.{{% /alert %}}
    
 3. <a name="upload-step-three"></a>If there are any changed or new file objects their content is uploaded to the server and stored there temporarily. Each file is uploaded in a separate network request. If a file upload fails, the whole sync is aborted without causing any changes to the server or device database.
 4. <a name="upload-step-four"></a>All the changed and new objects are sent to the server, and the content of the files is linked to the objects. The server performs referential integrity validation of the objects (for more information, see the [Dangling References](#dangling-references) section below). The objects are committed to the server database. Information about deleted objects is also sent to the server so the server can delete them from its database too. This step is performed in a single network request.

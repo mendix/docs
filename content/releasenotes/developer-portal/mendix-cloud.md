@@ -12,6 +12,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### February 17th, 2022
+
+#### Fixes
+
+* We removed a misleading message which was displayed when a Free App was unlinked from its environment. (Ticket 140897)
+
 ### January 13th, 2022
 
 #### Fixes
@@ -654,7 +660,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Improvements
 
-* We added a confirmation dialogue when you delete Custom Headers.
+* We added a confirmation dialog when you delete Custom Headers.
 * We made general performance improvements.
 
 #### Fixes

@@ -82,7 +82,7 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 
 ### 3.4 For Selling App Services
 
-For details on preparing and selling your component, see [How to Sell Your App Service in the Marketplace](sell).
+For details on preparing and selling your component, see [How to Sell Your App Service in the Marketplace](/appstore/creating-content/as-sell).
 
 ## 4 Adding New Marketplace Content {#adding}
 
@@ -90,11 +90,7 @@ To add content to the Marketplace, follow the steps in each section below.
 
 ### 4.1 Getting Started
 
-To start, click **Add content** in the upper-right corner of the Marketplace home screen:
-
-![](attachments/share-app-store-content/add-content-button.jpg)
-
-Follow these steps to continue adding content:
+To start, click **Add content** in the top bar of the Marketplace home screen. Follow these steps to continue adding content:
 
 1.  On the **Upload Content** page, select the type of content you would like to publish (the available types correspond to the [Marketplace home page](app-store-overview#home)):
 
@@ -136,7 +132,7 @@ Follow these steps to describe your content:
 
 	* [Apache V2](https://www.apache.org/licenses/LICENSE-2.0)
 	* [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)
-	* [Mendix EULA](https://www.mendix.com/terms-of-use/)<
+	* [Mendix EULA](https://www.mendix.com/terms-of-use/)
 	* [MindSphere Development License Agreement](https://siemens.mindsphere.io/en/terms)
 	* [MIT](https://opensource.org/licenses/MIT)
 	* SDISW Development License Agreement for Mendix Sample Apps EXTERNAL
@@ -194,7 +190,7 @@ The editor comes with a set of basic formatting tools, such as bold, bullet list
 
 <a name="screenshot"></a>Click **Add Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
 
-![](attachments/share-app-store-content/enable.png)
+![](attachments/share-app-store-content/enable.jpg)
 	
 You can optionally add a **Video** and **Demo**.
 	
@@ -259,5 +255,5 @@ To update content that has already been published, follow these steps:
 ## 6 Read More
 
 * [Marketplace Overview](app-store-overview)
-* [How to Sell Your App Service in the Marketplace](sell)
+* [How to Sell Your App Service in the Marketplace](/appstore/creating-content/as-sell)
 * [How to Use Marketplace Content in Studio Pro](app-store-content)

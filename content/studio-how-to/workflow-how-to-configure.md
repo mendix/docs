@@ -272,13 +272,13 @@ Do the following:
 
     3. Create a new page called **ShipDevices** for the **Page** property referring to steps 7a-7d of the the [Specifying Details of the New Hire](#specify-details) section.
 
-    5.  On the newly created **ShipDevices** page all attributes are added to the employee detail form by default. You need to make sure that the Facilities department will be able to view the fields but not change them: select the data view with the employee details and go to its properties.
+    5.  On the newly created **ShipDevices_Workflow** page all attributes are added to the employee detail form by default. You need to make sure that the Facilities department will be able to view the fields but not change them: select the data view with the employee details and go to its properties.
 
     6. Toggle the **Read-Only** property to make all fields in the form read-only:
 
         ![Read-Only Data View](attachments/workflow-how-to-configure/data-view-read-only.png)
 
-    7. Only the Facilities role can access the **ShipDevices** page. Navigate to the page properties > **Allowed Roles** and deselect all roles except **Facilities**.
+    7. Only the Facilities role can access the **ShipDevices_Workflow** page. Navigate to the page properties > **Allowed Roles** and deselect all roles except **Facilities**.
 
 
 Great job! You have created the decision and user tasks on whether the new hire is working from the office or from home. Your workflow is configured! 
@@ -319,11 +319,9 @@ You need to configure navigation otherwise the user roles will not be able to re
 
     4. Find the **TaskInbox** page in the list and click **Select**.
 
-    5. In the menu item properties, set **Caption** to **Managers: Task Inbox**.
+    5. In the menu item properties, set **Caption** to **Task Inbox**.
 
     6. Set **Icon** to **Envelope**.
-
-4. You also need to add menu items for the Facilities department to be able to open their task inbox. Create a new **Facilities: Task Inbox** menu item referring to steps 2a-2e above.
 
 You have configured the navigation for your app and now you can preview and test it 
 

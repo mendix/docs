@@ -4,7 +4,7 @@ description: "Describes Mendix best practices on optimizing an app performance."
 parent: "mx-assist-performance-bot"
 tags: ["studio pro", "performance", "performance bot", "mx assist", "mendix assist"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#The anchors <mxp001-mxp012> below are all mapped, so they should not be removed or changed.
+#The anchors <mxp001-mxpnnn> below are all mapped, so they should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -195,7 +195,7 @@ A list view is used on a page that is nested for two or more levels, for example
 When you use two or more levels of nesting, page performance may be affected due to the increased number of requests and transferred data volume.
     
 ### 10.1 Steps to Fix
-    
+
 To fix this issue, consider restructuring your current page and adding a new one. For example, you can add a pop-up page.
 
 ## 11 Avoid Repeatedly Committing a Variable [MXP012] {#mxp012}
@@ -205,4 +205,14 @@ A microflow with a repeatedly committed variable may cause longer-running transa
 ### 11.1 Steps to Fix
 
 Refactor the microflow so that the variable is only committed once in the flow.
+
+## 12 Negating XPath Entity Access Rules [MXP013] {#mxp013}
+
+An entity with a large amount of data and access rules that are negating one another may cause performance issues.
+
+If two access rules differ only by negation, you can try to remove the negating rule (the rule that contains `not()` or `= false()`).
+
+### 12.1 Steps to Fix
+
+Try to avoid negating XPath rules. Otherwise your app may require database tuning if there is a large number of objects.
 

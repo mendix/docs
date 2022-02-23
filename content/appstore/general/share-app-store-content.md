@@ -103,24 +103,25 @@ On the **General** page,  you need to provide some details about your component.
 Follow these steps to describe your content:
 
 1. Enter a **Name** for your component.<br />
-2. Enter a **Description** of your component.
+2.  Enter a **Description** of your component.
 
 	{{% alert type="warning" %}}You can use rich text in the editor. However, using rich text at the beginning of the description is not recommended, as the rich text will not get rendered properly. You should add a few lines of regular text before using rich text.
 	{{% /alert %}}
 
-3. The **Category** you selected earlier will be listed here. You can change this if necessary by going back to previous screen.
+3. The **Category** you selected earlier will be listed here. You can change this if necessary by clicking **Back** to go back to previous page..
 	
 	{{% alert type="warning" %}}You can only set the category in the initial version of your content. You cannot change this setting after the inital version is published.
 	{{% /alert %}}
 
-4. Depending on the Category you selected, you may be asked to select a sub-category for your component.
-5. Select the location where you want to publish your component:
+4. Depending on the category you selected, you may be asked to select a **Sub-category** for your component.
+5.  Select the location where you want to publish your component:
 
 	* <a name="public-app-store"></a>**Public Marketplace (all Mendix users)** – your component will be available to the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
 	* <a name="private-app-store"></a>**Private Marketplace (your company only)** – your content will receive the **Company only** label and be available only via your [Company Content](app-store-overview#company-content) page; selected private content of a user group can also be made available to [user group guests](app-store-overview#guests) for download; this content will not be reviewed by Mendix
 	
 	{{% alert type="warning" %}}You can only set the location in the initial version of your content. You cannot change this setting by updating the Marketplace component later.
 	{{% /alert %}}
+
 6. Select the **Studio Pro Version** on which you built the content.
 7. <a name="license"></a>Select the type of **License** you want applied to your app (if applicable):
 
@@ -195,12 +196,10 @@ On the **Capabilities** page, you can provide the following details about a solu
 * A category recommendation in the **Industry Cloud** section
 * A **Banner** that will be displayed on your content page
 * One or more key features to leverage in the **Solution Capabilities** section (for each capability, enter a **Name** and **Description**)
-* **Use Case** relevant to the content (enter a **Header** and **URL**)
+* A **Use Case** relevant to the content (enter a **Header** and **URL**)
 * **External links** relevant to the content
 
-![](attachments/share-app-store-content/capabilities_1.jpg)
-
-![](attachments/share-app-store-content/capabilities_2.jpg)
+![](attachments/share-app-store-content/capabilities.jpg)
 
 ### 4.6 Publish {#publish}
 

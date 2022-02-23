@@ -1,5 +1,5 @@
 ---
-title: "Speech To Text"
+title: "Speech to Text"
 category: "App Services"
 description: " "
 tags: ["speech to text", "service", "app store", "marketplace", "component", "platform support"]
@@ -7,7 +7,7 @@ tags: ["speech to text", "service", "app store", "marketplace", "component", "pl
 
 ## 1 Introduction
 
-The [Speech To Text](https://marketplace.mendix.com/link/component/118408) app service enables you to build an app to convert speech to text with state-of-the-art speech recognition. With this app service, your app can easily convert speech into text and trigger actions that you have specified. All you need to do is drag and drop items and configure them.
+The [Speech to Text](https://marketplace.mendix.com/link/component/118408) app service enables you to build an app to convert speech to text with state-of-the-art speech recognition. With this app service, your app can easily convert speech into text and trigger actions that you have specified. All you need to do is drag and drop items and configure them.
 
 Here is an overview of what Speech To Text contains:
 
@@ -48,7 +48,7 @@ Speech to Text is a premium Mendix product that is subject to a purchase and sub
 
 A trial gives everyone in your company one-month access to the app service. The trial has a limitation with [data usage](#check-usage) up to 300 minutes. To start a trial, perform the following steps:
 
-1. Go to the [Speech to Text](https://marketplace.mendix.com/link/component/118408) page in the marketplace.
+1. Go to the [Speech to Text](https://marketplace.mendix.com/link/component/118408) page in the Marketplace.
 2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
 3. Select the check box to agree to the **Terms & Conditions**.
 4. Click **Enable Trial**. A page opens and confirms that the your request has been received.

@@ -14,11 +14,11 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ##### Improvements 
 
-* We improved the styling of the Catalog
+* We improved the appearance of the Catalog by adjusting colors and styling.
 
 #### Fixes
 
-* We fixed a typo in a validation message that appears when registering a contract fails
+* We fixed a typo in a validation message that appeared if registering a contract failed.
 
 ### February 17th, 2022
 

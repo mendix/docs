@@ -151,7 +151,7 @@ Click **Delete** to delete a draft. You can also click **Withdraw** to withdraw 
 
 ### 4.2 My Subscriptions {#my-subscriptions}
 
-{{% todo %}}[**Please verify below. Does this page only include free trials? Can you provide me with a screenshot with appropriate example data or acceptance credentials to take a new screenshot? More details necessary?**]{{% /todo %}}
+{{% todo %}}[**Please verify below. Screenshot with appropriate example data or acceptance credentials to take a new screenshot? More details necessary?**]{{% /todo %}}
 
 You can see all the Marketplace app services you have trials for on this page:
 

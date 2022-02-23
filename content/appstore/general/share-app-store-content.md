@@ -161,6 +161,16 @@ If this is the first version of the component you are uploading, the number in t
 
 Enter **Release Notes** for the component in the box provided describing what is new in that release.
 
+Finally, you can upload a **Virus Scan Report**. Uploading a scan report is currently optional, but Mendix strongly recommends that you create this report using [VirusTotal](https://www.virustotal.com/gui/home/upload), for example. This will ensure a high-quality and secure component. Once you upload your app package or component file (for example, *.mpk*, *.mxmodule*, *.zip*, *.class*, *.csv*, *.txt*, or *.tar*) and run the scan with the scanning service, save the report as a PDF. Then, click **Scan Report Upload** to upload your report.
+
+{{% alert type="warning" %}}
+If the virus scan report is invalid or there is some issue with it, the [Marketplace approval process](/appstore/general/share-app-store-content#approval) will reject the component and it will not be listed in the Marketplace. Ensure you upload a true virus scan report to avoid the rejection of your component.
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+If this report is not attached and during our approval process we identify security issues in your component, the component will not be listed in the public Marketplace until the issue is resolved.
+{{% /alert %}}
+
 ![](attachments/share-app-store-content/package.jpg)
 
 ### 4.4 Enable {#doc}

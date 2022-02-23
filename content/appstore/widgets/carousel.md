@@ -12,21 +12,21 @@ The [Carousel](https://marketplace.mendix.com/link/component/47784/) widget disp
 
 ### 1.1 Features
 
-* Supports widget as a content
+* Allows you to use the widget as a content area
 * Navigate to the next or previous image using arrows or dots
 * Autoplay your images
-* Set the timeout between each slide
-* Use the infinite loop to scroll the slides endlessly
-* Add animation when switching slides
+* Set the timeouts between each slide
+* Use the infinite loop to scroll through slides endlessly
+* Add animation when slides are switched
 
 ## 2 Usage
 
-The widget requires a context configured on the **Data Source** section in **General** tab. The possible data sources are described below.
+The widget requires a defined **Data source** available in the **General** tab. The possible data sources are described below.
 
 ### 2.1 Data Source
 
-* Select **System.Image** type of entity as a data source
-* Place **Image** widget inside content and configure it as it is described in [Image](https://docs.mendix.com/appstore/widgets/image)
+* Select a **System.Image** type of entity as a data source
+* Place an **Image** widget inside of the content area and configure it as it is described in [Image](https://docs.mendix.com/appstore/widgets/image)
 
 ## 3 Configuration
 
@@ -40,15 +40,15 @@ The following sections will describe the different available widget properties a
 
 * **Pagination** - show pagination dots
 	* Default: **Yes**
-* **Navigation controls** - show arrows on left and right side
+* **Navigation controls** - show arrows on the left and right side
 	* Default: **Yes**
-* **Autoplay** - allow images to start sliding automatically when widget is ready
+* **Autoplay** - allow images to start sliding automatically when the widget is ready
 	* Default: **Yes**
-* **Delay** - time interval between cycling an item
+* **Delay** - creates a time interval between one item cycling to the next
 	* Default: **1000ms**
 * **Infinite loop** - cycle between images endlessly
 	* Default: **Yes**
-* **Animation** - add fade animation on each cycle
+* **Animation** - add a fade animation on each cycle
 	* Default: **Yes**
 
 ### 3.3 Events

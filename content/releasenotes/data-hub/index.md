@@ -10,6 +10,16 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### February 24th, 2022
+
+##### Improvements 
+
+* Improved Catalog styling
+
+#### Fixes
+
+* Fixed typo in validation message that appears when registering a contract 
+
 ### February 17th, 2022
 
 #### Fixes

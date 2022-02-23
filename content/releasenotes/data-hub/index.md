@@ -14,7 +14,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ##### Improvements 
 
-* Improved Catalog styling
+* We improved the styling of the Catalog
 
 #### Fixes
 

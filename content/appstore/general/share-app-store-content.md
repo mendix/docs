@@ -102,7 +102,7 @@ On the **General** page,  you need to provide some details about your component.
 
 Follow these steps to describe your content:
 
-1. Enter a **Name** for your component.<br />
+1. Enter a **Name** for your component.
 2.  Enter a **Description** of your component.
 
 	{{% alert type="warning" %}}You can use rich text in the editor. However, using rich text at the beginning of the description is not recommended, as the rich text will not get rendered properly. You should add a few lines of regular text before using rich text.

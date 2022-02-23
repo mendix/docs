@@ -1,5 +1,6 @@
 ---
 title: "General Info"
+weight: 10
 tags: ["studio pro"]
 ---
 

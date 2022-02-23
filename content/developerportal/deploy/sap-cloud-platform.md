@@ -17,6 +17,10 @@ This document describes two ways of managing the SAP BTP:
 * Initial setup of the environment when creating a new app: see the section [Set Up SAP BTP for the First Time](#FirstTime)
 * Create a new environment for an existing app: see the section [Create a New Environment](#NewEnvironment)
 
+{{% alert type="info" %}}
+Mendix applications can be deployed to Cloud Foundry regions on SAP Business Technology Platform, not to Neo regions.
+{{% /alert %}}
+
 ## 2 Set Up SAP BTP for the First Time{#FirstTime}
 
 Before you can manage your SAP BTP using the Developer Portal, you will need to set it up. There are two circumstances under which you will have to set up the SAP BTP for the first time.
@@ -507,7 +511,7 @@ If you no longer require a service you can unbind it or remove it from your app.
 
 1. Click the ellipsis (**...**) next to the service you want to unbind in the **Bound Services** section.
 2. Select one of the following:
-    * **Unbind Service** – unbind the service instance and move it to the **Services To Be Bound** section — the service will be bound next time your app is restarted
+    * **Unbind Service** – unbind the service instance and move it to the **Services To Be Bound** section — the service will be bound again next time your app is restarted
     * **Delete Service** – unbind the service instance from the application and delete the service instance from your environment
 
     ![](attachments/sap-cloud-platform/service-unbind.png)
@@ -521,7 +525,7 @@ If you no longer require a service you can unbind it or remove it from your app.
 
     ![](attachments/sap-cloud-platform/service-unbind-warning.png)
 
-    Once the service is deleted, it is deleted from the app environment and returned to the list of **Available Services**. If the service is unbound, it is returned to the list of **Services To Be Bound**, and will be rebound next time the app is restarted.
+    Once the service is deleted, it is deleted from the app environment and returned to the list of **Available Services**. If the service is unbound but not deleted, it is returned to the list of **Services To Be Bound**, and will be rebound next time the app is restarted.
 
 **Removing an Unbound Service**
 
@@ -535,7 +539,9 @@ If you no longer require a service you can unbind it or remove it from your app.
 
 #### 7.3.3 Add Binding Configuration
 
-When a service is in the **Services To Be Bound** section, you can add a new binding configuration.
+When a service is in the **Services To Be Bound** section, you can add a new binding configuration, if this is supported by the service and the Mendix Developer Portal.
+
+If you want to change the configuration of a service which is already bound, you will need to unbind the service first, as described above.
 
 1. Click the ellipsis next to the service you want to (re)configure in the **Services To Be Bound** section.
 

@@ -1,6 +1,6 @@
 ---
 title: "Other Mendix Terms"
-menu_order: 2
+weight: 20
 draft: true
 ---
 

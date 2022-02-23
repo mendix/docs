@@ -237,15 +237,7 @@ When you want to merge the whole branch back to the main line to integrate the f
 
 2. Choose **Version Control > Merge changes here**.
 
-3. Depending on the version control you are using, do one of the following:
-
-    1.  **For SVN**, choose **Merge feature branch**:
-
-        ![](attachments/using-version-control-in-studio-pro/2018-02-28_14-05-23.png)
-
-    1. **For Git**, select the branch you would like to merge from the **Branch line** drop-down list:
-
-        ![](attachments/using-version-control-in-studio-pro/merge-git.png)
+3. Select **Merge feature branch** option.
 
 4. Click **Merge**.
 
@@ -271,10 +263,10 @@ If you have multiple development lines, you sometimes want to port changes from 
 
 Merging is always done while you have a working copy open. The merge will result in extra local changes in that working copy. It is advisable to commit local changes first before merging extra changes into a working copy. Otherwise, the uncommitted local changes and the changes caused by the merge will be combined and it is very hard to untangle them if you are unhappy with the merge. Studio Pro will warn you if you have uncommitted changes.
 
-Select **Version Control > Merge Changes Here**, do the following depending on the version control you are using:
+Select **Version Control > Merge Changes Here**, select the option available for the version control you are using:
 
-1. **For SVN**, select the appropriate type of merge (**Port fix**, **Merge feature branch**, and **Advanced merge** options are available)
-2. **For Git,** select the branch line to merge to the current branch. 
+* For SVN, **Port fix**, **Merge feature branch**, and **Advanced merge** options are available
+* For Git, **Port fix** and **Merge feature branch** options are available
 
 For more information on merge settings, see [Merge Dialog](merge-dialog).
 

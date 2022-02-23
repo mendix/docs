@@ -10,11 +10,48 @@ These release notes cover changes to deployment to [Mendix Cloud](/developerport
 
 For information on the current status of deployment to Mendix Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
+## 2022
+
+### February 17th, 2022
+
+#### Fixes
+
+* We removed a misleading message which was displayed when a Free App was unlinked from its environment. (Ticket 140897)
+
+### January 13th, 2022
+
+#### Fixes
+
+* We fixed an issue where the start environment call to the deploy API failed to start the environment. (Ticket 132011)
+
 ## 2021
+
+### December 23rd, 2021
+
+#### Improvements
+
+* We added log entries to the activity log to record changes to members of the app team and any changes to the [permissions](/developerportal/deploy/node-permissions) that team members have.
+* We now display any documentation associated with [scheduled events](/refguide/scheduled-events#common-properties) in the [Model Options tab](/developerportal/deploy/environments-details#model-options) of the environment details.
+
+#### Fixes
+
+* We fixed an issue where uploading a backup file got stuck and could not be completed. (Tickets 134454, 134887, 134898, 135007, 135325, 135359, 135692, 135894, and 137806)
+
+### December 22nd, 2021
+
+#### Improvements
+
+**Update of `*.mendix.com` TLS certificate**
+
+We will gradually replace the TLS certificate for `*.mendix.com` in January 2022. Browsers like Mozilla Firefox, Microsoft Edge, Google Chrome, and Internet Explorer automatically trust the new certificate. In those cases, there is nothing you have to do.
+
+Current Certificate Details: <https://crt.sh/?id=2349479044>
+
+New Certificate Details: <https://crt.sh/?id=5832398831>
 
 ### November 18th, 2021
 
-### Fixes
+#### Fixes
 
 * We fixed an issue with the custom HTTP header Content-Security-Policy to follow RFC and W3C specs during validation. (Tickets 133172)
 * We fixed an issue where a request handler path with '.' would break transport. (Tickets 132865, 133292)
@@ -31,7 +68,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 ### October 7th, 2021
 
-### Fixes
+#### Fixes
 
 * We fixed an issue where users could not see all their backups, and some backups were shown more than once. (Tickets 127908, 128966, 130090, and 130313)
 
@@ -435,8 +472,8 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 
 This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
-* as **unused** in [JVM Object Heap](/developerportal/operate/trends-v4#a-name-trends-appmxruntimejvmheap-a-4-4-jvm-object-heap)
-* as **unused java heap** in [JVM Process Memory Usage](/developerportal/operate/trends-v4#a-name-trends-appmxruntimejvmprocessmemory-a-4-5-jvm-process-memory-usage)
+* as **unused** in [JVM Object Heap](/developerportal/operate/trends-v4#Trends-appmxruntimejvmheap)
+* as **unused java heap** in [JVM Process Memory Usage](/developerportal/operate/trends-v4#Trends-appmxruntimejvmprocessmemory)
 
 {{% alert type="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
 
@@ -456,7 +493,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 * We introduced new alerts for Mendix Cloud v4.
     * Database IOPS Burst Balance, based on the graph [Database IOPS Burst Balance](/developerportal/operate/trends-v4#Trends-dbmxdatabaseburstbalance)
-    * Database Freeable Memory, based on the graph [Database Node Operating System Memory](/developerportal/operate/trends-v4#a-name-trends-dbmemory-a-5-5-database-node-operating-system-memory)
+    * Database Freeable Memory, based on the graph [Database Node Operating System Memory](/developerportal/operate/trends-v4#Trends-dbmemory)
 
 ### June 4th, 2020
 
@@ -623,7 +660,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Improvements
 
-* We added a confirmation dialogue when you delete Custom Headers.
+* We added a confirmation dialog when you delete Custom Headers.
 * We made general performance improvements.
 
 #### Fixes

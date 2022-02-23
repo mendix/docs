@@ -1,12 +1,12 @@
 ---
 title: "Configure a Workflow in Studio for the Employee Onboarding Process"
 description: "Describes how to configure a workflow in Mendix Studio."
-menu_order: 05
+weight: 05
 tags: ["studio", "workflow", "how to", task", "onboarding"]
 ---
 
 {{% alert type="warning" %}}
-Workflows in Studio are temporarily unavailable for apps with Mendix version 9.6. We introduced workflows as a Beta feature in Mendix 9 and are now incorporating feedback we received from our community to improve workflows.
+Workflows in Studio are temporarily unavailable for apps with Mendix version 9.6. For more information, see [Using Workflows in Apps with Mendix Version 9.6 and Above](/studio/workflows-9.6).
 
 Workflows in Studio are available for apps with Mendix version 9.5.
 {{% /alert %}}
@@ -308,7 +308,7 @@ You need to configure navigation otherwise the user roles will not be able to re
 
     2. Click the **Page** property.
 
-    3. In the **Select Page** dialog box, switch from the current module to the Workflow Commons one using the drop-down menu in the top-right corner:
+    3. In the **Select Page** dialog box, switch from the current module to the Workflow Commons one using the drop-down menu in the upper-right corner:
 
         {{% image_container width="400" %}}![Select Page](attachments/workflow-how-to-configure/select-page-for-navigation.png){{% /image_container %}}
 

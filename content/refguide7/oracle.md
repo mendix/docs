@@ -24,7 +24,7 @@ You cannot sort, group, or use aggregate functions such as `count()` on strings 
 
 ### 2.3 Selecting DISTINCT Attribute
 
-Using [SELECT DISTINCT](/refguide/oql-select-clause) in OQL queries is not supported for strings longer than 2000 characters.
+Using [SELECT DISTINCT](/refguide7/oql-select-clause) in OQL queries is not supported for strings longer than 2000 characters.
 
 If you run into this limitation, a message like `Error Msg = ORA-06502: PL/SQL: numeric or value error: character string buffer too small` will be logged.
 

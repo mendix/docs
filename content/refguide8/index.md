@@ -2,6 +2,14 @@
 title: "Studio Pro 8 Guide"
 description: "The various sections of the Mendix Studio Pro Guide provide details on the features and functionality of the Mendix Platform."
 tags: ["studio pro"]
+weight: 60
+no_list: false
+cascade:
+    - space: "Studio Pro 8 Guide"
+    - mendix_version: "8"
+    - old_content: true
+    - sitemap:
+        priority: 0.4
 ---
 
 ## 1 Introduction
@@ -12,7 +20,7 @@ Before installing Studio Pro 8, please read [System Requirements](system-require
 
 If you have been using Desktop Modeler version 7, we recommend reading [Moving from Desktop Modeler Version 7 to Studio Pro Version 8](moving-from-7-to-8).
 
-If you are looking for step-by-step guides on performing various Mendix actions, browse the [Studio Pro 8 How-to's](/howto).
+If you are looking for step-by-step guides on performing various Mendix actions, browse the [Studio Pro 8 How-to's](/howto8).
 
 ## 2 Studio Pro Functionality
 
@@ -34,7 +42,7 @@ For more information on options for deploying your app see [Deployment](/develop
 
 ## 3 Version Control
 
-[Version Control](version-control) allows you to manage your app development, work on multiple development lines, as well as collaboratively work with [Mendix Studio](/studio).  For information on how Studio Pro handles versioning of apps, see the [Versioning a Project Deployed to the Cloud](using-version-control-in-studio-pro#versioning-project) section in *Using Version Control in Studio Pro*. 
+[Version Control](version-control) allows you to manage your app development, work on multiple development lines, as well as collaboratively work with [Mendix Studio](/studio8).  For information on how Studio Pro handles versioning of apps, see the [Versioning a Project Deployed to the Cloud](using-version-control-in-studio-pro#versioning-project) section in *Using Version Control in Studio Pro*. 
 
 ## 4 Mendix Runtime
 

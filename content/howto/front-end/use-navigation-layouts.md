@@ -83,7 +83,7 @@ A top navigation conserves more vertical page space than a left navigation. With
 
 #### 2.3.3 Item Priority
 
-Items in a top navigation do not have equal weight. The leftmost items carry more visual weight than other items because of their placement in the primary visual area (top left). Items in the top-left area get more exposure and are often seen as more important than other items. The items in  left navigation, however, do have equal weight because they are all placed on the left with no other items in their opposing direction on the right. Because users read items from left to right, the priority direction for reading items is stronger horizontally than vertically.
+Items in a top navigation do not have equal weight. The leftmost items carry more visual weight than other items because of their placement in the primary visual area (top left). Items in the upper-left area get more exposure and are often seen as more important than other items. The items in  left navigation, however, do have equal weight because they are all placed on the left with no other items in their opposing direction on the right. Because users read items from left to right, the priority direction for reading items is stronger horizontally than vertically.
 
 #### 2.3.4 Visibility
 

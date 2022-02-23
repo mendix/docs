@@ -63,7 +63,7 @@ To find the unused items, do the following:
 
 3. Click **Find**. 
 
-The results will show up in the **Find Results** pane. To filter the results click the **Show all** button in the top-right corner of the pane. 
+The results will show up in the **Find Results** pane. To filter the results click the **Show all** button in the upper-right corner of the pane. 
 
 Note that deleting any unused items might result in more unused items. For example, if you delete an unused page, a microflow which is only used on that page will become an unused item itself. If you are cleaning up your app regularly refresh the unused items list.
 
@@ -89,7 +89,7 @@ Some pages and microflows are only used from Java code and will be listed as an 
 
    ![](attachments/find-and-find-advanced/mark-as-used-property.png)
 
-## 4 Find Usages Option
+## 4 Find Usages Option {#find-usages}
 
 The **Find Usages** option allows you to find where a certain element is used, for example, to find all buttons that open a certain page.
 

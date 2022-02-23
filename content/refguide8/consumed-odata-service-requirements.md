@@ -1,7 +1,7 @@
 ---
 title: "Consumed OData Service Requirements"
 parent: "consumed-odata-services"
-menu-order: 20
+menu_order: 20
 description: "Requirements on OData services consumed in Mendix."
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -106,7 +106,7 @@ There are two types of Data Hub licenses currently available:
   {{% alert type="info" %}}The Freemium Data Hub license is issued on an invitation-only basis. {{% /alert %}}
   {{% alert type="info" %}}For Mendix 8.12.3 and later, apps running without a [Mendix license](/developerportal/deploy/licensing-apps-outside-mxcloud) (and also when running from the Studios) do not have this limitation. This also means that you can run your app from the Studios without the Data Hub license limitations. {{% /alert %}}
 
-Contact your [Mendix Admin](/developerportal/control-center/index#company) or Data Hub Admin to find out what type of Data Hub license your organization has.
+Contact your [Mendix Admin](/developerportal/control-center/#company) or Data Hub Admin to find out what type of Data Hub license your organization has.
 
 
 ### 4.1 Local development

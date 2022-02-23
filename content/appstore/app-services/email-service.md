@@ -1,7 +1,7 @@
 ---
 title: "Email Service"
 category: "App Services"
-description: " "
+description: "Describes the configuration and usage of the Email Service app service, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "app service", "email"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
@@ -30,7 +30,7 @@ This app service enables doing the following:
 
 * The total number of recipients in the "To", "CC", and "BCC" lists cannot exceed 50
 * The cumulative size of the attachment(s) cannot exceed 10 MB
-* Certain files, for example, executables, scripts, and macros, are not supported as attachments. For an exhaustive list of unsupported file types, see [Unsupported File Types for Attachments](#unsupported-file-types)
+* Certain files, for example, executables, scripts, and macros, are not supported as attachments. For an exhaustive list of unsupported file types, see the [Unsupported File Types for Attachments](#unsupported-file-types) section
 
 ### 1.4 Prerequisites
 
@@ -46,7 +46,7 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4]
 
         In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
-        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
     2. In the **Import Module** dialog box, click **Import**. 
     3. Wait until a pop-up window states that the module was successfully imported. Click **OK**.
@@ -61,26 +61,15 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 ### 3.1  Subscribing to Get SecretKey and UserName {#key-generation}
 
 1. On the [Email Service](https://marketplace.mendix.com/link/component/118393) page, click **Subscribe** to start a subscription or click **Try for Free** to start a trial.
-
 2.  To start a subscription, fill in [Technical Contact](https://docs.mendix.com/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email. 
 
     For the trial, you do not need to fill in this information.
 
 3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
-
 4. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
+5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. The system generates **SecretKey** and **UserName** and also returns **MailFromDomain**, **SPFRecordValue**, and **MXRecordValue**. For more details on SPF and MX configuration, see the [SPF and MX Records](#spf-and-mx-records) section.
 
-5. Click **Create Binding Keys**.
-
-6. Enter a meaningful name for the binding keys. Make sure that the name includes the name of the app which uses Email Service.
-
-7.  Click **Create Keys** to generate the **SecretKey** and **UserName**. 
-
-    The system generates **SecretKey** and **UserName** and also returns **MailFromDomain**, **SPFRecordValue**, and **MXRecordValue**. For more details on SPF and MX configuration, see the section [SPF and MX Records](#spf-and-mx-records).
-
-    ![secretkey-username-mailfromdomain-spfrecordvalue-mxrecordvalue-generated](attachments/email-service/binding-key-generation.png)
-
-8. **Copy** the **SecretKey** and **UserName**. You will use them later for app deployment.
+   ![secretkey-username-mailfromdomain-spfrecordvalue-mxrecordvalue-generated](attachments/email-service/binding-key-generation.png)
 
 9. After the order is created successfully, the Technical Contact also receives an email to confirm the email address. Follow the instructions in the email to confirm the email address. Once this email address is confirmed, this email address is used as the sender's email address when the app sends an email.
 
@@ -130,7 +119,7 @@ To configure the **Send email** activity, double-click the activity and specify 
   * **Content type** – Defines whether the email is a **Text** or **HTML** message
   *  **Body** – Defines the body of the email
 
-   {{% alert type="info" %}}If you want to send an HTML message, you can generate HTML content, and add the generated HTML string in the **Body** field. For more information, see [Generating HTML Body Content](#generate-html-body).{{% /alert %}}
+   {{% alert type="info" %}}If you want to send an HTML message, you can generate HTML content, and add the generated HTML string in the **Body** field. For more information, see the [Generating HTML Body Content](#generate-html-body) section below.{{% /alert %}}
   
   * **Attachment** – Defines the attachment to the email
 
@@ -171,7 +160,7 @@ The following file types are not supported as attachments:
 
 *.ade*, *.adp*, *.app*, *.asp*, *.bas*, *.bat*, *.cer*, *.chm*, *.cmd*, *.com*, *.cpl*, *.crt*, *.csh*, *.der*, *.exe*, *.fxp*, *.gadget*, *.hlp*, *.hta*, *.inf*, *.ins*, *.isp*, *.its*, *.js*, *.jse*, *.ksh*, *.lib*, *.lnk*, *.mad*, *.maf*, *.mag*, *.mam*, *.maq*, *.mar*, *.mas*, *.mat*, *.mau*, *.mav*, *.maw*, *.mda*, *.mdb*, *.mde*, *.mdt*, *.mdw*, *.mdz*, *.msc*, *.msh*, *.msh1*, *.msh2*, *.mshxml*, *.msh1xml*, *.msh2xml*, *.msi*, *.msp*, *.mst*, *.ops*, *.pcd*, *.pif*, *.plg*, *.prf*, *.prg*, *.reg*, *.scf*, *.scr*, *.sct*, *.shb*, *.shs*, *.sys*, *.ps1*, *.ps1xml*, *.ps2* *.ps2xml*, *.psc1*, *.psc2*, *.tmp*, *.url*, *.vb*, *.vbe*, *.vbs*, *.vps*, *.vsmacros*, *.vss*, *.vst*, *.vsw*, *.vxd*, *.ws*, *.wsc*, *.wsf*, *.wsh*, .xnk
 
-### 4.3 Checking Statistics Using the Usage Dashboard
+### 4.3 Checking Statistics on the Usage Dashboard
 
 The **Usage** dashboard shows the real-time statistics about the usage of an app service. For the Email Service, perform the following steps to check the number of emails sent and data transfer usage:
 
@@ -211,3 +200,6 @@ The SPF record and MX record use the formats shown in the following table:
 | --- | --- | --- |
 | notification.domain.com | TXT | "v=spf1 include:amazonses.com ~all" |
 |notification.domain.com | MX | 10 feedback-smtp.eu-central-1.amazonses.com|
+
+## 6 Read More
+* [Send Emails from a Mendix App](https://academy.mendix.com/link/paths/117/Send-Emails-from-a-Mendix-App-)

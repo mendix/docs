@@ -64,7 +64,7 @@ The title of the page that is shown using the [page title widget](page-title). I
 
 The title can be overridden. For example, the [Create button](control-bar) and the [Edit button](control-bar) of a data grid can refer to the same page, but they override the titles to **New** and **Edit**, respectively.
 
-#### 2.3.6 URL
+#### 2.3.5 URL {#url}
 
 The URL of the page can be used to directly navigate to the page (for example, from external links or bookmarks). It will be shown in the address bar of the browser when you visit the page. When navigating to a page without a URL configured, the last visited URL is shown. Note that the full URL of the page will be the base URL of your application followed by `/p` and then by the configured URL of the page (for example, `http://example.mendixcloud.com/p/home_page`).
 

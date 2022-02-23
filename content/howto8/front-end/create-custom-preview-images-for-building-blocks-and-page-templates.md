@@ -26,7 +26,7 @@ To create a building block preview image in Sketch, follow these steps:
 2. Open the Sketch file named **BB_previewimage.sketch**. This file contains two artboards. The first artboard shows an example of how custom preview images look in the Studio's Toolbox. The second artboard is where you place your image.
 3. Hide the layer called **Template**, then insert your preview image into the **Building Block preview** folder.
 4. When you are happy with your image, select your artboard.
-5.  In the **Export** dialog box that appears in the bottom-right of your screen, make sure the preferences are set to the following:
+5.  In the **Export** dialog box that appears on the lower-right side of your screen, make sure the preferences are set to the following:
     * **Size**: 1x
     * **Format**: PNG
 
@@ -81,7 +81,7 @@ To create a page template preview image in Sketch, follow these steps:
 2. Open the Sketch file named **PT_previewimage.sketch**. This file contains three artboards. The first two artboards show examples of how page template preview images look in Studio. The third artboard is where you place your image.
 3. Hide the layer called **Template**, then insert your preview image into the **Building Block preview** folder.
 4. When you are happy with your image, select your artboard
-5.  In the **Export** dialog box that appears in the bottom-right of your screen, make sure the preferences are set to the following:
+5.  In the **Export** dialog box that appears on the lower-right side of your screen, make sure the preferences are set to the following:
     * **Size**: 1x
     * **Format**: PNG
 

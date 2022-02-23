@@ -16,7 +16,7 @@ The Private Cloud data migration tool allows you to:
 * export the database and files from a Private Cloud environment into a backup file
 * import the database and files from a previously exported backup file into an environment
 
-The Private Cloud data migration tool is compatible with [backup files](/developerportal/operate/restore-backup#5-format-of-a-backup-file) from Mendix Cloud V4,
+The Private Cloud data migration tool is compatible with [backup files](/developerportal/operate/restore-backup#format-of-backup-file) from Mendix Cloud V4,
 allowing you to transfer application data between Mendix Cloud V4 and Mendix for Private Cloud.
 
 ## 2 Prerequisites
@@ -88,7 +88,7 @@ To restore a backup file into your environment, use the following command:
 
 - `-n <namespace>` - the namespace containing the environment
 - `-e <environment>` - the environment where the data should be restored
-- `-f <file>` - backup file (in a [Mendix Cloud V4 format](/developerportal/operate/restore-backup#5-format-of-a-backup-file)) that should be restored into the destination environment
+- `-f <file>` - backup file (in a [Mendix Cloud V4 format](/developerportal/operate/restore-backup#format-of-backup-file)) that should be restored into the destination environment
 
 ### 3.3 Running the Data Transfer in a Jump Pod{#jump-pod}
 

@@ -37,7 +37,7 @@ The [Team Server](team-server) is implemented using Subversion, and the Modeler 
 
 ## 4 Web Modeler
 
-The [Mendix Web Modeler](/studio) is optimized for use with Google Chrome. While Chrome is the officially supported browser, you can also use the Web Modeler with other popular browsers like Mozilla Firefox, Apple Safari, and Microsoft Edge. 
+The [Mendix Web Modeler](/studio7) is optimized for use with Google Chrome. While Chrome is the officially supported browser, you can also use the Web Modeler with other popular browsers like Mozilla Firefox, Apple Safari, and Microsoft Edge. 
 
 {{% alert type="info" %}}
 The browser you use needs to have JavaScript turned on.
@@ -66,7 +66,7 @@ The browser you use needs to have JavaScript turned on.
 * Azure SQL v12 (support is not independently verified and is available only through compatible versions of SQL Server)
 * [MySQL](mysql) 5.7, 8.0
 * [Oracle Database](oracle) 12c Release 2, 19
-* PostgreSQL 9.6, 10, 11, 12, 13
+* PostgreSQL 9.6, 10, 11, 12, 13, 14
 * [SAP HANA](saphana) 2.00.040.00.1545918182
 
 ### 5.4 Java

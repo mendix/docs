@@ -17,7 +17,7 @@ Mendix only supports the InnoDB storage engine, with row-based logging enabled.
 
 ## 3 Transaction Isolation
 
-Mendix uses the `Read Committed` transaction isolation level by default. Only row-based logging can be used in the case of this transaction isolation level. You should set the `binlog_format` database configuration value to `ROW` or `MIXED`. For more information, see [`binlog_format` for MySQL](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_format) or [`binlog_format` for MariaDB](https://mariadb.com/kb/en/mariadb/replication-and-binary-log-server-system-variables/#binlog_format).
+Mendix uses the `Read Committed` transaction isolation level by default. Only row-based logging can be used in the case of this transaction isolation level. You should set the `binlog_format` database configuration value to `ROW` or `MIXED`. For more information, see [`binlog_format` for MySQL](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_format) or [`binlog_format` for MariaDB](https://mariadb.com/kb/en/replication-and-binary-log-system-variables/#binlog_format).
 
 ## 4 SAVEPOINT Exception Does Not Exist
 
@@ -29,7 +29,7 @@ Mendix supports functionality to extract a part of a date and time in a query. I
 
 In Mendix, DateTimes are stored in the UTC time zone. For these functions to work correctly, it is important that the database supports converting dates and times from UTC to another time zone. If this is not possible, the functions will operate on the date and time in the UTC time zone. That can lead to incorrect results if the user expects the date to work in their time zone.
 
-MySQL does not fully support time zone conversion out-of-the-box. You have to fill in some time zone tables (for more details, see [10.6 MySQL Server Time Zone Support](http://dev.mysql.com/doc/refman/5.5/en/time-zone-support.html)). You do not have to do this if you do not use this sort of function in your queries, or if you always want to work with UTC dates and times.
+MySQL does not fully support time zone conversion out-of-the-box. You have to fill in some time zone tables (for more details, see [5.1.15 MySQL Server Time Zone Support](https://dev.mysql.com/doc/refman/8.0/en/time-zone-support.html)). You do not have to do this if you do not use this sort of function in your queries, or if you always want to work with UTC dates and times.
 
 MariaDB supports an identical configuration for time zone conversions.
 

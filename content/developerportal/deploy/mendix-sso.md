@@ -135,19 +135,9 @@ To enable Mendix SSO in your app, follow these steps:
 
     {{% alert type="info" %}}If there is already an After startup microflow, you should not replace it, but rather add the MendixSSO_AfterStartup microflow as an action in the existing microflow{{% /alert %}}
 
-3. To use the *default* user administration pages, add the pages **MyAccountViewEdit** and **UserOverview** to the app navigation by performing the following steps:
-    1. Open **Navigation** from the **App Explorer**.
-    2. Click **New item** to add a new navigation item.
-    3. Enter the following values and click **OK**.
-        * **Caption** – *My Account*
-        * **Icon** – *Glyphicon 'user'* (click **Select…** and search for `user`)
-        * **On click** – *Show a page* **Marketplace modules** > **MendixSSO** > **Default Implementation** > **Pages** > **User** > **MyAccountViewEdit**
-    4. Repeat the above to add another **New item** with the values.
-        * **Caption** – *User Overview*
-        * **Icon** – *Glyphicon 'lock'*
-        * **On click** – *Show a page* **Marketplace modules** > **MendixSSO** > **Default Implementation** > **Pages** > **Admin** > **UserOverview**
+3.  Add your own administration pages to monitor usage, if required.
 
-    {{% alert type="info" %}}If you want to implement your own administration pages, see [Customizing Mendix SSO](#customizing), below, for more information.{{% /alert %}}
+    {{% alert type="info" %}}If you are using Mendix SSO version 2, you can use the *default* user administration pages, see [Customizing Mendix SSO](#customizing), below, for more information.{{% /alert %}}
 
 4. Turn on **Production** security level and configure **User roles** *User* and *Administrator* to have access to the appropriate **MendixSSO** module roles by performing the following steps:
     1. Open **Project Security** from the **App Explorer**.
@@ -164,12 +154,19 @@ To enable Mendix SSO in your app, follow these steps:
 
         ![Confirmation of user roles](attachments/mendix-sso/module-user-roles.png)
 
-5. Rename the file *login-with-sso.html* in the **theme** folder of your app to *login.html* by performing the following steps — this adds the single sign-on button to your sign in screen:
+5. Change the page that Mendix uses to log you in (`login.html`) to allow logging in using SSO.
+
+    There are two versions of the file which you can use to replace `login.html`:
+
+    * `login-with-mendixsso-button.html` – adds a button to the standard sign in page which the end user can click to initiate the single sign-on process — this gives the end user the possibility to sign in using a user name and password if desired
+    * `login-with-mendixsso-automatically.html` – automatically initiates the single sign-on process without needing to click a button
+
+    Rename one of the two files discussed above (`login-with-mendixsso-button.html` or `login-with-mendixsso-automatically.html`) in the **theme** folder of your app to *login.html* by performing the following steps:
+
     1. Open your app directory in File Explorer by selecting the menu item **App** > **Show App Directory in Explorer**.
     2. Go to the **theme** folder.
     3. Rename *login.html* to  *login-without-sso.html*.
-    4. Rename *login-with-sso.html* to *login.html*.
-        ![file explorer showing two login files](attachments/mendix-sso/theme-folder.png)
+    4. Rename your chosen file to *login.html*.
 
 Your app is now configured to use Mendix Single Sign-on when it is deployed to the Cloud.
 

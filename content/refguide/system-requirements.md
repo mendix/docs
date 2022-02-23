@@ -13,7 +13,7 @@ This document presents the system requirements for the various parts of the Mend
 
 ## 2 Mendix Studio Pro {#sp}
 
-Mendix [Studio Pro](modeling) version 9 is supported on 64-bit versions of Windows 10 release 1809 and above. Studio Pro does not run on Windows emulators on Apple Silicon Macs, such as the M1, or on any other ARM-based machines.
+Mendix [Studio Pro](modeling) version 9 is supported on 64-bit versions of Windows 10 release 1809 and above. MTS versions starting from Mendix Studio Pro 9.6.5 and Mendix Studio 9.9.1 are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
 
 The following frameworks are automatically installed (if necessary):
 
@@ -164,7 +164,7 @@ Current support:
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 140 or higher
 * [MySQL](mysql) 8.0
 * [Oracle Database](oracle) 19
-* PostgreSQL 9.6, 10, 11, 12, 13
+* PostgreSQL 10, 11, 12, 13, 14
 * [SAP HANA](saphana) 2.00.040.00.1545918182
 
 {{% alert type="warning" %}}

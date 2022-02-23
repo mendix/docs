@@ -22,7 +22,7 @@ Tools like [Helm](https://helm.sh) and [Kustomize](https://kustomize.io/) allow 
 
 While Helm might be suitable for applications that don't need to be frequently modified or reconfigured, Helm doesn't monitor applications after they have been deployed. In addition, Helm cannot do any advanced processing, such as requesting a new database user or ensuring that an application knows its ingress domain name.
 
-### 2.3 Kubernetes Operators
+### 2.3 Kubernetes Operators{#operators}
 
 Kubernetes offers a standard way to automate application management – the [Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/). An operator uses the standard Kubernetes [REST API](https://kubernetes.io/docs/reference/using-api/) and its own Kubernetes service account to monitor and manage Kubernetes resources for an application.
 

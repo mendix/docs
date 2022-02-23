@@ -60,7 +60,7 @@ For a deep-dive look into styling with Calypso, check out this video:
 
 	![files to watch](attachments/calypso/calypso-watching.png)
 
-9.  Click the sun in the top-right corner to toggle between dark mode and regular mode:
+9.  Click the sun in the upper-right corner to toggle between dark mode and regular mode:
 
 	![dark mode](attachments/calypso/dark-mode.png)
 

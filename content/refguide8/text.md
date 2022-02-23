@@ -72,7 +72,7 @@ Parameters have the following settings:
 
 To use parameters, do the following:
 
-1. Place the **Text** widget must be placed in a context of an entity, as in, inside a [data widget](data-widgets).
+1. Place the **Text** widget in a context of an entity, as in, inside a [data widget](data-widgets).
 
 2. Double-click the **Caption** setting in the text widget properties.
 

@@ -12,6 +12,12 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2021
 
+### December 9th, 2021
+
+#### Improvements
+
+* We added a configurator to help you create a custom *xs-security-json* file to configure an XSUAA service. For more information, see [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector).
+
 ### October 14th, 2021
 
 #### Improvements

@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 If you want to use push notifications with custom apps created with Mendix Native Mobile Builder, make sure you have completed the following prerequisite:
 
-* Complete [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app) through the end of the *Making Your First Build* section
+* Complete [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app) through the end of the *Making Your First Build* section
 
 ## 3 Sending Notifications to Multiple Devices
 

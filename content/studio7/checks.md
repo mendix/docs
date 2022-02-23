@@ -1,7 +1,7 @@
 ---
 title: "Checks"
 description: "Describes checks during publishing process in Mendix Studio."
-menu_order: 60
+weight: 80
 tags: ["studio", "app viewing", "checks", "errors", "consistency errors"]
 ---
 
@@ -15,7 +15,7 @@ When [previewing or publishing your app](publishing-app#publishing-your-app), Me
 
 To display checks for your app and view the faulty elements in it, do the following:
 
-1. Click **Preview** or **Publish** > **Update** in the top-right of Studio. 
+1. Click **Preview** or **Publish** > **Update** in the upper right of Studio. 
 
     ![](attachments/checks/publish-update.png)
 
@@ -30,7 +30,7 @@ To display checks for your app and view the faulty elements in it, do the follow
 
 5.  To view the exact place and element that the error refers to, click the corresponding row in the **Checks** panel (you can click any place of the row, the whole row is responsive),  and the element that contains faults will be displayed.
 
-7. To close the panel, either click the close button in the top-right corner of the panel, or click **Checks** in the top-right corner of Studio. 
+7. To close the panel, either click the close button in the upper-right corner of the panel, or click **Checks** in the upper-right corner of Studio. 
 
 {{% alert type="info" %}}
 

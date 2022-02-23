@@ -112,7 +112,7 @@ To easily find which elements on your page have conditional visibility, you can 
 
 1. Open the page.
 
-2. Click the eye icon in the top-left corner of the page:
+2. Click the eye icon in the upper-left corner of the page:
 
     {{% image_container width="250" %}}![Eye Icon](attachments/pages-how-to-set-visibility/eye-icon.png){{% /image_container %}}
 

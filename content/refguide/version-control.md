@@ -1,6 +1,7 @@
 ---
 title: "Version Control"
 description: "This document gives definitions and explains the version control  process"
+weight: 30
 tags: ["Version Control", "Application Lifecycle Management", "Commit", "Collaborate"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
@@ -14,6 +15,10 @@ Version Control allows you to manage your app development in two ways:
 * Secondly, it allows work to take place on multiple [development lines](#development-line) so that several different features can be worked on at once. These development lines can then be [merged](#merge) back together so that your [main line](#main-line) contains all the completed features that have been worked on separately.
 
 Version control in Mendix is built on top of either [Apache Subversion](https://subversion.apache.org/) or [Git](https://git-scm.com). The concepts will be familiar to seasoned users of these version control systems (VCS). Mendix simplifies the VCS commands by building them into Studio Pro, Studio, and the Developer Portal.
+
+{{% alert type="info" %}}
+Git is in Beta since Mendix 9.6.0, you can enable Beta features in Studio Pro [Preferences](preferences-dialog#new-features). 
+{{% /alert %}}
 
 ## 2 Concepts {#concepts}
 

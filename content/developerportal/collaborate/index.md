@@ -5,6 +5,7 @@ tags: ["Developer Portal", "Sprint", "story", "stories", "buzz"]
 aliases:
     - /developerportal/develop/
     - /developerportal/settings/
+weight: 5
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

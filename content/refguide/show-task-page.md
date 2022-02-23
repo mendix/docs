@@ -1,7 +1,7 @@
 ---
 title: "Show User Task Page"
 parent: "workflow-activities"
-menu_order: 20
+menu_order: 50
 tags: ["studio pro", "user task", "workflow"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -18,9 +18,9 @@ The **Show user task page** activity can be used to open a user task page define
 
 ## 2 Properties
 
-An example of complete task properties is represented in the image below:
+An example of show user task page properties is represented in the image below:
 
-![Show user task page Properties](attachments/open-workflow-page/open-workflow-page-properties.jpg)
+![Show user task page Properties](attachments/open-user-task/open-task-page-properties.jpg)
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -39,7 +39,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 User Task Object
 
-A user task object of which the page you want to open.
+The user task object of the System.WorkflowUserTask entity available from the microflow parameters.
 
 ## 4 Common Section {#common}
 

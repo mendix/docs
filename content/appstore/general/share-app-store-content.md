@@ -64,7 +64,9 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 * Create an empty folder with the version number as its name, which will appear in Studio Pro's App Explorer
 *  If you add any **userlib** .*jar* files, make sure they are accompanied by a blank **MyModule.RequiredLib** file so that users know where the .*jar* files come from
 
+	{{% image_container width="400" %}}
 	![](attachments/share-app-store-content/userlibBlankFiles_boxed.jpg)
+	{{% /image_container %}}
 
 * Verify that the module's Java actions compile correctly (the easiest way to check is to create a deployment package, as it will clean the deployment folder and rebuild the app; for more information, see [Environments](/developerportal/deploy/environments))
 * Reduce the use of layouts and use snippets instead, which will result in fewer module dependencies and will reduce the number of potential errors (for example, missing layouts)
@@ -94,8 +96,11 @@ To start, click **Add content** in the top bar of the Marketplace home screen. F
 
 On the **Upload Content** page, select the type of content you would like to publish (the available types correspond to the [Marketplace home page](app-store-overview#home)):
 
+{{% image_container width="400" %}}
 ![](attachments/share-app-store-content/category.JPG)
+{{% /image_container %}}
 	
+
 ### 4.2 General {#general}
 
 On the **General** page,  you need to provide some details about your component. The information you entered above is pre-filled on this page.
@@ -135,7 +140,8 @@ Follow these steps to describe your content:
 	* SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL
 	* SDISW End-User License Agreement for Mendix Sample Apps
 
-	![](attachments/share-app-store-content/general.jpg)
+	{{% image_container width="400" %}}![](attachments/share-app-store-content/general.jpg)
+	{{% /image_container %}}
 
 6. Click **Upload an Image** to upload an icon for the component.
 7. <a name="draft"></a>On each page of the upload flow, click one of the following buttons:
@@ -143,7 +149,7 @@ Follow these steps to describe your content:
 	* **Save Draft** to save the details you have entered so far to the [Drafts](app-store-overview#my-content) page of your Marketplace (which you can access via the **My Drafts** button in the upper right of the page)
 	* **Save & Continue** to go to the next page of the upload flow
 
-### 4.3 Package {#version}
+### 4.3 Package {#package}
 
 On the **Package** page, select your content source. 
 
@@ -161,7 +167,7 @@ If this is the first version of the component you are uploading, the number in t
 
 Enter **Release Notes** for the component in the box provided describing what is new in that release.
 
-Finally, you can upload a **Virus Scan Report**. Uploading a scan report is currently optional, but Mendix strongly recommends that you create this report using [VirusTotal](https://www.virustotal.com/gui/home/upload), for example. This will ensure a high-quality and secure component. Once you upload your app package or component file (for example, *.mpk*, *.mxmodule*, *.zip*, *.class*, *.csv*, *.txt*, or *.tar*) and run the scan with the scanning service, save the report as a PDF. Then, click **Scan Report Upload** to upload your report.
+Finally, you can upload a **Virus Scan Report**. Uploading a scan report is currently optional, but Mendix strongly recommends that you create this report using [VirusTotal](https://www.virustotal.com/gui/home/upload), for example. This will ensure a high-quality and secure component. Once you upload your app package or component file (for example, *.mpk*, *.mxmodule*, *.zip*, *.class*, *.csv*, *.txt*, or *.tar*) and run the scan with the scanning service, save the report as a PDF. Then, click **Upload** in the Marketplace to upload your report.
 
 {{% alert type="warning" %}}
 If the virus scan report is invalid or there is some issue with it, the [Marketplace approval process](/appstore/general/share-app-store-content#approval) will reject the component and it will not be listed in the Marketplace. Ensure you upload a true virus scan report to avoid the rejection of your component.
@@ -171,7 +177,9 @@ If the virus scan report is invalid or there is some issue with it, the [Marketp
 If this report is not attached and during our approval process we identify security issues in your component, the component will not be listed in the public Marketplace until the issue is resolved.
 {{% /alert %}}
 
+{{% image_container width="400" %}}
 ![](attachments/share-app-store-content/package.jpg)
+{{% /image_container %}}
 
 ### 4.4 Enable {#doc}
 
@@ -195,11 +203,13 @@ The editor comes with a set of basic formatting tools, such as bold, bullet list
 
 <a name="screenshot"></a>Click **Add Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
 
+{{% image_container width="400" %}}
 ![](attachments/share-app-store-content/enable.jpg)
-	
+{{% /image_container %}}
+
 You can optionally add a **Video** and **Demo**.
 	
-### 4.5 Capabilities
+### 4.5 Capabilities {#capabilities}
 
 On the **Capabilities** page, you can provide the following details about a solutions template:
 
@@ -209,13 +219,17 @@ On the **Capabilities** page, you can provide the following details about a solu
 * A **Use Case** relevant to the content (enter a **Header** and **URL**)
 * **External links** relevant to the content
 
+{{% image_container width="400" %}}
 ![](attachments/share-app-store-content/capabilities.jpg)
+{{% /image_container %}}
 
 ### 4.6 Publish {#publish}
 
 Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
 
+{{% image_container width="400" %}}
 ![](attachments/share-app-store-content/publish.png)
+{{% /image_container %}}
 
 After you click **Publish Content**, your draft will be reviewed by Mendix before it is visible in the Marketplace. See the next section on details for the approval process.
 

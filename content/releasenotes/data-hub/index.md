@@ -18,7 +18,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Fixes
 
-* We fixed a typo in a validation message that appears when registering a contract 
+* We fixed a typo in a validation message that appears when registering a contract fails
 
 ### February 17th, 2022
 

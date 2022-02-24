@@ -20,7 +20,7 @@ Online working copies are automatically removed 24 hours after they have been cr
 
 ### 1.4 What Are the Limits on App Size?
 
-The initial app mpk file that is uploaded is not allowed to exceed 250Mb (app mpr file and other files combined).
+The initial app *.mpk* file that is uploaded is not allowed to exceed 250Mb (with the app *.mpk* file and other files combined).
 
 ### 1.5 What Are the Limits on Working Copy Size?
 

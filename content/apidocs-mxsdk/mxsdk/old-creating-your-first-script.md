@@ -51,11 +51,11 @@ After setting up all the prerequisites, follow these steps to write your first s
 
 3.  Replace the `username` (line 7) and `apikey` (line 8) with the email address of your Mendix account. From your [Mendix Profile](/developerportal/community-tools/mendix-profile#api-key), you can generate an [API Key](/apidocs-mxsdk/apidocs/authentication).
 
-### 2.1 Code Explanation
+## 3 Code Explanation
 
 The sections below explain the script.
 
-#### 2.1.1 Line 6
+### 3.1 Line 6
 
 ```ts
 const client = new MendixSdkClient(username, apikey);
@@ -63,7 +63,7 @@ const client = new MendixSdkClient(username, apikey);
 
 This line is where the `MendixSdkClient` object is instantiated.
 
-#### 2.1.2 Lines 9-10
+### 3.2 Lines 9-10
 
 ```ts
 const project = await client.platform().createNewApp(`NewApp-${Date.now()}`);
@@ -76,7 +76,7 @@ The `createNewApp()` call is where you actually kick off the process that will c
 If you create an online working copy from an existing app on Team Server, be sure your app has been saved using the latest Mendix Studio Pro version. Earlier versions might not be supported!
 {{% /alert %}}
 
-#### 2.1.3 Lines 12-15
+### 3.3 Lines 12-15
 
 ```ts
 const domainModel = await loadDomainModel(workingCopy);
@@ -87,7 +87,7 @@ entity.location = { x: 100, y: 100 };
 
 Now that you have an online working copy, you can start manipulating the model. In this example, first you grab the default module named **MyFirstModule** (see the function `loadDomainModel()` on lines 25-29). Once you have loaded the domain model in memory with the function `dm.load()`, you create a new entity in the domain model and give it a name and coordinates.
 
-#### 2.1.4 Lines 22-29
+### 3.4 Lines 22-29
 
 ```ts
 try {
@@ -102,7 +102,7 @@ Once you are done with the model changes, you can commit the changes back to the
 
 For more information, see [Async Await](https://basarat.gitbooks.io/typescript/docs/async-await.html) and [Using Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises).
 
-## 3 Compiling & Running the Script
+## 4 Compiling & Running the Script
 
 1.  Compile the script with the TypeScript compiler into JavaScript using the following command:
 
@@ -139,7 +139,7 @@ For more information, see [Async Await](https://basarat.gitbooks.io/typescript/d
 The steps for app (project) creation (line 3) and committing to the Team Server (line 10) can take some time, so please be patient. Be aware that 'revision -1' refers to the latest revision, and that 'branch null' is equal to the main line.
 {{% /alert %}}
 
-## 4 Opening the App in Studio Pro
+## 5 Opening the App in Studio Pro
 
 1.  In the [My Apps](/developerportal/#my-apps) page of the Developer Portal, verify the app you just created is visible at the top of the list.
 2.  Open the new app, and on the right side, click **Edit**.

@@ -135,7 +135,7 @@ If you want to prevent developers from accessing secrets or other Kubernetes obj
 
 ### 3.5 Scope
 
-Mendix Operator is limited in scope to one namespace. If you need to use the Mendix Operator in multiple namespaces, you have to install it and configure it in each namespace. This allows the use of multiple versions of the Operator, with different configurations, in the same cluster - as long as each Operator runs in its own dedicated namespace.
+Mendix Operator is limited in scope to one namespace. If you need to use the Mendix Operator in multiple namespaces, you have to install it and configure it in each namespace. This allows the use of multiple versions of the Operator, with different configurations, in the same cluster — as long as each Operator runs in its own dedicated namespace.
 It is not possible to install one global instance of the Operator for the entire cluster.
 
 On the other hand, CRDs are global within the cluster. Since all Mendix Operators in a cluster will be using the same shared CRD, it is critical that the latest version of the CRDs are installed in a cluster.  See the [Private Cloud upgrade instructions](private-cloud-upgrade-guide) for more information.

@@ -61,7 +61,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 * Marketplace filtering has been revamped. You can now find content faster by filtering by **Industry**, [Content Type](https://docs.mendix.com/appstore/general/app-store-overview#types), and Studio Pro **Compatibility**. 
 * We have made 15+ fully developed solutions and 10+ solution templates available to help you realize value even more quickly.
-* We have listed 10+ **Premium** [app services](https://docs.mendix.com/appstore/app-services/), and we now support a self-service [subscription](/appstore/general/app-store-overview#subscriptions) experience using credit card for two app services in supported regions.
+* We have listed 10+ **Premium** [app services](https://docs.mendix.com/appstore/app-services/), and we now support a self-service [subscription](/appstore/general/app-store-overview#company-subscriptions) experience using credit card for two app services in supported regions.
 
 ### August 12th, 2021
 
@@ -99,7 +99,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 * We released support for the subscription to an app service (like [MindSphere IIoT for Makers](/partners/siemens/mindsphere-app-service)):
 	* Automatic provisioning of the app service on subscription.
-	* The [Service Management Dashboard](/appstore/general/app-store-overview#subscriptions), where you can view the service instance to which you have subscribed and generate binding keys for your service instance.
+	* The [Service Management Dashboard](/appstore/general/app-store-overview#company-subscriptions), where you can view the service instance to which you have subscribed and generate binding keys for your service instance.
 
 ### May 4th, 2021
 

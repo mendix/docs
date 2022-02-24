@@ -545,8 +545,8 @@ On the [3D Viewer](https://marketplace.mendix.com/link/component/118345) page, c
 
 1. Fill in **Technical Owner** information (first name, last name, email address), the subscription amount, billing account information, and other required information. 
 2. Upon successful order creation, if you are the app's technical owner, you will receive an order confirmation email. 
-3. Click the link in the email to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there.
-4. In the list of your organization's subscriptions, click the **3D Viewer** subscription link to open the subscription details page.
+3. Click the link in the email to the [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) page and log in there.
+4. In the list of your company's subscriptions, click the **3D Viewer** subscription link to open the subscription details page.
 5. Click **Create Binding Keys** , give the key a meaningful name (which should include the name of the app where you are using 3D Viewer), then click **Create Keys**.
 6. When the **LicenseToken** key is generated, copy and save it for later use in your app.
 

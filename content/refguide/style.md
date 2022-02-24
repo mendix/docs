@@ -102,3 +102,6 @@ In the end your setup should look like this:
 
 * The *fop.xconf* file, your custom font, and the 6 default fonts should be in your app resources folder
 * The *fop.xconf* file should include a reference to your custom font
+
+{{% alert type="warning" %}} Please note that not all typography variations in custom fonts are supported by our PDF generation library . {{% /alert %}}![image](https://user-images.githubusercontent.com/60467476/155552986-d4ca11c2-3e9a-4804-ba30-da2273776bc2.png)
+

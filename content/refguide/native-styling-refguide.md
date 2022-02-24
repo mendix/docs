@@ -159,13 +159,13 @@ The layout grid widget can be used to structure the content on your page. You ar
 
 The widget’s style properties are divided over several objects: `LayoutGrid`, `row`, `noGuttersRow`, `col`, `colFitToContent`, `col1`, `col2`, `col3`, `col4`, `col5`, `col6`,  `col7`, `col8`, `col9`, `col10`, `col11`, `col12`, and `noGutters`.
 
-`col` is being applied when the Width property on a column is "Auto-fill".
+`col` is being applied when the Width property on a column is *Auto-fill*.
 
-`colFitToContent` is being applied when the Width property on a column is "Auto-fit content".
+`colFitToContent` is being applied when the Width property on a column is *Auto-fit content*.
 
-`col1`, `col2`, `col3`, `col4`, `col5`, `col6`,  `col7`, `col8`, `col9`, `col10`, `col11`, `col12` are applied when the Width on a column property is "Manual". Only one class is applied based on the related Size property.
+`col1`, `col2`, `col3`, `col4`, `col5`, `col6`,  `col7`, `col8`, `col9`, `col10`, `col11`, `col12` are applied when the Width on a column property is *Manual*. Only one class is applied based on the related Size property.
 
-`noGuttersRow` (Row) and `noGutters` (Column) are being applied when the Spacing between columns property on a row is set to "No".
+`noGuttersRow` (Row) and `noGutters` (Column) are being applied when the Spacing between columns property on a row is set to *No*.
 
 The main `LayoutGrid`:
 
@@ -311,7 +311,7 @@ The widget’s style properties are structured as follows:
 | `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
 | `inputDisabled` | Same properties as `input` | Overrides `input` styles if the text box is non-editable. |
 | `label` | This has all TextStyle properties |   |
-| `label` | `numberOfLines` | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (defaults to 1). |
+| `label` | `numberOfLines` | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (defaults to `1`). |
 | `labelDisabled` | Same properties as `label` | Overrides `label` styles if the text box is non-editable. |
 | `validationMessage` | This has all TextStyle properties.   |    |
 

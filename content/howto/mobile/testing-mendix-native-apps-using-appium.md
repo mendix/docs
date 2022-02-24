@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install [Appium Desktop](https://github.com/appium/appium-desktop)
 * Install, run, and fix any issues found by [appium-doctor](https://github.com/appium/appium-doctor)
 
-## 3 Understand How Widgets Relate to Your Native App
+## 3 Understanding How Widgets Relate to Your Native App
 
 For each widget in the page editor of Studio and Studio Pro, the value of the named property will map to a property of the corresponding UI element in the native app. For iOS these UI elements will have an `accessibility id` property and for Android there will be a `view-tag` property. `view-tag` properties can only be read with the Espresso Android driver.
 
@@ -32,10 +32,10 @@ Under the hood, Mendix uses react-native to create your native apps. React-nativ
 
 However, the default Appium Android driver (UIAutomator2) is unable to read the `view-tag` property. For Appium to be able to read that property, you will need to configure it to use another driver: the Espresso driver. The Espresso driver requires you to install instrumentation in your app to work.
 
-## 4 Set Up Appium Desktop to Spy on a Mendix Native iOS App
+## 4 Setting Up Appium Desktop to Spy on a Mendix Native iOS App
 
 1. Build a native iOS app for your Mendix app (see [How to Build Native Apps](/howto/mobile/build-native-apps) for more information).
-1. Build the WebDriverAgent project that is shipped with your Appium Desktop installation as described [here](http://appium.io/docs/en/advanced-concepts/wda-custom-server/).For Appium Desktop, the WDA project can be found in */Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-webdriveragent*.
+1. Build the WebDriverAgent project that is shipped with your Appium Desktop installation as described [here](http://appium.io/docs/en/advanced-concepts/wda-custom-server/). For Appium Desktop, the WDA project can be found in */Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-webdriveragent*.
 1. Start Appium Desktop
 1. Click **Start Server**.
 1. On the new screen, click the **Start Inspector Session** magnifier image in the top-right.
@@ -54,7 +54,7 @@ However, the default Appium Android driver (UIAutomator2) is unable to read the 
 1. Click **Start Session** and wait until your app starts.
 1. Click on the blue **Select Elements** button, and then click on an element in the app preview to spy on that element.
 
-## 5 Set Up Appium Desktop to Spy on a Mendix Native Android App
+## 5 Setting Up Appium Desktop to Spy on a Mendix Native Android App
 
 1. Add the Espresso dependencies by following the setup instructions [here](https://developer.android.com/training/testing/espresso/setup).
 

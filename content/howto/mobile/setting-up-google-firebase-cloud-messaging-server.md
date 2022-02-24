@@ -23,7 +23,7 @@ There are two possible scenarios: you can create a new FCM project, or you can u
 
 To prevent the degraded reliability of push notifications delivery, you should migrate existing GCM projects to FCM and upgrade credentials if needed.
 
-#### 3.1.1 Sign into the Developer's Console
+#### 3.1.1 Signing into the Developer's Console
 
 Open the [Firebase developer's console](https://console.firebase.google.com/) and sign in with your Google ID.
 
@@ -113,7 +113,7 @@ In addition to the back-end configuration set up in the previous steps, you will
 The list at the bottom shows the Android and iOS applications that you have configured for your Firebase project. Select the Android application and click *google-services.json*. Then click the iOS application and click *GoogleService-Info.plist*. Store both files in a secure location. You will need these when building your mobile application.
 
 {{% alert type="warning" %}}
-Only create an iOS application in your Firebase project when you plan on using FCM for sending push notifications to iOS devices. If you plan on keeping using APNS to send push notifications to iOS devices, you do not have to create an iOS application in your Firebase project, and you do not have to download a *GoogleService-Info.plist* config file.
+Only create an iOS application in your Firebase project when you plan on using FCM for sending push notifications to iOS devices. If you plan to keep using APNS to send push notifications to iOS devices, you do not have to create an iOS application in your Firebase project, and you do not have to download a *GoogleService-Info.plist* config file.
 {{% /alert %}}
 
 ## 8 Read More

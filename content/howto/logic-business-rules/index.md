@@ -1,5 +1,6 @@
 ---
 title: "Logic & Business Rules"
+weight: 60
 tags: ["studio pro", "how-to"]
 ---
 
@@ -13,8 +14,7 @@ With these how-to's, you can learn how to translate your business logic into mic
 
 ## 2 Main Documents in This Category
 
-* [Trigger a Microflow From a Menu Item](trigger-microflow-from-menu-item) – explains how to create a simple microflow that will define the logic of your application
-* [Configure a Workflow in Studio Pro for the Employee Onboarding Process](workflow-how-to-configure) – explains how to configure a workflow for the employee onboarding process
+* [Trigger a Microflow From a Menu Item](trigger-microflow-from-menu-item) – explains how to create a simple microflow that will define the logic of your application 
 * [Create a Custom Save Button](create-a-custom-save-button) – explains how to create a custom save button by utilizing microflows
 * [Extract & Use Sub-Microflows](extract-and-use-sub-microflows) – shows you how to break down a large microflow into more manageable parts
 * [Work with Lists in a Microflow](working-with-lists-in-a-microflow) – teaches you how to iterate over a retrieved list of objects

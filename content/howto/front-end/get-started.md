@@ -2,7 +2,7 @@
 title: "Get Started"
 parent: "atlas-ui"
 menu_order: 10
-tags: ["Atlas", "UI", "UX", "user experience"]
+tags: ["Atlas", "UI", "UX", "user experience", "design"]
 ---
 
 ## 1 Introduction

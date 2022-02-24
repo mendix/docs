@@ -34,7 +34,7 @@ When you have completed the prerequisites, your work should look like this:
 
 ## 3 Creating an AR Business Card Demo
 
-For this app you will need to start a new app based on the Native Mobile Quickstart App, or use another app with the Native Mobile Resources module imported from the Mendix Marketplace. First you will lay a virtual business card over your real business card. You will need the **Square (AR)** widget and the imported PNG of the business card you wish to use.
+For this app you will need to start a new app based on the Blank Native Mobile App, or use another app with the Native Mobile Resources module imported from the Mendix Marketplace. First you will lay a virtual business card over your real business card. You will need the **Square (AR)** widget and the imported PNG of the business card you wish to use.
 
 Ideally you should have several recognizable features on your image, specifically an image with a lot of edges and contrast. The business card you are using in this document possesses these traits:
 
@@ -56,7 +56,7 @@ Next you will add a virtual image of your business card to overlap the physical 
 1. Select the image of your business card for the **Texture**. This should be the same image as you selected for your
    **Image Tracker (AR)**. When finished your dialog box will look like this:
 
-{{% image_container width="300" %}}![Square dialogue](attachments/how-to-ar-business-card/square-material-dialogue.png){{% /image_container %}}
+{{% image_container width="300" %}}![Square dialog](attachments/how-to-ar-business-card/square-material-dialogue.png){{% /image_container %}}
 
 5. Go back to the **General** tab and fill out the size of your business card. The important sizes are X for the width of
    your business card and Y for the height.

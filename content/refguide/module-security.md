@@ -18,7 +18,7 @@ Within a module you can define module roles and specify security settings for pa
 
 ## 2 Module Role {#module-role}
 
-A module role defines a set of access permissions that you can assign to a user. For more information on module roles, [user roles](user-roles), and their relation, see [Security](security).
+A module role is a specific role you create within the module to define a set of access permissions. The permissions are contained within the module. You can assign multiple module roles to a user role under the **App Security** > **User roles** tab. For more information on module roles, [user roles](user-roles), and their relation, see [Security](security).
 
 A module role has the following properties:
 
@@ -29,7 +29,7 @@ A module role has the following properties:
 
 ## 2 Page Access
 
-**Page Access** defines which pages are visible to each role. The **Page access** tab is displayed as a matrix showing pages and modules roles.
+**Page Access** defines which pages are visible to each role. The **Page access** tab is displayed as a matrix showing pages and modules roles. You can choose to show the unused pages in the matrix or hide them by enabling/disabling the **Show unused pages** setting. 
 
 ![page access tab](attachments/module-security/page-access-tab.png)
 
@@ -41,9 +41,9 @@ Page access settings do not restrict users from navigating to a page through oth
 
 ## 3 Microflow Access
 
-**Microflow Access** defines which microflows can be executed by users with a certain module role. The menu bar is optimized so that it only shows pages and microflows that the user has access to.
+**Microflow Access** defines which microflows can be executed by users with a certain module role. The menu bar is optimized so that it only shows microflows that the user has access to. 
 
-The **Microflow access** tab is displayed as a matrix showing microflows and modules roles. 
+The **Microflow access** tab is displayed as a matrix showing microflows and modules roles. You can choose to show the unused microflows in the matrix or hide them by enabling/disabling the **Show unused pages** setting. 
 
 ![](attachments/module-security/microflow-access-tab.png)
 
@@ -53,15 +53,15 @@ For each combination you can indicate whether or not the module role has access 
 Note that these roles are only checked when the microflow is executed from the client. A microflow is always allowed to call another microflow and these roles are not checked then.
 {{% /alert %}}
 
-## 4 Workflow Access {#workflow-access}
+## 4 Nanoflow Access
 
-**Workflow access** defines which workflows can be triggered by users with a certain module role. 
+**Nanoflow Access** defines which nanoflows can be executed by users with a certain module role. The menu bar is optimized so that it only shows nanoflows that the user has access to. 
 
-The **Workflow access** tab is displayed as a matrix showing microflows and modules roles:
+The **Nanoflow access** tab is displayed as a matrix showing nanoflows and modules roles. You can choose to show the unused nanoflows in the matrix or hide them by enabling/disabling the **Show unused nanoflows** setting. 
 
-![Workflow Access](attachments/module-security/workflow-access.png)
+![](attachments/module-security/nanoflow-access-tab.png)
 
-For each combination you can indicate whether or not the module role can start the workflow. You can also edit this information in a [workflow](workflow-properties) using the **Allowed roles** property.
+For each combination you can indicate whether or not the module role has access to the nanoflow. You can also edit this information in the [nanoflow](nanoflow) using the **Allowed roles** property.
 
 ## 5 Entity Access {#entity-access}
 

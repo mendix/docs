@@ -262,7 +262,7 @@ When searching in the Data Hub Catalog, the following fields are searched:
 
 From the **Data Hub Home** page, you can search the Catalog in the following ways:
 
-![data hub home page](../share-data/attachments/share-data/data-hub-home.png)
+![data hub home page](/data-hub/share-data/attachments/share-data/data-hub-home.png)
 
 * Type a search term in the search box and click **Search** (search strings must be at least 3 alphanumeric characters)
 * Click one of the *tags* given in the **Search suggestions**
@@ -394,10 +394,9 @@ The metadata panel at the right of the asset details screen displays details fro
 These are the tags that have been assigned to the data source in the Catalog (for more information, see the [Adding or Editing Tags to a Service](curate#tags) section of *How to 
 Curate Registered Assets*). Tags assigned at a data source-level propagate down to the datasets and attributes exposed in the service.
 
-#### 3.6.2 Business Owner
+#### 3.6.2 Business Owner {#busines-owner}
 
-This is a link to the business owner of the data exposed in the data source. For more information, see the [Changing Owners of an App](curate#changing-owners) section of *How to 
-Curate Registered Assets*.
+This is a link to the business owner of the data exposed in the data source. For more information, see the [Changing Owners of an App](curate#changing-owners) section of *How to Curate Registered Assets*.
 
 #### 3.6.3 Technical Owner
 
@@ -440,13 +439,12 @@ The **Curate Bar** is displayed in the asset detail screen if you are the owner 
 
 ![called out curate bar](attachments/search/curate-bar.png)
 
-The following actions can be carried out:
+In **Edit** > **Edit Metadata**, you can edit the information that is displayed in the Catalog for an asset:
 
-* **Edit Metadata** – edit information that is displayed in the Catalog for the asset:
-  * for a selected data source you can edit [Application Details](./curate#curate-application) and [Data Source Details](./curate#service-details)
-  * for a selected dataset you can edit [Dataset Details](./curate#curate-datasets)
+* For the selected data source, you can edit [Application Details](curate#curate-application) and [Data Source Details](curate#service-details)
+* For a selected dataset, you can edit [Dataset Details](curate#curate-datasets)
 
-For further details, see [Curate Registered Assets](./curate).
+For further details, see [Curate Registered Assets](curate).
 
 ### 3.8 Data Source and Dataset URIs
 

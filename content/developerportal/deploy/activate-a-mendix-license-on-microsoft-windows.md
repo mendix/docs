@@ -12,11 +12,9 @@ tags: ["license", "Windows", "on-premises", "Mendix Service Console"]
 
 ## 1 Introduction
 
-After you have installed the Mendix software on your on-premises server and have deployed your first app (for details, see [Deploying Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows)), it is time to activate your license. This how-to will guide you through this process.  
+If you want to run your app on a Microsoft Windows server without the restrictions placed on unlicensed apps, you will need to activate a license. The restrictions which are placed on unlicensed apps are described in [Licensing Apps](licensing-apps-outside-mxcloud).
 
-**This how-to will teach you how to do the following:**
-
-* Activate a Mendix license on a Microsoft Windows server
+You will need to apply a separate license to each environment for which you want to lift the restrictions.
 
 ## 2 Prerequisites
 
@@ -26,7 +24,7 @@ Before starting with this how-to, make sure you have completed the following pre
 * Install Mendix on your Microsoft Windows server (for more information, see [Deploying Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows))
 * Be registered as the technical contact for the license
     * This is usually done in the license request process
-    * If you are not the technical contact, ask him or her to follow this how-to to activate the license
+    * If you are not the technical contact, ask the technical contact to follow this how-to to activate the license
 * Have your MxID and password ready
 * Have login access and access to the Mendix Service Console on the server
 

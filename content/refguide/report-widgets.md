@@ -1,5 +1,5 @@
 ---
-title: "Report Widgets"
+title: "Reports"
 parent: "pages"
 menu_order: 50
 tags: ["studio pro", "report widgets", "report", "widgets", "data set"]
@@ -10,11 +10,11 @@ tags: ["studio pro", "report widgets", "report", "widgets", "data set"]
 
 ## 1 Introduction
 
-With report widgets, you can create reports from the database data. Reporting is mainly used for presenting aggregated information (for example , total sales per customer). 
+With reports widgets, you can create reports from the database data. Reporting is mainly used for presenting aggregated information (for example , total sales per customer). 
 
 The **Report widgets** category contains the following widgets:
 
-* [Report grid](report-grid) – displays data in a form of a table; the data for the reporting widgets is provided by a [Data set](data-sets)
+* [Report grid](report-grid) – displays data in a form of a table; the data for the reports is provided by a [Data set](data-sets)
 
     ![Example report grid](attachments/report-widgets/report-grid-example.png)
 

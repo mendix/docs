@@ -99,7 +99,7 @@ The following results can be assigned to a test step:
 
 ### 2.3 Actions
 
-On the top-right of the screen, you will find the **Edit** and **Run** buttons:
+On the upper-right side the screen, you will find the **Edit** and **Run** buttons:
 
 * **Edit** – opens the corresponding test case/test suite
 * **Run** – opens the **Job Configuration** page, where you can edit the run configuration and re-run the test

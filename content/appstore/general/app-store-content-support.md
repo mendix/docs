@@ -16,7 +16,7 @@ Support for Marketplace content is determined by the content support category an
 
 | Category | Description |
 | --- | --- |
-| Platform | Mendix supports all the content in this category when you are equipped with an SLA (**Platform**, **Gold**, or **Platinum**) with Mendix. Content in this category is proactively incorporated into Mendix R&D test cycles as part of our platform release management. Please note that this category replaces the former **Extended** category, which has been deprecated. |
+| Platform | Mendix supports all the content in this category as-is when you are equipped with an SLA (**Platform**, **Gold**, or **Platinum**) with Mendix. Content in this category is proactively incorporated into Mendix R&D test cycles as part of our platform release management. Please note that this category replaces the former **Extended** category, which has been deprecated. |
 | Deprecated | The content in this category is considered end-of-life and will be dropped to the **Community support** status in the next major release of Mendix. Content is provided as-is by Mendix R&D, and support depends on the severity of the reported issue and the effort required to resolve it. |
 | Community | Content is provided as-is by members of the Mendix community, and support depends on the availability and effort of the owner. | 
 
@@ -30,6 +30,10 @@ The applicable level of service for Mendix-supported Marketplace content is equa
 
 This means that equal response and resolve times are applicable, and the standard support process using the [Mendix Support Portal](https://support.mendix.com) has to be followed.
 
+{{% alert type="warning" %}}
+Content in this support category is supported as-is. When changing the content, the module will no longer be Platform-supported.
+{% /alert %}}
+
 ### 2.2 Deprecated Support Category
 
 We will move Platform-supported content into this category when we consider the content end-of-life. We factor in popularity, the availability of improved alternative(s), and industry standards when deciding on this.
@@ -40,9 +44,9 @@ Support for content in this category is decided by Mendix on a case-by-case basi
 
 Support on content in this category is up to the user or organization providing the content. We recommend contacting the owner of the content in case of questions or issues via the following methods:
 
-* Open an an issue on the GitHub repository associated with the content (for details on GitHub issues, see [Mastering Issues](https://guides.github.com/features/issues/))
+* Open an issue on the GitHub repository associated with the content (for details on GitHub issues, see [Mastering Issues](https://guides.github.com/features/issues/))
 * Contact the owner of the content via the contact details available on the Marketplace component's detail pages
-* Ask a question son the [Mendix Forum](https://mxforum.mendix.com/)
+* Ask a question on the [Mendix Forum](https://mxforum.mendix.com/)
 * Contribute 
 
 The level of support depends on the availability and effort of the developer and/or the Mendix community.

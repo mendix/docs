@@ -23,7 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install the [Make It Native](/refguide/getting-the-make-it-native-app) app on your mobile device
 
 {{% alert type="info" %}}
-To use push notifications with apps created with the Native Mobile Builder, make sure you have completed [How To Deploy Your First Mendix Native Mobile App](deploying-native-app) and [How to Set up Native Push Notifications](setting-up-native-push-notifications)
+To use push notifications with apps created with the Native Builder, make sure you have completed [How To Deploy Your First Mendix Native Mobile App](deploying-native-app) and the how-to's described in [Use Notifications](notifications)
 {{% /alert %}}
 
 
@@ -33,9 +33,9 @@ Follow the instructions below to set up your first local notification:
 
 1. Open Mendix Studio Pro.
 2. Select **File** > **New App**.
-3.  Select the **Native Mobile Quickstart** app (also available online [here](https://marketplace.mendix.com/link/component/109511/)):
+3.  Select the **Blank Native Mobile App** (also available online [here](https://marketplace.mendix.com/link/component/109511/)):
 
-	![native mobile quickstart app](attachments/native-push/quickstart.png)
+	![Blank Native Mobile App](attachments/native-push/quickstart.png)
 
 4.  Click **Use this starting point**.
 5.  Click **Create App** to close the dialog box:
@@ -132,7 +132,7 @@ Now you will set up the final logic necessary for your app to display a notifica
 
 Now you will set up the final piece of your nanoflow's logic. 
 
-1.  Delete the end event in the top-right corner of your nanoflow, drag and drop a **Merge** in its place, and rebuild your connections:
+1.  Delete the end event in the upper-right corner of your nanoflow, drag and drop a **Merge** in its place, and rebuild your connections:
 
 	{{% image_container width="400" %}}![app settings](attachments/native-push/merge.png){{% /image_container %}}
 
@@ -176,7 +176,7 @@ Now you can run your app and see if your notification works.
 
 	{{% image_container width="400" %}}![app settings](attachments/native-push/basic-notif.png){{% /image_container %}}
 
-	If you did not see a notification, try clicking the play button (**Run Locally**) to reload your app. Then, tap the **Send Notification** button again.
+	If you did not see a notification, try clicking **Run Locally** to reload your app. Then, tap the **Send Notification** button again.
 
 Congratulations! You can now see local notifications on your device. Next, in [How to Use Local Notifications Part 2: Badges](local-notif-badges), you will learn how to configure notification badges.
 

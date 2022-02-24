@@ -170,7 +170,7 @@ To set these tags, do the following:
 2. Click **Details** to select an environment you are monitoring with Datadog. 
 3. Open the **Tags** tab.
 4. Add a **Tag** – this is the string which is sent to Datadog as a tag.
-  ![Example metric showing tags in Datadog](attachments/datadog-metrics/set-tags.png)
+    ![Example metric showing tags in Datadog](attachments/datadog-metrics/set-tags.png)
 5. **Restart** the application.
 
 Setting these values for your app means that all metrics from this environment of your app will have these tags. For example, the tags for mx.microflow.time.avg for this set of metrics include **app:customermanagement** and **env:accp**.
@@ -185,7 +185,10 @@ You can add more tags if you want, but note that Datadog's charges include an el
 
 By default, Mendix will pass a log of *all* **request handler** activity to Datadog and no other information. However, by using JSON to configure the metrics agent, you can add logs of microflows and activities within microflows, and restrict which request handler calls are sent.
 
-#### 3.3.1 Format of Metrics Agent Configuration
+#### 3.3.1 Format of Metrics Agent Configuration{#mx-agent-format}
+
+<!-- Changes to this should be reflected in "Configuring the Java Instrumentation Agent" in /developerportal/deploy/private-cloud-monitor,
+but replace 'Datadog' with 'Prometheus' and update relative links -->
 
 You can specify which request handlers, microflows, and activities are reported to Datadog using a JSON configuration with the following format (note that this is the syntax and not an example of this custom setting):
 
@@ -220,7 +223,7 @@ You can specify which request handlers, microflows, and activities are reported 
 Microflow names are case-sensitive. If the case is not exactly matched, metrics will not be properly submitted.
 {{% /alert %}}
 
-**<details><summary><sup><small>[1]</small></sup>Request Handlers (click to see list)</summary>**
+**<details><summary><sup><small>[1 ]</small></sup> Request Handlers (click to see list)</summary>**
 
 The following Mendix *request handler* calls will be passed to Datadog:
 
@@ -237,7 +240,7 @@ The following Mendix *request handler* calls will be passed to Datadog:
 You can find help in analyzing some of these values in [Trends in Mendix Cloud v4](trends-v4).
 </details>
 
-**<details><summary><sup><small>[2]</small></sup>Activities (click to see list)</summary>**
+**<details><summary><sup><small>[2]</small></sup> Activities (click to see list)</summary>**
 
 The following Mendix *activities* can be passed to Datadog:
 
@@ -425,7 +428,7 @@ If you have any issues related to accessing Datadog, please contact their suppor
 
 | Metric | Description |
 | --- | --- |
-| jmx.com.mendix.* | Core runtime metrics |
+| jmx.com.mendix.* | JMX metrics for the `com.mendix` domain (core runtime). |
 | mx.database.diskstorage_size | Disk storage available to the application database (this is a fixed value) |
 | mx.activity.time | How long a microflow activity takes to run |
 | mx.client.time | The time to handle a request to a request handler that is used by the web ui |

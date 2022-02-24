@@ -227,7 +227,7 @@ If you have made any of the above modifications, please follow the following ste
 This section concerns modifications you have made to the **custom-variables** js file of your **Atlas 2 theme**.
 
 ```
-theme_atlas2/styles/native/sass/app/custom-variables.js
+theme_atlas2/styles/native/app/custom-variables.js
 ```
 
 To move your custom variable modifications to **Atlas 3**, there are two options: 
@@ -249,7 +249,7 @@ themesource/your-module/native/custom-variables.js
 This section concerns modifications you have made to the **custom** js file of your **Atlas 2 theme**.
 
 ```
-theme_atlas2/styles/native/sass/app/_custom.js
+theme_atlas2/styles/native/app/_custom.js
 ```
 
 To move your custom styling modifications to **Atlas 3**, there are two options: 
@@ -271,7 +271,7 @@ themesource/your-module/native/main.js
 This section concerns modifications you have made to the **app** folder of your **Atlas 2 theme** and any additional js stylesheets that you might have added. 
 
 ```
-theme_atlas2/styles/native/sass/app/_
+theme_atlas2/styles/native/app/_
 ```
 
 To move you additional stylesheets that you have added here to **Atlas 3**, there are two options: 

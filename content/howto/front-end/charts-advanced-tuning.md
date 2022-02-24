@@ -37,7 +37,7 @@ To create a custom layout, follow these steps:
 3. Open the charts widget settings.
 4. Go to the tab **Advanced**.
 5. Set the **Mode** to **Developer**.
-    ![chart widget properties](attachments/charts/charts-widget-properties-advanced.png)
+    ![chart properties](attachments/charts/charts-widget-properties-advanced.png)
 6. Run the app.
 7. In your browser, open the page with the chart.
 8. Click on the button **Toggle Editor**.

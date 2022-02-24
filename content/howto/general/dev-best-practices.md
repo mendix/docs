@@ -51,6 +51,12 @@ The [user roles](/refguide/user-roles) should have logical names that reflect th
 
 Each user role should correspond to only one module role per module. In other words, a user role should not map to multiple module roles within the same module. This helps to keep the number of applicable module roles for a user to a minimum, which reduces complexity in understanding the security model and reduces the performance impact of complex security rules.
 
+### 2.5 Passwords and Other Secrets
+
+Always store secret information in a safe place. A safe place is the database. Use the [Encryption](https://marketplace.mendix.com/link/component/1011) module to encrypt and store and to retrieve and decrypt the information.
+
+Using either the default value of a constant or the project's configuration setting is unsafe. Both these places are readable by others and visible in the version management copies made by SVN. 
+
 ## 3 Naming Conventions
 
 ### 3.1 Modules
@@ -152,9 +158,9 @@ For attributes, you can choose to store the value in the database or to calculat
 
 | Event Type                | Prefix             | Used In |
 |---------------------------|--------------------|---- |
-| On enter event            | OEN\_{Purpose}   | Input widgets   |
-| On change event           | OCH\_{Purpose}   | Input widgets   |
-| On leave event            | OLE\_{Purpose}   | Input widgets   |
+| On enter event            | OEN\_{Purpose}   | Input elements   |
+| On change event           | OCH\_{Purpose}   | Input elements   |
+| On leave event            | OLE\_{Purpose}   | Input elements   |
 | Data source               | DS\_{Purpose}    | Data view, list view, data grid, template grid |
 | Action button             | ACT\_{Purpose}   | Menu item, navigation item, microflow and action button, drop-down button<br />(“IVK\_” is used historically) |
 
@@ -372,7 +378,7 @@ Apps should keep up with new Mendix releases as much as possible.
 
 When introducing a new [Mendix Marketplace](https://marketplace.mendix.com/) component to an app, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
 
-Marketplace modules should NOT be modified. If an ApMarketplace module is modified, updating to a new version becomes much harder, because the changes will be overwritten when a new version is downloaded from the Marketplace. If changing an Marketplace module is unavoidable, you have two options:
+Marketplace modules should NOT be modified. If a Marketplace module is modified, updating to a new version becomes much harder, because the changes will be overwritten when a new version is downloaded from the Marketplace. If changing an Marketplace module is unavoidable, you have two options:
 
 * Mark any changes you make explicitly and clearly, and perform them again when the module is updated
 * Copy the contents of the Marketplace module to another module in your app and use that module instead (remember that your app will no longer reflect updates to the original Marketplace module)

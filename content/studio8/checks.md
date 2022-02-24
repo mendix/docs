@@ -1,7 +1,7 @@
 ---
 title: "Checks"
 description: "Describes checks during publishing process in Mendix Studio."
-menu_order: 70
+weight: 70
 tags: ["studio", "app viewing", "checks", "errors", "consistency errors"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor viewing-checks below is mapped, so it should not be removed or changed.
@@ -38,7 +38,7 @@ If your app has consistency errors, the **Checks** button will have the red bord
 
 4. To view the exact place and element that the error refers to in the corresponding editor, click the row in the **Checks** panel (you can click any place of the row, the whole row is responsive), and the element that failed a check will be displayed and highlighted.
 
-5. To close the panel, either click the close button in the top-right corner of the panel, click **Checks** in the top-right corner of Studio, or press <kbd>C</kbd> . 
+5. To close the panel, either click the close button in the upper-right corner of the panel, click **Checks** in the upper-right corner of Studio, or press <kbd>C</kbd> . 
 
 To sort the errors, click the column header in the panel. Thus, you can sort errors in ascending or descending order by **Message**, **Code**, **Module**, **Document**, or **Element**. For more information on items displayed in the **Checks** panel, see the [Checks Panel Overview](#checks-panel-overview) section. 
 

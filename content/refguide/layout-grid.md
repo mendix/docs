@@ -1,6 +1,6 @@
 ---
 title: "Layout Grid"
-parent: "container-widgets"
+parent: "structure-widgets"
 menu_order: 10
 tags: ["studio pro", "layout grid", "container widget", "column", "row", "grid", "layout"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -10,7 +10,8 @@ tags: ["studio pro", "layout grid", "container widget", "column", "row", "grid",
 
 The layout grid is a widget that gives structure to your pages.  
 
-A layout grid consists of [rows](#rows) and [columns](#columns): ![Layout Grid Example](attachments/container-widgets/layout-grid.png)
+A layout grid consists of [rows](#rows) and [columns](#columns): 
+![Layout Grid Example](attachments/structure-widgets/layout-grid.png)
 
 In a browser, the layout grid is based on the Bootstrap grid system. For more information on the Bootstrap grid system, see the [official Bootstrap documentation](http://getbootstrap.com/css/#grid).
 
@@ -26,7 +27,7 @@ For more information on row and column properties, see the [Rows and Their Prope
 
 An example of layout grid properties is represented in the image below:
 
-{{% image_container width="250" %}}![Layout Grid Properties](attachments/container-widgets/layout-grid-properties.png)
+{{% image_container width="250" %}}![Layout Grid Properties](attachments/structure-widgets/layout-grid-properties.png)
 {{% /image_container %}}
 
 Layout grid properties consist of the following sections:
@@ -71,7 +72,7 @@ A layout grid can contain one or more rows. Each row contains [columns](#columns
 
 An example of layout grid row properties is represented in the image below:
 
-{{% image_container width="300" %}}![Row Properties](attachments/container-widgets/row-properties.png)
+{{% image_container width="300" %}}![Row Properties](attachments/structure-widgets/row-properties.png)
 {{% /image_container %}}
 
 Row properties consist of the following sections:
@@ -116,7 +117,7 @@ Columns form a row of a layout grid.
  An example of layout grid column properties is represented in the image below:
 
 {{% image_container width="300" %}}
-![Column Properties](attachments/container-widgets/column-properties.png)
+![Column Properties](attachments/structure-widgets/column-properties.png)
 {{% /image_container %}}
 
 Layout grid column properties consist of the following sections:
@@ -150,17 +151,17 @@ For example, you have a layout grid with one row and two columns: a picture is i
 
 For the *desktop* and *tablet*, you might want to set the first column with a picture to **Auto-fit content** and and the second one to **Auto-fill**, this way the first column will adjust to the size of the picture, while the second one will take the rest of the row:
 
-![Layout Example, Desktop](attachments/container-widgets/layout-example-desktop.png)
+![Layout Example, Desktop](attachments/structure-widgets/layout-example-desktop.png)
 
 For *phone*, it can be a good idea to place two columns one under another, setting them to **Manual** width of *12* (for more information on the column size property, see the [Size](#column-size) section). In this case, the second column will be automatically wrapped to another line:
 
  {{% image_container width="300" %}}
-![Layout Example, Phone](attachments/container-widgets/layout-example-phone.png)
+![Layout Example, Phone](attachments/structure-widgets/layout-example-phone.png)
 {{% /image_container %}}
 
 On the picture below you can see the settings for two column described above:
 
-![](attachments/container-widgets/column-settings-example.png)
+![](attachments/structure-widgets/column-settings-example.png)
 
 #### 4.2.2 **Size** {#column-size}
 
@@ -182,7 +183,7 @@ To add a new row, do the following:
 
 2. Right-click and select **Insert row above** or **Insert row below**:
 
-    ![Adding a New Row](attachments/container-widgets/adding-row.png)
+    ![Adding a New Row](attachments/structure-widgets/adding-row.png)
 
 3. Select a column layout (how many columns should be in a row and what weight columns should have).
 
@@ -213,5 +214,5 @@ In adding to inserting a new column, you can perform the following actions when 
 ## 6 Read More
 
 * [Page](page)
-* [Container Widgets](container-widgets)
+* [Structure](structure-widgets)
 * [Properties Common for Widgets](common-widget-properties)

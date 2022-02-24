@@ -32,7 +32,7 @@ To edit the server configuration with extra JVM parameters, follow these steps:
 
 In your Java IDE, you need to configure remote debugging. This screenshot shows the configuration in IntelliJ:
 
-![Mendix Intellij remote debugging](http://www.andrejkoelewijn.com/blog/images/2014/01/mx-java-debug/intellij_rundebug_configurations.png)
+![Mendix Intellij remote debugging](attachments/18448579/intellij_rundebug_configurations.png)
 
 1. Start the debugger.
 2. Place some breakpoints in your Java code.

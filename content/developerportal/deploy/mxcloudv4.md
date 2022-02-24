@@ -3,7 +3,7 @@ title: "Mendix Cloud v4"
 parent: "mendix-cloud-deploy"
 menu_order: 50
 description: "Frequently asked questions about Mendix Cloud v4"
-tags: ["Cloud", "Mendix Cloud", "v4", "Version 4", "FAQ", "v3", "AWS", "Amazon Web Services"]
+tags: ["Cloud", "Mendix Cloud", "v4", "Version 4", "FAQ", "v3", "AWS", "Amazon Web Services", "Max file size"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -44,7 +44,6 @@ The primary hosting locations are as follows:
 *   Mendix Cloud US: AWS North Virginia
 *   Mendix Cloud US: AWS Oregon
 
-
 Backups will always be stored in at least one secondary location, separate from the primary hosting location. Each individual backup is immutable, i.e. once it has been written to our storage location, it can no longer be modified or overwritten.
 
 Data will always be stored in the same political region for the following regions:
@@ -54,7 +53,7 @@ Data will always be stored in the same political region for the following region
     * Data in the UK is backed up in the EU
 *   Data in the US, including backups, will stay within the US
 
-Data in Japan is currently backed up in Australia.
+Data in Japan is currently backed up in Japan.
 
 ## 4 Does Mendix Expose the Underlying Cloud Foundry API?
 
@@ -86,7 +85,7 @@ There are certain limits and behaviors which apply to your app when running in M
 * In some circumstances your app can run out of file connections as indicated by the following entry in the logfile: *com.amazonaws.http.AmazonHttpClient executeHelper Unable to execute HTTP request: Timeout waiting for connection from pool* — to resolve this:
     * Update all Marketplace modules to the latest version – older versions may not close file connections correctly
     * If using Mendix 7, upgrade to version 7.16 or above
-    * Increase the number of available file connections (default is 50) by adding the *com.mendix.storage.s3.MaxConnections* setting on the **Environments > Runtime > Custom Runtime Settings** in the Developer Portal – see [Customization – Amazon S3 Storage Service Settings](/refguide/custom-settings#5-amazon-s3-storage-service-settings) for more information
+    * Increase the number of available file connections (default is 50) by adding the *com.mendix.storage.s3.MaxConnections* setting on the **Environments > Runtime > Custom Runtime Settings** in the Developer Portal – see [Customization – Amazon S3 Storage Service Settings](/refguide/custom-settings#amazon-s3-storage-service-settings) for more information
 * **Call REST** connections will be closed by the cloud infrastructure after a time if they are idle.
     * Mendix Cloud uses AWS NAT gateways for outgoing traffic. These gateways will drop connections that are idle for more than 350 seconds. This can result in your outgoing REST or web service connection getting dropped if there is no traffic for 350 seconds.
     

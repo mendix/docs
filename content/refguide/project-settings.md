@@ -29,7 +29,7 @@ These settings influence the behavior of the Runtime when running your applicati
 
 If this option is enabled, the static resources for your mobile application are downloaded as soon as you open your application rather than bit by bit as you navigate through the app. This can drastically cut down the number of network requests, as the files can be retrieved from the disk rather than from the server.
 
-The resources are downloaded to the device once for each deployment and are reused for subsequent runs of your app. This affects a number of files, including: your theme; the JavaScript client; CSS files; and pages.
+The resources are downloaded to the device once for each deployment and are reused for subsequent runs of your app. This affects a number of files, including your theme, the JavaScript client, CSS files, and pages.
 
 ### 3.2 Optimize Network Calls {#optimize-network-calls}
 
@@ -44,7 +44,7 @@ Here you can select a microflow that is automatically executed immediately after
 {{% alert type="warning" %}}
 There is a timeout of *11 minutes* on the after startup microflow. If your after startup microflow takes longer than 11 minutes your whole app will fail to start.
 
-After startup is designed to initialize the app and therefore runs *before* the app is able to respond to incoming service requests (for example, published REST services).
+**After startup** is designed to initialize the app and therefore runs *before* the app is able to respond to incoming service requests (for example, published REST services).
 {{% /alert %}}
 
 ### 3.4 Before Shutdown
@@ -67,26 +67,26 @@ The health check microflow is specific to the [Mendix Cloud](/developerportal/de
 
 ### 3.6 First Day of the Week {#first-day-of-the-week}
 
-The first day of the week setting determines the first day of the week in the date picker widget.
+The **First day of the week** setting determines the first day of the week in the date picker widget.
 
 | Option | Description |
 | --- | --- |
-| Default (based on locale)  *(default)* | The first day of the week in date picker widgets is based on the locale of the user. |
-| Sunday | Use Sunday as first day of the week in date picker widgets. |
-| Monday | Use Monday as first day of the week in date picker widgets. |
-| Tuesday | Use Tuesday as first day of the week in date picker widgets. |
-| Wednesday | Use Wednesday as first day of the week in date picker widgets. |
-| Thursday | Use Thursday as first day of the week in date picker widgets. |
-| Friday | Use Friday as first day of the week in date picker widgets. |
-| Saturday | Use Saturday as first day of the week in date picker widgets. |
+| **Default (based on locale)**  *(default)* | The first day of the week in date picker widgets is based on the locale of the user. |
+| **Sunday** | Use Sunday as first day of the week in date picker widgets. |
+| **Monday** | Use Monday as first day of the week in date picker widgets. |
+| **Tuesday** | Use Tuesday as first day of the week in date picker widgets. |
+| **Wednesday** | Use Wednesday as first day of the week in date picker widgets. |
+| **Thursday** | Use Thursday as first day of the week in date picker widgets. |
+| **Friday** | Use Friday as first day of the week in date picker widgets. |
+| **Saturday** | Use Saturday as first day of the week in date picker widgets. |
 
 ### 3.7 Default Time Zone
 
-The default time zone determines the time zone for newly created users. If your application is only used in one time zone, setting this default will make sure that users of your application never have to worry about setting their time zone.
+The **Default time zone** determines the time zone for newly created users. If your application is only used in one time zone, setting this default will make sure that users of your application never have to worry about setting their time zone.
 
 ### 3.8 Scheduled Event Time Zone {#scheduled}
 
-The scheduled event time zone defines under which timezone scheduled events run. The default is UTC and this has been the case since 3.0. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the app default timezone), you can select it here.
+The **Scheduled event time zone** defines under which timezone scheduled events run. The default is UTC. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the app default timezone), you can select it here.
 
 This affects time zone-related operations, such as parsing and formatting dates from/to strings and obtaining the beginning of the current day.
 
@@ -94,24 +94,28 @@ If you run on-premises, then you can select the time zone to which the server is
 
 ### 3.9 Hash Algorithm{#hash-algorithm}
 
-The hash algorithm is used to generate hash values for attributes of the **Hashed string** type, such as the password of a user. Mendix offers two recommended hashing algorithms:
+The **Hash algorithm** is used to generate hash values for attributes of the hashed string type, such as the password of a user. Mendix offers two recommended hashing algorithms:
 
 | Option | Description |
 | --- | --- |
-| BCrypt (default, recommended) | Resistant to brute-force search attacks. |
-| SSHA256 | Seeded Secure Hash Algorithm 2, digest length 256 bits. |
+| **BCrypt** (default, recommended) | Resistant to brute-force search attacks. |
+| **SSHA256** | Salted Secure Hash Algorithm 2, digest length 256 bits. |
 
-Mendix believes both algorithms are secure enough to store passwords within Mendix. The main difference between BCrypt and SSHA256 is that the BCrypt algorithm has been configured so that it is relatively slow on purpose, since it was designed specifically to stop brute force attacks. That's why this results in a slight performance difference with the SSHA256 algorithm.
+Mendix believes both algorithms are secure enough to store passwords within Mendix. The main difference between **BCrypt** and **SSHA256** is that the BCrypt algorithm has been configured so that it is relatively slow on purpose, since it was designed specifically to stop brute force attacks. That's why this results in a slight performance difference with the SSHA256 algorithm.
 
-#### 3.9.1 Performance
+#### 3.9.1 BCrypt Cost {#bcrypt-cost}
 
-This performance difference is hardly noticeable to a single user when signing in (the password you enter when signing in is hashed using the selected algorithm), so in general the performance alone is not a reason to choose SSHA256 over BCrypt. This situation can change when dealing with high concurrency of hashing operations. A common example of an area where this occurs is published web services exposing operations that compute quickly, like short-running microflows.
+**BCrypt cost** is used to specify the cost of the BCrypt algorithm. The default value is 10, and can go up to 30. The higher the value is, the slower the process of hashing values. For more information, see the subsections below.
 
-#### 3.9.2 Performance Tests
+#### 3.9.2 Performance
+
+If the BCrypt cost is low, the performance difference is hardly noticeable to a single user when signing in (meaning, the password you enter when signing in is hashed using the selected algorithm). This means performance alone is not a reason to choose **SSHA256** over **BCrypt**. The situation can change when dealing with high concurrency of hashing operations, for example, published web services exposing operations that compute quickly, like short-running microflows.
+
+#### 3.9.3 Performance Tests
 
 A (web service) user will sign in to execute a web service operation, wait for the operation to finish, and finally get the result back (if any).
 
-Imagine an empty microflow that returns nothing at all exposed as a published web service. We ask one user to execute this operation as many times as he can in one minute (simulated with SoapUI). First we set the hashing algorithm to BCrypt, then we set it to SSHA256. Any extra overhead here (on top of establishing the connection, building the XML message and so forth) is basically the hashing algorithm, as the operation should take near zero milliseconds and there is no result. So that leaves only the login, or, more precisely, the hashing of the password.
+Imagine an empty microflow that returns nothing at all exposed as a published web service. We ask one user to execute this operation as many times as he can in one minute (simulated with SoapUI). First we set the hashing algorithm to **BCrypt** (with cost value 10), then we set it to **SSHA256**. Any extra overhead here (on top of establishing the connection, building the XML message and so forth) is basically the hashing algorithm, as the operation should take near zero milliseconds and there is no result. So that leaves only the login, or, more precisely, the hashing of the password.
 
 | Hashing Algorithm | Total Operations Executed | Operation per Second | Overhead in Milliseconds |
 | --- | --- | --- | --- |
@@ -131,7 +135,7 @@ So 80 milliseconds per operation is not that much, right? Well, that depends on 
 The difference is noticeable when the operation takes less time. So if you expect a very high amount of concurrency in operations where hashing takes place (most commonly any place where login operations are involved), you might want to consider changing your hashing algorithm.
 
 {{% alert type="info" %}}
-It is important to remember when changing hashing algorithms is that any hashed attribute (like the System$User password attribute) has its algorithm set on hashing. In other words, for the hashing type to take effect, any existing hashed attribute will have to be reset using the new hashing type.
+It is important to remember when changing hashing algorithms that any hashed attribute (like the `System$User` password attribute) has its algorithm set on hashing. In other words, for the hashing type to take effect, any existing hashed attribute will have to be reset using the new hashing type.
 {{% /alert %}}
 
 ### 3.10 Rounding Numbers{#rounding}
@@ -173,7 +177,7 @@ For more information about using different languages in your app, see [Language 
 
 ### 4.1 Default Language
 
-The default language indicates the language that is used when a user has not chosen a language. The default language is also used as a fall-back language when a certain text is not translated to another language.
+The **Default language** indicates the language that is used when a user has not chosen a language. The default language is also used as a fall-back language when a certain text is not translated to another language.
 
 ### 4.2 Languages {#languages}
 
@@ -267,15 +271,15 @@ You can set an explicit order in the theme settings (**App Settings** > **Theme*
 
 **User entity** defines the entity which is used in [assigning a user task](user-task#user-assignment). If you assign a user task using an XPath, you can use attributes of this entity. If you are using a microflow, the entity defines the return type the microflows expects. For more information, see the [User Task Assignment](user-task#user-assignment) section in *User Task*.
 
-## 7.2 Execution
+### 7.2 Execution
 
 Allows you to set a maximum number of workflow and user task transactions that can be executed simultaneously by the runtime. This is an advanced setting that gives developers control over app performance.
 
-### 7.2.1 Parallel Workflow Executions
+#### 7.2.1 Parallel Workflow Executions
 
 Defines the maximum number of workflow transactions that the runtime will execute simultaneously. The limit is 10. 
 
-### 7.2.2 Parallel Task Executions
+#### 7.2.2 Parallel Task Executions
 
 Defines the maximum number of user task transactions that the runtime will execute simultaneously. The limit is 10.
 

@@ -85,9 +85,9 @@ The functions of these tabs are described in the table below:
 | -------------------- | ------------------------------------------------------------ |
 | Variables/Attributes | Shows variables and attributes that match the type of an attribute, association, or variable that you want to create or change. <br />For example, when you select  an attribute of the type Decimal, variables of types Decimal and Integer will be shown in the tab. This happens because decimal can include whole numbers (integer). However, if you pick an attribute of the type Integer, variables of the type Decimal will not be shown, because the whole numbers (integer) cannot contain decimals.  For more information on attribute types, see [Attributes](domain-models-attributes).<br />**Note** The attribute of the type Long will be shown as Integer in microflows. |
 | Constant             | With this tab you can assign a new value selecting it from the values of an attribute of enumeration type. |
-| Expression           | With this tab you can assign an attribute, association, or variable different values, depending on what you write in the expression. For more information on expressions, see [Microflow Expressions](microflows-expressions). |
+| Expression           | With this tab you can assign an attribute, association, or variable different values, depending on what you write in the expression. For more information on expressions, see [Microflow Expressions](expressions). |
 
 ## 6 Read More
 
 * [Microflows](microflows)
-* [Microflow Expressions](microflows-expressions)
+* [Microflow Expressions](expressions)

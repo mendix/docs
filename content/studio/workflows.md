@@ -1,13 +1,15 @@
 ---
 title: "Workflows"
 description: "Describes the workflows in Mendix Studio."
-menu_order: 15
+weight: 15
 tags: ["workflow", "workflows", "Studio"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert type="warning" %}}
-This functionality is in Beta. For more information on Beta products, see [Mendix Beta Features](/releasenotes/beta-features/).
+Workflows in Studio are temporarily unavailable for apps with Mendix version 9.6 and above. For more information, see [Using Workflows in Apps with Mendix Version 9.6 and Above](workflows-9.6).
+
+Workflows in Studio are available for apps with Mendix version 9.5.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -191,6 +193,8 @@ The elements of this section are described in the table below:
 
 ![System Actions](attachments/workflows/system-actions.jpg)
 
-## 5 Read More
+## 5 Main Documents in This Category
 
-* [Workflow Properties](workflow-properties)
+* [Using Workflows in Apps with Mendix Version 9.6 and Above](workflows-9.6) – explains how to use workflow functionality in apps with Mendix version 9.6 and above
+* [Workflow Properties](workflow-properties) – describes workflow properties 
+* [User Task](workflows-user-task) – describes properties of a user task

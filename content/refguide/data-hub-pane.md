@@ -21,53 +21,44 @@ You can search in the Data Hub Catalog through the **Data Hub** pane to discover
 In the Data Hub Catalog, registered published services are referred to as *data sources* and exposed entities will show the **Entity set** name and are called *datasets.*
 {{% /alert %}}
 
-To display the **Data Hub** pane, click **View** > **Data Hub**:
+To display the **Data Hub** pane, click **View** > **Data Hub**.
 
-{{% image_container width="300" %}}![data-hub-pane](attachments/data-hub-pane/data-hub-pane-empty.png){{% /image_container %}}
+## 2 Data Hub Pane Overview
 
-## 2 Data Hub Pane in the Domain Model
-
-The Data Hub pane is used to search the Data Hub Catalog for entities that can be dragged and used in your app and also display the external entities and the associated services that are consumed in your current model
-
-### 2.1 Data Hub Search
-
-{{% image_container width="300" %}}![](attachments/data-hub-pane/data-hub-pane.png){{% /image_container %}}
+The **Data Hub** pane is used to search the Data Hub Catalog for entities that can be dragged to the domain model and used in your app and also display the external entities and the associated services that are consumed in your current model.
 
 The following functionality is available in the pane:
 
 * [Search](#search) – Enter a search string of alphanumeric characters to search in the Data Hub Catalog. The search will be performed on services, entities, attributes, associations, and descriptions in the Catalog.
+* [Filter](#filter) – By default, the search is performed on assets in the **Production** environment. Click the **Filter** icon to include all other environments such as test, acceptance and also the Mendix free app environment **Sandbox** in the search.
+* [View information](#viewing) on the service, its entities, attributes, and associations – When you enter a search term and browse through services, you can view various information on them.
+* [View services used in your app](#used-in-app) – Services and the entities that are currently being used in your app are displayed in the **Used in your App** section and are indicated with a green check-mark in the search results. For more information, see the [Used in Your App](#used-in-app) section below. 
 
-* [Filter](#search) – By default, the search will be performed on assets in the **Production** environment. Click the **Filter** icon to **Show development environments** such as **Test**, **Acceptance**, and the Mendix Free App environment **Sandbox** in the search.
+### 2.2 Used in Your App Section {#used-in-app}
 
-* [Search results](#viewing) – The search results will show all the assets in the catalog that satisfy the search string. For each "hit" the information this is displayed includes the service name, service version, environment that the service was deployed to, and the assets matching the search string. If attributes or associations satisfy the search criteria, they will be displayed. You can drag the entity from the search results into your domain model and it will be displayed as an [external entity](external-entities):
+When you do not enter search text in the **Data Hub** pane, then **Used in your App** section is displayed. This shows the consumed services and the external entities used in the current app. The list of entities, associations, and attributes for the consumed services are shown as for the search results:
 
-  ![](attachments/data-hub-pane/external-entities-in-domain-model.png)
+![User in Your App Section](attachments/data-hub-pane/used-in-your-app.png)
 
-  Services and the entities that are currently being used in the current domain model are indicated with a green check-mark in the search results.
-
-### 2.2 Data Hub App Pane
-
-When no search string has been specified in the **Data Hub** pane, the **App** section is displayed. This shows the consumed services and the external entities used in the current project. The list of entities, associations and attributes for the consumed services are shown as for the search results:
-
-{{% image_container width="300" %}}![Project Section](attachments/data-hub-pane/project-section.png){{% /image_container %}}
-
-To add entities to your app model, see [Adding an External Entity to a Project](external-entities#adding-external-entities).
+For more information on how to add entities to your app, see [Adding an External Entity to an App](external-entities#adding-external-entities) section in *External Entities*.
 
 ## 3 Searching the Data Hub Catalog {#search}
 
-As you enter a search term, all the items in the Data Hub Catalog satisfying the search string are listed in the search results. This will include words in the service, entity and attribute descriptions which are not displayed in the the Data Hub pane. For further information see the [Data Hub Catalog asset details](/data-hub/data-hub-catalog/search#search-details).
+As you enter a search term, all the items in the Data Hub Catalog satisfying the search string are listed in the search results. This includes words in the service, entity and attribute descriptions, which are not displayed in the **Data Hub** pane. For more information, see the [Selected Asset Details](/data-hub/data-hub-catalog/search#search-details) section in *Search in the Data Hub Catalog*.
 
-{{% alert type="info" %}}Services that are set to **not-Discoverable** in the Catalog will not be included in the search results for *any* user including owners of the service. To consume entities from these services owners must ensure that they are [Discoverable](/data-hub/data-hub-catalog/curate#discoverability).{{% /alert %}}
+You can drag the entity from the search results into your domain model and it will be added to your app and displayed as an [external entity](external-entities).
+
+{{% alert type="info" %}}Services that are set to **not-Discoverable** in the Catalog are not be included in the search results for *any* user including owners of the service. To consume entities from these services owners must ensure that they are [Discoverable](/data-hub/data-hub-catalog/curate#discoverability).{{% /alert %}}
 
 ### 3.1 Wildcard Search
-You can perform a wildcard search by entering `*` in the search area.
+You can perform a wildcard search by entering `*` in the search field.
 
 {{% alert type="info" %}}
-The search strings must be a minimum of 3 alphanumeric characters. Punctuation cannot be used as part of the search term except for the wildcard character `*` to perform an "empty" search in the Data Hub Catalog. You cannot use the wildcard in combination with other characters. For further details, see [How to Search for Registered Assets](/data-hub/data-hub-catalog/search).
+The search strings must be a minimum of three alphanumeric characters. Punctuation cannot be used as part of the search term except for the wildcard character `*` to perform an "empty" search in the Data Hub Catalog. You cannot use the wildcard in combination with other characters. For further details, see [How to Search for Registered Assets](/data-hub/data-hub-catalog/search).
 {{% /alert %}}
 
-### 3.2 Service Environments
-By default, the search will be performed on assets in the **Production** environment. To include all other environments such as **Test**, **Acceptance**, and the Mendix Free App environment, **Sandbox** in the search, click the **Filter** icon and check **Show development environments**:
+### 3.2 Filtering Environments {#filter}
+By default, the search is performed on assets in the **Production** environment. To include all other environments such as test, acceptance, and also the Mendix free app environment, **Sandbox** in the search, click the **Filter** icon and check **Show development environments**:
 
 {{% image_container width="300" %}}![Filter Icon](attachments/data-hub-pane/filter-icon.png){{% /image_container %}}
 
@@ -75,78 +66,81 @@ By default, the search will be performed on assets in the **Production** environ
 When the **Show development environments** is checked, all subsequent searches results will also include those in non-production environments.
 {{% /alert %}}
 
-## 4 Information in Search Results and App Pane {#viewing}
+## 4 Data Hub Pane Information {#viewing}
 
-The search results show all the hits for the specified search string and environments. For further information on search results from the Data Hub Catalog, see [Search Results](/data-hub/data-hub-catalog/search#search-results).
-
-For each hit the following information is displayed.
+The information that is displayed in the **Data Hub** pane either when you enter a search term or when you open the **Used in your App** section is described in the sections below. 
 
 ### 4.1 Services
 
-The search results and **Project** pane will show the following at a service level:
+The search results and **User in your App** section show the following information at a service level:
 
 * **Service name**
 
-*  **Application icon** for the service (for example, Mendix, SAP, Siemens Teamcenter, or as shown in the screenshots above, custom icons)
+*  **Application icon** for the service (for example, Mendix, SAP, Siemens Teamcenter, or custom icons)
 
 * **Service version**
 
 *  **Environment name** for non-production environments
 
-	{{% alert type="info" %}}Only the names of non-production environments are displayed. Services in the **Production** will not show an environment name. {{% /alert %}}
+	{{% alert type="info" %}}Only the names of non-production environments are displayed. Services in the **Production** do not show an environment name. {{% /alert %}}
 
 * **Green check-mark** if the service or entity is consumed in the app. If you right-click a consumed service, you can do the following:
 
-  {{% image_container width="250" %}}![info on a Service](attachments/data-hub-pane/data-hub-pane-menu.png){{% /image_container %}}
+    * **View in Data Hub Catalog** – click this to go to the **Data Source Details** page in the Data Hub Catalog
+    * **Go to connection settings** – click this to open the [consumed OData service](consumed-odata-service) document
+    
+        ![info on a Service](attachments/data-hub-pane/data-hub-pane-menu.png)
+  
+* **Gray shield icon** shows if the service or entity is validated in the Catalog
 
-  * **View in Data Hub Catalog** – click this to go to the **Data Source Details** page in the Data Hub Catalog
-  * **Go to connection settings** – click this to open the [consumed OData service](consumed-odata-service) document
+* **Update icon** is a blue arrow icon that indicates that there is another version of the consumed service available in the Data Hub. Click to update the service that is consumed in the app to the contract that is now available:
 
-* **Blue** **Update Service** icon to indicate that there is another version of the consumed service available in the Data Hub. Click to update the service that is consumed in the app to the contract that is now available:
+    ![Data Hub Pane update](attachments/data-hub-pane/update-available.png)
 
-    {{% image_container width="250" %}}![Data Hub Pane update](attachments/data-hub-pane/project-pane-update-available.png){{% /image_container %}}
+    {{% alert type="info" %}}If there is an OData service update available, then the entities that are listed are those that are available in that version of the OData service. These entities are grayed-out to indicate that they cannot be dragged into the domain model, as the *current* contract that is consumed in the app does not have these entities. You must update the contract to the version shown in the search results by clicking the **Update** icon. {{% /alert %}}
 
-    {{% alert type="info" %}}If there is an OData Service update available, then the entities that are listed are those that are available in that version of the OData service. These entities will be "grayed-out" to indicate that they cannot be dragged into the domain model, as the *current* contract that is consumed in the app does not have these entities. You must update the contract to the version shown in the search results by clicking the **Update** arrow. {{% /alert %}}
+    {{% alert type="info" %}}The version number that is shown for the OData service is the latest one that is available in the Data Hub Catalog at the service endpoint – in the example above, version 1.0.0 of **BikeVehicleService** is currently consumed in the app, but the contract that is available in the Catalog is different to the one currently consumed.{{% /alert %}}
 
-  {{% alert type="info" %}}The version number that is shown for the OData service is the latest one that is available in the Data Hub Catalog at the service endpoint—in the example above version 1.0.0 of **BikeVehicleService** is currently consumed in the app, but the contract that is available in the Catalog is different to the one currently consumed.{{% /alert %}}
+* **Information icon** allows you to view further details for the service and a link to go directly to the [Service Details](/data-hub/data-hub-catalog/search#search-details) screen in the Data Hub Catalog:
 
-* **Information icon** to view further details for the service and a link to go directly to the [Service Details](/data-hub/data-hub-catalog/search#search-details) screen in the Data Hub Catalog:
-
-  {{% image_container width="250" %}}![Data Hub Pane Information](attachments/data-hub-pane/data-hub-pane-info.png){{% /image_container %}}
+    ![Data Hub Pane Information](attachments/data-hub-pane/data-hub-pane-info.png)
 
 ### 4.2 Entities, Attributes, and Associations {#association-attributes}
 
-Entities, attributes and associations that satisfy the search string are listed in the search results.
+Entities, attributes, and associations are displayed under the service name.
 
-For any service in the list, you can click **:Show details** to see the full list of the exposed entities and the associations and attributes for that service.
+For any service in the list, you can click **Show details** to see the full list of the exposed entities, associations, and attributes for that service.
 
-{{% alert type="info" %}}The associations and attributes that are not supported in your Mendix model are shown as non-selectable (gray) and will not be included when you drag them into the domain model.{{% /alert %}}
+![Data Hub Pane Information](attachments/data-hub-pane/expand-service-list.png)
 
-{{% image_container width="250" %}}![Data Hub Pane Information](attachments/data-hub-pane/expand-service-list.png){{% /image_container %}}
+{{% alert type="info" %}}The associations and attributes that are not supported in your Mendix app are shown as non-selectable (gray) and will not be included when you drag them into the domain model.{{% /alert %}}
 
-### 4.2.1 Entity
+#### 4.2.1 Entity
 
 If you right-click an entity and select **View in Data Hub Catalog**, it will take you to the entity details page in the [Data Hub Catalog](/data-hub/data-hub-catalog/).
 
 If you right-click a consumed entity and **Go to entity**, it will take you to the entity in the domain model.
 
-### 4.2.2 Associations
+#### 4.2.2 Associations
 
 The associations that are exposed in the services are listed before attributes in alphabetical order. You can click on the **+** to see the entity that the association is with.
 
 **Mulitiple association**s between the same entities are shown before single associations.
 
-In the following example the entity **Customer** has multiple associations with the entity **Order** however, these associations are not supported and cannot be used in your model"
+In the following example the entity **Customer** has multiple associations with the entity **Order** however, these associations are not supported and cannot be used in your app:
 
-{{% image_container width="250" %}}![multiple associations](attachments/data-hub-pane/multiple-assocs.png){{% /image_container %}}
+![multiple associations](attachments/data-hub-pane/multiple-associations.png)
 
-### 4.2.3 Attributes
+#### 4.2.3 Attributes
 
-Attributes for a service are listed in alphabetical order. If you right-click an attribute of a consumed entity and **Go to attribute**, it will take you to the attribute in the domain model.
+Attributes for a service are listed in alphabetical order. If you right-click an attribute of a consumed entity and **Go to attribute**, it takes you to the attribute in the domain model.
 
-In the above example, there are two attributes, **Addresses** and **FavoriteColors** which are not supported and therefore will not be included in your model:
+Unsupported attributes are grayed out and are not included in your app. 
 
-{{% image_container width="300" %}}![multiple associations](attachments/data-hub-pane/unsupported-attributes.png){{% /image_container %}}
+#### 4.2.4 CRUD Capabilities
+
+If the entity, association, or attribute supports **C**reate, **R**ead, **U**pdate, or **D**elete capabilities and it is also supported by Studio Pro, then it is displayed in the **Data Hub** pane.
+Entities and associations can have any of the CRUD capabilities, while attributes can only have create and update. For more information on CRUD capabilities, see [Write Data to Another App](/data-hub/write-data/).
 
 ## 5 Read More
 

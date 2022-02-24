@@ -1,5 +1,6 @@
 ---
 title: "Logic & Business Rules"
+weight: 60
 tags: ["studio pro", "how-to"]
 ---
 

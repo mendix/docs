@@ -110,7 +110,7 @@ There are three possible outcomes of the authentication microflow:
 * Otherwise, when the resulting User is not empty, the operation is executed in the context of that user
 * Otherwise, when the resulting User is empty, the next authentication method is attempted. When there are no other authentication methods, the result is **404 Not Found**.
 
-### 3.4 Allowed Roles
+### 3.4 Allowed Roles{#allowed-roles}
 
 The allowed roles define which [module role](module-security#module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
 

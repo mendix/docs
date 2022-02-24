@@ -4,6 +4,10 @@ description: "How to register OData resources in the Data Hub Catalog: through t
 category: "Data Hub Catalog"
 menu_order: 35
 tags: ["data hub catalog", "data hub", "external entities", "register", "published OData service" ,"how to", "registration"]
+aliases:
+    /data-hub/data-hub-catalog/register.html
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
+#The anchor registration-form below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -15,7 +19,6 @@ There are three ways to register exposed OData services in the Data Hub Catalog.
 * [Through the Mendix Cloud](#mendix-cloud)
 * [Through the Data Hub Catalog Registration API](#registration-api)
 * [Through the Data Hub Catalog UI form](#registration-form)
-
 
 ## 2 Prerequisites
 
@@ -62,31 +65,7 @@ The [Data Hub Registration API specification](https://datahub-spec.s3.eu-central
 
 #### 4.1.1 Creating a Data Hub Catalog API token {#create-token}
 
-You can create a Personal Access Token in the Mendix **Warden** application. Follow the steps below:
-
-1. To access the **Warden** app, go to [https://warden.mendix.com/](https://warden.mendix.com/) and log in. You land on the Warden homepage:
-
-    ![Warden Home Screen](attachments/register-data/warden-home-screen.png)
-
-2. To create a new personal access token, click **Add**. The **Create a Personal Access Token** screen is displayed.
-
-3. Enter a unique **Name** for the token. This name will help you identify it on the Warden homepage.
-
-4. In the **Select scopes that can be used with this token**, find the **Data Hub** section and check both the **mx:datahub:services:read** and **mx:datahub:services:write** boxes.
-	
-	![create token home](attachments/register-data/create-token.png)
-   
-5. Click **Create**. 
-
-    The token is generated and displayed in a pop-up window:
-
-    ![generated token](attachments/register-data/generated-token.png)
-
-6. Copy the **Token secret** and keep this token in a secure place. You will not get another chance to view this token once you close this pop-up window.
-
-7. Click **Close** to return to the **Warden** homepage where all your Personal Access Tokens are listed. If needed, you can delete your token from this list using the red trash bin button.
-
-    ![generated token](attachments/register-data/warden-home-with-token.png)
+You can create a Personal Access Token in the Mendix [Warden](/developerportal/community-tools/warden) application.
 
 #### 4.1.2 Registering an Application Through the Data Hub Catalog Registration API {#register-application}
 
@@ -350,3 +329,5 @@ Follow the steps below:
 8. Select the **Done!** option that appears once you have filled out all the required fields.
 
 Congratulations! Your OData service is registered in the Data Hub Catalog. 
+
+The discoverable status of the OData service defaults to the value set by the Mendix Admin. For more details, see the [Settings](/developerportal/control-center/data-hub-admin#settings) section of *Data Hub Administration*.

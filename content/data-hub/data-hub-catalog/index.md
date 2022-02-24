@@ -2,6 +2,7 @@
 title: "Data Hub Catalog"
 description: "Introduces the processes and properties of Mendix Data Hub."
 tags: ["data hub", "data hub catalog"]
+weight: 30
 ---
 
 ## 1 Introduction
@@ -14,7 +15,7 @@ The Data Hub Catalog functionality is enhanced by the [Data Hub Landscape](/data
 
 From the Data Hub [Home](https://hub.mendix.com) screen, you can carry out the major functions of Data Hub.
 
-![Data Hub screen](../share-data/attachments/share-data/data-hub-home.png)
+![Data Hub screen](/data-hub/share-data/attachments/share-data/data-hub-home.png)
 
 You can navigate to the following tabs:
 
@@ -39,7 +40,7 @@ The Data Hub integration is available in Studio Pro version 8.14 and above. To u
 
 The functionality of the Data Hub reflects the process of sharing data in an organization through application APIs from the different systems in an enterprise. The sections below describe the processes involved.
 
-### 3.1 Search – Finding Connectable Data sources
+### 3.1 Search – Finding Connectable Data Sources
 
 Users can find shared datasets by searching the Data Hub Catalog. The [search](search) features include results that are project-relevant in order of most popular services, and results can be refined by using filters. Full details of the registered services are displayed to help in deciding on the suitability of the data associated with a registered dataset.
 
@@ -71,11 +72,11 @@ Registered assets can be curated to ensure that they are discoverable by the rel
 
 For more details, see [How to Curate Registered Assets](curate).
 
-### 3.5 Data Accessibility & Security
+### 3.5 Data Accessibility and Security
 
 Mendix Data Hub enables organizations to manage the data that is shared from the different sources. Security of the shared datasets is crucial, and this includes access to the shared data and authentication of users.
 
-Registered users on the Mendix platform have access to Data Hub. However to consume data through external entities in your Mendix app, you need a Data Hub license and the type of license that you have determines how much data you can consume. This is described in [Data Hub License](/refguide/consumed-odata-service-requirements#license-limitations).
+Registered users on the Mendix platform have access to Data Hub. However, to consume data through external entities in your Mendix app, you need a Data Hub license and the type of license that you have determines how much data you can consume. For more information, see the [Data Hub License Limitations](/refguide/consumed-odata-service-requirements#license-limitations) section of *Consumed OData Service Requirements*.
 
 For details on security and accessibility in the Data Hub Catalog and for registered services and datasets, see [Data Accessibility and Security](security).
 
@@ -102,5 +103,6 @@ The information that is registered for data sources and exposed datasets are as 
 * [How to Search for Registered Assets](search) – describes search and asset details
 * [How to Consume Registered Assets](consume) – gives general information on consuming registered datasets
 * [How to Register OData Resources in the Data Hub Catalog](register-data) – describes how to register OData resources in the Data Hub Catalog: through the Mendix Cloud, using the Registration API, or in the UI form
+* [How to Register Non-OData Resources in the Data Hub Catalog](register-non-odata-resources) – describes ways to register non-OData resources in the Data Hub Catalog
 * [How to Curate Registered Assets](curate) – describes the curate functions for managing assets
 * [Data Accessibility and Security](security) – describes access to datasets and security

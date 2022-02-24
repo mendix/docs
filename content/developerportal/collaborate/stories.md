@@ -21,7 +21,7 @@ You can also manage the progress of tasks and Sprints from within Mendix Studio 
 
 This page has two tabs, which are described below.
 
-## 2 Overview
+## 2 Overview {#overview}
 
 The sections below describe the main actions to be performed on the **Overview** tab.
 
@@ -236,7 +236,7 @@ In addition to managing your Sprints in the Developer Portal, you can view them 
 
 To manage stories in Studio Pro, follow these steps:
 
-1. Open your app in Studio Pro by clicking **Edit in Studio Pro** in the top-right corner of the page.
+1. Open your app in Studio Pro by clicking **Edit in Studio Pro** in the upper-right corner of the page.
 2. Open **View** > **Stories**. You can see your active Sprints in the **Stories** pane.
 
 	![](attachments/stories/stories-pane.png)

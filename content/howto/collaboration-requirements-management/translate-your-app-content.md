@@ -132,15 +132,15 @@ To translate multiple occurrences and multiple texts from the default language, 
 
 5. Make sure only the module **MyFirstModule** is selected. This can restrict batch translation to this module.
 
-   ![Select only MyFirstModule](attachments/translate-your-app-content/batch-translate-myfirstmodule.png)
+    ![Select only MyFirstModule](attachments/translate-your-app-content/batch-translate-myfirstmodule.png)
 
 6. Click **OK**. You can now see all the translatable texts in your module. The **Translation (Russian, Russia)** column shows the individual translations you made in the previous section. The **#** column shows the number of times each text appears in the selected module(s).
 
-   ![Translatable texts in MyFirstModule](attachments/translate-your-app-content/batch-translate-initial.png)
+    ![Translatable texts in MyFirstModule](attachments/translate-your-app-content/batch-translate-initial.png)
 
 7. Enter translations in the **Translation (Russian, Russia)** column for a few terms: **Cancel**, **Delete**, and **Edit**, for example.
 
-   ![Translate Cancel, Delete, and Edit into Russian](attachments/translate-your-app-content/batch-translate-cancel-delete-edit.png)
+    ![Translate Cancel, Delete, and Edit into Russian](attachments/translate-your-app-content/batch-translate-cancel-delete-edit.png)
 
 8. Click **Translate** to save the current translations.
 
@@ -263,7 +263,7 @@ To set up the completeness check, do the following:
 4. Click **OK** to close the **Edit Language** dialog box. 
 5. In the **App Settings** dialog box, click **OK** to save the changes and close the dialog box. You then receive warnings about all text which has not been translated into that language. There is always a completeness check for the default language.
 
-For more information, see [Advanced Language Settings](../../refguide/language-settings#advanced) in the *Language Settings* reference guide.
+For more information, see [Advanced Language Settings](/refguide/language-settings#advanced) in the *Language Settings* reference guide.
 
 ### 9.2 Sharing Translations With Other Apps
 
@@ -273,8 +273,8 @@ What if you have several apps and want to add Russian to all of them? Maybe you 
 
 Mendix allows you to export a translation to an Excel file, either for the whole app or just selected modules. You can then import this translation to another app and have your translation available to you.
 
-For more information, see [Exporting & Importing Text](../../refguide/batch-translate#export-import) in the *Batch Translate* reference guide.
+For more information, see [Exporting & Importing Text](/refguide/batch-translate#export-import) in the *Batch Translate* reference guide.
 
 ## 10 Read More
 
-* [Language Menu](../../refguide/translatable-texts)
+* [Language Menu](/refguide/translatable-texts)

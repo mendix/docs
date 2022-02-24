@@ -73,8 +73,8 @@ Here is a list of key changes pertaining to the web environment:
 * Many design properties have been introduced, and existing ones have recieved added options:
   * **Inner** spacing options allowing users to configure **padding** for widgets. This applies to all widgets
     * Previous spacing options are now renamed to **Outer** to be more explicit and apply to **margin** for widgets
-  * Container widgets get a new **gradient** option for background color
-  * Container widgets get a **shade** design property with options to apply shades to background colors
+  * Structure  widgets get a new **gradient** option for background color
+  * Structure  widgets get a **shade** design property with options to apply shades to background colors
   * List View widgets get a **style** option to add horizontal borders at the top and bottom of each list item
   * Static and dynamic images each get a new design property to assist with fitting images (for example fill, contain, cover, or scale-down)
   * Tab container widgets get new design properties to style and space tabs

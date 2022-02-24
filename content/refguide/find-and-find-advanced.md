@@ -1,5 +1,5 @@
 ---
-title: "Find, Find Advanced, and Find Usages"
+title: "Find, Find Advanced & Find Usages"
 parent: "edit-menu"
 description: "Describes Find, Find Advanced, and Find Usages in Mendix Studio Pro."
 menu_order: 10
@@ -59,7 +59,7 @@ To find the unused items, do the following:
 
 3. Click **Find**. 
 
-The results will show up in the **Find Results** pane. To filter the results click the **Show all** button in the top-right corner of the pane. 
+The results will show up in the **Find Results** pane. To filter the results click the **Show all** button in the upper-right corner of the pane. 
 
 Note that deleting any unused items might result in more unused items. For example, if you delete an unused page, a microflow which is only used on that page will become an unused item itself. If you are cleaning up your app regularly refresh the unused items list.
 

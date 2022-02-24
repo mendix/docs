@@ -1,6 +1,6 @@
 ---
 title: "Expressions"
-menu_order: 55
+weight: 55
 description: "Describes the microflow expressions available in Mendix Studio."
 tags: ["studio", "microflow", "expressions", "expression", "set value", "variable"]
 aliases:
@@ -45,7 +45,7 @@ Attributes and associations of objects are accessed using a slash (for example, 
 You can use brackets to determine the priority and associativity of calculations. For example, the **SellingPrice** is being calculated based on the default **Price** and **Discount** attributes:
 
 ```
-$CurrentPrice/Price - (($CurrentPrice/Price **div** 100) * $OrderLine/Discount)
+$CurrentPrice/Price - (($CurrentPrice/Price div 100) * $OrderLine/Discount)
 ```
 
 Arithmetic functions (subtraction, dividing, and multiplying) are being combined here.

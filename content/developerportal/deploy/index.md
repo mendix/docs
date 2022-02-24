@@ -2,6 +2,7 @@
 title: "Deployment"
 description: "Deployment section of the Developer Portal Guide: How to deploy Mendix apps to different environments and how to manage those deployments."
 tags: ["Deploy","Manage", "Mendix Cloud", "IBM", "SAP", "Cloud Foundry", "Kubernetes", "On-premises", "Environment"]
+weight: 10
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -28,7 +29,7 @@ In *Studio Pro*, you can click the play button (▶) in the toolbar to run your 
 
 ### 2.2 Studio
 
-In *Studio*, you can click **Preview** in the top-right corner of Studio to see a preview of your app in the browser. 
+In *Studio*, you can click **Preview** in the upper-right corner of Studio to see a preview of your app in the browser. 
 
 For more information see [Previewing & Publishing Your App](/studio/publishing-app).
 

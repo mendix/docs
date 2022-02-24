@@ -132,6 +132,10 @@ The **Password** property defines the password that will be used to authenticate
 
 These headers are added to the HTTP request header. Each custom header is a pair with a key and a value (a microflow expression).
 
+{{% alert type="warning" %}}
+REST endpoints which are using NGINX as a webserver will ['silently drop'](https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/#missing-disappearing-http-headers) HTTP headers which contain an underscore `_`.
+{{% /alert %}}
+
 ## 6 Request Tab {#request}
 
 ![](attachments/integration-activities/request-tab.png)
@@ -212,7 +216,20 @@ The **Type** field defines the type of the output.
 
 The **Variable** field defines the name for the result of the operation.
 
-### 7.4  Store Message Body in $latestHttpResponse Variable {#latesthttpresponse}
+#### 7.3.1 $latestHttpResponse Variable
+
+The `$latestHttpResponse` variable is of the [HttpResponse](http-request-and-response-entities#http-response) type. It is available after a **Call REST** activity.
+
+However, its `Content` attribute will be left empty in most cases to minimize memory usage.
+
+This attribute is filled when one of the following scenarios occur:
+
+* The **Response handling** is **Store in an HTTP response** and the call succeeded
+* The **Store message body in $latestHttpResponse variable** option in the **Error handling** section is checked and the call failed
+
+This variable can be accessed from any microflow action in the scope.
+
+#### 7.3.2  Store Message Body in $latestHttpResponse Variable {#latesthttpresponse}
 
 If HTTP response status code is not successful (for example, `[4xx]` or `[5xx]`), the flow will continue in an [error handler](error-event#errorhandlers).
 

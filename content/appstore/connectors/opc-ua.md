@@ -8,7 +8,7 @@ tags: ["Marketplace", "Marketplace component", "OPC UA", "connector", ]
 
 ## 1 Introduction
 
-The [OPC UA Client connector](https://marketplace.mendix.com/link/component/117391/) connector allows you to connect your Mendix application to [OPC](https://opcfoundation.org/) enabled servers using the functionality of [OPC UA](https://opcfoundation.org/about/opc-technologies/opc-ua/). The connector allows you to read from, write to, and subscribe to OPC UA servers.
+The [OPC UA Client](https://marketplace.mendix.com/link/component/117391/) connector allows you to connect your Mendix application to [OPC](https://opcfoundation.org/) enabled servers using the functionality of [OPC UA](https://opcfoundation.org/about/opc-technologies/opc-ua/). The connector allows you to read from, write to, and subscribe to OPC UA servers.
 
 OPC is the platform-independent, multi-vendor interoperability standard for the secure and reliable exchange of data in the industrial automation space and in other industries. The OPC Unified Architecture (OPC UA) is an architecture that integrates all the OPC specifications into one extensible framework.
 
@@ -50,19 +50,11 @@ Recommended; Having an external OPC UA Client tool will make setup of the connec
 
 ## 2 Installation
 
-Import the [OPC UA Client connector](https://marketplace.mendix.com/link/component/117391/) module into your app. Instructions for doing this are in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).
-
-You will see the new module in the **Marketplace modules** section of the **App Explorer**.
-
-{{% image_container width="300" %}}
-![OPC UA Client connector in App Explorer](attachments/opc-ua/opc-ua-connector-module.png)
-{{% /image_container %}}
+Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) to import the [OPC UA Client connector](https://marketplace.mendix.com/link/component/117391/) module into your app. You will see the new module in the **Marketplace modules** section of the **App Explorer**.
 
 When you edit a microflow, you will also see five additional actions in the **Toolbox**.
 
-{{% image_container width="300" %}}
 ![OPC UA Client connector actions in the microflow toolbox](attachments/opc-ua/opc-ua-toolbox.png)
-{{% /image_container %}}
 
 ### 2.1 Configuration
 

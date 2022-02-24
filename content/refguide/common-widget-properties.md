@@ -18,7 +18,7 @@ The Screen reader caption property allows information to be read by screen reade
 
 {{% alert type="info" %}}The Screen reader caption property is not supported on native mobile pages.{{% /alert %}}
 
-#### 2.1.1 Screen Reader Caption Input Widgets 
+#### 2.1.1 Screen Reader Caption Input Elements 
 
 The **Screen reader caption** property can be set on the following widgets:
 
@@ -92,7 +92,7 @@ Some widgets, for example snippets and building blocks, have a **Documentation**
 
 This property identifies an attribute which is used in an input widget.
 
-#### 4.1.1 Attribute Input Widgets
+#### 4.1.1 Attribute Input Elements
 
 With the following widgets, the Attribute (Path) specifies the attribute which is being changed (or displayed) by the widget:
 
@@ -113,9 +113,9 @@ In the first two cases we say the widget is connected to an **attribute** and in
 
 You can edit attributes of any enclosing data container including grandparent data containers.
 
-#### 4.1.2 Association Input Widgets
+#### 4.1.2 Association Input Elements
 
-For widgets which manipulate associations, the Attribute (Path) specifies an attribute which is from an entity which is reachable from the current data container using an association. This applies to the following input widgets:
+For widgets which manipulate associations, the Attribute (Path) specifies an attribute which is from an entity which is reachable from the current data container using an association. This applies to the following input elements:
 
 *   [Reference Selector](reference-selector)
 *   [Reference Set Selector](reference-set-selector)
@@ -252,7 +252,7 @@ Default: *Fixed*
 | 19.9999  | 20.00<sup><small>*</small></sup> | 19.9999      | 19.9999  |
 | 19.99999 | 20.00<sup><small>*</small></sup> | 20.0000<sup><small>*</small></sup> | 19.99999 |
 
-<sup><small>*</small></sup>The value is rounded to the nearest decimal with the defined number of decimal places.
+<small><sup>*</sup> The value is rounded to the nearest decimal with the defined number of decimal places.</small>
 
 ### 7.2 Decimal Precision{#decimal-precision}
 
@@ -284,7 +284,7 @@ For example, with **Group digits** set to `true`, the number `1100100.01` will b
 
 ![Validation Section](attachments/common-widget-properties/validation-section.png)
 
-Input widgets can include validation to ensure that data is correct before it is used by the app.
+Input elements can include validation to ensure that data is correct before it is used by the app.
 
 There are two settings in the validation section which are described below:
 
@@ -358,6 +358,10 @@ When selected, this shows the widget while a particular attribute has a certain 
 ##### 9.1.1.2 Based on Expression{#visibility-based-on-expression}
 
 When selected, this shows the widget while a provided [expression](expressions) evaluates to true. The object of the containing data container is available inside an expression as a `$currentObject` variable. The expression can access objects of all the data containers enclosing that data container widget. These objects are available under the name of the widget they originate from (for example, `$dataView1`).
+
+For example, you might want a button to only be visible if a condition is met. Assume the object has an attribute called `myAttribute`, and you want the button to be visible only if `myAttribute` actually has a value stored. To achieve this goal put this expression into the field: `$currentObject/myAttribute != empty`.
+
+![Visibility Example](attachments/common-widget-properties/visibility-example.png)
 
 Note that the expression is evaluated in the browser, and hence, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](constants). Also, client-side expressions currently do not support all the functions that are available in the microflows. Please refer to an autocomplete list to know what functions are supported in your version.
 

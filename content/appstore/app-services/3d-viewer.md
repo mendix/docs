@@ -433,7 +433,7 @@ By selecting one attribute to set the **Error** event, you can pick up an error 
 
 ![viewerevent-onerror](attachments/3d-viewer/viewerevent-onerror.jpg)
 
-Like other Mendix events, you can select from a list of actions upon a Viewer error for **Action**. One possible use case is show a error pop up page to let user know the error details.
+Like other Mendix events, you can select from a list of actions upon a Viewer error for **Action**. One possible use case is show a error pop-up page to let user know the error details.
 
 ![viewer-onerror-sample](attachments/3d-viewer/viewer-onerror-sample.jpg) 
 
@@ -461,7 +461,7 @@ By selecting one attribute for the **Loaded** value, you can get the current loa
 
 ![viewer-onload-result](attachments/3d-viewer/viewer-onload-result.jpg)
 
-Like other Mendix events, you can select from a list of actions upon the product structure tree loaded status for **Action**. In order to call on load action, you must bind a valid **Loaded** value. One possible use case is show a pop up page to let user know if product structure is successfully loaded.
+Like other Mendix events, you can select from a list of actions upon the product structure tree loaded status for **Action**. In order to call the **On Load** action, you must bind a valid **Loaded** value. One possible use case is show a pop-up page to let user know if product structure is successfully loaded.
 
 ![viewer-onload-sample](attachments/3d-viewer/viewer-onload-sample.jpg)
 

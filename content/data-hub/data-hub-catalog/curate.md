@@ -249,7 +249,7 @@ The **Validated** property can be assigned to a data source or a dataset to indi
 
 Setting an asset as **Validated** contributes to the weighting of the asset in the search results. This means that **Validated** assets will be listed before not-validated assets in the results. The weigting of the validation property is also cumulative for a data souce and the consituent datasets. For example, if there is a dataset named **Customer** that is **Validated** in a **Validated** data source, the search results will list this higher than a dataset of the same name that is not **Validated** in a **Validated** data source.
 
-## 7 Deleting a Data Source
+## 7 Deleting a Data Source {#delete-data-source}
 
 Owners of a data source can delete their own data sources. Anyone with curation rights (Mendix Admins or Curators) can delete any data sources within the company. This ensures that their Data Hub Catalog is free of outdated or irrelevant data sources. 
 

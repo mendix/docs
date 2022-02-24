@@ -245,7 +245,11 @@ You can change your password in this section. By default, you are requested to c
 
 ### 10.5 API Keys {#api-key}
 
-In this section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allow apps using it to act on behalf of the user who created the key, which means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password. 
+In this section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allow apps using it to act on behalf of the user who created the key, which means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password.
+
+{{% alert type="info" %}}
+Some platform APIs use *Personal Access Tokens (PATs)* rather than *API Keys*. For more information on PATs, and how to generate and manage them, see [Create a Personal Access Token with Warden](warden).
+{{% /alert %}}
 
 For example, you can use an API key to perform scripted operations on your application model with the SDK. 
 
@@ -270,15 +274,15 @@ For more information, see the following:
 
 ### 10.6 My Activity Overview {#my-activity-overview}
 
-### 10.6.1 Latest Messages
+#### 10.6.1 Latest Messages
 
 In this section, you can see all the notifications of the [Buzz](/developerportal/collaborate/buzz) instances you participate in (for example, when a colleague has created an app or added a new story).
 
-### 10.6.2 Documents
+#### 10.6.2 Documents
 
 This section presents all the documents you have shared within different apps. 
 
-### 10.6.3 Feedback {#feedback}
+#### 10.6.3 Feedback {#feedback}
 
 {{% image_container width="500" %}}![](attachments/mendix-profile/feedback.png)
 {{% /image_container %}}
@@ -290,14 +294,14 @@ In this section, you can view feedback submitted on the following:
 
 When you click **Details** for a feedback item on an app of which you are a team member, you can manage that feedback. For more information, see [Feedback](/developerportal/collaborate/feedback).
 
-### 10.6.4 Team Server
+#### 10.6.4 Team Server
 
 Changes made through Studio Pro are stored in the Mendix [Team Server](/developerportal/collaborate/team-server). This section provides an overview of the revisions you have committed for all your apps.
 
 {{% image_container width="500" %}}![](attachments/mendix-profile/team-server.png)
 {{% /image_container %}}
 
-### 10.6.5 Pending Invites
+#### 10.6.5 Pending Invites
 
 In this section, you can view the invitations you have sent and received. There are two types of invitations:
 

@@ -1,7 +1,7 @@
 ---
 title: "Published OData Resource"
 parent: "published-odata-services"
-tags: ["studio pro"]
+tags: ["studio pro", "OData"]
 ---
 
 ## 1 Introduction
@@ -58,7 +58,7 @@ Use **Exposed entity name** in the **Edit published resource** window to customi
 
 {{% alert type="info" %}}
 
-Location URIs must be unique. Exposing two different resources at the same location will result in a consistency error.
+Location URIs must be unique. Exposing two different resources at the same location will result in a [consistency error](/refguide/consistency-errors).
 
 {{% /alert %}}
 
@@ -96,8 +96,34 @@ Default: *10000*
 
 ## 8 Capabilities {#capabilities}
 
-A published OData resource is always readable. Use the checkbox for **Updatable (write)** to indicate that clients can update the values of attributes and associations. Only users that have write entity access to attributes and associations can update them. For more information, see [OData query options](odata-query-options#updating-objects).
+The **Capabilities** section gives an overview of what operations the resource supports.
 
 {{% alert type="info" %}}
 This *Capabilities* section was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6).
 {{% /alert %}}
+
+## 8.1 Readable
+
+A published OData resource is always readable.
+
+## 8.2 Updatable
+
+Select the check box for **Updatable (write)** to indicate that clients can update the values of attributes and associations.
+
+When the app receives a request to change values, it does the following:
+
+1. It checks that the request is formatted correctly, rejecting things like specifying a string value for an integer attribute.
+2. It checks that the requested changes are valid, rejecting things like strings that are longer than the maximum length and empty values for required attributes.
+3. It commits the changes to the database.
+
+This is the behavior when you choose the action **Write to database**.
+
+### 8.2.1 Call a Microflow Instead of Writing to Database
+
+The **Call a microflow** action allows you to replace the third step (committing the changes to the database) with your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](http-request-and-response-entities) parameter. In the microflow, you can use the [Commit](committing-objects) activity to commit the changes to the database. If the microflow reports [validation feedback](validation-feedback), the runtime informs the client that the update request has failed.
+
+{{% alert type="info" %}}
+This **Call a microflow** action was introduced in Studio Pro [9.11.0](/releasenotes/studio-pro/9.11).
+{{% /alert %}}
+
+For more information, see [OData query options](odata-query-options#updating-objects).

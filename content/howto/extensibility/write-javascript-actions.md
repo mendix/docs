@@ -19,7 +19,7 @@ Nanoflows are more powerful with pluggable nanoflow actions — called JavaScrip
 * Expose an action as a nanoflow action
 * Use your actions in a demo
 
-## 2 Create a JavaScript action: TextToSpeech
+## 2 Creating a JavaScript action: TextToSpeech
 
 To create a JavaScript action that can synthesize text to speech, follow these steps:
 

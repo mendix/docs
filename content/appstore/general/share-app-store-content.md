@@ -64,20 +64,14 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 * Create an empty folder with the version number as its name, which will appear in Studio Pro's App Explorer
 *  If you add any **userlib** .*jar* files, make sure they are accompanied by a blank **MyModule.RequiredLib** file so that users know where the .*jar* files come from
 
-	{{% image_container width="400" %}}
-	![](attachments/share-app-store-content/userlibBlankFiles_boxed.jpg)
+	{{% image_container width="400" %}}![](attachments/share-app-store-content/userlibBlankFiles_boxed.jpg)
 	{{% /image_container %}}
 
 * Verify that the module's Java actions compile correctly (the easiest way to check is to create a deployment package, as it will clean the deployment folder and rebuild the app; for more information, see [Environments](/developerportal/deploy/environments))
 * Reduce the use of layouts and use snippets instead, which will result in fewer module dependencies and will reduce the number of potential errors (for example, missing layouts)
 * Implement [user roles](/refguide/user-roles) and [security](/refguide/security)
 * Creating a new release or module export should be done while the security level of the app containing the module is set to **Production**
-* The [status](/refguide/project-security#app-status) must be **Complete** for the following:
-	* Page access
-	* Microflow access
-	* OData access
-	* Entity access
-	* Dataset access
+* The [status](/refguide/project-security#app-status) must be **Complete** for the following access: page, microflow, OData, entity, and dataset
 * For example pages and microflows to be copied to another module, select the **Exclude from project** option for the document in order to encourage duplication and reduce dependency errors 
 * Do not rename entities and attributes when creating new versions, as data in these entities will get lost (replacing an existing module is based on the entity names)
 * The module should include the English language
@@ -96,7 +90,7 @@ To start, click **Add content** in the top bar of the Marketplace home screen. F
 
 On the **Upload Content** page, select the type of content you would like to publish (the available types correspond to the [Marketplace home page](app-store-overview#home)):
 
-{{% image_container width="400" %}}
+{{% image_container width="600" %}}
 ![](attachments/share-app-store-content/category.JPG)
 {{% /image_container %}}
 	
@@ -140,7 +134,7 @@ Follow these steps to describe your content:
 	* SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL
 	* SDISW End-User License Agreement for Mendix Sample Apps
 
-	{{% image_container width="400" %}}![](attachments/share-app-store-content/general.jpg)
+	{{% image_container width="600" %}}![](attachments/share-app-store-content/general.jpg)
 	{{% /image_container %}}
 
 6. Click **Upload an Image** to upload an icon for the component.
@@ -177,7 +171,7 @@ If the virus scan report is invalid or there is some issue with it, the [Marketp
 If this report is not attached and during our approval process we identify security issues in your component, the component will not be listed in the public Marketplace until the issue is resolved.
 {{% /alert %}}
 
-{{% image_container width="400" %}}
+{{% image_container width="600" %}}
 ![](attachments/share-app-store-content/package.jpg)
 {{% /image_container %}}
 
@@ -203,7 +197,7 @@ The editor comes with a set of basic formatting tools, such as bold, bullet list
 
 <a name="screenshot"></a>Click **Add Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
 
-{{% image_container width="400" %}}
+{{% image_container width="600" %}}
 ![](attachments/share-app-store-content/enable.jpg)
 {{% /image_container %}}
 
@@ -219,7 +213,7 @@ On the **Capabilities** page, you can provide the following details about a solu
 * A **Use Case** relevant to the content (enter a **Header** and **URL**)
 * **External links** relevant to the content
 
-{{% image_container width="400" %}}
+{{% image_container width="600" %}}
 ![](attachments/share-app-store-content/capabilities.jpg)
 {{% /image_container %}}
 
@@ -227,7 +221,7 @@ On the **Capabilities** page, you can provide the following details about a solu
 
 Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
 
-{{% image_container width="400" %}}
+{{% image_container width="600" %}}
 ![](attachments/share-app-store-content/publish.png)
 {{% /image_container %}}
 

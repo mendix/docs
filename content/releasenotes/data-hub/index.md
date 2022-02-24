@@ -12,7 +12,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### February 24th, 2022
 
-##### Improvements 
+#### Improvements 
 
 * We improved the appearance of the Catalog by adjusting colors and styling.
 

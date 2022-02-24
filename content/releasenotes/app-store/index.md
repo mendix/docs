@@ -21,7 +21,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 #### Improvements
 
-* We made performance improvements for when a large source file is [uploaded](](/appstore/general/share-app-store-content#package), specifically on the navigation steps.
+* We made performance improvements for when a large source file is [uploaded](/appstore/general/share-app-store-content#package), specifically on the navigation steps.
 * We improved the UI for self-service uploading your component to the Marketplace.
 
 ### February 10th, 2022

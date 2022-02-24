@@ -52,8 +52,8 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 #### Improvements
 
-* You can now add [release notes](/appstore/general/share-app-store-content#version) for your new component version without uploading a new source file.
-* You can now skip uploading a source file on the [Package](/appstore/general/share-app-store-content#version) page for **App Service** and **Solution Template** component types if your component is not downloadable.
+* You can now add [release notes](/appstore/general/share-app-store-content#package) for your new component version without uploading a new source file.
+* You can now skip uploading a source file on the [Package](/appstore/general/share-app-store-content#package) page for **App Service** and **Solution Template** component types if your component is not downloadable.
 
 ### September 7th, 2021
 

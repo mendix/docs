@@ -56,7 +56,7 @@ The Intelligent Document Service is a premium Mendix product that is subject to 
 
     {{% alert type="info" %}}For the trial, only one user per company is allowed.{{% /alert %}}
 
-2. Fill in the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email. 
+2. Fill in the **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Owner receives an order confirmation email. 
 
     For the trial, you do not need to fill in this information.
 

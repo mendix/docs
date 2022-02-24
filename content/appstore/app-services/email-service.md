@@ -61,7 +61,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 ### 3.1  Subscribing to Get SecretKey and UserName {#key-generation}
 
 1. On the [Email Service](https://marketplace.mendix.com/link/component/118393) page, click **Subscribe** to start a subscription or click **Try for Free** to start a trial.
-2.  To start a subscription, fill in [Technical Contact](https://docs.mendix.com/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email. 
+2.  To start a subscription, fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Owner receives an order confirmation email. 
 
     For the trial, you do not need to fill in this information.
 
@@ -71,7 +71,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
    ![secretkey-username-mailfromdomain-spfrecordvalue-mxrecordvalue-generated](attachments/email-service/binding-key-generation.png)
 
-9. After the order is created successfully, the Technical Contact also receives an email to confirm the email address. Follow the instructions in the email to confirm the email address. Once this email address is confirmed, this email address is used as the sender's email address when the app sends an email.
+9. After the order is created successfully, the Technical Owner also receives an email to confirm the email address. Follow the instructions in the email to confirm the email address. Once this email address is confirmed, this email address is used as the sender's email address when the app sends an email.
 
 ### 3.2 Configuring userName and secretKey for App Deployment
 

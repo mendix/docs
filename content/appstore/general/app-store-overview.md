@@ -20,7 +20,7 @@ This document describes the different sections of the Mendix Marketplace.
 The home page is your entry point to the various parts of the Mendix Marketplace. Here you can perform actions such as the following:
 
 * Click **My Marketplace** to go to pages presenting your [Marketplace activity](#my-marketplace) as well as your company's [private content](#company-content)
-* Click  **Get Studio Pro** to get the latest version of [Studio Pro](/releasenotes/studio-pro/)
+* Click **Get Studio Pro** to get the latest version of [Studio Pro](/releasenotes/studio-pro/)
 * Click **Add Content** to [share new Marketplace content](/appstore/general/share-app-store-content) you have developed
 * Explore various [industry solutions](#industry) and[content types](#types).
 
@@ -219,7 +219,7 @@ This additional management option is only available for specific app services wh
 
 ##### 4.7.1.1 Creating Binding Keys {#creating-binding-keys}
 
-To create binding keys for a specific [subscription](#subscriptions), click **Create Binding Keys**. In the dialog box, enter a name for the keys that includes the name of the app where you intend to use the component you have subscribed to (so that it is clear to other users where the keys are used).
+To create binding keys for a specific [subscription](#company-subscriptions), click **Create Binding Keys**. In the dialog box, enter a name for the keys that includes the name of the app where you intend to use the component you have subscribed to (so that it is clear to other users where the keys are used).
 
 After you click **Create Keys**, a page appears with your binding keys. Click **Copy** for each key and manually save the keys somewhere safe.
 

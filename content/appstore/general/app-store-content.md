@@ -85,7 +85,7 @@ There are three ways to install a Marketplace component:
 
     After the app is downloaded, the app opens automatically in Studio Pro.
 
-### 3.2 Import Content from the App Explorer
+### 3.2 Import Content from the App Explorer {#import}
 
 {{% todo %}}After the add-on modules are released, change the note below to: This procedure only works for [connectors](/appstore/connectors/) and [modules](/appstore/modules/), including [add-on modules]().{{% /todo %}}
 
@@ -119,7 +119,7 @@ There are three ways to install a Marketplace component:
 
 You can find the imported module or connector in the **App Explorer**.
 
-### 3.3 Manually Add Content into the App Directory
+### 3.3 Manually Add Content into the App Directory {#add}
 
 {{% todo %}}[After the add-on modules are released, change the note below to: This procedure only works for [widgets](/appstore/widgets/) and [add-on modules]().{{% /todo %}}
 

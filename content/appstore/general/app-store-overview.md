@@ -65,20 +65,12 @@ The header for a component presents the following details:
 	* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
 	* The best practice is to download a component from the Marketplace that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
 * The **Premium** label is applied to components like [app services](#types) that require a subscription; some premium services (like [Email Service](/appstore/app-services/email-service)) also offer a free trial based on a predefined quota/limit
-
 	* These components have a **Subscribe** button to configure your subscription (by selecting a specific plan and setting a **Technical Owner**) and a **Try for Free** button to start your free trial
-
-		{{% todo %}}[**Please verify below for "Buy More" button.**]{{% /todo %}}
-
 	* If your company has an active subscription, click **Buy More** to buy more instances on the same or different plan.
-
-		{{% todo %}}[**Please verify below.**]{{% /todo %}}
-
 	* If you have an active subscription or trial, click **View status** to go to the [Company Subscriptions](#company-subscriptions) page
 	* These components also have a [Pricing](#tabs) tab
 * The **Request Demo** and **Contact Sales** buttons are only available for [industry solutions](#types)
 <a name="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
-
 * The latest **Version** number of the component
 * The Studio Pro version that the component **Requires** to work
 * The type of [license](share-app-store-content#license) for the component
@@ -151,8 +143,6 @@ Click **Delete** to delete a draft. You can also click **Withdraw** to withdraw 
 
 ### 4.2 My Subscriptions {#my-subscriptions}
 
-{{% todo %}}[**Please verify below. Screenshot with appropriate example data or acceptance credentials to take a new screenshot? More details necessary?**]{{% /todo %}}
-
 You can see all the Marketplace app services you have trials for on this page:
 
 ![](attachments/app-store-overview/my-subscriptions.jpg)
@@ -194,8 +184,6 @@ On this page, you can see all the content your company has published. Click the 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. However, the **Edit a version** and **Unpublish a version** options are only available for your own versions of company content.
 
 ### 4.7 Company Subscriptions {#company-subscriptions}
-
-{{% todo %}}[**Please verify below. More details necessary?**]{{% /todo %}}
 
 You can see all the Marketplace app services your company has subscribed to on this page:
 
@@ -250,8 +238,6 @@ When you are developing your app, set the app service's binding keys as [constan
 Refer to the documentation on specific [app services](/appstore/app-services/) for how to use the binding keys (for example, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere IIoT for Makers*).
 
 #### 4.7.2 Usage Dashboard {#usage-dashboard}
-
-{{% todo %}}[**Please verify below. More details necessary?**]{{% /todo %}}
 
 This dashboard presents **Subscription Details** specific to the component (for example, **Data Transfer** and **Number of Emails**). 
 

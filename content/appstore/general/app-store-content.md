@@ -33,7 +33,7 @@ There are three ways to install a Marketplace component:
 
 {{% todo %}}After the add-on modules are released, change the second bullet point to: [Import](#import) the component from the **App Explorer** – this only works for [connectors](/appstore/connectors/) and [modules](/appstore/modules/), including [add-on modules]().{{% /todo %}}
 
-{% todo %}}After the add-on modules are released, change the third bullet point to: [Manually add](#add) the component into the app directory – this only works for [widgets](/appstore/widgets/) and add-on modules.{{% /todo %}}
+{{% todo %}}After the add-on modules are released, change the third bullet point to: [Manually add](#add) the component into the app directory – this only works for [widgets](/appstore/widgets/) and add-on modules.{{% /todo %}}
 
 * [Download]( #downloading) the component from the Marketplace within Studio Pro – this works for all types of marketplace components
 * [Import](#import) the component from the **App Explorer** – this only works for [connectors](/appstore/connectors/) and [modules](/appstore/modules/)

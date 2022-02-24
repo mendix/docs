@@ -217,7 +217,7 @@ As a helping hand, the checklist below presents the final items to consider when
 
 * Verify the app service works well for the specified Studio Pro version it is marked as being compatible with.
 * Keep the versioning pattern consistent in terms of naming and version numbers for your app service [releases](/appstore/general/share-app-store-content#updating).
-* Provide [release notes](/appstore/general/share-app-store-content#version) for the app service release.
+* Provide [release notes](/appstore/general/share-app-store-content#package) for the app service release.
 * Keep your app service up to date with new versions.
 
 **Branding**

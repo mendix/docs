@@ -10,6 +10,20 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2022
 
+### February 24th, 2022
+
+#### New Features
+
+* There are now user trials avaiable for **Premium** app services, such as [Email Service](/appstore/app-services/email-service) and [Speech to Text](/appstore/app-services/speech-to-text). This self-service experience helps you to evaluate the capabilities offered with these components and realize the value of premium content.
+* User trial subscriptions are now listed under [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions), and company trial and paid subscriptions are now listed under [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions).
+* For new uploads of public components, you can now optionally share a [virus scan report](/appstore/general/share-app-store-content#package) to speed up the governance process.
+* For solutions and solution templates, you can now add a [use case](/appstore/general/share-app-store-content#capabilities) relevant to the component. The use case is displayed in the component listing and includes header text and an external link.
+
+#### Improvements
+
+* We made performance improvements for when a large source file is [uploaded](](/appstore/general/share-app-store-content#package), specifically on the navigation steps.
+* We improved the UI for self-service uploading your component to the Marketplace.
+
 ### February 10th, 2022
 
 #### Improvements
@@ -33,13 +47,13 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 #### New Features
 
-* We released **Try for Free** for premium app services (like [Email Service](https://marketplace.mendix.com/link/component/118393)). This self-service experience helps to evaluate the capabilities offered and realize the value of premium content.
+* We released **Try for Free** for premium app services (like [Email Service](https://marketplace.mendix.com/link/component/118393)).
 * You can now provide key capabilities, a banner, external links, and industry cloud details when sharing new **Solution** and **Solution Template** [component types](/appstore/general/share-app-store-content#adding).
 
 #### Improvements
 
-* You can now add [release notes](/appstore/general/share-app-store-content#version) for your new component version without uploading a new source file.
-* You can now skip uploading a source file on the [Package](/appstore/general/share-app-store-content#version) page for **App Service** and **Solution Template** component types if your component is not downloadable.
+* You can now add [release notes](/appstore/general/share-app-store-content#package) for your new component version without uploading a new source file.
+* You can now skip uploading a source file on the [Package](/appstore/general/share-app-store-content#package) page for **App Service** and **Solution Template** component types if your component is not downloadable.
 
 ### September 7th, 2021
 

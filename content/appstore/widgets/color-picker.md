@@ -14,9 +14,9 @@ The [Color Picker](https://marketplace.mendix.com/link/component/107044/) enable
 * Render using the button, input box, and inline modes
 * Execute an action after a color change using the [Events](/studio/page-editor-widgets-events-section) section
 * Add a label
-* Choose when the Color Picker should be editable
-* Choose when the Color Picker should be visible 
-* Support the hex, RGB, or RGBA color formats
+* Choose when the Color Picker should be [editable](#editability-tab)
+* Choose when the Color Picker should be [visible](#visibility-tab)
+* Support the hex, RGB, and RGBA color formats
 
 ## 2 Configuration
 
@@ -36,14 +36,13 @@ To configure this widget, follow these steps:
 * **Enable advanced options**
 
     * **Yes** – if selected, the following advanced options become available:
-
-        * **Display mode**
-            * **Button** (default)
-            * **Input**
-            * **Inline**
-
-        * **Picker type** – select one of the following available pickers from the [React Color](https://casesandberg.github.io/react-color/) library:
-            
+    * **Display mode** – determines how Color Picker is displayed in your app
+            * **Button** (default) – a button is displayed
+            * **Input** – a button is displayed with a text box that shows the color in the selected format
+            * **Inline** – a spectrum color picker is displayed
+        
+    * **Picker type** – select one of the following available pickers from the [React Color](https://casesandberg.github.io/react-color/) library:
+          
             * **Block**
             * **Chrome**
             * **Circle**
@@ -62,11 +61,7 @@ To configure this widget, follow these steps:
             * **RGBA**
             
         *  **Default colors** – defines a list of pre-defined colours used with the color picker
-        	 
-        	 {{% alert type="info" %}}
-        	 This is option is only available if the Picker type is Block, Sketch, Circle, Compact, or Twitter
-        	 {{% /alert %}}
-        	 
+        	 {{% alert type="info" %}}This is option is only available if the **Picker type** is **Block**, **Sketch**, **Circle**, **Compact**, or **Twitter**{{% /alert %}}
         	 * **New** – opens the **Edit Default Colors Item** dialog box where you can create a new default color
         	   * **Color** – defines the default color in hex, RGB, or RGBA format
         	 * **Delete** – deletes the selected default color
@@ -74,7 +69,7 @@ To configure this widget, follow these steps:
         	 * **Move up** – moves up the selected default color
         	 * **Move down** – moves down the selected default color
         	 * **Color** – the list of the existing default colors
-
+        
     * **No** (default) – if selected, the advanced options are disabled.
 
 * **Invalid format message** – defines the message that is shown when the user provides a wrong input
@@ -86,19 +81,17 @@ To configure this widget, follow these steps:
 
     * **No** (default) – if selected, the **Label caption** property is unavailable
 
-
-
 ### 2.3 Events Tab
 
 * **On change** – executes an action when the attribute value changes
 
-### 2.4 Edibility Tab
+### 2.4 Edibility Tab {#editability-tab}
 
-For more information, see [Editability Section](/refguide/common-widget-properties.md/#editability) in the *Studio Pro 9 Guide*.
+For more information, see [Editability Section](/refguide/common-widget-properties#editability) in the *Studio Pro 9 Guide*.
 
-### 2.5 Visibility Tab
+### 2.5 Visibility Tab {#visibility-tab}
 
-For more information, see [Visibility Section](/refguide/common-widget-properties.md/#visibility-properties) in the *Studio Pro 9 Guide*.
+For more information, see [Visibility Section](/refguide/common-widget-properties#visibility-properties) in the *Studio Pro 9 Guide*.
 
 ### 2.6 Common Tab
 

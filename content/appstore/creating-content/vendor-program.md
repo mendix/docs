@@ -24,9 +24,6 @@ The [Mendix Vendor Program](https://www.mendix.com/marketplace-vendor-program/) 
 The Mendix Vendor program is a Beta program, and is currently only applicable for content other than solutions and solution templates.
 {{% /alert %}}
 
-
-
-
 ## 2 Applying to the Vendor Program
 
 Whether you are an individual supplier with your own business or you are supplying a component on behalf of your company, you need to [apply](https://www.mendix.com/marketplace-vendor-program/#contactForm) to the Mendix Vendor Program. Since your Mendix Vendor account will be associated with your Mendix ID, make sure you have a [Mendix Platform account](https://signup.mendix.com/). 
@@ -74,9 +71,9 @@ The company registered with your account is the legal entity against which Mendi
 
 {{% todo %}}[**IS THIS PART ACCURATE? IS THIS REQUIREMENT GENERIC TO ALL COMPONENTS - STARTING WITH SOLUTIONS - SOLD VIA THE VENDOR PROGRAM, OR IS IT SPECIFIC TO APP SERVICES?**]{{% /todo %}}
 
-In addition, before your content can be published in the Marketplace, it must be classified for export to the countries in which it will be sold and for how it will be used. For more details, see the [Export Control](as-prepare#export-control) section of *How to Prepare Your App Service to Sell in the Marketplace*.
+In addition, before your content can be published in the Marketplace, it must be classified for export to the countries in which it will be sold and for how it will be used. For more details, see the [Export Control](as-prepare#export-control) section of *How to Prepare Your Commercial Content to Sell in the Marketplace*.
 
 ## 5 Read More
 
-* [How to Prepare Your App Service to Sell in the Marketplace](as-prepare)
+* [How to Prepare Your Commercial Content to Sell in the Marketplace](as-prepare)
 * [Creating Solutions](sol-solutions-guide)

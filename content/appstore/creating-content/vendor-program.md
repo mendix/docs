@@ -20,6 +20,13 @@ In return, you will gain the following benefits:
 
 The [Mendix Vendor Program](https://www.mendix.com/marketplace-vendor-program/) includes opportunities for a variety of types of partners. We only need some key information from you before you are ready to offer your product through the Mendix Marketplace. Mendix will work with you throughout the application process to make your submission experience as simple as possible.
 
+{{% alert type="info" %}}
+The Mendix Vendor program is a Beta program, and is currently only applicable for content other than solutions and solution templates.
+{{% /alert %}}
+
+
+
+
 ## 2 Applying to the Vendor Program
 
 Whether you are an individual supplier with your own business or you are supplying a component on behalf of your company, you need to [apply](https://www.mendix.com/marketplace-vendor-program/#contactForm) to the Mendix Vendor Program. Since your Mendix Vendor account will be associated with your Mendix ID, make sure you have a [Mendix Platform account](https://signup.mendix.com/). 

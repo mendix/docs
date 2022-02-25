@@ -1,8 +1,8 @@
 ---
-title: "Prepare Your App Service to Sell in the Marketplace"
+title: "Prepare Your Commercial Content to Sell in Marketplace"
 category: "Creating Content"
 menu_order: 2
-description: "Describes how to prepare your your app service to sell in the Mendix Marketplace."
+description: "Describes how to prepare your your commercial content to sell in the Mendix Marketplace."
 tags: ["marketplace", "vendor", "app service"]
 ---
 
@@ -10,16 +10,20 @@ tags: ["marketplace", "vendor", "app service"]
 
 ## 1 Introduction
 
-To sell your app service in the Mendix Marketplace, you need to first sign up as a [Mendix Vendor](vendor-program). Once that process is complete, you need to prepare your app service to sell in the Marketplace. 
+To bring your commercial product to the Mendix Marketplace, you need to first sign up as a [Mendix Vendor](vendor-program). Once that process is complete, you need to prepare your content to sell in the Marketplace.
+
+{{% alert type="warning" %}}
+The process for becoming a vendor is currently restricted to Beta suppliers, so you have to be part of the Mendix Vendor Beta program.
+{{% /alert %}}
 
 **This how-to will teach you how to do the following:**
 
-* Make your app service ready to sell on the Marketplace
+* Make your commercial content ready to sell on the Marketplace
 * Complete specific tasks before you submit, as you submit, and after you submit your app service to the Marketplace
 
 ## 2 Prerequisites
 
-* Be registered and approved as a [Mendix Vendor](vendor-program)
+* Be part of the [Mendix Vendor](vendor-program) Beta program
 
 ## 3 Making Your App Service Marketplace-Ready
 

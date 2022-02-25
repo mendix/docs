@@ -9,8 +9,7 @@ tags: ["SAP", "integration", "OData", "BAPI"]
 
 ## 1. Introduction
 
-The [BAPI Connector for SAP Solutions](https://example.com/bapiconnector) is a connector for integrating with SAP back-end systems which provide the SAP Business API (SAP BAPI), such as SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, and SAP S/4HANA Cloud.
-The BAPI connector is a Mendix module that allows you to call SAP BAPIs available on SAP R/3 or SAP S/4 HANA systems.
+The [BAPI Connector for SAP Solutions](https://example.com/bapiconnector) is a connector allowing Mendix apps to integrate using tha SAP Business API (SAP BAPI) available with SAP Business Suite, SAP S/4HANA, and SAP S/4HANA Cloud. The BAPI Connector module allows you to discover, select, and call an SAP BAPI from your Mendix application.
 
 The BAPI connector uses the [SAP Java Connector](https://support.sap.com/en/product/connectors/jco.html) (JCo) to make Remote Function Calls (RFCs) to SAP systems. Once you have made a connection to your JCo destination, you will have access to all the BAPIs which are authorized for that destination.
 
@@ -26,7 +25,7 @@ This connector allows you to do the following:
 
 To use the **BAPI Connector for SAP Solutions** you need the following:
 
-1. An SAP back-end system (SAP ERP, SAP S/4HANA, SAP S/4HANA Cloud) which has Remote Function Modules/BAPI enabled.
+1. An SAP back-end system (for example SAP Business Suite, SAP S/4HANA, or SAP S/4HANA Cloud) which has Remote Function Modules/BAPI enabled.
 2. Access to the SAP System over the network from where the Mendix application is deployed.
 3. Mendix Studio Pro version 8.18.10 or above.
 4. At least 1GB memory per instance if running on SAP BTP.
@@ -72,9 +71,11 @@ To use the BAPI Connector, you have to first set up your environment and configu
 
     ![](attachments/sap-bapi-connector/sap-bapi-connector-module.png)
 
-3. Download following files from [SAP Support](https://support.sap.com/en/product/connectors/jco.html). You need the versions for *Microsoft Windows and Windows Server*:
+3. Download following files from [SAP Support](https://support.sap.com/en/product/connectors/jco.html):
     1. sapjco3.dll
     2. sapjco3.jar
+
+    You need the latest stable versions for *Microsoft Windows and Windows Server*. For more details on SAP JCo releases, please refer to official [SAP JCo release and support strategy](https://launchpad.support.sap.com/#/notes/2786882).
 
     Put both of these files in the `/userlib` folder where your Mendix application is stored on your local machine (that is `<app location>/userlib`). You can open this from within Studio Pro using the menu item **App > Show App Directory in Explorer**.
 
@@ -293,12 +294,11 @@ Use [Model Creator for SAP Solutions](https://sapmodelcreator.mendixcloud.com/) 
 
     ![](attachments/sap-bapi-connector/model-creator-download.png)
 
-## 9 Known Issues
+## 9 Known Limitations
 
-1. SAP Hierarchical View is unavailable in BAPI explorer.
-2. We do not import the detailed documentation of the BAPI into the Mendix BAPI module documentation. Only a short description is provided. 
-3. The entity description provided by BAPI is not visible in the Model Creator for SAP Solutions.
-4. You can only generate a schema for BAPIs. Remote-enabled Function Modules (RFMs) available to the JCo are not listed by Create_BAPIExplorer.
+1. The BAPI Connector for SAP Solutions provides a short description of the SAP BAPI contained in your SAP Business Suite or S/4HANA system. For detailed documentation of an SAP BAPI, please refer to standard SAP BAPI documentation. 
+2. The entity description provided by the BAPI is not visible in the Model Creator for SAP Solutions.
+3. The BAPI Connector for SAP Solutions is limited to discovering and using a SAP BAPI. It cannot be used for invoking Remote-enabled Function Modules (RFMs).
 
 {{% alert type="info" %}}
 Minimum 1GB memory per instance is required to run application on SAP BTP.

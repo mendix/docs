@@ -19,13 +19,13 @@ The [Slider](https://marketplace.mendix.com/link/component/48786/) widget can be
 
 ## 2 Configuration
 
-### 2.1 General tab
+### 2.1 General Tab
 
-#### 2.1.1 Data source section
+#### 2.1.1 Data Source Section
 
 - **Value attribute** – the selected value on the slider
 
-#### 2.1.2 General section
+#### 2.1.2 General Section
 
 - **Minimum value type** – type of value source for _Minimum value_ property
 - **Minimum value** – defines the minimum value of the slider
@@ -37,24 +37,24 @@ The [Slider](https://marketplace.mendix.com/link/component/48786/) widget can be
 - **Tooltip type** – defines type of tooltip content. If set to _Current value_ then only current slider value  is visible to the user. Use _Custom_ to set custom text template to create more descriptive tooltip
 - **Show label** – if enabled, show label for slider
 
-#### 2.1.3 Editability section
+#### 2.1.3 Editability Section
 
 - **Editable** – controls weather this widget can be edited or not
 
-#### 2.1.4 Visibility section
+#### 2.1.4 Visibility Section
 - **Visible** – weather widget visible or not
 
-### 2.2 Track tab
+### 2.2 Track Tab
 
-#### 2.2.1 Track section
+#### 2.2.1 Track Section
 
 - **Number of markers** – number of marker ticks that appear along the slider's track
 - **Decimal places** – number of decimal places form marker values
 - **Orientation** – controls orientation of the slider. When set to "Vertical" _height_ property should be set in order to prevent slider from being collapsed
 
-### 2.3 Events tab
+### 2.3 Events Tab
 
-#### 2.3.1 Events section
+#### 2.3.1 Events Section
 
 - **On change** – set the action to execute when slider change its value.
 

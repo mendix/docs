@@ -16,7 +16,7 @@ In return, you will gain the following benefits:
 
 {{% todo %}}[**WANT TO EDIT THIS DIAGRAM TO BE GENERIC? OR REMOVE ENTIRELY?**]{{% /todo %}}
 
-![](attachments/as-sell/benefits.png)
+![](attachments/as-prepare/benefits.png)
 
 The [Mendix Vendor Program](https://www.mendix.com/marketplace-vendor-program/) includes opportunities for a variety of types of partners. We only need some key information from you before you are ready to offer your product through the Mendix Marketplace. Mendix will work with you throughout the application process to make your submission experience as simple as possible.
 

@@ -1,6 +1,6 @@
 ---
 title: "Consistency Errors"
-menu_order: 70
+weight: 90
 description: "Describes consistency errors in Mendix Studio and the way to fix them."
 tags: ["studio", "consistency errors", "checks", "errors"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

@@ -1,6 +1,7 @@
 ---
 title: "Starting With Your Own Data"
 description: "Describes how to import an Excel spreadsheet to your domain model in Mendix Studio."
+weight: 120
 tags: ["studio", "domain model", "excel import", "start with data", "data model"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -15,7 +16,7 @@ To create an app based on a spreadsheet, you need to use the **App from a spread
 
 1. Make sure your spreadsheet is in the *.xlsx* format
 
-2. Open the Developer Portal and click the **Create App** button in the top-right corner.
+2. Open the Developer Portal and click the **Create App** button in the upper-right corner.
 
 3. Choose **App from a spreadsheet** to create an app with the spreadsheet import functionality.
 

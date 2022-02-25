@@ -12,6 +12,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### February 17th, 2022
+
+#### Fixes
+
+* We removed a misleading message which was displayed when a Free App was unlinked from its environment. (Ticket 140897)
+
 ### January 13th, 2022
 
 #### Fixes
@@ -466,8 +472,8 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 
 This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
-* as **unused** in [JVM Object Heap](/developerportal/operate/trends-v4#a-name-trends-appmxruntimejvmheap-a-4-4-jvm-object-heap)
-* as **unused java heap** in [JVM Process Memory Usage](/developerportal/operate/trends-v4#a-name-trends-appmxruntimejvmprocessmemory-a-4-5-jvm-process-memory-usage)
+* as **unused** in [JVM Object Heap](/developerportal/operate/trends-v4#Trends-appmxruntimejvmheap)
+* as **unused java heap** in [JVM Process Memory Usage](/developerportal/operate/trends-v4#Trends-appmxruntimejvmprocessmemory)
 
 {{% alert type="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
 
@@ -487,7 +493,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 * We introduced new alerts for Mendix Cloud v4.
     * Database IOPS Burst Balance, based on the graph [Database IOPS Burst Balance](/developerportal/operate/trends-v4#Trends-dbmxdatabaseburstbalance)
-    * Database Freeable Memory, based on the graph [Database Node Operating System Memory](/developerportal/operate/trends-v4#a-name-trends-dbmemory-a-5-5-database-node-operating-system-memory)
+    * Database Freeable Memory, based on the graph [Database Node Operating System Memory](/developerportal/operate/trends-v4#Trends-dbmemory)
 
 ### June 4th, 2020
 
@@ -654,7 +660,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Improvements
 
-* We added a confirmation dialogue when you delete Custom Headers.
+* We added a confirmation dialog when you delete Custom Headers.
 * We made general performance improvements.
 
 #### Fixes

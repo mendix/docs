@@ -60,7 +60,7 @@ To create the action structure, follow these steps:
 
     ![](attachments/ht-two-cr-unsup-wid/ht-two-cab-10-autocomplete/autocompletewidget-parentelement-outlined.png)
 
-2.  In a standard situation, you use the [*Find Widget Child Node*](rg-one-find-widget-child-node) action while creating an unsupported widget action. In this case, you see that the drop-down menu is not a child element of the AutoComplete widget. To find it, click the inspector icon in the top-left corner of the debugger: 
+2.  In a standard situation, you use the [*Find Widget Child Node*](rg-one-find-widget-child-node) action while creating an unsupported widget action. In this case, you see that the drop-down menu is not a child element of the AutoComplete widget. To find it, click the inspector icon in the upper-left corner of the debugger: 
 
     ![](attachments/ht-two-cr-unsup-wid/ht-two-cab-10-autocomplete/debugger-inspector.png)
 

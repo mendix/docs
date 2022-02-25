@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "tooltip", "platform su
 
 ## 1 Introduction
 
-You can use the [Tooltip widget](https://marketplace.mendix.com/link/component/119160) to add tooltip texts to any widget available in Mendix.
+You can use the [Tooltip](https://marketplace.mendix.com/link/component/119160) widget to add tooltip texts to any widget available in Mendix.
 
 ### 1.1 Trigger
 

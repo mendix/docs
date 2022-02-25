@@ -2,12 +2,66 @@
 title: "Data Hub"
 description: "Release notes for updates to the Mendix Data Hub"
 tags: ["data hub", "data hub catalog", "data hub Landscape"]
+weight: 30
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
 These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
+
+### February 24th, 2022
+
+#### Improvements 
+
+* We improved the appearance of the Catalog by adjusting colors and styling.
+
+#### Fixes
+
+* We fixed a typo in a validation message that appeared if registering a contract failed.
+
+### February 17th, 2022
+
+#### Fixes
+
+* We made various security and UI fixes.
+
+### February 10th, 2022
+
+#### New Features
+
+* We added an option to [delete a data source](/data-hub/data-hub-catalog/curate#delete-data-source), available for users with [curation](/data-hub/data-hub-catalog/curate) rights. To delete a data source, go to the [Curation Bar](/data-hub/data-hub-catalog/curate#curation-bar) for the data source and click **Edit**, then click **Delete Data Source**.
+
+#### Fixes
+
+* We fixed a bug where the Data Hub Catalog did not display the correct status of an updatable entity.
+* We made various security and UI fixes.
+
+### February 3rd, 2022
+
+#### Fixes
+
+* We fixed a bug on the **Contract Upload** page. The page incorrectly displayed a red warning border if you uploaded a document with non-blocking errors and then immediately deleted it. We have removed the red border in this scenario.
+
+### January 27th, 2022
+
+#### Improvements
+
+* We added a notification menu to the upper-right menu header.
+* We added counts to the **Catalog** page so that you can now see the total numbers of **Associations**, **Attributes**, and **Datasets**. The counts appear in parentheses next to each heading.
+
+#### Fixes
+
+* We fixed a bug that was causing the file uploader to get stuck when uploading an empty file.
+
+### January 21st, 2022
+
+#### Improvements
+
+* The following OData contract parsing and validation improvements were added:
+	* Improved detection and feedback on the OData version
+	* Improved parsing and more detailed error messaging
+	* Improved validation (after parsing succeeded) and more detailed error messaging
 
 ### January 14th, 2022
 
@@ -172,7 +226,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
     * `GET` all environments for an application
     * `GET` all consumed endpoints
 * A change was made to the `POST` application API call to also allow for the `Opcenter` and `MindSphere` application types.
-* We added Data Hub Catalog integration with [Control Center](/developerportal/control-center/index#data-hub). For details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin).
+* We added Data Hub Catalog integration with [Control Center](/developerportal/control-center/#data-hub). For details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin).
 
 ### August 19th, 2021
 
@@ -231,7 +285,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Improvements
 
-* In the search input boxes on the [Search result](/data-hub/data-hub-catalog/search#search-results) listings and [Data Hub Home](/data-hub/data-hub-catalog/index#data-hub-home) page, the magnifying glass now appears on the right side.
+* In the search input boxes on the [Search result](/data-hub/data-hub-catalog/search#search-results) listings and [Data Hub Home](/data-hub/data-hub-catalog/#data-hub-home) page, the magnifying glass now appears on the right side.
 * In the [Search result](/data-hub/data-hub-catalog/search#search-results) listings, the filters have been restyled.
 * All cancel and discard buttons now have matching styles for improved usability.
 
@@ -272,7 +326,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* Improvements have been made to the styling of the [Data Hub Home](/data-hub/data-hub-catalog/index#data-hub-home).
+* Improvements have been made to the styling of the [Data Hub Home](/data-hub/data-hub-catalog/#data-hub-home).
 
 ### April 22nd, 2021
 

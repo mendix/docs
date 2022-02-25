@@ -38,7 +38,7 @@ The parameters and entities which you would like to use in configuring the condi
 
 ### 2.2 Configuring the Condition with an Expression {#expression-tab}
 
-You can also configure the condition by writing the expression. For more information on how to write an expression, see [Microflow Expressions](microflows-expressions).
+You can also configure the condition by writing the expression. For more information on how to write an expression, see [Microflow Expressions](expressions).
 
 ## 3 Cases
 
@@ -61,6 +61,6 @@ The caption describes what happens in this element.
 ## 5 Read More
 
 * [Microflows](microflows)
-* [Microflow Expressions](microflows-expressions)
+* [Microflow Expressions](expressions)
 * [Configure a  Decision](/studio-how-to/microflows-how-to-configure-decision) 
 

@@ -9,7 +9,7 @@ tags: ["native", "mobile", "build", "local", "xcode", "android studio"]
 ## 1 Introduction
 
 {{% alert type="info" %}}
-When the Mendix Native Mobile Builder identifies a Native Template version (v5.1.9 and above) that is Mobile Toolkit capable, it will not apply changes directly to the app. To apply the changes when building locally, check out your latest changes, run `npm install`, then make sure to run `npm run configure`.
+When the Mendix Native Mobile Builder identifies a Native Template version (v5.1.9 and above) that is Mobile Toolkit capable, it will not apply changes directly to the app. To apply the changes when building locally, check out your latest changes, run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`), then make sure to run `npm run configure`.
 {{% /alert %}}
 
 By default when building your native mobile app binaries, Mendix uses [Visual Studio App Center](https://appcenter.ms/sign-in?original_url=%2Fapps) as a service so that users can build without having to install tools like XCode or Android Studio. However, there are cases when using App Center is not allowed or possible. In those situations, you can build your apps locally without an internet connection.
@@ -74,14 +74,12 @@ The final step differs based on your machine:
 
 For a Windows machine building an Android app, do the following: 
 
-1. Run `npm i`  to install the required dependencies.
+1.  Run `npm i`  to install the required dependencies.
 
+	{{% alert type="info" %}}
+	When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and above), it will not apply changes directly to the app. To apply the changes when building locally check out your latest changes, run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`), then make sure to run `npm run configure`.{{% /alert %}}
 
-{{% alert type="info" %}}
-When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and above), it will not apply changes directly to the app. To apply the changes when building locally check out your latest changes, run `npm install`, then make sure to run `npm run configure`.
-{{% /alert %}}
-
-2. Instances of the Native Template v5.1.9 and above include the Native Mobile Toolkit. Therefore, if you are using one of these versions you also must run the `npm run configure` command. This ensures that the changes from the Mendix Native Mobile Builder are applied to your app.
+1. Instances of the Native Template v5.1.9 and above include the Native Mobile Toolkit. Therefore, if you are using one of these versions you also must run the `npm run configure` command. This ensures that the changes from the Mendix Native Mobile Builder are applied to your app.
 
 For a Mac OS X machine building an iOS app, do the following:
 
@@ -139,7 +137,7 @@ In the sections below you can see the basic steps to get an app up and running o
 
 ### 5.1 Building an Android App with Android Studio
 
-1. Run `npm install` in the app root to install the required dependencies.
+1. Run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) in the app root to install the required dependencies.
 1. Open Android Studio.
 1. Select the `<Native Template root>/android` as the entry point for the app.
 1. After synchronizing the app your Android Studio should look something like this. **Do not accept any suggestions to update to latest Gradle or Kotlin version!**:
@@ -158,7 +156,7 @@ In the sections below you can see the basic steps to get an app up and running o
 
 ### 5.2 Building an iOS App with XCode
 
-1. If you have not ran it yet, run `npm install` in the app root to install the required dependencies.
+1. If you have not ran it yet, run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) in the app root to install the required dependencies.
 1. Change directory by running `cd ios` and run `pod install` to install the iOS dependencies.
 
 	The iOS app is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see CocoaPods [documentation](https://cocoapods.org/#install).
@@ -189,7 +187,7 @@ Mendix native mobile apps are build on top of React Native. Therefore, any React
 Mendix supports RN and therefore auto-linking. Auto linking is a React Native mechanism that allows React Native to link the native dependencies defined in the *package.json* file automatically with the native apps. To add dependencies do the following:
 
 1. Add the dependency to the root *package.json* of your Native Template using `npm i -s <dependency name>`.
-1. If the dependency supports auto-linking when `npm install` is run it will automatically add itself correctly to the Android and iOS apps. If the dependency does not support auto-linking or requires more configuration, follow its documentation to add the required entries manually.
+1. If the dependency supports auto-linking when `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) is run it will automatically add itself correctly to the Android and iOS apps. If the dependency does not support auto-linking or requires more configuration, follow its documentation to add the required entries manually.
 
 ### 6.2 Adding Dependencies Which Do Not Support Auto-Linking
 

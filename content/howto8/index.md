@@ -2,6 +2,14 @@
 title: "Studio Pro 8 How-to's"
 description: "Step-by-step guides on various Mendix topics that will teach you how to build and customize apps."
 tags: ["studio pro"]
+weight: 65
+no_list: false
+cascade:
+    - space: "Studio Pro 8 How-to's"
+    - mendix_version: "8"
+    - old_content: true
+    - sitemap:
+        priority: 0.3
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 

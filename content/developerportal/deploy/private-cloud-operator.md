@@ -144,6 +144,17 @@ spec:
       {
         "ApplicationRootUrl": "https://myapp1-dev.mendix.example.com"
       }
+  runtimeMetricsConfiguration: # Optional, can be omitted : set Runtime metrics configuration
+    mode: native # Metrics collection mode : native or compatibility
+    interval: "PT1M" # Optional, can be omitted : set Prometheus scrape interval
+    mxAgentConfig: |- # Optional, can be omitted : specify configuration for collecting additional metrics
+      {
+        …
+      }
+    mxAgentInstrumentationConfig: |- # Optional, can be omitted : specify instrumentation configuration for collecting additional metrics
+      {
+        …
+      }
 ```
 
 You need to make the following changes:
@@ -193,6 +204,7 @@ You need to make the following changes:
 * **jettyOptions** and **customConfiguration**: – if you have any custom Mendix Runtime parameters, they need to be added to this section — options for the Mendix runtime have to be provided in JSON format — see the examples in the CR for the correct format and the information below for more information on [setting app constants](#set-app-constants) and [configuring scheduled events](#configure-scheduled-events)
 * **environmentVariables**: – set the environment variables for the Mendix app container, and JVM arguments through the `JAVA_TOOL_OPTIONS` environment variable
 * **clientCertificates**: – specify client certificates to be used for TLS calls to Web Services and REST services
+* **runtimeMetricsConfiguration**: – specify how metrics should be collected — any non-empty values will override [default values](/developerportal/deploy/private-cloud-cluster#customize-runtime-metrics) from `OperatorConfiguration` — see [Monitoring Environments in Mendix for Private Cloud](private-cloud-monitor) for details on how to monitor your environment
 
 #### 3.2.1 Setting App Constants{#set-app-constants}
 

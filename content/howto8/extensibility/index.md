@@ -1,6 +1,7 @@
 ---
 title: "Extensibility"
 description: "A selection of how to's that explain how to use connectors and adapters from the Marketplace."
+weight: 80
 tags: ["widget", "marketplace", "connectors", "adapters"]
 ---
 

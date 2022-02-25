@@ -115,7 +115,7 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 * Install [AndroidStudio](https://developer.android.com/studio)
 * Install [NodeJS LTS](https://nodejs.org/en/download/) using the all-in-one installation option
 * Install JDK 1.8
-* Create a keystore using [Generating a Keystore](/refguide/managing-app-signing-keys#generating-a-keystore)
+* Create a keystore using [Generating a Keystore](/refguide8/managing-app-signing-keys#generating-a-keystore)
 * Download the [local build package](/howto8/mobile/customizing-phonegap-build-packages#download-local-package) from Cloud Portal and unzip it in a known location
 
 ### 3.1 Prepare Your App for Building
@@ -206,6 +206,6 @@ You *APK* should now be generated and signed using Android Studio. The resulting
 ## 4 Read More
 
 * [Deploy and Manage Guide](/developerportal/deploy)
-* [Offline Reference Guide](/refguide/offline-first)
+* [Offline Reference Guide](/refguide8/offline-first)
 * [How to Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [Apache Cordova Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)

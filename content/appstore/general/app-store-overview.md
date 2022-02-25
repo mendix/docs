@@ -20,7 +20,7 @@ This document describes the different sections of the Mendix Marketplace.
 The home page is your entry point to the various parts of the Mendix Marketplace. Here you can perform actions such as the following:
 
 * Click **My Marketplace** to go to pages presenting your [Marketplace activity](#my-marketplace) as well as your company's [private content](#company-content)
-* Click  **Get Studio Pro** to get the latest version of [Studio Pro](/releasenotes/studio-pro/)
+* Click **Get Studio Pro** to get the latest version of [Studio Pro](/releasenotes/studio-pro/)
 * Click **Add Content** to [share new Marketplace content](/appstore/general/share-app-store-content) you have developed
 * Explore various [industry solutions](#industry) and[content types](#types).
 
@@ -65,13 +65,12 @@ The header for a component presents the following details:
 	* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
 	* The best practice is to download a component from the Marketplace that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
 * The **Premium** label is applied to components like [app services](#types) that require a subscription; some premium services (like [Email Service](/appstore/app-services/email-service)) also offer a free trial based on a predefined quota/limit
-	* These components have a **Subscribe** button to start your subscription and a **Try for Free** button to start your free trial
-	* If you have an active trial or a subscription for a component, click **Check Status** to go to the [Subscriptions](#subscriptions) page
+	* These components have a **Subscribe** button to configure your subscription (by selecting a specific plan and setting a **Technical Owner**) and a **Try for Free** button to start your free trial
+	* If your company has an active subscription, click **Buy More** to buy more instances on the same or different plan.
+	* If you have an active subscription or trial, click **View status** to go to the [Company Subscriptions](#company-subscriptions) page
 	* These components also have a [Pricing](#tabs) tab
 * The **Request Demo** and **Contact Sales** buttons are only available for [industry solutions](#types)
-
 <a name="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
-
 * The latest **Version** number of the component
 * The Studio Pro version that the component **Requires** to work
 * The type of [license](share-app-store-content#license) for the component
@@ -102,20 +101,17 @@ The details page for a component presents the following item information tabs:
 
 At the top of your Marketplace page, you can choose a category to [share new Marketplace content](share-app-store-content#adding), such as **Widgets** or **Solutions**.
 
-The rest of this page presents previews of your Marketplace activity:
-
-![](attachments/app-store-overview/my_app_store.png)
-
 Click an item in the sidebar to go to the page for that content:
 
 * [My Content](#my-content)
+* [My Subscriptions](#my-subscriptions)
 * [Shared with Me](#shared-with-me)
 * [Saved Content](#saved-components)
 * [My Reviews](#my-reviews)
 * [Company Content](#company-content)
+* [Company Subscriptions](#company-subscriptions)
 * [Company Reviews](#company-reviews)
 * [User Groups](#user-groups)
-* [Subscriptions](#subscriptions)
 
 ### 4.1 My Content {#my-content}
 
@@ -145,13 +141,23 @@ On this page, click the name of a Marketplace component to go to its [draft page
 
 Click **Delete** to delete a draft. You can also click **Withdraw** to withdraw the content from the review process after you have [submitted it for approval](share-app-store-content#approval), which will return the content to the draft state.
 
-### 4.2 Shared with Me {#shared-with-me}
+### 4.2 My Subscriptions {#my-subscriptions}
+
+You can see all the Marketplace app services you have trials for on this page:
+
+![](attachments/app-store-overview/my-subscriptions.jpg)
+
+The table presents the **Product Names** you have trials for. Clicking a product name takes you to the [service management dashboard](#service-management-dashboard) for the component. 
+
+The table also presents the **Plan** and its **Status**, and the **Expires On** date for the subscription. Under **Usage Details** is a link to the [usage dashboard](#usage-dashboard) for the component.
+
+### 4.3 Shared with Me {#shared-with-me}
 
 This page contains private content shared with you by other companies who have marked you as a [guest](#guests).
 
-### 4.3 Saved Content {#saved-components}
+### 4.4 Saved Content {#saved-components}
 
-This page presents the Marketplace content you have [saved](#saved). Click the bell icon in the bottom-right corner of the component's tile to receive email notifications on new versions of the component:
+This page presents the Marketplace content you have [saved](#saved). Click the bell icon in the lower-right corner of the component's tile to receive email notifications on new versions of the component:
 
 ![](attachments/app-store-overview/bell.png)
 
@@ -163,13 +169,13 @@ Click the context menu to access various options for managing this content:
 * **Receive/Stop email notifications** – click this to start receivin email notifications or to stop the notifications if you already have them enabled
 * **Unsave** – click this to remove the component from your saved content
 
-### 4.4 My Reviews {#my-reviews}
+### 4.5 My Reviews {#my-reviews}
 
 This page contains reviews of [My Content](#my-content) by other users as well as **My reviews** that you have written of other content:
 
 ![](attachments/app-store-overview/your-reviews.png)
 
-### 4.5 Company Content {#company-content}
+### 4.6 Company Content {#company-content}
 
 On this page, you can see all the content your company has published. Click the context menu to access various options for managing this content:
 
@@ -177,11 +183,75 @@ On this page, you can see all the content your company has published. Click the 
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. However, the **Edit a version** and **Unpublish a version** options are only available for your own versions of company content.
 
-### 4.6 Company Reviews {#company-reviews}
+### 4.7 Company Subscriptions {#company-subscriptions}
+
+You can see all the Marketplace app services your company has subscribed to on this page:
+
+![](attachments/app-store-overview/company-subscriptions.jpg)
+
+The table presents the **Product Names** your company has subscribed to. Clicking a product name takes you to the [service management dashboard](#service-management-dashboard) for the component. 
+
+The table also presents the **Technical Owner** of the company subscription. When subscribing for a paid component, you can assign the **Technical Owner** role to a user in your company. The Technical Owner can create binding keys on the [service management dashboard](#service-management-dashboard) and do other tasks.
+
+Finally, the table presents, the **Plan**, the plan's **Status**, and the **Expires On** date for the subscription. Under **Usage Details** is a link to the [usage dashboard](#usage-dashboard) for the component.
+
+#### 4.7.1 Service Management Dashboard {#service-management-dashboard}
+
+This dashboard presents an overview of your service instances and binding keys. A service instance is what Mendix creates when you subscribe to an app service. After the service instance has been created, you need binding keys to use the app service in your app.
+
+{{% alert type="info" %}}
+Only a Technical Owner for the subscription can create binding keys. When a user from your company wants to request a free trial (and there is already a Technical Owner), they will not have separate unique binding keys. The Technical Owner has to provide the binding keys to the user.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+Only a Technical Owner for the subscription can edit the instance name and manage the instance’s settings on external platforms. 
+{{% /alert %}}
+
+This page presents the **Binding Key Names** that have been created as well as details on the user who created the binding keys (**Created By**) and when the binding keys were created (**Created At**). Click **Delete** to delete that group of binding keys.
+
+![](attachments/app-store-overview/binding-keys.jpg)
+
+You can also select a group of binding keys and click **Manage Instance** to go to the component provider's configuration page, where you can do further configuration.
+
+{{% alert type="info" %}}
+This additional management option is only available for specific app services where necessary.
+{{% /alert %}}
+
+##### 4.7.1.1 Creating Binding Keys {#creating-binding-keys}
+
+To create binding keys for a specific [subscription](#company-subscriptions), click **Create Binding Keys**. In the dialog box, enter a name for the keys that includes the name of the app where you intend to use the component you have subscribed to (so that it is clear to other users where the keys are used).
+
+After you click **Create Keys**, a page appears with your binding keys. Click **Copy** for each key and manually save the keys somewhere safe.
+
+{{% alert type="warning" %}}
+Once you close this page, you will not be able to retrieve the keys again.
+{{% /alert %}}
+
+For more information, see the [Using the Binding Keys](#using) section below.
+
+Click **Return to the overview** to go to the main page of the dashboard. 
+
+##### 4.7.1.2 Using the Binding Keys {#using}
+
+When you are developing your app, set the app service's binding keys as [constants](/refguide/configuration#constants) in the [App Settings](/refguide/project-settings).
+
+Refer to the documentation on specific [app services](/appstore/app-services/) for how to use the binding keys (for example, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere IIoT for Makers*).
+
+#### 4.7.2 Usage Dashboard {#usage-dashboard}
+
+This dashboard presents **Subscription Details** specific to the component (for example, **Data Transfer** and **Number of Emails**). 
+
+The **Package Usage** section presents details on the limits of the purchased plan and usage against the total current package. 
+
+In the **Analytics** section, you can gain a visual intepretation of the plan usage.
+
+![](attachments/app-store-overview/usage-dashboard.jpg)
+
+### 4.8 Company Reviews {#company-reviews}
 
 This page contains reviews of **Your company's content** as well as **Your company's reviews** that users from your company have written of other content.
 
-### 4.7 User Groups {#user-groups}
+### 4.9 User Groups {#user-groups}
 
 You can configure user groups for various levels of access to your company content. The available configuration tabs for each user group page are described in the sections below.
 
@@ -189,7 +259,7 @@ You can configure user groups for various levels of access to your company conte
 The **User Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/#company) can create and delete user groups. Both [Group Admins](#members) and Mendix Admins can manage user groups.
 {{% /alert %}}
 
-#### 4.7.1 Members Tab {#members}
+#### 4.9.1 Members Tab {#members}
 
 On this tab, you can enter the email address of a Mendix Platform user from your company and click **Add Member** to add them as a user group member. User group members can manage the [content](#group-content) assigned to the group.
 
@@ -199,7 +269,7 @@ Once a member is added, you can select their permission level: **Group Member** 
 
 To remove a member, click **Remove** next to their name.
 
-#### 4.7.2 Guests Tab {#guests}
+#### 4.9.2 Guests Tab {#guests}
 
 A guest is a Mendix Platform user from outside your organization who can download the selected private [Content](#group-content) of this group. To add a guest, enter their email address in the box and click **Add Guest**:
 
@@ -213,7 +283,7 @@ The guest must be a registered Mendix Platform user; otherwise, they will not be
 
 To remove a guest, click **Remove**.
 
-#### 4.7.3 Content Tab {#group-content}
+#### 4.9.3 Content Tab {#group-content}
 
 On this tab, you can assign content to this user group that can only be managed by members of this group. To assign a component to a user group, click **Assign Content** and select a company Marketplace component from the dialog box:
 
@@ -229,7 +299,7 @@ Click the context menu to access various options for managing this content:
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. The **Unassign from group** button is only available for [Group Admins](#members) and can be used to remove content from the user group.
 
-#### 4.7.4 Settings Tab
+#### 4.9.4 Settings Tab
 
 {{% alert type="info" %}}
 This tab is only accessible to [Group Admins](#members) and [Mendix Admins](/developerportal/control-center/#company).
@@ -239,57 +309,9 @@ On this tab, you can enter a **Group Name** and a **Group Description**.
 
 To delete a user group, a Group Admin or Mendix Admin can click **Delete Group**.
 
-### 4.8 Subscriptions {#subscriptions}
-
-You can see all the Marketplace app services you have subscribed to on this page:
-
-![](attachments/app-store-overview/subscriptions.jpg)
-
-The table presents the **Products** you have subscribed to, the **Type** of plan status, the type of subscription **Plan**, and the **Expiration** date of the subscription.
-
-Clicking a **Product** name takes you to the service management dashboard, which is described in the sections below.
-
-#### 4.8.1 Service Management Dashboard {#service-management-dashboard}
-
-This dashboard presents an overview of your service instances and binding keys. A service instance is what Mendix creates when you subscribe to an app service. After the service instance has been created, you need binding keys to use the app service in your app.
-
-{{% alert type="info" %}}
-Only [Technical Contacts](/developerportal/collaborate/app-roles#technical-contact) for apps can create binding keys, edit the instance name, and manage the instance’s settings on external platforms.
-{{% /alert %}}
-
-This page presents the **Binding Key Names** that have been created as well as details on the user who created the binding keys (**Created By**) and when the binding keys were created (**Created At**). Click **Delete** to delete that group of binding keys.
-
-![](attachments/app-store-overview/binding-keys.jpg)
-
-You can also select a group of binding keys and click **Manage Instance** to go to the component provider's configuration page, where you can do further configuration.
-
-{{% alert type="info" %}}
-This additional management option is only available for specific app services where necessary.
-{{% /alert %}}
-
-#### 4.8.2 Creating Binding Keys {#creating-binding-keys}
-
-To create binding keys for a specific [subscription](#subscriptions), click **Create Binding Keys**. In the dialog box, enter a name for the keys that includes the name of the app where you intend to use the component you have subscribed to (so that it is clear to other users where the keys are used).
-
-After you click **Create Keys**, a page appears with your binding keys. Click **Copy** for each key and manually save the keys somewhere safe.
-
-{{% alert type="warning" %}}
-Once you close this page, you will not be able to retrieve the keys again.
-{{% /alert %}}
-
-For more information, see the [Using the Binding Keys](#using) section below.
-
-Click **Return to the overview** to go to the main page of the dashboard. 
-
-#### 4.8.3 Using the Binding Keys {#using}
-
-When you are developing your app, set the app service's binding keys as [constants](/refguide/configuration#constants) in the [App Settings](/refguide/project-settings).
-
-Refer to the documentation on specific [app services](/appstore/app-services/) for how to use the binding keys (for example, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere IIoT for Makers*).
-
 ## 5 Read More
 
 * [How to Use Marketplace Content in Studio Pro](app-store-content)
-* [How to Sell Your App Service in the Marketplace](sell) 
+* [How to Sell Your App Service in the Marketplace](/appstore/creating-content/as-sell) 
 * [How to Share Marketplace Content](share-app-store-content)
 * [Marketplace Content Support](app-store-content-support)

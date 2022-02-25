@@ -8,7 +8,7 @@ tags: ["workflow", "workflows", "9.6", "beta"]
 
 ## 1 Introduction
 
-Workflows were introduced as a [Beta functionality](/releasenotes/beta-features/) in Mendix version 9.0. for Mendix Studio and Mendix Studio Pro. Workflows are still a Beta feature, but we are introducing significant changes to the functionality. For more information on what Beta feature means, see [Beta Releases](/releasenotes/beta-features/).  
+Workflows were introduced in Mendix version 9.0. for Mendix Studio and Mendix Studio Pro. 
 
 During the last months we have collected very valuable feedback and are now incorporating some of the major changes into an improved version of workflows before we release it to production. To bring these changes to our community as quickly as possible, we have to temporarily disable the workflow editor for apps with Mendix version 9.6 and above in Studio. 
 
@@ -32,11 +32,7 @@ To create an app with Mendix version 9.5, do the following:
 
 Next to just exploring the functionality, you can also build an app in Studio that will later be published to production. 
 
-{{% alert type="info" %}}
-Since workflows are in Beta, there are limitations that apply to [Beta features](/releasenotes/beta-features/) and it might be better to not put the app in production until workflows are GA. 
-{{% /alert %}}
-
-You can start building an app with Mendix version 9.5  in Studio and manually migrate your app to Mendix version 9.6 or above via Mendix Studio Pro. Afterwards, you can continue working on workflows in Studio Pro until workflows are available in Studio again. For more information on how to migrate the app, see [Migrate Workflow Apps to Mendix 9.6 and Above](/refguide/workflow-beta-migration).
+You can start building an app with Mendix version 9.5  in Studio and manually migrate your app to Mendix version 9.6 or above via Mendix Studio Pro. Afterwards, you can continue working on workflows in Studio Pro until workflows are available in Studio again. For more information on how to migrate the app, see [Migrate Workflow Apps](/refguide/workflow-beta-migration).
 
 ## 4 Building an App Together with Studio Pro Developers in Mendix 9.6 and Above
 

@@ -2,6 +2,7 @@
 title: "Operations"
 description: "The day-to-day operation of an app from the the Developer Portal. This is mainly useful for apps running in the Mendix Cloud."
 tags: ["Operate", "App", "Developer Portal", "Metrics", "Alerts", "Logs", "Backups", "Mendix Cloud", "v3", "v4"]
+weight: 15
 ---
 
 ## 1 Introduction

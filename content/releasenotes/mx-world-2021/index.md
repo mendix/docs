@@ -1,6 +1,7 @@
 ---
 title: "Feature Release Calendar"
 tags: ["mendix world", "announcements", "features", "feature release", "products", "features and products", "calendar"]
+weight: 60
 #notoc: true
 #layout: wide
 #toc-level: "3"
@@ -40,7 +41,7 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | Feature | Expected Release |
 | --- | --- |
 | Studio expression editor | Released for GA on [May 19th, 2021](/releasenotes/studio/9.0-9.6#expression-editor) |
-| End-user services – App Switcher | Released for GA on [Jan 14th, 2022](https://marketplace.mendix.com/link/component/119451) |
+| End-user services – App Switcher | Released for GA on [Jan 14th, 2022](/appstore/modules/app-switcher) |
 | Studio workflow templates | GA: Feb 2022 |
 | End-user services – notifications | GA: Mar 2022 |
 | End-user services – branding | GA: Mar 2022 |
@@ -49,7 +50,7 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 
 | Feature | Expected Release |
 | --- | --- |
-| Platform user onboarding experience | Released for GA on [Oct 1st, 2021](/releasenotes/developer-portal/index#oct1) |
+| Platform user onboarding experience | Released for GA on [Oct 1st, 2021](/releasenotes/developer-portal/#oct1) |
 | Dashboards with insights on platform employees and app activity | Currently in Public Beta<br/>GA: Feb 2022 |
 | Company branding for end-user services | GA: Mar 2022 |
 | Marketplace subscription dashboards | GA: Mar 2022 |
@@ -105,7 +106,7 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | --- | --- | --- |
 | Smart app services integrated in workflows | Email | Released for GA on [Sep 6th 2021](https://marketplace.mendix.com/link/component/118393) |
 | Smart app services integrated in workflows | Intelligent Document Service<br/>Receipt Processing<br/>Invoice Processing<br/>MS Team Connector | GA: Jan 2022 |
-| Workflow | | Currently in Public Beta<br/>GA: Feb 2022 |
+| Workflow | | Released for GA on [Jan 25th, 2022](/releasenotes/studio-pro/9.10#new-features) |
 | Smart app services integrated in workflows | Speech to Text<br/>Text to Speech<br/>Text Analytics<br/>Translation | GA: Feb 2022 (except in China) |
 | Smart app services integrated in workflows | General Purpose OCR | GA: Mar 2022 |
 

@@ -17,6 +17,10 @@ This document describes two ways of managing the SAP BTP:
 * Initial setup of the environment when creating a new app: see the section [Set Up SAP BTP for the First Time](#FirstTime)
 * Create a new environment for an existing app: see the section [Create a New Environment](#NewEnvironment)
 
+{{% alert type="info" %}}
+Mendix applications can be deployed to Cloud Foundry regions on SAP Business Technology Platform, not to Neo regions.
+{{% /alert %}}
+
 ## 2 Set Up SAP BTP for the First Time{#FirstTime}
 
 Before you can manage your SAP BTP using the Developer Portal, you will need to set it up. There are two circumstances under which you will have to set up the SAP BTP for the first time.

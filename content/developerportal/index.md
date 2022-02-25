@@ -2,6 +2,11 @@
 title: "Developer Portal Guide"
 description: "Describes the sections of the Mendix Developer Portal and links to more detailed documents in the guide."
 tags: ["mendix", "developer portal", "platform services", "buzz", "apps", "community", "marketplace", "academy", "forum", "docs", "documentation"]
+weight: 30
+no_list: false
+cascade:
+    - space: "Developer Portal Guide"
+    - mendix_version: ""
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
@@ -76,7 +81,7 @@ The actions available depend on the app selected:
 * **Edit in Mendix Studio Pro**
 * **Delete App** – allows you to delete your app, provided you are the only team member (you will be warned of the consequences and asked for confirmation before the app is deleted)
 
-To go to the [licensed environments](/developerportal/deploy/environments) of your deployed app, click the cloud icon in the bottom-right corner of the app tile.
+To go to the [licensed environments](/developerportal/deploy/environments) of your deployed app, click the cloud icon in the lower-right corner of the app tile.
 
 ## 4 My Company's Apps & Buzz {#my-company-apps}
 
@@ -84,7 +89,7 @@ In the header, you can click links to see your **Company Apps** and **Company Bu
 
 ![](attachments/company-links.png)
 
-On the **My Company's Apps** page, you will see all the apps created by members of your [company](/developerportal/control-center/index#company).
+On the **My Company's Apps** page, you will see all the apps created by members of your [company](/developerportal/control-center/#company).
 
 You can also sort the order of the apps here.
 

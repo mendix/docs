@@ -30,7 +30,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Deploy your app by completing [How to Deploy Your First Mendix Native Mobile App](deploying-native-app).
 * Ensure you have set up and configured App Center for your app. For information on setting up App Center, see the [App Center Token](deploying-native-app#appcenter-token) section of *How to Deploy Your First Mendix Native Mobile App*. If you previously opted out of configuring App Center while building your app, you must navigate to the **Tokens** screen and toggle on the **I want to use App Center** option.
 * Install your app on a test device or emulator.
-* Read the [Offline First Reference Guide](/refguide/offline-first).
+* Read the [Offline First Reference Guide](/refguide8/offline-first).
 
 {{% alert type="info" %}}
 Before using this document, please ensure compatibility. If you have not migrated your project to the Native Mobile Builder or are on an Native Template version older than 5.1.9 (Mendix Studio Pro 8.15.1 and below), either follow [Transfer a CLI OTA-Compatible App to the Mendix Native Mobile Builder](#from-cli-to-ui) section below **before** implementing OTA updates, or update your Native Template. 
@@ -51,7 +51,7 @@ It is good practice to *always* redeploy your Mendix App before pushing a new ov
 * JavaScript action changes
 * Widgets shipped with Mendix added or removed
 * A new custom Javascript-only widget or module was added
-* Non-destructive model changes (for more information, see the [Offline First Reference Guide](/refguide/offline-first))
+* Non-destructive model changes (for more information, see the [Offline First Reference Guide](/refguide8/offline-first))
 
 ### 3.2 When a Full Release Is Required
 
@@ -134,7 +134,7 @@ To release a new version OTA, follow these steps:
 
 ## 6 Preserving your Model's Integrity
 
-Before issuing OTA updates or releasing new versions, please read and understand the [Offline First](/refguide/offline-first) reference guide. It is important to understand the implications of offline first.
+Before issuing OTA updates or releasing new versions, please read and understand the [Offline First](/refguide8/offline-first) reference guide. It is important to understand the implications of offline first.
 
 Mendix Native Apps are offline first. This means you should be cautious when changing the following elements, and should avoid changing them if possible:
 
@@ -198,7 +198,7 @@ If the OTA release button remains disabled. Verify that the app names added in t
 
 ## 8 Read More
 
-* [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)
-* [Offline First Reference Guide](/refguide/offline-first)
+* [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app)
+* [Offline First Reference Guide](/refguide8/offline-first)
 * [Codepush Introduction](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/)
 * [Using the CodePush UI](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/using-ui)

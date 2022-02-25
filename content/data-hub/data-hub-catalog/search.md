@@ -3,14 +3,14 @@ title: "Search in the Data Hub Catalog"
 category: "Data Hub Catalog"
 menu_order: 10
 description: "Describes how to find data sources and datasets in the Data Hub Catalog."
-tags: ["data hub", "data hub catalog"]
+tags: ["data hub", "data hub catalog", "data source", "dataset"]
 ---
 
 ## 1 Introduction
 
-Finding the right data to use in your app development is made easier using the search functionality in the Data Hub Catalog. The details of registered data assets can be accessed via the [Data Hub Search API](/apidocs-mxsdk/apidocs/data-hub-apis), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Data Hub pane](/refguide/data-hub-pane) in Studio Pro.  This document describes the functionality of the Data Hub Catalog.
+Finding the right data to use in your app development is made easier using the search functionality in the Data Hub Catalog. The details of registered data assets can be accessed using the [Data Hub Search API](/apidocs-mxsdk/apidocs/data-hub-apis), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Data Hub pane](/refguide/data-hub-pane) in Studio Pro.  This document describes how you can search in Data Hub Catalog.
 
-## 2 Search via the API {#search-api}
+## 2 Search Using the API {#search-api}
 
 To use the Data Hub Catalog Search API, you need the following:
 
@@ -262,10 +262,10 @@ When searching in the Data Hub Catalog, the following fields are searched:
 
 From the **Data Hub Home** page, you can search the Catalog in the following ways:
 
-![data hub home page](../share-data/attachments/share-data/data-hub-home.png)
+![data hub home page](/data-hub/share-data/attachments/share-data/data-hub-home.png)
 
 * Type a search term in the search box and click **Search** (search strings must be at least 3 alphanumeric characters)
-* Click one of the *tags* given in the **Search suggestions**
+* Click one of the *tags* given in the search suggestions
 * Click one of the services under **Popular Data Sources**
 * Click the **Catalog** tab
 
@@ -329,7 +329,7 @@ When a data source is selected in the search results, the following details are 
 
 * **Environment Name** – where the app is deployed
 
-* **Version** number of the service
+* **Version** – version number of the service
 
 * **Connections** – number of apps that consume the service
 
@@ -410,7 +410,7 @@ Technical owners can be [changed](curate#changing-owners).
 
 When a data source is registered, by default, it is **Discoverable** in the Data Hub Catalog. When this is set, all users in your company can find it, view the details, and consume it. The owners of an asset and curators can set a data source as **Non-discoverable**, which means it is not visible to users unless they are the owner or a curator.
 
-See [Curate Bar](#curate-bar) for changing **Discoverability** as the owner of the data source or curator.
+See the [Curation Bar](#curation-bar) section below for changing **Discoverability** as the owner of the data source or curator.
 
 The following discoverability values can be set:
 
@@ -419,7 +419,7 @@ The following discoverability values can be set:
 
 #### 3.6.5 Validated
 
-This indicates if the data source has been **Validated**. For details on changing **Validated** as an owner or curator, see the [Curate Bar](#curate-bar) section below.
+This indicates if the data source has been **Validated**. For details on changing **Validated** as an owner or curator, see the [Curation Bar](#curation-bar) section below.
 
 #### 3.6.6 Application
 
@@ -433,22 +433,18 @@ The environment type indicates the quality and the status of the data that the e
 * **Non-Production**
 * **Sandbox** (the Mendix Free App environment)
 
-### 3.7 Curate Bar {#curate-bar}
+### 3.7 Curation Bar {#curation-bar}
 
-The **Curate Bar** is displayed in the asset detail screen if you are the owner of the selected asset or a curator:
+The **Curation Bar** is displayed in the asset detail screen if you are the owner of the selected asset or a curator. In **Edit** > **Edit Metadata**, you can edit the information that is displayed in the Catalog for an asset:
 
-![called out curate bar](attachments/search/curate-bar.png)
+* For the selected data source, you can edit [Application Details](curate#curate-application) and [Data Source Details](curate#service-details)
+* For a selected dataset, you can edit [Dataset Details](curate#curate-datasets)
 
-In **Edit** > **Edit Metadata**, you can edit the information that is displayed in the Catalog for an asset:
-
-* For the selected data source, you can edit [Application Details](./curate#curate-application) and [Data Source Details](./curate#service-details)
-* For a selected dataset, you can edit [Dataset Details](./curate#curate-datasets)
-
-For further details, see [Curate Registered Assets](./curate).
+For further details, see [Curate Registered Assets](curate).
 
 ### 3.8 Data Source and Dataset URIs
 
-The data source URI is the location of the service contract of the data source – also known as the service endpoint. The endpoints of all exposed datasets (entity sets) are defined in the contract. From the details screen of the data source and dataset, you can copy the URIs to the clipboard by clicking the **Copy Data Source URI** and **Copy Dataset URI** respectively. These URIs can be used for directly accessing the contract and resource in BI applications.
+The data source URI is the location of the service contract of the data source, also known as the service endpoint. The endpoints of all exposed datasets (entity sets) are defined in the contract. From the details screen of the data source and dataset, you can copy the URIs to the clipboard by clicking the **Copy Data Source URI** and **Copy Dataset URI** respectively. These URIs can be used for directly accessing the contract and resource in BI applications.
 
 ### 3.9 Download the Metadata Contract of a Data Source {#download-contract}
 

@@ -23,7 +23,7 @@ The merge button
 
 {{% /alert %}}
 
-Tables can be selected by clicking the white square in the top-left corner.
+Tables can be selected by clicking the white square in the upper-left corner.
 
 Tables allow for a number of keyboard interactions. Examples include navigating between rows and columns with the cursor keys and copy(ctrl+c)/pasting(ctrl+v) rows and cells.
 

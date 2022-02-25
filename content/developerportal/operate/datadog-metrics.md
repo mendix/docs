@@ -185,7 +185,10 @@ You can add more tags if you want, but note that Datadog's charges include an el
 
 By default, Mendix will pass a log of *all* **request handler** activity to Datadog and no other information. However, by using JSON to configure the metrics agent, you can add logs of microflows and activities within microflows, and restrict which request handler calls are sent.
 
-#### 3.3.1 Format of Metrics Agent Configuration
+#### 3.3.1 Format of Metrics Agent Configuration{#mx-agent-format}
+
+<!-- Changes to this should be reflected in "Configuring the Java Instrumentation Agent" in /developerportal/deploy/private-cloud-monitor,
+but replace 'Datadog' with 'Prometheus' and update relative links -->
 
 You can specify which request handlers, microflows, and activities are reported to Datadog using a JSON configuration with the following format (note that this is the syntax and not an example of this custom setting):
 
@@ -425,7 +428,7 @@ If you have any issues related to accessing Datadog, please contact their suppor
 
 | Metric | Description |
 | --- | --- |
-| jmx.com.mendix.* | Core runtime metrics |
+| jmx.com.mendix.* | JMX metrics for the `com.mendix` domain (core runtime). |
 | mx.database.diskstorage_size | Disk storage available to the application database (this is a fixed value) |
 | mx.activity.time | How long a microflow activity takes to run |
 | mx.client.time | The time to handle a request to a request handler that is used by the web ui |

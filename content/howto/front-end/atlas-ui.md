@@ -7,7 +7,7 @@ tags: ["Atlas", "UI", "UX", "user experience", "design"]
 
 ## 1 Introduction
 
-Mendix offers Atlas UI, a cross-platform UI framework that gives teams the foundation they need to build engaging, high-quality experiences and brings UX, IT, and business together. See the [Atlas 3](https://atlas.mendix.com) site for more information about Atlas.
+Mendix offers Atlas UI, a cross-platform UI framework that gives teams the foundation they need to build engaging, high-quality experiences and brings UX, IT, and business together. See the [Atlas 3](https://atlas.mendix.com) site additional information on Atlas.
 
 If you use an older version of Mendix Studio Pro, see [atlas2.mendix.com](https://atlas2.mendix.com/) for information on Atlas 2.
 

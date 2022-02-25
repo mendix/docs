@@ -98,7 +98,7 @@ Externally hosted registries are supported if they allow username/password authe
 * [quay.io](https://quay.io/)
 * [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/) (ACR)
 
-When using ACR in combination with Azure Combination Service, it is possible to set up [native authentication](https://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration#create-a-new-aks-cluster-with-acr-integration) for pulling images from ACR.
+When using ACR in combination with Azure Kubernetes Service, it is possible to set up [native authentication](https://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration#create-a-new-aks-cluster-with-acr-integration) for pulling images from ACR.
 
 ### 3.3 OpenShift Image Registry
 

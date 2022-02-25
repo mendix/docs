@@ -75,7 +75,7 @@ To execute queries from the explorer (the left pane) in the **Database Manager**
 
     ![](attachments/18448637/18580423.png)
 
-2.  To select all customers from the table CUSTOMER, choose the first option. It will automatically fill the SQL command in the top-right pane:
+2.  To select all customers from the table CUSTOMER, choose the first option. It will automatically fill the SQL command in the upper-right pane:
 
     ![](attachments/18448637/18580422.png)
 
@@ -83,7 +83,7 @@ To execute queries from the explorer (the left pane) in the **Database Manager**
 
     ![](attachments/18448637/18580421.png)
 
-On the bottom-right pane, the results are shown and a total of 50 rows is retrieved from the database. From the standard actions, it is also possible to delete, update, and insert records. The standard actions can also be customized to retrieve, update, or delete specific data. Advanced knowledge about the SQL language is needed to get the desired results.
+On the lower-right pane, the results are shown and a total of 50 rows is retrieved from the database. From the standard actions, it is also possible to delete, update, and insert records. The standard actions can also be customized to retrieve, update, or delete specific data. Advanced knowledge about the SQL language is needed to get the desired results.
 
 ## 7 Committing the Data Snapshot
 

@@ -1,5 +1,6 @@
 ---
 title: "APD"
+weight: 20
 aliases:
     - /addons/apm-addon/index.html
 ---

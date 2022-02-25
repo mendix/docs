@@ -95,7 +95,7 @@ For more information, see [Visibility Section](/refguide/common-widget-propertie
 
 ### 2.6 Common Tab
 
-For more information, see [Common Section](/refguide/common-widget-properties.md/#common-properties) in the *Studio Pro 9 Guide*.
+For more information, see [Common Section](/refguide/common-widget-properties/#common-properties) in the *Studio Pro 9 Guide*.
 
 ## 4 Widgets Below Version 2.0.0
 

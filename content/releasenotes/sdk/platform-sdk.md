@@ -9,9 +9,9 @@ These are the [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/) release notes, includ
 
 ## 5.0.0
 
-**Release date: February 23th, 2022**
+**Release date: February 23rd, 2022**
 
-* Use new public APIs and support apps with a Git repository
+* With this new version, you can use new public APIs and support apps with a Git repository.
 
 ## 4.1.1
 

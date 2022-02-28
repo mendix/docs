@@ -12,7 +12,7 @@ The [Color Picker](https://marketplace.mendix.com/link/component/107044/) enable
 
 ### 1.1 Features
 * Render using the button, input box, and inline modes
-* Execute an action after a color change using the [Events](/studio/page-editor-widgets-events-section) section
+* Execute an action after a color change using the [Events tab](#events-tab)
 * Add a label
 * Choose when the Color Picker should be [editable](#editability-tab)
 * Choose when the Color Picker should be [visible](#visibility-tab)
@@ -72,7 +72,7 @@ To configure this widget, follow these steps:
         * **Label caption** – defines the label caption of the widget that is shown on the page
     * **No** (default) – if selected, the **Label caption** property is unavailable
 
-### 2.3 Events Tab
+### 2.3 Events Tab {#events-tab}
 
 * **On change** – executes an action when the attribute value changes
 

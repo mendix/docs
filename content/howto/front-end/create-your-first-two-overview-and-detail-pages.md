@@ -33,7 +33,7 @@ To create the overview and detail pages for your data structure, follow these st
 And there you go! For each entity, an overview page and a detail page is generated. Also, an **Entity_Menu** snippet is created and added to each overview page.
 
 {{% alert type="info" %}}
-Mendix can do even more of the work for you, if you create an Excel spreadsheet with two tabs (one for the header and data for **Customer**, and the other for the header and data for **Order**). When you are creating a new app, select **App from a spreadsheet** and upload your Excel spreadsheet.
+Mendix can do even more work for you if you create an Excel spreadsheet with two tabs (one for the header and data for **Customer**, and the other for the header and data for **Order**). When you are creating a new app, select **App from a spreadsheet** and upload your Excel spreadsheet.
 {{% /alert %}}
 
 ## 4 Creating Overview & Detail Pages Manually

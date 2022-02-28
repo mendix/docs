@@ -11,7 +11,7 @@ Mendix is all about enabling developers. Within apps developers can be enabled b
 
 Note that in this document we use the term design system, but one could also consider this a UI Kit, depending on how it is used and implemented.
 
-A design system is the single source of truth and contains all the elements that a team needs to design, realize and develop a product. The design system includes the styling (e.g. colors, fonts, spacing, images), principles, best practices, components and patterns (widgets, page templates, building blocks and design properties).
+A design system is the single source of truth and contains all the elements that a team needs to design, realize and develop a product. The design system includes the styling (for example colors, fonts, spacing, images), principles, best practices, components and patterns (widgets, page templates, building blocks and design properties).
 
 Follow the high level steps in the next paragraphs to create your own design system. Note that based on the needs/requirements, different choices can be made.
 

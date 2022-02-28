@@ -17,7 +17,7 @@ Google Maps is a very powerful addition to your applications. You can use it to 
 
 ## 2 Preparation
 
-Before you start this how-to, please make sure you have completed the following prerequisite.
+Before you start this how-to, please make sure you have completed the following prerequisite:
 
 *   Have the latest version of the [Google Maps](/appstore/widgets/google-maps) widget in your app
 

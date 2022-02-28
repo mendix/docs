@@ -51,7 +51,7 @@ To upgrade your theme directory to Atlas 3 specifications, please complete the f
 
 #### 2.2.1 Upgrading Atlas UI Resources to Atlas Core
 
-1. If you have modified any of the Atlas UI content found in **Atlas UI Resources** e.g. building blocks, page templates or layouts, it is recommended to move the UI content you have modified to another user defined module within your app. *Skip this step* if you have not modifed any of Atlas UI's content.
+1. If you have modified any of the Atlas UI content found in **Atlas UI Resources** (for example building blocks, page templates, or layouts) it is recommended to move the UI content you have modified to another user defined module within your app. *Skip this step* if you have not modifed any of Atlas UI's content.
 1.  Rename the **Atlas_UI_Resources** module to **Atlas_Core** in Studio Pro by right-clicking the module then clicking **Rename**:
 
 	![](attachments/atlas-mig/2-rename.png)

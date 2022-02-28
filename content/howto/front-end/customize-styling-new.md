@@ -111,7 +111,7 @@ The previous section describes how developers can customize the styling of an ap
 
 Adding styling to a module is similar to adding styling to an app, except that styling resources are placed in the **themesource** folder as explained in the [File and Folder Structure](#file-and-folder) section below.
 
-For classes that are generic or that should be easily discovered, a developer can consider creating design properties for this. For more information see [How to Extend design properties](extend-design-properties).
+For classes that are generic or that should be easily discovered, a developer can consider creating design properties for this. For more information see [How to Extend Design Properties](extend-design-properties).
 
 ## 4 Creating a Theme Module {#create-theme-mod}
 

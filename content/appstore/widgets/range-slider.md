@@ -24,9 +24,9 @@ If you need to set one value, instead of a range of values, you should use the [
 
   ![](attachments/range-slider/step-value.png)
 
-* Set a microflow that is executed once a range value is changed on the slider
+* Set a microflow that is executed when a range value is changed on the slider
 
-* Show or hide a tooltip when you click or move the slider handle
+* Show a tooltip when you click or move the slider handle
 
 * Render the slider with different colors
 

@@ -41,9 +41,9 @@ To configure this widget, follow these steps:
       * **Inline** – a spectrum color picker is displayed      
     * **Picker type** – select one of the following available pickers from the [React Color](https://casesandberg.github.io/react-color/) library: 
       * **Block**
-      *  **Chrome**
-      *  **Circle**
-      *  **Compact**
+      * **Chrome**
+      * **Circle**
+      * **Compact**
       * **Github**
       * **Hue**
       * **Material**
@@ -52,9 +52,9 @@ To configure this widget, follow these steps:
       * **Swatches**
       * **Twitter**
       * **Color format** – defines which color format to use
-          * **HEX**
-          * **RGB**
-          * **RGBA**
+        * **HEX**
+        * **RGB**
+        * **RGBA**
       * **Default colors** – defines a list of pre-defined colours used with the color picker
           {{% alert type="info" %}}This is option is only available if the **Picker type** is **Block**, **Sketch**, **Circle**, **Compact**, or **Twitter**{{% /alert %}}
            * **New** – opens the **Edit Default Colors Item** dialog box where you can create a new default color
@@ -67,10 +67,9 @@ To configure this widget, follow these steps:
     * **No** (default) – if selected, the advanced options are disabled.
 * **Invalid format message** – defines the message that is shown when the user provides a wrong input
 * **Show label**
-
-    * **Yes** – if selected, the **Label caption** property becomes available
-        * **Label caption** – defines the label caption of the widget that is shown on the page
-    * **No** (default) – if selected, the **Label caption** property is unavailable
+  * **Yes** – if selected, you can define the label caption
+    * **Label caption** – defines the label caption of the widget that is displayed on the page
+  * **No** (default) – if selected, there is no label for this widget on the page
 
 ### 2.3 Events Tab {#events-tab}
 

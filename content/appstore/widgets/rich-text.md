@@ -50,7 +50,6 @@ Place the Rich Text widget in a Data View, a List View, or a Template Grid with 
 * **Value attribute** – the attribute that has a string value, which is used as the rich-text content
 
 * **Sanitize content** – determines whether your content from untrusted strings is removed or not
-	
 	* **Yes** (default)
 	* **No**
 	
@@ -166,7 +165,7 @@ The following keyboard shortcuts can be used when editing:
 
 ## 4 Widgets Below Version 2.0.0
 
-### 4.1 Features
+Feature:
 
 * Format selected text
 * HTML output of formatted text
@@ -174,7 +173,7 @@ The following keyboard shortcuts can be used when editing:
 * Use the custom option to select which editing options you want to show
 * Input and display text is sanitized
 
-### 4.2 Configuration
+Configuration:
 
 Place the widget in a data view, list view, or template grid with a data source that has a string attribute. Then, select the **Value attribute** that contains the editable text.
 

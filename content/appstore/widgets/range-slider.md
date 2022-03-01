@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "range slider", "platfo
 
 ## 1 Introduction
 
-You can use the [Range Slider](https://marketplace.mendix.com/link/component/52704/) widget to change a range of values using a slider. This range has an upper bound value and a lower bound value, and the whole range stays between the minimum value and maximum value of the slider's track.
+You can use the [Range Slider](https://marketplace.mendix.com/link/component/52704/) widget to change a range of values using a slider. This range has an upper bound value and a lower bound value, and the whole range stays between the minimum and maximum values of the slider.
 
 {{% alert type="info" %}}
 If you need to set one value, instead of a range of values, you should use the [Slider](https://marketplace.mendix.com/link/component/48786/) widget instead.
@@ -16,19 +16,19 @@ If you need to set one value, instead of a range of values, you should use the [
 
 ### 1.1 Features
 
-* Set the minimum value and the maximum value that are the limits of the slider, as well as a lower bound value and an upper bound value of a range:
+* Set the minimum value and the maximum value which are the limits of the slider, as well as a lower bound value and an upper bound value of a range:
 
   ![](attachments/range-slider/sample-range.png)
 
-* Set a step size, which is the difference between the two adjacent values of the slider:
+* Set a step size, which is the difference between two adjacent values on the slider:
 
   ![](attachments/range-slider/step-value.png)
 
-* Set a microflow which is executed when a range value is changed or the slider is clicked
+* Set a microflow that is executed once a range value is changed on the slider
 
-* Show or hide a tooltip upon hover
+* Show or hide a tooltip when you click or move the slider handle
 
-* Render slider with different colors
+* Render the slider with different colors
 
 ## 2 Configuration
 
@@ -42,12 +42,13 @@ To configure this widget, follow these steps:
 
 #### 2.1.1 Data Source Section
 
-- **Lower bound attribute** – defines the value for lower bound of the range
-- **Upper bound attribute** – defines the value for upper bound of the range
+- **Lower bound attribute** – defines the attribute to store the lower bound value of the range
+- **Upper bound attribute** – defines the attribute to store the upper bound value of the range
 
 #### 2.1.2 General Section
 
 - **Minimum value type** – sets the type of the value source for the **Minimum value** property
+  
   - **Static** – if selected, the minimum value is a static value
   - **Dynamic** – if selected, the minimum value is a dynamic value
   - **Expression** – if selected, the minimum value is an [expression](/refguide/expressions)
@@ -65,21 +66,21 @@ To configure this widget, follow these steps:
   - **Static** – if selected, the step size is a static value
   - **Dynamic** – if selected, the step size is a dynamic value
   - **Expression** – if selected, the step size is an [expression](/refguide/expressions)
-- **Step size** – sets the difference between the two adjacent values of the slider
+- **Step size** – sets the difference between two adjacent values on the slider
 - **Show tooltip**
-  - **Yes** (default) – if selected, the tooltip shows the current slider value when you hover the cursor over slider handle
+  - **Yes** (default) – if selected, a tooltip is displayed when you click or move the slider handle
     - **Lower bound tooltip type** – sets the tooltip type for the lower bound value
-      - **Value** (default) – if selected, the tooltip shows the current value
+      - **Value** (default) – if selected, the tooltip shows the current lower bound value of the range
       - **Custom** – if selected, you can define a custom tooltip
       - **Tooltip** – sets the custom tooltip
     - **Upper bound tooltip type** – sets the tooltip type for the upper bound value
-      - **Value** (default) – if selected, the tooltip shows the current value
+      - **Value** (default) – if selected, the tooltip shows the current upper bound value of the range
       - **Custom** – if selected, you can define a custom tooltip
       - **Tooltip** – sets the custom tooltip
   - **No** – if selected, no tooltip is shown
 - **Tooltip always visible**
   - **Yes** –  if selected, the tooltip is always visible
-  - **No** (default) – if selected, the tooltip is only shown when you hover over the slider
+  - **No** (default) – if selected, the tooltip is only shown when you click or move the slider handles
 - **Show label** 
   - **Yes** – if selected, the **Label caption** property becomes available
     - **Label caption** – defines the label caption of the widget that is shown on the page
@@ -101,8 +102,8 @@ To configure this widget, follow these steps:
 
 #### 2.2.1 Track Section
 
-- **Number of markers** – specifies the number of the markers that appear along the slider's track
-- **Decimal places** – specifies the number of decimal places for marker values
+- **Number of markers** – sets the number of the markers that appear along the slider's track
+- **Decimal places** – sets the number of decimal places for marker values
 - **Orientation** – determines the orientation of the slider
   - **Horizontal** – if selected, the orientation of the slider is horizontal
   - **Vertical** – if selected, the orientation of the slider is vertical and you must set **Height unit** and **Height**

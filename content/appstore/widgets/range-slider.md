@@ -8,15 +8,15 @@ tags: ["marketplace", "marketplace component", "widget", "range slider", "platfo
 
 ## 1 Introduction
 
-You can use the [Range Slider](https://marketplace.mendix.com/link/component/52704/) widget to change a range of values using a slider. This range has an upper bound value and a lower bound value, and the whole range stays between the minimum and maximum values of the slider.
+The [Range Slider](https://marketplace.mendix.com/link/component/52704/) allows the user to set a range using a slider. You need to configure a minimum value and a maximum value for the slider, which define the limits of the slider's track. Then the user can set a range within these limits by defining the lower bound value and the upper bound value of the range.
 
 {{% alert type="info" %}}
-If you need to set one value, instead of a range of values, you should use the [Slider](https://marketplace.mendix.com/link/component/48786/) widget instead.
+If you need to set one value, instead of a range of values, you should use the [Slider](slider) widget instead.
 {{% /alert %}}
 
 ### 1.1 Features
 
-* Set the minimum value and the maximum value which are the limits of the slider, as well as a lower bound value and an upper bound value of a range:
+* Configure the minimum value and the maximum value, which define the limits of the slider's track, and then the user can set the lower bound value and the upper bound value of a range within these limits:
 
   ![](attachments/range-slider/sample-range.png)
 
@@ -24,9 +24,9 @@ If you need to set one value, instead of a range of values, you should use the [
 
   ![](attachments/range-slider/step-value.png)
 
-* Set a microflow that is executed when a range value is changed on the slider
+* Set a microflow that is executed when the user changes the range value on the slider
 
-* Show a tooltip when you click or move the slider handle
+* Show a tooltip when the user clicks or moves the slider handle
 
 * Render the slider with different colors
 
@@ -34,7 +34,7 @@ If you need to set one value, instead of a range of values, you should use the [
 
 To configure this widget, follow these steps:
 
-1. In Studio Pro, place the widget in the context of an object that has attributes for the lower bound value and the upper bound value of a range
+1. In Studio Pro, place the widget in the context of an object that has Integer or Decimal attributes for the lower bound value and the upper bound value of a range
 2. Double-click the Ranger Slider widget to open the **Edit Ranger Slider** dialog box.
 3. Configure the widget using the properties described in the sections below.
 

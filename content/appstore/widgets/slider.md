@@ -24,7 +24,7 @@ If the user needs to set a range, instead of one value, you should use the [Rang
 
   ![](attachments/slider/slider2.png)
 
-- Set a microflow that is executed when the slider value is changed
+- Set a microflow that is executed when the user changes the slider value
 - Show a tooltip when the user clicks or moves the slider handle
 - Render the slider with colors
 

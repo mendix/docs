@@ -100,8 +100,6 @@ To configure this widget, follow these steps:
 
 ### 2.2 Track Tab
 
-#### 2.2.1 Track Section
-
 - **Number of markers** – sets the number of the markers that appear along the slider's track
 - **Decimal places** – sets the number of decimal places for marker values
 - **Orientation** – determines the orientation of the slider
@@ -111,7 +109,6 @@ To configure this widget, follow these steps:
       - **Percentage** (default) – if selected, the aspect ratio is used to specify the height
       - **Pixels** – if selected, an absolute value is used to specify the height
     - **Height** – the height in pixels or percentage based on the setting of **Height unit**
-
 
 ### 2.3 Events Tab
 

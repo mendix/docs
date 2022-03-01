@@ -75,9 +75,9 @@ To configure this widget, follow these steps:
   - **Yes** –  if selected, the tooltip is always visible
   - **No** (default) – if selected, the tooltip is only shown when the user clicks or moves the slider handle
 - **Show label** 
-  - **Yes** – if selected, the **Label caption** property becomes available
-    - **Label caption** – defines the label caption of the widget that is shown on the page
-  - **No** (default) – if selected, the **Label caption** property is unavailable
+  - **Yes** – if selected, you can define the label caption
+    - **Label caption** – defines the label caption of the widget that is displayed on the page
+  - **No** (default) – if selected, there is no label for this widget on the page
 
 #### 2.1.3 Editability Section
 

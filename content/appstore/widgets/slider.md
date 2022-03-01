@@ -131,7 +131,3 @@ The following properties must be configured:
 * **Value attribute** – the selected value on the slider
 * **Range minimum attribute** – the attribute that contains the minimum slider value; if not provided, **Default minimum value** is used
 * **Range maximum attribute** – the attribute that contains the maximum slider value; if not provided, **Default maximum value** is used
-
-## 4 Read More
-
-* [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide)

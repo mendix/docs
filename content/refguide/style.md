@@ -106,6 +106,3 @@ In the end your setup should look like this:
 {{% alert type="warning" %}}
 Please note that characters with variant selectors are not supported by our PDF generation library. 
 {{% /alert %}}
-
-![image](https://user-images.githubusercontent.com/60467476/155552986-d4ca11c2-3e9a-4804-ba30-da2273776bc2.png)
-

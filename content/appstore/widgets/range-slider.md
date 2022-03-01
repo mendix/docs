@@ -25,9 +25,7 @@ If the user needs to set one value, instead of a range, you should use the [Slid
   ![](attachments/range-slider/step-value.png)
 
 * Set a microflow that is executed when the user changes the range value on the slider
-
 * Show a tooltip when the user clicks or moves a slider handle
-
 * Render the slider with different colors
 
 ## 2 Configuration
@@ -48,13 +46,11 @@ To configure this widget, follow these steps:
 #### 2.1.2 General Section
 
 - **Minimum value type** – sets the type of the value source for the **Minimum value** property
-  
   - **Static** – if selected, the minimum value is a static value
   - **Dynamic** – if selected, the minimum value is a dynamic value
   - **Expression** – if selected, the minimum value is an [expression](/refguide/expressions)
 - **Minimum value** – sets the minimum value of the slider
 - **Maximum value type** – sets the type of the value source for the **Maximum value** property
-  
   - **Static** – if selected, the maximum value is a static value
   - **Dynamic** – if selected, the maximum value is a dynamic value
   - **Expression** – if selected, the maximum value is an [expression](/refguide/expressions)
@@ -76,7 +72,6 @@ To configure this widget, follow these steps:
         - **Tooltip** – defines the custom tooltip
   - **No** – if selected, no tooltip is shown when the user clicks or moves a slider handle
 - **Tooltip always visible**
-  
   - **Yes** –  if selected, the tooltip is always visible
   - **No** (default) – if selected, the tooltip is only shown when you click or move the slider handles
 - **Show label** 

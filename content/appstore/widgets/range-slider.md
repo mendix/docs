@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "range slider", "platfo
 
 ## 1 Introduction
 
-The [Range Slider](https://marketplace.mendix.com/link/component/52704/) allows the user to set a range using a slider. You need to configure a minimum value and a maximum value for the slider, which define the limits of the slider's track. Then the user can set a range within these limits by defining the lower bound value and the upper bound value of the range.
+The [Range Slider](https://marketplace.mendix.com/link/component/52704/) allows the user to set a range using a slider. You need to configure a minimum value and a maximum value for the slider, which define the limits of the slider's track. The user can set a range within these limits by defining the lower bound value and the upper bound value of the range.
 
 {{% alert type="info" %}}
 If the user needs to set one value, instead of a range, you should use the [Slider](slider) widget instead.
@@ -26,7 +26,7 @@ If the user needs to set one value, instead of a range, you should use the [Slid
 
 * Set a microflow that is executed when the user changes the range value on the slider
 
-* Show a tooltip when the user clicks or moves the slider handle
+* Show a tooltip when the user clicks or moves a slider handle
 
 * Render the slider with different colors
 
@@ -34,7 +34,7 @@ If the user needs to set one value, instead of a range, you should use the [Slid
 
 To configure this widget, follow these steps:
 
-1. In Studio Pro, place the widget in the context of an object that has Integer or Decimal attributes for the lower bound value and the upper bound value of a range
+1. In Studio Pro, place the Ranger Slider widget in the context of an object that has Integer or Decimal attributes to store the lower bound value and the upper bound value of the range
 2. Double-click the Ranger Slider widget to open the **Edit Ranger Slider** dialog box.
 3. Configure the widget using the properties described in the sections below.
 
@@ -68,23 +68,24 @@ To configure this widget, follow these steps:
   - **Expression** – if selected, the step size is an [expression](/refguide/expressions)
 - **Step size** – sets the difference between two adjacent values on the slider
 - **Show tooltip**
-  - **Yes** (default) – if selected, a tooltip is displayed when you click or move the slider handle
+  - **Yes** (default) – if selected, a tooltip is displayed when the user clicks or moves a slider handle
     - **Lower bound tooltip type** – sets the tooltip type for the lower bound value
       - **Value** (default) – if selected, the tooltip shows the current lower bound value of the range
       - **Custom** – if selected, you can define a custom tooltip
-      - **Tooltip** – sets the custom tooltip
+        - **Tooltip** – defines the custom tooltip
     - **Upper bound tooltip type** – sets the tooltip type for the upper bound value
       - **Value** (default) – if selected, the tooltip shows the current upper bound value of the range
       - **Custom** – if selected, you can define a custom tooltip
-      - **Tooltip** – sets the custom tooltip
-  - **No** – if selected, no tooltip is shown
+        - **Tooltip** – defines the custom tooltip
+  - **No** – if selected, no tooltip is shown when the user clicks or moves a slider handle
 - **Tooltip always visible**
+  
   - **Yes** –  if selected, the tooltip is always visible
   - **No** (default) – if selected, the tooltip is only shown when you click or move the slider handles
 - **Show label** 
-  - **Yes** – if selected, the **Label caption** property becomes available
-    - **Label caption** – defines the label caption of the widget that is shown on the page
-  - **No** (default) – if selected, the **Label caption** property is unavailable
+  - **Yes** – if selected, you can define the label caption
+    - **Label caption** – defines the label caption of the widget that is displayed on the page
+  - **No** (default) – if selected, there is no label for this widget on the page
 
 #### 2.1.3 Editability Section
 

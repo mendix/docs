@@ -25,16 +25,14 @@ If the user needs to set a range, instead of one value, you should use the [Rang
   ![](attachments/slider/slider2.png)
 
 - Set a microflow that is executed when the slider value is changed
-
 - Show a tooltip when the user clicks or moves the slider handle
-
 - Render the slider with colors
 
 ## 2 Configuration
 
 To configure this widget, follow these steps:
 
-1. In Studio Pro, place the Slider widget in the context of an object that has an attribute for the slider value
+1. In Studio Pro, place the Slider widget in the context of an object that has an Integer or Decimal attribute to store the slider value.
 2. Double-click the Slider widget to open the **Edit Slider** dialog box.
 3. Configure the widget using the properties described in the sections below.
 

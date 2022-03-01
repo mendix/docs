@@ -45,18 +45,15 @@ To configure this widget, follow these steps:
 #### 2.1.2 General Section
 
 - **Minimum value type** – sets the type of the value source for the **Minimum value** property
-
   - **Static** – if selected, the minimum value is a static value
   - **Dynamic** – if selected, the minimum value is a dynamic value
   - **Expression** – if selected, the minimum value is an [expression](/refguide/expressions)
 - **Minimum value** – sets the minimum value of the slider
 - **Maximum value type** – sets the type of the value source for the **Maximum value** property
-
   - **Static** – if selected, the maximum value is a static value
   - **Dynamic** – if selected, the maximum value is a dynamic value
   - **Expression** – if selected, the maximum value is an [expression](/refguide/expressions)
 - **Maximum value** – sets the maximum value of the slider
-
 - **Step size type** – sets the type of the value source for the **Step size** property
   - **Static** – if selected, the step size is a static value
   - **Dynamic** – if selected, the step size is a dynamic value

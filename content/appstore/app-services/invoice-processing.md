@@ -13,7 +13,7 @@ Powered by AI and OCR technologies, the [Invoice Processing](https://marketplace
 ### 1.2 Features
 
 * Extract data from images of invoices in bulk and map data to an entity
-* Support the invoices from United States and European Union regions
+* Support the invoices from the United States and European Union regions
 * Support [Mendix SSO](/appstore/modules/mendix-sso)
 
 ### 1.3 Limitation
@@ -66,7 +66,7 @@ The Invoice Processing app service is a premium Mendix product that is subject t
 
 ## 4 Usage
 
-To use the Invoice Processing app service, first you need to create a model, then create an [Import Mapping](#mapping-file) using a sample invoice. Import Mapping defines how to map extracted data from images to an entity. After Import Mapping creation, you include the [invoice processing service activity](#extraction-activity) into a microflow. This microflow should be set up to accept set of invoice image(s), your trained model, and Import Mapping. Microflow should extract data from the images in bulk and then map the data to an entity using the Import Mapping that you created.
+To use the Invoice Processing app service, first you need to create a model, then create an [Import Mapping](#mapping-file) using a sample invoice. The Import Mapping defines how to map extracted data from images to an entity. After you create the Import Mapping, include the [Invoice Processing activity](#extraction-activity) into a microflow. This microflow should be set up to accept the invoice image(s), your trained model, and the Import Mapping. The microflow should extract data from the invoice images in bulk and then map the data to an entity using the Import Mapping that you created.
 
 ### 4.1 Training a Document Model {#document-model-training}
 
@@ -78,9 +78,9 @@ To use the Invoice Processing app service, first you need to create a model, the
 
         ![Document model training app login page](attachments/invoice-processing/document-model-training-app.png)
 
-    5. Log into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account.
+    5. Log into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account.    
     
-2.  Select appropriate Invoice Processing **Environment** from the dropdown to show the **Existing Models** list.
+2.  From the drop-down list below **Select an environment to continue**, select an environment that you use to train models for the Invoice Processing app service. The **Existing Models** in this environment is displayed.
 
     ![Existing Invoice models list](attachments/invoice-processing/existing-invoice-models.png)
 
@@ -90,17 +90,17 @@ To use the Invoice Processing app service, first you need to create a model, the
 
     ![Create Invoice Model dialog box](attachments/invoice-processing/create-invoice-model-dialog-box.png)
 
-4.  Enter a unique **Model Name**, select a **Region**, and then select **Country** specific to the selected Region. You can select multiple countries for a given Region. Click **Create Model**.
+4. Enter a unique **Model Name**, select a **Region**, and then **Country**. You can select multiple countries for a given **Region**.
+5.  Click **Create Model**.
     
     {{% alert type="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
    
-5. An **Information** pop up window appears notifying the user that the model is being trained.
-
+    An **Information** pop-up window appears notifying the user that the model is being trained.
+   
     ![Create Invoice Model dialog box](attachments/invoice-processing/info-pop-up-dialog-box.png)
-
-6. Click **OK**. The new model appears in the **Existing Models** list with the status **In Progress**.
-7. Click **Refresh** and wait until the **Status** of the model becomes **Published**.
-8. Once the model is published, it is ready to use.
+   
+7. Click **OK**. The new model appears in the **Existing Models** list with the status **In Progress**.
+8. Click **Refresh** and wait until the **Status** of the model becomes **Published**. Once the model is published, it is ready to use.
 
 
 ### 4.2 Creating an Import Mapping{#mapping-file}
@@ -109,10 +109,10 @@ You need to use an [Import Mapping](/refguide/mapping-documents#import-mappings)
 
 1.  To create an Import Mapping, you need a JSON structure. Perform the following steps to generate the JSON structure:
     1.  Log into the [Document Model Training](#document-model-training) application with your Mendix account.
-    2.  Click appropriate Invoice Processing **Environment** to show the **Invoice Models** list.
+    2.  From the drop-down list below **Select an environment to continue**, select an environment that you use to train models for the Invoice Processing app service. The **Existing Models** in this environment is displayed.
     3.  Select your trained model. Make sure that the **Status** of the model is **Published**. Note down the **Model Id**. You will need it when you [extract data with the trained model ](#extraction-activity).
     4.  Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens.
-    5.  Drag the sample invoice into the box where it says **Drag & Drop your image file here**. You can also click the **Browse** button and select the file.
+    5.  Drag the sample invoice into the box where it says **Drag & Drop your image file here**. You can also click **Browse** and select the file.
 
         ![Sample Extraction dialog box](attachments/invoice-processing/sample-extraction-dialog-box.png)
 

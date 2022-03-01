@@ -50,11 +50,11 @@ The Receipt Processing app service is a premium Mendix product that is subject t
 
     {{% alert type="info" %}}For the trial, only one user per company is allowed.{{% /alert %}}
     
-2.  Fill in the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
+2.  Fill in the **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Owner receives an order confirmation email.
 
     For the trial, you do not need to fill in this information.
     
-3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in with your Mendix account. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+3. Click the link in the order confirmation email to go to the [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) page and log in with your Mendix account. This page gives an overview of all the subscriptions of your organization.
 4. Click **Receipt Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
 5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys.
 
@@ -76,7 +76,7 @@ You need to use an [import mapping](/refguide/mapping-documents#import-mappings)
 
 1.  To create an import mapping, you need a JSON structure. Perform the following steps to generate the JSON structure:
     1. Log into the Marketplace with your Mendix account.
-    2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.    
+    2. Go to **My Marketplace** and Click [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) on the left navigation menu. The **Compmany Subscriptions** page gives an overview of all the subscriptions of your organization.    
     3. Click **Receipt Processing** to open the service management dashboard.
     4.  Click **Manage Instance** to open the **Document Model Training** application.
       
@@ -140,7 +140,7 @@ You need to use an [import mapping](/refguide/mapping-documents#import-mappings)
 The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
 1. Log into the Marketplace.
-2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+2. Go to **My Marketplace** and Click [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
 3. Click **Receipt Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
 
 ## 5 Technical Provider{#technical-provider}

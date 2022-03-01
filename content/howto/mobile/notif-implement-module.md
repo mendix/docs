@@ -10,7 +10,7 @@ tags: ["mobile", "native", "push", "local", "firebase, ios, android"]
 
 Now that you have implemented the prerequisites in your app, you must implement the [Push Notifications Connector](https://marketplace.mendix.com/link/component/3003) module. Complete the steps below to enable the basic configuration.
 
-## 2 Download From Marketplace
+## 2 Downloading From Marketplace
 
 If you have not done so, make sure to download the **Push Notification Connector** module from the Marketplace:
 
@@ -19,7 +19,7 @@ If you have not done so, make sure to download the **Push Notification Connector
 1. Open the **Push Notification Connector** module.
 1. Click **Download**.
 
-## 3 Configure Your App {#config}
+## 3 Configuring Your App {#config}
 
 In order for your app to use to use the Push Connections Module, configure the following things:
 

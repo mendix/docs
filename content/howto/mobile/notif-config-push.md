@@ -10,7 +10,7 @@ tags: ["mobile", "native", "push", "local", "firebase"]
 
 This how-to will teach you to configure the runtime for using push notifications in native apps. 
 
-## 2 Configure Your Notifications
+## 2 Configuring Your Notifications
 
 If you have completed [Add Module Dependencies](notif-add-module-depends) and [Implement the Push Notifications Module](notif-implement-module) per your use case, do the following to configure your push notifications:
 

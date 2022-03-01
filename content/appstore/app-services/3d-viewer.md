@@ -433,7 +433,7 @@ By selecting one attribute to set the **Error** event, you can pick up an error 
 
 ![viewerevent-onerror](attachments/3d-viewer/viewerevent-onerror.jpg)
 
-Like other Mendix events, you can select from a list of actions upon a Viewer error for **Action**. One possible use case is show a error pop up page to let user know the error details.
+Like other Mendix events, you can select from a list of actions upon a Viewer error for **Action**. One possible use case is show a error pop-up page to let user know the error details.
 
 ![viewer-onerror-sample](attachments/3d-viewer/viewer-onerror-sample.jpg) 
 
@@ -461,7 +461,7 @@ By selecting one attribute for the **Loaded** value, you can get the current loa
 
 ![viewer-onload-result](attachments/3d-viewer/viewer-onload-result.jpg)
 
-Like other Mendix events, you can select from a list of actions upon the product structure tree loaded status for **Action**. One possible use case is show a pop up page to let user know if product structure is successfully loaded.
+Like other Mendix events, you can select from a list of actions upon the product structure tree loaded status for **Action**. In order to call the **On Load** action, you must bind a valid **Loaded** value. One possible use case is show a pop-up page to let user know if product structure is successfully loaded.
 
 ![viewer-onload-sample](attachments/3d-viewer/viewer-onload-sample.jpg)
 
@@ -543,10 +543,10 @@ When you want to deploy your app to a licensed Mendix Cloud node or an on-premis
 
 On the [3D Viewer](https://marketplace.mendix.com/link/component/118345) page, click **Subscribe** to go to the subscription order page and follow these steps:
 
-1. Fill in technical contact information (first name, last name, email address), the subscription amount, billing account information, and other required information. 
-2. Upon successful order creation, if you are the app's [Technical Contact](/developerportal/collaborate/app-roles#technical-contact), you will receive an order confirmation email. 
-3. Click the link in the email to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there.
-4. In the list of your organization's subscriptions, click the **3D Viewer** subscription link to open the subscription details page.
+1. Fill in **Technical Owner** information (first name, last name, email address), the subscription amount, billing account information, and other required information. 
+2. Upon successful order creation, if you are the app's technical owner, you will receive an order confirmation email. 
+3. Click the link in the email to the [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) page and log in there.
+4. In the list of your company's subscriptions, click the **3D Viewer** subscription link to open the subscription details page.
 5. Click **Create Binding Keys** , give the key a meaningful name (which should include the name of the app where you are using 3D Viewer), then click **Create Keys**.
 6. When the **LicenseToken** key is generated, copy and save it for later use in your app.
 

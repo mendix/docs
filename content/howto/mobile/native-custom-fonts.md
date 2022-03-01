@@ -87,7 +87,7 @@ Before [adding fonts manually](#manual):
 * Understand git and have a git tool installed
 * Have XCode installed for the iOS sections below
 
-## 3 Add Custom Fonts With the Mendix Native Mobile Builder {#fonts-nbui}
+## 3 Adding Custom Fonts With the Mendix Native Mobile Builder {#fonts-nbui}
 
 The Mendix Native Mobile Builder simplifies adding custom fonts to your app. It configures both Android and iOS app and also provides the snippets needed to simply copy and paste in your Mendix app's native styles. To add custom fonts to your app, follow these steps: 
 
@@ -113,7 +113,7 @@ The Mendix Native Mobile Builder simplifies adding custom fonts to your app. It 
 
 1. Build your app to get a new binary with fonts included. 
 
-## 4 Use Custom Fonts in Your App
+## 4 Using Custom Fonts in Your App
 
 To use the new fonts to style your content, follow these instructions:
 
@@ -129,11 +129,11 @@ To use the new fonts to style your content, follow these instructions:
 
 	{{% image_container width="350" %}}![Custom style](attachments/nbui/custom-style.png){{% /image_container %}}
 
-## 5 Add Custom Fonts Manually {#manual}
+## 5 Adding Custom Fonts Manually {#manual}
 
 While the Mendix Native Mobile Builder simplifies adding fonts, you might find yourself in a situation where you must add fonts manually instead.
 
-### 5.1 Add Custom Fonts to an Android App
+### 5.1 Adding Custom Fonts to an Android App
 
 To manually add custom fonts to your Android app, follow these instructions: 
 
@@ -155,7 +155,7 @@ To manually add custom fonts to your Android app, follow these instructions:
 
 Congratulations, you have learned how to add fonts to an Android app.
 
-### 5.2 Add Custom Fonts to an iOS App
+### 5.2 Adding Custom Fonts to an iOS App
 
 Use XCode to manually add fonts to an iOS app:
 

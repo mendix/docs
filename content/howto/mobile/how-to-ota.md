@@ -76,7 +76,7 @@ If you have made any changes directly to your iOS or Android app, you will have 
 * The app's launcher icons have been changed
 * The splash screen has been changed
 
-## 5 Enable and Build an App with Mendix OTA Updates Enabled {#build-with-ota-support}
+## 5 Enabling and Building an App with Mendix OTA Updates Enabled {#build-with-ota-support}
 
 By default OTA updates are disabled for your Native Mobile Profile. To enable them, do the following: 
 

@@ -29,7 +29,7 @@ Synchronization is automatically triggered during the following scenarios:
 * The first startup of your mobile app after your Mendix app is redeployed when the following conditions are matched:
  * There is a network connection
  * You are using a new Mendix version or the domain model used in the offline-first app has changed
-* After the app user logs in or out
+* After the app user logs in or out. Note that synchronization after log out does not synchronize the data of the logged-out user, but rather synchronizes the data for the anonymous user.
 
 Synchronization can also be configured via different places in your Mendix app, for example:
 
@@ -299,4 +299,4 @@ Attributes with the hashed string [attribute type](attributes#type) will not be 
 
 ### 4.10 Access Rules with XPath Constraints {#access-rules}
 
-While working offline, offline-first apps cannot apply access rules with XPath constraints. For example, consider a **Customer** entity with **Locked** (Boolean) and **Name** (string) attributes. There is an access rule where the **Name** attribute of the customer is writable only when the **Locked** attribute is false. Changing and committing the **Locked** attribute’s value while offline will not change the read-only status of the **Name** attribute. Instead, this change will take effect after you synchronize the changed **Customer** object.
+While working offline, offline-first apps cannot apply access rules with XPath constraints. For example, consider a `Customer` entity with `Locked` (Boolean) and `Name` (string) attributes. There is an access rule where the `Name` attribute of the customer is writable only when the `Locked` attribute is false. Changing and committing the `Locked` attribute’s value while offline will not change the read-only status of the `Name` attribute. Instead, this change will take effect after you synchronize the changed `Customer` object.

@@ -8,116 +8,133 @@ tags: ["marketplace", "marketplace component", "widget", "range slider", "platfo
 
 ## 1 Introduction
 
-The [Range Slider](https://marketplace.mendix.com/link/component/52704/) widget can be used to change the range of values using a slider.
+You can use the [Range Slider](https://marketplace.mendix.com/link/component/52704/) widget to change a range of values using a slider. This range has an upper bound value and a lower bound value, and the whole range stays between the minimum value and maximum value of the slider's track.
+
+{{% alert type="info" %}}
+If you need to set one value, instead of a range of values, you should use the [Slider](https://marketplace.mendix.com/link/component/48786/) widget instead.
+{{% /alert %}}
 
 ### 1.1 Features
 
-* Adjust lower bound and upper bound values on the slider
-* Execute a microflow when a slider value is changed or clicked
+* Set the minimum value and the maximum value that are the limits of the slider, as well as a lower bound value and an upper bound value of a range:
+
+  ![](attachments/range-slider/sample-range.png)
+
+* Set a step size, which is the difference between the two adjacent values of the slider:
+
+  ![](attachments/range-slider/step-value.png)
+
+* Set a microflow which is executed when a range value is changed or the slider is clicked
+
 * Show or hide a tooltip upon hover
-* Render range slider with different colors
+
+* Render slider with different colors
 
 ## 2 Configuration
+
+To configure this widget, follow these steps:
+
+1. In Studio Pro, place the widget in the context of an object that has attributes for the lower bound value and the upper bound value of a range
+2. Double-click the Ranger Slider widget to open the **Edit Ranger Slider** dialog box.
+3. Configure the widget using the properties described in the sections below.
 
 ### 2.1 General Tab
 
 #### 2.1.1 Data Source Section
 
-- **Lower bound attribute** – defines value for lower bound of the range
-- **Upper bound attribute** – defines value for upper bound of the range
+- **Lower bound attribute** – defines the value for lower bound of the range
+- **Upper bound attribute** – defines the value for upper bound of the range
 
 #### 2.1.2 General Section
 
-- **Minimum value type** – type of value source for _Minimum value_ property
-- **Minimum value** – defines the minimum value of the slider
-- **Maximum value type** – type of value source for _Maximum value_ property
-- **Maximum value** – defines the maximum value of the slider
-- **Step size type** – type of value source for _Step size_ property
-- **Step size** – the difference between the two adjacent values of the slider
-- **Show tooltip** – when enabled, moving cursor over slider handle will show tooltip with current slider value
-- **Lower bound tooltip type** – defines tooltip type for _lower_ bound type
-- **Upper bound tooltip type** – defines tooltip type for _upper_ bound type
-- **Tooltip always** – if set to yes, then tooltip will be visible permanently
-- **Show label** – if enabled, show label for slider
+- **Minimum value type** – sets the type of the value source for the **Minimum value** property
+  - **Static** – if selected, the minimum value is a static value
+  - **Dynamic** – if selected, the minimum value is a dynamic value
+  - **Expression** – if selected, the minimum value is an [expression](/refguide/expressions)
+- **Minimum value** – sets the minimum value of the slider
+- **Maximum value type** – sets the type of the value source for the **Maximum value** property
+  
+  - **Static** – if selected, the maximum value is a static value
+  - **Dynamic** – if selected, the maximum value is a dynamic value
+  - **Expression** – if selected, the maximum value is an [expression](/refguide/expressions)
+- **Maximum value** – sets the maximum value of the slider
+
+  {{% alert type="info" %}}The difference between the maximum value and the minimum value should be divisible by 2 (as in, `(maximumValue – minimumValue) % 2 = 0`).{{% /alert %}}
+
+- **Step size type** – sets the type of the value source for the **Step size** property
+  - **Static** – if selected, the step size is a static value
+  - **Dynamic** – if selected, the step size is a dynamic value
+  - **Expression** – if selected, the step size is an [expression](/refguide/expressions)
+- **Step size** – sets the difference between the two adjacent values of the slider
+- **Show tooltip**
+  - **Yes** (default) – if selected, the tooltip shows the current slider value when you hover the cursor over slider handle
+    - **Lower bound tooltip type** – sets the tooltip type for the lower bound value
+      - **Value** (default) – if selected, the tooltip shows the current value
+      - **Custom** – if selected, you can define a custom tooltip
+      - **Tooltip** – sets the custom tooltip
+    - **Upper bound tooltip type** – sets the tooltip type for the upper bound value
+      - **Value** (default) – if selected, the tooltip shows the current value
+      - **Custom** – if selected, you can define a custom tooltip
+      - **Tooltip** – sets the custom tooltip
+  - **No** – if selected, no tooltip is shown
+- **Tooltip always visible**
+  - **Yes** –  if selected, the tooltip is always visible
+  - **No** (default) – if selected, the tooltip is only shown when you hover over the slider
+- **Show label** 
+  - **Yes** – if selected, the **Label caption** property becomes available
+    - **Label caption** – defines the label caption of the widget that is shown on the page
+  - **No** (default) – if selected, the **Label caption** property is unavailable
 
 #### 2.1.3 Editability Section
 
-- **Editable** – controls weather this widget can be edited or not
+- **Editable** – determines if the widget can be edited
+
+  {{% alert type="info" %}}For more information, see [Editability Section](/refguide/common-widget-properties#editability) in the *Studio Pro 9 Guide*.{{% /alert %}}
 
 #### 2.1.4 Visibility Section
 
-- **Visible** – weather widget visible or not
+- **Visible** – determines if the widget visible or not
+
+  {{% alert type="info" %}}For more information, see [Visibility Section](/refguide/common-widget-properties#visibility-properties) in the *Studio Pro 9 Guide*.{{% /alert %}}
 
 ### 2.2 Track Tab
 
 #### 2.2.1 Track Section
 
-- **Number of markers** – number of marker ticks that appear along the slider's track
-- **Decimal places** – number of decimal places form marker values
-- **Orientation** – controls orientation of the slider. When set to "Vertical" _height_ property should be set in order to prevent slider from being collapsed
+- **Number of markers** – specifies the number of the markers that appear along the slider's track
+- **Decimal places** – specifies the number of decimal places for marker values
+- **Orientation** – determines the orientation of the slider
+  - **Horizontal** – if selected, the orientation of the slider is horizontal
+  - **Vertical** – if selected, the orientation of the slider is vertical and you must set **Height unit** and **Height**
+    - **Height unit** – specifies the type of unit which is used for the **Height** property
+      - **Percentage** (default) – if selected, the aspect ratio is used to specify the height
+      - **Pixels** – if selected, an absolute value is used to specify the height
+    - **Height** – the height in pixels or percentage based on the setting of **Height unit**
+
 
 ### 2.3 Events Tab
 
-#### 2.3.1 Events Section
+- **On change** – sets the action to execute when the slider changes its value
 
-- **On change** – set the action to execute when slider change its value.
+For more information, see [Event Actions](/refguide/on-click-event#actions) in the *Studio Pro 9 Guide*.
 
-## 3 Usage
+### 2.4 Common Tab
 
-### 3.1 Two Values vs. One Value
+For more information, see [Common Section](/refguide/common-widget-properties#common-properties) in the *Studio Pro 9 Guide*.
 
-The Range Slider widget allows you to set two values between two bounds (the minimum value and maximum value). However, if only one value needs to be set between two bounds, you should use the [Slider](https://marketplace.mendix.com/link/component/48786/) widget instead.
+## 3 Widgets Below Version 2.0.0
 
-### 3.2 Sample Slider
-
-In Studio Pro, place the widget in the context of an object that has attributes for the maximum value, minimum value, lower bound value, and upper bound value. The maximum and minimum values determine the range within which the range slider values can be adjusted.
-
-![](attachments/range-slider/sample-range.png)
-
-The step value determines the next point to shift to when sliding (meaning, the interval between points or numbers):
-
-![](attachments/range-slider/step-value.png)
-
-For the step value, the difference between the maximum value and the minimum value should be divisible by 2 (as in, `(maximumValue – minimumValue) % 2 = 0`).
-
-## Previous Versions' Documentation
-
-### Widget below v2.0.0
-
-#### 1 Introduction
-
-The [Range Slider](https://marketplace.mendix.com/link/component/52704/) widget can be used to change the range of values using a slider.
-
-##### 1.1 Features
+Features:
 
 * Adjust lower bound and upper bound values on the slider
 * Execute a microflow when a slider value is changed or clicked
 * Show or hide a tooltip upon hover
-* Render range slider with different Bootstrap colors
+* Render slider with different Bootstrap colors
 
-#### 2 Configuration
+Configuration:
 
-On the **Data source** tab, configure these properties:
-
-* **Range minimum attribute** – the attribute that contains the minimum slider value; if not provided, the **Default minimum value** is used
-* **Range maximum attribute** – the attribute that contains the maximum slider value; if not provided, the **Default maximum value** is used
-* **Selected minimum attribute** – the attribute that contains the minimum bound slider value
-* **Selected maximum attribute** – the attribute that contains the maximum bound slider value
-
-#### 3 Usage
-
-##### 3.1 Two Values vs. One Value
-
-The Range Slider widget allows you to set two values between two bounds (the minimum value and maximum value). However, if only one value needs to be set between two bounds, you should use the [Slider](https://marketplace.mendix.com/link/component/48786/) widget instead.
-
-##### 3.2 Sample Slider
-
-In Studio Pro, place the widget in the context of an object that has attributes for the maximum value, minimum value, lower bound value, and upper bound value. The maximum and minimum values determine the range within which the range slider values can be adjusted.
-
-![](attachments/range-slider/sample-range.png)
-
-The step value determines the next point to shift to when sliding (meaning, the interval between points or numbers):
-
-![](attachments/range-slider/step-value.png)
-
-For the step value, the difference between the maximum value and the minimum value should be divisible by 2 (as in, `(maximumValue – minimumValue) % 2 = 0`).
+* **Data source** tab
+  * **Range minimum attribute** – the attribute that contains the minimum slider value; if not provided, the **Default minimum value** is used
+  * **Range maximum attribute** – the attribute that contains the maximum slider value; if not provided, the **Default maximum value** is used
+  * **Selected minimum attribute** – the attribute that contains the minimum bound slider value
+  * **Selected maximum attribute** – the attribute that contains the maximum bound slider value

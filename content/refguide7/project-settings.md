@@ -90,7 +90,7 @@ This affects time zone-related operations, such as parsing and formatting dates 
 
 If you run on-premises, then you can select the time zone to which the server is set. However, please note that no guarantees are given for the whereabouts of application servers in the cloud.
 
-### 3.9 Hash Algorithm
+### 3.9 Hash Algorithm{#hash-algorithm}
 
 The hash algorithm is used to generate hash values for attributes of the HashString type, such as the password of a user. Mendix offers two recommended hashing algorithms:
 

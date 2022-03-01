@@ -60,7 +60,7 @@ To use the Mendix Native Mobile Builder, you will first need to get tokens to au
 4. Add a description of your token, select **Full Access**, then click **Add new API token**, and then **New API Token**.
 5. Store this token in a secure place as well. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
 
-## 4 Build Your Native App {#building}
+## 4 Building Your Native App {#building}
 
 {{% alert type="info" %}}
 The Mendix Native Mobile Builder needs to communicate with GitHub and App Center. Therefore, make sure your firewall permissions do not restrict the tool.
@@ -130,7 +130,7 @@ Next, do the following:
 
 By default, App Center builds are unsigned and cannot be released on the Google Play Store or the Apple App Store. To release your apps, you must provide your signature keys to Mendix Native Mobile Builder. Signature keys prove the authenticity of your app and prevent forgeries. For more information to how to acquire these keys, see the [Managing App Signing Keys Reference Guide](/refguide/managing-app-signing-keys).
 
-### 5.1 Set Up Signing for iOS {#signing-for-ios}
+### 5.1 Setting Up Signing for iOS {#signing-for-ios}
 
 iOS supports two types of signing configurations: **Development** and **Release**. The type of the build depends on the type of provisioning file and certificate that was used for configuring the tool. To set up signing for iOS, follow these steps:
 
@@ -152,7 +152,7 @@ iOS supports two types of signing configurations: **Development** and **Release*
 
 With that you have completed setting up signing for iOS. Your next build will use the provided configuration to sign your iOS app.
 
-### 5.2 Set Up Signing for Android {#signing-for-android}
+### 5.2 Setting Up Signing for Android {#signing-for-android}
 
 1.  From within Mendix Native Mobile Builder, choose **Android** under **Certificates**:
 
@@ -180,11 +180,11 @@ For distributing to a specific platform, consult the appropriate section below:
 * [Distributing for Android](#android-distributing)
 * [Distributing for iOS](#ios-distributing)
 
-### 6.1 Distribute the iOS app to App Store Connect {#ios-distributing}
+### 6.1 Distributing the iOS app to App Store Connect {#ios-distributing}
 
 Depending on whether you chose to sign your iOS app or not, the output of the build will be an *IPA* or *XCArchive* file, respectively. *IPA* files can be directly distributed to App Store Connect for further processing. *XCArchives* require XCode to sign and generate an *IPA* before they can be further processed.
 
-#### 6.1.1 Distribute a Signed IPA
+#### 6.1.1 Distributing a Signed IPA
 
 To be able to upload your app to App Store Connect, you will have to have set up a new app using the App Store Connect website. While there, use the **app name** and **app id** you used to build your app. For further instruction, see the [App Store Connect Guide to adding a new app](https://help.apple.com/app-store-connect/en.lproj/static.html#devbec4892b7).
 
@@ -199,7 +199,7 @@ Replace `file "path/to/application.ipa"` with the absolute path to your IPA file
 
 The command will first verify your IPA is packaged correctly and ready to be shipped, and then will then upload it to TestFlight for further processing.
 
-#### 6.1.2 Distributed an Unsigned XCArchive
+#### 6.1.2 Distributing an Unsigned XCArchive
 
 Local signing is useful if you only want to test your app on a device, or you do not have a distribution certificate and have run out of build minutes on App Center when signing with a developer certificate.
 
@@ -234,7 +234,7 @@ Congratulations. You now have a signed *.ipa* file:
 
 {{% image_container width="350" %}}![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-7.png){{% /image_container %}}
 
-### 6.2 Distribute the Android app to Google Play {#android-distributing}
+### 6.2 Distributing the Android app to Google Play {#android-distributing}
 
 A signed Android APK can be uploaded to Google Play store directly. For more info on setting up a new app and uploading your binaries follow Google's guide on [Uploading an app](https://support.google.com/googleplay/android-developer/answer/113469?hl=en).
 

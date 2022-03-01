@@ -27,7 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Have Mendix Studio Pro installed (download [here](https://marketplace.mendix.com/link/studiopro/))
 * Have the [Community Commons Function Library](/appstore/modules/community-commons-function-library) in your app
 
-## 3 Sign Up for the TimeSeries Connector
+## 3 Signing Up for the TimeSeries Connector
 
 Follow these steps to get access to the TimeSeries connector and receive an API key:
 
@@ -39,11 +39,11 @@ Follow these steps to get access to the TimeSeries connector and receive an API 
 
 2. After you receive the key, import the [TimeSeries](https://marketplace.mendix.com/link/component/31951/) connector into your app from the Mendix Marketplace.
 
-## 4 Configure the Module Settings
+## 4 Configuring the Module Settings
 
 After importing the module, there are a couple of settings you need to configure. Some of the settings are preconfigured.
 
-### 4.1 Set the Constants
+### 4.1 Setting the Constants
 
 There are three constants that you can configure. Follow these steps to configure them:
 

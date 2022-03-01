@@ -29,7 +29,7 @@ For Android Builds:
 		* Installs a default set of the Android SDK (allowing you to accept important liscences) 
 		* Helps you set up an emulator
 
-## 3 Use Mendix Native Mobile Builder to Set Up Your Local App
+## 3 Using Mendix Native Mobile Builder to Set Up Your Local App
 
 1.  Run Mendix Native Mobile Builder from your app: 
 
@@ -65,7 +65,8 @@ For Android Builds:
 	* Checkout the correct version of Native Template for the Mendix Studio Pro version you are using
 	* Configure the app
 	
-	If GitHub is enabled, in addition to the previous steps, it will: 
+	If GitHub is enabled, in addition to the previous steps, it will:
+
 	* Commit the whole local copy to the app's repository
 
 ## 4 Building your Native Mobile App {#building-app-project}

@@ -10,7 +10,7 @@ tags: ["mobile", "native", "push", "local", "firebase"]
 
 After setting up your configuration on the server, and deploying your native app it is now time to send your first test push notification.
 
-## 2 Send the Test Notification
+## 2 Sending the Test Notification
 
 To send your first test notification, do the following:
 
@@ -34,7 +34,7 @@ Congratulations, you have just sent your first push notification!
 
 If you did not receive the message, check the application's logs to see if the message was sent successfully. See the troubleshooting section below for solutions to the most common issues.
 
-## 3 Troubleshoot Notification Issues {#troubleshoot}
+## 3 Troubleshooting Notification Issues {#troubleshoot}
 
 | Issue | Cause | Solution |
 |-----|----|-----|

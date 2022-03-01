@@ -15,7 +15,7 @@ This how-to is based on the blog post [Common UX Mistakes Made by Business Devel
 
 In a Mendix team, the UX Designer's job is to improve the user experience of applications in as many ways as possible. However, sometimes logical solutions from a development perspective are not the best solutions from a UX perspective. 
 
-This set of best practices is for UX Designers to think carefully about what they can add to app development process.
+This set of best practices is for UX Designers to think carefully about what they can add to the app development process.
 
 ## 2 Do Not Put Everything in a Single Screen
 
@@ -103,7 +103,7 @@ The rule of thumb for web typography is to write no more than nine words per lin
 
 ### 5.1. Whitespace Is Not Wasted Space
 
-Consider the popular blogging platform [Medium.com](https://blog.prototypr.io/common-ux-mistakes-made-by-business-developers-e837d0b31379). Have you ever noticed how much screen real estate they "waste"? That is because what may be called "waste" is actually an investment. It presents the impression that if you can afford to invest that much space into a page, the text must be important (and if the text is not important, you should get rid of it anyway).
+Consider the popular blogging platform [Medium.com](https://www.medium.com). Have you ever noticed how much screen real estate they "waste"? That is because what may be called "waste" is actually an investment. It presents the impression that if you can afford to invest that much space into a page, the text must be important (and if the text is not important, you should get rid of it anyway).
 
 For more information, see [A Typographic Approach to Email](http://blog.weare1910.com/post/78113100010/a-typographic-approach-to-email).
 

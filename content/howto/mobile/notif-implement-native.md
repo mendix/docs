@@ -39,7 +39,7 @@ The snippet also adds the **Notifications** widget which lets users interact wit
 
 By default this widget is configured with an **Example** action. It uses a non-persistable entity ([NPE](/refguide/persistability#non-persistable)) that stores data received from the notifications. It then uses that data in the nanoflow upon receiving or opening the notification. Use this example to make your own actions. 
 
-## 4 Customize Offline Synchronization
+## 4 Customizing Offline Synchronization
 
 To ensure push notification integration executes properly on your native app you must adjust the objects that are synchronized to your mobile device:
 

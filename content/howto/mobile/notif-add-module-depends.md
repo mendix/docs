@@ -10,7 +10,7 @@ tags: ["mobile", "native", "push", "local", "firebase"]
 
 This how-to will help you add module dependencies for the [Push Notifications Connector](https://marketplace.mendix.com/link/component/3003) module. You only need to install the modules your use case requires. Once your app has the modules it needs, you may move on to [Implement the Push Notifications Module](notif-implement-module).
 
-## 2 Implement the Encryption Module
+## 2 Implementing the Encryption Module
 
 Skip this section if the [Encryption](https://marketplace.mendix.com/link/component/1011) module is already implemented in your app. Implement this module by doing the following:
 
@@ -20,7 +20,7 @@ Skip this section if the [Encryption](https://marketplace.mendix.com/link/compon
 1. Click **Download**.
 1. Follow the instructions on the [Encryption marketplace guide](https://docs.mendix.com/appstore/modules/encryption) to set up this module.
 
-## 3 Implement the Community Commons Module
+## 3 Implementing the Community Commons Module
 
 Skip this section if the [Community Commons](https://marketplace.mendix.com/link/component/170) module is already implemented in your app. Implement this module by doing the following:
 
@@ -30,7 +30,7 @@ Skip this section if the [Community Commons](https://marketplace.mendix.com/link
 1. Click **Download**.
 1. No further installation is required. If you want to know more about the module visit the [Community Commons marketplace guide](https://docs.mendix.com/appstore/modules/community-commons-function-library).
 
-## 4 Implement the Nanoflow Commons Module
+## 4 Implementing the Nanoflow Commons Module
 
 Skip this section if the [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515/Mendix/Nanoflow-Commons) module is already implemented in your app, or if you do not plan on using using local or native push notifications. Implement this module by doing the following:
 
@@ -40,7 +40,7 @@ Skip this section if the [Nanoflow Commons](https://marketplace.mendix.com/link/
 1. Click **Download**.
 1. No further installation is required. If you want to know more about the module visit the [Nanoflow Commons marketplace guide](https://docs.mendix.com/appstore/modules/nanoflow-commons).
 
-## 5 Implement the Native Mobile Resources Module
+## 5 Implementing the Native Mobile Resources Module
 
 Skip this section if the [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513/Mendix/Native-Mobile-Resources) module is already implemented in your app, or if you do not plan on using using local or native push notifications. Implement this module by doing the following:
 
@@ -50,7 +50,7 @@ Skip this section if the [Native Mobile Resources](https://marketplace.mendix.co
 1. Click **Download**.
 1. No further installation is required. If you want to know more about the module visit the [Native mobile resources marketplace guide](https://docs.mendix.com/appstore/modules/native-mobile-resources).
 
-## 6 Implement the Atlas Core Module
+## 6 Implementing the Atlas Core Module
 
 Implement the Atlas Core module for apps in Mendix Studio Pro 9.0 and above. Skip this section if the [Atlas Core](https://marketplace.mendix.com/link/component/117187/Mendix/Atlas-Core) module is already implemented in your app. Implement this module by doing the following:
 
@@ -60,7 +60,7 @@ Implement the Atlas Core module for apps in Mendix Studio Pro 9.0 and above. Ski
 1. Click **Download**.
 1. No further installation is required. If you want to know more about the module visit the [Atlas UI marketplace guide](https://docs.mendix.com/appstore/modules/atlas-ui-resources).
 
-## 7 Implement the Data Widgets Module
+## 7 Implementing the Data Widgets Module
 
 Implement the Data Widgets module for apps in Mendix Studio Pro 9.0 and above. Skip this section if the [Data Widgets](https://marketplace.mendix.com/link/component/116540/Mendix/Data-Widgets) module is already implemented in your app. Implement this module by doing the following:
 
@@ -70,7 +70,7 @@ Implement the Data Widgets module for apps in Mendix Studio Pro 9.0 and above. S
 1. Click **Download**.
 1. No further installation is required. If you want to know more about the module visit the [Data Widgets marketplace guide](https://docs.mendix.com/appstore/modules/data-widgets).
 
-## 8 Implement the Pop-Up Menu Widget
+## 8 Implementing the Pop-Up Menu Widget
 
 Implement the Pop-Up Menu widget for apps in Mendix Studio Pro 9.0 and above. Skip this section if the [Pop-Up Menu](https://marketplace.mendix.com/link/component/115826/Mendix/Pop-Up-Menu) widget is already implemented in your app. Implement this widget by doing the following:
 

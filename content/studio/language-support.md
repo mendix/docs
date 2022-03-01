@@ -7,7 +7,7 @@ tags: ["studio", "language", "translate", "translations"]
 
 ## 1 Introduction 
 
-Delivering your Mendix app in multiple languages is an important capability for reaching a wide audience. Using the language features of Mendix, you can quickly make your app multilingual and translate the content to many other languages. This means that texts that are presented to end-users, such as button captions, screen titles, menu items, can be translated.  
+Delivering your Mendix app in multiple languages is an important capability for reaching a wide audience. Using the language features of Mendix, you can quickly make your app multilingual and translate the content to many other languages. This means that texts that are presented to end-users, such as button captions, screen titles, menu items, can be translated to other languages.  
 
 {{% alert type="info" %}}
 
@@ -15,7 +15,7 @@ Translating your app to other languages is available in Mendix Studio if multipl
 
 {{% /alert %}}
 
-## 2 Switching Currently Selected Language
+## 2 Switching the Currently Selected Language
 
 You can switch the selected language in the top menu bar:
 
@@ -25,20 +25,19 @@ You can switch the selected language in the top menu bar:
 
 When multiple languages are set up in your app, one language is set as default language. All untranslated texts in other languages will be displayed in the default language when you run the app.
 
-You can translate the following elements in your app:
+You can translate the following widgets and elements in your app:
 
-* Button captions
-* Data grid columns
-* Labels
-* Menu items
+* [Button captions](page-editor-widgets-buttons#general)
+* [Text widget](page-editor-widgets-text#content)
+* [Data grid columns](page-editor-data-grid#grid-columns)
+* [Menu items](navigation#properties-of-menu-items)
 * Messages that are sent from a microflow
-* Text
 
-When working in a language which is not the default, you can identify texts that have not been translated yet. These show the text in the default language between angle brackets. For example, `<Name>`. You can replace the text with the appropriate translation for the currently selected language. To replace the text, do the following:
+When working in a language which is not the default, you can identify texts that have not been translated yet. They show the text in the default language between angle brackets. For example, `<Name>`. You can replace the text with the appropriate translation for the currently selected language. To replace the text, do the following:
 
 1. Selected the element and navigate to its properties.
 
-2. Depending on the element, find the **Content** or **Caption** property and click the **Translations** drop-down menu:
+2. Depending on the element, find the **Content**, **Caption**, or **Template** property and click the **Translations** drop-down menu:
 
     ![Translations Drop-Down Menu](attachments/language-support/translations-drop-down.png)
 

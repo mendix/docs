@@ -57,8 +57,6 @@ To configure this widget, follow these steps:
   - **Expression** – if selected, the maximum value is an [expression](/refguide/expressions)
 - **Maximum value** – sets the maximum value of the slider
 
-  {{% alert type="info" %}}The difference between the maximum value and the minimum value should be divisible by 2 (as in, `(maximumValue – minimumValue) % 2 = 0`).{{% /alert %}}
-
 - **Step size type** – sets the type of the value source for the **Step size** property
   - **Static** – if selected, the step size is a static value
   - **Dynamic** – if selected, the step size is a dynamic value
@@ -124,8 +122,9 @@ Features:
 
 Configuration:
 
-The following properties must be configured:
+* **Data source** tab
+  * **Value attribute** – the selected value on the slider
+  * **Range minimum attribute** – the attribute that contains the minimum slider value; if not provided, **Default minimum value** is used
+  * **Range maximum attribute** – the attribute that contains the maximum slider value; if not provided, **Default maximum value** is used
 
-* **Value attribute** – the selected value on the slider
-* **Range minimum attribute** – the attribute that contains the minimum slider value; if not provided, **Default minimum value** is used
-* **Range maximum attribute** – the attribute that contains the maximum slider value; if not provided, **Default maximum value** is used
+    {{% alert type="info" %}}The difference between the maximum value and the minimum value should be divisible by 2 (as in, `(maximumValue – minimumValue) % 2 = 0`).{{% /alert %}}

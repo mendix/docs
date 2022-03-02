@@ -47,7 +47,7 @@ The charts below provide overviews of use cases and categorization for connector
 
 ### 2.1 Getting Mendix Connectors
 
-Many existing Mendix connectors can be downloaded from the [Mendix Marketplace](https://marketplace.mendix.com/) directly into your app. Depending on your use case, your company's Mendix Marketplace could also have a variety of Mendix connector modules available. See an [explanation of available Mendix connectors](/appstore/connectors/).
+Many existing Mendix [Connectors](/appstore/connectors) can be downloaded from the [Mendix Marketplace](https://marketplace.mendix.com/) directly into your app. Depending on your use case, your company's private Mendix Marketplace could also have a variety of Mendix connector modules available. For more information on the distinction between public and private Marketplace content, see the Getting Started section of [Share Marketplace Content](https://docs.mendix.com/appstore/general/share-app-store-content#get-started).
 
 Because connectors expose data via custom microflow activities, you can find them in the Studio Pro [Toolbox](/refguide/view-menu#toolbox) to implement when building your application logic. Then, you can drag them where you want to use the connector functionality.
 

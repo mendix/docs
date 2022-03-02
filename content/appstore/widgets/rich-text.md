@@ -87,31 +87,31 @@ To configure this widget, follow these steps:
 	* **Full** – if selected, the editor contains plenty of buttons suitable for various different needs
 	  ![Example of toolbar](attachments/ckeditor/full-toolbar.png)
 	  
-	* **Custom** – allows you to make your toolbar with customized options
-		* **Toolbar group** 
-		  * **Basic** (default) – if selected, you can select which of the following toolbar groups are available in the toolbar
-          * **Document Group**
-          * **Clipboard Group**
-          * **Editing Group**
-          * **Forms group**
-          * **Separator group**
-          * **Basic style group**
-          * **Paragraph group**
-          * **Links group**
-          * **Separator 2 group**
-          * **Styles group**
-          * **Colors group**
-          * **Tools group**
-		      * **Others group**
-		  * **Advanced** – if selected, you can configure buttons for different toolbar groups
+	* **Custom** – allows you to make your toolbar with customized options	
+    * **Toolbar group** 
+      * **Basic** (default) – if selected, you can select which of the following toolbar groups are available in the toolbar
+        * **Document Group**
+        * **Clipboard Group**
+        * **Editing Group**
+        * **Forms group**
+        * **Separator group**
+        * **Basic style group**
+        * **Paragraph group**
+        * **Links group**
+        * **Separator 2 group**
+		    * **Styles group**
+		    * **Colors group**
+		    * **Tools group**
+		    * **Others group**
+    * **Advanced** – if selected, you can configure buttons for different toolbar groups
+    
+		{{% alert type="info" %}}All the toolbar groups that you configure will be available in the toolbar. The buttons that have the same **Toolbar ID** will be grouped together, with vertical bars ("|") separating different toolbar groups.{{% /alert %}}
 		
-		    {{% alert type="info" %}}All the toolbar groups that you configure will be available in the toolbar. The buttons that have the same **Toolbar ID** will be grouped together, with vertical bars ("|") separating different toolbar groups.{{% /alert %}}
-      
-        * **New** – opens the **Edit Advanced Groups Item** dialog box where you can add a new button to a toolbar group
-		      * **Button** – specifies the button to be included in the toolbar group
-		      * **Toolbar ID** – specifies the ID of the toolbar group in which this button should be included
-		    * **Delete** – deletes the selected button
-		    * **Edit** – opens the **Edit Advanced Groups Item** dialog box where you can make changes to the selected button 
+		* **New** – opens the **Edit Advanced Groups Item** dialog box where you can add a new button to a toolbar group
+		  * **Button** – specifies the button to be included in the toolbar group
+		  * **Toolbar ID** – specifies the ID of the toolbar group in which this button should be included
+		* **Delete** – deletes the selected button
+		* **Edit** – opens the **Edit Advanced Groups Item** dialog box where you can make changes to the selected button 
 
 ### 2.3 Dimensions Tab
 

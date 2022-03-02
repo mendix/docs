@@ -52,7 +52,7 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | --- | --- |
 | Platform user onboarding experience | Released for GA on [Oct 1st, 2021](/releasenotes/developer-portal/#oct1) |
 | Dashboards with insights on platform employees and app activity | Currently in Public Beta<br/>GA: Feb 2022 |
-| Company branding for end-user services | GA: Mar 2022 |
+| Company branding for end-user services | Private Beta: Apr 2022<br/>GA: Jun 2022 |
 | Marketplace subscription dashboards | GA: Mar 2022 |
 | Overview of cloud environments | Currently in Public Beta<br/>GA: Apr 2022 |
 | Self-service subscription management | GA: Jun 2022 |
@@ -87,7 +87,7 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 
 | Feature | Expected Release |
 | --- | --- |
-| Studio Pro modernization | Released for GA on [Sept 28th, 2021](/releasenotes/studio-pro/9.6#studio-pro-new-design) |
+| Studio Pro modernization | Released for GA on [Sep 28th, 2021](/releasenotes/studio-pro/9.6#studio-pro-new-design) |
 | Team Server Git (Mendix Cloud) | Currently in Public Beta<br/>GA: Mar 2022 |
 | BYO Team Server Git (Bring Your Own) | Currently in Public Beta<br/>GA: Mar 2022 |
 | Studio Pro dark theme | Public Beta: Mar 2022 |

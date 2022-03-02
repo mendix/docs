@@ -90,7 +90,6 @@ To configure this widget, follow these steps:
 	* **Custom** - allows you to make your toolbar with customized options
 		* **Toolbar group** 
 		  * **Basic** (default) – if selected, you can select which of the following toolbar groups are available in the toolbar
-      
           * **Document Group**
           * **Clipboard Group**
           * **Editing Group**
@@ -104,7 +103,6 @@ To configure this widget, follow these steps:
           * **Colors group**
           * **Tools group**
 		      * **Others group**
-		
 		  * **Advanced** – if selected, you can configure buttons for different toolbar groups
 		
 		    {{% alert type="info" %}}All the toolbar groups that you configure will be available in the toolbar. The buttons that have the same **Toolbar ID** will be grouped together, with vertical bars ("|") separating different toolbar groups.{{% /alert %}}

@@ -16,7 +16,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 #### BAPI Connector
 
-* We added a new connector BAPI Connector for SAP solutions, this allows Mendix apps to integrate using the SAP Business API (SAP BAPI) available with SAP Business Suite, SAP S/4HANA, and SAP S/4HANA Cloud. For more information, see [BAPI Connector for SAP Solutions](/partners/sap/sap-bapi-connector).
+* We added the new BAPI Connector for SAP solutions, which allows Mendix apps to integrate using the SAP Business API (SAP BAPI) available with SAP Business Suite, SAP S/4HANA, and SAP S/4HANA Cloud. For more information, see [BAPI Connector for SAP Solutions](/partners/sap/sap-bapi-connector).
 
 ## 2021
 

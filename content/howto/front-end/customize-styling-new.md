@@ -111,7 +111,7 @@ The previous section describes how developers can customize the styling of an ap
 
 Adding styling to a module is similar to adding styling to an app, except that styling resources are placed in the **themesource** folder as explained in the [File and Folder Structure](#file-and-folder) section below.
 
-For classes that are generic or that should be easily discovered, a developer can consider creating design properties for this. For more information see [How to Extend design properties](extend-design-properties)
+For classes that are generic or that should be easily discovered, a developer can consider creating design properties for this. For more information, see [How to Extend Design Properties](extend-design-properties).
 
 ## 4 Creating a Theme Module {#create-theme-mod}
 
@@ -230,7 +230,7 @@ Note: To open your Mendix app directory from Studio Pro, click **App** in the to
 	export * from "../../themesource/mytheme/native/custom-variables";
 	```
 
-The two files should end up looking list this:
+The two files should end up looking like this:
 
 *theme/native/custom-variables.js*:
 
@@ -402,64 +402,64 @@ The resulting success button is visible in **Figure 3**. Note that the underlyin
 
 All supported exclusion variables for web are:
 
-```text
-- $exclude-background-helpers
-- $exclude-badge
-- $exclude-badge-button
-- $exclude-badge-button-helpers
-- $exclude-button
-- $exclude-button-helpers
-- $exclude-check-box
-- $exclude-custom-dijit-widget
-- $exclude-custom-switch
-- $exclude-data-grid
-- $exclude-data-grid-helpers
-- $exclude-data-view
-- $exclude-data-picker
-- $exclude-glyphicon
-- $exclude-grid
-- $exclude-group-box
-- $exclude-group-box-helpers
-- $exclude-header
-- $exclude-helper-classes
-- $exclude-input
-- $exclude-image-helpers
-- $exclude-label
-- $exclude-label-helpers
-- $exclude-layout-grid
-- $exclude-list-view
-- $exclude-list-view-helpers
-- $exclude-modal
-- $exclude-navigation-bar
-- $exclude-navigation-bar-helpers
-- $exclude-navigation-list
-- $exclude-navigation-tree
-- $exclude-navigation-tree-helpers
-- $exclude-pagination
-- $exclude-pop-up-menu
-- $exclude-progress
-- $exclude-progress-bar
-- $exclude-progress-bar-helpers
-- $exclude-progress-circle
-- $exclude-progress-circle-helpers
-- $exclude-radio-button
-- $exclude-range-slider
-- $exclude-range-slider-helpers
-- $exclude-rating
-- $exclude-rating-helpers
-- $exclude-simple-menu-bar
-- $exclude-simple-menu-bar-helpers
-- $exclude-slider
-- $exclude-slider-helpers
-- $exclude-table
-- $exclude-table-helpers
-- $exclude-tab-container
-- $exclude-tab-container-helpers
-- $exclude-template-grid
-- $exclude-template-grid-helpers
-- $exclude-timeline
-- $exclude-typography
-- $exclude-typography-helpers
+```scss
+$exclude-background-helpers
+$exclude-badge
+$exclude-badge-button
+$exclude-badge-button-helpers
+$exclude-button
+$exclude-button-helpers
+$exclude-check-box
+$exclude-custom-dijit-widget
+$exclude-custom-switch
+$exclude-data-grid
+$exclude-data-grid-helpers
+$exclude-data-view
+$exclude-data-picker
+$exclude-glyphicon
+$exclude-grid
+$exclude-group-box
+$exclude-group-box-helpers
+$exclude-header
+$exclude-helper-classes
+$exclude-input
+$exclude-image-helpers
+$exclude-label
+$exclude-label-helpers
+$exclude-layout-grid
+$exclude-list-view
+$exclude-list-view-helpers
+$exclude-modal
+$exclude-navigation-bar
+$exclude-navigation-bar-helpers
+$exclude-navigation-list
+$exclude-navigation-tree
+$exclude-navigation-tree-helpers
+$exclude-pagination
+$exclude-pop-up-menu
+$exclude-progress
+$exclude-progress-bar
+$exclude-progress-bar-helpers
+$exclude-progress-circle
+$exclude-progress-circle-helpers
+$exclude-radio-button
+$exclude-range-slider
+$exclude-range-slider-helpers
+$exclude-rating
+$exclude-rating-helpers
+$exclude-simple-menu-bar
+$exclude-simple-menu-bar-helpers
+$exclude-slider
+$exclude-slider-helpers
+$exclude-table
+$exclude-table-helpers
+$exclude-tab-container
+$exclude-tab-container-helpers
+$exclude-template-grid
+$exclude-template-grid-helpers
+$exclude-timeline
+$exclude-typography
+$exclude-typography-helpers
 ```
 
 ### 8.2 Disabling Default Native Mobile Widget Styling
@@ -506,65 +506,65 @@ The resulting success button is visible in **Figure 6**. Note that the button te
 
 All supported exclusion variables for native mobile are:
 
-```text
-- excludeActivityIndicator
-- excludeActivityIndicatorHelpers
-- excludeAnimation
-- excludeBackgroundImage
-- excludeBadge
-- excludeBadgeHelpers
-- excludeBottomSheet
-- excludeButtons
-- excludeButtonsHelpers
-- excludeCarousel
-- excludeCheckBox
-- excludeColorPicker
-- excludeContainer
-- excludeDatePicker
-- excludeDropDown
-- excludeFeedback
-- excludeFAB
-- excludeFABHelpers
-- excludeImage
-- excludeImageHelpers
-- excludeIntroScreen
-- excludeIntroScreenHelpers
-- excludeLayoutGrid
-- excludeLineChart
-- excludeLineChartHelpers
-- excludeBarChart
-- excludeBarChartHelpers
-- excludeListView
-- excludeListViewHelpers
-- excludeListViewSwipe
-- excludeListViewSwipeHelpers
-- excludeMaps
-- excludeMapsHelpers
-- excludePageTitle
-- excludeProgressBar
-- excludeProgressBarHelpers
-- excludeProgressCircle
-- excludeProgressCircleHelpers
-- excludePopUpMenu
-- excludeQRCode
-- excludeRangeSlider
-- excludeRangeSliderHelpers
-- excludeRating
-- excludeReferenceSelector
-- excludeSafeAreaView
-- excludeSlider
-- excludeSliderHelpers
-- excludeTabContainer
-- excludeTabContainerHelpers
-- excludeTextArea
-- excludeTextBox
-- excludeTextBoxHelpers
-- excludeToggleButtons
-- excludeTypography
-- excludeTypographyHelpers
-- excludeVideoPlayer
-- excludeWebView
-- excludeHelpers
+```javascript
+excludeActivityIndicator
+excludeActivityIndicatorHelpers
+excludeAnimation
+excludeBackgroundImage
+excludeBadge
+excludeBadgeHelpers
+excludeBottomSheet
+excludeButtons
+excludeButtonsHelpers
+excludeCarousel
+excludeCheckBox
+excludeColorPicker
+excludeContainer
+excludeDatePicker
+excludeDropDown
+excludeFeedback
+excludeFAB
+excludeFABHelpers
+excludeImage
+excludeImageHelpers
+excludeIntroScreen
+excludeIntroScreenHelpers
+excludeLayoutGrid
+excludeLineChart
+excludeLineChartHelpers
+excludeBarChart
+excludeBarChartHelpers
+excludeListView
+excludeListViewHelpers
+excludeListViewSwipe
+excludeListViewSwipeHelpers
+excludeMaps
+excludeMapsHelpers
+excludePageTitle
+excludeProgressBar
+excludeProgressBarHelpers
+excludeProgressCircle
+excludeProgressCircleHelpers
+excludePopUpMenu
+excludeQRCode
+excludeRangeSlider
+excludeRangeSliderHelpers
+excludeRating
+excludeReferenceSelector
+excludeSafeAreaView
+excludeSlider
+excludeSliderHelpers
+excludeTabContainer
+excludeTabContainerHelpers
+excludeTextArea
+excludeTextBox
+excludeTextBoxHelpers
+excludeToggleButtons
+excludeTypography
+excludeTypographyHelpers
+excludeVideoPlayer
+excludeWebView
+excludeHelpers
 ```
 
 ## 9 Customizing index.html (Web)

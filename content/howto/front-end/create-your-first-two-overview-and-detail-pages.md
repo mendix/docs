@@ -33,7 +33,7 @@ To create the overview and detail pages for your data structure, follow these st
 And there you go! For each entity, an overview page and a detail page is generated. Also, an **Entity_Menu** snippet is created and added to each overview page.
 
 {{% alert type="info" %}}
-Mendix can do even more of the work for you if you create an Excel spreadsheet with two tabs (one for the header and data for **Customer** and the other for the header and data for **Order**). When you are creating a new app, select **App from a spreadsheet** and upload your Excel spreadsheet.
+Mendix can do even more work for you if you create an Excel spreadsheet with two tabs (one for the header and data for **Customer**, and the other for the header and data for **Order**). When you are creating a new app, select **App from a spreadsheet** and upload your Excel spreadsheet.
 {{% /alert %}}
 
 ## 4 Creating Overview & Detail Pages Manually
@@ -48,7 +48,7 @@ To create a new overview page and add it to your app, follow these steps:
 2. Click **Responsive**.
 3. Enter *CustomerOverview* in **Page name**.
 4. Select _Sidebar_Full_Responsive_ as the navigation layout.
-5.  Click **Blank**, then select the **Blank** page template** and click **OK**:
+5.  Click **Blank**, then select the **Blank** page template and click **OK**:
 
     ![](attachments/18448704/18581337.png)
 
@@ -79,7 +79,7 @@ To create a new detail page manually, follow these steps:
 
 1.  Right-click **New** on the data grid on the overview page and select **Generate page**.
 2.  Select **PopupLayout** as the **Navigation layout**.
-3.  Select **Form horizontal** and then click **OK**:
+3.  Select **Form Horizontal** and then click **OK**:
 
     ![](attachments/18448704/18581327.png) 
 
@@ -99,7 +99,7 @@ If you switched on security for this application, you also need to configure pag
 
 ## 6 Read More
 
-* [Atlas UI](atlas-ui)
+* [UI Design](atlas-ui)
 * [Use Layouts and Snippets](layouts-and-snippets)
 * [Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure)
 * [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

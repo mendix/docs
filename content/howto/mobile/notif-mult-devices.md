@@ -93,7 +93,7 @@ Every user is allowed to have more than one device. When sending push notificati
 
 To send a push notification to all users, use the **SendMessageToUsers** Java action.
 
-## 5 Troubleshoot Notification Issues
+## 5 Troubleshooting Notification Issues
 
 If you run into issues, see the [Troubleshoot Notification Issues](notif-send-test#troubleshoot) section of *Send Your First Test Push Notification*.
 

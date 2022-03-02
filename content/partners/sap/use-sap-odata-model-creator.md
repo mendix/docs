@@ -36,13 +36,13 @@ OData Model Creator for SAP solutions will produce a module which is in Mendix v
 
 ## 3 Generating a Data Model
 
-The OData Model Creator for SAP solutions is an app in the Marketplace. Search for it in the Mendix Marketplace, or find it here: [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/). 
+The OData Model Creator for SAP solutions is an app in the Marketplace. Search for it in the Mendix Marketplace, or find it here: [OData Model Creator for SAP solutions](https://sapmodelcreator.mendixcloud.com/link/odata).
 
 {{% alert type="info" %}}
 The OData Model Creator for SAP solutions is not currently available in the Marketplace within Studio Pro. It can only be run in a browser.
 {{% /alert %}}
 
-Open the [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/), where you will be asked how you want to generate your model:
+Open the [OData Model Creator for SAP solutions](https://sapmodelcreator.mendixcloud.com/link/odata), where you will be asked how you want to generate your model:
 
 ![](attachments/use-sap-odata-model-creator/model-creator-wizard-1.png)
 
@@ -120,7 +120,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
     ![](attachments/use-sap-odata-model-creator/model-creator-wizard-2-1-catalog.png)
 
-2. Click **Continue**. 
+2. Click **Continue**.
 
     You will be presented with a list of OData API definitions. You can search this list (this includes text in the API description as well as the API name), and page through it using the paging buttons.
 
@@ -151,7 +151,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 8. Click **Download**.
 
     Your browser will offer options on what to do with the file.
-    
+
 9. Save the file locally. It is recommended that you save it in the **resources** folder of your Mendix app so that you can find it easily.
 
 You have now created the module. The [Using the Data Model Module in a Mendix App](#Using) section, below, explains how to import it into your app.
@@ -190,7 +190,7 @@ One way to do this is by getting the OData metadata XML file. This file can be d
 8. Click **Continue** to proceed to the confirmation screen.
 
     ![](attachments/use-sap-odata-model-creator/upload-metadata-confirmation.png)
-    
+
 9. Click **Generate .mpk**. A progress bar will be shown during the parsing and generation of the module.
 
 10. Once the generation is complete, the **Download File** button appears. Notice that the file name of your data model module is extracted from the metadata file itself.
@@ -231,7 +231,7 @@ This method does not work where the destination needs authentication. You cannot
 5. Click **Continue** to proceed to the confirmation screen.
 
     ![](attachments/use-sap-odata-model-creator/metadata-url-confirmation.png)
-    
+
 6. Click **Generate .mpk**. A progress bar will be shown during the parsing and generation of the module.
 
 7.  Once the generation is complete, the **Download File** button appears. Notice that the file name of your data model module is extracted from the metadata file itself.
@@ -272,4 +272,4 @@ For more information on how to use the imported data model together with the ODa
 
 * [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content)
 * [How to Use the OData Connector for SAP Solutions](use-sap-odata-connector)
-* [OData Model Creator for SAP Solutions](https://sapodatamodelcreator.mendixcloud.com/)
+* [OData Model Creator for SAP Solutions](https://sapmodelcreator.mendixcloud.com/link/odata)

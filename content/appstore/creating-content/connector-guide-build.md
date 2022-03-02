@@ -12,6 +12,8 @@ Welcome to the world of Mendix connectors! Mendix connectors allow you to connec
 * What connectors are and how they work
 * How to build a Mendix connector
 
+Check back for a link to a future document about recommended practices for building connectors.
+
 ### 1.1 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
@@ -69,11 +71,11 @@ When creating a new Mendix connector, it is advised to have an app in which you 
 
 ### 3.1 Setting Up Your App
 
-1. Create a [Mendix app](/refguide/new-project) for your connector.
-2. Create a module to contain your connector. To do this, right-click anywhere in the **App Explorer** outside of existing modules and choose **Add Module**.
-![](/attachments/connectors/add-module.png)
-3. Give your module a name fitting for the type of connector you are building.
-4. Create the basic folder structure at root level. 
+1.  Create a [Mendix app](/refguide/new-project) for your connector.</br>
+2.  Create a module to contain your connector. To do this, right-click anywhere in the **App Explorer** outside of existing modules and choose **Add Module**.</br>
+    ![](attachments/connectors/add-module.png)</br>
+3.  Give your module a name fitting for the type of connector you are building.
+4.  Create the basic folder structure at root level. 
 
 ### 3.2 Implementing the Connector
 
@@ -101,10 +103,9 @@ Because Mendix connectors are like any other Mendix [module](/appstore/modules/)
 
 #### 3.3.1 Exporting as an .mpk File
 
-1. Ensure that version number in the version folder corresponds with Marketplace version number.
+1. Ensure your version is aligned with the version number that appears on the Marketplace version. Versioning in Marketplace starts at 1.0.0 (for more information, see the *Adding New Marketplace Content* section in [How to Share Marketplace Content](/appstore/general/share-app-store-content#adding)). You cannot use Marketplace to distribute your connector if it is below version 1.0.0.
 2. Generate the export module package using your [Gradle script](https://github.com/ako/CsvServices/blob/cd219e71249c194bca26b374716b88628237a6dd/build.gradle#L72).
-3. Build/export release candidate with versioning and put it in the Marketplace `DIST` folder.
-4. Ensure your version is aligned with the Marketplace version number. Versioning in Marketplace starts at 1.0.0. See the *Adding New Marketplace Content* section in [Share Marketplace Content](appstore/general/share-app-store-content)/. You cannot use Marketplace to distribute your connector if it is below version 1.0.0.
+3. Build and export release candidate with versioning and put it in the Marketplace **DIST** folder. You can create this folder to contain the releases of your module for reference.
 
 ### 3.4 Distributing the Connector
 
@@ -112,16 +113,16 @@ To share your connector with other developers and the wider community you can pu
 
 Once you publish the connector and someone imports it in their Mendix app, all of these elements will be placed in the same location from which they are exported.
 
-Distribute the module to whomever wants to use it (share the file or upload to Marketplace).
+Distribute the module to whomever wants to use it (share the file or upload to Marketplace) by following these steps: 
+
 1. Keep the release notes ready.
 2. Deploy to GITHub by doing the following:
     * Commit code to GitHub (if you have not already made this a Git project)
     * Create new release
 3. Create the release in Marketplace using the release from GitHub.
 
-**Architectural impact:**
-Because connectors are exported as modules and then published on the private/public Mendix Marketplace, they are as decoupled as possible from your development application. This is needed because a copy of the module will be imported in other applications when they download the module from the Marketplace. The implementing application might need to configure some constants/add specific microflows/use pages or snippets/configure specifics on runtime, but it will always be a standalone situation.
+See [Share Marketplace Content](/appstore/general/share-app-store-content) for more information on adding content to the Marketplace.
 
-## 4 Read More
+### 3.5 Architectural Impact
 
-This document introduced connectors and gave you a step-by-step outline on how to build one. An upcoming document will contain more detailed information and good practices for this process.
+Because connectors are exported as modules and then published on the Marketplace, they are as decoupled as possible from your development application. This is needed because a copy of the module will be imported in other applications when users download the module from the Marketplace. The implementing application might need to configure some constants, add specific microflows, use pages or snippets, configure specifics on runtime, but it will always be a standalone situation.

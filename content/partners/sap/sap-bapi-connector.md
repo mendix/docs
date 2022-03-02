@@ -7,9 +7,9 @@ tags: ["SAP", "integration", "OData", "BAPI"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1. Introduction
+## 1 Introduction
 
-The [BAPI Connector for SAP Solutions](https://example.com/bapiconnector) is a connector allowing Mendix apps to integrate using tha SAP Business API (SAP BAPI) available with SAP Business Suite, SAP S/4HANA, and SAP S/4HANA Cloud. The BAPI Connector module allows you to discover, select, and call an SAP BAPI from your Mendix application.
+The [BAPI Connector for SAP Solutions](https://marketplace.mendix.com/link/component/119810) is a connector allowing Mendix apps to integrate using the SAP Business API (SAP BAPI) available with SAP Business Suite, SAP S/4HANA, and SAP S/4HANA Cloud. The BAPI Connector module allows you to discover, select, and call an SAP BAPI from your Mendix application.
 
 The BAPI connector uses the [SAP Java Connector](https://support.sap.com/en/product/connectors/jco.html) (JCo) to make Remote Function Calls (RFCs) to SAP systems. Once you have made a connection to your JCo destination, you will have access to all the BAPIs which are authorized for that destination.
 
@@ -21,7 +21,7 @@ This connector allows you to do the following:
 * Call BAPIs or BAPI sequences
 * Use the BAPI response in your application
 
-## 2. Prerequisites
+## 2 Prerequisites
 
 To use the **BAPI Connector for SAP Solutions** you need the following:
 
@@ -30,18 +30,18 @@ To use the **BAPI Connector for SAP Solutions** you need the following:
 3. Mendix Studio Pro version 8.18.10 or above.
 4. At least 1GB memory per instance if running on SAP BTP.
 
-## 3. Developing using the BAPI Connector for SAP Solutions
+## 3 Developing using the BAPI Connector for SAP Solutions
 
-To use BAPI Connector for SAP Solutions in your Mendix application to call the BAPI of your choice, you need to perform the following steps: 
+To use BAPI Connector for SAP Solutions in your Mendix application to call the BAPI of your choice, you need to perform the following steps:
 
-1. Set up the developer environment as described in [Setting Up the Developer Environment](#setup-environment) 
+1. Set up the developer environment as described in [Setting Up the Developer Environment](#setup-environment).
 2. Test the connection to the SAP Backend [using the microflow `TestConnection`](#test-connection).
 3. Add the microflow `Create_BAPIExplorer` to the navigation of your app to allow you to search for the BAPI(s) you need.
 
     {{% alert type="info" %}}Searching for BAPIs is provided as a microflow rather than a separate app so that you can set up the JCo destination securely. You should not give access to this microflow to any end-users of an app you build using the Mendix BAPI Connector.{{% /alert %}}
 
-4. Search for the BAPI(s) you need, download the schema(s), and [generate Mendix BAPI module(s)](#create-bapi-module) using the [Model Creator for SAP Solutions](https://sapmodelcreator.mendixcloud.com/).
-5. Import the generated Mendix BAPI module .mpk to your Mendix application using the instructions in [Import & Export Objects](/howto/integration/importing-and-exporting-objects). A module with the same name as the BAPI is added to the project. 
+4. Search for the BAPI(s) you need, download the schema(s), and [generate Mendix BAPI module(s)](#create-bapi-module) using the [Model Creator for SAP Solutions](https://sapmodelcreator.mendixcloud.com/link/bapi).
+5. Import the generated Mendix BAPI module .mpk to your Mendix application using the instructions in [Import & Export Objects](/howto/integration/importing-and-exporting-objects). A module with the same name as the BAPI is added to the project.
 
     ![](attachments/sap-bapi-connector/bapi-material-getall.png)
 
@@ -62,11 +62,11 @@ To use BAPI Connector for SAP Solutions in your Mendix application to call the B
 
     More information on microflow actions can be found in the section [Microflow Actions](#microflow-actions).
 
-## 4. Setting Up the Developer Environment{#setup-environment}
+## 4 Setting Up the Developer Environment {#setup-environment}
 
 To use the BAPI Connector, you have to first set up your environment and configure the connection details by doing the following.
 
-1. Get the [BAPI Connector for SAP solutions module](https://example.com/BAPIConnector).
+1. Get the [BAPI Connector for SAP solutions module](https://marketplace.mendix.com/link/component/119810).
 2. Import the BAPI Connector for SAP solutions module into a new or existing application in Mendix Studio Pro version 8.18.0 or above. On successful import, this module will be visible in your application as **SAPBAPIConnector**
 
     ![](attachments/sap-bapi-connector/sap-bapi-connector-module.png)
@@ -108,7 +108,7 @@ If you need to set additional JCoProperties for which a constant is not availabl
 * Name – the JCoProperty key — for example to set maximum pool size, Name would be `jco.pool.maxpoolsize`
 * Value – the value to be assigned to this property
 
-## 5. Domain Models
+## 5 Domain Models
 
 This section describes two different domain models. The domain model in the `SAPBAPIConnector` module is used to control how your app communicates with an SAP BAPI. The domain model in a Mendix BAPI module describes a specific SAP BAPI which you want to use in your app.
 
@@ -118,30 +118,19 @@ This is part of the `SAPBAPIConnector` module and contains the entities which ar
 
 ![Domain Model of BAPI Connector](attachments/sap-bapi-connector/bapi-connector-domain-model.png)
 
-**BAPIRequest** –
-This is a generic entity which represents a BAPI request. Any entity that represents a specific BAPI request is a specialization of the `BAPIRequest` entity. Objects of this entity contain the request attributes required for a BAPI Call. Request attributes represent Import and Table parameters.
+* **BAPIRequest** – This is a generic entity which represents a BAPI request. Any entity that represents a specific BAPI request is a specialization of the `BAPIRequest` entity. Objects of this entity contain the request attributes required for a BAPI Call. Request attributes represent Import and Table parameters.
+* **BAPIResponse** – This is a generic entity which represents a BAPI response. Any entity that represents a specific BAPI response is a specialization of the `BAPIResponse` entity. Objects of this entity contain the response from a BAPI Call. Response attributes contain Export and Table parameters.
+*  **BAPIComplexType** – Any entity in a Mendix BAPI module which is associated with the `BAPIRequest` and `BAPIResponse` entity and part of BAPI Import or Export parameters is a specialization of this entity.
+* **BAPITable** – Any entity in a Mendix BAPI module which is associated with the `BAPIRequest` and `BAPIResponse` entity and is a BAPI Table parameter is a specialization of this entity.
+* **BAPIMetadata** – This holds all the attributes which represent the metadata of an SAP BAPI. It is used to generate a metadata.json file which is used in the Model Creator for SAP Solutions to create a domain model for a Mendix BAPI module.
+* **Destination** – This entity holds the JCo Destination name and properties.
 
-**BAPIResponse** –
-This is a generic entity which represents a BAPI response. Any entity that represents a specific BAPI response is a specialization of the `BAPIResponse` entity. Objects of this entity contain the response from a BAPI Call. Response attributes contain Export and Table parameters.
+### 5.2 Mendix BAPI Module Domain Model
 
-**BAPIComplexType** –
-Any entity in a Mendix BAPI module which is associated with the `BAPIRequest` and `BAPIResponse` entity and part of BAPI Import or Export parameters is a specialization of this entity. 
-
-**BAPITable** –
-Any entity in a Mendix BAPI module which is associated with the `BAPIRequest` and `BAPIResponse` entity and is a BAPI Table parameter is a specialization of this entity. 
-
-**BAPIMetadata** –
-This holds all the attributes which represent the metadata of an SAP BAPI. It is used to generate a metadata.json file which is used in the Model Creator for SAP Solutions to create a domain model for a Mendix BAPI module. 
-
-**Destination**
-This entity holds the JCo Destination name and properties.
-
-### 5.2 Mendix BAPI module Domain Model
-
-This is the domain model which represents a specific BAPI. You can have one or more of these modules in your Mendix application, each defining a single BAPI. 
+This is the domain model which represents a specific BAPI. You can have one or more of these modules in your Mendix application, each defining a single BAPI.
 The microflow actions of the BAPI Connector for SAP solutions make use of the domain model representing an SAP BAPI. The entities in the domain model have attributes which define import, export, and table parameters of an SAP BAPI.
 
-You can create Mendix BAPI modules for the SAP BAPIs you want to use with the [Model Creator for SAP Solutions](https://sapmodelcreator.mendixcloud.com/) (see [Create a Mendix BAPI Module Using the Model Creator](#create-bapi-module), below).
+You can create Mendix BAPI modules for the SAP BAPIs you want to use with the [Model Creator for SAP Solutions](https://sapmodelcreator.mendixcloud.com/link/bapi) (see [Create a Mendix BAPI Module Using the Model Creator](#create-bapi-module), below).
 
 A Mendix BAPI module domain model contains entities which are specializations of the entities defined in section [SAP BAPI Connector Domain Model](#bapi-connector-domain-model), above to model the SAP BAPI you are using.
 
@@ -151,25 +140,24 @@ For example, consider the domain model for **BAPI_QUOTATION_CREATEFROMDATA2**, s
 
 The entities in this domain model are as follows:
 
-* **BAPI_QUOTATION_CREATEFROMDATA2_Request** – a specialization of  BAPIConnector.BAPIRequest. Objects of this entity will be used as the BAPIRequest for the CallBAPI action
-* **BAPI_QUOTATION_CREATEFROMDATA2_Response** – a specialization of  BAPIConnector.BAPIResponse. Objects of this entity will be returned from a CallBAPI action.
-* **QUOTATION_HEADER_IN** – a specialization of BAPIComplexType. Objects of this entity contain attributes used as import parameters of BAPI.
-* **QUOTATION_PARTNERS** and QUOTATION_ITEMS_IN – specializations of BAPITable. Objects of this entity contain attributes corresponding to table parameters of BAPI_QUOTATION_CREATEFROMDATA2. As the Table parameters can be part of a BAPI request or response, entities of BAPITable have associations with both request and response entities. Here they are associated with BAPI_QUOTATION_CREATEFROMDATA2_Request and BAPI_QUOTATION_CREATEFROMDATA2_Response.
+* **BAPI_QUOTATION_CREATEFROMDATA2_Request** – A specialization of  BAPIConnector.BAPIRequest. Objects of this entity will be used as the BAPIRequest for the CallBAPI action
+* **BAPI_QUOTATION_CREATEFROMDATA2_Response** – A specialization of  BAPIConnector.BAPIResponse. Objects of this entity will be returned from a CallBAPI action.
+* **QUOTATION_HEADER_IN** – A specialization of BAPIComplexType. Objects of this entity contain attributes used as import parameters of BAPI.
+* **QUOTATION_PARTNERS** and QUOTATION_ITEMS_IN – Specializations of BAPITable. Objects of this entity contain attributes corresponding to table parameters of BAPI_QUOTATION_CREATEFROMDATA2. As the Table parameters can be part of a BAPI request or response, entities of BAPITable have associations with both request and response entities. Here they are associated with BAPI_QUOTATION_CREATEFROMDATA2_Request and BAPI_QUOTATION_CREATEFROMDATA2_Response.
 
 BAPI parameters which are reserved words in Mendix will be prefixed with `mxbapi_`. For example, mxbapi_RETURN in the above domain model.
 
-## 6. Microflow Actions{#microflow-actions}
+## 6 Microflow Actions {#microflow-actions}
 
 The BAPI Connector provides the following microflow actions. These can be used as activities in your microflows to consume the BAPIs available in the SAP system for which you have imported Mendix BAPI modules.
 
 ![](attachments/sap-bapi-connector/use-me-microflows.png)
 
-**GetJCoDestination** –
-The action `GetJCoDestination`, is used to get the JCoDestination. Assign the values from the *JCO_Constants* described in *the* *Configure Connection Details* section above. The action returns a `Destination` object which is used when making calls to a BAPI.
+**GetJCoDestination** – The action `GetJCoDestination`, is used to get the JCoDestination. Assign the values from the *JCO_Constants* described in *the* *Configure Connection Details* section above. The action returns a `Destination` object which is used when making calls to a BAPI.
 
 ![](attachments/sap-bapi-connector/getjcodestination-properties.png)
 
-You can set additional properties which are not available as JCO Constants as a list of objects of the `Property` entity associated with this GetJCoDestination. 
+You can set additional properties which are not available as JCO Constants as a list of objects of the `Property` entity associated with this GetJCoDestination.
 
 This example shows setting of below properties to GetJCoDestination action:
 
@@ -184,7 +172,7 @@ The microflow actions are described in the following sections.
 
 ### 6.1 Create_BAPIExplorer
 
-This microflow opens the BAPI explorer page to allow you to find all the BAPIs available at your JCo destination. 
+This microflow opens the BAPI explorer page to allow you to find all the BAPIs available at your JCo destination.
 
 For more information on how to use this microflow, see [BAPI Schema for Model Creator](#bapi-schema), below.
 
@@ -203,7 +191,7 @@ This microflow action is used to call a BAPI function.
 
 ### 6.3 CallBAPISequence
 
-Use this microflow action when you want to call more than one BAPI in a given order. This microflow action is only required when you want to call more than one BAPI in a single [JCoContext](https://javadoc.io/doc/com.sap.cloud/neo-java-web-api/2.35.9/com/sap/conn/jco/JCoContext.html). After the calls have been made, this executes an additional call to `BAPI_COMMIT_TRANSACTION` to commit all the changes made in this JCOContext. 
+Use this microflow action when you want to call more than one BAPI in a given order. This microflow action is only required when you want to call more than one BAPI in a single [JCoContext](https://javadoc.io/doc/com.sap.cloud/neo-java-web-api/2.35.9/com/sap/conn/jco/JCoContext.html). After the calls have been made, this executes an additional call to `BAPI_COMMIT_TRANSACTION` to commit all the changes made in this JCOContext.
 
 ![](attachments/sap-bapi-connector/execute-bapi-sequence.png)
 
@@ -219,13 +207,13 @@ This microflow action is used together with `CallBAPISequence`. It returns the r
 
 ![](attachments/sap-bapi-connector/get-bapi-response.png)
 
-| Parameters | Description 
+| Parameters | Description
 | --- | --- |
 | BAPI request | One `BAPIRequest` object specialization which was supplied to the `CallBAPISequence` action.   |
 | Return entity type | The `BAPIResponse` specialization entity associated with the `BAPIRequest` entity given in request. <br>This entity will be defined in your BAPI module domain model. |
 | Output | An object of the entity type mentioned in **Return entity type** |
 
-### 6.5 TestDestinationConnection{#test-connection}
+### 6.5 TestDestinationConnection {#test-connection}
 
 This action can be found in the **Internal > microflows** folder of the `SAPBAPIConnector` module.
 
@@ -235,13 +223,13 @@ This can be done by calling the internal microflow `TestConnection`, provided. O
 
 ![](attachments/sap-bapi-connector/connection-success.png)
 
-## 7 BAPI Schema for Model Creator{#bapi-schema}
+## 7 BAPI Schema for Model Creator {#bapi-schema}
 
 The BAPI Connector for SAP Solutions contains the microflow **Create_BAPIExplorer**.
 
 This can be used to find all BAPIs from SAP systems which are available to you. You can then select the BAPI which you need for your app and download the schema which you can convert into a Mendix BAPI module for use in your app using the [Model Creator](#create-bapi-module). You can create several Mendix BAPI modules if you need to use multiple BAPIs in your app.
 
-The **Create_BAPIExplorer** microflow displays BAPIs grouped by SAP Object Name in alphabetical order. 
+The **Create_BAPIExplorer** microflow displays BAPIs grouped by SAP Object Name in alphabetical order.
 You can see all the BAPIs for an SAP object by clicking the `+` symbol next to the object. You can also search for the BAPI you need in the search box.
 
 When you find a BAPI, you can click the info icon (🛈) to see details including documentation, import, export, and table parameters.
@@ -256,9 +244,9 @@ Once you find the BAPI you need, select it and click **Next** to generate the BA
 
 ![BAPI Explorer – Download schema](attachments/sap-bapi-connector/bapi-explorer-download-schema.png)
 
-## 8 Create a Mendix BAPI Module Using the Model Creator{#create-bapi-module}
+## 8 Create a Mendix BAPI Module Using the Model Creator {#create-bapi-module}
 
-Use [Model Creator for SAP Solutions](https://sapmodelcreator.mendixcloud.com/) to generate a Mendix BAPI module containing the domain model for a BAPI using the schema file downloaded from BAPI explorer. 
+Use [Model Creator for SAP Solutions](https://sapmodelcreator.mendixcloud.com/) to generate a Mendix BAPI module containing the domain model for a BAPI using the schema file downloaded from BAPI explorer.
 
 1. Go to [Model Creator for SAP Solutions](https://sapmodelcreator.mendixcloud.com/) and click **SAP BAPI**.
 
@@ -294,9 +282,9 @@ Use [Model Creator for SAP Solutions](https://sapmodelcreator.mendixcloud.com/) 
 
     ![](attachments/sap-bapi-connector/model-creator-download.png)
 
-## 9 Known Limitations
+## 9 Limitations
 
-1. The BAPI Connector for SAP Solutions provides a short description of the SAP BAPI contained in your SAP Business Suite or S/4HANA system. For detailed documentation of an SAP BAPI, please refer to standard SAP BAPI documentation. 
+1. The BAPI Connector for SAP Solutions provides a short description of the SAP BAPI contained in your SAP Business Suite or S/4HANA system. For detailed documentation of an SAP BAPI, please refer to standard SAP BAPI documentation.
 2. The entity description provided by the BAPI is not visible in the Model Creator for SAP Solutions.
 3. The BAPI Connector for SAP Solutions is limited to discovering and using a SAP BAPI. It cannot be used for invoking Remote-enabled Function Modules (RFMs).
 

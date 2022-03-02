@@ -67,7 +67,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 3. Click the link in the order confirmation email to go to the [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
 4. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. The system generates **SecretKey** and **UserName** and also returns **MailFromDomain**, **SPFRecordValue**, and **MXRecordValue**. For more details on SPF and MX configuration, see the [SPF and MX Records](#spf-and-mx-records) section.
+5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. The system generates **SecretKey** and **UserName** {{% TODO: change the picture below %}}.
 
    ![secretkey-username-mailfromdomain-spfrecordvalue-mxrecordvalue-generated](attachments/email-service/binding-key-generation.png)
 
@@ -175,7 +175,19 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
 You can make your emails comply with [Domain-based Message Authentication, Reporting and Conformance (DMARC)](https://dmarc.org/) to increase the deliverability of your emails. This is a protocol that helps mail servers validate whether an incoming email is authorised by the administrators of the sending domain. To comply with DMARC, you can use the Sender Policy Framework (SPF) method.
 
-### 5.1 Configuring the Mail From Domain
+You can configure your environments with email addresses that you wish to use to send emails by using the Communication Services Console. You can use the **Email ID** text input box to provide a list of comma-separated email addresses.
+
+![cs-console-email-text-input](attachments/email-service/cs-console-email-text-input.png)
+
+Optionally you can also provide **Mail From Domain** information that you may wish to use with your [Email Service](https://marketplace.mendix.com/link/component/118393) instance. For more details you can check [Configuring the Mail From Domain](#config-mail-from-domain) section. 
+
+![cs-console-mail-from-domain-text-input](attachments/email-service/cs-console-mail-from-domain-text-input.png)
+
+You can also opt for the domain configuration by providing the domain address. Along with the domain, you can also provide a list of comma-separated email addresses to be used to send emails. 
+
+![cs-console-domain-text-input](attachments/email-service/cs-console-domain-text-input.png)
+
+### 5.1 Configuring the Mail From Domain {#config-mail-from-domain}
 
 Sender Policy Framework (SPF) is an email authentication method. During the delivery of an email, SPF allows the mail server to check whether an incoming email claiming to come from a specific domain is submitted by an IP address authorized by the administrators of that domain. 
 
@@ -186,7 +198,7 @@ To achieve The SPF validation, you must meet these two requirements:
 
 If you use the default Mail From domain of the Email Service, you can only meet the first requirement. To meet the second requirement, you must use your own Mail From domain.
 
-To configure your custom Mail From domain, you should work with your IT administrators to add the MX and SPF records, which you received during the [generation of your keys](#key-generation).
+To configure your custom Mail From domain, you should work with your IT administrators to add the MX and SPF records.
 
 ### 5.2 SPF and MX Records {#spf-and-mx-records}
 

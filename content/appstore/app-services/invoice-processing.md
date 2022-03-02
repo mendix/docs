@@ -90,7 +90,10 @@ To use the Invoice Processing app service, first you need to create a model, the
 
     ![Create Invoice Model dialog box](attachments/invoice-processing/create-invoice-model-dialog-box.png)
 
-4. Enter a unique **Model Name**, select a **Region**, and then **Country**. You can select multiple countries for a given **Region**.
+4.  Enter a unique **Model Name**, select a **Region**, and then **Country**. You can select multiple countries for a given **Region**.
+
+    {{% alert type=“info” %}}Currently, the supported regions are **America**, **Canada** and **Europe**, and for the **Europe** region, the supported countries are **The Netherlands**, **Germany**, and **United Kingdom**. {{% /alert %}}
+
 5.  Click **Create Model**.
     
     {{% alert type="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
@@ -99,7 +102,8 @@ To use the Invoice Processing app service, first you need to create a model, the
    
     ![Create Invoice Model dialog box](attachments/invoice-processing/info-pop-up-dialog-box.png)
    
-7. Click **OK**. The new model appears in the **Existing Models** list with the status **In Progress**.
+6. Click **OK**. The new model appears in the **Existing Models** list with the status **In Progress**.
+
 8. Click **Refresh** and wait until the **Status** of the model becomes **Published**. Once the model is published, it is ready to use.
 
 

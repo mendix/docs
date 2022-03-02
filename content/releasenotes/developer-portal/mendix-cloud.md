@@ -12,6 +12,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### March 3rd, 2022
+
+#### Fixes
+
+* We fixed an issue where the start environment deploy API error response had incorrect JSON format. (Ticket 135323)
+
 ### February 17th, 2022
 
 #### Fixes

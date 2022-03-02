@@ -18,6 +18,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We fixed an issue where the `start environment` Deploy API error response had an incorrect JSON format. (Ticket 135323)
 
+### March 2nd, 2022
+
+#### Improvements
+
+* We have adjusted the thresholds for the Application Container Memory Percentage alert. It will now send a warning alert when the memory utilization is above 90% and a critical alert when its above 95%.
+
 ### February 17th, 2022
 
 #### Fixes

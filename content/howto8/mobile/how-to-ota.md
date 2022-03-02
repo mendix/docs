@@ -188,6 +188,13 @@ The transition from the CLI to Mendix Native Mobile Builder for OTA supporting a
     },
     ```
     
+    Also, check the "appCenterOTA" key in the "capabilities" section and make sure it is set to enabled:
+    ```  
+        "appCenterOTA": {
+          "enabled": true
+        }
+    ```
+    
     If the file does not exist add it manually. Either way, **make sure to change the names to reflect the IDs of your App Center apps**. Then make sure the newly changed file is still a valid JSON.
     
 1. Restart the Mendix Native Mobile Builder for your project. If the tool does not start, verify once more that the *.config* file is a valid JSON.

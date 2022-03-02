@@ -87,7 +87,7 @@ To configure this widget, follow these steps:
 	* **Full** – if selected, the editor contains plenty of buttons suitable for various different needs
 	  ![Example of toolbar](attachments/ckeditor/full-toolbar.png)
 	  
-	* **Custom** - allows you to make your toolbar with customized options
+	* **Custom** – allows you to make your toolbar with customized options
 		* **Toolbar group** 
 		  * **Basic** (default) – if selected, you can select which of the following toolbar groups are available in the toolbar
           * **Document Group**

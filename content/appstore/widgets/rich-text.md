@@ -51,9 +51,11 @@ To configure this widget, follow these steps:
 	  ![Example of toolbar](attachments/ckeditor/inline-toolbar.png)
 	
 * **Value attribute** (required) – sets a String attribute to store the rich-text content
+
 * **Sanitize content**	
 	* **Yes** (default) – if selected, untrusted strings in user's content gets removed
 	* **No** – if selected, untrusted strings in user's content is not removed	
+	
 *  **Read-only style** – defines how the editor looks when the editor becomes read-only
 	
     {{% alert type="info" %}}The editor becomes read-only when the **Editable** property is set to **Never** or **Condition** returns `false`.{{% /alert %}}
@@ -61,15 +63,16 @@ To configure this widget, follow these steps:
 	 * **Rich text** – if selected, only text is shown
 	 * **Bordered** –  if selected, text is shown in a frame
 	 * **Bordered toolbar** – if selected, text is shown in a frame and the toolbar is also visible, but the user cannot make any changes
+	
 *  **Editable** – determines when user can edit content in the editor and when it is read-only
 
     {{% alert type="info" %}}For more information, see [Editability Section](https://docs.mendix.com/refguide/common-widget-properties#editability) in the *Studio Pro 9 Guide*.{{% /alert %}}
 
-* **Show label**
-  * **Yes** – if selected, you can define the label caption 
-    * **Label caption** – defines the label caption of the widget that is displayed on the page
-  * **No** (default) – if selected, there is no label for this widget on the page
-*  **Visible** – determines if the widget is visible on the page
+* **Show label** 
+    * **Yes** – if selected, you can define the label caption
+      * **Label caption** – defines the label caption of the widget that is displayed on the page
+    * **No** (default) – if selected, there is no label for this widget on the page
+* **Visible** – determines if the widget is visible on the page
 
     {{% alert type="info" %}}For more information, see [Visibility Section](https://docs.mendix.com/refguide/common-widget-properties#visibility-properties) in the *Studio Pro 9 Guide*.{{% /alert %}}
 
@@ -88,23 +91,24 @@ To configure this widget, follow these steps:
 	  ![Example of toolbar](attachments/ckeditor/full-toolbar.png)
 	  
 	* **Custom** – allows you to make your toolbar with customized options	
+    
     * **Toolbar group** 
       * **Basic** (default) – if selected, you can select which of the following toolbar groups are available in the toolbar
-        * **Document Group**
-        * **Clipboard Group**
-        * **Editing Group**
-        * **Forms group**
-        * **Separator group**
-        * **Basic style group**
-        * **Paragraph group**
-        * **Links group**
-        * **Separator 2 group**
+		    * **Document Group**
+		    * **Clipboard Group**
+		    * **Editing Group**
+		    * **Forms group**
+		    * **Separator group**
+		    * **Basic style group**
+		    * **Paragraph group**
+		    * **Links group**
+		    * **Separator 2 group**
 		    * **Styles group**
 		    * **Colors group**
 		    * **Tools group**
 		    * **Others group**
     * **Advanced** – if selected, you can configure buttons for different toolbar groups
-    
+		
 		{{% alert type="info" %}}All the toolbar groups that you configure will be available in the toolbar. The buttons that have the same **Toolbar ID** will be grouped together, with vertical bars ("|") separating different toolbar groups.{{% /alert %}}
 		
 		* **New** – opens the **Edit Advanced Groups Item** dialog box where you can add a new button to a toolbar group
@@ -136,22 +140,28 @@ To configure this widget, follow these steps:
 	* **Paragraph** (`<p>`)
 	* **Break lines** (`<br>`)
 	* **Blocks** (`<div>`)
+	
 * **Shift enter mode** – defines which of the following elements is wrapped when the user presses the <kbd>Shift</kbd> + <kbd>Enter</kbd> keys:
   * **Paragraph** (`<p>`)
   * **Break lines** (`<br>`)
   * **Blocks** (`<div>`)
+  
 * **Spellchecker**
   * **Yes** (default) – if selected, the inline spelling and grammar checker is enabled
   * **No** – if selected, the inline spelling and grammar checker is disabled 
+  
 * **Enable code highlight**
-  * **Yes ** – if selected, the![insert-code-snippet](attachments/ckeditor/insert-code-snippet.png)button becomes available in the toolbar, which enables the user to insert a code snippet that is displayed with highlighted syntax in the editor 
-  * **No** (default) – if selected, the![insert-code-snippet](attachments/ckeditor/insert-code-snippet.png)button is unavailable in the toolbar
-* **Advanced content filtering**
-  * **Auto** (default) – if selected, the content is sanitized automatically
-  * **Custom** – if selected, you can customize how content is sanitized with the following items:
-  	* **Allowed content** – specifies tags that are allowed, for example, `h1 h2 h3 p blockquote strong em del ins table tr th td caption`
-  	* **Disallowed content** – specifies tags that get removed
-  	
+  * **Yes** – if selected, the **Insert Code Snippet** button below becomes available in the toolbar, which enables the user to insert a code snippet that is displayed with highlighted syntax in the editor 
+  
+    ![insert-code-snippet](attachments/ckeditor/insert-code-snippet.png)
+  
+  * **No** (default) – if selected, the **Insert Code Snippet** button is unavailable in the toolbar
+* **Advanced content filtering**  
+    * **Auto** (default) – if selected, the content is sanitized automatically
+    * **Custom** – if selected, you can customize how content is sanitized with the following items:
+      * **Allowed content** – specifies tags that are allowed, for example, `h1 h2 h3 p blockquote strong em del ins table tr th td caption`
+      * **Disallowed content** – specifies tags that get removed
+  
     {{% alert type="info" %}}For more information about how to use tags for content filtering, see the [Custom ACF Mode](https://ckeditor.com/docs/ckeditor4/latest/examples/acfcustom.html) section in *Advanced Content Filter – Custom Mode*{{% /alert %}}
 
 ## 3 Widgets Below Version 2.0.0

@@ -175,7 +175,11 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
 You can make your emails comply with [Domain-based Message Authentication, Reporting and Conformance (DMARC)](https://dmarc.org/) to increase the deliverability of your emails. This is a protocol that helps mail servers validate whether an incoming email is authorised by the administrators of the sending domain. To comply with DMARC, you can use the Sender Policy Framework (SPF) method.
 
-You can configure your environments with email addresses that you wish to use to send emails by using the Communication Services Console. You can use the **Email ID** text input box to provide a list of comma-separated email addresses.
+You can configure your environments with email addresses that you wish to use to send emails by using the Communication Services Console. 
+
+![cs-console](attachments/email-service/cs-console.png)
+
+You can use the **Email ID** text input box to provide a list of comma-separated email addresses. 
 
 ![cs-console-email-text-input](attachments/email-service/cs-console-email-text-input.png)
 

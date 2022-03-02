@@ -88,7 +88,7 @@ For details on preparing and selling your component, see [How to Sell Your App S
 
 To add content to the Marketplace, follow the steps in each section below.
 
-### 4.1 Getting Started
+### 4.1 Getting Started {#get-started}
 
 To start, click **Add content** in the top bar of the Marketplace home screen. Follow these steps to continue adding content:
 

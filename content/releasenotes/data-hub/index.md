@@ -14,11 +14,11 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Improvements 
 
-* We made the user experience for deleting data in the Administration screens more consistent.
+* We made the user experience for deleting data in the **Administration** page more consistent. Access the **Administration** page by going to the **Switch to** menu on the upper-right of the Catalog, then clicking **Control Center**.
 
 #### Fixes
 
-* We implemented a fix to allow users to re-register a  previously deleted data source via the registration form.
+* We implemented a fix to allow users to re-register a previously deleted data source. You can do this by going to the **Register a Data Source** section on the Catalog home page.
 
 ### February 24th, 2022
 

@@ -53,66 +53,9 @@ When you first create your app, it will be set to deploy to the Mendix Cloud. Yo
 
 5. Your app is now configured for private cloud.
 
-### 3.2 Creating an Environment{#create-environment}
-When deploying your app for the first time, there will be no environments and no deployment packages available. The **Environments** page for your app in the Developer Portal will show you the current status.
+### 3.2 Creating a Deployment Package {#create-deployment-package}
 
-![](attachments/private-cloud-deploy/image5.png)
-
-First you need to create an environment:
-
-1. Click **Create Environment**.
-
-2. A **UUID** will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
-
-    {{% alert type="info" %}}You can change the UUID if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.{{% /alert %}}
-
-3. Enter **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
-
-4. Use the drop-down **Select Namespace** to select an existing namespace. You will see all namespaces of which you are a member.
-
-5. Select the **Purpose**.
-   
-  1. For development of the app, for example acceptance testing, choose **Development**.
-  2. For production deployment, select **Production**. If you select **Production**, then you will be asked for the **Subscription Secret** which ensures that your app runs as a licensed app. These restrictions on unlicensed/test apps are very similar to those listed in the [Free Apps](mendix-cloud-deploy#free-app) section of *Mendix Cloud*.
-
-    {{% alert type="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/project-security). You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
-
-6. Click **Next**.
-   
-    ![](attachments/private-cloud-deploy/create-environment.png)
-
-7. Select **Core Resources**.
-
-    For core resources, there are two sets of values. The **Request** value is the amount of core resources which are initially requested. The **Limit** value is the maximum amount of resource that the environment can use.
-
-    There are three pre-defined sets of resources, **Small**, **Medium**, and **Large**. Choosing these will set the **CPU** and **Memory** values automatically.
-
-    | **Name** | **CPU cores**: Limit | **Memory (Gb)**: Limit | **CPU cores**: Request | **Memory (Gb)**: Request |
-    | --- | --- | --- | --- | --- |
-    | Small | 1 | 0.5 | 0.1 | 0.5 |
-    | Medium | 2 | 2 | 1 | 1 |
-    | Large | 4 | 4 | 2 | 2 |
-    | Custom | own choice | own choice | own choice | own choice |
-
-    Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* environment, otherwise you may run into problems running your app.
-
-8. Select a **Database plan** from the list of plans set up in the namespace.
-
-9. Select a **Storage plan** from the list of plans set up in the namespace.
-   
-    ![](attachments/private-cloud-deploy/image7.png)
-
-10. Click **Create Environment**.
-
-11. You will see your new environment listed. An *in-progress* icon will be shows next to the resource plans until they have been provisioned.
-
-    ![](attachments/private-cloud-deploy/image8.png)
-
-You will not be able to deploy to this environment until it has been fully prepared. This means that all the resource plans have been confirmed and that the placeholder app has been successfully deployed. See [Deploying the Deployment Package](#deploy-package), below, for instructions on how to check that the environment has been created successfully.
-
-### 3.3 Creating a Deployment Package {#create-deployment-package}
-
-Before you can deploy your app, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
+Before you can create an environment, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
 
 1. On the **Environments** page for your app in the Developer Portal, click **Create Package**.
    
@@ -140,6 +83,64 @@ Before you can deploy your app, you will need to create a deployment package. En
 Alternatively, you can upload an existing MDA by clicking **Upload Package**.
 {{% /alert %}}
 
+### 3.3 Creating an Environment{#create-environment}
+When deploying your app for the first time, there will be no environments available. Before creating an environment, make sure that you have created/uploaded deployment package. The **Environments** page for your app in the Developer Portal will show you the current status.
+
+![](attachments/private-cloud-deploy/image5.png)
+
+1. Click **Create Environment**.
+
+2. Select the deployment package from the list of deployment packages and click Next
+
+3. A **UUID** will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
+
+    {{% alert type="info" %}}You can change the UUID if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.{{% /alert %}}
+
+4. Enter **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
+
+5. Use the drop-down **Select Namespace** to select an existing namespace. You will see all namespaces of which you are a member.
+
+6. Select the **Purpose**.
+   
+  1. For development of the app, for example acceptance testing, choose **Development**.
+  2. For production deployment, select **Production**. If you select **Production**, then you will be asked for the **Subscription Secret** which ensures that your app runs as a licensed app. These restrictions on unlicensed/test apps are very similar to those listed in the [Free Apps](mendix-cloud-deploy#free-app) section of *Mendix Cloud*.
+
+    {{% alert type="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/project-security). You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
+
+7. Click **Next**.
+   
+    ![](attachments/private-cloud-deploy/create-environment.png)
+
+8. Select **Core Resources**.
+
+    For core resources, there are two sets of values. The **Request** value is the amount of core resources which are initially requested. The **Limit** value is the maximum amount of resource that the environment can use.
+
+    There are three pre-defined sets of resources, **Small**, **Medium**, and **Large**. Choosing these will set the **CPU** and **Memory** values automatically.
+
+    | **Name** | **CPU cores**: Limit | **Memory (Gb)**: Limit | **CPU cores**: Request | **Memory (Gb)**: Request |
+    | --- | --- | --- | --- | --- |
+    | Small | 1 | 0.5 | 0.1 | 0.5 |
+    | Medium | 2 | 2 | 1 | 1 |
+    | Large | 4 | 4 | 2 | 2 |
+    | Custom | own choice | own choice | own choice | own choice |
+
+    Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* environment, otherwise you may run into problems running your app.
+
+9. Select a **Database plan** from the list of plans set up in the namespace.
+
+10. Select a **Storage plan** from the list of plans set up in the namespace.
+   
+    ![](attachments/private-cloud-deploy/image7.png)
+
+11. Click **Create Environment**.
+
+12. You will see your new environment listed. An *in-progress* icon will be shows next to the resource plans until they have been provisioned.
+
+    ![](attachments/private-cloud-deploy/image8.png)
+
+See [Deploying the Deployment Package](#deploy-package), below, for instructions on how to check that the environment has been created successfully.
+
+
 ### 3.4 Deploying the Deployment Package{#deploy-package}
 
 You can also deploy an existing deployment package to an environment without having to create a new one. This also allows you to specify constant values and control scheduled events before the app is started.
@@ -150,13 +151,6 @@ Currently, deployment packages are only valid for two weeks. Older deployment pa
 
 After creating an environment and deployment package (see [Creating an Environment](#create-environment) and [Creating a Deployment Package](#create-deployment-package), above) you will now have a deployment package and an environment. Check that there is a green tick next to the deployment package and the resources of the environment. If any of these have failed, try to create the environment or the deployment package again, and contact your cluster manager. If neither of these solves the problem, contact Mendix Support for help.
 
-![](attachments/private-cloud-deploy/image13.png)
-
-You also need to check that the **PlaceholderMDA**, an initial app which is deployed by default to your environment, has successfully built and is running.
-
-![](attachments/private-cloud-deploy/image14.png)
-
-If everything has been created successfully, and the PlaceholderMDA has been built and is running, you can deploy the deployment package of your app by doing the following:
 
 1. Click **Deploy** next to the deployment package you wish to deploy.
 
@@ -246,7 +240,7 @@ This section shows all the environments created for this app.
 
 ![](attachments/private-cloud-deploy/image19.png)
 
-For each environment, you can see a summary of the status of the resources and details of the package which is running in the environment (which may be the placeholder app *PlaceholderMDA*).
+For each environment, you can see a summary of the status of the resources and details of the package which is running in the environment.
 
 You can perform the following actions:
 

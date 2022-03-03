@@ -1,7 +1,7 @@
 ---
 title: "Building Connectors"
 linktitle: "Building Connectors"
-parent: "Creating Content"
+category: "Creating Content"
 menu_order: 3
 tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "how to"]
 ---
@@ -13,7 +13,7 @@ Welcome to the world of Mendix connectors! Mendix connectors allow you to connec
 **This how-to will teach you the following:**
 
 * What connectors are and how they work
-* How to build a Mendix connector
+* How to build a connector
 
 Check back later for a link to a future document about recommended practices for building connectors.
 
@@ -39,7 +39,7 @@ They can also be used to package a Java library provided by the other system to 
 
 #### 2.1.1 Connecting Mendix Apps to Mendix Apps  
 
-This chart shows the possible solutions when you want to connect Mendix apps to other Mendix apps:  
+This chart shows the available solutions for when you want to connect Mendix apps to other Mendix apps:  
   
 | Category | Solution | 
 | ---------- | ---------- |
@@ -48,7 +48,7 @@ This chart shows the possible solutions when you want to connect Mendix apps to 
 
 #### 2.1.2 Connecting Mendix Apps to Third-Party Systems  
 
-This chart shows the possible solutions when you want to connect Mendix apps to third-party systems:  
+This chart shows the available solutions for when you want to connect Mendix apps to third-party systems:  
 
 | Category | Solution |
 | ---------- | ---------- |
@@ -85,13 +85,11 @@ When creating a new Mendix connector, it is advised to have an app in which you 
 To start setting up your app, open Studio Pro and do the following:
 
 1.  Create a [New App](/refguide/new-project) for your connector.
-
 2.  Create a module to contain your connector. To do this, right-click anywhere in the **App Explorer** outside of existing modules and choose **Add Module**.
     
      ![](attachments/connectors/add-module.png)
 
 3.  Give your module a name fitting for the type of connector you are building.
-
 4.  Create the basic folder structure at root level. 
 
 ### 3.2 Implementing the Connector
@@ -139,6 +137,7 @@ Distribute the module to whomever wants to use it (share the file or upload to M
 1. Keep the release notes ready.
 
 2. Deploy to GITHub by doing the following:
+
     * Commit code to GitHub (if you have not already made this a Git project)
     * Create new release
   

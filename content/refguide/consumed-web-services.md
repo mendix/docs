@@ -10,7 +10,6 @@ tags: ["studio pro"]
 
 This document describes imported web services. For further information on the consumed web services screen, see [Consumed Web Service](consumed-web-service).
 
-
 ## 2 Web Services
 
 Web services (see also [Wikipedia](http://en.wikipedia.org/wiki/Web_service)) are a way of exposing or absorbing functions and data entities between systems. They can be used to enable applications to "talk" to each other through the network (or Internet).
@@ -21,7 +20,7 @@ Mendix supports the interaction between servers using SOAP. This can either be M
 
 Using third party web services is easy in Mendix. There is a microflow activity available which calls a web service on another system and imports the XML in the Mendix database.
 
-### 2.2 Published web services
+### 2.2 Published web Services
 
 To expose functionality in a Mendix Server (thus enabling other systems to make use of certain functions) a microflow can easily be published as a web service. For further information, see [Published Web Services](published-web-services).
 

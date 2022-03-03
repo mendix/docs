@@ -170,9 +170,9 @@ If you are using Mendix version 9.9.0 or above, you can use the `com.mendix.core
 
 ### 2.7 Execution Context {#context}
 
-Prior to Mendix 9.6 tasks were always executed in a *sudo* context, even if the scheduling microflow had **Apply entity access** set to *true* (see [Microflow Properties](microflow) for more information). As of Mendix 9.6 this behavior has been deprecated and tasks now run in an equivalent context to the one in which they were scheduled. This has the following effect:
+Prior to Mendix 9.6 tasks were always executed in a *sudo* context, even if the scheduling microflow had **Apply entity access** set to *true* (see [Microflow Properties](microflow) for more information). As of Mendix 9.6 this behavior has been deprecated and tasks now run in an equivalent context to the one in which they were scheduled, with entity access applied. This has the following effect:
 
-* When a user is logged in, the task will be executed in a new context for the same named user. This context will be the same as if the user is logged in.
+* When a user is logged in, the task will be executed in a new context for the same named user. This context will be the same as if the user is logged in. 
 * When no user is logged in, the task will be executed in a new anonymous context. This context will be for a new anonymous user with the same language and timezone as the original user.
 * When a system session is used to schedule the task (using the Java API), the task will be executed in a new system context.
 

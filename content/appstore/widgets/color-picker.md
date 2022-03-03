@@ -34,6 +34,7 @@ To configure this widget, follow these steps:
 ### 2.2 General Tab
 
 * **Enable advanced options**
+    
     * **Yes** – if selected, the following advanced options become available:
         * **Display mode** – determines how Color Picker is displayed in your app
             * **Button** (default) – a button is displayed
@@ -56,9 +57,9 @@ To configure this widget, follow these steps:
             * **RGB**
             * **RGBA**
         * **Default colors** – defines a list of pre-defined colours used with the color picker
-
-            {{% alert type="info" %}}This is option is only available if the **Picker type** is **Block**, **Sketch**, **Circle**, **Compact**, or **Twitter**{{% /alert %}}
-
+    
+            {{% alert type="info" %}}The **Default colors** property is only available if the **Picker type** property is set to **Block**, **Sketch**, **Circle**, **Compact**, or **Twitter**.{{% /alert %}}
+    
             * **New** – opens the **Edit Default Colors Item** dialog box where you can create a new default color
                 * **Color** – defines the default color in hex, RGB, or RGBA format
             * **Delete** – deletes the selected default color
@@ -75,19 +76,19 @@ To configure this widget, follow these steps:
 
 ### 2.3 Events Tab {#events-tab}
 
-* **On change** – executes an action when the attribute value changes
+**On change** – executes an action when the attribute value changes
 
 ### 2.4 Edibility Tab {#editability-tab}
 
-For more information, see [Editability Section](/refguide/common-widget-properties#editability) in the *Studio Pro 9 Guide*.
+For more information, see [Editability Section](/refguide/common-widget-properties#editability) in *Properties Common in the Page Editor*.
 
 ### 2.5 Visibility Tab {#visibility-tab}
 
-For more information, see [Visibility Section](/refguide/common-widget-properties#visibility-properties) in the *Studio Pro 9 Guide*.
+For more information, see [Visibility Section](/refguide/common-widget-properties#visibility-properties) in *Properties Common in the Page Editor*.
 
 ### 2.6 Common Tab
 
-For more information, see [Common Section](/refguide/common-widget-properties#common-properties) in the *Studio Pro 9 Guide*.
+For more information, see [Common Section](/refguide/common-widget-properties#common-properties) in *Properties Common in the Page Editor*.
 
 ## 4 Widgets Below Version 2.0.0
 

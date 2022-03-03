@@ -9,15 +9,17 @@ tags: ["security", "headers"]
 
 ## 1 Introduction
 
-Since Mendix 9.12.0, applications can be made even more secure and strict by setting the Content Security Policy (CSP) to `default-src: self`. By doing so, only resources from the same domain can be loaded, and no resources can be loaded inline (such as base64 images, inline JavaScript, etc...).
+By employing a content security policy (CSP) in your app, you can protect it from malicious content which might try to take advantage of the apps trusted web page context. A rigorous CSP allows you to control which resources are loaded in the app.
 
-For more background information, see https://owasp.org/www-community/controls/Content_Security_Policy.
+In Mendix Studio Pro 9.12.0 and higher, an application can be made more strict and secure by setting its CSP to `default-src: self`. By doing so, only resources from the same domain can be loaded and no resources can be loaded inline (such as Base64 images or inline JavaScript).
+
+For more background information on CSMs, see [Content Security Policy](https://owasp.org/www-community/controls/Content_Security_Policy) from the software security nonprofit OWASP.
 
 ## 2 Setup
 
 In order to be able to use the strictest setting of CSP (`default-src: self`) some changes are needed in your application. 
 
-### 2.1 Changing the theme
+### 2.1 Changing the Theme
 
 Create a new file that will hold the Dojo configuration in your theme folder (`theme/web/appSetup.js`) with the following configuration:
 
@@ -83,7 +85,7 @@ To tie it together, the `theme/web/index.html` file needs to be changed to use t
 
 The last step is to ensure you are not using any external fonts by checking the styling of your theme and making sure all of the fonts are loaded locally.
 
-#### 2.1.1 Testing your changes locally
+#### 2.1.1 Testing Your Changes Locally
 To ensure the changes you've made are working locally, you can temporarily enforce the header by adding the following to your `theme/web/index.html` at the top of the `<head>` tag:
 
 ```html
@@ -98,7 +100,7 @@ After redeploying your app locally, it should function as normal. If your applic
 
 Don't forget to remove this line after you're done testing your changes.
 
-### 2.2 Enabling the header in the Cloud
+### 2.2 Enabling the Header in the Cloud
 
 At this point you can enable the header in the cloud as mentioned [here](https://docs.mendix.com/developerportal/deploy/environments-details#http-headers).
 

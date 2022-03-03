@@ -126,12 +126,12 @@ To configure this widget, follow these steps:
     * **Percentage of parent** – specifies the width in relation to the rest of the elements on the page
 * **Height** – used as an appropriate CSS value
 
-### 2.5 Events Tab
+### 2.4 Events Tab
 
 * **On key press** – specifies an action to execute when the user presses any keyboard key or a combination of keyboard keys
 * **On change** – specifies an action to execute when the user changes any content in the editor
 
-### 2.4 Advanced Tab
+### 2.5 Advanced Tab
 
 * **Enter mode** – defines which of the following elements is wrapped when the user presses the <kbd>Enter</kbd> key:
     * **Paragraph** (`<p>`)
@@ -157,6 +157,10 @@ To configure this widget, follow these steps:
         * **Disallowed content** – specifies tags that get removed
     
           {{% alert type="info" %}}For more information about how to use tags for content filtering, see the [Custom ACF Mode](https://ckeditor.com/docs/ckeditor4/latest/examples/acfcustom.html) section in *Advanced Content Filter – Custom Mode*{{% /alert %}}
+
+### 2.6 Common Tab
+
+For more information, see [Common Section](https://docs.mendix.com/refguide/common-widget-properties#common-properties) in *Properties Common in the Page Editor*.
 
 ## 3 Widgets Below Version 2.0.0
 

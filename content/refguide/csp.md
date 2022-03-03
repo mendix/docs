@@ -1,9 +1,7 @@
 ---
 title: "CSP"
-#category: "Enter the category under which the document should be published if necessary (for parent pages only; a category example is "Modeler"); if there is a parent, remove this category line"
-#parent: "Enter the parent document filename of this document if necessary (for example, "push-notifications"); if there is a category, remove this parent line"
-#menu_order: Enter the position of the document in the category or under the parent; number by 10 (for first), 20, 30, etc. for easy ordering of other documents in the future if necessary; don't add brackets or quotation marks; if no number is added, the system will add an extremely high number to order the documents, which means that if you only want a document to appear at the top, you only have to add "10" to that specific document, you don't have to order all the other documents in the category/under the parent
-description: "Enabling Content-Security-Policy headers for your application."
+parent: "progressive-web-app"
+menu_order: 10
 tags: ["security", "headers"]
 ---
 
@@ -11,7 +9,7 @@ tags: ["security", "headers"]
 
 By employing a content security policy (CSP) in your app, you can protect it from malicious content which might try to take advantage of the apps trusted web page context. A rigorous CSP allows you to control which resources are loaded in the app.
 
-In Mendix Studio Pro 9.12.0 and higher, an application can be made more strict and secure by setting its CSP to `default-src: self`. By doing so, only resources from the same domain can be loaded and no resources can be loaded inline (such as Base64 images or inline JavaScript).
+In Mendix Studio Pro 9.12.0 and higher, a web app (inluding progressive web apps) can be made more strict and secure by setting its CSP to `default-src: self`. By doing so, only resources from the same domain can be loaded and no resources can be loaded inline (such as Base64 images or inline JavaScript).
 
 For more background information on CSMs, see [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) from Mozilla.
 

@@ -41,10 +41,10 @@ They can also be used to package a Java library provided by the other system to 
 
 This chart shows the available solutions for when you want to connect Mendix apps to other Mendix apps:<br/>  
 
-| Category | Solution | 
+| Category | Solution |
 | ---------- | ---------- |
-| Platform-supported protocols | Connect to two or more Mendix applications using platform-supported facilities:<br> SOAP web services (see [Published Web Services](https://docs.mendix.com/refguide/published-web-services) and [Consumed Web Services](https://docs.mendix.com/refguide/consumed-web-services)), REST web services (see [Published REST Services](/refguide/published-rest-service) and [Consumed REST Services](/refguide/consumed-rest-services)), OData (see [Published OData Services](https://docs.mendix.com/refguide/published-odata-services) and [Consumed OData Services](https://docs.mendix.com/refguide/consumed-odata-services)), or Data Hub (see the [Data Hub Guide](https://docs.mendix.com/data-hub/)).  |
-| Unsupported protocols   | Build a module to connect either with alternative protocols or by encapsulating one of the platform supported protocols. You can do this with [Java actions](https://docs.mendix.com/refguide/java-actions) or [JavaScript actions](https://docs.mendix.com/refguide/javascript-actions).   |  |
+| Platform-supported protocols | Connect to two or more Mendix applications using platform-supported facilities:<br> SOAP web services (see [Published Web Services](https://docs.mendix.com/refguide/published-web-services) and [Consumed Web Services](https://docs.mendix.com/refguide/consumed-web-services)), REST web services (see [Published REST Services](/refguide/published-rest-service) and [Consumed REST Services](/refguide/consumed-rest-services)), OData (see [Published OData Services](https://docs.mendix.com/refguide/published-odata-services) and [Consumed OData Services](https://docs.mendix.com/refguide/consumed-odata-services)), or Data Hub (see the [Data Hub Guide](https://docs.mendix.com/data-hub/)). | 
+| Unsupported protocols   | Build a module to connect either with alternative protocols or by encapsulating one of the platform supported protocols. You can do this with [Java actions](https://docs.mendix.com/refguide/java-actions) or [JavaScript actions](https://docs.mendix.com/refguide/javascript-actions).  | 
 
 #### 2.1.2 Connecting Mendix Apps to Third-Party Systems  
 
@@ -54,7 +54,7 @@ This chart shows the available solutions for when you want to connect Mendix app
 | ---------- | ---------- |
 | Platform-supported protocols | Connect a Mendix application to one or more third party applications using platform-supported facilities: SOAP web services, REST web services or ODATA.       | 
 | eQ-supported protocols   | Use eQ supported facilities: Web services, REST, OData | 
-| Unsupported protocols   | Build a module to connect either via alternative protocols, or by encapsulating one of the platform supported protocols. | 
+| Unsupported protocols   | Build a module to connect either via alternative protocols, or by encapsulating one of the platform supported protocols. |
 
 ### 2.2 Getting Mendix Connectors
 

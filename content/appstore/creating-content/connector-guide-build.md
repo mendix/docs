@@ -39,16 +39,16 @@ They can also be used to package a Java library provided by the other system to 
 
 #### 2.1.1 Connecting Mendix Apps to Mendix Apps  
 
-This chart shows the available solutions for when you want to connect Mendix apps to other Mendix apps:  
-  
+This chart shows the available solutions for when you want to connect Mendix apps to other Mendix apps:<br/>  
+
 | Category | Solution | 
 | ---------- | ---------- |
-| Platform-supported protocols | Connect to two or more Mendix applications using platform-supported facilities:<br> SOAP web services (see [Published Web Services](https://docs.mendix.com/refguide/published-web-services) and [Consumed Web Services](https://docs.mendix.com/refguide/consumed-web-services)), REST web services (see [Published REST Services](/refguide/published-rest-service) and [Consumed REST Services](/refguide/consumed-rest-services)), OData (see [Published OData Services](https://docs.mendix.com/refguide/published-odata-services) and [Consumed OData Services](https://docs.mendix.com/refguide/consumed-odata-services)), or Data Hub (see the [Data Hub Guide](https://docs.mendix.com/data-hub/)).      |
+| Platform-supported protocols | Connect to two or more Mendix applications using platform-supported facilities:<br> SOAP web services (see [Published Web Services](https://docs.mendix.com/refguide/published-web-services) and [Consumed Web Services](https://docs.mendix.com/refguide/consumed-web-services)), REST web services (see [Published REST Services](/refguide/published-rest-service) and [Consumed REST Services](/refguide/consumed-rest-services)), OData (see [Published OData Services](https://docs.mendix.com/refguide/published-odata-services) and [Consumed OData Services](https://docs.mendix.com/refguide/consumed-odata-services)), or Data Hub (see the [Data Hub Guide](https://docs.mendix.com/data-hub/)).  |
 | Unsupported protocols   | Build a module to connect either with alternative protocols or by encapsulating one of the platform supported protocols. You can do this with [Java actions](https://docs.mendix.com/refguide/java-actions) or [JavaScript actions](https://docs.mendix.com/refguide/javascript-actions).   |  |
 
 #### 2.1.2 Connecting Mendix Apps to Third-Party Systems  
 
-This chart shows the available solutions for when you want to connect Mendix apps to third-party systems:  
+This chart shows the available solutions for when you want to connect Mendix apps to third-party systems:<br/>
 
 | Category | Solution |
 | ---------- | ---------- |
@@ -121,9 +121,7 @@ Because Mendix connectors are like any other Mendix [module](/appstore/modules/)
 To export your connector as an *.mpk* file, do the following:
 
 1. Ensure your version is aligned with the version number that appears on the Marketplace version. Versioning in Marketplace starts at 1.0.0 (for more information, see the [Adding New Marketplace Content](/appstore/general/share-app-store-content#adding) section in *How to Share Marketplace Content*). You cannot use Marketplace to distribute your connector if it is below version 1.0.0.
-
 2. Generate the export module package using your [Gradle script](https://github.com/ako/CsvServices/blob/cd219e71249c194bca26b374716b88628237a6dd/build.gradle#L72).
-
 3. Build and export release candidate with versioning and put it in the Marketplace **DIST** folder. You can create this folder to contain the releases of your module for reference.
 
 ### 3.4 Distributing the Connector
@@ -135,12 +133,9 @@ Once you publish the connector and someone imports it in their Mendix app, all o
 Distribute the module to whomever wants to use it (share the file or upload to Marketplace) by following these steps: 
 
 1. Keep the release notes ready.
-
 2. Deploy to GITHub by doing the following:
-
     * Commit code to GitHub (if you have not already made this a Git project)
     * Create new release
-  
 3. Create the release in Marketplace using the release from GitHub.
 
 ### 3.5 Architectural Impact

@@ -67,7 +67,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 3. Click the link in the order confirmation email to go to the [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
 4. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. The system generates **SecretKey** and **UserName** {{% TODO: change the picture below %}}.
+5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. The system generates **SecretKey** and **UserName**.
 
    ![secretkey-username-generated](attachments/email-service/cs-binding-key-generation.png)
 

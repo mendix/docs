@@ -17,11 +17,11 @@ For more background information on CSMs, see [Content Security Policy](https://o
 
 ## 2 Setup
 
-In order to be able to use the strictest setting of CSP (`default-src: self`) some changes are needed in your application. 
+In order to be able to use CSP's strictest setting (`default-src: self`) you must make some changes in your application. See the sections below for guidance.
 
 ### 2.1 Changing the Theme
 
-Create a new file that will hold the Dojo configuration in your theme folder (`theme/web/appSetup.js`) with the following configuration:
+Create a new file to contain the Dojo configuration in your theme folder (*theme/web/appSetup.js*) with the following configuration:
 
 ```js
 window.dojoConfig = {
@@ -44,7 +44,7 @@ if (!document.cookie || !document.cookie.match(/(^|;)originURI=/gi))
 	document.cookie = "originURI=/login.html" + (window.location.protocol === "https:" ? ";SameSite=None;Secure" : "");
 ```
 
-Now create a second file that will hold the script for unsupported browsers (`theme/web/unsupported-browser.js`):
+Create a second file to contain the script for unsupported browsers (*theme/web/unsupported-browser.js*):
 
 ```js
 // Redirect to unsupported browser page if opened from browser that doesn't support Symbols
@@ -55,11 +55,13 @@ if (typeof Symbol !== "function") {
 }
 ```
 
-To tie it together, the `theme/web/index.html` file needs to be changed to use these files directly. In case, you do not have this file, please follow [these instructions](https://docs.mendix.com/howto/front-end/customize-styling-new#9-customizing-index-html-web). In your `theme/web/index.html`:
+Finally, the *theme/web/index.html* file needs to be changed to use these files directly. If you lack this file, please follow the [Customizing index.html (Web)](/howto/front-end/customize-styling-new#custom-web) section of *Customize Styling*.
 
-- Remove the line with the `{{unsupportedbrowsers}}` tag
-- Remove the `<script>` tag with the `dojoConfig` inside
-- At the top of the `<head`> tag, add a reference to the `unsupported-browser.js` script:
+In *theme/web/index.html* do the following:
+
+1. Remove the line with the `{{unsupportedbrowsers}}` tag
+1. Remove the `<script>` tag with the `dojoConfig` inside
+1.  At the top of the `<head`> tag, add a reference to the `unsupported-browser.js` script:
 
     ```js
     <html>
@@ -70,7 +72,7 @@ To tie it together, the `theme/web/index.html` file needs to be changed to use t
         ...
     </html>
     ```
-- In the `<body>` tag, add a reference to the `appSetup.js` script before `mxui.js` is loaded:
+1.  In the `<body>` tag, add a reference to the `appSetup.js` script before `mxui.js` is loaded:
 
     ```js
     <html>
@@ -83,10 +85,11 @@ To tie it together, the `theme/web/index.html` file needs to be changed to use t
     </html>
     ```
 
-The last step is to ensure you are not using any external fonts by checking the styling of your theme and making sure all of the fonts are loaded locally.
+Lastly, ensure you are not using any external fonts by checking your theme's styling to confirm all of the fonts are loaded locally.
 
 #### 2.1.1 Testing Your Changes Locally
-To ensure the changes you've made are working locally, you can temporarily enforce the header by adding the following to your `theme/web/index.html` at the top of the `<head>` tag:
+
+To check that your changes are working locally, you can temporarily enforce the header by adding the following *theme/web/index.html* at the top of the `<head>` tag:
 
 ```html
 <html>
@@ -96,13 +99,13 @@ To ensure the changes you've made are working locally, you can temporarily enfor
 </html>
 ```
 
-After redeploying your app locally, it should function as normal. If your application does not load, or if there are any errors, go back to the first step and ensure you've gone through all steps necessary.
+After redeploying your app locally, it should function as normal. If your app does not load or if there are errors, check that you have completed all steps listed above.
 
-Don't forget to remove this line after you're done testing your changes.
+After you finish testing locally, remember to remove the line of code in the `head` tag.
 
 ### 2.2 Enabling the Header in the Cloud
 
-At this point you can enable the header in the cloud as mentioned [here](https://docs.mendix.com/developerportal/deploy/environments-details#http-headers).
+To enable the header in the cloud, as mentioned [here](https://docs.mendix.com/developerportal/deploy/environments-details#http-headers).
 
 ## 3 Read More
 

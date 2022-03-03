@@ -179,7 +179,7 @@ You can configure your environments with email addresses that you wish to use to
 
 ![cs-console](attachments/email-service/cs-console.png)
 
-You can use the **Email ID** text input box to provide a list of comma-separated email addresses. 
+You can use the **Email ID** text input box to provide sender's email address. 
 
 ![cs-console-email-text-input](attachments/email-service/cs-console-email-text-input.png)
 
@@ -187,7 +187,7 @@ Optionally you can also provide **Mail From Domain** information that you may wi
 
 ![cs-console-mail-from-domain-text-input](attachments/email-service/cs-console-mail-from-domain-text-input.png)
 
-You can also opt for the domain configuration by providing the domain address. Along with the domain, you can also provide a list of comma-separated email addresses to be used to send emails. 
+You can also opt for the domain configuration by providing the domain address. Along with the domain, you are required to provide sender's email addresses to be used to send emails. 
 
 ![cs-console-domain](attachments/email-service/cs-console-domain.png)
 
@@ -226,6 +226,34 @@ You can select either **Email** or **Domain** verification by using the radio op
 ![cs-console-domain-verification](attachments/email-service/cs-console-domain-verification.png)
 
 #### 5.3.1 Email Id Verification
+
+When you configure email address for your environment, you are required to go through a verification process. You can use the **Verify** button to verify individual email addresses. 
+
+![cs-email-verification](attachments/email-service/cs-email-verification.png)
+
+Soon after you should get an alert window indicating that the verification process is in progress.
+
+![cs-email-verification-in-progress](attachments/email-service/cs-email-verification-in-progress.png)
+
+You should receive an email from `verify-email@notify.mendix.com` to the configured email address. Click on the link provided in the email to complete the process. Until the verification process is complete, you shall continue to see a message saying the verification is **Pending**.
+
+![cs-email-verification-pending](attachments/email-service/cs-email-verification-pending.png)
+
+#### 5.3.2 Domain Verification
+
+Similarly, you can opt for domain verification. You can use the **Save** button to verify domain address. 
+
+![cs-domain-verification](attachments/email-service/cs-domain-verification.png)
+
+You should get an alert window indicating that the verification process is in progress.
+
+![cs-domain-verification-in-progress](attachments/email-service/cs-domain-verification-in-progress.png)
+
+Until the verification process is complete, you shall continue to see a message saying the verification is **Pending**.
+
+![cs-domain-verification-pending](attachments/email-service/cs-domain-verification-pending.png)
+
+
 
 ## 6 Read More
 * [Send Emails from a Mendix App](https://academy.mendix.com/link/paths/117/Send-Emails-from-a-Mendix-App-)

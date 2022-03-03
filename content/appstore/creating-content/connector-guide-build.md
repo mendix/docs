@@ -42,7 +42,7 @@ They can also be used to package a Java library provided by the other system to 
 This chart shows the available solutions for when you want to connect Mendix apps to other Mendix apps:<br/>  
 
 | Category | Solution |
-| ---------- | ---------- |
+| --- | --- |
 | Platform-supported protocols | Connect to two or more Mendix applications using platform-supported facilities:<br> SOAP web services (see [Published Web Services](https://docs.mendix.com/refguide/published-web-services) and [Consumed Web Services](https://docs.mendix.com/refguide/consumed-web-services)), REST web services (see [Published REST Services](/refguide/published-rest-service) and [Consumed REST Services](/refguide/consumed-rest-services)), OData (see [Published OData Services](https://docs.mendix.com/refguide/published-odata-services) and [Consumed OData Services](https://docs.mendix.com/refguide/consumed-odata-services)), or Data Hub (see the [Data Hub Guide](https://docs.mendix.com/data-hub/)). | 
 | Unsupported protocols   | Build a module to connect either with alternative protocols or by encapsulating one of the platform supported protocols. You can do this with [Java actions](https://docs.mendix.com/refguide/java-actions) or [JavaScript actions](https://docs.mendix.com/refguide/javascript-actions).  | 
 
@@ -51,7 +51,7 @@ This chart shows the available solutions for when you want to connect Mendix app
 This chart shows the available solutions for when you want to connect Mendix apps to third-party systems:<br/>
 
 | Category | Solution |
-| ---------- | ---------- |
+| --- | --- |
 | Platform-supported protocols | Connect a Mendix application to one or more third party applications using platform-supported facilities: SOAP web services, REST web services or ODATA.       | 
 | eQ-supported protocols   | Use eQ supported facilities: Web services, REST, OData | 
 | Unsupported protocols   | Build a module to connect either via alternative protocols, or by encapsulating one of the platform supported protocols. |
@@ -68,7 +68,7 @@ Once you deploy an application, the connector will automatically deploy with it.
 
 As an example, check out the [AWS IoT](/appstore/connectors/aws-iot) connector. This connector uses AWS-provided Java libraries to interact with the AWS IoT service. The functions from these Java libraries in turn are exposed via a set of Mendix Java actions that are available in the toolbox to use in your logic.
 
-#### 2.3.1 Future Versions of Connectors
+### 2.4 Future Versions of Connectors
 
 Another approach to connecting to external systems is by creating connector applications that wrap those systems with OData APIs. This approach will be discussed in the future, either here or in a linked document.
 

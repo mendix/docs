@@ -170,11 +170,18 @@ If you are using Mendix version 9.9.0 or above, you can use the `com.mendix.core
 
 ### 2.7 Execution Context {#context}
 
-Prior to Mendix 9.6 tasks were always executed in a *sudo* context, even if the scheduling microflow had **Apply entity access** set to *true* (see [Microflow Properties](microflow) for more information). As of Mendix 9.6 this behavior has been deprecated and tasks now run in an equivalent context to the one in which they were scheduled, with entity access applied. This has the following effect:
+Prior to Mendix 9.6 tasks were always executed in a *sudo* context, even if the scheduling microflow had **Apply entity access** set to *true* (see [Microflow Properties](microflow) for more information). As of Mendix 9.6 this behavior has been deprecated and tasks now run in an equivalent context to the one in which they were scheduled. This has the following effect:
+
+* When the microflow corresponding to the task has **Apply entity access** set to *false*, the task will be executed in a *sudo* context.
+
+In the case where **Apply entity access** is set to *true*, the following rules apply:
 
 * When a user is logged in, the task will be executed in a new context for the same named user. This context will be the same as if the user is logged in. 
 * When no user is logged in, the task will be executed in a new anonymous context. This context will be for a new anonymous user with the same language and timezone as the original user.
-* When a system session is used to schedule the task (using the Java API), the task will be executed in a new system context.
+
+There is one exception to the above rules:
+
+* When a system context is used to schedule the task using the [Java API](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/actionmanagement/ActionCallBuilder.html#executeInBackground(com.mendix.systemwideinterfaces.core.IContext,java.lang.String)), the task will be executed in a new system context, regardless of the **Apply entity access** setting.
 
 Projects containing task queues that were created before Mendix 9.6 will get a deprecation warning in the log: `The project setting 'System context tasks' is deprecated`.
 You can remove this warning in the **Runtime** tab of the app **Settings** in Studio Pro. Set **System context tasks** to *no* to execute tasks in an equivalent context to the one they were created in and remove the warning.

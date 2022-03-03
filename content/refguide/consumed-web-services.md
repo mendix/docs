@@ -47,7 +47,7 @@ XML can be used in Mendix for serialization and de-serialization in order to exp
 See [XML Schemas](xml-schemas) for further information on importing XSDs into your application.
 See  [Import Mappings](import-mappings) for further information on mapping XML documents to domain model entities and [Export Mappings](export-mappings) for further information on exporting domain entities as XML.
 
-## 4 SOAP
+## 4 SOAP {#soap}
 
 In the enterprise market, SOAP (see also [Wikipedia](http://en.wikipedia.org/wiki/SOAP_(protocol))) is a common protocol for web services. It defines a standard way for systems to communicate with each other. XML is used as the message format.
 

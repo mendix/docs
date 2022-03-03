@@ -71,7 +71,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
    ![secretkey-username-mailfromdomain-spfrecordvalue-mxrecordvalue-generated](attachments/email-service/binding-key-generation.png)
 
-9. After the order is created successfully, the Technical Owner also receives an email to confirm the email address. Follow the instructions in the email to confirm the email address. Once this email address is confirmed, this email address is used as the sender's email address when the app sends an email.
+6. After the order is created successfully, the Technical Owner also receives an email to confirm the email address. Follow the instructions in the email to confirm the email address. Once this email address is confirmed, this email address is used as the sender's email address when the app sends an email.
 
 ### 3.2 Configuring userName and secretKey for App Deployment
 
@@ -189,7 +189,7 @@ Optionally you can also provide **Mail From Domain** information that you may wi
 
 You can also opt for the domain configuration by providing the domain address. Along with the domain, you can also provide a list of comma-separated email addresses to be used to send emails. 
 
-![cs-console-domain-text-input](attachments/email-service/cs-console-domain-text-input.png)
+![cs-console-domain](attachments/email-service/cs-console-domain.png)
 
 ### 5.1 Configuring the Mail From Domain {#config-mail-from-domain}
 
@@ -216,6 +216,16 @@ The SPF record and MX record use the formats shown in the following table:
 | --- | --- | --- |
 | notification.domain.com | TXT | "v=spf1 include:amazonses.com ~all" |
 |notification.domain.com | MX | 10 feedback-smtp.eu-central-1.amazonses.com|
+
+### 5.3 Verification
+
+You can select either **Email** or **Domain** verification by using the radio option.
+
+![cs-console-email-verification](attachments/email-service/cs-console-email-verification.png)
+
+![cs-console-domain-verification](attachments/email-service/cs-console-domain-verification.png)
+
+#### 5.3.1 Email Id Verification
 
 ## 6 Read More
 * [Send Emails from a Mendix App](https://academy.mendix.com/link/paths/117/Send-Emails-from-a-Mendix-App-)

@@ -31,11 +31,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 There are three ways to install a Marketplace component:
 
-* [Download]( #downloading) the component from the Marketplace within Studio Pro – this works for all types of marketplace components
-* [Import](#import) the component from the **App Explorer** – this only works for [connectors](/appstore/connectors/) and [modules](/appstore/modules/)
+* [Download]( #downloading) the component from the Marketplace within Studio Pro – this works for all types of marketplace components, except [app services](/appstore/app-services/)
+* [Import](#import) the component from the **App Explorer** – this works for [connectors](/appstore/connectors/), [modules](/appstore/modules/), and [app services](/appstore/app-services/)
 * [Manually add](#add) the component into the app directory – this only works for [widgets](/appstore/widgets/)
 
 ### 3.1 Downloading Content from the Marketplace Within Studio Pro {#downloading}
+
+{{% alert type="info" %}}This procedure only works for all types of marketplace components, except [app services](/appstore/app-services/).{{% /alert %}}
 
 1. Open Studio Pro and sign in with your Mendix credentials.
 2. Open the app in which you want to install the component from the Marketplace.
@@ -83,7 +85,7 @@ There are three ways to install a Marketplace component:
 
 ### 3.2 Importing Content from the App Explorer {#import}
 
-{{% alert type="info" %}}This procedure only works for [connectors](/appstore/connectors/) and [modules](/appstore/modules/).{{% /alert %}}
+{{% alert type="info" %}}This procedure works for [connectors](/appstore/connectors/), [modules](/appstore/modules/), and [app services](/appstore/app-services/).{{% /alert %}}
 
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and sign in with your Mendix credentials.
 2. **Search** the component and open the component page.

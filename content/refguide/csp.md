@@ -13,7 +13,7 @@ By employing a content security policy (CSP) in your app, you can protect it fro
 
 In Mendix Studio Pro 9.12.0 and higher, an application can be made more strict and secure by setting its CSP to `default-src: self`. By doing so, only resources from the same domain can be loaded and no resources can be loaded inline (such as Base64 images or inline JavaScript).
 
-For more background information on CSMs, see [Content Security Policy](https://owasp.org/www-community/controls/Content_Security_Policy) from the software security nonprofit OWASP.
+For more background information on CSMs, see [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) from Mozilla.
 
 ## 2 Setup
 
@@ -105,8 +105,4 @@ After you finish testing locally, remember to remove the line of code in the `he
 
 ### 2.2 Enabling the Header in the Cloud
 
-To enable the header in the cloud, as mentioned [here](https://docs.mendix.com/developerportal/deploy/environments-details#http-headers).
-
-## 3 Read More
-
-* https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP - More information on CSP
+To enable the header in the cloud, follow the instructions in the [HTTP Headers](/developerportal/deploy/environments-details#http-headers) section of *Environment Details*.

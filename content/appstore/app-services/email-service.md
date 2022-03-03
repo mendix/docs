@@ -69,7 +69,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 4. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
 5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. The system generates **SecretKey** and **UserName** {{% TODO: change the picture below %}}.
 
-   ![secretkey-username-mailfromdomain-spfrecordvalue-mxrecordvalue-generated](attachments/email-service/binding-key-generation.png)
+   ![secretkey-username-generated](attachments/email-service/cs-binding-key-generation.png)
 
 6. After the order is created successfully, the Technical Owner also receives an email to confirm the email address. Follow the instructions in the email to confirm the email address. Once this email address is confirmed, this email address is used as the sender's email address when the app sends an email.
 
@@ -107,7 +107,7 @@ To configure the **Send email** activity, double-click the activity and specify 
 ![send-email-dialog-box](attachments/email-service/send-email-dialog-box.png)
 
 * **Required Fields**
-  * **From name** – Defines the sender of the email
+  * **From** – Defines the sender's email
   * **To**  – Defines the recipients of the email
   * **Subject**  – Defines the subject of the email
 *  **Optional Fields**

@@ -43,19 +43,17 @@ To configure this widget, follow these steps:
 ### 2.1 General Tab
 
 * **Editor style**
-	*  **Toolbar** (default) – if selected, the toolbar is always displayed
+    * **Toolbar** (default) – if selected, the toolbar is always displayed
 
-      ![Example of toolbar](attachments/ckeditor/basic-toolbar.png)
+        ![Example of toolbar](attachments/ckeditor/basic-toolbar.png)
 	
-	* **Inline** – if selected, the toolbar pops up only when the user starts typing in the editor
-	  ![Example of toolbar](attachments/ckeditor/inline-toolbar.png)
+	  * **Inline** – if selected, the toolbar pops up only when the user starts typing in the editor
+        ![Example of toolbar](attachments/ckeditor/inline-toolbar.png)
 	
 * **Value attribute** (required) – sets a String attribute to store the rich-text content
-
 * **Sanitize content**	
-	* **Yes** (default) – if selected, untrusted strings in user's content gets removed
-	* **No** – if selected, untrusted strings in user's content is not removed	
-	
+    * **Yes** (default) – if selected, untrusted strings in user's content gets removed
+    * **No** – if selected, untrusted strings in user's content is not removed	
 *  **Read-only style** – defines how the editor looks when the editor becomes read-only
 	
     {{% alert type="info" %}}The editor becomes read-only when the **Editable** property is set to **Never** or **Condition** returns `false`.{{% /alert %}}
@@ -63,14 +61,13 @@ To configure this widget, follow these steps:
 	 * **Rich text** – if selected, only text is shown
 	 * **Bordered** –  if selected, text is shown in a frame
 	 * **Bordered toolbar** – if selected, text is shown in a frame and the toolbar is also visible, but the user cannot make any changes
-	
 *  **Editable** – determines when user can edit content in the editor and when it is read-only
 
     {{% alert type="info" %}}For more information, see [Editability Section](https://docs.mendix.com/refguide/common-widget-properties#editability) in the *Studio Pro 9 Guide*.{{% /alert %}}
 
 * **Show label** 
     * **Yes** – if selected, you can define the label caption
-      * **Label caption** – defines the label caption of the widget that is displayed on the page
+     	 * **Label caption** – defines the label caption of the widget that is displayed on the page
     * **No** (default) – if selected, there is no label for this widget on the page
 * **Visible** – determines if the widget is visible on the page
 
@@ -79,54 +76,54 @@ To configure this widget, follow these steps:
 ### 2.2 Toolbar Tab
 
 * **Presets** – defines which pre-set buttons are included in the editor
-	* **Basic** – if selected, the editor contains buttons suitable for quick input fields
-	  
-	  ![Example of toolbar](attachments/ckeditor/basic-toolbar.png)
+    * **Basic** – if selected, the editor contains buttons suitable for quick input fields
+
+        ![Example of toolbar](attachments/ckeditor/basic-toolbar.png)
 	
-	* **Standard** – if selected, the editor contains buttons used for creating standards-compliant content
+	  * **Standard** – if selected, the editor contains buttons used for creating standards-compliant content
 	  
-	  ![Example of toolbar](attachments/ckeditor/standard-toolbar.png)
+        ![Example of toolbar](attachments/ckeditor/standard-toolbar.png)
 	  
-	* **Full** – if selected, the editor contains plenty of buttons suitable for various different needs
-	  ![Example of toolbar](attachments/ckeditor/full-toolbar.png)
+	  * **Full** – if selected, the editor contains plenty of buttons suitable for various different needs
+
+        ![Example of toolbar](attachments/ckeditor/full-toolbar.png)
 	  
-	* **Custom** – allows you to make your toolbar with customized options	
-    
-    * **Toolbar group** 
-      * **Basic** (default) – if selected, you can select which of the following toolbar groups are available in the toolbar
-		    * **Document Group**
-		    * **Clipboard Group**
-		    * **Editing Group**
-		    * **Forms group**
-		    * **Separator group**
-		    * **Basic style group**
-		    * **Paragraph group**
-		    * **Links group**
-		    * **Separator 2 group**
-		    * **Styles group**
-		    * **Colors group**
-		    * **Tools group**
-		    * **Others group**
-    * **Advanced** – if selected, you can configure buttons for different toolbar groups
+    * **Custom** – allows you to make your toolbar with customized options	
+        * **Toolbar group** 
+            * **Basic** (default) – if selected, you can select which of the following toolbar groups are available in the toolbar
+                * **Document Group**
+                * **Clipboard Group**
+                * **Editing Group**
+                * **Forms group**
+                * **Separator group**
+                * **Basic style group**
+                * **Paragraph group**
+                * **Links group**
+                * **Separator 2 group**
+                * **Styles group**
+                * **Colors group**
+                * **Tools group**
+                * **Others group**
+            * **Advanced** – if selected, you can configure buttons for different toolbar groups
 		
-		{{% alert type="info" %}}All the toolbar groups that you configure will be available in the toolbar. The buttons that have the same **Toolbar ID** will be grouped together, with vertical bars ("|") separating different toolbar groups.{{% /alert %}}
+                {{% alert type="info" %}}All the toolbar groups that you configure will be available in the toolbar. The buttons that have the same **Toolbar ID** will be grouped together, with vertical bars ("|") separating different toolbar groups.{{% /alert %}}
 		
-		* **New** – opens the **Edit Advanced Groups Item** dialog box where you can add a new button to a toolbar group
-		  * **Button** – specifies the button to be included in the toolbar group
-		  * **Toolbar ID** – specifies the ID of the toolbar group in which this button should be included
-		* **Delete** – deletes the selected button
-		* **Edit** – opens the **Edit Advanced Groups Item** dialog box where you can make changes to the selected button 
+                * **New** – opens the **Edit Advanced Groups Item** dialog box where you can add a new button to a toolbar group
+                    * **Button** – specifies the button to be included in the toolbar group
+                    * **Toolbar ID** – specifies the ID of the toolbar group in which this button should be included
+                * **Delete** – deletes the selected button
+                * **Edit** – opens the **Edit Advanced Groups Item** dialog box where you can make changes to the selected button 
 
 ### 2.3 Dimensions Tab
 
 * **Width unit** – the width of the widget
-  * **Percentage** – specifies the width in relation to the rest of the elements on the page
-  * **Pixels** – specifies the width in pixels
+    * **Percentage** – specifies the width in relation to the rest of the elements on the page
+    * **Pixels** – specifies the width in pixels
 * **Width** – used as an appropriate CSS value
 * **Height unit** – the height of the widget
-  * **Percentage of width** – specifies the height in relation to the width
-  * **Pixels** – specifies the height in pixels
-  * **Percentage of parent** – specifies the width in relation to the rest of the elements on the page
+    * **Percentage of width** – specifies the height in relation to the width
+    * **Pixels** – specifies the height in pixels
+    * **Percentage of parent** – specifies the width in relation to the rest of the elements on the page
 * **Height** – used as an appropriate CSS value
 
 ### 2.5 Events Tab
@@ -137,36 +134,33 @@ To configure this widget, follow these steps:
 ### 2.4 Advanced Tab
 
 * **Enter mode** – defines which of the following elements is wrapped when the user presses the <kbd>Enter</kbd> key:
-	* **Paragraph** (`<p>`)
-	* **Break lines** (`<br>`)
-	* **Blocks** (`<div>`)
-	
+    * **Paragraph** (`<p>`)
+    * **Break lines** (`<br>`)
+    * **Blocks** (`<div>`)
 * **Shift enter mode** – defines which of the following elements is wrapped when the user presses the <kbd>Shift</kbd> + <kbd>Enter</kbd> keys:
-  * **Paragraph** (`<p>`)
-  * **Break lines** (`<br>`)
-  * **Blocks** (`<div>`)
-  
+    * **Paragraph** (`<p>`)
+    * **Break lines** (`<br>`)
+    * **Blocks** (`<div>`)
 * **Spellchecker**
-  * **Yes** (default) – if selected, the inline spelling and grammar checker is enabled
-  * **No** – if selected, the inline spelling and grammar checker is disabled 
-  
+    * **Yes** (default) – if selected, the inline spelling and grammar checker is enabled
+    * **No** – if selected, the inline spelling and grammar checker is disabled 
 * **Enable code highlight**
-  * **Yes** – if selected, the **Insert Code Snippet** button below becomes available in the toolbar, which enables the user to insert a code snippet that is displayed with highlighted syntax in the editor 
-  
-    ![insert-code-snippet](attachments/ckeditor/insert-code-snippet.png)
-  
-  * **No** (default) – if selected, the **Insert Code Snippet** button is unavailable in the toolbar
+    * **Yes** – if selected, the **Insert Code Snippet** button below becomes available in the toolbar, which enables the user to insert a code snippet that is displayed with highlighted syntax in the editor 
+    
+        ![insert-code-snippet](attachments/ckeditor/insert-code-snippet.png)
+    
+    * **No** (default) – if selected, the **Insert Code Snippet** button is unavailable in the toolbar
 * **Advanced content filtering**  
     * **Auto** (default) – if selected, the content is sanitized automatically
     * **Custom** – if selected, you can customize how content is sanitized with the following items:
-      * **Allowed content** – specifies tags that are allowed, for example, `h1 h2 h3 p blockquote strong em del ins table tr th td caption`
-      * **Disallowed content** – specifies tags that get removed
-  
-    {{% alert type="info" %}}For more information about how to use tags for content filtering, see the [Custom ACF Mode](https://ckeditor.com/docs/ckeditor4/latest/examples/acfcustom.html) section in *Advanced Content Filter – Custom Mode*{{% /alert %}}
+        * **Allowed content** – specifies tags that are allowed, for example, `h1 h2 h3 p blockquote strong em del ins table tr th td caption`
+        * **Disallowed content** – specifies tags that get removed
+    
+          {{% alert type="info" %}}For more information about how to use tags for content filtering, see the [Custom ACF Mode](https://ckeditor.com/docs/ckeditor4/latest/examples/acfcustom.html) section in *Advanced Content Filter – Custom Mode*{{% /alert %}}
 
 ## 3 Widgets Below Version 2.0.0
 
-Feature:
+Features:
 
 * Format selected text
 * HTML output of formatted text
@@ -174,11 +168,11 @@ Feature:
 * Use the custom option to select which editing options you want to show
 * Input and display text is sanitized – all unsupported HTML tags and JavaScript is removed for security reasons. The following are supported:
 
-  * Tags: `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `br`, `a`, `ul`, `li`, `ol`, `s`, `u`, `em`, `pre`, `strong`, `blockquote`, `span`
-    * Attributes:
-    	* For all tags: `class`, `style`
-    	* `a` tag: `href`, `name`, `target`
-  * Schemes: `http`, `https`, `ftp`, `mailto`
+    * Tags: `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `br`, `a`, `ul`, `li`, `ol`, `s`, `u`, `em`, `pre`, `strong`, `blockquote`, `span`
+        * Attributes:
+            * For all tags: `class`, `style`
+            * `a` tag: `href`, `name`, `target`
+    * Schemes: `http`, `https`, `ftp`, `mailto`
 
-  {{% alert type="info" %}}To be fully secure, all user HTML input should be sanitized on the server side too. This could be done with the XSSSanitize action found in the [Community Commons](/appstore/modules/community-commons-function-library). When the option 'Sanitize content' is set to 'false' server side sanitating is required before showing any HTML content.{{% /alert %}}
+    {{% alert type="info" %}}To be fully secure, all user HTML input should be sanitized on the server side too. This could be done with the XSSSanitize action found in the [Community Commons](/appstore/modules/community-commons-function-library). When the option 'Sanitize content' is set to 'false' server side sanitating is required before showing any HTML content.{{% /alert %}}
 

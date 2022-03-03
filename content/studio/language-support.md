@@ -46,3 +46,6 @@ When working in a language which is not the default, you can identify texts that
 If you edit your app to add new widgets while not in the default language, any new translatable texts for those widgets will be added to the current language. The text in the default language will either be left blank or will have the placeholder text for the widget.
 
 ## 4 Read More
+
+* [General Info](general)
+* [Language Menu](/refguide/translatable-texts)

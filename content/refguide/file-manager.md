@@ -20,7 +20,7 @@ For an external entity to be used as a file source, it must be defined as a medi
 {{% /alert %}}
 
 {{% alert type="info" %}}
-When uploading a file through the file manager, the FileDocument object will be committed immediately.
+When uploading a file through the file manager, the FileDocument object will be committed immediately. When used inside a form, this happens on submission.
 {{% /alert %}}
 
 ## 2 Properties

@@ -91,11 +91,15 @@ When deploying your app for the first time, there will be no environments availa
 
 1. Click **Create Environment**.
 
+![](attachments/private-cloud-deploy/selectDeploymentpackage.png)
+
 2. Select the deployment package from the list of deployment packages and click **Next**.
 
 3. A **UUID** will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 
     {{% alert type="info" %}}You can change the UUID if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.{{% /alert %}}
+
+ ![](attachments/private-cloud-deploy/customizeEnvironmentPage1.png)
 
 4. Enter **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
 
@@ -109,8 +113,9 @@ When deploying your app for the first time, there will be no environments availa
     {{% alert type="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/project-security). You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
 
 7. Click **Next**.
+
+![](attachments/private-cloud-deploy/configureEnvResources.png)
    
-    ![](attachments/private-cloud-deploy/create-environment.png)
 
 8. Select **Core Resources**.
 
@@ -150,7 +155,7 @@ You can also deploy an existing deployment package to an environment without hav
 Currently, deployment packages are only valid for two weeks. Older deployment packages will still be visible, but if you try to deploy a package that was created more than two weeks ago, the deployment will fail and return a 403 error. The solution is to [recreate the deployment package](#create-deployment-package).
 {{% /alert %}}
 
-After creating an environment and deployment package (see [Creating an Environment](#create-environment) and [Creating a Deployment Package](#create-deployment-package), above) you will now have a deployment package and an environment. Check that there is a green tick next to the deployment package and the resources of the environment. If any of these have failed, try to create the environment or the deployment package again, and contact your cluster manager. If neither of these solves the problem, contact Mendix Support for help.
+If creation of environment fails, then contact your cluster manager. If neither of these solves the problem, contact Mendix Support for help.
 
 You can deploy the deployment package of your app by doing the following:
 

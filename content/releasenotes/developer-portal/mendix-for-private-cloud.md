@@ -12,6 +12,16 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
+### March 10th, 2022
+
+#### Portal Improvement
+
+* We have added support for Pod Autoscaling
+* Allow sorting and searching of members invited for a namespace
+* Allow sorting and searching of members invited for a cluster
+* Allow sorting and searching of database and storage plans in a namespace
+* Added a tootip next to the Purpose field
+
 ### March 4th, 2022
 
 #### mxpc-cli v2.4.1 for Mendix Operator v2.3.0

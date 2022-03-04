@@ -16,8 +16,8 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### mxpc-cli v2.4.1 for Mendix Operator v2.3.0
 
-* We have added an option to clear the local cache and  check for updates to verify that the hash of your downloaded images matches with he remote images.
-* We have also fixed issue where customer was getting an error while installing the Operator (Ticket 142583).
+* We have added an option to clear the local cache and check for updates to verify that the hash of your downloaded images matches with remote images.
+* We have also fixed issue where users got an error while installing the Operator (Ticket 142583).
 
 ### February 10th, 2022
 

@@ -71,7 +71,7 @@ Before you can create an environment, you will need to create a deployment packa
 
 4. Enter a **New version** and **Tag description** according to your own deployment procedure.
 
-5. Select an environment in **Environment for Autodeploy** if you want to deploy and start your package immediately. You need to make sure that the environment is ready using the techniques described in [Deploying the Deployment Package](#deploy-package), below, where you can also see how to deploy a deployment package manually.
+5. Select an environment in **Environment for Autodeploy** if you want to deploy and start your package immediately. You need to make sure that the environment is ready using the techniques described in the [Deploying the Deployment Package](#deploy-package) section below, where you can also see how to deploy a deployment package manually.
 
 6. Click **Build this revision.**
    
@@ -84,13 +84,14 @@ Alternatively, you can upload an existing MDA by clicking **Upload Package**.
 {{% /alert %}}
 
 ### 3.3 Creating an Environment{#create-environment}
+
 When deploying your app for the first time, there will be no environments available. Before creating an environment, make sure that you have created/uploaded deployment package. The **Environments** page for your app in the Developer Portal will show you the current status.
 
 ![](attachments/private-cloud-deploy/image5.png)
 
 1. Click **Create Environment**.
 
-2. Select the deployment package from the list of deployment packages and click Next
+2. Select the deployment package from the list of deployment packages and click **Next**.
 
 3. A **UUID** will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 
@@ -151,6 +152,7 @@ Currently, deployment packages are only valid for two weeks. Older deployment pa
 
 After creating an environment and deployment package (see [Creating an Environment](#create-environment) and [Creating a Deployment Package](#create-deployment-package), above) you will now have a deployment package and an environment. Check that there is a green tick next to the deployment package and the resources of the environment. If any of these have failed, try to create the environment or the deployment package again, and contact your cluster manager. If neither of these solves the problem, contact Mendix Support for help.
 
+You can deploy the deployment package of your app by doing the following:
 
 1. Click **Deploy** next to the deployment package you wish to deploy.
 

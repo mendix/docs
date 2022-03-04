@@ -39,9 +39,9 @@ A trial gives everyone in your company one-month access to the app service. To s
 3. Select the check box to agree to the **Terms & Conditions**.
 4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used.
-6. Click the link in the email to go to the [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
+6. Click the link in the email to go to the [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) page and log in there. This page shows all the products that you have trials for.
 7. Click **Invoice Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-8. Follow the instructions in the [Creating Binding Keys](/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
+8. Follow the instructions in the [Creating Binding Keys](/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. Save the keys somewhere safe. You need to use them later to [configure](#configure) the keys in your app.
 
 #### 2.1.2 Subscribing to the App Service
 
@@ -52,7 +52,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Contact will receive an email that says the app service is ready to be used.
 6. Click the link in the email to go to the [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
 7. Click **Invoice Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-8. Follow the instructions in the [Creating Binding Keys](/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
+8. Follow the instructions in the [Creating Binding Keys](/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. Save the keys somewhere safe. You need to use them later to [configure](#configure) the keys in your app.
 
 ### 2.2 Installing the Component in Your App
 
@@ -60,7 +60,7 @@ To download and install the Invoice Processing app service in your app, follow t
 
 After the app service is installed, you can find it in the **App Explorer** and also in the **Document Data Capture Service** category in the **Toolbox**.
 
-## 3 Configuration
+## 3 Configuration {#configure}
 
 Before you deploy an app, you should configure the binding keys in your app as follows:
 
@@ -98,19 +98,18 @@ To use the Invoice Processing app service, first you need to create a model, the
 
 4.  Enter a unique **Model Name**, select a **Region**, and then **Country**. You can select multiple countries for a given **Region**.
 
-    {{% alert type=“info” %}}Currently, the supported regions are **America**, **Canada** and **Europe**, and for the **Europe** region, the supported countries are **The Netherlands**, **Germany**, and **United Kingdom**. {{% /alert %}}
+    {{% alert type=“info” %}}Currently, these regions and countries are supported: **USA** (**USA**), **Canada** (**Canada**), **Europe** (**Netherlands**, **Germany**, **Great Britain**).{{% /alert %}}
 
 5.  Click **Create Model**.
-    
-    {{% alert type="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
-   
-    An **Information** pop-up window appears notifying the user that the model is being trained.
-   
-    ![Create Invoice Model dialog box](attachments/invoice-processing/info-pop-up-dialog-box.png)
-   
-6. Click **OK**. The new model appears in the **Existing Models** list with the status **In Progress**.
 
-8. Click **Refresh** and wait until the **Status** of the model becomes **Published**. Once the model is published, it is ready to use.
+    {{% alert type="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
+
+    An **Information** pop-up window appears notifying the user that the model is being trained.
+
+    ![Create Invoice Model dialog box](attachments/invoice-processing/info-pop-up-dialog-box.png)
+
+6. Click **OK**. The new model appears in the **Existing Models** list with the status **In Progress**.
+7. Click **Refresh** and wait until the **Status** of the model becomes **Published**. Once the model is published, it is ready to use.
 
 
 ### 4.2 Creating an Import Mapping{#mapping-file}

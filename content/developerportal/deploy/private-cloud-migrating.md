@@ -43,9 +43,9 @@ Follow these steps to export the Mendix components and store them on your local 
 
     ![](attachments/private-cloud-migrating/export.png)
 
-5. Clear cache button - This will trigger the deletion of local image cache, otherwise the cache is reused when re-downloading the same images.   
+5. Click the **Clear cache** button, which will trigger the deletion of local image cache, otherwise the cache is reused when redownloading the same images.   
 
-6. Check for updates button- This is used to verify that the hash of your downloaded images matches with the latest remote images.  
+6. Click the **Check for updates** button, which is used to verify that the hash of your downloaded images matches with the latest remote images.  
 
 7. Click **Export components**.
 

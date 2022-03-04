@@ -131,15 +131,15 @@ The following microflow shows a possible way to generate HTML content using a te
 
 ![microflow-to-generate-html-body-content](attachments/email-service/generate-html-body-content-microflow.png)
 
-The second step creates an HTML file from the template contents after possible variable substitution.
+The second step of the microflow creates an HTML file from the template contents after possible variable substitution.
 
 ![generate-document-dialog-box](attachments/email-service/generate-document-dialog-box.png)
 
-The third step generates a string from this HTML file using the **String from file** action.
+The third step of the microflow generates a string from this HTML file using the **String from file** action.
 
 ![string-from-file-dialog-box](attachments/email-service/string-from-file-dialog-box.png)
 
- In the last step, you can add the variable for the generated HTML content into the **Body** field of the **Send email** activity.
+ In the last step of the microflow, you can add the variable for the generated HTML content into the **Body** field of the **Send email** activity.
 
 
 ### 4.2 Sending Message with Attachment(s) to Recipients

@@ -35,7 +35,7 @@ On the **Excel Exporter** page, there are the following items:
 
   * **Filename** : the name of the template
 
-  * **Input object** (optional)
+  * **Input object **(optional): an entity associated to your entity to be exported
 
   * **Description** (optional): the description of the template
 
@@ -78,11 +78,11 @@ On the template details page, you can define the template with the following ite
      
       * **Style name**: the name of the style
       
-      * **Bold**: when selected, the text is in bold
+      * **Bold**: if selected, the text is in bold
       
-      * **Italic**: when selected, the text is in italics
+      * **Italic**: if selected, the text is in italics
       
-      * **Underline**: when selected, the text is underlined
+      * **Underline**: if selected, the text is underlined
       
       * **Text height** (optional): the height of the text
       
@@ -100,22 +100,22 @@ On the template details page, you can define the template with the following ite
       
         {{% alert type="info" %}}The rotation must be between -90 and 90 degrees. If the number is negative, the rotation is clockwise.{{% /alert %}}
       
-      * **Wrap text**: when selected, the text in a cell can be wrapped to a line
+      * **Wrap text**: if selected, the text in a cell can be wrapped to a line
       
-      * **Border top**: maximum value is 14
+      * **Border top**: each number represents a type of border in Excel sheet (the maximum value is 14)
       
-      * **Border bottom**: maximum value is 14
+      * **Border bottom**: each number represents a type of border in Excel sheet (the maximum value is 14)
       
-      * **Border left**: maximum value is 14
+      * **Border left**: each number represents a type of border in Excel sheet (the maximum value is 14)
       
-      * **Border right**: maximum value is 14
+      * **Border right**: each number represents a type of border in Excel sheet (the maximum value is 14)
       
       * **Border color**: the color of the cell borders
       
       * **Format**: **General** or **Number**
       
         * When **Number** is selected, **Decimal places** becomes visible
-          * **Decimal places**: defines how numbers are displayed (for instance, 0.010 has 3 decimal places, and 0.2 has 1 decimal place)
+          * **Decimal places**: defines the number of decimal places (for instance, 0.010 has 3 decimal places, and 0.2 has 1 decimal place)
       
    * **Edit**: opens the **Edit style** dialog box where you can make changes to the selected style
    
@@ -138,30 +138,30 @@ On the sheet details page, you can define sheets with the following items:
 
 * **Row object**: the object data used for the rows
 
-* **Reference to template input object **(optional): the reference to the template input object (if input object is used)
+* **Reference to template input object **(optional): the reference to the template input object (if **Input object** is used)
 
 * **Sheet input object**: the object that is the input for this sheet
 
 * **Start retrieved data at row**: the row where the header is
 
-* **Distinct duplicate data**:
+* **Distinct duplicate data**
   
-  * When selected, duplicate data are not exported
-  * When unselected, duplicate data are exported
+  * If selected, duplicate data are not exported
+  * If unselected, duplicate data are exported
   
-* **Use static data**: when selected, the [Static data tab](#static-data-tab) becomes visible
+* **Use static data**: if selected, the [Static data tab](#static-data-tab) becomes visible
 
-* **Column default width**:
+* **Column default width**
 
-  * When selected, the default column width is used
-  * When unselected, you can set a new default row height in the **Default column height in pixels** field
+  * If selected, the default column width is used
+  * If unselected, you can set a new default row height in the **Default column height in pixels** field
 
 * **Default text style**: the default style of the text when no style is applied
 
 * **Row default height**
 
-  * When selected, the default row height is used
-  * When unselected, you can set a new default row height in the **Default column height in points** field
+  * If selected, the default row height is used
+  * If unselected, you can set a new default row height in the **Default column height in points** field
 
 * **Default header text style**: the default style of the header text
 
@@ -174,7 +174,7 @@ On the **Static data** tab, there are the following items:
   * **Column place**: the column in which the static data are shown
   * **Row place**:  the row in which the static data are shown
   * **Static type**: the type of the static data
-  * –     **Name**: the name of the cell where the static data are placed
+  * **Name**: the name of the cell where the static data are placed
 
 * **New**: opens the **New static data** dialog box that contains the following items:
   * **Row**: the row in which the static data are placed
@@ -187,9 +187,9 @@ On the **Static data** tab, there are the following items:
 
   * **Type**: the type of the static data in the cell
     
-    * **Static Text**: when selected, the cell shows static text, and **Name** is changed to **Excel Text**.
-    * **Object data**: when selected, the cell shows object data
-    * **Aggregate function**: when selected, the cell shows an aggregate function
+    * **Static Text**: if selected, the cell shows static text, and **Name** is changed to **Excel Text**.
+    * **Object data**: if selected, the cell shows object data
+    * **Aggregate function**: if selected, the cell shows an aggregate function
     
   * **Style**: the style of the static data
 
@@ -229,17 +229,15 @@ On the **Column data** tab, you can define column data with the following items:
 
     {{% alert type="info" %}}If you use **Upload existing excel file** on the [template details page](#template-details), the column name defined in your Excel template file will be used, and the **Name** you enter here will not be used.{{% /alert %}}
 
-  * **Use name as column header**: if selected, the name
-
   * **Retrieve type**: the type of the data which is retrieved for the column
 
-  * **Aggregate on attribute**:
+  * **Aggregate on attribute**: if selected, you can select an aggregate function
 
-    * **Aggregate type**
+    * **Aggregate type**: sets the type of the aggregate function, which is added in the query
 
-  * **End column with aggregate**: when selected, the result of the function that you select in the **Aggregate type** drop-down list will be shown at the bottom of the column
+  * **End column with aggregate**: if selected, the result of the aggregate function that you select in the **Aggregate type** drop-down list will be shown at the bottom of the column
 
-    * **Aggregate type**: the type of the function, the result of which will be shown at the bottom of the column
+    * **Aggregate type**: the type of the aggregate function, the result of which will be shown at the bottom of the column
 
 * **Edit**: opens the **Edit Mx column** dialog box where you can make changes to the selected column
 
@@ -257,16 +255,11 @@ On the **Column data** tab, you can define column data with the following items:
 
 * **Object and attribute**: the source of the data used for the column
 
-* **Header**
-
-  * **Yes**: the column name is used as a header
-  * **No**: the attribute name is used as a header
-
 * **Specific style**: the style of the column (not including the column header)
 
-* **Data aggregate**:
+* **Data aggregate**: shows if a type of the aggregate function is added in the query
 
-* **Function**: the type of the function, the result of which will be shown at the bottom of the column
+* **Function**: the type of the aggregate function added in the query
 
 * **Result aggregate**: if the result of the function is shown at the button of the column
 
@@ -289,11 +282,11 @@ On the **Associations, constraints and sorting** tab, you can define the associa
   * **New**: opens the **Edit Mx Constant** dialog box that contains the following items:
     * **Sheet row object**: the object of the rows
     * **Retrieve type**: type of the data used as a constraint2
-      * **Attribute**: when selected, you use an attribute as a constraint
+      * **Attribute**: if selected, you use an attribute as a constraint
         * **Select attribute**: the attribute that you use as a constraint
         * **Constraint**: the rule of the constraint
         * **Handling on previous constraint:** how this constraint is used with the previous constraint
-      * **Reference**: when selected, you use a reference as a constraint
+      * **Reference**: if selected, you use a reference as a constraint
         * **Select reference**: the reference that you use for sorting
         * **Select object**: the object that you use for sorting
   * **Edit**: opens the **Edit Mx Constraint** dialog box where you can make changes to the selected constraint
@@ -308,9 +301,9 @@ On the **Associations, constraints and sorting** tab, you can define the associa
     * **Sequence**: the sequence of the sorting
     * **Sorting direction**: the direction of the sorting (**Ascending** or **Descending**)
     * **Retrieve type**: the type of the data used for sorting
-      * **Attribute**: when selected, you use an attribute for sorting
+      * **Attribute**: if selected, you use an attribute for sorting
         * **Select attribute**: the attribute that you use for sorting
-      * **Reference**: when selected, you use a reference for sorting
+      * **Reference**: if selected, you use a reference for sorting
       * **Select reference**: the reference that you use for sorting
       * **Select object**: the object that you use for sorting
   * **Edit**: opens the **Edit sorting** dialog box where you can make changes to the selected sorting
@@ -337,8 +330,8 @@ On the **Sheet Preferences** tab, you can define sheet preferences with the foll
   
     * **Column number**: the number of the column, same as **Column index**
     * **Automatic resize**
-      * When selected, the column width is automatically adjusted and **Column width** is invisible
-      * When unselected, the **Column width** is visible
+      * If selected, the column width is automatically adjusted and **Column width** is invisible
+      * If unselected, the **Column width** is visible
         * **Column width (pixels)**: the fixed width of the column in pixels
   
   * **Edit**: opens the **Form title** dialog box where you can make changes to the selected column settings
@@ -359,8 +352,8 @@ On the **Sheet Preferences** tab, you can define sheet preferences with the foll
   * **New**: opens the **Edit Mx row settings** dialog box that contains the following items:
     * **Row number**: the number of the row
     * **Automatic height**
-      * When selected, the row height is automatically adjusted and **Row height** is invisible
-      * When unselected, the **Row height** is visible
+      * If selected, the row height is automatically adjusted and **Row height** is invisible
+      * If unselected, the **Row height** is visible
         * **Row height**: the fixed height of the row
   * **Edit**: opens the **Edit Mx row settings** dialog box where you can make changes to the selected row settings
   * **Delete**: deletes the selected row settings

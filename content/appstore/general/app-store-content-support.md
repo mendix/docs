@@ -31,8 +31,8 @@ The applicable level of service for Mendix-supported Marketplace content is equa
 This means that equal response and resolve times are applicable, and the standard support process using the [Mendix Support Portal](https://support.mendix.com) has to be followed.
 
 {{% alert type="warning" %}}
-Content in this support category is supported as-is. When changing the content, the module will no longer be Platform-supported.
-{% /alert %}}
+Content in this support category is supported as-is. When changing the content, the module will no longer be platform-supported.
+{{% /alert %}}
 
 ### 2.2 Deprecated Support Category
 

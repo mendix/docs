@@ -5,11 +5,27 @@ menu_order: 10
 description: "Native Template 5.2 release notes."
 ---
 
+## 5.2.8
+
+**Release date: January 25th, 2022** 
+
+### Fixes
+
+* We identified and fixed an issue that would stop the **Navigate To** action from launching Google Maps on Android v11 and above.
+
+## 5.2.7
+
+**Release date: November 5th, 2021** 
+
+### Fixes
+
+* We added a missing configuration that was failing the `OpenURL` and `CallPhoneNumber` JavaScript actions on devices using Android 11 and above. Without this configuration the actions will fail.
+
 ## 5.2.6
 
 **Release date: November 2nd, 2021**
 
-## Fixes
+### Fixes
 
 * We fixed a bug on Android that would not allow an app to reload correctly after the first login.
 
@@ -17,7 +33,7 @@ description: "Native Template 5.2 release notes."
 
 **Release date: October 25th, 2021**
 
-## Improvements
+### Improvements
 
 * We improved the SQLite database life cycle on Android. This should remove the possibility of dead locks when an app is being restarted, for example after an over-the-air update.
 
@@ -25,7 +41,7 @@ description: "Native Template 5.2 release notes."
 
 **Release date: September 29th, 2021**
 
-## Improvements
+### Improvements
 
 * iOS 15 requires you to recompile your apps with XCode 13. This release bumps the configuration of App Center to use XCode 13.
 

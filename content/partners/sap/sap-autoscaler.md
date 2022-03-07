@@ -33,10 +33,10 @@ Click **Configurator** to start the **Autoscaler Configurator**.
 
 ## 3 Using the Autoscaler Configurator
 
-The **autoscaler configurator** provide a user friendly interface to create the JSON required to configure the application autoscaler.
+The **autoscaler configurator** provides a user friendly interface to create the JSON required to configure the application autoscaler.
 
 {{% alert type="info" %}}
-The configurator will only create a JSON file from scratch. It does not have access to your existing autoscaler settings on SAP BTP, and you cannot import any existing JSON files.
+The configurator will only create a JSON file from scratch. It does not have access to your existing autoscaler settings on SAP BTP, and you cannot import an existing JSON files.
 {{% /alert %}}
 
 There three options available:

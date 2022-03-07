@@ -37,7 +37,7 @@ To set up an IDP configuration for the Mendix platform and your Mendix app, you 
 
 ## 3 Configuring Your BYOIDP Setup
 
-As a Mendix Administrator, you will find the IDP setup on the **Single Sign-On** tab of your Control Center's [Security](index#security) section.
+As a Mendix Administrator, you will find the IDP setup on the **Single Sign-On** tab of your Control Center's [Security](/developerportal/control-center/#security) section.
 
 In this overview, you will find your current IDP configurations, both draft versions and the active one. When you create a new configuration, the Control Center displays a pop-up screen to inform you of known limitations.
 
@@ -89,7 +89,7 @@ You can test in one of two ways:
 
 When you are ready, you can activate the IDP configuration from the overview page. Your users will immediately benefit from logging into the Mendix Developer Portal with the same credentials as they use in the IDP. Any user passwords currently held in the Mendix platform will be scrambled to prevent the users from bypassing your IDP authentication.
 
-As an option, you can inform your users of the change in the sign-in process via a preconfigured email message.
+As an option, you can inform your users of the change in the sign-in process via a standard email message. This email is a fixed template which cannot be configured. 
 
 Please be aware that there can be only one active IDP configuration at a time. When you activate an IDP configuration while another one is already active, the current active configuration will be de-activated automatically.
 
@@ -97,7 +97,7 @@ Please be aware that there can be only one active IDP configuration at a time. W
 
 You can deactivate the IDP configuration at any time. The changes become into effect immediately. Users will be forced to reset their Mendix passwords on first sign-in.
 
-Optionally you can inform your users of the change in the sign-in process via a preconfigured email message.
+Optionally you can inform your users of the change in the sign-in process via a a standard email message. This email is a fixed template which cannot be configured.
 
 ## 7 Microsoft Azure AD
 
@@ -164,3 +164,9 @@ Single sign-on was introduced in Mendix version 7.18. Your app will need to be t
 ### 8.3 Automation
 
 Automation, such as CI/CD pipelines, and other functions which require access to the [Team Server](/developerportal/collaborate/team-server) (where versioned copies of your app are held online) cannot be performed if BYOIDP is enabled.
+
+### 8.4 Adding and Removing Email Domains from Company
+
+When you [add or remove an email domain from your company](/developerportal/control-center/#company) in Mendix, you will need to deactivate BYOIDP and reactivate it again to apply the changes for users logging on using the changed domains.
+
+You cannot select which of your email domains are used for single sign-on. When you activate BYOIDP SSO, it will apply to all email domains which are registered to your company.

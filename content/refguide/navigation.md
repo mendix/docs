@@ -97,9 +97,13 @@ This specifies the application icon. This icon is shown as favicon in the title 
 
 ### 4.2 Home Pages
 
-#### 4.2.1 Default Home Page
+#### 4.2.1 Default Home Page {#default-home-page}
 
 The default home page indicates which [page](page) or [microflow](microflow) is opened after a user signs in. If role-based home pages (see below) are specified for one of the [user roles](user-roles) of the user, then that home page will be used instead.
+
+{{% alert type="info" %}}
+The default home page is visible to all unauthenticated users.
+{{% /alert %}}
 
 #### 4.2.2 Role-Based Home Pages
 

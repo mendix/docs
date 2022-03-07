@@ -13,7 +13,7 @@ The **Mendix Studio version** is a build number of the Studio user interface.
 
 The **Mendix version** is the version of the  you are editing. **Mendix version** correlates to **Mendix Studio Pro version**, but is broader, as the Mendix version is the version of the whole platform including Mendix Studio Pro and Mendix Runtime. 
 
-The **Mendix Studio version** and the **Mendix version** can be viewed by clicking the **More Options** icon > **About** in the top-right corner of Studio.
+The **Mendix Studio version** and the **Mendix version** can be viewed by clicking the **More Options** icon > **About** in the upper-right corner of Studio.
 
 {{% image_container width="500" %}}![](attachments/general-versions/about-dialog.png)
 {{% /image_container %}}
@@ -24,7 +24,7 @@ Studio supports a range of **Mendix versions**. For example, Studio supports Men
 
 Studio introduces a new range when there are breaking changes in a model that prevent your app from functioning properly without an upgrade.  An example of a breaking change is introduction of a new functionality. 
 
-## 3 Upgrading to the Next Version
+## 3 Upgrading to the Next Version{#upgrade}
 
 The *Studio version* is updated continuously (even daily), which will provide you with the latest user interface features for editing your app. No action is required from you, these updates are done automatically. However, when there is a new *Mendix version*, a top bar is displayed, informing you that you can upgrade your app to the next version.  
 
@@ -32,7 +32,7 @@ The *Studio version* is updated continuously (even daily), which will provide yo
 
 This means that when you upgrade, you upgrade your whole app to a new Mendix version. As Mendix version contains Mendix Studio Pro version, this also means that you or your team members need to install and use the new version for Studio Pro as well. 
 
-When you see the upgrade notification, you can either stay on the current version and continue working (although you might not have the newest Mendix Platform features and improvements), or you can upgrade to the newest version. When you upgrade, you will automatically be upgraded to the latest version possible, even if it is in a new Studio range. 
+When you see the upgrade notification, you can either stay on the current version and continue working (although you might not have the newest Mendix Platform features and improvements), or you can upgrade to the newest version. When you upgrade, you will automatically be upgraded to the latest version possible. Usually it is the latest version in the current Studio bundle. An upgrade from one Studio bundle to another can be done in Studio Pro. For example, if you want to upgrade from Mendix version 9.6 to Mendix version 9.10, you need to use Studio Pro.
 
 {{% alert type="info" %}} 
 

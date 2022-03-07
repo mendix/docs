@@ -24,7 +24,7 @@ Clone this [code sample](https://github.com/mendix/text-box-sample) from GitHub 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install the LTS version of [Node.js](https://nodejs.org).
+* Install the LTS version of [Node.js](https://nodejs.org) (we recommend using Node 14).
 	* For Windows, install using this [official installer](https://nodejs.org/en/download/package-manager/#windows)
 	* For Mac, install using [Homebrew](https://docs.brew.sh/Installation) and
 	  these [official tools](https://nodejs.org/en/download/package-manager/#macos)
@@ -104,7 +104,7 @@ Note that whenever it is required to reinstall NPM package dependencies inside t
 
 ### 3.3 Adding the Attribute
 
-Open the **(YourMendixApp)/CustomWidgets/TextBox** folder in your IDE of choice (any IDE is fine if it can execute commands) . From now on, all file references will be relative to this path. To set up your new widget, first you must use an attribute of the context object and display that attribute in an input field: 
+Open the *(YourMendixApp)/CustomWidgets/TextBox* folder in your IDE of choice (any IDE is fine if it can execute commands) . From now on, all file references will be relative to this path. To set up your new widget, first you must use an attribute of the context object and display that attribute in an input field: 
 
 1. To prevent future errors, remove the file *src/components/HelloWorldSample.tsx*. Errors in *TextBox.editorPreview.tsx* will be dealt with in step 6 below.
 2. In *src/TextBox.xml*, the generator creates a sample property `sampleText`. Remove this property and add the new property `Text attribute`:
@@ -215,7 +215,7 @@ Open the **(YourMendixApp)/CustomWidgets/TextBox** folder in your IDE of choice 
 	Before moving on from this step, you should remove the import lines concerning the **Hello World** sample text from *TextBox.editorPreview.tsx* and *TextBox.tsx*, as these lines are no longer in use.
 
 7.  Add a test widget to the proappject home page:<br />
-	a. To find your widget for the first time you need to refresh from the files system. Use <kbd>F4</kbd> or select **App** > **Synchronize ProjeAppct Directory** from the Studio Pro menu.<br />
+	a. To find your widget for the first time you need to refresh from the files system. Use <kbd>F4</kbd> or select **App** > **Synchronize Project Directory** from the Studio Pro menu.<br />
 	b. Navigate to **Home > Add widget** in the editor menu.<br />
 	c. Select the newly-created **TextBox** widget at the bottom of the list.<br />
 	d. Place the widget below the standard text widget.<br />

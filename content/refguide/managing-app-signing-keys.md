@@ -24,7 +24,7 @@ It is convenient to have an Apple Mac available, but it is not a requirement. Yo
 
 ### 2.1 On Apple Macs
 
-If you have an Apple Mac available, see the Apple developer documentation on [certificate management](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html) for information on how to obtain an iOS signing certificate and distribution profile. Next, see the Apple documentation on [how to create the required distribution profile](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html). Finally, check the end of this section for information on how to [upload the signing key files to Adobe PhoneGap Build](managing-app-signing-keys#uploading-keys).
+If you have an Apple Mac available, see the Apple developer documentation on [certificate management](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html) for information on how to obtain an iOS signing certificate and distribution profile. Next, see the Apple documentation on [how to create the required distribution profile](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html). 
 
 ### 2.2 On Other Platforms
 
@@ -58,14 +58,6 @@ The resulting *ios.csr* file must be uploaded to the Apple Developer Member Cent
 
 Once you have the certificate file, you need to obtain a distribution profile. The Apple Developer Member Center allows you to define an app identifier, a test device, and finally a distribution profile. For more information, check the Apple documentation on how to [maintain identifiers, devices and profiles](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html).
 
-### 2.4 Uploading the Key to Adobe PhoneGap Build {#uploading-keys}
-
-Once you have downloaded the signing certificate (a *.cer* file), you need to convert the signing certificate from a *.cer* to a *.p12*. Use OpenSSL with the following steps:
-
-1. Create from the signing certificate a PEM format: `"C:\OpenSSL\bin\openssl.exe" x509 -in "C:\ios.cer" -inform DER -out "C:\ios_pem.pem" -outform PEM`.
-2. Create from the PEM certificate a password secured. This action requires the PEM certificate, the private key that was created in step 3 earlier, and the password thas was given on the creation of the *ios.csr*: `"C:\OpenSSL\bin\openssl.exe" pkcs12 -export -out "C:\ios.p12" -inkey "C:\private.key" -in "C:\ios_pem.pem"`.
-3. You can upload the signing certificate (now a `.p12` file) and the distribution profile (a `.mobileprovision` file) to Adobe PhoneGap Build on your [account page](https://build.phonegap.com/people/edit). Go to the **Signing Keys** tab and click **Add a key** under **iOS**. Select the two files and give the key a name. Unlock the key by clicking the yellow lock icon on the right of the key and filling in the certificate passphrase. The key is now ready to be used by your build job.
-
 ## 3 Android{#android}
 
 Android apps can be developed and deployed to Android devices without signing the apps. However, to publish to app stores, signed apps are required. This requires you generate a keystore and then upload it to Adobe PhoneGap Build.
@@ -95,12 +87,3 @@ To generate a keystore for Android, follow these steps:
 	![info questions](attachments/managing-app-signing-keys/qanda.png)
 	
 6. Finishing these questions generates a keystore which will be saved into a *file.keystore* file in your current working directory. 
-
-### 3.2 Uploading Your Keystore to PhoneGap Build
-
-After creating the keystore file, upload it to Adobe PhoneGap Build on your [account page](https://build.phonegap.com/). Then, complete the following instructions:
-
-1. Go to the **Signing Keys** tab and click **Add a key** under **Android**. 
-2. Select the keystore file, fill in a title for the key, and fill in the alias that you noted down in the previous step. 
-3. After uploading the keystore file, unlock the key. Click the yellow lock icon on the right of the key and fill in both the keystore and the key passwords. The key is now ready to be used by your build job.
-4. In the [Developer Portal](https://sprintr.home.mendix.com/index.html), navigate to **Deploy > Mobile app**, and click the **Publish for Mobile App Stores** button. Then click the **Start PhoneGap Build job** button.

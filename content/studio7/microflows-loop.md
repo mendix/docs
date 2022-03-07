@@ -14,7 +14,7 @@ The loop is visualized as a frame. The flow inside the loop is executed for each
 
 ![](attachments/microflows-loop/loop.png)
 
-The loop can contain all types of elements used in other parts of microflows, with the exception of start and stop events. Additionally, only a loop can contain [break events](/refguide/break-event) and [continue events](/refguide/continue-event). A break event is used in loops only to stop iterating over a list of objects and continue with the rest of the flow in a microflow. A continue event is used in loops only to stop the current iteration and start the iteration of the next object.
+The loop can contain all types of elements used in other parts of microflows, with the exception of start and stop events. Additionally, only a loop can contain [break events](/refguide7/break-event) and [continue events](/refguide7/continue-event). A break event is used in loops only to stop iterating over a list of objects and continue with the rest of the flow in a microflow. A continue event is used in loops only to stop the current iteration and start the iteration of the next object.
 
 ## 2 Loop Properties
 
@@ -73,13 +73,13 @@ To start the use-case, do the following:
 
     ![Change Object Properties in Loop Example](attachments/microflows-loop/change-object-properties.png)
 
-5. In the **Change value** dialogue window, do the following:<br />
+5. In the **Change value** dialog window, do the following:<br />
 
     a. Set **Select an Attribute or Association** to **Processed (Boolean)**.<br />
 
     b. In the **Expressions** tab, set the **New value** of this attribute by typing in *true*. <br />
 
-    ![Example of Change Value Dialogue Window](attachments/microflows-loop/change-value-dialogue-example.png)
+    ![Example of Change Value Dialog Window](attachments/microflows-loop/change-value-dialogue-example.png)
 
     c. Click **Add** to save the changes. 
 

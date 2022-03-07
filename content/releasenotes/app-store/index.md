@@ -2,12 +2,58 @@
 title: "Marketplace"
 description: "Release notes for updates to the Mendix Marketplace"
 tags: ["marketplace", "connector", "module", "add on", "widget"]
+weight: 35
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
 These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
+## 2022
+
+### February 24th, 2022
+
+#### New Features
+
+* There are now user trials avaiable for **Premium** app services, such as [Email Service](/appstore/app-services/email-service) and [Speech to Text](/appstore/app-services/speech-to-text). This self-service experience helps you to evaluate the capabilities offered with these components and realize the value of premium content.
+* User trial subscriptions are now listed under [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions), and company trial and paid subscriptions are now listed under [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions).
+* For new uploads of public components, you can now optionally share a [virus scan report](/appstore/general/share-app-store-content#package) to speed up the governance process.
+* For solutions and solution templates, you can now add a [use case](/appstore/general/share-app-store-content#capabilities) relevant to the component. The use case is displayed in the component listing and includes header text and an external link.
+
+#### Improvements
+
+* We made performance improvements for when a large source file is [uploaded](/appstore/general/share-app-store-content#package), specifically on the navigation steps.
+* We improved the UI for self-service uploading your component to the Marketplace.
+
+### February 10th, 2022
+
+#### Improvements
+
+* When you onboard a component now, the maximum number of screenshots is restricted to ten.
+* You can use form validations now when you navigate between steps during onboarding.
+
+#### Fixes
+
+* We fixed an issue with the logo cropper. Now the ratio of a cropped image is 600 x 420 pixels.
+
 ## 2021
+
+### December 16th, 2021
+
+#### Improvements
+
+* We now support using rich text for your [component description](/appstore/general/share-app-store-content#general).
+
+### November 18th, 2021
+
+#### New Features
+
+* We released **Try for Free** for premium app services (like [Email Service](https://marketplace.mendix.com/link/component/118393)).
+* You can now provide key capabilities, a banner, external links, and industry cloud details when sharing new **Solution** and **Solution Template** [component types](/appstore/general/share-app-store-content#adding).
+
+#### Improvements
+
+* You can now add [release notes](/appstore/general/share-app-store-content#package) for your new component version without uploading a new source file.
+* You can now skip uploading a source file on the [Package](/appstore/general/share-app-store-content#package) page for **App Service** and **Solution Template** component types if your component is not downloadable.
 
 ### September 7th, 2021
 
@@ -15,7 +61,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 * Marketplace filtering has been revamped. You can now find content faster by filtering by **Industry**, [Content Type](https://docs.mendix.com/appstore/general/app-store-overview#types), and Studio Pro **Compatibility**. 
 * We have made 15+ fully developed solutions and 10+ solution templates available to help you realize value even more quickly.
-* We have listed 10+ **Premium** [app services](https://docs.mendix.com/appstore/app-services/), and we now support a self-service [subscription](/appstore/general/app-store-overview#subscriptions) experience using credit card for two app services in supported regions.
+* We have listed 10+ **Premium** [app services](https://docs.mendix.com/appstore/app-services/), and we now support a self-service [subscription](/appstore/general/app-store-overview#company-subscriptions) experience using credit card for two app services in supported regions.
 
 ### August 12th, 2021
 
@@ -53,7 +99,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 * We released support for the subscription to an app service (like [MindSphere IIoT for Makers](/partners/siemens/mindsphere-app-service)):
 	* Automatic provisioning of the app service on subscription.
-	* The [Service Management Dashboard](/appstore/general/app-store-overview#subscriptions), where you can view the service instance to which you have subscribed and generate binding keys for your service instance.
+	* The [Service Management Dashboard](/appstore/general/app-store-overview#company-subscriptions), where you can view the service instance to which you have subscribed and generate binding keys for your service instance.
 
 ### May 4th, 2021
 

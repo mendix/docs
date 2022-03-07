@@ -45,7 +45,7 @@ Once your order is processed, your entitlement to MindSphere IIoT for Makers wil
 
 ### 2.2 Provisioning a MindSphere Tenant
 
-On receipt of your confirmation, a [Mendix Administrator](/developerportal/control-center/index#company) for your company will need to initiate the creation of a dedicated tenant account within MindSphere.
+On receipt of your confirmation, a [Mendix Administrator](/developerportal/control-center/#company) for your company will need to initiate the creation of a dedicated tenant account within MindSphere.
 
 Once all the resources have been provisioned, the Mendix Administrator for your company will receive an email confirming that your MindSphere account has been created. The email will also contain the following:
 
@@ -150,7 +150,7 @@ To authenticate your calls you will need to provide the MindSphere IIoT Authenti
 
     ![Binding](attachments/mindsphere-app-service/binding-keys.png)
 
-You can find more information about managing binding keys in the [Subscriptions](/appstore/general/app-store-overview#subscriptions) section of *Marketplace Overview*.
+You can find more information about managing binding keys in the [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) and [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) sections of *Marketplace Overview*.
 
 ## 4 Using MindSphere IIoT for Makers Through Mendix Data Hub{#using-data-hub}
 
@@ -176,9 +176,13 @@ In the **_Use me** folder of the *MindSphereIIotAuthenticator* module set the fo
 * **ClientID** – this is the *clientID* from the binding keys you generated
 * **ClientSecret** – this is the *clientSecret* from the binding keys you generated
 
-In the Consumed OData Service document associated with your MindSphere service, set the **Headers from microflow** to be *MindSphereIIoTAuthenticator.AddAuthHeader*. This ensures that the values you have set in the **Use me** folder are passed as HTTP headers with every call to authenticate your app to MindSphere.
+In the Consumed OData Service document associated with your MindSphere service, set the **Headers from microflow** to be *MindSphereIIoTAuthenticator.DH_AddAuthHeader*. This ensures that the values you have set in the **Use me** folder are used to authenticate each HTTP request to MindSphere.
 
 ![Binding](attachments/mindsphere-app-service/data-hub-authentication.png)
+
+Set the **Error handling microflow** to be *MindsphereIIoTAuthenticator.DH_ErrorHandler*. This microflow is executed if there is an error. It logs the error and provides a human readable string of the error, which is shown to the user in an error message. See [Custom Error Handling](#ts-customerrorhandling), below, for further details.
+
+![Binding](attachments/mindsphere-app-service/data-hub-error-handling.png)
 
 ## 5 Using MindSphere IIoT for Makers Through REST Calls{#using-rest}
 
@@ -287,17 +291,11 @@ For example, Time Series can only be sorted using the timestamp attribute. If yo
 
 ## 9 Troubleshooting
 
-### 9.1 "An error occurred…" Error Message
+### 9.1 Custom Error Handling{#ts-customerrorhandling}
 
-If your app returns the message "An error occurred, please contact your system administrator", this could be due to a MindSphere error that Mendix is unable to handle. Always check the log to see if there is more information to help you resolve this issue.
+Custom Error Handling is possible when using OData in Microflows, for example on a retrieve action. On the error flow of the action you get a human-readable error string in the variable **$latestError/Message**. Use this variable as input to *MindsphereIIoTAuthenticator.DH_MindSphereErrorFromString* to get a *MindSphereError* entity. Now implement your custom error handling, for example based on the **StatusCode** of the error.
 
-To ensure that you get full information about MindSphere responses that cause Mendix to return these generic errors, set the **Log Level** for `ODataConsume` to **Trace**, using the instructions in [How To Set Log Levels](/howto/monitoring-troubleshooting/log-levels#standard-log-levels).
-
-![Example of setting the Log Level for ODataConsume](attachments/mindsphere-app-service/odata-log-levels.png)
-
-{{% alert type="info" %}}
-Setting log levels to trace can have in impact on performance and should only be done during testing.
-{{% /alert %}}
+![Binding](attachments/mindsphere-app-service/data-hub-custom-error-handingScreenshot.png)
 
 ### 9.2 Internal Server Error and Long Names
 

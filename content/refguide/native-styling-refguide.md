@@ -159,13 +159,13 @@ The layout grid widget can be used to structure the content on your page. You ar
 
 The widget’s style properties are divided over several objects: `LayoutGrid`, `row`, `noGuttersRow`, `col`, `colFitToContent`, `col1`, `col2`, `col3`, `col4`, `col5`, `col6`,  `col7`, `col8`, `col9`, `col10`, `col11`, `col12`, and `noGutters`.
 
-`col` is being applied when the Width property on a column is "Auto-fill".
+`col` is being applied when the Width property on a column is *Auto-fill*.
 
-`colFitToContent` is being applied when the Width property on a column is "Auto-fit content".
+`colFitToContent` is being applied when the Width property on a column is *Auto-fit content*.
 
-`col1`, `col2`, `col3`, `col4`, `col5`, `col6`,  `col7`, `col8`, `col9`, `col10`, `col11`, `col12` are applied when the Width on a column property is "Manual". Only one class is applied based on the related Size property.
+`col1`, `col2`, `col3`, `col4`, `col5`, `col6`,  `col7`, `col8`, `col9`, `col10`, `col11`, `col12` are applied when the Width on a column property is *Manual*. Only one class is applied based on the related Size property.
 
-`noGuttersRow` (Row) and `noGutters` (Column) are being applied when the Spacing between columns property on a row is set to "No".
+`noGuttersRow` (Row) and `noGutters` (Column) are being applied when the Spacing between columns property on a row is set to *No*.
 
 The main `LayoutGrid`:
 
@@ -311,7 +311,7 @@ The widget’s style properties are structured as follows:
 | `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
 | `inputDisabled` | Same properties as `input` | Overrides `input` styles if the text box is non-editable. |
 | `label` | This has all TextStyle properties |   |
-| `label` | `numberOfLines` | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (defaults to 1). |
+| `label` | `numberOfLines` | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (defaults to `1`). |
 | `labelDisabled` | Same properties as `label` | Overrides `label` styles if the text box is non-editable. |
 | `validationMessage` | This has all TextStyle properties.   |    |
 
@@ -398,47 +398,78 @@ The widget’s render hierarchy is as follows for uniform:
 | `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio Pro v8.11).|
 | `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio Pro v8.11).|
 
-### 6.4 Check Box 
+### 6.4 Check Box
 
-A check box input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a check box widget could look in an app:
+A check box input widget can be used to display and edit Boolean attributes and is rendered as either a switch or a checkbox. This is how a check box widget in switch render mode looks by default:
 
 {{% image_container width="350" %}}![check box](attachments/native-styling-refguide/check-box.png){{% /image_container %}}
+
+This is how a check box widget in checkbox render mode looks by default:
+
+{{% image_container width="350" %}}![check box in checkbox render mode](attachments/native-styling-refguide/check-box-checkbox.png){{% /image_container %}}
 
 The widget’s style properties structure is as follows:
 
 ```xml
-<container>
-	<label>Boolean switch</label>
-	<inputError>
-		<trackColorOff/>
-		<thumbColorOff/>
-	</inputError>
-	<validationMessage>Feedback switch input</validationMessage>
-</container>
-<container>
-	<label>Valid boolean</label>
-	<input>
-		<trackColorOn/>
-		<thumbColorOn/>
-	</input>
-</container>
+<container/>
+<containerDisabled/>
+<label>
+    <numberOfLines/>
+</label>
+<labelDisabled/>
+<input>
+    <thumbColorOn/>,
+    <trackColorOn/>
+    <trackColorOff/>
+    <thumbColorOff/>
+</input>
+<inputDisabled>
+    <thumbColorOn/>,
+    <trackColorOn/>
+    <trackColorOff/>
+    <thumbColorOff/>
+</inputDisabled>
+<inputError>
+    <thumbColorOn/>,
+    <trackColorOn/>
+    <trackColorOff/>
+    <thumbColorOff/>
+</inputError>
+<checkboxInput>
+    <color/>
+    <size/>
+</checkboxInput>
+<checkboxInputDisabled>
+    <color/>
+    <size/>
+</checkboxInputDisabled>
+<checkboxInputDisabled>
+    <color/>
+    <size/>
+</checkboxInputDisabled>
+<validationMessage/>
 ```
 
-| Element | Style Properties    | Description |
-| --- | --- | --- |
-| `container` | This has all ViewStyle properties.   |   |
-| `containerDisabled` | Same properties as `container` | Overrides `container` styles if the text box is non-editable. |
-| `input` | This has all TextStyle properties.   |   |
-| `input` | `trackColorOn` | Custom color for the switch track when turned on. |
-| `input` | `trackColorOff` | Custom color for the switch track when turned off. |
-| `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. |
-| `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. |
-| `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
-| `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the check box is non-editable. |
-| `label` | This has all TextStyle properties   |  |
-| `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
-| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the check box is non-editable. |
-| `validationMessage` | This has all TextStyle properties.   |  |
+| Element | Style Properties    | Description | Render mode |
+| --- | --- | --- | --- |
+| `container` | This has all ViewStyle properties.   |   | Both |
+| `containerDisabled` | Same properties as `container`. | Overrides `container` styles if the text box is non-editable. | Both |
+| `input` | This has all ViewStyle properties.   |   | Switch |
+| `input` | `trackColorOn` | Custom color for the switch track when turned on. | Switch  |
+| `input` | `trackColorOff` | Custom color for the switch track when turned off. | Switch |
+| `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. | Switch |
+| `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. | Switch |
+| `inputError` | This has the same properties as `input`. | Overrides `input` styles if there are validation errors. | Switch |
+| `inputDisabled` | This has the same properties as `input`. | Overrides `input` styles if the check box is non-editable. | Switch |
+| `checkboxInput` | This has all ViewStyle properties. |  | Checkbox |
+| `checkboxInput` | `color` | Custom color for the tick icon. | Checkbox |
+| `checkboxInput` | `size` | Custom size for the tick icon. | Checkbox |
+| `checkboxInputDisabled` | This has the same properties as `checkboxInput`. | Overrides `checkboxInput` styles if the check box is non-editable. | Checkbox |
+| `checkboxInputError` | This has the same properties as `checkboxInput`. | Overrides `input` styles if there are validation errors. | Checkbox |
+| `label` | This has all TextStyle properties.   |  | Both |
+| `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. | Both |
+| `labelDisabled` | Same properties as `label`. | Overrides `label` styles if the check box is non-editable. | Both |
+| `validationMessage` | This has all TextStyle properties.   |  | Both |
 
 The default class to style all check box inputs is named `Checkbox`.
 
@@ -1561,6 +1592,60 @@ The widget consists of the following elements:
 | `slices` | `paddingVertical` | Applies padding to the vertical sides of the chart (number). |
 
 The default class to style all Pie/Doughnut Chart widgets is named `com_mendix_widget_native_piedoughnutchart_PieDoughnutChart`.
+
+### 11.30 Switch
+
+A switch input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a switch widget looks by default:
+
+{{% image_container width="350" %}}![check box](attachments/native-styling-refguide/check-box.png){{% /image_container %}}
+
+The widget’s style properties structure is as follows:
+
+```xml
+<container/>
+<containerDisabled/>
+<label>
+    <numberOfLines/>
+</label>
+<labelDisabled/>
+<input>
+    <thumbColorOn/>,
+    <trackColorOn/>
+    <trackColorOff/>
+    <thumbColorOff/>
+</input>
+<inputDisabled>
+    <thumbColorOn/>,
+    <trackColorOn/>
+    <trackColorOff/>
+    <thumbColorOff/>
+</inputDisabled>
+<inputError>
+    <thumbColorOn/>,
+    <trackColorOn/>
+    <trackColorOff/>
+    <thumbColorOff/>
+</inputError>
+<validationMessage/>
+```
+
+| Element | Style Properties    | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties.   |   |
+| `containerDisabled` | Same properties as `container` | Overrides `container` styles if the text box is non-editable. |
+| `input` | This has all TextStyle properties.   |   |
+| `input` | `trackColorOn` | Custom color for the switch track when turned on. |
+| `input` | `trackColorOff` | Custom color for the switch track when turned off. |
+| `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. |
+| `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. |
+| `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
+| `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the check box is non-editable. |
+| `label` | This has all TextStyle properties   |  |
+| `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
+| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the check box is non-editable. |
+| `validationMessage` | This has all TextStyle properties.   |  |
+
+The default class to style all check box inputs is named `com_mendix_widget_native_switch_Switch`.
 
 ## 12 Read More
 

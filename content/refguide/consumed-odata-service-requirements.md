@@ -1,7 +1,7 @@
 ---
 title: "Consumed OData Service Requirements"
 parent: "consumed-odata-services"
-menu-order: 20
+menu_order: 20
 description: "Requirements on OData services consumed in Mendix."
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -42,6 +42,10 @@ Furthermore, an entity can only be used if it is uniquely identifiable with a ke
 
 {{% alert type="info" %}}
 This feature of using entities with keys that do not have a maximum length specified in the contract applies to version 9.3.0 and above. In previous versions of Studio Pro, you must change the contract to ensure that `MaxLength` is specified.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+The list above for supported key fields does not include `Date` or `DateTime` data types.
 {{% /alert %}}
 
 ### 3.2 Attributes

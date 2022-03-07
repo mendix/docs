@@ -126,6 +126,8 @@ You may want to have a complete list of node permissions for audit purposes. The
 
 The CSV file will contain a list of environments, users, and their respective permissions.
 
+In addition, all changes to node permissions will be logged on the activity log.
+
 ## 5 Technical Contact
 
 A cloud node has a single Technical Contact. They manage the cloud node and can edit the privileges of regular team members.

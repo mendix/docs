@@ -15,7 +15,7 @@ aliases:
 Your Mendix Profile is your main point of contact with members of the Mendix community. It displays your activities on the Mendix Platform and details about your background. 
 To get more involved in the Mendix community, your profile is the best way to start. 
 
-You can access your Mendix profile by clicking your picture in the top-right corner of the Developer Portal and then selecting **See Your Profile**.
+You can access your Mendix profile by clicking your picture in the upper-right corner of the Developer Portal and then selecting **See Your Profile**.
 
 ## 2 Header {#header}
 
@@ -128,7 +128,7 @@ These are points you can gain through activity in the [Mendix Marketplace](https
 | --- | --- | --- |
 | Publish an app | 50 | N/A |
 | Publish a new app version | 25 | N/A |
-| Add an app review | 5 | N/A |
+| Add an app review | 5 | 25 |
 | Download [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) | 5 | 5 |
 | Download an app from the Marketplace | 1 | 5 |
 
@@ -156,12 +156,10 @@ These are points you can gain through activity in the [Mendix Marketplace](https
 | Win a Mendix Hackathon! | 300 | N/A |
 | Reach the [Mendix MVP](https://www.mendix.com/mvp-program/) status | 300 | N/A |
 | Be the runner-up in a Mendix Hackathon | 150 | N/A |
-| Organize a [Mendix Meetup ](https://www.meetup.com/nl-NL/pro/mendix-maker-community/)  | 100 | N/A |
 | Complete your Mendix Profile | 50 | N/A |
 | Make your Mendix Profile public | 50 | N/A |
 | Attend a Mendix Hackathon | 50 | N/A |
 | Successfully refer a friend to Mendix | 25 | N/A |
-| Attend a Mendix Meetup | 25 | N/A |
 | Invite a friend to Mendix | 5 | 50 |
 | Have a user sign up via your referral URL | 5 | 50 |
 
@@ -239,7 +237,7 @@ Here you can tell the Mendix community about yourself and your work experience. 
 
 ### 10.3 Social {#social}
 
-Here you can connect your social accounts for **Meetup**, **Twitter**, and **LinkedIn**.
+Here you can connect your social accounts for **Twitter** and **LinkedIn**.
 
 ### 10.4 Security {#security}
 
@@ -247,7 +245,11 @@ You can change your password in this section. By default, you are requested to c
 
 ### 10.5 API Keys {#api-key}
 
-In this section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allow apps using it to act on behalf of the user who created the key, which means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password. 
+In this section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allow apps using it to act on behalf of the user who created the key, which means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password.
+
+{{% alert type="info" %}}
+Some platform APIs use *Personal Access Tokens (PATs)* rather than *API Keys*. For more information on PATs, and how to generate and manage them, see [Create a Personal Access Token with Warden](warden).
+{{% /alert %}}
 
 For example, you can use an API key to perform scripted operations on your application model with the SDK. 
 
@@ -272,15 +274,15 @@ For more information, see the following:
 
 ### 10.6 My Activity Overview {#my-activity-overview}
 
-### 10.6.1 Latest Messages
+#### 10.6.1 Latest Messages
 
 In this section, you can see all the notifications of the [Buzz](/developerportal/collaborate/buzz) instances you participate in (for example, when a colleague has created an app or added a new story).
 
-### 10.6.2 Documents
+#### 10.6.2 Documents
 
 This section presents all the documents you have shared within different apps. 
 
-### 10.6.3 Feedback {#feedback}
+#### 10.6.3 Feedback {#feedback}
 
 {{% image_container width="500" %}}![](attachments/mendix-profile/feedback.png)
 {{% /image_container %}}
@@ -292,14 +294,14 @@ In this section, you can view feedback submitted on the following:
 
 When you click **Details** for a feedback item on an app of which you are a team member, you can manage that feedback. For more information, see [Feedback](/developerportal/collaborate/feedback).
 
-### 10.6.4 Team Server
+#### 10.6.4 Team Server
 
 Changes made through Studio Pro are stored in the Mendix [Team Server](/developerportal/collaborate/team-server). This section provides an overview of the revisions you have committed for all your apps.
 
 {{% image_container width="500" %}}![](attachments/mendix-profile/team-server.png)
 {{% /image_container %}}
 
-### 10.6.5 Pending Invites
+#### 10.6.5 Pending Invites
 
 In this section, you can view the invitations you have sent and received. There are two types of invitations:
 
@@ -352,7 +354,7 @@ Mendix has been tracking these data changes since November 2018.
 
 #### 10.7.4 Removing Your Account
 
-If you do not want to use Mendix anymore, you can remove your account from here.
+If you do not want to use Mendix anymore, you can remove your account from here. All of your personal and identifiable information is then removed and deleted from our servers.
 
 ## 11 Point Penalties
 

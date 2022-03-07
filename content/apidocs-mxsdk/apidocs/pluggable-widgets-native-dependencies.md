@@ -19,6 +19,12 @@ While this tooling exists for pluggable widgets, some manual work has to be done
 
 The declaration file is a *.json* file which contains information about the specific setup required by a pluggable widget or a JavaScript action.
 
+Where you place the file depends on your situation:
+
+* For JavaScript actions, declare in the *.json* file
+* For widgets, if you are using the latest **pluggable-widgets-tools** they will collect and create the declaration file automatically
+* If you are creating a widget on your own, create a a *.json* file which has the same name as your widget as listed in its *.mpk*
+
 ### 2.1 Naming Conventions
 
 For pluggable widgets, the declaration file should be named after the [Widget Definition XML File](/apidocs-mxsdk/apidocs/pluggable-widgets#widget-definition), but should use a *.json* extension.

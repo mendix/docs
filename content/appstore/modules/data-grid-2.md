@@ -120,6 +120,8 @@ Here is an example of custom content using new Badge widget in Structure mode:
 
 ![Example of custom content using new Badge widget in Structure mode](attachments/data-grid-2/column-custom-content.png)
 
+For more information on configuring various widget properties, see [Common Widget Properties](/refguide/common-widget-properties).
+
 ### 4.4 Column Width
 
 You can define how each cell will be rendered in the data grid. We offer three choices:
@@ -147,6 +149,26 @@ In the new data grid we offer an option to dynamically apply a CSS class in a sp
 In this example we check the value of `StringAttribute` and then apply the class `.my-name-class` if the attribute is equal to `my name` to the cell:
 
 ![Example of dynamic cell class](attachments/data-grid-2/dynamic-cell-class.png)
+
+### 4.7 Wrap Text
+
+You can choose if you want to wrap the text content of a column and apply ellipsis in the end of it.
+
+{{% alert type="info" %}}
+If you are using **Custom content** in the **Show** option of the **General** tab, please make sure you are using a **Text Widget** without containers around it. Containers sometimes interfere with wrapping texts.
+{{% /alert %}}
+
+![Example of wrap text](attachments/data-grid-2/column-wrap-text.png)
+
+### 4.8 Tooltip
+
+If you need to display advisory information for cell content, you can specify the tooltip text. This text will be shown when a user is hovering over the cell content.
+
+{{% alert type="warning" %}}
+This property not available if you enable "Custom content" for the column
+{{% /alert %}}
+
+![Example of wrap text](attachments/data-grid-2/tooltip-prop.png)
 
 ## 5 Rows
 
@@ -183,7 +205,9 @@ Triggers an action (such as a nanoflow, microflow, or Show page action) when the
 Sets of filters can be used in combination with data grids. To be able to use filters you need to select the option **Show column filters**. When this option is selected a drop-zone where you can place your desired filter widget will appear in each column header.
 
 {{% alert type="warning" %}}
-The type of your selected attribute should match the filter type. For example, a **Text filter** should be used for a String attribute. Also the desired attribute should be filterable (for example, not computed in a microflow).
+The type of your selected attribute should match the filter type. For example, a **Text filter** should be used for a String attribute.
+
+Also the desired attribute must be filterable. For example, not a value which is calculated.
 {{% /alert %}}
 
 ![Settings for data grid 2](attachments/data-grid-2/settings-show-column-filters.png)
@@ -198,6 +222,7 @@ Here is an example of dropzones for filters in Structure mode:
 
 **Date filter** allows users to match date attributes based on these predefined criteria:
 
+* Between
 * Greater than
 * Greater than or equal
 * Equal
@@ -205,7 +230,15 @@ Here is an example of dropzones for filters in Structure mode:
 * Smaller than
 * Smaller than or equal
 
-You can select your filter criteria in the Date Filter settings:
+Here is an example of **Date filter** as **Between**:
+
+![Date filter between](attachments/data-grid-2/date-filter-between.png)
+
+{{% alert type="warning" %}}
+When **Date filter** is defined with **Between** it is not possible to type the date manually. It also has a clear button to clear the date range.
+{{% /alert %}}
+
+You can select your filter criteria in the **Date Filter** settings:
 
 ![Date filter settings](attachments/data-grid-2/date-filter-settings.png)
 
@@ -220,6 +253,10 @@ Here is an example of **Date Filter** with **Adjustable by user** defined as **N
 ![Example of Date filter with “Adjustable by user” set as No](attachments/data-grid-2/date-filter-not-adjustable.png)
 
 You can also define the default value of the widget which will be predefined as initial value when opening your data grid page.
+
+When **Default filter** is defined as **Between** these fields will appear to define the start and end dates:
+
+![Example of Date filter with “Default value” set as Between](attachments/data-grid-2/date-filter-between-settings.png)
 
 #### 7.1.1 Configurations
 
@@ -396,7 +433,7 @@ Here is an example of a configuration containing an On change action:
 
 ## 9 Performance
 
-The performance of the new data grid can be affected if sorting or filtering are enabled. This is because Data widgets v1.1 - 1.2 retrieve all available values for sorting or filtering while the widget runs. This problem does not occur in versions above 1.3 because those version use [Filtering Apis](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values#4-filter-helpers) to retrieve only the necessary data.
+The performance of the new data grid can be affected if sorting or filtering are enabled. This is because Data widgets v1.1 - 1.2 retrieve all available values for sorting or filtering while the widget runs. This problem does not occur in versions above 1.3 because those version use [Filtering Apis](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values#filter-helpers) to retrieve only the necessary data.
 
 ## 10 Troubleshooting
 

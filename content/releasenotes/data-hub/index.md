@@ -2,12 +2,156 @@
 title: "Data Hub"
 description: "Release notes for updates to the Mendix Data Hub"
 tags: ["data hub", "data hub catalog", "data hub Landscape"]
+weight: 30
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
 These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
+## 2022
+
+### March 3rd, 2022
+
+#### Improvements 
+
+* We made the user experience for deleting data in the **Administration** page more consistent. Access the **Administration** page by going to the **Switch to** menu on the upper-right of the Catalog, then clicking **Control Center**.
+
+#### Fixes
+
+* We implemented a fix to allow users to re-register a previously deleted data source. You can do this by going to the **Register a Data Source** section on the Catalog home page.
+
+### February 24th, 2022
+
+#### Improvements 
+
+* We improved the appearance of the Catalog by adjusting colors and styling.
+
+#### Fixes
+
+* We fixed a typo in a validation message that appeared if registering a contract failed.
+
+### February 17th, 2022
+
+#### Fixes
+
+* We made various security and UI fixes.
+
+### February 10th, 2022
+
+#### New Features
+
+* We added an option to [delete a data source](/data-hub/data-hub-catalog/curate#delete-data-source), available for users with [curation](/data-hub/data-hub-catalog/curate) rights. To delete a data source, go to the [Curation Bar](/data-hub/data-hub-catalog/curate#curation-bar) for the data source and click **Edit**, then click **Delete Data Source**.
+
+#### Fixes
+
+* We fixed a bug where the Data Hub Catalog did not display the correct status of an updatable entity.
+* We made various security and UI fixes.
+
+### February 3rd, 2022
+
+#### Fixes
+
+* We fixed a bug on the **Contract Upload** page. The page incorrectly displayed a red warning border if you uploaded a document with non-blocking errors and then immediately deleted it. We have removed the red border in this scenario.
+
+### January 27th, 2022
+
+#### Improvements
+
+* We added a notification menu to the upper-right menu header.
+* We added counts to the **Catalog** page so that you can now see the total numbers of **Associations**, **Attributes**, and **Datasets**. The counts appear in parentheses next to each heading.
+
+#### Fixes
+
+* We fixed a bug that was causing the file uploader to get stuck when uploading an empty file.
+
+### January 21st, 2022
+
+#### Improvements
+
+* The following OData contract parsing and validation improvements were added:
+	* Improved detection and feedback on the OData version
+	* Improved parsing and more detailed error messaging
+	* Improved validation (after parsing succeeded) and more detailed error messaging
+
+### January 14th, 2022
+
+#### Fixes
+
+* We fixed a bug where an error occurred after selecting any curate menu item on the **Curation** page as a Data Hub Curator.
+
+### January 13th, 2022
+
+#### Fixes
+
+* We fixed a bug where V3 contracts uploaded as single XML files were not downloadable from the Data Hub Catalog via the **Download Contract** button.
+
+### January 6th, 2022
+
+#### Fixes 
+
+* We updated the Log4j dependency to 2.17.1, which addresses [CVE-2021-44832](https://cert-portal.siemens.com/productcert/pdf/ssa-784507.pdf).
+
 ## 2021
+
+### December 30th, 2021
+
+#### Fixes
+
+* We fixed an issue where a user registered an endpoint with an environment URL and the same relative path combination. As a result, an endpoint was reused from a different company.
+
+### December 23rd, 2021
+
+#### Fixes
+
+* We fixed an issue where the user was logged out after changing the Technical Owner of a data source.
+* We fixed an issue that occurred with scrolling on a data source deep-link page.
+
+### December 20th, 2021
+
+#### Fixes
+
+* We updated the Log4j dependency to 2.17.0, which addresses [CVE-2021-45105](https://cert-portal.siemens.com/productcert/pdf/ssa-501673.pdf).
+
+### December 16th, 2021
+
+#### Fixes
+
+* We fixed an issue that caused uploading a contract as a ZIP file to fail when the compression ratio was too high.
+
+#### Improvements
+
+* We consolidated the existing **Edit Metadata**, **Discoverability**, and **Validate** drop-down menus into one menu named **Edit**.
+
+### December 9th, 2021
+
+#### Fixes
+
+* We fixed an issue that caused uploading a contract as a ZIP file to fail.
+* We fixed an issue that occurred when searching for and then clicking a popular dataset.
+
+### December 2nd, 2021
+
+#### New Features
+
+* We added a new **Settings** tab to the [Data Hub](/developerportal/control-center/data-hub-admin#settings) page in Control Center with a default discoverability setting.
+* We added a discoverability radio button to the data source [registration](/data-hub/data-hub-catalog/register-data) form.
+
+#### Fixes
+
+* We fixed an issue with the icon size for the registered datasets.
+
+### November 18th, 2021
+
+#### Improvements
+
+* Non-company admins are now navigated to the Control Center landing page instead of getting the **Access Denied** message.
+
+### November 11th, 2021
+
+#### Fixes
+
+* We fixed an issue where a Data Hub Curator could not access the fourth page or above of [Company Assets](/data-hub/data-hub-catalog/curate#curatelist).
+* We fixed an issue with the landscape view for datasets.
 
 ### October 28th, 2021
 
@@ -92,7 +236,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
     * `GET` all environments for an application
     * `GET` all consumed endpoints
 * A change was made to the `POST` application API call to also allow for the `Opcenter` and `MindSphere` application types.
-* We added Data Hub Catalog integration with [Control Center](/developerportal/control-center/index#data-hub). For details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin).
+* We added Data Hub Catalog integration with [Control Center](/developerportal/control-center/#data-hub). For details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin).
 
 ### August 19th, 2021
 
@@ -151,7 +295,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Improvements
 
-* In the search input boxes on the [Search result](/data-hub/data-hub-catalog/search#search-results) listings and [Data Hub Home](/data-hub/data-hub-catalog/index#data-hub-home) page, the magnifying glass now appears on the right side.
+* In the search input boxes on the [Search result](/data-hub/data-hub-catalog/search#search-results) listings and [Data Hub Home](/data-hub/data-hub-catalog/#data-hub-home) page, the magnifying glass now appears on the right side.
 * In the [Search result](/data-hub/data-hub-catalog/search#search-results) listings, the filters have been restyled.
 * All cancel and discard buttons now have matching styles for improved usability.
 
@@ -192,7 +336,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* Improvements have been made to the styling of the [Data Hub Home](/data-hub/data-hub-catalog/index#data-hub-home).
+* Improvements have been made to the styling of the [Data Hub Home](/data-hub/data-hub-catalog/#data-hub-home).
 
 ### April 22nd, 2021
 

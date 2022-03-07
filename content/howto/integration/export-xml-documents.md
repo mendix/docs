@@ -121,7 +121,7 @@ To create the export logic, follow these steps:
     ![](attachments/18448731/18581802.png)
 
 5. Select the input parameter and delete it.
-6. Open the **Toolbox**, which should be on the bottom-right of Studio Pro (you can also open it from the **View** menu).
+6. Open the **Toolbox**, which should be on the lower-right side of Studio Pro (you can also open it from the **View** menu).
 7. Drag a **Retrieve** activity from the **Toolbox** to the line between the start event and end event.
 8. Double-click the activity to open the **Retrieve Objects** properties editor and do the following:
     * For **Source**, select **From database**

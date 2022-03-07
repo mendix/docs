@@ -95,4 +95,3 @@ For further documentation and to see the GitHub project for REST services, see t
 * [How to Configure Selenium Support](selenium-support)
 * [How to Import XML Documents](importing-xml-documents)
 * [How to Consume a REST Service](consume-a-rest-service)
-* [Extending Salesforce with Mendix, an Alternative to Force.com](https://www.mendix.com/blog/extending-salesforce-mendix-alternative-force-com/)

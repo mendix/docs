@@ -4,7 +4,7 @@ category: "Mendix Runtime"
 description: "Describes custom settings for server, log file, database, Amazon S3 storage service, IBM Cloud Object Storage, Microsoft Azure, IBM Bluemix object storage, web client, and proxy server in Mendix."
 tags: ["Runtime", "Customization", "Settings", "Configuration", "IBM Cloud", "Amazon S3", "IBM Cloud Object Storage", "Microsoft Azure", "Custom Settings", "Proxy", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#The anchor #5-amazon-s3-storage-service-settings below is mapped, so it should not be removed or changed.
+#The anchor #amazon-s3-storage-service-settings below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -21,7 +21,7 @@ If you are running your app on the Mendix Cloud, you can access these settings i
 
 If you are running on SAP Cloud, you can add custom settings as User-Provided Variables prefixed with `MXRUNTIME_`. If the setting contains a dot `.` you can use an underscore `_` in the variable. [Reference](https://github.com/mendix/cf-mendix-buildpack#configuring-custom-runtime-settings)
 
-## 2 General Settings
+## 2 General Settings{#general}
 
 The following custom settings can be configured:
 
@@ -42,8 +42,9 @@ The following custom settings can be configured:
 | **NoClientCertificateUsages** | Comma-separated list of host names or imported web service names that should never be contacted using a client certificate. |  |
 | **com.mendix.core.SameSiteCookies** | The [SameSite](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) property can be included in all cookies that are returned by the embedded HTTP server. The possible values are `"Strict"`, `"Lax"`, and `"None"`. At present, `"None"` is the default, but this will change to `"Strict"` in the next major Mendix release. Setting it to `"None"` is typically needed only when an application is embedded in an iframe of another application with a different domain. Newer browsers may require the connection to be secure (HTTPS) when set to `"None"`. If the connection is plain HTTP, then this setting must be changed to `"Strict"` (recommended) or `"Lax"`. This setting is available in Studio Pro [8.11.0](/releasenotes/studio-pro/8.11#8110) and above. | |
 | **SessionTimeout** | Defines after how much time session becomes invalid (in milliseconds). After that timeout a session becomes applicable for removal. The session will not be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 |
-| **http.client.MaxConnectionsPerRoute** | The [maximum number of connections for a route](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnPerRoute(int)) for call REST service and call web service activities. | 2 |
-| **http.client.MaxConnectionsTotal** | The [maximum number of connections allowed across all routes](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnTotal(int)) for the call REST service and call web service activities. | 20 |
+| **HashAlgorithm** | Specifies the hash algorithm used to generate hash values for attributes of the HashString type, such as the password of a user. This setting overrides the setting in Studio Pro, see [Hash Algorithm](project-settings#hash-algorithm). Possible values are `BCRYPT`, `SSHA256`, `SHA256` (not recommended) and `MD5` (not recommended). To override the default BCrypt cost, you can specify `BCRYPT:cost`, where 'cost' is a number between 10 and 30. An example value is `BCRYPT:12`. | BCRYPT |
+| **http.client.MaxConnectionsPerRoute** | The [maximum number of connections for a route](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnPerRoute(int)) for call REST service and call web service activities.<br/>{{% alert type="warning" %}}If your app uses these calls, it is strongly recommended that this value is increased. The default could prevent multiple end-users accessing the API simultaneously. A good value is around the number of concurrent users you expect, with a maximum of 250. The value of `http.client.MaxConnectionsTotal` may also need to increase.{{% /alert %}} | 2 |
+| **http.client.MaxConnectionsTotal** | The [maximum number of connections allowed across all routes](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnTotal(int)) for the call REST service and call web service activities.<br/>{{% alert type="warning" %}}If you change the value of `http.client.MaxConnectionsPerRoute`, you will need to increase this value in line with that, up to a maximum of 250.{{% /alert %}} | 20 |
 | **http.client.CleanupAfterSeconds** | For the call REST service and call web service activities, the first request to a new host will create an HTTP client that will handle subsequent requests. When there are no new requests to the host for the specified time, the HTTP client will be cleaned up. A value of `0` means no cleanup. | `12 * 60 * 60` (12 hours) (for Studio Pro 8.18.0 and below) or `355` (for Studio Pro 8.18.1 and above) |
 | **ClusterManagerActionInterval** | The interval (in milliseconds) used for performing all cluster manager actions. These actions include, unblocking users, and removing invalid sessions. If nothing is specified the interval is half the `SessionTimeout`. | 300000 |
 | **com.mendix.core.StorageService** | Defines which storage service module will be used. The storage service module takes care of storing the actual files associated with `System.FileDocument` objects, such as uploaded files. Possible values are `com.mendix.storage.localfilesystem`, `com.mendix.storage.s3`, `com.mendix.storage.azure`, and `com.mendix.storage.swift`. | com.mendix.storage.localfilesystem |
@@ -117,7 +118,7 @@ Before the data copy process starts, the source database will also be brought in
 | **SourceDatabaseUserName** | The user name for the connection to the source database. |   |
 | **SourceOracleServiceName** | Defines the `SERVICE_NAME` when you have a connection with an Oracle DBMS as source. |   |
 
-## 5 S3 Storage Service Settings {#5-amazon-s3-storage-service-settings}
+## 5 S3 Storage Service Settings {#amazon-s3-storage-service-settings}
 
 The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage. Using these settings manually in Mendix Cloud is strongly discouraged, as files stored in external systems will not be included in backup creation and restoration.
 

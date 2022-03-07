@@ -70,7 +70,7 @@ This app service can only be used with Studio Pro 8 versions starting with [8.15
 
 ## 2 Installation
 
-### 2.1 Obtaining Binding Keys {#obtain-license-token}
+### 2.1 Obtaining a License Token {#obtain-license-token}
 
 3D Viewer is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in your app, first you need to start a subscription or a trial to get a license token.
 
@@ -85,7 +85,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used.
 6. Click the link in the email to go to the [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) page and log in there. This page shows all the products that you have trials for.
 7. Click **3D Viewer** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. Save the keys somewhere safe. You need to use them later to [configure](#configure) the keys in your app.
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. You need to use them later to [configure](#configure-license-token) the license token in your app.
 
 #### 2.1.2 Subscribing to the App Service
 
@@ -96,13 +96,11 @@ A trial gives everyone in your company one-month access to the app service. To s
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Contact will receive an email that says the app service is ready to be used.
 6. Click the link in the email to go to the [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
 7. Click **3D Viewer** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. Save the keys somewhere safe. You need to use them later to [configure](#configure) the keys in your app.
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. You need to use them later to [configure](#configure-license-token) the license token in your app.
 
 ### 2.2 Installing the Component in Your App
 
-To download and install the 3D Viewer app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content#import) section in *Use Marketplace Content in Studio Pro*.
-
-After the app service is installed, you can see a collection of ready-to-use items under the **Viewer3D** folder and a collection of 3D widgets in the **Add-on widget** category in the **Toolbox**.
+To download and install the 3D Viewer app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see a collection of ready-to-use items under the **Viewer3D** folder and a collection of 3D widgets in the **Add-on widget** category in the **Toolbox**.
 
 ## 3 Initializing on App Startup
 
@@ -306,7 +304,7 @@ These widgets do not require additional configuration. Simply place them within 
 | Tool Bar Item Selection Mode | Provides the ability to select a model part, edge, face, and body. |
 | Tool Bar Item Snapshot | Provides the ability to take a snapshot of the current Viewer and save the snapshot to a local machine. |
 
-### 4.7 Configuring the LicenseToken {#configure-license-token}
+### 4.7 Configuring the License Token {#configure-license-token}
 
 #### 4.7.1 For an App Run Locally or Deployed as a Mendix Free App
 

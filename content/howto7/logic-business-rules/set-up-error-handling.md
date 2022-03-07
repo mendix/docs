@@ -144,10 +144,10 @@ A submicroflow with error handling set to **Custom without Rollback** will alway
 
 **For 3:**
 
-| Order        |        |
-| ------------ | ------ |
-| ...          |        |
-| ...          |        |
+| Order        |          |
+| ------------ | -------- |
+| ID           | 1234     |
+| Date         | 1/1/2018 |
 
 | Customer     |        |
 | ------------ | ------ |

@@ -163,7 +163,7 @@ As a helping hand, the checklist below presents the final items to consider when
 
 * Verify the content works well for the specified Studio Pro version it is marked as being compatible with.
 * Keep the versioning pattern consistent in terms of naming and version numbers for your content [releases](/appstore/general/share-app-store-content#updating).
-* Provide [release notes](/appstore/general/share-app-store-content#version) for the content release.
+* Provide [release notes](/appstore/general/share-app-store-content#package) for the content release.
 * Keep your content up to date with new versions.
 
 **Branding**
@@ -196,4 +196,4 @@ Mendix's mission in regards to the governance of Marketplace content is to manag
 
 You can keep track of your submission by subscribing to receive status notifications. If you need more help, contact *DIS_AppServices_Supplier_Team@mendix.com*.
 
-Once your content is available in the public Marketplace, you can gain insights into its usage through the **Subscriptions** overview in the [Marketplace](/appstore/general/app-store-overview#subscriptions). You can engage with your customers as they use your content via [Reviews](/appstore/general/app-store-overview#my-reviews).
+Once your content is available in the public Marketplace, you can gain insights into its usage through the [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) and [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) pages. You can engage with your customers as they use your content via [Reviews](/appstore/general/app-store-overview#my-reviews).

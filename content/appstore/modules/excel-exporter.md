@@ -48,7 +48,7 @@ On the template details page, you can define the template with the following ite
 * **Date time export format**: the format for exported date and time
 *  **Upload existing excel file**: uploads an Excel file which is used as a template
 
-    {{% alert type="info" %}}If you use an uploaded Excel file as a template, the names of the sheets and columns in your template will be used. However, the background color in your template will be overruled by the **Background color** you select for the [Styles](#styles) when the **Background color** is not set to **none**.{{% /alert %}}
+    {{% alert type="info" %}}If you use an uploaded Excel file as a template, the names of the sheets and columns in your template will be used. However, the background color in your template will be overruled by the **Background color** of the style that is applied when the **Background color** is not set to **none**.{{% /alert %}}
    
 *  **Worksheets**: contains the following items that you can use to define sheets in an exported document:
     * **New**: opens a new [sheet details page](#sheet-details) to create a sheet

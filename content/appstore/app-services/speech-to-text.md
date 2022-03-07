@@ -70,9 +70,8 @@ A trial gives everyone in your company one-month access to the app service. The 
 
 ### 2.2 Installing the Component in Your App
 
-To download and install the Speech to Text app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **App Explorer** and also in the **Cognitive AI widgets** category in the **Toolbox**.
-
-Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
+1. To download and install the Speech to Text app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **App Explorer** and also in the **Cognitive AI widgets** category in the **Toolbox**.
+2. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
 ## 3 Configuration
 

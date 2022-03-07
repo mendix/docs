@@ -76,8 +76,8 @@ Application Container Memory Percentage | |
 :---|:---|
 Description | Track the memory utilization for the database belonging to the application |
 Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has high memory usage: 90.5
-Warning Threshold | Memory utilization is between 75% and 85%. |
-Critical Threshold | memory utilization is higher than 85%.
+Warning Threshold | Memory utilization is between 90% and 95%. |
+Critical Threshold | memory utilization is higher than 95%.
 First actions to take | Inspect the trends for **Application node operating system memory** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
 
 Application Server Memory | |

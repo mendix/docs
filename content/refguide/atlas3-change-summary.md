@@ -46,7 +46,7 @@ Our removal of float has the following advantages:
 
 Consult the table below for a summary of the changes to existing design properties.
 
-| Spacing options - <br>added spacing-inner, spacing-inner-medium, spacing-inner-large | Introduction of options for inner spacing to all components. Align design properties with that with of native. Design in the two mediums of native and web should be the same experience. |
+| Spacing options - <br>added spacing-inner, spacing-inner-medium, spacing-inner-large | Introduction of options for inner spacing to all components. Align design properties with that of native. Design in the two mediums of native and web should be the same experience. |
 | --- | --- |
 | Spacing outer options                                        | Previous spacing options are renamed to outer to be more explicit and to refer to “margin”, while inner refers to “padding”. Aligning design implementation between native and web. |
 | Streamlined style options                                    | Across a number of widgets we have streamlined the options available for style to primary, secondary, success, warning and danger. The options of “brand-inverse” and “brand-info” are still actionable classes in the sass framework. |

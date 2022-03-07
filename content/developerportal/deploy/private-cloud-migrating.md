@@ -43,7 +43,11 @@ Follow these steps to export the Mendix components and store them on your local 
 
     ![](attachments/private-cloud-migrating/export.png)
 
-5. Click **Export components**.
+5. Click the **Clear cache** button, which will trigger the deletion of local image cache, otherwise the cache is reused when redownloading the same images.   
+
+6. Click the **Check for updates** button, which is used to verify that the hash of your downloaded images matches with the latest remote images.  
+
+7. Click **Export components**.
 
     The components you selected will be extracted from the Mendix repository and saved on your local machine. This will be in the folder `C:\Users\<User id>\.mxpc-cli\registry-migration` on Windows or `home/<User id>/.mxpc-cli/registry-migration` for Mac and U*ix. This can take some time. Wait for the message *The images for the selected components were exported successfully in tarballs*.
 

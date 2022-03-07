@@ -29,7 +29,7 @@ Synchronization is automatically triggered during the following scenarios:
 * The first startup of your mobile app after your Mendix app is redeployed when the following conditions are matched:
  * There is a network connection
  * You are using a new Mendix version or the domain model used in the offline-first app has changed
-* After the app user logs in or out
+* After the app user logs in or out. Note that synchronization after log out does not synchronize the data of the logged-out user, but rather synchronizes the data for the anonymous user.
 
 Synchronization can also be configured via different places in your Mendix app, for example:
 
@@ -74,9 +74,7 @@ The upload phase executes the following operations:
 1. <a name="upload-step-one"></a>As the local database can be modified only by committing or deleting an object, such an object can be either a new object created while offline or an existing object previously synced from the server. The upload phase detects which objects have been committed to the local database since the last sync. The detection logic differs per sync type. For **Synchronize all**, all committed objects in the local database are checked. For **Synchronize objects**, all committed objects from the list of selected objects are checked.
 2.  <a name="upload-step-two"></a>There might be objects deleted from the device database since the last sync. The upload phase checks which objects have been deleted.
    
-   {{% alert type="warning" %}}
-   Deleting an object from the device database is only supported in Studio Pro 9.7 and higher.
-   {{% /alert %}}
+   {{% alert type="warning" %}}Deleting an object from the device database is only supported in Studio Pro 9.7 and higher.{{% /alert %}}
    
 3. <a name="upload-step-three"></a>If there are any changed or new file objects their content is uploaded to the server and stored there temporarily. Each file is uploaded in a separate network request. If a file upload fails, the whole sync is aborted without causing any changes to the server or device database.
 4. <a name="upload-step-four"></a>All the changed and new objects are sent to the server, and the content of the files is linked to the objects. The server performs referential integrity validation of the objects (for more information, see the [Dangling References](#dangling-references) section below). The objects are committed to the server database. Information about deleted objects is also sent to the server so the server can delete them from its database too. This step is performed in a single network request.
@@ -301,4 +299,4 @@ Attributes with the hashed string [attribute type](attributes#type) will not be 
 
 ### 4.10 Access Rules with XPath Constraints {#access-rules}
 
-While working offline, offline-first apps cannot apply access rules with XPath constraints. For example, consider a **Customer** entity with **Locked** (Boolean) and **Name** (string) attributes. There is an access rule where the **Name** attribute of the customer is writable only when the **Locked** attribute is false. Changing and committing the **Locked** attribute’s value while offline will not change the read-only status of the **Name** attribute. Instead, this change will take effect after you synchronize the changed **Customer** object.
+While working offline, offline-first apps cannot apply access rules with XPath constraints. For example, consider a `Customer` entity with `Locked` (Boolean) and `Name` (string) attributes. There is an access rule where the `Name` attribute of the customer is writable only when the `Locked` attribute is false. Changing and committing the `Locked` attribute’s value while offline will not change the read-only status of the `Name` attribute. Instead, this change will take effect after you synchronize the changed `Customer` object.

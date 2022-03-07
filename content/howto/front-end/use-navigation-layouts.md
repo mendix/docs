@@ -13,12 +13,12 @@ This document will cover the basics of how you work with navigation layouts.
 **This how-to will teach you how to do the following:**
 
 * Select the right navigation layout
-* Understanding the difference between top and left navigation
+* Understand the difference between top and left navigation
 * Configure the sidebar toggle
 
 ## 2 Selecting the Correct Navigation Layout
 
-When building an app with Mendix, the first thing you have to decide is which navigation layout to choose. These layouts are the frames within which your dynamic pages are housed, and provide consistent structure through your app. 
+When building an app with Mendix, the first thing you have to decide is which navigation layout to choose. These layouts are the frames within which your dynamic pages are housed, and provide consistent structure throughout your app. 
 
 Layouts specify what goes where. Each page is based on a layout. The layout contains widgets and structures that return on every page based on that layout. 
 
@@ -51,7 +51,7 @@ across web, tablet and mobile devices:
 
 {{% image_container width="350" %}}![](attachments/use-navigation-layouts/2.2_atlastopbar.png){{% /image_container %}}
 
-It has three regions: top, left, and center. The top region though contains both the brand logo and the navigation menu. The left region does contain a navigation menu, but it is only visible at phone screen size. At that screen size the navigation menu in the top region will be hidden and replaced with a hamburger toggle which triggers the  opening and closing of the left region. The center region houses the dynamic content of your app:
+It has three regions: top, left, and center. The top region contains both the brand logo and the navigation menu. The left region does contain a navigation menu, but it is only visible at phone screen size. At that screen size the navigation menu in the top region will be hidden and replaced with a hamburger toggle which triggers the  opening and closing of the left region. The center region houses the dynamic content of your app:
 
 {{% image_container width="350" %}}![](attachments/use-navigation-layouts/2.2_atlastopbarregions.png){{% /image_container %}}
 
@@ -69,21 +69,21 @@ The options for the sidebar (unlike the Atlas Default) are only applicable at ph
 
 Choosing which of the two layouts (Atlas Default and Atlas Topbar) is right for you comes down to choosing between top navigation versus left navigation, The information below will help you determine which approach better suits your users. The sections below assume your app is designed for users who read left to right, but Mendix may release more design guidance and options for other language cultures in the future.
 
-When it comes down to designing for your users, context is key. A navigation that works well in one context may not as well in another. To determine which navigation is best for your app, it is important to understand the different contexts where the top and left navigation work best:
+When it comes down to designing for your users, context is key. A navigation that works well in one context might not in another. To determine which navigation is best for your app, it is important to understand the different contexts where the top and left navigation work best:
 
 {{% image_container width="350" %}}![](attachments/use-navigation-layouts/2.3_topvsleftnavigation.png){{% /image_container %}}
 
 #### 2.3.1 Scanning
 
-A left navigation is faster and more efficient for users to scan. In just three visual fixations, users scan six items in the left navigation compared to the three items scanned in the top navigation. The left navigation also facilitates a vertical scanning direction that is natural for people, while the top navigation forces a horizontal scanning direction that people often use when they are reading.
+Left navigation is faster and more efficient for users to scan. In just three visual fixations, users scan six items in the left navigation compared to the three items scanned in the top navigation. Left navigation also facilitates a vertical scanning direction that is natural for people, while top navigation forces a horizontal scanning direction that people often use when they are reading.
 
 #### 2.3.2 Page Space
 
-A top navigation conserves more vertical page space than a left navigation. With a left navigation, the navigation links occupy the left column of your page. This shrinks and narrows the content area of your page, which means you will have less space for your content. A top navigation, however, uses minimal vertical space which allows you to fill your page's content area with content only.
+Top navigation conserves more vertical page space than left navigation. With left navigation, the navigation links occupy the left column of your page. This shrinks and narrows the content area of your page, which means you will have less space for your content. Top navigation, however, uses minimal vertical space which allows you to fill your page's content area with content only.
 
 #### 2.3.3 Item Priority
 
-Items in a top navigation do not have equal weight. The leftmost items carry more visual weight than other items because of their placement in the primary visual area (top left). Items in the upper-left area get more exposure and are often seen as more important than other items. The items in  left navigation, however, do have equal weight because they are all placed on the left with no other items in their opposing direction on the right. Because users read items from left to right, the priority direction for reading items is stronger horizontally than vertically.
+Items in top navigation do not have equal weight. The leftmost items carry more visual weight than other items because of their placement in the primary visual area (top left). Items in the upper-left area get more exposure and are often seen as more important than other items. The items in  left navigation, however, do have equal weight because they are all placed on the left with no other items in their opposing direction on the right. Because users read items from left to right, the priority direction for reading items is stronger horizontally than vertically.
 
 #### 2.3.4 Visibility
 
@@ -91,7 +91,7 @@ Top navigation items are more visible because they are always above the fold and
 
 ## 3 Configuring the Sidebar
 
-### 3.1 Set the Toggled Sidebar to Shrinking Content (Initially Open):
+### 3.1 Setting Toggled Sidebar to Shrinking Content (Initially Open):
 
 To configure the toggled sidebar to shrinking content (initially open), follow these steps:
 
@@ -103,7 +103,7 @@ To configure the toggled sidebar to shrinking content (initially open), follow t
 
 	{{% image_container width="350" %}}![](attachments/use-navigation-layouts/3.1_layoutselection.png){{% /image_container %}}
 
-3.  Then in the breadcrumb, navigate to the **Atlas_Default** navigation layout:
+3.  In the breadcrumb, navigate to the **Atlas_Default** navigation layout:
 
 	{{% image_container width="350" %}}![](attachments/use-navigation-layouts/3.1_breadcrumb.png){{% /image_container %}}
 
@@ -124,7 +124,7 @@ To toggle the sidebar for **Shrinking content (initially open)**, follow these s
 
 	{{% image_container width="350" %}}![](attachments/use-navigation-layouts/3.2_toggleshrinkingcontentopenoption.gif){{% /image_container %}}
 
-### 3.3 Set the Toggled Sidebar to Shrinking Content (Initially Closed)
+### 3.3 Setting Toggled Sidebar to Shrinking Content (Initially Closed)
 
 To configure the toggled sidebar to **Shrinking content (initially closed)**, follow these steps:
 
@@ -136,7 +136,7 @@ To configure the toggled sidebar to **Shrinking content (initially closed)**, fo
 
 	{{% image_container width="350" %}}![](attachments/use-navigation-layouts/3.3_layoutselection.png){{% /image_container %}}
 
-3.  Then in the breadcrumb, navigate to the **Atlas_Default** navigation layout:
+3.  In the breadcrumb, navigate to the **Atlas_Default** navigation layout:
 
 	{{% image_container width="350" %}}![](attachments/use-navigation-layouts/3.3_breadcrumb.png){{% /image_container %}}
 
@@ -155,7 +155,7 @@ To configure the toggled sidebar to **Shrinking content (initially closed)**, fo
 
 	{{% image_container width="350" %}}![](attachments/use-navigation-layouts/3.4_toggleshrinkingcontentclosedoption.gif){{% /image_container %}}
 
-### 3.5 Set the Toggled Sidebar to Pushing Content Aside
+### 3.5 Setting Toggled Sidebar to Pushing Content Aside
 
 To configure the toggled sidebar to **Push content aside**, follow these steps:
 
@@ -204,7 +204,7 @@ To toggle the sidebar for Pushing content aside, follow these steps:
 
 	{{% image_container width="350" %}}![](attachments/use-navigation-layouts/3.6_pushingcontentaside.gif){{% /image_container %}}
 
-### 3.7 Set the Toggled Sidebar to Slide Over Content
+### 3.7 Setting Toggled Sidebar to Slide Over Content
 
 To configure the toggled sidebar to **Slide over content**, follow these steps:
 

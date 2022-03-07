@@ -12,6 +12,24 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### March 3rd, 2022
+
+#### Fixes
+
+* We fixed an issue where the `start environment` Deploy API error response had an incorrect JSON format. (Ticket 135323)
+
+### March 2nd, 2022
+
+#### Improvements
+
+* We have adjusted the thresholds for the Application Container Memory Percentage alert. It will now send a warning alert when the memory utilization is above 90% and a critical alert when it is above 95%.
+
+### February 17th, 2022
+
+#### Fixes
+
+* We removed a misleading message which was displayed when a Free App was unlinked from its environment. (Ticket 140897)
+
 ### January 13th, 2022
 
 #### Fixes
@@ -654,7 +672,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Improvements
 
-* We added a confirmation dialogue when you delete Custom Headers.
+* We added a confirmation dialog when you delete Custom Headers.
 * We made general performance improvements.
 
 #### Fixes

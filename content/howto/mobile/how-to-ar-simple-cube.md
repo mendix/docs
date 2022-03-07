@@ -32,10 +32,10 @@ For iOS:
 Create a new app by following these steps:
 
 1. Open Mendix Studio Pro. Select **File** > **New App** , and then select the **Blank Native Mobile App**.
-1. Click **Use this starting point.**
-1. Name your app _Hello World_ and click **Create app** to close the dialog box.
-1. Open the **Home_Native** page and remove the Intro screen widget and other containers.
-1. Download the AR widgets from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/117209)
+2. Click **Use this starting point.**
+3. Name your app _Hello World_ and click **Create app** to close the dialog box.
+4. Open the **Home_Native** page and remove the intro screen widget and other containers.
+5. Download the Native Mobile AR module from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/117209) and import it to your app.
 
 You will begin by embedding the following widgets into your Mendix app:
 
@@ -91,7 +91,7 @@ It is possible to use a more conventional image, like a company logo, as long as
 
 **Orientation** — this dictates the orientation of 3D objects on your tracker, not the orientation of the tracker itself. Leaving it on **Up** will make your 3D object appear right side up when you have it lying on a table.
 
-Your standard cube will not look different when turned around. To show orientation, this tutorial has temporarily added the following texture was added (see the [Material](#material) section below to learn how to add your own texture to an object):
+Your standard cube will not look different when turned around. To show orientation, this tutorial has temporarily added the following texture (see the [Material](#material) section below to learn how to add your own texture to an object):
 
 {{% image_container width="300" %}}![UP Image](attachments/how-to-ar-simple-cube/up-arrow.png){{% /image_container %}}
 

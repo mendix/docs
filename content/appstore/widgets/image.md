@@ -83,7 +83,7 @@ The **Dimensions** tab allows you to configure settings that are related to the 
     * The image will never get larger than its original size, but it can become smaller
     * This option will be hidden if **Image type** is set to **Icon**
 
-### 3 Styling
+## 3 Styling
 
 The widget is shipped with default styles and works out of the box without Atlas UI. However, including Atlas UI in the app brings improved styling and customizations such as design properties, helper classes, and custom variables.
 

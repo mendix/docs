@@ -80,7 +80,7 @@ If you have made any changes directly to your iOS or Android app, you will have 
 * The app's launcher icons have been changed
 * The splash screen has been changed
 
-## 5 Build an App That Can Use CodePush OTA Updates {#build-with-ota-support}
+## 5 Building an App That Can Use CodePush OTA Updates {#build-with-ota-support}
 
 Apps built using the Mendix Native Mobile Builder have OTA updates with App Center's CodePush disabled by default. To make OTA updates via App Center's CodePush available to your app's users, you must toggle the **App Center OTA Support** capability on. 
 

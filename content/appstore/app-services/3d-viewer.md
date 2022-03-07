@@ -2,6 +2,7 @@
 title: "3D Viewer"
 category: "App Services"
 menu_order: 1
+description: "Describes the configuration and usage of the 3D Viewer app service, which is available in the Mendix Marketplace."
 tags: ["3d visualization", "cad", "app store", "marketplace", "component", "platform support"]
 ---
 
@@ -76,7 +77,7 @@ First, download the *3DViewer.mpk* file for the [3D Viewer](https://marketplace.
 
 	![import-3dviewer](attachments/3d-viewer/import-3dviewer.jpg)
 	
-	{{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+	{{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
 3. Click **Import** on the **Import Module** dialog box, and a pop-up window stating that “The app was successfully imported into the project” will appear. Click **OK**.
 4. Open the **Project Explorer** to view the Viewer3D module. You can see a collection of ready to use items under the Viewer3D folder. Besides, if you go to Toolbox window, you will also notice a  collection of 3D widgets are added to Toolbox widget list, under the **Add-on widget** category. 
@@ -91,9 +92,8 @@ To use the 3DViewer features, your app needs to be bound to the 3D Viewer servic
 If you app does not have an after-startup microflow set,  follow these steps:
 
 1. Create a **Startup** microflow and add the **Viewer3D/USE_ME/VisServerAction** Java action to it.
-2. Make sure the java action parameter **Http endpoint** is set to `Expression:@Viewer3D.HttpEndpoint`.
-3. Set the return type of the microflow to **Boolean** with a **Value** of **true**.
-4.  Set this microflow as the **After startup** step via **Project Settings** > **Runtime** > [After startup](/refguide8/project-settings#after-startup).
+2. Set the return type of the microflow to **Boolean** with a **Value** of **true**.
+3.  Set this microflow as the **After startup** step via **Project Settings** > **Runtime** > [After startup](/refguide8/project-settings#after-startup).
 
 If your project already has a microflow set to execute after startup, you need to extend it with the **Viewer3D/USE_ME/VisServerAction** Java action and configure it as described in the above steps. 
 
@@ -137,7 +137,7 @@ The **HttpEndpoint** constant with the default value **visualization** is used t
 
 The **ModelSourceType** constant with the value **Mendix** is used to signify the model source. You can use this constant to restrict the value of the **Data source** parameter in the **Uploader** widget, the **Model source type** parameter in the **Viewer** widget, or the value of the **Source** attribute in the **ModelDocument** entity.
 
-The **LicenseToken** constant is used to provide a valid 3DViewer license token for the app that uses 3DViewer to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your ownrenvironment. As 3DViewer is a commercial product and subject to a subscription fee, to be able to use the 3DViewer functionalities in a deployed app, you will need a valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
+The **LicenseToken** constant is used to provide a valid 3DViewer license token for the app that uses 3DViewer to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As 3DViewer is a commercial product and subject to a subscription fee, to be able to use the 3DViewer functionalities in a deployed app, you will need a valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
 
 However, if you only plan to try how 3DViewer works  (meaning, build and run an app that uses 3DViewer locally in Studio Pro or deploy to a Mendix Free App environment), you do not need to subscribe to get a license token. Therefore, you do not need to set a value for the **LicenseToken** constant, just leave it empty.
 
@@ -171,7 +171,7 @@ The **GetMarkupsFromMendix** nanoflow takes a **ModelDocument** object as an inp
 
 The **VisServerAction** Java action is used to set up a visualization server infrastructure, which is critical for realizing all the functions that 3D Viewer provides. It is exposed as microflow actions. 
 
-For 3D Viewer to work, you must set the app's after-startup microflow to call the **VisServerAction** Java action. Make sure the **Http endpoint** parameter of this java action is set to `Expression:@Viewer3D.HttpEndpoint`. 
+For 3D Viewer to work, you must set the app's after-startup microflow to call the **VisServerAction** Java action. 
 
 ### 4.6 Widgets {#widgets}
 
@@ -263,7 +263,7 @@ No specific configuration is needed. With this widget, you can add, delete, and 
 
 This widget enables creating a 2D markup on a model and saving the annotated screenshot. Snapshots that contain 2D markup will be saved along with the model in Mendix file storage.
 
-On **General** tab, by setting the **Enable** property you can switch the markup mode on or off. When set to **True**, model will be locked to a 2D dimension and will not react to mouse rotatation. When set to **False**, the model will be unlocked and return to rotatable state.
+On **General** tab, by setting the **Enable** property you can switch the markup mode on or off. When set to **True**, model will be locked to a 2D dimension and will not react to mouse rotation. When set to **False**, the model will be unlocked and return to rotatable state.
 
 Also on the **General** tab is the **markup color** property, which allows you to set the color of markup annotations. The valid values are [CSS legal color values](https://www.w3schools.com/CSSref/css_colors_legal.asp) (for example, RGB values, predefined color names, and hexadecimal color values).
 
@@ -433,7 +433,7 @@ By selecting one attribute to set the **Error** event, you can pick up an error 
 
 ![viewerevent-onerror](attachments/3d-viewer/viewerevent-onerror.jpg)
 
-Like other Mendix events, you can select from a list of actions upon a Viewer error for **Action**. One possible use case is show a error pop up page to let user know the error details.
+Like other Mendix events, you can select from a list of actions upon a Viewer error for **Action**. One possible use case is show a error pop-up page to let user know the error details.
 
 ![viewer-onerror-sample](attachments/3d-viewer/viewer-onerror-sample.jpg) 
 
@@ -441,9 +441,9 @@ Like other Mendix events, you can select from a list of actions upon a Viewer er
 
 By selecting one attribute for the **Progress status** value, you can get the current loading status and the loading percentage of the model, product structure tree, and [PMI tree](#pmi-tree).
 
-**Progress status** takes a String attribute. You can define an attribute and bind that attribute to this propoerty. In a running app, upon loading a model, product structure tree, PMI tree, and PMI shape, the load progress status information will be populated to this attribute. You can easily get this model loading status information (`Notloaded`, `Loading`, `Loaded`)and use it in the actions.
+**Progress status** takes a String attribute. You can define an attribute and bind that attribute to this property. In a running app, upon loading a model, product structure tree, PMI tree, and PMI shape, the load progress status information will be populated to this attribute. You can easily get this model loading status information (`Notloaded`, `Loading`, `Loaded`)and use it in the actions.
 
-**Progress percentage** takes a Decimal attribute. You can define an attribute and bind that attribute to this propoerty. In a running app, upon loading a model, product structure tree, PMI tree, and PMI shape, the load progress percentage information will be populated to this attribute.You can easily get this loading percentage and use it in the actions.
+**Progress percentage** takes a Decimal attribute. You can define an attribute and bind that attribute to this property. In a running app, upon loading a model, product structure tree, PMI tree, and PMI shape, the load progress percentage information will be populated to this attribute.You can easily get this loading percentage and use it in the actions.
 
 ![viewer-onprogress](attachments/3d-viewer/viewer-onprogress.jpg) 
 
@@ -457,11 +457,11 @@ For more information, see [Displaying Model Loading Progress with Progress Bar W
 
 By selecting one attribute for the **Loaded** value, you can get the current loading status of the product structure tree.
 
-**OnLoad** takes a Boolean type attribute. You can define an attribute and bind that attribute to this propoerty. In a running app, when you open a model, product structure tree will need to be loaded first, the product structure tree load event will be triggered, and the product structure load information will be populated to this attribute. You can get the current loading status of product structure tree and use it in the actions.
+**OnLoad** takes a Boolean type attribute. You can define an attribute and bind that attribute to this property. In a running app, when you open a model, product structure tree will need to be loaded first, the product structure tree load event will be triggered, and the product structure load information will be populated to this attribute. You can get the current loading status of product structure tree and use it in the actions.
 
 ![viewer-onload-result](attachments/3d-viewer/viewer-onload-result.jpg)
 
-Like other Mendix events, you can select from a list of actions upon the product structure tree loaded status for **Action**. One possible use case is show a pop up page to let user know if product structure is successfuly loaded.
+Like other Mendix events, you can select from a list of actions upon the product structure tree loaded status for **Action**. In order to call the **On Load** action, you must bind a valid **Loaded** value. One possible use case is show a pop-up page to let user know if product structure is successfully loaded.
 
 ![viewer-onload-sample](attachments/3d-viewer/viewer-onload-sample.jpg)
 
@@ -487,7 +487,7 @@ The sections below present operations within the Section View widget.
 
 #### 5.6.2 Direction
 
-* **X Direction** –  sets the X axis of the default coordinate system as the reference.
+* **X Direction** –  sets the X axis of the default coordinate system as the reference
 * **Y Direction** –  sets the Y axis of the default coordinate system as the reference
 * **Z Direction** – sets the Z axis of the default coordinate system as the reference
 
@@ -543,10 +543,10 @@ When you want to deploy your app to a licensed Mendix Cloud node or an on-premis
 
 On the [3D Viewer](https://marketplace.mendix.com/link/component/118345) page, click **Subscribe** to go to the subscription order page and follow these steps:
 
-1. Fill in technical contact information (first name, last name, email address), the subscription amount, billing account information, and other required information. 
-2. Upon successful order creation, if you are the app's [Technical Contact](/developerportal/collaborate/app-roles#technical-contact), you will receive an order confirmation email. 
-3. Click the link in the email to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there.
-4. In the list of your organization's subscriptions, click the **3D Viewer** subscription link to open the subscription details page.
+1. Fill in **Technical Owner** information (first name, last name, email address), the subscription amount, billing account information, and other required information. 
+2. Upon successful order creation, if you are the app's technical owner, you will receive an order confirmation email. 
+3. Click the link in the email to the [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) page and log in there.
+4. In the list of your company's subscriptions, click the **3D Viewer** subscription link to open the subscription details page.
 5. Click **Create Binding Keys** , give the key a meaningful name (which should include the name of the app where you are using 3D Viewer), then click **Create Keys**.
 6. When the **LicenseToken** key is generated, copy and save it for later use in your app.
 

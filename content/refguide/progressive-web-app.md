@@ -31,15 +31,15 @@ Within the navigation profiles the following PWA features can be configured:
 
 To be able to fully test PWA functionalities, the app needs to be deployed to the cloud. This is because the service worker is only enabled in the cloud over HTTPS.
 
-### 2.1 Publish as a Progressive Web App
+### 2.1 Publishing as a Progressive Web App
 
 When checked and deployed to the cloud, the app registers a [service worker](https://developers.google.com/web/fundamentals/primers/service-workers) that is the basis for PWAs. On offline navigation profiles, this option is always enabled. In online navigation profiles, enabling this option will also give the end-user a custom page when the device has no connection. Where desired, this page can be customized by adding an *offline.html* page to the theme folder (for example, *theme/offline.html*). Note that this page should not load any other resources over the network.
 
-### 2.2 Allow "Add to Home Screen" Prompt
+### 2.2 Allowing "Add to Home Screen" Prompt
 
 When the **Add to Home Screen** option is selected, the end-user might be actively asked to add the app to their device's home screen or desktop. The behavior can differ per browser and over time. When unselected, the app can still always be added to the home screen, but the user will not be actively asked.
 
-### 2.3 Preload Static Resources
+### 2.3 Preloading Static Resources
 
 Enabling this option will make the app pre-load static resources like pages, images, and widgets in the background. This can aid performance. This pre-loading happens when a user opens the app for the first time, or when the model has changed. This makes the app feel faster when navigating to new pages. It comes at a cost, however, as it consumes more bandwidth and device storage initially.
 
@@ -47,7 +47,7 @@ In offline profiles, this feature is automatically enabled to allow the app to f
 
 Note that all pages and images reachable in the navigation profile are loaded by the browser. This configuration can be undesirable from a security perspective, depending on your use case and requirements.
 
-## 3 Preview or Test a PWA
+## 3 Previewing or Testing a PWA
 
 PWAs can be directly viewed and tested in the browser on your machine or device. Via the **View** menu you can directly open the PWA profiles in your browser:
 
@@ -67,7 +67,7 @@ When previewing or testing an offline-first PWA locally, an internet connection 
 
 To check a PWA's capabilities, you can use [Lighthouse](https://developers.google.com/web/tools/lighthouse). Lighthouse is an open-source, automated tool for improving the quality of web pages. It can check if your app meets the progressive web app requirements and can offer suggestions for improving your web app.
 
-## 4 Distribute or Share the PWA
+## 4 Distributing or Sharing the PWA
 
 As PWAs are web apps, these can be shared easily by sharing the PWA's URL.
 

@@ -248,4 +248,4 @@ To consume the service deployed to the **Acceptance environment**, follow these 
 ## 5 Read More
 
 * [Data Hub Pane](data-hub-pane)
-* [Consumed OData Service](consumed-odata-service)
+* [Consumed OData Services](consumed-odata-services)

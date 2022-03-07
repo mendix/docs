@@ -61,7 +61,7 @@ The following sections will describe the different available widget properties a
 
 The [Carousel](https://marketplace.mendix.com/link/component/47784/) widget displays images in a carousel.
 
-### 1.1 Features
+Features:
 
 * Supports different data sources:
 	* Set static images in Studio Pro
@@ -72,29 +72,23 @@ The [Carousel](https://marketplace.mendix.com/link/component/47784/) widget disp
 * Execute a microflow or nanoflow or open a page when an image is clicked
 * Swipe through images on mobile devices
 
-## 2 Usage
+Usage
 
 The widget requires a context configured on the **Data Source** tab. The possible data sources are described below.
 
-### 2.1 Static Data Source
-
-When this option is selected, do the following:
+Static Data Source:
 
 * In the **Static images** section, click **New** to add static images from Studio Pro and also configure an on-click action
 * On the **On click action** tab of the **Edit Static Images Item** dialog box, configure only one of option:: **Microflow**, **Nanoflow**, or **Page**
 
-### 2.2 Database Data Source
-
-When this option is selected, do the following:
+Database Data Source:
 
 * Specify the **Images entity** and the **XPath** constraint (if any)
 * On the **Behavior** tab, configure the **On click** behavior
 	* For the **Call microflow**, **Call nanoflow**, and **Show page** options, specify the respective microflow, nanoflow, or page
 * Specifying a **URL attribute** will make the value of the URL attribute the priority
 
-### 2.3 Microflow Data Source
-
-When this option is selected, do the following:
+Microflow Data Source:
 
 * Specify the **Images entity** and the **Microflow** from which the carousel images will be retrieved (both are required)
 * On the **Behavior** tab, configure the **On click** behavior

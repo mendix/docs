@@ -38,17 +38,17 @@ The following sections will describe the different available widget properties a
 
 ### 3.2 Display
 
-* **Pagination** - show pagination dots
+* **Pagination** – shows pagination dots
 	* Default: **Yes**
-* **Navigation controls** - show arrows on the left and right side
+* **Navigation controls** – shows arrows on the left and right side
 	* Default: **Yes**
-* **Autoplay** - allow images to start sliding automatically when the widget is ready
+* **Autoplay** – allows images to start sliding automatically when the widget is ready
 	* Default: **Yes**
-* **Delay** - creates a time interval between one item cycling to the next
+* **Delay** – creates a time interval between one item cycling to the next
 	* Default: **1000ms**
-* **Infinite loop** - cycle between images endlessly
+* **Infinite loop** – cycles between images endlessly
 	* Default: **Yes**
-* **Animation** - add a fade animation on each cycle
+* **Animation** – adds a fade animation on each cycle
 	* Default: **Yes**
 
 ### 3.3 Events

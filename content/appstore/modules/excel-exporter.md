@@ -31,7 +31,7 @@ On the **Excel Exporter** page, there are the following items:
 * **New**: opens the **New template** dialog box that contains the following items:
     * **Document type**: the document type of the exported file (**Excel 97 - 2003**, **Excel 2007 or higher**, or **CSV file**)
     * **Filename** : the name of the template
-    * **Input object **(optional): an entity associated to your entity to be exported
+    * **Input object**(optional): an entity associated to your entity to be exported
     * **Description** (optional): the description of the template
 * **Edit**: opens the [template details page](#template-details) where you can make changes to the selected template
 * **Delete**: deletes the selected template
@@ -43,7 +43,7 @@ On the template details page, you can define the template with the following ite
 
 * **Template ID**: the ID of a template, which is generated automatically by the system
 * **Filename**: the name of the template
-* **Input object **(optional): an entity associated to your entity to be exported
+* **Input object**(optional): an entity associated to your entity to be exported
 * **Description** (optional): the description of the template
 * **Date time export format**: the format for exported date and time
 *  **Upload existing excel file**: uploads an Excel file which is used as a template
@@ -97,12 +97,12 @@ On the sheet details page, you can define sheets with the following items:
 
     {{% alert type="info" %}}If you use **Upload existing excel file** on the [template details page](#template-details), the sheet name defined in your Excel template file will be used, and the **Name** you enter here will not be used.{{% /alert %}}
 
-* **Sequence **(optional): the sequence of the sheet in the exported document
+* **Sequence**(optional): the sequence of the sheet in the exported document
 
     {{% alert type="info" %}}The sheets in the exported Excel document are shown in the ascending sequence. If the sequence of a sheet is set to empty, this sheet will become the first sheet.{{% /alert %}}
 
 * **Row object**: the object data used for the rows
-* **Reference to template input object **(optional): the reference to the template input object (if **Input object** is used)
+* **Reference to template input object** (optional): the reference to the template input object (if **Input object** is used)
 * **Sheet input object**: the object that is the input for this sheet
 * **Start retrieved data at row**: the row where the header is
 * **Distinct duplicate data**

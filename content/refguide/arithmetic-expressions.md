@@ -57,7 +57,7 @@ The input parameters are described in the table below:
 
 ### 3.2 Output
 
-If either of the two inputs is of type Decimal, the result is of type Decimal.
+The result is always of type Decimal, regardless of the types for the inputs.
 
 ### 3.3 Example
 
@@ -65,27 +65,27 @@ Find the example of usages below:
 
 * The `div` syntax example: if you use the following input:
 
-  ```java
-  3 div 5
-  ```
+    ```java
+    3 div 5
+    ```
 
-  The output is:
+     the output is:
 
-  ```java
-  0.6
-  ```
+    ```java
+    0.6
+    ```
 
 * `:` syntax example: if you use the following input:
 
-  ```java
-  12 : 3
-  ```
+    ```java
+    12 : 3
+    ```
 
-  The output is:
+    the output is:
 
-  ```java
-  4.0
-  ```
+    ```java
+    4.0
+    ```
 
 ### 3.4 Remarks
 

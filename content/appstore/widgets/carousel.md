@@ -12,7 +12,7 @@ The [Carousel](https://marketplace.mendix.com/link/component/47784/) widget disp
 
 ### 1.1 Features
 
-* Allows you to use the widget as a content area
+* Allows you to use the widget as a composable region for your image widgets, text widgets, and more
 * Navigate to the next or previous image using arrows or dots
 * Autoplay your images
 * Set the timeouts between each slide

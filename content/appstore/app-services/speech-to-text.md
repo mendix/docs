@@ -53,9 +53,9 @@ A trial gives everyone in your company one-month access to the app service. The 
 3. Select the check box to agree to the **Terms & Conditions**.
 4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used. 
-6. Click the link in the email to go to the [Company Subscriptions](https://docs.mendix.com/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **Speech to Text** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
+6. Click the link in the email to go to the [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) page and log in there. This page shows all the products that you have trials for.
+7. Click **Speech to Text** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. You need to use them later to [configure](#configure-license-token) the license token in your app.
 
 #### 2.1.2 Subscribing to the App Service
 
@@ -66,29 +66,13 @@ A trial gives everyone in your company one-month access to the app service. The 
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Contact will receive an email that says the app service is ready to be used. 
 6. Click the link in the email to go to the [Company Subscriptions](https://docs.mendix.com/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
 7. Click **Speech to Text** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. You need to use them later to [configure](#configure-license-token) the license token in your app.
 
-### 2.2 Downloading the Component from the Marketplace
+### 2.2 Installing the Component in Your App
 
-1. Go to the [Speech to Text](https://marketplace.mendix.com/link/component/118408) page in the marketplace.
-2. **Download** the *SpeechToText.mpk* file.
-3.  To add the Speech to Text app service to your app in Mendix Studio Pro, follow these steps:
+To download and install the Speech to Text app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **App Explorer** and also in the **Cognitive AI widgets** category in the **Toolbox**.
 
-    1.  In the **App Explorer**, right-click the app.
-    2.  Click **Import module package** and then select *SpeechToText.mpk*.
-
-        In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
-
-        ![import-speech-to-text](attachments/speech-to-text/import-speech-to-text.png)
-
-        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
-
-   3.  In the **Import Module** dialog box, click **Import**. 
-   4.  Wait until a pop-up box states that the module was successfully imported. Click **OK**.
-   5.  Open the **App Explorer**  to view the **SpeechToText** module. You can also find the app service in the **Cognitive AI widgets** category in the **Toolbox**.
-4. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
-
-You have successfully added the Speech To Text resources to your app.
+Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
 ## 3 Configuration
 
@@ -195,7 +179,7 @@ The only core widget required is the **Microphone** widget. You can make the fol
 | Thai                    | th-TH         |
 | Turkish                 | tr-T          |
 
-### 3.6 Configuring the LicenseToken {#configure-license-token}
+### 3.6 Configuring the License Token {#configure-license-token}
 
 #### 3.6.1 For an App Run Locally or Deployed as a Mendix Free App
 

@@ -26,7 +26,7 @@ The widget requires a defined **Data source** available in the **General** tab. 
 ### 2.1 Data Source
 
 * Select a **System.Image** type of entity as a data source
-* Place an **Image** widget inside of the content area and configure it as it is described in [Image](https://docs.mendix.com/appstore/widgets/image)
+* Place an **Image** widget inside of the content area and configure it as it is described in [Image](/appstore/widgets/image)
 
 ## 3 Configuration
 
@@ -34,7 +34,7 @@ The following sections will describe the different available widget properties a
 
 ### 3.1 General tab
 
-* **Data source** - see [Data source](https://docs.mendix.com/refguide/data-sources) documentation for more details
+* **Data source** – see [Data source](/refguide/data-sources) documentation for more details
 
 ### 3.2 Display
 
@@ -56,10 +56,6 @@ The following sections will describe the different available widget properties a
 * **On click action** – executes an action when the carousel item is clicked
 
 ## 4 Widgets Below Version 2.0.0
-
-## 1 Introduction
-
-The [Carousel](https://marketplace.mendix.com/link/component/47784/) widget displays images in a carousel.
 
 Features:
 

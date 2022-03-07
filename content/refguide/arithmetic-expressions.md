@@ -57,7 +57,7 @@ The input parameters are described in the table below:
 
 ### 3.2 Output
 
-If either of the two inputs is of type Decimal, the result is of type Decimal.
+The result is always of type Decimal, regardless of the types for the inputs.
 
 ### 3.3 Example
 

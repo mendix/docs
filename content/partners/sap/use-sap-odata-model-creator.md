@@ -2,7 +2,7 @@
 title: "Use OData Model Creator for SAP Solutions"
 category: "SAP"
 menu_order: 35
-description: "Presents the use of the OData Model Creator for SAP solutions."
+description: "Presents the use of the OData functions of the Model Creator for SAP solutions."
 tags: ["SAP", "OData", "integration", "SAP services"]
 aliases:
     - /howto/sap/use-sap-odata-model-creator.html
@@ -13,7 +13,7 @@ aliases:
 
 SAP data models reflect an OData service from SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, and SAP S/4HANA Cloud. OData services are exposed via SAP Gateway and are described in a `$metadata` file, which describes all the entities, relationships, and functions that are exposed for that service.
 
-Handcrafting a Mendix domain model for these OData services would be a lot of work. The OData Model Creator for SAP solutions automates this process by creating a Mendix module for the selected service containing the Mendix domain model which can be imported in your project. The data model also contains additional information such as the URL of the exposed endpoint, a list of collections in the service, and a list of functions provided by the service.
+Handcrafting a Mendix domain model for these OData services would be a lot of work. The Model Creator for SAP solutions automates this process by creating a Mendix module for the selected service containing the Mendix domain model which can be imported in your project. The data model also contains additional information such as the URL of the exposed endpoint, a list of collections in the service, and a list of functions provided by the service.
 
 There are four ways to create the data model:
 
@@ -31,18 +31,20 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Obtain authentication credentials, if needed, for the SAP Catalog Service or SAP back-end system you wish to use
 
 {{% alert type="warning" %}}
-OData Model Creator for SAP solutions will produce a module which is in Mendix version 8.15.1. To use the module you will have to create your app in, or upgrade your app to, Mendix version 8.15.1 or above.
+The Model Creator for SAP solutions will produce a module which is in Mendix version 8.15.1. To use the module you will have to create your app in, or upgrade your app to, Mendix version 8.15.1 or above.
 {{% /alert %}}
 
 ## 3 Generating a Data Model
 
-The OData Model Creator for SAP solutions is an app in the Marketplace. Search for it in the Mendix Marketplace, or find it here: [OData Model Creator for SAP solutions](https://sapmodelcreator.mendixcloud.com/link/odata).
+The Model Creator for SAP solutions is an app in the Marketplace. Search for it in the Mendix Marketplace, or find it here: [Model Creator for SAP solutions - OData](https://sapmodelcreator.mendixcloud.com/link/odata). If the app gives you a choice between **SAP OData** and **SAP BAPI**, choose **SAP OData**.
+
+![](attachments/use-sap-odata-model-creator/odata-bapi.png)
 
 {{% alert type="info" %}}
-The OData Model Creator for SAP solutions is not currently available in the Marketplace within Studio Pro. It can only be run in a browser.
+The Model Creator for SAP solutions is not currently available in the Marketplace within Studio Pro. It can only be run in a browser.
 {{% /alert %}}
 
-Open the [OData Model Creator for SAP solutions](https://sapmodelcreator.mendixcloud.com/link/odata), where you will be asked how you want to generate your model:
+Open the [Model Creator for SAP solutions - OData](https://sapmodelcreator.mendixcloud.com/link/odata), where you will be asked how you want to generate your model:
 
 ![](attachments/use-sap-odata-model-creator/model-creator-wizard-1.png)
 
@@ -63,7 +65,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
 1. Click **API Business Hub**.
 
-    You will be presented with a list of packages containing OData API definitions. You can search this list (this includes text in the package description as well as the package name), and page through it using the paging buttons.
+    You will be presented with a list of packages containing OData API definitions. You can search this list (this includes text in the package description as well as the package name) , and page through it using the paging buttons.
 
     ![](attachments/use-sap-odata-model-creator/model-creator-wizard-2-api.png)
 
@@ -72,7 +74,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
 2. Click the package you want. It will be highlighted.
 
-3. Click **Continue** to see the APIs within the package.
+3. Click **Next** to see the APIs within the package.
 
     ![](attachments/use-sap-odata-model-creator/model-creator-wizard-3-api.png)
 
@@ -81,7 +83,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
 4. Click the API you want. It will be highlighted.
 
-5. Click **Continue** to see the schemas within the API.
+5. Click **Next** to see the schemas within the API.
 
     ![](attachments/use-sap-odata-model-creator/model-creator-wizard-4-api.png)
 
@@ -90,7 +92,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
 6. Click the schema you want. It will be highlighted.
 
-7. Click **Continue** to proceed to the confirmation screen.
+7. Click **Next** to proceed to the confirmation screen.
 
     ![](attachments/use-sap-odata-model-creator/model-creator-wizard-5-api.png)
 
@@ -98,7 +100,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
     ![](attachments/use-sap-odata-model-creator/model-creator-generated-api.png)
 
-9. Click **Download File**.
+9. Click **Download**.
 
     Your browser will offer options on what to do with the file.
 
@@ -120,7 +122,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
     ![](attachments/use-sap-odata-model-creator/model-creator-wizard-2-1-catalog.png)
 
-2. Click **Continue**.
+2. Click **Next**.
 
     You will be presented with a list of OData API definitions. You can search this list (this includes text in the API description as well as the API name), and page through it using the paging buttons.
 
@@ -166,7 +168,7 @@ One way to do this is by getting the OData metadata XML file. This file can be d
 
     ![](attachments/use-sap-odata-model-creator/download-xml.png)
 
-2. Open the OData Model Creator for SAP solutions
+2. Open the OData Model Creator for SAP solutions to generate a Domain Model for an SAP OData Service.
 
     ![](attachments/use-sap-odata-model-creator/model-creator-wizard-1.png)
 
@@ -207,13 +209,13 @@ You have now created the module. The [Using the Data Model Module in a Mendix Ap
 
 ### 3.4 Providing the URL to the Metadata{#URL}
 
-You can also generate the data model from the metadata by providing the URL to the OData Model Creator for SAP solutions.
+You can also generate the data model from the metadata by providing the URL to the Model Creator for SAP solutions.
 
 {{% alert type="warning" %}}
 This method does not work where the destination needs authentication. You cannot use it, for example, to generate a data model for a service on the ES5 Gateway Demo.
 {{% /alert %}}
 
-1. Click **URL** on the first page of the OData Model Creator for SAP solutions.
+1. Click **URL** on the OData page of the Model Creator for SAP solutions.
 
     ![](attachments/use-sap-odata-model-creator/metadata-url.png)
 
@@ -272,4 +274,4 @@ For more information on how to use the imported data model together with the ODa
 
 * [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content)
 * [How to Use the OData Connector for SAP Solutions](use-sap-odata-connector)
-* [OData Model Creator for SAP Solutions](https://sapmodelcreator.mendixcloud.com/link/odata)
+* [Model Creator for SAP Solutions - OData](https://sapmodelcreator.mendixcloud.com/link/odata)

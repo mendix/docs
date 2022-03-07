@@ -12,7 +12,7 @@ Mendix apps can consume OData services exposed by SAP back-end systems. To do th
 
 The OData Connector for SAP solutions needs to know details of the OData service which has been exposed. This involves mapping the data structures exposed by the OData service (via the $metadata URL) to entities and attributes of the domain model. This information is created as a Mendix module (.mpk) file which can be imported into your Mendix app.
 
-Any OData service can be used to generate a data model using the OData Model Creator for SAP solutions. See [How To Use the OData Model Creator for SAP Solutions](use-sap-odata-model-creator) for instructions on how to do this.
+Any OData service can be used to generate a data model using the Model Creator for SAP solutions. See [How To Use the OData Model Creator for SAP Solutions](use-sap-odata-model-creator) for instructions on how to do this.
 
 ## 2 SAP Data Models
 
@@ -35,7 +35,7 @@ Do not change the names of entities, attributes, or associations in the Domain M
 
 ### 2.2 Service Root
 
-The module contains a constant whose value is the service root of the OData service. For example, the **GWSAMPLE_BASIC** data model, generated from the SAP Catalog Service using the OData Model Creator for SAP solutions has a Service Root which is the constant GWSAMPLE_BASIC which has the value `https://sapes5.sapdevcenter.com:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC`.
+The module contains a constant whose value is the service root of the OData service. For example, the **GWSAMPLE_BASIC** data model, generated from the SAP Catalog Service using the Model Creator for SAP solutions has a Service Root which is the constant GWSAMPLE_BASIC which has the value `https://sapes5.sapdevcenter.com:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC`.
 
 ### 2.3 Entity Set Names
 

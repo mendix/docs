@@ -24,6 +24,7 @@ These are the common properties for microflows and nanoflows:
 * [Auto-generate caption](#auto-generate-caption)
 * [Background color](#color)
 * [Error handling type](#error-handling)
+* [Disabled](#disabled)
 
 ## 2 Caption {#caption}
 
@@ -48,7 +49,17 @@ You can also select a default color for all the activities of a certain type in 
 
 In **Error handling type**, you can choose the type of error handling for the activity. For details on available options and their effects, see the [Error Handlers](error-event#errorhandlers) section in *Microflows*.
 
-## 5 Read More
+## 5 Disabled {#disabled}
+
+The **Disabled** property allows you to skip the activity from a flow.
+
+
+| Option | Description                                                                                                                                                             |
+|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Yes    | The activity will be shown as faded out. Errors will be ignored. When running your microflow, the disabled activity is skipped, also while debugging. |
+| No  *(default)*    | The activity works as usuall.                                                                                                                                           |
+
+## 6 Read More
 
 * [Microflows](microflows)
 * [Nanoflows](nanoflows)

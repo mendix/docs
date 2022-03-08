@@ -87,11 +87,11 @@ Alternatively, you can upload an existing MDA by clicking **Upload Package**.
 
 When deploying your app for the first time, there will be no environments available. Before creating an environment, make sure that you have created/uploaded deployment package. The **Environments** page for your app in the Developer Portal will show you the current status.
 
-![](attachments/private-cloud-deploy/image5.png)
+    ![](attachments/private-cloud-deploy/image5.png)
 
 1. Click **Create Environment**.
 
-![](attachments/private-cloud-deploy/selectDeploymentpackage.png)
+    ![](attachments/private-cloud-deploy/selectDeploymentpackage.png)
 
 2. Select the deployment package from the list of deployment packages and click **Next**.
 
@@ -99,7 +99,7 @@ When deploying your app for the first time, there will be no environments availa
 
     {{% alert type="info" %}}You can change the UUID if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.{{% /alert %}}
 
- ![](attachments/private-cloud-deploy/customizeEnvironmentPage1.png)
+    ![](attachments/private-cloud-deploy/customizeEnvironmentPage1.png)
 
 4. Enter **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
 
@@ -114,7 +114,7 @@ When deploying your app for the first time, there will be no environments availa
 
 7. Click **Next**.
 
-![](attachments/private-cloud-deploy/configureEnvResources.png)
+    ![](attachments/private-cloud-deploy/configureEnvResources.png)
    
 
 8. Select **Core Resources**.
@@ -195,7 +195,7 @@ The **Environments** page of the Developer Portal contains three sections:
 
 This lists the deployment packages which have been created for this app.
 
-![](attachments/private-cloud-deploy/image17.png)
+    ![](attachments/private-cloud-deploy/image17.png)
 
 There are five buttons:
 
@@ -227,7 +227,7 @@ This allows you to upload an MDA package you have already created, using Studio 
 
 This displays details of the deployment package.
 
-![](attachments/private-cloud-deploy/image18.png)
+    ![](attachments/private-cloud-deploy/image18.png)
 
 The information shows here is labeled to help you. The indicators in the environment description are described in the next section, [Environments](#environments), below.
 
@@ -245,7 +245,7 @@ This deploys the package to an existing environment as described in [Deploying t
 
 This section shows all the environments created for this app.
 
-![](attachments/private-cloud-deploy/image19.png)
+    ![](attachments/private-cloud-deploy/image19.png)
 
 For each environment, you can see a summary of the status of the resources and details of the package which is running in the environment.
 
@@ -330,7 +330,7 @@ This button contains a list of actions which you can perform quickly on the envi
 
 This section shows all the activities, such as creating environments and deploying apps, which have taken place in this environment. You can sort the activities in either descending or ascending date and time order.
 
-![](attachments/private-cloud-deploy/image20.png)
+    ![](attachments/private-cloud-deploy/image20.png)
 
 ## 5 Managing Your Environments from the Environment Details Page{#environment-details}
 
@@ -338,7 +338,7 @@ Each environment you create has an **Environment Details** page which allows you
 
 If you have any outstanding changes to your environment the page will display a warning message. If you click **Apply Changes**, the environment will be stopped and restarted.
 
-![](attachments/private-cloud-deploy/image21.png)
+    ![](attachments/private-cloud-deploy/image21.png)
 
 The environment details page consists of seven tabs:
 
@@ -356,7 +356,7 @@ These tabs are described below.
 
 The general tab shows information about your running app.
 
-![](attachments/private-cloud-deploy/image22.png)
+    ![](attachments/private-cloud-deploy/image22.png)
 
 Most of the information is self-explanatory, but the status information gives you a quick summary of the status of the environment and the app deployed there.
 
@@ -386,7 +386,7 @@ Allows you to deploy the deployment package in the current environment to anothe
 
 This allows you to scale your app by increasing the number of replicas.
 
-![](attachments/private-cloud-deploy/image23.png)
+    ![](attachments/private-cloud-deploy/image23.png)
 
 To apply the new value, click **Restart the App and Scale**. Because you restart your app, it will be unavailable for a short time.
 
@@ -410,7 +410,7 @@ If the cluster is standalone, or the Mendix Gateway Agent is not connected for s
 
 If the environment cannot be deleted, you will receive a warning, but can go ahead and remove it from the Developer Portal.
 
-![](attachments/private-cloud-deploy/delete-environment.png)
+    ![](attachments/private-cloud-deploy/delete-environment.png)
 
 For a *connected* cluster, the top level MendixApp​ CRD will be deleted from the namespace – this will cause the following environment resources set up by the Operator to be garbage collected:
 
@@ -454,7 +454,7 @@ Subscription secrets are obtained from [Mendix support](https://support.mendix.c
 
 The **Model Options** tab allows you to change the configuration of scheduled events and constants in your app.
 
-![](attachments/private-cloud-deploy/image24.png)
+    ![](attachments/private-cloud-deploy/image24.png)
 
 To toggle any scheduled events, select the scheduled event you want to enable or disable and click **Toggle**.
 
@@ -464,13 +464,13 @@ To change any constants, select the constant you want to edit and then click **E
 
 On the Network tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections. This works in the same way as the Network tab for deployments to the Mendix Cloud. For more details on these, see the [Network Tab](environments-details#network-tab) section of *Environment Details*.
 
-![](attachments/private-cloud-deploy/network-tab.png)
+    ![](attachments/private-cloud-deploy/network-tab.png)
 
 ### 5.4 Runtime Tab
 
 On the Runtime tab, you can change various runtime settings for your app environment. This works in the same way as the Runtime tab for deployments to the Mendix Cloud. For more details on these, see the [Runtime Tab](environments-details#runtime-tab) section of *Environment Details*.
 
-![](attachments/private-cloud-deploy/runtime-tab.png)
+    ![](attachments/private-cloud-deploy/runtime-tab.png)
 
 {{% alert type="info" %}}
 When you use some settings on the Runtime tab for Mendix for Private Cloud they may work differently from how they work in the Mendix Cloud.
@@ -480,11 +480,11 @@ When you use some settings on the Runtime tab for Mendix for Private Cloud they 
 
 On the **Log Levels** tab, you can change the log levels which are used for the log nodes in your app.
 
-![](attachments/private-cloud-deploy/log-levels-tab-1.png)
+    ![](attachments/private-cloud-deploy/log-levels-tab-1.png)
 
 The **NODE** is a **Log node name** that you specified in your Mendix application. In the example below, the constant `MyFirstModile.LogNode` is used as a log node name. In this case you need put the *value* of the constant (in this case, `Test Service`) as a NODE on the Log Levels tab.
 
-![](attachments/private-cloud-deploy/log-levels-tab-2.png)
+    ![](attachments/private-cloud-deploy/log-levels-tab-2.png)
 
 You can find your logs in your Mendix application pod inside the Mendix container using the command below:
 
@@ -494,7 +494,7 @@ kubectl logs <pod-name> -c mendix
 
 This might produce the log below for the example described above.
 
-![](attachments/private-cloud-deploy/log-levels-tab-3.png)
+    ![](attachments/private-cloud-deploy/log-levels-tab-3.png)
 
 For more information, see the [Log Levels Tab](environments-details#log-levels) section of *Environment Details*.
 
@@ -508,7 +508,7 @@ In the TLS pane, you can choose whether to **Apply Default Configuration** or a 
 If you are using a version of Mendix Operator before 1.5.0, the settings in this tab will have no effect and the default configuration will be applied.
 {{% /alert %}}
 
-![](attachments/private-cloud-deploy/tls-configuration.png)
+    ![](attachments/private-cloud-deploy/tls-configuration.png)
 
 If you choose a custom TLS configuration, you will need to enter the following information:
 

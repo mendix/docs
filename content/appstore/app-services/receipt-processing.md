@@ -31,7 +31,7 @@ The Receipt Processing is a premium Mendix product that is subject to a purchase
 
 #### 2.1.1 Starting a Trial
 
-A trial gives everyone in your company one-month access to the app service. Only one user per company is allowed for the trial. To start a trial, perform the following steps:
+A trial gives everyone in your company one-month access to the app service. To start a trial, perform the following steps:
 
 1. Go to the [Receipt Processing](https://marketplace.mendix.com/link/component/118390) page in the Marketplace.
 2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.

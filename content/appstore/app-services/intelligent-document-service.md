@@ -36,7 +36,7 @@ The Intelligent Document Service is a premium Mendix product that is subject to 
 
 #### 2.1.1 Starting a Trial
 
-A trial gives everyone in your company one-month access to the app service. Only one user per company is allowed for the trial. To start a trial, perform the following steps:
+A trial gives everyone in your company one-month access to the app service. To start a trial, perform the following steps:
 
 1. Go to the [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) page in the Marketplace.
 2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.

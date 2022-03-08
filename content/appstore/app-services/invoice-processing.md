@@ -54,7 +54,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 
 ### 2.2 Installing the Component in Your App
 
-To download and install the Invoice Processing app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content.md#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can find it in the **App Explorer** and also in the **Document Data Capture Service** category in the **Toolbox**.
+To download and install the Invoice Processing app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can find it in the **App Explorer** and also in the **Document Data Capture Service** category in the **Toolbox**.
 
 ## 3 Configuring the Binding Keys {#configure-keys}
 

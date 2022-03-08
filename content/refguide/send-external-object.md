@@ -9,10 +9,10 @@ These activities can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Send external object** activity can be used to persist changes to an external object.
+The **Send external object** activity can be used to persist changes to an external object. It can be used to send newly created objects, or objects that have been first retrieved and then changed.
 
 {{% alert type="info" %}}
-The ability to send attributes using this activity was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6). The sending of association members was added in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8)
+The ability to send attributes using this activity was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6). The sending of association members was added in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8), and sending a new object was added in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12)
 {{% /alert %}}
 
 ## 2 Updatable External Entities
@@ -27,7 +27,11 @@ This activity can only send objects from an OData service.
 
 Some services may have updatable attributes that are part of the key of the entity. Services published by Mendix apps do not have this, but other services might. It's not recommended to change those attributes.
 
-## 3 Related
+## 3 Creatable External Entities
+
+This activity sends new objects and their attributes and owned associations to be inserted in the external app.
+
+## 4 Related
 
 Persistable objects are persisted by using the [commit activity](committing-objects). External entities cannot be committed. Use this activity instead.
 

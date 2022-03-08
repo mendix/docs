@@ -86,7 +86,7 @@ To use the Invoice Processing app service, first you need to create a model, the
     
     5. Log into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account.    
     
-2.  From the drop-down list below **Select an environment to continue**, select an environment that you use to train models for the Invoice Processing app service. The **Existing Models** in this environment is displayed.
+2.  From the drop-down list below **Select an environment to continue**, select an environment that you use to train models for the Invoice Processing app service. The **Existing Models** in this environment are displayed.
 
     ![Existing Invoice models list](attachments/invoice-processing/existing-invoice-models.png)
 
@@ -117,7 +117,7 @@ You need to use an [Import Mapping](/refguide/mapping-documents#import-mappings)
 
 1.  To create an Import Mapping, you need a JSON structure. Perform the following steps to generate the JSON structure:
     1.  Log into the [Document Model Training](#document-model-training) application with your Mendix account.
-    2.  From the drop-down list below **Select an environment to continue**, select an environment that you use to train models for the Invoice Processing app service. The **Existing Models** in this environment is displayed.
+    2.  From the drop-down list below **Select an environment to continue**, select an environment that you use to train models for the Invoice Processing app service. The **Existing Models** in this environment are displayed.
     3.  Select your trained model. Make sure that the **Status** of the model is **Published**. Note down the **Model Id**. You will need it when you [extract data with the trained model ](#extraction-activity).
     4.  Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens.
     5.  Drag the sample invoice into the box where it says **Drag & Drop your image file here**. You can also click **Browse** and select the file.

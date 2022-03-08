@@ -31,9 +31,7 @@ For more information on how to manage branch lines, see the [Managing Developmen
 * <a name="branch-line"></a>**Branch line** – allows you to create a branch line from another branch line
 * <a name="tagged-version"></a>**Tagged version** – if you are doing maintenance on a deployed version you probably want to select a *tagged version*
 
-## 3 Revision (SVN Only)
-
-This setting is only available only **for SVN** when you select the [Main line](#main-line) or [Branch line](#branch-line) in **Create branch from**. There is no functionality to create a branch from a specific revision **for Git**.
+## 3 Revision
 
 Select from which revision of the main line or a branch line you want to create a branch line. Often, you would want to choose the most recent version.
 

@@ -32,7 +32,7 @@ The [Intelligent Document Service](https://marketplace.mendix.com/link/component
 
 ### 2.1 Obtaining the Binding Keys {#obtain-keys}
 
-The Intelligent Document Service is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in your app, first you need to start a subscription or a trial to get binding keys.
+The Intelligent Document Service is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in your app, first you need to start a subscription or a trial to get the binding keys.
 
 #### 2.1.1 Starting a Trial
 

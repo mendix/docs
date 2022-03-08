@@ -27,7 +27,7 @@ This app service works best with Studio Pro 8 versions starting with [8.18.15](/
 
 ### 2.1 Obtaining the Binding Keys {#obtain-keys}
 
-The Receipt Processing is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in your app, first you need to start a subscription or a trial to get binding keys.
+The Receipt Processing is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in your app, first you need to start a subscription or a trial to get the binding keys.
 
 #### 2.1.1 Starting a Trial
 

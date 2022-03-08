@@ -25,40 +25,41 @@ This app service works best with Studio Pro 8 versions starting with [8.18.15](/
 
 ## 2 Installation
 
-1. Go to the [Receipt Processing](https://marketplace.mendix.com/link/component/118390) component page in the Marketplace and download the *.mpk* file.
-2.  To add the Receipt Processing app service to your app in Mendix Studio Pro, follow these steps:
-    1.  In the **App Explorer** (in Studio Pro 9) or **Project Explorer** (in Studio Pro 8), right-click the app.
-    2.  Click **Import module package** and then select *ReceiptProcessing.mpk*.
+### 2.1 Obtaining the Binding Keys {#obtain-keys}
 
-        ![pop-up-menu-in-app-explorer](attachments/receipt-processing/import-module-in-app-explorer.png)
+The Receipt Processing is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in your app, first you need to start a subscription or a trial to get binding keys.
 
-        In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
+#### 2.1.1 Starting a Trial
 
-        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+A trial gives everyone in your company one-month access to the app service. Only one user per company is allowed for the trial. To start a trial, perform the following steps:
 
-3. In the **Import Module** dialog box, click **Import**.
-4. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
-5. Open the **App Explorer** or **Project Explorer** to view the **ReceiptProcessing** module. You can also find the app service in the **Document Data Capture Service** category in the **Toolbox**.
+1. Go to the [Receipt Processing](https://marketplace.mendix.com/link/component/118390) page in the Marketplace.
+2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
+3. Select the check box to agree to the **Terms & Conditions**.
+4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
+5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used. 
+6. Click the link in the email to go to the [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) page and log in there. This page shows all the products that you have trials for.
+7. Click **Receipt Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. Save the keys somewhere safe. You need to use them later to [configure the binding keys](#configure-keys) in your app.
 
-## 3 Configuration
+#### 2.1.2 Subscribing to the App Service
 
-The Receipt Processing app service is a premium Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses the Receipt Processing app service, you need to get a valid combination of certain keys and configure them as constants in the module.
+1. Go to the [Receipt Processing](https://marketplace.mendix.com/link/component/118390) page in the marketplace.
+2. Click **Subscribe** to start a subscription.
+3. Select your subscription plan.
+4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
+5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Owner will receive an email that says the app service is ready to be used.
+6. Click the link in the email to go to the [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
+7. Click **Receipt Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. Save the keys somewhere safe. You need to use them later to [configure the keys](#configure-keys) in your app.
 
-### 3.1  Subscribing to Get Keys
+### 2.2 Installing the Component in Your App
 
-1.  On the [Receipt Processing](https://marketplace.mendix.com/link/component/118390) component page in the Marketplace, click **Subscribe** to order a subscription or click **Try for Free** to start a trial.
+To download and install the Receipt Processing app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **App Explorer** and also in the **Document Data Capture Service** category in the **Toolbox**.
 
-    {{% alert type="info" %}}For the trial, only one user per company is allowed.{{% /alert %}}
-    
-2.  Fill in the **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Owner receives an order confirmation email.
+## 3 Configuring the Binding Keys {#configure-key}
 
-    For the trial, you do not need to fill in this information.
-    
-3. Click the link in the order confirmation email to go to the [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) page and log in with your Mendix account. This page gives an overview of all the subscriptions of your organization.
-4. Click **Receipt Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys.
-
-### 3.2 Configuring Keys for Application Deployment
+Before you deploy an app, you should configure the binding keys in your app as follows:
 
 1.  In the **App Explorer** or the **Project Explorer**, go to **ReceiptProcessing** > **Configurations**. **Access_Key**, **Secret_Key**, and **Encryption_Key** are defined as constants.
 

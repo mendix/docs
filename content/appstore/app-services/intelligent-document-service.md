@@ -30,7 +30,7 @@ The [Intelligent Document Service](https://marketplace.mendix.com/link/component
 
 ## 2 Installation
 
-### 2.1 Obtaining Binding Keys {#obtain-keys}
+### 2.1 Obtaining the Binding Keys {#obtain-keys}
 
 The Intelligent Document Service is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in your app, first you need to start a subscription or a trial to get binding keys.
 
@@ -54,8 +54,8 @@ A trial gives everyone in your company one-month access to the app service. Only
 3. Select your subscription plan.
 4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Owner will receive an email that says the app service is ready to be used.
-6. Click the link in the email to go to the [Company Subscriptions](https://github.com/mendix/docs/blob/1907dead1f7719f809f8d662ef53ee84a41c694e/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **Intelligent Document Service** to open the [service management dashboard](https://github.com/mendix/docs/blob/1907dead1f7719f809f8d662ef53ee84a41c694e/appstore/general/app-store-overview#service-management-dashboard).
+6. Click the link in the email to go to the [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
+7. Click **Intelligent Document Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
 8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. Save the keys somewhere safe. You need to use them later to [configure the keys](#configure-keys) in your app.
 
 ### 2.2 Installing the Component in Your App

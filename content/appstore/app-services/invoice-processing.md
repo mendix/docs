@@ -6,8 +6,6 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 ## 1 Introduction
 
-{{% todo %}}[update doc links on Documentation tabs for components already released ]{{% /todo %}}
-
 Powered by AI and OCR technologies, the [Invoice Processing](https://marketplace.mendix.com/link/component/118389) app service can help you automate the processing of invoices in bulk. It supports invoices in the European Union and the United States.
 
 ### 1.2 Features
@@ -41,9 +39,9 @@ A trial gives everyone in your company one-month access to the app service. To s
 5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used.
 6. Click the link in the email to go to the [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) page and log in there. This page shows all the products that you have trials for.
 7. Click **Invoice Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-8. Follow the instructions in the [Creating Binding Keys](/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. Save the keys somewhere safe. You need to use them later to [configure the keys](#configure-keys) in your app.
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. Save the keys somewhere safe. You need to use them later to [configure the keys](#configure-keys) in your app.
 
-#### 2.1.2 Subscribing to the App Service
+#### 2.1.2 Starting a Subscription
 
 1. Go to the [Invoice Processing](https://marketplace.mendix.com/link/component/118389) page in the marketplace.
 2. Click **Subscribe** to start a subscription.
@@ -52,7 +50,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Contact will receive an email that says the app service is ready to be used.
 6. Click the link in the email to go to the [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
 7. Click **Invoice Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-8. Follow the instructions in the [Creating Binding Keys](/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. Save the keys somewhere safe. You need to use them later to [configure the keys](#configure-keys) in your app.
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. Save the keys somewhere safe. You need to use them later to [configure the keys](#configure-keys) in your app.
 
 ### 2.2 Installing the Component in Your App
 
@@ -75,13 +73,17 @@ To use the Invoice Processing app service, first you need to create a model, the
 ### 4.1 Training a Document Model {#document-model-training}
 
 1.  Perform the following steps to log into the **Document Model Training** application:
-    1.  Log into the Marketplace with your Mendix account.
-    2.  Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
-    3.  Click **Invoice Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
+    1. Log into the Marketplace with your Mendix account.
+    2.  Go to **My Marketplace** and then do as follows:
+        
+        * If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+        * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+
+    3. Click **Invoice Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
     4.  Click **Manage Instance** to open the **Document Model Training** application.
-
+    
         ![Document model training app login page](attachments/invoice-processing/document-model-training-app.png)
-
+    
     5. Log into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account.    
     
 2.  From the drop-down list below **Select an environment to continue**, select an environment that you use to train models for the Invoice Processing app service. The **Existing Models** in this environment is displayed.
@@ -165,7 +167,10 @@ You need to use an [Import Mapping](/refguide/mapping-documents#import-mappings)
 The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
 1. Log into the Marketplace.
-2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+2.  Go to **My Marketplace** and then do as follows:
+    * If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+    * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+    
 3. Click **Invoice Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
 
 ## 5 Technical Provider{#technical-provider}

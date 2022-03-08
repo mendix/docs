@@ -60,7 +60,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 
 7. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
 
-8. Follow the instructions in the [Creating Binding Keys](/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
 
       ![secretkey-username-generated](attachments/email-service/cs-binding-key-generation.png)
 
@@ -80,7 +80,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 
 7. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
 
-8. Follow the instructions in the [Creating Binding Keys](/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
 
       ![secretkey-username-generated](attachments/email-service/cs-binding-key-generation.png)
 
@@ -88,7 +88,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 
 ### 2.2 Installing the Component in Your App
 
-To download and install the Email Service app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content.md#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can find it in the **App Explorer** and also in the **Communication Services** category in the **Toolbox**.
+To download and install the Email Service app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can find it in the **App Explorer** and also in the **Communication Services** category in the **Toolbox**.
 
 ## 3 Configuring SecretKey and UserName {#configure-keys}
 

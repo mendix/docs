@@ -102,13 +102,30 @@ The **Capabilities** section gives an overview of what operations the resource s
 This *Capabilities* section was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6).
 {{% /alert %}}
 
-## 8.1 Readable
+## 8.1 Insertable
+
+Check the check box for **Insertable** to indicate that clients can insert new objects.
+
+When the app receives a request to insert a new object, it does the following:
+
+1. It checks that the request is formatted correctly, rejecting things like specifying a string value for an integer attribute.
+2. It checks that the requested changes are valid, rejecting things like strings that are longer than the maximum length and empty values for required attributes.
+3. It creates a new object with the values specified in the request.
+4. It commits the object to the database.
+
+This is the behavior when you choose the action **Write to database**.
+
+{{% alert type="info" %}}
+Insertable capability was introduced in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12).
+{{% /alert %}}
+
+## 8.2 Readable
 
 A published OData resource is always readable.
 
-## 8.2 Updatable
+## 8.3 Updatable
 
-Select the check box for **Updatable (write)** to indicate that clients can update the values of attributes and associations.
+Check the check box for **Updatable** to indicate that clients can update the values of attributes and associations.
 
 When the app receives a request to change values, it does the following:
 
@@ -118,9 +135,9 @@ When the app receives a request to change values, it does the following:
 
 This is the behavior when you choose the action **Write to database**.
 
-### 8.2.1 Call a Microflow Instead of Writing to Database
+### 8.4 Call a Microflow Instead of Write to Database
 
-The **Call a microflow** action allows you to replace the third step (committing the changes to the database) with your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](http-request-and-response-entities) parameter. In the microflow, you can use the [Commit](committing-objects) activity to commit the changes to the database. If the microflow reports [validation feedback](validation-feedback), the runtime informs the client that the update request has failed.
+The **Call a microflow** action allows you to replace the last step (committing to the database) of the *Insertable* or *Updatable* capability with your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](http-request-and-response-entities) parameter. In the microflow, you can use the [Commit](committing-objects) activity to commit the changes to the database. If the microflow reports [validation feedback](validation-feedback), the runtime informs the client that the update request has failed.
 
 {{% alert type="info" %}}
 This **Call a microflow** action was introduced in Studio Pro [9.11.0](/releasenotes/studio-pro/9.11).

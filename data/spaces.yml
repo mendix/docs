@@ -117,8 +117,8 @@ releasenotes:
     - "SDKs"
     - "Quality Add-ons"
     - "Security Advisories"
-    - "Beta Versions"
-    - "Feature Release Calendar (MxWorld 2021)"
+    - "Beta Releases"
+    - "Feature Release Calendar"
 developerportal:
   space: "Developer Portal Guide"
   priority: false
@@ -202,7 +202,6 @@ partners:
   menu_categories:
     - "Siemens"
     - "SAP"
-    - "IBM"
 appstore:
   space: "Marketplace Guide"
   priority: false
@@ -219,7 +218,6 @@ data-hub:
   menu_categories:
     - "Share Data Between Apps"
     - "Write Data to Another App"
-    - "General Info"
     - "Data Hub Catalog"
     - "Data Hub Landscape"
 product-naming:
@@ -231,4 +229,3 @@ product-naming:
     - "Other Mendix Terms"
     - "Strategic Partner Terms"
     - "Terminology History"
-    - "Maintaining Documentation Links"

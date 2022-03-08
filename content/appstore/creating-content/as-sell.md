@@ -200,7 +200,7 @@ As a helping hand, the checklist below presents the final items to consider when
 
 **Technical Readiness**
 
-* Make sure you have prepared your app service according to the [Marketplace content development guidelines](/appstore/general/share-app-store-content#submission).
+* Make sure you have prepared your app service according to the [Marketplace content development guidelines](/appstore/general/share-app-store-content#guidelines).
 * Verify  your app service for errors and warnings before submitting it to Marketplace. Warnings are accepted, but they are not recommended.
 * While importing the app service, there might still be errors that exist, because it is expected that the user needs to hook up some information from their existing modules into the new app services. Make sure you explain how to set up the app service and how to address all errors in the [app service's documentation](/appstore/general/share-app-store-content#doc) when you are preparing for publication. There should be no errors displayed upon importing the app service that do not have an explanation.
 
@@ -217,7 +217,7 @@ As a helping hand, the checklist below presents the final items to consider when
 
 * Verify the app service works well for the specified Studio Pro version it is marked as being compatible with.
 * Keep the versioning pattern consistent in terms of naming and version numbers for your app service [releases](/appstore/general/share-app-store-content#updating).
-* Provide [release notes](/appstore/general/share-app-store-content#version) for the app service release.
+* Provide [release notes](/appstore/general/share-app-store-content#package) for the app service release.
 * Keep your app service up to date with new versions.
 
 **Branding**
@@ -250,4 +250,4 @@ Mendix's mission in regards to the governance of Marketplace content is to manag
 
 You can keep track of your submission by subscribing to receive status notifications. If you need more help, contact *DIS_AppServices_Supplier_Team@mendix.com*.
 
-Once your app service is available in the public Marketplace, you can gain insights into its usage through the **Subscriptions** overview in the [Marketplace](/appstore/general/app-store-overview#subscriptions). You can engage with your customers as they use your app service via [Reviews](/appstore/general/app-store-overview#my-reviews).
+Once your app service is available in the public Marketplace, you can engage with your customers as they use your app service via [Reviews](/appstore/general/app-store-overview#my-reviews).

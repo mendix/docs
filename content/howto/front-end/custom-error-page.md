@@ -7,19 +7,19 @@ tags: ["theming", "UX", "Error page", "offline", "404", "403", "front end"]
 
 ## 1 Introduction
 
-Whenever your application is stopped, you are presented with the infamous green monsters. To present your app users with a more professional looking page when the application is down, Mendix enables the creation of custom error pages on *Mendix Cloud*.
+Whenever your application is stopped, you are presented with the default Mendix error page. However, you can make a custom error page on *Mendix Cloud* for a more tailored user experience. 
 
-You can create an `offline.html` page, a `404.html` page, and a `403.html` page.
+Specifically, you can create an `offline.html` page, a `404.html` page, and a `403.html` page.
 
 The different files serve different purposes:
 
 * `offline.html`: will be served when your application has been stopped manually
 * `404.html`: will be served whenever a path does not exist
-* `403.html`: will be served when access to a resource is denied, because an IP filter has been implemented or because of client certificate restrictions.
+* `403.html`: will be served when access to a resource is denied, because an IP filter has been implemented or because of client certificate restrictions
 
-If you do not create these files, the default "green monsters" will be used instead for each scenario.
+If you do not create these files, the default error page will be used for each scenario:
 
-![](attachments/customerror-page/monsters.png)
+![](attachments/customerror-page/custom-error-page.png)
 
 **This how-to will teach you how to do the following:**
 
@@ -32,19 +32,23 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Have a local repository of the app
 * Have your app *hosted in the Mendix Cloud*
 
-## 3 Create a Custom Error Page
+## 3 Creating a Custom Error Page
 
 1. Open the local folder of your app.
 
-2.  Go to **theme**.
+2.  Go to **theme**:
 
     ![](attachments/customerror-page/theme.png)
 
-3.  Create a new folder named *error_page*.
+3.  Go to **web**:
+
+    ![](attachments/customerror-page/web.png)
+
+4.  Create a new folder named *error_page*:
 
     ![](attachments/customerror-page/error-page.png)
 
-4.  In the **error_page** folder, place your *offline.html* file. 
+5.  In the **error_page** folder, place your *offline.html* file:
 
     ![](attachments/customerror-page/offline.png)
 
@@ -52,7 +56,7 @@ Before starting this how-to, make sure you have completed the following prerequi
     
     {{% alert type="info" %}}In these *.html* files, you can only refer to external resources or resources under the absolute path `/error_page/`; the `/error_page/` path is the only one that will be available when the application is stopped.{{% /alert %}}
 
-5. Commit the changes in Studio Pro.
+6. Commit the changes in Studio Pro.
 
 {{% alert type="warning" %}}
 It might take up to an hour to before the custom error page is visible when the app is offline.

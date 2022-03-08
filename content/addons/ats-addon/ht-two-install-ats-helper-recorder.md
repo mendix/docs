@@ -35,7 +35,7 @@ Before starting this how-to, make sure you have the following prerequisites in p
 
 To install the ATS Helper, follow these steps:
 
-1.  Open ATS and click the information icon in the top-right corner of the screen:
+1.  Open ATS and click the information icon in the upper-right corner of the screen:
 
 	![](attachments/ht-two-install-ats-helper-recorder/information-icon.png)
 
@@ -61,7 +61,7 @@ See [How to Create a Test Case](ht-two-create-a-test-case) for more information 
 
 To install the ATS Recorder, follow these steps:
 
-1.	Open ATS and click the information icon in the top-right corner of the screen:
+1.	Open ATS and click the information icon in the upper-right corner of the screen:
 
 	![](attachments/ht-two-install-ats-helper-recorder/information-icon.png)
     

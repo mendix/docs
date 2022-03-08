@@ -3,7 +3,7 @@ title: "Use Mendix Data Storage APIs to Build Reusable Microflow Actions"
 category: "Extensibility"
 menu_order: 90
 description: "Describes creating custom microflow actions using Data Storage APIs."
-tags: ["java", "connector kit", "microflow action", "parameter type", "sql", "xpath", "oql", "datastorage"]
+tags: ["java", "microflow action", "parameter type", "sql", "xpath", "oql", "datastorage"]
 output:
   word_document: default
   html_document: default
@@ -16,7 +16,7 @@ Mendix Studio Pro supports two query languages to retrieve data:
 * Xpath as an easy to use query language to retrieve objects
 * OQL is a SQL based language, more focused on powerful reporting facilities
 
-You can use these query languages in Mendix Studio Pro, but both languages are also available through a Java API. You can use these APIs to implement powerful reusable microflow actions through the Connector Kit. In addition to Xpath and OQL, the Mendix APIs also enable you to use standard SQL on your Mendix database.
+You can use these query languages in Mendix Studio Pro, but both languages are also available through a Java API. You can use these APIs to implement powerful reusable microflow actions. In addition to Xpath and OQL, the Mendix APIs also enable you to use standard SQL on your Mendix database.
 
 This how to describes how you can build the following microflow actions:
 
@@ -98,9 +98,9 @@ Note that here you use the alias (**as ...**) to map the results of the selectio
 
 You can create a generic microflow action to execute OQL queries and return a list of objects. The Java action has the following parameters:
 
-* OqlQuery – a string containing the OQL query
-* ResultEntity – which entity will hold the retrieved data
-* A list of the ResultEntity specified as a return type.
+* **OqlQuery** – a string containing the OQL query
+* **ResultEntity** – which entity will hold the retrieved data
+* A list of the **ResultEntity** specified as a return type.
 
 As in the Xpath example above, a **Type parameter** is defined to specify that the return list uses the type specified in ResultEntity.
 
@@ -110,7 +110,7 @@ Additionally, you need to expose the Java action as a microflow action, provide 
 
 The Java action illustrated below does the following:
 
-* Retrieves all data using the Mendix API Core.retrieveOQLDataTable()
+* Retrieves all data using the Mendix API `Core.retrieveOQLDataTable()`
 * Loops through all the rows, creates a new object of the type specified by ResultEntity.
 
     {{% alert type="info" %}}Setting a Java action parameter of type **Entity of type parameter...** (*ResultEntity* in the example above) creates a Java string in the action which contains the name of the entity type. This string can be passed to Core.instantiate to create a new object.
@@ -160,11 +160,11 @@ The Java implementation below implements the following steps:
 ![](attachments/dsapi/image026.png)
 
 *	With the JDBC connection you can now implement your Java as you would with a regular JDBC connection. 
-*	A prepared statement is created, executed and the resulting records are made available through a ResultSet.
+*	A prepared statement is created, executed and the resulting records are made available through a `ResultSet`.
 
 ![](attachments/dsapi/image027.png)
 
-*	Next you loop through all the records in the ResultSet and create a Mendix object as specified by the user via ResultEntity.
+*	Next you loop through all the records in the `ResultSet` and create a Mendix object as specified by the user via ResultEntity.
 
 ![](attachments/dsapi/image028.png)
 
@@ -190,7 +190,7 @@ The following example illustrates the use of PostgreSQL-specific functionality. 
 
 The requirement for this example is to generate a list of dates for all first Mondays of the month between a range specified by the user.
 
-This example has a page where a user can enter a start and end date. The microflow triggered by the “Generate first Mondays of the month” button will print all the respective dates.
+This example has a page where a user can enter a start and end date. The microflow triggered by the **Generate first Mondays of the month** button will print all the respective dates.
 
 ![](attachments/dsapi/image031.png)
 
@@ -206,7 +206,7 @@ For example:
 
 ### 6.1 Creating the Java Action
 
-You create a Java action with parameters for the start date and the end date. You have a specific entity to return a list of the dates: Hr.FirstMondayDate.
+You create a Java action with parameters for the start date and the end date. You have a specific entity to return a list of the dates: *Hr.FirstMondayDate*.
 
 ![](attachments/dsapi/image033.png)
 
@@ -220,7 +220,7 @@ You create a Java action with parameters for the start date and the end date. Yo
 
     ![](attachments/dsapi/image035.png)
 
-3.	Using the FirstMondayDate Java proxy, instantiate a new Mendix object and set the date attribute. 
+3.	Using the `FirstMondayDate` Java proxy, instantiate a new Mendix object and set the date attribute. 
 4.	Finally, return the created list of dates.
 
     ![](attachments/dsapi/image036.png)
@@ -267,4 +267,4 @@ public java.lang.Boolean executeAction() throws Exception {
 }
 ```
 
-This example will trigger a listener for every object change before writing the changes to the database. To find out what attributes have been changed, you can use the **getChangedMembers** method, as illustrated above.
+This example will trigger a listener for every object change before writing the changes to the database. To find out what attributes have been changed, you can use the `getChangedMembers` method, as illustrated above.

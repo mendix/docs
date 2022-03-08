@@ -374,6 +374,7 @@ More recent additions to the JavaScript language are `async functions` and the `
 * `await` can be put in front of any async promise-based function to pause your code on that line until the promise fulfills, then return the resulting value
 
 For error handling, there are couple of options:
+
 * Using a synchronous `try...catch` structure with `async/await` and wrapping async function call into it. The `catch(`*`error`*`) {}` block will have receive the error object of rejected `Promise`
 * Chaining a `.catch(`*`error`*`)` block onto the end of the `.then()` call
 

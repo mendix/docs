@@ -32,7 +32,7 @@ In [Creating a "Search GitHub User" JavaScript Action](#create-a-search) below, 
 
 This how-to comes paired with an app package prepared for you by Mendix. To download and import the package, follow the steps below:
 
-1. [Download an *.mpk* file with an app package](https://www.dropbox.com/s/2mbssghy754h2jh/JavaScript_Actions_How_To_Advanced.mpk?dl=0).
+1. [Download an *.mpk* file with an app package](attachments/jsactions-advanced/JavaScript_Actions_How_To_Advanced.mpk).
 2. In Mendix Studio Pro click on **Open app** from **My apps** page.
 1. Select the **Locally on disk** option.
 2. In a file browser dialog box, browse to the directory downloaded *.mpk* file and double-click it (or select it and click **Open**).

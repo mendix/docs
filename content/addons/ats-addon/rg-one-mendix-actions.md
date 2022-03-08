@@ -1,6 +1,6 @@
 ---
 title: "Mendix Actions"
-parent: "rg-one-standard-actions-reference"
+parent: "rg-one-std-actions-ref"
 ---
 
 **Mendix Actions** contains the following sections:

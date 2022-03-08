@@ -236,7 +236,7 @@ In addition to managing your Sprints in the Developer Portal, you can view them 
 
 To manage stories in Studio Pro, follow these steps:
 
-1. Open your app in Studio Pro by clicking **Edit in Studio Pro** in the top-right corner of the page.
+1. Open your app in Studio Pro by clicking **Edit in Studio Pro** in the upper-right corner of the page.
 2. Open **View** > **Stories**. You can see your active Sprints in the **Stories** pane.
 
 	![](attachments/stories/stories-pane.png)

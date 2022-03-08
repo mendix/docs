@@ -1,7 +1,7 @@
 ---
 title: "Previewing & Publishing Your App"
 description: "Describes previewing and publishing processes in the Mendix Studio."
-menu_order: 60
+weight: 60
 tags: ["studio", "deployment", "publishing", "app publishing", "deploy", "deploying", "publish", "preview"]
 ---
 
@@ -15,7 +15,7 @@ In Mendix Studio, the **Preview** allows you to experience how your app will loo
 
 The app preview shows you what your app will look like for end-users. Previewing your app does not change the published app. Also, the preview environment has a separate database from the published app, that means you can create your own test data without polluting the data in the published application.
 
-To preview your app, click **Preview** in the top-right corner of Studio. 
+To preview your app, click **Preview** in the upper-right corner of Studio. 
 
 ![](attachments/publishing-app/preview.jpg)
 
@@ -25,7 +25,7 @@ You can preview your app in the Phone, Tablet, and Responsive (Desktop) mode. Cl
 
 ![Preview Modes](attachments/publishing-app/preview-modes.jpg)
 
-To exit the preview environment, click **Close Preview** in the top-right corner of the screen.
+To exit the preview environment, click **Close Preview** in the upper-right corner of the screen.
 
 ![Close Preview](attachments/publishing-app/close-preview.jpg)
 
@@ -71,7 +71,7 @@ After you have published your app, you are able to instantly view it in your bro
 
 To view your app in the browser in the currently selected view mode (Phone, Tablet, or Responsive), do the following:
 
-1. Click **Publish** button in the top-right corner.
+1. Click **Publish** button in the upper-right corner.
 2. In the **Publish your app** pop-up message, click **View current app**.
 3. Click the link under **View the published app here**:
 
@@ -83,7 +83,7 @@ Your published app is opened in the browser.
 
 To view your app on a mobile device, follow these steps:
 
-1.  Click **Publish** button in the top-right corner.
+1.  Click **Publish** button in the upper-right corner.
 
 2. In the **Publish your app** pop-up message, click **View current app**:
 

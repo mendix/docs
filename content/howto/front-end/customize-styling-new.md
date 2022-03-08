@@ -20,11 +20,20 @@ When tailoring your app's look, a simple first step is to change the theme setti
 
 For Studio users, use the [Theme Customizer](/studio/theme-customizer) to change the basic look and feel of your app. The differences will become visible immediately.
 
-For Studio Pro users there are more options to change the default theme settings. In the theme folder there is a *custom-variables* file (for both web apps and native mobile apps) which can be used to simply change many of the theme settings for the app. For more information on this topic, see the [File and Folder Structure](#file-and-folder) section below.
+For Studio Pro users there are more options to change the default theme settings. To customize the default theme settings, you can open and edit the *custom-variables* file from the App Explorer (**App** > **Styling** > **web** > **custom-variables.scss** for web apps, and **App** > **Styling** > **native** > **custom-variables.js** for native apps).
 
 For more information on how changes can be quickly previewed, see the [Preview a Styling Change](#previewing-styling) section below.
 
-### 2.2 Adding Custom Styling
+### 2.2 Using the Styling Editor {#styling-editor}
+
+The styling editor is based on the editor that powers Visual Studio Code and is also used for JavaScript actions. You can find the styling files (JS, SCSS) and theme settings (JSON) inside the App Explorer, and edit them using this editor.
+By default, Studio Pro shows styling files on the app level and from UI resources modules, such as **Atlas_Core**. This can be changed in [preferences](/refguide/preferences-dialog) (Edit > **Preferences** > **General** > **Interface**) or by simply right-clicking **Styling** in the App Explorer:
+
+![styling editor settings](attachments/customize-styling/styling-editor-settings.png)
+
+To learn more about the file and folder structure, see the [File and Folder Structure](#file-and-folder) section below.
+
+### 2.3 Adding Custom Styling
 
 Developers can add custom styling for apps in the `theme/web` or `theme/native` folder.
 
@@ -34,7 +43,7 @@ While custom styling can be added directly in the *main.scss* or *main.js* it is
 
 Within custom styling, the theme settings (colors, spacings, etc.) as configured in *custom-variables.scss* or *custom-variables.js*, can be re-used. This is also recommended to provide a consistent user experience.
 
-#### 2.2.1. Web Environment Example
+#### 2.3.1. Web Environment Example
 
 In the following example a custom style is added to change any matching element's font-size upon use.
 
@@ -60,7 +69,7 @@ Steps:
 
 This ensures the SCSS is included in CSS compilation.
 
-#### 2.2.2 Native Environment Example
+#### 2.3.2 Native Environment Example
 
 In this example we will be creating a custom style which will change the font size of text upon use:
 
@@ -84,7 +93,7 @@ In this example we will be creating a custom style which will change the font si
 	module.exports = {companyHeader};
 	```
 
-### 2.3 Importing CSS (Web Only)
+### 2.4 Importing CSS (Web Only)
 
 An app's theme is based on SASS (`.scss` files), but it can be the case you require CSS files from third-party libraries. This can be done by adding the third-party library file to the `cssFiles` property in *theme/web/settings.json*.
 
@@ -102,7 +111,7 @@ The previous section describes how developers can customize the styling of an ap
 
 Adding styling to a module is similar to adding styling to an app, except that styling resources are placed in the **themesource** folder as explained in the [File and Folder Structure](#file-and-folder) section below.
 
-For classes that are generic or that should be easily discovered, a developer can consider creating design properties for this. For more information see [How to Extend design properties](extend-design-properties)
+For classes that are generic or that should be easily discovered, a developer can consider creating design properties for this. For more information, see [How to Extend Design Properties](extend-design-properties).
 
 ## 4 Creating a Theme Module {#create-theme-mod}
 
@@ -221,7 +230,7 @@ Note: To open your Mendix app directory from Studio Pro, click **App** in the to
 	export * from "../../themesource/mytheme/native/custom-variables";
 	```
 
-The two files should end up looking list this:
+The two files should end up looking like this:
 
 *theme/native/custom-variables.js*:
 
@@ -393,64 +402,64 @@ The resulting success button is visible in **Figure 3**. Note that the underlyin
 
 All supported exclusion variables for web are:
 
-```text
-- $exclude-background-helpers
-- $exclude-badge
-- $exclude-badge-button
-- $exclude-badge-button-helpers
-- $exclude-button
-- $exclude-button-helpers
-- $exclude-check-box
-- $exclude-custom-dijit-widget
-- $exclude-custom-switch
-- $exclude-data-grid
-- $exclude-data-grid-helpers
-- $exclude-data-view
-- $exclude-data-picker
-- $exclude-glyphicon
-- $exclude-grid
-- $exclude-group-box
-- $exclude-group-box-helpers
-- $exclude-header
-- $exclude-helper-classes
-- $exclude-input
-- $exclude-image-helpers
-- $exclude-label
-- $exclude-label-helpers
-- $exclude-layout-grid
-- $exclude-list-view
-- $exclude-list-view-helpers
-- $exclude-modal
-- $exclude-navigation-bar
-- $exclude-navigation-bar-helpers
-- $exclude-navigation-list
-- $exclude-navigation-tree
-- $exclude-navigation-tree-helpers
-- $exclude-pagination
-- $exclude-pop-up-menu
-- $exclude-progress
-- $exclude-progress-bar
-- $exclude-progress-bar-helpers
-- $exclude-progress-circle
-- $exclude-progress-circle-helpers
-- $exclude-radio-button
-- $exclude-range-slider
-- $exclude-range-slider-helpers
-- $exclude-rating
-- $exclude-rating-helpers
-- $exclude-simple-menu-bar
-- $exclude-simple-menu-bar-helpers
-- $exclude-slider
-- $exclude-slider-helpers
-- $exclude-table
-- $exclude-table-helpers
-- $exclude-tab-container
-- $exclude-tab-container-helpers
-- $exclude-template-grid
-- $exclude-template-grid-helpers
-- $exclude-timeline
-- $exclude-typography
-- $exclude-typography-helpers
+```scss
+$exclude-background-helpers
+$exclude-badge
+$exclude-badge-button
+$exclude-badge-button-helpers
+$exclude-button
+$exclude-button-helpers
+$exclude-check-box
+$exclude-custom-dijit-widget
+$exclude-custom-switch
+$exclude-data-grid
+$exclude-data-grid-helpers
+$exclude-data-view
+$exclude-data-picker
+$exclude-glyphicon
+$exclude-grid
+$exclude-group-box
+$exclude-group-box-helpers
+$exclude-header
+$exclude-helper-classes
+$exclude-input
+$exclude-image-helpers
+$exclude-label
+$exclude-label-helpers
+$exclude-layout-grid
+$exclude-list-view
+$exclude-list-view-helpers
+$exclude-modal
+$exclude-navigation-bar
+$exclude-navigation-bar-helpers
+$exclude-navigation-list
+$exclude-navigation-tree
+$exclude-navigation-tree-helpers
+$exclude-pagination
+$exclude-pop-up-menu
+$exclude-progress
+$exclude-progress-bar
+$exclude-progress-bar-helpers
+$exclude-progress-circle
+$exclude-progress-circle-helpers
+$exclude-radio-button
+$exclude-range-slider
+$exclude-range-slider-helpers
+$exclude-rating
+$exclude-rating-helpers
+$exclude-simple-menu-bar
+$exclude-simple-menu-bar-helpers
+$exclude-slider
+$exclude-slider-helpers
+$exclude-table
+$exclude-table-helpers
+$exclude-tab-container
+$exclude-tab-container-helpers
+$exclude-template-grid
+$exclude-template-grid-helpers
+$exclude-timeline
+$exclude-typography
+$exclude-typography-helpers
 ```
 
 ### 8.2 Disabling Default Native Mobile Widget Styling
@@ -497,65 +506,65 @@ The resulting success button is visible in **Figure 6**. Note that the button te
 
 All supported exclusion variables for native mobile are:
 
-```text
-- excludeActivityIndicator
-- excludeActivityIndicatorHelpers
-- excludeAnimation
-- excludeBackgroundImage
-- excludeBadge
-- excludeBadgeHelpers
-- excludeBottomSheet
-- excludeButtons
-- excludeButtonsHelpers
-- excludeCarousel
-- excludeCheckBox
-- excludeColorPicker
-- excludeContainer
-- excludeDatePicker
-- excludeDropDown
-- excludeFeedback
-- excludeFAB
-- excludeFABHelpers
-- excludeImage
-- excludeImageHelpers
-- excludeIntroScreen
-- excludeIntroScreenHelpers
-- excludeLayoutGrid
-- excludeLineChart
-- excludeLineChartHelpers
-- excludeBarChart
-- excludeBarChartHelpers
-- excludeListView
-- excludeListViewHelpers
-- excludeListViewSwipe
-- excludeListViewSwipeHelpers
-- excludeMaps
-- excludeMapsHelpers
-- excludePageTitle
-- excludeProgressBar
-- excludeProgressBarHelpers
-- excludeProgressCircle
-- excludeProgressCircleHelpers
-- excludePopUpMenu
-- excludeQRCode
-- excludeRangeSlider
-- excludeRangeSliderHelpers
-- excludeRating
-- excludeReferenceSelector
-- excludeSafeAreaView
-- excludeSlider
-- excludeSliderHelpers
-- excludeTabContainer
-- excludeTabContainerHelpers
-- excludeTextArea
-- excludeTextBox
-- excludeTextBoxHelpers
-- excludeToggleButtons
-- excludeTypography
-- excludeTypographyHelpers
-- excludeVideoPlayer
-- excludeWebView
-- excludeHelpers
+```javascript
+excludeActivityIndicator
+excludeActivityIndicatorHelpers
+excludeAnimation
+excludeBackgroundImage
+excludeBadge
+excludeBadgeHelpers
+excludeBottomSheet
+excludeButtons
+excludeButtonsHelpers
+excludeCarousel
+excludeCheckBox
+excludeColorPicker
+excludeContainer
+excludeDatePicker
+excludeDropDown
+excludeFeedback
+excludeFAB
+excludeFABHelpers
+excludeImage
+excludeImageHelpers
+excludeIntroScreen
+excludeIntroScreenHelpers
+excludeLayoutGrid
+excludeLineChart
+excludeLineChartHelpers
+excludeBarChart
+excludeBarChartHelpers
+excludeListView
+excludeListViewHelpers
+excludeListViewSwipe
+excludeListViewSwipeHelpers
+excludeMaps
+excludeMapsHelpers
+excludePageTitle
+excludeProgressBar
+excludeProgressBarHelpers
+excludeProgressCircle
+excludeProgressCircleHelpers
+excludePopUpMenu
+excludeQRCode
+excludeRangeSlider
+excludeRangeSliderHelpers
+excludeRating
+excludeReferenceSelector
+excludeSafeAreaView
+excludeSlider
+excludeSliderHelpers
+excludeTabContainer
+excludeTabContainerHelpers
+excludeTextArea
+excludeTextBox
+excludeTextBoxHelpers
+excludeToggleButtons
+excludeTypography
+excludeTypographyHelpers
+excludeVideoPlayer
+excludeWebView
+excludeHelpers
 ```
 
 ## 9 Customizing index.html (Web)

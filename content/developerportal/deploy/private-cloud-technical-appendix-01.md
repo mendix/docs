@@ -22,7 +22,7 @@ Tools like [Helm](https://helm.sh) and [Kustomize](https://kustomize.io/) allow 
 
 While Helm might be suitable for applications that don't need to be frequently modified or reconfigured, Helm doesn't monitor applications after they have been deployed. In addition, Helm cannot do any advanced processing, such as requesting a new database user or ensuring that an application knows its ingress domain name.
 
-### 2.3 Kubernetes Operators
+### 2.3 Kubernetes Operators{#operators}
 
 Kubernetes offers a standard way to automate application management – the [Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/). An operator uses the standard Kubernetes [REST API](https://kubernetes.io/docs/reference/using-api/) and its own Kubernetes service account to monitor and manage Kubernetes resources for an application.
 
@@ -135,7 +135,7 @@ If you want to prevent developers from accessing secrets or other Kubernetes obj
 
 ### 3.5 Scope
 
-Mendix Operator is limited in scope to one namespace. If you need to use the Mendix Operator in multiple namespaces, you have to install it and configure it in each namespace. This allows the use of multiple versions of the Operator, with different configurations, in the same cluster.
+Mendix Operator is limited in scope to one namespace. If you need to use the Mendix Operator in multiple namespaces, you have to install it and configure it in each namespace. This allows the use of multiple versions of the Operator, with different configurations, in the same cluster — as long as each Operator runs in its own dedicated namespace.
 It is not possible to install one global instance of the Operator for the entire cluster.
 
 On the other hand, CRDs are global within the cluster. Since all Mendix Operators in a cluster will be using the same shared CRD, it is critical that the latest version of the CRDs are installed in a cluster.  See the [Private Cloud upgrade instructions](private-cloud-upgrade-guide) for more information.

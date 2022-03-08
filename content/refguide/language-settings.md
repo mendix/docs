@@ -65,7 +65,7 @@ Click **Edit…** to open a dialog box which will provide a full reference for t
 
 The most up-to-date list of supported languages in your version of Studio Pro is the one in the add languages menu. The list below is provided to enable you to quickly evaluate if Mendix supports your desired language.
 
-| Language | Country | Locale | Available Since |
+| Language | Region | Locale | Available Since |
 | --- | --- | --- | --- |
 | Albanian | Albania | sq_AL | 9.0.5 |
 | Amharic | Ethiopia | am_ET | 9.2.0 |
@@ -94,8 +94,8 @@ The most up-to-date list of supported languages in your version of Studio Pro is
 | Catalan | Spain | ca_ES | 9.0.5 |
 | Chinese (Simplified) | China | zh_CN | 9.0.5 |
 | Chinese (Simplified) | Singapore | zh_SG | 9.0.5 |
-| Chinese (Traditional) | Hong Kong | zh_HK | 9.0.5 |
-| Chinese (Traditional) | Taiwan | zh_TW | 9.0.5 |
+| Chinese (Traditional) | Hong Kong, China | zh_HK | 9.0.5 |
+| Chinese (Traditional) | Taiwan, China | zh_TW | 9.0.5 |
 | Croatian | Croatia | hr_HR | 9.0.5 |
 | Czech | Czech Republic | cs_CZ | 9.0.5 |
 | Dari | Afghanistan | fa_AF | 9.2.0 |
@@ -136,6 +136,7 @@ The most up-to-date list of supported languages in your version of Studio Pro is
 | Italian | Switzerland | it_CH | 9.0.5 |
 | Japanese (Gregorian calendar) | Japan | ja_JP | 9.0.5 |
 | Japanese (Imperial calendar) | Japan | ja_JP_JP | 9.0.5 |
+| Kazakh | Kazakhstan | kk_KZ | 9.10.0 |
 | Khmer | Cambodia | km_KH | 9.0.5 |
 | Kinyarwanda | Rwanda | rw_RW | 9.3.0 |
 | Korean | South Korea | ko_KR | 9.0.5 |

@@ -75,7 +75,7 @@ The XML schema describes what the contents of an XML document should be. We need
 
     ![](attachments/18448731/18581810.png)
 
-5. Open the **Connector** pane, which should be in the bottom-right corner of Studio Pro:
+5. Open the **Connector** pane, which should be in the lower-right corner of Studio Pro:
 
     ![](attachments/18448731/18581817.png)
 
@@ -125,7 +125,7 @@ To create the export logic, follow these steps:
     ![](attachments/18448731/18581802.png)
 
 5. Select the input parameter and delete it.
-6. Open the **Toolbox**, which should be on the bottom-right of Studio Pro (you can also open it from the **View** menu).
+6. Open the **Toolbox**, which should be on the lower-right side of Studio Pro (you can also open it from the **View** menu).
 7. Drag a **Retrieve** activity from the **Toolbox** to the line between the start event and end event.
 8. Double-click the activity to open the **Retrieve Objects** properties editor and do the following:
     * For **Source**, select **From database**

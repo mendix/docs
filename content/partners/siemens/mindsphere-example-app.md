@@ -56,7 +56,7 @@ Open Studio Pro without opening an app and follow these steps:
 ## 4 Deploy and Run the Example App
 
 A Mendix-based application for MindSphere can be deployed to Mendix or to MindSphere. Deploying to Mendix is quite easy and is the preferred option as you can then  use the Auto Registration process.
-For more information about the deployment options see [Deploying to MindSphere](/developerportal/deploy/deploying-to-mindsphere#5-deploying-your-app).
+For more information about the deployment options see [Deploying to MindSphere](/developerportal/deploy/deploying-to-mindsphere#deploying-your-app).
 
 To start the Auto Registration process just click the **Publish** button.
 

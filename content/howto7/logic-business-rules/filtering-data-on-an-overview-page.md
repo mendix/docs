@@ -20,7 +20,7 @@ This how-to serves as a comparison for filtering data and emphasizes how to use 
 * Filter a list using the search bar
 * Filter a list using XPath
 
-## 2 Prerequisites - Preparing the Data Structure, GUI, and Example Data
+## 2 Prerequisites – Preparing the Data Structure, GUI & Example Data
 
 To see the results of this how-to, it is necessary that you set up a test project with test data.
 

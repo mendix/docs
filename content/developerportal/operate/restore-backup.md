@@ -95,7 +95,7 @@ For a Free App, you can only restore available backups which are made from the a
 
 3. Click **Yes** to confirm the restoration.
 
-## 5 Format of a Backup File
+## 5 Format of a Backup File{#format-of-backup-file}
 
 You may want to restore a backup which has been created on another platform, for example an on-premises deployment. In this case you will have to construct the backup file which the Mendix Cloud will recognize.
 

@@ -1,6 +1,7 @@
 ---
 title: "Security Advisories"
 tags: ["security", "security advisories", "cve", "cvss", "ssa", "siemens security advisory"]
+weight: 50
 #notoc: true
 #layout: wide
 #toc-level: "3"
@@ -10,7 +11,7 @@ tags: ["security", "security advisories", "cve", "cvss", "ssa", "siemens securit
 
 Mendix publishes security advisories by leveraging [Siemens ProductCERT](https://new.siemens.com/global/en/products/services/cert.html), which is a dedicated team of seasoned security experts that manages the receipt, investigation, internal coordination, and public reporting of security issues related to Siemens products, solutions, and services.
 
-Mendix adds the CVSS score and CVSS vector for security vulnerabilities described in the Studio Pro release notes. Mendix also adds the CVE IDs when they become available.
+Mendix adds the CVSS score and CVSS vector for security vulnerabilities described in the Studio Pro release notes. Mendix also adds the Mendix-specific CVE IDs when they become available.
 
 {{% alert type="warning" %}}
 Siemens publishes their CVEs on the second Tuesday of every month.
@@ -20,6 +21,7 @@ Siemens publishes their CVEs on the second Tuesday of every month.
 
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
+| (To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications)) | 7.7 | (To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications)) | Fixed in Desktop Modeler [7.23.29](/releasenotes/studio-pro/7.23#142100) |
 | <a name="42026"></a>CVE-2021-42026 | 3.1 | [Two Incorrect Authorization Vulnerabilities in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-779699.pdf) | See the SSA description for remediation details |
 | <a name="42025"></a>CVE-2021-42025 | 5.3 | [Two Incorrect Authorization Vulnerabilities in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-779699.pdf) | See the SSA description for remediation details |
 | <a name="42015"></a>CVE-2021-42015 | 4.0 | [Information Disclosure Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-338732.pdf) | See the SSA description for remediation details |
@@ -35,4 +37,3 @@ Siemens publishes their CVEs on the second Tuesday of every month.
 * [Siemens ProductCERT and Siemens CERT](https://new.siemens.com/global/en/products/services/cert.html)
 	* [Search](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) for relevant security advisories  with the keyword "Mendix"
 * Mendix-specific security advisories can be read using an [Atom feed](https://cert-portal.siemens.com/productcert/rss/advisories_mendix_products.atom) and an [RSS feed](https://cert-portal.siemens.com/productcert/rss/advisories_mendix_products.rss)
-

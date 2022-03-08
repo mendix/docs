@@ -2,6 +2,7 @@
 title: "SAP"
 description: "Documentation for users who need material on consuming SAP services."
 tags: ["SAP", "OData", "XSUAA", "Destination Services", "Fiori"]
+weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -14,6 +15,7 @@ To find out how to deploy your app to SAP Business Technology Platform, see [SAP
 ## 2 Reference Documents in This Category
 
 * [OData Connector for SAP Solutions](sap-odata-connector) – describes the actions and domain model of the [OData Connector for SAP solutions](/partners/sap/use-sap-odata-connector) 
+* [BAPI Connector for SAP Solutions](sap-bapi-connector) – describes the actions and domain model used when using this connector to integrate with SAP BAPI
 * [SAP Destination Service](sap-destination-service) – presents details on enabling your Mendix app running on SAP BTP to use external services and systems
 * [SAP Data Models](sap-data-models) – describes resources for consuming the SAP OData service
 * [XSUAA Connector for SAP Business Technology Platform](sap-xsuaa-connector) – presents background information on the [XSUAA Connector for SAP Business Technology Platform](/partners/sap/use-sap-xsuaa-connector)

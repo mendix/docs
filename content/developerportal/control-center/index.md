@@ -2,6 +2,7 @@
 title: "Control Center"
 description: "Describes the Mendix Control Center, used for the governance of company members, apps, security, and cloud resources."
 tags: ["control center", "mendix admin", "developer portal", "role", "permissions", "fallback", "resource pack", "node", "offboard"]
+weight: 20
 aliases:
     - /developerportal/company-app-roles/users.html
 ---
@@ -23,7 +24,7 @@ If you are a Mendix Admin, you will immediately see the [Dashboard](#dashboard) 
 ## 2 Dashboard {#dashboard}
 
 {{% alert type="info" %}}
-This new feature is currently in Beta. Please provide feedback via the feedback button on the right of the page. For more information, see [Beta Versions](/releasenotes/beta-features/).
+This new feature is currently in Beta. Please provide feedback via the feedback button on the right of the page. For more information, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 The Control Center dashboard gives you an overview of various activities for your company on the Mendix Platform:
@@ -124,7 +125,21 @@ You can set a **Cover image** to be the background header of your company page. 
 
 ![](attachments/brand.jpg)
 
-## 8 Security {#security}
+## 8 Onboarding {#onboarding}
+
+On the **Landing Page** tab of this page, you can customize your company's onboarding landing page and use that instead of the standard Mendix Platform onboarding page for new platform users from your company. This helps users to understand your company’s way of working on the Mendix Platform and enables them to get started more quickly. You can share your company’s best practices on Mendix Platform usage, and you can link to videos, company documentation, and other content.
+
+You can start configuring the sections and blocks of your landing page from a standard template or from scratch. You can work on drafts and preview how the page looks before publishing for your company's new platform users.
+
+![](attachments/onboarding-landing.png)
+
+Once you publish your landing page, this will be where new users land after signing up with your company's domains on Mendix. This page is also accessible via the **Getting Started with Mendix** link in the upper-right navigation menu. If you do not have a company onboarding landing page set up, this link will lead to the default Mendix onboarding page.
+
+On the **Onboarding Email** tab, you can customize the onboarding email that users of your domains receive when they join the Mendix Platform. You can provide a link to your company's onboarding page, share a welcome message, or present company guidelines for using Mendix. You can create a draft email before sending it.
+
+![](attachments/onboarding-email.png)
+
+## 9 Security {#security}
 
 On the **Password Policy** tab of this page, you can set the password expiration policy for all company members. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.
 
@@ -134,7 +149,7 @@ On the **Security History** tab, you can click **Show Security History** to open
 
 ![](attachments/security.jpg)
 
-## 9 Cloud {#cloud}
+## 10 Cloud {#cloud}
 
 {{% alert type="warning" %}}
 This feature is not yet publicly available. Please talk to your Customer Success Manager to enable this page.
@@ -156,14 +171,15 @@ These links will open in a new browser tab.
 
 The **Free Environments** tab presents details on your company's free environments.
 
-## 10 Data Hub {#data-hub}
+## 11 Data Hub {#data-hub}
 
 An organization's Data Hub requires governance of the data-sharing policy down to the practical details of curating registered assets. A Mendix Admin can oversee these functions and also assign curators that can perform governance tasks for their apps.
 
 For details on these tasks, see [Data Hub Administration](data-hub-admin).
 
-## 11 Read More
+## 12 Read More
 
+* [How to Set Up an SSO (BYOIDP)](set-up-sso-byoidp)
 * [Data Hub Administration](data-hub-admin)
 * [Control Center and Mendix 8.18: The Right Amount of Control](https://www.mendix.com/blog/control-center-and-mendix-8-18-the-right-amount-of-control/)
 * [Govern and Scale your App Landscape with Mendix Control Center](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center)

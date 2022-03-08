@@ -7,7 +7,7 @@ tags: ["native", "mobile", "build", "local", "xcode", "android studio"]
 ---
 
 {{% alert type="info" %}}
-When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and above), it will not apply changes directly to the project. To apply the changes when building locally check out your latest changes, run `npm install`, then make sure to run `npm run configure`.
+When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and above), it will not apply changes directly to the project. To apply the changes when building locally check out your latest changes, run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`), then make sure to run `npm run configure`.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -106,7 +106,7 @@ Now that you have a copy of the Native Template checked out and ready, you can b
 
 Bundling is the process of packaging everything you created in Studio Pro and making that package ready to be compiled into your native mobile app. Bundling in the case of a React Native app, and hence a Mendix Native App, includes transpiling the business logic and layout of your app into a JavaScript bundle and gathering all your static resources into the correct folder structure. 
 
-For bundling your resources, Mendix Studio Pro comes with a helpfull tool called [MxBuild](/refguide/mxbuild). MxBuild can be found relatively to the location of the Studio Pro executable (e.g. C:\Program Files\Mendix\Studio Pro (version)\mxbuild.exe).
+For bundling your resources, Mendix Studio Pro comes with a helpfull tool called [MxBuild](/refguide8/mxbuild). MxBuild can be found relatively to the location of the Studio Pro executable (for example *C:\Program Files\Mendix\Studio Pro (version)\mxbuild.exe*).
 
 1. Run the following command:
 
@@ -139,7 +139,7 @@ In the sections below you can see the basic steps to get an app up and running o
 
 ### 5.1 Building an Android App with Android Studio
 
-1. Run npm install in the app root to install the required dependencies.
+1. Run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) in the app root to install the required dependencies.
 1. Open Android Studio.
 1. Select the `<Native Template root>/android` as the entry point for the app.
 1. After synchronizing the app your Android Studio should look something like this. **Do not accept any suggestions to update to latest Gradle or Kotlin version!**:
@@ -158,10 +158,32 @@ In the sections below you can see the basic steps to get an app up and running o
 
 ### 5.2 Building an iOS App with XCode
 
-1. If you have not ran it yet, run `npm install` in the app root to install the required dependencies.
-1. Change directory by running `cd ios` and run `pod install` to install the iOS dependencies.
+1. If you have not done so yet, run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) in the app root to install the required dependencies.
+1. Change directory by running `cd ios`.
+1. Complete one of the two paths below depending on your Mac type.
 
-	The iOS project is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see CocoaPods [documentation](https://cocoapods.org/#install).
+**Path 1: Mac Running Apple Silicon (M1)**
+
+The Native Template does not yet support the ARM 64 Simulator architecture. For this reason, it is required that you install x86 pods and start XCode with Rosetta:
+
+1. Ensure you have Rosetta installed on your system (for more information, see this [Apple documentation](https://support.apple.com/en-us/HT211861)).
+1. Run `arch -x86_64 pod install` to install the correct type of pods.
+1. Right-click on the **XCode.app** icon and select **Get info**.
+1. Select the check box **Open using Rosetta**.
+1. Start XCode.
+
+XCode will now use x86_64 simulators and building should work as expected. Now that you have set up the 86 pods, click [here](#resume-ios) to skip the second path and resume the build process.
+
+**Path 2: Mac Running Intel Silicon**
+
+To build an iOS app with a Mac running Intel Silicon, do the following:
+
+1. Run `pod install`.
+1. Start XCode.
+
+The iOS project is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see this CocoaPods [documentation](https://cocoapods.org/#install).
+
+<a name="resume-ios"></a>Now that you have completed one of the two paths listed above, you can resume building your iOS app:
 
 1. Open *.xcodeworkspace* using XCode.
 1. Navigate to **Signing and Capabilities** and choose your **Team** from the drop-down menu:
@@ -187,7 +209,7 @@ Mendix native mobile apps are build on top of React Native. Therefore, any React
 From Native Template v4.0.0 and above Mendix supports RN 0.6.x and therefore auto-linking. Auto linking is a React Native mechanism that allows React Native to link the native dependencies defined in the *package.json* file automatically with the native projects. To add dependencies for Native Template v4.0.0 and above, do the following:
 
 1. Add the dependency to the root *package.json* of your Native Template using `npm i -s <dependency name>`.
-1. If the dependency supports auto-linking when `npm install` is run it will automatically add itself correctly to the Android and iOS project. If the dependency does not support auto-linking or requires more configuration, follow its documentation to add the required entries manually.
+1. If the dependency supports auto-linking when `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) is run it will automatically add itself correctly to the Android and iOS project. If the dependency does not support auto-linking or requires more configuration, follow its documentation to add the required entries manually.
 
 ### 6.2 Adding Dependencies For Native Templates Below v4.0.0
 

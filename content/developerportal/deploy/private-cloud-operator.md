@@ -144,6 +144,17 @@ spec:
       {
         "ApplicationRootUrl": "https://myapp1-dev.mendix.example.com"
       }
+  runtimeMetricsConfiguration: # Optional, can be omitted : set Runtime metrics configuration
+    mode: native # Metrics collection mode : native or compatibility
+    interval: "PT1M" # Optional, can be omitted : set Prometheus scrape interval
+    mxAgentConfig: |- # Optional, can be omitted : specify configuration for collecting additional metrics
+      {
+        …
+      }
+    mxAgentInstrumentationConfig: |- # Optional, can be omitted : specify instrumentation configuration for collecting additional metrics
+      {
+        …
+      }
 ```
 
 You need to make the following changes:
@@ -168,17 +179,9 @@ You need to make the following changes:
 * **debuggerPassword** – here you can provide the password for the debugger — this is optional. Setting an empty `debuggerPassword` will disable the debugging features. In order to connect to the debugger in Studio Pro, enter the debugger URL as `<AppURL>/debugger/`. You can find further information in [How to Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely)
 * **dtapmode** – for development of the app, for example acceptance testing, choose **D**, for production deployment, select **P**
 
-    If you select production, then you will need to provide a **Subscription Secret** to ensure that your app runs as a licensed app — see [Free Apps](mendix-cloud-deploy#free-app) in *Mendix Cloud* for the differences between unlicensed/test apps and licensed apps
-    the subscription secret needs to be supplied via the **customConfiguration** using the following values:
-
-    * `"License.SubscriptionSecret":"{subscription secret}"`
-    * `"License.UseLicenseServer":"true"`
-    * `"License.LicenseServerURL":<https://subscription-api.test.mendix.com/activate>`
-    * `"License.EnvironmentName":"{environment name}"`
-
     {{% alert type="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/project-security). {{% /alert %}}
 
-    If you have an offline license, you cannot provide it through **customConfiguration**. You will need to configure it by adding a **runtimeLicense** section within the **runtime** section and setting **LicenseId** and **LicenseKey** to the values received from Mendix Support:
+    If you have an offline Runtime license, for example for a standalone cluster, you can configure it by adding a **runtimeLicense** section within the **runtime** section and setting **LicenseId** and **LicenseKey** to the values received from Mendix Support:
 
     ```yaml
     apiVersion: privatecloud.mendix.com/v1alpha1
@@ -201,6 +204,7 @@ You need to make the following changes:
 * **jettyOptions** and **customConfiguration**: – if you have any custom Mendix Runtime parameters, they need to be added to this section — options for the Mendix runtime have to be provided in JSON format — see the examples in the CR for the correct format and the information below for more information on [setting app constants](#set-app-constants) and [configuring scheduled events](#configure-scheduled-events)
 * **environmentVariables**: – set the environment variables for the Mendix app container, and JVM arguments through the `JAVA_TOOL_OPTIONS` environment variable
 * **clientCertificates**: – specify client certificates to be used for TLS calls to Web Services and REST services
+* **runtimeMetricsConfiguration**: – specify how metrics should be collected — any non-empty values will override [default values](/developerportal/deploy/private-cloud-cluster#customize-runtime-metrics) from `OperatorConfiguration` — see [Monitoring Environments in Mendix for Private Cloud](private-cloud-monitor) for details on how to monitor your environment
 
 #### 3.2.1 Setting App Constants{#set-app-constants}
 

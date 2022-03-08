@@ -202,7 +202,7 @@ Define the structure and default style of the group box widget with these steps:
 5. Execute the following command to bundle your widget and update the widget bundle in your Mendix test app:
 
 	```shell
-	$ npm run dev
+	$ npm start
 	```
 
 	The executed script will keep watching your source files and rebundle the widget every time you save one of these files.

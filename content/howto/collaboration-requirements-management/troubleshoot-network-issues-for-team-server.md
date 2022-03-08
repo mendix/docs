@@ -38,4 +38,4 @@ If this solution does not work, submit a request to [Mendix Support](https://sup
 
 ## 3 Read More
 
-* [Team Server](/developerportal/develop/team-server)
+* [Team Server](/developerportal/collaborate/team-server)

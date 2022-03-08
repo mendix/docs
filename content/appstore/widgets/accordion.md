@@ -13,9 +13,9 @@ The [Accordion](https://marketplace.mendix.com/link/component/117895) widget ena
 ### 1.1 Features
 
 * Display groups consisting of a header and content
-* Allow you to collapse and expand the content when interacting with the header using a mouse or keyboard
-* Allow you to control the collapsed state of a group through expressions or an entity attribute
-* Allow for additional styling customizations through Atlas UI
+* Allows you to collapse and expand the content when interacting with the header using a mouse or keyboard
+* Allows you to control the collapsed state of a group through expressions or an entity attribute
+* Allows for additional styling customizations through Atlas UI
 
 ## 2 Configuration
 

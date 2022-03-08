@@ -14,7 +14,7 @@ If you need to access pages or set up a published REST service, the Deep Link mo
 
 | Solution  | Description | Advantage                                                 | Disadvantage                                                 |
 | ---------------- | ---- | --------------------------------------------------------- | ------------------------------------------------------------ |
-| URL property of a page | You can access a page by specifying the [URL property of the page]( /refguide/page-properties#2-3-6-url). This is an out-of-the-box feature of Mendix Studio Pro. | Mapping is clearly configured in the application model. | <ul><li>The object ID of the data is owned by Mendix runtime, so when the object ID changes for whatever reason, the link will be broken</li><li>You can only use this solution to access pages</li></ul> |
+| URL property of a page | You can access a page by specifying the [URL property of the page](/refguide/page-properties#url). This is an out-of-the-box feature of Mendix Studio Pro. | Mapping is clearly configured in the application model. | <ul><li>The object ID of the data is owned by Mendix runtime, so when the object ID changes for whatever reason, the link will be broken</li><li>You can only use this solution to access pages</li></ul> |
 | Published Deeplink API REST service | The published REST service basically has the same concept as the Deep Link module, that is, a request handler is mapped to microflow actions. <br/>For an example for how to set up a published REST service, see the [REST DeepLink module](https://marketplace.mendix.com/link/component/116642). | <ul><li>The mapping is clearly configured in the application model</li><li>Concepts on which the implementation is based such as session handling and security are available in the Mendix Studio Pro and runtime</li></ul> |The redirect logic is executed before the Mendix Client is loaded. Therefore, after processing the request, you need to forward it to a page that contains a persistent object.|
 | Deep Link module | The Deep Link module processes the request and creates a reference object which is being stored with the user session. After this, the user is forwarded to a location which takes care of loading the Mendix Client. This is by default the `index.html` page. When the Mendix Client is loaded, the **Home** microflow (configured in the model) is executed and the microflow which is configured to handle the deep link request is being executed. | It is possible to set up non-persistent actions which can be passed as a parameter to a page. |The model consistency check is not sufficient in certain scenarios. When a microflow which is configured with a deep link at runtime and afterwards deleted at design time, Mendix consistency checking mechanism cannot catch it.|
 
@@ -87,14 +87,16 @@ To view all the available deep link configurations and example URLs, add the **D
 ### 3.6 Configuring Constants
 
 * **IndexPage** – In special cases—for example, when you want to load a specific theme or bypass a certain single sign-on page—you can modify this constant to redirect to another index page like `index3.html` or `index-mytheme.html`
-* **LoginLocation** – When authentication is required but the session is not of an authenticated user, the user will be redirected to this location
-  * When the value is left empty, the default location `login.html` in the theme folder is used
+* **LoginLocation** – The value in this constant applies when the app is configured to not allow anonymous users, and if a user with an anonymous user session visits a deep link, they will be redirected to this location
+  * When the value is left empty, the default location `login.html` (this file should be available in the theme folder)
   * When the login location ends with `= ` (for example, in the case of Mendix SSO: `https://login.mendix.com/oidp/login?ret=`), the original deep link location will be appended to the login location
   * When using the module with a MindSphere app, use `/mindspherelogin.html?redirect_uri=` as a login location (MindSphere SSO V2.0 and above is required)
-  * When using XSUAA, set the value to `/xsauaalogin/`   
+  * When using XSUAA, set the value to `/xsauaalogin/` 
+  * When using the [SAML](saml) module, set the value to `/SSO/login?f=true&cont=` to redirect the user to the original deep link location after a successful login
+    * When using version 6.1.0 or higher of the Deep Link module, you should also set the **EnableLeadingSlash** constant to `false` to prevent the users from being redirected to an invalid deep link location  
 
 
-* **SSOHandlerLocation** – When a deep link is configured to support anonymous users, the SSO handler is requested before redirecting users to the destination
+* **SSOHandlerLocation** – When both the application and a deep link are configured to support anonymous users, the location value in this constant is requested before a user is directed to the destination deep link
   * The SSO handler will only be requested when the user session is an anonymous user session (this is useful in situations where the SSO handler does not ask users for authentication to support anonymous users)
   * When the SSO handler location ends with `=` (for example, in the case of Mendix SSO: `/openid/login?continuation=`), the original deep link location will be appended to the SSO handler location
 

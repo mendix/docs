@@ -1,6 +1,6 @@
 ---
 title: "Data-Driven Tests"
-parent: "rg-one-test-development"
+parent: "rg-one-test-dev"
 menu_order: 8
 ---
 

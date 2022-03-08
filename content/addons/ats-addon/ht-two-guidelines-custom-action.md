@@ -9,7 +9,7 @@ For details on custom actions, please see [Custom Actions](rg-one-custom-actions
  
 These are the definitions of Mendix actions and core actions:
 
-* Mendix actions include [Mendix actions](rg-one-mendix-actions) and [Mendix Marketplace widget actions](rg-one-mendix-appstore-widgets-actions)
+* Mendix actions include [Mendix actions](rg-one-mendix-actions) and [Mendix Marketplace widget actions](rg-one-appstore-widg-acts)
 * Core actions include [ATS Core actions](rg-one-ats-core-actions) and [Selenium actions](rg-one-selenium-actions)
 
 {{% alert type="info" %}}

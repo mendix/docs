@@ -38,52 +38,67 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4]
 
 ## 2 Installation
 
-1. Go to the Marketplace and download the *SendEmailModule.mpk* file for the [Email Service](https://marketplace.mendix.com/link/component/118393).
-2.  To add the Email Service to your app in Mendix Studio Pro, follow these steps:
-    1.  In the **App Explorer**, right-click the app, click **Import module package**, and then select *SendEmailModule.mpk*. 
+### 2.1 Obtaining SecretKey and UserName{#obtain-keys}
 
-        ![pop-up-menu-in-app-explorer](attachments/email-service/import-module-in-app-explorer.png)
+Email Service is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in your app, first you need to start a subscription or a trial to get a SecretKey and a UserName.
 
-        In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
+#### 2.1.1 Starting a Trial
 
-        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+A trial gives everyone in your company one-month access to the app service. To start a trial, perform the following steps:
 
-    2. In the **Import Module** dialog box, click **Import**. 
-    3. Wait until a pop-up window states that the module was successfully imported. Click **OK**.
-    4. Open the **App Explorer** to view the **SendEmailModule** module.
+1. Go to the [Email Service](https://marketplace.mendix.com/link/component/118393) page in the Marketplace.
 
-Once imported, the app service is visible in the **App Explorer** and in the **Communication Services** category in the **Toolbox**.
+2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
 
-## 3 Configuration
+3. Select the check box to agree to the **Terms & Conditions**.
 
-Email Service is a premium Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses Email Service, you need to get a valid combination of **userName** and **secretKey** and configure them as environment variables in the deployment setting.
+4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
 
-### 3.1  Subscribing to Get SecretKey and UserName {#key-generation}
+5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used.
 
-1. On the [Email Service](https://marketplace.mendix.com/link/component/118393) page, click **Subscribe** to start a subscription or click **Try for Free** to start a trial.
-2.  To start a subscription, fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Owner receives an order confirmation email. 
+6. Click the link in the email to go to the [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) page and log in there. This page shows all the products that you have trials for.
 
-    For the trial, you do not need to fill in this information.
+7. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
 
-3. Click the link in the order confirmation email to go to the [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-4. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. The system generates **SecretKey** and **UserName**.
+8. Follow the instructions in the [Creating Binding Keys](/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
 
-   ![secretkey-username-generated](attachments/email-service/cs-binding-key-generation.png)
+      ![secretkey-username-generated](attachments/email-service/cs-binding-key-generation.png)
 
-6. After the order is created successfully, the Technical Owner also receives an email to confirm the email address. Follow the instructions in the email to confirm the email address. Once this email address is confirmed, this email address is used as the sender's email address when the app sends an email.
+#### 2.1.2 Starting a Subscription
 
-### 3.2 Configuring userName and secretKey for App Deployment
+1. Go to the [Email Service](https://marketplace.mendix.com/link/component/118393) page in the marketplace.
+
+2. Click **Subscribe** to start a subscription.
+
+3. Select your subscription plan.
+
+4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
+
+5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Contact will receive an email that says the app service is ready to be used.
+
+6. Click the link in the email to go to the [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
+
+7. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
+
+8. Follow the instructions in the [Creating Binding Keys](/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
+
+      ![secretkey-username-generated](attachments/email-service/cs-binding-key-generation.png)
+
+
+
+### 2.2 Installing the Component in Your App
+
+To download and install the Email Service app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content.md#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can find it in the **App Explorer** and also in the **Communication Services** category in the **Toolbox**.
+
+## 3 Configuring SecretKey and UserName {#configure-keys}
+
+Before you deploy an app, you should configure the binding keys in your app as follows:
 
 1.  In the **App Explorer**, go to **SendEmailModule** > **Configurations**. You can see **SecretKey** and **UserName** are defined as constants. 
 
     ![secretkey-and-username](attachments/email-service/configure-username-secretkey.png)
 
-2. Double-click **SecretKey** and enter the **SecretKey** that you got.
-3. Click **OK** to save the settings.
-4. Double-click **UserName** and enter the **UserName** that you got.
-5. Click **OK** to save the settings.
-6. After you finish building the app, click **Run** to deploy your app to the cloud.
+2. For each constant, double-click the constant, enter the key that you saved, and click **OK** to save the changes.
 
 
 ## 4 Usage

@@ -47,44 +47,28 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 A trial gives everyone in your company one-month access to the app service. To start a trial, perform the following steps:
 
 1. Go to the [Email Service](https://marketplace.mendix.com/link/component/118393) page in the Marketplace.
-
 2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
-
 3. Select the check box to agree to the **Terms & Conditions**.
-
 4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
-
 5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used.
-
 6. Click the link in the email to go to the [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) page and log in there. This page shows all the products that you have trials for.
-
 7. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
+8.  Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
 
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
-
-      ![secretkey-username-generated](attachments/email-service/cs-binding-key-generation.png)
+    ![secretkey-username-generated](attachments/email-service/cs-binding-key-generation.png)
 
 #### 2.1.2 Starting a Subscription
 
 1. Go to the [Email Service](https://marketplace.mendix.com/link/component/118393) page in the marketplace.
-
 2. Click **Subscribe** to start a subscription.
-
 3. Select your subscription plan.
-
 4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
-
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Contact will receive an email that says the app service is ready to be used.
-
 6. Click the link in the email to go to the [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-
 7. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
+8.  Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
 
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
-
-      ![secretkey-username-generated](attachments/email-service/cs-binding-key-generation.png)
-
-
+    ![secretkey-username-generated](attachments/email-service/cs-binding-key-generation.png)
 
 ### 2.2 Installing the Component in Your App
 
@@ -99,7 +83,6 @@ Before you deploy an app, you should configure the binding keys in your app as f
     ![secretkey-and-username](attachments/email-service/configure-username-secretkey.png)
 
 2. For each constant, double-click the constant, enter the key that you saved, and click **OK** to save the changes.
-
 
 ## 4 Usage
 
@@ -122,21 +105,21 @@ To configure the **Send email** activity, double-click the activity and specify 
 ![send-email-dialog-box](attachments/email-service/send-email-dialog-box.png)
 
 * **Required Fields**
-  * **From** – Defines the sender's email
-  * **To**  – Defines the recipients of the email
-  * **Subject**  – Defines the subject of the email
+    * **From** – Defines the sender's email
+    * **To**  – Defines the recipients of the email
+    * **Subject**  – Defines the subject of the email
 *  **Optional Fields**
 
-   {{% alert type="warning" %}}For all **Optional Fields**, you must either define a value or select **empty** for the field. Otherwise, you will get an "missing value" error.{{% /alert %}}
+    {{% alert type="warning" %}}For all **Optional Fields**, you must either define a value or select **empty** for the field. Otherwise, you will get an "missing value" error.{{% /alert %}}
 
-  * **Cc** – Defines the recipients on the CC list of the email
-  * **Bcc** – Defines the recipients on the BCC list of the email
-  * **Content type** – Defines whether the email is a **Text** or **HTML** message
-  *  **Body** – Defines the body of the email
+    * **Cc** – Defines the recipients on the CC list of the email
+    * **Bcc** – Defines the recipients on the BCC list of the email
+    * **Content type** – Defines whether the email is a **Text** or **HTML** message
+    *  **Body** – Defines the body of the email
 
-   {{% alert type="info" %}}If you want to send an HTML message, you can generate HTML content, and add the generated HTML string in the **Body** field. For more information, see the [Generating HTML Body Content](#generate-html-body) section below.{{% /alert %}}
+    {{% alert type="info" %}}If you want to send an HTML message, you can generate HTML content, and add the generated HTML string in the **Body** field. For more information, see the [Generating HTML Body Content](#generate-html-body) section below.{{% /alert %}}
   
-  * **Attachment** – Defines the attachment to the email
+    * **Attachment** – Defines the attachment to the email
 
 After the **Send Email** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the recipients.
 
@@ -154,7 +137,7 @@ The third step of the microflow generates a string from this HTML file using the
 
 ![string-from-file-dialog-box](attachments/email-service/string-from-file-dialog-box.png)
 
- In the last step of the microflow, you can add the variable for the generated HTML content into the **Body** field of the **Send email** activity.
+In the last step of the microflow, you can add the variable for the generated HTML content into the **Body** field of the **Send email** activity.
 
 
 ### 4.2 Sending Message with Attachment(s) to Recipients
@@ -181,10 +164,11 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
 1. Log into the Marketplace.
 2. Go to **My Marketplace** and Click [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
-3. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the following statistics:
-   * **Current Month** – Shows statistics for current month usage
-   * **Last Month** – Shows usage statistics for last month
-   * **Till date** – Shows usage statistics from the start of the subscription date to today
+3.  Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the following statistics:
+
+    * **Current Month** – Shows statistics for current month usage
+    * **Last Month** – Shows usage statistics for last month
+    * **Till date** – Shows usage statistics from the start of the subscription date to today
 
 ## 5 Increasing the Deliverability of Your Emails
 
@@ -267,8 +251,6 @@ You should get an alert window indicating that the verification process is in pr
 Until the verification process is complete, you shall continue to see a message saying the verification is **Pending**.
 
 ![cs-domain-verification-pending](attachments/email-service/cs-domain-verification-pending.png)
-
-
 
 ## 6 Read More
 * [Send Emails from a Mendix App](https://academy.mendix.com/link/paths/117/Send-Emails-from-a-Mendix-App-)

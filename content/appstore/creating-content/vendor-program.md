@@ -41,15 +41,6 @@ When applying to the program, you will be asked for basic information, including
 
 As the owner of the Mendix Vendor account, you must have permission to legally bind your company to Mendix.
 
-If you want to offer a paid service, you must also provide the following details:
-
-| Account Detail | Description |
-| --- | --- |
-| Bank Name | The name of the branch where the account is held. |
-| Bank Address | The address of the branch where the account is held. |
-| Account Number | The account number for the legal entity or individual. |
-| Account Holder Name | The name registered with the account. |
-
 ## 3 Mendix Vendor License Agreement {#vendor-license}
 
 Whether you are offering a free or paid component through the Marketplace, you need to accept our Mendix Vendor License Agreement, which is an agreement between Mendix and you as a Mendix Vendor within the Mendix Vendor Program.

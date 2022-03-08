@@ -79,13 +79,19 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 ### 4.1 Training a Document Model {#document-model-training}
 
 1.  Perform the following steps to log into the **Document Model Training** application:
-    1.  Log into the Marketplace with your Mendix account.
-    2.  Go to **My Marketplace** and Click [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
-    3.  Click **Intelligent Document Service** to open the service management dashboard.
+    1. Log into the Marketplace with your Mendix account.
+    
+    2.  Go to **My Marketplace** and then do as follows:
+
+        * If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+        * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+    
+    3. Click **Intelligent Document Service** to open the service management dashboard.
+
     4.  Click **Manage Instance** to open the **Document Model Training** application.
 
         ![Document model training app login page](attachments/intelligent-document-service/document-model-training-app.png)
-
+    
     5. Sign into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account.
 2.  Click **Environment** to show the **Existing Models** list.
 
@@ -199,7 +205,11 @@ You need to use an [import mapping](/refguide/mapping-documents#import-mappings)
 The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
 1. Log into the Marketplace.
-2. Go to **My Marketplace** and Click [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+2. Go to **My Marketplace** and then do as follows:
+
+    * If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+    * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+
 3. Click **Intelligent Document Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
 
 ## 5 Technical Provider{#technical-provider}

@@ -52,7 +52,7 @@ A trial gives everyone in your company one-month access to the app service. The 
 5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used. 
 6. Click the link in the email to go to the [Company Subscriptions](https://docs.mendix.com/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
 7. Click **Translation** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. You need to use them later to [configure the license token](#configure-license-token) in your app.
 
 
 #### 2.1.2 Subscribing to the App Service
@@ -64,28 +64,12 @@ A trial gives everyone in your company one-month access to the app service. The 
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Contact will receive an email that says the app service is ready to be used. 
 6. Click the link in the email to go to the [Company Subscriptions](https://docs.mendix.com/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
 7. Click **Translation** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. You need to use them later to [configure the license token](#configure-license-token) in your app.
 
-### 2.2 Download the Component from the Marketplace
+### 2.2 Installing the Component in Your App
 
-1. Go to the [Translation](https://marketplace.mendix.com/link/component/118411) page in the Marketplace.
-2. **Download** the *Translation.mpk* file.
-3.  To add the Translation app service to your app in Mendix Studio Pro, follow these steps: 
-    1. In the **App Explorer**, right-click the app.
-    2.  Click **Import module package** and then select the *Translation.mpk*. 
-
-        In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project.
-
-        ![import-translation](attachments/translation/import-translation.png)
-
-        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
-
-   3. In the **Import Module** dialog box, click **Import**. 
-   4. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
-   5. Open the **App Explorer**  to view the **Translation** module. You can also find the app service in the **Cognitive AI widgets** category in the **Toolbox**.   
-4. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
-
-You have succesfully added the Translation resources to your app.
+1. To download and install the Translation app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **App Explorer** and also in the **Cognitive AI widgets** category in the **Toolbox**.
+2. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
 ## 3 Configuration
 

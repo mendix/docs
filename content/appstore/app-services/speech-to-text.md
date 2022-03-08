@@ -57,7 +57,7 @@ A trial gives everyone in your company one-month access to the app service. The 
 7. Click **Speech to Text** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
 8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. You need to use them later to [configure the license token](#configure-license-token) in your app.
 
-#### 2.1.2 Subscribing to the App Service
+#### 2.1.2 Starting a Subscription
 
 1. Go to the [Speech to Text](https://marketplace.mendix.com/link/component/118408) page in the marketplace.
 2. Click **Subscribe** to start a subscription.

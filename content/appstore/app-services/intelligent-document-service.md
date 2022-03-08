@@ -47,7 +47,7 @@ A trial gives everyone in your company one-month access to the app service. Only
 7. Click **Intelligent Document Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
 8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. Save the keys somewhere safe. You need to use them later to [configure the binding keys](#configure-keys) in your app.
 
-#### 2.1.2 Subscribing to the App Service
+#### 2.1.2 Starting a Subscription
 
 1. Go to the [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) page in the marketplace.
 2. Click **Subscribe** to start a subscription.

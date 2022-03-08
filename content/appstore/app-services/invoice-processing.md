@@ -96,7 +96,7 @@ To use the Invoice Processing app service, first you need to create a model, the
 
 4.  Enter a unique **Model Name**, select a **Region**, and then **Country**. You may select multiple countries for a given **Region**.
 
-    {{% alert type=“info” %}}Currently, these regions and countries are supported: **USA** (**USA**), **Canada** (**Canada**), **Europe** (**Netherlands**, **Germany**, **Great Britain**).{{% /alert %}}
+    {{% alert type="info" %}}Currently, these regions and countries are supported: **USA** (**USA**), **Canada** (**Canada**), **Europe** (**Netherlands**, **Germany**, **Great Britain**).{{% /alert %}}
 
 5.  Click **Create Model**.
 

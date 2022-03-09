@@ -8,7 +8,7 @@ tags: ["Data Hub", "Data Hub Catalog", "registration", "OData", "register data"]
 
 ## 1 Introduction
 
-The Data Hub Catalog collects metadata from exposed services and currently supports only OData v3 and v4 XML resources. If you want to connect something other than OData, you can do so by wrapping it in OData and then registering the data source contract file in the Data Hub Catalog. Afterwards, you can make it available for being consumed in Mendix Studio Pro. Currently there are two ways to wrap data in OData:
+The Data Hub Catalog collects metadata from exposed services and currently supports all OData XML resources. If you want to connect something other than OData, you can do so by wrapping it in OData and then registering the data source contract file in the Data Hub Catalog. Afterwards, you can make it available for being consumed in Mendix Studio Pro. Currently there are two ways to wrap data in OData:
 
 * [Expose OData via a Mendix app](#use-mendix-app)
 * [Expose OData via a service wrapper (a custom solution)](#use-service-wrapper)

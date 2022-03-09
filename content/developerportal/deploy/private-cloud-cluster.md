@@ -1355,16 +1355,16 @@ Mendix for Private Cloud is compatible with multiple types of Kubernetes autosca
 {{% alert type="warning" %}}
 To optimize resource utilization, autoscaling can terminate running instances of an app.
 
-When autoscaling scales down an app or Kubernetes node, microflows in affected pods will be terminated, and a terminating pod will no longer accept new HTTP connections.
+When autoscaling scales down an app or Kubernetes node, microflows in affected pods will be terminated, and the terminating pod will no longer accept new HTTP connections.
 {{% /alert %}}
 
-#### 5.6.1 Cluster autoscaling
+#### 5.6.1 Cluster Autoscaling
 
 The Kubernetes [cluster autoscaler](https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler) monitors resource usage and automatically adjusts the size of the cluster based on its resource needs.
 
 Mendix for Private Cloud is compatible with cluster autoscaling. To install and enable cluster autoscaling, follow your cluster vendor's recommended way of configuring the cluster autoscaler.
 
-#### 5.6.2 Horizontal pod autoscaling
+#### 5.6.2 Horizontal Pod Autoscaling{#horizontal-autoscaling}
 
 {{% alert type="info" %}}
 You need to have the Mendix Operator version 2.4.0 or above installed in your namespace to use horizontal pod autoscaling.
@@ -1373,7 +1373,7 @@ You need to have the Mendix Operator version 2.4.0 or above installed in your na
 [Horizontal pod autoscaling](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) is a standard Kubernetes feature
 and can automatically add or remove pods based on metrics, such as average CPU usage.
 
-Enabling horizontal pod autoscaling allows to increase processing capacity during peak loads and reduce resource usage during periods of low activity.
+Enabling horizontal pod autoscaling allows you to increase processing capacity during peak loads and reduce resource usage during periods of low activity.
 Horizontal pod autoscaling can be combined with cluster autoscaling, so that the cluster and environment are automatically optimized for the current workload.
 
 To enable horizontal pod autoscaling for an environment, run the following command:
@@ -1382,8 +1382,8 @@ To enable horizontal pod autoscaling for an environment, run the following comma
 kubectl -n {namespace} autoscale mendixapp {envname} --cpu-percent=50 --min=1 --max=10
 ```
 
-replacing `{namespace}` with the namespace name, and `{envname}` with the MendixApp CR name (the environment internal name).
-Use `--cpu-percent` to specify the target CPU usage, and `--min` `--max` to specify minimum and maximum amount of replicas.
+Replace `{namespace}` with the namespace name, and `{envname}` with the MendixApp CR name (the environment internal name).
+Use `--cpu-percent` to specify the target CPU usage, and `--min` `--max` to specify minimum and maximum number of replicas.
 
 To configure additional horizontal pod autoscaling, run the following command:
 
@@ -1391,19 +1391,19 @@ To configure additional horizontal pod autoscaling, run the following command:
 kubectl -n {namespace} edit horizontalpodautoscaling {envname}
 ```
 
-replacing `{namespace}` with the namespace name, and `{envname}` with the MendixApp CR name (the environment internal name).
-The [Horizontal pod autoscaling](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) documentation explains additional available autoscaling options.
+Replace `{namespace}` with the namespace name, and `{envname}` with the MendixApp CR name (the environment internal name).
+The Kubernetes [Horizontal pod autoscaling](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) documentation explains additional available autoscaling options.
 
 {{% alert type="warning" %}}
 The Mendix Runtime is based on Java, which preallocates memory and typically never releases it.
 Memory-based metrics should not be used for autoscaling.
 {{% /alert %}}
 
-When an environment is scaled (manually or automatically), it will not be restarted. Adjusting the number of replicas will not cause downtime - as long as the number of replicas is higher than zero.
+When an environment is scaled (manually or automatically), it will not be restarted. Adjusting the number of replicas will not cause downtime - as long as the number of replicas is greater than zero.
 Scaling an environment up (increasing the number of replicas) adds more pods - without restarting any already running pods; once the additional pods become available, they will start receiving HTTP(S) requests.
 Scaling an environment down (decreasing the number of replicas) removes some of the running pods - without restarting remaining pods; all HTTP(S) traffic will be routed to the remaining pods.
 
-#### 5.6.2 Vertical pod autoscaling
+#### 5.6.3 Vertical Pod Autoscaling
 
 [Vertical pod autoscaling](https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler) can automatically configure CPU and memory resources and requirements for a pod.
 
@@ -1412,14 +1412,14 @@ The Mendix Runtime is based on Java, which preallocates memory and typically nev
 Memory-based metrics should not be used for autoscaling.
 {{% /alert %}}
 
-Mendix Operator version 2.4.0 or above has the necessary APIs required by the vertical pod autoscaler.
+Mendix Operator version 2.4.0 or above has the APIs required by the vertical pod autoscaler.
 
 {{% alert type="warning" %}}
 Vertical pod autoscaling is still an experimental, optional Kubernetes addon.
 
-Vertical pod autoscaling cannot be combined with horizontal pod autoscaling.
+We recommend using *horizontal* pod autoscaling to adjust environments to meet demand.
 
-Horizontal pod autoscaling is the recommended option for adjusting environments to meet demand.
+Vertical pod autoscaling cannot be combined with horizontal pod autoscaling.
 {{% /alert %}}
 
 ## 6 Cluster and Namespace Management

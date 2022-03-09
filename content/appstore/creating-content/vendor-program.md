@@ -37,20 +37,9 @@ When applying to the program, you will be asked for basic information, including
 
 As the owner of the Mendix Vendor account, you must have permission to legally bind your company to Mendix.
 
-## 3 Mendix Vendor License Agreement {#vendor-license}
+## 3 Mendix Vendor License Agreement 
 
 Whether you are offering a free or paid component through the Marketplace, you need to accept our Mendix Vendor License Agreement, which is an agreement between Mendix and you as a Mendix Vendor within the Mendix Vendor Program.
-
-For ease of reference, here are some of the main points of the license agreement you need to be aware of:
-
-{{% todo %}}[**THESE GENERIC POINTS NEED VERIFICATION**]{{% /todo %}}
-
-* Your content must be free from any known security vulnerabilities
-* Your content must not contain default passwords, authorization keys, or any other credentials
-* Your content must not include software that collects and exports customer data without the customer's knowledge and express consent
-* You must define the applicable laws, treaties, regulations for your content, including, without limitation, those related to export control, data privacy, international communications, and the transmission of technical or personal data
-* Your content must be production-ready and must include a defined support policy
-* Mendix reserves the right to reject content that does not comply with these guidelines or the requirements described in the license agreement
 
 ## 4 Legal & Compliance Checks
 

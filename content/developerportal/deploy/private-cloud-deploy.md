@@ -155,7 +155,7 @@ You can also deploy an existing deployment package to an environment without hav
 Currently, deployment packages are only valid for two weeks. Older deployment packages will still be visible, but if you try to deploy a package that was created more than two weeks ago, the deployment will fail and return a 403 error. The solution is to [recreate the deployment package](#create-deployment-package).
 {{% /alert %}}
 
-If creation of environment fails, then contact your cluster manager. If neither of these solves the problem, contact Mendix Support for help.
+If creation of the environment fails, then contact your cluster manager. If they cannot solve the problem, contact Mendix Support for help.
 
 You can deploy the deployment package of your app by doing the following:
 

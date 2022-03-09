@@ -16,7 +16,7 @@ In return, you will gain the following benefits:
 
 {{% todo %}}[**WANT TO EDIT THIS DIAGRAM TO BE GENERIC? OR REMOVE ENTIRELY?**]{{% /todo %}}
 
-![](attachments/as-prepare/benefits.png)
+![](attachments/prepare/benefits.png)
 
 The overall [Mendix Vendor Program](https://www.mendix.com/marketplace-vendor-program/) consists of the Mendix Solution Vendor Program and the Beta Mendix Supplier Program. The Beta Mendix Supplier Program is currently only applicable for content other than solutions and solution templates. If you are interested in participating in the Beta Mendix Supplier Program, please reach out to `appservices_supplier_team@mendix.com`. If you want to a upload commercial solution, make a request via the form on [Mendix Solution Vendor Program](https://www.mendix.com/marketplace-vendor-program/solutions/).
 
@@ -49,5 +49,5 @@ You, as the company, are responsible for ensuring that you comply with all local
 
 ## 5 Read More
 
-* [How to Prepare Your Commercial Content to Sell in the Marketplace](as-prepare)
+* [How to Prepare Your Commercial Content to Sell in the Marketplace](prepare)
 * [Creating Solutions](sol-solutions-guide)

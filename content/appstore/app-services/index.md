@@ -15,7 +15,7 @@ When you download an app service, it will go into the **App** > **Marketplace mo
 App services like [3D Viewer](3d-viewer) start with a free trial for development and testing. After the trial ends, a subscription is required to continue using the app service.
 {{% /alert %}}
 
-For details on participating in the Mendix Vendor program, see [How to Prepare Your Commercial Content to Sell in the Marketplace](/appstore/creating-content/as-prepare).
+For details on participating in the Mendix Vendor program, see [How to Prepare Your Commercial Content to Sell in the Marketplace](/appstore/creating-content/prepare).
 
 ## 2 Main Documents in This Category
 

@@ -8,17 +8,17 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 Powered by AI and OCR technologies, the [Invoice Processing](https://marketplace.mendix.com/link/component/118389) app service can help you automate the processing of invoices in bulk. It supports invoices in the European Union and the United States.
 
-### 1.2 Features
+### 1.1 Features
 
 * Extract data from images of invoices in bulk and map data to an entity
 * Support the invoices from the United States and European Union regions
 * Support [Mendix SSO](/appstore/modules/mendix-sso)
 
-### 1.3 Limitation
+### 1.2 Limitation
 
 * Currently only supports images in JPG and JPEG formats
 
-### 1.4 Prerequisites
+### 1.3 Prerequisites
 
 This app service works best with Studio Pro 8 versions starting with [8.18.5](/releasenotes/studio-pro/8.18#8185) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0).
 
@@ -39,7 +39,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used.
 6. Click the link in the email to go to the [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) page and log in there. This page shows all the products that you have trials for.
 7. Click **Invoice Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. Save the keys somewhere safe. You need to use them later to [configure the keys](#configure-keys) in your app.
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. Save the keys somewhere safe. You need [configure the keys](#configure-keys) later in your app.
 
 #### 2.1.2 Starting a Subscription
 
@@ -47,14 +47,14 @@ A trial gives everyone in your company one-month access to the app service. To s
 2. Click **Subscribe** to start a subscription.
 3. Select your subscription plan.
 4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
-5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Contact will receive an email that says the app service is ready to be used.
+5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Owner will receive an email that says the app service is ready to be used.
 6. Click the link in the email to go to the [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
 7. Click **Invoice Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. Save the keys somewhere safe. You need to use them later to [configure the keys](#configure-keys) in your app.
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. Save the keys somewhere safe. You need [configure the keys](#configure-keys) later in your app.
 
 ### 2.2 Installing the Component in Your App
 
-To download and install the Invoice Processing app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can find it in the **App Explorer** and also in the **Document Data Capture Service** category in the **Toolbox**.
+To download and install the Invoice Processing app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can find it in the **App Explorer** or **Project Explorer**, and also in the **Document Data Capture Service** category in the **Toolbox**.
 
 ## 3 Configuring the Binding Keys {#configure-keys}
 
@@ -120,11 +120,11 @@ You need to use an [Import Mapping](/refguide/mapping-documents#import-mappings)
     2.  From the drop-down list below **Select an environment to continue**, select an environment that you use to train models for the Invoice Processing app service. The **Existing Models** in this environment are displayed.
     3.  Select your trained model. Make sure that the **Status** of the model is **Published**. Note down the **Model Id**. You will need it when you [extract data with the trained model ](#extraction-activity).
     4.  Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens.
-    5.  Drag the sample invoice into the box where it says **Drag & Drop your image file here**. You can also click **Browse** and select the file.
+    5.  Drag the sample invoice into the box where it says **Drag & drop your image file here**. You can also click **Browse** and select the file.
 
         ![Sample Extraction dialog box](attachments/invoice-processing/sample-extraction-dialog-box.png)
 
-    6. Click **Download** to get the JSON structure.
+    6. Click **Download JSON** to get the JSON structure.
 2.  To add the JSON structure to your app, perform the following steps:
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON structure.
     2.  From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures).

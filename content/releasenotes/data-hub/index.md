@@ -10,6 +10,17 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### March 10th, 2022
+
+#### Improvements 
+
+* We have unified all OData versions to a single ContractType on UI  with separate version attributes.
+* We added API Version4 with new OData type and version structure.
+
+#### Fixes
+
+* We have added the loading spinner when the user is waiting for a response on each of the registration form steps.
+
 ### March 3rd, 2022
 
 #### Improvements 

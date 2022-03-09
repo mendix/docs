@@ -21,6 +21,8 @@ For an external entity to be used as a file source, it must be defined as a medi
 
 {{% alert type="info" %}}
 When uploading a file through the file manager, the FileDocument object will be committed immediately. When used inside a form, this happens on submission.
+
+A form is submitted just before a microflow or nanoflow is called or when the page is saved.
 {{% /alert %}}
 
 ## 2 Properties

@@ -1,12 +1,13 @@
 ---
-title: "Prepare Your Commercial Content to Sell in Marketplace"
+title: "Prepare Your Commercial Content to Sell"
 category: "Creating Content"
 menu_order: 2
 description: "Describes how to prepare your your commercial content to sell in the Mendix Marketplace."
 tags: ["marketplace", "vendor", "app service"]
+aliases:
+    - /appstore/general/sell.html
+    - /appstore/creating-content/as-sell.html
 ---
-
-{{% todo %}}[**SHOULD THIS DOC EVEN BE PUBLISHED IF THIRD-PARTY PRICING MODELS & SELLING FUNCTIONALITY WILL NOT BE AVAIALBLE THIS FY?**]{{% /todo %}}
 
 ## 1 Introduction
 
@@ -23,7 +24,9 @@ The process for becoming a vendor is currently restricted to Beta suppliers, so 
 
 ## 2 Prerequisites
 
-* Be part of the [Mendix Vendor](vendor-program) Beta program
+Before starting this how-to, make sure you have completed the following prerequisites:
+
+* Participate in the [Mendix Vendor Program](vendor-program)
 
 ## 3 Making Your Content Marketplace-Ready
 
@@ -97,8 +100,6 @@ If you are unclear what this means to you and your content, there are useful res
 As a Mendix Vendor, it is important that you choose the pricing model that will maximize the business opportunity for your content. Once you have decided on your preferred pricing model and whether you want to offer your content as a free trial, you can apply these these options to your content via steps in the Add Content wizard.
 
 #### 4.6.1 Pricing Models
-
-{{% todo %}}[**WHEN WILL THIS APPEAR IN THE MARKETPLACE?**]{{% /todo %}}
 
 The Marketplace supports three pricing models:
 

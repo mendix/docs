@@ -4,8 +4,6 @@ category: "Creating Content"
 menu_order: 1
 description: "Describes how to join the Mendix Vendor Program to sell your content in the Mendix Marketplace."
 tags: ["marketplace", "vendor"]
-aliases:
-    - /appstore/general/sell.html
 ---
 
 ## 1 Introduction
@@ -13,8 +11,6 @@ aliases:
 Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](/appstore/general/share-app-store-content) your content in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. The process is simple: sign up as a [Mendix Vendor](https://www.mendix.com/marketplace-vendor-program/), design and build your content, edit your listing, and submit it to the Marketplace.
 
 In return, you will gain the following benefits:
-
-{{% todo %}}[**WANT TO EDIT THIS DIAGRAM TO BE GENERIC? OR REMOVE ENTIRELY?**]{{% /todo %}}
 
 ![](attachments/prepare/benefits.png)
 

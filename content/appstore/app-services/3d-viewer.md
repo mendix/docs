@@ -17,7 +17,7 @@ Here is an overview of what the 3DViewer contains:
 | Item | Name |
 | ---  | --- |
 | [Predefined entities](#predefined-entities) | ModelDocument, Pagination, Markup, MxChildDocument, MxModelDocument |
-| [Constants](#constants) | HttpEndpoint, LicenseToken, ModelSourceType |
+| [Constants](#constants) | HTTPEndpoint / Endpoint, LicenseToken, ModelSourceType |
 | [Microflow](#microflow) | DeleteModelFromMendix, DownloadMarkup |
 | [Nanoflow](#nanoflow) | CreateModelDocumentFromFileDocument, GetMarkupsFromMendix, GetModelListFromMendix |
 | [Java action](#java-action) | VisServerAction |
@@ -150,11 +150,13 @@ The **MxModelDocument** and **MxChildDocument** entities are internal entities, 
 
 ### 4.2 Constants {#constants}
 
-The **Endpoint** constant with the default value **visualization** is used to restrict the value of the **Endpoint** parameter used in the **Viewer3D/USE_ME/VisServerAction** Java action.
+For Studio Pro 8 versions below xxx, the **HTTPEndpoint** constant with the default value **visualization** is used to restrict the value of the **Endpoint** parameter used in the **Viewer3D/USE_ME/VisServerAction** Java action.
+
+For Studio Pro 8 versions xxx and above, **HTTPEndpoint** is renamed **Endpoint**, and you do not need to configure this constant.
 
 The **ModelSourceType** constant with the value **Mendix** is used to signify the model source. You can use this constant to restrict the value of the **Data source** parameter in the **Uploader** widget, the **Model source type** parameter in the **Viewer** widget, or the value of the **Source** attribute in the **ModelDocument** entity.
 
-The **LicenseToken** constant provides a valid license token for an app that uses this app service. As 3D Viewer is a commercial product, no matter your app is deployed in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), your own environment, or locally in Studio Pro, you need to have a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token) section.
+The **LicenseToken** constant provides a valid license token for an app that uses this app service. As 3D Viewer is a commercial product, you need to have a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token) section.
 
 ### 4.3 Microflow {#microflow}
 

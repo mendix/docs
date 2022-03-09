@@ -16,11 +16,12 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Portal Improvement
 
-* We have added support for Pod Autoscaling using which, the number of replicas will be displayed correctly. To use autoscaling, see [Pod Autoscaling](/developerportal/deploy/private-cloud-cluster#562-horizontal-pod-autoscaling)
-* Allow sorting and searching of members invited for a namespace
-* Allow sorting and searching of members invited for a cluster
-* Allow sorting and searching of database and storage plans in a namespace
-* Added a tootip next to the Purpose field
+* We have added support for Pod Autoscaling. If you are using this, the number of replicas will be displayed correctly. To use autoscaling, see [Pod Autoscaling](/developerportal/deploy/private-cloud-cluster#horizontal-autoscaling) in *Creating a Private Cloud Cluster*.
+* We now allow sorting of and searching in the following:
+  * members invited for a namespace
+  * members invited for a cluster
+  * database and storage plans in a namespace
+* We have added a tootip to assist in using the **Purpose** field
 
 ### March 4th, 2022
 

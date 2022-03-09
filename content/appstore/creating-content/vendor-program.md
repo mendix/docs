@@ -45,9 +45,7 @@ Whether you are offering a free or paid component through the Marketplace, you n
 
 The company registered with your account is the legal entity against which Mendix will be bound. For this reason, Mendix performs screening checks to ensure we are legally permitted to undertake business transactions together.
 
-{{% todo %}}[**IS THIS PART ACCURATE? IS THIS REQUIREMENT GENERIC TO ALL COMPONENTS - STARTING WITH SOLUTIONS - SOLD VIA THE VENDOR PROGRAM, OR IS IT SPECIFIC TO APP SERVICES?**]{{% /todo %}}
-
-In addition, before your content can be published in the Marketplace, it must be classified for export to the countries in which it will be sold and for how it will be used. For more details, see the [Export Control](as-prepare#export-control) section of *How to Prepare Your Commercial Content to Sell in the Marketplace*.
+You, as the company, are responsible for ensuring that you comply with all local laws and regulations in the countries where you are conducting business.
 
 ## 5 Read More
 

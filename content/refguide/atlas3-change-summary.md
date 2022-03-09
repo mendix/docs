@@ -46,7 +46,7 @@ Our removal of float has the following advantages:
 
 Consult the table below for a summary of the changes to existing design properties.
 
-| Spacing options - <br>added spacing-inner, spacing-inner-medium, spacing-inner-large | Introduction of options for inner spacing to all components. Align design properties with that with of native. Design in the two mediums of native and web should be the same experience. |
+| Spacing options - <br>added spacing-inner, spacing-inner-medium, spacing-inner-large | Introduction of options for inner spacing to all components. Align design properties with that of native. Design in the two mediums of native and web should be the same experience. |
 | --- | --- |
 | Spacing outer options                                        | Previous spacing options are renamed to outer to be more explicit and to refer to “margin”, while inner refers to “padding”. Aligning design implementation between native and web. |
 | Streamlined style options                                    | Across a number of widgets we have streamlined the options available for style to primary, secondary, success, warning and danger. The options of “brand-inverse” and “brand-info” are still actionable classes in the sass framework. |
@@ -73,8 +73,8 @@ Here is a list of key changes pertaining to the web environment:
 * Many design properties have been introduced, and existing ones have recieved added options:
   * **Inner** spacing options allowing users to configure **padding** for widgets. This applies to all widgets
     * Previous spacing options are now renamed to **Outer** to be more explicit and apply to **margin** for widgets
-  * Container widgets get a new **gradient** option for background color
-  * Container widgets get a **shade** design property with options to apply shades to background colors
+  * Structure  widgets get a new **gradient** option for background color
+  * Structure  widgets get a **shade** design property with options to apply shades to background colors
   * List View widgets get a **style** option to add horizontal borders at the top and bottom of each list item
   * Static and dynamic images each get a new design property to assist with fitting images (for example fill, contain, cover, or scale-down)
   * Tab container widgets get new design properties to style and space tabs

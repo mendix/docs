@@ -37,7 +37,7 @@ To create a custom layout, follow these steps:
 3. Open the charts widget settings.
 4. Go to the tab **Advanced**.
 5. Set the **Mode** to **Developer**.
-    ![chart widget properties](attachments/charts/charts-widget-properties-advanced.png)
+    ![chart properties](attachments/charts/charts-widget-properties-advanced.png)
 6. Run the app.
 7. In your browser, open the page with the chart.
 8. Click on the button **Toggle Editor**.
@@ -113,10 +113,8 @@ To create custom a configuration, follow these steps:
 
 ## 6 Read More
 
-Reference for the [advanced properties](/refguide/charts-configuration#advanced)
-
-Layout options: [cheat sheet](/refguide/charts-advanced-cheat-sheet#layout-all)  
-Configuration options: [cheat sheet](/refguide/charts-advanced-cheat-sheet#config-options)  
-Data series options: [cheat sheet](/refguide/charts-advanced-cheat-sheet#data-series)  
-
-Full reference: https://plot.ly/javascript/
+* Reference for the [advanced properties](/refguide/charts-configuration#advanced)
+* Layout options: [cheat sheet](/refguide/charts-advanced-cheat-sheet#layout-all)  
+* Configuration options: [cheat sheet](/refguide/charts-advanced-cheat-sheet#config-options)  
+* Data series options: [cheat sheet](/refguide/charts-advanced-cheat-sheet#data-series)  
+* Full reference: [Plotly JavaScript Open Source Graphing Library](https://plot.ly/javascript/)

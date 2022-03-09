@@ -48,7 +48,7 @@ To replace the default Save button with a custom one, follow these steps:
     
     ![](attachments/18448679/18580984.png)
 
-2. Open the **Toolbox** from the bottom-right corner of the Modeler:
+2. Open the **Toolbox** from the lower-right corner of the Modeler:
 
     ![](attachments/8784287/8946802.png)
 

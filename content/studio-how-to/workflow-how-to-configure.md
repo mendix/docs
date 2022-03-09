@@ -1,15 +1,21 @@
 ---
 title: "Configure a Workflow in Studio for the Employee Onboarding Process"
 description: "Describes how to configure a workflow in Mendix Studio."
-menu_order: 05
+weight: 05
 tags: ["studio", "workflow", "how to", task", "onboarding"]
 ---
+
+{{% alert type="warning" %}}
+Workflows in Studio are temporarily unavailable for apps with Mendix version 9.6. For more information, see [Using Workflows in Apps with Mendix Version 9.6 and Above](/studio/workflows-9.6).
+
+Workflows in Studio are available for apps with Mendix version 9.5.
+{{% /alert %}}
 
 ## 1 Introduction 
 
 Workflow is a new visual language in Mendix Studio and Mendix Studio Pro that allows you to build extendable processes. It is fully integrated with other visual languages, such as microflow editor and page editor. 
 
-This how-to explains how to build an employee onboarding process using the workflow editor. For more information on how to build a similar process in Studio Pro, see [How to Configure a Workflow in Studio Pro for the Employee Onboarding Process](/howto/logic-business-rules/workflow-how-to-configure).
+This how-to explains how to build an employee onboarding process using the workflow editor. 
 
 **This how-to will teach you how to do the following:**
 
@@ -159,7 +165,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
 7. In the **Create new page** dialog box, you can see the templates for workflow pages. Do the following:
 
-    1. Set the **Title** to **SpecifyDetails**.
+    1. Set the **Title** to **SpecifyDetails_Workflow**.
 
     2. Check that **Layout** is set to **Atlas_Default**.
 
@@ -169,7 +175,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
         ![Create New Page](attachments/workflow-how-to-configure/create-new-page.png)
 
-8. Now you need to make sure that only the relevant information is displayed on the **SpecifyDetails** page. By default, all attributes are added to the data view with the employee details and can be edited. You need to leave only the attributes related to the task. You also need to make sure that the manager can change only a specific field in the form. For example, the name of the employee has been entered by the HR department, so the manager does not need to change it and should have this field as read-only. 
+8. Now you need to make sure that only the relevant information is displayed on the **SpecifyDetails_Workflow** page. By default, all attributes are added to the data view with the employee details and can be edited. You need to leave only the attributes related to the task. You also need to make sure that the manager can change only a specific field in the form. For example, the name of the employee has been entered by the HR department, so the manager does not need to change it and should have this field as read-only. 
 
     Do the following:
 
@@ -183,7 +189,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
         ![Specify Details Form](attachments/workflow-how-to-configure/specify-details-form.png)
 
-9. Only the Manager role can access the **SpecifyDevice** page. Navigate to the page properties > **Allowed Roles** and deselect all roles except **Manager**.
+9. Only the Manager role can access the **SpecifyDetails_Workflow** page. Navigate to the page properties > **Allowed Roles** and deselect all roles except **Manager**.
 
 10. Navigate back to the workflow and open the user task properties to finish the user task configuration. 
 
@@ -209,7 +215,7 @@ Depending on whether the new hire is working from the office or home, there are 
 
 Do the following:
 
-1. Open the workflow editor > **Toolbox** and drag and drop the **Decision** activity after the **Manager: Specify Location** user task. 
+1. Open the workflow editor > **Toolbox** and drag and drop the **Decision** activity after the **Manager: Specify Employee Details** user task. 
 
     ![Adding a Decision](attachments/workflow-how-to-configure/decision.png)
     
@@ -237,9 +243,9 @@ Do the following:
 
     3. In the **Allowed Roles** property deselect all roles except **Facilities**. 
 
-    4. Create a new page called **PrepareDesk** for the **Page** property referring to steps 7a-7d of the the [Specifying Details of the New Hire](#specify-details) section.
+    4. Create a new page called **PrepareDesk_Workflow** for the **Page** property referring to steps 7a-7d of the the [Specifying Details of the New Hire](#specify-details) section.
 
-    5. You need to make sure that only the relevant information is displayed on the **PrepareDesk** page. By default, all attributes are added to the employee detail form. You need to make sure that the Facilities department will be able to view the fields but not change them. Do the following: 
+    5. You need to make sure that only the relevant information is displayed on the **PrepareDesk_Workflow** page. By default, all attributes are added to the employee detail form. You need to make sure that the Facilities department will be able to view the fields but not change them. Do the following: 
 
     6. Select the data view with the employee details and go to its properties.
 
@@ -247,7 +253,7 @@ Do the following:
 
        ![Read-Only Data View](attachments/workflow-how-to-configure/data-view-read-only.png)
 
-    8. Only the Facilities role can access the **PrepareDesk** page. Navigate to the page properties > **Allowed Roles** and deselect all roles except **Facilities**.
+    8. Only the Facilities role can access the **PrepareDesk_Workflow** page. Navigate to the page properties > **Allowed Roles** and deselect all roles except **Facilities**.
 
 8. Now you need to create a user task for Facilities when the employee is working from home. Open the workflow editor.
 
@@ -259,15 +265,15 @@ Do the following:
 
     3. In the **Allowed Roles** property deselect all roles except **Facilities**. 
 
-    4. Create a new page called **ShipDevices** for the **Page** property referring to steps 7a-7d of the the [Specifying Details of the New Hire](#specify-details) section.
+    4. Create a new page called **ShipDevices_Workflow** for the **Page** property referring to steps 7a-7d of the the [Specifying Details of the New Hire](#specify-details) section.
 
-    5.  On the newly created **ShipDevices** page all attributes are added to the employee detail form by default. You need to make sure that the Facilities department will be able to view the fields but not change them: select the data view with the employee details and go to its properties.
+    5.  On the newly created **ShipDevices_Workflow** page all attributes are added to the employee detail form by default. You need to make sure that the Facilities department will be able to view the fields but not change them: select the data view with the employee details and go to its properties.
 
     6. Toggle the **Read-Only** property to make all fields in the form read-only:
 
         ![Read-Only Data View](attachments/workflow-how-to-configure/data-view-read-only.png)
 
-    7. Only the Facilities role can access the **ShipDevices** page. Navigate to the page properties > **Allowed Roles** and deselect all roles except **Facilities**.
+    7. Only the Facilities role can access the **ShipDevices_Workflow** page. Navigate to the page properties > **Allowed Roles** and deselect all roles except **Facilities**.
 
 
 Great job! You have created the decision and user tasks on whether the new hire is working from the office or from home. Your workflow is configured! 
@@ -288,31 +294,29 @@ You need to configure navigation otherwise the user roles will not be able to re
 
     2. Click the **Page** property.
 
-    3. In the **Select Page** dialog box, select EmployeesToOnboard page.
+    3. In the **Select Page** dialog box, select **EmployeesToOnboard** page.
 
-    4. In the menu item properties, set Caption to **HR: Employees to onboard**.
+    4. In the menu item properties, set Caption to **Employees to Onboard**.
 
     5. Set **Icon** to **User**.
 
         ![Navigation Item for HRs](attachments/workflow-how-to-configure/navigation-hr.png)
 
-3. You need to add menu items for manager to be able to open their task inbox. Add a new menu item and do the following (for more information on how to add a new menu item, see [Navigation Document](/studio/navigation):
+3. You need to add menu items for Manager and Facilities user roles to be able to open their task inbox. Add a new menu item and do the following (for more information on how to add a new menu item, see [Navigation Document](/studio/navigation):
 
     1. Set its **On-Click Action** to **Page**.
 
     2. Click the **Page** property.
 
-    3. In the **Select Page** dialog box, switch from the current module to the Workflow Commons one using the drop-down menu in the top-right corner:
+    3. In the **Select Page** dialog box, switch from the current module to the Workflow Commons one using the drop-down menu in the upper-right corner:
 
         {{% image_container width="400" %}}![Select Page](attachments/workflow-how-to-configure/select-page-for-navigation.png){{% /image_container %}}
 
     4. Find the **TaskInbox** page in the list and click **Select**.
 
-    5. In the menu item properties, set **Caption** to **Managers: Task Inbox**.
+    5. In the menu item properties, set **Caption** to **Task Inbox**.
 
     6. Set **Icon** to **Envelope**.
-
-4. You also need to add menu items for the Facilities department to be able to open their task inbox. Create a new **Facilities: Task Inbox** menu item referring to steps 2a-2e above.
 
 You have configured the navigation for your app and now you can preview and test it 
 

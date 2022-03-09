@@ -89,6 +89,8 @@ There are some things you need to consider when applying a uniqueness constraint
 
 The uniqueness constraint will take into account the way that the underlying database deals with case sensitivity. For a full discussion of this, see [Case-Sensitive Database Behavior](case-sensitive-database-behavior).
 
+The uniqueness constraint will also take into account the way that the underlying database deals with string matching. If, for example, two values of a string attribute differ only in having a different number of trailing spaces, some databases will ignore these spaces when deciding if the strings are the same, while others will see them as different.
+
 #### 3.1.2 Existing Entities
 
 When you add a uniqueness constraint to an entity which already contains data, all the existing objects for the affected entity will be checked on deployment for the uniqueness of the attribute. If you have, for example, applied uniqueness validation to an insurance number and there are multiple people with the same insurance number then:

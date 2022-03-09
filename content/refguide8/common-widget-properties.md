@@ -42,7 +42,7 @@ The **Screen reader caption** property can be set on the following widgets:
 
 ### 3.1 Name{#name}
 
-The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class `mx-name-{NAME}`, which can be useful for [Selenium testing](/howto7/integration/selenium-support).
+The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class `mx-name-{NAME}`, which can be useful for [Selenium testing](/howto8/integration/selenium-support).
 
 ### 3.2 Tab Index{#tab-index}
 
@@ -266,7 +266,7 @@ Default: *Fixed*
 | 19.9999  | 20.00<sup><small>*</small></sup> | 19.9999      | 19.9999  |
 | 19.99999 | 20.00<sup><small>*</small></sup> | 20.0000<sup><small>*</small></sup> | 19.99999 |
 
-<sup><small>*</small></sup>The value is rounded to the nearest decimal with the defined number of decimal places.
+<sup><small>*</small></sup> The value is rounded to the nearest decimal with the defined number of decimal places.
 
 ### 7.2 Decimal Precision{#decimal-precision}
 

@@ -20,8 +20,8 @@ $ mkdir my-app-generator
 $ cd my-app-generator
 $ npm init --yes
 $ npm install -g typescript
-$ npm install mendixmodelsdk mendixplatformsdk when @types/when --save
-$ tsc --init --target es2018
+$ npm install mendixmodelsdk mendixplatformsdk --save
+$ tsc --init --target es2020
 ```
 
 ## 3 Setting Up Your Development Tools {#setting}
@@ -34,15 +34,15 @@ To set up your development tools, follow these steps:
 
     ```bash
     $ node --version
-    v10.13.0
+    v14.15.0
     ```
 
     For Debian-based Linux distributions such as Ubuntu, please refer to [this article](https://github.com/nodesource/distributions#user-content-installation-instructions) to properly set up your apt-get sources.
 
     In the rest of the how-to's, in blocks such as the above, lines starting with a `$` represent commands to type into a terminal. Sometimes a line follows without a $, represents output of the command.
 
-3.  Install [Visual Studio Code](https://code.visualstudio.com/) - not to be confused with Visual Studio - a text editor/IDE with good support for [TypeScript](http://www.typescriptlang.org/). Make sure you have a recent version (v1.11.0+); check the version you are using through Help > About when you have Code opened.
-4.  Install TypeScript 3.6.2 (or higher) with [`npm`](https://www.npmjs.com/) , Node.js' package manager:
+3.  Install [Visual Studio Code](https://code.visualstudio.com/) (not to be confused with Visual Studio), a text editor/IDE with good support for [TypeScript](http://www.typescriptlang.org/). Make sure you have a recent version (v1.11.0+); check the version you are using through Help > About when you have Code opened.
+4.  Install TypeScript 4.4.3 or higher with [`npm`](https://www.npmjs.com/) (or [`yarn`](https://yarnpkg.com/)), Node.js's package manager:
 
     ```bash
     $ npm install -g typescript
@@ -52,7 +52,7 @@ To set up your development tools, follow these steps:
 
     ```bash
     $ tsc --version
-    Version 3.6.2 (or higher)
+    Version 4.4.3 (or higher)
     ```
 
     If the version number is much lower, it could be that you also have an outdated TypeScript SDK on your system, left over from a previous installation. You can either uninstall the old TypeScript SDK, or bypass it by removing the old TypeScript SDK from your system's PATH environment variable.
@@ -61,7 +61,7 @@ To set up your development tools, follow these steps:
 
 To set up a working directory for your script, follow these steps:
 
-1.  First, create a new directory and initialize it for use with the Node.js package manager `npm`. Using `--yes` skips several unimportant questions. This creates a [package.json](https://docs.npmjs.com/files/package.json)with default contents. Through this file you control your `npm` package. 
+1.  Create a new directory and initialize it for use with the Node.js package manager `npm`. Using `--yes` skips several unimportant questions. This creates a [package.json](https://docs.npmjs.com/files/package.json) with default contents. Through this file you control your `npm` package. 
 
     ```bash
     $ mkdir my-app-generator
@@ -77,15 +77,13 @@ To set up a working directory for your script, follow these steps:
     $ code .
     ```
 
-3.  Add `mendixmodelsdk,` `mendixplatformsdk,` and `when.js` as dependencies. 
+3.  Add `mendixmodelsdk`, and `mendixplatformsdk` as dependencies. 
     Dependencies are stored in the `node_modules` directory (which will be automatically created by `npm` if necessary). Open the *package.json* you just created. Add a [`dependencies` block](https://docs.npmjs.com/files/package.json#dependencies) that looks like this:
 
     ```json
     "dependencies": {
-      "@types/when": "^2.4.33",
-      "mendixmodelsdk": "^4.35.0",
-      "mendixplatformsdk": "^4.1.1",
-      "when": "^3.7.8"
+      "mendixmodelsdk": "^4.56.0",
+      "mendixplatformsdk": "^5.0.0"
     }
     ```
 
@@ -96,15 +94,15 @@ To set up a working directory for your script, follow these steps:
     ```bash
     $ npm install
     ```
-    If you are using version control, make sure to ignore the `node_modules directory`, otherwise you end up committing dependencies.
+    If you are using version control, make sure to ignore the `node_modules` directory, otherwise you end up committing dependencies.
 
-5.  In Code, create a [tsconfig.json](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json) file next to your *package.json*. The *tsconfig.json* file is used by the TypeScript compiler to compile your code in the proper manner to a JS file. Create it with the following contents. 
+5.  In Code, create a [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) file next to your *package.json*. The *tsconfig.json* file is used by the TypeScript compiler to compile your code in the proper manner to a JS file. Create it with the following contents. 
 
     ```json
     {
     	"compilerOptions" : {
     		"module" : "commonjs",
-    		"target" : "es2018",
+    		"target" : "es2020",
             "strict": true
     	},
     	"files" : [

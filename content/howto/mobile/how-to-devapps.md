@@ -17,7 +17,7 @@ A custom developer app helps you by serving as a replacement for the Make It Nat
 * Complete [How to Get Started with Native Mobile](getting-started-with-native-mobile)
 * Complete the Mendix Native Mobile Builder wizard as found in [Deploy Your First Mendix Native Mobile App](deploying-native-app)
 
-## 3 Build Your Developer App {#build-your-developer-app}
+## 3 Building Your Developer App {#build-your-developer-app}
 
 1.  Run Mendix Native Mobile Builder from your app: 
 
@@ -130,4 +130,4 @@ Read more on TestFlight in the [official documentation](https://testflight.apple
 ## 5 Read More
 
 * [How to Deploy Your First Mendix Native Mobile App](deploying-native-app)
-* [How to Release Over the Air Updates with App Center's CodePush](how-to-ota)
+* [Release Over the Air Updates with Mendix](how-to-ota)

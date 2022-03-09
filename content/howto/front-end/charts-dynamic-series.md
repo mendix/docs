@@ -116,5 +116,5 @@ To view the chart, follow these steps:
 ## 6 Read More
 
 * [Create a Basic Chart](charts-basic-create)
-* [Fine_Tune a Chart with Advance Settings](charts-advanced-tuning)
+* [Fine-Tune a Chart with Advance Settings](charts-advanced-tuning)
 * [Use Any Chart](charts-any-usage)

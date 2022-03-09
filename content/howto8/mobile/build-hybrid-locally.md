@@ -5,6 +5,12 @@ menu_order: 9
 tags: ["mobile", "deploy", "hybrid", "local"]
 ---
 
+{{% alert type="warning" %}}
+Hybrid mobile packages require Node.js v12 with npm v6. Versions above those fail to install and compile dependencies. We are working to update hybrid mobile packages to support later versions.
+
+To support multiple node or npm versions on Windows, use the [Node Version Switcher (NVM)](https://github.com/coreybutler/nvm-windows) utility.
+{{% /alert %}}
+
 ## 1 Introduction
 
 This document describes how to build your hybrid apps locally.
@@ -14,7 +20,7 @@ This document describes how to build your hybrid apps locally.
 **Prerequisites:**
 
 * A Mac OSX machine
-* Install [NodeJS LTS](https://nodejs.org/en/download/) using the all-in-one installation option
+* Install [NodeJS 12 with NPM 6](https://nodejs.org/download/release/latest-v12.x/) using the all-in-one installation option
 * Download your [local build package](/developerportal/deploy/mobileapp#doing-it-yourself) from Cloud Portal and unzip it in a known location
 * Register for an [Apple Developer Account](https://developer.apple.com/register/index.action)
 * Install [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and its command-line tools
@@ -109,7 +115,7 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 * Install [AndroidStudio](https://developer.android.com/studio)
 * Install [NodeJS LTS](https://nodejs.org/en/download/) using the all-in-one installation option
 * Install JDK 1.8
-* Create a keystore using [Generating a Keystore](/refguide/managing-app-signing-keys#generating-a-keystore)
+* Create a keystore using [Generating a Keystore](/refguide8/managing-app-signing-keys#generating-a-keystore)
 * Download the [local build package](/howto8/mobile/customizing-phonegap-build-packages#download-local-package) from Cloud Portal and unzip it in a known location
 
 ### 3.1 Prepare Your App for Building
@@ -200,6 +206,6 @@ You *APK* should now be generated and signed using Android Studio. The resulting
 ## 4 Read More
 
 * [Deploy and Manage Guide](/developerportal/deploy)
-* [Offline Reference Guide](/refguide/offline-first)
+* [Offline Reference Guide](/refguide8/offline-first)
 * [How to Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [Apache Cordova Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)

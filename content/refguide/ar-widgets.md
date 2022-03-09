@@ -12,16 +12,16 @@ to create AR experiences. The following terms will be used frequently:
 
 * Augmented reality (AR): adding virtual objects to the real world, through the mobile phone camera view
 * AR scene: the place where all objects are placed in
-* Billboard: describes the rotation behaviour of an object, where it will always face the camera
+* Billboard: describes the rotation behavior of an object, where it will always face the camera
 * Origin: the starting position, specifically (0,0,0)
 
 ## 2 Overview of AR Widgets
 
-There are 9 total AR Widgets. Some are container widgets, while others are visual widgets:
+There are 9 total AR Widgets. Some are structure widgets, while others are visual widgets:
 
-Container widgets:
+Structure  widgets:
 
-1.  **Containter (AR)**
+1.  **Container (AR)**
 2.  **Image Tracker (AR)**
 3.  **Plane Selector (AR)**
 4.  **Node (AR)**
@@ -34,7 +34,7 @@ Visual widgets:
 8.  **Sphere (AR)**
 9.  **Square (AR)**
 
-## 3 Container Widgets 
+## 3 Structure Widgets 
 
 This are the AR widgets that can contain other widgets:
 
@@ -43,7 +43,7 @@ This are the AR widgets that can contain other widgets:
 * **Plane Selector (AR)**
 * **Node (AR)**
 
-These widgets do not necessarily add something visual to the AR scene. Instead, they provide functionality or allow you to group other widgets. Container widgets function as new starting points for the widgets embedded in them. When you start an AR app, the location of your phone serves as the origin.
+These widgets do not necessarily add something visual to the AR scene. Instead, they provide functionality or allow you to group other widgets. Structure  widgets function as new starting points for the widgets embedded in them. When you start an AR app, the location of your phone serves as the origin.
 
 ### 3.1 Container (AR)
 
@@ -55,7 +55,7 @@ Starts the AR camera view, and contains all other AR widgets. This widget is the
 every AR widget that is embedded in it. For example, if you use a **ImageTracker (AR)** to recognize an image, and put a
 **Cube (AR)** in it, the cube will start in the exact middle of your image:
 
-{{% image_container width="300" %}}![Cube](../howto/mobile/attachments/how-to-ar-simple-cube/scale-one.jpg){{% /image_container %}}
+{{% image_container width="300" %}}![Cube](attachments/ar-widgets/scale-one.jpg){{% /image_container %}}
 
 ### 3.3 Plane Selector (AR)
 
@@ -63,7 +63,7 @@ every AR widget that is embedded in it. For example, if you use a **ImageTracker
 
 ### 3.4 Node (AR)
 
-A **Node (AR)** can help group other widgets. Everything embedded in a **Node (AR)** can be oriented with fixed distances and rotations from eachother. **Node (AR)** also has a feature that can make the objects in it 'billboard' to the camera, which is useful for UI like elements. To see an example of this, check **AR-Examples** > **Car Color Picker** and note the the spheres above the car.
+A **Node (AR)** can help group other widgets. Everything embedded in a **Node (AR)** can be oriented with fixed distances and rotations from each other. **Node (AR)** also has a feature that can make the objects in it 'billboard' to the camera, which is useful for UI like elements. To see an example of this, check **AR-Examples** > **Car Color Picker** and note the the spheres above the car.
 
 ## 4 Visual widgets
 
@@ -91,7 +91,7 @@ Beyond using simple 3D objects, there are also ways to add more complex and cust
 
 ![Text](attachments/ar-widgets/Text.gif)
 
-**Text (AR)** can be used to have 3D or 2D text floating in space. It is best practice to add only a few lines of text to the scene in this way. Bigger paragraphs are better communicated through a 2D textfield on another place in your app.
+**Text (AR)** can be used to have 3D or 2D text floating in space. It is best practice to add only a few lines of text to the scene in this way. Bigger paragraphs are better communicated through a 2D text field on another place in your app.
 
 ## 5 Common Properties
 
@@ -122,9 +122,9 @@ It is possible to set a position on visual widgets that is not relative by addin
 
 ### 5.4 Material
 
-The **Material** tab sets things like color and also the realism of the object that has to be rendered. For example, setting the rendering mode to PBR will enable physically-based rendering (do not forget to set an HDR image as the reflection map and lightsource in the **Container (AR)**).
+The **Material** tab sets things like color and also the realism of the object that has to be rendered. For example, setting the rendering mode to PBR will enable physically-based rendering (do not forget to set an HDR image as the reflection map and light source in the **Container (AR)**).
 
-**Material** configurations actually render a 3D element in the camera view. **Cube (AR)**, **Sphere (AR)**, and **Square (AR)** each render a simple 3D object. Only the **Square (AR)** widget can sometimes be invisible from one side. The simple visual widgets come with a way to customize them through scale and material. A material for a 3D object describes what it should look like — think of it like styling. You can add a texture(image), color, different lighting, or even a video to play on the 3D object. The only difference between these objects is in appearance — the configuration is the same on each widget.
+**Material** configurations actually render a 3D element in the camera view. **Cube (AR)**, **Sphere (AR)**, and **Square (AR)** each render a simple 3D object. Only the **Square (AR)** widget can sometimes be invisible from one side. The simple visual widgets come with a way to customize them through scale and material. A material for a 3D object describes what it should look like — think of it like styling. You can add a texture (image), color, different lighting, or even a video to play on the 3D object. The only difference between these objects is in appearance — the configuration is the same on each widget.
 
 ### 5.5 Interaction
 

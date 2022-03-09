@@ -18,6 +18,10 @@ AppDynamics is a flexible application performance management tool that provides 
 
 * Set up application performance management for your Mendix application on AppDynamics
 
+{{% alert type="warning" %}}
+AppDynamics is currently in private beta, and thus not supported. We plan to offer full support for AppDynamics during 2022.
+{{% /alert %}}
+
 ## 2 Prerequisites
 
 Before starting with this how-to, make sure you have completed the following prerequisites:

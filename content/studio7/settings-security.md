@@ -25,11 +25,11 @@ Whether security is enabled for your app by default, depends on app's type and v
 	{{% image_container width="400" %}}![Secure Your App Pop-up Window](attachments/settings-security/security-pop-up.png)
 	{{% /image_container %}}<br/>
 
-    b. If security is set to the **Production** level in Studio Pro and settings are compatible with Studio, you can view and edit **Roles and Permissions** in Studio. (For more information on what security settings are compatible with Studio, see the [Studio Compatibility](/refguide/studio-security-enabled#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
+    b. If security is set to the **Production** level in Studio Pro and settings are compatible with Studio, you can view and edit **Roles and Permissions** in Studio. (For more information on what security settings are compatible with Studio, see the [Studio Compatibility](/refguide8/studio-security-enabled#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
 
     ![](attachments/settings-security/roles-and-permissions-screen.png)
 
-    c. If security is set to the **Prototype/demo** or **Production** level in Studio Pro and settings are not compatible with Studio, you can view (not edit) **Roles and Permissions** in Studio. (For more information on security settings compatible with Studio, see the [Studio Compatibility](/refguide/studio-security-enabled#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
+    c. If security is set to the **Prototype/demo** or **Production** level in Studio Pro and settings are not compatible with Studio, you can view (not edit) **Roles and Permissions** in Studio. (For more information on security settings compatible with Studio, see the [Studio Compatibility](/refguide8/studio-security-enabled#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
 
     ![](attachments/settings-security/security-read-only.png)
 
@@ -43,7 +43,7 @@ If you need to enable security, do one of the following:
 	![The Roles and Permissions Screen](attachments/settings-security/enabling-security.png)
 
 {{% alert type="info" %}}
-When you enable security, it is enabled for the whole app, and there are checks and changes applied to the model that are visible in Studio Pro. For more technical information on these checks and changes, see [Model Changes When Security Is Enabled in Studio](/refguide/studio-security-enabled).
+When you enable security, it is enabled for the whole app, and there are checks and changes applied to the model that are visible in Studio Pro. For more technical information on these checks and changes, see [Model Changes When Security Is Enabled in Studio](/refguide8/studio-security-enabled).
 {{% /alert %}}
 
 ## 3 Roles and Permissions {#roles-and-permissions}
@@ -151,7 +151,7 @@ There are two ways to set access for specific pages/microflows in your app:
 
 ## 4 Demo Users
 
-Demo users are a demonstration of each user role existing in your app. You can use demo users to review how your app looks like for each user role. For more technical information, see [Demo Users](/refguide/demo-users). 
+Demo users are a demonstration of each user role existing in your app. You can use demo users to review how your app looks like for each user role. For more technical information, see [Demo Users](/refguide7/demo-users). 
 
 ### 4.1 Testing Your Roles {#testing-your-roles}
 
@@ -175,7 +175,7 @@ You can assign the default or customized user roles for your app to app end-user
 You can manage App Users only after you publish your app.
 {{% /alert %}}
 
-To manage App Users, open **Roles and Permissions** and click **Manage Users** in the top-right of the screen:
+To manage App Users, open **Roles and Permissions** and click **Manage Users** on the upper-right side of the screen:
 
 ![](attachments/settings-security/manage-users-button.png)
 
@@ -191,5 +191,5 @@ If you have created a new user role on the **Roles and Permissions** page, you n
 
 ## 6 Read More
 
-* [Security](/refguide/security)
-* [Model Changes When Security Is Enabled in Studio](/refguide/studio-security-enabled)
+* [Security](/refguide7/security)
+* [Model Changes When Security Is Enabled in Studio](/refguide8/studio-security-enabled)

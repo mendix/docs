@@ -15,7 +15,7 @@ These are the available list view widgets:
 * [Check box filter](#check-box-filter) – filters a list view with various constraints when checked or unchecked
 * [Drop-down filter](#drop-down-filter) – filters a list view with various options that can be selected from a drop-down
 * [Drop-down sort](#drop-down-sort) – adds an interactive sort to your list view.
-* [Header sort](#header-sort) – add sorting behavior to the headers of a list view.
+* [Header sort](#header-sort) – adds sorting behavior to the headers of a list view.
 * [Pagination](#pagination) – adds bootstrap like paging to a list view and page numbers similar to in-built data grid
 * [Text box search](#text-box-search) – adds an interactive search box to all of your list view
 
@@ -24,10 +24,6 @@ These are the available list view widgets:
 If an entity in a list view has an attribute populated by a microflow, it will cause an error.
 
 {{% /alert %}}
-
-### 1.1 Demo App
-
-For a demo app that has been deployed with these widgets, see [here](https://listviewcontrols.mxapps.io).
 
 ## 2 Check Box Filter Widget {#check-box-filter}
 

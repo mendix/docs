@@ -1,7 +1,7 @@
 ---
 title: "Configure a Navigation Bar"
 description: "This how-to describes the process of configuring a navigation bar in Mendix Studio."
-menu_order: 15
+weight: 15
 tags: ["studio", "navigation", "how to", "navigation bar"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -111,7 +111,7 @@ Good job! You have added a menu item for the **New Employee** page to your navig
 
 ![New Menu Item Created](attachments/navigation-how-to-configure/new-menu-item-created.png)
 
-Click **Preview** in the top-right corner to [preview your app](/studio8/publishing-app) and test how the navigation menu looks like:
+Click **Preview** in the upper-right corner to [preview your app](/studio8/publishing-app) and test how the navigation menu looks like:
 ![Previewed Menu Items](attachments/navigation-how-to-configure/previewed-menu-items.png)
 
 ### 3.3 Create a Menu Item for the Employee_Details Page and Configuring Its Sub-Items

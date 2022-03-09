@@ -17,7 +17,7 @@ In the top left corner of the **Test Suite Details** page, you find the name and
 
 With the parallel/sequential switch, you change the run behaviour of the test suite. If it is set to **parallel**, ATS tries to run all the containing tests of your test suite in parallel. This is limited through the concurrency limit of your Selenium hub. With the switch set to **sequential**, the tests run in succession.
 
-In the top-right corner of the page, you find the **Export** and **Run** buttons:
+In the upper-right corner of the page, you find the **Export** and **Run** buttons:
 
 | Name                   | Description                              |
 | ---------------------- | ---------------------------------------- |

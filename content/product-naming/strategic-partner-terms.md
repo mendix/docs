@@ -1,6 +1,6 @@
 ---
 title: "Strategic Partner Terms"
-menu_order: 3
+weight: 30
 draft: true
 ---
 

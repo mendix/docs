@@ -4,6 +4,90 @@ parent: "nt-studio-pro-9-parent"
 menu_order: 10
 description: "Native Template 6 release notes."
 ---
+## 6.2.12
+
+**Release date: January 25th, 2022**
+
+### Fixes
+
+* We identified and fixed an issue that would stop the **Navigate To** action from launching Google Maps on Android v11 and above.
+
+## 6.2.11
+
+**Release date: January 6th, 2022**
+
+### Fixes
+
+* We identified and fixed a bug introduced with Native Template v6.2.9 and Mendix Clients built with Mendix Studio Pro 9.8.0 and above which support the new mobile encryption features. The iOS apps would wrongly clear the keychain values on each restart forcing app users to re-authenticate on each app restart. iOS apps now correctly persist the user session after each restart for clients built with Mendix Studio Pro 9.8.0 and above. (Ticket 138881)
+ * Rebuilding and releasing a new iOS app with this Native Template version will solve the issue.
+
+## 6.2.10
+
+**Release date: December 14th, 2021**
+
+### Fixes
+
+* We fixed an issue introduced with v6.2.9 where an Android app crashed when CodePush was enabled.
+
+## 6.2.9 {#6.2.9}
+
+**Release date: November 29th, 2021**
+
+### Improvements
+
+* We added support for the new native mobile encryption features introduced with Mendix Studio Pro v9.8.
+* We added support for authentication token encryption for iOS and Android.
+  * The token will be encrypted only for clients built with Mendix Studio Pro v9.8 and above. Lower Studio Pro versions do not support this feature and tokens will remain unencrypted.
+* We added support for all cookies on Android.
+  * All new app-specific cookies on Android from Native Template v6.2.9 and above will be automatically encrypted independently of the Studio Pro 9 minor version.
+
+### Fixes
+
+* We added file storage support for Android 30 to address the camera roll dependency.
+
+## 6.2.8
+
+**Release date: November 5th, 2021**
+
+### Fixes
+
+* We identified and added a missing configuration that was failing the `CallPhoneNumber` JavaScript action on devices using Android 11 and above. Without this new configuration, the action will fail.
+
+## 6.2.7
+
+**Release date: October 25th, 2021**
+
+### Improvements
+
+* Mendix Studio Pro v9.7 brings with it a new over-the-air update mechanism. With this new mechanism you can update your apps directly via your app's runtime without using third-party services. For more information on OTA updates, see [Release Over the Air Updates with Mendix](/howto/mobile/how-to-ota).
+
+### Fixes
+
+* We fixed bugs and optimized performance.
+
+## 6.2.6
+
+**Release date: October 4th, 2021**
+
+### Fixes
+
+* We fixed an issue with the `OpenURL` JavaScript action on Android devices which use version 11 and above.
+
+## 6.2.5
+
+**Release date: September 29th, 2021**
+
+### Improvements
+
+* iOS 15 requires you to recompile your apps with XCode 13. This release bumps the configuration of App Center to use XCode 13.
+
+## 6.2.4
+
+**Release date: September 23rd, 2021**
+
+### Improvements
+
+* To support new features and capabilities introduced with the latest versions of Mendix 9 we updated the main dependencies. This version is backward compatible with previous Mendix Studio Pro 9 versions.
 
 ## 6.2.3
 

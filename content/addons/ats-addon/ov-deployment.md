@@ -84,21 +84,21 @@ Before you pick your option, you need to be aware of the differences. The follow
 
 Feature                       | Standard          | SaaS Selenium Provider | Public App On-Premises        | Private App On-Premises       | Customer-Hosted Selenium
 ----------------------------- | ----------------- | ---------------------- | ----------------------------- | ----------------------------- | -----------------------------
-Test Automation               | ![][green] Yes    | ![][green] Yes         | ![][green] Yes                | ![][green] Yes                | ![][green] Yes
-Test Recording                | ![][green] Yes    | ![][green] Yes         | ![][green] Yes                | ![][green] Yes                | ![][green] Yes
-OS Selection                  | ![][red] No       | ![][green] Yes         | ![][green] Yes                | ![][green] Yes                | ![][red] No
-Responsive Testing            | ![][green] Yes    | ![][green] Yes         | ![][green] Yes                | ![][green] Yes                | ![][red] No
-Multiple Browsers<sup>1</sup> | ![][grey] Limited | ![][green] All         | ![][green] All                | ![][green] All                | ![][grey] Limited<sup>3</sup>
-Mobile Testing<sup>2</sup>    | ![][red] No       | ![][green] Yes         | ![][green] Yes                | ![][green] Yes                | ![][red] No
-Mendix Platform Integration   | ![][green] All    | ![][green] All         | ![][grey] Limited<sup>4</sup> | ![][grey] Limited<sup>4</sup> | ![][grey] Limited<sup>4</sup>
-Live View & Video<sup>2</sup> | ![][green] Yes    | ![][green] Yes         | ![][green] Yes                | ![][green] Yes                | ![][red] No
-Future Proof<sup>5</sup>      | ![][green] Yes    | ![][green] Yes         | ![][green] Yes                | ![][green] Yes                | ![][red] No
+Test Automation               | ![](attachments/ov-deployment/green.png) Yes    | ![](attachments/ov-deployment/green.png) Yes         | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/green.png) Yes
+Test Recording                | ![](attachments/ov-deployment/green.png) Yes    | ![](attachments/ov-deployment/green.png) Yes         | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/green.png) Yes
+OS Selection                  | ![](attachments/ov-deployment/red.png) No       | ![](attachments/ov-deployment/green.png) Yes         | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/red.png) No
+Responsive Testing            | ![](attachments/ov-deployment/green.png) Yes    | ![](attachments/ov-deployment/green.png) Yes         | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/red.png) No
+Multiple Browsers<sup>1</sup> | ![](attachments/ov-deployment/grey.png) Limited | ![](attachments/ov-deployment/green.png) All         | ![](attachments/ov-deployment/green.png) All                | ![](attachments/ov-deployment/green.png) All                | ![](attachments/ov-deployment/grey.png) Limited<sup>3</sup>
+Mobile Testing<sup>2</sup>    | ![](attachments/ov-deployment/red.png) No       | ![](attachments/ov-deployment/green.png) Yes         | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/red.png) No
+Mendix Platform Integration   | ![](attachments/ov-deployment/green.png) All    | ![](attachments/ov-deployment/green.png) All         | ![](attachments/ov-deployment/grey.png) Limited<sup>4</sup> | ![](attachments/ov-deployment/grey.png) Limited<sup>4</sup> | ![](attachments/ov-deployment/grey.png) Limited<sup>4</sup>
+Live View & Video<sup>2</sup> | ![](attachments/ov-deployment/green.png) Yes    | ![](attachments/ov-deployment/green.png) Yes         | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/red.png) No
+Future Proof<sup>5</sup>      | ![](attachments/ov-deployment/green.png) Yes    | ![](attachments/ov-deployment/green.png) Yes         | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/red.png) No
 
-<sup>1</sup> Only if supported by ATS.<br />
+<small><sup>1</sup> Only if supported by ATS.<br />
 <sup>2</sup> Feature not available yet.<br />
 <sup>3</sup> Additional setup for every browser required.<br />
 <sup>4</sup> ATS will integrate with several APIs from the Mendix Cloud to improve the testing experience. Since some of these APIs are only available for apps that run in the Mendix Cloud, certain features cannot be offered for on-premises apps.<br />
-<sup>5</sup> Future features may depend on the functionality offered by the Mendix Cloud or the Selenium service providers. They may not be available if you run your app on-premises or host your own Selenium server.
+<sup>5</sup> Future features may depend on the functionality offered by the Mendix Cloud or the Selenium service providers. They may not be available if you run your app on-premises or host your own Selenium server.</small>
 
 ### 4.2 Setup and Maintenance
 
@@ -106,16 +106,16 @@ The following matrix compares the efforts for setup and maintenance of the diffe
 
 Aspect                                | Standard                   | SaaS Selenium Provider     | Public App On-Premises     | Private App On-Premises     | Customer-Hosted Selenium
 ------------------------------------- | ---------------------------| -------------------------- | -------------------------- | ----------------------------| ----------------------------
-Firewall Setup                        | ![][green] No              | ![][green] None<sup>1</sup>| ![][red] Required          | ![][green] None<sup>1</sup> | ![][red] Required
-Selenium<sup>2</sup> Runner Setup     | ![][green] No<sup>3</sup>  | ![][green] No<sup>3</sup>  | ![][green] No<sup>3</sup>  | ![][green] No<sup>3</sup>   | ![][red] Customer responsibility
-Selenium<sup>2</sup> SaaS Agent Setup | ![][green] No              | ![][green] No<sup>4</sup>  | ![][green] No<sup>4</sup>  | ![][red] Yes                | ![][green] No<sup>4</sup>
-Selenium<sup>2</sup> Maintenance      | ![][green] No              | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup>  | ![][red] Customer responsibility
-Selenium<sup>2</sup> Support          | ![][green] No              | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup>  | ![][red] No
+Firewall Setup                        | ![](attachments/ov-deployment/green.png) No              | ![](attachments/ov-deployment/green.png) None<sup>1</sup>| ![](attachments/ov-deployment/red.png) Required          | ![](attachments/ov-deployment/green.png) None<sup>1</sup> | ![](attachments/ov-deployment/red.png) Required
+Selenium<sup>2</sup> Runner Setup     | ![](attachments/ov-deployment/green.png) No<sup>3</sup>  | ![](attachments/ov-deployment/green.png) No<sup>3</sup>  | ![](attachments/ov-deployment/green.png) No<sup>3</sup>  | ![](attachments/ov-deployment/green.png) No<sup>3</sup>   | ![](attachments/ov-deployment/red.png) Customer responsibility
+Selenium<sup>2</sup> SaaS Agent Setup | ![](attachments/ov-deployment/green.png) No              | ![](attachments/ov-deployment/green.png) No<sup>4</sup>  | ![](attachments/ov-deployment/green.png) No<sup>4</sup>  | ![](attachments/ov-deployment/red.png) Yes                | ![](attachments/ov-deployment/green.png) No<sup>4</sup>
+Selenium<sup>2</sup> Maintenance      | ![](attachments/ov-deployment/green.png) No              | ![](attachments/ov-deployment/green.png) Yes<sup>3</sup> | ![](attachments/ov-deployment/green.png) Yes<sup>3</sup> | ![](attachments/ov-deployment/green.png) Yes<sup>3</sup>  | ![](attachments/ov-deployment/red.png) Customer responsibility
+Selenium<sup>2</sup> Support          | ![](attachments/ov-deployment/green.png) No              | ![](attachments/ov-deployment/green.png) Yes<sup>3</sup> | ![](attachments/ov-deployment/green.png) Yes<sup>3</sup> | ![](attachments/ov-deployment/green.png) Yes<sup>3</sup>  | ![](attachments/ov-deployment/red.png) No
 
-<sup>1</sup> A Selenium SaaS Agent with VPN is used to surpass the company network firewall.<br />
+<small><sup>1</sup> A Selenium SaaS Agent with VPN is used to surpass the company network firewall.<br />
 <sup>2</sup> Selenium is an open-source third-party component that is not maintained/supported by Mendix.<br />
 <sup>3</sup> Provided by your Selenium SaaS provider.<br />
-<sup>4</sup> Not required in this option.
+<sup>4</sup> Not required in this option.</small>
 
 ### 4.3 Uploading Files
 
@@ -128,8 +128,8 @@ ATS does not support the uploading of files in every situation. This table prese
 | SauceLabs (SaaS) | ![](attachments/ov-deployment/red.png) No | ![](attachments/ov-deployment/red.png) No | ![](attachments/ov-deployment/red.png) No |
 | Selenium SaaS Agent | ![](attachments/ov-deployment/grey.png) Limited<sup>2</sup> | ![](attachments/ov-deployment/green.png) Yes | ![](attachments/ov-deployment/green.png) Yes |
 
-<sup>1</sup> This is only possible when you prepare your own files on that server.<br />
-<sup>2</sup> This depends on where the agent is installed.
+<small><sup>1</sup> This is only possible when you prepare your own files on that server.<br />
+<sup>2</sup> This depends on where the agent is installed.</small>
 
 For more information, see [How to Upload a File in Your App Using ATS](ht-two-upload-file-using-ats).
 
@@ -250,7 +250,7 @@ Before you start, make sure that your server has internet access to download the
         image: selenium/hub:3.141.59
         ports:
         - 4444:4444
-
+    
     firefoxnode:
         image: selenium/node-firefox-debug:3.141.59
         ports:
@@ -261,7 +261,7 @@ Before you start, make sure that your server has internet access to download the
         - SCREEN_HEIGHT=1080
         - SCREEN_WIDTH=1920
         - SCREEN_DEPTH=24
-
+    
     chromenode:
         image: selenium/node-chrome-debug:3.141.59
         ports:
@@ -288,6 +288,3 @@ Before you start, make sure that your server has internet access to download the
 
 The firewall should accept TCP connections from the internet on port 4444 (the standard port for Selenium Server). This port should forward to your Selenium Server.
 
-[green]:attachments/ov-deployment/green.png
-[grey]:attachments/ov-deployment/grey.png
-[red]:attachments/ov-deployment/red.png

@@ -13,7 +13,7 @@ Apps built with [Studio Pro 8](/releasenotes/studio-pro/8) can now be tested usi
 
 ### Fixes
 
-* Since the update to Selenium v3.14, the click coordinates behavior was changed to refer from the center of the web element instead of the top-left corner. Because we like to keep the behavior of our functions consistent between upgrades, we implemented an offset to make sure that **Click Coordinates** works with respect to the top-left corner. (Ticket 8752)
+* Since the update to Selenium v3.14, the click coordinates behavior was changed to refer from the center of the web element instead of the upper-left corner. Because we like to keep the behavior of our functions consistent between upgrades, we implemented an offset to make sure that **Click Coordinates** works with respect to the upper-left corner. (Ticket 8752)
 * We fixed an issue introduced in 2.13 where error logs were missing for data-driven test cases. (Ticket 8760)
 * We fixed a minor issue where the warning tooltip showed the same text multiple times.
 

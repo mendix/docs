@@ -9,7 +9,7 @@ tags: ["studio pro", "logic bot", mendix assist", "AI", "assist", "mx assist"]
 
 MxAssist Logic Bot is an AI-powered virtual co-developer bot that helps you to model and configure your application logic (microflows) in Mendix Studio Pro. It gives you contextualized recommendations on the next best activity in your microflow based on the already designed activities, parameters, and other context-related information. 
 
-MxAssist Logic Bot is built using machine learning analysis of over twelve million anonymized application logics (microflows)*—*built with Mendix*—*to detect and learn the best practice patterns in microflows.
+MxAssist Logic Bot is built using the machine learning analysis of over twelve million anonymized application logics (microflows) built with Mendix to detect and learn the best practice patterns in microflows.
 
 The key features of MxAssist Logic Bot are the following: 
 
@@ -20,17 +20,19 @@ The key features of MxAssist Logic Bot are the following:
 
 ## 2 MxAssist Logic Bot Settings
 
-You can switch MxAssist Logic Bot on and off in the top right corner of the microflow editor. 
+You can switch MxAssist Logic Bot on and off using the **On-Off** button in the top right corner of the microflow editor:
 
-To access settings of MxAssist Logic Bot, open **Edit** > **Preferences >**the **General** tab >the **MxAssist Logic Bot** tab. For more information, see [Preferences](preferences-dialog).
+![On-Off-Button](attachments/mx-assist-logic-bot/mx-assist-on-off-button.png)
 
-In the **MxAssist Logic Bot** tab, you can set the following: 
+To access settings of MxAssist Logic Bot, open **Edit** > **Preferences** >the **Mendix Assist** tab >the **Logic Bot** section. For more information, see [Preferences](preferences-dialog).
+
+In the **Mendix Assist** tab, section **Logic Bot**, you can set the following: 
 
 * **Enable MxAssist Logic Bot** – switches MxAssist Logic Bot on and off
 
 * **Show suggestions for system variables** – when enabled, MxAssist Logic Bot will make suggestions for system objects (for example, it can suggest that you change such objects as **currentUser** or **currentSession**):
 
-    ![Mx Assist Logic Bot Suggestions for System Variables](attachments/mx-assist-logic-bot/mx-assist-system-variables.png)
+  ![Suggestions for System Variables](attachments/mx-assist-logic-bot/mx-assist-system-variables.png)
 
 For more information on preferences, see [Preferences](preferences-dialog).
 

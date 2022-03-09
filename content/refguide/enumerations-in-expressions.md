@@ -23,7 +23,7 @@ Conditional statements are also possible:
 if 4>3 then
   OrderProcessing.Status.completed
 else
-  OrderProcessing.Status.completed
+  OrderProcessing.Status.started
 ```
 
 ## 2 getCaption

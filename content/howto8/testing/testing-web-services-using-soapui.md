@@ -20,7 +20,7 @@ You can publish your own webservices in a Mendix application. These webservices 
 Before you can start with this how-to, make sure you have completed the following prerequisites.
 
 *   Download and install [SoapUI](https://www.soapui.org/downloads/soapui.html)
-*   Complete the how-to [Exposing a web service](/howto/integration/expose-a-web-service)
+*   Complete the how-to [Exposing a web service](/howto8/integration/expose-a-web-service)
 
 | Software | Version used in this how-to |
 | --- | --- |
@@ -34,10 +34,10 @@ All images, names and steps in this how-to are based on these versions. When usi
 
 ## 3 Publishing More Microflows as Web Service Operation
 
-In the how-to [Exposing a web service](/howto/integration/expose-a-web-service) you already published the microflow _GetCustomers_ as web service operation. In this chapter you will create two more microflow and publish them as web service operation.
+In the how-to [Exposing a web service](/howto8/integration/expose-a-web-service) you already published the microflow _GetCustomers_ as web service operation. In this chapter you will create two more microflow and publish them as web service operation.
 
 1.  Open Studio Pro.
-2.  Open the project you created in the how-to [Exposing a web service](/howto/integration/expose-a-web-service).
+2.  Open the project you created in the how-to [Exposing a web service](/howto8/integration/expose-a-web-service).
 3.  Create a **Microflow** that creates a customer and returns a Boolean. 
 
 	![](attachments/18448632/model1.jpg)
@@ -46,7 +46,7 @@ In the how-to [Exposing a web service](/howto/integration/expose-a-web-service) 
 
 	![](attachments/18448632/model2.jpg)
 
-5.  Publish both microflows as web service operation of the **CustomerWebservice** as described in chapter 4 of the how-to [Exposing a web service](/howto/integration/expose-a-web-service).
+5.  Publish both microflows as web service operation of the **CustomerWebservice** as described in chapter 4 of the how-to [Exposing a web service](/howto8/integration/expose-a-web-service).
 
 ## 4 Creating a new SOAP Project
 

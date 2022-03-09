@@ -1,275 +1,164 @@
 ---
-title: "Use the Siemens MindSphere Pump Asset Example App"
+title: "Use the Siemens MindSphere Operations Insight Example App"
 parent: "mendix-on-mindsphere"
 menu_order: 110
-tags: ["Siemens", "MindSphere", "Example", "Asset Management", "Time Series", "REST", "API", "Pump"]
+tags: ["Siemens", "MindSphere", "Example", "Operations Insight", "Time Series", "REST", "API"]
 ---
 
 ## 1 Introduction
 
 {{% alert type="warning" %}}
-This information is for the MindSphere Pump Asset Example App. This app cannot be used with MindSphere IIoT for Makers.
+This information is for the Siemens MindSphere Operations Insight Example App. This app cannot be used with MindSphere IIoT for Makers.
 {{% /alert %}}
 
-You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based, IoT operating system from Siemens. To help you build your app, the [Siemens MindSphere Pump Asset Example](https://marketplace.mendix.com/link/component/108810/) app is available in the Mendix Marketplace and can be used as the starting point for a new Mendix app.
+You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based, IoT operating system from Siemens. To help you build your app, the [Siemens MindSphere Operations Insight Example](https://marketplace.mendix.com/link/component/117954) app is available in the Mendix Marketplace and can be used as the starting point for a new Mendix app.
 
 This documentation provides more explanation of the MindSphere example app. Please note that this app is not production-ready. It is designed as an example of how you might begin to build a Mendix/MindSphere app.
 
-You can get more detailed information on how to deploy your app to the MindSphere Platform in [Siemens MindSphere – deployment](/developerportal/deploy/deploying-to-mindsphere).
+You can get more detailed information on how to deploy your app to the MindSphere Platform in [Siemens MindSphere – deployment](/developerportal/deploy/deploying-to-mindsphere). If your are interested in how to develop a MindSphere app with Mendix we recommend a visit to our learning path [Build a MindSphere app with Mendix](https://academy.mendix.com/link/path/80/Build-a-MindSphere-app-with-Mendix).
 
 ## 2 Prerequisites
 
-To deploy your app to MindSphere, you need to complete the prerequisites described below.
+To run your app on MindSphere, you need to complete the prerequisites described below.
 
 ### 2.1 Roles
 
-You need a MindSphere user account on a developer tenant. This account needs the following core roles:
+You need a MindSphere user account on a tenant including a Developer Cockpit - e.g. a [Start for free](https://siemens.mindsphere.io/en/start) tenant. This account needs the following core roles:
 
 * mdsp:core:Developer
 * mdsp:core:StandardUser
 * mdsp:core:TenantUser
 
-### 2.2 Assets{#create-assets}
-
-This example app displays information about pumps. If there are no pump assets created yet for your tenant, you will need to create them using the MindSphere **Asset Manager** in the launchpad.
-
-For this example app you must create Pump assets based on a **Pump** aspect with the following properties:
-
-| **Name**       | **Data type** | **Unit** |
-| -------------- | ------------- | -------- |
-| Motor_Current | DOUBLE        | amps     |
-| Pressure_In   | DOUBLE        | psi      |
-| Pressure_Out  | DOUBLE        | psi      |
-
-To create your assets, perform the following steps:
-
-1.  Login to MindSphere and go to the **MindSphere Asset Manager**.
-
-    {{% image_container width="25%" %}}![MindSphere Asset Manager Tile](attachments/mindsphere-example-app/image1.png){{% /image_container %}}
-
-2.  Select **Aspects**.
-
-3.  Click **Create aspect**.
-
-4.  Create a *dynamic* aspect called *Pump*.
-
-5.  Set up the following variables:
-
-    | **Name**       | **Data type** | **Unit** |
-    | -------------- | ------------- | -------- |
-    | Motor_Current | DOUBLE        | amps     |
-    | Pressure_In   | DOUBLE        | psi      |
-    | Pressure_Out  | DOUBLE        | psi      |
-
-    The result should look like:
-
-    ![Pump aspect screen](attachments/mindsphere-example-app/image2.png)
-
-6.  Select **Types**.
-
-7.  Click **Create Type**.
-
-8.  Create a **BasicAsset** called *Pump*.
-
-9.  Add the aspect *Pump* to the asset type.
-
-    ![Pump asset type screen](attachments/mindsphere-example-app/image3.png)
-
-10. Select **Assets**.
-
-11. Click **Create asset**.
-
-12. Select the type *Pump*.
-
-13. Type the *Name* and click **Save**. Location information is optional.
-
-14. Create more assets if required.
-
-    You should now have one or more Pump assets which you can use in the example app:
-
-    {{% image_container width="25%" %}}![List of pump assets](attachments/mindsphere-example-app/image4.png){{% /image_container %}}
-
-More information on creating assets is available in the MindSphere [Asset Manager – System Manual](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/index.html).
-
 ## 3 Opening the App in Studio Pro
 
 Open Studio Pro without opening an app and follow these steps:
 
-1. Click the icon in the top-right of the menu bar to open the Mendix Marketplace:
+1. Open the *Switch to* menu in the top bar of Studio Pro and click the Marketplace icon to open the Mendix Marketplace in the browser:
 
 	![](attachments/mindsphere-example-app/app-store-icon.png)
 
-2. Enter *MindSphere* in the search box, and click the magnifying glass icon.
-
-3. Select **Siemens MindSphere Pump Asset Example** from the search results:
+2. Enter *MindSphere Operations* in the search box and select **Siemens MindSphere Operations Insight** from the search results:
 
 	![](attachments/mindsphere-example-app/app-store-search.png)
 
-4. Click **Download** to create a new app app using this app:
+3. Click **Download**, and store the **Siemens_MindSphere_Operations_Insight_Example.mpk** on your local machine.
 
 	![](attachments/mindsphere-example-app/app-store-download.png)
 
-5. To start the new app, confirm where to store the app, the app name, and the app directory, then click **OK**:
+4. Go back to your Studio Pro and select **Import App Package…** from the **File** menu to import the downloaded app package.
+
+    ![](attachments/mindsphere-example-app/app-store-import-app-package.png)
+
+5. Confirm the **App name**, and the **App directory**, then click **OK**:
 
 	![](attachments/mindsphere-example-app/app-store-download-project.png)
 
-## 4 Deploying the Example App
+## 4 Deploy and Run the Example App
 
-To deploy the example app, you will need to configure the app, push it to Cloud Foundry, and set it up in the MindSphere launchpad.
+A Mendix-based application for MindSphere can be deployed to Mendix or to MindSphere. Deploying to Mendix is quite easy and is the preferred option as you can then  use the Auto Registration process.
+For more information about the deployment options see [Deploying to MindSphere](/developerportal/deploy/deploying-to-mindsphere#deploying-your-app).
 
-More detailed instructions are available in the deployment documentation: [Siemens MindSphere – deployment](/developerportal/deploy/deploying-to-mindsphere).
+To start the Auto Registration process just click the **Publish** button.
 
-The following sections summarize the settings and values you need to enter to successfully run this example app.
+![](attachments/mindsphere-example-app/autoreg-publish.png)
 
-### 4.1 App Configuration
+Once your app is deployed to Mendix, click **View App**.
 
-Within the app, you will need to set the following constants correctly:
+![](attachments/mindsphere-example-app/autoreg-view-app.png)
 
-![Folder structure of MindSphereSingleSignOn module](attachments/mindsphere-example-app/image5.png)
+Your default Browser will open and when your app starts, it will trigger the registration process.
 
-* CockpitApplicationName (the *Name* of your app in the MindSphere Developer Cockpit)
-* MindSphereGatewayURL
-* PublicKeyURL
+### 4.1 Auto Registration
 
-To deploy locally, you will need to configure the three constants above plus:
+All apps running within MindSphere need to be registered. When you open your app for the first time, it will recognize that is currently unregistered and ask you to perform the registration. You can do this manually in the Developer Cockpit, but the easier way is the Auto Registration process we follow here.
 
-* CockpitApplicationVersion
-* CredentialsType
-* HostTenant
-* UserTenant
+1. Click **Start Auto Registration**.
 
-### 4.2 Scopes and Roles
+	![Choose app registration](attachments/mindsphere-example-app/autoreg-choose-app-registration.png)
 
-The scopes and roles need to be set up as shown in the image below.
+	The process now tries to figure out on which tenant your app should be registered. Therefore you have to sign in
+	
+2. Enter your credentials and click **Sign In**.
 
-![Roles and Scopes page in MindSphere Developer Cockpit](attachments/mindsphere-example-app/image7.png)
+	![Choose app registration](attachments/mindsphere-example-app/autoreg-web-key.png)
 
-The following sections give more information on how these settings apply to the example app.
+	{{% alert type="info" %}}If you have more then one tenant with a Developer Cockpit option, MindSphere will present you with a list of those tenants. Choose the tenant in which you want to register your app.<br/><br/>If you have only one tenant on MindSphere, the process will automatically select this tenant for you.{{% /alert %}}
 
-#### 4.2.1 User Scopes{#userscopes}
+3. Give a **Display Name**, **Internal Name**, and, optionally, a **Description** in order to register your app.
 
-The example app has two Mendix user roles, *Admin* and *User*. These are mapped to the two application scopes *admin* and *user*. The MindSphere *user* role should be mapped to the *user* scope. The MindSphere *admin* scope should be mapped to both the *user* and *admin* scopes.
+	![Choose app registration](attachments/mindsphere-example-app/autoreg-name-description.png)
 
-This means that a MindSphere user who is given the **Admin Role** for the app will be given the *admin* and *user* scopes and will therefore have the Mendix user roles *admin* and *user*.
+	On a **Start for Free** tenant the **admin** role will be assigned automatically to your account. For all other tenants, you have to select at least one application user role which will be assigned to your account automatically.
+
+4. Click **Register** to start the registration process on your tenant.
+
+	After a few seconds, a summary page is shown.
+	
+	{{% alert type="warning" %}}Do **not** launch your application directly.{{% /alert %}}
+	
+	The MindSphere Operations Insight app uses quite a lot of MindSphere APIs. When you register an application you also have to grant access to each API you want to use in your application. Therefore, you have to do this for the Operations Insight application.
+	
+5. Click **Developer Cockpit** to take you to grant access to the APIs.
+
+	![Choose app registration](attachments/mindsphere-example-app/autoreg-registration-completed.png)
+
+	A new tab opens showing the registration detail of your app.
+	
+6. Click **Configure** to add the required MindSphere roles.
+
+	![Choose app registration](attachments/mindsphere-example-app/devcockpit-app-details.png)
+
+7. Add the following MindSphere API Roles to your app and assign them to correct application roles **admin** and **user**, as shown in the table below:
+
+    | **MindSphere application role** | **Admin** | **User** |
+    | ------------------------------- | --------- | -------- |
+    | mdsp:core:assetmanagement.standarduser | X |  X |
+    | mdsp:core:em.eventcreator | X |   |
+    | mdsp:core:em.eventmanager | X |   |
+    | mdsp:core:em.eventviewer | X |  X |
+    | mdsp:core:iot.filAdmin | X |   |
+    | mdsp:core:iot.filUser | X |  X |
+    | mdsp:core:.iot.tsaUser | X |  X |
+    | mdsp:core:.iot.timUser | X |  X |
+    | mdsp:core:mindconnect.fullaccess | X |   |
+    | mdsp:core:mindconnect.readonly | X |  X |
+    | mdsp:core:tm.tenantUser | X |  X |
+    | mdsp:core:tsm.full-access | X |   |
+    | mdsp:core:tsm.read-only | X |  X |
+
+	![Choose app registration](attachments/mindsphere-example-app/devcockpit-mdsp-api-roles.png)
+
+	The app configuration is finished now.
+	
+8. Switch back to the **Registration completed!** browser tab and click **Launch your application**, which will start the app.  
+
+	![Choose app registration](attachments/mindsphere-example-app/oi-home.png)
+
+### 4.2 Scopes and Roles{#scopesroles}
+
+The auto registration process has created two MindSphere application Roles *admin* and *user*:
+
+![Developer Cockpit application roles](attachments/mindsphere-example-app/devcockpit-app-roles.png)
+
+You can assign these application roles to users in the *Settings* app found on the launchpad.
+
+In addition, the auto registration process has created two MindSphere application Scopes *admin* and *user* and assigned these to the roles as follows:
+
+![Developer Cockpit application roles](attachments/mindsphere-example-app/devcockpit-app-scopes.png)
+
+The example app has two Mendix user roles, *Admin* and *User*. These are mapped to the two application scopes *admin* and *user*.
+
+This means that a MindSphere user who is given the **Admin Role** for the app will be given the *admin* scope and will therefore have the Mendix user roles *admin*.
 
 ![Relationship of MindSphere App user roles with Mendix App user roles](attachments/mindsphere-example-app/image6.png)
 
-#### 4.2.2 Core Roles
+For more information see the MindSphere documentation [Roles & Scopes for Applications](https://developer.mindsphere.io/concepts/concept-roles-scopes.html#available-roles-of-mindsphere-apis).
 
-To access the MindSphere APIs, the app needs to be given **Core Roles**. This Asset Management example app needs the following core roles:
+## 5 Run the app locally
 
-* assetmanagement.standarduser – this allows the app to read or update assets and images, and to read asset types and aspect types in the Asset Management Service
-* iot.timAdmin – this gives the app read, write and delete access to time series
+To run and test your app locally follow the steps described in [Local Testing](/partners/siemens/mindsphere-development-considerations#localtesting).
 
-{{% alert type="warning" %}}
-Without these core roles, the app will not have access to the asset management or time series APIs of MindSphere.
-{{% /alert %}}
+## 6 Read More
 
-For more information see the MindSphere documentation [Roles & Scopes for Applications](https://developer.mindsphere.io/concepts/concept-roles-scopes.html#asset-management).
-
-## 5 Siemens MindSphere Pump Asset Example App
-
-The **PumpAssetExample** module within the app uses the *MindSphere Asset Management Connector* and MindSphere APIs, via Mendix native REST, to create and view time series information for an asset.
-
-This is based on a standard Mendix app template. It also has additional modules which are required for integrating with and deploying to MindSphere. These additional modules are:
-
-* MindSphere SSO
-* MindSphere Theme Pack
-* MindSphere OS Bar Connector
-
-The use of these modules is covered in more detail in [Siemens MindSphere – deployment](/developerportal/deploy/deploying-to-mindsphere).
-
-It also uses the **MindSphere Asset Management Connector**. This is described in [MindSphere Asset Management Connector](/partners/siemens/mindsphere-asset-management-connector).
-
-To use the app:
-
-1.  View the app either from the MindSphere launchpad, or by running the app locally from Studio Pro and clicking **View**.
-
-2.  Click **Go to Assets** to view a list of assets.
-
-    ![Example App Home page](attachments/mindsphere-example-app/image8.png)
-
-3.  If you are running locally, you will need to provide *Client ID* and *Client Secret* credentials for your app. See [MindSphere Development Considerations](/partners/siemens/mindsphere-development-considerations) for more information on how to do this.
-
-    If you are running in the MindSphere launchpad, you will be logged on using Single Sign-on.
-
-4.  The assets are displayed using the **Get asset type by id** and **Get all assets** actions of the *MindSphere Asset Management Connector*.
-
-5.  Click an asset.
-
-    ![Example App assets page – no time series](attachments/mindsphere-example-app/image9.png)
-
-6.  If no time series data is available, you will be asked to create it; click **Create Timeseries Data**.  
-    This creates some sample data and uploads it to MindSphere using the REST API through Mendix's native REST functions.
-
-7.  You will see the time series data which has been generated. This is retrieved from MindSphere, again using Mendix's native REST functions.
-
-8.  Click on a magnifying glass to enlarge a time series chart.
-
-    ![Example App assets page – displaying time series](attachments/mindsphere-example-app/image10.png)
-
-    The enlarged chart can display three limit lines: Info, Warn, and Error. If you have an admin role in the app, you can configure these for your tenant.
-
-9. Click the settings icon in the menu. You will only see this if you have the *admin* role.
-
-    {{% image_container width="50%" %}}![Example App chart configuration page](attachments/mindsphere-example-app/image11.png){{% /image_container %}}
-
-    These values are held in the **LimitConfig** entity of the *PumpAssetExample* module domain model. When this entity is accessed, a constraint is used so that only the limits for the user's tenant are displayed. This enables the app to be multi-tenant.
-
-## 6 Notes on App Design
-
-### 6.1 Single Sign-On
-
-The app uses Single Sign-on (SSO) to identify the user. This is initiated in the **Runtime** tab of the **App Settings**, where the microflow **MindSphereSingleSignOn.RegisterSingleSignOn** is called on startup. This microflow sets up two configurations for the user.
-
-#### 6.1.1 User Role
-
-The user is given the role of *user* or *admin* within MindSphere. These roles are translated to MindSphere scopes which are matched to the Mendix user role. With the recommended mapping, a user with the app role *user* in MindSphere will be given the Mendix user role *user*.
-
-For a more complete description, see the [User Scopes](#userscopes) section.
-
-#### 6.1.2 Multi-Tenant Support
-
-The user is also connected to their MindSphere tenant. This enables security to be placed on persistable Mendix entity objects.
-
-MindSphere SSO provides the user’s tenant as the **Name** attribute in the **Tenant** entity.
-
-{{% image_container width="75%" %}}![Tenant and Tenant Object Domain Model](attachments/mindsphere-example-app/image12.png){{% /image_container %}}
-
-By utilizing this value when an entity is accessed, the Mendix app can be made multi-tenant. Note that security has to be applied explicitly in the action which accesses the entity, it cannot be applied to the entity itself.
-
-In this app there is a **LimitConfig** entity which is a specialization of **MindSphereSingleSignOn.TenantObject**. This holds a set of limits which should be displayed on the time series chart. The limits are set for each tenant individually.
-
-![LimitConfig entity in Domain Model](attachments/mindsphere-example-app/image13.png)
-
-When the app needs to get a list of limits, it calls the sub-microflow DS_GetLimitConfigs which returns a list of all limits for this tenant. The **Retrieve Objects** action applies an XPath constraint to ensure that only objects for this user’s tenant are retrieved.
-
-{{% image_container width="75%" %}}![Retrieve Objects dialog showing XPath constraint](attachments/mindsphere-example-app/image14.png){{% /image_container %}}
-
-When the list of limits is required, this microflow is called to ensure that tenant-based security is applied.
-
-### 6.2 Access Token
-
-The *Access Token* action is called at the start of every microflow which accesses MindSphere. This refreshes the access token and ensures that errors are not introduced because the access token has expired.
-
-### 6.3 Asset Management
-
-Asset Management (retrieving assets and asset types) is performed using the MindSphere Asset Management Connector. This is described in [MindSphere Asset Management Connector](/partners/siemens/mindsphere-asset-management-connector).
-
-### 6.4 Native REST
-
-The time series information is accessed using Mendix native REST. Native REST can also call other APIs which access MindSphere.
-
-For instructions on how to use Mendix native REST see [How To Consume a REST Service](/howto/integration/consume-a-rest-service).
-
-### 6.5 PUT Time Series
-
-In ACT_PutTimeSeriesData, the timeseries data is created as a MindSphere time series using a native REST(PUT) action. It this is successful, MindSphere returns a 204 code and this is checked in the decision *Put request completed successfully?*
-
-However, MindSphere will queue this request internally and the data will not be available until MindSphere has processed the queue. To ensure that this does not impact the app flow, the sub-microflow DS_GetTimeSeriesDataWithRetry is called. This attempts to read the time series data back from MindSphere until either it is successful, or it reaches the maximum number of retries (set in the constant *MaxRetryAfterPutTimeSeries*). There is a delay between each retry which follows an increasing arithmetic series.
-
-![Part of ACT_PutTimeSeriesData microflow](attachments/mindsphere-example-app/image15.png)
-
-## 7 Read More
-
-* [MindSphere Asset Management Connector](/partners/siemens/mindsphere-asset-management-connector)
+* [MindSphere Development Considerations](/partners/siemens/mindsphere-development-considerations)
+* [MindSphere Module Details](/partners/siemens/mindsphere-module-details)

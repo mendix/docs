@@ -27,7 +27,6 @@ User task properties consist of the following sections:
 * [Events](#events)
 * [General](#general)
 * [Outcomes](#outcomes)
-* [Security](#security)
 * [Task page](#task-page)
 * [User assignment](#user-assignment)
 
@@ -104,25 +103,15 @@ In addition to adding new parameters, you can perform the following actions on p
 
 The outcomes property allows you to create new outcomes for the user task. Outcomes are translated into different outgoing paths of the user task and can be referred to by other elements, such as a button. For example, you have a process when you need to approve or reject a request. One button on a [task page](#task-page) can refer to the **Approve** outcome of the user task, while another one can use the **Reject** outcome. 
 
-### 2.7 Security Section {#security}
-
-**Allowed roles** defines which [module role](module-security#module-role) the user must have to be able to execute the user task. 
-
-{{% alert type="info" %}}
-
-Only assigned users, which are defined in the [User Assignment Section](#user-assignment) below, will be able to see the user task and interact with it.
-
-{{% /alert %}}
-
-### 2.8 Task Page Section {#task-page}
+### 2.7 Task Page Section {#task-page}
 
 **Task page** is the page that an assigned user will use to inspect their task and complete it. You can also allow users to add comments or attachments on this page. 
 
 If you generate the page using the templates in the **Workflows Commons** module, these templates contain necessary data containers and associated context entity.
 
-### 2.9 User Assignment Section {#user-assignment}
+### 2.8 User Assignment Section {#user-assignment}
 
-#### 2.9.1 Assign User Task Using {#assign-user-task}
+#### 2.8.1 Assign User Task Using {#assign-user-task}
 
 **Assign user task using** allows you to manage what users will the task be assigned to. You can filter users using XPath or implement more flexible logic and add several checks using a microflow. 
 
@@ -133,11 +122,11 @@ Possible options of this property are described in the table below:
 | XPath     | Allows you to filter users who should be assigned the user task. For example, you can assign a certain task only to users with the Manager user role. You can use attributes of the of the **User Entity** set in [Project Settings](project-settings#workflows). |
 | Microflow | Allows you to assign the user task to certain users. Using microflow you can check, for example, which users have the right to approve user tasks and are currently not on vacation and assign the task only to users who passed the check.<br />The return type of the microflow should be the **User Entity** set in [Project Settings](project-settings#workflows). |
 
-#### 2.9.2 XPath Constraint
+#### 2.8.2 XPath Constraint
 
 Specifies the expression used to assign the user task. This option is displayed only when the [Assign user task using](#assign-user-task) is set to **XPath**.   
 
-#### 2.9.3 Microflow
+#### 2.8.3 Microflow
 
 Specifies the microflow used to assign the user task. This option is displayed only when the [Assign user task using](#assign-user-task) is set to **Microflow**.   
 

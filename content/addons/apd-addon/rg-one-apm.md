@@ -96,7 +96,7 @@ The JVM browser can be used to see JVM information similar to tools like JConsol
 
 ## 8 Query Tool
 
-The query tool lets you perform XPath, OQL and JDBC queries to collect either business statistics (like reports), application statistics (number of scheduled events running at the same time) or database specific statistics like the number of sessions. This module is also used for the explain plan functionality of the performance tool.
+The query tool lets you perform XPath, OQL and JDBC queries to collect either business statistics (like reports), application statistics (number of scheduled events running at the same time) or database specific statistics like the number of sessions. This module is also used for the functionality of the performance tool.
 
 ## 9 Log Tool
 

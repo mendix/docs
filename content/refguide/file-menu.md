@@ -19,7 +19,7 @@ The **File** menu items are described in the table below:
 
 | Menu Item                  | Description                                                  | Shortcut Key                                      |
 | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------- |
-| **New Document**           | Creates a new document within the app currently open. You can choose the name, location, and type of document. | <kbd>Ctrl</kbd> + <kbd>N</kbd>                    |
+| **New Document**           | Creates a new document within the app currently open. You can choose the name, location, and type of document. For more information on types of documents, see [Modules](modules). | <kbd>Ctrl</kbd> + <kbd>N</kbd>                    |
 | **New App**            | Creates a new single-developer app. A single-developer app is simply a file (with the extension *.mpr*) that is stored in the local file system. For more information, see [New App](new-project). | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd> |
 | **Open App**           | Opens an existing single-developer app (*.mpr*) or app package (*.mpk*). See **New App** above for information on single-developer apps. For more information, see [Open App](open-app-dialog). | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> |
 | **Recent Apps**        | Shows a list of recently opened apps for quick opening.  |                                                   |

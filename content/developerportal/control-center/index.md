@@ -2,35 +2,36 @@
 title: "Control Center"
 description: "Describes the Mendix Control Center, used for the governance of company members, apps, security, and cloud resources."
 tags: ["control center", "mendix admin", "developer portal", "role", "permissions", "fallback", "resource pack", "node", "offboard"]
+weight: 20
 aliases:
     - /developerportal/company-app-roles/users.html
 ---
 
 ## 1 Introduction
 
-Users that sign up on the Mendix Platform are able to create new apps, invite others to their teams, deploy their apps, and invite end-users to give feedback on apps, among many other activities. Insights into these company activities are provided in the Control Center in one central overview. These insights will help you to be in control and remain aware of everything happening within the Mendix landscape of your company.
+When you sign up on the Mendix Platform, you are able to create new apps, invite other users to your app teams, deploy your apps, and invite app end-users to give feedback, among many other activities. Insights into these company activities are provided in the Control Center in one central overview. These insights will help you to be in control and remain aware of everything happening within the Mendix landscape of your company.
 
 The [Mendix Control Center](https://controlcenter.mendix.com/) consists of the pages described below, which are for use by [Mendix Admins](#company).
 
-If your company does not already have a Mendix Admin, you will see a landing page that outlines the usage and goals of Control Center. You can also recommend a colleague for Mendix Admin status by clicking **Suggest a Mendix Admin**.
+If your company does not already have a Mendix Admin, you will see a page that outlines the usage and goals of Control Center. You can also recommend a colleague for Mendix Admin status by clicking **Suggest a Mendix Admin**.
 
-If your company does already have a Mendix Admin (but you yourself are not a Mendix Admin), you will see this landing page:
+If your company already has a Mendix Admin but you yourself are not a Mendix Admin, you will see this page:
 
 ![](attachments/admin-exists.jpg)
 
-If you are a Mendix Admin, you will immediately see the [Dashboard](#dashboard) page and can navigate to the pages described in the sections below.
+If you are a Mendix Admin, you will immediately see the [Dashboard](#dashboard) page and can navigate to the pages described below.
 
 ## 2 Dashboard {#dashboard}
 
 {{% alert type="info" %}}
-This new feature is currently in Beta. Please provide feedback via the feedback button on the right of the page. For more information, see [Mendix Beta Features](/releasenotes/beta-features/).
+This new feature is currently in Beta. Please provide feedback via the feedback button on the right of the page. For more information, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
-The Control Center dashboard gives you an overview of various activities for your company on the Mendix Platform.
+The Control Center dashboard gives you an overview of various activities for your company on the Mendix Platform:
 
 ![](attachments/dashboard.png)
 
-These are some examples of what the dashboard presents:
+These are some examples of what you can find on the dashboard:
 
 * **Apps Created** – you can filter these [apps](#apps) by date
 * **Mendix Versions** – describes which Studio Pro/Mendix versions your internal and external [members](#members) are using for apps, which is especially important as the development of apps on outdated or [non-MTS/LTS versions](/releasenotes/studio-pro/lts-mts) can lead to security issues
@@ -47,9 +48,12 @@ On the **Active Apps** tab of this page, you can see a list of the active apps t
 
 When you click an app name, a pop-up window opens with the app profile. You have options to directly **Deactivate App** and **Delete App** in this window. The window has the following tabs:
 
-* **App Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings) page for your app in the Developer Portal. 
-* **Members** tab – This tab presents the active members and external members of the app. You can directly deactivate a member from the app by clicking their name and selecting **Deactivate Member**. For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/collaborate/team#managing) page. If you are a Mendix Admin, you can also add yourself to a team via this page.
-* **App Roles** –  This tab presents the team roles defined via the **Default App Roles** tab and/or customized for a particular app.
+* **App Info** – this tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings) page for your app in the Developer Portal
+* **Members** – this tab presents the active members and external members of the app
+	* You can directly deactivate a member from the app by clicking their name and selecting **Deactivate Member**
+	* For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/collaborate/team#managing) page
+	* As a Mendix Admin, you can also add yourself to a team via this page
+* **App Roles** –  this tab presents the team roles defined via the **Default App Roles** tab and/or customized for a particular app
 
 When you select one or more apps via the check boxes on the **Active Apps** or **Deactivated Apps** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating/activating apps, and deleting apps.
 
@@ -93,7 +97,11 @@ When you select groups in the list or members or accessible apps in the group de
 
 ## 6 Company Settings {#company}
 
-On the **Company Details** tab of this page, you can edit your **Company Name** and **Description**. You can also request new **Company Email Domains** by clicking **Add Domain**, upon which a request is sent to [Mendix Support](/developerportal/support/). Once a domain is added, every user who signs up to Mendix with that email domain will be assigned to your company.
+On the **Company Details** tab of this page, you can edit your **Company Name** and **Description**.
+
+You can also request new **Company Email Domains** by clicking **Add Domain**, upon which a request is sent to [Mendix Support](/developerportal/support/). Once a domain is added, every user who signs up to Mendix with that email domain will be assigned to your company.
+
+If you have [configured single sign on using BYOIDP](set-up-sso-byoidp), you will have to wait until the domain has been added, then deactivate and reactivate BYOIDP to pick up the new email domain. It is not possible to add email domains which do not use single sign-on if it is activated for your company.
 
 The **Mendix Admins** tab lists all the current Mendix Admins in your company. A Mendix Admin will normally be someone in the IT department of your company, and they will have full access to Control Center to perform all available tasks. 
 
@@ -117,20 +125,34 @@ You can set a **Cover image** to be the background header of your company page. 
 
 ![](attachments/brand.jpg)
 
-## 8 Security {#security}
+## 8 Onboarding {#onboarding}
+
+On the **Landing Page** tab of this page, you can customize your company's onboarding landing page and use that instead of the standard Mendix Platform onboarding page for new platform users from your company. This helps users to understand your company’s way of working on the Mendix Platform and enables them to get started more quickly. You can share your company’s best practices on Mendix Platform usage, and you can link to videos, company documentation, and other content.
+
+You can start configuring the sections and blocks of your landing page from a standard template or from scratch. You can work on drafts and preview how the page looks before publishing for your company's new platform users.
+
+![](attachments/onboarding-landing.png)
+
+Once you publish your landing page, this will be where new users land after signing up with your company's domains on Mendix. This page is also accessible via the **Getting Started with Mendix** link in the upper-right navigation menu. If you do not have a company onboarding landing page set up, this link will lead to the default Mendix onboarding page.
+
+On the **Onboarding Email** tab, you can customize the onboarding email that users of your domains receive when they join the Mendix Platform. You can provide a link to your company's onboarding page, share a welcome message, or present company guidelines for using Mendix. You can create a draft email before sending it.
+
+![](attachments/onboarding-email.png)
+
+## 9 Security {#security}
 
 On the **Password Policy** tab of this page, you can set the password expiration policy for all company members. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.
 
-On the **Single Sign-On** tab of this page, you can set up an identity federation between the Mendix platform and your corporate identity provider. We call this feature *Bring Your Own Identity Provider (BYOIDP)* and you can find more information in [How to Set Up an SSO (BYOIDP)](set-up-sso-byoidp).
+On the **Single Sign-On** tab, you can set up an identity federation between the Mendix platform and your corporate identity provider. We call this feature *Bring Your Own Identity Provider (BYOIDP)* and you can find more information in [How to Set Up an SSO (BYOIDP)](set-up-sso-byoidp).
 
 On the **Security History** tab, you can click **Show Security History** to open a page (in a new browser tab) that presents an audit trail of security-related changes in **App History** and **Member History**. You can search through and view details on these changes as well as export the audit trail to a CSV file.
 
 ![](attachments/security.jpg)
 
-## 9 Cloud {#cloud}
+## 10 Cloud {#cloud}
 
 {{% alert type="warning" %}}
-This feature is not yet publicly available. Please talk to your CSM to enable this page.
+This feature is not yet publicly available. Please talk to your Customer Success Manager to enable this page.
 {{% /alert %}}
 
 The **Paid Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy#resource-pack) and whether the [Fallback](/developerportal/deploy/mendix-cloud-deploy#fallback) option has been purchased as part of a Premium plan.   
@@ -149,13 +171,15 @@ These links will open in a new browser tab.
 
 The **Free Environments** tab presents details on your company's free environments.
 
-## 10 Data Hub {#data-hub}
+## 11 Data Hub {#data-hub}
 
 An organization's Data Hub requires governance of the data-sharing policy down to the practical details of curating registered assets. A Mendix Admin can oversee these functions and also assign curators that can perform governance tasks for their apps.
 
 For details on these tasks, see [Data Hub Administration](data-hub-admin).
 
-## 11 Read More
+## 12 Read More
 
+* [How to Set Up an SSO (BYOIDP)](set-up-sso-byoidp)
 * [Data Hub Administration](data-hub-admin)
 * [Control Center and Mendix 8.18: The Right Amount of Control](https://www.mendix.com/blog/control-center-and-mendix-8-18-the-right-amount-of-control/)
+* [Govern and Scale your App Landscape with Mendix Control Center](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center)

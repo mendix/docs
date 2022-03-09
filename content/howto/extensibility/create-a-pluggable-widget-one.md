@@ -24,7 +24,7 @@ Clone this [code sample](https://github.com/mendix/text-box-sample) from GitHub 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install the LTS version of [Node.js](https://nodejs.org).
+* Install the LTS version of [Node.js](https://nodejs.org) (we recommend using Node 14).
 	* For Windows, install using this [official installer](https://nodejs.org/en/download/package-manager/#windows)
 	* For Mac, install using [Homebrew](https://docs.brew.sh/Installation) and
 	  these [official tools](https://nodejs.org/en/download/package-manager/#macos)
@@ -104,7 +104,7 @@ Note that whenever it is required to reinstall NPM package dependencies inside t
 
 ### 3.3 Adding the Attribute
 
-Open the **(YourMendixApp)/CustomWidgets/TextBox** folder in your IDE of choice (any IDE is fine if it can execute commands) . From now on, all file references will be relative to this path. To set up your new widget, first you must use an attribute of the context object and display that attribute in an input field: 
+Open the *(YourMendixApp)/CustomWidgets/TextBox* folder in your IDE of choice (any IDE is fine if it can execute commands) . From now on, all file references will be relative to this path. To set up your new widget, first you must use an attribute of the context object and display that attribute in an input field: 
 
 1. To prevent future errors, remove the file *src/components/HelloWorldSample.tsx*. Errors in *TextBox.editorPreview.tsx* will be dealt with in step 6 below.
 2. In *src/TextBox.xml*, the generator creates a sample property `sampleText`. Remove this property and add the new property `Text attribute`:
@@ -215,7 +215,7 @@ Open the **(YourMendixApp)/CustomWidgets/TextBox** folder in your IDE of choice 
 	Before moving on from this step, you should remove the import lines concerning the **Hello World** sample text from *TextBox.editorPreview.tsx* and *TextBox.tsx*, as these lines are no longer in use.
 
 7.  Add a test widget to the proappject home page:<br />
-	a. To find your widget for the first time you need to refresh from the files system. Use <kbd>F4</kbd> or select **App** > **Synchronize ProjeAppct Directory** from the Studio Pro menu.<br />
+	a. To find your widget for the first time you need to refresh from the files system. Use <kbd>F4</kbd> or select **App** > **Synchronize Project Directory** from the Studio Pro menu.<br />
 	b. Navigate to **Home > Add widget** in the editor menu.<br />
 	c. Select the newly-created **TextBox** widget at the bottom of the list.<br />
 	d. Place the widget below the standard text widget.<br />
@@ -289,7 +289,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 
 ### 3.5 Labeling the Input{#label-input}
 
-While the Mendix input widgets come with labels, you will need to add one to TextBox manually. With the new API it is easy to [add a label](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#label) to any widget.
+While the Mendix input elements come with labels, you will need to add one to TextBox manually. With the new API it is easy to [add a label](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#label) to any widget.
 
 1. In the *TextBox.xml* file, add an element `<propertyGroup caption="Label">` with a child element `<systemProperty />` above the existing `<propertyGroup caption="Data source">` element:
 
@@ -309,7 +309,7 @@ While the Mendix input widgets come with labels, you will need to add one to Tex
 
 3. This will result in a label above or next to the input depending on the available space, data view `Form orientation`, and the `Label width (weight)`:
 
-	![input widgets with label](attachments/pluggable-part-one/inputwidgetswithlabel.png)
+	![input elements with label](attachments/pluggable-part-one/inputwidgetswithlabel.png)
 
 ### 3.6 Handling Updates
 

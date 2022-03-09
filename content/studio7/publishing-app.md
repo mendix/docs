@@ -1,7 +1,7 @@
 ---
 title: "Previewing & Publishing Your App"
 description: "Describes previewing and publishing processes in the Mendix Studio."
-menu_order: 55
+weight: 70
 tags: ["studio", "deployment", "publishing", "app publishing", "deploy", "deploying", "publish", "preview"]
 ---
 
@@ -15,7 +15,7 @@ Publishing means getting your app up and running in a cloud environment to make 
 
 The app preview shows you what your app will look like after it is published.  
 
-To preview your app, click **Preview** in the top-right corner of Studio. 
+To preview your app, click **Preview** in the upper-right corner of Studio. 
 
 ![](attachments/publishing-app/preview.jpg)
 
@@ -25,7 +25,7 @@ You can preview your app in the Phone, Tablet, and Responsive (Desktop) mode. Cl
 
 ![](attachments/publishing-app/preview-modes.jpg)
 
-To exit the preview environment, click **Close Preview** in the top-right corner of the screen.
+To exit the preview environment, click **Close Preview** in the upper-right corner of the screen.
 
 ![](attachments/publishing-app/close-preview.jpg)
 

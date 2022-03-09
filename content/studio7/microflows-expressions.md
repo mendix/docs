@@ -13,12 +13,12 @@ This document describes microflow expressions in Mendix Studio. Expressions can 
 
 The **Expression** tab is available for the following activities in a microflow:
 
-*  [End Event](/refguide/end-event)
+*  [End Event](/refguide7/end-event)
 *  [Decision](microflows-decision)
-*  [Create Object](/refguide/create-object)
-*  [Change Object](/refguide/change-object)
-*  [Create Variable](/refguide/create-variable) 
-*  [Change Variable](/refguide/change-variable)
+*  [Create Object](/refguide7/create-object)
+*  [Change Object](/refguide7/change-object)
+*  [Create Variable](/refguide7/create-variable) 
+*  [Change Variable](/refguide7/change-variable)
 
 ![](attachments/microflows-expressions/expression-tab.png)
 
@@ -94,17 +94,17 @@ A list of the operators you can use in expressions in Studio can be found below:
 
 ### 4.1 Relational Expressions
 
-* [Less than ( < )](/refguide/relational-expressions)
-* [Greater than ( > )](/refguide/relational-expressions)
-* [Less than or equal to ( <= )](/refguide/relational-expressions)
-* [Greater than or equal to ( >= )](/refguide/relational-expressions)
-* [Is equal to ( = )](/refguide/relational-expressions)
-* [Is not equal to ( != )](/refguide/relational-expressions)
+* [Less than ( < )](/refguide7/relational-expressions)
+* [Greater than ( > )](/refguide7/relational-expressions)
+* [Less than or equal to ( <= )](/refguide7/relational-expressions)
+* [Greater than or equal to ( >= )](/refguide7/relational-expressions)
+* [Is equal to ( = )](/refguide7/relational-expressions)
+* [Is not equal to ( != )](/refguide7/relational-expressions)
 
 ### 4.2 Boolean Expressions
 
-* [and](/refguide/boolean-expressions)
-* [or](/refguide/boolean-expressions)
+* [and](/refguide7/boolean-expressions)
+* [or](/refguide7/boolean-expressions)
 
 ## 5 Read More
 

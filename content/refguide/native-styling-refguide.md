@@ -47,7 +47,7 @@ That custom class can be easily accessed in Mendix Studio Pro:
 
 {{% image_container width="400" %}}![custom class](attachments/native-styling-refguide/custom-class.png){{% /image_container %}}
 
-When you want to apply styling to one instance of a widget, you can extend that widget’s default class. Each widget's default class is named in the [Data Widgets](#understanding-data-widgets) section below. The example below shows how to extend a default class:
+When you want to apply styling to one instance of a widget, you can extend that widget’s default class. Each widget's default class is named in the [Data Containers](#understanding-data-widgets) section below. The example below shows how to extend a default class:
 
 ```javascript
 export const ActionButton = {
@@ -75,9 +75,9 @@ export const com_mendix_widget_native_badge_Badge = (Badge = {
 
 For more information on creating your own classes, see the [Creating Your Own Classes](/howto/mobile/how-to-use-native-styling#creating-your-own-classes) section in *Style Your Mendix Native Mobile App*. That document also shows how to use custom classes as design properties.
 
-## 3  Data Widgets {#understanding-data-widgets}
+## 3  Data Containers {#understanding-data-widgets}
 
-Data widgets are essential to many Mendix apps. These widgets will allow your users to create and handle data objects, and can be customized to fit your app’s needs.
+Data containers are essential to many Mendix apps. These widgets will allow your users to create and handle data objects, and can be customized to fit your app’s needs.
 
 ### 3.1 Data View Widget
 
@@ -111,9 +111,9 @@ The widget’s style properties are as follows:
 
 The default class to style all list views is named `ListView`.
 
-## 4 Common Widgets
+## 4 Text Widgets
 
-Common widgets are used in almost all app pages. Because of their ubiquity, learning to style common widgets will make a large difference for your apps.
+Text widgets are used in almost all app pages. Because of their ubiquity, learning to style text widgets will make a large difference for your apps.
 
 ### 4.1 Text
 
@@ -132,28 +132,7 @@ The text widget shows text which can optionally contain parameters. For more inf
 
 The default class to style all texts is named `Text`.
 
-### 4.2 Image {#image}
-
-The image widget can be used to show a predefined image on a page, layout, or snippet. For more information on these widgets, see [Image Widgets](image). The widget’s style properties are as follows:
-
-```xml
-<container>
-	<image/>
-</container>
-```
-
-| Element | Style Properties    | Description |
-| --- | --- | --- |
-| `container` | This has all ViewStyle properties.  |       |
-| `container`  | `rippleColor` | This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored (defaults to `rgba(0, 0, 0, 0.2)`). |
-| `container`  | `underlayColor` | This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only. |
-| `containerDisabled` | Same properties as `container` | Overrides `container` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
-| `image`     | This has all ImageStyle properties. |       |
-| `imageDisabled` | Same properties as `image` | Overrides `image` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
-
-The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `NativeDynamicImage` as described in the [Image Viewer](#image-viewer) section below.
-
-### 4.3 Page Title 
+### 4.2 Page Title 
 
 The page title widget shows the title of the page on which it is used. This can be the title defined on the page itself, or the override title defined when showing a page. For more information on this widget, consult [Page Title](page-title). The widget’s style properties are as follows:
 
@@ -170,19 +149,23 @@ The page title widget shows the title of the page on which it is used. This can 
 
 The default class to style all page titles is named `PageTitle`.
 
-### 4.4 Layout Grid
+## 5 Structure Widgets
+
+Structure  widgets are a set of tools that allow you to provide structure for your page’s content. There is also a specific widget called container widget detailed below. For more information on these widgets, see [Structure](structure-widgets).
+
+### 5.1 Layout Grid
 
 The layout grid widget can be used to structure the content on your page. You are able to create rows and columns which you can configure to have fixed or dynamic sizing.
 
 The widget’s style properties are divided over several objects: `LayoutGrid`, `row`, `noGuttersRow`, `col`, `colFitToContent`, `col1`, `col2`, `col3`, `col4`, `col5`, `col6`,  `col7`, `col8`, `col9`, `col10`, `col11`, `col12`, and `noGutters`.
 
-`col` is being applied when the Width property on a column is "Auto-fill".
+`col` is being applied when the Width property on a column is *Auto-fill*.
 
-`colFitToContent` is being applied when the Width property on a column is "Auto-fit content".
+`colFitToContent` is being applied when the Width property on a column is *Auto-fit content*.
 
-`col1`, `col2`, `col3`, `col4`, `col5`, `col6`,  `col7`, `col8`, `col9`, `col10`, `col11`, `col12` are applied when the Width on a column property is "Manual". Only one class is applied based on the related Size property.
+`col1`, `col2`, `col3`, `col4`, `col5`, `col6`,  `col7`, `col8`, `col9`, `col10`, `col11`, `col12` are applied when the Width on a column property is *Manual*. Only one class is applied based on the related Size property.
 
-`noGuttersRow` (Row) and `noGutters` (Column) are being applied when the Spacing between columns property on a row is set to "No".
+`noGuttersRow` (Row) and `noGutters` (Column) are being applied when the Spacing between columns property on a row is set to *No*.
 
 The main `LayoutGrid`:
 
@@ -212,11 +195,7 @@ The resulting DOM looks like this:
 </container>
 ```
 
-## 5 Container Widgets
-
-Container widgets are a set of tools that allow you to provide structure for your page’s content. There is also a specific widget called container widget detailed below. For more information on these widgets, see [Container Widgets](container-widgets).
-
-### 5.1 Container 
+### 5.2 Container 
 
 A container widget can be used to style or hide a group of widgets. This widget does not have a visual representation by default, though styling can be used to add spacing. The widget’s style properties are as follows:
 
@@ -235,7 +214,7 @@ A container widget can be used to style or hide a group of widgets. This widget 
 
 The default class to style all page titles is named `Container`.
 
-### 5.2 Tab Container
+### 5.3 Tab Container
 
 Tab containers are used to show information categorized into multiple tab pages. Tab containers can help display information which exceeds a device’s screen space. This is how a default tab container widget could look in an app:
 
@@ -279,7 +258,7 @@ The widget’s style properties are as follows:
 
 The default class to style all tab containers is named `TabContainer`.
 
-### 5.3 Scroll Container
+### 5.4 Scroll Container
 
 A scroll container is used to make enable scrolling for a part of a page. This widget does not have a visual representation by default, though styling can be used to add spacing.  The widget’s style properties are as follows:
 
@@ -295,9 +274,9 @@ A scroll container is used to make enable scrolling for a part of a page. This w
 
 The default class to style all scroll containers is named `ScrollContainer`.
 
-## 6 Input Widgets
+## 6 Input Elements
 
-Input widgets are typically used to show data to the user and allow them to edit data. For more information on these widgets, see [Input Widgets](input-widgets).
+Input elements are typically used to show data to the user and allow them to edit data. For more information on these widgets, see [Input Elements](input-widgets).
 
 ### 6.1 Text Box {#text-box}
 
@@ -332,7 +311,7 @@ The widget’s style properties are structured as follows:
 | `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
 | `inputDisabled` | Same properties as `input` | Overrides `input` styles if the text box is non-editable. |
 | `label` | This has all TextStyle properties |   |
-| `label` | `numberOfLines` | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (defaults to 1). |
+| `label` | `numberOfLines` | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (defaults to `1`). |
 | `labelDisabled` | Same properties as `label` | Overrides `label` styles if the text box is non-editable. |
 | `validationMessage` | This has all TextStyle properties.   |    |
 
@@ -419,47 +398,78 @@ The widget’s render hierarchy is as follows for uniform:
 | `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio Pro v8.11).|
 | `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio Pro v8.11).|
 
-### 6.4 Check Box 
+### 6.4 Check Box
 
-A check box input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a check box widget could look in an app:
+A check box input widget can be used to display and edit Boolean attributes and is rendered as either a switch or a checkbox. This is how a check box widget in switch render mode looks by default:
 
 {{% image_container width="350" %}}![check box](attachments/native-styling-refguide/check-box.png){{% /image_container %}}
+
+This is how a check box widget in checkbox render mode looks by default:
+
+{{% image_container width="350" %}}![check box in checkbox render mode](attachments/native-styling-refguide/check-box-checkbox.png){{% /image_container %}}
 
 The widget’s style properties structure is as follows:
 
 ```xml
-<container>
-	<label>Boolean switch</label>
-	<inputError>
-		<trackColorOff/>
-		<thumbColorOff/>
-	</inputError>
-	<validationMessage>Feedback switch input</validationMessage>
-</container>
-<container>
-	<label>Valid boolean</label>
-	<input>
-		<trackColorOn/>
-		<thumbColorOn/>
-	</input>
-</container>
+<container/>
+<containerDisabled/>
+<label>
+    <numberOfLines/>
+</label>
+<labelDisabled/>
+<input>
+    <thumbColorOn/>,
+    <trackColorOn/>
+    <trackColorOff/>
+    <thumbColorOff/>
+</input>
+<inputDisabled>
+    <thumbColorOn/>,
+    <trackColorOn/>
+    <trackColorOff/>
+    <thumbColorOff/>
+</inputDisabled>
+<inputError>
+    <thumbColorOn/>,
+    <trackColorOn/>
+    <trackColorOff/>
+    <thumbColorOff/>
+</inputError>
+<checkboxInput>
+    <color/>
+    <size/>
+</checkboxInput>
+<checkboxInputDisabled>
+    <color/>
+    <size/>
+</checkboxInputDisabled>
+<checkboxInputDisabled>
+    <color/>
+    <size/>
+</checkboxInputDisabled>
+<validationMessage/>
 ```
 
-| Element | Style Properties    | Description |
-| --- | --- | --- |
-| `container` | This has all ViewStyle properties.   |   |
-| `containerDisabled` | Same properties as `container` | Overrides `container` styles if the text box is non-editable. |
-| `input` | This has all TextStyle properties.   |   |
-| `input` | `trackColorOn` | Custom color for the switch track when turned on. |
-| `input` | `trackColorOff` | Custom color for the switch track when turned off. |
-| `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. |
-| `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. |
-| `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
-| `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the check box is non-editable. |
-| `label` | This has all TextStyle properties   |  |
-| `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
-| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the check box is non-editable. |
-| `validationMessage` | This has all TextStyle properties.   |  |
+| Element | Style Properties    | Description | Render mode |
+| --- | --- | --- | --- |
+| `container` | This has all ViewStyle properties.   |   | Both |
+| `containerDisabled` | Same properties as `container`. | Overrides `container` styles if the text box is non-editable. | Both |
+| `input` | This has all ViewStyle properties.   |   | Switch |
+| `input` | `trackColorOn` | Custom color for the switch track when turned on. | Switch  |
+| `input` | `trackColorOff` | Custom color for the switch track when turned off. | Switch |
+| `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. | Switch |
+| `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. | Switch |
+| `inputError` | This has the same properties as `input`. | Overrides `input` styles if there are validation errors. | Switch |
+| `inputDisabled` | This has the same properties as `input`. | Overrides `input` styles if the check box is non-editable. | Switch |
+| `checkboxInput` | This has all ViewStyle properties. |  | Checkbox |
+| `checkboxInput` | `color` | Custom color for the tick icon. | Checkbox |
+| `checkboxInput` | `size` | Custom size for the tick icon. | Checkbox |
+| `checkboxInputDisabled` | This has the same properties as `checkboxInput`. | Overrides `checkboxInput` styles if the check box is non-editable. | Checkbox |
+| `checkboxInputError` | This has the same properties as `checkboxInput`. | Overrides `input` styles if there are validation errors. | Checkbox |
+| `label` | This has all TextStyle properties.   |  | Both |
+| `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. | Both |
+| `labelDisabled` | Same properties as `label`. | Overrides `label` styles if the check box is non-editable. | Both |
+| `validationMessage` | This has all TextStyle properties.   |  | Both |
 
 The default class to style all check box inputs is named `Checkbox`.
 
@@ -511,19 +521,40 @@ The reference selector is an input widget that can be used to display and edit a
 
 The default class to style all reference selector inputs is named `ReferenceSelector`.
 
-## 7 File Widgets
+## 7 Images, Videos & Files
 
-File widgets help your user app manage images and other files. For more information on these widgets, see [File Widgets](file-widgets).
+Images, videos & files help your user app manage images and other files. For more information on these widgets, see [Images, Videos & Files](image-and-file-widgets).
 
-### 7.1 Image Viewer {#image-viewer}
+### 4.2 Static Image {#image}
 
-An image viewer can be used to display an image. This widget supports the same style properties and structure as the [Image](#image) widget above.
+The static image widget can be used to show a predefined image on a page, layout, or snippet. For more information on this widgets, see [Static Image](image). The widget’s style properties are as follows:
 
-The default class to style all image viewers is named  `NativeDynamicImage`.
+```xml
+<container>
+	<image/>
+</container>
+```
 
-## 8 Button Widgets
+| Element             | Style Properties                    | Description                                                  |
+| ------------------- | ----------------------------------- | ------------------------------------------------------------ |
+| `container`         | This has all ViewStyle properties.  |                                                              |
+| `container`         | `rippleColor`                       | This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored (defaults to `rgba(0, 0, 0, 0.2)`). |
+| `container`         | `underlayColor`                     | This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only. |
+| `containerDisabled` | Same properties as `container`      | Overrides `container` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
+| `image`             | This has all ImageStyle properties. |                                                              |
+| `imageDisabled`     | Same properties as `image`          | Overrides `image` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
 
-Button widgets help your user perform actions. For more information about these widgets, see [Button Widgets](button-widgets).
+The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `NativeDynamicImage` as described in the [Dynamic Image](#dynamic-image) section below.
+
+### 7.1 Dynamic Image {#dynamic-image}
+
+A dynamic image can be used to display an image. This widget supports the same style properties and structure as the [Static Image](#image) widget above.
+
+The default class to style all dynamic images is named  `NativeDynamicImage`.
+
+## 8 Buttons
+
+Buttons help your user perform actions. For more information about these widgets, see [Buttons](button-widgets).
 
 ### 8.1 Action Button
 
@@ -617,9 +648,9 @@ The navigation style properties are as follows:
 
 The default class to style the navigation is named  `navigationStyle`. There is no support for custom class styling on navigation.
 
-## 11 Add-On Widgets
+## 11 Add-Ons
 
-Add-on widgets are distributed through the [Native Mobile Resources](/appstore/modules/native-mobile-resources) module, and are not shipped with Mendix Studio Pro. Other add-on widgets might also be distributed through app templates, as well as modules importing pages from other apps. 
+Add-on widgets are distributed through the [Native Mobile Resources](/appstore/modules/native-mobile-resources) module, and are not shipped with Mendix Studio Pro. Other add-ons might also be distributed through app templates, as well as modules importing pages from other apps. 
 
 ### 11.1 Activity Indicator {#activity-indicator}
 
@@ -1432,7 +1463,7 @@ The default class to style all line chart widgets is named `com_mendix_widget_na
 
 ### 11.28 Bar Chart
 
-The bar chart widget renders a horizontal bar graph based on static and dynamic data sets.
+The [Bar Chart](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/bar-chart-native) widget renders a horizontal bar graph based on static and dynamic data sets.
 
 The widget consists of the following elements:
 
@@ -1454,15 +1485,15 @@ The widget consists of the following elements:
 	<label/>
 </legend>
 <domain>
-    </padding>
+    <padding/>
 </domain>
 <bars>
-    </barsOffset>
-    </barColorPalette>
+    <barsOffset/>
+    <barColorPalette/>
 	<customBarStyles>
 		<any_custom_bar_style_name>
-			</bar>
-			</label>
+			<bar/>
+			<label/>
 		</any_custom_bar_style_name>
 	</customBarStyles>
 </bars>
@@ -1514,6 +1545,107 @@ The widget consists of the following elements:
 | `bars` > `customBarStyles` > `any_custom_bar_style_name` > `label` | `fontWeight` | Applies a font weight to the bar label ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
 
 The default class to style all bar chart widgets is named `com_mendix_widget_native_barchart_BarChart`.
+
+### 11.29 Pie/Doughnut Chart
+
+The [Pie/Doughnut Chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/pie-doughnut-chart-native) widget renders a dataset as a pie or doughnut chart (depending on its configuration) based on static data sets.
+
+The widget consists of the following elements:
+
+```xml
+<container/>
+<slices>
+    <customStyles>
+        <any_custom_key>
+            <slice/>
+            <label/>
+        </any_custom_key>
+    </customStyles>
+    <colorPalette/>
+    <innerRadius/>
+    <padding/>
+    <paddingBottom/>
+    <paddingHorizontal/>
+    <paddingLeft/>
+    <paddingRight/>
+    <paddingTop/>
+    <paddingVertical/>
+</slices>
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `slices` > `customStyles` > `any_custom_key` > `slice` | `color` | Applies a color to the slice (string). If labels are configured to be shown, each label will be the same color as its corresponding slice. |
+| `slices` > `customStyles` > `any_custom_key` > `label` | `fontFamily` | Applies a font type to the slice label (string). |
+| `slices` > `customStyles` > `any_custom_key` > `label` | `fontSize` | Applies a size to the slice label (number). |
+| `slices` > `customStyles` > `any_custom_key` > `label` | `fontStyle` | Applies a font style to the slice label (**normal** or **italic**). |
+| `slices` > `customStyles` > `any_custom_key` > `label` | `fontWeight` | Applies a font weight to the slice label ("normal" or "bold" or "100"-"900" ascending by increments of 100). |
+| `slices` | `colorPalette` | Provides colors to slices that do not have a slice color configured (string with list of colors separated by a ';'). |
+| `slices` | `innerRadius` | Applies an inner radius to the chart when in doughnut presentation mode (number). |
+| `slices` | `padding` | Applies padding to all sides of the chart (number). |
+| `slices` | `paddingBottom` | Applies padding to the bottom side of the chart (number). |
+| `slices` | `paddingHorizontal` | Applies padding to the horizontal sides of the chart (number). |
+| `slices` | `paddingLeft` | Applies padding to the left side of the chart (number). |
+| `slices` | `paddingRight` | Applies padding to the right side of the chart (number). |
+| `slices` | `paddingTop` | Applies padding to the top side of the chart (number). |
+| `slices` | `paddingVertical` | Applies padding to the vertical sides of the chart (number). |
+
+The default class to style all Pie/Doughnut Chart widgets is named `com_mendix_widget_native_piedoughnutchart_PieDoughnutChart`.
+
+### 11.30 Switch
+
+A switch input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a switch widget looks by default:
+
+{{% image_container width="350" %}}![check box](attachments/native-styling-refguide/check-box.png){{% /image_container %}}
+
+The widget’s style properties structure is as follows:
+
+```xml
+<container/>
+<containerDisabled/>
+<label>
+    <numberOfLines/>
+</label>
+<labelDisabled/>
+<input>
+    <thumbColorOn/>,
+    <trackColorOn/>
+    <trackColorOff/>
+    <thumbColorOff/>
+</input>
+<inputDisabled>
+    <thumbColorOn/>,
+    <trackColorOn/>
+    <trackColorOff/>
+    <thumbColorOff/>
+</inputDisabled>
+<inputError>
+    <thumbColorOn/>,
+    <trackColorOn/>
+    <trackColorOff/>
+    <thumbColorOff/>
+</inputError>
+<validationMessage/>
+```
+
+| Element | Style Properties    | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties.   |   |
+| `containerDisabled` | Same properties as `container` | Overrides `container` styles if the text box is non-editable. |
+| `input` | This has all TextStyle properties.   |   |
+| `input` | `trackColorOn` | Custom color for the switch track when turned on. |
+| `input` | `trackColorOff` | Custom color for the switch track when turned off. |
+| `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. |
+| `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. |
+| `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
+| `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the check box is non-editable. |
+| `label` | This has all TextStyle properties   |  |
+| `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
+| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the check box is non-editable. |
+| `validationMessage` | This has all TextStyle properties.   |  |
+
+The default class to style all check box inputs is named `com_mendix_widget_native_switch_Switch`.
 
 ## 12 Read More
 

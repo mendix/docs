@@ -90,14 +90,14 @@ This affects time zone-related operations, such as parsing and formatting dates 
 
 If you run on-premises, then you can select the time zone to which the server is set. However, please note that no guarantees are given for the whereabouts of application servers in the cloud.
 
-### 3.9 Hash Algorithm
+### 3.9 Hash Algorithm{#hash-algorithm}
 
 The hash algorithm is used to generate hash values for attributes of the HashString type, such as the password of a user. Mendix offers two recommended hashing algorithms:
 
 | Option | Description |
 | --- | --- |
 | BCrypt (default, recommended) | Resistant to brute-force search attacks. |
-| SSHA256 | Seeded Secure Hash Algorithm 2, digest length 256 bits. |
+| SSHA256 | Salted Secure Hash Algorithm 2, digest length 256 bits. |
 
 Mendix believes both algorithms are secure enough to store passwords within Mendix. The main difference between BCrypt and SSHA256 is that the BCrypt algorithm has been configured so that it is relatively slow on purpose, since it was designed specifically to stop brute force attacks. That's why this results in a slight performance difference with the SSHA256 algorithm.
 

@@ -32,20 +32,22 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 
 #### 2.1.1 Supported Versions
 
-Mendix for Private Cloud Operator **v2.\*.\*** is the latest version which officially supports:
+Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
-* Kubernetes versions 1.19 through 1.21
-* OpenShift 4.6 through 4.7
+* Kubernetes versions 1.19 through 1.22
+* OpenShift 4.6 through 4.8
 
 {{% alert type="warning" %}}
-Mendix for Private Cloud has not yet been fully validated to support Kubernetes 1.22, a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
+Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
 
-This version of Kubernetes was released recently and is not yet offered or fully supported by most distributions and providers.
+This version of Kubernetes is not yet offered or fully supported by most distributions and providers.
 
-Upgrading an existing cluster to Kubernetes 1.22 might cause issues with Mendix for Private Cloud.
+Mendix for Private Cloud Operator v2.\*.\* is compatible with Kubernetes 1.22.
+
+Existing clusters running Mendix for Private Cloud Operator v1.\*.\* will need to be upgraded to Kubernetes 1.21 and Mendix for Private Cloud Operator v2.\*.\* **before** upgrading to Kubernetes 1.22.
 {{% /alert %}}
 
-Mendix for Private Cloud Operator **v1.12.\*** is an LTS release which officially supports older Kubernetes versions:
+Mendix for Private Cloud Operator `v1.12.*` is an LTS release which officially supports older Kubernetes versions:
 
 * Kubernetes versions 1.13 through 1.21
 * OpenShift 3.11 through 4.7
@@ -96,7 +98,7 @@ Externally hosted registries are supported if they allow username/password authe
 * [quay.io](https://quay.io/)
 * [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/) (ACR)
 
-When using ACR in combination with Azure Combination Service, it is possible to set up [native authentication](https://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration#create-a-new-aks-cluster-with-acr-integration) for pulling images from ACR.
+When using ACR in combination with Azure Kubernetes Service, it is possible to set up [native authentication](https://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration#create-a-new-aks-cluster-with-acr-integration) for pulling images from ACR.
 
 ### 3.3 OpenShift Image Registry
 
@@ -157,6 +159,15 @@ The following standard PostgreSQL databases are supported:
 
 * PostgreSQL 9.6
 * PostgreSQL 10
+* PostgreSQL 11
+* PostgreSQL 12
+* PostgreSQL 13
+
+{{% alert type="info" %}}
+While Mendix for Private Cloud supports all Postgres versions listed above, the Mendix Runtime might require a more specific Postgres version.
+
+For best compatibility, use Postgres 12 - it's supported by the latest supported LTS versions of the Mendix Runtime.
+{{% /alert %}}
 
 A standard PostgreSQL database is an unmodified PostgreSQL database installed from a Helm chart or from an installation package.
 
@@ -286,6 +297,10 @@ Unlike MinIO and S3, Mendix for Private Cloud doesn't manage Azure Blob Storage 
 
 Mendix Operator will need the endpoint, access key, and secret key to access the storage that can be configured in the interoperability setting. 
 
+### 5.6 Ceph
+
+[Ceph](https://ceph.io/en/) is supported with the S3-compatible interface [Ceph Object Gateway](https://docs.ceph.com/en/mimic/radosgw/). The Mendix Operator will need the endpoint, access key, and secret key to access the storage. Please check the Ceph documentation for information on how to get the credentials.
+
 ## 6 Networking
 
 {{% alert type="info" %}}
@@ -343,7 +358,7 @@ For ingress, it is possible to do the following:
 For each environment, the URL will be automatically generated based on the domain name.
 For example, if the domain name is set to mendix.example.com, then apps will have URLs such as myapp1-dev.mendix.example.com, myapp1-prod.mendix.example.com and so on.
 
-The DNS server should be configured to route all subdomains (the `*` subdomain, for example, *.mendix.example.com) to the ingress/load balancer.
+The DNS server should be configured to route all subdomains (the `*` subdomain, for example, `*.mendix.example.com`) to the ingress/load balancer.
 
 It is also possible to provide a custom TLS configuration for individual environments, overriding the default configuration (only available in **Standalone** Mendix Operator installations):
 
@@ -353,7 +368,7 @@ It is also possible to provide a custom TLS configuration for individual environ
 
 There are multiple ways of managing TLS certificates:
 
-* The Ingress controller can have a default certificate with a wildcard domain (for example, *.mendix.example.com*). For Ingress controllers which support for [Let's Encrypt](https://letsencrypt.org/), the Ingress controller can also request and manage TLS certificates automatically.
+* The Ingress controller can have a default certificate with a wildcard domain (for example, `*.mendix.example.com`). For Ingress controllers which support for [Let's Encrypt](https://letsencrypt.org/), the Ingress controller can also request and manage TLS certificates automatically.
 * Providing a TLS certificate secret for each environment.
 * Using [cert-manager](https://cert-manager.io/) or a similar solution by using Ingress annotations. This service can be used to automatically request TLS certificates and create secrets for the Ingress controller.
 

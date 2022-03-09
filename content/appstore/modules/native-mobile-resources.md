@@ -57,6 +57,7 @@ These are the native widgets included in these resources along with links to the
 | [List View Swipe](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/listview-swipe-native) | Shows controls on swipe for an interactive list view. |
 | [Maps](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/maps-native) | Shows locations on an interactive map. |
 | [Notifications](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/notifications-native) | Triggers actions based on incoming notifications. |
+| [Pie/Doughnut Chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/pie-doughnut-chart-native) | Renders a dataset as a pie or doughnut chart (depending on configuration) based on static data sets. |
 | <a name="popup-menu"></a>[Popup Menu](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/popup-menu-native) | Displays a context menu exactly where the user taps. |
 | [Progress Bar](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/progress-bar-native) | Displays progress in a horizontal bar. |
 | [Progress Circle](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/progress-circle-native) | Displays progress in a circle with enclosed text. |
@@ -66,6 +67,7 @@ These are the native widgets included in these resources along with links to the
 | [Repeater](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/repeater-native) | Iterates over a data source or nanoflow and repeats the content while changing the values assigned to it. |
 | [Safe Area View](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/safe-area-view-native) | Prevents content from being rendered in unsafe areas (iOS only). |
 | [Slider](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/slider-native) | Changes a numeric value using a slider. |
+| [Switch](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/switch-native) | Changes a boolean value using a switch. |
 | [Toggle Buttons](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/toggle-buttons-native) | Changes an enumeration value using a group of buttons. |
 | [Video Player](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/video-player-native) | Plays a video loaded from a URL. |
 | [Web View](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/web-view-native) | Displays an external web page or loads custom HTML. |

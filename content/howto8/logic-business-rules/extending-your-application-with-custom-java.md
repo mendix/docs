@@ -186,7 +186,7 @@ If you get an `UnsupportedClassVersionError` when running your app, follow these
 
 1. Clean your app's **deployment** folder by selecting **App** > **Clean Deployment Directory**.
 
-2. Add the same JDK version to Eclipse as that which you are using in Studio Pro (this is the recommended version correlation). For details on JDK requirements, see the [Mendix Studio Pro](/refguide/system-requirements#sp) section of *System Requirements*.
+2. Add the same JDK version to Eclipse as that which you are using in Studio Pro (this is the recommended version correlation). For details on JDK requirements, see the [Mendix Studio Pro](/refguide8/system-requirements#sp) section of *System Requirements*.
 
 ## 8 Read More
 

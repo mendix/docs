@@ -13,9 +13,9 @@ The [Accordion](https://marketplace.mendix.com/link/component/117895) widget ena
 ### 1.1 Features
 
 * Display groups consisting of a header and content
-* Allow you to collapse and expand the content when interacting with the header using a mouse or keyboard
-* Allow you to control the collapsed state of a group through expressions or an entity attribute
-* Allow for additional styling customizations through Atlas UI
+* Allows you to collapse and expand the content when interacting with the header using a mouse or keyboard
+* Allows you to control the collapsed state of a group through expressions or an entity attribute
+* Allows for additional styling customizations through Atlas UI
 
 ## 2 Configuration
 
@@ -69,7 +69,11 @@ Configure the following properties in this section:
 
 ### 2.2 Advanced Tab {#advanced}
 
-The **Advanced options** button (default: **No**) determines whether advanced configuration properties become visible. 
+{{% alert type="info" %}}
+The **Enable advanced options** toggle is available in Mendix Studio. In Mendix Studio Pro these advanced options are always available.
+{{% /alert %}}
+
+The **Enable advanced options** toggle (default: **No**) determines whether advanced configuration properties become visible. 
 
 When set to **Yes**, the following tabs and properties become visible:
 

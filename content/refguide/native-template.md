@@ -541,14 +541,14 @@ Here is an example of the file with all required splash screens defined:
 ### 5.3 Configuring Firebase
 
 Using Firebase requires special considerations. When enabling the Firebase capabilities via the Native Mobile Toolkit **config** file, 
-the toolkit will look in the **assets/firebase** folder for the appropriate configuration files.
+the toolkit will look in the *assets/firebase* folder for the appropriate configuration files.
 
 The files are looked up by name. The expected names per platform are the following: 
 
 | Platform | Expected Name            |
 | -------- | ------------------------ |
-| Android  | google-services.json     |
-| iOS      | GoogleService-Info.plist |
+| Android  | *google-services.json*     |
+| iOS      | *GoogleService-Info.plist* |
 
 The Native Mobile Toolkit does not verify the validity of the provided configuration files. It only moves them to the correct 
 location when configuring the app. 
@@ -558,10 +558,10 @@ location when configuring the app.
 The Native Mobile Toolkit is a Node module included with Native Template. As such, it must be installed first by running `install` in the Native Template root directory. When building locally, you must run `npm install` when a new version of the Native Mobile Toolkit is released to ensure you are always running on the latest version.
 
 {{% alert type="info" %}}
-The npm script expects that the Native Mobile Toolkit configuration files are at the root of the app, and named **config.json**. This is always the case when using the Mendix Native Mobile Builder to configure a local or a remote app.  
+The npm script expects that the Native Mobile Toolkit configuration files are at the root of the app, and named *config.json*. This is always the case when using the Mendix Native Mobile Builder to configure a local or a remote app.  
 {{% /alert %}}
 
-To run the toolkit using the run script defined in **package.json**, run `npm run configure`.
+To run the toolkit using the run script defined in *package.json*, run `npm run configure`.
 
 #### 5.4.1 Specifying Custom Configuration Paths
 
@@ -622,7 +622,7 @@ The created bundles need to be copied to the right place in the Native Template 
 * For Android, the content of the `bundle/android` reflects the exact folders the assets and bundles need to be copied to
 * For iOS, the content of the `bundle/iOS` folder needs to be simply copied to the `<native-template>/ios/Bundle` directory
 
-## 7 Deriving the App' Native Dependencies
+## 7 Deriving the App's Native Dependencies
 
 Mendix Studio Pro 9 introduced Native Dependency resolution for pluggable widgets and Javascript actions. For more information, see [Declaring Native Dependencies
 ](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies). Prior to Studio Pro 9 Mendix Studio Pro was shipping with a set of core dependencies which are now are removed. 

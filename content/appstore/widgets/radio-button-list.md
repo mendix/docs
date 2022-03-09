@@ -81,4 +81,4 @@ The configuration of the widget's required properties would be the following:
 
 * **Entity to list**: CompanyDepartment
 * **Label**: Name (string attribute of CompanyDepartment)
-* **Association**: Employee_CompanyDeparment/CompanyDepartment.
+* **Association**: Employee_CompanyDeparment/CompanyDepartment

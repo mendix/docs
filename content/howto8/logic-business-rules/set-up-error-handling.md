@@ -98,10 +98,10 @@ Any submicroflow initiated with error handling set to **Custom with Rollback** w
 
 **For 3:**
 
-| Order        |        |
-| ------------ | ------ |
-| ...          |        |
-| ...          |        |
+| Order        |          |
+| ------------ | -------- |
+| ID           | 1234     |
+| Date         | 1/1/2018 |
 
 | Customer     |        |
 | ------------ | ------ |

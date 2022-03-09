@@ -15,7 +15,7 @@ With Mendix 8, you have the capacity to alter design properties with Mendix Stud
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 * Create a Mendix app based on the Blank Native Mobile App template by following the [Creating a New App Based on the Quickstart App](getting-started-with-native-mobile#quickstartapp) section of *Get Started with Native Mobile*
-* Download the Make It Native app on your mobile device via either the [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp) store or the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181) so you can text your app and see your styling changes
+* Download the Make It Native 8 app on your mobile device via either the [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp) store or the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181) so you can text your app and see your styling changes
 
 ### 3 Customizing the Quickstart App
 

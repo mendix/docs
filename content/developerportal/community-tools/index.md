@@ -1,6 +1,7 @@
 ---
 title: "Community Tools"
 description: "Describes the main tools that Mendix maintains to support the awesome Mendix community."
+weight: 25
 ---
 
 ## 1 Introduction
@@ -16,5 +17,3 @@ You can go to the [Mendix Community Hub](https://community.mendix.com/p/communit
 * [Forum](mendix-forum) – describes how to use the Mendix Forum and the Mendix Idea Forum to ask questions, search for answers, and post ideas
 * [Contribute to the Documentation](contribute-to-the-mendix-documentation) – shows you how to edit and write new documentation to help the Mendix community
 * [MVP Program](mendix-mvp-program) – describes how Mendix MVPs are selected and what the benefits are to being an MVP
-* [Jobs Board](mendix-job-board) – explains how to post and find Mendix-related jobs
-

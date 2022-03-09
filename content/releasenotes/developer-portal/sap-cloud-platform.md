@@ -10,7 +10,27 @@ These release notes cover changes to deployment to [SAP Business Technology Plat
 
 For information on the current status of deployment to SAP BTP and any planned releases see [Mendix Status](https://status.mendix.com/).
 
+## 2022
+
+### March 2nd, 2022
+
+#### BAPI Connector
+
+* We added the new BAPI Connector for SAP solutions, which allows Mendix apps to integrate using the SAP Business API (SAP BAPI) available with SAP Business Suite, SAP S/4HANA, and SAP S/4HANA Cloud. For more information, see [BAPI Connector for SAP Solutions](/partners/sap/sap-bapi-connector).
+
 ## 2021
+
+### December 9th, 2021
+
+#### Improvements
+
+* We added a configurator to help you create a custom *xs-security-json* file to configure an XSUAA service. For more information, see [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector).
+
+### October 14th, 2021
+
+#### Improvements
+
+* We added the ability to provide a custom *xs-security.json* file to configure an XSUAA service. This allows you to apply the configuration every time your app is deployed. You can add your configuration by unbinding and rebinding the XSUAA service in the [Services](/developerportal/deploy/sap-cloud-platform#binding-services) tab.
 
 ### August 30th, 2021
 
@@ -31,7 +51,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 * We released version 2.1.1 of the [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector).
 
     {{% alert type="info" %}}This version uses a new user administration module called **SapAuthentication** and customers using *XSUAA Connector for SAP Business Technology Platform* version 2.0.0 or below will need to migrate their existing users from **Administration.Account** to **SapAuthentication.SapUser** using the [User Migration](/appstore/modules/user-migration-module) Marketplace module.{{% /alert %}}
-    
+
 ### July 14th, 2021
 
 #### Fix
@@ -94,7 +114,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 * We have added support for PostgreSQL on SAP Cloud Platform, Hyperscaler Option for Mendix apps deployed to SAP Cloud Platform.
     * this comes with a configurator to help you create the correct configuration.
     * see [Running Mendix on PostgreSQL on SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform#sap-hyperscaler) for more information.
-* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on SAP Cloud Platform. The functions of this page are still available via the **Edit in Studio** and **Edit in Studio Pro** buttons on the environments page. 
+* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on SAP Cloud Platform. The functions of this page are still available via the **Edit in Studio** and **Edit in Studio Pro** buttons on the environments page.
 
 ### October 21st, 2020
 

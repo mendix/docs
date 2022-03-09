@@ -1,6 +1,6 @@
 ---
 title: "Expressions"
-menu_order: 55
+weight: 55
 description: "Describes the microflow expressions available in Mendix Studio."
 tags: ["studio", "microflow", "expressions", "expression", "set value", "variable"]
 aliases:

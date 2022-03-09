@@ -18,11 +18,15 @@ The Model API service is hosted in the European Union.
 
 Online working copies are automatically removed 24 hours after they have been created. It is not possible to extend their lifetime - you need to create a new online working copy.
 
-### 1.4 What Are the Limits on Project Size?
+### 1.4 What Are the Limits on App Size?
 
-The initial project mpk file that is uploaded is not allowed to exceed 250Mb (project mpr file and other files combined).
+The initial app *.mpk* file that is uploaded is not allowed to exceed 250Mb (with the app *.mpk* file and other files combined).
 
-### 1.5 Which Parts of the Mendix App Model Can I Access with the Model API?
+### 1.5 What Are the Limits on Working Copy Size?
+
+The maximum number of files allowed in a working copy is 10,000.
+
+### 1.6 Which Parts of the Mendix App Model Can I Access with the Model API?
 
 You can access every meta model element of your app model! That includes domain models, microflows, pages, integrations (consumed and published web services), Java actions, custom widgets, security constraints and so on. Anything you can access with Studio Pro - and all the technical details we abstract away from in the UI, but are part of the app model!
 
@@ -37,10 +41,6 @@ However, because we provide full read-write access, you can also break the model
 *   Rest services: PublishedRestService is an unsupported, experimental feature.
 
 When changing these components, make sure to use the [reverse engineering tool](generating-code-from-the-model) to increase your chances of successfully building a script that creates valid models.
-
-### 1.6 What Are "Promises"?
-
-Glad you asked. We put together a page on [Working with when.js and Promises in TypeScript](working-with-when-js-and-promises-in-typescript). We're happy to tell you all about it!
 
 ## 2 Common Error Messages
 

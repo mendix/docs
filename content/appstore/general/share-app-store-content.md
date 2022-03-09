@@ -78,7 +78,7 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 
 ### 3.4 For Selling App Services
 
-For details on preparing and selling your component, see [How to Sell Your App Service in the Marketplace](/appstore/creating-content/as-sell).
+For details on preparing and selling your component, see [How to Prepare Your Commercial Content to Sell in the Marketplace](/appstore/creating-content/as-prepare).
 
 ## 4 Adding New Marketplace Content {#adding}
 
@@ -269,5 +269,5 @@ To update content that has already been published, follow these steps:
 ## 6 Read More
 
 * [Marketplace Overview](app-store-overview)
-* [How to Sell Your App Service in the Marketplace](/appstore/creating-content/as-sell)
+* [How to Prepare Your Commercial Content to Sell in the Marketplace](/appstore/creating-content/as-prepare)
 * [How to Use Marketplace Content in Studio Pro](app-store-content)

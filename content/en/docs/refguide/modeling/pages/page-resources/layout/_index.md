@@ -37,7 +37,7 @@ Layout properties consist of the following sections:
 
 ### 2.1 Common Section{#common}
 
-{{% snippet file="refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ### 2.2 Designer Section{#designer}
 

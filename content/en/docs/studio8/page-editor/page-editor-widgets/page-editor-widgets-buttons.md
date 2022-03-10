@@ -80,7 +80,7 @@ Properties available in the **General** section are described in the table below
 
 ## 4 Conditional Visibility
 
-{{% snippet file="studio/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/studio/visibility-section-link.md" %}}
 
 ## 5 Design Section
 

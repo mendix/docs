@@ -23,4 +23,4 @@ See [Style](/refguide7/style/)
 
 ## Common Properties
 
-{{% snippet file="refguide7/Name+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Name+Property.md" %}}

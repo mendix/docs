@@ -77,7 +77,7 @@ The **Action** section of the properties pane shows the action associated with t
 
 ## 6 Common Section {#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
 
 ## 7 Limitations {#limitations}
 

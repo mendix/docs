@@ -75,7 +75,7 @@ When inside a [nanoflow](/refguide/nanoflows/), the rollback object action reloa
 
 ## 4 Common Section{#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
 
 ## 5 What Does Rollback Do?
 

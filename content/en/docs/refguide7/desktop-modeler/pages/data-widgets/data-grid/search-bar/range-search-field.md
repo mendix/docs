@@ -16,17 +16,17 @@ You can specify whether the range boundaries are inclusive or exclusive using th
 
 ## Common Properties
 
-{{% snippet file="refguide7/Search+Field+Caption+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Search+Field+Caption+Property.md" %}}
 
-{{% snippet file="refguide7/Search+Field+Type+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Search+Field+Type+Property.md" %}}
 
-{{% snippet file="refguide7/Search+Field+Default+Value+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Search+Field+Default+Value+Property.md" %}}
 
-{{% snippet file="refguide7/Search+Field+Custom+Date+Format+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Search+Field+Custom+Date+Format+Property.md" %}}
 
-{{% snippet file="refguide7/Custom+Date+Format+Tokens.md" %}}
+{{% snippet file="/static/_includes/refguide7/Custom+Date+Format+Tokens.md" %}}
 
-{{% snippet file="refguide7/Search+Field+Placeholder+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Search+Field+Placeholder+Property.md" %}}
 
 ## General Properties
 

@@ -49,4 +49,4 @@ This is the name of the list which can be used by all activities that follow thi
 
 ## 4 Common Section{#common}
 
-{{% snippet file="refguide8/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/microflow-common-section-link.md" %}}

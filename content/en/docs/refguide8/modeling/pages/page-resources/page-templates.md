@@ -33,11 +33,11 @@ Page template properties are described in the sections below.
 
 ## 3 Common Properties
 
-{{% snippet file="refguide8/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/common-section-link.md" %}}
 
 ## 4 Designer Properties
 
-{{% snippet file="refguide8/designer-properties.md" %}}
+{{% snippet file="/static/_includes/refguide8/designer-properties.md" %}}
 
 ## 5 General Properties
 

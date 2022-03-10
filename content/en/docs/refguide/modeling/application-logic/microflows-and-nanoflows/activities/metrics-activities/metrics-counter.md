@@ -61,7 +61,7 @@ You can specify a list of tags to enrich the counter name with key/value pairs. 
 
 ## 4 Common Section {#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
 
 ## 5 Read More
 

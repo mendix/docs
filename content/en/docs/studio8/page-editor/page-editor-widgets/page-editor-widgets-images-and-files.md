@@ -72,7 +72,7 @@ The dynamic image has a specific on-click action **Enlarge on Click**. The full-
 
 #### 2.1.3 Conditional Visibility Section
 
-{{% snippet file="studio/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/studio/visibility-section-link.md" %}}
 
 #### 2.1.4 Design Section
 
@@ -166,7 +166,7 @@ The **Show Buttons For** option specifies whether end-users are able to upload a
 
 #### 3.1.4 Conditional Visibility Section
 
-{{% snippet file="studio/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/studio/visibility-section-link.md" %}}
 
 #### 3.1.5 Design Section
 

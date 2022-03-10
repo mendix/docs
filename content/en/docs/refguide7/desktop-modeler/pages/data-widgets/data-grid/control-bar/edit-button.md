@@ -14,21 +14,21 @@ The edit button allows user to edit, or view, an object selected in the grid or 
 
 ## Common properties
 
-{{% snippet file="refguide7/Class+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Class+Property.md" %}}
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Style+Property.md" %}}
 
 ## General properties
 
-{{% snippet file="refguide7/Caption+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Caption+Property.md" %}}
 
-{{% snippet file="refguide7/Tooltip+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Tooltip+Property.md" %}}
 
-{{% snippet file="refguide7/Image+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Image+Property.md" %}}
 
-{{% snippet file="refguide7/Button+Style+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Button+Style+Property.md" %}}
 
-{{% snippet file="refguide7/Is+default+button+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Is+default+button+Property.md" %}}
 
 ### Page
 
@@ -48,6 +48,6 @@ Let us say you have an entity Vehicle and two specializations thereof: Bicycle a
 
 ## Visibility properties
 
-{{% snippet file="refguide7/Visibility+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visibility+Property.md" %}}
 
-{{% snippet file="refguide7/Visibility+Property+With+Module+Roles+Extended.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visibility+Property+With+Module+Roles+Extended.md" %}}

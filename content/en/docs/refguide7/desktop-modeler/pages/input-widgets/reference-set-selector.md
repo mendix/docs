@@ -44,13 +44,13 @@ See [Columns](/refguide7/columns/) for more information.
 
 ## Common Properties
 
-{{% snippet file="refguide7/Name+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Name+Property.md" %}}
 
-{{% snippet file="refguide7/Class+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Class+Property.md" %}}
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Style+Property.md" %}}
 
-{{% snippet file="refguide7/Tab+index+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Tab+index+Property.md" %}}
 
 ## Appearance Properties
 
@@ -144,7 +144,7 @@ Using non-persistable entities (NPEs) in a reference set selector is not support
 
 ## Events Properties
 
-{{% snippet file="refguide7/On+Change+Event.md" %}}
+{{% snippet file="/static/_includes/refguide7/On+Change+Event.md" %}}
 
 ## Selectable Objects Properties
 
@@ -160,9 +160,9 @@ See [Selectable Objects Properties](/refguide7/reference-selector/) of the refer
 
 ## Visibility Properties
 
-{{% snippet file="refguide7/Visibility+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visibility+Property.md" %}}
 
-{{% snippet file="refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## Read More
 

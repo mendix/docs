@@ -40,7 +40,7 @@ Buttons perform an action when clicked. They can be rendered as a button or as a
 
 ## 2 Performing Basic Functions
 
-{{% snippet file="refguide/performing-basic-functions-widgets.md" %}}
+{{% snippet file="/static/_includes/refguide/performing-basic-functions-widgets.md" %}}
 
 ## 3 Read More
 

@@ -84,7 +84,7 @@ Often you need to have control of page history, for example to show the correct 
 
 ## 4 Common Section{#common}
 
-{{% snippet file="refguide8/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/microflow-common-section-link.md" %}}
 
 ## 5 Read More
 

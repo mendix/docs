@@ -65,4 +65,4 @@ Many browsers implement pop-up window blockers preventing them from being opened
 
 ## 4 Common Section {#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

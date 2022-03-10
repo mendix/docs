@@ -48,29 +48,29 @@ This property indicates whether the file will be shown in the browser, instead o
 
 _Default value:_ False
 
-{{% snippet file="refguide7/Label+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Label+Property.md" %}}
 
 ## Editability properties
 
-{{% snippet file="refguide7/Editable+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Editable+Property.md" %}}
 
-{{% snippet file="refguide7/Condition+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Condition+Property.md" %}}
 
 ## Visibility properties
 
-{{% snippet file="refguide7/Visibility+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visibility+Property.md" %}}
 
-{{% snippet file="refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## Common properties
 
-{{% snippet file="refguide7/Name+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Name+Property.md" %}}
 
-{{% snippet file="refguide7/Class+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Class+Property.md" %}}
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Style+Property.md" %}}
 
-{{% snippet file="refguide7/Tab+index+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Tab+index+Property.md" %}}
 
 ## Related articles
 

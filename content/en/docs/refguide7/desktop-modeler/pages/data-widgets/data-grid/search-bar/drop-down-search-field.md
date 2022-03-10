@@ -7,17 +7,17 @@ parent: "search-bar"
 
 ## Common Properties
 
-{{% snippet file="refguide7/Search+Field+Caption+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Search+Field+Caption+Property.md" %}}
 
-{{% snippet file="refguide7/Search+Field+Type+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Search+Field+Type+Property.md" %}}
 
-{{% snippet file="refguide7/Search+Field+Default+Value+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Search+Field+Default+Value+Property.md" %}}
 
 ## General properties
 
-{{% snippet file="refguide7/Search+Field+Attribute+Path+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Search+Field+Attribute+Path+Property.md" %}}
 
-{{% snippet file="refguide7/Search+Field+Comparison+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Search+Field+Comparison+Property.md" %}}
 
 The number of drop-down selection options is capped at 1,000. Therefore, no more than 1,000 unique values of a selected attribute can be selectable. This limit has been set to protect page loading performance on older browsers when these options need to be retrieved from the server. In Mendix 8 this limit has been removed.
 

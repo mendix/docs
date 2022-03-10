@@ -49,27 +49,27 @@ Reference selector properties consist of the following sections:
 
 ### 2.1 Common Section{#common}
 
-{{% snippet file="refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ### 2.2 Data Source Section{#data-source}
 
-{{% snippet file="refguide/data-source-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/data-source-section-link.md" %}}
 
 The attribute path specifies which attribute of an associated entity is shown in the reference selector. The path must follow one association of type reference starting in the entity of the data view.
 
 ### 2.3 Design Properties Section{#design-properties}
 
-{{% snippet file="refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
 
 ### 2.4 Editability Section{#editability}
 
-{{% snippet file="refguide/editability-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/editability-section-link.md" %}}
 
 ### 2.5 Events Section{#events}
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
-{{% snippet file="refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
 ### 2.6 Formatting Section{#formatting}
 
@@ -79,7 +79,7 @@ The formatting section applies only to the way that numeric attributes are displ
 * Integer
 * Long
 
-{{% snippet file="refguide/numeric-formatting-link.md" %}}
+{{% snippet file="/static/_includes/refguide/numeric-formatting-link.md" %}}
 
 ### 2.7 General Section{#general}
 
@@ -169,7 +169,7 @@ This is activated by checking the **Override page title** check box.
 
 ### 2.8 Label Section{#label}
 
-{{% snippet file="refguide/label-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/label-section-link.md" %}}
 
 ### 2.9 Selectable Objects Section{#selectable-objects}
 
@@ -262,11 +262,11 @@ In microflow settings you can specify what parameters are passed to the microflo
 
 ### 2.10 Validation Section{#validation}
 
-{{% snippet file="refguide/widget-validation-link.md" %}}
+{{% snippet file="/static/_includes/refguide/widget-validation-link.md" %}}
 
 ### 2.11 Visibility Section{#visibility}
 
-{{% snippet file="refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
 ## 3 Read More
 

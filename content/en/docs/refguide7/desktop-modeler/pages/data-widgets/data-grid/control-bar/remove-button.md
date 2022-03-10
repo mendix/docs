@@ -9,24 +9,24 @@ The remove button is a button specifically made for the reference set selector. 
 
 ## Common Properties
 
-{{% snippet file="refguide7/Class+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Class+Property.md" %}}
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Style+Property.md" %}}
 
 ## General Properties
 
-{{% snippet file="refguide7/Caption+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Caption+Property.md" %}}
 
-{{% snippet file="refguide7/Tooltip+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Tooltip+Property.md" %}}
 
-{{% snippet file="refguide7/Image+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Image+Property.md" %}}
 
-{{% snippet file="refguide7/Button+Style+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Button+Style+Property.md" %}}
 
-{{% snippet file="refguide7/Is+default+button+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Is+default+button+Property.md" %}}
 
 ## Visibility Properties
 
-{{% snippet file="refguide7/Visibility+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visibility+Property.md" %}}
 
-{{% snippet file="refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}

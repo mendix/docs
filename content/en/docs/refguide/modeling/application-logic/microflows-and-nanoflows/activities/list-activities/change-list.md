@@ -67,4 +67,4 @@ Value defines the objects that are used to change the list. The value is entered
 
 ## 4 Common Section{#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

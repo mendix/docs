@@ -63,4 +63,4 @@ The **Reason** property is only used when **Abort workflow** is selected in the 
 
 ## 4 Common Section {#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

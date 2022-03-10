@@ -47,7 +47,7 @@ This is the name for the result of the cast. It can be used by all activities th
 
 ## 4 Common Section{#common}
 
-{{% snippet file="refguide8/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/microflow-common-section-link.md" %}}
 
 ## 5 Example
 

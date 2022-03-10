@@ -38,19 +38,19 @@ Check box properties consist of the following sections:
 
 ### 2.1 Common Section{#common}
 
-{{% snippet file="refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ### 2.2 Data Source Section{#data-source}
 
-{{% snippet file="refguide/data-source-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/data-source-section-link.md" %}}
 
 ### 2.3 Design Properties Section{#design-properties}
 
-{{% snippet file="refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
 
 ### 2.4 Editability Section{#editability}
 
-{{% snippet file="refguide/editability-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/editability-section-link.md" %}}
 
 ### 2.5 Events Section{#events}
 
@@ -58,13 +58,13 @@ Check box properties consist of the following sections:
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
-{{% snippet file="refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
 #### 2.5.2 On Enter
 
 The on-enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
 
-{{% snippet file="refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
 #### 2.5.3 On Leave
 
@@ -72,7 +72,7 @@ The on-leave property specifies an action that will be executed when leaving the
 
 This differs from the [On change](#on-change) property in that the event will always be triggered, even if the value has not been changed.
 
-{{% snippet file="refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
 ### 2.6 Formatting Section{#formatting}
 
@@ -80,11 +80,11 @@ The render mode property determines whether the widget renders as a switch or a 
 
 ### 2.7 Label Section{#label}
 
-{{% snippet file="refguide/label-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/label-section-link.md" %}}
 
 ### 2.8 Visibility Section{#visibility}
 
-{{% snippet file="refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
 ## 3 Read More
 

@@ -35,11 +35,11 @@ Login ID text box properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-{{% snippet file="refguide8/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/common-section-link.md" %}}
 
 ### 2.2 Design Properties Section {#design-properties}
 
-{{% snippet file="refguide8/design-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/design-section-link.md" %}}
 
 ### 2.3 General Section {#general}
 
@@ -49,7 +49,7 @@ A **Placeholder** shows a text when an end-user has not entered any text yet. It
 
 ### 2.4 Label Section {#label}
 
-{{% snippet file="refguide8/label-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/label-section-link.md" %}}
 
 ## 3 Read More
 

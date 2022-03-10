@@ -13,4 +13,4 @@ For details on how this works in Mendix versions 7.2 and 7.3, see [Navigation in
 
 The desktop profile is the default profile used by a Mendix application. It cannot be disabled, and if all other profiles are disabled, all device types will automatically redirect to desktop.
 
-{{% snippet file="refguide7/Profile+properties.md" %}}
+{{% snippet file="/static/_includes/refguide7/Profile+properties.md" %}}

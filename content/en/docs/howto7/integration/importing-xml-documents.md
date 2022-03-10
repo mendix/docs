@@ -46,7 +46,7 @@ To prepare the data structure and the GUI, follow these steps:
 
 ## 4 Adding an XML Schema (XSD)
 
-Whether you plan to import or export documents, working with XML means that your application must contain an XML schema, which is also called an XSD. An XSD describes the possible contents of an XML file. Based on the XSD, your application knows how to read or write an XML file. If you don't have an XSD file, there are some online XSD generators that accept an XML document as input. For this how-to, you can use [Customers.xsd](attachments/18448727/18581652.xsd).
+Whether you plan to import or export documents, working with XML means that your application must contain an XML schema, which is also called an XSD. An XSD describes the possible contents of an XML file. Based on the XSD, your application knows how to read or write an XML file. If you don't have an XSD file, there are some online XSD generators that accept an XML document as input. For this how-to, you can use [Customers.xsd](/attachments/howto7/integration/18448727/18581652.xsd).
 
 To add an XML schema (XSD), follow these steps:
 
@@ -102,7 +102,7 @@ To create the XML-to-domain mapping, follow these steps:
 
 ## 6 Creating the Import Logic
 
-In this section, you will create the logic to import the customers stored in an [XML document](attachments/18448727/18581651.xml) in your application.
+In this section, you will create the logic to import the customers stored in an [XML document](/attachments/howto7/integration/18448727/18581651.xml) in your application.
 
 To create the import logic, follow these steps:
 
@@ -141,7 +141,7 @@ To create the import logic, follow these steps:
 
 To import the XML file, follow these steps:
 
-1. Deploy the application, upload [Customers.xml](attachments/18448727/18581651.xml), and trigger the import microflow.
+1. Deploy the application, upload [Customers.xml](/attachments/howto7/integration/18448727/18581651.xml), and trigger the import microflow.
 2. Open the customer overview page and check if the customer data has been imported into your application.
 
 ## 8 Read More

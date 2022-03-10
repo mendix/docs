@@ -11,7 +11,7 @@ description: "Describes how to get information from a REST service."
 
 Mendix applications frequently need to communicate with existing systems. Whether you are creating an app to replace an older platform or a legacy system or want to integrate an existing database, the ability to integrate with existing systems is a necessary feature. In your Mendix app, you can use published REST services for this integration. 
 
-This how-to shows you how to do this using an example in which you create an app that retrieves Wikipedia pages from a REST service. The resulting app is [available for download](attachments/consume-a-rest-service/WikipediaApi.mpk).
+This how-to shows you how to do this using an example in which you create an app that retrieves Wikipedia pages from a REST service. The resulting app is [available for download](/attachments/howto8/integration/consume-a-rest-service/WikipediaApi.mpk).
 
 **This how-to will teach you how to do the following:**
 

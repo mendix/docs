@@ -85,7 +85,7 @@ Before you can import data from an Excel File into your application, you have to
 
 In this how-to, you will import data from a simple Excel file which can be downloaded here:
 
-[{{< figure src="/attachments/howto7/integration/importing-excel-documents/18581938.png" >}}](attachments/18448735/18581949.xlsx)
+[{{< figure src="/attachments/howto7/integration/importing-excel-documents/18581938.png" >}}](/attachments/howto7/integration/18448735/18581949.xlsx)
 
 Based on the structure of the file you want to import, you will setup your template.
 
@@ -210,14 +210,14 @@ Now the template is setup you can start importing data from an Excel file into y
 
 In the previous steps you have manually added all the columns to your import template. In this section you will be creating the same Excel template in an automated way. You can do this by using the **New template by excelfile** button at the **Normal templates** tab. An example Excel file can be downloaded here:
 
-[{{< figure src="/attachments/howto7/integration/importing-excel-documents/18581938.png" >}}](attachments/18448735/18581949.xlsx)
+[{{< figure src="/attachments/howto7/integration/importing-excel-documents/18581938.png" >}}](/attachments/howto7/integration/18448735/18581949.xlsx)
 
 1.  Click on the menu item for the ExcelImportOverview in your navigation.
 2.  Click on  **New template by excelfile
 
     {{< figure src="/attachments/howto7/integration/importing-excel-documents/18581948.png" >}}
 
-3.  Select the [Import Example.xlsx](attachments/18448735/18581949.xlsx)
+3.  Select the [Import Example.xlsx](/attachments/howto7/integration/18448735/18581949.xlsx)
 4.  Define the sheet number.
 5.  Define the Header row nr.
 6.  Define the row to import from.

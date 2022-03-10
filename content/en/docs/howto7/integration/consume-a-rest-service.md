@@ -9,7 +9,7 @@ description: "Describes how to get information from a REST service."
 
 ## 1 Introduction
 
-In your Mendix app, you can use information from REST services. This how-to shows you how to do that through an example in which you create an app that retrieves Wikipedia pages from a REST service. The resulting app is [available for download](attachments/consume-a-rest-service/WikipediaApi.mpk).
+In your Mendix app, you can use information from REST services. This how-to shows you how to do that through an example in which you create an app that retrieves Wikipedia pages from a REST service. The resulting app is [available for download](/attachments/howto7/integration/consume-a-rest-service/WikipediaApi.mpk).
 
 **This how-to will teach you how to do the following:**
 

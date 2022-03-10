@@ -145,8 +145,8 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
    * If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
    * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
-
-3. Click **Receipt Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
+3. Find **Receipt Processing** in the list.
+4. Click **Usage Dashboard** to show the usage details.
 
 ## 5 Technical Provider{#technical-provider}
 

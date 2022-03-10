@@ -180,9 +180,9 @@ The core widget required is the **AudioPlayer** widget. You can make the followi
 
 ### 3.7 Configuring the License Token {#configure-license-token}
 
-#### 3.7.1 For an App Run Locally or Deployed as a Mendix Free App
+#### 3.7.1 For an App Deployed Locally or as a Mendix Free App
 
-If you run your app locally or deploy it as a Mendix Free App, configure the license token in Studio Pro. Perform the following steps:
+If you deploy your app locally or as a Mendix Free App, configure the license token in Studio Pro. Perform the following steps:
 
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
@@ -298,5 +298,5 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
    * If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
    * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
-
-3. Click **Text to Speech** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
+3. Find **Text to Speech** in the list.
+4. Click **Usage Dashboard** to show the usage details.

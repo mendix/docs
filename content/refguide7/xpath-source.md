@@ -1,5 +1,6 @@
 ---
 title: "XPath Source"
+url: /refguide7/xpath-source/
 parent: "data-sources"
 ---
 

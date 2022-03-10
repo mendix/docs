@@ -1,5 +1,6 @@
 ---
 title: "Trim to Date"
+url: /refguide7/trim-to-date/
 parent: "expressions"
 ---
 

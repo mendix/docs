@@ -1,5 +1,6 @@
 ---
 title: "Model SDK"
+url: /releasenotes/sdk/model-sdk/
 category: "SDKs"
 menu_order: 1
 ---

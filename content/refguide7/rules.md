@@ -1,5 +1,6 @@
 ---
 title: "Rules"
+url: /refguide7/rules/
 parent: "application-logic"
 menu_order: 25
 tags: ["Microflow", "Nanoflow", "Exclusive Split", "Logic"]

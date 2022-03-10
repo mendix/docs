@@ -1,5 +1,6 @@
 ---
 title: "Export App Package"
+url: /refguide/export-project-package-dialog/
 parent: "file-menu"
 menu_order: 30
 tags: ["studio pro", "export app", "export app package"]

@@ -1,5 +1,6 @@
 ---
 title: "Workflow Commons"
+url: /appstore/modules/workflow-commons/
 category: "Modules"
 description: "Describes usage and implementation of the Workflow Commons module that is used with workflows."
 tags: ["Workflow","Workflow Commons","Module","Workflow Commons Implementation"]

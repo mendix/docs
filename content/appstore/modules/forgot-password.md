@@ -1,5 +1,6 @@
 ---
 title: "Forgot Password"
+url: /appstore/modules/forgot-password/
 category: "Modules"
 description: "Describes the configuration and usage of the Forgot Password module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "forgot password", "password", "login", "credentials", "platform support"]

@@ -1,5 +1,6 @@
 ---
 title: "Language Settings"
+url: /refguide/language-settings/
 parent: "translatable-texts"
 menu_order: 10
 tags: ["studio pro", "translation", "languages", "translatable text", "add language", "date format", "completeness"]

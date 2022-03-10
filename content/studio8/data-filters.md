@@ -1,5 +1,6 @@
 ---
 title: "Data Filters"
+url: /studio8/data-filters/
 category: "Working with Data"
 menu_order: 40
 description: "Describes data filtering in page and microflow editors in Mendix Studio."

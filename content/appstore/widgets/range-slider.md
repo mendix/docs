@@ -1,5 +1,6 @@
 ---
 title: "Range Slider"
+url: /appstore/widgets/range-slider/
 category: "Widgets"
 description: "Describes the configuration and usage of the Range Slider widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "range slider", "platform support"]

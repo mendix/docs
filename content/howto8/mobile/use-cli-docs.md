@@ -1,5 +1,6 @@
 ---
 title: "Build Apps Using the Native Builder CLI"
+url: /howto8/mobile/use-cli-docs/
 parent: "build-native-apps"
 menu_order: 89
 description: Tutorials for building native mobile apps using the Native Builder CLI.

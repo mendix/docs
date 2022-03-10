@@ -1,5 +1,6 @@
 ---
 title: "Switch"
+url: /appstore/widgets/switch/
 category: "Widgets"
 description: "Describes the configuration and usage of the Switch widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "switch", "platform support"]

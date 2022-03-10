@@ -1,5 +1,6 @@
 ---
 title: "Starting With Your Own Data"
+url: /studio8/start-with-data/
 category: "Working with Data"
 menu_order: 20
 description: "Describes how to import an Excel spreadsheet to your domain model in Mendix Studio."

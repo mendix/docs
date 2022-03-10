@@ -1,5 +1,6 @@
 ---
 title: "Show the Project Directory in Explorer"
+url: /howto7/general/show-project-directory/
 category: "General"
 menu_order: 2
 tags: ["project directory", "directory", "explorer", "local", "windows"]

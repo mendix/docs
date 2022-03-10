@@ -1,5 +1,6 @@
 ---
 title: "Translation"
+url: /appstore/app-services/translation/
 category: "App Services"
 description: " "
 tags: ["translation", "service", "app store", "marketplace", "component", "platform support"]

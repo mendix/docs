@@ -1,5 +1,6 @@
 ---
 title: "Native Mobile"
+url: /howto/mobile/native-mobile/
 category: "Mobile"
 menu_order: 1
 tags: ["mobile", "native", "iOS", "Android"]

@@ -1,5 +1,6 @@
 ---
 title: "OAuth & Scopes"
+url: /developerportal/community-tools/oauth-scopes/
 category: "Community Tools"
 menu_order: 2
 tags: ["oath", "profile", "login", "Developer Portal", "scopes"]  

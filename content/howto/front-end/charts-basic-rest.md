@@ -1,5 +1,6 @@
 ---
 title: "Use a Chart with a REST Data Source"
+url: /howto/front-end/charts-basic-rest/
 parent: "charts-tutorials"
 menu_order: 60
 tags: ["Charts", "Widgets", "REST", "Studio Pro"]

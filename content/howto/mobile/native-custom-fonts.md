@@ -1,5 +1,6 @@
 ---
 title: "Add Fonts to Your Native Mobile App"
+url: /howto/mobile/native-custom-fonts/
 parent: "implementation"
 menu_order: 20
 description: "This tutorial will teach you to enrich the design of your native mobile app with custom fonts."

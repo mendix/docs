@@ -1,5 +1,6 @@
 ---
 title: "Report Parameter"
+url: /refguide8/report-parameter/
 parent: "report-widgets"
 menu_order: 20
 tags: ["studio pro"]

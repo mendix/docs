@@ -1,5 +1,6 @@
 ---
 title: "Developing Solutions"
+url: /appstore/creating-content/sol-development/
 parent: "sol-solutions-guide"
 menu_order: 20
 description: "Presents documentation for developing solutions"

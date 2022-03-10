@@ -1,5 +1,6 @@
 ---
 title: "Radio Buttons"
+url: /refguide8/radio-buttons/
 parent: "input-widgets"
 menu_order: 50
 tags: ["studio pro"]

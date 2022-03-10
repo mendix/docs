@@ -1,5 +1,6 @@
 ---
 title: "Team"
+url: /developerportal/collaborate/team/
 category: "Collaboration"
 menu_order: 4
 description: "Describes the Team page of the Developer Portal."

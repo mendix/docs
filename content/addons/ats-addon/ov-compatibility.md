@@ -1,5 +1,6 @@
 ---
 title: "Compatibility"
+url: /addons/ats-addon/ov-compatibility/
 parent: "ov"
 menu_order: 2
 ---

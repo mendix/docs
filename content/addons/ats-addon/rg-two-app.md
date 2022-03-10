@@ -1,5 +1,6 @@
 ---
 title: "App"
+url: /addons/ats-addon/rg-two-app/
 parent: "rg-two-ats"
 ---
 

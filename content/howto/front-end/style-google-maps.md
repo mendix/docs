@@ -1,5 +1,6 @@
 ---
 title: "Style Google Maps"
+url: /howto/front-end/style-google-maps/
 category: "Front End"
 menu_order: 60
 tags: ["studio pro"]

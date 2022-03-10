@@ -1,5 +1,6 @@
 ---
 title: "Image"
+url: /appstore/widgets/image/
 category: "Widgets"
 description: "Describes the configuration and usage of the Image widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "image", "platform support"]

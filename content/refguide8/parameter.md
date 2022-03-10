@@ -1,5 +1,6 @@
 ---
 title: "Parameter"
+url: /refguide8/parameter/
 parent: "application-logic"
 menu_order: 70
 tags: ["studio pro", "parameter", "microflow"]

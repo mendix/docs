@@ -1,5 +1,6 @@
 ---
 title: "Show User Task Page"
+url: /refguide/show-task-page/
 parent: "workflow-activities"
 menu_order: 50
 tags: ["studio pro", "user task", "workflow"]

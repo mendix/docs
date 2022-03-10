@@ -1,5 +1,6 @@
 ---
 title: "App Menu"
+url: /refguide/app-menu/
 parent: "menus"
 description: "Describes the App Menu in Studio Pro."
 menu_order: 30

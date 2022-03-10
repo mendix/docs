@@ -1,5 +1,6 @@
 ---
 title: "Cell (Document Template)"
+url: /refguide8/cell-document-template/
 parent: "row-document-template"
 tags: ["studio pro"]
 aliases:

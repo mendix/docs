@@ -1,5 +1,6 @@
 ---
 title: "Database"
+url: /appstore/connectors/database-connector/
 category: "Connectors"
 description: "Describes the configuration and usage of the Database connector, which is available in the Mendix Marketplace."
 tags: ["marketplace",  "marketplace component", "database connector", "jdbc", "hikari", "query" ]

@@ -1,5 +1,6 @@
 ---
 title: "Group Box"
+url: /refguide8/group-box/
 parent: "container-widgets"
 menu_order: 30
 tags: ["studio pro", "group box", "container widget", "widget"]

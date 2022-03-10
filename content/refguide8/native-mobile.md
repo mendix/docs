@@ -1,5 +1,6 @@
 ---
 title: "Native Mobile"
+url: /refguide8/native-mobile/
 category: "Mobile"
 menu_order: 1
 tags: ["mobile", "native", "studio pro"]

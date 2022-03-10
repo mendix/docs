@@ -1,5 +1,6 @@
 ---
 title: "Application Autoscaler for SAP Business Technology Platform"
+url: /partners/sap/sap-autoscaler/
 category: "SAP"
 menu_order: 47
 description: "How to set up the SAP Autoscaler"

@@ -1,5 +1,6 @@
 ---
 title: "Change List"
+url: /refguide8/change-list/
 parent: "list-activities"
 menu_order: 2
 tags: ["studio pro", "List"]

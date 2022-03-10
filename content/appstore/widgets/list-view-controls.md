@@ -1,5 +1,6 @@
 ---
 title: "List View Controls"
+url: /appstore/widgets/list-view-controls/
 category: "Widgets"
 description: "Describes the configuration and usage of the List View Controls widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "list view control", "check box filter", "platform support"]

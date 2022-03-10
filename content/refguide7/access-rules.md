@@ -1,5 +1,6 @@
 ---
 title: "Access Rules"
+url: /refguide7/access-rules/
 parent: "entities"
 menu_order: 70
 tags: ["domain model", "entity", "access rule", "xpath constraint", "module role"]

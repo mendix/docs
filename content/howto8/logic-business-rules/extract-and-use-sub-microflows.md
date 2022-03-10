@@ -1,5 +1,6 @@
 ---
 title: "Extract & Use Sub-Microflows"
+url: /howto8/logic-business-rules/extract-and-use-sub-microflows/
 category: "Logic & Business Rules"
 menu_order: 5
 tags: ["microflow", "sub-microflow", "extract"]

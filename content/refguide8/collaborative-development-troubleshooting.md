@@ -1,5 +1,6 @@
 ---
 title: "Troubleshooting Collaborative Development"
+url: /refguide8/collaborative-development-troubleshooting/
 parent: "collaborative-development"
 description: "Describes troubleshooting for collaborative development between the Mendix Studio Pro and the Mendix Studio"
 tags: ["studio pro", "studio", "collaborative development", "troubleshooting", "troubleshoot"]

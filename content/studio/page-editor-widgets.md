@@ -1,5 +1,6 @@
 ---
 title: "Widgets"
+url: /studio/page-editor-widgets/
 category: "Pages"
 description: "Describes widgets in Mendix Studio."
 tags: ["studio", "page editor", "pages", "widgets"]

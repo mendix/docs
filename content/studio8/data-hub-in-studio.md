@@ -1,5 +1,6 @@
 ---
 title: "Data Hub in Studio"
+url: /studio8/data-hub-in-studio/
 category: "Working with Data"
 menu_order: 30
 description: "Describes the Data Hub Catalog usage in Mendix Studio."

@@ -1,5 +1,6 @@
 ---
 title: "Managing App Signing Keys"
+url: /refguide7/managing-app-signing-keys/
 category: "Mobile Development"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

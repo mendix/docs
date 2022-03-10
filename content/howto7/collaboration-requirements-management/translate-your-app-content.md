@@ -1,5 +1,6 @@
 ---
 title: "Translate Your App Content"
+url: /howto7/collaboration-requirements-management/translate-your-app-content/
 category: "Collaboration & Requirements Management"
 menu_order: 50
 tags: ["translate", "collaboration"]

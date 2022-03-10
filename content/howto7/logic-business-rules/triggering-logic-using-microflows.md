@@ -1,5 +1,6 @@
 ---
 title: "Trigger Logic Using Microflows"
+url: /howto7/logic-business-rules/triggering-logic-using-microflows/
 category: "Logic & Business Rules"
 menu_order: 2
 tags: ["microflow", "logic"]

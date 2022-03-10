@@ -1,5 +1,6 @@
 ---
 title: "Create Button"
+url: /refguide7/new-button/
 parent: "button-widgets"
 ---
 

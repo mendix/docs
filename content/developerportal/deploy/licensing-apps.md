@@ -1,5 +1,6 @@
 ---
 title: "Licensing Mendix Cloud Apps"
+url: /developerportal/deploy/licensing-apps/
 #New document which replaces four others
 parent: "mendix-cloud-deploy"
 menu_order: 15

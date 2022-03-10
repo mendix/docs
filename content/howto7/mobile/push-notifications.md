@@ -1,5 +1,6 @@
 ---
 title: "Include Push Notifications"
+url: /howto7/mobile/push-notifications/
 category: "Mobile Development"
 menu_order: 10
 tags: ["mobile", "push notification"]

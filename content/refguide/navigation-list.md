@@ -1,5 +1,6 @@
 ---
 title: "Navigation List"
+url: /refguide/navigation-list/
 parent: "structure-widgets"
 menu_order: 70
 tags: ["studio pro", "navigation list", "container widget", "widget"]

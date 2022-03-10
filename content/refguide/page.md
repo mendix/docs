@@ -1,5 +1,6 @@
 ---
 title: "Page"
+url: /refguide/page/
 parent: "pages"
 menu_order: 10
 tags: ["studio pro", "page", "properties"]

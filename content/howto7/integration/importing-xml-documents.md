@@ -1,5 +1,6 @@
 ---
 title: "Import XML Documents"
+url: /howto7/integration/importing-xml-documents/
 category: "Integration"
 menu_order: 3
 tags: ["import", "xml", "integration"]

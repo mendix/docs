@@ -1,5 +1,6 @@
 ---
 title: "Use the OData Connector for SAP Solutions"
+url: /partners/sap/use-sap-odata-connector/
 category: "SAP"
 menu_order: 15
 description: "Describes how to use the OData Connector for SAP solutions."

@@ -1,5 +1,6 @@
 ---
 title: "Model SDK & Platform SDK"
+url: /apidocs-mxsdk/apidocs/model-platform-sdk/
 category: "API Documentation"
 menu_order: 37
 tags: ["model sdk", "platform sdk", "sdk"]

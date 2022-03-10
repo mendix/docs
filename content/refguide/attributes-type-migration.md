@@ -1,5 +1,6 @@
 ---
 title: "Attribute Type Migration"
+url: /refguide/attributes-type-migration/
 parent: "data-storage"
 menu_order: 10
 tags: ["studio pro"]

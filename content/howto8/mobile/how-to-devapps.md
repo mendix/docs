@@ -1,5 +1,6 @@
 ---
 title: "Create a Custom Developer App"
+url: /howto8/mobile/how-to-devapps/
 parent: "build-native-apps"
 menu_order: 50
 description: A tutorial for creating custom developer apps.

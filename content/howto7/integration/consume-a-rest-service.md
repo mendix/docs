@@ -1,5 +1,6 @@
 ---
 title: "Consume a REST Service"
+url: /howto7/integration/consume-a-rest-service/
 category: "Integration"
 menu_order: 9
 tags: ["integration", "rest service", "data model", "consume"]

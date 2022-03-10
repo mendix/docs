@@ -1,5 +1,6 @@
 ---
 title: "Scheduled Events"
+url: /refguide7/scheduled-events/
 category: "Desktop Modeler"
 #menu_order: 
 description: "Options for configuring scheduled events"

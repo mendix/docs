@@ -1,5 +1,6 @@
 ---
 title: "Simple Check Box Set Selector"
+url: /appstore/widgets/simple-check-box-set-selector/
 category: "Widgets"
 description: "Describes the configuration and usage of the Simple Check Box Set Selector widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "simple check box set selector", "check box", "platform support"]

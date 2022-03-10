@@ -1,5 +1,6 @@
 ---
 title: "Implement Best Practices for Native Mobile App UI"
+url: /howto8/mobile/ui-best-practices/
 parent: "native-mobile"
 menu_order: 35
 description: "This document will teach you how to build a native mobile app's UI."

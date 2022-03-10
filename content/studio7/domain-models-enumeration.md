@@ -1,5 +1,6 @@
 ---
 title: "Enumeration"
+url: /studio7/domain-models-enumeration/
 category: "Domain Model"
 description: "Describes an attribute of the enumeration type in Mendix Studio."
 tags: ["studio", "domain model", "attributes", "attribute types", "enumeration"]

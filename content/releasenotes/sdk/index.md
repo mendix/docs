@@ -1,5 +1,6 @@
 ---
 title: "SDKs"
+url: /releasenotes/sdk/
 weight: 40
 ---
 

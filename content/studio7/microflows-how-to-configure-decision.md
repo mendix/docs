@@ -1,5 +1,6 @@
 ---
 title: "Configure a Decision"
+url: /studio7/microflows-how-to-configure-decision/
 category: "Microflows"
 menu_order: 60
 description: "This how-to describes the process of configuring a decision in Mendix Studio."

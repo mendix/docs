@@ -1,5 +1,6 @@
 ---
 title: "Create the Domain Model"
+url: /apidocs-mxsdk/mxsdk/creating-the-domain-model/
 parent: "sdk-howtos"
 menu_order: 30
 description: "Explains how to create a domain model with inheritance and what the relation is between the Mendix Metamodel and the SDK."

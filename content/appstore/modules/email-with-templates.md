@@ -1,5 +1,6 @@
 ---
 title: "Email with Templates"
+url: /appstore/modules/email-with-templates/
 category: "Modules"
 description: "Describes the configuration and usage of the Email with Templates module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "email with templates", "token", "platform support"]

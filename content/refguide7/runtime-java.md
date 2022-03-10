@@ -1,5 +1,6 @@
 ---
 title: "Mendix Runtime & Java"
+url: /refguide7/runtime-java/
 category: "Mendix Runtime"
 tags: ["runtime", "java"]
 ---

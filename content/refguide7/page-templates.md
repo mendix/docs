@@ -1,5 +1,6 @@
 ---
 title: "Page Templates"
+url: /refguide7/page-templates/
 parent: "pages"
 aliases:
     - /refguide7/page-template.html

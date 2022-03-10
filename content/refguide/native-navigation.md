@@ -1,5 +1,6 @@
 ---
 title: "Native Navigation"
+url: /refguide/native-navigation/
 parent: "native-mobile"
 menu_order: 11
 tags: ["mobile", "navigation", "native", "iOS", "Android"]

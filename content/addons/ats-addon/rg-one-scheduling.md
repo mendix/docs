@@ -1,5 +1,6 @@
 ---
 title: "Scheduling"
+url: /addons/ats-addon/rg-one-scheduling/
 parent: "rg-one-ats"
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Sort Bar"
+url: /refguide/sort-bar/
 parent: "grids"
 menu_order: 50
 tags: ["studio pro", "sort bar", "grid"]

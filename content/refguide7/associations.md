@@ -1,5 +1,6 @@
 ---
 title: "Associations"
+url: /refguide7/associations/
 parent: "entities"
 menu_order: 30
 tags: ["domain model", "association"]

@@ -1,5 +1,6 @@
 ---
 title: "Menus"
+url: /refguide8/menus/
 category: "App Modeling"
 description: "Describes Studio Pro menus."
 menu_order: 12

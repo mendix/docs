@@ -1,5 +1,6 @@
 ---
 title: "8"
+url: /releasenotes/sdk/metamodel-8/
 menu_order: 2
 parent: "metamodel" 
 ---

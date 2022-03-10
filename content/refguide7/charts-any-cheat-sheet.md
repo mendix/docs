@@ -1,5 +1,6 @@
 ---
 title: "Any Chart Cheat Sheet"
+url: /refguide7/charts-any-cheat-sheet/
 parent: "chart-widgets"
 description: "Shows, with examples, how the most common types of chart can be configured using the Any Chart Widget"
 menu_order: 50

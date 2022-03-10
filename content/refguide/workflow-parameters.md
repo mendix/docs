@@ -1,5 +1,6 @@
 ---
 title: "Workflow Parameters"
+url: /refguide/workflow-parameters/
 parent: "workflows"
 menu_order: 05
 tags: ["workflow", "workflows", "parameters", "workflow parameters"]

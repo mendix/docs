@@ -1,5 +1,6 @@
 ---
 title: "Mendix 8"
+url: /apidocs-mxsdk/apidocs/pluggable-parent-8/
 parent: "pluggable-widgets"
 menu_order: 100
 description: Information on Pluggable Widget API.

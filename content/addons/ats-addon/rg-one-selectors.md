@@ -1,5 +1,6 @@
 ---
 title: "Selectors"
+url: /addons/ats-addon/rg-one-selectors/
 parent: "rg-one-test-dev"
 menu_order: 7
 ---

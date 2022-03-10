@@ -1,5 +1,6 @@
 ---
 title: "Pluggable Widget Property Types"
+url: /apidocs-mxsdk/apidocs/pluggable-widgets-property-types/
 description: A guide for understanding pluggable widgets' property types.
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 

@@ -1,5 +1,6 @@
 ---
 title: "Monitoring"
+url: /addons/ats-addon/rg-one-monitoring/
 parent: "rg-one-ats"
 ---
 

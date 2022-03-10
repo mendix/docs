@@ -1,5 +1,6 @@
 ---
 title: "Mendix 7 How-to's"
+url: /howto7/
 notoc: true
 description: "Step-by-step guides on various Mendix topics that will teach you how to build and customize apps."
 weight: 85

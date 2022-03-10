@@ -1,5 +1,6 @@
 ---
 title: "Rules"
+url: /refguide8/rules/
 parent: "resources"
 menu_order: 30
 tags: ["Microflow", "Nanoflow", "Decision", "Logic"]

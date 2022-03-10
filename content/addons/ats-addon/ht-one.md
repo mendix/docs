@@ -1,5 +1,6 @@
 ---
 title: "ATS 1 How-to's"
+url: /addons/ats-addon/ht-one/
 parent: "ht"
 menu_order: 20
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Using Eclipse"
+url: /refguide/using-eclipse/
 category: "Java Programming"
 tags: ["studio pro"]
 ---

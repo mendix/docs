@@ -1,5 +1,6 @@
 ---
 title: "Open GroupBox"
+url: /addons/ats-addon/rg-one-open-groupbox/
 parent: "rg-one-groupbox"
 ---
 

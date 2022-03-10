@@ -1,5 +1,6 @@
 ---
 title: "2"
+url: /releasenotes/add-ons/apm-2/
 parent: "apd"
 menu_order: 2
 ---

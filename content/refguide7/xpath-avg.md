@@ -1,5 +1,6 @@
 ---
 title: "XPath avg"
+url: /refguide7/xpath-avg/
 parent: "xpath-query-functions"
 ---
 

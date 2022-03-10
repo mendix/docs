@@ -1,5 +1,6 @@
 ---
 title: "Build Microflow Actions Using the Mendix Connector Kit"
+url: /howto8/extensibility/howto-connector-kit/
 category: "Extensibility"
 description: "Describes creating custom Microflow actions using advanced Connector Kit options."
 menu_order: 80

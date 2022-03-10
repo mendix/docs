@@ -1,5 +1,6 @@
 ---
 title: "New Project"
+url: /refguide8/new-project/
 parent: "file-menu"
 menu_order: 10
 description: "This document describes the New Project (New App) flow and the App Settings dialog box."

@@ -1,5 +1,6 @@
 ---
 title: "Invoice Processing"
+url: /appstore/app-services/invoice-processing/
 category: "App Services"
 tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 ---

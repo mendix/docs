@@ -1,5 +1,6 @@
 ---
 title: "Log Message"
+url: /refguide8/log-message/
 parent: "activities"
 menu_order: 70
 tags: ["studio pro", "logging activity", "logging activities", "log message"]

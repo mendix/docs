@@ -1,5 +1,6 @@
 ---
 title: "Release Over the Air Updates with App Center's CodePush (Deprecated)"
+url: /howto/mobile/how-to-ota-appcenter/
 parent: "distribution"
 menu_order: 21
 description: Describes pushing over the air updates (OTA) using App Center's CodePush.

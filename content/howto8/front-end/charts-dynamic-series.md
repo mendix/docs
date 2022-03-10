@@ -1,5 +1,6 @@
 ---
 title: "Create a Dynamic Series Chart"
+url: /howto8/front-end/charts-dynamic-series/
 parent: "charts-tutorials"
 menu_order: 50
 tags: ["Charts", "Dynamic Series", "Studio Pro", "Widgets"]

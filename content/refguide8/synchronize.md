@@ -1,5 +1,6 @@
 ---
 title: "Synchronize"
+url: /refguide8/synchronize/
 parent: "client-activities"
 menu_order: 70
 tags: ["studio pro", "synchronize", "offline", "client activity"]

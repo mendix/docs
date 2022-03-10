@@ -1,5 +1,6 @@
 ---
 title: "Set & Change a Value for Different Activities in the Microflows"
+url: /studio7/microflows-setting-and-changing-value/
 category: "Microflows"
 menu_order: 50
 description: "Describes the process of setting the initial value for objects or variables in Mendix Studio."

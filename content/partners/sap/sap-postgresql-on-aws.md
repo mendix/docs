@@ -1,5 +1,6 @@
 ---
 title: "PostgreSQL on Amazon (AWS) for SAP Business Technology Platform"
+url: /partners/sap/sap-postgresql-on-aws/
 category: "SAP"
 menu_order: 48
 description: "How to configure PostgreSQL on Amazon (AWS) for Mendix apps running on SAP Business Technology Platform"

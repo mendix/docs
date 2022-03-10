@@ -1,5 +1,6 @@
 ---
 title: "Java Actions"
+url: /refguide/java-actions/
 parent: "resources"
 menu_order: 10
 description: "Describes using Java Actions to extend the functionality of your Mendix app."

@@ -1,5 +1,6 @@
 ---
 title: "Parsing and Formatting Decimal Function Calls"
+url: /refguide7/parse-and-format-decimal-function-calls/
 parent: "expressions"
 ---
 

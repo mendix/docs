@@ -1,5 +1,6 @@
 ---
 title: "Siemens MindSphere"
+url: /developerportal/deploy/deploying-to-mindsphere/
 category: "Deployment"
 menu_order: 42
 description: "Describes how to register a Mendix app at the MindSphere Gateway and integrate it into the MindSphere Launchpad"

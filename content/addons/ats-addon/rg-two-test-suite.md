@@ -1,5 +1,6 @@
 ---
 title: "Test Suite"
+url: /addons/ats-addon/rg-two-test-suite/
 parent: "rg-two-ats"
 ---
 

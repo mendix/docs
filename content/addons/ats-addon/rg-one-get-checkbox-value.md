@@ -1,5 +1,6 @@
 ---
 title: "Get Checkbox Value"
+url: /addons/ats-addon/rg-one-get-checkbox-value/
 parent: "rg-one-input"
 ---
 

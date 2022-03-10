@@ -1,5 +1,6 @@
 ---
 title: "MVP Program"
+url: /developerportal/community-tools/mendix-mvp-program/
 category: "Community Tools"
 menu_order: 6
 description: "Describes how the Mendix Community MVP program works."

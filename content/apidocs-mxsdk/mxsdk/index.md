@@ -1,5 +1,6 @@
 ---
 title: "Mendix Platform SDK"
+url: /apidocs-mxsdk/mxsdk/
 ---
 
 ## 1 Introduction & FAQ

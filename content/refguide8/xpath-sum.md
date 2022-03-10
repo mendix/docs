@@ -1,5 +1,6 @@
 ---
 title: "XPath Sum"
+url: /refguide8/xpath-sum/
 parent: "xpath-query-functions"
 tags: ["studio pro"]
 ---

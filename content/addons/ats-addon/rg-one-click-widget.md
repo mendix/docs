@@ -1,5 +1,6 @@
 ---
 title: "Click Widget"
+url: /addons/ats-addon/rg-one-click-widget/
 parent: "rg-one-generic"
 ---
 

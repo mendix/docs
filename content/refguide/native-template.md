@@ -1,5 +1,6 @@
 ---
 title: "Native Template"
+url: /refguide/native-template/
 parent: "native-mobile"
 menu_order: 12
 tags: ["mobile", "template", "native", "iOS", "Android", "reference guide"]

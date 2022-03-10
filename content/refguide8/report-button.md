@@ -1,5 +1,6 @@
 ---
 title: "Generate Report Button"
+url: /refguide8/report-button/
 parent: "report-widgets"
 menu_order: 40
 tags: ["studio pro"]

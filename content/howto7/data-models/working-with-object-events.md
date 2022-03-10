@@ -1,5 +1,6 @@
 ---
 title: "Work with Object Events"
+url: /howto7/data-models/working-with-object-events/
 category: "Data Models"
 menu_order: 3
 tags: ["microflow"]

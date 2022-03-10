@@ -1,5 +1,6 @@
 ---
 title: "Building Block"
+url: /refguide8/building-block/
 parent: "page-resources"
 menu_order: 40
 tags: ["studio pro", "building block", "page resource"]

@@ -1,5 +1,6 @@
 ---
 title: "Static Label (Document Template)"
+url: /refguide8/static-label-document-template/
 parent: "document-templates"
 tags: ["studio pro"]
 aliases:

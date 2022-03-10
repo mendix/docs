@@ -1,5 +1,6 @@
 ---
 title: "Synchronize to Device"
+url: /refguide8/synchronize-to-device/
 parent: "client-activities"
 tags: ["studio pro", "synchronize to device", "client activities"]
 menu_order: 60

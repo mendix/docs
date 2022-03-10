@@ -1,5 +1,6 @@
 ---
 title: "Decision"
+url: /studio7/microflows-decision/
 category: "Microflows"
 menu_order: 20
 description: "Describes a decision in Mendix Studio."

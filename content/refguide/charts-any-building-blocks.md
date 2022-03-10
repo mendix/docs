@@ -1,5 +1,6 @@
 ---
 title: "Any Chart Building Blocks"
+url: /refguide/charts-any-building-blocks/
 parent: "chart-widgets"
 description: "A reference for the Any Chart building blocks which are provided as part of the Any Chart widget"
 menu_order: 40

@@ -1,5 +1,6 @@
 ---
 title: "Apps"
+url: /addons/apd-addon/rg-three-apps/
 parent: "rg-three-apd"
 ---
 

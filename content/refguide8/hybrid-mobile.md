@@ -1,5 +1,6 @@
 ---
 title: "Hybrid Mobile"
+url: /refguide8/hybrid-mobile/
 category: "Mobile"
 menu_order: 2
 tags: ["mobile", "hybrid", "studio pro"]

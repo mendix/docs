@@ -1,5 +1,6 @@
 ---
 title: "Merge"
+url: /refguide/merge/
 parent: "decisions"
 menu_order: 1
 tags: ["studio pro", "merge", "decisions"]

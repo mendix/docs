@@ -1,5 +1,6 @@
 ---
 title: "Buzz"
+url: /studio8/collaboration-buzz/
 category: "Collaboration"
 menu_order: 20
 description: "Describes Studio Buzz."

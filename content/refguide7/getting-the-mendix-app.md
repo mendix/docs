@@ -1,5 +1,6 @@
 ---
 title: "Getting the Mendix Mobile App"
+url: /refguide7/getting-the-mendix-app/
 parent: "developing-hybrid-mobile-apps"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

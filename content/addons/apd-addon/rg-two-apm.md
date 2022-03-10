@@ -1,5 +1,6 @@
 ---
 title: "APM 2 Reference Guide"
+url: /addons/apd-addon/rg-two-apm/
 parent: "rg-apd"
 menu_order: 1
 aliases:

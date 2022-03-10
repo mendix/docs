@@ -1,5 +1,6 @@
 ---
 title: "ATS"
+url: /addons/ats-addon/
 weight: 10
 ---
 

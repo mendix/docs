@@ -1,5 +1,6 @@
 ---
 title: "Managing App Signing Keys"
+url: /refguide/managing-app-signing-keys/
 category: "Mobile"
 menu_order: 21
 tags: ["studio pro"]

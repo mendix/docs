@@ -1,5 +1,6 @@
 ---
 title: "Workflows"
+url: /studio/workflows/
 description: "Describes the workflows in Mendix Studio."
 weight: 15
 tags: ["workflow", "workflows", "Studio"]

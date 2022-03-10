@@ -1,5 +1,6 @@
 ---
 title: "Create Automated Tests with TestNG"
+url: /howto8/testing/create-automated-tests-with-testng/
 category: "Testing"
 menu_order: 50
 tags: ["test", "testing", "testng"]

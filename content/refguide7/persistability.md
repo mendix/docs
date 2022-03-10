@@ -1,5 +1,6 @@
 ---
 title: "Persistability"
+url: /refguide7/persistability/
 parent: "entities"
 menu_order: 10
 tags: ["domain model", "entity", "persistability", "persistable", "non-persistable", "transient"]

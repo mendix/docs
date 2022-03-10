@@ -1,5 +1,6 @@
 ---
 title: "Task Queue"
+url: /refguide/task-queue/
 parent: "resources"
 menu_order: 85
 description: "Concepts and usage of the task queue"

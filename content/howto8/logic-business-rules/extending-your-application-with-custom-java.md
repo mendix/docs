@@ -1,5 +1,6 @@
 ---
 title: "Extend Your Application with Custom Java"
+url: /howto8/logic-business-rules/extending-your-application-with-custom-java/
 category: "Logic & Business Rules"
 menu_order: 12
 tags: ["microflow", "logic", "java", "extend", "jdk", "custom", "UnsupportedClassVersionError"]

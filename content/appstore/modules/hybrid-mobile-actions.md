@@ -1,5 +1,6 @@
 ---
 title: "Hybrid Mobile Actions"
+url: /appstore/modules/hybrid-mobile-actions/
 category: "Modules"
 description: "Describes the configuration and usage of the Hybrid Mobile Actions module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "platform support", "hybrid mobile", "hybrid mobile actions",  "mobile"]

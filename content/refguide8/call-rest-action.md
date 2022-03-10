@@ -1,5 +1,6 @@
 ---
 title: "Call REST Service"
+url: /refguide8/call-rest-action/
 parent: "integration-activities"
 tags: ["studio pro", "integration activity", "call rest service"]
 menu_order: 10

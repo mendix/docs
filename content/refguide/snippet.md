@@ -1,5 +1,6 @@
 ---
 title: "Snippet"
+url: /refguide/snippet/
 parent: "page-resources"
 menu_order: 30
 tags: ["studio pro", "snippet", "page resources"]

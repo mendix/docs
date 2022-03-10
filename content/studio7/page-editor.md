@@ -1,5 +1,6 @@
 ---
 title: "Pages"
+url: /studio7/page-editor/
 description: "Describes the page editor in Mendix Studio."
 weight: 30
 tags: ["studio", "page editor", "pages"]

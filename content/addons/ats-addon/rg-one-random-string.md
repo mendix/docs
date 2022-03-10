@@ -1,5 +1,6 @@
 ---
 title: "Random String"
+url: /addons/ats-addon/rg-one-random-string/
 parent: "rg-one-ats-core-actions"
 ---
 

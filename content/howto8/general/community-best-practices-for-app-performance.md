@@ -1,5 +1,6 @@
 ---
 title: "Implement Community Best Practices for App Performance"
+url: /howto8/general/community-best-practices-for-app-performance/
 category: "General Info"
 menu_order: 8
 tags: ["best practice", "performance", "community"]

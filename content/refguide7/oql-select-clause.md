@@ -1,5 +1,6 @@
 ---
 title: "OQL Select Clause"
+url: /refguide7/oql-select-clause/
 parent: "oql"
 ---
 

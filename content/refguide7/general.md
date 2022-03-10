@@ -1,5 +1,6 @@
 ---
 title: "General"
+url: /refguide7/general/
 weight: 10
 ---
 

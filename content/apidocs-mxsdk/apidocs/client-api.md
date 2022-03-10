@@ -1,5 +1,6 @@
 ---
 title: "Client API"
+url: /apidocs-mxsdk/apidocs/client-api/
 category: "API Documentation"
 menu_order: 15
 tags: ["Client API", "API"]

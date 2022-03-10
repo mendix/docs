@@ -1,5 +1,6 @@
 ---
 title: "Customize Styling"
+url: /howto/front-end/customize-styling-new/
 parent: "atlas-ui"
 menu_order: 20
 description: "This describes how developers can change apps styling and create re-usable styling."

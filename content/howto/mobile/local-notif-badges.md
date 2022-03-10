@@ -1,5 +1,6 @@
 ---
 title: "Part 2: Badges"
+url: /howto/mobile/local-notif-badges/
 parent: "local-notif-parent"
 menu_order: 20
 description: A tutorial for setting up badges for local push notifications.

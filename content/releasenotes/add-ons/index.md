@@ -1,5 +1,6 @@
 ---
 title: "Quality Add-ons"
+url: /releasenotes/add-ons/
 weight: 45
 ---
 

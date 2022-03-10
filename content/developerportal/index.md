@@ -1,5 +1,6 @@
 ---
 title: "Developer Portal Guide"
+url: /developerportal/
 description: "Describes the sections of the Mendix Developer Portal and links to more detailed documents in the guide."
 tags: ["mendix", "developer portal", "platform services", "buzz", "apps", "community", "marketplace", "academy", "forum", "docs", "documentation"]
 weight: 30

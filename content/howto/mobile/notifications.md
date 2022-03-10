@@ -1,5 +1,6 @@
 ---
 title: "Use Notifications"
+url: /howto/mobile/notifications/
 parent: "implementation"
 menu_order: 54
 description: Tutorials for configuring push and local notifications.

@@ -1,5 +1,6 @@
 ---
 title: "Commit Object(s)"
+url: /refguide8/committing-objects/
 parent: "object-activities"
 menu_order: 30
 tags: ["studio pro"]

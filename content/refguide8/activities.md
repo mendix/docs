@@ -1,5 +1,6 @@
 ---
 title: "Activities"
+url: /refguide8/activities/
 parent: "application-logic"
 menu_order: 40
 tags: ["studio pro", "microflows", "nanoflows", "activity"]

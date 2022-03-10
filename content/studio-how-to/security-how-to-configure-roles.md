@@ -1,5 +1,6 @@
 ---
 title: "Secure Your App and Configure Access to Its Functionality"
+url: /studio-how-to/security-how-to-configure-roles/
 description: "Describes how to configure security in Mendix Studio."
 weight: 40
 tags: ["studio", "security", "user roles", "secure your app", "conditional visibility"]

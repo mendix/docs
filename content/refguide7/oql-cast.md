@@ -1,5 +1,6 @@
 ---
 title: "OQL CAST"
+url: /refguide7/oql-cast/
 parent: "oql-functions"
 ---
 

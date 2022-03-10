@@ -1,5 +1,6 @@
 ---
 title: "Forum"
+url: /developerportal/community-tools/mendix-forum/
 category: "Community Tools"
 menu_order: 4
 description: "Describes the Mendix Forum, where the Mendix community can ask and answer questions as well as post ideas for how to improve the Mendix Platform."

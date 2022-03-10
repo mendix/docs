@@ -1,5 +1,6 @@
 ---
 title: "Optimize Microflow Aggregates"
+url: /howto8/logic-business-rules/optimizing-microflow-aggregates/
 category: "Logic & Business Rules"
 menu_order: 7
 tags: ["microflow", "aggregate"]

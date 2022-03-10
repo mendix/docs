@@ -1,5 +1,6 @@
 ---
 title: "OQL Order by Clause"
+url: /refguide7/oql-order-by-clause/
 parent: "oql"
 ---
 

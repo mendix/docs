@@ -1,5 +1,6 @@
 ---
 title: "Moving from Modeler Version 6 to 7"
+url: /refguide7/moving-from-6-to-7/
 category: "General"
 menu_order: 20
 description: "Provides details on updating your project from Mendix 6 to Mendix 7, including sections on converting your project and deprecated features."

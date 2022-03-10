@@ -1,5 +1,6 @@
 ---
 title: "Text Area"
+url: /refguide8/text-area/
 parent: "input-widgets"
 menu_order: 20
 tags: ["studio pro"]

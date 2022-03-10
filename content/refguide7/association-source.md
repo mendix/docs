@@ -1,5 +1,6 @@
 ---
 title: "Association Source"
+url: /refguide7/association-source/
 parent: "data-sources"
 ---
 

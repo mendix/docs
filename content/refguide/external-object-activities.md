@@ -1,5 +1,6 @@
 ---
 title: "External Object Activities"
+url: /refguide/external-object-activities/
 parent: "activities"
 menu_order: 100
 tags: ["studio pro"]

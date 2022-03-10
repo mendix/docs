@@ -1,5 +1,6 @@
 ---
 title: "Create List"
+url: /refguide/create-list/
 parent: "list-activities"
 menu_order: 3
 tags: ["studio pro"]

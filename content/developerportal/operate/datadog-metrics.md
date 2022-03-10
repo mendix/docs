@@ -1,5 +1,6 @@
 ---
 title: "Datadog for v4 Mendix Cloud"
+url: /developerportal/operate/datadog-metrics/
 parent: "metrics"
 menu_order: 50
 description: "How to configure Mendix Cloud v4 to enable monitoring and analysis with Datadog."

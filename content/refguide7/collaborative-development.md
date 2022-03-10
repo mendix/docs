@@ -1,5 +1,6 @@
 ---
 title: "Collaborative Development"
+url: /refguide7/collaborative-development/
 category: "Version Control"
 description: "Describes the process of collaborative development between the Mendix Desktop Modeler and the Mendix Web Modeler"
 tags: ["desktop modeler", "collaborative development", "sync"]

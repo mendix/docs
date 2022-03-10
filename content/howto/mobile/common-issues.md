@@ -1,5 +1,6 @@
 ---
 title: "Troubleshoot Common Native Mobile Issues"
+url: /howto/mobile/common-issues/
 parent: "get-started"
 menu_order: 40
 description: Troubleshoot common issues associated with building and running native mobile apps.

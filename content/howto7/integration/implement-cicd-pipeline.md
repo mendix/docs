@@ -1,5 +1,6 @@
 ---
 title: "Implement a Simple CICD Pipeline with Mendix APIs"
+url: /howto7/integration/implement-cicd-pipeline/
 category: "Integration"
 tags: ["cicd", "continuous", "integration", "delivery", "deployment", "automation", "testing"]
 ---

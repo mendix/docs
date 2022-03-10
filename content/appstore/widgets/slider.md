@@ -1,5 +1,6 @@
 ---
 title: "Slider"
+url: /appstore/widgets/slider/
 category: "Widgets"
 description: "Describes the configuration and usage of the Slider widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "slider", "bound", "platform support"]

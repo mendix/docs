@@ -1,5 +1,6 @@
 ---
 title: "End Event"
+url: /refguide/end-event/
 parent: "events"
 menu_order: 2
 tags: ["studio pro", "end event", "event"]

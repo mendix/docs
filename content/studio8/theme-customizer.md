@@ -1,5 +1,6 @@
 ---
 title: "Theme Customizer"
+url: /studio8/theme-customizer/
 description: "Describes the Theme Customizer in Mendix Studio."
 weight: 80
 tags: ["studio", "theme customizer", "atlas ui"]

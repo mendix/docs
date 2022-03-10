@@ -1,5 +1,6 @@
 ---
 title: "Configure Selenium Support"
+url: /howto/integration/selenium-support/
 category: "Integration"
 menu_order: 16
 tags: ["selenium", "integration"]

@@ -1,5 +1,6 @@
 ---
 title: "Configuration"
+url: /addons/apd-addon/rg-one-configuration/
 parent: "rg-one-apm"
 ---
 

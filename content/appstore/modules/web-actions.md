@@ -1,5 +1,6 @@
 ---
 title: "Web Actions"
+url: /appstore/modules/web-actions/
 category: "Modules"
 description: "Describes the configuration and usage of the Web Actions module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "platform support", "web actions"]

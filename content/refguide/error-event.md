@@ -1,5 +1,6 @@
 ---
 title: "Error Event"
+url: /refguide/error-event/
 parent: "events"
 menu_order: 3
 tags: ["studio pro", "error event", "event"]

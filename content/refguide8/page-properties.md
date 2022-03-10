@@ -1,5 +1,6 @@
 ---
 title: "Page Properties"
+url: /refguide8/page-properties/
 parent: "page"
 menu_order: 10
 tags: ["studio pro", "page", "properties"]

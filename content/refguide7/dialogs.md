@@ -1,5 +1,6 @@
 ---
 title: "Dialog Boxes"
+url: /refguide7/dialogs/
 category: "Desktop Modeler"
 ---
 

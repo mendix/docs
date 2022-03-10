@@ -1,5 +1,6 @@
 ---
 title: "Create List"
+url: /refguide7/create-list/
 parent: "list-activities"
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Mendix Native Mobile Builder"
+url: /releasenotes/mobile/mendix-native-mobile-builder/
 category: "Mobile"
 menu_order: 11
 toc-level: 1

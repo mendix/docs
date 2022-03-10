@@ -1,5 +1,6 @@
 ---
 title: "Hybrid App Base & Template"
+url: /releasenotes/mobile/hybrid-app/
 category: "Mobile"
 menu_order: 30
 toc-level: 1

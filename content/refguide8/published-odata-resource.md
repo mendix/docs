@@ -1,5 +1,6 @@
 ---
 title: "Published OData Resource"
+url: /refguide8/published-odata-resource/
 parent: "published-odata-services"
 tags: ["studio pro"]
 ---

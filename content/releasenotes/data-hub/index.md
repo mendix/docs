@@ -1,5 +1,6 @@
 ---
 title: "Data Hub"
+url: /releasenotes/data-hub/
 description: "Release notes for updates to the Mendix Data Hub"
 tags: ["data hub", "data hub catalog", "data hub Landscape"]
 weight: 30

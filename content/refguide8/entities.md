@@ -1,5 +1,6 @@
 ---
 title: "Entities"
+url: /refguide8/entities/
 parent: "domain-model"
 menu_order: 10
 tags: ["domain model", "entity", "entities", "attribute", "validation rule", "even handler", "access rule", "studio pro"]

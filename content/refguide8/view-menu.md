@@ -1,5 +1,6 @@
 ---
 title: "View Menu"
+url: /refguide8/view-menu/
 parent: "menus"
 description: "Describes the View Menu in Studio Pro."
 menu_order: 20

@@ -1,5 +1,6 @@
 ---
 title: "Create a Basic Chart"
+url: /howto7/extensibility/charts-basic-create/
 parent: "charts-tutorials"
 menu_order: 10
 description: "How to create a basic chart and configure the display options"

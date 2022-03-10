@@ -1,5 +1,6 @@
 ---
 title: "JSON Structures"
+url: /refguide/json-structures/
 parent: "integration"
 menu_order: 40
 tags: ["studio pro"]

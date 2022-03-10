@@ -1,5 +1,6 @@
 ---
 title: "ATS Core Actions"
+url: /addons/ats-addon/rg-one-ats-core-actions/
 parent: "rg-one-std-actions-ref"
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Microflows"
+url: /studio-how-to/microflows/
 description: "A landing page for Studio how-to's on microflows."
 weight: 50
 tags: ["studio", "microflow", "how-to"]

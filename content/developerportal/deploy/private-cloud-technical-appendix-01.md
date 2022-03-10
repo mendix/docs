@@ -1,5 +1,6 @@
 ---
 title: "Technical Appendix: 1 Introduction to Operators"
+url: /developerportal/deploy/private-cloud-technical-appendix-01/
 parent: "private-cloud-technical-appendix"
 description: "Describes which providers are supported by Mendix for Private Cloud"
 menu_order: 10

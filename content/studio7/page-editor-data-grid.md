@@ -1,5 +1,6 @@
 ---
 title: "Data Grid Properties"
+url: /studio7/page-editor-data-grid/
 parent: "page-editor-widgets"
 description: "Describes a data grid in the page editor of Mendix Studio."
 menu_order: 15

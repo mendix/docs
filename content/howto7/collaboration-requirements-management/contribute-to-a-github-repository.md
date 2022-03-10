@@ -1,5 +1,6 @@
 ---
 title: "Contribute to a GitHub Repository"
+url: /howto7/collaboration-requirements-management/contribute-to-a-github-repository/
 category: "Collaboration & Requirements Management"
 menu_order: 20
 tags: ["github"]

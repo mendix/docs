@@ -1,5 +1,6 @@
 ---
 title: "Document Templates"
+url: /refguide7/document-templates/
 category: "Desktop Modeler"
 aliases:
     - /refguide7/Document+Templates.html

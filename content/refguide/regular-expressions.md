@@ -1,5 +1,6 @@
 ---
 title: "Regular Expressions"
+url: /refguide/regular-expressions/
 parent: "resources"
 menu_order: 70
 tags: ["studio pro", "regular expressions", "regular expression"]

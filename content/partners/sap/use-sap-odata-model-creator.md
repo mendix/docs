@@ -1,5 +1,6 @@
 ---
 title: "Use OData Model Creator for SAP Solutions"
+url: /partners/sap/use-sap-odata-model-creator/
 category: "SAP"
 menu_order: 35
 description: "Presents the use of the OData Model Creator for SAP solutions."

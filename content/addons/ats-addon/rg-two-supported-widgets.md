@@ -1,5 +1,6 @@
 ---
 title: "Supported Widgets"
+url: /addons/ats-addon/rg-two-supported-widgets/
 parent: "rg-two-ats"
 ---
 

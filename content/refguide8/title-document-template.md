@@ -1,5 +1,6 @@
 ---
 title: "Title (Document Template)"
+url: /refguide8/title-document-template/
 parent: "document-templates"
 tags: ["studio pro"]
 aliases:

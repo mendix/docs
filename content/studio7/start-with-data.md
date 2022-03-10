@@ -1,5 +1,6 @@
 ---
 title: "Starting With Your Own Data"
+url: /studio7/start-with-data/
 description: "Describes how to import an Excel spreadsheet to your domain model in Mendix Studio."
 weight: 120
 tags: ["studio", "domain model", "excel import", "start with data", "data model"]

@@ -1,5 +1,6 @@
 ---
 title: "Mendix Cloud v4"
+url: /developerportal/deploy/mxcloudv4/
 parent: "mendix-cloud-deploy"
 menu_order: 50
 description: "Frequently asked questions about Mendix Cloud v4"

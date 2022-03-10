@@ -1,5 +1,6 @@
 ---
 title: "Object Type Decision"
+url: /refguide8/object-type-decision/
 parent: "decisions"
 menu_order: 2
 tags: ["studio pro", "object type decision", "decisions"]

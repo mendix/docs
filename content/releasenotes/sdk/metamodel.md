@@ -1,5 +1,6 @@
 ---
 title: "Metamodel"
+url: /releasenotes/sdk/metamodel/
 category: "SDKs"
 menu_order: 3
 ---

@@ -1,5 +1,6 @@
 ---
 title: "App Services"
+url: /appstore/app-services/
 description: "Presents details on the app services available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "app service"]
 weight: 30

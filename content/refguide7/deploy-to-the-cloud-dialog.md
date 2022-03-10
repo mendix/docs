@@ -1,5 +1,6 @@
 ---
 title: "Deploy To The Cloud Dialog"
+url: /refguide7/deploy-to-the-cloud-dialog/
 parent: "dialogs"
 ---
 

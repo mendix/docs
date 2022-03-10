@@ -1,5 +1,6 @@
 ---
 title: "Nanoflows"
+url: /refguide/nanoflows/
 parent: "microflows-and-nanoflows"
 menu_order: 20
 description: "Presents an overview of all the elements that can be used in a nanoflow."

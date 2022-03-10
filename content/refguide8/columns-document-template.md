@@ -1,5 +1,6 @@
 ---
 title: "Columns (Document Template)"
+url: /refguide8/columns-document-template/
 parent: "data-grid-document-template"
 tags: ["studio pro"]
 aliases:

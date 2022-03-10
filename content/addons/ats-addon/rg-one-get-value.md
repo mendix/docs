@@ -1,5 +1,6 @@
 ---
 title: "Get Value"
+url: /addons/ats-addon/rg-one-get-value/
 parent: "rg-one-input"
 ---
 

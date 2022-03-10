@@ -1,5 +1,6 @@
 ---
 title: "Published REST Operation"
+url: /refguide8/published-rest-operation/
 parent: "published-rest-service"
 menu_order: 10
 description: "Options to configure a published REST operation."

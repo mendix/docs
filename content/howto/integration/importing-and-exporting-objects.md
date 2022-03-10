@@ -1,5 +1,6 @@
 ---
 title: "Import & Export Objects"
+url: /howto/integration/importing-and-exporting-objects/
 category: "Integration"
 menu_order: 2
 tags: ["mpk", "import", "export", "document", "module", "widget"]

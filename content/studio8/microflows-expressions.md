@@ -1,5 +1,6 @@
 ---
 title: "Microflow Expressions"
+url: /studio8/microflows-expressions/
 category: "Microflows"
 menu_order: 40
 description: "Describes the microflow expressions available in Mendix Studio."

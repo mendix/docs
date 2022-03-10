@@ -1,5 +1,6 @@
 ---
 title: "Encryption"
+url: /appstore/modules/encryption/
 category: "Modules"
 description: "Describes the configuration and usage of the Encryption module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "encryption", "aes", "platform support"]

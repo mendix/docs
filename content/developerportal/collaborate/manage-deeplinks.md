@@ -1,5 +1,6 @@
 ---
 title: "Manage Deep Links"
+url: /developerportal/collaborate/manage-deeplinks/
 parent: "general-settings"
 menu_order: 2
 description: "Describes how to implement deep links to Developer Portal pages."

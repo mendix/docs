@@ -1,5 +1,6 @@
 ---
 title: "User Roles"
+url: /refguide/user-roles/
 parent: "project-security"
 menu_order: 10
 tags: ["studio pro", "user role", "app security", "security"]

@@ -1,5 +1,6 @@
 ---
 title: "App Security"
+url: /refguide/project-security/
 parent: "security"
 menu_order: 10
 tags: ["studio pro", "security", "app security"]

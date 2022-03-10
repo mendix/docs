@@ -1,5 +1,6 @@
 ---
 title: "Set Return Value"
+url: /addons/ats-addon/rg-one-set-return-value/
 parent: "rg-one-ats-core-actions"
 ---
 

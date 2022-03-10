@@ -1,5 +1,6 @@
 ---
 title: "Decisions"
+url: /refguide8/decisions/
 parent: "application-logic"
 menu_order: 50
 tags: ["studio pro", "decision", "decisions"]

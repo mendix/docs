@@ -1,5 +1,6 @@
 ---
 title: "Microflow Consistency Errors"
+url: /studio7/consistency-errors-microflows/
 category: "Consistency Errors"
 description: "Describes microflow consistency errors in Mendix Studio and the way to fix them."
 tags: ["studio", "consistency errors", "checks", "errors", "microflow"]

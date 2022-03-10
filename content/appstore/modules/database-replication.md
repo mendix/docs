@@ -1,5 +1,6 @@
 ---
 title: "Database Replication"
+url: /appstore/modules/database-replication/
 category: "Modules"
 description: "Describes the configuration and usage of the Database Replication module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "database replication", "platform support"]

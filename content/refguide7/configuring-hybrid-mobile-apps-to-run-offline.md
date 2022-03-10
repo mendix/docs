@@ -1,5 +1,6 @@
 ---
 title: "Configuring Hybrid Mobile Apps To Run Offline"
+url: /refguide7/configuring-hybrid-mobile-apps-to-run-offline/
 category: "Mobile Development"
 ---
 

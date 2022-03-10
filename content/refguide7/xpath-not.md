@@ -1,5 +1,6 @@
 ---
 title: "XPath not"
+url: /refguide7/xpath-not/
 parent: "xpath-constraint-functions"
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "On-Premises"
+url: /developerportal/deploy/on-premises-design/
 category: "Deployment"
 description: "Describes the options for deploying a Mendix app on premises"
 menu_order: 80

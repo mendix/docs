@@ -1,5 +1,6 @@
 ---
 title: "Trigger a Microflow From a Menu Item"
+url: /howto/logic-business-rules/trigger-microflow-from-menu-item/
 category: "Logic & Business Rules"
 menu_order: 30
 tags: ["how-to", "microflow", "create microflow"]

@@ -1,5 +1,6 @@
 ---
 title: "Object Activities"
+url: /refguide7/object-activities/
 parent: "activities"
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Atlas 3 Change Summary"
+url: /refguide/atlas3-change-summary/
 parent: "moving-from-atlas-2-to-3"
 menu_order: 7
 tags: ["Atlas", "UI", "UX", "user experience", "design"]

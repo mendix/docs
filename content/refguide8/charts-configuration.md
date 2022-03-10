@@ -1,5 +1,6 @@
 ---
 title: "Chart Configuration"
+url: /refguide8/charts-configuration/
 parent: "chart-widgets"
 menu_order: 10
 tags: ["Charts", "Widgets", "Studio Pro", "Chart Configuration", "Configuration"]

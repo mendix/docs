@@ -1,5 +1,6 @@
 ---
 title: "Images"
+url: /refguide/images/
 category: "App Modeling"
 menu_order: 70
 tags: ["Images", "Image Collections", "png", "Studio Pro"]

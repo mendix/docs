@@ -1,5 +1,6 @@
 ---
 title: "Set BootstrapRTE Value"
+url: /addons/ats-addon/rg-one-set-bootstraprte-value/
 parent: "rg-one-bootstraprte"
 ---
 

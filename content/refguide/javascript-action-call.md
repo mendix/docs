@@ -1,5 +1,6 @@
 ---
 title: "JavaScript Action Call"
+url: /refguide/javascript-action-call/
 parent: "action-call-activities"
 menu_order: 20
 description: "This reference explains the properties of the JavaScript action call activity."

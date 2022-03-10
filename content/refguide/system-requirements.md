@@ -1,5 +1,6 @@
 ---
 title: "System Requirements"
+url: /refguide/system-requirements/
 category: "General Info"
 menu_order: 10
 description: "Presents the system requirements for using the Mendix Platform."

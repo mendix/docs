@@ -1,5 +1,6 @@
 ---
 title: "Set Row Cell Value"
+url: /addons/ats-addon/rg-one-set-row-cell-value/
 parent: "rg-one-datagrid-templategrid-listview"
 ---
 

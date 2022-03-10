@@ -1,5 +1,6 @@
 ---
 title: "Break Event"
+url: /refguide8/break-event/
 parent: "events"
 menu_order: 5
 tags: ["studio pro", "break event", "event", "loop"]

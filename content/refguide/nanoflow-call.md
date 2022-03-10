@@ -1,5 +1,6 @@
 ---
 title: "Call Nanoflow"
+url: /refguide/nanoflow-call/
 parent: "client-activities"
 menu_order: 2
 tags: ["studio pro", "nanoflow call", "call nanoflow"]

@@ -1,5 +1,6 @@
 ---
 title: "Configure File Upload and Download"
+url: /studio-how-to/pages-how-to-attach-files/
 category: "Pages"
 description: "Describes how to configure file manager in Mendix Studio."
 menu_order: 70

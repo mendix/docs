@@ -1,5 +1,6 @@
 ---
 title: "Table row"
+url: /refguide7/table-row/
 parent: "table"
 ---
 

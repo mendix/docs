@@ -1,5 +1,6 @@
 ---
 title: "Validation Feedback"
+url: /refguide8/validation-feedback/
 parent: "client-activities"
 menu_order: 70
 tags: ["studio pro", "validation feedback", "client activities"]

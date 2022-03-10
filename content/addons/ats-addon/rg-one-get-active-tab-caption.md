@@ -1,5 +1,6 @@
 ---
 title: "Get Active Tab Caption"
+url: /addons/ats-addon/rg-one-get-active-tab-caption/
 parent: "rg-one-tab"
 ---
 

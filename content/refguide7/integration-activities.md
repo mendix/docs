@@ -1,5 +1,6 @@
 ---
 title: "Integration Activities"
+url: /refguide7/integration-activities/
 parent: "activities"
 ---
 

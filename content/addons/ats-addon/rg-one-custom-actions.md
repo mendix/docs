@@ -1,5 +1,6 @@
 ---
 title: "Custom Actions"
+url: /addons/ats-addon/rg-one-custom-actions/
 parent: "rg-one-test-dev"
 menu_order: 5
 ---

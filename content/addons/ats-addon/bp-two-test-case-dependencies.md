@@ -1,5 +1,6 @@
 ---
 title: "Test Case Dependencies"
+url: /addons/ats-addon/bp-two-test-case-dependencies/
 parent: "bp-two"
 ---
 

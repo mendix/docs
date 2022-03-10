@@ -1,5 +1,6 @@
 ---
 title: "Test Run"
+url: /addons/ats-addon/rg-one-test-run/
 parent: "rg-one-test-dev"
 ---
 

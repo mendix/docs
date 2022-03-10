@@ -1,5 +1,6 @@
 ---
 title: "Mendix Product Naming Guide"
+url: /product-naming/
 draft: true
 weight: 5
 cascade:

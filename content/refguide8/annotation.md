@@ -1,5 +1,6 @@
 ---
 title: "Annotation"
+url: /refguide8/annotation/
 parent: "application-logic"
 menu_order: 60
 tags: ["studio pro", "annotation", annotation flow]

@@ -1,5 +1,6 @@
 ---
 title: "Consumed REST Services"
+url: /refguide8/consumed-rest-services/
 parent: "integration"
 description: "Presents an overview of consumed REST services and JSON in Mendix."
 tags: ["studio pro"]

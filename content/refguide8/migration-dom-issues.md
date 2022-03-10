@@ -1,5 +1,6 @@
 ---
 title: "Troubleshooting DOM Changes"
+url: /refguide8/migration-dom-issues/
 parent: "moving-from-7-to-8"
 menu_order: 10
 description: "This document explains the updated DOM structure for Mendix 8, and what that means for app's CSS."

@@ -1,5 +1,6 @@
 ---
 title: "Dashboard"
+url: /addons/apd-addon/rg-two-dashboard/
 parent: "rg-two-apm"
 ---
 

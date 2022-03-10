@@ -1,5 +1,6 @@
 ---
 title: "Settings"
+url: /studio7/settings/
 description: "Describes the Settings menu in Mendix Studio."
 weight: 110
 tags: ["studio", "settings", "widgets"]

@@ -1,5 +1,6 @@
 ---
 title: "Mx Model Reflection"
+url: /appstore/modules/model-reflection/
 category: "Modules"
 description: "Describes the configuration and usage of the Mx Model Reflection module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "mx model reflection", "token configuration", "platform support"]

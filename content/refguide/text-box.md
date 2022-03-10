@@ -1,5 +1,6 @@
 ---
 title: "Text Box"
+url: /refguide/text-box/
 parent: "input-widgets"
 menu_order: 10
 tags: ["studio pro", "data"]

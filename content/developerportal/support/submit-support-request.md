@@ -1,5 +1,6 @@
 ---
 title: "Submit a Support Request"
+url: /developerportal/support/submit-support-request/
 category: "Mendix Support"
 menu_order: 2
 description: "Describes submitting a request with Mendix Support."

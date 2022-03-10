@@ -1,5 +1,6 @@
 ---
 title: "Send Your First Test Push Notification"
+url: /howto8/mobile/notif-send-test/
 parent: "notifications"
 menu_order: 64
 description: Tutorial for testing your push notifications.

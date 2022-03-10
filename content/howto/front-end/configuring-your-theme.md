@@ -1,5 +1,6 @@
 ---
 title: "Configure Your Theme"
+url: /howto/front-end/configuring-your-theme/
 category: "Front End"
 menu_order: 15
 tags: ["theming", "UX", "front end"]

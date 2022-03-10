@@ -1,5 +1,6 @@
 ---
 title: "Indexes"
+url: /refguide/indexes/
 parent: "entities"
 menu_order: 60
 tags: ["domain model", "entity", "attribute", "index", "studio pro"]

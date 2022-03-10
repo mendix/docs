@@ -1,5 +1,6 @@
 ---
 title: "Private Cloud"
+url: /developerportal/deploy/private-cloud/
 category: "Deployment"
 description: "Describes the processes for deploying a Mendix app in the Private Cloud"
 menu_order: 48

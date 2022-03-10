@@ -1,5 +1,6 @@
 ---
 title: "XPath Constraint Functions"
+url: /refguide7/xpath-constraint-functions/
 parent: "xpath-constraints"
 ---
 

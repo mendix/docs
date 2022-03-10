@@ -1,5 +1,6 @@
 ---
 title: "3"
+url: /releasenotes/sdk/model-sdk-3/
 parent: "model-sdk"
 ---
 

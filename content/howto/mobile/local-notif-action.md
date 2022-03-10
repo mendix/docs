@@ -1,5 +1,6 @@
 ---
 title: "Part 3: Actions"
+url: /howto/mobile/local-notif-action/
 parent: "local-notif-parent"
 menu_order: 30
 description: A tutorial for making your push notifications trigger actions when tapped.

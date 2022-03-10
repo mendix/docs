@@ -1,5 +1,6 @@
 ---
 title: "Decisions"
+url: /refguide/decisions/
 parent: "microflows-and-nanoflows"
 menu_order: 50
 tags: ["studio pro", "decision", "decisions"]

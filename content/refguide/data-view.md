@@ -1,5 +1,6 @@
 ---
 title: "Data View"
+url: /refguide/data-view/
 parent: "data-widgets"
 menu_order: 10
 tags: ["page", "data view", "widget", "studio pro"]

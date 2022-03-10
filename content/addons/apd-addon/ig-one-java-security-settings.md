@@ -1,5 +1,6 @@
 ---
 title: "Java Security Settings"
+url: /addons/apd-addon/ig-one-java-security-settings/
 parent: "ig-one-prerequisites"
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Style Google Maps"
+url: /howto7/front-end/style-google-maps/
 category: "Front End"
 menu_order: 60
 tags: []

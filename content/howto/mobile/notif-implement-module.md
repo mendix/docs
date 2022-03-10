@@ -1,5 +1,6 @@
 ---
 title: "Implement the Push Notifications Module"
+url: /howto/mobile/notif-implement-module/
 parent: "notifications"
 menu_order: 54
 description: Tutorial for implementing the push notification module.

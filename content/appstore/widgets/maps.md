@@ -1,5 +1,6 @@
 ---
 title: "Maps"
+url: /appstore/widgets/maps/
 category: "Widgets"
 description: "Describes the configuration and usage of the Maps widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "maps", "google maps", "openstreetmap", "mapbox", "here maps", "platform support"]

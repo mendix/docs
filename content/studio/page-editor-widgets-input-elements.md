@@ -1,5 +1,6 @@
 ---
 title: "Input Elements"
+url: /studio/page-editor-widgets-input-elements/
 parent: "page-editor-widgets"
 description: "Describes input elements in Mendix Studio."
 menu_order: 20

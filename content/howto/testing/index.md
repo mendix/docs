@@ -1,5 +1,6 @@
 ---
 title: "Testing"
+url: /howto/testing/
 weight: 100
 tags: ["test", "testing"]
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Label Selector"
+url: /appstore/widgets/label-selector/
 category: "Widgets"
 description: "Describes the configuration and usage of the Label Selector widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "label selector", "platform support"]

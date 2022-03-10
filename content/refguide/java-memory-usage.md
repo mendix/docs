@@ -1,5 +1,6 @@
 ---
 title: "Java Memory Usage"
+url: /refguide/java-memory-usage/
 parent: "runtime-java"
 menu_order: 2
 tags: ["runtime", "java", "memory usage", "memory", "studio pro"]

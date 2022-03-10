@@ -1,5 +1,6 @@
 ---
 title: "Mendix Cloud"
+url: /developerportal/deploy/mendix-cloud-deploy/
 category: "Deployment"
 menu_order: 20
 description: "Describes how to deploy to the Mendix Cloud."

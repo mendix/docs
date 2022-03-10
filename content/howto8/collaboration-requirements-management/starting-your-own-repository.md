@@ -1,5 +1,6 @@
 ---
 title: "Start Your Own GitHub Repository"
+url: /howto8/collaboration-requirements-management/starting-your-own-repository/
 category: "Collaboration"
 menu_order: 30
 tags: ["studio pro"]

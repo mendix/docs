@@ -1,5 +1,6 @@
 ---
 title: "Workflows"
+url: /refguide/workflows/
 parent: "application-logic"
 menu_order: 20
 tags: ["workflow", "workflows", "Studio Pro"]

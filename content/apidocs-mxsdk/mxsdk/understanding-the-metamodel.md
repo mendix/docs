@@ -1,5 +1,6 @@
 ---
 title: "Understanding the Mendix Metamodel"
+url: /apidocs-mxsdk/mxsdk/understanding-the-metamodel/
 parent: "sdk-refguide"
 menu_order: 1
 ---

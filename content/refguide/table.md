@@ -1,5 +1,6 @@
 ---
 title: "Table"
+url: /refguide/table/
 parent: "structure-widgets"
 menu_order: 60
 tags: ["studio pro", "table", "container widget", "widget"]

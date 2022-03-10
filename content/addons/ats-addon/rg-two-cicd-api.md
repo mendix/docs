@@ -1,5 +1,6 @@
 ---
 title: "CI/CD API"
+url: /addons/ats-addon/rg-two-cicd-api/
 parent: "rg-two-ats"
 ---
 

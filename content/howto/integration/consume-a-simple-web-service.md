@@ -1,5 +1,6 @@
 ---
 title: "Consume a Simple Web Service"
+url: /howto/integration/consume-a-simple-web-service/
 category: "Integration"
 menu_order: 7
 tags: ["integration", "wsdl", "web service", "consume"]

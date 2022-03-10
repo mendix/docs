@@ -1,5 +1,6 @@
 ---
 title: "Dashboard"
+url: /addons/apd-addon/rg-three-dashboard/
 parent: "rg-three-apd"
 ---
 

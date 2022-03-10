@@ -1,5 +1,6 @@
 ---
 title: "User Task"
+url: /studio/workflows-user-task/
 category: "Workflows"
 menu_order: 20
 tags: ["workflow", "workflows", "user task", "task"]

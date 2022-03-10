@@ -1,5 +1,6 @@
 ---
 title: "Domain Model Consistency Errors"
+url: /studio7/consistency-errors-domain-model/
 category: "Consistency Errors"
 description: "Describes domain model consistency errors in Mendix Studio and the way to fix them."
 tags: ["studio", "consistency errors", "errors", "domain model"]

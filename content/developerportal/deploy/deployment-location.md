@@ -1,5 +1,6 @@
 ---
 title: "Deployment Location"
+url: /developerportal/deploy/deployment-location/
 parent: "general"
 menu_order: 45
 description: "URL considerations for deploying Mendix"

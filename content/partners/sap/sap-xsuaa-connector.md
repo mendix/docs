@@ -1,5 +1,6 @@
 ---
 title: "XSUAA Connector for SAP Business Technology Platform"
+url: /partners/sap/sap-xsuaa-connector/
 category: "SAP"
 menu_order: 40
 description: "Presents reference information on the XSUAA Connector for SAP Business Technology Platform."

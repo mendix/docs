@@ -1,5 +1,6 @@
 ---
 title: "Monitoring client state"
+url: /refguide7/monitoring-client-state/
 category: "Mendix Runtime"
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Label"
+url: /refguide8/label/
 parent: "common-widgets"
 menu_order: 30
 tags: ["studio pro", "label", "common widgets"]

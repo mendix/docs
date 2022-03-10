@@ -1,5 +1,6 @@
 ---
 title: "Control Center"
+url: /developerportal/control-center/
 description: "Describes the Mendix Control Center, used for the governance of company members, apps, security, and cloud resources."
 tags: ["control center", "mendix admin", "developer portal", "role", "permissions", "fallback", "resource pack", "node", "offboard"]
 weight: 20

@@ -1,5 +1,6 @@
 ---
 title: "Page Consistency Errors"
+url: /studio/consistency-errors-pages/
 parent: "consistency-errors"
 menu_order: 10
 description: "Describes consistency errors in the page editor in Mendix Studio and the way to fix them."

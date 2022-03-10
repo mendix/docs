@@ -1,5 +1,6 @@
 ---
 title: "Selectors"
+url: /addons/ats-addon/rg-two-selectors/
 parent: "rg-two-ats"
 ---
 

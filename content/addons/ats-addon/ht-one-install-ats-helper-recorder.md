@@ -1,5 +1,6 @@
 ---
 title: "Install the ATS Helper and the ATS Recorder"
+url: /addons/ats-addon/ht-one-install-ats-helper-recorder/
 parent: "ht-one"
 menu_order: 2
 description: "Describes how to install the ATS Helper and the ATS Recorder tool."

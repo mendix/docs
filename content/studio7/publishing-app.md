@@ -1,5 +1,6 @@
 ---
 title: "Previewing & Publishing Your App"
+url: /studio7/publishing-app/
 description: "Describes previewing and publishing processes in the Mendix Studio."
 weight: 70
 tags: ["studio", "deployment", "publishing", "app publishing", "deploy", "deploying", "publish", "preview"]

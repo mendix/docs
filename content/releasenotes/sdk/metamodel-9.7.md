@@ -1,5 +1,6 @@
 ---
 title: "9.7"
+url: /releasenotes/sdk/metamodel-9.7/
 parent: "metamodel-9"
 ---
 

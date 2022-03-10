@@ -1,5 +1,6 @@
 ---
 title: "Cancel Dialog"
+url: /addons/ats-addon/rg-one-cancel-dialog/
 parent: "rg-one-dialog"
 ---
 

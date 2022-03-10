@@ -1,5 +1,6 @@
 ---
 title: "SAP HANA"
+url: /refguide8/saphana/
 parent: "data-storage"
 menu_order: 70
 tags: ["studio pro"]

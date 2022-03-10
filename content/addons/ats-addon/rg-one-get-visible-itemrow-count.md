@@ -1,5 +1,6 @@
 ---
 title: "Get Visible Item/Row Count"
+url: /addons/ats-addon/rg-one-get-visible-itemrow-count/
 parent: "rg-one-datagrid-templategrid-listview"
 ---
 

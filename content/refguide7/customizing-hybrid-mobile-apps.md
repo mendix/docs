@@ -1,5 +1,6 @@
 ---
 title: "Customizing Hybrid Mobile Apps"
+url: /refguide7/customizing-hybrid-mobile-apps/
 category: "Mobile Development"
 ---
 

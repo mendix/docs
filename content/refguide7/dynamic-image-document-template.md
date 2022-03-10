@@ -1,5 +1,6 @@
 ---
 title: "Dynamic Image (Document Template)"
+url: /refguide7/dynamic-image-document-template/
 parent: "document-templates"
 aliases:
     - /refguide7/Dynamic+Image+(document+template).html

@@ -1,5 +1,6 @@
 ---
 title: "Using Eclipse"
+url: /refguide7/using-eclipse/
 category: "Java Programming"
 ---
 

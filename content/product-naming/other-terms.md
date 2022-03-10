@@ -1,5 +1,6 @@
 ---
 title: "Other Mendix Terms"
+url: /product-naming/other-terms/
 weight: 20
 draft: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Grids"
+url: /refguide/grids/
 parent: "data-widgets"
 menu_order: 20
 tags: ["studio pro", "grid", "data grid", "template grid"]

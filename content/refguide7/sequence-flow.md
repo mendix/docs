@@ -1,5 +1,6 @@
 ---
 title: "Sequence Flow"
+url: /refguide7/sequence-flow/
 parent: "common-elements"
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Page Resources"
+url: /refguide8/page-resources/
 parent: "pages"
 menu_order: 12
 tags: ["studio pro", "page resources"]

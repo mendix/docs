@@ -1,5 +1,6 @@
 ---
 title: "Drop-Down"
+url: /refguide8/drop-down/
 parent: "input-widgets"
 menu_order: 30
 tags: ["Drop-down", "input", "page", "widget", "enumeration", "studio pro"]

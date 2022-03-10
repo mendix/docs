@@ -1,5 +1,6 @@
 ---
 title: "8.5"
+url: /releasenotes/sdk/metamodel-8.5/
 parent: "metamodel-8"
 #When updating, remember to update the Latest Mendix Releases file
 ---

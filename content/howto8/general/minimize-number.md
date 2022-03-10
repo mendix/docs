@@ -1,5 +1,6 @@
 ---
 title: "Minimize the Number of In-Use Objects in Your Session"
+url: /howto8/general/minimize-number/
 category: "General Info"
 menu_order: 6
 tags: ["object", "session", "architecture", "stateless", "runtime"]

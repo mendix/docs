@@ -1,5 +1,6 @@
 ---
 title: "Certificates"
+url: /developerportal/deploy/certificates/
 parent: "mendix-cloud-deploy"
 menu_order: 30
 tags: ["client certificate", "certification authority", "PKCS12", "connections"]

@@ -1,5 +1,6 @@
 ---
 title: "Pop-Up Menu"
+url: /appstore/widgets/popup-menu/
 category: "Widgets"
 description: "Describes the configuration and usage of the Pop-Up Menu widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "popup", "pop-up", "popup menu", "pop-up menu", "platform support"]

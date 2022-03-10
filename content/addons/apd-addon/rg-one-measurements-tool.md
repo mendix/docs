@@ -1,5 +1,6 @@
 ---
 title: "Measurements Tool"
+url: /addons/apd-addon/rg-one-measurements-tool/
 parent: "rg-one-apm"
 ---
 

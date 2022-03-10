@@ -1,5 +1,6 @@
 ---
 title: "OQL Limit Clause"
+url: /refguide7/oql-limit-clause/
 parent: "oql"
 ---
 

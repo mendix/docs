@@ -1,5 +1,6 @@
 ---
 title: "Documents"
+url: /developerportal/collaborate/documents/
 category: "Collaboration"
 menu_order: 6
 description: "Describes how to manage the documents in your app."

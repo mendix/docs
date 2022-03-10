@@ -1,5 +1,6 @@
 ---
 title: "Pages"
+url: /studio-how-to8/pages/
 description: "A landing page for Studio how-to's on pages."
 weight: 10
 tags: ["studio", "pages", "how-to"]

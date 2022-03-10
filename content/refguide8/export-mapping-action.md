@@ -1,5 +1,6 @@
 ---
 title: "Export With Mapping"
+url: /refguide8/export-mapping-action/
 parent: "integration-activities"
 tags: ["studio pro", "integration activity", "export mapping action", "export to xml"]
 menu_order: 40

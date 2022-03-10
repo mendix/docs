@@ -1,5 +1,6 @@
 ---
 title: "Show Workflow Admin Page"
+url: /refguide/show-workflow-page/
 parent: "workflow-activities"
 menu_order: 60
 tags: ["studio pro", "workflow page", "workflow"]

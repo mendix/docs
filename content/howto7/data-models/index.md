@@ -1,5 +1,6 @@
 ---
 title: "Data Models"
+url: /howto7/data-models/
 weight: 30
 ---
 

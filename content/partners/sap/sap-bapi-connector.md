@@ -1,5 +1,6 @@
 ---
 title: "BAPI Connector for SAP Solutions"
+url: /partners/sap/sap-bapi-connector/
 category: "SAP"
 menu_order: 18
 description: "Presents reference information on the use of the BAPI Connector for SAP solutions."

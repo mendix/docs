@@ -1,5 +1,6 @@
 ---
 title: "Published REST Request Routing"
+url: /refguide8/published-rest-routing/
 parent: "published-rest-technical-details"
 menu_order: 10
 description: "A flow chart which shows how an example request is processed, what security is applied, and what is returned by the service."

@@ -1,5 +1,6 @@
 ---
 title: "Batch Replace"
+url: /refguide/batch-replace/
 parent: "translatable-texts"
 menu_order: 20
 tags: ["studio pro", "translation", "languages", "translatable text"]

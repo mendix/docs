@@ -1,5 +1,6 @@
 ---
 title: "Native Template 5.1"
+url: /releasenotes/mobile/nt-5.1-rn/
 parent: "nt-studio-pro-8-parent"
 menu_order: 20
 description: "Native Template 5.1 release notes."

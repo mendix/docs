@@ -1,5 +1,6 @@
 ---
 title: "Marketplace Content Support"
+url: /appstore/general/app-store-content-support/
 category: "General Info"
 menu_order: 50
 tags: ["marketplace", "support", "platform support", "community support", "deprecated"]

@@ -1,5 +1,6 @@
 ---
 title: "Increment Counter"
+url: /refguide/metrics-increment-counter/
 parent: "metrics-activities"
 menu_order: 30
 tags: ["studio pro", "metrics", "micrometer"]

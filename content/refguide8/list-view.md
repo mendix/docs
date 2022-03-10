@@ -1,5 +1,6 @@
 ---
 title: "List View"
+url: /refguide8/list-view/
 parent: "data-widgets"
 menu_order: 40
 tags: ["studio pro"]

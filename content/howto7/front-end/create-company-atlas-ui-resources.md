@@ -1,5 +1,6 @@
 ---
 title: "Create Company Atlas UI Resources"
+url: /howto7/front-end/create-company-atlas-ui-resources/
 parent: "atlas-ui"
 menu_order: 30
 tags: ["Atlas", "UI", "UX", "user experience"]

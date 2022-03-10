@@ -1,5 +1,6 @@
 ---
 title: "Licensing Apps"
+url: /developerportal/deploy/licensing-apps-outside-mxcloud/
 parent: "general"
 menu_order: 5
 description: "How to apply licenses to apps which are outside Mendix Cloud"

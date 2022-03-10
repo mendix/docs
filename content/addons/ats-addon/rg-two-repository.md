@@ -1,5 +1,6 @@
 ---
 title: "Repository"
+url: /addons/ats-addon/rg-two-repository/
 parent: "rg-two-ats"
 ---
 

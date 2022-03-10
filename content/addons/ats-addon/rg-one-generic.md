@@ -1,5 +1,6 @@
 ---
 title: "Generic"
+url: /addons/ats-addon/rg-one-generic/
 parent: "rg-one-mendix-actions"
 ---
 

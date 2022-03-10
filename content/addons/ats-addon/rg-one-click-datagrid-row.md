@@ -1,5 +1,6 @@
 ---
 title: "Click DataGrid Row"
+url: /addons/ats-addon/rg-one-click-datagrid-row/
 parent: "rg-one-datagrid-templategrid-listview"
 ---
 

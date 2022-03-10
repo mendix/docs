@@ -1,5 +1,6 @@
 ---
 title: "MxBuild"
+url: /refguide8/mxbuild/
 category: "General Info"
 menu_order: 50
 description: "Describes MxBuild which is a command-line tool for building and deploying Mendix Apps"

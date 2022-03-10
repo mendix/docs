@@ -1,5 +1,6 @@
 ---
 title: "Parameter"
+url: /refguide/parameter/
 parent: "microflows-and-nanoflows"
 menu_order: 70
 tags: ["studio pro", "parameter", "microflow"]

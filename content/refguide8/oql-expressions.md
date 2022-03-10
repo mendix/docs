@@ -1,5 +1,6 @@
 ---
 title: "OQL Expressions"
+url: /refguide8/oql-expressions/
 parent: "oql"
 tags: ["studio pro"]
 ---

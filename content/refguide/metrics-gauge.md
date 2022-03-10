@@ -1,5 +1,6 @@
 ---
 title: "Gauge"
+url: /refguide/metrics-gauge/
 parent: "metrics-activities"
 menu_order: 20
 tags: ["studio pro", "metrics", "micrometer"]

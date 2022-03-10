@@ -1,5 +1,6 @@
 ---
 title: "Break Event"
+url: /refguide7/break-event/
 parent: "events"
 ---
 

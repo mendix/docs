@@ -1,5 +1,6 @@
 ---
 title: "Send External Object"
+url: /refguide/send-external-object/
 parent: "external-object-activities"
 tags: ["studio pro", "integration activity"]
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Nanoflow Properties"
+url: /refguide/nanoflow/
 parent: "nanoflows"
 tags: ["studio pro"]
 ---

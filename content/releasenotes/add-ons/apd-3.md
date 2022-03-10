@@ -1,5 +1,6 @@
 ---
 title: "3"
+url: /releasenotes/add-ons/apd-3/
 parent: "apd"
 menu_order: 1
 ---

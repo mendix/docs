@@ -1,5 +1,6 @@
 ---
 title: "Parallel Split"
+url: /refguide/parallel-split/
 parent: "workflows"
 menu_order: 30
 tags: ["workflow", "workflows", "parallel split", "Studio Pro"]

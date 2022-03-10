@@ -1,5 +1,6 @@
 ---
 title: "Show Page"
+url: /refguide/show-page/
 parent: "client-activities"
 menu_order: 50
 tags: ["studio pro", "show page", "client activity"]

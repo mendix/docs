@@ -1,5 +1,6 @@
 ---
 title: "Start Styling with Gulp & Sass"
+url: /howto7/front-end/style-with-gulp-and-sass/
 parent: "use-gulp-and-sass"
 menu_order: 2
 tags: ["gulp", "sass", "ux", "front end"]

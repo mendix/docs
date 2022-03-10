@@ -1,5 +1,6 @@
 ---
 title: "Annotations"
+url: /refguide/annotations/
 parent: "domain-model"
 menu_order: 30
 tags: ["domain model", "annotation", "studio pro"]

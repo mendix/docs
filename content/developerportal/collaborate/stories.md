@@ -1,5 +1,6 @@
 ---
 title: "Stories"
+url: /developerportal/collaborate/stories/
 category: "Collaboration"
 menu_order: 2
 description: "Describes how to manage the Sprints and stories for your apps."

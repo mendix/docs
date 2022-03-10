@@ -1,5 +1,6 @@
 ---
 title: "Studio Ranges & Mendix Versions"
+url: /studio/general-versions/
 category: "General Info"
 description: "Describes how Studio ranges relate to Mendix versions."
 tags: ["studio", "studio pro", "versions", "version", "range"]

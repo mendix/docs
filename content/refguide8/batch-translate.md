@@ -1,5 +1,6 @@
 ---
 title: "Batch Translate"
+url: /refguide8/batch-translate/
 parent: "translatable-texts"
 menu_order: 30
 tags: ["studio pro", "translation", "languages", "translatable text"]

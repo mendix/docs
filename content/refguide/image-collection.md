@@ -1,5 +1,6 @@
 ---
 title: "Image Collection"
+url: /refguide/image-collection/
 parent: "page-resources"
 menu_order: 5
 description: "Why and how to create an image collection"

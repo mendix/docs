@@ -1,5 +1,6 @@
 ---
 title: "Image Widgets"
+url: /studio7/page-editor-widgets-images/
 parent: "page-editor-widgets"
 description: "Describes image widgets in Mendix Studio."
 menu_order: 30

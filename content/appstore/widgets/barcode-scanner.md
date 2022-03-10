@@ -1,5 +1,6 @@
 ---
 title: "Barcode Scanner"
+url: /appstore/widgets/barcode-scanner/
 category: "Widgets"
 description: "Describes the configuration and usage of the Barcode Scanner widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "barcode scanner", "platform support"]

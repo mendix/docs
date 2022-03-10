@@ -1,5 +1,6 @@
 ---
 title: "Restrict Access for Incoming Requests"
+url: /developerportal/deploy/access-restrictions/
 parent: "mendix-cloud-deploy"
 menu_order: 36
 description: "How to limit access to your app using IP addresses and certificates"

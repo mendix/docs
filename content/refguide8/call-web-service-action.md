@@ -1,5 +1,6 @@
 ---
 title: "Call Web Service"
+url: /refguide8/call-web-service-action/
 parent: "integration-activities"
 tags: ["studio pro", "integration activity", "call web service"]
 menu_order: 20

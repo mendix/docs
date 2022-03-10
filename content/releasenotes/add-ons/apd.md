@@ -1,5 +1,6 @@
 ---
 title: "APD"
+url: /releasenotes/add-ons/apd/
 category: "Quality Add-ons"
 menu_order: 20 
 ---

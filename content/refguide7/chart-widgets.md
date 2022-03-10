@@ -1,5 +1,6 @@
 ---
 title: "Chart Widgets"
+url: /refguide7/chart-widgets/
 parent: "pages"
 tags: ["Charts", "Any Chart", "Desktop Modeler", "Pages"]
 ---

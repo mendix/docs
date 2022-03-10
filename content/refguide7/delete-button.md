@@ -1,5 +1,6 @@
 ---
 title: "Delete button"
+url: /refguide7/delete-button/
 parent: "control-bar"
 ---
 

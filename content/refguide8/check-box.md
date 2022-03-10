@@ -1,5 +1,6 @@
 ---
 title: "Check Box"
+url: /refguide8/check-box/
 parent: "input-widgets"
 menu_order: 40
 tags: ["studio pro"]

@@ -1,5 +1,6 @@
 ---
 title: "Generating a Published REST Resource"
+url: /refguide/generate-rest-resource/
 parent: "published-rest-services"
 menu_order: 20
 description: "Generate a published REST resource from an entity"

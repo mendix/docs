@@ -1,5 +1,6 @@
 ---
 title: "Timeline"
+url: /appstore/widgets/timeline/
 category: "Widgets"
 description: "Describes the Timeline widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "timeline", "platform support"]

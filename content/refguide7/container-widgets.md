@@ -1,5 +1,6 @@
 ---
 title: "Container Widgets"
+url: /refguide7/container-widgets/
 parent: "pages"
 ---
 

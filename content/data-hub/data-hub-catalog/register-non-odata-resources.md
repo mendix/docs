@@ -1,5 +1,6 @@
 ---
 title: "Register Non-OData Resources in the Data Hub Catalog"
+url: /data-hub/data-hub-catalog/register-non-odata-resources/
 category: "Data Hub Catalog"
 menu_order: 40
 description: "How to convert non-OData resources into OData and then registered them in the Data Hub Catalog."

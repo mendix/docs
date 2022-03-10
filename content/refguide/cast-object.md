@@ -1,5 +1,6 @@
 ---
 title: "Cast Object"
+url: /refguide/cast-object/
 parent: "object-activities"
 menu_order: 10
 tags: ["studio pro"]

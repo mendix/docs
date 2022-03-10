@@ -1,5 +1,6 @@
 ---
 title: "SAP HANA"
+url: /refguide7/saphana/
 parent: "data-storage"
 menu_order: 70
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Domain Model"
+url: /studio/domain-models/
 description: "Describes the domain models in Mendix Studio."
 category: "Working with Data"
 menu_order: 10

@@ -1,5 +1,6 @@
 ---
 title: "Alerts"
+url: /developerportal/operate/monitoring-application-health/
 category: "Operations"
 menu_order: 20
 description: "This page describes how to monitor the application health."

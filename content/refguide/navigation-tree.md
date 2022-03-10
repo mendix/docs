@@ -1,5 +1,6 @@
 ---
 title: "Navigation Tree"
+url: /refguide/navigation-tree/
 parent: "menu-widgets"
 menu_order: 3
 tags: ["studio pro"]

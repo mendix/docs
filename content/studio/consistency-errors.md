@@ -1,5 +1,6 @@
 ---
 title: "Consistency Errors"
+url: /studio/consistency-errors/
 category: "Checks"
 description: "Describes consistency errors in Mendix Studio and the way to fix them."
 tags: ["studio", "consistency errors", "checks", "errors"]

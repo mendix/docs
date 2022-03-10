@@ -1,5 +1,6 @@
 ---
 title: "Data Hub Administration"
+url: /developerportal/control-center/data-hub-admin/
 category: "Control Center"
 description: "Describes the Mendix Admin functions for Mendix Admin and curators."
 tags: ["data hub", "Mendix Admin", "curator", "custom owner", "administration"]

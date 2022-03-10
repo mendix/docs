@@ -1,5 +1,6 @@
 ---
 title: "Language Menu"
+url: /refguide8/translatable-texts/
 parent: "menus"
 menu_order: 50
 tags: ["studio pro", "translation", "languages", "translatable text"]

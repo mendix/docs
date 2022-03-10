@@ -1,5 +1,6 @@
 ---
 title: "Deep Link"
+url: /appstore/modules/deep-link/
 category: "Modules"
 description: "Describes the configuration and usage of the Deep Link module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "deep link", "platform support"]

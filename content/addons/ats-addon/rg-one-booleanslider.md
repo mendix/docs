@@ -1,5 +1,6 @@
 ---
 title: "BooleanSlider"
+url: /addons/ats-addon/rg-one-booleanslider/
 parent: "rg-one-appstore-widg-acts"
 ---
 

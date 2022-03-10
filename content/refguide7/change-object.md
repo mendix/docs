@@ -1,5 +1,6 @@
 ---
 title: "Change Object"
+url: /refguide7/change-object/
 parent: "object-activities"
 ---
 

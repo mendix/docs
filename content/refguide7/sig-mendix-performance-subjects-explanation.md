@@ -1,5 +1,6 @@
 ---
 title: "SIG–Mendix Performance Subjects"
+url: /refguide7/sig-mendix-performance-subjects-explanation/
 category: "Mendix Runtime"
 ---
 

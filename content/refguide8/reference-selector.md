@@ -1,5 +1,6 @@
 ---
 title: "Reference Selector"
+url: /refguide8/reference-selector/
 parent: "input-widgets"
 menu_order: 70
 tags: ["studio pro"]

@@ -1,5 +1,6 @@
 ---
 title: "Create Custom Actions"
+url: /addons/ats-addon/ht-two-create-custom-actions/
 parent: "ht-two"
 ---
 

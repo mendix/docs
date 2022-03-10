@@ -1,5 +1,6 @@
 ---
 title: "Use Notifications"
+url: /howto8/mobile/notifications/
 parent: "native-mobile"
 menu_order: 54
 description: Tutorials for configuring push and local notifications.

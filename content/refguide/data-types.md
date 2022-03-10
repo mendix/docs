@@ -1,5 +1,6 @@
 ---
 title: "Data Types"
+url: /refguide/data-types/
 category: "App Modeling"
 menu_order: 60
 tags: ["studio pro"]

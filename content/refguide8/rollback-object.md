@@ -1,5 +1,6 @@
 ---
 title: "Rollback Object"
+url: /refguide8/rollback-object/
 parent: "object-activities"
 menu_order: 70
 tags: ["studio pro"]

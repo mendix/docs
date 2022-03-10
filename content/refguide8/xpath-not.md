@@ -1,5 +1,6 @@
 ---
 title: "XPath Not"
+url: /refguide8/xpath-not/
 parent: "xpath-constraint-functions"
 tags: ["studio pro"]
 ---

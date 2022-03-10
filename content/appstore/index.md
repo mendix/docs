@@ -1,5 +1,6 @@
 ---
 title: "Marketplace Guide"
+url: /appstore/
 description: "Presents documentation on configuring and using the latest versions of platform-supported components."
 tags: ["marketplace",  "component", "platform support"]
 weight: 35

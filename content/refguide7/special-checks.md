@@ -1,5 +1,6 @@
 ---
 title: "Special checks"
+url: /refguide7/special-checks/
 parent: "expressions"
 ---
 

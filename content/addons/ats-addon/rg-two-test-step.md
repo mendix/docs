@@ -1,5 +1,6 @@
 ---
 title: "Test Step"
+url: /addons/ats-addon/rg-two-test-step/
 parent: "rg-two-ats"
 ---
 

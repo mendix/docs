@@ -1,5 +1,6 @@
 ---
 title: "Association Source"
+url: /refguide/association-source/
 parent: "data-sources"
 tags: ["studio pro", "association", "data source"]
 menu_order: 60

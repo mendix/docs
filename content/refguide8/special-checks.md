@@ -1,5 +1,6 @@
 ---
 title: "Special Checks"
+url: /refguide8/special-checks/
 parent: "expressions"
 menu_order: 40
 description: "Describes special checks in expressions in Mendix."

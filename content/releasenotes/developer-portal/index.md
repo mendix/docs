@@ -1,5 +1,6 @@
 ---
 title: "Developer Portal"
+url: /releasenotes/developer-portal/
 description: "Release notes for all project management parts of the Mendix Developer Portal"
 tags: ["developer portal", "buzz", "mendix profile"]
 weight: 20

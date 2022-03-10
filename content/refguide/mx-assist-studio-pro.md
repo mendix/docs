@@ -1,5 +1,6 @@
 ---
 title: "Mendix Assist"
+url: /refguide/mx-assist-studio-pro/
 parent: "studio-pro-overview"
 description: "Describes Mendix Assist in Mendix Studio Pro."
 tags: ["studio pro", "mendix assist", "AI", "assistant"]

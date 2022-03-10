@@ -1,5 +1,6 @@
 ---
 title: "Arithmetic Expressions"
+url: /refguide/arithmetic-expressions/
 parent: "expressions"
 menu_order: 20
 tags: ["studio pro", "expressions", "arithmetic expressions"]

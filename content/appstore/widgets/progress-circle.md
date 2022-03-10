@@ -1,5 +1,6 @@
 ---
 title: "Progress Circle"
+url: /appstore/widgets/progress-circle/
 category: "Widgets"
 description: "Describes the purpose, features, and configuration of the Progress Circle widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "progress circle", "platform support"]

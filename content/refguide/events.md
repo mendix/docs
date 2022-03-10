@@ -1,5 +1,6 @@
 ---
 title: "Events"
+url: /refguide/events/
 parent: "microflows-and-nanoflows"
 menu_order: 90
 tags: ["studio pro", "event", "events"]

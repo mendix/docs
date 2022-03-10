@@ -1,5 +1,6 @@
 ---
 title: "Download and License"
+url: /addons/apd-addon/rg-one-download-license/
 parent: "rg-one-apm"
 ---
 

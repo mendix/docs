@@ -1,5 +1,6 @@
 ---
 title: "Audit Trail"
+url: /appstore/modules/audit-trail/
 category: "Modules"
 description: "Describes the configuration and usage of the Audit Trail module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "audit trail", "log", "platform support"]

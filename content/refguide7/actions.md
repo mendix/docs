@@ -1,5 +1,6 @@
 ---
 title: "Actions"
+url: /refguide7/actions/
 parent: "published-app-services"
 ---
 

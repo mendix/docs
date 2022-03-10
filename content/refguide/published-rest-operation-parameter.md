@@ -1,5 +1,6 @@
 ---
 title: "Operation Parameters for Published REST"
+url: /refguide/published-rest-operation-parameter/
 parent: "published-rest-service"
 menu_order: 20
 description: "Configure a published REST Operation by adding parameters to an operation "

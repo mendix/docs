@@ -1,5 +1,6 @@
 ---
 title: "Technical Details of Published REST"
+url: /refguide/published-rest-technical-details/
 parent: "published-rest-services"
 menu_order: 40
 description: "Landing page for technical details about aspects of Published REST"

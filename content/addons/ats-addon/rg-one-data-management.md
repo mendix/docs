@@ -1,5 +1,6 @@
 ---
 title: "Data Management"
+url: /addons/ats-addon/rg-one-data-management/
 parent: "rg-one-ats"
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Error Event"
+url: /refguide7/error-event/
 parent: "events"
 ---
 

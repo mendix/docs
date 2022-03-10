@@ -1,5 +1,6 @@
 ---
 title: "List Activities"
+url: /refguide/list-activities/
 parent: "activities"
 menu_order: 20
 tags: ["studio pro", "microflow", "list"]

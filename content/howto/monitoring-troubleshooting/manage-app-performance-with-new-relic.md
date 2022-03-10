@@ -1,5 +1,6 @@
 ---
 title: "Manage App Performance with New Relic"
+url: /howto/monitoring-troubleshooting/manage-app-performance-with-new-relic/
 parent: "manage-app-performance"
 menu_order: 2
 tags: ["monitoring", "troubleshooting", "performance", "new relic"]

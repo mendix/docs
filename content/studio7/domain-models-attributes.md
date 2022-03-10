@@ -1,5 +1,6 @@
 ---
 title: "Attribute Types"
+url: /studio7/domain-models-attributes/
 category: "Domain Model"
 description: "Describes attribute types in Mendix Studio."
 tags: ["studio", "domain model", "attributes", "attribute types"]

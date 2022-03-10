@@ -1,5 +1,6 @@
 ---
 title: "Calendar"
+url: /appstore/widgets/calendar/
 category: "Widgets"
 description: "Describes the configuration and usage of the Calendar widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "calendar", "platform support"]

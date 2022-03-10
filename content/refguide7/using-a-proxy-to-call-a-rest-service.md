@@ -1,5 +1,6 @@
 ---
 title: "Using a Proxy to Call a REST Service"
+url: /refguide7/using-a-proxy-to-call-a-rest-service/
 parent: "consumed-rest-services"
 ---
 

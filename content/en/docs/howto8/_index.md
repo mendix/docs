@@ -22,4 +22,4 @@ Browse the *Studio Pro 8 How-to's* to find step-by-step guides that will teach y
 
 The *Studio Pro 8 How-to's* are divided into the following categories:
 
-{{% category_block %}}
+

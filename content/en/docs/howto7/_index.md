@@ -17,4 +17,4 @@ Browse the Mendix how-to's to find step-by-step guides that will teach you how t
 
 The *Mendix How-to's* are divided into the following categories:
 
-{{% category_block %}}
+

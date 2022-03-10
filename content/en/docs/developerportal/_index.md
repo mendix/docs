@@ -114,4 +114,4 @@ Clicking the question icon in the Developer Portal brings up the options Mendix 
 
 The *Developer Portal Guide* is divided into the following categories:
 
-{{% category_block %}}
+

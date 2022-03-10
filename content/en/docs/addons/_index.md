@@ -11,5 +11,5 @@ cascade:
 
 The *Quality Add-ons Guide* are divided into the following categories:
 
-{{% category_block %}}
+
 

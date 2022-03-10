@@ -26,7 +26,7 @@ Information that is added or changed during curation is stored in the Data Hub C
 
 Owners and curators of registered assets can click **Curate** from the **Data Hub** screen to see the **Curation List** screen which provides an overview of all the registered assets that you can curate as an owner under the **My Assets** tab. Curators will also see the **Company Assets** tab that lists all the registered assets:
 
-![curate list](attachments/curate/curate-list.png)
+![curate list](/attachments/data-hub/data-hub-catalog/curate/curate-list.png)
 
 In both cases, the list includes registered data sources and also individual datasets that are exposed for the data source.
 
@@ -38,9 +38,9 @@ Click **View** to display the asset details. You can then perform curate actions
 
 ## 3 Curation Bar {#curation-bar}
 
-Curation is performed from the [asset details screen](search#search-details). If you are an owner of an asset or are a curator, you will see the **Curation Bar** for the selected item. The following shows the curation bar for a selected service:
+Curation is performed from the [asset details screen](/data-hub/data-hub-catalog/search/#search-details). If you are an owner of an asset or are a curator, you will see the **Curation Bar** for the selected item. The following shows the curation bar for a selected service:
 
-![curate bar](attachments/curate/curate-bar.png)
+![curate bar](/attachments/data-hub/data-hub-catalog/curate/curate-bar.png)
 
 {{% alert type="info" %}}
 Owners of registered assets and can only curate their services.
@@ -67,7 +67,7 @@ You can curate Application Details from the **Application Details** screen as fo
 1. In the **Curation Bar** click **Edit** > **Edit Metadata** > **Application Details**.
 2. The **Application Metadata** screen is displayed:
 
-   ![app metadata screen](attachments/curate/application-metadata-screen.png)
+   ![app metadata screen](/attachments/data-hub/data-hub-catalog/curate/application-metadata-screen.png)
 
 ### 4.1 Changing Owners of an App {#changing-owners}
 
@@ -84,7 +84,7 @@ App owners can be changed by users with curation rights (owners and curators) fr
 If you, as a **Technical Owner**, curate the application and change the technical owner to a different user, then you will no longer have curation rights to the asset once you save the changes. If the [Discoverability](#discoverability) is turned off for the asset, then you will also not be able to find the asset in the Catalog.{{% /alert %}}
 
 {{% alert type="info" %}}
-Curators and Mendix Admins can manage the lists of custom owners as part of **Administration** functions. For details, see the [Owners](/developerportal/control-center/data-hub-admin#custom-owners) section of *Data Hub Administration*.
+Curators and Mendix Admins can manage the lists of custom owners as part of **Administration** functions. For details, see the [Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
 {{% /alert %}}
 
 #### 4.1.1 Changing the Business & Technical Owners of an App {#changing-owner}
@@ -95,13 +95,13 @@ To change the **Business Owner** or **Technical Owner**, from the **Application 
 
 When curating the owners of an application, you can specify an owner who is not a registered Mendix user but is the technical contact point for the application, or the owner of the data that is made available in the app – the **Business Owner**. The name and the contact email must be provided.
 
-Curators can manage the lists of custom owners as an **Administration** task. For more details, see the [Owners](/developerportal/control-center/data-hub-admin#custom-owners) section of *Data Hub Administration*.
+Curators can manage the lists of custom owners as an **Administration** task. For more details, see the [Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
 
 To add a custom owner follow these steps:
 
 1. On the **Application Metadata** screen, if you start typing the name of an owner and it is not in the drop-down list, you will be prompted to **Create** it. Click on the prompt and the **Enter New Custom Owner Details** pop-up is displayed:
 
-    {{% image_container width="275" %}}![custom contact create](attachments/curate/custom-contact.png){{% /image_container %}}
+    {{% image_container width="275" %}}![custom contact create](/attachments/data-hub/data-hub-catalog/curate/custom-contact.png){{% /image_container %}}
 
 1. Enter the **Name** and **Email** of the owner and click **Save**.
 
@@ -111,11 +111,11 @@ To add a custom owner follow these steps:
 
 ### 4.2 Changing the App Icon {#application-icon}
 
-You can change the icon that is displayed for the app and the data source by uploading your own custom application icon or selecting one from Data Hub the icon library. The selected icon will be displayed for all endpoints of the application and data source such as the Catalog search results and also in the Mendix Studio Pro [Data Hub pane](/refguide/data-hub-pane) and Studio **Data Source** pane.
+You can change the icon that is displayed for the app and the data source by uploading your own custom application icon or selecting one from Data Hub the icon library. The selected icon will be displayed for all endpoints of the application and data source such as the Catalog search results and also in the Mendix Studio Pro [Data Hub pane](/refguide/data-hub-pane/) and Studio **Data Source** pane.
 
 {{% alert type="info" %}} When you change an application icon all data sources (published OData services) that are registered in the Catalog for that application will show the new icon. For example, the following shows two data sources that are published from the **HR Sample App** which are listed in the search results pane (**SAMPLE_Employee…** and **SAP 1.0.0**). They both display the same icon that was set for the app:
 
-![custom contact create](attachments/curate/app-icon-several-services.png)
+![custom contact create](/attachments/data-hub/data-hub-catalog/curate/app-icon-several-services.png)
 
  {{% /alert %}}
 
@@ -141,7 +141,7 @@ To **upload a different icon** for the app follow these steps:
 
 1. In the **Application Metadata** screen of the selected data source, click **Upload a different icon** to display the **Upload Application Icon** pop up:
 
-    {{% image_container width="300" %}}![upload icon](attachments/curate/icon-upload-dialog.png){{% /image_container %}}
+    {{% image_container width="300" %}}![upload icon](/attachments/data-hub/data-hub-catalog/curate/icon-upload-dialog.png){{% /image_container %}}
 
 2. Drag the image file into the upload area or click **Upload** to browse and select a file from your file system. Click **Step 2: Crop image** to proceed.
 
@@ -151,11 +151,11 @@ To **upload a different icon** for the app follow these steps:
 
 4. A preview of the application icon is shown. Click **Save** to upload the selected icon.
 
-    {{% image_container width="300" %}}![upload icon](attachments/curate/icon-preview.png){{% /image_container %}}
+    {{% image_container width="300" %}}![upload icon](/attachments/data-hub/data-hub-catalog/curate/icon-preview.png){{% /image_container %}}
 
 5. The **Application Metadata** screen will now show the selected icon for the application:
 
-    ![upload icon](attachments/curate/asset-metadata-new-icon.png)
+    ![upload icon](/attachments/data-hub/data-hub-catalog/curate/asset-metadata-new-icon.png)
 
 6. Click **Save Changes** to return to the data source details page. The custom icon will be stored in the **Icon Library**.
 
@@ -163,7 +163,7 @@ To **upload a different icon** for the app follow these steps:
 
 An alternative to uploading an icon is to use an existing icon by clicking **select one from your library**. The icons for your Data Hub will be shown and you can select one and click **Change Icon**.
 
-{{% image_container width="300" %}}![upload icon](attachments/curate/icon-library.png){{% /image_container %}}
+{{% image_container width="300" %}}![upload icon](/attachments/data-hub/data-hub-catalog/curate/icon-library.png){{% /image_container %}}
 
 ## 5 Editing the Metadata of a Data Source {#service-details}
 
@@ -183,11 +183,11 @@ To edit the asset metadata, follow these steps:
 
 1. In the **Curation Bar**, click **Edit** > **Edit Metadata** > **Service Details** to display the **Service Metadata** box:
 
-    ![service metadata](attachments/curate/service-metadata-box.png)
+    ![service metadata](/attachments/data-hub/data-hub-catalog/curate/service-metadata-box.png)
 
 2. The description from the OData service metadata is displayed in the **Contract Description**. This cannot be changed, as it is part of the OData service definition. You can provide an alternative description by toggling **Use the catalog description** to display the **Catalog Description** box:
 
-    ![edit description](attachments/curate/service-metadata-description.png)
+    ![edit description](/attachments/data-hub/data-hub-catalog/curate/service-metadata-description.png)
 
 3. Add a catalog description. This will be stored with the service details in the Catalog.
 
@@ -205,7 +205,7 @@ Add tags to categorize a registered service and provide additional means for fin
 
 2. To add tags, click the empty **Tag** input area:
 
-    ![tags](attachments/curate/service-metadata-tags.png)
+    ![tags](/attachments/data-hub/data-hub-catalog/curate/service-metadata-tags.png)
 
 3. To add or edit the tags, enter a tag string and press **Enter** or select one from the list of existing tags that are used in the Data Hub Catalog and displayed when you start typing in the **Tag** field. To separate multiple tags, use spaces.
 
@@ -213,7 +213,7 @@ Add tags to categorize a registered service and provide additional means for fin
 
 4. You can enter multiple tags separated by spaces. You can remove tags by clicking the **x**:
 
-    ![tag list](attachments/curate/service-metadata-tags-list.png)
+    ![tag list](/attachments/data-hub/data-hub-catalog/curate/service-metadata-tags-list.png)
 
 5. When you are finished specifying the tags, click **Save Changes** to register the changes and the tags will be shown in the **Service Metadata** pane.
 
@@ -225,7 +225,7 @@ The discoverable and validated properties of registered assets can be set from t
 
 ### 6.1 Discoverable
 
-The discoverability is set at a data source level. When a data source is registered in the Data Hub catalog, **Discoverable** is set to the company default value, which is configured by the Mendix Admin in [Control Center](/developerportal/control-center/data-hub-admin#settings). If **Discoverable** is on for a data source, all users can find the asset and see the details of it. The **Discoverable** setting will apply to all datasets that are exposed in the data source.
+The discoverability is set at a data source level. When a data source is registered in the Data Hub catalog, **Discoverable** is set to the company default value, which is configured by the Mendix Admin in [Control Center](/developerportal/control-center/data-hub-admin/#settings). If **Discoverable** is on for a data source, all users can find the asset and see the details of it. The **Discoverable** setting will apply to all datasets that are exposed in the data source.
 
 When the **Discoverable** setting is turned off, it will only be visible to the owners of the service and curators and the Mendix Admin. All other users of Data Hub (also through the Data Hub integrations in Studio Pro and Studio) will not be able to see an asset whose discvorabilty is turned off.
 
@@ -266,7 +266,7 @@ To change dataset and attribute descriptions, follow these steps:
 
 1. In the **Search Details** screen for the selected dataset, click **Edit Dataset Details** on the **Curate** bar to display the **Dataset Metadata** box:
 
-    ![curate entity metadata](attachments/curate/curate-entity-metadata.png)
+    ![curate entity metadata](/attachments/data-hub/data-hub-catalog/curate/curate-entity-metadata.png)
 
 2. The service metadata contract description is displayed. To edit and use a **Catalog Description**, click the toggle and enter a description.
 3. When there are a large number of attributes for a dataset, you can use the search area to find specific attributes.

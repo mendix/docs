@@ -1,0 +1,11 @@
+{'t': 'Data Hub Guide', 'i': 'index', 'u': '/data-hub/', 'd': '/data-hub/', 'm': True, 'newDir': '/data-hub/', 'indexFlag': 'true'}
+{'t': 'Write Data to Another App', 'i': 'index', 'u': '/data-hub/write-data/', 'd': '/data-hub/write-data/', 'newDir': '/data-hub/write-data/', 'indexFlag': 'true'}
+{'t': 'Data Hub Landscape', 'i': 'index', 'u': '/data-hub/data-hub-landscape/', 'd': '/data-hub/data-hub-landscape/', 'newDir': '/data-hub/data-hub-landscape/', 'indexFlag': 'true'}
+{'t': 'Consume Registered Assets', 'c': 'Data Hub Catalog', 'i': 'consume', 'u': '/data-hub/data-hub-catalog/consume', 'd': '/data-hub/data-hub-catalog/', 'mo': 20, 'newDir': '/data-hub/data-hub-catalog//', 'p': 'data-hub-catalog/'}
+{'t': 'Curate Registered Assets', 'c': 'Data Hub Catalog', 'i': 'curate', 'u': '/data-hub/data-hub-catalog/curate', 'd': '/data-hub/data-hub-catalog/', 'mo': 45, 'newDir': '/data-hub/data-hub-catalog//', 'p': 'data-hub-catalog/'}
+{'t': 'Data Hub Catalog', 'i': 'index', 'u': '/data-hub/data-hub-catalog/', 'd': '/data-hub/data-hub-catalog/', 'newDir': '/data-hub/data-hub-catalog/', 'indexFlag': 'true'}
+{'t': 'Register Non-OData Resources in the Data Hub Catalog', 'c': 'Data Hub Catalog', 'i': 'register-non-odata-resources', 'u': '/data-hub/data-hub-catalog/register-non-odata-resources', 'd': '/data-hub/data-hub-catalog/', 'mo': 40, 'newDir': '/data-hub/data-hub-catalog//', 'p': 'data-hub-catalog/'}
+{'t': 'Search in the Data Hub Catalog', 'c': 'Data Hub Catalog', 'i': 'search', 'u': '/data-hub/data-hub-catalog/search', 'd': '/data-hub/data-hub-catalog/', 'mo': 10, 'newDir': '/data-hub/data-hub-catalog//', 'p': 'data-hub-catalog/'}
+{'t': 'Register OData Resources in the Data Hub Catalog', 'c': 'Data Hub Catalog', 'i': 'register-data', 'u': '/data-hub/data-hub-catalog/register-data', 'd': '/data-hub/data-hub-catalog/', 'mo': 35, 'newDir': '/data-hub/data-hub-catalog//', 'p': 'data-hub-catalog/'}
+{'t': 'Data Accessibility and Security', 'c': 'Data Hub Catalog', 'i': 'security', 'u': '/data-hub/data-hub-catalog/security', 'd': '/data-hub/data-hub-catalog/', 'mo': 50, 'newDir': '/data-hub/data-hub-catalog//', 'p': 'data-hub-catalog/'}
+{'t': 'Share Data Between Apps', 'i': 'index', 'u': '/data-hub/share-data/', 'd': '/data-hub/share-data/', 'newDir': '/data-hub/share-data/', 'indexFlag': 'true'}

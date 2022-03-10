@@ -9,7 +9,7 @@ tags: ["data hub", "data hub catalog", "data source", "dataset"]
 
 ## 1 Introduction
 
-Finding the right data to use in your app development is made easier using the search functionality in the Data Hub Catalog. The details of registered data assets can be accessed using the [Data Hub Search API](/apidocs-mxsdk/apidocs/data-hub-apis), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Data Hub pane](/refguide/data-hub-pane) in Studio Pro.  This document describes how you can search in Data Hub Catalog.
+Finding the right data to use in your app development is made easier using the search functionality in the Data Hub Catalog. The details of registered data assets can be accessed using the [Data Hub Search API](/apidocs-mxsdk/apidocs/data-hub-apis/), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro.  This document describes how you can search in Data Hub Catalog.
 
 ## 2 Search Using the API {#search-api}
 
@@ -263,7 +263,7 @@ When searching in the Data Hub Catalog, the following fields are searched:
 
 From the **Data Hub Home** page, you can search the Catalog in the following ways:
 
-![data hub home page](/data-hub/share-data/attachments/share-data/data-hub-home.png)
+![data hub home page](/attachments/data-hub/share-data/data-hub-home.png)
 
 * Type a search term in the search box and click **Search** (search strings must be at least 3 alphanumeric characters)
 * Click one of the *tags* given in the search suggestions
@@ -276,13 +276,13 @@ Any of the above actions will take you to the **Search** screen.
 
 The **Search** screen is divided into the [search](#search-pane) pane on the left, the [asset details](#search-details) of the selected asset in the center panel, and the [asset metadata](#metadata) panel on the right.
 
-![search details](attachments/search/search-details-page.png)
+![search details](/attachments/data-hub/data-hub-catalog/search/search-details-page.png)
 
 ### 3.4 Search Pane {#search-pane}
 
 The collapsible **Search** pane is used to search for registered assets in the Data Hub Catalog:
 
- {{% image_container width="300" %}}![search pane](attachments/search/search-pane.png){{% /image_container %}}
+ {{% image_container width="300" %}}![search pane](/attachments/data-hub/data-hub-catalog/search/search-pane.png){{% /image_container %}}
 
 #### 3.4.1 Specifying the Search
 
@@ -294,7 +294,7 @@ You can filter search results by environment type. The **Production** environmen
 
 To change the environment type filter, click **Filter**:
 
-![filter box](attachments/search/dh-filter-box.png)
+![filter box](/attachments/data-hub/data-hub-catalog/search/dh-filter-box.png)
 
 In the **Filters** dialog box, check the **Environment Type** that you want to include in your search. Then click **Apply Filters**. The search results will only display results in the selected environments.
 
@@ -318,7 +318,7 @@ The contract of the published OData service (the *$metadata* document) contains 
 
 When a data source is selected in the search results, the following details are displayed:
 
-![service details](attachments/search/search-details-service.png)
+![service details](/attachments/data-hub/data-hub-catalog/search/search-details-service.png)
 
 * Application icon
 
@@ -351,7 +351,7 @@ You can perform the following actions from this screen:
 
 When a **Dataset** is selected in the search results, the following details are displayed in the **Search Details** panel.
 
-![search details entity](attachments/search/search-details-entity.png)
+![search details entity](/attachments/data-hub/data-hub-catalog/search/search-details-entity.png)
 
 ##### 3.5.2.1 General Information
 
@@ -378,7 +378,7 @@ You can perform the following actions from this screen:
 
  Under the **Associations** tab for each dataset, the associations are displayed:
 
- ![associations info](attachments/search/attributes-associations.png)
+ ![associations info](/attachments/data-hub/data-hub-catalog/search/attributes-associations.png)
 
 * **Name** – the name of the association that is exposed in the OData service contract.
 * **Navigates to** – the dataset the association is made with. Click the link to see the details of the associated dataset in the Catalog.
@@ -388,16 +388,16 @@ You can perform the following actions from this screen:
 
 The metadata panel at the right of the asset details screen displays details from the OData service metadata contract and values that have been curated in the Data Hub Catalog:
 
- {{% image_container width="300" %}}![metadata pane](attachments/search/metadata.png){{% /image_container %}}
+ {{% image_container width="300" %}}![metadata pane](/attachments/data-hub/data-hub-catalog/search/metadata.png){{% /image_container %}}
 
 #### 3.6.1 Tags
 
-These are the tags that have been assigned to the data source in the Catalog (for more information, see the [Adding or Editing Tags to a Service](curate#tags) section of *How to 
+These are the tags that have been assigned to the data source in the Catalog (for more information, see the [Adding or Editing Tags to a Service](/data-hub/data-hub-catalog/curate/#tags) section of *How to 
 Curate Registered Assets*). Tags assigned at a data source-level propagate down to the datasets and attributes exposed in the service.
 
 #### 3.6.2 Business Owner {#busines-owner}
 
-This is a link to the business owner of the data exposed in the data source. For more information, see the [Changing Owners of an App](curate#changing-owners) section of *How to Curate Registered Assets*.
+This is a link to the business owner of the data exposed in the data source. For more information, see the [Changing Owners of an App](/data-hub/data-hub-catalog/curate/#changing-owners) section of *How to Curate Registered Assets*.
 
 #### 3.6.3 Technical Owner
 
@@ -405,7 +405,7 @@ The technical contact of the app; by default this is the owner who registered th
 
 For apps hosted in the Mendix Cloud, the **Technical Owner** is the app developer that deployed the app.
 
-Technical owners can be [changed](curate#changing-owners).
+Technical owners can be [changed](/data-hub/data-hub-catalog/curate/#changing-owners).
 
 #### 3.6.4 Discoverability {#discoverability-metadata}
 
@@ -438,10 +438,10 @@ The environment type indicates the quality and the status of the data that the e
 
 The **Curation Bar** is displayed in the asset detail screen if you are the owner of the selected asset or a curator. In **Edit** > **Edit Metadata**, you can edit the information that is displayed in the Catalog for an asset:
 
-* For the selected data source, you can edit [Application Details](curate#curate-application) and [Data Source Details](curate#service-details)
-* For a selected dataset, you can edit [Dataset Details](curate#curate-datasets)
+* For the selected data source, you can edit [Application Details](/data-hub/data-hub-catalog/curate/#curate-application) and [Data Source Details](/data-hub/data-hub-catalog/curate/#service-details)
+* For a selected dataset, you can edit [Dataset Details](/data-hub/data-hub-catalog/curate/#curate-datasets)
 
-For further details, see [Curate Registered Assets](curate).
+For further details, see [Curate Registered Assets](/data-hub/data-hub-catalog/curate/).
 
 ### 3.8 Data Source and Dataset URIs
 
@@ -455,7 +455,7 @@ The resulting ZIP file is named `DataHub_<service_name>_<service_version>_<techn
 
 Here is an example:
 
-![download example](attachments/search/download_example.png)
+![download example](/attachments/data-hub/data-hub-catalog/search/download_example.png)
 
 When you click **Download**, the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`. This ZIP file has the folder `DataHub_SAP_Intelligence_1.0_OData4`, which contains the all the metadata files that define the service.
 

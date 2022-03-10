@@ -254,7 +254,7 @@ If you have already deployed your app, change the existing **LicenseToken** cons
 
 #### 3.6.3 For an App Deployed in Your Own Environment
 
-If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](/developerportal/deploy/index).
+If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](/developerportal/deploy/).
 
 ## 4 Usage
 

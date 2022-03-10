@@ -70,6 +70,6 @@ This flag indicates whether the current page should be closed.
 
 #### Sync Automatically (Only for "Save changes") {#on-leave-sync-automatically}
 
-When an object is saved in a Mendix application running in an [offline profile](/refguide7/hybrid-phone-profile/), this information is stored in a local database until it can be synchronized with the server. In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [syncing it](/refguide7/offline#synchronization/).
+When an object is saved in a Mendix application running in an [offline profile](/refguide7/hybrid-phone-profile/), this information is stored in a local database until it can be synchronized with the server. In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [syncing it](/refguide7/offline/#synchronization).
 
 This flag indicates whether synchronization should happen when the save button is clicked.

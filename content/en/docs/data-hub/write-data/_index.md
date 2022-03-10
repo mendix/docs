@@ -53,17 +53,17 @@ The OData updatable capability pertains to the data in your app. The Data Hub Ca
 
 To see the capabilities of a particular OData entity, do the following: 
 
-1. Go to the Data Hub Catalog and search for the name of an exposed OData service endpoint, entity, attribute, or association. For more information, see the [Using the Data Hub Catalog and Curating Your Own Service](/data-hub/share-data#use-and-curate) section in *Share Data Between Apps*.
+1. Go to the Data Hub Catalog and search for the name of an exposed OData service endpoint, entity, attribute, or association. For more information, see the [Using the Data Hub Catalog and Curating Your Own Service](/data-hub/share-data/#use-and-curate) section in *Share Data Between Apps*.
 2. Select your entity from the left-side search results pane. If you are not seeing many results, try removing the **Production** filter on your search.
 3. Notice the highlighted **CRUD** letters next to the entity name in the search panel and in the detailed information in the center. The purple letters indicate which operations are supported. The gray letters indicate which are not. Hover over the letters to see which operations are supported:
 
-    ![entity capabilities](attachments/crud-info.png)
+    ![entity capabilities](/attachments/data-hub/write-data/crud-info.png)
 
 ## 5 Consuming OData Resources in Your Mendix App
 
 Just like in the Catalog, you can see the **CRUD** capabilities of entities, attributes, and associations inside the **Data Hub** pane of Studio Pro.
 
-![crud capabilities](attachments/crud-capabilities.png)
+![crud capabilities](/attachments/data-hub/write-data/crud-capabilities.png)
 
 To consume an OData entity, do the following:
 
@@ -71,4 +71,4 @@ To consume an OData entity, do the following:
  2. Select your entity from the **Data Hub** pane. By default it shows only results published to the production environment. If you also want to see results from other environments, click the filter icon and check the **Show development environment** checkbox.
  3. Drag the entity to the domain model.
 
-Now you have an external entity in your domain model. Depending on the capabilities, for example the **CRUD** capabilities, you can generally use external entities to model your app as you would normally do, although there are some limitations. For more information on limitations, see the [External Entities Limitations](/refguide/external-entities#limitations) section in *External Entities*. 
+Now you have an external entity in your domain model. Depending on the capabilities, for example the **CRUD** capabilities, you can generally use external entities to model your app as you would normally do, although there are some limitations. For more information on limitations, see the [External Entities Limitations](/refguide/external-entities/#limitations) section in *External Entities*. 

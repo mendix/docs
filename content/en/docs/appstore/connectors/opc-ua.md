@@ -77,9 +77,7 @@ This is all you need to do to use the connector. However, there is also a sample
 
 The module/app is designed for usage with multiple servers if necessary. The state for each OPC UA server is kept by the client in an object of entity type **OpcUaServerCfg**. This  needs to be populated before the actions of the OPC UA client connector can be used. 
 
-{{% image_container width="300" %}}
-{{< figure src="/attachments/appstore/connectors/opc-ua/opcuaservercfg.png" alt="OPC UA Server configuration entity" >}}
-{{% /image_container %}}
+{{< figure src="/attachments/appstore/connectors/opc-ua/opcuaservercfg.png" alt="OPC UA Server configuration entity"  width="300" >}}
 
 For each OPC UA server, the following information will need to be stored in a OpcUaServerCfg object.
 
@@ -180,9 +178,7 @@ Subscriptions and MonitoredItems are automatically kept alive by the app & OPC U
 
 Information about nodes which are subscribed to is stored in the **MonitoredItem** entity associated with the **OpcUaServerCfg** server configuration & **Subscription** entity.  
 
-{{% image_container width="300" %}}
-{{< figure src="/attachments/appstore/connectors/opc-ua/monitoreditem.png" alt="The subscription entity" >}}
-{{% /image_container %}}
+{{< figure src="/attachments/appstore/connectors/opc-ua/monitoreditem.png" alt="The subscription entity"  width="300" >}}
 
 An object is created for each Node you request to monitor and contains the following information:
 
@@ -199,9 +195,7 @@ An object is created for each Node you request to monitor and contains the follo
 Information about unique **Subscription**s that are active with the OPC UA Server. The subscription is associated to a **OpcUaServerCfg** server configuration & at least one **Monitored Item**.  
 The subscription reflects the connection configuration with the OPC UA Server. 
 
-{{% image_container width="300" %}}
-{{< figure src="/attachments/appstore/connectors/opc-ua/subscription.png" alt="The subscription entity" >}}
-{{% /image_container %}}
+{{< figure src="/attachments/appstore/connectors/opc-ua/subscription.png" alt="The subscription entity" width="300" >}}
 
 This is the only object from the OpcUaClientMx domain that you should create from a microflow, you can create, change and commit this before passing it into the Subscribe action. If you choose to leave the parameter empty then an object is created automatically for each Node you request to monitor. The entity contains the following information:
 

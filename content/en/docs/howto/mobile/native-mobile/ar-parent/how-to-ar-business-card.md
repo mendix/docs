@@ -85,7 +85,7 @@ add two social media logos: a Twitter one and a LinkedIn one. You can use any 3D
 The following settings correctly place them underneath our business card (since scale can differ between 3D objects, this is not guarenteed to work with all 3D objects):
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-business-card/twitter-3d-object.png" alt="twitter 3d object"   width="300"  >}}{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-business-card/twitter-3d-object.png" alt="twitter 3d object"   width="300"  >}}
-{{% image_container width="300" %}}{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-business-card/linkedin-3d-object.png" alt="linkedin 3d object" >}}{{% /image_container %}}
+{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-business-card/linkedin-3d-object.png" alt="linkedin 3d object"  width="300" >}}
 
 Since you are using *.obj* files, you can alter the color or texture within Mendix. Currently, Twitter has a color of #1DA1F2 and Linkedin has #0A66C2:
 

@@ -121,7 +121,7 @@ Next, do the following:
 1.  The tool will set up your GitHub repository, commit your changes, configure App Center with two new apps (one for iOS and one for Android), and continue building your apps:
 
 	{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/deploying-native-app/build-release-app-build-step1.png" alt="Setting up build prerequisites"   width="350"  >}}{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/deploying-native-app/build-release-app-build-step1.png" alt="Setting up build prerequisites"   width="350"  >}}
-	{{% image_container width="350" %}}{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/deploying-native-app/build-release-app-build-step2.png" alt="Building release app" >}}{{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/deploying-native-app/build-release-app-build-step2.png" alt="Building release app"  width="350" >}}
 
 1.  After the build completes you can scan the QR code provided to install the app on your device. Currently the QR code service is only supported for Android devices:
 

@@ -3,7 +3,7 @@ title: "Runtime Server"
 url: /refguide8/runtime-server/
 category: "Mendix Runtime"
 description: "A description of the Runtime Server and how it functions"
-menu_order: 10
+weight: 10
 tags: ["runtime", "runtime server", "stateless", "database", "java", "microflows"]
 ---
 

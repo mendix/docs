@@ -2,7 +2,7 @@
 title: "Show Home Page"
 url: /refguide/show-home-page/
 parent: "client-activities"
-menu_order: 30
+weight: 30
 tags: ["studio pro", "show home page", "home page", "client activities"]
 aliases:
     - /refguide/Show+Home+Page.html

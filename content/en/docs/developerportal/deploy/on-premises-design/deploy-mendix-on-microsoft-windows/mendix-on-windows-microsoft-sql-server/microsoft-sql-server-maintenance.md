@@ -2,7 +2,7 @@
 title: "Maintenance of SQL Server"
 url: /developerportal/deploy/microsoft-sql-server-maintenance/
 parent: "mendix-on-windows-microsoft-sql-server"
-menu_order: 40
+weight: 40
 ---
 
 {{% alert color="info" %}}

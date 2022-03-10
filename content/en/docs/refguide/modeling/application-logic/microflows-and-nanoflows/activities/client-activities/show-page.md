@@ -2,7 +2,7 @@
 title: "Show Page"
 url: /refguide/show-page/
 parent: "client-activities"
-menu_order: 50
+weight: 50
 tags: ["studio pro", "show page", "client activity"]
 aliases:
     - /refguide/Show+Page.html

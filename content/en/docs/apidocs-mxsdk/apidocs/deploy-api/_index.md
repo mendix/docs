@@ -3,7 +3,7 @@ title: "Deploy API"
 url: /apidocs-mxsdk/apidocs/deploy-api/
 category: "API Documentation"
 description: "APIs which can be used to deploy Mendix apps to licensed nodes"
-menu_order: 25
+weight: 25
 tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

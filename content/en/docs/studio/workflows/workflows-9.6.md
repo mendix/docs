@@ -2,7 +2,7 @@
 title: "Using Workflows in Apps with Mendix Version 9.6 and Above"
 url: /studio/workflows-9.6/
 category: "Workflows"
-menu_order: 05
+weight: 05
 tags: ["workflow", "workflows", "9.6", "beta"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

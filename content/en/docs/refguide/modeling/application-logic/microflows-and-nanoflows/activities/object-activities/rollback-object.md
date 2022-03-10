@@ -2,7 +2,7 @@
 title: "Rollback Object"
 url: /refguide/rollback-object/
 parent: "object-activities"
-menu_order: 70
+weight: 70
 tags: ["studio pro"]
 ---
 

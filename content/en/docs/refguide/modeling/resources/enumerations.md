@@ -2,7 +2,7 @@
 title: "Enumerations"
 url: /refguide/enumerations/
 parent: "resources"
-menu_order: 40
+weight: 40
 tags: ["studio pro", "enumeration", "enumeration values", "enumeration value"]
 aliases:
     - /refguide/enumeration-values.html

@@ -2,7 +2,7 @@
 title: "Contribute to a Mendix GitHub Repository"
 url: /howto/collaboration-requirements-management/contribute-to-a-github-repository/
 category: "Collaboration"
-menu_order: 20
+weight: 20
 tags: ["GitHub", "contribute", "community"]
 ---
 

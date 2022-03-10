@@ -2,7 +2,7 @@
 title: "Change Object"
 url: /refguide8/change-object/
 parent: "object-activities"
-menu_order: 20
+weight: 20
 tags: ["studio pro"]
 ---
 

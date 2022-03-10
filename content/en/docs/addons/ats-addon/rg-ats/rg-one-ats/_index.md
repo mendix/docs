@@ -2,7 +2,7 @@
 title: "ATS 1 Reference Guide"
 url: /addons/ats-addon/rg-one-ats/
 parent: "rg-ats"
-menu_order: 20
+weight: 20
 ---
 
 These are the main documents in this section:

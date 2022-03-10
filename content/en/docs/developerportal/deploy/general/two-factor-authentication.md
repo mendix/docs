@@ -2,7 +2,7 @@
 title: "Two-Factor Authentication"
 url: /developerportal/deploy/two-factor-authentication/
 parent: "general"
-menu_order: 20
+weight: 20
 description: "What is Two-Factor Authentication and how to set up and change it."
 tags: ["Authenticator","Developer Portal","Cloud","Permissions", "Google", "2FA", "Two-factor authentication", "SMS"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

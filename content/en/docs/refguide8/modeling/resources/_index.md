@@ -2,7 +2,7 @@
 title: "Resources"
 url: /refguide8/resources/
 category: "App Modeling"
-menu_order: 50
+weight: 50
 tags: ["studio pro", "resources"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---

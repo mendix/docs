@@ -2,7 +2,7 @@
 title: "Snippet"
 url: /refguide8/snippet/
 parent: "page-resources"
-menu_order: 30
+weight: 30
 tags: ["studio pro", "snippet", "page resources"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

@@ -2,7 +2,7 @@
 title: "Manage App Performance"
 url: /howto/monitoring-troubleshooting/manage-app-performance/
 category: "Monitoring & Troubleshooting"
-menu_order: 12
+weight: 12
 tags: ["monitoring", "troubleshooting", "performance", "new relic"]
 ---
 

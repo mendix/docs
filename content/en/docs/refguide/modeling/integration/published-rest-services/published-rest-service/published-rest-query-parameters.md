@@ -2,7 +2,7 @@
 title: "Published REST Query Parameters"
 url: /refguide/published-rest-query-parameters/
 parent: "published-rest-service"
-menu_order: 40
+weight: 40
 description: "Parameters for a published REST query"
 tags: ["published REST", "query", "parameters", "Date and Time format", "studio pro"]
 # Merge into published rest service document

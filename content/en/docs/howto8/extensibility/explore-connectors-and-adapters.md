@@ -2,7 +2,7 @@
 title: "Explore Connectors & Adapters"
 url: /howto8/extensibility/explore-connectors-and-adapters/
 category: "Extensibility"
-menu_order: 70
+weight: 70
 tags: ["extensibility", "connector", "adapter", "extensibility"]
 ---
 

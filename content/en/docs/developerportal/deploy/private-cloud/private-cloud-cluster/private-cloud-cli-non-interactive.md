@@ -3,7 +3,7 @@ title: "Install and Configure Mendix for Private Cloud Non-interactive Mode"
 url: /developerportal/deploy/private-cloud-cli-non-interactive/
 parent: "private-cloud-cluster"
 description: "Describes how to install and configure Mendix for Private Cloud in non-interactive mode"
-menu_order: 5
+weight: 5
 tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

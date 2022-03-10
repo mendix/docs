@@ -2,7 +2,7 @@
 title: "Atlas UI"
 url: /howto8/front-end/atlas-ui/
 category: "Front End"
-menu_order: 5
+weight: 5
 tags: ["Atlas", "UI", "UX", "user experience"]
 aliases:
     - /howto8/front-end/create-a-custom-theme-with-the-mendix-ui-framework.html

@@ -2,7 +2,7 @@
 title: "Uninstall Steps"
 url: /addons/apd-addon/ig-one-uninstall-steps/
 parent: "ig-one"
-menu_order: 3
+weight: 3
 ---
 
 ## 1 Introduction

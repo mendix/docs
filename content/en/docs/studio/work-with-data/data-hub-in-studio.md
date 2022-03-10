@@ -2,7 +2,7 @@
 title: "Data Hub in Studio"
 url: /studio/data-hub-in-studio/
 category: "Working with Data"
-menu_order: 30
+weight: 30
 description: "Describes the Data Hub Catalog usage in Mendix Studio."
 tags: ["studio", "data hub", "data hub catalog", "external entities"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

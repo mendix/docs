@@ -2,7 +2,7 @@
 title: "Mathematical Function Calls"
 url: /refguide8/mathematical-function-calls/
 parent: "expressions"
-menu_order: 70
+weight: 70
 tags: ["studio pro", "mathematical function call", "mathematical function", "expressions"]
 ---
 

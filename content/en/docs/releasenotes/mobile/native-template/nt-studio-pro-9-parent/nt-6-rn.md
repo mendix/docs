@@ -2,7 +2,7 @@
 title: "Native Template 6"
 url: /releasenotes/mobile/nt-6-rn/
 parent: "nt-studio-pro-9-parent"
-menu_order: 10
+weight: 10
 description: "Native Template 6 release notes."
 ---
 ## 6.2.12

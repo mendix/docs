@@ -3,7 +3,7 @@ title: "Creating a Private Cloud Cluster"
 url: /developerportal/deploy/private-cloud-cluster/
 parent: "private-cloud"
 description: "Describes the processes for creating a Private Cloud cluster in the Mendix Developer Portal"
-menu_order: 10
+weight: 10
 tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

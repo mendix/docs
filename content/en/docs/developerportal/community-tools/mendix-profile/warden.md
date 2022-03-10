@@ -2,7 +2,7 @@
 title: "Create a Personal Access Token with Warden"
 url: /developerportal/community-tools/warden/
 parent: "mendix-profile"
-menu_order: 10
+weight: 10
 description: "Explains the concept of Personal Access Tokens (PATs) and how platform users can use these security tokens to give application access to Mendix platform services on their behalf."
 tags: ["Personal Access Token", "API", "PAT", "Warden", "Developer Portal"]
 ---

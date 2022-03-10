@@ -2,7 +2,7 @@
 title: "Distribution"
 url: /howto/mobile/distribution/
 parent: "native-mobile"
-menu_order: 40
+weight: 40
 description: Distribute native mobile apps.
 tags: ["native", "mobile", "start", "quickstart"]
 ---

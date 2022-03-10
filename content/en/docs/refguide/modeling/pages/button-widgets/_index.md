@@ -2,7 +2,7 @@
 title: "Buttons"
 url: /refguide/button-widgets/
 parent: "pages"
-menu_order: 40
+weight: 40
 tags: ["studio pro", "button widgets", "buttons", "widget"]
 aliases:
     - /refguide/action-button.html

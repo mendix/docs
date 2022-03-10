@@ -3,7 +3,7 @@ title: "Supported Providers"
 url: /developerportal/deploy/private-cloud-supported-environments/
 parent: "private-cloud"
 description: "Describes which providers are supported by Mendix for Private Cloud"
-menu_order: 50
+weight: 50
 tags: ["Private Cloud", "Cluster", "Operator", "Deploy", "Provider", "Registry", "Database"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

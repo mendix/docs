@@ -2,7 +2,7 @@
 title: "Expose a Web Service"
 url: /howto8/integration/expose-a-web-service/
 category: "Integration"
-menu_order: 12
+weight: 12
 description: "Describes how Mendix supports exposing the functionality and data of your app using web services."
 tags: ["web service", "expose", "integration"]
 ---

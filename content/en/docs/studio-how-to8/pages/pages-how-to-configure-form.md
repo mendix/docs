@@ -3,7 +3,7 @@ title: "Configure a Form and Show Items Related to It"
 url: /studio-how-to8/pages-how-to-configure-form/
 category: "Pages"
 description: "Describes how to configure a list of items in Mendix Studio."
-menu_order: 10
+weight: 10
 tags: ["studio", "pages", "list", "how to"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

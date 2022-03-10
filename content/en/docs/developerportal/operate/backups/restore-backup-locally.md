@@ -5,7 +5,7 @@ url: /developerportal/operate/restore-backup-locally/
 linktitle: "restore backup locally"
 url: /developerportal/operate/restore-backup-locally/
 parent: "backups"
-menu_order: 40
+weight: 40
 description: "This page describes how to restore a backup."
 tags: ["Backup","Restore","Local","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

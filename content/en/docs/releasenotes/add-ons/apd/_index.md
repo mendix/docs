@@ -2,7 +2,7 @@
 title: "APD"
 url: /releasenotes/add-ons/apd/
 category: "Quality Add-ons"
-menu_order: 20 
+weight: 20 
 ---
 
 These are the [Mendix Application Performance Diagnistics (APD)](/addons/apd-addon/) major version release notes:

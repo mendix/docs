@@ -2,7 +2,7 @@
 title: "1"
 url: /releasenotes/add-ons/apm-1/
 parent: "apd"
-menu_order: 3
+weight: 3
 ---
 
 These are the release notes for Mendix Application Performance Monitor version 1:

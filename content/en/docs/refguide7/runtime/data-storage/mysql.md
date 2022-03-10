@@ -2,7 +2,7 @@
 title: "MySQL/MariaDB"
 url: /refguide7/mysql/
 parent: "data-storage"
-menu_order: 50
+weight: 50
 ---
 
 ## 1 Introduction

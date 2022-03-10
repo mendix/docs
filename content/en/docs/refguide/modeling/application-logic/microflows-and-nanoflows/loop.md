@@ -2,7 +2,7 @@
 title: "Loop"
 url: /refguide/loop/
 parent: "microflows-and-nanoflows"
-menu_order: 80
+weight: 80
 tags: ["studio pro", "loop", "iterate over", "for each", "while"]
 ---
 

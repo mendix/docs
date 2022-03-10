@@ -3,7 +3,7 @@ title: "Go to Option"
 url: /refguide8/go-to-option/
 parent: "edit-menu"
 description: "Describes the Go to option in Mendix Studio Pro."
-menu_order: 40
+weight: 40
 tags: ["project", "go to", "navigation", "usage"]
 ---
 

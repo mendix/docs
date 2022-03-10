@@ -2,7 +2,7 @@
 title: "Manage App Performance with AppDynamics"
 url: /howto8/monitoring-troubleshooting/manage-app-performance-with-appdynamics/
 parent: "manage-app-performance"
-menu_order: 1
+weight: 1
 tags: ["monitoring", "troubleshooting", "performance", "appdynamics"]
 ---
 

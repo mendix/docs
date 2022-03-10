@@ -3,7 +3,7 @@ title: "File Menu"
 url: /refguide/file-menu/
 parent: "menus"
 description: "Describes the File Menu in Studio Pro."
-menu_order: 5
+weight: 5
 tags: ["Studio Pro", "file menu", "file"]
 ---
 

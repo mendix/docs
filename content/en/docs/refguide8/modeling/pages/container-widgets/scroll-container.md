@@ -2,7 +2,7 @@
 title: "Scroll Container"
 url: /refguide8/scroll-container/
 parent: "container-widgets"
-menu_order: 50
+weight: 50
 tags: ["studio pro", "scroll container", "container widget", "widget"]
 aliases:
     - /refguide8/horizontal-split-pane.html

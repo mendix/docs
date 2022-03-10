@@ -2,7 +2,7 @@
 title: "JavaScript Action Call"
 url: /refguide/javascript-action-call/
 parent: "action-call-activities"
-menu_order: 20
+weight: 20
 description: "This reference explains the properties of the JavaScript action call activity."
 tags: ["javascript", "return", "variable", "studio pro", "action call"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

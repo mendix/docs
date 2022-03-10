@@ -3,7 +3,7 @@ title: "Microflow Source"
 url: /refguide8/microflow-source/
 parent: "data-sources"
 tags: ["studio pro", "microflow source", "data source"]
-menu_order: 40
+weight: 40
 ---
 
 {{% alert color="info" %}}

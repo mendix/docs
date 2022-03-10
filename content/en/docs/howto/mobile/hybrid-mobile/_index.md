@@ -2,7 +2,7 @@
 title: "Hybrid Mobile"
 url: /howto/mobile/hybrid-mobile/
 category: "Mobile"
-menu_order: 2
+weight: 2
 tags: ["mobile", "hybrid"]
 ---
 

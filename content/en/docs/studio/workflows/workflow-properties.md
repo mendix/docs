@@ -2,7 +2,7 @@
 title: "Workflow Properties"
 url: /studio/workflow-properties/
 category: "Workflows"
-menu_order: 10
+weight: 10
 tags: ["workflow", "workflows", "workflow properties", "Studio"]
 ---
 

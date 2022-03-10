@@ -2,7 +2,7 @@
 title: "App Node Requests"
 url: /developerportal/support/new-app-node-request-template/
 category: "Mendix Support"
-menu_order: 3
+weight: 3
 tags: ["Support", "app node", "node", "license", "subscription secret"]
 aliases:
     - /developerportal/support/new-app-request-template.html

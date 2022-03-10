@@ -2,7 +2,7 @@
 title: "Project Settings"
 url: /refguide8/project-settings/
 parent: "project"
-menu_order: 10
+weight: 10
 description: "Settings which apply to the project app as a whole."
 tags: ["project", "app", "configuration", "runtime", "Studio Pro", "languages", "certificate", "theme", "hashing", "hashing algorithm"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

@@ -2,7 +2,7 @@
 title: "Get Started with the TimeSeries Connector"
 url: /howto/extensibility/get-started-with-the-timeseries-connector/
 category: "Extensibility"
-menu_order: 100
+weight: 100
 tags: ["iot", "connector", "timeseries", "big data", "analytics", "extensibility"]
 ---
 

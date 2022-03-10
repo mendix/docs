@@ -2,7 +2,7 @@
 title: "Make It Native Apps"
 url: /releasenotes/mobile/make-it-native-parent/
 category: "Mobile"
-menu_order: 8
+weight: 8
 description: "Make It Native apps information."
 ---
 

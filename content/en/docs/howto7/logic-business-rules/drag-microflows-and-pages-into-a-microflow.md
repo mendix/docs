@@ -2,7 +2,7 @@
 title: "Drag Microflows & Pages into a Microflow"
 url: /howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/
 category: "Logic & Business Rules"
-menu_order: 4
+weight: 4
 tags: ["microflow", "logic", "page"]
 ---
 

@@ -3,7 +3,7 @@ title: "Context Source"
 url: /refguide8/context-source/
 parent: "data-sources"
 tags: ["studio pro", "context", "data source"]
-menu_order: 30
+weight: 30
 ---
 
 {{% alert color="info" %}}

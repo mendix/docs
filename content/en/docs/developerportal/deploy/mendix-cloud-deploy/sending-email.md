@@ -2,7 +2,7 @@
 title: "Sending Email"
 url: /developerportal/deploy/sending-email/
 parent: "mendix-cloud-deploy"
-menu_order: 40
+weight: 40
 description: "How to use external email providers in Mendix, and how to configure Mendix mail on Cloud v3"
 tags: ["email", "smtp", "sending policy framework", "Cloud v3", "SPF"]
 aliases:

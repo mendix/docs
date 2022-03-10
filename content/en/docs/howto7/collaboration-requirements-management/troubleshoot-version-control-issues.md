@@ -2,7 +2,7 @@
 title: "Solving Known Version Control Issues"
 url: /howto7/collaboration-requirements-management/troubleshoot-version-control-issues/
 category: "Collaboration & Requirements Management"
-menu_order: 7
+weight: 7
 description: "This document presents a list of problems and fixes for version control issues."
 tags: ["version control", "troubleshoot", "modeler"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

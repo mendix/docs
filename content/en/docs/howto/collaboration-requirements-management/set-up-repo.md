@@ -2,7 +2,7 @@
 title: "Set Up a GitHub Repo to Publish a Marketplace Item"
 url: /howto/collaboration-requirements-management/set-up-repo/
 category: "Collaboration"
-menu_order: 30
+weight: 30
 tags: ["studio pro", "GitHub", "repository", "repo"]
 ---
 

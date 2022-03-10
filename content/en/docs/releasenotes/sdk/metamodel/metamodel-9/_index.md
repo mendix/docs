@@ -1,7 +1,7 @@
 ---
 title: "9"
 url: /releasenotes/sdk/metamodel-9/
-menu_order: 1
+weight: 1
 parent: "metamodel" 
 ---
 

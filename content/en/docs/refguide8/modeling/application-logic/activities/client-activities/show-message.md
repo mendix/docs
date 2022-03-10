@@ -2,7 +2,7 @@
 title: "Show Message"
 url: /refguide8/show-message/
 parent: "client-activities"
-menu_order: 4
+weight: 4
 tags: ["studio pro", "show message", "client activities"]
 aliases:
     - /refguide8/Show+Message.html

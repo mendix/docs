@@ -2,7 +2,7 @@
 title: "MySQL/MariaDB"
 url: /refguide8/mysql/
 parent: "data-storage"
-menu_order: 50
+weight: 50
 tags: ["studio pro"]
 ---
 

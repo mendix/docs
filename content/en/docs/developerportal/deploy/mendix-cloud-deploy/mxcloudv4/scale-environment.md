@@ -2,7 +2,7 @@
 title: "Scaling Your Environment in Mendix Cloud v4"
 url: /developerportal/deploy/scale-environment/
 parent: "mxcloudv4"
-menu_order: 20
+weight: 20
 description: "Describes how to scale your environments in Mendix Cloud v4."
 tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

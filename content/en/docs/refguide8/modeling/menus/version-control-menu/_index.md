@@ -3,7 +3,7 @@ title: "Version Control Menu"
 url: /refguide8/version-control-menu/
 parent: "menus"
 description: "Describes the Project Menu in Studio Pro."
-menu_order: 40
+weight: 40
 tags: ["Studio Pro", "project menu", "top bar"]
 ---
 

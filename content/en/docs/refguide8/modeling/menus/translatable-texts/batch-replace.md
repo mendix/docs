@@ -2,7 +2,7 @@
 title: "Batch Replace"
 url: /refguide8/batch-replace/
 parent: "translatable-texts"
-menu_order: 20
+weight: 20
 tags: ["studio pro", "translation", "languages", "translatable text"]
 ---
 

@@ -2,7 +2,7 @@
 title: "Java Actions"
 url: /refguide/java-actions/
 parent: "resources"
-menu_order: 10
+weight: 10
 description: "Describes using Java Actions to extend the functionality of your Mendix app."
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

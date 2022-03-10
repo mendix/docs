@@ -3,7 +3,7 @@ title: "Association Source"
 url: /refguide8/association-source/
 parent: "data-sources"
 tags: ["studio pro", "association", "data source"]
-menu_order: 60
+weight: 60
 ---
 
 {{% alert color="info" %}}

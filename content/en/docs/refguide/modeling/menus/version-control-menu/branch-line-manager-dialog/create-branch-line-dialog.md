@@ -2,7 +2,7 @@
 title: "Create Branch Line"
 url: /refguide/create-branch-line-dialog/
 parent: "branch-line-manager-dialog"
-menu_order: 10
+weight: 10
 tags: ["studio pro", "create branch line"]
 ---
 

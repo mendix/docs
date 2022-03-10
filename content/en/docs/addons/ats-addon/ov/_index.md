@@ -2,7 +2,7 @@
 title: "ATS Overview"
 url: /addons/ats-addon/ov/
 category: "ATS"
-menu_order: 1
+weight: 1
 ---
 
 ## 1 Introduction

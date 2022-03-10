@@ -2,7 +2,7 @@
 title: "Use the Java API"
 url: /howto7/logic-business-rules/java-api-tutorial/
 category: "Logic & Business Rules"
-menu_order: 13
+weight: 13
 tags: ["microflow", "logic", "java", "api"]
 ---
 

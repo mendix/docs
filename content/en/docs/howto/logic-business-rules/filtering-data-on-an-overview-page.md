@@ -2,7 +2,7 @@
 title: "Filter Data on an Overview Page Using XPath"
 url: /howto/logic-business-rules/filtering-data-on-an-overview-page/
 category: "Logic & Business Rules"
-menu_order: 150
+weight: 150
 tags: ["filter", "xpath"]
 ---
 

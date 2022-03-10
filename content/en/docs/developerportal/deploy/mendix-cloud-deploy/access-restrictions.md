@@ -2,7 +2,7 @@
 title: "Restrict Access for Incoming Requests"
 url: /developerportal/deploy/access-restrictions/
 parent: "mendix-cloud-deploy"
-menu_order: 36
+weight: 36
 description: "How to limit access to your app using IP addresses and certificates"
 tags: ["incoming requests", "IP Range", "security", "paths", "URL", "certificate"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

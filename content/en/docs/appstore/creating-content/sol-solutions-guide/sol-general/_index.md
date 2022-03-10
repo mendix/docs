@@ -2,7 +2,7 @@
 title: "General Info"
 url: /appstore/creating-content/sol-general/
 parent: "sol-solutions-guide"
-menu_order: 10
+weight: 10
 tags: ["solutions", "adaptive solutions"]
 ---
 

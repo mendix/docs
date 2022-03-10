@@ -2,7 +2,7 @@
 title: "Image"
 url: /refguide8/image/
 parent: "common-widgets"
-menu_order: 20
+weight: 20
 tags: ["studio pro", "image", "image widget"]
 aliases:
     - /refguide8/image-property.html

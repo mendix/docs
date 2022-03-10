@@ -3,7 +3,7 @@ title: "Text"
 url: /studio8/page-editor-widgets-text/
 parent: "page-editor-widgets"
 description: "Describes typography widgets in Mendix Studio."
-menu_order: 40
+weight: 40
 tags: ["studio", "page editor", "typography", "text widgets", "widgets"]
 ---
 

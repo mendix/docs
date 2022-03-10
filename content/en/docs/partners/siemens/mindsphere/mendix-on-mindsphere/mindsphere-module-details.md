@@ -2,7 +2,7 @@
 title: "MindSphere Module Details"
 url: /partners/siemens/mindsphere-module-details/
 parent: "mendix-on-mindsphere"
-menu_order: 20
+weight: 20
 description: "A detailed description of the modules which are required for deployment to MindSphere"
 tags: ["MindSphere"]
 aliases:

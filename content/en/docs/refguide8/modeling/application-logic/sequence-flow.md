@@ -2,7 +2,7 @@
 title: "Sequence Flow"
 url: /refguide8/sequence-flow/
 parent: "application-logic"
-menu_order: 30
+weight: 30
 tags: ["studio pro", "sequence flow", "microflow"]
 ---
 

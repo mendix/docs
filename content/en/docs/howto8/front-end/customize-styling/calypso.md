@@ -2,7 +2,7 @@
 title: "Customize Styling Using Calypso"
 url: /howto8/front-end/calypso/
 parent: "customize-styling"
-menu_order: 10
+weight: 10
 tags: ["Atlas", "UI", "UX", "Calypso", "styling", "CSS", "low-code"]
 description: "This document will teach you to use Calypso, a tool which improves the way you edit styling."
 ---

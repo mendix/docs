@@ -2,7 +2,7 @@
 title: "Persistability"
 url: /refguide8/persistability/
 parent: "entities"
-menu_order: 20
+weight: 20
 tags: ["domain model", "entity", "persistability", "persistable", "non-persistable"]
 ---
 

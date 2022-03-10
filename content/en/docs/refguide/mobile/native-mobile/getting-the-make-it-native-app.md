@@ -2,7 +2,7 @@
 title: "Getting the Make It Native App"
 url: /refguide/getting-the-make-it-native-app/
 parent: "native-mobile"
-menu_order: 10
+weight: 10
 tags: ["Android", "iOS", "native", "debug"]
 ---
 

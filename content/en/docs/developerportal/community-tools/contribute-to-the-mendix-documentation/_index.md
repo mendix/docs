@@ -2,7 +2,7 @@
 title: "Contribute to the Documentation"
 url: /developerportal/community-tools/contribute-to-the-mendix-documentation/
 category: "Community Tools"
-menu_order: 5
+weight: 5
 description: "Describes how to add and edit Mendix documentation as a Mendix community member."
 tags: ["documentation", "community"]
 #If moving or renaming this doc file, update the link in the site footer and links in the mendix/docs repo. See Mapping to Products for more details.

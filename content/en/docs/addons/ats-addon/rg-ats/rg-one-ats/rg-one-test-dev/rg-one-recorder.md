@@ -2,7 +2,7 @@
 title: "Recorder"
 url: /addons/ats-addon/rg-one-recorder/
 parent: "rg-one-test-dev"
-menu_order: 2
+weight: 2
 ---
 
 The recorder is a function/plugin within ATS which will record the actions behind your test steps during manually testing an application. After saving your recorded actions they are directly added to your active test case.

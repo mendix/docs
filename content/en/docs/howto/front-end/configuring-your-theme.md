@@ -2,7 +2,7 @@
 title: "Configure Your Theme"
 url: /howto/front-end/configuring-your-theme/
 category: "Front End"
-menu_order: 15
+weight: 15
 tags: ["theming", "UX", "front end"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

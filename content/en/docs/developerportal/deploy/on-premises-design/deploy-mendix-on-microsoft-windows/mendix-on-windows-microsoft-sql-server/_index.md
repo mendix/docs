@@ -2,7 +2,7 @@
 title: "Microsoft SQL Server"
 url: /developerportal/deploy/mendix-on-windows-microsoft-sql-server/
 parent: "deploy-mendix-on-microsoft-windows"
-menu_order: 30
+weight: 30
 ---
 
 This section describes how to set up your Microsoft SQL Server user, notification, and maintenance plans for use with your Mendix installation.

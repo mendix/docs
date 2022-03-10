@@ -2,7 +2,7 @@
 title: "Publish Data to Other Mendix Apps Using an App Service"
 url: /howto7/integration/publish-data-to-other-mendix-apps-using-an-app-service/
 category: "Integration"
-menu_order: 14
+weight: 14
 description: "Describes how to use an app service to publish data to other Mendix apps."
 tags: ["integration", "app service", "publish"]
 ---

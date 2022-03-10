@@ -2,7 +2,7 @@
 title: "Other Deployment Options"
 url: /releasenotes/developer-portal/on-premises/
 category: "Deployment"
-menu_order: 40
+weight: 40
 description: "Release notes for On-premises deployments based on Virtual Machine (Windows and Linux) and Buildpacks (Cloud Foundry and Docker)"
 tags: ["release notes", "deployment", "on-premises", "buildpack", "cloud foundry", "docker", "IBM Cloud Portal"]
 ---

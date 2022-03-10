@@ -2,7 +2,7 @@
 title: "Continue Event"
 url: /refguide8/continue-event/
 parent: "events"
-menu_order: 4
+weight: 4
 tags: ["studio pro", "continue event", "event", "loop"]
 ---
 

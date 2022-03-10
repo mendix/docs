@@ -2,7 +2,7 @@
 title: "Make It Native 8 App"
 url: /releasenotes/mobile/make-it-native-app/
 parent: make-it-native-parent
-menu_order: 10
+weight: 10
 description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
 tags: ["Native", "Android", "iOS", "Apple", "mendix 8"]
 ---

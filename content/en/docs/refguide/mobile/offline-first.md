@@ -2,7 +2,7 @@
 title: "Offline-First"
 url: /refguide/offline-first/
 category: "Mobile"
-menu_order: 30
+weight: 30
 tags: ["offline", "native", "mobile", "studio pro"]
 ---
 

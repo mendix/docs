@@ -2,7 +2,7 @@
 title: "Integration Activities"
 url: /refguide/integration-activities/
 parent: "activities"
-menu_order: 60
+weight: 60
 tags: ["studio pro"]
 ---
 {{% alert color="warning" %}}

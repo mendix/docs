@@ -2,7 +2,7 @@
 title: "Use the Platform SDK"
 url: /apidocs-mxsdk/mxsdk/using-platform-sdk/
 parent: "sdk-howtos"
-menu_order: 12
+weight: 12
 ---
 
 ## 1 Introduction 

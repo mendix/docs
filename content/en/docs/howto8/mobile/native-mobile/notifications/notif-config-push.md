@@ -2,7 +2,7 @@
 title: "Configure Push Notifications"
 url: /howto8/mobile/notif-config-push/
 parent: "notifications"
-menu_order: 56
+weight: 56
 description: Tutorial for configuring push notifications.
 tags: ["mobile", "native", "push", "local", "firebase"]
 ---

@@ -2,7 +2,7 @@
 title: "Boolean Expressions"
 url: /refguide8/boolean-expressions/
 parent: "expressions"
-menu_order: 50
+weight: 50
 tags: ["studio pro", "expression", "expressions", "Boolean"]
 ---
 

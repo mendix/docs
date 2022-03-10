@@ -2,7 +2,7 @@
 title: "Decision"
 url: /studio8/microflows-decision/
 category: "Microflows"
-menu_order: 20
+weight: 20
 description: "Describes a decision in Mendix Studio."
 tags: ["studio", "microflow", "exclusive split", "decision"]
 ---

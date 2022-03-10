@@ -2,7 +2,7 @@
 title: "Simple Menu Bar"
 url: /refguide/simple-menu-bar/
 parent: "menu-widgets"
-menu_order: 2
+weight: 2
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

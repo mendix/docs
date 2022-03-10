@@ -2,7 +2,7 @@
 title: "Parse Integer"
 url: /refguide/parse-integer/
 parent: "expressions"
-menu_order: 140
+weight: 140
 description: "Describes the function for parsing integer from strings in Mendix."
 tags: ["studio pro", "expressions", "parse", "integer"]
 ---

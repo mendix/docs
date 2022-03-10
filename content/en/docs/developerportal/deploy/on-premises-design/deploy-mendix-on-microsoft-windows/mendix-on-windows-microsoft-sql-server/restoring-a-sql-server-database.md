@@ -2,7 +2,7 @@
 title: "Restore Database on SQL Server"
 url: /developerportal/deploy/restoring-a-sql-server-database/
 parent: "mendix-on-windows-microsoft-sql-server"
-menu_order: 70
+weight: 70
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

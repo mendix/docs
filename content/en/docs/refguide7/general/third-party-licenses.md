@@ -2,7 +2,7 @@
 title: "Third-Party Licenses"
 url: /refguide7/third-party-licenses/
 category: "General"
-menu_order: 70
+weight: 70
 ---
 
 

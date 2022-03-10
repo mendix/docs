@@ -2,7 +2,7 @@
 title: "Set Up the Navigation Structure"
 url: /howto7/general/setting-up-the-navigation-structure/
 category: "General"
-menu_order: 30
+weight: 30
 tags: []
 ---
 Once you've created some pages you want to give users the ability to access them. The easiest way to do this is by using a navigation menu. The navigation editor of the Desktop Modeler allows you define navigation menus for desktop, tablet and phone interfaces. It also allows you to define which page is shown as a default home page depending on the user role.

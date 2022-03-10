@@ -2,7 +2,7 @@
 title: "Get Started with AR"
 url: /howto/mobile/how-to-ar-simple-cube/
 parent: "ar-parent"
-menu_order: 10
+weight: 10
 description: "In this how-to you will make a 3D cube by dragging and dropping widgets into your Mendix app."
 tags: ["AR", "VR", "mixed reality", "augmented reality", "virtual reality"]
 ---

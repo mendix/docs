@@ -2,7 +2,7 @@
 title: "Metrics"
 url: /developerportal/operate/metrics/
 category: "Operations"
-menu_order: 10
+weight: 10
 description: "This page describes the Metrics page of the Developer Portal."
 tags: ["Operate","App","Trends","Running now","Cache","Metrics","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

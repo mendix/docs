@@ -5,7 +5,7 @@ description: A guide for understanding native dependencies for pluggable widgets
 tags: ["Widget", "Pluggable",  "JavaScript", "Native"]
 
 parent: "pluggable-widgets"
-menu_order: 40
+weight: 40
 aliases:
  - /apidocs-mxsdk/apidocs/native-dependencies
 ---

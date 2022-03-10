@@ -2,7 +2,7 @@
 title: "Test the Implementation"
 url: /howto7/mobile/testing-the-implementation/
 parent: "push-notifications"
-menu_order: 60
+weight: 60
 tags: ["mobile", "push notification"]
 ---
 

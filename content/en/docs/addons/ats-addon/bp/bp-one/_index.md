@@ -2,7 +2,7 @@
 title: "ATS 1 Best Practices"
 url: /addons/ats-addon/bp-one/
 parent: "bp"
-menu_order: 20
+weight: 20
 ---
 
 These are the main documents in this section:

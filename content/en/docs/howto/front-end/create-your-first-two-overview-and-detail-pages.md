@@ -2,7 +2,7 @@
 title: "Create Your First Two Overview & Detail Pages"
 url: /howto/front-end/create-your-first-two-overview-and-detail-pages/
 category: "Front End"
-menu_order: 25
+weight: 25
 tags: ["front end"]
 ---
 

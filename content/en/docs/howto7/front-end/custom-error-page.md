@@ -2,7 +2,7 @@
 title: "Create Custom Error Pages"
 url: /howto7/front-end/custom-error-page/
 category: "Front End"
-menu_order: 50
+weight: 50
 tags: ["theming", "UX", "Error page", "offline", "404", "403", "front end"]
 ---
 

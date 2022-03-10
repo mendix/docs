@@ -2,7 +2,7 @@
 title: "XPath"
 url: /refguide8/xpath/
 category: "App Modeling"
-menu_order: 90
+weight: 90
 description: "Describes how the XPath query language is used in Mendix by presenting functions and examples."
 tags: ["studio pro"]
 ---

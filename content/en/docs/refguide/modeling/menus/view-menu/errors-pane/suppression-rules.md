@@ -2,7 +2,7 @@
 title: "Suppression Rules"
 url: /refguide/suppression-rules/
 parent: "errors-pane"
-menu_order: 10
+weight: 10
 description: "Describes suppression rules for warnings in Studio Pro."
 tags: ["Studio Pro", "consistency errors", "checks", "warnings"]
 ---

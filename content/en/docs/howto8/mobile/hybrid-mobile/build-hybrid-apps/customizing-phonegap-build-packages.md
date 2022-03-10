@@ -2,7 +2,7 @@
 title: "Customizing Local Build Packages"
 url: /howto8/mobile/customizing-phonegap-build-packages/
 parent: "build-hybrid-apps"
-menu_order: 30
+weight: 30
 tags: ["mobile", "marketplace", "phonegap"]
 aliases:
     - /refguide8/customizing-phonegap-build-packages.html

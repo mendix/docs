@@ -2,7 +2,7 @@
 title: "Loop"
 url: /refguide8/loop/
 parent: "application-logic"
-menu_order: 80
+weight: 80
 tags: ["studio pro", "loop", "iterate over"]
 ---
 

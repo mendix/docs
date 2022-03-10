@@ -2,7 +2,7 @@
 title: "Use Navigation Layouts"
 url: /howto/front-end/use-navigation-layouts/
 category: "Front End"
-menu_order: 12
+weight: 12
 description: "This guide will teach you to use navigation layouts."
 tags: ["Atlas UI", "User Experience", "Navigation", "Responsive Design", "Sidebar"]
 ---

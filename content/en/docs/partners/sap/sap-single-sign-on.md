@@ -2,7 +2,7 @@
 title: "SAP Single Sign-On"
 url: /partners/sap/sap-single-sign-on/
 category: "SAP"
-menu_order: 50
+weight: 50
 description: "Reference information on SAP Single Sign-On"
 tags: ["SAP", "SSO", "Single Sign-On"]
 ---

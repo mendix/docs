@@ -2,7 +2,7 @@
 title: "Stories API"
 url: /apidocs-mxsdk/apidocs/stories-api/
 category: "API Documentation"
-menu_order: 60
+weight: 60
 ---
 
 ## 1 Introduction

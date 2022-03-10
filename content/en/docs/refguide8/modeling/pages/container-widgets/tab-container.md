@@ -2,7 +2,7 @@
 title: "Tab Container"
 url: /refguide8/tab-container/
 parent: "container-widgets"
-menu_order: 40
+weight: 40
 tags: ["studio pro", "tab container", "tab page", "container widget", "widget"]
 aliases:
     - /refguide8/tab-page.html

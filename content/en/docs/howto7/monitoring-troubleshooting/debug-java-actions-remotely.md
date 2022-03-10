@@ -2,7 +2,7 @@
 title: "Debug Java Actions Remotely"
 url: /howto7/monitoring-troubleshooting/debug-java-actions-remotely/
 category: "Monitoring & Troubleshooting"
-menu_order: 7
+weight: 7
 tags: ["monitoring", "troubleshooting", "java action", "debug"]
 ---
 

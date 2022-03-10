@@ -2,7 +2,7 @@
 title: "Deployment Options"
 url: /addons/ats-addon/ov-deployment/
 parent: "ov"
-menu_order: 3
+weight: 3
 ---
 
 ## 1 Introduction

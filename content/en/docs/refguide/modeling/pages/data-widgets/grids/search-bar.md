@@ -2,7 +2,7 @@
 title: "Search Bar"
 url: /refguide/search-bar/
 parent: "grids"
-menu_order: 40
+weight: 40
 tags: ["studio pro", "search bar", "comparison search field", "drop down search field", "range search field", "grid"]
 aliases:
     - /refguide/comparison-search-field.html

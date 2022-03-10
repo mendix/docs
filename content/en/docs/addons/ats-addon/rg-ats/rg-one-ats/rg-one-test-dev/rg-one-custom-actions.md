@@ -2,7 +2,7 @@
 title: "Custom Actions"
 url: /addons/ats-addon/rg-one-custom-actions/
 parent: "rg-one-test-dev"
-menu_order: 5
+weight: 5
 ---
 
 ## 1 Create Custom Actions from Scratch

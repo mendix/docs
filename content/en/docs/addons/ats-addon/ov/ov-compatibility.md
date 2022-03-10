@@ -2,7 +2,7 @@
 title: "Compatibility"
 url: /addons/ats-addon/ov-compatibility/
 parent: "ov"
-menu_order: 2
+weight: 2
 ---
 
 ## 1 Mendix Platform Compatibility

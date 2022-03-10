@@ -3,7 +3,7 @@ title: "Widget Overview"
 url: /studio8/settings-widget-overview/
 category: "Settings"
 description: "Describes the Widget Overview tab in Mendix Studio."
-menu_order: 20
+weight: 20
 tags: ["studio", "settings", "widgets"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

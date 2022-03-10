@@ -2,7 +2,7 @@
 title: "Build Native Apps"
 url: /howto8/mobile/build-native-apps/
 parent: "native-mobile"
-menu_order: 8
+weight: 8
 description: Tutorials for building native mobile apps.
 tags: ["mobile", "native", "react", "ios", "android"]
 ---

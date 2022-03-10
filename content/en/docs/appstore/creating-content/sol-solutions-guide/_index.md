@@ -4,7 +4,7 @@ url: /appstore/creating-content/sol-solutions-guide/
 linktitle: "Creating Solutions"
 url: /appstore/creating-content/sol-solutions-guide/
 category: "Creating Content"
-menu_order: 2
+weight: 2
 description: "A guide to best practices and techniques for using Mendix"
 tags: ["solutions guide", "adaptive solutions", "solutions"]
 ---

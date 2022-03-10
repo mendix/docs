@@ -3,7 +3,7 @@ title: "Enable End-Users to Attach Images"
 url: /studio-how-to8/pages-how-to-attach-images/
 category: "Pages"
 description: "Describes how to configure image uploader in Mendix Studio."
-menu_order: 60
+weight: 60
 tags: ["studio", "pages", "image", "image uploader", "attachment", "attach image"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

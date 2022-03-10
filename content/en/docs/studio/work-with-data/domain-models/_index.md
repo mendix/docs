@@ -3,7 +3,7 @@ title: "Domain Model"
 url: /studio/domain-models/
 description: "Describes the domain models in Mendix Studio."
 category: "Working with Data"
-menu_order: 10
+weight: 10
 tags: ["studio", "domain model"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor <entity-types> below is mapped, so it should not be removed or changed.

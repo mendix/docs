@@ -2,7 +2,7 @@
 title: "Static Image"
 url: /refguide/image/
 parent: "image-and-file-widgets"
-menu_order: 20
+weight: 20
 tags: ["studio pro", "image", "image widget"]
 aliases:
     - /refguide/image-property.html

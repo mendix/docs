@@ -2,7 +2,7 @@
 title: "External Object Activities"
 url: /refguide/external-object-activities/
 parent: "activities"
-menu_order: 100
+weight: 100
 tags: ["studio pro"]
 ---
 {{% alert color="warning" %}}

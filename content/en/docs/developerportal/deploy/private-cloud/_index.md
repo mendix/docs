@@ -3,7 +3,7 @@ title: "Private Cloud"
 url: /developerportal/deploy/private-cloud/
 category: "Deployment"
 description: "Describes the processes for deploying a Mendix app in the Private Cloud"
-menu_order: 48
+weight: 48
 tags: ["Deployment", "Private Cloud", "Environment"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

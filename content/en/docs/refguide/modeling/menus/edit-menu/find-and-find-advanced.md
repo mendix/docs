@@ -3,7 +3,7 @@ title: "Find, Find Advanced & Find Usages"
 url: /refguide/find-and-find-advanced/
 parent: "edit-menu"
 description: "Describes Find, Find Advanced, and Find Usages in Mendix Studio Pro."
-menu_order: 10
+weight: 10
 tags: ["studio pro", "find advanced", "find usages", "find", "edit menu"]
 ---
 

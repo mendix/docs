@@ -2,7 +2,7 @@
 title: "Association Properties"
 url: /refguide8/association-properties/
 parent: "associations"
-menu_order: 10
+weight: 10
 tags: ["domain model", "association", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

@@ -2,7 +2,7 @@
 title: "Customize Styling Using Gulp"
 url: /howto8/front-end/use-gulp-and-sass/
 parent: "customize-styling"
-menu_order: 30
+weight: 30
 tags: ["gulp", "sass", "ux", "front end"]
 ---
 

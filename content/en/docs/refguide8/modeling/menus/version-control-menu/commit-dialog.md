@@ -2,7 +2,7 @@
 title: "Commit"
 url: /refguide8/commit-dialog/
 parent: "version-control-menu"
-menu_order: 20
+weight: 20
 tags: ["studio pro"]
 ---
 

@@ -2,7 +2,7 @@
 title: "Java Memory Usage"
 url: /refguide7/java-memory-usage/
 parent: "runtime-java"
-menu_order: 2
+weight: 2
 tags: ["runtime", "java", "memory usage", "memory"]
 ---
 

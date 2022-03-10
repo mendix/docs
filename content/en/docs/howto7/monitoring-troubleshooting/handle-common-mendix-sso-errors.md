@@ -2,7 +2,7 @@
 title: "Handle Common Mendix SSO Errors"
 url: /howto7/monitoring-troubleshooting/handle-common-mendix-sso-errors/
 category: "Monitoring & Troubleshooting"
-menu_order: 4
+weight: 4
 tags: ["monitoring", "troubleshooting", "sso", "single sign on", "error"]
 ---
 

@@ -2,7 +2,7 @@
 title: "Create a Dynamic Series Chart"
 url: /howto7/extensibility/charts-dynamic-series/
 parent: "charts-tutorials"
-menu_order: 50
+weight: 50
 tags: ["Charts", "Dynamic Series", "Desktop Modeler", "Widgets"]
 ---
 

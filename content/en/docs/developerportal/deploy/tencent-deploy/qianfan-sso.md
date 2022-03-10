@@ -2,7 +2,7 @@
 title: "千帆玉符 SSO – QianFan Single Sign-On"
 url: /developerportal/deploy/qianfan-sso/
 parent: "tencent-deploy"
-menu_order: 20
+weight: 20
 description: "Use the QianFan SSO module (千帆玉符 SSO) to add Single Sign-on to your Tencent app using the user's QianFan credentials"
 tags: ["SSO", "Single Sign-on", "Tencent", "QianFan"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

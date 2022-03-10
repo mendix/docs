@@ -2,7 +2,7 @@
 title: "Create Object"
 url: /refguide/create-object/
 parent: "object-activities"
-menu_order: 40
+weight: 40
 tags: ["studio pro"]
 ---
 

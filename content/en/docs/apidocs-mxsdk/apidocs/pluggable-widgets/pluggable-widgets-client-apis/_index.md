@@ -5,7 +5,7 @@ description: A guide for understanding the client APIs available to pluggable wi
 tags: ["Widget", "Pluggable",  "JavaScript"]
 
 parent: "pluggable-widgets"
-menu_order: 20
+weight: 20
 aliases:
  - /apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets
 ---

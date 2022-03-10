@@ -2,7 +2,7 @@
 title: "Download File"
 url: /refguide/download-file/
 parent: "client-activities"
-menu_order: 20
+weight: 20
 tags: ["studio pro", "download file", "client activities"]
 aliases:
     - /refguide/Download+File.html

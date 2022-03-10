@@ -3,7 +3,7 @@ title: "Set Fields as Read-Only or Required"
 url: /studio-how-to8/pages-how-to-set-validation-and-editability/
 category: "Pages"
 description: "Describes how to set validation and editability in Mendix Studio."
-menu_order: 20
+weight: 20
 tags: ["studio", "pages", "form", "how to", "validation", "required", "read-only", "editability"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

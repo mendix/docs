@@ -2,7 +2,7 @@
 title: "Object Types in ATS"
 url: /addons/ats-addon/rg-one-object-types-in-the-ats/
 parent: "rg-one-test-dev"
-menu_order: 1
+weight: 1
 ---
 
 ## 1 Introduction

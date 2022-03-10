@@ -2,7 +2,7 @@
 title: "Implement Mendix Best Practices for Development"
 url: /howto/general/dev-best-practices/
 category: "General Info"
-menu_order: 7
+weight: 7
 tags: ["best practice", "development", "develop", "reusable", "prefix"]
 #Academy are SMEs for verification, they discuss and link to this doc in training
 ---

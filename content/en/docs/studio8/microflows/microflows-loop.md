@@ -2,7 +2,7 @@
 title: "Loop"
 url: /studio8/microflows-loop/
 category: "Microflows"
-menu_order: 30
+weight: 30
 description: "Describes a loop in Mendix Studio."
 tags: ["studio", "microflow", "loop", "loops"]
 ---

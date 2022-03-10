@@ -2,7 +2,7 @@
 title: "Permissions API"
 url: /apidocs-mxsdk/apidocs/permissions-api/
 category: "API Documentation"
-menu_order: 40
+weight: 40
 ---
 
 ## 1 Introduction

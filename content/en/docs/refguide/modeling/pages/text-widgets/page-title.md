@@ -2,7 +2,7 @@
 title: "Page Title"
 url: /refguide/page-title/
 parent: "text-widgets"
-menu_order: 50
+weight: 50
 tags: ["studio pro", "page title", "text widgets"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

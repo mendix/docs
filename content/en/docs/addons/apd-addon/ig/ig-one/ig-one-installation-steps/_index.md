@@ -2,7 +2,7 @@
 title: "Installation Steps"
 url: /addons/apd-addon/ig-one-installation-steps/
 parent: "ig-one"
-menu_order: 2
+weight: 2
 ---
 
 ## 1 Introduction

@@ -2,7 +2,7 @@
 title: "Test Case Documentation"
 url: /addons/ats-addon/rg-one-test-case-documentation/
 parent: "rg-one-test-dev"
-menu_order: 9
+weight: 9
 ---
 
 You can export the structure of your test case by pressing **PDF**:

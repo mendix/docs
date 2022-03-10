@@ -2,7 +2,7 @@
 title: "Create a Test Suite"
 url: /addons/ats-addon/ht-one-create-a-test-suite/
 parent: "ht-one"
-menu_order: 4
+weight: 4
 description: "Describes how to create a test suite and add test cases and test suites to your test suite."
 tags: ["ATS", "testing"]
 ---

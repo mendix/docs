@@ -2,7 +2,7 @@
 title: "Uniqueness Constraint Migration"
 url: /refguide8/uniqueness-constraint-migration/
 parent: "data-storage"
-menu_order: 30
+weight: 30
 tags: ["studio pro"]
 aliases:
     - /refguide/uniqueness-constraint-migration.html

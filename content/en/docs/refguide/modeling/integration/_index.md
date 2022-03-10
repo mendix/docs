@@ -20,7 +20,7 @@ For a [call web service](/refguide/call-web-service-action/) activity and suppor
 
 ## 2 Other Documents in This Section
 
-* [HttpRequest & HttpResponse System Entities](/refguide/http-request-and-response-entities/request-and-response-entities)
+* [HttpRequest & HttpResponse System Entities](/refguide/http-request-and-response-entities/request-and-response-entities/)
 * [JSON Structures](/refguide/json-structures/)
 * [Message Definitions](/refguide/message-definitions/)
 * [Published OData Services](/refguide/published-odata-services/)

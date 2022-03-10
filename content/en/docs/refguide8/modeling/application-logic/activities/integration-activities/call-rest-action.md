@@ -203,7 +203,7 @@ See [String Template](#string-template), above, for more information on construc
 These are the options in the drop-down menu for handling the response:
 
 * **Apply import mapping** – if the response is JSON or XML, it can be transformed directly into objects using an [import mapping](/refguide8/import-mappings/); the fields that you can choose here are described in the [Import Mapping action](/refguide8/import-mapping-action/)
-* **Store in an HTTP response** – any successful HTTP response can be stored directly in an [HttpResponse](/refguide8/http-request-and-response-entities/request-and-response-entities#http-response) object, and the [$latestHttpResponse](#latesthttpresponse) variable is also updated
+* **Store in an HTTP response** – any successful HTTP response can be stored directly in an [HttpResponse](/refguide8/http-request-and-response-entities/request-and-response-entities/#http-response) object, and the [$latestHttpResponse](#latesthttpresponse) variable is also updated
 * **Store in a file document** – if the response contains binary content (for example, a PDF), it can be stored in an object of an entity type which inherits from `System.FileDocument`
 * **Store in a string** – if the response is a string (for example, CSV), it can be stored directly in a string variable
 * **Do not store in a variable** - use this option when the call does not return anything useful
@@ -218,7 +218,7 @@ The **Variable** field defines the name for the result of the operation.
 
 #### 7.3.1 $latestHttpResponse Variable
 
-The `$latestHttpResponse` variable is of the [HttpResponse](/refguide8/http-request-and-response-entities/request-and-response-entities#http-response) type. It is available after a **Call REST** activity.
+The `$latestHttpResponse` variable is of the [HttpResponse](/refguide8/http-request-and-response-entities/request-and-response-entities/#http-response) type. It is available after a **Call REST** activity.
 
 However, its `Content` attribute will be left empty in most cases to minimize memory usage.
 

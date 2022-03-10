@@ -75,9 +75,9 @@ A microflow for an operation takes these operation parameters as input.
 
 A microflow parameter that has the *List* or *Object* type indicates a body parameter. You can specify an import mapping to convert the incoming JSON or XML. A parameter of the *FileDocument* type (or that inherits from a *FileDocument*) is special: It can also be used for form parameters, and an import mapping is not needed.
 
-An operation microflow may also take an [HttpRequest](/refguide8/http-request-and-response-entities/request-and-response-entities#http-request) parameter. You can add this parameter if you want to inspect the requested URL and headers.
+An operation microflow may also take an [HttpRequest](/refguide8/http-request-and-response-entities/request-and-response-entities/#http-request) parameter. You can add this parameter if you want to inspect the requested URL and headers.
 
-To set the status code, reason phrase, and headers, add an [HttpResponse](/refguide8/http-request-and-response-entities/request-and-response-entities#http-response) object parameter and set the attributes of that object, or return an *HttpResponse*.
+To set the status code, reason phrase, and headers, add an [HttpResponse](/refguide8/http-request-and-response-entities/request-and-response-entities/#http-response) object parameter and set the attributes of that object, or return an *HttpResponse*.
 
 The result of the microflow is the result of the operation and can include the following:
 
@@ -88,7 +88,7 @@ The result of the microflow is the result of the operation and can include the f
    If an empty value from the microflow is returned, then the *Content* of the *HttpResponse* is taken as the result.
    {{% /alert %}}
 3.  **Return a file document** – when you want to return data that is a file (such as a PDF or image), then the microflow returns a file document.
-4. **Return a** [HttpResponse](/refguide8/http-request-and-response-entities/request-and-response-entities#http-response) – in the *HttpResponse*, you can set the status code, reason phrase, and content (as a string). You can fill the content with, for example, the result of a mapping or a string from another source. You can also add headers to the response. 
+4. **Return a** [HttpResponse](/refguide8/http-request-and-response-entities/request-and-response-entities/#http-response) – in the *HttpResponse*, you can set the status code, reason phrase, and content (as a string). You can fill the content with, for example, the result of a mapping or a string from another source. You can also add headers to the response. 
    {{% alert color="info" %}}
    One important header to set is *Content-Type*. Do not return an *empty* *HttpResponse* because that will always result in an error.
    {{% /alert %}}

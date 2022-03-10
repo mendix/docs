@@ -22,14 +22,7 @@ Each Java action defined in Studio Pro corresponds to a file *{name of Java acti
 
 For a deep-dive look into this Java actions, check out this video:
 
-<img
-  style="width: 100%; margin: auto; display: block;"
-  class="vidyard-player-embed"
-  src="https://videoshare.mendix.com/watch/rof7aUB6Hom4et6qQU7FuT?.jpg"
-  data-uuid="rof7aUB6Hom4et6qQU7FuT?"
-  data-v="4"
-  data-type="inline"
-/>
+{{< vidyard "rof7aUB6Hom4et6qQU7FuT?" >}}
 
 ## 2 General
 

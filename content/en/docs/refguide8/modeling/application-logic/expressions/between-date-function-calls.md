@@ -16,14 +16,7 @@ Between date function calls calculate the differences between two dates.
 
 For a deep-dive look into working with DateTime functions, check out this video:
 
-<img
-  style="width: 100%; margin: auto; display: block;"
-  class="vidyard-player-embed"
-  src="https://videoshare.mendix.com/watch/Cjy2qSeKcGhcuKEmkKesp2?.jpg"
-  data-uuid="Cjy2qSeKcGhcuKEmkKesp2"
-  data-v="4"
-  data-type="inline"
-/>
+{{< vidyard "Cjy2qSeKcGhcuKEmkKesp2" >}}
 
 ## 2 millisecondsBetween
 

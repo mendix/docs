@@ -70,9 +70,9 @@ This app service can only be used with Studio Pro 8 versions starting with [8.15
 
 ## 2 Installation
 
-### 2.1 Obtaining a License Token {#obtain-license-token}
+### 2.1 Starting a Subscription {#obtain-license-token}
 
-3D Viewer is a premium Mendix product that is subject to a purchase and subscription fee. You can deploy 3D Viewer locally or in a Mendix Free App for free. However, to deploy 3D Viewer on the cloud, you need to start a subscription to get a license token:
+3D Viewer is a premium Mendix product that is subject to a purchase and subscription fee. You can deploy 3D Viewer locally or in a Mendix Free App for free. However, to deploy 3D Viewer on the cloud, you need to start a subscription to get a license token and configure it later:
 
 1. Go to the [3D Viewer](https://marketplace.mendix.com/link/component/118345) page in the marketplace.
 2. Click **Subscribe** to start a subscription.
@@ -293,7 +293,7 @@ These widgets do not require additional configuration. Simply place them within 
 
 ### 4.7 Configuring the License Token {#configure-license-token}
 
-You can deploy 3D Viewer locally or in a Mendix Free App for free. However, to deploy 3D Viewer on the cloud, you need to configure the license token that you received for [your subscription](#obtain-license-token).
+You can deploy 3D Viewer locally or in a Mendix Free App for free. However, to deploy 3D Viewer on the cloud, you need to start a subscription to [obtain a license token](#obtain-license-token), and then configure it.
 
 #### 4.7.1 For an App Deployed in the Mendix Cloud
 

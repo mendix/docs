@@ -1,21 +1,25 @@
 {
-  "name": "demo-test",
-  "version": "1.0.0",
-  "description": "",
+  "name": "mxdocumentation",
+  "version": "2.0.0",
+  "description": "Node files needed by Docsy",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mendix/docs-site-test.git"
+    "url": "git+https://github.com/mendix/docs.git"
   },
-  "author": "",
+  "author": {
+    "name": "Mendix B.V.",
+    "email": "community@mendix.com",
+    "url": "https://docs.mendix.com/community/"
+  },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mendix/docs-site-test/issues"
+    "url": "https://github.com/mendix/docs/issues"
   },
-  "homepage": "https://github.com/mendix/docs-site-test#readme",
+  "homepage": "https://github.com/mendix/docs#readme",
   "devDependencies": {
     "autoprefixer": "^10.3.1",
     "postcss": "^8.3.6",

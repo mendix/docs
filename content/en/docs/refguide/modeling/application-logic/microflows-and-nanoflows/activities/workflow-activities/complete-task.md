@@ -52,4 +52,4 @@ Gives you a list of available outcomes for the selected user task. The user task
 
 ## 4 Common Section {#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

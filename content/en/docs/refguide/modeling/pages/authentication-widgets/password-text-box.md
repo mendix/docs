@@ -32,11 +32,11 @@ Password text box properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-{{% snippet file="refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ### 2.2 Design Properties Section {#design-properties}
 
-{{% snippet file="refguide/design-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}}
 
 ### 2.3 General Section {#general}
 
@@ -46,7 +46,7 @@ A **Placeholder** shows a text when an end-user has not entered any text yet. It
 
 ### 2.4 Label Section {#label}
 
-{{% snippet file="refguide/label-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/label-section-link.md" %}}
 
 ## 3 Read More
 

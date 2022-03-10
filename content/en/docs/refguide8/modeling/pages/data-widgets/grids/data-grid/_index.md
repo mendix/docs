@@ -47,7 +47,7 @@ Data grid properties consist of the following sections:
 
 ### 3.1 Common Section {#common}
 
-{{% snippet file="refguide8/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/common-section-link.md" %}}
 
 ### 3.2 Data Source Section {#data-source}
 
@@ -66,7 +66,7 @@ The database and XPath sources retrieve objects from the database and supports s
 
 ### 3.3 Design Properties Section {#design-properties}
 
-{{% snippet file="refguide8/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide8/design-section-link.md" %}} 
 
 ### 3.4 General Section {#general}
 
@@ -161,7 +161,7 @@ A tooltip page is a page that appears when you hover your mouse over a row. The 
 
 ### 3.5 Visibility Section {#visibility}
 
-{{% snippet file="refguide8/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/visibility-section-link.md" %}}
 
 ## 4 Performing Specific Actions
 

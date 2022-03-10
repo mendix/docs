@@ -53,19 +53,19 @@ The autocomplete property specifies if a text box should have autocomplete enabl
 
 ### 2.2 Common Section{#common}
 
-{{% snippet file="refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ### 2.3 Data Source Section{#data-source}
 
-{{% snippet file="refguide/data-source-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/data-source-section-link.md" %}}
 
 ### 2.4 Design Properties Section{#design-properties}
 
-{{% snippet file="refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
 
 ### 2.5 Editability Section{#editability}
 
-{{% snippet file="refguide/editability-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/editability-section-link.md" %}}
 
 ### 2.6 Events Section{#events}
 
@@ -73,7 +73,7 @@ The autocomplete property specifies if a text box should have autocomplete enabl
 
 The on change event property specifies an action that will be executed when the value has been changed and gets submitted. A value will be submitted when pressing the <kbd>Enter</kbd> key or leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
 
-{{% snippet file="refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
 #### 2.6.2 On Change Behaviour
 
@@ -97,13 +97,13 @@ This option allows makes it so users trigger an on change event while they are t
 
 With **While user is entering data**, users now can adjust one more property called **Apply after (ms)** (described above). This will reduce the amount of the calls made for an on change event, thus improving app performance.
 
-{{% snippet file="refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
 #### 2.6.3 On Enter Event
 
 The on enter event property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
 
-{{% snippet file="refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
 #### 2.6.4 On Leave Event
 
@@ -111,13 +111,13 @@ The on leave event property specifies an action that will be executed when leavi
 
 This differs from the [On change](#on-change) property in that the event will always be triggered, even if the value has not been changed.
 
-{{% snippet file="refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
 #### 2.6.5 On Enter Key Press Event
 
 The on enter key press event property specifies an action that will be executed when the focus is inside the widget  and the <kbd>Enter</kbd> key is pressed. In a web application the widget will keep focus after the action gets executed.
 
-{{% snippet file="refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
 ### 2.7 Formatting Section{#formatting}
 
@@ -127,7 +127,7 @@ The formatting section applies only to the way that numeric attributes are displ
 * Integer
 * Long
 
-{{% snippet file="refguide/numeric-formatting-link.md" %}}
+{{% snippet file="/static/_includes/refguide/numeric-formatting-link.md" %}}
 
 ### 2.8 General Section{#general}
 
@@ -180,15 +180,15 @@ It can be used, for example, to give a hint to the end-user what kind of text sh
 <a name="label-properties"></a>
 ### 2.9 Label Section{#label}
 
-{{% snippet file="refguide/label-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/label-section-link.md" %}}
 
 ### 2.10 Validation Section{#validation}
 
-{{% snippet file="refguide/widget-validation-link.md" %}}
+{{% snippet file="/static/_includes/refguide/widget-validation-link.md" %}}
 
 ### 2.11 Visibility Section{#visibility}
 
-{{% snippet file="refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
 ## 3 Read More
 

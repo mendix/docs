@@ -239,4 +239,4 @@ You should always add an error handler for a [call REST service](/refguide8/call
 
 ## 8 Common Section{#common}
 
-{{% snippet file="refguide8/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/microflow-common-section-link.md" %}}

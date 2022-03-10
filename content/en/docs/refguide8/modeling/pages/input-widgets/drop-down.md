@@ -48,19 +48,19 @@ Drop-down properties consist of the following sections:
 
 ### 2.1 Common Section{#common}
 
-{{% snippet file="refguide8/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/common-section-link.md" %}}
 
 ### 2.2 Data Source Section{#data-source}
 
-{{% snippet file="refguide8/data-source-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/data-source-section-link.md" %}}
 
 ### 2.3 Design Properties Section{#design-properties}
 
-{{% snippet file="refguide8/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide8/design-section-link.md" %}} 
 
 ### 2.4 Editability Section{#editability}
 
-{{% snippet file="refguide8/editability-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/editability-section-link.md" %}}
 
 ### 2.5 Events Section{#events}
 
@@ -68,13 +68,13 @@ Drop-down properties consist of the following sections:
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
-{{% snippet file="refguide8/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/events-section-link.md" %}}
 
 #### 2.5.2 On Enter
 
 The on-enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
 
-{{% snippet file="refguide8/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/events-section-link.md" %}}
 
 #### 2.5.3 On Leave
 
@@ -82,7 +82,7 @@ The on-leave property specifies an action that will be executed when leaving the
 
 This differs from the [On change](#on-change) property in that the event will always be triggered, even if the value has not been changed.
 
-{{% snippet file="refguide8/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/events-section-link.md" %}}
 
 ### 2.6 General Section{#general}
 
@@ -98,15 +98,15 @@ For example, the drop-down that allows the end-user to select the region allocat
 
 ### 2.7 Label Section{#label}
 
-{{% snippet file="refguide8/label-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/label-section-link.md" %}}
 
 ### 2.8 Validation Section{#validation}
 
-{{% snippet file="refguide8/widget-validation-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/widget-validation-link.md" %}}
 
 ### 2.9 Visibility Section{#visibility}
 
-{{% snippet file="refguide8/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/visibility-section-link.md" %}}
 
 ## 3 Read More
 

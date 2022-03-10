@@ -35,7 +35,7 @@ Common widgets category contain widgets that are commonly used. This category co
 
 ## 2 Performing Basic Functions
 
-{{% snippet file="refguide8/performing-basic-functions-widgets.md" %}}
+{{% snippet file="/static/_includes/refguide8/performing-basic-functions-widgets.md" %}}
 
 ## 3 Read More
 

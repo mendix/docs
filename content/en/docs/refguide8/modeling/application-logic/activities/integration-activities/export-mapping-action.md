@@ -84,4 +84,4 @@ The name of the object or string which is the result of the activity.
 
 ## 4 Common Section{#common}
 
-{{% snippet file="refguide8/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/microflow-common-section-link.md" %}}

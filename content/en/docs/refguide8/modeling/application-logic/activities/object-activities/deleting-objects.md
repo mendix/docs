@@ -71,7 +71,7 @@ For more information, see the [Microflows](/refguide8/offline-first/#microflows)
 
 ## 4 Common Section{#common}
 
-{{% snippet file="refguide8/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/microflow-common-section-link.md" %}}
 
 ## 5 What Happens During a Delete?
 

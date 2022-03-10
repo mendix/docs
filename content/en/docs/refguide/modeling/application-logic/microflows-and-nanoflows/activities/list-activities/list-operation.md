@@ -108,4 +108,4 @@ This is the name of the resulting List, Object, or Boolean variable. The result 
 
 ## 4 Common Section{#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

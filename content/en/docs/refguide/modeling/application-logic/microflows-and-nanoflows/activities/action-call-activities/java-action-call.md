@@ -84,4 +84,4 @@ For more information about task queues, see [Task Queue](/refguide/task-queue/).
 
 ## 4 Common Section {#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

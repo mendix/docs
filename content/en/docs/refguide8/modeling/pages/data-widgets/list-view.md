@@ -37,7 +37,7 @@ List view properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-{{% snippet file="refguide8/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/common-section-link.md" %}}
 
 ### 2.2. Data Source Section {#data-source}
 
@@ -59,7 +59,7 @@ The database and XPath sources retrieve objects from the database and supports s
 
 ### 2.3 Design Properties Section{#design-properties}
 
-{{% snippet file="refguide8/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide8/design-section-link.md" %}} 
 
 ### 2.4 General Section {#general}
 
@@ -113,7 +113,7 @@ Now if there is a row of type Bicycle the template specific for bicycles will be
 
 ### 2.6 Visibility Section {#visibility}
 
-{{% snippet file="refguide8/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/visibility-section-link.md" %}}
 
 ## 3 Performing Specific Actions
 

@@ -29,7 +29,7 @@ Images, videos & files allow end-users to upload, download, and display files, i
 
 ## 2 Performing Basic Functions
 
-{{% snippet file="refguide/performing-basic-functions-widgets.md" %}}
+{{% snippet file="/static/_includes/refguide/performing-basic-functions-widgets.md" %}}
 
 ## 3 Read More
 

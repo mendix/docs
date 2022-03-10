@@ -43,7 +43,7 @@ Data view properties consist of the following sections:
 
 ### 3.1 Common Section {#common}
 
-{{% snippet file="refguide8/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/common-section-link.md" %}}
 
 ### 3.2 Data Source Section {#data-source}
 
@@ -60,7 +60,7 @@ The data view supports the following types of data source: context, microflow, n
 
 ### 3.3 Design Properties Section{#design-properties}
 
-{{% snippet file="refguide8/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide8/design-section-link.md" %}} 
 
 ### 3.4 Editability Section {#editability}
 
@@ -117,7 +117,7 @@ Default: *empty*
 
 ### 3.6 Visibility Section {#visibility}
 
-{{% snippet file="refguide8/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/visibility-section-link.md" %}}
 
 ## 4 Performing Specific Actions
 

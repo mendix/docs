@@ -25,18 +25,18 @@ A label placed in a cell with render mode header.
 
 ## General properties
 
-{{% snippet file="refguide7/Caption+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Caption+Property.md" %}}
 
 ## Visibility properties
 
-{{% snippet file="refguide7/Visibility+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visibility+Property.md" %}}
 
-{{% snippet file="refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## Common properties
 
-{{% snippet file="refguide7/Name+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Name+Property.md" %}}
 
-{{% snippet file="refguide7/Class+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Class+Property.md" %}}
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Style+Property.md" %}}

@@ -29,5 +29,5 @@ For details, see [Style](/refguide8/style/).
 
 ## 3 Common Properties
 
-{{% snippet file="refguide8/name-property.md" %}}
+{{% snippet file="/static/_includes/refguide8/name-property.md" %}}
 

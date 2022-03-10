@@ -10,10 +10,10 @@ The validation message widget informs the user about authentication failures. It
 
 ## Common Properties
 
-{{% snippet file="refguide7/Name+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Name+Property.md" %}}
 
-{{% snippet file="refguide7/Class+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Class+Property.md" %}}
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Style+Property.md" %}}
 
-{{% snippet file="refguide7/Tab+index+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Tab+index+Property.md" %}}

@@ -54,27 +54,27 @@ Reference set selector properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-{{% snippet file="refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ### 2.2 Data Source Section {#data-source}
 
-{{% snippet file="refguide/data-source-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/data-source-section-link.md" %}}
 
 The attribute path specifies which attribute(s) of an associated entity is shown in the reference set selector. The path must follow one association, of type reference set, starting in the entity of the data view.
 
 ### 2.3 Design Properties Section {#design-properties}
 
-{{% snippet file="refguide/design-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}}
 
 ### 2.4 Editability Section {#editability}
 
-{{% snippet file="refguide/editability-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/editability-section-link.md" %}}
 
 ### 2.5 Events Section {#events}
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
-{{% snippet file="refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
 ### 2.6 General Properties {#general}
 
@@ -92,7 +92,7 @@ You can generate a new page to show by right-clicking the widget and selecting *
 
 ### 2.7 Label Section {#label}
 
-{{% snippet file="refguide/label-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/label-section-link.md" %}}
 
 ### 2.8 Selectable Objects Section {#selectable-objects}
 
@@ -106,4 +106,4 @@ You cannot use a microflow to define selectable objects in an input reference se
 
 ### 2.9 Visibility Section {#visibility}
 
-{{% snippet file="refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}

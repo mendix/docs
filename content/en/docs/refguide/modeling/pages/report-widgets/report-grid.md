@@ -41,7 +41,7 @@ Each column in a report grid also has properties: see [Report Grid Column Proper
 
 ### 2.1 Common Section{#common}
 
-{{% snippet file="refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ### 2.2 Data Source Section{#data-source}
 
@@ -51,7 +51,7 @@ Each column in a report grid also has properties: see [Report Grid Column Proper
 
 ### 2.3 Design Properties Section{#design-properties}
 
-{{% snippet file="refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
 
 ### 2.4 General Section{#general}
 

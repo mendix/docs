@@ -53,7 +53,7 @@ The [Any Chart Cheat Sheet](/refguide/charts-any-cheat-sheet/) lists the most co
 
 ## 4 Performing Basic Functions
 
-{{% snippet file="refguide/performing-basic-functions-widgets.md" %}}
+{{% snippet file="/static/_includes/refguide/performing-basic-functions-widgets.md" %}}
 
 ## 5 Documents in This Section
 

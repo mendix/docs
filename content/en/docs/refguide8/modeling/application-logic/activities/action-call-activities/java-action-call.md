@@ -74,4 +74,4 @@ The result of the Java action will be given this name. The label indicates wheth
 
 ## 4 Common Section {#common}
 
-{{% snippet file="refguide8/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/microflow-common-section-link.md" %}}

@@ -40,11 +40,11 @@ Layout grid properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-{{% snippet file="refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ### 2.2 Design Properties Section{#design-properties}
 
-{{% snippet file="refguide/design-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}}
 
 ### 2.3 General Section {#general}
 
@@ -65,7 +65,7 @@ As the layout grid responds to the viewport width, and not to the width of its c
 
 ### 2.4 Visibility Section {#visibility}
 
-{{% snippet file="refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
 ## 3 Rows and Their Properties {#rows}
 
@@ -84,7 +84,7 @@ Row properties consist of the following sections:
 
 ### 3.1 Common Section {#row-common}
 
-{{% snippet file="refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ### 3.2 General Section {#row-general}
 
@@ -109,7 +109,7 @@ The **General** section of a row contains the following properties:
 
 ### 3.3 Visibility Section {#row-visibility}
 
-{{% snippet file="refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
 ## 4 Columns and Their Properties {#columns}
 
@@ -128,7 +128,7 @@ Layout grid column properties consist of the following sections:
 
 ### 4.1 Common Section {#column-common}
 
-{{% snippet file="refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ### 4.2 General Section {#column-general}
 

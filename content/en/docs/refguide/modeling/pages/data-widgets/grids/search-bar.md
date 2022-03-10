@@ -47,7 +47,7 @@ Search field properties consist of the following sections:
 
 ### 3.1 Common Section {#common}
 
-Properties as **Name**, **Caption**, and **Type** are common for most of the widgets. {{% snippet file="refguide/common-section-link.md" %}}
+Properties as **Name**, **Caption**, and **Type** are common for most of the widgets. {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 However, there are additional properties that are described in the sections below.
 
@@ -61,7 +61,7 @@ Search input formatting must be an exact day. Custom date formatting is not limi
 
 {{% /alert %}}
 
-{{% snippet file="refguide/custom-date-format-tokens.md" %}}
+{{% snippet file="/static/_includes/refguide/custom-date-format-tokens.md" %}}
 
 #### 3.1.2 Placeholder Text
 

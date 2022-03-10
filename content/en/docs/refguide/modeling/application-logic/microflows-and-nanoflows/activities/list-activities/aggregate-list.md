@@ -71,4 +71,4 @@ The name of the variable in which the result of the aggregation is stored. This 
 
 ## 4 Common Section{#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

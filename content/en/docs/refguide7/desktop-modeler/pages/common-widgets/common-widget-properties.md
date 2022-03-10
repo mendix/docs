@@ -32,25 +32,25 @@ The tab index influences the order in which the end user navigates through the f
 
 _Default value:_ 0
 
-{{% snippet file="refguide7/Name+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Name+Property.md" %}}
 
-{{% snippet file="refguide7/Class+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Class+Property.md" %}}
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Style+Property.md" %}}
 
 ## Data Source Properties
 
-{{% snippet file="refguide7/Attribute+Path+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Attribute+Path+Property.md" %}}
 
 ## Visibility Properties
 
-{{% snippet file="refguide7/Visibility+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visibility+Property.md" %}}
 
-{{% snippet file="refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## Editability Properties
 
-{{% snippet file="refguide7/Editable+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Editable+Property.md" %}}
 
 ### Condition
 

@@ -13,4 +13,4 @@ For details on how this works in Mendix versions 7.2 and 7.3, see [Navigation in
 
 When the hybrid tablet profile is enabled, every user that accesses the Mendix application from a PhoneGap hybrid application running on a tablet device will automatically be redirected to this profile. If the hybrid tablet profile is disabled, tablet users will be redirected to the [hybrid phone profile](/refguide7/hybrid-phone-profile/). If the hybrid phone profile is disabled, users will be redirected to the [desktop profile](/refguide7/desktop-profile/).
 
-{{% snippet file="refguide7/Profile+properties.md" %}}
+{{% snippet file="/static/_includes/refguide7/Profile+properties.md" %}}

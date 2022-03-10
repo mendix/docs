@@ -18,41 +18,41 @@ This check box allows you to change whether someone is subscribed to the newslet
 
 ## Data source properties
 
-{{% snippet file="refguide7/Attribute+Path+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Attribute+Path+Property.md" %}}
 
-{{% snippet file="refguide7/Label+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Label+Property.md" %}}
 
 ## Editability properties
 
-{{% snippet file="refguide7/Editable+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Editable+Property.md" %}}
 
-{{% snippet file="refguide7/Read+Only+Style.md" %}}
+{{% snippet file="/static/_includes/refguide7/Read+Only+Style.md" %}}
 
-{{% snippet file="refguide7/Condition+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Condition+Property.md" %}}
 
 ## Visibility properties
 
-{{% snippet file="refguide7/Visibility+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visibility+Property.md" %}}
 
-{{% snippet file="refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## Events properties
 
-{{% snippet file="refguide7/On+Change+Event.md" %}}
+{{% snippet file="/static/_includes/refguide7/On+Change+Event.md" %}}
 
-{{% snippet file="refguide7/On+Enter+event.md" %}}
+{{% snippet file="/static/_includes/refguide7/On+Enter+event.md" %}}
 
-{{% snippet file="refguide7/On+Leave+Event.md" %}}
+{{% snippet file="/static/_includes/refguide7/On+Leave+Event.md" %}}
 
 ## Common properties
 
-{{% snippet file="refguide7/Name+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Name+Property.md" %}}
 
-{{% snippet file="refguide7/Class+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Class+Property.md" %}}
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Style+Property.md" %}}
 
-{{% snippet file="refguide7/Tab+index+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Tab+index+Property.md" %}}
 
 ## Related articles
 

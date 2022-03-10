@@ -159,7 +159,7 @@ The **Input Validation** section properties are described in the table below:
 
 ### 3.6 Conditional Visibility Section {#visibility}
 
-{{% snippet file="studio/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/studio/visibility-section-link.md" %}}
 
 ### 3.7 Design Section {#input-elements-design}
 

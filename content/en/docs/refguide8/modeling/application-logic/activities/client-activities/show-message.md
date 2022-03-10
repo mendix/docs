@@ -79,7 +79,7 @@ The **Blocking** property defines whether the message shown to the end-user is b
 
 ## 4 Common Section {#common}
 
-{{% snippet file="refguide8/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/microflow-common-section-link.md" %}}
 
 ## 5 Read More
 

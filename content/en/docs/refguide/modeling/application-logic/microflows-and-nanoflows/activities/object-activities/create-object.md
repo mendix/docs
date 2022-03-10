@@ -85,7 +85,7 @@ This is the name of the resulting object which can be used by all activities tha
 
 ## 4 Common Section{#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
 
 ## 5 What Happens During a Create?
 

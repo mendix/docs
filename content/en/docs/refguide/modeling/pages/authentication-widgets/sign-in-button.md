@@ -34,11 +34,11 @@ Sign-in button properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-{{% snippet file="refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ### 2.2 Design Properties Section {#design-properties}
 
-{{% snippet file="refguide/design-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}}
 
 ### 2.3 General Section {#general}
 
@@ -53,7 +53,7 @@ Default: *None*
 
 ### 2.4 Visibility Section {#visibility}
 
-{{% snippet file="refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
 ## 3 Read More
 

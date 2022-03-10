@@ -13,4 +13,4 @@ For details on how this works in Mendix versions 7.2 and 7.3, see [Navigation in
 
 When enabled, all users accessing the Mendix application from a smart phone will automatically be redirected to this profile. If disabled, smart phone users will be redirected to the [tablet profile](/refguide7/tablet-profile/). Lacking that, the user will be redirected to the [desktop profile](/refguide7/desktop-profile/).
 
-{{% snippet file="refguide7/Profile+properties.md" %}}
+{{% snippet file="/static/_includes/refguide7/Profile+properties.md" %}}

@@ -16,7 +16,7 @@ A data view showing orderline information
 
 ## Common Properties
 
-{{% snippet file="refguide7/Name+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Name+Property.md" %}}
 
 ## Data Source Properties
 

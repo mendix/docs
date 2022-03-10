@@ -10,9 +10,9 @@ The **Create** button allows the user to create new objects in a grid or referen
 
 ## Common Properties
 
-{{% snippet file="refguide7/Class+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Class+Property.md" %}}
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Style+Property.md" %}}
 
 ## Data Source Properties
 
@@ -28,15 +28,15 @@ Let us say you have an entity Vehicle and two specializations, namely Bicycle an
 
 ## General Properties
 
-{{% snippet file="refguide7/Caption+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Caption+Property.md" %}}
 
-{{% snippet file="refguide7/Tooltip+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Tooltip+Property.md" %}}
 
-{{% snippet file="refguide7/Image+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Image+Property.md" %}}
 
-{{% snippet file="refguide7/Button+Style+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Button+Style+Property.md" %}}
 
-{{% snippet file="refguide7/Is+default+button+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Is+default+button+Property.md" %}}
 
 ### Edit location
 
@@ -56,4 +56,4 @@ See [Opening Pages](/refguide7/opening-pages/).
 
 ## Visibility Properties
 
-{{% snippet file="refguide7/Visible+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visible+Property.md" %}}

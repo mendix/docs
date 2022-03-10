@@ -48,7 +48,7 @@ Template grid properties consist of the following sections:
 
 ### 3.1 Common Section {#common}
 
-{{% snippet file="refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ### 3.2 Data Source Properties {#data-source}
 
@@ -67,7 +67,7 @@ The database and XPath sources retrieve objects from the database and supports s
 
 ### 3.3 Design Properties Section {#design-properties}
 
-{{% snippet file="refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
 
 ### 3.4 General Section {#general}
 
@@ -148,7 +148,7 @@ Default: *0*
 
 ### 3.5 Visibility Section {#visibility}
 
-{{% snippet file="refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
 ## 4 Performing Specific Actions
 

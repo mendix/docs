@@ -33,7 +33,7 @@ These are the possible values:
 
 If you choose 'Custom' as the date format (see above) this property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally.
 
-{{% snippet file="refguide7/Custom+Date+Format+Tokens.md" %}}
+{{% snippet file="/static/_includes/refguide7/Custom+Date+Format+Tokens.md" %}}
 
 {{% alert color="info" %}}
 Even though a date picker with a custom date format is editable (as of Mendix 7.21.0), the calendar drop-down button will not be shown if the custom format does not represent the full date (meaning, the year [`y`-`yyyy`], month [`M`-`MMMM`], or day of month [`d`-`dd`] tokens are missing in the custom format).
@@ -45,45 +45,45 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 ## 3 Validation Properties
 
-{{% snippet file="refguide7/Widget+Validation.md" %}}
+{{% snippet file="/static/_includes/refguide7/Widget+Validation.md" %}}
 
 ## 4 Data Source Properties
 
-{{% snippet file="refguide7/Attribute+Path+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Attribute+Path+Property.md" %}}
 
-{{% snippet file="refguide7/Label+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Label+Property.md" %}}
 
 ## 5 Editability Properties
 
-{{% snippet file="refguide7/Editable+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Editable+Property.md" %}}
 
-{{% snippet file="refguide7/Read+Only+Style.md" %}}
+{{% snippet file="/static/_includes/refguide7/Read+Only+Style.md" %}}
 
-{{% snippet file="refguide7/Condition+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Condition+Property.md" %}}
 
 ## 6 Visibility Properties
 
-{{% snippet file="refguide7/Visibility+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visibility+Property.md" %}}
 
-{{% snippet file="refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## 7 Events Properties
 
-{{% snippet file="refguide7/On+Change+Event.md" %}}
+{{% snippet file="/static/_includes/refguide7/On+Change+Event.md" %}}
 
-{{% snippet file="refguide7/On+Enter+event.md" %}}
+{{% snippet file="/static/_includes/refguide7/On+Enter+event.md" %}}
 
-{{% snippet file="refguide7/On+Leave+Event.md" %}}
+{{% snippet file="/static/_includes/refguide7/On+Leave+Event.md" %}}
 
 ## 8 Common Properties
 
-{{% snippet file="refguide7/Name+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Name+Property.md" %}}
 
-{{% snippet file="refguide7/Class+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Class+Property.md" %}}
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Style+Property.md" %}}
 
-{{% snippet file="refguide7/Tab+index+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Tab+index+Property.md" %}}
 
 ## 9 Read More
 

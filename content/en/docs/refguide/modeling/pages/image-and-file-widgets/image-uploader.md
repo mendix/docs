@@ -34,15 +34,15 @@ Image uploader properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-{{% snippet file="refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ### 2.2 Design Properties Section {#design-properties}
 
-{{% snippet file="refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
 
 ### 2.3 Editability Section {#editability}
 
-{{% snippet file="refguide/editability-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/editability-section-link.md" %}}
 
 ### 2.4 General Section {#general}
 
@@ -68,11 +68,11 @@ If a file with an extension that is not allowed is selected, a [system text](/re
 
 ### 2.5 Label Section {#label}
 
-{{% snippet file="refguide/label-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/label-section-link.md" %}}
 
 ### 2.6 Visibility Section {#visibility}
 
-{{% snippet file="refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
 ## 3 Read More
 

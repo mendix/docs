@@ -12,25 +12,25 @@ It must be placed on a page together with a [login id text box](/refguide7/login
 
 ## Common Properties
 
-{{% snippet file="refguide7/Name+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Name+Property.md" %}}
 
-{{% snippet file="refguide7/Class+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Class+Property.md" %}}
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Style+Property.md" %}}
 
-{{% snippet file="refguide7/Tab+index+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Tab+index+Property.md" %}}
 
 ## General Properties
 
-{{% snippet file="refguide7/Caption+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Caption+Property.md" %}}
 
-{{% snippet file="refguide7/Tooltip+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Tooltip+Property.md" %}}
 
-{{% snippet file="refguide7/Image+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Image+Property.md" %}}
 
-{{% snippet file="refguide7/Render+Mode+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Render+Mode+Property.md" %}}
 
-{{% snippet file="refguide7/Button+Style+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Button+Style+Property.md" %}}
 
 ### Validation Message Widget
 
@@ -40,6 +40,6 @@ Default value: None
 
 ## Visibility Properties
 
-{{% snippet file="refguide7/Visibility+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visibility+Property.md" %}}
 
-{{% snippet file="refguide7/Visibility+Property+With+Module+Roles+Extended.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visibility+Property+With+Module+Roles+Extended.md" %}}

@@ -241,7 +241,7 @@ The **Events** section properties are described in the table below:
 
 ### 2.7 Conditional Visibility {#visibility}
 
-{{% snippet file="studio/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/studio/visibility-section-link.md" %}}
 
 ### 2.8 Design {#grid-design-section}
 

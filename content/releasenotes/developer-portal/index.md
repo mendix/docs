@@ -16,7 +16,11 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
-### February 24th, 2022
+### March 10th, 2022
+
+#### Fixes
+
+* We fixed a bug where screenshots posted through the [Mendix Feedback](/appstore/widgets/mendix-feedback) widget could be viewed in thumbnail size only. It ain't much, but it's honest work. (Tickets 143368, 143399, 143435, 143505, 143526, 143602, 143657, 143681, 143782, 143818, 143838, 143919, 143924, 143965)
 
 #### Improvements
 

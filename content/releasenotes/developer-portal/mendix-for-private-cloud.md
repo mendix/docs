@@ -12,6 +12,18 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
+### March 10th, 2022
+
+#### Portal Improvement
+
+* We have added support for Pod Autoscaling. If you are using this, the number of replicas will be displayed. To use autoscaling, see [Pod Autoscaling](/developerportal/deploy/private-cloud-cluster#horizontal-autoscaling) in *Creating a Private Cloud Cluster*.
+    * Note that we are aware that the maximum number of replicas is sometimes displayed as `0` for existing environments and are working on a fix.
+* We now allow sorting of and searching in the following:
+    * members invited for a namespace
+    * members invited for a cluster
+    * database and storage plans in a namespace
+* We have added a tootip to assist in using the **Purpose** field
+
 ### March 4th, 2022
 
 #### mxpc-cli v2.4.1 for Mendix Operator v2.3.0

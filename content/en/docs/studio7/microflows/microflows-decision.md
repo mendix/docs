@@ -20,7 +20,7 @@ There are two ways to configure a condition for the decision:
 * [With **Variables/ Attributes**](#variables-attributes-tab) ( for example, you can use it to create different flows for an attribute of the enumeration type)
 *  [With an **Expression**](#expression-tab) (for example, you can create a comparison with it)
 
-   ![](/attachments/studio7/microflows/microflows-decision/configure-condition-dialog.png)
+   {{< figure src="/attachments/studio7/microflows/microflows-decision/configure-condition-dialog.png" >}}
 
 ### 2.1 Configuring the Condition with Variables or Attributes {#variables-attributes-tab}
 
@@ -47,11 +47,11 @@ The number of available cases depends on the selected **Condition**.
 
 For the Boolean type of the parameter or attribute, two values are possible: true and false.  
 
-![](/attachments/studio7/microflows/microflows-decision/decision-boolean.png)
+{{< figure src="/attachments/studio7/microflows/microflows-decision/decision-boolean.png" >}}
 
 The number of cases available for the enumeration type depends on the corresponding enumeration constants/values. There is also the empty case available for enumeration. If the enumeration parameter or attribute of an object is unassigned, the sequence flow with the caption (empty) is followed.
 
-![](/attachments/studio7/microflows/microflows-decision/decision-enumeration.png)
+{{< figure src="/attachments/studio7/microflows/microflows-decision/decision-enumeration.png" >}}
 
 ## 4 Caption
 

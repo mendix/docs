@@ -36,16 +36,16 @@ To create a new enumeration, do the following:
     c. Click **Select enumeration**.<br />d. In the **Select enumeration** dialog box, click the plus icon in the top right corner.<br/>
     e. In the **Create new enumeration** dialog box, click **Add Item** to add possible options of the enumeration (**Name** is filled out automatically and is the same as the attribute name).<br />
 
-    ![](/attachments/studio/work-with-data/domain-models/domain-models-enumeration/new-enumeration-add-item.png)<br />
+    {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/new-enumeration-add-item.png" >}}<br />
 
     f. Fill out the name for the **Caption** (**Name** is filled out automatically). In the example below, you need to fill out  *Bronze*, as one of three possible items of the enumeration: Bronze, Silver, and Gold. <br />
 
-    ![](/attachments/studio/work-with-data/domain-models/domain-models-enumeration/new-enumeration-add-item-bronze.png)<br />
+    {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/new-enumeration-add-item-bronze.png" >}}<br />
 
     g. Click **Add Item** and repeat the step above to create other enumeration items.<br />
     h. Click **Create** to close the dialog box and create the new attribute.
 
-    ![](/attachments/studio/work-with-data/domain-models/domain-models-enumeration/new-enumeration-bronze-silver-gold.png)
+    {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/new-enumeration-bronze-silver-gold.png" >}}
 
 The attribute and the enumeration items are created.
 
@@ -63,11 +63,11 @@ You can also set an existing enumeration for attributes of the enumeration type.
     b. Set the [Type](/studio/domain-models-attributes/) to **Enumeration**.<br />
     c. Click **Select enumeration**.<br />
 
-    ![](/attachments/studio/work-with-data/domain-models/domain-models-enumeration/new-attribute-select-enumeration.png) <br/>
+    {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/new-attribute-select-enumeration.png" >}} <br/>
 
     d. In the **Select enumeration** dialog box, the existing enumerations are displayed in the list. Click the one you want to use, then click **Select**.<br />
 
-    ![](/attachments/studio/work-with-data/domain-models/domain-models-enumeration/selecting-existing-enumeration.png)
+    {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/selecting-existing-enumeration.png" >}}
 
 The existing enumeration is selected for the attribute of the enumeration type. 
 
@@ -82,7 +82,7 @@ You can copy and paste an enumeration to another Studio app. Follow the steps be
 3. In the **Select Enumeration** dialog box, select the enumeration you would like to copy and click the ellipsis icon.
 
 4. Select the **Copy to clipboard** option in the drop-down menu. 
-![Copy Enumeration](/attachments/studio/work-with-data/domain-models/domain-models-enumeration/copy-to-clipboard.png)
+{{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/copy-to-clipboard.png" alt="Copy Enumeration" >}}
 
 5. Open a different module or Studio app, navigate to a domain model and press <kbd>Ctrl</kbd> + <kbd>V</kbd>.
 
@@ -100,7 +100,7 @@ To duplicate an enumeration, follow the steps below:
 
 4.  Select the **Duplicate** option in the drop-down menu. 
 
-    ![Duplicate Enumeration](/attachments/studio/work-with-data/domain-models/domain-models-enumeration/duplicate.png)
+    {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/duplicate.png" alt="Duplicate Enumeration" >}}
 
 5. Close the dialog box.
 
@@ -118,7 +118,7 @@ To delete an enumeration, follow the steps below:
 
 4. Select the **Delete** option in the drop-down menu:
 
-    ![Delete Enumeration](/attachments/studio/work-with-data/domain-models/domain-models-enumeration/delete-enumeration.png)
+    {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/delete-enumeration.png" alt="Delete Enumeration" >}}
 
 5. Confirm your choice and close the dialog box.
 

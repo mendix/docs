@@ -29,7 +29,7 @@ Restoring a backup locally can be useful if you want to test your cloud environm
 * [Download a backup](/developerportal/operate/download-backup/) that you want to restore locally
 * Install PostgreSQL version 12 or above (as you need pgAdmin version 4.12 or above) on your local machine by downloading and running the [PostgreSQL Installer](https://www.postgresql.org/download/windows/); use the program defaults and choose a password:
 
-    ![](/attachments/developerportal/operate/backups/restore-backup-locally/postgres-password.png)
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/postgres-password.png" >}}
 
     {{% alert color="info" %}}You will need this password later to allow your Mendix app to access the restored data. 
     {{% /alert %}}
@@ -52,19 +52,19 @@ If you have downloaded a full backup, this will also have been archived as a *.t
 2. Click the **+** in the Browser pane to open the **Servers > PostgreSQL 9.6** menu.
 3. Right-click **Databases** and **Create** a new database.
 
-    ![](/attachments/developerportal/operate/backups/restore-backup-locally/add-database.png)
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/add-database.png" >}}
 
 4. Fill in the **Database** name.
 5. Select the correct owner (the default is **postgres**) and click **Save**.
 6. Right-click the newly created database and click **Restore...**.
 
-    ![](/attachments/developerportal/operate/backups/restore-backup-locally/restore-database.png)
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/restore-database.png" >}}
 
 7. Select the **.backup** file you downloaded from the Team Server.
 8. Click on the **Restore options** tab.
 9. Under **Do not save** set **Owner** to **Yes**.
 
-    ![](/attachments/developerportal/operate/backups/restore-backup-locally/restore-options.png)
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/restore-options.png" >}}
 
 10. Click **Restore**.
 11.	Wait until you see that the backup is **Successfully completed.** in the right corner of the screen.
@@ -76,11 +76,11 @@ After the backup has been restored as a local Postgres database, you have to lin
 1. Open your app in **Studio Pro**.
 2. Open **Project... > Settings** from the **App Explorer**.
 
-    ![](/attachments/developerportal/operate/backups/restore-backup-locally/app-settings.png)
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/app-settings.png" >}}
 
 3. Under the tab **Configurations** click **New**.
 
-    ![](/attachments/developerportal/operate/backups/restore-backup-locally/add-configuration.png)
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/add-configuration.png" >}}
 
 4. Fill in the database information:
     * **Name**: *{a unique name}*
@@ -105,11 +105,11 @@ If you also want to restore the **FileDocuments**, you need to follow the follow
 
 1. Download a **Full Snapshot**.
 
-    ![](/attachments/developerportal/operate/backups/restore-backup-locally/backup-choice.png)
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/backup-choice.png" >}}
 
 2. Select **Project > Show App Directory in Explorer** from the Studio Pro menu:
 
-    ![](/attachments/developerportal/operate/backups/restore-backup-locally/project-directory.png)
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/project-directory.png" >}}
 
 3. Navigate to the **deployment/data/files** folder within your app.
 4. Extract the *{backup name}.tar* file from the *.gz* archive using a program like **7-zip**.

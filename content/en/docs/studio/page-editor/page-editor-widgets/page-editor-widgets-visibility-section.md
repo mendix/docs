@@ -16,12 +16,12 @@ The **Conditional Visibility** section in widget properties allows you to show a
 
 For example, you have a web shop and you do not want to bother users with filling in the same address twice when the delivery address matches the billing address. You would like to show fields to fill the billing address in only when a user unchecks the **Billing address is the same as delivery address** option (which is checked by default). In this case you can make the billing address fields visible based on an *attribute value*: the field will be displayed only when the *BillingAddressSame* is unticked (set to *false*):
 
-![Visibility Example](/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-visibility-section/attribute-based-example.png)
+{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-visibility-section/attribute-based-example.png" alt="Visibility Example" >}}
 
 You can also show a widget to a certain *user role* only. For example, you can show a widget showing salary amounts only to Finance Managers. 
 
 To see which widgets that have conditional visibility configured, click the eye icon is the **Show** option in the upper-left corner of a page:
-![Show Option](/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-visibility-section/highlight-conditional-items.png)
+{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-visibility-section/highlight-conditional-items.png" alt="Show Option" >}}
 
 ## 2 Conditional Visibility Properties
 
@@ -31,7 +31,7 @@ You can enable conditional visibility based on the outcome of the [dynamic data]
 
 **Visible Based on Data** allows you to show widgets based on the outcome of the dynamic data. For example, you would like to show a special offer price only for customers with the **Gold** grade: 
 
-![Visible Based on Data](/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-visibility-section/visible-based-on-data.jpg)
+{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-visibility-section/visible-based-on-data.jpg" alt="Visible Based on Data" >}}
 
 ### 2.2 Condition Based on {#condition}
 
@@ -50,7 +50,7 @@ This property is shown only when the attribute is selected for the [Attribute](#
 
 If you would like to show a special offer price only for customers with the **Gold** grade, you need to select *Grade* in the **Attribute** property and *Gold* in as the **Attribute Value**:
 
-![Attribute-Based Visibility](/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-visibility-section/attribute-based-visibility.png)
+{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-visibility-section/attribute-based-visibility.png" alt="Attribute-Based Visibility" >}}
 
 ### 2.5 Expression
 
@@ -60,7 +60,7 @@ This property allows you to create an expression and is shown only when the expr
 
 The widget can be made visible to users with a specific user role only. For example, in a taxi booking app, you would like to show a taxi driver rating to customers and administrators, but hide it from taxi drivers:
 
-![Visible Based on Role](/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-visibility-section/visible-based-on-role.jpg)
+{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-visibility-section/visible-based-on-role.jpg" alt="Visible Based on Role" >}}
 
 {{% alert color="info" %}}
 
@@ -84,13 +84,13 @@ To configure visibility based on the attribute value, follow the steps below:
 
 3. The **Condition Based on** is set to **Attribute** by default. Click the **Attribute** property: 
 
-    ![](/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-visibility-section/attribute-based-property.png)
+    {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-visibility-section/attribute-based-property.png" >}}
 
 4. In the **Select Attribute** dialog box, select an attribute of the Boolean or enumeration type and click **Select**.
 
 5. The **Attribute Values** property is now displayed in properties. Untick the values that do not meet the conditions you would like to set:
 
-    {{% image_container width="300" %}}![](/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-visibility-section/attribute-values.png){{% /image_container %}} 
+    {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-visibility-section/attribute-values.png"   width="300"  >}} 
 
 Conditional visibility based on the attribute value is set for the widget.
 
@@ -104,7 +104,7 @@ To configure role-based conditional visibility, do the following:
 
 3. A list of roles available in your app is displayed in the **Roles** property. Untick the roles who would like to hide the widget from:
 
-    ![](/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-visibility-section/role-based-example.png)    
+    {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-visibility-section/role-based-example.png" >}}    
 
 Conditional visibility based on user roles is set for the widget.
 

@@ -56,9 +56,7 @@ You can choose different types of button by setting the appropriate **Button sty
 | Attention | Warning |
 | Transparent | *this can be added using a building block* |
 
-{{% image_container width="75%" %}}
-![SAP Fiori Button Styles](/attachments/partners/sap/sap-fiori-3-0/button-styles.png)
-{{% /image_container %}}
+{{< figure src="/attachments/partners/sap/sap-fiori-3-0/button-styles.png" alt="SAP Fiori Button Styles"   width="75%"  >}}
 
 For the **Link button**, see [Applying CSS Classes Manually](#apply-css), below*.
 
@@ -66,19 +64,19 @@ For the **Link button**, see [Applying CSS Classes Manually](#apply-css), below*
 
 The **container count badge** allows you to add a count badge to containers on Mendix pages as shown in the following example.
 
-![SAP Fiori Count Badge Example](/attachments/partners/sap/sap-fiori-3-0/count-badge-example.png)
+{{< figure src="/attachments/partners/sap/sap-fiori-3-0/count-badge-example.png" alt="SAP Fiori Count Badge Example" >}}
 
 You can create this style by adding the **ContainerCountBadge** widget inside a container.
 
-![SAP Fiori Count Badge page design](/attachments/partners/sap/sap-fiori-3-0/count-badge-edit.png)
+{{< figure src="/attachments/partners/sap/sap-fiori-3-0/count-badge-edit.png" alt="SAP Fiori Count Badge page design" >}}
 
 The number which is displayed in the badge is supplied by a microflow which you can specify in the **Data Source** tab of the badge properties. The microflow must return an integer value.
 
-![SAP Fiori Count Badge microflow](/attachments/partners/sap/sap-fiori-3-0/count-badge-microflow.png)
+{{< figure src="/attachments/partners/sap/sap-fiori-3-0/count-badge-microflow.png" alt="SAP Fiori Count Badge microflow" >}}
 
 You can specify the appearance of the count badge in the **Appearance** tab of the badge properties. If you want to maintain the correct SAP Fiori theme, you should choose the **Color Source** *Bootstrap Color Schema*.
 
-![SAP Fiori Count Badge appearance](/attachments/partners/sap/sap-fiori-3-0/count-badge-appearance.png)
+{{< figure src="/attachments/partners/sap/sap-fiori-3-0/count-badge-appearance.png" alt="SAP Fiori Count Badge appearance" >}}
 
 #### 2.1.3 List Views
 

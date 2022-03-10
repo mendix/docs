@@ -22,7 +22,7 @@ The **Create list** activity creates an empty list.
 
 An example of create list properties is represented in the image below:
 
-![create list properties](/attachments/refguide8/modeling/application-logic/activities/list-activities/create-list/create-list-properties.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/list-activities/create-list/create-list-properties.png" alt="create list properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

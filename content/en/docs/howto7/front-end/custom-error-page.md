@@ -20,7 +20,7 @@ The different files serve different purposes:
 
 If you do not create these files, the default "green monsters" will be used instead for each scenario.
 
-![](/attachments/howto7/front-end/custom-error-page/monsters.png)
+{{< figure src="/attachments/howto7/front-end/custom-error-page/monsters.png" >}}
 
 **This how-to will teach you how to do the following:**
 
@@ -39,15 +39,15 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 2.  Go to **theme**.
 
-    ![](/attachments/howto7/front-end/custom-error-page/theme.png)
+    {{< figure src="/attachments/howto7/front-end/custom-error-page/theme.png" >}}
 
 3.  Create a new folder named *error_page*.
 
-    ![](/attachments/howto7/front-end/custom-error-page/error-page.png)
+    {{< figure src="/attachments/howto7/front-end/custom-error-page/error-page.png" >}}
 
 4.  In the **error_page** folder, place your *offline.html* file. 
 
-    ![](/attachments/howto7/front-end/custom-error-page/offline.png)
+    {{< figure src="/attachments/howto7/front-end/custom-error-page/offline.png" >}}
 
     Optionally, you can also create *404.html* and *403.html* pages.
     

@@ -11,7 +11,7 @@ tags: ["studio", "settings", "module", "add-on", "mendix version", "update", "mo
 
 The **Mendix Version & Add-Ons** screen provide information on the Mendix version and add-on modules your app currently has and allows you to upgrade them when a newer version is available. You may want to stay up-to-date to have the latest features, issue fixes, and security updates. 
 
-![Mendix Version &Add-Ons Screen](/attachments/studio/settings/settings-version-and-add-ons/version-and-add-ons-screen.png)
+{{< figure src="/attachments/studio/settings/settings-version-and-add-ons/version-and-add-ons-screen.png" alt="Mendix Version &Add-Ons Screen" >}}
 
 The Mendix version is the core version of your app that contains main features and functionality. For more information on Mendix and Studio versions, see [Studio Ranges & Mendix Versions](/studio/general-versions/).
 
@@ -27,7 +27,7 @@ Version upgrades and add-on updates come into effect after you publish your app.
 
 When a new Mendix version comes out, you see a green dot next to the **Settings** icon and the **Mendix Version & Add-Ons** screen in the menu bar (in addition to the top bar that is displayed in Studio). Click the **Upgrade Now** button to upgrade to the next version.
 
-![Upgrade Now Button](/attachments/studio/settings/settings-version-and-add-ons/upgrade-now-button.png)
+{{< figure src="/attachments/studio/settings/settings-version-and-add-ons/upgrade-now-button.png" alt="Upgrade Now Button" >}}
 
 For more information on the upgrade, see the [Upgrading to the Next Version](/studio/general-versions/#upgrade) section in *Studio Ranges & Mendix Versions*.
 
@@ -43,9 +43,7 @@ Once there is a new version of an add-on module that is compatible with your app
 
 Modules can be dependent on each other: one module might need other modules to function properly, or one version of a module might require a specific version of the module it depends on. For example, the workflow-specific module Workflow Commons requires the Atlas Core module and it requires Atlas Core to be no lower than version 3. Studio detects such dependencies automatically and notifies you about them, so no additional action is required from you, all dependencies are handled automatically:
 
-{{% image_container width="350" %}}
-![Dependencies Found Pop-up Window](/attachments/studio/settings/settings-version-and-add-ons/dependencies-found.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio/settings/settings-version-and-add-ons/dependencies-found.png" alt="Dependencies Found Pop-up Window"   width="350"  >}}
 
 ## 4 Read More
 

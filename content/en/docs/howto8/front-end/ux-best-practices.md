@@ -28,7 +28,7 @@ The arguments for putting everything onto a single screen include the following:
 
 To a UX Designer, this kind of app looks like a Swiss Army knife with all the tools unfolded, but the only one being used is the bottle opener.
 
-![](/attachments/howto8/front-end/ux-best-practices/single-screen.png)
+{{< figure src="/attachments/howto8/front-end/ux-best-practices/single-screen.png" >}}
 
 ### 2.1 Avoid Overwhelming Design
 
@@ -55,7 +55,7 @@ The arguments for using drop-down menus and packing them full of options often i
 
 The guidelines below address what you really need to consider when designing drop-down menus.
 
-![](/attachments/howto8/front-end/ux-best-practices/drop-down.png)
+{{< figure src="/attachments/howto8/front-end/ux-best-practices/drop-down.png" >}}
 
 ### 3.1 Emphasize Balance
 
@@ -77,7 +77,7 @@ The arguments for using a very consistent design system and brand style may incl
 
 The guidelines below address how to let the user know where they are in your app.
 
-![](/attachments/howto8/front-end/ux-best-practices/where-am-i.png)
+{{< figure src="/attachments/howto8/front-end/ux-best-practices/where-am-i.png" >}}
 
 ### 4.1 Design for Distracted Users
 
@@ -98,7 +98,7 @@ Writing long lines of text and implementing tiny font sizes is another example o
 
 The rule of thumb for web typography is to write no more than nine words per line. When the end-user is finished reading a line, their eyes need to be able to find the next line. So, if a line is too long, it is harder for their eyes to move on.
 
-![](/attachments/howto8/front-end/ux-best-practices/long-lines.png)
+{{< figure src="/attachments/howto8/front-end/ux-best-practices/long-lines.png" >}}
 
 ### 5.1. Whitespace Is Not Wasted Space
 
@@ -116,7 +116,7 @@ The main argument for a UX Designer implementing something like this is the foll
 
 However, the problem with such a design is that the end-user will lose the mental model of where they are in the flow of app pages or the process. They will be more distracted, no matter if they close the second pop-up window and return to the first pop-up window or return to the original screen.  
 
-![](/attachments/howto8/front-end/ux-best-practices/pop-up.png)
+{{< figure src="/attachments/howto8/front-end/ux-best-practices/pop-up.png" >}}
 
 ### 6.1 Avoid One Too Many Pop-Up Windows
 
@@ -135,7 +135,7 @@ An argument for implementing such a design would be the following:
 
 UX Designers often talk about visual hierarchy, which is the way elements are organized on a screen to communicate their importance to the end-user. Physical symbolism—such as cards—was introduced into the visual hierarchy to present information in a certain way. Because playing cards are of equal size in a traditional card deck, digital cards placed on, under, or next to other cards can communicate certain states and relationships between information. However, when you nest a card inside another card, the end-user's mental model of what you can do with the cards starts to break down. This end-user may even start to question the relationships of other objects in the UI, thus further compromising the design hierarchy in your app.
 
-![](/attachments/howto8/front-end/ux-best-practices/cards.png)
+{{< figure src="/attachments/howto8/front-end/ux-best-practices/cards.png" >}}
 
 ### 7.1 Do Not Nest Cards
 
@@ -151,7 +151,7 @@ The main argument for including a lot of form fields in one page is an argument 
 
 Again, the issue here is not the need to scroll, but the amount of information on the screen (meaning, how many form fields are visible on the screen at a single time). Like buttons, the number of form fields should be reduced to the minimal number possible that can still provide context and ease-of-use.
 
-![](/attachments/howto8/front-end/ux-best-practices/forms.png)
+{{< figure src="/attachments/howto8/front-end/ux-best-practices/forms.png" >}}
 
 ### 8.1 Always Use a Single Column
 
@@ -183,7 +183,7 @@ An argument for designing buttons inconsistently may be something like this:
 
 However, consistency in button design is important for enabling the user to progress through your app smoothly.
 
-![](/attachments/howto8/front-end/ux-best-practices/buttons.png)
+{{< figure src="/attachments/howto8/front-end/ux-best-practices/buttons.png" >}}
 
 ### 9.1 Plan the Position, Color, and Label
 

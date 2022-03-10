@@ -40,15 +40,15 @@ Follow the instructions below to configure a maintenance window:
 
 2. Go to the **Environments** page for your app.
 
-    ![](/attachments/developerportal/deploy/mendix-cloud-deploy/maintenance-windows/maintenance1.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/maintenance-windows/maintenance1.png" >}}
 
 3. Click **Details** for the environment you want to configure:
 
-    ![](/attachments/developerportal/deploy/mendix-cloud-deploy/maintenance-windows/maintenance2.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/maintenance-windows/maintenance2.png" >}}
 
 4. Go to the **Maintenance** tab:
 
-    ![](/attachments/developerportal/deploy/mendix-cloud-deploy/maintenance-windows/maintenance.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/maintenance-windows/maintenance.png" >}}
     
 5. Click **Change** to modify the preferred maintenance window of your environment. Transport rights for this environment are required.
 

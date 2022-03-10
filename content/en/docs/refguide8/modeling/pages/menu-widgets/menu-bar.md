@@ -19,14 +19,13 @@ A menu bar shows menu items of a [navigation profile](/refguide8/navigation/#pro
 
 Menu bars can go two levels deep, that means menu items can have sub-items. For more information on menu items and their properties, see [Menu](/refguide8/menu/).
 
-![Menu Bar](/attachments/refguide8/modeling/pages/menu-widgets/menu-bar/menu-bar.png)
+{{< figure src="/attachments/refguide8/modeling/pages/menu-widgets/menu-bar/menu-bar.png" alt="Menu Bar" >}}
 
 ## 2 Properties
 
 An example of menu bar properties is represented in the image below:
 
-{{% image_container width="250" %}}![](/attachments/refguide8/modeling/pages/menu-widgets/menu-bar/menu-bar-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/pages/menu-widgets/menu-bar/menu-bar-properties.png"   width="250"  >}}
 
 Menu bar properties consist of the following sections:
 

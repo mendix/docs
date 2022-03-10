@@ -29,7 +29,7 @@ Widgets/Components for which the font tab page is visible:
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide8/modeling/resources/document-templates/style/2018-03-01_14-27-27.png)
+{{< figure src="/attachments/refguide8/modeling/resources/document-templates/style/2018-03-01_14-27-27.png" >}}
 
 The font tab page in the style editor.
 
@@ -49,7 +49,7 @@ Widgets/Components for which the cell styling tab page is visible:
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide8/modeling/resources/document-templates/style/2018-03-01_14-29-13.png)
+{{< figure src="/attachments/refguide8/modeling/resources/document-templates/style/2018-03-01_14-29-13.png" >}}
 
 The cell styling tab page in the style editor.
 
@@ -61,7 +61,7 @@ The custom styles tab page is always visible for widgets/components that allow s
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide8/modeling/resources/document-templates/style/2018-03-01_14-33-46.png)
+{{< figure src="/attachments/refguide8/modeling/resources/document-templates/style/2018-03-01_14-33-46.png" >}}
 
 The custom styles tab page in the style editor.
 

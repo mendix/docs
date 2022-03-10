@@ -22,7 +22,7 @@ Delete object(s) can be used to delete one or more objects.
 
 An example of delete object properties is represented in the image below:
 
-![delete object properties](/attachments/refguide8/modeling/application-logic/activities/object-activities/deleting-objects/delete-properties.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/deleting-objects/delete-properties.png" alt="delete object properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -85,4 +85,4 @@ Clicking a Delete button or triggering a delete activity will initiate the delet
 * Result: the object will be removed from memory and if applicable from the database
 	* All delete behavior for the associations is validated, and any associated objects are removed as well
 
-![](/attachments/refguide8/modeling/application-logic/activities/object-activities/deleting-objects/18582171.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/deleting-objects/18582171.png" >}}

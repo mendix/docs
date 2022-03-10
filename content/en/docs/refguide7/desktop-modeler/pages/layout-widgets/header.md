@@ -12,10 +12,10 @@ Headers consist of three distinct elements: a left drop-zone, a right drop-zone,
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/pages/layout-widgets/header/header-layout.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/layout-widgets/header/header-layout.png" >}}
 A basic lay-out utilizing a header to give the page structure.
 
-![](/attachments/refguide7/desktop-modeler/pages/layout-widgets/header/header-page.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/layout-widgets/header/header-page.png" >}}
 An edit page derived from the lay-out above. The page title it automatically adjusted to match that of the page and the [placeholders](/refguide7/placeholder/) have been used to add a save and cancel button, replacing the need to add a control bar to the data view.
 
 {{% /alert %}}

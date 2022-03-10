@@ -36,7 +36,7 @@ Command-line arguments provide information to the Native Builder, such as where 
 1. Open your command line program as an administrator by right-clicking its icon or *.exe* file and selecting **Run as administrator**.
 2.  Target your Native Builder's directory by typing `cd "{your Native Builder .exe location}"` and pressing <kbd>Enter</kbd>:
 
-	![change directory](/attachments/refguide8/mobile/native-mobile/native-builder/change-directory.png)
+	{{< figure src="/attachments/refguide8/mobile/native-mobile/native-builder/change-directory.png" alt="change directory" >}}
 
 ### 2.1 Prepare {#prepare}
 

@@ -10,7 +10,7 @@ description: "This page contains detailed explanations on how pages, layouts, an
 
 Pages are defined based on Layouts (see below). Pages, Layouts and Snippets inherit from FormBase, through which a list of top level widgets on the page can be defined. To secure access to pages, you can define allowed module roles for each page.
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582251.svg)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582251.svg" >}}
 
 
 Studio Pro Guide | Model SDK API docs
@@ -25,7 +25,7 @@ A Page can have a LayoutCall to render a Layout. As a Layout has zero or more La
 
 A Layout can contain one or more Widgets or Placeholders. For each Placeholder, the Layout will have a LayoutParameter. A LayoutCall that targets that Layout will have a LayoutCallArgument for each LayoutParameter/Placeholder pair.
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582250.svg)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582250.svg" >}}
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
@@ -44,7 +44,7 @@ Similar to Layout and Page, a Snippet inherits from FormBase. You can add any wi
 
 For a Page to include a Snippet, it needs to use the SnippetCallWidget which, in turn, calls the Snippet.
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582219.svg)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582219.svg" >}}
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
@@ -62,7 +62,7 @@ A ListView is a widget that can contain other widgets or list of objects. The Cl
 
 Conditional visibility settings can determine whether or not the list view is visible, based on either an attribute value and/or module roles.
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582258.svg)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582258.svg" >}}
 
 ### 4.2 Data View
 
@@ -72,7 +72,7 @@ If a `noEntityMessage` is specified, a data view that receives no source data wi
 
 The control bar of the data view can have the following buttons: save, cancel, close, and microflow. A typical data view has a save and a cancel button. If it is not editable, a close button is sufficient. Microflow buttons trigger custom microflows that have been defined in the model.
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582311.svg)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582311.svg" >}}
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
@@ -100,7 +100,7 @@ There are basically two ways to retrieve entities from the database:
 
 An `ImageViewerSource` only works with the ImageViewer widget and is restricted to (specializations of) the `System.Image` entity.
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582293.svg)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582293.svg" >}}
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
@@ -124,7 +124,7 @@ A data grid shows a list of objects in a grid. For example, a data grid can show
 
 A reference set selector allows you to set an association of type _reference set_ by selecting objects. For example, if customers can belong to several groups, a reference set selector can be used to select the groups the customer belongs to. This requires that there is an association from customer to a group of type _reference set_ in the domain model.
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582297.svg)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582297.svg" >}}
 
 Studio Pro Guide | Model SDK API Docs
 --- | --- |
@@ -137,7 +137,7 @@ Studio Pro Guide | Model SDK API Docs
 
 Button widgets perform an action when clicked. They can be rendered as a button or a hyperlink (RenderType). The ButtonStyle enumeration determines the visual cues for Warning, Success, and other styles that can be applied to the Button. A Button may refer to an Icon. Icons can either be ImageIcons (containing a bitmap image) or GlyphIcons (containing a UTF-8 code referring to a glyph from the [Bootstrap Halflings collection](http://getbootstrap.com#glyphicons)). The tooltip property determines the text you will see in the tooltip that appears when you hover over the button. The tooltip text is translatable. It can also be templated with the help of a ClientTemplate, in which case the text content of the button will be parameterizable (dynamic).
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582314.svg)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582314.svg" >}}
 
 Studio Pro Guide | Model SDK API Docs
 --- | --- 
@@ -152,7 +152,7 @@ Studio Pro Guide | Model SDK API Docs
 
 DivContainers, Split Panes, Group Boxes, LayoutGridColumns, ScrollContainerRegions, and TabPages are widgets whose basic function is to contain other widgets. With the exception of SplitPanes, which refer to a VerticalFlow widget that, in turn, contains a list of other widgets. Split Panes (**deprecated** in favor of ScrollContainer) each refer to a firstWidget and secondWidget to fill their contents. ScrollContainers have regions (left, right, top, bottom, center) that each refer to contained widgets. TabContainers contain an array of TabPages, and one of those must be the default visible page.
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582317.svg)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582317.svg" >}}
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
@@ -166,7 +166,7 @@ Studio Pro Guide | Model SDK API docs
 
 The _reference selector_ is an input widget that can be used to display and edit associations. The _reference set selector_ allows you to set an association of type reference set by selecting objects. When the value of an association widget changes, a microflow can be triggered. The way in which this happens is determined by the MicroflowSettings. An Association is, by nature, associated to an entity. Where this entity is retrieved from can be determined using a SelectorSource. There are two types of selector sources: one using an XPath query, and one that triggers a Microflow.
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582318.svg)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582318.svg" >}}
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |

@@ -16,7 +16,7 @@ The APM Tool includes the load test session recorder, so APM Tool users do not n
 
 You can start and stop the Load Test Recorder. The followingscreenshot below shows the Log Tool when started:
 
-![](/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-load-test-recorder/Control.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-load-test-recorder/Control.png" >}}
 
 You can Start and stop timers to mark individual functionality in the session. This helps the load tool to measure those functions.
 
@@ -24,7 +24,7 @@ You can Start and stop timers to mark individual functionality in the session. T
 
 The following screenshot shows the Load Test Recorder Options:
 
-![](/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-load-test-recorder/Options.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-load-test-recorder/Options.png" >}}
 
 The **Max messages to record** can limit the amount of records in memory. The recording stops when the maximum is reached.
 
@@ -35,4 +35,4 @@ You can configure the Load Test Recorder to stop if a queue builds up with too m
 ## 4 Recorded Sessions
 
 The recorded sessions can be downloaded from the recorded sessions tab.
-![](/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-load-test-recorder/Overview.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-load-test-recorder/Overview.png" >}}

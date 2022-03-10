@@ -10,7 +10,7 @@ With this dialog box, you can export a Mendix project package (*.mpk*) from the 
 
 To open the **Export Project Package** dialog box, open your project in the Mendix Modeler and then go to **File > Export Project Package**.
 
-![](/attachments/refguide7/desktop-modeler/dialogs/export-project-package-dialog/export-project-package-dialog.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/dialogs/export-project-package-dialog/export-project-package-dialog.png" >}}
 
 ## 2 Package Destination
 

@@ -14,7 +14,7 @@ In this document, we explain how to solve the most common consistency errors tha
 
 An example of a consistency error is when you set a drag and drop a **Create Object** activity to the microflow, but do not specify what entity should be used as a data source to create the object. 
 
-![Microflow Error Example](/attachments/studio8/checks/consistency-errors/consistency-errors-microflows/microflow-error-example.png)
+{{< figure src="/attachments/studio8/checks/consistency-errors/consistency-errors-microflows/microflow-error-example.png" alt="Microflow Error Example" >}}
 
 {{% alert color="info" %}}
 

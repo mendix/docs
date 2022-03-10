@@ -27,13 +27,13 @@ There is a car rental company that has a car rental app. Customers can register 
 
 The domain model of this app looks the following way:
 
-![Domain Model](/attachments/studio-how-to8/security-how-to-configure-roles/domain-model.png)
+{{< figure src="/attachments/studio-how-to8/security-how-to-configure-roles/domain-model.png" alt="Domain Model" >}}
 
 There are the following pages in this app:
 
 * *Home_Web* – a home page which should be accessed by all roles. Buttons on the home page open the corresponding page:
 
-    ![Home Page](/attachments/studio-how-to8/security-how-to-configure-roles/home-page.png)
+    {{< figure src="/attachments/studio-how-to8/security-how-to-configure-roles/home-page.png" alt="Home Page" >}}
 
 * *Car_Details* – a page listing car details
 
@@ -58,13 +58,13 @@ Depending on your app type and version, you might need to enable security first.
 
 2. In the **Roles and Permissions** screen, click **Enable Security**:
 
-	{{% image_container width="550" %}}![Enable Security](/attachments/studio-how-to8/security-how-to-configure-roles/enable-security.png){{% /image_container %}}
+	{{< figure src="/attachments/studio-how-to8/security-how-to-configure-roles/enable-security.png" alt="Enable Security"   width="550"  >}}
 	
 3. After security is enabled, you can see a table with three tabs: **Roles,** **Pages**, **Microflows**. Two roles are created by default: **Administrator** and **User**. The **Administrator** role is read-only, meaning you cannot delete or rename it. As it is already configured and has access to all functionality, you can use this role for your app administrators in the future. 
 
     To rename the **User** role, click the ellipsis icon next to the **User** role and select **Edit** in the drop-down menu:
 
-    ![User Role](/attachments/studio-how-to8/security-how-to-configure-roles/user-role.png)
+    {{< figure src="/attachments/studio-how-to8/security-how-to-configure-roles/user-role.png" alt="User Role" >}}
 
 4. In the **Edit Role** dialog box, rename it to **Customer** and click **Save**.
 
@@ -72,11 +72,11 @@ Depending on your app type and version, you might need to enable security first.
 
 6. In the **Create Role** dialog box, fill in the role name as **Front_Desk** and click **Save**:
 
-    {{% image_container width="450" %}}![Create Role](/attachments/studio-how-to8/security-how-to-configure-roles/create-role.png){{% /image_container %}}
+    {{< figure src="/attachments/studio-how-to8/security-how-to-configure-roles/create-role.png" alt="Create Role"   width="450"  >}}
 
 You now have three user roles: Administrator, Customer, and Front_Desk.
 
-![Create Roles](/attachments/studio-how-to8/security-how-to-configure-roles/roles-created.png)
+{{< figure src="/attachments/studio-how-to8/security-how-to-configure-roles/roles-created.png" alt="Create Roles" >}}
 
 ## 4 Managing Role Access
 
@@ -86,7 +86,7 @@ If you look at the table of your user roles, you will see that by default they c
 
 2. As front-desk agents should not have access to customer's personal profiles, untick the check-box in the **Front-Desk** column next in the **Personal_Profile** line:
 
-	![Page Access for the Front-Desk Role](/attachments/studio-how-to8/security-how-to-configure-roles/page-access-front-desk.png)
+	{{< figure src="/attachments/studio-how-to8/security-how-to-configure-roles/page-access-front-desk.png" alt="Page Access for the Front-Desk Role" >}}
 
 Good job! You have set the access for pages for your user roles. 
 
@@ -104,15 +104,15 @@ You can test the roles that you set with [demo users](/studio8/settings-security
 
 3. When your app is previewed, click a user icon in the right side of the screen: 
 
-    ![Demo User Icon](/attachments/studio-how-to8/security-how-to-configure-roles/demo-users-icon.png)
+    {{< figure src="/attachments/studio-how-to8/security-how-to-configure-roles/demo-users-icon.png" alt="Demo User Icon" >}}
 
 4. In the displayed menu bar, select a demo user and the app will be viewed from the perspective of the corresponding role. Click the **demo_customer** to test which functionality can the **Customer** role view and access.
 
-    {{% image_container width="350" %}}![Select Demo User](/attachments/studio-how-to8/security-how-to-configure-roles/select-user.png){{% /image_container %}}
+    {{< figure src="/attachments/studio-how-to8/security-how-to-configure-roles/select-user.png" alt="Select Demo User"   width="350"  >}}
 
 5. Repeat steps 3-4 to test the **Front_Desk** role:
 
-    ![Testing Roles](/attachments/studio-how-to8/security-how-to-configure-roles/testing-roles.png)
+    {{< figure src="/attachments/studio-how-to8/security-how-to-configure-roles/testing-roles.png" alt="Testing Roles" >}}
 
 6. Click **Close Preview** in the upper-right corner to finish your test.
 

@@ -10,7 +10,7 @@ tags: ["studio pro", "App Explorer"]
 
 The **App Explorer** shows the complete structure of your app including all documents inside the modules:
 
-![](/attachments/refguide/modeling/menus/view-menu/project-explorer/app-explorer.png)
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/app-explorer.png" >}}
 
 The **App Explorer** consists of the following:
 

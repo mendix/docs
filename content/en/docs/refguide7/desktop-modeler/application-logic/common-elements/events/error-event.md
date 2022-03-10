@@ -18,6 +18,6 @@ You can only use an Error Event if an error is in scope: the Modeler does not ac
 
 In this example, an error is caught while committing an object to the database, and is rethrown at the error event. From outside the microflow, you can catch this error with custom error handling and react appropriately. So you can implement your error handling on multiple levels.
 
-![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/events/error-event/16843954.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/events/error-event/16843954.png" >}}
 
 {{% /alert %}}

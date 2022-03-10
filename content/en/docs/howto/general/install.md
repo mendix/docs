@@ -8,7 +8,7 @@ toc-level: "2"
 tags: ["studio pro", "install", "install studio pro", "download"]
 ---
 
-[![](/attachments/howto/general/install/download.png)](https://marketplace.mendix.com/link/studiopro/)
+[{{< figure src="/attachments/howto/general/install/download.png" >}}](https://marketplace.mendix.com/link/studiopro/)
 
 ## 1 Introduction
 
@@ -38,29 +38,24 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
 1.  Open the downloaded Mendix Studio Pro executable. It is named like this: *Mendix-9.X.X-Setup*. Then click **Next**:
 
-	{{% image_container width="400" %}}![](/attachments/howto/general/install/setup-wizard.png)
-	{{% /image_container %}}
+	{{< figure src="/attachments/howto/general/install/setup-wizard.png"   width="400"  >}}
 
 2.  Select **I accept the terms in the License Agreement** and click **Next**:
 
-	{{% image_container width="400" %}}![](/attachments/howto/general/install/terms-of-use.png)
-	{{% /image_container %}}
+	{{< figure src="/attachments/howto/general/install/terms-of-use.png"   width="400"  >}}
 
 3.  Select the folder in which you want to install Studio Pro and click **Next**:
 
-	{{% image_container width="400" %}}![](/attachments/howto/general/install/select-folder.png)
-	{{% /image_container %}}
+	{{< figure src="/attachments/howto/general/install/select-folder.png"   width="400"  >}}
 
 4.  Enter the start menu shortcuts folder you want to use and click **Next**:
 
-	{{% image_container width="400" %}}![](/attachments/howto/general/install/shortcut-folder.png)
-	{{% /image_container %}}
+	{{< figure src="/attachments/howto/general/install/shortcut-folder.png"   width="400"  >}}
 
 5.  Check the desktop option to create a shortcut to Studio Pro on your desktop and click **Next**.
 6.  Click **Install** to install Studio Pro on your computer:
 
-	{{% image_container width="400" %}}![](/attachments/howto/general/install/ready-to-install.png)
-	{{% /image_container %}}
+	{{< figure src="/attachments/howto/general/install/ready-to-install.png"   width="400"  >}}
 
 7.  If you are asked to restart your computer, make a selection and click **Finish**. Otherwise, check **Launch Mendix 9.X.X** and click **Finish** to finish the installation and launch Studio Pro.
 

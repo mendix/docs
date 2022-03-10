@@ -16,7 +16,7 @@ tags: ["studio", "settings", "widgets"]
 
 **App Settings** contains **Widget Overview** – an overview of all Marketplace widgets and local widgets in your app.
 
-![](/attachments/studio7/settings/settings-widget-overview/widget-overview.png)
+{{< figure src="/attachments/studio7/settings/settings-widget-overview/widget-overview.png" >}}
 
 The following types of widgets are included into the widget overview of the App Settings:
 

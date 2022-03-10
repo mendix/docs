@@ -110,13 +110,13 @@ The Repository Service manages communication between Studio or Studio Pro and ot
 
 The figure below shows how two developers might work on a [Studio enabled](#studio-enabled) development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the main line).
 
-![](/attachments/refguide8/version-control/image1.png)
+{{< figure src="/attachments/refguide8/version-control/image1.png" >}}
 
 ### 3.1 Work in Studio Only
 
 The developer works on the app in Studio. They start with the app in state 1, this can be a new app or a revision of the app. Changes are made continuously to the working copy for Studio, stored in the cloud.
 
-![](/attachments/refguide8/version-control/image2.png)
+{{< figure src="/attachments/refguide8/version-control/image2.png" >}}
 
 ### 3.2 Work in Studio Pro Only
 
@@ -126,13 +126,13 @@ The developer works in Studio Pro on the local working copy of the app. There is
 
 The developer can commit this to the Team Server repository at any time to make a new revision (state 3). This revision is copied into the Studio working copy and the developer using Studio will get the changes automatically.
 
-![](/attachments/refguide8/version-control/image3.png)
+{{< figure src="/attachments/refguide8/version-control/image3.png" >}}
 
 ### 3.3 Work in Studio & Studio Pro
 
 Two developers are working on the same [development line](#development-line) of the same app at the same time. One is using Studio Pro, the other is using Studio. Changes from Studio Pro and Studio are stored in the respective working copies: on the local machine for Studio Pro and in the cloud for Studio.
 
-![](/attachments/refguide8/version-control/image4.png)
+{{< figure src="/attachments/refguide8/version-control/image4.png" >}}
 
 ### 3.4 Update Studio Pro Working Copy
 
@@ -146,7 +146,7 @@ This will also pick up changes from other developers using Studio Pro, if they h
 
 If there are conflicts, the developer using Studio Pro will have to resolve them before they can commit the changes to the Team Server repository.
 
-![](/attachments/refguide8/version-control/image5.png)
+{{< figure src="/attachments/refguide8/version-control/image5.png" >}}
 
 ### 3.5 Commit Changes to Team Server Repository
 
@@ -162,7 +162,7 @@ If there are no merge [conflicts](#conflict), the updated Studio Pro working cop
 
 If there are conflicts, the developer using Studio Pro will need to resolve these. Studio will be unlocked, without receiving any of the changes from Studio Pro, while they do this. The developer using Studio Pro then needs to commit again, and the process starts from the beginning (Studio is locked ready for a new revision to be committed from the Studio Working Copy).
 
-![](/attachments/refguide8/version-control/image6.png)
+{{< figure src="/attachments/refguide8/version-control/image6.png" >}}
 
 ## 4 Branches {#branches}
 
@@ -174,7 +174,7 @@ This is done using [Branch Lines](#branch-line).
 
 All apps are developed along the main line (also referred to as **trunk**). Here you have all development happening along a single line, with all changes built upon the previous revision:
 
-![](/attachments/refguide8/version-control/image7.png)
+{{< figure src="/attachments/refguide8/version-control/image7.png" >}}
 
 This is the case for the version control processes described in the section [Version Control Processes for a Single Branch](#vc-single), above.
 
@@ -186,7 +186,7 @@ When you add a branch line, you take a copy of an existing [revision](#revision)
 
 In Mendix each revision within a [repository](#repository) is given a unique version number. This means that version numbers given to revisions along any chosen branch line may not be consecutive.
 
-![](/attachments/refguide8/version-control/image8.png)
+{{< figure src="/attachments/refguide8/version-control/image8.png" >}}
 
 ### 4.3 Merging Branches {#merging-branches}
 
@@ -199,7 +199,7 @@ On the other hand, you may want to add the features from one branch line into an
 
 You can merge a specific revision of a branch line into your current [working copy](#working-copy). If, for example, you were working on the main line updated to revision 6, you can [merge](#merge) revision 5 from another branch line into your working copy. Then you can commit the result to create revision 7. If you want to merge several different committed changes from a branch, you will need to select a range of revisions which includes all the changes.
 
-![](/attachments/refguide8/version-control/image9.png)
+{{< figure src="/attachments/refguide8/version-control/image9.png" >}}
 
 As with the examples in the [Version Control Processes for a Single Branch](#vc-single) section, there may be conflicts during the merge, and these will have to be resolved before you can commit the changes to your app.
 

@@ -8,23 +8,23 @@ parent: "rg-two-test-run"
 
 To run an existing test, you must open the test case or test suite by clicking its name in the repository, or click the play button displayed in the test case:
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-test-run/rg-two-test-run-configuration/play-button.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-test-run/rg-two-test-run-configuration/play-button.png" >}}
 
 The test case (or test suite) details page then opens. On this page, you can see all the test steps and, for the test suite, the containing test case of your test.
 
 If you want to execute your test case, click **Run**:
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-test-run/rg-two-test-run-configuration/test-case-details-run.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-test-run/rg-two-test-run-configuration/test-case-details-run.png" >}}
 
 The **General Settings** job configuration page then opens. On this page, set the job configuration for the test case (or test suite) you want to execute. For every test run, a new job is created.
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-test-run/rg-two-test-run-configuration/runconfig.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-test-run/rg-two-test-run-configuration/runconfig.png" >}}
 
 For explanations of the general settings sections, see [2 General Settings](#general).
 
 If you selected a Selenium hub from a supported Selenium hub provider (SauceLabs, or Browserstack), you get access to the **Platform Settings** section for the selection of the operating system and screen resolution:
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-test-run/rg-two-test-run-configuration/runconfig-os.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-test-run/rg-two-test-run-configuration/runconfig-os.png" >}}
 
 For explanations of the platform settings, see [3 Platform Settings](#platform).
 

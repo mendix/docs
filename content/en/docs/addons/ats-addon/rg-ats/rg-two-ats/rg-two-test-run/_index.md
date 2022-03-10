@@ -17,7 +17,7 @@ Before a test is run, the **Job Configuration** page opens. For every test run, 
 
 You can also cancel a running job by pressing **Cancel** in the corresponding line on the test run page. This immediately cancels the job and interrupts all the running test steps.
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-test-run/job-cancel.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-test-run/job-cancel.png" >}}
 
 ## 2 Special Behavior 
 

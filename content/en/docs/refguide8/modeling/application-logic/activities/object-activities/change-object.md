@@ -22,7 +22,7 @@ The change object activity can be used to change the members of an object. This 
 
 An example of change object properties is represented in the image below:
 
-![change object properties](/attachments/refguide8/modeling/application-logic/activities/object-activities/change-object/change-properties.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/change-object/change-properties.png" alt="change object properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

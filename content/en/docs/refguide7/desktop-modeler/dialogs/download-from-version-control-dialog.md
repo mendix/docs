@@ -11,7 +11,7 @@ aliases:
 
 Use the **Download from Version Control Server** dialog box to download an app from an SVN version control server. 
 
-![](/attachments/refguide7/desktop-modeler/dialogs/download-from-version-control-dialog/download-from-version-control-server-dialog-original.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/dialogs/download-from-version-control-dialog/download-from-version-control-server-dialog-original.png" >}}
 
 {{% alert color="info" %}}
 
@@ -29,7 +29,7 @@ Use this setting to select the location where your app is stored. You can choose
 
 In the **Team Server App** drop-down list, select the Team Server app you wish to open, and then choose the development line you want to download in the **Development line** drop-down list.
 
-![](/attachments/refguide7/desktop-modeler/dialogs/download-from-version-control-dialog/download-from-version-control-server.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/dialogs/download-from-version-control-dialog/download-from-version-control-server.png" >}}
 
 For more information about the Mendix Team Server, see [Team Server](/refguide7/team-server/).
 
@@ -39,7 +39,7 @@ For more information about development lines, see [Version Control Concepts](/re
 
 In the **App repository address** field, enter the repository address of the app you want to open and click **Connect** to load the development lines from the repository. Then choose the development line you want to download in the **Development line** drop-down list.
 
-![](/attachments/refguide7/desktop-modeler/dialogs/download-from-version-control-dialog/download-from-private-server.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/dialogs/download-from-version-control-dialog/download-from-private-server.png" >}}
 
 {{% alert color="info" %}}
 

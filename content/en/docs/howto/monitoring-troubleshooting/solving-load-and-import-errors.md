@@ -15,7 +15,7 @@ This how-to will help you to solve problems that may occur when opening an app i
 
 One possible cause of errors that prevent loading is the usage of the [Mendix Model SDK](/apidocs-mxsdk/mxsdk/) for creating or editing the app. With the Mendix Model SDK it's possible to edit your app in such a way that its format becomes invalid, and in the process preventing Studio Pro from opening it. When this happens the following message is shown:
 
-![](/attachments/howto/monitoring-troubleshooting/solving-load-and-import-errors/18580055.png)
+{{< figure src="/attachments/howto/monitoring-troubleshooting/solving-load-and-import-errors/18580055.png" >}}
 
 Read on to find out how to determine the origin of these errors, and possible ways to solve them.
 
@@ -23,7 +23,7 @@ Read on to find out how to determine the origin of these errors, and possible wa
 
 Click the **Details >>** button to show the actual errors that occurred while loading your app:
 
-![](/attachments/howto/monitoring-troubleshooting/solving-load-and-import-errors/18580052.png)
+{{< figure src="/attachments/howto/monitoring-troubleshooting/solving-load-and-import-errors/18580052.png" >}}
 
 These detailed messages tell you the following:
 

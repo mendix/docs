@@ -16,15 +16,15 @@ File widgets allow end-users to upload, download, and display files and images.
 
 * [File manager](/refguide8/file-manager/) – allows end-users to upload and/or download files:
 
-    ![File Manager Example](/attachments/refguide8/modeling/pages/file-widgets/file-manager-example.png)
+    {{< figure src="/attachments/refguide8/modeling/pages/file-widgets/file-manager-example.png" alt="File Manager Example" >}}
 
 * [Image uploader](/refguide8/image-uploader/) – allows end-users to upload images to the server:
 
-    ![Image Uploader Example](/attachments/refguide8/modeling/pages/file-widgets/image-uploader-example.png)
+    {{< figure src="/attachments/refguide8/modeling/pages/file-widgets/image-uploader-example.png" alt="Image Uploader Example" >}}
 
 * [Image viewer](/refguide8/image-viewer/) – displays an image or its thumbnail:
 
-    ![Image Viewer Example](/attachments/refguide8/modeling/pages/file-widgets/image-viewer-example.png)
+    {{< figure src="/attachments/refguide8/modeling/pages/file-widgets/image-viewer-example.png" alt="Image Viewer Example" >}}
 
 ## 2 Performing Basic Functions
 

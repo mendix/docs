@@ -18,14 +18,13 @@ An image uploader is used to upload images to the server. It also generates a th
 
 In the example below, an image uploader is placed in a nested data view (the *Profile* entity is a specialization of System.Image):
 
-![Image Uploader](/attachments/refguide8/modeling/pages/file-widgets/image-uploader/image-uploader.png)
+{{< figure src="/attachments/refguide8/modeling/pages/file-widgets/image-uploader/image-uploader.png" alt="Image Uploader" >}}
 
 ## 2 Properties
 
 An example of image uploader properties is represented in the image below:
 
-{{% image_container width="250" %}}![Image Uploader Properties](/attachments/refguide8/modeling/pages/file-widgets/image-uploader/image-uploader-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/pages/file-widgets/image-uploader/image-uploader-properties.png" alt="Image Uploader Properties"   width="250"  >}}
 
 Image uploader properties consist of the following sections:
 

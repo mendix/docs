@@ -17,7 +17,7 @@ The Mendix Platform only creates an optimized SQL query if the list is not used 
 
 If you do want to use the list but you also want the optimized query, do two separate retrieves. This will do the optimized query, and you can use the second retrieve in your microflow.
 
-![](/attachments/howto8/logic-business-rules/optimizing-microflow-aggregates/18580944.png)
+{{< figure src="/attachments/howto8/logic-business-rules/optimizing-microflow-aggregates/18580944.png" >}}
 
 ## 2 Read More
 

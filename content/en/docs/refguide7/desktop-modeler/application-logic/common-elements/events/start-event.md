@@ -10,6 +10,6 @@ A start event defines the location where the flow will start from. A flow can on
 
 When you want to start your flow with an activity, you link a start event, using a sequence flow with the activity.
 
-![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/events/start-event/917944.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/events/start-event/917944.png" >}}
 
 {{% /alert %}}

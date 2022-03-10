@@ -15,7 +15,7 @@ tags: ["studio pro", "find advanced", "find usages", "find", "edit menu"]
 
 You can search for changes or usages of different elements, documents, Xpaths, changes to various elements, in your app.  You do it via **Find**, **Find Advanced**, and **Find Usages** options under the **Edit** menu. 
 
-![Find Options](/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/find-options.jpg)
+{{< figure src="/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/find-options.jpg" alt="Find Options" >}}
 
 ## 2 Find Option
 
@@ -27,11 +27,11 @@ You can find various elements in your app via the **Find** option. For example, 
 
 3. In the **Look in** section unselect items in your project where you do not want to search in:  
 
-   ![Look in Section](/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/look-in.jpg)
+   {{< figure src="/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/look-in.jpg" alt="Look in Section" >}}
 
 You can see search results in the **Find Results** pane:
 
-![Search Results](/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/search-results.jpg)
+{{< figure src="/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/search-results.jpg" alt="Search Results" >}}
 
 ## 3 Find Advanced Option
 
@@ -43,9 +43,9 @@ You can search for microflows that have object activities in them. Do the follow
 
 1.  Click **Edit** > **Find** **Advanced** in the top-bar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>.
     The **Find Advanced** dialog box will open:
-    ![](/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/find-advanced-dialog-box.png)
+    {{< figure src="/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/find-advanced-dialog-box.png" >}}
 3.  In the **Search for** option, select **Microflow actions**:
-    ![](/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/search-for-microflow-actions.png)
+    {{< figure src="/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/search-for-microflow-actions.png" >}}
 3.  Select the entity for which you want to search for object activities, and click **Find**.
 
 You can see search results in the **Find Results** pane.
@@ -60,7 +60,7 @@ To find the unused items, do the following:
 
 2. In the **Find Advanced** dialog box, select **Unused items** in the **Search for** option:
 
-   ![](/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/search-for-unused-items.png)
+   {{< figure src="/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/search-for-unused-items.png" >}}
 
 3. Click **Find**. 
 
@@ -88,7 +88,7 @@ Some pages and microflows are only used from Java code and will be listed as an 
 
 2. Navigate to properties and change the **Mark as used** property from **No** to **Yes**.
 
-   ![](/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/mark-as-used-property.png)
+   {{< figure src="/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/mark-as-used-property.png" >}}
 
 ## 4 Find Usages Option {#find-usages}
 
@@ -102,10 +102,10 @@ To find where a certain element is used, do the following:
 
 1. Open the document which contains the element. For example, open the domain model. 
 2. Select an element (for example, an entity) and click **Edit** > **Find usages** in the top-bar or right-click an element and select **Find usages**:
-   ![Find Usages](/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/find-usages.png)
+   {{< figure src="/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/find-usages.png" alt="Find Usages" >}}
 
 Studio Pro shows all usages of this entity in the **Find Results** pane. 
-![Find Results Pane](/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/found-usages.png)
+{{< figure src="/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/found-usages.png" alt="Find Results Pane" >}}
 
 Double-click an item in the **Find Results** pane to open the corresponding document. 
 

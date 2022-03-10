@@ -12,7 +12,7 @@ tags: ["Feedback","Developer Portal", "feedback widget"]
 
 On the **Feedback** page of the Developer Portal, you can view and manage the feedback that has been submitted about an app.
 
-![](/attachments/developerportal/collaborate/feedback/feedback.png)
+{{< figure src="/attachments/developerportal/collaborate/feedback/feedback.png" >}}
 
 This feedback comes from different sources:
 
@@ -62,17 +62,17 @@ If you need to use a link to a specific feedback item (for example, to ask someo
 
 Here you can review the feedback and start any necessary investigation.
 
-![](/attachments/developerportal/collaborate/feedback/feedback-no-details.png)
+{{< figure src="/attachments/developerportal/collaborate/feedback/feedback-no-details.png" >}}
 
 You can also click **Details** for technical details of the feedback item:
 
-![](/attachments/developerportal/collaborate/feedback/feedback-details.png)
+{{< figure src="/attachments/developerportal/collaborate/feedback/feedback-details.png" >}}
 
 On the item's details page, you can also **Turn email updates on/off**. This is useful for when you comment on a feedback item and perform further [processing](#processing) actions on it.
 
 In the **Leave a comment** box, you can post a comment and start an exchange with the App User or team member who submitted the feedback. This is a good place to ask for clarification. You can also use the **Add:** icons to attach files to your comment.
 
-![](/attachments/developerportal/collaborate/feedback/comment.png)
+{{< figure src="/attachments/developerportal/collaborate/feedback/comment.png" >}}
 
 ### 4.2 Processing a Feedback Item {#processing}
 
@@ -85,15 +85,15 @@ To process a feedback item, you can select one of the following in the **Actions
 
 If the feedback item has not yet been accepted, you can also change the feedback item's type by clicking **Convert to idea**, **Convert to question**, or **Convert to issue**. For more information, see the [Types of Feedback](#types) section.
 
-![](/attachments/developerportal/collaborate/feedback/convert-feedback.png)
+{{< figure src="/attachments/developerportal/collaborate/feedback/convert-feedback.png" >}}
 
 If the feedback applies to a different app, you can select an app where you are an team member from the drop-down menu under **Move to app**.
 
-![](/attachments/developerportal/collaborate/feedback/move-feedback.png)
+{{< figure src="/attachments/developerportal/collaborate/feedback/move-feedback.png" >}}
 
 Finally, you can click **Delete feedback** to delete the item. This action will remove all the associated messages as well. Note that this action cannot be performed if the item has been accepted, and cannot be undone.
 
-![](/attachments/developerportal/collaborate/feedback/delete-feedback.png)
+{{< figure src="/attachments/developerportal/collaborate/feedback/delete-feedback.png" >}}
 
 ### 4.3 Adding a Feedback Item to Your Backlog {#adding}
 
@@ -106,8 +106,7 @@ After clicking **Accept feedback**, you can create a story on the basis of the f
 5. Select the label(s) (if available ) to be added to the story under **Assign labels**.
 6. Click **Submit** to submit the story.
 
-	{{% image_container width="350" %}}![](/attachments/developerportal/collaborate/feedback/accept-feedback.png)
-	{{% /image_container %}}
+	{{< figure src="/attachments/developerportal/collaborate/feedback/accept-feedback.png"   width="350"  >}}
 
 Once a feedback item is connected to a user story, the user who submitted the story will automatically be updated on the progress made on that story:
 

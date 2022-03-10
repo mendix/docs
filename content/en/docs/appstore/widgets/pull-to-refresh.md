@@ -40,4 +40,4 @@ To use this widget, follow these steps:
 	c. **Text when refreshing**
 3. In the client, pull down the page until the **Release to refresh text** appears in order to refresh the page.
 
-![](/attachments/appstore/widgets/pull-to-refresh/demo.gif)
+{{< figure src="/attachments/appstore/widgets/pull-to-refresh/demo.gif" >}}

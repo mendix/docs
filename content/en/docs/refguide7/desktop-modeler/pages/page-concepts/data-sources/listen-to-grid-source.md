@@ -9,7 +9,7 @@ The listen-to-widget data source allows a data view to display detailed informat
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/pages/page-concepts/data-sources/listen-to-grid-source/16843964.jpg)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/page-concepts/data-sources/listen-to-grid-source/16843964.jpg" >}}
 The data view on the right listens to the data grid on the left. In this example, the listening view will display the image attached to the selected product if one is selected.
 
 {{% /alert %}}

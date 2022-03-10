@@ -51,7 +51,7 @@ To add these restrictions, follow the instructions below:
 
 2. Run `npm run build` to update the widget. When viewing in Studio Pro, the `Editability` property can been seen here:
 	
-	{{% image_container width="500" %}}![Editability studio pro](/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/editability-property-studio-pro.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/editability-property-studio-pro.png" alt="Editability studio pro"   width="500"  >}}
 
 3. Now add read-only functionality to your widget. In *TextBox.tsx*, replace the `render` function with the code below to check if the input should be disabled and pass it to in the `TextInput` component:
 
@@ -124,7 +124,7 @@ To add these restrictions, follow the instructions below:
 
 5. When you select **Never** for your TextBox widget's `Editable` property in Mendix Studio Pro, the widget will function like this: 
 
-	{{% image_container width="500" %}}![editable never result](/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/settonever.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/settonever.png" alt="editable never result"   width="500"  >}}
 
 	Explaining the code:
 
@@ -136,13 +136,13 @@ This section will teach you to add validation to your TextBox widget. Using micr
 
 1. Drag a **call microflow button** widget below your TextBox widget and drop it there. On the subsequent dialog box, click **New** to assign a new microflow to your button, name it *Validation_Microflow*, and click **OK**:
 
-	{{% image_container width="500" %}}![validation microflow dialog box](/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/validation-microflow-dialog.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/validation-microflow-dialog.png" alt="validation microflow dialog box"   width="500"  >}}
 
 	Before moving forward, go back to your app's **Home** page, double-click your validation button, and name it *Show validation feedback*.
 
 2. Open your *Validation_Microflow* and drop a **Validation feedback** activity onto your microflow: 
 
-	{{% image_container width="500" %}}![validation feedback client activity](/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/addingvalidation.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/addingvalidation.png" alt="validation feedback client activity"   width="500"  >}}
 
 	To define your validation feedback activity:<br />
 	a. Double-click the **Validation feedback** activity.<br />
@@ -216,7 +216,7 @@ This section will teach you to add validation to your TextBox widget. Using micr
 
 	Now, your widget will show validation feedback from its microflow:
 
-	{{% image_container width="350" %}}![validation feedback demo](/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/microflowwithvalidationfeedback.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/microflowwithvalidationfeedback.png" alt="validation feedback demo"   width="350"  >}}
 
 ### 3.3 Customizing Validation
 
@@ -270,7 +270,7 @@ Validation can come from a modeled microflow or nanoflow, but can also be widget
 
 3. When entering text and removing all characters, the following error is shown:
 
-	{{% image_container width="500" %}}![no character error](/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/nocharerror.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/nocharerror.png" alt="no character error"   width="500"  >}}
 
 ### 3.4 Adding an OnChange Action
 
@@ -305,7 +305,7 @@ Until now the components did not keep any state. Each keystroke passed through t
 
 	Adding this code will allow you to select various actions:
 
-	![various actions](/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/variousactions.png)
+	{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/variousactions.png" alt="various actions" >}}
 
 2. In *TextBox.tsx*, check if `onChangeAction` is available and call the execute function `onLeave` when the value is changed. When doing this, replace the `onUpdate` function with your new `onLeave` function:
 
@@ -604,9 +604,7 @@ To apply this knowledge, reorganize the `properties` section in *TextBox.xml* to
 
 Your code alterations will produce the following result:
 
-{{% image_container width="500" %}}
-![property dialog Studio Pro](/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/property-grouping-studio-pro.png)
-{{% /image_container %}}
+{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/property-grouping-studio-pro.png" alt="property dialog Studio Pro"   width="500"  >}}
 
 ## 4 Read More
 

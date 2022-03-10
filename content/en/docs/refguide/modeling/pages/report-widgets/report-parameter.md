@@ -15,7 +15,7 @@ For example, a report may show order data for a customer and the report paramete
 
 The report parameter is displayed in structure mode with the data set parameter name (and the attribute to be displayed if the parameter is an object) shown between square brackets and colored blue.
 
-![Report parameter in structure mode](/attachments/refguide/modeling/pages/report-widgets/report-parameter/report-parameter.png)
+{{< figure src="/attachments/refguide/modeling/pages/report-widgets/report-parameter/report-parameter.png" alt="Report parameter in structure mode" >}}
 
 {{% alert color="info" %}}
 A **Report parameter** cannot be used for data set parameters of type **Date and time**. Date and time parameters must be filtered by a [Report Date Parameter](/refguide/report-date-parameter/) widget.
@@ -27,8 +27,7 @@ If you add a report parameter widget on the page, you must also add a [Report Bu
 
 An example of report parameter properties is represented in the image below:
 
-{{% image_container width="300" %}}![Report parameter in structure mode](/attachments/refguide/modeling/pages/report-widgets/report-parameter/report-parameter-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide/modeling/pages/report-widgets/report-parameter/report-parameter-properties.png" alt="Report parameter in structure mode"   width="300"  >}}
 
 Report parameter properties consist of the following sections:
 

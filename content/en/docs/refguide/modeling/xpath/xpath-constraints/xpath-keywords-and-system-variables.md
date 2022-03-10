@@ -47,7 +47,7 @@ These will be created for each user role in your app. Here is an example:
 
 Here is an example for retrieving that user role: 
 
-![](/attachments/refguide/modeling/xpath/xpath-constraints/xpath-keywords-and-system-variables/user-role.png)
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/xpath-keywords-and-system-variables/user-role.png" >}}
 
 ### 3.3 Time-Related
 

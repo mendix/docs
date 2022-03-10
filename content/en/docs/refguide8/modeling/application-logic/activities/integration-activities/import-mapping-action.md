@@ -23,7 +23,7 @@ The **Import with mapping** activity allows you to import the data stored in an 
 
 An example of import with mapping properties is represented in the image below:
 
-![import with mapping properties](/attachments/refguide8/modeling/application-logic/activities/integration-activities/import-mapping-action/import-with-mapping-properties.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/import-mapping-action/import-with-mapping-properties.png" alt="import with mapping properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -40,7 +40,7 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-![](/attachments/refguide8/modeling/application-logic/activities/integration-activities/import-mapping-action/import-mapping-action.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/import-mapping-action/import-mapping-action.png" >}}
 
 ### 3.1 Variable
 

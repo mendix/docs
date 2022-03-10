@@ -14,7 +14,7 @@ not `Nothing`, a return value should be specified.
 
 If you want to stop your flow after an activity, you link the activity, using a sequence flow with a stop event. In this case, the flow is called from another flow that expects the buyer to be returned.
 
-![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/events/end-event/917940.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/events/end-event/917940.png" >}}
 
 {{% /alert %}}
 

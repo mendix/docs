@@ -9,9 +9,9 @@ The reference selector is an [input widget](/refguide7/input-widgets/) that can 
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/reference-selector.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/reference-selector.png" >}}
 This reference selector allows you to select a product for your orderline.
-![](/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/reference-selector-domain-model.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/reference-selector-domain-model.png" >}}
 To use a reference selector you need a many-to-one association in the domain model.
 
 {{% /alert %}}
@@ -134,17 +134,17 @@ A reference selector can be constrained by one or more paths. This is typically 
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/917938.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/917938.png" >}}
 _Domain model_
 
 In the domain model the order line has associations of type reference to both category and product. In this form, these can be edited with two reference selectors. The third association, from product to category, describes the relation between those two entities. Such a 'triangle' shaped part of the domain model is what makes constraining possible.
 
-![](/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/16844014.jpg)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/16844014.jpg" >}}
 _Form_
 
 The page has two reference selectors, one for category and one for product. The one for product is constrained by the path through the domain model that forms the triangle.
 
-![](/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/16844013.jpg)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/16844013.jpg" >}}
 
 {{% /alert %}}
 

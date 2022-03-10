@@ -17,13 +17,13 @@ The goal of the Mendix [Connector Kit](https://www.mendix.com/blog/introducing-m
 
 To illustrate the power of the Connector Kit, here's a high-level design diagram for an application Mendix recently built: a Slack bot that enables users to determine things and people in pictures taken with a mobile Slack app:
 
-![Slack Rekognition Bot design](/attachments/howto8/extensibility/howto-connector-kit/slack-rekogition-bot-architecture.png)
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/slack-rekogition-bot-architecture.png" alt="Slack Rekognition Bot design" >}}
 
 The Mendix application consists of a small number of microflows that use Mendix microflow actions to offer a conversational user interface using [Slack](https://slack.com/) and different Amazon services: [S3](https://aws.amazon.com/s3/), [Rekognition](https://aws.amazon.com/rekognition/), and [Lex](https://aws.amazon.com/lex/).
 
 This image shows what the microflow toolbox looks like after including all the modules that provide connectors to the services used:
 
- ![Slack Rekognition bot toolbox](/attachments/howto8/extensibility/howto-connector-kit/slack-rekogition-bot-toolkit.png)
+ {{< figure src="/attachments/howto8/extensibility/howto-connector-kit/slack-rekogition-bot-toolkit.png" alt="Slack Rekognition bot toolbox" >}}
 
 For the basics of building toolbox actions, see the [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/) blog post. 
 
@@ -34,7 +34,7 @@ For the basics of building toolbox actions, see the [Introducing the Mendix Conn
 * Create the **Import string** action
 * Create the **Join objects in list** action
 
-![Connectorkit demo toolbox](/attachments/howto8/extensibility/howto-connector-kit/toolkit-connector-kit-demo.png)
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/toolkit-connector-kit-demo.png" alt="Connectorkit demo toolbox" >}}
 
 ## 2 Creating Generic Actions Using Type Parameters
 
@@ -46,17 +46,17 @@ To create a generic action using type parameters, follow these steps:
 
 1. Define the type parameter to hold the entity used by all the parameters:
 
-    ![Type parameter tab](/attachments/howto8/extensibility/howto-connector-kit/join_objects_type_par.png)
+    {{< figure src="/attachments/howto8/extensibility/howto-connector-kit/join_objects_type_par.png" alt="Type parameter tab" >}}
 
 2. Create parameters using the previously defined type parameter *EntityToJoin*:
 
-    ![Type parameter use](/attachments/howto8/extensibility/howto-connector-kit/join_objects_pars.png)
+    {{< figure src="/attachments/howto8/extensibility/howto-connector-kit/join_objects_pars.png" alt="Type parameter use" >}}
 
 3. The action needs the following parameters:
     * **Entity** – this is used to specify the entity of the objects to join
       * The entity selected by the user will be stored in the type parameter *EntityToJoin*
 
-      ![Type parameter use definition](/attachments/howto8/extensibility/howto-connector-kit/join_objects_type_par_def.png)
+      {{< figure src="/attachments/howto8/extensibility/howto-connector-kit/join_objects_type_par_def.png" alt="Type parameter use definition" >}}
 
     * **Object1** – the first object to be added to the new list
 
@@ -68,11 +68,11 @@ The Java implementation still uses strings to specify the name of an entity, whi
 
 Finally, here's the actual Java implementation of the action defined:
 
-![Java implementation join object](/attachments/howto8/extensibility/howto-connector-kit/join_objects_javacode.png)
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/join_objects_javacode.png" alt="Java implementation join object" >}}
 
 You now have a reusable action in your toolbox that will join two objects into a list as illustrated by this example:
 
-![Join objects use](/attachments/howto8/extensibility/howto-connector-kit/join_objects_use.png)
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/join_objects_use.png" alt="Join objects use" >}}
 
 As you can see, type parameters enable creating typesafe generic actions.
 
@@ -80,11 +80,11 @@ As you can see, type parameters enable creating typesafe generic actions.
 
 The following example illustrates how you can use microflow parameters. The microflow below creates a list of **Product** objects and calls a microflow for every project object to initialize it:
 
-![Init loop](/attachments/howto8/extensibility/howto-connector-kit/init-loop.png)
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/init-loop.png" alt="Init loop" >}}
 
 Here's an alternative to the microflow above that uses a custom Java action to replace the loop, instantiation, and initialization of the objects with a Java action:
 
-![Init list loop with action](/attachments/howto8/extensibility/howto-connector-kit/init-list-use.png)
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/init-list-use.png" alt="Init list loop with action" >}}
 
 The action uses the following parameters:
 
@@ -97,7 +97,7 @@ The return type is a list of new initialized objects.
 
 As you can see below, this action uses a new parameter type (**Microflow**) to indicate that the user needs to specify a microflow. When using the action, Studio Pro will show a list of microflows to make this as easy to use as possible.
 
-![Initialize list using microflow action parameters](/attachments/howto8/extensibility/howto-connector-kit/initialize_list_mf_pars.png)
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/initialize_list_mf_pars.png" alt="Initialize list using microflow action parameters" >}}
 
 In the Java implementation for this action, you'll see the following details for the parameters:
 
@@ -106,7 +106,7 @@ In the Java implementation for this action, you'll see the following details for
 * **InitializationMicroflow** – a string containing the name of the initializing microflow
 * **ListSize** – a long variable containing the number of objects desired in the list
 
-![Initialize list java implementation 1](/attachments/howto8/extensibility/howto-connector-kit/initilialize_list_java_1.png)
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/initilialize_list_java_1.png" alt="Initialize list java implementation 1" >}}
 
 The `executeAction` method is where all the magic happens:
 
@@ -118,7 +118,7 @@ The `executeAction` method is where all the magic happens:
 6. Add the newly instantiated and initialized object to the result list.
 7. The list of new objects is returned.
 
-![Initialize list java implementation 2](/attachments/howto8/extensibility/howto-connector-kit/initilialize_list_java_2.png)
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/initilialize_list_java_2.png" alt="Initialize list java implementation 2" >}}
 
 Microflow parameters are especially useful for handling events. For example, the community-supported [MQTT Client](https://marketplace.mendix.com/link/component/3066/Mendix/MQTT-Client) connector (via the [GitHub MQTTClient project](https://github.com/ako/MqttClient)) will execute a microflow when receiving an IoT sensor event so it can be handled using a user-specified microflow.
 
@@ -128,7 +128,7 @@ Now we will discuss an example of how you can use mappings in your Java actions.
 
 This is an image of what we are building: an action to import JSON strings:
 
-![Example import string use](/attachments/howto8/extensibility/howto-connector-kit/example_import_string_use.png)
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/example_import_string_use.png" alt="Example import string use" >}}
 
 The action requires the user to provide a string with the JSON to import, select an import mapping, and define the entity of the result. Finally, a name needs to be provided for the result of the import mapping.
 
@@ -139,7 +139,7 @@ The action is defined as follows:
 * **ResultEntity** – the type of object that will be the result of the import
 * **Return type** – an object of the type specified with `ResultEntity`
 
- ![Import String with mapping java action parameters](/attachments/howto8/extensibility/howto-connector-kit/import_string_action_pars.png)
+ {{< figure src="/attachments/howto8/extensibility/howto-connector-kit/import_string_action_pars.png" alt="Import String with mapping java action parameters" >}}
 
 Implement the action in Java as follows:
 
@@ -147,7 +147,7 @@ Implement the action in Java as follows:
 2. Use `Core.integration().importStream()` to import the JSON with the specified mapping.
 3. Return the first object imported.
 
-![Import String java action](/attachments/howto8/extensibility/howto-connector-kit/import_string_java.png)
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/import_string_java.png" alt="Import String java action" >}}
 
 ## 5 Some Development Tips
 
@@ -160,7 +160,7 @@ while developing your application.
 
 In the screenshot below, observe two important points. First, the **ConnectorKitDemo** module only contains the actions you want to publish to the Marketplace. To do this, right-click the module and select **Export module package...**. Second, the **ConnectorKitDemoTests** module contains all the functionality you need while developing the reusable module: a small domain model with some sample data and some test pages. It also contains the unit test microflow **Test_InitProduct**, which will be called by the unit test module.
 
-![Mendix Connector kit module project with tests](/attachments/howto8/extensibility/howto-connector-kit/project_test.png)
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/project_test.png" alt="Mendix Connector kit module project with tests" >}}
 
 ### 5.2 Managing Libraries
 

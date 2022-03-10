@@ -22,7 +22,7 @@ Scroll containers may be placed on navigation layouts as well as on pages.
 
 The scroll container example below divides the layout in three parts: a header containing a logo, a content part with a placeholder and a footer:
 
-![Scroll Container](/attachments/refguide8/modeling/pages/container-widgets/scroll-container/scroll-container.PNG)
+{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/scroll-container/scroll-container.PNG" alt="Scroll Container" >}}
 
 
 A scroll container can consist of several scroll container regions. For more information on scroll container regions and their properties, see the [Scroll Container Region](#scroll-container-region) section. 
@@ -31,8 +31,7 @@ A scroll container can consist of several scroll container regions. For more inf
 
 An example of scroll container properties is represented in the image below:
 
-{{% image_container width="250" %}}![Scroll Container Properties](/attachments/refguide8/modeling/pages/container-widgets/scroll-container/scroll-container-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/scroll-container/scroll-container-properties.png" alt="Scroll Container Properties"   width="250"  >}}
 
 Scroll container properties consist of the following sections:
 

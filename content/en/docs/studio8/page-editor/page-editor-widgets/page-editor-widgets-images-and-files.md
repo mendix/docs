@@ -11,8 +11,7 @@ tags: ["studio", "page editor", "image", "image widgets", "widgets", "file", "fi
 
 **Images & Files** are widgets that allow end-users to view, download, and upload images or files. For example, with an image uploader end-users will be able to upload a profile image:
 
-{{% image_container width="350" %}}![](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-images-and-files/image-uploader-example.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-images-and-files/image-uploader-example.png"   width="350"  >}}
 
 There are the following image and file widgets in Mendix Studio:
 
@@ -24,8 +23,7 @@ There are the following image and file widgets in Mendix Studio:
 
 *   **File Manager** – allows end-users to upload or/and download a file (in the **Toolbox**, you see  preconfigured file managers: **File Uploader** and **File Downloader**)
   
-	{{% image_container width="350" %}}![](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-images-and-files/images-and-files.png)
-    {{% /image_container %}}
+	{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-images-and-files/images-and-files.png"   width="350"  >}}
 
 ## 2 Image and Dynamic Image 
 
@@ -33,7 +31,7 @@ An image and a dynamic image widgets allow you to display an image either from a
 
 You can switch from one widget to another in properties:
 
-![](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-images-and-files/static-and-dynamic-image.png)
+{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-images-and-files/static-and-dynamic-image.png" >}}
 
 ### 2.1 Properties
 
@@ -43,8 +41,7 @@ In the **General** section, you can switch between static and dynamic image, sel
 
 Before configuring settings in the **General** section for the **Dynamic Image**, keep in mind that it can only function inside a data container (a list view or a data view). You can either place widget in an existing data container; or click **Wrap with a new data view** in **Properties** to create a data view automatically and place an input element inside it. 
 
-{{% image_container width="350" %}}![](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-images-and-files/dynamic-image-data-view.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-images-and-files/dynamic-image-data-view.png"   width="350"  >}}
 
 Settings available for **Static Image** and **Dynamic Image** are described in the table below:
 
@@ -151,9 +148,7 @@ This property is shown only when an attribute in the [Attribute-Based](#attribut
 
 For example, you would like to allow users upload images only when their *email is verified*. So, you need to select *EmailVerified* in the **Attribute-Based** property and *true* in the **Attribute Value** property:
 
-{{% image_container width="250" %}}
-![](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-images-and-files/conditional-editability.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-images-and-files/conditional-editability.png"   width="250"  >}}
 
 #### 3.1.3 Controls Section
 

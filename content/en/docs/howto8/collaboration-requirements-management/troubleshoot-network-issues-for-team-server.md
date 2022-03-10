@@ -27,7 +27,7 @@ Team Server is implemented using Subversion and Mendix Studio Pro uses the HTTPS
 
 Mendix Studio Pro connects to `https://teamserver.sprintr.com/` and with the domains shown in the diagram below over HTTPS on port 443. These domains should be added to the firewall white list:
 
-![Domains home.mendix.com, cloud.mendix.com, and teamserver.sprintr.com need to be accessible on port 443 from your network](/attachments/howto8/collaboration-requirements-management/troubleshoot-network-issues-for-team-server/networkaccessmendixplatform.jpg)
+{{< figure src="/attachments/howto8/collaboration-requirements-management/troubleshoot-network-issues-for-team-server/networkaccessmendixplatform.jpg" alt="Domains home.mendix.com, cloud.mendix.com, and teamserver.sprintr.com need to be accessible on port 443 from your network" >}}
 
 You can look up the IP address of `https://teamserver.sprintr.com/`.
 

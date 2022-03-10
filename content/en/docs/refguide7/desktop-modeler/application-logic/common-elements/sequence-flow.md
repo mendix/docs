@@ -12,7 +12,7 @@ A sequence flow is an arrow that links events, activities, splits and merges wit
 
 When you have two activities that you want to link together a sequence flow is used.
 
-![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/sequence-flow/917971.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/sequence-flow/917971.png" >}}
 
 {{% /alert %}}
 

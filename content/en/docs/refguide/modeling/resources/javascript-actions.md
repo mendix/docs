@@ -30,7 +30,7 @@ To learn how to create, configure, and use a JavaScript action, see these [Build
 
 After double-clicking a JavaScript action in your **App Explorer** you will see the JavaScript action's settings: 
 
-{{% image_container width="400" %}}![javascript settings](/attachments/refguide/modeling/resources/javascript-actions/javascript-action-settings-no-para.png){{% /image_container %}}
+{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/javascript-action-settings-no-para.png" alt="javascript settings"   width="400"  >}}
 
 The settings for JavaScript actions and their implications are detailed below.
 
@@ -42,15 +42,15 @@ This setting handles a JavaScript action's name, which a nanoflow refers to when
 
 Parameters pass data to JavaScript actions. For example, if you had a JavaScript action which multiplied numbers, parameters would define the numbers to be multiplied. A JavaScript action can have zero or more parameters. Each parameter should have a unique name. You may add a parameter by clicking **Parameters** > **Add**, and then customize that parameter to pass data into a JavaScript action:
 
-![parameter](/attachments/refguide/modeling/resources/javascript-actions/parameter-naming.png)
+{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/parameter-naming.png" alt="parameter" >}}
 
 In a JavaScript action's **Code** tab, you can see its parameters' values and handle its implementation. Each parameter has a name (1), type (2), category, description (3), and return type (4):
 
-![parameter code](/attachments/refguide/modeling/resources/javascript-actions/parameter-code.png)
+{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/parameter-code.png" alt="parameter code" >}}
 
 You will see a parameter's category (1), parameter name (2), and description (3) in the **Call JavaScript Action** dialog box after double-clicking its activity in your nanoflow:
 
-{{% image_container width="400" %}}![call javascript action dialog](/attachments/refguide/modeling/resources/javascript-actions/call-js-action-dialog.png){{% /image_container %}}
+{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/call-js-action-dialog.png" alt="call javascript action dialog"   width="400"  >}}
 
 The parameter types supported by JavaScript actions are described below.
 
@@ -99,7 +99,7 @@ When using a JavaScript action for a specific platform in a nanoflow, it will re
 
 A type parameter is a placeholder for an entity type which will be filled with a specific entity when called in a nanoflow. Type parameters can be used when configuring the data type of a parameter, which allows users to pass an object or list of an arbitrary entity type. They can easily be added, edited, or deleted:
 
-{{% image_container width="450" %}}![type parameter](/attachments/refguide/modeling/resources/javascript-actions/type-parameter.png){{% /image_container %}}
+{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/type-parameter.png" alt="type parameter"   width="450"  >}}
 
 A JavaScript action can have zero or more type parameters. Each type parameter should have a unique name.
 
@@ -107,11 +107,11 @@ A JavaScript action can have zero or more type parameters. Each type parameter s
 
 In the **Expose as nanoflow action** tab, it is possible to expose a JavaScript action as a nanoflow action. This sample action has been given *Sample Action* caption text, assigned *Workshop* as its category, and given no icon:
 
-{{% image_container width="450" %}}![expose action](/attachments/refguide/modeling/resources/javascript-actions/expose-jsaction.png){{% /image_container %}}
+{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/expose-jsaction.png" alt="expose action"   width="450"  >}}
 
 Exposing the JavaScript action will make it appear in the **Toolbox** window when editing a nanoflow in the category of your choice. When this action is used in a nanoflow, it will show the caption and icon you provided. The category and caption are apparent here, and the default icon is being displayed as no custom one was assigned: 
 
-![workshop exposed](/attachments/refguide/modeling/resources/javascript-actions/workshop-exposed.png)
+{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/workshop-exposed.png" alt="workshop exposed" >}}
 
 ### 4.1 Caption
 
@@ -129,11 +129,11 @@ An icon is optional when exposing a JavaScript action. When no icon is selected,
 
 In the **Documentation** tab, press **Edit** to document a JavaScript action: 
 
-{{% image_container width="450" %}}![documentation](/attachments/refguide/modeling/resources/javascript-actions/documentation-pro.png){{% /image_container %}}
+{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/documentation-pro.png" alt="documentation"   width="450"  >}}
 
 Documentation is visible in the **Code** tab. Your documentation also is copied into the JavaScript action as comment on the function in the corresponding *.js* file:
 
-{{% image_container width="450" %}}![documentation js file](/attachments/refguide/modeling/resources/javascript-actions/documentation-js-file.png){{% /image_container %}}
+{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/documentation-js-file.png" alt="documentation js file"   width="450"  >}}
 
 ## 6 Code
 

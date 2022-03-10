@@ -55,7 +55,7 @@ To create your docker image using the IEAP UI, do the following:
 
 1. Select the workspace (an empty folder) which will be used by the Industrial Edge App Publisher to store the app related data.
 
-   ![Select Workspace](/attachments/developerportal/deploy/mendix-app-on-industrial-edge/App_Publisher_Workspace.png)
+   {{< figure src="/attachments/developerportal/deploy/mendix-app-on-industrial-edge/App_Publisher_Workspace.png" alt="Select Workspace" >}}
 
 2. Connect to the Docker daemon.
 
@@ -67,7 +67,7 @@ To create your docker image using the IEAP UI, do the following:
     3. Click **Browse** and select the **deployment package(.mda)** of your Mendix app.
     4. Click **Create**.
 
-      ![Create docker image of Mendix app](/attachments/developerportal/deploy/mendix-app-on-industrial-edge/select_mda_file.png)
+      {{< figure src="/attachments/developerportal/deploy/mendix-app-on-industrial-edge/select_mda_file.png" alt="Create docker image of Mendix app" >}}
       
 Once the Docker image is built, the next step is to create the Mendix Edge App.
 
@@ -101,7 +101,7 @@ You can skip this step if you just want to create a standalone app which does no
 
    You can find the procedure and additional information on how to create a project and an app inside of it in the **Applications > My Projects** section of the [Industrial Edge Management - Operation](https://support.industry.siemens.com/cs/us/en/view/109799510) manual.
 
-   ![Create docker image of Mendix app](/attachments/developerportal/deploy/mendix-app-on-industrial-edge/IEM_Created_app.png)
+   {{< figure src="/attachments/developerportal/deploy/mendix-app-on-industrial-edge/IEM_Created_app.png" alt="Create docker image of Mendix app" >}}
 
 Once you have created the Mendix app on IEM side, you must create a version of your Mendix app in the Industrial Edge App Publisher.
 
@@ -125,7 +125,7 @@ Perform the following steps to create a version of your app on Industrial Edge u
 4. Click **Add New Version**.
 5. Enter all the required Docker Compose configurations and information for your Mendix app in the wizard. 
 6. In the wizard, select the Docker image which you have created above.
-   ![Create docker image of Mendix app](/attachments/developerportal/deploy/mendix-app-on-industrial-edge/Select_Mendix_Image.png)
+   {{< figure src="/attachments/developerportal/deploy/mendix-app-on-industrial-edge/Select_Mendix_Image.png" alt="Create docker image of Mendix app" >}}
 7. Click **Save** and then **Review**.
 
    The docker-compose.yml file for your Mendix app will resemble this example:

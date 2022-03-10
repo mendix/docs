@@ -13,11 +13,11 @@ tags: ["studio", "app viewing", "checks", "errors", "consistency errors"]
 Mendix Studio checks your app for consistency in real-time, for example, it checks if any necessary properties of elements are missing. Such checks help you build an app that will function properly. 
 
 If your app passes the check, the **Checks** button will have a green check mark and the app will be ready to be [previewed or published](/studio8/publishing-app/):
-![Passed Check](/attachments/studio8/checks/passed-check.jpg)
+{{< figure src="/attachments/studio8/checks/passed-check.jpg" alt="Passed Check" >}}
 
 If the app does not pass the check, you see the **Checks** button goes red with the number of failed checks – [consistency errors](/studio8/consistency-errors/). If you click the button, a **Checks** panel with the list of errors will open and the elements that did not pass the check will be highlighted. This list can be seen as a to-do list that you need to complete before your app can be [previewed or published](/studio8/publishing-app/).
 
-![](/attachments/studio8/checks/checks-button.png)
+{{< figure src="/attachments/studio8/checks/checks-button.png" >}}
 
 {{% alert color="info" %}}
 
@@ -31,11 +31,11 @@ If your app has consistency errors, the **Checks** button will have the red bord
 
 1. Click the **Checks** button or press the <kbd>C</kbd> shortcut to open the **Checks** panel:
 
-    ![](/attachments/studio8/checks/checks-button-red.png)
+    {{< figure src="/attachments/studio8/checks/checks-button-red.png" >}}
 
     The panel with the list of consistency errors appears at the bottom of the screen. For more information on the **Checks** panel, see the [Checks Panel Overview](#checks-panel-overview) section below.
 
-    ![](/attachments/studio8/checks/checks-panel.png)
+    {{< figure src="/attachments/studio8/checks/checks-panel.png" >}}
 
 4. To view the exact place and element that the error refers to in the corresponding editor, click the row in the **Checks** panel (you can click any place of the row, the whole row is responsive), and the element that failed a check will be displayed and highlighted.
 

@@ -18,13 +18,13 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 Change variable allows you to change the value of an existing variable. For example, if you have a *$Discount* variable that gives customers a 50% discount on certain items, you can change this variable and assign a new value to it. You can use this value to give new customers a bigger discount:
 
-![Change Variable](/attachments/refguide8/modeling/application-logic/activities/variable-activities/change-variable/change-variable.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/variable-activities/change-variable/change-variable.png" alt="Change Variable" >}}
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-![Change Variable Properties](/attachments/refguide8/modeling/application-logic/activities/variable-activities/change-variable/change-variable-properties.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/variable-activities/change-variable/change-variable-properties.png" alt="Change Variable Properties" >}}
 
 The **Change variable** properties pane consists of the following sections:
 

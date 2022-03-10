@@ -11,11 +11,11 @@ tags: ["page", "data view", "widget", "studio pro"]
 
 The data view is a starting point for showing the contents of exactly one object. For example, if you want to show the details of a single program item, you can use a data view to do this:
 
-![](/attachments/refguide/modeling/pages/data-widgets/data-view/data-view-example-structure-mode.png)
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-view/data-view-example-structure-mode.png" >}}
 
 In a more complex example, a data view can contain customer information and [tab containers](/refguide/tab-container/) per specific topic (for example, addresses and payment information) with nested data grids for related objects:
 
-![](/attachments/refguide/modeling/pages/data-widgets/data-view/data-view-complex-example.png)
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-view/data-view-complex-example.png" >}}
 
 ## 2 Data View Footer
 
@@ -25,8 +25,7 @@ The footer of the data view is the section at the bottom of the data view that o
 
 An example of data view properties is represented in the image below:
 
-{{% image_container width="250" %}}![](/attachments/refguide/modeling/pages/data-widgets/data-view/data-view-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-view/data-view-properties.png"   width="250"  >}}
 
 Data view properties consist of the following sections:
 

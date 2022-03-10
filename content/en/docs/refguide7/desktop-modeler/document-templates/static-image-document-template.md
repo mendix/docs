@@ -11,7 +11,7 @@ aliases:
 
 A static image shows a predefined image. It can be put either in- or outside a data view or templategrid.
 
-![](/attachments/refguide7/desktop-modeler/document-templates/918133.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/document-templates/918133.png" >}}
 A static image inside a table cell.
 
 ## Appearance Properties

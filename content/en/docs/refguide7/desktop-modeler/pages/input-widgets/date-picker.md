@@ -11,7 +11,7 @@ A date picker is an [input widget](/refguide7/input-widgets/) that can be used t
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/pages/input-widgets/date-picker/date-picker.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/date-picker/date-picker.png" >}}
 This date picker allows the end-user to set the birth date of the customer.
 
 {{% /alert %}}

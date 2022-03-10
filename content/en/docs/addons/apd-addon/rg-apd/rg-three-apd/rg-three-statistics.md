@@ -16,17 +16,17 @@ On the **Statistics** tab, the collected statistics are displayed with the follo
 
 This overview displays the statistics hourly or daily (you can switch between time periods). It is possible to drill down into each microflow, page, or client API call for more information. In the case of a microflow, statistics regarding the microflow action(s) and sub-microflow(s) are shown as well as an historic chart. In the case of a page, the historic chart is shown as well as which page(s) the users opened from that page. 
 
-![](/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-statistics/statistics.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-statistics/statistics.png" >}}
 
 ## 2 Microflow Statistics
 
 The **Items** tab provides insight into all the actions and sub-microflows of the selected microflow from the statistics overview. Drill down to see more details.
 
-![](/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-statistics/statistics_items.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-statistics/statistics_items.png" >}}
 
 The **Tree** tab can be used to see the statistic results in a quick overview. This overview will help pinpoint the actions with the longest duration. Drill down to see more details.
 
-![](/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-statistics/statistics_tree.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-statistics/statistics_tree.png" >}}
 
 {{% alert color="info" %}}
 In the tree of the statistics, a child action can take longer than the parent. This is because the average durations are compared, and if you consider a microflow with a decision and most cases take the quick route while only some cases take the slow route, then the average of the parent is faster than the average of the slow route child.
@@ -34,8 +34,8 @@ In the tree of the statistics, a child action can take longer than the parent. T
 
 The **History** tab gives insight into the duration and count over time. These insights help to detect trends and see if the optimizations were successful. 
 
-![](/attachments/addons/apd-addon/rg-apd/rg-three-apd/statistics_history.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/statistics_history.png" >}}
 
 Using the **Manual snapshots** tab, it is possible to create a manual statistics snapshot. When clearing the counters, the manual statistics are reset. This can be helpful to collect data over a small period of time.
 
-![](/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-statistics/manual_snapshot.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-statistics/manual_snapshot.png" >}}

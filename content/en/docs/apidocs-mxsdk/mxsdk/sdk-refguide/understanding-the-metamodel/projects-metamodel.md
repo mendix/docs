@@ -11,7 +11,7 @@ A Mendix app model starts with a project. A project contains several top-level o
 
 ### 1.1 Graphical Overview
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/16842800.svg)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/16842800.svg" >}}
 
 Studio Pro Guide | Model SDK API docs
 | --- | --- |
@@ -26,7 +26,7 @@ Project-level documents describe project security, app settings, app navigation 
 
 #### 1.2.1 Graphical Overview
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/16842801.svg)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/16842801.svg" >}}
 
 Studio Pro Guide | Model SDK API docs
 | --- | --- |
@@ -43,7 +43,7 @@ A module consists of a domain model, model security settings and zero or more do
 
 #### 2.1.1 Graphical Overview
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/18582255.svg)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/18582255.svg" >}}
 
 Studio Pro Guide | Model SDK API docs
 | --- | --- |
@@ -58,7 +58,7 @@ In this sense, Module and Folder behave in the exact same way, and thus inherit 
 
 #### 2.2.1 Graphical Overview
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/18582254.svg)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/18582254.svg" >}}
 
 Studio Pro Guide | Model SDK API docs
 | --- | --- |

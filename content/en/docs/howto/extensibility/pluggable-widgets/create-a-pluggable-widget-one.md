@@ -67,9 +67,9 @@ The following steps will teach you to build a pluggable input widget, and show y
 5. Go back to the home page, open the **Add Widget** menu, and then add a **TextBox** widget inside the data view.
 6. Open the Textbox's properties and select the **Datasource Attribute (path)** string attribute you created above. Then click the **OK** button to close the dialog box. The end result should look like this:
 
-	![](/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/createtestobject.png)
+	{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/createtestobject.png" >}}
 
-	![](/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/microflowcreateentity.png)
+	{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/microflowcreateentity.png" >}}
 
 ### 3.2 Widget Scaffolding
 
@@ -99,7 +99,7 @@ The generator will ask you a few questions during setup. Answer the questions by
 * Unit tests: **No**
 * End-to-end tests: **No**
 
-![mx generator](/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/generatorblack.png)
+{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/generatorblack.png" alt="mx generator" >}}
 
 Note that whenever it is required to reinstall NPM package dependencies inside the scaffolded widget development app with an NPM version of 7 or higher, make sure to run the installation script with an extra flag: `npm install --legacy-peer-deps`.
 
@@ -224,19 +224,19 @@ Open the *(YourMendixApp)/CustomWidgets/TextBox* folder in your IDE of choice (a
 
 	The end result will be similar to the screenshot below:
 
-	![](/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/updateallwidgets.png)
+	{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/updateallwidgets.png" >}}
 
 	{{% alert color="info" %}}The widgets in Studio and Studio Pro are not automatically updated. First, run the `npm start` command again. To refresh your widgets, press F4 or select **App** > **Synchronize App Directory** from the Studio Pro menu to reload the widgets from the file system. Finally, right-click the widget and select Update all widgets to update the newly-changed properties in the widget.{{% /alert %}}
 
 8.  When running the app, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable web widget. When data is changed in the first input and the cursor is moved to the next widget, the data of your widget is also updated: 
 
-	![two text widgets](/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/twotextwidgets.png)
+	{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/twotextwidgets.png" alt="two text widgets" >}}
 
 ### 3.4 Adding Style
 
 The input works, but the styling could be improved. In the next code snippets, you will add the default styling to make your TextBox widget look like a Mendix widget. Also, you need to pass the `Class`, `Style` and `Tab index` [standard properties](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#standard-properties) from the `Common` tab which originate from the **Edit Custom Widget** dialog box:
 
-![custom widget](/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/customwidgetedit.png)
+{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/customwidgetedit.png" alt="custom widget" >}}
 
 1. In *TextBox.tsx*, pass the properties from the runtime to the `TextInput` component:
 
@@ -286,7 +286,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 	* Each property with a question mark is optional
 3. Your efforts will result in a well-styled input widget:
 
-	![styled widgets](/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/styledinputwidgets.png)
+	{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/styledinputwidgets.png" alt="styled widgets" >}}
 
 ### 3.5 Labeling the Input{#label-input}
 
@@ -302,15 +302,15 @@ While the Mendix input elements come with labels, you will need to add one to Te
 
 	This will add the **Show label** radio buttons in the widget properties tab **Label** (after synchronizing the app directory and updating the widget). When **Show label** is set to true, it will automatically render the label for you in the page editor and the browser:
 
-	![edit text box two](/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/edittextboxtwo.png)
+	{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/edittextboxtwo.png" alt="edit text box two" >}}
 
 2. Preview the label in the page editor:
 
-	![edit data view one](/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/editdataviewone.png)
+	{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/editdataviewone.png" alt="edit data view one" >}}
 
 3. This will result in a label above or next to the input depending on the available space, data view `Form orientation`, and the `Label width (weight)`:
 
-	![input elements with label](/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/inputwidgetswithlabel.png)
+	{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/inputwidgetswithlabel.png" alt="input elements with label" >}}
 
 ### 3.6 Handling Updates
 

@@ -49,7 +49,7 @@ Follow these steps to create a simple app in Mendix Studio Pro.
     
 6. Repeat steps 5a and 5b to create attributes *FirstName*, *LastName*, *CompanyName*, *Address* and set type to *String* for all of them. 
 
-	![](/attachments/data-hub/share-data/entity-properties-pane.png)
+	{{< figure src="/attachments/data-hub/share-data/entity-properties-pane.png" >}}
 	
 7. Click **OK** to save your changes.
 
@@ -60,7 +60,7 @@ Follow these steps to create a simple app in Mendix Studio Pro.
 10. In the **Information** pop-up dialog, click **OK**. 
     Overview pages for the new entity are added in the **OverviewPages** folder of **MyFirstModule**.
 
-	![](/attachments/data-hub/share-data/overview-pages-for-customer-entity.png)
+	{{< figure src="/attachments/data-hub/share-data/overview-pages-for-customer-entity.png" >}}
 
 11. In the **App Explorer**, double-click **Home_Web** to open the **Home_Web** page.
 
@@ -82,23 +82,23 @@ Do the following:
 
 2.  In the **Domain Model**, right-click the **Customer** entity and select **Expose as OData resource…**.
 
-	![](/attachments/data-hub/share-data/expose-as-odata-resource.png)
+	{{< figure src="/attachments/data-hub/share-data/expose-as-odata-resource.png" >}}
 
 3.  In the **Select Published OData Service** dialog box, select the **MyFirstModule** > **APIs** folder and click **New** to add a new OData service to this folder.
 
-	![](/attachments/data-hub/share-data/select-published-odata-service.png)
+	{{< figure src="/attachments/data-hub/share-data/select-published-odata-service.png" >}}
 	
 4. Name the published OData service *{yourname}CustomerODataService* and click **OK**.
 
     The new **{yourname}CustomerODataService** is added to the module and the **Edit published resource** dialog box is displayed for the entity **Customer**. 
 
-    ![](/attachments/data-hub/share-data/edit-published-resource-box.png)
+    {{< figure src="/attachments/data-hub/share-data/edit-published-resource-box.png" >}}
 
     {{% alert color="info" %}}  Make a note of the the **Exposed set name**. This defaults to the **Exposed name** with an "**s"** added to the end. When the service is registered in the Data Hub Catalog, the **Exposed set name** will be displayed as the available **Dataset**. {{% /alert %}}
     
 5. Click **OK** twice to display the **OData Service** document that will be registered in the Data Hub Catalog. In the **General** tab, notice the **Version** number. 
 
-	![](/attachments/data-hub/share-data/customer-odata-service-page.png)
+	{{< figure src="/attachments/data-hub/share-data/customer-odata-service-page.png" >}}
 
 	Under **Entities**, the **Customer** entity is listed. The details of the entity are displayed on the right. To expose more entities in the service, add them on this page.
 
@@ -110,7 +110,7 @@ Do the following:
 
 9. Add data to the app. Click **New** to add data for a customer entry.
 
-    ![external entities](/attachments/data-hub/share-data/add-data-in-app.png)
+    {{< figure src="/attachments/data-hub/share-data/add-data-in-app.png" alt="external entities" >}}
 
   When this entity set is consumed by another app via the Data Hub Catalog, the other app will see the data entered here.
 
@@ -122,7 +122,7 @@ Do the following:
 
 1.  Go to [Mendix Data Hub](https://hub.mendix.com/):
 
-	![Data Hub screen](/attachments/data-hub/share-data/data-hub-home.png)
+	{{< figure src="/attachments/data-hub/share-data/data-hub-home.png" alt="Data Hub screen" >}}
 
 2. In the search field, enter the search term *{yourname}*. All services and datasets that satisfy this search string are displayed in the **Search Results** pane in the **Search Details** screen. However, the service does not appear in the **Search Results** yet, as by default, a filter is set to show results in **Production** environments.
 
@@ -130,13 +130,13 @@ Do the following:
 
 4. Your app was deployed to the **Mendix Free App** or **Sandbox** environment. Check **Sandbox** to include it in the search results, then click **Apply**:
 
-    ![Data Hub screen](/attachments/data-hub/share-data/dh-filter-box.png)
+    {{< figure src="/attachments/data-hub/share-data/dh-filter-box.png" alt="Data Hub screen" >}}
 
 5. From the new search results list on the left, select the *{yourname}CustomerODataService* service. Full details from the OData contract for the service are displayed on the right.
 
 6. The **Curate** bar confirms that "**You are the owner of this data source**". You have permissions edit the metadata for this service in the Catalog and a **Business Owner**.
 
-	![data hub](/attachments/data-hub/share-data/search-details-screen.png)
+	{{< figure src="/attachments/data-hub/share-data/search-details-screen.png" alt="data hub" >}}
 
 	{{% alert color="info" %}}For more information about roles in Data Hub, see [Roles in Data Hub](/data-hub/#data-hub-roles).{{% /alert %}}
 
@@ -152,16 +152,16 @@ To do this, follow the steps below:
 
 2. Go to the domain model > **Data Hub** pane:
 
-	![data hub pane](/attachments/data-hub/share-data/data-hub-pane-empty.png)
+	{{< figure src="/attachments/data-hub/share-data/data-hub-pane-empty.png" alt="data hub pane" >}}
 
 	If you do not see the **Data Hub** pane, click **View** > **Data Hub** to display it:
-	![](/attachments/data-hub/share-data/view-data-hub.png)
+	{{< figure src="/attachments/data-hub/share-data/view-data-hub.png" >}}
 	
 3. In the [Data Hub](/refguide/data-hub-pane/) pane, enter the search string *{yourname}*.
 
 4. By default, search in the **Data Hub** pane only shows services in **Production** environments. Your app was deployed as a **Sandbox** app. Click the **Filter** icon next to the search and check **Show development environments**.
 
-    ![Filter Icon](/attachments/data-hub/share-data/filter-icon.png)
+    {{< figure src="/attachments/data-hub/share-data/filter-icon.png" alt="Filter Icon" >}}
 
     The search results now include **{yourname}CustomerOData_service** from your Mendix Cloud **Sandbox** environment.
 
@@ -169,7 +169,7 @@ To do this, follow the steps below:
 
 6. This entity is different from the blue entity container from the first app. This purple colored entity is called an *external entity*. The name of the OData service it is exposed in is displayed above it.
 
-    ![external entities](/attachments/data-hub/share-data/external-entities-in-domain-model.png)
+    {{< figure src="/attachments/data-hub/share-data/external-entities-in-domain-model.png" alt="external entities" >}}
 
     {{% alert color="info" %}}For further information on external entities, see [External Entities](/refguide/external-entities/) in the *Studio Pro Guide*.  {{% /alert %}}
 
@@ -209,7 +209,7 @@ You can view the two apps that you have created in the Data Hub Landscape and se
 1. Open the [Data Hub](https://hub.mendix.com/#/home) home page.
 2. Find your service using the search pane. Remember to use the filter to ensure you can see **Sandbox** apps. 
 3. Click the **Landscape** tab to see a visual representation of your apps (rounded squares), services (circles), and connections (lines). The number of entity sets/datasets that have been exposed appears beneath the service. 
-    ![](/attachments/data-hub/share-data/landscape-full-screen.png)
+    {{< figure src="/attachments/data-hub/share-data/landscape-full-screen.png" >}}
 
     The service **{yourname}CustomerODataAPI** is linked by a solid line to the running instance of **{yourname}CustomerCustomerServiceApp**, which is deployed as a Free App.
 

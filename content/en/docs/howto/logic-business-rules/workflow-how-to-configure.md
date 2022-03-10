@@ -41,21 +41,21 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Make sure that the domain model of the module you are working in looks the following way:
 
-    ![Domain Model](/attachments/howto/logic-business-rules/workflow-how-to-configure/domain-model.png)
+    {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/domain-model.png" alt="Domain Model" >}}
 
 * Make sure you have the following enumerations configured:
 
     * The PhoneModel enumeration:
     
-        ![](/attachments/howto/logic-business-rules/workflow-how-to-configure/enumeration-phone-model.png)
+        {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/enumeration-phone-model.png" >}}
     
     * The LaptopModel enumeration:
     
-        ![](/attachments/howto/logic-business-rules/workflow-how-to-configure/enumeration-laptop-model.png)
+        {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/enumeration-laptop-model.png" >}}
   
 * Make sure you have an **EmployeesToOnboard** page that contains a list view and has the **EmployeeOnboarding** entity as the data source:
 
-    ![Employees Page](/attachments/howto/logic-business-rules/workflow-how-to-configure/employees-page.png)
+    {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/employees-page.png" alt="Employees Page" >}}
 
 * Add the following pages to your navigation (pages are part of the Workflow Commons module):
   * TaskInbox
@@ -82,11 +82,11 @@ Do the following:
 
 6. In the **User Role** dialog box, click **Edit** in the **Module roles** section.
 
-    ![](/attachments/howto/logic-business-rules/workflow-how-to-configure/edit-module-roles.png)
+    {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/edit-module-roles.png" >}}
 
 7. In the **Select Module Roles** dialog box, tick the User role for Administration and WorkflowCommons modules where no role is selected and click **OK**:
 
-    ![Module Roles](/attachments/howto/logic-business-rules/workflow-how-to-configure/modules-roles.png)
+    {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/modules-roles.png" alt="Module Roles" >}}
 
 8. Confirm your choice by clicking **OK**.
 
@@ -102,7 +102,7 @@ Do the following:
 
       3. In the **Select Module Roles**, find the WorkflowCommons module and select the Administrator role:
 
-         {{% image_container width="450" %}}![Selecting Workflow Commons Administrator](/attachments/howto/logic-business-rules/workflow-how-to-configure/workflow-commons-admin.png){{% /image_container %}}
+         {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/workflow-commons-admin.png" alt="Selecting Workflow Commons Administrator"   width="450"  >}}
 
       4. Confirm your choice by clicking **OK**.
 
@@ -135,7 +135,7 @@ The next step in setting up security is to configure the entity access otherwise
 
 3. In the **Properties** dialog box, open the **Access rules** tab and click **New**:
 
-    ![Entity Properties](/attachments/howto/logic-business-rules/workflow-how-to-configure/entity-properties.png) 
+    {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/entity-properties.png" alt="Entity Properties" >}} 
 
 4. In the **New Access rule** dialog box, do the following:
 
@@ -145,7 +145,7 @@ The next step in setting up security is to configure the entity access otherwise
 
     2. In the **Member read and write rights** section, click **Set all to Read, Write**.
 
-        ![New Access Rule](/attachments/howto/logic-business-rules/workflow-how-to-configure/new-access-rule.png)
+        {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/new-access-rule.png" alt="New Access Rule" >}}
 
 5. Click **OK** to save the settings.
 
@@ -165,7 +165,7 @@ To create a workflow that you will add activities to and create pages for, do th
 
 1. In the App Explorer, right-click the **MyFirstModule** module and select **Add workflow** in the drop-down menu.
 
-    ![Add Workflow](/attachments/howto/logic-business-rules/workflow-how-to-configure/add-workflow.png)
+    {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/add-workflow.png" alt="Add Workflow" >}}
 
 2.  In the **Add workflow** dialog box, set the **Name** to *Employee_Onboarding* and click **OK**.
 
@@ -175,12 +175,12 @@ To create a workflow that you will add activities to and create pages for, do th
 
 4. In the **Select Entity** dialog box, select the **EmployeeOnboarding** entity and click **Select**.
 
-    ![Select WorkflowContext Entity](/attachments/howto/logic-business-rules/workflow-how-to-configure/select-workflowcontext-entity.png)
+    {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/select-workflowcontext-entity.png" alt="Select WorkflowContext Entity" >}}
 
 
 Good job! You have created a workflow and configured parameter properties. 
 
-![Newly Created Workflow](/attachments/howto/logic-business-rules/workflow-how-to-configure/newly-created-workflow.png)
+{{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/newly-created-workflow.png" alt="Newly Created Workflow" >}}
 
 
 
@@ -190,11 +190,11 @@ To start you workflow, you need to trigger it. In this use case, the workflow is
 
 You have an **EmployeesToOnboard** page that contains a list of all employees and has the **EmployeeOnboarding** entity as the data source:
 
-![New Employee Page](/attachments/howto/logic-business-rules/workflow-how-to-configure/employees-page.png)
+{{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/employees-page.png" alt="New Employee Page" >}}
 
 The page access is restricted to the HR user role:
 
-![Page Access](/attachments/howto/logic-business-rules/workflow-how-to-configure/page-access-hr.png)
+{{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/page-access-hr.png" alt="Page Access" >}}
 
 To add a button that will initiate the workflow, do the following:
 
@@ -210,7 +210,7 @@ To add a button that will initiate the workflow, do the following:
 
 Good job! Now when the HR specialist clicks the button, the workflow will start:
 
-![](/attachments/howto/logic-business-rules/workflow-how-to-configure/employees-page-configured.png) 
+{{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/employees-page-configured.png" >}} 
 
 ## 6 Selecting a Device and a Location for the New Hire {#select-device}
 
@@ -224,7 +224,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
 4. Set the **Caption** property to **Manager: Specify Device and Location** to easily see who this task should be assigned to:
 
-    {{% image_container width="400" %}}![SpecifyDevice Properties](/attachments/howto/logic-business-rules/workflow-how-to-configure/specify-device-and-location-properties.png){{% /image_container %}} 
+    {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/specify-device-and-location-properties.png" alt="SpecifyDevice Properties"   width="400"  >}} 
 
 5. Now configure the user task to be assigned to the Manager role, as only managers should specify devices for the new employee. Make sure **Assign task using** is set to **XPath** and click the ellipsis icon in the **XPath constraint** property.
 
@@ -258,7 +258,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
       4. Leave **WFH**, **Phone model**, and **Laptop model** radio buttons:
 
-          ![Form for Specifying Devices](/attachments/howto/logic-business-rules/workflow-how-to-configure/manager-form.png)
+          {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/manager-form.png" alt="Form for Specifying Devices" >}}
 
 13. Only the Manager role can access and interact with the **SpecifyDeviceAndLocation_Workflow** page, so restricting the access to this page is the next step. Navigate to the page properties and do the following:
 
@@ -266,7 +266,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
       2. In the **Select Module Roles** dialog box, select **Manager** and click **OK**:
 
-          ![Select Module Roles](/attachments/howto/logic-business-rules/workflow-how-to-configure/select-module-roles.png)
+          {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/select-module-roles.png" alt="Select Module Roles" >}}
     
 13. A microflow called **DS_WorkflowUserTask_GetEmployee_OnboardingContext** was created together with the **SpecifyDeviceAndLocation_Workflow** page. This microflow retrieves data of user tasks. You need to set up security for this microflow. In the App Explorer, double-click the **DS_WorkflowUserTask_GetEmployee_OnboardingContext** microflow to open it.
 
@@ -276,7 +276,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
 Great job! You have configured the user task for the Manager role:
 
-{{% image_container width="500" %}}![Workflow with Specify Device User Task](/attachments/howto/logic-business-rules/workflow-how-to-configure/workflow-with-task.png){{% /image_container %}}
+{{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/workflow-with-task.png" alt="Workflow with Specify Device User Task"   width="500"  >}}
 
 This can be also a good time to test your app: you can create an employee, start the onboarding process, and test the first task for the Manager demo user. For more information, see the [Testing the Workflow](#test-workflow) section. 
 
@@ -294,17 +294,17 @@ Do the following:
     2. Click the ellipsis icon in the **Condition** property.
     3. In the **Condition** dialog box, type in the expression that will split the flow into two depending on the **WFH** attribute: `$WorkflowContext/WFH`.
 
-        ![Decision Properties](/attachments/howto/logic-business-rules/workflow-how-to-configure/decision-properties.png)
+        {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/decision-properties.png" alt="Decision Properties" >}}
 
 3. Since the WFH attribute is a Boolean, it has a `true` (when the new hire works from home) and a `false` (when they work from the office) outcome. These outcomes are added to the workflow automatically: 
 
-    ![Decision Outcomes](/attachments/howto/logic-business-rules/workflow-how-to-configure/decision-outcomes.png)
+    {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/decision-outcomes.png" alt="Decision Outcomes" >}}
 
 4. Now you need to configure what happens in both scenarios: when the new hire works from the home (true) and when the new hire works from office (false). Open the **Toolbox**, drag and drop a **User task** activity to the **false** path, and do the following:
 
     1. Name the user task **Prepare_Desk** and set its title to **Facilities: Prepare Desk** referring to steps 2-4 of the [Selecting a Device for the New Hire](#select-device) section:
 
-        ![Prepare Desk](/attachments/howto/logic-business-rules/workflow-how-to-configure/prepare-desk.png)
+        {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/prepare-desk.png" alt="Prepare Desk" >}}
 
     2. Configure the task to be assigned to the Facilities role only referring to steps 5 and 6 of the [Selecting a Device for the New Hire](#select-device) section and using the `[System.UserRoles = '[%UserRole_Facilities%]']` expression.
 
@@ -318,7 +318,7 @@ Do the following:
       
     3. Set the **Editable** property to *No* to make the remaining fields in the form read-only.
       
-       ![Read-Only Form](/attachments/howto/logic-business-rules/workflow-how-to-configure/read-only-form.png)
+       {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/read-only-form.png" alt="Read-Only Form" >}}
     
 7. To restrict access to the page to the Facilities role only, follow the step 12 of the [Selecting a Device for the New Hire](#select-device) section.
 
@@ -344,7 +344,7 @@ To call a microflow in your workflow, do the following:
 
 1. Open the workflow editor > **Toolbox** and drag and drop the **Call microflow** activity after the **Facilities: Prepare Desk** user task:
 
-    ![Call Microflow](/attachments/howto/logic-business-rules/workflow-how-to-configure/call-microflow.png)
+    {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/call-microflow.png" alt="Call Microflow" >}}
 
 2. Open **Call microflow** properties and click the ellipsis icon in the **Microflow** property.
 
@@ -354,7 +354,7 @@ To call a microflow in your workflow, do the following:
 
 5. If you create a microflow from the workflow, parameter is added automatically:
 
-    ![Microflow Example](/attachments/howto/logic-business-rules/workflow-how-to-configure/microflow-example.png)
+    {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/microflow-example.png" alt="Microflow Example" >}}
 
 You can now add the actual desk assignment logic to the microflow, which falls outside the scope of this how-to. For more information on microflows and their properties, see [Microflows](/refguide/microflows/) and [Microflow Properties](/refguide/microflow/).
 Now if the manager indicates that the new employee works from home, the desk prepared by the Facilities department will be assigned to the new employee and will be shown in the system. 
@@ -367,19 +367,19 @@ Now you can test your workflow from the perspective of different users.
 
 For certain user roles, there are default end-user and admin pages. For example, users who have tasks assigned to them (Manager, Facilities roles) should see their task inbox and dashboards pages where they can manage and monitor tasks assigned to them:
 
-![Task Inbox](/attachments/howto/logic-business-rules/workflow-how-to-configure/task-inbox.png)
+{{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/task-inbox.png" alt="Task Inbox" >}}
 
 The Admin role has access to the Workflow Admin Center and can monitor all workflows, can view the progress of workflows, and change the workflow settings:
 
-![Workflow Admin Center](/attachments/howto/logic-business-rules/workflow-how-to-configure/workflow-admin-center.png)
+{{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/workflow-admin-center.png" alt="Workflow Admin Center" >}}
 
 This role is also able to manage users:
 
-![Admin Role](/attachments/howto/logic-business-rules/workflow-how-to-configure/admin-role.png)
+{{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/admin-role.png" alt="Admin Role" >}}
 
 Users who have tasks assigned to them (Manager, Facilities roles) will see their task inbox and dashboards pages where they can manage and monitor tasks assigned to them:
 
-![Task Inbox](/attachments/howto/logic-business-rules/workflow-how-to-configure/task-inbox.png)
+{{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/task-inbox.png" alt="Task Inbox" >}}
 
 To test your workflow, you need to switch between different user roles. Follow the steps below:
 
@@ -391,13 +391,13 @@ To test your workflow, you need to switch between different user roles. Follow t
 
 4. Click the user icon on the right to switch to another user role:
 
-    {{% image_container width="500" %}}![User Icon](/attachments/howto/logic-business-rules/workflow-how-to-configure/user-icon.png){{% /image_container %}}
+    {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/user-icon.png" alt="User Icon"   width="500"  >}}
 
 5. Switch between different demo user roles to test the use case. Do can do the following:
 
     1. Start the onboarding process: select the HR demo user that has **EmployeesToOnboard** as the home page, add a new employee, and then click **Start Onboarding**:
     
-       ![EmployeeToOnboard Example](/attachments/howto/logic-business-rules/workflow-how-to-configure/demo_hr.png)
+       {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/demo_hr.png" alt="EmployeeToOnboard Example" >}}
     
     2. Test the process: switch users, view inbox for each user, complete tasks, see how new inbox items are created for the user roles you configured at the next task in the process. 
     

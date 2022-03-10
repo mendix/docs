@@ -20,7 +20,7 @@ The **Change workflow state** activity can be used to add **Abort**, **Continue*
 
 An example of change workflow state properties is represented in the image below:
 
-![Change Workflow State Properties](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/change-workflow-state/change-workflow-state-properties.png)
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/change-workflow-state/change-workflow-state-properties.png" alt="Change Workflow State Properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

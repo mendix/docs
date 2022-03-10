@@ -36,7 +36,7 @@ The collaborative development process between the Desktop Modeler and the Web Mo
 
 2.  When Desktop Modeler users open a project, they are notified if the Web Modeler is enabled for this development line. 
 
-    ![Collaborative Development Enabled Notification](/attachments/refguide7/version-control/collaborative-development/collaborative-development-enabled-notification.png)
+    {{< figure src="/attachments/refguide7/version-control/collaborative-development/collaborative-development-enabled-notification.png" alt="Collaborative Development Enabled Notification" >}}
 
 3. The Desktop Modeler creates a local working copy that the Desktop Modeler user works on. To get changes from the Team Server the user needs to click **Update** (the latest revision is then retrieved from the Team Server, containing commits from other Desktop Modeler users and the latest changes from the Web Modeler).
 
@@ -66,13 +66,13 @@ When you connect to a project which has collaborative development turned on, you
 
 Click the drop-down to select another line or click **OK** to open the currently selected line. 
 
-![Open App Dialog Window](/attachments/refguide7/version-control/collaborative-development/open-app-dialog.png)
+{{< figure src="/attachments/refguide7/version-control/collaborative-development/open-app-dialog.png" alt="Open App Dialog Window" >}}
 
 ### 4.1 Merging Latest Changes
 
 To merge the latest changes stored in the Team Server (from both Web Modeler users and other Desktop Modeler users), open **Changes** and click **Update**.
 
-![Update Option](/attachments/refguide7/version-control/collaborative-development/update-button.png)
+{{< figure src="/attachments/refguide7/version-control/collaborative-development/update-button.png" alt="Update Option" >}}
 
 ### 4.2 Merging Latest Changes
 
@@ -92,7 +92,7 @@ Your changes will be sent to the Web Modeler automatically if there are no confl
 
 You can see all the changes committed to the current development line via **Project** > **More Versioning** > **History**
 
-![History Dialog Box](/attachments/refguide7/version-control/collaborative-development/history.png)
+{{< figure src="/attachments/refguide7/version-control/collaborative-development/history.png" alt="History Dialog Box" >}}
 
  
 
@@ -119,11 +119,11 @@ To enable the Web Modeler for a development line or switch it to another develop
 
 1.  Click **Project** > **More Versioning** > **Manage Branch Lines**. In the **Branch Line Manager** dialog window, you can see the development line that the Web Modeler is enabled for (if any) is marked with a globe icon in the first column.<br/> 
 
-	![Globe Icon in the Branch Line Manager](/attachments/refguide7/version-control/collaborative-development/globe-icon.png)<br/>
+	{{< figure src="/attachments/refguide7/version-control/collaborative-development/globe-icon.png" alt="Globe Icon in the Branch Line Manager" >}}<br/>
 
 2.  Select the line you want to enable the Web Modeler for and click **Enable for the Web Modeler**. <br/>
 
-	![Branch Line Manager - Enabling Another Branch](/attachments/refguide7/version-control/collaborative-development/enable-another-branch.png) 
+	{{< figure src="/attachments/refguide7/version-control/collaborative-development/enable-another-branch.png" alt="Branch Line Manager - Enabling Another Branch" >}} 
 
 The development line for the Web Modeler has been selected.   
 
@@ -137,7 +137,7 @@ To create a new branch line, do the following:
 
 2.  In the **Branch Line Manager** dialog window, you see the list of existing development lines. Click **New** to create a branch line. <br/>
 
-	![Creating New Branch](/attachments/refguide7/version-control/collaborative-development/creating-new-branch.png)<br/>
+	{{< figure src="/attachments/refguide7/version-control/collaborative-development/creating-new-branch.png" alt="Creating New Branch" >}}<br/>
 
 3.  In the **Create Branch Line** dialog window, set the following: <br/>
 
@@ -149,7 +149,7 @@ To create a new branch line, do the following:
 
 4.  After you have configured all the settings, click **OK.** 
 
-	![Create Branch Line Dialog](/attachments/refguide7/version-control/collaborative-development/create-branch-dialog.png) 
+	{{< figure src="/attachments/refguide7/version-control/collaborative-development/create-branch-dialog.png" alt="Create Branch Line Dialog" >}} 
 
 You have created a new branch line.   
 
@@ -161,7 +161,7 @@ To delete a branch line, do the following:
 
 2.  In the **Branch Line Manager** dialog window, select the branch you would like to delete, click **Delete** and confirm deletion. 
 
-	![Deleting a Branch](/attachments/refguide7/version-control/collaborative-development/deleting-branch.png)
+	{{< figure src="/attachments/refguide7/version-control/collaborative-development/deleting-branch.png" alt="Deleting a Branch" >}}
 
 You have deleted the branch.
 

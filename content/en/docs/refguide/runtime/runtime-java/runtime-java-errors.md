@@ -33,11 +33,11 @@ The following things can cause this error:
 
 A memory leak should look like the garbage collector stops running. See the first half of the graph here for an example:
 
-![](/attachments/refguide/runtime/runtime-java/runtime-java-errors/2.jpg)
+{{< figure src="/attachments/refguide/runtime/runtime-java/runtime-java-errors/2.jpg" >}}
 
 It is advisable to always take a look at the Object Cache (Mendix objects in the Heap) graph to see if it resembles the Heap. For example:
 
-![](/attachments/refguide/runtime/runtime-java/runtime-java-errors/3.jpg)
+{{< figure src="/attachments/refguide/runtime/runtime-java/runtime-java-errors/3.jpg" >}}
 
 This looks quite healthy.
 
@@ -45,7 +45,7 @@ If you see the Object Cache going up indefinitely you might have introduced a me
 
 On the other hand, if it looks like the graph below there is much bigger chance you are dealing with a bug outside of your control (for example, Mendix Runtime) that is causing a memory leak.
 
-![](/attachments/refguide/runtime/runtime-java/runtime-java-errors/4.jpg)
+{{< figure src="/attachments/refguide/runtime/runtime-java/runtime-java-errors/4.jpg" >}}
 
 ### 2.3 java.lang.OutOfMemoryError: GC overhead limit exceeded
 
@@ -59,7 +59,7 @@ The most common causes for this error are:
 
 If you want to reproduce this error, do something like this:
 
-![](/attachments/refguide/runtime/runtime-java/runtime-java-errors/common-errors.png)
+{{< figure src="/attachments/refguide/runtime/runtime-java/runtime-java-errors/common-errors.png" >}}
 
 Eventually, memory will run low because of all the account being created, which is when the garbage collector will try to free up memory. It won’t be able to do this, so that all these Account objects are still alive. After a while, it will return the error.
 
@@ -69,5 +69,5 @@ That concludes this list of some of the more common errors in the application lo
 
 If you see the grey *committed* line peak into the white part of the *Application node operating system memory* graph, your app node needs more memory. Upgrading to a larger container is strongly recommended in this case. See the following graph for an example of this problem:
 
-![](/attachments/refguide/runtime/runtime-java/runtime-java-errors/6.jpg)
+{{< figure src="/attachments/refguide/runtime/runtime-java/runtime-java-errors/6.jpg" >}}
 

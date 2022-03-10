@@ -28,7 +28,7 @@ If the property 'Type' is set to 'Expression' the expression field can be used t
 
 If you want to open a different order form per member type you can use an exclusive split. The selected customer is a parameter with name SelectedCustomer to the microflow. For each enumeration value a different sequence flow is followed. If the enumeration has no value the sequence flow with the caption (empty) is followed.
 
-![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/splits/exclusive-split/918050.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/splits/exclusive-split/918050.png" >}}
 
 The expression entered is given below. Because you want to go a different direction for each enumeration you can suffice by just stating the attribute.
 `$SelectedCustomer/memberType`

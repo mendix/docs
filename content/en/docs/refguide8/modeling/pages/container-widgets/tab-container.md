@@ -18,14 +18,13 @@ aliases:
 
 Tab containers are used to show information categorized into tabs. This can be very useful if the amount of information that has to be displayed is larger than the amount of space on the screen.
 
-![Tab Container](/attachments/refguide8/modeling/pages/container-widgets/tab-container/tab-container.png)
+{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/tab-container/tab-container.png" alt="Tab Container" >}}
 
 ## 2 Properties
 
 An example of tab container properties is represented in the image below:
 
-{{% image_container width="250" %}}![Tab Container Properties](/attachments/refguide8/modeling/pages/container-widgets/tab-container/tab-container-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/tab-container/tab-container-properties.png" alt="Tab Container Properties"   width="250"  >}}
 
 Tab container properties consist of the following sections:
 

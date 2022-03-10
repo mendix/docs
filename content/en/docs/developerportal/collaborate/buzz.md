@@ -16,7 +16,7 @@ Located in the Developer Portal, Buzz lets you see Mendix app activity in your c
 
 The **Company Buzz is** is accessible via the top bar in the Developer Portal:
 
-![](/attachments/developerportal/collaborate/buzz/company-buzz.png)
+{{< figure src="/attachments/developerportal/collaborate/buzz/company-buzz.png" >}}
 
 Under **Show activity for**, you will initially see the Buzz activity for **All** apps for which you are a team member *plus* all Buzz activity for your company. You can choose to see only activity for your company by selecting the company name (**Mendix** in the example above).
 
@@ -26,7 +26,7 @@ Below the company name is a list of apps for which you are a team member. Clicki
 
 App Buzz is Buzz for a specific app:
 
-![](/attachments/developerportal/collaborate/buzz/app-buzz.jpg)
+{{< figure src="/attachments/developerportal/collaborate/buzz/app-buzz.jpg" >}}
 
 You can see the size of your **Team** and your fellow team members on the right side of the page. Click the **+** icon to invite new members to your team directly. Click **Show all** to go to the [Team](/developerportal/collaborate/team/) page for the app.
 
@@ -40,7 +40,7 @@ By default, communication via Company Buzz can be seen by all Mendix users in th
 
 You can choose to communicate with a single team by selecting the app from the **Share with** drop-down menu:
 
-![](/attachments/developerportal/collaborate/buzz/buzz-share-with.png)
+{{< figure src="/attachments/developerportal/collaborate/buzz/buzz-share-with.png" >}}
 
 In App Buzz, you will only be communicating with team members.
 
@@ -52,7 +52,7 @@ To continue a conversation, you can also **Comment** on an ongoing discussion an
 
 In App Buzz, a comment can come from Mendix Studio and refer to a specific document (a page, microflow, navigation document, or the domain model). You can navigate to this document in Studio by clicking the corresponding button, such as **Show page** or **Show microflow**:
 
-![](/attachments/developerportal/collaborate/buzz/show-document.png)
+{{< figure src="/attachments/developerportal/collaborate/buzz/show-document.png" >}}
 
 For more information on making comments in Studio, see [Buzz](/studio/collaboration-buzz/).  
 

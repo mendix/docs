@@ -25,7 +25,7 @@ Workflow properties consist of the following sections:
 
 The **General** section contains information on the title and name of the workflow. 
 
-![General Section](/attachments/studio/workflows/workflow-properties/general.jpg)
+{{< figure src="/attachments/studio/workflows/workflow-properties/general.jpg" alt="General Section" >}}
 
 The **General** section properties are described in the table below:
 
@@ -38,7 +38,7 @@ The **General** section properties are described in the table below:
 
 The **Data** section contains information on what data context the workflow is using. 
 
-![Data Section](/attachments/studio/workflows/workflow-properties/data.jpg)
+{{< figure src="/attachments/studio/workflows/workflow-properties/data.jpg" alt="Data Section" >}}
 
 **Workflow entity** is an entity that is used as a workflow context. This entity serves as input for the workflow and can hold the data added during the execution of the workflow. For example, for an expense approval process, it holds the amount to approve and the purpose.
 
@@ -48,7 +48,7 @@ This entity should be of a workflow entity type. For more information, see the [
 
 The **Display Information** section defines the workflow name and its description that are displayed in the running (published) app. 
 
-![Display Information Section](/attachments/studio/workflows/workflow-properties/display-information.jpg)
+{{< figure src="/attachments/studio/workflows/workflow-properties/display-information.jpg" alt="Display Information Section" >}}
 
 The **Display Information** section properties are described in the table below:
 
@@ -61,7 +61,7 @@ The **Display Information** section properties are described in the table below:
 
 **Allowed roles** defines the [user role](/studio/settings-security/#roles-and-permissions) that can trigger the workflow.
 
-![Permissions Section](/attachments/studio/workflows/workflow-properties/permissions.jpg)
+{{< figure src="/attachments/studio/workflows/workflow-properties/permissions.jpg" alt="Permissions Section" >}}
 
 {{% alert color="info" %}}
 This section is only displayed when the security is on. For more information, see [Security](/studio/settings-security/).
@@ -71,7 +71,7 @@ This section is only displayed when the security is on. For more information, se
 
 The **Due Date** section allows you to set a deadline for the workflow and keep track of it. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. For example, you can use this due date to show workflows that are overdue in a dashboard.
 
-![Due Date Section](/attachments/studio/workflows/workflow-properties/due-date.jpg)
+{{< figure src="/attachments/studio/workflows/workflow-properties/due-date.jpg" alt="Due Date Section" >}}
 
 The **Due Date** section properties are described in the table below:
 
@@ -85,7 +85,7 @@ The **Due Date** section properties are described in the table below:
 
 **Override Admin Page** is an optional page used for displaying all running workflows to the workflow admin. This overrides a generic page used to display any running workflow in the app, for example, when you have a **Show Workflow Page** set as an [on-click action](/studio/page-editor-widgets-events-section/#show-workflow-page) or as a [microflow activity](/studio/microflows/#microflow-workflow-activities) and would like to override the page selected for this event/activity. 
 
-![Workflow Page Section](/attachments/studio/workflows/workflow-properties/workflow-page.jpg)
+{{< figure src="/attachments/studio/workflows/workflow-properties/workflow-page.jpg" alt="Workflow Page Section" >}}
 
 ## 3 Read More
 

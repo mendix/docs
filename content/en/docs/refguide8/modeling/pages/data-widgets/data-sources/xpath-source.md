@@ -29,8 +29,7 @@ If you want to restrict data not for a single widget, but for several, you may w
 
 The **Entity (path)** property specifies the target of the database query. If you have a top-level data widget, **Entity (path)** will get objects of the selected entity directly. If you have a nested data widget, you can also select an entity of a parent data container. In this case objects are retrieved following the association path and the association is parsed as an extra constraint in the database query. 
 
-{{% image_container width="400" %}}![Data Source Example](/attachments/refguide8/modeling/pages/data-widgets/data-sources/database-source/data-source-example.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/data-sources/database-source/data-source-example.png" alt="Data Source Example"   width="400"  >}}
 
 {{% alert color="info" %}}
 This differs from the [association data source](/refguide8/association-source/) when objects are retrieved from the memory, not database.

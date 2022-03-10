@@ -34,14 +34,11 @@ As all Studio changes are auto-saved, the collaborative development is indicated
 
 1. **Committing Your Changes** – if your team members are working on the same development line in Studio Pro and they click **Update**, your screen gets locked for a few moments while your changes are automatically committed to the Team Server and then applied to Studio Pro. For more information on the collaborative development process in Studio Pro, see section [4 Studio Pro Perspective](/refguide7/collaborative-development/) in *Collaborative Development* in *Version Control*.
 
-    {{% image_container width="350" %}}![Committing Changes Dialog Box](/attachments/studio7/general/general-collaborative-development/committing-changes.png)
-   {{% /image_container %}}
+    {{< figure src="/attachments/studio7/general/general-collaborative-development/committing-changes.png" alt="Committing Changes Dialog Box"   width="350"  >}}
 
 2.  **Syncing Changes** – your screen gets locked for a few moments each time the Studio Pro users commit. <br/>
 
-    {{% image_container width="350" %}}![Synching Changes Dialog Box](/attachments/studio7/general/general-collaborative-development/synching-changes.png)<br/>
-
-    {{% /image_container %}}
+    {{< figure src="/attachments/studio7/general/general-collaborative-development/synching-changes.png" alt="Synching Changes Dialog Box"   width="350"  >}}
 
     There are two possible outcomes of this process:<br/>
 
@@ -52,8 +49,7 @@ As all Studio changes are auto-saved, the collaborative development is indicated
 3.  **Switching Contents** – in Studio Pro, users can change the branch line Studio is enabled for. For more information on managing branches, see section [5 Managing Development Lines](/refguide7/collaborative-development/#managing-branches) in the *Collaborative Development* in *Version Control*. 
 	During this process Studio gets locked for a few moments, all changes are auto-saved on the current development line, and a pop-up dialog is shown that the Studio Pro user is changing the branch line for Studio. This means that the contents of your app will change. 
 
-	{{% image_container width="350" %}}![Switching Contents Dialog Box](/attachments/studio7/general/general-collaborative-development/switching-branches.png)
-  {{% /image_container %}}
+	{{< figure src="/attachments/studio7/general/general-collaborative-development/switching-branches.png" alt="Switching Contents Dialog Box"   width="350"  >}}
 
 ## 4 Read More
 

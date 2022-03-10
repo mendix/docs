@@ -10,7 +10,7 @@ To create a new app from a Mendix project package (*.mpk*) file, you need to imp
 
 To open this dialog box,  go to **File > Import App Package**, browse to the *.mpk* file, and then open it.
 
-![](/attachments/refguide7/desktop-modeler/dialogs/import-project-package-dialog/import-project-package.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/dialogs/import-project-package-dialog/import-project-package.png" >}}
 
 ## 2 Where Should We Store Your App?
 

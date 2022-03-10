@@ -26,7 +26,7 @@ aliases:
 
 A control bar of a [template grid](/refguide8/template-grid/), [data grid](/refguide8/data-grid/), and [reference set selector](/refguide8/reference-set-selector/) allows you to manipulate the objects displayed by means of buttons. By default, both grids will be created with [Search](#search-button), [New](#create-button), [Edit](#grid-action-button), and [Delete](#grid-action-button) buttons in the control bar:
 
-![Data Grid Control Bar](/attachments/refguide8/modeling/pages/data-widgets/grids/control-bar/control-bar-example.png)
+{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/grids/control-bar/control-bar-example.png" alt="Data Grid Control Bar" >}}
 
 The control bar can also include a number of selection options and spreadsheet export buttons, as well as microflow buttons for custom actions. 
 

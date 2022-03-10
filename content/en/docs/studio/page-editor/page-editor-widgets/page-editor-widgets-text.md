@@ -11,8 +11,7 @@ tags: ["studio", "page editor", "typography", "text widgets", "widgets"]
 
 Text is a group of [widgets](/studio/page-editor-widgets/) that consists of [Text, Paragraph, Headings (H1-H6)](#text-widget), and the [Page Title](#page-title-widget). They are used to display textual information to the end-user. For example, you can display a text paragraph:
 
-{{% image_container width="350" %}}![](/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-text/paragraph-example.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-text/paragraph-example.png"   width="350"  >}}
 
 ## 2 Text, Paragraph, and Headings General Properties {#text-widget}
 
@@ -24,11 +23,11 @@ In **Content**, you define the text that is shown to end-users. You can also dis
 
 When add attributes, the attribute value is displayed to the user. Choose **Add** > **Attribute** or press <kbd>Ctrl</kbd> + <kbd>Space</kbd> to select an attribute.  For example, when the user logs in to the account, a greeting message can be shown, where *Name* and *NumberOfMessages* are attribute values: 
 
-![](/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-text/content-example.png)
+{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-text/content-example.png" >}}
 
 You can also configure an expression and display the expression outcome (for more information on expressions, see [Expressions](/studio/expressions/)). Choose **Add** > **Expression Outcome** to write an expression. For example, you can show an price excluding VAT and including it:
 
-![Content Example Expressions](/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-text/content-example-expression.png)
+{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-text/content-example-expression.png" alt="Content Example Expressions" >}}
 
 To edit **Content**, double-click the widget on the page.
 
@@ -56,7 +55,7 @@ The page title is changed.
 
 The **Title** that you see in the page properties and in widget is one and the same. This means, if you make changes to the title in page properties, this change will be displayed in the widget, and vice versa.  
 
-![](/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-text/page-title-interrelation.png)
+{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-text/page-title-interrelation.png" >}}
 
 
 

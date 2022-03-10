@@ -21,7 +21,7 @@ There are two tabs available in the Mendix Forum: **Questions** and **Ideas**. O
 
 On the **Questions** tab, you can see an overview of the questions that have been asked. Here is an example question:
 
-![](/attachments/developerportal/community-tools/mendix-forum/questions_example.png)
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_example.png" >}}
 
 Each question has a descriptive title (**1**). Clicking the question title opens the specific [question and answers details page](#question-description-page) under the **Question** tab. After you click the question title, the dot ( • ) before the question title will disappear.
 
@@ -41,9 +41,7 @@ Each question specifies the following elements:
 
 Hovering over the developer name brings up the profile card:
 
-{{% image_container width="200" %}}
-![](/attachments/developerportal/community-tools/mendix-forum/questions_profile_card.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_profile_card.png"   width="200"  >}}
 
 The profile card presents the Mendix points for the developer. Clicking the developer name on the card will bring you to their Mendix Profile.
 
@@ -51,9 +49,7 @@ The profile card presents the Mendix points for the developer. Clicking the deve
 
 The **Sort by** drop-down menu at the top of the screen has three options for sorting the questions on this page: **Last Updated**, **Newest**, and **Most Popular**.
 
-{{% image_container width="200" %}}
-![](/attachments/developerportal/community-tools/mendix-forum/questions_sort_by.jpg)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_sort_by.jpg"   width="200"  >}}
 
 #### 2.1.2 Searching {#searching}
 
@@ -85,7 +81,7 @@ To filter the questions that appear on the overview page, select from the follow
 #### 2.2.1 Question Details
 
 Clicking the title of a question will bring you to the details page for that question:
-![](/attachments/developerportal/community-tools/mendix-forum/questions_specific_page.png)
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_specific_page.png" >}}
 
 On this page, you can read the full descriptive text of the question and do the following:
 
@@ -110,19 +106,19 @@ The URL for each question is unique.
 
 Below the question details are the answer(s) to the question. Click the **▲** or **▼** button to upvote or downvote the answer based on how it addresses the question. You can also click **Comment** to comment on an answer.
 
-![](/attachments/developerportal/community-tools/mendix-forum/questions_answer.png)
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_answer.png" >}}
 
 #### 2.2.3 Answering a Question {#answering-question}
 
 Below the answer(s), you can contribute to the Mendix Forum by writing your own answer in the editor and then clicking **Submit answer**:
 
-![](/attachments/developerportal/community-tools/mendix-forum/questions_answer_editor.png)
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_answer_editor.png" >}}
 
 {{% alert color="info" %}}
 
 You can easily upload your images in the Mendix Forum by dragging them directly into the text editors. In order to resize and position an image, double-click it in the editor or click the image button in the toolbar:
 
-![](/attachments/developerportal/community-tools/mendix-forum/questions_image_button.png)
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_image_button.png" >}}
 
 {{% /alert %}}
 
@@ -137,8 +133,7 @@ To ask your own question on the Mendix Forum, follow these steps:
 1.  Click **Ask a question** on the main page of the [Questions tab](#questions-tab).
 2.  On the **Ask your question** page, fill in the following details in the editor:
 
-	{{% image_container width="500" %}}![](/attachments/developerportal/community-tools/mendix-forum/questions_ask_screen.jpg)
-	{{% /image_container %}}
+	{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_ask_screen.jpg"   width="500"  >}}
 
 	* The **Title** of your question (which is how Mendix Forum users will first see your question, so make the title descriptive and interesting)
 	* The text of your question (add all the details about your question to make it searchable and so other users can answer it; consider including steps to reproduce the issue)
@@ -160,7 +155,7 @@ You should accept the answer that properly and accurately responds to your quest
 
 On the **Ideas** tab, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
 
-![](/attachments/developerportal/community-tools/mendix-forum/ideas_example.png)
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/ideas_example.png" >}}
 
 All the submitted ideas are publicly visible, and each idea has a descriptive title (**1**). Clicking the idea title opens the specific [idea details page](#IdeaDetails) under the **Ideas** tab.
 
@@ -179,9 +174,7 @@ Each idea specifies the following elements:
 
 The **Sort by** drop-down menu at the top of the screen has three options for sorting the ideas on this page: **Last Updated**, **Newest**, and **Most Votes**.
 
-{{% image_container width="200" %}}
-![](/attachments/developerportal/community-tools/mendix-forum/ideas_sort_by.jpg)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/ideas_sort_by.jpg"   width="200"  >}}
 
 #### 3.1.2 Searching
 
@@ -201,7 +194,7 @@ To filter the ideas that appear on the overview page, select from the following 
 
 Clicking the title of an idea will bring you to the details page for that idea:
 
-![](/attachments/developerportal/community-tools/mendix-forum/ideas_specific_page.png)
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/ideas_specific_page.png" >}}
 
 On this page, you can read the full descriptive text of the idea and do the following:
 
@@ -242,8 +235,7 @@ To submit your own idea to the idea forum, follow these steps:
 1.  Click **Submit idea** on the main page of the [Ideas tab](#ideas-tab).
 2.  On the **Submit your idea** page, fill in the following details in the editor:
 
-	{{% image_container width="500" %}}![](/attachments/developerportal/community-tools/mendix-forum/ideas_submit_screen.jpg)
-	{{% /image_container %}}
+	{{< figure src="/attachments/developerportal/community-tools/mendix-forum/ideas_submit_screen.jpg"   width="500"  >}}
 
 	* The **Title** of your idea (which is how Mendix Forum users will first see your idea, so make the title descriptive and interesting)
 	* The text of your idea (add all the details about your idea to make it searchable and so other users can vote and comment on it)

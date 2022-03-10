@@ -33,11 +33,11 @@ You interact with the widget by clicking the text box and entering the text. The
 
 This is the text box focused:
 
-![](/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-focused.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-focused.png" >}}
 
 This is the text box unfocused:
 
-![](/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-unfocused.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-unfocused.png" >}}
 
 Now you know that you must focus, enter text, and unfocus the widget. You perform these tasks on the `input` element that is available inside all input widgets. The `input` element with the type `text` makes it possible to type inside a widget.
 
@@ -49,43 +49,43 @@ To create the action structure, follow these steps:
 
 1.  Start by checking the parent element, which is always the element with `mx-name` when creating an unsupported widget action. If the widget does not have `mx-name`, look for the highest `div` element that is still referencing the widget. The parent element of the text box looks like this in the debugger:
 
-    ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-parentelement-debugger.png)
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-parentelement-debugger.png" >}}
 
     The debugger creates the border around the selected element in the app:
 
-    ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-parentelement-outlined.png)
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-parentelement-outlined.png" >}}
 
 2.  The parent element is not an `input` element. Find a child element that ATS can use to enter text in the widget. When you look at the parent element, you will see it has an `input` child element that ATS can use:
 
-    ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-childelement-input-debugger.png)
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-childelement-input-debugger.png" >}}
 
     Before you start creating the action, you must know if ATS can find the `input` element within the text box widget. You use the debugger to simulate what ATS does. Since the Find Widget Child Node action uses the `mx-name` to find the parent, you must also use the `mx-name` in your code.
 
 3.  Use jQuery to find out if ATS can find the element. Enter the following code in the console of the debugger: `$( ‘.mx-name-textBox2 input’ )`. You use "dots" here, because in jQuery, the dot stands for a class name selector. When you enter this in the console, it looks like this:
 
-    ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-childelement-selector.png)
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-childelement-selector.png" >}}
 
     It can happen that the debugger does not return an element. Check if jQuery is available and if you constructed the code in the correct manner. When you enter a selector in ATS, don’t use `$( ‘….’ )` or `jQuery( ‘…..’ )`.
 
 4.  Add the Find Widget Child Node action to your action. Enter the `input` child node selector, then enter the test step description and output description:
 
-    ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-findwidgetchildnode-add.png)
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-findwidgetchildnode-add.png" >}}
 
 5.  Test step 1 provides the `input` element that you need for the other steps. Now, add the Focus and Clear Element Value action. Enter the output of step 1 as the input, and give it a proper description:
 
-    ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-focusclearelementvalue-add.png)
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-focusclearelementvalue-add.png" >}}
 
 6.  After focusing the `input` element, enter the text. When entering text in an `input` element, use the [Send Keys](/addons/ats-addon/rg-one-send-keys/) action. Add the action, connect the input element from step 1, and give it a proper description:
 
-    ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-sendkeys-add.png)
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-sendkeys-add.png" >}}
 
 7.  Now that you have entered the text, you can unfocus the `input` element. Add the Unfocus WebElement action, connect the `input` element from step 1, and give it a proper description:
 
-    ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-unfocuswebelement-add.png)
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-unfocuswebelement-add.png" >}}
 
 8.  The last action you add is [Mendix Wait](/addons/ats-addon/rg-one-mendix-wait/). You trigger a possible event in the widget by entering text, so you need to ensure that ATS waits for all the background processes to finish:
 
-    ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-mendix-wait.png)
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-mendix-wait.png" >}}
 
 ## 5 Action Parameters
 
@@ -103,25 +103,25 @@ To add the action parameters, follow these steps:
 
 1.  Configure the **Widget Name** input parameter like this:
 
-    ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-widgetname-parameter.png)
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-widgetname-parameter.png" >}}
 
 2.  Configure the **Value** input parameter like this:
 
-    ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-value-parameter.png)
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-value-parameter.png" >}}
 
 3.  Configure the **Search Context** input parameter like this:
 
-    ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-searchcontext-parameter.png)
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-searchcontext-parameter.png" >}}
 
     For this custom action, you do not need an output parameter.
 
 4.  Connect the input parameters to the correct actions. Start with the **Widget Name** and **Search Context** parameters for the Find Widget Child Node action:
 
-    ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-actioninputparameters-findwidgetchildnode.png)
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-actioninputparameters-findwidgetchildnode.png" >}}
 
 5.  The last parameter to connect is the **Value** parameter. Connect this input parameter to the Send Keys action:
 
-    ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-actioninputparameters-sendkeys.png)
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-actioninputparameters-sendkeys.png" >}}
 
 There is no need to add logic to this custom action. It only involves entering text in a widget.
 
@@ -138,4 +138,4 @@ After checking these items, you can run the test case that uses this action.
 
 Congratulations! You have created your own custom action for the Mendix text box widget.
 
-![](/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-finishedaction.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-03-textbox/text-box-finishedaction.png" >}}

@@ -18,7 +18,7 @@ If your company does not already have a Mendix Admin, you will see a page that o
 
 If your company already has a Mendix Admin but you yourself are not a Mendix Admin, you will see this page:
 
-![](/attachments/developerportal/control-center/admin-exists.jpg)
+{{< figure src="/attachments/developerportal/control-center/admin-exists.jpg" >}}
 
 If you are a Mendix Admin, you will immediately see the [Dashboard](#dashboard) page and can navigate to the pages described below.
 
@@ -30,7 +30,7 @@ This new feature is currently in Beta. Please provide feedback via the feedback 
 
 The Control Center dashboard gives you an overview of various activities for your company on the Mendix Platform:
 
-![](/attachments/developerportal/control-center/dashboard.png)
+{{< figure src="/attachments/developerportal/control-center/dashboard.png" >}}
 
 These are some examples of what you can find on the dashboard:
 
@@ -60,13 +60,13 @@ When you select one or more apps via the check boxes on the **Active Apps** or *
 
 The **Default App Roles** tab shows the default [team roles](/developerportal/collaborate/app-roles/#team-roles) assigned for every new app created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/collaborate/team-server/) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) information.
 
-![](/attachments/developerportal/control-center/roles.jpg)
+{{< figure src="/attachments/developerportal/control-center/roles.jpg" >}}
 
 ## 4 Members {#members}
 
 Members are users who can view and/or edit an app. On the **Active Members** tab, you can see the active members of your company who can access certain apps: 
 
-![](/attachments/developerportal/control-center/members.jpg)
+{{< figure src="/attachments/developerportal/control-center/members.jpg" >}}
 
 When you click a company member's name, a pop-up window opens with their member profile. The profile displays the **Apps** of which they are a member as well as their **App role** for each app. Click an app name to go to its [app profile](#apps) pop-up window.
 
@@ -88,7 +88,7 @@ A Mendix Admin can set up **App Access Groups**, which consist of end-users (who
 
 Click a group name to bring up the group details pop-up window, and click **Add Member** to add members to the group. When you add members to an app access group, they will automatically be granted access to the apps listed on **Accessible Apps** tab. After you select an app to be accessible for the group, you also need to select a specific app [environment](/developerportal/deploy/environments/) node to be accessible, in addition to specific [user roles](/refguide/user-roles/) that should be able to access the app.
 
-![](/attachments/developerportal/control-center/access-group.jpg)
+{{< figure src="/attachments/developerportal/control-center/access-group.jpg" >}}
 
 {{% alert color="warning" %}}
 You can only add apps that utilize [Mendix SSO](/appstore/modules/mendix-sso/) to App Access Groups.
@@ -108,7 +108,7 @@ The **Mendix Admins** tab lists all the current Mendix Admins in your company. A
 
 To add a new admin, click **Add Mendix Admin**. To remove an admin, hover over their name in the list and click **Remove**.
 
-![](/attachments/developerportal/control-center/admin.jpg)
+{{< figure src="/attachments/developerportal/control-center/admin.jpg" >}}
 
 {{% alert color="info" %}}
 It is not possible to remove yourself as a Mendix Admin.
@@ -124,7 +124,7 @@ On this page, you can add and edit a **Logo** that will appear on your company p
 
 You can set a **Cover image** to be the background header of your company page. If you do not set an image by clicking **Upload**, the **Primary** color as set in the **Brand colors** section will be used.
 
-![](/attachments/developerportal/control-center/brand.jpg)
+{{< figure src="/attachments/developerportal/control-center/brand.jpg" >}}
 
 ## 8 Onboarding {#onboarding}
 
@@ -132,13 +132,13 @@ On the **Landing Page** tab of this page, you can customize your company's onboa
 
 You can start configuring the sections and blocks of your landing page from a standard template or from scratch. You can work on drafts and preview how the page looks before publishing for your company's new platform users.
 
-![](/attachments/developerportal/control-center/onboarding-landing.png)
+{{< figure src="/attachments/developerportal/control-center/onboarding-landing.png" >}}
 
 Once you publish your landing page, this will be where new users land after signing up with your company's domains on Mendix. This page is also accessible via the **Getting Started with Mendix** link in the upper-right navigation menu. If you do not have a company onboarding landing page set up, this link will lead to the default Mendix onboarding page.
 
 On the **Onboarding Email** tab, you can customize the onboarding email that users of your domains receive when they join the Mendix Platform. You can provide a link to your company's onboarding page, share a welcome message, or present company guidelines for using Mendix. You can create a draft email before sending it.
 
-![](/attachments/developerportal/control-center/onboarding-email.png)
+{{< figure src="/attachments/developerportal/control-center/onboarding-email.png" >}}
 
 ## 9 Security {#security}
 
@@ -148,7 +148,7 @@ On the **Single Sign-On** tab, you can set up an identity federation between the
 
 On the **Security History** tab, you can click **Show Security History** to open a page (in a new browser tab) that presents an audit trail of security-related changes in **App History** and **Member History**. You can search through and view details on these changes as well as export the audit trail to a CSV file.
 
-![](/attachments/developerportal/control-center/security.jpg)
+{{< figure src="/attachments/developerportal/control-center/security.jpg" >}}
 
 ## 10 Cloud {#cloud}
 
@@ -158,7 +158,7 @@ This feature is not yet publicly available. Please talk to your Customer Success
 
 The **Paid Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) and whether the [Fallback](/developerportal/deploy/mendix-cloud-deploy/#fallback) option has been purchased as part of a Premium plan.   
 
-![](/attachments/developerportal/control-center/cloud.jpg)
+{{< figure src="/attachments/developerportal/control-center/cloud.jpg" >}}
 
 There are links to three other pages from this tab to allow you to [make requests to Mendix Support](/developerportal/support/submit-support-request/#submitting) to do the following:
 

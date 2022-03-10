@@ -12,7 +12,7 @@ tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
 
 To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to create a cluster and add at least one namespace in the Mendix Developer Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your OpenShift or Kubernetes context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
 
-![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/mx4pc-architecture.png)
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/mx4pc-architecture.png" >}}
 
 This document explains how to set up the cluster in Mendix.
 
@@ -46,27 +46,27 @@ Should you consider using a connected environment, the following URLs should be 
 
 1. Click **Cloud Settings** on the **General Settings** page of your Mendix app.
     
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image2.png)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image2.png" >}}
 
 2. Click **Mendix for Private Cloud**.
     
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image3.png)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image3.png" >}}
 
 3. Click **Set up Mendix for Private Cloud**.
     
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image4.png)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image4.png" >}}
 
 4. Click the **Switch-to** menu in the Developer Portal and choose **Cloud**.
 
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/go-to-nodes-page.png)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/go-to-nodes-page.png" >}}
 
 5. Select **Cluster Manager** from the top menu bar in the Developer Portal.
 
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" >}}
 
 6. Click **Register Cluster**. 
 
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image6.png)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image6.png" >}}
 
 7. Enter the following information:
     
@@ -78,7 +78,7 @@ Should you consider using a connected environment, the following URLs should be 
 
 8. Click **Create**.
 
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/create-cluster.png)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/create-cluster.png" >}}
 
 ### 3.2 Adding a Namespace
 
@@ -88,11 +88,11 @@ To add a namespace, do the following:
 
 1. Click **Details**:
 
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/empty-cluster.png)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/empty-cluster.png" >}}
 	
 2. Click **Add Namespace**:
 	
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/namespace-details.PNG)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/namespace-details.PNG" >}}
 
 3. Enter the following details:
 	* **Namespace** – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name
@@ -100,7 +100,7 @@ To add a namespace, do the following:
 
 4. Click **Done** to create the namespace.
 
-![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/add-namespace.png)
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/add-namespace.png" >}}
 
 {{% alert color="warning" %}} If you have selected a *Connected Installation Type* please verify that the [Connected Environment Pre-requisites](#prerequisites-connected) are configured. {{% /alert %}}
 
@@ -114,22 +114,22 @@ If you are not already on the installation tab for your namespace, go to it by f
 
 1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
 
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" >}}
 
 2. Click **Details** next to the namespace you want to use.
 
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-details.png)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-details.png" >}}
 
 3. Select the **Installation** tab.
 
 Now you can download the Configuration Tool by doing the following:
 
 1. Choose the **Operating System** for your local computer.
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/choose-operating-system.png)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/choose-operating-system.png" >}}
 
 2. Click **Download Executable**.
 
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/download-executable.png)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/download-executable.png" >}}
 
 3. Choose the **Mendix Operator Version** that you would like to install. If you have already installed the Mendix Operator, your currently installed version will be highlighted.
 
@@ -141,7 +141,7 @@ Now you can download the Configuration Tool by doing the following:
 
 	{{% alert color="info" %}}The installation and configuration tool only supports a limited range of Mendix Operator versions. If the Mendix Operator version in your namespace is too new or too old, the configuration tool will not be able to configure it. Download a version of the Configuration tool that is compatible with the Mendix Operator you have installed.{{% /alert %}}
 
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/download-operator-version.png)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/download-operator-version.png" >}}
 
 4. Click the **Download** icon to download the installation and configuration tool. Make sure that it is stored somewhere on your path.
 
@@ -157,17 +157,17 @@ You can do this as follows:
 
 2. Click **Copy Login Command** in the user drop-down.
     
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image9.png)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image9.png" >}}
 
 3. Choose your IdP (Identity Provider).
     
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image10.png)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image10.png" >}}
 
 4. Click **Display Token**.
 
 5. Copy the command under **Log in with this token**.
     
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image11.png)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image11.png" >}}
 
 6. Paste the command into your command line terminal and press Enter.
 
@@ -179,7 +179,7 @@ To install in non-interactive mode please see: [Install and Configure Mendix for
 
 1. Copy the **Installation Command** by clicking **Copy to clipboard**.
 
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-cli-non-interactive/installation-command.png)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-cli-non-interactive/installation-command.png" >}}
 
 2. Paste the command into your command line terminal and press <kbd>Enter</kbd>
 
@@ -187,7 +187,7 @@ To install in non-interactive mode please see: [Install and Configure Mendix for
 
 	You will see the configuration options on the screen and will be guided through filling in the information needed.
 
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/post-install-landing-page.png)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/post-install-landing-page.png" >}}
 
 #### 4.3.1 Base Installation{#base-installation}
 
@@ -197,7 +197,7 @@ If the Mendix Operator and the Mendix Gateway Agent have not been installed in y
 
 	You will see the screen below.
 
-	![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/installer-options.png)
+	{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/installer-options.png" >}}
 
 2. Select the required **Cluster Mode** – *connected* or *standalone*.
 
@@ -229,7 +229,7 @@ You can now configure the resources required for your namespace.
 
 The first time you configure the namespace, you should select all the items under **Select items to configure** except **Proxy** and **Custom TLS**. Only select **Proxy** if you want to configure a proxy for your namespace. Select **Custom TLS** only if you want to configure custom CAs for your namespace.
 
-![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/configure-namespace.png)
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/configure-namespace.png" >}}
 
 The options do the following:
 
@@ -246,7 +246,7 @@ The options do the following:
 
 	You will be shown the **Installation wizard** landing page.
 
-	![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/installation-wizard.png)
+	{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/installation-wizard.png" >}}
 
 3. Click the appropriate button at the bottom of the page to navigate to the setup page for each resource which you need to configure. Alternatively, use the allocated function keys (for example <kbd>F2</kbd> for the **Database Plan**). 
 
@@ -272,7 +272,7 @@ Once you have entered the details you can apply two validation checks by clickin
 * **Validate** – checks that you have provided all the required values and that they are in the correct format
 * **Connection validation** –  checks whether the specified storage plan has been successfully created — this does not guarantee that the storage *instance* will be created successfully when the configuration is applied
 
-![Database Plan Configuration](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/database-plan-config.png)
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/database-plan-config.png" alt="Database Plan Configuration" >}}
 
 The following **Database Types** are supported:
 
@@ -820,7 +820,7 @@ In order for the Mendix Operator to trust such certificates, you need to add the
 
 2. Paste the name of this `custom.crt` secret (the `{secret}` used in the commands above) into the **CA Certificates Secret Name** field (for example, `mendix-custom-ca`):
    
-   ![Custom TLS configuration](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/custom-tls-config.png)
+   {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/custom-tls-config.png" alt="Custom TLS configuration" >}}
 
 These custom CAs will be trusted by:
 
@@ -842,23 +842,23 @@ When you have configured all the resources, do the following:
 
 1. Press <kbd>F7</kbd> to **Review and Apply**.
 
-	![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/review-and-apply.png)
+	{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/review-and-apply.png" >}}
 
 2. Click **Evaluate Configuration** to check the configuration.
 
 	Resources which are correctly configured will have a status **Valid configuration**. If an resource is incorrectly configured, it will have a status **Invalid configuration: …** and an explanation of the issue.
 
-	![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/evaluate-configuration.png)
+	{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/evaluate-configuration.png" >}}
 
 3. Once you have evaluated the configuration, click **Write YAML** to save a copy of the configuration .yml files on your local machine.
 
 	The **Installer output** panel will display the locations of the saved files.
 
-	![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/write-yaml.png)
+	{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/write-yaml.png" >}}
 
 4. Click **Apply Configuration** to apply the configuration to your namespace.
 
-	![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/apply-configuration.png)
+	{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/apply-configuration.png" >}}
 
 	Once the configuration has been applied you will see the message **Successfully applied all the configuration!**.
 
@@ -868,7 +868,7 @@ When you have configured all the resources, do the following:
 
 When using a connected cluster, its status will be shown as **Connected** in the Developer Portal when the namespace is configured correctly. You may need to click the **Refresh** button if the screen does not update automatically.
 
-![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image22.png)
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image22.png" >}}
 
 ## 5 Advanced Operator Configuration
 
@@ -1431,7 +1431,7 @@ Once it is configured, you can manage your cluster and namespaces through the De
 
 Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
 
-![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png)
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" >}}
 
 From this page you can see a summary of your clusters with all their namespaces and an indication of the namespace status and how long it has been running (runtime).
 
@@ -1450,7 +1450,7 @@ Here you can perform the following actions on the entire cluster:
 * When name of the cluster is changed
 * When cluster description is changed
 
-![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-activity-logs.PNG)
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-activity-logs.PNG" >}}
 
 {{% alert color="info" %}}
 When you add a cluster manager, the user will have most of the access which the original cluster manager had, such as the abilities to add a namespace, add a member, change the permissions of the cluster member, and delete another cluster manager. 
@@ -1484,13 +1484,13 @@ See the sections below for more information.
 
 You can also delete your namespace from the cluster manager by clicking the delete icon in the top right.
 
-![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image25.png)
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image25.png" >}}
 
 If there are any environments associated with the namespace, you cannot delete the namespace until the environments associated with it are deleted.
 
 When you delete a namespace, this removes the namespace from the cluster in the Developer Portal. However, it will not remove the namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
 
-![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image26.png)
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image26.png" >}}
 
 You can also see an activity log containing the following information for all namespaces within the cluster:
 
@@ -1513,13 +1513,13 @@ You can also see an activity log containing the following information for all na
 * When a user is removed as a namespace member
 * When user's permission is changed in the namespace
 
-![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/namespace-activity-logs.PNG)
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/namespace-activity-logs.PNG" >}}
 
 #### 6.2.1 Apps
 
 The **Apps** tab of namespace details in the cluster manager page lists all the app environments which are deployed to this namespace.
 
-![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image27.png)
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image27.png" >}}
 
 If you are a team member of the app, click **Details** to go to the *Environment Details* page for that app.
 
@@ -1589,7 +1589,7 @@ You can invite additional members to the namespace, and configure their role dep
 
 2. Click **Invite Member**.
     
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image28.png)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image28.png" >}}
 
 3. Enter the **Email** of the person you want to invite.
 
@@ -1601,7 +1601,7 @@ You can invite additional members to the namespace, and configure their role dep
 
 5. Click **Send Invite** to send an invite to this person.
     
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image29.png)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image29.png" >}}
 
 6. The user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
 
@@ -1617,7 +1617,7 @@ You can change the access rights for, or completely remove, existing members.
     
   2. Click **Remove member** to remove this member completely. You will be asked to confirm this action.
         
-    ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image30.png)
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image30.png" >}}
 
 #### 6.2.3 Operate {#operate}
 
@@ -1633,13 +1633,13 @@ The specification of these pages is optional.
 
 Open the **Operate** tab, enter the URLs relevant to your namespace, and click **Save** for each one.
 
-![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image32.png)
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image32.png" >}}
 
 #### 6.2.4 Plans
 
 The **Plans** tab shows you the database and storage plans which are currently configured for your namespace.
 
-![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image33.png)
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image33.png" >}}
 
 ##### 6.2.4.1 Deactivating a Plan
 
@@ -1729,21 +1729,21 @@ This section covers how to troubleshoot an issue you may find when running the i
 
 If you are unable to copy and paste in the installation tool, you may need to enable it from the Windows PowerShell Properties. Open the **Properties** menu by right clicking the header or by pressing <kbd>Alt</kbd> + <kbd>Space</kbd>.
 
-![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image34.png)
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image34.png" >}}
 
 Select the **Options** tab and enable **Use Ctrl+Shift+C/V as <u>C</u>opy/Paste**
 
-![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image35.png)
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image35.png" >}}
 
 You can now copy and paste with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd> in the terminal.
 
 ### 8.2.2 Unable to Click a Button
 
-![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image36.png)
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image36.png" >}}
 
 If you highlight a button instead of clicking the button, you may need to disable the **Quick Edit Mode** from the Windows PowerShell Properties.
 
-![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image37.png)
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image37.png" >}}
 
 After disabling the option you need to enable the new settings. You can do this by navigating to other page by pressing a shortcut key, or reopening the installer tool by closing it with **<kbd>Ctrl</kbd>+<kbd>C</kbd>** and reopening the tool with the installation command.
 
@@ -1751,6 +1751,6 @@ After disabling the option you need to enable the new settings. You can do this 
 
 Within your cluster you can run one, or several, Mendix apps. Each app runs in an environment, and each environment is in a namespace. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
 
-![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/mx4pc-containerized-architecture.png)
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/mx4pc-containerized-architecture.png" >}}
 
 To ensure that every app deployed to a namespace has a unique name, the environment will have an **Environment UUID** added to the environment name when it is deployed to ensure that it is unique in the project. This also ensures the app cannot have the same name as the Mendix tools used to deploy the app. See [Deploying a Mendix App to a Private Cloud Cluster](/developerportal/deploy/private-cloud-deploy/) for more information.

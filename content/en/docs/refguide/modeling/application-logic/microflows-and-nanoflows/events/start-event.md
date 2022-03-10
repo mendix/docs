@@ -11,7 +11,7 @@ A start event defines the starting point of a microflow or a nanoflow and is rep
 
 Link the start event to an activity with which you would like to start the microflow using a [sequence flow](/refguide/sequence-flow/).
 
-![](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/start-event/start-event.png)
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/start-event/start-event.png" >}}
 
 ## 2 Read More
 

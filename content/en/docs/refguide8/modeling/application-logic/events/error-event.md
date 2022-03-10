@@ -28,7 +28,7 @@ You can only use an error event if an error is in scope: Studio Pro does not acc
 
 In this example, an error occurs while committing an object to the database. It is caught, and the flow continues to the error event where the error is passed back to the caller of the microflow. So you can implement your error handling on multiple levels.
 
-![](/attachments/refguide8/modeling/application-logic/events/error-event/error-event.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/events/error-event/error-event.png" >}}
 
 {{% alert color="info" %}}
 When adding an error event, you need to add an [error handler](#errorhandlers) for an activity before the error event, and select **Set as error handler** for the sequence flow.
@@ -51,7 +51,7 @@ On an activity or decision, you have three options:
 For the latter two options you can draw an additional flow from the block and mark this flow as the error handler flow. When selecting 'Custom with rollback' it will trigger this path when the error occurs and still rollback your objects afterwards. The 'Custom without rollback' option does not rollback the objects. After you selected a flow as the error handler it will show this as in the following image.
 Error handling is only specified for an individual action. The "without rollback" in the **Custom without rollback** option is only targeted at the action itself, not the error handling. There is thus a slight difference between **Custom with rollback** and **Custom without rollback** throwing the same exception or another one in the error handler. In the latter case, you will still have access to the database objects you have created until the end of error handler.
 
-![](/attachments/refguide8/modeling/application-logic/events/error-event/custom-without-rollback-microflows.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/events/error-event/custom-without-rollback-microflows.png" >}}
 
 On a loop you get two options:
 
@@ -60,7 +60,7 @@ On a loop you get two options:
 
 The continue option means that when an error occurs, the loop will simply continue to the next iteration. It will show as a continue icon on the exit flow of the loop.
 
-![](/attachments/refguide8/modeling/application-logic/events/error-event/error-event-loop.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/events/error-event/error-event-loop.png" >}}
 
 ### 2.2 Inspecting Errors
 
@@ -104,7 +104,7 @@ Error handlers are supported on all nanoflow elements except for gateways and lo
 
 With the **Custom without rollback** option, you can draw an additional flow from the block and then mark this flow as the error handler flow. The **Custom without rollback** option does not roll back the objects. After you select a flow as the error handler it will appear this way:
 
-![selected error handler](/attachments/refguide8/modeling/application-logic/events/error-event/custom-without-rollback-nanoflows.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/events/error-event/custom-without-rollback-nanoflows.png" alt="selected error handler" >}}
 
 ### 3.2 Error Inspection
 

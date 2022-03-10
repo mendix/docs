@@ -25,7 +25,7 @@ The input variable is the variable of which the type is inspected to see how to 
 
 Let us say you have an entity Student and an entity Professor which have the entity Member as their generalization. For a professor you want to open a different form than for another member. The selected member is available in the parameter SelectedMember and is used as input variable for the inheritance split. Note that the sequence flow for Student is missing. If a sequence flow is missing, the closest generalization is searched that does have a sequence flow. In the case of Student this is Member. The sequence flow with the caption (empty) is followed when the parameter used as input variable does not contain an object.
 
-![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/splits/inheritance-split/918058.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/splits/inheritance-split/918058.png" >}}
 
 {{% /alert %}}
 

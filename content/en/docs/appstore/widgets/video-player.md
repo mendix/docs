@@ -32,11 +32,11 @@ inside a context, you need to provide a static URL; otherwise, the player will n
 
 Configure the following properties:
 
-![](/attachments/appstore/widgets/video-player/general.jpg)
+{{< figure src="/attachments/appstore/widgets/video-player/general.jpg" >}}
 
-![](/attachments/appstore/widgets/video-player/behavior.jpg)
+{{< figure src="/attachments/appstore/widgets/video-player/behavior.jpg" >}}
 
-![](/attachments/appstore/widgets/video-player/dimensions.jpg)
+{{< figure src="/attachments/appstore/widgets/video-player/dimensions.jpg" >}}
 
 ### 2.1 Cordova Configuration
 

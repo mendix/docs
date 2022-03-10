@@ -43,7 +43,7 @@ Support for an LTS version ends when a third consecutive major version is releas
 
 This diagram illustrates the LTS concept with version and [end of support](#end) examples:
 
-![](/attachments/releasenotes/studio-pro/lts-mts/lts.png)
+{{< figure src="/attachments/releasenotes/studio-pro/lts-mts/lts.png" >}}
 
 ### 2.2 Release Cycle
 

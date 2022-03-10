@@ -33,7 +33,7 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
 
 2.  In **Toolbox** > **Widgets** > **Data Containers**, find **Data View**.
 
-    ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/data-view.png)
+    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/data-view.png" >}}
 
 3. Drag and drop **Data View** to the page.
 
@@ -42,7 +42,7 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
     1. Set **Data Source** to **Context.**
     2. Set **Entity** to **Customer**.
     
-        ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/data-view-properties.png)
+        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/data-view-properties.png" >}}
     
 5. In **Toolbox**>**Widgets** >**Buttons** find **Create Object**, drag and drop it inside the data view container (it is named **New** by default).
 
@@ -51,13 +51,13 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
     1. Set **Customer** as **Entity** in the **Events** section.
     2. Click **Select Page**.
 
-        ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/create-button-properties.png) 
+        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/create-button-properties.png" >}} 
 
     3. In the **Select Page** dialog box, click the plus icon in the top right corner.
     4. In the **Create new page** dialog box, fill out the title of the page, for example, *New_customer*. 
     5. Tick **Pre-fill page contents based on the Customer entity** and click **Create**.
 
-        ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/pre-fill-contents.png) 
+        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/pre-fill-contents.png" >}} 
 
    The page with customer details is generated.
 
@@ -67,7 +67,7 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
 
 9. In the **Toolbox** > **Building Blocks** > **Lists** select **List 4**, drag and drop it to the list view. 
 
-    ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/list-view-list4.png) 
+    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/list-view-list4.png" >}} 
 
 10. Delete the following elements from the list view:
 
@@ -79,7 +79,7 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
     1. Set **Events**>**On Click Action** to **Microflow**.
     2. Click **Select microflow** and set **Show_grade_specific_page**.
 
-        ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/details-button-microflow.png) 
+        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/details-button-microflow.png" >}} 
 
 Congratulations! Now when the end-user clicks **Details**, the form for the corresponding customer grade will be opened. 
 
@@ -95,34 +95,34 @@ To embed the microflow with a decision (the attribute of the Boolean type), do t
 
 3.  In the **Properties** for the radio buttons, click **Data Source** > **Attribute** and select **Blocked Boolean**. This is how it should look like on your page: 
 
-    ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/new-customer-page-blocked-attribute.png)
+    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/new-customer-page-blocked-attribute.png" >}}
 
 4. Now you will add the microflow to pages. Open the page **Order_form_for_bronze_customers.**
 
 5.  In **Toolbox** > **Widgets** > **Data Containers**, find **Data View**. 
 
-    ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/data-view.png)
+    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/data-view.png" >}}
 
 6.  Drag and drop **Data View** to the page.
 
-    ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/data-view-select-data-view-source.png)
+    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/data-view-select-data-view-source.png" >}}
 
 7.  In the **Properties** of the data view, do the following:
     
     1. Set **Data Source** to **Context.**
     2. Set **Entity** to **Customer**.
     
-        ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/data-view-properties.png)
+        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/data-view-properties.png" >}}
     
 8. In **Toolbox**>**Widgets**>**Buttons**, find the **Call Microflow** button, drag and drop it into the **Data View** container. 
 
-    ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/call-microflow-button-in-data-view.png)
+    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/call-microflow-button-in-data-view.png" >}}
 
 9. Click the **Call Microflow** button to view its properties. 
 
 10. In the **Properties** tab, select the **Customers_status_check microflow**. 
 
-    ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/call-microflow-button-selected-microflow.png)
+    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/call-microflow-button-selected-microflow.png" >}}
 
 11. Change the **Caption** from **Microflow** to **Place Order**. 
 

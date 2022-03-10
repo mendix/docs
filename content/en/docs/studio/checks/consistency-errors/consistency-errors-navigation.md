@@ -40,7 +40,7 @@ When you set a page with a data view as a menu item, you get a consistency error
 
 For example, you have created a menu item called **Program**. This menu item opens the **Program** page but does not create and pass any object to it. The **Program** page has a data view on it and expects a *ProgramItem* object to be passed to it. As a result, you get a consistency error, as no object is passed to this page from the navigation.
 
-![Scheme Showing the Menu Item Error](/attachments/studio/checks/consistency-errors/consistency-errors-navigation/page-expects-an-object-error.png)
+{{< figure src="/attachments/studio/checks/consistency-errors/consistency-errors-navigation/page-expects-an-object-error.png" alt="Scheme Showing the Menu Item Error" >}}
 
 To fix the error, you can create an object and pass it to the page. Do the following:
 
@@ -52,8 +52,7 @@ To fix the error, you can create an object and pass it to the page. Do the follo
 
     b. Set **ProgramItem** as **Entity**.<br />
 
-    {{% image_container width="350" %}}![Menu Item Properties](/attachments/studio/checks/consistency-errors/consistency-errors-navigation/menu-item-properties.png)
-    {{% /image_container %}}
+    {{< figure src="/attachments/studio/checks/consistency-errors/consistency-errors-navigation/menu-item-properties.png" alt="Menu Item Properties"   width="350"  >}}
 
 Now when a user clicks the navigation item, a new object of type *ProgramItem* will be created and passed to the **Program** page.
 
@@ -63,12 +62,11 @@ If you set a page that expects an object to be passed to it as the home page (fo
 
 For example, you have set **Customer Details** page as the default home page in your **Navigation**. 
 
-![Navigation Item Properties](/attachments/studio/checks/consistency-errors/consistency-errors-navigation/home-page.png)
+{{< figure src="/attachments/studio/checks/consistency-errors/consistency-errors-navigation/home-page.png" alt="Navigation Item Properties" >}}
 
 You have the **Customer Details** page with a data view that expects an object *Customer* to be passed to it. In other words, this page needs to get data first to be able to display it. 
 
-{{% image_container width="350" %}}![Data View Expects the Customer Object](/attachments/studio/checks/consistency-errors/consistency-errors-navigation/data-view-customer.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio/checks/consistency-errors/consistency-errors-navigation/data-view-customer.png" alt="Data View Expects the Customer Object"   width="350"  >}}
 
 However, the home page is the first page to be opened in your app by default, and the **Customer Details** page cannot function as a home page, as it needs to get data first. 
 
@@ -80,8 +78,7 @@ However, you can also solve this error by creating a microflow that will create 
 
 2.  Change the **On Click Action** from **Page** to **Microflow**. 
 
-    {{% image_container width="350" %}}![Menu Item Properties](/attachments/studio/checks/consistency-errors/consistency-errors-navigation/menu-item-on-click-action.png)
-    {{% /image_container %}}
+    {{< figure src="/attachments/studio/checks/consistency-errors/consistency-errors-navigation/menu-item-on-click-action.png" alt="Menu Item Properties"   width="350"  >}}
 
 3. Click **Select Microflow** and click **New Microflow** in the pop-up window.
 
@@ -91,8 +88,7 @@ However, you can also solve this error by creating a microflow that will create 
 
 6.  Open the **Create object** activity properties, and set **Entity** to **Customer**.
 
-    {{% image_container width="350" %}}![Create Object Activity Properties](/attachments/studio/checks/consistency-errors/consistency-errors-navigation/create-object-properties.png)
-    {{% /image_container %}}
+    {{< figure src="/attachments/studio/checks/consistency-errors/consistency-errors-navigation/create-object-properties.png" alt="Create Object Activity Properties"   width="350"  >}}
 
 7. In the **Toolbox** > **Client Activities**, select **Show Page** activity, drag and drop it to the microflow.
 
@@ -102,11 +98,11 @@ However, you can also solve this error by creating a microflow that will create 
 
     b. Set **Object to pass** to **NewCustomer**.<br />
 
-    ![Show Page Properties](/attachments/studio/checks/consistency-errors/consistency-errors-navigation/show-page-properties.png)
+    {{< figure src="/attachments/studio/checks/consistency-errors/consistency-errors-navigation/show-page-properties.png" alt="Show Page Properties" >}}
 
 Now the new object of type *Customer* will be created and passed to the home page.
 
-![Open Home Page Microflow](/attachments/studio/checks/consistency-errors/consistency-errors-navigation/open-page-microflow.png)
+{{< figure src="/attachments/studio/checks/consistency-errors/consistency-errors-navigation/open-page-microflow.png" alt="Open Home Page Microflow" >}}
 
 
 ## 3 Read More

@@ -25,13 +25,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 In your microflow which is making a REST or SOAP call, perform a **Get Destination** action before the REST or SOAP call. This needs to use the Destination Name which is configured in a Destination on SAP BTP.
 
-![REST Microflow](/attachments/partners/sap/sap-destination-with-rest/rest-microflow.png)
+{{< figure src="/attachments/partners/sap/sap-destination-with-rest/rest-microflow.png" alt="REST Microflow" >}}
 
 This will return a **Destination** object. This is named *DestinationObject* in the above example, and is used to configure the subsequent REST or SOAP call.
 
 The Destination object has the properties shown in the image below:
 
-![Destination entity](/attachments/partners/sap/sap-destination-with-rest/destination-entity.png)
+{{< figure src="/attachments/partners/sap/sap-destination-with-rest/destination-entity.png" alt="Destination entity" >}}
 
 ### 3.1 Configuring a REST Call
 
@@ -49,7 +49,7 @@ The following entries are required in the **General** tab:
 |Username|$DestinationObject/SapConnectivityProxyCredentials|
 |Password|empty|
 
-![REST general tab](/attachments/partners/sap/sap-destination-with-rest/rest-general.png)
+{{< figure src="/attachments/partners/sap/sap-destination-with-rest/rest-general.png" alt="REST general tab" >}}
 
 #### 3.1.2 HTTP Headers Tab
 
@@ -64,7 +64,7 @@ The following HTTP Headers do the following:
 |Proxy-Authorization|'Bearer ' + $DestinationObject/SapConnectivityProxyCredentials|
 |Accept|'application/json'|
 
-![REST HTTP headers tab](/attachments/partners/sap/sap-destination-with-rest/rest-http-headers.png)
+{{< figure src="/attachments/partners/sap/sap-destination-with-rest/rest-http-headers.png" alt="REST HTTP headers tab" >}}
 
 ### 3.2 Configuring a SOAP Call
 
@@ -83,7 +83,7 @@ The following entries are required in the **Operation** tab:
 |Username|$DestinationObject/SapConnectivityProxyCredentials|
 |Password|empty|
 
-![SOAP web service general tab](/attachments/partners/sap/sap-destination-with-rest/web-service-general.png)
+{{< figure src="/attachments/partners/sap/sap-destination-with-rest/web-service-general.png" alt="SOAP web service general tab" >}}
 
 #### 3.2.2 HTTP Headers Tab
 
@@ -98,7 +98,7 @@ The same HTTP Headers are required as for a REST call. They do the following:
 |Proxy-Authorization|'Bearer ' + $DestinationObject/SapConnectivityProxyCredentials|
 |Accept|'application/json'|
 
-![SOAP web services HTTP headers tab](/attachments/partners/sap/sap-destination-with-rest/web-service-http-headers.png)
+{{< figure src="/attachments/partners/sap/sap-destination-with-rest/web-service-http-headers.png" alt="SOAP web services HTTP headers tab" >}}
 
 
 ## 4 Read More

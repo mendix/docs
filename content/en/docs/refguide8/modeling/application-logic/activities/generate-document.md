@@ -20,7 +20,7 @@ This activity can only be used in **Microflows**.
 
 The **Generate document** activity is used to write a document to a file, based on a [document template](/refguide8/document-templates/). 
 
-![Generate Document](/attachments/refguide8/modeling/application-logic/activities/generate-document/generate-document.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/generate-document/generate-document.png" alt="Generate Document" >}}
 
 For more information on which types of documents can be created, see [Document Type](#document-type).
 
@@ -28,7 +28,7 @@ For more information on which types of documents can be created, see [Document T
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-![Generate Document Properties](/attachments/refguide8/modeling/application-logic/activities/generate-document/generate-document-properties.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/generate-document/generate-document-properties.png" alt="Generate Document Properties" >}}
 
 The **Generate document** properties pane consists of the following sections:
 

@@ -24,7 +24,7 @@ This document describes the purpose and the functionality of two-factor authenti
 
 Actions which require 2FA are indicated by a padlock symbol.
 
-![](/attachments/developerportal/deploy/general/two-factor-authentication/production.png)
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/production.png" >}}
 
 
 
@@ -36,13 +36,13 @@ Once it is set up, you will receive an authentication code via your chosen route
 
 After successfully performing 2FA, your browser session is authorized for the next eight hours.
 
-{{% image_container width="400" %}}![](/attachments/developerportal/deploy/general/two-factor-authentication/information.png){{% /image_container %}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/information.png"   width="400"  >}}
 
 To set it up, you first need to perform an action which required 2FA, such as **Transport to Production** on the **Environments** page of your app.
 
 Choose one of the two options and follow the relevant instructions, below.
 
-{{% image_container width="400" %}}![](/attachments/developerportal/deploy/general/two-factor-authentication/sms-or-google.png){{% /image_container %}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/sms-or-google.png"   width="400"  >}}
 
 ### 3.1 SMS Authentication
 
@@ -53,19 +53,19 @@ If you have chosen the SMS option, the first time you need to perform 2FA you wi
 1. Click **Use SMS** in the dialog box that opens when you use 2FA for the first time.
 2. Enter your phone number and click **Send text message**.
 
-    {{% image_container width="400" %}}![](/attachments/developerportal/deploy/general/two-factor-authentication/setup-sms.png){{% /image_container %}}
+    {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/setup-sms.png"   width="400"  >}}
 
 3. Enter the authentication code which is sent as an SMS to your device and click **Activate**.
 
-    {{% image_container width="400" %}}![](/attachments/developerportal/deploy/general/two-factor-authentication/enter-sms.png){{% /image_container %}}
+    {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/enter-sms.png"   width="400"  >}}
 
 In future you will need to ask Mendix to send a text message to your phone.
 
-{{% image_container width="400" %}}![](/attachments/developerportal/deploy/general/two-factor-authentication/authentication-sms.png){{% /image_container %}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/authentication-sms.png"   width="400"  >}}
 
 You will need to enter the authentication code from the SMS message to unlock 2FA.
 
-{{% image_container width="400" %}}![](/attachments/developerportal/deploy/general/two-factor-authentication/please-authenticate.png){{% /image_container %}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/please-authenticate.png"   width="400"  >}}
 
 ### 3.2 Google Authenticator
 
@@ -78,13 +78,13 @@ For more information on how Google Authenticator works, see Google's own documen
 5. Scan the barcode or enter the six-digit time-based code.
 6. Once Google Authenticator is set up you will be asked to confirm by entering the Google Authenticator code.
 
-    {{% image_container width="400" %}}![](/attachments/developerportal/deploy/general/two-factor-authentication/authenticator.png){{% /image_container %}}
+    {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/authenticator.png"   width="400"  >}}
 
 Your account is now secured with 2FA and ready to use.
 
 In future, You will get a six-digit number that expires every minute. You will need to enter that number to validate your account every time you performing an operation on the production environment.
 
-{{% image_container width="400" %}}![](/attachments/developerportal/deploy/general/two-factor-authentication/google.png){{% /image_container %}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/google.png"   width="400"  >}}
 
 ## 4 Changing your Device or Phone Number
 

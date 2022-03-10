@@ -126,7 +126,7 @@ Each demo user can be assigned an entity and one or more user roles that apply w
 
 After signing in to your application with the administrator user, a small tab called the 'user switcher' is presented at the right side of your application. Expanding this tab shows a list with all the demo users that are defined in the project security settings. Selecting a user from this list will sign in to your application using the credentials of this user, thus allowing you to test or demo your application with the user's role(s). This allows for rapid testing of your application with different user roles.
 
-![](/attachments/refguide7/desktop-modeler/project/project-security/16844039.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/project/project-security/16844039.png" >}}
 
 The user switcher is only shown and the demo users are only created when running your application locally on your development machine, or when running in a sandbox.
 

@@ -67,11 +67,11 @@ To do this, follow the steps below:
 
 1. Go to the Environment details page of your app by opening the Developer Portal, selecting your app, and clicking **Environments**.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/environments.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/environments.png" >}}
 
 2. Choose the environment where your app is published, and click **Details**.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/environment-details.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/environment-details.png" >}}
 
 3. Open the [General tab](/developerportal/deploy/tencent-deploy/#environment-details) on the *Environment Details* page.
 
@@ -81,17 +81,17 @@ To do this, follow the steps below:
     
 4. Click **Change Admin Password**.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/change-password-button.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/change-password-button.png" >}}
 
 5. Enter and confirm a **New Password** for the local admin user in your app.
 
     This enables you to change the password without having to change it in Studio Pro and redeploy the app.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/change-admin-password.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/change-admin-password.png" >}}
 
 6. Click **Apply Changes** to enable the new password.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/apply-changes.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/apply-changes.png" >}}
 
 ## 3 Managing App Users
 
@@ -118,11 +118,11 @@ This section describes how to access the user management screen(s) from the Admi
 
 2. Log in with the [default Admin username](/refguide8/administrator/#user-name) and your [newly changed Admin Password](/refguide8/administrator/#password).
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/sign-in.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/sign-in.png" >}}
 
 3. Select the **User Management** option from your App’s navigation menu. You will see this option because you are logged in as administrator.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/account-overview.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/account-overview.png" >}}
 
 {{% alert color="info" %}}
 If you created your app using an older version of Mendix, the Administration module might not be available to you. Please consult [How to Import & Export Objects](/howto8/integration/importing-and-exporting-objects/) to import the Administration module into your app and redeploy.
@@ -138,7 +138,7 @@ Local users, their personal information, and authentication details are maintain
 
 Click **New local user** in the User Management Overview and fill out the required fields to create a new local user.
 
-![](/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/new-account.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/new-account.png" >}}
 
 Under **User role**, select the appropriate role. Your app is configured by default with the *Administrator* and *User* roles.
 
@@ -146,11 +146,11 @@ Under **User role**, select the appropriate role. Your app is configured by defa
 
 Select the user’s row in the overview and click **Edit** to edit an existing local user.
 
-![](/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/edit-existing.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/edit-existing.png" >}}
 
 Change the user properties where necessary and click **Save**.
 
-![](/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/local-user-details.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/local-user-details.png" >}}
 
 #### 3.3.3 Creating or Editing Web Service Users
 
@@ -158,8 +158,8 @@ To access web services published by your app, other apps may need to authenticat
 
 The User Management Overview allows you to create *Web Service Users*. These are users which do not log into your app, but allow other (Mendix) apps to connect to your Mendix App [when publishing Web Services](/refguide/published-web-services/). You can create dedicated a web service user account for each consumer of your Mendix App’s *Web Services*.
 
-![](/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/new-web-service-user.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/new-web-service-user.png" >}}
 
 Simply select **New web service user** in the User Management Overview and fill out the required fields.
 
-![](/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/new-account.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/new-account.png" >}}

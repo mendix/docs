@@ -50,7 +50,7 @@ To migrate your Free App and its database to your Mendix Basic environment, foll
 
 4. Click **Download** when the snapshot is ready.
 
-    ![](/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/download-backup.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/download-backup.png" >}}
 
 ### 3.3 Unlink your app from its node
 
@@ -60,15 +60,15 @@ To migrate your Free App and its database to your Mendix Basic environment, foll
 
 3. Click **unlink your app**.
 
-    ![](/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/unlink-free-app.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/unlink-free-app.png" >}}
 
     If you see the following message, then your app isn’t linked to a node and you can skip this step:
 
-    ![](/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/link-node.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/link-node.png" >}}
 
 4. In the **Confirmation** pop-up, click **Yes, delete all data and unlink this app**.
 
-    ![](/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/confirm-unlink.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/confirm-unlink.png" >}}
 
     Before your environment is deleted, you may be asked to **authenticate** with two-factor authentication.
 
@@ -76,7 +76,7 @@ To migrate your Free App and its database to your Mendix Basic environment, foll
 
 1. In the message that now appears on-screen, click **select a node**.
 
-    ![](/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/link-node.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/link-node.png" >}}
 
 2. Click **Use this node** for the node that you just licensed.
 
@@ -111,7 +111,7 @@ The final step is to restore your data. This must be done after you've deployed 
 
 Make sure your app is not running before you restore a backup. You can stop your running app on the Environments page.
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/restore-backup.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/restore-backup.png" >}}
 
 Now start your app and it is ready for use.
 

@@ -42,11 +42,11 @@ In the how-to [Exposing a web service](/howto7/integration/expose-a-web-service/
 2.  Open the project you created in the how-to [Exposing a web service](/howto7/integration/expose-a-web-service/).
 3.  Create a **Microflow** that creates a customer and returns a boolean. 
 
-	![](/attachments/howto7/testing/testing-web-services-using-soapui/model1.jpg)
+	{{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/model1.jpg" >}}
 
 4.  Create a **Microflow** that deletes a customer and returns a boolean.
 
-	![](/attachments/howto7/testing/testing-web-services-using-soapui/model2.jpg)
+	{{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/model2.jpg" >}}
 
 5.  Publish both microflows as web service operation of the **CustomerWebservice** as described in chapter 4 of the how-to [Exposing a web service](/howto7/integration/expose-a-web-service/).
 
@@ -56,39 +56,39 @@ In this chapter you will create a new SOAP project.
 
 1.  Open **SoapUI**.
 2.  Press **CTRL+N** to create a new SOAP project.
-    ![](/attachments/howto7/testing/testing-web-services-using-soapui/18580339.png)
+    {{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/18580339.png" >}}
 3.  Run the project locally in the **Mendix Desktop Modeler**.
 4.  Go to `http://localhost:8080/ws-doc/`.
-    ![](/attachments/howto7/testing/testing-web-services-using-soapui/18580314.png)
+    {{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/18580314.png" >}}
 5.  Enter the URL of the WSDL schema in the **Initial WSDL** field in SoapUI.
     The Project Name field will automatically be filled with the name of the webservice following by _?wsdl_.
-    ![](/attachments/howto7/testing/testing-web-services-using-soapui/18580334.png)
+    {{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/18580334.png" >}}
 6.  Click** OK**. This will create a new SOAP project in SoapUI.
-    ![](/attachments/howto7/testing/testing-web-services-using-soapui/18580313.png)
+    {{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/18580313.png" >}}
 
 ## 5 Building a TestSuite, TestCase, and TestStep
 
 In this chapter you will build a testsuite. A testsuite contains one or more testcases. Every testcase contains one ore more teststeps. 
 
 1. In SoapUI, press **CTRL+T** to create a new TestSuite.
-   ![](/attachments/howto7/testing/testing-web-services-using-soapui/18580332.png)
+   {{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/18580332.png" >}}
 2. Click **OK**.
 3. Select TestSuite 1 and press **CTRL+N** to create a new TestCase.
-   ![](/attachments/howto7/testing/testing-web-services-using-soapui/18580331.png)
+   {{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/18580331.png" >}}
 4. Click **OK**.
 5. Expand Testuite 1 and TestCase 1.
 6. Right-click **Test Steps(0)** and select **SOAP Request**.
-   ![](/attachments/howto7/testing/testing-web-services-using-soapui/18580312.png)
+   {{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/18580312.png" >}}
 7. Enter _Retrieve Customers_ in the name field.
-   ![](/attachments/howto7/testing/testing-web-services-using-soapui/18580329.png)
+   {{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/18580329.png" >}}
 8. Click **OK**.
 9. Select **CustomerWebserviceSoap -> GetCustomers**.
-   ![](/attachments/howto7/testing/testing-web-services-using-soapui/18580328.png)
+   {{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/18580328.png" >}}
 10. Click **OK**.
-    ![](/attachments/howto7/testing/testing-web-services-using-soapui/18580327.png)
+    {{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/18580327.png" >}}
 11. Click **OK**.
 12. Open SOAP request **Retrieve Customers**.
-    ![](/attachments/howto7/testing/testing-web-services-using-soapui/18580326.png) 
+    {{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/18580326.png" >}} 
 13. Change the follow value:
 
     ```java
@@ -143,15 +143,15 @@ In this chapter you will build a testsuite. A testsuite contains one or more tes
 Assertions are used to validate the message received by a TestStep during execution, usually by comparing parts of the message (or the entire message) to some expected value. In this chapter you will create an assertion that validates the number of customers.
 
 1.  Click **Assertions (1)**.
-    ![](/attachments/howto7/testing/testing-web-services-using-soapui/18580307.png)
+    {{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/18580307.png" >}}
     In chapter 3 step 9 the _Add SOAP Response Assertion_ checkbox was checked. That is the first assertion you see in the list, _SOAP Response - VALID_.
 2.  Click the add assertion icon.
-    ![](/attachments/howto7/testing/testing-web-services-using-soapui/18580324.png)
+    {{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/18580324.png" >}}
 3.  Click **Property Content**.
 4.  Click **XPath Match**.
 5.  Enter _count(//Customer)_ in the XPath Expression field.
 6.  In step 1.4 of the previous how-to you have added some data. Enter the number of created customers in the **Expected Result** field. In this example four customers were created.
-    ![](/attachments/howto7/testing/testing-web-services-using-soapui/18580323.png)
+    {{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/18580323.png" >}}
 7.  Click **Save**.
 
 ## 7 Extending Your Test Case
@@ -182,13 +182,13 @@ In this chapter you will extend your test case with multiple test steps and asse
     ```
 
 3.  Add a **Contains Assertion** and enter _true_ in the content field.
-    ![](/attachments/howto7/testing/testing-web-services-using-soapui/18580322.png) 
+    {{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/18580322.png" >}} 
 4.  Right-click test step **Retrieve Customers**.
 
 5.  Select **Clone TestStep**.
 
 6.  Change **TestStep Name** to _Retrieve Customers 2_.
-    ![](/attachments/howto7/testing/testing-web-services-using-soapui/18580320.png)
+    {{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/18580320.png" >}}
 7.  Click **OK**.
 8.  Open teststep **Retrieve Customers 2**.
 9.  Click **Assertions (2)**.
@@ -217,9 +217,9 @@ In this chapter you will extend your test case with multiple test steps and asse
 In this chapter you will learn how to run the testcase you created in previous chapters.
 
 1.  Open testcase **TestCase 1**.
-    ![](/attachments/howto7/testing/testing-web-services-using-soapui/18580310.png)
+    {{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/18580310.png" >}}
 2.  Click the run this testcase icon.
-    ![](/attachments/howto7/testing/testing-web-services-using-soapui/18580309.png)
+    {{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/18580309.png" >}}
 
 Congratulations! You have just created your first automated test with SoapUI.
 

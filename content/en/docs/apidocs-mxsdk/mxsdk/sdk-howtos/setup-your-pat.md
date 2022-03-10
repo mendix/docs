@@ -21,7 +21,7 @@ You can manage your Mendix personal access tokens with [Mendix Warden](https://w
 1. Click **Create**. A pop-up window opens and shows the Personal Access Token.
 1. Keep the token safe. It is only displayed once. After you close the pop-up window, you cannot see it anymore.
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-howtos/setup-your-pat/personal-access-token.png)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-howtos/setup-your-pat/personal-access-token.png" >}}
 
 ## 3 Saving the Personal Access Token as an Environment Variable
 

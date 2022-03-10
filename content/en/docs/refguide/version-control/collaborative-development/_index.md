@@ -24,7 +24,7 @@ The collaborative development process between Studio Pro and Studio consists of 
 1. Every change made in Studio is automatically saved to the Studio working copy. Multiple users can view the app in Studio at the same time: One user can edit it and the others are in read-only mode. 
 2.  When Studio Pro users open an app, they are notified if Studio is enabled for this development line. 
 
-	![Collaborative Development Enabled Notification](/attachments/refguide/version-control/collaborative-development/collaborative-development-enabled-notification.png)
+	{{< figure src="/attachments/refguide/version-control/collaborative-development/collaborative-development-enabled-notification.png" alt="Collaborative Development Enabled Notification" >}}
 
 3. Studio Pro creates a local working copy that the Studio Pro user works on. 
 4. To get changes from the Team Server the user needs to click **Update**. When the Studio Pro user clicks **Update**, the latest changes from *Studio* are committed automatically to the Team Server before Studio Pro receives the update from it. The latest revision from the Team Server containing the latest *Studio* changes is merged into Studio Pro's local working copy. 
@@ -49,13 +49,13 @@ After opening an app in Studio Pro, you can see which development line (the main
 
 If you are on another line than the Studio-enabled line, you can select the branch and click the **Switch Branch** button:
 
-![Open App Dialog Window](/attachments/refguide/version-control/collaborative-development/switch-branch.png)
+{{< figure src="/attachments/refguide/version-control/collaborative-development/switch-branch.png" alt="Open App Dialog Window" >}}
 
 ### 4.1 Merging Latest Changes
 
 To merge the latest changes stored in the Team Server (from both Studio users and other Studio Pro users), open **Changes** and click **Update**.
 
-![Update Option](/attachments/refguide/version-control/collaborative-development/update-button.png)
+{{< figure src="/attachments/refguide/version-control/collaborative-development/update-button.png" alt="Update Option" >}}
 
 ### 4.2 Committing Latest Changes
 
@@ -73,7 +73,7 @@ Your changes will be sent to Studio automatically if there are no conflicts. For
 
 You can see all the changes committed to the current development line via **Version Control** > **History**:
 
-![History Dialog Box](/attachments/refguide/version-control/collaborative-development/history-dialog.png)
+{{< figure src="/attachments/refguide/version-control/collaborative-development/history-dialog.png" alt="History Dialog Box" >}}
 
 ## 5 Managing Studio on Development Lines {#managing-studio}
 
@@ -96,11 +96,11 @@ To enable Studio for a development line or switch it to another development line
 
 1.  Click **Version Control** > **Manage Branch Lines**. In the **Branch Line Manager** dialog box, you can see that the development line that Studio is enabled for (if any) is marked with a globe icon in the first column.
 
-	![Globe Icon in the Branch Line Manager](/attachments/refguide/version-control/collaborative-development/globe-icon.png)
+	{{< figure src="/attachments/refguide/version-control/collaborative-development/globe-icon.png" alt="Globe Icon in the Branch Line Manager" >}}
 
 2.  Select the line you want to enable Studio for and click **Enable for Studio**.
 
-	![Branch Line Manager - Enabling Another Branch](/attachments/refguide/version-control/collaborative-development/enable-another-branch.png) 
+	{{< figure src="/attachments/refguide/version-control/collaborative-development/enable-another-branch.png" alt="Branch Line Manager - Enabling Another Branch" >}} 
 
 The development line for Studio has been selected.   
 
@@ -133,7 +133,7 @@ To create a new branch line, do the following:
 1. Click **Version Control** > **Manage Branch Lines**. 
 2.  In the **Branch Line Manager** dialog box, you see the list of existing development lines. Click **New** to create a branch line. <br/>
 
-	![Creating New Branch](/attachments/refguide/version-control/collaborative-development/creating-new-branch.png)<br/>
+	{{< figure src="/attachments/refguide/version-control/collaborative-development/creating-new-branch.png" alt="Creating New Branch" >}}<br/>
 
 3.  In the **Create Branch Line** dialog box, set the following: 
 
@@ -141,7 +141,7 @@ To create a new branch line, do the following:
     2. Select the **Revision**, if needed. 
     3. Type the name of the new line.
 		
-		![Create Branch Line Dialog](/attachments/refguide/version-control/collaborative-development/create-branch-dialog.png) 
+		{{< figure src="/attachments/refguide/version-control/collaborative-development/create-branch-dialog.png" alt="Create Branch Line Dialog" >}} 
     
 4.  After you have configured all the settings, click **OK**.
 
@@ -154,7 +154,7 @@ To delete a branch line, do the following:
 1. Click **Version Control** > **Manage Branch Lines**. 
 2.  In the **Branch Line Manager** dialog box, select the branch you would like to delete, click **Delete** and confirm deletion. 
 
-	![Deleting a Branch](/attachments/refguide/version-control/collaborative-development/deleting-branch.png)
+	{{< figure src="/attachments/refguide/version-control/collaborative-development/deleting-branch.png" alt="Deleting a Branch" >}}
 
 You have deleted the branch.
 

@@ -16,7 +16,7 @@ These instructions are for apps which are deployed to Mendix Cloud V3 only. Apps
 
 Usually. the database of a Mendix application in the Mendix Cloud will grow over time, as shown in this chart:
 
-![](/attachments/developerportal/operate/backups/database-size-reduction/Untitled.png)
+{{< figure src="/attachments/developerportal/operate/backups/database-size-reduction/Untitled.png" >}}
 
 The data grows in a steady fashion. If entities are removed in a major releases, you may see a temporary decrease in the size of the database, but on average the direction will be upwards.
 

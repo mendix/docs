@@ -18,17 +18,17 @@ The app preview shows you what your app will look like for end-users. Previewing
 
 To preview your app, click **Preview** in the upper-right corner of Studio. 
 
-![](/attachments/studio/publishing-app/preview.jpg)
+{{< figure src="/attachments/studio/publishing-app/preview.jpg" >}}
 
 Your app will now get built and launched in a preview environment, and will appear in your browser window so you can interact with the app.
 
 You can preview your app in the Phone, Tablet, and Responsive (Desktop) mode. Click the corresponding icon to change the mode.
 
-![Preview Modes](/attachments/studio/publishing-app/preview-modes.jpg)
+{{< figure src="/attachments/studio/publishing-app/preview-modes.jpg" alt="Preview Modes" >}}
 
 To exit the preview environment, click **Close Preview** in the upper-right corner of the screen.
 
-![Close Preview](/attachments/studio/publishing-app/close-preview.jpg)
+{{< figure src="/attachments/studio/publishing-app/close-preview.jpg" alt="Close Preview" >}}
 
 You cannot preview your app if it has [consistency errors](/studio/consistency-errors/). You will be notified if there are, and you need to fix errors first to preview your app.
 
@@ -49,7 +49,7 @@ To publish your application, follow these steps:
 1. Click **Publish** in the top menu bar of Studio. 
 2.  In the **Publish your app** pop-up message, click the **Publish** button to push the latest changes from Studio to the published app or to publish the app for the first time. 
 
-    ![Publishing and Updating Your App](/attachments/studio/publishing-app/publish-button.jpg)
+    {{< figure src="/attachments/studio/publishing-app/publish-button.jpg" alt="Publishing and Updating Your App" >}}
 
 Your app is published and can be viewed in the browser or on a mobile device. For more information on how to view your app, see the [Viewing Your App](#viewing-your-app) section below.
 
@@ -76,7 +76,7 @@ To view your app in the browser in the currently selected view mode (Phone, Tabl
 2. In the **Publish your app** pop-up message, click **View current app**.
 3. Click the link under **View the published app here**:
 
-    ![View in Browser](/attachments/studio/publishing-app/view-in-browser.jpg)
+    {{< figure src="/attachments/studio/publishing-app/view-in-browser.jpg" alt="View in Browser" >}}
 
 Your published app is opened in the browser.
 
@@ -88,7 +88,7 @@ To view your app on a mobile device, follow these steps:
 
 2. In the **Publish your app** pop-up message, click **View current app**:
 
-    ![View Current App](/attachments/studio/publishing-app/view-current-app.jpg)
+    {{< figure src="/attachments/studio/publishing-app/view-current-app.jpg" alt="View Current App" >}}
 
 3. Scan the QR code to view your app on your mobile device.
 

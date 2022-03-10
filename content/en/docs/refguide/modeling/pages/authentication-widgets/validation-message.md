@@ -12,7 +12,7 @@ tags: ["studio pro", "validation message", "authentication widget", "authenticat
 
 The **Validation message** widget displays an authentication failure message on a page:
 
-![Validation Message Widget](/attachments/refguide/modeling/pages/authentication-widgets/validation-message/validation-message.png)
+{{< figure src="/attachments/refguide/modeling/pages/authentication-widgets/validation-message/validation-message.png" alt="Validation Message Widget" >}}
 
  It is only displayed to an end-user when both of the following conditions are met:
 
@@ -23,8 +23,7 @@ The **Validation message** widget displays an authentication failure message on 
 
 An example of validation message properties is represented in the image below:
 
-{{% image_container width="300" %}}![Validation Message Properties](/attachments/refguide/modeling/pages/authentication-widgets/validation-message/validation-message-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide/modeling/pages/authentication-widgets/validation-message/validation-message-properties.png" alt="Validation Message Properties"   width="300"  >}}
 
 Validation message properties consist of the following sections:
 

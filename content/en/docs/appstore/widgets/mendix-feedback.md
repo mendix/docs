@@ -31,23 +31,23 @@ The Mendix Feedback widget is easy to set up and automatically attaches addition
 
 The Feedback widget can be used for a variety of purposes, which are described below.
 
-![](/attachments/appstore/widgets/mendix-feedback/widget.png)
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/widget.png" >}}
 
 ### 2.1 Submitting Feedback on an App
 
 When you click the **Feedback** icon, the Mendix Platform first checks if you are signed in. If you are already signed in, you will be in **Feedback Mode** right away. If you are not signed in, you will need to either **Sign in to Mendix** or **Continue as a guest** to enter feedback mode:
 
-![](/attachments/appstore/widgets/mendix-feedback/feedback-mode.png)
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-mode.png" >}}
 
 Once you are in feedback mode, you can click anywhere on the screen to leave a comment:
 
-![](/attachments/appstore/widgets/mendix-feedback/add-comment.png)
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/add-comment.png" >}}
 
 And voila! A screenshot of the current page is created automatically, which you can choose to attach to your feedback. After clicking **Send**, your feedback will go straight to the [Feedback](/developerportal/collaborate/feedback/) page of the app in the Developer Portal.
 
 When you have left your feedback, you need to exit the feedback mode by clicking this button:
 
-![](/attachments/appstore/widgets/mendix-feedback/exit.png)
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/exit.png" >}}
 
 {{% alert color="info" %}}
 For details on how to see all the feedback you have submitted, see the [Feedback](/developerportal/community-tools/mendix-profile/#feedback) section of *Mendix Profile*.
@@ -61,7 +61,7 @@ Clicking the **Edit** icon opens the app page in [Mendix Studio](/studio/). If y
 
 When you click the **Mobile view**  icon, a pop-up window is displayed that enables viewing your app on a mobile device:
 
-![](/attachments/appstore/widgets/mendix-feedback/view-app.png)
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/view-app.png" >}}
 
 You can access this mobile view by installing the [Mendix Mobile app](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile) and then scanning the QR code in the pop-up window. 
 
@@ -69,8 +69,7 @@ You can access this mobile view by installing the [Mendix Mobile app](https://pl
 
 When you click the **Share** icon on the widget, a pop-up window appears for sharing your app via **Email**:
 
-{{% image_container width="450" %}}![](/attachments/appstore/widgets/mendix-feedback/share.png)
-{{% /image_container %}}
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/share.png"   width="450"  >}}
 
 You can add as many email addresses as you like and email your app to colleagues for further collaboration and feedback.
 
@@ -78,8 +77,7 @@ You can add as many email addresses as you like and email your app to colleagues
 
 When you click the **App Switcher** button, a pop-up window appears with a list of other Mendix SSO-enabled apps that you have access to:
 
-{{% image_container width="450" %}}![](/attachments/appstore/widgets/mendix-feedback/app-switcher.png)
-{{% /image_container %}}
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/app-switcher.png"   width="450"  >}}
 
 When you click an app, you are redirected to it.
 
@@ -101,11 +99,11 @@ To ensure you have the latest version of the widget included in your app, follow
 1.  Download the latest version of the [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget from the Marketplace. You are strongly encouraged to use version 8.2.1 or above of the widget.
 2.  When the widget is included in your app, ensure that it is added to the homepage of the application. Open the homepage from your app's **App** > **Navigation**:
 
-	![](/attachments/appstore/widgets/mendix-feedback/show-page.png)
+	{{< figure src="/attachments/appstore/widgets/mendix-feedback/show-page.png" >}}
 
 3.  If the widget has not been added automatically, add it to the desired page or layout by selecting **Add widget** > **Add-on widgets** > **Feedback & Collaboration Widget** and dropping it into a position in the page:
 
-	![](/attachments/appstore/widgets/mendix-feedback/feedback-collaboration-widget.png)
+	{{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-collaboration-widget.png" >}}
 
 {{% alert color="info" %}}
 You can place the widget on any form in your app, but it needs to be placed on only one form. When the end-user accesses that form, the widget will remain in the browser until the session is expired. This means you only need to place the widget on the home form. You can use this mechanism to limit the feedback to certain user roles as well. To do that, just place the widget on their home forms but not on the home form of other users.
@@ -128,7 +126,7 @@ For the best user experience, your are strongly encouraged to apply Mendix SSO t
 
 The result should look like this:
 
-![](/attachments/appstore/widgets/mendix-feedback/authentication.jpg)
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/authentication.jpg" >}}
 
 {{% alert color="info" %}}
 If Mendix SSO is applied and the above **MendixSSO Authentication** settings are configured correctly, the end-user can leave feedback without having to enter their name and email address. If you are not using the Mendix SSO module and are using other SSO solutions instead, you should configure the settings in the **Custom Authentication** tab. In this tab, you can provide a microflow that should return a valid user name and email when the end-user is signed in with your authentication solution. The Feedback widget will then go directly into feedback mode. If the end-user is not signed in (meaning, the **User Object Provider** microflow returns an empty user name or an invalid email address), the end-user will have to manually enter their name and email address when they leave feedback.
@@ -150,10 +148,10 @@ You can also configure the widget for certain actions in your app, for example:
 
 If you are trying to upgrade your Mendix Feedback widget from version 7 to version 8, [Studio Pro](/refguide/) will not recognize the current configuration of this widget. Add the Mendix Feedback widget into your page again and configure it accordingly. Then delete the old one.
 
-![](/attachments/appstore/widgets/mendix-feedback/cannot-recognize-the-old-version.png)
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/cannot-recognize-the-old-version.png" >}}
 
 ### 4.2 MPK Error
 
 If you encounter the following issue, you need to delete the old *.mpk* file in the **/widgets/FeedbackWidget.mpk**  folder of your app:
 
-![](/attachments/appstore/widgets/mendix-feedback/remove-feedbackwidget-mpk.png)
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/remove-feedbackwidget-mpk.png" >}}

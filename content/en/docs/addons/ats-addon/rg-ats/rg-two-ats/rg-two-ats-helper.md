@@ -18,11 +18,11 @@ Follow these steps to set the bookmark:
 2. Log in with your account.
 3.  Open the information dialog by clicking this icon in the upper right corner of the screen:
 
-	![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-ats-helper/information.png)
+	{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-ats-helper/information.png" >}}
    
 4.  Find the link that says **ATS Helper**:
 
-	![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-ats-helper/info-dialog.png)
+	{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-ats-helper/info-dialog.png" >}}
 
 5. Create a browser bookmark for this link with one of these methods:
    * Drag the link to your browser's bookmark bar
@@ -43,13 +43,13 @@ Use the ATS Helper within the application under test. Follow these steps to load
 
 The following dialog box will appear on top of your application's UI:
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-ats-helper/loaded.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-ats-helper/loaded.png" >}}
 
 ### 3.2 Inspecting Widgets
 
 To inspect a widget, press and hold <kbd>Ctrl</kbd> while moving your mouse pointer to a UI element.
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-ats-helper/inspection.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-ats-helper/inspection.png" >}}
 
 The ATS Helper will highlight the selected widget with a yellow border. The ATS Helper dialog box will show you the `Mx Name` as well as the Mx Name Selector properties.
 

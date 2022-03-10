@@ -31,7 +31,7 @@ This app service works best with Studio Pro 8 versions starting with [8.18.15](/
     1.  In the **App Explorer** (in Studio Pro 9) or **Project Explorer** (in Studio Pro 8), right-click the app.
     2.  Click **Import module package** and then select *ReceiptProcessing.mpk*.
 
-        ![pop-up-menu-in-app-explorer](/attachments/appstore/app-services/receipt-processing/import-module-in-app-explorer.png)
+        {{< figure src="/attachments/appstore/app-services/receipt-processing/import-module-in-app-explorer.png" alt="pop-up-menu-in-app-explorer" >}}
 
         In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
@@ -63,7 +63,7 @@ The Receipt Processing app service is a premium Mendix product that is subject t
 
 1.  In the **App Explorer** or the **Project Explorer**, go to **ReceiptProcessing** > **Configurations**. **Access_Key**, **Secret_Key**, and **Encryption_Key** are defined as constants.
 
-    ![Keys under Configurations in a tree view](/attachments/appstore/app-services/receipt-processing/configurations-keys.png)
+    {{< figure src="/attachments/appstore/app-services/receipt-processing/configurations-keys.png" alt="Keys under Configurations in a tree view" >}}
 
 2. For each constant, double-click the constant, enter the key that you saved, and click **OK** to save the changes.
 
@@ -81,18 +81,18 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
     3. Click **Receipt Processing** to open the service management dashboard.
     4.  Click **Manage Instance** to open the **Document Model Training** application.
       
-        ![Document model training app login page](/attachments/appstore/app-services/receipt-processing/document-model-training-app.png)
+        {{< figure src="/attachments/appstore/app-services/receipt-processing/document-model-training-app.png" alt="Document model training app login page" >}}
       
     5. Log into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account. 
     6. Click **Environment** to show the **Existing Models** list.   
     7.  Select pre-trained model. Make sure that the **Status** of the model is **Published**.
 
-        ![pre trained model published](/attachments/appstore/app-services/receipt-processing/pre-trained-receipt-model-pub.png)
+        {{< figure src="/attachments/appstore/app-services/receipt-processing/pre-trained-receipt-model-pub.png" alt="pre trained model published" >}}
        
     8. Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens. 
     9.  Drag a sample receipt into the box where it says **Drag image files here**. You can also click **Browser** and select the file. The sample receipt should represent the receipts from which data will be extracted. You can also click the box and select the file.
       
-        ![Sample Extraction dialog box](/attachments/appstore/app-services/receipt-processing/sample-extraction-dialog-box.png)
+        {{< figure src="/attachments/appstore/app-services/receipt-processing/sample-extraction-dialog-box.png" alt="Sample Extraction dialog box" >}}
       
     10. Click **Download** to get the JSON structure.
    
@@ -102,7 +102,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON structure.
     2.  From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures/).
 
-        ![json-structure](/attachments/appstore/app-services/receipt-processing/json-structure.png)
+        {{< figure src="/attachments/appstore/app-services/receipt-processing/json-structure.png" alt="json-structure" >}}
 
     3. In the **Add JSON Structure** dialog box, enter a **Name** for the JSON Structure and click **OK**. The **JSON Structure** dialog box opens.
     4. In the **JSON Snippet** box, add the content of the JSON structure that you have generated. The system converts the JSON snippet into a schema structure automatically. You will need this schema structure to create the import mapping.
@@ -113,7 +113,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
     3. In the **Add Import Mapping** dialog box, enter a **Name** for the import mapping and click **OK**. The **Select schema elements for import mapping** dialog box opens.
     4.  For **Schema source**, select **JSON structure** and **Select** the JSON structure that you created.
 
-        ![schema-source-json-structure](/attachments/appstore/app-services/receipt-processing/schema-source-json-structure.png)
+        {{< figure src="/attachments/appstore/app-services/receipt-processing/schema-source-json-structure.png" alt="schema-source-json-structure" >}}
 
     5. Click **OK** to save the changes and close the dialog box.
 
@@ -121,12 +121,12 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
 1.  In the **Toolbox**, drag **Receipt Processing** activity from the **Document Data Capture Service** category into your microflow.
 
-    ![receipt-processing-microflow](/attachments/appstore/app-services/receipt-processing/receipt-processing-microflow.png)
+    {{< figure src="/attachments/appstore/app-services/receipt-processing/receipt-processing-microflow.png" alt="receipt-processing-microflow" >}}
 
 2. Create a list of image that inherits from `System.Image`. Images from where data are extracted should be passed as a list, as shown in the microflow above.
 3.  Double-click the **Receipt Processing** activity to open the **Receipt Processing** dialog box.
 
-    ![Receipt Processing](/attachments/appstore/app-services/receipt-processing/receipt-processing-dialog-box.png)
+    {{< figure src="/attachments/appstore/app-services/receipt-processing/receipt-processing-dialog-box.png" alt="Receipt Processing" >}}
 
 4. For **Image List**, click **Edit** to select the **Image List** which inherits from `System.Image`.
 5. For **Mapping**, **Select** the import mapping that you created to define how extracted data should be mapped into an entity.
@@ -148,4 +148,4 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
 The AI and OCR technologies used by Receipt Processing Service are powered by [ABBYY&reg;](https://www.abbyy.com). Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.
 
-![Technical Provider ABBYY](/attachments/appstore/app-services/receipt-processing/logo-powered-by-abbyy.png)
+{{< figure src="/attachments/appstore/app-services/receipt-processing/logo-powered-by-abbyy.png" alt="Technical Provider ABBYY" >}}

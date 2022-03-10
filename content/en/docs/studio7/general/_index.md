@@ -14,7 +14,7 @@ With Studio you can create and edit applications in your browser without install
 
 The picture below shows the components of Studio's interface:
 
-![](/attachments/studio7/general/home-page.png)
+{{< figure src="/attachments/studio7/general/home-page.png" >}}
 
 ## 2 Opening Studio
 
@@ -24,7 +24,7 @@ You can open Mendix Studio [via Developer Portal](#opening-studio-via-dev-portal
 
 You can edit an app in Mendix Studio by opening your app in [Developer Portal](https://home.mendix.com) and clicking **Edit in Studio**:
 
-![](/attachments/studio7/general/edit-app.jpg)
+{{< figure src="/attachments/studio7/general/edit-app.jpg" >}}
 
 If you do not see **Edit in Studio**, go to [General Settings](/developerportal/collaborate/general-settings/) in the Developer Portal and [enable Studio](/developerportal/collaborate/general-settings/#web).
 
@@ -36,7 +36,7 @@ You can also open your app in Studio via Studio Pro. Do the following:
 
 2.  Click the globe icon in the top right corner (only available if Studio is enabled).
 
-    ![](/attachments/studio7/general/globe-icon.png)
+    {{< figure src="/attachments/studio7/general/globe-icon.png" >}}
 
 The app opens in Studio.
 
@@ -44,8 +44,7 @@ The app opens in Studio.
 
 After clicking **Edit in Studio** you may need to upgrade your app to the latest version.
 
-{{% image_container width="350" %}}![](/attachments/studio7/general/upgrade.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/general/upgrade.png"   width="350"  >}}
 
 {{% alert color="info" %}}
 When you upgrade your app in Studio to the latest  Mendix version, you will need to upgrade your app in the Studio Pro to the same version as well. 
@@ -64,15 +63,13 @@ You can change the view of your page to different views by clicking the correspo
 *  Tablet
 *  Responsive (Desktop)    
 
-	{{% image_container width="350" %}}![](/attachments/studio7/general/view.png)
-	{{% /image_container %}}
+	{{< figure src="/attachments/studio7/general/view.png"   width="350"  >}}
 
 ## 5 Left Menu Bar
 
 The left menu bar provides the following options:
 
-{{% image_container width="350" %}}![](/attachments/studio7/general/left-menu-bar.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/general/left-menu-bar.png"   width="350"  >}}
 
 | Menu item                            | Shortcut     | Description                                                  |
 | ------------------------------------ | ------------ | ------------------------------------------------------------ |
@@ -89,7 +86,7 @@ The left menu bar provides the following options:
 
 The top right menu of Studio consists of the **Toolbox**, **Properties** , and **Buzz** tabs. 
 
-![](/attachments/studio7/general/toolbox-properties-buzz.png)
+{{< figure src="/attachments/studio7/general/toolbox-properties-buzz.png" >}}
 
 | Tab        | Description                                                  |
 | ---------- | ------------------------------------------------------------ |
@@ -101,7 +98,7 @@ The top right menu of Studio consists of the **Toolbox**, **Properties** , and *
 
 The top bar provides the following options:
 
-![](/attachments/studio7/general/top-bar.png)
+{{< figure src="/attachments/studio7/general/top-bar.png" >}}
 
 | Top bar item | Description |
 |------|------|

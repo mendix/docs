@@ -26,7 +26,7 @@ To add a message definitions document do the following:
 
 2. Choose **Add other > Message definitions**.
 
-    ![Right-click menu - add Message definitions](/attachments/refguide8/modeling/integration/message-definitions/add-definitions-document.png)
+    {{< figure src="/attachments/refguide8/modeling/integration/message-definitions/add-definitions-document.png" alt="Right-click menu - add Message definitions" >}}
 
 3. Give your message definitions a name and click **OK**.
 
@@ -56,7 +56,7 @@ To generate mappings, do the following:
 
 4. Click **OK**.
 
-    ![General mappings dialog](/attachments/refguide8/modeling/integration/message-definitions/generate-mappings.png)
+    {{< figure src="/attachments/refguide8/modeling/integration/message-definitions/generate-mappings.png" alt="General mappings dialog" >}}
 
 ## 4 Defining a Message Definition{#message-definition}
 
@@ -66,7 +66,7 @@ In the message definitions document, click **Add** to create a new message defin
 
 The message definition is defined in the **General** tab.
 
-![The Message Definition General tab](/attachments/refguide8/modeling/integration/message-definitions/message-definition.png)
+{{< figure src="/attachments/refguide8/modeling/integration/message-definitions/message-definition.png" alt="The Message Definition General tab" >}}
 
 #### 4.1.1 Name
 

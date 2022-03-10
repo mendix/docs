@@ -30,13 +30,13 @@ Do the following:
 
 1.  Open **Project** > **Navigation**.
 
-    ![](/attachments/howto8/general/setting-up-the-navigation-structure/open-navigation.jpg)
+    {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/open-navigation.jpg" >}}
 
 2. Some navigation profiles are open in a tab by default, for example, the **Responsive** one. To open other navigation profiles, do the following:
 
     1. Click **Add navigation profile**, select the profile type depending on the type of the interface you are working on:
 
-       ![](/attachments/howto8/general/setting-up-the-navigation-structure/add-navigation-profile.jpg)
+       {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/add-navigation-profile.jpg" >}}
 
     2. Click **OK**.
 
@@ -44,7 +44,7 @@ Do the following:
 
 4. Select the page you want to use as the default home page. The example below uses *Homepage_Web*:
 
-    ![](/attachments/howto8/general/setting-up-the-navigation-structure/select-home-page.jpg)
+    {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/select-home-page.jpg" >}}
 
 5. Click **Select**.
 
@@ -68,16 +68,16 @@ Follow the steps below:
 4.  In the **Role-based home pages** dialog box, click **New**.
 5.  Select a user role to create a new setting, for example, select the **Administrator** role:
 
-    ![](/attachments/howto8/general/setting-up-the-navigation-structure/select-user-role.png)
+    {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/select-user-role.png" >}}
 
 6.  Click **Select**.
 7.  After you have selected the user role, click the **Select target** button.
 
-    ![](/attachments/howto8/general/setting-up-the-navigation-structure/select-target.png)
+    {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/select-target.png" >}}
 
 8.  Select the home page for selected user role, for example, the **Account_Overview** page:
 
-    ![](/attachments/howto8/general/setting-up-the-navigation-structure/select-page.png)
+    {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/select-page.png" >}}
 
 9. Click **Select**.
 
@@ -93,7 +93,7 @@ You can create menu items for your navigation. Do the following:
 5.  Enter a **Caption** for your menu item. In the example below, the menu item is named *Customer Overview* after a page this menu item will open.
 6.  Select a page or microflow as a target:
 
-    ![](/attachments/howto8/general/setting-up-the-navigation-structure/new-menu-item.png)
+    {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/new-menu-item.png" >}}
 
 7.  Click **OK** to save the menu item.
 
@@ -109,17 +109,17 @@ Now that you have created a menu structure it is time to start using it on pages
 
 2.  Click **Add widget** and select **Menu bar**:
 
-    ![](/attachments/howto8/general/setting-up-the-navigation-structure/select-menu-bar.png)
+    {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/select-menu-bar.png" >}}
 
 3.  Select a place on the page to add the widget.
 
-    ![](/attachments/howto8/general/setting-up-the-navigation-structure/add-widget.png)
+    {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/add-widget.png" >}}
 
 4. Open the **Properties** pane.
 
 5. In **General** > **Menu source**, select **Project navigation**. This is the navigation structure defined in the navigation editor. (You can also add additional menu structures using menu documents.)
 
-    ![](/attachments/howto8/general/setting-up-the-navigation-structure/menu-bar-properties.jpg)
+    {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/menu-bar-properties.jpg" >}}
 
 6. In **Profile**, select the profile type depending on the device type. **Responsive** is selected by default.  
 

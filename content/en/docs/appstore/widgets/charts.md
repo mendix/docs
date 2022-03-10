@@ -79,7 +79,7 @@ The **Heat map** should be configured with required horizontal, vertical, and da
 
 The sample domain model could be either of the two configurations below:
 
-![](/attachments/appstore/widgets/charts/heat-map.png)
+{{< figure src="/attachments/appstore/widgets/charts/heat-map.png" >}}
 
 ### 2.8 Bubble chart
 

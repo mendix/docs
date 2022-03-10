@@ -25,23 +25,23 @@ To import a WSDL, follow these steps:
 
 1. Right-click your module in the **Project Explorer** and select **Add** > **Consumed services>** > **Consumed web service**:
 
-    ![](/attachments/howto7/integration/consume-a-simple-web-service/18582087.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582087.png" >}}
 
 2. Enter a name for the new consumed web service (for example, *TemperatureConverter*):
 
-    ![](/attachments/howto7/integration/consume-a-simple-web-service/18582086.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582086.png" >}}
 
 3. Click **OK** again. You will now see the **Consumed Web Service** wizard. Enter `https://www.w3schools.com/xml/tempconvert.asmx?wsdl` as the **URL**, and then click **Import**.
 
-    ![](/attachments/howto7/integration/consume-a-simple-web-service/18582085.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582085.png" >}}
 
 4.  This will bring up the **Select Ports** dialog box asking you to select a web service port:
 
-    ![](/attachments/howto7/integration/consume-a-simple-web-service/18582065.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582065.png" >}}
 
 5. Click **OK** to select the default. The Modeler should now import these operations: **CelsiusToFahrenheit** and **FahrenheitToCelsius**.
 
-    ![](/attachments/howto7/integration/consume-a-simple-web-service/18582084.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582084.png" >}}
 
 6. Click **OK** to save the consumed web service.
 
@@ -51,62 +51,62 @@ To create logic to call the web service, follow these steps:
 
 1.  Right-click your module in the **Project Explorer** and select **Add** > **Microflow** from the menu:
 
-    ![](/attachments/howto7/integration/consume-a-simple-web-service/create-microflow.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/create-microflow.png" >}}
 
 2.  Enter a name for the new microflow (for example, *ConvertCelsiusToFahrenheit*).
 
-    ![](/attachments/howto7/integration/consume-a-simple-web-service/18582083.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582083.png" >}}
 
 3.  Click **OK**. You will now see an empty microflow:
 
-    ![](/attachments/howto7/integration/consume-a-simple-web-service/18582081.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582081.png" >}}
 
 4.  Open the **Toolbox** (from the lower-right corner of the Modeler) and drag a **Create variable** activity to the line between the start and end event.
 
-    ![](/attachments/howto7/integration/consume-a-simple-web-service/8946802.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/8946802.png" >}}
 
 5. Double-click the new activity to open the **Create Variable** properties editor.
 6. Select **Integer/Long** as the **Data Type**, enter *100* as the value, and enter *TemperatureInCelsius* as the **Output Variable Name**:
 
-    ![](/attachments/howto7/integration/consume-a-simple-web-service/18582080.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582080.png" >}}
 
 7.  Click **OK.** The microflow will look like this:
 
-    ![](/attachments/howto7/integration/consume-a-simple-web-service/18582079.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582079.png" >}}
 
 8. Drag a **Call web service** activity from the toolbox to the line between the start and end event. This inserts a new activity.
 9.  In the **Call Web Service** properties editor, click **Select** and select the **CelsiusToFahrenheit** for the **Operation** of your consumed web service:
 
-    ![](/attachments/howto7/integration/consume-a-simple-web-service/18582076.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582076.png" >}}
 
 10. In the **Location** section for this operation , click the **Override location** box. You are doing this in order to use the secure location of the web service.
 11. Click **Edit** to override the location and change `http` to `https` for the URL in the **Location** editor.
 12. In the **SOAP Request Body** tab of the **Call Web Service** properties editor, double-click the **Celsius (optional)** input parameter and enter `toString($TemperatureInCelsius)` for the expression. The web service operation expects a string value, which is why you need to use the `toString` function. 
 
-    ![](/attachments/howto7/integration/consume-a-simple-web-service/18582075.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582075.png" >}}
 
     Then click **OK**.
 13. On the **SOAP Response** tab, select **Yes** for the **Store in variable** option, and enter *TemperatureInFahrenheit* for the **Name**:
 
-    ![](/attachments/howto7/integration/consume-a-simple-web-service/18582074.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582074.png" >}}
 
 14. Click **OK**. The microflow will look like this:
 
-    ![](/attachments/howto7/integration/consume-a-simple-web-service/18582073.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582073.png" >}}
 
 15. Drag a **Show message** activity from the **Toolbox** to the line before the end event.
 16. Double-click the new activity to open the **Show Message** properties editor.
 17. Select **Information** as the **Type**, and enter *The temperature in fahrenheit is: {1}* for the **Template**. The *{1}* functions as a placeholder for the parameters.
 
-    ![](/attachments/howto7/integration/consume-a-simple-web-service/18582071.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582071.png" >}}
 
 19. Create a new parameter and enter `$TemperatureInFahrenheit` for the expression (this is the return value of the web service operation), then click **OK**:
 
-    ![](/attachments/howto7/integration/consume-a-simple-web-service/18582072.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582072.png" >}}
 
 20. Click **OK** again to save the **Show message activity** properties. The microflow will look like this:
 
-    ![](/attachments/howto7/integration/consume-a-simple-web-service/18582070.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582070.png" >}}
 
 21. Create a menu item that triggers this microflow. For details on how to create a menu item, see [How to Set Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure/).
 22. Deploy the application and trigger the microflow to call the web service operation. You should see a message with the converted temperature.

@@ -77,7 +77,7 @@ A trial gives everyone in your company one-month access to the app service. The 
 
         In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project.
 
-        ![import-translation](/attachments/appstore/app-services/translation/import-translation.png)
+        {{< figure src="/attachments/appstore/app-services/translation/import-translation.png" alt="import-translation" >}}
 
         {{% alert color="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
@@ -96,7 +96,7 @@ You have succesfully added the Translation resources to your app.
 
 The **Translator** entity is a conceptual entity that incorporates all the information of the translator object. It contains both input and output text strings. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module. 
 
-![translator](/attachments/appstore/app-services/translation/translator.png)
+{{< figure src="/attachments/appstore/app-services/translation/translator.png" alt="translator" >}}
 
 | Attribute | Description |
 | --- | --- |
@@ -107,7 +107,7 @@ The **Translator** entity is a conceptual entity that incorporates all the infor
 
 The **Language** entity is an entity referenced from **Translator** that incorporates all the information of supported language object.
 
-![language](/attachments/appstore/app-services/translation/language.png)
+{{< figure src="/attachments/appstore/app-services/translation/language.png" alt="language" >}}
 
 | Attribute | Description |
 | --- | --- |
@@ -134,7 +134,7 @@ The **CreateTranslator** microflow takes **inputText**, **inputLanguageCode**, a
 For more information about the language codes, see the [Supported Languages](#supported-languages) section.
 {{% /alert %}}
 
-![createtranslator](/attachments/appstore/app-services/translation/createtranslator.png)
+{{< figure src="/attachments/appstore/app-services/translation/createtranslator.png" alt="createtranslator" >}}
 
 ### 3.4 Nanoflows {#nanoflows}
 
@@ -142,7 +142,7 @@ For more information about the language codes, see the [Supported Languages](#su
 
 The **TranslatorText** microflow takes the **translator** object as an input parameter, performs text translation actions in the back-end service, and eventually updates the output text string of the **translator** object.
 
-![translatortext](/attachments/appstore/app-services/translation/translatortext.png)
+{{< figure src="/attachments/appstore/app-services/translation/translatortext.png" alt="translatortext" >}}
 
 ### 3.5 Supported Languages {#supported-languages}
 
@@ -236,7 +236,7 @@ If you run your app locally or deploy it as a Mendix Free App, configure the lic
 4. Fill in the **Value** with the license token that you obtained.
 5.  Click **OK** to save the settings.
 
-    ![licensetoken-inmendix](/attachments/appstore/app-services/translation/licensetoken-inmendix.png)
+    {{< figure src="/attachments/appstore/app-services/translation/licensetoken-inmendix.png" alt="licensetoken-inmendix" >}}
 
 6. When you finish building the app, click **Run Locally** to run your app locally or click **Run** to deploy it as a Mendix Free App. Then you can see the app service in your app.
 
@@ -246,11 +246,11 @@ If you deploy your app in the Mendix Cloud, configure the license token in the D
 
 Before you deploy your app, configure the app **Constants** in the deployment package.
 
-![licensetoken-cloudportal](/attachments/appstore/app-services/translation/licensetoken-cloudportal.png)
+{{< figure src="/attachments/appstore/app-services/translation/licensetoken-cloudportal.png" alt="licensetoken-cloudportal" >}}
 
 If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app.
 
-![licensetoken-envdetails](/attachments/appstore/app-services/translation/licensetoken-envdetails.png)
+{{< figure src="/attachments/appstore/app-services/translation/licensetoken-envdetails.png" alt="licensetoken-envdetails" >}}
 
 #### 3.6.3 For an App Deployed in Your Own Environment
 
@@ -267,13 +267,13 @@ If you deploy your app in your own environment, you need to configure the licens
     2. Add the **CreateTranslator** microflow from the **Translation** > **USE_ME** folder to the nanoflow.
     3.  Double-click the **CreateTranslator** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**. 
 
-        ![call-createtranslator-microflow](/attachments/appstore/app-services/translation/call-createtranslator-microflow.png)
+        {{< figure src="/attachments/appstore/app-services/translation/call-createtranslator-microflow.png" alt="call-createtranslator-microflow" >}}
 
         In this example,  **inputLanguageCode** is set to *'en'* and **outputLanguageCode** is set to *'zh'*, so the default translation will be from English to Chinese. You can also set them to other [language codes](#supported-languages). For more information about the parameters, see  [CreateTranslator microflow](#create-translator).
 
     4.  Right-click the create object activity and select **Set $translator as return value** in the pop-up menu. 
 
-        ![createtranslator-nanoflow](/attachments/appstore/app-services/translation/createtranslator-nanoflow.png)
+        {{< figure src="/attachments/appstore/app-services/translation/createtranslator-nanoflow.png" alt="createtranslator-nanoflow" >}}
     
 2.  Create a microflow as follows:
     1. Name the microflow *GetTranslatorSupportedLanguages*. 
@@ -288,7 +288,7 @@ If you deploy your app in your own environment, you need to configure the licens
     10. In the text box, enter *$translator/Translation.Translator_SupportedLanguages/Translation.Language*.
     11.  Click **OK** to save the settings.  
 
-         ![gettranslatorsupportedlanguages-microflow](/attachments/appstore/app-services/translation/gettranslatorsupportedlanguages-microflow.png)
+         {{< figure src="/attachments/appstore/app-services/translation/gettranslatorsupportedlanguages-microflow.png" alt="gettranslatorsupportedlanguages-microflow" >}}
 
 3. Add a **Data view** widget to your page.
 4. Set the **CreateTranslator** nanoflow as the data source of the **Data view** widget as follows:
@@ -339,7 +339,7 @@ If you deploy your app in your own environment, you need to configure the licens
      3. For **Label caption**, enter *Text*.
      4.  Click **OK** to save the settings. 
 
-         ![data-view](/attachments/appstore/app-services/translation/data-view.png)
+         {{< figure src="/attachments/appstore/app-services/translation/data-view.png" alt="data-view" >}}
 
 17. Inside the **Data view** widget, add a **Button** widget below the **Text area** widget.
 18. Change the settings of the **Button** widget as follows:
@@ -351,7 +351,7 @@ If you deploy your app in your own environment, you need to configure the licens
 19. Make sure you have [configured the license token](#configure-license-token).
 20.  Run your app locally. You can perform text translation directly in the browser:
 
-     ![runlocally-translation](/attachments/appstore/app-services/translation/runlocally-translation.png)
+     {{< figure src="/attachments/appstore/app-services/translation/runlocally-translation.png" alt="runlocally-translation" >}}
 
 ### 4.2 Checking Statistics on the Usage Dashboard {#check-usage}
 

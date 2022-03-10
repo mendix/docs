@@ -13,7 +13,7 @@ tags: ["domain model", "entity", "attribute", "index", "studio pro"]
 
 Indexes can be added and edited from the **Indexes** tab of the entity properties.
 
-![Example of index tab](/attachments/refguide/modeling/domain-model/entities/indexes/index-properties.png)
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/indexes/index-properties.png" alt="Example of index tab" >}}
 
 {{% alert color="info" %}}
 Index properties are read-only for external entities. For further details, see [External Entities](/refguide/external-entities/).
@@ -41,7 +41,7 @@ Changing and deleting objects of an entity with indexes takes longer, because th
 
 Customers are usually retrieved by a combination of ZIP code and house number. So, *one* index is set on the combination of the attributes:
 
-![](/attachments/refguide/modeling/domain-model/entities/indexes/customer-index-example.png)
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/indexes/customer-index-example.png" >}}
 
 The objects are retrieved by the following OQL query – note that the order of the attributes in the `WHERE` clause is the same as the order of the attributes for the index:
 

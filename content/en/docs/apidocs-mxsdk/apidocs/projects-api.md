@@ -31,7 +31,7 @@ The following operations are available in the Projects API.
 
 The CreateNewApp operation will create a new app and corresponding project. As parameters it requires a project name, a user name that is linked to a Mendix account, an [API Key](/apidocs-mxsdk/apidocs/authentication/) corresponding to that user account, and a project summary. The project summary may contain a brief description of the project.
 
-![](/attachments/apidocs-mxsdk/apidocs/projects-api/CreateNewAppCall.PNG)
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/projects-api/CreateNewAppCall.PNG" >}}
 
 #### 3.1.1 Parameters
 
@@ -53,7 +53,7 @@ After you have imported the Projects API app service, an activity called 'Create
 
 Reference the microflow below:
 
-![](/attachments/apidocs-mxsdk/apidocs/projects-api/call-create-new-app.png)
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/projects-api/call-create-new-app.png" >}}
 
 ### 3.2 RetrieveJobStatus
 
@@ -65,13 +65,13 @@ Retrieves the status of a background job that was queued for execution.
 | --- | --- | --- |
 | JobId | String | The ID of a background job that was provided to you by one of the ProjectsAPI operations. |
 
-![](/attachments/apidocs-mxsdk/apidocs/projects-api/RetrieveJobStatusCall.PNG)
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/projects-api/RetrieveJobStatusCall.PNG" >}}
 
 #### 3.2.2 Output
 
 The output of the RetrieveJobStatus operation is a `JobStatus` entity with the following attributes:
 
-![](/attachments/apidocs-mxsdk/apidocs/projects-api/RetrieveJobStatusResponse.PNG)
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/projects-api/RetrieveJobStatusResponse.PNG" >}}
 
 The `ProjectsAPI.JobState` enumeration can have the values `Running`, `Completed` or `Failed`.
 
@@ -81,7 +81,7 @@ The `Result` element contains the job result, in case it has completed. For `Cre
 
 The microflow below references how to use the RetrieveJobStatus call from Studio Pro.
 
-![](/attachments/apidocs-mxsdk/apidocs/projects-api/call-retrieve-job-status.png)
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/projects-api/call-retrieve-job-status.png" >}}
 
 ### 3.3 DeleteApp
 
@@ -123,7 +123,7 @@ The ExposeTeamServerAsWorkingCopy action returns a String which is the Job ID of
 
 Reference this microflow:
 
-![](/attachments/apidocs-mxsdk/apidocs/projects-api/expose-team-server-revision.png)
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/projects-api/expose-team-server-revision.png" >}}
 
 ### 3.5 CommitOnlineWorkingCopyChangesToTeamServer
 
@@ -145,7 +145,7 @@ The CommitOnlineWorkingCopyChangesToTeamServer action returns a String which is 
 
 Reference this microflow:
 
-![](/attachments/apidocs-mxsdk/apidocs/projects-api/commit-working-copy.png)
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/projects-api/commit-working-copy.png" >}}
 
 ## 4 Download
 

@@ -25,7 +25,7 @@ To import a web service using the wizard, follow these steps:
 
 1. Open your domain model and click **Import web service/XML file** in the toolbar.
 
-    ![](/attachments/howto7/integration/consume-a-complex-web-service/18581788.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581788.png" >}}
 
     This will open a straightforward wizard dialog that guides you through importing the result of a web service (or an XML file). As a result, it will generate the following items:
     * Domain model entities to store the results
@@ -34,29 +34,29 @@ To import a web service using the wizard, follow these steps:
     * A microflow that calls the web service (or imports an XML file) (optional)
 2. On the **Import Web Service or XML Scheme** dialog box, select **Web service operation** and click **Next**:
 
-    ![](/attachments/howto7/integration/consume-a-complex-web-service/18581787.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581787.png" >}}
 
 3. On the **Import Web Service** dialog box, select **Create new imported web service** and click **Next**.
 4.  For **WSDL source** in the **Web service Description** section of the **New Web Service Operation** dialog box, select the WSDL to be used for this imported web service. You can either use a **URL** (for example, http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL) or load a **file** from your computer.
 
-    ![](/attachments/howto7/integration/consume-a-complex-web-service/18581785.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581785.png" >}}
 
 5.  Click **Next** to fetch the services and operations in the WSDL.
 
-    ![](/attachments/howto7/integration/consume-a-complex-web-service/port.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/port.png" >}}
 
 6. This will bring up the **Select Ports** pop-up window asking you to select a web service port. Click **OK** to select the default. The Modeler now imports the operations.
 7. On the **New Web Service Operation** dialog box, you can now review the services and operations available to the imported web service. Select a web service operation and click **Next**.
 
-    ![](/attachments/howto7/integration/consume-a-complex-web-service/18581784.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581784.png" >}}
 
 8. On the **Select Elements** dialog box, you can optionally select the elements to map as return values of the web service, and then click **Next**.
 
-    ![](/attachments/howto7/integration/consume-a-complex-web-service/18581783.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581783.png" >}}
 
 9. The final step in this wizard provides you with the options to add icons to the generated entities and to create a microflow in which the imported web service is called: 
 
-    ![](/attachments/howto7/integration/consume-a-complex-web-service/18581782.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581782.png" >}}
 
     Click **Finish** to create the web service.
 
@@ -69,7 +69,7 @@ When finished the wizard will add to your model based on the options selected:
 * A microflow in which the web service operation is called
 * Domain model entities (by default, the Modeler creates non-persistable entities)
 
-![](/attachments/howto7/integration/consume-a-complex-web-service/18581781.png)
+{{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581781.png" >}}
 
 ## 3 Importing a Web Service Directly
 
@@ -81,13 +81,13 @@ To import a web service directly, follow these steps:
 2. Add a name for the new consumed web service.
 3.  In the **Consumed Web Service** wizard, on the **General** tab, enter the WSDL to be used for this imported web service. You can use a **URL** or load a **File** from your computer.
 
-    ![](/attachments/howto7/integration/consume-a-complex-web-service/18581780.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581780.png" >}}
 
 
 3. Click **Import** to fetch the services and operations in the WSDL.
 4. Review the **Services** and **Operations** available to the imported web service:
 
-    ![](/attachments/howto7/integration/consume-a-complex-web-service/18581779.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581779.png" >}}
 
 You can also describe the design purpose of the web service on the **Documentation** tab.
 
@@ -97,7 +97,7 @@ To configure the web service call, follow these steps:
 
 1. If you did not use the web service wizard and/or did not use the option within the wizard to automatically create a microflow, you have to create a microflow that will call the imported web service:
 
-    ![](/attachments/howto7/integration/consume-a-complex-web-service/18581778.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581778.png" >}}
 
     {{% alert color="info" %}}
 
@@ -109,30 +109,30 @@ To configure the web service call, follow these steps:
 3. Double-click the activity to open the **Call Web Service** wizard and in the **Operation** section, click **Select...** for **Operation**.
 4. This opens the **Select Web Service Operation** dialog box, where you can choose the operation for this web service call:
 
-    ![](/attachments/howto7/integration/consume-a-complex-web-service/18581777.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581777.png" >}}
 
 5. On the **SOAP Request Body** tab of the **Call Web Service** wizard, you can configure the SOAP body, which contains the parameters needed to execute the web service request. The **Simple**, **Export Mapping**, and **Custom** options enable choosing the type of SOAP body to use. Click **Edit value** to change the domain-to-XML mapping or the variables from the microflow used as input arguments.
     * Use the **Simple** option if the imported web service requires only primitive arguments:
 
-        ![](/attachments/howto7/integration/consume-a-complex-web-service/18581791.png)
+        {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581791.png" >}}
     
     * Use the **Export mappings for each request parameter** or **Export mapping for the entire request** options if the domain model entities need to be mapped to XML elements
     * Use the **Custom** option for the definition of a custom XML body with parameters:
 
-        ![](/attachments/howto7/integration/consume-a-complex-web-service/18581792.png)
+        {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581792.png" >}}
 
 6. On the **HTTP Headers** tab in the **Call Web Service** wizard, you can enter authentication information using the **Edit** button if the Mendix Runtime should use this before calling the web service:
 
-    ![](/attachments/howto7/integration/consume-a-complex-web-service/18581793.png)
+    {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581793.png" >}}
 
 7. On the **SOAP Response** tab of the **Call Web Service** wizard, you can configure the handling of the return from the web service call:
     * If the return is a complex XML structure, you can select the **Mapping** and use an XML-to-domain mapping to map the XML elements to the domain model entities:
 
-        ![](/attachments/howto7/integration/consume-a-complex-web-service/18581790.png)
+        {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581790.png" >}}
 
     * If the return is a primitive, you can store it in a variable that you can name in the **Store in variable** field:
 
-        ![](/attachments/howto7/integration/consume-a-complex-web-service/18581789.png)
+        {{< figure src="/attachments/howto7/integration/consume-a-complex-web-service/18581789.png" >}}
         
     * If you want to ignore the return, select the **Ignore** option
 8.  Your imported web service is now ready to be used in your application.

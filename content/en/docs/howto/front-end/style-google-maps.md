@@ -33,10 +33,10 @@ These instructions are for the Google Maps widget which you can download from th
 In this chapter you will learn how to add styling to the Google Maps widget.
 
 1.  Open the properties of your Google Maps widget and go to the **Customisation** tab.
-    ![](/attachments/howto/front-end/style-google-maps/customisation-tab.png)
+    {{< figure src="/attachments/howto/front-end/style-google-maps/customisation-tab.png" >}}
 
 2.  Simply enter the style in the **Style Array** section and you're done!
-    ![](/attachments/howto/front-end/style-google-maps/new-styling.png)
+    {{< figure src="/attachments/howto/front-end/style-google-maps/new-styling.png" >}}
 
     Here is the example styling:
 
@@ -45,7 +45,7 @@ In this chapter you will learn how to add styling to the Google Maps widget.
     ```
 
 3.  The example style will give you this result:
-    ![](/attachments/howto/front-end/style-google-maps/style-example.png)
+    {{< figure src="/attachments/howto/front-end/style-google-maps/style-example.png" >}}
 
 ### 3.2 Finding the Right Style
 
@@ -53,13 +53,13 @@ Choosing an existing style sheet from a large library that fits your application
 
 1.  On the website click **Explore:**
 2.  Explore the styles to find one that matches your application and click it:
-    ![](/attachments/howto/front-end/style-google-maps/snazzymaps-style.png)
+    {{< figure src="/attachments/howto/front-end/style-google-maps/snazzymaps-style.png" >}}
 3.  On the lefthand pane you will see the style array:
-    ![](/attachments/howto/front-end/style-google-maps/snazzymaps-style-array.png)
+    {{< figure src="/attachments/howto/front-end/style-google-maps/snazzymaps-style-array.png" >}}
 4.  Now simply press **Copy.** The style is copied to your clipboard.
 5.  Open the **Customisation** tab of the Google Maps widget and paste the style array you just copied from snazzymaps:
 
-    ![](/attachments/howto/front-end/style-google-maps/snazzymaps-styling.png)
+    {{< figure src="/attachments/howto/front-end/style-google-maps/snazzymaps-styling.png" >}}
 
     The style array:
 
@@ -68,16 +68,16 @@ Choosing an existing style sheet from a large library that fits your application
     ```
 
 6.  And there it is:
-    ![](/attachments/howto/front-end/style-google-maps/new-style-example.png)
+    {{< figure src="/attachments/howto/front-end/style-google-maps/new-style-example.png" >}}
 
 ### 3.3 Upload Your Own Style Array
 
 Supporting communities is cool. Therefore I will also show you how to upload your own custom style array to the website.
 
 1.  Go-to Snazzymaps and click **Create.**
-    ![](/attachments/howto/front-end/style-google-maps/snazzymaps.png) 
+    {{< figure src="/attachments/howto/front-end/style-google-maps/snazzymaps.png" >}} 
 2.  Now you will see the same sort of handy quick style method that Mendix provides at the [Atlas 3](https://atlas.mendix.com/) site.
-    ![](/attachments/howto/front-end/style-google-maps/custom-snazzymaps.png) 
+    {{< figure src="/attachments/howto/front-end/style-google-maps/custom-snazzymaps.png" >}} 
 
     Happy modeling!
 

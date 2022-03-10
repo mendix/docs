@@ -10,11 +10,11 @@ tags: ["studio", "theme customizer", "atlas ui"]
 
 The **Theme Customizer** is a tool that helps you customize your app in Mendix Studio. For example, you can adjust colors, upload a logo, change a text style, thus making your app look consistent and unique.
 
-![Default Style vs. Customized Style](/attachments/studio/theme-customizer/default-vs-customized.png)
+{{< figure src="/attachments/studio/theme-customizer/default-vs-customized.png" alt="Default Style vs. Customized Style" >}}
 
 To open the **Theme Customizer**, click the paintbrush icon in the left menu bar. 
 
-![Theme Customizer Icon](/attachments/studio/theme-customizer/theme-customizer-icon.png)
+{{< figure src="/attachments/studio/theme-customizer/theme-customizer-icon.png" alt="Theme Customizer Icon" >}}
 
 On the left, the Theme Customizer contains settings that you can change to customize different elements of your app. The changes you make are previewed on the right side. There are two preview modes:
 
@@ -27,7 +27,7 @@ On the left, the Theme Customizer contains settings that you can change to custo
 
 You can switch between the modes by clicking the corresponding button in the top-bar:
 
-![Preview Modes](/attachments/studio/theme-customizer/preview-modes.png)
+{{< figure src="/attachments/studio/theme-customizer/preview-modes.png" alt="Preview Modes" >}}
 
 ## 2 Settings
 
@@ -39,8 +39,7 @@ In the **Upload Logo** section, you can upload a picture that will be used as a 
 
 Once the logo is uploaded, a color palette is generated based on the logo colors. You can then select **Logo Colors** in color-pickers of different settings and align your app style with the style of your logo:
 
-{{% image_container width="250" %}}![Logo Colors](/attachments/studio/theme-customizer/logo-colors.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio/theme-customizer/logo-colors.png" alt="Logo Colors"   width="250"  >}}
 
 For more information on how to select a new color in a setting, see [Adjusting Colors](#adjusting-colors).
 
@@ -48,7 +47,7 @@ For more information on how to select a new color in a setting, see [Adjusting C
 
 In the **Brand Colors** section, you can define colors of different styles: **Default**, **Primary**, **Inverse**, **Info**, etc. These styles are applied for widgets that have the **Style** property, for example, buttons. That means, if you selected a green color for the **Success** style, buttons that have *Success* selected in the **Style** property will be green: 
 
-![](/attachments/studio/theme-customizer/brand-colors-style-dependency.png)
+{{< figure src="/attachments/studio/theme-customizer/brand-colors-style-dependency.png" >}}
 
 ### 2.3 UI Customization
 
@@ -58,8 +57,7 @@ In the **UI Customization** section, you can adjust the style and color of the m
 
 In the **Typography** section, you can override the text styles and text colors for your app, such as colors and size of headings and hyperlinks in your app:
 
-{{% image_container width="250" %}}![Widget View](/attachments/studio/theme-customizer/widget-view.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio/theme-customizer/widget-view.png" alt="Widget View"   width="250"  >}}
 
 ## 3 Widget View {#widget-view}
 
@@ -72,7 +70,7 @@ The **Widget View** previews the style on an individual widget or UI elements as
 
 In the **Page View**, you can select any page from your app to preview changes on it. You can select a page from a drop-down menu in the top bar. You can also switch the Device modes to see how your style looks on the **Phone**, **Tablet**, or **Responsive view**.  
 
-![Top Bar](/attachments/studio/theme-customizer/top-bar.png)
+{{< figure src="/attachments/studio/theme-customizer/top-bar.png" alt="Top Bar" >}}
 
 ## 5 Performing Basic Actions
 
@@ -84,7 +82,7 @@ To upload a logo, do the following:
 
 2.  In the **Upload Logo** section, click **Select File**.  
 
-    ![Uploading Your Logo](/attachments/studio/theme-customizer/upload-logo.png)
+    {{< figure src="/attachments/studio/theme-customizer/upload-logo.png" alt="Uploading Your Logo" >}}
 
 3. In the dialog box, select the picture you want to use as the logo.
 
@@ -107,8 +105,7 @@ To change the color, do the following:
     1. Select a color in the palette.
     2. Filling in the code of the color.
     3. Selecting the color from **Brand Colors** and **Logo Colors** (**Logo Colors** are only available when you [upload a logo](#uploading-logo)).<br/>
-	{{% image_container width="200" %}}![Brand Colors and Logo Colors](/attachments/studio/theme-customizer/adjusting-color.png)
-    {{% /image_container %}}
+	{{< figure src="/attachments/studio/theme-customizer/adjusting-color.png" alt="Brand Colors and Logo Colors"   width="200"  >}}
 
 3. See the result in the preview.
 

@@ -38,7 +38,7 @@ For more information, see [Data Grid (Document Template)](/refguide7/data-grid-d
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/document-templates/data-grid-document-template/918138.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/document-templates/data-grid-document-template/918138.png" >}}
 
 A data grid showing a list of orders with a description and the referenced customer name.
 
@@ -52,7 +52,7 @@ For more information, see [Data View (Document Template)](/refguide7/data-view-d
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/document-templates/data-view-document-template/918139.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/document-templates/data-view-document-template/918139.png" >}}
 
 A data view showing order line information.
 
@@ -66,7 +66,7 @@ For more information, see [Template Grid (Document Template)](/refguide7/templat
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/document-templates/918137.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/document-templates/918137.png" >}}
 
 A template grid showing products with name and description.
 
@@ -85,7 +85,7 @@ For more information, see [Table (Document Template)](/refguide7/table-document-
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/document-templates/918134.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/document-templates/918134.png" >}}
 
 A table with four rows and three columns. Last row containing a data view with another table.
 
@@ -99,7 +99,7 @@ For more information, see [Page Break (Document Template)](/refguide7/page-break
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/document-templates/918135.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/document-templates/918135.png" >}}
 
 A page break
 
@@ -123,7 +123,7 @@ For more information, see [Dynamic Label (Document Template)](/refguide7/dynamic
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/document-templates/918131.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/document-templates/918131.png" >}}
 
 A dynamic label linking to a customer name.
 
@@ -137,7 +137,7 @@ For more information, see [Dynamic Image (Document Template)](/refguide7/dynamic
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/document-templates/918132.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/document-templates/918132.png" >}}
 
 A dynamic image inside a table cell, showing the preset default image.
 
@@ -155,7 +155,7 @@ For more information, see [Static Label (Document Template)](/refguide7/static-l
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/document-templates/918130.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/document-templates/918130.png" >}}
 
 A label with text 'Customer name'.
 
@@ -175,7 +175,7 @@ For more information, see [Static Image (Document Template)](/refguide7/static-i
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/document-templates/918133.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/document-templates/918133.png" >}}
 
 A static image inside a table cell.
 

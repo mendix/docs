@@ -13,8 +13,7 @@ tags: ["studio", "page editor", "input widgets", "widgets"]
 
 **Input Elements** can only function inside a data container (a list view or a data view). You can either place widget in an existing data container; or click **Wrap with a new data view** in **Properties** to create a data view automatically and place an input element inside it. 
 
-{{% image_container width="350" %}}![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-input-elements/wrap-in-data-view.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-input-elements/wrap-in-data-view.png"   width="350"  >}}
 
 ## 2 Input Elements Overview
 
@@ -85,7 +84,7 @@ Specific properties of the input elements are described in the table below:
 
 In **Input Validation**, you can specify whether the widget's value should be validated. You can set a validation type for an input widget and specify an end-user message in case validation fails. For example, you can mark the **Full name** field as required for new customers and you can add a message saying: "Please specify your name to proceed".
 
-![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-input-elements/Validation-type-required.png)
+{{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-input-elements/Validation-type-required.png" >}}
 
 The **Input Validation** section properties are described in the table below:
 

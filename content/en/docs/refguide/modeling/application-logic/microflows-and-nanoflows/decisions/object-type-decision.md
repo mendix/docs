@@ -27,9 +27,7 @@ The object type decision properties consists of the following sections:
 
 * [Input](#input)
 
-    {{% image_container width="250" %}}
-![](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/object-type-decision/object-type-decision-properties.png)
-{{% /image_container %}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/object-type-decision/object-type-decision-properties.png"   width="250"  >}}
 
 ### 2.1 Common Section {#common} 
 
@@ -45,7 +43,7 @@ The input object contains an object of a generalized entity.
 
 For example, you have an entity **Student** and an entity **Professor** which have an entity **Member** as their generalization. You want to open a different page for **Professor** than for any other **Member**. The selected **Member** object is available in the parameter **SelectedMember** and is used as input to the object type decision. Note that there is no outgoing flow for **Student**. If an outgoing flow is missing, the closest generalization that has an outgoing flow is searched. In this case, this generalization is **Member**. The outgoing flow with the caption **(empty)** is followed when **SelectedMember** does not contain an object.
 
-![](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/object-type-decision.png)
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/object-type-decision.png" >}}
 
 
 

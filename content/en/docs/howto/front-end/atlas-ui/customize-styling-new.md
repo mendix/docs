@@ -30,7 +30,7 @@ For more information on how changes can be quickly previewed, see the [Preview a
 The styling editor is based on the editor that powers Visual Studio Code and is also used for JavaScript actions. You can find the styling files (JS, SCSS) and theme settings (JSON) inside the App Explorer, and edit them using this editor.
 By default, Studio Pro shows styling files on the app level and from UI resources modules, such as **Atlas_Core**. This can be changed in [preferences](/refguide/preferences-dialog/) (Edit > **Preferences** > **General** > **Interface**) or by simply right-clicking **Styling** in the App Explorer:
 
-![styling editor settings](/attachments/howto/front-end/atlas-ui/customize-styling-new/styling-editor-settings.png)
+{{< figure src="/attachments/howto/front-end/atlas-ui/customize-styling-new/styling-editor-settings.png" alt="styling editor settings" >}}
 
 To learn more about the file and folder structure, see the [File and Folder Structure](#file-and-folder) section below.
 
@@ -126,7 +126,7 @@ See the examples below for more information on creating a re-usable theme module
 
 Modules that contain theme styling should be marked as UI resources modules. To do so, right-click the **Module {name}** in the App Explorer, then click **Mark as UI resources module**. This will give the modules a green icon, which makes it easy to distinguish theme modules from other modules, and also influences the order in which styling will be applied from those modules:
 
-![green module](/attachments/howto/front-end/atlas-ui/customize-styling-new/green-module.png)
+{{< figure src="/attachments/howto/front-end/atlas-ui/customize-styling-new/green-module.png" alt="green module" >}}
 
 #### 4.2 Ordering UI Resource Modules
 
@@ -134,7 +134,7 @@ When a module contains styling (SCSS/CSS), be sure it is added to the compiled C
 
 You can set an explicit order in the theme settings (**App Settings** > **Theme**). This contains a list of all modules that are marked as UI resource modules, and allows you to set the explicit order in which they are added to the CSS file. Note that the lower a module is ordered in the list, the higher its precedence. For example, an app that uses a company theme module could be ordered as follows:
 
-![app theme settings](/attachments/howto/front-end/atlas-ui/customize-styling-new/app-theme-settings.png)
+{{< figure src="/attachments/howto/front-end/atlas-ui/customize-styling-new/app-theme-settings.png" alt="app theme settings" >}}
 
 ### 4.3 Examples
 
@@ -334,7 +334,7 @@ The *.scss* files compile in the following order:
 
 If SASS compilation fails, it will be shown in Studio Pro as a consistency error. This error gives information on what went wrong and what should be fixed:
 
-![theme compilation error](/attachments/howto/front-end/atlas-ui/customize-styling-new/compilation-error.png)
+{{< figure src="/attachments/howto/front-end/atlas-ui/customize-styling-new/compilation-error.png" alt="theme compilation error" >}}
 
 The content from the **public** folder will be copied to the same folder as the *theme.compiled.css* file when deployed. This allows you to reference those resources using a relative path in the theme module's *SCSS*. For example, to use the image *themesource/{module}/public/images/login-background.jpg* from *themesource/{module}/web/main.scss*, you can simply use `url("./images/login-background.jpg)`.
 
@@ -365,7 +365,7 @@ To disable the default styling of a web widget, open the *exclusion-variables.sc
 
 Pick the button widget as an example. The success button is by default styled as in **Figure 1**:
 
-![Figure 1](/attachments/howto/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig1.png)
+{{< figure src="/attachments/howto/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig1.png" alt="Figure 1" >}}
 
 **Figure 1 - All Styles Enabled**
 
@@ -377,7 +377,7 @@ $exclude-button-helpers: true;
 
 The resulting success button is visible in **Figure 2**:
 
-![Figure 2](/attachments/howto/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig2.png)
+{{< figure src="/attachments/howto/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig2.png" alt="Figure 2" >}}
 
 **Figure 2 - Helper Styles Disabled**
 
@@ -397,7 +397,7 @@ $exclude-button-helpers: false;
 
 The resulting success button is visible in **Figure 3**. Note that the underlying Bootstrap styles, the styles that the Atlas UI Framework is build upon, have become visible now.
 
-![Figure 3](/attachments/howto/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig3.png)
+{{< figure src="/attachments/howto/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig3.png" alt="Figure 3" >}}
 
 **Figure 3 - All Styles Disabled (visible Bootstrap styles)**
 
@@ -469,7 +469,7 @@ To disable the default styling of a native mobile widget, open the *exclusionVar
 
 Pick the button widget as an example again. The success button is by default styled as in **Figure 4**.
 
-![Figure 4](/attachments/howto/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig4.png)
+{{< figure src="/attachments/howto/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig4.png" alt="Figure 4" >}}
 
 **Figure 4 - All Styles Enabled**
 
@@ -481,7 +481,7 @@ export const excludeButtonsHelpers = true;
 
 The resulting success button is visible in **Figure 5**.
 
-![Figure 5](/attachments/howto/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig5.png)
+{{< figure src="/attachments/howto/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig5.png" alt="Figure 5" >}}
 
 **Figure 5 - Helper Styles Disabled**
 
@@ -501,7 +501,7 @@ export const excludeButtonsHelpers = false;
 
 The resulting success button is visible in **Figure 6**. Note that the button text is white and, thus, not visible.
 
-![Figure 6](/attachments/howto/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig6.png)
+{{< figure src="/attachments/howto/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig6.png" alt="Figure 6" >}}
 
 **Figure 6 - All Styles Disabled (Button Text is White)**
 

@@ -63,7 +63,7 @@ Before you deploy an app, you should configure the binding keys in your app as f
 
 1.  In the **App Explorer** or the **Project Explorer**, go to **InvoiceProcessing** > **Configurations**. **Access_Key**, **Secret_Key**, and **Encryption_Key** are defined as constants.
 
-    ![Keys under Configurations in a tree view](/attachments/appstore/app-services/invoice-processing/configurations-keys.png)
+    {{< figure src="/attachments/appstore/app-services/invoice-processing/configurations-keys.png" alt="Keys under Configurations in a tree view" >}}
 
 2. For each constant, double-click the constant, enter the key that you saved, and click **OK** to save the changes.
 
@@ -83,19 +83,19 @@ To use the Invoice Processing app service, first you need to create a model, the
     3. Click **Invoice Processing** to open the [service management dashboard](/appstore/general/app-store-overview/#service-management-dashboard).
     4.  Click **Manage Instance** to open the **Document Model Training** application.
     
-        ![Document model training app login page](/attachments/appstore/app-services/invoice-processing/document-model-training-app.png)
+        {{< figure src="/attachments/appstore/app-services/invoice-processing/document-model-training-app.png" alt="Document model training app login page" >}}
     
     5. Log into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account.    
     
 2.  From the drop-down list below **Select an environment to continue**, select an environment that you use to train models for the Invoice Processing app service. The **Existing Models** in this environment are displayed.
 
-    ![Existing Invoice models list](/attachments/appstore/app-services/invoice-processing/existing-invoice-models.png)
+    {{< figure src="/attachments/appstore/app-services/invoice-processing/existing-invoice-models.png" alt="Existing Invoice models list" >}}
 
     {{% alert color="info" %}} The model is ready to use only when the **Status** of this model is **Published**. {{% /alert %}}
 
 3.  To train a new model, click **Create New Model** on the page. The **Create New Model** dialog box opens.
 
-    ![Create Invoice Model dialog box](/attachments/appstore/app-services/invoice-processing/create-invoice-model-dialog-box.png)
+    {{< figure src="/attachments/appstore/app-services/invoice-processing/create-invoice-model-dialog-box.png" alt="Create Invoice Model dialog box" >}}
 
 4.  Enter a unique **Model Name**, select a **Region**, and then **Country**. You may select multiple countries for a given **Region**.
 
@@ -107,7 +107,7 @@ To use the Invoice Processing app service, first you need to create a model, the
 
     An **Information** pop-up window appears notifying the user that the model is being trained.
 
-    ![Create Invoice Model dialog box](/attachments/appstore/app-services/invoice-processing/info-pop-up-dialog-box.png)
+    {{< figure src="/attachments/appstore/app-services/invoice-processing/info-pop-up-dialog-box.png" alt="Create Invoice Model dialog box" >}}
 
 6. Click **OK**. The new model appears in the **Existing Models** list with the status **In Progress**.
 7. Click **Refresh** and wait until the **Status** of the model becomes **Published**. Once the model is published, it is ready to use.
@@ -123,14 +123,14 @@ You need to use an [Import Mapping](/refguide/mapping-documents/#import-mappings
     4.  Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens.
     5.  Drag the sample invoice into the box where it says **Drag & drop your image file here**. You can also click **Browse** and select the file.
 
-        ![Sample Extraction dialog box](/attachments/appstore/app-services/invoice-processing/sample-extraction-dialog-box.png)
+        {{< figure src="/attachments/appstore/app-services/invoice-processing/sample-extraction-dialog-box.png" alt="Sample Extraction dialog box" >}}
 
     6. Click **Download JSON** to get the JSON structure.
 2.  To add the JSON structure to your app, perform the following steps:
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON structure.
     2.  From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures/).
 
-        ![json-structure](/attachments/appstore/app-services/invoice-processing/json-structure.png)
+        {{< figure src="/attachments/appstore/app-services/invoice-processing/json-structure.png" alt="json-structure" >}}
 
     3. In the **Add JSON Structure** dialog box, enter a **Name** for the JSON Structure and click **OK**. The **JSON Structure** dialog box opens.
     4. In the **JSON Snippet** box, add the content of the JSON mapping file that you generated. The system converts the JSON snippet into a schema structure automatically. You will need this schema structure to create the Import Mapping.
@@ -141,7 +141,7 @@ You need to use an [Import Mapping](/refguide/mapping-documents/#import-mappings
     3.  In the **Add Import Mapping** dialog box, enter a **Name** for the Import Mapping and click **OK**. The **Select schema elements for import mapping** dialog box opens.
     4.  For **Schema source**, select **JSON structure** and **Select** the JSON structure that you created.
 
-        ![schema-source-json-structure](/attachments/appstore/app-services/invoice-processing/schema-source-json-structure.png)
+        {{< figure src="/attachments/appstore/app-services/invoice-processing/schema-source-json-structure.png" alt="schema-source-json-structure" >}}
 
     5. Click **OK** to save the changes and close the dialog box.
 
@@ -149,12 +149,12 @@ You need to use an [Import Mapping](/refguide/mapping-documents/#import-mappings
 
 1.  In the **Toolbox**, drag **Invoice Processing** activity from the **Document Data Capture Service** category into your microflow.
 
-    ![intelligent-document-microflow](/attachments/appstore/app-services/invoice-processing/invoice-processing-microflow.png)
+    {{< figure src="/attachments/appstore/app-services/invoice-processing/invoice-processing-microflow.png" alt="intelligent-document-microflow" >}}
 
 2. Create a list of image that inherits from `System.Image`. Images where data are extracted should be passed as a list, as shown in the microflow above.
 3.  Double-click the **Invoice Processing** activity to open the dialog box.
 
-    ![Intelligent Document Service dialog box](/attachments/appstore/app-services/invoice-processing/invoice-processing-dialog-box.png)
+    {{< figure src="/attachments/appstore/app-services/invoice-processing/invoice-processing-dialog-box.png" alt="Intelligent Document Service dialog box" >}}
 
 4.  Click **Edit** to enter the **Model Id** of your model.
 5. Click **Edit** to select the **Image List** which inherits from `System.Image`.
@@ -178,4 +178,4 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
 The AI and OCR technologies used by Invoice Processing Service are powered by [ABBYY&reg;](https://www.abbyy.com). Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.
 
-![Technical Provider ABBYY](/attachments/appstore/app-services/invoice-processing/logo-powered-by-abbyy.png)
+{{< figure src="/attachments/appstore/app-services/invoice-processing/logo-powered-by-abbyy.png" alt="Technical Provider ABBYY" >}}

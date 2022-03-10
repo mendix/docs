@@ -53,13 +53,13 @@ If you have chosen to register a connected cluster, the Mendix Gateway Agent wil
 
 Using this channel, any Mendix user who has been given the correct authority can pass instructions to the Mendix Operator and receive status information about the cluster. This includes instructions needed to deploy an app, or to configure the environment.
 
-![](/attachments/developerportal/deploy/private-cloud/mx4pc-architecture.png)
+{{< figure src="/attachments/developerportal/deploy/private-cloud/mx4pc-architecture.png" >}}
 
 ### 2.2 Standalone Architecture
 
 If you have chosen to register a standalone cluster, then all communication with the Mendix Operator will be through instructions which are made directly through the Kubernetes API. These can be made manually, but are generally performed by your CI/CD pipeline. In this case, you will also have to have local source control of the Mendix app deployment packages to ensure that the deployment process can discover them.
 
-![](/attachments/developerportal/deploy/private-cloud/mx4pc-standalone-architecture.png)
+{{< figure src="/attachments/developerportal/deploy/private-cloud/mx4pc-standalone-architecture.png" >}}
 
 ## 3 Product Capability Comparison
 

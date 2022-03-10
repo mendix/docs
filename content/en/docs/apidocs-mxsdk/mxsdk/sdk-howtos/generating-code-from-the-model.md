@@ -23,7 +23,7 @@ console.log(JavaScriptSerializer.serializeToJs(someFullyLoadedModelUnit));
 
 Let's say you want to generate a set of entities in a domain model that looks like this:
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-howtos/generating-code-from-the-model/16844118.png)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-howtos/generating-code-from-the-model/16844118.png" >}}
 
 First you need to create the two entities in the domain model and commit that to Team Server. Next, you need to write a script like this:
 

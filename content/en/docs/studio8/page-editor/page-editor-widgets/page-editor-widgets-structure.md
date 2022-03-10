@@ -24,7 +24,7 @@ There are the following Structure widgets:
 
 * [Snippet](#snippet)
 
-    ![](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/structure-widgets.jpg)
+    {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/structure-widgets.jpg" >}}
 
 ## 2 Columns and Sidebars{#columns}
 
@@ -34,19 +34,17 @@ There are the following Structure widgets:
 
 The **Layout Grid** helps you to structure a page and make it responsive immediately. This means that a layout grid has a built-in behavior to show how a page will look like on different devices. Switch **Device** modes to see how a page will be displayed on a phone, tablet, or desktop:
 
-{{% image_container width="300" %}}![Device Modes](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/device-modes.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/device-modes.png" alt="Device Modes"   width="300"  >}}
 
 Layout grid contains [columns](#column) and [rows](#row). 
 
 A row consists of one or more columns that are placed next to each other in a responsive (desktop) view. 
 
-![Row Example](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/row-example.png)
+{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/row-example.png" alt="Row Example" >}}
 
 A column is a cell inside a row. You can place one or several widgets inside a column, for example, you can place two buttons inside it.
 
-{{% image_container width="300" %}}![Column Example](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/column-example.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/column-example.png" alt="Column Example"   width="300"  >}}
 
 For more information on rows and columns, see [Row Properties](#row) and [Column Properties](#column) sections. 
 
@@ -61,8 +59,7 @@ Layout grid properties consist of the following sections:
 
 * [Design](/studio8/page-editor-widgets-design-section/)
 
-    {{% image_container width="250" %}}![Layout Grid Properties](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/layout-grid-properties.png)
-    {{% /image_container %}}
+    {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/layout-grid-properties.png" alt="Layout Grid Properties"   width="250"  >}}
 
 #### 3.1.1 Expand Section {#expand-section}
 
@@ -103,8 +100,7 @@ For information on the **Design** section and its properties, see [Design Sectio
 
 * [General](#general-section-row)
 
-	{{% image_container width="250" %}}![Row Properties](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/row-sections.png)
-	{{% /image_container %}}
+	{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/row-sections.png" alt="Row Properties"   width="250"  >}}
 
 #### 3.2.1 Expand Section {#expand-section-row}
 
@@ -128,12 +124,11 @@ In the **General** section of a row you can select the number of columns in it, 
 
     * You can also set the number of columns in the working area: select one of the columns and click a plus icon on top of it to add a new column to the right
 
-        {{% image_container width="300" %}}![Adding New Column](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/adding-new-column.png){{% /image_container %}}
+        {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/adding-new-column.png" alt="Adding New Column"   width="300"  >}}
 
 * <a name="align-columns"></a>**Align Columns Vertically** – aligns all columns in the row vertically, you can select the following options:
 
-    {{% image_container width="280" %}}![](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/align-columns.png)
-    {{% /image_container %}}
+    {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/align-columns.png"   width="280"  >}}
 
 * **Spacing Between Columns** – when enabled, adds spacing between columns
 
@@ -145,8 +140,7 @@ Column properties consist of the following sections:
 
 * [General](#general-section-column)
 
-	{{% image_container width="250" %}}![Column Sections](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/column-sections.png)
-	{{% /image_container %}}
+	{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/column-sections.png" alt="Column Sections"   width="250"  >}}
 
 #### 3.3.1 Expand Section {#expand-section-column}
 
@@ -169,7 +163,7 @@ In the **General** section, you can set the column [width](#column-width) and [a
 
 You can set the column width for desktop, tablet, or phone by choosing the corresponding device mode:
 
-![](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/width-per-device.png)
+{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/width-per-device.png" >}}
 
 You can choose the following options:
 
@@ -181,13 +175,11 @@ You can choose the following options:
 
     * When you select **Manual** the slider appears that allows you to set the width of the column from 1 to 12:
     
-	    ![](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/column-size.png)
+	    {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/column-size.png" >}}
 
 You can also resize columns manually in the working area: drag the column border to change its size. 
 
-{{% image_container width="300" %}}
-![Resizing Column](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/resizing-column.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/resizing-column.png" alt="Resizing Column"   width="300"  >}}
 
 The **Width** property can be used to make your layout more flexible and adaptive to different types of devices.
 
@@ -195,13 +187,11 @@ For example, you have a layout grid with one row and two columns: a picture is i
 
 For the *desktop* and *tablet*, you might want to set the first column with a picture to **Auto-fit content** and and the second one to **Auto-fill**, this way the first column will adjust to the size of the picture, while the second one will take the rest of the row:
 
-![Layout Example, Desktop](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/layout-example-desktop.png)
+{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/layout-example-desktop.png" alt="Layout Example, Desktop" >}}
 
 For *phone*, it can be a good idea to place two columns one under another, setting them to **Manual** width of *12*. In this case, the second column will be automatically wrapped to another line:
 
- {{% image_container width="300" %}}
-![Layout Example, Phone](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/layout-example-phone.png)
-{{% /image_container %}}
+ {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/layout-example-phone.png" alt="Layout Example, Phone"   width="300"  >}}
 
 ##### 3.3.2.2 Align Vertically {#align-column}
 
@@ -211,8 +201,7 @@ The **Align Vertically** property overrides the [Align Columns Vertically](#alig
 
 A **Container** is used as a layout element where you can place a widget or a group of widgets and simultaneously style, drag or delete them. For example, you can place a section title and input widgets for filling out program's details in one container, and subsequently reposition the whole container at once to a different location on the page. 
 
-{{% image_container width="300" %}}![Container Example](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/container.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/container.png" alt="Container Example"   width="300"  >}}
 
 Container properties consist of the **Design** section. For information, see [Design Section](/studio8/page-editor-widgets-design-section/).
 
@@ -220,8 +209,7 @@ Container properties consist of the **Design** section. For information, see [De
 
 A group box is used to group widgets together. The group box can be configured to collapse or expand dynamically with all the elements inside it. 
 
-{{% image_container width="300" %}}![Group Box Example](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/group-box.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/group-box.png" alt="Group Box Example"   width="300"  >}}
 
 ### 5.1 Group Box Properties
 
@@ -239,8 +227,7 @@ Properties available in the **General** section are described in the table below
 
 A tab container is a container that is used to show information categorized into tabs. This can be useful if the amount of information that you would like to display is larger than the amount of space on the screen. For example, you can show a list of customers on one tab, and orders on the other one. 
 
-{{% image_container width="300" %}}![Tab Container Example](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/tab-container-example.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/tab-container-example.png" alt="Tab Container Example"   width="300"  >}}
 
 You can place a widget or a group of widgets inside each tab and configure information in them separately. 
 
@@ -250,13 +237,11 @@ In the **General** section, you can configure the following properties:
 
 *  **Tabs** – use radio buttons to switch from one tab to another; click the tab and drag it to change the order of tabs; click the **Edit** icon to open the tab properties and configure it (for more information, see section the [Tab Properties](#tab-properties) section)
 
-	{{% image_container width="300" %}}![](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/tab-container-tabs-property.png)
-	{{% /image_container %}}
+	{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/tab-container-tabs-property.png"   width="300"  >}}
 
 *  **Add New Tab** – adds a new tab to your tab container; tab properties will open automatically (for more information, see section the [Tab Properties](#tab-properties) section)
 
-	{{% image_container width="300" %}}![](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/add-new-tab.png)
-	{{% /image_container %}}
+	{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/add-new-tab.png"   width="300"  >}}
 
 ### 6.2 Design Section
 
@@ -270,8 +255,7 @@ Each tab has the following properties:
 
 *  **Default Tab** – defines which tab is active when the page is opened. If no tab is set as the default one, the first tab page will be shown. By default, none of the tabs are set as a default tab.
 
-	{{% image_container width="300" %}}![](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/tab-properties.png)
-	{{% /image_container %}}
+	{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/tab-properties.png"   width="300"  >}}
 
 ## 7 Snippet Overview {#snippet}
 
@@ -279,8 +263,7 @@ Snippets define reusable elements of pages and are created in Studio Pro. By usi
 
 For example, your team member in Studio Pro has created a snippet and added a customer form to it turning this form into a reusable page element. You can use this snippet on your pages in Studio too:
 
-{{% image_container width="500" %}}![](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/snippet-example.jpg)
-{{% /image_container %}}
+{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/snippet-example.jpg"   width="500"  >}}
 
 While you can call (use) snippets on your pages in Studio, you cannot create, change, or delete them. For more information on snippets in Studio Pro, see [Snippet](/refguide8/snippet/).
 
@@ -296,7 +279,7 @@ To call a snippet and add it to your page, do the following:
 
 3. In the **Select Snippet** dialog box, select a snippet you would like to use on your page and click **Select**. 
 
-    ![](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/select-snippet.jpg)
+    {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-structure/select-snippet.jpg" >}}
 
 The snippet is added to your page. 
 

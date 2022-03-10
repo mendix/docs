@@ -50,9 +50,9 @@ In the **Data Hub** pane the service and the entity are displayed as consumed bo
 
 If the metadata contract at the specified service endpoint is different to the contract in the current project model, this is indicated in the **Data Hub** pane search results and  **Properties** pane for the service with a blue **Update** arrow:
 
-![Data Hub Pane update](/attachments/refguide8/modeling/integration/consumed-odata-services/data-hub-pane-update.png)
+{{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/data-hub-pane-update.png" alt="Data Hub Pane update" >}}
 
-![update service project-pane](/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/project-pane-update-available.png)
+{{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/project-pane-update-available.png" alt="update service project-pane" >}}
 
 This means that the consumed service will have to be **Updated** to the new contract. If this is not done, then this will result in errors when data has to be retrieved from the endpoint based on an outdated contract. Changes in consumed OData service contracts is further described in [Updating or Switching a Consumed OData Service](/refguide8/consumed-odata-service/#updating).
 

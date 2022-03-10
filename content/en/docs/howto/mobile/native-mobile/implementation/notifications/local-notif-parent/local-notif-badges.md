@@ -30,29 +30,29 @@ Since you know how to send a simple local notification, you can now set the badg
 1. Open **ACT_CreateAndSendNotification**.
 2.  Drag and drop a **Create variable** activity to the right of the three string variables you made:
 
-	{{% image_container width="500" %}}![new create variable](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/new-variable-badge.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/new-variable-badge.png" alt="new create variable"   width="500"  >}}
 
 3. Double-click the variable activity and select **Data type** > **Integer/Long**.
 4. Type *1* into the expression value field. 
 5.  Type *badge_number* into the **variable name** field:
 
-	{{% image_container width="400" %}}![badge number](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/badge-1.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/badge-1.png" alt="badge number"   width="400"  >}}
 
 6. Click **OK**.
 7.  Drag and drop a **Set badge number** JavaScript action to the right of your merge activity:
 
-	![drag set badge number](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/set-badge-act.png)
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/set-badge-act.png" alt="drag set badge number" >}}
 
 8. Double-click the badge number activity.
 9.  Set the value of **Badge number** to **$badge_number**
 
-	![value badge number](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/badge-input.png)
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/badge-input.png" alt="value badge number" >}}
 
 10. Click **OK**.
 
 Start and load the app on your mobile device and tap the button which calls your nanoflow. You will see a notification. Go to your device's start screen to see the notification badge on your app:
 
-{{% image_container width="300" %}}![badge number on mobile](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/badge-mobile.png){{% /image_container %}}
+{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/badge-mobile.png" alt="badge number on mobile"   width="300"  >}}
 
 ## 4 Reducing a Badge Number
 
@@ -60,7 +60,7 @@ To make your badge disappear after your user opens your app, follow the instruct
 
 1. Drop an **App events** widget onto **Home_Native** (you have this widget because it is included in the [Blank Native Mobile App](https://marketplace.mendix.com/link/component/109511/)):
 
-	![app event widget](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/app-events.png)
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/app-events.png" alt="app event widget" >}}
 
 2. Double-click your **App events** widget.
 3. Select **On load** > **Call a nanoflow**.
@@ -68,25 +68,25 @@ To make your badge disappear after your user opens your app, follow the instruct
 5. Go to **ACT_ClearBadge**.
 6. Drag and drop a **Set badge number** activity onto your nanoflow:
 
-	![set badge activity](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/clear-set-badge.png)
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/clear-set-badge.png" alt="set badge activity" >}}
 
 7. Double-click your **Set badge number** activity.
 8. Click **Badge number** > **Edit**.
 9. Type *0* and click **OK**.
 10. Set **Use Return Value** to **No**:
 
-	{{% image_container width="400" %}}![return value](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/clear-badge-settings.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/clear-badge-settings.png" alt="return value"   width="400"  >}}
 
 11. Drag and drop a **Log message** activity onto your microflow.
 12. Double-click your **Log message** activity, write *Your notification has been cleared* into **Template**, and click **OK**:
 
-	{{% image_container width="500" %}}![clear text](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/clear-text-log.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/clear-text-log.png" alt="clear text"   width="500"  >}}
 
 13. Go back to your **Home_Native** page and double-click your **App events** activity.
 14. Make sure **Page load** > **On load** is set to **Call a nanoflow**, and specify that nanoflow as **ACT_ClearBadge**. This will make sure your badge clears on page load.
 15. Set **App resume** > **On resume** is set to **Call a nanoflow**, and specify that nanoflow as **ACT_ClearBadge**. This will make sure your badge clears when your app is resumed:
 
-	{{% image_container width="300" %}}![app event final settings](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/app-event-final-settings.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/app-event-final-settings.png" alt="app event final settings"   width="300"  >}}
 
 16. Click **OK** and save your changes.
 
@@ -95,12 +95,12 @@ You can now test your badge clearing.
 1. Start and load the app on your mobile device and tap the button which calls your nanoflow. You will see a notification. 
 2. Go to your device's start screen to see the notification badge on your app:
 
-	{{% image_container width="300" %}}![badge number on mobile](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/badge-mobile.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/badge-mobile.png" alt="badge number on mobile"   width="300"  >}}
 
 3. Tap your app again to open it.
 4. Navigate to your device's home screen and see that your Make It Native app has no more badge:
 
-	{{% image_container width="300" %}}![cleared-badge-icon.png](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/cleared-badge-icon.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-badges/cleared-badge-icon.png" alt="cleared-badge-icon.png"   width="300"  >}}
 
 5. Check your Studio Pro **Console** to read the **Your notification has been cleared** text you set up.
 

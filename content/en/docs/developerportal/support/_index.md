@@ -259,36 +259,28 @@ The full stack is depicted in the table below. This indicates which components a
 
 In the diagrams below, the following colors are used:
 
-{{% image_container width="50%" %}}
-![](/attachments/developerportal/support/legend.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/support/legend.png"   width="50%"  >}}
 
 ### 9.1 Mendix Public & Dedicated Cloud
 
 The Mendix Public and Dedicated Clouds are an integrated part of the Mendix Platform and are therefore fully supported as described in the SLA.
 Mendix Support has access to app health, logs, graphs and monitoring.
 
-{{% image_container width="75%" %}}
-![](/attachments/developerportal/support/mendix-cloud.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/support/mendix-cloud.png"   width="75%"  >}}
 
 ### 9.2 Mendix for Private Cloud
 
 Mendix for Private Cloud is based on the Kubernetes-Native Operator Framework. You can check the supported Kubernetes platforms in our [Private Cloud](/developerportal/deploy/private-cloud/) documentation. Check our [System Requirements](/refguide/system-requirements/) for other supported components like database and storage. The Mendix Gateway Agent and Mendix Operator are supported by Mendix.
 Mendix Support does not have access to app health, logs, graphs and monitoring. If you run into issues or want to ask a question on these supported components, please always provide relevant logs, data, and your own analysis that explains why you suspect the issue is caused by one of our supported components.
 
-{{% image_container width="75%" %}}
-![](/attachments/developerportal/support/private-cloud.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/support/private-cloud.png"   width="75%"  >}}
 
 ### 9.3 SAP Business Technology Platform
 
 Mendix provides an integration with the SAP Cloud Foundry environment of SAP Business Technology Platform (SAP BTP). Mendix applications are built to run on SAP BTP using the Mendix Cloud Foundry buildpack. Please check out the supported components in [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/).
 Mendix Support does not have access to app health, logs, graphs and monitoring – for support on these components, please contact [SAP Support](https://launchpad.support.sap.com/#/incident/create/prefilled/comp_name=XX-PART-MDX-RAD). If you run into issues or want to ask a question on the supported components, please always provide relevant logs, data, and your own analysis that explains why you suspect the issue is caused by one of our supported components
 
-{{% image_container width="40%" %}}
-![](/attachments/developerportal/support/sap-cloud-platform.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/support/sap-cloud-platform.png"   width="40%"  >}}
 
 ### 9.4 Tencent
 
@@ -296,9 +288,7 @@ Mendix provides an integration with Tencent for customers in China.
 
 Mendix Support does not have access to app health, logs, graphs and monitoring – for support on these components, please contact **Tencent Support**. If you run into issues or want to ask a question on the supported components, please always provide relevant logs, data, and your own analysis that explains why you suspect the issue is caused by one of our supported components
 
-{{% image_container width="40%" %}}
-![](/attachments/developerportal/support/tencent.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/support/tencent.png"   width="40%"  >}}
 
 ### 9.5 Cloud Foundry / Docker & Kubernetes / Traditional Architectures
 
@@ -308,9 +298,7 @@ Check our [System Requirements](/refguide/system-requirements/) for the supporte
 
 Mendix Support does not have access to app health, logs, graphs and monitoring. If you run into issues or want to ask a question on these supported components, please always provide relevant logs, data and your own analysis that explains why you suspect the issue is caused by one of our supported components.
 
-{{% image_container width="75%" %}}
-![](/attachments/developerportal/support/on-premises.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/support/on-premises.png"   width="75%"  >}}
 
 ## 10 Components of the Mendix Stack {#components}
 

@@ -47,7 +47,7 @@ To create the calling microflow and add it as the custom action to the workflow 
 
 3. In **Toolbox**, select **Microflow call** and drag and drop it to the flow:
 
-    ![Microflow call action](/attachments/howto/logic-business-rules/add-action-to-workflow-toolbox/microflow-call.png)
+    {{< figure src="/attachments/howto/logic-business-rules/add-action-to-workflow-toolbox/microflow-call.png" alt="Microflow call action" >}}
 
 4. Double-click the **Microflow call** activity to open its properties and set **Microflow** to **ACT_SAP_INVENTORY_LAPTOP_CHECK**.
 
@@ -61,7 +61,7 @@ To create the calling microflow and add it as the custom action to the workflow 
 
 9. Select the **Expose as workflow action** check-box:
 
-    ![Expose as Workflow Action](/attachments/howto/logic-business-rules/add-action-to-workflow-toolbox/expose-as-workflow-action.png)
+    {{< figure src="/attachments/howto/logic-business-rules/add-action-to-workflow-toolbox/expose-as-workflow-action.png" alt="Expose as Workflow Action" >}}
 
 10. The properties for the new workflow action appear. Do the following:
 
@@ -71,7 +71,7 @@ To create the calling microflow and add it as the custom action to the workflow 
 
     3. Set Icon to **pt_feedback_checkmark**:
 
-        ![Expose as Workflow Action Settings](/attachments/howto/logic-business-rules/add-action-to-workflow-toolbox/expose-as-workflow-action-properties.png)
+        {{< figure src="/attachments/howto/logic-business-rules/add-action-to-workflow-toolbox/expose-as-workflow-action-properties.png" alt="Expose as Workflow Action Settings" >}}
 
 11. Click **OK**.
 
@@ -85,7 +85,7 @@ Now that you have exposed the microflow as the custom workflow action, you can u
 
 2. Open the **Toolbox** and find the newly created **Integration** category there > the **Pass details to SAP** action:
 
-    ![Workflow Toolbox](/attachments/howto/logic-business-rules/add-action-to-workflow-toolbox/workflow-toolbox.png)
+    {{< figure src="/attachments/howto/logic-business-rules/add-action-to-workflow-toolbox/workflow-toolbox.png" alt="Workflow Toolbox" >}}
 
 3. Drag and drop the action to the workflow.
 

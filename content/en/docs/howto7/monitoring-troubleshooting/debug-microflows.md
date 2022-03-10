@@ -26,19 +26,19 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 There are three debugging panes to be aware of: **Breakpoints**, **Debugger**, and **Variables**:
 
-![](/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580004.png)
+{{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580004.png" >}}
 
 The **Breakpoints** pane shows all the microflows that contain breakpoints, which makes it easier to find your breakpoints. The best practice is to remove any breakpoints after you are done troubleshooting your microflows. You can always delete them from the **Breakpoints** pane.
 
-![](/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580017.png)
+{{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580017.png" >}}
 
 The **Debugger** pane is useful when you are debugging your microflow, as it will walk you through the microflow:
 
-![](/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580008.png)
+{{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580008.png" >}}
 
 The **Variables** pane shows the variables involved in your microflow and how they are changing as you step through the microflow via the **Debugger** pane:
 
-![](/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580005.png)
+{{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580005.png" >}}
 
 The best practice is to have the **Debugger** and **Variables** panes at different docks. The **Debugger** pane should usually be at the bottom of your development dock, and the **Variables** can be either on the left dock or the side dock. You want to be aware of how the variables are being changed in the microflow, and it is difficult to see those changes if both panes are tabs within the same dock.
 
@@ -49,12 +49,12 @@ Breakpoints are points in a microflow where the application will halt execution.
 1. Run your application locally.
 2. Open the microflow that needs debugging in the Modeler.
 3. Right-click any of the activities or splits in the microflow and select **Add breakpoint**. This sets a breakpoint on the selected step in the microflow, which is visually represented by a red dot:
-    ![](/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580020.png)
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580020.png" >}}
     You can open an overview of all the breakpoints by going to **View** > **Breakpoints**:
-    ![](/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580019.png)
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580019.png" >}}
 
     In the **Breakpoints** pane, you can enable, disable, and delete breakpoints. You can also configure a breakpoint condition and open the microflow that contains that breakpoint:
-    ![](/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580017.png)
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580017.png" >}}
 
 ## 5 Debugging
 
@@ -63,12 +63,12 @@ Breakpoints are points in a microflow where the application will halt execution.
     * As an end-user of the application, you will see a progress bar on the application
     * As a developer of the application, you will see the Mendix icon flashing on the panes task bar
 3. Click the icon on the panes task bar to open the Modeler. The element with the breakpoint that interrupts this microflow should be highlighted with a red border:
-    ![](/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580010.png)
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580010.png" >}}
 4. Open the **Debugger** pane from the **View** menu:
-    ![](/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580009.png)
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580009.png" >}}
 
     The debugger can be used to go through the microflow step by step:
-    ![](/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580008.png)
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580008.png" >}}
 5. You have the following options on this pane:  
     * Click **Step into** or **Step over** to move to the next step in the microflow (note that the difference between **Step into** and **Step over** is only noticeable if you run into a call microflow activity or a loop)
         * **Step into** means that the debugger steps into the sub microflow or loop
@@ -81,10 +81,10 @@ Breakpoints are points in a microflow where the application will halt execution.
 As you are stepping through a microflow, the variables pane will start to change. This overview will show you all the variables involved in the application. It will show you all the entities, references, current-user information, and device-type information. It can be used as you are stepping through the microflow to review the variable values and see if they match your expectations.
 
 You can open the **Variables** pane from the **View** menu:
-![](/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580006.png)
+{{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580006.png" >}}
 
 The **Variables** viewer can be used to inspect the values of variables in the microflow. The values are updated with every step you make in the **Debugger**:
-![](/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580005.png)
+{{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580005.png" >}}
 
 ## 7 Breakpoint Conditions
 
@@ -93,7 +93,7 @@ Sometimes it is necessary to configure a breakpoint so that the microflow only b
 To use breakpoint conditions, follow these steps:
 
 1. Right-click the activity or split in the microflow with a breakpoint and select **Edit breakpoint condition**:
-    ![](/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580018.png)
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580018.png" >}}
 2.  Use the expression below to make sure this breakpoint only interrupts the microflow if you are executing it yourself (replace `YourUserName` with your own user name):
 
     ```java
@@ -101,7 +101,7 @@ To use breakpoint conditions, follow these steps:
     ```
 
     The expression should look like this:
-    ![](/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580012.png)
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580012.png" >}}
 
 3. Click **OK** to save the breakpoint condition.
 

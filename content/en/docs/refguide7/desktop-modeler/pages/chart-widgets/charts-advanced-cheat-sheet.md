@@ -145,7 +145,7 @@ Adjust y to -0.2 for long X-axis ticks.
 }
 ```
 
-![Legend configurations](/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/advanced-layout-legend.gif)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/advanced-layout-legend.gif" alt="Legend configurations" >}}
 
 More options can be found here: [Legend configurations](https://plot.ly/javascript/reference/#layout-legend).
 
@@ -178,7 +178,7 @@ The axes properties apply to charts with x and y axes. They can be configured as
 }
 ```
 
-![Axes configurations](/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/axes.gif)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/axes.gif" alt="Axes configurations" >}}
 
 More options can be found here: [Axes configurations](https://plot.ly/javascript/reference/#layout-xaxis).
 
@@ -209,7 +209,7 @@ These properties apply to charts with more than one Y axis. They can be configur
 
 The layout properties above should be used with the corresponding [data properties](#multiple-y-axes-data-properties).
 
-![Multiple Y axes configurations](/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/multiple-y.gif)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/multiple-y.gif" alt="Multiple Y axes configurations" >}}
 
 More options can be found here: [Multiple Y axes configurations](https://plot.ly/javascript/multiple-axes/).
 
@@ -246,7 +246,7 @@ These properties apply to charts with more than one X axis. They can be configur
 
 The layout properties above should be used with the corresponding [data properties](#multiple-x-axes-data-properties).
 
-![Multiple X axes configurations](/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/multiple-x.gif)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/multiple-x.gif" alt="Multiple X axes configurations" >}}
 
 More options can be found here: [Multiple X axes configurations](https://plot.ly/javascript/multiple-axes/).
 
@@ -254,7 +254,7 @@ More options can be found here: [Multiple X axes configurations](https://plot.ly
 
 Titles, axes and series can contain complex mathematical expressions.
 
-![Math formula](/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/math-formula.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/math-formula.png" alt="Math formula" >}}
 
 ```
 $\sqrt{(n_\text{c}(t|{T_\text{early}}))}$
@@ -283,7 +283,7 @@ The title appears above the chart. It can be configured as:
 }
 ```
 
-![Title configurations](/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/title.gif)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/title.gif" alt="Title configurations" >}}
 
 More options can be found here: [Title configurations](https://plot.ly/javascript/reference/#layout-title).
 
@@ -314,7 +314,7 @@ Creates space around the chart.
 }
 ```
 
-![ Margin configurations ](/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/margin.gif)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/margin.gif" alt=" Margin configurations " >}}
 
 More options can be found here: [Margin configurations](https://plot.ly/javascript/reference/#layout-margin).
 
@@ -338,7 +338,7 @@ A small pop-up box that appears when the user moves the mouse pointer over a cha
 }
 ```
 
-![Tooltip configurations](/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/tooltip.gif).
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/tooltip.gif" alt="Tooltip configurations" >}}.
 
 More options can be found here: [Tooltip configurations](https://plot.ly/javascript/reference/#layout-hovermode).
 
@@ -386,7 +386,7 @@ Sets the range based on the plotted values, adjusting to fit them.
   }
 }
 ```
-![Range mode](/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/normal.gif)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/normal.gif" alt="Range mode" >}}
 
 **nonnegative:**
 
@@ -400,7 +400,7 @@ Shows only positive values, the range is based on the plotted positive values.
 }
 ```
 
-![Range mode](/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/nonnegative.gif)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/nonnegative.gif" alt="Range mode" >}}
 
 **tozero:**
 
@@ -414,7 +414,7 @@ This is the default range mode in charts. Both positive and negative ranges for 
 }
 ```
 
-![Range mode](/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/tozero.gif)  
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/tozero.gif" alt="Range mode" >}}  
 
 {{% alert color="info" %}}
 When **fill** for the series is set to something other than *none*, the Y-axis range is forced to start from zero (*tozero*). For example:
@@ -438,7 +438,7 @@ When **fill** for the series is set to something other than *none*, the Y-axis r
 ```
 {{% /alert %}}
 
-![Range mode](/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/rangemode-note.gif)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/rangemode-note.gif" alt="Range mode" >}}
 
 More options can be found here: [range mode configurations](https://plot.ly/javascript/reference/#layout-yaxis-rangemode).
 
@@ -450,7 +450,7 @@ These properties are applied to specific types of chart only. For each chart, da
 
 A mode and line configuration can be added in the **Advanced** configuration of the series.
 
-![Line styles](/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/line-styles.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/line-styles.png" alt="Line styles" >}}
 
 ``` json
 [
@@ -494,7 +494,7 @@ A mode and line configuration can be added in the **Advanced** configuration of 
 
 The type of a series can be changed. For example, you can make a bar series into a line series:
 
-![Column chart data properties](/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/combine-list-bar.gif)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/combine-list-bar.gif" alt="Column chart data properties" >}}
 
 ### 3.3 Pie Chart
 
@@ -506,7 +506,7 @@ Displays a circular graph divided into slices to illustrate numerical proportion
 }
 ```
 
-![Pie chart data properties](/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/pie-chart.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/pie-chart.png" alt="Pie chart data properties" >}}
 
 More options can be found here: [Pie chart data properties](https://plot.ly/javascript/reference/#pie).
 
@@ -527,7 +527,7 @@ Displays a line chart with the areas below the lines filled with colors.
 }
 ```
 
-![Area chart data properties](/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/area-chart.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/area-chart.png" alt="Area chart data properties" >}}
 
 More options can be found here: [Area chart data properties](https://plot.ly/javascript/reference/#area).
 
@@ -535,7 +535,7 @@ More options can be found here: [Area chart data properties](https://plot.ly/jav
 
 The example below shows how you can set up filter buttons to filter a chart by time.
 
-![Line chart data properties](/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/time-series-filters.png).
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/time-series-filters.png" alt="Line chart data properties" >}}.
 
 ``` json
 {
@@ -599,7 +599,7 @@ Displays two different Y axes with different scales, according to the ranges of 
 ]
 ```
 
-![Multiple Y axes properties](/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/data-multiple-y.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/data-multiple-y.png" alt="Multiple Y axes properties" >}}
 
 ### 3.7 Multiple X Axes Data Properties {#multiple-x-axes-data-properties}
 
@@ -620,7 +620,7 @@ Displays two different X axes with different scales.
 ]
 ```
 
-![Multiple X axes properties](/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/data-multiple-x.png).
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/data-multiple-x.png" alt="Multiple X axes properties" >}}.
 
 ## 4 Configurations Options (All Charts) {#config-options}
 

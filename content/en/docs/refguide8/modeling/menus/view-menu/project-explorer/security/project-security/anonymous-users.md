@@ -18,7 +18,7 @@ You can use anonymous users to allow end-users access your application without h
 
 Open **Project Security** > the **Anonymous users** tab to access the properties:
 
-![](/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/anonymous-users/anonymous-users-tab.png)
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/anonymous-users/anonymous-users-tab.png" >}}
 
 The properties of anonymous users are described in the table below:
 

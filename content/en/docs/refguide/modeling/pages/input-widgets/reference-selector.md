@@ -15,13 +15,13 @@ A reference selector must be placed in a [data widget](/refguide/data-widgets/).
 
 For example, if you have an employee they will work for one company. A company can have many employees. The entities **Employee** and **Company** have a one-to-many association, **Employee_Company**, which you can select by choosing a Company from the Employee through the reference selector.  
 
-![](/attachments/refguide/modeling/pages/input-widgets/reference-selector/reference-selector-domain-model.png)
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/reference-selector-domain-model.png" >}}
 
 In the reference selector, the name of the attribute of the associated objects which will be  displayed is shown inside the reference selector, between square brackets, and colored blue.
 
 For example, the following reference allows the end-user to see, and set, the association **Employee_Company** by selecting the **CompanyName** for the current **Employee**.
 
-![](/attachments/refguide/modeling/pages/input-widgets/reference-selector/reference-selector.png)
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/reference-selector.png" >}}
 
 {{% alert color="info" %}}
 If you only want to _display_ information, you can also use a [text box](/refguide/text-box/). This has the added advantage that you can choose an attribute from an object which is linked via several association steps.
@@ -31,8 +31,7 @@ If you only want to _display_ information, you can also use a [text box](/refgui
 
 An example of reference selector properties is represented in the image below:
 
-{{% image_container width="400" %}}![](/attachments/refguide/modeling/pages/input-widgets/reference-selector/reference-selector-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/reference-selector-properties.png"   width="400"  >}}
 
 Reference selector properties consist of the following sections:
 
@@ -134,7 +133,7 @@ This page can be used to select an associated object from the list of all possib
 
 It is recommended that you generate a new page to show by right-clicking the widget and selecting **Generate select page…**. You can then edit the resulting page, if required.
 
-![Generate a select page by right-clicking the widget](/attachments/refguide/modeling/pages/input-widgets/reference-selector/generate-select-page.png)
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/generate-select-page.png" alt="Generate a select page by right-clicking the widget" >}}
 
 See the [Show a Page](/refguide/on-click-event/#show-page) section of *On Click Event & Events Section*. Note that select pages must have a [pop-up layout](/refguide/layout/#layout-type).
 
@@ -190,7 +189,7 @@ Database is the default source for the selectable objects. By default, all datab
 
 You can limit the objects presented to the end-user by adding constraints. You will be guided through making constraints in the **Edit Constraints** dialog box:
 
-![Edit constraints dialog box](/attachments/refguide/modeling/pages/input-widgets/reference-selector/database-constraints.png)
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/database-constraints.png" alt="Edit constraints dialog box" >}}
 
 See the [constraints](/refguide/database-source/#constraints) section of *Database Source* for more information.
 
@@ -217,7 +216,7 @@ A reference selector can be constrained by one or more paths. This is typically 
 Imagine you have an ordering system where the products are sorted into categories – for example, food products and drink products. On a page where you can edit an order line, a product selector can be constrained by a category selector. After selecting a category (*food*, for example), the product selector is constrained by this category and shows only products in the category.
 
 _Example Domain model_
-![](/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-domain-model.png)
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-domain-model.png" >}}
 
 In the domain model the order line has many-to-one associations to both category and product. These associations can be be edited using reference selectors. A third association, from product to category, describes the relation between those two entities – that is, that every product has an associated category.
 
@@ -227,19 +226,19 @@ Such a triangle-shaped part of the domain model is what makes using **constraine
 
 On the form, you have two reference selectors: one for **Category** and one for **Product**.
 
-![](/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-reference-selectors.png)
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-reference-selectors.png" >}}
 
 Without a constraint, the reference set selector will offer all the products:
 
-![List of all products, food and drink](/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-no-constraint.png)
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-no-constraint.png" alt="List of all products, food and drink" >}}
 
 However, because of the structure of the domain model, you can add a constraint which means that only the products of the previously selected category will be chosen. This is set by the **Constrained by** property.
 
-![](/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-constrained-by.png)
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-constrained-by.png" >}}
 
 Now the end-user will only see products in the selected category:
 
-![List of just products in the drink category](/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-with-constraint.png)
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-with-constraint.png" alt="List of just products in the drink category" >}}
 
 **Sort Order**
 

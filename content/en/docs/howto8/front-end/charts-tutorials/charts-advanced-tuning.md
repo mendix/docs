@@ -29,7 +29,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 This is what the original chart looks like:
 
-![chart](/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-toggle-editor.png)
+{{< figure src="/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-toggle-editor.png" alt="chart" >}}
 
 To create a custom layout, follow these steps:
 
@@ -38,7 +38,7 @@ To create a custom layout, follow these steps:
 3. Open the charts widget settings.
 4. Go to the tab **Advanced**.
 5. Set the **Mode** to **Developer**.
-    ![chart widget properties](/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-widget-properties-advanced.png)
+    {{< figure src="/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-widget-properties-advanced.png" alt="chart widget properties" >}}
 6. Run the app.
 7. In your browser, open the page with the chart.
 8. Click on the button **Toggle Editor**.
@@ -59,11 +59,11 @@ To create a custom layout, follow these steps:
 
     After making some changes, the chart looks like this:
 
-    ![chart editor](/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-toggle-editor-open.png)
+    {{< figure src="/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-toggle-editor-open.png" alt="chart editor" >}}
 
 11. Paste the new font settings into the **Layout options** property in the **Advanced** tab.
 
-    ![chart editor](/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-widget-properties-advanced-layout.png)
+    {{< figure src="/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-widget-properties-advanced-layout.png" alt="chart editor" >}}
 
 12. Change the **Mode** back to **Advanced** in Studio Pro, this will remove the Toggle Editor button from the chart.  
 
@@ -77,23 +77,23 @@ Please note that the advanced settings only apply to the chart in Advanced or De
 
 This is what the chart looks like before making any changes:
 
-![chart editor](/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-widget-bar.png)
+{{< figure src="/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-widget-bar.png" alt="chart editor" >}}
 
 To create a custom configuration, follow these steps:
 
 1. Repeat steps 1 to 8 from the [layout instructions](#layout-changes).
 2. Select the name of the series you want to display differently from the drop-down menu: in this case **Series 1**.
 3. Edit the **Custom settings**; change them to `{ "type": "line" }`.
-    ![chart editor](/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-widget-bar-line-combination.png)
+    {{< figure src="/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-widget-bar-line-combination.png" alt="chart editor" >}}
 4. Copy the the custom settings.
 5. In Studio Pro, open the **Series 1** configuration.
 6. Paste the new configuration for the data into the **(Layout) Options** property in the **Advanced** tab.
 
-    ![chart editor](/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-widget-bar-line-combination-properties.png)
+    {{< figure src="/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-widget-bar-line-combination-properties.png" alt="chart editor" >}}
 
 After the changes, the chart looks like this:
 
-![chart editor](/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-widget-bar-line-combination-result.png)
+{{< figure src="/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-widget-bar-line-combination-result.png" alt="chart editor" >}}
 
 ## 5 Changing the Configuration 
 
@@ -105,12 +105,12 @@ To create custom a configuration, follow these steps:
 4. Add more Custom settings as desired. See [here](https://plot.ly/javascript/configuration-options/) for more configuration settings.
 5. The changes made in the editor are not persistable; copy the required settings.
 6. Paste the new configuration into the **Configuration options** property in the **Advanced** tab.
-    ![chart editor](/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-widget-properties-advanced-config.png)
+    {{< figure src="/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-widget-properties-advanced-config.png" alt="chart editor" >}}
 7. Change **Mode** to **Advanced**, set Studio Pro to remove the **Toggle Editor** button.
 
     {{% alert color="warning" %}}Please note that the advanced settings only apply to the chart in Advanced or Developer mode{{% /alert %}}
 
-    ![chart editor](/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-config-toolbar.png)
+    {{< figure src="/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-config-toolbar.png" alt="chart editor" >}}
 
 ## 6 Read More
 

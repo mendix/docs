@@ -10,7 +10,7 @@ An image uploader is used to upload images to the server. It also generates a th
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/pages/file-widgets/image-uploader/image-uploader.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/file-widgets/image-uploader/image-uploader.png" >}}
 The image uploader is placed in a nested data view here. The Profile entity is a specialization of System.Image.
 
 {{% /alert %}}

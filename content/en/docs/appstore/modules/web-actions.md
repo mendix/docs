@@ -25,20 +25,20 @@ To take a picture, follow these steps:
 
 1.  To use the **Take picture** action, create an entity that extends the **System.Image** entity:
 
-    ![Example entity](/attachments/appstore/modules/web-actions/entity.png)
+    {{< figure src="/attachments/appstore/modules/web-actions/entity.png" alt="Example entity" >}}
 
 2.  Drag the **Take picture** action from the Studio Pro toolbar to your nanoflow like in the example below. For that you need to pass an object for the action:
 
-    ![Example nanoflow](/attachments/appstore/modules/web-actions/nanoflow.png)
+    {{< figure src="/attachments/appstore/modules/web-actions/nanoflow.png" alt="Example nanoflow" >}}
 
 3.  Double-click the **Take picture** action and select which object you pass to the action to fill with the image properties:
 
-    ![Properties](/attachments/appstore/modules/web-actions/properties.png)
+    {{< figure src="/attachments/appstore/modules/web-actions/properties.png" alt="Properties" >}}
 
 4.  If needed, configure an option which shows a confirmation screen allowing users to accept or retake the picture:
 
-    ![Confirmation Screen](/attachments/appstore/modules/web-actions/confirmation.png)
+    {{< figure src="/attachments/appstore/modules/web-actions/confirmation.png" alt="Confirmation Screen" >}}
 
 5.  After the execution, check if the picture was taken or not. The value returned from the action is a Boolean:
 
-    ![Check](/attachments/appstore/modules/web-actions/check.png)
+    {{< figure src="/attachments/appstore/modules/web-actions/check.png" alt="Check" >}}

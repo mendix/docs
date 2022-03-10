@@ -71,7 +71,7 @@ To use this module after importing it from the Marketplace, follow these steps:
 
 This diagram describes updating an object via the Notify action:
 
-![update object via notify listen](/attachments/appstore/modules/pusher/SequenceDiagramUpdateObject.png)
+{{< figure src="/attachments/appstore/modules/pusher/SequenceDiagramUpdateObject.png" alt="update object via notify listen" >}}
 
 ### 3.1 Refresh Microflow
 
@@ -79,7 +79,7 @@ You can use a microflow to retrieve data that is changed by other users as long 
 
 The `$Message` variable contains the object in the session state. With the `[id = $Message]` XPath query, the object is retrieved from the database. The changes action only does a refresh in the client, which triggers a refresh update on the client page.
 
-![refresh microflow](/attachments/appstore/modules/pusher/RefreshMicroflowSample.png)
+{{< figure src="/attachments/appstore/modules/pusher/RefreshMicroflowSample.png" alt="refresh microflow" >}}
 
 ### 3.2  Security 
 

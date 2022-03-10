@@ -58,7 +58,7 @@ If you are an existing customer, you should deploy into your licensed cloud node
 
 As noted in the table above, a Free App will go to sleep after an hour or so of inactivity. If you access it while it is inactive, you will see the image below. If, after a couple of minutes, your app does not wake up, please contact our support team at [support.mendix.com](http://support.mendix.com).
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/appresumed.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/appresumed.png" >}}
 
 You can upgrade a Free App to a licensed node with a *node* in the Mendix Cloud. Instructions for doing this are here: [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
@@ -132,15 +132,15 @@ The Mendix Cloud has a limit of 1GB on the size of a deployment package.
 2. Open the licensed app.
 3. Click **App** in the top menu bar and select **Deploy to Licensed Cloud Node**:
 
-    ![](/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-to-cloud-node.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-to-cloud-node.png" >}}
 
 4. Click **Deploy**:
 
-    ![](/attachments/developerportal/deploy/mendix-cloud-deploy/select-revision.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/select-revision.png" >}}
 
 5. The deployment is now in progress. To see the uploaded package, click **Show online**:
 
-    ![](/attachments/developerportal/deploy/mendix-cloud-deploy/deployment-started.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deployment-started.png" >}}
 
 ### 3.2 Creating a Package from Team Server in the Developer Portal{#package-from-team-server}
 
@@ -167,7 +167,7 @@ The previous steps explained how to deploy a deployment package to the Mendix Cl
 5. Click the environment to which you want to deploy the package.
 6. Click **Transport**.
 
-    ![](/attachments/developerportal/deploy/mendix-cloud-deploy/transport-to-flex.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/transport-to-flex.png" >}}
 
 7. If asked to do so, clean the environment.
 8. Configure the constants (if necessary) by clicking **Constants** and **Edit constants value**. This can also be done in a later stage in the settings.
@@ -185,13 +185,13 @@ With a Free App, it's only possible to deploy your app to the Mendix cloud using
 
 Once you have created and worked on your App, you will want to share it with others in the Free App. You can deploy your Free App to an environment by clicking **Run > Run** at the top of Studio Pro. This will automatically deploy your app to a Free App environment.
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/runapp2.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp2.png" >}}
 
 ### 5.2 From Studio Pro – Method 2
 
 If you want to run your app in a Free App environment in the Mendix cloud, you can deploy to the Free App environment by clicking **Run** or **Publish**:
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" >}}
 
 ### 5.3 From Studio
 

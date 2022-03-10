@@ -22,15 +22,15 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install [Eclipse](https://eclipse.org/)
 * Add a Java action and open the project in Eclipse
 * Deploy the application for Eclipse by selecting **Deploy for Eclipse** from the project menu in the Modeler (you should redo this every time you make changes in the Modeler):
-    ![](/attachments/howto7/monitoring-troubleshooting/debug-java-actions/18581045.png)
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-java-actions/18581045.png" >}}
 
 ## 3 Setting Breakpoints
 
 1. Open Eclipse and locate the project in the **Package Explorer**.
 2. Double-click **ReverseCustomerName.java**:
-    ![](/attachments/howto7/monitoring-troubleshooting/debug-java-actions/18581041.png)
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-java-actions/18581041.png" >}}
 3. Place the cursor on the line that needs debugging, hold down **Ctrl+Shift**, and press **B** to enable a breakpoint. A blue dot in front of the line will appear: 
-    ![](/attachments/howto7/monitoring-troubleshooting/debug-java-actions/18580059.png)
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-java-actions/18580059.png" >}}
 
     {{% alert color="info" %}}
 
@@ -41,7 +41,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 ## 4 Debugging in Eclipse
 
 1. Select the project root node in the package explorer and click the debug icon in the Eclipse toolbar:
-    ![](/attachments/howto7/monitoring-troubleshooting/debug-java-actions/18580062.png)
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-java-actions/18580062.png" >}}
 
     The application will now be started with Eclipse attached as debugger.
 
@@ -50,7 +50,7 @@ Before starting this how-to, make sure you have completed the following prerequi
     * As a developer, you will see the Eclipse icon flashing on the Windows task bar
 3. Open Eclipse. You should now see the "debug" perspective of Eclipse.
 4. Click **Step into** (or press F5) or **Step over** (or press F6) to move on the next step in the microflow:
-    ![](/attachments/howto7/monitoring-troubleshooting/debug-java-actions/18580056.png)
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-java-actions/18580056.png" >}}
 
     {{% alert color="warning" %}}
 
@@ -58,7 +58,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{% /alert %}}
 5. Place your cursor on any of the variables in the Java action to see its value in a pop-up window:
-    ![](/attachments/howto7/monitoring-troubleshooting/debug-java-actions/18580057.png)
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-java-actions/18580057.png" >}}
 
 ## 5 Read More
 

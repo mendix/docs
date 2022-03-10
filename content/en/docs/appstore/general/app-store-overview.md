@@ -25,7 +25,7 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 * Click **Add Content** to [share new Marketplace content](/appstore/general/share-app-store-content/) you have developed
 * Explore various [industry solutions](#industry) and[content types](#types).
 
-![](/attachments/appstore/general/app-store-overview/home-page.jpg)
+{{< figure src="/attachments/appstore/general/app-store-overview/home-page.jpg" >}}
 
 <a name="industry"></a>The Marketplace offers **Industry** solutions for manufacturing, financial services, and other industries.
 
@@ -51,7 +51,7 @@ The following filter options are also available:
 
 Clicking the tile of a Marketplace component will bring you to its details page with the sections described below.
 
-![](/attachments/appstore/general/app-store-overview/component-details.jpg)
+{{< figure src="/attachments/appstore/general/app-store-overview/component-details.jpg" >}}
 
 ### 3.1 Header & Usage
 
@@ -118,7 +118,7 @@ Click an item in the sidebar to go to the page for that content:
 
 In this page, you can see the Marketplace content for which you have created at least one version. Click the context menu to access various options for managing your content:
 
-![](/attachments/appstore/general/app-store-overview/my-content.png)
+{{< figure src="/attachments/appstore/general/app-store-overview/my-content.png" >}}
 
 * **View item** – click this to go to the [component details page](#details) 
 * **Create a new draft** – click this to create a new draft version of the component
@@ -136,7 +136,7 @@ In addition, you may see a label on a component name for the [user group](#user-
 
 At the top of the page, you can click **Open Drafts** to see drafts of all the Marketplace content you have started:
 
-![](/attachments/appstore/general/app-store-overview/drafts.png)
+{{< figure src="/attachments/appstore/general/app-store-overview/drafts.png" >}}
 
 On this page, click the name of a Marketplace component to go to its [draft page](/appstore/general/share-app-store-content/#adding), where you can continue editing the component details.
 
@@ -146,7 +146,7 @@ Click **Delete** to delete a draft. You can also click **Withdraw** to withdraw 
 
 You can see all the Marketplace app services you have trials for on this page:
 
-![](/attachments/appstore/general/app-store-overview/my-subscriptions.jpg)
+{{< figure src="/attachments/appstore/general/app-store-overview/my-subscriptions.jpg" >}}
 
 The table presents the **Product Names** you have trials for. Clicking a product name takes you to the [service management dashboard](#service-management-dashboard) for the component. 
 
@@ -160,11 +160,11 @@ This page contains private content shared with you by other companies who have m
 
 This page presents the Marketplace content you have [saved](#saved). Click the bell icon in the lower-right corner of the component's tile to receive email notifications on new versions of the component:
 
-![](/attachments/appstore/general/app-store-overview/bell.png)
+{{< figure src="/attachments/appstore/general/app-store-overview/bell.png" >}}
 
 Click the context menu to access various options for managing this content:
 
-![](/attachments/appstore/general/app-store-overview/saved.png)
+{{< figure src="/attachments/appstore/general/app-store-overview/saved.png" >}}
 
 * **View item** – click this to go to the [component details page](#details) 
 * **Receive/Stop email notifications** – click this to start receivin email notifications or to stop the notifications if you already have them enabled
@@ -174,13 +174,13 @@ Click the context menu to access various options for managing this content:
 
 This page contains reviews of [My Content](#my-content) by other users as well as **My reviews** that you have written of other content:
 
-![](/attachments/appstore/general/app-store-overview/your-reviews.png)
+{{< figure src="/attachments/appstore/general/app-store-overview/your-reviews.png" >}}
 
 ### 4.6 Company Content {#company-content}
 
 On this page, you can see all the content your company has published. Click the context menu to access various options for managing this content:
 
-![](/attachments/appstore/general/app-store-overview/company-content.png)
+{{< figure src="/attachments/appstore/general/app-store-overview/company-content.png" >}}
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. However, the **Edit a version** and **Unpublish a version** options are only available for your own versions of company content.
 
@@ -188,7 +188,7 @@ The options in this menu are the same as described for the context menu for the 
 
 You can see all the Marketplace app services your company has subscribed to on this page:
 
-![](/attachments/appstore/general/app-store-overview/company-subscriptions.jpg)
+{{< figure src="/attachments/appstore/general/app-store-overview/company-subscriptions.jpg" >}}
 
 The table presents the **Product Names** your company has subscribed to. Clicking a product name takes you to the [service management dashboard](#service-management-dashboard) for the component. 
 
@@ -210,7 +210,7 @@ Only a Technical Owner for the subscription can edit the instance name and manag
 
 This page presents the **Binding Key Names** that have been created as well as details on the user who created the binding keys (**Created By**) and when the binding keys were created (**Created At**). Click **Delete** to delete that group of binding keys.
 
-![](/attachments/appstore/general/app-store-overview/binding-keys.jpg)
+{{< figure src="/attachments/appstore/general/app-store-overview/binding-keys.jpg" >}}
 
 You can also select a group of binding keys and click **Manage Instance** to go to the component provider's configuration page, where you can do further configuration.
 
@@ -246,7 +246,7 @@ The **Package Usage** section presents details on the limits of the purchased pl
 
 In the **Analytics** section, you can gain a visual intepretation of the plan usage.
 
-![](/attachments/appstore/general/app-store-overview/usage-dashboard.jpg)
+{{< figure src="/attachments/appstore/general/app-store-overview/usage-dashboard.jpg" >}}
 
 ### 4.8 Company Reviews {#company-reviews}
 
@@ -266,7 +266,7 @@ On this tab, you can enter the email address of a Mendix Platform user from your
 
 Once a member is added, you can select their permission level: **Group Member** or **Group Admin**. A Group Admin can manage the user group.
 
-![](/attachments/appstore/general/app-store-overview/members.png)
+{{< figure src="/attachments/appstore/general/app-store-overview/members.png" >}}
 
 To remove a member, click **Remove** next to their name.
 
@@ -274,7 +274,7 @@ To remove a member, click **Remove** next to their name.
 
 A guest is a Mendix Platform user from outside your organization who can download the selected private [Content](#group-content) of this group. To add a guest, enter their email address in the box and click **Add Guest**:
 
-![](/attachments/appstore/general/app-store-overview/guests.png)
+{{< figure src="/attachments/appstore/general/app-store-overview/guests.png" >}}
 
 The guest will receive an email notifying them of access to the private content. They can then see all the private Marketplace content shared with them in their [Shared with Me](#shared-with-me) page.
 
@@ -288,7 +288,7 @@ To remove a guest, click **Remove**.
 
 On this tab, you can assign content to this user group that can only be managed by members of this group. To assign a component to a user group, click **Assign Content** and select a company Marketplace component from the dialog box:
 
-![](/attachments/appstore/general/app-store-overview/group-content.png)
+{{< figure src="/attachments/appstore/general/app-store-overview/group-content.png" >}}
 
 {{% alert color="info" %}}
 A component can only be assigned to one user group at a time. If a component is already assigned to another user group, it will not appear in this dialog box.
@@ -296,7 +296,7 @@ A component can only be assigned to one user group at a time. If a component is 
 
 Click the context menu to access various options for managing this content:
 
-![](/attachments/appstore/general/app-store-overview/group-content-context.png)
+{{< figure src="/attachments/appstore/general/app-store-overview/group-content-context.png" >}}
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. The **Unassign from group** button is only available for [Group Admins](#members) and can be used to remove content from the user group.
 

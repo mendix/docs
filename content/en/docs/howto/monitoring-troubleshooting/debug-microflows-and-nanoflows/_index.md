@@ -26,19 +26,19 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 There are three debugging panes: **Breakpoints**, **Debugger**, and **Variables**:
 
-![](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580004.png)
+{{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580004.png" >}}
 
 The **Breakpoints** pane shows all the microflows/nanoflows that contain breakpoints, which makes it easier to find your breakpoints. The best practice is to remove any breakpoints after you are done troubleshooting your microflows/nanoflows. You can always delete them from the **Breakpoints** pane.
 
-![](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580017.png)
+{{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580017.png" >}}
 
 The **Debugger** pane is useful when you are debugging your microflow/nanoflow, as it will walk you through the microflow/nanoflow:
 
-![](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580008.png)
+{{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580008.png" >}}
 
 The **Variables** pane shows the variables, objects, and lists involved in your microflow/nanoflow and how they change as you step through the microflow/nanoflow via the **Debugger** pane:
 
-![](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580005.png)
+{{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580005.png" >}}
 
 The best practice is to have the **Debugger** and **Variables** panes in different docks. The **Debugger** pane should usually be at the bottom of your development dock, and the **Variables** pane can be either in the left dock or the side dock. You want to be aware of how the values are being changed in the microflow/nanoflow, and it is difficult to see those changes if both panes are tabs within the same dock.
 
@@ -49,15 +49,15 @@ Breakpoints are points in a microflow/nanoflow where the application will halt e
 1. Run your application locally.
 2. Open the microflow/nanoflow that needs debugging in Studio Pro.
 3. Right-click any of the activities or decisions in the microflow/nanoflow and select **Add breakpoint**. This sets a breakpoint on the selected step in the microflow/nanoflow, which is visually represented by a red dot:
-    ![](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580020.png)
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580020.png" >}}
 
     You can open an overview of all the breakpoints by going to **View** > **Breakpoints**:
     
-    ![](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/breakpoints.png)
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/breakpoints.png" >}}
 
     In the **Breakpoints** pane, you can enable, disable, and delete breakpoints. You can also configure a breakpoint condition and open the microflow/nanoflow that contains that breakpoint:
     
-    ![](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580017.png)
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580017.png" >}}
 
 ## 5 Debugging
 
@@ -67,15 +67,15 @@ Breakpoints are points in a microflow/nanoflow where the application will halt e
     * As a developer of the application, you will see the Mendix icon flashing on the panes task bar
 3. Click the icon on the panes task bar to open Studio Pro. The element with the breakpoint that interrupts this microflow/nanoflow should be highlighted with a red border:
 
-    ![](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580010.png)
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580010.png" >}}
 
 4.  Open the **Debugger** pane from the **View** menu:
 
-    ![](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580009.png)
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580009.png" >}}
 
     The debugger can be used to go through the microflow/nanoflow step by step:
 
-    ![](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580008.png)
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580008.png" >}}
     
 5. You have the following options on this pane:
     * Click **Step into** or **Step over** to move to the next step in the microflow/nanoflow (note that the difference between **Step into** and **Step over** is only noticeable if you run into a microflow/nanoflow call activity or a loop)
@@ -93,10 +93,10 @@ For details on available shortcut keys, see the [Debugger Shortcut Keys](/refgui
 As you are stepping through a microflow/nanoflow, the variables pane will start to change. This overview will show you all the variables, objects, and lists involved in the application, that is all the variables, entities, references, current-user information, and device-type information. It can be used as you are stepping through the microflow/nanoflow to review the values and see if they match your expectations.
 
 You can open the **Variables** pane from the **View** menu:
-![](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580006.png)
+{{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580006.png" >}}
 
 The **Variables** viewer can be used to inspect values accessible to the microflow/nanoflow. The values are updated with every step you make in the **Debugger**:
-![](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580005.png)
+{{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580005.png" >}}
 
 ## 7 Breakpoint Conditions
 
@@ -105,7 +105,7 @@ Sometimes it is necessary to configure a breakpoint so that the microflow/nanofl
 To use breakpoint conditions, follow these steps:
 
 1. Right-click the activity or decision in the microflow/nanoflow with a breakpoint and select **Edit breakpoint condition**:
-    ![](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580018.png)
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580018.png" >}}
 2.  Use the expression below to make sure this breakpoint only interrupts the microflow/nanoflow if you are executing it yourself (replace `YourUserName` with your own user name):
 
     ```java
@@ -113,7 +113,7 @@ To use breakpoint conditions, follow these steps:
     ```
 
     The expression should look like this:
-    ![](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580012.png)
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580012.png" >}}
 
 3. Click **OK** to save the breakpoint condition.
 

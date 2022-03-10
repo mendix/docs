@@ -127,7 +127,7 @@ public void firstTest() throws Exception {
 
 The ATS Java client comes with built-in documentation and auto-complete:
 
-![](/attachments/addons/ats-addon/ov/ov-function-api/ov-function-api-java/java_autocomplete.gif)
+{{< figure src="/attachments/addons/ats-addon/ov/ov-function-api/ov-function-api-java/java_autocomplete.gif" >}}
 
 ## 7 Read More
 

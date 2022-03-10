@@ -39,13 +39,11 @@ Note that when you click **Edit App** for any Atlas UI app, it will automaticall
 
 Your app is ready to be built. In the **Toolbox** in the [page editor](/studio7/page-editor/), you will find building blocks and widgets you can build your pages with. 
 
-![Web Modeler Page Example](/attachments/howto7/front-end/atlas-ui/get-started-with-atlasui/start_explore_the_mendix_wm.png)
+{{< figure src="/attachments/howto7/front-end/atlas-ui/get-started-with-atlasui/start_explore_the_mendix_wm.png" alt="Web Modeler Page Example" >}}
 
 All these resources have been created with Atlas UI. Each building block has an information icon that directs you to the Atlas UI website for the relevant information:
 
-{{% image_container width="200" %}}
-![Building Block Example](/attachments/howto7/front-end/atlas-ui/get-started-with-atlasui/start_building_block.png)
-{{% /image_container %}}
+{{< figure src="/attachments/howto7/front-end/atlas-ui/get-started-with-atlasui/start_building_block.png" alt="Building Block Example"   width="200"  >}}
 
 ## 5 Choosing a Page Template
 
@@ -53,7 +51,7 @@ You can choose a page template when you create a new page. For information on ho
 
 For example, **Dashboard Action Tiles**, **Dashboard Charts**, **Dashboard Expenses** are page templates. 
 
-![Page Template](/attachments/howto7/front-end/atlas-ui/get-started-with-atlasui/start_choose_a_page_template.png)
+{{< figure src="/attachments/howto7/front-end/atlas-ui/get-started-with-atlasui/start_choose_a_page_template.png" alt="Page Template" >}}
 
 Once the page is created, you can customize it.
 

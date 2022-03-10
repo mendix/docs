@@ -13,7 +13,7 @@ A loop is used to iterate over a list of object and perform actions on each item
 
 The loop is visualized as a frame. The flow inside the loop is executed for each object. That means, if you add more than one activity to the loop, the full flow gets executed on each item. For example, you can add a loop that will prevent orders from processing if a customer is blocked. 
 
-![](/attachments/studio7/microflows/microflows-loop/loop.png)
+{{< figure src="/attachments/studio7/microflows/microflows-loop/loop.png" >}}
 
 The loop can contain all types of elements used in other parts of microflows, with the exception of start and stop events. Additionally, only a loop can contain [break events](/refguide7/break-event/) and [continue events](/refguide7/continue-event/). A break event is used in loops only to stop iterating over a list of objects and continue with the rest of the flow in a microflow. A continue event is used in loops only to stop the current iteration and start the iteration of the next object.
 
@@ -25,14 +25,13 @@ Loop properties consists of the **Data Source** section and are described below:
 
 *  **Loop Variable Name** – refers to the name of the list item that is currently being worked on
 
-	{{% image_container width="350" %}}![Data Source Properties of a Loop](/attachments/studio7/microflows/microflows-loop/loop-properties.png)
-	{{% /image_container %}}
+	{{< figure src="/attachments/studio7/microflows/microflows-loop/loop-properties.png" alt="Data Source Properties of a Loop"   width="350"  >}}
 
 ## 3 Loop Example {#loop-example}
 
 Let us study a straightforward use-case, where you retrieve a list of orders from your database, loop over this list, and mark orders as processed as a result. 
 
-![Loop Example](/attachments/studio7/microflows/microflows-loop/loop-example.png)
+{{< figure src="/attachments/studio7/microflows/microflows-loop/loop-example.png" alt="Loop Example" >}}
 
 Make sure you have the following prerequisites:
 
@@ -50,19 +49,17 @@ To start the use-case, do the following:
 
     b. In **Properties** > the **Data Source** section, select **From Database**, and set *Order* as an entity for this activity. (The **Range** property is set to **All** by default.)<br />
 
-    {{% image_container width="350" %}}![Retrieve Object Properties](/attachments/studio7/microflows/microflows-loop/retrieve-properties.png)
-    {{% /image_container %}}
+    {{< figure src="/attachments/studio7/microflows/microflows-loop/retrieve-properties.png" alt="Retrieve Object Properties"   width="350"  >}}
 
 3. As we have retrieved the list of orders we can work on, we will create a loop and logic for it. Do the following: <br />
 
     a. In the **Toolbox**, select **Loop**, drag and drop it to the microflow. <br />
 
-    ![Loop is Added](/attachments/studio7/microflows/microflows-loop/loop-added.png)<br />
+    {{< figure src="/attachments/studio7/microflows/microflows-loop/loop-added.png" alt="Loop is Added" >}}<br />
 
     b. In **Properties**, set **OrderList** as **Loop Over** (**Loop Variable Name** is set automatically). We have selected the entity, and will loop over the list of its objects. <br />
 
-    {{% image_container width="350" %}}![Loop Properties in an Example](/attachments/studio7/microflows/microflows-loop/loop-properties-in-example.png)
-     {{% /image_container %}}
+    {{< figure src="/attachments/studio7/microflows/microflows-loop/loop-properties-in-example.png" alt="Loop Properties in an Example"   width="350"  >}}
 
 4. Now we can add the activity that will change the status of each order to *Processed*. This means that the activities you add inside the loop will be performed on each object (each order). Do the following:<br />
 
@@ -72,7 +69,7 @@ To start the use-case, do the following:
 
     c. When the **Change Members** option appears, click **Add New Value**.<br />
 
-    ![Change Object Properties in Loop Example](/attachments/studio7/microflows/microflows-loop/change-object-properties.png)
+    {{< figure src="/attachments/studio7/microflows/microflows-loop/change-object-properties.png" alt="Change Object Properties in Loop Example" >}}
 
 5. In the **Change value** dialog window, do the following:<br />
 
@@ -80,7 +77,7 @@ To start the use-case, do the following:
 
     b. In the **Expressions** tab, set the **New value** of this attribute by typing in *true*. <br />
 
-    ![Example of Change Value Dialog Window](/attachments/studio7/microflows/microflows-loop/change-value-dialogue-example.png)
+    {{< figure src="/attachments/studio7/microflows/microflows-loop/change-value-dialogue-example.png" alt="Example of Change Value Dialog Window" >}}
 
     c. Click **Add** to save the changes. 
 

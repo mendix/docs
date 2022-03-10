@@ -19,7 +19,7 @@ To add a resource document, do the following:
 
 1.  In the [App Explorer](/refguide/project-explorer/), right-click the module or a folder you want to add a resource to and select **Add other**:
 
-    ![](/attachments/refguide/modeling/resources/project-explorer-resources.png)
+    {{< figure src="/attachments/refguide/modeling/resources/project-explorer-resources.png" >}}
 
 2. In the **Resources** category, select the document you would like to add to your app.
 

@@ -33,10 +33,10 @@ These instructions are for the Google Maps widget which you can download from th
 In this chapter I will explain how you can add styling to the Google Maps widget.
 
 1.  Open the properties of your Google Maps widget and go to the **Customisation** tab.
-    ![](/attachments/howto8/front-end/style-google-maps/19398957.png)
+    {{< figure src="/attachments/howto8/front-end/style-google-maps/19398957.png" >}}
 
 2.  Simply enter the style in the **Style Array** section and you're done!
-    ![](/attachments/howto8/front-end/style-google-maps/19398956.png)
+    {{< figure src="/attachments/howto8/front-end/style-google-maps/19398956.png" >}}
 
     Here is the example styling:
 
@@ -45,22 +45,22 @@ In this chapter I will explain how you can add styling to the Google Maps widget
     ```
 
 3.  The example style will give you this result:
-    ![](/attachments/howto8/front-end/style-google-maps/19398958.png)
+    {{< figure src="/attachments/howto8/front-end/style-google-maps/19398958.png" >}}
 
 ### 3.2 Finding the Right Style
 
 Choosing an existing style sheet from a large library that fits your application will save you a lot of time. Here is a community website where new styles are uploaded on a regular basis: [https://snazzymaps.com/](https://snazzymaps.com/).
 
 1.  On the website click **Explore:**
-    ![](/attachments/howto8/front-end/style-google-maps/19398959.png)
+    {{< figure src="/attachments/howto8/front-end/style-google-maps/19398959.png" >}}
 2.  Explore the styles to find one that matches your application and click it:
-    ![](/attachments/howto8/front-end/style-google-maps/19398960.png)
+    {{< figure src="/attachments/howto8/front-end/style-google-maps/19398960.png" >}}
 3.  On the lefthand pane you will see the style array:
-    ![](/attachments/howto8/front-end/style-google-maps/19398961.png)
+    {{< figure src="/attachments/howto8/front-end/style-google-maps/19398961.png" >}}
 4.  Now simply press **Copy.** The style is copied to your clipboard.
 5.  Open the **Customisation** tab of the Google Maps widget and paste the style array you just copied from snazzymaps:
 
-    ![](/attachments/howto8/front-end/style-google-maps/19398962.png)
+    {{< figure src="/attachments/howto8/front-end/style-google-maps/19398962.png" >}}
 
     The style array:
 
@@ -69,16 +69,16 @@ Choosing an existing style sheet from a large library that fits your application
     ```
 
 6.  And there it is:
-    ![](/attachments/howto8/front-end/style-google-maps/19398963.png)
+    {{< figure src="/attachments/howto8/front-end/style-google-maps/19398963.png" >}}
 
 ### 3.3 Upload Your Own Style Array
 
 Supporting communities is cool. Therefore I will also show you how to upload your own custom style array to the website.
 
 1.  Go-to Snazzymaps and click **Create.**
-    **![](/attachments/howto8/front-end/style-google-maps/19398964.png)** 
+    **{{< figure src="/attachments/howto8/front-end/style-google-maps/19398964.png" >}}** 
 2.  Now you will see a handy quick style method for altering your map appearance:
-    ![](/attachments/howto8/front-end/style-google-maps/19398965.png) 
+    {{< figure src="/attachments/howto8/front-end/style-google-maps/19398965.png" >}} 
 
     Happy modeling!
 

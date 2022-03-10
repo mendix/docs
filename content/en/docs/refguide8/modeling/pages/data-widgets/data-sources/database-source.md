@@ -22,8 +22,7 @@ You can filter data shown with the help of database [constraints](#constraints).
 
 The **Entity (path)** property specifies the target of the database query. If you have a top-level data widget, **Entity (path)** will get objects of the selected entity directly. If you have a nested data widget, you can also select an entity of a parent data container. In this case objects are retrieved following the association path and the association is parsed as an extra constraint in the database query. 
 
-{{% image_container width="400" %}}![Data Source Example](/attachments/refguide8/modeling/pages/data-widgets/data-sources/database-source/data-source-example.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/data-sources/database-source/data-source-example.png" alt="Data Source Example"   width="400"  >}}
 
 {{% alert color="info" %}}
 
@@ -56,7 +55,7 @@ Constraints allow for custom, hard-coded limitations on the data displayed. This
 
 Each constraint consists of an **Attribute**, an **Operator**, and a **Value**:
 
-![Constraint Example](/attachments/refguide8/modeling/pages/data-widgets/data-sources/database-source/constraint-example.png)
+{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/data-sources/database-source/constraint-example.png" alt="Constraint Example" >}}
 
 Multiple constraints will limit the data even more (the logical operator **AND**). There is no way to use the logical operator **OR** in constraints, but you can switch to an [XPath data source](/refguide8/xpath-source/) and create an XPath constraint.
 

@@ -16,8 +16,7 @@ The **Mendix version** is the version of the app you are editing. **Mendix versi
 
 The **Mendix Studio version** and the **Mendix version** can be viewed by clicking the info icon **About** in the upper-right corner of Studio.
 
-{{% image_container width="500" %}}![](/attachments/studio7/general/general-versions/about-dialog.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/general/general-versions/about-dialog.png"   width="500"  >}}
 
 ## 2 Relation Between Studio Ranges and Mendix Versions 
 
@@ -29,7 +28,7 @@ Studio introduces a new range when there are breaking changes in a model that pr
 
 The *Studio version* is updated continuously (even daily), which will provide you with the latest user interface features for editing your app. No action is required from you, these updates are done automatically. However, when there is a new *Mendix version*, an orange top-bar is displayed, informing you that you can upgrade your app to the next version.  
 
-![](/attachments/studio7/general/general-versions/top-bar-upgrade.png)
+{{< figure src="/attachments/studio7/general/general-versions/top-bar-upgrade.png" >}}
 
 {{% alert color="info" %}}
 

@@ -42,16 +42,16 @@ Follow these steps to install and run the Company Expenses app:
 1. Open the Mendix Destkop Modeler.
 2.  Click the Marketplace icon in the top toolbar:
 
-	![](/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580298.png)
+	{{< figure src="/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580298.png" >}}
 
 3. Search for *Company Expenses*.
 4. Click **Company Expenses**:
 
-	![](/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580282.png)
+	{{< figure src="/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580282.png" >}}
 
 5.  Click **Download** and then **OK**. This will open the Company Expenses app in the Modeler.
 
-	![](/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580296.png)
+	{{< figure src="/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580296.png" >}}
 
 6. Click **Run Locally** (F5).
 7. Click **View** (F9).
@@ -63,32 +63,32 @@ To create an automated test by using the record button in Selenium IDE, follow t
 1. Open **Firefox** and go to `http://localhost:8080/index.html`.
 2.  Click the Selenium IDE (DEFAULT RECORDING) icon:
 
-	![](/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580306.png)
+	{{< figure src="/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580306.png" >}}
 
 3.  Enter the following login details on the Mendix login screen:
 
 	* **User name** – Mxadmin
 	* **Password** – 1
 
-	![](/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580279.png)
+	{{< figure src="/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580279.png" >}}
 
 4. Click **Sign in**.
 5. Click **Sign out**.
 6.  Click record icon in Selenium IDE:
 
-	![](/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580302.png)
+	{{< figure src="/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580302.png" >}}
 
 	Selenium IDE should look like this:
 
-	![](/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580281.png)
+	{{< figure src="/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580281.png" >}}
 
 7.  Click the "run current test case" icon:
 
-	![](/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580303.png)
+	{{< figure src="/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580303.png" >}}
 
 	Every passed test step will be marked green:
 
-	![](/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580278.png)
+	{{< figure src="/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580278.png" >}}
 
 Well done! You have just created your first automated test!
 
@@ -111,14 +111,14 @@ You need to find the right locator, which will tell Selenium IDE which GUI eleme
 7. Enter *1* in the **Amount** field.
 8.  Select **Accomodation** in the **Description** box:
 
-	![](/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580273.png)
+	{{< figure src="/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580273.png" >}}
 
 9. Click **Save**.
 10. Click **Sign out**.
 11. Click the record icon in Selenium IDE to stop recording.
 12. Click **Run current test case**. The test will fail because it can not find the element with the target `id=mxui_widget_NumberInput_1_input`.
 
-	![](/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580299.png)
+	{{< figure src="/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580299.png" >}}
 
 	The element with the target `id=mxui_widget_NumberInput_1_input` does not exist on the page. The number in the ID is not always the same. You need to find another target selector for the same element.
 
@@ -126,22 +126,22 @@ You need to find the right locator, which will tell Selenium IDE which GUI eleme
 14. Find a unique selector for the **Amount** field. Mendix uses CSS classes to identify page content like widgets and pop-up windows. You can use these classes in Selenium to manipulate pages and verify data. Widgets can be given a name in the Mendix Modeler. These names appear in the HTML document as class names prefixed by `mx-name-`. For instance, a grid named `EmployeeGrid` will get a CSS class `mx-name-EmployeeGrid`. This is true for all widgets.
 15. Open the **Desktop_Expense_NewEdit_Admin** page in the Modeler:
 
-	![](/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580285.png)
+	{{< figure src="/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580285.png" >}}
 
 16. Select the **Amount** field:
 
-	![](/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580290.png) 
+	{{< figure src="/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580290.png" >}} 
 
 	The **Name** property of the **Amount** field is **textBox6**. Every element will automatically get the CSS class `mx-name-[Name]`, so the amount field will have the CSS class `mx-name-textBox6`.
 
-	![](/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580289.png)
+	{{< figure src="/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580289.png" >}}
 
 17. Enter `.mx-name-textBox6` in your developer tools and press <kbd>Enter</kbd>. There is only one matching node, so you have now found a unique selector for the **Amount** field.
 18. Change the value `id=_mxui_widget_NumberInput_1_input` into `css=.mx-name-textBox6 input` in Selenium. Because it is an input field, you have to add *input* to the target. 
 19. Click **Run current test case**. The test will fail because it can not find the element with the target `css=.mx-name-textBox6 input`, because the page with the element has not been loaded yet.
 20. Switch the speed control to slow. The speed control determines how fast your test script runs. By default, the speed control is set to the maximum speed. When the test runs too fast, it is possible that the test starts asserting for an element on the page even before the page is fully loaded by the browser. Try to run your test script as fast as possible.
 
-	![](/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580284.png)
+	{{< figure src="/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580284.png" >}}
 
 21. Click **Run current test case**. The test will fail because it can not find the element with the target `css=input.form-control.mx-focus`.
 22. Open the **Desktop_Expense_NewEdit_Admin** page in the Modeler.
@@ -151,7 +151,7 @@ You need to find the right locator, which will tell Selenium IDE which GUI eleme
 26. Change the value `id=mxui_widget_ReferenceSelector_2_input` into `css=.mx-window-active .mx-name-referenceSelector1 select` in Selenium. Because it is a dropdown list, you have to add *select* to the target.
 27. Click **Run current test case**. The test will pass.
 
-	![](/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580286.png)
+	{{< figure src="/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580286.png" >}}
 
 Congratulations! You have just created your second automated test.
 
@@ -168,7 +168,7 @@ To install the Selenium Mendix Locator Builder plugin, follow these steps:
 1. Go to [https://github.com/mgroeneweg/SeleniumMendixLocatorBuilder](https://github.com/mgroeneweg/SeleniumMendixLocatorBuilder).
 2.  Click **Download ZIP**:
 
-	![](/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580277.png)
+	{{< figure src="/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580277.png" >}}
 
 3. Unzip `SeleniumMendixLocatorBuilder-master.zip` and open Selenium IDE.
 4. Go to **Options** > **Options**.
@@ -197,22 +197,22 @@ Now the test steps will have `mx-name-` CSS selectors rather than the Selenium d
 6. Enter *1* in the **Amount** field.
 7.  Select **Accomodation** in the **Description** box:
 
-	![](/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580274.png)
+	{{< figure src="/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580274.png" >}}
     
 8. Click **Save**.
 9. Click **Sign out**.
 10. Click the record icon in Selenium IDE to stop recording.
 11. Click **Run current test case**. The test will fail because it can not find the element with the target `css=.mx-window-active .mx-name-textBox6 input`. The element can't be found, because the page with the element has not been loaded yet.
 
-	![](/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580276.png)
+	{{< figure src="/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580276.png" >}}
 
 12. Switch the speed control to slow. The speed control determines how fast your test script runs. By default, the speed control is set to the maximum speed. When the test runs too fast, it is possible that the test starts asserting for an element on the page even before the page is fully loaded by the browser. Try to run your test script as fast as possible.
 
-	![](/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580284.png)
+	{{< figure src="/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580284.png" >}}
 
 13. Click **Run current test case**. The test will pass.
 
-	![](/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580275.png)
+	{{< figure src="/attachments/howto7/testing/testing-mendix-applications-using-selenium-ide/18580275.png" >}}
 
 ## 5 Read More
 

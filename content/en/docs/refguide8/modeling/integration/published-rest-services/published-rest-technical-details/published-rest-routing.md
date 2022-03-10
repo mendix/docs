@@ -29,4 +29,4 @@ Consult this flow chart to answer questions like:
 
 The example request is `GET /rest/petstore/pet/12`.
 
-![](/attachments/refguide8/modeling/integration/published-rest-services/published-rest-technical-details/published-rest-routing/determine-operation.png)
+{{< figure src="/attachments/refguide8/modeling/integration/published-rest-services/published-rest-technical-details/published-rest-routing/determine-operation.png" >}}

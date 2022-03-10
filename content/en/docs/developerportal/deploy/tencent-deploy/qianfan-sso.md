@@ -30,7 +30,7 @@ The Qianfan SSO module enables your app end-users to sign in with single sign-on
 
     After activation, you'll receive the following email:
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image1.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image1.png" >}}
 
 ## 3 Configuring Yufu iDaaS
 
@@ -38,11 +38,11 @@ The Qianfan SSO module enables your app end-users to sign in with single sign-on
 
 1. Log in to Yufu iDaaS using login address provided by the above-mentioned email, log in to Yufu iDaaS control panel.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image2.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image2.png" >}}
 
 2. Switch to administrator mode (管理员模式).
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image3.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image3.png" >}}
 
 ### 3.2 User Management
 
@@ -50,15 +50,15 @@ The Qianfan SSO module enables your app end-users to sign in with single sign-on
 
 1. Select **对象管理** -> **部门管理** -> **部门数据** (Object Management -> Department Management -> Department Data).
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image4.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image4.png" >}}
 
 2. Click on the correct department and select **本部门人员** (Department Users).
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image5.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image5.png" >}}
 
 3. Click **添加人员** -> **创建人员** (Add User -> Create User).
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image6.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image6.png" >}}
 
     Or click** 转入人员** (Transfer Users).
 
@@ -70,23 +70,23 @@ The Qianfan SSO module enables your app end-users to sign in with single sign-on
 
 1. Click the **添加应用** (Add App) button on the right side.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image7.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image7.png" >}}
 
 2. Select **创键自定义应用** (Create Custom App).
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image8.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image8.png" >}}
 
 3. Select **OpenID Connect**.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image9.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image9.png" >}}
 
 4. Select **Web**.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image10.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image10.png" >}}
 
 5. Enter the basic information.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image11.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image11.png" >}}
 
 6. Enter the callback URI.
 
@@ -100,7 +100,7 @@ The Qianfan SSO module enables your app end-users to sign in with single sign-on
 
 7. Save the **Client ID** and **Client Secret** values locally
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image12.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image12.png" >}}
 
 8. Save the **Well-known** interface address locally, and also save the contents shown when you click the link.
 
@@ -108,21 +108,21 @@ The Qianfan SSO module enables your app end-users to sign in with single sign-on
 
 1. Click **自助申请** (Self-Service Request).
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image13.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image13.png" >}}
 
     The configuration is as follows
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image14.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image14.png" >}}
 
 2. Click **添加人员** (Add Users).
 
     If you have already clicked "users" (人员), click on the plus sign (**+**) to add users.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image15.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image15.png" >}}
 
 3. Enter the user's name and click **确定** (OK).
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image16.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image16.png" >}}
 
 ### 3.4 Applying Permissions Management
 
@@ -132,73 +132,73 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
 1. Select **应用** -> **API管理** -> **创建** (Apps -> API Management -> Create).
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image17.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image17.png" >}}
 
 2. Enter the basic information and click **确定** (OK). And remember the API unique identifier. For example:
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image18.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image18.png" >}}
 
 3. Go to the API management interface and click **添加权限** (Add Permissions).
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image19.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image19.png" >}}
 
 4. Enter the basic information and click **确定** (OK). If your app has multiple roles, please add them separately. For example:
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image20.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image20.png" >}}
 
     {{% alert color="info" %}}Set the Display Name as follows: `{App name} + underscore (_) + {App role name}`.<br/>For example: `TestApp_Administrator`.{{% /alert %}}
 
     Permissions are displayed in the API management interface when successful.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image21.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image21.png" >}}
 
 5. Click **添加应用** (Add Apps).
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image22.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image22.png" >}}
 
 6. Select the app created in Section 3.3 and confirm. For example:
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image23.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image23.png" >}}
 
 7. Upon completion, check whether the permissions and the trusted SSO application are correct. For example:
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image24.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image24.png" >}}
 
 #### 3.4.2 Rights Group Management
 
 1. Select **对象管理** -> **权限组管理** (Object Management -> Rights Group Management).
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image25.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image25.png" >}}
 
 2. Click **添加权限组** (Add Permissions Group).
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image26.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image26.png" >}}
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image27.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image27.png" >}}
 
 3. Enter the basic information, set the Permission Group Type to Custom, and click **确定** (OK). For example:
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image28.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image28.png" >}}
 
 4. Go to the management interface and click **添加人员** (Add Users).
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image29.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image29.png" >}}
 
 5. After selecting the corresponding users, click **确定** (OK) to confirm.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image30.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image30.png" >}}
 
 6. Click **关联权限** (Associate Permissions).
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image31.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image31.png" >}}
 
 7. Select the API created in Section 3.4.1.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image32.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image32.png" >}}
 
 8. Select permissions and confirm.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image33.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image33.png" >}}
 
     If you have more than one permission, add each permission group separately and associate them with people and permissions.
 
@@ -206,11 +206,11 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
     *Create Administrator and User permissions and assign the appropriate permissions to the appropriate people.*
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image34.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image34.png" >}}
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image35.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image35.png" >}}
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image36.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image36.png" >}}
 
 ## 4 Mendix Configuration
 
@@ -224,11 +224,11 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
 1. Open an existing app in Studio Pro. If you do not have one, create a new app first. Right-click the app to select **Import module package…**.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image37.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image37.png" >}}
 
 2. Select the QianfanSSO.mpk file you just downloaded and click **Import**.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image38.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image38.png" >}}
 
 ### 4.3 Configuring the QianfanSSO Module
 
@@ -238,7 +238,7 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
 3. Set the **After startup** microflow to *QianfanSSO.QianfanSSO\_AfterStartup*.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image39.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image39.png" >}}
 
 4. For local testing, you need to set the application's root URL:
 
@@ -252,11 +252,11 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
         `http://127.0.0.1:8080`
 
-        ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image40.png)
+        {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image40.png" >}}
 
 5. Expand the **QianfanSSO** module and the **Configuration** folder within the module.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image41.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image41.png" >}}
 
 6. Assign the Client ID and the Client Secret values saved in section 3.3.1 to the corresponding constants (**ClientID** and **ClientSecret**).
 
@@ -272,17 +272,17 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
     For example: `TEST_Administrator`
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image42.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image42.png" >}}
 
 10. In the constant “Prefix”, assign the first half of the permission name (including the underscore) from in section 3.5.1. For example, for the permission shown below, **Prefix** should be set to `TestApp_`:
 
-   ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image20.png)
+   {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image20.png" >}}
 
 ### 4.4 Configure the Login Page
 
 1. Choose the menu item **App** > **Show App Directory in Explorer**.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image43.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image43.png" >}}
 
 2. Go to the **theme** folder and replace the existing **login.html** file with the following file, which contains the login page with Qianfan Yufu SSO content.
 
@@ -294,7 +294,7 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
 4. Choose **App** >  **Synchronize App Directory** in Studio Pro.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image44.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image44.png" >}}
 
 ### 4.5 Configure the Logout Page
 
@@ -308,85 +308,85 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
 5. Set the **Caption** to *logout*.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image45.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image45.png" >}}
 
 ### 4.6 Role Settings
 
 1. Open **Security** and set the **Security Level** to *Production*.
 
-    ![security-set-to-production](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/security-production.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/security-production.png" alt="security-set-to-production" >}}
 
 2. Make sure that, in the **User roles** tab, the role **Name**s are consistent with the part of the permission names after the underscore, as set in section 3.4.1. For example:
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image46.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image46.png" >}}
 
 3. Choose the role and click **Edit** to confirm that the corresponding permissions in **QianFanSSO** are checked.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image47.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image47.png" >}}
 
 ### 4.7 Sign in for Verification
 
 1. Save the configuration, then click **Run Locally**. Once the app has started successfully, click **View App**.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image48.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image48.png" >}}
 
 2. You will see the login screen below in your browser. Click **Qianfan IDaaS Account**.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image49.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image49.png" >}}
 
 3. In the Yufu login interface, log in using your Yufu account.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image50.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image50.png" >}}
 
     The app jumps back to the app page.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image51.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image51.png" >}}
 
 4. Click **logout** to sign out and return to the login screen.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image52.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image52.png" >}}
 
 ### 4.8 Cloud Verification
 
 1. Once the local test passes, go to the App deployment page via **Environment** in the Mendix platform
 
-![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image53.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image53.png" >}}
 
 2. Click **Add Environment**.
 
-![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image54.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image54.png" >}}
 
 3. For **Purpose** select **Production** and enter the **Subscription Secret** you have purchased.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image55.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image55.png" >}}
 
 4. Click **Next** and select the appropriate plan, then click **Create Environment**.
 
 5. Click **Create Package** and select the version to be built.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image56.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image56.png" >}}
 
 6. Once packages have been built, select the .mda file that should be deployed, and click **Deploy**.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image57.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image57.png" >}}
 
 7. Save the URL and click **Transport**.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image58.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image58.png" >}}
 
 8. Select the **Constants** tab, and assign the new URL to the **AppUrl** constant.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image59.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image59.png" >}}
 
 9. Finally, click **Apply Changes**.
 
     Check that the **Status** valuse for **Loaded Deployment Details** and **Environment Details** are normal.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image60.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image60.png" >}}
 
 10. Go to the Qianfan Yufu Management page and add a callback URI as following: **{App Url} + "/qianfan/callback"**. For example:
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image61.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image61.png" >}}
 
 11. Since the App Url is a temporary URL, please use the Cluster CLB IP in the email you received when you purchased Mendix and update your local hostfile:
 
@@ -396,8 +396,8 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
 12. Update the IP for the App Url.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image62.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image62.png" >}}
 
 13. Finally, visit the App Url and click **Qianfan IDaaS Account** to access the app.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image49.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image49.png" >}}

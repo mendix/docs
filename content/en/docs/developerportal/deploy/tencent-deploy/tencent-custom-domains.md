@@ -46,11 +46,11 @@ Before configuring your custom domain in the Developer Portal, you will need to 
 
 You can register a domain from the console of the Tencent cloud by choosing the **Domain Registration** ([域名注册](https://console.cloud.tencent.com/domain)) product.
 
-![](/attachments/developerportal/deploy/tencent-deploy/tencent-custom-domains/domain-registration-product.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/tencent-custom-domains/domain-registration-product.png" >}}
 
 Click **register a domain name** (注册域名). 
 
-![](/attachments/developerportal/deploy/tencent-deploy/tencent-custom-domains/register-domain-name.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/tencent-custom-domains/register-domain-name.png" >}}
 
 Here you can register your domain.
 
@@ -64,7 +64,7 @@ You then need to configure an A Record.
 
 You can bind the IP address, which you get during onboarding to the Mendix platform, to a specific domain name, like `myapp.mxapps.cn` as in the example below. You can also bind it to a wildcard domain name like `*.mxapps.cn` or `*.mendix.mxapps.cn`. If you use a wildcard domain name, you don’t need to bind the IP for every Mendix app.
 
-![](/attachments/developerportal/deploy/tencent-deploy/tencent-custom-domains/create-a-records.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/tencent-custom-domains/create-a-records.png" >}}
 
 ## 3 Adding Custom Domains
 
@@ -76,11 +76,11 @@ To add a custom domains, follow these steps:
 
 3. Click **Edit** next to the **App URL**.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/tencent-custom-domains/edit-app-url.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/tencent-custom-domains/edit-app-url.png" >}}
 
 4. Click **Apply Changes** to apply the changes to the environment.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/tencent-custom-domains/apply-environment-changes.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/tencent-custom-domains/apply-environment-changes.png" >}}
 
 {{% alert color="info" %}}
 Make sure you have configured an A record for your custom domain with your domain registrar/DNS provider (for details, see [Register Domain Name and Configure A Record](#DNS), above).
@@ -96,7 +96,7 @@ Custom domain certificates (or just "certificates") are managed at the *applicat
 
 If you do not have an SSL/TLS certificate, you can purchase one from the Tencent cloud **SSL certificate** (SSL 证书) product or apply for a free certificate.
 
-![](/attachments/developerportal/deploy/tencent-deploy/tencent-custom-domains/get-signed-certificate.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/tencent-custom-domains/get-signed-certificate.png" >}}
 
 
 ### 4.2 Uploading the Custom Domain Certificate{#Uploading}
@@ -114,7 +114,7 @@ To enable TLS and upload the custom domain certificate, follow these steps:
 4. Upload files containing the following:
     1. the **TLS Private Key**
     2. the signed **TLS Certificate**
-        ![](/attachments/developerportal/deploy/tencent-deploy/tencent-custom-domains/upload-certificate.png)
+        {{< figure src="/attachments/developerportal/deploy/tencent-deploy/tencent-custom-domains/upload-certificate.png" >}}
 
 5. Click **Save** to save your new custom domain certificate. It will be uploaded to the Developer Portal automatically.
 6. Click **Apply Changes** to apply the changes to the environment.

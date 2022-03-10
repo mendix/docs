@@ -14,8 +14,8 @@ The domain model editor uses the following symbols for visualization of attribut
 
 | Symbol | Description |
 | --- | --- |
-| ![](/attachments/refguide7/desktop-modeler/domain-model/entities/attributes/917593.png) | This attribute has one or more validation rules. |
-| ![](/attachments/refguide7/desktop-modeler/domain-model/entities/attributes/917592.png) | This attribute has a microflow that calculates the value of the attribute. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/attributes/917593.png" >}} | This attribute has one or more validation rules. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/attributes/917592.png" >}} | This attribute has a microflow that calculates the value of the attribute. |
 
 ## Common
 
@@ -68,7 +68,7 @@ The password itself should not be stored, but only its hash value, thus it is st
 
 A customer can be active or inactive, which is stored in an attribute named 'Active' of type Boolean.
 
-![](/attachments/refguide7/desktop-modeler/domain-model/entities/attributes/917578.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/attributes/917578.png" >}}
 
 ### Localize (Only for the Date and Time Attribute Type)
 
@@ -113,7 +113,7 @@ If the value is a computation, the **Microflow** property defines which microflo
 
 In a webshop, you want to show the total expenses for each customer. These are calculated by retrieving all orders associated with the customer and adding their totals.
 
-![](/attachments/refguide7/desktop-modeler/domain-model/entities/attributes/917570.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/attributes/917570.png" >}}
 
 ### Default Value (If Value Is Stored)
 

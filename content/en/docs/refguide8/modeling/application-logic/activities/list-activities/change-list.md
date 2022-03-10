@@ -25,7 +25,7 @@ The **Change list** activity allows you to change a list by adding objects to, a
 
 An example of change list properties is represented in the image below:
 
-![change list properties](/attachments/refguide8/modeling/application-logic/activities/list-activities/change-list/change-list-properties.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/list-activities/change-list/change-list-properties.png" alt="change list properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

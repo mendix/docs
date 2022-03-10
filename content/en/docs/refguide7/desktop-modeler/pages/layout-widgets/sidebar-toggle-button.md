@@ -8,7 +8,7 @@ parent: "layout-widgets"
 
 The sidebar toggle is a button that when pressed will make a region of a [scroll container](/refguide7/scroll-container/) appear or disappear. This makes it possible to create sidebars, for instance a menu on a mobile phone that is hidden by default and can be shown by clicking the button. See the picture for an example layout that used the sidebar toggle. 
 
-![](/attachments/refguide7/desktop-modeler/pages/layout-widgets/sidebar-toggle-button/sidebar-toggle-button.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/layout-widgets/sidebar-toggle-button/sidebar-toggle-button.png" >}}
 
 ## Button properties
 

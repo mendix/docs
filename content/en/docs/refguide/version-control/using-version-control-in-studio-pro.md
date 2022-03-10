@@ -24,7 +24,7 @@ To start a new app with version control do the following:
 
 The app is created on the Team Server, and a working copy is created in the **App directory**. This is opened in Studio Pro so that you can start working immediately.
 
-![](/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-03-02_11-11-18.png)
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-03-02_11-11-18.png" >}}
 
 ## 3 Joining an App
 
@@ -56,12 +56,12 @@ The **App Explorer** shows an icon in front of items (documents, folders, and mo
 
 | Icon | Meaning |
 | --- | --- |
-| ![](/attachments/refguide/version-control/using-version-control-in-studio-pro/688173.png) | Nothing happened to this item. It is unchanged with the respect to the original. |
-| ![](/attachments/refguide/version-control/using-version-control-in-studio-pro/688172.png) | You modified this item (as in, document, folder or module). |
-| ![](/attachments/refguide/version-control/using-version-control-in-studio-pro/688175.png) | You added this item. |
-| ![](/attachments/refguide/version-control/using-version-control-in-studio-pro/688174.png) | You moved this item to another position in the app tree. |
-| ![](/attachments/refguide/version-control/using-version-control-in-studio-pro/688164.png) | You deleted this item. |
-| ![](/attachments/refguide/version-control/using-version-control-in-studio-pro/688165.png) | You and somebody else made conflicting changes to this item. For more information, see the [Dealing With Conflicts](#conflicts) section below. |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/688173.png" >}} | Nothing happened to this item. It is unchanged with the respect to the original. |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/688172.png" >}} | You modified this item (as in, document, folder or module). |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/688175.png" >}} | You added this item. |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/688174.png" >}} | You moved this item to another position in the app tree. |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/688164.png" >}} | You deleted this item. |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/688165.png" >}} | You and somebody else made conflicting changes to this item. For more information, see the [Dealing With Conflicts](#conflicts) section below. |
 
 {{% alert color="info" %}}
 There is only room for one icon and if a document is both modified and moved it is shown as modified.
@@ -71,7 +71,7 @@ For example, say that the microflow *ChangePassword* has been modified. Also a n
 
 You can see the same information in the **Changes** pane. In this case there is an entry for each *change* to an item. If a document is both modified and moved there are *two* lines for that document. The pane also shows items that were deleted, something the app explorer cannot do.
 
-![](/attachments/refguide/version-control/using-version-control-in-studio-pro/changes-pane.png)
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/changes-pane.png" >}}
 
 {{% alert color="info" %}}
 When you successfully commit your app, this becomes the new original and all the change information is removed from the App Explorer and the Changes pane.
@@ -83,7 +83,7 @@ Sending changes to the repository is called *committing*. The idea is that you c
 
 To commit your changes, click the **Commit** button in the **Changes** pane, or choose the **Version Control** > **Commit...** menu item.
 
-![Commit Button](/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-button.png)
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-button.png" alt="Commit Button" >}}
 
 In general, it is a good idea to commit after implementing one feature or fixing one bug. By committing often, your work is integrated with the work of others regularly. The benefits of committing include the following:
 
@@ -96,7 +96,7 @@ Committing results in a new revision in the repository. You can add the followin
 * A textual message. This should be a summary of the changes you made
 * A list of Developer Portal stories that relate to the commit. A small commit will probably relate to one story. Studio Pro shows stories that are in the current Sprint and do not have a status of *Done*. Adding the story to the commit will not change the state of the Developer Portal story. Setting the status to 'Done' must be done manually and depends on your *definition of done*.
 
-    ![](/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-02-21_13-50-03.png)
+    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-02-21_13-50-03.png" >}}
 
 Studio Pro also attaches some information automatically:
 
@@ -121,7 +121,7 @@ Pushing is sending your local changes to the Team Server. After committing you n
 
 To push changes, select **Version Control** > **Push** or make sure that the **Also push changes to the remote server** setting is set to **Yes** in the **Commit** dialog box, this way changes are pushed automatically when you commit them:
 
-![](/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-git.png)
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-git.png" >}}
 
 ### 4.4 Updating
 
@@ -129,7 +129,7 @@ Updating retrieves the latest changes from the repository. You need to do this t
 
 To update the working copy of your app, click the **Update** button in the **Changes** pane, or choose the **Version Control** > **Update** menu item.
 
-![Update Button](/attachments/refguide/version-control/using-version-control-in-studio-pro/update-button.png)
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/update-button.png" alt="Update Button" >}}
 
 Changes you receive from the repository when updating are combined with the changes you have made to your working copy (if any). Afterwards, your working copy will contain both your changes and the changes you received. As part of the update, the original of your working copy is updated as well.
 
@@ -143,13 +143,13 @@ If your team is committing often you will have to update often. Frequent updatin
 
 The *history* of the app is a list of all revisions that have been committed. To view the history of the app, click the **History** button in the **Changes** pane, or choose the **Version Control** > **History** menu item.
 
-![History Button](/attachments/refguide/version-control/using-version-control-in-studio-pro/history-button.png)
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/history-button.png" alt="History Button" >}}
 
 The revisions are shown in reverse chronological order (newest is at top of list). The history dialog shows you revision number, date, time, author and message of each revision.
 
 Select a revision to see additional details such as related Developer Portal stories, changed documents, Studio Pro version and changes on disk. Icons summarize the kinds of changes that happened in the app.
 
-![](/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-02-21_14-06-46.png)
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-02-21_14-06-46.png" >}}
 
 ## 5 Reverting Changes
 
@@ -159,7 +159,7 @@ Deletes of documents, folders, and modules can also be reverted. This will bring
 
 You can revert changes in the **Changes** pane, from **Version Control** > **Revert All Changes**, or from the right-click menu on the document you want to revert.
 
-![Two ways of reverting](/attachments/refguide/version-control/using-version-control-in-studio-pro/revertx2.png)
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/revertx2.png" alt="Two ways of reverting" >}}
 
 ## 6 Dealing With Conflicts {#conflicts}
 
@@ -185,7 +185,7 @@ App conflicts are conflicts are conflicts at the level of the app. There are two
 
 The involved document is marked as conflicted and you can see the reason in the details column of the **Changes** pane.
 
-![Example of app conflicts](/attachments/refguide/version-control/using-version-control-in-studio-pro/project-conflicts.png)
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/project-conflicts.png" alt="Example of app conflicts" >}}
 
 {{% alert color="info" %}}
 If a whole folder (or module) was *deleted* and another person changes a document inside that folder, the folder/module is restored and also marked as conflicted. This way you know that the intention was to delete that folder but it has been restored to show you the context of the changed document.
@@ -197,7 +197,7 @@ You can resolve an app conflict by choosing **Tasks > Use mine** or by deleting 
 
 A repository can contain a number of development lines. Each development line offers independent development from the other development lines. In the simple case there is just one development line called the main line (called 'trunk' in subversion). All development then happens inside that one line.
 
-![](/attachments/refguide/version-control/using-version-control-in-studio-pro/688156.png)
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/688156.png" >}}
 
 It is often convenient to have more than one development line. For example, one development line for fixing bugs in the currently deployed version of your app and another line where you develop new functionality. If you then find a bug in the deployed version you can fix it in the corresponding development line irrespective of the state of the development line where new functionality is developed. See [Version Control](/refguide/version-control/) for more information about branches.
 
@@ -210,7 +210,7 @@ If you want to add some functionality to a deployed application or you want to f
 1. Determine the version of the deployed application. This information is in the Developer Portal. Alternatively, you can find the version in the *metadata.json* file in the **model** subfolder of your deployment package (mda) archive. For example, `"ModelVersion": "1.0.0.16"`
 2. Choose **Version Control > Manage Branch Lines...** and create a branch based on the tag with the that version number as its name.
 
-    ![](/attachments/refguide/version-control/using-version-control-in-studio-pro/create-from-tag.png)
+    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/create-from-tag.png" >}}
 
 3. Add the functionality or fix the bug in this newly created branch.
 4. Testing that things work as intended.
@@ -228,7 +228,7 @@ Another reason for creating a branch is to develop a big new feature without int
 
 Firstly, select **Version Control > Manage Branch Lines...** and create a branch from a revision of the main line.
 
-![](/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-02-28_13-50-39.png)
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-02-28_13-50-39.png" >}}
 
 Now work on the branch until the feature is done and commit the completed work.
 
@@ -256,7 +256,7 @@ Development lines other than the main line are called branch lines. Our advice w
 
 You can create branch lines from the Branch Line Manager which you can find at **Version Control > Manage Branch Lines...**.
 
-![](/attachments/refguide/version-control/using-version-control-in-studio-pro/create-branch-line.png)
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/create-branch-line.png" >}}
 
 #### 7.2.2 Merging
 
@@ -279,11 +279,11 @@ Choose **Version Control > Reverse Merge Changes...**
 
 For SVN, you can choose a range (**Start revision** and **End revision**):
 
-![](/attachments/refguide/version-control/using-version-control-in-studio-pro/revert-committed-changes.png)
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/revert-committed-changes.png" >}}
 
 For Git, reverting changes is done with one commit at a time. If you want to revert multiple commits, you can do that by reverting the latest commit, then the previous one, and so on.
 
-![](/attachments/refguide/version-control/using-version-control-in-studio-pro/revert-changes-git.png)
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/revert-changes-git.png" >}}
 
 After a reverse merge the app will look like the changes never happened; if you 'reverse merge' the adding of a page, the page will be deleted locally. Just like when you are doing a normal merge, conflicts can arise. In the example, if later commits change the added page, the reverse merge will result in a conflict. After resolving any problems, you can commit the results to the repository.
 
@@ -329,13 +329,13 @@ When it creates the package, Studio Pro will also create a tag representing this
 
 If you are using the Mendix Cloud you can choose **App** > **Deploy to Licensed Cloud Node** to deploy a specific version.
 
-![](/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-02-21_17-05-05.png)
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-02-21_17-05-05.png" >}}
 
 #### 8.3.2 Creating a Deployment Package from a Specific Version
 
 If you are using a different hosting environment, you create a deployment package using the menu item **App** > **Create Deployment Package**.
 
-![](/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-02-28_13-44-04.png)
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-02-28_13-44-04.png" >}}
 
 ## 9 Working Outside Studio Pro {#working-outside-studio-pro}
 

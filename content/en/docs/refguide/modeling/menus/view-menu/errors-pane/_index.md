@@ -13,7 +13,7 @@ To make sure that your app is always consistent and properly built, Studio Pro d
 
 When a consistency check is not met, Studio Pro will notify you about this on the **Errors** pane. The errors and warnings in pages, microflows, domain models, and document templates will be highlighted: 
 
-![Errors Pane](/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/errors-pane.png)
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/errors-pane.png" alt="Errors Pane" >}}
 
 To display the **Errors** pane, there are two options:
 
@@ -24,15 +24,15 @@ To display the **Errors** pane, there are two options:
 
 There are three types of messages, each having its own button and icon:
 
-![Types of Messages](/attachments/refguide/modeling/menus/view-menu/errors-pane/types-of-messages.png)
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/types-of-messages.png" alt="Types of Messages" >}}
 
 The table below provides the details on each type of the message:
 
 | Type         | Icon                                              | Function                                                     |
 | ------------ | ------------------------------------------------- | ------------------------------------------------------------ |
-| Errors       | ![](/attachments/refguide/modeling/menus/view-menu/errors-pane/error-icon.png)       | Consistency errors that prevent your app from functioning in a correct way and being deployed (for example, if you do not specify an entity for the data view, your app cannot function correctly). |
-| Deprecations | ![](/attachments/refguide/modeling/menus/view-menu/errors-pane/deprecation-icon.png) | This type shows information on features that are deprecated and can be entirely removed in the future versions. This does not affect the app now, but may cause problems when upgrading to the next version. |
-| Warnings     | ![](/attachments/refguide/modeling/menus/view-menu/errors-pane/warning-icon.png)     | Errors that are not critical, so you can publish your app having warnings. However, it is highly recommended to take action based on the warnings, because your app has logical gaps (for example, clicking a button does nothing). |
+| Errors       | {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/error-icon.png" >}}       | Consistency errors that prevent your app from functioning in a correct way and being deployed (for example, if you do not specify an entity for the data view, your app cannot function correctly). |
+| Deprecations | {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/deprecation-icon.png" >}} | This type shows information on features that are deprecated and can be entirely removed in the future versions. This does not affect the app now, but may cause problems when upgrading to the next version. |
+| Warnings     | {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/warning-icon.png" >}}     | Errors that are not critical, so you can publish your app having warnings. However, it is highly recommended to take action based on the warnings, because your app has logical gaps (for example, clicking a button does nothing). |
 
 ## 3 Interacting with the Errors Pane
 
@@ -68,7 +68,7 @@ You can also sort the order which messages are displayed in by clicking the colu
 
 Right-clicking the message line opens a drop-down menu:
 
-![Drop-Down Menu](/attachments/refguide/modeling/menus/view-menu/errors-pane/drop-down-menu.png)
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/drop-down-menu.png" alt="Drop-Down Menu" >}}
 
 The following actions are available in the drop-down menu:
 

@@ -28,7 +28,7 @@ To create a new enumeration, do the following:
 
     a.  Fill out **Name** and **Caption** for an enumeration value. You can set **Image** for it if necessary. For more information on enumeration properties, see the [Enumeration Properties](#enum-properties) section. <br />
 
-    ![](/attachments/refguide/modeling/resources/enumerations/add-enum-value.png)
+    {{< figure src="/attachments/refguide/modeling/resources/enumerations/add-enum-value.png" >}}
 
     b.  Click **OK** to save the enumeration value.
 
@@ -46,7 +46,7 @@ An enumeration has the following properties:
 
 *  **Enumeration values** – an enumeration has one or more enumeration values. Each value represents one of the options. For more information on enumeration values and their properties, see the [Enumeration Value Properties](#enum-value-properties) section.
 
-    ![](/attachments/refguide/modeling/resources/enumerations/enumeration-properties.png)
+    {{< figure src="/attachments/refguide/modeling/resources/enumerations/enumeration-properties.png" >}}
 
 ### 3.1 Enumeration Value Properties {#enum-value-properties}
 

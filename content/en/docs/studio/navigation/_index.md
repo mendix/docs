@@ -10,11 +10,11 @@ tags: ["studio", "navigation", "menu item", "navigation item", "app menu"]
 
 A **Navigation Document** in Mendix Studio shows a configured menu of your app in a form of a tree. You can create items and sub-items in your navigation. 
 
-![](/attachments/studio/navigation/navigation-vs-app.png)
+{{< figure src="/attachments/studio/navigation/navigation-vs-app.png" >}}
 
 To open the **Navigation Document**, click the corresponding icon in the left menu bar.
 
-![Navigation Document Icon](/attachments/studio/navigation/navigation-icon.png)
+{{< figure src="/attachments/studio/navigation/navigation-icon.png" alt="Navigation Document Icon" >}}
 
 The **Navigation Document** consists of menu items that allow end-users navigate your app or that perform certain actions. For example, you can configure a menu item to open a specific page or to log an end-user out of their profile. For more information on actions you can assign to menu items, see the [Events Section](#events-section-navigation).
 
@@ -26,7 +26,7 @@ To create a new menu item, do the following:
 
 2. Click a plus at the bottom of the navigation tree to create a menu item, or click a plus next to the existing navigation item to create its sub-item
 
-   ![](/attachments/studio/navigation/adding-navigation-items.png)
+   {{< figure src="/attachments/studio/navigation/adding-navigation-items.png" >}}
 
 3. Specify the properties of the created item if needed (For more information, see [Properties of Menu Items](#properties-of-menu-items)). 
 
@@ -48,7 +48,7 @@ In navigation editor properties, you can set a [default home page](#default-home
 
 You can set a page or a microflow as a default home page:
 
-![Default Home Page](/attachments/studio/navigation/default-home-page.jpg)
+{{< figure src="/attachments/studio/navigation/default-home-page.jpg" alt="Default Home Page" >}}
 
 The **Default Home Page** section consists of the following properties:
 
@@ -57,7 +57,7 @@ The **Default Home Page** section consists of the following properties:
 
 A home page icon is displayed in a list of pages or microflows against a page or microflow that is set as a home page:
 
-![Home Icon](/attachments/studio/navigation/home-icon.jpg)
+{{< figure src="/attachments/studio/navigation/home-icon.jpg" alt="Home Icon" >}}
 
 ### 2.2 Role-Specific Home Page {#role-specific-home-page}
 
@@ -65,7 +65,7 @@ A role-specific home page is a home page that that overrides the [default home p
 
 For example, an Administrator role can have the **Admin_Dashboard** page as its home page, while other users will have the default home page opened when they open the app:
 
-![Role-Specific Home Page](/attachments/studio/navigation/role-specific-home-page.jpg)
+{{< figure src="/attachments/studio/navigation/role-specific-home-page.jpg" alt="Role-Specific Home Page" >}}
 
 When adding or editing the role-specific home page, you can set the following properties:
 
@@ -80,11 +80,11 @@ When adding or editing the role-specific home page, you can set the following pr
 
 * **Microflow** – This property is only available when **Type** is set to **Microflow**. Allows you to set a microflow that is performed when a user with the selected role opens the app.
 
-    ![](/attachments/studio/navigation/role-specific-home-page-properties.jpg)
+    {{< figure src="/attachments/studio/navigation/role-specific-home-page-properties.jpg" >}}
 
 A role-specific home page icon is displayed in a list of pages or microflows against a page or microflow that is set as a home page:
 
-![Role-Specific Home Page Icon](/attachments/studio/navigation/role-specific-home-page-icon.jpg)
+{{< figure src="/attachments/studio/navigation/role-specific-home-page-icon.jpg" alt="Role-Specific Home Page Icon" >}}
 
 ### 2.3 Adding a Role-Specific Home Page
 
@@ -98,7 +98,7 @@ To add a role-specific home page, do the following:
 
 4. In the **Role** drop-down menu, select a role that will have a dedicated home page:
 
-    ![Selecting a Role](/attachments/studio/navigation/selecting-role.jpg)
+    {{< figure src="/attachments/studio/navigation/selecting-role.jpg" alt="Selecting a Role" >}}
 
 5. Select the **Type** of the home page: a page or a microflow.
 
@@ -113,7 +113,7 @@ Properties of the menu items consists of the following sections:
 * [Events](#events-section-navigation) 
 * [General](#general-section-navigation) 
 
-![](/attachments/studio/navigation/navigation-properties.png)
+{{< figure src="/attachments/studio/navigation/navigation-properties.png" >}}
 
 ### 3.1 Events Section {#events-section-navigation}
 

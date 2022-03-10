@@ -10,7 +10,7 @@ aliases:
 
 For both [import](/refguide7/import-mappings/)and [export mappings](/refguide7/export-mappings/) you need to specify the elements structure you want to map. You do this in the **Select schema elements** window. An example of this screen is shown below.
 
-![](/attachments/refguide7/desktop-modeler/integration/mapping-documents/select--elements/19399143.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/mapping-documents/select--elements/19399143.png" >}}
 
 Perform the following steps in the **Select schema elements** window:
 

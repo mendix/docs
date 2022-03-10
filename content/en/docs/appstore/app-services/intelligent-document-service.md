@@ -37,7 +37,7 @@ The [Intelligent Document Service](https://marketplace.mendix.com/link/component
     1.  In the **App Explorer** (in Studio Pro 9) or **Project Explorer** (in Studio Pro 8), right-click the app.
     2.  Click **Import module package** and then select the *.mpk* file.
 
-        ![pop-up-menu-in-app-explorer](/attachments/appstore/app-services/intelligent-document-service/import-module-in-app-explorer.png)
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/import-module-in-app-explorer.png" alt="pop-up-menu-in-app-explorer" >}}
 
         In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
@@ -71,7 +71,7 @@ The Intelligent Document Service is a premium Mendix product that is subject to 
 
 1.  In the **App Explorer** or **Project Explorer**, go to **IntelligentDocService** > **Configurations**. **Access_Key**, **Secret_Key** and **Encryption_Key** are defined as constants.
 
-    ![Keys under Configurations in a tree view](/attachments/appstore/app-services/intelligent-document-service/configurations-keys.png)
+    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/configurations-keys.png" alt="Keys under Configurations in a tree view" >}}
 
 2. For each constant, double-click the constant, enter the key that you saved, and click **OK** to save the changes.
 
@@ -87,18 +87,18 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
     3.  Click **Intelligent Document Service** to open the service management dashboard.
     4.  Click **Manage Instance** to open the **Document Model Training** application.
 
-        ![Document model training app login page](/attachments/appstore/app-services/intelligent-document-service/document-model-training-app.png)
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/document-model-training-app.png" alt="Document model training app login page" >}}
 
     5. Sign into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account.
 2.  Click **Environment** to show the **Existing Models** list.
 
-    ![Existing models list](/attachments/appstore/app-services/intelligent-document-service/existing-models-list.png)
+    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/existing-models-list.png" alt="Existing models list" >}}
 
     {{% alert color="info" %}} The model is ready to use only when the **Status** of this model is **Published**. {{% /alert %}}
 
 3.  To train a new model, click **Create New Model** on the page. The **Create New Model** dialog box opens.
 
-    ![Create New Model dialog box](/attachments/appstore/app-services/intelligent-document-service/create-new-model-dialog-box.png)
+    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/create-new-model-dialog-box.png" alt="Create New Model dialog box" >}}
 
 4.  Enter a unique **Model Name**. select a **Language**, and then click **Create Model**.
 
@@ -107,20 +107,20 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 5. Wait until the **Import File** page opens.
 6.  Drag sample images in JPG or JPEG format into the box where it says **Drag image files here**. You can also click **Browse** and select the files.
 
-    ![Import File page](/attachments/appstore/app-services/intelligent-document-service/import-file-page.png)
+    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/import-file-page.png" alt="Import File page" >}}
     
     {{% alert color="warning" %}}If you upload multiple files, all your images must have a similar structure. Each image file size should not exceed 50 MB.{{% /alert %}}
     
 7.  Click **Next**. The **Add Marker and IDs** page opens. The status of the images you imported shows **Not Marked**.
 
-    ![Add Marker and IDs page](/attachments/appstore/app-services/intelligent-document-service/add-marker-and-ids-image-unmarked.png)
+    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-marker-and-ids-image-unmarked.png" alt="Add Marker and IDs page" >}}
 
 8.  To mark an image, perform the following steps:
     1. Click **Add Marker**. The **Mark Document** dialog box opens.
     
     2.  In the **Mark the fields to be extracted** pane, select a field of interest from which some meaningful data needs to be extracted.
     
-        ![Mark Document page](/attachments/appstore/app-services/intelligent-document-service/mark-document-dialog-box.png)
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/mark-document-dialog-box.png" alt="Mark Document page" >}}
         
     3.  On the right side, enter a **Marker Id** that is used for the area that you selected. 
     
@@ -132,17 +132,17 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
     
     7.  When you add all the markers for this image, click **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.
     
-        ![add markers and id status is marked](/attachments/appstore/app-services/intelligent-document-service/add-marker-and-ids-image-status-marked.png)
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-marker-and-ids-image-status-marked.png" alt="add markers and id status is marked" >}}
     
     8. Repeat the steps above until you mark all the images, and then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
 9.  Wait until the **Status** of the model becomes **Published**.
 10. Once the model is published, this pop-up window opens:
     
-    ![new model status included](/attachments/appstore/app-services/intelligent-document-service/new-model-status-popup.png)
+    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/new-model-status-popup.png" alt="new model status included" >}}
     
     Click **OK** to close the pop-up window. The model is ready to use. 
     
-    ![new model status published](/attachments/appstore/app-services/intelligent-document-service/new-model-status-completed.png)
+    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/new-model-status-completed.png" alt="new model status published" >}}
 
 ### 4.2 Creating an Import Mapping{#mapping-file}
 
@@ -155,7 +155,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
     4.  Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens.
     5.  Drag one of the sample images, which you used to train the document model, into the box where it says **Drag image files here**. You can also click **Browse** and select the file.
 
-        ![Sample Extraction dialog box](/attachments/appstore/app-services/intelligent-document-service/sample-extraction-dialog-box.png)
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/sample-extraction-dialog-box.png" alt="Sample Extraction dialog box" >}}
 
     6. Click **Download** to get the JSON structure.
 
@@ -165,7 +165,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the generated JSON structure.
     2.  From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures/).
 
-        ![json-structure](/attachments/appstore/app-services/intelligent-document-service/json-structure.png)
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/json-structure.png" alt="json-structure" >}}
 
     3. In the **Add JSON Structure** dialog box, enter a **Name** for the JSON structure and click **OK**. The **JSON Structure** dialog box opens.
     4. In the **JSON Snippet** box, add the content of the JSON structure that you have generated. The system converts the JSON snippet into a schema structure automatically. You will need this schema structure to create the import mapping.
@@ -176,19 +176,19 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
     3. In the **Add Import Mapping** dialog box, enter a **Name** for the import mapping and click **OK**. The **Select schema elements for import mapping** dialog box opens.    
     4.  For **Schema source**, select **JSON structure** and **Select** the JSON structure that you created.
     
-        ![schema-source-json-structure](/attachments/appstore/app-services/intelligent-document-service/schema-source-json-structure.png)
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/schema-source-json-structure.png" alt="schema-source-json-structure" >}}
     5. Click **OK** to save the changes and close the dialog box.
 
 ### 4.3 Extracting the Data with the Trained Document Model {#extraction-activity}
 
 1.  In the **Toolbox**, drag **Intelligent Document Service** activity from the **Document Data Capture Service** category into your microflow.
 
-    ![intelligent-document-microflow](/attachments/appstore/app-services/intelligent-document-service/intelligent-document-microflow.png)
+    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/intelligent-document-microflow.png" alt="intelligent-document-microflow" >}}
 
 2. Create a list of image that inherits from `System.Image`. Images from where data are extracted should be passed as a list, as shown in the microflow above.
 3.  Double-click the **Intelligent Document Service** activity to open the dialog box.
 
-    ![Intelligent Document Service dialog box](/attachments/appstore/app-services/intelligent-document-service/intelligent-document-service-dialog-box.png)
+    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/intelligent-document-service-dialog-box.png" alt="Intelligent Document Service dialog box" >}}
 
 4. For **Model Id**, click **Edit** to enter the **Model Id** of your model.
 5. For **Image List**, click **Edit** to select the **Image List** which inherits from `System.Image`.
@@ -209,4 +209,4 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
 The AI and OCR technologies used by Intelligent Document Service are powered by [ABBYY&reg;](https://www.abbyy.com). Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.
 
-![Technical Provider ABBYY](/attachments/appstore/app-services/intelligent-document-service/logo-powered-by-abbyy.png)
+{{< figure src="/attachments/appstore/app-services/intelligent-document-service/logo-powered-by-abbyy.png" alt="Technical Provider ABBYY" >}}

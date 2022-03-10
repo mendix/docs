@@ -9,7 +9,7 @@ A navigation list can be used to attach an action to an entire row. Such a row i
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/pages/container-widgets/navigation-list/navigation-list.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/container-widgets/navigation-list/navigation-list.png" >}}
 A navigation list with three empty rows.
 
 {{% /alert %}}

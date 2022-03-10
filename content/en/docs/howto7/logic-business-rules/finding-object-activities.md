@@ -16,11 +16,11 @@ The following steps will explain how to find certain activities that are used in
 
 1.  In the top toolbar of the Desktop Modeler, click **Edit** > **Find** Advanced (or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>.
 2.  This dialog box will appear:
-    ![](/attachments/howto7/logic-business-rules/finding-object-activities/18581632.png)
+    {{< figure src="/attachments/howto7/logic-business-rules/finding-object-activities/18581632.png" >}}
 3.  For **Search for**, select **Microflow actions**, and this dialog box will appear:
-    ![](/attachments/howto7/logic-business-rules/finding-object-activities/18581631.png)
+    {{< figure src="/attachments/howto7/logic-business-rules/finding-object-activities/18581631.png" >}}
 4.  Select the entity for which you want to search for object activities, and click **Find**.
-    ![](/attachments/howto7/logic-business-rules/finding-object-activities/18581630.png)
+    {{< figure src="/attachments/howto7/logic-business-rules/finding-object-activities/18581630.png" >}}
 5.  See the results of in the **Find Results** pane:
-    ![](/attachments/howto7/logic-business-rules/finding-object-activities/18581629.png)
+    {{< figure src="/attachments/howto7/logic-business-rules/finding-object-activities/18581629.png" >}}
 

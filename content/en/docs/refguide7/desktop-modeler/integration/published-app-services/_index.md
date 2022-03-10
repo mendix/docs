@@ -15,7 +15,7 @@ An app service can be created via **File** > **New Document**.
 
 Names of published app service documents must be unique (also with regard to published web service).
 
-![](/attachments/refguide7/desktop-modeler/integration/published-app-services/16843911.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-app-services/16843911.png" >}}
 
 ## 2 Create Version
 

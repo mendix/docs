@@ -23,7 +23,7 @@ To import a project package, do the following:
 
 3.  Select the relevant options in the **Import Project Package** dialog box and click **OK**. For more information on what options you can select, see the sections below. 
 
-    ![Import Project Package Dialog Window](/attachments/refguide8/modeling/menus/file-menu/import-project-package-dialog/import-project-package.png)
+    {{< figure src="/attachments/refguide8/modeling/menus/file-menu/import-project-package-dialog/import-project-package.png" alt="Import Project Package Dialog Window" >}}
 
 Project packages can be created using [Export Project Package](/refguide8/export-project-package-dialog/).
 

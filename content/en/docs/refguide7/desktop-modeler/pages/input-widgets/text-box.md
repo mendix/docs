@@ -10,7 +10,7 @@ A text box can be used to display and/or edit a textual value.
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/pages/input-widgets/text-box/text-box.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/text-box/text-box.png" >}}
 This text box allows the end-user to set the name of the customer.
 
 {{% /alert %}}

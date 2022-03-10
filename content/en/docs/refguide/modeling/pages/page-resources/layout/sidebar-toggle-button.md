@@ -19,14 +19,13 @@ You can only have one sidebar toggle in a scroll container, and the behavior of 
 
 For example, the image below shows for an example layout that uses the sidebar toggle to hide and make visible the **Left** region of the **Scroll Container**. 
 
-![](/attachments/refguide/modeling/pages/page-resources/layout/sidebar-toggle-button/sidebar-toggle-button.png)
+{{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/sidebar-toggle-button/sidebar-toggle-button.png" >}}
 
 ## 2 Properties
 
 An example of sidebar toggle properties is represented in the image below:
 
-{{% image_container width="250" %}}![](/attachments/refguide/modeling/pages/page-resources/layout/sidebar-toggle-button/sidebar-toggle-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/sidebar-toggle-button/sidebar-toggle-properties.png"   width="250"  >}}
 
 Sidebar toggle properties consist of the following sections:
 

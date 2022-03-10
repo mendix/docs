@@ -85,10 +85,10 @@ Events represent the start and end points of a nanoflow and special operations i
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/microflows/917902.png)](/refguide7/start-event/) | [Start event](/refguide7/start-event/) | The starting point of the nanoflow. A nanoflow can only have one start event. |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/microflows/918113.png)](/refguide7/end-event/) | [End event](/refguide7/end-event/) | Defines the location where the nanoflow will stop. Depending on the return type of the nanoflow, in some cases a value must be specified. There can be more than one end event. |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/microflows/918115.png)](/refguide7/continue-event/) | [Continue event](/refguide7/continue-event/) | Used to stop the current iteration of a loop and continue with the next iteration. Please note that continue events can only be used inside a [loop](/refguide7/loop/). |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/microflows/918026.png)](/refguide7/break-event/) | [Break Event](/refguide7/break-event/) | Used to stop iterating over the list of objects and to continue with the rest of the flow after the loop. Please note that break events can only be used inside a [loop](/refguide7/loop/). |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917902.png" >}}](/refguide7/start-event/) | [Start event](/refguide7/start-event/) | The starting point of the nanoflow. A nanoflow can only have one start event. |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918113.png" >}}](/refguide7/end-event/) | [End event](/refguide7/end-event/) | Defines the location where the nanoflow will stop. Depending on the return type of the nanoflow, in some cases a value must be specified. There can be more than one end event. |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918115.png" >}}](/refguide7/continue-event/) | [Continue event](/refguide7/continue-event/) | Used to stop the current iteration of a loop and continue with the next iteration. Please note that continue events can only be used inside a [loop](/refguide7/loop/). |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918026.png" >}}](/refguide7/break-event/) | [Break Event](/refguide7/break-event/) | Used to stop iterating over the list of objects and to continue with the rest of the flow after the loop. Please note that break events can only be used inside a [loop](/refguide7/loop/). |
 
 ### 5.2 Flows<a name="flows"></a>
 
@@ -96,8 +96,8 @@ Flows form the connection between elements.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/microflows/917883.png)](/refguide7/sequence-flow/) | [Sequence flow](/refguide7/sequence-flow/) | An arrow that links events, activities, splits, and merges with each other. Together they define the order of execution within a nanoflow. |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/microflows/917688.png)](/refguide7/annotation-flow/) | [Annotation flow](/refguide7/annotation-flow/) | A connection that can be used to connect an annotation to another element. |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917883.png" >}}](/refguide7/sequence-flow/) | [Sequence flow](/refguide7/sequence-flow/) | An arrow that links events, activities, splits, and merges with each other. Together they define the order of execution within a nanoflow. |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917688.png" >}}](/refguide7/annotation-flow/) | [Annotation flow](/refguide7/annotation-flow/) | A connection that can be used to connect an annotation to another element. |
 
 ### 5.3 Gateways<a name="gateways"></a>
 
@@ -105,8 +105,8 @@ Gateways deal with making choices and merging different paths.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/microflows/917726.png)](/refguide7/exclusive-split/) | [Exclusive split](/refguide7/exclusive-split/) | Makes a decision based on a condition and follows one and only one of the outgoing flows. Please note that there is no parallell execution in nanoflows. |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/microflows/918116.png)](/refguide7/merge/) | [Merge](/refguide7/merge/) | Can be used to combine multiple sequence flows into one. If a choice is made in a nanoflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917726.png" >}}](/refguide7/exclusive-split/) | [Exclusive split](/refguide7/exclusive-split/) | Makes a decision based on a condition and follows one and only one of the outgoing flows. Please note that there is no parallell execution in nanoflows. |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918116.png" >}}](/refguide7/merge/) | [Merge](/refguide7/merge/) | Can be used to combine multiple sequence flows into one. If a choice is made in a nanoflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
 ### 5.4 Activities<a name="activities"></a>
 
@@ -118,11 +118,11 @@ Object activities can be used to create and manipulate objects. The [domain mode
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/917661.png)](/refguide7/change-object/) | [Change object](/refguide7/change-object/) | Can be used to change the members of an object. This can be done with or without commiting. |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/17661961.png)](/refguide7/committing-objects/) | [Commit object(s)](/refguide7/committing-objects/) | Can be used to commit the changes to one or more objects. |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/917756.png)](/refguide7/create-object/) | [Create object](/refguide7/create-object/) | Can be used to create an object. |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/917866.png)](/refguide7/retrieve/) | [Retrieve](/refguide7/retrieve/) | Can be used to get one (or more) associated objects of another object. The activity can also get one (or more) objects directly from the database. |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/918119.png)](/refguide7/rollback-object/) | [Rollback object](/refguide7/rollback-object/) | Can be used to undo the changes (that have not been committed) made to the object in the part of the nanoflow preceding the activity. This also deletes objects that have been created but never committed. |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/917661.png" >}}](/refguide7/change-object/) | [Change object](/refguide7/change-object/) | Can be used to change the members of an object. This can be done with or without commiting. |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/17661961.png" >}}](/refguide7/committing-objects/) | [Commit object(s)](/refguide7/committing-objects/) | Can be used to commit the changes to one or more objects. |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/917756.png" >}}](/refguide7/create-object/) | [Create object](/refguide7/create-object/) | Can be used to create an object. |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/917866.png" >}}](/refguide7/retrieve/) | [Retrieve](/refguide7/retrieve/) | Can be used to get one (or more) associated objects of another object. The activity can also get one (or more) objects directly from the database. |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/918119.png" >}}](/refguide7/rollback-object/) | [Rollback object](/refguide7/rollback-object/) | Can be used to undo the changes (that have not been committed) made to the object in the part of the nanoflow preceding the activity. This also deletes objects that have been created but never committed. |
 
 #### 5.4.2 List Activitities
 
@@ -130,8 +130,8 @@ List activities can be used to create and manipulate lists of objects.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/918007.png)](/refguide7/change-list/) | [Change list](/refguide7/change-list/) | Can be used to change the content of a list variable. |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/918009.png)](/refguide7/create-list/) | [Create list](/refguide7/create-list/) | Can be used to create a (empty) list variable. |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/918007.png" >}}](/refguide7/change-list/) | [Change list](/refguide7/change-list/) | Can be used to change the content of a list variable. |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/918009.png" >}}](/refguide7/create-list/) | [Create list](/refguide7/create-list/) | Can be used to create a (empty) list variable. |
 
 #### 5.4.3 Variable Activities
 
@@ -139,8 +139,8 @@ Variable activities can be used to create or change a variable within a microflo
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/918011.png)](/refguide7/change-variable/) | [Change variable](/refguide7/change-variable/) | Can be used to change the value of a variable. |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/918110.png)](/refguide7/create-variable/) | [Create variable](/refguide7/create-variable/) | Can be used to create a new variable. |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/918011.png" >}}](/refguide7/change-variable/) | [Change variable](/refguide7/change-variable/) | Can be used to change the value of a variable. |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/918110.png" >}}](/refguide7/create-variable/) | [Create variable](/refguide7/create-variable/) | Can be used to create a new variable. |
 
 #### 5.4.4 Client Activities
 
@@ -148,15 +148,15 @@ Client activities can be used to have the web client of your application perform
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/918114.png)](/refguide7/close-page/) | [Close page](/refguide7/close-page/) | Closes the page that is opened last by the user that calls the microflow in which this activity is used. |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/917544.png)](/refguide7/show-page/) | [Show page](/refguide7/show-page/) | Can be used to show a page to the user that calls the microflow in which this activity is used. |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/918097.png)](/refguide7/validation-feedback/) | [Validation feedback](/refguide7/validation-feedback/) | Can be used to display red text below a widget that displays an attribute or association. |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/918114.png" >}}](/refguide7/close-page/) | [Close page](/refguide7/close-page/) | Closes the page that is opened last by the user that calls the microflow in which this activity is used. |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/917544.png" >}}](/refguide7/show-page/) | [Show page](/refguide7/show-page/) | Can be used to show a page to the user that calls the microflow in which this activity is used. |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/918097.png" >}}](/refguide7/validation-feedback/) | [Validation feedback](/refguide7/validation-feedback/) | Can be used to display red text below a widget that displays an attribute or association. |
 
 ### 5.5 Loop
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/microflows/917804.png)](/refguide7/loop/) | [Loop](/refguide7/loop/) | A looped activity is used to iterate over a list of objects. For every object the flow inside the looped activity is executed. A looped activity can contain all elements used in nanoflows, with the exception of start and stop events. The flow starts at the first element with no incoming flows. |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917804.png" >}}](/refguide7/loop/) | [Loop](/refguide7/loop/) | A looped activity is used to iterate over a list of objects. For every object the flow inside the looped activity is executed. A looped activity can contain all elements used in nanoflows, with the exception of start and stop events. The flow starts at the first element with no incoming flows. |
 
 ### 5.6 Artifacts<a name="artifacts"></a>
 
@@ -164,8 +164,8 @@ Artifacts provide the nanoflow with input and allow comments to be made.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/microflows/918019.png)](/refguide7/parameter/) | [Parameter](/refguide7/parameter/) | Data that serves as input for the nanoflow. Parameters are filled at the location from which the nanoflow is triggered. |
-| [![](/attachments/refguide7/desktop-modeler/application-logic/microflows/917689.png)](/refguide7/annotation/) | [Annotation](/refguide7/annotation/) | An element that can be used to put comments in a nanoflow. |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918019.png" >}}](/refguide7/parameter/) | [Parameter](/refguide7/parameter/) | Data that serves as input for the nanoflow. Parameters are filled at the location from which the nanoflow is triggered. |
+| [{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917689.png" >}}](/refguide7/annotation/) | [Annotation](/refguide7/annotation/) | An element that can be used to put comments in a nanoflow. |
 
 ## 6 Variable Usages
 
@@ -173,7 +173,7 @@ The Modeler visualizes which variables are used by selected object(s). It does t
 
 In the example below, the parameter **AccountPasswordData** is highlighted because it is used in the selected activity. And the activity **Save password** has a usage label because it uses the variable defined by the selected activity.
 
-![](/attachments/refguide7/desktop-modeler/application-logic/microflows/16843950.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/16843950.png" >}}
 
 ## 7 Errors
 

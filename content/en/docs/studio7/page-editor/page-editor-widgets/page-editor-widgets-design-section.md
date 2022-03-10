@@ -10,7 +10,7 @@ tags: ["studio", "page editor", "widgets", "on click action", "events"]
 
 The **Design** section in **Properties** allows you to change spacing and alignment of a widget on a page, but is not limited to these functions. For some elements you can, for example, change their color. Hover over the information icon to get more details on each option.
 
-![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-design-section/design-section-info-icon.png)
+{{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-design-section/design-section-info-icon.png" >}}
 
 ## 2 Common Properties {#design-common-properties}
 
@@ -24,7 +24,7 @@ The **Design** section has the following properties common to all widgets:
 
 The example of how spacing works on a button is schematically shown on an image below:
 
-![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-design-section/design-section-scheme.png)
+{{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-design-section/design-section-scheme.png" >}}
 
 ## 2 Specific Properties
 

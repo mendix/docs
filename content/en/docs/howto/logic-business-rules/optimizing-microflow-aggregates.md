@@ -19,7 +19,7 @@ If you do want to use the list but you also want the optimized query, do two sep
 
 When an average is calculated within an optimized SQL query, the rounding mode configured in the app settings will not be respected. The result that is returned will be rounded by the database according to the database settings. If the rounding mode setting for the app is essential for the result, you can retrieve the sum and count separately and perform the division in the microflow.
 
-![](/attachments/howto/logic-business-rules/optimizing-microflow-aggregates/18580944.png)
+{{< figure src="/attachments/howto/logic-business-rules/optimizing-microflow-aggregates/18580944.png" >}}
 
 ## 2 Read More
 

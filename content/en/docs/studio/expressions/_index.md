@@ -64,7 +64,7 @@ You can use a list of suggestions to help you write an expression. Use <kbd>Ctrl
 
 If there is an errors in the expression, the place where the error is, is highlighted red and an error message is shown when you hover over it.  In some cases there are quick fixes available to quickly solve the issue.
 
-![](/attachments/studio/expressions/expression-error.png)
+{{< figure src="/attachments/studio/expressions/expression-error.png" >}}
 
 
 ### 2.3  Expression Examples
@@ -75,23 +75,23 @@ Examples that illustrate how expressions can be used are described below.
 
 You have a [Decision](/studio/microflows-decision/) in a microflow and you would like to write an expression that checks whether the customer grade is gold and the price of the order is more than 100 (you can configure a discount after the **Decision** that is allowed if this expression is true):
 
-![](/attachments/studio/expressions/example-decision.png) 
+{{< figure src="/attachments/studio/expressions/example-decision.png" >}} 
 
 The expression will look the following way:
 
-![](/attachments/studio/expressions/expression-decision.png)
+{{< figure src="/attachments/studio/expressions/expression-decision.png" >}}
 
 #### 2.3.2 Example 2
 
 You add a [Decision](/studio/microflows-decision/) to a microflow to check if an object (in the example below the object is *Customer*) exists. And you also check if the Customer's name matches a particular one (in the example below Customer's name is *Mendix*). The expression will look the following way:
 
-![](/attachments/studio/expressions/customer-empty-and-name-example.png)
+{{< figure src="/attachments/studio/expressions/customer-empty-and-name-example.png" >}}
 
 #### 2.3.3 Example 3
 
 You have a [user task](/studio/workflows-user-task/) in a workflow and would like to add a **Due Date** as a reminder that the user task should be done by the day after tomorrow. You can write the following expression for it:
 
-![User Task Expression](/attachments/studio/expressions/user-task-due-date.png)
+{{< figure src="/attachments/studio/expressions/user-task-due-date.png" alt="User Task Expression" >}}
 
 ## 3 Expression Types {#expression-types}
 

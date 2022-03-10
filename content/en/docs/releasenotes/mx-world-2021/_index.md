@@ -14,7 +14,7 @@ At Mendix World on September 8th, 2021, the keynote from Mendix CTO Johan den Ha
 
 Johan divided the new features into these major announcements, which are described in the sections below:
 
-![Announcements are solutions platform, app services framework, end-user services and studio, control center, next-level front-end, page bot and machine learning toolkit, studio pro experience, data hub 2.0, intelligent automation, and hybrid cloud automation.](/attachments/releasenotes/mx-world-2021/innovations.png)
+{{< figure src="/attachments/releasenotes/mx-world-2021/innovations.png" alt="Announcements are solutions platform, app services framework, end-user services and studio, control center, next-level front-end, page bot and machine learning toolkit, studio pro experience, data hub 2.0, intelligent automation, and hybrid cloud automation." >}}
 
 {{% alert color="info" %}}
 "GA" means General Availability for all users. A GA release is different than a Beta release. For more information on Private Beta and Public Beta releases, see [Beta Releases](/releasenotes/beta-features/).

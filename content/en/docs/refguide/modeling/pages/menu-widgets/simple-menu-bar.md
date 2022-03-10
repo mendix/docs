@@ -15,14 +15,13 @@ A simple menu bar shows menu items of a [navigation profile](/refguide/navigatio
 
 Sub-items of menu items are not displayed by this widgets, that means the menu structure can only have one level. For more information on menu items and their properties, see [Menu](/refguide/menu/).
 
-![Simple Menu Bar](/attachments/refguide/modeling/pages/menu-widgets/simple-menu-bar/simple-menu-bar.png)
+{{< figure src="/attachments/refguide/modeling/pages/menu-widgets/simple-menu-bar/simple-menu-bar.png" alt="Simple Menu Bar" >}}
 
 ## 2 Properties
 
 An example of a simple menu bar properties is represented in the image below:
 
-{{% image_container width="250" %}}![Simple Menu Bar Properties](/attachments/refguide/modeling/pages/menu-widgets/simple-menu-bar/simple-menu-bar-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide/modeling/pages/menu-widgets/simple-menu-bar/simple-menu-bar-properties.png" alt="Simple Menu Bar Properties"   width="250"  >}}
 
 Menu bar properties consist of the following sections:
 

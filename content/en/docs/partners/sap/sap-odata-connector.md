@@ -14,7 +14,7 @@ This documentation describes the actions and domain model of the OData Connector
 
 The OData Connector for SAP solutions is an OData connector written specifically to integrate with SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, SAP S/4HANA Cloud, and SAP SuccessFactors. The OData Connector for SAP solutions can be used for all SAP back-end systems that have OData enabled, both in the cloud and on-premises. For ECC, SAP Gateway will be used to expose the traditional BAPI interface as an OData service.
 
-![](/attachments/partners/sap/sap-odata-connector/appstore-sapodata.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/appstore-sapodata.png" >}}
 
 You can use the [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/) to generate a data model from the metadata of your OData service, exposed from your SAP back-end system, or from APIs in the SAP API Business Hub or the SAP Catalog Service. For more details see [How to Use the OData Model Creator for SAP Solutions](/partners/sap/use-sap-odata-model-creator/).
 
@@ -38,7 +38,7 @@ Once you have downloaded the OData Connector for SAP solutions from the Marketpl
 
 The OData Connector for SAP solutions module gives you access to additional actions which you can assign to your Microflow Activities. These give you access to the OData services.
 
-![](/attachments/partners/sap/sap-odata-connector/actions-sapodataconnector.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/actions-sapodataconnector.png" >}}
 
 The use of each of these actions is described in the [Actions](#Actions) section.
 
@@ -46,7 +46,7 @@ The use of each of these actions is described in the [Actions](#Actions) section
 
 Each of these actions will ask for a number of parameters which will be categorized as either **Input** or **Output**. Here is an example of the parameters which are required for the **Get List** action.
 
-![](/attachments/partners/sap/sap-odata-connector/actionparameters-sapodataconnector.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/actionparameters-sapodataconnector.png" >}}
 
 These parameters are described in the section [Connector Action Parameters](#ConnectorActionParameters).
 
@@ -74,7 +74,7 @@ In addition to the domain model, the OData Model Creator will also create three 
 * An enumeration (**FunctionNames**) containing a list of all the functions which are exposed by the OData service
 {{% /alert %}}
 
-![](/attachments/partners/sap/sap-odata-connector/serviceroot.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/serviceroot.png" >}}
 
 The examples used in this guide are based on the **GWSAMPLE_BASIC** OData service exposed by the back-end system of sapes5.sapdevcenter.com.
 
@@ -94,7 +94,7 @@ In both cases, save the file you download from the **OData Model Creator for SAP
 
 Part of the data model for this sample data is:
 
-![](/attachments/partners/sap/sap-odata-connector/domainmodelgwsample_basic-sapodataconnector.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/domainmodelgwsample_basic-sapodataconnector.png" >}}
 
 This domain model generally works in the same way as a Mendix domain model, with entities, attributes, and associations. However, there are two additions to support the OData Connector for SAP solutions:
 
@@ -107,7 +107,7 @@ In addition to the SAP Service Domain Model, there is a domain model which is us
 
 Here is the domain model of the OData Connector for SAP solutions:
 
-![](/attachments/partners/sap/sap-odata-connector/domainmodel-sapodataconnector.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/domainmodel-sapodataconnector.png" >}}
 
 This domain model is part of the OData Connector for SAP solutions module and can be found in **App** > **Marketplace modules** > **SAPODataConnector**. Each [entity](/refguide/entities/) contains one or more [attributes](/refguide/attributes/):
 
@@ -158,7 +158,7 @@ A more detailed description of the parameters is in the [Connector Action Parame
 
 The Get List action gets a list of objects described by a type of entity in the domain model from the SAP OData service. This action uses filters (SQL queries) to control which objects are returned. The entity collection is described by an entity in the SAP service domain model which you have imported into your app.
 
-![](/attachments/partners/sap/sap-odata-connector/get-list-params.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/get-list-params.png" >}}
 
 * Input
   * Response type (required) - the type of entity which represents the objects which are returned
@@ -183,7 +183,7 @@ The **Response Type** would be GWSAMPLE_BASIC.Product. You will need to pass aut
 
 The Get Entry operation gets a single existing entity instance from the OData service.
 
-![](/attachments/partners/sap/sap-odata-connector/get-entry-params.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/get-entry-params.png" >}}
 
 * Input
   * Response type (required) - the type of entity which represents the object which is returned
@@ -211,7 +211,7 @@ The Create operation creates a new object in the SAP back-end system using the O
 This Create is not the same as the Mendix **Create object** action. The OData Connector for SAP solutions Create will commit the object to the SAP back-end system and it cannot be rolled back. If you decide later that you do not want this object you must delete it using its key.
 {{% /alert %}}
 
-![](/attachments/partners/sap/sap-odata-connector/create-params.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/create-params.png" >}}
 
 * Input
 
@@ -229,7 +229,7 @@ The Create operation can also perform a *Deep Create*. This means that if you cr
 
 In the image below, creating a **Parent** object via the OData Connector for SAP solutions will also create any **Child**, **Grandchild**, or **ParentData** objects which have been associated with it. (Creating a Child object will only create Grandchild objects and will NOT create the Parent, even if one is associated).
 
-![](/attachments/partners/sap/sap-odata-connector/deep-create-parent-child.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/deep-create-parent-child.png" >}}
 
 For example, this connector can be used to create a product using the **GWSAMPLE_BASIC** service. In this case the **Query** is
 
@@ -249,7 +249,7 @@ The **Odata object** is an object of entity type **Product**. This can be create
 
 The Delete operation deletes an existing entity instance in the SAP back-end system using the OData service.
 
-![](/attachments/partners/sap/sap-odata-connector/delete-params.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/delete-params.png" >}}
 
 * Input
   * Odata object (required) - The Mendix representation of the object which you wish to delete
@@ -267,11 +267,11 @@ The Open Data Protocol (OData) includes standard CRUD (Create, Retrieve, Update,
 
 The service operations which are supported by the OData service are listed in the enumeration **FunctionNames** which is imported as part of the SAP service domain model.
 
-![](/attachments/partners/sap/sap-odata-connector/functionnames-sapodataconnector.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/functionnames-sapodataconnector.png" >}}
 
 The Execute entry action allows you to invoke these service operations on the SAP back-end system. It returns an object from the OData service.
 
-![](/attachments/partners/sap/sap-odata-connector/execute-entry-params.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/execute-entry-params.png" >}}
 
 * Input
   * Response type (required) - the type of entity which represents the object which is returned
@@ -288,7 +288,7 @@ The Execute entry action allows you to invoke these service operations on the SA
 
 This performs the same action as the Execute entry action, but this is used where the expected result from the service operation is a list, rather than a single item.
 
-![](/attachments/partners/sap/sap-odata-connector/execute-list-params.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/execute-list-params.png" >}}
 
 * Input
   * Response type (required) - the type of entity which represents the objects in the list which is returned
@@ -305,7 +305,7 @@ This performs the same action as the Execute entry action, but this is used wher
 
 This action refreshes local data which is cached in objects within the Mendix domain model and may have become 'dirty' or in some other way is not the same as the data held in the SAP back-end system.
 
-![](/attachments/partners/sap/sap-odata-connector/refresh-params.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/refresh-params.png" >}}
 
 * Input
   * Odata object (required) - The Mendix representation of the object containing the 'dirty' data which you wish to refresh by retrieving it from SAP using the OData service
@@ -319,7 +319,7 @@ This action refreshes local data which is cached in objects within the Mendix do
 
 The Update operation changes the attributes of an existing entity instance in the SAP back-end system using the OData service.
 
-![](/attachments/partners/sap/sap-odata-connector/update-params.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/update-params.png" >}}
 
 * Input
   * Odata object (required) - The Mendix representation of the object containing the updated data which you wish to update.
@@ -383,7 +383,7 @@ This action returns the HTTP Response to the last OData action that was performe
 
 For example, you could catch an exception on **Get List** and display an error message to the user.
 
-![](/attachments/partners/sap/sap-odata-connector/errorhandling-sapodataconnector.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/errorhandling-sapodataconnector.png" >}}
 
 #### 3.2.5 Get cloud connector info
 
@@ -408,13 +408,13 @@ This section describes in more detail each of the parameters which is used by on
 
 Every action of the OData Connector for SAP solutions will ask for a set of parameters. For example, **Get List**:
 
-![](/attachments/partners/sap/sap-odata-connector/actionparameters-sapodataconnector.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/actionparameters-sapodataconnector.png" >}}
 
 The parameters can be entered using the drop-down, clicking the **Edit** or **Select…** buttons, or typing directly into a text field.
 
 Within the edit box, you can type your parameter. As is standard in Mendix, certain characters (for example [@ $ .]) will trigger a pop-up window to help you select the right values. This can also be triggered using <kbd>Ctrl</kbd>+<kbd>Space</kbd>. Typing while this pop-up window is open will filter the list of possibilities. For example, you can type (the beginning of) _entitysetnames_ and the pop-up window will allow you to select the collection of entity set names which you want.
 
-![](/attachments/partners/sap/sap-odata-connector/editbox-sapodataconnector.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/editbox-sapodataconnector.png" >}}
 
 Press <kbd>Enter</kbd> to select the highlighted item.
 
@@ -523,7 +523,7 @@ Before you pass the function parameters you will need to set the value of the **
 
 For example: in the **GWSAMPLE_BASIC** service domain model there is a function called **SalesOrder_InvoiceCreated**. This has an associated entity, **SalesOrder_InvoiceCreatedParameters**, which is a specialization of the OData Connector for SAP solutions entity **FunctionParameters**. This function parameter entity indicates that you need to supply a **SalesOrderID**.
 
-![](/attachments/partners/sap/sap-odata-connector/functionsandfunctionparameters-sapodataconnector.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/functionsandfunctionparameters-sapodataconnector.png" >}}
 
 To use this function you will need to create an object of entity type **SalesOrder_InvoiceCreatedParameters** with the correct values for **SalesOrderID** and **postParameterInline**, using the Create object action. You can then use these parameters when you invoke the function using Execute list.
 
@@ -547,7 +547,7 @@ For example, you may be initiating a service operation using the Execute entry a
 * Use **Add header** to add the required HTTP header. This can be done repeatedly to add as many HTTP headers as are needed by the service operation being invoked by Execute entry.
 * Invoke the service operation with **Execute entry** using the required URL, HTTP method, Function parameters, and the Request parameters and associated HTTP headers which you created above.
 
-![](/attachments/partners/sap/sap-odata-connector/requestparams-sapodataconnector.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/requestparams-sapodataconnector.png" >}}
 
 Request parameters can also be set to `empty` if no headers are needed and the default action behavior is used.
 
@@ -561,7 +561,7 @@ Set this to `empty` if it is not required.
 
 For example, **SalesOrder** is the parent entity of **SalesOrderLineItem** via the **ToHeader_SalesOrderLineItem_SalesOrder** association in the **GWSAMPLE_BASIC** domain model.
 
-![](/attachments/partners/sap/sap-odata-connector/tolineitems-sapodataconnector.png)
+{{< figure src="/attachments/partners/sap/sap-odata-connector/tolineitems-sapodataconnector.png" >}}
 
 {{% alert color="info" %}}
 If you are using the Destination Service to identify the endpoint of your SAP OData Service, you will need to edit the values of the **…Deferred** attributes as they will already contain an endpoint in addition to the object references.

@@ -25,7 +25,7 @@ On the **Environments** page, there are four tabs:
 * **Permissions**
     * [Node Permissions](/developerportal/deploy/node-permissions/)
     
-   ![](/attachments/developerportal/deploy/mendix-cloud-deploy/environments/environment-tab.png)       
+   {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/environment-tab.png" >}}       
 
 ## 2 Deploy
 
@@ -33,7 +33,7 @@ In the **Deploy** tab, you can find the information below about your environment
 
 ### 2.1 Deployment Package Repository
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deployment-package.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deployment-package.png" >}}
 
 In the **Deployment Package Repository** section, there is an overview of the following:
 
@@ -79,7 +79,7 @@ If you click **Deploy**, the package from the team server will be transported to
 
 #### 2.2.1 Standard Licensed Environments
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-environments.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-environments.png" >}}
 
 In this section, you have the an overview of all the available environments with the following details:
 
@@ -114,7 +114,7 @@ There are two actions you can take :
 
 If your node supports flexible environments you will see a slightly different format for the list of environments.
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-flex-environments.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-flex-environments.png" >}}
 
 This shows a similar list of details (the differences are highlighted):
 
@@ -132,7 +132,7 @@ You can use the **Search...** box to find a specific environment.
 
 If you are the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) you can reorder the environments by dragging and dropping:
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/environments/reorder-environments.gif)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/reorder-environments.gif" >}}
 
 **Actions**
 
@@ -146,18 +146,18 @@ There is no concept of staging, and you need to deploy your app directly to the 
 
 If you are the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) for an app, you will be see the **Setup Studios Deployment** button which enables you to set the target environment to which apps will be deployed from Studio and Studio Pro. For more information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/environments/setup-studios-target.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/setup-studios-target.png" >}}
 
 ### 2.3 Activity
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/environments/activity.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/activity.png" >}}
 
 If you are the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) you will see the **Download to CSV** button and can download a copy of the activity log as follows:
 
 1. Click **Download to CSV**.
 2. Choose the period for which you want to download log entries. If you choose **Custom Period** you will need to enter a valid period using **Start Date** and **End Date**.
 
-    ![](/attachments/developerportal/deploy/mendix-cloud-deploy/environments/download-activity-log.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/download-activity-log.png" >}}
 3. Click **Download**.
 
 {{% alert color="info" %}}

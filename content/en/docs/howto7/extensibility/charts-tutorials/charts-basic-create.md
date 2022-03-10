@@ -37,7 +37,7 @@ To use the Charts widget, a specific data structure is set up. This is defined b
 
 2. Configure your domain model to contain an entity **Value** with a string attribute **xValue** and a decimal attribute **yValue**.
 
-    ![Value entity](/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/charts-entity.png)
+    {{< figure src="/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/charts-entity.png" alt="Value entity" >}}
 
 ## 3.2 Creating a Data Entry Page
 
@@ -47,7 +47,7 @@ To create a basic data entry page from which the Charts widget will fetch data, 
 
 2. Select **Generate overview pages**.
 
-    ![Generate overview pages for Value entity](/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/charts-rest-generate-overview-pages.png)
+    {{< figure src="/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/charts-rest-generate-overview-pages.png" alt="Generate overview pages for Value entity" >}}
 
 3. Add the **Value_NewEdit** page to user navigation.
 
@@ -61,21 +61,21 @@ To create a basic data entry page from which the Charts widget will fetch data, 
 
 4. Create a new microflow named **DS_NewValue** to fill the data view.
 
-    ![Data view showing the Value entity](/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/charts-create-new-value.png)
+    {{< figure src="/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/charts-create-new-value.png" alt="Data view showing the Value entity" >}}
 
 5. Right-click the data view and select **Go to microflow**.
 
 6. In the new **DS_NewValue** microflow, create a new *Value* object and set that object as the return.
 
-    ![New Value microflow](/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/charts-new-values-microflow.png)
+    {{< figure src="/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/charts-new-values-microflow.png" alt="New Value microflow" >}}
 
 7. On the ShowChart page, add the widget **Area chart**.
 
-    ![Select widget](/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/charts-select-chart.png)
+    {{< figure src="/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/charts-select-chart.png" alt="Select widget" >}}
 
 8. The final page should look like this.
 
-    ![Final widget Page](/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/charts-widget-page.png)
+    {{< figure src="/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/charts-widget-page.png" alt="Final widget Page" >}}
 
 ## 3.4 Configuring the Charts Widget
 
@@ -87,17 +87,17 @@ To configure a Charts widget, follow these steps:
 
 3. In the tab **Chart properties**, add a new **Series** property.
 
-    ![Chart Series](/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/charts-series.png)
+    {{< figure src="/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/charts-series.png" alt="Chart Series" >}}
 
 4. In the tab **Data source**, select *Value* as the **Entity**.
 
 5. Set the **Data source** as **Database**.
 
-    ![select Entity](/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/chart-add-entity.png)
+    {{< figure src="/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/chart-add-entity.png" alt="select Entity" >}}
 
 6. In the tab **Data points**, select *xValue* as the **X-axis data attribute** and *yValue* as the **Y-axis data attribute**.
 
-    ![select Data Points](/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/charts-data-points.png)
+    {{< figure src="/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/charts-data-points.png" alt="select Data Points" >}}
 
 ## 3.5 Viewing the Chart
 
@@ -109,13 +109,13 @@ To view the chart, follow these steps:
 
 3. Enter data values for **x value** and **y value**.
 
-    ![Enter Data](/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/charts-front-end.png)
+    {{< figure src="/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/charts-front-end.png" alt="Enter Data" >}}
 
 4. Click the **Save** button.
 
 5. Open the **ShowChart** page to view the chart created.
 
-    ![Show Chart](/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/charts-area-chart.png)
+    {{< figure src="/attachments/howto7/extensibility/charts-tutorials/charts-basic-create/charts-area-chart.png" alt="Show Chart" >}}
 
 ## 4 Read More
 

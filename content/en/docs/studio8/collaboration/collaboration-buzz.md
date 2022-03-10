@@ -17,7 +17,7 @@ Comments from Studio Buzz are automatically posted in [App Buzz](/developerporta
 
 To *leave a comment*, navigate to the **Buzz** tab, write your comment, and click **Post**:
 
-![Posting a Comment](/attachments/studio8/collaboration/collaboration-buzz/posting-a-comment.png)
+{{< figure src="/attachments/studio8/collaboration/collaboration-buzz/posting-a-comment.png" alt="Posting a Comment" >}}
 
 To *tag a person* by their name, use *@*. 
 
@@ -29,7 +29,7 @@ To *edit* a comment, do the following:
 
 3.  Click the edit icon and change the comment.
 
-    ![](/attachments/studio8/collaboration/collaboration-buzz/edit-comment.png)
+    {{< figure src="/attachments/studio8/collaboration/collaboration-buzz/edit-comment.png" >}}
 
 4. Click **Save**. 
 
@@ -43,7 +43,7 @@ You cannot delete comments in Studio, this is only possible in the [App Buzz](/d
 
 Your comments are posted and shown in the **App Buzz** in the Developer Portal. To view the **App Buzz**, click the ellipsis icon > **View app buzz**:
 
-![App Buzz](/attachments/studio8/collaboration/collaboration-buzz/viewing-app-buzz.png)
+{{< figure src="/attachments/studio8/collaboration/collaboration-buzz/viewing-app-buzz.png" alt="App Buzz" >}}
 
 You will be automatically taken to the Developer Portal. For more information on the App Buzz, see the [App Buzz](/developerportal/collaborate/buzz/#app-buzz) section in *Buzz*.  
 
@@ -59,20 +59,17 @@ To create a feedback item, do the following:
 
 2.  Click the ellipsis icon and select **Create Feedback Item**:
 
-	{{% image_container width="350" %}}![Creating Feedback Item](/attachments/studio8/collaboration/collaboration-buzz/creating-feedback-item.png)
-	{{% /image_container %}}
+	{{< figure src="/attachments/studio8/collaboration/collaboration-buzz/creating-feedback-item.png" alt="Creating Feedback Item"   width="350"  >}}
 	
 3.  In the **Create feedback item** dialog box, fill in the type of feedback, its title, and additional information if necessary.
 
-    {{% image_container width="450" %}}![Create Feedback Item Dialog Box](/attachments/studio8/collaboration/collaboration-buzz/feedback-item-info.png)
-    {{% /image_container %}}
+    {{< figure src="/attachments/studio8/collaboration/collaboration-buzz/feedback-item-info.png" alt="Create Feedback Item Dialog Box"   width="450"  >}}
 
 4. Click **Create**.
 
 The feedback item is submitted and a corresponding comment is posted in the **Buzz** tab with a link to the Developer Portal:
 
-{{% image_container width="350" %}}![Created Feedback Item](/attachments/studio8/collaboration/collaboration-buzz/feedback-item-created.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio8/collaboration/collaboration-buzz/feedback-item-created.png" alt="Created Feedback Item"   width="350"  >}}
 
 ## 4 Read More
 

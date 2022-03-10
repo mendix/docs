@@ -50,15 +50,13 @@ First, you need to enable workflows for your app. Do the following:
 
 2. Before enabling workflows, you need to enable security first. Click **Enable Security**:
 
-    {{% image_container width="250" %}}![Enable Security](/attachments/studio-how-to/workflow-how-to-configure/enable-security.png)
-    {{% /image_container %}}
+    {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/enable-security.png" alt="Enable Security"   width="250"  >}}
 
 3. After security is enabled, click **Enable Workflows**.
 
 4. In the **Workflows Enabled** pop-up menu, click **Create Workflow**:
 
-    {{% image_container width="300" %}}![Create Workflow](/attachments/studio-how-to/workflow-how-to-configure/create-workflow.png)
-    {{% /image_container %}}
+    {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/create-workflow.png" alt="Create Workflow"   width="300"  >}}
 
 5. In the **Create new workflow** dialog box, set the **Title** to **Employee_Onboarding**, and then click the **Workflow Entity** field to create a new workflow entity.
 
@@ -81,7 +79,7 @@ Good job! You have created a workflow and a workflow-specific entity. For more i
     5. Add the **LaptopModel** enumeration with the following enumeration items: Lenovo, Mac, Dell. For more information on enumerations and how to create them, see the [Creating a New Enumeration](/studio/domain-models-enumeration/#create-new-enumeration) section in *Enumerations*.
 
 You have configured the **EmployeeOnboarding** entity:
-![Domain Model](/attachments/studio-how-to/workflow-how-to-configure/domain-model.png)
+{{< figure src="/attachments/studio-how-to/workflow-how-to-configure/domain-model.png" alt="Domain Model" >}}
 
 ## 5 Configuring Security
 
@@ -100,8 +98,7 @@ To start your workflow, you need to trigger it. In this use case, the workflow i
 
 1. Create an **EmployeesToOnboard** page that contains a list view with the **EmployeeOnboarding** entity as its data source. (For more information on how to create a page and add widgets to it, see the [Performing Basic Functions](/studio/page-editor/#page-editor-basic-functions) section in *Pages*.)
 
-    {{% image_container width="500" %}}![Employees to Onboard List](/attachments/studio-how-to/workflow-how-to-configure/employees-to-onboard-list.png)
-     {{% /image_container %}}
+    {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/employees-to-onboard-list.png" alt="Employees to Onboard List"   width="500"  >}}
 
 2. Add a button that will initiate the workflow to the list view. Follow the steps below:
 
@@ -109,7 +106,7 @@ To start your workflow, you need to trigger it. In this use case, the workflow i
 
     2. Drag and drop the button inside the list view:
 
-        ![Start Onboarding Button](/attachments/studio-how-to/workflow-how-to-configure/start-onboarding-button.png)
+        {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/start-onboarding-button.png" alt="Start Onboarding Button" >}}
 
     3. Open the button properties and set the **Workflow** property to **Employee_Onboarding**. 
 
@@ -117,12 +114,11 @@ To start your workflow, you need to trigger it. In this use case, the workflow i
 
 3. The HR specialist also needs a page where they can fill in new hire's details. Add a **Create Object** button on the top of the page (outside the list view):
 
-    {{% image_container width="500" %}}![Employees to Onboard Page](/attachments/studio-how-to/workflow-how-to-configure/employees-to-onboard-page.png) 
-    {{% /image_container %}}
+    {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/employees-to-onboard-page.png" alt="Employees to Onboard Page"   width="500"  >}}
 
 4. Set **Entity** to **EmployeeOnboarding**:
 
-    ![](/attachments/studio-how-to/workflow-how-to-configure/create-object-button.png)
+    {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/create-object-button.png" >}}
 
 5. Click the **Page** property. 
 
@@ -138,11 +134,11 @@ To start your workflow, you need to trigger it. In this use case, the workflow i
 
     4. Click **Create**.
 
-        ![Create Employee Details Page](/attachments/studio-how-to/workflow-how-to-configure/create-employee-details-page.png)
+        {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/create-employee-details-page.png" alt="Create Employee Details Page" >}}
 
 8. The new page opens. By default all attributes are added to the form. However, the HR specialist needs to specify only the name and the first day of the new hire. Leave the relevant widgets and delete all other ones from the form:
 
-    ![Employee Details Form](/attachments/studio-how-to/workflow-how-to-configure/employee-details-form.png)
+    {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/employee-details-form.png" alt="Employee Details Form" >}}
 
 Good job! Now you have a page where the HR specialist can start the workflow.
 
@@ -158,7 +154,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
 4. Set the **Caption** property to **Manager: Specify Employee Details** to easily see who this task should be assigned to:
 
-    ![Caption](/attachments/studio-how-to/workflow-how-to-configure/user-task-caption.png)
+    {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/user-task-caption.png" alt="Caption" >}}
 
 5. To create a page where the manager will specify necessary details, click the **Page** property.
 
@@ -174,7 +170,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
     4. Click **Create**.
 
-        ![Create New Page](/attachments/studio-how-to/workflow-how-to-configure/create-new-page.png)
+        {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/create-new-page.png" alt="Create New Page" >}}
 
 8. Now you need to make sure that only the relevant information is displayed on the **SpecifyDetails_Workflow** page. By default, all attributes are added to the data view with the employee details and can be edited. You need to leave only the attributes related to the task. You also need to make sure that the manager can change only a specific field in the form. For example, the name of the employee has been entered by the HR department, so the manager does not need to change it and should have this field as read-only. 
 
@@ -188,7 +184,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
     4. Leave **WFH**, **Phone model**, and **Laptop model** fields:
 
-        ![Specify Details Form](/attachments/studio-how-to/workflow-how-to-configure/specify-details-form.png)
+        {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/specify-details-form.png" alt="Specify Details Form" >}}
 
 9. Only the Manager role can access the **SpecifyDetails_Workflow** page. Navigate to the page properties > **Allowed Roles** and deselect all roles except **Manager**.
 
@@ -202,13 +198,13 @@ The manager of a new employee will get a task to specify devices for the new hir
 
     3. In the **Assign task to** dialog box, the **Where** condition is set to **User Role** by default. Set the other part of the condition to **Manager** and click **Add**:
 
-        ![Assign Task to Manager](/attachments/studio-how-to/workflow-how-to-configure/assign-task-to-manager.png)
+        {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/assign-task-to-manager.png" alt="Assign Task to Manager" >}}
 
 12. In the **Allowed Roles** property deselect all roles except **Manager** to restrict access to this user task to the relevant role only.
 
 Great job! You have created the user task for the Manager role:
 
-![Configured User Task](/attachments/studio-how-to/workflow-how-to-configure/user-task-configured.png)
+{{< figure src="/attachments/studio-how-to/workflow-how-to-configure/user-task-configured.png" alt="Configured User Task" >}}
 
 ## 8 Following Different Paths for the Hire's Location
 
@@ -218,7 +214,7 @@ Do the following:
 
 1. Open the workflow editor > **Toolbox** and drag and drop the **Decision** activity after the **Manager: Specify Employee Details** user task. 
 
-    ![Adding a Decision](/attachments/studio-how-to/workflow-how-to-configure/decision.png)
+    {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/decision.png" alt="Adding a Decision" >}}
     
 2. Decision means that the workflow path can split and follow one of the outcomes depending on the condition of the decision. For more information, see the [Decision](/studio/workflows-general-activities/#decision) section in *General Activities*. Open the decision properties and do the following:
 
@@ -228,13 +224,13 @@ Do the following:
 
     3. In the **Configure condition** dialog box, type in the expression that will split one flow into two depending on the **WFH** attribute: `$workflowData/WFH`.
 
-        {{% image_container width="500" %}}![Decision Properties](/attachments/studio-how-to/workflow-how-to-configure/decision-properties.png){{% /image_container %}}
+        {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/decision-properties.png" alt="Decision Properties"   width="500"  >}}
 
     4. Click **Save**.
 
 3. Since the WFH attribute is a Boolean, it has a true (when the new hire works from home) and a false (when they work from the office) outcome. These outcomes are added to the workflow automatically: 
 
-    ![Decision Outcomes](/attachments/studio-how-to/workflow-how-to-configure/decision-outcomes.png)
+    {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/decision-outcomes.png" alt="Decision Outcomes" >}}
 
 4. Now you need to configure what happens in both scenarios: when the new hire works from home (true) and when the new hire works from the office (false). Open the **Toolbox**, drag and drop a **User Task** activity to the **false** path, and do the following:
 
@@ -252,7 +248,7 @@ Do the following:
 
     7. Toggle the **Read-Only** property to make all fields in the form read-only.
 
-       ![Read-Only Data View](/attachments/studio-how-to/workflow-how-to-configure/data-view-read-only.png)
+       {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/data-view-read-only.png" alt="Read-Only Data View" >}}
 
     8. Only the Facilities role can access the **PrepareDesk_Workflow** page. Navigate to the page properties > **Allowed Roles** and deselect all roles except **Facilities**.
 
@@ -272,16 +268,14 @@ Do the following:
 
     6. Toggle the **Read-Only** property to make all fields in the form read-only:
 
-        ![Read-Only Data View](/attachments/studio-how-to/workflow-how-to-configure/data-view-read-only.png)
+        {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/data-view-read-only.png" alt="Read-Only Data View" >}}
 
     7. Only the Facilities role can access the **ShipDevices_Workflow** page. Navigate to the page properties > **Allowed Roles** and deselect all roles except **Facilities**.
 
 
 Great job! You have created the decision and user tasks on whether the new hire is working from the office or from home. Your workflow is configured! 
 
-{{% image_container width="250" %}}
-![Configured Workflow](/attachments/studio-how-to/workflow-how-to-configure/worfklow-configured.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio-how-to/workflow-how-to-configure/worfklow-configured.png" alt="Configured Workflow"   width="250"  >}}
 
 ## 10 Configuring Navigation
 
@@ -301,7 +295,7 @@ You need to configure navigation otherwise the user roles will not be able to re
 
     5. Set **Icon** to **User**.
 
-        ![Navigation Item for HRs](/attachments/studio-how-to/workflow-how-to-configure/navigation-hr.png)
+        {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/navigation-hr.png" alt="Navigation Item for HRs" >}}
 
 3. You need to add menu items for Manager and Facilities user roles to be able to open their task inbox. Add a new menu item and do the following (for more information on how to add a new menu item, see [Navigation Document](/studio/navigation/):
 
@@ -311,7 +305,7 @@ You need to configure navigation otherwise the user roles will not be able to re
 
     3. In the **Select Page** dialog box, switch from the current module to the Workflow Commons one using the drop-down menu in the upper-right corner:
 
-        {{% image_container width="400" %}}![Select Page](/attachments/studio-how-to/workflow-how-to-configure/select-page-for-navigation.png){{% /image_container %}}
+        {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/select-page-for-navigation.png" alt="Select Page"   width="400"  >}}
 
     4. Find the **TaskInbox** page in the list and click **Select**.
 
@@ -321,7 +315,7 @@ You need to configure navigation otherwise the user roles will not be able to re
 
 You have configured the navigation for your app and now you can preview and test it 
 
-![Configured Navigation](/attachments/studio-how-to/workflow-how-to-configure/configured-navigation.png)
+{{< figure src="/attachments/studio-how-to/workflow-how-to-configure/configured-navigation.png" alt="Configured Navigation" >}}
 
 ## 11 Testing the Workflow {#test-workflow}
 
@@ -329,7 +323,7 @@ Now you can test your workflow from the perspective of different users.
 
 For example, users who have tasks assigned to them (Manager, Facilities roles) will see their task inbox and dashboards pages where they can manage and monitor tasks assigned to them:
 
-![Task Inbox](/attachments/studio-how-to/workflow-how-to-configure/task-inbox.png)
+{{< figure src="/attachments/studio-how-to/workflow-how-to-configure/task-inbox.png" alt="Task Inbox" >}}
 
 The Workflow Admin role has access to the Workflow Admin Center and can monitor all workflows, can view the progress of workflows, and change the workflow settings.
 
@@ -341,7 +335,7 @@ To test your workflow, you need to switch between different user roles. Follow t
 
 2. Click the user icon on the right and select a user role:
 
-    {{% image_container width="300" %}}![Demo User Role](/attachments/studio-how-to/workflow-how-to-configure/user-roles.png){{% /image_container %}}
+    {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/user-roles.png" alt="Demo User Role"   width="300"  >}}
 
 3. You can switch between different demo user roles to test the use case. Do can do the following:
     1. Select the HR user role, open the **EmployeesToOnboard** page and add a new onboarding request.

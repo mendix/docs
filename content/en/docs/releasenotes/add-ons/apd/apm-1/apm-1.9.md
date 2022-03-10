@@ -8,7 +8,7 @@ parent: "apm-1"
 
 The theme for this version is further enhancement of UX. 
 
-![](/attachments/releasenotes/add-ons/apd/apm-1/apm-1.9/Dashboard_1.9.0.png)
+{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.9/Dashboard_1.9.0.png" >}}
 
 The measurements tool has been enhanced to allow for calculated measurements. This allows for 
 measuring memory as a percentage and triggering on 70% instead of some large number. The measurements tool

@@ -20,7 +20,7 @@ You can specify a number of different access restriction profiles for your appli
 
 Click **New** to create a new access restriction profile. Select an existing profile and click **Edit** to modify it, or **Delete** to delete it. You can also click **Clone** to make a copy of an existing profile.
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/access-restriction-profiles.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/access-restriction-profiles.png" >}}
 
 See below for information on setting up access restriction profiles for Mendix Cloud [v4](#v4) and [v3](#v3).
 
@@ -36,7 +36,7 @@ When you create a new access restriction profile, you will first be asked to ent
 
 Once your profile has a name, or if you are editing an existing profile, you will see the access restriction profile editing page.
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/v4-access-restriction-profile.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/v4-access-restriction-profile.png" >}}
 
 Add IP ranges and certificate profiles as described below, then click **Save** to save the access restriction profile.
 
@@ -58,7 +58,7 @@ Your CA must contain a single root certificate and can have multiple intermediat
 
 Once the CA is uploaded, you will see a tree containing the root certificate and any intermediate certificates included in the CA. When you upload a CA, the last certificate in the CA will be selected by default.
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/ca-profile.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/ca-profile.png" >}}
 
 Select the check box next to each intermediate or root certificate you want to use. Client certificates will be accepted if they are signed by any checked certificate. If more than one certificate in a branch is checked (for example the root certificate and an intermediate certificate) the client certificate will be accepted if it is signed by any of the checked certificates.
 
@@ -74,7 +74,7 @@ You can specify a number of different IP ranges. Click **New** to add a new one,
 
 For each IP range, you can specify a **Name** for the range, and a range of addresses. Mendix Cloud v4 supports both IPv4 and IPv6 format addresses.
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/ip-range.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/ip-range.png" >}}
 
 ### 2.2 Access Restriction Profiles for Mendix Cloud V3{#v3}
 
@@ -84,7 +84,7 @@ Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be reti
 
 For Mendix Cloud v3, you have fewer options for setting up an access restriction profile.
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/v3-access-restriction-profile.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/v3-access-restriction-profile.png" >}}
 
 #### 2.2.1 Changing the Profile Name
 
@@ -100,7 +100,7 @@ The IP range filter option is not available in Mendix Cloud v3 environments host
 
 For each IP range, you can specify a **Name** for the range, and a range of addresses. Mendix Cloud v3 supports both IPv4 or IPv6 format addresses.
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/ip-range.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/ip-range.png" >}}
 
 #### 2.2.3 Specifying TLS Client Certificate Verification
 
@@ -158,13 +158,13 @@ To restrict access to the app to an IP range, follow these steps:
 
 2. Go to the **Access Restriction Profiles** tab of the **Environments** page.
 
-    ![](/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/app-restriction.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/app-restriction.png" >}}
 
 3. Create an access restriction profile.
 
 4. Add one or more IP ranges to the access restriction profile.
 
-    ![](/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/scenario1.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/scenario1.png" >}}
 
 5. Save the access restriction profile.
 
@@ -172,7 +172,7 @@ To restrict access to the app to an IP range, follow these steps:
 
 7. Select the **Network** tab of an application environment.
 
-    ![](/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/environment-restriction.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/environment-restriction.png" >}}
 
 8. **Edit** the top level path `/`.
 
@@ -196,13 +196,13 @@ To add this additional access restriction profile, follow these steps:
 
 1. Go to the **Access Restriction Profiles** tab of the **Environments** page.
 
-    ![](/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/app-restriction.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/app-restriction.png" >}}
 
 2. Create a **New** access restriction profile.
 
 3. **Upload** the certificate of the internal CA that is used to sign the client certificates.
 
-    ![](/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/scenario2.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/scenario2.png" >}}
 
 4. **Save** the new access restriction profile.
 
@@ -210,7 +210,7 @@ To add this additional access restriction profile, follow these steps:
 
 7. Select the **Network** tab of an application environment.
 
-    ![](/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/environment-restriction.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/environment-restriction.png" >}}
 
 8. **Edit** the `/ws/` path of the environment to apply the new access restriction profile. For the selected path (`/ws/`), the default profile (for the top level `/`) will now be overridden.
 

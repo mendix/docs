@@ -31,7 +31,7 @@ If your handler relies on the event having already been applied to another objec
 
 For example, say your **Customer** entity has a **Postcode** attribute and you want to check that this is always valid. If there are multiple places where this can be changed, you can add a *Before Commit* event which calls a microflow **BCo_Customer_Postcode** which checks that the postcode is valid every time a Customer object is committed and prevents the object being committed if the postcode is invalid.
 
-![Example of adding a before commit event handler to the Customer entity](/attachments/refguide8/modeling/domain-model/entities/event-handlers/customer-event-handlers.png)
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/event-handlers/customer-event-handlers.png" alt="Example of adding a before commit event handler to the Customer entity" >}}
 
 For more information on using event handlers for data validation, see [How To Set Up Data Validation](/howto8/data-models/setting-up-data-validation/).
 
@@ -41,7 +41,7 @@ You can add and edit event handlers for an entity from the [entity dialog box](/
 
 An example of the event handler properties is represented in the image below:
 
-![](/attachments/refguide8/modeling/domain-model/entities/event-handlers/event-handler-properties.png)
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/event-handlers/event-handler-properties.png" >}}
 
 Event handler properties consist of the following sections:
 

@@ -20,7 +20,7 @@ Measurement triggers are used to check measurements for a specific value. If the
 
 The trigger definition tab contains the **Description** and **Enabled** attributes as well as specific settings for the different trigger types.
 
- ![](/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-triggers/Trigger_Definition.png)   
+ {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-triggers/Trigger_Definition.png" >}}   
 
 #### 3.1.1 Shared Fields
 
@@ -47,7 +47,7 @@ The trigger definition tab contains the **Description** and **Enabled** attribut
 
 Trigger actions define what happens when the trigger fires.
 
- ![](/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-triggers/Trigger_Actions.png) 
+ {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-triggers/Trigger_Actions.png" >}} 
 
 These are possible trigger actions:
 
@@ -65,7 +65,7 @@ These are only visible with special permissions:
 
 The continuation tab enables configuration of what happens after the trigger has fired and the action has been executed.
 
-![](/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-triggers/Trigger_Continuation.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-triggers/Trigger_Continuation.png" >}}
 
 You can:
 
@@ -81,7 +81,7 @@ If a trigger fires, a record is created in the triggered events. The events are 
 
 **Remove triggered events after (days)**. If you want to keep an event for future reference, you can keep the event using the keep-button above the triggered event grid.
 
-![](/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-measurements-tool/Triggered_Events.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-measurements-tool/Triggered_Events.png" >}}
 
 If a trap is created with the trigger actions, you can open the trap.
 

@@ -30,7 +30,7 @@ We are in the process of adding the Mendix SSO module to the Mendix app template
 
 You can see if your app has the Mendix SSO module, and which version it has, by looking in the **Marketplace modules** section in the **App Explorer** for your app. The version number is recorded in the **Version** constant within the module.
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/mxsso-app-store-module.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/mxsso-app-store-module.png" >}}
 
 If your app does not have the Mendix SSO module, it is available from the Mendix Marketplace [here](https://marketplace.mendix.com/link/component/111349/). Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up), below.
 
@@ -46,11 +46,11 @@ Mendix Single Sign-On is only activated when your app is deployed to the Mendix 
 
 When you open an app as an end-user, and this is the first time visiting the app environment *or* you have not opened the app recently, you will see the Mendix SSO sign-on screen. You can still choose to sign-on with local user credentials, but to use your Mendix Account with Mendix SSO, click  the **Mendix Account** button.
 
-![Mendix SSO sign-on screen](/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/sso-sign-on.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/sso-sign-on.png" alt="Mendix SSO sign-on screen" >}}
 
 Every app implementing Mendix SSO needs some of your profile information (like your account identifier and your display name) to work. So for each environment (for example, myapp running in acceptance), the first time you sign in as an end-user using Mendix SSO the app will ask you to authorize access. This means that the app can access certain information held in your Mendix profile as specified on the authorization page.
 
-![Authorization screen](/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/authorize-access.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/authorize-access.png" alt="Authorization screen" >}}
 
 Click **Authorize** to continue using Mendix SSO with this app. After authorizing the app you are automatically signed in to the app.
 
@@ -58,7 +58,7 @@ Click **Authorize** to continue using Mendix SSO with this app. After authorizin
 
 Give end-users access to your app through the [Manage App Users](/developerportal/collaborate/general-settings/#managing-app-users) page of the Developer Portal. You can get to this page in the Developer Portal from the **General Settings** page of your app.
 
-![General page for the app in Developer Portal](/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/manage-app-users.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/manage-app-users.png" alt="General page for the app in Developer Portal" >}}
 
 {{% alert color="warning" %}}
 Do not attempt to add or delete Mendix SSO users using administration functions within the app. If user access is not modified through the Developer Portal, then user access to your app will not be changed.
@@ -81,14 +81,14 @@ To deactivate Mendix SSO, follow these two steps:
     3. Rename *login.html* to *login-with-sso.html*.
     4. Rename *login-without-sso.html* to *login.html*.
     
-    ![File explorer showing two login files](/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/theme-folder-remove.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/theme-folder-remove.png" alt="File explorer showing two login files" >}}
 
 2. Follow the instructions below to remove the microflow **MendixSSO_AfterStartup** as the **After startup** microflow.
     1. Open **App Settings** from the **App Explorer**.
     2. Click the **Runtime** tab.
     3. Click **Select…** for the **After startup** microflow.
     4. Click **None**.
-        ![Setting after startup microflow to none](/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/after-startup-remove.png)
+        {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/after-startup-remove.png" alt="Setting after startup microflow to none" >}}
     5. Click **OK** to close the **App Settings**.
     {{% alert color="info" %}}If there is a different **After startup** microflow, you should not remove it. Instead remove the MendixSSO_AfterStartup microflow which is an action in the existing microflow{{% /alert %}}
 
@@ -131,7 +131,7 @@ To enable Mendix SSO in your app, follow these steps:
     2. Click the **Runtime** tab.
     3. Click **Select…** for the **After startup** microflow.
     4. Choose the microflow **Marketplace modules** > **MendixSSO** > **MOVE_THIS** > **CustomizableMendixSSOMicroflows** > **MendixSSO_AfterStartup** (you can use the filter to find it quickly) and click **Select**.
-        ![](/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/after-startup.png)
+        {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/after-startup.png" >}}
     5. Click **OK** to close the **App Settings**.
 
     {{% alert color="info" %}}If there is already an After startup microflow, you should not replace it, but rather add the MendixSSO_AfterStartup microflow as an action in the existing microflow{{% /alert %}}
@@ -147,13 +147,13 @@ To enable Mendix SSO in your app, follow these steps:
     4. Select the **Administrator** user role and click **Edit**.
     5. Click **Edit** next to **Module roles**.
     6. Select the **Administrator** module role for **Marketplace modules** > **MendixSSO**.
-        ![Set Administrator module role](/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/set-module-role.png)
+        {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/set-module-role.png" alt="Set Administrator module role" >}}
     7. Click **OK** twice to return to **Project Security**.
     8. Repeat the steps above to add the MendixSSO.User module role to the **User** user role.
 
         The app security settings now contains these two additional module roles:
 
-        ![Confirmation of user roles](/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/module-user-roles.png)
+        {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/module-user-roles.png" alt="Confirmation of user roles" >}}
 
 5. Change the page that Mendix uses to log you in (`login.html`) to allow logging in using SSO.
 
@@ -191,7 +191,7 @@ These two ways are described below.
 
 The default Mendix SSO implementation is based on snippets. You can use these snippets in your own pages to customize the administration of the end-users. If you look at how they are used in the default implementation, you can see how to use them in your own pages. The snippets are:
 
-![List of snippets in Mendix SSO](/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/snippets.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/snippets.png" alt="List of snippets in Mendix SSO" >}}
 
 * In folder **Admin**
     * **TokensOverviewSnippet** – an overview of all the tokens issued to end-users of the app
@@ -243,11 +243,11 @@ You need to tell the Mendix SSO Module to use your new entity, instead of the de
 
 1. Update the **MendixSSO_AfterStartup** microflow in the customized user administration module to use the **MendixSSO_CreateUser** and **MendixSSO_UpdateUser** microflows in the same module. If you moved the folder from the **MendixSSO** module the names should have been updated automatically.
 
-    ![Modify custom afterstartup microflow to use custom create and update microflows](/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/custom-afterstartup-microflow.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/custom-afterstartup-microflow.png" alt="Modify custom afterstartup microflow to use custom create and update microflows" >}}
 
 2. Update the **Create** action in the **MendixSSO_CreateUser** microflow in your user administration module to use your custom user entity, not the one in the Mendix SSO module.You will also need to update all the members which are set during the create.
 
-    ![Edit custom create microflow to use the new entity](/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/create-new-entity.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/create-new-entity.png" alt="Edit custom create microflow to use the new entity" >}}
 
 3. Change the **End event** of the microflow to return an object of the correct type.
 
@@ -255,7 +255,7 @@ You need to tell the Mendix SSO Module to use your new entity, instead of the de
 
 5. Change the **Change object** action to set the correct members of the object.
 
-    ![Edit all the members of the entity to match the attributes and associations](/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/edit-members.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/edit-members.png" alt="Edit all the members of the entity to match the attributes and associations" >}}
 
 6. Change the **End event** of the microflow to return an object of the correct type.
 
@@ -285,13 +285,13 @@ Local users don't have tokens as they don't sign in via SSO.
 
 Tokens are held in encrypted form in the `Token` entity, and are associated with the end-user via the `Token_User` association.
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/domain-model-token.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/domain-model-token.png" >}}
 
 You can allow an administrator to see all the tokens by displaying them on an administration page of your app.
 
 For example, you can create a data grid sourced from the database entity `MendixSSO.Token` and display the attributes you require from the `Token` entity, and the associated `User` and `Session` entities. Remember that, in this case, the tokens will still be encrypted.
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/token-datagrid.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/token-datagrid.png" >}}
 
 If you implement a page like this, ensure that security is set up to prevent unauthorized users accessing the page.
 
@@ -309,17 +309,17 @@ Versions of Mendix SSO below v3.0 contained a default Mendix SSO administration 
 
 Individual end-users can see their tokens on the MendixSSO.MyTokensOverview page of the default implementation. Administrators may want to see all active tokens – these can be seen on the MendixSSO.TokensOverview page.
 
-![List of pages which show tokens in Mendix SSO](/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/token-pages.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/token-pages.png" alt="List of pages which show tokens in Mendix SSO" >}}
 
 If you want administrators or end-users to be able to see tokens, it is recommended that you add these to the navigation of the app. This avoids them being included in the main process flows of the app.
 
-![How to add navigation to the tokens overview pages in Mendix SSO](/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/token-navigation.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/token-navigation.png" alt="How to add navigation to the tokens overview pages in Mendix SSO" >}}
 
 ##### 6.2.1.1 TokensOverview Page
 
 The TokensOverview page allows administrators to see all tokens which have been issued to end-users of the app.
 
-![List of all Mendix SSO tokens issued to the app](/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/token-administration.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/token-administration.png" alt="List of all Mendix SSO tokens issued to the app" >}}
 
 The page can be used for troubleshooting – you can see the creation and expiry dates of the tokens and, by clicking **View**, you can view the values held in the tokens.
 
@@ -333,7 +333,7 @@ Deleting tokens from the TokensOverview page will cause end-users to lose access
 
 The MyTokensOverview page allows end-users to see their own access tokens.
 
-![List of all my Mendix SSO tokens](/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/my-tokens.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/my-tokens.png" alt="List of all my Mendix SSO tokens" >}}
 
 The page can be used for troubleshooting – the end-user can see the creation and expiry dates of the tokens and, by clicking **View**, they can view the values held in the tokens. This can be useful for troubleshooting if the end-user is having difficulty getting proper access to the app.
 
@@ -341,6 +341,6 @@ The page can be used for troubleshooting – the end-user can see the creation a
 
 The default tokens pages in the MendixSSO module are created using snippets.
 
-![List of snippets which manipulate tokens in Mendix SSO](/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/token-snippets.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/token-snippets.png" alt="List of snippets which manipulate tokens in Mendix SSO" >}}
 
 You can use these snippets to create your own token administration pages. Look at the pages in the **Pages** subfolder of the **Default Implementation** folder in the Mendix SSO module for ideas on how they can be used.

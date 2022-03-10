@@ -33,11 +33,11 @@ Always try to use a Mendix action first. This table explains why you should use 
 
 However, there are reasons to not use Mendix actions. For example, sometimes a custom action can get too complex using a Mendix action, because of the input parameters that are required. For another example, when using a Mendix action, you have six input parameters:
 
-![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-general/ht-two-guidelines-custom-action/mendix-action-input-parameters.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-general/ht-two-guidelines-custom-action/mendix-action-input-parameters.png" >}}
 
 But when you use a core action, you have four input parameters: 
 
-![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-general/ht-two-guidelines-custom-action/core-action-input-parameters.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-general/ht-two-guidelines-custom-action/core-action-input-parameters.png" >}}
 
 The difference is because of the required **Widget Name** input parameter in a Mendix action. When you use a core action, this is not always required. So if you don not need the widget name, a core action is a better solution. This is a valid reason to use the core actions; otherwise, the custom action is not user-friendly.
 
@@ -47,7 +47,7 @@ Only use items that are visually present on the page, like the text inside a cer
 
 This is a visual component:
 
-![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-general/ht-two-guidelines-custom-action/visual-component-widget.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-general/ht-two-guidelines-custom-action/visual-component-widget.png" >}}
 
 {{% alert color="info" %}}
 
@@ -76,7 +76,7 @@ Try to find the generic aspect of the child node. In most cases, the `mx-name-` 
 
 This is the `mx-name` in the debugger:
 
-![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-general/ht-two-guidelines-custom-action/mx-name-in-debugger.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-general/ht-two-guidelines-custom-action/mx-name-in-debugger.png" >}}
 
 {{% alert color="info" %}}
 
@@ -90,7 +90,7 @@ When using core actions to trigger an event, always use a Mendix Wait action aft
 
 This is the Mendix Wait action:
 
-![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-general/ht-two-guidelines-custom-action/mendix-wait-action.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-general/ht-two-guidelines-custom-action/mendix-wait-action.png" >}}
 
 For more information, please see [Mendix Wait](/addons/ats-addon/rg-one-mendix-wait/).
 
@@ -122,9 +122,9 @@ These are some of the most used action parameters:
 
 These are the three most used action parameters:
 
-![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-general/ht-two-guidelines-custom-action/standard-input-parameters.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-general/ht-two-guidelines-custom-action/standard-input-parameters.png" >}}
 
-![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-general/ht-two-guidelines-custom-action/standard-input-parameters-2.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-general/ht-two-guidelines-custom-action/standard-input-parameters-2.png" >}}
 
 Last but not least, give a description to the action parameters, especially when it requires specific information. You can also give a generic example of what the user should enter, making it more user-friendly.
 
@@ -142,7 +142,7 @@ In addition, describe the output of each test step to make it easier to understa
 
 This is an example:
 
-![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-general/ht-two-guidelines-custom-action/describe-teststeps-define-output.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-general/ht-two-guidelines-custom-action/describe-teststeps-define-output.png" >}}
 
 ## 9 Data Type Awareness
 
@@ -164,7 +164,7 @@ These are the different data types in ATS:
 | Float | **The Float type is deprecated and should not be used.** | N/A |
 | Currency | **The Currency type is deprecated and should not be used** | N/A |
 
-![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-general/ht-two-guidelines-custom-action/datatype-web-element.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-general/ht-two-guidelines-custom-action/datatype-web-element.png" >}}
 
 The JavaScript actions have three different versions, based on the data types:
 

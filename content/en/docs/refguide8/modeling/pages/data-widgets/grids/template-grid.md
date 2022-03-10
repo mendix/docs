@@ -17,7 +17,7 @@ tags: ["studio pro", "grid", "template grid", "data widgets"]
 
 A template grid shows a list of objects in a tile view. For example, a template grid can show a list of employees with their profile pictures. Using controls provided by the template grid you can browse, search, and manipulate those objects:
 
-![](/attachments/refguide8/modeling/pages/data-widgets/grids/template-grid/template-grid.png)
+{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/grids/template-grid/template-grid.png" >}}
 
 The template grid has a lot in common with a [data grid](/refguide8/data-grid/). The main difference is that the objects are shown in templates instead of rows.
 
@@ -39,8 +39,7 @@ For more information, see [Control Bar](/refguide8/control-bar/).
 
 An example of template grid properties is represented in the image below:
 
-{{% image_container width="250" %}}![](/attachments/refguide8/modeling/pages/data-widgets/grids/template-grid/template-grid-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/grids/template-grid/template-grid-properties.png"   width="250"  >}}
 
 Template grid properties consist of the following sections:
 

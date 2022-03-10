@@ -12,7 +12,7 @@ Datasets are easy to create and maintain, so you can add more values later on wi
 
 You can access the **Test Data** tab from the **Test Cases** page. Here you create a dataset by clicking **New Data Set**. A dialog box opens, where you give the dataset a name and an optional description.
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-data-driven-testing/test-data-tab.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-data-driven-testing/test-data-tab.png" >}}
 
 Datasets consist of one or more fields and records. You can think of fields as columns in a table. Corresponding to that, records are the rows in a table and represent the values of a field.
 
@@ -23,13 +23,13 @@ Fields can have following data types: text or number.
 | Field  | A column of a table for specific data (for example, *username*. |
 | Record | A row in a data table containing a text or number value. |
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-data-driven-testing/test-data.PNG)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-data-driven-testing/test-data.PNG" >}}
 
 ## 2 Using Test Data in Test Cases
 
 To use your datasets in test cases, you need to select a **Master dataset** under the **Test Data** tab inside a test case. Click the arrow to open the **Select Data Set** dialog box.
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-data-driven-testing/master-data-set.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-data-driven-testing/master-data-set.png" >}}
 
 You can only select one master dataset at a time per test case. Your selected dataset affects which fields you can use as parameters in your selected test case. You can only choose fields that are in the selected master dataset. On execution, ATS picks the corresponding record values for each field.
 

@@ -27,7 +27,7 @@ When Studio Pro is open, press <kbd>F1</kbd> to quickly jump to documentation.
 
 This document describes the user interface of Mendix Studio Pro:
 
-![Studio Pro Diagram](/attachments/refguide8/modeling/studio-pro-overview/studio-pro-diagram.png)
+{{< figure src="/attachments/refguide8/modeling/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram" >}}
 
 ## 2 Top Bar
 

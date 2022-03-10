@@ -15,7 +15,7 @@ When enabled, the header will be inserted at the top of every page. Other widget
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide/modeling/resources/document-templates/header-document-template/918236.png)
+{{< figure src="/attachments/refguide/modeling/resources/document-templates/header-document-template/918236.png" >}}
 
 A header.
 

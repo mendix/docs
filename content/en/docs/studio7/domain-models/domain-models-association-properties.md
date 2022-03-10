@@ -19,8 +19,7 @@ In Mendix Studio, associations have the following properties:
 
 *  [Delete behavior](#delete-behavior)
 
-   {{% image_container width="300" %}}![](/attachments/studio7/domain-models/domain-models-association-properties/association-properties.png)
-   {{% /image_container %}}
+   {{< figure src="/attachments/studio7/domain-models/domain-models-association-properties/association-properties.png"   width="300"  >}}
 
 In relation to the module the associations can be of two types:
 
@@ -43,8 +42,7 @@ Multiplicity can be of the following types:
 
 Multiplicity shows the owner and the direction of association if the association is of the one-to-many or many-to-many type. In the domain model it is displayed as an arrow pointing the direction. The owner is the entity the association starts from, so it is located at the start of the arrow. In one-to-one associations both entities are owners. 
 
-{{% image_container width="400" %}}![](/attachments/studio7/domain-models/domain-models-association-properties/association-domainmodel.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/domain-models/domain-models-association-properties/association-domainmodel.png"   width="400"  >}}
 
 You can swap the direction of the multiplicity if its type is one-to-many or many-to-many. In this case you will change the owner of association. 
 
@@ -75,11 +73,11 @@ In Studio, cross-module association is indicated with the following:
 
 *  An icon next to the entity that has such association: 
 
-   ![](/attachments/studio7/domain-models/domain-models-association-properties/association-icon.png)
+   {{< figure src="/attachments/studio7/domain-models/domain-models-association-properties/association-icon.png" >}}
 
 *  A pop-up window, which displays when you click the icon:
 
-   ![](/attachments/studio7/domain-models/domain-models-association-properties/association-pop-up.png)
+   {{< figure src="/attachments/studio7/domain-models/domain-models-association-properties/association-pop-up.png" >}}
 
 Cross module associations have the following properties:
 

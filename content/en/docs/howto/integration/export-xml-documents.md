@@ -28,17 +28,17 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 1. Create the following **Customer** entity in your domain model:
 
-    ![](/attachments/howto/integration/export-xml-documents/18581816.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581816.png" >}}
 
 2. Create overview and detail pages to manage the Customer objects.
 3. Create a menu item to access the customer overview page.
 4. Create the **XMLDocument** entity that inherits all the properties from *System.FileDocument*:
 
-    ![](/attachments/howto/integration/export-xml-documents/18581650.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581650.png" >}}
 
 5. Create a reference set (multiplicity **[*-*]**) between XMLDocument and Customer:
 
-    ![](/attachments/howto/integration/export-xml-documents/18581814.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581814.png" >}}
 
 ## 3 Adding an XML Schema (XSD)
 
@@ -47,11 +47,11 @@ Whether you plan to import documents or export documents, working with XML means
 1.  Right-click your module in the **App Explorer** and select **Add other** > **XML schema**.
 2.  Enter *CustomersXSD* for the **Name** and click **OK**:
 
-    ![](/attachments/howto/integration/export-xml-documents/18581696.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581696.png" >}}
 
 3.  In the **XML Schema** editor, click **Select** for **XML Schema** and select the XSD file that you downloaded earlier:
 
-    ![](/attachments/howto/integration/export-xml-documents/18581812.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581812.png" >}}
 
 4. Click **OK** to save the XML Schema. We'll be using this schema in the following steps.
 
@@ -63,39 +63,39 @@ The XML schema describes what the contents of an XML document should be. We need
 
 2. Enter *ExportCustomersMapping* for the **Name**:
 
-    ![](/attachments/howto/integration/export-xml-documents/18581849.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581849.png" >}}
 
 3. Click **OK**, and the **Select schema elements for export mapping** dialog box will automatically open. Now do the following:<br />
     a. For **Schema source**, select **XML schema**.<br />
     b. For the schema, select the previously added **CustomersXSD**.<br />
     c. In the **Schema elements** section of the dialog box, click the **Expand all** and **Check all** buttons. This automatically selects the **Customer** element and its child elements. Your screen should now look like this:
 
-    ![](/attachments/howto/integration/export-xml-documents/18581811.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581811.png" >}}
 
 4. Click **OK**. You should now see the first part of the import mappings:
 
-    ![](/attachments/howto/integration/export-xml-documents/18581810.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581810.png" >}}
 
 5. Open the **Connector** pane and drag the **XMLDocument** entity from the **Connector** to the placeholder:
 
-    ![](/attachments/howto/integration/export-xml-documents/18581809.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581809.png" >}}
 
     The mapping editor for this element will pop up, you can close that by clicking **OK**.
 
 6. Drag the **Customer** entity from the **Connector** to the placeholder:
 
-    ![](/attachments/howto/integration/export-xml-documents/18581808.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581808.png" >}}
 
     The mapping editor for this element will open up:
 
-    ![](/attachments/howto/integration/export-xml-documents/18581806.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581806.png" >}}
 
 7. In the mapping editor, verify the following:<br />
     a. **Method** is set to **By association**<br />
     b. **Association to parent** is set to **XMLDocument_Customer**<br />
 8. Select attributes for all five **Attribute to value element mapping** instances (or click **Map attributes by name** to accomplish this). You should have the following mapping:
 
-    ![](/attachments/howto/integration/export-xml-documents/18581807.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581807.png" >}}
 
 9. Click **OK** to save the mapping.
 
@@ -107,19 +107,19 @@ To create the export logic, follow these steps:
 
 1. Open the **Customer** overview page, right-click the toolbar of the data grid widget, and select **Add button** > **Action** to add a new Action button:
 
-    ![](/attachments/howto/integration/export-xml-documents/18581804.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581804.png" >}}
 
 2. Double-click the new button to open the properties editor and do the following:
     * For **Caption**, enter *Export as XML*
     * For **On click**, select **Call a microflow**
     * In the **Select Microflow** dialog box, click **New** to create a new microflow and enter *Customers_Export* for its **Name**
 
-    ![](/attachments/howto/integration/export-xml-documents/18581803.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581803.png" >}}
 
 3. Click **OK** to save the button properties.
 4. Right-click the new action button and click **Go to microflow** in the context menu. You should see an empty microflow with one input parameter:
 
-    ![](/attachments/howto/integration/export-xml-documents/18581802.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581802.png" >}}
 
 5. Select the input parameter and delete it.
 6. Open the **Toolbox**, which should be on the lower-right side of Studio Pro (you can also open it from the **View** menu).
@@ -128,33 +128,33 @@ To create the export logic, follow these steps:
     * For **Source**, select **From database**
     * For **Entity**, click **Select...** and select the customer entity
 
-    ![](/attachments/howto/integration/export-xml-documents/18581830.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581830.png" >}}
 
 9. Click **OK**. The microflow should now look like this:
 
-    ![](/attachments/howto/integration/export-xml-documents/18581827.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581827.png" >}}
 
 10. Drag a **Create object** activity from the **Toolbox** to the line between the start event and end event.
 11. Double-click the activity to open the **Create Object** editor and do the following:
     * For **Entity**, select **XMLDocument**
     * Click **New** to add a change item
 
-    ![](/attachments/howto/integration/export-xml-documents/18581801.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581801.png" >}}
 
 12. In the **Edit Change Item** editor, do the following:
     * For the **Member** for the change item, select the **XMLDocument_Customer** reference:
     * For the **Value**, enter *$CustomerList*
 
-    ![](/attachments/howto/integration/export-xml-documents/18581825.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581825.png" >}}
 
 13. Click **OK** to save the change item.
 14. Create a change item to set the **Name** attribute to: *'customers.xml'* (including the single quotation marks [']). The **Create Object** dialog box should now look like this:
 
-    ![](/attachments/howto/integration/export-xml-documents/create-object.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/create-object.png" >}}
 
 15. Click **OK** to save the action properties. The microflow should look like this:
 
-    ![](/attachments/howto/integration/export-xml-documents/18581823.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581823.png" >}}
 
 16. Drag an **Export with mapping** activity from the **Toolbox** to the line between the start event and end event. This inserts a new export XML activity.
 17. Double-click the new activity to open the properties editor and do the following:
@@ -163,20 +163,20 @@ To create the export logic, follow these steps:
     * For the **Parameter**, select the created **NewXMLDocument**
     * For the output **Name**, select the created **NewXMLDocument**
 
-    ![](/attachments/howto/integration/export-xml-documents/18581822.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581822.png" >}}
 
 18. Click **OK** to save the properties. The microflow should look like this:
 
-    ![](/attachments/howto/integration/export-xml-documents/18581821.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581821.png" >}}
 
 19. Drag a **Download file** activity from the **Toolbox** to the line between the start event and end event.
 20. Double-click the activity to open the **Download File** dialog box and select **NewXMLDocument** as the **File document**:
 
-    ![](/attachments/howto/integration/export-xml-documents/18581818.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581818.png" >}}
 
 21. Click **OK**. The microflow should now look like this:
 
-    ![](/attachments/howto/integration/export-xml-documents/18581819.png)
+    {{< figure src="/attachments/howto/integration/export-xml-documents/18581819.png" >}}
 
 22. Deploy the application and open the customer overview page.
 23. Click the **Export as XML** button and download the generated XML document.

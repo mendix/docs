@@ -16,14 +16,13 @@ A **Date range field** can be placed inside a [Report date parameter](/refguide8
 
 To add a date range field, right-click the widget and choose **Add field** from the pop-up menu.
 
-![Add a date range field to a report date parameter](/attachments/refguide8/modeling/pages/report-widgets/report-date-parameter/date-range-field/add-field.png)
+{{< figure src="/attachments/refguide8/modeling/pages/report-widgets/report-date-parameter/date-range-field/add-field.png" alt="Add a date range field to a report date parameter" >}}
 
 ## 2 Date Range Field Properties
 
 An example of date range field properties is represented in the image below:
 
-{{% image_container width="300" %}}![Date range field in structure mode](/attachments/refguide8/modeling/pages/report-widgets/report-date-parameter/date-range-field/date-range-field-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/pages/report-widgets/report-date-parameter/date-range-field/date-range-field-properties.png" alt="Date range field in structure mode"   width="300"  >}}
 
 Date range field properties have only a [General](#general) section.
 

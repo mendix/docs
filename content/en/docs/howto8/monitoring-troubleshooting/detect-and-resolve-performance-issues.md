@@ -11,7 +11,7 @@ Any application can run into performance issues. This document describes a numbe
 
 The flow chart below, which is designed like a microflow, presents infrastructure for deciding how to troubleshoot and resolve performance-related issues. This document is based on this flow.
 
-![](/attachments/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580226.png)
+{{< figure src="/attachments/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580226.png" >}}
 
 ## 2 Issues
 
@@ -88,19 +88,19 @@ Setting a break point and stepping through these relevant microflows can often g
 
 Times stamps can allow you to objectively identify slow microflows and activities by timing their execution. To do so, consider a simple microflow like this:
 
-![](/attachments/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580222.png)
+{{< figure src="/attachments/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580222.png" >}}
 
 To set up a timer, first add a **Create variable** activity as the first step, where you are going to store the current time:
 
-![](/attachments/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580221.png)
+{{< figure src="/attachments/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580221.png" >}}
 
 Then, add a **Log message** activity at the end of your microflow:
 
-![](/attachments/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580219.png)
+{{< figure src="/attachments/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580219.png" >}}
 
 Set up the activity similar to this:
 
-![](/attachments/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580220.png)
+{{< figure src="/attachments/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580220.png" >}}
 
 Here, you are calculating the number of milliseconds between when your microflow began and when it completed, and then writing that out to the console as info. When you run your app, you will see a line in the console every time this microflow executes. The message will contain the execution time.
 
@@ -130,7 +130,7 @@ If you are committing large amounts of data (for example, thousands of rows), yo
 
 Below is an example of how to retrieve in batches. You can do something quite similar for commits as well.
 
-![](/attachments/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580216.png)
+{{< figure src="/attachments/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580216.png" >}}
 
 #### 5.2.2 Refresh in Client {#refresh}
 
@@ -148,11 +148,11 @@ If your microflow is slow as a whole but there is no particular activity that st
 
 If you find yourself committing data inside a loop, you can typically optimize this by making changes to your entities and storing them into a list. For example, consider this microflow:
 
-![](/attachments/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580218.png)
+{{< figure src="/attachments/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580218.png" >}}
 
 Every time the loop executes, an **Order** object is committed. You can optimize this by committing the entire list outside the loop after processing is completed. Simply set the **Commit** property to **No** on the **Change order** activity, then add a commit of the entire OrderList outside the loop:
 
-![](/attachments/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580217.png)
+{{< figure src="/attachments/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580217.png" >}}
 
 This ultimately reduces the number of database operations that need to be performed during execution of your microflow, thus enhancing performance.
 

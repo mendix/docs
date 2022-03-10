@@ -20,11 +20,11 @@ You have a test case that creates a new expense in a company expenses app. It cr
 
 These are the fields in the app:
 
-![](/attachments/addons/ats-addon/bp/bp-two/bp-two-test-case-dependencies/amount-and-description-field.png)
+{{< figure src="/attachments/addons/ats-addon/bp/bp-two/bp-two-test-case-dependencies/amount-and-description-field.png" >}}
 
 This is the **TC.01 - Create New Expense** screen:
 
-![](/attachments/addons/ats-addon/bp/bp-two/bp-two-test-case-dependencies/random-number-and-random-string.png)
+{{< figure src="/attachments/addons/ats-addon/bp/bp-two/bp-two-test-case-dependencies/random-number-and-random-string.png" >}}
 
 The test case creates a new expense with values that you don't know upfront. ATS does not allow for the sharing of values between test cases, meaning, it does not allow for any dependencies between test cases. 
 
@@ -32,7 +32,7 @@ You have another test case that deletes an expense using the description of that
 
 This is the **TC.02 - Delete Expense** screen:
 
-![](/attachments/addons/ats-addon/bp/bp-two/bp-two-test-case-dependencies/delete-expense-by-datagrid-row.png)
+{{< figure src="/attachments/addons/ats-addon/bp/bp-two/bp-two-test-case-dependencies/delete-expense-by-datagrid-row.png" >}}
 
 As you see, TC.02 - Delete Expense cannot delete the expense from TC.01 - Create New Expense, because the description is a randomly generated value.
 
@@ -82,7 +82,7 @@ First, create the test case that creates the new expense: TC.01 - Create New Exp
 
 This is TC.01 - Create New Expense as a setup step:
 
-![](/attachments/addons/ats-addon/bp/bp-two/bp-two-test-case-dependencies/delete-expense-create-new-expense-setup-step.png)
+{{< figure src="/attachments/addons/ats-addon/bp/bp-two/bp-two-test-case-dependencies/delete-expense-create-new-expense-setup-step.png" >}}
 
 This table presents the conclusions:
 
@@ -109,7 +109,7 @@ This option only applies if you have a very long setup routine and the scenarios
 
 These are the two scenarios:
 
-![](/attachments/addons/ats-addon/bp/bp-two/bp-two-test-case-dependencies/multiple-scenarios-create-new-expense-and-delete-expense.png)
+{{< figure src="/attachments/addons/ats-addon/bp/bp-two/bp-two-test-case-dependencies/multiple-scenarios-create-new-expense-and-delete-expense.png" >}}
 
 This table presents aspects against the good test case criteria:
 
@@ -128,19 +128,19 @@ Create two separate test cases and combine them in a test suite. Make sure there
 
 This is TC.01 - Create New Expense:
 
-![](/attachments/addons/ats-addon/bp/bp-two/bp-two-test-case-dependencies/tc.01-create-new-expense.png)
+{{< figure src="/attachments/addons/ats-addon/bp/bp-two/bp-two-test-case-dependencies/tc.01-create-new-expense.png" >}}
 
 This is TC.02 - Delete Expense:
 
-![](/attachments/addons/ats-addon/bp/bp-two/bp-two-test-case-dependencies/tc.02-delete-expense.png)
+{{< figure src="/attachments/addons/ats-addon/bp/bp-two/bp-two-test-case-dependencies/tc.02-delete-expense.png" >}}
 
 This is TS.01 - Create New Expense and Delete Expense:
 
-![](/attachments/addons/ats-addon/bp/bp-two/bp-two-test-case-dependencies/ts.01-create-new-expense-and-Delete-expense.png)
+{{< figure src="/attachments/addons/ats-addon/bp/bp-two/bp-two-test-case-dependencies/ts.01-create-new-expense-and-Delete-expense.png" >}}
 
 Because TC.02 depends on the result of TC.01, ATS must execute TC.01 first. To ensure ATS does so, set the execution type to **Sequential**. 
 
-![](/attachments/addons/ats-addon/bp/bp-two/bp-two-test-case-dependencies/ts.01-create-new-expense-and-Delete-expense-type-sequential.png)
+{{< figure src="/attachments/addons/ats-addon/bp/bp-two/bp-two-test-case-dependencies/ts.01-create-new-expense-and-Delete-expense-type-sequential.png" >}}
 
 ATS will then execute the contents of the test suite based on the order they are in.
 

@@ -8,7 +8,7 @@ parent: "rg-one-ats"
 
 The **Repository** is the heart of ATS, since it allows you to create and manage folders, test suites, test cases and actions. The folder in the ATS is equivalent to a directory in your file browser. You can create folders within other folders, and in each folder, you can store test suites, test cases and actions.
 
-![Repository of ATS](/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-data-management/21168203.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-data-management/21168203.png" alt="Repository of ATS" >}}
 
 ## 2 Import/Export
 
@@ -25,11 +25,11 @@ To import data in ATS, do the following:
 1. Click **Import** to open the data import form.
 2. On the data import form, click **New Import** to open the import data dialog box.
 
-![ATS Import Page](/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-data-management/21168204.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-data-management/21168204.png" alt="ATS Import Page" >}}
 
 3. In the data import dialog box, select the *.xml* file containing your import and press **Upload**.
 
-![Data Import Dialog](/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-data-management/21168205.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-data-management/21168205.png" alt="Data Import Dialog" >}}
 
 The system will check the import for data inconsistencies and show error details in a list if any. 
 
@@ -56,14 +56,14 @@ In order to start an export, you can do the following:
 * Mark the export items listed in the current list view in the **Repository** and then click **Export** in the top menu
 * Export the item you are currently editing by clicking the **Export** button in the top right
 
-![Exporting a test Case](/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-data-management/21168206.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-data-management/21168206.png" alt="Exporting a test Case" >}}
 
 To export items from the repository, do the following:
 
 1. Open the **All Objects** tab of the **Repository**.
 2. Click the **Export items** button.
 
-![Exporting items in the Repository](/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-data-management/21168207.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-data-management/21168207.png" alt="Exporting items in the Repository" >}}
 
 Data is exported from the repository.
 
@@ -73,7 +73,7 @@ Data is exported from the repository.
 
 In the **Test Data** tab of the **Repository** you can create datasets by clicking the **New Data Set** button. You can name the dataset and give it a description.
 
-![](/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-data-management/21168208.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-data-management/21168208.png" >}}
 
 A dataset is defined by one or more fields and records. Fields are the columns of your table, records are the lines in your table containing the field values. Fields can have the data types integer or string. After you have created a dataset you can add fields and records to the set.
 

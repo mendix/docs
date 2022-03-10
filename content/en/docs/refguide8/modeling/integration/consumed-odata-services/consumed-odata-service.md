@@ -18,7 +18,7 @@ When an external entity is used in a project module through the [Data Hub pane](
 
 The **Consumed OData Service** document that is added to the project displays the following information:
 
-![Connection Tab](/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/consumed-odata-doc-connection-tab.png)
+{{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/consumed-odata-doc-connection-tab.png" alt="Connection Tab" >}}
 
 * Service name and the icon for the source application of the originating app
 * Version number of the consumed service
@@ -30,7 +30,7 @@ The **Consumed OData Service** document that is added to the project displays th
     {{% alert color="info" %}}Studio Pro displays the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Data Hub search and **Project**  pane, when a different contract is detected at the service end-point, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document. {{% /alert %}}
 
     {{% alert color="info" %}}In the **Data Hub** pane consumed services that have an available **Update** will have an update arrow to indicate this:<br />
-    ![update service data hub pane](/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/data-hub-pane-update-available.png)
+    {{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/data-hub-pane-update-available.png" alt="update service data hub pane" >}}
 	{{% /alert %}}
 
 ### 2.1 Connection Tab
@@ -44,7 +44,7 @@ The **Service URL** displays the URL of the service endpoint:
 * Click **Select** to select another [constant](/refguide8/constants/) for the service
 *  Click **Show** to display the **Constant** dialog box displaying the service URL or endpoint:
 
-	![Connection Tab](/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/consumed-service-constant.png)
+	{{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/consumed-service-constant.png" alt="Connection Tab" >}}
 
 ### 2.3 Timeout
 
@@ -91,7 +91,7 @@ Custom authentication can be done with the microflow where the authentication va
 
 In the **Metadata** tab, you can select a metadata file or use metadata obtained through a URL:
 
-![Metadata Tab](/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/metadata-tab.jpg)
+{{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/metadata-tab.jpg" alt="Metadata Tab" >}}
 
 ### 3.1 Metadata Editor
 
@@ -99,7 +99,7 @@ The metadata editor allows to open OData contracts from a file or URL. When you 
 
 To open the **Metadata Editor**, click **Edit**. In the editor, you can specify a URL or file for the metadata:
 
-![Metadata Editor](/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/metadata-editor.jpg)
+{{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/metadata-editor.jpg" alt="Metadata Editor" >}}
 
 The following settings are available:
 
@@ -119,7 +119,7 @@ When you import the metadata, you can add external entities from the consumed OD
 
 Click the **Properties** tab for the consumed OData service which displays the properties that were defined for the OData service document and the following additional properties:
 
-![](/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/consumed-odata-service-doc-properties.png)
+{{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/consumed-odata-service-doc-properties.png" >}}
 
 * **Entities** – the URL of the metadata defining the entities and associated datasets
 * **Documentation** – an additional description about this service for the current app
@@ -138,7 +138,7 @@ When you add an external entity to your project, you are consuming the entity fr
 
 The same service, deployed to a different environment will be to a different service endpoint and this will be registered as a different asset in the Data Hub Catalog. In the following example, there are two endpoints for the **CustomerApi service version 1.1.0** which is deployed to the production environment and the **Acceptance** environment:
 
-{{% image_container width="250" %}}![2 endpoints](/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/same-service-different-endpoints.png){{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/same-service-different-endpoints.png" alt="2 endpoints"   width="250"  >}}
 
 When you drag the **Customer** entity from **CustomerApi version 1.0.0** deployed to the **Acceptance** environment into your project, Studio Pro will retrieve the information it requires from the contract that is at the endpoint.
 
@@ -164,7 +164,7 @@ When a major change has been made to a published service we recommend that the s
 
 In this case the new service will be registered in the Data Hub Catalog as a different service, and show up in the catalog as a separate asset. In the following example, there are 4 registered occurrences of the **OrderManagementService**:
 
-{{% image_container width="250" %}}![4 endpoints](/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/consume-major-service-update-version.png){{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/consume-major-service-update-version.png" alt="4 endpoints"   width="250"  >}}
 
 There is a major service update indicated by the change in the version number from **1.0.0** to **2.0.0**. Further, both versions have also been deployed to the **Acceptance** which also results in separately registered assets in the Data Hub Catalog.
 
@@ -184,7 +184,7 @@ The **Update** option is available when a new version of a published OData servi
 
 In the **Project** pane this will be shown as follows:
 
-![update service project-pane](/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/project-pane-update-available.png)
+{{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/project-pane-update-available.png" alt="update service project-pane" >}}
 
 - The service version that is *currently consumed* is shown (in this example **1.0.11**)
 - Blue **Update** - click to open the **Update Service** box and update the contract to the new one. Studio Pro will retrieve the new contract from Data Hub and this will be loaded for the project.
@@ -194,7 +194,7 @@ In the **Project** pane this will be shown as follows:
 
 In the **Data Hub** pane the search results for the same consumed service displays the following:
 
-![update service dhpane](/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/data-hub-pane-update-available.png)
+{{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/data-hub-pane-update-available.png" alt="update service dhpane" >}}
 
 - The version of the service that is now at the endpoint, **1.0.12**
 
@@ -206,7 +206,7 @@ In the **Data Hub** pane the search results for the same consumed service displa
 
 When you click **Update** on the **Consumed OData Service** document or the update icon in the **Data Hub** and **Project** panes, the **Update** dialog box is displayed.
 
-![update service dhpane](/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/update-service-dialog-box.png)
+{{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/update-service-dialog-box.png" alt="update service dhpane" >}}
 
 The consumed OData service that is currently consumed in the project (**1.0.0**) is shown on the left, and you can click **Update** to retrieve the new contract from the Data Hub (**2.0.0**).
 
@@ -222,21 +222,21 @@ A published OData services that is deployed to multiple environments or is publi
 
 In the following example, the consumed **OrderManagementService** version **1.0.0** deployed to a production environment is consumed in the app. However,  the same service is deployed to the **Acceptance** environment:
 
-![major change environment](/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/consume-major-service-update.png)
+{{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/consume-major-service-update.png" alt="major change environment" >}}
 
 To consume the service deployed to the **Acceptance environment**, follow these steps:
 
 1. Click  **Update** > **Switch** on the **Consumed OData Service** screen:
 
-	![major change environment](/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/update-switch.png)
+	{{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/update-switch.png" alt="major change environment" >}}
 
 2. On the **Switch** dialog box, from the drop-down list, select the service that you want to consume from and click **Switch**:
 
-	![major change environment](/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/switch-environment.png)
+	{{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/switch-environment.png" alt="major change environment" >}}
 
 3. The consumed service will now be consumed from the new selected environment. The information on the **Consumed OData Service** screen will display the changed service details and the **Data Hub** pane will now show that you are consuming from the selected environment:
 
-	{{% image_container width="300" %}}![major change environment dh pane](/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/switch-new-environment.png){{% /image_container %}}
+	{{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/switch-new-environment.png" alt="major change environment dh pane"   width="300"  >}}
 
 ## 5 Read More
 

@@ -17,7 +17,7 @@ The search bar contains search fields that allow the end-user to quickly find th
 
 To add a search field to the search bar, right-click within the search bar in your data grid and choose **Add search field** > [Type of the search field](#search-field-type). 
 
-![](/attachments/refguide/modeling/pages/data-widgets/grids/search-bar/add-search-field.png)
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/search-bar/add-search-field.png" >}}
 
 ## 2 Search Field Types {#search-field-type}
 
@@ -37,8 +37,7 @@ Search field properties depend on the type of the search field.
 
 An example of drop-down search field properties properties is represented in the image below:
 
-{{% image_container width="250" %}}![Search Field Properties](/attachments/refguide/modeling/pages/data-widgets/grids/search-bar/search-field-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/search-bar/search-field-properties.png" alt="Search Field Properties"   width="250"  >}}
 
 Search field properties consist of the following sections:
 

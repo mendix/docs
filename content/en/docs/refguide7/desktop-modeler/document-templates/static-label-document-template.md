@@ -13,7 +13,7 @@ A static label shows a line of static text. You can use it to place custom text 
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/document-templates/918130.png)]
+{{< figure src="/attachments/refguide7/desktop-modeler/document-templates/918130.png" >}}]
 A label with text 'Customer name'.
 
 {{% /alert %}}

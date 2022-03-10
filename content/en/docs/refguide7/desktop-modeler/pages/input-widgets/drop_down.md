@@ -12,7 +12,7 @@ A drop-down is an [input widget](/refguide7/input-widgets/) that can be used to 
 
 {{% alert color="info" %}}
 
- ![](/attachments/refguide7/desktop-modeler/pages/input-widgets/drop_down/drop-down.png)
+ {{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/drop_down/drop-down.png" >}}
 
 This drop-down widget allows the user to select their favorite color.
 

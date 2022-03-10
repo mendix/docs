@@ -15,7 +15,7 @@ A domain model consists of [entities](/refguide/entities/) with their relationsh
 
 Below is a domain model that defines customers and orders. The names of the entities are `Customer` and `Order`. The line between them is an association. `Order_Customer`. One customer can have many orders, but each order is for one customer. Within the boxes representing the entities you can see the [attributes](/refguide/attributes/) of the entities together with the [type](/refguide/attributes/#type) of data they hold. There is also a [non-persistable](/refguide/persistability/) entity, `ProductQueryResults`, which is used to record product information which is retrieved from a separate product system.
 
-![Domain Model annotated with structure](/attachments/refguide/modeling/domain-model/annotated-domain-model.png)
+{{< figure src="/attachments/refguide/modeling/domain-model/annotated-domain-model.png" alt="Domain Model annotated with structure" >}}
 
 | Element | Displays |
 | --- | --- |
@@ -39,7 +39,7 @@ In the database every entity is stored in a separate table and has columns for t
 
 Take a look at the following domain model.
 
-![](/attachments/refguide/modeling/domain-model/customer-order.png)
+{{< figure src="/attachments/refguide/modeling/domain-model/customer-order.png" >}}
 
 The entity 'Customer' is stored in the table 'module$customer' which is shown below. Take note of the 'system$owner' and 'system$changedby' columns which contain the IDs of the 'User' objects from the 'System' module.
 

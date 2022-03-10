@@ -19,11 +19,11 @@ Start a new recording session by clicking **Record runtime(s)**. You can provide
 
 It is possible to record an individual user's browser without recording the runtime by clearing the **Record all browsers** box and then clicking **Select browsers to record**. A pop-up window will show a list of the users logged in on the current day. You can select here the users whose browsers you want to record.
 
-![](/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-recorder/select-browsers.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-recorder/select-browsers.png" >}}
 
 When recording a browser, the user has to confirm the following message:
 
-![](/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-recorder/Browser_agent_recording_notice.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-recorder/Browser_agent_recording_notice.png" >}}
 
 ## 3 Recorded Results
 
@@ -31,7 +31,7 @@ The results of a recording are found in the **Recorded sessions** overview. This
 
 When you click a recording of the **Browser** type, the [browser recorder results](/addons/apd-addon/rg-three-browser-recorder-results/) screen opens. When you click a recording of the **Server** type, the [server recording results](/addons/apd-addon/rg-three-runtime-recorder-results/) screen opens.
 
-![](/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-recorder/recorder.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-recorder/recorder.png" >}}
 
 {{% alert color="info" %}}
 A browser session is per browser window. If a user uses multiple browser instances to connect with the application, this results in a recorded session for each instance.

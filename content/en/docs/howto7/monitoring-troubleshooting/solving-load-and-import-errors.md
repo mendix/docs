@@ -15,7 +15,7 @@ This how-to will help you to solve problems that may occur when opening a projec
 
 One possible cause of errors that prevent loading is the usage of the [Mendix Model SDK](/apidocs-mxsdk/mxsdk/) for creating or editing the project. With the Mendix Model SDK it's possible to edit your project in such a way that its format becomes invalid, and in the process preventing the Desktop Modeler from opening it. When this happens the following message is shown:
 
-![](/attachments/howto7/monitoring-troubleshooting/solving-load-and-import-errors/18580055.png)
+{{< figure src="/attachments/howto7/monitoring-troubleshooting/solving-load-and-import-errors/18580055.png" >}}
 
 Read on to find out how to determine the origin of these errors, and possible ways to solve them.
 
@@ -23,7 +23,7 @@ Read on to find out how to determine the origin of these errors, and possible wa
 
 Click the **Details >>** button to show the actual errors that occurred while loading your project:
 
-![](/attachments/howto7/monitoring-troubleshooting/solving-load-and-import-errors/18580052.png)
+{{< figure src="/attachments/howto7/monitoring-troubleshooting/solving-load-and-import-errors/18580052.png" >}}
 
 These detailed messages tell you the following:
 
@@ -41,7 +41,7 @@ If your project is a [Team Server](/refguide7/team-server/) project, and you jus
 
 If the latest change on your branch line was committed by someone other than yourself, please inform the person about the problem.
 
-![](/attachments/howto7/monitoring-troubleshooting/solving-load-and-import-errors/18580053.png)
+{{< figure src="/attachments/howto7/monitoring-troubleshooting/solving-load-and-import-errors/18580053.png" >}}
 
 ### 3.2 Did You Obtain the Model from Someone Else?
 

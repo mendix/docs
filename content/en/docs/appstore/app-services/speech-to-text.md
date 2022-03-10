@@ -80,7 +80,7 @@ A trial gives everyone in your company one-month access to the app service. The 
 
         In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
-        ![import-speech-to-text](/attachments/appstore/app-services/speech-to-text/import-speech-to-text.png)
+        {{< figure src="/attachments/appstore/app-services/speech-to-text/import-speech-to-text.png" alt="import-speech-to-text" >}}
 
         {{% alert color="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
@@ -99,7 +99,7 @@ You have successfully added the Speech To Text resources to your app.
 
 The **MediaDocument** entity is a conceptual entity that inherits from the **System.FileDocument** entity and incorporates all the information of media document. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
-![mediadocument](/attachments/appstore/app-services/speech-to-text/mediadocument.png)
+{{< figure src="/attachments/appstore/app-services/speech-to-text/mediadocument.png" alt="mediadocument" >}}
 
 | Attribute        | Data Type | Description|
 | ---------------- | ---- | -----------|
@@ -122,13 +122,13 @@ The **TokenEndpoint** constant provides a valid endpoint of security token servi
 
 The **StartService** microflow is a Java action which starts the Speech To Text service. It is used to set up a cognitive speech-to-text back-end server infrastructure, which is critical for realizing all the functions that Speech To Text provides.
 
-![startservice](/attachments/appstore/app-services/speech-to-text/startservice.png)
+{{< figure src="/attachments/appstore/app-services/speech-to-text/startservice.png" alt="startservice" >}}
 
 #### 3.3.2 BatchTranscript {#batchtranscript}
 
 The **BatchTranscription** microflow takes a **MediaDocument** object as an input parameter and converts the based64-encoded audio string into text.
 
-![batchtranscription](/attachments/appstore/app-services/speech-to-text/batchtranscription.png)
+{{< figure src="/attachments/appstore/app-services/speech-to-text/batchtranscription.png" alt="batchtranscription" >}}
 
 ### 3.4 Widgets {#widgets}
 
@@ -208,7 +208,7 @@ If you run your app locally or deploy it as a Mendix Free App, configure the lic
 4. Fill in the **Value** with the license token that you [obtained](#obtain-license-token).
 5.  Click **OK** to save the settings.
 
-    ![licensetoken-inmendix](/attachments/appstore/app-services/speech-to-text/licensetoken-inmendix.png)
+    {{< figure src="/attachments/appstore/app-services/speech-to-text/licensetoken-inmendix.png" alt="licensetoken-inmendix" >}}
 
 6. When you finish building the app, click **Run Locally** to run your app locally or click **Run** to deploy it as a Mendix Free App. Then you can see the app service in your app.
 
@@ -218,11 +218,11 @@ If you deploy your app in the Mendix Cloud, configure the license token in the [
 
 Before you deploy your app, configure the app **Constants** in the deployment package.
 
-![licensetoken-cloudportal](/attachments/appstore/app-services/speech-to-text/licensetoken-cloudportal.png)
+{{< figure src="/attachments/appstore/app-services/speech-to-text/licensetoken-cloudportal.png" alt="licensetoken-cloudportal" >}}
 
 If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app.
 
-![licensetoken-envdetails](/attachments/appstore/app-services/speech-to-text/licensetoken-envdetails.png)
+{{< figure src="/attachments/appstore/app-services/speech-to-text/licensetoken-envdetails.png" alt="licensetoken-envdetails" >}}
 
 #### 3.6.3 For an App Deployed in Your Own Environment
 
@@ -258,7 +258,7 @@ Below are the steps to build a simple example web app based on a blank app templ
     4. **Select** the **Microphone** entity as the **Entity** and click **OK**. 
     5.  Right-click the create object activity and select **Set $NewMicrophone as return value** in the pop-up menu.
 
-        ![createmicrophoneentity-nanoflow](/attachments/appstore/app-services/speech-to-text/createmicrophoneentity-nanoflow.png)
+        {{< figure src="/attachments/appstore/app-services/speech-to-text/createmicrophoneentity-nanoflow.png" alt="createmicrophoneentity-nanoflow" >}}
 
 3. Add a **Data view** widget to your page.
 4. Set the **CreateMicrophoneObject** nanoflow as the data source of the Data View widget as follows:
@@ -295,11 +295,11 @@ By binding an attribute to the **transcript** event, the app can pick up the res
 
 **transcript** takes a string attribute. You can define an attribute and bind this attribute to **transcript**. This attribute stores the result of text converted from voice. The app can trigger an action after the transcript is received. You can select the custom **Action** from a list of actions.
 
-![microphone-ontranscript-sample](/attachments/appstore/app-services/speech-to-text/microphone-ontranscript-sample.png) 
+{{< figure src="/attachments/appstore/app-services/speech-to-text/microphone-ontranscript-sample.png" alt="microphone-ontranscript-sample" >}} 
 
 For example, you can set up the **Action** to append the transcript of each segment and show the transcript of the entire long speech input.
 
-![show-transcript-history](/attachments/appstore/app-services/speech-to-text/show-transcript-history.png)
+{{< figure src="/attachments/appstore/app-services/speech-to-text/show-transcript-history.png" alt="show-transcript-history" >}}
 
 #### 4.3.2 On Error {#on-error}
 
@@ -307,11 +307,11 @@ By binding an attribute to the **Error** event, the app can pick up an error rai
 
 **Error** takes a string attribute. You can define an attribute and bind this attribute to **Error**. In a running app, when speech-to-text transcription fails, an error event will be triggered, and the error information will be populated to this **Error** attribute. The app can obtain this error message and trigger a custom action. You can select the custom **Action** from a list of actions.
 
-![microphone-onerror-sample](/attachments/appstore/app-services/speech-to-text/microphone-onerror-sample.png) 
+{{< figure src="/attachments/appstore/app-services/speech-to-text/microphone-onerror-sample.png" alt="microphone-onerror-sample" >}} 
 
 For example, you can set up the **Action** to make the app show a pop-up window to show error details to users.
 
-![microphone-event-onerror](/attachments/appstore/app-services/speech-to-text/microphone-event-onerror.jpg)
+{{< figure src="/attachments/appstore/app-services/speech-to-text/microphone-event-onerror.jpg" alt="microphone-event-onerror" >}}
 
 ### 4.4 Adding Speech-Triggered Actions to Your App
 
@@ -344,7 +344,7 @@ You can select an **Action** from a list of actions. This action is triggered wh
 
 For instance, you can set **Feedback** as `model is rotated {0} degree around {1} direction`, with `{0}` and `{1}` being the parameters passed through **Arguments** in the **Microphone** widget.
 
-![microphone-voicetoaction-sample](/attachments/appstore/app-services/speech-to-text/microphone-voicetoaction-sample.png)
+{{< figure src="/attachments/appstore/app-services/speech-to-text/microphone-voicetoaction-sample.png" alt="microphone-voicetoaction-sample" >}}
 
 ### 4.5 Using the Batch Mode
 

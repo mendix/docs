@@ -13,7 +13,7 @@ An operation has the following properties:
 
 ## General
 
-![](/attachments/refguide7/desktop-modeler/integration/published-web-services/operations/16843884.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-web-services/operations/16843884.png" >}}
 
 ### Name
 
@@ -29,7 +29,7 @@ Describes the operation and is included in the WSDL.
 
 ## Parameters
 
-![](/attachments/refguide7/desktop-modeler/integration/published-web-services/operations/16843879.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-web-services/operations/16843879.png" >}}
 
 ### Microflow parameter
 
@@ -61,7 +61,7 @@ The CountCarsAndHp operation. It takes a non-optional list of Vehicle as a param
 
 {{% /alert %}}{{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/integration/published-web-services/operations/918221.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-web-services/operations/918221.png" >}}
 
 The microflow attached to the CountCarsAndHp operation. It takes a list of objects of the entity Vehicle as input and returns an object that holds the number of cars and the total amount of horsepower of those cars.
 
@@ -82,7 +82,7 @@ If you click 'Select...' in the parameter tab, you can select individual members
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/integration/published-web-services/operations/16843878.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-web-services/operations/16843878.png" >}}
 
 Here you can select which members of the entity can be passed and/or are optional or nillable, as well as set their names. Note that checking Optional or Nillable on the root element has no effect; you should set these values in the operation editor.
 
@@ -122,7 +122,7 @@ Optional and Nillable cannot be checked both.
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/integration/published-web-services/operations/16843880.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-web-services/operations/16843880.png" >}}
 
 Here, you can see an optional Order entity set as the return type of the operation ReturnsOrder.
 

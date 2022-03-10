@@ -15,13 +15,13 @@ This activity can only be used in **Microflows**.
 
 The **Counter** activity can be used to increment a metrics counter by a specific value.
 
-![Counter](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/metrics-activities/metrics-counter/counter.png)
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/metrics-activities/metrics-counter/counter.png" alt="Counter" >}}
 
 ## 2 Properties
 
 An example of counter properties is represented in the image below:
 
-![Counter Properties](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/metrics-activities/metrics-counter/counter-properties.png)
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/metrics-activities/metrics-counter/counter-properties.png" alt="Counter Properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

@@ -17,7 +17,7 @@ When creating an app in multiple languages, there are a number of tasks which yo
 * **Swap** texts between two language dictionaries
 * **Delete** texts from one language dictionary
 
-![](/attachments/refguide/modeling/menus/translatable-texts/language-operations/language_operations.png)
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-operations/language_operations.png" >}}
 
 ## 2 Selecting Modules
 

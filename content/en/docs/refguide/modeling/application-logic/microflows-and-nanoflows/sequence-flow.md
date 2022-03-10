@@ -12,7 +12,7 @@ A sequence flow is a flow that is shown an arrow that links elements (events, ac
 
 When you have two activities that you want to link together a sequence flow is used.
 
-![](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/sequence-flow/sequence-flow.png)
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/sequence-flow/sequence-flow.png" >}}
 
 ## 2 Condition Value
 

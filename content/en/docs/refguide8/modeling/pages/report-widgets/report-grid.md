@@ -21,14 +21,13 @@ The difference between a data grid and a report grid is that you can use a data 
 
 The report grid is displayed in structure mode with the data set source shown between square brackets and colored blue. The data fields returned by the data set are shown in the report grid columns, under the column captions. See [Report Grid Column Data Source](#column-data-source) for information on how to assign a data field to a column.
 
-![Report grid in structure mode](/attachments/refguide8/modeling/pages/report-widgets/report-grid/report-grid.png)
+{{< figure src="/attachments/refguide8/modeling/pages/report-widgets/report-grid/report-grid.png" alt="Report grid in structure mode" >}}
 
 ## 2 Report Grid Properties
 
 An example of report grid properties is represented in the image below:
 
-{{% image_container width="300" %}}![Report grid in structure mode](/attachments/refguide8/modeling/pages/report-widgets/report-grid/report-grid-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/pages/report-widgets/report-grid/report-grid-properties.png" alt="Report grid in structure mode"   width="300"  >}}
 
 Report grid properties consist of the following sections:
 
@@ -69,7 +68,7 @@ Set **Use paging** to **Yes** if you expect more data than you can display on on
 
 If the selected page contains a report, the columns of the current report can be mapped to the parameters of the data set which is the basis of the report in the other page.
 
-![Zoom configuration showing columns being passed as parameters](/attachments/refguide8/modeling/pages/report-widgets/report-grid/report-zoom.png)
+{{< figure src="/attachments/refguide8/modeling/pages/report-widgets/report-grid/report-zoom.png" alt="Zoom configuration showing columns being passed as parameters" >}}
 
 #### 2.4.4 Column Widths
 
@@ -77,11 +76,11 @@ The widths of the columns are expressed as a percentage of the total width of th
 
 * by dragging the border between the columns:
 
-    ![Drag column widths](/attachments/refguide8/modeling/pages/report-widgets/report-grid/drag-column-width.png)
+    {{< figure src="/attachments/refguide8/modeling/pages/report-widgets/report-grid/drag-column-width.png" alt="Drag column widths" >}}
 
 * by entering the percentages explicitly
 
-    ![Enter column widths](/attachments/refguide8/modeling/pages/report-widgets/report-grid/enter-column-widths.png)
+    {{< figure src="/attachments/refguide8/modeling/pages/report-widgets/report-grid/enter-column-widths.png" alt="Enter column widths" >}}
 
 Each column in a report grid also has properties: see [Report Grid Column Properties](#column-properties), below.
 
@@ -91,7 +90,7 @@ The data source for each column can be dragged into the column from the **Connec
 
 Set **Show export button** to **Yes** to display the **Export to Excel** button to the end-user on the report grid.
 
-![Add the Export to Excel button](/attachments/refguide8/modeling/pages/report-widgets/report-grid/export-to-excel.png)
+{{< figure src="/attachments/refguide8/modeling/pages/report-widgets/report-grid/export-to-excel.png" alt="Add the Export to Excel button" >}}
 
 When the end-user clicks this button, the report is exported as a `Microsoft Excel 97-2003 Worksheet` which the end-user can download or view, depending on their browser's settings.
 
@@ -103,8 +102,7 @@ If **Generate on page load** is set to **No**, the report grid will not show any
 
 An example of report grid properties is represented in the image below:
 
-{{% image_container width="250" %}}![Report grid column properties](/attachments/refguide8/modeling/pages/report-widgets/report-grid/report-grid-column-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/pages/report-widgets/report-grid/report-grid-column-properties.png" alt="Report grid column properties"   width="250"  >}}
 
 Report grid properties consist of a single section, [General](#column-general).
 
@@ -142,4 +140,4 @@ This can be used to add a value to the report which can be passed to a report on
 
 To add data to a column, select the column, open the **Connector** pane, and drag one of the results into the column. You will need to select the report grid, or part of it, to see the results of the data set in the connector pane.
 
-![Drag value from Connector pane into a column](/attachments/refguide8/modeling/pages/report-widgets/report-grid/drag-column-value.png)
+{{< figure src="/attachments/refguide8/modeling/pages/report-widgets/report-grid/drag-column-value.png" alt="Drag value from Connector pane into a column" >}}

@@ -34,11 +34,11 @@ Follow these steps to create a backup archive of a licensed app:
 4. Click **Backups**.
 5. Select the environment for which you want to create a backup snapshot.
 
-    ![](/attachments/developerportal/operate/backups/create-backup/environment.png)
+    {{< figure src="/attachments/developerportal/operate/backups/create-backup/environment.png" >}}
 
 6. Click **Create Backup**.
 
-    ![](/attachments/developerportal/operate/backups/create-backup/backupoptions.jpg)
+    {{< figure src="/attachments/developerportal/operate/backups/create-backup/backupoptions.jpg" >}}
 
 You can now download a backup archive by clicking [Download Backup](/developerportal/operate/download-backup/).
 

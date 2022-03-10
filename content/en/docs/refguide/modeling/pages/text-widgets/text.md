@@ -11,7 +11,7 @@ tags: ["studio pro", "text", "text widget", "common widget"]
 
 The text widget displays a text which can contain parameters if necessary. Every attribute is replaced with the value of this attribute. For example, you can show a greeting message to a user by placing a text widget in a [data view](/refguide/data-view/) and adding parameters to it.
 
-![Text Widget](/attachments/refguide/modeling/pages/text-widgets/text/text.png)
+{{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/text.png" alt="Text Widget" >}}
 
 If you start typing in any empty container, Studio Pro will automatically generate a text widget to display your text.
 
@@ -19,8 +19,7 @@ If you start typing in any empty container, Studio Pro will automatically genera
 
 An example of text properties is represented in the image below:
 
-{{% image_container width="300" %}}![Text Properties](/attachments/refguide/modeling/pages/text-widgets/text/text-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/text-properties.png" alt="Text Properties"   width="300"  >}}
 
 Text properties consist of the following sections:
 
@@ -53,7 +52,7 @@ Parameters are attributes the value of which will be displayed. To view **Parame
 
 *  Double-click the text widget on the page and click **Edit** in the **General** section > **Caption**:
 
-    ![Opening Parameters](/attachments/refguide/modeling/pages/text-widgets/text/caption-edit-button.png) 
+    {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/caption-edit-button.png" alt="Opening Parameters" >}} 
 
 Parameters have the following settings:
 
@@ -63,7 +62,7 @@ Parameters have the following settings:
 
 *  **Format** – a format in which an attribute value will be displayed
 
-    ![Parameter Settings](/attachments/refguide/modeling/pages/text-widgets/text/parameter-settings.png)
+    {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameter-settings.png" alt="Parameter Settings" >}}
 
 ##### 2.3.2.1 Adding New Parameters
 
@@ -75,13 +74,13 @@ To use parameters, do the following:
 
 3.  In the **Edit Caption** dialog box > **Parameters** section click **New**:
 
-    ![Adding New Parameter](/attachments/refguide/modeling/pages/text-widgets/text/adding-parameter.png)
+    {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/adding-parameter.png" alt="Adding New Parameter" >}}
 
 4. In the **Edit Template Parameter** dialog box, click **Select**, choose an attribute and confirm your choice.
 
 5.  In the **Caption** setting, write the text you would like to display and type **Index** of the parameter you would like to include. In the example below, to include a full name of your customer and a number of unread messages, you need to use indexes {1} for the *FullName* attribute, and {2} for the *NrOfUnread* attribute:  
 
-    ![Parameter Example](/attachments/refguide/modeling/pages/text-widgets/text/parameters-example.png)
+    {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameters-example.png" alt="Parameter Example" >}}
 
 ##### 2.3.2.2 Performing Other Actions on Parameters
 
@@ -95,7 +94,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
 *  **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
 
-    ![Parameter Actions](/attachments/refguide/modeling/pages/text-widgets/text/parameter-actions.png)
+    {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameter-actions.png" alt="Parameter Actions" >}}
 
 #### 2.3.3 Render Mode
 

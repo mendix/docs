@@ -15,8 +15,7 @@ tags: ["Studio Pro", "run", "run menu"]
 
 The **Run** menu allows you to deploy and monitor your app:
 
-{{% image_container width="300" %}}![Run Menu](/attachments/refguide8/modeling/menus/run-menu/run-menu.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/menus/run-menu/run-menu.png" alt="Run Menu"   width="300"  >}}
 
 ## 2 Menu Items Overview 
 

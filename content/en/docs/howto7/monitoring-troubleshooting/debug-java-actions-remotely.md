@@ -25,7 +25,7 @@ To edit the server configuration with extra JVM parameters, follow these steps:
 2. Edit the configuration.
 3. Go to the **Server** tab on the **Edit Configuration** editor and add the following line to the **Extra JVM parameters** field: `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005`
 
-    ![](/attachments/howto7/monitoring-troubleshooting/debug-java-actions-remotely/18580063.png)
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-java-actions-remotely/18580063.png" >}}
 
 4. Next, start your application in Mendix.
 
@@ -33,7 +33,7 @@ To edit the server configuration with extra JVM parameters, follow these steps:
 
 In your Java IDE, you need to configure remote debugging. This screenshot shows the configuration in IntelliJ:
 
-![Mendix Intellij remote debugging](/attachments/howto7/monitoring-troubleshooting/debug-java-actions-remotely/intellij_rundebug_configurations.png)
+{{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-java-actions-remotely/intellij_rundebug_configurations.png" alt="Mendix Intellij remote debugging" >}}
 
 1. Start the debugger.
 2. Place some breakpoints in your Java code.

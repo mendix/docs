@@ -15,13 +15,13 @@ A microflow data source ignores all context. It performs the actions described i
 
 {{% /alert %}}{{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/pages/page-concepts/data-sources/microflow-source/16843969.jpg)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/page-concepts/data-sources/microflow-source/16843969.jpg" >}}
 The data grid above needs to display a list of potential orders based on the order type. If the OrderType of the encasing Order is set to 'Cars' then the grid should display all Products for which the boolean Motorized is set to true. If the OrderType is 'Bicycles' only objects for which Motorized is false need be shown. If OrderType is empty the data grid should remain empty.
 
-![](/attachments/refguide7/desktop-modeler/pages/page-concepts/data-sources/microflow-source/16843968.jpg)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/page-concepts/data-sources/microflow-source/16843968.jpg" >}}
 Because of the mismatch in attribute types this cannot be constrained by XPath and a microflow data source is required.
 
-![](/attachments/refguide7/desktop-modeler/pages/page-concepts/data-sources/microflow-source/16843967.jpg)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/page-concepts/data-sources/microflow-source/16843967.jpg" >}}
 The microflow above is passed the order of the enclosing data view as a parameter. It can then split on the OrderType attribute and retrieve a different set of products for each enumeration value. The microflow is configured to return a list of products and each end event is designated a list to return. Please note that the empty path also requires a value, where `empty` is also a value.
 
 {{% /alert %}}{{% alert color="warning" %}}

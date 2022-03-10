@@ -27,7 +27,7 @@ For concepts and definitions, see section [2 Concepts](/refguide7/version-contro
 
 Normally, the Web Modeler working copy is synchronized with the Desktop Modeler when the Desktop Modeler user updates or commits. However, if a commit or an update happened outside the Desktop Modeler (using Tortoise SVN or any other version control tool), the Web Modeler is temporary out of sync. In this case you will get a warning:
 
-![](/attachments/refguide7/version-control/collaborative-development/collaborative-development-troubleshooting/changes-are-out-of-sync.png)
+{{< figure src="/attachments/refguide7/version-control/collaborative-development/collaborative-development-troubleshooting/changes-are-out-of-sync.png" >}}
 
 You can do one of the following:
 
@@ -37,7 +37,7 @@ You can do one of the following:
 
 	b. If there are any merge conflicts found in the process, you need to resolve them and commit the changes afterwards. Once you resolve the conflicts and commit the changes, you can delete this automatically-created branch.<br/>
 
-	![](/attachments/refguide7/version-control/collaborative-development/collaborative-development-troubleshooting/automatically-created-branch.png)
+	{{< figure src="/attachments/refguide7/version-control/collaborative-development/collaborative-development-troubleshooting/automatically-created-branch.png" >}}
 
 2. **Resolve Later** –  the changes can be merged later. In the meanwhile, changes from the Web Modeler and the Team Server development line will not be kept in sync. In this case, the dialog will appear again when committing/updating/merging changes. 
 
@@ -45,7 +45,7 @@ You can do one of the following:
 
 When the Web Modeler enabled branch with the commit outside the Desktop Modeler is being merged with a different line, you will see the following message:
 
-![](/attachments/refguide7/version-control/collaborative-development/collaborative-development-troubleshooting/cannot-merge-automatically.png)
+{{< figure src="/attachments/refguide7/version-control/collaborative-development/collaborative-development-troubleshooting/cannot-merge-automatically.png" >}}
 
 You can choose one of the following:
 
@@ -53,7 +53,7 @@ You can choose one of the following:
 	a.  Open the Web Modeler enabled development line<br/>
 	b.  The warning described in section [3 The Desktop Modeler & the Web Modeler Are Out of Sync](#out-of-sync) will be displayed.<br/>
 
-	![](/attachments/refguide7/version-control/collaborative-development/collaborative-development-troubleshooting/changes-are-out-of-sync.png)<br/>
+	{{< figure src="/attachments/refguide7/version-control/collaborative-development/collaborative-development-troubleshooting/changes-are-out-of-sync.png" >}}<br/>
 
 	c. Click **Merge** to synchronize the changes with the Web Modeler.<br/>
 
@@ -65,11 +65,11 @@ You can choose one of the following:
 
 During the **Update** operation, changes are requested from the Web Modeler and integrated into the current project.  There is an additional step **Retrieve branch status** in the update process. During this step, Web Modeler changes are retrieved. 
 
-![](/attachments/refguide7/version-control/collaborative-development/collaborative-development-troubleshooting/retrieving-branch-status.png)
+{{< figure src="/attachments/refguide7/version-control/collaborative-development/collaborative-development-troubleshooting/retrieving-branch-status.png" >}}
 
 If there are network or service issues, the Desktop Modeler will not be able to contact the repository service and a warning message is displayed:
 
-![](/attachments/refguide7/version-control/collaborative-development/collaborative-development-troubleshooting/changes-are-not-retrieved.png)
+{{< figure src="/attachments/refguide7/version-control/collaborative-development/collaborative-development-troubleshooting/changes-are-not-retrieved.png" >}}
 
 You can do one of the following:
 
@@ -81,7 +81,7 @@ You can do one of the following:
 
 When your team members initiate a blocking operation (commit/update/merge Web Modeler enabled branch/switch Web Modeler enabled branch), and at the same you initiate a blocking operation as well, and you will see the dialog below:
 
-![](/attachments/refguide7/version-control/collaborative-development/collaborative-development-troubleshooting/another-operation-in-progress.png)
+{{< figure src="/attachments/refguide7/version-control/collaborative-development/collaborative-development-troubleshooting/another-operation-in-progress.png" >}}
 
 You can do one of the following:
 

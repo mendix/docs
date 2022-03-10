@@ -23,7 +23,7 @@ In all other cases, a validation error results in a Java exception being thrown.
 
 For example, for entity 'Customer' the name and credit need to be filled in at all times, and the expenses cannot be higher than the credit. This is visualized in the domain model editor as follows:
 
-![](/attachments/refguide8/modeling/domain-model/entities/validation-rules/customer-validation-rules.png)
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/validation-rules/customer-validation-rules.png" >}}
 
 {{% alert color="warning" %}}
 You can only define validation rules for persistable entities as they are designed to ensure database integrity. Therefore, validation rules are disabled for non-persistable entities.
@@ -35,7 +35,7 @@ You can add and edit validation rules for an entity from the [entity dialog box]
 
 An example of the validation rule properties is represented in the image below:
 
-![](/attachments/refguide8/modeling/domain-model/entities/validation-rules/validation-rule-properties.png)
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/validation-rules/validation-rule-properties.png" >}}
 
 Validation rule properties consist of the following sections:
 

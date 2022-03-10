@@ -8,17 +8,17 @@ parent: "rg-one-ats"
 
 On the configuration page under the **Project** tab you can see the current project settings. You can change the settings and add users or libraries to your project by clicking the **Edit Project Settings** button.
 
-![Configuration Page Project](/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-configuration/21168209.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-configuration/21168209.png" alt="Configuration Page Project" >}}
 
 ## 2 Configure the Selenium Hubs
 
 On the **Selenium** tab, you can see a list of the Selenium hubs that are configured for this project. Project users can run tests on the listed hubs:
 
-![Configuration Selenium Tab](/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-configuration/21168210.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-configuration/21168210.png" alt="Configuration Selenium Tab" >}}
 
 To add a new Selenium hub, click the **New** in the top bar:
 
-![Edit Selenium hub dialog](/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-configuration/21168211.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-configuration/21168211.png" alt="Edit Selenium hub dialog" >}}
 
 In the **Selenium hub** dialog box, you can set the following parameters:
 
@@ -34,11 +34,11 @@ Custom Capabilities | Set the Selenium DesiredCapabilities (for more information
 
 On the **Applications** tab, you can see a list of test applications that are configured for the current project:
 
-![Configuration Applications tab](/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-configuration/21168212.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-configuration/21168212.png" alt="Configuration Applications tab" >}}
 
 You can edit, create, and delete applications by pressing the buttons in the top bar:
 
-![New Application Dialog](/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-configuration/21168213.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-configuration/21168213.png" alt="New Application Dialog" >}}
 
 When creating a new application, you can set the following parameters:
 

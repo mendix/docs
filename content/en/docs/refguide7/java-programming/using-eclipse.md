@@ -11,7 +11,7 @@ In Mendix, all text is saved in UTF-8 encoding. First make sure your source code
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/java-programming/using-eclipse/918120.png)
+{{< figure src="/attachments/refguide7/java-programming/using-eclipse/918120.png" >}}
 Settings UTF-8 encoding.
 
 {{% /alert %}}
@@ -20,7 +20,7 @@ You should also have a Java Development Kit (JDK) installed and selected.
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/java-programming/using-eclipse/918186.png)
+{{< figure src="/attachments/refguide7/java-programming/using-eclipse/918186.png" >}}
 Selecting a default JDK.
 
 {{% /alert %}}
@@ -35,12 +35,12 @@ To add a Mendix project to Eclipse, you can perform these steps:
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/java-programming/using-eclipse/917580.png)
+{{< figure src="/attachments/refguide7/java-programming/using-eclipse/917580.png" >}}
 Import existing project.
 
 {{% /alert %}}{{% alert color="info" %}}
 
-![](/attachments/refguide7/java-programming/using-eclipse/917527.png)
+{{< figure src="/attachments/refguide7/java-programming/using-eclipse/917527.png" >}}
 Import existing project step 2.
 
 {{% /alert %}}
@@ -51,7 +51,7 @@ To actually launch the project, go to 'debug configurations' or 'run configurati
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/java-programming/using-eclipse/917586.png)
+{{< figure src="/attachments/refguide7/java-programming/using-eclipse/917586.png" >}}
 Looking up your launch configuration.
 
 {{% /alert %}}
@@ -60,7 +60,7 @@ After you have launched the application, you will see the M2EE admin console pop
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/java-programming/using-eclipse/917582.png)
+{{< figure src="/attachments/refguide7/java-programming/using-eclipse/917582.png" >}}
 The M2EE admin console.
 
 {{% /alert %}}

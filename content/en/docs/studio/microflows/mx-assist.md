@@ -17,7 +17,7 @@ Mendix Assist was built using machine learning analysis of over twelve million a
 
 Mendix Assist is enabled by default and is displayed as a blue dot in a flow of a [microflow](/studio/microflows/). A bow-tie appears on the dot when you hover over it. 
 
-![](/attachments/studio/microflows/mx-assist/mendix-assist-icon.png)
+{{< figure src="/attachments/studio/microflows/mx-assist/mendix-assist-icon.png" >}}
 
 {{% alert color="info" %}}
 
@@ -27,8 +27,7 @@ It is possible to add activities in a regular way without using Mendix Assist.
 
 Click the bow-tie to view Mendix Assist recommendations. 
 
-{{% image_container width="350" %}}![](/attachments/studio/microflows/mx-assist/mx-assist-recommendations.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio/microflows/mx-assist/mx-assist-recommendations.png"   width="350"  >}}
 
 Mendix Assist lists the top five recommendations from the most probable to less probable ones for the particular microflow. Click the suggestion to proceed with it and insert it into a microflow. For more information, see the [Adding Activities and Elements with Mendix Assist](#add-activities) section.
 
@@ -41,7 +40,7 @@ Some activities still need to be configured in **Properties** to function correc
 Once you have selected an activity or an event to insert to the microflow using Mendix Assist, the
 information dialog with brief description of this activity/event is displayed above the flow.
 
-![](/attachments/studio/microflows/mx-assist/info-dialog.png)
+{{< figure src="/attachments/studio/microflows/mx-assist/info-dialog.png" >}}
 
 The following options are available in the information dialog box:
 
@@ -53,7 +52,7 @@ The following options are available in the information dialog box:
 
 To open settings of Mendix Assist, click the gear icon in the top right corner of the information dialog.
 
-![](/attachments/studio/microflows/mx-assist/settings-mx-assist.png)
+{{< figure src="/attachments/studio/microflows/mx-assist/settings-mx-assist.png" >}}
 
 Settings available for Mendix Assist are described in the table below:
 
@@ -64,7 +63,7 @@ Settings available for Mendix Assist are described in the table below:
 
 You can also enable/disable Mendix Assist by clicking the **More Options** icon in the top menu bar of Mendix Studio: 
 
-![](/attachments/studio/microflows/mx-assist/mx-assist-is-on.png)
+{{< figure src="/attachments/studio/microflows/mx-assist/mx-assist-is-on.png" >}}
 
 {{% alert color="info" %}}
 If you disable Mendix Assist, the information dialog will be disabled as well. Once you re-enable Mendix Assist, the information dialog is also re-enabled. 
@@ -84,8 +83,7 @@ To add an activity (such as **Change Object**, **Show Page**, **Create Object**,
 
 3.  Click the selected activity to add it to the flow.
 
-    {{% image_container width="350" %}}![](/attachments/studio/microflows/mx-assist/mx-assist-list.png)
-    {{% /image_container %}}
+    {{< figure src="/attachments/studio/microflows/mx-assist/mx-assist-list.png"   width="350"  >}}
 
 The activity is added to the flow.
 
@@ -93,7 +91,7 @@ The activity is added to the flow.
 
 Adding a check means that you will add a **Decision** with Boolean attribute type: your flow will be split into one flow labeled *true* and another one labeled *false*. For more information, see [Decision](/studio/microflows-decision/).   
 
-![](/attachments/studio/microflows/mx-assist/check-added.png)
+{{< figure src="/attachments/studio/microflows/mx-assist/check-added.png" >}}
 
 {{% alert color="info" %}}
 
@@ -108,8 +106,7 @@ To add the check, do the following:
 
 2.  Find **Add a check** in the suggestions.
 
-    {{% image_container width="350" %}}![](/attachments/studio/microflows/mx-assist/adding-check.png)
-    {{% /image_container %}}
+    {{< figure src="/attachments/studio/microflows/mx-assist/adding-check.png"   width="350"  >}}
 
 3. The number of options for the check will be opened, select the check that you want to add and click it. 
 
@@ -131,8 +128,7 @@ To add the decision, do the following:
 
 2. Find **Add a decision** in the suggestions and select it.
 
-    {{% image_container width="350" %}}![](/attachments/studio/microflows/mx-assist/adding-decision.png)
-    {{% /image_container %}}
+    {{< figure src="/attachments/studio/microflows/mx-assist/adding-decision.png"   width="350"  >}}
 
 The decision is added to the microflow.
 

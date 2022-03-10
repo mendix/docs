@@ -25,9 +25,9 @@ The **System.User** entity has inbuilt access rules where access is given to its
 
 Access rules are defined via entity's **Properties** > **Access rules**, or on the **Access rules** tab of the entity dialog. 
 
-![Access Rules for Entities](/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-section.png)
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-section.png" alt="Access Rules for Entities" >}}
 
-![Access Rules for Entities](/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-tab.png)
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-tab.png" alt="Access Rules for Entities" >}}
 
 {{% alert color="info" %}}
 The **Access rules** section is visible only if the [App Security](/refguide/project-security/) is set to **Production**.
@@ -35,7 +35,7 @@ The **Access rules** section is visible only if the [App Security](/refguide/pro
 
 An example of the access rules properties is represented in the image below:
 
-![Access Rules for Entities](/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-properties.png)
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-properties.png" alt="Access Rules for Entities" >}}
 
 Access rules properties consist of the following sections:
 
@@ -94,7 +94,7 @@ You cannot set *write* access to attributes which are calculated. This includes 
 
 For example, a customer is allowed to view the discount, but is not allowed to edit it. The access rights for the discount attribute are **Read**.
 
-![](/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-discount-read.png)
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-discount-read.png" >}}
 
 {{% alert color="warning" %}}
 If a user cannot view the value of an attribute because of security constraints, that attribute will never be sent to the Mendix Client. Because Mendix is stateless, this can lead to unexpected results (for example, loss of changes) if changes to the attribute in a microflow are not committed immediately. See [Basic CRUD Communication Pattern](/refguide/communication-patterns/#crud) in *Communication Patterns in the Mendix Runtime* for more information on how data is passed between the Runtime Server and the Mendix Client and what cases may lead to a loss of changes.
@@ -104,7 +104,7 @@ If a user cannot view the value of an attribute because of security constraints,
 
 An [XPath constraint](/refguide/xpath-constraints/) can be used to constrain the set of objects to which the access rule applies. If the XPath constraint is empty, the rule applies to all objects of the entity.
 
-![](/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-xpath-tab.png)
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-xpath-tab.png" >}}
 
 For example, the **Customer** entity is a specialization of the **User** entity. The **Order** entity is associated to the **Customer** entity.
 
@@ -114,7 +114,7 @@ A logged-in customer is allowed to view personal orders, but is not allowed to v
 [Module.Order_Customer = '[%CurrentUser%]']
 ```
 
-![](/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-order-xpath.png)
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-order-xpath.png" >}}
 
 Because of this XPath constraint, the access rule only applies to orders for which the customer is the currently signed-in user.
 

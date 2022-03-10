@@ -40,7 +40,7 @@ To view the credentials:
 * If the service is part of a project, click the name of the project that contains the service and you can view the credentials from the Credentials section of the project details page
 * If the service is not part of a project, click the service name that you want to view
 
-![The IBM cloud page where you get the service credentials](/attachments/appstore/connectors/ibm-watson-connector/ibm-credentials.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/ibm-credentials.png" alt="The IBM cloud page where you get the service credentials" >}}
 
 For more information see [Service credentials for Watson services](https://cloud.ibm.com/docs/services/watson/getting-started-credentials.html).
 
@@ -54,7 +54,7 @@ If you are running your app on IBM Cloud and the Watson resources have been adde
 
 Import the [IBM Watson Connector Suite](https://marketplace.mendix.com/link/component/2860/) into your project from the Marketplace. This will give you access to the connector actions within your microflows. IBM app templates for Watson have the suite already included.
 
-![The list of IBM Watson connector actions available in Mendix microflows](/attachments/appstore/connectors/ibm-watson-connector/connectorlist.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/connectorlist.png" alt="The list of IBM Watson connector actions available in Mendix microflows" >}}
 
 To use these actions, just drag them into your microflow. Each of the connectors is described in the following sections:
 
@@ -98,7 +98,7 @@ There are two actions supporting Watson Assistant:
 
 This action creates a new session for the [Watson Assistant](https://cloud.ibm.com/docs/services/assistant/index.html). A session is used to send user input to an assistant and receive responses. It also maintains the state of the conversation. See [Watson Assistant API: Create a session](https://cloud.ibm.com/apidocs/assistant-v2#create-a-session) for more details.
 
-![Configuration of the Create Session action for Watson Assistant](/attachments/appstore/connectors/ibm-watson-connector/assistant-create-session.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/assistant-create-session.png" alt="Configuration of the Create Session action for Watson Assistant" >}}
 
 #### 2.1.1 Apikey
 
@@ -112,7 +112,7 @@ This is a string containing the URL assigned to the Watson Assistant service in 
 
 This is an **Assistant** object in which the **Assistant ID** attribute contains the ID of an assistant you have set up for your IBM Cloud service. The Assistant ID of your Watson Assistant can be found by selecting **View API Details** from the assistant in your IBM Cloud service.
 
-![Where to find the Watson Assistant API details](/attachments/appstore/connectors/ibm-watson-connector/assistant-api-details.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/assistant-api-details.png" alt="Where to find the Watson Assistant API details" >}}
 
 #### 2.1.4 Variable (SessionContext)
 
@@ -122,7 +122,7 @@ This is an object of type *SessionContext* which is used to maintain the context
 
 This action sends a message from your app to a specified session. This will use the assistant associated with this session to analyze the message and return an appropriate response. See [Watson Assistant API: Send user input to assistant](https://cloud.ibm.com/apidocs/assistant-v2#send-user-input-to-assistant) for more details.
 
-![Configuration dialog for the Assistant - Send Message action](/attachments/appstore/connectors/ibm-watson-connector/assistant-send-message.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/assistant-send-message.png" alt="Configuration dialog for the Assistant - Send Message action" >}}
 
 #### 2.2.1 Apikey
 
@@ -154,13 +154,13 @@ The AssistantMessageResponse contains the following:
 * Association to *AssistantIntent* which gives more information on what Watson Assistant interpreted as the intention of the input
 * Association to *AssistantEntity* which gives more information on which (dialog skill) entities Watson interpreted as being referred to
 
-![Domain model for Watson Assistant connector actions](/attachments/appstore/connectors/ibm-watson-connector/assistant.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/assistant.png" alt="Domain model for Watson Assistant connector actions" >}}
 
 ## 3 Connector Actions: Speech To Text{#SpeechToText}
 
 This action uses the [IBM Watson Speech to Text service](https://cloud.ibm.com/docs/services/speech-to-text/index.html) to transcribe audio to text. Audio can be supplied in a number of common formats and the service uses machine intelligence to transcribe the text into one of a number of possible target languages.
 
-![Parameters for the Mendix connector action for the IBM Watson Speech to Text service](/attachments/appstore/connectors/ibm-watson-connector/speechtotext.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/speechtotext.png" alt="Parameters for the Mendix connector action for the IBM Watson Speech to Text service" >}}
 
 More information on the APIs for the IBM Watson Speech to Text service is available here: [IBM Cloud API Docs / Speech to Text](https://cloud.ibm.com/apidocs/speech-to-text).
 
@@ -200,7 +200,7 @@ This is the name you want to give to the object of type SpeechReturn which is re
 
 The domain model for this action allows for several interim responses. In this implementation, however, you will only get final results (with `_final` set to true) because the connector cannot analyze a stream, only a complete file.
 
-![Domain model for Speech to Text connector actions](/attachments/appstore/connectors/ibm-watson-connector/speechtotext-microflow.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/speechtotext-microflow.png" alt="Domain model for Speech to Text connector actions" >}}
 
 If Watson detects that the speech file contains multiple sentences or speakers, each recognized sentence will be provided via a separate **Result** object.
 
@@ -210,7 +210,7 @@ The text which has been decoded is in the object of type **Alternative** in the 
 
 This connector uses the [IBM Text to Speech service](https://cloud.ibm.com/docs/services/text-to-speech/index.html) to 'speak' some text. It converts a string containing text into a sound object corresponding to the synthesis of the text using a specified voice. This voice can sound male or female and is optimized for a particular language. Some voices can, depending on their capabilities, add extra vocal signals such as speed, timbre, or emotional cues.
 
-![Configuration dialog for the Text To Speech - Synthesize action](/attachments/appstore/connectors/ibm-watson-connector/texttospeech-synthesize.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/texttospeech-synthesize.png" alt="Configuration dialog for the Text To Speech - Synthesize action" >}}
 
 More information on the APIs for the IBM Watson text to speech service is available here: [IBM Cloud API Docs / Text to Speech](https://cloud.ibm.com/apidocs/text-to-speech).
 
@@ -248,7 +248,7 @@ This is the name you wish to assign to an object of type Speech which contains t
 
 This connector uses the [Tone Analyzer](https://cloud.ibm.com/docs/services/tone-analyzer/index.html) to detect emotional and language tones in written text.
 
-![Configuration dialog for the Tone Analyzer - Analyze Tone action](/attachments/appstore/connectors/ibm-watson-connector/toneanalyzer-analyzetone.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/toneanalyzer-analyzetone.png" alt="Configuration dialog for the Tone Analyzer - Analyze Tone action" >}}
 
 More information on the APIs for the IBM Watson Analyze Tone service is available here: [IBM Cloud API Docs / Tone Analyzer](https://cloud.ibm.com/apidocs/tone-analyzer).
 
@@ -268,7 +268,7 @@ This is a string containing the text to be analyzed. You can submit no more than
 
 This is the name you wish to assign to an object of type ToneAnalyzerResponse which is the response received from Watson. This is associated with the responses from the Tone Analyzer.
 
-![Domain model for Tone Analyzer connector actions](/attachments/appstore/connectors/ibm-watson-connector/toneanalyzer.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/toneanalyzer.png" alt="Domain model for Tone Analyzer connector actions" >}}
 
 {{% alert color="info" %}}
 In the previous version of the Tone Analyzer, tones were split into *Tone Categories*. This additional level of categorization has been removed from the current version of the Tone Analyzer.
@@ -304,7 +304,7 @@ The IBM Watson Connector Suite provides three actions which allow you to use the
 
 This action is part of the Language Translator service and returns a list of languages which are recognized by the Watson Language Translation Service. Each language is represented by a code and a name. These languages are used as the input to the Translate language action, below.
 
-![Configuration dialog for the Translation - Get Identifiable Languages action](/attachments/appstore/connectors/ibm-watson-connector/translation-getidentifiablelanguages.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/translation-getidentifiablelanguages.png" alt="Configuration dialog for the Translation - Get Identifiable Languages action" >}}
 
 {{% alert color="info" %}}
 Note that [Translate Language](#translate-language) cannot translate between any possible combination of languages. If translation between languages is not supported by Watson (for example, _Traditional Chinese_ to _Catalan_), the [Translate Language](#translate-language) action will throw an error. The language pairs which are supported by the [Translate Language](#translate-language) action can be identified from the results of the [Get Translation Models](#getTranslationModels) action.
@@ -337,7 +337,7 @@ IBM provides a number of standard models, and it is possible to extend these wit
 The IBM Watson Connector Suite does not support the creation and deletion of custom models. you will need to do this using the native REST capabilities of Mendix.
 {{% /alert %}}
 
-![Configuration dialog for the Translation - Get Translation Models action](/attachments/appstore/connectors/ibm-watson-connector/translation-gettranslationmodels.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/translation-gettranslationmodels.png" alt="Configuration dialog for the Translation - Get Translation Models action" >}}
 
 #### 6.2.1 Apikey
 
@@ -368,7 +368,7 @@ Each TranslationModel object is associated with two languages:
 
 This action is part of the Language Translator service and translates a piece of text from one language to another using the *default* translation model for that pair of languages.
 
-![Configuration dialog for the Translation - Translate Language action](/attachments/appstore/connectors/ibm-watson-connector/translation-translatelanguage.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/translation-translatelanguage.png" alt="Configuration dialog for the Translation - Translate Language action" >}}
 
 The languages are not explicit in the parameters of the action, but are identified by associating the **Translation** object which is passed with two **Language** objects via the following associations:
 
@@ -377,7 +377,7 @@ The languages are not explicit in the parameters of the action, but are identifi
 
 You can create the objects of entity type Language using the *Get Identifiable Languages* action, described [above](#getIdentifiableLanguages).
 
-![Domain model for Translation connector actions](/attachments/appstore/connectors/ibm-watson-connector/translation.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/translation.png" alt="Domain model for Translation connector actions" >}}
 
 {{% alert color="info" %}}
 Note that not all pairs of languages are supported. For example, you can translate to and from English and Spanish and English and Portuguese. However, there is no model in Watson to translate Spanish to Portuguese. The IBM Watson Connector Suite does not check whether there is a valid model before it passes the language pair to Watson.
@@ -437,7 +437,7 @@ The IBM Watson Connector Suite consists of five actions to classify images:
 
 This action passes an image to the Visual Recognition service which uses either its built-in classifiers or custom classifiers to analyze the image and identify the contents.
 
-![Configuration dialog for the Visual Recognition - Classify Image action](/attachments/appstore/connectors/ibm-watson-connector/visualrecognition-classifyimage.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/visualrecognition-classifyimage.png" alt="Configuration dialog for the Visual Recognition - Classify Image action" >}}
 
 More information on the APIs for the IBM Watson Visual Recognition service is available here: [IBM Cloud API Docs / Visual Recognition](https://cloud.ibm.com/apidocs/visual-recognition).
 
@@ -477,13 +477,13 @@ This is the name of the list of Classifier objects returned from Watson.
 
 Associated with each of the classifier objects will be zero or more **ClassifierClass** objects. Each of these contain the **Name** of content which Watson has identified using the classifier, and the **Score** which is an indication of the confidence that Watson has that it has correctly identified the content, with 1.0 indicating complete confidence in the identification.
 
-![Domain model for Visual Recognition connector actions](/attachments/appstore/connectors/ibm-watson-connector/visualrecognition.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/visualrecognition.png" alt="Domain model for Visual Recognition connector actions" >}}
 
 ### 7.2 Visual Recognition – Create Classifier{#createClassifier}
 
 This action allows you to train a new classifier for the Visual Recognition service by uploading ZIP files containing images.
 
-![Configuration dialog for the Visual Recognition - Create Classifier action](/attachments/appstore/connectors/ibm-watson-connector/visualrecognition-createclassifier.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/visualrecognition-createclassifier.png" alt="Configuration dialog for the Visual Recognition - Create Classifier action" >}}
 
 You can use a number of files which contain positive examples: images which depict the visual subject of this class. These are stored as **TrainingImagesZipFile** entities. The name of the class is in the *ClassName* attribute of the *TrainingImagesZipFile* entity. Each positive class is associated with the **Classifier** being created via the *Classifier_positiveTrainingImagesZipFiles* association.
 
@@ -527,7 +527,7 @@ This is an object of type Classifier. This is associated with the following obje
 
 The **Name** attribute of the Classifier is the name of the classifier which will be created by Watson. For example "Mammals" for a classifier identifying mammals.
 
-![Domain model for Visual Recognition connector actions](/attachments/appstore/connectors/ibm-watson-connector/visualrecognition.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/visualrecognition.png" alt="Domain model for Visual Recognition connector actions" >}}
 
 #### 7.2.4 Variable (String)
 
@@ -535,7 +535,7 @@ This is the name of a string containing the ID of the new classifier.
 
 ### 7.3 Visual Recognition – Delete Classifier{#deleteClassifier}
 
-![Configuration dialog for the Visual Recognition - Delete Classifier action](/attachments/appstore/connectors/ibm-watson-connector/visualrecognition-deleteclassifier.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/visualrecognition-deleteclassifier.png" alt="Configuration dialog for the Visual Recognition - Delete Classifier action" >}}
 
 #### 7.3.1 Apikey
 
@@ -563,7 +563,7 @@ It may take several minutes to fully delete a classifier. Any quota for the maxi
 
 This action allows you to analyze and get data about faces in images. Responses can include estimated age and gender.
 
-![Configuration dialog for the Visual Recognition - Detect Faces action](/attachments/appstore/connectors/ibm-watson-connector/visualrecognition-detectfaces.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/visualrecognition-detectfaces.png" alt="Configuration dialog for the Visual Recognition - Detect Faces action" >}}
 
 #### 7.4.1 Apikey
 
@@ -613,7 +613,7 @@ The attributes which were used in previous versions to identify individuals have
 
 This action returns a list of *custom* classifiers which can be used in visual recognition.
 
-![Configuration dialog for the Visual Recognition - Get Classifiers action](/attachments/appstore/connectors/ibm-watson-connector/visualrecognition-getclassifiers.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/visualrecognition-getclassifiers.png" alt="Configuration dialog for the Visual Recognition - Get Classifiers action" >}}
 
 #### 7.5.1 Apikey
 
@@ -651,7 +651,7 @@ If the app is not running on IBM Cloud (for example if you are testing it locall
 
 An example of how to check for the VCAP services and import the configured credentials is in the WatsonServices microflow **USE_ME > OnStartUpWatsonAppOnIBMCloud**. In the sample app, this is configured to run automatically in **App Settings > Runtime > After startup**.
 
-![On Startup Microflow](/attachments/appstore/connectors/ibm-watson-connector/onstartupwatsonapponibmcloud.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/onstartupwatsonapponibmcloud.png" alt="On Startup Microflow" >}}
 
 The microflow does the following:
 
@@ -660,7 +660,7 @@ The microflow does the following:
 * If the VCAP_SERVICE environment variable does exist it will contain the credentials, in JSON format, of all the services which have been allocated to your project on IBM Cloud
 * The action **Import with mapping** is used, together with the mapping **USE_ME > JsonMapping > VCAP_Import_Mapping** to populate an object of type **Config** (see [Import Mapping Action](/refguide/import-mapping-action/) for more information)
 
-    ![Domain model for Watson VCAP Management](/attachments/appstore/connectors/ibm-watson-connector/vcap.png)
+    {{< figure src="/attachments/appstore/connectors/ibm-watson-connector/vcap.png" alt="Domain model for Watson VCAP Management" >}}
 
 * A list of all the **ConfigItem** objects associated with the **Config** item which has just been created is retrieved
 * This list is passed to the microflow **IVK_CreateOrUpdateService** which creates an object of type **WatsonServiceConfig** for each item in the list which contains credentials for a Watson service
@@ -679,7 +679,7 @@ If VCAP is not available, then the WatsonServiceConfig objects will have to be e
 
 The microflow **GetWatsonServiceConfiguration** takes a parameter of WatsonServiceConfigType and checks to see that a configuration of that type has been set up as a **WatsonServiceConfig** object. It returns the object if it exists. If the object does not exist, it posts a message to the log and returns an empty object.
 
-![GetWatsonServiceConfiguration microflow](/attachments/appstore/connectors/ibm-watson-connector/getwatsonserviceconfiguration.png)
+{{< figure src="/attachments/appstore/connectors/ibm-watson-connector/getwatsonserviceconfiguration.png" alt="GetWatsonServiceConfiguration microflow" >}}
 
 The WatsonServiceConfig entity has the following attributes:
 

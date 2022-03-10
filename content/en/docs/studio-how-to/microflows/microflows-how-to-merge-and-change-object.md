@@ -42,11 +42,11 @@ To create a merge for gold, silver, and bronze customer grades in a microflow, f
 
 1. Open the microflow named *Show_grade_specific_page*:
 
-    ![](/attachments/studio-how-to/microflows/microflows-how-to-merge-and-change-object/microflow-without-merge.png)
+    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-merge-and-change-object/microflow-without-merge.png" >}}
 
 2. Open the **Toolbox** tab > the **General** section, drag and drop the **Merge** activity before the end event of the flow labelled **Bronze**:
 
-    ![](/attachments/studio-how-to/microflows/microflows-how-to-merge-and-change-object/adding-merge.png)
+    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-merge-and-change-object/adding-merge.png" >}}
 
 3. To merge the flow labelled **Gold** with the **Bronze** one, do the following:
 
@@ -54,13 +54,13 @@ To create a merge for gold, silver, and bronze customer grades in a microflow, f
     
     2. Hover over the **Show Page** activity.
     
-        ![](/attachments/studio-how-to/microflows/microflows-how-to-merge-and-change-object/hover-over.png)
+        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-merge-and-change-object/hover-over.png" >}}
     
     3. Click one of the dots that will turn into an arrow.
     
     4. Drag the arrow to the merge. Now the **Show Page activity** is connected to the merge:
     
-        ![](/attachments/studio-how-to/microflows/microflows-how-to-merge-and-change-object/connecting-activity-and-merge.png)
+        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-merge-and-change-object/connecting-activity-and-merge.png" >}}
     
 4. Repeat step 3 for the flows labelled **Silver**. 
 
@@ -77,7 +77,7 @@ Now you will add logic to the microflow. You have merged three flows into one to
     1.  Click the **Customer** entity > **New attribute**.
     2.  In the **Create New Attribute** dialog box, set **Name** to *Active* and **Type** to *Boolean*.
     
-        ![](/attachments/studio-how-to/microflows/microflows-how-to-merge-and-change-object/new-attribute-active.png)
+        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-merge-and-change-object/new-attribute-active.png" >}}
     
     3. Click **Create**.
     
@@ -85,24 +85,24 @@ Now you will add logic to the microflow. You have merged three flows into one to
 
 3. In the **Toolbox** > **Object Activities** select the **Change Object** activity, drag and drop it after the merge in the microflow.
 
-    ![](/attachments/studio-how-to/microflows/microflows-how-to-merge-and-change-object/change-object-added.png)
+    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-merge-and-change-object/change-object-added.png" >}}
 
 4. In the **Properties** tab for the **Change Object** activity, do the following:
 
     1.  Set **Variable** to **Customer** (because you are going to edit **Customer**).
     2.  Click **Add New Value**.
 
-        ![](/attachments/studio-how-to/microflows/microflows-how-to-merge-and-change-object/change-object-add-new-value.png)
+        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-merge-and-change-object/change-object-add-new-value.png" >}}
 
     3. In the **Change value** dialog box, select the attribute named **Active**, then click the **Expression** tab, and type *true*. This means that after the order form is opened for a specific customer, the customer's status is set to active (active=true), no matter what grade this customer has.
 
-        ![](/attachments/studio-how-to/microflows/microflows-how-to-merge-and-change-object/change-value-expression-editor.png)
+        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-merge-and-change-object/change-value-expression-editor.png" >}}
 
     4. Click **Add** to finish setting the value for the **Active** attribute.
 
     5. In the **Properties** tab > the **Behavior** section do the following: leave the **Commit** option set to **Yes**, (this means the object will not be changed further and your changes will be saved (committed) to the database). 
 
-        ![](/attachments/studio-how-to/microflows/microflows-how-to-merge-and-change-object/change-object-properties.png)
+        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-merge-and-change-object/change-object-properties.png" >}}
 
 Congratulations! Now you have the microflow that checks if the customer has a grade and does one of the following:
 

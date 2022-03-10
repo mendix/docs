@@ -30,7 +30,7 @@ The live log is displayed in the local time of the browser. All other logs have 
  
 Logs on Mendix Cloud v4 are rotated and archived every day. The logs are kept for at least 6 months.
 
-![Logs Page v4](/attachments/developerportal/operate/logs/log-v4.png)
+{{< figure src="/attachments/developerportal/operate/logs/log-v4.png" alt="Logs Page v4" >}}
 
 Action Button | Performs the Action
 :---|:---
@@ -61,7 +61,7 @@ To make full use of Kibana and see proper mapping of the log level, multiline lo
 
 The logs page shows all the environments for this app. Click the **Logs** button to open the log in Kibana.
 
-![Logs Page SAP](/attachments/developerportal/operate/logs/log-sap.png)
+{{< figure src="/attachments/developerportal/operate/logs/log-sap.png" alt="Logs Page SAP" >}}
 
 You may be asked to provide your SAP credentials before you can see the log in Kibana.
 

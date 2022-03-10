@@ -21,14 +21,13 @@ A navigation list can be used to attach an action to an entire row when a user c
 
 For example, clicking one row can open a page, clicking another one can execute a microflow. 
 
-![Navigation List](/attachments/refguide8/modeling/pages/container-widgets/navigation-list/navigation-list.png)
+{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/navigation-list/navigation-list.png" alt="Navigation List" >}}
 
 ## 2 Properties
 
 An example of navigation list properties is represented in the image below:
 
-{{% image_container width="250" %}}![Navigation List Properties](/attachments/refguide8/modeling/pages/container-widgets/navigation-list/navigation-list-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/navigation-list/navigation-list-properties.png" alt="Navigation List Properties"   width="250"  >}}
 
 Navigation list properties consist of the following sections:
 

@@ -416,7 +416,7 @@ JavaScript Actions can be used in a nanoflow with a JavaScript action call activ
 
 Use **Category** to group actions, and **Icon** to give the exposed nanoflow action easy recognition inside the nanoflow:
 
-![exposed nanoflow with info](/attachments/howto8/extensibility/best-practices-javascript-actions/narrow-expose.png)
+{{< figure src="/attachments/howto8/extensibility/best-practices-javascript-actions/narrow-expose.png" alt="exposed nanoflow with info" >}}
 
 ### 3.3 Publishing JavaScript Actions
 
@@ -460,7 +460,7 @@ Initially, JavaScript actions' source code is not loaded. Their source code will
 
 After the file is loaded, breakpoints can be set in the code by clicking the inline number (**A**, in the screenshot below). Alternatively, select **Pause on caught exceptions**  could be used to find issues (**B**). As a last resort, you could alter the source code by adding the line `debugger;` (**C**). This statement will start the debugging tools the first time the action is executed, and will apply a breakpoint:
 
-{{% image_container width="500" %}}![debugging](/attachments/howto8/extensibility/best-practices-javascript-actions/debugging.png){{% /image_container %}}
+{{< figure src="/attachments/howto8/extensibility/best-practices-javascript-actions/debugging.png" alt="debugging"   width="500"  >}}
 
 ## 6 Understanding Bad Practices {#badpractice}
 

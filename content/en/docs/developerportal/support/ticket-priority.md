@@ -30,7 +30,7 @@ The priority levels are based on the impact and urgency of the request.
 
 The ticket priority that Mendix Support validates is based on this matrix:
 
-![](/attachments/developerportal/support/submit-support-request/204371729-pic5.png)
+{{< figure src="/attachments/developerportal/support/submit-support-request/204371729-pic5.png" >}}
 
 If Mendix provides a workaround, the impact can never be higher than **Medium**.
 

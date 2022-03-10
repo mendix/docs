@@ -44,7 +44,7 @@ There are three ways to install a Marketplace component:
 2. Open the app in which you want to install the component from the Marketplace.
 3.  Click the Marketplace icon in the top menu bar to open it in Studio Pro:
 
-    ![Marketplace icon](/attachments/appstore/general/app-store-content/toolbar.png)
+    {{< figure src="/attachments/appstore/general/app-store-content/toolbar.png" alt="Marketplace icon" >}}
 
     The Marketplace opens within Studio Pro. The **Categories** menu item on the left side gives an overview of which types of content are available.
 
@@ -52,18 +52,18 @@ There are three ways to install a Marketplace component:
 
     {{% alert color="warning" %}}Results for Marketplace content searches within Studio Pro may differ from those in the [online Marketplace](/appstore/general/app-store-overview/) due to synchronization issues.{{% /alert %}}
 
-    ![Search result for rating](/attachments/appstore/general/app-store-content/marketplace.png)
+    {{< figure src="/attachments/appstore/general/app-store-content/marketplace.png" alt="Search result for rating" >}}
 
 5.  Click the component (or the **Read more** button on the right side) to show the details of the component.
 6.  Check the **Mendix Version** on the **Overview** tab. Do not download a component that requires a higher **Mendix version** than the Studio Pro that you use.
 
     * Click **Download** to download the latest version of the component
 
-        ![Details of Rating widget](/attachments/appstore/general/app-store-content/item-details.png)
+        {{< figure src="/attachments/appstore/general/app-store-content/item-details.png" alt="Details of Rating widget" >}}
 
     * To download an older version, go to the **All Versions** tab and **Download** the right version.
 
-        ![All Versions tab](/attachments/appstore/general/app-store-content/versions.png)
+        {{< figure src="/attachments/appstore/general/app-store-content/versions.png" alt="All Versions tab" >}}
 
 7. If you download a widget, wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported widget in the **Toobox**.
 8. If you download a component or a connector, the **Import Module** dialog box opens. Perform the following steps:
@@ -94,15 +94,15 @@ There are three ways to install a Marketplace component:
 
     *  Click **Download** to download the latest version of the component
 
-        ![marketplace-version-requirement-download](/attachments/appstore/general/app-store-content/marketplace-version-requirement-download.png)
+        {{< figure src="/attachments/appstore/general/app-store-content/marketplace-version-requirement-download.png" alt="marketplace-version-requirement-download" >}}
 
     *  To download an older version, go to the **Releases** tab and **Download** the right version.
 
-        ![releases-download](/attachments/appstore/general/app-store-content/releases-download.png)
+        {{< figure src="/attachments/appstore/general/app-store-content/releases-download.png" alt="releases-download" >}}
 
 4.  In the **App Explorer**, right-click the app, click **Import module package**, and then select the component that you downloaded.
 
-    ![import-module-in-app-explorer](/attachments/appstore/general/app-store-content/import-module-in-app-explorer.png)
+    {{< figure src="/attachments/appstore/general/app-store-content/import-module-in-app-explorer.png" alt="import-module-in-app-explorer" >}}
 
     The **Import Module** dialog box opens. 
 
@@ -127,11 +127,11 @@ You can find the imported module or connector in the **App Explorer**.
 
     *  Click **Download** to download the latest version of the component
 
-        ![All Versions tab](/attachments/appstore/general/app-store-content/marketplace-rating-version-requirement.png)
+        {{< figure src="/attachments/appstore/general/app-store-content/marketplace-rating-version-requirement.png" alt="All Versions tab" >}}
 
     *  To download an older version, go to the **Releases** tab and **Download** the right version
 
-        ![marketplace-rating-all-releases-download](/attachments/appstore/general/app-store-content/marketplace-rating-all-releases-download.png)
+        {{< figure src="/attachments/appstore/general/app-store-content/marketplace-rating-all-releases-download.png" alt="marketplace-rating-all-releases-download" >}}
 
 5. Open Studio Pro and sign in with your Mendix credentials.
 6. Open the app in which you want to install the component from the Marketplace.
@@ -148,7 +148,7 @@ You can find the added widget in the **Toolbox** and you can find the added *.mx
 
 After you download a component, you can use the component in your app. For detailed information on how a component works, check the **Documentation** tab on the page of the component in the Marketplace.
 
-![Documentation tab](/attachments/appstore/general/app-store-content/widget-documentation.png)
+{{< figure src="/attachments/appstore/general/app-store-content/widget-documentation.png" alt="Documentation tab" >}}
 
 ### 4.1 Using a Widget  {#widget}
 
@@ -164,7 +164,7 @@ After you [install](#install) the widget from the marketplace in your app, there
 1. Open the page where you want to add the widget.
 2.  In the **Toolbox**, **search** the name of the widget, for example *Rating to find the widget.
 
-    ![Rating widget found in the toolbox](/attachments/appstore/general/app-store-content/toolbox-rating.png)
+    {{< figure src="/attachments/appstore/general/app-store-content/toolbox-rating.png" alt="Rating widget found in the toolbox" >}}
 
 3. Drag the widget to the place on the page where you want it to be.
 
@@ -172,16 +172,16 @@ After you [install](#install) the widget from the marketplace in your app, there
 
 1.  Click **Add widget** on the top on the page where you want to add the widget. The **Select Widget** dialog box opens.
 
-    ![Add widget](/attachments/appstore/general/app-store-content/add-widget.png)
+    {{< figure src="/attachments/appstore/general/app-store-content/add-widget.png" alt="Add widget" >}}
 
 2.  In the **Filter** bar, enter the name of the widget, for example *Rating*, to find the widget.
 
-    ![Rating widget highlighted in Select Widget dialog box](/attachments/appstore/general/app-store-content/select-widget.png)
+    {{< figure src="/attachments/appstore/general/app-store-content/select-widget.png" alt="Rating widget highlighted in Select Widget dialog box" >}}
 
 3. Click the widget and then click **Select**. 
 4.  In the page, click where you want to drop the widget. The widget is added to the location where the mouse pointer is.
 
-    ![Rating widget in the page](/attachments/appstore/general/app-store-content/widget-dropped-in-page.png)
+    {{< figure src="/attachments/appstore/general/app-store-content/widget-dropped-in-page.png" alt="Rating widget in the page" >}}
 
 #### 4.1.2 Updating a Widget to a Newer Version
 
@@ -195,15 +195,15 @@ To configure the widget, follow these steps:
 
 1.  Go to the **Errors** pane and check the error message. This error shows after you drop the **Rating** widget into the page:
 
-    ![Errors pane](/attachments/appstore/general/app-store-content/widget-errors.png)
+    {{< figure src="/attachments/appstore/general/app-store-content/widget-errors.png" alt="Errors pane" >}}
 
 2.  In the page, double-click the Rating widget. The **Edit Rating** dialog box opens and the **Attribute** field shows **(none)** – this means that no attribute is assigned, which causes the error.
 
-    ![Edit Rating dialog box](/attachments/appstore/general/app-store-content/edit-rating.png)
+    {{< figure src="/attachments/appstore/general/app-store-content/edit-rating.png" alt="Edit Rating dialog box" >}}
 
 3.  Click **Select** to select an attribute. In this example, we select the attribute **ProductRating**. This is the attribute of an entity that we already created.
 
-    ![ProductRating selected in Select Attribute dialog box](/attachments/appstore/general/app-store-content/select-attribute.png)
+    {{< figure src="/attachments/appstore/general/app-store-content/select-attribute.png" alt="ProductRating selected in Select Attribute dialog box" >}}
 
 4. In the **Edit Rating** dialog box, click **OK**. The error in the **Errors** pane disappears.
 
@@ -219,7 +219,7 @@ To update a module in your app to a newer version, go to the Marketplace to down
 
 {{% alert color="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
 
-![Import Module dialog box](/attachments/appstore/general/app-store-content/import-module.png)
+{{< figure src="/attachments/appstore/general/app-store-content/import-module.png" alt="Import Module dialog box" >}}
 
 #### 4.2.2 Configuring a Module
 

@@ -16,7 +16,7 @@ There are a number of reasons that you may wish to do this:
 * If all occurrences of a piece of text are identical, you only need to enter the translation once — this saves time and improves consistency
 * If you find better wording for a common label or text, you can change them all at once with a single command
 
-![](/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace.png)
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace.png" >}}
 
 ## 2 Using Batch Replace
 
@@ -28,7 +28,7 @@ You can select one or more modules you want to use for batch translate. For exam
 
 Click **Select…** and check the modules you want to work on.
 
-![Module selection screen](/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-modules.png)
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-modules.png" alt="Module selection screen" >}}
 
 The default is to work on all modules in the app.
 
@@ -36,7 +36,7 @@ The default is to work on all modules in the app.
 
 To search for phrases that are similar, type what you want to search for.
 
-![Batch translate search](/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-search.png)
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-search.png" alt="Batch translate search" >}}
 
 By default, all the translatable text from the selected module(s) will be shown.
 
@@ -53,11 +53,11 @@ Tip: move the dialog box to one side to get a better look at the document.
 
 In **Replace with**, type new text that you want to use instead of the existing text. Click **Replace** to confirm the replacement.
 
-![](/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-replace.png)
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-replace.png" >}}
 
 Identical replacement and original texts will be combined into a single entry.
 
-![Show combined entries](/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-replaced.png)
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-replaced.png" alt="Show combined entries" >}}
 
 ## 3 Exporting & Importing Text
 
@@ -71,7 +71,7 @@ Click **Export to Excel…** to export the currently displayed text items to a M
 
 The file will be in the format shown below:
 
-![Sample Excel file](/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-excel.png)
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-excel.png" alt="Sample Excel file" >}}
 
 **Row 1** – *Filter:* indicates the modules which are included in the exported file.
 

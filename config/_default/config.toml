@@ -1,5 +1,5 @@
-baseURL = "http://mendix-new-docs-site.s3-website.eu-central-1.amazonaws.com/"
-title = "Mendix Docs Test Site"
+baseURL = "http://docs.mendix.com/"
+title = "Mendix Documentation"
 
 enableRobotsTXT = true
 
@@ -104,7 +104,7 @@ disableKinds = ["taxonomy","taxonomyTerm","term"]
 
     # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
     # ==========================================================================================
-    github_repo = "https://github.com/mendix/docs-site-test"
+    github_repo = "https://github.com/mendix/docs"
     # Specify development branch for GitHub links (e.g. to edit)
     github_branch= "development"
 

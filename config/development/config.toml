@@ -2,8 +2,8 @@
 # Need to set _merge = 'deep' to overwrite original value
 # =============================================================
 
-baseURL = "http://mendix-new-docs-site.s3-website.eu-central-1.amazonaws.com/"
-title = "Mendix Docs Test Site (Development)"
+baseURL = "https://d25bt5g8n19u8d.cloudfront.net/"
+title = "Mendix Documentation (Development)"
 
 # In development we want to build everything
 buildDrafts=true

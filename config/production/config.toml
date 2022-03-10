@@ -2,8 +2,8 @@
 # Need to set _merge = 'deep' to overwrite original value
 # =============================================================
 
-baseURL = "http://mendix-new-docs-site.s3-website.eu-central-1.amazonaws.com/"
-title = "Mendix Docs Test Site"
+baseURL = "http://docs.mendix.com/"
+title = "Mendix Documentation"
 
 # MvM - add line below to output MxDocsAlgolia at root of /public (master only)
 [outputs]

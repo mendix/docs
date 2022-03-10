@@ -1,27 +1,18 @@
-_site
-node_modules
-*DS_Store*
-.jekyll-metadata
 
-_algolia_api_key_
+# Individual Visual Studio Code settings
+.vscode
+# NK - Hugo 
+hugo.exe
 
-data/history.yml
-data/asset*.json
+# Start directories with / to ensure that only directories in the ROOT are ignored, could be duplicate names
 
-static/public/js/*
-static/public/styles/*
-
-static/json/*.json
-
-yarn-error.log
-
-manifest_test.yml
-_scripts/hugo_bin
-.vscode/settings.json
-.idea
-
-mx-1-get-hugo-and-node.ps1
-mx-2-install-dependencies.bat
-mx-3-run-server.bat
-bin
-package-lock.json
+# The built site
+/public/
+# Resources file 
+/resources/
+# Node modules required for the site - built each time using npm install
+/node_modules/
+# MvM - Put HUGO and NODE (and dependencies) into /bin folder
+/bin/
+# Temporary directory
+/tmp/

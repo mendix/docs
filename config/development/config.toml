@@ -1,0 +1,11 @@
+# Merges with _default/config.toml if --environment development
+# Need to set _merge = 'deep' to overwrite original value
+# =============================================================
+
+baseURL = "http://mendix-new-docs-site.s3-website.eu-central-1.amazonaws.com/"
+title = "Mendix Docs Test Site (Development)"
+
+# In development we want to build everything
+buildDrafts=true
+buildExpired=true
+buildFuture=true

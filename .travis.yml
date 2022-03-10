@@ -1,50 +1,154 @@
-sudo: false
-dist: trusty
+language: node_js
+node_js:
+  - lts/*             # latest LTS version ('node' will give latest version)
+arch: amd64           # optional, this is default, routes to a full VM
+# arch: arm64         # this is the recommended LXD container - faster spin up but some limitations Not used as it seems very unstable.
+os: linux             # optional, this is default
+dist: xenial          # or bionic | xenial | trusty | precise with xenial as default - Recommended here: https://docs.travis-ci.com/user/reference/overview/#deprecated-virtualization-environments
+
 git:
   depth: 20000 # We're cloning a max of xxx commits, so the author date is correct
-language: node_js
+
 env:
   global:
-    - GET_ENV_VAR=./_scripts/get_env.sh
-    - GOPATH="${HOME}/.go_workspace"
-    - HUGO_ENV=$($GET_ENV_VAR)
-    - HUGO_VERSION=0.31.1
-#   - secure: "NdoI6WzRsU/OsGpyIjjzgrnc23IJWzSAkEhJQWEjkMim6g2NrhrSipcKVjpsGkOyJFlmhMcVcejTxuvCMkIxOPSZziDHvHyqVU752ZGPTd7dYUIET2k7W6xytA2Aos66R3DasUPParFdmvvUdFny5GFjIILB8s6P5n3d1BnUG+nWhNOf3s++eY2UITq+jZl8JjEq8hMUq4UKLaFcwKUoFYBdNe9CV5sHmRK54BOOP65UJCm10H8pS6ywA/7ZVoHJwaIUF1XVdypxfdMpciqIN4jq6VB7AYEN6a2Qep6fa1wYeitCJkLaWkSzArGSQWUNw39JQcODijE2y1H/QBq7DNwqHcQtwtIme+HDtVsPHLzv47GQ/NV+AjV20EmXIxWp2ZgrUdndUC0sP3rhnRSAE0L2YSUwzYUG1xIKry4bxafkpjQ2DcZ0JC/2bpMy3JTThot/Ek8eDX+1cKbkaTghMYqT5bpSlL0OqE1/F2dr/ZGVUjhqdlMWf992pmDAq7IUl3nERLAY1RZByb6yDUy8llxpv3NWGeAxoXZFdfJNdN08qSJb6d2j2U+Y1NMbXhDjcs6YT1Jbn/33ZEwzS6NmKvQc+oEwjgKLbZKNoUmo822X8lBhvvr+bpHItycUqQUZ+nx344wsp3ISkSedZjeE1Lia98ZY1ryXC+UpoI9lQQE="
-#   - secure: "kYSZufIWTrCfGHk6QX3r7hdOpusvxnBncCRSs1E6yh8Bept9NX/zhUGwSR1k1aMhzeLzxZRWGMnwUK1y0v1gJrry0dicLZkcqnkNRPR8l8YFHhpAloQQDfToAq83RMQwgZUFgQNP+y7d82mzui14aY6Na9gUl0U8KU3hXGM4RaUWOLf5Ovil4FvKsdPzPHuHmnkHOrAeDvf9nZgp9HqsePFjs3vr8LVZCL/QucjXp+4AVMDs83gOVayJEfg8lBbT2R+9gDEmZOzKJaJosFZ30DL7PM1EsKK7SJap+FQGlow5l7Q2Vf2RYAuTLpxKh5pr38rtYayRmQI9oNRzTROaialR4JqvEa42PojpBM7MUQChjpvyEsDi2FoxzLTc+DVSD2NhoH/kh/gilKX8HyfRLHIpIVqA2n7NnWhSZgMqbgdWntbMNrjEtLWA3GgWPDZ+wNYTL552d3ZAuXciJJEEQcr2nbnAjF4j5fwZ+WLl0TfFle750Jje/mqQcY5KkT7OPvFm0lbFqFhBzdKJzIS2kv3wtm19+uX376a/kwbZ9/S7uuKiarblC3IMzDmMZxV47q5sG/JImWU7KBl2gqXl8PTMNESpJ7uxwNbsSY6MZgxrRBO+CCjWPcNkBjGFlOFNiJEuJeEtmsJCGEJKX02J/BV4PV5lxbi4NxDiq5t8K3Q="
-before_install:
-  - export PATH=$HOME:$PATH
-  - export HUGO_PACKAGE=hugo_${HUGO_VERSION}_Linux-64bit
-  - travis_retry curl -L https://github.com/gohugoio/hugo/releases/download/v$HUGO_VERSION/$HUGO_PACKAGE.tar.gz | tar xz
-  - chmod +x ./hugo
-  - mv ./hugo $HOME/bin/hugo
-install:
-  - rm -rf _site
-  - yarn install
-before_deploy:
-  - export PATH=$HOME:$PATH
-  - travis_retry curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-  - unzip -q awscliv2.zip
-  - sudo ./aws/install
-  - ./_scripts/algolia.sh
-# Algolia must be before deploy as AWS is renaming all the .html files which the script expects#
-script:
-  - ./node_modules/.bin/gulp build
-cache:
-  yarn: true
-  #directories:
-  #  - node_modules
+# =============================================
+# UPDATE VERSION MANUALLY AND TEST BEFORE MERGE
+# =============================================
+    - HUGO_VERSION=0.91.0 # Choose Hugo version explicitly, in case there is an issue with published version.
+
 branches:
+# build only development and production
   only:
-    - master
-    - development
+  - production
+  - development
+
+# Start of Travis Job Lifecycle: https://docs.travis-ci.com/user/job-lifecycle/
+
+# addons:
+######### Skipped
+#
+#   snaps:              # Installs hugo if dist: xenial or bionic see https://gohugo.io/getting-started/installing/#snap-package and https://docs.travis-ci.com/user/installing-dependencies/#installing-snap-packages-with-the-snaps-addon
+# ===================================================================================================
+# TOO RISKY TO USE SNAP - IF WRONG VERSION IS UPLOADED THEN DIFFICULT TO GO BACK TO DIFFERENT VERSION
+# ===================================================================================================
+#     - name: hugo
+#       channel: extended/stable # needs extended to compile SCSS etc. Issue if snap is not updated correctly
+
+# cache:
+######## Skipped
+#
+# Is there anything worth cacheing that isn't currently cached?
+# see https://docs.travis-ci.com/user/caching/#how-does-caching-work
+# Probably NOT /static
+# Docsy theme?
+# Custom layouts?
+# SASS/CSS
+#
+
+before_install:
+###############
+  #
+  - npm install # use npm rather than yarn - HUGO doesn't have that many dependencies
+  #
+  - travis_retry curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz | tar xz # Install Hugo manually - Snap is too fragile
+  - chmod +x ./hugo # installed into $TRAVIS_BUILD_DIR/hugo
+  #
+  # Currently will use custom version of htmltest stored in /htmltest/htmltest
+  # This version makes the html.Parse much smaller
+  # For htmltest installation instructions, see https://github.com/wjdp/htmltest/blob/master/README.md
+  # - travis_retry curl https://htmltest.wjdp.uk | bash # install htmltest into $TRAVIS_BUILD_DIR/bin/htmltest
+
+install:
+########
+  # ------------------------
+  - mkdir public  # This because <Maybe> the process of syncing to public is probably deadlocked behind waiting for the public folder to be made, and is never signalled that the folder is created, which ends up stalling the build on Travis CI.
+  # ------------------------
+  - ./hugo config --environment $TRAVIS_BRANCH # report the config we are using
+  - echo "HUGO was run for environment $TRAVIS_BRANCH" > $TRAVIS_BUILD_DIR/hugo.log
+  # put the flags in different config files controlled by environment matching $TRAVIS_BRANCH
+  # Append output to hugo.log file to print at the end of the travis job
+  # (see https://stackoverflow.com/questions/418896/how-to-redirect-output-to-a-file-and-stdout)
+  - ./hugo --environment $TRAVIS_BRANCH 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log
+  #
+  # normal htmltest takes too much memory - using a modified version which strips <aside> tag content
+  # NB - Travis CI sees the return code from `tee` and not from `htmltest` so it will always build.
+  - chmod +x ./htmltest/htmltest
+  - ./htmltest/htmltest 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log
+
+before_script:
+##############
+  - pyenv versions # list python versions supported by pyenv in case version in next command is removed
+  - pyenv global 3.6.7 # this version needs to be already installed in the travis build
+  - python -V
+
+script:
+#######
+# Uncomment these variables if you want to see what values are there
+#  - echo $HOME
+#  - echo $TRAVIS_BRANCH
+#  - echo $TRAVIS_BUILD_DIR
+#  - echo $TRAVIS_BUILD_ID
+#  - echo $TRAVIS_BUILD_NUMBER
+#  - echo $TRAVIS_BUILD_WEB_URL
+#  - echo $TRAVIS_COMMIT
+#  - echo $TRAVIS_COMMIT_MESSAGE
+#  - echo $TRAVIS_COMMIT_RANGE
+#  - echo $TRAVIS_COMPILER
+#  - echo $TRAVIS_CPU_ARCH
+#  - echo $TRAVIS_DEBUG_MODE
+#  - echo $TRAVIS_DIST
+#  - echo $TRAVIS_EVENT_TYPE
+#  - echo $TRAVIS_JOB_ID
+#  - echo $TRAVIS_JOB_NAME
+#  - echo $TRAVIS_JOB_NUMBER
+#  - echo $TRAVIS_JOB_WEB_URL
+#  - echo $TRAVIS_NODE_VERSION
+#  - echo $TRAVIS_OS_NAME
+#  - echo $TRAVIS_PULL_REQUEST
+#  - echo $TRAVIS_PULL_REQUEST_BRANCH
+#  - pwd
+# NB: Have to have something here, otherwise Travis tries to run "npm test"
+# Display the output from hugo and htmltest so it is not folded and hidden, and is at the end of the log.
+  - echo "$(<$TRAVIS_BUILD_DIR/hugo.log)"
+
+# before_cache
+############## Skipped
+
+# after_success
+############### Skipped
+
+# after_failure
+############### Skipped
+
+before_deploy:
+##############
+#  - curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip" # arm version
+  - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" # amd version
+  - unzip -q awscliv2.zip
+  - sudo ./aws/install # install AWS command line
+  - aws --version
+  - chmod +x $TRAVIS_BUILD_DIR/_scripts/deploy.sh
+  - python --version
+  - pip install --upgrade 'algoliasearch>=2.0,<3.0' # install Algolia Python API Client version 2
+
 deploy:
+#######
+#
+# Need to decide where to deploy to, so need to do the actual deployment in a script https://docs.travis-ci.com/user/job-lifecycle#complex-build-commands
+#  - aws s3 sync . s3://$TARGETAWSBUCKET --delete --only-show-errors
   - provider: script
     script:
-      - ./_scripts/deploy.sh
+      - $TRAVIS_BUILD_DIR/_scripts/deploy.sh
     skip_cleanup: true
     on:
       branch:
-        - master
+        - production
         - development
+
 after_deploy:
-# Algolia was here before we deployed to AWS
+############# Skipped
+# Cannot get python push to Travis to work here. Added it to deploy.sh.
+
+after_script:
+############# Skipped
+# Anything placed here gets folded by Travis, so can't output useful information :-(.

@@ -16,7 +16,8 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Portal Improvement
 
-* We have added support for Pod Autoscaling. If you are using this, the number of replicas will be displayed correctly. To use autoscaling, see [Pod Autoscaling](/developerportal/deploy/private-cloud-cluster#horizontal-autoscaling) in *Creating a Private Cloud Cluster*.
+* We have added support for Pod Autoscaling. If you are using this, the number of replicas will be displayed. To use autoscaling, see [Pod Autoscaling](/developerportal/deploy/private-cloud-cluster#horizontal-autoscaling) in *Creating a Private Cloud Cluster*.
+    * Note that we are aware that the maximum number of replicas is sometimes displayed as `0` for existing environments and are working on a fix.
 * We now allow sorting of and searching in the following:
     * members invited for a namespace
     * members invited for a cluster

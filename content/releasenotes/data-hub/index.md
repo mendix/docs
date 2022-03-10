@@ -10,6 +10,17 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### March 10th, 2022
+
+#### Improvements 
+
+* We now support all OData versions and have unified all OData versions to a single **ContractType** with separate version attributes. Previously we only supported v3 and v4.
+* We added v4 of the **Registration API** and **Search API** to support the unified OData type and version structure. View the [list of Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) or see our [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis) documentation.
+
+#### Fixes
+
+* We added a loading spinner when you are waiting for a response on each of the registration form steps. 
+
 ### March 3rd, 2022
 
 #### Improvements 

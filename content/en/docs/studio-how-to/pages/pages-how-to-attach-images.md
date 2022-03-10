@@ -22,12 +22,12 @@ The how-to describes the following use case:
 
 You have the **New Report** page with a form (a data view) where employees submit a trip report for  reimbursement. They fill in their name, department, purpose and date of their trip, and total amount to be reimbursed:
 
-{{% image_container width="600" %}}![](attachments/pages-how-to-upload-images/form-example.png){{% /image_container %}}
+{{% image_container width="600" %}}![](/attachments/studio-how-to/pages/pages-how-to-attach-images/form-example.png){{% /image_container %}}
 
 Your domain model looks the following way:
 
 {{% image_container width="200" %}}
-![](attachments/pages-how-to-upload-images/domain-model.png)
+![](/attachments/studio-how-to/pages/pages-how-to-attach-images/domain-model.png)
 {{% /image_container %}}
 
 You would like to add a new functionality: when creating a reimbursement report, employees need to attach receipts – screenshots or scanned images of what they paid for.  
@@ -38,8 +38,8 @@ You also would like to display attached images in a list below the report and to
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio/page-editor). 
-* Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/studio/domain-models).
+* Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio/page-editor/). 
+* Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/studio/domain-models/).
 
 ## 3 Creating an Image Entity
 
@@ -51,27 +51,27 @@ First of all, to be able to attach and upload images you need to add a special t
 
 3. In the **Create New Image Entity** dialog box, set **Name** to *Receipt* and click **Create**.
 
-    {{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/create-new-image-entity.png){{% /image_container %}}
+    {{% image_container width="400" %}}![](/attachments/studio-how-to/pages/pages-how-to-attach-images/create-new-image-entity.png){{% /image_container %}}
 
 4. Now you need to create an association from the **Image** entity to the **Report** entity. Do one of the following:
 
     1. Hover over the **Image** entity, click the dot icon, and drag the dot to the **Report** entity:
 
-		{{% image_container width="500" %}}![](attachments/pages-how-to-upload-images/association-method1.png){{% /image_container %}}
+		{{% image_container width="500" %}}![](/attachments/studio-how-to/pages/pages-how-to-attach-images/association-method1.png){{% /image_container %}}
 
     2. Select the **Image** entity, click the arrow icon, and select **Report** as a second entity for the association:
 
-		{{% image_container width="250" %}}![](attachments/pages-how-to-upload-images/association-method2.png){{% /image_container %}}
+		{{% image_container width="250" %}}![](/attachments/studio-how-to/pages/pages-how-to-attach-images/association-method2.png){{% /image_container %}}
 
 Good job! You have created the image entity and an association from it to the **Report** entity:
 
-{{% image_container width="600" %}}![](attachments/pages-how-to-upload-images/domain-model-configured.png){{% /image_container %}}
+{{% image_container width="600" %}}![](/attachments/studio-how-to/pages/pages-how-to-attach-images/domain-model-configured.png){{% /image_container %}}
 
 ## 4 Adding an Image Uploader
 
 An **Image Uploader** is a widget that allows your end-users to attach images. However, it can only function inside a data container (a list view or data view) and can only have an image entity as its data source. If you just drag and drop the image uploader to your report form, it will not work correctly, because your current data view has the **Report** entity as its data source, which is not an image entity:
 
-{{% image_container width="600" %}}![](attachments/pages-how-to-upload-images/form-example.png){{% /image_container %}}
+{{% image_container width="600" %}}![](/attachments/studio-how-to/pages/pages-how-to-attach-images/form-example.png){{% /image_container %}}
 
 To solve this, you can add a button which will open a pop-up page where your end-users can attach images. This page will be connected to your current report form over the *Image_Report* association and will upload images as **Image** entity and associated to this specific report. 
 
@@ -83,7 +83,7 @@ Follow the steps below:
 
 3. Drag and drop the button above **Save** and **Cancel** buttons:
 
-    {{% image_container width="450" %}}![](attachments/pages-how-to-upload-images/new-button.png){{% /image_container %}}
+    {{% image_container width="450" %}}![](/attachments/studio-how-to/pages/pages-how-to-attach-images/new-button.png){{% /image_container %}}
 
 4. Open button properties > the **Caption** property and rename it from *New* to *Attach Images*.
 
@@ -93,13 +93,13 @@ Follow the steps below:
 
 7. In the button properties, click the **Style** property and change it from **Default** to **Success**. After your changes, the button will look the following way:
 
-    {{% image_container width="150" %}}![](attachments/pages-how-to-upload-images/button-style-change.png){{% /image_container %}}
+    {{% image_container width="150" %}}![](/attachments/studio-how-to/pages/pages-how-to-attach-images/button-style-change.png){{% /image_container %}}
 
 8. In the button properties, click the **Entity** property.
 
 9. In the **Select Entity** dialog box, choose the **Receipt** entity over **Receipt_Report** association and click **Select**: 
 
-    {{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/image-report-association.png){{% /image_container %}}
+    {{% image_container width="400" %}}![](/attachments/studio-how-to/pages/pages-how-to-attach-images/image-report-association.png){{% /image_container %}}
 
 10. In the button properties, click **Page**.
 
@@ -113,11 +113,11 @@ Follow the steps below:
 
      3. The **Pre-fill page contents based on the Receipt entity** option is on, so the page template (Forms) is selected automatically for you. Choose **Form Vertical** and click **Create**.
 
-         {{% image_container width="500" %}}![](attachments/pages-how-to-upload-images/create-new-page-images.png){{% /image_container %}}
+         {{% image_container width="500" %}}![](/attachments/studio-how-to/pages/pages-how-to-attach-images/create-new-page-images.png){{% /image_container %}}
 
 13. A new pop-up page with a preconfigured form (a data view) is created:
 
-     {{% image_container width="500" %}}![](attachments/pages-how-to-upload-images/attach-images-page.png){{% /image_container %}}
+     {{% image_container width="500" %}}![](/attachments/studio-how-to/pages/pages-how-to-attach-images/attach-images-page.png){{% /image_container %}}
 
      As you only need your end-users to attach images on this page, delete the **Dynamic image** widget, **Name** and **Size** text boxes from the data view. 
 
@@ -125,7 +125,7 @@ Follow the steps below:
 
 You have created a pop-up page that will allow employees to attach images to their reimbursement reports:
 
-{{% image_container width="450" %}}![](attachments/pages-how-to-upload-images/attach-images-pop-up-page.png){{% /image_container %}}
+{{% image_container width="450" %}}![](/attachments/studio-how-to/pages/pages-how-to-attach-images/attach-images-pop-up-page.png){{% /image_container %}}
 
 
 ## 5 Displaying Attached Images
@@ -136,14 +136,14 @@ After users attach the images, it would be nice to display their attachments and
 
 2. In the **Building Blocks**, search for **List with image** and drag and drop it under the **Attach Images** button (*inside* the data view). A list view with widgets inside it is added to your page:
 
-    ![](attachments/pages-how-to-upload-images/list-4.png)
+    ![](/attachments/studio-how-to/pages/pages-how-to-attach-images/list-4.png)
 
 3. Open list view properties and do the following:
 
     1. Click the **Entity** property.
     2. In the **Select Entity** dialog box, choose the **Select Entity** dialog box, choose the **Receipt** entity over **Receipt_Report** association and click **Select**:
 
-    	{{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/image-report-association.png){{% /image_container %}}
+    	{{% image_container width="400" %}}![](/attachments/studio-how-to/pages/pages-how-to-attach-images/image-report-association.png){{% /image_container %}}
 
 4. Click the image in the list view, open its properties, and do the following.
 
@@ -152,7 +152,7 @@ After users attach the images, it would be nice to display their attachments and
     3. In the **Select Image Entity**, choose **Receipt** and click **Select**.
     4. In the **Default Image** property, click **Select image**, and in the **Select image** dialog box, click **Clear**.  
 
-    	{{% image_container width="300" %}}![](attachments/pages-how-to-upload-images/image-properties.png){{% /image_container %}}
+    	{{% image_container width="300" %}}![](/attachments/studio-how-to/pages/pages-how-to-attach-images/image-properties.png){{% /image_container %}}
 
 5. Delete a subtitle in the list view saying *Secondary text*.
 
@@ -161,7 +161,7 @@ After users attach the images, it would be nice to display their attachments and
     1. In the **Content** property, delete the *List item title* text and click **Add**  > **Attribute**.
     2. In the **Select Attribute** dialog box, choose the **Name** attribute and click **Select** to display the name of the attached image.
 
-    	{{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/select-attribute.png){{% /image_container %}}
+    	{{% image_container width="400" %}}![](/attachments/studio-how-to/pages/pages-how-to-attach-images/select-attribute.png){{% /image_container %}}
 
 7. Select the button in the list view, open its properties, and do the following:
 
@@ -177,12 +177,12 @@ After users attach the images, it would be nice to display their attachments and
     
     6. In the **Style** property, change **Default** to **Danger**. 
     
-      ![](attachments/pages-how-to-upload-images/button-properties.png)
+      ![](/attachments/studio-how-to/pages/pages-how-to-attach-images/button-properties.png)
 
 Great job! Now you have the image list that shows attached images and your users will be able to delete images from the list if necessary:
 
-![](attachments/pages-how-to-upload-images/configured-image-list.png)
+![](/attachments/studio-how-to/pages/pages-how-to-attach-images/configured-image-list.png)
 
 Congratulations! You have configured the report that allows your users to attach images and displays these images in the list.
 
-[Preview your app](/studio/publishing-app) to test how the image uploading works. You can also configure a button to attach files instead of images. For more information on files, see [Images & Files](/studio/page-editor-widgets-images-and-files).
+[Preview your app](/studio/publishing-app/) to test how the image uploading works. You can also configure a button to attach files instead of images. For more information on files, see [Images & Files](/studio/page-editor-widgets-images-and-files/).

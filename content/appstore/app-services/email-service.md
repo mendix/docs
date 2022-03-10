@@ -163,12 +163,11 @@ The following file types are not supported as attachments:
 The **Usage** dashboard shows the real-time statistics about the usage of an app service. For the Email Service, perform the following steps to check the number of emails sent and data transfer usage:
 
 1. Log into the Marketplace.
-2. Go to **My Marketplace** and Click [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
-3.  Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the following statistics:
-
-    * **Current Month** – Shows statistics for current month usage
-    * **Last Month** – Shows usage statistics for last month
-    * **Till date** – Shows usage statistics from the start of the subscription date to today
+2. Go to **My Marketplace** and then do as follows:
+   - If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+   - If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+3. Find **Email Service** in the list.
+4. Click **Usage Dashboard** to show the usage details.
 
 ## 5 Increasing the Deliverability of Your Emails
 

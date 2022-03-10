@@ -7,7 +7,7 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}The navigation tree widget is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="warning" %}}The navigation tree widget is not supported on native mobile pages.{{% /alert %}}
 
 ## 1 Introduction
 

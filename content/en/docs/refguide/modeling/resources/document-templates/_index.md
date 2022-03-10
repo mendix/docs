@@ -13,7 +13,7 @@ aliases:
 
 Document Templates are used to model a template required as input for a document export action which can generate all kinds of documents based on application data. They are composed much in the same way as [Pages](/refguide/pages/).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This page describes what document templates are for and what kind of widgets can be placed on them. If you want to see the properties of the document template you can check the documentation for a [document template](/refguide/document-template/) itself.
 {{% /alert %}}
 
@@ -38,7 +38,7 @@ The data grid shows a list of objects in a grid. For example, a data grid can sh
 
 For more information, see [Data Grid (Document Template)](/refguide/data-grid-document-template/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide/modeling/resources/document-templates/data-grid-document-template/918138.png)
 
@@ -52,7 +52,7 @@ The data view is used for showing the contents of exactly one object. If, for ex
 
 For more information, see [Data View (Document Template)](/refguide/data-view-document-template/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide/modeling/resources/document-templates/data-view-document-template/918139.png)
 
@@ -66,7 +66,7 @@ The template grid shows a list of objects in a tile view. For example, a templat
 
 For more information, see [Template Grid (Document Template)](/refguide/template-grid-document-template/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide/modeling/resources/document-templates/918137.png)
 
@@ -85,7 +85,7 @@ Tables can be used both inside and outside data view or templategrid widgets.
 
 For more information, see [Table (Document Template)](/refguide/table-document-template/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide/modeling/resources/document-templates/918134.png)
 
@@ -99,7 +99,7 @@ When inserting a page break, the current page will be cut off after the break an
 
 For more information, see [Page Break (Document Template)](/refguide/page-break-document-template/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide/modeling/resources/document-templates/918135.png)
 
@@ -123,7 +123,7 @@ A dynamic label is used for the same attribute types as a text box in the page e
 
 For more information, see [Dynamic Label (Document Template)](/refguide/dynamic-label-document-template/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide/modeling/resources/document-templates/918131.png)
 
@@ -137,7 +137,7 @@ A dynamic image can be used to show a System.Image. If the image is not availabl
 
 For more information, see [Dynamic Image (Document Template)](/refguide/dynamic-image-document-template/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide/modeling/resources/document-templates/918132.png)
 
@@ -155,7 +155,7 @@ A static label shows a line of static text. You can use it to place custom text 
 
 For more information, see [Static Label (Document Template)](/refguide/static-label-document-template/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide/modeling/resources/document-templates/918130.png)
 
@@ -175,7 +175,7 @@ A static image shows a predefined image. It can be put either in- or outside a d
 
 For more information, see [Static Image (Document Template)](/refguide/static-image-document-template/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide/modeling/resources/document-templates/918133.png)
 

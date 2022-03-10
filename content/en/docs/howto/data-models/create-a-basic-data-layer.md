@@ -128,7 +128,7 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 
 	![](/attachments/howto/data-models/create-a-basic-data-layer/18582208.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Delete behavior includes objects which are in memory. This means that delete cascades and delete prevention will apply, even if the associated object has not been committed.
 {{% /alert %}}
 

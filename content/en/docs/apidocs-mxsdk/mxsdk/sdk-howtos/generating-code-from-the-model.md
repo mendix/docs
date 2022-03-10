@@ -192,7 +192,7 @@ function generate(domainModel1, model) {
 
 Execute the script. You should have a new app with the generated entities.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Instead of creating a new app, you can also reuse an existing project or even an existing online working copy.
 

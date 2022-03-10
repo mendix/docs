@@ -12,7 +12,7 @@ tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis"]
 
 **Datadog** is a monitoring and analysis tool for cloud applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform. You can link your Mendix Cloud v4 apps to Datadog to provide additional monitoring.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Datadog logging and application metrics are supported in Mendix version 7.15 and above.
 {{% /alert %}}
 
@@ -20,7 +20,7 @@ This document explains what information can be provided to Datadog and how to co
 
 A summary of the useful metrics provided by Mendix is in the section [Summary of Mendix Metrics](#summary), below.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Datadog is not supported in the deprecated Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
 {{% /alert %}}
 
@@ -178,7 +178,7 @@ Setting these values for your app means that all metrics from this environment o
 
 ![Example metric showing tags in Datadog](/attachments/developerportal/operate/metrics/datadog-metrics/datadog-summary-tags.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can add more tags if you want, but note that Datadog's charges include an element for [custom metrics](https://docs.datadoghq.com/developers/metrics/custom_metrics/) as described on the Datadog site.
 {{% /alert %}}
 
@@ -220,7 +220,7 @@ You can specify which request handlers, microflows, and activities are reported 
 | `"name": "<microflow>"` | Each time this microflow is run | The format is `<module>.<microflow>`<br />For example, `TrainingManagement.ACT_CancelScheduledCourse` |
 | `"name": "<activity>"` | All activities of this type | click **Activities<sup><small>2</small></sup>** below to see the list of options |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Microflow names are case-sensitive. If the case is not exactly matched, metrics will not be properly submitted.
 {{% /alert %}}
 
@@ -368,7 +368,7 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 
 9.  Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
 
-	{{% alert type="warning" %}}Your app must be **redeployed** before it is started as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to Datadog.{{% /alert %}}
+	{{% alert color="warning" %}}Your app must be **redeployed** before it is started as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to Datadog.{{% /alert %}}
 
 ## 5 Additional Information{#additional-info}
 

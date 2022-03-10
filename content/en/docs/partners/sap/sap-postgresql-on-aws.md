@@ -51,7 +51,7 @@ Click **Open Editor** or **Configurator** to start the **PostgreSQL on Amazon (A
 
 The **PostgreSQL on Amazon (AWS) configurator** provide a user friendly interface to create the JSON required to configure PostgreSQL on Amazon (AWS).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The configurator will only create a JSON file from scratch. It does not have access to your existing database settings on SAP BTP, and you cannot import any existing JSON files.
 {{% /alert %}}
 

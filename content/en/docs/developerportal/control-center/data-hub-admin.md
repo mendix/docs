@@ -25,13 +25,13 @@ The Data Hub Curator role can see and edit metadata for all registered assets in
 
 To assign a Curator role to a Mendix user, click **Add Curator**. To search the list of Mendix users in your organization, start typing in the search box and check the user(s) you want to assign the Curator role to.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 A user with Curator rights can access all assets registered in the Data Hub Catalog. This also includes those that are set to **Non-discoverable** (for more information on discoverability, see the [Discoverability](/data-hub/data-hub-catalog/search/#discoverability-metadata) section in *How to Search in the Data Hub Catalog*). Curators can also change the metadata for assets that are owned by other users.
 {{% /alert %}}
 
 If you want to remove the curator rights for a user, check the box next to the user and click **Remove Curator**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This only removes the Curator rights of the user, it does not remove the user as a Mendix Platform user.
 {{% /alert %}}
 
@@ -45,7 +45,7 @@ Mendix Admins and Data Hub Curators can manage the custom owner list on the **Ow
 
 ![Owners](/attachments/developerportal/control-center/data-hub-admin/owners.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Data Hub Curators will see *only* the **Owners** tab available in the **Data Hub** page.
 {{% /alert %}}
 
@@ -64,7 +64,7 @@ Mendix Admins can invite and manage external users on the **External Users** tab
 
 To invite a new user, on the Data Hub screen, click **Invite External Users**. In the dialog box, enter the email addresses of the users you would like to invite as external users and click **Send Invitation**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can only invite users with a Mendix account. The invitation email will not be sent to email addresses that are not associated with any Mendix account.
 {{% /alert %}}
 
@@ -80,10 +80,10 @@ The default value of this setting is **On**:
 
 ![Settings](/attachments/developerportal/control-center/data-hub-admin/Admin-Settings.PNG)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This setting does not work in retrospect, it will only apply to the  OData resources published after changing the setting.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When the discoverable value is explicitly declared on the registration form or in the API field, it will take precedence over this company **Settings** value.
 {{% /alert %}}

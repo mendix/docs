@@ -7,7 +7,7 @@ parent: "container-widgets"
 
 A navigation list can be used to attach an action to an entire row. Such a row is called a navigation list item.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/container-widgets/navigation-list/navigation-list.png)
 A navigation list with three empty rows.

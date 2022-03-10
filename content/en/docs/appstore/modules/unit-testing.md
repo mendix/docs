@@ -98,7 +98,7 @@ This is an example response:
 }
 ```
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The completed flag will be `false` as long as the test run is not finished. The `runtime` flag will return the total runtime of the suite in milliseconds after the test run has finished.
 {{% /alert %}}
 

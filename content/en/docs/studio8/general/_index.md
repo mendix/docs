@@ -51,7 +51,7 @@ After clicking **Edit in Studio** you may need to upgrade your app to the latest
 
 You may also see an orange top bar suggesting an upgrade to the next Mendix version. For more information on Studio upgrades and Mendix versions, see [Studio Ranges & Mendix Versions](/studio8/general-versions/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When you upgrade your app in Studio to the latest  Mendix version, you will need to upgrade your app in the Studio Pro to the same version as well. 
 
 If you are working in a team with others, it is wise to check with your team members if everyone is OK to upgrade the app to the latest Mendix version. 

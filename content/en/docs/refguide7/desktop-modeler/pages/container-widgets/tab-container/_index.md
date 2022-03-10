@@ -8,7 +8,7 @@ parent: "container-widgets"
 
 Tab containers are used to show information categorized into multiple tab pages. This can be very useful if the amount of information that has to be displayed is larger than the amount of space on the screen.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/container-widgets/tab-container/tab-container.png)
 A tab control with two tab pages (Address, Orders).

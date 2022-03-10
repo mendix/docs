@@ -9,7 +9,7 @@ tags: ["Published REST", "operation", "method", "path", "example location", "map
 # linked from DM: published rest > select resource > add operation for resource > help (integration)
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-rest-operation.pdf).
 {{% /alert %}}
 
@@ -60,12 +60,12 @@ The **Example Location** gives an example of a URL on which the operation can be
 An operation can have the following parameters:
 
  * [Query parameters](/refguide8/published-rest-query-parameters/), which are at the end of the URL in the form of `?name1=value1&name2=value2` 
-   {{% alert type="info" %}}
+   {{% alert color="info" %}}
    When a microflow parameter is not in the path and is not an object, then it is considered to be a query parameter.
    {{% /alert %}}
 * [Path parameters](/refguide8/published-rest-path-parameters/), which form part of the path of the URL
 * A body parameter (optional), which is in the body of the request to the operation 
-   {{% alert type="info" %}}
+   {{% alert color="info" %}}
    The **GET**, **HEAD**, and **DELETE** operations do not have a body parameter.
    {{% /alert %}}
 * Header parameters, which come from the HTTP headers of the request
@@ -83,13 +83,13 @@ The result of the microflow is the result of the operation and can include the f
 
 1. **Return a** ***list*** **or an** ***object***– you must specify an export mapping to convert it to XML or JSON.
 2. **Return a primitive** – when the microflow returns a value, for example, a string, integer, or Boolean, then the response to the operation will be that value. 
-   {{% alert type="info" %}}
+   {{% alert color="info" %}}
    If a non-empty value from the microflow is returned, the *Content* attribute of the *HttpResponse* object is ignored. 
    If an empty value from the microflow is returned, then the *Content* of the *HttpResponse* is taken as the result.
    {{% /alert %}}
 3.  **Return a file document** – when you want to return data that is a file (such as a PDF or image), then the microflow returns a file document.
 4. **Return a** [HttpResponse](http-request-and-response-entities#http-response) – in the *HttpResponse*, you can set the status code, reason phrase, and content (as a string). You can fill the content with, for example, the result of a mapping or a string from another source. You can also add headers to the response. 
-   {{% alert type="info" %}}
+   {{% alert color="info" %}}
    One important header to set is *Content-Type*. Do not return an *empty* *HttpResponse* because that will always result in an error.
    {{% /alert %}}
 

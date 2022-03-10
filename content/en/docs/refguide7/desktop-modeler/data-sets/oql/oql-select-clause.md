@@ -24,7 +24,7 @@ SELECT [ DISTINCT ]
 
 `entity_name.*`, `from_alias.*` – specifies that all attributes of the specified entity or expression of the FROM clause should be returned.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ```
 SELECT Sales.Customer.* FROM Sales.Customer
@@ -40,7 +40,7 @@ SELECT Person.* FROM Sales.Customer AS Person
 
 Is either a constant, a function or any combination of attribute names, constants, and functions connected by operator(s) or a subquery. When you add more expressions, place a comma between each expression.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ```
 SELECT Name AS CustomerName, LastName AS CustomerLastName, Birthday, Category FROM Sales.Customer
@@ -52,7 +52,7 @@ See [this page](/refguide7/oql-expressions/) for more information.
 
 `column_alias` – is an alternative name to replace the column name in the result. When the attribute Name is retrieved, the result column is 'Name'. With an alias, you can specify another result column name, like 'Customer Name'. An alias can contain spaces.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ```
 SELECT Sales.Customer.Name AS CustomerName FROM Sales.Customer

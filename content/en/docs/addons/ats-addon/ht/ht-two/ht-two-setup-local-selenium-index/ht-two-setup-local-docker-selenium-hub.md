@@ -10,7 +10,7 @@ tags: ["ATS", "testing", "Selenium hub"]
 
 This how-to shows you an example of a simple setup of a Docker Selenium hub with a Chrome and a Firefox node on a Linux machine. The Docker works on a Windows machine as well, but the commands and configuration could be different. For the official project go to: [https://github.com/SeleniumHQ/docker-selenium](https://github.com/SeleniumHQ/docker-selenium)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Mendix does not deliver support for the local Selenium solutions. 
 {{% /alert %}}
 
@@ -113,7 +113,7 @@ Each node has one browser, so if you need more nodes of a certain browser, you c
    docker_hub_1       /opt/bin/entry_point.sh   Up      0.0.0.0:4444->4444/tcp
    ```
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 By default the hub only accepts a maximum of 5 sessions to run in parallel at a time, even if you configure more, see the official documentation.
 {{% /alert %}}
 

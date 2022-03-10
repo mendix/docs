@@ -13,7 +13,7 @@ aliases:
 
 This document describes how to configure the styling of your page in the Desktop Modeler and Web Modeler.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This functionality was introduced in Mendix 7.16.
 

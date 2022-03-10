@@ -35,7 +35,7 @@ In the settings of the OData service, you can choose how associations are repres
 
 ### 2.1 As a Link
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This was introduced in version 7.21.
 {{% /alert %}}
 
@@ -47,7 +47,7 @@ Using this method, you can expose both sides of the association and you can expo
 
 ### 2.2 As an Associated Object ID
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This feature has been deprecated since version 7.21.
 {{% /alert %}}
 

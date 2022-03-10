@@ -20,7 +20,7 @@ For example, you have an *Employee Onboarding app* containing information on wha
 
 For more information on how to use data in your app, see the [Selecting External Entities on Pages](#select-external-entities) section.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can access Data Hub if your organization has a Data Hub license. 
 {{% /alert %}}
 
@@ -60,7 +60,7 @@ In the **Data Hub** tab, you can do the following:
 
 * **Search** – when you enter a search term, you will get a list of services and entities available for your organization, as well as entities and services that are already used in your app.
 
-    {{% alert type="info" %}} In Studio, you can discover services that are published to a **Production** environment. {{% /alert %}}
+    {{% alert color="info" %}} In Studio, you can discover services that are published to a **Production** environment. {{% /alert %}}
 
 * **Filter out Studio incompatible services** – some services require authentication that is not compatible with Studio, you can use them only in Studio Pro. You can view all services, or filter out only compatible ones. Choose one of the following options in the drop-down menu:
 
@@ -119,7 +119,7 @@ External attributes may have limitations that you can see in their properties. L
 
 {{% image_container width="250" %}}![Attribute with Limitations](/attachments/studio/work-with-data/data-hub-in-studio/attribute-with-limitations.jpg){{% /image_container %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You cannot delete attributes of external entities.
 

@@ -30,7 +30,7 @@ You can create a new app on [Mendix Team Server](/developerportal/collaborate/te
 
 ### 2.2 Existing Mendix Team Server
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You can only upload to an existing repository if the repository is currently empty
 {{% /alert %}}
 

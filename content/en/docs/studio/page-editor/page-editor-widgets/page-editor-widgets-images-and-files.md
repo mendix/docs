@@ -144,7 +144,7 @@ This property allows you to create an expression and is shown only when the expr
 
 ### 3.3 Controls Section
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **Controls** section is available for **File Manager** only. 
 

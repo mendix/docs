@@ -58,7 +58,7 @@ At the moment there is only a button with no microflow behind it yet. In this ex
     | **Name** | This property specifies the name of the microflow in the page builderClass: The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget. |
     | **Style** | The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class. |
 
-    {{% alert type="warning" %}}
+    {{% alert color="warning" %}}
 
     The styling is applied in the following order:
 
@@ -113,7 +113,7 @@ These are the execution settings:
 
 *  **Progress message** – the progress message is shown along with the progress bar if the progress bar is either non-blocking or blocking
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Set the duration only to asynchronous if you experience problems. Sometimes if a request takes too long to handle, the request will be sent again by an (impatient) proxy server.
 
@@ -123,7 +123,7 @@ Set the duration only to asynchronous if you experience problems. Sometimes if a
 
 You have the option to ask for confirmation before proceeding with the microflow. This is useful in cases where an operation modifies or deletes a lot of data or when it takes a lot of time to complete. The user will be prompted with a question whether to continue with this operation.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The title of the confirmation pop-up is determined by a system text (category 'Message dialog title').
 

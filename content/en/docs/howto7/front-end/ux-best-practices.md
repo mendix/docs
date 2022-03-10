@@ -8,7 +8,7 @@ tags: ["ux", "ui", "ux designer", "user experience", "design", "menu", "button",
 
 ## 1 Introduction
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This how-to is based on the blog post [Common UX Mistakes Made by Business Developers](https://blog.prototypr.io/common-ux-mistakes-made-by-business-developers-e837d0b31379) by Jason Teunissen, UX Consultant at [Appronto](https://developer.mendixcloud.com/link/partnerprofile/8870).
 {{% /alert %}}
 

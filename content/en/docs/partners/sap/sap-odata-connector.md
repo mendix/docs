@@ -18,7 +18,7 @@ The OData Connector for SAP solutions is an OData connector written specifically
 
 You can use the [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/) to generate a data model from the metadata of your OData service, exposed from your SAP back-end system, or from APIs in the SAP API Business Hub or the SAP Catalog Service. For more details see [How to Use the OData Model Creator for SAP Solutions](/partners/sap/use-sap-odata-model-creator/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Version 5.3.0 of the OData Connector for SAP solutions adds support for services using OData version 4. Currently, only **Get List** and **Get Entry** are supported for services using OData version 4.
 {{% /alert %}}
 
@@ -26,7 +26,7 @@ If you are new to the OData Connector for SAP solutions, you can try it out by f
 
 When running the Mendix application on SAP Business Technology Platform (SAP BTP), you can choose to use the SAP Destination Service to gain access to your on-premises SAP instance. The SAP Destination Service can be configured to invoke the SAP Connectivity Service in SAP BTP to find a route to your OData service residing on-premises. This route is configured from the SAP Cloud Connector running as an agent in your on-premises SAP back-end. If no route is configured, the OData Connector for SAP solutions will route requests to the public OData service. For more information, see the [SAP Destination Service](/partners/sap/sap-destination-service/) documentation and the [OData Connector for SAP Solutions](https://marketplace.mendix.com/link/component/74525/Mendix/SAP-OData-Connector).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The SAP Destination Service replaces the SAP Cloud Connector flag which was used in previous version of the OData Connector for SAP solutions
 {{% /alert %}}
 
@@ -66,7 +66,7 @@ Most of the actions of the OData Connector for SAP solutions make use of a domai
 
 You can create a data model by inspecting the service metadata. The response from the service can be used in the [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/) to generate a domain model which can be imported into your app. Instructions for doing this are in [How to Use the OData Model Creator for SAP Solutions](/partners/sap/use-sap-odata-model-creator/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In addition to the domain model, the OData Model Creator will also create three other items:
 
 * A constant with the name of the service which has the value of the Service Root URL for the SAP OData service you are using
@@ -78,7 +78,7 @@ In addition to the domain model, the OData Model Creator will also create three 
 
 The examples used in this guide are based on the **GWSAMPLE_BASIC** OData service exposed by the back-end system of sapes5.sapdevcenter.com.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You will need to have an SAP account with access to the [SAP NetWeaver (ES5)](https://sapes5.sapdevcenter.com/) system to be able to use this service.
 {{% /alert %}}
 
@@ -207,7 +207,7 @@ This produces the GET request `https://sapes5.sapdevcenter.com/sap/opu/odata/iwb
 
 The Create operation creates a new object in the SAP back-end system using the OData service. The object is described by an entity in the SAP service domain model.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This Create is not the same as the Mendix **Create object** action. The OData Connector for SAP solutions Create will commit the object to the SAP back-end system and it cannot be rolled back. If you decide later that you do not want this object you must delete it using its key.
 {{% /alert %}}
 
@@ -387,7 +387,7 @@ For example, you could catch an exception on **Get List** and display an error m
 
 #### 3.2.5 Get cloud connector info
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This action is included for backward compatibility. The information about your cloud connector connection is available in the **Destination** entity after you have performed a **Get Destination** action. See [SAP Destination Service](/partners/sap/sap-destination-service/) for more information.
 {{% /alert %}}
 
@@ -398,7 +398,7 @@ This creates a **CloudConnectorInfo** object and fills the values for **ProxyHos
   * Return type - SAPODataConnector.CloudConnectorInfo
   * Variable - the name which you would like to give to the CloudConnectorInfo object which is created and returned by this action
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If your app is not running on SAP BTP, this action will throw an error.
 {{% /alert %}}
 
@@ -432,7 +432,7 @@ When an object is returned from an OData service, your app needs to know to whic
 
 Destination is the name of the object of type SAPODataConnector.Destination where the details of a destination have been stored by a *Get Destination* action. An SAP Destination Service enables your Mendix app to use services defined in the SAP BTP cockpit without needing to know all the technical details of the endpoint. You can find more information about the SAP Destination Service in [SAP Destination Service](/partners/sap/sap-destination-service/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The SAP Destination Service will only provide the correct information when run on SAP BTP. To test your app on your local machine you will have to use a URL to connect directly to an OData service which is available to you.
 {{% /alert %}}
 
@@ -450,7 +450,7 @@ The Query edit box will help you by offering suggestions as described above.
 
 `@SERVICEROOT` is a constant which is created in the SAP Service Data Model and has a value which is the root URL of the OData service, for example: https://sapes5.sapdevcenter.com/sap/opu/odata/iwbep/GWSAMPLE_BASIC.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If you are using a Destination configured by the SAP Destination Service, then the `@SERVICEROOT` should be empty. In other words, the query should begin with the `'/'` before the `COLLECTIONNAME`. 
 {{% /alert %}}
 
@@ -466,7 +466,7 @@ For example, to return a list of products in the category *Notebooks*, using the
 ```javascript
 @GWSAMPLE_BASIC.GWSAMPLE_BASIC + '/' + toString(GWSAMPLE_BASIC.EntitySetNames.ProductSet) + '?' + '$filter=Category%20eq%20''Notebooks''' + '&' + '$inlinecount=allpages'
 ```
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Note that the request has to be URL encoded so that, for example, spaces have to be encoded as %20. Mendix has the function urlEncode() which can do this for you.
 {{% /alert %}}
 
@@ -496,7 +496,7 @@ When you are referencing an object, the format of the URL is:
 
 `@SERVICEROOT` is a constant which is created in the SAP Service Data Model and has a value which is the root URL of the OData service, for example: https://sapes5.sapdevcenter.com/sap/opu/odata/iwbep/GWSAMPLE_BASIC.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If you are using a *Destination* configured by the SAP Destination Service, then the `@SERVICEROOT` should be empty. In other words, the query should begin with the `'/'` before the `COLLECTIONNAME`. 
 {{% /alert %}}
 
@@ -563,11 +563,11 @@ For example, **SalesOrder** is the parent entity of **SalesOrderLineItem** via t
 
 ![](/attachments/partners/sap/sap-odata-connector/tolineitems-sapodataconnector.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you are using the Destination Service to identify the endpoint of your SAP OData Service, you will need to edit the values of the **…Deferred** attributes as they will already contain an endpoint in addition to the object references.
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 There is no data content validation on the Parent parameter. This means you will not get an error if you:
 
 * Link all the objects in a returned list to the wrong parent (if, for example, your query does not select on the correct parent object)

@@ -9,7 +9,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/export-project-package-dialog.pdf).
 {{% /alert %}}
 
@@ -36,12 +36,12 @@ Mendix project packages can be exported to a Mendix package file (*.mpk*).  You 
 
 * **Existing snapshot** – this option will include the existing database snapshot in the export project package
   
-	{{% alert type="info" %}}This option is only available when a snapshot has already been created. If necessary, you can create a snapshot via **Version Control** > **Add Snapshot of Data**.
+	{{% alert color="info" %}}This option is only available when a snapshot has already been created. If necessary, you can create a snapshot via **Version Control** > **Add Snapshot of Data**.
 	{{% /alert %}}
   
 * **New snapshot from current database** – will create a new snapshot from the database and include it in the export
 
-	{{% alert type="info" %}}This option is available after you run the app locally at least once, because a local database will be created when running the app for the first time.
+	{{% alert color="info" %}}This option is available after you run the app locally at least once, because a local database will be created when running the app for the first time.
 	{{% /alert %}}
 
 ## 4 Read More

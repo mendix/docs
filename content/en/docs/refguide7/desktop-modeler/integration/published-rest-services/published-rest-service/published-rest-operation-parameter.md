@@ -19,7 +19,7 @@ When you add or edit a parameter in a published REST operation, you can specify 
 
 ## 2 General
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 These fields were introduced as read-only in the parameter list in version 7.12.0, and as read-only in the dialog box in version 7.14.0. They are editable since version 7.17.0.
 
@@ -52,7 +52,7 @@ The mapping group is only shown for body parameters.
 
 ## 3.1 Import Mapping
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This feature was introduced in version 7.14.0
 
@@ -64,7 +64,7 @@ You can use an import mapping that takes a primitive parameter (string, integer,
 
 ## 3.2 If No Object Was Found
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This feature was introduced in version 7.17.0
 
@@ -74,7 +74,7 @@ You can indicate what should happen **if no object was found** when the import m
 
 ## 3.3 Commit
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This feature was introduced in version 7.14.0
 

@@ -18,7 +18,7 @@ This document describes two ways of managing the SAP BTP:
 * Initial setup of the environment when creating a new app: see the section [Set Up SAP BTP for the First Time](#FirstTime)
 * Create a new environment for an existing app: see the section [Create a New Environment](#NewEnvironment)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Mendix applications can be deployed to Cloud Foundry regions on SAP Business Technology Platform, not to Neo regions.
 {{% /alert %}}
 
@@ -52,7 +52,7 @@ Once the app has been created you can continue with [Set Up Region](#SetUpRegion
 
 You are now prompted with an SAP BTP login screen. Select the region where your SAP BTP is located.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Currently supported regions are:
 
 * Australia (Sydney) 
@@ -86,7 +86,7 @@ You may be asked to provide your credentials in one of two ways:
 * You will be taken to the SAP authentication page to enter your credentials – in this case, your SAP user name (email address) must be the same as your Mendix user name
 * The Developer Portal will ask for your credentials, which it will then use to obtain an access token from SAP – the Developer Portal will then use the access token, but it will not store your credentials (please note this method is being deprecated)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you have issues using SAP authentication, please refer to the reference [SAP Single Sign On](/partners/sap/sap-single-sign-on/).
 {{% /alert %}}
 
@@ -166,7 +166,7 @@ To create a new environment, perform the following steps:
 
 10. Set a **Subscription Secret** (required). This secret is associated with your Mendix production license. By entering the subscription secret, your application will run in this environment as production. If the subscription secret is invalid, your app will still run, but will restart every 1-2 hours and have a limitation of six named users.
 
-    {{% alert type="info" %}}If you do not have a subscription secret, create a ticket with Mendix Support and they will send you one.{{% /alert %}}
+    {{% alert color="info" %}}If you do not have a subscription secret, create a ticket with Mendix Support and they will send you one.{{% /alert %}}
 
 11. If you want the user to be redirected to a custom URL after they have logged in using XSUAA then, optionally, add **Redirect URLs**. 
 
@@ -189,7 +189,7 @@ There are two ways of getting a package ready to deploy to SAP.
 
 At any time, you can create a new deployment package from a committed version of the project. If you are working with Mendix Studio Pro, you will first have to commit the project.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can also deploy your app (the steps in sections 4 and 5.1 of this How-To) automatically from Studio Pro. However, you will then have less control over the deployment.
 
 If you click **Run** or **Publish** in Studio Pro, this will automatically do the following:
@@ -199,7 +199,7 @@ If you click **Run** or **Publish** in Studio Pro, this will automatically do th
 3. Deploy the deployment package to the first available environment (this will replace any app which is currently running in this environment).
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You will still have to deploy your app in the Developer Portal the very first time to ensure that all the services are bound correctly.
 {{% /alert %}}
 
@@ -241,13 +241,13 @@ Alternatively, you can upload an MDA which has already been created from the app
 
 The package will be added to the list of packages in the **Deployment Package Repository**. To deploy your package, follow the instructions in the [Deploy Package](#DeployPackage) section, below.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 There is a limit of 200MB on the size of the MDA file you can upload to the Developer Portal for SAP BTP deployment.
 {{% /alert %}}
 
 ## 5 Deploy Package{#DeployPackage}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 SAP BTP [has a limit of 1.5GB](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/9c7092c7b7ae4d49bc8ae35fdd0e0b18.html#loio9809fa4f02cb4696baea5c23d6eaac94) on the size of a deployment package.
 {{% /alert %}}
 
@@ -286,7 +286,7 @@ SAP BTP [has a limit of 1.5GB](https://help.sap.com/viewer/65de2977205c403bbc107
 
     {{% image_container width="75%" %}}![](/attachments/developerportal/deploy/sap-cloud-platform/transport-services.png){{% /image_container %}}
 
-    {{% alert type="warning" %}}In your initial deployment, do not remove any of the services with the status **Services To Be Bound**. For a new app, these services are all required for the correct deployment of the app.{{% /alert %}}
+    {{% alert color="warning" %}}In your initial deployment, do not remove any of the services with the status **Services To Be Bound**. For a new app, these services are all required for the correct deployment of the app.{{% /alert %}}
 
 5. Click **Continue** to continue to the Start Application confirmation page.
 
@@ -294,7 +294,7 @@ SAP BTP [has a limit of 1.5GB](https://help.sap.com/viewer/65de2977205c403bbc107
 
     ![](/attachments/developerportal/deploy/sap-cloud-platform/start-application.png)
 
-    {{% alert type="info" %}}This will bind any services which are in the status **Services To Be Bound**.{{% /alert %}}
+    {{% alert color="info" %}}This will bind any services which are in the status **Services To Be Bound**.{{% /alert %}}
  
 7. When the application has been started you will receive a confirmation message. Click **OK** and you will be taken to the Environment Details page for the selected environment. See [Environment Details](#EnvironmentDetails), below.
 
@@ -344,7 +344,7 @@ Open the environment details by clicking **Details** on an environment on the En
 
 ![](/attachments/developerportal/deploy/sap-cloud-platform/environment-details.png)
 
-{{% alert type="info" %}}If you make changes to your app which you want be applied next time the app is deployed you must make them here.
+{{% alert color="info" %}}If you make changes to your app which you want be applied next time the app is deployed you must make them here.
 
 Changes made to the app in the SAP BTP cockpit are only temporary and can be overwritten by the values in the Mendix Developer Portal next time the app is deployed.{{% /alert %}}
 
@@ -362,7 +362,7 @@ If the application is running, click **Stop Application** and confirm when asked
 
 The button will change to **Start Application** which you can click to (re)start the application.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You may need to use this option to stop and start your app after changing one of the settings on this page.
 {{% /alert %}}
 
@@ -372,7 +372,7 @@ If you receive an error trying to start the app, please refer to the [App Will N
 
 Click **Change Admin Password** to change the password for the administrator account (by default, MxAdmin) in your Mendix app.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The new password will not come into effect until you stop and start your environment.
 {{% /alert %}}
 
@@ -388,7 +388,7 @@ You will be asked to confirm that this environment should be removed. You will a
 
 ![](/attachments/developerportal/deploy/sap-cloud-platform/delete-environment.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you do not select **Remove resources** in this dialog, the resources will be left in SAP BTP. This could be useful if you want to remove the environment but, for some reason, a resource cannot be removed. In this case, the resources can only be removed individually from within the SAP BTP cockpit.
 {{% /alert %}}
 
@@ -408,7 +408,7 @@ Click **Scale Now** to apply the new settings. If the application is running, it
 
 Click **Reset** to return the values to what they were before the sliders were moved.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can also make use of the **Application Autoscaler** service on SAP BTP. Mendix provides assistance in setting up the parameters needed to configure application autoscaler. For more information see [Application Autoscaler for SAP Business Technology Platform](/partners/sap/sap-autoscaler/).
 {{% /alert %}}
 
@@ -422,7 +422,7 @@ This tab displays the application constants and allows you to edit them. It also
 
 ![](/attachments/developerportal/deploy/sap-cloud-platform/12-sap-model-options.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You need to restart your app if you change any of these options.
 {{% /alert %}}
 
@@ -446,7 +446,7 @@ This tab displays Cloud Foundry services which are bound to the app, waiting to 
 ![](/attachments/developerportal/deploy/sap-cloud-platform/service-tab.png)
 {{% /image_container %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 There are a number of services which your Mendix app requires. **If you unbind any of these services, your app will probably stop working**:
 
 * destination
@@ -457,7 +457,7 @@ There are a number of services which your Mendix app requires. **If you unbind a
 Services should be selected, bound, and unbound through this **Services** page. Changes made in the SAP BTP cockpit will *not* be reflected in the Mendix Developer Portal.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Changes to bound services will not take place immediately. You will have to stop and start your application to activate the changes.
 
 Services which will be bound when the application is stopped and restarted are listed in the category **Services To Be Bound**. You will also see an information message in this case: the button **Review Services** will list the services which are not currently bound.
@@ -476,15 +476,15 @@ To connect a service in the section **Available Services**
 
     The services you have selected will be added as **Services To Be Bound**. Now, you can upload JSON **File** with a configuration that will be applied to the service binding. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you use the **PostgreSQL on SAP BTP** service on SAP BTP, Mendix can create a JSON file for you. See [Running Mendix on PostgreSQL](#sap-hyperscaler) in this document for more information.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you use the **Application Autoscaler** service on SAP BTP, Mendix can create a JSON file for you. See [Application Autoscaler for SAP Business Technology Platform](/partners/sap/sap-autoscaler/) for more information.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you use the **PostgreSQL on Amazon (AWS)** service on SAP BTP, Mendix can create a JSON file for you. See [PostgreSQL on Amazon (AWS) for SAP Business Technology Platform](/partners/sap/sap-postgresql-on-aws/) for more information.
 {{% /alert %}}
 
@@ -498,7 +498,7 @@ To upload the JSON **File** for service binding, follow these steps:
 
 The service bindings will be created with the provided configurations when you restart the application. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you receive an error, and the service fails to bind please check all aspects of your SAP account. The error message may not provide full information about, for example, which plans you are allowed to choose for a particular service.
 {{% /alert %}}
 
@@ -582,7 +582,7 @@ You can also enter other environment variables which can be used to support Mend
 
 ![List of custom environment variables](/attachments/developerportal/deploy/sap-cloud-platform/custom-environment-variables-unsupported.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Only use unsupported environment variables if you know exactly what you are doing. Incorrect values can prevent Mendix Runtime from starting.
 {{% /alert %}}
 
@@ -592,7 +592,7 @@ Mendix needs access to a relational database back end and can run using differen
 
 ### 8.1 Running Mendix on PostgreSQL
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 SAP have deprecated the use of PostgreSQL databases bound via the marketplace. This means that SAP accounts created recently will not be able to directly bind PostgreSQL databases and you will have to use [PostgreSQL on SAP BTP](#sap-hyperscaler), [SAP HANA](#sap-hana), or [AWS RDS PostgreSQL](#aws-rds) databases.
 {{% /alert %}}
 
@@ -618,7 +618,7 @@ On the new page which is displayed you can set the required values for your **SA
 
 ![](/attachments/developerportal/deploy/sap-cloud-platform/postgresql-configurator.png)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 There is no validation on the value of the **Source Instance ID** or **Restore Time** you enter for Standard or Premium plans. If you have issues, check that you entered the correct value here.
 {{% /alert %}}
 
@@ -637,7 +637,7 @@ You will also need to set up the configuration of your AWS RDS PostgreSQL file. 
 
 ### 8.2 Running Mendix on SAP HANA{#sap-hana}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can only use SAP HANA as the Mendix database for Mendix version 7.23.3 and above.
 
 There are also some differences in the way that Mendix can be used with SAP HANA compared to PostgreSQL databases – see [SAP HANA – Known Issues](/refguide/saphana/).
@@ -653,7 +653,7 @@ To run a Mendix application on SAP BTP using SAP HANA as the database, there are
 
 Once one of these services is available, you can use the SAP Cloud deployment functions of the Mendix SAP Developer Portal to deploy your app and use the **HANA_SCHEMA** service to bind your application to the provisioned service. The HANA_SCHEMA will create a separate schema on the SAP HANA Database which isolates your application's data from other applications. In this way the SAP HANA DB/Cloud Service will be shared across applications.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Please bear the following in mind when using SAP HANA as your Mendix database:
 
 * Do *not* attempt to add the SAP HANA *service* to your app. It is the SAP HANA *schema* which needs to be bound to your app.
@@ -665,7 +665,7 @@ If you have issues with your app running on SAP HANA, you will need to use the S
 
 #### 8.2.2 SAP HANA Configuration for Trial Accounts
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you are using a trial account created before November 2019, the SAP HANA Schema may not be available. It is not possible to work around this, so we advise you to set up a new trial account if your account does not support the `hanatrial-schema` database.
 {{% /alert %}}
 
@@ -707,7 +707,7 @@ If you are the last member of the app development team, you will be asked if you
 
 ![](/attachments/developerportal/deploy/sap-cloud-platform/delete-app.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This will not stop the app and delete the deployment of the app in SAP BTP.
 
 If you want to delete your app and all its resources, delete the environment and resources first before you leave the app via the Mendix Developer Portal.

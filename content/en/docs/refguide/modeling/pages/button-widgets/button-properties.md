@@ -29,7 +29,7 @@ Button properties consist of the following sections:
 
 ### 2.1 Accessibility Section {#accessibility}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **Accessibility** section is only shown for web buttons when [Render Mode](#RenderMode) is Link.
 
@@ -165,7 +165,7 @@ Default: *true*
 
 ### 2.6 Items Section {#items}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **Items** section is only shown for drop-down buttons. 
 
@@ -173,7 +173,7 @@ The **Items** section is only shown for drop-down buttons.
 
 When an end-user clicks a drop-down button, a pop-up window with a list of items opens. Each item performs an event when an end-user clicks this item. Different items can perform different events. For more information on events that can be assigned, see [On Click Event & Events Section](/refguide/on-click-event/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 * Items with the **Create object** event are only shown when you have sufficient permissions on. For more information, see [Security](/refguide/security/). 
 

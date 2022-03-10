@@ -7,7 +7,7 @@ tags: ["studio pro", "metrics", "micrometer"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
@@ -47,7 +47,7 @@ The name of the counter whose value you want to increment, which must adhere to 
 * The name cannot start with `mx`, because this prefix is reserved for Mendix internal metrics.
 * The name is case-insensitive.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 It is recommended to use a common prefix that uniquely defines your organisation and application.
 {{% /alert %}}
 

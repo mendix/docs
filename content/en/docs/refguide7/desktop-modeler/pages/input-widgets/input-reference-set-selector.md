@@ -8,12 +8,12 @@ parent: "input-widgets"
 
 The input reference set selector is an [input widget](/refguide7/input-widgets/) that can be used to display and edit [associations](/refguide7/associations/) for which the multiplicity setting is configured to allow multiple parent objects to associate with multiple children. This type of association is also known as a reference set.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/input-widgets/input-reference-set-selector/16844008.jpg)
 The multiplicity settings of an association can be found by double-clicking the association in the [domain model](/refguide7/domain-model/).
 
-{{% /alert %}}{{% alert type="info" %}}
+{{% /alert %}}{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/input-widgets/input-reference-set-selector/input-reference-set-selector.png)
 This input reference set selector allows you to link an employee to organizations.
@@ -32,7 +32,7 @@ If an input reference set selector is not editable under any circumstances, no s
 
 See [Opening Pages](/refguide7/opening-pages/). Note that opening select pages in content is prohibited.
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 
 You can generate a new page to show by right-clicking the widget and selecting 'Generate select page...'.
 
@@ -44,7 +44,7 @@ You can generate a new page to show by right-clicking the widget and selecting '
 
 With the XPath constraint you can add a manual constraint to limit the list of objects that can be selected.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The XPath constraint `[InStock = true()]` on a reference selector for products will ensure that only products that are in stock are selectable.
 
@@ -54,7 +54,7 @@ The XPath constraint `[InStock = true()]` on a reference selector for products w
 
 An input reference set selector can be constrained by one or more paths. This is typically used to make one reference selector dependent on another. For example, in page where you can edit a user, an organization selector can be constrained by a country selector. After selecting a country, the organization selector is constrained by this country and shows only organizations linked to that country.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/input-widgets/input-reference-set-selector/16844007.jpg)
 

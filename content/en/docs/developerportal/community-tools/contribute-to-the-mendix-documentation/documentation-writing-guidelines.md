@@ -28,7 +28,7 @@ Need an extra hand with spelling and grammar? Load your article into [Hemmingway
 
 ## 3 Guidelines for the Mendix Studio Pro How-to's
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This section presents detailed guidelines for writing a how-to. Read this section while referencing the [How-to Template](https://github.com/mendix/docs/blob/development/templates/how-to-template.md).
 
@@ -77,7 +77,7 @@ Keep the images as simple as possible, because having too many arrows on an imag
 
 ## 4 Guidelines for the Mendix Studio Pro Guide
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This section presents guidelines for writing the Studio Pro Guide page. Read this section while referencing the [Reference Guide Page Template](https://github.com/mendix/docs/blob/development/templates/ref-guide-page-template.md).
 

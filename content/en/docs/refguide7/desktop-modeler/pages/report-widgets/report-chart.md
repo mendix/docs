@@ -5,7 +5,7 @@ parent: "report-widgets"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This widget was deprecated and is marked for removal in version 8.0.0.
 
@@ -47,7 +47,7 @@ With this property you can choose the type of the report chart. The following ty
 
 ### Horizontal Axis Properties
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 If the chart type is HorizontalBars, the axisses are swapped, and these properties apply to the vertical axis instead of the horizontal axis.
 
@@ -67,7 +67,7 @@ If the dataset column of the horizontal axis has type DateTime, through this pro
 
 ## Vertical Axis Properties
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 If the chart type is HorizontalBars, the axisses are swapped, and these properties apply to the horizontal axis instead of the vertical axis.
 

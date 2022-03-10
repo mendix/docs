@@ -87,7 +87,7 @@ Those files are always present so you don't have to change the filepath every ti
 
 You can find the BrowserStack test files [here](/addons/ats-addon/ht-two-browserstack-test-files/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 These files are possibly outdated and not maintained by Mendix. For the latest version please contact BrowserStack.
 

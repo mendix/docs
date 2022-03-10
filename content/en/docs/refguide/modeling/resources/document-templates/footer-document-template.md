@@ -15,7 +15,7 @@ When enabled, the footer will be inserted at the bottom of every page. Other wid
 
 For inserting page numbers, see [Static Label](/refguide/static-label-document-template/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide/modeling/resources/document-templates/footer-document-template/918235.png)
 

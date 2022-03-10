@@ -6,11 +6,11 @@ menu_order: 3
 tags: ["studio pro", "error event", "event"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/error-event.pdf).
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This event can only be used in **Microflows**.
 {{% /alert %}}
 
@@ -22,7 +22,7 @@ For more information on error handlers and their settings in microflows, see the
 
 Link an error event and an activity which has an error handlers set on it with a [sequence flow](/refguide8/sequence-flow/).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You can only use an error event if an error is in scope: Studio Pro does not accept it if you connect the normal execution flow to an error event, because there would not be an error to pass back to the caller.
 {{% /alert %}}
 
@@ -30,7 +30,7 @@ In this example, an error occurs while committing an object to the database. It 
 
 ![](/attachments/refguide8/modeling/application-logic/events/error-event/error-event.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When adding an error event, you need to add an [error handler](#errorhandlers) for an activity before the error event, and select **Set as error handler** for the sequence flow.
 {{% /alert %}}
 
@@ -68,7 +68,7 @@ When an error occurs inside a microflow, under the hood a Java exception is rais
 
 In a custom error handler that is executed after an error occurs, `$latestError` is set to an object containing information about the error that occurred. If the error is a SOAP fault (an error that occurs as a result of a web service call), `$latestSoapFault` is set to an object that contains more specific information about the SOAP fault. Otherwise, `$latestSoapFault` is `empty`.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can determine whether an error was a SOAP fault by checking `$latestSoapFault` for `empty`.
 {{% /alert %}}
 
@@ -87,7 +87,7 @@ The following table shows the attributes of System.Error and System.SoapFault.
 
 Click [here](http://www.w3.org/TR/soap12-part1/#soapfault) for more information on SOAP faults.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 In microflows that apply entity access, it is not possible to inspect the attributes of error objects for security reasons. You can pass the error object to a sub-microflow that does not apply entity access and inspect the attributes there.
 {{% /alert %}}
 

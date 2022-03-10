@@ -7,7 +7,7 @@ description: "Describes suppression rules for warnings in Studio Pro."
 tags: ["Studio Pro", "consistency errors", "checks", "warnings"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/suppression-rules.pdf).
 {{% /alert %}}
 
@@ -79,7 +79,7 @@ For more information on how to edit or delete a suppression rule, see the [Manag
 
 You can add, edit, delete, export, or import suppression rules. You can also suppress warnings from the Marketplace. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 After modifying suppression rules, click **OK** to close the **Manage Suppression Rules** dialog box and apply changes. 
 {{% /alert %}}
 

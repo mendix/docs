@@ -23,7 +23,7 @@ Widgets/Components for which the font tab page is visible:
 *   Static label
 *   Table
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide/modeling/resources/document-templates/style/2018-03-01_14-27-27.png)
 
@@ -43,7 +43,7 @@ Widgets/Components for which the cell styling tab page is visible:
 *   Table
 *   Table cell
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide/modeling/resources/document-templates/style/2018-03-01_14-29-13.png)
 
@@ -55,7 +55,7 @@ The cell styling tab page in the style editor.
 
 The custom styles tab page is always visible for widgets/components that allow styling.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide/modeling/resources/document-templates/style/2018-03-01_14-33-46.png)
 
@@ -104,6 +104,6 @@ In the end your setup should look like this:
 * The *fop.xconf* file, your custom font, and the 6 default fonts should be in your app resources folder
 * The *fop.xconf* file should include a reference to your custom font
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Please note that characters with variant selectors are not supported by our PDF generation library. 
 {{% /alert %}}

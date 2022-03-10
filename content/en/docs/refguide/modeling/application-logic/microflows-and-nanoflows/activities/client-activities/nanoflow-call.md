@@ -9,7 +9,7 @@ tags: ["studio pro", "nanoflow call", "call nanoflow"]
 
 ## 1 Introduction
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This activity can only be used in **Nanoflows**.
 {{% /alert %}}
 

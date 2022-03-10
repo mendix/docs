@@ -6,7 +6,7 @@ menu_order: 20
 tags: ["studio pro"]
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
@@ -67,7 +67,7 @@ This setting defines whether data sources are rerun after data is committed to t
 
 Default: *No*
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To make pages of a Mendix app efficient, many widgets display values from an attribute of an object which is cached on the page. Attributes in widgets which use cached data are *always* reflected in the client even if they are not committed and irrespective of the value of **Refresh in client**.
 
 If a widget is only updated when a [data source](/refguide/data-sources/) is loaded, then changes will only be seen if changes are committed and **Refresh in client** is set to *Yes*.

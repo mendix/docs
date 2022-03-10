@@ -116,7 +116,7 @@ To access your IoT data using the OData technology provided by the Mendix Data H
 
 1. Click the **Submit** button to finalize the creation of your contract.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
    In Mendix, every user is a member of (exactly) one company ([User Account](/apidocs-mxsdk/apidocs/user-management-api/#user-account)). All users with the same email domain (the part after the `@`) are part of the same [Company](/apidocs-mxsdk/apidocs/user-management-api/#company-account).
 
    Published contracts are only visible in Mendix DataHub for users that belong to the same company.

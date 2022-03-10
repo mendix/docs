@@ -13,7 +13,7 @@ XSUAA is a service provided by the SAP Business Technology Platform (SAP BTP) th
 
 Out of the box, SAP BTP has the SAP external identify provider (IDP) configured as the default IDP. It is possible to use your own (corporate) IDP as an alternative so that you can automatically give access to all the employees of your organization.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Version 2.1.1 of the XSUAA Connector for SAP Business Technology Platform uses a new user administration module called **SapAuthentication**. If you are upgrading from version 2.0.0 or below, you will need to migrate your existing users from **Administration.Account** to **SapAuthentication.SapUser** using the [User Migration](/appstore/modules/user-migration-module/) Marketplace module.
 {{% /alert %}}
 
@@ -43,7 +43,7 @@ You then have two options:
 
 The **XSUAA Configurator** provides a user friendly interface to create the JSON required to configure the XSUAA service. It can be uploaded automatically for you, or you can download the file and upload it manually.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The configurator will only create a JSON file from scratch. It does not have access to your existing XSUAA settings on SAP BTP, and you cannot import an existing JSON files.
 
 You cannot change the **xsappname** in the configurator – this is generated automatically for your app by the Developer Portal.

@@ -28,7 +28,7 @@ With this module, you can authenticate against your Microsoft Active Directory s
 
 ### 1.4 Dependencies
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If you are running your app outside of the Mendix Cloud, make sure you have [external file storage](/refguide/system-requirements/#file-storage) configured. The SAML module writes configuration data to a file document on the file storage to read it later. Without external file storage, this configuration will be lost when you restart your app. The SAML module will not work correctly without reading the configuration data from the file storage.
 {{% /alert %}}
 
@@ -48,7 +48,7 @@ If you are running your app outside of the Mendix Cloud, make sure you have [ext
 
 Before any IdP can be configured, you need to configure the service provider (SP), which is your current application. The SP configuration allows you to configure some basic information for the SP metadata file. This information will be be available in the IdP for the reference of the IdP administrator.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The base URL used for the links in your SP metadata is determined by the **Application Root URL** [custom runtime setting](/refguide/custom-settings/#general) of your app. Change the value for this runtime setting to change the base URL of the links in your SP metadata. After changing the **Application Root URL** setting, you have to import the SP metadata into your IdP again.
 {{% /alert %}}
 
@@ -63,7 +63,7 @@ Accessing the metadata can be done by downloading the XML file or by opening `ht
 
 ### 3.1 Creating a New IdP Configuration
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If you have multiple IdPs, please make sure each IdP has a unique **Entity descriptor**. If you add multiple IdPs with the same entity descriptor, you might experience unexepected behavior where a different SSO configuration is selected than the alias provided.
 {{% /alert %}}
 
@@ -85,7 +85,7 @@ Each IdP (entity descriptor) should have its own configuration set. Every IdP ca
 * **IdP Metadata Location** – The module is capable of re-importing all IdP metadata files on a daily basis. You can also choose to import the metadata from a file.
 	* **Metadata Overview** – This overview shows all the information that has been found in the IdP metadata information. It is usually not necessary to do anything here, but it can be useful in order to review the possible IdP and SP configuration options.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you want to automatically synchronize the IdP metadata, go to **\_USE ME** > **Scheduled Events** in the **App Explorer**, double-click **SE_SynchronizeIdPMetadata** and select **Yes** for **Enabled** to enable the automatic synchronization of the IdP metadata. 
 {{% /alert %}}
 
@@ -93,7 +93,7 @@ If you want to automatically synchronize the IdP metadata, go to **\_USE ME** > 
 
 * **Uses InCommon Federation Standard** – IdPs that use the InCommon standard often do not specify the assertion attributes. When following the InCommon standard, a fixed set of assertion attributes will be available to choose from later.
 * **Identifying Assertion** (aka "Principal Key") – Specifies which of the assertion attributes identifies the user name.
-	{{% alert type="info" %}}In Mendix version 7,  all user names passing through the SAML module are converted to lower-case before login and creation. We strongly advise you to convert all existing and new user names to lower-case as well.
+	{{% alert color="info" %}}In Mendix version 7,  all user names passing through the SAML module are converted to lower-case before login and creation. We strongly advise you to convert all existing and new user names to lower-case as well.
 	{{% /alert %}}
 * **User Entity** – The Mendix entity in which you will store and look up the user account. Most often something like `Administration.Account`.
 * **Attribute On** – Determines the attribute on which you want to do the lookup. This attribute will be compared against the passed **Identifying Assertion** (see above).
@@ -172,5 +172,5 @@ The resources folder contains the *SAMLConfig.properties* file, and through this
 
 *  [SSO Using SAML](https://academy.mendix.com/link/module/115/lecture/938)
 
-	{{% alert type="info" %}}You must be signed in to the Mendix Platform to see the above lecture.
+	{{% alert color="info" %}}You must be signed in to the Mendix Platform to see the above lecture.
 	{{% /alert %}}

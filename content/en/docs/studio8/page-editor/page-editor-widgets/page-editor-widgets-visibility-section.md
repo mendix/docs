@@ -31,13 +31,13 @@ You can enable conditional visibility based on the selected attribute value and/
 
 **Attribute-Based** visibility allows you to show widgets only when they match a certain value of the selected attribute. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The attribute must be of the Boolean or enumeration type. 
 
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You can only configure attribute-based conditional visibility when a widget is placed in a data container: a data view or a list view.
 
@@ -57,7 +57,7 @@ For example, you would like to show a special offer price only for customers wit
 
 The widget can be made visible to a specific of the user roles available in your app. When enabled, this setting will render the widget visible to all users that are linked to one of the selected user roles.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You can only configure role-based conditional visibility when security is enabled. For more information, see [Security, Roles & Permissions](/studio8/settings-security/).
 

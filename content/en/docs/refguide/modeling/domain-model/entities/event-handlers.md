@@ -13,13 +13,13 @@ Event handlers define microflows that handle certain events related to the entit
 
 Event handlers should be used moderately, as they will be triggered every time the corresponding event occurs, so they must be for things you want always to happen. If you only want something to happen on a certain page, you can use a microflow there (for example, on a customized **Save** button).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Event handlers are not triggered in a particular order. So, make sure events do not depend on each other in any way (also with regard to events in generalizations and specializations).
 
 When events are triggered from microflows you can choose to bypass the event handlers in the microflow action.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If the specified event is applied to a list of objects (if, for example, you are committing a list of objects), the handler will be triggered for all the objects first, and then the event will be applied to the list. In the given example,  the handler will run on all the objects first and then all the objects in the list will be committed.
 
 If your handler relies on the event having already been applied to another object in a list, you should loop through the list and apply the event to each object in turn.

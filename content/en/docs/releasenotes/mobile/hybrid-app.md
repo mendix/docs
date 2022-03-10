@@ -187,7 +187,7 @@ To enable more control over the target architecture, use the following variants:
 
 **Release date: January 6th, 2019**
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 As of April 11th, 2019, Google will drop support for sending push notifications through their Google Cloud Messaging (GCM) service. By that time, all clients will need to have migrated to the new Firebase Cloud Messaging (FCM) service. The move from GCM to FCM impacts Mendix apps that employ push notifications through the Mendix [Push Notifications Connector](/appstore/modules/push-notifications/) module. Please read the notes below for upgrade instructions
 {{% /alert %}}
 
@@ -212,7 +212,7 @@ If your app does not employ push notifications, you can still use the Phonegap B
 
 **Release date: November 20th, 2018"
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 This is a major version upgrade of the hybrid app.
 
@@ -328,7 +328,7 @@ We have tested extensively against real-life projects and commonly used widgets 
 
 **Release date: July 9th, 2018**
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 As of August 1st, new apps published to Google's Play Store need to target at least Android SDK 26. As of November 1st, updates to apps also need to target at least SDK 26.
 
@@ -338,7 +338,7 @@ With this update, Mendix hybrid apps are compatible with the above requirement.
 
 Unfortunately, Crosswalk is not compatible with SDK versions 24 and above. Therefore, we removed Crosswalk from the default Mendix hybrid app template. This can lead to a degraded performance on Android devices running version 4.4 or lower.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 For this update, we recommend downloading a fresh hybrid app package from the Mendix Developer Portal via [Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**.
 
@@ -391,7 +391,7 @@ This patch fixes an issue with an upstream dependency (`com.android.support:supp
 
 **Release date: March 9th, 2018**
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This is a major release, because it is not fully compatible with older versions of hybrid-app-template. For this update, we recommend that you download a fresh hybrid app package from the Mendix Developer Portal via [Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**. We extended the **Mobile Apps** wizard with fields for the theming options described below. In addition, you can configure splash screens/icons by uploading a single base image.
 
@@ -407,7 +407,7 @@ This is a major release, because it is not fully compatible with older versions 
 
 **Release date: January 31st, 2018**
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 For this update, we recommend that you download a fresh hybrid app package from the Mendix Developer Portal ([Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**).
 

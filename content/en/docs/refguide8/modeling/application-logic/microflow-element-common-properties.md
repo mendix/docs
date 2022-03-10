@@ -6,7 +6,7 @@ menu_order: 110
 tags: ["studio pro", "common properties", "microflow", "nanoflow"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/microflow-element-common-properties.pdf).
 {{% /alert %}}
 
@@ -14,7 +14,7 @@ tags: ["studio pro", "common properties", "microflow", "nanoflow"]
 
 This document describes common properties that are shared by many elements in the microflow editor.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Not every element in a microflow or a nanoflow has all of these properties.
 {{% /alert %}}
 

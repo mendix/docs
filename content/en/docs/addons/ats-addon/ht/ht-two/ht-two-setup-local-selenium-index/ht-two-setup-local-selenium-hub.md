@@ -10,7 +10,7 @@ tags: ["ATS", "testing", "Selenium hub"]
 
 This how-to shows you an example of a simple installation of a Selenium hub with a Google Chrome/Mozilla Firefox node on a Windows machine. For the official documentation go to: [https://www.seleniumhq.org/projects/](https://www.seleniumhq.org/projects/)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Mendix does not deliver support for local Selenium solutions. 
 {{% /alert %}}
 
@@ -126,7 +126,7 @@ The following steps describe how to start the node with three Chrome and three F
 
 You can start testing by sending your test script to `http://yourmachinenameorIP:4444/wd/hub`.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Make sure it is reachable from the outside!
 {{% /alert %}}
 

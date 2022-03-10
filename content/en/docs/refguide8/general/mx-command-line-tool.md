@@ -25,7 +25,7 @@ The `mx convert` command converts the apps to a specific Studio Pro version. For
 
 The input can be a single file, directory, or multiple files.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The mx tool can only upgrade your project, but you cannot use it to downgrade the version.
 {{% /alert %}}
 

@@ -91,7 +91,7 @@ To deploy a Mendix app to Cloud Foundry, you have to configure the settings in S
 
 	![](/attachments/developerportal/deploy/cloud-foundry-deploy/edit-cf-configure-app.png)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Your Cloud Foundry environment needs to be configured with the resources needed by the Mendix app. You cannot run your app until it has the resources it needs. 
 {{% /alert %}}
 
@@ -117,7 +117,7 @@ All these consoles have similar features which allow you to select services, bin
 * [IBM](https://console.bluemix.net/dashboard/apps/)
 * [SAP](https://account.hanatrial.ondemand.com/cockpit#/home/trialhome)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The images in this document are mainly taken from a previous hosting option, the Pivotal Web Services console, which is no longer available.
 {{% /alert %}}
 
@@ -141,7 +141,7 @@ To add a database service to your app, follow these steps:
 
 	![](/attachments/developerportal/deploy/cloud-foundry-deploy/db-configure.png)
 
-	{{% alert type="info" %}}Different consoles may use slightly different names for these configuration items.{{% /alert %}}
+	{{% alert color="info" %}}Different consoles may use slightly different names for these configuration items.{{% /alert %}}
 
 Once you have configured the database, you can deploy your app, provided there are no other requirements for the platform you have selected (you may, for example, need to bind a route to your app if it is not created automatically).
 
@@ -151,7 +151,7 @@ FileDocuments in your application (for example, binary objects such as images) a
 
 This is a service which you need to attach to your application in the same way as the database, above. For supported cloud file storage services see the [Mendix System Requirements](/refguide/system-requirements/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Some trial accounts may not include object storage. 
 
 You may need to configure your file store by using environment variables. See the [Mendix BuildPack Documentation](https://github.com/mendix/cf-mendix-buildpack) for more information.

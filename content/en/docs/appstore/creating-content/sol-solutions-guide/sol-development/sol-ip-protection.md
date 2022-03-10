@@ -30,7 +30,7 @@ Not all parts of a component need to be protected. It is often desirable to prot
 
 ## 4 Applying IP Protection Effectively
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 IP protection is currently in [Private Beta](/releasenotes/beta-features/) and only available to select early adopters. Reach out to the [Mendix Solutions Vendor Program](https://www.mendix.com/marketplace-vendor-program/solutions/) team to request access.
 {{% /alert %}}
 

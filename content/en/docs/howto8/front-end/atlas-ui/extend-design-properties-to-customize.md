@@ -33,7 +33,7 @@ These design properties are used in the **Design** section of Studio.
 
 ![Design Properties in Studio](/attachments/howto8/front-end/atlas-ui/extend-design-properties-to-customize/button-design-properties.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 When you use a new class as a design property, make sure that this class exists.
 

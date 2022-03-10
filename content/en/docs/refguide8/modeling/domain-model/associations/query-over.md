@@ -6,7 +6,7 @@ menu_order: 20
 tags: ["query", "self-reference", "association", "domain model"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/query-over.pdf).
 {{% /alert %}}
 
@@ -22,7 +22,7 @@ This example is for an implementation of folders on a computer, where one folder
 
 To implement this, a self-reference to **Folder** is used. The self-reference is an association called **Folder_SubFolder**. This allows you to build a folder structure with unlimited numbers and levels of folders.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The association in this case is a one-to-many association, but the same techniques apply to many-to-many or one-to-one associations.
 {{% /alert %}}
 
@@ -66,7 +66,7 @@ When you have the $ChosenFolder object available and you want to retrieve its Pa
 
 Use the expression `[reversed ()]` to instruct Mendix to read the constraint in the reverse direction to that which it would normally use.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 `[reversed()]` only applies to one association. If you have multiple associations they will continue to be interpreted the normal way. See [Creating More Complex Queries](#more-complex), below.
 
 The `[reversed()]` expression can only be applied on self-references. When an association is between two different object types, the platform will be able to determine the direction of the join automatically.
@@ -136,7 +136,7 @@ public class RetrieveAsAssociatedWithB extends CustomJavaAction<java.util.List<I
 }
 ```
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Be sure to import `com.mendix.core.Core` so you are able to execute `Core.retrieveByPath(..)` in this code snippet.
 {{% /alert %}}
 

@@ -38,7 +38,7 @@ There are three ways to install a Marketplace component:
 
 ### 3.1 Downloading Content from the Marketplace Within Studio Pro {#downloading}
 
-{{% alert type="info" %}}This procedure only works for all types of marketplace components, except [app services](/appstore/app-services/).{{% /alert %}}
+{{% alert color="info" %}}This procedure only works for all types of marketplace components, except [app services](/appstore/app-services/).{{% /alert %}}
 
 1. Open Studio Pro and sign in with your Mendix credentials.
 2. Open the app in which you want to install the component from the Marketplace.
@@ -50,7 +50,7 @@ There are three ways to install a Marketplace component:
 
 4.  Use the **Search** bar to find the component that you want to download.
 
-    {{% alert type="warning" %}}Results for Marketplace content searches within Studio Pro may differ from those in the [online Marketplace](/appstore/general/app-store-overview/) due to synchronization issues.{{% /alert %}}
+    {{% alert color="warning" %}}Results for Marketplace content searches within Studio Pro may differ from those in the [online Marketplace](/appstore/general/app-store-overview/) due to synchronization issues.{{% /alert %}}
 
     ![Search result for rating](/attachments/appstore/general/app-store-content/marketplace.png)
 
@@ -73,7 +73,7 @@ There are three ways to install a Marketplace component:
 
         * **Replace existing module** (default option when the module already exists in your app) – if you select this option, you need to specify which **Module to replace**
 
-            {{% alert type="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
+            {{% alert color="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
         
     2. Click **Import**.
     3. Wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported module or connector in the **App Explorer**.
@@ -86,7 +86,7 @@ There are three ways to install a Marketplace component:
 
 ### 3.2 Importing Content from the App Explorer {#import}
 
-{{% alert type="info" %}}This procedure works for [connectors](/appstore/connectors/), [modules](/appstore/modules/), and [app services](/appstore/app-services/).{{% /alert %}}
+{{% alert color="info" %}}This procedure works for [connectors](/appstore/connectors/), [modules](/appstore/modules/), and [app services](/appstore/app-services/).{{% /alert %}}
 
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and sign in with your Mendix credentials.
 2. **Search** the component and open the component page.
@@ -109,7 +109,7 @@ There are three ways to install a Marketplace component:
 5.  In the **Import Module** dialog box, select one of these options:
     *  **Add as a new module** (default option when the module is downloaded to your app for the first time ) – if you select this option, new entities and attributes will be created in your app
     *  **Replace existing module** (default option when the module already exists in your app) – if you select this option, you need to specify which **Module to replace**
-        {{% alert type="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
+        {{% alert color="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
 
 6. Click **Import**. 
 7. Wait until a pop-up window states that the module was successfully imported. Click **OK**. 
@@ -118,7 +118,7 @@ You can find the imported module or connector in the **App Explorer**.
 
 ### 3.3 Manually Adding Content into the App Directory {#add}
 
-{{% alert type="info" %}}This procedure only works for [widgets](/appstore/widgets/).{{% /alert %}}
+{{% alert color="info" %}}This procedure only works for [widgets](/appstore/widgets/).{{% /alert %}}
 
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and sign in with your Mendix credentials.
 2. **Search** the component to find the component.
@@ -217,7 +217,7 @@ A module downloaded from the Marketplace has a light blue icon to differentiate 
 
 To update a module in your app to a newer version, go to the Marketplace to download the right version, and [install](#install) it in your app. When the **Import Module** dialog box opens, select **Replace existing module** and click **Import**.
 
-{{% alert type="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
+{{% alert color="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
 
 ![Import Module dialog box](/attachments/appstore/general/app-store-content/import-module.png)
 
@@ -229,7 +229,7 @@ Each module that you download from the Marketplace is different. Some modules ca
 
 Downloading an app or layout will create a new app structure in the location that you enter. After you click **Download**, a window will appear where you can specify how the app should be created.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You cannot create a new app in an existing repository that is not empty.
 {{% /alert %}}
 
@@ -253,7 +253,7 @@ The widget is removed from your app.
 1. In the **App Explorer**, find the module that you want to delete.
 2.  Right-click the module and select **Delete** from the pop-up menu. A warning pop-up window opens.
 
-    {{% alert type="warning" %}} Once you delete a module, all your user data will be lost – even if you later install the module again. If you want to replace the existing module with a different version, do not delete the module – [update the module](#update-module) instead.{{% /alert %}}
+    {{% alert color="warning" %}} Once you delete a module, all your user data will be lost – even if you later install the module again. If you want to replace the existing module with a different version, do not delete the module – [update the module](#update-module) instead.{{% /alert %}}
 
 3. When you are sure that you want to delete the module and existing user data, click **Delete module and user data**.
 

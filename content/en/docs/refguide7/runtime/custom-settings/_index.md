@@ -11,7 +11,7 @@ tags: ["Runtime", "Customization", "Settings", "Configuration", "IBM Cloud", "Am
 
 You can use custom server settings to configure the Runtime beyond the standard possibilities offered by the Modeler.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Only use this functionality if you know exactly what you are doing. Wrong values can prevent the Runtime from starting.
 
@@ -162,7 +162,7 @@ These settings can be used to store files using the Microsoft Azure blob storage
 | com.mendix.storage.azure.TimeoutIntervalInMs | Sets the amount of time (in milliseconds) to allow a call to the storage service to complete. For more information, see [the Azure Libraries](https://azure.github.io/azure-sdk-for-java/storage.html). This setting is available in Studio Pro [7.21.0](/releasenotes/studio-pro/7.21/#7210) and above. | No timeout |
 | com.mendix.storage.azure.MaximumExecutionTimeInMs | Sets the maximum execution time (in milliseconds) to use when making this request. For more information, see [the Azure Libraries](https://azure.github.io/azure-sdk-for-java/storage.html). This setting is available in Studio Pro [7.21.0](/releasenotes/studio-pro/7.21/#7210) and above. | No maximum time |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 In Mendix 7.7.0, we changed Azure blob storage's default connection protocol from HTTP to HTTPS to encourage secure connections by default. This is a highly recommended best practice (for more information, see [Configure Azure Storage Connection Strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)). For existing customers switching to this Mendix version, this should be transparent, unless you use custom domain names (for details, see [Require Secure Transfer](https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer)). In that case, you should use the `UseHttps` setting above to revert to the previous default behavior and disable HTTPS.
 

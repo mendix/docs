@@ -54,7 +54,7 @@ Drag and drop the Tree Node widget onto the page and use the configuration prope
     * When set to **Text**, you can configure the **Header caption** property
     * When set to **Custom**, a new region becomes available where you can configure the header through other widgets
    
-    {{% alert type="info" %}}The **Data source** of the widget can also be used as a data source for the header and the content, regardless of the **Header type**.
+    {{% alert color="info" %}}The **Data source** of the widget can also be used as a data source for the header and the content, regardless of the **Header type**.
 {{% /alert %}}
 
 * **Header caption** – you can enter the header caption in the field or click **Edit** to configure a text template in the **Edit Caption** dialog box
@@ -82,7 +82,7 @@ When set to **Yes**, the following tabs and properties become visible:
     * **Collapsed icon**
     * **Animate icon**
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The **Advanced** tab is only available in Mendix Studio. In Mendix Studio Pro there is no **Advanced** tab and all the advanced options listed above are always available on the related tabs.
 {{% /alert %}}
 

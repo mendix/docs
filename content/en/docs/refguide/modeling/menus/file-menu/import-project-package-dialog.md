@@ -42,7 +42,7 @@ For more information about the Mendix Team Server, see [Team Server](/developerp
 
 ### 2.2 Private Server {#private-server}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **Private server** option is only available when support for other SVN servers is enabled: **Edit** >**Preferences** > **Version Control** > **Enable private version control**. 
 

@@ -31,7 +31,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Create an app in Mendix Studio Pro (version 8.15.1 or above)
 * Obtain authentication credentials, if needed, for the SAP Catalog Service or SAP back-end system you wish to use
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 OData Model Creator for SAP solutions will produce a module which is in Mendix version 8.15.1. To use the module you will have to create your app in, or upgrade your app to, Mendix version 8.15.1 or above.
 {{% /alert %}}
 
@@ -39,7 +39,7 @@ OData Model Creator for SAP solutions will produce a module which is in Mendix v
 
 The OData Model Creator for SAP solutions is an app in the Marketplace. Search for it in the Mendix Marketplace, or find it here: [OData Model Creator for SAP solutions](https://sapmodelcreator.mendixcloud.com/link/odata).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The OData Model Creator for SAP solutions is not currently available in the Marketplace within Studio Pro. It can only be run in a browser.
 {{% /alert %}}
 
@@ -58,7 +58,7 @@ There are four ways to generate your data model.
 
 Your SAP back end OData API is held in the API Business Hub.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 There may be several schemas in the packages of an API. Each of these will generate a module. Depending on the functionality of your app, you may have to generate several modules and import all of them into your app.
 {{% /alert %}}
 
@@ -68,7 +68,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
     ![](/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-2-api.png)
 
-    {{% alert type="info" %}}You can return to any stage in this process by clicking on the relevant step number.
+    {{% alert color="info" %}}You can return to any stage in this process by clicking on the relevant step number.
     {{% /alert %}}
 
 2. Click the package you want. It will be highlighted.
@@ -77,7 +77,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
     ![](/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-3-api.png)
 
-    {{% alert type="info" %}}This will be shown even if only one API exists.
+    {{% alert color="info" %}}This will be shown even if only one API exists.
     {{% /alert %}}
 
 4. Click the API you want. It will be highlighted.
@@ -86,7 +86,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
     ![](/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-4-api.png)
 
-    {{% alert type="info" %}}This will be shown even if only one schema exists.
+    {{% alert color="info" %}}This will be shown even if only one schema exists.
     {{% /alert %}}
 
 6. Click the schema you want. It will be highlighted.
@@ -111,7 +111,7 @@ You have now created the module. The [Using the Data Model Module in a Mendix Ap
 
 Your SAP back end OData API is held in the SAP Catalog Service.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 There may be several schemas in the packages of an API. Each of these will generate a module. Depending on the functionality of your app, you may have to generate several modules and import all of them into your app.
 {{% /alert %}}
 
@@ -127,7 +127,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
     ![](/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-2-catalog.png)
 
-    {{% alert type="info" %}}You can return to any stage in this process by clicking on the relevant step number.
+    {{% alert color="info" %}}You can return to any stage in this process by clicking on the relevant step number.
     {{% /alert %}}
 
 3. Click the API you want. It will be highlighted.
@@ -136,7 +136,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
     ![](/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-3-catalog.png)
 
-    {{% alert type="info" %}}This will be shown even if only one schema exists.
+    {{% alert color="info" %}}This will be shown even if only one schema exists.
     {{% /alert %}}
 
 5. Click the schema you want. It will be highlighted.
@@ -183,7 +183,7 @@ One way to do this is by getting the OData metadata XML file. This file can be d
 
     ![](/attachments/partners/sap/use-sap-odata-model-creator/upload-metadata-schemas.png)
 
-    {{% alert type="info" %}}This will be shown even if only one schema exists.
+    {{% alert color="info" %}}This will be shown even if only one schema exists.
     {{% /alert %}}
 
 7. Click the schema you want. It will be highlighted.
@@ -210,7 +210,7 @@ You have now created the module. The [Using the Data Model Module in a Mendix Ap
 
 You can also generate the data model from the metadata by providing the URL to the OData Model Creator for SAP solutions.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This method does not work where the destination needs authentication. You cannot use it, for example, to generate a data model for a service on the ES5 Gateway Demo.
 {{% /alert %}}
 
@@ -224,7 +224,7 @@ This method does not work where the destination needs authentication. You cannot
 
     ![](/attachments/partners/sap/use-sap-odata-model-creator/upload-metadata-schemas.png)
 
-    {{% alert type="info" %}}This will be shown even if only one schema exists.
+    {{% alert color="info" %}}This will be shown even if only one schema exists.
     {{% /alert %}}
 
 4. Click the schema you want. It will be highlighted.
@@ -263,7 +263,7 @@ Now you have a Mendix module ready to import into your project.
 
     ![](/attachments/partners/sap/use-sap-odata-model-creator/project_explorer.png)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Do not change the names of entities, attributes, or associations in the Domain Model of the module; they need to match the names used by the SAP OData service for the OData Connector for SAP solutions to work correctly.
 {{% /alert %}}
 

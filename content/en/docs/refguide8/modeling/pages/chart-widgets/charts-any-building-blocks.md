@@ -7,7 +7,7 @@ menu_order: 40
 tags: ["Any Chart", "Charts", "Building Blocks", "Widget", "Studio Pro"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/charts-any-building-blocks.pdf).
 {{% /alert %}}
 
@@ -50,6 +50,6 @@ The attribute layout will merge and overwrite static layout options.
 #### Sample layout
 Layout options for preview. It will be merged with the 'Static' in Studio or at runtime when no 'Source attribute' is selected.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For more a detailed description of Any Chart configuration, see [Any Chart Widgets](/refguide8/charts-any-configuration/)
 {{% /alert %}}

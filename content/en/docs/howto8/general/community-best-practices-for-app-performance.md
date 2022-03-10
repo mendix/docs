@@ -8,7 +8,7 @@ tags: ["best practice", "performance", "community"]
 
 ## 1 Introduction
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This document is created by and for the Mendix community. It collects performance best practices in the form of do's and don'ts.
 

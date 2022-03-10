@@ -33,7 +33,7 @@ When you click a recording of the **Browser** type, the [browser recorder result
 
 ![](/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-recorder/recorder.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 A browser session is per browser window. If a user uses multiple browser instances to connect with the application, this results in a recorded session for each instance.
 {{% /alert %}}
 

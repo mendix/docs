@@ -58,7 +58,7 @@ Set up a native template with the **Native Mobile App Builder** by following the
 
 5. Navigate to the build page and click **Build**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When running locally from source, on iOS you have to run `pod install` once more
 {{% /alert %}}
 
@@ -74,7 +74,7 @@ Now you have to handle the incoming URL in your Mendix application. To do this, 
 
 The Register Deep Link nanoflow action registers a callback nanoflow, which is called each time the app is opened using a URL. This **URL Handler** nanoflow will receive the URL, of type string, as an input parameter. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The name of the input parameter is case sensitive and can not be changed.
 {{% /alert %}}
         

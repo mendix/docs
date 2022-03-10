@@ -44,7 +44,7 @@ To view the credentials:
 
 For more information see [Service credentials for Watson services](https://cloud.ibm.com/docs/services/watson/getting-started-credentials.html).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If you have an existing Watson service it may give a *Username* and *Password* in the credentials. To obtain credentials in the correct format, you will have to create a **new** service which has *API Key* and *URL* as the credentials. It is not possible to obtain the API Key/URL style of credentials for an existing service which uses Username/Password credentials.
 {{% /alert %}}
 
@@ -65,7 +65,7 @@ To use these actions, just drag them into your microflow. Each of the connectors
 * [Language Translator](#LanguageTranslator)
 * [Visual Recognition](#VisualRecognition)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Not all Watson services are currently supported by the IBM Watson Connector Suite. More services will be added over time.
 
 These connectors are based on version 6.11.0 of the [Watson SDK](https://github.com/watson-developer-cloud/java-sdk).
@@ -79,13 +79,13 @@ To use IBM Watson Assistant, you must first create an **assistant** for your IBM
 
 The easiest way to set up an assistant is through the Watson Assistant Tool. Here you can create an assistant. You can give the assistant a sample skill or, alternatively, create a skill which supports your own dialog requirements and give this to your assistant. More information about assistants and dialog skills, and how they need to be set up, is available in the [Watson Assistant: Getting started tutorial](https://cloud.ibm.com/docs/services/assistant/getting-started.html#getting-started).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 There is no action in the IBM Watson Connector Suite to allow you to create or configure an assistant. If you wish to do this programmatically, you will need to use Mendix's native REST.
 {{% /alert %}}
 
 More information on the APIs for the IBM Watson Conversation service is available here: [Watson Assistant – API methods summary](https://cloud.ibm.com/docs/services/assistant/api-methods.html#api-methods-summary)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Watson Assistant used to be called Watson Conversation.
 {{% /alert %}}
 
@@ -176,7 +176,7 @@ This is a string containing the URL assigned to the Speech to Text service in yo
 
 This is an object of type, or a specialization of type, FileDocument containing the audio stream to be analyzed. The stream must be encoded in the format described in the audio format parameter.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Currently, transcribing speech uses a recorded sample - there are no options for transcribing a stream in real time using the Mendix IBM Watson Connector Suite.
 {{% /alert %}}
 
@@ -186,7 +186,7 @@ The format of the audio file which is to be transcribed. These are listed in the
 
 All of the formats detailed on the IBM site are supported. For more detail see the [IBM Cloud documentation on audio formats](https://console.bluemix.net/docs/services/speech-to-text/audio-formats.html).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Watson Speech to Text expects the sampling rate for BASIC files to be 8000 Hz. For RAW files, the connector doesn't currently support setting a custom sampling rate - files must have a sampling rate of 22050 Hz to be successfully processed. The rate for all other file types will be detected automatically. BASIC files are narrowband and can only be processed by a narrowband model.
 {{% /alert %}}
 
@@ -236,7 +236,7 @@ Note that the voice chosen should match the language of the **Text**. There is n
 
 This is an object of type AudioFormats_TextToSpeech which specifies the format of the audio data which is returned as the spoken text.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 All formats except BASIC and RAW can be played back in a Mendix app using the community-supported [Audio Video Playback](https://marketplace.mendix.com/link/component/932/) widget available in the Marketplace.
 {{% /alert %}}
 
@@ -270,7 +270,7 @@ This is the name you wish to assign to an object of type ToneAnalyzerResponse wh
 
 ![Domain model for Tone Analyzer connector actions](/attachments/appstore/connectors/ibm-watson-connector/toneanalyzer.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In the previous version of the Tone Analyzer, tones were split into *Tone Categories*. This additional level of categorization has been removed from the current version of the Tone Analyzer.
 {{% /alert %}}
 
@@ -306,7 +306,7 @@ This action is part of the Language Translator service and returns a list of lan
 
 ![Configuration dialog for the Translation - Get Identifiable Languages action](/attachments/appstore/connectors/ibm-watson-connector/translation-getidentifiablelanguages.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Note that [Translate Language](#translate-language) cannot translate between any possible combination of languages. If translation between languages is not supported by Watson (for example, _Traditional Chinese_ to _Catalan_), the [Translate Language](#translate-language) action will throw an error. The language pairs which are supported by the [Translate Language](#translate-language) action can be identified from the results of the [Get Translation Models](#getTranslationModels) action.
 {{% /alert %}}
 
@@ -333,7 +333,7 @@ This action is part of the Language Translator service and returns a list of tra
 
 IBM provides a number of standard models, and it is possible to extend these with your own models.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The IBM Watson Connector Suite does not support the creation and deletion of custom models. you will need to do this using the native REST capabilities of Mendix.
 {{% /alert %}}
 
@@ -379,7 +379,7 @@ You can create the objects of entity type Language using the *Get Identifiable L
 
 ![Domain model for Translation connector actions](/attachments/appstore/connectors/ibm-watson-connector/translation.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Note that not all pairs of languages are supported. For example, you can translate to and from English and Spanish and English and Portuguese. However, there is no model in Watson to translate Spanish to Portuguese. The IBM Watson Connector Suite does not check whether there is a valid model before it passes the language pair to Watson.
 
 The valid model pairs can be retrieved through the Get Translation Models action.
@@ -465,7 +465,7 @@ This is an object of type **VisualRecognitionImage** which contains the image wh
 
 This is a list of the classifiers which Watson should use to classify the image. Before you use **Classify Image** you will need to get a list of available classifiers using the **Get Classifier** action.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To use built-in IBM classifiers such as *default*, *food*, or *explicit*, you will need to create *Classifier* object for the classifier(s) you wish to use. Set the **Classifier Id** to the classifier_id of the IBM classifier. The built-in classifiers are described in the IBM documentation [Classify an image](https://cloud.ibm.com/apidocs/visual-recognition#classify-an-image).
 
 If the Classifiers list is empty, classification will be performed using the _default_ classifier.
@@ -497,7 +497,7 @@ Each ZIP file must
 * contain at least 10 images in jpg or png format (minimum recommended image resolution is 32X32 pixels)
 * contain less than 10,000 images
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You cannot retrain an existing classifier.
 
 It can take a substantial length of time (several minutes) to create a classifier. It cannot be used for classification until the **Status** is set to *Ready*. You can find the status of a classifier using the **Get Classifiers** action and looking at the value of the Status attribute in the Classifier entity.
@@ -553,7 +553,7 @@ This is the id of the classifier which is to be deleted. The Classifier id is he
 
 The action returns *true* if the delete request is accepted. Otherwise it throws an error.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You cannot delete an IBM built-in classifier, for example *default*, *food*, or *explicit*.
 
 It may take several minutes to fully delete a classifier. Any quota for the maximum number of custom classifier models will not be updated until the classifier has been deleted fully.
@@ -603,7 +603,7 @@ Each face object will contain the following:
 * GenderName – The gender of the detected face
 * GenderScore – A confidence score for the detected gender, in the range 0 to 1
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If there are more than ten faces in an image, these will all be detected but the age and gender confidence may return scores of zero.
 
 The attributes which were used in previous versions to identify individuals have been removed in this version. These were: IdentityName, IdentityScore, and TypeHierarchy. For more details, see the [IBM Watson Release Notes](https://cloud.ibm.com/docs/services/visual-recognition/release-notes.html#2april2018).
@@ -627,7 +627,7 @@ This is a string containing the URL assigned to the Visual Recognition service i
 
 This is the name to give to a list of Classifier objects which is the list of *custom* classifiers available in your Visual Recognition service.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 **Get Classifiers** only returns details for custom classifiers. It doesn't return details for built-in IBM classifiers such as *default*, *food*, or *explicit*.
 {{% /alert %}}
 
@@ -687,7 +687,7 @@ The WatsonServiceConfig entity has the following attributes:
 * Url - a string containing the URL used to access an IBM Watson service
 * Label – a label identifying the service for which these credentials are stored. It is an enumeration of WatsonServiceConfigType
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The enumeration **WatsonServiceConfigType** contains a *Name* which reflects the VCAP value referring to the service. In some cases this is different from the current name of the service (for example the *Assistant* service uses the VCAP name *conversation*). The current name of the service is shown in the *Caption* of the enumeration.
 {{% /alert %}}
 

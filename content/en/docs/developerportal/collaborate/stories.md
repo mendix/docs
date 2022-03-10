@@ -14,7 +14,7 @@ In **Stories**, you are able to manage Sprints, stories, and labels for your app
 
 By adding your Sprints to Mendix, you will have a clear overview of your tasks and can easily view the status of the development of your app. You can create, refine, and prioritize user stories collaboratively using the stories' conversation threads. User stories can be estimated and organized into Sprints which can be monitored using Scrum boards and burndown charts.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can also manage the progress of tasks and Sprints from within Mendix Studio Pro via the [Stories pane](/refguide/stories-pane/).
 {{% /alert %}}
 
@@ -175,7 +175,7 @@ When you select a story, you can perform the following actions:
 * **Assign Label** – enables assigning existing labels to a story
 * **Delete** – enables deleting a story (note that if you delete a story, it is gone forever)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 These actions support multi-selection of stories, except for the **Clone** action.
 {{% /alert %}}
 
@@ -223,7 +223,7 @@ If you need to reorder stories or move a story to a different Sprint, there are 
 
 	![](/attachments/developerportal/collaborate/stories/move-story-details.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Moving a story will move the tasks as well.
 {{% /alert %}}
 
@@ -250,7 +250,7 @@ When you return to your app in the Developer Portal, you will see the new story 
 
 ![](/attachments/developerportal/collaborate/stories/status-update.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Changing the status of a story or updating story points automatically synchronizes the updates between the Developer Portal and Studio Pro. For more information on how to change the status of your story, see the [Changing the Status of a Story or a Task](/refguide/stories-pane/#changing-status) section in *Stories Pane*.
 {{% /alert %}}
 
@@ -266,7 +266,7 @@ You can click **Mark current sprint as completed** only when all stories have th
 
 When you click **Details** for a story, you will be taken to the [story details](/developerportal/collaborate/stories/#story-details) page.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 All the changes made on this page are directly passed on to the **Stories** page and vice versa.
 {{% /alert %}}
 

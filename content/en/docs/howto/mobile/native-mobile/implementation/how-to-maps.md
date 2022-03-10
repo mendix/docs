@@ -11,7 +11,7 @@ tags: ["maps", "google maps", "native", "mobile"]
 
 The Maps module allows you to work with maps. Consult the instructions below to include map capabilities in your native mobile apps.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The Mendix Native Mobile Builder does not currently support connections behind proxy servers. Please make sure you are not behind a proxy server and that your security rules allow access to the required services.
 {{% /alert %}}
 
@@ -56,7 +56,7 @@ Next you will configure the **Maps** widget provider. You will have two choices:
 1. Click the **Save** button. 
 1. Navigate to the build page then click **Build**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When running locally from source, on iOS you have to run `pod install` once more
 {{% /alert %}}
 

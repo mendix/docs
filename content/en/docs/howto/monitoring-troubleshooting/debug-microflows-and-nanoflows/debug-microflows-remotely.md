@@ -9,11 +9,11 @@ tags: ["monitoring", "troubleshooting", "debug", "microflow", "remote"]
 
 In addition to debugging a local deployment of your app, it is also possible to debug applications that are already in a cloud environment.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 These instructions are for apps running in Mendix Cloud v4. If you are running an older version of Mendix which is deployed to Mendix Cloud v3 you need the previous version of this document here: [Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely/).
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 **Debugging in a production environment is not recommended.**
 
 If you are debugging in the cloud, be aware of other app end-users. Breakpoints in the debugger will pause processes for all users of the app in this environment.
@@ -34,7 +34,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 In Mendix Cloud v4, the debugger is always listening for connections so you cannot turn it on or off. To debug your app in the cloud, you need to get a URL and a password from the app environment and provide that information to Studio Pro. The steps below explain how to do this.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The debugger supports only debugging of single-instance environments. Multi-instance environments need to be scaled down to one instance before the debugger can be used. See [Scaling Your Environment in Mendix Cloud v4](/developerportal/deploy/scale-environment/) for more information.
 {{% /alert %}}
 
@@ -66,7 +66,7 @@ You will need to provide these credentials to Studio Pro to connect the debugger
 
 If your application is on a connected Private Cloud, you can get the credentials from the Developer Portal:
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You can only remotely debug apps deployed to Private Cloud for Mendix if you are using Mendix Operator version 1.6.0 or above.
 {{% /alert %}}
 
@@ -108,7 +108,7 @@ If your application is on the SAP S/4 HANA cloud, you will need to set the passw
 
 Once you have the unique URL and password, there are two methods for connecting Studio Pro to the cloud environment. 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If you do cannot connect the debugger, then you do not have sufficient permissions to your app. Ask the Technical Contact or the app Scrum Master to provide the correct permissions.
 {{% /alert %}}
 

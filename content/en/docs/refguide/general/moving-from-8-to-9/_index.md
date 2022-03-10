@@ -32,7 +32,7 @@ Make sure that you have either committed your latest changes to Team Server, or 
 
 ### 3.2 Upgrade to the Latest Release of Version 8
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 It is technically required for you to upgrade your app to Mendix 8.12 first to be able to update it to Mendix 9. However, we recommend you update to the latest version of Mendix 8: [8.18](/releasenotes/studio-pro/8.18/).
 {{% /alert %}}
 
@@ -84,7 +84,7 @@ Mendix 9 comes with a new Atlas theme including new page templates and building 
 
 Finally, review the sections below and ensure that you have made all the changes necessary. Test the app for any unexpected results.
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 Congratulations! Your app has been successfully upgraded to Mendix 9 and you can continue working as normal.
 {{% /alert %}}
 

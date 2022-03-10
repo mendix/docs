@@ -39,7 +39,7 @@ SELECT CustomerObj/Name As Name, SUM(OrderObj/TotalAmount) As TotalAmount
 
 A dataset can have multiple parameters. Parameters are used to filter / manipulate datasets. Security on datasets is configured based on the parameters. In a Java action, the parameters are used in the generated template.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 In OQL, parameters can be called using a **$** symbol, for example: **$Month**.
 

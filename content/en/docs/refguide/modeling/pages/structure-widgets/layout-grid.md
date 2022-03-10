@@ -16,7 +16,7 @@ A layout grid consists of [rows](#rows) and [columns](#columns):
 
 In a browser, the layout grid is based on the Bootstrap grid system. For more information on the Bootstrap grid system, see the [official Bootstrap documentation](http://getbootstrap.com/css/#grid).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Row and column properties described below are available if your app has [Atlas UI Resources](/appstore/modules/atlas-ui-resources/) version 2.4.0 or above. 
 
@@ -57,7 +57,7 @@ The **General** section contains the **Width** property, which determines the wi
 | Full width  | The layout grid spans the full width of the available space and will stretch and shrink. |
 | Fixed width | The layout grid has a fixed width but it is still responsive to viewport changes. Note that the width is not configurable in Studio Pro but is determined by Bootstrap. |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 As the layout grid responds to the viewport width, and not to the width of its container, a fixed width layout grid should only be used on top-level.
 
@@ -102,7 +102,7 @@ The **General** section of a row contains the following properties:
 
   * **Bottom** – columns are aligned to the bottom of the layout grid
 
-{{% alert type="info" %}}This setting can be overridden by the **Align vertically** setting of an individual column.
+{{% alert color="info" %}}This setting can be overridden by the **Align vertically** setting of an individual column.
 {{% /alert %}}
 
 * **Spacing between columns** – when set to *Yes*, adds spacing between columns

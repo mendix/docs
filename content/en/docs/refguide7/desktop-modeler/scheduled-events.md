@@ -12,7 +12,7 @@ With scheduled events you can let the runtime execute a microflow at a specific 
 
 A scheduled event is added to your module as a document (right-click your module and you will find it listed under *Add other...*).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Scheduled events can be tested locally, but they will not be run if your app is deployed as a Free App. See the Free App section of [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/#free-app) for more information on Free App limitations.
 {{% /alert %}}
 
@@ -83,7 +83,7 @@ switch(scheduledEvent.getIntervalType())
 }
 ```
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 If it is absolutely critical to run a scheduled event on a specific day of the month, you should schedule the event to run daily. 
 

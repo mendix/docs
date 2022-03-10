@@ -8,7 +8,7 @@ tags: ["studio pro", "break event", "event", "loop"]
 
 ## 1 Introduction
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Break events can only be used inside [loops](/refguide/loop/).
 {{% /alert %}}
 

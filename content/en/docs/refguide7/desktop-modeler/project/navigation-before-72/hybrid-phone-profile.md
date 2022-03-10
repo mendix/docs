@@ -5,7 +5,7 @@ parent: "navigation-before-72"
 description: "Describes usage of the Hybrid Phone profile in a Mendix app for Mendix versions 7.0 and 7.1."
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 For details on how this works in Mendix versions 7.2 and 7.3, see [Navigation in 7.2 and 7.3](/refguide7/navigation-in-72-and-73/). For Mendix version 7.4 and above, see [Navigation](/refguide7/navigation/).
 

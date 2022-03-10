@@ -109,7 +109,7 @@ Follow these steps to edit the most important fields on your Partner Profile:
 	{{% image_container width="550" %}}![](/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/geo-focus.png)
 	{{% /image_container %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you're missing an input option (for example, an industry or skill), click **Feedback** on the right side of the screen and let us know!
 {{% /alert %}}
 
@@ -133,7 +133,7 @@ All of the fields in the project editor must be filled out before submitting the
 ![](/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/project-buttons.png)
 {{% /image_container %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 All projects are reviewed by Mendix upon submission. After approval, the project will be shown in the **Published** project section.
 {{% /alert %}}
 
@@ -179,7 +179,7 @@ To add developers to the Partner Profile, follow these steps:
 
     Only the certifications and points of the added developers will be counted in the Partner Profile. The highest rank of certification will be added to the overview.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Make sure you offboard and deactivate the developers who no longer work at your company through [Control Center](/developerportal/control-center/).
 {{% /alert %}}
 
@@ -197,7 +197,7 @@ You can do further editing to the testimonials with the following buttons:
 * **Delete** – deletes the testimonial
 * **Show on profile** – displays the testimonial on your company's Partner Profile
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Providing accurate testimonials is an important part of participating in the Mendix community, as is respecting the testimonials that have been given. So, while you are able to edit the details of a testimonial about your company, please respect the original intent of the writer of a testimonial that has already been approved by your company's Profile Editor.
 {{% /alert %}}
 

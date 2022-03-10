@@ -11,7 +11,7 @@ tags: ["runtime", "json", "studio pro", "on-premises", "local"]
 
 For on-premises and local deployments of Mendix, the Mendix Runtime monitoring actions can be called by sending a JSON request to the admin handler. This is accomplished by sending a request to the admin port which is specified in the application configuration (the default port is 8090).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This is only available for local and on-premises deployments of your app.
 
 For deployments to the Mendix Cloud, you will not have access to the m2ee admin handler. However, you can get the same information from various pages in the Developer Portal. For more information see:
@@ -251,7 +251,7 @@ Number of database requests. Distinguishes between "select", "update", "insert",
 
 #### 3.3.5 Memory
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Memory statistics should only be interpreted by experts, lack of detailed knowledge of the Java memory model can lead to false conclusions.
 
@@ -266,7 +266,7 @@ The "memorypools" section contains an ordered list of all the memory pools exact
 *   "name" – the description of the memory pool as received by the JVM. These names can be different depending on for example JDK,memory manager or  garbage collection options
 *   "index" – the index in the JSON Array. This field is not strictly needed as the pools are returned in a list so you can, and should, rely on the order of the list in case you are processing them in a program
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 If you are automatically processing the "memorypools" section to, for example, display in a graph, you should ideally not make any assumptions about the kind of memory pool based on its order in the list or its name as these may change depending on for example garbage collector settings or Java version.
 
@@ -500,7 +500,7 @@ If a health check microflow has been configured, this request will report on the
 
 The health check microflow gets invoked multiple times per minute. Therefore, it is recommended to make it light-weight and run quickly. Heavy operations may have a significant impact on your application's performance.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 This request can only be executed when the Mendix Runtime status is "running" (see [Runtime Status](#runtime-status) above).
 

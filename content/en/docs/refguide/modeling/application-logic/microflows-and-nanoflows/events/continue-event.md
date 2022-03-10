@@ -8,7 +8,7 @@ tags: ["studio pro", "continue event", "event", "loop"]
 
 ## 1 Introduction
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Continue events can only be used inside [loops](/refguide/loop/).
 

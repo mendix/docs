@@ -8,7 +8,7 @@ tags: ["Siemens", "MindSphere", "Example", "Operations Insight", "Time Series", 
 
 ## 1 Introduction
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This information is for the Siemens MindSphere Operations Insight Example App. This app cannot be used with MindSphere IIoT for Makers.
 {{% /alert %}}
 
@@ -83,7 +83,7 @@ All apps running within MindSphere need to be registered. When you open your app
 
 	![Choose app registration](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-example-app/autoreg-web-key.png)
 
-	{{% alert type="info" %}}If you have more then one tenant with a Developer Cockpit option, MindSphere will present you with a list of those tenants. Choose the tenant in which you want to register your app.<br/><br/>If you have only one tenant on MindSphere, the process will automatically select this tenant for you.{{% /alert %}}
+	{{% alert color="info" %}}If you have more then one tenant with a Developer Cockpit option, MindSphere will present you with a list of those tenants. Choose the tenant in which you want to register your app.<br/><br/>If you have only one tenant on MindSphere, the process will automatically select this tenant for you.{{% /alert %}}
 
 3. Give a **Display Name**, **Internal Name**, and, optionally, a **Description** in order to register your app.
 
@@ -95,7 +95,7 @@ All apps running within MindSphere need to be registered. When you open your app
 
 	After a few seconds, a summary page is shown.
 	
-	{{% alert type="warning" %}}Do **not** launch your application directly.{{% /alert %}}
+	{{% alert color="warning" %}}Do **not** launch your application directly.{{% /alert %}}
 	
 	The MindSphere Operations Insight app uses quite a lot of MindSphere APIs. When you register an application you also have to grant access to each API you want to use in your application. Therefore, you have to do this for the Operations Insight application.
 	

@@ -8,7 +8,7 @@ parent: "input-widgets"
 
 The **Radio Buttons** widget is an [input widget](/refguide7/input-widgets/) that can be used to display and edit Boolean and enumeration attributes.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/input-widgets/radio-buttons/radio-buttons.png)
 

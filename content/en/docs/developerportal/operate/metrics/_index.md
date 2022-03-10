@@ -47,7 +47,7 @@ You can click the following buttons to execute actions:
 *   **Refresh** refreshes the list of running requests
 
 *   **Kill request** stops the selected request
-    {{% alert type="warning" %}}If you stop a request, it will not complete and the end-user may receive an error.{{% /alert %}}
+    {{% alert color="warning" %}}If you stop a request, it will not complete and the end-user may receive an error.{{% /alert %}}
     
 *   **Details** shows you the **Action Stack** for the selected request. An Action Stack displays all the actions currently on the call stack. The bottom action is the one which is currently being performed. It was triggered by the action above it and so forth. The details shown for an Action Stack are:
     *   Name
@@ -64,7 +64,7 @@ If you select a user session you can click **Details** to see which entities are
 
 ![User session cache details](/attachments/developerportal/operate/metrics/user-cache.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Runtime versions 7 and above are stateless and do not cache Mendix objects on the server. See the [Mendix Desktop Modeler Release Notes 7.0](/releasenotes/studio-pro/7.0/) for more information.
 

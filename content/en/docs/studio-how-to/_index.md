@@ -10,7 +10,7 @@ cascade:
         priority: 0.7
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 The **Studio 9 How-to's** space describes Mendix Studio functionality that corresponds to Mendix version 9. It describes the latest Studio functionality and features.
 

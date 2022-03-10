@@ -17,7 +17,7 @@ A JSON structure document stores a JSON snippet, and converts it into a schema s
 
 Contains text of the JSON snippet. Usually it is pasted from API documentation, or you can enter it manually for simple JSON.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 When you paste or modify the JSON snippet, it is automatically checked for validity. If the snippet is not valid, an exclamation mark appears above the snippet:
 
@@ -31,7 +31,7 @@ You cannot press "OK" without making the JSON valid.
 
 Formattings and whitespacing of JSON snippets that are found in API documentations may vary. You can paste JSON into the document without bothering about whitespaces. The button 'Format' formats the JSON snippet in such a way that it is canonical and readable. The semantic contents of the snippets are not changed.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Special unicode characters are encoded according to JSON standards. For example, if the original snippet contained a heart-shaped symbol (❤️), it is replaced by '\u2764'.
 
@@ -47,7 +47,7 @@ Shows a tree structure with a schema that is parsed from the JSON snippet. The f
 * **Occurrence** – shows the occurrence of the element. Typically JSON arrays have multiple occurrence (0..*) and JSON objects single occurrence (1).
 * **Custom name** – this column is editable. Often the name JSON objects or arrays can not be inferred from the snippet. For reference, you can modify the name of the JSON element. This name is important when you use Mapping documents based on the JSON schema. You will see this name in mapping elements, and it is used when you want to use "Map Automatically" to generate domain model entities and associations.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 When you modify the JSON snippet, you need to refresh the structure by clicking the 'Refresh' button. If you have not done so, an error will appear:
 
@@ -87,7 +87,7 @@ A JSON array is contained in square brackets (between `[` and `]`). It contains 
 
 *   a JSON array can be contained within another JSON array.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The first item of the array will be used to determine the type of the items in the array. Mixed arrays are unsupported. A mixed array is an array with entries of different data types (for example, string and integer). In the tree structure, a error will appear that you cannot use mixed arrays in your mappings.
 

@@ -7,7 +7,7 @@ tags: ["studio pro", "Java", "java action call", "action call"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
@@ -70,7 +70,7 @@ The result of the Java action will be given this name. The label indicates wheth
 
 ### 3.6 Task Queue
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You cannot execute Java actions in a task queue when calling them from a nanoflow.
 {{% /alert %}}
 

@@ -6,7 +6,7 @@ menu_order: 120
 tags: ["studio pro", "trim to date", "expression", "expressions"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/trim-to-date.pdf).
 {{% /alert %}}
 

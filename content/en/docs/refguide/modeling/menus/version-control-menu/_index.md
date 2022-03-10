@@ -23,7 +23,7 @@ The **Commit** option commits all local changes made to the app since the previo
 
 ## 4 Push
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Push is only available in Git. In SVN, changes are automatically pushed together with the commit. 
 

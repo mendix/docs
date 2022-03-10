@@ -6,7 +6,7 @@ menu_order: 1
 tags: ["studio pro", "Aggregate", "Sum", "Average", "Count", "Minimum", "Maximum"]
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
@@ -61,7 +61,7 @@ Defines which type of aggregation is applied.
 
 Defines which attribute of the objects in the list is used to aggregate over. This must be a numeric attribute (Long, Integer, or Decimal).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When using the 'Count' function it is not necessary to select an attribute, as it simply counts the number of objects in the list.
 {{% /alert %}}
 

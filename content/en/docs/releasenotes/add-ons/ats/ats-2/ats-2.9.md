@@ -93,7 +93,7 @@ Mendix applications that are based on Mendix version 7.17 can now be tested and 
 
 It is now possible to specify that certain members of a project in the Developer Portal do not get any access to a project in ATS. This can be configured by app administrators from the **App settings**. Members of an app that have the **No access** role will not see this app in their **My apps** page and will not be able to view, edit, and run test cases from this app. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Scrum Masters in the Developer Portal always keep the administrator role in ATS.
 
@@ -103,7 +103,7 @@ Scrum Masters in the Developer Portal always keep the administrator role in ATS.
 
 We have implemented a functionality to set a default role per app. This role will be applied to the new members of an app. The default role can be changed by app administrators in **App settings**. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Scrum Masters in the Developer Portal get an administrator role in ATS even if the default role is set to **No access** or **Tester**.
 

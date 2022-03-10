@@ -9,7 +9,7 @@ tags: ["published REST", "GitHub", "Markdown"]
 # linked from DM: published rest > add resource > Public documentation > You can use GitHub Flavored Markdown ... (integration)
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **published REST service** feature was introduced in version 7.10.0.
 

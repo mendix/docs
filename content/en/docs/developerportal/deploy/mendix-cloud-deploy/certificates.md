@@ -15,7 +15,7 @@ aliases:
 
 Certificates are used to authenticate users to apps. They can be used on both incoming and outgoing connections.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Custom certificates cannot be configured for Free Apps.
 {{% /alert %}}
 
@@ -38,7 +38,7 @@ Certificates for *.mendixcloud.com* and *.mxapps.io* are managed by Mendix and w
 
 Using certificates with a short validity limits the impact of misconfigured or compromised certificates, which can occasionally happen. The wider internet community has standardized on this approach for many years.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 **Do not pin these certificates in your solutions.**
 
 Doing so can interrupt your operations when Mendix updates these certificates.
@@ -79,7 +79,7 @@ You can upload a PKCS12 file by following these steps:
 
     ![](/attachments/developerportal/deploy/mendix-cloud-deploy/certificates/certificate-details.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Changes made to certificate settings will only become effective after restarting the app.
 {{% /alert %}}
 

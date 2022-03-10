@@ -10,7 +10,7 @@ aliases:
 
 This category contains all the documentation for versions 1 and 2 of Application Performance Monitor (APM) and version 3 of Application Performance Diagnostics (APD).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 With version 3, the product has been renamed from **Mendix Application Performance Monitor (APM)** to **Mendix Application Performance Diagnostics (APD)**.
 {{% /alert %}}
 

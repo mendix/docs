@@ -22,7 +22,7 @@ The Database Connector can be used for the following SQL statements:
 * `DDL`
 * `SELECT` (only with the **Execute query** action, not with **Execute statement**)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Automatic mapping is currently not possible.
 {{% /alert %}}
 
@@ -72,6 +72,6 @@ To use an ExecuteStatement action in a microflow, follow these steps:
 
 	The statement action's result is either an **Integer** or a **Long** value, which usually represents the amount of affected rows.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 It is your responsibility to apply the proper security, as this action can allow for SQL injection into your Mendix application. Among others things, do not use user-supplied or environment-supplied variables in your SQL statement; if possible, you should prefer them to be static.
 {{% /alert %}}

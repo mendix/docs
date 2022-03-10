@@ -10,7 +10,7 @@ A configuration is a group of settings with a name. You can define any number of
 
 You can use configurations to have different database settings for different people working on your project. Maybe one person has SQL Server on their computer and the other Postgres. You can also have a shared configuration for connecting to a database server that you both have access to.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 When you are deploying your application to a server or the Mendix cloud you will have to configure settings below there. See the [deployment guide](/developerportal/deploy/mendix-cloud-deploy/) for more information.
 
@@ -89,7 +89,7 @@ When you set the Java heap setting to 'Custom', you can specify the amount of he
 
 ### Emulate cloud security
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Since March 18th 2020, this setting in no longer needed and will have no effect.
 
@@ -97,7 +97,7 @@ Since March 18th 2020, this setting in no longer needed and will have no effect.
 
 Projects hosted in the Mendix Cloud have to adhere to much stricter security policies than those hosted on your own server. Turning this switch on emulates that behavior. A security policy will be enforced which will allow you to test your Java actions and verify that they will also run in the cloud.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 This option is removed from versions 7.21.0 and above, see [release notes](/releasenotes/studio-pro/7.21/#62223) for more information.
 
@@ -115,7 +115,7 @@ Constants have a default value that you can override per configuration. You only
 
 You can use custom server settings to configure the Runtime beyond the standard possibilities offered by the Modeler.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Only use this functionality if you know exactly what you are doing. Wrong values can prevent the Runtime from starting.
 

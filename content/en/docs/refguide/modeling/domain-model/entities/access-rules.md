@@ -13,11 +13,11 @@ The access rules of an entity define what a user is allowed to do with objects o
 
 Every access rule is applicable to one or more [module roles](/refguide/module-security/#module-role). An access rule grants certain access rights to those roles. Rules are additive, which means that if multiple access rules apply to the same module role, all access rights of those rules are combined for that module role.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Access rules are not inherited from an entity's [generalization](/refguide/entities/#generalization), because the security for every entity is specified explicitly. So when adding an access rule to an entity, always make sure that all required XPath constraints are applied. If the entity has a generalization with access rules defining XPath constraints, these will not apply to its specializations and will therefore not limit its visibility.
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The **System.User** entity has inbuilt access rules where access is given to its attributes if the user can manage the role of that user. Specializations of **System.User** (such as **Administration.Account**) cannot restrict this access with their own access rules.
 {{% /alert %}}
 
@@ -29,7 +29,7 @@ Access rules are defined via entity's **Properties** > **Access rules**, or on t
 
 ![Access Rules for Entities](/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-tab.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The **Access rules** section is visible only if the [App Security](/refguide/project-security/) is set to **Production**.
 {{% /alert %}}
 
@@ -84,7 +84,7 @@ The set of objects that can be deleted can be limited by using an [XPath constra
 | Read | Users are allowed to view the value of this member, but cannot edit it. |
 | Read, Write | Users are allowed to view and edit the value of this member. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You cannot set *write* access to attributes which are calculated. This includes attributes of type *Autonumber* and attributes where the attribute value is set to **Calculated**.
 {{% /alert %}}
 
@@ -96,7 +96,7 @@ For example, a customer is allowed to view the discount, but is not allowed to e
 
 ![](/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-discount-read.png)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If a user cannot view the value of an attribute because of security constraints, that attribute will never be sent to the Mendix Client. Because Mendix is stateless, this can lead to unexpected results (for example, loss of changes) if changes to the attribute in a microflow are not committed immediately. See [Basic CRUD Communication Pattern](/refguide/communication-patterns/#crud) in *Communication Patterns in the Mendix Runtime* for more information on how data is passed between the Runtime Server and the Mendix Client and what cases may lead to a loss of changes.
 {{% /alert %}}
 
@@ -118,6 +118,6 @@ A logged-in customer is allowed to view personal orders, but is not allowed to v
 
 Because of this XPath constraint, the access rule only applies to orders for which the customer is the currently signed-in user.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 XPath constraints can only be applied to persistable entities as they are applied by the database. Defining XPath constraints for non-persistable entities results in consistency errors.
 {{% /alert %}}

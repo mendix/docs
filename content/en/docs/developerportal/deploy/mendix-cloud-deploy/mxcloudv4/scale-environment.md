@@ -35,7 +35,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * The Mendix version of the app is Mendix 7.0 or above
 * Have a plan which provides more than 1GiB of memory
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can find the cloud version on which your app is hosted in the environment details: see [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region/).
 
 Details of your plan are also displayed on the environment details page.
@@ -57,7 +57,7 @@ If you want to scale your licensed app in Mendix Cloud v4, follow these steps:
 
 6. Set the **Memory per instance** that you want to use.
 
-    {{% alert type="warning" %}}You cannot exceed the total memory provided by your plan. This is shown as the lower number in **Total Allocated Memory**.<br/>If you try to use scaling values which exceed the memory provided by your plan you will get the message `You do not have sufficient resources to configure this allocation`.{{% /alert %}}    
+    {{% alert color="warning" %}}You cannot exceed the total memory provided by your plan. This is shown as the lower number in **Total Allocated Memory**.<br/>If you try to use scaling values which exceed the memory provided by your plan you will get the message `You do not have sufficient resources to configure this allocation`.{{% /alert %}}    
 
 7. Click **Apply**. This will restart your environment to apply the changes.
 

@@ -57,7 +57,7 @@ To add an additional language, do the following:
 
 1. Select the menu item **Language > Language settings…**.
 2. Click the **Add** button and select a second language. In this example we will be using *Russian, Russia*, but you can use any language you like.
-	{{% alert type="info" %}}It is recommended that you **don't** choose *Dutch, Netherlands* as this already contains translations for many of the translatable texts.{{% /alert %}}
+	{{% alert color="info" %}}It is recommended that you **don't** choose *Dutch, Netherlands* as this already contains translations for many of the translatable texts.{{% /alert %}}
 3. Click **OK** to confirm.
 	![Language settings tab in the project settings dialog](/attachments/howto8/collaboration-requirements-management/translate-your-app-content/language-settings.png)
 
@@ -73,7 +73,7 @@ To change your current language to Russian, do the following:
 2. Click **Russian, Russia** to make that your current language.
 	![Change the current language](/attachments/howto8/collaboration-requirements-management/translate-your-app-content/change-language.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you do further development later on, you will need to remember to change back to your default language so that any new text is recorded there and not in a translated dictionary.
 {{% /alert %}}
 

@@ -55,7 +55,7 @@ This property determines in which mode the scroll container operates.
 | Headline  *(default)* | The top and bottom regions extend the entire width of the container and the remaining regions are placed in the middle. |
 | Sidebar | The side panels extend the full height of the container. |
 
-{{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
 #### 2.3.2 Scroll Behavior
 
@@ -66,7 +66,7 @@ This property determines what happens when the content of a region does not fit 
 | Per region *(default)*  | Every region will show its own scroll bar in case its content does not fit. |
 | Full widget | The scroll container will grow to fit its contents and will leave scrolling to its parent. |
 
-{{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
 #### 2.3.3 Width {#width}
 
@@ -74,7 +74,7 @@ By default the scroll container will extend the full width of its parent widget.
 
 Default: *Full width*
 
-{{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
 #### 2.3.4 Width Value
 
@@ -88,11 +88,11 @@ Default: *Center*
 
 ### 2.4 Regions Section {#regions}
 
-{{% alert type="info" %}}Regions are not supported on native mobile pages.{{% /alert %}}
+{{% alert color="info" %}}Regions are not supported on native mobile pages.{{% /alert %}}
 
 Regions define the content area of a scroll container. For more information see the [Scroll Container Region](#scroll-container-region) section.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you add regions in a [layout](/refguide/layout/), they will automatically be filled with [placeholders](/refguide/placeholder/).
 {{% /alert %}}
 

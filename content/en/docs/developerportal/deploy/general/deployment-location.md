@@ -11,7 +11,7 @@ tags: ["URL", "sub-domain", "folders", "subdirectories"]
 
 When you deploy your app outside the Mendix Cloud, you can choose the URL which points to your app. However, there are some restrictions on where you should deploy your app.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In this document, `domain` is used to identify the domain registered to you through the *Internet Corporation for Assigned Names and Numbers (ICANN)*. This is sometimes referred to as the [apex domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages#using-an-apex-domain-for-your-github-pages-site). This includes the *top level domain*. For example, `example.com` would be a `domain` as used in this document.
 {{% /alert %}}
 

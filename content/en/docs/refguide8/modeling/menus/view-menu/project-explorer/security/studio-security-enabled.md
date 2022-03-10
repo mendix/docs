@@ -6,7 +6,7 @@ description: "Describes checks and changes in the project when security is enabl
 tags: ["studio pro", "security", "studio"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/studio-security-enabled.pdf).
 {{% /alert %}}
 
@@ -27,7 +27,7 @@ When security is enabled, a number of checks and changes are done at several lev
 5. Studio checks if the *login.html* file exists, backs it up, and replaces it with a new version (for more information on this process, see the [File Set Up](#file-set-up) section).
 6. Studio does checks and changes (if necessary) at the [Project Security](/refguide8/project-security/) level (for more information on this process, see the [Project Security Level Set Up](#project-security-level) section).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 If security has already been set to **Prototype/demo** or **Production** in Studio Pro, these settings may be incompatible (too advanced) with Studio roles and permissions settings. In this case, you will not be able to edit roles and permissions in Studio. For more information on security settings in Studio, see [Security, Roles & Permissions](/studio8/settings-security/) in the *Studio Guide*. 
 
@@ -44,7 +44,7 @@ To enable single sign-on the following checks and changes are performed:
 
 The Mendix SSO module also adds user management to your app. With user management you can manage app users.
 
-{{% alert type="info" %}}If your project already has the Mendix SSO module installed, you will not be able to enable security from Studio. You can only set security manually in Studio Pro meeting the following requirements: 
+{{% alert color="info" %}}If your project already has the Mendix SSO module installed, you will not be able to enable security from Studio. You can only set security manually in Studio Pro meeting the following requirements: 
 
 * Security should be set to **Production** <br/>
 * The Mendix SSO module should be set up to enable single sign on
@@ -69,7 +69,7 @@ After the **After startup** microflow is set up, Studio checks if the *Administr
     c. If the model has no module roles connected to the Administrator project role or the User project role, Studio creates these roles. <br/>
     d. If the module role exists, its name is identical to the project role, but it is not linked to this project role, Studio creates a new module role, names it *Administrator_1* or *User_1*, and links it to the corresponding project role.<br/>
   
-    {{% alert type="info" %}}Studio links the Administrator role from the System module to the Administrator role on the project level. *Every other project role* created from Studio, including the original User project role, will be linked to the User module role for the System module.
+    {{% alert color="info" %}}Studio links the Administrator role from the System module to the Administrator role on the project level. *Every other project role* created from Studio, including the original User project role, will be linked to the User module role for the System module.
     {{% /alert %}}
 
 3. Studio links the Administrator role at the project level to MendixSSO.Administrator and Administration.Administrator (if they exist, if not, Studio will not do any linking). The User role at the project level is linked to MendixSSO.User, and Administration.User (if they exist, if not, Studio will not do any linking). All other Mendix Marketplace modules will remain unchanged. 
@@ -78,7 +78,7 @@ After the **After startup** microflow is set up, Studio checks if the *Administr
 
 4. Studio checks if demo users named *demo_administrator* and *demo_user* exist, and if not, Studio creates them.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 If Administrator and User roles already exist and are [compatible with Studio](#studio-compatible), they will get access to all microflows, nanoflows, pages, and entities (including entities' attributes and associations).
 
@@ -100,12 +100,12 @@ When you enable security, Studio creates access rules for all entities (and thei
 
   *  All roles in the current module, except anonymous roles, have *read* and *write* access for attributes
 
-     {{% alert type="info" %}}There are cases where entities inherit from System.Image or System.FileDocument. Some of those inherited attributes cannot be set to read/write, so they are set to read-only. 
+     {{% alert color="info" %}}There are cases where entities inherit from System.Image or System.FileDocument. Some of those inherited attributes cannot be set to read/write, so they are set to read-only. 
      {{% /alert %}}
   
 * All roles in the current module, except anonymous roles, have *read* and *write* access for associations if the entity is the association owner 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The rules described above are created if you create an entity in Studio.
 

@@ -13,7 +13,7 @@ These are the definitions of Mendix actions and core actions:
 * Mendix actions include [Mendix actions](/addons/ats-addon/rg-one-mendix-actions/) and [Mendix Marketplace widget actions](/addons/ats-addon/rg-one-appstore-widg-acts/)
 * Core actions include [ATS Core actions](/addons/ats-addon/rg-one-ats-core-actions/) and [Selenium actions](/addons/ats-addon/rg-one-selenium-actions/)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 These are guidelines, not rules. It is possible that you will encounter situations in which these guidelines cannot be followed.
 
@@ -49,7 +49,7 @@ This is a visual component:
 
 ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-general/ht-two-guidelines-custom-action/visual-component-widget.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This guideline focuses on how to find certain widgets.
 
@@ -78,7 +78,7 @@ This is the `mx-name` in the debugger:
 
 ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-general/ht-two-guidelines-custom-action/mx-name-in-debugger.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This guideline focuses on unsupported widget actions.
 
@@ -94,7 +94,7 @@ This is the Mendix Wait action:
 
 For more information, please see [Mendix Wait](/addons/ats-addon/rg-one-mendix-wait/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This guideline does not apply to the Search Context action, since it does not trigger any events.
 
@@ -128,7 +128,7 @@ These are the three most used action parameters:
 
 Last but not least, give a description to the action parameters, especially when it requires specific information. You can also give a generic example of what the user should enter, making it more user-friendly.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Follow the naming conventions. Only deviate when there is no standard name.
 

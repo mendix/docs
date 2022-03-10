@@ -7,7 +7,7 @@ tags: ["domain model", "entity", "attribute", "index", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/indexes.pdf).
 {{% /alert %}}
 
@@ -19,7 +19,7 @@ Indexes can be added and edited from the **Indexes** tab of the entity propertie
 
 ![Example of index tab](/attachments/refguide8/modeling/domain-model/entities/indexes/index-properties.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Index properties are read-only for external entities. For further details, see [External Entities](/refguide8/external-entities/).
 {{% /alert %}}
 

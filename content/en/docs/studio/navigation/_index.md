@@ -32,7 +32,7 @@ To create a new menu item, do the following:
 
 A new menu item or a sub-item is added to the navigation.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 In Studio, you are viewing and editing a Responsive type of the navigation profile, while there are more types of profiles in Studio Pro. For more information on profiles in Studio Pro, see the [Profiles](/refguide/navigation/#profiles) section in *Navigation* in the *Studio Pro Guide*. 
 
@@ -119,7 +119,7 @@ Properties of the menu items consists of the following sections:
 
 You can choose the **On Click Action** in the **Events** section. The **On Click Action** defines what action is performed when the user clicks a menu item. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If a menu item has a sub-item(s), it cannot have an action configured for it.
 {{% /alert %}}
 
@@ -136,7 +136,7 @@ The available actions are described in the table below:
 | Sign Out       | The current user is signed out of the app.                   |
 | Open Link      | Triggers an action based on the link type: <ul><li>**Web** – navigates to a website </li><li>**Email** – composes an email</li><li>**Phone Call** – starts a phone call</li><li>**Text Message** - sends a text message</li></ul>**Note** When you configure **Email**, **Phone Call** or **Message** options, the corresponding default app will be opened on the device when the action is triggered, for example, the default email client will be opened to compose a message. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 If a menu item has a sub-item, the **On Click Action** should be **Nothing**. 
 

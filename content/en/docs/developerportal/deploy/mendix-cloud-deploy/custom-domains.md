@@ -17,13 +17,13 @@ aliases:
 
 The Mendix Cloud supports adding custom domains such as `https://myapp.mycompany.com/` to your environments. As we only allow HTTPS connections, you have to provide a custom domain certificate (an SSL/TLS certificate). This how-to walks you through the process.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This option is provided for licensed apps. You cannot add custom domains to Free Apps.
 
 This documentation is describing certificates for *incoming* connections. For information on setting up certificates for *outgoing* connections, see [Certificates](/developerportal/deploy/certificates/).
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You may not immediately see changes which affect DNS routing. This is because of DNS caching, where changes are not visible until the cache is updated.
 {{% /alert %}}
 
@@ -57,7 +57,7 @@ Before configuring your custom domain in the Mendix Cloud, you will need to conf
 
 Create a CNAME (Canonical Name) record and point it to `[YOUR-CUSTOM-DOMAIN].cname.mendix.net.`. For example, if your custom domain is `myapp.mycompany.com`, create a CNAME record pointing to `myapp.mycompany.com.cname.mendix.net.` so that Mendix can direct your custom domain to your Mendix app.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 It is not possible to create a CNAME record for an apex/naked domain (meaning, a domain without a subdomain, like `mycompany.com`). If you want to use a custom apex/naked domain you should redirect it to a subdomain (for example, `subdomain.mycompany.com`) and create a CNAME for the subdomain instead.
 
@@ -109,7 +109,7 @@ To create a CSR and an RSA (Rivest–Shamir–Adleman) encryption key, follow th
 
     ![](/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168226.png)
 
-    {{% alert type="info" %}}The SSL/TLS private key will be stored in our secure keystore. It will not be available for download in order to keep it secure.{{% /alert %}}
+    {{% alert color="info" %}}The SSL/TLS private key will be stored in our secure keystore. It will not be available for download in order to keep it secure.{{% /alert %}}
 
 You can now go to your certificate authority to get a signed SSL/TLS certificate.
 
@@ -161,7 +161,7 @@ To upload the custom domain certificate, follow these steps:
 
 7. Click **Save** to save your new custom domain certificate. It will be uploaded to the Mendix Cloud automatically.
 
-    {{% alert type="info" %}}The SSL/TLS private key will be hidden after uploading it. It will be stored in our secure keystore and will not be available for download in order to keep it secure.{{% /alert %}}
+    {{% alert color="info" %}}The SSL/TLS private key will be hidden after uploading it. It will be stored in our secure keystore and will not be available for download in order to keep it secure.{{% /alert %}}
 
 You can now configure your custom domain. See [Configuring a Custom Domain](#Configuring), below.
 
@@ -193,7 +193,7 @@ You can also edit an existing custom domain certificate.
 
 ![Edit a certificate](/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/certificate-edit.png)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 For this you will need access to the certificate request that you created for the current certificate.
 {{% /alert %}}
 
@@ -226,7 +226,7 @@ To configure a custom domain for your application environment, follow these step
     ![](/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168229.png)
     
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Make sure you have configured a CNAME record for your custom domain with your domain registrar/DNS provider (for details, see [Create and Configure a CNAME Record](#DNS)), above.
 

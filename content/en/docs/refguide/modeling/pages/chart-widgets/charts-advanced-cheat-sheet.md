@@ -416,7 +416,7 @@ This is the default range mode in charts. Both positive and negative ranges for 
 
 ![Range mode](/attachments/refguide/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/tozero.gif)  
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When **fill** for the series is set to something other than *none*, the Y-axis range is forced to start from zero (*tozero*). For example:
 
 **Layout**

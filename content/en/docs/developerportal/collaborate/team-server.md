@@ -30,7 +30,7 @@ The **Team Server URL** will take you to the repository for your app. Here, you 
 * `https://teamserver.sprintr.com/<your AppID>/` if it is an SVN-enabled app
 * `https://git.api.mendix.com/<your AppID>.git` if it is a Git-enabled app
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You may have to add the final slash (`/`) manually to follow the link. You may also be asked to re-enter your Mendix credentials. Single sign-on (SSO) is not yet implemented for the Team Server.
 {{% /alert %}}
 

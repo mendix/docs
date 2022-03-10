@@ -102,7 +102,7 @@ This specifies the application icon. This icon is shown as favicon in the title 
 
 The default home page indicates which [page](/refguide/page/) or [microflow](/refguide/microflow/) is opened after a user signs in. If role-based home pages (see below) are specified for one of the [user roles](/refguide/user-roles/) of the user, then that home page will be used instead.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The default home page is visible to all unauthenticated users.
 {{% /alert %}}
 
@@ -122,7 +122,7 @@ If the sign-in page is set to none, a built-in pop-up window will appear instead
 
 Each device type contains a default menu. You can use these menus in [Menus & Navigation](/refguide/menu-widgets/). Defining the menu for a device type works the same as when editing a menu document. For more details, see [Menu](/refguide/menu/).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If [security](/refguide/project-security/) is enabled, the menu will only show the items to which the user has access.
 {{% /alert %}}
 

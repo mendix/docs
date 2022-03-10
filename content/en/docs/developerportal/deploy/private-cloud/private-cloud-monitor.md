@@ -10,7 +10,7 @@ tags: ["Monitor", "Logging", "Private Cloud", "Environment"]
 
 ## 1 Introduction
 
-{{% alert type="info" %}}To monitor Mendix for Private Cloud environments, install Mendix Operator v2.1.0 or above.{{% /alert %}}
+{{% alert color="info" %}}To monitor Mendix for Private Cloud environments, install Mendix Operator v2.1.0 or above.{{% /alert %}}
 
 Mendix for Private Cloud provides a [Prometheus](https://prometheus.io/) API that can be scraped by a local Prometheus server.
 This API can also be used by other monitoring solutions that support scraping the Prometheus API.
@@ -59,7 +59,7 @@ If you already have installed Prometheus, Loki, and Grafana in your cluster, you
 This section contains a quick start guide on how to install Grafana and its dependencies in a cluster by using the [Loki Helm chart](https://grafana.com/docs/loki/latest/installation/helm/).
 In addition, this section explains how to install and configure a logging solution based on [Loki](https://grafana.com/docs/loki/next/).
 
-{{% alert type="warning" %}}These instructions have been simplified to make the installation process as easy as possible.
+{{% alert color="warning" %}}These instructions have been simplified to make the installation process as easy as possible.
 
 Before installing Prometheus, Loki, and Grafana in a production environment, consult with your cluster administrator and IT security teams
 to ensure that this logging/monitoring solution is compliant with your organization's security policies.{{% /alert %}}
@@ -138,12 +138,12 @@ kubectl --namespace={namespace} create ingress loki-grafana \
 --default-backend="loki-grafana:80"
 ```
 
-{{% alert type="info" %}}The Ingress object configuration depends on how the Ingress Controller is set up in your cluster.
+{{% alert color="info" %}}The Ingress object configuration depends on how the Ingress Controller is set up in your cluster.
 
 You might need to adjust additional Ingress parameters, for example specify the ingress class, annotations, or TLS configuration.{{% /alert %}}
 
 
-{{% alert type="info" %}}The domain name needs to be configured so that it resolves to the Ingress Controller's IP address.
+{{% alert color="info" %}}The domain name needs to be configured so that it resolves to the Ingress Controller's IP address.
 
 You can use the same wildcard domain name as other Mendix apps - for example, if you're using _mendix.example.com_ as the Mendix for Private Cloud domain name,
 you can use `grafana.mendix.example.com` as the domain name for Grafana.{{% /alert %}}
@@ -225,7 +225,7 @@ To read logs from Pods (including logs from Mendix app environments), the Loki s
 Promtail runs a pod on every Kubernetes node, and this pod reads local container logs from the host system.
 Promtail pods require elevated permissions to read those logs.
 
-{{% alert type="info" %}}Promtail can be replaced with other similar components, for example Fluentd, Fluent Bit, Filebeat, or Azure Container Insights.
+{{% alert color="info" %}}Promtail can be replaced with other similar components, for example Fluentd, Fluent Bit, Filebeat, or Azure Container Insights.
 
 All of these use the same mechanism for reading logs, and replacing Promtail with an alternative will still require logs to be collected using a privileged container.{{% /alert %}}
 
@@ -351,7 +351,7 @@ If you would like to enable Prometheus scraping only for a specific environment,
 
 #### 3.2.2 Enable Scraping in Standalone Mode
 
-{{% alert type="warning" %}}Do not use this approach in Connected mode - any annotations you set this way will be overridden by annotations set in the Private Cloud section of the Developer Portal.{{% /alert %}}
+{{% alert color="warning" %}}Do not use this approach in Connected mode - any annotations you set this way will be overridden by annotations set in the Private Cloud section of the Developer Portal.{{% /alert %}}
 
 Open an environment's `MendixApp` CR [for editing](/developerportal/deploy/private-cloud-operator/#edit-cr) and add the following pod annotations:
 
@@ -380,11 +380,11 @@ Mendix for Private Cloud offers a reference dashboard that looks similar to [Men
 
 In addition, this dashboard will display Mendix app and Runtime logs.
 
-{{% alert type="warning" %}}Depending on how Prometheus is [configured](https://prometheus.io/docs/prometheus/latest/configuration/configuration/)
+{{% alert color="warning" %}}Depending on how Prometheus is [configured](https://prometheus.io/docs/prometheus/latest/configuration/configuration/)
 and which addons are installed, some labels or metrics might be missing or have a different name.
 The reference dashboards are compatible with Prometheus installed as described in [Installing Monitoring Tools](#install-grafana-loki), above.{{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Mendix for Private Cloud uses a `m2ee-metrics` sidecar that collects metrics from the [admin port](/refguide/monitoring-mendix-runtime/) and translates them into a format supported by Prometheus.
 This approach works with all Mendix versions, starting from Mendix 7.23.
 
@@ -426,14 +426,14 @@ Select the **Namespace**, **Environment internal name** and **Pod name** from th
 
 ![](/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/grafana-select-pod.png)
 
-{{% alert type="info" %}}If the dropdowns are empty, this means that no metrics are available for that date range.
+{{% alert color="info" %}}If the dropdowns are empty, this means that no metrics are available for that date range.
 Select another date range in the top right corner, or check if Prometheus is set up correctly.{{% /alert %}}
 
 Metrics are displayed per pod and not aggregated on a namespace or environment level.
 Every time an app is restarted or scaled up, this will add new pods or replace existing pods with new ones.
 You will need to select the currently running pod from the dropdown to monitor its metrics and logs.
 
-{{% alert type="info" %}}This dashboard is provided for reference and can be used as an example.
+{{% alert color="info" %}}This dashboard is provided for reference and can be used as an example.
 You can use it to build a custom dashboard with details that are relevant for your organization, such as aggregating metrics per namespace/project or displaying additional metrics from another source.{{% /alert %}}
 
 ### 4.3 Configuring Metrics Links
@@ -476,7 +476,7 @@ To set the **Metrics** and **Logs** links:
 
 ## 5 Generating Metrics{#generating}
 
-{{% alert type="info" %}}It is possible to configure metrics in Mendix Operator v2.4.0 or a later version.
+{{% alert color="info" %}}It is possible to configure metrics in Mendix Operator v2.4.0 or a later version.
 Older versionso of the Mendix Operator generate metrics in [compatibility mode](#metrics-generation-modes) and do not have any options to configure metrics.{{% /alert %}}
 
 It is possible to specify a default metrics configuration for the namespace in [Advanced Operator Configuration](/developerportal/deploy/private-cloud-cluster/#customize-runtime-metrics).
@@ -516,7 +516,7 @@ spec:
   # …
 ```
 
-{{% alert type="info" %}}When Mendix Operator v2.4.0 is installed into a new namespace, it will use `native` metrics by default.
+{{% alert color="info" %}}When Mendix Operator v2.4.0 is installed into a new namespace, it will use `native` metrics by default.
 However, if Mendix Operator v2.3.\* or below is upgraded to v2.4.0 or above, the upgrade process will set the default metrics mode to `compatibility`. 
 This way, upgrading an older Mendix Operator will not change the way it generates metrics.{{% /alert %}}
 
@@ -550,7 +550,7 @@ In this mode, all other `runtimeMetricsConfiguration` attributes are ignored.
 
 #### 5.1.2 Enable Compatibility Metrics in Standalone Mode
 
-{{% alert type="warning" %}}Do not use this approach in Connected mode. Any configuration you set this way will be overridden by the configuration set in the Private Cloud section of the Developer Portal.{{% /alert %}}
+{{% alert color="warning" %}}Do not use this approach in Connected mode. Any configuration you set this way will be overridden by the configuration set in the Private Cloud section of the Developer Portal.{{% /alert %}}
 
 Open an environment's `MendixApp` CR [for editing](/developerportal/deploy/private-cloud-operator/#edit-cr) and set the `mode` attribute in `runtimeMetricsConfiguration` to `compatibility`:
 
@@ -599,7 +599,7 @@ To completely disable metrics collection, delete the `runtimeMetricsConfiguratio
 
 #### 5.2.2 Disable Metrics in Standalone Mode
 
-{{% alert type="warning" %}}Do not use this approach in Connected mode. Any configuration you set this way will be overridden by the configuration set in the Private Cloud section of the Developer Portal.{{% /alert %}}
+{{% alert color="warning" %}}Do not use this approach in Connected mode. Any configuration you set this way will be overridden by the configuration set in the Private Cloud section of the Developer Portal.{{% /alert %}}
 
 Open the environment's `MendixApp` CR [for editing](/developerportal/deploy/private-cloud-operator/#edit-cr) and delete the `runtimeMetricsConfiguration` block:
 
@@ -697,7 +697,7 @@ After an environment is [switched into native metrics mode](#enable-native-metri
 
 #### 5.3.3 Enable Native Metrics in Standalone Mode
 
-{{% alert type="warning" %}}Do not use this approach in Connected mode. Any configuration you set this way will be overridden by the configuration set in the Private Cloud section of the Developer Portal.{{% /alert %}}
+{{% alert color="warning" %}}Do not use this approach in Connected mode. Any configuration you set this way will be overridden by the configuration set in the Private Cloud section of the Developer Portal.{{% /alert %}}
 
 Open an environment's `MendixApp` CR [for editing](/developerportal/deploy/private-cloud-operator/#edit-cr) and set the `mode` attribute to `native`:
 
@@ -738,7 +738,7 @@ Save and apply the changes.
 
 By specifying a value for `mxAgentConfig`, you can enable the Mendix [Java instrumentation agent](https://github.com/mendix/mx-agent) and collect additional metrics such as the execution times of microflows, OData/SOAP/REST endpoints, and client activity.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 MxAgent is a [Java instrumentation agent](https://docs.oracle.com/javase/8/docs/api/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix for Private Cloud Gateway Agent.
 {{% /alert %}}
 
@@ -774,7 +774,7 @@ You can specify which request handlers, microflows, and activities are reported 
 | `"name": "<microflow>"` | Each time this microflow is run | The format is `<module>.<microflow>`<br />For example, `TrainingManagement.ACT_CancelScheduledCourse` |
 | `"name": "<activity>"` | All activities of this type | click **Activities<sup><small>2</small></sup>** below to see the list of options |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Microflow names are case-sensitive. If the case is not exactly matched, metrics will not be properly submitted.
 {{% /alert %}}
 
@@ -849,6 +849,6 @@ The following example will send logs for:
 ```
 <!-- END snippet -->
 
-{{% alert type="info" %}}The format for `mxAgentConfig` is identical to the Datadog `METRICS_AGENT_CONFIG` [custom environment variable](/developerportal/operate/datadog-metrics/#mx-agent-format) in Mendix Cloud V4.{{% /alert %}}
+{{% alert color="info" %}}The format for `mxAgentConfig` is identical to the Datadog `METRICS_AGENT_CONFIG` [custom environment variable](/developerportal/operate/datadog-metrics/#mx-agent-format) in Mendix Cloud V4.{{% /alert %}}
 
 Advanced instrumentation configuration can be specified through `mxAgentInstrumentationConfig`. If this attribute is not supplied, the default instrumentation configuration will be used.

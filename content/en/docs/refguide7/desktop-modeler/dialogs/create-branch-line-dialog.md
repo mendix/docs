@@ -25,7 +25,7 @@ To open the **Create Branch Line** dialog box, go to **Project > More Versioning
 * **Branch line** – if you want to create a branch line from another branch line
 * **Tagged version** – probably if you are doing maintenance on a deployed version
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 We do not recommend you to use the **Branch line** option unless you have good reasons.
 
@@ -35,7 +35,7 @@ We do not recommend you to use the **Branch line** option unless you have good r
 
 For the **Revision** field, click **Select** to select from which revision of the main line you want to create a branch line. Often, you want to choose the most recent version. You then develop some functionality in the branch line and merge it back to the main line when you are done.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This setting is only available when you select **Main line** or **Branch line** in the **Create branch from** field.
 
@@ -45,7 +45,7 @@ This setting is only available when you select **Main line** or **Branch line** 
 
 In the **Branch line** drop-down list, select from which branch line you want to create another branch line.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This setting is only available when you select **Branch line** in the **Create branch from** field.
 
@@ -55,7 +55,7 @@ This setting is only available when you select **Branch line** in the **Create b
 
 In the **Tagged version** drop-down list, select from which tagged version you want to create a branch line. Every time you create a deployment archive a tag is created so that you can always refer back to that version of the app.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This setting is only available when you select **Tagged version** in the **Create branch from** field.
 
@@ -65,7 +65,7 @@ This setting is only available when you select **Tagged version** in the **Creat
 
 Enter a name of the new **Branch line**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Branch names cannot include special characters (for example, `@`, `$`, `#`).
 

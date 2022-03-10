@@ -9,7 +9,7 @@ menu_order: 60
 
 The Mendix Stories API allows you to retrieve, create and update the sprints, stories and tasks in your Mendix projects.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Each call also requires the parameters 'username' and 'password'. These are the public credentials you will find below; actual authentication of requests is done through API keys.
 

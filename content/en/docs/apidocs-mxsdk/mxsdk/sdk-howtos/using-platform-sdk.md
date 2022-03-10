@@ -62,7 +62,7 @@ The platform client allows you to open an existing app using the app ID:
 const app = client.getApp("33118fbf-7053-482a-8aff-7bf1c626a6d9");
 ```
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can get the **App ID** in the app's [General Settings](/developerportal/collaborate/general-settings/) in the Developer Portal.
 {{% /alert %}}
 
@@ -82,7 +82,7 @@ The app object allows you to delete the corresponding Mendix app.
 await app.delete();
 ```
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 All resources of this app will be deleted permanently!
 {{% /alert %}}
 

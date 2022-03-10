@@ -29,7 +29,7 @@ Mendix allows you to publish REST Web services natively from the modeler. Using 
 
 To create an Area Chart with data from a REST service, follow these steps:
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 For more information on publishing a REST API refer to this Mendix document: [Published REST Operation](/refguide7/published-rest-operation/)
 

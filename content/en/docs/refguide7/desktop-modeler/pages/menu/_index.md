@@ -10,7 +10,7 @@ A menu document defines a navigation menu that can be used by a [menu widget](/r
 
 A menu consists of a list of menu items, which optionally contain sub-items. Depending on the widget a number of levels are allowed.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 If [security](/refguide7/project-security/) is enabled, the menu will only show items that the user has access to.
 

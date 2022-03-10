@@ -21,7 +21,7 @@ For example, for entity 'Customer' the name and credit need to be filled in at a
 
 ![](/attachments/refguide/modeling/domain-model/entities/validation-rules/customer-validation-rules.png)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You can only define validation rules for persistable entities as they are designed to ensure database integrity. Therefore, validation rules are disabled for non-persistable entities.
 {{% /alert %}}
 
@@ -63,7 +63,7 @@ The rule defines which condition an attribute should satisfy.
 | Regular expression | The attribute needs to match a regular expression stored in a [regular expression](/refguide/regular-expressions/) resource. |
 | Maximum length | The attribute may have no more than the specified number of characters. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Date values should be entered in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format, for example 2015-07-26.
 {{% /alert %}}
 

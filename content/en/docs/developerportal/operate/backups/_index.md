@@ -67,17 +67,17 @@ Anything you can download you can also upload again, which means you can upload 
 * **Database Only**
 * **Files Only**
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Uploading a **Files Only** archive will result in a backup item with an exclamation mark and a warning message. Since the archive does not contain a database, it is not possible to restore it.
 {{% /alert %}}
 
 #### 3.2.2 Uploading Data in Mendix Cloud v3
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 In **Mendix Cloud v3**, this will *not* add a backup to the backup list but directly update the application with the newly uploaded data.
 
 Your environment will be cleared completely. The existing deployment package, uploaded files, and database will be removed. If you are uploading data to the production environment, any published app services will be unpublished.
@@ -100,7 +100,7 @@ You can download a backup archive containing one of the following:
 
 See [Download a Backup](/developerportal/operate/download-backup/) for more information.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 As the download archive is generated on request, it is not possible to estimate the file size before requesting a download.
 {{% /alert %}}
 
@@ -110,7 +110,7 @@ You can choose the **destination** environment to which you want to restore the 
 
 If you restore a backup snapshot that was originally deployed with an older Mendix version, you will get a warning. You can still restore the data, but you will have to deploy the older model later on. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In Mendix Cloud v4, if the restore takes too long, the system will show a timeout message. The restore will continue behind the scenes, and you can track the progress of the restore by inspecting your database free disk space graphs. While the database free disk space keeps decreasing, the restore is still in progress. If the database free disk space is constant, the restore has stopped and you can try to start your application. If this happens regularly, consider upgrading to a database plan with more CPU cores, so that the restore can be executed faster.
 {{% /alert %}}
 

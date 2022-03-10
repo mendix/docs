@@ -6,7 +6,7 @@ tags: ["studio pro", "microflow source", "data source"]
 menu_order: 40
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/microflow-source.pdf).
 {{% /alert %}}
 
@@ -18,7 +18,7 @@ When a data widget with a microflow data source is displayed in the browser or r
 
 A microflow data source ignores all context. It performs the actions described in the microflow, nothing else. For example, nested data widgets with a microflow data source will not automatically create or invoke associations to the encasing data widget.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When **Microflow** is selected as the data source, this is regarded as "indirect usage." This means that you cannot also select an **Entity (path)** as you can with the **Database**, **XPath**, or **Association** data source types.
 {{% /alert %}}
 

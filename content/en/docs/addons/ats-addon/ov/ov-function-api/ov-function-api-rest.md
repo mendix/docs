@@ -9,7 +9,7 @@ menu_order: 1
 
 This page describes how to use the Function API directly.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Before you start writing tests, install the [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver) package.
 {{% /alert %}}
 

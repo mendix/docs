@@ -24,7 +24,7 @@ APM has several tour guides and videos to help navigate through APM to perform c
 
 ![](/attachments/addons/apd-addon/rg-apd/rg-two-apm/rg-two-apps/Documentation.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 By default, APM displays the tour guides and videos upon login for new users.
 {{% /alert %}}
 

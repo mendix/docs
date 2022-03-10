@@ -7,7 +7,7 @@ description: "Configuration options for a published REST service"
 tags: ["published REST", "service", "reserved URL prefixes", "swagger", "security", "CORS", "resources", "operation", "how-to"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **published REST service** feature was introduced in version 7.10.0.
 
@@ -31,7 +31,7 @@ When service is initially created, service name is used in the creation of the d
 
 ### 2.2 Version
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **Version** feature was introduced in version 7.12.0.
 
@@ -44,7 +44,7 @@ By default, version is set to "1.0.0".
 <a name="location"></a>
 ### 2.3 Location
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 **Location** is editable in Mendix versions 7.12.0 and above.
 
@@ -95,7 +95,7 @@ When the app is running, this file is available under `/rest-doc/servicename/swa
 <a name="authentication"></a>
 ### 3.1 Requires Authentication
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **No Authentication** feature was introduced in version 7.11.0. In earlier versions, it was always **Username and password**.
 
@@ -147,7 +147,7 @@ There are three possible outcomes of the authentication microflow
 
 The allowed roles define which [module role](/refguide7/module-role/) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Web service users cannot access REST services.
 {{% /alert %}}
 

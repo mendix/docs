@@ -13,7 +13,7 @@ There are two ways to edit the properties of an [association](/refguide/associat
 
 You can also edit an association directly within the association tab in the entity properties. For more information see [Association Tab Properties](/refguide/association-member-properties/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Attributes properties for associated external entities are defined in the originating app and the only local changes that can be applied to these entities is a local name and description. For further information, see the [Attributes](/refguide/external-entities/#attributes) section of *External Entities*.
 {{% /alert %}}
 

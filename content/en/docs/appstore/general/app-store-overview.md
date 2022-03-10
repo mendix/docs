@@ -200,11 +200,11 @@ Finally, the table presents, the **Plan**, the plan's **Status**, and the **Expi
 
 This dashboard presents an overview of your service instances and binding keys. A service instance is what Mendix creates when you subscribe to an app service. After the service instance has been created, you need binding keys to use the app service in your app.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Only a Technical Owner for the subscription can create binding keys. When a user from your company wants to request a free trial (and there is already a Technical Owner), they will not have separate unique binding keys. The Technical Owner has to provide the binding keys to the user.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Only a Technical Owner for the subscription can edit the instance name and manage the instance’s settings on external platforms. 
 {{% /alert %}}
 
@@ -214,7 +214,7 @@ This page presents the **Binding Key Names** that have been created as well as d
 
 You can also select a group of binding keys and click **Manage Instance** to go to the component provider's configuration page, where you can do further configuration.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This additional management option is only available for specific app services where necessary.
 {{% /alert %}}
 
@@ -224,7 +224,7 @@ To create binding keys for a specific [subscription](#company-subscriptions), cl
 
 After you click **Create Keys**, a page appears with your binding keys. Click **Copy** for each key and manually save the keys somewhere safe.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Once you close this page, you will not be able to retrieve the keys again.
 {{% /alert %}}
 
@@ -256,7 +256,7 @@ This page contains reviews of **Your company's content** as well as **Your compa
 
 You can configure user groups for various levels of access to your company content. The available configuration tabs for each user group page are described in the sections below.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The **User Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/#company) can create and delete user groups. Both [Group Admins](#members) and Mendix Admins can manage user groups.
 {{% /alert %}}
 
@@ -278,7 +278,7 @@ A guest is a Mendix Platform user from outside your organization who can downloa
 
 The guest will receive an email notifying them of access to the private content. They can then see all the private Marketplace content shared with them in their [Shared with Me](#shared-with-me) page.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The guest must be a registered Mendix Platform user; otherwise, they will not be able to access the shared content.
 {{% /alert %}}
 
@@ -290,7 +290,7 @@ On this tab, you can assign content to this user group that can only be managed 
 
 ![](/attachments/appstore/general/app-store-overview/group-content.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 A component can only be assigned to one user group at a time. If a component is already assigned to another user group, it will not appear in this dialog box.
 {{% /alert %}}
 
@@ -302,7 +302,7 @@ The options in this menu are the same as described for the context menu for the 
 
 #### 4.9.4 Settings Tab
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This tab is only accessible to [Group Admins](#members) and [Mendix Admins](/developerportal/control-center/#company).
 {{% /alert %}}
 

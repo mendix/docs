@@ -45,7 +45,7 @@ When filing a Git support issue with Mendix Support, attach the log files doing 
 
 ### 3.3 Git Properties Useful for Troubleshooting
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The properties described below might contain personal information. We advise you to make sure that all the private information is removed before sharing it. 
 {{% /alert %}}
 

@@ -26,7 +26,7 @@ The following **Buttons** are available in Mendix Studio as default widgets:
 * Sign Out
 * Open Link
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Apart from the default button widgets, you can also [download widgets from the Mendix Marketplace](https://marketplace.mendix.com/) to your app. For more information, see section [4 Widgets by Origin](/studio7/page-editor-widgets/#widgets-by-origin) in *Widgets*.
 
@@ -41,7 +41,7 @@ Properties in the **Events** section are partially preset for buttons listed abo
 
 For more information, see section [2.1 Default Properties in the Events Section](#default-properties). 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You can change preset properties, and make the button perform another action. 
 

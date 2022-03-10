@@ -91,7 +91,7 @@ To use the Invoice Processing app service, first you need to create a model, the
 
     ![Existing Invoice models list](/attachments/appstore/app-services/invoice-processing/existing-invoice-models.png)
 
-    {{% alert type="info" %}} The model is ready to use only when the **Status** of this model is **Published**. {{% /alert %}}
+    {{% alert color="info" %}} The model is ready to use only when the **Status** of this model is **Published**. {{% /alert %}}
 
 3.  To train a new model, click **Create New Model** on the page. The **Create New Model** dialog box opens.
 
@@ -99,11 +99,11 @@ To use the Invoice Processing app service, first you need to create a model, the
 
 4.  Enter a unique **Model Name**, select a **Region**, and then **Country**. You may select multiple countries for a given **Region**.
 
-    {{% alert type="info" %}}Currently, these regions and countries are supported: **USA** (**USA**), **Canada** (**Canada**), **Europe** (**Netherlands**, **Germany**, **Great Britain**).{{% /alert %}}
+    {{% alert color="info" %}}Currently, these regions and countries are supported: **USA** (**USA**), **Canada** (**Canada**), **Europe** (**Netherlands**, **Germany**, **Great Britain**).{{% /alert %}}
 
 5.  Click **Create Model**.
 
-    {{% alert type="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
+    {{% alert color="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
 
     An **Information** pop-up window appears notifying the user that the model is being trained.
 
@@ -161,7 +161,7 @@ You need to use an [Import Mapping](/refguide/mapping-documents/#import-mappings
 6. In the **Mapping** box, **Select** the Import Mapping that you created to define how extracted data should be mapped into an entity.
 7. Click **OK** to save the changes and close the dialog box.
 
-{{% alert type="info" %}} Optionally for further automation, add [event handlers](/refguide/event-handlers/) on the entity where you populate the extracted data. You can call your own microflow to process the extracted data when inserted into the entity. For example, you can modify, validate, and pass the data to next steps. By dong this, you can achieve full end-to-end automation.{{% /alert %}}
+{{% alert color="info" %}} Optionally for further automation, add [event handlers](/refguide/event-handlers/) on the entity where you populate the extracted data. You can call your own microflow to process the extracted data when inserted into the entity. For example, you can modify, validate, and pass the data to next steps. By dong this, you can achieve full end-to-end automation.{{% /alert %}}
 
 ### 4.4 Checking Statistics on the Service Dashboard
 

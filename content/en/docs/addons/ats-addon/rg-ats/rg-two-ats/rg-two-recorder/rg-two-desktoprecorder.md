@@ -13,7 +13,7 @@ ATS supports recording via two options:
 
 Both the web recorder and desktop recorder are maintaned. You can freely switch between them at any time in the **Project Preferences**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 There is a known issue with the Desktop recorder that prevents it from communicating with ATS. We are working on resolving this issue asap. Because of this, at the moment, we recommend using the web recorder.
 {{% /alert %}}
 

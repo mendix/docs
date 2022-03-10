@@ -71,7 +71,7 @@ Repeat this process for the Recorder test case to complete your test suite.
 
 ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-suite/test-suite-page-complete.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can add as many test cases and test suites as you want. 
 {{% /alert %}}
 

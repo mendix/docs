@@ -11,7 +11,7 @@ tags: ["marketplace", "marketplace component", "widget", "range slider", "platfo
 
 The [Range Slider](https://marketplace.mendix.com/link/component/52704/) allows the user to set a range using a slider. You need to configure a minimum value and a maximum value for the slider, which define the limits of the slider's track. The user can set a range within these limits by defining the lower bound value and the upper bound value of the range.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If the user needs to set one value, instead of a range, you should use the [Slider](/appstore/widgets/slider/) widget instead.
 {{% /alert %}}
 
@@ -84,13 +84,13 @@ To configure this widget, follow these steps:
 
 **Editable** – determines if the widget can be edited
 
-{{% alert type="info" %}}For more information, see [Editability Section](/refguide/common-widget-properties/#editability) in *Properties Common in the Page Editor*.{{% /alert %}}
+{{% alert color="info" %}}For more information, see [Editability Section](/refguide/common-widget-properties/#editability) in *Properties Common in the Page Editor*.{{% /alert %}}
 
 #### 2.1.4 Visibility Section
 
 **Visible** – determines if the widget visible or not
 
-{{% alert type="info" %}}For more information, see [Visibility Section](/refguide/common-widget-properties/#visibility-properties) in *Properties Common in the Page Editor*.{{% /alert %}}
+{{% alert color="info" %}}For more information, see [Visibility Section](/refguide/common-widget-properties/#visibility-properties) in *Properties Common in the Page Editor*.{{% /alert %}}
 
 ### 2.2 Track Tab
 
@@ -108,7 +108,7 @@ To configure this widget, follow these steps:
 
 **On change** – sets the action to execute when the slider changes its value
 
-{{% alert type="info" %}}For more information, see [Event Actions](/refguide/on-click-event/#actions) in *Properties Common in the Page Editor*.{{% /alert %}}
+{{% alert color="info" %}}For more information, see [Event Actions](/refguide/on-click-event/#actions) in *Properties Common in the Page Editor*.{{% /alert %}}
 
 ### 2.4 Common Tab
 
@@ -131,4 +131,4 @@ Configuration:
     * **Selected minimum attribute** – the attribute that contains the minimum bound slider value 
     * **Selected maximum attribute** – the attribute that contains the maximum bound slider value
   
-    {{% alert type="info" %}}The difference between the maximum value and the minimum value should be divisible by 2 (as in, `(maximumValue – minimumValue) % 2 = 0`).{{% /alert %}}
+    {{% alert color="info" %}}The difference between the maximum value and the minimum value should be divisible by 2 (as in, `(maximumValue – minimumValue) % 2 = 0`).{{% /alert %}}

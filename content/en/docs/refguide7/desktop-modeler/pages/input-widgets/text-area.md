@@ -8,7 +8,7 @@ parent: "input-widgets"
 
 A text area can be used to display and/or edit a long text value that can be split over several lines.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/input-widgets/text-area/text-area.png)
 
@@ -36,7 +36,7 @@ _Default value:_ 5
 
 This is the text displayed when typing in the text area. This text has 2 placeholders. The first placeholder shows the number of characters already typed and the second placeholder shows the maximum number of characters.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You've used {1} characters of the {2} characters that are allowed.
 

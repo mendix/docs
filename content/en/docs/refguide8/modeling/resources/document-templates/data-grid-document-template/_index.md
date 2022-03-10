@@ -9,7 +9,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/data-grid-document-template.pdf).
 {{% /alert %}}
 
@@ -17,7 +17,7 @@ aliases:
 
 The data grid shows a list of objects in a grid. For example, a data grid can show all the orders a customer has placed.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide8/modeling/resources/document-templates/data-grid-document-template/918138.png)
 
@@ -41,7 +41,7 @@ See [Sort Bar](/refguide8/sort-bar/).
 
 The column weights are percentages separated by semi-colons that determine the widths of the columns. The weights have to add up to 100\. An alternative way of changing the widths of columns is by dragging the separating line between columns.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In the screenshot above the column weights are 50;25;25.
 {{% /alert %}}
 

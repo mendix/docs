@@ -6,7 +6,7 @@ menu_order: 20
 tags: ["on-premises", "git", "version control"]
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This functionality is in Beta. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
@@ -16,11 +16,11 @@ When developing Mendix applications, changes to these applications are stored in
 
 While using Team Server is the recommended for most Mendix developers, you may prefer to store your application's files in a system controlled by your own organization. For version control, Mendix uses the [Subversion](https://subversion.apache.org) system (also known as SVN) and [Git](/howto/collaboration-requirements-management/on-premises-git-howto/). This how-to describes how to work with Git version control system.	
 
-{{% alert type="info" %}}	
+{{% alert color="info" %}}	
 This how-to will not describe how to set up a Git server from scratch; typically, this will be taken care of by the IT department of your organization.	
 {{% /alert %}}
 
-{{% alert type="warning" %}}	
+{{% alert color="warning" %}}	
 You will not be able to use Mendix Studio for collaborative development if you use an on-premises version control server. Collaborative development between Studio and Studio Pro will only work if you use the Mendix Team Server.	
 {{% /alert %}}	
 
@@ -143,7 +143,7 @@ For the previous local disk method do the following:
 
 Once you have an unversioned app, you can upload it to your private team server. 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The repository has to be completely empty (including README.md and. gitignore files), or the upload will fail.
 {{% /alert %}}
 

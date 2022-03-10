@@ -14,7 +14,7 @@ To run Mendix apps in production on the Mendix Cloud, they must be linked to a l
 
 If you have an app which you want to license, you can do this simply and cost-effectively by ordering the **Mendix Basic** package. This can be done online.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Your order is made immediately but the provisioning of your licensed node will take 48 hours.
 {{% /alert %}}
 
@@ -65,7 +65,7 @@ To order your Mendix Basic package, do the following:
 
     ![Invoice details entry screen](/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/basic-package/invoice-details.png)
 
-    {{% alert type="info" %}}Ensure that the **Email Address** is monitored. Mendix will use this to send further information about your Mendix Basic package.{{% /alert %}}
+    {{% alert color="info" %}}Ensure that the **Email Address** is monitored. Mendix will use this to send further information about your Mendix Basic package.{{% /alert %}}
 
 6. Click **Continue**.
 
@@ -73,7 +73,7 @@ To order your Mendix Basic package, do the following:
 
 8. Click to agree to the **Terms & Conditions**.
 
-    {{% alert type="info" %}}The license will take 48 hours to provision.<br />You will receive your invoice 7-14 days after you submit your order.{{% /alert %}}
+    {{% alert color="info" %}}The license will take 48 hours to provision.<br />You will receive your invoice 7-14 days after you submit your order.{{% /alert %}}
 
 9. Click **Order Now** to complete your order.
 

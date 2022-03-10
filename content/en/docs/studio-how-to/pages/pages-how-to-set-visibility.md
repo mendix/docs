@@ -61,7 +61,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 The visibility of the billing address depends whether the customer checks that the billing address is different from the delivery address. In your domain model, you have an attribute of the Boolean type called **BillingAddressSame**, so when it is set to *false*, the billing address should be visible. This means that the visibility of the billing address depends on the value of the **BillingAddressSame** attribute, so the conditional visibility is *attribute-based*. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Attribute-based conditional visibility can be set only for widgets that are inside data containers (a data view, list view, or data grid). 
 

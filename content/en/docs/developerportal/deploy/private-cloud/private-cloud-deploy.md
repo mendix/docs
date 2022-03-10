@@ -80,7 +80,7 @@ Before you can create an environment, you will need to create a deployment packa
 
 7. Confirm the information message and you will be returned to the **Environments** page.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Alternatively, you can upload an existing MDA by clicking **Upload Package**.
 {{% /alert %}}
 
@@ -98,7 +98,7 @@ When deploying your app for the first time, there will be no environments availa
 
 3. A **UUID** will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 
-    {{% alert type="info" %}}You can change the UUID if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.{{% /alert %}}
+    {{% alert color="info" %}}You can change the UUID if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.{{% /alert %}}
 
     ![](/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/customizeEnvironmentPage1.png)
 
@@ -111,7 +111,7 @@ When deploying your app for the first time, there will be no environments availa
   1. For development of the app, for example acceptance testing, choose **Development**.
   2. For production deployment, select **Production**. If you select **Production**, then you will be asked for the **Subscription Secret** which ensures that your app runs as a licensed app. These restrictions on unlicensed/test apps are very similar to those listed in the [Free Apps](/developerportal/deploy/mendix-cloud-deploy/#free-app) section of *Mendix Cloud*.
 
-    {{% alert type="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/project-security/). You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
+    {{% alert color="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/project-security/). You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
 
 7. Click **Next**.
 
@@ -152,7 +152,7 @@ See [Deploying the Deployment Package](#deploy-package), below, for instructions
 
 You can also deploy an existing deployment package to an environment without having to create a new one. This also allows you to specify constant values and control scheduled events before the app is started.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Currently, deployment packages are only valid for two weeks. Older deployment packages will still be visible, but if you try to deploy a package that was created more than two weeks ago, the deployment will fail and return a 403 error. The solution is to [recreate the deployment package](#create-deployment-package).
 {{% /alert %}}
 
@@ -212,7 +212,7 @@ These are described in more detail below.
 
 Sometimes the page will not be automatically refreshed with the latest information. Click this button to see the latest information on the page.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Using the browser refresh button will take you away from this environments page, so use this button instead.
 {{% /alert %}}
 
@@ -302,7 +302,7 @@ When the Operator is running in trial mode, it will stop managing an environment
 
 The word **Licensed** shows that the Operator managing that environment is licensed.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The Operator license is independent from a Mendix Runtime license. The Operator license allows you to manage Mendix apps in your cluster, while the Mendix Runtime license (configured through a [Subscription Secret](#change-subscription-secret)) removes trial restrictions from a Mendix App itself.
 
 You can get an Operator license from [Mendix Support](https://support.mendix.com), together with instructions on how to configure it.
@@ -399,7 +399,7 @@ This allows you to clear the password for the local admin user set in the Privat
 
 This allows you to change the password for the local admin user in your app. The password you set here will be pushed to your app environment every time the app is deployed.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 By default, there will be no admin password set for your environment. This means that the Mendix administration account will be inactive unless you set (change) a password.
 {{% /alert %}}
 
@@ -417,21 +417,21 @@ For a *connected* cluster, the top level MendixApp​ CRD will be deleted from t
 
 * ​​The database will be dropped and the database user will be deleted from the database server — databases and users from other environments will remain untouched.
 
-    {{% alert type="info" %}}If the storage plan is using a JDBC plan (not Postgres or SQL Server), the database and the user will remain untouched).{{% /alert %}}
+    {{% alert color="info" %}}If the storage plan is using a JDBC plan (not Postgres or SQL Server), the database and the user will remain untouched).{{% /alert %}}
 
 * ​​Files related to that environment will be deleted from the S3/Minio/Tencent storage bucket (or prefix if this is using a shared bucket).
 
-    {{% alert type="info" %}}If you are using the S3 [create account with existing policy](/developerportal/deploy/private-cloud-cluster/#storage-plan) plan - the files remain untouched.{{% /alert %}} 
+    {{% alert color="info" %}}If you are using the S3 [create account with existing policy](/developerportal/deploy/private-cloud-cluster/#storage-plan) plan - the files remain untouched.{{% /alert %}} 
 
 * ​​S3/Minio users and policies will be deleted (if there is a storage plan specified to create those objects).
 
 * ​​Network resources: ingress, service will be removed. This might also garbage collect other resources (for example Load Balancers and TLS certificates), depending on how your network is set up,
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 ​​Images are not deleted from the container registry. You should delete those images manually.
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If any of these garbage collection steps fail, you will no longer see the environment in the Developer Portal, and will have to [delete the storage instances](#delete-storage) manually.
 {{% /alert %}}
 
@@ -441,7 +441,7 @@ This enables you to change the purpose of your app environment. You can label an
 
 For production deployment, select **Production**. If you select **Production**, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. For the differences between unlicensed/test apps and licensed apps, see the [Free App](/developerportal/deploy/mendix-cloud-deploy/#free-app) section in *Mendix Cloud*.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Your app can only be deployed to a production environment if [security in the app is set on](/refguide/project-security/). You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
 {{% /alert %}}
 
@@ -473,7 +473,7 @@ On the Runtime tab, you can change various runtime settings for your app environ
 
     ![](/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/runtime-tab.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When you use some settings on the Runtime tab for Mendix for Private Cloud they may work differently from how they work in the Mendix Cloud.
 {{% /alert %}}
 
@@ -505,7 +505,7 @@ If you are using Mendix Operator version 1.5.0 or above, you can configure TLS f
 
 In the TLS pane, you can choose whether to **Apply Default Configuration** or a **Custom TLS Configuration**. If you apply the default configuration, then the configuration made when you ran the configuration script for the namespace will be used.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you are using a version of Mendix Operator before 1.5.0, the settings in this tab will have no effect and the default configuration will be applied.
 {{% /alert %}}
 
@@ -607,7 +607,7 @@ If you attempt to deploy an app with security not set to production into a produ
 
 ### 7.4 ApplicationRootUrl Needs to be Set Manually
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This workaround is only required for Mendix Operator versions below 1.10.0. Mendix Operator 1.10.0 and later versions will set `ApplicationRootUrl` automatically.
 {{% /alert %}}
 
@@ -621,7 +621,7 @@ To add this setting:
 2. Switch to the **Runtime** tab.
 3. Add a **Custom Runtime Setting**: use `ApplicationRootUrl` as the **Setting** name and the URL you copied from **App URL** as the **New value**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you change **App URL** in the **General** tab, you should update the `ApplicationRootUrl` value as well.
 {{% /alert %}}
 

@@ -7,7 +7,7 @@ parent: "data-widgets"
 
 The data grid shows a list of objects in a grid. For example, a data grid can show all the orders a customer has placed. Using controls provided by the data grid you can browse, search and edit those objects.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/data-widgets/data-grid/data-grid.png)
 A data grid showing accounts.
@@ -30,7 +30,7 @@ A data grid showing accounts.
 
 This property indicates whether the control bar buttons will be visible in the end user interface.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Even if the control bar buttons are invisible, there can still be a default button that is triggered by (double) clicking a row. For more information, see the property [Default Button Trigger](#dbt) and [Data Grid Buttons](/refguide7/control-bar/).
 
@@ -132,7 +132,7 @@ See the corresponding data source for its properties:
 
 The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Note that the styling is applied in the following order:
 
@@ -146,7 +146,7 @@ Note that the styling is applied in the following order:
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 background-color:blue;
 This will result in a blue background
@@ -209,7 +209,7 @@ If you choose 'Custom' as the date format (see above) the custom date format det
 | m | 1..2 | 59 | Minute, use one or two for zero padding |
 | s | 1..2 | 12 | Second, use one or two for zero padding |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 | Format | Example output |
 | --- | --- |
@@ -244,7 +244,7 @@ The values in a column can be aggregated in several ways. The aggregate function
 | Sum | Show the sum of the values. |
 | Count | Show the count of the values. |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Note that all objects will be taken into account, and not just the ones on the current page.
 
@@ -254,7 +254,7 @@ Note that all objects will be taken into account, and not just the ones on the c
 
 The aggregate caption is the text that appears in front of the computed value. This is a translatable text. See [Translatable Texts](/refguide7/translatable-texts/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 'Total' could be an aggregate caption for a column that shows the sum of the values.
 

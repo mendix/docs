@@ -34,7 +34,7 @@ You can find the description of possible on-click actions below:
 * [Open Link](#open-link-action) 
 * [Delete Object](#delete-object-action) 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The list of available on-click actions may differ depending on the widget. For example, **Delete Object** on-click action is unavailable for the list view. 
 

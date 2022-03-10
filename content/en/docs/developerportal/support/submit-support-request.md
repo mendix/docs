@@ -13,7 +13,7 @@ tags: ["support", "incident", "standard change", "URL", "change URL", "license",
 
 In order for Mendix Support to pick up and process your support request, it is important to provide the right information. This will speed up the processing of your request and minimize back-and-forth communication between you and Mendix Support. The details below are what Mendix Support needs and uses to process an incident ticket.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 For critical production incidents, please contact Mendix Support by [phone](https://support.mendix.com).
 {{% /alert %}}
 
@@ -56,7 +56,7 @@ To submit a request with Mendix Support, follow these steps:
 	* **Standard Change: Change Mendix Cloud File Storage** – increase or decrease the file storage size
 	* **Standard Change: Change Mendix Cloud URL** – change a *non-custom* Mendix URL (for example, *something.mendixcloud.com*)
 
-        {{% alert type="info" %}}This URL change will apply to *all* your environments for this app. For example, the production environment will be *something.mendixcloud.com* and the acceptance environment will be *something-accp.mendixcloud.com*.{{% /alert %}}
+        {{% alert color="info" %}}This URL change will apply to *all* your environments for this app. For example, the production environment will be *something.mendixcloud.com* and the acceptance environment will be *something-accp.mendixcloud.com*.{{% /alert %}}
 
 	* **Standard Change: Assign Mendix Admin** – make an existing Mendix user the [Mendix Admin](/developerportal/control-center/#company)
 	* **Standard Change: Request ATS License** – obtain a license to use ATS (for more information on this product, see [ATS](/addons/ats-addon/))
@@ -156,7 +156,7 @@ You can add large attachments such as project files to the request. Please note 
 * Test project (for details, see [How To Export A Mendix App Package](/refguide/export-project-package-dialog/))
 * Reproducible steps
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Not all Marketplace content is compatible with every version of Studio Pro, and not all Marketplace content is supported by Mendix. For more information, see [Marketplace Content Support](/appstore/general/app-store-content-support/).
 {{% /alert %}}
 
@@ -164,7 +164,7 @@ Not all Marketplace content is compatible with every version of Studio Pro, and 
 
 * Operating system and version (Android x.x or iOS x.x; for example, Android 6.1)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For Windows Phone, please contact Mendix Support for the current support conditions.
 {{% /alert %}}
 

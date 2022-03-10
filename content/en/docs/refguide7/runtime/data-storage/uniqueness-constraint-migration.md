@@ -72,7 +72,7 @@ We enforce this new stricter association on existing data in order to avoid easi
 
 To help with migrating your old data, Mendix has developed a migration toolkit for Mendix 6 and Mendix 7.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The MigrationToolkit is designed for applications using PostgreSQL databases only.
 {{% /alert %}}
 

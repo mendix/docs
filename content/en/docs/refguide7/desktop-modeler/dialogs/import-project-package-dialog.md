@@ -28,7 +28,7 @@ If you select this option, a new Team Server repository will be created to store
 
 If you select this option, the app will be uploaded to an existing Team Server repository. You need to select the repository in the **Team Server App** drop-down list.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This only works when the existing repository is empty.
 
@@ -38,7 +38,7 @@ This only works when the existing repository is empty.
 
 If you select this option, the app will be stored on a private server. You need to enter the **App repository address** to which you want to upload your app.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This option is only available when support for other servers is enabled in the [Preferences](/refguide7/preferences-dialog/#enabled) dialog box.
 
@@ -48,7 +48,7 @@ This option is only available when support for other servers is enabled in the [
 
 If you select this option, the app will be stored on the local disk of the computer that is running Desktop Modeler.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Select this option if you do not need to upload the new app to a version control server. 
 

@@ -17,7 +17,7 @@ To access the offline application, you need to have a mobile device that runs a 
 
 The first time an [offline-enabled](/refguide7/configuring-hybrid-mobile-apps-to-run-offline/) mobile application is run, it will retrieve all the data it requires to run offline from the server. After that, it will remain in offline mode until a synchronization event is triggered. Remaining in offline mode will significantly improve the performance of your application. Synchronization can be triggered by either the server or the user. The server will automatically resynchronize the app if it is opened after a new model is uploaded, in order to prevent inconsistencies. The user can trigger a synchronization by triggering a sync action, for example from an [action button](/refguide7/action-button/). 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 As of Mendix 7.6, the startup performance of offline apps skips data and file synchronizations on subsequent application startups. Mendix still does them, but only if your app has been redeployed in the meantime. In that case, synchronization consists of two steps: Uploading new and changed objects, and then recreating the database by downloading all necessary objects from the runtime.
 
@@ -31,7 +31,7 @@ Because synchronization depends on the regular runtime APIs, the models of the a
 
 Synchronization of files is only triggered by modifications to the attributes of the object, not by modifying the contents of the file itself.
 
-{{% alert type="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server.{{% /alert %}}
+{{% alert color="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server.{{% /alert %}}
 
 ## 4 Restrictions {#restrictions}
 

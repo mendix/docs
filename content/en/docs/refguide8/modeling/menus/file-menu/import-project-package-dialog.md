@@ -7,7 +7,7 @@ description: "Describes the Import Project Package process and Import Project Pa
 tags: ["studio pro", "import project package"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/import-project-package-dialog.pdf).
 {{% /alert %}}
 
@@ -47,7 +47,7 @@ For more information about the Mendix Team Server, see [Team Server](/developerp
 
 ### 2.2 Private Server {#private-server}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **Private server** option is only available when support for other SVN servers is enabled: **Edit** >**Preferences** > **Advanced** > **Enable private version control**. 
 

@@ -10,7 +10,7 @@ tags: ["Backup", "Restore", "Data transfer", "Migration", "Private Cloud", "Envi
 
 ## 1 Introduction
 
-{{% alert type="warning" %}}This feature is currently in preview mode - to collect feedback about the UX and features which should be added to the final version.{{% /alert %}}
+{{% alert color="warning" %}}This feature is currently in preview mode - to collect feedback about the UX and features which should be added to the final version.{{% /alert %}}
 
 The Private Cloud data migration tool allows you to:
 
@@ -28,7 +28,7 @@ The following database is supported:
 
 * PostgreSQL (any version [supported by Mendix for Private Cloud](/developerportal/deploy/private-cloud-supported-environments/))  
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 To remain compatible with Mendix Cloud V4 backups, other databases types (such as SQL Server) are not supported.
 
 To convert a database to a different type, you would need to use a temporary, intermediate environment with a PostgreSQL database and use the [built-in](/howto/data-models/migrating-your-mendix-database/) Mendix Runtime `SourceDatabase` features to convert the database to or from PostgreSQL.
@@ -65,7 +65,7 @@ Download and extract the tool for your operating system. If you are planning to 
 
 If your local machine has network access to the database and file storage, you can run it directly on your machine.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The tools will only work if you have access to the cluster. Setting up the network to access your cluster is out of the scope of this document. If it is not possible to connect to the database or file storage directly, a [jump pod](#jump-pod) also can be use this tools inside your cluster.
 {{% /alert %}}
 
@@ -155,12 +155,12 @@ spec:
 This configuration creates a pod which includes `pgtools` (PostgreSQL tools such as `pg_dump` and `pg_restore`), and a Service Account that can get the database credentials from an environment.
 If your database is using another PostgreSQL version (for example, PostgreSQL 13), change the `image: docker.io/bitnami/postgresql:12` to match the target PostgreSQL version (for example, `docker.io/bitnami/postgresql:13`).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Before importing a backup file into an environment, the environment should be stopped (scaled down to 0 replicas).
 Importing data into a running environment might cause the environment to stop working.
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 These instructions have been validated in Windows Subsystem for Linux and macOS and might not work in the Windows commandline terminal, Git Bash or Powershell. 
 {{% /alert %}}
 

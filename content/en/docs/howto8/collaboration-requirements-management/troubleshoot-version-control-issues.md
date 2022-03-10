@@ -49,7 +49,7 @@ Follow these steps:
 
 1.  Install [TortoiseSVN](https://tortoisesvn.net/), as suggested in [System Requirements](/refguide8/system-requirements/).
 
-	{{% alert type="warning" %}}Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are NOT compatible.<br/>
+	{{% alert color="warning" %}}Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are NOT compatible.<br/>
 	
 	Always use the version of TortoiseSVN that matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN, you will no longer be able to open it in Mendix.{{% /alert %}}
 
@@ -69,7 +69,7 @@ Follow these steps:
 
 1.  Install [TortoiseSVN](https://tortoisesvn.net/), as suggested in [System Requirements](/refguide8/system-requirements/).
 
-	{{% alert type="warning" %}}Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are NOT compatible.<br/>
+	{{% alert color="warning" %}}Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are NOT compatible.<br/>
 	
 	Always use the version of TortoiseSVN that matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN, you will no longer be able to open it in Mendix.{{% /alert %}}
 
@@ -127,7 +127,7 @@ ResolveIgnoreConflict.mpr.bak
 deployment
 ```
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The first five lines are the same and after that, the lists deviate.
 {{% /alert %}}
 
@@ -135,7 +135,7 @@ Merging the branch to the main line will result in the following information mes
 
 ![](/attachments/howto8/collaboration-requirements-management/troubleshoot-version-control-issues/mergesuccessfuldialog.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 A conflict is reported on the project *folder*. This usually means that there is a conflict on the `svn:ignore` property.
 {{% /alert %}}
 
@@ -143,7 +143,7 @@ To resolve a conflict on the `svn:ignore` property, perform these steps:
 
 1.  Install [TortoiseSVN](https://tortoisesvn.net/), as suggested in [System Requirements](/refguide8/system-requirements/).
 
-	{{% alert type="warning" %}}Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are NOT compatible.<br/>
+	{{% alert color="warning" %}}Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are NOT compatible.<br/>
 	
 	Always use the version of TortoiseSVN that matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN, you will no longer be able to open it in Mendix.{{% /alert %}}
 
@@ -160,7 +160,7 @@ To resolve a conflict on the `svn:ignore` property, perform these steps:
 
 	![](/attachments/howto8/collaboration-requirements-management/troubleshoot-version-control-issues/combinedignorelist.png)
 
-	{{% alert type="info" %}}This includes both the lines from the main line and from the branch. The order is not important.
+	{{% alert color="info" %}}This includes both the lines from the main line and from the branch. The order is not important.
 	{{% /alert %}}
 
 9. Click **OK** and then **OK** again to confirm the change.

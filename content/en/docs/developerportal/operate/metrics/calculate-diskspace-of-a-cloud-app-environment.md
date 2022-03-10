@@ -8,7 +8,7 @@ tags: ["Mendix Cloud", "cloud", "v3", "Disk Space"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
 {{% /alert %}}
 
@@ -16,7 +16,7 @@ Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be reti
 
 In this how-to you will learn how-to calculate the total amount of disk space in gigabytes (GB) on a Mendix Cloud version 3 environment for both app-node and db-node.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This how-to is meant for apps running on Mendix Cloud version **3** only.
 {{% /alert %}}
 

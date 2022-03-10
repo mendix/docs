@@ -54,7 +54,7 @@ These are the general feedback actions available on all the tabs of the **Feedba
 
 Clicking **Details** or the title of a feedback item opens the item's details page, where you can perform various actions for reviewing and processing a feedback item on this page. These actions are described below.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you need to use a link to a specific feedback item (for example, to ask someone else on your team to review it), you can use the URL `https://sprintr.home.mendix.com/link/showfeedback/{FeedbackID}` where `{FeedbackID}` is the feedback number – for example `382647` from the example above.
 {{% /alert %}}
 

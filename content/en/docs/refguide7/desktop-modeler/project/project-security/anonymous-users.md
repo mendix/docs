@@ -29,7 +29,7 @@ The sign-in microflow has two parameters.
 | AnonymousUser | Object of entity 'System.User' | The 'User' object of the anonymous user. This object will be automatically deleted after the execution of the sign-in microflow. |
 | SignedInUser | Object of entity 'System.User' | The 'User' object of the signed-in user. |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Clean up objects that were attached to the anonymous user and that you do _not_ transfer to the signed-in user. Since the anonymous user is deleted after running the sign-in microflow, you can use [delete behavior](/refguide7/associations/) to automatically clean objects that were attached to the anonymous user.
 
@@ -41,7 +41,7 @@ The sign-in microflow is executed when an end-user:
 2.  clicks a button for which she does not have access, which causes a sign-in screen to appear, and then
 3.  signs in to your application.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 An anonymous user in a web shop adds some items to her shopping cart and then clicks the 'Check out' button. A sign-in screen appears, and the user signs in. The sign-in microflow is executed and transfers the shopping cart of the anonymous user to the signed-in user.
 

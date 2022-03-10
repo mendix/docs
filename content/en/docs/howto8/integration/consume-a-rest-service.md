@@ -18,7 +18,7 @@ This how-to shows you how to do this using an example in which you create an app
 * Integrate with an existing system using a REST service
 * Call the REST service in a microflow
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Creating a published REST service on top of the system you want to integrate with is outside the scope of this how-to; for instructions on how to do this, refer to the configuration of your non-Mendix Platform.
 {{% /alert %}}
 
@@ -181,7 +181,7 @@ Congratulations! You can now start your app and get summaries from Wikipedia.
 
 **How to consume REST with Mendix Studio Pro 8**
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For Studio Pro v 8.15 and above, the **Call REST** dialog box has changed from what is shown in the video. You have to ensure that for **Output** you select **Yes** for **Store in variable** and then specify the **Variable name**.
 {{% /alert %}}
 

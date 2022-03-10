@@ -7,11 +7,11 @@ menu_order: 45
 tags: ["Deploy", "Tencent", "Environment", "Cluster", "Namespace"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/tencent-deploy.pdf).
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The Mendix Platform on Tencent Cloud is branded as **Siemens Low-Code Platform**.
 {{% /alert %}}
 
@@ -93,7 +93,7 @@ Click **Invite** to confirm the invitation
 
 ![](/attachments/developerportal/deploy/tencent-deploy/cluster-manager-invite.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When you invite a cluster manager, the user will have most of the access which the original cluster manager had, such as the abilities to add a member, change the permissions of the cluster member, and delete another cluster manager. 
 
 The only limitations are that:
@@ -151,7 +151,7 @@ The **Apps** tab of namespace details lists all the apps which are deployed to t
 
 If you are a team member of the app, click **Details** to go to the *Environment Details* page for that app.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can only see the environment details of an app if you are a member of the app team with the appropriate authorization.
 {{% /alert %}}
 
@@ -248,7 +248,7 @@ First you need to create an environment:
 
 2. A **UUID** will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 
-    {{% alert type="info" %}}You can change the UUID if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.{{% /alert %}}
+    {{% alert color="info" %}}You can change the UUID if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.{{% /alert %}}
 
 3. Enter **Environment Name**, the name for the environment. The environment name can only contain lowercase (latin) letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
 
@@ -260,7 +260,7 @@ First you need to create an environment:
 
     2. For production deployment, select **Production**. If you select **Production**, then you will be asked for the **Subscription Secret** which you received when you purchased Tencent resources.
 
-        {{% alert type="warning" %}}Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
+        {{% alert color="warning" %}}Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
 
 6. Click **Next**.
    
@@ -299,7 +299,7 @@ You will not be able to deploy to this environment until it has been fully prepa
 
 Before you can deploy your app, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 There is a limit of 200MB on the size of a deployment package which can be deployed on the Tencent Cloud.
 {{% /alert %}}
 
@@ -325,7 +325,7 @@ There is a limit of 200MB on the size of a deployment package which can be deplo
 
 7. Confirm the information message and you will be returned to the **Environments** page.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Alternatively, you can upload an existing MDA by clicking **Upload Package**.
 {{% /alert %}}
 
@@ -393,7 +393,7 @@ These are described in more detail below.
 
 Sometimes the page will not be automatically refreshed with the latest information. Click this button to update the information on the page.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Using the browser refresh button will take you away from this environments page, so use this button instead.
 {{% /alert %}}
 
@@ -582,7 +582,7 @@ This enables you to change the purpose of your app environment. You can label an
 
 For production deployment, select **Production**. If you select **Production**, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. For the differences between unlicensed/test apps and licensed apps, see the [Free App](/developerportal/deploy/mendix-cloud-deploy/#free-app) section in *Mendix Cloud*.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
 {{% /alert %}}
 
@@ -626,7 +626,7 @@ If you are using Mendix Operator version 1.5.0 or above, you can configure TLS f
 
 In the TLS pane, you can choose whether to **Apply Default Configuration** or a **Custom TLS Configuration**. If you apply the default configuration, then the configuration made when you ran the configuration script for the namespace will be used.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you are using a version of Mendix Operator before 1.5.0, the settings in this tab will have no effect and the default configuration will be applied.
 {{% /alert %}}
 
@@ -682,7 +682,7 @@ To add this setting:
 2. Switch to the **Runtime** tab.
 3. Add a **Custom Runtime Setting**: use `ApplicationRootUrl` as the **Setting** name and the URL you copied from **App URL** as the **New value**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you change **App URL** in the **General** tab, you should update the `ApplicationRootUrl` value as well.
 {{% /alert %}}
 

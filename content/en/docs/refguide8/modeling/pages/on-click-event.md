@@ -10,7 +10,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/on-click-event.pdf).
 {{% /alert %}}
 
@@ -146,7 +146,7 @@ If the microflow is triggered within a grid and has an object list parameter, th
 | Non-Blocking | A progress bar is shown, but the end-user can continue working. |
 | Blocking | A progress bar is shown and the end-user must wait until the microflow is done. |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Non-blocking progress bars are shown with a delay of half a second. If the execution of your microflow takes less than half a second, the progress bar will not be shown at all. Blocking progress bars are shown immediately.
 {{% /alert %}}
 

@@ -19,7 +19,7 @@ Via this menu you can also enable or disable the [full screen mode](#full-screen
 
 You can change the default layout of panes and arrange them in the layout you like.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Note that this section describes the behavior of panes, not the behavior of documents in the working area. For more information on the behavior of documents open in the working area, see the [Document Tabs](/refguide/studio-pro-overview/#documents) section in *Studio Pro Overview*.
 
@@ -41,7 +41,7 @@ When you drag a pane, you can see arrows that indicate where you can position th
 
    5. New pane as a new tab
 
-      {{% alert type="info" %}}If you try to position the pane as a new pane inside the working area, it will be opened as a dialog box.
+      {{% alert color="info" %}}If you try to position the pane as a new pane inside the working area, it will be opened as a dialog box.
       
       {{% /alert %}}
 

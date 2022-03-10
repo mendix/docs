@@ -9,7 +9,7 @@ tags: ["secure", "outgoing", "encryption", "TLS/HTTPS", "proxy", "SSH", "VPN"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/securing-outgoing-connections-from-your-application.pdf).
 {{% /alert %}}
 
@@ -61,7 +61,7 @@ This scenario is identical to scenario 4, with one exception: your app includes 
 
 ### Scenario 6 - VPN
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 VPN is not supported at all in Mendix Cloud V4.
 
 VPN is deprecated in Mendix Cloud V3. Although you can still set it up, you will not receive support from Mendix for a VPN in Mendix Cloud V3, or for using VPN in deployments to other clouds.

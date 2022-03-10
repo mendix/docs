@@ -49,11 +49,11 @@ These settings can be configured as follows:
 
 You can migrate databases using Studio Pro, the Service Console, or m2ee-tools. The Service Console gives you the advantage of seeing a progress bar during the copy process, which is handy if you copy a lot of data which takes a long time to execute.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Database migration is handled by Mendix as a normal database synchronization phase during the start-up process of an app. When using m2ee-tools, it is possible that during the start-up process you will get to see messages like ‘The database has to be synchronized’ or you will see an empty message. You can ignore these messages — the database migration will be performed.
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Before the data copying process starts, the main database structure will be generated based on the source database structure. This is necessary to make sure all the data is copied without any problems, especially in cases where the source database has a larger element value than what the current domain model specifies.
 
 As of version [8.1](/releasenotes/studio-pro/8.1/), the source database structure and data do not change as part of the migration.
@@ -84,7 +84,7 @@ To do this, perform the following steps:
 5. Ensure that PostgreSQL is running locally on the correct port.
 6. Run your app locally. Provided your PostgreSQL database is empty, your app will configure the database to support the domain model of your app.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you already have the database, for example a test database in the cloud, you can also restore this to a local PostgreSQL database. Instructions for doing this can be found in [Restore a Backup Locally](/developerportal/operate/restore-backup-locally/).
 {{% /alert %}}
 

@@ -90,7 +90,7 @@ To create a new widget, follow these steps:
 
 Open the widget source directory, which is the directory you entered when creating the widget. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Because the boilerplate is used, you will have a widget that is compliant with the standards defined for a GitHub custom widget repository.
 

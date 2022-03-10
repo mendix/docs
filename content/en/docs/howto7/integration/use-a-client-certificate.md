@@ -11,7 +11,7 @@ Some services require you to authenticate using a client certificate. This how-t
 
 Let's assume that you already have an app that calls a service. For details on how to configure this, have a look at [How to Consume a REST Service](/howto7/integration/consume-a-rest-service/) or [How to Consume a Simple Web Service](/howto7/integration/consume-a-simple-web-service/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Client certificates for REST services were introduced in version 7.2.0.
 
@@ -53,7 +53,7 @@ A complete configuration may look like this:
 
 You can use an empty path for `ClientCertficateUsages` to specify that you do not want to use a client certificate, even when the server accepts one. To do this, you need to add the **Value** `{"<endpoint>":""}` (replace `<endpoint>` with the actual endpoint).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Be sure to drop `https://` from a URL endpoint.
 
@@ -65,7 +65,7 @@ The following sample uses client certificate `Mx1.pfx` for `WebService1` and no 
 { "Module.WebService1": "D:\\App\\Mx1.pfx", "Module.WebService2": "" }
 ```
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The possibility to use an empty path was introduced in Mendix version 7.19.0.
 
@@ -73,7 +73,7 @@ The possibility to use an empty path was introduced in Mendix version 7.19.0.
 
 ## 4 Running in the Cloud
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You will only be able to follow the steps below if you have the correct access rights for the client certificates.
 

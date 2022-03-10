@@ -9,7 +9,7 @@ The template grid shows a list of objects in a tile view. For example, a templat
 
 Like data grid rows, single tiles do not have their content updated. For example, a data view inside a tile is not updated via the **Refresh in client** setting in a microflow action. Refreshing the template grid entity refreshes the whole grid.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/data-widgets/template-grid/template-grid.png)
 
@@ -47,7 +47,7 @@ See [Sort Bar](/refguide7/sort-bar/).
 
 This property indicates whether the control bar will be visible in the end user interface. The control bar also includes the paging buttons.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Even if the control bar is invisible there can still be a default button that is triggered by (double) clicking a row. See the property 'Default button trigger' and [grid buttons](/refguide7/control-bar/) for more information.
 

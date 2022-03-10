@@ -16,7 +16,7 @@ The domain model editor uses the following symbols for visualization on entities
 | --- | --- |
 | ![](/attachments/refguide7/desktop-modeler/domain-model/entities/917594.png) | This entity has one or more event handlers. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Let us say you have a collection of CDs like the one in the table below.
 
@@ -50,7 +50,7 @@ An entity can be a more specialized version of a general entity. This means that
 
 The generalization specifies the entity of which this entity derives her properties (attributes, associations, events, etc.). This is used when entities have common attributes and can be generalized using a super entity. Using this feature it is possible to derive functionality from the System module like images from the entity 'Image' and files from the entity 'FileDocument'. In object oriented programming (OOP) the generic term for generalization and specialization is called inheritance.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This property can be used in a situation where one has an entity 'Student' and an entity 'Professor' which have some generic properties. They both have a name, telephone number and email address and can be a member of one or more courses. Both entities are generalized in the entity 'Member'. Contrary this means that the entity 'Member' can be specialized in the entity 'Student' and the entity 'Professor'.
 ![](/attachments/refguide7/desktop-modeler/domain-model/entities/917900.png)
@@ -65,7 +65,7 @@ The image property can be used to associate the entity with an image. In the dom
 
 Define whether instances of this entity can be stored in the database. See [persistability](/refguide7/persistability/) for more information about this property. Non-persistable entities are painted orange instead of blue to indicate the difference.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/domain-model/entities/4325380.png)
 
@@ -84,7 +84,7 @@ This property defines whether the entity contains the system attribute 'createdD
 
 _Default value:_ False
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
 {{% /alert %}}
 
@@ -99,7 +99,7 @@ This property defines whether the entity contains the system attribute 'changedD
 
 _Default value:_ False
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
 {{% /alert %}}
 

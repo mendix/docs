@@ -71,7 +71,7 @@ In the previous section you have set up a basic data structure and created some 
     a. For **Entity**, select **Order**_<br>
     b. For **List**, enter **OrderList**<br>
 
-	{{% alert type="info" %}}With the currents settings your retrieve action gets every order in the database, using the XPath expression in the following steps you will filter the results that come back from the database.
+	{{% alert color="info" %}}With the currents settings your retrieve action gets every order in the database, using the XPath expression in the following steps you will filter the results that come back from the database.
 	{{% /alert %}}
 
 13.  Add the following XPath expression in the XPath constraint field: `[OrderStatus = 'Processing']`. This expression will filter the list to only orders with the status **Processing**.
@@ -79,7 +79,7 @@ In the previous section you have set up a basic data structure and created some 
 
 	![](/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581088.png)
 
-	{{% alert type="info" %}}With the currents settings your retrieve action gets all the 'Processing' orders in the database. In the next section you will edit this list of orders.
+	{{% alert color="info" %}}With the currents settings your retrieve action gets all the 'Processing' orders in the database. In the next section you will edit this list of orders.
 	{{% /alert %}}
 
 You should see a microflow like this:
@@ -98,7 +98,7 @@ In the previous section you retrieved a list of orders with the status 'Processi
 
 	![](/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581086.png)
 
-	{{% alert type="info" %}}A loop is used to iterate over a list of objects. For each object the flow inside the loop is executed. For each object the flow inside the loop is executed. The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in microflows, with the exception of start and stop events. Additionally, a loop (and only a loop) can contain break events and continue events. The iterator, which looks the same as a parameter, represents the current object in the list for each iteration. Beneath it the name of the object is shown in black and the entity type of the object in blue. For more information, see [Loop](/refguide/loop/).
+	{{% alert color="info" %}}A loop is used to iterate over a list of objects. For each object the flow inside the loop is executed. For each object the flow inside the loop is executed. The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in microflows, with the exception of start and stop events. Additionally, a loop (and only a loop) can contain break events and continue events. The iterator, which looks the same as a parameter, represents the current object in the list for each iteration. Beneath it the name of the object is shown in black and the entity type of the object in blue. For more information, see [Loop](/refguide/loop/).
 	{{% /alert %}}
 
 3.  Double click the loop activity and select the **OrderList** to iterate over.
@@ -164,7 +164,7 @@ In the previous section you iterated over a filtered list of objects using a 'Lo
     a. For **Variable** select **CalculatedTotalPrice**.<br>
     b. For **Value** enter `$CalculatedTotalPrice + $IteratorOrder/TotalPrice`.<br>
 
-	{{% alert type="info" %}}By iterating over the list, the price of every order will be added one by one to the 'CalculatedTotalPrice' variable
+	{{% alert color="info" %}}By iterating over the list, the price of every order will be added one by one to the 'CalculatedTotalPrice' variable
 	{{% /alert %}}
 
     ![](/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581067.png)

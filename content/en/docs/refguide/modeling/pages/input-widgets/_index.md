@@ -55,7 +55,7 @@ There are several different input elements, these are used for different [data t
 
     ![Input reference set selector showing the name attribute of associated products](/attachments/refguide/modeling/pages/input-widgets/input-reference-set-selector.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For more information on data types, see [Data Types](/refguide/data-types/).
 
 For more information on associations and their properties, see [Associations](/refguide/associations/).

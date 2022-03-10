@@ -7,7 +7,7 @@ parent: "pages"
 
 ## 1 Introduction
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This document describes the properties of a page. For details on what pages are for and what kind of widgets can be placed on them, see [Pages](/refguide7/pages/).
 
@@ -15,7 +15,7 @@ This document describes the properties of a page. For details on what pages are 
 
 Pages define the end-user interface of a Mendix application. Every page is based on a [layout](/refguide7/layout/). A page fills the "gaps" defined by a layout with widgets such as the [data view](/refguide7/data-view/) and [data grid](/refguide7/data-grid/).
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 From Mendix version 7.16 it is possible to see a preview of a page you are designing by clicking the **View mode** button in the page editor. You can return to editing the page by clicking **Edit mode**.
 
 ![Edit mode and View mode buttons](/attachments/refguide7/desktop-modeler/pages/page/view-mode.png)

@@ -59,7 +59,7 @@ To configure this widget, follow these steps:
             * **RGBA**
         * **Default colors** – defines a list of pre-defined colours used with the color picker
     
-            {{% alert type="info" %}}The **Default colors** property is only available if the **Picker type** property is set to **Block**, **Sketch**, **Circle**, **Compact**, or **Twitter**.{{% /alert %}}
+            {{% alert color="info" %}}The **Default colors** property is only available if the **Picker type** property is set to **Block**, **Sketch**, **Circle**, **Compact**, or **Twitter**.{{% /alert %}}
     
             * **New** – opens the **Edit Default Colors Item** dialog box where you can create a new default color
                 * **Color** – defines the default color in hex, RGB, or RGBA format

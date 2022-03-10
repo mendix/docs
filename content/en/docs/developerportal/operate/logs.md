@@ -16,7 +16,7 @@ The page is accessed through the **Logs** menu item in the left-hand menu.
 
 ## 2 Apps Deployed to Mendix Cloud Version 4
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This is the default Mendix deployment for a licensed app.
 {{% /alert %}}
 
@@ -24,7 +24,7 @@ For apps deployed to Mendix Cloud Version 4 (v4), you can select which environme
 
 You can view the live (current) log, download it, or view and download an archived log.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The live log is displayed in the local time of the browser. All other logs have timestamps in UTC.
 {{% /alert %}}
  
@@ -55,7 +55,7 @@ View Current Log | view the current log in a new browser tab
 
 For apps deployed to SAP Business Technology Platform (SAP BTP) you can see the logs using Kibana.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To make full use of Kibana and see proper mapping of the log level, multiline log messages, and stack traces, you will need to configure the *SAP Logger Connector* in your app. For more information see [SAP Logger Connector](/partners/sap/sap-logger/).
 {{% /alert %}}
 
@@ -67,7 +67,7 @@ You may be asked to provide your SAP credentials before you can see the log in K
 
 The Kibana user guide is available here: [Kibana User Guide](https://www.elastic.co/guide/en/kibana/current/index.html) and within Kibana. More information on how Kibana is integrated with SAP BTP is available on the SAP help site here: [Application Logging for the Cloud Foundry Environment](https://help.sap.com/viewer/ee8e8a203e024bbb8c8c2d03fce527dc/Cloud/en-US/68454d44ad41458788959485a24305e2.html).
 
-{{% alert type="info" %}}For apps deployed to environments created before 22 October 2018, the *Application Logging (application-logs)* service will not have been bound to your app automatically. To resolve this you can either:
+{{% alert color="info" %}}For apps deployed to environments created before 22 October 2018, the *Application Logging (application-logs)* service will not have been bound to your app automatically. To resolve this you can either:
 
 1. Create a new environment and deploy your app there.
 

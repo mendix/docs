@@ -11,7 +11,7 @@ With the report parameter, the user can specify a parameter of the dataset that 
 
 Note that if you have a report parameter widget on the page, you must also add a [Report Button](/refguide7/report-button/) widget so that it is possible for the user to regenerate the report after specifying the parameter.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 A drop-down menu can be used for a dataset parameter of any type except DateTime. DataTime parameters can be filtered by a [Report Date Parameter](/refguide7/report-date-parameter/).
 

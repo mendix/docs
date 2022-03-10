@@ -29,7 +29,7 @@ A term may not already be included in this guide for the following reasons:
 * The term is outdated (meaning, usage of it has been decided against; for examples, see [Terminology History](/product-naming/terminology-history/))
 * The term should not be used in customer-facing resources
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This guide should not give insights into the product roadmap or internal company operations.
 {{% /alert %}}
 
@@ -46,11 +46,11 @@ The *Product Naming Guide* is divided into the following documents:
 
 Details and cross-references where necessary.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Guidelines for usage.
 {{% /alert %}}
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 Example usage.
 {{% /alert %}}
 

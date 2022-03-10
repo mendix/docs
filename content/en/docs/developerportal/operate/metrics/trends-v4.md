@@ -14,7 +14,7 @@ tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
 
 To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs of both your app and its environment. These graphs show performance trends of your apps in the paid editions of the Mendix Cloud. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This document describes the trends graphs available in Mendix Cloud v4. If your app is deployed to the deprecated Mendix Cloud v3, please refer to [Trends in Mendix Cloud v3](/developerportal/operate/trends/).
 
 If you don't know which Mendix Cloud version you are using, you can find out by following the instructions in [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region/).
@@ -24,7 +24,7 @@ If you don't know which Mendix Cloud version you are using, you can find out by 
 
 To view the **Trends**, you must have permission to **Access the Monitoring**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Only the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) is allowed to grant node permissions.
 
@@ -109,7 +109,7 @@ Additional information about request handlers is available in the *Requests* sec
 
 In the **Object cache** graph you can monitor the number of Mendix Objects that live in memory.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This metric is only available for apps built with Mendix versions 6 and below. Mendix versions 7 and above use a stateless runtime and so have no object cache. See the [Mendix 7.0 Release Notes](/releasenotes/studio-pro/7.0/) for more information.
 {{% /alert %}}
 
@@ -215,7 +215,7 @@ The **Application node CPU usage** graph shows the CPU utilization in percentage
 
 ![](/attachments/developerportal/operate/metrics/trends-v4/app-cpu.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 CPU usage of the database is shown in [Database Node CPU Usage](#Trends-dbcpu), below.
 {{% /alert %}}
 
@@ -241,7 +241,7 @@ The disk usage graph shows only the disk usage inside the container. This is usu
 
 In this section you will find the statistics about the database that the application uses.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If you are using the [Basic License](/developerportal/deploy/basic-package/) you will only see the first three graphs as these are the ones which show information specific to your app.
 {{% /alert %}}
 
@@ -304,7 +304,7 @@ Rollbacks appearing during normal operation indicate a problem and should be inv
 
 The **Number of database connections** graph shows the number of connections to the PostgreSQL server.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) as you are using a private schema on a shared database server.
 {{% /alert %}}
 
@@ -318,7 +318,7 @@ The standard configuration sets a maximum of 50 connections per instance. The gr
 
 The **Database node operating system memory** graph shows the distribution of operating system memory that is available for this server.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) as you are using a private schema on a shared database server.
 {{% /alert %}}
 
@@ -340,7 +340,7 @@ The **Database node CPU usage** graph shows the amount of CPU usage over time, a
 
 This graph is normalized so that 100% is the full capacity of the database node. This is the figure reported by the database node itself, so however many CPUs the database node has the graph will peak at 100%.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) as you are using a private schema on a shared database server.
 {{% /alert %}}
 
@@ -350,7 +350,7 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 
 The **Database node disk throughput** graph shows the amount of data that is being read from and written to disk.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) as you are using a private schema on a shared database server.
 {{% /alert %}}
 
@@ -362,15 +362,15 @@ If you see large values here which do not immediately drop back again, it may in
 
 The **Database node disk usage (in bytes)** graph displays both used storage (the absolute amount of data that is stored on disk), and free space (the remaining space on the database node). When hovering over the graph, you will also see the total size of your database.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) as you are using a private schema on a shared database server.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The units on the graph are mebibytes. One gibibyte is 1024 mebibytes, so if the total storage of your database is 10 GiB, it is 10240 MiB, and will appear like this on the graph.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The used storage metric was added in September 2020. The used storage metric will not be present on graphs for times before September 2020. When hovering over the graph for times before September 2020, the value will be shown as "NaN". This is normal.
 {{% /alert %}}
 
@@ -380,7 +380,7 @@ The used storage metric was added in September 2020. The used storage metric wil
 
 The **Database node disk IO/s** graph shows the *number* of disk read and write operations that are done from and to the disk storage. It does not show the amount of data that was transferred.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) as you are using a private schema on a shared database server.
 {{% /alert %}}
 
@@ -397,7 +397,7 @@ Value | Explanation
 
 The **Database node disk latency** graph shows the average waiting times for disk operations to complete.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) as you are using a private schema on a shared database server.
 {{% /alert %}}
 
@@ -414,11 +414,11 @@ Value | Explanation
 
 ### 5.11 Database IOPS Burst Balance {#Trends-dbmxdatabaseburstbalance}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) as you are using a private schema on a shared database server.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Databases larger than 1,000 GiB have a base performance that is equal to or greater than the maximum burst performance. This means depleting the Database IOPS Burst Balance will not affect their performance.
 {{% /alert %}}
 

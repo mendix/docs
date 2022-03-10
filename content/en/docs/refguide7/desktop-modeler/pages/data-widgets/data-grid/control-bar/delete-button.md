@@ -4,7 +4,7 @@ url: /refguide7/delete-button/
 parent: "control-bar"
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This button was removed in Mendix 7.17. Use a normal [Action button](/refguide7/action-button/) instead.
 
@@ -32,7 +32,7 @@ The delete button allows end-users to delete objects from the database that are 
 
 ## Visibility properties
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Conditional visibility settings were added in version 5.10.0.
 {{% /alert %}}
 

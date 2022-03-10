@@ -6,13 +6,13 @@ menu_order: 4
 tags: ["studio pro", "continue event", "event", "loop"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/continue-event.pdf).
 {{% /alert %}}
 
 ## 1 Introduction
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Continue events can only be used inside [loops](/refguide8/loop/).
 

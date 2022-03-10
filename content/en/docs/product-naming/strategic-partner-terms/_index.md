@@ -19,11 +19,11 @@ For more information on strategic partners, see:
 
 Details and cross-references where necessary.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Guidelines for usage.
 {{% /alert %}}
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 Example usage.
 {{% /alert %}}
 
@@ -31,13 +31,13 @@ Example usage.
 
 ### ATS Helper
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Use full name (with "ATS") and capitalize in all instances.
 {{% /alert %}}
 
 ### ATS Recorder
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Use full name (with "ATS") and capitalize in all instances.
 {{% /alert %}}
 
@@ -49,7 +49,7 @@ This is the name of the Mendix product that SAP is selling.
 
 This can sometimes be shortened to "SAP RAD by Mendix."
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Use the full name in the SAP context.
 {{% /alert %}}
 
@@ -61,6 +61,6 @@ This was formerly *SAP Cloud Platform Rapid Application Development by Mendix* a
 
 Text and descriptions for MindSphere should be taken from [This is MindSphere!](https://siemens.com/mindsphere).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Note the capitalized "S" in "MindSphere."
 {{% /alert %}}

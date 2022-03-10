@@ -19,7 +19,7 @@ This how-to explains how to do the following:
 
 In this section, you will learn how to download the necessary modules from the Mendix Marketplace. The modules required for this process are [Mx Model Reflection](/appstore/modules/model-reflection/) and [Excel Exporter](/appstore/modules/excel-exporter/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The Mx Model Reflection module enables your app to obtain information about its domain model (entities and attributes) and microflow definitions at runtime.
 {{% /alert %}}
 
@@ -36,7 +36,7 @@ To download the modules, follow these steps:
 	![](/attachments/howto8/integration/using-the-excel-exporter/exporter.png)
 	
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Depending on the layout selected when the project was created, errors in Studio Pro may arise due to the new module's default layouts. To correct this, open each page that has an error and update the layout to the desired layout within the app.
 {{% /alert %}}
 
@@ -82,7 +82,7 @@ To run the MxModelReflection sync follow these steps:
 
 In this section, you will learn how to create a basic Excel export template within your app. This section will cover an overview of the various configuration items to enable you to start building the desired templates.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The Excel Exporter has many options that allow the configurations to be as simple or complex as the user desires. This how-to will go over the basics to get you started, but building the desired template will vary according to your requirements.		
 {{% /alert %}}
 
@@ -96,7 +96,7 @@ To set up a template, follow these steps:
 4. Click the **New** to create a new template.
 5.  Configure the **Filename** (without extension) to be the default file name when the template is used. This is the **Name** by which the template can be identified.
 
-	{{% alert type="info" %}}The file name can always be changed when the template is used within a microflow.
+	{{% alert color="info" %}}The file name can always be changed when the template is used within a microflow.
 	{{% /alert %}}
 
 6.  Configure the **Input Object** to be the file document entity that is associated to your entity to be exported.
@@ -118,20 +118,20 @@ To create the worksheet layout, follow these steps:
 3.  Configure the **Row Object** that you want to export and set the reference to the template input object (if input object is used). Each object of this entity type will be saved as a row in the worksheet.
 4.  Configure the **Start retrieved data at row** to set the ordinal number in which the data should be exported.
 
-	{{% alert type="info" %}}This setting will possibly trim the result set being exported, as the export will go from this value to the end of the list of data
+	{{% alert color="info" %}}This setting will possibly trim the result set being exported, as the export will go from this value to the end of the list of data
 	{{% /alert %}}
 
 5.  Select if the export should export distinct only or allow duplicate data
 6.  Specify the **Column default width** and **Row default height** (or leave them as defaults).
 7.  Specify if the extract will **Use Static Data** or not:
 
-	{{% alert type="info" %}}If static data is used, that will be configured below.
+	{{% alert color="info" %}}If static data is used, that will be configured below.
 	{{% /alert %}}
 
 8.  Specify if the **Default text style** that will denote the pre-defined style to be applied to the exported data.
 9.  Specify if the **Default header text style** that will denote the pre-defined style to be applied to the header data:
 
-	{{% alert type="info" %}}Specifying styles are addressed in the section below.
+	{{% alert color="info" %}}Specifying styles are addressed in the section below.
 	{{% /alert %}}
 
 ### 6.3 Configuring the Dynamic Column Data
@@ -213,7 +213,7 @@ To allow you to enter some data, you will need to generate some pages and then e
 
 To run the microflow you created above, you will need to create another microflow which is added to the navigation. This microflow should create a **PolicyDoc** object and associate it with existing **Policy** objects, making sure that all the associations are committed, and pass this PolicyDoc as the parameter to the microflow. This will export all the Policy objects you associated with the PolicyDoc.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you create a **PolicyDoc** with *no* associations to **Policy** objects, you will export an empty spreadsheet with the structure defined in the template.
 {{% /alert %}}
 

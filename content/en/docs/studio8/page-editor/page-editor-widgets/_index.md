@@ -99,7 +99,7 @@ To add an Marketplace widget, do the following:
 
 The widget is now added to your app, you can simply drag and drop it to the page to use it. You can also view settings of this widget in the **App Settings**.  For more information on managing widgets in your app, see [Settings](/studio8/settings/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Some similar widgets are packaged together: downloading one of these widgets will cause a number of other widgets to be downloaded as well. For example, downloading a line chart will give you all chart widgets.
 

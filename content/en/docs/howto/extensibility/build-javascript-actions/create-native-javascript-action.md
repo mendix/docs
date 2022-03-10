@@ -38,7 +38,7 @@ To build NFC JavaScript actions, you will do the following:
 1. Make two NFC JavaScript actions.
 1. Implement the NFC Scanner in your app.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This tutorial's commands assume your software is installed in the following places:
 
 * GitHub working folder: **C:\github\**
@@ -110,7 +110,7 @@ Now you will build a native custom developer app and install it on your phone:
 
 Your apps are now available in the *C:\native-builder\builds\* folder, where you will find *Native-NFC-App-Android-1.zip* for an Android app and *Native-NFC-App-iOS-1.zip* for an iOS app.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 1. During a build, the free version of the App Center will time out if the build exceeds 30 minutes.
 1. By default, Native Builder builds both an iOS and Android apps. To build faster, for one platform specifically, add the parameter `--platform android` or `--platform ios` to the `build` command.
@@ -233,7 +233,7 @@ The dependency is split into two parts: the native device part, and the client J
 1. Make sure *HasNFCSupport.js* is in this folder so you know you are in the right place.
 1. Install the dependency with the command `npm install react-native-nfc-manager@1.2.2`.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This will create a **node_module** folder inside your **actions** folder. There is a known issue that when you try to commit the *node_modules* folder using Apache Subversion, there could be problems if your commit contains a large number of files. To solve this, try removing unnecessary files before committing.
 
@@ -362,7 +362,7 @@ To write your own NFC tag, do the following:
 
 	{{% image_container width="250" %}}![write nfc tag](/attachments/howto/extensibility/build-javascript-actions/create-native-javascript-action/nfc-tools-write-tag.png){{% /image_container %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This dialog box is your phone's operating system recognizing the NFC tag. On Android devices, you will see a success message anytime you touch an NFC tag to your device. What you truly need to test is your app's NFC scanning after tapping its button. You will be able to do this on all platforms: on iOS things work as expected, and on Android an app scanning NFC takes priority over the operating systems' scanning.
 
@@ -372,7 +372,7 @@ This dialog box is your phone's operating system recognizing the NFC tag. On And
 
 Now that you added NFC capability to your app's source code, you must rebuild your native mobile app and reinstall it on your device to use the new JavaScript actions.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Making software is an iterative process. If you integrate your own module or build your own actions, it is highly recommended to set up a system which allows you to iterate quickly. For more information on setting up a local development environment, see the [Advanced Usage](/refguide8/native-builder/#advanced-usage) section of the *Native Builder Reference Guide*. This will require an Apple Mac with [XCode](https://developer.apple.com/xcode/) for iOS and [Android Studio](https://developer.android.com/studio) for Android devices.
 
@@ -490,7 +490,7 @@ Until this section, you have used a custom developer app to validate your applic
 
 For the full explanation on how to build, sign, and distribute your app to an app store see [Deploy Your First Mendix Native Mobile App with the Native Builder CLI](/howto8/mobile/deploying-native-app-cli/) as well as the tutorial's subsequent sections.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The Native Builder will locally run MxBuild. The output is a *bundles.js* file which will be packaged with your application. Therefore, any update on your Mendix model requires a new build. You are not building a development app that updates automatically.
 

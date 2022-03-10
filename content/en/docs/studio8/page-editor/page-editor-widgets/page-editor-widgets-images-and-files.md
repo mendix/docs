@@ -157,7 +157,7 @@ For example, you would like to allow users upload images only when their *email 
 
 #### 3.1.3 Controls Section
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **Controls** section is available for **File Manager** only. 
 

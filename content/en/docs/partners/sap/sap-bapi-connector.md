@@ -39,7 +39,7 @@ To use BAPI Connector for SAP Solutions in your Mendix application to call the B
 2. Test the connection to the SAP Backend [using the microflow `TestConnection`](#test-connection).
 3. Add the microflow `Create_BAPIExplorer` to the navigation of your app to allow you to search for the BAPI(s) you need.
 
-    {{% alert type="info" %}}Searching for BAPIs is provided as a microflow rather than a separate app so that you can set up the JCo destination securely. You should not give access to this microflow to any end-users of an app you build using the Mendix BAPI Connector.{{% /alert %}}
+    {{% alert color="info" %}}Searching for BAPIs is provided as a microflow rather than a separate app so that you can set up the JCo destination securely. You should not give access to this microflow to any end-users of an app you build using the Mendix BAPI Connector.{{% /alert %}}
 
 4. Search for the BAPI(s) you need, download the schema(s), and [generate Mendix BAPI module(s)](#create-bapi-module) using the [Model Creator for SAP Solutions](https://sapmodelcreator.mendixcloud.com/link/bapi).
 5. Import the generated Mendix BAPI module .mpk to your Mendix application using the instructions in [Import & Export Objects](/howto/integration/importing-and-exporting-objects/). A module with the same name as the BAPI is added to the project.
@@ -59,7 +59,7 @@ To use BAPI Connector for SAP Solutions in your Mendix application to call the B
 
     * Use the response in further actions. In this microflow, display details on a Mendix page called ‘MaterialDetails’.
 
-    {{% alert type="info" %}}We recommend that you always use the `GetJcoDestination` action before using the BAPI. If the destination has already been registered it will not be registered again.{{% /alert %}}
+    {{% alert color="info" %}}We recommend that you always use the `GetJcoDestination` action before using the BAPI. If the destination has already been registered it will not be registered again.{{% /alert %}}
 
     More information on microflow actions can be found in the section [Microflow Actions](#microflow-actions).
 
@@ -289,6 +289,6 @@ Use [Model Creator for SAP Solutions](https://sapmodelcreator.mendixcloud.com/) 
 2. The entity description provided by the BAPI is not visible in the Model Creator for SAP Solutions.
 3. The BAPI Connector for SAP Solutions is limited to discovering and using a SAP BAPI. It cannot be used for invoking Remote-enabled Function Modules (RFMs).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Minimum 1GB memory per instance is required to run application on SAP BTP.
 {{% /alert %}}

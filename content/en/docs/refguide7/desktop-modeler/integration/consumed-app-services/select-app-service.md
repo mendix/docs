@@ -4,7 +4,7 @@ url: /refguide7/select-app-service/
 parent: "consumed-app-services"
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 App services have been deprecated in version 7.23.4 and are marked for removal. Use a [consumed web service](/refguide7/consumed-web-services/) to consume existing app services.
 {{% /alert %}}
 

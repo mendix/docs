@@ -10,7 +10,7 @@ tags: ["Cloud Foundry", "Deploy", "studio pro"]
 
 The **Edit Cloud Foundry Settings** menu option allows you to specify the information necessary for deploying your app to a Cloud Foundry instance.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 More information on deploying to Cloud Foundry can be found in [Cloud Foundry: Deploy](/developerportal/deploy/cloud-foundry-deploy/).
 {{% /alert %}}
 

@@ -57,7 +57,7 @@ To download a backup of a licensed app, follow these steps:
 7. Select a backup and click **Download Backup**.
 8. Select the backup type **Full Snapshot**, **Database Only**, or **Files Only** and click **Start**.
 
-    {{% alert type="info" %}}If a backup archive has been prepared recently, the **Show URL** and **Download** buttons will be active and you can download it immediately.{{% /alert %}}
+    {{% alert color="info" %}}If a backup archive has been prepared recently, the **Show URL** and **Download** buttons will be active and you can download it immediately.{{% /alert %}}
     
 9. Once the download archive has been prepared, you can do one of the following:
 

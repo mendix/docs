@@ -8,7 +8,7 @@ tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The Deploy API only works for apps which are deployed to the Mendix Cloud.
 {{% /alert %}}
 
@@ -28,7 +28,7 @@ As APIs are designed for automated systems, the Deploy API does not require the 
 
 ## 3 API Calls
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Only _Retrieve apps_, _Create Free App Environment_ and _Retrieve app_ API calls are supported for Free Apps. Please note that most API calls — with the exception of _Upload Package_ — require that the _Content-Type_ header be set to _application/json_.
 {{% /alert %}}
 
@@ -38,7 +38,7 @@ Only _Retrieve apps_, _Create Free App Environment_ and _Retrieve app_ API calls
 
 Retrieves all licensed apps and Free Apps to which the authenticated user has access as a regular user.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The [Nodes](/developerportal/deploy/node-permissions/#nodes) screen in the Developer Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps, while the [My Apps](/developerportal/#my-apps) screen shows both licensed apps and Free Apps.
 {{% /alert %}}
 
@@ -547,7 +547,7 @@ An object with the following key-value pairs:
 
 ### 3.10 Upload Package{#upload-package}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When uploading large (>300MB) packages, this API can time out. In this case, you should switch to the [V2 version of this API](/apidocs-mxsdk/apidocs/deploy-api-2/#upload-package).
 {{% /alert %}}
 

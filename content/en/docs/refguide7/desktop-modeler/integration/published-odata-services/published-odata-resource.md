@@ -3,7 +3,7 @@ title: "Published OData Resource"
 url: /refguide7/published-odata-resource/
 parent: "published-odata-services"
 ---
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 This document describes the properties of a published OData resource. If you want a general overview of OData services, you can check the [Published OData Services](/refguide7/published-odata-services/) documentation.
 

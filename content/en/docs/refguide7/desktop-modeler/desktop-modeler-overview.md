@@ -17,7 +17,7 @@ The Mendix Desktop Modeler is the tool for creating, viewing, and editing your M
 
 This documentation describes the graphical user interface of the Modeler. The rest of the documentation follows the structure of the project explorer.
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 
 Press <kbd>F1</kbd> while in the Desktop Modeler to quickly jump to the right page in the documentation.
 

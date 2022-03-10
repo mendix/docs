@@ -14,7 +14,7 @@ In this document, we explain how to solve complex consistency errors that can oc
 
 An example of a consistency error is when you did not select a page for a new user task. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This document does not describe *all* the errors, as there are a lot of errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
 

@@ -8,7 +8,7 @@ tags: ["published REST", "path parameters", "Data and Time"]
 # combine this with published rest service
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **published REST service** feature was introduced in version 7.10.0.
 

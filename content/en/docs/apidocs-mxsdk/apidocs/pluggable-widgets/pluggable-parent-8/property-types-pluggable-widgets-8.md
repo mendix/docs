@@ -231,7 +231,7 @@ Then the Studio Pro UI for the property appears like this:
 
 Properties of type icon allows a user to configure an icon similar to one used by a [button](/refguide/button-properties/#icon). It is passed as `DynamicValue<IconValue>` prop to a client component. For more information, see the [IconValue](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets-8/#icon-value) section of *Client APIs Available to Pluggable Widgets*.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This property type was introduced in Mendix 8.1.
 {{% /alert %}}
 
@@ -261,15 +261,15 @@ Then the Studio Pro UI for the component appears like this:
 
 Image allows a user to configure a static image from an [image collection](/refguide/image-collection/). It also allows a user to configure an image from an object that is a specialization of **System.Image**. It is passed as an `DynamicValue<ImageValue>` prop to a client component (for more information, see the [ImageValue](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets-8/#imagevalue) section of *Client APIs Available to Pluggable Widgets*). See the [Images Reference Guide](/refguide/images/) for more information about supported image formats.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This property type was introduced in Mendix 8.1. Support for dynamic images was introduced in Mendix [8.4.0](/releasenotes/studio-pro/8.4/).
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Support for SVG images in native mobile apps was introduced in Mendix [8.4.0](/releasenotes/studio-pro/8.4/).
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 GIF images are not supported in native mobile apps on Android devices.
 {{% /alert %}}
 
@@ -299,15 +299,15 @@ Then the Studio Pro UI for the component appears like this:
 
 The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container/) widget. It is passed as a `ReactNode` prop to a client component if a `dataSource` attribute is not specified or if an attribute is specified, but the data source is not configured by the user. Otherwise it is passed as a [`ListWidgetValue`](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets-8/#listwidgetvalue). For more information, see the [Datasource](#datasource) section below.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This property type was introduced in Mendix 8.3.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Support for the `dataSource` attribute was introduced in Mendix 8.7.
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Some widgets are not yet supported inside pluggable widgets. Placing unsupported widgets inside a pluggable widget results in a consistency error in Studio and Studio Pro.
 {{% /alert %}}
 
@@ -360,7 +360,7 @@ If a `dataSource` attribute is not specified, or if a `dataSource` attribute is 
 
 When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListExpressionValue<T>`](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets-8/#listexpressionvalue) where `T` depends on the expression's return type. For more information, see the [Datasource](#datasource) section below.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Support for the `dataSource` attribute was introduced in Mendix 8.14.
 {{% /alert %}}
 
@@ -410,7 +410,7 @@ If a `dataSource` attribute is not specified, or if a `dataSource` attribute is 
 
 When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListExpressionValue<string>`](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets-8/#listexpressionvalue). For more information, see the [Datasource](#datasource) section below.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Support for the `dataSource` attribute was introduced in Mendix 8.14.
 {{% /alert %}}
 
@@ -458,7 +458,7 @@ If a `dataSource` attribute is not specified, or if a `dataSource` attribute is 
 
 When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListActionValue`](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets-8/#listactionvalue). For more information, see the [Datasource](#datasource) section below.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Support for the `dataSource` attribute was introduced in Mendix 8.9.
 {{% /alert %}}
 
@@ -493,7 +493,7 @@ If a `dataSource` attribute is not specified, or if a `dataSource` attribute is 
 
 When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListAttributeValue`](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets-8/#listattributevalue). For more information, see the [Datasource](#datasource) section below.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Support for the `dataSource` attribute was introduced in Mendix 8.12.
 {{% /alert %}}
 
@@ -625,11 +625,11 @@ Then the Studio Pro UI for the property appears like this:
 
 The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets-8/#listvalue) and may be used with [`action`](#action), [`attribute`](#attribute), [`expression`](#expression), [`text template`](#texttemplate) and [`widgets`](#widgets) properties. See [Data Sources](/refguide/data-sources/#list-widgets) for available data source types.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Support for the datasource property type was introduced in Mendix 8.7.
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Only list datasources are supported, therefore specifying `isList="true"` is required.
 {{% /alert %}}
 
@@ -695,7 +695,7 @@ The TabIndex property allows pluggable widgets to implement the **Tab index** se
 
 Every pluggable widget can be [conditionally hidden](/refguide/common-widget-properties/#visibility-properties). This property can be used to control a position of the widget visibility inputs.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This property type was introduced in Mendix 8.1.
 {{% /alert %}}
 
@@ -707,7 +707,7 @@ This property type was introduced in Mendix 8.1.
 
 The editability property allows a pluggable widget to have an editable configuration similar to a [core input widget](/refguide/text-box/#editability). When a widget is marked as read-only or conditionally editable with condition being false, all [editable values](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets-8/#editable-value) its client component receives will have `readOnly` flag.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This property type was introduced in Mendix 8.1.
 {{% /alert %}}
 

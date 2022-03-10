@@ -158,7 +158,7 @@ To create a re-usable theme module, do the following:
    
 2. In your Mendix app directory, create a new file *themesource/mytheme/web/custom-variables.scss*.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To open your Mendix app directory from Studio Pro, click **App** in the top menu-bar, then click **Show App Directory in Explorer**.
 {{% /alert %}}
 
@@ -190,7 +190,7 @@ You can now export the **mytheme** module from Studio Pro to re-use in your apps
 
 To test the theme for all the widgets, page templates, and building blocks it can be helpful to use the Atlas Design System app as discussed in [Create a Company Design System](/howto/front-end/create-a-company-design-system/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Note: if this is done, the Theme customizer in Studio will not work any more as it depends on the custom variables in the **theme** folder.
 {{% /alert %}}
 
@@ -219,7 +219,7 @@ Steps:
    
 2. In your Mendix app directory, create a new file *themesource/mytheme/native/custom-variables.js*.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Note: To open your Mendix app directory from Studio Pro, click **App** in the top menu-bar, then click **Show App Directory in Explorer**.
 {{% /alert %}}
 
@@ -258,7 +258,7 @@ export const brand = {
 
 If you get errors, double check if the imports point to valid files.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When this approach is used we recommend you create a company starter app. Out-of-the-box this app will contain the theme module, and already contains this change in the theme folder that points to the module.
 {{% /alert %}}
 
@@ -317,7 +317,7 @@ With the modular structure of the styling of Mendix app, the styling files are p
 
 Studio and Studio Pro combines the different *.scss* files in a certain order and compiles the SASS into CSS which is used in the browser. The compiled output is saved in a folder named **theme-cache**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The content of this folder is regenerated regularly (for example when opening the app or pressing <kbd>{F4}</kbd>) and therefore should not be changed manually. Also note, that the **theme-cache** folder is included when uploading your app to Team Server. It is required to see the correct styling in Studio, which is why it's strongly recommended to commit any changes when the styling has changed.
 {{% /alert %}}
 

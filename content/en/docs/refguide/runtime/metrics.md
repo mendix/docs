@@ -5,7 +5,7 @@ category: "Mendix Runtime"
 tags: ["studio pro", "metrics", "micrometer"]
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Custom metrics were introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/#960).
 {{% /alert %}}
 
@@ -276,7 +276,7 @@ The above filter discards metrics which starts with **"Unnamed."**, **"Invalid."
 
 ### Notes
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The following should be taken into account when configuring the metrics registries.
 {{% /alert %}}
 
@@ -367,7 +367,7 @@ The name must adhere to the following rules:
 * The name cannot start with `mx`, because this prefix is reserved for Mendix internal metrics.
 * The name is case-insensitive.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 It is recommended to use a common prefix that uniquely defines your organisation and application.
 {{% /alert %}}
 

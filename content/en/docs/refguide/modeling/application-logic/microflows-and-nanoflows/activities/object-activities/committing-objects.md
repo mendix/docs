@@ -6,7 +6,7 @@ menu_order: 30
 tags: ["studio pro"]
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
@@ -14,7 +14,7 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 The **Commit** activity works on one or more objects. For persistable entities, committing an object stores it in the database. Committing non-persistable entities stores the current attribute values and association values in memory, this allows a rollback to revert to those values. See also [Persistability](/refguide/persistability/). External objects can't be committed. To store changed values of external objects, use the [Send External Object](/refguide/send-external-object/) activity.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 A Mendix commit does not always behave like a database commit. See [How Commits Work](#how-commits-work), below, for more information.
 {{% /alert %}}
 
@@ -45,7 +45,7 @@ The object or list of objects that you want to commit.
 
 ### 3.2 With Events
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This property is for microflows only.
 {{% /alert %}}
 
@@ -67,7 +67,7 @@ This setting defines how changes are reflected in the pages presented to the end
 
 Default: *No*
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To make pages of a Mendix app efficient, many widgets display values from an attribute of an object which is cached on the page. Attributes in widgets which use cached data are *always* reflected in the client when they are updated or deleted irrespective of the value of **Refresh in client**.
 
 If a widget is only updated when a [data source](/refguide/data-sources/) is loaded, then changes will only be seen when **Refresh in client** is set to *Yes*.
@@ -75,7 +75,7 @@ If a widget is only updated when a [data source](/refguide/data-sources/) is loa
 When testing your app, ensure that the desired data is being displayed by the widgets you have chosen.
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 When committing a large number of objects, we recommend that you do not enable 'Refresh in client' because it can slow things down.
 {{% /alert %}}
 
@@ -115,7 +115,7 @@ When an object is committed through a default Save button, a commit activity, or
 
 An autocommit is an automatic commit from the platform, which is done to keep the domain model in sync. If your application ends up having autocommitted objects, then you will have a modeling error. Since an association is also a member of an object, the association will be stored in the database as well. This means that if you create an order line inside an order and the order line is the parent of the association, when you commit the order line, the order will be autocommitted.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 An autocommit is not the same as an explicit commit!
 
 If a rollback is triggered for any reason (for example, if the user session is terminated by the user closing the browser), then autocommitted objects will be deleted from the database. See [Persistability](/refguide/persistability/) for more information about how Mendix handles persistable objects.
@@ -128,7 +128,7 @@ During commit the the following will occur:
 * Events: For *explicitly committed* objects all before and after events are executed, and if any before-rollback event returns false, an exception can be thrown
 	* If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior
 	* Changes made prior to the commit will be kept
-		{{% alert type="warning" %}}Before and after events are not executed for autocommitted objects.{{% /alert %}}
+		{{% alert color="warning" %}}Before and after events are not executed for autocommitted objects.{{% /alert %}}
 * Database: there is an insert or update query executed both for explicitly committed objects and auto committed objects
 	* Depending on the object state, the platform will do an insert for objects with the state **Instantiated** and an update for all other states
 * Result: an object with the state Instantiated will be inserted into the database, and an object with any other state will be updated

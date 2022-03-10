@@ -10,7 +10,7 @@ tags: ["Developer Portal", "App Services", "Deploy"]
 
 ## 1 Introduction
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 App services are deprecated and  were removed in Studio Pro 9. Use a [published web service](/refguide/published-web-services/) or a [published REST service](/refguide/published-rest-services/) instead.
 {{% /alert %}}
 

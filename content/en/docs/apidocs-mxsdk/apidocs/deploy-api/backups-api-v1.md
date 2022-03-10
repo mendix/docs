@@ -6,7 +6,7 @@ description: "An API to allow the triggering of backups creation, restore, downl
 menu_order: 20
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This documents version 1 of the backups API **which is now deprecated**.
 
 You are advised to use the [Backups API V2](/apidocs-mxsdk/apidocs/backups-api/) which uses asynchronous calls to support  long-running tasks.
@@ -141,7 +141,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ### 3.3 Create a Backup of an Environment (Mendix Cloud v4 Only)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This call will trigger the creation of a snapshot and will return the **SnapshotID** immediately. However, the creation of the snapshot takes some time and if the creation hasn't completed you will get a **500 INTERNAL_SERVER_ERROR** response from a request to download the backup (see above). In this case, it is recommended that you periodically retry downloading the backup until the call is successful.
 {{% /alert %}}
 

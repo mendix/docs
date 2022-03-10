@@ -99,7 +99,7 @@ To configure the web service call, follow these steps:
 
     ![](/attachments/howto7/integration/consume-a-complex-web-service/18581778.png)
 
-    {{% alert type="info" %}}
+    {{% alert color="info" %}}
 
     Make sure the microflow either creates the variables required as arguments for the web service call or has those passed to it.
 

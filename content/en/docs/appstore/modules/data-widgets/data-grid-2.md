@@ -17,7 +17,7 @@ Here is an example of a data grid using filters:
 
 ### 1.2 Advanced Options
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The **Enable advanced options** toggle is available in Mendix Studio. In Mendix Studio Pro these advanced options are always available.
 {{% /alert %}}
 
@@ -69,7 +69,7 @@ Here is an example of hiding button containing columns to be hidden:
 
 ![Example of hiding button containing columns to be hidden](/attachments/appstore/modules/data-widgets/data-grid-2/hiding.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When a column is marked as “Yes, hidden by default” it will render differently in Structure mode and Design mode (Studio Pro) and in Studio to indicate that the column is hidden. **When running the application, the column will in fact be hidden by default**.
 {{% /alert %}}
 
@@ -137,7 +137,7 @@ You can define how each cell will be rendered in the data grid. We offer three c
 
 You can choose how the content inside your columns will be aligned. We offer three choices: left, center, and right.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This will also change the alignment of your header.
 {{% /alert %}}
 
@@ -155,7 +155,7 @@ In this example we check the value of `StringAttribute` and then apply the class
 
 You can choose if you want to wrap the text content of a column and apply ellipsis in the end of it.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you are using **Custom content** in the **Show** option of the **General** tab, please make sure you are using a **Text Widget** without containers around it. Containers sometimes interfere with wrapping texts.
 {{% /alert %}}
 
@@ -165,7 +165,7 @@ If you are using **Custom content** in the **Show** option of the **General** ta
 
 If you need to display advisory information for cell content, you can specify the tooltip text. This text will be shown when a user is hovering over the cell content.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This property not available if you enable "Custom content" for the column
 {{% /alert %}}
 
@@ -185,7 +185,7 @@ The **Empty List Message** option defines what users can see when the data grid 
 
 The **Dynamic Row Class** option allows users to dynamically apply a CSS class in a specific row. This option will apply for the entire row the same class. You can achieve this by adding an expression based on the column value (attribute), like the example below.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If you have a dynamic cell class being applied it will have precedence over the row class.
 {{% /alert %}}
 
@@ -205,7 +205,7 @@ Triggers an action (such as a nanoflow, microflow, or Show page action) when the
 
 Sets of filters can be used in combination with data grids. To be able to use filters you need to select the option **Show column filters**. When this option is selected a drop-zone where you can place your desired filter widget will appear in each column header.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The type of your selected attribute should match the filter type. For example, a **Text filter** should be used for a String attribute.
 
 Also the desired attribute must be filterable. For example, not a value which is calculated.
@@ -235,7 +235,7 @@ Here is an example of **Date filter** as **Between**:
 
 ![Date filter between](/attachments/appstore/modules/data-widgets/data-grid-2/date-filter-between.png)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 When **Date filter** is defined with **Between** it is not possible to type the date manually. It also has a clear button to clear the date range.
 {{% /alert %}}
 
@@ -296,7 +296,7 @@ In this section you can select a **Saved attribute** in order to save the curren
 
 * String
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If **Multiselect** is enabled you must select a String attribute containing `Unlimited` in its size.
 {{% /alert %}}
 
@@ -410,7 +410,7 @@ In order to enable filtering within the data grid header (outside the columns) y
 
 The attributes selected here will be used for the matching filter placed inside the composable region. When using multiple attributes, the filters will automatically select the matching attributes and then compose the desired filter value in an `OR expression`. Make sure you only have one filter widget for each type, for example `Text Filter` and `Number Filter`.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If a filter is being used and its type does not match with any selected attribute, then it will throw an error requesting you to select the correct filter widget.
 {{% /alert %}}
 
@@ -418,7 +418,7 @@ If a filter is being used and its type does not match with any selected attribut
 
 You can define an attribute to store the current configuration of the data grid. In this way, if you re-open your page then the current sorted columns, order, and hidden columns will remain the same as in the previous state. To set this option, you need to select a `String` attribute with `Unlimited` as its size as the attribute in the data grid **Personalization** tab in Studio Pro or **Configuration** in Studio.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If the desired `String` attribute does not contain `Unlimited` in its size, the Data grid will not be able to save all the configurations as expected.
 {{% /alert %}}
 

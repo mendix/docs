@@ -23,7 +23,7 @@ Whether security is enabled for your app by default, depends on whether the secu
 
     {{% image_container width="300" %}}![Secure Your App Pop-up Window](/attachments/studio/settings/settings-security/security-pop-up.png) {{% /image_container %}}
     
-    {{% alert type="info" %}}When you enable security, it is enabled for the whole app, and there are checks and changes applied to the model that are visible in Studio Pro. For more technical information on these checks and changes, see [Model Changes When Security Is Enabled in Studio](/refguide/studio-security-enabled/).{{% /alert %}}
+    {{% alert color="info" %}}When you enable security, it is enabled for the whole app, and there are checks and changes applied to the model that are visible in Studio Pro. For more technical information on these checks and changes, see [Model Changes When Security Is Enabled in Studio](/refguide/studio-security-enabled/).{{% /alert %}}
 
 2. Security is set to the **Production** level in Studio Pro and settings are compatible with Studio. In this case, you can view and edit **Roles and Permissions** in Studio. (For more information on what security settings are compatible with Studio, see the [Studio Compatibility](/refguide/studio-security-enabled/#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
 
@@ -37,7 +37,7 @@ Whether security is enabled for your app by default, depends on whether the secu
 
 ## 3 Roles and Permissions {#roles-and-permissions}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In Studio Pro, advanced security settings can be applied. In this case, you will not be able to edit roles and permissions in Studio.
 {{% /alert %}}
 
@@ -48,7 +48,7 @@ In apps created via the Developer Portal, there are two app roles:
 * Administrator
 * User
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 When security is enabled, these two app roles will have full access to your app. We recommend you to review permissions for the User role. 
 {{% /alert %}}
 
@@ -56,7 +56,7 @@ For more information on managing app users, see the [Managing App Users](#managi
 
 When a new page/microflow/workflow is created, Studio default permissions are set for them, which means that all existing roles in the app will have access to the newly created document.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 When a page/microflow/workflow is copy-pasted, Studio default permissions are set for the new document. We recommend you to review permissions for that document.
 {{% /alert %}}
 
@@ -127,7 +127,7 @@ To delete an existing role, do the following:
 
 The role has been deleted.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You cannot delete or edit the Administrator role.
 
@@ -171,7 +171,7 @@ You can test how your app looks like for different roles the following way:
 
 You can assign the default or customized user roles for your app to app end-users with Mendix accounts. These are called **App Users** and once authorized, they can access your published app to use it, test it, and provide feedback.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can manage App Users only after you publish your app.
 {{% /alert %}}
 
@@ -181,11 +181,11 @@ To manage App Users, open **Roles and Permissions** and click **Manage Users** i
 
 You will be taken to the [App User Management](/developerportal/collaborate/general-settings/#managing-app-users) page in the Developer Portal, where you can invite people to your app and manage their user roles. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 People invited to join your team in the Developer Portal are not added as App Users automatically, so you will need to invite your team members if necessary.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you have created a new user role on the **Roles and Permissions** page, you need to publish the app first to be able to see and assign this role in the Developer Portal.
 {{% /alert %}}
 

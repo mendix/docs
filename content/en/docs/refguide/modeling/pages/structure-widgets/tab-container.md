@@ -59,7 +59,7 @@ Default: *False*
 
 Default: *True*
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This property is not supported on native mobile pages.
 {{% /alert %}}
 

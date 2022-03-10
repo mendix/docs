@@ -33,7 +33,7 @@ To *edit* a comment, do the following:
 
 4. Click **Save**. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You cannot delete comments in Studio, this is only possible in the [App Buzz](/developerportal/collaborate/buzz/#app-buzz) in the Developer Portal.  
 

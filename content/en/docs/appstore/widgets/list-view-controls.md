@@ -20,7 +20,7 @@ These are the available list view widgets:
 * [Pagination](#pagination) – adds bootstrap like paging to a list view and page numbers similar to in-built data grid
 * [Text box search](#text-box-search) – adds an interactive search box to all of your list view
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 If an entity in a list view has an attribute populated by a microflow, it will cause an error.
 
@@ -49,7 +49,7 @@ This widget enables filtering a list view at runtime with various constraints.
 			* **Enumeration** data type – use the enumeration name/key (not **caption**)
 		* **XPath** – input a constraint by which to filter (**none** is for an empty option which resets the filter then selected)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The widget connects to the first list view it finds from within its parent container and outer wards.
 {{% /alert %}}
 

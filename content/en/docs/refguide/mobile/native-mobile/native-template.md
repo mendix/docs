@@ -558,7 +558,7 @@ location when configuring the app.
 
 The Native Mobile Toolkit is a Node module included with Native Template. As such, it must be installed first by running `install` in the Native Template root directory. When building locally, you must run `npm install` when a new version of the Native Mobile Toolkit is released to ensure you are always running on the latest version.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The npm script expects that the Native Mobile Toolkit configuration files are at the root of the app, and named *config.json*. This is always the case when using the Mendix Native Mobile Builder to configure a local or a remote app.  
 {{% /alert %}}
 

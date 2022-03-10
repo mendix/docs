@@ -33,7 +33,7 @@ To display checks for your app and view the faulty elements in it, do the follow
 
 7. To close the panel, either click the close button in the upper-right corner of the panel, or click **Checks** in the upper-right corner of Studio. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 If there are no consistency errors, the app will be published, and the **Checks** panel will be empty. 
 
@@ -45,7 +45,7 @@ If there are no consistency errors, the app will be published, and the **Checks*
 
 The **Checks** panel is represented as a table and shows you a list of consistence errors that prevent your app from functioning in a correct way and being published (for example, if you do not specify an entity for the data view, your app cannot function correctly). For more information on consistency errors, see [Consistency Errors](/studio7/consistency-errors/). 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **Checks** panel is only refreshed after a user clicks **Update** again, it is not refreshed in real-time.
 

@@ -68,7 +68,7 @@ Layout grid properties consist of the following sections:
 
 The **Expand** section > **Add Row** allows you to add a row above or below the selected one to create more space to place widgets in.
 
-{{% alert type="info" %}} 
+{{% alert color="info" %}} 
 
 A [row](#row) and a [column](#column) have the **Expand** section with the same setting.
 
@@ -114,7 +114,7 @@ The **Expand** section > **Add Row** allows you to add a row above or below the 
 
 In the **Container Settings** section, you can set the width for the layout grid and choose between full width or fixed width. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This property is the same as the property in the [General Section](#general-section) of the layout grid. For details, see the [General Section](#general-section).
 
@@ -284,7 +284,7 @@ For example, your team member in Studio Pro has created a snippet and added a cu
 
 While you can call (use) snippets on your pages in Studio, you cannot create, change, or delete them. For more information on snippets in Studio Pro, see [Snippet](/refguide/snippet/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The **Snippet** widget is not displayed if your  does not contain any snippets. 
 {{% /alert %}}
 

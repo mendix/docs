@@ -13,7 +13,7 @@ Boolean expressions can be used to perform logical operations such as checking i
 
 Combines two Boolean expressions and only returns True if both of the expressions evaluate to True.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ```java
 (6 > 4) and (3 < 5)
@@ -33,7 +33,7 @@ evaluates to False, because only the second expression is True.
 
 Combines two Boolean expressions, and returns True if at least one of the expressions evaluates to True.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Given a domain entity instance with name "$product" that has an integer attribute "price" with value "3" and another integer attribute "recommendedPrice" with value "2", the following expression:
 
@@ -63,7 +63,7 @@ An expression of type Boolean.
 
 Returns the negation of the specified expression. If the expression evaluates to True, it returns False; otherwise it returns True.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ```java
 not('hello' = 'hallo')

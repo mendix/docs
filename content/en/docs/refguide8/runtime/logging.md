@@ -44,7 +44,7 @@ This section provides some details on specific log nodes used by Mendix. It is r
 
 The following log nodes are used by Mendix when writing log messages.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This list is currently incomplete and is being worked on.
 {{% /alert %}}
 

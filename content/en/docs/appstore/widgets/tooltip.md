@@ -60,6 +60,6 @@ This option defines how the tooltip will be triggered.
 * **Hover** – triggered when the user hovers the mouse over it
 * **Hover and focus** – triggered in both cases described above
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 On mobile devices the **Hover** option will be triggered on touch.
 {{% /alert %}}

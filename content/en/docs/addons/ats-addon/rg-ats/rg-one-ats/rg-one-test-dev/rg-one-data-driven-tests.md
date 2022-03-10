@@ -43,7 +43,7 @@ Shows parameters that require a different data type than the datatype of the fie
 
 For each error the test step and parameter are listed so they can be easily identified.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 If you change the selected dataset the system will remember your set parameters and will match them again if you select a dataset containing the same field names.
 

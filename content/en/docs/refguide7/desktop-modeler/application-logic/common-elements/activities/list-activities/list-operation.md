@@ -5,7 +5,7 @@ parent: "list-activities"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This activity can only be used in microflows, not in nanoflows.
 {{% /alert %}}
 
@@ -13,7 +13,7 @@ This activity can only be used in microflows, not in nanoflows.
 
 The List Operation activity can perform various actions on a list. See below for details on these actions.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 See [Microflow Element Common Properties](/refguide7/microflow-element-common-properties/) for properties that all activities share (for example, caption). This page only describes the properties specific to the action.
 

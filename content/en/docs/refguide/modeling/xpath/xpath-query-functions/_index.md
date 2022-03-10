@@ -15,6 +15,6 @@ The following XPath query aggregate functions are available:
 
 These functions must contain full queries as their arguments. However, the `avg`, `max`, `min`, and `sum` functions must specify a column in the query to aggregate.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 These functions are for use in Java code only.
 {{% /alert %}}

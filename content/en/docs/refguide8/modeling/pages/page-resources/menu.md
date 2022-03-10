@@ -10,7 +10,7 @@ aliases:
 #The anchor <menu-item> below is mapped, so it should not be removed or changed.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/menu.pdf).
 {{% /alert %}}
 
@@ -20,7 +20,7 @@ A menu document defines a navigation menu that can be used by a [menu widget](/r
 
 A menu consists of a list of menu items, which optionally contain sub-items. Depending on the widget a number of levels are allowed.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 If [security](/refguide8/project-security/) is enabled, the menu will only show items that the user has access to.
 
@@ -39,7 +39,7 @@ A menu item or a sub-item has the following general properties:
 * Alternative text - You can specify alternative text if a caption is not provided. This will allow screen readers to announce a description for an icon.
 * On click – Action to be performed when the item is clicked. A menu item that has sub-items cannot have an on click event.
 
-{{% alert type="info" %}}To open a page with a data view on it from a menu item, set a microflow that first retrieves an object for the data view and then opens the page as a target.{{% /alert %}}
+{{% alert color="info" %}}To open a page with a data view on it from a menu item, set a microflow that first retrieves an object for the data view and then opens the page as a target.{{% /alert %}}
 
 ## 3 Read More
 

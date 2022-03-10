@@ -9,7 +9,7 @@ An [enumeration](/refguide7/enumerations/) has one or more enumeration values. E
 
 ## Properties
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The name of an enumeration value must be a technical name without spaces and special characters. On the other hand, the caption of an enumeration value can any character. For example, an enumeration value can have 'InProgress' as its name and 'In progress' as its caption.
 
@@ -23,7 +23,7 @@ The caption of an enumeration value is the text that the end user sees for this 
 
 The name of an enumeration value is the technical name of the value which is used to refer to the enumeration value in your model.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 The name of an enumeration value is also used to store the enumeration value in the data database. That is why changing the Name of an enumeration value is not allowed; it would invalidate the data in your database. The caption, however, can be changed without problems and this is the text that the end user gets to see.
 

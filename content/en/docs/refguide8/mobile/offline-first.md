@@ -10,7 +10,7 @@ tags: ["offline", "native", "mobile", "studio pro"]
 
 Offline-first applications work regardless of the connection in order to provide a continuous experience. Pages and logic interact with an offline database on the device itself, and data is synchronized with the server. This results in a snappier UI, increased reliability, and improved device battery life.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 It is important to understand that offline-first is an architectural concept and not an approach based on the network state of the device. Offline-first apps do not rely on a connection, but they can use connections (for example, you can call microflows, use a Google Maps widget, or use push notifications).
 {{% /alert %}}
 
@@ -94,7 +94,7 @@ Please note that a nanoflow object variable's value might become `empty` after s
 
 ### 2.4 Customizable Synchronization {#customizable-synchronization}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 These settings are not applied for [selective synchronization](#selective-sync).
 {{% /alert %}}
 
@@ -145,7 +145,7 @@ During the synchronization, changed and new objects are committed. An object's s
 * The object is not valid according to domain-level validation rules
 * The object has a dangling reference (for more information, see the [Dangling References](#dangling-references) section below)
 
-{{% alert type="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server. To prevent data loss, the attribute values for such objects are stored in the `System.SynchronizationError` entity (since Mendix 8.12).  {{% /alert %}}
+{{% alert color="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server. To prevent data loss, the attribute values for such objects are stored in the `System.SynchronizationError` entity (since Mendix 8.12).  {{% /alert %}}
 
 #### 2.6.3 Dangling References {#dangling-references}
 

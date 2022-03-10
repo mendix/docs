@@ -9,7 +9,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/drop-down.pdf).
 {{% /alert %}}
 
@@ -19,7 +19,7 @@ A **drop-down** is used to display and, optionally, allow the end-user to edit t
 
 A drop-down must be placed in a [data widget](/refguide8/data-widgets/) and displays an attribute of the object(s) retrieved by that widget. The name of the attribute to be displayed is shown inside the drop-down, between square brackets, and colored blue.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 A drop-down should not be confused with a [reference selector](/refguide8/reference-selector/), which is used to select an [association](/refguide8/associations/) to another object.
 {{% /alert %}}
 

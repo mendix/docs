@@ -92,7 +92,7 @@ If need be, the layout can also be generated in the same way as the data. In mos
 
 Editing the JSON configuration in Studio Pro can be cumbersome. With the live preview editor, developers can directly see the output of their changes. 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 The editor is only a playground and no settings are stored. All changes you make in the runtime preview that you wish to use the next time you view the app have to be applied to your **Any Chart** widget too.
 

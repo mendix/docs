@@ -72,7 +72,7 @@ While running a multi-node cluster, you cannot predict the node on which a micro
 
 Some apps require a guaranteed single execution of a certain activity at a given point in time. In a single node Mendix Runtime, this could be guaranteed by using JVM locks. However, in a distributed scenario, those JVMs run on different machines, so there is no locking system available. Mendix does not support cluster-wide locking, either. If this cannot be circumvented, you might need to resort to an external distributed lock manager. However, keep in mind that locking in a distributed system is complex and prone to failure (for example, via lock starvation or lock expiration.).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For the reason described above, the **Disallow concurrent execution** property of a microflow only applies to a single node.
 {{% /alert %}}
 
@@ -90,7 +90,7 @@ Reading objects and deleting (unchanged) objects from the Mendix database is sti
 
 Only the dirty state for requests that originate from the Mendix Client (both synchronous and asynchronous calls) can be retained between requests. For all other requests—such as scheduled events, web services, or background executions—the state only lives for the current request. After that, the dirty state either has to be persisted or discarded. The reason for only allowing Mendix Client requests to retain their dirty state is that this is currently the only channel that works with actual user input. User input requires more interaction and flexibility with the data between requests. By only allowing these requests to retain their dirty state, the load on the Mendix Runtime and the external source is minimized, and performance is optimized.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Whenever the Mendix Client is restarted, all the state is discarded, as it is only kept in the Mendix Client memory. The Mendix Client is restarted when reloading the browser tab (for example, when pressing <kbd>F5</kbd>), restarting a mobile hybrid app, or explicitly signing out.
 {{% /alert %}}
 
@@ -98,7 +98,7 @@ The more objects that are part of the dirty state, the more data has to be trans
 
 The Mendix Client attempts to optimize the amount of state sent to the Mendix Runtime by only sending data that can potentially be read while processing the request. For example, if you call a microflow that gets `Booking` as a parameter and retrieves `Flight` over association, then the client will pass only `Booking` and the associated `Flight`s from the dirty state along with the request, but not the `Hotel`s. Note that this behavior is the best effort; if the microflow is too complex to analyze (for example, when a Java action is called with a state object as a parameter), the entire dirty state will be sent along. This optimization can be disabled via the [Optimize network calls](/refguide/project-settings/#optimize-network-calls) project setting.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 It is important to realize that when calling external web services in Mendix to fetch external data, the responses of those actions are converted into Mendix entities. As long as they are not persisted in the Mendix database, they will be part of the dirty state and have a negative impact on the performance of the application. To reduce this impact, this behavior is likely to change in the future.
 {{% /alert %}}
 
@@ -108,7 +108,7 @@ To reduce the performance impact of large requests and responses, an app develop
 * A microflow that calls a web service to retrieve external data and convert them to non-persistable entities
 * A page that has multiple microflow data source data views, each causing the state transferred to the Mendix Runtime to handle the microflow
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 To make sure the dirty state does not become too big when the above scenarios apply to your app, it's recommended to explicitly delete objects when they are no longer necessary, so that they are not part of the state anymore. This frees up memory for the Mendix Runtime nodes to handle requests and improves performance.
 {{% /alert %}}
 
@@ -126,7 +126,7 @@ The `Value` values can easily be obtained by performing a find on the `Key` valu
 
 ![](/attachments/refguide/runtime/clustered-mendix-runtime/2018-03-01_17-56-37.png)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 When data is associated to the current user or current session, it cannot be automatically garbage-collected. As such, this data will be sent with every request to the server and returned by the responses of those requests. Therefore, associating entity instances with the current user and current session should be done when no other solutions are possible to retain this temporary data.
 {{% /alert %}}
 
@@ -138,7 +138,7 @@ Roundtrips to the database for this purpose are reduced by giving the persistent
 
 Persistent sessions also store a last-active date upon each request. To improve this particular aspect of the performance, the last-active date attribute of a session is no longer committed to the database immediately on each request. Instead, this information is queued for an action to run at a configurable interval to be stored in the Mendix database. This action verifies whether the session has not been logged out by another node and whether the last active date is more recent than the one in the database. The interval can be configured by setting `ClusterManagerActionInterval` (value in milliseconds).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Overriding the default values for the `SessionTimeout` and `ClusterManagerActionInterval` custom settings can impact the behavior of "keep alive" and results in an unexpected session logout. The best practice is to set the `ClusterManagerActionInterval` to half of the `SessionTimeout` so that each node gets the chance to run the clean-up action at least once during the session time out interval.
 {{% /alert %}}
 

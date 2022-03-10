@@ -26,9 +26,9 @@ The **Consumed OData Service** document contains the following information:
     * **Update** – this button is displayed so that you can **Update** the contract that is currently consumed (and shown in the **Consumed OData Service** document). You will be presented with the contract that is currently at the service end-point. It is good practice that only minor, non-breaking changes are deployed to the same end-point.
     *  **Switch** – this button is shown if other registered instances of the same service (with the same name, from the same app) are available in Data Hub and are deployed to different endpoints (for example, to another environment or because of changes that would break existing apps consuming the previous version)
 
-    {{% alert type="info" %}} Studio Pro will always show the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Data Hub search and **App**  pane, when a different contract is detected at the service end-point, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document. {{% /alert %}}
+    {{% alert color="info" %}} Studio Pro will always show the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Data Hub search and **App**  pane, when a different contract is detected at the service end-point, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document. {{% /alert %}}
 
-    {{% alert type="info" %}}In the **Data Hub** pane, consumed services have an **Update** icon (a blue arrow) if they have an update available.
+    {{% alert color="info" %}}In the **Data Hub** pane, consumed services have an **Update** icon (a blue arrow) if they have an update available.
     
     {{% /alert %}}
 
@@ -61,7 +61,7 @@ Default value: *300 seconds*
 * **Override** – override the app-level settings for this action by specifying the host, port, user name, and password settings for the proxy
 * **No proxy** – do not use a proxy for this service, even if there is a proxy configured at the app level
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In most cases, this setting can be ignored, and the default **Use app settings** can be used.
 {{% /alert %}}
 
@@ -80,11 +80,11 @@ You can specify additional HTTP request headers to be passed to the endpoint in 
 
 Using **Headers from a Microflow**, you can specify a microflow for creating a key and value pair(s) for dynamic values. The microflow must return a list of **System.HttpHeader** objects.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For more flexible HTTP request headers, you can select a microflow that returns a list of **System.HttpHeader**. This microflow may take a parameter of type **System.HttpResponse**. The microflow is called every time a request is made. Initially, the HTTP response parameter will be empty. If the response is **401 Unauthorized**, the microflow is called with that HTTP response and another call is made with the new HTTP headers.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For further information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/data-hub/data-hub-catalog/security/#http-header-validation) in the *Data Hub Guide*.
 {{% /alert %}}
 
@@ -100,7 +100,7 @@ The microflow must return a `String` containing the error message. If it returns
 
 Note for developers of java actions: the message returned by the error handling microflow can be caught as a [UserException](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/systemwideinterfaces/core/UserException.html).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The *error handling microflow* feature was introduced in Studio Pro 9.6.0.
 
@@ -128,7 +128,7 @@ The following settings are available:
 
 When downloading the metadata from a URL, the server may request a username and password (basic authentication). In that case, a dialog box will prompt you to enter your username and password. If the metadata file refers to other metadata files on the same server within the same realm, the username and password are re-used.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This information is not stored, so if you download the metadata from the same server again, you will have to enter your username and password again.
 {{% /alert %}}
 
@@ -188,7 +188,7 @@ In this case the new service should be registered in the Data Hub Catalog as a d
 
 There is a major service update indicated by the change in the version number from **1.0.0** to **2.0.0**. Further, both major versions have also been deployed to **Acceptance** which also results in separately registered assets in the Data Hub Catalog at different endpoints.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Entities of non-Mendix OData services are identified with a key of one or more fields. If the key fields are changed in an update of the service, this will also be seen as a breaking change.
 {{% /alert %}}
 

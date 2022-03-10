@@ -11,7 +11,7 @@ tags: ["studio pro", "studio", "collaborative development", "sync"]
 
 Collaborative development is the process of sharing app model changes when a team of more than one person is working on the app. Collaborative development allows the team members to work together on one app in Mendix Studio Pro and Mendix Studio, and easily synchronize changes using [version control](/refguide/version-control/). Studio Pro can be used to work on different branches of an app, while Studio can be enabled for one of these branches. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you get a **Mendix Studio is not enabled for this app yet** message when opening your app in Studio, make sure you enable a development line for it. For more information, see [Enabling Studio for a Development Line](#active-branch).
 {{% /alert %}}
 
@@ -35,7 +35,7 @@ The collaborative development process between Studio Pro and Studio consists of 
 	a.   There are no conflicts, the Studio Pro user changes are committed to the Team  Server. Afterwards Studio gets the latest revision from the Team Server and is unlocked; the Studio Pro user changes are visible to Studio users. Other Studio Pro users will get the changes once they do an update. <br/>
 	b. There are conflicts, the Studio Pro commit process is stopped. Studio is unlocked without getting changes from the Studio Pro user. The Studio Pro user needs to resolve the merge conflicts first to before being able to do a commit again.<br/>
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When the Studio Pro user wants to deploy the app to the cloud, they click the **Publish** button. The commit is done automatically during this process and step five is executed. 
 {{% /alert %}}
 
@@ -61,7 +61,7 @@ To merge the latest changes stored in the Team Server (from both Studio users an
 
 To commit your latest app changes and make them available to other users, open **Changes** and click **Commit**. The process of deploying your app (when you click the **Publish** button) will also trigger a commit. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 We recommend you update your app and commit changes often to avoid multiple conflicts in your app.  
 {{% /alert %}}
 
@@ -110,7 +110,7 @@ When you switch Studio to another development line, Studio gets locked for a few
 
 If Studio is enabled for a development line, you can disable it. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you disable Studio for a development line it was enabled for and do not enable it for any other development line, you will not be able to use collaborative development.
 {{% /alert %}}
 
@@ -158,7 +158,7 @@ To delete a branch line, do the following:
 
 You have deleted the branch.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You cannot delete a Studio enabled branch. If you need to delete this branch, enable Studio for another line, and only then delete the branch. 
 {{% /alert %}}
 

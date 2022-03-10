@@ -22,7 +22,7 @@ Before you start this how-to, please make sure you have completed the following 
 
 *   Have the latest version of the [Google Maps](/appstore/widgets/google-maps/) widget in your app
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 These instructions are for the Google Maps widget which you can download from the Marketplace. The Google Maps widget within the Atlas UI template has different options.
 {{% /alert %}}
 

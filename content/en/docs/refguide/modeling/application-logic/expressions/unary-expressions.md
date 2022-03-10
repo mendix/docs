@@ -10,7 +10,7 @@ tags: ["studio pro", "unary expression", "expression", "expressions"]
 
 An unary minus operator is used to convert a number from negative to positive or vice versa. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 There is no unary plus.
 

@@ -8,7 +8,7 @@ tags: ["studio pro", "navigation"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/navigation.pdf).
 {{% /alert %}}
 
@@ -122,7 +122,7 @@ If the sign-in page is set to none, a built-in pop-up window will appear instead
 
 Each device type contains a default menu. You can use these menus in [menu widgets](/refguide8/menu-widgets/). Defining the menu for a device type works the same as when editing a menu document. For more details, see [Menu](/refguide8/menu/).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If [security](/refguide8/project-security/) is enabled, the menu will only show the items to which the user has access.
 {{% /alert %}}
 

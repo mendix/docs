@@ -20,7 +20,7 @@ Mendix Cloud version 3 has been deprecated and will be turned off shortly. This 
 
 ## 2 Migration considerations
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Do not upgrade your runtime version at the same time as migrating from Cloud v3 to Cloud v4. This is because potential errors from upgrading the runtime version can be incorrectly ascribed to a failed migration. If you do choose to upgrade your runtime version at the same time as migrating from Cloud v3 to Cloud v4, Mendix Support will not be able to assist you.
 
 If you need to upgrade your runtime version, ensure that it is fully tested in Cloud V3 before attempting to migrate to Cloud v4.
@@ -40,7 +40,7 @@ To make the most of the features of Mendix Cloud v4, we recommend that your apps
 There are a few other differences between the way you develop and deploy apps in Mendix Cloud v4 and Mendix Cloud v3:
 
 * In Mendix Cloud v4, the debugger is always active, and does not have to be activated – the **Show Debugger Information** button shows the credentials to connect Mendix Studio Pro to the debugger
-    {{% alert type="info" %}}You can only use the debugger if your app is scaled to a single instance.{{% /alert %}}
+    {{% alert color="info" %}}You can only use the debugger if your app is scaled to a single instance.{{% /alert %}}
 * In Mendix Cloud v4, the number of permitted database connections is tied to the RAM of the database environment, rather than being static.
     * The limit is roughly 100 connections per GB of database RAM – the defaults are perfectly fine for most situations, but you can use the Mendix Runtime settings **ConnectionPoolingMaxActive** and **ConnectionPoolingMaxIdle** to tweak the number of database connections that the Mendix Runtime will set up for each runtime instance.
 * In Mendix Cloud v4, there are some circumstances in which your app can run out of file connections
@@ -105,7 +105,7 @@ To deploy your app to your new Mendix Cloud v4 environment, you need to do the f
     * Tags
     * Custom Domain Certificates – the new environment will need to have the same Custom Domain Certificates as the V3 environment, see [Changing a Custom Domain](#custom-domain) for advice on copying Custom Domain Certificates
 
-    {{% alert type="info" %}}You do not need to point your **Custom Domains** to a new destination. When the app is migrated to v4, it will be given the same name as your current app and so your Custom Domain will automatically pick up the v4 app.{{% /alert %}}
+    {{% alert color="info" %}}You do not need to point your **Custom Domains** to a new destination. When the app is migrated to v4, it will be given the same name as your current app and so your Custom Domain will automatically pick up the v4 app.{{% /alert %}}
 
 ### 4.3 Replicating the Data {#replicating-data}
 
@@ -133,7 +133,7 @@ Below are the steps to start with the migration.
 
 7. Once data transfer is complete, progress will be at 100%.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Database dump-restore will run twice – once on replication activation, and again on the stop of replication (if the **Interrupt** option has not been set – for details, see the section below). This is to ensure that the latest data on the source database for your application is copied to the Cloud v4 app.
 {{% /alert %}}
 
@@ -162,7 +162,7 @@ The migration page lists all the ongoing migrations, including the following inf
 
     ![Status of the Migration](/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/migration-status.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 File and row counts may not be completely accurate if the v3 app is running during the replication. File sync is refreshed on every sync run (there is a 5 minute pause between the stop of the previous one and start of the new one).
 
 For the database dump-restore process, the counts are refreshed only twice – when the actual process is run on start and on stop, as mentioned above.
@@ -172,7 +172,7 @@ For the database dump-restore process, the counts are refreshed only twice – w
 
 Once you have replicated your data, you should test it, to ensure that everything is working as expected.
 
-{{% alert type="info" %}}You should wait before testing to ensure the replication progress has reached 100%, otherwise you may find some data is missing.{{% /alert %}}
+{{% alert color="info" %}}You should wait before testing to ensure the replication progress has reached 100%, otherwise you may find some data is missing.{{% /alert %}}
 
 1. Go to the migration page of the Migration Tool.
 
@@ -186,7 +186,7 @@ Once you have replicated your data, you should test it, to ensure that everythin
 
 6. Check that the app works as expected, and that the data which has been migrated is accessible.
 
-    {{% alert type="info" %}}Any data you add to the database during the test will be overwritten when the migration process is restarted.{{% /alert %}}
+    {{% alert color="info" %}}Any data you add to the database during the test will be overwritten when the migration process is restarted.{{% /alert %}}
 
 7. Stop your v4 app at the end of the test and restart the replication so you can continue to copy data from your v3 app.
 
@@ -194,19 +194,19 @@ Once you have replicated your data, you should test it, to ensure that everythin
 
 Once you have tested the data migration you are ready to migrate your app to Mendix Cloud v4.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The final migration will only check that *production* data has been completely transferred to the new v4 app. If you want to keep all your test and acceptance data, you need to review the migration status yourself. We recommend that you do this before initiating the final migration, but you can migrate non-production data after the final migration if necessary.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 We recommend that you allow at least an hour between starting to replicate the data (see the [Replicating the Data](#replicating-data) section above) and starting the final migration. This is because we reduce the TTL for the DNS records at the beginning of the process, but this will take some time to propagate and allow us to switch quickly between your v3 and v4 app.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The final migration can have considerable downtime since the data replication process uses Postgres dump restore feature. This takes a full dump of the data from source Cloud v3 database and restores it on the destination Cloud v4 database. The displayed times on the **Migration Status** page depict how much time the last operation took (be it file sync or database dump-restore). These timings add to the downtime, but as file sync and dump-restore are run in parallel, only the bigger timing will contribute directly to the downtime.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 We also recommend that you stop replication at least once before the final migration because, when replication is stopped, there are more operations and these take additional time. If the replication is stopped, the last operation timing will include these additional operations, thus becoming more accurate.
 {{% /alert %}}
 
@@ -238,7 +238,7 @@ If you encounter issues with your app when running on Mendix Cloud v4, then you 
     4. Removes the `-v3` suffix from the subdomain name of the original v3 app and **all** environments
     5. Restarts the original v3 app
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This will not copy any new data from the v4 environment back to the v3 environment. Any data added to the v4 database before the rollback is effectively lost.
 {{% /alert %}}
 
@@ -260,7 +260,7 @@ If the apps and environments cannot be successfully renamed, or the apps cannot 
 
 ## 5 Migrating the App Manually
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 These instructions are provided in case you have problems using the migration tool above. We recommend that you use the migration tool whenever possible. Please contact [Mendix Support](https://support.mendix.com) if you are having difficulty with the migration tool and only use these instructions as a last resort.
 {{% /alert %}}
 
@@ -328,7 +328,7 @@ To upload the deployment package, follow these steps:
 
 #### 5.3.2 Backing Up
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Ensure you have performed the last two steps in the previous section to deploy your deployment package before continuing. Making a deployment prepares the environment and ensures your data is restored to the correct locations.
 {{% /alert %}}
 
@@ -336,7 +336,7 @@ Transfer the backup data from the app on Mendix Cloud v3 to the app on Mendix Cl
 
 1. Download a backup from your app hosted in Mendix Cloud v3 (for details, see [How to Download a Backup](/developerportal/operate/download-backup/)).
 
-    {{% alert type="info" %}}It is recommended that you download copies of *all* backups you want to keep. Once you have offboarded the old v3 environment, they will no longer be available.{{% /alert %}}
+    {{% alert color="info" %}}It is recommended that you download copies of *all* backups you want to keep. Once you have offboarded the old v3 environment, they will no longer be available.{{% /alert %}}
 
 2. Upload the downloaded backup to your app hosted in Mendix Cloud v4 (for details, see [How to Restore a Backup](/developerportal/operate/restore-backup/)).
 
@@ -368,7 +368,7 @@ A more detailed example of how this works given in the [Exchanging Linked Apps B
 
 Follow these steps to link the app you detached from the v3 node, above, to the v4 Node:
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Make sure you have downloaded the latest backup and deployment package before linking your app to the v4 node.
 {{% /alert %}}
 
@@ -413,7 +413,7 @@ You can find further information about setting up custom domains in [Custom Doma
 
 Your app is now running in Mendix Cloud v4. If everything works correctly, submit a request to [Mendix Support](https://support.mendix.com) to offboard the v3 node. This means that your v3 node will no longer be available.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 After your node is offboarded, it will no longer be accessible. Ensure that you have downloaded any backups or other information that you need from the node before asking for it to be offboarded.
 {{% /alert %}}
 

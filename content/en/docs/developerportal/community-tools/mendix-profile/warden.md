@@ -24,7 +24,7 @@ Personal access tokens (PATs) are an alternative to using passwords. They are de
 Platform users can create a PAT via the Mendix Warden app and are in control of what access is delegated via the PAT; the platform user selects the ‘scope’ while creating the PAT. The PAT itself is a ‘bearer’ token; anyone or anything that has access to the PAT can use it as if they were the associated platform user subject to the restrictions set up in the scope of the PAT.
 PATs are security tokens that don’t expire but cannot be used if the associated user has been deactivated on the Mendix platform or when the user has ‘deleted’ the PAT via the Warden app.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 From a governance aspect it is important for Mendix Administrators to deactivate ex-employees in the Mendix platform; this will prevent those ‘leavers’ from logging into the platform but also blocks the delegated access via PATs. Note that this recommendation applies both when end-users use Mendix credentials and when end-users use SSO with authentication provided by their corporate IDP (BYOIDP).
 {{% /alert %}}
 
@@ -59,7 +59,7 @@ Click **Create**
 
 A dialog is shown with your **Token secret**, which is the PAT. You can copy the secret by clicking the ‘copy’ button on the right.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You need to store this in a safe location as it will not be displayed again.
 {{% /alert %}}
 
@@ -73,7 +73,7 @@ You can delete a PAT. This will prevent anyone who may have obtained the Token s
 
 ![](/attachments/developerportal/community-tools/mendix-profile/warden/manage-pat.png)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You cannot obtain the Token secrets of these PATs. You can only see that they exist. 
 {{% /alert %}}
 
@@ -81,7 +81,7 @@ You cannot obtain the Token secrets of these PATs. You can only see that they ex
 
 Use of a PAT depends on the API you are accessing.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 For security, Personal Access Tokens should not be included into your source code!
 {{% /alert %}}
 

@@ -89,7 +89,7 @@ The width of the chart in pixels or as a percentage, based on the **Width unit**
 
 **Percentage of width** allows you to change the aspect ratio, **Pixels** is an absolute measure, and **Percentage of parent** allows you to set the height in relation to the parent container.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Warning: When using **Percentage of parent** the parent container must have an absolute height, else nothing is displayed.
 {{% /alert %}}
 
@@ -104,11 +104,11 @@ The **Any Chart** widget supports two sorts of event, related to the points plot
 * **hover**: which resolves as a *Tooltip* request
 * **click**: which resolves as an *On click* event
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Events will be triggered by hovering over or clicking on the points plotted on the chart. Clicks on other parts of the chart will NOT trigger an event.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Preventing the hover event from triggerring will also prevent the click event from triggering. This includes setting the layout parameter `hovermode` to `false` and setting the data parameter `hoverinfo` to `skip`.
 {{% /alert %}}
 
@@ -197,7 +197,7 @@ To the theme folder, add a *.json* file named *com.mendix.charts*. The JSON shou
 
 For guidance on how to set up chart theming see: [How to Use the Charts Theme](/howto/front-end/charts-theme/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Please use with caution, as the configuration set up here will be applied to every chart in your application. Only the advanced configurations set up in the widget itself have a higher precedence.
 

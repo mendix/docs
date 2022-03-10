@@ -100,7 +100,7 @@ The best practices when selecting *No* as **Requires authentication** option are
 
 By performing your authentication checks in this way, you will have the flexibility of the [Custom authentication option](#custom) described below, but it comes with the lowest performance hit. This is at the expense of losing the user context, which in most scenarios is acceptable for APIs.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Choosing *No* without these restrictions will allow anyone on the internet to make requests to your API endpoint at any time and at any rate, which can seriously affect your app's response and even cause server failure.
 {{% /alert %}}
 
@@ -113,7 +113,7 @@ APIs that do require authentication have either two or three options to fulfill 
 All these authentication options will later be combined with the API's [Allowed Roles](/refguide/published-rest-service/#allowed-roles) configuration.
 Allowed roles can be any of the roles you have defined in [User Roles](/refguide/user-roles/), including the role assigned to Anonymous users.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Assigning an Anonymous user role as one of the API's allowed roles is similar as choosing *No* at **Requires authentication**.
 This means that the same advice around certificate usage and IP restrictions applies, and you should perform the authentication inside the API handling microflow itself.
 {{% /alert %}}
@@ -130,11 +130,11 @@ Credentials provided in the basic auth header will be checked as follows:
 * for REST and OData – endpoints will only look for accounts that have the attribute `WebServiceUser` set to "FALSE"
 * for SOAP endpoints – `WebServiceUser` should be "TRUE"
 
-    {{% alert type="info" %}}This means that you cannot create an account in Mendix that can use Published Web Services, the application UI, and OData/REST APIs at the same time.{{% /alert %}}
+    {{% alert color="info" %}}This means that you cannot create an account in Mendix that can use Published Web Services, the application UI, and OData/REST APIs at the same time.{{% /alert %}}
 
 #### 5.2.2 Authentication Option 2, Active Session{#active}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This authentication option is not available for Published Web Services and can only be used in apps which are not [Offline-First](/refguide/offline-first/). 
 {{% /alert %}}
 
@@ -197,7 +197,7 @@ The user name of the administrator can be changed in 's **App Security** setting
 
 When deployed to the Mendix Cloud, the information about the administrator user name and role is taken into account when using the **Change admin password** button on the environment. After changing the settings in  and redeploying the application, a successful admin password change will trigger the creation of a user in the app with the new name and role.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 At this point, the application does not automatically remove the user with the previous user name. Removing the old **MxAdmin** account has to be done manually.
 {{% /alert %}}
 

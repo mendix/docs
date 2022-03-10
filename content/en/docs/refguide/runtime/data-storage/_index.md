@@ -14,7 +14,7 @@ Data storage is the data foundation of the Mendix Runtime. Data storage does the
 * Translates XPath and OQL queries to SQL queries
 * Handles security transparently and effectively
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Each app has its own database which cannot be shared directly with other apps. If you want to share data with another app, you must publish an API using [Data Hub](/data-hub/share-data/) or the [REST and OData](/refguide/integration/) capabilities of Mendix.
 
 See [Databases and Apps](#databases), below, for an overview of this.

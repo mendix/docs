@@ -8,7 +8,7 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/nanoflows.pdf).
 {{% /alert %}}
 
@@ -16,7 +16,7 @@ tags: ["studio pro"]
 
 Nanoflows are similar to [microflows](/refguide8/microflows/), in that they allow you to express the logic of your application. However, they do have some specific benefits (for example, they run directly on the browser/device and can be used in an offline app). Furthermore, most of the actions run directly on the device, so there is also a speed benefit for logic which does not need access to the server.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This page is an overview of all the elements that can be used in a nanoflow. For the properties of the nanoflow itself, see [Nanoflow Properties](/refguide8/nanoflow/).
 {{% /alert %}}
 
@@ -39,7 +39,7 @@ The following actions interact with the database:
 
 Therefore, the best practice is to use nanoflows in online applications when they do not contain the above actions.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Changing objects without committing is not a database-related action, as changes are applied on the device or in the browser.
 {{% /alert %}}
 

@@ -14,7 +14,7 @@ aliases:
 
 ## 1 Introduction
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This information is for apps which are deployed to MindSphere. It does not apply to MindSphere IIoT for Makers.
 {{% /alert %}}
 
@@ -28,7 +28,7 @@ When running on MindSphere, the MindSphere user can use their MindSphere credent
 
 The MindSphere SSO module is included in the MindSphere starter and example apps. It can also be downloaded separately here: [MindSphere SSO](https://marketplace.mendix.com/link/component/108805/).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The SSO module also requires changes to the app theme. See the section on [Siemens MindSphere Web Content](#msthemepack), below.
 
 Please ensure that you also download the *latest version* of the Siemens MindSphere Web Content module when you download the SSO module.
@@ -80,13 +80,13 @@ This microflow populates the *MindSphereToken* entity.
 
 If the access token can be retrieved, then this is used. If a valid token cannot be retrieved, *and the app is running locally*, then the user is asked to sign on by providing their credentials manually. This enables the app to be tested locally, without having to be deployed to the MindSphere environment after every change. You should check whether the access token has been successfully retrieved using the query `${MindSphereTokenName} != empty`. For example, `$MindSphereToken != empty` in the scenario shown in the image below.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If the app cannot retrieve a valid token and is *not* running locally, then an error is returned.
 {{% /alert %}}
 
 The Access_token attribute needs to be passed as the *Authorization* header in REST calls to MindSphere APIs.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The MindSphereToken has a short time before it expires, and therefore needs to be refreshed before each call to any MindSphere API. This is done using the *Access token* action which returns the latest MindSphereToken.
 
 To improve security of your app, it is recommended that you delete *MindSphereToken* before showing a page or reaching the end of the microflow.
@@ -102,7 +102,7 @@ This microflow populates the *Name* attribute of the *Tenant* entity and the *Em
 
 In addition, MindSphere SSO will identify whether the current user is a subtenant using **IsSubTenantUser** and, if so, will populate the name of the subtenant in **SubtenantId**. More information about subtenants can be found in the MindSphere documentation [Subtenants](https://developer.mindsphere.io/apis/core-tenantmanagement/api-tenantmanagement-overview.html#subtenants).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If the same user logs in using a different tenant, Mendix will treat this as a different user and a User ID will be used within Mendix instead of a user name.
 {{% /alert %}}
 
@@ -143,7 +143,7 @@ The MindSphereOSBarConfig module provides a constant **OSBarURL** for specifying
 
 The MindSphereOSBarConfig module creates an endpoint which is used by the MindSphere OS Bar to provide tenant context and information about the application. The MindSphereOSBarConfig module is included in the MindSphere app template, or can be downloaded from the Mendix Marketplace here: [MindSphere OS Bar Connector](https://marketplace.mendix.com/link/component/108804/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The MindSphere OS Bar Connector also needs the Siemens MindSphere Web Content module, or manual configuration of the index.html file, in order to work. See [Customizing an Existing App](/developerportal/deploy/deploying-to-mindsphere/#existingapp) in *Siemens MindSphere – deploy* and [index.html Changes](#indexhtmlchanges), below, for more information.
 {{% /alert %}}
 
@@ -326,7 +326,7 @@ and directly after the script of the X-XRSR put the following script
 </script>
 ```
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you do not use the **Siemens MindSphere Web Content** module you have to create the mindspherelogin.html yourself in the folder /theme/web. See the [mindspherelogin.html](#mindspherelogin) section, below.
 {{% /alert %}}
 
@@ -334,7 +334,7 @@ If you do not use the **Siemens MindSphere Web Content** module you have to crea
 
 For the OS Bar to work correctly in your Mendix app, the following script has to be added after the just added SSO script. Please note the comments in the code regarding the order in which things need to be done if you are inserting this manually.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 *dojoConfig* and the call to load *mxui.js* must also be removed from their original positions in the file.
 {{% /alert %}}
 

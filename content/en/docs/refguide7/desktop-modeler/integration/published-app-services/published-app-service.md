@@ -4,7 +4,7 @@ url: /refguide7/published-app-service/
 parent: "published-app-services"
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 App services have been deprecated in version 7.23.4 and are marked for removal. Use a [published web service](/refguide7/published-web-services/) or a [published REST service](/refguide7/published-rest-services/) instead.
 {{% /alert %}}
 
@@ -22,7 +22,7 @@ App services are explicitly versioned, because once the app service is consumabl
 A newly created version will have the status set to 'Draft' by default. With 'Draft' status, changes and additions can be made to the app service. When the version is ready to be published, the status must be set to 'Consumable'.
 Once the status is set to 'Consumable', you cannot edit the app service anymore. App service versions are only editable when the version is in 'Draft'. Only one version of app service is allowed to be in 'Draft' status.
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 Always remember to set at least one app service version to Consumable before going to production. Only Consumable app service versions will be available in production.
 {{% /alert %}}
 
@@ -63,7 +63,7 @@ The 'Target namespace' is a technical term, that provides an XML namespace.
 
 The button 'Export Mendix Service Definition' creates an MSD-file with the definition of the App service. It can be imported by a consumer of your service. You can test your app service on the local machine by importing this MSD file in another app, and running the provider and consumer apps simultaneously.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 This MSD file contains a default location: the Application Root URL of the default configuration in the project settings. For example: [http://localhost:8080/](http://localhost:8080/). This endpoint address is overwritten if you deploy your app in the cloud, and will be set to the cloud location where your app is running.
 

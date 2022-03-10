@@ -7,7 +7,7 @@ menu_order: 30
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
@@ -85,7 +85,7 @@ Indicates whether the resulting objects should be committed to the database, and
 
 ### 3.9 Validate Against Schema
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Validation properties are only applicable if an import mapping is selected that maps from XML based on an [XML schema](/refguide/xml-schemas/) or a [consumed web service](/refguide/consumed-web-service/).
 

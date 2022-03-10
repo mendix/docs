@@ -64,7 +64,7 @@ The entity [attribute](/refguide7/attributes/) should reflect a property of a re
 
 Attributes that do not reflect business-related data, but are only necessary for technical reasons, should start with an underscore (`_`).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 A strong indicator for determining whether or not an attribute is business-related is whether you would still capture it if you were using a paper-only process. If you would, it is likely that the attribute will deliver business value.
 {{% /alert %}}
 
@@ -80,7 +80,7 @@ If you have multiple associations between the same entities we recommend extendi
 
 A second recommendation is that when an association already exists between entities, and you change the name on one or both of the entities, that you rename the association.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Starting with version 7.19, Mendix will rename the association automatically. 
 {{% /alert %}}
 

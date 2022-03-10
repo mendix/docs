@@ -18,7 +18,7 @@ In the example below, the arrow indicates that **Order** is the owner of the ass
 
 ![](/attachments/refguide7/desktop-modeler/domain-model/association-properties/918217.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 An association between a persistable entity and a non-persistable entity must start in the non-persistable entity and have the owner **Default**. For more information on persistable and non-persistable entities, see [Persistability](/refguide7/persistability/).
 

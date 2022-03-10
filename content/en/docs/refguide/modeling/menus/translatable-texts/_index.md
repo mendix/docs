@@ -42,7 +42,7 @@ If you edit your app to add new widgets while not in the default language, any n
 
 All untranslated texts will be displayed in the default language when you run the application.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If there is no text in the default language, the end-user will see `[no translation]`. If you want the text to be blank, set the default language text to be a space rather than empty.
 {{% /alert %}}
 
@@ -96,7 +96,7 @@ There are two options to ensure that the language is changed:
 
     ![System Domain Model for User and Language](/attachments/refguide/modeling/menus/translatable-texts/reload-with-state.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The above only applies to pages *within* your Mendix application (meaning, pages that are created in Studio Pro). The labels for static pages (such as the *index.html* and *login.html* pages in the **theme** folder of your app) are generated when you create a deployment package using the default language of your app. The labels on those pages will not change for different users, they will always be the same.
 {{% /alert %}}
 

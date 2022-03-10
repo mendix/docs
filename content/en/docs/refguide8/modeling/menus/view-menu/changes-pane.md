@@ -7,7 +7,7 @@ description: "Describes the Changes pane in Mendix Studio Pro."
 tags: ["Studio Pro", "changes", "changes pane"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/changes-pane.pdf).
 {{% /alert %}}
 
@@ -108,7 +108,7 @@ The toolbar at this level contains the following buttons:
 * **Show Changes in mine** – it shows changes to a document on a current development line (for more information on how to solve conflicts, see the [Dealing With Conflicts](/refguide8/using-version-control-in-studio-pro/#conflicts) section in *Using Version Control in Studio Pro*)
 * **Show Changes in theirs** – it shows incoming changes to a document from another development line (for more information on how to solve conflicts, see the [Dealing With Conflicts](/refguide8/using-version-control-in-studio-pro/#conflicts) section in *Using Version Control in Studio Pro*)
 
-	{{% alert type="info" %}}**Show Conflicts**, **Show Changes in mine**, and **Show Changes in theirs** described above are toggles, and each selection de-selects the other two.
+	{{% alert color="info" %}}**Show Conflicts**, **Show Changes in mine**, and **Show Changes in theirs** described above are toggles, and each selection de-selects the other two.
 	{{% /alert %}}
 
 The columns on the left side of the grid will vary based on what toggle button is pressed on the toolbar.

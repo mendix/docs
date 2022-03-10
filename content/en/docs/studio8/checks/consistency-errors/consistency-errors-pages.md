@@ -14,7 +14,7 @@ In this document, we explain how to solve the most common consistency errors tha
 
 An example of a consistency error is when you do not specify the entity property of a data view on a page. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This document does not describe *all* the errors, as there are a lot of errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
 

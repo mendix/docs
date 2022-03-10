@@ -23,7 +23,7 @@ This is for documentation purpose only; it is not visible in the end-user applic
 
 The expression defines the criteria that a string should be checked against in a [formal, internationally standardized regular expression language](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 For example, an expression for checking the Dutch postcode could be: [1-9][0-9][0-9][0-9] ?[A-Za-z][A-Za-z]
 

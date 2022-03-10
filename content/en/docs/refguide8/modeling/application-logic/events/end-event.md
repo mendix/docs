@@ -7,7 +7,7 @@ tags: ["studio pro", "end event", "event"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/end-event.pdf).
 {{% /alert %}}
 
@@ -41,7 +41,7 @@ You can choose to return nothing, or to return, for example, a list, enumeration
 
 The return value can be entered as an [expression](/refguide8/expressions/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 If you are calling a microflow from another microflow, note that a *calling* microflow cannot control what is returned. It is controlled by the *called* microflow. 
 

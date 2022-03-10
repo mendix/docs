@@ -7,7 +7,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This activity can only be used in microflows, not in nanoflows.
 {{% /alert %}}
 
@@ -15,7 +15,7 @@ This activity can only be used in microflows, not in nanoflows.
 
 The download-file action can be used to enable the browser to download a specific file. The user gets a download popup or the file is shown directly in the browser.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 See [Microflow Element Common Properties](/refguide7/microflow-element-common-properties/) for properties that all activities share (for example, caption). This page only describes the properties specific to the action.
 
@@ -38,7 +38,7 @@ Show file in browser defines whether the file is downloaded to a location specif
 | True | File is downloaded to the location for temporary internet files and shown on a new page in the browser. |
 | False | File is downloaded to the location specified by the user. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 On mobile devices files are always shown in a browser window.
 

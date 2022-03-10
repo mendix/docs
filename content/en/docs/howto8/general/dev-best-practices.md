@@ -69,7 +69,7 @@ The [module roles](/refguide8/module-security/#module-role) should have logical 
 
 Most of the time, an [entity](/refguide8/entities/) reflects a real-world object that people can relate to. Therefore, the entity name should also reflect that object and identify its purpose. There are sometimes project-specific exceptions that lead to creating other types of entity, but that is up to you. The name of an entity is singular since an object is a single instance of the entity. A good example is using **Customer** and not **Customers**. Furthermore, we advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names of entities. Entity names also use UpperCamelCase, for example, **HousekeepingRecord** or **LogEntry**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Following these entity naming conventions will prevent issues with naming conflicts between modules and entities. For example, if a module named **Customer** contains an entity named **customer** (note the lower-case "c"), there will be a Java compilation error and the app will not run. Renaming the entity to **Customer** will solve the problem.
 {{% /alert %}}
 
@@ -79,7 +79,7 @@ The entity [attribute](/refguide8/attributes/) should reflect a property of a re
 
 Attributes that do not reflect business-related data, but are only necessary for technical reasons, should start with an underscore (`_`).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 A strong indicator for determining whether or not an attribute is business-related is whether you would still capture it if you were using a paper-only process. If you would, it is likely that the attribute will deliver business value.
 {{% /alert %}}
 

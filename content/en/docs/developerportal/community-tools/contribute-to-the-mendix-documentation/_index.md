@@ -16,11 +16,11 @@ All the Mendix documentation is stored in a [GitHub repository](https://github.c
 
 To work on the documentation in GitHub, use Markdown. For details on this easy-to-use syntax, see the [GitHub Guide to Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 All documentation contributions may be edited to conform to our internal style guide.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 **Quick guide to making a documentation change**
 
 1. Fork the **development** branch of the [mendix / docs](https://github.com/mendix/docs) repository.
@@ -52,7 +52,7 @@ To edit existing documentation, follow these steps:
 2. Make your changes in GitHub (make sure the changes align with our [Documentation Writing Guidelines](/developerportal/community-tools/documentation-writing-guidelines/)).
 3. Create a pull request that specifies our **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/) and [GitHub Standard Fork & Pull Request Workflow](https://gist.github.com/Chaser324/ce0505fbed06b947d962).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If you need your pull request to be merged on a specific date (for example, for a specific release), specify that in the title of the pull request or as a comment. Otherwise, all pull requests are reviewed and merged under the assumption that the content can be published immediately. 
 {{% /alert %}}
 
@@ -69,7 +69,7 @@ When you click the **Feedback** button on the right side of the screen, you will
 
 We look at all feedback and take it seriously, and we will be in contact about how to resolve it.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You need to have a GitHub account to leave feedback. The good news is that, with that same GitHub account, you can also send a pull request with a direct [edit](#editing) of the documentation or even [new documentation](#new-documentation).
 {{% /alert %}}
 
@@ -109,7 +109,7 @@ When you are ready to submit your work, follow these guidelines:
 
 Finally, create a pull request that specifies the Mendix **development** branch as the base (for more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/)).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You may receive a response to your pull request asking for verification of specific issues. Do not panic! We just want to make sure your documentation submission fits well with what we have.
 {{% /alert %}}
 

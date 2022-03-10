@@ -20,7 +20,7 @@ Please see [Supported Providers](/developerportal/deploy/private-cloud-supported
 
 There are two steps required to achieve this, listed below.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Mendix for Private Cloud is a premium offering from Mendix, and there are additional licensing and cost implications if you want to use it for applications in production. See [Licensing Mendix for Private Cloud](#licensing), below, for more information.
 {{% /alert %}}
 

@@ -41,7 +41,7 @@ The [Intelligent Document Service](https://marketplace.mendix.com/link/component
 
         In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
-        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+        {{% alert color="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
    3. In the **Import Module** dialog box, click **Import**. 
    4. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
@@ -55,7 +55,7 @@ The Intelligent Document Service is a premium Mendix product that is subject to 
 
 1.  On the [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) component page in the Marketplace, click **Subscribe** to order a subscription or click **Try for Free** to start a trial.
 
-    {{% alert type="info" %}}For the trial, only one user per company is allowed.{{% /alert %}}
+    {{% alert color="info" %}}For the trial, only one user per company is allowed.{{% /alert %}}
 
 2. Fill in the **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Owner receives an order confirmation email. 
 
@@ -94,7 +94,7 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
     ![Existing models list](/attachments/appstore/app-services/intelligent-document-service/existing-models-list.png)
 
-    {{% alert type="info" %}} The model is ready to use only when the **Status** of this model is **Published**. {{% /alert %}}
+    {{% alert color="info" %}} The model is ready to use only when the **Status** of this model is **Published**. {{% /alert %}}
 
 3.  To train a new model, click **Create New Model** on the page. The **Create New Model** dialog box opens.
 
@@ -102,14 +102,14 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
 4.  Enter a unique **Model Name**. select a **Language**, and then click **Create Model**.
 
-    {{% alert type="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
+    {{% alert color="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
 
 5. Wait until the **Import File** page opens.
 6.  Drag sample images in JPG or JPEG format into the box where it says **Drag image files here**. You can also click **Browse** and select the files.
 
     ![Import File page](/attachments/appstore/app-services/intelligent-document-service/import-file-page.png)
     
-    {{% alert type="warning" %}}If you upload multiple files, all your images must have a similar structure. Each image file size should not exceed 50 MB.{{% /alert %}}
+    {{% alert color="warning" %}}If you upload multiple files, all your images must have a similar structure. Each image file size should not exceed 50 MB.{{% /alert %}}
     
 7.  Click **Next**. The **Add Marker and IDs** page opens. The status of the images you imported shows **Not Marked**.
 
@@ -159,7 +159,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
     6. Click **Download** to get the JSON structure.
 
-    {{% alert type="info" %}} Generated JSON structure file size cannot exceed 50MB. {{% /alert %}}
+    {{% alert color="info" %}} Generated JSON structure file size cannot exceed 50MB. {{% /alert %}}
     
 2.  To add the JSON structure to your app, perform the following steps:
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the generated JSON structure.
@@ -195,7 +195,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 6. For **Mapping**, **Select** the import mapping that you created to define how extracted data should be mapped into an entity.
 7. Click **OK** to save the changes and close the dialog box.
 
-{{% alert type="info" %}} Optionally for further automation, add [event handlers](/refguide/event-handlers/) on the entity where you populate the extracted data. You can call your own microflow to process the extracted data when inserted into the entity. For example, you can modify, validate, and pass the data to next steps. By doing this, you can achieve full end-to-end automation.{{% /alert %}}
+{{% alert color="info" %}} Optionally for further automation, add [event handlers](/refguide/event-handlers/) on the entity where you populate the extracted data. You can call your own microflow to process the extracted data when inserted into the entity. For example, you can modify, validate, and pass the data to next steps. By doing this, you can achieve full end-to-end automation.{{% /alert %}}
 
 ### 4.4 Checking Statistics on the Usage Dashboard
 

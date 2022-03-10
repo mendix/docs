@@ -4,7 +4,7 @@ url: /refguide/send-external-object/
 parent: "external-object-activities"
 tags: ["studio pro", "integration activity"]
 ---
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 These activities can only be used in **Microflows**.
 {{% /alert %}}
 
@@ -12,7 +12,7 @@ These activities can only be used in **Microflows**.
 
 The **Send external object** activity can be used to persist changes to an external object.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The ability to send attributes using this activity was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/). The sending of association members was added in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8/)
 {{% /alert %}}
 

@@ -42,7 +42,7 @@ The permissions are set independently for each environment. You can choose the e
 
 Only team members who have permission to *Deploy, Publish, and Monitor* can view the permissions.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Note that only team members with a *user role* which includes permission to *Deploy, Publish, and Monitor* the app will be listed in the Node Permissions tab.
 
@@ -76,7 +76,7 @@ The Technical Contact and team members specifically allowed to *Manage Permissio
 
 With Manage Permissions, team members other than the Technical Contact can change the permissions granted to team members.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Only the Technical Contact can grant this permission to other team members.
 {{% /alert %}}
 
@@ -109,7 +109,7 @@ With API rights, you can use the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/
 
 As the API does not require two-factor authentication, it is disabled for the production environment by default. The Technical Contact can assign API access for each user.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Other permissions are needed in addition to *API Rights*.
 
 For example, to access backups via the API you need *Access to Backups* in addition to *API Rights*.

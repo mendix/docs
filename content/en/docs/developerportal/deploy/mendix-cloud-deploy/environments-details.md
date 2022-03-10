@@ -55,7 +55,7 @@ On the right side of the screen, you can find the following action buttons:
 * **Show Logged in Users** 
 * **Change Admin Password** – this changes the password for the inbuilt [administrator](/refguide/administrator/) account — the new password is applied immediately, without the need for a restart and will also force the administrator to pick up any new roles assigned in the app deployment package — see the [User Role](/refguide/administrator/#user-role) section of *Administrator* for more information
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 During a [maintenance window](/developerportal/deploy/maintenance-windows/), you will not be able to start, restart, or stop your app.
 {{% /alert %}}
 
@@ -63,7 +63,7 @@ During a [maintenance window](/developerportal/deploy/maintenance-windows/), you
 
 You can use the **Clear Environment** button to clear your environment so that you can use it for another purpose. This option is only available if the environment is stopped.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You do not need to clear your environment if you are restoring an existing backup of the currently deployed app, the restore process will handle the existing data automatically.
 {{% /alert %}}
 
@@ -89,7 +89,7 @@ In Mendix Cloud v4 environments, you have two additional action buttons:
 
 #### 2.1.3 Logging and Debugging in Mendix Cloud v3
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
 {{% /alert %}}
 
@@ -106,7 +106,7 @@ If you are the [Technical Contact](/developerportal/collaborate/app-roles/#techn
 
 Click the **Change** button next to the name of the environment.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The name must be at least two characters and consist of alphanumeric characters and hyphens (`a-z`, `A-Z`, `0-9`, and `-`) but cannot begin or end with a hyphen.
 
 If you rename an environment, it may take up to 15 minutes before you can access an app via its URL. This is because the URL includes the name of the environment and the old value needs to be removed from the DNS cache. It may take considerably longer for the change to be visible worldwide.
@@ -127,7 +127,7 @@ In **Scaling**, there are two sliders that you can control:
 
 The **Total Allocated Memory** is a process circle that shows how much memory is currently used for scaling.
 
-{{% alert type="info" %}}The maximum value for **Memory per instance** equals the **Total Allocated Memory** of your plan, but it cannot exceed 32 GB. The maximum number of instances will change according to the **Memory per instance** you have chosen in such a way that `Max instances x Memory per instance = Total Allocated Memory`.{{% /alert %}}
+{{% alert color="info" %}}The maximum value for **Memory per instance** equals the **Total Allocated Memory** of your plan, but it cannot exceed 32 GB. The maximum number of instances will change according to the **Memory per instance** you have chosen in such a way that `Max instances x Memory per instance = Total Allocated Memory`.{{% /alert %}}
 
 If you have 1GB RAM of the **Total Allocated Memory**, you have one instance available to store your memory.
 
@@ -182,7 +182,7 @@ In this section, you can view your configured scheduled events.
 
 If you select a scheduled event and click **Toggle**, you can switch the scheduled event off and on.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You have to restart your application before the changes will be made.
 
@@ -206,7 +206,7 @@ You can also set **Mask** to **Yes**. This replaces the **Current value** and th
 ![Edit Constants Pop-up window](/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/edit-constant.png)
 {{% /image_container %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You have to restart your application before the changes will be made.
 {{% /alert %}}
 
@@ -238,7 +238,7 @@ For more information, see [Certificates](/developerportal/deploy/certificates/) 
 
 HTTP Headers allows you to set the values of selected HTTP response headers. These allow the server to pass additional information with the response which the browser will interpret to control the behavior of your Mendix app.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This replaces the option to prevent embedding your app in an iframe with more flexible options to set HTTP Headers.
 {{% /alert %}}
 
@@ -286,7 +286,7 @@ A number of non-configurable response headers are added automatically by Mendix 
 
 Most browsers have additional security to ensure that iframes are only allowed when they are from the same domain as the main page. The defaults for these vary by browser version. This security is controlled through SameSite cookies. You can find a good explanation of SameSite cookies in [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) on the *web.dev* website.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 There can be additional issues when using cookies in iframes for end-users using the **Safari** browser. Resolving these issues is outside the control of Mendix. See the [Full Third-Party Cookie Blocking and More](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) blog post on *Webkit.org* for more information.
 {{% /alert %}}
 
@@ -305,7 +305,7 @@ You can change this value in the `com.mendix.core.SameSiteCookies` [custom runti
 
 For **Mendix versions below 8.12** there was no SameSite value set on cookies and the behavior is dependent on the browser default. To ensure that cookies can be used within iframes, you can set the custom environment variable `SAMESITE_COOKIE_PRE_MX812` to `true` in [custom environment variables](#custom-environment-variables), which will set `SameSite=None; Secure;` for all your cookies.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The SAMESITE_COOKIE_PRE_MX812 setting will only be implemented the next time your app is deployed.
 {{% /alert %}}
 
@@ -405,23 +405,23 @@ On this tab, you can perform the following actions:
 * Change the log level type by clicking the specific level
 * Click **Set all to INFO** to revert all the changes
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If your app is not running, you will only see log nodes which are not set to the `Info` level. You will see these log nodes again when your app is restarted and, for custom nodes, messages have been logged to them.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you change the log level, this level will continue to be used even if you later restart your app.
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 For an application running a **single instance**, any changes will be applied immediately to the application.
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 For an application running **more than one instance**, the changes can only be applied after a restart of the app. This is because it is not possible to instruct the load balancer to set the log level for a specific running instance. 
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Log levels may not persist across restarts if you change them outside the Developer Portal (for example, using an app module).
 {{% /alert %}}
 
@@ -506,7 +506,7 @@ In addition, to support features which are in beta, you can add **Unsupported** 
 
 ![](/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-variable.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The *Unsupported* environment variables can only be used for controlling Mendix beta features.
 {{% /alert %}}
 

@@ -52,7 +52,7 @@ The **Jump** activity allows you to jump to other activities in the workflow. Th
 
 ![Jump Activity Example](/attachments/studio/workflows/workflows-general-activities/jump-example.jpg)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You cannot use the **Jump** activity in a Parallel split or in a path where it would end the workflow without any other path continuing it. 
 {{% /alert %}}
 
@@ -76,7 +76,7 @@ The parallel split is used to have parallel processes in your workflow. For exam
 
 ![Parallel Split Example](/attachments/studio/workflows/workflows-general-activities/parallel-split-example.jpg)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The workflow will only continue to the next activity when all paths of the parallel split have been completed.
 
@@ -107,7 +107,7 @@ To change the order of paths, click the **Paths** property and drag it.
 
 The **End** event ends the path of the workflow. 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You cannot use the **End** event in a Parallel split or in a path where it would end the workflow without any other path continuing it. 
 {{% /alert %}}
 

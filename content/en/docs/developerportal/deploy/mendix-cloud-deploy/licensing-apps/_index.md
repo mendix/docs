@@ -24,7 +24,7 @@ This page explains how you can link your app to a licensed node. It covers the f
 * [Unlinking a Free App](#unlink-free) from its environment
 * [Exchanging Linked Apps Between Nodes](#exchange-apps)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 These instructions will not move databases, file storage, or any other environment configurations to another node. Only the deployment package of a Mendix model – the app as built in Mendix Studio Pro – is moved.
 {{% /alert %}}
 
@@ -56,7 +56,7 @@ If you want to license a single app for between five and a hundred users, you ca
 
 If you have an existing contract which allows for more licensed nodes, use the [Request New App Node](https://newnode.mendix.com) app to request a new node from Mendix Support. For more information, see [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If your contract does not allow for more licensed nodes, please contact your Customer Success Manager (CSM).
 {{% /alert %}}
 
@@ -77,7 +77,7 @@ You have deployed an app: either as a Free App, or to a licensed node. You now w
 * [Connect your app to a licensed node](#connect-app)
 * [Restore the backup of your data](#restoring)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For the specific case of swapping two apps between licensed nodes, see the guidance in the [Exchanging Linked Apps Between Nodes](#exchange-apps) section.
 {{% /alert %}}
 
@@ -87,7 +87,7 @@ When you remove an app from its environment you may want to take the data (datab
 
 For more information on downloading a backup, see [Download a Backup](/developerportal/operate/download-backup/). 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 When you unlink your Free App from its environment, the environment will be permanently deleted. This means that you will not be able to recover any data once the app is unlinked.
 
 If you are unlinking from a licensed node, the node is NOT deleted and data is retained in the node.
@@ -119,7 +119,7 @@ To unlink a Free App, do the following:
 
     ![](/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/confirm-unlink.png)
 
-    {{% alert type="warning" %}}Your Data will be deleted.{{% /alert %}}
+    {{% alert color="warning" %}}Your Data will be deleted.{{% /alert %}}
 
 6.  Validate with your [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/).
 
@@ -133,11 +133,11 @@ An example of how this behavior can be used is given in the [Exchanging Linked A
 
 ### 4.3 Connecting Your App to a Licensed Node{#connect-app}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If there is already an app linked to the target node, it will be **unlinked automatically**.
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Apart from the app, the rest of the environment(s) in the target node will remain the same. This includes:
 
 * the container and its configuration (including memory, instances, and environment variables)
@@ -177,7 +177,7 @@ After you have linked your app to a licensed node, it will be using the resource
 
 If you want to use the data which was originally in your app, you will need to restore the backup from your old node. For more information on restoring a backup, see [Restore a Backup](/developerportal/operate/restore-backup/).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You can only restore data to an existing database. This means that there must have been an app deployed to the licensed node before you attempt to restore data.
 {{% /alert %}}
 

@@ -7,7 +7,7 @@ menu_order: 40
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
@@ -55,7 +55,7 @@ If the [export mapping](/refguide/export-mappings/) is based on a message defini
 
 ### 3.5 Validate Against Schema
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Validation against schema is only applicable if an export mapping is selected that maps to XML.
 

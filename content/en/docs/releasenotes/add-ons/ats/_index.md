@@ -10,6 +10,6 @@ These are the release notes for the the [Mendix Application Test Suite (ATS)](/a
 * [2](/releasenotes/add-ons/ats-2/)
 * [1](/releasenotes/add-ons/ats-1/)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The patch release notes are also included here.
 {{% /alert %}}

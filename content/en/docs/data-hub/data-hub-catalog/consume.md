@@ -29,7 +29,7 @@ The published OData service document (the API) is included in the module definit
 
 When a new version of the OData service for an external entity is registered in the Data Hub Catalog, the consumed OData service will have to be updated in the consuming app. For more details on updating a consumed service see the [Updating or Switching a Consumed OData Service](/refguide/consumed-odata-service/#updating) section of *Consumed OData Service*.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This is not compulsory, and users can continue to use an older version of a service unless the new version was deployed to the same service endpoint as the previous version. In Studio Pro, new versions of a service are indicated and users can choose to **Update** the service, or **Switch** to another version of the service deployed to another endpoint.
 {{% /alert %}}
 
@@ -47,7 +47,7 @@ You can associate external entities with both [persistable and non-persistable](
 
 Mendix entities that are [specializations](/refguide/generalization-and-association/) in the originating app will be published and consumed as discrete entities that include the inherited attributes and associations. When the generalized entity is also exposed in the same service as the specialized entities, the inheritance relationship will not be present in the metadata contract or when both are consumed. 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Associations that are inherited from a generalization will be exposed and shown when the specialization is consumed. However the same association of the generalized entity is not supported for the specialization in the same domain model The same association cannot be exposed and consumed for two different external entities in the same domain model.
 {{% /alert %}}
 

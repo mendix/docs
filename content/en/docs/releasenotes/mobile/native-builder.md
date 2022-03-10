@@ -8,7 +8,7 @@ description: "Native Builder release notes."
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The Native Builder, a CLI tool, has been deprecated in favor of the Mendix Native Mobile Builder — a UI tool that integrates with Studio Pro. For Mendix Studio Pro 8.15 please use the Native Mobile Builder UI tool instead of the CLI tool. Read more on how to deploy your app [here](/howto/mobile/deploying-native-app/) using the Native Mobile Builder.
 {{% /alert %}}
 
@@ -16,7 +16,7 @@ The [Native Builder](/refguide8/native-builder/) is a command line input tool wh
 
 We are heavily invested in streamlining the experience of building your apps and are continuously improving upon the tool's capabilities. For more information on using the Native Builder, see [How To Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app/).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fixes required to accomodate Github's transition of using **main** instead of **master** for naming the default branch for new repositories. 
 {{% /alert %}}
 

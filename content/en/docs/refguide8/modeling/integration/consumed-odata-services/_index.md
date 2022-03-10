@@ -6,7 +6,7 @@ description: "Overview of consumed OData services for Studios"
 tags: ["studio pro"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/consumed-odata-services.pdf).
 {{% /alert %}}
 
@@ -18,7 +18,7 @@ Mendix Data Hub enables integration of available data sources from different sou
 
 For further details on the consumed OData service document and updating consumed OData services in your project, see [Consumed OData Service](/refguide8/consumed-odata-service/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Mendix Data Hub is a licensed product. Using external entities to consume OData services requires a license, and the type of license you have will define how many data records can be consumed.  For further details, see the [Data Hub License Limitations](/refguide8/consumed-odata-service-requirements/#license-limitations) section of *Consumed OData Service Requirements*. To find out more about your Data Hub license, contact [Mendix Support](https://support.mendix.com).
 {{% /alert %}}
 

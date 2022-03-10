@@ -10,7 +10,7 @@ tags: ["ATS", "testing"]
 
 The sections below provide helpful resources when creating custom actions. Most are third-party resources, and there are also some Mendix documents.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Keep in mind that Google Chrome is the browser used in these documents.
 {{% /alert %}}
 
@@ -37,6 +37,6 @@ Keep in mind that Google Chrome is the browser used in these documents.
 | [jQuery Selector Helper](https://chrome.google.com/webstore/detail/jquery-unique-selector/cmdmlphjbobhblimniofbnlfkmpcjlgd) | This is a third-party extension for the Google Chrome browser. It helps you create jQuery selectors quickly. It also helps with learning jQuery, because it creates the selector automatically. |
 | [jQuery Injector](https://chrome.google.com/webstore/detail/jquery-injector/ekkjohcjbjcjjifokpingdbdlfekjcgi) | This is a third-party extension for the Chrome brower. It enables you to inject jQuery into the page. Some pages don’t have jQuery or something goes wrong while loading.  |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To get the ATS Helper and the ATS Recorder, click the information icon in ATS.
 {{% /alert %}}

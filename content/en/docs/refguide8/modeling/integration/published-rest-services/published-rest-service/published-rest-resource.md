@@ -9,7 +9,7 @@ tags: ["published REST", "resource", "studio pro"]
 # linked from DM: published rest > add resource > help (integration)
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-rest-resource.pdf).
 {{% /alert %}}
 

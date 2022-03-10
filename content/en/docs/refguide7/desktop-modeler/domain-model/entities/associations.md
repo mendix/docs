@@ -35,7 +35,7 @@ This property defines whether an association is a reference (single) or a refere
 
 * *Default value*: Reference
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The examples for this property are combined with the example of the owner property below.
 

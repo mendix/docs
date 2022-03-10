@@ -7,7 +7,7 @@ tags: ["studio pro", "regular expressions", "regular expression"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/regular-expressions.pdf).
 {{% /alert %}}
 
@@ -31,7 +31,7 @@ This is for documentation purpose only; it is not visible in the end-user applic
 
 The expression defines the criteria that a string should be checked against in a [formal, internationally standardized regular expression language](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 For example, an expression for checking the Dutch post code could be: `[1-9][0-9][0-9][0-9] ?[A-Za-z][A-Za-z]`.
 
@@ -58,14 +58,14 @@ A regular expression can contain the following types of subexpressions:
 	* `[abc]` matches "_a_", "_b_", or "_c_"
 	* `[a-z]` specifies a range which matches any lowercase letter from "_a_" to "_z_"
 
-	{{% alert type="info" %}}These forms can be mixed: `[abcx-z]` matches "_a_", "_b_", "_c_", "_x_", "_y_", or "_z_", and is equivalent to `[a-cx-z]`. The `-` character is treated as a literal character if it is the last or the first character within the brackets, or if it is escaped with a backslash (`\`).
+	{{% alert color="info" %}}These forms can be mixed: `[abcx-z]` matches "_a_", "_b_", "_c_", "_x_", "_y_", or "_z_", and is equivalent to `[a-cx-z]`. The `-` character is treated as a literal character if it is the last or the first character within the brackets, or if it is escaped with a backslash (`\`).
 	{{% /alert %}}
 
 * `[^ ]` – matches a single character that is NOT contained within the brackets, for example:
 	* `[^abc]` matches any character other than "a", "b", or "c"
 	* `[^a-z]` matches any single character that is not a lowercase letter from "a" to "z"
 
-	{{% alert type="info" %}}As above, literal characters and ranges can be mixed.
+	{{% alert color="info" %}}As above, literal characters and ranges can be mixed.
 	{{% /alert %}}
 
 * `{m,n}` – matches the preceding element at least _m_ and not more than _n_ times, for example:
@@ -78,7 +78,7 @@ A regular expression can contain the following types of subexpressions:
 * A literal character – this is a character that does not have a special meaning in the regular expression language and it matches itself; this is effectively any character except `\[](){}^-$?*+|.`, for example:
 	* The *`space`* in the Dutch post code example is a literal character that just matches itself
 
-	{{% alert type="info" %}}If you need to match one of the characters which is not a literal, prefix it with a backslash (`\`).
+	{{% alert color="info" %}}If you need to match one of the characters which is not a literal, prefix it with a backslash (`\`).
 	{{% /alert %}}
 
 * `\w` – a word: a letter, digit, or underscore; `\w` is an abbreviation for `[A-Za-z0-9_]`

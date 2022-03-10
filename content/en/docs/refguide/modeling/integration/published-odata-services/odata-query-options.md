@@ -9,7 +9,7 @@ tags: ["OData", "filter", "count", "sort", "select", "page", "studio pro"]
 
 This is a list of query options for OData.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 We currently only support the options described here.
 {{% /alert %}}
 
@@ -151,7 +151,7 @@ When you filter against associations, null literals can be quite useful. For exa
 
 If the OData query is too long to be sent as a `GET` request, clients can send the query as a `POST` request to the `/$query` endpoint. For example, `GET /Products?$select=Name,Price` and `POST /Products/$query` with `$select=Name,Price` in the request body give the same result. These `POST` requests must specify the header `Content-Type: text/plain`. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The body must adhere to *URL encoding* principles. So, for instance, spaces, tabs, and newlines are not allowed.
 {{% /alert %}}
 
@@ -198,6 +198,6 @@ When the association refers to multiple objects, add objects to or remove object
 
 Clients can only update an association from the entity that is the [owner](/refguide/associations/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The updating attributes functionality was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/). The updating associations functionality was introduced in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8/).
 {{% /alert %}}

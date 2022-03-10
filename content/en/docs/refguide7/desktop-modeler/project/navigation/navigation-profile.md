@@ -5,7 +5,7 @@ parent: "navigation"
 description: "Describes the profile properties and profile buttons for Mendix version 7.4 and above."
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 For details on how this works in Mendix versions 7.0 and 7.1, see [Navigation Before Mendix Version 7.2](/refguide7/navigation-before-72/). For 7.2 and 7.3, see [Navigation in Mendix Versions 7.2 and 7.3](/refguide7/navigation-in-72-and-73/)
 
@@ -51,7 +51,7 @@ If the sign-in page is set to none, a built-in pop-up window will appear instead
 
 Each device type contains a default menu. You can use these menus in [menu widgets](/refguide7/menu-widgets/). Defining the menu for a device type works the same as when editing a menu document. For more details, see [Menu](/refguide7/menu/).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 If [security](/refguide7/project-security/) is enabled, the menu will only show the items to which the user has access.
 

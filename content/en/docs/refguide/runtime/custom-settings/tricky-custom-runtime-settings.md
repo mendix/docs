@@ -72,11 +72,11 @@ The settings below are used to define the database connection pooling behavior. 
 | `ConnectionPoolingMaxIdle` | Sets the cap on the number of "idle" instances in the pool. | 50 |
 | `ConnectionPoolingMinIdle` | Sets the minimum number of objects allowed in the pool before the evictor thread (if active) spawns new objects. Note that no objects are created when `numActive` + `numIdle` >= `maxActive`.  This setting has no effect if the idle object evictor is disabled (meaning, if `timeBetweenEvictionRunsMillis` <= 0). | 0 |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you change these settings, you will need to restart your app to apply the changes.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 These settings are configured *per runtime instance*. If you have [scaled your application](/developerportal/deploy/scale-environment/), the number of connections on the database side will be multiplied by the number of runtime instances. For example, if you set `ConnectionPoolingMaxIdle` to `50` and scale your app to 2 runtime instances, each runtime instance will create at most 50 connections, but on the database side this will lead to a maximum of 100 connections.
 {{% /alert %}}
 

@@ -29,7 +29,7 @@ Mendix Support will contact the [Technical Contact](/developerportal/collaborate
 
 If you have an app deployed to **SAP** and need a *Subscription Secret*, you need to choose the **Hosting type** *Virtual Private Cloud* and then, on the subsequent screen choose **Hosting type** *Cloud Foundry* and **Virtual Private Cloud Name** *SAP Cloud Platform*.  
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Apps in the IBM Cloud Portal are licensed in a different way – see [IBM Cloud](/developerportal/deploy/ibm-cloud/) for more information.
 {{% /alert %}}
 
@@ -41,7 +41,7 @@ Fill in all the required details in the [Resize Environment](https://resize.mend
 
 Mendix Support will contact the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) for the app via a ticket in the [Mendix Support Portal](https://support.mendix.com) to discuss priority and timing.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Resizing operations will require your app to be restarted and it will be offline for a time while it is being resized.
 {{% /alert %}}
 

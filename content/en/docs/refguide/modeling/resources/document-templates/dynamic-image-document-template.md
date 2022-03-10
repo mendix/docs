@@ -13,7 +13,7 @@ aliases:
 
 A dynamic image can be used to show a System.Image. If the image is not available (for example: the image was never saved) it will show the preset default image. It can be put inside a data view or templategrid.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide/modeling/resources/document-templates/918132.png)
 A dynamic image inside a table cell, showing the preset default image.

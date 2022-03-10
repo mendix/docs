@@ -15,7 +15,7 @@ Indexes can be added and edited from the **Indexes** tab of the entity propertie
 
 ![Example of index tab](/attachments/refguide/modeling/domain-model/entities/indexes/index-properties.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Index properties are read-only for external entities. For further details, see [External Entities](/refguide/external-entities/).
 {{% /alert %}}
 

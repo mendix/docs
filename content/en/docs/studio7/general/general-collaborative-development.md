@@ -10,7 +10,7 @@ menu_order: 05
 
 ## 1 Introduction
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Collaborative development is only available if your app has Mendix version 7.23.3 or above. You cannot sync your changes with the Desktop Modeler if your app has Mendix version 7.23.2 or below. 
 

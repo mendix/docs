@@ -27,7 +27,7 @@ While styling Mendix apps, users must often apply the same set of CSS or native 
 
 Design properties can make this work easier and safer. By configuring your own custom design properties, a certain styling can be applied to a widget in a few clicks.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Mendix Studio does not have any class editing interface. This means that in Studio, design properties are the only way to alter the visual behavior of a certain element.
 {{% /alert %}}
 
@@ -147,7 +147,7 @@ The examples above show that the fields `name` and `description` define the UI, 
 
 Field `type` defines the type of a property and can only take one of the two string values: `Toggle` or `Dropdown`.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Name your design property and its options carefully. Those names cannot be changed easily when there are apps already using them. If you want to rename a design property which is already being used in an app, see the [Renaming Design Properties](#old-names) section below.
 {{% /alert %}}
 
@@ -173,7 +173,7 @@ The precedence of design properties is determined by this compilation order of m
 
 If multiple modules have a definition of a **Dropdown** property with the same name, the options will be ordered from high to low precedence (highest on top). If multiple modules have definitions of a **Toggle** property with the same name, the CSS class name from the module with the highest precedence will be applied when using the property.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Note that having multiple definitions with different types (for example **Toggle** and **Dropdown**) is an invalid configuration and will result in a failure to load any design properties.
 {{% /alert %}}
 
@@ -181,7 +181,7 @@ Note that having multiple definitions with different types (for example **Toggle
 
 When defining design properties in your *JSON* file, you must specify which widget your properties apply to, as some design properties may only work with certain widgets.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Having a property that applies a table appearance style like **Stripped**, **Bordered**, or **Lined** only makes sense for widgets that contain tables, for example a data grid widget.
 {{% /alert %}}
 
@@ -223,7 +223,7 @@ The design property above was renamed from **my Dropdown Propery** to **My Dropd
 
 ### 6.1 Renaming a Dropdown Option to a Toggle Property
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This feature was introduced in Mendix 9.
 {{% /alert %}}
 

@@ -24,7 +24,7 @@ You cannot currently upload an archive through this API. This function is curren
 
 V2 of this API is focused on working with snapshots and archives asynchronously, as these can be very long-running tasks for large quantities of data. The [older V1 API](/apidocs-mxsdk/apidocs/backups-api-v1/), in contrast, works synchronously. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This article is only applicable to applications deployed in **Mendix Cloud V4**. You can check which version of the Mendix Cloud you are using in the [Developer Portal](/developerportal/deploy/environments-details/).
 {{% /alert %}}
 
@@ -580,7 +580,7 @@ URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<Environment
 *   _source\_snapshot\_id_ (String): Identifier of the snapshot which will be restored. This value is required and must belong to a snapshot within the same application, although it could be a different environment.
 *   _db\_only_ (Boolean): Boolean flag. Set this to *true* if you are doing a database only restore operation. It defaults to *false* if not present.
 
-    {{% alert type="warning" %}}Setting `db_only` to `true` will not restore any of your files leading to a risk that data will be missing from your app or that your app will not work as expected. Use this option with caution.{{% /alert %}}
+    {{% alert color="warning" %}}Setting `db_only` to `true` will not restore any of your files leading to a risk that data will be missing from your app or that your app will not work as expected. Use this option with caution.{{% /alert %}}
 
 **Example Request**
 

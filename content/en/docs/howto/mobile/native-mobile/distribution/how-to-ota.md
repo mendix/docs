@@ -15,11 +15,11 @@ Native apps are separated into two parts: a wrapper that functions as a native i
 
 With OTA updates support via the Mendix runtime, you can simply deploy a new version of your app to the cloud. Then, the changed apps will be updated automatically at the next restart as long as devices can access the runtime. This way the model, runtime, and apps can be kept seamlessly in sync.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Currently OTA does not update your app while the app is open or minimized.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Mendix OTA updates are the replacement for the deprecated [App Center's CodePush OTA updates solution](/howto/mobile/how-to-ota-appcenter/). When opting in for OTA updates via the Mendix Runtime, CodePush OTA updates will be disabled. 
 {{% /alert %}}
 

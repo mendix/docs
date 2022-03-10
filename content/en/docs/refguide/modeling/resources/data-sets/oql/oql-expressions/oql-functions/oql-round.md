@@ -21,7 +21,7 @@ ROUND ( numeric_expression , length )
 
 `numeric_expression` specifies the expression which must be rounded. This expression must be a numeric expression.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 If `numeric_expression` is `NULL` (empty), the function will return `NULL`.
 

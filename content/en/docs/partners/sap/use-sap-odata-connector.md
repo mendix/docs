@@ -17,7 +17,7 @@ The OData Connector for SAP solutions is a specific SAP connector for integratin
 * Configure the OData Connector for SAP solutions
 * Display product data from the SAP OData service GWSAMPLE_BASIC in your Mendix app
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Version 5.3.0 of the OData Connector for SAP solutions adds support for services using OData version 4. Currently, only **Get List** and **Get Entry** are supported for services using OData version 4.
 {{% /alert %}}
 
@@ -131,7 +131,7 @@ To create a page to show the objects in a list, follow these steps:
 3. Drag a **open page button** on your homepage.
 4. Select the page you have just created to be displayed.
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 Congratulations! You can now run your app and see a list of the products available in the **GWBASIC_SAMPLE** application.
 {{% /alert %}}
 

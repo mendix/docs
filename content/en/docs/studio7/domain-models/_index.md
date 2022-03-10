@@ -15,7 +15,7 @@ The domain model in Studio consists of the following:
 * [Entities](#entity)
 * [Associations](/studio7/domain-models-association-properties/) 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Let us say you have a collection of CDs like the one in the table below.
 
@@ -37,7 +37,7 @@ After opening a domain model, you will see an overview of all the entities, attr
 
 ![](/attachments/studio7/domain-models/domain-overview.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The complexity of your domain model depends on the complexity of your app. 
 
@@ -111,7 +111,7 @@ To add association in the domain model, do the following:
 
     ![](/attachments/studio7/domain-models/new-association.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The module is indicated next to the entity name in the brackets. If you select the entity from another module, you will create a cross-  module association. For more information, see section [5 Cross-Module Associations](/studio7/domain-models-association-properties/#cross-module-associations) in *Association Properties*. The entities of the current module are listed first. 
 
@@ -149,7 +149,7 @@ To change the attribute properties, click the attribute in the domain model. The
 ![](/attachments/studio7/domain-models/selecting-attribute.png)
 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Fields that are displayed in **Properties** may vary depending on the type of the attribute.
 

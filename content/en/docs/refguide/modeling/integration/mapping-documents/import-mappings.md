@@ -36,7 +36,7 @@ This is what will happen when you use an [Import with Mapping](/refguide/import-
 | **Find an object (by key)** | Searches for an object, using keys defined in the attributes list. The runtime searches for the object by taking all attributes marked as **Key** (in the **Value element to attribute mapping** section below) and converting them to an XPath query.<br/>If more than one object is returned by the XPath query, an error will be thrown. |
 | **Call a microflow** | Calls a microflow to obtain an object and return it. If the microflow expects any parameters, these need to be specified in the **Select...** window. Possible parameters are the input parameter (see above), any parent entity in the mapping and any attributes in the current XML element. The microflow must return an object of the correct entity type. If it returns a null object, the selected **If no object was found** action will be performed. ||
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In each case, if the object is found or created, mapped attributes will be given the value from the XML or JSON input. Unmapped attributes will retain their current (default for a newly-created object) values. See [Mapping Attributes in Import Mappings](#mapping-attributes), below for more information.
 {{% /alert %}}
 
@@ -58,7 +58,7 @@ If this is the top level of the mapping, you can check **Decide this at the plac
 
 After obtaining a mendix object (see [Obtain Mendix Object Methods](#obtain-object), above), you can set an association to the parent object. If **Set association** is *Yes*, a dropdown of allowed associations is shown. If an association is selected, it is drawn in the mapping document.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Be aware that lists are not stored ordered in the Mendix database. The XML Schema can prescribe that a grouping of objects is a sequence, but the order of Mendix objects in the database may differ from the order of incoming XML elements.
 

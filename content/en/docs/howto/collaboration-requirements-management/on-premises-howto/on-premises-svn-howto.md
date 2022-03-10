@@ -12,11 +12,11 @@ When developing Mendix applications, changes to these applications are stored in
 
 While this is the recommended way of working for almost all Mendix developers, you may prefer to store your application's files in a system that is controlled by your own organization. For version control, Mendix uses the [Subversion](https://subversion.apache.org) system (also known as SVN) and [Git](/howto/collaboration-requirements-management/on-premises-git-howto/). This how-to describes how to work with SVN version control system.	
 
-{{% alert type="info" %}}	
+{{% alert color="info" %}}	
 This how-to will not describe how to set up an SVN server from scratch; typically, this will be taken care of by the IT department of your organization.	
 {{% /alert %}}
 
-{{% alert type="warning" %}}	
+{{% alert color="warning" %}}	
 You will not be able to use Mendix Studio for collaborative development if you use an on-premises version control server. Collaborative development between Studio and Studio Pro will only work if you use the Mendix Team Server.	
 {{% /alert %}}	
 
@@ -50,7 +50,7 @@ In the following sections of this how-to, it is assumed that you have a reposito
 
 Mendix Studio Pro has a (built-in) Subversion client that uses version 1.9 of the SVN working copy format. This client should be compatible with any 1.x version of the SVN server, so you could use, for example, a 1.6.x or 1.9.x SVN server as well.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are NOT compatible.
 
 This means that, if you use a separate SVN client (for example [TortoiseSVN](https://tortoisesvn.net/)) to work on your Mendix app, you must always use the version which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN, **you will no longer be able to open it in Mendix**.{{% /alert %}}
@@ -71,7 +71,7 @@ To create a new app to store in your on-premises SVN server, you must create the
 
 To look at moving an app from Mendix Team Server to a private SVN server, we will use the scenario of creating a new app in the [Developer Portal](/developerportal/). In this case a Team Server app is created automatically.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 For the purpose of creating an app to store in your on-premises SVN server, this is a deprecated workflow.
 {{% /alert %}}
 

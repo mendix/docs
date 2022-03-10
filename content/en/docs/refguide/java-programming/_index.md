@@ -66,7 +66,7 @@ public class JavaAction_1 extends CustomJavaAction<java.lang.Void>
 
 You can use the Mendix Java library in the Java code that you write for your Java actions.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can find the Javadoc at [Runtime API](/apidocs-mxsdk/apidocs/runtime-api/) or in the directory Studio Pro is installed in (for example, *C:\Program Files\Mendix\9.0.0\runtime\javadoc*).
 {{% /alert %}}
 

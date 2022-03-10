@@ -6,7 +6,7 @@ parent: "integration"
 ---
 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 This document describes published web services. If you're looking for specific information on the published web services screen, you can check the [Published web service](/refguide7/published-web-service/) documentation.
 

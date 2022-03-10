@@ -6,7 +6,7 @@ menu_order: 40
 tags: ["studio pro", "microflows", "nanoflows", "activity"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/activities.pdf).
 {{% /alert %}}
 
@@ -16,7 +16,7 @@ Activities define the actions that are executed in a microflow or a nanoflow.
 
 There are different types of activity, and these are grouped together in the Studio Pro toolbox. All the activities are listed below, follow the links for more information.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Most activities can be used in both microflows and nanoflows. However, some can only be used in one of these types of flow, or the behavior may differ between microflows and nanoflows. Follow the links for more information.
 {{% /alert %}}
 

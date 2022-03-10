@@ -18,7 +18,7 @@ The data view supports the following data sources:
 *   [Microflow](/refguide7/microflow-source/): the data view object is determined by the result of calling the specified microflow. The microflow can take objects in the context as parameter and needs to return a single object.
 *   [Listen to widget](/refguide7/listen-to-grid-source/): the data view object depends on the selection in a list widget. Each time the selection changes, the data view will show that selected object.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The microflow source is not supported in offline applications because it implies a call to the server.
 
@@ -33,7 +33,7 @@ List widgets support the data sources listed below. The data source also determi
 *   [Microflow](/refguide7/microflow-source/): the objects in the list are determined by the result of calling the specified microflow. The microflow can take objects in the context as parameter and needs to return a list of objects.
 *   [Association](/refguide7/association-source/): the objects are retrieved by following an association from the object in the context. As such this data source is only available when the when a widget is nested in an existing context, such as a data view. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The database source is the only data source that is also supported offline. If a list widget has a database data source in an offline application, the data will come from the database that is situated on the device. This database can be synced with the [create button](/refguide7/new-button/).
 

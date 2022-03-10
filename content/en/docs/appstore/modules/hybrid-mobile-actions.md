@@ -51,7 +51,7 @@ Note that the standard *config.xml* template already includes `cordova-plugin-co
 <plugin name="cordova-plugin-contacts" spec="https://github.com/mendixlabs/cordova-plugin-contacts.git#3.0.2" />
 ```
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Please note that the above plugins are not available in the in standard Mendix mobile app and can only be tested with a custom-built mobile app.
 {{% /alert %}}
 

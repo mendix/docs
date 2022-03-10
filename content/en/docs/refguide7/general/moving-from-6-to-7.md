@@ -28,7 +28,7 @@ Before converting your project, reading the following sections is recommended.
 
 If you are not using Team Server, make a backup of your project. Check that the backup was successful by opening the project.
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 Seriously, make a backup!
 {{% /alert %}}
 

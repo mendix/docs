@@ -86,7 +86,7 @@ However, the default Appium Android driver (UIAutomator2) is unable to read the 
 
 1. Click on the blue **Select Elements** button, and then click on an element in the app preview to spy on that element.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 While using Espresso in combination with Mendix apps, we observed a `No static method lifecycleEventObserver` error. More information about this can be found [here](https://github.com/appium/appium-espresso-driver/issues/639). You can fix this by adding the `espressoBuildConfig` property to the capabilities. It should point to a JSON file containing:
 
 ```json
@@ -97,7 +97,7 @@ While using Espresso in combination with Mendix apps, we observed a `No static m
 
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 While using Espresso in combination with Mendix apps, there have been occasional package conflicts. You can fix this by adding the `espressoBuildConfig` property to the capabilities. It should point to a JSON file containing your desired tools and versions:
 
 ```json

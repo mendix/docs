@@ -40,7 +40,7 @@ menu_order: 2
 | ----------- | ------------------------- | ----- |
 | 2.x         | 11.x                      |       |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Please be aware that we cannot always guarantee the same smooth experience when testing with Internet Explorer (IE). IE is comparably slow and outdated. Also, its support for automation by Microsoft and Selenium projects is much less mature, stable, and efficient.
 

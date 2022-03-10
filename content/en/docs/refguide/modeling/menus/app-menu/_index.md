@@ -77,7 +77,7 @@ The **Deploy to Licensed Cloud Node** option deploys the latest committed revisi
 
 Shortcut key:  <kbd>Ctrl</kbd> + <kbd>F5</kbd>
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings/#target) needs to be set and the deploying user needs to have transport rights to the set target.
 {{% /alert %}}
 

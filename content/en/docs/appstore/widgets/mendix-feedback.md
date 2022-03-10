@@ -49,7 +49,7 @@ When you have left your feedback, you need to exit the feedback mode by clicking
 
 ![](/attachments/appstore/widgets/mendix-feedback/exit.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For details on how to see all the feedback you have submitted, see the [Feedback](/developerportal/community-tools/mendix-profile/#feedback) section of *Mendix Profile*.
 {{% /alert %}}
 
@@ -83,7 +83,7 @@ When you click the **App Switcher** button, a pop-up window appears with a list 
 
 When you click an app, you are redirected to it.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This feature is available when the following conditions are met:<br />
 
 * You have configured the widget to show the App Switcher (for details, see the [Configuring the Widget](#configuring) section below)<br />
@@ -107,7 +107,7 @@ To ensure you have the latest version of the widget included in your app, follow
 
 	![](/attachments/appstore/widgets/mendix-feedback/feedback-collaboration-widget.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can place the widget on any form in your app, but it needs to be placed on only one form. When the end-user accesses that form, the widget will remain in the browser until the session is expired. This means you only need to place the widget on the home form. You can use this mechanism to limit the feedback to certain user roles as well. To do that, just place the widget on their home forms but not on the home form of other users.
 {{% /alert %}}
 
@@ -130,7 +130,7 @@ The result should look like this:
 
 ![](/attachments/appstore/widgets/mendix-feedback/authentication.jpg)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If Mendix SSO is applied and the above **MendixSSO Authentication** settings are configured correctly, the end-user can leave feedback without having to enter their name and email address. If you are not using the Mendix SSO module and are using other SSO solutions instead, you should configure the settings in the **Custom Authentication** tab. In this tab, you can provide a microflow that should return a valid user name and email when the end-user is signed in with your authentication solution. The Feedback widget will then go directly into feedback mode. If the end-user is not signed in (meaning, the **User Object Provider** microflow returns an empty user name or an invalid email address), the end-user will have to manually enter their name and email address when they leave feedback.
 {{% /alert %}}
 

@@ -6,7 +6,7 @@ menu_order: 50
 tags: ["studio pro", "preferences", "settings", "edit menu"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/preferences-dialog.pdf).
 {{% /alert %}}
 
@@ -91,7 +91,7 @@ Sometimes the computer running Studio Pro cannot access the internet directly, b
 
 The **New features** tab allows you to turn new features on and off. These are features which are being worked on but are either not yet developed sufficiently to remove the previous version, or which are currently optional.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You need to restart Studio Pro for changes to these settings to take effect.
 {{% /alert %}}
 

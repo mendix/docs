@@ -68,7 +68,7 @@ Then link the object to the current session when you create it in a microflow:
 
 Because it is always possible to look at the current **Session** object, any objects related to the current session can also always be retrieved. The Mendix Client must then always keep these objects around; they will never be removed.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 There is a drawback here as well: since the objects will never be removed, they will be in memory indefinitely. It is very important to remove these objects as soon as they are not necessary anymore.
 {{% /alert %}}
 

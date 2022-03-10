@@ -17,7 +17,7 @@ Mendix Studio Pro is a tool for creating, viewing, and editing your Mendix appli
 
 One Studio Pro instance can have only one app open at a time, but you can open two Studio Pro instances when necessary.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When Studio Pro is open, press <kbd>F1</kbd> to quickly jump to documentation.
 {{% /alert %}}
 
@@ -65,7 +65,7 @@ A working area is a current document tab that you work in. The working area and 
 
 The documents you view and edit are shown in tabs. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This section describes documents in the working area, not panes that you can open and position around the working area. For more information on behavior of panes, see the [Layout of Panes](/refguide/view-menu/#layout-of-panes) section in *View Menu*.
 

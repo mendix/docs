@@ -16,7 +16,7 @@ The standards used for OData in Mendix are:
 * [OData version 3](http://www.odata.org/documentation/odata-version-3-0), which returns data in Atom XML format.
 * [OData version 4](http://www.odata.org/documentation), which returns data in JSON format.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The OData version 4 feature was introduced in Studio Pro [9.4.0](/releasenotes/studio-pro/9.4/).
 {{% /alert %}}
 
@@ -34,7 +34,7 @@ The service name uniquely identifies the published OData service within the app.
 
 Use the **Version** field to assign a version number to the service. This number will be shown in the API documentation.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 It is recommended to use [semantic versioning](https://semver.org/) for services that you publish.
 {{% /alert %}}
 
@@ -60,7 +60,7 @@ This list gives an overview of all published attributes and associations.
 
 You can choose between OData 4 (recommended) and OData 3. One of the main differences is that OData 4 services return results in JSON, and OData 3 services return results in XML.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This setting was introduced in Studio Pro [9.4.0](/releasenotes/studio-pro/9.4/). In earlier versions, all published OData services were OData 3.
 {{% /alert %}}
 
@@ -131,7 +131,7 @@ There are three possible outcomes of the authentication microflow:
 
 The allowed roles define which [module role](/refguide/module-security/#module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Web service users cannot access OData services.
 {{% /alert %}}
 
@@ -168,7 +168,7 @@ You can write a *summary* and a *description* intended for people using the serv
 
 Once your app is published, a list of the published OData services will be available on the root URL of the app followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/`.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 While the API documentation for OData resources is enabled by default, access to it may be restricted by the administrator for apps running in production.
 {{% /alert %}}
 

@@ -119,7 +119,7 @@ The **Read** action allows you to read the current value of a specific node with
 * Opc ua server cfg – an object of entity type OpcUaServerCfg containing the configuration of the server to which the request is made
 * NodeId – The NodeId of the Node you want to read. Expects the full Node Id as referenced by the OPC UA server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 All values are read as strings, you will need to convert them if you need a numeric or date value.
 {{% /alert %}}
 
@@ -172,7 +172,7 @@ Each subscription requires a microflow to process the data each time a notificat
 * Use return value – `Yes` returns an object of type **MonitoredItem** which defines the new subscription and can be used in the microflow, `No` does not return an object. The returned object should not be changed or committed, but can be associated to for your administration/logic.
 * Variable name – the name assigned to the variable containing the return value  
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Subscriptions and MonitoredItems are automatically kept alive by the app & OPC UA Server and will continue to be sent as long as both the client and server are running. The OPC UA Connector automatically provides values for `requestedMaxKeepAliveCount` and `requestedLifetimeCount`and will keep the subscription alive. If these values are exceeded, then the subscription will lapse. This can happen, for example, if the app is redeployed.
 {{% /alert %}}
 
@@ -268,7 +268,7 @@ This page allows you to create or change the details of an OPC UA server you wan
 
 The password for the credentials & certificate are automatically encrypted/decrypted by the module. After saving the configuration the UI doesn't allow you to read the existing password, the decryption is only programmed in the connector. 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The OPC UA server should have only one type of authentication enabled, and the authentication type chosen here must match that type to ensure that the endpoint can be reached.
 {{% /alert %}}
 

@@ -28,7 +28,7 @@ In the **App name** field, enter the name for the new Team Server project and re
 
 In the **Team Server App** list, select the corresponding Team Server app. After you click **OK**, you app will be uploaded to the selected repository.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This only works when the existing repository is empty.
 
@@ -38,7 +38,7 @@ This only works when the existing repository is empty.
 
 In the **App repository address** field, enter the repository address you want to upload your app to. After you click **OK**, you app will be uploaded to this repository.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This option is only available when support for other servers is enabled in the [Preferences](/refguide7/preferences-dialog/#enabled) dialog box.
 

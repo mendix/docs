@@ -52,6 +52,6 @@ If your are building a hybrid mobile app, you need to add the following lines to
 <allow-navigation href="*://*.mp4" />
 ```
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 [Noembed](https://noembed.com/) is the API used to request video sizes in order to calculate aspect ratios.
 {{% /alert %}}

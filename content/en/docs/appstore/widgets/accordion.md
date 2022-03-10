@@ -70,7 +70,7 @@ Configure the following properties in this section:
 
 ### 2.2 Advanced Tab {#advanced}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The **Enable advanced options** toggle is available in Mendix Studio. In Mendix Studio Pro these advanced options are always available.
 {{% /alert %}}
 

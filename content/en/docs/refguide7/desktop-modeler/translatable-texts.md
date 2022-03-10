@@ -10,7 +10,7 @@ All texts that are presented to the end user can be translated to different lang
 
 The Modeler makes it really easy to translate your application to another language. You can add a language in the [project settings](/refguide7/project-settings/) and then you can switch to that language using the drop-down in the toolbar. For texts that have not been translated yet the text in the default language is shown between pointy brackets. For example, a caption can be shown as '<Name>'. This means that the caption has not been translated yet and was 'Name' in the default language. By simply typing the text in the currently selected language (for example, 'Naam' in Dutch) the caption has been translated.
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 
 To ease the translation of many texts a Batch Translate feature can be found in the Tools menu. By using this feature you can quickly translate all occurrences of a word to a word in another language. It is even possible to export all texts to Excel and later import the translations again.
 

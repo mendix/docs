@@ -36,7 +36,7 @@ The following tables list all standard actions for Mendix. There's one table per
 | Find/Assert Dialog | Window, DialogMessage, ConfirmationDialog | Find/Assert a Dialog by Title or Type |
 | Get Dialog Message Text | ConfirmationDialog, DialogMessage | Get the text from message and confirmation dialogs |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 A _Window_ is rendered when a page is opened as a popup.
 

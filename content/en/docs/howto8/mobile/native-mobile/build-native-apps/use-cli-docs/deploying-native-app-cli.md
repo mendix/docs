@@ -7,7 +7,7 @@ description: Describes how to deploy your first Mendix native mobile app with th
 tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Please update to Native Builder v3.2.2. Native Builder v3.2.2 includes the fixes required to addresses GitHub's transition from using **master** to using **main** as its default repository branch name. 
 {{% /alert %}}
 
@@ -47,7 +47,7 @@ If you plan to deploy your app for testing on an Android device, make sure you h
 
 To use the Native Builder, you will first need to get tokens to authenticate with GitHub and App Center. If you already have tokens for your GitHub and App Center, you do not need to repeat these sections.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The Native Builder needs to communicate with GitHub and App Center. Therefore, make sure your firewall permissions do not restrict the Native Builder.
 {{% /alert %}}
 
@@ -78,7 +78,7 @@ The native builder uses the `prepare` command as well as a line of parameters in
 native-builder.exe prepare --project-name CoolApp --java-home "C:\Program Files\Java\jdk-11.0.3" --project-path "Y:\Documents\Mendix\CoolApp\CoolApp.mpr" --mxbuild-path "C:\Program Files\Mendix\8.6.0.715\modeler\mxbuild.exe" --github-access-token b609183aa226a8c2d962700be7a387bd7776e986 --appcenter-api-token 440725eb1311ddfced62894a4d23fc90843370c7 --appcenter-organization "cool-organization" --runtime-url "https://coolapp.mendixcloud.com" --app-name "My Cool App" --app-identifier "com.mendix.coolapp" --mendix-version "8.6.0"
 ```
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To be valid, the `app-identifier` needs to be lower-case with no special characters.
 {{% /alert %}}
 
@@ -116,11 +116,11 @@ To address the warning, complete the following steps (you must do them for both 
 8. Select the repository you want to connect to.
 9. You will be redirected back to your App Center account. Your repository’s branches are now listed in the build page.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you run into errors while running the `prepare` command, try running your CLI as an administrator.
 {{% /alert %}}
 
-{{% alert type="info" %}} A free App Center account might run out of build hours. A workaround is to add another organization with another GitHub access token. {{% /alert %}}
+{{% alert color="info" %}} A free App Center account might run out of build hours. A workaround is to add another organization with another GitHub access token. {{% /alert %}}
 
 You have successfully prepared your app, and in the next section will make a build from it.
 
@@ -164,7 +164,7 @@ By default, App Center builds are unsigned and cannot be released on the Google 
 
 For Android, if you do not intend to publish your app to the Google Play Store, you can skip this section. For iOS, this step prepares an already installable iOS App Store Package (*.ipa*). Without this section's instructions, an unsigned version of an iOS app (*.xcarchive*) would need to be signed manually using Xcode in order to deploy on a device or in the Apple App Store.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Currently, the Native Builder is not able to copy signing keys from one branch to another. Therefore you must set up signing for each branch you want to release. When you build with the Native Builder, the build number provided is used to create a new branch with the format **{build/#number}**. When ready to release, set up signing for the build number branch you decided according to this documentation and rebuild with the Native Builder using the branch's build number.
 {{% /alert %}}
 
@@ -277,7 +277,7 @@ To install your app via USB, connect your device to a machine via USB. To Instal
 2. Open your phone’s file manager, navigate to the folder containing your APK, then tap the APK file to open it.
 3. Tap the **Install** button. 
 	
-	{{% alert type="info" %}}On Android, you might see a dialog box warning you against installing because this is not a Play Store app. Tap **INSTALL ANYWAY**.
+	{{% alert color="info" %}}On Android, you might see a dialog box warning you against installing because this is not a Play Store app. Tap **INSTALL ANYWAY**.
 	{{% /alert %}}
 	
 4. Tap the **Done** button when prompted. You should now be able to access your installed app via your **App Drawer**, as well as by tapping the **Open** button after the installation completes.

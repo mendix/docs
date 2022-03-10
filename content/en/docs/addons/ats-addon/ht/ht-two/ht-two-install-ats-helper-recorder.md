@@ -22,14 +22,14 @@ Before starting this how-to, make sure you have the following prerequisites in p
 *  ATS
 *   Mendix app
 
-	{{% alert type="info" %}}  Both the ATS Helper and the ATS Recorder only work on a Mendix app.
+	{{% alert color="info" %}}  Both the ATS Helper and the ATS Recorder only work on a Mendix app.
 	{{% /alert %}}
 	
 	{{% youtube C7GuDU9nePQ %}}
 
 *   Google Chrome Browser
 
-	{{% alert type="info" %}}  Both the ATS Helper and the ATS Recorder only function in [Google Chrome](https://www.google.com/chrome/browser/). 
+	{{% alert color="info" %}}  Both the ATS Helper and the ATS Recorder only function in [Google Chrome](https://www.google.com/chrome/browser/). 
 	{{% /alert %}}
 
 ## 3 Installing the ATS Helper
@@ -52,7 +52,7 @@ To use the ATS Helper, select the bookmark, press <kbd>Ctrl</kbd>, and hover ove
 
 ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-install-ats-helper-recorder/ats-helper-widget.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The ATS Helper only works on standalone widgets.
 {{% /alert %}}
 

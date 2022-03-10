@@ -8,7 +8,7 @@ parent: "common-widgets"
 
 The page title widget shows the title of the [page](/refguide7/page/) on which it is used. This can be the title defined on the page itself or the override title defined when showing a page.
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 
 The page title widget makes it possible to embed the page title in a [layout](/refguide7/layout/), as it will show the title of the page that uses the layout.
 

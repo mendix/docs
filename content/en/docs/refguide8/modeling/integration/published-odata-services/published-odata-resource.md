@@ -5,11 +5,11 @@ parent: "published-odata-services"
 tags: ["studio pro"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-odata-resource.pdf).
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 This document describes the properties of a published OData resource. For an overview of OData services, see [Published OData Services](/refguide8/published-odata-services/).
 
@@ -43,7 +43,7 @@ Specify the location where the resource will be published in **Example of locati
 
 In the **Public documentation** tab, you can provide a summary and a description of the exposed entity.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 [IBM DB2](/refguide8/db2/) does not support read-isolated data retrieval operations that are non-blocking in a multi-user environment. Therefore, the data retrieved by OData might not be 100% consistent if the same data rows are modified concurrently by another user. 
 
@@ -53,7 +53,7 @@ In the **Public documentation** tab, you can provide a summary and a description
 
 In the **Edit published resource** window, select **Exposed attributes and associations** to display the list of attributes and associations for the entity.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **System.ID** attribute is used as a key in OData services and must always be checked.
 
@@ -61,7 +61,7 @@ The **System.ID** attribute is used as a key in OData services and must always b
 
 Attributes of published entities are **Nillable** by default. This means that if their value is empty then they will be encoded as explicit nulls in the OData content. If **Nillable** is unchecked for an attribute, the attribute cannot be empty (as this will result in a runtime error).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Attributes of the type **Binary** cannot be exported through OData services except for the **Contents** field of the **System.FileDocument** attribute.
 
@@ -71,7 +71,7 @@ Attributes of the type **Binary** cannot be exported through OData services exce
 
 Use **Exposed entity name** in the **Edit published resource** window to customize the name of the resource that is exposed to the outside world. The default is the name of the exposed entity in the domain model. The **Exposed entity name** must start with a letter followed by letters or digits with a maximum length of 480 characters. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Location URIs must be unique. Exposing two different resources at the same location will result in a consistency error.
 
@@ -81,7 +81,7 @@ Attributes and associations can be customized in the same way in the **Exposed a
 
 For associations, the exposed name is the name given to the navigation property (which is the property referring to the associated object(s)). The default is the same as the name of the association in the domain model.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 When names have been customized in this way, the name of the entity, attribute, or association as defined in the domain model will not be exposed to the outside world. For all OData communication, the exposed name is used.
 

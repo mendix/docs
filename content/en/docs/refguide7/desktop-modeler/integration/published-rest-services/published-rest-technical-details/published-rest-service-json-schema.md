@@ -7,7 +7,7 @@ description: "Describes the JSON schemas for operation request bodies and operat
 tags: ["published REST", "JSON", "Schema", "operation", "request body", "result", "message definition"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Support for *JSON Schema* was added in version 7.14.0.
 

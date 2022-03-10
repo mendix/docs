@@ -17,7 +17,7 @@ If the app does not pass the check, you see the **Checks** button goes red with 
 
 ![](/attachments/studio/checks/checks-button.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 **Preview** and **Publish** become available only when the app is fully consistent and all checks have been solved.
 
@@ -38,7 +38,7 @@ If your app has consistency errors, the **Checks** button will have the red bord
 
 To sort the errors, click the column header in the panel. Thus, you can sort errors in ascending or descending order by **Message**, **Code**, **Module**, **Document**, or **Element**. For more information on items displayed in the **Checks** panel, see the [Checks Panel Overview](#checks-panel-overview) section. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 If there are no consistency errors, the **Checks** panel will be empty and **Preview** and **Publish** buttons will be clickable. 
 

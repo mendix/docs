@@ -149,7 +149,7 @@ HTTP Method: GET
 |Name|Type|Required|Description
 |---|---|---|---|
 |`limit`|Integer|No|The number of items to return per result page. Defaults to 20 items. Maximum is 100 items.|
-|`cursor`|String|No|A cursor specifying which page to retrieve. To obtain a cursor value, see the `cursors` property of the response payload of this operation. If no cursor is specified, the first page is returned. {{% alert type="info" %}}To the user of this API, a cursor is an opaque value that can only be obtained from a previous API response.{{% /alert %}}|
+|`cursor`|String|No|A cursor specifying which page to retrieve. To obtain a cursor value, see the `cursors` property of the response payload of this operation. If no cursor is specified, the first page is returned. {{% alert color="info" %}}To the user of this API, a cursor is an opaque value that can only be obtained from a previous API response.{{% /alert %}}|
 
 ##### 6.2.1.3 Example
 
@@ -258,7 +258,7 @@ An object with the following key-value pairs:
 |`latestCommit`|Object|An object representing the latest commit done on the branch.|
 |`latestCommit.id`|String|Commit ID. Will be a hash for Git repositories and a revision number for Subversion repositories.|
 |`latestCommit.author`|Object|An object with the commit author details.|
-|`latestCommit.author.name`|String|The full name of the commit author. {{% alert type="info" %}}For Subversion repositories, this will be the same value as the email address of the author. {{% /alert %}}|
+|`latestCommit.author.name`|String|The full name of the commit author. {{% alert color="info" %}}For Subversion repositories, this will be the same value as the email address of the author. {{% /alert %}}|
 |`latestCommit.author.email`|String|The email address of the commit author.|
 |`latestCommit.date`|String|The commit date and time in RFC 3339 format.|
 |`latestCommit.message`|String|The comit message.|
@@ -309,7 +309,7 @@ HTTP Method: GET
 |Name|Type|Required|Description|
 |---|---|---|---|
 |`limit`|Integer|No|The number of items to return per result page. Defaults to 20 items. Maximum is 100 items.|
-|`cursor`|String|No|A cursor specifying which page to retrieve. To obtain a cursor value, see the `cursors` property of the response payload of this operation. If no cursor is specified, the first page is returned. {{% alert type="info" %}}To the user of this API, a cursor is an opaque value that can only be obtained from a previous API response.{{% /alert %}}|
+|`cursor`|String|No|A cursor specifying which page to retrieve. To obtain a cursor value, see the `cursors` property of the response payload of this operation. If no cursor is specified, the first page is returned. {{% alert color="info" %}}To the user of this API, a cursor is an opaque value that can only be obtained from a previous API response.{{% /alert %}}|
 
 ##### 6.4.1.3 Examples
 
@@ -342,7 +342,7 @@ List of objects with the following key-value pairs:
 |`items`|Array|An array of objects representing the commits of the specified repository branch.|
 |`items.id`|String|Commit ID. Will be a hash for Git repositories and a revision number for Subversion repositories.|
 |`items.author`|Object|An object with the commit author details.|
-|`items.author.name`|String|The full name of the commit author. {{% alert type="info" %}}For Subversion repositories, this will be the same value as the email address of the author. {{% /alert %}}|
+|`items.author.name`|String|The full name of the commit author. {{% alert color="info" %}}For Subversion repositories, this will be the same value as the email address of the author. {{% /alert %}}|
 |`items.author.email`|String|The email address of the commit author.|
 |`items.date`|String|The commit date and time in RFC 3339 format.|
 |`items.message`|String|The commit message.|

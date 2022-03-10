@@ -7,7 +7,7 @@ tags: ["published REST", "path parameters", "Data and Time", "studio pro"]
 # combine this with published rest service
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-rest-path-parameters.pdf).
 {{% /alert %}}
 

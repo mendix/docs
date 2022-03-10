@@ -4,7 +4,7 @@ url: /refguide7/actions/
 parent: "published-app-services"
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 App services have been deprecated in version 7.23.4 and are marked for removal. Use a [published web service](/refguide7/published-web-services/) or a [published REST service](/refguide7/published-rest-services/) instead.
 {{% /alert %}}
 
@@ -68,7 +68,7 @@ Defines what kind of object will be returned by the action. This can be a simple
 
 Defines whether the return value can be **empty**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/integration/published-app-services/actions/16843921.png)
 

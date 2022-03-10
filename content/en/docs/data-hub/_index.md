@@ -15,11 +15,11 @@ cascade:
 
 [Mendix Data Hub](https://hub.mendix.com) is a product for integrating app development with the data available from the many applications in an organization. It is the central hub in an organization for finding and connecting to the relevant shared datasets. It also ensures consistency in the data used throughout the organization. Data Hub enables reliable data sources to be located centrally from one point and for users to connect to them through it. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To use the Mendix Data Hub a license is required, which also includes the integration of Data Hub in Studio Pro. For more information, see the [Data Hub License Limitations](/refguide/consumed-odata-service-requirements/#license-limitations) section of *Consumed OData Service Requirements*.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The Data Hub integration is available in Studio Pro version [8.14](/releasenotes/studio-pro/8.14/) and above. To use the latest functionality of Data Hub, download the latest version of [Studio Pro](https://marketplace.mendix.com/link/studiopro/). {{% /alert %}}
 
 Follow the journey for building an app using available datasets (or entity sets for services from Mendix apps) from the [Data Hub](https://hub.mendix.com) home page, or try building a quick app by following [How to Share Data Between Apps](/data-hub/share-data/).
@@ -56,7 +56,7 @@ Data Hub users can do the following:
 * Owners can set the discoverability of their services, thereby publishing the service and the exposed datasets for use by other users
 * See all the discoverable services and datasets registered in their organization’s Data Hub Catalog and connect to the data by using the published entities as external entities in their apps in the Mendix Studios
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 A user who publishes an OData service is the technical owner of the service and thereby has a [Data Hub Curator](#curator) role over their own services. If they have registered services which are not published and are non-discoverable, only they will be able to find and consume these services. 
 {{% /alert %}}
 

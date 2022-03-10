@@ -41,17 +41,17 @@ Furthermore, an entity can only be used if it is uniquely identifiable with a ke
 * Only the following types are allowed: `Byte`, `SByte`, `Int16`, `Int32`, `Int64`, `Boolean`, `Decimal`, `Single`, `Double`, and `String`.
 * If the type of a key property is `String`, it must have a limited  (maximum) length specified. This is because not all databases support indexes on strings of unlimited length. It is sufficient if  a `MaxLength` is specified in the contract. However, if a `MaxLength` is not specified in the contract, and you know that the string is limited in length, you can still use the entity by specifying the maximum length of the attribute in the the domain model.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This feature of using entities with keys that do not have a maximum length specified in the contract applies to version 9.3.0 and above. In previous versions of Studio Pro, you must change the contract to ensure that `MaxLength` is specified.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The list above for supported key fields does not include `Date` or `DateTime` data types.
 {{% /alert %}}
 
 ### 3.2 Attributes
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Attributes marked as `FC_KeepInContent=false` cannot be used.
 {{% /alert %}}
 
@@ -68,7 +68,7 @@ Attribute types have to be primitive (not complex, collections, or enumerations)
 | String, Guid                   | String |
 | (Other)                        | (Ignored) |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 When the OData endpoint contains operations, these are not imported in the consumed OData service. You can use a [Call REST service](/refguide/call-rest-action/) activity to call these operations.
 {{% /alert %}}
 
@@ -82,7 +82,7 @@ This means that when you are consuming a Mendix OData endpoint, it is not necess
 
 Associations to the generalizations with other exposed entities in the published OData service will be included for the now discrete "specialized" entities.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 When a generalization and a specialized entity are exposed in the same service. Only the association for the generalization will be visible when both entities are consumed. The now discrete specialization will have the inherited association. A possible work-around for this is to publish a service with the specializations without the generalization. Alternatively, the association for the generalization should not be published, allowing for the inherited association in the specialization to be preserved.
 {{% /alert %}}
 
@@ -108,7 +108,7 @@ Without a license, an app can retrieve a total of 1000 OData objects per day for
 
 With a Data Hub license, apps are not limited in retrieving OData objects.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Apps running in development environments (and also when running from the Studios) do not have this limitation. This means that you can run your app from the Studios without Data Hub license limitations.
 {{% /alert %}}
 
@@ -121,6 +121,6 @@ For each call, the app instance logs how many objects it has retrieved and how m
 * On the `info` level, the following statement is logged when the limit is reached: `"Exceeded the daily limit. Retrieved $delta objects, which would increase the counter to $newCount (of max $max per day)."`
 * On the `error` level, the following statement is logged when the limit is reached: `"The limit of $max objects has been reached."`
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 It is up to the application to communicate to its end-users that the daily limit has been reached. If this is not done, the end-user gets a message that an error occurred.
 {{% /alert %}}

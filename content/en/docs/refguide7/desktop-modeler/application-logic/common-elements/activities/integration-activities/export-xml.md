@@ -5,7 +5,7 @@ parent: "integration-activities"
 ---
 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Please see [Export Mapping Action](/refguide7/export-mapping-action/) for details on exporting XML.
 

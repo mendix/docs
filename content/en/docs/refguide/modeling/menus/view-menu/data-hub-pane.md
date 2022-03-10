@@ -12,13 +12,13 @@ tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
 
 [Mendix Data Hub](/data-hub/) enables integration of available data sources from the different applications in an organization into your Mendix apps. This means that new apps can be created using shared datasets that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/). In Studio Pro, this is possible using the integrated functionality of Data Hub Catalog through the **Data Hub** pane.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You need a license to use Data Hub in Studio Pro. For further information see [Data Hub License](/refguide/consumed-odata-service-requirements/#license-limitations).
 {{% /alert %}}
 
 You can search in the Data Hub Catalog through the **Data Hub** pane to discover data sources that you can use in your app. Via this pane you can add the entities that are exposed in the registered OData services—called **Data Sources** in Data Hub—into your app's domain model. These entities are called [external entities](/refguide/external-entities/) and are different because they enable the connection to the data associated with the entities in the originating app.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In the Data Hub Catalog, registered published services are referred to as *data sources* and exposed entities will show the **Entity set** name and are called *datasets.*
 {{% /alert %}}
 
@@ -49,12 +49,12 @@ As you enter a search term, all the items in the Data Hub Catalog satisfying the
 
 You can drag the entity from the search results into your domain model and it will be added to your app and displayed as an [external entity](/refguide/external-entities/).
 
-{{% alert type="info" %}}Services that are set to **not-Discoverable** in the Catalog are not be included in the search results for *any* user including owners of the service. To consume entities from these services owners must ensure that they are [Discoverable](/data-hub/data-hub-catalog/curate/#discoverability).{{% /alert %}}
+{{% alert color="info" %}}Services that are set to **not-Discoverable** in the Catalog are not be included in the search results for *any* user including owners of the service. To consume entities from these services owners must ensure that they are [Discoverable](/data-hub/data-hub-catalog/curate/#discoverability).{{% /alert %}}
 
 ### 3.1 Wildcard Search
 You can perform a wildcard search by entering `*` in the search field.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The search strings must be a minimum of three alphanumeric characters. Punctuation cannot be used as part of the search term except for the wildcard character `*` to perform an "empty" search in the Data Hub Catalog. You cannot use the wildcard in combination with other characters. For further details, see [How to Search for Registered Assets](/data-hub/data-hub-catalog/search/).
 {{% /alert %}}
 
@@ -63,7 +63,7 @@ By default, the search is performed on assets in the **Production** environment.
 
 {{% image_container width="300" %}}![Filter Icon](/attachments/refguide/modeling/menus/view-menu/data-hub-pane/filter-icon.png){{% /image_container %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When the **Show development environments** is checked, all subsequent searches results will also include those in non-production environments.
 {{% /alert %}}
 
@@ -83,7 +83,7 @@ The search results and **User in your App** section show the following informati
 
 *  **Environment name** for non-production environments
 
-	{{% alert type="info" %}}Only the names of non-production environments are displayed. Services in the **Production** do not show an environment name. {{% /alert %}}
+	{{% alert color="info" %}}Only the names of non-production environments are displayed. Services in the **Production** do not show an environment name. {{% /alert %}}
 
 * **Green check-mark** if the service or entity is consumed in the app. If you right-click a consumed service, you can do the following:
 
@@ -98,9 +98,9 @@ The search results and **User in your App** section show the following informati
 
     ![Data Hub Pane update](/attachments/refguide/modeling/menus/view-menu/data-hub-pane/update-available.png)
 
-    {{% alert type="info" %}}If there is an OData service update available, then the entities that are listed are those that are available in that version of the OData service. These entities are grayed-out to indicate that they cannot be dragged into the domain model, as the *current* contract that is consumed in the app does not have these entities. You must update the contract to the version shown in the search results by clicking the **Update** icon. {{% /alert %}}
+    {{% alert color="info" %}}If there is an OData service update available, then the entities that are listed are those that are available in that version of the OData service. These entities are grayed-out to indicate that they cannot be dragged into the domain model, as the *current* contract that is consumed in the app does not have these entities. You must update the contract to the version shown in the search results by clicking the **Update** icon. {{% /alert %}}
 
-    {{% alert type="info" %}}The version number that is shown for the OData service is the latest one that is available in the Data Hub Catalog at the service endpoint – in the example above, version 1.0.0 of **BikeVehicleService** is currently consumed in the app, but the contract that is available in the Catalog is different to the one currently consumed.{{% /alert %}}
+    {{% alert color="info" %}}The version number that is shown for the OData service is the latest one that is available in the Data Hub Catalog at the service endpoint – in the example above, version 1.0.0 of **BikeVehicleService** is currently consumed in the app, but the contract that is available in the Catalog is different to the one currently consumed.{{% /alert %}}
 
 * **Information icon** allows you to view further details for the service and a link to go directly to the [Service Details](/data-hub/data-hub-catalog/search/#search-details) screen in the Data Hub Catalog:
 
@@ -114,7 +114,7 @@ For any service in the list, you can click **Show details** to see the full list
 
 ![Data Hub Pane Information](/attachments/refguide/modeling/menus/view-menu/data-hub-pane/expand-service-list.png)
 
-{{% alert type="info" %}}The associations and attributes that are not supported in your Mendix app are shown as non-selectable (gray) and will not be included when you drag them into the domain model.{{% /alert %}}
+{{% alert color="info" %}}The associations and attributes that are not supported in your Mendix app are shown as non-selectable (gray) and will not be included when you drag them into the domain model.{{% /alert %}}
 
 #### 4.2.1 Entity
 

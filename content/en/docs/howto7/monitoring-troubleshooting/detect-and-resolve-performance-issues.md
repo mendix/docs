@@ -20,7 +20,7 @@ In either case, some process is running too long or too many times to complete 
 
 First, you'll need to identify if your issue is UI-centric or microflow-centric. If a page is taking a long time to initially load, or if a page gets slow or unresponsive after clicking a microflow button, it's most likely a microflow slowing your application down. If the UI feels glitchy or slow _after_ the page has loaded, you may have a UI-centric issue.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 All performance issues are extremely context-sensitive. That is, there is no single cure-all for a performance problem, but this article will attempt to address common issues and how may be able to resolve them.
 

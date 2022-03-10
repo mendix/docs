@@ -18,7 +18,7 @@ For apps deployed to the **Mendix Cloud** you can use the standard metrics as de
 
 Outside the Mendix Cloud, you can use Datadog, or there are alternative monitoring tools you can use. You can see these under [Monitoring Tools](https://github.com/mendix/cf-mendix-buildpack#monitoring-tools) in the Mendix *Cloud Foundry Buildback*.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Only Datadog is supported for apps deployed to the Mendix Cloud.
 {{% /alert %}}
 

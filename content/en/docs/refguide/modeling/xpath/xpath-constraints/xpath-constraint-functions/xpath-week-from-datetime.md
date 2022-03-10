@@ -9,7 +9,7 @@ tags: ["studio pro"]
 
 The `week-from-dateTime()` function extracts the week number (in the year) from a **Date and time** attribute so it can be used to compare to a value. Values range from 1 to 53.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The value returned depends on which *database* is being used to support your Mendix app. It does *not* take into account the app runtime setting **First day of the week**.
 
 Many databases implement [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601), but please refer to the documentation for the database you are using to find the exact details.

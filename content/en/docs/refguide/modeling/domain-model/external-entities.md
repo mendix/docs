@@ -16,7 +16,7 @@ External entities can be used with local entities, however, as the datasets are 
 
 To follow how to add external entites from the **Data Hub** pane see [Adding External Entities](#adding-external-entities).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 A license is required to use Mendix Data Hub and connect to external data sources through consumed OData services in your apps.
 {{% /alert %}}
 
@@ -26,7 +26,7 @@ To add an external entity to your app model, follow these steps:
 
 1. In the the Domain Model of you app model search in the **Data Hub** pane for the entity or data source that you want to use in your app. 
 
-    {{% alert type="info" %}}In the [Data Hub Catalog](/data-hub/data-hub-catalog/search/), an OData service may be registered mulitple times with different version numbers or deployed to different environments, all exposing the entity (dataset)) that you may want to use. Search the Data Hub Catalog first and find the one most relevant to the requirements for your app.{{% /alert %}}
+    {{% alert color="info" %}}In the [Data Hub Catalog](/data-hub/data-hub-catalog/search/), an OData service may be registered mulitple times with different version numbers or deployed to different environments, all exposing the entity (dataset)) that you may want to use. Search the Data Hub Catalog first and find the one most relevant to the requirements for your app.{{% /alert %}}
 
 3. Drag and drop the entity in the Domain Model. 
 
@@ -37,7 +37,7 @@ To add an external entity to your app model, follow these steps:
 
 	    ![ Virtual Entity and OData Service files](/attachments/refguide/modeling/domain-model/external-entities/consumed-service-docs.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When you drag an entity that is associated with an entity from the same service already in your Domain Model, the association will be displayed and established between the entities. For more information on associations between external entities, see [Associations](#properties).
 {{% /alert %}}
 
@@ -47,13 +47,13 @@ The consumed entities of the current app are listed in the **Used in your App** 
 
 ![ Virtual Entity and OData Service files](/attachments/refguide/modeling/domain-model/external-entities/data-hub-app.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When a new version of a consumed service becomes available in the Data Hub Catalog, this will be indicated in the **Data Hub** pane by an update arrow next to the service name. For more information, see the [Updating or Switching a Consumed OData Service](/refguide/consumed-odata-service/#updating) section in *Consumed OData Service*.
 {{% /alert %}}
 
 You can make local changes to the properties of external entities that only affect how the data is used and presented in the consuming app. All other properties are defined in the source application and cannot be changed. When multiple external entities from the same OData service are used in a module or app, associations between the entities (made in the source app) will automatically be made in the local module.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you delete an external entity from the Domain Model, the service documents remain in the App Explorer list and the service continues to be listed in the Data Hub App pane. You can delete the two service documents if you are no longer going to be using any entities from the Consumed service.
 {{% /alert %}}
 
@@ -63,7 +63,7 @@ For more information on using published OData services and entities through the 
 
 Compared to local entities, external entities have a limited number of properties that can be changed. The rest of the properties are defined in the originating app and are, therefore, read-only.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Changes that are made to the properties of external entities are made only in the consuming app. The originating app will not be affected by the changes.
 {{% /alert %}}
 
@@ -81,7 +81,7 @@ This tab displays the general properties of the external entity. The values that
 
 The [attributes](/refguide/attributes/) that have been exposed in the OData service for the external entity are listed here. All changes that are made to the attributes and the attribute list are applied to the local instance of the entity. As they are consumed, these changes will not affect the metadata of the consumed service that the entity is exposed in or the attributes of the entity in the originating app.
 
-{{% alert type="info" %}}In the [Data Hub Pane](/refguide/data-hub-pane/#association-attributes) the associations and attributes that are not supported in your Mendix model are shown as non-selectable (gray) and will not be included when you drag them into the domain model or be included in the entity properties. For more information see [Data Hub Pane](/refguide/data-hub-pane/#association-attributes).{{% /alert %}}
+{{% alert color="info" %}}In the [Data Hub Pane](/refguide/data-hub-pane/#association-attributes) the associations and attributes that are not supported in your Mendix model are shown as non-selectable (gray) and will not be included when you drag them into the domain model or be included in the entity properties. For more information see [Data Hub Pane](/refguide/data-hub-pane/#association-attributes).{{% /alert %}}
 
 The following operations can be done on the displayed attribute list:
 
@@ -120,11 +120,11 @@ You can **Add** and **Edit** associations to the external entity with a local en
 
 If you use an external entity in your app and this entity is associated with other external entities from the same OData service in your app, the association will automatically be added in the domain model and be listed here.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 It is possible to **Remove** an association between two external entities in the domain model that has been automatically added. If at a later stage you want to restore the association, you can do this in the domain model by right-clicking one of the external entities and clicking **Add** > **Association**.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you want to connect two external entities that are not connected in the originating app, this is not possible as the relationship to the data cannot be influenced locally. However, consider adding a local entity and connect this local entity with both external entities. The local entity must be the owner of both associations, in this case.
 {{% /alert %}}
 

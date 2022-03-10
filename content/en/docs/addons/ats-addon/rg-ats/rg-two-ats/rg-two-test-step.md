@@ -54,7 +54,7 @@ ATS provides you with suggestions for the parameter value.
 
 For primitive parameter types like Text or Number, you set the input value by typing the desired value in the input box.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Parameters of the Number type only allow digits as inputs.
 

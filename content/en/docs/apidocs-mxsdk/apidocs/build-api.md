@@ -7,7 +7,7 @@ menu_order: 10
 tags: ["API", "Build Server", "Team Server", "Deployment package", "Mendix Cloud"]
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The Build API only works for apps which are deployed to the Mendix Cloud.
 {{% /alert %}}
 
@@ -274,7 +274,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 #### 2.5.2 Output
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You will receive a response to indicate that the build has started. Depending on the complexity of your app, it may take some time before it is complete.
 
 You can find out the status of your build by looking at the `status` from a [Retrieve Package](#retrieve-package) call. The status will be *Succeeded* once the package has been built successfully.

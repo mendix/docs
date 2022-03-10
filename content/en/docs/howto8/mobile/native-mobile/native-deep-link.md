@@ -58,7 +58,7 @@ Set up a native template with the **Native Mobile App Builder** by following the
 
 5. Navigate to the build page and click **Build**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When running locally from source, on iOS you have to run `pod install` once more
 {{% /alert %}}
 
@@ -183,7 +183,7 @@ Now you have to handle the incoming URL in your Mendix application. To do this, 
 
 The Register Deep Link nanoflow action registers a callback nanoflow, which is called each time the app is opened using a URL. This **URL Handler** nanoflow will receive the URL, of type string, as an input parameter. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The name of the input parameter is case sensitive and can not be changed.
 {{% /alert %}}
         
@@ -256,7 +256,7 @@ Next you will implement the deep link handler nanoflow **DL_ShowUrlDetails** so 
 
 Add a few test link buttons, for example {app://myapp/task/123} or {makeitnative://task/123}, to your web page, then re-run your project. Open the your app in your device's browser by typing *{your local IP address}:8080* into the browser. With the app loaded, tap the links to test. You should be brought out of your browser and into your app's page!
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Please note that if you are not running the app from a local source, you must build your app again with the Native Builder before testing. Do this by using the `build` command: `build --project-name “Native Deep Link” --app-version “1.0.0" --build-number 2`.
 {{% /alert %}}
 

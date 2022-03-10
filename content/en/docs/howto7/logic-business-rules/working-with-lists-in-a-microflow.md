@@ -70,7 +70,7 @@ In the previous section you have set up a basic data structure and created some 
     a. For **Entity**, select **Order**_<br>
     b. For **Name**, enter **OrderList**<br>
 
-    {{% alert type="info" %}}
+    {{% alert color="info" %}}
     With the currents settings your retrieve action gets every order in the database, using the XPath expression in the following steps you will filter the results that come back from the database.
 
     {{% /alert %}}
@@ -79,7 +79,7 @@ In the previous section you have set up a basic data structure and created some 
 
     ![](/attachments/howto7/logic-business-rules/working-with-lists-in-a-microflow/18581088.png)
 
-    {{% alert type="info" %}}
+    {{% alert color="info" %}}
     With the currents settings your retrieve action gets all the 'Processing' orders in the database. In the next section you will edit this list of orders.
 
     {{% /alert %}}
@@ -100,7 +100,7 @@ In the previous section you retrieved a list of orders with the status 'Processi
 
     ![](/attachments/howto7/logic-business-rules/working-with-lists-in-a-microflow/18581086.png)
 
-    {{% alert type="info" %}}
+    {{% alert color="info" %}}
 
     For each object the flow inside the loop is executed. The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in microflows, with the exception of start and stop events. Additionally, a loop (and only a loop) can contain break events and continue events.
 
@@ -167,7 +167,7 @@ In the previous section you iterated over a filtered list of objects using a 'Lo
     a. For **Variable** select **CalculatedTotalPrice**.<br>
     b. For **Value** enter `$CalculatedTotalPrice + $IteratorOrder/TotalPrice`.<br>
 
-    {{% alert type="info" %}}
+    {{% alert color="info" %}}
 
     By iterating over the list, the price of every order will be added one by one to the 'CalculatedTotalPrice' variable
 

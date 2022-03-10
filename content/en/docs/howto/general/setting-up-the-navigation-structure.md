@@ -20,7 +20,7 @@ Before starting this how-to make sure you have completed the following prerequis
 
 This section will explain how to set the default home page. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Note that the **Default home page** setting is overridden by a **Role-based home page** if you configure it. For more information, see the [Setting a Role-Based Home Page](#role-based-home-page).
 
@@ -44,7 +44,7 @@ Do the following:
 
 5. Click **Select**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 For online profiles you can set a microflow as a default home page. Make sure a *Show Page* activity is called from the startup microflow for each possible execution flow, or else the user will see nothing during execution paths where the activity is missing.
 

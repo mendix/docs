@@ -20,7 +20,7 @@ The **Create** button allows the user to create new objects in a grid or referen
 
 This property determines of which entity this button should create an instance. If the entity that is connected to the grid or reference set selector has no specializations, the page builder will automatically set this property for you. Otherwise, you will have to select one of the specializations yourself.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Let us say you have an entity Vehicle and two specializations, namely Bicycle and Car. In a grid on Vehicle you have to specify for the create button whether a Vehicle, a Bicycle or a Car will be created. You can even have three create buttons, one for each possibility.
 

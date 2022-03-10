@@ -25,7 +25,7 @@ Possible values are described in the table below:
 | Two values | Numeric (Integer/Long, Decimal) |
 | Two values | Date and time                   |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
 {{% /alert %}}
 
@@ -64,7 +64,7 @@ Possible values are described in the table below:
 | Two values | Numeric (Integer/Long, Decimal) |
 | Two values | Date and time                   |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
 {{% /alert %}}
 
@@ -103,7 +103,7 @@ Possible values are described in the table below:
 | Two values | Numeric (Integer/Long, Decimal) |
 | Two values | Date and time                   |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
 {{% /alert %}}
 
@@ -157,7 +157,7 @@ Possible values are described in the table below:
 | Two values | Numeric (Integer/Long, Decimal) |
 | Two values | Date and time                   |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
 {{% /alert %}}
 
@@ -198,7 +198,7 @@ Possible values are described in the table below:
 | Two values | Date and time                                                |
 | Two values | Domain entity; equality is checked based on the ID of the object |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
 {{% /alert %}}
 
@@ -255,7 +255,7 @@ Possible values are described in the table below:
 | Two values | Date and time                                             |
 | Two values | Object; equality is checked based on the ID of the object |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
 {{% /alert %}}
 

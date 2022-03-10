@@ -81,7 +81,7 @@ To generate a CI/CD API key follow these steps:
 
 8.  The **Your new API key:** dialog box appears. 
 
-	{{% alert type="info" %}} This is the only time ATS shows the API. Write it down in a secure place.
+	{{% alert color="info" %}} This is the only time ATS shows the API. Write it down in a secure place.
 	{{% /alert %}}
 
 9.  Make sure you wrote down the API key. Now close the dialog box. 

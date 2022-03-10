@@ -33,7 +33,7 @@ The following steps describe how you can set your Mendix API Key in ATS:
 2. Open the app where you want to add the Mendix API Key.
 3.  Inside your app click the profile menu and click **Show Test Settings**.
 
-	{{% alert type="info" %}} **Show Test Settings** is only present if you have Scrum Master rights in the Mendix Developer Portal project {{% /alert %}}
+	{{% alert color="info" %}} **Show Test Settings** is only present if you have Scrum Master rights in the Mendix Developer Portal project {{% /alert %}}
 	
 	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-configure-a-selenium-hub/show-test-settings.png)
 

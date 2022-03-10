@@ -6,7 +6,7 @@ description: "This documentation will give you insight into creating documents w
 tags: ["Document", "Generate", "Word", "PDF", "studio pro"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/creating-your-own-documents.pdf).
 {{% /alert %}}
 
@@ -43,7 +43,7 @@ The domain model for this application looks like this:
 
 The **Customer** holds the address information and the preferred communication language. The **Order** owns the date and sum of all the order lines. The **OrderLine** entity has the customer-specific price for a **Product**. Because you want to generate a document, the **OrderDocument** entity has been added. This entity inherits from the **System.FileDocument** entity.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Do not use the **System.FileDocument** entity directly, because you have no control over the security of that part from the **System** module.
 {{% /alert %}}
 
@@ -65,7 +65,7 @@ The microflow consists of just the default start and endpoint at present:
 
 After creating the microflow, decide what information you would like to use in the document. Let’s start with an order as input. Later on, you can retrieve additional data via the order instance.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When you create microflows, it is a best practice to limit the number of input parameters to promote reuse.
 {{% /alert %}}
 
@@ -89,7 +89,7 @@ This is the document template configuration:
 
 ![](/attachments/refguide8/modeling/resources/document-templates/creating-your-own-documents/2018-03-01_13-03-55.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Based on the changes you make to the selected template, the arguments will change.
 {{% /alert %}}
 
@@ -101,7 +101,7 @@ After you have configured the general settings of the document template, you do 
 
 Now that you have set up the **Generate document** configuration, you can configure the template itself.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Make sure to set the correct entity access for entities and their attributes used in the document template. Read access is a must for those attributes that are shown in the template. Here is a **Customer** entity that is configured to **Read, Write** for the **User** module role:
 
 ![](/attachments/refguide8/modeling/resources/document-templates/creating-your-own-documents/2018-03-01_13-12-28.png)

@@ -34,7 +34,7 @@ You cannot preview your app if it has [consistency errors](/studio/consistency-e
 
 If your app has security enabled, in the preview mode you will be able to check how your app looks like for different user roles. For more information on how to test different user roles, see the [Testing Your Roles](/studio/settings-security/#testing-your-roles) section in *Security, Roles & Permissions*. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The app preview is your personal preview of the app. Hence, only users logged into Studio can preview the app, and the preview app will no longer be running when you exit Studio.  
 

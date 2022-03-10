@@ -7,7 +7,7 @@ parent: "data-sources"
 
 If database is selected as the data source for a widget then the object or objects shown are retrieved directly from the database with a query. This data source is also supported in [offline](/refguide7/offline/) applications in which case the data will come from the database on the mobile device. 
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 
 Use access rules whenever possible to limit data in data grids. This way you know that the objects will always be constrained by these rules (as opposed to constraints on a single data grid). The access rules will also be applied when executing microflows which saves you from repeating constraints.
 
@@ -56,7 +56,7 @@ _Default value:_ false
 
 Constraints allow for custom, hard-coded limitations on the data displayed. This constraint will be applied after constraints already applied through security. Each constraint consists of an attribute, an operator and a value. Multiple constraints will limit the data even more ("and"). There is no way to create "or" constraints, except by switching to an [XPath data source](/refguide7/xpath-source/).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Constraints are applied equally to all users and only apply to the data displayed in a single data widget. If the goal is to shield a particular subset of the data from users then [entity access rules](/refguide7/access-rules/) are superior in that they can be tailored to each individual user role and that they apply system-wide.
 

@@ -30,7 +30,7 @@ The following schedule settings are available:
 
 ## 3 Platform
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This option is only available for supported Selenium hubs.
 {{% /alert %}}
 
@@ -40,7 +40,7 @@ For more information on the different supported operating systems, see [Supporte
 
 ## 4 Resolution
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This option is only available for supported Selenium hubs.
 {{% /alert %}}
 

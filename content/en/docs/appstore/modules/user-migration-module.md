@@ -29,7 +29,7 @@ To perform a user migration, you need the following prerequisites:
 
 To migrate your users, you need to do the following. For the examples, assume that you are migrating users from the default Mendix user management module, `Administration` to an SAP-specific module, `SapAuthentication`:
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You should migrate your users immediately after first deploying the app containing the new user management functionality. Until you do this, your existing users will not be able to sign in to the app.
 
 If you have specializations of the user entities you are migrating, you must migrated the specializations first followed by the main account entity. For example, if you have specialized your `Account` entity into `CompanyA_Account` and `CompanyB_Account`, you must migrate `CompanyA_Account` and `CompanyB_Account` into their related specializations of your new account entity (for example `CompanyA_NewAccount`) before migrating `Account`.
@@ -51,13 +51,13 @@ If you have specializations of the user entities you are migrating, you must mig
 
 6. Edit any mappings which are missing or incorrect using the **Edit** buttons.
 
-    {{% alert type="info" %}}Attributes must be of same type.{{% /alert %}}
+    {{% alert color="info" %}}Attributes must be of same type.{{% /alert %}}
 
 7. Click **Next**.
 
 8. Click **Edit** next to set up any associations from the old entity that you want to migrate to the new entity.
 
-    {{% alert type="info" %}}As with the new attributes, the new associations must already exist in the Domain Model for the new user management module and must have the same multiplicity and ownership as the association they are being mapped from.{{% /alert %}}
+    {{% alert color="info" %}}As with the new attributes, the new associations must already exist in the Domain Model for the new user management module and must have the same multiplicity and ownership as the association they are being mapped from.{{% /alert %}}
 
     ![](/attachments/appstore/modules/user-migration-module/user-migration-step3.png)
 
@@ -65,7 +65,7 @@ If you have specializations of the user entities you are migrating, you must mig
 
 10. Check **Keep … users after migration** to keep the existing user in the old account entity after migration. The message will contain the name of the entity which will be retained, for example `Administration.Account`.
 
-    {{% alert type="info" %}}If you keep the old users after migration, the new user created will have the `_new` postfix for the *Name* attribute of `System.User`, since `System.User/Name` must be  unique.{{% /alert %}}
+    {{% alert color="info" %}}If you keep the old users after migration, the new user created will have the `_new` postfix for the *Name* attribute of `System.User`, since `System.User/Name` must be  unique.{{% /alert %}}
 
     ![](/attachments/appstore/modules/user-migration-module/user-migration-step4.png)
 

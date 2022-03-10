@@ -50,7 +50,7 @@ The **Execute query** and **Execute parameterized query** actions should be used
 
 For both queries and statements, the difference between the parameterized and regular versions are that the parameterized version takes a string template parameter, while the regular version takes a fully formed SQL command string with no placeholders.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The parameterized actions are only available with Database Connector versions 3.0.0 and above. For these, it is necessary to use Mendix [8.6.0](/releasenotes/studio-pro/8.6/#860).
 {{% /alert %}}
 
@@ -103,7 +103,7 @@ Some database vendors support creating complex SQL object types, which can be re
 
 Attributes of the object can be represented by associated `DatabaseConnector.Parameter` objects using the `ParameterObject_Parameter` association. You can use any specialization of `DatabaseConnector.Parameter` for the associated parameter objects. This also allows for flexibility defining the nested object hierarchies (as in, objects with attributes of the object type).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Attributes within an object are identified by their position in the object and not by their name. Therefore, it is necessary to set the **Position** attribute correctly for all object attributes.
 {{% /alert %}}
 
@@ -146,7 +146,7 @@ The many-to-many-association with `DatabaseConnector.Parameter` is also used her
 * [Presto](https://prestodb.github.io/docs/current/installation/jdbc.html)
 * [SQLite](https://bitbucket.org/xerial/sqlite-jdbc/downloads/)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you intend to connect to SQL Server using integrated security, please be aware that the JDBC driver in the **userlib** folder needs to match the version supplied with the Mendix Platform (via the **runtime/bundles/** folder inside the Mendix installation directory).
 {{% /alert %}}
 

@@ -19,7 +19,7 @@ When you log on to Mendix Studio Pro, you have the option to use SAP authenticat
 
 ![](/attachments/partners/sap/sap-single-sign-on/sign-in.png)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 For SAP authentication, your SAP and Mendix usernames must be the same.
 
@@ -102,7 +102,7 @@ If you have more than one account with Mendix, check that you have created your 
 
 If you are using the wrong Mendix account, you will have to sign out of Mendix and sign in again with the correct account. You will then have to create the app again. Alternatively, you can be invited to join the app as another team member.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You cannot solve this problem by changing your email address on Mendix. This **does not** change your Mendix username.
 

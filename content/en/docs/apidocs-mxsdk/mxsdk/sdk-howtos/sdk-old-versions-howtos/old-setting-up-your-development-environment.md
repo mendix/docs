@@ -40,7 +40,7 @@ To set up your development tools, follow these steps:
 
     For Debian-based Linux distributions such as Ubuntu, refer to these [Installation Instructions](https://github.com/nodesource/distributions#user-content-installation-instructions) to properly set up your `apt-get` sources.
 
-    {{% alert type="info" %}}In the rest of the how-to's in these series, in blocks such as the above, lines starting with `$` represent commands to type into a terminal. Sometimes a line follows without a `$`, which represents the output of the command.
+    {{% alert color="info" %}}In the rest of the how-to's in these series, in blocks such as the above, lines starting with `$` represent commands to type into a terminal. Sometimes a line follows without a `$`, which represents the output of the command.
     {{% /alert %}}
 
 3.  Install [Visual Studio Code](https://code.visualstudio.com/) (not to be confused with Visual Studio), a text editor/IDE with good support for [TypeScript](http://www.typescriptlang.org/). Make sure you have a recent version (v1.11.0+) (you can check the version you are using via **Help** > **About**).
@@ -71,7 +71,7 @@ To set up a working directory for your script, follow these steps:
     $ npm init --yes
     ```
 
-    {{% alert type="info" %}}Visual Studio Code works with directories instead of project files.
+    {{% alert color="info" %}}Visual Studio Code works with directories instead of project files.
     {{% /alert %}}
 
 2.  Start Visual Studio Code and open the directory you just created. You can open a new instance of VSC from the command line with the directory you want to open as the first argument. For example, if your current working directory in your terminal is the directory in which all your project files live, use the following command to open VSC:

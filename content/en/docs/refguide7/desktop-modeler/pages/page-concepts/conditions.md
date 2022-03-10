@@ -57,7 +57,7 @@ By selecting this option, visibility or editability becomes conditional based on
 
 The expression result must be of the Boolean type. The expression can use the obejct of the enclosing data container available as a `$currentObject` variable.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 The expression is evaluated in the browser, so we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](/refguide7/constants/). Also, client-side expressions currently do not support all the functions that are available in the microflows. Please refer to an autocomplete list to know what functions are supported in your version.
 
@@ -75,7 +75,7 @@ For example, if you have a page that has a tab page containing the current order
 
 For each module role, you can specify whether the table row or tab page is visible or not.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Do not rely on hiding tab pages and table rows for security! Also, use domain model security to give roles the appropriate access to data.
 

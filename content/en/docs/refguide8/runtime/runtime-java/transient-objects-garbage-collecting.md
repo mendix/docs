@@ -39,7 +39,7 @@ When non-persistable objects are associated with the current user or the current
 
 Objects which are the parameter of a page which is closed in a web browser are only garbage collected after five new pages have been opened. This means that the end-user can use the back button in their browser (a limited number of times) and still see the same page they saw before, even if the parameter is non-persistable.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This is not relevant in mobile apps as pages are not closed in the same way, and always remain alive.
 {{% /alert %}}
 

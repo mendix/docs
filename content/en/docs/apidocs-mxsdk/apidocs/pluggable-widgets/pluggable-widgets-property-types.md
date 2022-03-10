@@ -260,7 +260,7 @@ Then the Studio Pro UI for the component appears like this:
 
 Image allows a user to configure a static image from an [image collection](/refguide/image-collection/). It also allows a user to configure an image from an object that is a specialization of **System.Image**. It is passed as an `DynamicValue<ImageValue>` prop to a client component (for more information, see the [ImageValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#imagevalue) section of *Client APIs Available to Pluggable Widgets*). See the [Images Reference Guide](/refguide/images/) for more information about supported image formats.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 GIF images are not supported in native mobile apps on Android devices.
 {{% /alert %}}
 
@@ -290,7 +290,7 @@ Then the Studio Pro UI for the component appears like this:
 
 The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container/) widget. It is passed as a `ReactNode` prop to a client component if a `dataSource` attribute is not specified, otherwise it is passed as a [`ListWidgetValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listwidgetvalue). For more information, see the [Datasource](#datasource) section below.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Some widgets are not yet supported inside pluggable widgets. Placing unsupported widgets inside a pluggable widget results in a consistency error in Studio and Studio Pro.
 {{% /alert %}}
 
@@ -593,7 +593,7 @@ The datasource property allows widgets to work with object lists. The client com
 
 If no data source has been configured by the user, any properties that are linked to the datasource property are automatically omitted from the props passed to the client component (even if they are marked as required).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Only list datasources are supported, therefore specifying `isList="true"` is required.
 {{% /alert %}}
 

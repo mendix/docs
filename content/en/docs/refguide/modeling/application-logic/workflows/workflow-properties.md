@@ -77,7 +77,7 @@ To add a parameter to the **Workflow name** or the **Workflow description**, do 
 
     ![Specifying the Attribute](/attachments/refguide/modeling/application-logic/workflows/workflow-properties/specifying-attribute.png)
 
-    {{% alert type="info" %}}Make sure that the attribute you use in the expression is of the string type.{{% /alert %}}
+    {{% alert color="info" %}}Make sure that the attribute you use in the expression is of the string type.{{% /alert %}}
 
 4. In the **Template** setting, write the text you would like to display and type **Index** of the parameter you would like to include. In the example below, to include a full name of the new hire being onboarded, you need to use {1} index:
 

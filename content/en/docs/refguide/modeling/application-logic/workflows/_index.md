@@ -39,7 +39,7 @@ The elements of this category are described in the table below:
 | ![Jump Activity](/attachments/refguide/modeling/application-logic/workflows/jump.png)            | [Jump](/refguide/jump-activity/)             | Allows you to jump to other activities in the workflow.      |
 | ![End event](/attachments/refguide/modeling/application-logic/workflows/end-event.png)        | End event                      | Ends the path of the workflow                                |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can add customized activities to this section if you use the **Expose as a workflow action** setting in microflows. For more information see the [Expose as Workflow Action](/refguide/microflow/#expose-as-workflow-action) section in *Microflow Properties*.
 {{% /alert %}}
 
@@ -95,7 +95,7 @@ To delete a workflow, do the following:
 
 The selected workflow is deleted. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **WorkflowInstance** entity that was generated when the workflow was created remains in the domain model, you have to delete it manually.
 

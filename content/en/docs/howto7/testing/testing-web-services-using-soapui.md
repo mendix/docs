@@ -28,7 +28,7 @@ Before you can start with this how-to, make sure you have completed the followin
 | Mendix Desktop Modeler | 5.20.0 |
 | SoapUI | 5.2.0 |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 All images, names and steps in this how-to are based on these versions. When using other versions the images and/or names on your screen may be different than the images or names used in this how-to.
 

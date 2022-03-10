@@ -6,7 +6,7 @@ menu_order: 30
 tags: ["studio pro", "demo users", "demo-users", "project security"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/demo-users.pdf).
 {{% /alert %}}
 
@@ -29,7 +29,7 @@ When security is enabled, demo users are enabled by default. You can disable or 
 * **Yes** – demo users are enabled, you can create new demo users, edit or delete them
 * **No** – demo users are disabled, you cannot add, edit, or delete demo users
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 After they are created automatically, demo users do not differ in any way from other local users that are defined in your application. This means that you can still manually sign in using their user name and password, even after disabling the demo users feature. Also, the demo users are never automatically removed from the database.
 

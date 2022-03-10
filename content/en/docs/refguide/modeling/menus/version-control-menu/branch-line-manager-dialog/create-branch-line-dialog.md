@@ -18,7 +18,7 @@ To view the **Create Branch Line** dialog box,  do the following:
 
 2. In the **Branch Line Manager**, click **New**. 
 
-    {{% alert type="info" %}}You can only create a new branch for Git when it is the current checked-out and open app, otherwise the **New** button is disabled.{{% /alert %}}
+    {{% alert color="info" %}}You can only create a new branch for Git when it is the current checked-out and open app, otherwise the **New** button is disabled.{{% /alert %}}
 
 The **Create Branch Line** dialog box is displayed.
 
@@ -52,7 +52,7 @@ Select from which tagged version you want to create a branch line. Every time yo
 
 Enter a name for the new branch line.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Branch names cannot include special characters (for example, `@`, `$`, `#`). 
 {{% /alert %}}
 

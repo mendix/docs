@@ -87,7 +87,7 @@ Every property requires the  **key** and **type** attribute.
 
 Any property can have the  **isDefault**  or  **required**  attribute.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The **required** attribute defaults to "true".
 {{% /alert %}}
 
@@ -195,7 +195,7 @@ The form property lets you pass a form to the widget. If needsEntityContext is s
  <description>Form to open</description>
 </property>
 ```
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For forms containing a data view, remember that calling a form  with a dataview, if needsEntityContext is set to "false" in your widget, still requires an object to work.
 {{% /alert %}}
 
@@ -340,6 +340,6 @@ What it looks like in Mendix Studio Pro:
 
 ![](/attachments/howto8/extensibility/widget-development/use-xml-widget/16844045.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Remember to use the correct language notation according to the [Java supported locales](http://java.sun.com/javase/6/docs/technotes/guides/intl/locale.doc.html).
 {{% /alert %}}

@@ -49,7 +49,7 @@ This the browser in which ATS executes the test case. The browser version is set
 
 ### 3.1 Platform
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This option is only available for supported Selenium hubs.
 
@@ -61,7 +61,7 @@ For more information on the different supported operating systems, see [Supporte
 
 ### 3.2 Resolution
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This option is only available for supported Selenium hubs.
 

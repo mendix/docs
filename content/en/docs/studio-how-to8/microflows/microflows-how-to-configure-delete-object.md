@@ -19,7 +19,7 @@ This how-to explains how you can configure a delete object action in Mendix Stud
 
 This how-to describes the following use case:  you would like to delete the customer's name from a list of customers. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You can configure the **Delete Object** on click action for such widgets as buttons or a static image. In this how-to, a **Delete** button is used as an example of a widget with **Delete Object** on click action. For more information, see the [Delete Object Action](/studio8/page-editor-widgets-events-section/#delete-object-action) section in *Events Section*.
 

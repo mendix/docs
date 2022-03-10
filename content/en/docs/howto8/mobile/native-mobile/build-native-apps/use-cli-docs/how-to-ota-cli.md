@@ -9,7 +9,7 @@ tags: ["native", "mobile", "ota", "native-builder", "over the air", "update"]
 
 ## 1 Introduction
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This document is for legacy cases when older projects cannot use the Mendix Native Mobile Builder. However, we *strongly suggest* you migrate your project to the Mendix Native Mobile Builder. If you have not migrated your project to the Native Mobile Builder, or are on an Native Template version older than 5.1.9 (Mendix Studio Pro 8.15.0 or older), follow the [Transfer a CLI OTA-Compatible App to the Mendix Native Mobile Builder](/howto8/mobile/how-to-ota/#from-cli-to-ui) section of *How to Release Over the Air Updates with App Center's CodePush* to update your Native Template. If for whatever reason it's not possible to migrate your project to a newer version of Native Template, continue with this guide.
 {{% /alert %}}
 
@@ -19,7 +19,7 @@ Native apps are separated into two parts: a wrapper that is basically a native i
 
 OTA updates are bound to a specific app version and build number. Therefore, you can target specific updates to specific versions of your app. For example, you can push an update for version 1.0.0 as a legacy version that supports older devices, and also push an update for the 2.0.0 version of your app which includes more features.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Currently OTA  does not update your app while the app is open or minimized.
 {{% /alert %}}
 
@@ -96,7 +96,7 @@ To release a new version OTA, follow these steps:
 	native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory
 	```
 
-	{{% alert type="info" %}}
+	{{% alert color="info" %}}
 This command does the following:<br />
 * Runs Mx Build to build your project<br />
 * Packages your project to be pushed as a new update<br />

@@ -73,7 +73,7 @@ const workingCopy = await project.createWorkingCopy();
 
 The `createNewApp()` call is where you actually kick off the process that will create a new app in the Mendix Platform, which will also create a commit in the Team Server repository. By using `await`, you are waiting for the asynchronous call for creating the app and resuming the code afterwards. The result of this call will be accessible via Studio Pro, but in order to be able to manipulate it using the SDK, you need to expose it as an online working copy. The subsequent call `createWorkingCopy()` will do exactly that.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you create an online working copy from an existing app on Team Server, be sure your app has been saved using the latest Mendix Studio Pro version. Earlier versions might not be supported!
 {{% /alert %}}
 
@@ -136,7 +136,7 @@ For more information, see [Async Await](https://basarat.gitbooks.io/typescript/d
     Successfully committed revision: 3. Done.
     ```
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The steps for app (project) creation (line 3) and committing to the Team Server (line 10) can take some time, so please be patient. Be aware that 'revision -1' refers to the latest revision, and that 'branch null' is equal to the main line.
 {{% /alert %}}
 

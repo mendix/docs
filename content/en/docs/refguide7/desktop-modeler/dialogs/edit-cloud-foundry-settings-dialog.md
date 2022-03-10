@@ -9,7 +9,7 @@ tags: ["Cloud Foundry", "Deploy"]
 
 Use this dialog to specify the information necessary for deploying your app to a Cloud Foundry instance.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 For more information on deploying to Cloud Foundry, see [Cloud Foundry: Deploy](/developerportal/deploy/cloud-foundry-deploy/) in *Developer Portal Guide*.
 

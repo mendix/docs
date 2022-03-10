@@ -19,7 +19,7 @@ Select the category that covers your situation. If you are not sure, use the wid
 
 For a quick summary and action plan, go straight to section [8 Summary](#summary).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 When the ATS Recorder does not record any steps, you can use this best practice to find the right action.
 

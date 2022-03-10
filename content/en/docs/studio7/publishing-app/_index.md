@@ -36,7 +36,7 @@ Previewing your app does not change the published app. Also, the preview environ
 
 If your app has security enabled, in the preview mode you will be able to check how your app looks like for different user roles. For more information on how to test different user roles, see the [Testing Your Roles](/studio7/settings-security/#testing-your-roles) section in *Security, Roles & Permissions*. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The app preview is your personal preview of the app. Hence, only users logged into Studio can preview the app, and the preview app will no longer be running when you exit Studio.  
 
@@ -44,7 +44,7 @@ The app preview is your personal preview of the app. Hence, only users logged in
 
 ## 3 Publishing Your App {#publishing-your-app}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Publishing is no longer available in Studio for apps with Mendix version 7. You can either publish your app in Studio Pro or upgrade you app to Mendix version 8 or above. For more information, see [Moving from Desktop Modeler Version 7 to Studio Pro 8](/refguide8/moving-from-7-to-8/).
 

@@ -101,12 +101,12 @@ To add input parameters, follow these steps:
 
 2.  Enter a name in the **Name** field (for example, *Widget Name*).
 
-	{{% alert type="info" %}}Use the ATS naming convention
+	{{% alert color="info" %}}Use the ATS naming convention
 	{{% /alert %}}
 
 3.  Enter a description in the **Description** field (for example, *Enter the name of the widget*).
 
-	{{% alert type="info" %}}You must make sure everybody understands what information they must enter.
+	{{% alert color="info" %}}You must make sure everybody understands what information they must enter.
 	{{% /alert %}}
   
 4.  Select a data type from the **Datatype** drop-down menu (for example, **String**).
@@ -129,7 +129,7 @@ You have now created an input parameter. You can add as many input parameters as
 
 2.  Enter a name in the **Name** field (for example, *Element*).
 
-	{{% alert type="info" %}}The user must know what the action returns, so be clear in the name that you enter.
+	{{% alert color="info" %}}The user must know what the action returns, so be clear in the name that you enter.
 	{{% /alert %}}
   
 3.  Enter a description in the **Description** field. Use this field to give a more detailed description of what is returned.
@@ -150,7 +150,7 @@ You have now created an input parameter. You can add as many input parameters as
 
 	ATS now returns the outcome of test step 1.
   
-	{{% alert type="info" %}}Make sure the datatype of the **Output Parameter** corresponds with datatype of the connected outcome.
+	{{% alert color="info" %}}Make sure the datatype of the **Output Parameter** corresponds with datatype of the connected outcome.
 	{{% /alert %}}
 
 You now know how to add parameters to your custom action.

@@ -23,7 +23,7 @@ When security is enabled, a number of checks and changes are done at several lev
 5. Studio checks if the *login.html* file exists, backs it up, and replaces it with a new version (for more information on this process, see the [File Set Up](#file-set-up) section).
 6. Studio does checks and changes (if necessary) at the [App Security](/refguide/project-security/) level (for more information on this process, see the [App Security Level Set Up](#project-security-level) section).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 If security has already been set to **Prototype/demo** or **Production** in Studio Pro, these settings may be incompatible (too advanced) with Studio roles and permissions settings. In this case, you will not be able to edit roles and permissions in Studio. For more information on security settings in Studio, see [Security, Roles & Permissions](/studio/settings-security/) in the *Studio Guide*. 
 
@@ -40,7 +40,7 @@ To enable single sign-on the following checks and changes are performed:
 
 The Mendix SSO module also adds user management to your app. With user management you can manage app users.
 
-{{% alert type="info" %}}If your app already has the Mendix SSO module installed, you will not be able to enable security from Studio. You can only set security manually in Studio Pro meeting the following requirements: 
+{{% alert color="info" %}}If your app already has the Mendix SSO module installed, you will not be able to enable security from Studio. You can only set security manually in Studio Pro meeting the following requirements: 
 
 * Security should be set to **Production** <br/>
 * The Mendix SSO module should be set up to enable single sign on
@@ -65,7 +65,7 @@ After the **After startup** microflow is set up, Studio checks if the *Administr
     c. If the model has no module roles connected to the Administrator app role or the User app role, Studio creates these roles. <br/>
     d. If the module role exists, its name is identical to the app role, but it is not linked to this app role, Studio creates a new module role, names it *Administrator_1* or *User_1*, and links it to the corresponding app role.<br/>
   
-    {{% alert type="info" %}}Studio links the Administrator role from the System module to the Administrator role on the app level. *Every other app role* created from Studio, including the original User app role, will be linked to the User module role for the System module.
+    {{% alert color="info" %}}Studio links the Administrator role from the System module to the Administrator role on the app level. *Every other app role* created from Studio, including the original User app role, will be linked to the User module role for the System module.
     {{% /alert %}}
 
 3. Studio links the Administrator role at the app level to MendixSSO.Administrator and Administration.Administrator (if they exist, if not, Studio will not do any linking). The User role at the app level is linked to MendixSSO.User, and Administration.User (if they exist, if not, Studio will not do any linking). All other Mendix Marketplace modules will remain unchanged. 
@@ -74,7 +74,7 @@ After the **After startup** microflow is set up, Studio checks if the *Administr
 
 4. Studio checks if demo users named *demo_administrator* and *demo_user* exist, and if not, Studio creates them.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 If Administrator and User roles already exist and are [compatible with Studio](#studio-compatible), they will get access to all microflows, nanoflows, pages, and entities (including entities' attributes and associations).
 
@@ -96,12 +96,12 @@ When you enable security, Studio creates access rules for all entities (and thei
 
   *  All roles in the current module, except anonymous roles, have *read* and *write* access for attributes
 
-     {{% alert type="info" %}}There are cases where entities inherit from System.Image or System.FileDocument. Some of those inherited attributes cannot be set to read/write, so they are set to read-only. 
+     {{% alert color="info" %}}There are cases where entities inherit from System.Image or System.FileDocument. Some of those inherited attributes cannot be set to read/write, so they are set to read-only. 
      {{% /alert %}}
   
 * All roles in the current module, except anonymous roles, have *read* and *write* access for associations if the entity is the association owner 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The rules described above are created if you create an entity in Studio.
 

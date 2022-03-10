@@ -6,7 +6,7 @@ tags: ["studio pro", "file manager", "file widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}The file manager widget is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="warning" %}}The file manager widget is not supported on native mobile pages.{{% /alert %}}
 
 ## 1 Introduction
 
@@ -16,11 +16,11 @@ A file manager is used to upload and/or download files.
 
 A file manager must be placed inside a data view connected to the entity that is either a **System.FileDocument** (or a specialization) or an [external entity](/refguide/external-entities/) with a `Contents` binary attribute.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For an external entity to be used as a file source, it must be defined as a media element in the corresponding OData service. Such an element can be recognized by setting the `HasStream` attribute to `true` in its metadata.  
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When uploading a file through the file manager, the FileDocument object will be committed immediately. When used inside a form, this happens on submission.
 
 A form is submitted just before a microflow or nanoflow is called or when the page is saved.
@@ -77,7 +77,7 @@ The **Type** property indicates how the end-user will be able to use the file ma
 
 Default: *5*
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This value cannot be set arbitrarily high as the platform to which the app is deployed may also impose a limitation on the size of the files that can be uploaded or downloaded.
 {{% /alert %}}
 

@@ -7,7 +7,7 @@ description: "Describes the Data Hub pane in Mendix Studio Pro."
 tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/data-hub-pane.pdf).
 {{% /alert %}}
 
@@ -15,13 +15,13 @@ tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
 
 [Mendix Data Hub](/data-hub/) enables integration of available data sources from the different applications in an organization into your Mendix apps. This means that new apps can be created using shared datasets that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/). In Studio Pro, this is possible using the integrated functionality of Data Hub Catalog through the **Data Hub** pane.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You need a license to use Data Hub in Studio Pro. For further information see [Data Hub License](/refguide8/consumed-odata-service-requirements/#license-limitations).
 {{% /alert %}}
 
 You can search in the Data Hub Catalog through the **Data Hub** pane to discover data sources that you can use in your project. Via this pane you can add the entities that are exposed in the registered OData services—called **Data Sources** in Data Hub—into your app's domain model. These entities are called [external entities](/refguide8/external-entities/) and are different because they enable the connection to the data associated with the entities in the originating app.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In the Data Hub Catalog, registered published services are referred to as *data sources* and exposed entities will show the **Entity set** name and are called *datasets.*
 {{% /alert %}}
 
@@ -64,7 +64,7 @@ As you enter a search term, all the items in the Data Hub Catalog satisfying the
 ### 3.1 Wildcard Search
 You can perform a wildcard search by entering `*` in the search area.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The search strings must be a minimum of 3 alphanumeric characters. Punctuation cannot be used as part of the search term except for the wildcard character `*` to perform an "empty" search in the Data Hub Catalog. You cannot use the wildcard in combination with other characters. For further details, see [How to Search for Registered Assets](/data-hub/data-hub-catalog/search/).
 {{% /alert %}}
 
@@ -73,7 +73,7 @@ By default, the search will be performed on assets in the **Production** environ
 
 {{% image_container width="300" %}}![Filter Icon](/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/filter-icon.png){{% /image_container %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When the **Show development environments** is checked, all subsequent searches results will also include those in non-production environments.
 {{% /alert %}}
 
@@ -93,7 +93,7 @@ The search results and Project pane will show the following at a service level:
 
 *  **Environment name** for non-production environments
 
-	{{% alert type="info" %}}Only the names of non-production environments are displayed. Services in the **Production** will not show an environment name. {{% /alert %}}
+	{{% alert color="info" %}}Only the names of non-production environments are displayed. Services in the **Production** will not show an environment name. {{% /alert %}}
 
 * **Green check-mark** if the service or entity is consumed in the project. If you right-click a consumed service, you can do the following:
 
@@ -106,9 +106,9 @@ The search results and Project pane will show the following at a service level:
 
 	![Data Hub Pane update](/attachments/refguide8/modeling/integration/consumed-odata-services/data-hub-pane-update.png)
 
-	{{% alert type="info" %}}If there is an OData Service update available, then the entities that are listed are those that are available in that version of the OData service. These entities will be "grayed-out" to indicate that they cannot be dragged into the domain model as the *current* contract that is consumed in the project does not have these entities. You will have to update the contract to the version shown in the search results by clicking the **Update**. arrow. {{% /alert %}}
+	{{% alert color="info" %}}If there is an OData Service update available, then the entities that are listed are those that are available in that version of the OData service. These entities will be "grayed-out" to indicate that they cannot be dragged into the domain model as the *current* contract that is consumed in the project does not have these entities. You will have to update the contract to the version shown in the search results by clicking the **Update**. arrow. {{% /alert %}}
 
-  {{% alert type="info" %}}The version number that is shown for the OData service is the latest one that is available in the Data Hub Catalog at the service endpoint—in the example above version 1.0.11 of **Theatre_service** is currently consumed in the project, but version **1.0.12** is now available in the Data Hub Catalog. The search results display the entities available in the new service (also showing one that is locally consumed) however they are greyed-out and cannot be selected until the local service is **Updated** to this one.{{% /alert %}}
+  {{% alert color="info" %}}The version number that is shown for the OData service is the latest one that is available in the Data Hub Catalog at the service endpoint—in the example above version 1.0.11 of **Theatre_service** is currently consumed in the project, but version **1.0.12** is now available in the Data Hub Catalog. The search results display the entities available in the new service (also showing one that is locally consumed) however they are greyed-out and cannot be selected until the local service is **Updated** to this one.{{% /alert %}}
 
 * **Information icon** to view further details for the service and a link to go directly to the [Service Details](/data-hub/data-hub-catalog/search/#search-details) screen in the Data Hub Catalog:
 
@@ -120,7 +120,7 @@ Entities, attributes and associations that satisfy the search string are listed 
 
 For any service in the list, you can click **:Show details** to see the full list of the exposed entities and the associations and attributes for that service.
 
-{{% alert type="info" %}}The associations and attributes that are not supported in your Mendix model are shown as non-selectable (gray) and will not be included when you drag them into the domain model.{{% /alert %}}
+{{% alert color="info" %}}The associations and attributes that are not supported in your Mendix model are shown as non-selectable (gray) and will not be included when you drag them into the domain model.{{% /alert %}}
 
 {{% image_container width="250" %}}![Data Hub Pane Information](/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/expand-service-list.png){{% /image_container %}}
 

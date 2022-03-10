@@ -5,7 +5,7 @@ parent: "xml-schemas"
 tags: ["studio pro"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/xml-schema-support.pdf).
 {{% /alert %}}
 
@@ -91,7 +91,7 @@ Mendix fully supports elements with primitive content, as in, simple types or co
 
 Usually, elements with primitive content are translated to value elements in the mapping. If for some reason an element with primitive content is translated to an object element in the mapping, for instance because it occurs more than once, or because it has a complex type that also defines attributes, the contents of the element are translated to an extra value element called '(Contents)'.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The hex binary type is recognized as a string, so operations on binary types are not applicable for a hex binary (for example, MTOM attachment).
 {{% /alert %}}
 

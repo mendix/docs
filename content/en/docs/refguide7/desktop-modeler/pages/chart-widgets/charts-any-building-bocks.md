@@ -46,6 +46,6 @@ The attribute layout will merge and overwrite static layout options.
 #### Sample layout
 Layout options for preview. It will be merged with the 'Static' in Mendix Studio or at runtime when no 'Source attribute' is selected.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For more a detailed description of Any Chart configuration, see [Any Chart Widgets](/refguide7/charts-any-configuration/)
 {{% /alert %}}

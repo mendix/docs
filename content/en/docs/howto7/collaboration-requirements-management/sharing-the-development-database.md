@@ -94,7 +94,7 @@ To import a data snapshot into the model, the app has to be updated since the la
 
 3.  Now copy the data directory to the data directory in the deployment directory
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Make sure the names of the databases aren't the same or make a copy of your own database first so it will not be overwritten.
 

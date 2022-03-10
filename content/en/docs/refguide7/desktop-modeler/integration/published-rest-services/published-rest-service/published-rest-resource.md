@@ -9,7 +9,7 @@ tags: ["published REST", "resource"]
 # linked from DM: published rest > add resource > help (integration)
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **published REST service** feature was introduced in version 7.10.0.
 

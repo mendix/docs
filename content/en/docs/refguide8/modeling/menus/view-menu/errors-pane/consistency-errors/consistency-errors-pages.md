@@ -7,7 +7,7 @@ tags: ["Studio Pro", "consistency errors", "checks", "errors", "pages"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/consistency-errors-pages.pdf).
 {{% /alert %}}
 
@@ -15,7 +15,7 @@ tags: ["Studio Pro", "consistency errors", "checks", "errors", "pages"]
 
 In this document, we explain how to solve the most common or complicated consistency errors that can occur when configuring pages in Studio Pro. An example of a consistency error on a page is when you do not specify the entity property of a data view on a page. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This document does not describe *all* the errors, as there are a lot of errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
 
@@ -238,7 +238,7 @@ To fix this error, do the following:
 
 You have changed the association multiplicity and fixed the error. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Сhanging the domain model can result in other errors. To avoid changing the domain model, you might want to use another widget instead of the reference selector, for example, a reference set selector or input reference set selector. 
 
@@ -269,7 +269,7 @@ To fix the error, do the following:
 
 You have changed the association multiplicity and fixed the error. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Сhanging the domain model can result in other errors. To avoid changing the domain model, you might want to use another widget instead of the reference set selector or input reference set selector, for example, a reference selector. 
 

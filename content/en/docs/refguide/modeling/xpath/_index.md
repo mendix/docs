@@ -22,7 +22,7 @@ Examples of XPath queries are:
 *   `avg(//Sales.Order[IsPaid = true()]/TotalPrice)`
     Retrieve the average of the total prices of all paid orders.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write the whole queries, including the double slashes (`//`) and the entity name.
 {{% /alert %}}
 
@@ -80,7 +80,7 @@ The following XPath functions are available:
 
 **How to find the right path to XPath**
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This video was done with [Studio Pro 8](/refguide8/), but the concepts remain applicable.
 {{% /alert %}}
 

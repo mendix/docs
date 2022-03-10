@@ -27,7 +27,7 @@ For more information, see [Team Server](/refguide7/team-server/).
 
 In the **SVN repository address** field, enter the address of the app you want to manage and click **Connect** to load the available branches from the repository.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This option is only available when support for other SVN servers is enabled in the [Preferences](/refguide7/preferences-dialog/#enabled) dialog box.
 
@@ -43,7 +43,7 @@ For more information, see [Create Branch Line Dialog](/refguide7/create-branch-l
 
 You can delete existing branch lines by selecting them and then clicking **Delete**. 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Once a branch line is deleted, the operation cannot be undone.
 

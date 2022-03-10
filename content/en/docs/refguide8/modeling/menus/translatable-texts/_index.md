@@ -7,7 +7,7 @@ tags: ["studio pro", "translation", "languages", "translatable text"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/translatable-texts.pdf).
 {{% /alert %}}
 
@@ -42,7 +42,7 @@ If you edit your app to add new widgets while not in the default language, any n
 
 All untranslated texts will be displayed in the default language when you run the application.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If there is no text in the default language, the end-user will see `[no translation]`. If you want the text to be blank, set the default language text to be a space rather than empty.
 {{% /alert %}}
 
@@ -96,7 +96,7 @@ There are two options to ensure that the language is changed:
 
     ![System Domain Model for User and Language](/attachments/refguide8/modeling/menus/translatable-texts/reload-with-state.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The above only applies to pages *within* your Mendix application (meaning, pages that are created in Studio Pro). The labels for static pages (such as the *index.html* and *login.html* pages in the **theme** folder of your app) are generated when you create a deployment package using the default language of your project. The labels on those pages will not change for different users, they will always be the same.
 {{% /alert %}}
 

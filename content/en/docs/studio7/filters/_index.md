@@ -125,7 +125,7 @@ To delete a filter, do the following:
 
 All conditions in the filter are deleted.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you want to delete just one condition and not all of them, click the trash can icon on the right. 
 {{% /alert %}}
 

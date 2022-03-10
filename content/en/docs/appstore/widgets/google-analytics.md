@@ -42,13 +42,13 @@ Typically, you want to start with the MasterPageTracker widget by adding it to y
 
 By having a MasterPageTracker widget in the master layout, you do not need to define the tracker ID (`UA-XXX-XX`) in each [AdvancedPageTracker](#advancedpagetracker) or [PageTracker](#pagetracker) anymore, since they will use the one from MasterPageTracker.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 MasterPageTracker should only be used once in your Mendix application.
 {{% /alert %}}
 
 ### 3.4 AdvancedPageTracker {#advancedpagetracker}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This widget must be inside a data view.
 {{% /alert %}}
 

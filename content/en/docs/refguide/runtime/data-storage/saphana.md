@@ -16,7 +16,7 @@ Retrieving an entity that is sorted on an attribute of one of its associated ent
 
 For example, you have two associated entities — **Person** and **Address** — and they have the **name** and **street** attributes, respectively. You cannot retrieve `Person` objects sorted on `Person_Address/Address/street`. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This limitation has been removed in Studio Pro version [9.8.0](/releasenotes/studio-pro/9.8/) and above, and also from MTS version [9.6.3](/releasenotes/studio-pro/9.6/#963) and above.
 {{% /alert %}}
 
@@ -28,7 +28,7 @@ SAP HANA does not support unlimited strings or strings with a specified length g
 
 See also [Case-Sensitive Database Behavior](/refguide/case-sensitive-database-behavior/).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 In versions of Mendix below 8.11.0, string comparisons in SAP HANA were case sensitive.
 {{% /alert %}}
 

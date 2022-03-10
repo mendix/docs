@@ -6,7 +6,7 @@ menu_order: 40
 tags: ["studio pro", "user task", "workflow", "task outcome", "complete task"]
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 

@@ -29,11 +29,11 @@ These are the software versions used in this how-to:
 | Firefox | 67.0.1 |
 | Selenium IDE | 3.8.1 |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 All images, names, and steps in this how-to are based on these versions. When using other versions, the images and/or names on your screen may be different than what is used in this how-to.
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This how-to uses the Company Expenses app template for an example scenario. However, this app template is no longer platform-supported by Mendix. Therefore, sections using this app template can only be used as reference and not as sections that can be completed step-by-step.
 {{% /alert %}}
 

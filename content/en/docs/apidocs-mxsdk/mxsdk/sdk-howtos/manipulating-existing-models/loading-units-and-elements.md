@@ -40,7 +40,7 @@ entity1Interface.load((entity1) => {
     const entity2: domainmodels.Entity = fullDomainModel.entities[1];
 });
 ```
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
  You can also load units or elements using the convenience method `loadAsPromise`, which is available in the Mendix Platform SDK as a way to load and get `promise` as an output instead of having to use a callback function.
 

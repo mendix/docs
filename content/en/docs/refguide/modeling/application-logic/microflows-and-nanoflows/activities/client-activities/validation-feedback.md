@@ -9,11 +9,11 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This action is ignored and does not work when a microflow is called from an offline, native, or hybrid app. For more information, see the [Microflows](/refguide/offline-first/#microflows) section of the *Offline-First Reference Guide*.
 {{% /alert %}}
 
@@ -56,7 +56,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 **Template** is the message that will be shown to the end-user. The template can contain parameters that are written as a number between braces, for example, {1}. The first parameter has number 1, the second 2, etc.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Nanoflows do not support text templates in validation feedback. Only a static message text can be provided.
 

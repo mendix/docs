@@ -10,7 +10,7 @@ parent: "events"
 An end event defines the location where the flow will stop. If the return type of the flow is 
 not `Nothing`, a return value should be specified.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 If you want to stop your flow after an activity, you link the activity, using a sequence flow with a stop event. In this case, the flow is called from another flow that expects the buyer to be returned.
 

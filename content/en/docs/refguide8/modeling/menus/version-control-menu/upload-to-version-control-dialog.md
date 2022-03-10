@@ -9,7 +9,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/upload-to-version-control-dialog.pdf).
 {{% /alert %}}
 
@@ -34,7 +34,7 @@ You can create a new app on [Mendix Team Server](/developerportal/collaborate/te
 
 ### 2.2 Existing Mendix Team Server
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You can only upload to an existing repository if the repository is currently empty
 {{% /alert %}}
 

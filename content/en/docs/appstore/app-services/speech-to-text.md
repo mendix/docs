@@ -82,7 +82,7 @@ A trial gives everyone in your company one-month access to the app service. The 
 
         ![import-speech-to-text](/attachments/appstore/app-services/speech-to-text/import-speech-to-text.png)
 
-        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+        {{% alert color="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
    3.  In the **Import Module** dialog box, click **Import**. 
    4.  Wait until a pop-up box states that the module was successfully imported. Click **OK**.
@@ -281,7 +281,7 @@ Below are the steps to build a simple example web app based on a blank app templ
 9. Make sure that you have [configured the license token](#configure-license-token).
 10. Run your app locally. Click the microphone icon, talk to it, and the text area will show you the real-time transcript as you speak.
 
-{{% alert type="info" %}}While this simple example only displays the transcript result of the current speech segment, you can also configure **Action** to append all **NewTranscript** and display all your speech-to-text transcripts. For details, see the example screenshot in the [On Transcript](#on-transcript) section.{{% /alert %}}
+{{% alert color="info" %}}While this simple example only displays the transcript result of the current speech segment, you can also configure **Action** to append all **NewTranscript** and display all your speech-to-text transcripts. For details, see the example screenshot in the [On Transcript](#on-transcript) section.{{% /alert %}}
 
 ### 4.3 Handling Microphone Events
 
@@ -324,7 +324,7 @@ To set up speech-triggered actions, perform the following steps:
 3. For **Arguments**, select **Arguments** from **Data view**.
 4.  For each action, set up an [Utterance](#utterance), an [Action](#actions) and a [Feedback](#feedback).
 
-    {{% alert type="info" %}}You can use **New**, **Delete**, and **Edit** to manage all the **Actions**.{{% /alert %}}
+    {{% alert color="info" %}}You can use **New**, **Delete**, and **Edit** to manage all the **Actions**.{{% /alert %}}
 
 If the transcript received by the **Microphone** widget matches an **Utterance** that you specified, the app will run the **Action** and give users the voice **Feedback** that you configured.
 

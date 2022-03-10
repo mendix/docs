@@ -78,7 +78,7 @@ This differs from the [On change](#on-change) property in that the event will al
 
 #### 2.6.1 Grow Automatically
 
-{{% alert type="info" %}}The grow automatically property does not impact the behavior of native mobile pages. On iOS, the text area will always grow automatically
+{{% alert color="info" %}}The grow automatically property does not impact the behavior of native mobile pages. On iOS, the text area will always grow automatically
 {{% /alert %}}
 
 This property defines whether the text area grows automatically depending on the amount of text in it.
@@ -93,7 +93,7 @@ Default: *5*
 
 #### 2.6.3 Counter Message
 
-{{% alert type="info" %}}Counter message is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="info" %}}Counter message is not supported on native mobile pages.{{% /alert %}}
 
 This is the text displayed when typing in the text area. This text has two [parameters](/refguide/text/#parameters). The first parameter contains the number of characters already typed and the second parameter contains the maximum number of characters.
 
@@ -103,7 +103,7 @@ For example, if you use the counter message `You've used {1} characters of the {
 
 #### 2.6.4 Text Too Long Message
 
-{{% alert type="info" %}}Text too long message is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="info" %}}Text too long message is not supported on native mobile pages.{{% /alert %}}
 
 This is the text displayed when the number of typed characters is higher than the maximum allowed number of characters.
 
@@ -127,8 +127,8 @@ It can be used, for example, to give a hint to the end-user what kind of text sh
 
 The autocomplete property specifies if a text area should have autocomplete enabled. The autocomplete attribute also improves mobile devices' ability to pre-populate fields.
 
-{{% alert type="info" %}}This option is only available in native pages.{{% /alert %}}
-{{% alert type="info" %}}In Android when autocomplete is turned off it will remove support for new lines.{{% /alert %}}
+{{% alert color="info" %}}This option is only available in native pages.{{% /alert %}}
+{{% alert color="info" %}}In Android when autocomplete is turned off it will remove support for new lines.{{% /alert %}}
 
 ### 2.7 Label Section{#label}
 

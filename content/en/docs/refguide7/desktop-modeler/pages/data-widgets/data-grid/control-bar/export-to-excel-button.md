@@ -38,7 +38,7 @@ Defines how dates will be exported. When _Date value_ is selected, date values w
 
 _Default value:_ Date value
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 When choosing _Date value_, dates will be shown only in the time zone of your Windows account, because Excel does not support defining specific time zones.
 

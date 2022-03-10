@@ -7,7 +7,7 @@ tags: ["studio pro", "synchronize", "offline", "client activity"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This activity can only be used in **Nanoflows** that run in an offline-first app (a native or offline PWA app).
 {{% /alert %}}
 
@@ -55,7 +55,7 @@ Using this mode, only the selected objects or lists are synchronized. Deleted ob
 
 This section describes the behavior for the [Unsynchronized objects](#unsynchronized-objects) and [Selected object(s)](#selected-objects) modes.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The settings in [synchronization configuration](/refguide/offline-first/#customizable-synchronization) are not applied for the **Unsynchronized objects** and **Selected object(s)** modes.
 {{% /alert %}}
 

@@ -7,7 +7,7 @@ tags: ["marketplace", "marketplace component", "widget", "radio button list", "p
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This widget is partly deprecated – the [Attribute Radio Button list](#attribute-radio-button-list) type is deprecated, but the [Association Radio Button list](#association-radio-button-list) type is still supported.
 {{% /alert %}}
 

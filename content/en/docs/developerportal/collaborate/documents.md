@@ -25,7 +25,7 @@ Click **Upload document** to upload a new document:
 {{% image_container width="400" %}}![](/attachments/developerportal/collaborate/documents/upload-file.png)
 {{% /image_container %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 All file types are allowed, and they are scanned for viruses by Mendix.
 {{% /alert %}}
 

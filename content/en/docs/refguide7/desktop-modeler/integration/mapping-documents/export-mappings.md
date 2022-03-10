@@ -66,7 +66,7 @@ For each value element that the complex schema element encompasses, an attribute
 | Convert Using (optional) | A Microflow to convert the value before performing export. |
 | Map attributes by name | When this button is clicked, an effort is made to match attributes by name. A dialog appears reporting what has been changed. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 It is possible to implicitly convert Mendix Decimal data type to xs:float type. In this case, it is possible that resulting value will lose precision.
 

@@ -35,7 +35,7 @@ This app service works best with Studio Pro 8 versions starting with [8.18.15](/
 
         In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
-        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+        {{% alert color="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
 3. In the **Import Module** dialog box, click **Import**.
 4. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
@@ -49,7 +49,7 @@ The Receipt Processing app service is a premium Mendix product that is subject t
 
 1.  On the [Receipt Processing](https://marketplace.mendix.com/link/component/118390) component page in the Marketplace, click **Subscribe** to order a subscription or click **Try for Free** to start a trial.
 
-    {{% alert type="info" %}}For the trial, only one user per company is allowed.{{% /alert %}}
+    {{% alert color="info" %}}For the trial, only one user per company is allowed.{{% /alert %}}
     
 2.  Fill in the **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Owner receives an order confirmation email.
 
@@ -96,7 +96,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
       
     10. Click **Download** to get the JSON structure.
    
-    {{% alert type="info" %}}Since the document model is pre-trained, the system does not generate a `confidence level` during the receipt processing; instead, it generates a `not applicable` string.{{% /alert %}}
+    {{% alert color="info" %}}Since the document model is pre-trained, the system does not generate a `confidence level` during the receipt processing; instead, it generates a `not applicable` string.{{% /alert %}}
    
 2.  To add the JSON structure to your app, perform the following steps:
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON structure.
@@ -132,9 +132,9 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 5. For **Mapping**, **Select** the import mapping that you created to define how extracted data should be mapped into an entity.
 6. Click **OK** to save the changes and close the dialog box.
 
-{{% alert type="info" %}}Since the document model is pre-trained, the system does not generate a `confidence level` during the receipt processing; instead, it generates a `not applicable` string.{{% /alert %}}
+{{% alert color="info" %}}Since the document model is pre-trained, the system does not generate a `confidence level` during the receipt processing; instead, it generates a `not applicable` string.{{% /alert %}}
 
-{{% alert type="info" %}}Optionally for further automation, add [event handlers](/refguide/event-handlers/) on the entity where you populate the extracted data. You can call your own microflow to process the extracted data when inserted into the entity. For example, you can modify, validate, and pass the data to next steps. By doing this, you can achieve full end-to-end automation.{{% /alert %}}
+{{% alert color="info" %}}Optionally for further automation, add [event handlers](/refguide/event-handlers/) on the entity where you populate the extracted data. You can call your own microflow to process the extracted data when inserted into the entity. For example, you can modify, validate, and pass the data to next steps. By doing this, you can achieve full end-to-end automation.{{% /alert %}}
 
 ### 4.3 Checking Statistics on the Usage Dashboard
 

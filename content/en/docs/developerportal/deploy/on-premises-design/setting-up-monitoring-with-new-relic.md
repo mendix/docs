@@ -8,7 +8,7 @@ tags: ["new relic", "on-premises", "monitoring", "setup"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/setting-up-monitoring-with-new-relic.pdf).
 {{% /alert %}}
 
@@ -16,7 +16,7 @@ tags: ["new relic", "on-premises", "monitoring", "setup"]
 
 When setting up a Mendix application on premises, you can set up advanced monitoring with New Relic. This works with both Windows and Linux deployments.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 New Relic is currently in private beta, and thus not supported. We plan to offer full support for New Relic during 2022.
 {{% /alert %}}
 
@@ -50,7 +50,7 @@ Add `-javaagent:/PATH/TO/NEWRELIC.JAR` to your Java arguments in the Windows Ser
 
 ![](/attachments/developerportal/deploy/on-premises-design/setting-up-monitoring-with-new-relic/18580677.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 After you restart the application, your data should show up in New Relic. This requires the application to send data to New Relic servers, so your firewalls should be configured to allow for this traffic.
 {{% /alert %}}
 

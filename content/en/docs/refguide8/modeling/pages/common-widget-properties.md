@@ -7,7 +7,7 @@ tags: ["studio pro", "widget properties", "properties", "common", "widget", "cla
 #Common Section and Visibility section anchors are used in links of common-section-link and visibility-section-link snippets. If moving or renaming them, do not forget to update snippets.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/common-widget-properties.pdf).
 {{% /alert %}}
 
@@ -21,7 +21,7 @@ These are properties that are shared by many elements in the page editor, such a
 
 The Screen reader caption property allows information to be read by screen readers when **Show label** is set to **No** in an input widget.
 
-{{% alert type="info" %}}The Screen reader caption property is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="info" %}}The Screen reader caption property is not supported on native mobile pages.{{% /alert %}}
 
 #### 2.1.1 Screen Reader Caption Input Widgets 
 
@@ -51,7 +51,7 @@ The tab index influences the order in which the end-user navigates through the p
 
 Default: *0*
 
-{{% alert type="info" %}}Tab index is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="info" %}}Tab index is not supported on native mobile pages.{{% /alert %}}
 
 ### 3.3 Class{#class}
 
@@ -79,7 +79,7 @@ The dynamic classes property allows you to specify one or more cascading stylesh
 
 ![](/attachments/refguide8/modeling/pages/common-widget-properties/dynamic-classes.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The dynamic classes property was introduced in Mendix Studio Pro v8.14.
 {{% /alert %}}
 
@@ -116,15 +116,15 @@ The attribute can be one of the following:
 
 In the first two cases we say the widget is connected to an **attribute** and in the third case to an **attribute path**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In Mendix 8.0, an input widget connected to an **attribute path** must be read-only. Studio Pro will check this for you.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In Mendix 8.1 and above, you can edit attributes presented in input widgets over a path.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In Mendix 8.8 and above, you can edit attributes of any enclosing data container including grandparent data containers.
 {{% /alert %}}
 
@@ -138,7 +138,7 @@ For widgets which manipulate associations, the Attribute (Path) specifies an att
 
 For these widgets, only an **Attribute path** can be selected. In other words, the selected attribute must be from an entity associated with the data container entity by following an association, of the type which matches the widget, through the domain model.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For these widgets you are selecting an association to another object. The attribute should therefore indicate uniquely to the end-user which object is being selected.
 {{% /alert %}}
 
@@ -183,7 +183,7 @@ When selected, this enables the widget when a provided [expression](/refguide8/e
 
 The expression provided is evaluated in the browser and, currently, does not support all the functions that are available in microflows. The autocomplete function will only list those functions which are supported.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 As the expression is evaluated in the browser, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](/refguide8/constants/).
 {{% /alert %}}
 
@@ -199,7 +199,7 @@ This property determines how the widget is rendered if it is read-only.
 | Control                     | Widget is displayed but disabled so the value cannot be modified.
 | Text                        | Widget is replaced by a textual representation of the value.
 
-{{% alert type="info" %}}Read-only style is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="info" %}}Read-only style is not supported on native mobile pages.{{% /alert %}}
 
 ## 6 Label Section {#label}
 
@@ -207,7 +207,7 @@ This property determines how the widget is rendered if it is read-only.
 
 A label can be used to described the purpose of the widget to the user. The label is shown next to the widget in the user interface. If a label is configured, the widget will be rendered in the browser wrapped in a form group. See [Bootstrap documentation](http://getbootstrap.com/css/#forms).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The position of the label in relation to the widget is configured in the **Form orientation** and **Label width (weight)** properties of the data container.
 {{% /alert %}}
 
@@ -247,7 +247,7 @@ There are three options, described below:
 
 ### 7.1 Decimal Mode{#decimal-mode}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This mode only applies to attributes of type Decimal.
 {{% /alert %}}
 
@@ -271,7 +271,7 @@ Default: *Fixed*
 
 ### 7.2 Decimal Precision{#decimal-precision}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This only applies to attributes of type Decimal and is available only when the [Decimal mode](#decimal-mode) is set to **Fixed**.
 {{% /alert %}}
 
@@ -332,7 +332,7 @@ There are a number of variables you can use in your expression:
 * `$currentObject` – the current object
 * `$value` – the current member (attribute or association) value
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In **Mendix 8.1 and above**, the expression can access objects of **all** the data containers enclosing the input widget. The objects are given the name of the widget they originate from (for example, `$dataView1`).
 {{% /alert %}}
 
@@ -354,7 +354,7 @@ For example, if an address field is required, the validation message for the tex
 
 By default, whether or not an element is displayed in the browser is determined by how the page is designed and the user's roles within the application. However, the page can be configured to hide the element unless a certain condition is met.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can choose both **Context** conditions and **Module roles** conditions to apply to the widget.
 {{% /alert %}}
 

@@ -68,7 +68,7 @@ On iOS there are now two implementations of `AppDelegate.m.`: one for release ap
 
 This should make it easier to add custom code by simply following a dependency's documentation. 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Please note that if your app requires custom initialization, for example due to third-party dependencies, and you plan to test the implementation using custom developer apps, from this version and higher **you must duplicate that custom work** in the AppDelegate (found in `Dev/AppDelegate.m`).
 {{% /alert %}}
 
@@ -125,7 +125,7 @@ The Native Mobile Builder writes to the *config.json* and commits assets to rela
 
 **Release date: March 12th, 2021**
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 We have decided to retract version 5.1.7 after we received reports that apps would crash when using Firebase after the patch. Please update to [5.1.8](#518). 
 {{% /alert %}}
 

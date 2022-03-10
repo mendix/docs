@@ -6,7 +6,7 @@ menu_order: 20
 tags: ["Charts", "Advanced", "Studio Pro", "Layout Controls", "Data Properties", "Series Properties", "studio pro"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/charts-advanced-cheat-sheet.pdf).
 {{% /alert %}}
 
@@ -420,7 +420,7 @@ This is the default range mode in charts. Both positive and negative ranges for 
 
 ![Range mode](/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/tozero.gif)  
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When **fill** for the series is set to something other than *none*, the Y-axis range is forced to start from zero (*tozero*). For example:
 
 **Layout**

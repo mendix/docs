@@ -14,6 +14,6 @@ These are the documents in this section:
 * [How to Create Custom Actions](/addons/ats-addon/ht-one-create-custom-actions/)
 * [How to Upload a File in Your App Using ATS](/addons/ats-addon/ht-one-upload-file-using-ats/)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Following the how-to's in the order above is recommended.
 {{% /alert %}}

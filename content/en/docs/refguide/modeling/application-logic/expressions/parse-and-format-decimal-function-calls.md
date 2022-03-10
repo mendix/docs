@@ -73,7 +73,7 @@ In nanoflows, this function only takes a single parameter described below:
 | ---------------- | ------- |
 | Value to convert | Decimal |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 It is not possible to use `formatDecimal()` with the optional format string (for example, `'#.00'`) within a text parameter on a page. The text parameter works the same way as a nanoflow and is restricted to only using the system locale to specify the decimal format.
 {{% /alert %}}
 

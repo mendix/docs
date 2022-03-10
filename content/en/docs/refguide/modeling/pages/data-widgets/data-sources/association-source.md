@@ -10,7 +10,7 @@ menu_order: 60
 
 The **Association** source is a data source available to nested [data grids](/refguide/data-grid/), [template grids](/refguide/template-grid/), and [list views](/refguide/list-view/). 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 The **Association** source retrieves objects from memory, not from the database. 
 
@@ -20,7 +20,7 @@ An **Association** data source fills the widget with objects linked to another o
 
 Data containers that can have other data containers inside them are the [template grid](/refguide/template-grid/), [list view](/refguide/list-view/), and [data view](/refguide/data-view/).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Sorting columns and searching is not possible in data containers with an association data source. This is because these features require a database call to function, which an association data source does not necessarily initiate.
 

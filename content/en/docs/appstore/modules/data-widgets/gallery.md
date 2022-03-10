@@ -20,7 +20,7 @@ Here is an example of a Gallery widget using filters:
 
 ### 1.2 Advanced Options
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The **Enable advanced options** toggle is available in Mendix Studio. In Mendix Studio Pro these advanced options are always available.
 {{% /alert %}}
 
@@ -107,7 +107,7 @@ In order to enable filtering within the gallery items you need to select the des
 
 The attributes selected here will be used for the matching filter placed inside the composable region. When using multiple attributes, the filters will automatically select the matching attributes and then compose the desired filter value in an `OR expression`. Make sure you just have one filter widget for each type, for example `Text Filter` and `Number Filter`.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If a filter is being used and its type does not match with any selected attribute it will throw an error requesting you to select the correct filter widget.
 {{% /alert %}}
 
@@ -133,7 +133,7 @@ For more information about filters, see the [Filters](/appstore/modules/data-gri
 
 In the new Gallery widget it is possible to add sorting widgets to the composable region and use them based on the configurations available in the **Sorting** tab. In order to make the attributes available for the sorting widgets, you must select an attribute and define the name it will show via the sort button.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you have a sorting applied in the datasource of the gallery it will pre-select the value in the drop-down filter if it matches the selection made in the configurations and override the filter selected in the datasource in case you have more options defined. 
 {{% /alert %}}
 

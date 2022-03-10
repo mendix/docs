@@ -15,7 +15,7 @@ A new merge algorithm with fine-grained conflict resolution is used when you upd
 
 ## 2 Enabling the New Algorithm with Fine-Grained Conflict Resolution
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Make sure that you repository is in a clean state: everything has been committed and there are no outstanding changes or conflicts. 
 {{% /alert %}}
 
@@ -81,7 +81,7 @@ For the first conflict, you can inspect changes and decide which version to appl
 
 You will see the document update immediately after you click the button. If you are not satisfied with your choice, you can use undo to go back and try another option. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To use keyboard shortcuts <kbd>Ctrl</kbd>+<kbd>Z</kbd> and <kbd>Ctrl</kbd>+<kbd>Y</kbd> to undo your choice, click the document to focus it first.
 {{% /alert %}}
 

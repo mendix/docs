@@ -12,7 +12,7 @@ aliases:
 
 ## 1 Introduction
 
-There are three ways to register exposed OData services in the Data Hub Catalog.
+There are three ways to register exposed OData services in the Data Hub Catalog. We support all OData versions.
 
 **This how-to will teach you how to register a service:**
 
@@ -293,7 +293,7 @@ A successful `POST` call results in a `200` status code and a JSON response body
 
 The Data Hub Catalog has a UI form where you can register a single exposed OData service. Make sure you have collected the following details before you begin:
 
-- OData v4 metadata contract file as an XML, or ZIP if it is multiple files
+- OData metadata contract file as an XML, or ZIP if it is multiple files
 - Data Source details: `Name`, `Version`, `Path`
 - Application `Name`
 - Environment details: `Name`, `Location` (URL), `Type`

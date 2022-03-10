@@ -121,7 +121,7 @@ This is the behavior when you choose the action **Write to database**.
 
 ### 8.2.1 Call a Microflow Instead of Writing to Database
 
-The **Call a microflow** action allows you to replace the third step (committing the changes to the database) with your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/request-and-response-entities/) parameter. In the microflow, you can use the [Commit](/refguide/committing-objects/) activity to commit the changes to the database. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the update request has failed.
+The **Call a microflow** action allows you to replace the third step (committing the changes to the database) with your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Commit](/refguide/committing-objects/) activity to commit the changes to the database. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the update request has failed.
 
 {{% alert color="info" %}}
 This **Call a microflow** action was introduced in Studio Pro [9.11.0](/releasenotes/studio-pro/9.11/).

@@ -68,9 +68,9 @@ A microflow for an operation takes these operation parameters as input.
 
 A microflow parameter that has the *list* or *object* type indicates a body parameter. You can specify an import mapping to convert the incoming JSON or XML. If the parameter is a file document or inherits from a file document, an import mapping is not needed.
 
-An operation microflow may also take an [HttpRequest](/refguide7/http-request-and-response-entities/request-and-response-entities/#http-request) parameter. You can add this parameter if you would like to inspect the requested URL and headers.
+An operation microflow may also take an [HttpRequest](/refguide7/http-request-and-response-entities/#http-request) parameter. You can add this parameter if you would like to inspect the requested URL and headers.
 
-To set the status code, reason phrase, and headers, you should add an [HttpResponse](/refguide7/http-request-and-response-entities/request-and-response-entities/#http-response) object parameter and set the attributes of that object, or return an *HttpResponse*.
+To set the status code, reason phrase, and headers, you should add an [HttpResponse](/refguide7/http-request-and-response-entities/#http-response) object parameter and set the attributes of that object, or return an *HttpResponse*.
 
 The result of the microflow is the result of the operation. You have several options here, which are described below.
 
@@ -80,7 +80,7 @@ The second option is to **return a primitive**. When your microflow returns a st
 
 The third option is to **return a file document**. When you want to return data that is a file (such as a PDF or image), then you can have your microflow return a file document.
 
-The final option is to **return an [HttpResponse](/refguide7/http-request-and-response-entities/request-and-response-entities/#http-response)**. In the *HttpResponse*, you can set the status code, reason phrase, and content (as a string). You can fill the content with, for example, the result of a mapping or a string from another source. You can also add headers to the response. One important header to set is *Content-Type*. Do not return an *empty* *HttpResponse*, because that will always result in an error.
+The final option is to **return an [HttpResponse](/refguide7/http-request-and-response-entities/#http-response)**. In the *HttpResponse*, you can set the status code, reason phrase, and content (as a string). You can fill the content with, for example, the result of a mapping or a string from another source. You can also add headers to the response. One important header to set is *Content-Type*. Do not return an *empty* *HttpResponse*, because that will always result in an error.
 
 If the microflow throws an unhandled exception, the response is **500: Internal server error**.
 

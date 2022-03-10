@@ -104,7 +104,7 @@ This option allows you to generate the request using a string template. The temp
 These are the options in the drop-down menu for handling the response:
 
 * **Apply import mapping** – if the response is JSON or XML, it can be transformed directly into objects using an [import mapping](/refguide7/import-mappings/). The fields that you can choose here are described in the [Import Mapping action](/refguide7/import-mapping-action/)
-* **Store in an HTTP response** – any successful HTTP response can be stored directly in an [HttpResponse](/refguide7/http-request-and-response-entities/request-and-response-entities/#http-response) object, and the [$latestHttpResponse](#latesthttpresponse) variable is also updated
+* **Store in an HTTP response** – any successful HTTP response can be stored directly in an [HttpResponse](/refguide7/http-request-and-response-entities/#http-response) object, and the [$latestHttpResponse](#latesthttpresponse) variable is also updated
 * **Store in a file document variable** – if the response is a binary content (for example, a PDF), it can be stored in an entity – this entity should inherit from `System.FileDocument`
 * **Store in a string** – if the response is a string (for example, CSV), it can be stored directly in a string variable
 * **Do not store in a variable** - use this option when the call does not return anything useful
@@ -123,7 +123,7 @@ When the **Store message body in $latestHttpResponse variable** option is select
 
 ### 5.4 $latestHttpResponse Variable<a name="latesthttpresponse"></a>
 
-The `$latestHttpResponse` variable is of the [HttpResponse](/refguide7/http-request-and-response-entities/request-and-response-entities/#http-response) type. It is available after a Call REST activity.
+The `$latestHttpResponse` variable is of the [HttpResponse](/refguide7/http-request-and-response-entities/#http-response) type. It is available after a Call REST activity.
 
 However, its `Content` attribute will be left empty in most cases to minimize memory usage.
 

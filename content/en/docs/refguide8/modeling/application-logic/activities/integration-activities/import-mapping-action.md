@@ -44,7 +44,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 Variable
 
-The input variable can be the name of a string variable, a file document, an [HttpRequest](/refguide8/http-request-and-response-entities/request-and-response-entities/#http-request), or an [HttpRequest](/refguide8/http-request-and-response-entities/request-and-response-entities/#http-response). The content of the file document, HttpRequest, or HttpResponse should be XML or JSON.
+The input variable can be the name of a string variable, a file document, an [HttpRequest](/refguide8/http-request-and-response-entities/#http-request), or an [HttpRequest](/refguide8/http-request-and-response-entities/#http-response). The content of the file document, HttpRequest, or HttpResponse should be XML or JSON.
 
 ### 3.2 Mapping
 

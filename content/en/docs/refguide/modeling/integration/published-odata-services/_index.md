@@ -115,9 +115,9 @@ xmlHttp.send(null);
 
 Specify which microflow to use for custom authentication.
 
-The microflow may take an [HttpRequest](/refguide/http-request-and-response-entities/request-and-response-entities/#http-request) as a parameter, so it can inspect the incoming request.
+The microflow may take an [HttpRequest](/refguide/http-request-and-response-entities/#http-request) as a parameter, so it can inspect the incoming request.
 
-The microflow may also take an [HttpResponse](/refguide/http-request-and-response-entities/request-and-response-entities/#http-response) as a parameter. When the microflow sets the status code of this response to something other then **200**, this value is returned and the operation will not be executed. Any headers set on the response are returned (except when the microflow returns an empty user).
+The microflow may also take an [HttpResponse](/refguide/http-request-and-response-entities/#http-response) as a parameter. When the microflow sets the status code of this response to something other then **200**, this value is returned and the operation will not be executed. Any headers set on the response are returned (except when the microflow returns an empty user).
 
 The authentication microflow should return a User.
 

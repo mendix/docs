@@ -25,7 +25,7 @@ For a [call web service](/refguide8/call-web-service-action/) activity and suppo
 ## 2 Other Documents in This Section
 
 * [Consumed App Services](/refguide8/consumed-app-services/)
-* [HttpRequest & HttpResponse System Entities](/refguide8/http-request-and-response-entities/request-and-response-entities/)
+* [HttpRequest & HttpResponse System Entities](/refguide8/http-request-and-response-entities/)
 * [JSON Structures](/refguide8/json-structures/)
 * [Message Definitions](/refguide8/message-definitions/)
 * [Published App Services](/refguide8/published-app-services/)

@@ -7,7 +7,7 @@ tags: ["studio pro", "data hub", "odata service", "consumed odata service"]
 ---
 
 {{% alert color="info" %}}
-<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/consumed-odata-service.pdf).
+<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/consumed-odata-service.pdf).
 {{% /alert %}}
 
 ## 1 Introduction

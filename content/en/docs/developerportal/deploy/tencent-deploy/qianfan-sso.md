@@ -12,7 +12,7 @@ tags: ["SSO", "Single Sign-on", "Tencent", "QianFan"]
 {{% alert color="info" %}}
 This documentation is only relevant to customers deploying their Mendix app on the Tencent Cloud.
 
-<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> Full documentation in Chinese can be downloaded as a PDF from [千帆玉符 SSO 模块使用手册](https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/QianFanSSO%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.pdf).
+<img src="/attachments/china.png" class="d-inline-block" /> Full documentation in Chinese can be downloaded as a PDF from [千帆玉符 SSO 模块使用手册](https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/QianFanSSO%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.pdf).
 {{% /alert %}}
 
 ## 1 Introduction

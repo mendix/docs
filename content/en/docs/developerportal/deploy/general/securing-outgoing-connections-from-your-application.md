@@ -10,7 +10,7 @@ tags: ["secure", "outgoing", "encryption", "TLS/HTTPS", "proxy", "SSH", "VPN"]
 ---
 
 {{% alert color="info" %}}
-<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/securing-outgoing-connections-from-your-application.pdf).
+<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/securing-outgoing-connections-from-your-application.pdf).
 {{% /alert %}}
 
 ## 1 Introduction

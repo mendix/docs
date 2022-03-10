@@ -7,7 +7,7 @@ tags: ["studio pro", "data source"]
 ---
 
 {{% alert color="info" %}}
-<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/data-sources.pdf).
+<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/data-sources.pdf).
 {{% /alert %}}
 
 ## 1 Introduction

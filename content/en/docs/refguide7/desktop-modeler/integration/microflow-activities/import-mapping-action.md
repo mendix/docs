@@ -20,7 +20,7 @@ With the Import Mapping action, you can import the data stored in an XML or JSON
 
 ### 2.1 Variable
 
-The input variable can either be a string, a file document, an [HttpRequest](http-request-and-response-entities#http-request), or an [HttpRequest](http-request-and-response-entities#http-response). The content of the file document, HttpRequest, or HttpResponse should be XML or JSON.
+The input variable can either be a string, a file document, an [HttpRequest](/refguide7/http-request-and-response-entities/request-and-response-entities#http-request), or an [HttpRequest](/refguide7/http-request-and-response-entities/request-and-response-entities#http-response). The content of the file document, HttpRequest, or HttpResponse should be XML or JSON.
 
 {{% alert color="info" %}}
 Support for HttpRequest was added in version 7.11.0. Earlier versions needed a string variable that contained the HttpRequest content.

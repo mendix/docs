@@ -72,22 +72,7 @@ This app service can only be used with Studio Pro 8 versions starting with [8.15
 
 ### 2.1 Obtaining a License Token {#obtain-license-token}
 
-3D Viewer is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in your app, first you need to start a subscription or a trial to get a license token.
-
-#### 2.1.1 Starting a Trial
-
-A trial gives everyone in your company one-month access to the app service. To start a trial, perform the following steps:
-
-1. Go to the [3D Viewer](https://marketplace.mendix.com/link/component/118345) page in the Marketplace.
-2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
-3. Select the check box to agree to the **Terms & Conditions**.
-4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
-5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used.
-6. Click the link in the email to go to the [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) page and log in there. This page shows all the products that you have trials for.
-7. Click **3D Viewer** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. Later you will need to [configure the license token](#configure-license-token) in your app.
-
-#### 2.1.2 Starting a Subscription
+3D Viewer is a premium Mendix product that is subject to a purchase and subscription fee. You can deploy 3D Viewer locally or in a Mendix Free App for free. However, to deploy 3D Viewer on the cloud, you need to start a subscription to get a license token:
 
 1. Go to the [3D Viewer](https://marketplace.mendix.com/link/component/118345) page in the marketplace.
 2. Click **Subscribe** to start a subscription.
@@ -150,9 +135,9 @@ The **MxModelDocument** and **MxChildDocument** entities are internal entities, 
 
 ### 4.2 Constants {#constants}
 
-For Studio Pro 8 versions below xxx, the **HTTPEndpoint** constant with the default value **visualization** is used to restrict the value of the **Endpoint** parameter used in the **Viewer3D/USE_ME/VisServerAction** Java action.
+For Studio Pro 8.15, the **HTTPEndpoint** constant with the default value **visualization** is used to restrict the value of the **Endpoint** parameter used in the **Viewer3D/USE_ME/VisServerAction** Java action.
 
-For Studio Pro 8 versions xxx and above, **HTTPEndpoint** is renamed **Endpoint**, and you do not need to configure this constant.
+For Studio Pro 9.4 and above, **HTTPEndpoint** is renamed **Endpoint**, and you do not need to configure this constant.
 
 The **ModelSourceType** constant with the value **Mendix** is used to signify the model source. You can use this constant to restrict the value of the **Data source** parameter in the **Uploader** widget, the **Model source type** parameter in the **Viewer** widget, or the value of the **Source** attribute in the **ModelDocument** entity.
 
@@ -308,25 +293,9 @@ These widgets do not require additional configuration. Simply place them within 
 
 ### 4.7 Configuring the License Token {#configure-license-token}
 
-#### 4.7.1 For an App Run Locally or Deployed as a Mendix Free App
+You can deploy 3D Viewer locally or in a Mendix Free App for free. However, to deploy 3D Viewer on the cloud, you need to configure the license token that you received for [your subscription](#obtain-license-token).
 
-If you run your app locally or deploy it as a Mendix Free App, configure the license token in Studio Pro. Perform the following steps:
-
-1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
-
-2. On the **Configurations** tab, click **Edit**. 
-
-3. On the **Constants** tab of the dialog box, create a new constant with the predefined constant **Viewer3D.LicenseToken**.
-
-4. Fill in the **Value** with your obtained LicenseToken.
-
-5. Click **OK** to confirm the settings.
-
-   ![licensetoken-inmendix](attachments/3d-viewer/licensetoken-inmendix.jpg)
-
-6. When you finish building the app, click **Run Locally** to run your app locally or click **Run** to deploy it as a Mendix Free App. Then you can see the app service in your app.
-
-#### 4.7.2 For an App Deployed in the Mendix Cloud
+#### 4.7.1 For an App Deployed in the Mendix Cloud
 
 If you deploy your app in the Mendix Cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details).
 
@@ -338,7 +307,7 @@ If you have already deployed your app, change the existing **LicenseToken** cons
 
 ![licensetoken-envdetails](attachments/3d-viewer/licensetoken-envdetails.jpg)
 
-#### 4.7.3 For an App Deployed in Your Own Environment
+#### 4.7.2 For an App Deployed in Your Own Environment
 
 If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](https://docs.mendix.com/developerportal/deploy/index).
 
@@ -585,9 +554,7 @@ The sections below describe these tools.
 The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
 1. Log into the Marketplace.
-2. Go to **My Marketplace** and then do as follows:
-
-   * If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
-   * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
-
-3. Click **3D Viewer** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
+2. Go to **My Marketplace**.
+3. On the left navigation menu, click [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions). This page gives an overview of all the subscriptions of your organization.
+3. Find **3D Viewer** in the list.
+4. Click **Usage Dashboard** to show the usage details.

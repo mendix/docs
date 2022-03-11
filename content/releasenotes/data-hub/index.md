@@ -10,6 +10,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+## March 11th, 2022
+
+#### Fixes
+
+* We fixed Update/Switch button's functionality for Consumed OData Services
+
 ### March 10th, 2022
 
 #### Improvements 

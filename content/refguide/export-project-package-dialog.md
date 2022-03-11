@@ -17,11 +17,25 @@ To export the package, open the **File** menu > **Export App Package** and selec
 
  For more information on what options you can select, see the sections below. 
 
-## 2 Destination
+## 2 Package Type
+
+You can choose the type to export your package as. 
+
+### 2.1 Solution Package
+
+
+
+Your app will be exported as a *.mxsolution* file.
+
+### 2.2 Source Package
+
+
+
+## 3 Destination
 
 You can specify the folder to export the package to. The default location is a folder named *packages* inside the app directory.
 
-## 3 Export Data
+## 4 Export Data
 
 Mendix app packages can be exported to a Mendix package file (*.mpk*).  You can choose to export the built-in deployment database and uploaded files as well, or export with no data. You can choose one of the following options:
 
@@ -37,7 +51,7 @@ Mendix app packages can be exported to a Mendix package file (*.mpk*).  You can 
 	{{% alert type="info" %}}This option is available after you run the app locally at least once, because a local database will be created when running the app for the first time.
 	{{% /alert %}}
 
-## 4 Read More
+## 5 Read More
 
 * [Import App Package](import-project-package-dialog)
 * [Version Control Menu](version-control-menu)

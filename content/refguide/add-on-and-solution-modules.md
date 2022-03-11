@@ -17,7 +17,7 @@ Solution modules are *always part of a solution* – an app that can be used out
 
 ## 2 Configuring Add-on and Solution Modules
 
-You can mark an ordinary module as an add-on or solution module at any time, but we recommend to do so right-away when you start developing. When you do so, all content of add-on and solution modules is set to be hidden from consumers (has IP protection enabled) by default. You can then decide what parts of the module you would like to be usable, if any. For example, you can allow consumers to see how one of the microflows is configured or allow consumers to use certain entities and attributes. 
+You can mark an ordinary module as an add-on or solution module at any time, but we recommend to do so right-away when you start developing. All content of add-on and solution modules is set to be hidden from consumers (has IP protection enabled) by default. You can then decide what parts of the module you would like to be usable, if any. For example, you can allow consumers to see how one of the microflows is configured or allow consumers to use certain entities and attributes. 
 
 You need to mark those document/elements as usable individually. For more information on what documents and elements are supported, see the [Supported Documents](#supported-documents) section below. 
 
@@ -90,11 +90,13 @@ The add-on module gets an *.mxmodule* extension.
 
 ### 3.2 Exporting Solution Package
 
-To export a solution, right-click the name of the app in the **App Explorer** and select **Export app package**.
+Solution package is an app package that will be distributed as an out-of-the-box solution. It has a **solution core** that consists of solution modules. It can also consist of ordinary and add-on modules. For more information, see [Add-on and Solution Modules](add-on-and-solution-modules). 
 
-
+To export a solution, right-click the name of the app in the **App Explorer** and select **Export app package** or open the **File** menu > **Export App Package**. For more information, see [Export App Package](export-app-package-dialog).
 
 ## 4 Updating Add-on and Solution Modules
+
+
 
 ## 5 Consuming Add-on Modules and Solutions
 

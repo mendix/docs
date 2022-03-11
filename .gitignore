@@ -25,3 +25,12 @@ mx-2-install-dependencies.bat
 mx-3-run-server.bat
 bin
 package-lock.json
+
+# Added for convenience during new Docs Stack testing
+
+/public
+/resources/_gen/assets/scss/
+/tmp/.htmltest/
+/hugo.exe
+/htmltest.exe
+/.htmltest.yml

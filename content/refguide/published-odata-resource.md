@@ -135,7 +135,7 @@ When the app receives a request to change values, it does the following:
 
 This is the behavior when you choose the action **Write to database**.
 
-### 8.4 Call a Microflow Instead of Write to Database
+## 8.4 Call a Microflow Instead of Write to Database
 
 The **Call a microflow** action allows you to replace the last step (committing to the database) of the *Insertable* or *Updatable* capability with your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](http-request-and-response-entities) parameter. In the microflow, you can use the [Commit](committing-objects) activity to commit the changes to the database. If the microflow reports [validation feedback](validation-feedback), the runtime informs the client that the update request has failed.
 

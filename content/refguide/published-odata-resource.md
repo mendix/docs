@@ -104,7 +104,7 @@ This *Capabilities* section was introduced in Studio Pro [9.6.0](/releasenotes/s
 
 ## 8.1 Insertable
 
-Check the check box for **Insertable** to indicate that clients can insert new objects.
+Select the check box for **Insertable** to indicate that clients can insert new objects.
 
 When the app receives a request to insert a new object, it does the following:
 
@@ -116,7 +116,7 @@ When the app receives a request to insert a new object, it does the following:
 This is the behavior when you choose the action **Write to database**.
 
 {{% alert type="info" %}}
-Insertable capability was introduced in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12).
+The *Insertable* capability was introduced in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12).
 {{% /alert %}}
 
 ## 8.2 Readable

@@ -154,7 +154,7 @@ If the OData query is too long to be sent as a `GET` request, clients can send t
 The body must adhere to *URL encoding* principles. So, for instance, spaces, tabs, and newlines are not allowed.
 {{% /alert %}}
 
-## 10 Updating objects {#updating-objects}
+## 10 Updating Objects {#updating-objects}
 
 When a published resource has the [Updatable](published-odata-resource#capabilities) capability, clients can update its attributes and associations by sending a `PATCH` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Exployees(8444249301330581)`). 
 
@@ -201,11 +201,11 @@ Clients can only update an association from the entity that is the [owner](assoc
 The *updating attributes* functionality was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6). The *updating associations* functionality was introduced in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8).
 {{% /alert %}}
 
-## 10 Inserting objects {#inserting-objects}
+## 10 Inserting Objects {#inserting-objects}
 
 When a published resource has the [Insertable](published-odata-resource#capabilities) capability, clients can create new objects by sending a `POST` request to the URL of the entity set (for example, `POST /odata/myservice/v1/Exployees`). 
 
-The body of the request may specify attribute and association values just as with updates. There is one difference: when the association refers to multiple objects, objects are specified without using `@delta``, for example:
+The body of the request may specify attribute and association values just as with updates. There is one difference: when the association refers to multiple objects, objects are specified without using `@delta`. For example:
 
 ```json
 {

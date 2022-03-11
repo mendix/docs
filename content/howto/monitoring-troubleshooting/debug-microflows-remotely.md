@@ -19,9 +19,7 @@ If you are debugging in the cloud, be aware of other app end-users. Breakpoints 
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-**It is currently not possible to debug Nanoflows remotely.**
-
-If you are debugging in the cloud, any breakpoint added to a nanoflow will be disabled, as it is not currently possible to debug nanoflows remotely.
+**It is currently not possible to debug nanoflows remotely.** If you are debugging in the cloud, any breakpoint added to a nanoflow will be disabled.
 {{% /alert %}}
 
 **This how-to will teach you how to do the following:**

@@ -28,7 +28,7 @@ The pane gives you information on each anti-pattern and contains MxAssist Perfor
 
 ![Performance Bot Pane](attachments/mx-assist-performance-bot/performance-bot-pane.png)
 
-### 2.1 Options and Configuration
+### 2.1 Options and Configuration {#options}
 
 At the top of the **MxAssist Performance Bot** pane you can see the following options: 
 

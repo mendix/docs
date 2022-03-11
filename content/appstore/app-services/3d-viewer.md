@@ -17,7 +17,7 @@ Here is an overview of what the 3DViewer contains:
 | Item | Name |
 | ---  | --- |
 | [Predefined entities](#predefined-entities) | ModelDocument, Pagination, Markup, MxChildDocument, MxModelDocument |
-| [Constants](#constants) | HttpEndpoint, LicenseToken, ModelSourceType |
+| [Constants](#constants) | HTTPEndpoint / Endpoint, LicenseToken, ModelSourceType |
 | [Microflow](#microflow) | DeleteModelFromMendix, DownloadMarkup |
 | [Nanoflow](#nanoflow) | CreateModelDocumentFromFileDocument, GetMarkupsFromMendix, GetModelListFromMendix |
 | [Java action](#java-action) | VisServerAction |
@@ -70,20 +70,22 @@ This app service can only be used with Studio Pro 8 versions starting with [8.15
 
 ## 2 Installation
 
-First, download the *3DViewer.mpk* file for the [3D Viewer](https://marketplace.mendix.com/link/component/118345) from the Marketplace. When you want to add the app service to your app in Mendix Studio Pro, follow these steps:
+### 2.1 Starting a Subscription {#obtain-license-token}
 
-1. Right-click the project in the **Project Explorer**, click **Import module package**, and select the *3DViewer.mpk*. 
-2.  In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project. Note that the name will be displayed as "Viewer3D" instead of "3DViewer" in Project Explorer due to naming conventions:
+3D Viewer is a premium Mendix product that is subject to a purchase and subscription fee. You can deploy 3D Viewer locally or in a Mendix Free App for free. However, to deploy 3D Viewer on the cloud, you need to start a subscription to get a license token and configure it later:
 
-	![import-3dviewer](attachments/3d-viewer/import-3dviewer.jpg)
-	
-	{{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+1. Go to the [3D Viewer](https://marketplace.mendix.com/link/component/118345) page in the marketplace.
+2. Click **Subscribe** to start a subscription.
+3. Select your subscription plan.
+4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
+5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Owner will receive an email that says the app service is ready to be used.
+6. Click the link in the email to go to the [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
+7. Click **3D Viewer** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. Later you will need to [configure the license token](#configure-license-token) in your app.
 
-3. Click **Import** on the **Import Module** dialog box, and a pop-up window stating that “The app was successfully imported into the project” will appear. Click **OK**.
-4. Open the **Project Explorer** to view the Viewer3D module. You can see a collection of ready to use items under the Viewer3D folder. Besides, if you go to Toolbox window, you will also notice a  collection of 3D widgets are added to Toolbox widget list, under the **Add-on widget** category. 
-5. After importing, you need to map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
+### 2.2 Installing the Component in Your App
 
-Now you have successfully added the 3D Viewer resources to your app.
+To download and install the 3D Viewer app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see a collection of ready-to-use items under the **Viewer3D** folder and a collection of 3D widgets in the **Add-on widget** category in the **Toolbox**.
 
 ## 3 Initializing on App Startup
 
@@ -133,15 +135,13 @@ The **MxModelDocument** and **MxChildDocument** entities are internal entities, 
 
 ### 4.2 Constants {#constants}
 
-The **HttpEndpoint** constant with the default value **visualization** is used to restrict the value of the **HttpEndpoint** parameter used in the **Viewer3D/USE_ME/VisServerAction** Java action.
+For Studio Pro 8.15, the **HTTPEndpoint** constant with the default value **visualization** is used to restrict the value of the **Endpoint** parameter used in the **Viewer3D/USE_ME/VisServerAction** Java action.
+
+For Studio Pro 9.4 and above, **HTTPEndpoint** is renamed **Endpoint**, and you do not need to configure this constant.
 
 The **ModelSourceType** constant with the value **Mendix** is used to signify the model source. You can use this constant to restrict the value of the **Data source** parameter in the **Uploader** widget, the **Model source type** parameter in the **Viewer** widget, or the value of the **Source** attribute in the **ModelDocument** entity.
 
-The **LicenseToken** constant is used to provide a valid 3DViewer license token for the app that uses 3DViewer to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As 3DViewer is a commercial product and subject to a subscription fee, to be able to use the 3DViewer functionalities in a deployed app, you will need a valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
-
-However, if you only plan to try how 3DViewer works  (meaning, build and run an app that uses 3DViewer locally in Studio Pro or deploy to a Mendix Free App environment), you do not need to subscribe to get a license token. Therefore, you do not need to set a value for the **LicenseToken** constant, just leave it empty.
-
-For details on how to get a license token, see the [Obtaining a LicenseToken to Deploy Your App](#obtain) section below.
+The **LicenseToken** constant provides a valid license token for an app that uses this app service. As 3D Viewer is a commercial product, you need to have a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token) section.
 
 ### 4.3 Microflow {#microflow}
 
@@ -290,6 +290,26 @@ These widgets do not require additional configuration. Simply place them within 
 | Tool Bar Item Render Mode | Enables toggling between different model render modes. |
 | Tool Bar Item Selection Mode | Provides the ability to select a model part, edge, face, and body. |
 | Tool Bar Item Snapshot | Provides the ability to take a snapshot of the current Viewer and save the snapshot to a local machine. |
+
+### 4.7 Configuring the License Token {#configure-license-token}
+
+You can deploy 3D Viewer locally or in a Mendix Free App for free. However, to deploy 3D Viewer on the cloud, you need to start a subscription to [obtain a license token](#obtain-license-token), and then configure it.
+
+#### 4.7.1 For an App Deployed in the Mendix Cloud
+
+If you deploy your app in the Mendix Cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details).
+
+Before you deploy your app, configure the app **Constants** in the deployment package.
+
+![licensetoken-cloudportal](attachments/3d-viewer/licensetoken-cloudportal.jpg)
+
+If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app.
+
+![licensetoken-envdetails](attachments/3d-viewer/licensetoken-envdetails.jpg)
+
+#### 4.7.2 For an App Deployed in Your Own Environment
+
+If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](https://docs.mendix.com/developerportal/deploy/index).
 
 ## 5 Usage
 
@@ -508,7 +528,7 @@ You can move the position sliders to adjust the position of the section plane al
 
 You can add multiple section planes to cut the model in different directions. After the section, you can save a snapshot of a section view. You can also add markup annotations on the section view and save them for later review.
 
-### 5.7 Perform 3D Measurements {#perform-measurements}
+### 5.7 Performing 3D Measurements {#perform-measurements}
 
 When a model is loaded into the viewer, the [Measurement](#measurement) widget provides a set of tools to measure different geometrical entities:
 
@@ -529,50 +549,12 @@ The sections below describe these tools.
 * **Delete** – select one measurement result, then click **Delete** and the selected measurement result will be removed from the scene
 * **Clear** – clear all the measurement results in the scene
 
-## 6 Obtaining a LicenseToken to Deploy Your App {#obtain}
+### 5.8 Checking Statistics on the Usage Dashboard {#check-usage}
 
-3D Viewer is a premium Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses 3D Viewer, you need to provide a valid **LicenseToken** as an environment variable in the deployment setting; otherwise, the 3D Viewer widget features may not work in your app.
+The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
-### 6.1 Do You Need to Subscribe & Get a LicenseToken?
-
-When you just need to run your app with 3D Viewer locally or deploy as a Mendix Free App for testing and trial purposes, you do not need a LicenseToken. You can leave the value of the **Viewer3D.LicenseToken** constant empty when running your app.
-
-When you want to deploy your app to a licensed Mendix Cloud node or an on-premises environment, you need to subscribe to 3D Viewer in order to get a LicenseToken. 
-
-### 6.2  Subscribing to Get a LicenseToken
-
-On the [3D Viewer](https://marketplace.mendix.com/link/component/118345) page, click **Subscribe** to go to the subscription order page and follow these steps:
-
-1. Fill in **Technical Owner** information (first name, last name, email address), the subscription amount, billing account information, and other required information. 
-2. Upon successful order creation, if you are the app's technical owner, you will receive an order confirmation email. 
-3. Click the link in the email to the [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) page and log in there.
-4. In the list of your company's subscriptions, click the **3D Viewer** subscription link to open the subscription details page.
-5. Click **Create Binding Keys** , give the key a meaningful name (which should include the name of the app where you are using 3D Viewer), then click **Create Keys**.
-6. When the **LicenseToken** key is generated, copy and save it for later use in your app.
-
-### 6.3 Configuring a LicenseToken for App Deployment
-
-#### 6.3.1 In Studio Pro
-
-In Mendix Studio Pro, go to [Project Settings](/refguide8/project-settings) and follow these steps:
-
-1. In the **Configurations** tab, click **Edit**. 
-2. In the **Constants** tab of the dialog box, create a new constant with the predefined constant **Viewer3D.LicenseToken**.
-3. Fill in the **Value** with your obtained LicenseToken.
-4.  Click **OK** to confirm the settings.
-
-	![licensetoken-inmendix](attachments/3d-viewer/licensetoken-inmendix.jpg)
-
-5. When you finish building the app, click **Run** to deploy your app to the cloud.
-
-#### 6.3.2 In Developer Portal
-
-Alternatively, you can add or update LicenseToken as a constant in the [Developer Portal](/developerportal/deploy/environments-details).
-
-Before you deploy your app, configure the app **Constants** in the deployment package
-
-![licensetoken-cloudportal](attachments/3d-viewer/licensetoken-cloudportal.jpg)
-
-If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app:
-
-![licensetoken-envdetails](attachments/3d-viewer/licensetoken-envdetails.jpg)
+1. Log into the Marketplace.
+2. Go to **My Marketplace**.
+3. On the left navigation menu, click [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions). This page gives an overview of all the subscriptions of your organization.
+3. Find **3D Viewer** in the list.
+4. Click **Usage Dashboard** to show the usage details.

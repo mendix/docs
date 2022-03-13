@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "pusher", "platform support"]
 
 ## 1 Introduction
 
-The [Pusher](https://marketplace.mendix.com/link/component/107957/) module allows you to trigger a microflow or nanoflow directly from the server on the client app. This means it is triggered from the other session, without waiting for end-users to interact with the page.
+The [Pusher](https://marketplace.mendix.com/link/component/107957/) module allows you to trigger a microflow or nanoflow directly from the server on non-native client apps. This means it is triggered from the other session, without waiting for end-users to interact with the page.
 
 In the standard situation, updates in the client are triggered by a user interaction, by timed actions, or by data-grid refresh time. For information not created by the same user session that needs to be updated immediately in the client app, the Mendix core product does not support a viable option to accomplish this. As an alternative, you need need to refresh the page constantly with timers or constant clicking. This is not user-friendly, and it is not preferred when scaling.
 

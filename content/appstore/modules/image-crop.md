@@ -18,6 +18,8 @@ End-users can do the following with this module:
 * Shrink or convert images
 * Enforce a set size/aspect ratio
 
+The svg file is not supported on this module.
+
 ## 2 Configuration
 
 This module is pre-configured to use the **ImageCrop** entity. You can choose to inherit from this entity, set an association to the entity or copy the actions you want to have.
@@ -72,4 +74,4 @@ These are the **Cropper** widget properties:
 
 ## 5 Developing This Marketplace Component
 
-We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/ImageCropModule](https://github.com/mendix/ImageCropModule).
+We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendix/ImageCropModule](https://github.com/mendix/ImageCropModule).

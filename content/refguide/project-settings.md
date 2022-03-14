@@ -283,7 +283,11 @@ Defines the maximum number of workflow transactions that the runtime will execut
 
 Defines the maximum number of user task transactions that the runtime will execute simultaneously. The limit is 10.
 
-## 8 Miscellaneous Tab {#miscellaneous}
+## 8 Deployment Tab {#deployment}
+
+This tab allows you to exclude libraries from deployment. 
+
+## 9Miscellaneous Tab {#miscellaneous}
 
 These settings determine the behavior of Studio Pro for this app. The settings apply to everyone that is working on this app.
 

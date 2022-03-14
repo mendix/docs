@@ -7,6 +7,12 @@ menu_order: 2
 
 These are the [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/) release notes, including all minor versions and patches.
 
+## 5.1.0
+
+**Release date: March 11th, 2022**
+
+* It is no longer mandatory to include the `branches/` prefix for SVN branch names that are not `trunk`.
+
 ## 5.0.0
 
 **Release date: February 23rd, 2022**

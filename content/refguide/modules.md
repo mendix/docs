@@ -30,10 +30,13 @@ React Native modules expose native Java/Objective-C and C++ objects allowing for
 
 When you create a module, you can choose the type for it. 
 
-Some modules are part of your app by default and are called **app modules**, while others you can download in the [Mendix Marketplace](https://marketplace.mendix.com/) to add functionality to app.  
+Some modules are part of your app by default and are called **app modules**, while others you can download in the [Mendix Marketplace](https://marketplace.mendix.com/) to add functionality to app.   
 
-* [Add-on modules](add-on-module) are a special kind of modules that have explicit APIs and can have [IP protection](/appstore/creating-content/sol-ip-protection) enabled. For more information on downloading and installing a module from the Marketplace, see [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) in the *Marketplace Guide*. 
-* 
+There are the following type of modules:
+
+* App modules (standard modules)
+* [Add-on modules](configure-add-on-and-solution-modules) 
+* [Solution modules](configure-add-on-and-solution-modules)
 
 
 ##  Common

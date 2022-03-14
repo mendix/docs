@@ -13,7 +13,9 @@ The 3D Viewer API allows you to retrieve, create, and update 3D model entities, 
 
 For details, see [3D Viewer API Reference](http://3dviewer-apidoc.s3-website.eu-central-1.amazonaws.com/index/v2.1/apidoc/3dviewer.html).
 
-## 3 Use Case Example
+## 3 Usage
+
+### 3.1 Use Case Example
 
 If you want to get properties of a selected part on the 3D Viewer, perform the following steps:
 
@@ -42,9 +44,9 @@ If you want to get properties of a selected part on the 3D Viewer, perform the f
               }
             }
           }
-
+    
           return Promise.all(promises).then(()=>objects);
-
+    
           function createPropertyObject(objects, key, value) {
           return new Promise(function (resolve, reject) {
               mx.data.create({
@@ -61,7 +63,7 @@ If you want to get properties of a selected part on the 3D Viewer, perform the f
                 });
             });
               }
-
+    
             // END USER CODE
           }
     ```
@@ -69,6 +71,10 @@ If you want to get properties of a selected part on the 3D Viewer, perform the f
 4. Call this JavaScript action in a nanoflow to get all available properties of a given part.
 5. Use a page to show all the properties returned :
    ![show-properties](attachments/3d-viewer-api/show-properties.jpg)
+
+### 3.2 Other Sample Code Snippets
+
+Starting from version 2.2.0, 3D Viewer module includes some out-of-box API actions. The module allows you to manipulate model parts via **RotatePart**, **ScalePart**, **SetPartColor**, and **TranslatePart** API actions. You can find these actions in the **Viewer3D** > **USE_ME** > **API Actions** folder in the **App Explorer** in Studio Pro. You can directly use them to create your custom logic for manipulating models. Check out the code implementation of these javascript actions, along with the 3D Viewer API Reference. This may give you some ideas about how you want to make use of the 3D Viewer API.
 
 ## 4 Feedback
 

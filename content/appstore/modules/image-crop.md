@@ -18,7 +18,9 @@ End-users can do the following with this module:
 * Shrink or convert images
 * Enforce a set size/aspect ratio
 
-The svg file is not supported on this module.
+### 1.2 Limitations
+
+This module does not support the SVG format.
 
 ## 2 Configuration
 

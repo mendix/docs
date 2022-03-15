@@ -30,7 +30,7 @@ Since the widget will try to group the events based on date, make sure there is 
 
 On the **General** tab for both basic and custom modes, you can opt to show a day divider by selecting **Yes** for **Group Events** and selecting a **Group Attribute**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you are using the basic mode, the values of the **Data source** field will be used as a group header via the **Group Attribute** property.
 {{% /alert %}}
 

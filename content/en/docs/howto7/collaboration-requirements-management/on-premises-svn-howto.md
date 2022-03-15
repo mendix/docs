@@ -16,7 +16,7 @@ While this is the recommended way of working for almost all Mendix developers, y
 
 * Configure your Mendix apps to work with your own (on-premises) version control system
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For version control, the Mendix Modeler uses the [Subversion](https://subversion.apache.org) system (also known as SVN). This how-to will not describe how to set up an SVN server from scratch; typically, this will be taken care of by the IT department of your organization.
 {{% /alert %}}
 
@@ -45,7 +45,7 @@ In the following sections of this how-to, it is assumed that you have a reposito
 
 The Mendix Modeler has a (built-in) Subversion client that uses version 1.7 of the SVN working copy format. This client should be compatible with any 1.x version of the SVN server, so you could use, for example, a 1.6.x or 1.9.x SVN server as well.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 SVN clients newer than 1.7 use an updated working copy format, which means that when you use a separate SVN client (for example [TortoiseSVN](https://tortoisesvn.net/)) to work on your Mendix app, you cannot use a 1.8.x or 1.9.x (or newer) version of this client. That is because it would upgrade your working copy, and then the Mendix Modeler would not be able read it anymore.
 

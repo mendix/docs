@@ -16,7 +16,7 @@ Microflows run in the runtime server and can therefore not be used in offline ap
 
 This page is a summary of the elements which make up a microflow, together with their visual representation within the microflow. It also covers [keyboard support](#keyboard) when editing microflows.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For the properties of the microflow itself, see [Microflow Properties](/refguide/microflow/).
 {{% /alert %}}
 

@@ -43,7 +43,7 @@ This is the action that the runtime will perform when an error occurred in the s
 | **Ignore** | Don't map this element and continue parsing the rest of the XML. |
 | **Error** | Explicitly stop parsing the XML and throw an error. This error needs to be handled in the calling microflow. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The feature **Decide this at the place where the mapping gets used** was introduced in version 7.17.0
 
@@ -55,7 +55,7 @@ At the top level of the mapping, you can choose to decide this at the place wher
 
 Optionally, you may set an association to the parent object. If set to Yes, a list of allowed associations is shown. If an association is selected, it is drawn in the mapping document.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Be aware that lists are not stored ordered in the Mendix database. XML Schema can prescribe that a grouping of objects is a sequence, but the order of Mendix objects in the database may differ from the order of incoming XML elements.
 
@@ -88,7 +88,7 @@ Having defined the mappings for the attributes, these mappings are also shown in
 
 ## 3 Mapping Parameter
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Since version 7.16.0. it is possible to define a mapping parameter with a primitive data type (integer, string, etc.).
 

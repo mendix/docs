@@ -61,7 +61,7 @@ Task Queues have a number threads. Each of these threads can process one task at
     
 #### 2.2.1 Thread Count Recommendation 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In versions of Mendix below 9.9.0, there is a limit of 40 threads per cluster node.
 {{% /alert %}}
 
@@ -150,7 +150,7 @@ The period for a graceful shutdown of queues can be configured as a [custom runt
 | `TaskQueue.ShutdownGracePeriod`            |          10000| Time in ms to wait for task to finish when shutting down.                               |
 | `com.mendix.core.ProcessedTasksCleanupAge` |       86400000| Time in ms after which `ProcessedQueueTask` are deleted automatically (no tasks are automatically deleted if this setting is not specified). <b/>*This setting was introduced in Mendix version 9.9.0* |   
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This grace period is applied twice during the [shutdown](#shutdown) (described below) so the maximum time that the runtime will wait for tasks to end is twice this value.
 {{% /alert %}}
 
@@ -185,7 +185,7 @@ There is one exception to the above rules:
 Projects containing task queues that were created before Mendix 9.6 will get a deprecation warning in the log: `The project setting 'System context tasks' is deprecated`.
 You can remove this warning in the **Runtime** tab of the app **Settings** in Studio Pro. Set **System context tasks** to *no* to execute tasks in an equivalent context to the one they were created in and remove the warning.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You will be asked to confirm this change as, after choosing *no*, you cannot switch back to *yes* because executing tasks in system contexts (unless scheduled from a system session) is deprecated.
 {{% /alert %}}
 
@@ -214,7 +214,7 @@ If any of these condition checks fail, tasks are moved to `System.ProcessedQueue
 
 During shutdown, the `TaskQueueExecutors` will stop accepting new tasks. Running tasks are allowed a [grace period](#configuration) to finish. After this period, the runtime will send an interrupt to all task threads that are still running and again allow a grace period for them to finish. After the second grace period the runtime just continues shutting down, eventually aborting the execution of the tasks. The aborted tasks will be reset, so that they are re-executed later or on another cluster node. In development mode, the first grace period is shortened to 1 second.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Interrupting task threads may cause them to fail. These tasks will be marked as `Aborted` and retried at a later time.
 {{% /alert %}}
 
@@ -226,7 +226,7 @@ In Mendix versions 9.9.0 and above, the `System.ProcessedQueueTask` can be clean
 
 When this setting is not specified, no cleanup is performed.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When turning on the automatic cleanup after having used tasks for a long time, there might be many rows to clean up, which will be initiated when the runtime starts. This may cause additional load on the database, but will nog block the startup. It is recommended not to do this during a busy period.
 {{% /alert %}}
 
@@ -242,7 +242,7 @@ A [Log Node](/refguide/logging/#mendix-nodes) named `Queue` exists specifically 
 
 Executing **Find usages** on a task queue only finds the occurrences of that queue in microflows.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Invocations from Java actions are not found.
 {{% /alert %}}
 
@@ -282,7 +282,7 @@ When a node crashes, this is eventually detected by another cluster node, becaus
 
 The task will then automatically be consumed again by one of the remaining nodes in the cluster. Effectively, this means that a task is guaranteed to be executed at least once.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Under normal circumstances, a task is executed exactly once, but in the face of node failures a task may be (partially) executed multiple times. This is the best guarantee that a distributed system can provide.
 {{% /alert %}}
 

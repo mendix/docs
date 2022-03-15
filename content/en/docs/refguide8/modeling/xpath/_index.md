@@ -7,7 +7,7 @@ description: "Describes how the XPath query language is used in Mendix by presen
 tags: ["studio pro"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/xpath.pdf).
 {{% /alert %}}
 
@@ -26,7 +26,7 @@ Examples of XPath queries are:
 *   `avg(//Sales.Order[IsPaid = true()]/TotalPrice)`
     Retrieve the average of the total prices of all paid orders.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write the whole queries, including the double slashes (`//`) and the entity name.
 {{% /alert %}}
 

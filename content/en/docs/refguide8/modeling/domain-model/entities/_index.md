@@ -7,7 +7,7 @@ tags: ["domain model", "entity", "entities", "attribute", "validation rule", "ev
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/entities.pdf).
 {{% /alert %}}
 
@@ -30,7 +30,7 @@ For example, you have a collection of CDs like the one in the table below:
 
 The rows in the table are CDs. The type of the two rows is *CD* and this is the entity name. A specific CD like *How to Dismantle an Atomic Bomb* from the band *U2* is called an object of the entity *CD*. Characteristics like the title and artist are called attributes.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can also use data sources from other applications in your project  through the [Data Hub](/refguide8/data-hub-pane/) pane. These data sources are represented in the domain model as *external entities* which are displayed as purple entity containers in the domain model:
  ![Virtual Entity Example](/attachments/refguide8/modeling/domain-model/entities/virtual-entity-example.png) 
 
@@ -68,7 +68,7 @@ Entity properties consist of the following sections:
 * [General](#entities-general-properties)
 * [System members](#system-members)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For more information, see the [Properties](/refguide8/external-entities/#properties) section of *External Entities*.
 {{% /alert %}}
 
@@ -127,7 +127,7 @@ This property defines whether the entity contains the system attribute 'createdD
 | True | Entity contains the system attribute 'createdDate'. |
 | False *(default)* | Entity does not contain the system attribute 'createdDate'. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
 {{% /alert %}}
 
@@ -140,11 +140,11 @@ This property defines whether the entity contains the system attribute 'changedD
 | True | Entity contains the system attribute 'changedDate'. |
 | False *(default)* | Entity does not contain the system attribute 'changedDate'. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The 'changedDate' property is only updated on real changes. Simply changing and committing an entity with the same attribute values does not update 'changedDate'.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
 {{% /alert %}}
 

@@ -14,7 +14,7 @@ This documentation provides an overview of how the Mendix for Private Cloud comp
 * the Mendix Operator is installed and configured
 * an environment is created
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The sequence diagrams in this document are simplified for clarity. Kubernetes Operators are non-blocking, event-driven, and asynchronous. Instead of relying on blocking method calls, the Operator receives events when a [Custom Resource (CR)](/developerportal/deploy/private-cloud-technical-appendix-01/#operators) or another Kubernetes Resource changes its status and, if changes are necessary, will send a request to create, update, or delete a Kubernetes Resource.
 
 The diagrams apply to both connected and standalone modes, with some additional steps which are identified as being only used in connected mode.
@@ -35,7 +35,7 @@ Mendix for Private Cloud provides improved integration with some hyperscalers, b
 
 Before installing the Mendix for Private Cloud Operator, it is highly recommended that you confirm the environment is working. For example, you can try deploying a “hello world” test container app and testing that the database, file storage, and container registry can be reached from the Kubernetes cluster.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If your Kubernetes environment can be accessed from the public internet, ensure that the environment is secured and up to date.
 {{% /alert %}}
 
@@ -106,7 +106,7 @@ The configuration tool provides an interactive, terminal-based GUI to prepare an
 
 In *Connected Mode*, the `mxpc-cli` tool will call the Developer Portal to create a label for the storageplan CR which is successfully created or updated in Kubernetes. Cluster members with the appropriate roles can then select this plan from a dropdown when creating a new environment. The `mxpc-cli` tool will not interact with the Developer Portal when the cluster is installed in Standalone mode.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The configuration tool only creates configuration objects through the Kubernetes API. It can manage Mendix for Private Cloud components (the Mendix Operator and Mendix Gateway Agent). It does not directly communicate with the Mendix for Private Cloud Operator or manage infrastructure such as AWS accounts, VMs, or databases.
 {{% /alert %}}
 
@@ -173,7 +173,7 @@ The build pod will then do the following:
 * download the MDA from the specified `spec.sourceURL`
 * convert the MDA into a OCI image layer (app layer)
 * append the app layer to a `runtime-base` image
-    {{% alert type="info" %}}`runtime-base` images are prebuilt Mendix Runtime images that contain a specific version of the Mendix Runtime and all of its dependencies (JRE, fonts)<br/>Internally, the app layer is appended by using the [crane append](https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane_append.md) operation{{% /alert %}}
+    {{% alert color="info" %}}`runtime-base` images are prebuilt Mendix Runtime images that contain a specific version of the Mendix Runtime and all of its dependencies (JRE, fonts)<br/>Internally, the app layer is appended by using the [crane append](https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane_append.md) operation{{% /alert %}}
 * push the resulting image to the image registry
 
 When the build pod successfully completes without errors, the container registry will contain an updated version of the app's image. The `Build` controller signals to the `MendixApp` CR that there is a new version of the app, and this change triggers the `Runtime` controller to restart the environment.

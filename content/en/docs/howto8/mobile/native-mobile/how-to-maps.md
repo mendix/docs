@@ -52,7 +52,7 @@ Next you will configure the **Maps** widget provider. You will have two choices:
 1. Click the **Save** button. 
 1. Navigate to the build page then click **Build**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When running locally from source, on iOS you have to run `pod install` once more
 {{% /alert %}}
 

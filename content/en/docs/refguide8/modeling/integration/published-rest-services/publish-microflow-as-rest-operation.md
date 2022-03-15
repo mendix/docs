@@ -9,7 +9,7 @@ tags: ["Microflow", "REST", "operation", "resource"]
 # linked from DM: edit microflow > (right-click) Publish as REST service operation > New > Help (integration)
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/publish-microflow-as-rest-operation.pdf).
 {{% /alert %}}
 

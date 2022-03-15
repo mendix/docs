@@ -151,7 +151,7 @@ For more complex help pages you can link to a markdown page. For security reason
 
 #### 4.2.2 Toolbox Category {#toolbox-category}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This feature was introduced in Mendix Studio Pro v9.4.
 {{% /alert %}}
 
@@ -168,11 +168,11 @@ A category can by provided through `studioCategory` and `studioProCategory` tags
 
 In the example above, a widget would be placed under **Open Street Maps widgets** in Studio Pro. Note that **widgets** is added automatiacally in the Studio Pro UI. In Studio a widget will end up in the **Maps** category.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The `studioCategory` and `studioProCategory` tags should be placed right after the `description` tag.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When your widget is published in Marketplace and is assigned a special toolbox category by the Marketplace team, that special toolbox category always takes precedence over a developer-configured category.
 {{% /alert %}}
 

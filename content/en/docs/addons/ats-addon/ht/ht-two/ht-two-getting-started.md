@@ -25,7 +25,7 @@ Before starting with this how-to, make sure you have the following prerequisites
 * An application under test (AUT)
 * Selenium hub (for more information on the Selenium options, see [ATS Deployment](/addons/ats-addon/ov-deployment/))
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You add users to ATS by inviting them to your Mendix app. For more information on the user roles, see [Different User Roles](/addons/ats-addon/ov-introduction/#roles).
 {{% /alert %}}
@@ -48,7 +48,7 @@ You are now on the **Settings** page. Here you add environments and selenium hub
 
 ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-getting-started/settings-page.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Only the App admin and Scrum Master have the rights to edit the settings. You set the roles in the Developer Portal.
 
@@ -191,7 +191,7 @@ In this tab, you can connect your datasets to a test case. Use the arrow to sele
 
 ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-getting-started/test-data-tab.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 If you do not use the dataset, make sure to disconnect it. ATS will remember where you selected the dataset fields as input, so if you reconnect the dataset, ATS will automatically set the correct input.
 

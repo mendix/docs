@@ -22,7 +22,7 @@ As PWAs are basically web apps with additional features, Mendix offers these fea
 
 To create a full offline-first PWA, choose and add one of the following profiles (depending on which form factor you need): Responsive Web Offline, Phone Web Offline, or Tablet Web Offline. For more information about offline-first apps, see the [Offline-First Reference Guide](/refguide/offline-first/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Offline-first progressive web apps have some restrictions to make sure they can fully work offline. For more information, see the [Ensuring Your App Is Offline-First ](/refguide/offline-first/#limitations) section of the *Offline-First Reference Guide*.
 {{% /alert %}}
 
@@ -60,7 +60,7 @@ You can also open PWA profiles on your device via the **View on your device** op
 
 Note that if you are running on a Mac with Parallels, make sure that port 8080 (or whichever port you have configured for your app) is forwarded and that you use your Mac IP instead of the Virtual Machine’s IP. For more information on Mendix and Parallels, see [How to Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When previewing or testing an offline-first PWA locally, an internet connection is always required to load the app. After initial loading, the app behaves fully offline, but it can not be reloaded without a connection. Once the app is deployed to the cloud, end-users can always load it without a connection after the first visit.
 {{% /alert %}}
     
@@ -161,7 +161,7 @@ This table lists the most used device features and APIs, and also documents thei
 
 For more information on browser support for certain device features, see the third-party website [Can I Use](https://caniuse.com/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In order to test the features requiring HTTPS protocol, use [ngrok](https://ngrok.com/) to enable features in your localhost.
 {{% /alert %}}
 
@@ -169,7 +169,7 @@ In order to test the features requiring HTTPS protocol, use [ngrok](https://ngro
 
 Mendix offers options to build both native mobile apps and PWAs. Depending on your app's requirements or constraints, one or the other can be a better fit. It is also possible to have both native mobile and PWA profiles in a single app, which can run next to each other and overlap significantly.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Important limitation: Apple does not support push notifications for PWAs on iOS.
 
 Currently, it is not possible to create a fully offline-first PWA for iOS — adding that support is part of our 2022 roadmap.

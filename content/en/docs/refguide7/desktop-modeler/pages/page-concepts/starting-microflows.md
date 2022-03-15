@@ -29,7 +29,7 @@ Mendix allows for microflows to be triggered in pages by a variety of widgets. T
 
 This is the microflow that will be executed. Its parameters should match the available arguments.
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 
 You can create a new microflow by clicking 'Select...' and then 'New'. Modeler will generate a microflow with parameters matching all available arguments. If a parameter is not used it can simply be deleted.
 
@@ -39,7 +39,7 @@ You can create a new microflow by clicking 'Select...' and then 'New'. Modeler w
 
 The arguments sent to the microflow are automatically configured based on the parameters of the selected microflow and the available arguments. Which arguments are available depends on the widget calling the microflow. For a full listing consult the table above. Additionally, if the widget calling a microflow is contained inside a nested data view, then the object of the enclosing data view is also available.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 For Mendix version 7.19.0 and above, in addition to passing the object of the enclosing data view, objects from the data views above that one all the way up to the top of page can also be passed.
 
@@ -53,7 +53,7 @@ The arguments available to a data or template grid control bar button are determ
 
 This property indicates whether the connected microflow is executed synchronously or asynchronously. With synchronously executed microflows the microflow is started and the client waits for the result. With asynchronously called microflows the microflow is started on the server but the client does not wait for the result. It will check the server every ten seconds to see whether the microflow is done executing.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Set the duration only to asynchronous if you experience problems. Sometimes if a request takes too long to handle, the request will be sent again by an (impatient) proxy server.
 

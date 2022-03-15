@@ -5,7 +5,7 @@ parent: "microflow-activities"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This activity can only be used in microflows, not in nanoflows.
 {{% /alert %}}
 
@@ -16,7 +16,7 @@ This activity can only be used in microflows, not in nanoflows.
 
 With the Export Mapping action, you can export the data stored in [domain model](/refguide7/domain-model/) entities into an XML document, JSON document, or string variable.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 For details on the properties that all activities share (for example, caption), see [Microflow Element Common Properties](/refguide7/microflow-element-common-properties/). This page only describes the properties specific to the action.
 
@@ -28,7 +28,7 @@ For details on the properties that all activities share (for example, caption), 
 
 The [Export Mapping](/refguide7/export-mappings/) action defines in which way the data in the [domain model](/refguide7/domain-model/) corresponds with the XML schema or JSON structure.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
  
 Export mappings support flat JSON. You can select a JSON structure document in an export mapping, and you can select JSON elements that are at most one level deep. That means that you can export simple JSON objects like `{"Name":"John", "Age":46}`.
  
@@ -44,7 +44,7 @@ If the [export mapping](/refguide7/export-mappings/) requires an input, you can 
 
 ### 2.4 Content Type
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This feature was introduced in version 7.10.0.
 
@@ -54,7 +54,7 @@ If the [export mapping](/refguide7/export-mappings/) is based on a message defin
 
 ## 3 Validation Properties
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Validation properties are only applicable if an export mapping is selected that maps to XML.
 

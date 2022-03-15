@@ -6,11 +6,11 @@ menu_order: 70
 tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter", "deprecated"]
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The Native Builder CLI has been deprecated in favor of the Mendix Native Mobile Builder, a UI tool, that integrates with Studio Pro. Read more on how to deploy your app [here](/howto8/mobile/deploying-native-app/).
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Please update to Native Builder v3.2.1 or higher. Native Builder v3.2.1 includes the fixes required to addresses GitHub's transition from using **master** to using **main** as its default repository branch name. 
 {{% /alert %}}
 
@@ -121,7 +121,7 @@ native-builder.exe build dev-app --project-name "CoolApp" --output-path "C:\bund
 
 The `regenerate` command recreates the project on GitHub with the latest version of `Native Template`, renames the previous app with a new name to preserve changes (if any), and then updates the build configuration of the App Center apps. Running `regenerate` also expects that `prepare` has been run at least once for the `--project-name`.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 There is no automated way to preserve changes you made to a previous template. If you have some, you must apply them manually in the new GitHub repository. In addition, when changing your app's Mendix version, please also update the `mxbuild-path` using the `prepare` command.
 {{% /alert %}}
 

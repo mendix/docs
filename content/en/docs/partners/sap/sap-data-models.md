@@ -30,7 +30,7 @@ Each Mendix SAP data model has a domain model that describes the information in 
 
 ![](/attachments/partners/sap/sap-data-models/sap-service-example.png)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Do not change the names of entities, attributes, or associations in the Domain Model; they need to match the names used by the SAP OData service for the OData Connector for SAP solutions to work correctly.
 {{% /alert %}}
 

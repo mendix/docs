@@ -90,7 +90,7 @@ To create a new test case, click **Create a new Test Case**, and complete [How t
     
 ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-suite/test-suite-page-select-test-new.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can add as many test cases and test suites as you want. 
 {{% /alert %}}
 

@@ -7,7 +7,7 @@ tags: ["SQL Server", "Snapshot Isolation", "Transaction Isolation", "Database", 
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/setting-up-a-new-sql-server-database.pdf).
 {{% /alert %}}
 
@@ -15,7 +15,7 @@ tags: ["SQL Server", "Snapshot Isolation", "Transaction Isolation", "Database", 
 
 This how-to will teach you how to manually set up a new SQL Server database.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You only need to follow these steps if the database user used by Mendix does not have enough permission to create the database for you.
 
 Some of these steps are only required for specific versions of SQL Server or Mendix.
@@ -41,7 +41,7 @@ After the database is created, the Mendix Runtime can initiate the initial setup
 
 Mendix apps using SQL Server use both **Read Committed Snapshot** and **Snapshot Isolation** features for their database. This allows read operations to continue even if the record has been updated by a concurrent transaction, improving concurrency. For more information, see the [Transaction Locking and Row Versioning Guide](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide?view=sql-server-ver15).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You only need to follow these steps if the database user used by the Mendix Runtime does not have enough permission to issue the `ALTER DATABASE` command (usually the `sysadmin` role).
 {{% /alert %}}
 
@@ -52,13 +52,13 @@ ALTER DATABASE [MySchema] SET READ_COMMITTED_SNAPSHOT ON;
 
 ALTER DATABASE [MySchema] SET ALLOW_SNAPSHOT_ISOLATION ON;
 ```
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You need to replace `MySchema` with the name of your schema.
 {{% /alert %}}
 
 ## 4 Configuring the necessary SQL Server extensions
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You do not have to configure these extensions for Mendix version 8.0.0 and above.
 
 For Mendix version 7, you only need to perform these steps if the following are true:
@@ -96,7 +96,7 @@ CREATE FUNCTION [dbo].[mx_toLocalDateTime] (@utcDateTime datetime, @dstTimeZone 
 
 #### 4.2.2 Create Procedure usp_nextsequencevalue
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This is normally executed automatically by the Mendix Runtime so long as the database user used by Mendix has permission to create procedures.
 {{% /alert %}}
 

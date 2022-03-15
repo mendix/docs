@@ -63,7 +63,7 @@ The **App Explorer** shows an icon in front of items (documents, folders, and mo
 | ![](/attachments/refguide/version-control/using-version-control-in-studio-pro/688164.png) | You deleted this item. |
 | ![](/attachments/refguide/version-control/using-version-control-in-studio-pro/688165.png) | You and somebody else made conflicting changes to this item. For more information, see the [Dealing With Conflicts](#conflicts) section below. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 There is only room for one icon and if a document is both modified and moved it is shown as modified.
 {{% /alert %}}
 
@@ -73,7 +73,7 @@ You can see the same information in the **Changes** pane. In this case there is 
 
 ![](/attachments/refguide/version-control/using-version-control-in-studio-pro/changes-pane.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When you successfully commit your app, this becomes the new original and all the change information is removed from the App Explorer and the Changes pane.
 {{% /alert %}}
 
@@ -111,7 +111,7 @@ Committing is only allowed if your working copy is up to date with the repositor
 
 ### 4.3 Pushing
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Push is only available in Git. In SVN, changes are automatically pushed together with the commit. 
 
@@ -187,7 +187,7 @@ The involved document is marked as conflicted and you can see the reason in the 
 
 ![Example of app conflicts](/attachments/refguide/version-control/using-version-control-in-studio-pro/project-conflicts.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If a whole folder (or module) was *deleted* and another person changes a document inside that folder, the folder/module is restored and also marked as conflicted. This way you know that the intention was to delete that folder but it has been restored to show you the context of the changed document.
 {{% /alert %}}
 
@@ -216,7 +216,7 @@ If you want to add some functionality to a deployed application or you want to f
 4. Testing that things work as intended.
 5. Create a new deployment archive with a higher version number (increase patch or minor version).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 We advise you to merge the fixed maintenance branch into the main line quickly, if required. If the merge is too complicated to be made automatically, because the main line has changed too much, you will know how to apply the fix by hand to the main line as the changes will still be fresh in your mind.
 
 Of course, not all maintenance fixes need to be merged to the main line. Sometimes, it is a fix of something that was completely redesigned or eliminated in the main line. In this case, merging is unnecessary.
@@ -319,7 +319,7 @@ It is also possible to choose a specific development line and revision to deploy
 
 In this case, Studio Pro will create a fresh checkout of the chosen revision. This means that any team member can always recreate this version of the deployment package. In other words, Studio Pro does *not* rely on your local files for creating a versioned deployment package.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You can only create a versioned deployment package of changes that have been committed. If you have local changes that you want to deploy in a versioned deployment package, commit them first.
 {{% /alert %}}
 
@@ -347,7 +347,7 @@ We advise you to always commit and update inside Studio Pro because in this way 
 
 If you are doing more advanced changes to files, like adding Java actions or resources to your app, you will have to install TortoiseSVN on your computer and perform some operations yourself. You can download it for free at [https://tortoisesvn.net/](https://tortoisesvn.net/).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.
 
 Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.

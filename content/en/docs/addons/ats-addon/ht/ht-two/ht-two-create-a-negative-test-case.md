@@ -83,7 +83,7 @@ _The finished test case_
 
 ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-negative-test-case/the-finished-test-case.png)
 
- {{% alert type="info" %}}
+ {{% alert color="info" %}}
 You can also add the **Assert not false** action with the **Assert value** set to false, instead of the **Assert not true** action, to create a negative test case.
   {{% /alert %}}
 

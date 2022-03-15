@@ -8,7 +8,7 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/consumed-odata-service-requirements.pdf).
 {{% /alert %}}
 
@@ -46,7 +46,7 @@ Furthermore, an entity can only be used if it is uniquely identifiable with a ke
 
 ### 3.2 Attributes
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Attributes marked as `FC_KeepInContent=false` cannot be used.
 {{% /alert %}}
 
@@ -63,7 +63,7 @@ Attribute types have to be primitive (not complex, collections, or enumerations)
 | String, Guid                   | String |
 | (Other)                        | (Ignored) |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 When the OData endpoint contains operations, these are not imported in the consumed OData service. You can use a [Call REST service](/refguide8/call-rest-action/) activity to call these operations.
 {{% /alert %}}
 
@@ -77,7 +77,7 @@ This means that when you are consuming a Mendix OData endpoint, it is not necess
 
 Associations to the generalizations with other exposed entities in the published OData service will be included for the now discrete "specialized" entities.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 When a generalization and a specialized entity are exposed in the same service. Only the association for the generalization will be visible when both entities are consumed. The now discrete specialization will have the inherited association. A possible work-around for this is to publish a service with the specializations without the generalization. Alternatively, the association for the generalization should not be published, allowing for the inherited association in the specialization to be preserved.
 {{% /alert %}}
 
@@ -104,8 +104,8 @@ There are two types of Data Hub licenses currently available:
 * **Freemium** – this enables you to retrieve a total of 1000 OData objects per day for each runtime instance. After that limit is exceeded, an error will occur when users try to retrieve more data.
   The number of consumed objects per day is reset at midnight in the timezone of the Mendix Runtime scheduler (which can be defined in the app [Project Settings](/refguide8/project-settings/#scheduled)).
 
-  {{% alert type="info" %}}The Freemium Data Hub license is issued on an invitation-only basis. {{% /alert %}}
-  {{% alert type="info" %}}For Mendix 8.12.3 and later, apps running without a [Mendix license](/developerportal/deploy/licensing-apps-outside-mxcloud/) (and also when running from the Studios) do not have this limitation. This also means that you can run your app from the Studios without the Data Hub license limitations. {{% /alert %}}
+  {{% alert color="info" %}}The Freemium Data Hub license is issued on an invitation-only basis. {{% /alert %}}
+  {{% alert color="info" %}}For Mendix 8.12.3 and later, apps running without a [Mendix license](/developerportal/deploy/licensing-apps-outside-mxcloud/) (and also when running from the Studios) do not have this limitation. This also means that you can run your app from the Studios without the Data Hub license limitations. {{% /alert %}}
 
 Contact your [Mendix Admin](/developerportal/control-center/#company) or Data Hub Admin to find out what type of Data Hub license your organization has.
 

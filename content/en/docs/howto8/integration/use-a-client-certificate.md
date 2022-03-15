@@ -47,7 +47,7 @@ A complete configuration may look like this:
 
 You can use an empty path for `ClientCertificateUsages` to specify that you do not want to use a client certificate, even when the server accepts one. To do this, you need to add the **Value** `{"<endpoint>":""}` (replace `<endpoint>` with the actual endpoint).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Be sure to drop `https://` from a URL endpoint.
 
@@ -61,7 +61,7 @@ The following sample uses client certificate `Mx1.pfx` for `WebService1` and no 
 
 ## 4 Running in the Cloud
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You will only be able to follow the steps below if you have the correct access rights for the client certificates.
 

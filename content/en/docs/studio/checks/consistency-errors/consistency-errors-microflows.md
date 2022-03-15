@@ -17,7 +17,7 @@ An example of a consistency error is when you set a drag and drop a **Create Obj
 
 ![Microflow Error Example](/attachments/studio/checks/consistency-errors/consistency-errors-microflows/microflow-error-example.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This document does not describe all the errors, as there are a lot of errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
 

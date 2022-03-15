@@ -31,7 +31,7 @@ The following elements can be used as a decision condition in the **Variable/Att
 * Attribute  of Boolean type
 * Attribute of enumeration type
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The parameters and entities which you would like to use in configuring the condition of the decision should be present in the microflow, either as input parameter or as a result of an activity. 
 

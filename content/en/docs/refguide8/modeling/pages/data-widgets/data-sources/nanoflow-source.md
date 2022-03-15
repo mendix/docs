@@ -6,7 +6,7 @@ tags: ["studio pro", "nanoflow source", "data source"]
 menu_order: 50
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/nanoflow-source.pdf).
 {{% /alert %}}
 
@@ -41,7 +41,7 @@ This nanoflow does the following:
 
 3. The nanoflow returns a list of products and each end event is configured to return a list. 
 
-    {{% alert type="info" %}}The *empty* path also requires a value, where `empty` is also a value.
+    {{% alert color="info" %}}The *empty* path also requires a value, where `empty` is also a value.
     {{% /alert %}}
 
 ## 3 Properties

@@ -23,7 +23,7 @@ A branch line allows independent development from other development lines. There
 
 Use this setting to select the location where your app is stored. This can be either the [Team Server](#team-server-app) or a [private SVN or Git repository](#byo-server-app).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This option is only available when support for private SVN or Git servers is enabled in [Preferences](/refguide/preferences-dialog/).
 {{% /alert %}}
 

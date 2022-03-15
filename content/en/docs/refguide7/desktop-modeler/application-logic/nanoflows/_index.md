@@ -9,7 +9,7 @@ description: "Presents an overview of all the elements that can be used in a nan
 
 ## 1 Introduction
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This page is an overview of all the elements that can be used in a nanoflow. For the properties of the nanoflow itself, see [Nanoflow Properties](/refguide7/nanoflow/).
 
@@ -34,7 +34,7 @@ Nanoflows also offer great value in online applications (for example, for UI log
 
 Therefore, the best practice is to use nanoflows in online applications when they do not contain the above actions.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Changing objects without committing is not a database-related action, as changes are applied on the device or in the browser.
 {{% /alert %}}
 

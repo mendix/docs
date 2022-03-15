@@ -9,11 +9,11 @@ In most cases, the intended object or objects used to fill a [data widget](/refg
 
 When a data widget with a microflow data source is displayed in the browser or refreshed, it runs the designated microflow and displays the return value. The manner in which the objects are acquired in the microflow is entirely up to the designer. This allows for unlimited control over the exact objects returned.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 A microflow data source ignores all context. It performs the actions described in the microflow, nothing else. For example: nested data widgets with a microflow data source will not automatically create or invoke associations to the encasing data view.
 
-{{% /alert %}}{{% alert type="info" %}}
+{{% /alert %}}{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/page-concepts/data-sources/microflow-source/16843969.jpg)
 The data grid above needs to display a list of potential orders based on the order type. If the OrderType of the encasing Order is set to 'Cars' then the grid should display all Products for which the boolean Motorized is set to true. If the OrderType is 'Bicycles' only objects for which Motorized is false need be shown. If OrderType is empty the data grid should remain empty.
@@ -24,7 +24,7 @@ Because of the mismatch in attribute types this cannot be constrained by XPath a
 ![](/attachments/refguide7/desktop-modeler/pages/page-concepts/data-sources/microflow-source/16843967.jpg)
 The microflow above is passed the order of the enclosing data view as a parameter. It can then split on the OrderType attribute and retrieve a different set of products for each enumeration value. The microflow is configured to return a list of products and each end event is designated a list to return. Please note that the empty path also requires a value, where `empty` is also a value.
 
-{{% /alert %}}{{% alert type="warning" %}}
+{{% /alert %}}{{% alert color="warning" %}}
 
 Sorting columns and searching are not available to data widgets with an association data source. This is because these features require a database call to function, which an association data source does not necessarily initiate.
 

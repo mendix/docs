@@ -40,7 +40,7 @@ To fix the issue, do the following:
 1. In the domain model, change the attribute to be stored instead of calculated.
 2. Wherever the attribute is about to be committed to the database, calculate the value using the relevant microflow.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You will also need to migrate any existing data, since when the attribute is changed to be stored, the database will only contain the default value for that data type.
 
@@ -141,7 +141,7 @@ To fix the issue, do the following:
 1. Check if the underlying entity contains a substantial amount of records before adding an index (at least 10000 records).
 2. Add an index per each attribute used in the XPath expression only for scenarios where read-intensive operations are predominantly performed on the underlying entities.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This optimization may not be very beneficial for data types like Boolean and enumerations due to a limited number of possible values of these types. It is not recommended to add indexes for such types.
 

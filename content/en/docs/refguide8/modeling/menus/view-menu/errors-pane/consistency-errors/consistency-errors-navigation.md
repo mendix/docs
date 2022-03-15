@@ -7,7 +7,7 @@ tags: ["Studio Pro", "consistency errors", "checks", "errors", "navigation"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/consistency-errors-navigation.pdf).
 {{% /alert %}}
 
@@ -15,7 +15,7 @@ tags: ["Studio Pro", "consistency errors", "checks", "errors", "navigation"]
 
 In this document, we explain how to solve the most common consistency errors that can occur when configuring navigation in Studio Pro. An example of a consistency error is when you set a page that has a data view as a menu item. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This document does not describe *all* the errors, as there are a lot of errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
 

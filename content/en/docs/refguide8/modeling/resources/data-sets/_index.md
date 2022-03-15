@@ -7,7 +7,7 @@ tags: ["studio pro", "data set", "dataset"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/data-sets.pdf).
 {{% /alert %}}
 
@@ -43,7 +43,7 @@ SELECT CustomerObj/Name As Name, SUM(OrderObj/TotalAmount) As TotalAmount
 
 A dataset can have multiple parameters. Parameters are used to filter / manipulate datasets. Security on datasets is configured based on the parameters. In a Java action, the parameters are used in the generated template.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 In OQL, parameters can be called using a **$** symbol, for example: **$Month**.
 

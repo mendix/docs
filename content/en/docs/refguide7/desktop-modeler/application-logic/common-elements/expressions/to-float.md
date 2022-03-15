@@ -7,7 +7,7 @@ parent: "expressions"
 
 Converts a value of type Decimal to type Float.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 This function is deprecated together with the Float type. Use the high-precision Decimal type instead.
 

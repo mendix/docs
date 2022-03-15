@@ -11,7 +11,7 @@ tags: ["domain model", "association", "studio pro"]
 
 An association describes a relation between entities. In the domain model, an association is represented by a line or arrow between two entities.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Associations between two external entities from the same data source are defined in the originating app and therefore automatically established when the entities are used in a model. For further details, see the [Associations](/refguide/external-entities/#properties) section of *External Entities*.
 {{% /alert %}}
 
@@ -29,7 +29,7 @@ In the example below, the arrow indicates that **Order** is the owner of the ass
 
 ![](/attachments/refguide/modeling/domain-model/associations/association-order-customer.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 An association between a persistable entity and a non-persistable entity must start in the non-persistable entity and have the owner **Default**. For more information on persistable and non-persistable entities, see [Persistability](/refguide/persistability/).
 {{% /alert %}}
 
@@ -39,11 +39,11 @@ The quickest way to create an association is to draw the association between two
 
 You can also create associations between entities in different modules of your app. In this case it is not possible to draw the association. You can create an association to an entity in another module's domain model by creating a new association in the **Association** tab of the entity which owns the association. You can then choose any entity within your app as the target of the association. For more information see [Association Tab Properties](/refguide/association-member-properties/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can create and edit associations only between an external entity and a local entity. However, an external entity cannot be the [owner](/refguide/association-member-properties/#owner) for an association with a local entity.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you need to connect two external entities, consider adding a local entity and connect this local entity with both external entities. The local entity must be the owner of both associations, in this case.
 {{% /alert %}}
 
@@ -71,7 +71,7 @@ For more information see [Association Tab Properties](/refguide/association-memb
 
 You can move the association arrow between two entities without deleting it. Click within the black dot on either side of the association arrow and drag it to the new desired location.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Your mouse pointer should not activate a white dot. This indicates the creation of a new association.
 {{% /alert %}}
 

@@ -51,7 +51,7 @@ The list view supports the following types of data sources:
 
 The database and XPath sources retrieve objects from the database and supports searching and sorting. 
 
-{{% alert type="warning" %}}Searching is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="warning" %}}Searching is not supported on native mobile pages.{{% /alert %}}
 
 ### 2.3 Design Properties Section{#design-properties}
 
@@ -71,35 +71,35 @@ An on-click event defines what action is performed when a user clicks a list vie
 
 the number of rows displayed on the page; after the indicated limit is reached, the **Load more...** button is displayed on the page.
 
-{{% alert type="info" %}}The **Load more** button is not visible on native mobile pages. The list view will automatically load new items, when the last of the currently loaded items is shown.{{% /alert %}}
+{{% alert color="info" %}}The **Load more** button is not visible on native mobile pages. The list view will automatically load new items, when the last of the currently loaded items is shown.{{% /alert %}}
 
 #### 2.4.4 Scroll Direction
 
-{{% alert type="info" %}}The scroll direction property is only supported on native mobile pages.{{% /alert %}}
+{{% alert color="info" %}}The scroll direction property is only supported on native mobile pages.{{% /alert %}}
 
 This property determines whether the list view lays out its items vertically (default) or horizontally.
 
 #### 2.4.5 Number of Columns
 
-{{% alert type="info" %}}The number of columns property is only supported on native mobile pages.{{% /alert %}}
+{{% alert color="info" %}}The number of columns property is only supported on native mobile pages.{{% /alert %}}
 
 With this property you can change the number of items that will be shown next to each other in one row.
 If you set the scroll direction property to horizontal, this property determines the number of items per column.
 
 #### 2.4.6 Pull Down Action
 
-{{% alert type="info" %}}The number of columns property is only supported on native mobile pages.{{% /alert %}}
+{{% alert color="info" %}}The number of columns property is only supported on native mobile pages.{{% /alert %}}
 
 The pull down action defines what action is performed when you drag downwards on a list view.
 Its common behavior is to update the contents of the list view by synchronizing data.
 
 ### 2.5 Templates Section {#templates}
 
-{{% alert type="warning" %}}Templates are not supported on native mobile pages.{{% /alert %}}
+{{% alert color="warning" %}}Templates are not supported on native mobile pages.{{% /alert %}}
 
 If the entity that is connected to the list view has specializations, you can optionally specify templates for each specialization. For each row in the list view the most specific template is shown. The different templates can be selected by clicking the extra header that appears when a specialization template is added.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Let us say you have an entity Vehicle and two specializations thereof: Bicycle and Car. And there is a specialization of Car called SportsCar. You create a list view that is connected to Vehicle. With the templates property of the list view you specify what template to show for arbitrary Vehicles. For the specializations Bicycle and Car you create separate templates to show them.
 

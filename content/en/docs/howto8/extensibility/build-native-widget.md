@@ -74,7 +74,7 @@ To scaffold your project folder for the group box widget, follow these steps:
 1. Open up a terminal.
 2. Change the current working directory to the folder where you want to store your widget project.
 
-	{{% alert type="info" %}}Make sure to store your widget project in a folder not connected to Dropbox. Dropbox blocks files from being watched, which will prevent you from completing this document. 
+	{{% alert color="info" %}}Make sure to store your widget project in a folder not connected to Dropbox. Dropbox blocks files from being watched, which will prevent you from completing this document. 
 	{{% /alert %}}
 
 3. Start the generator by executing the following command:

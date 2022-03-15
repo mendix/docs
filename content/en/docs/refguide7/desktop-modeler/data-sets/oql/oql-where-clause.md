@@ -16,7 +16,7 @@ WHERE <constraint>
 `<constraint>`
 An expression for which the value always equals true. Expressions consist of simple comparables with operators, functions, keywords or system variables.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ```
 SELECT FirstName FROM Sales.Customer
@@ -25,7 +25,7 @@ WHERE LastName = 'Jansen'
 
 This query retrieves all customers whose name is equal to 'Jansen'.
 
-{{% /alert %}}{{% alert type="info" %}}
+{{% /alert %}}{{% alert color="info" %}}
 
 ```
 SELECT FirstName FROM Sales.Customer

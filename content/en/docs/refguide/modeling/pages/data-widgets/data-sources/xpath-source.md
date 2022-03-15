@@ -28,7 +28,7 @@ The **Entity (path)** property specifies the target of the database query. If yo
 {{% image_container width="400" %}}![Data Source Example](/attachments/refguide/modeling/pages/data-widgets/data-sources/database-source/data-source-example.png)
 {{% /image_container %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This differs from the [association data source](/refguide/association-source/) when objects are retrieved from the memory, not database.
 {{% /alert %}}
 
@@ -55,7 +55,7 @@ Default: *false*
 
 The [XPath constraint](/refguide/xpath-constraints/) allows for custom, hard-coded limitations on the data displayed. This constraint will be appended to the constraints (if any) already applied through security and context.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 XPath constraints are applied equally to all users and only apply to the data displayed in a single data widget. If the goal is to restrict access to a particular subset of the data for users then [access rules](/refguide/access-rules/) for entities should be used as they can be applied to an individual user role and they apply system-wide.
 {{% /alert %}}
 
@@ -67,11 +67,11 @@ For example `$customer/Name` would refer to the `Name` attribute of the surround
 
 The data source will automatically update when an object or attribute used in an XPath constraint changes.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The feature to use objects and attributes from surrounding data containers was introduced in [9.10.0](/releasenotes/studio-pro/9.10/).
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The feature to use objects and attributes can be used for [List view](/refguide/list-view/) widgets, [Data Grid 2](/appstore/modules/data-grid-2/) modules, and many other widgets. However, it **cannot be used** for [Data Grid](/refguide/data-grid/) and [Template Grid](/refguide/template-grid/) containers.
 {{% /alert %}}
 

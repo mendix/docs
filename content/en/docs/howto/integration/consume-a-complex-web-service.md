@@ -98,7 +98,7 @@ To configure the web service call, follow these steps:
 
     ![](/attachments/howto/integration/consume-a-complex-web-service/import-microflow.png)
 
-    {{% alert type="info" %}}Make sure the microflow either creates the variables required as arguments for the web service call or has them passed to it.{{% /alert %}}
+    {{% alert color="info" %}}Make sure the microflow either creates the variables required as arguments for the web service call or has them passed to it.{{% /alert %}}
 
 2. If you are creating your own microflow, add the call web service activity to the microflow. For details on how to add activities to a microflow, see [Activities](/refguide/activities/) in the *Studio Pro Guide*.
 3. Double-click the activity to open the **Call Web Service** properties editor and in the **Operation** section, click **Select** for **Operation**.

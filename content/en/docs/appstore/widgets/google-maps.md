@@ -7,7 +7,7 @@ tags: ["marketplace", "marketplace component", "widget", "google maps", "platfor
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This widget is deprecated. You can use the [Maps](/appstore/widgets/maps/) widget instead.
 {{% /alert %}}
 
@@ -31,7 +31,7 @@ The [Google Maps](https://marketplace.mendix.com/link/component/48911/) widget c
 
 To use the widget, you need to obtain a Google API Key.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Make sure that you keep the API key secure. For more information, see [API security best practices](https://developers.google.com/maps/api-security-best-practices).
 {{% /alert %}}
 

@@ -15,7 +15,7 @@ For information on how to use images in your app, see [Images](/refguide/images/
 
 Remember that, if you want to use the same set of custom images in several apps, you can export and import complete image collections, with their images, using [Import & Export Objects](/howto/integration/importing-and-exporting-objects/).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Too many large static images in your app can lead to performance issues. If you need a lot of large images, you can store them in your database (see [How to Work with Images & Files](/howto/data-models/working-with-images-and-files/) for more information).
 {{% /alert %}}
 
@@ -62,7 +62,7 @@ The **Find usages** button displays, in the **Find Results** dock, all the place
 
 The **Move to other image collection** button allows you to move the selected image(s) to another image collection. When you move the image(s), all references elsewhere in your app will also be updated.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 It is not possible to *copy* an image, you can only *move* it. If you need to make a copy, you can export the image to a file (see below) and then add the image to a different image collection.
 {{% /alert %}}
 

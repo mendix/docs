@@ -5,7 +5,7 @@ parent: "activities"
 menu_order: 100
 tags: ["studio pro"]
 ---
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 These activities can only be used in **Microflows**.
 {{% /alert %}}
 
@@ -19,7 +19,7 @@ The following are the integration activities you can use in your microflow:
 
 * [Send external object](/refguide/send-external-object/) – sends changes to an external object to the publishing app
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This group of activities was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/).
 {{% /alert %}}
 

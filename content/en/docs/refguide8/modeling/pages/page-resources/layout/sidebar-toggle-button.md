@@ -7,17 +7,17 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/sidebar-toggle-button.pdf).
 {{% /alert %}}
 
 ## 1 Introduction
 
-{{% alert type="info" %}}Sidebar toggles are not supported on native mobile pages, as scroll container regions are not supported.{{% /alert %}}
+{{% alert color="info" %}}Sidebar toggles are not supported on native mobile pages, as scroll container regions are not supported.{{% /alert %}}
 
 A **sidebar toggle** is a button that when pressed will make either a left or a right region of a [scroll container](/refguide8/scroll-container/) appear or disappear. This makes it possible to create a sidebar that is hidden by default and can be shown by clicking the button.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can only have one sidebar toggle in a scroll container, and the behavior of the sidebar toggle is configured in the [scroll container region](/refguide8/scroll-container/#region) properties.
 {{% /alert %}}
 

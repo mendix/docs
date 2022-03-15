@@ -36,7 +36,7 @@ Click **Configurator** to start the **Autoscaler Configurator**.
 
 The **autoscaler configurator** provides a user friendly interface to create the JSON required to configure the application autoscaler.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The configurator will only create a JSON file from scratch. It does not have access to your existing autoscaler settings on SAP BTP, and you cannot import an existing JSON files.
 {{% /alert %}}
 
@@ -53,7 +53,7 @@ The metrics you can use to trigger dynamic scaling are as follows:
 * Response time: monitors response time in milliseconds
 * Throughput: monitors requests per seconds (RPS)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The configurator does not support adding custom metrics as triggers.
 {{% /alert %}}
 
@@ -76,7 +76,7 @@ When you have added all the rules, you can do one of the following:
 
 ### 3.1 Scheduled Scaling{#schedule}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Do not attempt to enter overlapping schedules as this will cause the scaling to fail.
 {{% /alert %}}
 
@@ -88,7 +88,7 @@ For all the types of schedule you will need to set the following:
 * **Max Instances** – maximum number of application instances that can be provisioned as part of application scaling
 * **Timezone** – the timezone in which to run the schedule
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For custom schedules you will see these values on the screen more than once, but changing them in one place will automatically set them in the others.
 {{% /alert %}}
 
@@ -139,7 +139,7 @@ First you will need to set the following:
 * **Min Instances** – minimum number of application instances that always run
 * **Max Instances** – maximum number of application instances that can be provisioned as part of application scaling
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For custom schedules you will see these values on the screen more than once, but changing them in one place will automatically set them in the others.
 {{% /alert %}}
 

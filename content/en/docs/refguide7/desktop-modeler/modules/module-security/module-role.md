@@ -11,7 +11,7 @@ The module roles define which roles users of this module can have. See [Security
 
 The name of a module role is used to refer to the module role from other elements in your model.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 End users do not see the names of module roles. End users (if they create or view user accounts) only see the names of [user roles](/refguide7/user-roles/).
 

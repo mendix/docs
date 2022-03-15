@@ -59,7 +59,7 @@ To use the Mendix Native Mobile Builder, you will first need to get tokens to au
 
 ## 4 Build Your Native App {#building}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The Mendix Native Mobile Builder needs to communicate with GitHub and App Center. Therefore, make sure your firewall permissions do not restrict the tool.
 {{% /alert %}}
 

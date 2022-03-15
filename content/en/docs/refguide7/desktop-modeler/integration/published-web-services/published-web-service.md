@@ -40,7 +40,7 @@ It is important to correctly configure the target namespace before publishing yo
 
 ### 3.4 Generated XML
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **Generated XML** feature was introduced in version 7.13.0.
 

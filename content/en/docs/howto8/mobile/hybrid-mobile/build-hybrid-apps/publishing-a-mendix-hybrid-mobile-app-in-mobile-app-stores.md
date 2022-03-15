@@ -9,7 +9,7 @@ aliases:
 ---
 ## 1 Introduction
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible.
 
 To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally/) for information on local building.
@@ -63,7 +63,7 @@ To start the packaging process, follow these steps:
 6. Select the platforms that you want to support.
 7. Optionally, upload custom-branded app icons and splash screens under the tabs for the different platforms. You can find those tabs next to the **App Info** tab.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you do not upload any images, the default Mendix-branded images that are shown will continue to be used.
 {{% /alert %}}
 

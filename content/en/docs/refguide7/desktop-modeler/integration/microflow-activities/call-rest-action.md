@@ -5,7 +5,7 @@ parent: "microflow-activities"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This activity can only be used in microflows, not in nanoflows.
 {{% /alert %}}
 
@@ -29,7 +29,7 @@ Set **Use timeout on request** to **Yes** to be able specify how long the Call R
 
 ### 2.3 Proxy Configuration
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This feature was introduced in version 7.15.0.
 

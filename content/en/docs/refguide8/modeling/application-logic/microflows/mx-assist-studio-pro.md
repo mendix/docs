@@ -6,7 +6,7 @@ description: "Describes MxAssist Logic Bot in Mendix Studio Pro."
 tags: ["studio pro", "mendix assist", "AI", "assistant", "mx assist logic bot", "logic bot"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/mx-assist-studio-pro.pdf).
 {{% /alert %}}
 

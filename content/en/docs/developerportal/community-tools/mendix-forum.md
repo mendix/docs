@@ -102,7 +102,7 @@ On this page, you can read the full descriptive text of the question and do the 
 
 If you want to follow the discussion on a question via email notifications, click **Subscribe to Email Notifications** below the question details. Please note that you are automatically subscribed for email notifications on questions that you have asked; if you want to unsubscribe from these notifications, click **Unsubscribe from Email Notifications** on a specific question that you have asked.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The URL for each question is unique.
 {{% /alert %}}
 
@@ -118,7 +118,7 @@ Below the answer(s), you can contribute to the Mendix Forum by writing your own 
 
 ![](/attachments/developerportal/community-tools/mendix-forum/questions_answer_editor.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You can easily upload your images in the Mendix Forum by dragging them directly into the text editors. In order to resize and position an image, double-click it in the editor or click the image button in the toolbar:
 
@@ -220,7 +220,7 @@ On this page, you can read the full descriptive text of the idea and do the foll
 * <a name="upvoting"></a>Click **Vote** to upvote the idea (**2**)
     * By upvoting ideas, you can show the Mendix community and Product Managers what you would like to see added to the Mendix Platform
 
-		{{% alert type="info" %}}The upvotes will be used as input for the Product Managers and Mendix community MVPs to decide which features will be nominated for implementation. Please note that the level of impact also needs to be considered.
+		{{% alert color="info" %}}The upvotes will be used as input for the Product Managers and Mendix community MVPs to decide which features will be nominated for implementation. Please note that the level of impact also needs to be considered.
 		{{% /alert %}}
 	
 * Click **Bookmark** to bookmark the idea (**3**)
@@ -229,7 +229,7 @@ On this page, you can read the full descriptive text of the idea and do the foll
 
 If you want to follow the discussion on an idea via email notifications, click **Subscribe to Email Notifications** below the idea details. Please note that you are automatically subscribed for email notifications on ideas that you have submitted; if you want to unsubscribe from these notifications, click **Unsubscribe from Email Notifications** on a specific idea that you have submitted.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The URL for each idea is unique.
 {{% /alert %}}
 

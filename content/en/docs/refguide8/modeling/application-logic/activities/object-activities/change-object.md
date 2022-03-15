@@ -6,11 +6,11 @@ menu_order: 20
 tags: ["studio pro"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/change-object.pdf).
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
@@ -69,7 +69,7 @@ This setting defines whether data sources are rerun after data is committed to t
 
 Default: *No*
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To make pages of a Mendix app efficient, many widgets display values from an attribute of an object which is cached on the page. Attributes in widgets which use cached data are *always* reflected in the client even if they are not committed and irrespective of the value of **Refresh in client**.
 
 If a widget is only updated when a [data source](/refguide8/data-sources/) is loaded, then changes will only be seen if changes are committed and **Refresh in client** is set to *Yes*.

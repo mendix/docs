@@ -99,12 +99,12 @@ Based on the structure of the file you want to import, you need to manually set 
 
 	![](/attachments/howto8/integration/importing-excel-documents/18581965.png)
 
-	{{% alert type="info" %}}For this example you will be using a simple Excel file that has just one sheet and column headers on the first row. If a more comprehensive Excel file is used, you can change these values via the **Sheet nr**, **Header row nr**, and **Import from row nr** fields.{{% /alert %}}
+	{{% alert color="info" %}}For this example you will be using a simple Excel file that has just one sheet and column headers on the first row. If a more comprehensive Excel file is used, you can change these values via the **Sheet nr**, **Header row nr**, and **Import from row nr** fields.{{% /alert %}}
 
 9.  In the **Connect columns to attributes** section, click **New** to create a mapping from the Excel sheet column to the proper Mendix attribute.
 10. Add the column number that corresponds to the column number from the Excel file you want to map.
 
-	{{% alert type="info" %}}The number of the first column in Excel is 0, the second is 1, etc.{{% /alert %}}
+	{{% alert color="info" %}}The number of the first column in Excel is 0, the second is 1, etc.{{% /alert %}}
 
 11. Define the Excel column header as the **Caption** value.
 12. Select **Attribute** for the **Type**.
@@ -122,7 +122,7 @@ Based on the structure of the file you want to import, you need to manually set 
 
 	![](/attachments/howto8/integration/importing-excel-documents/18581961.png)
 	
-	{{% alert type="info" %}}If the mapping is set up right, a green check appears in front of the row.{{% /alert %}}
+	{{% alert color="info" %}}If the mapping is set up right, a green check appears in front of the row.{{% /alert %}}
 
 16. You now need to create mappings for the **Order** object attributes. However, because the **Order** object is associated to the **Customer** object, the mapping setup will be slightly different. Follow these steps for each attribute of the **Order** object:<br/>
 	a. Add the column number that corresponds to the column number from the Excel file you want to map.<br/>
@@ -198,7 +198,7 @@ Follow these steps to create the import template via the Excel file:
 
 11.  Complete the template as you did in the [Creating the Import Template](#creating) section above.
 
-	{{% alert type="info" %}}Remember that you have to set a key attribute for the **Customer** object as well as the **Order** object.{{% /alert %}}
+	{{% alert color="info" %}}Remember that you have to set a key attribute for the **Customer** object as well as the **Order** object.{{% /alert %}}
 
 ## 8 Exporting & Importing a Template
 
@@ -217,7 +217,7 @@ Follow these steps to export and import your template:
 
 You have now imported a complete import template.
 
-{{% alert type="info" %}}You will have a duplicate import template in your app, but in a working scenario, you would import this template in a different environment/database where the template had not already been created.{{% /alert %}}
+{{% alert color="info" %}}You will have a duplicate import template in your app, but in a working scenario, you would import this template in a different environment/database where the template had not already been created.{{% /alert %}}
 
 ## 9 Read More
 

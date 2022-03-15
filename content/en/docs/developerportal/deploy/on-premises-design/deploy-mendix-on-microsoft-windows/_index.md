@@ -10,7 +10,7 @@ aliases:
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/deploy-mendix-on-microsoft-windows.pdf).
 {{% /alert %}}
 
@@ -239,7 +239,7 @@ To configure the MIME types, follow these steps:
 
 ### 5.5 Configuring the URL Rewrite
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 These instructions use port 8080, which is the default port. Please use the port for which your Mendix App is configured.
 {{% /alert %}}
 
@@ -296,7 +296,7 @@ You can also add additional request handlers in the same way. However you must e
 
 This is required to ensure that you can access the Swagger documentation of your published REST services. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This has to be the first rule; it is described after the rewrite rules to ensure that it is moved to the top and that additional rules are not placed above it accidentally.
 {{% /alert %}}
 

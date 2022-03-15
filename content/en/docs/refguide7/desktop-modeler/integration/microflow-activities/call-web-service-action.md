@@ -5,7 +5,7 @@ parent: "microflow-activities"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This activity can only be used in microflows, not in nanoflows.
 {{% /alert %}}
 
@@ -25,7 +25,7 @@ The call-web-service activity can be used to call one of the [imported web servi
 
 **Override location** defines whether to override the location where the web service is called.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 When calling a web service using a call-web-service activity, the location of the web service is determined as follows.
 
@@ -57,13 +57,13 @@ _Default value:_ 30
 
 Setting this setting to yes can greatly decrease performance!
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 When consuming a WSDL that uses encoding, turning on validation will lead to a consistency error, because it is not WS-I compliant.
 {{% /alert %}}
 
 Schema validation is not supported when you configure the [consumed web service](/refguide7/consumed-web-service/) to send binary data as attachments.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Support for schema validation using the [(optimized) implementation](/refguide7/project-settings/#web-service-calls) was introduced in version 7.20.
 {{% /alert %}}
 
@@ -71,7 +71,7 @@ _Default value:_ No
 
 ### 2.7 Proxy Configuration
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This feature was introduced in version 7.15.0.
 
@@ -133,7 +133,7 @@ For primitive parameters (both optional and nillable) that do not have an export
 
 This option can be used when all children of the XML element of the request part occur at most once. You need to supply an argument value for all top-level elements of the request (parameters). For simple parameters you can enter a microflow expression, for complex parameters you define a mapping.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 If a primitive request parameter is both optional and nillable, you need to select whether or not to send the empty values.
 
@@ -159,7 +159,7 @@ Here you can choose the [Import Mapping](/refguide7/import-mappings/) that will 
 
 ### 5.2 If No Object Was Found
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This feature was introduced in version 7.17.0.
 

@@ -153,7 +153,7 @@ The next step in setting up security is to configure the entity access otherwise
 
 You have set up the entity access. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 In some cases you may want to restrict access to the entity or to some of its attributes by configuring the access rules more specifically.
 

@@ -54,7 +54,7 @@ The following steps explain how to create a test case with preconditions:
 
 8.  Add the **Find/Assert DataGrid Row** action as precondition. 
 
-	{{% alert type="info" %}}You add the same action as a precondition because you do not want the test case to fail at this step if the expense is not present on that page.
+	{{% alert color="info" %}}You add the same action as a precondition because you do not want the test case to fail at this step if the expense is not present on that page.
 	{{% /alert %}}
 
 9.  Enter the same values in the input parameter fields:

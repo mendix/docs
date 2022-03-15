@@ -7,7 +7,7 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}The **reference set selector** widget is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="warning" %}}The **reference set selector** widget is not supported on native mobile pages.{{% /alert %}}
 
 ## 1 Introduction
 
@@ -38,7 +38,7 @@ The reference set selector looks a lot like a [data grid](/refguide/data-grid/) 
 *   The **Add** button adds an association to an existing object. You will need to specify the page which opens when you want to add a new association. For more information, see [Add Button](/refguide/control-bar/#add-button).
 *   The **Remove** button removes the association to an object, but does not change or delete the object itself
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You must explicitly commit the object in the data view containing your reference set selector to save the association changes. This can be done, for example, by having a **Save** button for the object in the data view (as shown for the *Customer* entity in the picture above).
 {{% /alert %}}
 
@@ -79,7 +79,7 @@ There are three additional sets of properties which do not appear in the propert
 
 The attribute path specifies which attribute(s) of an associated entity is shown in the reference set selector. The path must follow one association of type reference set starting in the entity of the data view.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You cannot currently use non-persistable entities in a reference set selector.
 {{% /alert %}}
 
@@ -130,7 +130,7 @@ The tooltip will only be shown for the columns you specify. The default for each
 
 This property indicates whether the control bar will be visible in the end-user interface. The control bar also includes the paging buttons. See [Control Bar](/refguide/control-bar/) for more information.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Even if the control bar is invisible there can still be a default button that is triggered by (double) clicking on a row. See the property 'Default button trigger' and [control bar](/refguide/control-bar/) for more information.
 {{% /alert %}}
 
@@ -148,7 +148,7 @@ With this property, you can change the way the paging bar is shown.
 
 Default: *Yes (with total count)*
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Hiding the control bar also hides the paging buttons. For details, see [Show Control Bar](#show-control-bar).
 {{% /alert %}}
 
@@ -193,7 +193,7 @@ The **Source** property sets the way to define the selectable objects:
 
 For more information, see the [Selectable Objects Section](/refguide/reference-selector/#selectable-objects) section of *Reference Selector*.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You cannot use a microflow to define selectable objects in a reference set selector.
 {{% /alert %}}
 

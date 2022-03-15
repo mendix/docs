@@ -11,11 +11,11 @@ tags: ["Custom Domain","Tencent Cloud", "certificates"]
 
 When running Mendix on Tencent, you can add custom domains such as `https://myapp.mycompany.com/` to your environments. This how-to walks you through the process.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This documentation is describing certificates for *incoming* connections. For information on setting up certificates for *outgoing* connections, see [Certificates](/developerportal/deploy/certificates/).
 {{% /alert %}}
 
-{{% alert type="warning" %}} You may not immediately see changes which affect DNS routing. This is because of DNS caching, where changes are not visible until the cache is updated.
+{{% alert color="warning" %}} You may not immediately see changes which affect DNS routing. This is because of DNS caching, where changes are not visible until the cache is updated.
 {{% /alert %}}
 
 **This how-to will teach you how to do the following:**
@@ -82,7 +82,7 @@ To add a custom domains, follow these steps:
 
     ![](/attachments/developerportal/deploy/tencent-deploy/tencent-custom-domains/apply-environment-changes.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Make sure you have configured an A record for your custom domain with your domain registrar/DNS provider (for details, see [Register Domain Name and Configure A Record](#DNS), above).
 {{% /alert %}}
 

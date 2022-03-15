@@ -8,7 +8,7 @@ parent: "container-widgets"
 
 Tables can be used to lend structure to a page. They contain a number of [rows](/refguide7/table-row/) and columns, the intersection of which is called a [cell](/refguide7/table-cell/). Each cell can contain widgets.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/container-widgets/table/table.png)
 An example of how you can create a structured page with a table.
@@ -17,7 +17,7 @@ An example of how you can create a structured page with a table.
 
 Cells can be merged horizontally and vertically to allow for asymmetric lay-outs. To merge cells the cell you wish to merge to must be empty. A merge can then be initiated either in a cell's context menu or by clicking the merge button that will automatically appear if you select an eligible cell.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/container-widgets/table/table-merge.png)
 The merge button

@@ -7,7 +7,7 @@ menu_order: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
@@ -71,7 +71,7 @@ The **HTTP method** property defines the HTTP method to use when calling a REST 
 
 Set **Use timeout on request** to **Yes** to be able specify how long the Call REST activity should wait for the REST endpoint to respond. 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 It is recommended that you keep this set to **Yes**. Most cloud infrastructure services (including those used by the Mendix Cloud) will close HTTP connections automatically if there is no traffic for a few minutes, even if your activity is still waiting for a response. This means that, if your activity calls a web service which takes a long time to respond, the connection may be closed without the activity being aware of this, and your activity will not receive a response. Under these circumstances, if **Use timeout on request** is set to **No**, your activity will get stuck waiting indefinitely for data to arrive.
 {{% /alert %}}
 
@@ -133,7 +133,7 @@ The **Password** property defines the password that will be used to authenticate
 
 These headers are added to the HTTP request header. Each custom header is a pair with a key and a value (a microflow expression).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 REST endpoints which are using NGINX as a webserver will ['silently drop'](https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/#missing-disappearing-http-headers) HTTP headers which contain an underscore `_`.
 {{% /alert %}}
 
@@ -143,7 +143,7 @@ REST endpoints which are using NGINX as a webserver will ['silently drop'](https
 
 The sections below describe the options in the drop-down menu for generating the request.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Requests can only be generated for HTTP methods POST, PUT, PATCH, and OPTIONS.
 {{% /alert %}}
 
@@ -167,7 +167,7 @@ If the [export mapping](/refguide/export-mappings/) requires an input, you can s
 
 If the [export mapping](/refguide/export-mappings/) is based on a message definition, it can export either XML or JSON. Choose the type of output you want.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 **Content-Type header** is not set by default. To set it, use the **Custom HTTP Headers** tab.
 {{% /alert %}}
 
@@ -234,7 +234,7 @@ This variable can be accessed from any microflow action in the scope.
 
 If HTTP response status code is not successful (for example, `[4xx]` or `[5xx]`), the flow will continue in an [error handler](/refguide/error-event/#errorhandlers).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You should always add an error handler for a [call REST service](/refguide/call-rest-action/) action.
 {{% /alert %}}
 

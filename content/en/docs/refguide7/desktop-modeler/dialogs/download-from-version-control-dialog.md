@@ -13,7 +13,7 @@ Use the **Download from Version Control Server** dialog box to download an app f
 
 ![](/attachments/refguide7/desktop-modeler/dialogs/download-from-version-control-dialog/download-from-version-control-server-dialog-original.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You can use the [Open App](/refguide7/open-app-dialog/) dialog box to download and open an app from Team Server. However, you will need to use this option if you want to download a second copy of an app (and development line) you already have on disk.
 
@@ -41,7 +41,7 @@ In the **App repository address** field, enter the repository address of the app
 
 ![](/attachments/refguide7/desktop-modeler/dialogs/download-from-version-control-dialog/download-from-private-server.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This option is only available when support for other servers is enabled in the [Preferences](/refguide7/preferences-dialog/#enabled) dialog box.
 

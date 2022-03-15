@@ -64,7 +64,7 @@ The table below describes possible ways to specify the width of an image:
 | Percentage  *(default)* | The width is specified in a percentage of the original width. It can be larger than its original width in which case the image is stretched. |
 | Auto | The width of the given image is used. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Not supported on native mobile pages.
 {{% /alert %}}
 
@@ -84,7 +84,7 @@ The table below describes possible ways to specify the height of an image:
 | Percentage | The height is specified in a percentage of the original height. It can be larger than its original height in which case the image is stretched. |
 | Auto  *(default)*       | The height of the given image is used.                       |
 
-{{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
 #### 2.5.5 Height
 

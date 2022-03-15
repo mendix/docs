@@ -11,7 +11,7 @@ A deployment package can be deployed to the Mendix Cloud, another cloud provider
 
 ![Create Deployment Package dialog](/attachments/refguide/modeling/menus/app-menu/create-deployment-package-dialog/create-deployment-package.png)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Most deployment targets have a limit on the uncompressed size of deployment package you can deploy. For example:
 
 | Target | Maximum Deployment Package Size |

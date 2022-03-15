@@ -51,7 +51,7 @@ In the previous section you set up a basic data structure and created some sampl
 
 1.  Open your **orders overview** and right click the (empty) section above the **Search** button.
 
-    {{% alert type="warning" %}}
+    {{% alert color="warning" %}}
 
     The search bar section might be already populated if you automatically filled the contents of your data grid.
 

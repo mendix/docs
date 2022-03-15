@@ -22,7 +22,7 @@ Add a number of milliseconds to a date.
 
 A result of type DateTime that corresponds to the initial date plus x milliseconds.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ```java
 addMilliseconds(dateTime(2007, 1, 1, 1, 1, 1), 1400)
@@ -53,7 +53,7 @@ Add a number of seconds to a date.
 
 A result of type DateTime that corresponds to the initial date plus x seconds.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ```java
 addSeconds(dateTime(2007, 1, 1, 1, 1, 1), 2)
@@ -84,7 +84,7 @@ Add a number of minutes to a date.
 
 A result of type DateTime that corresponds to the initial date plus x minutes.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ```java
 addMinutes(dateTime(2007, 1, 1, 1, 1, 1), 3)
@@ -115,7 +115,7 @@ Add a number of hours to a date.
 
 A result of type DateTime that corresponds to the initial date plus x hours.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ```java
 addHours(dateTime(2007, 1, 1, 1, 1, 1), 25)
@@ -146,7 +146,7 @@ Add a number of days to a date. `addDays` uses the server's calendar and `addDay
 
 A result of type DateTime that corresponds to the initial date plus x days.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ```java
 addDays(dateTime(2007, 1, 1, 1, 1, 1), 3)
@@ -177,7 +177,7 @@ Add a number of weeks to a date. `addWeeks` uses the server's calendar and `addW
 
 A result of type DateTime that corresponds to the initial date plus x weeks.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ```java
 addWeeks(dateTime(2007, 1, 1, 1, 1, 1), 2)
@@ -208,7 +208,7 @@ Add a number of months to a date. `addMonths` uses the server's calendar and `ad
 
 A result of type DateTime that corresponds to the initial date plus x months.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ```java
 addMonths(dateTime(2007, 1, 1, 1, 1, 1), 13)
@@ -239,7 +239,7 @@ Add a number of years to a date. `addYears` uses the server's calendar and `addY
 
 A result of type DateTime that corresponds to the initial date plus x years.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ```java
 addYears(dateTime(2007, 1, 1, 1, 1, 1), 11)
@@ -253,7 +253,7 @@ results in a datetime that corresponds to
 
 ```
 
-{{% /alert %}}{{% alert type="warning" %}}
+{{% /alert %}}{{% alert color="warning" %}}
 
 It's also possible to pass Long values to different Add date function calls:
 

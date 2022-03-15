@@ -7,7 +7,7 @@ tags: ["studio pro", "layout grid", "container widget", "column", "row", "grid",
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/layout-grid.pdf).
 {{% /alert %}}
 
@@ -19,7 +19,7 @@ A layout grid consists of [rows](#rows) and [columns](#columns): ![Layout Grid E
 
 In a browser, the layout grid is based on the Bootstrap grid system. For more information on the Bootstrap grid system, see the [official Bootstrap documentation](http://getbootstrap.com/css/#grid).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Row and column properties described below are available if your project has [Mendix version 8.5.1](/releasenotes/studio-pro/8.5/) or above  and [Atlas UI Resources](/appstore/modules/atlas-ui-resources/) version 2.4.0 or above. 
 
@@ -60,7 +60,7 @@ The **General** section contains the **Width** property, which determines the wi
 | Full width  | The layout grid spans the full width of the available space and will stretch and shrink. |
 | Fixed width | The layout grid has a fixed width but it is still responsive to viewport changes. Note that the width is not configurable in Studio Pro but is determined by Bootstrap. |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 As the layout grid responds to the viewport width, and not to the width of its container, a fixed width layout grid should only be used on top-level.
 
@@ -105,7 +105,7 @@ The **General** section of a row contains the following properties:
 
   * **Bottom** – columns are aligned to the bottom of the layout grid
 
-{{% alert type="info" %}}This setting can be overridden by the **Align vertically** setting of an individual column.
+{{% alert color="info" %}}This setting can be overridden by the **Align vertically** setting of an individual column.
 {{% /alert %}}
 
 * **Spacing between columns** – when set to *Yes*, adds spacing between columns

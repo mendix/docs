@@ -7,7 +7,7 @@ tags: ["marketplace", "marketplace component", "google maps","platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This module is deprecated. You can use the [Maps](/appstore/widgets/maps/) widget instead.
 {{% /alert %}}
 
@@ -15,7 +15,7 @@ This module is deprecated. You can use the [Maps](/appstore/widgets/maps/) widge
 
 The [Google Maps](https://marketplace.mendix.com/link/component/174/) module lets you work on latitude/longitude, among other features. The module contains a Java action that geocodes addressess with the Google geocoding service. All you need to do is connect the module to your user information entity with a reference.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Disclaimer: Before using this module, be sure to read the [Google Maps Platform Terms of Service](https://cloud.google.com/maps-platform/terms), which states that the latitude/longitude coordinates retrieved with their service can only be used in combination with Google Maps, as well as the [Google Maps APIs Terms of Service](https://developers.google.com/maps/terms-20180207).
 {{% /alert %}}
 

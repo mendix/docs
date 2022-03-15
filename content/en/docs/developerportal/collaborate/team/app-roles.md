@@ -45,7 +45,7 @@ To change the App Contact, you need to have a **Scrum Master** role or possess t
 
 Change the App Contact by going to **General Settings**, clicking [Edit App Info](/developerportal/collaborate/general-settings/#editing), selecting a new **App Contact** from the drop-down menu, and finally clicking **Update Settings**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You should provide the new App Contact with the Scrum Master role. Because the App Contact will be the contact for regular users, they will thus be able to perform app operations on behalf of all Scrum Masters.
 {{% /alert %}}
 
@@ -76,7 +76,7 @@ When a Mendix app is on premises, it is running on the customer's own infrastruc
 
 To change the Technical Contact, you need to be a **Technical Contact**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 It is currently not possible to select more than one Technical Contact in the Mendix Cloud. However, for on-premises installations, it is possible to select more than one Technical Contact. Contact [Mendix Support](https://support.mendix.com) with your request.
 {{% /alert %}}
 
@@ -86,6 +86,6 @@ If you are the current Technical Contact for an app, make another team member th
 2. Select the [Permissions](/developerportal/deploy/environments/#permissions) tab.
 3.  Click **Change to Technical Contact** for the team member who should be the new Technical Contact. You may have to authenticate first to perform this action. If so, click **Change to Technical Contact** again after successful authentication to finish this action.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The Technical Contact will be changed for all environments..
 {{% /alert %}}

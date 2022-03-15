@@ -9,7 +9,7 @@ tags: ["CORS", "security", "origin", "domain", "access"]
 # linked from DM: published rest > Enable CORS > Settings > Help (integration)
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The CORS settings feature was introduced in Mendix version 7.18.0.
 

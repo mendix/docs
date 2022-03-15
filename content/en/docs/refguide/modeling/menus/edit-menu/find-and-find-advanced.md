@@ -64,13 +64,13 @@ The results will show up in the **Find Results** pane. To filter the results cli
 
 Note that deleting any unused items might result in more unused items. For example, if you delete an unused page, a microflow which is only used on that page will become an unused item itself. If you are cleaning up your app regularly refresh the unused items list.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Modules downloaded from the Marketplace might contain a lot of unused items. If you remove those items and the module is updated later, those items will be back in your model, so it is advised that you do not remove any unused items from an Marketplace module.'
 
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Any objects which are excluded from the app will not show up in the unused items list.
 
@@ -88,7 +88,7 @@ Some pages and microflows are only used from Java code and will be listed as an 
 
 The **Find Usages** option allows you to find where a certain element is used, for example, to find all buttons that open a certain page.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This option only finds places where the selected entity/attribute is selected itself. This means that it will not find instances where the entity/attribute is derived implicitly (for example, by following an association).
 {{% /alert %}}
 

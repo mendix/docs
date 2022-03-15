@@ -87,7 +87,7 @@ The following tokens can be used to add or subtract a period of time from a date
 | `[%WeekLength%]` | The length of one week (seven days). |
 | `[%YearLength%]` | The length of one year. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 These variables must be used as string values and placed between two quotes. Time-related tokens combined with period-related tokens must be placed within one string. See example 3.
 {{% /alert %}}
 
@@ -116,6 +116,6 @@ This query returns users with the role "Administrator":
 ```java
 //System.User[System.UserRoles = '[%UserRole_Administrator%]']
 ```
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Because system variables are written as a string (between quotes), it is not possible to use parentheses to group expressions.
 {{% /alert %}}

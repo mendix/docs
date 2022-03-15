@@ -5,7 +5,7 @@ parent: "published-odata-services"
 tags: ["OData", "filter", "count", "sort", "select", "page", "studio pro"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/odata-query-options.pdf).
 {{% /alert %}}
 
@@ -13,7 +13,7 @@ tags: ["OData", "filter", "count", "sort", "select", "page", "studio pro"]
 
 This is a list of query options for OData.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 We currently only support the options described here.
 {{% /alert %}}
 
@@ -31,7 +31,7 @@ A single object can be retrieved by passing the object identifier in the URI. Fo
 
 Associated objects can be retrieved by passing the `$expand` query parameter. For example: `/odata/myservice/Exployees?$expand=Cars,Address/City`.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The `$expand` feature was introduced in Studio Pro [8.11.0](/releasenotes/studio-pro/8.11/#8110).
 {{% /alert %}}
 

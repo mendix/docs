@@ -23,7 +23,7 @@ Mendix will intelligently detect if pages share a layout, so no user input is re
 
 ## 2 Placeholder Management<a name="phm"></a>
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The method for mapping placeholders described in this section was introduced in Mendix 7.9.0. Older versions make use of the placeholder properties described in [6 Page Generation Properties](#pgp).
 
@@ -71,7 +71,7 @@ Every layout has a layout type, which determines the purpose of the layout and h
 
 ## 6 Page Generation Properties<a name="pgp"></a>
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 This section (along with the placeholder properties described below) was removed in Mendix 7.9.0 in favor of name-based placeholder mapping. For a full explanation, see [2 Placeholder Management](#phm). 
 

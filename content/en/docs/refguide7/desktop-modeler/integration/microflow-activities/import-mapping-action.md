@@ -5,7 +5,7 @@ parent: "microflow-activities"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This activity can only be used in microflows, not in nanoflows.
 {{% /alert %}}
 
@@ -22,11 +22,11 @@ With the Import Mapping action, you can import the data stored in an XML or JSON
 
 The input variable can either be a string, a file document, an [HttpRequest](http-request-and-response-entities#http-request), or an [HttpRequest](http-request-and-response-entities#http-response). The content of the file document, HttpRequest, or HttpResponse should be XML or JSON.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Support for HttpRequest was added in version 7.11.0. Earlier versions needed a string variable that contained the HttpRequest content.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Support for HttpResponse was added in version 7.22.0. Earlier versions needed a string variable that contained the HttpResponse content.
 {{% /alert %}}
 
@@ -38,7 +38,7 @@ The [import mapping](/refguide7/import-mappings/) defines how to transform the X
 
 ### 3.2 Input Content Type
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This feature was introduced in version 7.10.0.
 
@@ -48,7 +48,7 @@ If the import mapping is based on a [message definition](/refguide7/message-defi
 
 ### 3.3 The Input Contains
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This feature was introduced in version 7.10.0.
 
@@ -58,7 +58,7 @@ If the import mapping is based on a [message definition](/refguide7/message-defi
 
 ### 3.4 If No Object Was Found
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This feature was introduced in version 7.17.0.
 
@@ -92,7 +92,7 @@ Indicates whether the resulting objects should be committed to the database, and
 
 ## 4 Validation
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Validation properties are only applicable if an import mapping is selected that maps from XML based on an [XML schema](/refguide7/xml-schemas/) or a [consumed web service](/refguide7/consumed-web-service/).
 

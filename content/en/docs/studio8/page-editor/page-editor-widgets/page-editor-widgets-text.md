@@ -83,7 +83,7 @@ The **Title** that you see in the page properties and in widget is one and the s
 
 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You can put several **Title** widgets on your page, but they will all display the same text and cannot be edited individually.
 

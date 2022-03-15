@@ -6,7 +6,7 @@ menu_order: 20
 tags: ["studio pro", "user task", "workflow", "change workflow state", "workflow state"]
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This activity can only be used in **Microflows**.
 
 This activity was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/#960).
@@ -47,7 +47,7 @@ You can select the following operations that represent the new state of the work
 * **Restart workflow** – This operation stops the current task of the workflow and starts it from the initial task in the workflow definition. This action can be used when a workflow instance has become *incompatible* after a modified workflow definition has been deployed. Note that when the workflow instance is restarted, the workflow context object has the same values as before the **Restart workflow** operation was executed.
 * **Resume workflow** – This operation resumes the workflow after it has been paused with the **Pause workflow** operation. User tasks can be completed again.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The workflow instance state changes are reflected in the **System.Workflow.State** attribute.
 

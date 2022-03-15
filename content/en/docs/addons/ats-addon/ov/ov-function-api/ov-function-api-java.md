@@ -9,7 +9,7 @@ menu_order: 2
 
 Java is the undisputed champion when it comes to automated UI testing (for example, see [Which programming language is most popular for UI test automation in 2019?](https://medium.com/@applitools/which-programming-language-is-most-popular-for-ui-test-automation-in-2019-d8787bb6feb6)). That is why CLEVR decided to build an integration between ATS and Java. This integration allows testers to leverage the power of Java and combine it with the ease-of-use and Mendix-focus of ATS. With this integration, executing an ATS function is as simple as calling a Java method.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Before you start writing tests, you need to import the ATS Java library. We have made this step painless by packaging all the dependencies in a single *.jar* file.
 {{% /alert %}}
 

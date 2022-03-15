@@ -10,7 +10,7 @@ tags: ["Page", "Display", "widget", "object"]
 
 The data view is a central component of Mendix applications. It is the starting point for showing the contents of exactly one object. For example, if you want to show the details of a single customer, you can use a data view to do this. The data view typically contains input widgets like text boxes with labels. In more complex screens, a data view can contain tab controls per topic (for example, address and payment information) and data views and data grids for related objects (for example, order history or wish list).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/data-widgets/data-view/data-view.png)
 
@@ -105,7 +105,7 @@ See the corresponding data source for specific properties:
 
 ### 6.3 Use Schema
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This property has been deprecated in version 7.2.0 and is marked for removal in version 8.0.0.
 

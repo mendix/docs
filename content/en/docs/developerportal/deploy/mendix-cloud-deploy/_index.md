@@ -48,7 +48,7 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 
 ² The Mendix pricing plans are listed in [Mendix Pricing Plans](#plans), below. More information on the capabilities of different license options is available on [Mendix Platform Pricing](http://www.mendix.com/pricing).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Free Apps are part of our Free Edition.
 
 If you are not currently a customer but would prefer to use a licensed cloud node you can find more information on our pricing page: [Mendix Platform Pricing](http://www.mendix.com/pricing).
@@ -122,7 +122,7 @@ Before starting this how-to, make sure you have completed the prerequisites desc
 
 There are two methods for deploying your app to the Mendix Cloud. The first option is directly via Studio Pro, and the second is through the Developer Portal.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The Mendix Cloud has a limit of 1GB on the size of a deployment package.
 {{% /alert %}}
 
@@ -260,7 +260,7 @@ The *Standard* resource packs can be used with both standard and premium plans, 
 | XL | 8GB | 2  | 8GB | 2  | 40GB | 40GB |
 | XXL | 16GB | 4  | 16 GB | 4  | 80GB | 80GB |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can have a pack using a fraction of a vCPU as several environments can run, completely isolated from each other, on a single virtual machine.
 {{% /alert %}}
 

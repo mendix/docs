@@ -49,7 +49,7 @@ _Default value:_ Date
 If you choose 'Custom' as the date format (see above) the custom date format determines the way date and/or time are formatted. The custom date format is a string that follows the rules described in
 [http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html](http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The custom date format
 `EEE, MMM d, yy`

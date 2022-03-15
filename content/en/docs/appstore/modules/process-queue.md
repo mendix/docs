@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "process queue", "queue overview"
 
 ## 1 Introduction
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The Process Queue module is deprecated from Mendix version 9.0.3. It is replaced by the [Task Queue](/refguide/task-queue/) which is part of Studio Pro and also supports horizontally-scaled environments.
 {{% /alert %}}
 
@@ -17,7 +17,7 @@ The [Process Queue](https://marketplace.mendix.com/link/component/393/) module e
 
 With the amount of parallel processes and the number of queues that can be controlled from the runtime, you can see the real-time progress of your application.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This module does NOT support a multi-instance setup and as a result should NOT be used in a horizontally scaled environment.
 {{% /alert %}}
 

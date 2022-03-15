@@ -75,7 +75,7 @@ To make a call to *Plotly API images* REST endpoint, follow these steps:
 
         ![Authorization](/attachments/howto/front-end/charts-tutorials/charts-plotly-images-rest/charts-call-rest-authorization.png)
 
-        {{% alert type="warning" %}}Custom HTTP headers 'Content-Type' and 'Plotly-Client-Platform' must be provided{{% /alert %}}
+        {{% alert color="warning" %}}Custom HTTP headers 'Content-Type' and 'Plotly-Client-Platform' must be provided{{% /alert %}}
 
     * In the tab **Request**, select *Custom request template*; the request is a 'JSON' object with the structure
 
@@ -94,7 +94,7 @@ To make a call to *Plotly API images* REST endpoint, follow these steps:
 
         For more request parameter details, see the documentation here: [Plotly REST API, v2](https://api.plot.ly/v2/images#fields).
 
-        {{% alert type="warning" %}}When `encoded` is set to `true`, a base64 image url is returned.<br /><br />In the field **Template**, escape the opening brace, `{`, by using a double opening brace, `{{`.{{% /alert %}}
+        {{% alert color="warning" %}}When `encoded` is set to `true`, a base64 image url is returned.<br /><br />In the field **Template**, escape the opening brace, `{`, by using a double opening brace, `{{`.{{% /alert %}}
 
     * In the tab **Response**, set **Response handling** to *Store in a file document*
 

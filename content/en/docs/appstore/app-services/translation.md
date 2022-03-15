@@ -114,7 +114,7 @@ The **TokenEndpoint** constant provides a valid endpoint of security token servi
 
 The **CreateTranslator** microflow takes **inputText**, **inputLanguageCode**, and **outputLanguageCode** as input parameters and creates translator actions in the back-end service. For instance, **inputLanguageCode** and **outputLanguageCode** can be set to `en-US`.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For more information about the language codes, see the [Supported Languages](#supported-languages) section.
 {{% /alert %}}
 

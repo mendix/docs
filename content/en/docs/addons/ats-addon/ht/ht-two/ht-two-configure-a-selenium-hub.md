@@ -52,7 +52,7 @@ Some examples of custom capabilities are:
 * Builds
 * Names
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Browser and platform overwrites do not work! The ATS run configuration will overwrite your custom capabilities.
 
@@ -103,7 +103,7 @@ To set a custom capability for Browserstack follow these steps:
 
 5.  Now enter the capability in the **Key** field and the value you want in the **Value** field.
 
-	{{% alert type="info" %}}The datatype is always *String* unless you must enter *true* or *false* then the datatype must be set to *Boolean*.
+	{{% alert color="info" %}}The datatype is always *String* unless you must enter *true* or *false* then the datatype must be set to *Boolean*.
 	{{% /alert %}}
 
 	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-configure-a-selenium-hub/name-capability-browserstack-ats.png)
@@ -164,7 +164,7 @@ To set a custom capability for SauceLabs follow these steps:
 
 5.  Now enter the key in the **Key** field and the value you want in the **Value** field.
 
-	{{% alert type="info" %}}The datatype is always *String* unless you must enter *true* or *false* then the datatype must be set to *Boolean*.
+	{{% alert color="info" %}}The datatype is always *String* unless you must enter *true* or *false* then the datatype must be set to *Boolean*.
 	{{% /alert %}}
 
 	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-configure-a-selenium-hub/name-capability-saucelabs-ats.png)
@@ -225,7 +225,7 @@ To set a custom capability for Testingbot follow these steps:
 
 5.  Now enter the *name* value in the **Key** field and the value you want in the **Value** field.
 
-	{{% alert type="info" %}}The datatype is always *String* unless you must enter *true* or *false* then the datatype must be set to *Boolean*.
+	{{% alert color="info" %}}The datatype is always *String* unless you must enter *true* or *false* then the datatype must be set to *Boolean*.
 	{{% /alert %}}
 
 	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-configure-a-selenium-hub/name-capability-testingbot-ats.png)
@@ -256,7 +256,7 @@ To configure a custom selenium hub follow these steps:
 
 	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-configure-a-selenium-hub/new-selenium-hub-dialog-custom.png)
 
-	{{% alert type="info" %}}For more information on local selenium set-up go to [Customer Hosted Selenium](/addons/ats-addon/ov-deployment/#customer-hosted-selenium).
+	{{% alert color="info" %}}For more information on local selenium set-up go to [Customer Hosted Selenium](/addons/ats-addon/ov-deployment/#customer-hosted-selenium).
 	{{% /alert %}}
 
 Leave the **New Selenium Hub** dialog box open for the next section.

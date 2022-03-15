@@ -85,7 +85,7 @@ Entities have the following properties:
 
         ![Stored Information Properties of an Entity](/attachments/studio8/work-with-data/domain-models/entity-stored-info.png)
 
-        {{% alert type="info" %}}You cannot toggle **Stored Information** properties for Image and File entities.{{% /alert %}}
+        {{% alert color="info" %}}You cannot toggle **Stored Information** properties for Image and File entities.{{% /alert %}}
 
 ### 2.3 Attributes {#attributes}
 
@@ -191,7 +191,7 @@ There are several ways to add an association in the domain model. You can do one
 
         A module name is indicated next to the entity name in brackets. 
     
-        {{% alert type="info" %}} If you select the entity from another module, you will create a cross-module association. For more information, see the [Cross-Module Associations](/studio8/domain-models-association-properties/#cross-module-associations) section in *Associations*. The entities of the current module are listed first.     
+        {{% alert color="info" %}} If you select the entity from another module, you will create a cross-module association. For more information, see the [Cross-Module Associations](/studio8/domain-models-association-properties/#cross-module-associations) section in *Associations*. The entities of the current module are listed first.     
         {{% /alert %}}
 
 ## 6 Specifying Properties
@@ -226,13 +226,13 @@ To change the attribute properties, click the attribute in the domain model. The
 ![](/attachments/studio8/work-with-data/domain-models/selecting-attribute.png)
 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Fields that are displayed in **Properties** may vary depending on the type of the attribute.
 
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Properties of *Name* and *Size* attributes of image and file entities are read-only, as in, you cannot edit them. 
 
@@ -266,7 +266,7 @@ To delete an entity, attribute, or association, do the following:
     {{% image_container width="300" %}}![](/attachments/studio8/work-with-data/domain-models/deletion.png)
     {{% /image_container %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You cannot delete *Name* and *Size* attributes of image and file entities. 
 

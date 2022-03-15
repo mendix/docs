@@ -259,7 +259,7 @@ contains('stringtosearchin', $param)
 
 will return true.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This function is case-senstive.
 {{% /alert %}}
 
@@ -376,7 +376,7 @@ Checks to see if a string matches a given regular expression.
 * Regular expression to match
     * Type: string
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Please note that this function call uses a regular expression language provided by the current platform:
 
@@ -427,7 +427,7 @@ Replaces all occurrences of a regular expression with another string.
 * The replacement value
     * Type: string
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Please note that this function call uses a regular expression language provided by the current platform:
 
@@ -477,7 +477,7 @@ Replaces the first occurrence of the regular expression with a replacement strin
 * The replacement value
     * Type: string
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Please note that this function call uses a regular expression language provided by the current platform:
 

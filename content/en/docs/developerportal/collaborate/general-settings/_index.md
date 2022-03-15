@@ -34,7 +34,7 @@ In the **Mendix Studio** section, you can see whether Studio is enabled for the 
 
 You can enable Studio if it has not been enabled yet by clicking **Enable Mendix Studio**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Only Scrum Masters or custom team roles with the **App Settings** permission are allowed to enable Studio.
 {{% /alert %}}    
 
@@ -42,7 +42,7 @@ Only Scrum Masters or custom team roles with the **App Settings** permission are
 
 Click **Cloud Settings** to select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Only users with the **App Settings** permission can change cloud platforms. For default roles, only the **Scrum Master** has this permission. For more details, see the [Team Roles](/developerportal/collaborate/app-roles/#team-roles) section of *App Roles*.
 {{% /alert %}}
 
@@ -63,7 +63,7 @@ Specific steps for configuring different cloud platforms are provided here:
 
 Click **Manage App Users** to manage and invite App Users, who are end-users who can access the deployed app on specific environments to use it, test it, and provide feedback.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can also manage app users from Studio, by clicking **Manage Users** on the **Settings > Roles and Permissions** page within Studio.
 {{% /alert %}}
 
@@ -89,7 +89,7 @@ To remove an App User from the environment, click **Remove** by their name.
 
 To edit an App User's roles, click **Edit** by their name. Permissions for these roles (for example, **User** or **Administrator**) correspond to what you have configured for your app's user roles in [Project Security](/refguide/project-security/#user-roles) in Mendix Studio Pro or [Roles and Permissions](/studio/settings-security/#roles-and-permissions) in Mendix Studio. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If an App User has been granted access to an app environment through a [Group](/developerportal/control-center/#groups), only a Mendix Admin can remove them from that environment (by removing them from that group) or edit the roles granted by that group policy.
 {{% /alert %}}
 
@@ -124,14 +124,14 @@ To create a new app API key, click **Create API Key**  and follow these steps:
 1.  Fill in the **API key name**.	
 2.  Click **Generate API Key** to be able to use the app API key.
 
-	{{% alert type="warning" %}}For security reasons, the app API key will only be displayed once, during **Step 2 of 2**. It will not be displayed again.
+	{{% alert color="warning" %}}For security reasons, the app API key will only be displayed once, during **Step 2 of 2**. It will not be displayed again.
 	{{% /alert %}}
 	
 Click **Revoke** to delete an app API key.
 
 ## 6 Editing App Info {#editing}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Only users with the **App Settings** permission can edit the application information.
 {{% /alert %}}
 
@@ -150,7 +150,7 @@ For details on the **Deactivate App**, **Leave App**, and **Delete App** options
 
 Click **Manage Webhooks** to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if [CLEVR](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app in the Developer Portal are then sent to that URL.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Only [Mendix Admins](/developerportal/control-center/#company) or users with the **App Settings** permission can manage webhooks.
 {{% /alert %}}
 
@@ -173,7 +173,7 @@ To edit the above details for an existing webhook, click **Edit**.
 
 To delete an existing webhook, click **Delete**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For details on the technical configuration of webhooks, see [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints/) in the *API Documentation*.
 {{% /alert %}}
 

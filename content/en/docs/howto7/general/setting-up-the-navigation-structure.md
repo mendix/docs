@@ -32,7 +32,7 @@ This section will explain how to set the default home page. Please note that thi
 
 5.  Click **Select**.
 
-    {{% alert type="info" %}}You can also select a microflow as default home page. Make sure that the microflow contains a 'Show Form' activity, otherwise the user won't see anything.{{% /alert %}}
+    {{% alert color="info" %}}You can also select a microflow as default home page. Make sure that the microflow contains a 'Show Form' activity, otherwise the user won't see anything.{{% /alert %}}
 
     Now every time a user signs in to the application, the selected page/microflow is shown/triggered.
 

@@ -25,7 +25,7 @@ Before starting with this how-to, make sure you have completed the following pre
 * Download and install [Eclipse](http://www.eclipse.org/downloads/)
 * Download the [Selenium Client & WebDriver](http://www.seleniumhq.org/download/) for Java
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This how-to uses the Company Expenses app template starting in the [Add the Third Test Method](#third) section for an example scenario. However, this app template is no longer platform-supported by Mendix. Therefore, sections using this app template can only be used as reference and not as sections that can be completed step-by-step.
 {{% /alert %}}
 
@@ -255,7 +255,7 @@ Now that you are on the **Expenses** tab, you will want to create a new expense.
     | Description dropdown | `referenceSelector1` |
     | Save button | `saveButton1` |
 
-    {{% alert type="info" %}}
+    {{% alert color="info" %}}
 
     The name of an element in your app may be different than the name shown in the Name column. In step 7, use the name of the element of your app.
 

@@ -9,7 +9,7 @@ tags: ["SSO", "Single Sign-on", "Tencent", "QianFan"]
 #draft: true
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This documentation is only relevant to customers deploying their Mendix app on the Tencent Cloud.
 
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> Full documentation in Chinese can be downloaded as a PDF from [千帆玉符 SSO 模块使用手册](https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/QianFanSSO%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.pdf).
@@ -146,7 +146,7 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
     ![](/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image20.png)
 
-    {{% alert type="info" %}}Set the Display Name as follows: `{App name} + underscore (_) + {App role name}`.<br/>For example: `TestApp_Administrator`.{{% /alert %}}
+    {{% alert color="info" %}}Set the Display Name as follows: `{App name} + underscore (_) + {App role name}`.<br/>For example: `TestApp_Administrator`.{{% /alert %}}
 
     Permissions are displayed in the API management interface when successful.
 

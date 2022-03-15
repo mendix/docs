@@ -9,7 +9,7 @@ tags: ["publish", "REST service", "overview", "configuration"]
 # linked from integration - published rest > F1 help
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **published REST service** feature was introduced in version 7.10.0.
 
@@ -37,7 +37,7 @@ If you don't want basic authentication, there are three options:
 * When you [allow anonymous users](/refguide7/project-security/#anonymous-users) to your app, all published REST services become available without authentication, or
 * You can implement [custom authentication using a microflow](/refguide7/published-rest-service/#authentication-microflow)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Note that web service users cannot access REST services.
 {{% /alert %}}
 

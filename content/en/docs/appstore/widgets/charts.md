@@ -39,7 +39,7 @@ A series' data can be retrieved from the database, by a microflow, or from a RES
 	* If the **Data source** selected is **REST endpoint**, enter the **REST URL**
 5. If you set a **Dynamic** series, this will retrieve all the chart series in one configuration. Add configurations for them on the **Dynamic series** tab.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The line chart's X-axis provides support for dates, and thus the line chart can be configured as a [time series chart](#time-series).
 {{% /alert %}}
 
@@ -190,7 +190,7 @@ Add a *.json* file named *com.mendix.charts* to the **theme** folder. The JSON s
 }
 ```
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Use this with caution, as the configs set up here shall be applied to every instance of the charts in your application. Only the advanced configurations set up in the widget itself have a higher precendence.
 {{% /alert %}}
 

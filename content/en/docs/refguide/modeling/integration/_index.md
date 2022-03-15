@@ -12,9 +12,9 @@ Integration with other applications (other Mendix apps, or applications built wi
 
 Integration between Mendix applications is done best with REST services (for details, see [Published REST Service](/refguide/published-rest-services/) and [Call REST Service](/refguide/call-rest-action/)). Some of the terms used most often are explained below.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For a [call REST service](/refguide/call-rest-action/) activity and JSON support in [mapping documents](/refguide/mapping-documents/), see [Consumed REST Services](/refguide/consumed-rest-services/).
-{{% /alert %}}{{% alert type="info" %}}
+{{% /alert %}}{{% alert color="info" %}}
 For a [call web service](/refguide/call-web-service-action/) activity and support for SOAP web services/XML, see [Consumed Web Services](/refguide/consumed-web-services/).
 {{% /alert %}}
 

@@ -14,11 +14,11 @@ This page describes how to restore a backup to the Mendix Cloud.
 
 The backup can be stored in the cloud, associated with the environment from which it was made. Alternatively, for licensed nodes it can be a backup which has been stored locally, for example by downloading a backup from the Mendix Cloud (see [Download a Backup](/developerportal/operate/download-backup/)) for more information.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can only restore a backup if you have sufficient rights to the target node. See [Node Permissions](/developerportal/deploy/node-permissions/) for more information.
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You cannot transfer data from one app to another by restoring a backup from one app to a different app. This is because each app labels the entities uniquely, even if the name in the domain model is the same. See [Data Storage](/refguide/data-storage/) for more information.
 
 If you want to copy data to another app, we recommend using the [Database Replication](/appstore/modules/database-replication/) module.
@@ -44,13 +44,13 @@ If you want to restore a backup to a different cloud node, or have your backup s
 
     ![](/attachments/developerportal/operate/backups/restore-backup/restore-backup.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 If the app is still running, you have to stop it by clicking **Stop Application**. Then click **Restore Backup** again.
 
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 You can choose to restore only the database by selecting **DB only restore**. Doing a DB only restore will not restore any of your files leading to a risk that data will be missing from your app or that your app will not work as expected. Use this option with caution.
 
@@ -60,7 +60,7 @@ You can choose to restore only the database by selecting **DB only restore**. Do
 
 To transfer backups between environments, you will need a downloaded backup file (*.db* or *.gz*) stored locally on your computer. This could also be the case if you want to restore a backup which has expired and been deleted from the Mendix Cloud.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You can only restore data to an existing database. This means that there must have been an app deployed to the licensed node before you attempt to restore data. If it is a new node environment, you must deploy an app to it before attempting to restore data to the node.
 
 The app previously deployed to the node does not, however, need to have had the same Domain Model as the data you are restoring.
@@ -143,7 +143,7 @@ This contains json describing the backup. For example:
 
 This contains the *db.backup* file. This is a PostgreSQL dump file created using the command `pg_dump -O -x -Fc`.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If the dump does not use the *custom format* then the restore will fail.
 
 The dump must be created with `pg_dump` version 1.14 or below, which is currently bundled with PostgreSQL 12 and 13. If it is created with a later version, then the upload will fail.

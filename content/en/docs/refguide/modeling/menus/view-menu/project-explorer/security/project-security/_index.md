@@ -16,7 +16,7 @@ To configure the app security, open **App Explorer** > **App** > **Security**, a
 
 ![](/attachments/refguide/modeling/menus/view-menu/project-explorer/security/project-security/project-security-dialog.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For more general information on security, see [Security](/refguide/security/).
 {{% /alert %}}
 
@@ -30,7 +30,7 @@ The security level defines if security is switched off or on for the app and whi
 | Prototype/demo | Security is applied to signing in, forms, and microflows. Users can access all data. | Administrator and anonymous access, user roles, security for forms and microflows. |
 | Production | Full security is applied. | Administrator and anonymous access, user roles, security for forms, microflows, entities, and reports. |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 For all licensed Mendix Cloud nodes, you need to use the **Production** security level and configure all security settings accordingly. Security levels **Off** and **Prototype/demo** are only allowed when testing locally, when deploying a Free App, and in cloud environments outside the Mendix Cloud which are specifically set up with **Development mode**. 
 {{% /alert %}}
 

@@ -9,7 +9,7 @@ tags: ["OData", "filter", "count", "sort", "select", "page"]
 
 This is a list of query options for OData.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 We currently only support the options described here.
 {{% /alert %}}
 

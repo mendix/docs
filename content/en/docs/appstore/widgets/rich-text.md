@@ -57,14 +57,14 @@ To configure this widget, follow these steps:
     * **No** – if selected, untrusted strings in user's content is not removed	
 *  **Read-only style** – defines how the editor looks when the editor becomes read-only
 	
-    {{% alert type="info" %}}The editor becomes read-only when the **Editable** property is set to **Never** or **Condition** returns `false`.{{% /alert %}}
+    {{% alert color="info" %}}The editor becomes read-only when the **Editable** property is set to **Never** or **Condition** returns `false`.{{% /alert %}}
 	
 	 * **Rich text** – if selected, only text is shown
 	 * **Bordered** –  if selected, text is shown in a frame
 	 * **Bordered toolbar** – if selected, text is shown in a frame and the toolbar is also visible, but the user cannot make any changes
 *  **Editable** – determines when user can edit content in the editor and when it is read-only
 
-    {{% alert type="info" %}}For more information, see [Editability Section](https://docs.mendix.com/refguide/common-widget-properties#editability) in the *Studio Pro 9 Guide*.{{% /alert %}}
+    {{% alert color="info" %}}For more information, see [Editability Section](https://docs.mendix.com/refguide/common-widget-properties#editability) in the *Studio Pro 9 Guide*.{{% /alert %}}
 
 * **Show label** 
     * **Yes** – if selected, you can define the label caption
@@ -72,7 +72,7 @@ To configure this widget, follow these steps:
     * **No** (default) – if selected, there is no label for this widget on the page
 * **Visible** – determines if the widget is visible on the page
 
-    {{% alert type="info" %}}For more information, see [Visibility Section](https://docs.mendix.com/refguide/common-widget-properties#visibility-properties) in the *Studio Pro 9 Guide*.{{% /alert %}}
+    {{% alert color="info" %}}For more information, see [Visibility Section](https://docs.mendix.com/refguide/common-widget-properties#visibility-properties) in the *Studio Pro 9 Guide*.{{% /alert %}}
 
 ### 2.2 Toolbar Tab
 
@@ -107,7 +107,7 @@ To configure this widget, follow these steps:
                 * **Others group**
             * **Advanced** – if selected, you can configure buttons for different toolbar groups
 		
-                {{% alert type="info" %}}All the toolbar groups that you configure will be available in the toolbar. The buttons that have the same **Toolbar ID** will be grouped together, with vertical bars ("|") separating different toolbar groups.{{% /alert %}}
+                {{% alert color="info" %}}All the toolbar groups that you configure will be available in the toolbar. The buttons that have the same **Toolbar ID** will be grouped together, with vertical bars ("|") separating different toolbar groups.{{% /alert %}}
 		
                 * **New** – opens the **Edit Advanced Groups Item** dialog box where you can add a new button to a toolbar group
                     * **Button** – specifies the button to be included in the toolbar group
@@ -157,7 +157,7 @@ To configure this widget, follow these steps:
         * **Allowed content** – specifies tags that are allowed, for example, `h1 h2 h3 p blockquote strong em del ins table tr th td caption`
         * **Disallowed content** – specifies tags that get removed
     
-          {{% alert type="info" %}}For more information about how to use tags for content filtering, see the [Custom ACF Mode](https://ckeditor.com/docs/ckeditor4/latest/examples/acfcustom.html) section in *Advanced Content Filter – Custom Mode*{{% /alert %}}
+          {{% alert color="info" %}}For more information about how to use tags for content filtering, see the [Custom ACF Mode](https://ckeditor.com/docs/ckeditor4/latest/examples/acfcustom.html) section in *Advanced Content Filter – Custom Mode*{{% /alert %}}
 
 ### 2.6 Common Tab
 
@@ -179,5 +179,5 @@ Features:
             * `a` tag: `href`, `name`, `target`
     * Schemes: `http`, `https`, `ftp`, `mailto`
 
-    {{% alert type="info" %}}To be fully secure, all user HTML input should be sanitized on the server side too. This could be done with the XSSSanitize action found in the [Community Commons](/appstore/modules/community-commons-function-library/). When the option 'Sanitize content' is set to 'false' server side sanitating is required before showing any HTML content.{{% /alert %}}
+    {{% alert color="info" %}}To be fully secure, all user HTML input should be sanitized on the server side too. This could be done with the XSSSanitize action found in the [Community Commons](/appstore/modules/community-commons-function-library/). When the option 'Sanitize content' is set to 'false' server side sanitating is required before showing any HTML content.{{% /alert %}}
 

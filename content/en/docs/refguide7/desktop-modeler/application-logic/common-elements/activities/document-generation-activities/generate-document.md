@@ -7,7 +7,7 @@ tags: ["PDF", "document", "document template", "HTML", "Microsoft Word", "ODT"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This activity can only be used in microflows, not in nanoflows.
 {{% /alert %}}
 
@@ -15,12 +15,12 @@ This activity can only be used in microflows, not in nanoflows.
 
 The generate-document microflow action can be used to create a document based on a [template](/refguide7/document-templates/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/document-generation-activities/generate-document/918200.png)
 Generate document
 
-{{% /alert %}}{{% alert type="info" %}}
+{{% /alert %}}{{% alert color="info" %}}
 
 See [Microflow Element Common Properties](/refguide7/microflow-element-common-properties/) for properties that all activities share (for example, caption). This page only describes the properties specific to the action.
 

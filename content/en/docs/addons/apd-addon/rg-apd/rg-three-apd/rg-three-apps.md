@@ -24,7 +24,7 @@ APD has several tour guides and videos to help you navigate through APD to perfo
 
 ![](/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-apps/Documentation.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 By default, APD displays the tour guides and videos upon login for new users.
 {{% /alert %}}
 

@@ -264,9 +264,9 @@ parent: "model-sdk"
 **Release date: December 13th, 2018**
 
 *  We added the ability to use promises instead of callbacks when using the Model SDK. All methods in `ModelSdkClient` and `Model` as well as the `load()` method of model elements now feature promise-based overloads in addition to the original callback-based ones.
-  {{% alert type="info" %}}If you open a working copy using the promise-based methods but you are still using callbacks in other places in your code without passing an error callback (for example, the callback overload of the `load()` method of model elements), be sure to register an error handler on the model using `Model.setErrorHandler()`.{{% /alert %}}
+  {{% alert color="info" %}}If you open a working copy using the promise-based methods but you are still using callbacks in other places in your code without passing an error callback (for example, the callback overload of the `load()` method of model elements), be sure to register an error handler on the model using `Model.setErrorHandler()`.{{% /alert %}}
 *  We added support for Mendix 7.22.0.
-  {{% alert type="info" %}}There is a small breaking API change where the property `navigation.NavigationDocument.profiles` is now of a different type to accommodate the introduction of a new type of navigation profile. For now, these profiles can be safely casted to `navigation.NavigationProfile`.{{% /alert %}}
+  {{% alert color="info" %}}There is a small breaking API change where the property `navigation.NavigationDocument.profiles` is now of a different type to accommodate the introduction of a new type of navigation profile. For now, these profiles can be safely casted to `navigation.NavigationProfile`.{{% /alert %}}
 *  We added a lock type parameter to the `unlockWorkingCopy` API.
 
 ## 4.17.0

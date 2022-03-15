@@ -59,7 +59,7 @@ To create a new project, follow these steps:
 
 ## 4 Configuring Your Project
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Only the Project Administrator role has the rights to edit the settings in **Configuration**. For a project user, only the Tester can see these settings and not edit them.
 
@@ -194,7 +194,7 @@ In this tab, you can connect your datasets to a test case. Use the arrow to sele
 
 ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/data-set-test-case.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 If you do not use the dataset, make sure to disconnect it. ATS will remember where you selected the dataset fields as input, so if you reconnect the dataset, ATS will automatically set the correct input.
 

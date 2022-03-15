@@ -12,7 +12,7 @@ This how-to shows you an example of a simple setup of a Selenoid hub with a Chro
 
 It is possible to run Selenoid without Docker, but that is outside of the scope of this how-to. Please check out the official documentation if you would like to achieve this.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
  Mendix does not deliver support for local Selenium solutions. 
 {{% /alert %}}
 

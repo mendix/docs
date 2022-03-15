@@ -6,7 +6,7 @@ menu_order: 20
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/updating-a-mendix-application.pdf).
 {{% /alert %}}
 
@@ -16,7 +16,7 @@ A Mendix application on a Windows server can be updated using the Mendix Service
 
 The service console creates a backup of the project files, this allows you to restore a previous deployment.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Before every update it is recommended that you create a backup of your data and uploaded files. The Mendix Service Console does not do this for you.
 {{% /alert %}}
 
@@ -66,7 +66,7 @@ This should be something like:
 ```bash
 D:\Mendix\MyApplications\Servers
 ```
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The user that is configured as the Service Account should have Read&Execute privileges on this entire server folder. You could just grant access to the specific server distribution, but that would mean that you would have to update the folder access after every platform version update.
 {{% /alert %}}
 

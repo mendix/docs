@@ -98,7 +98,7 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
     ![Existing models list](/attachments/appstore/app-services/intelligent-document-service/existing-models-list.png)
 
-    {{% alert type="info" %}} The model is ready to use only when the **Status** of this model is **Published**. {{% /alert %}}
+    {{% alert color="info" %}} The model is ready to use only when the **Status** of this model is **Published**. {{% /alert %}}
 
 3.  To train a new model, click **Create New Model** on the page. The **Create New Model** dialog box opens.
 
@@ -106,14 +106,14 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
 4.  Enter a unique **Model Name**. select a **Language**, and then click **Create Model**.
 
-    {{% alert type="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
+    {{% alert color="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
 
 5. Wait until the **Import File** page opens.
 6.  Drag sample images in JPG or JPEG format into the box where it says **Drag image files here**. You can also click **Browse** and select the files.
 
     ![Import File page](/attachments/appstore/app-services/intelligent-document-service/import-file-page.png)
     
-    {{% alert type="warning" %}}If you upload multiple files, all your images must have a similar structure. Each image file size should not exceed 50 MB.{{% /alert %}}
+    {{% alert color="warning" %}}If you upload multiple files, all your images must have a similar structure. Each image file size should not exceed 50 MB.{{% /alert %}}
     
 7.  Click **Next**. The **Add Marker and IDs** page opens. The status of the images you imported shows **Not Marked**.
 
@@ -163,7 +163,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
     6. Click **Download** to get the JSON structure.
 
-    {{% alert type="info" %}} Generated JSON structure file size cannot exceed 50MB. {{% /alert %}}
+    {{% alert color="info" %}} Generated JSON structure file size cannot exceed 50MB. {{% /alert %}}
     
 2.  To add the JSON structure to your app, perform the following steps:
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the generated JSON structure.
@@ -199,7 +199,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 6. For **Mapping**, **Select** the import mapping that you created to define how extracted data should be mapped into an entity.
 7. Click **OK** to save the changes and close the dialog box.
 
-{{% alert type="info" %}} Optionally for further automation, add [event handlers](/refguide/event-handlers/) on the entity where you populate the extracted data. You can call your own microflow to process the extracted data when inserted into the entity. For example, you can modify, validate, and pass the data to next steps. By doing this, you can achieve full end-to-end automation.{{% /alert %}}
+{{% alert color="info" %}} Optionally for further automation, add [event handlers](/refguide/event-handlers/) on the entity where you populate the extracted data. You can call your own microflow to process the extracted data when inserted into the entity. For example, you can modify, validate, and pass the data to next steps. By doing this, you can achieve full end-to-end automation.{{% /alert %}}
 
 ### 4.4 Checking Statistics on the Usage Dashboard
 

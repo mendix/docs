@@ -10,7 +10,7 @@ tags: ["offline", "native", "mobile", "studio pro"]
 
 Offline-first applications work regardless of the connection in order to provide a continuous experience. Pages and logic interact with an offline database on the device itself, and data is synchronized with the server. This results in a snappier UI, increased reliability, and improved device battery life.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 It is important to understand that offline-first is an architectural concept and not an approach based on the network state of the device. Offline-first apps do not rely on a connection, but they can use connections (for example, you can call microflows, use a Google Maps widget, or use push notifications).
 {{% /alert %}}
 
@@ -75,7 +75,7 @@ The upload phase executes the following operations:
 1. <a name="upload-step-one"></a>As the local database can be modified only by committing or deleting an object, such an object can be either a new object created while offline or an existing object previously synced from the server. The upload phase detects which objects have been committed to the local database since the last sync. The detection logic differs per sync type. For **Synchronize all**, all committed objects in the local database are checked. For **Synchronize objects**, all committed objects from the list of selected objects are checked.
 2.  <a name="upload-step-two"></a>There might be objects deleted from the device database since the last sync. The upload phase checks which objects have been deleted.
    
-   {{% alert type="warning" %}}Deleting an object from the device database is only supported in Studio Pro 9.7 and higher.{{% /alert %}}
+   {{% alert color="warning" %}}Deleting an object from the device database is only supported in Studio Pro 9.7 and higher.{{% /alert %}}
    
 3. <a name="upload-step-three"></a>If there are any changed or new file objects their content is uploaded to the server and stored there temporarily. Each file is uploaded in a separate network request. If a file upload fails, the whole sync is aborted without causing any changes to the server or device database.
 4. <a name="upload-step-four"></a>All the changed and new objects are sent to the server, and the content of the files is linked to the objects. The server performs referential integrity validation of the objects (for more information, see the [Dangling References](#dangling-references) section below). The objects are committed to the server database. Information about deleted objects is also sent to the server so the server can delete them from its database too. This step is performed in a single network request.
@@ -105,7 +105,7 @@ Please note that a nanoflow object variable's value might become `empty` after s
 
 ### 2.4 Customizable Synchronization {#customizable-synchronization}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 These settings are not applied for [selective synchronization](#selective-sync).
 {{% /alert %}}
 
@@ -156,7 +156,7 @@ During the synchronization, changed and new objects are committed. An object's s
 * The object is not valid according to domain-level validation rules
 * The object has a dangling reference (for more information, see the [Dangling References](#dangling-references) section below)
 
-{{% alert type="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server. To prevent data loss, the attribute values for such objects are stored in the `System.SynchronizationError` entity (since Mendix 8.12).  {{% /alert %}}
+{{% alert color="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server. To prevent data loss, the attribute values for such objects are stored in the `System.SynchronizationError` entity (since Mendix 8.12).  {{% /alert %}}
 
 #### 2.6.3 Dangling References {#dangling-references}
 
@@ -222,7 +222,7 @@ Microflows can be called from offline apps by using [microflow call](/refguide/m
 * Passing an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such an association can be an indirect association)
 * Passing a non-persistable entity that was created in another microflow is not supported for Mendix Studio Pro v9.7 and below.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you need to execute a microflow with a persistable object as parameter, you can define a before/after commit event handler on the desired persistable entity. When you create and commit an instance of this entity in the client and perform synchronization, the configured event handler(s) will run. 
 {{% /alert %}}
 	
@@ -272,7 +272,7 @@ Both autonumbers and calculated attributes require input from the server; theref
 
 ### 4.4 Default Attribute Values {#default-attributive}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This limitation applies only to Mendix 9.7 and below. Mendix 9.8 and above supports default attributes.
 {{% /alert %}}
 

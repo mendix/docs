@@ -52,7 +52,7 @@ To change the name of a certificate profile, click the **Edit** icon next to the
 
 Upload your CA from a file in *.pem* format by clicking **Upload Certificate Authority**. Alternatively, click **Enter Manually** to open an editor where you can paste your CA.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Your CA must contain a single root certificate and can have multiple intermediate certificates. It should not contain client certificates.
 {{% /alert %}}
 
@@ -62,7 +62,7 @@ Once the CA is uploaded, you will see a tree containing the root certificate and
 
 Select the check box next to each intermediate or root certificate you want to use. Client certificates will be accepted if they are signed by any checked certificate. If more than one certificate in a branch is checked (for example the root certificate and an intermediate certificate) the client certificate will be accepted if it is signed by any of the checked certificates.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If you do not select any certificates then all the certificates will be valid.
 {{% /alert %}}
 
@@ -78,7 +78,7 @@ For each IP range, you can specify a **Name** for the range, and a range of addr
 
 ### 2.2 Access Restriction Profiles for Mendix Cloud V3{#v3}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
 {{% /alert %}}
 
@@ -94,7 +94,7 @@ You can change the profile name by typing a new name into the **Description** fi
 
 You can specify a number of different IP ranges. Click **New** to add a new one, or use the **Edit** or **Delete** button to modify an existing IP range.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The IP range filter option is not available in Mendix Cloud v3 environments hosted outside the Netherlands
 {{% /alert %}}
 
@@ -104,7 +104,7 @@ For each IP range, you can specify a **Name** for the range, and a range of addr
 
 #### 2.2.3 Specifying TLS Client Certificate Verification
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 For Mendix Cloud v3, you can only specify one CA for your access restriction profile.
 
 The client certificate CA in all *active* profiles must be identical (in other words, it is only possible to use a single CA for the entire application environment).
@@ -128,7 +128,7 @@ To apply a restriction to a specific application environment, follow these steps
 
 4. The section **Path Based Access Restrictions** allows for applying access restrictions to a single environment.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 * The top level path `/` restricts access to the entire application
 * The settings for specific paths override the implicitly inherited profile for the top level
@@ -176,7 +176,7 @@ To restrict access to the app to an IP range, follow these steps:
 
 8. **Edit** the top level path `/`.
 
-    {{% alert type="info" %}}Any path below this path which does not have an explicit restriction will inherit this access restriction profile.{{% /alert %}}
+    {{% alert color="info" %}}Any path below this path which does not have an explicit restriction will inherit this access restriction profile.{{% /alert %}}
 
 9. Select *Custom Profile for Client Certificates and/or IP ranges* as the **New Restriction Type**.
 
@@ -214,7 +214,7 @@ To add this additional access restriction profile, follow these steps:
 
 8. **Edit** the `/ws/` path of the environment to apply the new access restriction profile. For the selected path (`/ws/`), the default profile (for the top level `/`) will now be overridden.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 If the `/ws/` path should still be reachable from the office location *without* using a client certificate, then add the IP ranges of the office location to the profile used for `/ws/`.
 

@@ -23,7 +23,7 @@ The domain model editor uses the following symbols for visualization of attribut
 
 The name property defines the name of the attribute. This name is used to refer to the attribute from forms, microflows, queries, constraints etcetera.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If you delete an attribute in your entity and then create a new attribute with the same name, Mendix will consider it a new and different attribute. This means that upon deployment the old column will be dropped, including its data. Then a new, empty, column with the same name will be created.
 {{% /alert %}}
 

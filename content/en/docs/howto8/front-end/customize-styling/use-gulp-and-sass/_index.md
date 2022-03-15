@@ -6,7 +6,7 @@ menu_order: 30
 tags: ["gulp", "sass", "ux", "front end"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Mendix recommends the Calypso GUI styling tool for most users. For more information, see [Customize Your Styling Using Calypso](/howto8/front-end/calypso/).
 {{% /alert %}}
 

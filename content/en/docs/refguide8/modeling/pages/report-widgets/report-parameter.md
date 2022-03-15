@@ -7,7 +7,7 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/report-parameter.pdf).
 {{% /alert %}}
 
@@ -21,7 +21,7 @@ The report parameter is displayed in structure mode with the data set parameter 
 
 ![Report parameter in structure mode](/attachments/refguide8/modeling/pages/report-widgets/report-parameter/report-parameter.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 A **Report parameter** cannot be used for data set parameters of type **Date and time**. Date and time parameters must be filtered by a [Report Date Parameter](/refguide8/report-date-parameter/) widget.
 
 If you add a report parameter widget on the page, you must also add a [Report Button](/refguide8/report-button/) widget. This allows the end-user to regenerate the report after specifying the parameter.

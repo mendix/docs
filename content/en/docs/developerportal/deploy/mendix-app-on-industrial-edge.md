@@ -92,7 +92,7 @@ After you have created the Docker image of your Mendix app, you must create the 
 
 ### 4.1 Create Mendix App on the IEM Side
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can skip this step if you just want to create a standalone app which does not require an IEM connection in the Industrial Edge App Publisher.
 {{% /alert %}}
 

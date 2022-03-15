@@ -94,7 +94,7 @@ The values in a column can be aggregated in several ways. The aggregate function
 | Sum | Show the sum of the values. |
 | Count | Show the count of the values. |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Note that all objects will be taken into account, and not just the ones on the current page.
 
@@ -104,7 +104,7 @@ Note that all objects will be taken into account, and not just the ones on the c
 
 The aggregate caption is the text that appears in front of the computed value. This is a translatable text. See [Language Menu](/refguide/translatable-texts/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 'Total' could be an aggregate caption for a column that shows the sum of the values.
 

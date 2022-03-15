@@ -52,7 +52,7 @@ There are several things you can do in a multiple time zone project:
 *   The administrator sets the time zone. Add the time zone reference selector to the page with which the administrator manages accounts, by default Account_NewEdit in Administration. If the application does not have too many users this is a viable solution.
 *   Automatically set the time zone by using a microflow. If your application is used in few time zones and you can automatically determine which users should which time zone you can write an after startup microflow to set the time zones. For example, if the application is used in the United States and in the Netherlands and all users in the United States have their language set to American English and all users in the Netherlands have their language set to Dutch a microflow can loop through all users and set the time zone based on the language code of the user.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Do NOT use the default time zone setting in Studio Pro for multiple time zone projects because that will set the default time zone for all users!
 

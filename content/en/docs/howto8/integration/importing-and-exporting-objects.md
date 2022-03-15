@@ -10,7 +10,7 @@ tags: ["mpk", "project package", "import", "export", "document", "project", "mod
 
 In Mendix, you don't need to reinvent the wheel. You can save time by importing modules others have created and by exporting new modules for others to use. The Marketplace provides this functionality on a macro level. You can also use 's built-in import and export functions to share content between your own apps, import unofficial modules, and share entire projects.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Please note throughout this how-to that Mendix packages are stored as Mendix package (*.mpk*) files. These are not compatible with each other; you cannot, for example, import individual *modules* from a *project* package.
 {{% /alert %}}
 
@@ -24,7 +24,7 @@ Please note throughout this how-to that Mendix packages are stored as Mendix pac
 
 ## 2 Importing Objects
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Be careful when importing objects, as you can overwrite your existing work. Pay attention to prompts and warnings along the way!
 {{% /alert %}}
 
@@ -68,7 +68,7 @@ To import module packages, follow these steps:
 
     ![](/attachments/howto8/integration/importing-and-exporting-objects/18582112.png)
 
-    {{% alert type="info" %}}If you replace the module with a new version, the existing user data will be retained based on the names of entities, attributes, and associations. If you delete a module and then add a newer version of it, all user data will be lost.
+    {{% alert color="info" %}}If you replace the module with a new version, the existing user data will be retained based on the names of entities, attributes, and associations. If you delete a module and then add a newer version of it, all user data will be lost.
     {{% /alert %}}
 
 4. Click **Import**. You may see a **Warning** pop-up window that will inform you of any included module dependencies that will be overwritten in your project.
@@ -124,12 +124,12 @@ To import module objects, follow these steps:
 
 2.  Select your Mendix package file containing the document you want to import, and click **Open**.
 
-    {{% alert type="info" %}}If a document with the same name already exists, you will see the **Warning** pop-up window. In that case, you can either select **Rename** to rename the object or **Cancel**.
+    {{% alert color="info" %}}If a document with the same name already exists, you will see the **Warning** pop-up window. In that case, you can either select **Rename** to rename the object or **Cancel**.
     {{% /alert %}}
 
 3. Click **OK** to import the object into your module:
 
-    {{% alert type="info" %}}You may need to update the new object's permissions, depending on where it was originally exported from. For consistency, be sure to check the permissions on any objects imported.
+    {{% alert color="info" %}}You may need to update the new object's permissions, depending on where it was originally exported from. For consistency, be sure to check the permissions on any objects imported.
     {{% /alert %}}
 
 ### 2.4 Importing Widgets
@@ -148,7 +148,7 @@ To import widgets, follow these steps:
 
     ![](/attachments/howto8/integration/importing-and-exporting-objects/18582106.png)
 
-    {{% alert type="info" %}}You can also press **F4** to synchronize your project directory.
+    {{% alert color="info" %}}You can also press **F4** to synchronize your project directory.
     {{% /alert %}}
 
 4. Add your newly imported widget from the **Toolbox** or the **Add Widget** context menu.
@@ -193,7 +193,7 @@ To export a module, follow these steps:
 
     Here you can select files you would like to include in your package. This list includes any files in the **userlib** or **resources** folders in your project directory. If you don't want to include these files, you can uncheck the boxes.
 
-    {{% alert type="info" %}}To uncheck all the files quickly, press **<kbd>Ctrl</kbd>+<kbd>A</kbd>** to select all of the items then press the <kbd>spacebar</kbd> to uncheck all the objects.
+    {{% alert color="info" %}}To uncheck all the files quickly, press **<kbd>Ctrl</kbd>+<kbd>A</kbd>** to select all of the items then press the <kbd>spacebar</kbd> to uncheck all the objects.
     {{% /alert %}}
 
 ### 3.3 Exporting Widgets

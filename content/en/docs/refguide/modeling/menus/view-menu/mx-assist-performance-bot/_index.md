@@ -81,7 +81,7 @@ The first level of assistance is **detection** that includes inspecting the app 
 
 To inspect your app model, click **Inspect now** in the **MxAssist Performance Bot** pane. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **Inspect now** option will be disabled if there are consistency errors in the app. In this case, you need to resolve the consistency errors first. 
 

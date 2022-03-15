@@ -9,7 +9,7 @@ description: "Presents an overview of all the elements that can be used in a mic
 
 ## 1 Introduction
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This page is an overview of all the elements that can be used in a microflow. For the properties of the microflow itself, see [Microflow Properties](/refguide7/microflow/).
 
@@ -137,7 +137,7 @@ When an error occurs inside a microflow, under the hood a Java exception is rais
 
 In a custom error handler that is executed after an error occurs, `$latestError` is set to an object containing information about the error that occurred. If the error is a SOAP fault (an error that occurs as a result of a web service call), `$latestSoapFault` is set to an object that contains more specific information about the SOAP fault. Otherwise, `$latestSoapFault` is `empty`.
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 
 You can determine whether an error was a SOAP fault by checking `$latestSoapFault` for `empty`.
 
@@ -158,7 +158,7 @@ The following table shows the attributes of System.Error and System.SoapFault.
 
 Click [here](http://www.w3.org/TR/soap12-part1/#soapfault) for more information on SOAP faults.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 In microflows that apply entity access, it is not possible to inspect the attributes of error objects for security reasons. You can pass the error object to a submicroflow that does not apply entity access and inspect the attributes there.
 

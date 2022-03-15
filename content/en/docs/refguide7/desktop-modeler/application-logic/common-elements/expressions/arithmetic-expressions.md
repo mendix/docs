@@ -120,7 +120,7 @@ results in a Float with value
 
 Adds two numbers.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 See [String function calls](/refguide7/string-function-calls/) for more information.
 

@@ -20,13 +20,13 @@ For the **7-Day History**, a snapshot of the current test states is taken every 
 
 To generate a PDF report of the status of your tests, click **Download Report**. A dialog box will open allowing you to select between two reporting options for determining the items included in the report: **All** or **Selected**. If you select **All**, then all test suites and test cases will be included in the report. If you select **Selected**, then you can add one or more test cases, test suites, or folders that you want to be part of the report.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Adding a test suite or a folder will recursively add all nested test suites and test cases.
 {{% /alert %}}
 
 When you are happy with your selection (or you have just chosen **All**), you can proceed with the reporting process by clicking **Generate**. This will open a second dialog box where you will get a summary infographic, similar to the one that you see on the **Dashboard**. At this point, you can download the report by clicking **Download**. You can cancel the process at any point by clicking the **X** button.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The **7-day history** infographic will only be included in the PDF report when you choose **All**.
 {{% /alert %}}
 
@@ -70,7 +70,7 @@ The **App Admin** role is assigned to a user when they have the app settings per
 
 Settings is the central point for configuring ATS. You can set the Mendix API Key, add your deployments, and add your Selenium hubs. You can also find an overview of all the testers and administrators of your app.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Only App Admins can access the settings. Testers can only use the available deployments and Selenium hubs.
 
@@ -109,7 +109,7 @@ In the **Edit Selenium Hub** dialog box, set the following parameters:
 
 ATS automatically retrieves the parallel test session limit from the Selenium hub. This limit is updated every 15 minutes. If ATS is not able to get the limit from the Selenium hub, it is set to one single test execution at a time.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Starting with ATS verson 2.0, ATS capabilites override custom capabilities.
 {{% /alert %}}
 
@@ -121,7 +121,7 @@ By default, app members with the Scrum Master role in the Developer Portal will 
 
 App member that the have a No access role will not see the app in their **My apps** page and will not be able to open or edit or run any test cases for this app.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For on-premises instances of ATS, all accounts created manually by the tenant administrator will be members of each project.
 {{% /alert %}}
 
@@ -129,7 +129,7 @@ In order to make sure that the administration rights granted to users are not ov
 
 Finally, note that a user who has an administrative project role in the Developer Portal will always have administrative rights in ATS.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If an app lacks a Mendix app ID, the app roles will not be synced with the Developer Portal.
 {{% /alert %}}
 

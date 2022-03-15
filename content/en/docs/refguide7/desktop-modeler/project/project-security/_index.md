@@ -5,7 +5,7 @@ parent: "project"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 For more general information on security, see [Security](/refguide7/security/).
 
@@ -23,11 +23,11 @@ The security level defines how security is applied and which security settings n
 | Prototype / demo | Security is applied to signing in, forms, and microflows. Users can access all data. | Administrator and anonymous access, user roles, and security for forms and microflows. |
 | Production | Full security is applied. | Administrator and anonymous access, user roles, and security for forms, microflows, entities, and reports. |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 For all licensed Mendix Cloud nodes, you need to use the **Production** security level and configure all security settings accordingly. Security levels **Off** and **Prototype/demo** are only allowed when testing locally, when deploying a Free App, and in cloud environments outside the Mendix Cloud which are specifically set up with **Development mode**. 
 
-{{% /alert %}}{{% alert type="info" %}}
+{{% /alert %}}{{% alert color="info" %}}
 
 All other security settings are only visible if the security level is 'Prototype / demo' or 'Production'.
 
@@ -111,7 +111,7 @@ _Default value_: 1
 
 The user role of the administrator user that can be used to sign in to the application.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This user is always created and has the System.Administrator role by default. This module role allows any user with this role to manage your users. On sandboxes the user that created the application automatically has this role by default as well so you can use it to administer your users in that environment.
 This role may be helpful in case for some reason you have exceeded your user license restriction in which case you can use any user that has this System.Administrator role to login to manage your users.
@@ -130,7 +130,7 @@ After signing in to your application with the administrator user, a small tab ca
 
 The user switcher is only shown and the demo users are only created when running your application locally on your development machine, or when running in a sandbox.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 After they are created automatically, demo users do not differ in any way from other local users that are defined in your application. This means that you can still use them to manually sign in using their user name and password, even after disabling the demo users feature again. Also, the demo users are never automatically removed from the database.
 
@@ -189,7 +189,7 @@ The sign-in microflow has two parameters.
 | AnonymousUser | Object of entity 'System.User' | The 'User' object of the anonymous user. This object will be automatically deleted after the execution of the sign-in microflow. |
 | SignedInUser | Object of entity 'System.User' | The 'User' object of the signed-in user. |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Clean up objects that were attached to the anonymous user and that you do _not_ transfer to the signed-in user. Since the anonymous user is deleted after running the sign-in microflow, you can use [delete behavior](/refguide7/associations/) to automatically clean objects that were attached to the anonymous user.
 
@@ -201,7 +201,7 @@ The sign-in microflow is executed when an end-user:
 2.  clicks a button for which she does not have access, which causes a sign-in screen to appear, and then
 3.  signs in to your application.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 An anonymous user in a web shop adds some items to her shopping cart and then clicks the 'Check out' button. A sign-in screen appears, and the user signs in. The sign-in microflow is executed and transfers the shopping cart of the anonymous user to the signed-in user.
 

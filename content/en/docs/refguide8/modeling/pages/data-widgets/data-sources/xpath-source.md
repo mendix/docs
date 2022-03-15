@@ -6,7 +6,7 @@ tags: ["studio pro", "xpath", "xpath source", "data source"]
 menu_order: 20
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/xpath-source.pdf).
 {{% /alert %}}
 
@@ -32,7 +32,7 @@ The **Entity (path)** property specifies the target of the database query. If yo
 {{% image_container width="400" %}}![Data Source Example](/attachments/refguide8/modeling/pages/data-widgets/data-sources/database-source/data-source-example.png)
 {{% /image_container %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This differs from the [association data source](/refguide8/association-source/) when objects are retrieved from the memory, not database.
 {{% /alert %}}
 
@@ -59,7 +59,7 @@ Default: *false*
 
 The [XPath constraint](/refguide8/xpath-constraints/) allows for custom, hard-coded limitations on the data displayed. This constraint will be appended to the constraints (if any) already applied through security and context.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 XPath constraints are applied equally to all users and only apply to the data displayed in a single data widget. If the goal is to restrict access to a particular subset of the data for users then [access rules](/refguide8/access-rules/) for entities should be used as they can be applied to an individual user role and they apply system-wide.
 {{% /alert %}}
 

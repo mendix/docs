@@ -4,7 +4,7 @@ url: /refguide7/new-button/
 parent: "button-widgets"
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This button was removed in Mendix 7.17. Use a normal [Action button](/refguide7/action-button/) with the **Create object** action instead.
 

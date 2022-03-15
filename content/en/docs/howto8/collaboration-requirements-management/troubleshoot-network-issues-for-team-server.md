@@ -31,11 +31,11 @@ Mendix Studio Pro connects to `https://teamserver.sprintr.com/` and with the dom
 
 You can look up the IP address of `https://teamserver.sprintr.com/`.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Mendix reserves the right to change the IP address at any time and without notification to the customer. This could happen if Mendix moves to a different infrastructure, for example.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Contact your network administrator and give them this information to allow them to configure your network (for example, firewall and proxy settings) correctly.
 {{% /alert %}}
 

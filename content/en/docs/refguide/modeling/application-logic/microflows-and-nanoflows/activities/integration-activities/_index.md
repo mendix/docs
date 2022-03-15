@@ -5,7 +5,7 @@ parent: "activities"
 menu_order: 60
 tags: ["studio pro"]
 ---
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 These activities can only be used in **Microflows**.
 {{% /alert %}}
 

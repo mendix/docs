@@ -30,7 +30,7 @@ Before you can manage your IBM Cloud environment using the Developer Portal, you
 
 In this scenario, you have an existing app which is running in another environment: for instance, on the Mendix Cloud. To change this, go to the Cloud Settings tab of the General Settings in the Development Portal.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If you have an app running on SAP Business Technology Platform, deploying it to IBM Cloud will not be successful because of the customization done within SAP Mendix apps.
 {{% /alert %}}
 
@@ -121,7 +121,7 @@ This is done from the **Environments** page of the Developer Portal:
 
 9. Set a **Subscription Secret** (required). This secret is associated with your Mendix production license. By entering the subscription secret, your application will run in this environment as production. If the subscription secret is invalid, your app will still run, but will restart every 1-2 hours and have a limitation of six named users.
 
-    {{% alert type="info" %}}If you do not have a subscription secret, create a ticket with Mendix Support and they will send you one.{{% /alert %}}
+    {{% alert color="info" %}}If you do not have a subscription secret, create a ticket with Mendix Support and they will send you one.{{% /alert %}}
 
 10. Click **Next** to create the environment and finish the setup.
 
@@ -135,7 +135,7 @@ An environment is created; with more than one environment it is possible to tran
 
 At any time, you can create a new deployment package from a committed version of the project. If you are working with Mendix Studio Pro, you will first have to commit the project.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can also deploy your app (the steps in sections 4 and 5.1 of this How-To) automatically from Studio Pro. However, you will then have less control over the deployment.
 
 If you click **Run** or **Publish** in Studio Pro, this will automatically do the following:
@@ -145,7 +145,7 @@ If you click **Run** or **Publish** in Studio Pro, this will automatically do th
 3. Deploy the deployment package to the first available environment (this will replace any app which is currently running in this environment).
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You will still have to deploy your app in the Developer Portal the very first time to ensure that all the services are bound correctly.
 {{% /alert %}}
 
@@ -205,7 +205,7 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
     {{% image_container width="75%" %}}![](/attachments/developerportal/deploy/ibm-cloud/transport-services.png){{% /image_container %}}
 
-    {{% alert type="warning" %}}In your initial deployment, do not remove any of the services with the status **Services To Be Bound**. For a new app, these services are all required for the correct deployment of the app.{{% /alert %}}
+    {{% alert color="warning" %}}In your initial deployment, do not remove any of the services with the status **Services To Be Bound**. For a new app, these services are all required for the correct deployment of the app.{{% /alert %}}
 
 5. Click **Continue** to continue to the Start Application confirmation page.
 
@@ -213,7 +213,7 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
     ![](/attachments/developerportal/deploy/ibm-cloud/start-application.png)
 
-    {{% alert type="info" %}}This will bind any services which are in the status **Services To Be Bound**.{{% /alert %}}
+    {{% alert color="info" %}}This will bind any services which are in the status **Services To Be Bound**.{{% /alert %}}
 
 7. When the application has been started you will receive a confirmation message. Click **OK** and you will be taken to the Environment Details page for the selected environment. See [Environment Details](#EnvironmentDetails), below.
 
@@ -239,7 +239,7 @@ The environment details page contains three tabs: General, Model Options and Ser
 
 ![](/attachments/developerportal/deploy/ibm-cloud/environment-details.png)
 
-{{% alert type="info" %}}If you make changes to your app which you want be applied next time the app is deployed you must make them here.
+{{% alert color="info" %}}If you make changes to your app which you want be applied next time the app is deployed you must make them here.
 
 Changes made to the app in IBM Cloud Portal are only temporary and can be overwritten by the values in the Mendix Developer Portal next time the app is deployed.{{% /alert %}}
 
@@ -257,7 +257,7 @@ If the application is running, click **Stop Application** and confirm when asked
 
 The button will change to **Start Application** which you can click to (re)start the application.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You may need to use this option to stop and start your app after changing one of the settings on this page.
 {{% /alert %}}
 
@@ -279,7 +279,7 @@ You will be asked to confirm that this environment should be removed. You will a
 
 ![](/attachments/developerportal/deploy/ibm-cloud/delete-environment.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you do not select **Remove resources** in this dialog, the resources will be left in IBM Cloud. This could be useful if you want to remove the environment but, for some reason, a resource cannot be removed. In this case, the resources can only be removed individually from within IBM Cloud Portal.
 {{% /alert %}}
 
@@ -309,7 +309,7 @@ This tab displays the application constants and allows you to edit them. It also
 
 ![](/attachments/developerportal/deploy/ibm-cloud/12-ibm-model-options.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You need to restart your app if you change any of these options.
 {{% /alert %}}
 
@@ -333,13 +333,13 @@ This tab displays Cloud Foundry services which are bound to the app, waiting to 
 ![](/attachments/developerportal/deploy/ibm-cloud/service-tab.png)
 {{% /image_container %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 **If you unbind the database (compose-for-postgreSQL) service, your app will probably stop working**
 
 Other services should be selected, bound, and unbound through this **Services** page. Changes made in the IBM Cloud Portal will *not* be reflected in the Mendix Developer Portal.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Changes to bound services will not take place immediately. You will have to stop and start your application to activate the changes.
 
 Services which will be bound when the application is stopped and restarted are listed in the category **Services To Be Bound**. You will also see an information message in this case: the button **Review Services** will list the services which are not currently bound.
@@ -370,7 +370,7 @@ To upload the JSON **File** to configure the service being bound, follow these s
 
 The service bindings will be created with the provided configurations when you restart the application. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you receive an error, and the service fails to bind please check all aspects of your IBM account. The error message may not provide full information about, for example, which plans you are allowed to choose for a particular service.
 {{% /alert %}}
 
@@ -444,7 +444,7 @@ If you are the last member of the app development team, you will be asked if you
 
 ![](/attachments/developerportal/deploy/ibm-cloud/delete-app.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This will not stop the app and delete the deployment of the app in IBM Cloud.
 
 If you want to delete your app and all its resources, delete the environment and resources first before you leave the app via the Mendix Developer Portal.

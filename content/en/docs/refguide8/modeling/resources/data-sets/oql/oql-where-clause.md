@@ -5,7 +5,7 @@ parent: "oql"
 tags: ["studio pro", "queries", "where"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/oql-where-clause.pdf).
 {{% /alert %}}
 
@@ -20,7 +20,7 @@ WHERE <constraint>
 `<constraint>`
 An expression for which the value always equals true. Expressions consist of simple comparisons using operators, functions, keywords or system variables.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ```
 SELECT FirstName FROM Sales.Customer
@@ -29,7 +29,7 @@ WHERE LastName = 'Jansen'
 
 This query retrieves all customers whose name is equal to 'Jansen'.
 
-{{% /alert %}}{{% alert type="info" %}}
+{{% /alert %}}{{% alert color="info" %}}
 
 ```
 SELECT FirstName FROM Sales.Customer

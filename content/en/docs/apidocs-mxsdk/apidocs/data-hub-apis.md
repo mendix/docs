@@ -15,11 +15,11 @@ The [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.htm
 * [Registration API](#registration) — register and update data sources to the organization's Mendix Data Hub
 * [Transform API](#transform) — for Mendix users deploying to a non-Mendix environment, generate the request bodies to register data sources published from your Mendix app
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The Data Hub API v2 is now deprecated and will be removed. You should update your calls to this API and use the latest [Search](#search) and [Registration](#registration) API URLs.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The interactive features of the OpenAPI interface are not operational, so the **Try it out** feature does not work.
 {{% /alert %}}
 

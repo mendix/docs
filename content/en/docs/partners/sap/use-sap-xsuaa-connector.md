@@ -46,7 +46,7 @@ For more information, see [How to Use Marketplace Content in Studio Pro](/appsto
 
 In this section, you will learn how to implement the XSUAA connector in your Mendix app.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 SAP Authentication will not work if the App Security is off. See the prerequisites above.
 {{% /alert %}}
 
@@ -68,13 +68,13 @@ By default, the Mendix login page will not allow the user to enter their SSO cre
 * Add the SSO login button so the user can choose whether to use SSO or native Mendix credentials
 * Bypass the Mendix login page altogether and just display the XSUAA login page
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you are using the [Deep Link](/appstore/modules/deep-link/) module, you will also need to set the **LoginLocation** constant to `/xsauaalogin/`.
 {{% /alert %}}
 
 #### 4.2.1 Adding the SSO Login Button to the Login Page<a name="adding"></a>
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If your app already had XSUAA included, your login.html file may have been modified already.
 {{% /alert %}}
 
@@ -108,7 +108,7 @@ If login.html does not support XSUAA then you need to add the SSO login button t
 
 An alternative to adding the SSO login button to the landing page of your app is to redirect your app to XSUAA automatically without showing the login page.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Note that this will only work if you are running your app on SAP BTP.
 
 Because users will be automatically redirected to XSUAA after signing out of the application, this could cause them to be signed in again.
@@ -134,13 +134,13 @@ To accomplish this, follow these steps:
 
 Your app is configured to use an IdP. Now you need to configure the IdP and allocate users to roles. This is performed in the [SAP Business Technology Platform cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Before configuring the IdP, you must first deploy your app to SAP BTP. This will expose the user roles in the app to the security configuration tools in the SAP BTP cockpit.
 {{% /alert %}}
 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 This section describes actions which are carried out using the SAP BTP cockpit. This document uses the current navigation through the SAP BTP cockpit but this is outside the Mendix environment and may be changed. SAP BTP documentation is in the [SAP Help Portal](https://help.sap.com/viewer/p/CP).
 

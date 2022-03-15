@@ -6,7 +6,7 @@ parent: "modules"
 
 ## 1 Introduction
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 For more general information on security, see [Security](/refguide7/security/).
 
@@ -26,7 +26,7 @@ Microflow Access defines which microflows can be executed by users with a certai
 
 Microflow access takes the shape of a large matrix showing microflows and modules roles. For each combination you can indicate whether or not the module role has access to the microflow. You can also edit this information in a [microflow](/refguide7/microflow/) using the property 'Allowed roles'.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Note that these roles are only checked when the microflow is executed from the client. A microflow is always allowed to call another microflow and these roles are not checked then.
 
@@ -62,7 +62,7 @@ Data Set Access shows for each [dataset](/refguide7/data-sets/) (used for [repor
 | Limited access | At least one constraint applies to the parameters for the dataset, or at least one range parameter is not allowed. |
 | No access | Users with this module role have no access to the dataset. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The constraints are defined in the parameter definitions of the dataset. Whether they apply is defined in the dataset access.
 The ranges are defined in the parameters of the dataset. Whether values in these ranges are allowed is defined in the dataset access.
@@ -77,7 +77,7 @@ The module roles define which roles users of this module can have. See [Security
 
 The name of a module role is used to refer to the module role from other elements in your model.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 End users do not see the names of module roles. End users (if they create or view user accounts) only see the names of user roles.
 

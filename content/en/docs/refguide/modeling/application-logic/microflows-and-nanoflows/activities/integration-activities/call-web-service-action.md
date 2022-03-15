@@ -7,7 +7,7 @@ menu_order: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
  This activity can only be used in **Microflows**.
 {{% /alert %}}
 
@@ -56,7 +56,7 @@ The properties dialog box consists of five tabs:
 
 **Override location** defines whether to override the location where the web service is called.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 When calling a web service using a call web service activity, the location of the web service is determined as follows.
 
@@ -76,7 +76,7 @@ This can be used to throw an exception when the web service takes too long to re
 
 Default value: *Yes*
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 It is recommended that you keep this set this to **Yes**. Most cloud infrastructure services (including those used by the Mendix Cloud) will close HTTP connections automatically if there is no traffic for a few minutes, even if your activity is still waiting for a response. This means that, if your activity calls a web service which takes a long time to respond, the connection may be closed without the activity being aware of this, and your activity will not receive a response. Under these circumstances, if **Use timeout on request** is set to **No**, your activity will get stuck waiting indefinitely for data to arrive.
 {{% /alert %}}
 
@@ -94,7 +94,7 @@ Default value: *300*
 
 Setting this setting to yes can greatly decrease performance!
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 When consuming a WSDL that uses encoding, turning on validation will lead to a consistency error, because it is not WS-I compliant.
 {{% /alert %}}
 
@@ -180,7 +180,7 @@ For primitive parameters (both optional and nillable) that do not have an export
 
 This option can be used when all children of the XML element of the request part occur at most once. You need to supply an argument value for all top-level elements of the request (parameters). For simple parameters you can enter a microflow expression, for complex parameters you define a mapping.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 If a primitive request parameter is both optional and nillable, you need to select whether or not to send the empty values.
 

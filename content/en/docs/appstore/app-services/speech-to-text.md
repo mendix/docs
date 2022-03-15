@@ -264,7 +264,7 @@ Below are the steps to build a simple example web app based on a blank app templ
 9. Make sure that you have [configured the license token](#configure-license-token).
 10. Run your app locally. Click the microphone icon, talk to it, and the text area will show you the real-time transcript as you speak.
 
-{{% alert type="info" %}}While this simple example only displays the transcript result of the current speech segment, you can also configure **Action** to append all **NewTranscript** and display all your speech-to-text transcripts. For details, see the example screenshot in the [On Transcript](#on-transcript) section.{{% /alert %}}
+{{% alert color="info" %}}While this simple example only displays the transcript result of the current speech segment, you can also configure **Action** to append all **NewTranscript** and display all your speech-to-text transcripts. For details, see the example screenshot in the [On Transcript](#on-transcript) section.{{% /alert %}}
 
 ### 4.3 Handling Microphone Events
 
@@ -307,7 +307,7 @@ To set up speech-triggered actions, perform the following steps:
 3. For **Arguments**, select **Arguments** from **Data view**.
 4.  For each action, set up an [Utterance](#utterance), an [Action](#actions) and a [Feedback](#feedback).
 
-    {{% alert type="info" %}}You can use **New**, **Delete**, and **Edit** to manage all the **Actions**.{{% /alert %}}
+    {{% alert color="info" %}}You can use **New**, **Delete**, and **Edit** to manage all the **Actions**.{{% /alert %}}
 
 If the transcript received by the **Microphone** widget matches an **Utterance** that you specified, the app will run the **Action** and give users the voice **Feedback** that you configured.
 

@@ -9,7 +9,7 @@ tags: ["published REST", "resource", "entity", "operations", "expose"]
 # linked from DM: domain model > entity (right-click) > Expose as REST resource > Help (integration)
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This feature was introduced in version 7.16.0.
 

@@ -52,7 +52,7 @@ You can add bottom bar items in the native navigation profile. These items will 
 
 Every item in the bottom bar has its own navigation stack. This means that if you open a few pages in the first tab, then switch to the second tab and back to the first tab again, your first tab's pages will still be open as you left them.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Pages without a bottom bar are created in a separate stack. If you navigate from a page *without* a bottom bar to a page *with* a bottom bar, then all pages in that stack are closed.
 {{% /alert %}}
 

@@ -11,7 +11,7 @@ aliases:
 
 With this action, you can display a red text below a widget that displays an attribute or association.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 See [Microflow Element Common Properties](/refguide7/microflow-element-common-properties/) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
 
@@ -31,7 +31,7 @@ Member defines for which attribute or association the message will be shown. In 
 
 Template defines the text of the validation message. The template can contain parameters that are written as a number between braces, for example, {1}. The first parameter has number 1, the second 2 etcetera.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Nanoflows do not support text templates in validation feedback. Only a static message text can be provided.
 

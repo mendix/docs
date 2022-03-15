@@ -11,7 +11,7 @@ tags: ["mobile", "debug", "android", "ios"]
 
 Mendix has great tools for debugging web applications, including the offline and online debugger, but many people do not know that these tools can also be used to debug and test mobile applications.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible.
 
 To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally/) for information on local building.

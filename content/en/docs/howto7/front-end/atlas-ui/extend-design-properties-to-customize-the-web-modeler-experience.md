@@ -34,7 +34,7 @@ These design properties are used in the **Design** section of the Web Modeler.
 
 ![Design Properties in the Web Modeler](/attachments/howto7/front-end/atlas-ui/extend-design-properties-to-customize-the-web-modeler-experience/wm-button-design-properties.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 When you apply a new class in **settings.json** file, make sure that this class exists in the scss file. For example, the detailed Sass information for buttons can be found in this file: */theme/styles/sass/lib/components/_buttons.scss*
 
@@ -50,7 +50,7 @@ The first line in the **settings.json** file enables the resources, page templat
 
 If this line is deleted, the old Mendix UI Framework resources will be loaded in the Mendix Web Modeler and the Desktop Modeler. If you do not want to use Atlas UI, it is possible to delete this line.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 You can only switch to the old Mendix UI Framework following the instructions above if your app's  version is 7.8.0 or lower.
 

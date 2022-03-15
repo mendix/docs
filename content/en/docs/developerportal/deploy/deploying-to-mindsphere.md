@@ -12,7 +12,7 @@ tags: ["MindSphere", "deploy", "cloud foundry", "launchpad", "scopes", "roles", 
 
 ## 1 Introduction
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This information is for deploying apps to the MindSphere platform. It does not apply to MindSphere IIoT for Makers.
 {{% /alert %}}
 
@@ -20,11 +20,11 @@ MindSphere is the cloud-based, open IoT operating system from Siemens that lets 
 
 This documentation is meant for Mendix developers who want to deploy, register and run a Mendix app on MindSphere.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 There are some limitations to what you can do in your Mendix app if it is deployed to MindSphere. See the [Limitations](/partners/siemens/mindsphere-development-considerations/#limitations) section of *MindSphere Development Considerations* for more information.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can easily copy code examples shown within grey blocks into the clipboard. Hover the cursor over the code block and click the copy button which appears.
 
 ![](/attachments/developerportal/deploy/deploying-to-mindsphere/copy-from-documentation.png)
@@ -58,7 +58,7 @@ You must customize your app to allow it to be deployed, registered, and shown in
 
 The **MindSphere Starter Application** in the Mendix Marketplace contains all the modules and styling which you need to create an app you want to deploy to MindSphere.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This is the recommended approach if you are building a new application, as it will provide all the necessary building blocks to get started.
 {{% /alert %}}
 
@@ -158,7 +158,7 @@ https://core.piam.eu2.mindsphere.io/token_keys
 
 Add the *RegisterSingleSignOn* microflow as the **After startup** microflow or added as a sub-microflow of an existing *after startup* microflow.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you are using the MindSphere Starter Application, this will already be set up as the *After startup* microflow.
 {{% /alert %}}
 
@@ -189,7 +189,7 @@ More information on the structure and content of this JSON object, together with
 
 A Mendix based application for MindSphere can be deployed to Mendix or to MindSphere. Deploying to Mendix is quite easy and is the preferred option as you than also can use the **Auto Registration** process.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 **Auto Registration** process is only available on region Europe 1.
 {{% /alert %}}
 
@@ -203,7 +203,7 @@ Once your app is deployed you can automatically register the app in your MindSph
 
 ### 5.2 Option B: Creating a Mendix Deployment Package and deploy it to MindSphere Cloud Foundry
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 There is a limit of 1.5GB on the size of the Mendix deployment package (MDA file) which can be deployed to MindSphere.
 {{% /alert %}}
 
@@ -226,7 +226,7 @@ To create a Mendix deployment package from your app, do the following:
 
 Your deployment package will be created, and its location displayed in an information message.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 By default, the deployment package will be created in the *releases* folder of your app.
 {{% /alert %}}
 
@@ -240,7 +240,7 @@ To deploy your deployment package, do the following:
     * Open the URL printed by the CLI and sign in using your WebKey credentials to get a One Time Code
     * Enter the One Time Code in the CLI
 
-      {{% alert type="info" %}}If you need to configure proxies for Cloud Foundry, use the Windows `set` command. For example, `set http_proxy=http://my.proxy.ip:1234`.{{% /alert %}}
+      {{% alert color="info" %}}If you need to configure proxies for Cloud Foundry, use the Windows `set` command. For example, `set http_proxy=http://my.proxy.ip:1234`.{{% /alert %}}
 
 2.  Select your org and space using the command:
 
@@ -248,7 +248,7 @@ To deploy your deployment package, do the following:
     cf target –o {org_name} -s {space_name}
     ```
 
-    {{% alert type="info" %}}If you cannot target your org or space, you probably need to be added to your org. See [Cloud Foundry How Tos](https://developer.mindsphere.io/paas/paas-cloudfoundry-howtos.html) in the MindSphere documentation.{{% /alert %}}
+    {{% alert color="info" %}}If you cannot target your org or space, you probably need to be added to your org. See [Cloud Foundry How Tos](https://developer.mindsphere.io/paas/paas-cloudfoundry-howtos.html) in the MindSphere documentation.{{% /alert %}}
 
 3.  Create a PostgreSQL instance using the command:
 
@@ -260,7 +260,7 @@ To deploy your deployment package, do the following:
 
     For more information see [Using the a9s PostgreSQL](https://developer.mindsphere.io/paas/a9s-postgresql/using.html) on the MindSphere developers site.
 
-    {{% alert type="warning" %}}Each Mendix app needs its own database. Do not bind more than one app to a database as both apps will not work properly. Create a new database instance instead.{{% /alert %}}
+    {{% alert color="warning" %}}Each Mendix app needs its own database. Do not bind more than one app to a database as both apps will not work properly. Create a new database instance instead.{{% /alert %}}
 
 4.  Depending on your infrastructure and service broker usage, it may take several minutes to create the service instance. Check if your PostgreSQL service has been created successfully using the following command:
     `cf services`
@@ -279,9 +279,9 @@ To deploy your deployment package, do the following:
           - {service_instance}
     ```
 
-    {{% alert type="info" %}}`disk_quota_size` and `memory_size` must be at least **512M** to enable a Mendix app to run.<br />See the *Cloud Foundry* [App Manifest Attribute Reference](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html) for more information on valid specifications for memory and disk quota sizes.{{% /alert %}}
+    {{% alert color="info" %}}`disk_quota_size` and `memory_size` must be at least **512M** to enable a Mendix app to run.<br />See the *Cloud Foundry* [App Manifest Attribute Reference](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html) for more information on valid specifications for memory and disk quota sizes.{{% /alert %}}
 
-    {{% alert type="warning" %}}Each Mendix app needs its own database. Do not bind more than one app to a database as both apps will not work properly. Create a new database instance instead.{{% /alert %}}
+    {{% alert color="warning" %}}Each Mendix app needs its own database. Do not bind more than one app to a database as both apps will not work properly. Create a new database instance instead.{{% /alert %}}
 
     For more information on the configuration of manifest files, see [Configuring the manifest file](https://developer.mindsphere.io/howto/howto-cf-single-manifest.html#configuring-the-manifest-file) on the MindSphere developers site.
 
@@ -305,7 +305,7 @@ cf push -p "{deployment_package_name}" -s {stack_name}
 
 For example: `cf push -p "myapp.mda" -s cflinuxfs3`
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Apps pushed to MindSphere before the end of April 2019 may have used `cflinuxfs2` as the default.
 
 If this is the case, the stack must be updated to `cflinuxfs3` as support for Cloud Foundry stack `cflinuxfs2` was removed from MindSphere in April 2019. See [Migrating applications from the cflinuxfs2 stack to the cflinuxfs3 (Bionic Beaver) stack](https://community.plm.automation.siemens.com/t5/Developer-Space/Migrating-applications-from-the-cflinuxfs2-stack-to-the/m-p/582029#M1621) in the *Siemens Developer Space* for more information.
@@ -331,7 +331,7 @@ You have to register your application for it to work and appear on the MindSpher
 
 #### 5.3.1 Option A: Using the Auto Registration Process
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This method is recommended if your app is deployed to the Mendix Cloud.
 
 However, the Auto Registration process is only available on region Europe 1.
@@ -345,7 +345,7 @@ Click **Start Auto Registration**. The process now tries to figure out on which 
 
 ![Login to Siemens Digital Industry Software](/attachments/developerportal/deploy/deploying-to-mindsphere/WebKeyLogin.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you have more then one tenant on MindSphere you will get a list of tenants. Choose the tenant where you want to register your app.
 
 If you have only one tenant on MindSphere, the process will automatically select this tenant for you.
@@ -363,7 +363,7 @@ Click **Register** to start the registration process on your tenant. After a few
 
 ![AutoRegistrationSummary](/attachments/developerportal/deploy/deploying-to-mindsphere/AutoRegistrationSummary.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The **Auto Registration** process creates application roles and scopes for your app automatically.
 
 If you are on a **Start for Free** tenant, additional MindSphere API roles are assigned and your user is granted **admin** access to your app.
@@ -373,7 +373,7 @@ If you are on a **Developer** tenant, no additional MindSphere API roles are ass
 
 Please note, for further configuration of your registration, for example, CSPs or additional roles, please use the Developer Cockpit.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can have multiple versions of your app within the Developer Cockpit, for example, versions with different configurations or roles and scopes. 
 
 The deployment registered via the **Auto Registration** process is *always mapped to the version created during the process*. If you want to create additional versions of your app, you can do this by manually creating a new version within the Developer Cockpit.
@@ -434,7 +434,7 @@ To create a new app manually in the MindSphere launchpad, do the following:
       connect-src 'self' 'unsafe-inline' *;
       ```
 
-      {{% alert type="info" %}}These content security policy (CSP) settings are needed to ensure that the MindSphere OS Bar and the [Mendix Feedback](/appstore/widgets/mendix-feedback/) widget are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
+      {{% alert color="info" %}}These content security policy (CSP) settings are needed to ensure that the MindSphere OS Bar and the [Mendix Feedback](/appstore/widgets/mendix-feedback/) widget are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
 
       ![](/attachments/developerportal/deploy/deploying-to-mindsphere/image14.png)
 
@@ -442,7 +442,7 @@ To create a new app manually in the MindSphere launchpad, do the following:
 
 16.  Click **Register** to register your app with the MindSphere launchpad.
 
-    {{% alert type="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry.{{% /alert %}}
+    {{% alert color="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry.{{% /alert %}}
 
 ##### 5.3.2.2 Setting Application Scopes in Developer Cockpit{#scopes}
 
@@ -455,7 +455,7 @@ To set up the appropriate scopes in MindSphere, do the following:
 
     ![](/attachments/developerportal/deploy/deploying-to-mindsphere/image15.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you are using the app template, you should create two scopes, *user* and *admin*.
 {{% /alert %}}
 
@@ -463,7 +463,7 @@ For an explanation of the relationship between Mendix roles and MindSphere roles
 
 ![](/attachments/developerportal/deploy/deploying-to-mindsphere/image8.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You will also need to use the **Add Core Role** option to add *Core Roles* to your app if it makes calls to MindSphere. The ones you need to add will depend on which features of MindSphere you are using.
 {{% /alert %}}
 
@@ -482,11 +482,11 @@ Once you have created the scopes for your app, you will need to assign them to t
 
     ![](/attachments/developerportal/deploy/deploying-to-mindsphere/image17.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The user will have to sign out and sign in again for this assignment to take effect.
 {{% /alert %}}
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 Your app is now set up and users can run it from within the MindSphere Developer Cockpit.
 {{% /alert %}}
 

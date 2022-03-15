@@ -6,7 +6,7 @@ category: "Desktop Modeler"
 
 ## 1 Introduction
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The option to designate a custom UI resources package was added in Mendix 7.9.0. In older versions, theme information was stored in theme ZIP files stored in the **theme** folder. The required ZIP file could be selected in the Runtime tab of the app's [project settings](/refguide7/project-settings/).
 

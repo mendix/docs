@@ -10,7 +10,7 @@ tags: ["App","Troubleshoot","Developer Portal","Cache","Mendix Cloud"]
 
 ## 1 Introduction
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This information is only relevant for apps built using Mendix Studio Pro/Runtime version 6.
 

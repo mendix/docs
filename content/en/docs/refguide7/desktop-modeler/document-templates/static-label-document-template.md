@@ -11,7 +11,7 @@ aliases:
 
 A static label shows a line of static text. You can use it to place custom text inside a data view, template grid or table.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/document-templates/918130.png)]
 A label with text 'Customer name'.
@@ -21,7 +21,7 @@ A label with text 'Customer name'.
 If you want to insert the current page number or the total page count in your document, you can use a token inside a static label (and only in a static label).
 Before version 2.5.4, spaces were automatically inserted on either side of the token. This is no longer the case.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Static label content: Page [%pageNumber%] of [%totalPageCount%]
 Will print: Page 2 of 4

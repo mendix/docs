@@ -35,7 +35,7 @@ The entity type defines how the data is handled and there are two types:
 
 ![](/attachments/refguide/modeling/domain-model/entities/type-of-entities.jpg)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can also use data sources from other applications in your app through the [Data Hub](/refguide/data-hub-pane/) pane. These data sources are represented in the domain model as *external entities* which are displayed as purple entity containers in the domain model.
 
 For further information see [External Entities](/refguide/external-entities/).
@@ -63,7 +63,7 @@ Entity properties consist of the following sections:
 * [General](#entities-general-properties)
 * [System members](#system-members)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For more information, see the [Properties](/refguide/external-entities/#properties) section of *External Entities*.
 {{% /alert %}}
 
@@ -122,7 +122,7 @@ This property defines whether the entity contains the system attribute 'createdD
 | True | Entity contains the system attribute 'createdDate'. |
 | False *(default)* | Entity does not contain the system attribute 'createdDate'. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
 {{% /alert %}}
 
@@ -135,11 +135,11 @@ This property defines whether the entity contains the system attribute 'changedD
 | True | Entity contains the system attribute 'changedDate'. |
 | False *(default)* | Entity does not contain the system attribute 'changedDate'. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The 'changedDate' property is only updated on real changes. Simply changing and committing an entity with the same attribute values does not update 'changedDate'.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
 {{% /alert %}}
 

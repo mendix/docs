@@ -8,7 +8,7 @@ parent: "menu-widgets"
 
 The navigation tree widget shows a configured menu in the form of a tree. Items can have subitems in which case the main item can be expanded. The menu structure of the navigation tree can have three levels. In the end a [Menu Item](/refguide7/menu-item/) points to either the page or the microflow that will opened or started when the item is clicked.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/menu-widgets/navigation-tree/navigation-tree.png)
 

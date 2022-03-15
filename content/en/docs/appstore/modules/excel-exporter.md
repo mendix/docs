@@ -49,7 +49,7 @@ On the template details page, you can define the template with the following ite
 * **Date time export format**: the format for exported date and time
 *  **Upload existing excel file**: uploads an Excel file which is used as a template
 
-    {{% alert type="info" %}}If you use an uploaded Excel file as a template, the names of the sheets and columns in your template will be used. However, the background color in your template will be overruled by the **Background color** of the style that is applied when the **Background color** is not set to **none**.{{% /alert %}}
+    {{% alert color="info" %}}If you use an uploaded Excel file as a template, the names of the sheets and columns in your template will be used. However, the background color in your template will be overruled by the **Background color** of the style that is applied when the **Background color** is not set to **none**.{{% /alert %}}
    
 *  **Worksheets**: contains the following items that you can use to define sheets in an exported document:
     * **New**: opens a new [sheet details page](#sheet-details) to create a sheet
@@ -69,12 +69,12 @@ On the template details page, you can define the template with the following ite
         * **Horizontal alignment**: the horizontal alignment of the text 
         *  **Background color**: the color of the background
         
-            {{% alert type="info" %}}If you use an uploaded Excel file as a template, the background color you select here (if the value is not **none**) will overrule the background color in your template.{{% /alert %}}
+            {{% alert color="info" %}}If you use an uploaded Excel file as a template, the background color you select here (if the value is not **none**) will overrule the background color in your template.{{% /alert %}}
         
         * **Vertical alignment**: the vertical alignment of the text
         * **Rotation**: the degrees that the text is rotated anti-clockwise
 
-            {{% alert type="info" %}}The rotation must be between -90 and 90 degrees. If the number is negative, the rotation is clockwise.{{% /alert %}}
+            {{% alert color="info" %}}The rotation must be between -90 and 90 degrees. If the number is negative, the rotation is clockwise.{{% /alert %}}
         
        * **Wrap text**: if selected, the text in a cell can be wrapped to a line
        * **Border top**: each number represents a type of border in the Excel document (the maximum value is 14)
@@ -96,11 +96,11 @@ On the sheet details page, you can define sheets with the following items:
 
 * **Name:** the name of the sheet
 
-    {{% alert type="info" %}}If you use **Upload existing excel file** on the [template details page](#template-details), the sheet name defined in your Excel template file will be used, and the **Name** you enter here will not be used.{{% /alert %}}
+    {{% alert color="info" %}}If you use **Upload existing excel file** on the [template details page](#template-details), the sheet name defined in your Excel template file will be used, and the **Name** you enter here will not be used.{{% /alert %}}
 
 * **Sequence**(optional): the sequence of the sheet in the exported document
 
-    {{% alert type="info" %}}The sheets in the exported Excel document are shown in the ascending sequence. If the sequence of a sheet is set to empty, this sheet will become the first sheet.{{% /alert %}}
+    {{% alert color="info" %}}The sheets in the exported Excel document are shown in the ascending sequence. If the sequence of a sheet is set to empty, this sheet will become the first sheet.{{% /alert %}}
 
 * **Row object**: the object data used for the rows
 * **Reference to template input object** (optional): the reference to the template input object (if **Input object** is used)
@@ -132,7 +132,7 @@ On the **Static data** tab, there are the following items:
 * **New**: opens the **New static data** dialog box that contains the following items:
     * **Row**: the row in which the static data are placed
 
-        {{% alert type="info" %}}The value of **Row** must be smaller than the value of **Start retrieved data at row**.{{% /alert %}}
+        {{% alert color="info" %}}The value of **Row** must be smaller than the value of **Start retrieved data at row**.{{% /alert %}}
 
     * **Column**: the column in which the static data are placed
     * **Name**: the name of the cell where the static data are placed
@@ -162,15 +162,15 @@ On the **Column data** tab, you can define column data with the following items:
 * **New**: opens the **New column** dialog box that contains the following items:
     * **Column number**: the number of the column, same as **Sequence**
 
-        {{% alert type="info" %}}The lowest column number is 0. This column becomes column A in the exported Excel document.{{% /alert %}}
+        {{% alert color="info" %}}The lowest column number is 0. This column becomes column A in the exported Excel document.{{% /alert %}}
 
     * **Style**: the style of the column
 
-        {{% alert type="info" %}}This style does not apply to the column header. The style of the header is defined by **Default header text style** on the [sheet details page](#sheet-details).{{% /alert %}}
+        {{% alert color="info" %}}This style does not apply to the column header. The style of the header is defined by **Default header text style** on the [sheet details page](#sheet-details).{{% /alert %}}
 
     * **Name**: the name of the column
 
-        {{% alert type="info" %}}If you use **Upload existing excel file** on the [template details page](#template-details), the column name defined in your Excel template file will be used, and the **Name** you enter here will not be used.{{% /alert %}}
+        {{% alert color="info" %}}If you use **Upload existing excel file** on the [template details page](#template-details), the column name defined in your Excel template file will be used, and the **Name** you enter here will not be used.{{% /alert %}}
 
     * **Retrieve type**: the type of the data which is retrieved for the column
     * **Aggregate on attribute**: if selected, the **Aggregate type** property becomes available, and the results of the aggregate function that you select will be shown in the column

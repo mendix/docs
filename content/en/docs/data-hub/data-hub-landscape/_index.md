@@ -56,7 +56,7 @@ Registered apps and services are depicted in the Landscape as nodes from the def
 
 Data sources or the published OData services are depicted as a round node with the icon that indicates the **Technology** (OData) and the service name and version number on the line connecting it to the publishing app, the number of datasets exposed in the service.
 
-{{% alert type="info" %}}The application icon that is shown for the data source and application in the asset details screen and the search results is not shown for the data source in Landscape. Here the service technology is indicated.{{% /alert %}}
+{{% alert color="info" %}}The application icon that is shown for the data source and application in the asset details screen and the search results is not shown for the data source in Landscape. Here the service technology is indicated.{{% /alert %}}
 
 The following is an example of a selected service node exposing three datasets:
 
@@ -81,7 +81,7 @@ The relationships and dependencies between apps, published services, and consumi
 
 The network of dependencies that is shown will position the selected asset at the center of the network.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In the case when an app publishing a service also consumes from the same service, the line for the publishing dependency will be superimposed onto the line for the consuming dependency. This will result in only a single dotted-gray line being displayed.
 {{% /alert %}}
 

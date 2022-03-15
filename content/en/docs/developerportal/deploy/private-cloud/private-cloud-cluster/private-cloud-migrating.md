@@ -73,7 +73,7 @@ Perform the following steps.
 
 5. Select the **Main Components** and **Storage Provisioners** you want to import into your own registry.
 
-    {{% alert type="info" %}}You can only choose components which you exported in the previous section, [Export Mendix Components](#export).<br/><br/>
+    {{% alert color="info" %}}You can only choose components which you exported in the previous section, [Export Mendix Components](#export).<br/><br/>
     **ALL** runtime versions you exported will be imported – you cannot choose which versions are imported{{% /alert %}}
 
     ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-migrating/import.png)
@@ -86,7 +86,7 @@ Perform the following steps.
 
 You can now create a new Mendix for Private Cloud cluster and namespace. To tell the Configuration Tool that you want to use your own registry, you will use the configuration tool with the argument `--registry {registry_url}/{repository}` (use the **Registry URL** value specified in the previous step as the `{registry_url}` value, and **Repository** as the value for `{repository}`).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you have already installed and configured a namespace, skip directly to the [Upgrade cluster](#upgrade-cluster) section.
 {{% /alert %}}
 

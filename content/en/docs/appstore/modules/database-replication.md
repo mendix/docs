@@ -164,7 +164,7 @@ Like in Studio Pro, the value of a reference (set) can be added to the current v
 
 This keeps track of all the object keys in this association that could not be found.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This consumes a lot of memory, since all the values need to be remembered.
 {{% /alert %}}
 
@@ -200,7 +200,7 @@ There are a number of settings that control the behavior of the table mapping as
 
 You can put a constraint on the rows that are imported from the database. Here, you can insert a custom SQL constraint that will be appended as a `WHERE` clause to all queries. This means that any database rows that do not satisfy this constraint will be ignored by the replication module.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This feature is deprecated and might be removed in a future version. We recommend configuring constraints using [import calls](#import-call) instead.
 {{% /alert %}}
 

@@ -107,7 +107,7 @@ Sometimes the computer running Studio Pro cannot access the internet directly, b
 
 The **New features** tab allows you to turn new features on and off. These are features which are being worked on but are either not yet developed sufficiently to remove the previous version, or which are currently optional.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You need to restart Studio Pro for changes to these settings to take effect.
 {{% /alert %}}
 
@@ -115,7 +115,7 @@ You need to restart Studio Pro for changes to these settings to take effect.
 
 The **Dark mode** option allows you to preview to the dark mode of the Studio Pro user interface. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Not all screens of Studio Pro support the dark mode yet.
 {{% /alert %}}
 
@@ -137,7 +137,7 @@ Default: *enabled*
 
 With this option, Studio Pro starts using the Git version of the Team Server. Your apps will be created with a Git Version Control back end and will be built and deployed to a Git-oriented infrastructure. 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This is a Beta feature, and not yet suited for production usage. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features/). 
 {{% /alert %}}
 

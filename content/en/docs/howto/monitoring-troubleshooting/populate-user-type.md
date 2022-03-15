@@ -11,7 +11,7 @@ tags: ["licensing", "Users", "Internal Users", "External Users"]
 
 In your Mendix Pricing Plan there is a distinction between Internal and External Named Users of a Mendix App. This document helps you to set up your apps to meter External Users correctly. It describes a sample solution that can help you in External User classification for existing users of your apps.
 
-{{% alert type="info"  %}}
+{{% alert color="info"  %}}
 **Definitions** 
 
 * *Named User* – an individual authorized by you to have access to your apps with unique login credentials, or an authorized external system that accesses or is accessed by your application.
@@ -29,7 +29,7 @@ The *Mendix Metering* module relies on this attribute to ascertain the end-user 
 
 ## 3 Approach
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This approach is for end-users who are already set up in your app. For new end-users who onboard into your app, you can implement a similar logic to set the UserType attribute during initial end-user creation.
 {{% /alert %}}
 

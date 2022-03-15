@@ -9,9 +9,9 @@ tags: ["studio pro", "label", "text widgets"]
 
 ## 1 Introduction
 
-{{% alert type="warning" %}}The label widget is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="warning" %}}The label widget is not supported on native mobile pages.{{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 For input elements, it is recommended to use the [label property](/refguide/text-box/) to describe the purpose of widgets to end-users.
 

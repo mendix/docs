@@ -14,7 +14,7 @@ The [3D Viewer for Teamcenter](https://marketplace.mendix.com/link/component/118
 
 You can use this module to search and fetch JT models that are stored in a Teamcenter instance and use [3D Viewer](/appstore/app-services/3d-viewer/) widgets to visualize the fetched models. Once a model is fetched, you can perform some basic operations, such as navigating the model product structure tree and PMI tree, sectioning, and many more operations enabled by the 3D Viewer out-of-the-box tools. 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Using this module alone will not be enough to visualize a 3D model.
 {{% /alert %}}
 
@@ -91,7 +91,7 @@ Follow these steps to build this login:
 
 	![teamcenter-teamcenterlogin](/attachments/appstore/app-services/3d-viewer/3d-viewer-for-teamcenter/teamcenter-teamcenterlogin.jpg)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The above is an example Teamcenter login flow included in the **Viewer3D_TC** module. There are other Teamcenter login APIs provided in **TcConnector** > **Published** > **APIs** > **Login**, and you can choose how to use them based on your needs.
 {{% /alert %}}
 
@@ -155,7 +155,7 @@ Since you built a model list pop-up page, one scenario is to select a list item 
 
 7. Run your app locally. You will be able to view the selected model.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 There are other ways to visualize a model. The key idea is to pass a valid model ID and model source type to the 3D Viewer widget.
 {{% /alert %}}
 

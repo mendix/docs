@@ -28,7 +28,7 @@ Before you can start with this how-to, make sure you have completed the followin
     | [Community Commons Function Library](/appstore/modules/community-commons-function-library/) | 8.1.0 |
     | [Object Handling](/appstore/modules/object-handling/) | 3.0.0 |
 
-	{{% alert type="warning" %}}All the images, names, and steps in this how-to are based on the Marketplace component versions listed above. When using later versions of this content, images and/or names on your screen may be different than what is used in this how-to.
+	{{% alert color="warning" %}}All the images, names, and steps in this how-to are based on the Marketplace component versions listed above. When using later versions of this content, images and/or names on your screen may be different than what is used in this how-to.
 	{{% /alert %}}
 
 ## 3 The Unit Testing Module
@@ -156,11 +156,11 @@ To create the microflow, follow these steps:
 
 Congratulations! You created your first unit tests using the Unit Testing module.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 It is possible to create a "Setup" and "TearDown" microflow per module. The "Setup" microflow is invoked once before each test run, and the "TearDown" microflow is invoked once after each test run (regardless of whether the test run consists of one or multiple unit tests).
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Do not test everything, focus on the most used and complex microflows!
 {{% /alert %}}
 

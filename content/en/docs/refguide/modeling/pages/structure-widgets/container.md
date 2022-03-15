@@ -37,7 +37,7 @@ Container properties consist of the following sections:
 
 This property specifies whether to hide the container from screen readers or not.
 
-{{% alert type="info" %}} The container should not have any focusable elements inside such as input elements, links, or buttons. These elements will cause the container to be announced by screen readers.
+{{% alert color="info" %}} The container should not have any focusable elements inside such as input elements, links, or buttons. These elements will cause the container to be announced by screen readers.
 {{% /alert %}}
 
 ### 2.2 Common Section {#common}
@@ -67,7 +67,7 @@ The **Render mode** determines which HTML5 tag will be used to show the containe
 | Hgroup    | `hgroup`    |
 | Address   | `address`   |
 
-{{% alert type="info" %}}Render mode is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="info" %}}Render mode is not supported on native mobile pages.{{% /alert %}}
 
 ### 2.5 Events Section {#events}	
 

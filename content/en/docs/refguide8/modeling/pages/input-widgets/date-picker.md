@@ -7,7 +7,7 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/date-picker.pdf).
 {{% /alert %}}
 
@@ -99,7 +99,7 @@ If you choose **Custom** as the date format (see above), this property determine
 
 {{% snippet file="refguide8/custom-date-format-tokens.md" %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Even though a date picker with a custom date format is editable, the calendar drop-down button will only be shown if the custom format represents a full date (that is, the year [`y`-`yyyy`], month [`M`-`MMMM`], and day of month [`d`-`dd`] tokens are all present in the custom format).
 {{% /alert %}}
 
@@ -107,7 +107,7 @@ Even though a date picker with a custom date format is editable, the calendar dr
 
 The placeholder text is shown if the date attribute is empty. It can be used to give the end-user a hint as to the expected format.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Placeholder text will not be displayed if a native date picker is available (that is, for iOS and Android versions 4.0 and above).
 {{% /alert %}}
 

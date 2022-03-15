@@ -70,7 +70,7 @@ If you choose **Custom** as the date format, the custom date format determines t
 | m | 1–2 | m | 59 | Minute |
 | s | 1–2 | ss | 06 | Second |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 These are some examples:
 
@@ -105,7 +105,7 @@ The values in a column can be aggregated in several ways. The aggregate function
 | Sum | Show the sum of the values. |
 | Count | Show the count of the values. |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Note that all objects will be taken into account, and not just the ones on the current page.
 
@@ -115,7 +115,7 @@ Note that all objects will be taken into account, and not just the ones on the c
 
 The aggregate caption is the text that appears in front of the computed value. This is a translatable text. See [Translatable Texts](/refguide7/translatable-texts/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 'Total' could be an aggregate caption for a column that shows the sum of the values.
 

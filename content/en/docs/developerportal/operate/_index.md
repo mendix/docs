@@ -12,7 +12,7 @@ When you have created your app, it is important to be able to manage it. There a
 
 Access to operations information is divided into four pages: Metrics, Alerts, Logs, and Backups.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Metrics, alerts, and logs are not available for Free Apps running in the Mendix Cloud, and you cannot make manual backups of Free Apps.
 {{% /alert %}}
 

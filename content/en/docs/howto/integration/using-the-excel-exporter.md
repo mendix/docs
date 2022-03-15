@@ -19,7 +19,7 @@ This how-to explains how to do the following:
 
 In this section, you will learn how to download the necessary modules from the Mendix Marketplace. The modules required for this process are [Mx Model Reflection](/appstore/modules/model-reflection/) and [Excel Exporter](/appstore/modules/excel-exporter/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The Mx Model Reflection module enables your app to obtain information about its domain model (entities and attributes) and microflow definitions at runtime.
 {{% /alert %}}
 
@@ -36,7 +36,7 @@ To download the modules, follow these steps:
     ![](/attachments/howto/integration/using-the-excel-exporter/exporter.png)
 	
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Depending on the layout selected when the app was created, errors in Studio Pro may arise due to the new module's default layouts. To correct this, open each page that has an error and update the layout to the desired layout within the app.
 {{% /alert %}}
 
@@ -82,7 +82,7 @@ To run the MxModelReflection sync follow these steps:
 
 In this section, you will learn how to create a basic Excel export template within your app. This section will cover an overview of the various configuration items to enable you to start building the desired templates.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The Excel Exporter has many options that allow the configurations to be as simple or complex as the user desires. This how-to will go over the basics to get you started, but building the desired template will vary according to your requirements.		
 {{% /alert %}}
 
@@ -96,7 +96,7 @@ To set up a template, follow these steps:
 4. Click the **New** to create a new template.
 5.  Configure the **Filename** (without extension) to be the default file name when the template is used. This is the **Name** by which the template can be identified.
 
-    {{% alert type="info" %}}The file name can always be changed when the template is used within a microflow.
+    {{% alert color="info" %}}The file name can always be changed when the template is used within a microflow.
     {{% /alert %}}
 
 6. Configure the **Input Object** to be the file document entity that is associated to your entity to be exported.
@@ -134,26 +134,26 @@ To create the worksheet layout, follow these steps:
 
 2.  Specify the **Name** that will be given to the sheet when the file is exported.
 
-    {{% alert type="info" %}}If you use an uploaded Excel file as a template, the sheet name defined in your Excel template file will be used, and the **Name** you enter here will not be used. For more information, see [Using an Uploaded Excel File as a Template](#upload-excel-file-template)
+    {{% alert color="info" %}}If you use an uploaded Excel file as a template, the sheet name defined in your Excel template file will be used, and the **Name** you enter here will not be used. For more information, see [Using an Uploaded Excel File as a Template](#upload-excel-file-template)
     {{% /alert %}}
 
 3. Configure the **Row Object** that you want to export and set the reference to the template input object (if input object is used). Each object of this entity type will be saved as a row in the worksheet.
 4.  Configure the **Start retrieved data at row** to set the ordinal number in which the data should be exported.
 
-    {{% alert type="info" %}}This setting will possibly trim the result set being exported, as the export will go from this value to the end of the list of data
+    {{% alert color="info" %}}This setting will possibly trim the result set being exported, as the export will go from this value to the end of the list of data
     {{% /alert %}}
 
 5. Select if the export should export distinct only or allow duplicate data
 6. Specify the **Column default width** and **Row default height** (or leave them as defaults).
 7.  Specify if the extract will **Use Static Data** or not:
 
-    {{% alert type="info" %}}If static data is used, that will be configured below.
+    {{% alert color="info" %}}If static data is used, that will be configured below.
     {{% /alert %}}
 
 8. Specify if the **Default text style** that will denote the pre-defined style to be applied to the exported data.
 9.  Specify if the **Default header text style** that will denote the pre-defined style to be applied to the header data:
 
-    {{% alert type="info" %}}Specifying styles are addressed in the section below.
+    {{% alert color="info" %}}Specifying styles are addressed in the section below.
     {{% /alert %}}
 
 ### 6.4 Configuring Dynamic Column Data {#dynamic-column-data}
@@ -167,7 +167,7 @@ To configure the dynamic column data, follow these steps:
 2. The **Column number** will be set automatically, but can be overwritten to the desired ordinal number.
 3.  Define a **Name** for the column and specify if that **Name** should be the **Column Header** as well when exported.
 
-    {{% alert type="info" %}}If you use an uploaded Excel file as a template, the column name defined in your Excel template file will be used, and the **Name** you enter here will not be used. For more information, see [Using an Uploaded Excel File as a Template](#upload-excel-file-template).
+    {{% alert color="info" %}}If you use an uploaded Excel file as a template, the column name defined in your Excel template file will be used, and the **Name** you enter here will not be used. For more information, see [Using an Uploaded Excel File as a Template](#upload-excel-file-template).
     {{% /alert %}}
 
 4. Specify the **Retrieve type** to identify if this column will be an attribute or a reference.
@@ -197,7 +197,7 @@ To configure the custom formatting and styling for the cells, follow these steps
 
 3.  Specify the properties of the style that will be applied to the cells. 
 
-    {{% alert type="info" %}}If you use an uploaded Excel file as a template, the background color you select here (if the value is not **none**) will overrule the background color in your template.{{% /alert %}}
+    {{% alert color="info" %}}If you use an uploaded Excel file as a template, the background color you select here (if the value is not **none**) will overrule the background color in your template.{{% /alert %}}
     
 4.  Click **Save** to make the style available for dynamic columns, static columns, and headers.
 
@@ -246,7 +246,7 @@ Your new microflow should look similar to this:
 
 ![](/attachments/howto/integration/using-the-excel-exporter/associating-objects.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you create a **PolicyDoc** with *no* associations to **Policy** objects, you will export an empty spreadsheet with the structure defined in the template.
 {{% /alert %}}
 

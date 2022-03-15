@@ -102,7 +102,7 @@ To add a namespace, do the following:
 
 ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/add-namespace.png)
 
-{{% alert type="warning" %}} If you have selected a *Connected Installation Type* please verify that the [Connected Environment Pre-requisites](#prerequisites-connected) are configured. {{% /alert %}}
+{{% alert color="warning" %}} If you have selected a *Connected Installation Type* please verify that the [Connected Environment Pre-requisites](#prerequisites-connected) are configured. {{% /alert %}}
 
 ## 4. Installing and Configuring the Mendix Operator
 
@@ -133,13 +133,13 @@ Now you can download the Configuration Tool by doing the following:
 
 3. Choose the **Mendix Operator Version** that you would like to install. If you have already installed the Mendix Operator, your currently installed version will be highlighted.
 
-	{{% alert type="info" %}}Mendix Operator version 2.\*.\* supports Kubernetes versions 1.19 and later. Mendix Operator version 1.12.\* supports Kubernetes versions 1.12 through 1.21. Choose the latest version that is supported by your Kubernetes cluster.{{% /alert %}}
+	{{% alert color="info" %}}Mendix Operator version 2.\*.\* supports Kubernetes versions 1.19 and later. Mendix Operator version 1.12.\* supports Kubernetes versions 1.12 through 1.21. Choose the latest version that is supported by your Kubernetes cluster.{{% /alert %}}
 
-	{{% alert type="info" %}}Versions earlier than 1.9.0 are only available to allow _configuration_ of previously installed Mendix Operator versions.{{% /alert %}}
+	{{% alert color="info" %}}Versions earlier than 1.9.0 are only available to allow _configuration_ of previously installed Mendix Operator versions.{{% /alert %}}
 
-    {{% alert type="warning" %}}Once you've installed a certain version of the Mendix Operator into any namespace in the cluster, you should not install older versions of the Mendix Operator into the same cluster, including other namespaces.{{% /alert %}}
+    {{% alert color="warning" %}}Once you've installed a certain version of the Mendix Operator into any namespace in the cluster, you should not install older versions of the Mendix Operator into the same cluster, including other namespaces.{{% /alert %}}
 
-	{{% alert type="info" %}}The installation and configuration tool only supports a limited range of Mendix Operator versions. If the Mendix Operator version in your namespace is too new or too old, the configuration tool will not be able to configure it. Download a version of the Configuration tool that is compatible with the Mendix Operator you have installed.{{% /alert %}}
+	{{% alert color="info" %}}The installation and configuration tool only supports a limited range of Mendix Operator versions. If the Mendix Operator version in your namespace is too new or too old, the configuration tool will not be able to configure it. Download a version of the Configuration tool that is compatible with the Mendix Operator you have installed.{{% /alert %}}
 
     ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/download-operator-version.png)
 
@@ -183,7 +183,7 @@ To install in non-interactive mode please see: [Install and Configure Mendix for
 
 2. Paste the command into your command line terminal and press <kbd>Enter</kbd>
 
-	{{% alert type="warning" %}}The Configuration Tool needs a CLI terminal with mouse support. Read the [Terminal limitations](#terminal-limitations) section before running the Configuration Tool.{{% /alert %}}
+	{{% alert color="warning" %}}The Configuration Tool needs a CLI terminal with mouse support. Read the [Terminal limitations](#terminal-limitations) section before running the Configuration Tool.{{% /alert %}}
 
 	You will see the configuration options on the screen and will be guided through filling in the information needed.
 
@@ -207,7 +207,7 @@ If the Mendix Operator and the Mendix Gateway Agent have not been installed in y
 
 4. Click **Run Installer** to install the Mendix Operator and Mendix Gateway Agent in your cluster.
 
-	{{% alert type="info" %}}The installation is successful if the **Installer output** ends with **Done**.{{% /alert %}}
+	{{% alert color="info" %}}The installation is successful if the **Installer output** ends with **Done**.{{% /alert %}}
 
 5. Click **Save Installer** if you want to save these settings to be used later.
 
@@ -215,7 +215,7 @@ If the Mendix Operator and the Mendix Gateway Agent have not been installed in y
 
 The Mendix operator and Mendix Gateway Agent are now installed on your platform.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you have selected the **Connected Mode** which installs the **Mendix Gateway Agent** component, please take note of the following:
 
 * All the Websocket connections (to communicate with the Mendix Platform) are initiated by the Mendix Gateway Agent from the cluster, and said connections do not require any listening ports to be opened in the cluster's firewall.
@@ -285,19 +285,19 @@ They are described in more detail below:
 
 **Postgres** will enable you to enter the values to configure a PostgreSQL database. You will need to provide all the information about your PostgreSQL database such as plan name, host, port, database, user, and password.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If the plan name already exists, you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To connect to an Azure PostgreSQL server, the Kubernetes cluster must be added to the list of allowed hosts in the firewall. For the database name, use `postgres`.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To connect to an Amazon RDS database, the VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Enabling the **Strict TLS** option will enable full TLS certificate validation and require encryption when connecting to the PostgreSQL server. If the PostgreSQL server has a self-signed certificate, you will also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
 
 Disabling **Strict TLS** will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
@@ -307,19 +307,19 @@ Disabling **Strict TLS** will attempt to connect with TLS, but skip certificate 
 
 **SQL Server** will enable you to enter the values to configure a Microsoft SQL Server database. You will need to provide all the information about your SQL Server database such as plan name, host, port, user, and password. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To connect to an Azure SQL Server, the Kubernetes cluster must be added to the list of allowed hosts in the firewall.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For Azure SQL databases, the additional parameters `elastic pool name`, `tier`, `service objective`, and `maximum size` are required to specify the database. You can find information about these in the [Create Database](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&tabs=sqlpool#create-a-database) documentation for the Azure SQL Database on the Microsoft documentation site.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Enabling the **Strict TLS** option will enable full TLS certificate validation and require encryption when connecting to SQL Server. If the SQL Server has a self-signed certificate, you will also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
 
 Disabling **Strict TLS** will attempt to connect with TLS, but skip certificate validation. If encryption is not supported, it will fall back to an unencrypted connection.
@@ -327,19 +327,19 @@ Disabling **Strict TLS** will attempt to connect with TLS, but skip certificate 
 
 **Dedicated JDBC** will enable you to enter the [database configuration parameters](/refguide/custom-settings/) for an existing database directly, as supported by the Mendix Runtime.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 A dedicated JDBC database cannot be used by more than one Mendix app.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there is an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.1.0 or later.
 {{% /alert %}}
 
@@ -347,7 +347,7 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/
 
 **Minio** will connect to a [MinIO](https://min.io/product/overview) S3-compatible object storage. You will need to provide all the information about your MinIO storage such as endpoint, access key, and secret key. The MinIO server needs to be a full-featured MinIO server, or a [MinIO Gateway](https://github.com/minio/minio/tree/master/docs/gateway) with configured etcd.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To use TLS, specify the MinIO URL with an `https` schema, for example `https://minio.local:9000`. If MinIO has a self-signed certificate, you'll also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
 
 If the MinIO URL is specified with an `http` schema, TLS will not be used.
@@ -391,11 +391,11 @@ The **management IAM user account** needs to have the following IAM policy (repl
 }
 ```
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.8.0 or later.
 {{% /alert %}}
 
@@ -493,11 +493,11 @@ The **management IAM user account** needs to have the following IAM policy (repl
 }
 ```
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.8.0 or later.
 {{% /alert %}}
 
@@ -530,11 +530,11 @@ The **management IAM user account** needs to have the following IAM policy (repl
 }
 ```
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.8.0 or later.
 {{% /alert %}}
 
@@ -623,11 +623,11 @@ The **management IAM user account** needs to have the following IAM policy (repl
 }
 ```
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.8.0 or later.
 {{% /alert %}}
 
@@ -654,11 +654,11 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/
 }
 ```
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there is an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 If you select *Yes* to the *Can this storage be used by multiple environments?* question, all environments using that Storage Plan will use the same Access and Secret keys and will have identical permissions. 
 Each app will write into its own directory inside the bucket.
@@ -666,21 +666,21 @@ Each app will write into its own directory inside the bucket.
 To avoid compromising security, answer *No* to the *Can this storage be used by multiple environments?* question. This way, only one app will be able to use this Storage Plan, and attaching another app to the same storage plan will not be possible.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.1.0 or later.
 {{% /alert %}}
 
 **Azure Blob storage Container (existing)** will connect to an existing Azure Blob storage Container with the provided storage account name and key. All apps will use the same Container bucket and account credentials. You will need to provide all the information about your Azure Blob storage such as plan name, account name, account key, and container name.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there's an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 If you select *Yes* to the *Can this storage be used by multiple environments?* question, all environments using that Storage Plan will be using the same account name and account keys keys and will have identical permissions.
 All apps using will write into the root directory of same Azure Blob storage Container.
@@ -689,11 +689,11 @@ To avoid compromising security, answer *No* to the *Can this storage be used by 
 
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.1.0 or later.
 {{% /alert %}}
 
@@ -708,11 +708,11 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/
 **service-only** will create just a Kubernetes Service, without an Ingress or OpenShift route.
 This option enables you to use a Load Balancer without an Ingress, or to manually create and manage the Ingress object (an Ingress that is not managed by Mendix for Private Cloud).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When switching between Ingress, OpenShift Routes, and Service Only, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Additional network options such as Ingress/Service annotations and Service ports are available in [advanced network settings](#advanced-network-settings).
 {{% /alert %}}
 
@@ -783,7 +783,7 @@ For more information about how to use this field, see the [http proxy documentat
 
 #### 4.3.4 Custom TLS{#custom-tls}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To use this option, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.7.0 or later.
 {{% /alert %}}
 
@@ -828,11 +828,11 @@ These custom CAs will be trusted by:
 * The Mendix Operator when pushing app images to the container registry
 * Mendix apps when communicating with the database, file storage and external web services
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To prevent MITM attacks, enable **Strict TLS** for the database and use an HTTPS URL for Minio. This will ensure that all communication with data storage is done over TLS, and that certificates are properly validated.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}
 
@@ -891,7 +891,7 @@ For Kubernetes:
 kubectl -n {namespace} edit operatorconfiguration mendix-operator-configuration
 ```
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Changing options which are not documented here can cause the Mendix Operator to configure environments incorrectly. We recommend that you make a backup before applying any changes.
 {{% /alert %}}
 
@@ -1010,7 +1010,7 @@ You can change the following options:
 * **servicePorts**: - can be used to specify a list of custom ports for the Service; if not specified, Services will use be created with port `8080`
 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
 {{% /alert %}}
 
@@ -1131,7 +1131,7 @@ The `liveness probe` informs the cluster whether the pod is dead or alive. If th
 
 The `readiness probe`, on the other hand, is designed to check if the cluster is allowed to send network traffic to the pod. If the pod fails this probe, requests will no longer be sent to the pod.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The configuration of the **Readiness probe** does not help to resolve *crash loopback* scenarios. In fact increasing its parameters might degrade the performance of your app, since any malfunction or error recovery will take longer to be acknowledged by the cluster.
 {{% /alert %}}
 
@@ -1158,7 +1158,7 @@ The following fields can be configured:
 * `successThreshold` – the number of consecutive successes required before the probe is considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup Probes. Minimum value is 1.
 * `failureThreshold` – the number of times Kubernetes will retry when a probe fails before giving up. Giving up in case of a liveness probe means restarting the container. Defaults to 3. Minimum value is 1.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If we are deploying a large application that takes much longer to start than the defined 60 seconds, we will observe it restarting multiple times. To solve this scenario we must edit field `initialDelaySeconds` for the **Liveness probe** to a substantially larger value.
 {{% /alert %}}
 
@@ -1198,7 +1198,7 @@ Limits and requests for memory are measured in bytes. You can express memory as 
 
 For instance, in the example above, we are requesting and limiting memory usage to roughly **512MiB**.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Modifying the resource configuration should be performed carefully as that might have direct implications on the performance of your application, and the resource usage of the server node.
 {{% /alert %}}
 
@@ -1263,7 +1263,7 @@ ImageNameTemplate allows you to specify how the image name and tag are generated
 
 The imageNameTemplate is generated by mxpc-cli when you update the registry configuration.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Any manual changes you make to the imageNameTemplate in the manifest are overwritten when you update the registry configuration using mxpc-cli.
 {{% /alert %}}
 
@@ -1339,11 +1339,11 @@ You can set the following metrics configuration values:
 * `mxAgentConfig`: configuration for the [Java instrumentation agent](https://github.com/mendix/mx-agent); collects additional metrics such as microflow execution times; can be left empty to disable the instrumentation agent. This attribute is only applicable when `mode` is `native`.
 * `mxAgentInstrumentationConfig`: instrumentation configuration for the [Java instrumentation agent](https://github.com/mendix/mx-agent); collects additional metrics such as microflow execution times; can be left empty to use the default instrumentation config. This attribute is only applicable when `mode` is `native`, and `mxAgentConfig` is not empty.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 MxAgent is a [Java instrumentation agent](https://docs.oracle.com/javase/8/docs/api/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix for Private Cloud Gateway Agent.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To disable the Prometheus metrics API, remove the `runtimeMetricsConfiguration` section or set `mode` to an empty string.
 {{% /alert %}}
 
@@ -1353,7 +1353,7 @@ For more information about collecting metrics in Mendix for Private Cloud, see [
 
 Mendix for Private Cloud is compatible with multiple types of Kubernetes autoscalers.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 To optimize resource utilization, autoscaling can terminate running instances of an app.
 
 When autoscaling scales down an app or Kubernetes node, microflows in affected pods will be terminated, and the terminating pod will no longer accept new HTTP connections.
@@ -1367,7 +1367,7 @@ Mendix for Private Cloud is compatible with cluster autoscaling. To install and 
 
 #### 5.6.2 Horizontal Pod Autoscaling{#horizontal-autoscaling}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You need to have the Mendix Operator version 2.4.0 or above installed in your namespace to use horizontal pod autoscaling.
 {{% /alert %}}
 
@@ -1395,7 +1395,7 @@ kubectl -n {namespace} edit horizontalpodautoscaling {envname}
 Replace `{namespace}` with the namespace name, and `{envname}` with the MendixApp CR name (the environment internal name).
 The Kubernetes [Horizontal pod autoscaling](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) documentation explains additional available autoscaling options.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The Mendix Runtime is based on Java, which preallocates memory and typically never releases it.
 Memory-based metrics should not be used for autoscaling.
 {{% /alert %}}
@@ -1408,14 +1408,14 @@ Scaling an environment down (decreasing the number of replicas) removes some of 
 
 [Vertical pod autoscaling](https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler) can automatically configure CPU and memory resources and requirements for a pod.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The Mendix Runtime is based on Java, which preallocates memory and typically never releases it.
 Memory-based metrics should not be used for autoscaling.
 {{% /alert %}}
 
 Mendix Operator version 2.4.0 or above has the APIs required by the vertical pod autoscaler.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Vertical pod autoscaling is still an experimental, optional Kubernetes addon.
 
 We recommend using *horizontal* pod autoscaling to adjust environments to meet demand.
@@ -1452,7 +1452,7 @@ Here you can perform the following actions on the entire cluster:
 
 ![](/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-activity-logs.PNG)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When you add a cluster manager, the user will have most of the access which the original cluster manager had, such as the abilities to add a namespace, add a member, change the permissions of the cluster member, and delete another cluster manager. 
 
 The only limitations are that:
@@ -1461,7 +1461,7 @@ The only limitations are that:
 * cluster managers who are added to the cluster cannot remove the cluster manager who created the cluster
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When you delete a cluster, this removes the cluster from the Developer Portal. However, it will not remove the cluster from your platform. You will need to explicitly delete the cluster using the tools provided by your platform.
 {{% /alert %}}
 
@@ -1523,7 +1523,7 @@ The **Apps** tab of namespace details in the cluster manager page lists all the 
 
 If you are a team member of the app, click **Details** to go to the *Environment Details* page for that app.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can only see the environment details of an app if you are a member of the team with the appropriate authorization.
 {{% /alert %}}
 
@@ -1533,7 +1533,7 @@ If you are a cluster administrator, you can also click **Configure** to configur
 
 You can add, edit, and delete annotations for your environment.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You need to have the Mendix Operator version 1.12.0 or above installed in your namespace to configure all the available annotations. You need version 1.11.0 to use pod annotations.
 {{% /alert %}}
 
@@ -1546,7 +1546,7 @@ To add a new annotation, do the following.
 
 You can also **Edit** or **Delete** an existing annotation by selecting it and clicking the appropriate button.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The new value for the annotation will only be applied when the application is restarted.
 {{% /alert %}}
 
@@ -1697,12 +1697,12 @@ kubectl -n {namespace} scale deployment mendix-operator --replicas=1
 
 The Windows version of the Configuration Tool must be run in a terminal that supports the Windows console API and has mouse support. PowerShell and the Windows Command Prompt are supported.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When running PowerShell or the Windows Command Prompt from the [new Windows Terminal](https://aka.ms/terminal), mouse clicks are [not supported](https://github.com/microsoft/terminal/issues/376).
 Run PowerShell or the Windows Command Prompt terminal as a standalone app.
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Some previously released versions of Mendix for Private Cloud required using Git Bash in Windows.
 Starting from Mendix Operator version 1.9.0, Git Bash is no longer required.
 {{% /alert %}}

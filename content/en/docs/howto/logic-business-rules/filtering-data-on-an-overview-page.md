@@ -52,7 +52,7 @@ In the previous section you set up a basic data structure and created some sampl
 
 1.  Open your **orders overview** and right click the (empty) section above the **Search** button.
 
-    {{% alert type="warning" %}} The search bar section might be already populated if you automatically filled the contents of your data grid. {{% /alert %}}
+    {{% alert color="warning" %}} The search bar section might be already populated if you automatically filled the contents of your data grid. {{% /alert %}}
 
     ![](/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581359.png)
 

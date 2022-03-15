@@ -9,7 +9,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/page-break-document-template.pdf).
 {{% /alert %}}
 
@@ -17,7 +17,7 @@ aliases:
 
 When inserting a page break, the current page will be cut off after the break and widgets below the break will be inserted in a new page.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide8/modeling/resources/document-templates/918135.png)
 

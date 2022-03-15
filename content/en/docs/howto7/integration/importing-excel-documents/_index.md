@@ -100,7 +100,7 @@ Based on the structure of the file you want to import, you will setup your templ
 6.  Click on the arrow next to **Reference to import objects** box.
 7.  Select the **MyFirstModule.Customer_XLSFile** association.
 
-    {{% alert type="warning" %}}
+    {{% alert color="warning" %}}
 
      By setting the association to the XLS File, the XLS file is saved on disk and the imported data is linked to the source file.
 
@@ -109,7 +109,7 @@ Based on the structure of the file you want to import, you will setup your templ
   
     ![](/attachments/howto7/integration/importing-excel-documents/18581965.png)
 
-    {{% alert type="warning" %}}
+    {{% alert color="warning" %}}
 
     For this example you will be using a simple Excel file, with just one sheet and columnheaders at the first row. If a more comprehensive Excel file is used you can change these values at the Sheet nr, Header row nr, and Import from row nr boxes.
 
@@ -120,7 +120,7 @@ Based on the structure of the file you want to import, you will setup your templ
 
 10. Add the column number, this should correspond with the column number from the value on the Excel file you want to map
 
-    {{% alert type="warning" %}}
+    {{% alert color="warning" %}}
 
     The number of the first column in Excel is 0, the second 1, etc.
 
@@ -137,7 +137,7 @@ Based on the structure of the file you want to import, you will setup your templ
 
 15. Repeat steps 9 to 14 for each attribute of the **Customer** object.
 
-    {{% alert type="warning" %}}
+    {{% alert color="warning" %}}
 
     If the mapping is setup right, a green check will appear in front of the row.
 
@@ -235,14 +235,14 @@ In the previous steps you have manually added all the columns to your import tem
 
 10.  Click on **Connecting matching attributes**.![](/attachments/howto7/integration/importing-excel-documents/18581934.png)
 
-     {{% alert type="warning" %}}
+     {{% alert color="warning" %}}
 
      The attributes of the selected Mendix Object which have the same name as the Caption will be automatically matched.
 
      {{% /alert %}}
 11.  To complete the template repeat the same actions as performed in chapter 4.
 
-     {{% alert type="warning" %}}
+     {{% alert color="warning" %}}
 
      Keep in mind that you have to set a key attribute for as well as the **Customer **object as the **Order** object
 
@@ -264,7 +264,7 @@ Once you have completed an Excel template you can export the template for exampl
 
 5.  You have now imported a complete import template.
 
-    {{% alert type="warning" %}}
+    {{% alert color="warning" %}}
 
     You will have a duplicate import template in your app, but in a real life situation you would import this template in a different environment/database where this template is not created yet.
 

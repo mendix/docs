@@ -7,7 +7,7 @@ description: "Describes how to use an app service to publish data to other Mendi
 tags: ["integration", "publish"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 App services are deprecated marked for removal. Use a [published web service](/refguide8/published-web-services/) or a [published REST service](/refguide8/published-rest-services/) instead.
 {{% /alert %}}
 

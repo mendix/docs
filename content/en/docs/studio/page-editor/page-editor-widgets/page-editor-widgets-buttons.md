@@ -33,7 +33,7 @@ The following categories and buttons are available in Mendix Studio as default w
   * Show User Task
   * Show Workflow
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Apart from the default button widgets, you can also [download widgets from the Mendix Marketplace](https://marketplace.mendix.com/) to your app. For more information, see the [Widgets by Origin](/studio/page-editor-widgets/#widgets-by-origin) section in *Widgets*.
 
@@ -48,7 +48,7 @@ Properties in the **Events** section are partially preset for buttons listed abo
 
 For more information, see the [Default Properties in the Events Section](#default-properties) section. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You can change preset properties, and make the button perform another action. 
 

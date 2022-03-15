@@ -55,6 +55,6 @@ The attribute layout will merge and overwrite static layout options.
 
 Layout options for preview. It will be merged with the 'Static' in Studio or at runtime when no 'Source attribute' is selected.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For more a detailed description of Any Chart configuration, see [Any Chart Widgets](/refguide/charts-any-configuration/)
 {{% /alert %}}

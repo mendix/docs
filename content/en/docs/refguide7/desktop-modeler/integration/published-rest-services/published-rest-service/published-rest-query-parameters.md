@@ -8,7 +8,7 @@ tags: ["published REST", "query", "parameters", "Date and Time format"]
 # Merge into published rest service document
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **published REST service** feature was introduced in version 7.10.0.
 

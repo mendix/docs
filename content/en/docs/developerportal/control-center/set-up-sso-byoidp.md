@@ -73,7 +73,7 @@ The data from your IdP may have different attribute names from the Mendix identi
 
 Configure which data from your identity provider is mapped to the attributes of the Mendix identity. Configure at least **ID**, **user name**,and a **first name** or **last name**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The user name must be in the correct form for an email address.{{% /alert %}}
 ![Customer IDP setup - step 4](/attachments/developerportal/control-center/set-up-sso-byoidp/customer-idp-wizard-page-4.png)
 

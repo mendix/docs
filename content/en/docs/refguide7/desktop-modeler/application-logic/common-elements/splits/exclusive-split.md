@@ -24,7 +24,7 @@ Type defines whether an expression or a rule is used to define the condition of 
 
 If the property 'Type' is set to 'Expression' the expression field can be used to define the condition of the split. The condition can be entered as an [expression](/refguide7/expressions/). The expression should result in a boolean or an enumeration.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 If you want to open a different order form per member type you can use an exclusive split. The selected customer is a parameter with name SelectedCustomer to the microflow. For each enumeration value a different sequence flow is followed. If the enumeration has no value the sequence flow with the caption (empty) is followed.
 

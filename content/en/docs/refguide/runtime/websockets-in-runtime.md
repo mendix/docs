@@ -13,7 +13,7 @@ The Mendix Runtime supports registering custom web socket endpoints using the `j
 
 All you need to do is to use the method `Core.addWebSocketEndpoint(String path, Endpoint endpoint)` to register an instance of `javax.websocket.Endpoint` to respond to web socket requests on the given path. The Session ID of the client can be obtained from the `EndpointConfig` given in the `onOpen` method of the `Endpoint`.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 As with `Core#addRequestHandler`, adding a web socket end point only happens on the current cluster node. It is therefore a good practice to call it in an **After Startup** microflow.
 {{% /alert %}}
 

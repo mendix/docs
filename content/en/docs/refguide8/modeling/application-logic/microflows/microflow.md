@@ -5,7 +5,7 @@ parent: "microflows"
 tags: ["microflow", "entity access"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/microflow.pdf).
 {{% /alert %}}
 
@@ -65,7 +65,7 @@ Disallowing concurrent execution of a microflow can be useful if a microflow wou
 
 The return type defines what information the microflow returns. The caller of the microflow will get a result of this type. See [Data Types](/refguide8/data-types/) for the possible return types.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To indicate whether or not an object should be committed, you can use Boolean as the return type of the microflow.
 {{% /alert %}}
 
@@ -80,11 +80,11 @@ To indicate whether or not an object should be committed, you can use Boolean as
 | Yes | Entity access is applied to retrieving and manipulating objects. The rights of current user are taken into account. |
 | No  *(default)*  | Entity access is not applied. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 By default entity access is not applied. Set **Apply entity access** to **Yes** if you want to perform some actions that respect the access rights of the current user.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Microflows that apply entity access have an **Entity Access** tag in the editor.
 {{% /alert %}}
 
@@ -92,7 +92,7 @@ Microflows that apply entity access have an **Entity Access** tag in the editor.
 
 **Allowed roles** defines which [module role](/refguide8/module-security/#module-role) the user must have to be able to execute the microflow.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 These roles are only checked when the microflow is executed from the client. A microflow is always allowed to call another microflow, and these roles are not checked then.
 {{% /alert %}}
 

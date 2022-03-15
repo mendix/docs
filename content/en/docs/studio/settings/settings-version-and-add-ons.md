@@ -17,7 +17,7 @@ The Mendix version is the core version of your app that contains main features a
 
 Your Mendix app consists of *modules* that divide functionality of your app into separate parts. For example, you have a default MyFirstModule where you can start building your own functionality. On the **Mendix Version & Add-Ons** screen, you can see *add-on modules* that contain specific platform capabilities used in the app. An add-on module provides additional content to certain features, such as security or workflows. For example, the Mendix SSO module allows your end-users to sign into the app with their Mendix credentials; this module provides content for security. 
 
-{{% alert type="info" %}} 
+{{% alert color="info" %}} 
 
 Version upgrades and add-on updates come into effect after you publish your app.
 
@@ -31,7 +31,7 @@ When a new Mendix version comes out, you see a green dot next to the **Settings*
 
 For more information on the upgrade, see the [Upgrading to the Next Version](/studio/general-versions/#upgrade) section in *Studio Ranges & Mendix Versions*.
 
-{{% alert type="warning" %}} 
+{{% alert color="warning" %}} 
 
 Once you have upgraded to the newest version, you cannot revert the upgrade. Also, anyone working on the app using Studio Pro must use the new version of Studio Pro from that moment on.
 

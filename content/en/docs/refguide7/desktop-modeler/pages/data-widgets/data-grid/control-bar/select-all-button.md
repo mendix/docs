@@ -32,7 +32,7 @@ The select all button allows the end-user to select all objects in a grid, or re
 | Select page | Clicking on this button selects all objects on the current page. |
 | Select all | Clicking on this button selects all objects. |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Due to technical limitations, a button with the selection type "Select all" cannot be combined with Remove, Delete, or Select buttons. An Edit button always behaves as if the selection type is "Select page," regardless of the actual settings of the "Select all" button that had been used to select objects.
 

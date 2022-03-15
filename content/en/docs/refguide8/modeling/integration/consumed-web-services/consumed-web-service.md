@@ -6,7 +6,7 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/consumed-web-service.pdf).
 {{% /alert %}}
 
@@ -18,11 +18,11 @@ This document describes the properties of an imported web service. For a general
 
 You can load the WSDL from a URL or from a WSDL file saved on your disk.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 If you try to load a WSDL file from a URL that requires authentication you will be asked for a username and password.
 
-{{% /alert %}}{{% alert type="warning" %}}
+{{% /alert %}}{{% alert color="warning" %}}
 
 A WSDL file may contain multiple services and a service may contain multiple ports. Upon loading a WSDL, a dialog box will ask you to select a port for each service that contains multiple ports.
 
@@ -47,7 +47,7 @@ This part shows all the operations found in the WSDL. You can expand the list an
 
 Check **Send binary data as attachment (MTOM)** to enable MTOM (_Message Transmission Optimization Mechanism_): a method of efficiently sending binary data to and from Web services. Read more about it at [w3.org](https://www.w3.org/TR/soap12-mtom/). 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Message optimization will only be applied when you use one or more export mappings to create the request body in the call web service action.
 

@@ -13,7 +13,7 @@ A **Report date parameter** allows the end-user to specify a Date and time param
 
 For example, a report may show order data for a customer over a selected period, and the report date parameter can be used to specify which period should be selected.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can add more fields to a report date parameter widget to make it easier for an end-user to select a date range. See [Additional Report Date Parameter Fields](#additional-fields), below, for more information.
 {{% /alert %}}
 
@@ -21,7 +21,7 @@ The report date parameter is displayed in structure mode with the data set param
 
 ![Report date parameter in structure mode](/attachments/refguide/modeling/pages/report-widgets/report-date-parameter/report-date-parameter.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you have a report date parameter widget on the page, you must also add a [Report Button](/refguide/report-button/) widget so that it is possible for the end-user to regenerate the report after specifying the parameter.
 {{% /alert %}}
 
@@ -74,7 +74,7 @@ Set this to **No** if the **from** and **to** field results should not be shown.
 
 **Min. year** is the earliest year that the end-user can choose in the **Year** [date range field](/refguide/date-range-field/).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The value in **Min. year** will not prevent an end-user from choosing an earlier date in the **From** or **To** fields of the report date parameter widget. It only applies to the *year* date range field.
 {{% /alert %}}
 
@@ -82,7 +82,7 @@ The value in **Min. year** will not prevent an end-user from choosing an earlier
 
 **Max. year** is the latest year that the end-user can choose in the **Year** [date range field](/refguide/date-range-field/).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The value in **Max. year** will not prevent an end-user from choosing a later date in the **From** or **To** fields of the report date parameter widget. It only applies to the *year* date range field.
 {{% /alert %}}
 

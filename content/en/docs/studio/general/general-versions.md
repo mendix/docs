@@ -35,7 +35,7 @@ This means that when you upgrade, you upgrade your whole app to a new Mendix ver
 
 When you see the upgrade notification, you can either stay on the current version and continue working (although you might not have the newest Mendix Platform features and improvements), or you can upgrade to the newest version. When you upgrade, you will automatically be upgraded to the latest version possible. Usually it is the latest version in the current Studio bundle. An upgrade from one Studio bundle to another can be done in Studio Pro. For example, if you want to upgrade from Mendix version 9.6 to Mendix version 9.10, you need to use Studio Pro.
 
-{{% alert type="info" %}} 
+{{% alert color="info" %}} 
 
 Studio has a minimum supported Mendix Studio version. This means that if the Mendix version of your app is lower than the minimum supported version, the upgrade is obligatory; otherwise, you will not be able to work on your app in Studio. 
 
@@ -52,7 +52,7 @@ The table below shows how Studio ranges relate to Mendix versions and what versi
 | 9.0-9.6      | Latest available version, but no lower than 9.5.1. Due to breaking changes, minimum Studio-supported version in this bundle is 9.5.1.  Apps below 9.5.1 will not open in Studio and an automatic upgrade will be suggested. |
 | 9.7 & above  | Latest available version from 9.7 and above.                 |
 
-{{% alert type="warning" %}} 
+{{% alert color="warning" %}} 
 
 Once you have upgraded to the newest version, you cannot revert the upgrade. Also, anyone working on the app using Studio Pro must use the new version of Studio Pro from that moment on.
 

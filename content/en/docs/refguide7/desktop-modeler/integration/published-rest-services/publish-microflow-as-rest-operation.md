@@ -9,7 +9,7 @@ tags: ["Microflow", "REST", "operation", "resource"]
 # linked from DM: edit microflow > (right-click) Publish as REST service operation > New > Help (integration)
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This feature was introduced in version 7.15.0.
 

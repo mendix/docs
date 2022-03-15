@@ -12,7 +12,7 @@ aliases:
 #Please do not rename the anchors in this document as they are used in links from the Developer Portal.
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
 {{% /alert %}}
 
@@ -20,7 +20,7 @@ Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be reti
 
 To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs of both your app and its environment. These graphs show performance trends of your apps in the paid editions of the Mendix Cloud. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This document describes the trends graphs available in Mendix Cloud v3. If your app is deployed to Mendix Cloud v4, please refer to [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4/).
 
 If you don't know which Mendix Cloud version you are using, you can find out by following the instructions in [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region/).
@@ -30,7 +30,7 @@ If you don't know which Mendix Cloud version you are using, you can find out by 
 
 To view the **Trends**, you must have permission to **Access the Monitoring**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Only the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) is allowed to grant node permissions.
 {{% /alert %}}
 
@@ -110,7 +110,7 @@ Additional information about request handlers is available in the *Requests* sec
 
 In the **Object cache** graph you can monitor the number of Mendix Objects that live in memory.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This metric is only available for apps built with Mendix versions 6 and below. Mendix versions 7 and above use a stateless runtime and so have no object cache. See the [Mendix 7.0 Release Notes](/releasenotes/studio-pro/7.0/) for more information.
 {{% /alert %}}
 
@@ -193,7 +193,7 @@ The **Application node CPU usage** graph shows the CPU utilization in percentage
 
 The most important value in here is **user**, which shows the amount of CPU time used for handling requests at Mendix Runtime and executing microflows and scheduled events.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 CPU usage of the database is shown in [Database Node CPU Usage](#Trends-dbcpu), below.
 {{% /alert %}}
 

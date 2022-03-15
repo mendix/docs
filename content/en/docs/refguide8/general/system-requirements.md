@@ -8,7 +8,7 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/system-requirements.pdf).
 {{% /alert %}}
 
@@ -27,11 +27,11 @@ The following frameworks are automatically installed (if necessary):
 * Microsoft Visual C++ 2015 Redistributable Package
 * AdoptOpenJDK 11 or Oracle JDK 11 (the former is installed automatically as of [Mendix 8.0.0](/releasenotes/studio-pro/8.0/#800) if you do not have any JDK 11 installed) 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Please note the limitation that the database viewer built into Studio Pro (as described in [How to Share the Development Database](/howto8/collaboration-requirements-management/sharing-the-development-database/)) does not work with JDK 11.06 or 11.07.
 {{% /alert %}}
 
@@ -47,7 +47,7 @@ Studio Pro needs access to the following URLs in order to work. If your firewall
 
 If you want to use TortoiseSVN in combination with Studio Pro, download the latest version from the [TortoiseSVN](https://tortoisesvn.net/) website.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.
 
 Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
@@ -69,7 +69,7 @@ The [Team Server](/developerportal/collaborate/team-server/) is implemented usin
 
 [Mendix Studio](/studio8/) is optimized for use with Google Chrome. While Chrome is the officially supported browser, you can also use Mendix Studio with other popular browsers like Mozilla Firefox, Apple Safari, and Microsoft Edge. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The browser you use needs to have JavaScript turned on.
 {{% /alert %}}
 
@@ -104,7 +104,7 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from AdoptOpenJDK, see [AdoptOpenJDK Installation](https://adoptopenjdk.net/installation.html). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. Mendix Studio Pro will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself. For more information about this issue, see [HotSpot (64bit server) hangs on socket read (JVM 1.7 bug?) - updated](http://blog.bielu.com/2011/11/hotspot-64bit-server-hangs-on-socket.html) and [Possible Bug in Java 7](https://forums.oracle.com/forums/thread.jspa?messageID=9985748).
 {{% /alert %}}
 
@@ -123,7 +123,7 @@ Current support:
 * PostgreSQL 9.6, 10, 11, 12, 13, 14
 * [SAP HANA](/refguide8/saphana/) 2.00.040.00.1545918182
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Each app should have its own database. Mendix apps cannot share data by sharing the same database. 
 {{% /alert %}}
 

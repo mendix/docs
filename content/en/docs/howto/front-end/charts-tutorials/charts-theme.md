@@ -67,11 +67,11 @@ To create the required custom configuration easily, follow these steps:
 
     ![chart editor](/attachments/howto/front-end/charts-tutorials/charts-advanced-tuning/charts-toggle-editor-open.png)
 
-    {{% alert type="warning" %}}Please note that the editor changes will not persist. They need to be stored in the advanced settings of the widget or stored in the theme.{{% /alert %}}
+    {{% alert color="warning" %}}Please note that the editor changes will not persist. They need to be stored in the advanced settings of the widget or stored in the theme.{{% /alert %}}
 
 12. In Studio Pro, set **Mode** in the chart to **Advanced**, to remove the Toggle Editor button.
 
-    {{% alert type="warning" %}}Please note that the theme settings only apply to charts in Advanced or Developer mode.{{% /alert %}}
+    {{% alert color="warning" %}}Please note that the theme settings only apply to charts in Advanced or Developer mode.{{% /alert %}}
 
 ### 3.2 Adding a Theme Configuration
 
@@ -83,7 +83,7 @@ To add a theme file which will apply to all charts in the app, follow these step
 
 1. Create a new file: *com.mendix.charts.json*
 
-    {{% alert type="info" %}}Please note that<br/>
+    {{% alert color="info" %}}Please note that<br/>
     * the file name is case sensitive<br/>
     * the file extension is `json`<br/>
     * the file must contain a *json* object, even if this is empty — for example `{ }`

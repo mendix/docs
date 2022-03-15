@@ -44,7 +44,7 @@ Multiplicity shows the owner and the direction of association if the association
 
 You can swap the direction of the multiplicity if its type is one-to-many or many-to-many. In this case you will change the owner of association.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For more details on the reasoning underlying associations, ownership, and multiplicity, see the [Introduction](/refguide/associations/#intro) section of *Associations* in the *Studio Pro Guide*.
 {{% /alert %}}
 
@@ -65,7 +65,7 @@ For examples of delete behavior configuring, see [Delete Behavior](/howto/data-m
 
 Cross-module association makes an association between entities of different modules.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You cannot create separate modules in Studio. But if you have different modules in Studio Pro, you can see the list of different domain models (except the System module and Marketplace modules) and make cross-module associations in Studio. 
 

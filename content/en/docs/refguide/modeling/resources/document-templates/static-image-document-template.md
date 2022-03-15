@@ -13,7 +13,7 @@ aliases:
 
 A static image shows a predefined image. It can be put either inside or outside a data view or template grid.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide/modeling/resources/document-templates/918133.png)
 

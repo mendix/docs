@@ -5,7 +5,7 @@ parent: "document-templates"
 tags: ["studio pro"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/document-template.pdf).
 {{% /alert %}}
 
@@ -39,7 +39,7 @@ The margins specify the distance between the border of the paper and the content
 
 Indicates whether the header and/or footer are also shown on the first page.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You must use a page break widget to indicate you're no longer on the first page. This cannot be calculated while generating content.
 {{% /alert %}}
 

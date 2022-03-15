@@ -7,7 +7,7 @@ tags: ["studio pro", "grid", "template grid", "data widgets"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}The template grid widget is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="warning" %}}The template grid widget is not supported on native mobile pages.{{% /alert %}}
 
 ## 1 Introduction
 
@@ -75,7 +75,7 @@ The database and XPath sources retrieve objects from the database and supports s
 
 This property indicates whether the control bar will be visible in the end-user interface. The control bar also includes the paging buttons.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Even if the control bar is invisible there can still be a default button that is triggered by (double) clicking a row. See the property 'Default button trigger' and [grid buttons](/refguide/control-bar/) for more information.
 {{% /alert %}}
 
@@ -93,7 +93,7 @@ With this property, you can change the way the paging bar is shown.
 
 Default: *Yes (with total count)*
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Hiding the control bar also hides the paging buttons. For details, see [Show Control Bar](#show-control-bar).
 {{% /alert %}}
 

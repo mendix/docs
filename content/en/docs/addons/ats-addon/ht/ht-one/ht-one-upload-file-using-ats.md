@@ -88,7 +88,7 @@ Those files are always present so you don't have to change the filepath every ti
 
 You can find the BrowserStack test files [here](https://raw.githubusercontent.com/mendix/docs/development/templates/ats-browserstack-test-files.md).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 These files are possibly outdated and not maintained by Mendix. For the latest version please contact BrowserStack.
 

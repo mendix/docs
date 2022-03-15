@@ -7,7 +7,7 @@ description: "Widgets which can be added to pages to view and edit attributes of
 tags: ["studio pro", "input widgets", "widget", "reference selector", "reference set", "association", "edit", "data input"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/input-widgets.pdf).
 {{% /alert %}}
 
@@ -59,7 +59,7 @@ There are several different input widgets, these are used for different [data ty
 
     ![Input reference set selector showing the name attribute of associated products](/attachments/refguide8/modeling/pages/input-widgets/input-reference-set-selector.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For more information on data types, see [Data Types](/refguide8/data-types/).
 
 For more information on associations and their properties, see [Associations](/refguide8/associations/).

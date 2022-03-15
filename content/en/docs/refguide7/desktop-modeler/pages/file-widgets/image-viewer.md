@@ -8,7 +8,7 @@ parent: "file-widgets"
 
 An image viewer can be used to display an image or its thumbnail.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/file-widgets/image-viewer/image-viewer.png)
 This image viewer shows the product image.

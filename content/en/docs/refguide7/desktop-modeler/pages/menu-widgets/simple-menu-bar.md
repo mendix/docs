@@ -8,11 +8,11 @@ parent: "menu-widgets"
 
 The simple menu bar widget shows a configured menu in the form of a horizontal or vertical bar with images and captions. Items cannot have subitems; the menu structure can only have one level. The [menu items](/refguide7/menu-item/) points to either the page or the microflow that will opened or started when the item is clicked.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/menu-widgets/simple-menu-bar/simple-menu-bar-horizontal.png)
 
-{{% /alert %}}{{% alert type="info" %}}
+{{% /alert %}}{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/menu-widgets/simple-menu-bar/simple-menu-bar-vertical.png)
 

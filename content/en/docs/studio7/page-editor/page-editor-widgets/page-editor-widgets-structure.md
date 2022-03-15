@@ -61,7 +61,7 @@ The **Expand** section > **Add Row** allows you to add a row above or below the 
 
 To add a row, select a row in the layout grid and click one of the buttons in **Add Row**. A row identical to the selected one will be inserted.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 **Row** and **Column** also have the **Expand** section with the same properties.  
 

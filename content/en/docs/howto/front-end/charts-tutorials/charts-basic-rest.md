@@ -28,7 +28,7 @@ Mendix allows you to publish REST Web services natively from Studio Pro. Using t
 
 To create an Area Chart with data from a REST service, follow these steps:
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 For more information on publishing a REST API refer to this Mendix document: [Published REST Operation](/refguide/published-rest-operation/)
 

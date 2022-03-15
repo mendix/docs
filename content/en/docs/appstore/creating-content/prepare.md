@@ -14,7 +14,7 @@ aliases:
 
 To bring your commercial product to the Mendix Marketplace, you need to first sign up as a [Mendix Vendor](/appstore/creating-content/vendor-program/). Once that process is complete, you need to prepare your content to sell in the Marketplace.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The process for becoming a vendor is currently restricted to Beta suppliers, so you have to be part of the Mendix Vendor Beta program.
 {{% /alert %}}
 

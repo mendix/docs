@@ -7,7 +7,7 @@ tags: ["studio pro", "data"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/text-box.pdf).
 {{% /alert %}}
 
@@ -146,7 +146,7 @@ Attributes of the data type `String` or `Hashed string` can have their value hid
 
 #### 2.8.2 Input Mask
 
-{{% alert type="info" %}}Input masks are not supported on native mobile pages.
+{{% alert color="info" %}}Input masks are not supported on native mobile pages.
 
 Input masks are designed for string data types. Be cautious when using them with numeric or hashed string data types.
 {{% /alert %}}

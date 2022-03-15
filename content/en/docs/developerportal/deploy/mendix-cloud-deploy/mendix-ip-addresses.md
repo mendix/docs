@@ -16,7 +16,7 @@ An Internet Protocol address (IP address) is simply the address of a device on a
 
 Mendix uses one IP address when someone connects to your Mendix application (Incoming IP) and a different IP address for when your application connects to outside services (Outgoing IP).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Incoming IP addresses are liable to change without notice and should not be used to access the application.
 
 Mendix will endeavor to maintain the current *outgoing* IP addresses. However, they may change for operational reasons and this is subject to a 48-hour notice period.
@@ -49,7 +49,7 @@ Mendix uses the following static IP addresses. If you need further information, 
 
 #### 2.2.2 Mendix Cloud v3 (XS4/BIT)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
 {{% /alert %}}
 

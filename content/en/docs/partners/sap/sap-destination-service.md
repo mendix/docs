@@ -11,7 +11,7 @@ tags: ["SAP", "OData Connector", "Destination Service", "Cloud Connector", "Conn
 
 The SAP Destination Service enables your Mendix app, running on SAP Business Technology Platform (SAP BTP), to use external services or systems. It also enables access to remote on-premises systems using the Connectivity service. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The SAP Destination Service will only provide the correct information when run on SAP BTP. To test your app on your local machine you will have to use a URL to connect directly to an SAP service which is available to you.
 {{% /alert %}}
 
@@ -124,7 +124,7 @@ The following attributes are provided for destinations with basic authentication
 * User
 * Password
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 These are the credentials used to establish the connection to the destination. They are not the credentials of the user within the Mendix app.
 {{% /alert %}}
 
@@ -144,7 +144,7 @@ The following attributes are provided for destinations with SAML Bearer Assertio
 
 All the configuration for this type of authentication is performed in the connectivity service.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This is the type of authentication which you need to implement if you previously used the SAP Cloud Connector.
 {{% /alert %}}
 

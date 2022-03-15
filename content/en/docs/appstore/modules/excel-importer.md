@@ -167,7 +167,7 @@ Like in Studio Pro, the value of a reference (set) can be added to the current v
 
 Keep track of all the object keys in the association that could not be found. 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This consumes a lot of memory, since all the values need to be remembered.
 {{% /alert %}}
 
@@ -189,7 +189,7 @@ This option causes objects that are not found in the imported database to be rem
 
 This functionality requires your Mendix objects to have an integer attribute that is used to keep track of which objects to remove. You can specify which attribute to use for this in the selector marked **Attribute**. 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This attribute must not be used by your application in any other way, because this will cause unexpected results.
 {{% /alert %}}
 

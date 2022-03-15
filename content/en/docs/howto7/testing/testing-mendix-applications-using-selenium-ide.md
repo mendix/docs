@@ -29,7 +29,7 @@ Before starting with this how-to, make sure you have completed the following pre
 | Firefox | 50.1.0 |
 | Selenium IDE | 2.9.1.1 |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 All images, names, and steps in this how-to are based on these versions. When using other versions, the images and/or names on your screen may be different than what is used in this how-to.
 
@@ -155,7 +155,7 @@ You need to find the right locator, which will tell Selenium IDE which GUI eleme
 
 Congratulations! You have just created your second automated test.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Some widgets, like a grid or a list view, can show multiple items. Every item has the CSS class `mx-name-index-[indexNumber].` The index number starts at 0.
 {{% /alert %}}
 

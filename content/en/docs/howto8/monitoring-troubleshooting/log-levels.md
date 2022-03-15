@@ -103,7 +103,7 @@ To set the log levels for standard log messages, follow these steps:
 
 ![](/attachments/howto8/monitoring-troubleshooting/log-levels/18580029.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can override the log level for standard log messages in each environment when your app is deployed to the Mendix cloud. See the [Log Levels Tab](/developerportal/deploy/environments-details/#log-levels) section in *Environment Details* for more information.
 {{% /alert %}}
 

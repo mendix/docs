@@ -55,7 +55,7 @@ To write an expression using suggestions, do the following:
 2. Select an element from the list.
 4. Click **Add** when the expression is completed.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 To call the list of suggestions, press <kbd>Ctrl</kbd> + <kbd>Space</kbd>
 

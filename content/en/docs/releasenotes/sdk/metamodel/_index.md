@@ -10,7 +10,7 @@ These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/unde
 * [9](/releasenotes/sdk/metamodel-9/)
 * [8](/releasenotes/sdk/metamodel-8/)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The release notes include all minor versions and patches.
 {{% /alert %}}
 

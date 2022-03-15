@@ -27,7 +27,7 @@ This query returns a list with three objects (these objects have the IDs "123423
 id('ID_123423462342 ID_123423462343 ID_123423462344')
 ```
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 ID queries cannot be started by the characters `'//'`. ID queries always start directly with `id(....`.
 {{% /alert %}}
 

@@ -7,7 +7,7 @@ menu_order: 40
 
 ## 1 Introduction
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The AppCloudServices module has now been removed from the Mendix Marketplace and this API is therefore deprecated.
 {{% /alert %}}
 
@@ -15,7 +15,7 @@ The Permissions API enables retrieving the [user roles](/refguide/user-roles/) a
 
 * A user may be granted roles through a group policy for a [group](/developerportal/control-center/#groups) in which they are a member. Group policies define a specific set of user roles to be granted to members of the group to which the policy applies for a specific environment. Group membership can also be changed by the [User Management API](/apidocs-mxsdk/apidocs/user-management-api/) .
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The Permissions API will require the EnvironmentUUID and EnvironmentPassword parameters to authenticate and authorize requests; the values for these should come from constants from the AppCloudServices module with the same name. The Mendix Developer Portal will automatically set these constants; you do not need to set these yourself. For this reason, the Permissions API will however only function for applications which use the AppCloudServices module and are deployed through the Mendix Developer Portal.
 
@@ -31,7 +31,7 @@ The service is part of the AppCloudServices module, and it's included in the def
 
 Retrieves the user roles for a specific user, based on their OpenID; this will return a list of AppRole objects representing the user roles the user has.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Note that a request will return a list of [non-persistable objects](/refguide/persistability/). It's up to the implementer of the Permissions API to use these to create a database representation of the roles the user has in the application.
 

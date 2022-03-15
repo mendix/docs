@@ -6,7 +6,7 @@ menu_order: 110
 tags: ["studio pro"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/integration.pdf).
 {{% /alert %}}
 
@@ -16,9 +16,9 @@ Integration with other applications (other than Mendix) can be done using REST o
 
 Integration between Mendix applications is done best with REST services (for details, see [Published REST Service](/refguide8/published-rest-services/) and [Call REST Service](/refguide8/call-rest-action/)). Some of the terms used most often are explained below.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For a [call REST service](/refguide8/call-rest-action/) activity and JSON support in [mapping documents](/refguide8/mapping-documents/), see [Consumed REST Services](/refguide8/consumed-rest-services/).
-{{% /alert %}}{{% alert type="info" %}}
+{{% /alert %}}{{% alert color="info" %}}
 For a [call web service](/refguide8/call-web-service-action/) activity and support for SOAP web services/XML, see [Consumed Web Services](/refguide8/consumed-web-services/).
 {{% /alert %}}
 

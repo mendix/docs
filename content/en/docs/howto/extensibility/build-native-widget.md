@@ -74,7 +74,7 @@ To scaffold your app folder for the group box widget, follow these steps:
 1. Open up a terminal.
 2. Change the current working directory to the folder where you want to store your widget app.
 
-	{{% alert type="info" %}}Make sure to store your widget app in a folder not connected to Dropbox. Dropbox blocks files from being watched, which will prevent you from completing this document. 
+	{{% alert color="info" %}}Make sure to store your widget app in a folder not connected to Dropbox. Dropbox blocks files from being watched, which will prevent you from completing this document. 
 	{{% /alert %}}
 
 3. Start the generator by executing the following command:
@@ -1095,7 +1095,7 @@ First change the widget property configuration:
 
 	c. Add the file to the *src* folder which contains the *xml* file
 
-	{{% alert type="info" %}}This functionality was introduced in Studio Pro v9.6. To show a widget icon in Studio Pro v9.5 or below, the icon needs to be added to the *xml* file. To do this, follow the steps from the [Mendix 8](/howto8/extensibility/build-native-widget/#adding-a-collapsible-property) version of this document.
+	{{% alert color="info" %}}This functionality was introduced in Studio Pro v9.6. To show a widget icon in Studio Pro v9.5 or below, the icon needs to be added to the *xml* file. To do this, follow the steps from the [Mendix 8](/howto8/extensibility/build-native-widget/#adding-a-collapsible-property) version of this document.
 	{{% /alert %}}
 
 Now support this section's two features with your display component:

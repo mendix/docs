@@ -12,7 +12,7 @@ If database is selected as the data source for a widget then the object or objec
 2. The XPath constraint supplied in the widgets settings.
 3. An association, if the widget is nested in another data widget and the data path described runs over an association.
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 Use access rules whenever possible to limit data in data grids. This way you know that the objects will always be constrained by these rules (as opposed to an XPath constraint on a single data grid). The access rules will also be applied when executing microflows which saves you from repeating XPath constraints.
 {{% /alert %}}
 
@@ -34,7 +34,7 @@ The entity (path) property specifies the target of the database query. A top-lev
 
 A nested data grid can either be connected to an entity or to an entity path starting in the entity of the containing data view. The entity path follows one association of type reference in the opposite direction in which the association's arrow is pointing (from * to 1).
 
-{{% alert type="alert" %}}
+{{% alert color="alert" %}}
 This differs from the [association data source](/refguide7/association-source/) in that the objects are not retrieved from the client cache but directly from the database. The association is simply parsed as an extra constraint in the database query.
 {{% /alert %}}
 
@@ -69,6 +69,6 @@ _Default value:_ false
 
 The [XPath constraint](/refguide7/xpath-constraints/) allows for custom, hard-coded limitations on the data displayed. This constraint will be appended to the constraints (if any) already applied through security and context.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 XPath constraints are applied equally to all users and only apply to the data displayed in a single data widget. If the goal is to shield a particular subset of the data from users then [entity access rules](/refguide7/access-rules/) are superior in that they can be tailored to each individual user role and that they apply system-wide.
 {{% /alert %}}

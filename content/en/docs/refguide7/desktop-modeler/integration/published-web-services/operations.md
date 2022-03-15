@@ -55,11 +55,11 @@ Defines the name of the parameter in the webservice call. This is initially copi
 
 Is available when the parameter is a list, and can be used to name the object in the list.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The CountCarsAndHp operation. It takes a non-optional list of Vehicle as a parameter which is called VehicleList and consists of objects called Vehicle. This information is based on the microflow and entity model but can be modified.
 
-{{% /alert %}}{{% alert type="info" %}}
+{{% /alert %}}{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/integration/published-web-services/operations/918221.png)
 
@@ -80,19 +80,19 @@ If you click 'Select...' in the parameter tab, you can select individual members
 | All nillable | Checks the Nillable box on every expanded node and visible leaf node. |
 | All non-nillable | Unchecks the Nillable box on every expanded node and visible leaf node. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/integration/published-web-services/operations/16843878.png)
 
 Here you can select which members of the entity can be passed and/or are optional or nillable, as well as set their names. Note that checking Optional or Nillable on the root element has no effect; you should set these values in the operation editor.
 
-{{% /alert %}}{{% alert type="info" %}}
+{{% /alert %}}{{% alert color="info" %}}
 
 The order of XML elements in the WSDL does not by definition reflect the order of attributes in entities in the domain model. The order of members in the dialog is the same as the order of elements in the WSDL (and can be different from the order of attributes in entities). This gives a better overview of the WSDL contract that is exposed from Mendix. The structure you see in the members dialog reflects the structure in the WSDL.
 
 New attributes from entities will appear as new elements _below_ members that are already in the WSDL. This will prevent breaking the WSDL contract, because if you insert new XML elements inside a XML _Sequence_ container, existing web service consumers that strictly validate against the WSDL may break.
 
-{{% /alert %}}{{% alert type="info" %}}
+{{% /alert %}}{{% alert color="info" %}}
 
 If you expose the Password (hashed string) attribute of a System.User entity (or a specialization thereof), a warning appears that there is a risk that someone does a brute-force attack to obtain the original plain-text password. The risk is considerably less when you use a strong hashing algorithm (preferably 'BCrypt'). The hashing algorithm can be set in the Project settings.
 
@@ -120,7 +120,7 @@ This determines if the element in the XML is sent as nil if the return value is 
 
 Optional and Nillable cannot be checked both.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/integration/published-web-services/operations/16843880.png)
 

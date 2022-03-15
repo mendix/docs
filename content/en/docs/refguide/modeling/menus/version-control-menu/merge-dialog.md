@@ -10,7 +10,7 @@ tags: ["studio pro", "merge-dialog", "merge", "version control"]
 
 With the **Merge** dialog you can [merge](/refguide/version-control/#merge) changes from a branch line to the main line. For example, a fix that you applied in a maintenance branch line can be merged back to the main line so that you do not have to apply the fix by hand again. Also if you completed developing a large feature in a separate branch line you can use merge to incorporate that feature into the main line.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Before continuing with the merge action, make sure you are currently working in the development line to which you want to merge.
 {{% /alert %}} 
 
@@ -44,7 +44,7 @@ Choose the branch line that you want to merge. It is not necessary to select ind
 
 ## 4 Advanced Merge
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This option is only available for SVN.
 

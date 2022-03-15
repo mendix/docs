@@ -6,7 +6,7 @@ menu_order: 40
 tags: ["studio pro"]
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 

@@ -27,7 +27,7 @@ We currently support deploying to the following Kubernetes cluster types:
 * [minikube](https://minikube.sigs.k8s.io/docs/)
 * [Google Cloud Platform](https://cloud.google.com/)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If deploying to Red Hat OpenShift, you need to specify that specifically when creating your deployment. All other cluster types use generic Kubernetes operations.
 {{% /alert %}}
 
@@ -38,7 +38,7 @@ Mendix for Private Cloud Operator `v2.*.*` is the latest version which officiall
 * Kubernetes versions 1.19 through 1.22
 * OpenShift 4.6 through 4.8
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
 
 This version of Kubernetes is not yet offered or fully supported by most distributions and providers.
@@ -146,7 +146,7 @@ The following databases are supported, and provide the features listed.
 The ephemeral database plan uses an in-memory database running directly in a Mendix Runtime container.
 It doesn't require any external database or provider and is great for quick tests or apps that don't require any file storage.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 An app using an ephemeral database will lose all data if its environment is stopped or restarted.
 
 An app with an ephemeral database cannot have more than one replica. Only the first (master) replica will be able to start.
@@ -164,7 +164,7 @@ The following standard PostgreSQL databases are supported:
 * PostgreSQL 12
 * PostgreSQL 13
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 While Mendix for Private Cloud supports all Postgres versions listed above, the Mendix Runtime might require a more specific Postgres version.
 
 For best compatibility, use Postgres 12 - it's supported by the latest supported LTS versions of the Mendix Runtime.
@@ -185,13 +185,13 @@ Azure PostgreSQL databases require additional firewall configuration to allow co
 
 Some managed PostgreSQL databases might have restrictions or require additional configuration.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To use a PostgreSQL database, the Mendix Operator requires a master account with permissions to create new users and databases.
 
 For every Mendix app environment, a new database schema and user (role) will be created so that the app can only access its own data.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 By default, the Mendix Operator will first connect to the database server with TLS enabled; if the database server doesn't support TLS, the Mendix Operator will reconnect without TLS.
 To ensure compatibility with all PostgreSQL databases (including ones with self-signed certificates), all TLS CAs are trusted by default.
 
@@ -223,14 +223,14 @@ Amazon and Azure SQL servers require additional firewall configuration to allow 
 
 Some managed SQL Server databases might have restrictions or require additional configuration.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To use a SQL Server database, the Mendix Operator requires a master account with permissions to create new users and databases.
 
 For every Mendix app environment, a new database, user and login will be created so that the app can only access its own data.
 
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 By default, Mendix for Private Cloud will not enforce encryption. Encryption can be enforced in SQL Server if required.
 
 If Strict TLS is enabled, the Mendix Operator will connect to SQL server with TLS and validate the SQL Server's TLS certificate. In this case, the connection will fail if 
@@ -248,7 +248,7 @@ Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later
 
 This allows you to use an existing database (schema) [database configuration parameters](/refguide/custom-settings/) directly as supported by the Mendix Runtime.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 A dedicated JDBC database cannot be used by more than one Mendix app.
 {{% /alert %}}
 
@@ -259,7 +259,7 @@ A dedicated JDBC database cannot be used by more than one Mendix app.
 The ephemeral file storage plan will store files directly in the Mendix Runtime container.
 It doesn't require any external file storage provider and is great for quick tests or stateless apps that don't require any file storage.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 An app using an ephemeral file storage will lose all files if its environment is stopped or restarted.
 {{% /alert %}}
 
@@ -267,13 +267,13 @@ An app using an ephemeral file storage will lose all files if its environment is
 
 The latest version of [MinIO](https://min.io/) is supported if it is running in server mode.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 An admin account is required with permissions to create and delete users, policies and buckets.
 
 For every Mendix app environment, a new bucket and user will be created so that the app can only access its own data.
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If MinIO is installed in [Gateway](https://github.com/minio/minio/tree/master/docs/gateway) mode, it needs to be configured to use etcd.
 MinIO uses etcd to store its configuration.
 Without etcd, MinIO will disable its admin API – which is required by the Mendix Operator to create new users for each environment.
@@ -304,12 +304,12 @@ Mendix Operator will need the endpoint, access key, and secret key to access the
 
 ## 6 Networking
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 DNS, load balancing and the ingress controller should be configured first for the whole Kubernetes cluster.
 Mendix for Private Cloud will use the existing ingress controller.
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 We strongly recommend using the [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/), even if other Ingress controllers or OpenShift Routes are available.
 
 NGINX Ingress can be used to deny access to sensitive URLs, add HTTP headers, enable compression, and cache static content.

@@ -72,7 +72,7 @@ isNew($object1)
 
 ## Checking Whether an Object Is Synced<a name="synced"></a>
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This function is available only in expressions for [conditional visibility or editability](/refguide7/conditions/), as only they are evaluated client-side.
 

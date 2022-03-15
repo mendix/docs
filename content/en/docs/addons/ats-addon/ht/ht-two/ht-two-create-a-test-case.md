@@ -60,7 +60,7 @@ The following steps describe how to add test steps manually to your test case. Y
 
 2. Enter *Open Mendix Application* in the input area of the dialog box. You have the core action and Mendix actions. Mendix actions are preferred over core actions, so select the Mendix action to open the application. 
 
-    {{% alert type="info" %}} Enter terms like *Find*, *Click*, *Set*, *Assert*, and *Get* to find the right action. {{% /alert %}}
+    {{% alert color="info" %}} Enter terms like *Find*, *Click*, *Set*, *Assert*, and *Get* to find the right action. {{% /alert %}}
 
     ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-case/test-case-page-open-application.png)
 

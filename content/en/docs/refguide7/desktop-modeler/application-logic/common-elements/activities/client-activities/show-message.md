@@ -7,7 +7,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This activity can only be used in microflows, not in nanoflows.
 {{% /alert %}}
 
@@ -15,7 +15,7 @@ This activity can only be used in microflows, not in nanoflows.
 
 With the show-message action you can show a blocking or non-blocking message to the user.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 See [Microflow Element Common Properties](/refguide7/microflow-element-common-properties/) for properties that all activities share (for example, caption). This page only describes the properties specific to the action.
 
@@ -43,7 +43,7 @@ Template defines the text of the message. The template can contain parameters th
 
 For each parameter in the template you define a microflow expression of which the value will be inserted at the position of the parameter. Parameters need to be entered using [expressions](/refguide7/expressions/) resulting in a string.
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 
 With parameters you can customize your message with data specific to the situation. For example, the message "An e-mail has been sent to customer {1}." with parameter `$customer/FullName` will show the full name of the customer to whom an e-mail has been sent.
 

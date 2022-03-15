@@ -39,7 +39,7 @@ To add additional buttons to the control bar, do the following:
 
 ![Add Button to Control Bar](/attachments/refguide/modeling/pages/data-widgets/grids/control-bar/control-bar-add-button.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 It is not possible to add additional buttons by dragging them from the **Toolbox** into the control bar.
 
 When setting the visibility of control bar buttons, it is not possible to use currently selected objects for conditional visibility expressions, or visibility based on the selected objects' attributes.
@@ -51,7 +51,7 @@ Sections below describe the purpose of each control bar button and their specifi
 
 The **Search bar toggle** button (with default caption **Search**) opens or hides the [search bar](/refguide/search-bar/). It is only present if the **Show search bar** property of the grid is set to either *With button (initially open)* or *With button (initially closed)*.  
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In a [reference set selector](/refguide/reference-set-selector/) there will be no search fields set by default. See [Search Bar](/refguide/search-bar/) to learn more about search fields. 
 {{% /alert %}}
 
@@ -107,7 +107,7 @@ The **Selection type** property determines whether the **Select all** button sho
 | Select page *(default)* | Clicking this button selects all objects on the current page. |
 | Select all  | Clicking this button selects all objects.                    |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Due to technical limitations, a button with the **Select all** selection type cannot be combined with [Remove](#remove-button), [Delete](#grid-action-button), or [Select](#select-button) buttons. 
 
@@ -123,7 +123,7 @@ The **Deselect all** button lets the user deselect all rows in the grid or a ref
 
 The **Export to Excel** button allows end-users to export the contents of the grid or the reference set selector to an Excel file. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The Excel export function is only available in list widgets that have the [XPath data source](/refguide/xpath-source/). 
 
@@ -142,7 +142,7 @@ The **Date export format** property defines the format dates will be exported. T
 * **Date value** *(default)*  – date values are exported as real dates, so that it is possible to use Excel date functions like sorting
 * **Text** – date values are exported exactly as shown in the data grid
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 When selecting **Date value**, dates will be shown only in the time zone of your Windows account, because Excel does not support defining specific time zones.
 
@@ -152,7 +152,7 @@ When selecting **Date value**, dates will be shown only in the time zone of your
 
 The **Export to CSV** button allows end-users to export the contents of the grid or the reference set selector to a CSV file. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The export to CSV function is only available in list widgets that have the [XPath data source](/refguide/xpath-source/). 
 

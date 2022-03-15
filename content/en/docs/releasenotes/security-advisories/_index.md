@@ -14,7 +14,7 @@ Mendix publishes security advisories by leveraging [Siemens ProductCERT](https:/
 
 Mendix adds the CVSS score and CVSS vector for security vulnerabilities described in the Studio Pro release notes. Mendix also adds the Mendix-specific CVE IDs when they become available.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Siemens publishes their CVEs on the second Tuesday of every month.
 {{% /alert %}}
 

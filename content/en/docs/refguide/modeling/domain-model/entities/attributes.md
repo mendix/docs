@@ -22,7 +22,7 @@ The domain model editor uses the following symbols to help visualize attribute p
 | ![](/attachments/refguide/modeling/domain-model/entities/attributes/917593.png) | This attribute has one or more validation rules. |
 | ![](/attachments/refguide/modeling/domain-model/entities/attributes/917592.png) | This attribute has a microflow that calculates the value of the attribute. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Attributes for external entities are specified in the **External Entity Properties**. These attributes are defined in the originating app and the only local changes that can be applied to these entities is a local name and description. For further information see the [Attributes](/refguide/external-entities/#attributes) section of *External Entities*.
 {{% /alert %}}
 
@@ -30,7 +30,7 @@ Attributes for external entities are specified in the **External Entity Properti
 
 You can add attributes to an entity from the [entity properties dialog box](/refguide/entities/#dialog-box). You can also edit them from this dialog box, or by double-clicking the attribute name in the domain model.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can **Add** new attributes to [external entities](/refguide/external-entities/#attributes), **Edit** some of the attribute properties, or **Delete** them. However, the changes will only apply locally, and the values in the originating app will not be affected. For more information on operations on attributes of external entities, see the [Attributes](/refguide/external-entities/#attributes) section of *External Entities*.
 {{% /alert %}}
 
@@ -51,7 +51,7 @@ Attribute properties consist of the following sections:
 
 The **Name** property specifies the name of the attribute. This name is used to refer to the attribute in forms, microflows, queries, constraints, and so forth.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If you delete an attribute in your entity and then create a new attribute with the same name, Mendix will consider it a new and different attribute. This means that upon deployment the old column will be dropped, including its data. Then a new, empty, column with the same name will be created.
 {{% /alert %}}
 
@@ -65,7 +65,7 @@ This allows you to describe aspects of the entity which may be useful to you or 
 
 The type property defines the type of data that can be stored in the attribute. These are related to the data types described in [Data Types](/refguide/data-types/), but there is not a one-to-one mapping.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Mendix allows you to change attribute and association types on existing domain models. While some attributes can easily be converted, there are limitations and consequences of converting between some types. For more information, see [Attributes Type Migration](/refguide/attributes-type-migration/).
 {{% /alert %}}
 
@@ -108,7 +108,7 @@ A customer can be active or inactive, which is stored in an attribute named **Ac
 
 #### 2.2.2 Localize
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This property is shown if **Type** is set to **Date and time**.
 {{% /alert %}}
 
@@ -120,7 +120,7 @@ Default: *Yes*
 
 #### 2.2.3 Enumeration
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This property is shown if **Type** is set to **Enumeration**.
 {{% /alert %}}
 
@@ -128,7 +128,7 @@ The enumeration property indicates which enumeration defines the possible values
 
 #### 2.2.4 Length
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This property is shown if **Type** is set to **String**.
 {{% /alert %}}
 
@@ -138,7 +138,7 @@ Default: *Limited*
 
 #### 2.2.5 Max Length (Only for String Attribute Type)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This property is shown if **Type** is set to **String**.
 {{% /alert %}}
 
@@ -161,7 +161,7 @@ Take note of the following things when using **Calculated** attributes:
 
 #### 2.3.2 Microflow
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This property is shown if **Value** is set to **Calculated**.
 {{% /alert %}}
 
@@ -173,13 +173,13 @@ For example, in a web shop, you want to show the total expenses for each custome
 
 #### 2.3.3 Default Value
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This property is shown if **Value** is set to **Stored**.
 {{% /alert %}}
 
 The **Default value** property defines the value of this attribute when an object is created. The default value should be compatible with the type of the attribute.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Default value property is not supported for offline-first apps created in Mendix 9.7 and below. For such an attribute the value specified under the "Default Value When Not Specified" column will be used.
 {{% /alert %}}
 

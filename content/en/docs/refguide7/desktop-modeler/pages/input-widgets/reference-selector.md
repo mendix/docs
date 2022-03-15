@@ -7,7 +7,7 @@ parent: "input-widgets"
 
 The reference selector is an [input widget](/refguide7/input-widgets/) that can be used to display and edit [associations](/refguide7/associations/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/reference-selector.png)
 This reference selector allows you to select a product for your orderline.
@@ -18,7 +18,7 @@ To use a reference selector you need a many-to-one association in the domain mod
 
 The reference selector is similar to a [Report Parameter](/refguide7/report-parameter/) except that it allows users to choose from a list of objects with which to fill an association rather than items listed in an enumeration. The selector requires you to choose an entity with which the parent object shares a reference. It will also require you to choose which attribute from that referenced entity you wish to display in the selector.
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 
 If you only want to _display_ information, you can also use the text box. This has the added advantage that you can follow more than one association step.
 
@@ -35,7 +35,7 @@ The reference selector allows the end user to select objects by using either a d
 | Page | Select the reference using a pop-up page. |
 | Drop-down | Select the reference using a drop-down. |
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 
 The advantage of a selecting using a drop-down is that it is very efficient; no page needs to be opened. The advantage of selecting using a page is that the end user can search the objects. If there are a lot of objects (say, more than 20) to select from, selecting using a page is advisable.
 
@@ -47,13 +47,13 @@ _Default value:_ Drop-down
 
 This property represents the caption for the empty option in the drop-down reference selector shown to the user. Setting the caption is not available if the Select Using property set to the Page option. This is a translatable text. For more details, see [Translatable Texts](/refguide7/translatable-texts/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Filling out the caption for an empty option increases the user experience of your application. It also helps screen-reader users to operate the application easily.
 
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The empty option caption is available from Mendix 7.2.0.
 
@@ -65,7 +65,7 @@ The select page property determines which page is opened when the select page bu
 
 See [Opening Pages](/refguide7/opening-pages/). Note that opening select pages in content is prohibited.
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 
 You can generate a new page to show by right-clicking the widget and selecting 'Generate select page...'.
 
@@ -106,7 +106,7 @@ The properties in the category 'Selectable objects' determine the objects out of
 
 If a microflow is selected, the microflow will be called to compute the list of objects that the reference selector will show. A microflow can only be used if the selection is made using a drop-down.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Note that the other properties in this category have no effect when using a microflow!
 
@@ -120,7 +120,7 @@ In the microflow settings you can specify what parameters to pass to the microfl
 
 With the XPath constraint you can add a manual constraint to limit the list of objects that can be selected.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The XPath constraint `[InStock = true()]` on a reference selector for products will ensure that only products that are in stock are selectable.
 
@@ -132,7 +132,7 @@ This property has no effect if a microflow is used to fill the reference selecto
 
 A reference selector can be constrained by one or more paths. This is typically used to make one reference selector dependent on another. For example, in page where you can edit an order line, a product selector can be constrained by a category selector. After selecting a category, the product selector is constrained by this category and shows only products in the category.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/917938.png)
 _Domain model_
@@ -162,11 +162,11 @@ _Default value:_ No sort order
 
 The attribute path specifies which attribute of an associated entity is shown in the reference selector. The path must follow one association of type reference starting in the entity of the data view.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Order_Customer/Customer/Name will allow the end user to select a user from a list of user names.
 
-{{% /alert %}}{{% alert type="warning" %}}
+{{% /alert %}}{{% alert color="warning" %}}
 
 Keep in mind that even though you connect an attribute to the reference selector you are actually selecting an object. The attribute is just there to provide a visualization of the object. In this respect, the reference selector is different from other widgets like check boxes and text boxes. In those widgets you edit the value of the attribute. In the reference selector you edit an association of type reference.
 

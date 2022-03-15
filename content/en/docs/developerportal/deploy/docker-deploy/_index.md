@@ -51,7 +51,7 @@ To build the Docker image, follow these steps:
 
     ![](/attachments/developerportal/deploy/docker-deploy/build-image.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You can find much more information and links to relevant Docker documentation in the [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack) GitHub repository.
 {{% /alert %}}
 

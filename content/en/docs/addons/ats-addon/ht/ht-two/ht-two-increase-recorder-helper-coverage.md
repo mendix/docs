@@ -30,7 +30,7 @@ Using the ATS Recorder is the easiest and least time-consuming way to create tes
 * Give widgets a unique name
 * Reduce the use of custom widgets
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To perform the steps in this chapter you must have access to your app in Mendix Studio Pro.
 {{% /alert %}}
 

@@ -25,7 +25,7 @@ To further simplify app permissions, new projects now have the following permiss
 
 These permissions are not required and can be removed from the permission page if not needed.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Already configured projects should not be affected.
 {{% /alert %}}
 
@@ -106,7 +106,7 @@ App Center's CodePush OTA page improvements:
 
 ##### Local Project Configuration Support
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This feature becomes available only for projects using Native Template 5.1.9 or later. For older projects, please update your Native Template.* 
 {{% /alert %}}
 

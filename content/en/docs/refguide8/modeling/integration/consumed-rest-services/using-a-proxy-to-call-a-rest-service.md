@@ -5,7 +5,7 @@ parent: "consumed-rest-services"
 tags: ["studio pro"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/using-a-proxy-to-call-a-rest-service.pdf).
 {{% /alert %}}
 
@@ -19,7 +19,7 @@ There are two parameters that specify which proxy server to use when making REST
 
 You can either specify these as custom settings or as JVM parameters, which are described in the sections below.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you specify a setting both as a custom setting and as a JVM parameter, the custom setting will be used.
 {{% /alert %}}
 

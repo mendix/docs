@@ -74,7 +74,7 @@ To add an additional language, do the following:
 
 3. Select a **Language**. In this example, we select **Russian, Russia**, but you can use any language you like.
 
-	{{% alert type="info" %}} We recommend that you do *not* choose **Dutch, Netherlands**, as this already contains translations for many of the translatable texts.{{% /alert %}}
+	{{% alert color="info" %}} We recommend that you do *not* choose **Dutch, Netherlands**, as this already contains translations for many of the translatable texts.{{% /alert %}}
 
 4. Click **OK** to save the changes. The **Add Language** dialog box closes.
 
@@ -95,7 +95,7 @@ To change your current language to Russian, do the following:
 
 	![Change the current language](/attachments/howto/collaboration-requirements-management/translate-your-app-content/change-language.png)
 
-	{{% alert type="warning" %}}If you do further development later on, remember to change back to your default language so that any new text is recorded there and not in a translated dictionary.{{% /alert %}}
+	{{% alert color="warning" %}}If you do further development later on, remember to change back to your default language so that any new text is recorded there and not in a translated dictionary.{{% /alert %}}
 
 ## 5 Translating an Individual Piece of Text
 

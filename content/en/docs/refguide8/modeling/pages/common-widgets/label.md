@@ -7,15 +7,15 @@ tags: ["studio pro", "label", "common widgets"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/label.pdf).
 {{% /alert %}}
 
 ## 1 Introduction
 
-{{% alert type="warning" %}}The label widget is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="warning" %}}The label widget is not supported on native mobile pages.{{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 For input widgets, it is recommended to use the [label property](/refguide8/text-box/) to describe the purpose of widgets to end-users.
 

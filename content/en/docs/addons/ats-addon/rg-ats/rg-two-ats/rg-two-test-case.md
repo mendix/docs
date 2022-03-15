@@ -16,7 +16,7 @@ A dialog box opens where you give your test case a name and an optional descript
 
 ![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-test-case/testcase-details.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Please note that there is an additional switch for **paralell**/**sequential**. This switch is only available for [data driven test cases](/addons/ats-addon/rg-two-data-driven-testing/).
 

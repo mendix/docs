@@ -7,7 +7,7 @@ tags: ["studio pro", "constant", "constants"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/constants.pdf).
 {{% /alert %}}
 
@@ -21,7 +21,7 @@ For other cloud environments – for example, [IBM Cloud](/developerportal/deplo
 
 When running the application locally or in a Free App environment, the values defined in Studio Pro are used.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The value for a constant can also be overridden in a [configuration](/refguide8/configuration/). This allows you to run locally using different values for one or more constants, without having to change the default value for the constant every time.
 {{% /alert %}}
 
@@ -61,7 +61,7 @@ This property defines whether the constant is accessible from client-side expres
 | Yes | The constant will be sent to the client and will be accessible from client-side expressions |
 | No *(default)* | The constant will not be sent to the client and will be only accessible from [microflow](/refguide8/microflows/) expressions |
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 When a constant is exposed to the client, Mendix Runtime sends its value to the client so that in addition to microflow expressions, it will also be accessible from nanoflows and page expressions. This means that you should not use sensitive data or secrets such as passwords when a constant is exposed to the client.
 
 For a web or hybrid online app, changes to constant's values are reflected when a user refreshes the browser or restarts the app. For an offline-first application, the app stores the constants' values for offline use. The app updates the constant's values in the following cases:

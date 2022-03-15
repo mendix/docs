@@ -9,11 +9,11 @@ tags: ["Tencent"]
 #draft: true
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This documentation is only relevant to customers deploying their Mendix app on the Tencent Cloud.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/deploy/tencent-local-users-in-studio.pdf).
 {{% /alert %}}
 
@@ -40,7 +40,7 @@ In the **Administrator** tab the following properties are available:
 #### 2.1.1 User Name
 The user name is used to sign into the application as the Administrator.
 Default: *MxAdmin*
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Since this is general knowledge, it is safer to change this to a custom user name after you’ve obtained access to the user administration of your app.
 {{% /alert %}}
 
@@ -51,11 +51,11 @@ The password is used to sign into the application as the Administrator. You can 
 The user role assigned to the Administrator. For more information, see [Security, Roles & Permissions](/studio8/settings-security/).
 Default: *Administrator*
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The administrator is always created and has the System.Administrator role by default. The System.Administrator role allows users of your application to be managed.
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 When your app is deployed on Tencent Cloud, changes to the user role of the administrator account will not be applied until the administrator password is changed. See the [Action Buttons](/developerportal/deploy/tencent-deploy/#change-admin-password) section of *Deploying a Mendix App on Tencent Cloud (腾讯云)* for instructions on changing the admin password.
 {{% /alert %}}
 
@@ -124,7 +124,7 @@ This section describes how to access the user management screen(s) from the Admi
 
     ![](/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/account-overview.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you created your app using an older version of Mendix, the Administration module might not be available to you. Please consult [How to Import & Export Objects](/howto8/integration/importing-and-exporting-objects/) to import the Administration module into your app and redeploy.
 {{% /alert %}}
 

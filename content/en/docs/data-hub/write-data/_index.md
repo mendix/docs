@@ -43,7 +43,7 @@ When you publish an entity in a published OData service, clients can read the da
 2. Select the **Customer** entity and click **Edit**.
 3. Check the **Updatable** checkbox.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Studio Pro version 9.9.1 does not support publishing insertable or deletable resources yet.
 {{% /alert %}}
 

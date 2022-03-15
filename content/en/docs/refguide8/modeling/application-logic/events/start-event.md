@@ -6,7 +6,7 @@ menu_order: 1
 tags: ["studio pro", "start event", "event"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/start-event.pdf).
 {{% /alert %}}
 

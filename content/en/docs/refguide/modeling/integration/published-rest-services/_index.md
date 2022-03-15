@@ -31,7 +31,7 @@ If you don't want basic authentication, there are three options:
 * When you [allow anonymous users](/refguide/project-security/#anonymous-users) to your app, all published REST services become available without authentication, or
 * You can implement [custom authentication using a microflow](/refguide/published-rest-service/#authentication-microflow)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Note that web service users cannot access REST services.
 {{% /alert %}}
 

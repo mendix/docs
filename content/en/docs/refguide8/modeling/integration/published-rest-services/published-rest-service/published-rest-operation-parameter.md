@@ -8,7 +8,7 @@ tags: ["published REST", "operation", "parameter", "resource", "mapping", "not f
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-rest-operation-parameter.pdf).
 {{% /alert %}}
 
@@ -78,7 +78,7 @@ Provide a **Description** of the parameter. You can use [GitHub-flavored Markdow
 
 This is used in the service's [OpenAPI (Swagger) documentation page](/refguide8/published-rest-services/#interactive-documentation).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The public documentation feature was introduced in version 8.3.0.
 {{% /alert %}}
 

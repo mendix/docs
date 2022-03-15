@@ -11,16 +11,16 @@ tags: ["SAML", "SSO", "mobile", "hybrid app", "phonegap", "authentication"]
 
 This how-to will describe the challenges involved in implementing SSO (single sign-on) in hybrid mobile apps, and teach you how this can be solved in Mendix app.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The implementation described in this how-to will not work when you have enabled anonymous users in your app. Disable anonymous users in your app to use this implementation.
 {{% /alert %}}
 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The implementation described in this how-to will not work when you have enabled the PIN feature for your hybrid app. Disable the PIN feature for your hybrid app to use this implementation.
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible.
 
 To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally/) for information on local building.
@@ -171,7 +171,7 @@ To use the hybrid app package, follow these steps:
     
 ### 5.3 The SAML Module 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Not all versions of the SAML module will work correctly when implementing SSO for your hybrid app. Please make sure you use a version of the SAML module that is capable of creating mobile app tokens (that is, version 1.9.3 or above). We recommend updating the SAML module to the latest version available, and if needed, updating the Mendix version of your application.
 {{% /alert %}}
 

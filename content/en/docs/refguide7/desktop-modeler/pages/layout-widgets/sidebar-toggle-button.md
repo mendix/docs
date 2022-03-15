@@ -41,7 +41,7 @@ Choose the region that should be collapsed/expanded by clicking this button.
 | Left | The left region of the layout container will be toggled. |
 | Right | The right region of the layout container will be toggled. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The sidebar toggle is right-to-left-aware (RTL) which means that in RTL languages the sidebar will slide in from the right if you choose 'Left'.}
 

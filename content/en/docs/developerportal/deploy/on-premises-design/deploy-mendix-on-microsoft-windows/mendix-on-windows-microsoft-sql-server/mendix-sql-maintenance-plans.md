@@ -6,7 +6,7 @@ menu_order: 50
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/mendix-sql-maintenance-plans.pdf).
 {{% /alert %}}
 
@@ -128,7 +128,7 @@ In this section, you are going to create a new maintenance plan called **MP_USER
 
     ![](/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/mendix-on-windows-microsoft-sql-server/mendix-sql-maintenance-plans/18580658.png) .
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You should adapt the times set to your desired backup retention time. The cleanup might be set to smaller intervals in order to save disk space.
 

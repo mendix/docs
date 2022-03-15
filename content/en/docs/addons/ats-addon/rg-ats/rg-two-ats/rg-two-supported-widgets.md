@@ -8,7 +8,7 @@ parent: "rg-two-ats"
 
 The following table shows an overview of all the supported widgets in ATS.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 ATS does not support customized versions of Mendix Marketplace widgets. Also, ATS does not support using JavaScript that changes the behavior or apperance of standard or Marketplace widgets.
 {{% /alert %}}
 

@@ -9,7 +9,7 @@ The association source is a data source available to nested [data grids](/refgui
 
 Data widgets that can function as a container for other data widgets are the [template grid](/refguide7/template-grid/), [list view](/refguide7/list-view/), and [data view](/refguide7/data-view/).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Sorting columns and searching is not possible in data widgets with an association data source. This is because these features require a database call to function, which an association data source does not necessarily initiate.
 

@@ -31,7 +31,7 @@ You can sort the list of associations by any of these properties (ascending or d
 
 The name of the association is used to refer to it. For example, in forms or microflows.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You cannot change this name in the association tab. To change the name, click **Edit** (or double-click the association name) to open the [Association Properties](/refguide/association-properties/).
 {{% /alert %}}
 
@@ -44,7 +44,7 @@ This property defines whether an association is a reference (single) or a refere
 | Reference *(default)* | Single: an object of the owning entity refers to zero or one objects of the other entity. |
 | Reference set | Plural: an object of the owning entity refers to zero or more objects of the other entity. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The examples for this property are combined with the example of the owner property below.
 {{% /alert %}}
 
@@ -62,7 +62,7 @@ Ownership is important as it defines two aspects of an association:
 * how cardinality (many or one) is controlled
 * where the association is recorded
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 An external entity cannot be the owner for an association between a external and a local entity.
 {{% /alert %}}
 
@@ -84,7 +84,7 @@ For example, imagine you have a many-to-many association, **Customer_Group**, be
 
 If both ends own the association, you can overcome this limitation. However, this has to be balanced by the overhead associated with having to commit all entities where the association is recorded. Therefore, it is recommended that many-to-many relationships are owned by the **Default** entity, unless there is a strong business reason for needing to add the association from either end in your Mendix app.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Recording the association on only one of the entities does not affect your ability to navigate the association from both ends. However, it may be slower to navigate from the non-owning end.
 {{% /alert %}}
 

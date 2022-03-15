@@ -16,7 +16,7 @@ General knowledge of the Mendix Platform is a must when creating custom actions.
 
 In the [Become a Rapid Developer](https://academy.mendix.com/link/path/31/Become-a-Rapid-Developer) learning path, you learn all the fundamentals of the Mendix Platform, including how the different widgets work and how to adjust them. This is a great advantage when looking at a widget through the HTML.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You must be signed in to the Mendix Platform to see the above learning path.
 {{% /alert %}}
 

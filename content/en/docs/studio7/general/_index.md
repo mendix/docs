@@ -47,7 +47,7 @@ After clicking **Edit in Studio** you may need to upgrade your app to the latest
 {{% image_container width="350" %}}![](/attachments/studio7/general/upgrade.png)
 {{% /image_container %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When you upgrade your app in Studio to the latest  Mendix version, you will need to upgrade your app in the Studio Pro to the same version as well. 
 
 If you are working in a team with others, it is wise to check with your team members if everyone is OK to upgrade the app to the latest Mendix version. The reason for this is that once you update Studio, you need to update Studio Pro as well.

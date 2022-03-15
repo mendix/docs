@@ -10,7 +10,7 @@ aliases:
 #The anchor <tab-page> below is mapped, so it should not be removed or changed.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/tab-container.pdf).
 {{% /alert %}}
 
@@ -63,7 +63,7 @@ Default: *False*
 
 Default: *True*
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This property is not supported on native mobile pages.
 {{% /alert %}}
 

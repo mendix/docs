@@ -121,7 +121,7 @@ The **CreateSpeechSynthesizer** microflow takes **text** and **languageCode** fr
 
 ![createspeechsynthesizer](/attachments/appstore/app-services/text-to-speech/createspeechsynthesizer.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For more information about language codes, see the [Supported Languages](#supported-languages) section.
 {{% /alert %}}
 

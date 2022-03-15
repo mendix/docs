@@ -5,7 +5,7 @@ parent: "project-explorer"
 tags: ["studio pro", "security"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/security.pdf).
 {{% /alert %}}
 
@@ -13,7 +13,7 @@ tags: ["studio pro", "security"]
 
 Security in Mendix has two sides: you want different people to see different parts of your application and you want to prevent unauthorized access. Both of these can be managed from Studio Pro. Access to forms, data and microflows can be limited to authorized users.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Security in Mendix does not include scanning files that end-users upload or download from your application for viruses and malware. For more information, see the [Scanning Uploaded Files for Malicious Content](/howto8/security/best-practices-security/#scanning-for-malicious-content) section in *How to Implement Best Practices for App Security*. 
 {{% /alert %}}
 
@@ -45,7 +45,7 @@ See [Module Role](/refguide8/module-security/#module-role).
 
 A user role is a combination of module roles. A user that signs into the system gets the access rights of all of his or her user roles and indirectly to the module roles that are contained by those user roles.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Let us say you have a project with two modules: System and ProjectManagement (PM). The PM module has three module roles: TeamMember, TeamLeader and Administrator. And let us say that in this case, we only need two user roles because we do not need the distinction between team leaders and administrators. You define those two user roles and assign module roles to them. The table below shows which module roles are contained within the user roles. Note that you always need at least the User role in System.
 

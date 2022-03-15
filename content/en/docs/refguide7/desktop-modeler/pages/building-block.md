@@ -7,7 +7,7 @@ parent: "pages"
 
 ## 1 Introduction
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The option to edit and manage custom building blocks was added in Mendix 7.9.0.
 

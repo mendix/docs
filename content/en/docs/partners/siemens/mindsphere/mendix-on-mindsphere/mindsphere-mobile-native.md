@@ -60,7 +60,7 @@ The **Siemens MindSphere Mobile Starter Application** template provides the abil
 
     You have to map Mendix user roles to MindSphere user roles (see a more detailed discussion of MindSphere and Mendix roles and scopes in the [Roles & Scopes](/partners/siemens/mindsphere-module-details/#rolesscopes) section of *MindSphere Module Details*). The standard template will be delivered with the roles **Admin** and **User** therefore we will create the corresponding MindSphere scopes. If this does not match the roles in your application, please adapt these instructions accordingly.
 
-    {{% alert type="info" %}}The standard template also includes the role **Anonymous** which will be used for the authentication process. You should not register this role in the Developer Cockpit.{{% /alert %}}
+    {{% alert color="info" %}}The standard template also includes the role **Anonymous** which will be used for the authentication process. You should not register this role in the Developer Cockpit.{{% /alert %}}
 
 1. Click **Configure** to open the **Roles and Scopes Management**.
 
@@ -92,7 +92,7 @@ The **Siemens MindSphere Mobile Starter Application** template provides the abil
 
 You now have successfully registered your application within the Developer Cockpit.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The [MindSphere Mobile Starter Application](https://marketplace.mendix.com/link/component/118164) can be used to build applications for both native mobile apps and 'normal' web applications.
 
 Currently you can register either a mobile app or a web app in the MindSphere Developer Cockpit but not both together. If you need access in a web browser, please push your application to the Mendix cloud and set up another registration via the Auto Registration for your web application as described in [Setting up MindSphere Launchpad](/developerportal/deploy/deploying-to-mindsphere/#launchpad). This app can then be added to the MindSphere Launchpad. Please note, pushing a Mendix Mobile Native application to the MindSphere Cloud Foundry is currently not supported, as the Native applications needing an unprotected endpoint to any time.
@@ -148,7 +148,7 @@ The default browser of your phone will open and show you the MindSphere credenti
 
 After a successful login, your app will be restarted and a session created. Then your native home page is displayed.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you have trouble signing in to your application, it is a good idea to clear the cookies of your mobile browser. See your browser's documentation for further information.
 {{% /alert %}}
 
@@ -191,7 +191,7 @@ As of now your application has the user roles **admin** and **user**, but none o
 
     Your application has now been updated to be allowed to make API calls
     
-    {{% alert type="info" %}}To enable this for your local test session you have to force a logout of the user. For this, tap the logout button within your mobile application and clear the cookies within your mobile browser. Afterwards sign in again. The token now includes the added API roles.{{% /alert %}}
+    {{% alert color="info" %}}To enable this for your local test session you have to force a logout of the user. For this, tap the logout button within your mobile application and clear the cookies within your mobile browser. Afterwards sign in again. The token now includes the added API roles.{{% /alert %}}
 
 ### 2.6 Deploying your app
 
@@ -256,7 +256,7 @@ As you need a valid MindSphere token to call MindSphere APIs, it is very importa
 
     ![StarterMobile](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StarterMobile_OnRefresh.png)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You will want to change the home page to fit with the rest of your app. Please do this, but do not delete the initially provided Data view and App events.
 {{% /alert %}}
 

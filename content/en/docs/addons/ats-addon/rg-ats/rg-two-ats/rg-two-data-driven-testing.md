@@ -33,7 +33,7 @@ To use your datasets in test cases, you need to select a **Master dataset** unde
 
 You can only select one master dataset at a time per test case. Your selected dataset affects which fields you can use as parameters in your selected test case. You can only choose fields that are in the selected master dataset. On execution, ATS picks the corresponding record values for each field.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 If you connect a dataset with a test case, ATS executes a session for each record row in the dataset. For example, if there are three rows, ATS executes three sessions.
 
@@ -49,7 +49,7 @@ Use the sequential execution in order to prevent the tests to interfere with eac
 
 When creating and editing a dataset, select the **Create/Update fields from file** option to provide a template Excel file. Create or update fields and records of your dataset using this Excel file. ATS recognizes the first row of the Excel sheet as the field names. ATS considers all extra rows as records and also uses them to determine the field data type.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 When importing data from Excel, ATS tries to convert data that doesn't match the expected data type. If a conversion is not possible (for example, from a string to an integer), the resulting value is empty. Always check your data after import to ensure all the data was completely imported.
 

@@ -7,7 +7,7 @@ description: Describes how to build your first Mendix native mobile app locally 
 tags: ["native", "mobile", "build", "local", "xcode", "android studio"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and above), it will not apply changes directly to the project. To apply the changes when building locally check out your latest changes, run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`), then make sure to run `npm run configure`.
 {{% /alert %}}
 
@@ -78,7 +78,7 @@ For a Windows machine building an Android app, do the following:
 1. Run `npm i`  to install the required dependencies.
 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and above), it will not apply changes directly to the project. To apply the changes when building locally check out your latest changes, run `npm install`, then make sure to run `npm run configure`.
 {{% /alert %}}
 

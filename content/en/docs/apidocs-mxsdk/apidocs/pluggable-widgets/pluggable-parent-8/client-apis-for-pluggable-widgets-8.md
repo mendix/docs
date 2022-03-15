@@ -37,7 +37,7 @@ A user can specify a custom CSS for every widget on a web page by using the [sty
 
 On native pages, the meaning of a `style` prop is very different. First of all, a user cannot specify the aforementioned inline styles for widgets on a native page. So a `style` prop is used to pass styles computed based on configured classes. A client component will receive an array with a single [style object](/refguide/native-styling-refguide/#style-objects) with all applicable styles combined.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This property was introduced in Mendix 8.0 with an array of style objects. This array was changed to contain a single style object in Mendix 8.6.
 {{% /alert %}}
 
@@ -260,7 +260,7 @@ export type ListAttributeValue<T extends AttributeValue> = (item: ObjectItem) =>
 
 The type `<T>` depends on the allowed value types as configured for the attribute property.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Due to a technical limitation it is not yet possible to edit attributes obtained via `ListAttributeValue`. `EditableValue`s returned by `ListAttributeValue` are always **readonly**.
 {{% /alert %}}
 

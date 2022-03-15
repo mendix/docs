@@ -96,7 +96,7 @@ There are three types of environment statuses:
 *   Orange – there is at least one warning alert, but no critical alerts
 *   Red – there is at least one critical alert
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status.
 {{% /alert %}}
 
@@ -160,7 +160,7 @@ If you are the [Technical Contact](/developerportal/collaborate/app-roles/#techn
     ![](/attachments/developerportal/deploy/mendix-cloud-deploy/environments/download-activity-log.png)
 3. Click **Download**.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Operations carried out by the Mendix Operations Desk are not currently logged on the activity log.
 
 These are activities which are performed on a customer's behalf only with written approval through a Mendix Support ticket. 

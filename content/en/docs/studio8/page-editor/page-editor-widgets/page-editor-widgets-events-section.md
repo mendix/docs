@@ -32,7 +32,7 @@ You can find the description of possible on click actions below:
   * **Open Link** – triggers an action based on the link type (for more information, see section [2.2 Open Link Action](#open-link-action)
   * **Delete Object** – deletes an object (for more information, see section [2.3 Delete Object Action](#delete-object-action))
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The list of available on click actions may differ depending on the widget. For example, **Delete Object** on-click action is unavailable for the list view. 
 

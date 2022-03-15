@@ -72,7 +72,7 @@ To add a parameter to the **Task name** or the **Task description**, do the foll
 
     ![Parameter Example](/attachments/refguide/modeling/application-logic/workflows/user-task/parameter-example.jpg)
 
-    {{% alert type="info" %}}Make sure that the attribute you use in the expression is of the string type.{{% /alert %}}
+    {{% alert color="info" %}}Make sure that the attribute you use in the expression is of the string type.{{% /alert %}}
 
 4. In the **Template** setting, write the text you would like to display and type **Index** of the parameter you would like to include. For example, you can add a template for the **Task description** specifying the name of the workflow and what the workflow due date is :
 

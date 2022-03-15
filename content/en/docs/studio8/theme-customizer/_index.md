@@ -22,7 +22,7 @@ On the left, the Theme Customizer contains settings that you can change to custo
 
 *  [Page View](#page-view) – previews the style on a page
 
-    {{% alert type="info" %}} The **Page View** feature is in Beta. This means there might be changes to this feature. For more information on Beta features, see [Beta Releases](/releasenotes/beta-features/).
+    {{% alert color="info" %}} The **Page View** feature is in Beta. This means there might be changes to this feature. For more information on Beta features, see [Beta Releases](/releasenotes/beta-features/).
     {{% /alert %}}
 
 You can switch between the modes by clicking the corresponding button in the top-bar:
@@ -67,7 +67,7 @@ The **Widget View** previews the style on an individual widget or UI elements as
 
 ## 4 Page View {#page-view}
 
-{{% alert type="info" %}} The **Page View** feature is in Beta. This means there might be changes to this feature. For more information on Beta features, see [Beta Releases](/releasenotes/beta-features/).
+{{% alert color="info" %}} The **Page View** feature is in Beta. This means there might be changes to this feature. For more information on Beta features, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 In the **Page View**, you can select any page from your app to preview changes on it. You can select a page from a drop-down menu in the top bar. You can also switch the Device modes to see how your style looks on the **Phone**, **Tablet**, or **Responsive view**.  

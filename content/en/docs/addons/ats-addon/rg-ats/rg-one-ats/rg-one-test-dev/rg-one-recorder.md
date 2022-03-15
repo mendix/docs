@@ -7,7 +7,7 @@ menu_order: 2
 
 The recorder is a function/plugin within ATS which will record the actions behind your test steps during manually testing an application. After saving your recorded actions they are directly added to your active test case.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 To use the recorder function you will need to have the Google Chrome browser installed on your system and install the _ATS Recorder_ Chrome plugin.
 
@@ -21,7 +21,7 @@ With the _ATS Recorder_ plugin installed, you can start a recording session at a
 
 Some recorded test steps offer you multiple actions to choose from, for example when setting the value of a text box. Here you can either have an action to change the value of the text box or choose to assert the value of the text box. To change the selected action click the recorded test step under _Recorded Events_. On the right side, if multiple actions are proposed, select the action you want to execute by clicking the _Select_ button.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Current limitations on recording:
 

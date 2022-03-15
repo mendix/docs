@@ -8,7 +8,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-odata-services.pdf).
 {{% /alert %}}
 
@@ -50,7 +50,7 @@ You can configure security for the OData service when [Project Security](/refgui
 
 #### 3.2.1 Requires Authentication {#authentication}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **No Authentication** feature was introduced in version 8.0.0. In earlier versions, it was always **Username and password**.
 
@@ -115,7 +115,7 @@ There are three possible outcomes of the authentication microflow:
 
 The allowed roles define which [module role](/refguide8/module-security/#module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Web service users cannot access OData services.
 {{% /alert %}}
 
@@ -152,7 +152,7 @@ You can write a *summary* and a *description* intended for people using the serv
 
 Once your OData-enabled app is running, an overview of exposed OData resources is available on the root URL followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/` You can copy and paste the links into for instance Excel to establish a link between your OData resources and Excel.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 While the API documentation for OData resources is enabled by default, access to it may be restricted by the administrator for apps running in production.
 {{% /alert %}}
 

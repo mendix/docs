@@ -12,11 +12,11 @@ tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
 
 To support automation namespace installation and configuration we provide a non-interactive mode in our configuration tool.
 
-{{% alert type="info" %}} To use non-interactive mode, you need Mendix Operator version 2.1.0 or above.{{% /alert %}}
+{{% alert color="info" %}} To use non-interactive mode, you need Mendix Operator version 2.1.0 or above.{{% /alert %}}
 
 Please see [Download the Configuration Tool](/developerportal/deploy/private-cloud-cluster/#download-configuration-tool) for information on how to download the configuration tool.
 
-{{% alert type="info" %}} Use "./mxpc-cli <command> --help" for more information about a given command. {{% /alert %}}
+{{% alert color="info" %}} Use "./mxpc-cli <command> --help" for more information about a given command. {{% /alert %}}
 
 The following parameters may be used in the commands:
   

@@ -6,7 +6,7 @@ tags: ["studio pro", "button", "action button", "drop-down button", "button widg
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/button-properties.pdf).
 {{% /alert %}}
 
@@ -145,7 +145,7 @@ Default: *true*
 
 ### 2.5 Items Section {#items}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **Items** section is only shown for drop-down buttons. 
 
@@ -153,7 +153,7 @@ The **Items** section is only shown for drop-down buttons.
 
 When an end-user clicks a drop-down button, a pop-up window with a list of items opens. Each item performs an event when an end-user clicks this item. Different items can perform different events. For more information on events that can be assigned, see [On Click Event & Events Section](/refguide8/on-click-event/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 * Items with the **Create object** event are only shown when you have sufficient permissions on. For more information, see [Security](/refguide8/security/). 
 

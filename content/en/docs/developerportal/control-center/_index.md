@@ -24,7 +24,7 @@ If you are a Mendix Admin, you will immediately see the [Dashboard](#dashboard) 
 
 ## 2 Dashboard {#dashboard}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This new feature is currently in Beta. Please provide feedback via the feedback button on the right of the page. For more information, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
@@ -78,7 +78,7 @@ When you select members in the lists on these tabs, a context menu appears with 
 
 For security reasons, deactivating an employee that is leaving your company is recommended (if the employee returns to your company, they can be activated as a member again).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You cannot deactivate yourself.
 {{% /alert %}}
 
@@ -90,7 +90,7 @@ Click a group name to bring up the group details pop-up window, and click **Add 
 
 ![](/attachments/developerportal/control-center/access-group.jpg)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 You can only add apps that utilize [Mendix SSO](/appstore/modules/mendix-sso/) to App Access Groups.
 {{% /alert %}}
 
@@ -110,13 +110,13 @@ To add a new admin, click **Add Mendix Admin**. To remove an admin, hover over t
 
 ![](/attachments/developerportal/control-center/admin.jpg)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 It is not possible to remove yourself as a Mendix Admin.
 {{% /alert %}}
 
 ## 7 Company Brand
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Features on this page are available to try out, but you will not see changes implemented yet.
 {{% /alert %}}
 
@@ -152,7 +152,7 @@ On the **Security History** tab, you can click **Show Security History** to open
 
 ## 10 Cloud {#cloud}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This feature is not yet publicly available. Please talk to your Customer Success Manager to enable this page.
 {{% /alert %}}
 
@@ -166,7 +166,7 @@ There are links to three other pages from this tab to allow you to [make request
 * [Resize Environment](/developerportal/support/new-app-node-request-template/#resize) – requests a container size change
 * [Offboard Environment](/developerportal/support/new-app-node-request-template/#offboard) – requests that an app is offboarded
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 These links will open in a new browser tab.
 {{% /alert %}}
 

@@ -9,6 +9,6 @@ These are the release notes for the [Mendix Application Quality Monitor (AQM)](/
 
 * [2.0](/releasenotes/add-ons/aqm-2.0/)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The patch release notes are also included here.
 {{% /alert %}}

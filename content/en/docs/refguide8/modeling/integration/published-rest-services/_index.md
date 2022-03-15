@@ -9,7 +9,7 @@ tags: ["publish", "REST service", "overview", "configuration"]
 # linked from integration - published rest > F1 help
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-rest-services.pdf).
 {{% /alert %}}
 
@@ -35,7 +35,7 @@ If you don't want basic authentication, there are three options:
 * When you [allow anonymous users](/refguide8/project-security/#anonymous-users) to your app, all published REST services become available without authentication, or
 * You can implement [custom authentication using a microflow](/refguide8/published-rest-service/#authentication-microflow)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Note that web service users cannot access REST services.
 {{% /alert %}}
 

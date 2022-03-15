@@ -9,7 +9,7 @@ menu_order: 1
 
 The Application Performance Diagnostics (APD) tool is a solution that helps you to analyze performance issues and runtime behavior.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In earlier releases, this tool was called Application Performance Monitor (APM).
 {{% /alert %}}
 

@@ -13,7 +13,7 @@ For other cloud environments, IBM Cloud Portal or MindSphere for example, the co
 
 When running the application locally or in a sandbox, the values defined in the Modeler are used.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The value for a constant can also be overridden in a [Configuration](/refguide7/configuration/). This allows you to run locally using different values for one or more constants, without having to change the default value for the constant every time.
 {{% /alert %}}
 

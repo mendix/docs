@@ -30,7 +30,7 @@ To view maintenance windows, you need to have monitor or backup access to your M
 
 ## 3 Configuring Maintenance for Your Application
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Maintenance windows and planned maintenance are defined in UTC time format. When selecting a time period, remember to convert to UTC from your local time.
 {{% /alert %}}
 
@@ -56,7 +56,7 @@ Follow the instructions below to configure a maintenance window:
 
 7. Click **Save** to confirm your new maintenance window.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If planned maintenance is already scheduled for the current week it will be moved to the new planned maintenance window if this is still in the same week. However, if you move your maintenance window to before the current day and time the planned maintenance window will not be moved.
 
 For example: imagine today is Tuesday, your maintenance window is currently Thursday, and there is planned maintenance for Thursday this week.

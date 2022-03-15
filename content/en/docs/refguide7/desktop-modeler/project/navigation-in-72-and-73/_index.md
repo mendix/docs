@@ -7,13 +7,13 @@ description: "Describes the concept of navigation in apps and the properties of 
 
 ## 1 Introduction
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 This document describes the concept of navigation in Mendix applications and the properties of a profile. This is applicable to Mendix versions 7.2 and 7.3. For details on how this works in Mendix versions 7.0 and 7.1, see [Navigation Before Mendix Version 7.2](/refguide7/navigation-before-72/). For Mendix version 7.4 and above, see [Navigation](/refguide7/navigation/).
 
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This document describes the concept of navigation in Mendix applications and the properties of a profile. In Mendix 7.2.0 and in Mendix 7.4.0, the profiles received updates. For details on how this works in Mendix versions 7.0 and 7.1, see [Navigation Before Mendix Version 7.2](/refguide7/navigation-before-72/). For 7.2 and 7.3 see [Navigation in 7.2 and 7.3](/refguide7/navigation-in-72-and-73/).
 
@@ -25,7 +25,7 @@ The **Navigation** document can be found by expanding the **Project** node in th
 
 At the heart of the navigation model in Mendix, there are five kinds of profiles: responsive, tablet (browser), phone (browser), hybrid app, and hybrid offline app. Users that access the app via a particular device type are automatically redirected to the homepage of the appropriate profile based on the profile kind (for details, see [3 Redirection to Profiles](#Redirection)).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 In Mendix 7.0.2, the offline device profile was replaced by the [hybrid phone profile](/refguide7/hybrid-phone-profile/). In addition to this, a new device profile was made available, which was called the [hybrid tablet profile](/refguide7/hybrid-tablet-profile/). All the settings from the offline device profile were automatically copied to the hybrid phone profile.
 

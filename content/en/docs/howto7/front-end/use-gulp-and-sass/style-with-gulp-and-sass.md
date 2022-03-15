@@ -8,7 +8,7 @@ tags: ["gulp", "sass", "ux", "front end"]
 
 ## 1 Introduction
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This how-to is based on the blog post [How Do I Start Styling In Mendix (Gulp & Sass)](https://medium.com/@jasonteunissen/how-do-i-start-styling-in-mendix-gulp-sass-6b37ddaf8de6) by Jason Teunissen, UX Consultant at [Appronto](https://developer.mendixcloud.com/link/partnerprofile/8870).
 {{% /alert %}}
 
@@ -46,7 +46,7 @@ To run Gulp, follow these steps:
 
 ![](/attachments/howto7/front-end/use-gulp-and-sass/style-with-gulp-and-sass/red.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you are using Parallels on Mac, you can access your Mendix app on your Mac browser by going to your Parallels machine (for example, `http://10.211.55.3:30001` – this is different on each setup).
 {{% /alert %}}
 
@@ -66,7 +66,7 @@ If you have [TortoiseSVN](/refguide7/using-version-control-in-the-dm/#tortoisesv
 
 ![](/attachments/howto7/front-end/use-gulp-and-sass/style-with-gulp-and-sass/svn-ignore.jpg)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN, **you will no longer be able to open it in Mendix**.
 {{% /alert %}}
 

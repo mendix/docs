@@ -63,7 +63,7 @@ The following steps explain how to schedule test cases:
 	* **Platform** - Set platform on which to run the test
 	* **Resolution** - Set resolution with which the test is run
 
-	{{% alert type="info" %}}Note: Platform Settings are not visible for all Selenium hubs.
+	{{% alert color="info" %}}Note: Platform Settings are not visible for all Selenium hubs.
 	{{% /alert %}}
 
 6.	Click **Save**:
@@ -109,7 +109,7 @@ The following steps explain how to schedule test suites:
 	* **Platform** - Set platform on which to run the test
 	* **Resolution** - Set resolution with which the test is run
 
-	{{% alert type="info" %}}
+	{{% alert color="info" %}}
 	Note: Platform Settings are not visible for all Selenium hubs.
 	{{% /alert %}}
 
@@ -120,11 +120,11 @@ The following steps explain how to schedule test suites:
 Clicking **Save** adds the test suite to the list of scheduled items. Click the **Edit icon** to change the settings (1). Click the **Delete icon** to delete the scheduled test case(2):
 ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-schedule-testcase-testsuite/scheduled-testsuite-g.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In case repeat is set to **Yes**, ATS will run the test until you mark it as inactive or remove the repeat settings. An active test is marked green and an inactive test is marked grey. An example can can be seen in the image above.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Now you can schedule your own test cases and test suites. You can add as many scheduled tests as you want. However, as executing tests takes time, there is a limit to the number of tests you can schedule.
 {{% /alert %}}
 

@@ -9,7 +9,7 @@ tags: ["Published REST", "operation", "method", "path", "example location", "map
 # linked from DM: published rest > select resource > add operation for resource > help (integration)
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This feature was introduced in version 7.10.0.
 
@@ -51,7 +51,7 @@ The example location gives an example of a URL on which the operation can be rea
 
 ### 2.4 Microflow
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Support for **File Documents** in these microflows was introduced in version 7.13.0.
 
@@ -92,7 +92,7 @@ If you check this box, the operation is marked as deprecated in the service's [O
 
 ### 2.6 Parameters
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This feature was introduced in version 7.12.0.
 
@@ -105,7 +105,7 @@ In this list, you can add, update or delete the [parameters of the operation](/r
 <a name="import-mapping"></a>
 ### 2.6.1 Import Mapping
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This feature was introduced in version 7.14.0. Using an import mapping that takes a parameter was introduced in version 7.17.0
 
@@ -125,7 +125,7 @@ The import mapping is also used to generate object schemas for operation respons
 
 ### 2.7 Response
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Support for **Export mapping and models in OpenAPI (Swagger)** was added in 7.14.0.
 

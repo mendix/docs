@@ -61,7 +61,7 @@ To prepare your app, follow these steps:
 
 	If you use `npm install`, you may receive an error. PowerShell will tell you to use `npm run dev` instead. If that does not work, use `npm install run`.
 
-	{{% alert type="info" %}}You should do this for each new app! That way, you will not have to repeat the installation step whenever you reopen the app and Powershell.
+	{{% alert color="info" %}}You should do this for each new app! That way, you will not have to repeat the installation step whenever you reopen the app and Powershell.
 	{{% /alert %}}
 
 7.  Write `gulp dev`. Your screen should then look like this:
@@ -155,7 +155,7 @@ To implement this in your app, open the app in Mendix Studio Pro. You can find t
 
 You can remove **spacing-outer-bottom-medium**, as that is a variable that contains defined styling code. If you do not remove this, you will probably have trouble later in the app if you, for example, want to position your title somewhere else. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The inline styling is not made use of in this example. That is because the inline styling will always overrule your code in VSC. 
 {{% /alert %}}
 
@@ -171,7 +171,7 @@ You then need to replace the `8080` with `3000` in order to sync the browser wit
 
 `http://localhost:3000/index.html?profile=Responsive`
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you use a Mac laptop, you can open this URL: `http://windows-10:3000`.
 {{% /alert %}}
 

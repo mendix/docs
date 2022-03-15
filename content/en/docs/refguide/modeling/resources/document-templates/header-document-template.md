@@ -13,7 +13,7 @@ aliases:
 
 When enabled, the header will be inserted at the top of every page. Other widgets can be put in the header.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide/modeling/resources/document-templates/header-document-template/918236.png)
 

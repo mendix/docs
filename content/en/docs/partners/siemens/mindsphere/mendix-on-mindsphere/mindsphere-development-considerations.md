@@ -9,7 +9,7 @@ tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Lo
 
 ## 1 Introduction
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This information is for apps which are deployed to MindSphere. It does not apply to MindSphere IIoT for Makers.
 {{% /alert %}}
 
@@ -72,7 +72,7 @@ Make sure these environment variables exists. Use the returned token as usual in
 
 The following example shows how to use the microflow **DS_GetAccessTokenForScheduledEvents**. The sample retrieves a list of all Tenants from the database and fetches a token for each tenant. With the token you can proceed with your custom application logic.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Do not create a Tenant object yourself as this is done automatically during login.
 {{% /alert %}}
 
@@ -88,7 +88,7 @@ If you need to set or change the value of any Cloud Foundry Environment Variable
 2.  You will need to restage the app to use the new value.
     Use `cf restage {app_name}`
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Restaging your app will cause your app to be temporarily unavailable.
 
 If you do **not** restage your app, it will continue to run using the old values. If your app is an unlicensed (free) app, it will stop running after a time and this could cause the environment to be restarted and pick up the new environment variable values without an explicit restage.
@@ -120,7 +120,7 @@ If you need to use a corporate web proxy, the following settings must be applied
 
 Contact your local IT department for the `proxyHost` and `proxyPort` values you need.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Proxy settings for version control used in Mendix Studio Pro:
 
 For more information about the version control used by Mendix apps, see [Using Version Control in Studio Pro](/refguide/using-version-control-in-studio-pro/#working-outside-studio-pro). Depending on your local development environment, you may have to configure your version control client to use a proxy as well. You may need to do this to solve a merge conflict manually.
@@ -136,7 +136,7 @@ When you run your app locally, you will not be able to use SSO to get your crede
 
 This will use the credentials you have set up under **App Credentials** in the *Authorization Management* tab of the MindSphere Developer Cockpit for this application.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 **Tip:** Use the autofill feature based on a local environment variable for the *Client Secret*.
 
 Storing the *Client Secret* inside the project is, from a security perspective, not a good idea. A better approach is to use a local environment variable. Create a user-specific environment variable with *Variable name* equal to your *Client ID* value and the *Variable value* equal to your *Client Secret* value. See step 6 below for information on how to get these values.
@@ -189,7 +189,7 @@ Set this to *True* if you want your app to ask for credentials as soon as it sta
 
 If you trigger microflows consuming MindSphere APIs on the home page, setting this to *True* ensures that they will work the first time the page is displayed.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This setting has no effect on apps which are deployed to the cloud. The credentials page is only shown for local deployments.
 {{% /alert %}}
 
@@ -227,7 +227,7 @@ Local users should not be created for your MindSphere app.
 
 When a new user is identified during SSO, the SSO process generates a random password for the user. The password policy for your app needs to accept these randomly generated passwords. The password generation algorithm generates passwords of a fixed length, so the password policy should not be set to require more characters.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This policy is set up as the default in the MindSphere starter and example apps and should not be changed.
 {{% /alert %}}
 
@@ -246,7 +246,7 @@ You can select MindSphere icons from Siemens MindSphere Web Content to be displa
 
 ![Add icon as an image](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/svg-icon.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You cannot change the color of these icons from within Mendix.
 {{% /alert %}}
 
@@ -266,7 +266,7 @@ To do this:
 
     ![Add an icon as CSS](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/css-icon.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You will not see the icon in Studio Pro when it is in *Structure mode*. Switch to *Design mode* to confirm that you have selected the correct icon.
 
 You can only add one icon per element.
@@ -296,13 +296,13 @@ In addition, MindSphere SSO will identify whether the current user is a subtenan
 
 By utilizing the **Tenant** when an entity is accessed, the Mendix app can be made multi-tenant.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 It is not possible, currently, to generate these access restrictions automatically.
 
 The developer will have to add a rule every time the entity is accessed. See the instructions below.
 {{% /alert %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 It is not necessary to put an access rule on every entity within the domain model. It is only required for: **persistable** entities which have a **TenantId** attribute.
 {{% /alert %}}
 
@@ -319,7 +319,7 @@ To make your Mendix app multi-tenant, do the following:
 
     This ensures that the user can only retrieve entities which belong to their tenant, in other words, where their Tenant matches the TenantId of the entity. You can copy and paste this constraint from here (hover your mouse over the text and click the **Copy** button). You can also copy it from XPath constraint on the *TenantObject* entity in the *MindSphereSingleSignOn* module. For more information on XPath, see [XPath](/refguide/xpath/).
 
-    {{% alert type="info" %}}For consistency, it is recommended that all access to these entities is done through a sub-microflow which contains the XPath constraint. This enforces multi-tenant security.{{% /alert %}}
+    {{% alert color="info" %}}For consistency, it is recommended that all access to these entities is done through a sub-microflow which contains the XPath constraint. This enforces multi-tenant security.{{% /alert %}}
 
 3.  Similarly, every data widget on a page (for example a *Data view*) which retrieves data from the database or via an association must have the following XPath constraint, which works in the same way as the microflow XPath constraint, above:
 
@@ -387,7 +387,7 @@ If the user signs out from MindSphere, the Mendix app will not delete the sessio
 
 ![](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image18.png)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 In some circumstances, this could lead to another user *using the same app in the same browser on the same computer*, picking up the session from the previous user if the cookie has not yet expired.
 {{% /alert %}}
 

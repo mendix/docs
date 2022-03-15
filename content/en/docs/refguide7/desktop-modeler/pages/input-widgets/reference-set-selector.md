@@ -7,7 +7,7 @@ parent: "input-widgets"
 
 The reference set selector allows you to set an association of type reference set by selecting objects. For example, if customers can belong to several groups, a reference set selector can be used to select the groups the customer belongs to. This requires that there is an association from customer to group of type reference set in the domain model.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-set-selector/reference-set-selector.png)
 In this data view on customer you can select multiple groups using the reference set selector.
@@ -19,7 +19,7 @@ In the domain model there is an association of type reference set from customer 
 
 The reference set selector looks a lot like a [data grid](/refguide7/data-grid/) and consequently shares many properties with the data grid. Main differences are that the reference set selector lacks a search bar and that it has different buttons by default (Add, Remove).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 The **Add** and **Remove** buttons mean something else than the **New** and **Delete** buttons that are used by default in the data grid:
 
@@ -58,7 +58,7 @@ See [Columns](/refguide7/columns/) for more information.
 
 This property indicates whether the control bar will be visible in the end user interface. The control bar also includes the paging buttons.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Even if the control bar is invisible there can still be a default button that is triggered by (double) clicking on a row. See the property 'Default button trigger' and [control bar](/refguide7/control-bar/) for more information.
 
@@ -76,7 +76,7 @@ _Default value:_ True
 
 The column weights are percentages separated by semi-colons. They determine the widths of the columns. The weights have to add up to 100\. An alternative way of changing the widths of columns is by dragging the separating line between columns.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 In the screenshot above the column weights are 63;37.
 
@@ -130,13 +130,13 @@ A tooltip page is a page that appears when you hover your mouse over a row. The 
 
 The entity path of a reference set selector is a path following one association of type 'reference set' from the entity of the containing data view to the entity on the other side of that association. In the example above the association Customer_Group from Customer to Group is followed and the path is: Customer_Group/Group.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 With the reference selector you are editing an association of type reference set (Customer_Group). Adding, and removing, objects using the selector will only add and remove references to those objects; the objects themselves are unchanged.
 
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Using non-persistable entities (NPEs) in a reference set selector is not supported yet. For that reason, selecting an NPE in the entity selector for the reference set selector is not possible.
 

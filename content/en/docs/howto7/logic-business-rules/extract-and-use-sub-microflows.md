@@ -56,7 +56,7 @@ To create a sub-microflow for the validation steps, follow these steps:
 
 	![](/attachments/howto7/logic-business-rules/extract-and-use-sub-microflows/18581017.png)
 
-	{{% alert type="warning" %}} The best practice is to identify sub-microflows by their name. You can use "Sub_MicroflowDescriptionHere", "Subflow_MicrocflowDescriptionHere", or any other notation you feel works best. The key is to be consistent when you name your microflows so that it is easy for other team members to understand and find the microflows they need.
+	{{% alert color="warning" %}} The best practice is to identify sub-microflows by their name. You can use "Sub_MicroflowDescriptionHere", "Subflow_MicrocflowDescriptionHere", or any other notation you feel works best. The key is to be consistent when you name your microflows so that it is easy for other team members to understand and find the microflows they need.
 
 	{{% /alert %}}
 4. Click **OK** to create your first sub-microflow:

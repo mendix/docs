@@ -6,7 +6,7 @@ tags: ["studio pro", "association", "data source"]
 menu_order: 60
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/association-source.pdf).
 {{% /alert %}}
 
@@ -14,7 +14,7 @@ menu_order: 60
 
 The **Association** source is a data source available to nested [data grids](/refguide8/data-grid/), [template grids](/refguide8/template-grid/), and [list views](/refguide8/list-view/). 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 The **Association** source retrieves objects from memory, not from the database. 
 
@@ -24,7 +24,7 @@ An **Association** data source fills the widget with objects linked to another o
 
 Data widgets that can function as a container for other data widgets are the [template grid](/refguide8/template-grid/), [list view](/refguide8/list-view/), and [data view](/refguide8/data-view/).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Sorting columns and searching is not possible in data widgets with an association data source. This is because these features require a database call to function, which an association data source does not necessarily initiate.
 

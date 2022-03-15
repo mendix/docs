@@ -6,7 +6,7 @@ menu_order: 20
 tags: ["studio pro", "translation", "languages", "translatable text"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/batch-replace.pdf).
 {{% /alert %}}
 
@@ -49,7 +49,7 @@ The **#** column shows the number of times it occurs in the selected module(s).
 
 If you select a line, you can look in the **Show occurrence** section to see the **Object** containing the text and the **Document** it appears in. Double-clicking or clicking **Show occurrence** will open the document and select the object so you can easily see the context.
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 Tip: move the dialog box to one side to get a better look at the document.
 {{% /alert %}}
 
@@ -98,6 +98,6 @@ This does the following:
 
 Changes will only be made if you click **Replace**.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The formats of the Excel files for batch replace and batch translate are similar. You will be warned if you try to import a batch translate file or a batch replace file with the wrong language but you can still import it if you ignore the warning.
 {{% /alert %}}

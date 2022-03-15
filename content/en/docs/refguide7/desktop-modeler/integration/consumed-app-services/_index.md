@@ -5,7 +5,7 @@ parent: "integration"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}} 
+{{% alert color="info" %}} 
 App services have been deprecated in version 7.23.4 and are marked for removal. Use a [consumed web service](/refguide7/consumed-web-services/) to consume existing app services.
 {{% /alert %}} 
 

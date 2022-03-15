@@ -15,7 +15,7 @@ Native apps are separated into two parts: a wrapper that is basically a native i
 
 OTA updates are bound to a specific app version and build number. Therefore, you can target specific updates to specific versions of your app. For example, you can push an update for version 1.0.0 as a legacy version that supports older devices, and also push an update for the 2.0.0 version of your app which includes more features.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Currently OTA  does not update your app while the app is open or minimized.
 {{% /alert %}}
 
@@ -33,7 +33,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install your app on a test device or emulator.
 * Read the [Offline First Reference Guide](/refguide8/offline-first/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Before using this document, please ensure compatibility. If you have not migrated your project to the Native Mobile Builder or are on an Native Template version older than 5.1.9 (Mendix Studio Pro 8.15.1 and below), either follow [Transfer a CLI OTA-Compatible App to the Mendix Native Mobile Builder](#from-cli-to-ui) section below **before** implementing OTA updates, or update your Native Template. 
 
 If you cannot migrate your project to a newer version of Native Template, for example if you have to use an older version of Studio Pro, use [Release Over the Air Updates with App Center's CodePush using the CLI](/howto8/mobile/how-to-ota-cli/) instead of this document.

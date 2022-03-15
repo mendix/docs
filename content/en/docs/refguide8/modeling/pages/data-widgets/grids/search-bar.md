@@ -11,7 +11,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/search-bar.pdf).
 {{% /alert %}}
 
@@ -31,7 +31,7 @@ There are three different types of search fields that can be used for different 
 * **Drop-down** – Search results are filtered by comparing them to the given search term. If the search value matches the attribute value, this object will be a part of the search result. Possible attribute types: Boolean, Enumerations, Associations.
 * **Range** –  This will apply a filter based on whether the search term falls between the values of two selected attributes. Possible attribute types: AutoNumber, Date and Time, Integer, Long, Decimal.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 You cannot change the type of a search field, you will need to delete it and then add a new one of a different type.
 {{% /alert %}}
 
@@ -59,7 +59,7 @@ However, there are additional properties that are described in the sections belo
 
 **Custom date format** is only available when you select an attribute of *Date and Time* type in the [**Attribute (path)**](#attribute-path) property. This property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally. The **Format example** will show you a date example.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Search input formatting must be an exact day. Custom date formatting is not limited.
 
@@ -77,7 +77,7 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 #### 3.2.1 Attribute (Path) {#attribute-path}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This property is available for **Comparison** and **Drop-down** search fields. 
 
@@ -90,7 +90,7 @@ Many input widgets (like text boxes and drop-down widgets) can be connected to t
 
 In the first case, we say the widget is connected to an attribute, and in the second case it is connected to an attribute path.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 In Mendix 8.0, an input widget connected to an attribute path must be read-only. Studio Pro will check this for you.
 
@@ -100,7 +100,7 @@ In Mendix 8.1 and above, you can edit attributes presented in input widgets over
 
 #### 3.2.2 Comparison
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This property is available for **Comparison** and **Drop-down** search fields. 
 
@@ -119,7 +119,7 @@ The value entered by the end user (or the default value in the case of hidden an
 | Smaller or equal | Is the attribute value smaller than or equal to the entered value? | Text, Date                        | < date + 1 day             |
 | Smaller          | Is the attribute value smaller than the entered value?       | Text, Date                              | < date                    |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 For **Drop-down** search fields:  there is no limit on the number of drop-down selection options, thus a selected attribute can have an unlimited amount of unique values. However, having thousands of options which must be retrieved from the server will slow page loading considerably on older browsers. Initially hiding the search bar which contains the drop-down search field can improve page loading performance on first load. 
 
@@ -137,7 +137,7 @@ It is possible to search on date attributes using equality. What happens with th
 
 ### 3.3 Allow Multi-Select
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This property is available for **Drop-down** search fields. 
 
@@ -147,7 +147,7 @@ If this property is set to 'Yes', the resulting drop-down allows you to select m
 
 ### 3.4 XPath Constraint
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This property is available for **Drop-down** search fields. 
 
@@ -155,7 +155,7 @@ This property is available for **Drop-down** search fields.
 
 If the 'drop-down' search field is connected to an attribute of an associated entity (as opposed to the grid entity itself) the XPath constraint can be used to limit objects shown in the drop-down.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Let us say you have a grid showing bicycles. In the domain model the bicycle has an association to the shops where you can buy those bicycles. You can add a search field to the grid allowing the end-user to select a shop by name. The XPath can then be used to limit the shops to those that are in a given country.
 `[MyWebshop.Bicycle_Shop/MyWebshop.Shop/Country='Netherlands']`
@@ -164,7 +164,7 @@ Let us say you have a grid showing bicycles. In the domain model the bicycle has
 
 ### 3.5 Sort Order
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This property is available for **Drop-down** search fields. 
 
@@ -176,7 +176,7 @@ Default: *No sort order*
 
 ### 3.6 Lower Bound
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This property is available for **Range** search fields. 
 
@@ -186,7 +186,7 @@ This attribute (path) determines the lower bound of the range.
 
 ### 3.7 Lower Bound Operator
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This property is available for **Range** search fields. 
 
@@ -198,7 +198,7 @@ Default: *Greater*
 
 ### 3.8 Upper Bound
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This property is available for **Range** search fields. 
 
@@ -208,7 +208,7 @@ This attribute (path) determines the upper bound of the range.
 
 ### 3.9 Upper Bound Operator
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 This property is available for **Range** search fields. 
 

@@ -15,7 +15,7 @@ In the standard situation, updates in the client are triggered by a user interac
 
 With this module, you can create a notify event on the server that directly causes an action in the client application. The event is based on a persistable object that is available in the server and the client page. From a microflow, the notify action will send a message to every listening widget that is listening to the same object and the action name.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The listening widget can only listen when the page is active, so the widget cannot be used to send a notification when the user has navigated away.
 {{% /alert %}}
 
@@ -51,7 +51,7 @@ To set up the necessary Pusher app, follow these steps:
 	* `secret` – `Pusher_Secret`
 	* `cluster` – `Pusher_Cluster`
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Make sure you have different apps (keys) created for each app and environment (development, acceptance, and production). When the credentials are shared, messages could go across environments and have unwanted side effects. The configuration can also be set per developer via **App Settings** > **Edit** configuration > [Constants](/refguide/configuration/#constants).
 {{% /alert %}}
 

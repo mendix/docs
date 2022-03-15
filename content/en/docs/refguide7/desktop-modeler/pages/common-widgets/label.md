@@ -6,7 +6,7 @@ parent: "common-widgets"
 ---
 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 For input widgets it is recommended to use the more powerful [label property](/refguide7/text-box/) to describe their purpose.
 
@@ -16,7 +16,7 @@ For all other text use the [text widget](/refguide7/text/) as it provides more f
 
 A label shows static text, which intent is to describe the purpose of a specific widget to the user.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/common-widgets/label/label.png)
 A label placed in a cell with render mode header.

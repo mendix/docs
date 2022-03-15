@@ -140,7 +140,7 @@ The developer using Studio Pro wants to include the changes made by the develope
 
 All the changes from the Studio working copy are put into a new revision on the Team Server (state 4). This revision is merged into the Studio Pro working copy. While the Studio Pro working copy is being updated, Studio is locked temporarily so that the Studio working copy is stable while it is copied.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This will also pick up changes from other developers using Studio Pro, if they have committed changes to this branch.
 {{% /alert %}}
 

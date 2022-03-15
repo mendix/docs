@@ -7,11 +7,11 @@ menu_order: 30
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/import-mapping-action.pdf).
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
@@ -88,7 +88,7 @@ Indicates whether the resulting objects should be committed to the database, and
 
 ### 3.9 Validate Against Schema
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Validation properties are only applicable if an import mapping is selected that maps from XML based on an [XML schema](/refguide8/xml-schemas/) or a [consumed web service](/refguide8/consumed-web-service/).
 

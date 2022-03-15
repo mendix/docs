@@ -115,7 +115,7 @@ There are three possible outcomes of the authentication microflow:
 
 The allowed roles define which [module role](/refguide/module-security/#module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Web service users cannot access REST services.
 {{% /alert %}}
 

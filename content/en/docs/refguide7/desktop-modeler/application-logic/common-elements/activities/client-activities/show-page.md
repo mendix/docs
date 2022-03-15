@@ -11,7 +11,7 @@ aliases:
 
 With this action you can show a page to the end user.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 See [Microflow Element Common Properties](/refguide7/microflow-element-common-properties/) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
 
@@ -29,7 +29,7 @@ Object that will be passed to the opened page. This object will be used by [data
 
 The [page](/refguide7/page/) to show to the end user. If the Object to pass is specified, the page must contain a data view connected to the same entity as the passed object (or its generalization).
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 
 You can generate a new page to show by clicking 'Select...' and then 'New'. If you have selected an Object to pass the Modeler will automatically generate a data view to edit that object.
 
@@ -39,7 +39,7 @@ You can generate a new page to show by clicking 'Select...' and then 'New'. If y
 
 By default the title of the page is determined by the page title property of the page. You can replace this title with a custom title if necessary.
 
-{{% alert type="success" %}}
+{{% alert color="success" %}}
 
 This feature allows you to re-use the same page for the New and Edit buttons of a data grid. By simply setting the titles to, for example, 'New customer' and 'Edit customer', you can save yourself the trouble of duplicating the rest of the page.
 

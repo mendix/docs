@@ -7,7 +7,7 @@ menu_order: 30
 tags: ["Studio Pro", "project menu", "top bar"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/project-menu.pdf).
 {{% /alert %}}
 
@@ -84,7 +84,7 @@ The **Deploy to Licensed Cloud Node** option deploys the latest committed revisi
 
 Shortcut key:  <kbd>Ctrl</kbd> + <kbd>F5</kbd>
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings/#target) needs to be set and the deploying user needs to have transport rights to the set target.
 {{% /alert %}}
 

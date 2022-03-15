@@ -9,7 +9,7 @@ parent: "input-widgets"
 
 A date picker is an [input widget](/refguide7/input-widgets/) that can be used to display and edit date/time attributes. It takes into account the language setting to display a localized calendar.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/input-widgets/date-picker/date-picker.png)
 This date picker allows the end-user to set the birth date of the customer.
@@ -35,7 +35,7 @@ If you choose 'Custom' as the date format (see above) this property determines h
 
 {{% snippet file="refguide7/Custom+Date+Format+Tokens.md" %}}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Even though a date picker with a custom date format is editable (as of Mendix 7.21.0), the calendar drop-down button will not be shown if the custom format does not represent the full date (meaning, the year [`y`-`yyyy`], month [`M`-`MMMM`], or day of month [`d`-`dd`] tokens are missing in the custom format).
 {{% /alert %}}
 

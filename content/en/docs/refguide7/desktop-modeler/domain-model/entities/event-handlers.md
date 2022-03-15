@@ -9,11 +9,11 @@ tags: ["domain model", "entity", "event handler"]
 
 Event handlers define microflows that handle certain events related to the entity. Depending on the chosen moment and type, the microflow is executed before or after creating, committing, deleting or rolling back an object.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Use event handlers moderately. Event handlers will be triggered each and every time the corresponding event is raised so it has to be something that you want to always happen. If you just want something to happen in a certain form you can use a local microflow there, for example on a self-made Save button.
 
-{{% /alert %}}{{% alert type="warning" %}}
+{{% /alert %}}{{% alert color="warning" %}}
 
 Event handlers are not triggered in a particular order. So make sure events do not depend on each other in any way (also with regard to events in generalizations and specializations).
 

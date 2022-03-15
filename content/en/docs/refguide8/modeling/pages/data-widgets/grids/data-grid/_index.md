@@ -7,11 +7,11 @@ tags: ["studio pro", "data grid", "grid", "data widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/data-grid.pdf).
 {{% /alert %}}
 
-{{% alert type="warning" %}}The data grid widget is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="warning" %}}The data grid widget is not supported on native mobile pages.{{% /alert %}}
 
 ## 1 Introduction
 
@@ -74,7 +74,7 @@ The database and XPath sources retrieve objects from the database and supports s
 
 This property indicates whether the control bar buttons will be visible in the end-user interface.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Even if the control bar buttons are invisible, there can still be a default button that is triggered by (double) clicking a row. For more information, see the property [Default Button Trigger](#default-button-trigger) and [Control Bar](/refguide8/control-bar/).
 {{% /alert %}}
 
@@ -82,7 +82,7 @@ Default: *True*
 
 #### 3.4.2 Show Paging Buttons {#show-paging-buttons}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 This property is not available in Mendix 8.13 and above. Use the [Show Paging Bar](#show-paging-bar) property instead.
 {{% /alert %}}
 
@@ -92,7 +92,7 @@ Default: *True*
 
 #### 3.4.3 Show Paging Bar {#show-paging-bar}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This property was introduced in Mendix 8.13. It replaces the [Show Paging Buttons](#show-paging-buttons) property.
 {{% /alert %}}
 
@@ -106,7 +106,7 @@ With this property, you can change the way the paging bar is shown.
 
 Default: *Yes (with total count)*
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Hiding the control bar also hides the paging buttons. For details, see [Show Control Bar Buttons](#show-control-bar).
 {{% /alert %}}
 

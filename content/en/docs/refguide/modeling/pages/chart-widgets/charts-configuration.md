@@ -48,7 +48,7 @@ Add series and configure their properties, each series represents a dataset. For
 
   In this case, new series can be added by clicking the **Series > New** button in the **Chart properties** tab.
 
-  {{% alert type="info" %}}From version 1.4 of charts you can create charts with a variable number of data series. For instructions on how to do this, see [How to Create a Dynamic Series Chart](/howto/front-end/charts-dynamic-series/).{{% /alert %}}
+  {{% alert color="info" %}}From version 1.4 of charts you can create charts with a variable number of data series. For instructions on how to do this, see [How to Create a Dynamic Series Chart](/howto/front-end/charts-dynamic-series/).{{% /alert %}}
 
 1. Data source<a name="data-source"></a>
 
@@ -123,7 +123,7 @@ Add series and configure their properties, each series represents a dataset. For
     
     ![Edit series Events tab](/attachments/refguide/modeling/pages/chart-widgets/charts-configuration/series-item-events.png)
 
-    {{% alert type="info" %}}The context of the page, microflow, or nanoflow selected for an event or tooltip will be the plotted object from which the point on the chart is drawn. This means you can display or use the x and y values, _and_ any other values stored in that object.<br /><br />For example you could use the tooltip to display the precise y value of a point, plus information on when the data was collected{{% /alert %}}
+    {{% alert color="info" %}}The context of the page, microflow, or nanoflow selected for an event or tooltip will be the plotted object from which the point on the chart is drawn. This means you can display or use the x and y values, _and_ any other values stored in that object.<br /><br />For example you could use the tooltip to display the precise y value of a point, plus information on when the data was collected{{% /alert %}}
     
     * **On click**: Select the way a click of a data point should be handled:
       * Do nothing
@@ -165,7 +165,7 @@ The **Appearance** settings are used to set the size of the chart on the page.
   * **Pixels**: is an absolute height
   * **Percentage of parent**: sets the height in relation to a container in which the widget is placed
   
-  {{% alert type="warning" %}}When using **Percentage of parent** the parent container must have an **absolute** height, else nothing is displayed.{{% /alert %}}
+  {{% alert color="warning" %}}When using **Percentage of parent** the parent container must have an **absolute** height, else nothing is displayed.{{% /alert %}}
 
 * **Height**: The height in pixels or percentage based on the setting of **Height unit**
 
@@ -375,7 +375,7 @@ To the theme folder, add a *.json* file named *com.mendix.charts*. The JSON shou
 }
 ```
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Please use with caution, as the configuration set up here shall be applied to every instance of the charts in your application.  
 Only the advanced configurations set up in the widget itself have a higher precedence.

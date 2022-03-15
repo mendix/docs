@@ -34,7 +34,7 @@ Follow these steps to get access to the TimeSeries connector and receive an API 
 
 1. Sign up for the connector by going to the [TimeSeries Connector website](https://connector.timeseries.com/) and registering for free. You will receive your API key in an email after registering.
 
-  {{% alert type="info" %}}
+  {{% alert color="info" %}}
   It can take up to a few hours to generate the key and send it to you. This key is used to activate and access your TimeSeries Analytics instance.
   {{% /alert %}}
 
@@ -52,7 +52,7 @@ There are three constants that you can configure. Follow these steps to configur
 2. Open the **TimeSeriesAccessKey** constant.
 3. Paste your TimeSeries API key in the **Default value** field and click **OK**.
 
-  {{% alert type="info" %}}
+  {{% alert color="info" %}}
 
   There are two more constants that don't need to be configured unless otherwise instructed.
 
@@ -78,7 +78,7 @@ Let's take the concept of a house. In this scenario the house is an asset, of wh
 
 The module comes with a ready-to-use domain model, which will be used in this how-to. This is not a necessity, and you can also use your own domain model. All referenced microflows in this how-to can also be found in the module.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If you want to use your own domain model, make sure that your entities have the necessary attributes for every action that requires a Type Parameter.
 {{% /alert %}}
 
@@ -108,7 +108,7 @@ The next step is creating a *Channel*. This *Channel* should belong to an *Asset
 2. Provide a **Channel key**. 
 3. Provide a **Measurement interval**. 
 
-  {{% alert type="info" %}}
+  {{% alert color="info" %}}
 
   You are free to choose the channel key name and the measurement interval. The interval is stored and can be used for analysis.
 
@@ -132,7 +132,7 @@ Now that you have created an asset with a channel, you can start storing measure
 3. Provide the **Measurement type**.
 4. Provide the **Value**.
 
-  {{% alert type="info" %}}
+  {{% alert color="info" %}}
 
   The **Date and time** needs to be formatted in UTC to the following format: yyyy-MM-dd'T'HH:mm:ss.SSSZ. The **Measurement type** can be INTERVAL, REGISTER, or EVENT. The **Value** is a decimal.
 

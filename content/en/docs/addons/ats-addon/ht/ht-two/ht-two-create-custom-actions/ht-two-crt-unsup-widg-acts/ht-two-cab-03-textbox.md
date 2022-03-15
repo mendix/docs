@@ -93,7 +93,7 @@ Next, you need to add these action input parameters:
 * Value
 * Search Context
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Keep the **guidelines for creating a custom action** in mind while creating action parameters. 
 {{% /alert %}}
 

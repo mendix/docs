@@ -91,7 +91,7 @@ Next, you need to add the action input and output parameters:
     * Output parameters:
         * Item/Row
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Keep the [guidelines for creating a custom action](/addons/ats-addon/ht-one-guidelines-custom-action/) in mind while creating action parameters.
 {{% /alert %}}
 

@@ -7,7 +7,7 @@ description: "The parameters which are passed to the custom authentication micro
 tags: ["published REST", "custom authentication", "microflow", "parameters", "arguments", "query", "header"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-rest-authentication-parameter.pdf).
 {{% /alert %}}
 

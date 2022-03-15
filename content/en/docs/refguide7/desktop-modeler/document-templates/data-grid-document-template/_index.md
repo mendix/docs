@@ -11,7 +11,7 @@ aliases:
 
 The data grid shows a list of objects in a grid. For example, a data grid can show all the orders a customer has placed.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 [![](/attachments/refguide7/desktop-modeler/document-templates/data-grid-document-template/918138.png)](/refguide7/data-grid-document-template/)
 A data grid showing a list of orders with a description and the referenced customer name.
@@ -34,7 +34,7 @@ See [Sort Bar](/refguide7/sort-bar/).
 
 The column weights are percentages separated by semi-colons that determine the widths of the columns. The weights have to add up to 100\. An alternative way of changing the widths of columns is by dragging the separating line between columns.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 In the screenshot above the column weights are 50;25;25.
 

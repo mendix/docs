@@ -23,7 +23,7 @@ You can use this module when you want your application's end-users to sign in wi
 * Single sign-on with your Mendix account for any application that implements this module
 * App end-user access management that is handled in the [Mendix Developer Portal](/developerportal/)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 [Mendix Admins](/developerportal/control-center/#company) can manage [groups](/developerportal/control-center/#groups) that grant app permissions to groups of users.
 {{% /alert %}}
 

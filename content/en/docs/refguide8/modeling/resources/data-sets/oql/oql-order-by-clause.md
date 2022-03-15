@@ -5,7 +5,7 @@ parent: "oql"
 tags: ["studio pro"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/oql-order-by-clause.pdf).
 {{% /alert %}}
 
@@ -44,6 +44,6 @@ SELECT FirstName + ' ' + LastName FROM Sales.Customer
 ORDER BY LastName DESC
 ```
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For default ordering behavior of NULL values, see the [NULL Values Order Behavior](/refguide8/ordering-behavior/#null-ordering-behavior) section of *Order By Behavior*.
 {{% /alert %}}

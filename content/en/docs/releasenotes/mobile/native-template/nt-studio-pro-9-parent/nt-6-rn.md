@@ -148,7 +148,7 @@ On iOS there are now two implementations of `AppDelegate.m.`: one for release ap
 
 This should make it easier to add custom code by simply following a dependency's documentation. 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Please note that if your app requires custom initialization, for example due to third-party dependencies, and you plan to test the implementation using custom developer apps, from this version and higher **you must duplicate that custom work** in the AppDelegate (found in `Dev/AppDelegate.m`).
 {{% /alert %}}
 

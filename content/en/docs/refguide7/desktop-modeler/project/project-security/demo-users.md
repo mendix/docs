@@ -16,7 +16,7 @@ After signing in to your application with the [administrator user](/refguide7/ad
 
 The user switcher is only shown and the demo users are only created when running your application locally on your development machine, or when running in a sandbox.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 After they are created automatically, demo users do not differ in any way from other local users that are defined in your application. This means that you can still use them to manually sign in using their user name and password, even after disabling the demo users feature again. Also, the demo users are never automatically removed from the database.
 

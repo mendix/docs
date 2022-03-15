@@ -29,7 +29,7 @@ You can find the description of input elements available in Studio in the table 
 | Check Box     | A check box widget is used to allow users to mark a value as true or false. For example, users can tick a box to sign up for the newsletter. |
 | Radio Buttons | Radio buttons are used to allow users select the option from a number of preset ones. For example, users can select from several possible locations for picking an order up. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Apart from the standard input widgets, you can also [download widgets from the Mendix Marketplace](https://marketplace.mendix.com/) to your app. For more information, see section [4 Widgets by Origin](/studio7/page-editor-widgets/#widgets-by-origin) in *Widgets*.
 

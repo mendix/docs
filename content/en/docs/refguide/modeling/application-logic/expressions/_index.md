@@ -36,7 +36,7 @@ For example, you have an object called **package** with two attributes: `weight`
 if $package/weight < 1.00 then 0.00 else 5.00`
 ```
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 When an object is empty, accessing an attribute is considered invalid. If part of an expression is invalid, it will cause an exception and the result will return `false`. The object's attribute cannot be accessed and the expression cannot be evaluated. This can be crucial when evaluating multiple statements within an expression. See the examples below for more information.
 {{% /alert %}}
 

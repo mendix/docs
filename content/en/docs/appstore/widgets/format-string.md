@@ -76,7 +76,7 @@ These are the values that you can change when you use [Translatable strings](#tr
 * **String value for from now**
 * **String value for ago**
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The widget has default values for **nl-nl**, **en-us**, and **en-gb**.
 {{% /alert %}}
 

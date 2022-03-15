@@ -122,7 +122,7 @@ The user name of the administrator can be changed in the Desktop Modeler's **Pro
 
 When deployed to the Mendix Cloud, the information about the administrator user name and role is taken into account when using the **Change admin password** button on the environment. After changing the settings in the Desktop Modeler and redeploying the application, a successful admin password change will trigger the creation of a user in the app with the new name and role.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 At this point, the application does not automatically remove the user with the previous user name. Removing the old **MxAdmin** account has to be done manually.
 {{% /alert %}}
 

@@ -89,7 +89,7 @@ Line in the data table containing an integer or string value of the data
 
 When creating/editing a dataset you can select the **Create/Update fields from file** option to provide a template Excel file to create or update fields and records of your dataset. The first row of your sheet will be considered the header and will be used to determine the field names. All additional rows will be considered records and will be used to determine the fields data type.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 When updating an existing dataset all existing fields and data records will be removed
 
@@ -97,11 +97,11 @@ When updating an existing dataset all existing fields and data records will be r
 
 You can also only import data records into you dataset by clicking the **Import from Excel** button. The first row of your Excel sheet must contain the field names of the dataset into which you want to import the records.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 When importing data records all existing records in the dataset will be removed
 
-{{% /alert %}}{{% alert type="info" %}}
+{{% /alert %}}{{% alert color="info" %}}
 
 When importing data from from Excel, ATS will try to convert data that doesn't match the expected data type. In case a conversion is not possible (for example, from a string to an integer) the resulting value will be empty. Always check your data after import to be sure all data was completely imported.
 

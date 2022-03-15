@@ -14,7 +14,7 @@ aliases:
 
 ## 1 Introduction 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Collaborative development is only available if your project has Mendix version 7.23.3 or above. You cannot sync your changes with the Web Modeler if your project has Mendix version 7.23.2 or below. 
 
@@ -50,7 +50,7 @@ The collaborative development process between the Desktop Modeler and the Web Mo
 
     b. There are conflicts, the Desktop Modeler commit process is stopped. The Web Modeler is unlocked without getting changes from the Desktop Modeler user. The Desktop Modeler user needs to resolve the merge conflicts first to before being able to do a commit again.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 When the Desktop Modeler user wants to deploy the app to the cloud, they click the **Run** button. The commit is done automatically during this process and step five is executed. 
 
@@ -78,7 +78,7 @@ To merge the latest changes stored in the Team Server (from both Web Modeler use
 
 To commit your latest project changes and make them available to other users, open **Changes** and click **Commit**. The process of deploying your app (when you click the **Run** button) will also trigger a commit. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 We recommend you update your project and commit changes often to avoid multiple conflicts in your project. 
 
@@ -165,7 +165,7 @@ To delete a branch line, do the following:
 
 You have deleted the branch.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 You cannot delete the Web Modeler enabled branch. If you need to delete this branch, enable the Web Modeler for another line, and only then delete the branch. 
 

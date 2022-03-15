@@ -9,13 +9,13 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/module-security.pdf).
 {{% /alert %}}
 
 ## 1 Introduction
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 For more general information on security, see [Security](/refguide8/security/).
 {{% /alert %}}
 
@@ -54,7 +54,7 @@ The **Microflow access** tab is displayed as a matrix showing microflows and mod
 
 For each combination you can indicate whether or not the module role has access to the microflow. You can also edit this information in a [microflow](/refguide8/microflow/) using the **Allowed roles** property.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Note that these roles are only checked when the microflow is executed from the client. A microflow is always allowed to call another microflow and these roles are not checked then.
 {{% /alert %}}
 
@@ -100,7 +100,7 @@ The **REST Access** tab is visible only when the service has the security set to
 | Limited access | At least one constraint applies to the parameters for the data set or at least one range parameter is not allowed. |
 | No access | Users with this module role have no access to the data set. |
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The constraints are defined in the parameter definitions of the data set. Whether they apply is defined in the **Data Set Access**.
 The ranges are defined in the parameters of the data set. Whether values in these ranges are allowed is defined in the **Data Set Access**.
 {{% /alert %}}

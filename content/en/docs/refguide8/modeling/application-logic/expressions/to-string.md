@@ -6,7 +6,7 @@ menu_order: 130
 tags: ["studio pro", "to string", "expression", "expressions"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/to-string.pdf).
 {{% /alert %}}
 

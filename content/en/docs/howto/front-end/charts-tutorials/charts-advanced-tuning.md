@@ -55,7 +55,7 @@ To create a custom layout, follow these steps:
     ```
 10. Change the font settings till the chart shows the required font. Copy the font settings.
 
-    {{% alert type="warning" %}}Please note that changes made in the editor will not persist unless they are stored in the advanced settings of the widget or in the theme.{{% /alert %}}
+    {{% alert color="warning" %}}Please note that changes made in the editor will not persist unless they are stored in the advanced settings of the widget or in the theme.{{% /alert %}}
 
     After making some changes, the chart looks like this:
 
@@ -67,7 +67,7 @@ To create a custom layout, follow these steps:
 
 12. Change the **Mode** back to **Advanced** in Studio Pro, this will remove the Toggle Editor button from the chart.  
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Please note that the advanced settings only apply to the chart in Advanced or Developer mode.
 
@@ -108,7 +108,7 @@ To create custom a configuration, follow these steps:
     ![chart editor](/attachments/howto/front-end/charts-tutorials/charts-advanced-tuning/charts-widget-properties-advanced-config.png)
 7. Change **Mode** to **Advanced**, set Studio Pro to remove the **Toggle Editor** button.
 
-    {{% alert type="warning" %}}Please note that the advanced settings only apply to the chart in Advanced or Developer mode{{% /alert %}}
+    {{% alert color="warning" %}}Please note that the advanced settings only apply to the chart in Advanced or Developer mode{{% /alert %}}
 
     ![chart editor](/attachments/howto/front-end/charts-tutorials/charts-advanced-tuning/charts-config-toolbar.png)
 

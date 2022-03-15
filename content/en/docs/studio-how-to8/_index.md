@@ -11,7 +11,7 @@ cascade:
         priority: 0.3
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 The **Studio 8 How-to's** space describes Mendix Studio functionality that corresponds to Mendix 8 version. It describes the latest Studio functionality and features.
 

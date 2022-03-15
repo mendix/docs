@@ -271,7 +271,7 @@ both return:
 
 Compares the two numbers to decimal point p, which is equal to Precision.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 This function is deprecated together with the Float type. Use the high-precision Decimal type instead.
 
@@ -318,7 +318,7 @@ false
 
 See floatsEqual.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 This function is deprecated together with the Float type. Use the high-precision Decimal type instead.
 

@@ -16,7 +16,7 @@ Version Control allows you to manage your app development in two ways:
 
 Version control in Mendix is built on top of [Apache Subversion](https://subversion.apache.org/) and the concepts will be familiar to Subversion users. Mendix simplifies Subversion commands by building them into the Modelers and Developer Portal.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 The processes involving the Web Modeler described here apply to collaborative working in Mendix versions 7.23.3 and above. 
 
@@ -142,7 +142,7 @@ The developer using the Desktop Modeler wants to include the changes made by the
 
 All the changes from the Web Modeler working copy are put into a new revision on the Team Server (state 4). This revision is merged into the Desktop Modeler working copy. While the Desktop Modeler working copy is being updated, the Web Modeler is locked temporarily so that the Web Modeler working copy is stable while it is copied.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This will also pick up changes from other developers using the Desktop Modeler, if they have committed changes to this branch.
 {{% /alert %}}
 

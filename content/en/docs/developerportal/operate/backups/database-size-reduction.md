@@ -10,7 +10,7 @@ tags: ["Mendix Cloud", "disk space", "disk size", "size reduction", "backup"]
 
 ## 1 Introduction
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 These instructions are for apps which are deployed to Mendix Cloud V3 only. Apps deployed to Mendix Cloud V4 will not benefit from following these instructions.
 {{% /alert %}}
 

@@ -19,7 +19,7 @@ Select the chapter that covers your situation. If you are not sure what covers y
 
 Go straight to chapter 7 for a quick summary and action plan.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 When the ATS Recorder does not record any steps, you can use this best practice to find the right action.
 

@@ -361,7 +361,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 * We improved the way that the SSL/TLS connection is established to the database instance in Mendix Cloud **v4**. Now the application will verify that the Subject Alternative Name attribute(s) or the Common Name attribute of the database server certificate is matched against the database host name.
 
-{{% alert type="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
+{{% alert color="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
 
 ### September 15th, 2020
 
@@ -369,7 +369,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 * We fixed an issue where some customers were getting JVM heap size out of memory errors for applications with a Studio target set. (Tickets 106848, 106966)
 
-    {{% alert type="info" %}}You must restart the affected environment to apply this fix.{{% /alert %}} 
+    {{% alert color="info" %}}You must restart the affected environment to apply this fix.{{% /alert %}} 
 
 ### September 14th, 2020
 
@@ -473,7 +473,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 
 * We resolved an issue where deactivated users were still shown in the [Node Permissions](/developerportal/deploy/node-permissions/) tab of the Security page for an app. (Tickets 90744 95319, 97722, 98474, 99978, 100493, 101595, 103007, and 103549)
 * We resolved an issue where you could not change the role of the inbuilt administrator account for apps deployed to the cloud. (Tickets 87013 and 87605)
-    {{% alert type="info" %}}You will still need to change the password of the administrator account for the new role to be assigned to the administrator. See the [User Role](/refguide/administrator/#user-role) section of *Administrator* for more information{{% /alert %}}
+    {{% alert color="info" %}}You will still need to change the password of the administrator account for the new role to be assigned to the administrator. See the [User Role](/refguide/administrator/#user-role) section of *Administrator* for more information{{% /alert %}}
 * We resolved an issue where an incorrect debugger password could be displayed for Mendix Cloud **v4** when the **Show Debugger Information** button was clicked on the Environment Details page. (Ticket 99469)
 
 ### July 2nd, 2020
@@ -488,9 +488,9 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 * as **unused** in [JVM Object Heap](/developerportal/operate/trends-v4/#Trends-appmxruntimejvmheap)
 * as **unused java heap** in [JVM Process Memory Usage](/developerportal/operate/trends-v4/#Trends-appmxruntimejvmprocessmemory)
 
-{{% alert type="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
+{{% alert color="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
 
-{{% alert type="warning" %}}You may see a large increase in the size of the unused java heap metric when this change is applied. This is a consequence of the new calculation and not a change in the memory usage of your app.{{% /alert %}}
+{{% alert color="warning" %}}You may see a large increase in the size of the unused java heap metric when this change is applied. This is a consequence of the new calculation and not a change in the memory usage of your app.{{% /alert %}}
 
 ### June 17th, 2020
 
@@ -516,7 +516,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 * In Mendix Cloud v4 we introduced changes to the Access Restriction Profile (ARP) Certificate Authorities (CAs). These changes allow you to:
     * Have stricter access restrictions by allowing the selection of intermediate certificates instead of the root
     * Use different root certificates for each path
-        {{% alert type="info" %}}Existing configurations will not be changed and environments can be restarted safely.<br/><br/>To migrate to the new ARPs, you must remove **all** existing ARPs and replace them with *clones* that you have edited using the latest Developer Portal.<br/>In other words **Clone** the existing ARPs, **Edit** the CAs, and **Apply** the new ARPs to all paths.{{% /alert %}}
+        {{% alert color="info" %}}Existing configurations will not be changed and environments can be restarted safely.<br/><br/>To migrate to the new ARPs, you must remove **all** existing ARPs and replace them with *clones* that you have edited using the latest Developer Portal.<br/>In other words **Clone** the existing ARPs, **Edit** the CAs, and **Apply** the new ARPs to all paths.{{% /alert %}}
         For more information see [How To Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions/).
 
     You will need to redeploy your app in order to apply the new ARP(s).
@@ -628,7 +628,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 We have renewed the SSL/TLS certificate for `*.mendixcloud.com`. Browsers like Mozilla Firefox, Microsoft Edge, Google Chrome, and Internet Explorer automatically trust the new certificate. In those cases, there is nothing you have to do.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If you run services that connect to a `*.mendixcloud.com` endpoint AND use a static or outdated trust store, we advise you to update them. The new SSL/TLS certificate can be downloaded [here](/attachments/releasenotes/deployment/mendix-cloud/mendixcloud.com-2019-09-12.crt.txt).
 {{% /alert %}}
 

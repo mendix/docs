@@ -41,11 +41,11 @@ Set the `EncryptionPrefix` constant located in the **Private - String en/de-cryp
 * For version 2.2.0 or above, set the constant to `{AES3}`
 * For versions 1.4.1–2.1.3 , set the constant to `{AES2}`
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In version 1.4.1, the AES algorithm used for encrypting/decrypting text was switched from CBC to GCM mode, because CBC mode was vulnerable to Oracle padding attacks. For backward compatibility, the module still supports decrypting texts encrypted using CBC mode in older versions of the module. It does not support encrypting strings using the legacy CBC mode. So, strings encrypted in versions below 1.4.1 in CBC mode have the prefix `{AES}`, while strings encrypted in GCM mode in version 1.4.1 have the prefix `{AES2}`. If the the `EncryptionPrefix` constant is set to `{AES}`, the module in version 1.4.1 or above will still encrypt the string using a new GCM mode. Then, when decrypting the string, the module will detect the prefix `{AES}` and try to decrypt it using the legacy CBC mode, which will fail because the string was encrypted using GCM mode (which is incompatible with CBC).
 {{% /alert %}}
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 If you are updating the module from a version below 1.4.1 to 1.4.1 or above (including 2.2.0 and above), do not forget to update the `EncryptionPrefix` constant value when deploying your app to the Mendix Cloud. It is also advised to re-encrypt the encrypted data by first decrypting and then encrypting it again, in order to ensure it is encrypted with the new mechanism.
 {{% /alert %}}
 
@@ -61,6 +61,6 @@ One of the typical usage scenarios may be a project/module that stores customer 
 
 No configuration is needed. However, you should generate or upload certificates upfront using the **CertificateManagement** page.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 To use the FileDocument encryption, you need to use these two microflows – **Encrypt_Document** and **Decrypt_Document**. The microflows are in the **USE ME** > **PGP** folder. They are annotated with explanations and you can find more details when you open them in Mendix Studio Pro.
 {{% /alert %}}

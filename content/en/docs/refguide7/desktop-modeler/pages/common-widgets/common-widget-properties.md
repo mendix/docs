@@ -18,7 +18,7 @@ _Default value:_ False
 
 This property determines the message that is shown to the end user if the widget is empty and the 'Required' property is set to true. This is a translatable text. See [Translatable Texts](/refguide7/translatable-texts/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 For example, if an address field is required, the required message for the text box of the address could be something like "The address is required."
 

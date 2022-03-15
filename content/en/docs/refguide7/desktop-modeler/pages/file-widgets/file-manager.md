@@ -8,7 +8,7 @@ parent: "file-widgets"
 
 A file manager is used to upload and/or download files.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ![](/attachments/refguide7/desktop-modeler/pages/file-widgets/file-manager/file-manager.png)
 

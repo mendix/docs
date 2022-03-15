@@ -5,7 +5,7 @@ parent: "oql"
 tags: ["studio pro"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 <img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/oql-limit-clause.pdf).
 {{% /alert %}}
 
@@ -23,7 +23,7 @@ Specifies how many rows must be returned.
 **OFFSET**
 Specifies how many rows must be skipped before returning the result rows.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 ```
 SELECT FirstName FROM Sales.Customer
@@ -33,7 +33,7 @@ LIMIT 10
 
 This query retrieves the first ten customers, sorted by their last name.
 
-{{% /alert %}}{{% alert type="info" %}}
+{{% /alert %}}{{% alert color="info" %}}
 
 ```
 SELECT FirstName FROM Sales.Customer
@@ -43,7 +43,7 @@ OFFSET 10
 
 This query retrieves all customers, except the first ten, sorted by their last name.
 
-{{% /alert %}}{{% alert type="info" %}}
+{{% /alert %}}{{% alert color="info" %}}
 
 ```
 SELECT FirstName FROM Sales.Customer

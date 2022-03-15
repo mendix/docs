@@ -15,7 +15,7 @@ When creating a new page, the user is presented with an overview of all the comp
 
 ## 2 Custom Page Templates
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The option to edit and manage custom page templates was added in Mendix 7.9.0.
 

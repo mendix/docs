@@ -14,7 +14,7 @@ You can define any number of configurations. The active configuration, as in, th
 
 You can use configurations to have different database settings for different people working on your app. Maybe one person has SQL Server on their computer and the other has PostgreSQL. You can also have a shared configuration for connecting to a database server that you both have access to.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 When you are deploying your application to a server or the Mendix cloud you will have to configure settings  there. For more information, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
 
@@ -64,7 +64,7 @@ Constants have a default value that you can override per configuration. You only
 
 You can use custom server settings to configure the Runtime beyond the standard possibilities offered by Studio Pro.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Only use this functionality if you know exactly what you are doing. Wrong values can prevent the Runtime from starting.
 

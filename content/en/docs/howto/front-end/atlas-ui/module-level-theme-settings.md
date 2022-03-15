@@ -30,7 +30,7 @@ When using a custom design system, you might want to prevent your developers fro
 
 As the code snippet demonstrates, you can exclude the UI elements of a specific module by grouping them under a module name.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 By excluding a UI element, you can no longer use it across your app.
 {{% /alert %}}
 
@@ -49,7 +49,7 @@ By excluding [layouts](/refguide/layout/) and [page templates](/refguide/page-te
 }
 ```
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Existing pages with the banned designs will continue to work.
 {{% /alert %}}
 
@@ -102,7 +102,7 @@ Here is an example which integrates all the concepts described above:
 }
 ```
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Atlas Core provides the base functionalities required by your design system. Therefore, by disabling UI elements from Atlas Core you will encounter some consistency errors.
 {{% /alert %}}
 

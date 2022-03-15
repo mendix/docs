@@ -11,7 +11,7 @@ tags: ["Kubernetes", "cloud", "deployment"]
 
 This how-to describes what is needed to deploy your Mendix app to [Kubernetes](https://kubernetes.io/). Kubernetes is the standard Docker orchestration platform supported by Mendix. If possible, we suggest you use [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) to deploy Mendix apps to Kubernetes as this provides you with integration with the Developer Portal and takes away some of the heavy lifting. For details on supported version of Kubernetes see [Mendix System Requirements](/refguide/system-requirements/).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Do not use these instructions if you are using Mendix for Private Cloud — many of the steps here are not needed. For deploying using Mendix for Private Cloud, follow the instructions in the [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) documentation.
 {{% /alert %}}
 
@@ -82,7 +82,7 @@ You'll need to build your image in Minikube if you haven't done so yet. See [Doc
 
 The first step is deploying our database. For Minikube, an external folder to persist the data outside of the database pod is used.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 For simplicity and compatibility with `minikube`, we mount a folder from the `minikube node`. This approach is not recommended for production.
 
@@ -188,7 +188,7 @@ With the database running, we can deploy our application. We'll be using a sampl
 
 Before deploying the app, we'll create some secrets so that sensitive information for the application doesn't need to be in our *yaml* file. The secrets file has to be applied only once to the cluster, and the values will be kept there. For information on all of the options, see [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/). 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 The Secret values in the secrets file must be base64 encoded.
 {{% /alert %}}
 
@@ -291,7 +291,7 @@ docker push <hub-user>/<repo-name>:<tag>
 
 Where `<hub-user>/<repo-name>:<tag>` is the Docker image of your app identified in *mendix-app.yaml*. For the example above, this is again `mendix/sample-app-kubernetes:v3`.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 In this example, we use a local storage folder on the node to show how to externalize the data stored for your app from the Docker container. For production systems, we recommend using the storage provided on the selected cloud platform.
 {{% /alert %}}
 

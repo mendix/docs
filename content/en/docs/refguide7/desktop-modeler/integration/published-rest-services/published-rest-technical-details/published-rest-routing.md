@@ -7,7 +7,7 @@ description: "A flow chart which shows how an example request is processed, what
 tags: ["flow chart", "processing", "security", "service", "resource", "operation", "method", "authentication", "return code", "published REST"]
 ---
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 The **published REST service** feature was introduced in Mendix 7.10.0.
 

@@ -23,7 +23,7 @@ For example, the following reference allows the end-user to see, and set, the as
 
 ![](/attachments/refguide/modeling/pages/input-widgets/reference-selector/reference-selector.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 If you only want to _display_ information, you can also use a [text box](/refguide/text-box/). This has the added advantage that you can choose an attribute from an object which is linked via several association steps.
 {{% /alert %}}
 
@@ -86,7 +86,7 @@ The formatting section applies only to the way that numeric attributes are displ
 
 #### 2.7.1 Select Using{#select-using}
 
-{{% alert type="warning" %}}The **Select using** property is not shown for native mobile pages. Native mobile pages only support the **Drop-down** method of selection{{% /alert %}}
+{{% alert color="warning" %}}The **Select using** property is not shown for native mobile pages. Native mobile pages only support the **Drop-down** method of selection{{% /alert %}}
 
 The reference selector allows the end-user to select objects by using either a drop-down menu or a pop-up page. If you choose to to use a page, the drop-down functionality will be replaced with a button to the right of the widget that will open a page selection pop-up window.
 
@@ -98,7 +98,7 @@ The reference selector allows the end-user to select objects by using either a d
 * The advantage of selecting using a [Drop-down](#drop-down) is that it is very efficient – the end-user can make a selection with fewer keystrokes, as all the information is on the same page
 * The advantage of selecting using a [Page](#page) is that the end-user can search the objects, and more information about each object can be displayed – if there are a lot of objects to select from (for example, more than 20), it is recommended that selecting is done using a page
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 There is a small difference in functionality between a **Drop-down** reference selector and a **Page** reference selector. When changing a reference selector item that also has a linked list included in a second drop-down menu or page, the **Page** reference selector is NOT cleared as it is with a **Drop-down** reference selector.
 {{% /alert %}}
 
@@ -114,7 +114,7 @@ Select using a page, links a button to the right of the widget with a pop-up pag
 
 #### 2.7.2 Empty Option Caption
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This is only displayed if [Select using](#select-using) is set to **Drop-down**.
 {{% /alert %}}
 
@@ -124,7 +124,7 @@ Filling out the caption for an empty option improves the user experience of your
 
 #### 2.7.3 Select Page{#select-page}
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 This is only displayed if [Select using](#select-using) is set to **Page**. Consequently, select page is not supported on native mobile pages.
 {{% /alert %}}
 
@@ -140,7 +140,7 @@ See the [Show a Page](/refguide/on-click-event/#show-page) section of *On Click 
 
 **Page title**
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 **Page title** is only available in the **Properties** dialog box, not in the **Properties** pane.
 {{% /alert %}}
 
@@ -150,7 +150,7 @@ This is activated by checking the **Override page title** check box.
 
 #### 2.7.4 Go-To Page
 
-{{% alert type="warning" %}}Go-to page is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="warning" %}}Go-to page is not supported on native mobile pages.{{% /alert %}}
 
 The go-to page gives end users quick access to a more detailed overview of the currently selected object.
 
@@ -160,7 +160,7 @@ It is recommended that you generate a new go-to page by right-clicking the widge
 
 **Page title**
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 **Page title** is only available in the **Properties** dialog box, not in the **Properties** pane.
 {{% /alert %}}
 
@@ -221,7 +221,7 @@ _Example Domain model_
 
 In the domain model the order line has many-to-one associations to both category and product. These associations can be be edited using reference selectors. A third association, from product to category, describes the relation between those two entities – that is, that every product has an associated category.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Such a triangle-shaped part of the domain model is what makes using **constrained by** possible.
 {{% /alert %}}
 
@@ -247,7 +247,7 @@ The sort order specifies the order in which the items in the reference selector 
 
 #### 2.9.3 Microflow
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 A microflow can only be used if the selection is made using a drop-down.
 {{% /alert %}}
 

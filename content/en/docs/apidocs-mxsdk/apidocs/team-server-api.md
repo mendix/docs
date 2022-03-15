@@ -5,7 +5,7 @@ category: "API Documentation"
 menu_order: 65
 ---
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The Team Server API will be deprecated in the future.
 
 Please use the [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/) instead.
@@ -17,7 +17,7 @@ The team server API allows you to retrieve the information (branches, revisions)
 The image below provides a domain model representation of the concepts discussed below and how these are related:
 ![](/attachments/apidocs-mxsdk/apidocs/team-server-api/425989.png)
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The team server API is only available to *licensed* apps which are running in a Mendix Cloud.
 {{% /alert %}}
 

@@ -61,7 +61,7 @@ When you drag a pane, you can see arrows that indicate where you can position th
 
 The video below shows examples of how to position a pane:
 
-<video width="640" height="360" controls src="attachments/view-menu/positioning-panes.mp4">VIDEO</video>
+<video width="640" height="360" controls src="/attachments/refguide8/view-menu/positioning-panes.mp4">VIDEO</video>
 If you have several panes grouped together in tabs, you can change the position of all the tabs at once by dragging the top-bar. To change the position of an individual tab, drag the tab itself. 
 
 ## 3 Menu Items

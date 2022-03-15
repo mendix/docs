@@ -83,7 +83,7 @@ To start the use-case, do the following:
 
 Check out the video with the process of configuring the example above:
 
-<video width="768" height="432" controls src="attachments/microflows-loop/loop-example-video.mp4">VIDEO</video>
+<video width="768" height="432" controls src="/attachments/studio7/microflows-loop/loop-example-video.mp4">VIDEO</video>
 
 As a result, we have a list of orders retrieved to our microflow, and a loop that iterates over this list. The activity inside the loop sets the status of each order to processed. 
 

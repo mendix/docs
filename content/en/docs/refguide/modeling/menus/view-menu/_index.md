@@ -67,7 +67,7 @@ For version control-enabled apps (meaning, those with [Team Server](/developerpo
 
 This pane has two levels, so when you zoom into a changed document, you can review all the changes within that document without going back and forth between levels. The zoomed-in level of the pane is split into two grids, with elements on the left and properties on the right. Selecting an element on the left presents the changed properties on the right:
 
-<video width="640" height="360" controls src="attachments/view-menu/changes.mp4">VIDEO</video>
+<video width="640" height="360" controls src="/attachments/refguide/view-menu/changes.mp4">VIDEO</video>
 
 ### 3.2 Connector {#connector}
 

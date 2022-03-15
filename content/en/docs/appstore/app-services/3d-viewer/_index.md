@@ -310,7 +310,7 @@ If you have already deployed your app, change the existing **LicenseToken** cons
 
 #### 4.7.2 For an App Deployed in Your Own Environment
 
-If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](https://docs.mendix.com/developerportal/deploy/index).
+If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](https://docs.mendix.com/developerportal/deploy/).
 
 ## 5 Usage
 

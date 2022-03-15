@@ -97,6 +97,8 @@ An OData v3 association can only be used if it has two ends.
 
 An OData v4 navigation property can only be used as an association if it has a partner.
 
+When you publish a self-referencing association, you can only publish one side of it. This means that you cannot use the association when you consume the resource as an external entity.
+
 ## 4 Data Hub License
 
 ### 4.1 Limitations {#license-limitations}

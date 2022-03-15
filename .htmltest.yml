@@ -3,7 +3,7 @@
 # ========================== 
 # See documentation in repo: https://github.com/wjdp/htmltest
 
-DirectoryPath: "./_site"
+DirectoryPath: "./public"
 DirectoryIndex: "index.html"
 FileExtension: .html
 # Do not check external files - will want to do this monthly or so - implement later

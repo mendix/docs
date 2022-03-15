@@ -19,4 +19,4 @@ The *Mendix Strategic Partners Guide* provides documentation on widgets written 
 
 The *Strategic Partners Guide* is divided into the following categories:
 
-{{% category_block %}}
+

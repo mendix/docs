@@ -21,4 +21,4 @@ Browse the *Studio Pro 9 How-to's* to find step-by-step guides that will teach y
 
 The *Studio Pro 9 How-to's* are divided into the following categories:
 
-{{% category_block %}}
+

@@ -57,5 +57,5 @@ Mobile app development allows you to create native mobile and hybrid apps and an
 
 The *Studio Pro 8 Guide* is divided into the following categories:
 
-{{% category_block %}}
+
 

@@ -9,4 +9,4 @@ no_list: false
 
 These are the release notes for the Mendix Desktop Modeler version 7:
 
-{{% number_child_pages sort="desc" %}}
+

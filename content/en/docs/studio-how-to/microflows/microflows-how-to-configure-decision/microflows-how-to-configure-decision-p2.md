@@ -9,7 +9,7 @@ tags: ["studio", "microflows", "decision", "pages"]
 
 ## 1 Introduction 
 
-In the [previous step](microflows-how-to-configure-decision-p1), you have configured microflows and decisions with enumeration attribute type and Boolean attribute type, now you can validate the microflows by adding them to pages. This how-to explains how you can add microflows with decisions to pages in Mendix Studio. 
+In the [previous step](/studio-how-to/microflows-how-to-configure-decision-p1/), you have configured microflows and decisions with enumeration attribute type and Boolean attribute type, now you can validate the microflows by adding them to pages. This how-to explains how you can add microflows with decisions to pages in Mendix Studio. 
 
 **This how-to will teach you how to do the following:**
 
@@ -19,7 +19,7 @@ In the [previous step](microflows-how-to-configure-decision-p1), you have config
 
 To start this tutorial, make sure you have completed the following prerequisites:
 
-* [Step 1: Build the Domain Model & Configure a Microflow](microflows-how-to-configure-decision-p1)
+* [Step 1: Build the Domain Model & Configure a Microflow](/studio-how-to/microflows-how-to-configure-decision-p1/)
 
 ## 3 Embedding the Microflow to Pages   
 
@@ -29,11 +29,11 @@ After microflows are created, you can add them to pages to run them in your app.
 
 To embed the microflow with a decision (the attribute of the enumeration type) to pages, do the following:
 
-1. Create a page for the existing customers details and name it *Customer_details*. For more information on creating pages, see the [Creating a New Page](/studio/page-editor) section in *Pages*.
+1. Create a page for the existing customers details and name it *Customer_details*. For more information on creating pages, see the [Creating a New Page](/studio/page-editor/) section in *Pages*.
 
 2.  In **Toolbox** > **Widgets** > **Data Containers**, find **Data View**.
 
-    ![](attachments/microflows-how-to-configure-decision/data-view.png)
+    ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/data-view.png)
 
 3. Drag and drop **Data View** to the page.
 
@@ -42,7 +42,7 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
     1. Set **Data Source** to **Context.**
     2. Set **Entity** to **Customer**.
     
-        ![](attachments/microflows-how-to-configure-decision/data-view-properties.png)
+        ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/data-view-properties.png)
     
 5. In **Toolbox**>**Widgets** >**Buttons** find **Create Object**, drag and drop it inside the data view container (it is named **New** by default).
 
@@ -51,13 +51,13 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
     1. Set **Customer** as **Entity** in the **Events** section.
     2. Click **Select Page**.
 
-        ![](attachments/microflows-how-to-configure-decision/create-button-properties.png) 
+        ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/create-button-properties.png) 
 
     3. In the **Select Page** dialog box, click the plus icon in the top right corner.
     4. In the **Create new page** dialog box, fill out the title of the page, for example, *New_customer*. 
     5. Tick **Pre-fill page contents based on the Customer entity** and click **Create**.
 
-        ![](attachments/microflows-how-to-configure-decision/pre-fill-contents.png) 
+        ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/pre-fill-contents.png) 
 
    The page with customer details is generated.
 
@@ -67,7 +67,7 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
 
 9. In the **Toolbox** > **Building Blocks** > **Lists** select **List 4**, drag and drop it to the list view. 
 
-    ![](attachments/microflows-how-to-configure-decision/list-view-list4.png) 
+    ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/list-view-list4.png) 
 
 10. Delete the following elements from the list view:
 
@@ -79,11 +79,11 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
     1. Set **Events**>**On Click Action** to **Microflow**.
     2. Click **Select microflow** and set **Show_grade_specific_page**.
 
-        ![](attachments/microflows-how-to-configure-decision/details-button-microflow.png) 
+        ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/details-button-microflow.png) 
 
 Congratulations! Now when the end-user clicks **Details**, the form for the corresponding customer grade will be opened. 
 
-You can now [preview your app](/studio/publishing-app) or publish it.
+You can now [preview your app](/studio/publishing-app/) or publish it.
 
 ### 3.2 Embedding the Microflow Having a Decision with the Attribute of the Boolean Type 
 
@@ -95,34 +95,34 @@ To embed the microflow with a decision (the attribute of the Boolean type), do t
 
 3.  In the **Properties** for the radio buttons, click **Data Source** > **Attribute** and select **Blocked Boolean**. This is how it should look like on your page: 
 
-    ![](attachments/microflows-how-to-configure-decision/new-customer-page-blocked-attribute.png)
+    ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/new-customer-page-blocked-attribute.png)
 
 4. Now you will add the microflow to pages. Open the page **Order_form_for_bronze_customers.**
 
 5.  In **Toolbox** > **Widgets** > **Data Containers**, find **Data View**. 
 
-    ![](attachments/microflows-how-to-configure-decision/data-view.png)
+    ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/data-view.png)
 
 6.  Drag and drop **Data View** to the page.
 
-    ![](attachments/microflows-how-to-configure-decision/data-view-select-data-view-source.png)
+    ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/data-view-select-data-view-source.png)
 
 7.  In the **Properties** of the data view, do the following:
     
     1. Set **Data Source** to **Context.**
     2. Set **Entity** to **Customer**.
     
-        ![](attachments/microflows-how-to-configure-decision/data-view-properties.png)
+        ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/data-view-properties.png)
     
 8. In **Toolbox**>**Widgets**>**Buttons**, find the **Call Microflow** button, drag and drop it into the **Data View** container. 
 
-    ![](attachments/microflows-how-to-configure-decision/call-microflow-button-in-data-view.png)
+    ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/call-microflow-button-in-data-view.png)
 
 9. Click the **Call Microflow** button to view its properties. 
 
 10. In the **Properties** tab, select the **Customers_status_check microflow**. 
 
-    ![](attachments/microflows-how-to-configure-decision/call-microflow-button-selected-microflow.png)
+    ![](/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/call-microflow-button-selected-microflow.png)
 
 11. Change the **Caption** from **Microflow** to **Place Order**. 
 
@@ -132,4 +132,4 @@ To embed the microflow with a decision (the attribute of the Boolean type), do t
 
 Congratulations! Now when the end-user clicks **Place order**, only customers who are not blocked will be able to proceed. If a customer is blocked, they will get an error message. 
 
-You can preview and/or publish your app. For more information on how to preview and publish an app, see [Previewing & Publishing Your App](/studio/publishing-app).
+You can preview and/or publish your app. For more information on how to preview and publish an app, see [Previewing & Publishing Your App](/studio/publishing-app/).

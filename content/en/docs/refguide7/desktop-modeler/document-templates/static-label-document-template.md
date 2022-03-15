@@ -30,7 +30,7 @@ Will print: Page 2 of 4
 
 ## Common Properties
 
-{{% snippet file="refguide7/Name+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Name+Property.md" %}}
 
 ## Appearance Properties
 

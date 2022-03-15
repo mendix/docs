@@ -30,7 +30,7 @@ Menu widgets display menu items configured in the [Navigation](/refguide8/naviga
 
 ## 2 Performing Basic Functions
 
-{{% snippet file="refguide8/performing-basic-functions-widgets.md" %}}
+{{% snippet file="/static/_includes/refguide8/performing-basic-functions-widgets.md" %}}
 
 ## 3 Read More
 

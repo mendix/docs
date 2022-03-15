@@ -62,7 +62,7 @@ The **General** section properties of are described in the table below:
 
 ### 2.3 Conditional Visibility {#visibility-data-view}
 
-{{% snippet file="studio/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/studio/visibility-section-link.md" %}}
 
 ### 2.4 Design Section {#design-section-data-view}
 
@@ -109,7 +109,7 @@ In the **General** section, you can select the number of rows to be displayed on
 
 ### 3.4 Conditional Visibility Section {#visibility-list-view}
 
-{{% snippet file="studio/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/studio/visibility-section-link.md" %}}
 
 ### 3.5 Design Section {#design-section-list-view}
 

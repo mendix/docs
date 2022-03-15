@@ -31,15 +31,15 @@ Button properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-{{% snippet file="refguide8/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/common-section-link.md" %}}
 
 ### 2.2 Design Properties Section {#design}
 
-{{% snippet file="refguide8/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide8/design-section-link.md" %}} 
 
 ### 2.3 Events Section {#events}
 
-{{% snippet file="refguide8/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/events-section-link.md" %}}
 
 ### 2.4 General Section {#general}
 
@@ -191,7 +191,7 @@ To add items to a drop-down buttons, do the following:
 
 ### 2.6 Visibility Section {#visibility}
 
-{{% snippet file="refguide8/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/visibility-section-link.md" %}}
 
 ## 3 Read More
 

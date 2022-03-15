@@ -57,7 +57,7 @@ The [Any Chart Cheat Sheet](/refguide8/charts-any-cheat-sheet/) lists the most c
 
 ## 4 Performing Basic Functions
 
-{{% snippet file="refguide8/performing-basic-functions-widgets.md" %}}
+{{% snippet file="/static/_includes/refguide8/performing-basic-functions-widgets.md" %}}
 
 ## 5 Documents in This Section
 

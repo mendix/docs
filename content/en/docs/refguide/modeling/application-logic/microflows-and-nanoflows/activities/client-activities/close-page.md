@@ -54,7 +54,7 @@ This property allows you to control how many pages should be closed.
 
 ## 4 Common Section {#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
 
 ## 5 Read More
 

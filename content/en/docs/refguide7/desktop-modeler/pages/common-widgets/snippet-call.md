@@ -10,7 +10,7 @@ The snippet call widget allows you to use a [snippet](/refguide7/snippet/) on an
 
 ## Common Properties
 
-{{% snippet file="refguide7/Name+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Name+Property.md" %}}
 
 ## General Properties
 

@@ -51,15 +51,15 @@ The **Role type** property determines the `aria-role` attribute value that will 
 
 ### 2.2 Common Section {#common}
 
-{{% snippet file="refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ### 2.3 Design Properties Section {#design}
 
-{{% snippet file="refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
 
 ### 2.4 Events Section {#events}
 
-{{% snippet file="refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
 ### 2.5 General Section {#general}
 
@@ -209,7 +209,7 @@ To add items to a drop-down buttons, do the following:
 
 ### 2.7 Visibility Section {#visibility}
 
-{{% snippet file="refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
 ## 3 Read More
 

@@ -96,4 +96,4 @@ It is possible to perform a microflow call from an offline-first app. However, i
 
 ## 5 Common Section {#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

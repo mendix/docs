@@ -23,7 +23,7 @@ For example, static label content `Page [%pageNumber%] of [%totalPageCount%]` wi
 
 ## 2 Common Properties
 
-{{% snippet file="refguide/name-property.md" %}}
+{{% snippet file="/static/_includes/refguide/name-property.md" %}}
 
 ## 3 Appearance Properties
 

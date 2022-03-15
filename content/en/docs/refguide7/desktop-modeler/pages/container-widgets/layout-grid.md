@@ -51,11 +51,11 @@ There is rarely a use case for more than four columns in a row.
 
 ## Common Properties
 
-{{% snippet file="refguide7/Name+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Name+Property.md" %}}
 
-{{% snippet file="refguide7/Class+Property.md" %}} 
+{{% snippet file="/static/_includes/refguide7/Class+Property.md" %}} 
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Style+Property.md" %}}
 
 ## General Properties
 
@@ -76,4 +76,4 @@ As the layout grid responds to the viewport width, and not to the width of its c
 
 ## Visibility Properties
 
-{{% snippet file="refguide7/Visible+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visible+Property.md" %}}

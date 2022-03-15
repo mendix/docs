@@ -35,11 +35,11 @@ Menu bar properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-{{% snippet file="refguide8/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/common-section-link.md" %}}
 
 ### 2.2 Design Properties Section {#design}
 
-{{% snippet file="refguide8/design-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide8/design-section-link.md" %}}
 
 ### 2.3 General Section {#general}
 

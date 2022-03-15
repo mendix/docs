@@ -89,7 +89,7 @@ For more information on associations' delete behavior, see the [Delete Behavior]
 
 ## 5 Common Section{#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
 
 ## 6 What Happens During a Delete? 
 

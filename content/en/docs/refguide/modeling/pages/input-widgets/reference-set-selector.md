@@ -70,11 +70,11 @@ There are three additional sets of properties which do not appear in the propert
 
 ### 2.1 Common Section{#common}
 
-{{% snippet file="refguide/common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ### 2.2 Data Source Section {#data-source}
 
-{{% snippet file="refguide/data-source-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/data-source-section-link.md" %}}
 
 The attribute path specifies which attribute(s) of an associated entity is shown in the reference set selector. The path must follow one association of type reference set starting in the entity of the data view.
 
@@ -84,13 +84,13 @@ You cannot currently use non-persistable entities in a reference set selector.
 
 ### 2.3 Design Properties Section {#design-properties}
 
-{{% snippet file="refguide/design-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}}
 
 ### 2.4 Events Section {#events}
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
-{{% snippet file="refguide/events-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
 ### 2.5 General Section {#general}
 
@@ -198,7 +198,7 @@ You cannot use a microflow to define selectable objects in a reference set selec
 
 ### 2.7 Visibility Section {#visibility}
 
-{{% snippet file="refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
 ## 3 Read More
 

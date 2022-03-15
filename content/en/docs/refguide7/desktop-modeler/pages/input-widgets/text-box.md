@@ -19,7 +19,7 @@ A text box must be placed in a data view or template grid and connected to an at
 
 ## General Properties
 
-{{% snippet file="refguide7/Numeric+Formatting+Properties.md" %}}
+{{% snippet file="/static/_includes/refguide7/Numeric+Formatting+Properties.md" %}}
 
 ### Show as Password (Only for Attributes of the String or HashString Type)
 
@@ -52,45 +52,45 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 ## Validation Properties
 
-{{% snippet file="refguide7/Widget+Validation.md" %}}
+{{% snippet file="/static/_includes/refguide7/Widget+Validation.md" %}}
 
 ## Data Source Properties
 
-{{% snippet file="refguide7/Attribute+Path+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Attribute+Path+Property.md" %}}
 
-{{% snippet file="refguide7/Label+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Label+Property.md" %}}
 
 ## Editability Properties
 
-{{% snippet file="refguide7/Editable+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Editable+Property.md" %}}
 
-{{% snippet file="refguide7/Read+Only+Style.md" %}}
+{{% snippet file="/static/_includes/refguide7/Read+Only+Style.md" %}}
 
-{{% snippet file="refguide7/Condition+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Condition+Property.md" %}}
 
 ## Visibility Properties
 
-{{% snippet file="refguide7/Visibility+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visibility+Property.md" %}}
 
-{{% snippet file="refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
+{{% snippet file="/static/_includes/refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## Events Properties
 
-{{% snippet file="refguide7/On+Change+Event.md" %}}
+{{% snippet file="/static/_includes/refguide7/On+Change+Event.md" %}}
 
-{{% snippet file="refguide7/On+Enter+event.md" %}}
+{{% snippet file="/static/_includes/refguide7/On+Enter+event.md" %}}
 
-{{% snippet file="refguide7/On+Leave+Event.md" %}}
+{{% snippet file="/static/_includes/refguide7/On+Leave+Event.md" %}}
 
 ## Common Properties
 
-{{% snippet file="refguide7/Name+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Name+Property.md" %}}
 
-{{% snippet file="refguide7/Class+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Class+Property.md" %}}
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Style+Property.md" %}}
 
-{{% snippet file="refguide7/Tab+index+Property.md" %}}
+{{% snippet file="/static/_includes/refguide7/Tab+index+Property.md" %}}
 
 ## Read More
 

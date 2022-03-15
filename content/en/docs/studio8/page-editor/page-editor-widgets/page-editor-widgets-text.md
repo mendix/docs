@@ -87,7 +87,7 @@ You can put several **Title** widgets on your page, but they will all display th
 
 ## 4 Conditional Visibility Section
 
-{{% snippet file="studio/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/studio/visibility-section-link.md" %}}
 
 ## 5 Design Section {#input-elements-design}
 

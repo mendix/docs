@@ -44,4 +44,4 @@ The user task object of the System.WorkflowUserTask entity available from the mi
 
 ## 4 Common Section {#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

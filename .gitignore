@@ -24,7 +24,6 @@ mx-1-get-hugo-and-node.ps1
 mx-2-install-dependencies.bat
 mx-3-run-server.bat
 bin
-package-lock.json
 
 # Added for convenience during new Docs Stack testing
 

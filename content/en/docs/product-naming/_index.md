@@ -2,7 +2,7 @@
 title: "Mendix Product Naming Guide"
 url: /product-naming/
 draft: true
-weight: 5
+weight: 95
 cascade:
     - space: "Mendix Product Naming Guide"
     - mendix_version: ""

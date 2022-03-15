@@ -1,5 +1,6 @@
 ---
 title: "Common Widgets"
+url: /refguide8/common-widgets/
 parent: "pages"
 menu_order: 20
 tags: ["studio pro", "common widgets", "widget"]

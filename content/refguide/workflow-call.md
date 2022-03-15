@@ -1,5 +1,6 @@
 ---
 title: "Workflow Call"
+url: /refguide/workflow-call/
 parent: "workflow-activities"
 menu_order: 10
 tags: ["studio pro", "call workflow", "workflow call"]

@@ -1,5 +1,6 @@
 ---
 title: "Marketplace Overview"
+url: /appstore/general/app-store-overview/
 category: "General Info"
 menu_order: 10
 description: "Presents an overview of how to find and use content from the Mendix Marketplace."

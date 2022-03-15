@@ -1,5 +1,6 @@
 ---
 title: "Use Layouts & Snippets"
+url: /howto/front-end/layouts-and-snippets/
 category: "Front End"
 menu_order: 30
 tags: ["front end"]

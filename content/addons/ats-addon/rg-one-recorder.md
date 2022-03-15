@@ -1,5 +1,6 @@
 ---
 title: "Recorder"
+url: /addons/ats-addon/rg-one-recorder/
 parent: "rg-one-test-dev"
 menu_order: 2
 ---

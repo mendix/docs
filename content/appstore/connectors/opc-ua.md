@@ -1,5 +1,6 @@
 ---
 title: "OPC UA" 
+url: /appstore/connectors/opc-ua/
 category: "Connectors"
 description: "Describes how to use the OPC UA connector, which is available in the Mendix Marketplace."
 tags: ["Marketplace", "Marketplace component", "OPC UA", "connector", ]

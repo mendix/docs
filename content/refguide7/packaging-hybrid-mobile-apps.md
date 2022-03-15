@@ -1,5 +1,6 @@
 ---
 title: "Packaging Hybrid Mobile Apps"
+url: /refguide7/packaging-hybrid-mobile-apps/
 category: "Mobile Development"
 ---
 

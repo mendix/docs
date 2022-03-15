@@ -1,5 +1,6 @@
 ---
 title: "Container"
+url: /refguide/container/
 parent: "structure-widgets"
 menu_order: 20
 tags: ["studio pro", "container", "structure", "widget"]

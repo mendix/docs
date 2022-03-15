@@ -1,5 +1,6 @@
 ---
 title: "Include Push Notifications"
+url: /howto/mobile/push-notifications/
 parent: "hybrid-mobile"
 menu_order: 10
 tags: ["mobile", "push notification"]

@@ -1,5 +1,6 @@
 ---
 title: "Associations"
+url: /studio/domain-models-association-properties/
 parent: "domain-models"
 description: "Describes the association properties in Mendix Studio."
 tags: ["studio", "domain model"]

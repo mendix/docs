@@ -1,5 +1,6 @@
 ---
 title: "General"
+url: /addons/ats-addon/ht-one-custom-action-general/
 parent: "ht-one-create-custom-actions"
 ---
 

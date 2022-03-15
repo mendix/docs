@@ -1,5 +1,6 @@
 ---
 title: "Finding the Action You Need"
+url: /addons/ats-addon/bp-two-finding-the-action-you-need/
 parent: "bp-two"
 ---
 

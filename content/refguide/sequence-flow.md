@@ -1,5 +1,6 @@
 ---
 title: "Sequence Flow"
+url: /refguide/sequence-flow/
 parent: "microflows-and-nanoflows"
 menu_order: 30
 tags: ["studio pro", "sequence flow", "microflow"]

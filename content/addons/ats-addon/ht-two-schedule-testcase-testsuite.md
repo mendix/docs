@@ -1,5 +1,6 @@
 ---
 title: "Schedule a Test Suite/Test Case"
+url: /addons/ats-addon/ht-two-schedule-testcase-testsuite/
 parent: "ht-two"
 description: "Describes how to create a test suite and add test cases and test suites to your test suite."
 tags: ["ATS", "testing"]

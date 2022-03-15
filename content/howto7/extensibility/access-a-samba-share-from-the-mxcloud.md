@@ -1,5 +1,6 @@
 ---
 title: "Access a Samba Share"
+url: /howto7/extensibility/access-a-samba-share-from-the-mxcloud/
 category: "Extensibility"
 menu_order: 10
 tags: ["Samba", "share"]

@@ -1,5 +1,6 @@
 ---
 title: "System"
+url: /addons/ats-addon/rg-one-system/
 parent: "rg-one-mendix-actions"
 ---
 

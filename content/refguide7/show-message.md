@@ -1,5 +1,6 @@
 ---
 title: "Show Message"
+url: /refguide7/show-message/
 parent: "client-activities"
 aliases:
     - /refguide7/Show+Message.html

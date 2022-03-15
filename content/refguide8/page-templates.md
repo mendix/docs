@@ -1,5 +1,6 @@
 ---
 title: "Page Template"
+url: /refguide8/page-templates/
 parent: "page-resources"
 menu_order: 20
 tags: ["studio pro", "page template", "page resource"]

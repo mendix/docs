@@ -1,5 +1,6 @@
 ---
 title: "Image"
+url: /refguide8/image/
 parent: "common-widgets"
 menu_order: 20
 tags: ["studio pro", "image", "image widget"]

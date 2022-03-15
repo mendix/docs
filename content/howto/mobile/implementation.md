@@ -1,5 +1,6 @@
 ---
 title: "Implementation"
+url: /howto/mobile/implementation/
 parent: "native-mobile"
 menu_order: 30
 description: Implement native mobile features in Mendix Studio Pro.

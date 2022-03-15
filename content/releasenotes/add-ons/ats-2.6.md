@@ -1,5 +1,6 @@
 ---
 title: "2.6"
+url: /releasenotes/add-ons/ats-2.6/
 parent: "ats-2"
 ---
 

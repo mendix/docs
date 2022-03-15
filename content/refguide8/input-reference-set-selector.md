@@ -1,5 +1,6 @@
 ---
 title: "Input Reference Set Selector"
+url: /refguide8/input-reference-set-selector/
 parent: "input-widgets"
 menu_order: 90
 tags: ["studio pro"]

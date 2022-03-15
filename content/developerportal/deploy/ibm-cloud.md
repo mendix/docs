@@ -1,5 +1,6 @@
 ---
 title: "IBM Cloud"
+url: /developerportal/deploy/ibm-cloud/
 category: "Deployment"
 menu_order: 65
 description: "Describes how to deploy a Mendix app to the IBM Cloud"

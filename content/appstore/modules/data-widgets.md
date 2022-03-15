@@ -1,5 +1,6 @@
 ---
 title: "Data Widgets"
+url: /appstore/modules/data-widgets/
 category: "Modules"
 description: "Describes the configuration and usage of the Data Widgets module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "data grid", "gallery", "tree node", "platform support"]

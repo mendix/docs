@@ -1,5 +1,6 @@
 ---
 title: "OQL Order by Clause"
+url: /refguide8/oql-order-by-clause/
 parent: "oql"
 tags: ["studio pro"]
 ---

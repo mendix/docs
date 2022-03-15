@@ -1,5 +1,6 @@
 ---
 title: "Demo Users"
+url: /refguide8/demo-users/
 parent: "project-security"
 menu_order: 30
 tags: ["studio pro", "demo users", "demo-users", "project security"]

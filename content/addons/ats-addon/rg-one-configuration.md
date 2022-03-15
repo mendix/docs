@@ -1,5 +1,6 @@
 ---
 title: "Configuration"
+url: /addons/ats-addon/rg-one-configuration/
 parent: "rg-one-ats"
 ---
 

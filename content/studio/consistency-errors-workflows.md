@@ -1,5 +1,6 @@
 ---
 title: "Workflow Consistency Errors"
+url: /studio/consistency-errors-workflows/
 parent: "consistency-errors"
 menu_order: 05
 description: "Describes workflow consistency errors in Mendix Studio and the way to fix them."

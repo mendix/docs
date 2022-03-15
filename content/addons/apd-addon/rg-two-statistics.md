@@ -1,5 +1,6 @@
 ---
 title: "Performance Statistics"
+url: /addons/apd-addon/rg-two-statistics/
 parent: "rg-two-apm"
 ---
 

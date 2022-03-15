@@ -1,5 +1,6 @@
 ---
 title: "Old SDK Versions (Below 5.0)"
+url: /apidocs-mxsdk/mxsdk/sdk-old-versions-howtos/
 parent: "sdk-howtos"
 menu_order: 60
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Client Activities"
+url: /refguide/client-activities/
 parent: "activities"
 menu_order: 50
 tags: ["studio pro", "client activities", "activities"]

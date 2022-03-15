@@ -1,5 +1,6 @@
 ---
 title: "Message Definitions"
+url: /refguide/message-definitions/
 parent: "integration"
 menu_order: 50
 tags: ["studio pro"]

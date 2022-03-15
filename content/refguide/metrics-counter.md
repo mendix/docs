@@ -1,5 +1,6 @@
 ---
 title: "Counter"
+url: /refguide/metrics-counter/
 parent: "metrics-activities"
 menu_order: 10
 tags: ["studio pro", "metrics", "micrometer"]

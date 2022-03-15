@@ -1,5 +1,6 @@
 ---
 title: "Use Local Notifications"
+url: /howto8/mobile/local-notif-parent/
 parent: "notifications"
 menu_order: 88
 description: Tutorials for setting up local push notifications which do not use an internet connection.

@@ -1,5 +1,6 @@
 ---
 title: "Debug Microflows"
+url: /howto7/monitoring-troubleshooting/debug-microflows/
 category: "Monitoring & Troubleshooting"
 menu_order: 2
 tags: ["monitoring", "troubleshooting", "debug", "microflow"]

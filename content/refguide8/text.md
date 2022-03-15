@@ -1,5 +1,6 @@
 ---
 title: "Text"
+url: /refguide8/text/
 parent: "common-widgets"
 menu_order: 10
 tags: ["studio pro", "text", "text widget", "common widget"]

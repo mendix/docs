@@ -1,5 +1,6 @@
 ---
 title: "Build a Pluggable Web Widget: Part 1"
+url: /howto/extensibility/create-a-pluggable-widget-one/
 parent: "pluggable-widgets"
 menu_order: 10
 description: "This how-to will teach you to create a pluggable web widget."

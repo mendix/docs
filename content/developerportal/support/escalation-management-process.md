@@ -1,5 +1,6 @@
 ---
 title: "Support Escalation Process"
+url: /developerportal/support/escalation-management-process/
 category: "Mendix Support"
 menu_order: 5
 description: "This document describes the types of Mendix Support escalation and how the escalation process works."

@@ -1,5 +1,6 @@
 ---
 title: "Sidebar Toggle"
+url: /refguide/sidebar-toggle-button/
 parent: "layout"
 menu_order: 30
 tags: ["studio pro"]

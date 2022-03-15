@@ -1,5 +1,6 @@
 ---
 title: "Mendix Feedback"
+url: /appstore/widgets/mendix-feedback/
 category: "Widgets"
 description: "Describes the configuration and usage of the Mendix Feedback widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "feedback", "platform support"]

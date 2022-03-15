@@ -1,5 +1,6 @@
 ---
 title: "Page Title"
+url: /refguide8/page-title/
 parent: "common-widgets"
 menu_order: 50
 tags: ["studio pro", "page title", "common widgets"]

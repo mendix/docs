@@ -1,5 +1,6 @@
 ---
 title: "XPath quarter-from-dateTime"
+url: /refguide7/xpath-quarter-from-datetime/
 parent: "xpath-constraint-functions"
 ---
 

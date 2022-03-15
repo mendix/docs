@@ -1,5 +1,6 @@
 ---
 title: "Stories Pane"
+url: /refguide/stories-pane/
 parent: view-menu
 menu_order: 60
 description: "Describes the Stories pane in Mendix Studio Pro."

@@ -1,5 +1,6 @@
 ---
 title: "OQL Group by Clause"
+url: /refguide/oql-group-by-clause/
 parent: "oql"
 tags: ["studio pro"]
 ---

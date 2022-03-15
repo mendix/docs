@@ -1,5 +1,6 @@
 ---
 title: "Extend Design Properties"
+url: /howto/front-end/extend-design-properties/
 parent: "atlas-ui"
 menu_order: 60
 tags: ["Atlas", "UI", "UX", "user experience"]

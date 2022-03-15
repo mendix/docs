@@ -1,5 +1,6 @@
 ---
 title: "Upload to Version Control Server"
+url: /refguide/upload-to-version-control-dialog/
 parent: "version-control-menu"
 menu_order: 70
 tags: ["studio pro"]

@@ -1,5 +1,6 @@
 ---
 title: "Progress Bar"
+url: /appstore/widgets/progress-bar/
 category: "Widgets"
 description: "Describes the purpose, features, and configurations of the Progress Bar widget which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "progress bar", "bootstrap", "platform support"]

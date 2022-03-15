@@ -1,5 +1,6 @@
 ---
 title: "Datasets"
+url: /refguide/data-sets/
 parent: "resources"
 menu_order: 50
 tags: ["studio pro", "data set", "dataset"]

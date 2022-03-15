@@ -1,5 +1,6 @@
 ---
 title: "Set Value (by Index)"
+url: /addons/ats-addon/rg-one-set-value-by-index/
 parent: "rg-one-input"
 ---
 

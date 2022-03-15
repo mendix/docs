@@ -1,5 +1,6 @@
 ---
 title: "Use Navigation Layouts"
+url: /howto/front-end/use-navigation-layouts/
 category: "Front End"
 menu_order: 12
 description: "This guide will teach you to use navigation layouts."

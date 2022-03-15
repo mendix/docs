@@ -1,5 +1,6 @@
 ---
 title: "Prerequisites"
+url: /addons/apd-addon/ig-one-prerequisites/
 parent: "ig-one"
 menu_order: 1
 ---

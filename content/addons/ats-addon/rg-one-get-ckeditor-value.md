@@ -1,5 +1,6 @@
 ---
 title: "Get CKEditor Value"
+url: /addons/ats-addon/rg-one-get-ckeditor-value/
 parent: "rg-one-ckeditor"
 ---
 

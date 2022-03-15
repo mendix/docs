@@ -1,5 +1,6 @@
 ---
 title: "XPath Operators"
+url: /refguide7/xpath-operators/
 parent: "xpath-constraints"
 ---
 

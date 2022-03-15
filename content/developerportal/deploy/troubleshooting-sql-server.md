@@ -1,5 +1,6 @@
 ---
 title: "Troubleshooting SQL Server"
+url: /developerportal/deploy/troubleshooting-sql-server/
 parent: "mendix-on-windows-microsoft-sql-server"
 menu_order: 80
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

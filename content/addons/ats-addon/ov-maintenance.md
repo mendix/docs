@@ -1,5 +1,6 @@
 ---
 title: "Maintenance"
+url: /addons/ats-addon/ov-maintenance/
 parent: "ov"
 menu_order: 4
 ---

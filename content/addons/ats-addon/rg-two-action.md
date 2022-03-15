@@ -1,5 +1,6 @@
 ---
 title: "Action"
+url: /addons/ats-addon/rg-two-action/
 parent: "rg-two-ats"
 ---
 

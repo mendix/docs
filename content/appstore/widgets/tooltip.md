@@ -1,5 +1,6 @@
 ---
 title: "Tooltip"
+url: /appstore/widgets/tooltip/
 category: "Widgets"
 description: "Describes the Tooltip widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "tooltip", "platform support"]

@@ -1,5 +1,6 @@
 ---
 title: "Project Menu"
+url: /refguide8/project-menu/
 parent: "menus"
 description: "Describes the Project Menu in Studio Pro."
 menu_order: 30

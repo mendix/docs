@@ -1,5 +1,6 @@
 ---
 title: "Change Object"
+url: /refguide/change-object/
 parent: "object-activities"
 menu_order: 20
 tags: ["studio pro"]

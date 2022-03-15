@@ -1,5 +1,6 @@
 ---
 title: "JavaScript Actions"
+url: /refguide8/javascript-actions/
 parent: "resources"
 menu_order: 20
 description: "This reference guide details the ways JavaScript Actions can extend the functionality of your Mendix app."

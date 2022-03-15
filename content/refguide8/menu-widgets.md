@@ -1,5 +1,6 @@
 ---
 title: "Menu Widgets"
+url: /refguide8/menu-widgets/
 parent: "pages"
 menu_order: 45
 tags: ["studio pro", "menu widgets", "navigation", "widget"]

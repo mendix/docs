@@ -1,5 +1,6 @@
 ---
 title: "Deploy API"
+url: /apidocs-mxsdk/apidocs/deploy-api/
 category: "API Documentation"
 description: "APIs which can be used to deploy Mendix apps to licensed nodes"
 menu_order: 25

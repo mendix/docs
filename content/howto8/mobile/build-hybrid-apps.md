@@ -1,5 +1,6 @@
 ---
 title: "Build Hybrid Apps "
+url: /howto8/mobile/build-hybrid-apps/
 parent: "hybrid-mobile"
 menu_order: 2
 tags: ["mobile", "hybrid"]

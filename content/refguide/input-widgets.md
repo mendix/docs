@@ -1,5 +1,6 @@
 ---
 title: "Input Elements"
+url: /refguide/input-widgets/
 parent: "pages"
 menu_order: 30
 description: "Widgets which can be added to pages to view and edit attributes of objects."

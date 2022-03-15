@@ -1,5 +1,6 @@
 ---
 title: "Loop"
+url: /studio7/microflows-loop/
 category: "Microflows"
 menu_order: 30
 description: "Describes a loop in Mendix Studio."

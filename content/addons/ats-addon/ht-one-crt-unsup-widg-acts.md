@@ -1,5 +1,6 @@
 ---
 title: "Create Unsupported Widget Actions"
+url: /addons/ats-addon/ht-one-crt-unsup-widg-acts/
 parent: "ht-one-create-custom-actions"
 ---
 

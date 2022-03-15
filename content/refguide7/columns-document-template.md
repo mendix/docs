@@ -1,5 +1,6 @@
 ---
 title: "Columns (Document Template)"
+url: /refguide7/columns-document-template/
 parent: "data-grid-document-template"
 aliases:
     - /refguide7/Columns+(document+template).html

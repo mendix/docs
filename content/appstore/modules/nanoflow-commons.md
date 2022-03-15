@@ -1,5 +1,6 @@
 ---
 title: "Nanoflow Commons"
+url: /appstore/modules/nanoflow-commons/
 category: "Modules"
 description: "Describes the configuration and usage of the Nanoflow Commons module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "nanoflow", "nanoflow commons", "platform support"]

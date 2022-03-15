@@ -1,5 +1,6 @@
 ---
 title: "Mendix Runtime"
+url: /refguide/runtime/
 weight: 40
 tags: ["runtime", "runtime server", "mendix client", "cluster leader"]
 ---

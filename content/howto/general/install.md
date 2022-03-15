@@ -1,5 +1,6 @@
 ---
 title: "Install Mendix Studio Pro"
+url: /howto/general/install/
 category: "General Info"
 menu_order: 1
 description: "Follow this how-to to learn how to install Mendix Studio Pro."

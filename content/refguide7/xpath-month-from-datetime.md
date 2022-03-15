@@ -1,5 +1,6 @@
 ---
 title: "XPath month-from-dateTime"
+url: /refguide7/xpath-month-from-datetime/
 parent: "xpath-constraint-functions"
 ---
 

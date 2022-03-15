@@ -1,5 +1,6 @@
 ---
 title: "Edit Menu"
+url: /refguide/edit-menu/
 parent: "menus"
 description: "Describes the Edit Menu in Studio Pro."
 menu_order: 10

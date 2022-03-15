@@ -1,5 +1,6 @@
 ---
 title: "Published REST Services"
+url: /refguide/published-rest-services/
 parent: "integration"
 menu_order: 20
 description: "An overview of published REST services from Mendix apps"

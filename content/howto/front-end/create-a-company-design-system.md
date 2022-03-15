@@ -1,5 +1,6 @@
 ---
 title: "Create a Company Design System"
+url: /howto/front-end/create-a-company-design-system/
 parent: "atlas-ui"
 menu_order: 45
 tags: ["Atlas", "UI", "UX", "user experience"]

@@ -1,5 +1,6 @@
 ---
 title: "Oracle"
+url: /refguide8/oracle/
 parent: "data-storage"
 menu_order: 60
 tags: ["studio pro", "database", "oracle"]

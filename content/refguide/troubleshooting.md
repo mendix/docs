@@ -1,5 +1,6 @@
 ---
 title: "Troubleshooting"
+url: /refguide/troubleshooting/
 category: "Java Programming"
 tags: ["studio pro"]
 # See Jira issue IDS-807, compatibility list might need update

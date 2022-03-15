@@ -1,5 +1,6 @@
 ---
 title: "Version Control Menu"
+url: /refguide/version-control-menu/
 parent: "menus"
 description: "Describes the Version Control menu in Studio Pro."
 menu_order: 40

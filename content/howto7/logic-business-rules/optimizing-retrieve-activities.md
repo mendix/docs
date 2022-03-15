@@ -1,5 +1,6 @@
 ---
 title: "Optimize Retrieve Activities"
+url: /howto7/logic-business-rules/optimizing-retrieve-activities/
 category: "Logic & Business Rules"
 menu_order: 9
 tags: ["microflow", "retrieve", "optimize"]

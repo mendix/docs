@@ -1,5 +1,6 @@
 ---
 title: "Integration"
+url: /refguide8/integration/
 category: "App Modeling"
 menu_order: 110
 tags: ["studio pro"]

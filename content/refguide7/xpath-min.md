@@ -1,5 +1,6 @@
 ---
 title: "XPath min"
+url: /refguide7/xpath-min/
 parent: "xpath-query-functions"
 ---
 

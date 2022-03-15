@@ -1,5 +1,6 @@
 ---
 title: "Header"
+url: /refguide8/header/
 parent: "layout"
 menu_order: 20
 tags: ["studio pro"]

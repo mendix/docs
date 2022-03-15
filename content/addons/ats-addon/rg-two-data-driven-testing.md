@@ -1,5 +1,6 @@
 ---
 title: "Data-Driven Testing"
+url: /addons/ats-addon/rg-two-data-driven-testing/
 parent: "rg-two-ats"
 ---
 

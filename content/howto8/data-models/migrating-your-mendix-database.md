@@ -1,5 +1,6 @@
 ---
 title: "Migrate Your Mendix Database"
+url: /howto8/data-models/migrating-your-mendix-database/
 category: "Data Models"
 menu_order: 7
 tags: ["database", "migrate", "PostgreSQL", "export", "import"]

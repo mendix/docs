@@ -1,5 +1,6 @@
 ---
 title: "Implement Mendix Best Practices for Development"
+url: /howto8/general/dev-best-practices/
 category: "General Info"
 menu_order: 7
 tags: ["best practice", "development", "develop", "reusable", "prefix"]

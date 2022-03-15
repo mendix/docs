@@ -1,5 +1,6 @@
 ---
 title: "Show Message"
+url: /refguide/show-message/
 parent: "client-activities"
 menu_order: 4
 tags: ["studio pro", "show message", "client activities"]

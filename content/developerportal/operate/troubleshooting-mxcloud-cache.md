@@ -1,5 +1,6 @@
 ---
 title: "Cache Metrics (Runtime Version 6)"
+url: /developerportal/operate/troubleshooting-mxcloud-cache/
 parent: "metrics"
 menu_order: 40
 description: "How to troubleshoot the cache in your node."

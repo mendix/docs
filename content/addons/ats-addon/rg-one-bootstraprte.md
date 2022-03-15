@@ -1,5 +1,6 @@
 ---
 title: "BootstrapRTE"
+url: /addons/ats-addon/rg-one-bootstraprte/
 parent: "rg-one-appstore-widg-acts"
 ---
 

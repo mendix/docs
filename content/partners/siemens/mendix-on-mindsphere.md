@@ -1,5 +1,6 @@
 ---
 title: "Mendix on MindSphere"
+url: /partners/siemens/mendix-on-mindsphere/
 parent: "mindsphere"
 menu_order: 50
 description: "A description of some extra considerations to be taken into account when developing for deployment to MindSphere"

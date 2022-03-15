@@ -1,5 +1,6 @@
 ---
 title: "Fieldset"
+url: /appstore/widgets/fieldset/
 category: "Widgets"
 description: "Describes the Fieldset widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "fieldset", "token", "platform support"]

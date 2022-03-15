@@ -1,5 +1,6 @@
 ---
 title: "Data Storage"
+url: /refguide7/data-storage/
 category: "Mendix Runtime"
 ---
 

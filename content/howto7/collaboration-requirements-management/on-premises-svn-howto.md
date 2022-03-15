@@ -1,5 +1,6 @@
 ---
 title: "Work with an On-Premises Version Control Server"
+url: /howto7/collaboration-requirements-management/on-premises-svn-howto/
 category: "Collaboration & Requirements Management"
 menu_order: 60
 tags: ["on-premises"]

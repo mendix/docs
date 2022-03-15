@@ -1,5 +1,6 @@
 ---
 title: "Create a Custom Save Button"
+url: /howto/logic-business-rules/create-a-custom-save-button/
 category: "Logic & Business Rules"
 menu_order: 40
 tags: ["microflow", "logic", "save button", "how-to"]

@@ -1,5 +1,6 @@
 ---
 title: "Enumerations"
+url: /refguide/enumerations/
 parent: "resources"
 menu_order: 40
 tags: ["studio pro", "enumeration", "enumeration values", "enumeration value"]

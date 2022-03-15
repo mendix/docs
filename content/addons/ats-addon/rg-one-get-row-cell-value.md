@@ -1,5 +1,6 @@
 ---
 title: "Get Row Cell Value"
+url: /addons/ats-addon/rg-one-get-row-cell-value/
 parent: "rg-one-datagrid-templategrid-listview"
 ---
 

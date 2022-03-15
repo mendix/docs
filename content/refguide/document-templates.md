@@ -1,5 +1,6 @@
 ---
 title: "Document Templates"
+url: /refguide/document-templates/
 parent: "resources"
 menu_order: 90
 tags: ["studio pro", "document template"]

@@ -1,5 +1,6 @@
 ---
 title: "Click Menu Item"
+url: /addons/ats-addon/rg-one-click-menu-item/
 parent: "rg-one-navigation-menu"
 ---
 

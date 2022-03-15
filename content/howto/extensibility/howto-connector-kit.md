@@ -1,5 +1,6 @@
 ---
 title: "Build Microflow Actions with Java"
+url: /howto/extensibility/howto-connector-kit/
 category: "Extensibility"
 description: "Describes creating custom Microflow actions using Java."
 menu_order: 80

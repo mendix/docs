@@ -1,5 +1,6 @@
 ---
 title: "Start Event"
+url: /refguide7/start-event/
 parent: "events"
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Mendix Vendor Program"
+url: /appstore/creating-content/vendor-program/
 category: "Creating Content"
 menu_order: 1
 description: "Describes how to join the Mendix Vendor Program to sell your content in the Mendix Marketplace."

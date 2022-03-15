@@ -1,5 +1,6 @@
 ---
 title: "Import XML"
+url: /refguide7/import-xml/
 parent: "integration-activities"
 ---
 

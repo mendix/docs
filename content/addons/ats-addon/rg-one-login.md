@@ -1,5 +1,6 @@
 ---
 title: "Login"
+url: /addons/ats-addon/rg-one-login/
 parent: "rg-one-generic"
 ---
 

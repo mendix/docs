@@ -1,5 +1,6 @@
 ---
 title: "Settings"
+url: /addons/apd-addon/rg-two-settings/
 parent: "rg-two-apm"
 ---
 

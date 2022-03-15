@@ -1,5 +1,6 @@
 ---
 title: "Implement Push Notifications"
+url: /howto8/mobile/implementation-guide/
 parent: "push-notifications"
 menu_order: 10
 tags: ["mobile", "push notification"]

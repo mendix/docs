@@ -1,5 +1,6 @@
 ---
 title: "Metrics"
+url: /refguide/metrics/
 category: "Mendix Runtime"
 tags: ["studio pro", "metrics", "micrometer"]
 ---

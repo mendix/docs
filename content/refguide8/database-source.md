@@ -1,5 +1,6 @@
 ---
 title: "Database Source"
+url: /refguide8/database-source/
 parent: "data-sources"
 tags: ["studio pro", "database", "data source"]
 menu_order: 10

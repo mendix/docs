@@ -1,5 +1,6 @@
 ---
 title: "Create Your First Microflow: Hello World!"
+url: /howto7/logic-business-rules/create-your-first-microflow-hello-world/
 category: "Logic & Business Rules"
 menu_order: 1
 tags: ["microflow"]

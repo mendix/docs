@@ -1,5 +1,6 @@
 ---
 title: "ATS Helper"
+url: /addons/ats-addon/rg-two-ats-helper/
 parent: "rg-two-ats"
 ---
 

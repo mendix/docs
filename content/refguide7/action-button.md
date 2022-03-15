@@ -1,5 +1,6 @@
 ---
 title: "Action Button"
+url: /refguide7/action-button/
 parent: "button-widgets"
 aliases:
     - /refguide7/link-button.html

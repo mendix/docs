@@ -1,5 +1,6 @@
 ---
 title: "Mendix Cloud HTTP Request Headers"
+url: /developerportal/deploy/mendix-cloud-request-headers/
 parent: "mendix-cloud-deploy"
 menu_order: 36
 description: "Describes which HTTP request headers are available in the Mendix Cloud."

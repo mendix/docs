@@ -1,5 +1,6 @@
 ---
 title: "Download from Version Control Server"
+url: /refguide/download-from-version-control-dialog/
 parent: "version-control-menu"
 menu_order: 60
 tags: ["studio pro"]

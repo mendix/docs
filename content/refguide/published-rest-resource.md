@@ -1,5 +1,6 @@
 ---
 title: "Published REST Resource"
+url: /refguide/published-rest-resource/
 parent: "published-rest-service"
 menu_order: 50
 description: "The configurable options for a published REST resource"

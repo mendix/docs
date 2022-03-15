@@ -1,5 +1,6 @@
 ---
 title: "APM Use Cases"
+url: /addons/apd-addon/uc/
 category: "APD"
 ---
 

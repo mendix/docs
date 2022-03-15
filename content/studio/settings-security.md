@@ -1,5 +1,6 @@
 ---
 title: "Security, Roles & Permissions"
+url: /studio/settings-security/
 category: "Settings"
 description: "Describes security and roles and permissions in Mendix Studio."
 menu_order: 10

@@ -1,5 +1,6 @@
 ---
 title: "Mapping Documents"
+url: /refguide/mapping-documents/
 parent: "integration"
 menu_order: 35
 tags: ["studio pro"]

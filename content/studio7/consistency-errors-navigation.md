@@ -1,5 +1,6 @@
 ---
 title: "Navigation Consistency Errors"
+url: /studio7/consistency-errors-navigation/
 category: "Consistency Errors"
 description: "Describes navigation consistency errors in Mendix Studio and the way to fix them."
 tags: ["studio", "consistency errors", "checks", "errors", "navigation"]

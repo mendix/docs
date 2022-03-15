@@ -1,5 +1,6 @@
 ---
 title: "Docker"
+url: /developerportal/deploy/docker-deploy/
 category: "Deployment"
 menu_order: 60
 description: "Describes how to build a new Docker image using the Mendix buildpack."

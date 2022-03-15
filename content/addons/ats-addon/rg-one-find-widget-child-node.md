@@ -1,5 +1,6 @@
 ---
 title: "Find Widget Child Node"
+url: /addons/ats-addon/rg-one-find-widget-child-node/
 parent: "rg-one-system"
 ---
 

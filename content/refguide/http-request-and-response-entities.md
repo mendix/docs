@@ -1,5 +1,6 @@
 ---
 title: "HttpRequest & HttpResponse System Entities"
+url: /refguide/http-request-and-response-entities/
 parent: "integration"
 menu_order: 45
 tags: ["studio pro"]

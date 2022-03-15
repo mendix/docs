@@ -1,5 +1,6 @@
 ---
 title: "Retrieve"
+url: /refguide8/retrieve/
 parent: "object-activities"
 menu_order: 60
 tags: ["studio pro"]

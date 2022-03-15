@@ -1,5 +1,6 @@
 ---
 title: "MS Windows: Activate a Mendix License on Microsoft Windows"
+url: /developerportal/deploy/activate-a-mendix-license-on-microsoft-windows/
 parent: "deploy-mendix-on-microsoft-windows"
 menu_order: 10
 tags: ["license", "Windows", "on-premises", "Mendix Service Console"]

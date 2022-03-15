@@ -1,5 +1,6 @@
 ---
 title: "Native Template"
+url: /releasenotes/mobile/native-template/
 category: "Mobile"
 menu_order: 12
 toc-level: 1

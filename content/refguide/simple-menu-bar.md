@@ -1,5 +1,6 @@
 ---
 title: "Simple Menu Bar"
+url: /refguide/simple-menu-bar/
 parent: "menu-widgets"
 menu_order: 2
 tags: ["studio pro"]

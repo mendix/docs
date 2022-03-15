@@ -1,5 +1,6 @@
 ---
 title: "Create Object"
+url: /refguide7/create-object/
 parent: "object-activities"
 ---
 

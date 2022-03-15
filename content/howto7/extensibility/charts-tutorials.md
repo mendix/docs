@@ -1,5 +1,6 @@
 ---
 title: "Use the Charts Widgets"
+url: /howto7/extensibility/charts-tutorials/
 category: "Extensibility"
 menu_order: 10
 description: "These how-to's will guide you in using charts in Mendix apps."

@@ -1,5 +1,6 @@
 ---
 title: "MxAssist Performance Bot"
+url: /refguide/mx-assist-performance-bot/
 parent: "view-menu"
 menu_order: 50
 description: "Describes MxAssist Performance Bot in Mendix Studio Pro."

@@ -1,5 +1,6 @@
 ---
 title: "Work with Images & Files"
+url: /howto8/data-models/working-with-images-and-files/
 category: "Data Models"
 menu_order: 4
 tags: ["studio pro"]

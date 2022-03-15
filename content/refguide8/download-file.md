@@ -1,5 +1,6 @@
 ---
 title: "Download File"
+url: /refguide8/download-file/
 parent: "client-activities"
 menu_order: 20
 tags: ["studio pro", "download file", "client activities"]

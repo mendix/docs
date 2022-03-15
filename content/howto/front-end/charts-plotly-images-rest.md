@@ -1,5 +1,6 @@
 ---
 title: "Use the Plotly Images REST Service Endpoint"
+url: /howto/front-end/charts-plotly-images-rest/
 parent: "charts-tutorials"
 menu_order: 70
 tags: ["Charts", "Plotly", "REST", "Studio Pro", "Widget"]

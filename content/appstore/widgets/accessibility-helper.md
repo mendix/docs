@@ -1,5 +1,6 @@
 ---
 title: "Accessibility Helper"
+url: /appstore/widgets/accessibility-helper/
 category: "Widgets"
 description: "Describes the Accessibility Helper widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "accessibility helper", "a11y helper", "token", "platform support"]

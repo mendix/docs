@@ -1,5 +1,6 @@
 ---
 title: "Branch Line Manager"
+url: /refguide8/branch-line-manager-dialog/
 parent: "version-control-menu"
 menu_order: 80
 tags: ["studio pro", "manage branch lines", "branch line manager"]

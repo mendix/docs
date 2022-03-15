@@ -1,5 +1,6 @@
 ---
 title: "Constants"
+url: /refguide8/constants/
 parent: "resources"
 menu_order: 60
 tags: ["studio pro", "constant", "constants"]

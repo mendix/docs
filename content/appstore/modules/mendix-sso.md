@@ -1,5 +1,6 @@
 ---
 title: "Mendix SSO"
+url: /appstore/modules/mendix-sso/
 category: "Modules"
 description: "Describes the configuration and usage of the Mendix SSO module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "sso", "single sign on", "platform support"]

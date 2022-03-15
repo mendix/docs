@@ -1,5 +1,6 @@
 ---
 title: "Image Crop"
+url: /appstore/modules/image-crop/
 category: "Modules"
 description: "Describes the configuration and usage of the Image Crop module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "image crop", "cropper", "image", "platform support"]

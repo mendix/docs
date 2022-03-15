@@ -1,5 +1,6 @@
 ---
 title: "Decision in Workflows"
+url: /refguide/decision-in-workflows/
 parent: "workflows"
 menu_order: 20
 tags: ["workflow", "workflows", "decision", "Studio Pro"]

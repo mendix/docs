@@ -1,5 +1,6 @@
 ---
 title: "Changes Pane"
+url: /refguide/changes-pane/
 parent: view-menu
 menu_order: 10
 description: "Describes the Changes pane in Mendix Studio Pro."

@@ -1,5 +1,6 @@
 ---
 title: "Set Up Data Validation"
+url: /howto/data-models/setting-up-data-validation/
 category: "Data Models"
 menu_order: 2
 tags: ["studio pro"]

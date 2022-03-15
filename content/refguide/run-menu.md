@@ -1,5 +1,6 @@
 ---
 title: "Run Menu"
+url: /refguide/run-menu/
 parent: "menus"
 description: "Describes the Run menu in Mendix Studio Pro."
 menu_order: 35

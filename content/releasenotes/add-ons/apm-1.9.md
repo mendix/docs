@@ -1,5 +1,6 @@
 ---
 title: "1.9"
+url: /releasenotes/add-ons/apm-1.9/
 parent: "apm-1"
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Consistency Errors"
+url: /studio7/consistency-errors/
 weight: 90
 description: "Describes consistency errors in Mendix Studio and the way to fix them."
 tags: ["studio", "consistency errors", "checks", "errors"]

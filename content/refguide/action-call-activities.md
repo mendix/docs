@@ -1,5 +1,6 @@
 ---
 title: "Action Call Activities"
+url: /refguide/action-call-activities/
 parent: "activities"
 menu_order: 30
 tags: ["studio pro", "action call", "action call activities"]

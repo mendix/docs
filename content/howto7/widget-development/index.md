@@ -1,5 +1,6 @@
 ---
 title: "Widget Development"
+url: /howto7/widget-development/
 weight: 90
 tags: ["widget", "develop widget", "customize"]
 ---

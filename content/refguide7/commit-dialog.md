@@ -1,5 +1,6 @@
 ---
 title: "Commit Dialog"
+url: /refguide7/commit-dialog/
 parent: "dialogs"
 ---
 

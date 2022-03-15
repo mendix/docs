@@ -1,5 +1,6 @@
 ---
 title: "Browser Recorder Results"
+url: /addons/apd-addon/rg-two-browser-recorder-results/
 parent: "rg-two-recorder"
 ---
 

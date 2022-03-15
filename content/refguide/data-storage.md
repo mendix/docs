@@ -1,5 +1,6 @@
 ---
 title: "Data Storage"
+url: /refguide/data-storage/
 category: "Mendix Runtime"
 tags: ["studio pro", "Databases"]
 ---

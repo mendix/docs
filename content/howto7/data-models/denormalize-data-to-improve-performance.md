@@ -1,5 +1,6 @@
 ---
 title: "Denormalize Data to Improve Performance"
+url: /howto7/data-models/denormalize-data-to-improve-performance/
 category: "Data Models"
 menu_order: 6
 tags: []

@@ -1,5 +1,6 @@
 ---
 title: "Buttons"
+url: /studio/page-editor-widgets-buttons/
 parent: "page-editor-widgets"
 description: "Describes button widgets in Mendix Studio."
 menu_order: 50

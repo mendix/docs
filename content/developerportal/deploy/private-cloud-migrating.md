@@ -1,5 +1,6 @@
 ---
 title: "Hosting Your Own Registry"
+url: /developerportal/deploy/private-cloud-migrating/
 parent: "private-cloud-cluster"
 description: "Describes how to migrate Mendix images to a private cloud registry"
 menu_order: 10

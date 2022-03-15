@@ -1,5 +1,6 @@
 ---
 title: "Context Source"
+url: /refguide/context-source/
 parent: "data-sources"
 tags: ["studio pro", "context", "data source"]
 menu_order: 30

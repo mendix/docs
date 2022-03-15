@@ -1,5 +1,6 @@
 ---
 title: "Main Product Names"
+url: /product-naming/main-product-names/
 weight: 10
 draft: true
 ---

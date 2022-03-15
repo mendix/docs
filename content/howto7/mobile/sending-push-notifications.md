@@ -1,5 +1,6 @@
 ---
 title: "Send Push Notifications"
+url: /howto7/mobile/sending-push-notifications/
 parent: "push-notifications"
 menu_order: 20
 tags: ["mobile", "push notifications", "microflow"]

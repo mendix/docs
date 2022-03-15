@@ -1,5 +1,6 @@
 ---
 title: "Page Concepts"
+url: /refguide7/page-concepts/
 parent: "pages"
 menu_order: 5
 description: "Basic information on how pages are structured and ways to create an application flow."

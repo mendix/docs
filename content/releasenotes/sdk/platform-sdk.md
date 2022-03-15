@@ -1,5 +1,6 @@
 ---
 title: "Platform SDK"
+url: /releasenotes/sdk/platform-sdk/
 category: "SDKs"
 menu_order: 2
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.

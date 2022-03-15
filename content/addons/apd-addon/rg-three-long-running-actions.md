@@ -1,5 +1,6 @@
 ---
 title: "Long-Running Actions"
+url: /addons/apd-addon/rg-three-long-running-actions/
 parent: "rg-three-apd"
 ---
 

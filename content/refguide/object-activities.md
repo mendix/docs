@@ -1,5 +1,6 @@
 ---
 title: "Object Activities"
+url: /refguide/object-activities/
 parent: "activities"
 menu_order: 10
 tags: ["studio pro", "microflow", "object"]

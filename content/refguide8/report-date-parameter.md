@@ -1,5 +1,6 @@
 ---
 title: "Report Date Parameter"
+url: /refguide8/report-date-parameter/
 parent: "report-widgets"
 menu_order: 30
 tags: ["studio pro"]

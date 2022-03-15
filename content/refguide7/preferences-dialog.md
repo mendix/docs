@@ -1,5 +1,6 @@
 ---
 title: "Preferences Dialog"
+url: /refguide7/preferences-dialog/
 parent: "dialogs"
 ---
 ## 1 Introduction

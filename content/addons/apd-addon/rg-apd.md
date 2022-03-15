@@ -1,5 +1,6 @@
 ---
 title: "APD Reference Guides"
+url: /addons/apd-addon/rg-apd/
 category: "APD"
 ---
 

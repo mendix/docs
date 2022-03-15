@@ -1,5 +1,6 @@
 ---
 title: "Debug Microflows and Nanoflows"
+url: /howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/
 category: "Monitoring & Troubleshooting"
 menu_order: 2
 tags: ["monitoring", "troubleshooting", "debug", "microflow", "nanoflow"]

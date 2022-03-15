@@ -1,5 +1,6 @@
 ---
 title: "Report Grid"
+url: /refguide/report-grid/
 parent: "report-widgets"
 menu_order: 10
 tags: ["studio pro"]

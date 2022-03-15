@@ -1,5 +1,6 @@
 ---
 title: "Create Your First Script (Old Versions)"
+url: /apidocs-mxsdk/mxsdk/old-creating-your-first-script/
 parent: "sdk-old-versions-howtos"
 menu_order: 2
 ---

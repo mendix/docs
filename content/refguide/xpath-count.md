@@ -1,5 +1,6 @@
 ---
 title: "XPath Count"
+url: /refguide/xpath-count/
 parent: "xpath-query-functions"
 tags: ["studio pro"]
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Event Handlers"
+url: /refguide/event-handlers/
 parent: "entities"
 menu_order: 50
 tags: ["domain model", "entity", "event handler", "studio pro"]

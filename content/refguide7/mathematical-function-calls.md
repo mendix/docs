@@ -1,5 +1,6 @@
 ---
 title: "Mathematical function calls"
+url: /refguide7/mathematical-function-calls/
 parent: "expressions"
 ---
 

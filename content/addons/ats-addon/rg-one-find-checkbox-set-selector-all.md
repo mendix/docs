@@ -1,5 +1,6 @@
 ---
 title: "Find Checkbox Set Selector"
+url: /addons/ats-addon/rg-one-find-checkbox-set-selector-all/
 parent: "rg-one-checkbox-set-selector"
 ---
 

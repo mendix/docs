@@ -1,5 +1,6 @@
 ---
 title: "Use Marketplace Content in Studio Pro"
+url: /appstore/general/app-store-content/
 category: "General Info"
 menu_order: 20
 tags: ["marketplace", "Studio Pro"]

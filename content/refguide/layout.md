@@ -1,5 +1,6 @@
 ---
 title: "Layout"
+url: /refguide/layout/
 parent: "page-resources"
 menu_order: 10
 tags: ["studio pro", "layout widgets", "layout", "page template", "pages"]

@@ -1,5 +1,6 @@
 ---
 title: "Charts"
+url: /appstore/widgets/charts/
 category: "Widgets"
 description: "Describes the configuration and usage of the Charts widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "chart", "line chart", "area chart", "column chart", "bar chart", "heat map", "platform support"]

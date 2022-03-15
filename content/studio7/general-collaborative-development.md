@@ -1,5 +1,6 @@
 ---
 title: "Collaborative Development in Studio"
+url: /studio7/general-collaborative-development/
 category: "General Info"
 description: This document describes the process of collaborative development between Mendix Studio and Mendix Studio from the perspective of Mendix Studio.
 tags: ["studio", "collaborative development", "sync"]

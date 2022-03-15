@@ -1,5 +1,6 @@
 ---
 title: "Studio Pro 9 How-to's"
+url: /howto/
 description: "Step-by-step guides on various Mendix topics that will teach you how to build and customize apps."
 tags: ["studio pro"]
 weight: 15

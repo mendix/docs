@@ -1,5 +1,6 @@
 ---
 title: "Backups"
+url: /developerportal/operate/backups/
 category: "Operations"
 menu_order: 40
 description: "The Backups page of the Developer Portal described."

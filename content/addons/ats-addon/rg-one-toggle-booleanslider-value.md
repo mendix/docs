@@ -1,5 +1,6 @@
 ---
 title: "Toggle BooleanSlider Value"
+url: /addons/ats-addon/rg-one-toggle-booleanslider-value/
 parent: "rg-one-booleanslider"
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Check Box Set Selector"
+url: /appstore/widgets/check-box-set-selector/
 category: "Widgets"
 description: "Describes the configuration and usage of the Check Box Set Selector widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "check box set selector", "check box", "platform support"]

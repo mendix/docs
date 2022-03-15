@@ -1,5 +1,6 @@
 ---
 title: "Release Notes"
+url: /releasenotes/
 notoc: true
 description: "The release notes for the Mendix Platform are divided into various product categories and versions."
 weight: 5

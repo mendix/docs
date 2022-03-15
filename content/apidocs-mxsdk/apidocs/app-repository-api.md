@@ -1,5 +1,6 @@
 ---
 title: "App Repository API"
+url: /apidocs-mxsdk/apidocs/app-repository-api/
 category: "API Documentation"
 menu_order: 6
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Set Checkbox Set Selector Value"
+url: /addons/ats-addon/rg-one-set-grid-selector-checkbox-value/
 parent: "rg-one-grid-selector"
 ---
 

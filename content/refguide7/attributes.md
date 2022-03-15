@@ -1,5 +1,6 @@
 ---
 title: "Attributes"
+url: /refguide7/attributes/
 parent: "entities"
 menu_order: 20
 tags: ["domain model", "entity", "attribute"]

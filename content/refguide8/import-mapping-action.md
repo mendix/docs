@@ -1,5 +1,6 @@
 ---
 title: "Import with Mapping"
+url: /refguide8/import-mapping-action/
 parent: "integration-activities"
 tags: ["studio pro", "import xml", "import with mapping", "import mapping", "integration activity"]
 menu_order: 30

@@ -1,5 +1,6 @@
 ---
 title: "SAP Fiori 3.0 Styling"
+url: /partners/sap/sap-fiori-3-0/
 category: "SAP"
 menu_order: 70
 description: "Information on how to make an SAP Fiori version 3.0 themed app"

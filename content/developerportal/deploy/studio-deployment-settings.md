@@ -1,5 +1,6 @@
 ---
 title: "Studio Deployment Settings"
+url: /developerportal/deploy/studio-deployment-settings/
 parent: "mendix-cloud-deploy"
 menu_order: 10
 description: "Describes how to set deployment targets for Mendix Studio and Studio Pro."

@@ -1,5 +1,6 @@
 ---
 title: "ATS"
+url: /releasenotes/add-ons/ats/
 category: "Quality Add-ons"
 menu_order: 10
 ---

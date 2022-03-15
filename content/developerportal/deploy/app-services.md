@@ -1,5 +1,6 @@
 ---
 title: "App Services"
+url: /developerportal/deploy/app-services/
 category: "Deployment"
 menu_order: 100
 description: "Describes the App Services page in the Developer Portal."

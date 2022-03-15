@@ -1,5 +1,6 @@
 ---
 title: "Delete Object(s)"
+url: /refguide/deleting-objects/
 parent: "object-activities"
 menu_order: 50
 tags: ["studio pro"]

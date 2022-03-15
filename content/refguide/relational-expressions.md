@@ -1,5 +1,6 @@
 ---
 title: "Relational Expressions"
+url: /refguide/relational-expressions/
 parent: "expressions"
 menu_order: 30
 description: "Describes relational expressions in Mendix."

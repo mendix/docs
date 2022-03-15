@@ -1,5 +1,6 @@
 ---
 title: "Published OData Services"
+url: /refguide/published-odata-services/
 parent: "integration"
 menu_order: 10
 tags: ["studio pro","OData","publish"]

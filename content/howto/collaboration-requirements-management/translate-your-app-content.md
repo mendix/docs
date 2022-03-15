@@ -1,5 +1,6 @@
 ---
 title: "Translate Your App Content"
+url: /howto/collaboration-requirements-management/translate-your-app-content/
 category: "Collaboration"
 menu_order: 50
 tags: ["studio pro", "translate app", "batch translate", "translate"]

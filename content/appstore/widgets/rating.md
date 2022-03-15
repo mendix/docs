@@ -1,5 +1,6 @@
 ---
 title: "Rating"
+url: /appstore/widgets/rating/
 category: "Widgets"
 description: "Describes the configuration and usage of the Star Rating widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "star rating", "rating", "glyphicon", "platform support"]

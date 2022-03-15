@@ -1,5 +1,6 @@
 ---
 title: "Generate Document"
+url: /refguide/generate-document/
 parent: "activities"
 menu_order: 80
 description: "Describes generating documents from a microflow. "

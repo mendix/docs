@@ -1,5 +1,6 @@
 ---
 title: "External Entities"
+url: /refguide8/external-entities/
 parent: "domain-model"
 menu_order: 15
 tags: ["domain model", "entity", "entities", "attribute", "external entities", "even handler", "access rule", "studio pro", "consumed OData Service"]

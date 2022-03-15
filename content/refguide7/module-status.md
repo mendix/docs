@@ -1,5 +1,6 @@
 ---
 title: "Module Status"
+url: /refguide7/module-status/
 parent: "project-security"
 ---
 

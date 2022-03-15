@@ -1,5 +1,6 @@
 ---
 title: "Preferences"
+url: /refguide8/preferences-dialog/
 parent: "edit-menu"
 menu_order: 50
 tags: ["studio pro", "preferences", "settings", "edit menu"]

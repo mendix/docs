@@ -1,5 +1,6 @@
 ---
 title: "Select Elements"
+url: /refguide/select--elements/
 parent: "mapping-documents"
 tags: ["studio pro"]
 aliases:

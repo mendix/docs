@@ -1,5 +1,6 @@
 ---
 title: "Authentication"
+url: /apidocs-mxsdk/apidocs/authentication/
 category: "API Documentation"
 description: "How to retrieve and use authentication keys for Mendix APIs"
 menu_order: 5

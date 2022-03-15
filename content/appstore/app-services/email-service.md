@@ -1,5 +1,6 @@
 ---
 title: "Email Service"
+url: /appstore/app-services/email-service/
 category: "App Services"
 description: "Describes the configuration and usage of the Email Service app service, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "app service", "email"]

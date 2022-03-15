@@ -1,5 +1,6 @@
 ---
 title: "Studio Pro 8-Compatible"
+url: /releasenotes/mobile/nt-studio-pro-8-parent/
 parent: "native-template"
 menu_order: 20
 description: "Studio Pro 8-compatible Native Template release notes."

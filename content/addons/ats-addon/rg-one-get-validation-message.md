@@ -1,5 +1,6 @@
 ---
 title: "Get Validation Message"
+url: /addons/ats-addon/rg-one-get-validation-message/
 parent: "rg-one-generic"
 ---
 

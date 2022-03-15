@@ -1,5 +1,6 @@
 ---
 title: "Desktop Modeler Overview"
+url: /refguide7/desktop-modeler-overview/
 category: "Desktop Modeler"
 description: "Describes the Desktop Modeler in general: tabs, menus, shortcut keys."
 menu_order: 10

@@ -1,5 +1,6 @@
 ---
 title: "User Management API"
+url: /apidocs-mxsdk/apidocs/user-management-api/
 category: "API Documentation"
 menu_order: 70
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Receive Environment Status Alerts"
+url: /developerportal/operate/receive-alerts/
 parent: "monitoring-application-health"
 #menu_order: 180
 description: "Describes how to receive environment status alerts."

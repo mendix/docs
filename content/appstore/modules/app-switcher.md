@@ -1,5 +1,6 @@
 ---
 title: "App Switcher"
+url: /appstore/modules/app-switcher/
 category: "Modules"
 description: "Describes the configuration and troubleshooting of the App Switcher module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "app switcher", "platform support"]

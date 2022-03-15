@@ -1,5 +1,6 @@
 ---
 title: "Get BootstrapRTE Value"
+url: /addons/ats-addon/rg-one-get-bootstraprte-value/
 parent: "rg-one-bootstraprte"
 ---
 

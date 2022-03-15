@@ -1,5 +1,6 @@
 ---
 title: "Test Mendix Applications Using Selenium IDE"
+url: /howto7/testing/testing-mendix-applications-using-selenium-ide/
 category: "Testing"
 menu_order: 40
 tags: ["test", "testing", "selenium"]

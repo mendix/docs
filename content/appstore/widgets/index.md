@@ -1,5 +1,6 @@
 ---
 title: "Widgets"
+url: /appstore/widgets/
 description: "Presents details on the widgets available in the Mendix Marketplace."
 tags: ["platform support"]
 weight: 60

@@ -1,5 +1,6 @@
 ---
 title: "Text"
+url: /refguide/text-widgets/
 parent: "pages"
 menu_order: 20
 tags: ["studio pro", "text widgets", "widget"]

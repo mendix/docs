@@ -1,5 +1,6 @@
 ---
 title: "MySQL/MariaDB"
+url: /refguide/mysql/
 parent: "data-storage"
 menu_order: 50
 tags: ["studio pro"]

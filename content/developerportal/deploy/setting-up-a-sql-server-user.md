@@ -1,5 +1,6 @@
 ---
 title: "User Setup on SQL Server"
+url: /developerportal/deploy/setting-up-a-sql-server-user/
 parent: "mendix-on-windows-microsoft-sql-server"
 menu_order: 20
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

@@ -1,5 +1,6 @@
 ---
 title: "Event Handlers"
+url: /refguide7/event-handlers/
 parent: "entities"
 menu_order: 50
 tags: ["domain model", "entity", "event handler"]

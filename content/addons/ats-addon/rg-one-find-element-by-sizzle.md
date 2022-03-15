@@ -1,5 +1,6 @@
 ---
 title: "Find Element by Sizzle"
+url: /addons/ats-addon/rg-one-find-element-by-sizzle/
 parent: "rg-one-find"
 ---
 

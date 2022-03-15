@@ -1,5 +1,6 @@
 ---
 title: "Set Up the Apple Push Notification Server"
+url: /howto8/mobile/setting-up-apple-push-notification-server/
 parent: "push-notifications"
 menu_order: 30
 tags: ["mobile", "push notification", "apple", "server"]

@@ -1,5 +1,6 @@
 ---
 title: "Deployment"
+url: /developerportal/deploy/
 description: "Deployment section of the Developer Portal Guide: How to deploy Mendix apps to different environments and how to manage those deployments."
 tags: ["Deploy","Manage", "Mendix Cloud", "IBM", "SAP", "Cloud Foundry", "Kubernetes", "On-premises", "Environment"]
 weight: 10

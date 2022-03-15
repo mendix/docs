@@ -1,5 +1,6 @@
 ---
 title: "Runtime Recorder Results"
+url: /addons/apd-addon/rg-two-runtime-recorder-results/
 parent: "rg-two-recorder"
 ---
 

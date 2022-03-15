@@ -1,5 +1,6 @@
 ---
 title: "Create a Secure App"
+url: /howto/security/create-a-secure-app/
 category: "Security"
 menu_order: 10
 tags: ["security", "secure app"]

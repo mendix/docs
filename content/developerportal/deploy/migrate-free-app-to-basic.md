@@ -1,5 +1,6 @@
 ---
 title: "Migrate a Free App to Mendix Basic"
+url: /developerportal/deploy/migrate-free-app-to-basic/
 parent: "licensing-apps"
 menu_order: 40
 description: "Moving an existing Mendix app deployed as a Free App to a Basic Package node"

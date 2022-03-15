@@ -1,5 +1,6 @@
 ---
 title: "Set Up Your Development Environment (Old Versions)"
+url: /apidocs-mxsdk/mxsdk/old-setting-up-your-development-environment/
 parent: "sdk-old-versions-howtos"
 menu_order: 1
 ---

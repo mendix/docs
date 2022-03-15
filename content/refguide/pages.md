@@ -1,5 +1,6 @@
 ---
 title: "Pages"
+url: /refguide/pages/
 category: "App Modeling"
 menu_order: 30
 tags: ["Pages", "Widgets", "Studio Pro", "page structure"]

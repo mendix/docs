@@ -1,5 +1,6 @@
 ---
 title: "Project Security"
+url: /refguide8/project-security/
 parent: "security"
 menu_order: 10
 tags: ["studio pro", "security", "project security"]

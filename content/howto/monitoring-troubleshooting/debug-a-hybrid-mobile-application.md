@@ -1,5 +1,6 @@
 ---
 title: "Debug a Hybrid Mobile Application"
+url: /howto/monitoring-troubleshooting/debug-a-hybrid-mobile-application/
 category: "Monitoring & Troubleshooting"
 menu_order: 5
 tags: ["monitoring", "troubleshooting", "debug", "hybrid mobile"]

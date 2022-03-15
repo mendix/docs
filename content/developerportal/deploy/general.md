@@ -1,5 +1,6 @@
 ---
 title: "General"
+url: /developerportal/deploy/general/
 category: "Deployment"
 menu_order: 10
 description: "An overview of the DEPLOY section of the Developer Portal"

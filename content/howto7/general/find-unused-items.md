@@ -1,5 +1,6 @@
 ---
 title: "Find Unused App Items"
+url: /howto7/general/find-unused-items/
 category: "General"
 menu_order: 7
 tags: ["unused", "item", "usage"]

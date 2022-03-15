@@ -1,5 +1,6 @@
 ---
 title: "Published Web Services"
+url: /refguide/published-web-services/
 parent: "integration"
 menu_order: 30
 tags: ["studio pro"]

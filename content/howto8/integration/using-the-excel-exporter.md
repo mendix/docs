@@ -1,5 +1,6 @@
 ---
 title: "Export to Excel"
+url: /howto8/integration/using-the-excel-exporter/
 category: "Integration"
 menu_order: 6
 tags: ["excel", "excel export", "excel exporter", "integration"]

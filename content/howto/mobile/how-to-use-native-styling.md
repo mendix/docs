@@ -1,5 +1,6 @@
 ---
 title: "Style Your Mendix Native Mobile App"
+url: /howto/mobile/how-to-use-native-styling/
 parent: "native-styling"
 menu_order: 30
 description: A how-to for styling your first Mendix Native App.

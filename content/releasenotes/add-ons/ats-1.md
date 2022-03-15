@@ -1,5 +1,6 @@
 ---
 title: "1"
+url: /releasenotes/add-ons/ats-1/
 parent: "ats"
 menu_order: 20
 ---

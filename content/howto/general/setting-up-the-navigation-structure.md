@@ -1,5 +1,6 @@
 ---
 title: "Set Up the Navigation Structure"
+url: /howto/general/setting-up-the-navigation-structure/
 category: "General Info"
 menu_order: 3
 tags: ["studio pro", "navigation", "menu", "how to"]

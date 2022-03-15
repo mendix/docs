@@ -1,5 +1,6 @@
 ---
 title: "GitHub-Flavored Markdown"
+url: /refguide7/gfm-syntax/
 parent: "published-rest-service"
 menu_order: 70
 description: "Link to GitHub Guide to Mastering Markdown"

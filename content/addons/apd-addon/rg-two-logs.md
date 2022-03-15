@@ -1,5 +1,6 @@
 ---
 title: "Logs"
+url: /addons/apd-addon/rg-two-logs/
 parent: "rg-two-apm"
 ---
 

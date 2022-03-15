@@ -1,5 +1,6 @@
 ---
 title: "Apps"
+url: /addons/apd-addon/rg-two-apps/
 parent: "rg-two-apm"
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Scheduled Events"
+url: /refguide/scheduled-events/
 parent: "resources"
 menu_order: 80
 description: "Options for configuring scheduled events"

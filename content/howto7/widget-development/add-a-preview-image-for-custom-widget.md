@@ -1,5 +1,6 @@
 ---
 title: "Build a Preview Image for a Custom Widget"
+url: /howto7/widget-development/add-a-preview-image-for-custom-widget/
 category: "Widget Development"
 tags: ["image", "preview", "widget", "custom"]
 ---

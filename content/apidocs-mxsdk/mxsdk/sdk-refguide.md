@@ -1,5 +1,6 @@
 ---
 title: "SDK Reference Guide"
+url: /apidocs-mxsdk/mxsdk/sdk-refguide/
 category: "Mendix Platform SDK"
 menu_order: 3
 ---

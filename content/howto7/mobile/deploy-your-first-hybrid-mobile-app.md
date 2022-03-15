@@ -1,5 +1,6 @@
 ---
 title: "Deploy Your First Hybrid Mobile App"
+url: /howto7/mobile/deploy-your-first-hybrid-mobile-app/
 category: "Mobile Development"
 menu_order: 50
 tags: ["mobile", "deploy"]

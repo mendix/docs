@@ -1,5 +1,6 @@
 ---
 title: "Upgrading Private Cloud"
+url: /developerportal/deploy/private-cloud-upgrade-guide/
 parent: "private-cloud"
 description: "Describes how to upgrade the Mendix Operator"
 menu_order: 90

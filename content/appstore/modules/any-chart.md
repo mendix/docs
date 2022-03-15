@@ -1,5 +1,6 @@
 ---
 title: "Any Chart"
+url: /appstore/modules/any-chart/
 category: "Modules"
 description: "Describes the configuration and usage of the Any Chart module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "any chart", "plotly.js", "platform support"]

@@ -1,5 +1,6 @@
 ---
 title: "Badge Button"
+url: /appstore/widgets/badge-button/
 category: "Widgets"
 description: "Describes the configuration and usage of the Badge Button widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "badge button", "token", "platform support"]

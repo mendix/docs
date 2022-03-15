@@ -1,5 +1,6 @@
 ---
 title: "Solution Vendor & Startup Programs"
+url: /appstore/creating-content/sol-vendor-programs/
 parent: "sol-general"
 description: "Mendix supports solution developers through the Solution Vendor and Startup Programs"
 tags: [ "solutions", "vendors", "solution vendor", "startup", "adaptive solutions", "prescriptive solutions" ]

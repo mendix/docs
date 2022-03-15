@@ -1,5 +1,6 @@
 ---
 title: "Common Widget Properties"
+url: /refguide7/common-widget-properties/
 parent: "common-widgets"
 ---
 

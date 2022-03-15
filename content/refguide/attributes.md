@@ -1,5 +1,6 @@
 ---
 title: "Attributes"
+url: /refguide/attributes/
 parent: "entities"
 menu_order: 30
 tags: ["domain model", "entity", "attribute", "studio pro"]

@@ -1,6 +1,7 @@
 ---
 
 title: "Structure Widgets"
+url: /studio7/page-editor-widgets-structure/
 parent: "page-editor-widgets"
 description: "Describes Structure widgets in Mendix Studio."
 menu_order: 60

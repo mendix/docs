@@ -1,5 +1,6 @@
 ---
 title: "Trim to Date"
+url: /refguide/trim-to-date/
 parent: "expressions"
 menu_order: 120
 tags: ["studio pro", "trim to date", "expression", "expressions"]

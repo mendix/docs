@@ -1,5 +1,6 @@
 ---
 title: "Text Analytics"
+url: /appstore/app-services/text-analytics/
 category: "App Services"
 description: " "
 tags: ["text analytics", "service", "app store", "marketplace", "component", "platform support"]

@@ -1,5 +1,6 @@
 ---
 title: "Create a Backup"
+url: /developerportal/operate/create-backup/
 parent: "backups"
 menu_order: 10
 description: "This page describes how to create a backup."

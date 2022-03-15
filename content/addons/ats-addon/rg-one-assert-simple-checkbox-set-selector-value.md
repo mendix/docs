@@ -1,5 +1,6 @@
 ---
 title: "Assert Simple Checkbox Set Selector Value"
+url: /addons/ats-addon/rg-one-assert-simple-checkbox-set-selector-value/
 parent: "rg-one-simple-checkbox-set-selector"
 ---
 

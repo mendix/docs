@@ -1,5 +1,6 @@
 ---
 title: "Assert InputReferenceSelector Value"
+url: /addons/ats-addon/rg-one-assert-inputreferenceselector-value/
 parent: "rg-one-input-reference-selector"
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Button Widgets"
+url: /refguide8/button-widgets/
 parent: "pages"
 menu_order: 40
 tags: ["studio pro", "button widgets", "buttons", "widget"]

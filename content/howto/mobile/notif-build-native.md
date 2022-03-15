@@ -1,5 +1,6 @@
 ---
 title: "Build a Native App with Push Notifications Enabled"
+url: /howto/mobile/notif-build-native/
 parent: "notifications"
 menu_order: 60
 description: Tutorial for building a native app with push notifications enabled.

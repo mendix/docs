@@ -1,5 +1,6 @@
 ---
 title: "Collaborative Development"
+url: /refguide8/collaborative-development/
 category: "Version Control"
 description: "Describes the process of collaborative development between the Mendix Studio Pro and the Mendix Studio"
 tags: ["studio pro", "studio", "collaborative development", "sync"]

@@ -1,5 +1,6 @@
 ---
 title: "API Documentation"
+url: /apidocs-mxsdk/apidocs/
 description: "The Mendix Platform API documentation is divided into sections such as Runtime, Client, Feedback, and Deploy."
 weight: 10
 aliases:

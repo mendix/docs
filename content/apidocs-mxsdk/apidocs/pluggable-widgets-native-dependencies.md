@@ -1,5 +1,6 @@
 ---
 title: "Declaring Native Dependencies"
+url: /apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/
 description: A guide for understanding native dependencies for pluggable widgets and JavaScript actions.
 tags: ["Widget", "Pluggable",  "JavaScript", "Native"]
 

@@ -1,5 +1,6 @@
 ---
 title: "Implement Push Notifications in Your Native App"
+url: /howto/mobile/notif-implement-native/
 parent: "notifications"
 menu_order: 58
 description: Tutorial for implementing push notifications in a native app.

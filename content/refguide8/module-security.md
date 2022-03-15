@@ -1,5 +1,6 @@
 ---
 title: "Module Security"
+url: /refguide8/module-security/
 parent: "security"
 menu_order: 20
 tags: ["studio pro", "module security", "security", "module"]

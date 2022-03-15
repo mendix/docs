@@ -1,5 +1,6 @@
 ---
 title: "Toggle Simple Checkbox Set Selector Value"
+url: /addons/ats-addon/rg-one-toggle-simple-checkbox-set-selector-value/
 parent: "rg-one-simple-checkbox-set-selector"
 ---
 

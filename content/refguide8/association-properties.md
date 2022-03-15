@@ -1,5 +1,6 @@
 ---
 title: "Association Properties"
+url: /refguide8/association-properties/
 parent: "associations"
 menu_order: 10
 tags: ["domain model", "association", "studio pro"]

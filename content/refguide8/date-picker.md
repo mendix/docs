@@ -1,5 +1,6 @@
 ---
 title: "Date Picker"
+url: /refguide8/date-picker/
 parent: "input-widgets"
 menu_order: 60
 tags: ["studio pro"]

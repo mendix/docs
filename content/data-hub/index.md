@@ -1,5 +1,6 @@
 ---
 title: "Data Hub Guide"
+url: /data-hub/
 description: "This guide describes Mendix Data Hub for finding and sharing enterprise data assets."
 tags: ["data hub", "data hub catalog", "data hub landscape"]
 weight: 40

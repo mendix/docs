@@ -1,5 +1,6 @@
 ---
 title: "Scroll Container"
+url: /refguide/scroll-container/
 parent: "structure-widgets"
 menu_order: 50
 tags: ["studio pro", "scroll container", "container widget", "widget"]

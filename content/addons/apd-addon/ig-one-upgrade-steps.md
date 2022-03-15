@@ -1,5 +1,6 @@
 ---
 title: "Upgrade Steps"
+url: /addons/apd-addon/ig-one-upgrade-steps/
 parent: "ig-one"
 menu_order: 4
 ---

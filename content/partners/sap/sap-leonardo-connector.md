@@ -1,5 +1,6 @@
 ---
 title: "Connector for SAP Leonardo Machine Learning Foundation"
+url: /partners/sap/sap-leonardo-connector/
 category: "SAP"
 menu_order: 60
 description: "Documentation for using the Connector for SAP Leonardo Machine Learning Foundation with images and text."

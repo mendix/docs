@@ -1,5 +1,6 @@
 ---
 title: "Push Notifications Connector"
+url: /appstore/modules/push-notifications/
 category: "Modules"
 description: "Describes the configuration and usage of the Push Notifications module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "push notifications", "platform support"]

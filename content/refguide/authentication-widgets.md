@@ -1,5 +1,6 @@
 ---
 title: "Authentication"
+url: /refguide/authentication-widgets/
 parent: "pages"
 menu_order: 55
 tags: ["authentication", "widgets", "studio pro", "login", "password"]

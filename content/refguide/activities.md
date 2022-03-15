@@ -1,5 +1,6 @@
 ---
 title: "Activities"
+url: /refguide/activities/
 parent: "microflows-and-nanoflows"
 menu_order: 40
 tags: ["studio pro", "microflows", "nanoflows", "activity"]

@@ -1,5 +1,6 @@
 ---
 title: "Mendix Support"
+url: /developerportal/support/
 description: ""
 tags: ["Support", "SLA", "Gold", "Platinum"]
 weight: 30

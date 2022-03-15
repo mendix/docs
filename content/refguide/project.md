@@ -1,5 +1,6 @@
 ---
 title: "App"
+url: /refguide/project/
 parent: "project-explorer"
 menu_order: 10
 tags: ["studio pro", "app"]

@@ -1,5 +1,6 @@
 ---
 title: "Deploy Your First Mendix Native Mobile App"
+url: /howto8/mobile/deploying-native-app/
 parent: "build-native-apps"
 menu_order: 10
 description: Describes how to deploy your first Mendix native mobile app with the Mendix Native Mobile Builder.

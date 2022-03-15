@@ -1,5 +1,6 @@
 ---
 title: "Modules"
+url: /refguide/modules/
 parent: "project-explorer"
 menu_order: 20
 tags: ["studio pro", "module", "modules"]

@@ -1,5 +1,6 @@
 ---
 title: "Configure a Domain Model"
+url: /studio-how-to8/domain-model-how-to-configure/
 description: "This how-to describes the process of configuring the domain model in Mendix Studio."
 weight: 30
 tags: ["studio", "domain model", "decision", "domain model"]

@@ -1,5 +1,6 @@
 ---
 title: "Images & Files"
+url: /studio/page-editor-widgets-images-and-files/
 parent: "page-editor-widgets"
 description: "Describes image and file widgets in Mendix Studio."
 menu_order: 30

@@ -1,5 +1,6 @@
 ---
 title: "Team Server"
+url: /developerportal/collaborate/team-server/
 category: "Collaboration"
 menu_order: 7
 description: "Describes the overview of Team Server revisions and commits."

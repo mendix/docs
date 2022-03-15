@@ -1,5 +1,6 @@
 ---
 title: "Developer Tool Recommendations"
+url: /refguide7/developer-tools/
 category: "General"
 menu_order: 60
 description: "Describes the best third-party tools to use when developing with Mendix."

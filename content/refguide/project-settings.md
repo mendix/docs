@@ -1,5 +1,6 @@
 ---
 title: "App Settings"
+url: /refguide/project-settings/
 parent: "project"
 menu_order: 10
 description: "Settings which apply to the app as a whole."

@@ -1,5 +1,6 @@
 ---
 title: "Data Grid"
+url: /refguide/data-grid/
 parent: "grids"
 menu_order: 10
 tags: ["studio pro", "data grid", "grid", "data widget"]

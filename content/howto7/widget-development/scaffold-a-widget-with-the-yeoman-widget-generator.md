@@ -1,5 +1,6 @@
 ---
 title: "Scaffold a Widget with the Yeoman Widget Generator"
+url: /howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/
 category: "Widget Development"
 tags: ["widget", "develop widget", "scaffold", "yeoman"]
 ---

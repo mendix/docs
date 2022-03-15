@@ -1,5 +1,6 @@
 ---
 title: "Resources"
+url: /refguide/resources/
 category: "App Modeling"
 menu_order: 50
 tags: ["studio pro", "resources"]

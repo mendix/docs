@@ -1,5 +1,6 @@
 ---
 title: "Signature"
+url: /appstore/widgets/signature/
 category: "Widgets"
 description: "Describes the configuration and usage of the Signature widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "signature", "platform support"]

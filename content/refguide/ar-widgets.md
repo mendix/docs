@@ -1,5 +1,6 @@
 ---
 title: "Augmented Reality Widgets"
+url: /refguide/ar-widgets/
 category: "Mobile"
 menu_order: 55
 tags: ["mobile", "augmented reality", "studio pro", "AR", "VR"]

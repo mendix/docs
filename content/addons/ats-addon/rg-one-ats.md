@@ -1,5 +1,6 @@
 ---
 title: "ATS 1 Reference Guide"
+url: /addons/ats-addon/rg-one-ats/
 parent: "rg-ats"
 menu_order: 20
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Native Builder"
+url: /releasenotes/mobile/native-builder/
 category: "Mobile"
 menu_order: 11
 toc-level: 1

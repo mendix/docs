@@ -1,5 +1,6 @@
 ---
 title: "Close the Server Connection"
+url: /apidocs-mxsdk/mxsdk/closing-the-server-connection/
 parent: "manipulating-existing-models"
 ---
 

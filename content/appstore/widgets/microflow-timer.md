@@ -1,5 +1,6 @@
 ---
 title: "Microflow Timer"
+url: /appstore/widgets/microflow-timer/
 category: "Widgets"
 description: "Describes the configuration and usage of the Microflow Timer widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "microflow timer", "platform support"]

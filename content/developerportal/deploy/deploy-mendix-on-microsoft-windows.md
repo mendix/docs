@@ -1,5 +1,6 @@
 ---
 title: "Microsoft Windows"
+url: /developerportal/deploy/deploy-mendix-on-microsoft-windows/
 parent: "on-premises-design"
 description: "How to install and configure Mendix on a system running Microsoft Windows"
 menu_order: 50

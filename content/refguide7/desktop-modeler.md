@@ -1,5 +1,6 @@
 ---
 title: "Desktop Modeler"
+url: /refguide7/desktop-modeler/
 description: "Describes the various features of the Mendix Modeler, including document templates, the domain model, microflows, modules, pages, and security."
 weight: 20
 tags: ["Mendix", "Desktop Modeler", "Documents"]

@@ -1,5 +1,6 @@
 ---
 title: "Use a Client Certificate"
+url: /howto/integration/use-a-client-certificate/
 category: "Integration"
 tags: ["integration", "web service", "client certificate"]
 

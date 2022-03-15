@@ -1,5 +1,6 @@
 ---
 title: "Build a Mendix Native Mobile App Locally using the Mendix Native Builder"
+url: /howto/mobile/native-build-locally/
 parent: "build-native-apps"
 menu_order: 30
 description: Describes how to build your first Mendix native mobile app locally using Mendix Native Mobile Builder.

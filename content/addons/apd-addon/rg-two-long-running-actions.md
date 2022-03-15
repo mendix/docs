@@ -1,5 +1,6 @@
 ---
 title: "Long-Running Actions"
+url: /addons/apd-addon/rg-two-long-running-actions/
 parent: "rg-two-apm"
 ---
 

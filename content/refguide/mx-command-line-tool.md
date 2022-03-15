@@ -1,5 +1,6 @@
 ---
 title: "mx Command-Line Tool"
+url: /refguide/mx-command-line-tool/
 category: "General Info"
 menu_order: 50
 description: "Describes the options of the mx command-line tool"

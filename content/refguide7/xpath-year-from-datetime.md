@@ -1,5 +1,6 @@
 ---
 title: "XPath year-from-dateTime"
+url: /refguide7/xpath-year-from-datetime/
 parent: "xpath-constraint-functions"
 ---
 

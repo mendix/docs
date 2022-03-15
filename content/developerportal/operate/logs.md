@@ -1,5 +1,6 @@
 ---
 title: "Logs"
+url: /developerportal/operate/logs/
 category: "Operations"
 menu_order: 30
 description: "This page describes the Logs page of the Developer Portal."

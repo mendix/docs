@@ -1,5 +1,6 @@
 ---
 title: "Workflow Activities"
+url: /refguide/workflow-activities/
 parent: "activities"
 menu_order: 90
 tags: ["studio pro", "microflow", "workflow", "workflow activities"]

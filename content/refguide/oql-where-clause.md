@@ -1,5 +1,6 @@
 ---
 title: "OQL Where Clause"
+url: /refguide/oql-where-clause/
 parent: "oql"
 tags: ["studio pro", "queries", "where"]
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Version Downgrade Protection"
+url: /developerportal/deploy/version-downgrade-prevention/
 parent: "general"
 menu_order: 30
 description: "What to do if you cannot migrate a Mendix database to an earlier version"

@@ -1,5 +1,6 @@
 ---
 title: "Studio 8 How-to's"
+url: /studio-how-to8/
 tags: ["studio", "how to"]
 weight: 75
 cascade:

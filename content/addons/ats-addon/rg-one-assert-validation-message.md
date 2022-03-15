@@ -1,5 +1,6 @@
 ---
 title: "Assert Validation Message"
+url: /addons/ats-addon/rg-one-assert-validation-message/
 parent: "rg-one-generic"
 ---
 

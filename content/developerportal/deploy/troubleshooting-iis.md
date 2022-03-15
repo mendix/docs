@@ -1,5 +1,6 @@
 ---
 title: "Troubleshooting IIS (Internet Information Services) "
+url: /developerportal/deploy/troubleshooting-iis/
 parent: "deploy-mendix-on-microsoft-windows"
 description: "Help on fixing issues with Microsoft IIS, including the use of application logs and other troubleshooting features"
 menu_order: 40

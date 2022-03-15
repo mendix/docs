@@ -1,5 +1,6 @@
 ---
 title: "Performance Best Practices"
+url: /refguide/performance-best-practices/
 description: "Describes Mendix best practices on optimizing an app performance."
 parent: "mx-assist-performance-bot"
 tags: ["studio pro", "performance", "performance bot", "mx assist", "mendix assist"]

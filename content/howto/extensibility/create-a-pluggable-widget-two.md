@@ -1,5 +1,6 @@
 ---
 title: "Build a Pluggable Web Widget: Part 2 (Advanced)"
+url: /howto/extensibility/create-a-pluggable-widget-two/
 parent: "pluggable-widgets"
 menu_order: 20
 description: "This how-to will teach you how to add advanced features to your TextBox input widget."

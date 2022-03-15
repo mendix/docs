@@ -1,5 +1,6 @@
 ---
 title: "Create a Test Case"
+url: /addons/ats-addon/ht-one-create-a-test-case/
 parent: "ht-one"
 menu_order: 3
 description: "Describes how to create a test case and add test steps."

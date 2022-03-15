@@ -1,5 +1,6 @@
 ---
 title: "Runtime Deployment"
+url: /refguide/runtime-deployment/
 category: "Mendix Runtime"
 description: "A description of how the Mendix Runtime is deployed"
 menu_order: 30

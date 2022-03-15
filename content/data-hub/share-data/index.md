@@ -1,5 +1,6 @@
 ---
 title: "Share Data Between Apps"
+url: /data-hub/share-data/
 description: "Describes how to publish and register a simple data asset to Mendix Data Hub from Studio Pro and create a new apps that consumes this asset."
 tags: ["data hub catalog", "data hub", "external entities", "landscape", "published OData service" ,"how to", "consume"]
 weight: 10

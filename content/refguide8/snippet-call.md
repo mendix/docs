@@ -1,5 +1,6 @@
 ---
 title: "Snippet Call"
+url: /refguide8/snippet-call/
 parent: "common-widgets"
 menu_order: 40
 tags: ["studio pro", snippet call", "common widget"]

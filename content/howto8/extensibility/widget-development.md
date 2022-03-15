@@ -1,5 +1,6 @@
 ---
 title: "Build Custom Widgets"
+url: /howto8/extensibility/widget-development/
 category: "Extensibility"
 menu_order: 30
 tags: ["widget", "develop widget", "customize"]

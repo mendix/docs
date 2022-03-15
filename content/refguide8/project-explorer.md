@@ -1,5 +1,6 @@
 ---
 title: "Project Explorer"
+url: /refguide8/project-explorer/
 parent: view-menu
 menu_order: 40
 tags: ["studio pro", "project explorer"]

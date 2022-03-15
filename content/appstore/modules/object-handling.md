@@ -1,5 +1,6 @@
 ---
 title: "Object Handling"
+url: /appstore/modules/object-handling/
 category: "Modules"
 description: "Describes the configuration and usage of the Object Handling module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "object handling", "community commons", "platform support"]

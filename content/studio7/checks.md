@@ -1,5 +1,6 @@
 ---
 title: "Checks"
+url: /studio7/checks/
 description: "Describes checks during publishing process in Mendix Studio."
 weight: 80
 tags: ["studio", "app viewing", "checks", "errors", "consistency errors"]

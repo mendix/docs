@@ -1,5 +1,6 @@
 ---
 title: "AQM"
+url: /releasenotes/add-ons/aqm/
 category: "Quality Add-ons"
 menu_order: 30
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Text to Speech"
+url: /appstore/app-services/text-to-speech/
 category: "App Services"
 description: " "
 tags: ["text to speech", "service", "app store", "marketplace", "component", "platform support"]

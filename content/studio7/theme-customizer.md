@@ -1,5 +1,6 @@
 ---
 title: "Theme Customizer"
+url: /studio7/theme-customizer/
 description: "Describes the Theme Customizer in Mendix Studio."
 weight: 100
 tags: ["studio", "theme customizer", "atlas ui"]

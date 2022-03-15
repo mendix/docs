@@ -1,5 +1,6 @@
 ---
 title: "List Operation"
+url: /refguide/list-operation/
 parent: "list-activities"
 menu_order: 4
 tags: ["studio pro"]

@@ -1,5 +1,6 @@
 ---
 title: "CORS Settings for Published REST Services"
+url: /refguide/cors-settings/
 parent: "published-rest-service"
 menu_order: 60
 description: "Additional options for controlling access to a published REST service"

@@ -1,5 +1,6 @@
 ---
 title: "IBM Watson Connector"
+url: /appstore/connectors/ibm-watson-connector/
 category: "Connectors"
 #parent: "Enter the parent document filename of this document if necessary (for example, "push-notifications")"
 description: "A reference for the Mendix IBM Watson connectors"

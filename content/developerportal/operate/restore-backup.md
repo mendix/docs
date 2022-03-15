@@ -1,5 +1,6 @@
 ---
 title: "Restore a Backup"
+url: /developerportal/operate/restore-backup/
 parent: "backups"
 menu_order: 30
 description: "How to restore a backup."

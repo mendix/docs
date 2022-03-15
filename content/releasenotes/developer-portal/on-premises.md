@@ -1,5 +1,6 @@
 ---
 title: "Other Deployment Options"
+url: /releasenotes/developer-portal/on-premises/
 category: "Deployment"
 menu_order: 40
 description: "Release notes for On-premises deployments based on Virtual Machine (Windows and Linux) and Buildpacks (Cloud Foundry and Docker)"

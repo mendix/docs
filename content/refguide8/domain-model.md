@@ -1,5 +1,6 @@
 ---
 title: "Domain Model"
+url: /refguide8/domain-model/
 category: "App Modeling"
 menu_order: 30
 tags: ["domain model", "entity", "association", "annotation", "studio pro"]

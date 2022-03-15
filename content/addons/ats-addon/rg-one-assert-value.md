@@ -1,5 +1,6 @@
 ---
 title: "Assert Value"
+url: /addons/ats-addon/rg-one-assert-value/
 parent: "rg-one-input"
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Drop-Down"
+url: /addons/ats-addon/rg-two-drop-down/
 parent: "rg-two-ats"
 ---
 

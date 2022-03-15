@@ -1,5 +1,6 @@
 ---
 title: "After Startup Error?"
+url: /addons/apd-addon/ig-one-after-startup-error/
 parent: "ig-one-installation-steps"
 ---
 

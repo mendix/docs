@@ -1,5 +1,6 @@
 ---
 title: "Runtime Recorder Results"
+url: /addons/apd-addon/rg-three-runtime-recorder-results/
 parent: "rg-three-recorder"
 ---
 

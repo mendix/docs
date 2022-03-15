@@ -1,5 +1,6 @@
 ---
 title: "Runtime Server"
+url: /refguide/runtime-server/
 category: "Mendix Runtime"
 description: "A description of the Runtime Server and how it functions"
 menu_order: 10

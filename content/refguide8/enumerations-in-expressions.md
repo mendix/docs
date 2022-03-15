@@ -1,5 +1,6 @@
 ---
 title: "Enumerations in Expressions"
+url: /refguide8/enumerations-in-expressions/
 parent: "expressions"
 menu_order: 170
 tags: ["studio pro", "expression", "enumeration", "expressions"]

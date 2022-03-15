@@ -1,5 +1,6 @@
 ---
 title: "Radio Button List"
+url: /appstore/widgets/radio-button-list/
 category: "Widgets"
 description: "Describes the configuration and usage of the Radio Button List widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "radio button list", "platform support"]

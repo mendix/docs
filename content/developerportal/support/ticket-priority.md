@@ -1,5 +1,6 @@
 ---
 title: "Support Ticket Priority"
+url: /developerportal/support/ticket-priority/
 category: "Mendix Support"
 menu_order: 4
 description: "Presents details on how Mendix Support prioritizes tickets."

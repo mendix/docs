@@ -1,5 +1,6 @@
 ---
 title: "XML Schemas"
+url: /refguide/xml-schemas/
 parent: "integration"
 menu_order: 55
 tags: ["studio pro"]

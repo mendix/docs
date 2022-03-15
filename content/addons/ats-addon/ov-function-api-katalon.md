@@ -1,5 +1,6 @@
 ---
 title: "Function API with Katalon"
+url: /addons/ats-addon/ov-function-api-katalon/
 parent: "ov-function-api"
 menu_order: 3
 ---

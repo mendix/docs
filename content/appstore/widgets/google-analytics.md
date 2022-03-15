@@ -1,5 +1,6 @@
 ---
 title: "Google Analytics"
+url: /appstore/widgets/google-analytics/
 category: "Widgets"
 description: "Describes the configuration and usage of the Google Analytics widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "google analytics", "eventtracker", "webmaster", "platform support"]

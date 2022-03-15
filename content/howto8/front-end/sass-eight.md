@@ -1,5 +1,6 @@
 ---
 title: "Set Up Gulp & Sass"
+url: /howto8/front-end/sass-eight/
 parent: "use-gulp-and-sass"
 menu_order: 1
 tags: ["gulp", "sass", "ux", "front end"]

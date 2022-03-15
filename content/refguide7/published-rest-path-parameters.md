@@ -1,5 +1,6 @@
 ---
 title: "Published REST Path Parameters"
+url: /refguide7/published-rest-path-parameters/
 parent: "published-rest-service"
 menu_order: 30
 #description: " "

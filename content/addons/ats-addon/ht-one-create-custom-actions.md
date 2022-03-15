@@ -1,5 +1,6 @@
 ---
 title: "Create Custom Actions"
+url: /addons/ats-addon/ht-one-create-custom-actions/
 parent: "ht-one"
 menu_order: 5
 ---

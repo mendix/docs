@@ -1,5 +1,6 @@
 ---
 title: "Use Any Chart"
+url: /howto8/front-end/charts-any-usage/
 parent: "charts-tutorials"
 menu_order: 20
 description: "How to use the Any Chart widget to create advanced charts"

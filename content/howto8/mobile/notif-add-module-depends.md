@@ -1,5 +1,6 @@
 ---
 title: "Add Module Dependencies"
+url: /howto8/mobile/notif-add-module-depends/
 parent: "notifications"
 menu_order: 52
 description: Tutorial for adding push notification module dependencies.

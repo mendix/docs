@@ -1,5 +1,6 @@
 ---
 title: "Menu"
+url: /refguide/menu/
 parent: "page-resources"
 menu_order: 50
 tags: ["studio pro", "menu", "menu item", "page resource"]

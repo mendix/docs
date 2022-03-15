@@ -1,5 +1,6 @@
 ---
 title: "Layout Grid"
+url: /refguide8/layout-grid/
 parent: "container-widgets"
 menu_order: 10
 tags: ["studio pro", "layout grid", "container widget", "column", "row", "grid", "layout"]

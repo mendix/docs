@@ -1,5 +1,6 @@
 ---
 title: "Terminology History"
+url: /product-naming/terminology-history/
 weight: 40
 draft: true
 ---

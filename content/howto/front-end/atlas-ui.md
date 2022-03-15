@@ -1,5 +1,6 @@
 ---
 title: "UI Design"
+url: /howto/front-end/atlas-ui/
 category: "Front End"
 menu_order: 5
 tags: ["Atlas", "UI", "UX", "user experience", "design"]

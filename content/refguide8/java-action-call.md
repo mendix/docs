@@ -1,5 +1,6 @@
 ---
 title: "Java Action Call"
+url: /refguide8/java-action-call/
 parent: "action-call-activities"
 menu_order: 10
 tags: ["studio pro", "Java", "java action call", "action call"]

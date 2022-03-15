@@ -1,5 +1,6 @@
 ---
 title: "Download a Backup"
+url: /developerportal/operate/download-backup/
 parent: "backups"
 menu_order: 20
 description: "This page describes how to download a backup."

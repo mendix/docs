@@ -1,5 +1,6 @@
 ---
 title: "Activities"
+url: /refguide7/activities/
 parent: "common-elements"
 ---
 

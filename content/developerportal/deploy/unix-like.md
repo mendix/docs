@@ -1,5 +1,6 @@
 ---
 title: "Unix Deployment"
+url: /developerportal/deploy/unix-like/
 parent: "on-premises-design"
 description: "How to install and configure Mendix on a Unix-like system"
 menu_order: 99

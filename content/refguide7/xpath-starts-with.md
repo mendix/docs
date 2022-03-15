@@ -1,5 +1,6 @@
 ---
 title: "XPath starts-with"
+url: /refguide7/xpath-starts-with/
 parent: "xpath-constraint-functions"
 ---
 

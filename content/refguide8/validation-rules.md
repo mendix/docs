@@ -1,5 +1,6 @@
 ---
 title: "Validation Rules"
+url: /refguide8/validation-rules/
 parent: "entities"
 menu_order: 40
 tags: ["domain model", "entity", "validation rule"]

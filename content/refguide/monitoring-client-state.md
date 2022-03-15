@@ -1,5 +1,6 @@
 ---
 title: "Monitoring Client State"
+url: /refguide/monitoring-client-state/
 category: "Mendix Runtime"
 tags: ["studio pro"]
 ---

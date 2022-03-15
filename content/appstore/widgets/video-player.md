@@ -1,5 +1,6 @@
 ---
 title: "Video Player"
+url: /appstore/widgets/video-player/
 category: "Widgets"
 description: "Describes the configuration and usage of the Video Player widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "platform support", "widget", "video player"]

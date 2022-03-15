@@ -1,5 +1,6 @@
 ---
 title: "Reports"
+url: /refguide/report-widgets/
 parent: "pages"
 menu_order: 50
 tags: ["studio pro", "report widgets", "report", "widgets", "data set"]

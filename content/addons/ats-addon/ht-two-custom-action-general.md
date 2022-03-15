@@ -1,5 +1,6 @@
 ---
 title: "General"
+url: /addons/ats-addon/ht-two-custom-action-general/
 parent: "ht-two-create-custom-actions"
 ---
 

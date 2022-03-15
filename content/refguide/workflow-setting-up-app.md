@@ -1,5 +1,6 @@
 ---
 title: "Adding a Workflow to an Existing App: Setting Up the Basics"
+url: /refguide/workflow-setting-up-app/
 parent: "workflows"
 description: "Describes how to use Workflow Commons in an existing app in Mendix Studio Pro."
 menu_order: 55

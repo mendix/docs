@@ -1,5 +1,6 @@
 ---
 title: "Manipulate Existing Models"
+url: /apidocs-mxsdk/mxsdk/manipulating-existing-models/
 parent: "sdk-howtos"
 menu_order: 40
 ---

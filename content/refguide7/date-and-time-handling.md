@@ -1,5 +1,6 @@
 ---
 title: "Date & Time Handling"
+url: /refguide7/date-and-time-handling/
 category: "Mendix Runtime"
 ---
 

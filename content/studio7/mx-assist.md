@@ -1,5 +1,6 @@
 ---
 title: "Mendix Assist"
+url: /studio7/mx-assist/
 category: "Microflows"
 menu_order: 10
 description: "Describes Mendix Assist in Mendix Studio."

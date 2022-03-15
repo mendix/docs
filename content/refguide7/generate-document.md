@@ -1,5 +1,6 @@
 ---
 title: "Generate Document"
+url: /refguide7/generate-document/
 parent: "document-generation-activities"
 description: "Describes generating documents from a microflow. "
 tags: ["PDF", "document", "document template", "HTML", "Microsoft Word", "ODT"]

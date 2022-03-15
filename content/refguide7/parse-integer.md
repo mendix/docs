@@ -1,5 +1,6 @@
 ---
 title: "Parse integer"
+url: /refguide7/parse-integer/
 parent: "expressions"
 ---
 

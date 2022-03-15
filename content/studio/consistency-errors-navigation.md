@@ -1,5 +1,6 @@
 ---
 title: "Navigation Consistency Errors"
+url: /studio/consistency-errors-navigation/
 parent: "consistency-errors"
 menu_order: 20
 description: "Describes navigation consistency errors in Mendix Studio and the way to fix them."

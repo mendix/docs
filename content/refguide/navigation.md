@@ -1,5 +1,6 @@
 ---
 title: "Navigation"
+url: /refguide/navigation/
 parent: "project"
 menu_order: 20
 description: "Describes the concept of navigation in apps and the properties of a profile."

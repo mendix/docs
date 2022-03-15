@@ -1,5 +1,6 @@
 ---
 title: "OQL"
+url: /refguide/oql/
 parent: "data-sets"
 tags: ["studio pro"]
 ---

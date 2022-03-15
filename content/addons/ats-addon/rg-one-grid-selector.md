@@ -1,5 +1,6 @@
 ---
 title: "Grid Selector"
+url: /addons/ats-addon/rg-one-grid-selector/
 parent: "rg-one-appstore-widg-acts"
 ---
 

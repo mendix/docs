@@ -1,5 +1,6 @@
 ---
 title: "Share Company Atlas UI Resources"
+url: /howto8/front-end/share-company-atlas-ui-resources/
 parent: "atlas-ui"
 menu_order: 40
 tags: ["Atlas", "UI", "UX", "user experience"]

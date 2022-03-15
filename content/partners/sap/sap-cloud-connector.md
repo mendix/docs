@@ -1,5 +1,6 @@
 ---
 title: "SAP Cloud Connector"
+url: /partners/sap/sap-cloud-connector/
 category: "SAP"
 menu_order: 28
 description: "Presents reference information on the SAP Cloud Connector."

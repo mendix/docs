@@ -1,5 +1,6 @@
 ---
 title: "SAP Fiori 2.5 / Mendix Building Blocks"
+url: /partners/sap/sap-fiori-building-blocks/
 parent: "sap-fiori-3-0"
 menu_order: 10
 description: "A summary of the building blocks which can be used to make an SAP Fiori version 2.5 themed app"

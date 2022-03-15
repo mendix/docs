@@ -1,5 +1,6 @@
 ---
 title: "Create Search Context Actions"
+url: /addons/ats-addon/ht-one-create-search-context-actions/
 parent: "ht-one-create-custom-actions"
 ---
 

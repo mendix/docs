@@ -1,5 +1,6 @@
 ---
 title: "Continue Event"
+url: /refguide7/continue-event/
 parent: "events"
 ---
 

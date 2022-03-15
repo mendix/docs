@@ -1,5 +1,6 @@
 ---
 title: "Mobile App"
+url: /developerportal/deploy/mobileapp/
 category: "Deployment"
 menu_order: 90
 description: "Describes the Mobile App page in the Mendix Developer Portal."

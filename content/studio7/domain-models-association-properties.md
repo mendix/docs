@@ -1,5 +1,6 @@
 ---
 title: "Association Properties"
+url: /studio7/domain-models-association-properties/
 category: "Domain Model"
 description: "Describes the association properties in Mendix Studio."
 tags: ["studio", "domain model"]

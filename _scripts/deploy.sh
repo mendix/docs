@@ -42,7 +42,7 @@ aws --version
 start=$SECONDS
 echo "Starting sync to AWS"
 aws s3 sync . s3://$TARGETAWSBUCKET --delete --only-show-errors --exclude "*.png" # sync all files except png files
-aws s3 sync . s3://$TARGETAWSBUCKET --delete --only-show-errors --exclude "*" --include "*.png" # sync all png files
+aws s3 sync . s3://$TARGETAWSBUCKET --delete --only-show-errors --size-only --exclude "*" --include "*.png" # sync all png files
 echo "Upload to AWS took $((SECONDS - start)) seconds"
 
 # Go back to the build directory so state is the same

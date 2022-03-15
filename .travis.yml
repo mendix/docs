@@ -138,7 +138,7 @@ deploy:
 #  - aws s3 sync . s3://$TARGETAWSBUCKET --delete --only-show-errors
   - provider: script
     script:
-      - travis_wait $TRAVIS_BUILD_DIR/_scripts/deploy.sh
+      - $TRAVIS_BUILD_DIR/_scripts/deploy.sh
     skip_cleanup: true
     on:
       branch:

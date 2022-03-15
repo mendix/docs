@@ -41,7 +41,7 @@ aws --version
 #
 start=$SECONDS
 echo "Starting sync to AWS"
-aws s3 sync . s3://$TARGETAWSBUCKET --delete --only-show-errors
+aws s3 sync . s3://$TARGETAWSBUCKET --delete
 echo "Upload to AWS took $((SECONDS - start)) seconds"
 
 # Go back to the build directory so state is the same

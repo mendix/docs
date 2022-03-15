@@ -22,11 +22,11 @@ You would like to configure a menu bar for your app.
 
 In Studio, the navigation bar is build in most page templates and is available on pages either as a sidebar or top bar. The configured menu bar will look the following way:
 
-![Configured Menu](attachments/navigation-how-to-configure/navigation-previewed.png)
+![Configured Menu](/attachments/studio-how-to8/navigation-how-to-configure/navigation-previewed.png)
 
 Currently you have a page called **Home_web** that is set as a home page by default. Your navigation document currently looks the following way:
 
-![Navigation Default](attachments/navigation-how-to-configure/navigation-default.png)
+![Navigation Default](/attachments/studio-how-to8/navigation-how-to-configure/navigation-default.png)
 
 You have several pages that you would like to add to the navigation:
 
@@ -44,9 +44,9 @@ You have several pages that you would like to add to the navigation:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio8/page-editor). 
-* Familiarize yourself with navigation document terms. For more information, see [Navigation Document](/studio8/navigation). 
-* Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/studio8/domain-models).
+* Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio8/page-editor/). 
+* Familiarize yourself with navigation document terms. For more information, see [Navigation Document](/studio8/navigation/). 
+* Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/studio8/domain-models/).
 
 ## 3 Creating Menu Items and Sub-Items
 
@@ -58,17 +58,17 @@ Currently the **Home_web** page is set as the home page for your app. However, y
 
 2. Select the **Home** menu item:
 
-    ![Default Navigation](attachments/navigation-how-to-configure/navigation-default.png) 
+    ![Default Navigation](/attachments/studio-how-to8/navigation-how-to-configure/navigation-default.png) 
     
 3. Open its properties. The property **Set as Homepage** is enabled by default for the **Home** menu item. You need to change the page that is currently selected in properties for it. Do the following:
 
     1.  Click the **Page** property to change the page that is currently set as home page:
 
-        ![Home Page Properties](attachments/navigation-how-to-configure/home-page-properties.png)
+        ![Home Page Properties](/attachments/studio-how-to8/navigation-how-to-configure/home-page-properties.png)
 
     3. In the **Select Page** dialog box, choose **Employees** and click **Select**. 
 
-        ![Select Page Dialog Box](attachments/navigation-how-to-configure/select-page-dialog.png)
+        ![Select Page Dialog Box](/attachments/studio-how-to8/navigation-how-to-configure/select-page-dialog.png)
 
 You have changed the page that was selected as the home page by default and set the **Employees** page as the new home page for your app.
 
@@ -80,7 +80,7 @@ To create the menu item for the **New_Employee** page, do the following:
 
 1. Click a plus at the bottom of the navigation tree to create a menu item:
 
-    {{% image_container width="350" %}}![Adding Menu Item](attachments/navigation-how-to-configure/adding-menu-item.png){{% /image_container %}}
+    {{% image_container width="350" %}}![Adding Menu Item](/attachments/studio-how-to8/navigation-how-to-configure/adding-menu-item.png){{% /image_container %}}
 
 2. Open the new menu item properties and do the following:
 
@@ -90,7 +90,7 @@ To create the menu item for the **New_Employee** page, do the following:
 
     3. Click the **Entity** property to set the needed entity.
 
-        ![Create Object](attachments/navigation-how-to-configure/create-object.png)
+        ![Create Object](/attachments/studio-how-to8/navigation-how-to-configure/create-object.png)
 
     4. In the **Select Entity** dialog box, choose **Employee** and click **Select**.
 
@@ -98,7 +98,7 @@ To create the menu item for the **New_Employee** page, do the following:
 
     6. In the **Select Page** dialog box, choose **New_Employee** page and click **Select**:
 
-         ![Select New Employee Page](attachments/navigation-how-to-configure/select-new-employee-page.png)
+         ![Select New Employee Page](/attachments/studio-how-to8/navigation-how-to-configure/select-new-employee-page.png)
     
     7. In the **Caption** property, delete the *Navigation item* caption and type in *New Employee*. 
     
@@ -106,14 +106,14 @@ To create the menu item for the **New_Employee** page, do the following:
     
     9. In the **Select icon** dialog box, search for the *plus* icon and click **Select**:
     
-         ![Select Plus Icon](attachments/navigation-how-to-configure/plus-icon.png)
+         ![Select Plus Icon](/attachments/studio-how-to8/navigation-how-to-configure/plus-icon.png)
 
 Good job! You have added a menu item for the **New Employee** page to your navigation:
 
-![New Menu Item Created](attachments/navigation-how-to-configure/new-menu-item-created.png)
+![New Menu Item Created](/attachments/studio-how-to8/navigation-how-to-configure/new-menu-item-created.png)
 
-Click **Preview** in the upper-right corner to [preview your app](/studio8/publishing-app) and test how the navigation menu looks like:
-![Previewed Menu Items](attachments/navigation-how-to-configure/previewed-menu-items.png)
+Click **Preview** in the upper-right corner to [preview your app](/studio8/publishing-app/) and test how the navigation menu looks like:
+![Previewed Menu Items](/attachments/studio-how-to8/navigation-how-to-configure/previewed-menu-items.png)
 
 ### 3.3 Create a Menu Item for the Employee_Details Page and Configuring Its Sub-Items
 
@@ -131,7 +131,7 @@ First, you need to create the menu item that will encompass three menu sub-items
 
 3. Click a plus *next to* the **Employee Details** menu item to create a sub-item for it:
 
-    ![Creating Menu Sub-Item](attachments/navigation-how-to-configure/creating-menu-sub-item.png)
+    ![Creating Menu Sub-Item](/attachments/studio-how-to8/navigation-how-to-configure/creating-menu-sub-item.png)
 
 4. Open its properties and do the following:
 
@@ -143,7 +143,7 @@ First, you need to create the menu item that will encompass three menu sub-items
     
     4. In the **Caption** property, delete the *Navigation item* caption and type in *Job Details*:
     
-        ![Properties of Job Details Menu Sub-Item](attachments/navigation-how-to-configure/job-details-menu-item-properties.png)
+        ![Properties of Job Details Menu Sub-Item](/attachments/studio-how-to8/navigation-how-to-configure/job-details-menu-item-properties.png)
     
     5. Repeat steps 1-4 to create a menu sub-item to open the **Personal_Info** page and name this sub-item *Personal Info*.  
     
@@ -155,9 +155,9 @@ You have configured the sub-menu items for the **Employee Details** menu item.
 
 Congratulations! You created and configured navigation for your app:
 
-![Configured Navigation](attachments/navigation-how-to-configure/configured-navigation.png)
+![Configured Navigation](/attachments/studio-how-to8/navigation-how-to-configure/configured-navigation.png)
 
-[Preview your app](/studio8/publishing-app) to see how the navigation menu is displayed:
+[Preview your app](/studio8/publishing-app/) to see how the navigation menu is displayed:
 
-![Previewed Navigation](attachments/navigation-how-to-configure/navigation-previewed.png)
+![Previewed Navigation](/attachments/studio-how-to8/navigation-how-to-configure/navigation-previewed.png)
 

@@ -25,8 +25,8 @@ You would like to customize your app design: upload company's logo, change color
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with the Theme Customizer. For more information, see [Theme Customizer](/studio8/theme-customizer). 
-* Familiarize yourself with page terms. For more information, see [Pages](/studio8/page-editor). 
+* Familiarize yourself with the Theme Customizer. For more information, see [Theme Customizer](/studio8/theme-customizer/). 
+* Familiarize yourself with page terms. For more information, see [Pages](/studio8/page-editor/). 
 
 ## 3 Uploading Your Company Logo 
 
@@ -36,19 +36,19 @@ To upload a logo, do the following:
 
 2. In the **Upload Logo** section, click **Select File**.
 
-    ![Select File for Logo](attachments/theme-customizer-how-to-customize-design/select-logo.png)
+    ![Select File for Logo](/attachments/studio-how-to8/theme-customizer-how-to-customize-design/select-logo.png)
 
 3. In the dialog box, select the image with your company logo.
 
 4. Check out the selected image uploaded and shown in the preview:
 
-    ![Logo Preview](attachments/theme-customizer-how-to-customize-design/logo-preview.png)
+    ![Logo Preview](/attachments/studio-how-to8/theme-customizer-how-to-customize-design/logo-preview.png)
 
 5. In the **UI Customization** section, make the logo larger: set the **Logo Width** and **Logo Height** to 40 PX.
 
 6. In the upper-right corner, select **Page View** to check how your logo looks on pages:
 
-    ![Page View button](attachments/theme-customizer-how-to-customize-design/page-view-button.png)
+    ![Page View button](/attachments/studio-how-to8/theme-customizer-how-to-customize-design/page-view-button.png)
 
 Good job! You have uploaded your company's logo.
 
@@ -62,23 +62,23 @@ To customize your app colors, do the following:
 
 2. In the **Brand Colors** section, click the **Default** option and select a color marked as *1* in **Logo Colors**:
 
-    ![Implementing Logo Colors, Default Option](attachments/theme-customizer-how-to-customize-design/implementing-logo-colors-default.png)
+    ![Implementing Logo Colors, Default Option](/attachments/studio-how-to8/theme-customizer-how-to-customize-design/implementing-logo-colors-default.png)
 
 3. Click the **Primary** option and select a color marked as *3* in **Logo Colors**:
 
-    ![Implementing Logo Colors, Primary Option](attachments/theme-customizer-how-to-customize-design/implementing-logo-colors-primary.png)
+    ![Implementing Logo Colors, Primary Option](/attachments/studio-how-to8/theme-customizer-how-to-customize-design/implementing-logo-colors-primary.png)
 
 4. In the upper-right corner, select **Page View** to see how your changes are applied to pages. The colors you have changed are applied to widgets that have the **Style** property, for example, buttons and texts. 
 
-    ![Page View](attachments/theme-customizer-how-to-customize-design/page-view.png)
+    ![Page View](/attachments/studio-how-to8/theme-customizer-how-to-customize-design/page-view.png)
 
 5. Select different pages in the top bar to make sure you like how new colors are implemented on all pages of your app:
 
-    ![Select Pages](attachments/theme-customizer-how-to-customize-design/selecting-pages.png)
+    ![Select Pages](/attachments/studio-how-to8/theme-customizer-how-to-customize-design/selecting-pages.png)
 
 6. In the **Brand Colors** section, use an advanced way of choosing the color by filling in the HEX or RGB code of a color that are usually provided by the designers. Click the **Info** option and fill in the HEX color code `#B056EF`:
 
-    ![Using Color Code](attachments/theme-customizer-how-to-customize-design/hex-color-code.png)
+    ![Using Color Code](/attachments/studio-how-to8/theme-customizer-how-to-customize-design/hex-color-code.png)
 
 7. Repeat step 5 to make sure the color fits all pages in your app.
 
@@ -100,7 +100,7 @@ Do the following:
 
 4. Click the **Border** setting and fill in the HEX color code `#989393`. You can see that the border of the top bar is grey now.
 
-    ![Topbar Colors](attachments/theme-customizer-how-to-customize-design/topbar-colors.png)
+    ![Topbar Colors](/attachments/studio-how-to8/theme-customizer-how-to-customize-design/topbar-colors.png)
 
 5.  To change the logo size, do the following:
 
@@ -135,10 +135,10 @@ The **Typography** section of the **Theme Customizer** allows you to manage text
 
     4. Set **H4 Size** to 22:
 
-        ![Header Size](attachments/theme-customizer-how-to-customize-design/header-size.png)
+        ![Header Size](/attachments/studio-how-to8/theme-customizer-how-to-customize-design/header-size.png)
 
 5. In the upper-right corner, select **Page View** to see how your changes are applied to pages.
 
 6. Click **Save** in the upper-right corner to implement your changes.
 
-Congratulations! You have customized the style of your app. You can now [preview your app](/studio8/publishing-app) to test now the changes look like.  
+Congratulations! You have customized the style of your app. You can now [preview your app](/studio8/publishing-app/) to test now the changes look like.  

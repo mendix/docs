@@ -24,28 +24,28 @@ You have build a page with a list of inspections reports that shows companies ch
 A list of inspection reports is displayed on a page. If you have the list in a list view, the page can look the following way:
 
 {{% image_container width="600" %}}
-![](attachments/pages-how-to-filter-and-sort/list-view-example.png)
+![](/attachments/studio-how-to8/pages/pages-how-to-filter-and-sort/list-view-example.png)
 {{% /image_container %}}
 
 Or the page can look the following way if your list is in a data grid:
 
 {{% image_container width="600" %}}
-![](attachments/pages-how-to-filter-and-sort/page-example-data-grid.png)
+![](/attachments/studio-how-to8/pages/pages-how-to-filter-and-sort/page-example-data-grid.png)
 {{% /image_container %}}
 
 Domain model is configured the following way in this use-case:
 
 {{% image_container width="250" %}}
-![](attachments/pages-how-to-filter-and-sort/domain-model.png)
+![](/attachments/studio-how-to8/pages/pages-how-to-filter-and-sort/domain-model.png)
 {{% /image_container %}}
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio8/page-editor). 
-* Familiarize yourself with terms on data filters. For more information, see [Data Filters](/studio8/data-filters).
-* Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/studio8/domain-models).
+* Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio8/page-editor/). 
+* Familiarize yourself with terms on data filters. For more information, see [Data Filters](/studio8/data-filters/).
+* Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/studio8/domain-models/).
 
 ## 3 Filtering Information 
 
@@ -59,23 +59,23 @@ To configure a filter, do the following:
 
 2. In the **Data Source** section, click **Filter**:
 
-    {{% image_container width="250" %}}![](attachments/pages-how-to-filter-and-sort/properties-filter.png){{% /image_container %}}
+    {{% image_container width="250" %}}![](/attachments/studio-how-to8/pages/pages-how-to-filter-and-sort/properties-filter.png){{% /image_container %}}
 
 3. In the **Add Filter** dialog box, add conditions of the filter by doing the following:
 
     1. Select the **Passed** attribute in the drop-down menu:
 
-    	{{% image_container width="550" %}}![](attachments/pages-how-to-filter-and-sort/add-filter-select-attribute.png){{% /image_container %}}
+    	{{% image_container width="550" %}}![](/attachments/studio-how-to8/pages/pages-how-to-filter-and-sort/add-filter-select-attribute.png){{% /image_container %}}
 
     2. Once you select the first part of the condition, you can select the other part to complete it. Select *false*:
 
-    	{{% image_container width="550" %}}![](attachments/pages-how-to-filter-and-sort/add-filter-condition.png){{% /image_container %}}
+    	{{% image_container width="550" %}}![](/attachments/studio-how-to8/pages/pages-how-to-filter-and-sort/add-filter-condition.png){{% /image_container %}}
 
     3. To filter inspection reports for the current day, you need to add another condition to your filter: click **Add new condition** and select the **DateAndTime** attribute in the drop-down menu.
 
     4. Add the second part of the condition: the date should be today's date. Select *Today* in the drop-down menu: 
 
-		{{% image_container width="550" %}}![](attachments/pages-how-to-filter-and-sort/filter-date-and-time.png){{% /image_container %}}
+		{{% image_container width="550" %}}![](/attachments/studio-how-to8/pages/pages-how-to-filter-and-sort/filter-date-and-time.png){{% /image_container %}}
 
     5. Click **Add**.
 
@@ -91,8 +91,8 @@ To sort items in the list by date and time starting from the latest one, follow 
 
 3. In **Add sorting rule** dialog box, select the **DateAndTime** attribute and set **Order** to *Descending*.
 
-	{{% image_container width="450" %}}![](attachments/pages-how-to-filter-and-sort/add-sorting-rule.png){{% /image_container %}}
+	{{% image_container width="450" %}}![](/attachments/studio-how-to8/pages/pages-how-to-filter-and-sort/add-sorting-rule.png){{% /image_container %}}
 
 4. Click **Add**.
 
-Congratulations! You have added a filter and sorting order to your list. You can now preview your app and test your page. For more information on how to preview your page, see [Previewing & Publishing Your App](/studio8/publishing-app).
+Congratulations! You have added a filter and sorting order to your list. You can now preview your app and test your page. For more information on how to preview your page, see [Previewing & Publishing Your App](/studio8/publishing-app/).

@@ -16,14 +16,7 @@ Mendix Studio Pro enables you to build apps on the Mendix Platform. This how-to 
 
 For a deep-dive demonstration of how to install Studio Pro, follow along in this video:
 
-<img
-  style="width: 100%; margin: auto; display: block;"
-  class="vidyard-player-embed"
-  src="https://play.vidyard.com/WUp2tLi68nXFQd7xhPbDtt.jpg"
-  data-uuid="WUp2tLi68nXFQd7xhPbDtt"
-  data-v="4"
-  data-type="inline"
-/>
+{{< vidyard "WUp2tLi68nXFQd7xhPbDtt" >}}
 
 ## 2 Prerequisites
 

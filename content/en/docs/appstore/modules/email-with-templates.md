@@ -13,14 +13,7 @@ The [Email with Templates](https://marketplace.mendix.com/link/component/259/) m
 
 For a deep-dive look into using this module, check out this video:
 
-<img
-  style="width: 100%; margin: auto; display: block;"
-  class="vidyard-player-embed"
-  src="https://play.vidyard.com/GwE17mzGma5NAvDnXrVdFA.jpg"
-  data-uuid="GwE17mzGma5NAvDnXrVdFA"
-  data-v="4"
-  data-type="inline"
-/>
+{{< vidyard "GwE17mzGma5NAvDnXrVdFA" >}}
 
 ### 1.1 Typical Use Cases
 

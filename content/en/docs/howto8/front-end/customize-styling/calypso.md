@@ -22,14 +22,7 @@ Calypso is the easiest styling solution for most users. However, if you already 
 
 For a deep-dive look into styling with Calypso, check out this video:
 
-<img
-  style="width: 100%; margin: auto; display: block;"
-  class="vidyard-player-embed"
-  src="https://play.vidyard.com/M2NCccTnfnh7Yx2gjEyBpf.jpg"
-  data-uuid="M2NCccTnfnh7Yx2gjEyBpf"
-  data-v="4"
-  data-type="inline"
-/>
+{{< vidyard "M2NCccTnfnh7Yx2gjEyBpf" >}}
 
 ## 2 Prerequisites
 

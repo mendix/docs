@@ -16,14 +16,7 @@ Strings are surrounded by quotes. If the string contains a quote, it should be e
 
 For a great deep-dive look into string functions call, check out this video:
 
-<img
-  style="width: 100%; margin: auto; display: block;"
-  class="vidyard-player-embed"
-  src="https://play.vidyard.com/EpVivdyB4i1jGvc8J9yXkt.jpg"
-  data-uuid="EpVivdyB4i1jGvc8J9yXkt"
-  data-v="4"
-  data-type="inline"
-/>
+{{< vidyard "EpVivdyB4i1jGvc8J9yXkt" >}}
 
 ## 2 toLowerCase
 

@@ -25,14 +25,7 @@ To start making Mendix apps on your Mac, follow this how-to.
 
 For a deep-dive look into installing Studio Pro on a Mac, check out this video:
 
-<img
-  style="width: 100%; margin: auto; display: block;"
-  class="vidyard-player-embed"
-  src="https://play.vidyard.com/nJ9Tz8VnHPPKPrtSBgHv3U.jpg"
-  data-uuid="nJ9Tz8VnHPPKPrtSBgHv3U"
-  data-v="4"
-  data-type="inline"
-/>
+{{< vidyard "nJ9Tz8VnHPPKPrtSBgHv3U" >}}
 
 ## 2 Prerequisites
 

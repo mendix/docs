@@ -35,7 +35,7 @@ Mendix Runtime has the concept of a cluster leader. This is a single node within
 * **Background job expiration handling** – removing data about background jobs after the information has expired (meaning, older than a specific timespan)
 * **Unblocking blocked users**
 * **Cleanup unreferenced files** - removing from storage any file documents that have been deleted, replaced, or were never committed
-* **Executing Scheduled Events** – scheduled events are only executed on the cluster leader
+* **Executing Scheduled Events** – legacy scheduled events are only executed on the cluster leader; task queue based scheduled events are executed on an arbitrary cluster node
 * **Performing database synchronization after new deploy**
 * **Clear persistent sessions after new deploy** – invalidating all existing sessions so that they get in sync with the latest model version
 

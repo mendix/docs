@@ -78,7 +78,7 @@ Before you can import data from an Excel File into your application, you have to
 
 In this section, you will import data from a simple Excel file example, which can be downloaded here:
 
-[{{< figure src="/attachments/howto8/integration/importing-excel-documents/18581938.png" >}}](attachments/18448735/18581949.xlsx)
+[{{< figure src="/attachments/howto8/integration/importing-excel-documents/18581938.png" >}}](/attachments/howto8/integration/18448735/18581949.xlsx)
 
 Based on the structure of the file you want to import, you need to manually set up your template by following these steps:
 
@@ -168,7 +168,7 @@ Follow these steps to import the Excel file:
 
 In the previous steps, you manually added all the columns to your import template. In this section, you will create the same Excel template in an automated way, which you can do this via the specific **New template by excelfile** button. You can use this same Excel file example:
 
-[{{< figure src="/attachments/howto8/integration/importing-excel-documents/18581938.png" >}}](attachments/18448735/18581949.xlsx)
+[{{< figure src="/attachments/howto8/integration/importing-excel-documents/18581938.png" >}}](/attachments/howto8/integration/18448735/18581949.xlsx)
 
 Follow these steps to create the import template via the Excel file:
 

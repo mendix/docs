@@ -42,7 +42,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Adding an XML Schema (XSD)
 
-Whether you plan to import documents or export documents, working with XML means that your application must contain an XML schema (also called XSD). An XSD describes the possible contents of an XML file. Based on this XSD, your application knows how to read or write an XML file. If you don't have an XSD file, there are a couple of online XSD generators that accept an XML document as input. For this how-to, you can use [Customers.xsd](attachments/18448731/18581813.xsd).
+Whether you plan to import documents or export documents, working with XML means that your application must contain an XML schema (also called XSD). An XSD describes the possible contents of an XML file. Based on this XSD, your application knows how to read or write an XML file. If you don't have an XSD file, there are a couple of online XSD generators that accept an XML document as input. For this how-to, you can use [Customers.xsd](/attachments/howto8/integration/18448731/18581813.xsd).
 
 1.  Right-click your module in the **Project Explorer** and select **Add other** > **XML schema**.
 2.  Enter *CustomersXSD* for the **Name** and click **OK**:

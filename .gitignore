@@ -10,10 +10,9 @@
 # Legacy for users who still have leftovers from previous Docs Stack
 /_site/
 /.vscode/
-*/bin/hugo/
-*/bin/node/
-/data/asset*.json
-/data/history.yml
+bin
+data/asset*.json
+data/history.yml
 /static/public/js/*
 /static/public/styles/*
 /static/json/*.json

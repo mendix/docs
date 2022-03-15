@@ -10,14 +10,16 @@
 # Legacy for users who still have leftovers from previous Docs Stack
 /_site/
 /.vscode/
-/bin/
+*/bin/hugo/
+*/bin/node/
+/data/asset*.json
 /data/history.yml
 /static/public/js/*
 /static/public/styles/*
 /static/json/*.json
 /yarn-error.log
 /_scripts/hugo_bin
-/mx-1-get-hugo-and-node.ps1
-/mx-2-install-dependencies.bat
-/mx-3-run-server.bat
+mx-1-get-hugo-and-node.ps1
+mx-2-install-dependencies.bat
+mx-3-run-server.bat
 

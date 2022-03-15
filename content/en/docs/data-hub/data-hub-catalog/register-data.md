@@ -66,7 +66,7 @@ The [Data Hub Registration API specification](https://datahub-spec.s3.eu-central
 
 #### 4.1.1 Creating a Data Hub Catalog API token {#create-token}
 
-You can create a Personal Access Token in the Mendix [Warden](/developerportal/community-tools/warden) application.
+You can create a Personal Access Token in the Mendix [Warden](/developerportal/community-tools/warden/) application.
 
 #### 4.1.2 Registering an Application Through the Data Hub Catalog Registration API {#register-application}
 
@@ -303,17 +303,17 @@ Follow the steps below:
 
 1. Start at the [Data Hub Catalog homepage](https://hub.mendix.com). If the connector for your business application is not shown, use the generic **OData** v4 service:
 
-	![upload contract](attachments/register-data/register-data-source-odata-connector.png)
+	![upload contract](/attachments/data-hub/data-hub-catalog/register-data/register-data-source-odata-connector.png)
 
 2. On the **Contract** screen, upload your XML or ZIP file.
 
-	{{% image_container width="400" %}}![upload contract](attachments/register-data/register-data-source-contract.png) {{% /image_container %}}
+	{{% image_container width="400" %}}![upload contract](/attachments/data-hub/data-hub-catalog/register-data/register-data-source-contract.png) {{% /image_container %}}
 
 	If you selected the wrong file, click the **x** to remove it and upload a different one. 
 
-3. On the **Data Source** screen, specify the following Data Source details: **Data Source Name**, **Data Source Version**, **Data Source Relative Path**.  The **Data Source Relative Path** is the path of the OData service contract relative to the *environment URL of the application*. For more advice on versioning, see [Semantic numbering](/refguide/consumed-odata-service#semantic). The other fields on the form are optional.
+3. On the **Data Source** screen, specify the following Data Source details: **Data Source Name**, **Data Source Version**, **Data Source Relative Path**.  The **Data Source Relative Path** is the path of the OData service contract relative to the *environment URL of the application*. For more advice on versioning, see [Semantic numbering](/refguide/consumed-odata-service/#semantic). The other fields on the form are optional.
 
-	{{% image_container width="400" %}}![upload contract](attachments/register-data/register-data-source-details.png) {{% /image_container %}}
+	{{% image_container width="400" %}}![upload contract](/attachments/data-hub/data-hub-catalog/register-data/register-data-source-details.png) {{% /image_container %}}
 
 4. Select the **Go to next step** option that appears once you have filled out all the required fields.
 
@@ -331,4 +331,4 @@ Follow the steps below:
 
 Congratulations! Your OData service is registered in the Data Hub Catalog. 
 
-The discoverable status of the OData service defaults to the value set by the Mendix Admin. For more details, see the [Settings](/developerportal/control-center/data-hub-admin#settings) section of *Data Hub Administration*.
+The discoverable status of the OData service defaults to the value set by the Mendix Admin. For more details, see the [Settings](/developerportal/control-center/data-hub-admin/#settings) section of *Data Hub Administration*.

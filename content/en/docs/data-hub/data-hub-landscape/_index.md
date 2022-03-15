@@ -46,7 +46,7 @@ You can pan around the landscape and and zoom using the mouse. You can also coll
 
 When you click the **Catalog** tab the **Details** screen of the item selected is displayed in the search pane.
 
-![sample employee](attachments/use-landscape/landscape.png)
+![sample employee](/attachments/data-hub/data-hub-landscape/landscape.png)
 
 ### 2.3 Nodes
 
@@ -60,19 +60,19 @@ Data sources or the published OData services are depicted as a round node with t
 
 The following is an example of a selected service node exposing three datasets:
 
-![service  note](attachments/use-landscape/node-service.png)
+![service  note](/attachments/data-hub/data-hub-landscape/node-service.png)
 
 #### 2.3.2 Apps
 
-Apps are displayed as square icons with the application icon and the environment that the app is deployed to is given below the app name. The example below shows a non-Mendix app (**TeamcenterMfg**), a Mendix app (**CompanyCarDemo**) which are deployed to the Mendix Free App environment, **Sandbox**. The third example shows another Mendix app (**HRSample_App**) deployed to the production environment which has a custom icon. For further information on adding a custom icon to your app see [Changing the Application Icon](/data-hub/data-hub-catalog/curate#application-icon).
+Apps are displayed as square icons with the application icon and the environment that the app is deployed to is given below the app name. The example below shows a non-Mendix app (**TeamcenterMfg**), a Mendix app (**CompanyCarDemo**) which are deployed to the Mendix Free App environment, **Sandbox**. The third example shows another Mendix app (**HRSample_App**) deployed to the production environment which has a custom icon. For further information on adding a custom icon to your app see [Changing the Application Icon](/data-hub/data-hub-catalog/curate/#application-icon).
 
-![different app logos](attachments/use-landscape/node-apps.png)
+![different app logos](/attachments/data-hub/data-hub-landscape/node-apps.png)
 
 ### 2.4 Dependencies
 
 The relationships and dependencies between apps, published services, and consuming apps are represented by connecting lines that also display the datasets that are published by a service and consumed by consuming apps. These are illustrated and described in the following examples:
 
-![dependencies](attachments/use-landscape/dependencies.png)
+![dependencies](/attachments/data-hub/data-hub-landscape/dependencies.png)
 
 * **Solid gray line** – This links an app and the services published from the app in the specified environment. In the example, the selected app **LEGO-Machinesafety Data** has 2 published services, which includes**Published_OData_MS 1.0.0**.
 * **Broken gray line with an arrow (consume line)** – This indicates that an app is consuming from the service it is linked to by the line. The direction of the dependency is indicated by the direction of the arrow: the consuming app makes a call to the OData service for data from the publishing app—the arrow points to the service (or data source) which is "pulling" the data. The service will "get" the data associated with the endpoint of the consumed dataset from the publishing app.
@@ -92,5 +92,5 @@ Clicking a node will display details of the node in the **Metadata** pane. You c
 ### 2.6 Consumed Datasets
 If you click the **Entity** icon on the consume line, the names of the datasets that are being consumed from the service will be shown in the right panel.
 
-![arrow convention](attachments/use-landscape/consume-arrow-entities-list.png)
+![arrow convention](/attachments/data-hub/data-hub-landscape/consume-arrow-entities-list.png)
 

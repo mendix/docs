@@ -49,6 +49,13 @@ echo "Upload to AWS took $((SECONDS - start)) seconds"
 cd $TRAVIS_BUILD_DIR
 pwd
 
+# Algolia depends on the following (secret) Environment Variables being set up in Travis-CI
+# Algolia key needs to have appropriate access to the DOCS index
+# ALGOLIA_ADMIN_API_KEY
+# ALGOLIA_APPLICATION_ID
+# ALGOLIA_INDEX_NAME
+#
+
 if ([ "${TRAVIS_BRANCH}" == "production" ])
 then
   python --version

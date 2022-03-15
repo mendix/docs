@@ -1,0 +1,4 @@
+{{- /* <!-- Embed vidyard player and javascript. Use this shortcode as {{< vidyard "videocode" >}} --> */ -}}
+{{- with .Get 0 }}<p><img style="width: 100%; margin: auto; display: block;" class="vidyard-player-embed" src="https://play.vidyard.com/{{.}}.jpg" data-uuid="{{.}}" data-v="4" data-type="inline" />
+<script type="text/javascript" async src="https://play.vidyard.com/embed/v4.js"></script></p>
+{{- end }}

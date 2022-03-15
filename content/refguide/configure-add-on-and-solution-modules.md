@@ -7,11 +7,11 @@ tags: ["studio pro", "add-on", "solution", "module", "modules"]
 
 ## 1 Introduction
 
-Add-on and solution modules are special types of modules that add functionality to your app. They have Intellectual Property (IP) protection enabled and have the *.mxmodule* extension. For more information on IP protection, see [IP Protection](/appstore/creating-content/sol-ip-protection). 
+Add-on and solution modules are special types of modules that are developed to add functionality to an app. They have Intellectual Property (IP) protection enabled and have the *.mxmodule* extension. For more information on IP protection, see [IP Protection](/appstore/creating-content/sol-ip-protection). 
 
 The main *difference* between an add-on and a solution module is their purpose. An add-on module is developed to be a *stand-alone functionality* that others users can consume in the their apps, for example, an add-on can be a connector. 
 
-Solution modules are *always part of a solution* –  any Mendix app that is suitable to be sold to multiple different customers. Solution modules are dependent on each other and are inseparable. Solutions modules form the **solution core** of the solution. 
+Solution modules are *always part of a solution* – any Mendix app that is suitable to be sold to multiple different customers. Solution modules are dependent on each other and are inseparable. Solutions modules form the **solution core** of the solution. 
 
 {{% alert type="info" %}}
 
@@ -29,7 +29,7 @@ All content of add-on and solution modules is set to be hidden from consumers (h
 
 Documents and some elements in the add-on and solution module have the **Export level** property. This property defines whether the consumers will be able to see the contents of the document/element and use it. For more information on what documents and elements are supported for add-on and solution modules, see the [Supported Documents](#supported-documents) section below. 
 
-There are two types of the **Export level**:
+The **Export level** has two values:
 
 * **Hidden** – the document/element content is hidden from a consumer; for example, microflow's implementation can be hidden
 * **Usable** – consumers can see the content of the document/element; for example, you can mark some entities and their attributes as usable
@@ -63,11 +63,11 @@ The following documents and elements are supported in add-on and solution module
 * Microflow
 * Rules
 * Enumeration
-* Constants (when a constant is hidden, you cannot configure its value in the **App settings**, you need to set the constant to **Usable**.)
+* Constants (when a constant is hidden, a consumer will not be able to configure its value in the **App settings**)
 * Java Action
 * Integration documents (the **Export level** can be **Hidden** only):
 
-    * Published rest service (Consume Rest Service microflow action is also supported)
+    * Published rest service (**Consume Rest Service** microflow action is also supported)
     * Consumed web service
     * Message definitions
     * Import mapping
@@ -107,9 +107,11 @@ The add-on module gets an *.mxmodule* extension.
 
 ### 3.2 Exporting Solution Package
 
-Solution package is an app package that will be sold as an out-of-the-box solution. It has a **solution core** that consists of solution modules. It can also consist of standard modules (app modules) and add-on modules. For more information on solutions, see [Creating Solutions](/appstore/creating-content/sol-solutions-guide) in the *Marketplace Guide*.
+Solution package is an app package that will be sold as an out-of-the-box solution and can be used by multiple customers. It has a **solution core** that consists of solution modules. It can also consist of standard modules (app modules) and add-on modules. For more information on solutions, see [Creating Solutions](/appstore/creating-content/sol-solutions-guide) in the *Marketplace Guide*.
 
 To export the solution package, right-click the name of the app in the **App Explorer** and select **Export app package** or open the **File** menu > **Export App Package**. For more information on exporting, see [Export App Package](export-app-package-dialog).
+
+The solution package gets an *.mxsolution* extension.
 
 ## 4 Updating Add-on and Solution Modules
 

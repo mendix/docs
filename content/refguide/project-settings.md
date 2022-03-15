@@ -15,7 +15,7 @@ In the **App Settings** dialog box, you can alter the settings that are applicab
 
 The categories described below are available.
 
-## 2 Configurations Tab
+## 2 Configurations Tab {#configuration}
 
 A configuration is a group of settings. You can define any number of configurations. The active configuration (meaning, the one that will be used when running your application) is determined by the drop-down menu in the toolbar of Studio Pro.
 
@@ -285,9 +285,9 @@ Defines the maximum number of user task transactions that the runtime will execu
 
 ## 8 Deployment Tab {#deployment}
 
-This tab allows you to exclude libraries from deployment. 
+This tab allows you to exclude libraries from deployment. For example, you can exclude libraries when you consume a different version of an existing add-on module.
 
-## 9Miscellaneous Tab {#miscellaneous}
+## 9 Miscellaneous Tab {#miscellaneous}
 
 These settings determine the behavior of Studio Pro for this app. The settings apply to everyone that is working on this app.
 

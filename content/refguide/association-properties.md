@@ -34,11 +34,26 @@ Associations have the following properties:
 
 The name used to refer to the association. For example, in forms or microflows.
 
-### 2.2 Documentation {#documentation}
+### 2.2 Export Level 
+
+{{% alert type="info" %}}
+
+This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](modules#module-type) section in *Modules*. 
+
+{{% /alert %}}
+
+**Export level** allows you to hide the content of a certain document/element from a consumer (customer) when developing an add-on module or a solution. 
+
+| Value              | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| Hidden *(default)* | The document/element content is hidden from a consumer.      |
+| Usable             | Consumers can see the content of the document/element and use and change it in their app. |
+
+### 2.3 Documentation {#documentation}
 
 You can write notes and documentation in the **Documentation** property.
 
-### 2.3 Multiplicity {#multiplicity}
+### 2.4 Multiplicity {#multiplicity}
 
 Multiplicity can be of the following types:
 
@@ -50,7 +65,7 @@ Multiplicity can be of the following types:
 
 For more information about association types, see the [Type](association-member-properties#type) section in *Association Tab Properties*, and for information on ownership, see the [Owner](association-member-properties#owner) section in *Association Tab Properties*.
 
-### 2.4 Navigability {#navigability}
+### 2.5 Navigability {#navigability}
 
 | Navigability | Meaning | Equivalent of |
 | --- | --- | --- |
@@ -61,7 +76,7 @@ This corresponds to the **Owner** property for **Reference sets**. See the [Owne
 
 Despite it's name, navigability is usually only important when adding or changing associations. Making one object owner of an association does not prevent you reading the association from the non-owner end.
 
-### 2.5 Delete Behavior {#delete-behavior}
+### 2.6 Delete Behavior {#delete-behavior}
 
 | Value | Description |
 | --- | --- |

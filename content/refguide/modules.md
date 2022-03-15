@@ -26,7 +26,7 @@ Mendix modules are portions of your app which can include a data model, logic, a
 React Native modules expose native Java/Objective-C and C++ objects allowing for React Native apps (in Mendix apps you can leverage these modules via widgets or JavaScript actions to use device sensors or capabilities).
 {{% /alert %}}
 
-## Module Types {#module-type}
+## 2 Module Types {#module-type}
 
 When you create a module, you can choose the type for it. 
 
@@ -39,7 +39,7 @@ There are the following type of modules:
 * [Solution modules](configure-add-on-and-solution-modules)
 
 
-##  Common
+##  3 Common
 
 | Document type | Typical elements | Description |
 | --- | --- | --- |
@@ -47,7 +47,7 @@ There are the following type of modules:
 | [Microflows](microflows) | [Activities](activities), [Sequence Flow](sequence-flow) | Microflows describe the the logic of your application. They are composed of activities that manipulate objects, interact with the client etcetera. |
 | [Enumerations](enumerations) |   | An enumeration is a set of predefined values, for example: in a web shop, an enumeration called MemberType could have the values Gold and Silver. |
 
-## 3 Page Resources
+## 4 Page Resources
 
 | Document type | Description |
 | --- | --- |
@@ -56,7 +56,7 @@ There are the following type of modules:
 | [Menus](menu) | A menu document defines a navigation menu that can be used by a  [menu widget](menu-widgets). |
 | [Snippets](snippet) | Snippets define reusable interface parts. They can be used on  [pages](page) and  [layouts](layout) . |
 
-## 4 Resources
+## 5 Resources
 
 | Document type | Description |
 | --- | --- |
@@ -69,7 +69,7 @@ There are the following type of modules:
 | [Task Queue](task-queue) | A task queue runs continuously to check if any microflow tasks have been added to it and executes the tasks in the background. |
 | [Scheduled Events](scheduled-events) | A scheduled event is used to execute a microflow at a certain point in time. You can also schedule it to repeat after a given time. For example, a scheduled event can run every morning at 6 A.M. |
 
-## 5 Consumed Services
+## 6 Consumed Services
 
 | Document type | Description |
 | --- | --- |
@@ -78,7 +78,7 @@ There are the following type of modules:
 |  | An XML-to-domain mapping defines a translation from XML objects to domain model objects. |
 | [XML Schemas](xml-schemas) | An XML schema is defined in an XML Schema Definition (XSD) file and can be imported in your model. It describes what a certain XML document should look like. |
 
-## 6 Published Services
+## 7 Published Services
 
 | Document type | Description |
 | --- | --- |

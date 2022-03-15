@@ -3,29 +3,37 @@ title: "Consuming Add-on Modules and Solutions"
 parent: "modules"
 menu_order: 20
 tags: ["studio pro", "add-on", "solution", "module", "modules"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-Add-on and solution modules are special types of modules that add functionality to your app. They have Intellectual Property (IP) protection enabled and have the *.mxmodule* extension. For more information on IP protection, see [IP Protection](/appstore/creating-content/sol-ip-protection). 
+An *add-on module* is a special type of module that add functionality to your app. They have Intellectual Property (IP) protection enabled and have the *.mxmodule* extension. An add-on module is developed to be a *stand-alone functionality* that others users can consume in the their apps, for example, an add-on can be a connector. 
 
-The main *difference* between an add-on and a solution module is their purpose. An add-on module is developed to be a *stand-alone functionality* that others users can consume in the their apps, for example, an add-on can be a connector. 
+A *solution* is a Mendix app that has out-of-the-box solution suitable for multiple customers. Solution, as any other app, may consist of several modules, including app modules (standard modules) and add-on modules, but it also has solution modules that form the **solution core**. Solution modules may have IP protection enabled. For more information on IP protection, see [IP Protection](/appstore/creating-content/sol-ip-protection). 
 
-Solution modules are *always part of a solution* –  any Mendix app that is suitable to be sold to multiple different customers. Solution modules are dependent on each other and are inseparable. Solutions modules form the **solution core** of the solution. 
+## 2 Limitations
 
-{{% alert type="info" %}}
+When consuming add-on modules and solutions, you may come across the following limitations:
 
-Add-on and solution modules are not supported in Mendix Studio.
+* Add-on and solution modules are not supported in Mendix Studio and it should be disabled for your app, when you consume an add-on module or a solution. 
+* Debugging works for app modules (standard modules), you can step into add-on modules, but they will not be shown. If you try to step into a hidden action, Studio Pro will step over it automatically.
+* If app module and add-on modules or solutions have conflicting custom widgets, you are prompted with a warning showing the sources of the conflicts (module and widget package names) to find a workaround. An automatic fix is not implemented.
+* When a constant is hidden, you cannot configure its value in the **App settings**. For more information on app settings, see the [Configuration Tab](project-settings#configuration) section in *App Settings*. 
 
-{{% /alert %}}
-
-## 2 Consuming Add-on Modules and Solutions
+## 3 Importing an Add-on Module to Your App
 
 {{% alert type="warning" %}}
 
 When consuming an add-on or a solution, Studio should be disabled for your app. 
 
 {{% /alert %}}
+
+There are several ways to import an add-on module from the Marketplace. For more information, see the [Installing Marketplace Content](/appstore/general/app-store-content#install) section in *Use Marketplace Content in Studio Pro*.
+
+You can also add an add-on module to your app not through the Marketplace. For more information, see the [Importing Module Package](/howto/integration/importing-and-exporting-objects#import-module) section in *How to Import & Export Objects*. 
+
+## 4 Working with Add-on Modules and Solutions in Your App
 
 An example of an add-on module is the **MS Teams Connector** module. For more information on this module, see [MS Teams Connector](/appstore/app-services/ms-teams-connector).
 
@@ -41,13 +49,7 @@ Mendix Studio does not currently support add-on modules, you will not be able to
 
 {{% /alert %}}
 
-## 3 Importing an Add-on Module to Your App
-
-There are several ways to import an add-on module from the Marketplace. For more information, see the [Installing Marketplace Content](/appstore/general/app-store-content#install) section in *Use Marketplace Content in Studio Pro*.
-
-You can also add an add-on module to your app not through the Marketplace. For more information, see the [Importing Module Package](/howto/integration/importing-and-exporting-objects#import-module) section in *How to Import & Export Objects*. 
-
-## 4 Deleting a Consumed Add-on Module from Your App
+## 5 Deleting a Consumed Add-on Module from Your App
 
 To delete an add-on module, do the following:
 
@@ -56,7 +58,7 @@ To delete an add-on module, do the following:
 
 The module is deleted from your app.
 
-## Read More
+## 6 Read More
 
 * [IP Protection](/appstore/creating-content/sol-ip-protection)
 * [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content)

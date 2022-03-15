@@ -2,7 +2,7 @@
 title: "Team Server"
 url: /refguide7/team-server/
 category: "Version Control"
-menu_order: 20
+weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

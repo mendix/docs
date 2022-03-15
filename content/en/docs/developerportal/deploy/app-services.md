@@ -2,7 +2,7 @@
 title: "App Services"
 url: /developerportal/deploy/app-services/
 category: "Deployment"
-menu_order: 100
+weight: 100
 description: "Describes the App Services page in the Developer Portal."
 tags: ["Developer Portal", "App Services", "Deploy"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

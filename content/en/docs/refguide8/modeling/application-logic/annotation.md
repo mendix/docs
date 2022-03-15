@@ -2,7 +2,7 @@
 title: "Annotation"
 url: /refguide8/annotation/
 parent: "application-logic"
-menu_order: 60
+weight: 60
 tags: ["studio pro", "annotation", annotation flow]
 aliases:
     - /refguide8/annotation-flow.html

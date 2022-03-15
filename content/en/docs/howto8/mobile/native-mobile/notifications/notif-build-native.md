@@ -2,7 +2,7 @@
 title: "Build a Native App with Push Notifications Enabled"
 url: /howto8/mobile/notif-build-native/
 parent: "notifications"
-menu_order: 60
+weight: 60
 description: Tutorial for building a native app with push notifications enabled.
 tags: ["mobile", "native", "push", "local", "firebase"]
 ---

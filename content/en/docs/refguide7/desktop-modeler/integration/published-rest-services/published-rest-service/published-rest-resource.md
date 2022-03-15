@@ -2,7 +2,7 @@
 title: "Published REST Resource"
 url: /refguide7/published-rest-resource/
 parent: "published-rest-service"
-menu_order: 50
+weight: 50
 description: "The configurable options for a published REST resource"
 tags: ["published REST", "resource"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

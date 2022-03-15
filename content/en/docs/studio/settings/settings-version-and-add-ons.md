@@ -3,7 +3,7 @@ title: "Mendix Version & Add-Ons"
 url: /studio/settings-version-and-add-ons/
 category: "Settings"
 description: "Describes the Mendix Version and Add-On's screen in Mendix Studio."
-menu_order: 30
+weight: 30
 tags: ["studio", "settings", "module", "add-on", "mendix version", "update", "modules"]
 ---
 

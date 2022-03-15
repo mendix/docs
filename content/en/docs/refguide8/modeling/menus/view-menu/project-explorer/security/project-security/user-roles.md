@@ -2,7 +2,7 @@
 title: "User Roles"
 url: /refguide8/user-roles/
 parent: "project-security"
-menu_order: 10
+weight: 10
 tags: ["studio pro", "user role", "project security", "security"]
 aliases:
     - /refguide8/user-role.html

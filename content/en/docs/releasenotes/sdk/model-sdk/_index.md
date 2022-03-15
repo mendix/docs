@@ -2,7 +2,7 @@
 title: "Model SDK"
 url: /releasenotes/sdk/model-sdk/
 category: "SDKs"
-menu_order: 1
+weight: 1
 ---
 
 These are the release notes for the [Mendix Model SDK](/apidocs-mxsdk/mxsdk/sdk-intro/):

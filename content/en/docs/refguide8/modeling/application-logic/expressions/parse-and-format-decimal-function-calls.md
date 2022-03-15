@@ -2,7 +2,7 @@
 title: "Parse & Format Decimal Function Calls"
 url: /refguide8/parse-and-format-decimal-function-calls/
 parent: "expressions"
-menu_order: 150
+weight: 150
 tags: ["studio pro", "expression", "parsing", "formatting"]
 ---
 

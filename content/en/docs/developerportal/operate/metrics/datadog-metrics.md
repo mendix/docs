@@ -2,7 +2,7 @@
 title: "Datadog for v4 Mendix Cloud"
 url: /developerportal/operate/datadog-metrics/
 parent: "metrics"
-menu_order: 50
+weight: 50
 description: "How to configure Mendix Cloud v4 to enable monitoring and analysis with Datadog."
 tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

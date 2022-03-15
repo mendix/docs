@@ -3,7 +3,7 @@ title: "Page Consistency Errors"
 url: /studio7/consistency-errors-pages/
 category: "Consistency Errors"
 description: "Describes consistency errors in the page editor in Mendix Studio and the way to fix them."
-menu_order: 
+weight: 
 tags: ["studio", "consistency errors", "checks", "errors", "page editor"]
 ---
 

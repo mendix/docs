@@ -2,7 +2,7 @@
 title: "Download a Backup"
 url: /developerportal/operate/download-backup/
 parent: "backups"
-menu_order: 20
+weight: 20
 description: "This page describes how to download a backup."
 tags: ["Backup","Download","Mendix Cloud","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

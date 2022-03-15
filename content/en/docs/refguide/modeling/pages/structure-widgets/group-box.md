@@ -2,7 +2,7 @@
 title: "Group Box"
 url: /refguide/group-box/
 parent: "structure-widgets"
-menu_order: 30
+weight: 30
 tags: ["studio pro", "group box", "container widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

@@ -2,7 +2,7 @@
 title: "File Widgets"
 url: /refguide8/file-widgets/
 parent: "pages"
-menu_order: 35
+weight: 35
 tags: ["studio pro", "file widgets", "widget"]
 ---
 

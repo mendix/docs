@@ -2,7 +2,7 @@
 title: "New App"
 url: /refguide/new-project/
 parent: "file-menu"
-menu_order: 10
+weight: 10
 description: "This document describes the New App flow and the App Settings dialog box."
 tags: ["studio pro", "create app", "new app", "creating new app"]
 aliases:

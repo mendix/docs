@@ -2,7 +2,7 @@
 title: "General Settings"
 url: /developerportal/collaborate/general-settings/
 category: "Collaboration"
-menu_order: 8
+weight: 8
 description: "Describes general settings of your app."
 tags: ["Settings", "App", "Developer Portal"]
 aliases:

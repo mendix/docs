@@ -2,7 +2,7 @@
 title: "Configure a Delete Object Action"
 url: /studio7/microflows-how-to-configure-delete-object/
 category: "Microflows"
-menu_order: 80
+weight: 80
 description: "This how to describes the process of configuring a delete object action in a data view and a list view in Mendix Studio."
 tags: ["studio", "page editor", "delete object", "list view", "data view", "how to"]
 ---

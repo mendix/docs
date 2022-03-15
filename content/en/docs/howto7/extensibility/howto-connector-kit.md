@@ -3,7 +3,7 @@ title: "Build Microflow Actions Using the Mendix Connector Kit"
 url: /howto7/extensibility/howto-connector-kit/
 category: "Extensibility"
 description: "Describes creating custom Microflow actions using advanced Connector Kit options."
-menu_order: 4
+weight: 4
 tags: ["java", "connector kit", "microflow action", "parameter type", "aws", "amazon web services"]
 output:
   word_document: default

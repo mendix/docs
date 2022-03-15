@@ -2,7 +2,7 @@
 title: "Chart Advanced Cheat Sheet"
 url: /refguide8/charts-advanced-cheat-sheet/
 parent: "chart-widgets"
-menu_order: 20
+weight: 20
 tags: ["Charts", "Advanced", "Studio Pro", "Layout Controls", "Data Properties", "Series Properties", "studio pro"]
 ---
 

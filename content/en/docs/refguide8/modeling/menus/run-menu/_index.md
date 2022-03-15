@@ -3,7 +3,7 @@ title: "Run Menu"
 url: /refguide8/run-menu/
 parent: "menus"
 description: "Describes the Run menu in Mendix Studio Pro."
-menu_order: 35
+weight: 35
 tags: ["Studio Pro", "run", "run menu"]
 ---
 

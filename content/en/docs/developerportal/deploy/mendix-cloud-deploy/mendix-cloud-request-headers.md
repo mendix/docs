@@ -2,7 +2,7 @@
 title: "Mendix Cloud HTTP Request Headers"
 url: /developerportal/deploy/mendix-cloud-request-headers/
 parent: "mendix-cloud-deploy"
-menu_order: 36
+weight: 36
 description: "Describes which HTTP request headers are available in the Mendix Cloud."
 tags: ["Deploy", "Mendix Cloud", "headers", "HTTP Request Headers", "X-Real-IP", "SSL-Protocol", "SSL-Cipher", "SSL-Client-S-DN"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

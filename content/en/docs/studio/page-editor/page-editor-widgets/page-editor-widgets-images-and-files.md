@@ -3,7 +3,7 @@ title: "Images & Files"
 url: /studio/page-editor-widgets-images-and-files/
 parent: "page-editor-widgets"
 description: "Describes image and file widgets in Mendix Studio."
-menu_order: 30
+weight: 30
 tags: ["studio", "page editor", "image", "image widgets", "widgets", "file", "file manager", "file uploader", "file downloader"]
 ---
 

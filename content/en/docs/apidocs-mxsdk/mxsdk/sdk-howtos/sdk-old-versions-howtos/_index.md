@@ -2,7 +2,7 @@
 title: "Old SDK Versions (Below 5.0)"
 url: /apidocs-mxsdk/mxsdk/sdk-old-versions-howtos/
 parent: "sdk-howtos"
-menu_order: 60
+weight: 60
 ---
 
 The following how-to's present details for Mendix Platform SDK versions below 5.0:

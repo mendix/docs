@@ -2,7 +2,7 @@
 title: "Manage Local Users in Studio"
 url: /developerportal/deploy/managing-local-users-after-deployment/
 parent: "tencent-deploy"
-menu_order: 60
+weight: 60
 description: ""
 tags: ["Tencent"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

@@ -2,7 +2,7 @@
 title: "Navigation Consistency Errors"
 url: /studio8/consistency-errors-navigation/
 parent: "consistency-errors"
-menu_order: 20
+weight: 20
 description: "Describes navigation consistency errors in Mendix Studio and the way to fix them."
 tags: ["studio", "consistency errors", "checks", "errors", "navigation"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

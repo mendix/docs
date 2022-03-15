@@ -2,7 +2,7 @@
 title: "Application Logic"
 url: /refguide8/application-logic/
 category: "App Modeling"
-menu_order: 40
+weight: 40
 description: "Presents an overview of documentation on microflows and nanoflows."
 tags: ["studio pro", "logic", "microflow", "nanoflow"]
 ---

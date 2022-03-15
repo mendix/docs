@@ -3,7 +3,7 @@ title: "Deploy API – Version 2"
 url: /apidocs-mxsdk/apidocs/deploy-api-2/
 category: "API Documentation"
 description: "Version 2 of APIs which can be used to deploy Mendix apps to licensed nodes"
-menu_order: 26
+weight: 26
 tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 ---
 

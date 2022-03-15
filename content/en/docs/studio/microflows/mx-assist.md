@@ -2,7 +2,7 @@
 title: "Mendix Assist"
 url: /studio/mx-assist/
 category: "Microflows"
-menu_order: 10
+weight: 10
 description: "Describes Mendix Assist in Mendix Studio."
 tags: ["studio", "mendix assist", "AI", "assistant"]
 ---

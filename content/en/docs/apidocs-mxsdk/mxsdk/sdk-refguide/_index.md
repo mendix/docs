@@ -2,7 +2,7 @@
 title: "SDK Reference Guide"
 url: /apidocs-mxsdk/mxsdk/sdk-refguide/
 category: "Mendix Platform SDK"
-menu_order: 3
+weight: 3
 ---
 
 Start learning how the Mendix Metamodel works by reading [Understanding the Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel/).

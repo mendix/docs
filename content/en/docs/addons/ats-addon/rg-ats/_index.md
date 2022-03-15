@@ -2,7 +2,7 @@
 title: "ATS Reference Guides"
 url: /addons/ats-addon/rg-ats/
 category: "ATS"
-menu_order: 2
+weight: 2
 ---
 
 ## 1 Introduction

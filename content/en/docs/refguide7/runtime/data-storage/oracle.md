@@ -2,7 +2,7 @@
 title: "Oracle"
 url: /refguide7/oracle/
 parent: "data-storage"
-menu_order: 60
+weight: 60
 ---
 
 ## 1 Introduction

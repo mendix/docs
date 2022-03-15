@@ -2,7 +2,7 @@
 title: "Set Up Data Validation"
 url: /howto8/data-models/setting-up-data-validation/
 category: "Data Models"
-menu_order: 2
+weight: 2
 tags: ["studio pro"]
 ---
 

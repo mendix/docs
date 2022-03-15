@@ -4,7 +4,7 @@ url: /studio/collaborative-development/
 category: "Collaboration"
 description: This document describes the process of collaborative development between Mendix Studio and Mendix Studio from the perspective of Mendix Studio.
 tags: ["studio", "collaborative development", "sync"]
-menu_order: 10
+weight: 10
 aliases:
     - /studio/general-collaborative-development.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

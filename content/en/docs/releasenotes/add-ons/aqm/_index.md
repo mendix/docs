@@ -2,7 +2,7 @@
 title: "AQM"
 url: /releasenotes/add-ons/aqm/
 category: "Quality Add-ons"
-menu_order: 30
+weight: 30
 ---
 
 These are the release notes for the [Mendix Application Quality Monitor (AQM)](/addons/aqm-addon/):

@@ -2,7 +2,7 @@
 title: "Published REST Path Parameters"
 url: /refguide7/published-rest-path-parameters/
 parent: "published-rest-service"
-menu_order: 30
+weight: 30
 #description: " "
 tags: ["published REST", "path parameters", "Data and Time"]
 # combine this with published rest service

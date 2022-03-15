@@ -3,7 +3,7 @@ title: "Studio Pro Overview"
 url: /refguide8/studio-pro-overview/
 category: "App Modeling"
 description: "Describes Studio Pro in general: tabs, menus, shortcut keys."
-menu_order: 10
+weight: 10
 tags: ["Studio Pro"]
 aliases:
     - /refguide8/desktop-modeler-overview.html

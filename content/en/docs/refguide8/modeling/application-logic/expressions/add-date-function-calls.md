@@ -2,7 +2,7 @@
 title: "Add Date Function Calls"
 url: /refguide8/add-date-function-calls/
 parent: "expressions"
-menu_order: 110
+weight: 110
 tags: ["studio pro", "expressions", "add date function"]
 ---
 

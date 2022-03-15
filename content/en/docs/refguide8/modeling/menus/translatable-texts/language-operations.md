@@ -2,7 +2,7 @@
 title: "Language Operations"
 url: /refguide8/language-operations/
 parent: "translatable-texts"
-menu_order: 40
+weight: 40
 tags: ["studio pro", "translation", "languages", "translatable text"]
 ---
 

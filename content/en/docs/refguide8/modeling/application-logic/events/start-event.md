@@ -2,7 +2,7 @@
 title: "Start Event"
 url: /refguide8/start-event/
 parent: "events"
-menu_order: 1
+weight: 1
 tags: ["studio pro", "start event", "event"]
 ---
 

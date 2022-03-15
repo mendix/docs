@@ -2,7 +2,7 @@
 title: "Implement Community Best Practices for App Performance"
 url: /howto/general/community-best-practices-for-app-performance/
 category: "General Info"
-menu_order: 8
+weight: 8
 tags: ["best practice", "performance", "community"]
 aliases:
     - /howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7.html

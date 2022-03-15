@@ -2,7 +2,7 @@
 title: "History"
 url: /refguide/history-dialog/
 parent: "version-control-menu"
-menu_order: 50
+weight: 50
 tags: ["studio pro"]
 ---
 ## 1 Introduction

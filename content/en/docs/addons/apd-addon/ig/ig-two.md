@@ -2,7 +2,7 @@
 title: "APM 2 Installation Guide"
 url: /addons/apd-addon/ig-two/
 parent: "ig"
-menu_order: 1
+weight: 1
 aliases:
     - /apm/installation-guide.html
 ---

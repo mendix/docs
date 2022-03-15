@@ -2,7 +2,7 @@
 title: "Build Pluggable Web Widgets"
 url: /howto8/extensibility/pluggable-widgets/
 category: "Extensibility"
-menu_order: 20
+weight: 20
 tags: ["widget", "pluggable", "JavaScript", "API", "JavaScript-API"]
 ---
 

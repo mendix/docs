@@ -2,7 +2,7 @@
 title: "Troubleshoot Network Issues for Connecting to Team Server"
 url: /howto7/collaboration-requirements-management/troubleshoot-network-issues-for-team-server/
 category: "Collaboration & Requirements Management"
-menu_order: 14
+weight: 14
 description: "Describes troubleshooting connection issues as well as the permissions and settings required to connect to Team Server."
 tags: ["Team Server", "network", "troubleshoot", "firewall"]
 ---

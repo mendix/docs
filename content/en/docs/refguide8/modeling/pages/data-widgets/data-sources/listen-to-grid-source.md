@@ -3,7 +3,7 @@ title: "Listen to Widget Source"
 url: /refguide8/listen-to-grid-source/
 parent: "data-sources"
 tags: ["studio pro", "listen to widget", "data source"]
-menu_order: 70
+weight: 70
 ---
 
 {{% alert color="info" %}}

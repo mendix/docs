@@ -2,7 +2,7 @@
 title: "Implement Best Practices for App Security"
 url: /howto7/security/best-practices-security/
 category: "Security"
-menu_order: 20
+weight: 20
 description: "A set of security aspects and checks to use when developing your Mendix application."
 tags: ["security", "best practices", "access rules", "authentication", "encryption", "password", "ssl", "identity provider", "mendix cloud"]
 ---

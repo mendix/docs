@@ -2,7 +2,7 @@
 title: "Create a Basic Data Layer"
 url: /howto7/data-models/create-a-basic-data-layer/
 category: "Data Models"
-menu_order: 1
+weight: 1
 tags: ["data layer", "domain model", "entities", "enumerations", "associations"]
 ---
 

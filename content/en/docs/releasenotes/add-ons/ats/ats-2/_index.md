@@ -2,7 +2,7 @@
 title: "2"
 url: /releasenotes/add-ons/ats-2/
 parent: "ats"
-menu_order: 10
+weight: 10
 ---
 
 These are the release notes for Mendix Application Test Suite version 2:

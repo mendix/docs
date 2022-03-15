@@ -2,7 +2,7 @@
 title: "Export Project Package"
 url: /refguide8/export-project-package-dialog/
 parent: "file-menu"
-menu_order: 30
+weight: 30
 tags: ["studio pro", "export app", "export project package"]
 aliases:
     - /developerportal/support/export-a-project-package.html

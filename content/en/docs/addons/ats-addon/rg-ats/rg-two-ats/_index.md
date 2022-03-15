@@ -2,7 +2,7 @@
 title: "ATS 2 Reference Guide"
 url: /addons/ats-addon/rg-two-ats/
 parent: "rg-ats"
-menu_order: 10
+weight: 10
 ---
 
 Before you start testing, read [Compatibility](/addons/ats-addon/ov-compatibility/) and [Deployment Options](/addons/ats-addon/ov-deployment/) for setting up ATS.

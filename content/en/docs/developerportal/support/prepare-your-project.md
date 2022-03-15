@@ -2,7 +2,7 @@
 title: "Prepare Your App for Support"
 url: /developerportal/support/prepare-your-project/
 category: "Mendix Support"
-menu_order: 1
+weight: 1
 description: "Describes what you need to do with an on-premises app to prepare it for Mendix Support."
 tags: ["on-premises", "support"]
 aliases:

@@ -2,7 +2,7 @@
 title: "Set Up Your Development Environment"
 url: /apidocs-mxsdk/mxsdk/setting-up-your-development-environment/
 parent: "sdk-howtos"
-menu_order: 10
+weight: 10
 ---
 
 ## 1 Introduction

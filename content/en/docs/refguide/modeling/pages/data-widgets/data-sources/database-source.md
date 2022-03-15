@@ -3,7 +3,7 @@ title: "Database Source"
 url: /refguide/database-source/
 parent: "data-sources"
 tags: ["studio pro", "database", "data source"]
-menu_order: 10
+weight: 10
 ---
 
 ## 1 Introduction

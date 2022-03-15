@@ -2,7 +2,7 @@
 title: "Publish a REST Service"
 url: /howto/integration/publish-rest-service/
 category: "Integration"
-menu_order: 10
+weight: 10
 description: "Describes how to publish REST web services natively from ."
 tags: ["rest", "rest service", "web service", "integration"]
 ---

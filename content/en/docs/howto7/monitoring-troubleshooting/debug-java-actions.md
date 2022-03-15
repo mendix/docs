@@ -2,7 +2,7 @@
 title: "Debug Java Actions"
 url: /howto7/monitoring-troubleshooting/debug-java-actions/
 category: "Monitoring & Troubleshooting"
-menu_order: 6
+weight: 6
 tags: ["monitoring", "troubleshooting", "debug", "java action"]
 ---
 

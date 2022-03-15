@@ -2,7 +2,7 @@
 title: "Administrator"
 url: /refguide/administrator/
 parent: "project-security"
-menu_order: 20
+weight: 20
 tags: ["studio pro", "administrator", "app security", "security"]
 ---
 

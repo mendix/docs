@@ -2,7 +2,7 @@
 title: "Licensing Apps"
 url: /developerportal/deploy/licensing-apps-outside-mxcloud/
 parent: "general"
-menu_order: 5
+weight: 5
 description: "How to apply licenses to apps which are outside Mendix Cloud"
 tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "SAP", "IBM", "Siemens MindSphere"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

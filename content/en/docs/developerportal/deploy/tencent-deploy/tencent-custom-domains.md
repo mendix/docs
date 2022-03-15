@@ -2,7 +2,7 @@
 title: "Custom Domains on Tencent"
 url: /developerportal/deploy/tencent-custom-domains/
 parent: "tencent-deploy"
-menu_order: 10
+weight: 10
 description: "How to configure custom domains on the Tencent platform as well as generate, upload, and renew certificates for HTTPS connections."
 tags: ["Custom Domain","Tencent Cloud", "certificates"]
 ---

@@ -2,7 +2,7 @@
 title: "Module Security"
 url: /refguide8/module-security/
 parent: "security"
-menu_order: 20
+weight: 20
 tags: ["studio pro", "module security", "security", "module"]
 aliases:
     - /refguide8/module-role.html

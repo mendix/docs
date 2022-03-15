@@ -2,7 +2,7 @@
 title: "Use Any Chart"
 url: /howto7/extensibility/charts-any-usage/
 parent: "charts-tutorials"
-menu_order: 20
+weight: 20
 description: "How to use the Any Chart widget to create advanced charts"
 tags: ["Any Chart", "Advanced Charts", "Charts", "Desktop Modeler", "Widgets"]
 ---

@@ -2,7 +2,7 @@
 title: "On Click Event & Events Section"
 url: /refguide8/on-click-event/
 parent: "pages"
-menu_order: 130
+weight: 130
 tags: ["studio pro", "events section", "properties", "widget", "on click", "action", "on click event"]
 aliases:
     - /refguide8/opening-pages.html

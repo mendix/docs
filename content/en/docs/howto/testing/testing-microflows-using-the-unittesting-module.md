@@ -2,7 +2,7 @@
 title: "Test Microflows Using the Unit Testing Module"
 url: /howto/testing/testing-microflows-using-the-unittesting-module/
 category: "Testing"
-menu_order: 10
+weight: 10
 tags: ["test", "testing", "microflow", "unit testing"]
 ---
 

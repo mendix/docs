@@ -2,7 +2,7 @@
 title: "Work with SVN On-Premises Version Control Server"
 url: /howto/collaboration-requirements-management/on-premises-svn-howto/
 parent: "on-premises-howto"
-menu_order: 10
+weight: 10
 tags: ["on-premises", "svn", "version control"]
 ---
 

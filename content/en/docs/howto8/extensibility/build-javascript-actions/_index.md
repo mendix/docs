@@ -2,7 +2,7 @@
 title: "Build JavaScript Actions"
 url: /howto8/extensibility/build-javascript-actions/
 category: "Extensibility"
-menu_order: 40
+weight: 40
 tags: ["widget", "pluggable", "JavaScript", "API", "JavaScript-API"]
 ---
 

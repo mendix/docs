@@ -2,7 +2,7 @@
 title: "Maintenance Plans for SQL Server"
 url: /developerportal/deploy/mendix-sql-maintenance-plans/
 parent: "mendix-on-windows-microsoft-sql-server"
-menu_order: 50
+weight: 50
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

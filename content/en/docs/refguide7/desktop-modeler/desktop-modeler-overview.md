@@ -3,7 +3,7 @@ title: "Desktop Modeler Overview"
 url: /refguide7/desktop-modeler-overview/
 category: "Desktop Modeler"
 description: "Describes the Desktop Modeler in general: tabs, menus, shortcut keys."
-menu_order: 10
+weight: 10
 tags: ["desktop modeler"]
 aliases:
     - /refguide7/modeler.html

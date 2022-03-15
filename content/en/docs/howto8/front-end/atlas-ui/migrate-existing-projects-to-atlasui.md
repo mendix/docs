@@ -2,7 +2,7 @@
 title: "Migrate Existing Apps to Atlas UI"
 url: /howto8/front-end/migrate-existing-projects-to-atlasui/
 parent: "atlas-ui"
-menu_order: 20
+weight: 20
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 

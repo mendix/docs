@@ -2,7 +2,7 @@
 title: "Projects API"
 url: /apidocs-mxsdk/apidocs/projects-api/
 category: "API Documentation"
-menu_order: 50
+weight: 50
 ---
 
 ## 1 Introduction

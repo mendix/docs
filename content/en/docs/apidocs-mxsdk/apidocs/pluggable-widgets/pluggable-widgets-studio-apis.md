@@ -5,7 +5,7 @@ description: A guide for understanding the APIs which influence pluggable widget
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React", "Preview"]
 
 parent: "pluggable-widgets"
-menu_order: 30
+weight: 30
 aliases:
 - /apidocs-mxsdk/apidocs/studio-apis-for-pluggable-widgets
 ---

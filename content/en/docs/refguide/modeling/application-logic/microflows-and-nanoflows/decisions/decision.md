@@ -2,7 +2,7 @@
 title: "Decision"
 url: /refguide/decision/
 parent: "decisions"
-menu_order: 3
+weight: 3
 tags: ["studio pro", "decision", "exclusive split"]
 aliases:
     - /refguide/exclusive-split.html

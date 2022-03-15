@@ -3,7 +3,7 @@ title: "Data Grid"
 url: /studio/page-editor-data-grid/
 parent: "page-editor-widgets"
 description: "Describes a data grid in the page editor of Mendix Studio."
-menu_order: 15
+weight: 15
 tags: ["studio", "page editor", "pages", "data view", "list view"]
 ---
 

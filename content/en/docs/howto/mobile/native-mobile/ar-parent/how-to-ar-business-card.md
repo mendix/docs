@@ -2,7 +2,7 @@
 title: "Create An AR Business Card"
 url: /howto/mobile/how-to-ar-business-card/
 parent: "ar-parent"
-menu_order: 10
+weight: 10
 description: "In this how-to you will make an augmented reality business card app."
 tags: ["AR", "VR", "mixed reality", "augmented reality", "virtual reality"]
 ---

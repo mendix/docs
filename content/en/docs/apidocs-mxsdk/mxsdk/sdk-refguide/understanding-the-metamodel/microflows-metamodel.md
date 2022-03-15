@@ -2,7 +2,7 @@
 title: "Microflows in the Mendix Metamodel"
 url: /apidocs-mxsdk/mxsdk/microflows-metamodel/
 parent: "understanding-the-metamodel"
-menu_order: 4
+weight: 4
 ---
 
 ## 1 Introduction

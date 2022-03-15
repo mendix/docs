@@ -2,7 +2,7 @@
 title: "Build JavaScript Actions: Part 2 (Advanced)"
 url: /howto/extensibility/write-javascript-github/
 parent: "build-javascript-actions"
-menu_order: 20
+weight: 20
 description: "This advanced how-to will teach you to make a JavaScript action which can search for GitHub users."
 tags: ["widget", "search", "GitHub", "JavaScript", "API", "JavaScript-API"]
 ---

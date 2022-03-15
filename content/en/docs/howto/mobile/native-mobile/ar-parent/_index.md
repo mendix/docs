@@ -2,7 +2,7 @@
 title: "Use Augmented Reality"
 url: /howto/mobile/ar-parent/
 parent: "native-mobile"
-menu_order: 90
+weight: 90
 description: Tutorials for setting up and using AR in Mendix Studio Pro.
 tags: ["AR", "VR", "mixed reality", "augmented reality", "virtual reality"]
 ---

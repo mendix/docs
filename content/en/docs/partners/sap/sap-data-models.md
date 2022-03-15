@@ -2,7 +2,7 @@
 title: "SAP Data Models"
 url: /partners/sap/sap-data-models/
 category: "SAP"
-menu_order: 30
+weight: 30
 description: "Presents reference information on the use of SAP data models."
 tags: ["SAP", "integration", "SAP services", "OData"]
 ---

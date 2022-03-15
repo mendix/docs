@@ -3,7 +3,7 @@ title: "View Menu"
 url: /refguide/view-menu/
 parent: "menus"
 description: "Describes the View Menu in Studio Pro."
-menu_order: 20
+weight: 20
 tags: ["Studio Pro", "view menu", "top bar"]
 ---
 

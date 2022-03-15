@@ -2,7 +2,7 @@
 title: "Prerequisites"
 url: /addons/apd-addon/ig-one-prerequisites/
 parent: "ig-one"
-menu_order: 1
+weight: 1
 ---
 The APM Tool (version 1.6.0 and above) is available for Mendix 6.2 and above and in Java 8.
 

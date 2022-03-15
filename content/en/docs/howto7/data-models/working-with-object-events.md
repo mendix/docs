@@ -2,7 +2,7 @@
 title: "Work with Object Events"
 url: /howto7/data-models/working-with-object-events/
 category: "Data Models"
-menu_order: 3
+weight: 3
 tags: ["microflow"]
 #To update screenshots of these microflows in the Desktop Modeler, use the Microflow Screenshots app.
 ---

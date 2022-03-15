@@ -2,7 +2,7 @@
 title: "Webhooks"
 url: /apidocs-mxsdk/apidocs/webhooks-sprints/
 category: "API Documentation"
-menu_order: 75
+weight: 75
 ---
 
 ## 1 Introduction

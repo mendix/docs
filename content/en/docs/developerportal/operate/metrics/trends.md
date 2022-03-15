@@ -2,7 +2,7 @@
 title: "Trends in Mendix Cloud v3"
 url: /developerportal/operate/trends/
 parent: "metrics"
-menu_order: 10
+weight: 10
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v3."
 tags: ["Trends","v3","Mendix Cloud","Developer Portal"]
 aliases:

@@ -2,7 +2,7 @@
 title: "MS Windows: Activate a Mendix License on Microsoft Windows"
 url: /developerportal/deploy/activate-a-mendix-license-on-microsoft-windows/
 parent: "deploy-mendix-on-microsoft-windows"
-menu_order: 10
+weight: 10
 tags: ["license", "Windows", "on-premises", "Mendix Service Console"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

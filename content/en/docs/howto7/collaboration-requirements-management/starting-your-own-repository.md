@@ -2,7 +2,7 @@
 title: "Start Your Own Repository"
 url: /howto7/collaboration-requirements-management/starting-your-own-repository/
 category: "Collaboration & Requirements Management"
-menu_order: 30
+weight: 30
 tags: []
 ---
 

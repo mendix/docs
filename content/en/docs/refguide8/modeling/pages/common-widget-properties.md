@@ -2,7 +2,7 @@
 title: "Properties Common in the Page Editor"
 url: /refguide8/common-widget-properties/
 parent: "pages"
-menu_order: 120
+weight: 120
 tags: ["studio pro", "widget properties", "properties", "common", "widget", "classes"]
 #Common Section and Visibility section anchors are used in links of common-section-link and visibility-section-link snippets. If moving or renaming them, do not forget to update snippets.
 ---

@@ -2,7 +2,7 @@
 title: "Menu"
 url: /refguide/menu/
 parent: "page-resources"
-menu_order: 50
+weight: 50
 tags: ["studio pro", "menu", "menu item", "page resource"]
 aliases:
     - /refguide/menu-item.html

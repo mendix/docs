@@ -2,7 +2,7 @@
 title: "Deploy Your First Mendix Native Mobile App with the Native Builder CLI"
 url: /howto8/mobile/deploying-native-app-cli/
 parent: "use-cli-docs"
-menu_order: 20
+weight: 20
 description: Describes how to deploy your first Mendix native mobile app with the Native Builder.
 tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 ---

@@ -2,7 +2,7 @@
 title: "Use Marketplace Content in Studio Pro"
 url: /appstore/general/app-store-content/
 category: "General Info"
-menu_order: 20
+weight: 20
 tags: ["marketplace", "Studio Pro"]
 description: "Covers the basics of how to access the Marketplace from Studio Pro and provides examples of how to add a widget and module to your app."
 aliases:

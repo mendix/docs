@@ -2,7 +2,7 @@
 title: "Use Mendix Data Storage APIs to Build Reusable Microflow Actions"
 url: /howto8/extensibility/howto-datastorage-api/
 category: "Extensibility"
-menu_order: 90
+weight: 90
 description: "Describes creating custom microflow actions using Data Storage APIs."
 tags: ["java", "connector kit", "microflow action", "parameter type", "sql", "xpath", "oql", "datastorage"]
 output:

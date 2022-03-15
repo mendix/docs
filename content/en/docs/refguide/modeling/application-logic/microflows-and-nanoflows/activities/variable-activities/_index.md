@@ -2,7 +2,7 @@
 title: "Variable Activities"
 url: /refguide/variable-activities/
 parent: "activities"
-menu_order: 40
+weight: 40
 tags: ["studio pro", "variable activities", "variable", "variables"]
 ---
 

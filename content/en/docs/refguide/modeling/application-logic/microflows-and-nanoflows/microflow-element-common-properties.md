@@ -2,7 +2,7 @@
 title: "Common Properties"
 url: /refguide/microflow-element-common-properties/
 parent: "microflows-and-nanoflows"
-menu_order: 110
+weight: 110
 tags: ["studio pro", "common properties", "microflow", "nanoflow"]
 ---
 

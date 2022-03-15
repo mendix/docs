@@ -2,7 +2,7 @@
 title: "Open App"
 url: /refguide/open-app-dialog/
 parent: "file-menu"
-menu_order: 20
+weight: 20
 description: "Describes the Open App flow and the Open App dialog box"
 tags: ["studio pro", "open app"]
 aliases:

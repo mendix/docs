@@ -2,7 +2,7 @@
 title: "Create Your First Script"
 url: /apidocs-mxsdk/mxsdk/creating-your-first-script/
 parent: "sdk-howtos"
-menu_order: 20
+weight: 20
 ---
 
 ## 1 Introduction

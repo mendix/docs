@@ -2,7 +2,7 @@
 title: "APD 3 Reference Guide"
 url: /addons/apd-addon/rg-three-apd/
 parent: "rg-apd"
-menu_order: 1
+weight: 1
 ---
 
 ## 1 Introduction

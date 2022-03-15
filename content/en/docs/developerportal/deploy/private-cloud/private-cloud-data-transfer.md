@@ -3,7 +3,7 @@ title: "Migrating data in Private Cloud environments (preview)"
 url: /developerportal/deploy/private-cloud-data-transfer/
 parent: "private-cloud"
 description: "Describes how to migrate data between Private Cloud environments"
-menu_order: 32
+weight: 32
 tags: ["Backup", "Restore", "Data transfer", "Migration", "Private Cloud", "Environment"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

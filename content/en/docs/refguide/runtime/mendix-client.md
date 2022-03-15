@@ -3,7 +3,7 @@ title: "Mendix Client"
 url: /refguide/mendix-client/
 category: "Mendix Runtime"
 description: "A description of the Mendix Client part of the runtime and how it functions"
-menu_order: 20
+weight: 20
 tags: ["runtime", "mendix client", "offline-first", "browser", "javascript", "nanoflows", "widgets", "launch"]
 ---
 

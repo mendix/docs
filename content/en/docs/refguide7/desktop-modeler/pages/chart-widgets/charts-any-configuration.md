@@ -3,7 +3,7 @@ title: "Any Chart Widgets"
 url: /refguide7/charts-any-configuration/
 parent: "chart-widgets"
 description: "A reference guide on the configuration of the Any Chart widget to pass the correct values to plotly. This enables you to draw a wide variety of charts"
-menu_order: 30
+weight: 30
 tags: ["Any Chart", "Reference Guide", "Options", "Configuration", "Charts"]
 ---
 

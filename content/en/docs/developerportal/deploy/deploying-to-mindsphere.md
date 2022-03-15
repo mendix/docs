@@ -2,7 +2,7 @@
 title: "Siemens MindSphere"
 url: /developerportal/deploy/deploying-to-mindsphere/
 category: "Deployment"
-menu_order: 42
+weight: 42
 description: "Describes how to register a Mendix app at the MindSphere Gateway and integrate it into the MindSphere Launchpad"
 tags: ["MindSphere", "deploy", "cloud foundry", "launchpad", "scopes", "roles", "sso", "XSRF", "limitations", "Gateway"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

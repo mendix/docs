@@ -2,7 +2,7 @@
 title: "Using Version Control in the Desktop Modeler"
 url: /refguide7/using-version-control-in-the-dm/
 category: "Version Control"
-menu_order: 10
+weight: 10
 description: "How to work with version control and how to resolve some issues which may arise"
 tags: ["Version Control", "Conflicts", "Resolve", "Merge", "Patch", "Branch", "Development"]
 # Renamed from version-control-scenarios

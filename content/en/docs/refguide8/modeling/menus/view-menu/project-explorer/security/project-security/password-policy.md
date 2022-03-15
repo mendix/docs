@@ -2,7 +2,7 @@
 title: "Password Policy"
 url: /refguide8/password-policy/
 parent: "project-security"
-menu_order: 50
+weight: 50
 tags: ["studio pro", "password policy", "project security", "security"]
 ---
 

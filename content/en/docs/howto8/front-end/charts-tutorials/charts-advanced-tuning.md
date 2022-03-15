@@ -2,7 +2,7 @@
 title: "Fine-Tune a Chart with Advanced Settings"
 url: /howto8/front-end/charts-advanced-tuning/
 parent: "charts-tutorials"
-menu_order: 30
+weight: 30
 description: "Describes the settings you can use to change chart layouts and types"
 tags: ["Studio Pro", "Charts", "Layout", "Chart Type"]
 ---

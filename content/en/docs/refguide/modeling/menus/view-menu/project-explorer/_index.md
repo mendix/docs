@@ -2,7 +2,7 @@
 title: "App Explorer"
 url: /refguide/project-explorer/
 parent: view-menu
-menu_order: 40
+weight: 40
 tags: ["studio pro", "App Explorer"]
 ---
 

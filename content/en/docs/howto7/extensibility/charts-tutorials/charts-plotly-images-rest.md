@@ -2,7 +2,7 @@
 title: "Use the Plotly Images REST Service Endpoint"
 url: /howto7/extensibility/charts-plotly-images-rest/
 parent: "charts-tutorials"
-menu_order: 70
+weight: 70
 tags: ["Charts", "Plotly", "REST", "Desktop Modeler", "Widget"]
 ---
 

@@ -2,7 +2,7 @@
 title: "Get Started"
 url: /howto/front-end/get-started/
 parent: "atlas-ui"
-menu_order: 10
+weight: 10
 tags: ["Atlas", "UI", "UX", "user experience", "design"]
 ---
 

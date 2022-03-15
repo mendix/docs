@@ -2,7 +2,7 @@
 title: "APM 1 Reference Guide"
 url: /addons/apd-addon/rg-one-apm/
 parent: "rg-apd"
-menu_order: 2
+weight: 2
 ---
 
 ## 1 Introduction

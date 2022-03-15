@@ -3,7 +3,7 @@ title: "Filter and Sort Items in a List"
 url: /studio-how-to/pages-how-to-filter-and-sort/
 category: "Pages"
 description: "Describes how to filter and sort items in a list in Mendix Studio."
-menu_order: 50
+weight: 50
 tags: ["studio", "pages", "list", "how to", "filter", "sort"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

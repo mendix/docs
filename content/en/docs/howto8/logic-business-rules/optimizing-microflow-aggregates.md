@@ -2,7 +2,7 @@
 title: "Optimize Microflow Aggregates"
 url: /howto8/logic-business-rules/optimizing-microflow-aggregates/
 category: "Logic & Business Rules"
-menu_order: 7
+weight: 7
 tags: ["microflow", "aggregate"]
 #To update screenshots of these microflows in , use the Microflow Screenshots app.
 ---

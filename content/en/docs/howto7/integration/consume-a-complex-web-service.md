@@ -2,7 +2,7 @@
 title: "Consume a Complex Web Service"
 url: /howto7/integration/consume-a-complex-web-service/
 category: "Integration"
-menu_order: 8
+weight: 8
 tags: ["web service", "integration", "consume"]
 ---
 

@@ -3,7 +3,7 @@ title: "Synchronize to Device"
 url: /refguide8/synchronize-to-device/
 parent: "client-activities"
 tags: ["studio pro", "synchronize to device", "client activities"]
-menu_order: 60
+weight: 60
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

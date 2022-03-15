@@ -3,7 +3,7 @@ title: "Conditional Visibility Section"
 url: /studio8/page-editor-widgets-visibility-section/
 parent: "page-editor-widgets"
 description: "Describes the Conditional Visibility section in widgets properties in Mendix Studio."
-menu_order: 30
+weight: 30
 tags: ["studio", "page editor", "widgets", "on click action", "events"]
 ---
 

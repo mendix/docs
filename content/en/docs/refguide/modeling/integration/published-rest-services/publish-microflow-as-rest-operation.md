@@ -2,7 +2,7 @@
 title: "Publishing a Microflow as a REST Operation"
 url: /refguide/publish-microflow-as-rest-operation/
 parent: "published-rest-services"
-menu_order: 30
+weight: 30
 description: "How to publish a Microflow as a REST Operation"
 tags: ["Microflow", "REST", "operation", "resource"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

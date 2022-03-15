@@ -2,7 +2,7 @@
 title: "Generate a Published REST Resource"
 url: /refguide7/generate-rest-resource/
 parent: "published-rest-services"
-menu_order: 20
+weight: 20
 description: "Generate a published REST resource from an entity"
 tags: ["published REST", "resource", "entity", "operations", "expose"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

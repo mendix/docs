@@ -2,7 +2,7 @@
 title: "Maintenance"
 url: /addons/ats-addon/ov-maintenance/
 parent: "ov"
-menu_order: 4
+weight: 4
 ---
 
 The time window (within which planned system maintenance can occur) is weekly, on Tuesday between 17:00 and 18:00 (local time in Amsterdam, Netherlands).

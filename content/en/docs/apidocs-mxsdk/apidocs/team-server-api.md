@@ -2,7 +2,7 @@
 title: "Team Server API"
 url: /apidocs-mxsdk/apidocs/team-server-api/
 category: "API Documentation"
-menu_order: 65
+weight: 65
 ---
 
 {{% alert color="warning" %}}

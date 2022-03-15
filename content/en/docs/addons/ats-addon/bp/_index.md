@@ -2,7 +2,7 @@
 title: "ATS Best Practices"
 url: /addons/ats-addon/bp/
 category: "ATS"
-menu_order: 4
+weight: 4
 ---
 
 ## 1 Introduction

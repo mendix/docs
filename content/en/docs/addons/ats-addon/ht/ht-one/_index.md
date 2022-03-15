@@ -2,7 +2,7 @@
 title: "ATS 1 How-to's"
 url: /addons/ats-addon/ht-one/
 parent: "ht"
-menu_order: 20
+weight: 20
 ---
 
 These are the documents in this section:

@@ -2,7 +2,7 @@
 title: "ATS How-to's"
 url: /addons/ats-addon/ht/
 category: "ATS"
-menu_order: 3
+weight: 3
 ---
 
 ## 1 Introduction

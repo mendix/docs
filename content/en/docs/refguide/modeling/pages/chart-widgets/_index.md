@@ -2,7 +2,7 @@
 title: "Charts"
 url: /refguide/chart-widgets/
 parent: "pages"
-menu_order: 70
+weight: 70
 tags: ["Charts", "Any Chart", "Studio Pro", "Pages"]
 ---
 

@@ -2,7 +2,7 @@
 title: "Clear Warning Messages"
 url: /howto7/monitoring-troubleshooting/clear-warning-messages/
 category: "Monitoring & Troubleshooting"
-menu_order: 1
+weight: 1
 tags: ["monitoring", "troubleshooting", "warning", "error", "warning message"]
 ---
 

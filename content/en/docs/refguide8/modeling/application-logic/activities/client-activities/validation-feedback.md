@@ -2,7 +2,7 @@
 title: "Validation Feedback"
 url: /refguide8/validation-feedback/
 parent: "client-activities"
-menu_order: 70
+weight: 70
 tags: ["studio pro", "validation feedback", "client activities"]
 aliases:
     - /refguide8/Validation+Feedback.html

@@ -2,7 +2,7 @@
 title: "Submit a Support Request"
 url: /developerportal/support/submit-support-request/
 category: "Mendix Support"
-menu_order: 2
+weight: 2
 description: "Describes submitting a request with Mendix Support."
 tags: ["support", "incident", "standard change", "URL", "change URL", "license", "change" ]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

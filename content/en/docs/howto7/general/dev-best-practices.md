@@ -2,7 +2,7 @@
 title: "Implement Best Practices for Development"
 url: /howto7/general/dev-best-practices/
 category: "General"
-menu_order: 3
+weight: 3
 tags: ["best practice", "development", "develop", "reusable", "prefix"]
 ---
 

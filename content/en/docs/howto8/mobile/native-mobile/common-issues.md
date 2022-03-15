@@ -2,7 +2,7 @@
 title: "Troubleshoot Common Native Mobile Issues"
 url: /howto8/mobile/common-issues/
 parent: "native-mobile"
-menu_order: 80
+weight: 80
 description: Troubleshoot common issues associated with building and running native mobile apps.
 tags: ["native", "mobile", "developer", "troubleshoot", "app"]
 ---

@@ -2,7 +2,7 @@
 title: "APD 3 Installation Guide"
 url: /addons/apd-addon/ig-three/
 parent: "ig"
-menu_order: 1
+weight: 1
 ---
 
 ## 1 Introduction

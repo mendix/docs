@@ -2,7 +2,7 @@
 title: "Control Bar"
 url: /refguide8/control-bar/
 parent: "grids"
-menu_order: 30
+weight: 30
 tags: ["studio pro", "control bar", "add button", "deselect all button", "export to csv button", "grid action button", "grid new button", "remove button", "search button", "select button", "select all button", "data grid", "template grid", "reference set selector", "control bar buttons"]
 aliases:
     - /refguide8/add-button.html

@@ -2,7 +2,7 @@
 title: "Close Page"
 url: /refguide/close-page/
 parent: "client-activities"
-menu_order: 10
+weight: 10
 tags: ["studio pro", "close page", "client activity"]
 aliases:
     - /refguide/Close+Form.html

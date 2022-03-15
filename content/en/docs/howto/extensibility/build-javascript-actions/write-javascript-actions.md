@@ -2,7 +2,7 @@
 title: "Build JavaScript Actions: Part 1 (Basic)"
 url: /howto/extensibility/write-javascript-actions/
 parent: "build-javascript-actions"
-menu_order: 10
+weight: 10
 description: "This how-to will teach you to create a JavaScript action."
 tags: ["widget", "TexttoSpeech", "SpeechtoText", "JavaScript", "API", "JavaScript-API"]
 ---

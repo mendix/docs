@@ -2,7 +2,7 @@
 title: "LTS, MTS & Monthly Releases"
 url: /releasenotes/studio-pro/lts-mts/
 category: "Studio Pro"
-menu_order: 1
+weight: 1
 ---
 
 ## 1 Introduction

@@ -2,7 +2,7 @@
 title: "Mendix for Private Cloud"
 url: /releasenotes/developer-portal/mendix-for-private-cloud/
 category: "Deployment"
-menu_order: 20
+weight: 20
 description: "Release notes for deployment using Mendix for Private Cloud"
 tags: ["release notes", "deployment", "Mendix for Private Cloud", "Private Cloud"]
 ---

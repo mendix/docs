@@ -2,7 +2,7 @@
 title: "Data Hub Pane"
 url: /refguide/data-hub-pane/
 parent: view-menu
-menu_order: 15
+weight: 15
 description: "Describes the Data Hub pane in Mendix Studio Pro."
 tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
 

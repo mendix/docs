@@ -2,7 +2,7 @@
 title: "Metamodel"
 url: /releasenotes/sdk/metamodel/
 category: "SDKs"
-menu_order: 3
+weight: 3
 ---
 
 These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel/):

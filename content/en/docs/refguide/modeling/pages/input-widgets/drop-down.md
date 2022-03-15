@@ -2,7 +2,7 @@
 title: "Drop-Down"
 url: /refguide/drop-down/
 parent: "input-widgets"
-menu_order: 30
+weight: 30
 tags: ["Drop-down", "input", "page", "widget", "enumeration", "studio pro"]
 aliases:
     - /refguide/drop-down-widget.html

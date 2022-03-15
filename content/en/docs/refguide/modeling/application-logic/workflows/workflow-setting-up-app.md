@@ -3,7 +3,7 @@ title: "Adding a Workflow to an Existing App: Setting Up the Basics"
 url: /refguide/workflow-setting-up-app/
 parent: "workflows"
 description: "Describes how to use Workflow Commons in an existing app in Mendix Studio Pro."
-menu_order: 55
+weight: 55
 tags: ["studio pro", "workflow", "task", "onboarding"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

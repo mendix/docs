@@ -2,7 +2,7 @@
 title: "Migrate a Free App to Mendix Basic"
 url: /developerportal/deploy/migrate-free-app-to-basic/
 parent: "licensing-apps"
-menu_order: 40
+weight: 40
 description: "Moving an existing Mendix app deployed as a Free App to a Basic Package node"
 tags: ["App", "Node", "Developer Portal", "Licensed", "Free App", "Upgrade", "Basic Package"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

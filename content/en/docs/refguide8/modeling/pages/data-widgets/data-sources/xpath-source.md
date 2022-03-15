@@ -3,7 +3,7 @@ title: "XPath Source"
 url: /refguide8/xpath-source/
 parent: "data-sources"
 tags: ["studio pro", "xpath", "xpath source", "data source"]
-menu_order: 20
+weight: 20
 ---
 
 {{% alert color="info" %}}

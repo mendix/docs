@@ -2,7 +2,7 @@
 title: "Implement Best Practices for UX Design"
 url: /howto7/front-end/ux-best-practices/
 category: "Front End"
-menu_order: 10
+weight: 10
 tags: ["ux", "ui", "ux designer", "user experience", "design", "menu", "button", "typography", "card", "front end"]
 ---
 

@@ -2,7 +2,7 @@
 title: "Mendix IP Addresses"
 url: /developerportal/deploy/mendix-ip-addresses/
 parent: "mendix-cloud-deploy"
-menu_order: 38
+weight: 38
 description: "A list of static IP addresses used by the Mendix cloud"
 tags: ["Mendix cloud", "IP address", "Cloud Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

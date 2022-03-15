@@ -2,7 +2,7 @@
 title: "Set Up Data Validation"
 url: /howto7/data-models/setting-up-data-validation/
 category: "Data Models"
-menu_order: 2
+weight: 2
 tags: []
 ---
 This how-to explains how you can set up data validation with Mendix. Before you can start with this how-to you need to setup a basic data structure, otherwise there won't be any data to validate. If you don't know how to setup a basic data structure, you can take a look at [this how-to](/howto7/data-models/create-a-basic-data-layer/).

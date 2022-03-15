@@ -2,7 +2,7 @@
 title: "Querying Over Self-References"
 url: /refguide8/query-over/
 parent: "associations"
-menu_order: 20
+weight: 20
 tags: ["query", "self-reference", "association", "domain model"]
 ---
 

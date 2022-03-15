@@ -2,7 +2,7 @@
 title: "Entities"
 url: /refguide/entities/
 parent: "domain-model"
-menu_order: 10
+weight: 10
 tags: ["domain model", "entity", "entities", "attribute", "validation rule", "even handler", "access rule", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

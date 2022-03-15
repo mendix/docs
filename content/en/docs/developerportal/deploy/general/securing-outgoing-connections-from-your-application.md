@@ -2,7 +2,7 @@
 title: "Secure Outgoing Connections from Your App"
 url: /developerportal/deploy/securing-outgoing-connections-from-your-application/
 parent: "general"
-menu_order: 10
+weight: 10
 description: "Describes which methods are available for securing connections from your app to the outside world."
 tags: ["secure", "outgoing", "encryption", "TLS/HTTPS", "proxy", "SSH", "VPN"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

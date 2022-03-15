@@ -2,7 +2,7 @@
 title: "Environments"
 url: /developerportal/deploy/environments/
 parent: "mendix-cloud-deploy"
-menu_order: 5
+weight: 5
 description: "List the environments in which your app is deployed. Also the starting point for managing existing environments and further deployments."
 tags: ["Deploy","App","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

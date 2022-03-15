@@ -2,7 +2,7 @@
 title: "Introduction to ATS"
 url: /addons/ats-addon/ov-introduction/
 parent: "ov"
-menu_order: 1
+weight: 1
 ---
 
 ## 1 ATS Start Page

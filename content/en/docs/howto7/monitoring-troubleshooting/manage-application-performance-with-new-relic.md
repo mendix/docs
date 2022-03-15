@@ -2,7 +2,7 @@
 title: "Manage Application Performance with New Relic"
 url: /howto7/monitoring-troubleshooting/manage-application-performance-with-new-relic/
 category: "Monitoring & Troubleshooting"
-menu_order: 13
+weight: 13
 tags: ["monitoring", "troubleshooting", "performance", "new relic"]
 ---
 

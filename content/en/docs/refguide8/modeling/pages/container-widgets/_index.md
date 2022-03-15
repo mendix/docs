@@ -2,7 +2,7 @@
 title: "Container Widgets"
 url: /refguide8/container-widgets/
 parent: "pages"
-menu_order: 25
+weight: 25
 tags: ["studio pro", "container widget", "widget"]
 ---
 

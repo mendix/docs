@@ -2,7 +2,7 @@
 title: "Special Checks"
 url: /refguide/special-checks/
 parent: "expressions"
-menu_order: 40
+weight: 40
 description: "Describes special checks in expressions in Mendix."
 tags: ["studio pro", "special checks", "special check", "expressions"]
 ---

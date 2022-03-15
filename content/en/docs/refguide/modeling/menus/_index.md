@@ -3,7 +3,7 @@ title: "Menus"
 url: /refguide/menus/
 category: "App Modeling"
 description: "Describes Studio Pro menus."
-menu_order: 12
+weight: 12
 tags: ["Studio Pro", "menu", "top bar"]
 ---
 

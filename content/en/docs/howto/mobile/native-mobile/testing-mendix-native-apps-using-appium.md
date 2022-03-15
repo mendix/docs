@@ -2,7 +2,7 @@
 title: "Test Mendix Native Apps Using Appium"
 url: /howto/mobile/testing-mendix-native-apps-using-appium/
 parent: "native-mobile"
-menu_order: 95
+weight: 95
 description: "This how-to will teach you how to write end-to-end tests once and run them on both platforms using Appium."
 tags: ["test", "testing", "appium", "mobile", "native"]
 ---

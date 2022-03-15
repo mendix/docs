@@ -2,7 +2,7 @@
 title: "Use Layouts and Snippets"
 url: /howto7/front-end/layouts-and-snippets/
 category: "Front End"
-menu_order: 25
+weight: 25
 tags: ["front end"]
 ---
 

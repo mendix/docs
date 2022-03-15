@@ -6,7 +6,7 @@ tags: ["studio pro"]
 ---
 
 {{% alert color="info" %}}
-<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/oql-datedeiff.pdf).
+<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/oql-datedeiff.pdf).
 {{% /alert %}}
 
 The DATEDIFF function returns the difference between two given date/time values. The difference is given in the specified unit.

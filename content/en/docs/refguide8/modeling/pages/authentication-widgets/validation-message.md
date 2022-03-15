@@ -7,7 +7,7 @@ tags: ["studio pro", "validation message", "authentication widget", "authenticat
 ---
 
 {{% alert color="info" %}}
-<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/validation-message.pdf).
+<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/validation-message.pdf).
 {{% /alert %}}
 
 {{% alert color="warning" %}}The validation message widget is not supported on native mobile pages.{{% /alert %}}

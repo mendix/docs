@@ -8,7 +8,7 @@ tags: ["studio pro", "grid", "template grid", "data widgets"]
 ---
 
 {{% alert color="info" %}}
-<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/template-grid.pdf).
+<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/template-grid.pdf).
 {{% /alert %}}
 
 {{% alert color="warning" %}}The template grid widget is not supported on native mobile pages.{{% /alert %}}

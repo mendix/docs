@@ -1,0 +1,52 @@
+{'t': 'Checks', 'i': 'checks', 'u': '/studio/checks', 'd': '/studio/', 'newDir': '/studio/checks/', 'indexFlag': 'true'}
+{'t': 'Buzz', 'c': 'Collaboration', 'i': 'collaboration-buzz', 'u': '/studio/collaboration-buzz', 'd': '/studio/', 'mo': 20, 'newDir': '/studio/collaboration/', 'p': 'collaboration'}
+{'t': 'Collaborative Development in Studio', 'c': 'Collaboration', 'i': 'collaborative-development', 'u': '/studio/collaborative-development', 'd': '/studio/', 'mo': 10, 'newDir': '/studio/collaboration/', 'p': 'collaboration'}
+{'t': 'Collaboration', 'i': 'collaboration', 'u': '/studio/collaboration', 'd': '/studio/', 'newDir': '/studio/collaboration/', 'indexFlag': 'true'}
+{'t': 'Domain Model Consistency Errors', 'i': 'consistency-errors-domain-model', 'u': '/studio/consistency-errors-domain-model', 'd': '/studio/', 'p': 'checks', 'mo': 40, 'newDir': '/studio/checks/consistency-errors/'}
+{'t': 'Microflow Consistency Errors', 'i': 'consistency-errors-microflows', 'u': '/studio/consistency-errors-microflows', 'd': '/studio/', 'p': 'checks', 'mo': 30, 'newDir': '/studio/checks/consistency-errors/'}
+{'t': 'Navigation Consistency Errors', 'i': 'consistency-errors-navigation', 'u': '/studio/consistency-errors-navigation', 'd': '/studio/', 'p': 'checks', 'mo': 20, 'newDir': '/studio/checks/consistency-errors/'}
+{'t': 'Workflow Consistency Errors', 'i': 'consistency-errors-workflows', 'u': '/studio/consistency-errors-workflows', 'd': '/studio/', 'p': 'checks', 'mo': 5, 'newDir': '/studio/checks/consistency-errors/'}
+{'t': 'Consistency Errors', 'c': 'Checks', 'i': 'consistency-errors', 'u': '/studio/consistency-errors', 'd': '/studio/', 'newDir': '/studio/checks/consistency-errors/', 'indexFlag': 'true', 'p': 'checks'}
+{'t': 'Page Consistency Errors', 'i': 'consistency-errors-pages', 'u': '/studio/consistency-errors-pages', 'd': '/studio/', 'p': 'checks', 'mo': 10, 'newDir': '/studio/checks/consistency-errors/'}
+{'t': 'Data Filters', 'c': 'Working with Data', 'i': 'data-filters', 'u': '/studio/data-filters', 'd': '/studio/', 'mo': 40, 'newDir': '/studio/work-with-data/', 'p': 'work-with-data'}
+{'t': 'Data Hub in Studio', 'c': 'Working with Data', 'i': 'data-hub-in-studio', 'u': '/studio/data-hub-in-studio', 'd': '/studio/', 'mo': 30, 'newDir': '/studio/work-with-data/', 'p': 'work-with-data'}
+{'t': 'Associations', 'i': 'domain-models-association-properties', 'u': '/studio/domain-models-association-properties', 'd': '/studio/', 'p': 'work-with-data', 'newDir': '/studio/work-with-data/domain-models/'}
+{'t': 'Attributes', 'i': 'domain-models-attributes', 'u': '/studio/domain-models-attributes', 'd': '/studio/', 'p': 'work-with-data', 'newDir': '/studio/work-with-data/domain-models/'}
+{'t': 'Enumeration', 'i': 'domain-models-enumeration', 'u': '/studio/domain-models-enumeration', 'd': '/studio/', 'p': 'work-with-data', 'newDir': '/studio/work-with-data/domain-models/'}
+{'t': 'Domain Model', 'c': 'Working with Data', 'i': 'domain-models', 'u': '/studio/domain-models', 'd': '/studio/', 'mo': 10, 'newDir': '/studio/work-with-data/domain-models/', 'indexFlag': 'true', 'p': 'work-with-data'}
+{'t': 'Expressions', 'i': 'expressions', 'u': '/studio/expressions', 'd': '/studio/', 'newDir': '/studio/expressions/', 'indexFlag': 'true'}
+{'t': 'General Info', 'i': 'general', 'u': '/studio/general', 'd': '/studio/', 'newDir': '/studio/general/', 'indexFlag': 'true'}
+{'t': 'Studio Ranges & Mendix Versions', 'c': 'General Info', 'i': 'general-versions', 'u': '/studio/general-versions', 'd': '/studio/', 'newDir': '/studio/general/', 'p': 'general'}
+{'t': 'Decision', 'c': 'Microflows', 'i': 'microflows-decision', 'u': '/studio/microflows-decision', 'd': '/studio/', 'mo': 20, 'newDir': '/studio/microflows/', 'p': 'microflows'}
+{'t': 'Studio 9 Guide', 'i': 'index', 'u': '/studio/', 'd': '/studio/', 'm': True, 'newDir': '/studio/', 'indexFlag': 'true'}
+{'t': 'Loop', 'c': 'Microflows', 'i': 'microflows-loop', 'u': '/studio/microflows-loop', 'd': '/studio/', 'mo': 30, 'newDir': '/studio/microflows/', 'p': 'microflows'}
+{'t': 'Microflows', 'i': 'microflows', 'u': '/studio/microflows', 'd': '/studio/', 'newDir': '/studio/microflows/', 'indexFlag': 'true'}
+{'t': 'Set & Change a Value for Different Activities', 'c': 'Microflows', 'i': 'microflows-setting-and-changing-value', 'u': '/studio/microflows-setting-and-changing-value', 'd': '/studio/', 'mo': 50, 'newDir': '/studio/microflows/', 'p': 'microflows'}
+{'t': 'Mendix Assist', 'c': 'Microflows', 'i': 'mx-assist', 'u': '/studio/mx-assist', 'd': '/studio/', 'mo': 10, 'newDir': '/studio/microflows/', 'p': 'microflows'}
+{'t': 'Navigation Document', 'i': 'navigation', 'u': '/studio/navigation', 'd': '/studio/', 'newDir': '/studio/navigation/', 'indexFlag': 'true'}
+{'t': 'Data Grid', 'i': 'page-editor-data-grid', 'u': '/studio/page-editor-data-grid', 'd': '/studio/', 'p': 'page-editor', 'mo': 15, 'newDir': '/studio/page-editor/page-editor-widgets/'}
+{'t': 'Data View & List View', 'i': 'page-editor-data-view-list-view', 'u': '/studio/page-editor-data-view-list-view', 'd': '/studio/', 'p': 'page-editor', 'mo': 10, 'newDir': '/studio/page-editor/page-editor-widgets/'}
+{'t': 'Design Section', 'i': 'page-editor-widgets-design-section', 'u': '/studio/page-editor-widgets-design-section', 'd': '/studio/', 'p': 'page-editor', 'newDir': '/studio/page-editor/page-editor-widgets/'}
+{'t': 'Buttons', 'i': 'page-editor-widgets-buttons', 'u': '/studio/page-editor-widgets-buttons', 'd': '/studio/', 'p': 'page-editor', 'mo': 50, 'newDir': '/studio/page-editor/page-editor-widgets/'}
+{'t': 'Events Section', 'i': 'page-editor-widgets-events-section', 'u': '/studio/page-editor-widgets-events-section', 'd': '/studio/', 'p': 'page-editor', 'mo': 70, 'newDir': '/studio/page-editor/page-editor-widgets/'}
+{'t': 'Input Elements', 'i': 'page-editor-widgets-input-elements', 'u': '/studio/page-editor-widgets-input-elements', 'd': '/studio/', 'p': 'page-editor', 'mo': 20, 'newDir': '/studio/page-editor/page-editor-widgets/'}
+{'t': 'Images & Files', 'i': 'page-editor-widgets-images-and-files', 'u': '/studio/page-editor-widgets-images-and-files', 'd': '/studio/', 'p': 'page-editor', 'mo': 30, 'newDir': '/studio/page-editor/page-editor-widgets/'}
+{'t': 'Structure', 'i': 'page-editor-widgets-structure', 'u': '/studio/page-editor-widgets-structure', 'd': '/studio/', 'p': 'page-editor', 'mo': 60, 'newDir': '/studio/page-editor/page-editor-widgets/'}
+{'t': 'Text', 'i': 'page-editor-widgets-text', 'u': '/studio/page-editor-widgets-text', 'd': '/studio/', 'p': 'page-editor', 'mo': 40, 'newDir': '/studio/page-editor/page-editor-widgets/'}
+{'t': 'Conditional Visibility Section', 'i': 'page-editor-widgets-visibility-section', 'u': '/studio/page-editor-widgets-visibility-section', 'd': '/studio/', 'p': 'page-editor', 'mo': 30, 'newDir': '/studio/page-editor/page-editor-widgets/'}
+{'t': 'Pages', 'i': 'page-editor', 'u': '/studio/page-editor', 'd': '/studio/', 'newDir': '/studio/page-editor/', 'indexFlag': 'true'}
+{'t': 'Widgets', 'c': 'Pages', 'i': 'page-editor-widgets', 'u': '/studio/page-editor-widgets', 'd': '/studio/', 'newDir': '/studio/page-editor/page-editor-widgets/', 'indexFlag': 'true', 'p': 'page-editor'}
+{'t': 'Previewing & Publishing Your App', 'i': 'publishing-app', 'u': '/studio/publishing-app', 'd': '/studio/', 'newDir': '/studio/publishing-app/', 'indexFlag': 'true'}
+{'t': 'Mendix Version & Add-Ons', 'c': 'Settings', 'i': 'settings-version-and-add-ons', 'u': '/studio/settings-version-and-add-ons', 'd': '/studio/', 'mo': 30, 'newDir': '/studio/settings/', 'p': 'settings'}
+{'t': 'Widget Overview', 'c': 'Settings', 'i': 'settings-widget-overview', 'u': '/studio/settings-widget-overview', 'd': '/studio/', 'mo': 20, 'newDir': '/studio/settings/', 'p': 'settings'}
+{'t': 'Security, Roles & Permissions', 'c': 'Settings', 'i': 'settings-security', 'u': '/studio/settings-security', 'd': '/studio/', 'mo': 10, 'newDir': '/studio/settings/', 'p': 'settings'}
+{'t': 'Settings', 'i': 'settings', 'u': '/studio/settings', 'd': '/studio/', 'newDir': '/studio/settings/', 'indexFlag': 'true'}
+{'t': 'Starting With Your Own Data', 'c': 'Working with Data', 'i': 'start-with-data', 'u': '/studio/start-with-data', 'd': '/studio/', 'mo': 20, 'newDir': '/studio/work-with-data/', 'p': 'work-with-data'}
+{'t': 'Theme Customizer', 'i': 'theme-customizer', 'u': '/studio/theme-customizer', 'd': '/studio/', 'newDir': '/studio/theme-customizer/', 'indexFlag': 'true'}
+{'t': 'Workflow Properties', 'c': 'Workflows', 'i': 'workflow-properties', 'u': '/studio/workflow-properties', 'd': '/studio/', 'mo': 10, 'newDir': '/studio/workflows/', 'p': 'workflows'}
+{'t': 'Working with Data', 'i': 'work-with-data', 'u': '/studio/work-with-data', 'd': '/studio/', 'newDir': '/studio/work-with-data/', 'indexFlag': 'true'}
+{'t': 'Using Workflows in Apps with Mendix Version 9.6 and Above', 'c': 'Workflows', 'i': 'workflows-9.6', 'u': '/studio/workflows-9.6', 'd': '/studio/', 'mo': 5, 'newDir': '/studio/workflows/', 'p': 'workflows'}
+{'t': 'System Actions', 'c': 'Workflows', 'i': 'workflow-system-actions', 'u': '/studio/workflow-system-actions', 'd': '/studio/', 'mo': 40, 'newDir': '/studio/workflows/', 'p': 'workflows'}
+{'t': 'General Activities', 'c': 'Workflows', 'i': 'workflows-general-activities', 'u': '/studio/workflows-general-activities', 'd': '/studio/', 'mo': 30, 'newDir': '/studio/workflows/', 'p': 'workflows'}
+{'t': 'User Task', 'c': 'Workflows', 'i': 'workflows-user-task', 'u': '/studio/workflows-user-task', 'd': '/studio/', 'mo': 20, 'newDir': '/studio/workflows/', 'p': 'workflows'}
+{'t': 'Workflows', 'i': 'workflows', 'u': '/studio/workflows', 'd': '/studio/', 'newDir': '/studio/workflows/', 'indexFlag': 'true'}

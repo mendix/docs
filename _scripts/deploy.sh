@@ -12,13 +12,13 @@ fi
 if ([ "${TRAVIS_BRANCH}" == "development" ])
 then
   echo 'Deploying development to AWS'
-  TARGETAWSBUCKET="mendix-new-docs-site"
+  TARGETAWSBUCKET="mendixtestdocumentation"
 fi
 
 if ([ "${TRAVIS_BRANCH}" == "production" ])
 then
   echo 'Deploying production to AWS'
-  TARGETAWSBUCKET="mendix-new-docs-site"
+  TARGETAWSBUCKET="docs.mendix.com"
 fi
 
 echo "Deploying to AWS bucket $TARGETAWSBUCKET"

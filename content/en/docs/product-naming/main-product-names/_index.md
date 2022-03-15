@@ -47,10 +47,10 @@ V4 has much better security than v3.
 
 This term appears on the **My Apps** page in Studio Pro and in the **Back to the Developer Portal** button in Studio.
 
-The Developer Portal includes what is sometimes referred to as the "Cloud Portal," which is not an official term and is not used in the product UI or documentation (for more information, see [Terminology History](terminology-history)
+The Developer Portal includes what is sometimes referred to as the "Cloud Portal," which is not an official term and is not used in the product UI or documentation (for more information, see [Terminology History](/product-naming/terminology-history/)
 
 {{% alert type="info" %}}
-This term replaces "Sprintr," "Platform Portal," and "Mendix App Platform." These terms are not to be used in the product UI or documentation. For more information, see [Terminology History](terminology-history).<br />
+This term replaces "Sprintr," "Platform Portal," and "Mendix App Platform." These terms are not to be used in the product UI or documentation. For more information, see [Terminology History](/product-naming/terminology-history/).<br />
 <br />
 Capitalize in all instances.
 {{% /alert %}}
@@ -77,7 +77,7 @@ The platform includes Mendix Studio and our cloud hosting.
 
 ## Mendix Studio {#studio}
 
-The rebranded name for the [Web Modeler](terminology-history#wm) as of Mendix 8.
+The rebranded name for the [Web Modeler](/product-naming/terminology-history/#wm) as of Mendix 8.
 
 {{% alert type="info" %}}
 "Studio" can be used where regular repetition is necessary in a doc. However, where possible, "Mendix" should be added to the product name.<br />
@@ -87,7 +87,7 @@ Capitalize in all instances.
 
 ## Mendix Studio Pro {#pro}
 
-The rebranded name for the [Desktop Modeler](terminology-history#dm) as of Mendix 8.
+The rebranded name for the [Desktop Modeler](/product-naming/terminology-history/#dm) as of Mendix 8.
 
 {{% alert type="info" %}}
 "Studio Pro" can be used where regular repetition is necessary in a doc. However, where possible, "Mendix" should be added to the product name.<br />

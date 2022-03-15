@@ -63,7 +63,7 @@ Do not use "starter app."
 
 ### App User
 
-For a definition of this term, see the [Managing App Users](/developerportal/collaborate/general-settings#managing-app-users) section of the *Developer Portal Guide*.
+For a definition of this term, see the [Managing App Users](/developerportal/collaborate/general-settings/#managing-app-users) section of the *Developer Portal Guide*.
 
 {{% alert type="info" %}}
 Capitalize in all instances.
@@ -107,7 +107,7 @@ Capitalize in all instances.
 
 ### Custom Developer App
 
-For a definition of this term, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps).
+For a definition of this term, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps/).
 
 {{% alert type="info" %}}
 Do not capitalize.
@@ -135,21 +135,21 @@ Do not use "insta-deploy" or "instant redeploy."
 
 ### Free App {#free-app}
 
-A [Free App](/developerportal/deploy/mendix-cloud-deploy#free-app) is an app that can be deployed to the Mendix Cloud without purchasing a specific license and is therefore free. There are restrictions on the resources available to a Free App. A Free App environment is a cloud environment, but it does not support complex or large applications. Free Apps are part of the [Free Edition](#free-edition).
+A [Free App](/developerportal/deploy/mendix-cloud-deploy/#free-app) is an app that can be deployed to the Mendix Cloud without purchasing a specific license and is therefore free. There are restrictions on the resources available to a Free App. A Free App environment is a cloud environment, but it does not support complex or large applications. Free Apps are part of the [Free Edition](#free-edition).
 
 This is different from an *Unlicensed App* which is an app deployed to an unlicensed environment on another cloud platform, such as SAP or Private Cloud.
 
 {{% alert type="info" %}}
 Capitalize in all instances.<br />
 <br />
-Do not use "Sandbox." For more information, see [Terminology History](terminology-history).
+Do not use "Sandbox." For more information, see [Terminology History](/product-naming/terminology-history/).
 {{% /alert %}}
 
 ### Free Edition {#free-edition}
 
 This is the package of offerings that users can employ without requiring a paid license.
 
-"Free Edition" replaced [Community Edition](terminology-history#community-edition) in 2015, and was made a focus of the announcements at [Mendix World 2019](https://www.mendix.com/blog/a-3-step-leap-into-your-digital-future-highlights-from-mendix-world/).
+"Free Edition" replaced [Community Edition](/product-naming/terminology-history/#community-edition) in 2015, and was made a focus of the announcements at [Mendix World 2019](https://www.mendix.com/blog/a-3-step-leap-into-your-digital-future-highlights-from-mendix-world/).
 
 {{% alert type="info" %}}
 Use to refer to the whole package of Mendix free offerings (Studio Pro, Studio, and Free Apps), not individual parts of the offering.<br />
@@ -172,13 +172,13 @@ Do not capitalize.
 ### LTS (Long-Term Support)
 
 {{% alert type="info" %}}
-As with any acronym the user may not recognize at first, write out the term "long-term support" in full for first usage and use the acronym "LTS" after that. If possible, link to [LTS, MTS & Monthly Releases](/releasenotes/studio-pro/lts-mts) for more information.
+As with any acronym the user may not recognize at first, write out the term "long-term support" in full for first usage and use the acronym "LTS" after that. If possible, link to [LTS, MTS & Monthly Releases](/releasenotes/studio-pro/lts-mts/) for more information.
 {{% /alert %}}
 
 ### MTS (Medium-Term Support)
 
 {{% alert type="info" %}}
-As with any acronym the user may not recognize at first, write out the term "medium-term support" in full for first usage and use the acronym "MTS" after that. If possible, link to [LTS, MTS & Monthly Releases](/releasenotes/studio-pro/lts-mts) for more information.
+As with any acronym the user may not recognize at first, write out the term "medium-term support" in full for first usage and use the acronym "MTS" after that. If possible, link to [LTS, MTS & Monthly Releases](/releasenotes/studio-pro/lts-mts/) for more information.
 {{% /alert %}}
 
 ### Make It Native app
@@ -204,19 +204,19 @@ Capitalize in all instances.
 ### Mendix Assist {#mendix-assist}
 
 {{% alert type="info" %}}
-This replaces "Mx Assistant" and "Mx Assist" (which are not to be used in the product UI or documentation – for more information, see [Terminology History](terminology-history)).<br />
+This replaces "Mx Assistant" and "Mx Assist" (which are not to be used in the product UI or documentation – for more information, see [Terminology History](/product-naming/terminology-history/)).<br />
 <br />
 Capitalize in all instances.
 {{% /alert %}}
 
 ### Mendix mobile app {#mendix-mobile-app}
 
-[Mendix](/refguide8/getting-the-mendix-app) is the name for the mobile app available for developers to test hybrid mobile apps.
+[Mendix](/refguide8/getting-the-mendix-app/) is the name for the mobile app available for developers to test hybrid mobile apps.
 
 {{% alert type="info" %}}
-This term replaces "Mendix Developer app" and "Mendix Mobile app" (which are not to be used in the product UI or documentation – for more information, see [Terminology History](terminology-history)).<br />
+This term replaces "Mendix Developer app" and "Mendix Mobile app" (which are not to be used in the product UI or documentation – for more information, see [Terminology History](/product-naming/terminology-history/)).<br />
 <br />
-To avoid confusion with "Mendix" in all its other usages, always use "the Mendix mobile app" and cross-reference [Getting the Mendix Mobile App](/refguide8/getting-the-mendix-app) where possible.
+To avoid confusion with "Mendix" in all its other usages, always use "the Mendix mobile app" and cross-reference [Getting the Mendix Mobile App](/refguide8/getting-the-mendix-app/) where possible.
 {{% /alert %}}
 
 ### Mendix Client {#client}
@@ -268,7 +268,7 @@ Use the full name when referencing, not just "Evaluation Guide."
 ### Mendix Profile {#profile}
 
 {{% alert type="info" %}}
-This term replaces "Developer Profile" (which is not to be used in the product UI or documentation – for more information, see [Terminology History](terminology-history)).<br />
+This term replaces "Developer Profile" (which is not to be used in the product UI or documentation – for more information, see [Terminology History](/product-naming/terminology-history/)).<br />
 <br />
 Capitalize in all instances.
 {{% /alert %}}
@@ -276,7 +276,7 @@ Capitalize in all instances.
 ### Mendix Runtime {#runtime}
 
 {{% alert type="info" %}}
-This term replaces "Mendix Business Server" and "Business Engine" (which are not to be used in the product UI or documentation – for more information, see [Terminology History](terminology-history)).<br />
+This term replaces "Mendix Business Server" and "Business Engine" (which are not to be used in the product UI or documentation – for more information, see [Terminology History](/product-naming/terminology-history/)).<br />
 <br />
 Capitalize in instances when referring to Runtime as part of the Mendix Platform. The best practice is to use a definite article for additional clarity: "the Mendix Runtime."<br />
 <br />
@@ -291,7 +291,7 @@ This widget enables filtering a list view at runtime with various constraints.
 
 ### Mendix Server
 
-This term is still in use, even though [Mendix Business Server](terminology-history#business-server) is no longer used. It can be useful when contrasting with [Mendix Client](#client). In addition, it can be used to cover more than [Mendix Runtime](#runtime).
+This term is still in use, even though [Mendix Business Server](/product-naming/terminology-history/#business-server) is no longer used. It can be useful when contrasting with [Mendix Client](#client). In addition, it can be used to cover more than [Mendix Runtime](#runtime).
 
 {{% alert type="info" %}}
 Capitalize in all instances.
@@ -363,7 +363,7 @@ On-premises deployment needs specific security considerations.
 
 ### one-to-one & one-to-many associations
 
-For details on association properties, see [Association Properties](/refguide/association-properties). 
+For details on association properties, see [Association Properties](/refguide/association-properties/). 
 
 {{% alert type="info" %}}
 Write as "one-to-one" and "one-to-many," not as "1-1" or "1-to-many."
@@ -377,7 +377,7 @@ Capitalize in all instances.
 
 ### persistable & non-persistable
 
-For details on the persistability of entities, see [Persistability](/refguide/persistability). 
+For details on the persistability of entities, see [Persistability](/refguide/persistability/). 
 
 {{% alert type="info" %}}
 Do not use "persistent" or "non-persistent."<br />
@@ -412,7 +412,7 @@ Do not capitalize.
 ### Product Owner
 
 {{% alert type="info" %}}
-Capitalize in all instances of the [team role](/developerportal/collaborate/app-roles#team-roles).
+Capitalize in all instances of the [team role](/developerportal/collaborate/app-roles/#team-roles).
 {{% /alert %}}
 
 ### production, acceptance & test environments
@@ -436,7 +436,7 @@ Capitalize in all instances.
 ### Scrum Master
 
 {{% alert type="info" %}}
-This is the correct capitalization for this [team role](/developerportal/collaborate/app-roles#team-roles)
+This is the correct capitalization for this [team role](/developerportal/collaborate/app-roles/#team-roles)
 {{% /alert %}}
 
 ### Sprint
@@ -468,7 +468,7 @@ Capitalize in all instances.
 ### Technical Contact
 
 {{% alert type="info" %}}
-Capitalize in all instances of this [role](/developerportal/collaborate/app-roles#technical-contact).
+Capitalize in all instances of this [role](/developerportal/collaborate/app-roles/#technical-contact).
 {{% /alert %}}
 
 ### Theme Customizer
@@ -486,5 +486,5 @@ Do not capitalize, as this is a generic term. **Atlas UI Resources** is an examp
 ### version (Mendix, Studio Pro, Runtime)
 
 {{% alert type="info" %}}
-Do not use a lower-case "v" to describe a version for Mendix, Studio Pro, Studio, or Runtime (this is reserved for the [Mendix Cloud version](main-product-names#mx-cloud-version)).
+Do not use a lower-case "v" to describe a version for Mendix, Studio Pro, Studio, or Runtime (this is reserved for the [Mendix Cloud version](/product-naming/main-product-names/#mx-cloud-version)).
 {{% /alert %}}

@@ -125,10 +125,10 @@ XPath constraints can only be applied to persistable entities as they are applie
 
 Access rules are defined as part of the application development. This section describes the effects access rules have at runtime - under the assumption that the **App Security** is set to **Production**.
 
-The Mendix runtime stores the result of access rule evaluation in memory. In general, this evaluation happens on retrieval from the database. The results will stay valid for the lifetime of the object, which is usually the request. Some more details on whenaccess rules are evaluated when access through a user context follow.
+Access rules are abstract descriptions of access rights. To use them they need to be evaluated: given a user with certain user roles and a state of the database it can be determined if an access rule applies. The Mendix runtime stores the result of access rule evaluation in memory. In general, this evaluation happens on retrieval of objects from the database. The results will stay valid for the lifetime of the object, which is usually the request. Some more details on when access rules are evaluated when accessed through a user context follow.
 
 ### New Objects
-When a new object is created, or when a new object is sent to the runtime server as part of a request all XPath constraints are assumed to evaluate as `true`. This evaluation result is stored in memory and valid for the lifetime of the request. Committing the object does _not_ lead to access rules / XPath rules being reevaluated.
+When a new object is created, or when a new object is sent to the runtime server as part of a request, all XPath constraints are assumed to evaluate as `true`. This evaluation result is stored in memory and valid for the lifetime of the request. Committing the object does _not_ lead to access rules / XPath rules being reevaluated.
 
 ### Persisted Objects
 When a persisted object is passed to the runtime server as part of the request the object is retrieved from the database. At that time the access rules are evaluated based on the values retrieved from the database. As for new objects the result of this access rule evaluation is stored in memory and not changed for the lifetime of the object / request. 

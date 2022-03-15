@@ -33,3 +33,4 @@ bin
 /hugo.exe
 /htmltest.exe
 /.htmltest.yml
+/.hugo_build.lock

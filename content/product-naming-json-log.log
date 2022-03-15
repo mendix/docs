@@ -1,5 +1,0 @@
-{'t': 'Main Product Names', 'i': 'main-product-names', 'u': '/product-naming/main-product-names', 'd': '/product-naming/', 'dr': True, 'newDir': '/product-naming/main-product-names/', 'indexFlag': 'true'}
-{'t': 'Mendix Product Naming Guide', 'i': 'index', 'u': '/product-naming/', 'd': '/product-naming/', 'm': True, 'dr': True, 'newDir': '/product-naming/', 'indexFlag': 'true'}
-{'t': 'Strategic Partner Terms', 'i': 'strategic-partner-terms', 'u': '/product-naming/strategic-partner-terms', 'd': '/product-naming/', 'dr': True, 'newDir': '/product-naming/strategic-partner-terms/', 'indexFlag': 'true'}
-{'t': 'Terminology History', 'i': 'terminology-history', 'u': '/product-naming/terminology-history', 'd': '/product-naming/', 'dr': True, 'newDir': '/product-naming/terminology-history/', 'indexFlag': 'true'}
-{'t': 'Other Mendix Terms', 'i': 'other-terms', 'u': '/product-naming/other-terms', 'd': '/product-naming/', 'dr': True, 'newDir': '/product-naming/other-terms/', 'indexFlag': 'true'}

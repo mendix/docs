@@ -1,4 +1,0 @@
-FS - result of full search for any attachments reference in (), needs manual editing
-RP - will repeat search, file probably moved already
-OK - reference updated and file moved
-NO - matched in 1st loop, no match in 2nd, needs manual editing

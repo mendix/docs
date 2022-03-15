@@ -15,13 +15,13 @@ The **Add resource** or **Edit** button in the Published OData Service document 
 
 Another way to add a resource is by right-clicking on an entity in the domain model and clicking **Expose as OData resource**. Doing so will prompt you to select or create a published OData service document to add the new resource to. After the document has been selected, the published resource editor will be displayed.
 
-![](/attachments/refguide7/desktop-modeler/integration/published-odata-services/published-odata-resource/16843929.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-odata-services/published-odata-resource/16843929.png" >}}
 
 ### 1.1 Resource
 
 Press the **Select...** button to open a dialog window that allows you to select an entity from the domain model to publish. Click on an entity in the displayed tree and press **Select** to confirm.
 
-![](/attachments/refguide7/desktop-modeler/integration/published-odata-services/published-odata-resource/16843930.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-odata-services/published-odata-resource/16843930.png" >}}
 
 IBM DB2 does not support read-isolated data retrieval operations that are non-blocking in a multi-user environment. Therefore the data retrieved by OData might not be 100% consistent if the same data rows are modified concurrently by another user. For the details see this [IBM DB2](/refguide7/db2/) page.
 

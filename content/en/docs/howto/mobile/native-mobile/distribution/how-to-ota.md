@@ -85,7 +85,7 @@ By default OTA updates are disabled for your Native Mobile Profile. To enable th
 1. Navigate to the Native Mobile Profile
 1.  Select **Enable over-the-air updates**: 
 
-  {{% image_container width="350" %}}![Startup option ota checkbox](/attachments/howto/mobile/native-mobile/distribution/how-to-ota/ota-profile-screen.png){{% /image_container %}}
+  {{< figure src="/attachments/howto/mobile/native-mobile/distribution/how-to-ota/ota-profile-screen.png" alt="Startup option ota checkbox"   width="350"  >}}
 
 1. Deploy your app to the cloud.
 
@@ -100,7 +100,7 @@ To make the OTA update functionality available to your users, release the new bi
 
 OTA updates let you correct mistakes in your published apps without issuing a new release. For example, imagine you issued a new release and later found a spelling mistake on your welcome screen:
 
-{{% image_container width="300" %}}![Typo in welcome screen](/attachments/howto/mobile/native-mobile/distribution/how-to-ota-appcenter/phone-error-text.png){{% /image_container %}}
+{{< figure src="/attachments/howto/mobile/native-mobile/distribution/how-to-ota-appcenter/phone-error-text.png" alt="Typo in welcome screen"   width="300"  >}}
 
 Before OTA updates, you would have to make a new release and configure it in the app stores. But OTA updates make fixing such a mistake easy.
 

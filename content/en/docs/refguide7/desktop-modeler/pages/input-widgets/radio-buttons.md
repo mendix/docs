@@ -10,7 +10,7 @@ The **Radio Buttons** widget is an [input widget](/refguide7/input-widgets/) tha
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/pages/input-widgets/radio-buttons/radio-buttons.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/radio-buttons/radio-buttons.png" >}}
 
 These radio buttons are used to indicate whether the user wants to receive the newsletter (boolean, rendered horizontally) and to select his/her favorite color (enumeration, rendered vertically).
 

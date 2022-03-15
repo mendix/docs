@@ -12,7 +12,7 @@ This document describes the properties of an imported web service. If you want a
 
 {{% /alert %}}
 
-![](/attachments/refguide7/desktop-modeler/integration/consumed-web-services/consumed-web-service/16843949.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/consumed-web-services/consumed-web-service/16843949.png" >}}
 
 ## General
 

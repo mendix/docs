@@ -45,7 +45,7 @@ For Make it Native 9 apps, please download them in their app stores. If you woul
 
 |                                  Android                                  |                                iOS                                |
 | :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
-| ![Android QR Code](/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/qr-android-8.8.png) | ![iOS QR Code](/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/qr-ios-8.8.png) |
+| {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/qr-android-8.8.png" alt="Android QR Code" >}} | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/qr-ios-8.8.png" alt="iOS QR Code" >}} |
 |   [Link](https://www.dropbox.com/s/z0255q1gcxpvlwl/MiN%208.8.apk?dl=0)    |        [Link](https://testflight.apple.com/join/ra3QR6iG)         |
 
 

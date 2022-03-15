@@ -29,7 +29,7 @@ The Mendix Desktop Modeler can be installed on your machine with a Windows exect
 1. Go to the Modeler download page in the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/).
 2. Click **Download** to download the latest Mendix Desktop Modeler.
 
-   [![](/attachments/howto7/general/install-the-mendix-desktop-modeler/mendix-modeler-1.jpg)](https://marketplace.mendix.com/link/studiopro/)
+   [{{< figure src="/attachments/howto7/general/install-the-mendix-desktop-modeler/mendix-modeler-1.jpg" >}}](https://marketplace.mendix.com/link/studiopro/)
 
 ## 4 Install the Mendix Desktop Modeler
 
@@ -37,31 +37,31 @@ The Mendix Desktop Modeler needs to be installed on your computer before you can
 
 1. Open the downloaded Mendix Modeler executable. It is named like this: *Mendix-7.X.X-Setup*.
 
-    ![](/attachments/howto7/general/install-the-mendix-desktop-modeler/modeler-2.png)
+    {{< figure src="/attachments/howto7/general/install-the-mendix-desktop-modeler/modeler-2.png" >}}
 
 2. Click **Next**.
 
-    ![](/attachments/howto7/general/install-the-mendix-desktop-modeler/modeler-3.png)
+    {{< figure src="/attachments/howto7/general/install-the-mendix-desktop-modeler/modeler-3.png" >}}
 
 3. Select **I accept the terms in the License Agreement** and click **Next**.
 
-    ![](/attachments/howto7/general/install-the-mendix-desktop-modeler/modeler-4.png)
+    {{< figure src="/attachments/howto7/general/install-the-mendix-desktop-modeler/modeler-4.png" >}}
 
 4. Select the folder where you want to install to and click **Next**.
 
-    ![](/attachments/howto7/general/install-the-mendix-desktop-modeler/modeler-5.png)
+    {{< figure src="/attachments/howto7/general/install-the-mendix-desktop-modeler/modeler-5.png" >}}
 
 5. Enter the start menu shortcuts folder you want to use and click **Next**.
 
-    ![](/attachments/howto7/general/install-the-mendix-desktop-modeler/modeler-6.png)
+    {{< figure src="/attachments/howto7/general/install-the-mendix-desktop-modeler/modeler-6.png" >}}
 
 6. Check the **Desktop** option to create a shortcut to the Modeler on your desktop and click **Next**.
 
-    ![](/attachments/howto7/general/install-the-mendix-desktop-modeler/modeler-7.png)
+    {{< figure src="/attachments/howto7/general/install-the-mendix-desktop-modeler/modeler-7.png" >}}
 
 7. Click **Install** to install the Modeler on your computer.
 
-    ![](/attachments/howto7/general/install-the-mendix-desktop-modeler/modeler-8.png)
+    {{< figure src="/attachments/howto7/general/install-the-mendix-desktop-modeler/modeler-8.png" >}}
 
 8. Check **Launch Mendix 7.X.X** and click **Finish** to finish the installation and launch the Modeler.
 

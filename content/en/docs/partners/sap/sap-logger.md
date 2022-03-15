@@ -35,23 +35,23 @@ To initialize the connector, do the following:
 2. Switch to the **Runtime** tab.
 3. Go to the **After startup** microflow by clicking **Show** next to the **After startup** microflow:
 
-    ![Runtime show After startup microflow](/attachments/partners/sap/sap-logger/logger_project_runtime_show_startup.png)
+    {{< figure src="/attachments/partners/sap/sap-logger/logger_project_runtime_show_startup.png" alt="Runtime show After startup microflow" >}}
 
     {{% alert color="info" %}}If there's no existing microflow (as indicated by the text `(none)`, instead of a microflow name), click **Select…** and create a new microflow by clicking **New**:<br/>   
-    ![Runtime no After Startup](/attachments/partners/sap/sap-logger/logger_project_runtime_nostartup.png)
+    {{< figure src="/attachments/partners/sap/sap-logger/logger_project_runtime_nostartup.png" alt="Runtime no After Startup" >}}
     {{% /alert %}}
 
 4. In the **App Explorer**, drag and drop the **RegisterSubscriber** action from the **SapApplicationLogs** > **USE_ME** folder at the end of the *After startup* microflow:
 
-    ![Drag logging subscriber into After startup microflow](/attachments/partners/sap/sap-logger/logger_drag_component.png)
+    {{< figure src="/attachments/partners/sap/sap-logger/logger_drag_component.png" alt="Drag logging subscriber into After startup microflow" >}}
 
 5. Double-click the **RegisterSubscriber** action make sure that **Log level** is set to the constant *SapLogLevel*:
 
-    ![log level is set to SapLogLevel](/attachments/partners/sap/sap-logger/logger_edit_action.png)
+    {{< figure src="/attachments/partners/sap/sap-logger/logger_edit_action.png" alt="log level is set to SapLogLevel" >}}
 	
 6. Edit the constant **SapLogLevel** to select the minimum log level which you want to send to the *SAP Business Technology Platform Application Logging service*. The supported log levels (case-insensitive) are `Debug`, `Trace`, `Info`, `Warning`, `Error`, and `Critical`.
 
-    ![SapLogLevel is set to Info](/attachments/partners/sap/sap-logger/edit_log_level_constant.png)
+    {{< figure src="/attachments/partners/sap/sap-logger/edit_log_level_constant.png" alt="SapLogLevel is set to Info" >}}
 
 Now, when the application is started, it will produce logs in the JSON format supported by Kibana.
 

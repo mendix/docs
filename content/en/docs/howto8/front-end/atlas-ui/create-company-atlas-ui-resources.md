@@ -26,11 +26,11 @@ In the example below, we’ll go through the steps of creating a new page templa
 
 In Studio Pro, go to the **Project Explorer** of your app and right-click the page you want to use as the page template. In this example, we are using a dashboard page.
 
-![](/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_page_templates.png)
+{{< figure src="/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_page_templates.png" >}}
 
 Name the page template you want to create, then select your layout type. **Responsive** layouts are best when your app will be viewed on multiple screen sizes. **Tablet-specific** and **Phone-specific** types are best for their respective devices. The **Pop-up** layout type should be chosen when you would like the content of your page to be seen in a pop-up window or dialog box. The **Preview layout** is the default layout that will be used when creating the page template.
 
-![](/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_page_template_name.png)
+{{< figure src="/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_page_template_name.png" >}}
 
 The page template is now a new document type in the module with its own icon. In the page templates **Properties** pane, there are some properties important for the template:
 
@@ -40,11 +40,11 @@ The page template is now a new document type in the module with its own icon. In
 * **Layout type** — the layout type is needed to categorize the page as suitable for a responsive, tablet, phone, or pop-up type
 * **Preview layout** — the default layout that will be used when creating the page template
 
-![](/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_page_template_properties.png)
+{{< figure src="/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_page_template_properties.png" >}}
 
 When you create a new page in the module, it will now also show the created page template. The example below shows how the page template has been added to the **Local** category. Everything that has been created will stay **Local** until we move the page templates in the UI Resources module.
 
-![](/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_page_template_local.png)
+{{< figure src="/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_page_template_local.png" >}}
 
 Page templates in Atlas UI are all built with building blocks. In the next section, we will walk through the steps of creating building blocks.
 
@@ -56,22 +56,22 @@ Every page can contain building blocks by grouping widgets together. In our exam
 
 Go to a page and select a group of widgets that can be used as a building block. Right-click  the container or parent widget that includes the widgets, then select **Create building block**:
 
-![](/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_bb.png)
+{{< figure src="/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_bb.png" >}}
 
 Name the building block you want to create:
 
-![](/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_bb_name.png)
+{{< figure src="/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_bb_name.png" >}}
 
 The building block is now a new document type in the module with its own icon. In the building block **Properties** pane, there are two properties important for the building block:
 
 * **Display name** — the name of the building block that will show in the **Toolbox** pane of Studio Pro
 * **Image** — the building block preview image that will be shown in the **Toolbox** pane of Studio Pro
 
-![](/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_bb_properties.png)
+{{< figure src="/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_bb_properties.png" >}}
 
 The building block is now available in the **Toolbox**, where users can drag it and other building blocks onto the page. The example below shows that the building block has been added to the **Local** category. Everything that has been created will stay **Local** until we move the building block into the **UI Resources** module.
 
-![](/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_bb_toolbox.png)
+{{< figure src="/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_bb_toolbox.png" >}}
 
 ## 4 Moving from Local to Atlas UI Resources {#moving-from-local-to-atlas-ui-resources}
 
@@ -79,11 +79,11 @@ Now that it’s clear how to create page templates and building blocks, we need 
 
 Let’s begin by placing our page template inside the **UI_Resources** module under **App Store modules**:
 
-![](/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_moving_local.png)
+{{< figure src="/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_moving_local.png" >}}
 
 In our example, the new page template has been added to the dashboard category. When we now create a new page in Mendix Studio Pro, the **Homepage Template** is available in the **Create Page** wizard under the **Dashboards** category:
 
-![](/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_open_pt.png)
+{{< figure src="/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_open_pt.png" >}}
 
 The **UI_Resources** module has been organized with folders that can be renamed and used as categories for page templates and building blocks. The sorting is done using numbers in front of the name, which can be altered to change the order in which they appear. Page templates and building blocks can be placed inside the same folder to reuse the same category names.
 
@@ -93,7 +93,7 @@ Adding an underscore to the folder name in Studio Pro (for example, **_Layouts**
 
 When the resources are ready to be shared with multiple developers or apps, the module can be exported from the Project Explorer. You are free to change the name of a module as long as the module has been exported as a UI resource package.
 
-![](/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/export_ui_module.png)
+{{< figure src="/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/export_ui_module.png" >}}
 
 The module can now be imported in other apps or uploaded to the [Mendix Marketplace](https://marketplace.mendix.com/). There is an option to make the resource module available for private use only so that everybody in your company can benefit from and extend the module.
 

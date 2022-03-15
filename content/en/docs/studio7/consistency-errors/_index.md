@@ -13,7 +13,7 @@ To make sure that your app is always properly built, Mendix Studio does several 
 
 Errors need to be solved before your app can be published. An example of a consistency error is when you do not specify the entity property of a data view on a page. 
 
-![](/attachments/studio7/consistency-errors/data-view-no-entity.png)
+{{< figure src="/attachments/studio7/consistency-errors/data-view-no-entity.png" >}}
 
 Consistency errors can occur in the following editors of Mendix Studio:
 

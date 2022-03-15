@@ -28,7 +28,7 @@ Offline-first progressive web apps have some restrictions to make sure they can 
 
 Within the navigation profiles the following PWA features can be configured:
 
-{{% image_container width="350" %}}![PWA settings](/attachments/refguide/mobile/progressive-web-app/settings.png){{% /image_container %}}
+{{< figure src="/attachments/refguide/mobile/progressive-web-app/settings.png" alt="PWA settings"   width="350"  >}}
 
 To be able to fully test PWA functionalities, the app needs to be deployed to the cloud. This is because the service worker is only enabled in the cloud over HTTPS.
 
@@ -52,11 +52,11 @@ Note that all pages and images reachable in the navigation profile are loaded by
 
 PWAs can be directly viewed and tested in the browser on your machine or device. Via the **View** menu you can directly open the PWA profiles in your browser:
 
-![View menu](/attachments/refguide/mobile/progressive-web-app/view-menu.png)
+{{< figure src="/attachments/refguide/mobile/progressive-web-app/view-menu.png" alt="View menu" >}}
 
 You can also open PWA profiles on your device via the **View on your device** option:
 
-{{% image_container width="350" %}}![View menu](/attachments/refguide/mobile/progressive-web-app/view-dialog.png){{% /image_container %}}
+{{< figure src="/attachments/refguide/mobile/progressive-web-app/view-dialog.png" alt="View menu"   width="350"  >}}
 
 Note that if you are running on a Mac with Parallels, make sure that port 8080 (or whichever port you have configured for your app) is forwarded and that you use your Mac IP instead of the Virtual Machine’s IP. For more information on Mendix and Parallels, see [How to Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/).
 
@@ -130,34 +130,34 @@ This table lists the most used device features and APIs, and also documents thei
 
 | Feature | Chrome/Edge | Firefox | Safari |
 |---------|-----------|-------|------|
-| [Camera](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | ![Fully compatible](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | ![Compatible when using HTTPS](/attachments/refguide/mobile/progressive-web-app/warning.svg) |
-| [Payment](/attachments/refguide/mobile/progressive-web-app/warning.svg) | ![Not compatible](/attachments/refguide/mobile/progressive-web-app/cross-mark.svg) | ![Compatible when using HTTPS](/attachments/refguide/mobile/progressive-web-app/warning.svg) |
-| [Credentials (Biometrics)](/attachments/refguide/mobile/progressive-web-app/warning.svg) | ![Compatible when using HTTPS](/attachments/refguide/mobile/progressive-web-app/warning.svg) | ![Not compatible](/attachments/refguide/mobile/progressive-web-app/cross-mark.svg) |
-| [Push Notifications](/attachments/refguide/mobile/progressive-web-app/warning.svg) | ![Compatible when using HTTPS](/attachments/refguide/mobile/progressive-web-app/warning.svg) | ![Not compatible](/attachments/refguide/mobile/progressive-web-app/cross-mark.svg) |
-| [Permissions](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | ![Fully compatible](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | ![Not compatible](/attachments/refguide/mobile/progressive-web-app/cross-mark.svg) |
-| [Foreground Detection](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | ![Fully compatible](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | ![Fully compatible](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) |
-| [Bluetooth](/attachments/refguide/mobile/progressive-web-app/warning.svg) | ![Not compatible](/attachments/refguide/mobile/progressive-web-app/cross-mark.svg) | ![Not compatible](/attachments/refguide/mobile/progressive-web-app/cross-mark.svg) |
-| [File Access](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | ![Fully compatible](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | ![Fully compatible](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) |
-| [Geo Location](/attachments/refguide/mobile/progressive-web-app/warning.svg) | ![Compatible when using HTTPS](/attachments/refguide/mobile/progressive-web-app/warning.svg) | ![Compatible when using HTTPS](/attachments/refguide/mobile/progressive-web-app/warning.svg) |
-| [Battery](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | ![Not compatible](/attachments/refguide/mobile/progressive-web-app/cross-mark.svg) | ![Not compatible](/attachments/refguide/mobile/progressive-web-app/cross-mark.svg) |
-| [Share](/attachments/refguide/mobile/progressive-web-app/warning.svg) | ![Compatible when using HTTPS](/attachments/refguide/mobile/progressive-web-app/warning.svg) | ![Compatible when using HTTPS](/attachments/refguide/mobile/progressive-web-app/warning.svg) |
-| [Vibrate](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | ![Fully compatible](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | ![Not compatible](/attachments/refguide/mobile/progressive-web-app/cross-mark.svg) |
-| [Memory](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | ![Not compatible](/attachments/refguide/mobile/progressive-web-app/cross-mark.svg) | ![Not compatible](/attachments/refguide/mobile/progressive-web-app/cross-mark.svg) |
-| [Connection](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | ![Fully compatible](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | ![Not compatible](/attachments/refguide/mobile/progressive-web-app/cross-mark.svg) |
+| [Camera](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} |
+| [Payment](/attachments/refguide/mobile/progressive-web-app/warning.svg) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} |
+| [Credentials (Biometrics)](/attachments/refguide/mobile/progressive-web-app/warning.svg) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
+| [Push Notifications](/attachments/refguide/mobile/progressive-web-app/warning.svg) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
+| [Permissions](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
+| [Foreground Detection](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} |
+| [Bluetooth](/attachments/refguide/mobile/progressive-web-app/warning.svg) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
+| [File Access](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} |
+| [Geo Location](/attachments/refguide/mobile/progressive-web-app/warning.svg) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} |
+| [Battery](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
+| [Share](/attachments/refguide/mobile/progressive-web-app/warning.svg) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} |
+| [Vibrate](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
+| [Memory](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
+| [Connection](/attachments/refguide/mobile/progressive-web-app/check-mark.svg) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
 
 **Legend** — The symbols above correspond to the following definitions:
 
 *  Fully compatible:
 
-	![Fully compatible](/attachments/refguide/mobile/progressive-web-app/check-mark.svg)
+	{{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}}
 	
 *  Compatible only when using HTTPS protocol:
 
-	![Compatible when using HTTPS](/attachments/refguide/mobile/progressive-web-app/warning.svg)
+	{{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}}
 	
 *  Not compatible:
 
-	![Not compatible](/attachments/refguide/mobile/progressive-web-app/cross-mark.svg)
+	{{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}}
 
 For more information on browser support for certain device features, see the third-party website [Can I Use](https://caniuse.com/).
 
@@ -177,7 +177,7 @@ Currently, it is not possible to create a fully offline-first PWA for iOS — ad
 
 Use the following diagram to decide whether to build a PWA, a native mobile app, or both:
 
-{{% image_container width="350" %}}![Native app or PWA](/attachments/refguide/mobile/progressive-web-app/native-or-pwa.png){{% /image_container %}}
+{{< figure src="/attachments/refguide/mobile/progressive-web-app/native-or-pwa.png" alt="Native app or PWA"   width="350"  >}}
 
 ## 8 Read More
 

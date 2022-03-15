@@ -21,15 +21,13 @@ This action is ignored and does not work when a microflow is called from an offl
 
 The **Download file** activity can be used to enable the browser to download a specific file. The end-user either sees a download pop-up window or the file is shown directly in the browser.
 
-{{% image_container width="300" %}}
-![Download File Example](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/download-file/download-file.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/download-file/download-file.png" alt="Download File Example"   width="300"  >}}
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-![Download File Properties](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/download-file/download-file-properties.png)
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/download-file/download-file-properties.png" alt="Download File Properties" >}}
 
 The **Download file** properties pane consists of the following sections:
 

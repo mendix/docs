@@ -31,21 +31,21 @@ To create a test suite, follow these steps:
 1.  Open your project in ATS and go to **Test Cases**.
 2.  Click the **Action** drop-down menu and select **New Test Suite**.
     
-    ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-suite/Repository-add-test-suite.png)
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-suite/Repository-add-test-suite.png" >}}
 
     Clicking the **New Test Suite** button opens the **Create new** dialog box:
     
-    ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-suite/repository-create-new.png)
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-suite/repository-create-new.png" >}}
 
 3.  Enter a name in the **Name** field (for example, *TS - 001. Create New Expense (Manually/Recorder)*). Using a predefined naming structure is advised.
 4.  Enter a description in the **Description** field (for example, *This test suite executes the test cases that create a new expense in the company expenses app.*). Giving each test suite a description of what it does is advised.
 5.  Click **Create**.
     
-    ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-suite/repository-create-new-test-suite-e.png)
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-suite/repository-create-new-test-suite-e.png" >}}
 
 The **Test Suite** page opens after you click **Create**. ATS displays the **Name** and **Description** on the Test Suite page. The **Test Suite** page looks like the **Test Case** page, but with fewer tabs:
     
-![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-suite/test-suite-page.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-suite/test-suite-page.png" >}}
     
 ## 4 Adding Test Cases and Test Suites to a Test Suite
 
@@ -53,23 +53,23 @@ To add a test case or another test suite to a test suite, follow these steps:
 
 1.  Click **Select and add test case/suite** on the **Test Suite** page. This opens the **Select test case/suite** dialog box where you find all your test cases and test suites:
     
-    ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-suite/repository-test-suite-page-add.png)
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-suite/repository-test-suite-page-add.png" >}}
 
 2.  In the input area, enter the name or a part of the name of a test case or test suite you want to add. ATS searches in the database for test suites and test cases with that name. Note that the test case or test suite you want to add already needs to exist.
 
-    ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-suite/repository-test-suite-page-add-name.png)
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-suite/repository-test-suite-page-add-name.png" >}}
 
 3.  Select the test case or test suite and click **Select**:
     
-    ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-suite/repository-add-test-case-to-test-suite.png)
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-suite/repository-add-test-case-to-test-suite.png" >}}
 
     The test case or test suite is now added to your test suite:
     
-    ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-suite/repository-test-suite-page-selected-test.png)
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-suite/repository-test-suite-page-selected-test.png" >}}
 
 Repeat this process for the Recorder test case to complete your test suite.
 
-![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-suite/test-suite-page-complete.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-suite/test-suite-page-complete.png" >}}
 
 {{% alert color="info" %}}
 You can add as many test cases and test suites as you want. 

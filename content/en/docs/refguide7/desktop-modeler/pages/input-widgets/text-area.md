@@ -10,7 +10,7 @@ A text area can be used to display and/or edit a long text value that can be spl
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/pages/input-widgets/text-area/text-area.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/text-area/text-area.png" >}}
 
 This text area allows the end-user to set the description of the product.
 

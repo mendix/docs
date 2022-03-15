@@ -27,7 +27,7 @@ There are some limitations to what you can do in your Mendix app if it is deploy
 {{% alert color="info" %}}
 You can easily copy code examples shown within grey blocks into the clipboard. Hover the cursor over the code block and click the copy button which appears.
 
-![](/attachments/developerportal/deploy/deploying-to-mindsphere/copy-from-documentation.png)
+{{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/copy-from-documentation.png" >}}
 
 {{% /alert %}}
 
@@ -66,21 +66,21 @@ Open Studio Pro (version 7.22.2 or above) and follow these steps:
 
 1. Click the icon in the upper right of the menu bar to open the Mendix Marketplace.
 
-	![](/attachments/developerportal/deploy/deploying-to-mindsphere/app-store-icon.png)
+	{{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/app-store-icon.png" >}}
 
 2. Enter *MindSphere* in the search box, and press <kbd>Enter</kbd>.
 
 3. Select **MindSphere Starter Application** in the search results.
 
-	![](/attachments/developerportal/deploy/deploying-to-mindsphere/app-store-search.png)
+	{{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/app-store-search.png" >}}
 
 4. Click **Download** to create a new app using this app as the template.
 
-	![](/attachments/developerportal/deploy/deploying-to-mindsphere/app-store-download.png)
+	{{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/app-store-download.png" >}}
 
 5. To start the new app, confirm where to store the app, the app name, and the app directory, then click **OK**.
 
-	![](/attachments/developerportal/deploy/deploying-to-mindsphere/app-store-download-project.png)
+	{{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/app-store-download-project.png" >}}
 
 ### 3.2 Option B: Customizing an Existing App{#existingapp}
 
@@ -106,7 +106,7 @@ Now that you have your new app, or have imported the MindSphere modules into an 
 
 The following items in the MindSphereSingleSignOn module need to be configured.
 
-![Folder structure of the MindSphereSingleSignOn module](/attachments/developerportal/deploy/deploying-to-mindsphere/image2.png)
+{{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/image2.png" alt="Folder structure of the MindSphereSingleSignOn module" >}}
 
 #### 4.1.1 CockpitApplicationName
 
@@ -164,17 +164,17 @@ If you are using the MindSphere Starter Application, this will already be set up
 
 If you are are modifying an existing app, you can do this on the *Runtime* tab of the **App** > **Settings** dialog box accessed through the **App Explorer**.
 
-![App settings dialog](/attachments/developerportal/deploy/deploying-to-mindsphere/image4.png)
+{{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/image4.png" alt="App settings dialog" >}}
 
 ### 4.2 Configuring the MindSphere OS Bar (MindSphereOSBarConfig)
 
 Change the OS Bar to show information about the app you are running.
 
-![Example of the information in the OS Bar](/attachments/developerportal/deploy/deploying-to-mindsphere/image10.png)
+{{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/image10.png" alt="Example of the information in the OS Bar" >}}
 
 This is configured as a JSON object held as the default value of the string constant **Config** in the *MindSphereOSBarConfig* module. The imported module has a correctly formatted set of example values.
 
-![Dialog for setting the Config constant for the OS Bar](/attachments/developerportal/deploy/deploying-to-mindsphere/image11.png)
+{{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/image11.png" alt="Dialog for setting the Config constant for the OS Bar" >}}
 
 Change the JSON to contain appropriate values for the following information:
 
@@ -197,7 +197,7 @@ A Mendix based application for MindSphere can be deployed to Mendix or to MindSp
 
 Just click the Publish Button in Mendix Studio Pro.
 
-![Deploy to Mendix](/attachments/developerportal/deploy/deploying-to-mindsphere/runMendixApp.png)
+{{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/runMendixApp.png" alt="Deploy to Mendix" >}}
 
 Once your app is deployed you can automatically register the app in your MindSphere tenant.
 
@@ -218,7 +218,7 @@ To create a Mendix deployment package from your app, do the following:
 1.  Open your app in Studio Pro.
 2.  Select **App** > **Create Deployment Package**.
 
-    ![](/attachments/developerportal/deploy/deploying-to-mindsphere/image13.png)
+    {{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/image13.png" >}}
 
 3.  Select the correct **Development line** and **Revision**.
 4.  Set the **New version** number and add a **Description** if required.
@@ -339,11 +339,11 @@ However, the Auto Registration process is only available on region Europe 1.
 
 To start the **Auto Registration** process click the **View** Button in Mendix Studio Pro once your app is deployed to the Mendix Cloud. Your default browser will open and your app will start the process.
 
-![AutoRegistrationExplanation](/attachments/developerportal/deploy/deploying-to-mindsphere/AutoRegistrationExplanation.png)
+{{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/AutoRegistrationExplanation.png" alt="AutoRegistrationExplanation" >}}
 
 Click **Start Auto Registration**. The process now tries to figure out on which tenant your app should be registered. Therefore you have to login:
 
-![Login to Siemens Digital Industry Software](/attachments/developerportal/deploy/deploying-to-mindsphere/WebKeyLogin.png)
+{{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/WebKeyLogin.png" alt="Login to Siemens Digital Industry Software" >}}
 
 {{% alert color="info" %}}
 If you have more then one tenant on MindSphere you will get a list of tenants. Choose the tenant where you want to register your app.
@@ -353,7 +353,7 @@ If you have only one tenant on MindSphere, the process will automatically select
 
 Give a name, internal name, and, optionally, a description in order to register your app.
 
-![AutoRegistrationNameAndDescription](/attachments/developerportal/deploy/deploying-to-mindsphere/AutoRegistrationNameAndDescription.png)
+{{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/AutoRegistrationNameAndDescription.png" alt="AutoRegistrationNameAndDescription" >}}
 
 If you are on a **Developer** tenant you also have to select at least one application role which will be assigned to your account automatically.
 
@@ -361,7 +361,7 @@ On a **Start for Free** tenant the **admin** role will be assigned automatically
 
 Click **Register** to start the registration process on your tenant. After a few seconds, a summary page is shown and you are able to navigate directly to your app.
 
-![AutoRegistrationSummary](/attachments/developerportal/deploy/deploying-to-mindsphere/AutoRegistrationSummary.png)
+{{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/AutoRegistrationSummary.png" alt="AutoRegistrationSummary" >}}
 
 {{% alert color="info" %}}
 The **Auto Registration** process creates application roles and scopes for your app automatically.
@@ -436,7 +436,7 @@ To create a new app manually in the MindSphere launchpad, do the following:
 
       {{% alert color="info" %}}These content security policy (CSP) settings are needed to ensure that the MindSphere OS Bar and the [Mendix Feedback](/appstore/widgets/mendix-feedback/) widget are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
 
-      ![](/attachments/developerportal/deploy/deploying-to-mindsphere/image14.png)
+      {{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/image14.png" >}}
 
 15.  Click **Save** to save these details.
 
@@ -453,7 +453,7 @@ To set up the appropriate scopes in MindSphere, do the following:
 3.  Associate it with the MindSphere default roles **USER** and/or **ADMIN**. Or associate it with one of your self created MindSphere roles. MindSphere supports up to five application roles.
 4.  Click **Save**.
 
-    ![](/attachments/developerportal/deploy/deploying-to-mindsphere/image15.png)
+    {{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/image15.png" >}}
 
 {{% alert color="info" %}}
 If you are using the app template, you should create two scopes, *user* and *admin*.
@@ -461,7 +461,7 @@ If you are using the app template, you should create two scopes, *user* and *adm
 
 For an explanation of the relationship between Mendix roles and MindSphere roles, see section [Roles & Scopes](/partners/siemens/mindsphere-module-details/#rolesscopes) in *MindSphere Module Details*.
 
-![](/attachments/developerportal/deploy/deploying-to-mindsphere/image8.png)
+{{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/image8.png" >}}
 
 {{% alert color="info" %}}
 You will also need to use the **Add Core Role** option to add *Core Roles* to your app if it makes calls to MindSphere. The ones you need to add will depend on which features of MindSphere you are using.
@@ -473,14 +473,14 @@ Once you have created the scopes for your app, you will need to assign them to t
 
 1.  Go to **Settings > Roles** from the MindSphere launchpad.
 
-    {{% image_container width="50%" %}}![](/attachments/developerportal/deploy/deploying-to-mindsphere/image16.png){{% /image_container %}}
+    {{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/image16.png"   width="50%"  >}}
 
 2.  Choose the app role (scope) you want to assign from the list of **Roles**.
 3.  Click **Edit user assignment**.
 4.  Assign **Available users** to **Assigned users** using the assignment symbols (for example `>` to assign a user).
 5.  Click **Close**.
 
-    ![](/attachments/developerportal/deploy/deploying-to-mindsphere/image17.png)
+    {{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/image17.png" >}}
 
 {{% alert color="info" %}}
 The user will have to sign out and sign in again for this assignment to take effect.

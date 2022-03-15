@@ -24,11 +24,7 @@ These *translatable texts* include the following:
 
 You can see the language you are currently working in at the bottom right of the screen.
 
-{{% image_container width="350" %}}
-
-![Language Status](/attachments/refguide/modeling/menus/translatable-texts/language-status.png)
-
-{{% /image_container %}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-status.png" alt="Language Status"   width="350"  >}}
 
 When you have multiple languages set up in your app, you can choose a language to work in by doing one of the following:
 
@@ -50,7 +46,7 @@ If there is no text in the default language, the end-user will see `[no translat
 
 The **Language** menu allows you to manage additional languages and translations for your app. This includes features to help you to translate a text in all places where it appears with a single change instead of having to change each occurrence individually:
 
-![Language Menu](/attachments/refguide/modeling/menus/translatable-texts/language-menu.png)
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-menu.png" alt="Language Menu" >}}
 
 
 ### 3.1 Menu Items Overview
@@ -78,7 +74,7 @@ If the end-user is not associated with a language, for example they are an anony
 * for web apps – the first language which matches a language set in the app based on the browser's preferred order of languages
 * for mobile apps – the operating system language
 
-![System Domain Model for User and Language](/attachments/refguide/modeling/menus/translatable-texts/user-language-domain-model.png)
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/user-language-domain-model.png" alt="System Domain Model for User and Language" >}}
 
 If you allow end-users to change their display language within the app, the changes will not be applied immediately. This is because the translatable texts for the app are already set to the end-users original language.
 
@@ -94,7 +90,7 @@ There are two options to ensure that the language is changed:
     4. Add the **JavaScript** content `mx.reloadWithState();` to the widget.
     5. Open your new pop-up page from a microflow when you want to switch the user's language.
 
-    ![System Domain Model for User and Language](/attachments/refguide/modeling/menus/translatable-texts/reload-with-state.png)
+    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/reload-with-state.png" alt="System Domain Model for User and Language" >}}
 
 {{% alert color="info" %}}
 The above only applies to pages *within* your Mendix application (meaning, pages that are created in Studio Pro). The labels for static pages (such as the *index.html* and *login.html* pages in the **theme** folder of your app) are generated when you create a deployment package using the default language of your app. The labels on those pages will not change for different users, they will always be the same.

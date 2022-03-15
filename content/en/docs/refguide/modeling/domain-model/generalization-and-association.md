@@ -18,7 +18,7 @@ When defining closely related structures, it can be difficult to decide on the b
 
 The Mendix domain model is based on the [class diagram](http://en.wikipedia.org/wiki/Class_diagram) in [UML](http://en.wikipedia.org/wiki/Unified_Modeling_Language), which allows the specification of the objects/entities and their attributes and associations. The concept of generalization in Mendix is exactly the same as in UML. However, the Mendix domain model uses a different notation to display the generalization. The UML class diagram uses associations with a hollow triangle (arrow) pointing to the super class (meaning, the generalization). In Mendix generalization is expressed with a blue label above the specialized entity, specifying the generalization entity name.
 
-![example of generalization notation](/attachments/refguide/modeling/domain-model/generalization-and-association/generalization-indication.png)
+{{< figure src="/attachments/refguide/modeling/domain-model/generalization-and-association/generalization-indication.png" alt="example of generalization notation" >}}
 
 UML also allows us to specify the types of associations, such as an [Aggregation](http://en.wikipedia.org/wiki/Aggregation_(object-oriented_programming)) or [Composition](http://en.wikipedia.org/wiki/Object_composition). The definition of these associations specify whether or not the objects can exist without each other. Unlike UML we can not specify how strong a relationship is. Any dependencies between the two objects have to be specified using [event microflows](/refguide/event-handlers/) or [delete behavior/prevention](/refguide/association-properties/#delete-behavior).
 

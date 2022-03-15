@@ -21,19 +21,19 @@ The PostgreSQL on Amazon (AWS) service can be found and configured in three plac
 
 You can choose the **AWS RDS PostgreSQL-development** standard database when you are creating your new SAP app.
 
-![RDW AWS PostgreSQL-development option for app](/attachments/partners/sap/sap-postgresql-on-aws/database-new-app.png)
+{{< figure src="/attachments/partners/sap/sap-postgresql-on-aws/database-new-app.png" alt="RDW AWS PostgreSQL-development option for app" >}}
 
 #### 2.1.2 Creating an SAP Environment for an App
 
 You can choose the **AWS RDS PostgreSQL-development** standard database when you are creating an environment from the Environments page for your app in the Developer Portal.
 
-![RDW AWS PostgreSQL-development option for environment](/attachments/partners/sap/sap-postgresql-on-aws/database-new-environment.png)
+{{< figure src="/attachments/partners/sap/sap-postgresql-on-aws/database-new-environment.png" alt="RDW AWS PostgreSQL-development option for environment" >}}
 
 #### 2.1.3 Services Tab
 
 PostgreSQL on Amazon (AWS) can also be found on the [services tab](/developerportal/deploy/sap-cloud-platform/#binding-services) of the environment details page of your app's environment under *aws-rds-postgresql*.
 
-![RDW AWS PostgreSQL-development service on the environment details page](/attachments/partners/sap/sap-postgresql-on-aws/database-service.png)
+{{< figure src="/attachments/partners/sap/sap-postgresql-on-aws/database-service.png" alt="RDW AWS PostgreSQL-development service on the environment details page" >}}
 
 ### 2.2 Specifying the Configuration
 
@@ -55,7 +55,7 @@ The **PostgreSQL on Amazon (AWS) configurator** provide a user friendly interfac
 The configurator will only create a JSON file from scratch. It does not have access to your existing database settings on SAP BTP, and you cannot import any existing JSON files.
 {{% /alert %}}
 
-![PostgreSQL on Amazon (AWS) Configurator Options](/attachments/partners/sap/sap-postgresql-on-aws/postgresql-for-aws.png)
+{{< figure src="/attachments/partners/sap/sap-postgresql-on-aws/postgresql-for-aws.png" alt="PostgreSQL on Amazon (AWS) Configurator Options" >}}
 
 The configurator has tooltips for each of the fields to explain what should be entered. Most of the fields can be left blank and the configurator will generate the information automatically.
 

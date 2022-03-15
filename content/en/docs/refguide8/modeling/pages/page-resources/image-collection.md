@@ -30,7 +30,7 @@ To add an image collection, do the following.
 1. Right-click a module in the **Project Explorer**.
 2. Select **Add other > Image collection**:
 
-    ![Add an image collection](/attachments/refguide8/modeling/pages/page-resources/image-collection/add-collection.png)
+    {{< figure src="/attachments/refguide8/modeling/pages/page-resources/image-collection/add-collection.png" alt="Add an image collection" >}}
 
 3. Give your image collection a name.
 
@@ -38,7 +38,7 @@ To add an image collection, do the following.
 
 You can perform the following actions within image collections using the icons at the top of the image collection tab.
 
-![Image collection actions](/attachments/refguide8/modeling/pages/page-resources/image-collection/actions.png)
+{{< figure src="/attachments/refguide8/modeling/pages/page-resources/image-collection/actions.png" alt="Image collection actions" >}}
 
 Some of the actions can be applied to multiple images. You can select all images with <kbd>Ctrl</kbd>+<kbd>A</kbd>, or multiple images by combining your click with <kbd>Ctrl</kbd> or <kbd>Shift</kbd>
 

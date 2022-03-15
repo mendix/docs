@@ -19,7 +19,7 @@ The Runtime Server is deployed to the cloud (see [Runtime Deployment](/refguide8
 
 Below is a chart showing the components of the Runtime Server. Each of the components is described below the chart.
 
-![The makeup of the Runtime Server](/attachments/refguide8/runtime/runtime-server/runtime-server.png)
+{{< figure src="/attachments/refguide8/runtime/runtime-server/runtime-server.png" alt="The makeup of the Runtime Server" >}}
 
 ### 2.1 M2ee
 

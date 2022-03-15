@@ -15,7 +15,7 @@ The entities can also relate to each other through generalizations. Finally, you
 
 ### 1.1 Graphical Overview
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/domain-model-metamodel/16842837.svg)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/domain-model-metamodel/16842837.svg" >}}
 
 Studio Pro Guide | Model SDK API Docs
 --- | ---
@@ -31,11 +31,11 @@ Entities can have multiple attributes. Each attribute has a specific type.
 
 ### 2.1 Graphical Overview of Non-Numeric Attributes
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/domain-model-metamodel/16842840.svg)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/domain-model-metamodel/16842840.svg" >}}
 
 ### 2.2 Graphical Overview of Numeric Attributes
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/domain-model-metamodel/16842841.svg)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/domain-model-metamodel/16842841.svg" >}}
 
 Studio Pro Guide | Model SDK API docs
 --- | ---
@@ -51,7 +51,7 @@ An `Entity` instance has a `generalization` property with which to define this r
 
 ### 3.1 Graphical Overview
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/domain-model-metamodel/16842839.svg)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/domain-model-metamodel/16842839.svg" >}}
 
 Studio Pro Guide | Model SDK API docs
 --- | ---
@@ -66,7 +66,7 @@ To secure access to the data in a Mendix app, you can define access rules for en
 
 ### 4.1 Graphical Overview
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/domain-model-metamodel/16842835.svg)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/domain-model-metamodel/16842835.svg" >}}
 
 Studio Pro Guide | Model SDK API docs
 --- | ---
@@ -81,7 +81,7 @@ For each attribute of an entity, it is possible to define a validation rule. The
 
 ### 5.1 Graphical Overview
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/domain-model-metamodel/16842834.svg)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/domain-model-metamodel/16842834.svg" >}}
 
 Studio Pro Guide | Model SDK API docs
 --- | ---
@@ -95,7 +95,7 @@ An entity can have multiple indexes. Each index consists of a set of indexed att
 
 ### 6.1 Graphical Overview
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/domain-model-metamodel/16842836.svg)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/domain-model-metamodel/16842836.svg" >}}
 
 Studio Pro Guide | Model SDK API docs
 --- | ---

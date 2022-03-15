@@ -10,12 +10,12 @@ The input reference set selector is an [input widget](/refguide7/input-widgets/)
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/pages/input-widgets/input-reference-set-selector/16844008.jpg)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/input-reference-set-selector/16844008.jpg" >}}
 The multiplicity settings of an association can be found by double-clicking the association in the [domain model](/refguide7/domain-model/).
 
 {{% /alert %}}{{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/pages/input-widgets/input-reference-set-selector/input-reference-set-selector.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/input-reference-set-selector/input-reference-set-selector.png" >}}
 This input reference set selector allows you to link an employee to organizations.
 
 {{% /alert %}}
@@ -56,15 +56,15 @@ An input reference set selector can be constrained by one or more paths. This is
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/pages/input-widgets/input-reference-set-selector/16844007.jpg)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/input-reference-set-selector/16844007.jpg" >}}
 
 In the domain model the user has a reference association to country and a reference set association to organization. The third association, from country to organization, describes the relation between those two entities. Such a 'triangle' shaped part of the domain model is what makes constraining possible.
 
-![](/attachments/refguide7/desktop-modeler/pages/input-widgets/input-reference-set-selector/16844006.jpg)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/input-reference-set-selector/16844006.jpg" >}}
 
 The page has displays a reference selector for the reference to country and an input reference set selector for the reference set to organization. The latter is constrained by the path through the domain model that forms the triangle.
 
-![](/attachments/refguide7/desktop-modeler/pages/input-widgets/input-reference-set-selector/16844005.jpg)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/input-reference-set-selector/16844005.jpg" >}}
 
 {{% /alert %}}
 

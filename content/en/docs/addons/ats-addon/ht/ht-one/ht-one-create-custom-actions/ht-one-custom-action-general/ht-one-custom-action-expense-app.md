@@ -21,7 +21,7 @@ The Custom Action App is a modified Company Expenses sample app. You need the fo
 
 This is the login screen:
 
-![](/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-general/ht-one-custom-action-expense-app/company-expenses-login-screen.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-general/ht-one-custom-action-expense-app/company-expenses-login-screen.png" >}}
 
 The app has only one account that has no login limitations, meaning that every one can use this account to view the app.
 
@@ -31,7 +31,7 @@ Every night (GMT), the newly created expenses are deleted by ATS. The 30 initial
 
 When you log in for the first time, you see the **My Expenses** page. On this page, you can create new expenses or delete expenses.
 
-![](/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-general/ht-one-custom-action-expense-app/company-expenses-my-expenses.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-general/ht-one-custom-action-expense-app/company-expenses-my-expenses.png" >}}
 
 This page is used to create the how-to's for combined actions.
 
@@ -39,7 +39,7 @@ This page is used to create the how-to's for combined actions.
 
 Click the **Custom Actions** tab to open the page:
 
-![](/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-general/ht-one-custom-action-expense-app/company-expenses-custom-action-page.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-general/ht-one-custom-action-expense-app/company-expenses-custom-action-page.png" >}}
 
 All the how-to's for unsupported widget actions and search context actions are based on widgets that are available on this page. Each how-to has a title that corresponds with a widget on this page. For example, **CAB.02 - Switch** is based on the switch widget on this page. This allows you to follow the how-to directly in the app to get a better understanding of what to do, how, and why.
 

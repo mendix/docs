@@ -22,18 +22,17 @@ When **Microflow** is selected as the data source, this is regarded as "indirect
 
 In this scenario, you have a data grid that needs to display a list of potential orders based on the order type:
 
-{{% image_container width="400" %}}![Microflow Data Source for a Data Grid](/attachments/refguide/modeling/pages/data-widgets/data-sources/microflow-source/data-grid-microflow-source.jpg)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/microflow-source/data-grid-microflow-source.jpg" alt="Microflow Data Source for a Data Grid"   width="400"  >}}
 
 If the **OrderType** of the **Order** entity is set to **Cars**, then the data grid should display all the **Products** for which the Boolean **Motorized** is set to true. If the **OrderType** is **Bicycles**, only objects for which **Motorized** is set to false need be shown. Finally, if **OrderType** is empty, the data grid should remain empty.
 
-![Entities Example](/attachments/refguide/modeling/pages/data-widgets/data-sources/microflow-source/entities-example.jpg)
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/microflow-source/entities-example.jpg" alt="Entities Example" >}}
 
 Because of the mismatch in attribute types, this cannot be constrained by XPath, so a microflow data source is required. 
 
 The microflow for this scenario should look like this:
 
-![Microflow Example](/attachments/refguide/modeling/pages/data-widgets/data-sources/microflow-source/microflow-nanoflow-example.jpg)
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/microflow-source/microflow-nanoflow-example.jpg" alt="Microflow Example" >}}
 
 This microflow does the following:
 

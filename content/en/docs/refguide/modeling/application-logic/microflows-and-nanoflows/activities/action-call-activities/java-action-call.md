@@ -15,11 +15,7 @@ This activity can only be used in **Microflows**.
 
 The **Java action call** activity can be used to call a [Java action](/refguide/java-actions/). 
 
-{{% image_container width="200" %}}
-
-![Java Action](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/java-action-call.png)
-
-{{% /image_container %}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/java-action-call.png" alt="Java Action"   width="200"  >}}
 
 Arguments can be passed to the action and the result can be stored.
 
@@ -27,7 +23,7 @@ Arguments can be passed to the action and the result can be stored.
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-![Java Action Call Properties](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/java-action-call-properties.png)
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/java-action-call-properties.png" alt="Java Action Call Properties" >}}
 
 The **Java action call** properties pane consists of the following sections:
 
@@ -54,7 +50,7 @@ An argument is the input data that you are passing to the Java action. For each 
 
 The values of the arguments are defined using [expressions](/refguide/expressions/):
 
-![argument](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/argument-edit.png)
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/argument-edit.png" alt="argument" >}}
 
 ### 3.3 Return Type
 

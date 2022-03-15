@@ -22,11 +22,11 @@ See [App Roles](/developerportal/collaborate/app-roles/) to learn more about the
 
 To find a list of all the Mendix Cloud nodes to which you have access, click the **Switch-to** menu in the Developer Portal and choose **Cloud**.
 
-![Licensed Mendix Cloud nodes](/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/go-to-nodes-page.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/go-to-nodes-page.png" alt="Licensed Mendix Cloud nodes" >}}
 
 You will see a list of all your nodes:
 
-![Licensed Mendix Cloud nodes](/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/nodes-list.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/nodes-list.png" alt="Licensed Mendix Cloud nodes" >}}
 
 Clicking **Environments** will take you to the [Environments](/developerportal/deploy/environments/) page for the app that is deployed to this node.
 
@@ -58,11 +58,11 @@ To access the node permissions, do the following:
 
 2. Open the **Permissions** tab.
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/node-permissions.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/node-permissions.png" >}}
 
 3. Select the environment for which you want to change permissions from the drop-down.
 
-    ![](/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/node-flexible-environments.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/node-flexible-environments.png" >}}
 
 4. Complete two-factor authentication, if required for the selected environment.
 
@@ -70,7 +70,7 @@ To access the node permissions, do the following:
 
 The Technical Contact and team members specifically allowed to *Manage Permissions* can set the following node permissions.
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/nodepermission.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/nodepermission.png" >}}
 
 #### 3.4.1 Manage Permissions
 

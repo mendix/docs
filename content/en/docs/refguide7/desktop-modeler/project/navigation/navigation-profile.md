@@ -15,11 +15,11 @@ For details on how this works in Mendix versions 7.0 and 7.1, see [Navigation Be
 
 Management of profiles is available from the **Navigation** section of a project.
 
-![](/attachments/refguide7/desktop-modeler/project/navigation/navigation-profile/2018-03-01_17-29-32.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/project/navigation/navigation-profile/2018-03-01_17-29-32.png" >}}
 
 A profile can be added with the **Add navigation profile** button. Only one profile per type is allowed. While adding the profile, it is possible to copy the settings from an existing profile.
 
-![](/attachments/refguide7/desktop-modeler/project/navigation/navigation-profile/2018-03-01_17-31-42.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/project/navigation/navigation-profile/2018-03-01_17-31-42.png" >}}
 
 ## 2 Profile Properties
 

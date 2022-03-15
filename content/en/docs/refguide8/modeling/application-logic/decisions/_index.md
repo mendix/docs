@@ -17,20 +17,18 @@ Decisions are elements that split or merge sequence flows based on conditions se
 
 The elements described in this document are in the **Decisions** section of the **Toolbox**:
 
-{{% image_container width="300" %}}
-![Decisions](/attachments/refguide8/modeling/application-logic/decisions/decisions.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/decisions/decisions.png" alt="Decisions"   width="300"  >}}
 
 There are following types of decisions:
 
 * [Decision](/refguide8/decision/) – makes a choice based on a condition and follows one and only one of the outgoing sequence flows
 
-	{{% image_container width="400" %}}![](/attachments/refguide8/modeling/application-logic/decisions/decision/decision-example.png){{% /image_container %}}
+	{{< figure src="/attachments/refguide8/modeling/application-logic/decisions/decision/decision-example.png"   width="400"  >}}
 
 * [Object Type Decision](/refguide8/object-type-decision/) – makes a choice based on the type of an object of a generalized entity
 
-	![](/attachments/refguide8/modeling/application-logic/decisions/object-type-decision.png)
+	{{< figure src="/attachments/refguide8/modeling/application-logic/decisions/object-type-decision.png" >}}
 
 * [Merge](/refguide8/merge/) – merges incoming flows 
 
-	![](/attachments/refguide8/modeling/application-logic/decisions/merge.png)
+	{{< figure src="/attachments/refguide8/modeling/application-logic/decisions/merge.png" >}}

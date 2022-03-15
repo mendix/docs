@@ -29,64 +29,64 @@ To unmask your password, follow these steps:
 2. Click the **Repository** tab.
 3.  Click the **Actions** drop-down menu and then click **New Action**:
 
-	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/create_new_action.png)
+	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/create_new_action.png" >}}
 
 	Clicking **New Action** opens the **Create new** dialog box:
 
-	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-case/repository-create-new.png) 
+	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-test-case/repository-create-new.png" >}} 
 
 4. Enter a name in the **Name** field (for example, *Open app and Login*).     
 5. Enter a description in the **Description** field (for example, *This action opens the app and logs into the app as Admin*).
 6.  Click **Create**:
 
-	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/create-new-action-dialog-c.png)
+	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/create-new-action-dialog-c.png" >}}
 
 	This opens the **Action Details** page. ATS displays the **Name** and **Description** on this page.
 
-	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/action_details-page.png)
+	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/action_details-page.png" >}}
 
 7. Add the **Open application** action.
 8. Enter a description of the test step. Also, set the **Application URL** input parameter to **Environment URL** below **Global constant values**.
 9. Add the **Login** action.
 10. Enter a description of the test step:
 
-	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/description_added.png)
+	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/description_added.png" >}}
 
 11. Click the **Settings** tab.
 12. Add a new input parameter by clicking **New** below **Input Parameters**:
 
-	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/add_input_parameter.png)
+	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/add_input_parameter.png" >}}
 
 	Clicking **New** opens the **Edit Input Parameter** dialog box:
 
-	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/edit_input_paremeter.png)
+	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/edit_input_paremeter.png" >}}
 
 13. Enter **Username** in the **Name** field. This field represents the name you have to link to the input parameter **Username** in your test step. So, using the same names makes it easier to connect the parameter to the correct input parameter.
 14. Enter a description in the **Description** field. Give a clear description of the parameter (for example, *This input parameter unmasks your password*).
 15. Click **Save**:
 
-	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/Username_input_parameter_edit.png)
+	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/Username_input_parameter_edit.png" >}}
 
 16. Enter **Password** in the **Name** field. This field represents the name you have to link to the input parameter **Password** in your test step. So, using the same names makes it easier to connect the parameter to the correct input parameter. 
 17. Enter a description in the **Description** field. Give a clear description of the parameter (for example, *This input parameter unmasks your password*).
 18. Make sure that **Show as password** is set to **No**.
 19. Click **Save**:
 
-	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/unmask_password_edit.png)
+	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/unmask_password_edit.png" >}}
 
 20. Click the **Test Step** tab and open the **Login** action:
 
-	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/Test_steps_tab.png)
+	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/Test_steps_tab.png" >}}
 
 21. Click the drop-down meny for the **Username** input parameter.
 22. Select **Username [String]** below **Input values**:
 
-	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/Username_input_value.png)
+	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/Username_input_value.png" >}}
 
 23. Click the drop-down menu for the **Password** input parameter.
 24. Select **Password [String]** below **Input values**:
 
-	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/selected_input_parameters.png)
+	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/selected_input_parameters.png" >}}
 
 ### 3.1 Verifying That Your Password Is Unmasked
 
@@ -96,16 +96,16 @@ To verify that your password is unmasked, follow these steps:
 2. Create a new test case and add the **Open app and Login** action.
 3.  Click the drop-down menu next to the **Password** input parameter. Clicking the drop-down opens the input field:
 
-	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/input_field_password.png)
+	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/input_field_password.png" >}}
 
 4. Enter the password in the **Password** field.
 5.  Select the **Constant value**:
 
-	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/password_entered.png)
+	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/password_entered.png" >}}
 
 After selecting the constant value, the entered password represents the **Password** input parameter of your test step instead of five aterisks:
 
-![](/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/unmasked_password.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-mask-your-password/unmasked_password.png" >}}
 
 You can now unmask your password using ATS. You can use these steps as well to mask data in ATS.
 

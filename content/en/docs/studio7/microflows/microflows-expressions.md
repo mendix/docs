@@ -21,7 +21,7 @@ The **Expression** tab is available for the following activities in a microflow:
 *  [Create Variable](/refguide7/create-variable/) 
 *  [Change Variable](/refguide7/change-variable/)
 
-![](/attachments/studio7/microflows/microflows-expressions/expression-tab.png)
+{{< figure src="/attachments/studio7/microflows/microflows-expressions/expression-tab.png" >}}
 
 For more information on setting and changing values for microflow activities, see [How to Set & Change a Value for Different Activities in the Microflows](/studio7/microflows-setting-and-changing-value/).
 
@@ -34,8 +34,7 @@ There are two ways of writing an expression:
 
 If an error appears in the expression, hints with an explanation will be displayed. 
 
-{{% image_container width="350" %}}![](/attachments/studio7/microflows/microflows-expressions/expression-error.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/microflows/microflows-expressions/expression-error.png"   width="350"  >}}
 
 ### 2.1 Writing an Expression Using Suggestions
 
@@ -47,7 +46,7 @@ When you start typing your expression, a list of suggestions appears divided int
 * **Booleans** – true or false expressions
 * **Operators** – code elements that perform logical or mathematical operations. You can use Boolean or relational expressions (for more information, see the [Expression Types](#expression-types) section below)
 
-![](/attachments/studio7/microflows/microflows-expressions/expressions-list.png)
+{{< figure src="/attachments/studio7/microflows/microflows-expressions/expressions-list.png" >}}
 
 To write an expression using suggestions, do the following:
 
@@ -77,17 +76,17 @@ Below are two examples that illustrate how expressions can be used.
 
 You have a **[Decision](/studio7/microflows-decision/)** and you want to write an expression that checks whether the customer grade is gold and the price of the order is more than 100 (you can configure a discount after the **Decision** that is allowed if this expression is true):
 
-![](/attachments/studio7/microflows/microflows-expressions/example-decision.png) 
+{{< figure src="/attachments/studio7/microflows/microflows-expressions/example-decision.png" >}} 
 
 The expression will look the following way:
 
-![](/attachments/studio7/microflows/microflows-expressions/expression-decision.png)
+{{< figure src="/attachments/studio7/microflows/microflows-expressions/expression-decision.png" >}}
 
 ### 3.2 Example 2
 
 You add a **[Decision](/studio7/microflows-decision/)** to check if an object (in the example below the object is *Customer*) exists. And you also check if the Customer's name matches a particular one (in the example below Customer's name is *Mendix*). The expression will look the following way:
 
-![](/attachments/studio7/microflows/microflows-expressions/customer-empty-and-name-example.png)
+{{< figure src="/attachments/studio7/microflows/microflows-expressions/customer-empty-and-name-example.png" >}}
 
 ## 4 Expression Types {#expression-types}
 

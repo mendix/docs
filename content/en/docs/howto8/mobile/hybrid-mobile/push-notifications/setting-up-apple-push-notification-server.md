@@ -12,7 +12,7 @@ In order to proceed you need an Apple developer license and a device running Mac
 
 This how-to assumes that you already have the app signing key with provisioning profile and can freely build and install your mobile app (if not, please refer to [this how-to](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/)). Take into account that your App ID should use `Explicit App ID` and have `Push Notifications` turned on so you can receive push notifications with your app.
 
-![](/attachments/howto8/mobile/hybrid-mobile/push-notifications/setting-up-apple-push-notification-server/20217895.png)
+{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/setting-up-apple-push-notification-server/20217895.png" >}}
 
 If this is not the case, you need to create new App ID with `Explicit App ID` and `Push Notifications` turned on. After following the steps below, you'll need to generate and download a new provisioning profile for this App ID and use it to rebuild the mobile app.
 
@@ -67,7 +67,7 @@ Click **Edit**, scroll to the **Push Notifications** section, and choose to conf
 
 The wizard now explains how to create a Certificate Signing Request (CSR). Read this description and press **Continue**. During the next step, you should be asked for your CSR file. You may use the same CSR you used to create the app signing certificate. If you do not have one, please follow the instructions as shown below.
 
-![](/attachments/howto8/mobile/hybrid-mobile/push-notifications/setting-up-apple-push-notification-server/20217898.png)
+{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/setting-up-apple-push-notification-server/20217898.png" >}}
 
 ### 3.4 Downloading the Certificate
 

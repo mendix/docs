@@ -18,7 +18,7 @@ To import an app package, do the following:
 
 3.  Select the relevant options in the **Import App Package** dialog box and click **OK**. For more information on what options you can select, see the sections below. 
 
-    ![Import App Package Dialog Window](/attachments/refguide/modeling/menus/file-menu/import-project-package-dialog/import-project-package.png)
+    {{< figure src="/attachments/refguide/modeling/menus/file-menu/import-project-package-dialog/import-project-package.png" alt="Import App Package Dialog Window" >}}
 
 App packages can be created using [Export App Package](/refguide/export-project-package-dialog/).
 

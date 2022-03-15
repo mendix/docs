@@ -23,7 +23,7 @@ The **Call REST service** activity can be used to call a REST endpoint. You can 
 
 An example of call rest action properties is represented in the image below:
 
-![call rest action properties](/attachments/refguide8/modeling/application-logic/activities/integration-activities/call-rest-action/call-rest-action-properties.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/call-rest-action/call-rest-action-properties.png" alt="call rest action properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -49,7 +49,7 @@ The properties dialog box consists of four tabs:
 
 ## 4 General Tab {#general}
 
-![](/attachments/refguide8/modeling/application-logic/activities/integration-activities/call-rest-action/general-tab.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/call-rest-action/general-tab.png" >}}
 
 ### 4.1 Location
 
@@ -120,7 +120,7 @@ When this identifier is not set (either not pinned or not present in _ClientCert
 
 ## 5 HTTP Headers Tab {#http-headers}
 
-![](/attachments/refguide8/modeling/application-logic/activities/integration-activities/call-rest-action/http-headers-tab.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/call-rest-action/http-headers-tab.png" >}}
 
 ### 5.1 Use HTTP Authentication
 
@@ -140,7 +140,7 @@ These headers are added to the HTTP request header. Each custom header is a pair
 
 ## 6 Request Tab {#request}
 
-![](/attachments/refguide8/modeling/application-logic/activities/integration-activities/call-rest-action/request-tab.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/call-rest-action/request-tab.png" >}}
 
 The sections below describe the options in the drop-down menu for generating the request.
 
@@ -196,7 +196,7 @@ See [String Template](#string-template), above, for more information on construc
 
 ## 7 Response Tab {#response}
 
-![](/attachments/refguide8/modeling/application-logic/activities/integration-activities/call-rest-action/response-tab.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/call-rest-action/response-tab.png" >}}
 
 ### 7.1 Response Handling
 

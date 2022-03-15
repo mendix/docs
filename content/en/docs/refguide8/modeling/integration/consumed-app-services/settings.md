@@ -17,7 +17,7 @@ In the settings screen, you see the version of the app service, its icon and a s
 
 ## Actions
 
-![](/attachments/refguide8/modeling/integration/consumed-app-services/settings/16843901.png)
+{{< figure src="/attachments/refguide8/modeling/integration/consumed-app-services/settings/16843901.png" >}}
 
 With this tab, an overview of provided microflow actions is provided. With each action, an Icon, a Caption and a Description is shown. In the microflow toolbox, each action will show the icon and the caption as the name of the action. This name will also be seen when used in a microflow.
 
@@ -25,7 +25,7 @@ With this tab, an overview of provided microflow actions is provided. With each 
 
 The tab 'Settings' contains the location of the app service and the authentication method.
 
-![](/attachments/refguide8/modeling/integration/consumed-app-services/settings/16843897.png)
+{{< figure src="/attachments/refguide8/modeling/integration/consumed-app-services/settings/16843897.png" >}}
 
 ### Configuration
 

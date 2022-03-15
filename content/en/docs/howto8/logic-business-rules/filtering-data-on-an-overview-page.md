@@ -33,17 +33,17 @@ Before you continue, make sure that you know how to create the following:
 
 1.  Create the following domain model:
 
-    ![](/attachments/howto8/logic-business-rules/define-access-rules-using-xpath/18581378.png)
+    {{< figure src="/attachments/howto8/logic-business-rules/define-access-rules-using-xpath/18581378.png" >}}
 
 2.  Create **overview** and **detail** pages to manage objects of type **Customer** and **Order**.
 3.  Create **menu items** to access the **Order** and the **Customer** overview pages.
 4.  Add the following customer data to your app:
 
-    ![](/attachments/howto8/logic-business-rules/define-access-rules-using-xpath/18581374.png)
+    {{< figure src="/attachments/howto8/logic-business-rules/define-access-rules-using-xpath/18581374.png" >}}
 
 5.  Add the following order data to your app:
 
-    ![](/attachments/howto8/logic-business-rules/define-access-rules-using-xpath/18581373.png)
+    {{< figure src="/attachments/howto8/logic-business-rules/define-access-rules-using-xpath/18581373.png" >}}
 
 ## 4 Filtering a List of Orders Using the Search Bar
 
@@ -53,29 +53,29 @@ In the previous section you set up a basic data structure and created some sampl
 
     {{% alert color="warning" %}} The search bar section might be already populated if you automatically filled the contents of your data grid. {{% /alert %}}
 
-    ![](/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581359.png)
+    {{< figure src="/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581359.png" >}}
 
 2.  Right click the search bar section and select **Add search field** > **Drop-down**.
 3.  Add the **OrderStatus** attribute to the search field and define the name.
 
-    ![](/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581355.png)
+    {{< figure src="/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581355.png" >}}
 
 4.  Redeploy your application and click the **Search** button on your orders overview. The new search field appears.
 
-    ![](/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581354.png)
+    {{< figure src="/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581354.png" >}}
 
 5.  Use the **Order status** search field to filter your list on a specific order status and click the 'Search' button on the right side.
 
-    ![](/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581353.png)
+    {{< figure src="/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581353.png" >}}
 
 6.  To filter on a minimum price, add another search field by selecting **Add search field** > **Comparison**.
 7.  Select the **TotalPrice** attribute, name the search field **Minimum total price** and change the **Comparison** from **Contains** to **Greater or equal.**
 
-    ![](/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581351.png)
+    {{< figure src="/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581351.png" >}}
 
 8.  Redeploy your application and enter 50 in your newly added search field. Your list will be filtered to only show orders with a minimum value of 50.
 
-    ![](/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581350.png)
+    {{< figure src="/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581350.png" >}}
 
 ## 5 Filtering a List of Orders with the "Open" Status Using XPath 
 
@@ -83,15 +83,15 @@ In the previous section you used the search bar to filter data on your overview 
 
 1.  Select the **Order** data grid and in the **Properties** pane on the right, change **Data source** > **Type** to **XPath**, and then click the **XPath Constraint** field:
 
-    ![](/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581372.png)
+    {{< figure src="/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581372.png" >}}
 
 2.  Enter the following expression in the **XPath Constraint** editor: `[OrderStatus = ‘Open’]`. The data grid will now only show orders with status ‘Open’. 
 
-    ![](/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581371.png)
+    {{< figure src="/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581371.png" >}}
 
 3.  Run your application to see the following result set:
 
-    ![](/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581370.png)
+    {{< figure src="/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581370.png" >}}
 
 ## 6 Filtering a List of Orders on the Minimum Total Price Using XPath
 
@@ -99,11 +99,11 @@ In the previous section you have constraint the data grid on status 'Open'. In t
 
 1.  Select the **Order** data grid and in the **Properties** pane on the right, click the **XPath Constraint** field and enter the following expression: `[TotalPrice >= 50]`.
 
-    ![](/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581367.png) 
+    {{< figure src="/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581367.png" >}} 
 
 2.  If you run your application you will see the following result set.
 
-    ![](/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581368.png)
+    {{< figure src="/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581368.png" >}}
 
 ## 7 Combining Constraints Using XPath
 
@@ -111,19 +111,19 @@ In the previous two sections you used single constraints to filter the data grid
 
 1.  To constrain the results in the order overview to only the **Open** orders *or* orders with a minimum price of 50.00, you have to insert an `or` statement in the XPath constraint: `[OrderStatus = 'Open'] or [TotalPrice >= 50]`.
 
-    ![](/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581366.png)
+    {{< figure src="/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581366.png" >}}
 
 2.  Run your application to see all the orders with the order status 'Open' or with a total price higher or equal to 50.
 
-    ![](/attachments/howto8/logic-business-rules/define-access-rules-using-xpath/18581373.png)
+    {{< figure src="/attachments/howto8/logic-business-rules/define-access-rules-using-xpath/18581373.png" >}}
 
 3.  To constrain the results in the order overview to only the **Open** orders *and* orders with a minimum price of 50.00, you have to insert an `and` statement in the XPath constraint: `[OrderStatus = 'Open'] and [TotalPrice >= 50]`.
 
-    ![](/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581365.png)
+    {{< figure src="/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581365.png" >}}
     
 4.  Run your application to see orders which are 'Open' and have a minimum total price of 50.
 
-    ![](/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581364.png)
+    {{< figure src="/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581364.png" >}}
 
 ## 8 Filtering the Order List with Attributes of Associated Customers Using XPath
 
@@ -131,11 +131,11 @@ In the previous section you have constrained the data grid on attributes of the 
 
 1.  To constrain the results in the order overview to only orders from customers in Rotterdam, enter the following XPath into the **XPath Contraint** editor: `[Sales.Order_Customer/Sales.Customer/City = 'Rotterdam']`.
 
-    ![](/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581363.png)
+    {{< figure src="/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581363.png" >}}
 
 2.  Run your application to only see the orders of customers in Rotterdam.
 
-    ![](/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581362.png)
+    {{< figure src="/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581362.png" >}}
 
 ## 9 Read More
 

@@ -15,7 +15,7 @@ The Call REST Service action can be used to call a REST endpoint. You can specif
 
 ## 2 General
 
-![](/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-rest-action/19399080.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-rest-action/19399080.png" >}}
 
 ### 2.1 Location
 
@@ -47,7 +47,7 @@ When you select **Override**, you can configure dynamically whether to use a pro
 
 ## 3 HTTP Headers
 
-![](/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-rest-action/19399093.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-rest-action/19399093.png" >}}
 
 ### 3.1 Authentication
 
@@ -63,7 +63,7 @@ These headers are added to the HTTP request header. Each custom header is a pair
 
 ## 4 Request
 
-![](/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-rest-action/19399114.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-rest-action/19399114.png" >}}
 
 The sections below describe the options in the drop-down menu for generating the request. Requests can only be generated for HTTP methods POST, PUT, PATCH, and OPTIONS.
 
@@ -97,7 +97,7 @@ This option allows you to generate the request using a string template. The temp
 
 ## 5 Response
 
-![](/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-rest-action/19399084.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-rest-action/19399084.png" >}}
 
 ### 5.1 Response Handling
 

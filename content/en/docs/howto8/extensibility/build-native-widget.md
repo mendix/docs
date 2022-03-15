@@ -18,7 +18,7 @@ This how-to will teach you core widget concepts by having you build configure, a
 
 A group box can be used to visually group related widgets together. Group boxes are displayed as a frame around nested widgets with an optional header. Group boxes can be configured to collapse and expand dynamically, and look like this:
 
-![final widget](/attachments/howto8/extensibility/build-native-widget/group-box-tease.png)
+{{< figure src="/attachments/howto8/extensibility/build-native-widget/group-box-tease.png" alt="final widget" >}}
 
 **This how-to will teach you how to do the following:**
 
@@ -98,7 +98,7 @@ To scaffold your project folder for the group box widget, follow these steps:
 	* Widget template: {**Empty widget (recommended for more experienced developers)**}
 	* Unit tests: {**No**}
 
-	![Pluggable Widget Generator input](/attachments/howto8/extensibility/build-native-widget/pluggable-widget-generator-input.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/pluggable-widget-generator-input.png" alt="Pluggable Widget Generator input" >}}
 
 5. Your widget will build. If your project has been scaffolded correctly, you will see the following message:
 
@@ -138,13 +138,13 @@ Create a test case by following these steps:
 4. Open **Home_Native** page.
 5.  Copy the **Home** container and paste it underneath that container:
 
-	![home container](/attachments/howto8/extensibility/build-native-widget/home-container.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/home-container.png" alt="home container" >}}
 
 6. Delete the contents of your new container.
 7. Search in Toolbox for the **Group Box** widget.
 8. Drag and drop the widget into your empty container:
 
-	![initial widget](/attachments/howto8/extensibility/build-native-widget/initial-widget.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/initial-widget.png" alt="initial widget" >}}
 
 9. Double-click the widget, fill in your name as the **Default value**, and click **OK**.
 
@@ -154,7 +154,7 @@ You have set up your test project. To verify that your Mendix test project is se
 2. Use the Make It Native app to open your new app.
 3.  Verify that your app's home page contains the yellow text **Hello {your name}**.
 
-	![hello user](/attachments/howto8/extensibility/build-native-widget/1-yellow-text-mobile.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/1-yellow-text-mobile.png" alt="hello user" >}}
 
 ### 3.3 Building the Group Box Widget
 
@@ -212,7 +212,7 @@ Define the structure and default style of the group box widget with these steps:
 7. Run the project locally.
 8. Verify with the Make It Native app that your app looks like the image below:
 
-	![basic app](/attachments/howto8/extensibility/build-native-widget/2-header-caption-mobile.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/2-header-caption-mobile.png" alt="basic app" >}}
 
 The UI of your widget does not look like a group box yet. Apply a default style to make it look like one with the following steps:
 
@@ -270,7 +270,7 @@ The UI of your widget does not look like a group box yet. Apply a default style 
 4. Refresh the Mendix app inside the Make It Native app.
 5. Verify that the group box widget looks like the image below:
 
-	![black white widget](/attachments/howto8/extensibility/build-native-widget/3-bw-header.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/3-bw-header.png" alt="black white widget" >}}
 
 When you build a widget for native mobile, keep in mind that the widget can be used on both iOS and Android. Both platforms have their own design language, and you should adhere as much as possible to both languages. To do this, you will sometimes need to define platform-specific styling or use platform-specific React Native components.
 
@@ -326,7 +326,7 @@ For the group box widget it would be nice to have square corners on Android devi
 4. Refresh the Mendix app inside the Make It Native app.
 5. Verify that the group box widget looks like the image below (if you are using an Android test device, your border will look a little different):
 
-	![black white widget](/attachments/howto8/extensibility/build-native-widget/3-bw-header.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/3-bw-header.png" alt="black white widget" >}}
 
 As you might have noticed, the display component is still called **HelloWorldSample**. Next you will introduce the term "GroupBox" in your code:
 
@@ -407,7 +407,7 @@ You are not using the **label** property of the **defaultStyle** constant anymor
 6. Refresh the Mendix app inside the Make It Native app.
 7. Verify that the group box widget still looks the same after the refactoring:
 
-	![black white widget](/attachments/howto8/extensibility/build-native-widget/3-bw-header.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/3-bw-header.png" alt="black white widget" >}}
 
 #### 3.3.2 Adding Widget Properties
 
@@ -481,9 +481,9 @@ Do these final steps to sync and run your app:
 3. Double-click the same widget and you will now see your new property. 
 4. Fill in some caption text, click **OK**, and rerun your app locally to see your caption text in the app:
 
-	![sample text pro](/attachments/howto8/extensibility/build-native-widget/sample-caption-pro.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/sample-caption-pro.png" alt="sample text pro" >}}
 
-	![sample text mobile](/attachments/howto8/extensibility/build-native-widget/4-this-is-my-text.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/4-this-is-my-text.png" alt="sample text mobile" >}}
 
 #### 3.3.4 Content Property
 
@@ -562,7 +562,7 @@ Verify that the new content property works:
 2. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes to the **src/GroupBox.xml** file.
 3. Update the group box widget again. A content area will appear in the page editor:
 
-	![content area](/attachments/howto8/extensibility/build-native-widget/content-area.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/content-area.png" alt="content area" >}}
 
 4. Drag and drop a **Call nanoflow button** widget into the content area.
 5. Click **New** and a new nanoflow *ACT_ShowMessage*.
@@ -573,7 +573,7 @@ Verify that the new content property works:
 10. Rerun the app locally.
 11. With the Make It Native app, verify that your button is inside the group box and is triggering a message popup saying **Hello World!**.
 
-	![hello world](/attachments/howto8/extensibility/build-native-widget/5-hello-world.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/5-hello-world.png" alt="hello world" >}}
 
 It would be nice to hide the content area of the group box completely when there is no content added to the group box in Mendix Studio Pro:
 
@@ -619,7 +619,7 @@ It would be nice to hide the content area of the group box completely when there
 
 4. To see your changes, drag and drop a new **Group box** widget onto your home page. Run your project and check to see that your new group box with no content shows no empty white box:
 
-	![new group box](/attachments/howto8/extensibility/build-native-widget/6-button-inside.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/6-button-inside.png" alt="new group box" >}}
 
 5. Delete the empty **Group box** widget you created in the previous step, then rerun your app to save your changes.
 
@@ -926,7 +926,7 @@ Next you have to pass the icons configured by the Mendix developer to your displ
 10. In the **Icon** described as **Icon used to indicate that the group box can be expanded** click **Edit**.
 11. Click the € sign and click **Select**:
 
-	![euro](/attachments/howto8/extensibility/build-native-widget/euro-icon.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/euro-icon.png" alt="euro" >}}
 
 10. Click **OK**, then run the app locally.
 11. Inspect your changes. Notice that you cannot see any icon in group box's header. This is because your background color and text color are both black. Remember that in the **defaultStyle** constant of your display component you defined that text of React Native components that get the **headerContent** style applied to it should be white. However, you are not explicitly applying this style to our **Icon** component that you pass from our container component to the display component. You could argue to move the creation of the **Icon** component inside your display component, but this will go against the strict separation of concerns related to the container and display component, since the **Icon** component is Mendix specific. Therefore, it should be part of the container component.
@@ -978,9 +978,9 @@ Fix your icon issue by introducing a default style for your container component:
 
 5. Refresh the app in the Make It Native app. You should see the white icons in the correct size:
 
-	![better button](/attachments/howto8/extensibility/build-native-widget/7-better-button-inside.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/7-better-button-inside.png" alt="better button" >}}
 	
-	![collapsed with euro](/attachments/howto8/extensibility/build-native-widget/8-collapsed-w-euro-sign.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/8-collapsed-w-euro-sign.png" alt="collapsed with euro" >}}
 
 #### 3.3.7 Adding a Collapsible Property {#adding-a-collapsible-property}
 
@@ -1089,7 +1089,7 @@ First change the widget property configuration:
 
 	a. Download this image:
 
-	![Group box icon](/attachments/howto8/extensibility/build-native-widget/group-box.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/group-box.png" alt="Group box icon" >}}
 
 	b. Generate a Base64 representation of the *.png* file:
 
@@ -1311,11 +1311,11 @@ The last thing to do is change the container component so that the properties ge
 4. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes you made to the **src/GroupBox.xml** file.
 5. Update the group box widget. Notice that now your widget has the icon you loaded into its *xml*:
 
-	![groupbox 64](/attachments/howto8/extensibility/build-native-widget/groupbox-64-icon.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/groupbox-64-icon.png" alt="groupbox 64" >}}
 
 6. Verify that the collapsible property options behave correctly by double-clicking your widget and testing each collapsible property option on your test device:
 
-	![collapsible properties](/attachments/howto8/extensibility/build-native-widget/collapsible-properties.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/collapsible-properties.png" alt="collapsible properties" >}}
 
 #### 3.3.8 Adding a Custom Default Style
 
@@ -1346,7 +1346,7 @@ Although you have an extensively featured group box widget, you can still improv
 
 3. Save the file and refresh the your app in the Make It Native app to see your new default style. On Android, note the ripple effect on the header that was previously not visible:
 
-	![default styling](/attachments/howto8/extensibility/build-native-widget/9-default-styling.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/9-default-styling.png" alt="default styling" >}}
 
 #### 3.3.9 Adding a Design Property
 
@@ -1397,7 +1397,7 @@ It would be nice to provide the developer with some pre-defined styles that can 
 4. In the **Class** field, fill in *groupBoxWarning* to apply the warning style to the group box.
 5. Click **OK** and rerun the app locally to see the warning style:
 
-	![warning styling](/attachments/howto8/extensibility/build-native-widget/10-warning-styling.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/10-warning-styling.png" alt="warning styling" >}}
 
 Defining all the different styles inside **test/MxTestProject/theme/styles/native/app/custom.js** can make your code less readable. To prevent this, extract the styles specifically for the group box widget and store them in a separate file:
 
@@ -1411,7 +1411,7 @@ Defining all the different styles inside **test/MxTestProject/theme/styles/nativ
 
 4. Refresh your app in the Make It Native app to verify the custom warning style is still being applied to the group box widget.
 
-	![warning styling](/attachments/howto8/extensibility/build-native-widget/10-warning-styling.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/10-warning-styling.png" alt="warning styling" >}}
 
 The developer needs to have the class names memorized to apply a certain group box style. By using a design property this will no longer be necessary:
 
@@ -1452,11 +1452,11 @@ The developer needs to have the class names memorized to apply a certain group b
 
 6. Select the **Success** style and click **OK**:
 
-	![success style](/attachments/howto8/extensibility/build-native-widget/success-design-property.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/success-design-property.png" alt="success style" >}}
 
 7. Rerun the app locally and verify the new success style in the Make It Native App:
 
-	![mobile success](/attachments/howto8/extensibility/build-native-widget/11-success.png)
+	{{< figure src="/attachments/howto8/extensibility/build-native-widget/11-success.png" alt="mobile success" >}}
 	
 ## 4 Read More
 

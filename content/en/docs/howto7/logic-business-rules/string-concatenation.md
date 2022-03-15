@@ -25,7 +25,7 @@ Whenever you want to check if a string contains text it won't be sufficient to e
 An inefficient example on how to check for text and create a combined messages based on the outcome.
 Building out all combinations is a lot of work, and if something need to change it will be a lot of work to change and it is prone to errors.
 
-![](/attachments/howto7/logic-business-rules/string-concatenation/bco_contactperson_createfullname_inefficient.jpg)
+{{< figure src="/attachments/howto7/logic-business-rules/string-concatenation/bco_contactperson_createfullname_inefficient.jpg" >}}
 
 ### Example 2, a single expression:
 
@@ -48,7 +48,7 @@ else '')
 )
 ```
 
-![](/attachments/howto7/logic-business-rules/string-concatenation/bco_contactperson_createfullname_hardtoread.jpg)
+{{< figure src="/attachments/howto7/logic-business-rules/string-concatenation/bco_contactperson_createfullname_hardtoread.jpg" >}}
 
 ### Example 3, **BestPractice,**  expression break down:
 
@@ -58,5 +58,5 @@ In this example we went even one step further in the stability of the expression
 ```
 trim(  $ContactPerson/Fullname + ' ' + trim(  $ContactPerson/Firstname ) )
 ```
-![](/attachments/howto7/logic-business-rules/string-concatenation/bco_contactperson_createfullname.jpg)
+{{< figure src="/attachments/howto7/logic-business-rules/string-concatenation/bco_contactperson_createfullname.jpg" >}}
 

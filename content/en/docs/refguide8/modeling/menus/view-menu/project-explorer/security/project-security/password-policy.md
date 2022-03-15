@@ -18,7 +18,7 @@ You can specify a number of requirements for passwords. These requirements will 
 
 To set password policy properties, open **Project Security** > the **Password policy** tab:
 
-![](/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/password-policy/password-policy-tab.png)
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/password-policy/password-policy-tab.png" >}}
 
 Password policy properties are described in the table below:
 

@@ -16,7 +16,7 @@ The [multiplicity](#multiplicity) (or number of referred objects) of an associat
 
 In the example below, the arrow indicates that **Order** is the owner of the association, and the `1` and `*` indicate that one customer is associated with many orders:
 
-![](/attachments/refguide7/desktop-modeler/domain-model/association-properties/918217.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/association-properties/918217.png" >}}
 
 {{% alert color="info" %}}
 
@@ -28,7 +28,7 @@ An association between a persistable entity and a non-persistable entity must st
 
 If you double-click an association, its properties are opened. 
 
-![Association Properties](/attachments/refguide7/desktop-modeler/domain-model/association-properties/dm-association-properties.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/association-properties/dm-association-properties.png" alt="Association Properties" >}}
 
 
 Associations have the following properties:
@@ -80,11 +80,11 @@ Delete behavior defines what should happen to the associated object when an obje
 
 This delete behavior is used if you want to delete any associated **Profile** when a **Customer** is deleted:
 
-![](/attachments/refguide7/desktop-modeler/domain-model/association-properties/918143.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/association-properties/918143.png" >}}
 
 This delete behavior is used if you want to be able to delete a **Customer** only if it is not associated with any **Order**:
 
-![](/attachments/refguide7/desktop-modeler/domain-model/association-properties/918146.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/association-properties/918146.png" >}}
 
 ## 3 Read More
 

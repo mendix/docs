@@ -21,7 +21,7 @@ This pane consists of the following:
 
 The top bar of the top level of the **Changes** pane consists of various buttons:
 
-![Top Bar of the Changes Pane](/attachments/refguide/modeling/menus/view-menu/changes-pane/changes-top-bar.png)
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/changes-pane/changes-top-bar.png" alt="Top Bar of the Changes Pane" >}}
 
 Buttons allow you to perform the following actions:
 
@@ -38,7 +38,7 @@ The **Back** and **Go to** buttons are common throughout all the levels, while o
 
 The top level of the **Changes** pane is a grid listing changed documents, for example, a page or a nanoflow:
 
-![Top Level of the Changes Pane](/attachments/refguide/modeling/menus/view-menu/changes-pane/changes-top-level.png)
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/changes-pane/changes-top-level.png" alt="Top Level of the Changes Pane" >}}
 
 The grid contains information on the following items:
 
@@ -73,7 +73,7 @@ Each of them contains their own set of buttons.
 
 The zoomed-in level for modified documents is split into two grids, with elements on the left and changed properties on the right. If no properties were changed for an element, for example, when an element was added or deleted, the right grid will be empty:
 
-![No Properties to Show](/attachments/refguide/modeling/menus/view-menu/changes-pane/element-added.png)
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/changes-pane/element-added.png" alt="No Properties to Show" >}}
 
 The toolbar at this level contains the following buttons:
 
@@ -119,7 +119,7 @@ The grid on the right contains the following columns:
 * **Mine** – the change to the property that was made on the current development line
 * **Theirs** – the change to the property that was made on the other development line
 
-![Example of conflicts format of changes pane](/attachments/refguide/modeling/menus/view-menu/changes-pane/new-merge-algorithm-conflicts.png)
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/changes-pane/new-merge-algorithm-conflicts.png" alt="Example of conflicts format of changes pane" >}}
 
 ### 4.3 Merge Mode{#merge-mode}
 
@@ -142,7 +142,7 @@ The toolbar will change to show the following buttons:
 
 The left and right panes will contain the same information as in [Zoomed-In Level for Conflicted Documents](#conflicts), above.
 
-![Example of conflicts resolution format of changes pane](/attachments/refguide/modeling/menus/view-menu/changes-pane/new-merge-algorithm-resolve-mode.png)
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/changes-pane/new-merge-algorithm-resolve-mode.png" alt="Example of conflicts resolution format of changes pane" >}}
 
 ##  5 Read More
 

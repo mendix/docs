@@ -19,7 +19,7 @@ While developing a hybrid mobile app, you can quickly preview it in in the brows
 
 However, when you use native widgets on your hybrid pages, some of these widgets might not work in the browser. Some of these widgets will offer an alternative implementation for when they are running in an ordinary browser; others will not work at all. To see what your app will look like inside the wrapper, you can use the Mendix Mobile app. In Studio Pro, you can reach the hybrid mobile app dialog box via **View in the Mendix App** in the toolbar or through the **Run** menu. It shows a QR code that can be scanned with that app. This is a quick way to load your app into a compatible environment.
 
-![](/attachments/refguide8/mobile/hybrid-mobile/developing-hybrid-mobile-apps/View_Hybrid_Mobile_App_Popup.png)
+{{< figure src="/attachments/refguide8/mobile/hybrid-mobile/developing-hybrid-mobile-apps/View_Hybrid_Mobile_App_Popup.png" >}}
 
 For more information about how to download the Mendix Mobile app, see [Getting the Mendix Mobile App](/refguide8/getting-the-mendix-app/).
 

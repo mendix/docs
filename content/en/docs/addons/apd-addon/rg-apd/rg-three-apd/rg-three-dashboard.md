@@ -12,4 +12,4 @@ The dashboard of an environment shows real-time information regarding the follow
 * The number of actions per second
 * Recent logs and traps
 
- ![](/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-dashboard/dashboard.png)
+ {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-dashboard/dashboard.png" >}}

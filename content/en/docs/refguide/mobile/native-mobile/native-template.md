@@ -33,7 +33,7 @@ To determine which version of the Native Template you should use, do the followi
 
 The keys represent the Mendix Studio Pro version. The `min` and `max` values are the minimum and maximum Native Template versions supported: 
 
-{{% image_container width="200" %}}![Mendix Versions](/attachments/refguide/mobile/native-mobile/native-template/mendix-version.png){{% /image_container %}}
+{{< figure src="/attachments/refguide/mobile/native-mobile/native-template/mendix-version.png" alt="Mendix Versions"   width="200"  >}}
 
 So like in the example shown above, in the case of Mendix Studio Pro 8.9.x you could choose any Native Template version from 4.0.0 to the latest. Ideally, you should choose the most recent supported version.
 

@@ -21,7 +21,7 @@ To view and manage your team members, follow these steps:
 
 Only the following roles can manage the app team: [Scrum Master](/developerportal/collaborate/app-roles/#team-roles), [Mendix Admin](/developerportal/control-center/), or a [custom role](/developerportal/collaborate/app-roles/#team-roles) with  the **App Settings** permission.
 
-![](/attachments/developerportal/collaborate/team/team.jpg)
+{{< figure src="/attachments/developerportal/collaborate/team/team.jpg" >}}
 
 On this page, you can do the following:
 
@@ -30,8 +30,7 @@ On this page, you can do the following:
 * Click **Invite member** to invite a new user to the team (for more information, see the [Inviting Team Members](#inviting) section below)
 *  Click **Role settings** to view and edit the permissions for the team roles (clicking **Security Guide** in the **Role** dialog box will present useful information for configuring roles)
 
-	{{% image_container width="400" %}}![](/attachments/developerportal/collaborate/team/role-settings.png)
-	{{% /image_container %}}
+	{{< figure src="/attachments/developerportal/collaborate/team/role-settings.png"   width="400"  >}}
 
 * Click **Change log** to view the change log for the team and [node permissions](/developerportal/deploy/node-permissions/)
 

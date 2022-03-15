@@ -19,11 +19,11 @@ This how-to explains how to eliminate design time warnings. While these warnings
 
 Warning messages can be seen in the **Error List** tab of the Modeler (by default shown at the bottom of the Modeler). Note that the **Warnings** box must be selected for them to display.
 
-![](/attachments/howto7/monitoring-troubleshooting/clear-warning-messages/18579992.png)
+{{< figure src="/attachments/howto7/monitoring-troubleshooting/clear-warning-messages/18579992.png" >}}
 
 If this tab is not visible, it can be displayed via the **View** menu by selecting the **Error List** option:
 
-![](/attachments/howto7/monitoring-troubleshooting/clear-warning-messages/18579991.png)
+{{< figure src="/attachments/howto7/monitoring-troubleshooting/clear-warning-messages/18579991.png" >}}
 
 To get more information, double-click or right-click the warning.
 

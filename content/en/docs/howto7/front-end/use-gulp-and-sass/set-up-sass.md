@@ -24,15 +24,15 @@ Before starting this how-to, make sure you have completed the following prerequi
 1. Install [Visual Studio Code (VSC)](https://code.visualstudio.com/).
 2.  On the [Gulp for Mendix theming](https://github.com/mendix/ux-theming) GitHub project, click **Releases**:
 
-	![](/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/releases.png)
+	{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/releases.png" >}}
 
 3.  Download the *Gulp.zip* file:
 
-	![](/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/gulp.png)
+	{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/gulp.png" >}}
 
 4.  Install Node.js for task-running and automation through gulp. Install the latest LTS version from [Node.js](https://nodejs.org/en/):
 
-	![](/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/node.png)
+	{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/node.png" >}}
 
 5. Install version **1.7.15** of [TortoiseSVN](https://osdn.net/projects/tortoisesvn/storage/Archive/1.7.15/Application/).
 
@@ -43,21 +43,21 @@ To prepare your app, follow these steps:
 1. Open the [app directory](/howto7/general/show-project-directory/) (via **Project** > **Show Project Directory in Explorer** in Studio Pro).
 2.  Unpack the *Gulp.zip* file into your main app folder. You will then see a *Gulpfile* and *package* file that look like this:
 
-	![](/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/unpack.png)
+	{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/unpack.png" >}}
 
 	After you have unpacked the *Gulp.zip* into your app folder, you can remove the *zip* file.
 3.  Open **Windows PowerShell**:
 
-	![](/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/powershell.png)
+	{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/powershell.png" >}}
 
 4.  Copy the address as text from your main app folder and paste it into Powershell (your app folder cannot contain spaces and should not be too long):
 
-	![](/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/copy.png)
+	{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/copy.png" >}}
 
 5.  Provide the directory for your app folder in PowerShell: `cd ‘directory for your app folder’`
 6.  Write `npm install` or use `npm install gulp-cli -g`:
 
-	![](/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/write-install.png)
+	{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/write-install.png" >}}
 
 	If you use `npm install`, you may receive an error. PowerShell will tell you to use `npm run dev` instead. If that does not work, use `npm install run`.
 
@@ -66,27 +66,27 @@ To prepare your app, follow these steps:
 
 7.  Write `gulp dev`. Your screen should then look like this:
 
-	![](/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/gulp-dev.png)
+	{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/gulp-dev.png" >}}
 
 	At this point, you are ready to start working with Sass.
 
 8.  You also need to add the following selected items into the ignore list of TortoiseSVN for each new app. If you do not, your app will take too long to commit a change:
 
-	![](/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/selected-ignore.png)
+	{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/selected-ignore.png" >}}
 
 	To do that, right-click each item and select **TortoiseSVN** > **Add to ignore list**:
 
-	![](/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/add-ignore.png)
+	{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/add-ignore.png" >}}
 
 	You will receive a confirmation when the items have been added to the ignore list. You can also double-check via TortoiseSVN:
 
-	![](/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/check-ignore.png)
+	{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/check-ignore.png" >}}
 	
 	If you need to remove an item from the ignore list, right-click it and select **TortoiseSVN** > **Remove from ignore list**.
 
 9.  Open your app in Studio Pro, then click **Run Locally** and **View**:
 
-	![](/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/run-view.png)
+	{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/run-view.png" >}}
 
 ## 4  Setting Up Your Sass Files
 
@@ -95,19 +95,19 @@ Final steps! Read below to open and work with Sass:
 1. Open the main app folder and go to **theme** \> **styles** \> **sass** \> **custom**.
 2. Double-click either the *custom.scss* or *\_custom-variables.scss* file, which will open in VSC:
 
-	![](/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/custom-variables.png)
+	{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/custom-variables.png" >}}
 
 	If you open the **custom** file, you will see the following screen:
 
-	![](/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/import.png)
+	{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/import.png" >}}
 
 3. Click **Open Folder** in the **EXPLORER** and then select the **sass** folder:
 
-	![](/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/sass-folder.png)
+	{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/sass-folder.png" >}}
 
 4. Remove the **Welcome**, since you will not need this:
 
-	![](/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/welcome.png)
+	{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/welcome.png" >}}
 
 ### 4.1  Keeping Your Sass in the Custom Folder
 
@@ -117,7 +117,7 @@ You can now work on the Sass structure and organize everything neatly by creatin
 
 When you create a new Sass file, follow this naming guideline: *\_{namefilehere}.scss*. For example:
 
-![](/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/name-example.png)
+{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/name-example.png" >}}
 
 ### 4.2 Importing New Sub-Folders & Files
 
@@ -151,7 +151,7 @@ color: green;
 
 To implement this in your app, open the app in Mendix Studio Pro. You can find the defined class names in almost every element (for example, titles and subtitles). In this example, double-click the title **Event App** in Studio Pro, and you can see that the name has the standard class name for Studio Pro. 
 
-![](/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/class-name.png)
+{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/set-up-sass/class-name.png" >}}
 
 You can remove **spacing-outer-bottom-medium**, as that is a variable that contains defined styling code. If you do not remove this, you will probably have trouble later in the app if you, for example, want to position your title somewhere else. 
 

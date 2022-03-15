@@ -28,19 +28,19 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 
 2.  Give the JavaScript action a descriptive name:
 
-	![naming dialog](/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/descriptivename.png)
+	{{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/descriptivename.png" alt="naming dialog" >}}
 
 	You can now start creating the API for the JavaScript action, which consists of parameters and a return type.
 
 3.  Your **TextToSpeech** action only requires a single parameter. Create it by clicking the **Add** button in the top left corner. Give the parameter a name and add an extended description if desired:
 
-	![javascript action description field](/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/jsactiondescription.png)
+	{{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/jsactiondescription.png" alt="javascript action description field" >}}
 
 	You can leave the **Return type** at the default Boolean value. That means that the action will return `false` if no text is provided, and return `true` after it has successfully spoken the provided text.
   
 4.  Next, click the **Code** tab to begin editing the JavaScript action. Now you can start writing the actual action. Mendix Studio Pro already created a default template for you, using the parameters and return type we provided:
 
-	![text to speech code](/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/code.png)
+	{{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/code.png" alt="text to speech code" >}}
 
 	You can only add code between `// BEGIN USER CODE` and `// END USER CODE`. Any code outside this block will be lost. The source code is stored in your app folder under **javascriptsource** > **(module name)** > **actions** > **(action name).js**. This JavaScript action will be asynchronous, so you will be using promises to return values (for details about using promises, see Mozilla's [Using promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) guide). 
 
@@ -123,19 +123,19 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 
 9. You have just implemented your first JavaScript action! You can start using the action in your nanoflows by adding a **JavaScript action call** and selecting the newly created **SpeechToText** action: 
 
-	![select text to speech action](/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/selectjsactioncalldetail.png)
+	{{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/selectjsactioncalldetail.png" alt="select text to speech action" >}}
 	
 	Optionally, you can expose the JavaScript action as a nanoflow action. When you do, you can choose a **Caption**, **Category**, and **Icon**. Note that to choose an icon your image will need to be included in an existing [image collection](/refguide/image-collection/). 
 	
-	![add caption category and icon](/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/exposeasnanoflow.png)
+	{{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/exposeasnanoflow.png" alt="add caption category and icon" >}}
 	
 	It will then appear in the **Toolbox** window when editing a nanoflow: 
 	
-	![text to speech in nanoflow](/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/iconintoolbox.png)
+	{{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/iconintoolbox.png" alt="text to speech in nanoflow" >}}
 
 10. Now for a JavaScript action test run! First, make a nanoflow which features your new JavaScript action. Right-click your folder in the **App Explorer** and click **Add nanoflow**. Then, add an action to your nanoflow, select **call a nanoflow action**, and select your JavaScript action. You will see a window which will let you edit the JavaScript action. Click the **Edit** button of the **Input Text** and type *‘Hello world'*. Then, set **Use return value** to *No* radio button.
 
-	![edit text in call javascript action dialog](/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/calljsactionnanoflow.png)
+	{{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/calljsactionnanoflow.png" alt="edit text in call javascript action dialog" >}}
 
 11. Now you are going to put your new nanoflow to work. On a page of your app, make an action button by clicking **Add widget** in the top center toolbar. Then, under **Buttons**, select **Call nanoflow button**. Select your new nanoflow when prompted. 
 

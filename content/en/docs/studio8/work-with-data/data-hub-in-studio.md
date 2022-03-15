@@ -35,16 +35,16 @@ You can select external entities as a data source for data containers (a data vi
 3. In the **Select Entity** dialog box, you can search for external entities in the Data Hub Catalog and use them on your page. There are two ways to discover entities, you can do one of the following:
     1. **Search for a specific service or entity name** – enter a search term in the search field to find an entity you would like to add:
 
-        {{% image_container width="400" %}}![Searching for an Entity](/attachments/studio8/work-with-data/data-hub-in-studio/searching-for-entity.png){{% /image_container %}}
+        {{< figure src="/attachments/studio8/work-with-data/data-hub-in-studio/searching-for-entity.png" alt="Searching for an Entity"   width="400"  >}}
         
     2. **Browse through available data** – click the **Data Hub** section and browse through available services and entities:
     
-        {{% image_container width="400" %}}![Selecting an Entity](/attachments/studio8/work-with-data/data-hub-in-studio/selecting-entity.png){{% /image_container %}}
+        {{< figure src="/attachments/studio8/work-with-data/data-hub-in-studio/selecting-entity.png" alt="Selecting an Entity"   width="400"  >}}
 
 3. Click **Select**.
 
 The selected external entity will be added to your domain model automatically together with all integration and security settings. 
-![Domain Model](/attachments/studio8/work-with-data/data-hub-in-studio/domain-model-example.png)
+{{< figure src="/attachments/studio8/work-with-data/data-hub-in-studio/domain-model-example.png" alt="Domain Model" >}}
 
 When you [publish your app](/studio8/publishing-app/), you can see that the data from the external entity is shown in your app. 
 
@@ -54,7 +54,7 @@ When you [preview your app](/studio8/publishing-app/), you will see data from th
 
 The **Data Hub** tab of the **Select Entity** dialog box shows you a list of services that expands to a list of entities available for your organization:
 
-![Data Hub Section Diagram](/attachments/studio8/work-with-data/data-hub-in-studio/data-hub-tab-diagram.png)
+{{< figure src="/attachments/studio8/work-with-data/data-hub-in-studio/data-hub-tab-diagram.png" alt="Data Hub Section Diagram" >}}
 
 In the **Data Hub** tab, you can do the following:
 
@@ -71,7 +71,7 @@ In the **Data Hub** tab, you can do the following:
 
 * **Update services** – when a new version of the service is available, you can update it. However, it is best to check out the changes made to the service in the Data Hub Catalog first. 
 
-    {{% image_container width="500" %}}![Update Available](/attachments/studio8/work-with-data/data-hub-in-studio/service-update.png){{% /image_container %}}
+    {{< figure src="/attachments/studio8/work-with-data/data-hub-in-studio/service-update.png" alt="Update Available"   width="500"  >}}
 
     Click the drop-down menu to choose the following options:
 
@@ -96,28 +96,28 @@ In the **Data Hub** tab, you can do the following:
     
     * **View in Data Hub Catalog** – a link to the Data Hub Catalog of your organization.
     
-        {{% image_container width="300" %}}![Service Information](/attachments/studio8/work-with-data/data-hub-in-studio/service-information.jpg){{% /image_container %}}
+        {{< figure src="/attachments/studio8/work-with-data/data-hub-in-studio/service-information.jpg" alt="Service Information"   width="300"  >}}
 
 
 ## 3 External Entity Properties
 
 External entities are colored *purple* in the domain model:
 
-![External Entity](/attachments/studio8/work-with-data/data-hub-in-studio/external-entity.png)
+{{< figure src="/attachments/studio8/work-with-data/data-hub-in-studio/external-entity.png" alt="External Entity" >}}
 
 When you add external entities to your app, it is possible to make local changes to the entity, such as change its name. However, these changes are limited and will only apply to your app. Most of the properties of external entities are read-only as they are defined in the source app (this ensures that you will not accidently change the data in the source app):
 
-![External Entity Properties](/attachments/studio8/work-with-data/data-hub-in-studio/external-entity-properties.png)  
+{{< figure src="/attachments/studio8/work-with-data/data-hub-in-studio/external-entity-properties.png" alt="External Entity Properties" >}}  
 
 ### 3.1 External Entity Attributes
 
 You can rename external entity attributes to better fit your app structure. It will still be the same attribute containing the same data, meaning that this change will be local to your app and not affect the source app. All other properties, except the **Name** property, are read-only. 
 
-![Properties of External Entity Attribute](/attachments/studio8/work-with-data/data-hub-in-studio/external-attribute-properties.png)
+{{< figure src="/attachments/studio8/work-with-data/data-hub-in-studio/external-attribute-properties.png" alt="Properties of External Entity Attribute" >}}
 
 External attributes may have limitations that you can see in their properties. Limitation are added by the external service owner to indicate the features that are not supported. For example, if there are limitations on an attribute, you will not be able to use it in filters and/or sort on it on pages and in microflows.
 
-{{% image_container width="250" %}}![Attribute with Limitations](/attachments/studio8/work-with-data/data-hub-in-studio/attribute-with-limitations.jpg){{% /image_container %}}
+{{< figure src="/attachments/studio8/work-with-data/data-hub-in-studio/attribute-with-limitations.jpg" alt="Attribute with Limitations"   width="250"  >}}
 
 {{% alert color="info" %}}
 
@@ -133,7 +133,7 @@ You can create and edit associations only between a local entity and an external
 
 For example, you can create an association from a local entity **Order** to an external entity **Customer**:
 
-![External Association Example](/attachments/studio8/work-with-data/data-hub-in-studio/association-example.png)
+{{< figure src="/attachments/studio8/work-with-data/data-hub-in-studio/association-example.png" alt="External Association Example" >}}
 
 You cannot change or delete this association. It is also not possible to create an association between two external entities that do not have an association in the source app. 
 

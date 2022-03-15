@@ -171,12 +171,12 @@ To set these tags, do the following:
 2. Click **Details** to select an environment you are monitoring with Datadog. 
 3. Open the **Tags** tab.
 4. Add a **Tag** – this is the string which is sent to Datadog as a tag.
-    ![Example metric showing tags in Datadog](/attachments/developerportal/operate/metrics/datadog-metrics/set-tags.png)
+    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/set-tags.png" alt="Example metric showing tags in Datadog" >}}
 5. **Restart** the application.
 
 Setting these values for your app means that all metrics from this environment of your app will have these tags. For example, the tags for mx.microflow.time.avg for this set of metrics include **app:customermanagement** and **env:accp**.
 
-![Example metric showing tags in Datadog](/attachments/developerportal/operate/metrics/datadog-metrics/datadog-summary-tags.png)
+{{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog-summary-tags.png" alt="Example metric showing tags in Datadog" >}}
 
 {{% alert color="info" %}}
 You can add more tags if you want, but note that Datadog's charges include an element for [custom metrics](https://docs.datadoghq.com/developers/metrics/custom_metrics/) as described on the Datadog site.
@@ -302,7 +302,7 @@ You pass the configuration to the metrics agent by adding a *Custom Runtime Sett
 2. Click **Details** next to the environment you have configured for Datadog.
 3. Add a **Custom Environment Variable** *METRICS_AGENT_CONFIG* with the value of the JSON required for your configuration.
 
-	![](/attachments/developerportal/operate/metrics/datadog-metrics/datadog_metricsagentconfig.png)
+	{{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog_metricsagentconfig.png" >}}
 
 4. Click **Save**.
 5. Restart your app to apply the new settings if you have already [connected your node to Datadog](#connect-node). If you are in the process of connecting your node to Datadog, you must *redeploy* your application to apply the changes.
@@ -321,11 +321,11 @@ If you are new to Datadog, you will need to get an account first.
 2. Enter your Datadog account details. Once you have entered your details you cannot continue until you have set up your agent.
 3.  Choose the option **From Source**.
 
-    ![The From Source option on the Agent setup screen](/attachments/developerportal/operate/metrics/datadog-metrics/from-source.png)
+    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/from-source.png" alt="The From Source option on the Agent setup screen" >}}
 
 4.  Copy the value of *DD_API_KEY* key shown on the install script.
 
-    ![Source install script shows DD_API_KEY=your API key](/attachments/developerportal/operate/metrics/datadog-metrics/dd-api-key.png)
+    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/dd-api-key.png" alt="Source install script shows DD_API_KEY=your API key" >}}
 
 5. You now need to use this API key with your app: see [Connect Node to Datadog](#connect-node).
 
@@ -336,11 +336,11 @@ To find your existing API key, or to request a new one for your app, do the foll
 1. Login to your Datadog account.
 2.  Go to the **Integrations > API** screen.
 
-    ![Datadog site: navigation to Integration, API](/attachments/developerportal/operate/metrics/datadog-metrics/datadog-integrations-api.png)
+    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog-integrations-api.png" alt="Datadog site: navigation to Integration, API" >}}
 
 3.  Copy an existing **API Key** or create a new one.
 
-    ![Datadog site: API Keys page](/attachments/developerportal/operate/metrics/datadog-metrics/datadog-api=keys.png)
+    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog-api=keys.png" alt="Datadog site: API Keys page" >}}
 
 4. For more information on Datadog API keys, see the following page on the Datadog site: [How do I reset my Application Keys](https://docs.datadoghq.com/account_management/faq/how-do-i-reset-my-application-keys/) and related documentation.
 
@@ -354,7 +354,7 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 4. Add a **Custom Environment Variable**.
 5.  Select **DD_API_KEY** from the *Name* drop-down.
 
-	![Dropdown containing custom environment variable names](/attachments/developerportal/operate/metrics/datadog-metrics/environment-variable-dd-api-key.png)
+	{{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/environment-variable-dd-api-key.png" alt="Dropdown containing custom environment variable names" >}}
 
 6. Enter the Datadog **API key**, obtained in the [Datadog API Key](#api-key) section, above, as the *Value* of the Environment Variable.
 7. Add a second **Custom Environment Variable**:
@@ -413,7 +413,7 @@ If these additional metrics are enabled, the rate and counter metrics will be se
 
 The Datadog Events log contains events which come from your app: those are the same events that would appear in the Mendix Console. It does not contain events from the environment.
 
-![Example events log](/attachments/developerportal/operate/metrics/datadog-metrics/datadog-event-log.png)
+{{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog-event-log.png" alt="Example events log" >}}
 
 By default all email addresses contained in log events will be redacted. You can change this – see [Email Address Redaction](#redact-emails), above.
 

@@ -14,7 +14,7 @@ tags: ["studio pro"]
 
 The commit dialog is used for committing changes to the Team Server. You can enter a message and, if applicable, select related stories.
 
-![Version Control Menu](/attachments/refguide8/modeling/menus/version-control-menu/commit-dialog/commit-dialog-stories.png)
+{{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/commit-dialog/commit-dialog-stories.png" alt="Version Control Menu" >}}
 
 ## 2 Branch
 
@@ -22,8 +22,8 @@ At the top of the dialog box you will see the branch which you are committing. T
 
 | Branch Description | Notes |
 | --- | --- |
-| ![Version Control Menu](/attachments/refguide8/modeling/menus/version-control-menu/commit-dialog/commit-main.png) |  you are committing the main line |
-| ![Version Control Menu](/attachments/refguide8/modeling/menus/version-control-menu/commit-dialog/commit-branch.png) |  you are committing the specified branch |
+| {{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/commit-dialog/commit-main.png" alt="Version Control Menu" >}} |  you are committing the main line |
+| {{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/commit-dialog/commit-branch.png" alt="Version Control Menu" >}} |  you are committing the specified branch |
 
 ## 3 Message
 
@@ -33,19 +33,19 @@ Enter a message describing the changes you have made. This message may contain m
 
 ### 4.1 Related Stories {#stories}
 
-![Version Control Menu](/attachments/refguide8/modeling/menus/version-control-menu/commit-dialog/commit-dialog-stories.png)
+{{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/commit-dialog/commit-dialog-stories.png" alt="Version Control Menu" >}}
 
 Tick the boxes next to the stories that are related to your commit. We recommend committing a small number of changes at a time, so there is usually just one related story.
 
 ### 4.2 Changes in Model
 
-![Version Control Menu](/attachments/refguide8/modeling/menus/version-control-menu/commit-dialog/commit-dialog-model-changes.png)
+{{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/commit-dialog/commit-dialog-model-changes.png" alt="Version Control Menu" >}}
 
 If there are changes in the model this tab shows a summary of those changes. See [Changes Pane](/refguide8/changes-pane/) for a description of how changes are reported in Studio Pro.
 
 ### 4.3 Changes on Disk
 
-![Version Control Menu](/attachments/refguide8/modeling/menus/version-control-menu/commit-dialog/commit-dialog-disk-changes.png)
+{{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/commit-dialog/commit-dialog-disk-changes.png" alt="Version Control Menu" >}}
 
 If there are changes on disk this page shows a summary of those changes. Click **Open containing folder** to open the folder containing the selected file in Windows Explorer.
 

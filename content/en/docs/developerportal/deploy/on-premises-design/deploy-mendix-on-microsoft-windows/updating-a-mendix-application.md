@@ -24,19 +24,19 @@ Before every update it is recommended that you create a backup of your data and 
 
 1.  If the app is currently running, make sure you stop it first, otherwise you will be unable to update.
 
-    ![Step 1, Stop the app](/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/updating-a-mendix-application/1_stop_service.png)
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/updating-a-mendix-application/1_stop_service.png" alt="Step 1, Stop the app" >}}
 
 2.  You can update the application by clicking on the button **Update app**.
 
-    ![Step 2, Start the update process](/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/updating-a-mendix-application/2_click_update.png)
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/updating-a-mendix-application/2_click_update.png" alt="Step 2, Start the update process" >}}
 
 3.  The **Update App** popup that appears shows you information about the current active app. The **App version** shows the release number of the deployment package that is currently running on this server. The **Mendix server version** shows the version of the server distribution being used by the app — this is the same as the Studio Pro version which which the deployment package was created.
 
-    ![Step 3, Release details and overview of all server versions](/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/updating-a-mendix-application/3_update_app.png)
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/updating-a-mendix-application/3_update_app.png" alt="Step 3, Release details and overview of all server versions" >}}
 
 4.  To update the application click **Update app**. Select the new deployment archive (.mda) and click **Open**. The update process will start immediately.
 
-    ![Step 4, Choose the latest .mda package](/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/updating-a-mendix-application/4_browse_mda.png)
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/updating-a-mendix-application/4_browse_mda.png" alt="Step 4, Choose the latest .mda package" >}}
 
 This process will copy the new version of the project software into the configured location. All models will be extracted, and a symbolic link to the `mxclientsystem` folder is automatically created so the JavaScript libraries can be easily included without any additional configuration in IIS.
 
@@ -44,22 +44,22 @@ This process will copy the new version of the project software into the configur
 
 1.  After updating the Mendix application version, the Service Console may show the message `(missing)`. This means that the required server distribution is not installed on the server.
 
-    ![Step 5, a missing Runtime version](/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/updating-a-mendix-application/update_server_missing.png)
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/updating-a-mendix-application/update_server_missing.png" alt="Step 5, a missing Runtime version" >}}
 2.  There are two ways to install the required server distribution:
 
     1. If you are online and have access to the Mendix Marketplace, click **Download server** and the correct server distribution will be fetched and installed. You will then see the following 
-    ![](/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/updating-a-mendix-application/update_server_download.png)
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/updating-a-mendix-application/update_server_download.png" >}}
     2. If you are offline or automatic downloading fails, click **Add Server** and select the required server distribution (*.tar.gz*).  The server distribution can be found under the **Related Downloads** from the specific Mendix Studio Pro version in the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/). The server distribution is a *tar.gz* file. The Service Console will extract the server distribution to the same folder as the other server distributions.
 
     After the server distribution has been updated you will be able to start the Service using the new project and Mendix Runtime version. 
 
-    ![Step 6, Choose the correct server distribution (.tar.gz)](/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/updating-a-mendix-application/update_server_select.png)
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/updating-a-mendix-application/update_server_select.png" alt="Step 6, Choose the correct server distribution (.tar.gz)" >}}
 
 ### 3.1 Location of the Mendix Server Distributions
 
 In the Preferences of the Mendix Service Console you can configure the main directory for all applications and server distributions. You can find the installed platform version in the folder `/Servers`. This folder is located directly in the configured base path from the service console.
 
-![](/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/updating-a-mendix-application/18580698.png)
+{{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/updating-a-mendix-application/18580698.png" >}}
 
 This should be something like:
 

@@ -10,7 +10,7 @@ This chapter describes the global configuration and the **Start/Stop** dialog. B
 
 ## 2 After Startup Configuration
 
-![](/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-configuration/Configuration_After_Startup.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-configuration/Configuration_After_Startup.png" >}}
 
 This tab lets you determine which tools should run **After startup**. Please note that the Mendix Modeler contains a safety constant that overrules these after startup settings and enables the admin to take control of these settings.
 
@@ -24,7 +24,7 @@ APM requires an application license that can be requested via email using the bu
 
 A license is required per app. Every license has an end date.
 
-![](/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-configuration/Configuration_License.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-configuration/Configuration_License.png" >}}
 
 The license code goes in the **License key** field. The **Expiry date** field is automatically filled. When a license request code is delivered in the APM order, this one-time **License request code** can be filled in to automatically obtain a license when mailing the license request.
 
@@ -32,7 +32,7 @@ The license code goes in the **License key** field. The **Expiry date** field is
 
 The JDBC settings are for executing queries in the query tool and using the explain plan query in the performance tool. Usually these settings are correctly determined during installation and can stay unchanged.
 
-![](/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-configuration/Configuration_JDBC.png)                       
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-configuration/Configuration_JDBC.png" >}}                       
 
 A **JDBC URL** is automatically set during installation. For special cases, this URL can be changed. The URL can contain variables that are replaced on executing a JDBC statement. You can use `$HostName`, `$PortNumber`, `$DatabaseName`, `$UserName`, and `$Password`. They will be replaced with the current one on execution. This allows for production database dumps to be used without the risk of connection to the production database from a test environment after the load of a production dump.
 
@@ -44,13 +44,13 @@ The remaining four options are used in the query tool to determine the output an
 
 To quickly remove all the data that is collected by and stored in the APM tool, you can use the buttons on the **Clean data** tab:
 
-![](/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-configuration/Configuration_CleanData.png)                       
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-configuration/Configuration_CleanData.png" >}}                       
 
 ## 6 More {#more}
 
 Some other features and settings are collected on the **More** tab:
 
-![](/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-configuration/Configuration_More.png)                       
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-configuration/Configuration_More.png" >}}                       
 
 ### 6.1 Dashboard
 
@@ -74,6 +74,6 @@ You can do the following:
 
 A dialog has been added to manually start/stop the tools:
 
-![](/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-configuration/StartStop.png)                       
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-configuration/StartStop.png" >}}                       
 
 The reroute buttons add log messages from other sources to the Mendix logging so that all log information is combined and available in the log and trap tool. For example: `javax.mail` sends debug output to the `console(system.out)`. With the **Java console** option enabled, the debug output is caught and provided to the Mendix logging.

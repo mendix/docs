@@ -22,7 +22,7 @@ Clustering is also supported on Kubernetes, but you will have to use a *Stateful
 
 The Mendix Runtime Cluster requires the following infrastructure:
 
-![](/attachments/refguide7/runtime/clustered-mendix-runtime/16844074.png)
+{{< figure src="/attachments/refguide7/runtime/clustered-mendix-runtime/16844074.png" >}}
 
 This means that a Mendix Cluster requires a Load Balancer to distribute the load of the clients over the available Runtime Cluster nodes. It also means that all the nodes need to connect to the same Mendix Database and that files need to be stored on S3 (see the File Storage topic). The number of nodes in your cluster depends on the application, the high availability requirements, and its usage.
 
@@ -80,7 +80,7 @@ For example, imagine you are booking a vacation through a Mendix app that consis
 
 The following image describes its behavior:
 
-![](/attachments/refguide7/runtime/clustered-mendix-runtime/16844072.png)
+{{< figure src="/attachments/refguide7/runtime/clustered-mendix-runtime/16844072.png" >}}
 
 Reading objects and deleting (unchanged) objects from the Mendix Database is still a 'Clean State'. Changing an existing object or instantiating a new object will create 'Dirty State'. 'Dirty State' needs to be sent from the Mendix Client to the Mendix Runtime with every request. Committing objects or rolling back will remove them from the 'Dirty State'. The same will happen if an instantiated or changed object is deleted. Non-persistable entities are always part of the 'Dirty State'.
 
@@ -116,15 +116,15 @@ To make sure the dirty state does not become too big when the above scenarios ap
 
 The `$currentSession` variable is available in microflows so that a reference to the current session can easily be obtained. When an object needs to be stored, its association can be set to `$currentSession`, and when the object needs to be retrieved again `$currentSession` can be used as a starting point from which the desired object can be retrieved by association. The associated object can be designed so that it meets the desired needs. This same pattern applies to entities associated with `System.User`. In that case you can use the `$currentUser` variable.
 
-![](/attachments/refguide7/runtime/clustered-mendix-runtime/2018-03-01_17-49-15.png)
+{{< figure src="/attachments/refguide7/runtime/clustered-mendix-runtime/2018-03-01_17-49-15.png" >}}
 
 For example, you can add `Key` and `Value` members to a `Data` entity associated with `System.Session` (and have constants for key values).
 
-![](/attachments/refguide7/runtime/clustered-mendix-runtime/2018-03-01_17-42-38.png)
+{{< figure src="/attachments/refguide7/runtime/clustered-mendix-runtime/2018-03-01_17-42-38.png" >}}
 
 The `Value` values can easily be obtained by performing a find on the `Key` values of a list of `Data` instances.
 
-![](/attachments/refguide7/runtime/clustered-mendix-runtime/2018-03-01_17-56-37.png)
+{{< figure src="/attachments/refguide7/runtime/clustered-mendix-runtime/2018-03-01_17-56-37.png" >}}
 
 {{% alert color="warning" %}}
 

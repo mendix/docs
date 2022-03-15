@@ -12,18 +12,18 @@ Katalon is a popular graphical testing tool, which is why CLEVR decided to build
 {{% alert color="info" %}}
 Before you start writing tests, you need to import the ATS keywords library via *ats.jar*:<br />
 
-![](/attachments/addons/ats-addon/ov/ov-function-api/ov-function-api-katalon/library.png)
+{{< figure src="/attachments/addons/ats-addon/ov/ov-function-api/ov-function-api-katalon/library.png" >}}
 {{% /alert %}}
 
 ## 2 Configuring the ATS Settings
 
 To configure the ATS settings, you need to enter the **Project ID**, **API key**, and **URL**:
 
-![](/attachments/addons/ats-addon/ov/ov-function-api/ov-function-api-katalon/settings.png)
+{{< figure src="/attachments/addons/ats-addon/ov/ov-function-api/ov-function-api-katalon/settings.png" >}}
 
 ## 3 Executing an ATS Function
 
-![](/attachments/addons/ats-addon/ov/ov-function-api/ov-function-api-katalon/executing.png)
+{{< figure src="/attachments/addons/ats-addon/ov/ov-function-api/ov-function-api-katalon/executing.png" >}}
 
 ```
 WebUI.openBrowser('')
@@ -40,7 +40,7 @@ CustomKeywords.'ats.Mendix.Login'('user', 'password', false)
 
 Assert using ATS:
 
-![](/attachments/addons/ats-addon/ov/ov-function-api/ov-function-api-katalon/assert1.png)
+{{< figure src="/attachments/addons/ats-addon/ov/ov-function-api/ov-function-api-katalon/assert1.png" >}}
 
 ```
 WebUI.openBrowser('')
@@ -60,7 +60,7 @@ CustomKeywords.'ats.Widget_Assert.AssertValue'('listView1 index-0 textBox1', 'fo
 
 Aternatively, assert values using [Cucumber](https://cucumber.io/):
 
-![](/attachments/addons/ats-addon/ov/ov-function-api/ov-function-api-katalon/assert2.png)
+{{< figure src="/attachments/addons/ats-addon/ov/ov-function-api/ov-function-api-katalon/assert2.png" >}}
 
 ```
 WebUI.openBrowser('')

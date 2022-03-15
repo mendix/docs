@@ -58,11 +58,11 @@ You can click the following buttons to execute actions:
 
 Mendix Runtime version 6 has an object cache for non-persistable objects. In this tab you can see how many objects of each type currently live in memory. You can also see the number of objects broken down by user session.
 
-![User session cache details](/attachments/developerportal/operate/metrics/cache-summary.png)
+{{< figure src="/attachments/developerportal/operate/metrics/cache-summary.png" alt="User session cache details" >}}
 
 If you select a user session you can click **Details** to see which entities are being used by that user session.
 
-![User session cache details](/attachments/developerportal/operate/metrics/user-cache.png)
+{{< figure src="/attachments/developerportal/operate/metrics/user-cache.png" alt="User session cache details" >}}
 
 {{% alert color="info" %}}
 

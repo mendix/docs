@@ -29,7 +29,7 @@ If you do not configure a [data source](/refguide8/data-sources/) for a [list vi
 
 The scheme below shows that the data source of the list view has been set to **Database**, but the entity that needs to be retrieved from the database has not been specified. This results in a consistency error. 
 
-![Data Source Consistency Error Scheme](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/list-view-error.png)
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/list-view-error.png" alt="Data Source Consistency Error Scheme" >}}
 
 The table below describes the most common errors which can occur when configuring a list view,  the causes of these errors, and ways to fix them. 
 
@@ -46,7 +46,7 @@ If you do not configure a [data source](/refguide8/data-sources/) for a [data vi
 
 For example, you have selected **Listen to widget** as the data source, but you have not selected the specific **List widget** you are listening to.
 
-![Data View With no List Widget Configured](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-view-no-list-widget.png)
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-view-no-list-widget.png" alt="Data View With no List Widget Configured" >}}
 
 The table below describes the most common errors you can come across when configuring a data view,  causes of these errors, and ways to fix them. 
 
@@ -73,15 +73,15 @@ When a page expects a context that is not passed to it from a calling page or a 
 
 For example, the **Customers** page contains a list view with a list of all customer names (**Customer** is set as **Entity** in the **Data Source** properties), and a **Details** button outside of the list view (placed in a [container](/refguide8/container/) only). The **Details** button opens a **Customer Details** page when a user clicks it (the **On Click Action** for the button is set to **Page**). 
 
-![Button Properties on the Customers Page](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/customers-page.png)
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/customers-page.png" alt="Button Properties on the Customers Page" >}}
 
 However, the **Customer Details** page has a data view that expects an object *Customer* to be passed to it. In other words, this page needs to get data first to be able to display it. 
 
-![Data View Expects the Customer Object](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-view-customer.png)
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-view-customer.png" alt="Data View Expects the Customer Object" >}}
 
 As this object is not passed to it from the **Customers** page, you get a consistency error.
 
-![Example of Error When Context is Unavailable](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/object-error.png)
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/object-error.png" alt="Example of Error When Context is Unavailable" >}}
 
 As the **Details** button to the **Customers** page is outside a data container, it does not know which object to pass. The way of fixing this error depends on the following:
 
@@ -96,7 +96,7 @@ If you want the **Customer Details** page to open the details of a specific cust
 
 2.  Drag the **Details** button inside the list view.
 
-    ![The Details Button Example](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/details-button-inside-the-list-view.png)
+    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/details-button-inside-the-list-view.png" alt="The Details Button Example" >}}
 
 Now the button gets the object of type *Customer* from the list view on the **Customers** page, and it will be passed to the **Customer Details** page. As a result, the details of a particular customer is displayed on the **Customer Details** page. 
 
@@ -112,7 +112,7 @@ If you want to create a new customer and fill in the customer's details on the *
 
 4.  Set **Customer Details** as **Page**.
 
-    ![On Click Event Example](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/button-create-object.png)
+    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/button-create-object.png" alt="On Click Event Example" >}}
 
 5. Change the button's caption from **Details** to **Add**, as this button will now create a new customer instead of showing the details of an existing customer.
 
@@ -124,7 +124,7 @@ If a widget opens a page and this widget is inside a data container of entity X,
 
 For example, you have a **Details** button on the **Engineers** page that opens the **Tasks** page. 
 
-![A Button on Engineers Page](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/engineers-page.png)
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/engineers-page.png" alt="A Button on Engineers Page" >}}
 
 The button is placed inside a list view; the list view's data source is set to entity *Engineer* in **Properties** > **Data Source**.
 
@@ -132,14 +132,13 @@ The Tasks page has a data view on it, but the data view's data source is set to 
 
 This means that data view expects the object of type *SmartTask* passed to it, but the **Engineers** page is passing the object of type *Engineer*.
 
-![Data Source Example](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/tasks-page-list-view.png)
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/tasks-page-list-view.png" alt="Data Source Example" >}}
 
 To fix this error you can do one of the following:
 
 * Place the **Details** button in a data container that will pass the correct type of data to the page:
 
-	{{% image_container width="350" %}}![](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/details-button.png)
-	{{% /image_container %}}
+	{{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/details-button.png"   width="350"  >}}
 
 * Select another page for the button that will not expect any object to be passed to it, or will expect the object of type *Engineer*
 
@@ -164,11 +163,11 @@ When you set a microflow or a nanoflow as an on-click event for a widget, and th
 
 For example, on a page named *Customers* you have a button that calls a microflow (that is an [**On click** event](/refguide8/on-click-event/) of the button is set to *Microflow*):
 
- ![](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/on-click-event-button.png)
+ {{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/on-click-event-button.png" >}}
 
 However, the microflow contains a parameter *Customer*:
 
-![](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/microflow-parameter.png)
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/microflow-parameter.png" >}}
 
 The microflow parameter expects an argument *Customer*, and since this argument is not available on the page where the button is located, it results in an error. 
 
@@ -178,7 +177,7 @@ To fix it, do the following:
 
 2.  Set the data source type of the list view to *Database* and set **Entity (path)** to *Customer*.
 
-    ![](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-source-list-view.png)
+    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-source-list-view.png" >}}
 
 3. Place the button inside the list view.
 
@@ -190,15 +189,15 @@ When you set a microflow or nanoflow as an on-click event for a widget, and this
 
 For example, on a page named *Customers* you have a button that calls a microflow (that is an [On click event](/refguide8/on-click-event/) of the button is set to *Microflow*):
 
- ![](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/on-click-event-button.png)
+ {{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/on-click-event-button.png" >}}
 
 The microflow contains a parameter *Customer*:
 
-![](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/microflow-parameter.png)
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/microflow-parameter.png" >}}
 
 On the *Customers* page you also have a data container, for example, a data view, that has an object *Photo* available. That means that the data source type of the data view is set to *Context* and **Entity (path)** is set to *Photo*:
 
-![](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-view-data-source.png)
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-view-data-source.png" >}}
 
 As the microflow has the parameter *Customer*, and the data view has the object *Photo*, they are conflicting and resulting into an error.
 
@@ -222,7 +221,7 @@ A reference selector is a widget that is used to display and edit one-to-many or
 
 For example, you have several employees who are associated with one city where they work. This is a one-to-many association: multiple *Employees* objects are associated with one *City* object.  Associations that refer to a single object in this manner are *references*, as opposed to *reference sets*, in which multiple objects can refer to multiple other objects. In a reference, the "single object" side of the association is always the association's owner. For more information on associations and their types, see [Associations](/refguide8/associations/).
 
-![One-to-many Association](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/many-to-one-association.png)
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/many-to-one-association.png" alt="One-to-many Association" >}}
 
 If you have the wrong type of association, you will get a consistency error: *Association {Name} must be a reference (not a reference set)*.
 
@@ -232,7 +231,7 @@ To fix this error, do the following:
 
 2.  In **Properties of Association** dialog box, change **Multiplicity** to one-to-many (in our example, multiple 'Employee' objects are associated with one 'City' objects).
 
-    ![Multiplicity for One-to-many Association](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/one-to-many-multiplicity.png)
+    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/one-to-many-multiplicity.png" alt="Multiplicity for One-to-many Association" >}}
 
 3. Click **OK** to save changes.
 
@@ -250,7 +249,7 @@ Reference set selector and input set selector are widgets that are used to displ
 
 For example, you have several employees who can visit customers in different cities during the week. Thus, many employees are associated with many cities, this is a many-to-many association between an *Employee* entity and a *City* entity (multiple employees are associated with multiple cities). Associations that refer to multiple objects in this manner are *reference set*. For more information on associations and their types, see [Associations](/refguide8/associations/). 
 
-![Many-to-many Association](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/many-to-many-association.png)
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/many-to-many-association.png" alt="Many-to-many Association" >}}
 
 If you have a wrong type of association, you will get the following errors:
 
@@ -263,7 +262,7 @@ To fix the error, do the following:
 
 2.  In **Properties of Association** dialog box, change **Multiplicity** to many-to-many (in our example, multiple 'Employee' objects are associated with multiple 'City' objects).
 
-    ![Multiplicity for Many-to-many Association](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/changing-multiplicity.png)
+    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/changing-multiplicity.png" alt="Multiplicity for Many-to-many Association" >}}
 
 3. Click **OK** to save changes.
 
@@ -301,7 +300,7 @@ The most common consistency errors are connected with not configuring the on cli
 
 To fix the consistency errors, finish configuring the on click event (for example, for an on click event **Show a page**, select a particular page that should open), or change the on click action. 
 
-![On Click Event Example](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/on-click-event.png)
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/on-click-event.png" alt="On Click Event Example" >}}
 
 ##  10 Read More
 

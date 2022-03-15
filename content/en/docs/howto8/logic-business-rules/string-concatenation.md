@@ -28,7 +28,7 @@ An inefficient example on how to check for text and create a combined messages b
 
 Reference this microflow:
 
-![](/attachments/howto8/logic-business-rules/string-concatenation/bco_contactperson_createfullname_inefficient.jpg)
+{{< figure src="/attachments/howto8/logic-business-rules/string-concatenation/bco_contactperson_createfullname_inefficient.jpg" >}}
 
 ## 3 A Single Expression
 
@@ -52,7 +52,7 @@ else '')
 ```
 Reference this microflow:
 
-![](/attachments/howto8/logic-business-rules/string-concatenation/bco_contactperson_createfullname_hardtoread.jpg)
+{{< figure src="/attachments/howto8/logic-business-rules/string-concatenation/bco_contactperson_createfullname_hardtoread.jpg" >}}
 
 ## 4 Best Practices for Expression Breakdown
 
@@ -65,4 +65,4 @@ trim(  $ContactPerson/Fullname + ' ' + trim(  $ContactPerson/Firstname ) )
 ```
 Reference this microflow:
 
-![](/attachments/howto8/logic-business-rules/string-concatenation/bco_contactperson_createfullname.jpg)
+{{< figure src="/attachments/howto8/logic-business-rules/string-concatenation/bco_contactperson_createfullname.jpg" >}}

@@ -10,7 +10,7 @@ tags: ["desktop modeler", "consistency errors", "checks", "errors"]
 
 To make sure that your app is always consistent and properly built, the Desktop Modeler does consistency checks when you build your app. When a consistency check is not met, the Desktop Modeler will notify you about this via consistency errors on the **Errors** tab. 
 
-![The Errors tab](/attachments/refguide7/desktop-modeler/consistency-errors/dm-errors-tab.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/dm-errors-tab.png" alt="The Errors tab" >}}
 
 Errors need to be solved before your app can be published. A consistency error can occur in the following editors or functionalities of the modeler:
 

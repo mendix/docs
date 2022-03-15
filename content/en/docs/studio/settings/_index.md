@@ -17,7 +17,7 @@ tags: ["studio", "settings", "widgets"]
 
 To open the **Settings**, click the gear icon in the left menu bar.
 
-![](/attachments/studio/settings/settings-icon.png)
+{{< figure src="/attachments/studio/settings/settings-icon.png" >}}
 
 ## 2 Main Documents in This Category
 

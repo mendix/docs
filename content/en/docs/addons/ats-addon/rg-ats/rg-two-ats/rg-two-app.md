@@ -8,7 +8,7 @@ parent: "rg-two-ats"
 
 The dashboard is where you find all information about the results of your tests. It is split into two parts: **Current Status and 7-Day History** infographics and the **Recent Tests** result tree.
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/dashboard.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/dashboard.png" >}}
 
 ### 1.1 Infographics
 
@@ -48,9 +48,9 @@ The following three icons exist for test cases, test suites, and data-driven tes
 
 | Icon                                     | Meaning    |
 | ---------------------------------------- | ---------- |
-|![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/test-case-icon.png) | Test case  |
-|![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/test-suite-icon.png) | Test suite |
-|![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/ddt-icon.png)| Data-driven test case |
+|{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/test-case-icon.png" >}} | Test case  |
+|{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/test-suite-icon.png" >}} | Test suite |
+|{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/ddt-icon.png" >}}| Data-driven test case |
 
 To open the latest execution log, click **Show Log**. When you click the **name of a test case/test suite**, the edit page opens.
 
@@ -74,7 +74,7 @@ Settings is the central point for configuring ATS. You can set the Mendix API Ke
 
 Only App Admins can access the settings. Testers can only use the available deployments and Selenium hubs.
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/settings.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/settings.png" >}}
 
 {{% /alert %}}
 
@@ -84,7 +84,7 @@ Under **Environments**, you add the different environment URLs that you use for 
 
 You edit, create, and delete the applications by clicking the buttons in the top bar:
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/deployments.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/deployments.png" >}}
 
 When you create a new application, set the following parameters:
 
@@ -97,7 +97,7 @@ When you create a new application, set the following parameters:
 
 Under **Selenium Hubs**, you add the different Selenium hubs that you use for the current app. The users run the tests on the listed hubs. To add a new Selenium hub, click **New** in the top menu:
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/selenium-hub.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/selenium-hub.png" >}}
 
 In the **Edit Selenium Hub** dialog box, set the following parameters:
 

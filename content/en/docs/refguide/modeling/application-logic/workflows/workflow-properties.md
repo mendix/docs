@@ -75,13 +75,13 @@ To add a parameter to the **Workflow name** or the **Workflow description**, do 
 
 3. In the **Template Parameter (String)** dialog box, specify the expression, and confirm your choice. 
 
-    ![Specifying the Attribute](/attachments/refguide/modeling/application-logic/workflows/workflow-properties/specifying-attribute.png)
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-properties/specifying-attribute.png" alt="Specifying the Attribute" >}}
 
     {{% alert color="info" %}}Make sure that the attribute you use in the expression is of the string type.{{% /alert %}}
 
 4. In the **Template** setting, write the text you would like to display and type **Index** of the parameter you would like to include. In the example below, to include a full name of the new hire being onboarded, you need to use {1} index:
 
-    ![Edit Workflow Name Dialog Box](/attachments/refguide/modeling/application-logic/workflows/workflow-properties/edit-workflow-name.png)
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-properties/edit-workflow-name.png" alt="Edit Workflow Name Dialog Box" >}}
 
 ##### 2.4.3.2 Performing Other Actions on Parameters
 

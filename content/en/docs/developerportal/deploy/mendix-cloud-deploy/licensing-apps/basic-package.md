@@ -40,7 +40,7 @@ Select your Free App in the Developer Portal, and click **Environments** in the 
 
 When you view your Free App environment, you will see a banner showing that you are using a Free App.
 
-![Free App banner](/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/basic-package/free-app-message.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/basic-package/free-app-message.png" alt="Free App banner" >}}
 
 To order your Mendix Basic package, do the following:
 
@@ -55,7 +55,7 @@ To order your Mendix Basic package, do the following:
     * **Select the region to deploy your app** – choose your preferred region, we recommend the region where you expect to receive most visitors — these regions correspond to AWS regions
     * **Fill in the number of Users** – the cost of your basic package relates to the number of users
 
-    ![Configuration screen](/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/basic-package/configure-basic-package.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/basic-package/configure-basic-package.png" alt="Configuration screen" >}}
 
     You can see a summary of your basic package on the right-hand side of the screen.
 
@@ -63,7 +63,7 @@ To order your Mendix Basic package, do the following:
 
 5. Enter the invoice details.
 
-    ![Invoice details entry screen](/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/basic-package/invoice-details.png)
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/basic-package/invoice-details.png" alt="Invoice details entry screen" >}}
 
     {{% alert color="info" %}}Ensure that the **Email Address** is monitored. Mendix will use this to send further information about your Mendix Basic package.{{% /alert %}}
 

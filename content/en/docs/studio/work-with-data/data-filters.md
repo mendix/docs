@@ -13,15 +13,11 @@ In Mendix Studio, you can filter data in pages and microflows.
 
 *In a microflow*, you can filter the retrieved data by creating filters for the **Retrieve** activity. To add a filter objects should be retrieved from the database:
 
-{{% image_container width="300" %}}
-![](/attachments/studio/work-with-data/data-filters/retrieve-from-database.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio/work-with-data/data-filters/retrieve-from-database.png"   width="300"  >}}
 
 *In a page*, you can add a filter to a list view or a data grid. Mind that the data source of the list view or the data grid should be **Database**: 
 
-{{% image_container width="300" %}}
-![](/attachments/studio/work-with-data/data-filters/page-database.jpg)
-{{% /image_container %}}
+{{< figure src="/attachments/studio/work-with-data/data-filters/page-database.jpg"   width="300"  >}}
 
 ## 2 Conditions and Groups
 
@@ -29,11 +25,11 @@ A filter consists of conditions and groups.
 
 A *condition* is an expression that restricts the retrieved data. For example, you can retrieve all customers who do not have an email filled out.
 
-![](/attachments/studio/work-with-data/data-filters/filter-condition.png)
+{{< figure src="/attachments/studio/work-with-data/data-filters/filter-condition.png" >}}
 
 When you have more than one condition, `and` and `or` operators are used. For *conditions*, operators define if all (`and` operator) or only one of conditions (`or` operator) should be met. In the example below all three conditions should be satisfied for the data to be retrieved:
 
-![](/attachments/studio/work-with-data/data-filters/and-operator-in-conditions.png)
+{{< figure src="/attachments/studio/work-with-data/data-filters/and-operator-in-conditions.png" >}}
 
 *Groups* are sets of conditions that are connected with `and`  or `or` logic.
 
@@ -47,13 +43,13 @@ In the example below, only program items that meet the following conditions are 
 * If the full name is empty, the description is filled in, and email contains "mendix.com"
 * If the full name is empty, the description is filled in, and email contains "siemens.com"
 
-![](/attachments/studio/work-with-data/data-filters/operators-between-groups.png)
+{{< figure src="/attachments/studio/work-with-data/data-filters/operators-between-groups.png" >}}
 
 ## 3 Operators Used in Conditions
 
 While `and` and `or` operators are used between conditions and groups, other operators are used to define the condition itself.  
 
-![](/attachments/studio/work-with-data/data-filters/operator-examples.png)
+{{< figure src="/attachments/studio/work-with-data/data-filters/operator-examples.png" >}}
 
 Available operators depend on the attribute type you have selected in the left part of a condition. Possible operators used in conditions are described in the table below:
 
@@ -83,34 +79,34 @@ To create a new filter, do the following:
 
 2. Click the **Filter** field.
 
-    {{% image_container width="300" %}}![](/attachments/studio/work-with-data/data-filters/filter-field.png){{% /image_container %}}
+    {{< figure src="/attachments/studio/work-with-data/data-filters/filter-field.png"   width="300"  >}}
 
 3. In the **Add Filter** dialog box, specify the attribute/association on the left first, as operators depend on the type of attribute that you have chosen. For example, if you choose *Date and Time* attribute type, you will be able to select the **in same quarter as** operator, while this operator is unavailable for other attribute types. 
 
-    ![](/attachments/studio/work-with-data/data-filters/in-same-quarter-as-operator-example.png)
+    {{< figure src="/attachments/studio/work-with-data/data-filters/in-same-quarter-as-operator-example.png" >}}
 
 4. Select an operator and a value on the right. 
 
     The value on the right can be a literal value that you type in (only available for string, long, integer, decimal, and autonumber attribute types), or it can be an attribute, association, or value you choose from the drop-down list. The options in the drop-down list depend on the left attribute/association. 
 
-    ![](/attachments/studio/work-with-data/data-filters/list-of-options.png)
+    {{< figure src="/attachments/studio/work-with-data/data-filters/list-of-options.png" >}}
 
 5. To add more conditions and manage them, do the following: <br/>
 
     a. Click **Add new condition**. <br/>
 
-    ![](/attachments/studio/work-with-data/data-filters/add-new-condition.png)<br/>
+    {{< figure src="/attachments/studio/work-with-data/data-filters/add-new-condition.png" >}}<br/>
 
     b. If needed, change the `and` operator to `or` operator clicking the drop-down arrow. <br/>
     c.  If you want to change the order of conditions, click the icon on the left (appears when you hover over it) and drag it.<br/>
 
-    ![](/attachments/studio/work-with-data/data-filters/change-order.png)<br/>
+    {{< figure src="/attachments/studio/work-with-data/data-filters/change-order.png" >}}<br/>
 
 6. To create a new group and manage it, do the following: <br/>
 
     a.  Hover over the bottom of the dialog-box and click **Create a New Group** that appears there.<br/>
 
-    ![](/attachments/studio/work-with-data/data-filters/create-new-group.png)<br/>
+    {{< figure src="/attachments/studio/work-with-data/data-filters/create-new-group.png" >}}<br/>
 
     b. To change the `and` operator applied to groups to `or` operator, click the drop-down arrow. 
 
@@ -130,7 +126,7 @@ To delete a filter, do the following:
 
 3. In the **Edit Filter** dialog box, click **Clear**. 
 
-    ![](/attachments/studio/work-with-data/data-filters/clear-filter.png)
+    {{< figure src="/attachments/studio/work-with-data/data-filters/clear-filter.png" >}}
 
 All conditions in the filter are deleted.
 

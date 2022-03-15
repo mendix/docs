@@ -83,27 +83,27 @@ To access your IoT data using the OData technology provided by the Mendix Data H
 
 1. On the home page you find a card showing the numbers of already existing contracts.
 
-    ![asset-manager](/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_card.png)
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_card.png" alt="asset-manager" >}}
 
 1. Click **View contracts**.
 
 1. You will now see the lists of your already existing contracts or an indication that no contracts are created yet.
 
-    ![asset-manager](/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_first.png)
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_first.png" alt="asset-manager" >}}
 
     If no contracts are available, click **Create contract** to start your first one. If you have already some contracts, click **Add contracts** to add another one.
 
-    ![asset-manager](/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_add.png)
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_add.png" alt="asset-manager" >}}
 
 1. On the left-hand side, you can select the asset types you want to share within this contract. On the right side you will see a preview of all selected types.
 
-    ![asset-manager](/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_wizard_step1.png)
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_wizard_step1.png" alt="asset-manager" >}}
 
 1. Confirm your selection by clicking **Next**.
 
 1. In the **Meta Information** step of the wizard you can specify parameters like the name or the version of your contract. Note that the application name is already pre-filled with a combination of the prefix **mdsp_** and your tenant name. This will help you to find all contracts for your particular tenant within Mendix.
 
-    ![asset-manager](/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_wizard_step2.png)
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_wizard_step2.png" alt="asset-manager" >}}
 
 1. Confirm your meta information by clicking **Next**.
 
@@ -112,7 +112,7 @@ To access your IoT data using the OData technology provided by the Mendix Data H
     * Download your contract – if you want to store the contract yourself or you want to use it with an OData provider other than the Mendix Data Hub
     * Publish the contract to the Mendix Data Hub – you must do this if you want to use the asset information within your Mendix project; it is therefore preselected
 
-    ![asset-manager](/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_wizard_step3.png)
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_wizard_step3.png" alt="asset-manager" >}}
 
 1. Click the **Submit** button to finalize the creation of your contract.
 
@@ -143,13 +143,13 @@ To authenticate your calls you will need to provide the MindSphere IIoT Authenti
 
 5. Click **Create Keys**.
 
-    ![Binding](/attachments/partners/siemens/mindsphere/mindsphere-app-service/create-keys.png)
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/create-keys.png" alt="Binding" >}}
 
     You will see a pop-up containing three pieces of information: **clientID**, **TokenURL**, and **clientSecret**.
 
 6. Click **Copy** for each of these pieces of information and save them somewhere safe – you will not be able to access them again.
 
-    ![Binding](/attachments/partners/siemens/mindsphere/mindsphere-app-service/binding-keys.png)
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/binding-keys.png" alt="Binding" >}}
 
 You can find more information about managing binding keys in the [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) and [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) sections of *Marketplace Overview*.
 
@@ -179,11 +179,11 @@ In the **_Use me** folder of the *MindSphereIIotAuthenticator* module set the fo
 
 In the Consumed OData Service document associated with your MindSphere service, set the **Headers from microflow** to be *MindSphereIIoTAuthenticator.DH_AddAuthHeader*. This ensures that the values you have set in the **Use me** folder are used to authenticate each HTTP request to MindSphere.
 
-![Binding](/attachments/partners/siemens/mindsphere/mindsphere-app-service/data-hub-authentication.png)
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/data-hub-authentication.png" alt="Binding" >}}
 
 Set the **Error handling microflow** to be *MindsphereIIoTAuthenticator.DH_ErrorHandler*. This microflow is executed if there is an error. It logs the error and provides a human readable string of the error, which is shown to the user in an error message. See [Custom Error Handling](#ts-customerrorhandling), below, for further details.
 
-![Binding](/attachments/partners/siemens/mindsphere/mindsphere-app-service/data-hub-error-handling.png)
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/data-hub-error-handling.png" alt="Binding" >}}
 
 ## 5 Using MindSphere IIoT for Makers Through REST Calls{#using-rest}
 
@@ -201,11 +201,11 @@ To extract data from MindSphere, your calls to the MindSphere API need to be aut
 
 This is done by adding an **Access token** action before each **Call REST** action in your microflows. The **Access token** action returns a string which contains an access token which can be used in the **Call REST** action. In the example below, the token string is given the name *Token*.
 
-![Authentication](/attachments/partners/siemens/mindsphere/mindsphere-app-service/access-token.png)
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/access-token.png" alt="Authentication" >}}
 
 In the REST call, an HTTP Header is added called *Authorization* and this is given the value of the access token.
 
-![Authentication](/attachments/partners/siemens/mindsphere/mindsphere-app-service/call-rest.png)
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/call-rest.png" alt="Authentication" >}}
 
 However, authentication will only be successful if the correct credentials are provided to the **Access token** action. This requires the following to be set in the **_Use me** folder of the *MindSphereIIotAuthenticator* module:
 
@@ -213,7 +213,7 @@ However, authentication will only be successful if the correct credentials are p
 * **ClientID** – this is the *clientID* from the binding keys you generated
 * **ClientSecret** – this is the *clientSecret* from the binding keys you generated
 
-![Authentication](/attachments/partners/siemens/mindsphere/mindsphere-app-service/mindsphereiotauthenticator.png)
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/mindsphereiotauthenticator.png" alt="Authentication" >}}
 
 ## 6 Authentication Considerations
 
@@ -296,7 +296,7 @@ For example, Time Series can only be sorted using the timestamp attribute. If yo
 
 Custom Error Handling is possible when using OData in Microflows, for example on a retrieve action. On the error flow of the action you get a human-readable error string in the variable **$latestError/Message**. Use this variable as input to *MindsphereIIoTAuthenticator.DH_MindSphereErrorFromString* to get a *MindSphereError* entity. Now implement your custom error handling, for example based on the **StatusCode** of the error.
 
-![Binding](/attachments/partners/siemens/mindsphere/mindsphere-app-service/data-hub-custom-error-handingScreenshot.png)
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/data-hub-custom-error-handingScreenshot.png" alt="Binding" >}}
 
 ### 9.2 Internal Server Error and Long Names
 

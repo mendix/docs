@@ -23,15 +23,13 @@ The Developer Portal also offers open, well-defined APIs, enabling third-party d
 
 To create a new app click **Create App**, which will open a page where you can choose a starting pointing for your new app:
 
-![](/attachments/developerportal/create-app.png)
+{{< figure src="/attachments/developerportal/create-app.png" >}}
 
 On the right side of the top bar, you can search and access your [Mendix Profile](/developerportal/community-tools/mendix-profile/). You can also click the **+** icon to create a new app.
 
 On the left side of the top bar, you open an access menu by clicking the **Switch to** menu:
 
-{{% image_container width="300" %}}
-![](/attachments/developerportal/switcher.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/switcher.png"   width="300"  >}}
 
 You can then access the following parts of the Mendix Platform:
 
@@ -61,7 +59,7 @@ If you want to turn on the old navigation/header, click your avatar and toggle *
 
 The **My Apps** page shows you a summary of your apps:
 
-![Apps tiles](/attachments/developerportal/apps-tiles.jpg)
+{{< figure src="/attachments/developerportal/apps-tiles.jpg" alt="Apps tiles" >}}
 
 **All** displays all the apps for which you are a [Team](/developerportal/collaborate/team/) member. Any apps you pin with the pin icon will appear in the **Pinned** tab. 
 
@@ -74,7 +72,7 @@ Using the drop-down menu, you can choose to sort the apps in the following ways:
 
 By clicking the ellipsis (**…**) in the app tile, you can quickly perform a number of actions:
 
-![Quick actions menu for an app](/attachments/developerportal/quick-action-menu.jpg)
+{{< figure src="/attachments/developerportal/quick-action-menu.jpg" alt="Quick actions menu for an app" >}}
 
 The actions available depend on the app selected:
 
@@ -88,7 +86,7 @@ To go to the [licensed environments](/developerportal/deploy/environments/) of y
 
 In the header, you can click links to see your **Company Apps** and **Company Buzz**:
 
-![](/attachments/developerportal/company-links.png)
+{{< figure src="/attachments/developerportal/company-links.png" >}}
 
 On the **My Company's Apps** page, you will see all the apps created by members of your [company](/developerportal/control-center/#company).
 
@@ -98,9 +96,7 @@ If you click an app for which you are a team member, you will be taken to the ap
 
 If you click an app for which you are not an team member, you will see the app details:
 
-{{% image_container width="400" %}}
-![Example of app details](/attachments/developerportal/app-details.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/app-details.png" alt="Example of app details"   width="400"  >}}
 
 For details on **Company Buzz**, see the [Company Buzz](/developerportal/collaborate/buzz/#company-buzz) section of *Buzz*.
 
@@ -108,7 +104,7 @@ For details on **Company Buzz**, see the [Company Buzz](/developerportal/collabo
 
 Clicking the question icon in the Developer Portal brings up the options Mendix provides for getting assistance:
 
-![](/attachments/developerportal/developerportal-assistance.jpg)
+{{< figure src="/attachments/developerportal/developerportal-assistance.jpg" >}}
 
 * **Ask the Community** – click this to go to the [Mendix Forum](https://forum.mendixcloud.com/index4.html)
 * **Check the documentation** – click this to go to the [Mendix Documentation](https://docs.mendix.com/)

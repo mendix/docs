@@ -21,11 +21,11 @@ The main difference between workflows and [microflows](/studio/microflows/) is a
 
 To view the workflows of your app in Studio, click the **Workflows** icon in the left menu bar:
 
-![Workflow Icon](/attachments/studio/workflows/workflow-icon.jpg)
+{{< figure src="/attachments/studio/workflows/workflow-icon.jpg" alt="Workflow Icon" >}}
 
 Workflows are a visual way of processing logic in your application. A workflow looks like a flow chart. On a new workflow a *start event* (a starting point of the workflow) and an *end event* (an endpoint of the workflow) are created by default. You can add various activities to a flow of a workflow that is called a *path*.
 
-![Workflow Example](/attachments/studio/workflows/workflow-example.jpg)
+{{< figure src="/attachments/studio/workflows/workflow-example.jpg" alt="Workflow Example" >}}
 
 ## 2 Workflow App Template
 
@@ -61,13 +61,13 @@ To add a workflow to your app in Studio, do the following:
 
 2. Select the module you would like to add a new workflow to and click the plus icon next to this module:
 
-    ![New Workflow](/attachments/studio/workflows/new-workflow.jpg)
+    {{< figure src="/attachments/studio/workflows/new-workflow.jpg" alt="New Workflow" >}}
     
     For more information on what modules are, see [Domain Model](/studio/domain-models/).
 
 3. In the **Create new workflow** dialog box, fill in the name of the workflow and select a workflow entity (for more information on type of entities, see the [Entities and Their Types](/studio/domain-models/#entity-types) section in *Domain Model*):  
 
-    ![Create New Workflow](/attachments/studio/workflows/create-new-workflow.jpg)
+    {{< figure src="/attachments/studio/workflows/create-new-workflow.jpg" alt="Create New Workflow" >}}
 
 4. Click **Create**.
 
@@ -81,7 +81,7 @@ To duplicate a workflow, do the following:
 
 2. In the side panel, click the ellipsis icon and select **Duplicate** in the drop-down menu:
 
-    ![Duplicate a Workflow](/attachments/studio/workflows/duplicate.jpg)
+    {{< figure src="/attachments/studio/workflows/duplicate.jpg" alt="Duplicate a Workflow" >}}
 
 The workflow is duplicated.
 
@@ -93,7 +93,7 @@ To copy and paste a workflow, do the following:
 
 2. In the side panel, click the ellipsis icon and select **Copy to clipboard** in the drop-down menu:
 
-    ![Copy a Workflow](/attachments/studio/workflows/copy.jpg)
+    {{< figure src="/attachments/studio/workflows/copy.jpg" alt="Copy a Workflow" >}}
 
 3. Open the Studio app where you want to paste the workflow and press <kbd>Ctrl</kbd> +<kbd>V</kbd> or <kbd>Cmd</kbd> +<kbd>V</kbd>. 
 
@@ -156,7 +156,7 @@ Do the following:
 
 Now this microflow triggers the selected workflow:
 
-![Call Workflow Example](/attachments/studio/workflows/call-workflow-example.jpg)
+{{< figure src="/attachments/studio/workflows/call-workflow-example.jpg" alt="Call Workflow Example" >}}
 
 ## 4 Toolbox Elements
 
@@ -170,7 +170,7 @@ The **Toolbox** tab contains elements that you can drag and drop on a path. Belo
 
 Elements in the **General** section help you control the workflow path, for example, add parallel paths or end them:
 
-![General Section](/attachments/studio/workflows/workflows-general-activities/general.jpg)
+{{< figure src="/attachments/studio/workflows/workflows-general-activities/general.jpg" alt="General Section" >}}
 
 The elements of this section are described in the table below:
 
@@ -186,13 +186,13 @@ The elements of this section are described in the table below:
 
 [User task](/studio/workflows-user-task/) – a central element in a workflow that allows you to assign a task to a certain user or a group of users using filters or microflows. 
 
-![User Actions](/attachments/studio/workflows/user-actions.jpg)
+{{< figure src="/attachments/studio/workflows/user-actions.jpg" alt="User Actions" >}}
 
 ### 4.3 System Actions {#system}
 
 [Call microflow](/studio/workflow-system-actions/) activity calls a selected microflow. You can use this activity to add application logic to the path of the workflow that does not need user interaction. 
 
-![System Actions](/attachments/studio/workflows/system-actions.jpg)
+{{< figure src="/attachments/studio/workflows/system-actions.jpg" alt="System Actions" >}}
 
 ## 5 Main Documents in This Category
 

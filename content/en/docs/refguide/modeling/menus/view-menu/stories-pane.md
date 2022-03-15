@@ -15,7 +15,7 @@ In the **Stories** pane, you can view the stories and tasks of the current sprin
 
 The **Stories** pane consists of the top bar with various buttons and a table:
 
-![Stories Pane Example](/attachments/refguide/modeling/menus/view-menu/stories-pane/stories-pane.png)
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/stories-pane/stories-pane.png" alt="Stories Pane Example" >}}
 
 The table contains following columns:
 
@@ -61,7 +61,7 @@ When you view the details of a story or task, the **Story Details** pop-up windo
 
 * **Description** – the description of the story/task
 
-    ![Story Details](/attachments/refguide/modeling/menus/view-menu/stories-pane/story-details.png)
+    {{< figure src="/attachments/refguide/modeling/menus/view-menu/stories-pane/story-details.png" alt="Story Details" >}}
 
 ### 2.3 Showing Completed Stories {#show-completed-stories}
 
@@ -73,7 +73,7 @@ If the story is created from a feedback item, you can open a document which the 
 
 To open the document, either click the **Open document** button in the top bar or the corresponding icon in the table:
 
-![Open document icon](/attachments/refguide/modeling/menus/view-menu/stories-pane/open-document-icon.png)
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/stories-pane/open-document-icon.png" alt="Open document icon" >}}
 
 For more information on how to create a story on the basis of a feedback item and add it to your backlog, see the [Adding a Feedback Item to Your Backlog](/developerportal/collaborate/feedback/#adding) section in *Feedback Management*.
 

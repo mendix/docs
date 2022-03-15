@@ -20,15 +20,15 @@ This section will explain how to set the default home page. Please note that thi
 
 1.  Open the **Navigation** editor.
 
-    ![](/attachments/howto7/general/setting-up-the-navigation-structure/18581313.png)
+    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581313.png" >}}
 
-    ![](/attachments/howto7/general/setting-up-the-navigation-structure/18581311.png)
+    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581311.png" >}}
 
 2.  Select either **Responsive**, **Tablet browser**, or **Phone browser** navigation, depending on the device interface you're working on.
 3.  Next to **Home pages** > **Default home page**, click **Select**.
 4.  Select the page you want to use as default home page. In this case, we use _Homepage._
 
-    ![](/attachments/howto7/general/setting-up-the-navigation-structure/18581309.png)
+    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581309.png" >}}
 
 5.  Click **Select**.
 
@@ -46,16 +46,16 @@ In many cases you want users with different roles to see different home pages. T
 4.  In the **Role-based home pages** wizard, click **New**.
 5.  Select a user role to create a new setting. In this case, we select **Administrator**.
 
-    ![](/attachments/howto7/general/setting-up-the-navigation-structure/18581306.png)
+    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581306.png" >}}
 
 6.  Click **Select**.
 7.  Select the role and click **Select target**.
 
-    ![](/attachments/howto7/general/setting-up-the-navigation-structure/18581305.png)
+    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581305.png" >}}
 
 8.  Select the page **Account_Overview** and click **Select**.
 
-    ![](/attachments/howto7/general/setting-up-the-navigation-structure/18581304.png)
+    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581304.png" >}}
 
     Now every time a user with the **Administrator** user role signs in to the application, the corresponding page 'Account_Overview' is shown. Users with different roles will be redirected to the default home page.
 
@@ -70,7 +70,7 @@ This section will explain how to create menu items.
 5.  Enter a **caption**. In this case, enter _Customer Overview_.
 6.  Select a page or microflow as target. In this case, we select the page _CustomerOverview.
 
-    ![](/attachments/howto7/general/setting-up-the-navigation-structure/18581302.png)
+    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581302.png" >}}
 
 7.  Save the menu item by clicking **OK**.
 
@@ -83,11 +83,11 @@ Now that you've created a menu structure it's time to start using it on pages.
 1.  Open a page in the **Page Editor**.
 2.  Click **Add widget** and select **Menu bar**:
 
-    ![](/attachments/howto7/general/setting-up-the-navigation-structure/18581316.png)
+    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581316.png" >}}
 
 3.  Click once in an empty place holder on the page to insert the widget.
 
-    ![](/attachments/howto7/general/setting-up-the-navigation-structure/18581315.png)
+    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581315.png" >}}
 
 4.  Double click the widget to open its properties.
 5.  Select **Project navigation** as menu source. This is the navigation structure defined in the navigation editor. You can also add additional menu structures by use of menu documents and use them instead.

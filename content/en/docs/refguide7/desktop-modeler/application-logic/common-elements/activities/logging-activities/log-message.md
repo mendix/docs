@@ -30,9 +30,9 @@ The log level defines the severity of the log message. In the modeler console do
 | Trace |   | Used for detailed execution traces. |
 | Debug |   | Used to debug execution. |
 | Info |   | Used to log informative messages. |
-| Warning | ![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/logging-activities/log-message/917893.png) | Used to log warnings. These messages appear in orange. |
-| Error | ![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/logging-activities/log-message/917894.png) | Used to log error messages. These messages appear in red. |
-| Critical | ![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/logging-activities/log-message/917895.png) | Used to log critical errors. These messages appear in  white on red  . |
+| Warning | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/logging-activities/log-message/917893.png" >}} | Used to log warnings. These messages appear in orange. |
+| Error | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/logging-activities/log-message/917894.png" >}} | Used to log error messages. These messages appear in red. |
+| Critical | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/logging-activities/log-message/917895.png" >}} | Used to log critical errors. These messages appear in  white on red  . |
 
 _Default value:_ Info
 
@@ -64,7 +64,7 @@ With parameters you can customize your message with data specific to the situati
 
 Defines whether to include the stack trace of the latest error in this log message. In the modeler, log messages that include a stack trace are marked with a paperclip icon:
 
-![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/logging-activities/log-message/917892.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/logging-activities/log-message/917892.png" >}}
 
 Double-clicking these log messages shows the stack trace.
 

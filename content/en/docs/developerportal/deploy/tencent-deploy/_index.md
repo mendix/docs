@@ -34,7 +34,7 @@ To deploy an app to Tencent, you need the following:
 * Mendix Studio Pro China Edition
 
     * You will be able to download Mendix Studio Pro, as part of your initial sign up:
-       ![](/attachments/developerportal/deploy/tencent-deploy/download-studio-pro.png)
+       {{< figure src="/attachments/developerportal/deploy/tencent-deploy/download-studio-pro.png" >}}
     You can also get a copy from the **Get Studio Pro** option in the **Switch to** menu at the top left of **App & Team Management**.
 
 * A Mendix app created with Studio Pro
@@ -45,15 +45,15 @@ To deploy an app to Tencent, you need the following:
 
 Go to the Cluster Manager page by clicking the **Switch to** menu and selecting **Cluster Manager**.
 
-![](/attachments/developerportal/deploy/tencent-deploy/cluster-manager-navigation.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/cluster-manager-navigation.png" >}}
 
 If you have not got any Tencent clusters, you will first have to purchase one. You will see this page: click **[Go To Tencent Cloud Portal](https://cloud.tencent.com/solution/slp) "Siemens Low-Code Platform on Tencent Cloud"** to go to Tencent and purchase the necessary resources.
 
-![](/attachments/developerportal/deploy/tencent-deploy/purchase-resources.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/purchase-resources.png" >}}
 
 When you have one or more clusters, you can see a summary of them with all their namespaces and an indication of the namespace status and how long it has been running (Uptime).
 
-![](/attachments/developerportal/deploy/tencent-deploy/cluster-overview.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/cluster-overview.png" >}}
 
 Each cluster resource you purchase from Tencent automatically contains a number of *namespaces* and you will run your Mendix app inside one of these namespaces. The namespaces are designed to hold separate test, acceptance, and production versions of your app so that resource sharing between the versions is minimized.
 
@@ -64,7 +64,7 @@ You can also see the activities logged for all you clusters by clicking **Activi
 * When name of the cluster is changed
 * When cluster description is changed
 
-![](/attachments/developerportal/deploy/tencent-deploy/cluster-activity-logs.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/cluster-activity-logs.png" >}}
 
 The cluster overview will refresh automatically, but you can force a refresh by clicking **Refresh** at the top of the page.
 
@@ -74,7 +74,7 @@ Click **Details** next to the cluster name to see information about the entire c
 
 In the first tab you can see the **Namespaces** in the cluster and their current status. This duplicates the information you can see in the cluster overview.
 
-![](/attachments/developerportal/deploy/tencent-deploy/cluster-details.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/cluster-details.png" >}}
 
 There are two other tabs:
 
@@ -85,13 +85,13 @@ There are two other tabs:
 
 The **Cluster Managers** tab will show you all the cluster managers for this cluster. The **STATUS** indicates whether the user has accepted an invitation.
 
-![](/attachments/developerportal/deploy/tencent-deploy/cluster-managers.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/cluster-managers.png" >}}
 
 Click **Invite Cluster Manager** to invite another Tencent user to manage this cluster. You will need to know the other person's Tencent ID to invite them.
 
 Click **Invite** to confirm the invitation
 
-![](/attachments/developerportal/deploy/tencent-deploy/cluster-manager-invite.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/cluster-manager-invite.png" >}}
 
 {{% alert color="info" %}}
 When you invite a cluster manager, the user will have most of the access which the original cluster manager had, such as the abilities to add a member, change the permissions of the cluster member, and delete another cluster manager. 
@@ -141,13 +141,13 @@ You can also see an activity log containing the following information for all na
 * When a user is removed as a namespace member
 * When user's permission is changed in the namespace
 
-![](/attachments/developerportal/deploy/tencent-deploy/namespace-activity-logs.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/namespace-activity-logs.png" >}}
 
 #### 3.3.1 Apps
 
 The **Apps** tab of namespace details lists all the apps which are deployed to this namespace.
 
-![](/attachments/developerportal/deploy/tencent-deploy/namespace-apps.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/namespace-apps.png" >}}
 
 If you are a team member of the app, click **Details** to go to the *Environment Details* page for that app.
 
@@ -190,7 +190,7 @@ You can invite additional members to the namespace, and configure their role dep
 
 2. Click **Invite Member**.
    
-    ![](/attachments/developerportal/deploy/tencent-deploy/namespace-members.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/namespace-members.png" >}}
 
 3. Enter the **Tencent ID** of the person you want to invite.
 
@@ -202,7 +202,7 @@ You can invite additional members to the namespace, and configure their role dep
 
 5. Click **Invite** to send an invite to this person.
    
-    ![](/attachments/developerportal/deploy/tencent-deploy/namespace-member-invite.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/namespace-member-invite.png" >}}
 
 6. The next time the user signs in to the Mendix Developer Portal, they will be added to the namespace.
 
@@ -212,7 +212,7 @@ You can remove existing members.
 
 1. On the **Members** tab of the namespace details, click **Remove** next to the member you want to remove.
         
-    ![](/attachments/developerportal/deploy/tencent-deploy/namespace-member-remove.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/namespace-member-remove.png" >}}
 
 If you want to change the rights for an existing member, you will have to remove them and then add them again with the updated rights.
 
@@ -220,7 +220,7 @@ If you want to change the rights for an existing member, you will have to remove
 
 The **Operate** tab allows you to add a set of links which are used when users request a page from the Operate category for their app in the Developer Portal, as shown below.
 
-![](/attachments/developerportal/deploy/tencent-deploy/image31.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/image31.png" >}}
 
 The following pages can be configured:
 
@@ -233,14 +233,14 @@ The specification of these pages is optional.
 
 Open the **Operate** tab, enter the URLs relevant to your namespace, and click **Save** for each one.
 
-![](/attachments/developerportal/deploy/tencent-deploy/image32.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/image32.png" >}}
 
 ## 4 Deploying an App for the First Time
 
 ### 4.1 Creating an Environment{#create-environment}
 When deploying your app for the first time, there will be no environments and no deployment packages available. The **Environments** page for your app in the Developer Portal will show you the current status.
 
-![](/attachments/developerportal/deploy/tencent-deploy/environments-none.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/environments-none.png" >}}
 
 First you need to create an environment:
 
@@ -264,7 +264,7 @@ First you need to create an environment:
 
 6. Click **Next**.
    
-    ![](/attachments/developerportal/deploy/tencent-deploy/create-environment.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/create-environment.png" >}}
 
 7. Select **Core Resources**.
 
@@ -285,13 +285,13 @@ First you need to create an environment:
 
 9. Select a **Storage plan** from the list of plans in the dropdown. This will have the format `file-plan-…` where the suffix reflects the environment.
    
-    ![](/attachments/developerportal/deploy/tencent-deploy/image7.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image7.png" >}}
 
 10. Click **Create Environment**.
 
 11. You will see your new environment listed. An *in-progress* icon will be shows next to the resource plans until they have been provisioned.
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/environments-new.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/environments-new.png" >}}
 
 You will not be able to deploy to this environment until it has been fully prepared. This means that all the resource plans have been confirmed and that the placeholder app has been successfully deployed. See [Deploying the Deployment Package](#deploy-package), below, for instructions on how to check that the environment has been created successfully.
 
@@ -305,15 +305,15 @@ There is a limit of 200MB on the size of a deployment package which can be deplo
 
 1. On the **Environments** page for your app in the Developer Portal, click **Create Package**.
    
-    ![](/attachments/developerportal/deploy/tencent-deploy/image9.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image9.png" >}}
 
 2. Select the branch which contains the commit for which you want to create a deployment package and click **Next**.
    
-    ![](/attachments/developerportal/deploy/tencent-deploy/image10.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image10.png" >}}
 
 3. Select the revision/commit for which you want to create a deployment package and click **Next**.
    
-    ![](/attachments/developerportal/deploy/tencent-deploy/image11.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image11.png" >}}
 
 4. Enter a **New version** and **Tag description** according to your own deployment procedure.
 
@@ -321,7 +321,7 @@ There is a limit of 200MB on the size of a deployment package which can be deplo
 
 6. Click **Build this revision.**
    
-    ![](/attachments/developerportal/deploy/tencent-deploy/image12.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image12.png" >}}
 
 7. Confirm the information message and you will be returned to the **Environments** page.
 
@@ -335,11 +335,11 @@ You can also deploy an existing deployment package to an environment without hav
 
 After creating an environment and deployment package (see [Creating an Environment](#create-environment) and [Creating a Deployment Package](#create-deployment-package), above) you will now have a deployment package and an environment. Check that there is a green tick next to the deployment package and the resources of the environment. If any of these have failed, try to create the environment or the deployment package again, and contact your cluster manager. If neither of these solves the problem. contact Tencent support using the **help** option in the [Tencent Cloud Console](https://console.cloud.tencent.com/).
 
-![](/attachments/developerportal/deploy/tencent-deploy/image13.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/image13.png" >}}
 
 You also need to check that the **PlaceholderMDA**, an initial app which is deployed by default to your environment, has successfully built and is running.
 
-![](/attachments/developerportal/deploy/tencent-deploy/image14.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/image14.png" >}}
 
 If everything has been created successfully, and the PlaceholderMDA has been built and is running, you can deploy the deployment package of your app by doing the following:
 
@@ -351,7 +351,7 @@ If everything has been created successfully, and the PlaceholderMDA has been bui
 
 4. Click **Transport**.
    
-    ![](/attachments/developerportal/deploy/tencent-deploy/image15.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image15.png" >}}
 
 5. Change any constants in the **Constants** tab: select the constant you want to edit and then click **Edit**.
 
@@ -359,7 +359,7 @@ If everything has been created successfully, and the PlaceholderMDA has been bui
 
 7. Click **Continue** to continue to the Start Application confirmation page.
    
-    ![](/attachments/developerportal/deploy/tencent-deploy/image16.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image16.png" >}}
 
 8. Click **Apply Changes** to deploy the application to the selected environment. The app will start automatically once the deployment is successful.
 
@@ -377,7 +377,7 @@ The **Environments** page of the Developer Portal contains three sections:
 
 This lists the deployment packages which have been created for this app.
 
-![](/attachments/developerportal/deploy/tencent-deploy/image17.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/image17.png" >}}
 
 There are five buttons:
 
@@ -409,7 +409,7 @@ This allows you to upload an MDA package you have already created. The uploaded 
 
 This displays details of the deployment package.
 
-![](/attachments/developerportal/deploy/tencent-deploy/image18.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/image18.png" >}}
 
 The information shows here is labeled to help you. The indicators in the environment description are described in the next section, [Environments](#environments), below.
 
@@ -427,7 +427,7 @@ This deploys the package to an existing environment as described in [Deploying t
 
 This section shows all the environments created for this app.
 
-![](/attachments/developerportal/deploy/tencent-deploy/image19.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/image19.png" >}}
 
 For each environment, you can see a summary of the status of the resources and details of the package which is running in the environment (if there is one).
 
@@ -498,7 +498,7 @@ This button contains a list of actions which you can perform quickly on the envi
 
 This section shows all the activities, such as creating environments and deploying apps, which have taken place in this environment. You can sort the activities in either descending or ascending date and time order.
 
-![](/attachments/developerportal/deploy/tencent-deploy/image20.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/image20.png" >}}
 
 ## 6 Managing Your Environments from the Environment Details Page{#environment-details}
 
@@ -506,7 +506,7 @@ Each environment you create has an **Environment Details** page which allows you
 
 If you have any outstanding changes to your environment the page will display a warning message. If you click **Apply Changes**, the environment will be stopped and restarted.
 
-![](/attachments/developerportal/deploy/tencent-deploy/image21.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/image21.png" >}}
 
 The environment details page consists of seven tabs:
 
@@ -524,7 +524,7 @@ These tabs are described below.
 
 The general tab shows information about your running app.
 
-![](/attachments/developerportal/deploy/tencent-deploy/image22.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/image22.png" >}}
 
 Most of the information is self-explanatory, but the status information gives you a quick summary of the status of the environment and the app deployed there.
 
@@ -554,7 +554,7 @@ Allows you to deploy the deployment package in the current environment to anothe
 
 This allows you to scale your app by increasing the number of replicas.
 
-![](/attachments/developerportal/deploy/tencent-deploy/image23.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/image23.png" >}}
 
 To apply the new value, click **Restart the App and Scale**. Because you restart your app, it will be unavailable for a short time.
 
@@ -574,7 +574,7 @@ If the cluster is standalone, or the Mendix Gateway Agent is not connected for s
 
 If the environment cannot be deleted, you will receive a warning, but can go ahead and remove it from the Developer Portal.
 
-![](/attachments/developerportal/deploy/tencent-deploy/delete-environment.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/delete-environment.png" >}}
 
 ##### 6.1.3.7 Change Purpose
 
@@ -596,7 +596,7 @@ Subscription secrets are obtained from Tencent.
 
 The **Model Options** tab allows you to change the configuration of scheduled events and constants in your app.
 
-![](/attachments/developerportal/deploy/tencent-deploy/image24.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/image24.png" >}}
 
 To toggle any scheduled events, select the scheduled event you want to enable or disable and click **Toggle**.
 
@@ -606,19 +606,19 @@ To change any constants, select the constant you want to edit and then click **E
 
 On the **Network** tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections.
 
-![](/attachments/developerportal/deploy/tencent-deploy/network-tab.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/network-tab.png" >}}
 
 ### 6.4 Runtime Tab
 
 On the **Runtime** tab, you can change various runtime settings for your app environment. For more details of these, see the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details*.
 
-![](/attachments/developerportal/deploy/tencent-deploy/runtime-tab.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/runtime-tab.png" >}}
 
 ### 6.5 Log Levels Tab
 
 On the **Log Levels** tab, you can change the log levels which are used for the log nodes in your app. For more details of these, see the [Log Levels Tab](/developerportal/deploy/environments-details/#log-levels) section of *Environment Details*.
 
-![](/attachments/developerportal/deploy/tencent-deploy/log-levels-tab.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/log-levels-tab.png" >}}
 
 ### 6.6 TLS
 
@@ -630,23 +630,23 @@ In the TLS pane, you can choose whether to **Apply Default Configuration** or a 
 If you are using a version of Mendix Operator before 1.5.0, the settings in this tab will have no effect and the default configuration will be applied.
 {{% /alert %}}
 
-![](/attachments/developerportal/deploy/tencent-deploy/tls-configuration.png)
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/tls-configuration.png" >}}
 
 If you choose a custom TLS configuration, you will need to enter the following information:
 
 * Enable TLS – is TLS enabled for this environment?
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/enable-tls.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/enable-tls.png" >}}
 
 * Use existing TLS secret or add new tls private key and certificate?
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/choose-secret.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/choose-secret.png" >}}
 
 * Existing Secret Name – if you choose an existing TLS secret then you will be asked to enter its name
 
 * TLS Private Key File and TLS Certificate File – if you choose to add a new key you will need to upload these two files
 
-    ![](/attachments/developerportal/deploy/tencent-deploy/new-tls-key.png)
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/new-tls-key.png" >}}
 
 Click **Save** to confirm your new configuration.
 

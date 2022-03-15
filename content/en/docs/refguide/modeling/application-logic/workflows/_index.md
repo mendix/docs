@@ -23,7 +23,7 @@ A workflow is composed of elements that you can drag and drop on a path. Below i
 ### 2.1 Workflow Parameters {#parameters}
 
 A [workflow parameter](/refguide/workflow-parameters/) is input data for your workflow. The **WorkflowContext** parameter is a business-related data that travels through the workflow:
-![Workflow Context Example](/attachments/refguide/modeling/application-logic/workflows/workflow-context.png)
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-context.png" alt="Workflow Context Example" >}}
 
 ### 2.2 General {#general}
 
@@ -33,11 +33,11 @@ The elements of this category are described in the table below:
 
 | Graphic                                                     | Element                           | Description                                                  |
 | ----------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------ |
-| ![Start Event](/attachments/refguide/modeling/application-logic/workflows/start-event.png)    | Start event                    | The starting point of a workflow. Workflows are triggered either by the [Call workflow](/refguide/on-click-event/#call-workflow) on-click event on pages or by the [Workflow call](/refguide/workflow-call/) action in microflows. <br />Click the start event to open [workflow properties](/refguide/workflow-properties/). |
-| ![Decision](/attachments/refguide/modeling/application-logic/workflows/decision.png)             | [Decision](/refguide/decision-in-workflows/) | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
-| ![Parallel Split](/attachments/refguide/modeling/application-logic/workflows/parallel-split.png) | [Parallel split](/refguide/parallel-split/)  | Adds two parallel paths to your workflow.                    |
-| ![Jump Activity](/attachments/refguide/modeling/application-logic/workflows/jump.png)            | [Jump](/refguide/jump-activity/)             | Allows you to jump to other activities in the workflow.      |
-| ![End event](/attachments/refguide/modeling/application-logic/workflows/end-event.png)        | End event                      | Ends the path of the workflow                                |
+| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/start-event.png" alt="Start Event" >}}    | Start event                    | The starting point of a workflow. Workflows are triggered either by the [Call workflow](/refguide/on-click-event/#call-workflow) on-click event on pages or by the [Workflow call](/refguide/workflow-call/) action in microflows. <br />Click the start event to open [workflow properties](/refguide/workflow-properties/). |
+| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/decision.png" alt="Decision" >}}             | [Decision](/refguide/decision-in-workflows/) | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/parallel-split.png" alt="Parallel Split" >}} | [Parallel split](/refguide/parallel-split/)  | Adds two parallel paths to your workflow.                    |
+| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/jump.png" alt="Jump Activity" >}}            | [Jump](/refguide/jump-activity/)             | Allows you to jump to other activities in the workflow.      |
+| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/end-event.png" alt="End event" >}}        | End event                      | Ends the path of the workflow                                |
 
 {{% alert color="info" %}}
 You can add customized activities to this section if you use the **Expose as a workflow action** setting in microflows. For more information see the [Expose as Workflow Action](/refguide/microflow/#expose-as-workflow-action) section in *Microflow Properties*.
@@ -47,13 +47,13 @@ You can add customized activities to this section if you use the **Expose as a w
 
 [User task](/refguide/user-task/) – a central element in a workflow that allows you to assign a task to a certain user or a group of users using filters or microflows. 
 
-![User Task](/attachments/refguide/modeling/application-logic/workflows/user-task.png)
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/user-task.png" alt="User Task" >}}
 
 ### 2.4 System Actions {#system}
 
 [Call microflow](/refguide/call-microflow/) activity calls a selected microflow. 
 
-![Call Microflow](/attachments/refguide/modeling/application-logic/workflows/call-microflow.png)
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/call-microflow.png" alt="Call Microflow" >}}
 
 ## 3 Performing Basic Functions
 
@@ -82,7 +82,7 @@ To add a workflow to your app, do the following:
 
 2. In the **Add workflow** dialog box, fill in Name and click **OK**:
 
-    ![Adding Workflow](/attachments/refguide/modeling/application-logic/workflows/add-workflow-dialog.jpg)
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/add-workflow-dialog.jpg" alt="Adding Workflow" >}}
 
 The workflow is created and the **WorkflowInstance** entity is added to the domain model. For more information on the **WorkflowInstance** entity, see [Workflow Parameters](/refguide/workflow-parameters/).
 
@@ -155,7 +155,7 @@ Do the following:
 
 6. Set **Context object** to the workflow context:
 
-    ![Call Workflow Example](/attachments/refguide/modeling/application-logic/workflows/call-workflow-example.png)
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/call-workflow-example.png" alt="Call Workflow Example" >}}
 
 7. Click **OK**.
 

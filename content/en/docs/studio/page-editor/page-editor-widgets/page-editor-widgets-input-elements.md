@@ -11,12 +11,11 @@ tags: ["studio", "page editor", "input elements", "input widgets", "widgets"]
 
 **Input Elements** are [widgets](/studio/page-editor-widgets/) in Mendix Studio that are typically used to allow end-users enter or edit data. For example, a text box below allows users to fill in their full names:
 
-{{% image_container width="350" %}}![](/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-input-elements/text-box-example.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-input-elements/text-box-example.png"   width="350"  >}}
 
 **Input Elements** can only function inside a data container (a data view, a list view, or a data grid). You can either place widget in an existing data container; or click **Wrap with a new data view** in **Properties** to create a data view and place an input element inside it automatically. 
 
-![](/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-input-elements/wrap-in-data-view.png)
+{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-input-elements/wrap-in-data-view.png" >}}
 
 ## 2 Input Elements Overview
 
@@ -58,7 +57,7 @@ This option is only available for **Text Box**, **Text Area**, **Radio Buttons**
 
 The **Type** option allows you to quickly change the type of one input element to a similar one: you can change a **Text Box** to a **Text Area** and vice versa, and change **Radio Buttons** to a **Check Box** or a **Drop-Down** and vice versa:
 
-![Type Option](/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-input-elements/input-widget-type.jpg)
+{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-input-elements/input-widget-type.jpg" alt="Type Option" >}}
 
 ### 3.2 Data Source Section {#input-elements-data-source}
 
@@ -145,9 +144,7 @@ The **Format** section is specific for the **Date Picker** widget only.
 
 In **Input Validation**, you can specify whether the widget's value should be validated. You can set a validation type for an input widget and specify an end-user message in case validation fails. For example, you can mark the **Full name** field as required for new customers and you can add a message saying: "Please specify your name to proceed".
 
-{{% image_container width="350" %}}
-![](/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-input-elements/Validation-type-required.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-input-elements/Validation-type-required.png"   width="350"  >}}
 
 
 The **Input Validation** section properties are described in the table below:

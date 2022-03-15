@@ -14,7 +14,7 @@ When creating a new app, you can do the following with this dialog box:
 * Enter the location of the **Project directory** where the project files for your app are stored.
 
 These settings are optional. You can click **Create app** to create your app with the default settings.
-![](/attachments/refguide7/desktop-modeler/dialogs/app-settings-dialog/app-settings-dialg-box.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/dialogs/app-settings-dialog/app-settings-dialg-box.png" >}}
 
 ## 2 App Name
 

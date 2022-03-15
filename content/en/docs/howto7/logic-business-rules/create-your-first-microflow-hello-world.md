@@ -23,17 +23,17 @@ To create a menu item, follow these steps:
 
 1.  Open the **Navigation** editor, add a menu item in the desktop navigation settings, and enter the caption of *Hello World*:
 
-    ![](/attachments/howto7/logic-business-rules/create-your-first-microflow-hello-world/18580978.png)
+    {{< figure src="/attachments/howto7/logic-business-rules/create-your-first-microflow-hello-world/18580978.png" >}}
 
 2.  Click **Select...** in the **Target** section of the **New Menu Item** dialog box to open the **Select Navigation Target** pop-up window:
 
 3.  For **On click**, select **Call a microflow**:
 
-    ![](/attachments/howto7/logic-business-rules/create-your-first-microflow-hello-world/18580977.png)
+    {{< figure src="/attachments/howto7/logic-business-rules/create-your-first-microflow-hello-world/18580977.png" >}}
 
 4.  In the **Select Microflow** dialog box, select a microflow and then click **New**:
 
-    ![](/attachments/howto7/logic-business-rules/create-your-first-microflow-hello-world/microflow.png)
+    {{< figure src="/attachments/howto7/logic-business-rules/create-your-first-microflow-hello-world/microflow.png" >}}
 
 5. Enter *HelloWorld* for the **Name** of the new microflow.
 6. Save the new menu item by clicking **OK**.
@@ -44,28 +44,28 @@ To edit the new microflow, follow these steps:
 
 1.  Open the new microflow by right-clicking the new menu item created in [2 Creating a Menu Item](#CreatingaMenuItem) and selecting **Go to target** from the context menu:
 
-    ![](/attachments/howto7/logic-business-rules/create-your-first-microflow-hello-world/18580975.png)
+    {{< figure src="/attachments/howto7/logic-business-rules/create-your-first-microflow-hello-world/18580975.png" >}}
 
     You will see an empty microflow like this:
 
-    ![](/attachments/howto7/logic-business-rules/create-your-first-microflow-hello-world/18580974.png)
+    {{< figure src="/attachments/howto7/logic-business-rules/create-your-first-microflow-hello-world/18580974.png" >}}
 
 2.  Open the **Toolbox** in the lower-right corner of the Modeler:
     
-    ![](/attachments/howto7/logic-business-rules/create-your-first-microflow-hello-world/18580967.png)
+    {{< figure src="/attachments/howto7/logic-business-rules/create-your-first-microflow-hello-world/18580967.png" >}}
 
 3.  Drag a **Show message** action from the **Toolbox** to the line between the green start even and red end event, which will insert a show message action activity:
 
-    ![](/attachments/howto7/logic-business-rules/create-your-first-microflow-hello-world/18580972.png)
+    {{< figure src="/attachments/howto7/logic-business-rules/create-your-first-microflow-hello-world/18580972.png" >}}
 
 4. Double-click the message activity to open the **Show Message** properties editor.
 5.  Enter *Hello World* for the **Template** value and click **OK**:
 
-    ![](/attachments/howto7/logic-business-rules/create-your-first-microflow-hello-world/18580970.png)
+    {{< figure src="/attachments/howto7/logic-business-rules/create-your-first-microflow-hello-world/18580970.png" >}}
 
 6.  Run the application locally and click **View** to see the application in your default browser:
 
-    ![](/attachments/howto7/logic-business-rules/create-your-first-microflow-hello-world/18580968.png)
+    {{< figure src="/attachments/howto7/logic-business-rules/create-your-first-microflow-hello-world/18580968.png" >}}
 
 7. Locate the new navigation item in the menu bar and click it to see the message.
 

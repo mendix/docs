@@ -14,6 +14,6 @@ Only if the last activity of the flow inside the loop ends with a break event, t
 
 Let us say you have a list of objects of the entity 'OrderLine' and you want to set the purchase date for only the paid order lines. This can be done using a loop with an exclusive split, a continue event and a change activity. The exclusive split determines whether the order line is paid or not. If the order line is paid the purchase date is set by a change activity and the looped activity starts with the next order line. If the order line is not paid the loop starts with the next order line because of the continue event.
 
-![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/events/continue-event/917941.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/events/continue-event/917941.png" >}}
 
 {{% /alert %}}

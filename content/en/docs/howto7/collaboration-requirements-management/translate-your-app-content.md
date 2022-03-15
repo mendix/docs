@@ -23,11 +23,11 @@ The app language is the main language of the app when it is run. There must be a
 
 1.  In the **Project Explorer**, open the app **Settings** and go to the **Languages** tab.
 
-    ![](/attachments/howto7/collaboration-requirements-management/translate-your-app-content/01_project_settings.png)
+    {{< figure src="/attachments/howto7/collaboration-requirements-management/translate-your-app-content/01_project_settings.png" >}}
 
 2.  Click **Add**, select the desired language, and click **OK**.
 
-    ![](/attachments/howto7/collaboration-requirements-management/translate-your-app-content/02_dutch.png)
+    {{< figure src="/attachments/howto7/collaboration-requirements-management/translate-your-app-content/02_dutch.png" >}}
 
 If you want to set a different language as the default, you can do that in the **Default language** drop-down menu on the **Languages** tab.
 
@@ -39,7 +39,7 @@ The development language is the language used to define translatable texts as yo
 
 You can change the language setting if desired in the Modeler by going to: **Language > Current Language**.
 
-![](/attachments/howto7/collaboration-requirements-management/translate-your-app-content/04_switch_development_language.png)
+{{< figure src="/attachments/howto7/collaboration-requirements-management/translate-your-app-content/04_switch_development_language.png" >}}
 
 Mendix recommends setting your development language at the start of your app, because all the added text (for example, button labels) will be added to the selected language library (so that it can be reused in other apps).
 
@@ -51,7 +51,7 @@ When your app is deployed with labels that don’t yet have a translation, these
 
 To update the language settings in the Modeler, go to **Language > Language Operations**.
 
-![](/attachments/howto7/collaboration-requirements-management/translate-your-app-content/language_operations.png)
+{{< figure src="/attachments/howto7/collaboration-requirements-management/translate-your-app-content/language_operations.png" >}}
 
 In the **Selection** section of the dialog window, you can select the documents and modules that you want to update. The columns of languages for which there are items but which are not included in the app are gray.
 
@@ -82,7 +82,7 @@ To search for phrases that look similar and replace them as a batch, follow thes
 2. In the **Source text contains** field of the **Batch replace** dialog window, enter the word you want to search for.
 3.  The results will appear in the table with the column headers **Text** and **Replace with** (as in the example image below, in which "Schedule" is being searched).
 
-    ![](/attachments/howto7/collaboration-requirements-management/translate-your-app-content/08_batch_replace_2.png)
+    {{< figure src="/attachments/howto7/collaboration-requirements-management/translate-your-app-content/08_batch_replace_2.png" >}}
 
 4. Enter the new replacement text under **Replace with**, and then click **Replace**.
 
@@ -106,7 +106,7 @@ To enable batch translation, follow these steps:
 3. In the **Source text contains** field of the **Batch translate** dialog box, enter the word you want to search for.
 4.  The results will appear in the table with the column headers **Source** and **Translation** (as in the example image below, in which "Password" is being searched).
 
-    ![](/attachments/howto7/collaboration-requirements-management/translate-your-app-content/11_filter_module.png)
+    {{< figure src="/attachments/howto7/collaboration-requirements-management/translate-your-app-content/11_filter_module.png" >}}
 
 5. Enter the translated text for the various results under **Translation**, and then click **Translate**.
 

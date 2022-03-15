@@ -11,7 +11,7 @@ tags: ["Studio Pro", "menu", "top bar"]
 
 The top-bar of Studio Pro contains the following menus:
 
-![Menu-bar](/attachments/refguide/modeling/menus/menu-bar.png)
+{{< figure src="/attachments/refguide/modeling/menus/menu-bar.png" alt="Menu-bar" >}}
 
 * [Switch-to](#switch-to) – allows you to navigate to other parts of the platform
 * [File](#file) – allows you to manage documents and apps

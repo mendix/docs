@@ -63,15 +63,11 @@ You can tell end-users that they need to have installed certain software require
 
 Add images that clearly show the specific functionality of the related step (so the reader can check that the image matches what they see on their screen). For example, the arrows and flow on this screenshot are too busy and not clear enough for the user:
 
-{{% image_container width="500" %}}
-![](/attachments/developerportal/community-tools/contribute-to-the-mendix-documentation/documentation-writing-guidelines/image_examples.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/community-tools/contribute-to-the-mendix-documentation/documentation-writing-guidelines/image_examples.png"   width="500"  >}}
 
 Add boxes, indicators, arrows, and other information to an image only if it makes the image more understandable:
 
-{{% image_container width="400" %}}
-![](/attachments/developerportal/community-tools/contribute-to-the-mendix-documentation/documentation-writing-guidelines/image_examples2.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/community-tools/contribute-to-the-mendix-documentation/documentation-writing-guidelines/image_examples2.png"   width="400"  >}}
 
 Keep the images as simple as possible, because having too many arrows on an image can make it confusing!
 

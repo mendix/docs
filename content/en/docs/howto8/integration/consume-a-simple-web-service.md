@@ -27,19 +27,19 @@ To import a WSDL, follow these steps:
 
 2. Enter a name for the new consumed web service (for example, *TemperatureConverter*):
 
-    ![](/attachments/howto8/integration/consume-a-simple-web-service/18582086.png)
+    {{< figure src="/attachments/howto8/integration/consume-a-simple-web-service/18582086.png" >}}
 
 3. Click **OK**. You will now see the **Consumed Web Service** screen. Click **Edit**. Enter `https://www.w3schools.com/xml/tempconvert.asmx?wsdl` as the **URL** and click **Import**.
 
-    ![](/attachments/howto8/integration/consume-a-simple-web-service/wsdl-source.png)
+    {{< figure src="/attachments/howto8/integration/consume-a-simple-web-service/wsdl-source.png" >}}
 
 4.  The **Select Ports** dialog box is displayed for selecting a web service port:
 
-    ![](/attachments/howto8/integration/consume-a-simple-web-service/18582065.png)
+    {{< figure src="/attachments/howto8/integration/consume-a-simple-web-service/18582065.png" >}}
 
 5. Click **OK** to select the default, and click **OK** to close the **WSDL Source** dialog. The operations **CelsiusToFahrenheit** and **FahrenheitToCelsius** will now be imported into the project.
 
-    ![](/attachments/howto8/integration/consume-a-simple-web-service/18582084.png)
+    {{< figure src="/attachments/howto8/integration/consume-a-simple-web-service/18582084.png" >}}
 
 ## 3 Creating Logic to Call the Web Service
 
@@ -49,31 +49,31 @@ To create logic to call the web service, follow these steps:
 
 2.  Enter a name for the new microflow (for example, *ConvertCelsiusToFahrenheit*) and click **OK**.
 
-    ![](/attachments/howto8/integration/consume-a-simple-web-service/18582083.png)
+    {{< figure src="/attachments/howto8/integration/consume-a-simple-web-service/18582083.png" >}}
 
 3.  An empty microflow will be displayed:
 
-    ![](/attachments/howto8/integration/consume-a-simple-web-service/18582081.png)
+    {{< figure src="/attachments/howto8/integration/consume-a-simple-web-service/18582081.png" >}}
 
 4.  Open the **Toolbox** and drag a **Create variable** activity to the line between the start and end event.
 
-    ![](/attachments/howto8/integration/consume-a-simple-web-service/8946802.png)
+    {{< figure src="/attachments/howto8/integration/consume-a-simple-web-service/8946802.png" >}}
 
 5. Double-click the new activity to open the **Create Variable** properties editor.
 
 6. For the **Data Type**, select **Integer/Long** and enter *100* as the value. For the **Output Variable Name** enter *TemperatureInCelsius*:
 
-    ![](/attachments/howto8/integration/consume-a-simple-web-service/18582080.png)
+    {{< figure src="/attachments/howto8/integration/consume-a-simple-web-service/18582080.png" >}}
 
 7.  Click **OK.** The microflow will look like this:
 
-    ![](/attachments/howto8/integration/consume-a-simple-web-service/18582079.png)
+    {{< figure src="/attachments/howto8/integration/consume-a-simple-web-service/18582079.png" >}}
 
 8. Drag a **Call web service** activity from the toolbox and add it to the microflow just before the end event.
 
 9. Double-click this activity to open the **Call Web Service** properties editor. For the **Operation** of your consumed web service, click **Select**. Expand the **TemperatureConverter** web service and under **TempConvert** click **CelsiusToFahrenheit** and click **Select**:
 
-    ![](/attachments/howto8/integration/consume-a-simple-web-service/18582076.png)
+    {{< figure src="/attachments/howto8/integration/consume-a-simple-web-service/18582076.png" >}}
 
 10. In the **Location** section for this operation , check the **Override location** box to override the location and use the secure location of the web service.
 
@@ -81,15 +81,15 @@ To create logic to call the web service, follow these steps:
 
 12. In the **SOAP Request Body** tab of the **Call Web Service** properties editor, double-click the **Celsius (optional)** input parameter and enter `toString($TemperatureInCelsius)` for the expression. The web service operation expects a string value, which is why you need to use the `toString` function. Then click **OK**.
 
-    ![](/attachments/howto8/integration/consume-a-simple-web-service/18582075.png)
+    {{< figure src="/attachments/howto8/integration/consume-a-simple-web-service/18582075.png" >}}
 
 13. In the **SOAP Response** tab, select **Yes** for the **Store in variable** option. Enter *TemperatureInFahrenheit* for the **Variable name**:
 
-    ![](/attachments/howto8/integration/consume-a-simple-web-service/call-web-serv-SOAP-resp.png)
+    {{< figure src="/attachments/howto8/integration/consume-a-simple-web-service/call-web-serv-SOAP-resp.png" >}}
 
 14. Click **OK**. The microflow will look like this:
 
-    ![](/attachments/howto8/integration/consume-a-simple-web-service/18582073.png)
+    {{< figure src="/attachments/howto8/integration/consume-a-simple-web-service/18582073.png" >}}
 
 15. Drag a **Show message** activity from the **Toolbox** to the line before the end event.
 
@@ -97,15 +97,15 @@ To create logic to call the web service, follow these steps:
 
 17. Select **Information** as the **Type**, and enter *The temperature in Fahrenheit is: {1}* for the **Template**. The *{1}* functions as a placeholder for the parameters.
 
-    ![](/attachments/howto8/integration/consume-a-simple-web-service/18582071.png)
+    {{< figure src="/attachments/howto8/integration/consume-a-simple-web-service/18582071.png" >}}
 
 19. Create a new parameter and enter `$TemperatureInFahrenheit` for the expression (this is the return value of the web service operation) and click **OK**:
 
-    ![](/attachments/howto8/integration/consume-a-simple-web-service/18582072.png)
+    {{< figure src="/attachments/howto8/integration/consume-a-simple-web-service/18582072.png" >}}
 
 20. Click **OK** again to save the show message activity values. The microflow now looks like this:
 
-    ![](/attachments/howto8/integration/consume-a-simple-web-service/18582070.png)
+    {{< figure src="/attachments/howto8/integration/consume-a-simple-web-service/18582070.png" >}}
 
 21. Create a menu item that triggers this microflow. For details on how to create a menu item, see [How to Set Up the Navigation Structure](/howto8/general/setting-up-the-navigation-structure/).
 

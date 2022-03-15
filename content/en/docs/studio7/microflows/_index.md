@@ -26,14 +26,13 @@ Examples of using microflows can be the following:
 
 To view the microflows of your app in Studio, click the **Microflows** icon in the left menu bar:
 
-{{% image_container width="300" %}}![Microflow Icon](/attachments/studio7/microflows/micflows-icon.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/microflows/micflows-icon.png" alt="Microflow Icon"   width="300"  >}}
 
 ## 2 Concepts and Definitions 
 
 A microflow is like a flow chart. On a new microflow the start event (a starting point of the microflow represented by a green dot) and the end event (an endpoint of the microflow represented by a red dot) exist by default. They are also connected by a sequence flow (a line with an arrow), where you can add new events and activities. For more information, see section [3 Creating a New Microflow](#creating-new-microflow). If Mendix Assist is on, it will be represented with a blue dot in the middle. For more information, see [Mendix Assist](/studio7/mx-assist/).
 
-![New Microflow](/attachments/studio7/microflows/new-microflow-created.png)
+{{< figure src="/attachments/studio7/microflows/new-microflow-created.png" alt="New Microflow" >}}
 
 Before you start configuring microflows, familiarize yourself with the concepts and notions that the microflow editor uses:
 
@@ -52,12 +51,11 @@ To create a new microflow and to start building a microflow, do the following:
 1. Click the **Microflow** icon in the left menu bar. 
 2.  Click **New** on the **Microflows** side panel.
 
-    {{% image_container width="350" %}}![Adding New Microflow](/attachments/studio7/microflows/new-microflow.png)
-    {{% /image_container %}}
+    {{< figure src="/attachments/studio7/microflows/new-microflow.png" alt="Adding New Microflow"   width="350"  >}}
 
 3.  Fill out the name of the microflow in the pop-up dialog and click **Create**.
 
-    ![Create New Microflow Dialog](/attachments/studio7/microflows/new-microflow-dialog.png)    
+    {{< figure src="/attachments/studio7/microflows/new-microflow-dialog.png" alt="Create New Microflow Dialog" >}}    
 
 The new microflow is created, you can now start adding logic to it by adding events or activities. 
 
@@ -80,8 +78,7 @@ In the **Toolbox** tab, you can see that the microflow contains three sections w
 
 ### 5.1 General {#microflow-general-section}
 
-{{% image_container width="300" %}}![Microflow General Properties](/attachments/studio7/microflows/microflows-general-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/microflows/microflows-general-properties.png" alt="Microflow General Properties"   width="300"  >}}
 
 Elements available in the **General** section are described in the table below.
 
@@ -98,8 +95,7 @@ Elements available in the **General** section are described in the table below.
 
 ### 5.2 Object Activities {#microflow-object-activities}
 
-{{% image_container width="350" %}}![Microflow Object Activities](/attachments/studio7/microflows/object-activities.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/microflows/object-activities.png" alt="Microflow Object Activities"   width="350"  >}}
 
 The **Object Activities** are described in the table below.
 
@@ -114,7 +110,7 @@ The **Object Activities** are described in the table below.
 
 ### 5.3 Client Activities Section {#microflow-client-activities}
 
-![Microflow Client Activities](/attachments/studio7/microflows/client-activities.png)
+{{< figure src="/attachments/studio7/microflows/client-activities.png" alt="Microflow Client Activities" >}}
 
 The **Client Activities** are described in the table below.
 
@@ -127,7 +123,7 @@ The **Client Activities** are described in the table below.
 
 ### 5.4 Variable Activities
 
-![Microflow Variable Activities](/attachments/studio7/microflows/variable-activities.png)
+{{< figure src="/attachments/studio7/microflows/variable-activities.png" alt="Microflow Variable Activities" >}}
 
 The **Variable Activities** are described in the table below:
 
@@ -138,8 +134,7 @@ The **Variable Activities** are described in the table below:
 
 For example, you can first create a variable named *Discount* to a microflow, and then change the variable Discount depending on the type of the customer's grade. You can give a discount for customers with Gold and Silver grades. 
 
-{{% image_container width="400" %}}![Example a Microflow](/attachments/studio7/microflows/example-of-using-var-activities.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/microflows/example-of-using-var-activities.png" alt="Example a Microflow"   width="400"  >}}
 
 ## 6 Flows {#flows} 
 
@@ -147,8 +142,8 @@ Flows are lines connecting the elements. You can find the description of flows i
 
 | Flow            | Image                                                        | Description                                                  |
 | --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Sequence Flow   | ![Sequence Flow](/attachments/studio7/microflows/sequence-flow.png)   | A sequence flow is an arrow that links events, activities, decisions, and merges with each other. Thus, it defines the order of execution. Flows always flow in one direction where elements are executed one by one. A decision always leads to one direction so that means the microflow cannot follow two flows at the same time. |
-| Annotation Flow | ![Annotation Flow](/attachments/studio7/microflows/annotation-flow.png) | An annotation flow is a connection that can be used to link an annotation to a flow object(s). |
+| Sequence Flow   | {{< figure src="/attachments/studio7/microflows/sequence-flow.png" alt="Sequence Flow" >}}   | A sequence flow is an arrow that links events, activities, decisions, and merges with each other. Thus, it defines the order of execution. Flows always flow in one direction where elements are executed one by one. A decision always leads to one direction so that means the microflow cannot follow two flows at the same time. |
+| Annotation Flow | {{< figure src="/attachments/studio7/microflows/annotation-flow.png" alt="Annotation Flow" >}} | An annotation flow is a connection that can be used to link an annotation to a flow object(s). |
 
 ## 7 Activity Icons 
 
@@ -156,11 +151,11 @@ When configuring the activities of the microflows you will notice icons above or
 
 | Name                  | Image Example                                                | Description                                                  |
 | --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Entity                | ![Entity icon](/attachments/studio7/microflows/entity-icon.png)       | Indicates that the data source for the activity is an entity. |
-| Value                 | ![Value Icon](/attachments/studio7/microflows/simple-value-icon.png)  | Indicates that the data source for the activity is a simple value, such as decimal, boolean, date and time, etc. |
-| Commit                | ![Commit Icon](/attachments/studio7/microflows/commit-icon.png)       | Indicates that the object will be committed. Committing means that the changes will be saved in the database. This can be useful, for example, when you want an object *NewCustomer* to be saved and updated in the tables that contain information about customers. |
-| Commit without events | ![Commit Without Events Icon](/attachments/studio7/microflows/commit-with-no-events-icon.png) | Indicates that the object will be committed but without events. This means that the object will be saved in the database, but event handlers will not be triggered. For example, the information about a new customer will be saved, but the tables containing information about new customers will not be updated. |
-| Refresh in Client     | ![Refresh in Client Icon](/attachments/studio7/microflows/refresh-in-client-icon.png) | Indicates that the result of the activity will be displayed to the end-user. |
+| Entity                | {{< figure src="/attachments/studio7/microflows/entity-icon.png" alt="Entity icon" >}}       | Indicates that the data source for the activity is an entity. |
+| Value                 | {{< figure src="/attachments/studio7/microflows/simple-value-icon.png" alt="Value Icon" >}}  | Indicates that the data source for the activity is a simple value, such as decimal, boolean, date and time, etc. |
+| Commit                | {{< figure src="/attachments/studio7/microflows/commit-icon.png" alt="Commit Icon" >}}       | Indicates that the object will be committed. Committing means that the changes will be saved in the database. This can be useful, for example, when you want an object *NewCustomer* to be saved and updated in the tables that contain information about customers. |
+| Commit without events | {{< figure src="/attachments/studio7/microflows/commit-with-no-events-icon.png" alt="Commit Without Events Icon" >}} | Indicates that the object will be committed but without events. This means that the object will be saved in the database, but event handlers will not be triggered. For example, the information about a new customer will be saved, but the tables containing information about new customers will not be updated. |
+| Refresh in Client     | {{< figure src="/attachments/studio7/microflows/refresh-in-client-icon.png" alt="Refresh in Client Icon" >}} | Indicates that the result of the activity will be displayed to the end-user. |
 
 ## 8 Read More
 

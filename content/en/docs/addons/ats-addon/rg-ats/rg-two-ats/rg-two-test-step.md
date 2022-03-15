@@ -12,7 +12,7 @@ When you create a new test case, it is empty by default. You must add test steps
 
 To see the details of a test step, click the name of the test step. The details will open below the test step.
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-test-step/test-step-details.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-test-step/test-step-details.png" >}}
 
 ## 2 Description
 
@@ -62,7 +62,7 @@ Parameters of the Number type only allow digits as inputs.
 
 Another way of setting the parameter value is to use the **Edit Input Value** dialog box. To open the dialog box, click this icon:
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-test-step/input-value-dialog.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-test-step/input-value-dialog.png" >}}
 
 This dialog box shows you all the available input values for the parameter.
 

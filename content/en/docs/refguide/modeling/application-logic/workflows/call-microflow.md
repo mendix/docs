@@ -10,7 +10,7 @@ tags: ["workflow", "workflows", "call microflow", "Studio Pro"]
 
 **Call microflow** is used to call a selected [microflow](/refguide/microflow/). 
 
-![Call Microflow Example](/attachments/refguide/modeling/application-logic/workflows/call-microflow/call-microflow-example.jpg)
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/call-microflow/call-microflow-example.jpg" alt="Call Microflow Example" >}}
 
 ## 2 Properties
 

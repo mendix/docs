@@ -13,7 +13,7 @@ Mendix allows you to quickly build apps for mobile devices. This document gives 
 
 Every app starts at the home page. You can specify different home pages for phones and tablets in the [Navigation](/refguide7/navigation/) document. The mobile profiles can be added and removed separately. If you add a profile, you also have to provide its home page. Apart from the home page, different home page for different user roles can be specified. In addition, there is a default menu that can be used in [menu widgets](/refguide7/menu-widgets/).
 
-![](/attachments/refguide7/mobile/18582284.png)
+{{< figure src="/attachments/refguide7/mobile/18582284.png" >}}
 
 ## 3 Layout
 
@@ -23,7 +23,7 @@ For mobile devices, you might want to have a layout that hides the menu in a col
 
 You will need at least one layout per supported device type (desktop, tablet, phone) to optimize your app, but you can create as many as you like.
 
-![](/attachments/refguide7/mobile/16844053.png)
+{{< figure src="/attachments/refguide7/mobile/16844053.png" >}}
 
 ## 4 Widgets
 
@@ -39,7 +39,7 @@ If you want to publish your app in the Apple App Store or Google Play, you have 
 
 To access native functions of the device, we provide a number of PhoneGap widgets in the Mendix Marketplace. And, of course, you can build your own custom widgets that use native features. PhoneGap widgets can be recognized by their special icon. You can also search for them by via **Edit** > **Find Advanced** in the Mendix Desktop Modeler.
 
-![](/attachments/refguide7/mobile/16844052.png)
+{{< figure src="/attachments/refguide7/mobile/16844052.png" >}}
 
 ### 5.2 Offline Apps
 

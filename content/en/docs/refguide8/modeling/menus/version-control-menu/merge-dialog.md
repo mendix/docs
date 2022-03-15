@@ -16,7 +16,7 @@ With the **Merge** dialog you can [merge](/refguide8/version-control/#merge) cha
 
 To access the **Merge** dialog, open [Version Control menu](/refguide8/version-control-menu/) > **Merge Changes Here**:
 
-![Merge Dialog](/attachments/refguide8/modeling/menus/version-control-menu/merge-dialog/merge-dialog.png)
+{{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/merge-dialog/merge-dialog.png" alt="Merge Dialog" >}}
 
 {{% alert color="warning" %}}
 Before continuing with the merge action, please make sure that you are currently working in the development line that you want to merge to.

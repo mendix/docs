@@ -18,7 +18,7 @@ The Deploy API allows you to manage application environments in the Mendix Cloud
 
 This image provides a domain model representation of the concepts discussed below and how these are related:
 
-![](/attachments/apidocs-mxsdk/apidocs/build-api/api-model.png)
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/build-api/api-model.png" >}}
 
 ## 2 Authentication{#authentication}
 

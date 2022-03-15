@@ -61,8 +61,7 @@ Download this Excel spreadsheet example to check how data is normalized there: [
 
 When you create your app, a page where you can upload your spreadsheet is opened. Drag and drop your spreadsheet on the page or browse your files and choose the one you would like to import.
 
-{{% image_container width="500" %}}![](/attachments/studio7/start-with-data/drag-and-drop.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/start-with-data/drag-and-drop.png"   width="500"  >}}
 
 {{% alert color="info" %}}
 
@@ -74,18 +73,17 @@ If you choose to start without data, you will have just a blank app, and will no
 
 Once you select the spreadsheet for import, your data is analyzed and worksheets that have relations (associations) are identified: 
 
-{{% image_container width="400" %}}![](/attachments/studio7/start-with-data/relations-identified.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/start-with-data/relations-identified.png"   width="400"  >}}
 
 In the **Data Preview**, you can check the spreadsheet data before the actual import is completed. You can review tables and columns and untick the ones that you do not want to import. Tables that have relations (associations) detected are indicated with a link icon:
 
-![](/attachments/studio7/start-with-data/data-preview.png)
+{{< figure src="/attachments/studio7/start-with-data/data-preview.png" >}}
 
 The columns which have associations cannot be deselected for the import, you need to delete the association first.   
 
 To review a list of associations and unselect the ones that you do not want to be created, click **Manage Relations**. In the **Manage Relations** pop-up window, you can see which table and column will be used to create an association **from** and which will be used to create an association **to**. A column with unique data is the one the association goes **to**. 
 
-![](/attachments/studio7/start-with-data/manage-relations.png)
+{{< figure src="/attachments/studio7/start-with-data/manage-relations.png" >}}
 
 For example, in the image above you can see that an association will be created from the **MarketingDocs** entity to the **Contributors** entity. This association was discovered through the column **Responsible** in **MarketingDocs** and the column **Name** in **Contributors**.  As a result, when data is imported the **MarketingDocs** entity will not have **Responsible** as an attribute, instead it will have an association to the **Contributors** entity and will get data from this entity through the association.
 
@@ -97,11 +95,11 @@ A column can be used to create an association **from** it once only. If an assoc
 
 At the bottom of each column (that will be turned into an attribute) an attribute type is automatically identified and indicated. Click the drop-down menu to change the attribute type. For more information on how Excel data types correspond to attribute types, see [Correspondence between Excel Data Types and Attribute Types](#excel-type-attribute-type).
 
-![](/attachments/studio7/start-with-data/attribute-type-drop-down.png)
+{{< figure src="/attachments/studio7/start-with-data/attribute-type-drop-down.png" >}}
 
 **Generate pages for my data** will generate an overview page with a data grid for you, and *{EntityName}__NewEdit* pages for each entity. For more information, see [Generating Pages](#generating-pages). 
 
-![](/attachments/studio7/start-with-data/generate-pages-option.png)
+{{< figure src="/attachments/studio7/start-with-data/generate-pages-option.png" >}}
 
 
 #### 4.1.1 Correspondence Between Excel Data Types and Attribute Types {#excel-type-attribute-type}
@@ -125,8 +123,7 @@ You can take a brief tour showing you how your file has been converted.
 
 Open the domain model to see all created entities and attributes:
 
-{{% image_container width="350" %}}![](/attachments/studio7/start-with-data/domain-model-example.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/start-with-data/domain-model-example.png"   width="350"  >}}
 
 {{% alert color="success" %}}
 
@@ -140,13 +137,13 @@ If **Generate pages for my data** has been selected in the preview page, pages a
 
 * A *Manage_Data* page is created – an overview page with tabs for each Excel table and with data grids per each entity
 
-    ![](/attachments/studio7/start-with-data/manage-data-page.png)
+    {{< figure src="/attachments/studio7/start-with-data/manage-data-page.png" >}}
 
 * An *{EntityName}__NewEdit* page is created – a page for each of your entities for creating and saving a new object of this entity
 
 * A link from the *HomePage* is created – a card with buttons linking to the *Manage_Data* page   
 
-    ![](/attachments/studio7/start-with-data/home-page.png)
+    {{< figure src="/attachments/studio7/start-with-data/home-page.png" >}}
 
 * The *Manage Data* menu item is created in the navigation with a link to the *Manage_Data* page
 

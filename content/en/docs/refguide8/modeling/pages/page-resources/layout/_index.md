@@ -19,7 +19,7 @@ A layout consists of content and [placeholders](/refguide8/placeholder/). The co
 
 Layouts can be based on other layouts, in which case the generic layout is referred to as the master layout. If a layout has a master layout, it can use the placeholders defined in the master to create a more specialized configuration. If a page is based on this specialized layout, it makes use of the placeholders defined in the new layout, ignoring those of the master layout. 
 
-![](/attachments/refguide8/modeling/pages/page-resources/layout/16843991.png)
+{{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/16843991.png" >}}
 
 This chain can be as long as is necessary, with a generic layout used throughout the project  as a master layout for a more specific data input layout which is, in turn, used as a master layout for a specialized edit user layout. 
 
@@ -31,8 +31,7 @@ Mendix will intelligently detect if pages share a layout, so no user input is re
 
 An example of layout properties is represented in the image below:
 
-{{% image_container width="250" %}}![Example of the layout properties pane](/attachments/refguide8/modeling/pages/page-resources/layout/layout-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/layout-properties.png" alt="Example of the layout properties pane"   width="250"  >}}
 
 Layout properties consist of the following sections:
 
@@ -64,7 +63,7 @@ Default value: *600*
 
 **Platform** can only be set when a layout is created.
 
-![Dialog for adding a new layout](/attachments/refguide8/modeling/pages/page-resources/layout/add-layout.png)
+{{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/add-layout.png" alt="Dialog for adding a new layout" >}}
 
 The values for the platform property are:
 

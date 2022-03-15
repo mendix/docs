@@ -60,7 +60,7 @@ For an example of how to implement authentication using security assertion marku
 
 The following steps describe how the security proposal is set with [ADFS](https://docs.microsoft.com/en-us/windows-server/identity/active-directory-federation-services) and the [SAML](/appstore/modules/saml/) Mendix Marketplace module:
 
-![](/attachments/data-hub/data-hub-catalog/security/federation-with-ADFS-SAML-schematic.png)
+{{< figure src="/attachments/data-hub/data-hub-catalog/security/federation-with-ADFS-SAML-schematic.png" >}}
 
 1. The app end-user logs into an app that uses external entities.
 2. The end-user is not yet authenticated, so the SAML module forwards the user to ADFS for authentication.
@@ -68,11 +68,11 @@ The following steps describe how the security proposal is set with [ADFS](https:
 
 4. When the end-user performs a query on a external entity, the JSON web tokens (JWTs) are set on the API call (and are validated with a microflow in the consumed OData service):
 
-    ![authentication flow](/attachments/data-hub/data-hub-catalog/security/authentication-headers-from-microflow.png)
+    {{< figure src="/attachments/data-hub/data-hub-catalog/security/authentication-headers-from-microflow.png" alt="authentication flow" >}}
 
 5. The publishing app receives the request and uses the custom microflow specified in the settings of the published OData document to validate the tokens. If the tokens are not known, it calls ADFS to validate the user.
 
-    ![authentication microflow](/attachments/data-hub/data-hub-catalog/security/authentication-microflow.png)
+    {{< figure src="/attachments/data-hub/data-hub-catalog/security/authentication-microflow.png" alt="authentication microflow" >}}
 
 6. ADFS returns the user validation.
 7. The customer authentication microflow on the OData service document returns the appropriate user which is used for retrieving the data. The entity access rules will use this user for authorization.

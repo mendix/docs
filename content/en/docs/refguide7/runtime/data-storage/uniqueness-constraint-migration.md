@@ -24,7 +24,7 @@ A migration toolkit is available to help you fix any inconsistencies between dat
 
 In previous versions of Mendix, you could change an entity and add a unique validation rule on an attribute without affecting the current data. For example, you could indicate in your domain model that an insurance number should be unique for a person in the database because you wanted to use it to uniquely identify someone.
 
-![](/attachments/refguide7/runtime/data-storage/uniqueness-constraint-migration/attr-uniq-validation-rule.PNG)
+{{< figure src="/attachments/refguide7/runtime/data-storage/uniqueness-constraint-migration/attr-uniq-validation-rule.PNG" >}}
 
 Applying the validation rule did not affect persons that were already stored in the database before you deployed a new version of the app with a stricter data model. The insurance number would be checked for uniqueness only for new persons as compared to other persons.
 
@@ -32,39 +32,39 @@ The advantage of this was that the stricter model did not affect the current dat
 
 In a future version of Mendix 7, we will not allow this situation anymore. As a transition, we are providing a Runtime setting that, if set to **Database**, will enforce the unique validation rules on a database level.
 
-![](/attachments/refguide7/runtime/data-storage/uniqueness-constraint-migration/uniqueness-validation-setting.PNG)
+{{< figure src="/attachments/refguide7/runtime/data-storage/uniqueness-constraint-migration/uniqueness-validation-setting.PNG" >}}
 
 We highly recommend setting this radio button to **Database**. This will prepare your app for future versions of Mendix. If the radio button remains set to **Runtime**, a deprecation warning will appear:
 
-![](/attachments/refguide7/runtime/data-storage/uniqueness-constraint-migration/deprecation-warning.PNG)
+{{< figure src="/attachments/refguide7/runtime/data-storage/uniqueness-constraint-migration/deprecation-warning.PNG" >}}
 
 The effect of selecting **Database** is that when you deploy a model with unique validation rules on attributes (existing rules or new rules), all the existing objects for the affected entity will be checked for the uniqueness of the attribute. If there are multiple persons with the same insurance number, an error will be shown on deployment if you deploy from the Modeler. If you deploy the app in the Mendix cloud, the app will not start and errors will be written to the logs.
 
-![](/attachments/refguide7/runtime/data-storage/uniqueness-constraint-migration/modeler-startup-error.PNG)
+{{< figure src="/attachments/refguide7/runtime/data-storage/uniqueness-constraint-migration/modeler-startup-error.PNG" >}}
 
 However, with the database uniqueness validation option enabled, defining the unique validation rules on specialized attributes in a specialization entity is not allowed.
 
 For any specialized attribute with a unique validation rule defined in the specialization, the appropriate consistency error is reported, as in this image:
 
-![](/attachments/refguide7/runtime/data-storage/uniqueness-constraint-migration/unique-validation-rule-unresolved.png)
+{{< figure src="/attachments/refguide7/runtime/data-storage/uniqueness-constraint-migration/unique-validation-rule-unresolved.png" >}}
 
 These unique validation related inconcistency errors may be simply resolved by moving unique validation rules of specialized attributes to a generalization entity.
 
-![](/attachments/refguide7/runtime/data-storage/uniqueness-constraint-migration/unique-validation-rule-resolved.png)
+{{< figure src="/attachments/refguide7/runtime/data-storage/uniqueness-constraint-migration/unique-validation-rule-resolved.png" >}}
 
 ## 3 Unique Associations
 
 A comparable situation occurs for associations. Consider the following example:
 
-![](/attachments/refguide7/runtime/data-storage/uniqueness-constraint-migration/one-to-many-assoc.PNG)
+{{< figure src="/attachments/refguide7/runtime/data-storage/uniqueness-constraint-migration/one-to-many-assoc.PNG" >}}
 
 Initially, the domain model contains a one-to-many association between **Address** and **Person**. This means that a Person can have multiple addresses. After some time, the data structure is changed, because logic has been added to the app that only allows one Address per Person. Proper data modeling prescribes changing the association into a one-to-one association. New data will reflect the updated association properly.
 
-![](/attachments/refguide7/runtime/data-storage/uniqueness-constraint-migration/one-to-one-assoc.PNG)
+{{< figure src="/attachments/refguide7/runtime/data-storage/uniqueness-constraint-migration/one-to-one-assoc.PNG" >}}
 
 From Mendix 7.3, we enforce that existing association data in the database also adheres to the updated one-to-one association. This is checked at deployment as well. If a person has multiple addresses, the model will not deploy, and an error will be given in the Modeler or in the logs of deployment in the (Mendix) cloud:
 
-![](/attachments/refguide7/runtime/data-storage/uniqueness-constraint-migration/modeler-startup-error-assoc.PNG)
+{{< figure src="/attachments/refguide7/runtime/data-storage/uniqueness-constraint-migration/modeler-startup-error-assoc.PNG" >}}
 
 We enforce this new stricter association on existing data in order to avoid easily overlooked mistakes that result in returning only a single address per person (where in fact they still have multiple addresses in the database). The Mendix Platform consistently returned the same address each run, but other addresses would be dormant entries in the database.
 

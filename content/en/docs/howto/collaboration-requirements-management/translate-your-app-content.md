@@ -38,13 +38,13 @@ To create your app, do the following:
 	* **Order** with the **Integer** attribute **OrderNumber**
 	* **Product** with the **String** attribute **ProductName**
 	
-		![Domain model for How To](/attachments/howto/collaboration-requirements-management/translate-your-app-content/domain-model.png)
+		{{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/domain-model.png" alt="Domain model for How To" >}}
 
 4. Right-click one of the entities and select **Generate overview pages**.
 
 5. In the **Generate pages** dialog box, ensure both entities are selected and click **OK**.
 
-	![Options selected for Generate Pages](/attachments/howto/collaboration-requirements-management/translate-your-app-content/generate-pages.png)
+	{{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/generate-pages.png" alt="Options selected for Generate Pages" >}}
 	
 	This generates some pages containing text for you to translate.
 
@@ -52,11 +52,11 @@ To create your app, do the following:
 
 7. Change the text on the new button to **Order**. You will use this button to allow the end-user to order the product they are viewing. Ignore the warnings about the setup of this button.
 
-	![Product New Edit page with an Order button](/attachments/howto/collaboration-requirements-management/translate-your-app-content/order-button.png)
+	{{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/order-button.png" alt="Product New Edit page with an Order button" >}}
 
 8. Open the page **Home_Web** and put some text into the title and subtitle.
 
-	![Product New Edit page with an Order button](/attachments/howto/collaboration-requirements-management/translate-your-app-content/home-page-text.png)
+	{{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/home-page-text.png" alt="Product New Edit page with an Order button" >}}
 
 You now have an app with some translatable texts.
 
@@ -80,7 +80,7 @@ To add an additional language, do the following:
 
    In the **App Settings** window, the **default** language is still **English, United States**. This is the language that the end-user sees if they do not choose Russian as their language.
    
-   ![Language settings tab in the app settings dialog](/attachments/howto/collaboration-requirements-management/translate-your-app-content/language-settings.png)
+   {{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/language-settings.png" alt="Language settings tab in the app settings dialog" >}}
 
 5. Click **OK**. The **App Settings** dialog box closes.
 
@@ -93,7 +93,7 @@ To change your current language to Russian, do the following:
 1. Click the language indicator at the lower-right corner of the Studio Pro window.
 2. Select **Russian, Russia** to make that your current language.
 
-	![Change the current language](/attachments/howto/collaboration-requirements-management/translate-your-app-content/change-language.png)
+	{{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/change-language.png" alt="Change the current language" >}}
 
 	{{% alert color="warning" %}}If you do further development later on, remember to change back to your default language so that any new text is recorded there and not in a translated dictionary.{{% /alert %}}
 
@@ -105,11 +105,11 @@ Now that your current language is Russian, you can translate some of the texts i
 
 	The untranslated texts appear in the default language (English, United States) between angle brackets `<>`.
 	
-	![untranslated-texts](/attachments/howto/collaboration-requirements-management/translate-your-app-content/untranslated-texts.png)
+	{{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/untranslated-texts.png" alt="untranslated-texts" >}}
 	
 2. Enter your translation for the two text items on the page.
 
-	![Home page with translated text](/attachments/howto/collaboration-requirements-management/translate-your-app-content/home-page-russian.png)
+	{{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/home-page-russian.png" alt="Home page with translated text" >}}
 
 You have now added a translation for these two pieces of text.
 
@@ -133,15 +133,15 @@ To translate multiple occurrences and multiple texts from the default language, 
 
 5. Make sure only the module **MyFirstModule** is selected. This can restrict batch translation to this module.
 
-    ![Select only MyFirstModule](/attachments/howto/collaboration-requirements-management/translate-your-app-content/batch-translate-myfirstmodule.png)
+    {{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/batch-translate-myfirstmodule.png" alt="Select only MyFirstModule" >}}
 
 6. Click **OK**. You can now see all the translatable texts in your module. The **Translation (Russian, Russia)** column shows the individual translations you made in the previous section. The **#** column shows the number of times each text appears in the selected module(s).
 
-    ![Translatable texts in MyFirstModule](/attachments/howto/collaboration-requirements-management/translate-your-app-content/batch-translate-initial.png)
+    {{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/batch-translate-initial.png" alt="Translatable texts in MyFirstModule" >}}
 
 7. Enter translations in the **Translation (Russian, Russia)** column for a few terms: **Cancel**, **Delete**, and **Edit**, for example.
 
-    ![Translate Cancel, Delete, and Edit into Russian](/attachments/howto/collaboration-requirements-management/translate-your-app-content/batch-translate-cancel-delete-edit.png)
+    {{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/batch-translate-cancel-delete-edit.png" alt="Translate Cancel, Delete, and Edit into Russian" >}}
 
 8. Click **Translate** to save the current translations.
 
@@ -149,7 +149,7 @@ To translate multiple occurrences and multiple texts from the default language, 
 
 10. Open the **Product_NewEdit** page. The related terms now have Russian translations.
 
-	![Product New Edit page showing the cancel button translated into Russian](/attachments/howto/collaboration-requirements-management/translate-your-app-content/product-new-edit-partial-translation.png)
+	{{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/product-new-edit-partial-translation.png" alt="Product New Edit page showing the cancel button translated into Russian" >}}
 
 ### 6.2 Dealing With More Complex Translations
 
@@ -163,11 +163,11 @@ To deal with this situation, follow the steps below:
 
 3. In the grid, click the translatable text **Order**. The **#** column shows that there are three places where this text is used. The locations are listed in the **Show occurrence** section.
 
-	![All source texts containing the word 'order' with the locations of the text 'order' shown](/attachments/howto/collaboration-requirements-management/translate-your-app-content/batch-translate-order.png)
+	{{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/batch-translate-order.png" alt="All source texts containing the word 'order' with the locations of the text 'order' shown" >}}
 	
 4. In the **Show occurrence** section, the **Object** column shows that one of the locations of the text **Order** is the **Action button 'actionButton3'** on the **Product_NewEdit** page. This is the button we added to allow the end-user to order the product. To confirm this, double-click the row of **Action button 'actionButton3'**.
 
-   ![Order button on Product New Edit page](/attachments/howto/collaboration-requirements-management/translate-your-app-content/product-new-edit-order.png)
+   {{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/product-new-edit-order.png" alt="Order button on Product New Edit page" >}}
 
    In the background, the **Product_NewEdit** page opens with the button **Order** selected. This shows that this text is used on the button.
 
@@ -179,17 +179,17 @@ To deal with this situation, follow the steps below:
 
 8. Edit the text on the button to reflect the verb *to order*. In Russian this is *заказать*.
 
-   ![Order button on Product New Edit page translated into Russian](/attachments/howto/collaboration-requirements-management/translate-your-app-content/product-new-edit-order-russian.png)
+   {{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/product-new-edit-order-russian.png" alt="Order button on Product New Edit page translated into Russian" >}}
 
 9. Go to the **Language** > **Batch Translate** to open the dialog box and search for *Order* in the module **MyFirstModule**. 
 
    Now in the grid **Order** has two rows: one row has the translation **заказать**, and the other row has no translation.
 
-   ![All source texts containing the word 'order' showing that ones with different translations are shown separately. ](/attachments/howto/collaboration-requirements-management/translate-your-app-content/batch-translate-order-split.png)
+   {{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/batch-translate-order-split.png" alt="All source texts containing the word 'order' showing that ones with different translations are shown separately. " >}}
 
 10. In the row where **Order** has no translation, enter *Заказ*. This is the Russian translation for *an order*.
 
-    ![All source texts containing the word 'order' showing two different translations for Order. ](/attachments/howto/collaboration-requirements-management/translate-your-app-content/batch-translate-order-2-translations.png)
+    {{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/batch-translate-order-2-translations.png" alt="All source texts containing the word 'order' showing two different translations for Order. " >}}
 
 11. Click **Translate** to save the translation.
 
@@ -207,13 +207,13 @@ Once you have made some translations, you may want to look at just the translati
 
 	The **Documents/modules** field is set to **(all)**, so the dialog box shows all the translations in the current language dictionary. You can click **Select** next to this field and select only one module to reduce the scope. You can also search for a specific word in the **Source text contains** field. The **#** column shows the locations where the text is used. These locations are listed in the **Show occurrence** section.
 	
-	![All texts which have been translated into Russian.](/attachments/howto/collaboration-requirements-management/translate-your-app-content/batch-replace-russian-initial.png)
+	{{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/batch-replace-russian-initial.png" alt="All texts which have been translated into Russian." >}}
 	
 	You can see that you have been inconsistent with use of capital letters. So you need to make it more consistent.
 
 3. Enter the new text in the **Replace with** column.
 
-	![All texts which have been translated into Russian.](/attachments/howto/collaboration-requirements-management/translate-your-app-content/batch-replace-russian-capitals.png)
+	{{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/batch-replace-russian-capitals.png" alt="All texts which have been translated into Russian." >}}
 
 4. Click **Replace** to update the translation dictionary.
 
@@ -230,7 +230,7 @@ To copy our Russian translations into a Belarusian dictionary, you can do the fo
 
 2. Click **Add** to add **Belarusian, Belarus** as an app language.
 
-   ![Belarusian added to the app](/attachments/howto/collaboration-requirements-management/translate-your-app-content/language-settings-belarusian.png)
+   {{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/language-settings-belarusian.png" alt="Belarusian added to the app" >}}
 
 3. Click **OK** to save the changes and close the **App Settings** dialog box.
 

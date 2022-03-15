@@ -74,7 +74,7 @@ These are the available enumerations in the TimeSeriesConnector module:
 
 Let's take the concept of a house. In this scenario the house is an asset, of which you can have multiple. This house will use gas and electricity, which we call channels. Each channel can hold values over time; electricity usage is measured and saved every X seconds, minutes, hours, and so on. These measurements can later be used for analysis.
 
-![](/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/Systemoverview.PNG)
+{{< figure src="/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/Systemoverview.PNG" >}}
 
 The module comes with a ready-to-use domain model, which we'll also use in this how-to. Of course, this isn't a necessity, and you can also use your own domain model. All referenced microflows in this how-to can also be found in the module.
 
@@ -86,7 +86,7 @@ The module comes with a ready-to-use domain model, which we'll also use in this 
 
 The domain model looks like this:
 
-![](/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/Domainmodel.png)
+{{< figure src="/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/Domainmodel.png" >}}
 
 ### 5.1 Create an Asset
 
@@ -96,11 +96,11 @@ You start the implementation by creating an asset object in a page, or directly 
 
   In our example implementation, we have created a page with an *Asset* object on which the attributes can be set. The ID is grayed out because it will be returned by the connector later in this process.
 
-  ![](/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/CreateAsset.png)
+  {{< figure src="/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/CreateAsset.png" >}}
 
 After having set the **Asset name**, we trigger some validation, call the **Create asset** action, and save the **Asset ID** for later references. Reference the microflow below:
 
-![](/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/create-asset-microflow.png)
+{{< figure src="/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/create-asset-microflow.png" >}}
 
 ### 5.2 Create a Channel
 
@@ -119,11 +119,11 @@ The next step is creating a *Channel*. This *Channel* should belong to an *Asset
 
 In our example implementation we have created a page with a *Channel* object, on which the attributes and the association with an asset can be set.
 
-![](/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/CreateChannel.png)
+{{< figure src="/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/CreateChannel.png" >}}
 
 After having set the necessary attributes and associations, we trigger some validation and call the **Add channel** action. This action will return a Boolean, specifying if the action was successful. Reference the microflow below:
 
-![](/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/create-channel-microflow.png)
+{{< figure src="/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/create-channel-microflow.png" >}}
 
 ### 5.3 Store Measurement(s)
 
@@ -142,11 +142,11 @@ Now that you have created an asset with a channel, you can start storing measure
 
 In our example implementation we have created a page with a *measurement* object, on which the attributes and the associations with an *Asset* and *Channel* can be set.
 
-![](/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/StoreMeasurement.png)
+{{< figure src="/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/StoreMeasurement.png" >}}
 
 After having set the necessary attributes and associations, we trigger some validation and call the **Store measurement** action. This action will return a Boolean, which is not used. Reference the microflow below:
 
-![](/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/store-measurement-microflow.png)
+{{< figure src="/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/store-measurement-microflow.png" >}}
 
 You can find this microflow in the *TimerSeriesConnector* module under **3. Measurements > StoreMeasurements > IVK_StoreMeasurement**.
 
@@ -156,7 +156,7 @@ Once your channel has sufficient data, the TimeSeries Connector will really star
 
 1. Create an **AggregateSearchResult** object to use as the **Type parameter**. If you create a new entity, make sure it has all the necessary attributes as defined in this example:
 
-  ![](/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/example-aggregate-domain.png)
+  {{< figure src="/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/example-aggregate-domain.png" >}}
 
 2. Provide the empty **Type parameter** used to populate the results.
 3. Provide the **Asset ID** and **Channel key** to aggregate in.
@@ -167,11 +167,11 @@ Once your channel has sufficient data, the TimeSeries Connector will really star
 
 In our example implementation we have created a page with an *AggregateSearch* object, on which the search values and the associations with an asset and channel can be set.
 
-![](/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/AggregateSearch.png)
+{{< figure src="/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/AggregateSearch.png" >}}
 
 After having set the necessary attributes and associations, we trigger some validation, prepare the data, and call the **Aggregate between timestamps** action. This action will return a list of your type parameter, *AggregateSearchResult*. This list contains an aggregation of the channel data by the aggregation period specified. For example: From March 1st up to March 10th, you will receive a list of your total electricity usage per day. This means your list will hold 10 objects. Reference the microflow below:
 
-![](/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/get-aggregations-microflow.png)
+{{< figure src="/attachments/howto7/extensibility/get-started-with-the-timeseries-connector/get-aggregations-microflow.png" >}}
 
 
 ## 6 Final Remarks

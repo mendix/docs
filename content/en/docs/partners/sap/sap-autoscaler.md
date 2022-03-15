@@ -19,7 +19,7 @@ The autoscaler service can be found on the [services tab](/developerportal/deplo
 
 Selecting the autoscaler service will expand the entry to allow you to enter more details about the service you wish to bind, namely the **Plan** and the **File** which contains the configuration.
 
-![Autoscaler service on the environment details page](/attachments/partners/sap/sap-autoscaler/autoscaler-service.png)
+{{< figure src="/attachments/partners/sap/sap-autoscaler/autoscaler-service.png" alt="Autoscaler service on the environment details page" >}}
 
 You will need to specify the following:
 
@@ -100,13 +100,13 @@ Click **Add rule** or **Add another rule** (if rules already exist) to add a new
 
 You will need to enter the information requested on the following screen. A tooltip explains what needs to be entered for each value:
 
-![Add specific date rule dialog](/attachments/partners/sap/sap-autoscaler/add-specific-date.png)
+{{< figure src="/attachments/partners/sap/sap-autoscaler/add-specific-date.png" alt="Add specific date rule dialog" >}}
 
 Click **Add Rule** to add this rule.
 
 The new rule, and any existing rules will be shown in the configurator as shown below.
 
-![Existing specific date rule](/attachments/partners/sap/sap-autoscaler/specific-date.png)
+{{< figure src="/attachments/partners/sap/sap-autoscaler/specific-date.png" alt="Existing specific date rule" >}}
 
 You can collapse the view of existing rule by clicking **-** and expand it again with the **+**.
 You can also edit an existing rule by clicking **Edit** and delete an existing rule by clicking **Delete**.
@@ -119,7 +119,7 @@ Select whether you want to add a rule for days of the week (for example every Mo
 
 You will need to enter the information requested on the following screen. A tooltip explains what needs to be entered for each value:
 
-![Add recurring date rule dialog](/attachments/partners/sap/sap-autoscaler/add-recurring-date.png)
+{{< figure src="/attachments/partners/sap/sap-autoscaler/add-recurring-date.png" alt="Add recurring date rule dialog" >}}
 
 Click **Add Day** to add the days to which this recurring schedule applies. If it is a rule for days of the week, day 1 is always Monday irrespective of any local conventions. You can add several days by using **Add Day** multiple times.
 
@@ -127,7 +127,7 @@ Click **Add Rule** to add this rule.
 
 The new rule, and any existing rules will be shown in the configurator as shown below.
 
-![Existing recurring date rule](/attachments/partners/sap/sap-autoscaler/recurring-date.png)
+{{< figure src="/attachments/partners/sap/sap-autoscaler/recurring-date.png" alt="Existing recurring date rule" >}}
 
 You can collapse the view of existing rule by clicking **-** and expand it again with the **+**.
 You can also edit an existing rule by clicking **Edit** and delete an existing rule by clicking **Delete**.
@@ -147,13 +147,13 @@ Click **Add rule** or **Add another rule** (if rules already exist) to add a new
 
 You will need to enter the information requested on the following screen. A tooltip explains what needs to be entered for each value:
 
-![Add recurring date rule dialog](/attachments/partners/sap/sap-autoscaler/add-dynamic.png)
+{{< figure src="/attachments/partners/sap/sap-autoscaler/add-dynamic.png" alt="Add recurring date rule dialog" >}}
 
 Click **Add Rule** to add this rule.
 
 The new rule, and any existing rules will be shown in the configurator as shown below.
 
-![Existing recurring date rule](/attachments/partners/sap/sap-autoscaler/dynamic.png)
+{{< figure src="/attachments/partners/sap/sap-autoscaler/dynamic.png" alt="Existing recurring date rule" >}}
 
 You can collapse the view of existing rule by clicking **-** and expand it again with the **+**.
 You can also edit an existing rule by clicking **Edit** and delete an existing rule by clicking **Delete**.

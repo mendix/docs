@@ -17,7 +17,7 @@ An example of a consistency error is when you do not specify the entity property
 
 If you do not configure a data source for a [list view](/studio7/page-editor-data-view-list-view/#list-view-properties) properly, you will get a consistency error. 
 
-The scheme below shows that the data source of the list view has been set to **Database**, but the specific entity that needs to be retrieved from the database has not been set. This results in a consistency error.![List View Errors Cause](/attachments/studio7/consistency-errors/consistency-errors-pages/list-view-error.png)
+The scheme below shows that the data source of the list view has been set to **Database**, but the specific entity that needs to be retrieved from the database has not been set. This results in a consistency error.{{< figure src="/attachments/studio7/consistency-errors/consistency-errors-pages/list-view-error.png" alt="List View Errors Cause" >}}
 
 The table below describes the most common errors you can come across when configuring a list view,  causes of these errors, and ways to fix them. 
 
@@ -31,8 +31,7 @@ The table below describes the most common errors you can come across when config
 
 Not configuring a data source for a [data view](/studio7/page-editor-data-view-list-view/#data-view-properties) in a proper way results in consistency errors. For example, you selected a list widget as the data source, but you have not selected the specific list you would like the data view to listen to.
 
-{{% image_container width="350" %}}![Data View Properties Not Configured](/attachments/studio7/consistency-errors/consistency-errors-pages/data-view-error.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/consistency-errors/consistency-errors-pages/data-view-error.png" alt="Data View Properties Not Configured"   width="350"  >}}
 
 The table below describes the most common errors you can come across when configuring a data view,  causes of these errors, and ways to fix them. 
 
@@ -59,16 +58,15 @@ When a page expects a context that is not passed to it from another page or a mi
 
 Let us study an example: the **Customers** page contains a list view with a list of all customer names (**Customer** is set as **Entity** in the **Data Source** properties), and a **Details** button outside of the list view (placed in a [container](/studio7/page-editor-widgets-structure/#container-overview) only). The **Details** button opens a **Customer Details** page when a user clicks it (the **On Click Action** for the button is set to **Page** and the **Create Object** option is disabled). 
 
-![Button Properties on the Customers Page](/attachments/studio7/consistency-errors/consistency-errors-pages/customers-page.png)
+{{< figure src="/attachments/studio7/consistency-errors/consistency-errors-pages/customers-page.png" alt="Button Properties on the Customers Page" >}}
 
 However, the **Customer Details** page has a data view that expects an object *Customer* to be passed to it. In other words, this page needs to get data first to be able to display it. 
 
-{{% image_container width="350" %}}![Data View Expects the Customer Object](/attachments/studio7/consistency-errors/consistency-errors-navigation/data-view-customer.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/consistency-errors/consistency-errors-navigation/data-view-customer.png" alt="Data View Expects the Customer Object"   width="350"  >}}
 
 As this object is not passed to it from the **Customers** page, you get a consistency error.
 
-![Example of Error When Context is Unavailable](/attachments/studio7/consistency-errors/consistency-errors-pages/object-error.png)
+{{< figure src="/attachments/studio7/consistency-errors/consistency-errors-pages/object-error.png" alt="Example of Error When Context is Unavailable" >}}
 
 As the **Details** button to the **Customers** page is outside a data container (a data view or a list view) it does not know which Customer (object) it should pass. The way of fixing this error depends on the following:
 
@@ -83,8 +81,7 @@ If you want the **Customer Details** page to open the details of a specific cust
 
 2.  Drag the **Details** button inside the list view.
 
-    {{% image_container width="350" %}}![List View Example](/attachments/studio7/consistency-errors/consistency-errors-pages/list-view-content.png)
-    {{% /image_container %}}
+    {{< figure src="/attachments/studio7/consistency-errors/consistency-errors-pages/list-view-content.png" alt="List View Example"   width="350"  >}}
 
 
 Now the button gets the object of type *Customer* from the list view on the **Customers** page, and it will be passed to the **Customer Details** page. As a result, the details of a particular customer is displayed on the **Customer Details** page. 
@@ -97,8 +94,7 @@ If you want to create a new customer and fill in the customer's details on the *
 
 2. Open properties for the **Details** button > the **Events** section and enable the **Create Object** option.
 
-     {{% image_container width="350" %}}![Create Object Option Enabled](/attachments/studio7/consistency-errors/consistency-errors-pages/create-object-option-enabled.png)
-     {{% /image_container %}}
+     {{< figure src="/attachments/studio7/consistency-errors/consistency-errors-pages/create-object-option-enabled.png" alt="Create Object Option Enabled"   width="350"  >}}
 
 3. Set **Customer** as **Entity**.
 
@@ -112,8 +108,7 @@ If a widget opens a page and this widget is inside a data container of entity X,
 
 Let us study an example: you have a **New** button on the **Engineers** page that opens the **Tasks** page. 
 
-{{% image_container width="350" %}}![A Button on Engineers Page](/attachments/studio7/consistency-errors/consistency-errors-pages/engineers-page.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/consistency-errors/consistency-errors-pages/engineers-page.png" alt="A Button on Engineers Page"   width="350"  >}}
 
 The button is placed inside a list view; the list view's data source is set to entity *Engineer* in **Properties** > **Data Source**.
 
@@ -121,8 +116,7 @@ The Tasks page has a data view on it, but the data view's data source is set to 
 
 This means that data view expects the object of type *SmartTask* passed to it, but the **Engineers** page is passing the object of type *Engineer*. As a result you get a consistency error.
 
-{{% image_container width="350" %}}![List View on the Tasks Page](/attachments/studio7/consistency-errors/consistency-errors-pages/tasks-page-list-view.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/consistency-errors/consistency-errors-pages/tasks-page-list-view.png" alt="List View on the Tasks Page"   width="350"  >}}
 
 To fix this error you can either place a button within a list view that will pass the correct type of data to the page (place the button inside the list view and set its data source to entity *SmartTask*), or change the data source of the data view on the **Tasks** page to entity *Engineer*. 
 
@@ -141,8 +135,7 @@ The most common consistency errors for [static image widgets](/studio7/page-edit
 
 [Dynamic images](/studio7/page-editor-widgets-images/) need to be placed inside a data container (a data view or a list view) and an entity should be selected for them. 
 
-{{% image_container width="350" %}}![Dynamic Image Properties](/attachments/studio7/consistency-errors/consistency-errors-pages/dynamic-image-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/consistency-errors/consistency-errors-pages/dynamic-image-properties.png" alt="Dynamic Image Properties"   width="350"  >}}
 
 Errors for static and dynamic images are described in the table below. 
 
@@ -158,7 +151,7 @@ You can specify an **On Click Action** for different widgets, for example, for b
 
 The most common consistency errors appear when you do not configure the on click action entirely. For example, you select a microflow as an on click action, but do not select the microflow itself. 
 
-![On Click Action Error](/attachments/studio7/consistency-errors/consistency-errors-pages/on-click-action-error.png)
+{{< figure src="/attachments/studio7/consistency-errors/consistency-errors-pages/on-click-action-error.png" alt="On Click Action Error" >}}
 
 To fix the consistency errors, finish configuring the on click action (for example, for an on click action *Page*, select a particular page that should open), or change the on click action to another one. 
 

@@ -24,7 +24,7 @@ To create the domain model, follow these steps:
 1. In the domain model, create a persistable entity called **Product** with two attributes: **Name** (String) and **Stock** (Integer).
 2.  Create a non-persistable entity called **PublishedProduct** with the same attributes.
 
-	![](/attachments/howto8/integration/publish-data-to-other-mendix-apps-using-an-app-service/domain-model.png)
+	{{< figure src="/attachments/howto8/integration/publish-data-to-other-mendix-apps-using-an-app-service/domain-model.png" >}}
 
 ## 4 Creating Pages
 
@@ -35,7 +35,7 @@ To create pages that allows users to create, edit, and delete products, follow t
 3. From the **Connector**, drag the **Product** entity onto to yellow **[Unknown]** bar.
 4.  On the dialog box that appears, click **OK**.
 
-	![](/attachments/howto8/integration/publish-data-to-other-mendix-apps-using-an-app-service/edit-product-page.png)
+	{{< figure src="/attachments/howto8/integration/publish-data-to-other-mendix-apps-using-an-app-service/edit-product-page.png" >}}
 
 5. Open the **Homepage** and add a data grid.
 6. From the **Connector**, drag the **Product** entity onto to yellow **[Unknown]** bar.
@@ -43,7 +43,7 @@ To create pages that allows users to create, edit, and delete products, follow t
 8. From the **Project Explorer**, drag the **EditUser** page onto the **New** button.
 9.  From the **Project Explorer**, drag the **EditUser** page onto the **Edit [default]** button.
 
-	![](/attachments/howto8/integration/publish-data-to-other-mendix-apps-using-an-app-service/homepage.png)
+	{{< figure src="/attachments/howto8/integration/publish-data-to-other-mendix-apps-using-an-app-service/homepage.png" >}}
 
 ## 5 Creating a Microflow
 
@@ -74,7 +74,7 @@ To create this microflow, follow these steps:
 21. For **Entity**, select **PublishedProduct**.
 22. For **Return value**, enter *$PublishedProductList*, then click **OK**.
 
-	![](/attachments/howto8/integration/publish-data-to-other-mendix-apps-using-an-app-service/microflow.png) 
+	{{< figure src="/attachments/howto8/integration/publish-data-to-other-mendix-apps-using-an-app-service/microflow.png" >}} 
 
 ## 6 Creating an App Service
 

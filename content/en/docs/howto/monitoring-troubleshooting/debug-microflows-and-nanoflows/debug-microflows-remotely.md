@@ -54,15 +54,15 @@ When your application is in the Mendix cloud:
 
 3. In the **Deploy** tab, click **Details** for the environment which you want to debug:
 
-    ![](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/debug-microflows-remotely/18580051.png)
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/debug-microflows-remotely/18580051.png" >}}
 
 4. In the **General** tab, click **Show Debugger Information**:
 
-    ![](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/debug-microflows-remotely/show-debugger-information.png)
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/debug-microflows-remotely/show-debugger-information.png" >}}
 
     This invokes the **Debugger settings** pop-up window which provides a URL (such as `http://yourapp.mendixcloud.com/debugger/`) and a password:
 
-    ![](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/debug-microflows-remotely/debugger-settings.png)
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/debug-microflows-remotely/debugger-settings.png" >}}
 
 You will need to provide these credentials to Studio Pro to connect the debugger to the app running in the cloud.
 
@@ -84,13 +84,13 @@ You can only remotely debug apps deployed to Private Cloud for Mendix if you are
 
 5. If the debugger is currently disabled, click **Enable Debugger**. You will be asked to confirm the generated strong password. We recommend that you do not change this password.
 
-    ![Enter password for the private cloud debugger](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/debug-microflows-remotely/pc-debugger-password.png)
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/debug-microflows-remotely/pc-debugger-password.png" alt="Enter password for the private cloud debugger" >}}
 
     You will receive a warning that you have made some changes. Click **Apply Changes** to restart the app and apply the changes.
 
 Once the debugger is enabled, you will see the **URL** and **Password** which are the credentials you need to supply to Studio Pro. Use the **Copy to clipboard** links to simplify providing the credentials.
 
-![](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/debug-microflows-remotely/pc-debug-tab.png)
+{{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/debug-microflows-remotely/pc-debug-tab.png" >}}
 
 When the debugger is enabled, you can click **Disable Debugger** to disable it. You will be asked to confirm your choice and will receive a warning that you have made some changes. Click **Apply Changes** to restart the app and apply the changes.
 
@@ -104,7 +104,7 @@ If your application is on the SAP S/4 HANA cloud, you will need to set the passw
 
 3. Click on the button 'Add variable' and add 'DEBUGGER_PASSWORD' and the password. Both are case-sensitive.
 
-    ![SAP Cockpit showing user-provided variables](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/debug-microflows-remotely/debugger-settings-saps4hana.png)
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/debug-microflows-remotely/debugger-settings-saps4hana.png" alt="SAP Cockpit showing user-provided variables" >}}
 
 4. Restart your application.
 
@@ -120,11 +120,11 @@ If you do cannot connect the debugger, then you do not have sufficient permissio
 
     * Go to the **Run** menu and select **Connect Debugger…**:
 
-        ![](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/debug-microflows-remotely/18580048.png)
+        {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/debug-microflows-remotely/18580048.png" >}}
         
     * Click **Connect…** in the **Debugger** pane:
 
-        ![](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/debug-microflows-remotely/debugger-pane.png)
+        {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/debug-microflows-remotely/debugger-pane.png" >}}
 
 2. In the **Connect Debugger** dialog box set the following:
 
@@ -132,7 +132,7 @@ If you do cannot connect the debugger, then you do not have sufficient permissio
     * **URL** – the *URL* from the **Debugger Settings** for your app environment
     * **Password** – the *Password* from the **Debugger Settings** for your app environment
 
-        ![](/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/debug-microflows-remotely/18580047.png)
+        {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/debug-microflows-remotely/18580047.png" >}}
 
 3. Click **OK**.
 

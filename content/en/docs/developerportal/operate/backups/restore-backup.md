@@ -34,15 +34,15 @@ If you want to restore a backup to a different cloud node, or have your backup s
 
 2. Select the environment to which the backup should be restored (for example *Acceptance*).
 
-    ![](/attachments/developerportal/operate/backups/restore-backup/environment.png)
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup/environment.png" >}}
 
 3. Select the backup you want to restore and click **Restore Backup**.
 
-    ![](/attachments/developerportal/operate/backups/restore-backup/backupoptions.png)
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup/backupoptions.png" >}}
 
 4. Confirm the backup restore by clicking **Restore Backup**.
 
-    ![](/attachments/developerportal/operate/backups/restore-backup/restore-backup.png)
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup/restore-backup.png" >}}
 
 {{% alert color="info" %}}
 
@@ -70,7 +70,7 @@ The app previously deployed to the node does not, however, need to have had the 
 
 2. Select the environment to which the backup should be restored (for example *Acceptance*).
 
-    ![](/attachments/developerportal/operate/backups/restore-backup/environment.png)
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup/environment.png" >}}
 
 3. Click **Upload Archive**.
 
@@ -92,7 +92,7 @@ For a Free App, you can only restore available backups which are made from the a
 
 2. Select the backup you want to restore and click **Restore Backup**.
 
-    ![The buttons giving the backup options: Download, Restore, and Details](/attachments/developerportal/operate/backups/restore-backup/free-backup-options.png)
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup/free-backup-options.png" alt="The buttons giving the backup options: Download, Restore, and Details" >}}
 
 3. Click **Yes** to confirm the restoration.
 
@@ -110,7 +110,7 @@ The *.tar* archive within the *.tar.gz* archive (for example, *files_and_databas
 
 Here is an example:
 
-![](/attachments/developerportal/operate/backups/restore-backup/tar-gz-structure.png)
+{{< figure src="/attachments/developerportal/operate/backups/restore-backup/tar-gz-structure.png" >}}
 
 contains the following files:
 

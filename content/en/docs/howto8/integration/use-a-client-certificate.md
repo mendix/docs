@@ -43,7 +43,7 @@ This is an example:
 
 A complete configuration may look like this:
 
-![](/attachments/howto8/integration/use-a-client-certificate/example-custom-settings.png)
+{{< figure src="/attachments/howto8/integration/use-a-client-certificate/example-custom-settings.png" >}}
 
 You can use an empty path for `ClientCertificateUsages` to specify that you do not want to use a client certificate, even when the server accepts one. To do this, you need to add the **Value** `{"<endpoint>":""}` (replace `<endpoint>` with the actual endpoint).
 

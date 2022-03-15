@@ -34,11 +34,11 @@ To enable denormalization, follow these steps:
 
 1.  Create a domain model that looks like this:
 
-    ![](/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582169.png)
+    {{< figure src="/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582169.png" >}}
 
 2.  Double-click the **Customer** entity to open the properties editor:
 
-    ![](/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582168.png)
+    {{< figure src="/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582168.png" >}}
 
 3. Add a currency attribute **TotalOrderAmount**.
 4. Create an overview and detail page for the *Customer* entity.
@@ -57,61 +57,61 @@ Now the application is ready to store redundant data, but you still need to keep
     * Select **Yes** for **Pass the event object**
     * Click **Select...** to open the microflow selector
 
-    ![](/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582166.png)
+    {{< figure src="/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582166.png" >}}
 
 4. On the microflow selector, click **New** and enter a name for the new microflow (for example, *Order_AfterCommit*).
 5. Click **OK** to create the new microflow, and then click **OK** again to save the event handler.
 6.  Open the new microflow, which should look like this:
 
-    ![](/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582165.png)
+    {{< figure src="/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582165.png" >}}
 
     Let's take a moment to think about what the new microflow should do. We want to calculate the total order amount and store this value in the customer object. As you can see, the current microflow only has an order object as an input parameter. So, first we need to retrieve the corresponding customer. Then we need to get all the orders of this customer and calculate the total order amount. As soon as we have the total order amount, we need to store it in the customer object. Once you're done, the microflow should look like this:
 
-    ![](/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582150.png)
+    {{< figure src="/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582150.png" >}}
 
 7.  Open the **Toolbox**, which should be docked in the lower-right corner of the Modeler. If you can't find the **Toolbox** there, you can open it from the **View** menu:
 
-    ![](/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582163.png)
+    {{< figure src="/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582163.png" >}}
 
 8.  Drag a **Retrieve** activity from the toolbox to the line between the start and end event on the microflow, which will insert a new retrieve activity:
 
-    ![](/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582164.png)
+    {{< figure src="/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582164.png" >}}
 
 9.  Double-click the new activity to open its properties on the **Retrieve Objects** dialog box and do the following:
     * Select **By association** as **Source**
     * Click **Select...** to open the **Association** selector
 
-    ![](/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582162.png)
+    {{< figure src="/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582162.png" >}}
 
 10. On the **Select association** pop-up window, select **Order_Customer** from the **Variables** node in the tree view, and then click **Select**:
 
-    ![](/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582161.png)
+    {{< figure src="/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582161.png" >}}
 
     As you can see below, the **Output** section of the **Retrieve Objects** dialog box is configured automatically:
 
-    ![](/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582160.png)
+    {{< figure src="/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582160.png" >}}
 
 11. Click **OK** to save the activity. Your microflow should now look like this:
 
-    ![](/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582159.png)
+    {{< figure src="/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582159.png" >}}
 
 12. Insert another retrieve activity (as you did in step #8), double-click it to open its properties on the **Retrieve Objects** dialog box, and do the following:
     * Select **From Database** as **Source**
     * Click **Select...** to open the entity selector
 
-    ![](/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582157.png)
+    {{< figure src="/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582157.png" >}}
 
 13. On the **Select entity** pop-up window, select **Order** via from the **Variables** node in the tree view, and then click **Select**:
 
-    ![](/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582158.png)
+    {{< figure src="/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582158.png" >}}
 
     As you can see below, the **XPath constraint** and **Output** sections of the **Retrieve Objects** dialog box are configured automatically:
     
-    ![](/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582156.png)
+    {{< figure src="/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582156.png" >}}
 
 14. Click **OK** to save the activity. Your microflow should now look like this:
 
-    ![](/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582155.png)
+    {{< figure src="/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582155.png" >}}
 
 15. Insert an aggregate list activity, double-click it to open its properties on the **Aggregate List** dialog box, and do the following:
     * Select **OrderList** as the **Input Variable**
@@ -119,11 +119,11 @@ Now the application is ready to store redundant data, but you still need to keep
     * Select **Totalprice** as the **Attribute**
     * Enter *SumTotalprice* as the **Output Variable** name
 
-    ![](/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582153.png)
+    {{< figure src="/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582153.png" >}}
 
 16. Click **OK** to save the activity. Your microflow should now look like this:
 
-    ![](/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582152.png)
+    {{< figure src="/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582152.png" >}}
     
 17. Insert a change activity, double-click it to open its properties on the **Change Object** dialog box, and do the following:
     * Select **Customer** as the **Input Variable**
@@ -135,11 +135,11 @@ Now the application is ready to store redundant data, but you still need to keep
     * Enter *$SumTotalprice* as the **Value**
     * Click **OK** to save the change item
 
-    ![](/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582151.png)
+    {{< figure src="/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582151.png" >}}
 
 19. Click **OK** again to save the activity. Your microflow should now look like this:
 
-    ![](/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582150.png)
+    {{< figure src="/attachments/howto7/data-models/denormalize-data-to-improve-performance/18582150.png" >}}
 
 20. Run the application and create some customers and orders. You should now see an up-to-date value for the TotalOrderAmount.
 

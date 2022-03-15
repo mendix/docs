@@ -17,7 +17,7 @@ A parameter is a special kind of variable that is used an input for the microflo
 
 If you want to use an object of the *Customer* entity in a microflow, use the parameter. In the picture below, the object name is *EnclosingCustomer* and is shown in black. The data type is object, therefore the entity name is shown underneath the object name in blue.
 
-![](/attachments/refguide8/modeling/application-logic/parameter/parameter.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/parameter/parameter.png" >}}
 
 ## 2 Output Properties
 

@@ -13,7 +13,7 @@ This document describes a data grid in Mendix Studio.
 
 A data grid shows a list of objects in a table format. For example, a data grid can show all the program items for an event. Using controls, end-users can browse, search, and edit objects in the data grid.
 
-![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/data-grid-example.png)
+{{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/data-grid-example.png" >}}
 
 ## 2 Data Grid Properties
 
@@ -31,7 +31,7 @@ Data grid contains the following properties:
 
 The data source determines which objects will be shown in the data grid. 
 
-![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/data-grid-data-source.png)
+{{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/data-grid-data-source.png" >}}
 
 The **Data Source** section properties are described in the table below:
 
@@ -48,7 +48,7 @@ For general information on data sources, see [Data Sources](/refguide7/data-sour
 
 In **Columns** section, you can set the width for the data grid columns, add columns, edit, and delete them. 
 
-![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/data-grid-columns-section.png)
+{{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/data-grid-columns-section.png" >}}
 
 The **Columns** section properties are described in the table below:
 
@@ -61,7 +61,7 @@ The **Columns** section properties are described in the table below:
 
 In the **Grid Column** properties, you can select the attribute, change the name, width, and editability of the data grid column. 
 
-![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/grid-column-properties.png)
+{{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/grid-column-properties.png" >}}
 
 The properties are described in the table below:
 
@@ -78,7 +78,7 @@ The properties are described in the table below:
 
 In the **Rows** section, you can set up the number of rows to be displayed on the data grid page, and the way to display them. 
 
-![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/data-grid-rows-section.png)
+{{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/data-grid-rows-section.png" >}}
 
 The properties are described in the table below:
 
@@ -91,7 +91,7 @@ The properties are described in the table below:
 
 End-users can search for objects in the data grid if you enable search. You can determine the behavior of  search bar controls, as well as add, edit, and delete search fields. 
 
-![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/data-grid-search-section.png)
+{{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/data-grid-search-section.png" >}}
 
 The **Search** section properties are described in the table below:
 
@@ -109,7 +109,7 @@ You can select the type of the search field in the **Search Field Properties**. 
 
 Search field can be of three types:
 
-![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/search-field-types.png)
+{{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/search-field-types.png" >}}
 
 * **Input** – search results are filtered by comparing them to the given search term. If the search value matches the attribute value, this object will be a part of the search result. Possible attribute types: AutoNumber, Date and Time, Integer, Long, String, Decimal
 * **Range** –  will apply a filter based on whether the search term falls between the values of two selected attributes. Possible attribute types: AutoNumber, Date and Time, Integer, Long, Decimal
@@ -123,7 +123,7 @@ The following properties are common for all types of search fields:
 
 *  **Default Value** – defines a  prefilled value for the search field
 
-    ![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/search-fields-common-properties.png)
+    {{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/search-fields-common-properties.png" >}}
 
 ##### 2.4.2.3 Input and Drop-down Search Field Specific Properties
 
@@ -133,7 +133,7 @@ Input and drop-down search fields have the following specific properties:
 
 *  **Comparison** – the method used to compare the attribute with the search term. 
 
-    ![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/input-and-drop-down-search-field-properties.png)
+    {{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/input-and-drop-down-search-field-properties.png" >}}
 
 ##### 2.4.2.4 Range Search Field Specific Properties
 
@@ -147,7 +147,7 @@ A range search field has the following specific properties:
 
   *  **Include Maximum Value** –  when enabled, the maximum value is included into the range
 
-      ![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/range-search-field-properties.png)
+      {{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/range-search-field-properties.png" >}}
 
 ### 2.5 Control Bar {#grid-control-bar}
 
@@ -157,13 +157,13 @@ The **Control Bar** section properties are described below:
 
 *  **Show Paging Controls** –  indicates if the buttons for paging through the data grid are visible. Hide these buttons if you are sure that the data grid will contain only one page
 
-    ![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/control-bar-show-paging-controls.png)
+    {{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/control-bar-show-paging-controls.png" >}}
 
 * **Show Buttons** – determines whether the buttons defined in the **Buttons** section are shown. If disabled, none of the buttons will be accessible in any way, other than the one designated as the **On Click Action**. For more information, see sections [2.5.1 Grid Action Button](#grid-action-button) and [2.6 Events](#grid-events)
 
 *  **Buttons** – lists buttons in the control bar. A button set as **On Click Action** in the **Events** section will be indicated as *On Click Action.* This means that even if buttons are hidden, when the end-user clicks or double clicks (depending on settings in the [**Events**](#grid-events) section) the grid item, the default button (action) will be triggered
 
-    ![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/control-bar-default-button.png)
+    {{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/control-bar-default-button.png" >}}
 
   * **Edit** icon – depending on the button navigates you either to [**Grid Action Button** properties](#grid-action-button), or to [**Search Bar Toggle** properties](#search-bar-toggle)
   * **Add Button** – navigates you to [**Grid Action Button** properties](#grid-action-button), where you can configure a new button for the data grid. When you create a new button, the action of this button is added to the list of possible on-click actions in the **Events** section (for more information, see section [2.6 Events](#grid-events))
@@ -182,7 +182,7 @@ Data grid specific actions are the following ones:
 
 *  <a name="search-bar-toggle"></a> **Search Bar Toggle Button** – opens or hides the search bar when you click it and is specific for the data grid. This button cannot be used if the data source is set to *Microflow*. Note that if the **Show Search Control** property is set to **Always**, there is no search bar toggle button, as the search bar is always open
 
-    ![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/search-bar-toggle-button.png)
+    {{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/search-bar-toggle-button.png" >}}
 
 * **Create** – allows end-users to create new objects in a grid (for more information, see section [2.5.1.1 Grid Create Button](#grid-create-button))
 
@@ -202,13 +202,13 @@ Data grid specific actions are the following ones:
 
 	*  **Date Export Format** – defines how dates will be exported. When *Date value* is selected, date values will be exported as real dates, allowing Excel functions on them. When *Text* is selected, date values will be exported exactly as shown in the data grid without allowing Excel to format them.
 
-      ![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/grid-export-to-excel-button.png)
+      {{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/grid-export-to-excel-button.png" >}}
 
 #### 2.5.1.1 Grid Create Button {#grid-create-button}
 
 The **Create** button allows end-users to create new objects in the data grid.
 
-![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/grid-create-button.png) 
+{{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/grid-create-button.png" >}} 
 
 Users can edit new objects in the location specified in the **Edit Location** option. You can choose the following locations: 
 
@@ -221,7 +221,7 @@ Users can edit new objects in the location specified in the **Edit Location** op
 
 In the **Events** section, you can select the actions performed automatically when an end-user clicks an item in the grid. You can also determine whether the user can select items, and the way the user can select them. 
 
-![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/data-grid-events.png)
+{{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-data-grid/data-grid-events.png" >}}
 
 The **Events** section properties are described in the table below: 
 

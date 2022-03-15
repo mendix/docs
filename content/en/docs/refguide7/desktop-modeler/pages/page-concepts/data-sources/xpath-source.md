@@ -40,11 +40,11 @@ This differs from the [association data source](/refguide7/association-source/) 
 
 This [domain model](/refguide7/domain-model/) describes a database in which an indeterminate number of users can be linked to a single country:
 
-![](/attachments/refguide7/desktop-modeler/pages/page-concepts/data-sources/xpath-source/16843965.jpg)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/page-concepts/data-sources/xpath-source/16843965.jpg" >}}
 
 The data view shown contains a single country. The data grid nested inside will display only those users that are linked to that particular country:
 
-![](/attachments/refguide7/desktop-modeler/pages/page-concepts/data-sources/xpath-source/16843966.jpg)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/page-concepts/data-sources/xpath-source/16843966.jpg" >}}
 
 ### 3.2 Show Search Bar
 

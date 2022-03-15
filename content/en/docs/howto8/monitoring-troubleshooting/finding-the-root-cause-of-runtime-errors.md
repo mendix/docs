@@ -18,11 +18,11 @@ This how to will show you how to find the information necessary to locate the ro
 
 If the application is deployed from Studio Pro, the information is located in the console:
 
-![](/attachments/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/18580024.png)
+{{< figure src="/attachments/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/18580024.png" >}}
 
 When an error occurs, a line with a red font will appear in the console.  Double-clicking on this line brings up the **VIew Log Line Details** pop-up window:
 
-![](/attachments/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/18580023.png)
+{{< figure src="/attachments/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/18580023.png" >}}
 
 There are three key pieces of information in this window:
 
@@ -42,7 +42,7 @@ You need to have the timestamp of when the error occurred. The logs can contain 
 
 {{% /alert %}}
 
-![](/attachments/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/18580022.png)
+{{< figure src="/attachments/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/18580022.png" >}}
 
 Go to the section of the log that corresponds to the time of the error. There will be a number of lines in that timeframe that have `ERROR – ` after the timestamp. These are the lines of the log file that contain the necessary information. There are three key pieces of information here:
 

@@ -16,7 +16,7 @@ Before continuing with the merge action, make sure you are currently working in 
 
 To access the **Merge** dialog box, open [Version Control](/refguide/version-control-menu/) > **Merge Changes Here**:
 
-![Merge Dialog](/attachments/refguide/modeling/menus/version-control-menu/merge-dialog/merge-dialog.png)
+{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/merge-dialog/merge-dialog.png" alt="Merge Dialog" >}}
 
 Available scenarios are described below
 

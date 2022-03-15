@@ -32,7 +32,7 @@ From your console, start weinre with the following parameters: `weinre --boundHo
 
 Click the settings icon in the upper-right corner of the screen to configure your debugger:
 
-![](/attachments/howto8/monitoring-troubleshooting/debug-a-hybrid-mobile-application/18580021.png)
+{{< figure src="/attachments/howto8/monitoring-troubleshooting/debug-a-hybrid-mobile-application/18580021.png" >}}
 
 On the configure screen, fill in the same settings that you used to start weinre, which should be `http://1.2.3.4:9090` (wherein `1.2.3.4` is your local IP).
 

@@ -15,7 +15,7 @@ The data view is used for showing the contents of exactly one object. If, for ex
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide/modeling/resources/document-templates/data-view-document-template/918139.png)
+{{< figure src="/attachments/refguide/modeling/resources/document-templates/data-view-document-template/918139.png" >}}
 
 A data view showing orderline information.
 

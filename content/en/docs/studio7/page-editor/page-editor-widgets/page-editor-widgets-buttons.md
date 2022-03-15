@@ -11,8 +11,7 @@ tags: ["studio", "page editor", "button", "widgets"]
 
 Button [widgets](/studio7/page-editor-widgets/) allow the user to perform various actions, for example, opening a page or executing a microflow. 
 
-{{% image_container width="300" %}}![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-buttons/button-widgets.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-buttons/button-widgets.png"   width="300"  >}}
 
 The following **Buttons** are available in Mendix Studio as default widgets:
 
@@ -36,8 +35,7 @@ Apart from the default button widgets, you can also [download widgets from the M
 
 Properties in the **Events** section are partially preset for buttons listed above. They depend on the action a button performs. For example, if the button is supposed to open a page, the **On Click Action** in the **Events** section will be **Page**. However, you need to specify what page exactly the button will open. 
 
-{{% image_container width="300" %}}![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-buttons/events-section-page-button.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-buttons/events-section-page-button.png"   width="300"  >}}
 
 For more information, see section [2.1 Default Properties in the Events Section](#default-properties). 
 
@@ -53,8 +51,7 @@ For more information on the **Events** section and on click actions, see [Events
 
 **On Click Action** in the **Events** section determines the action of the button. 
 
-{{% image_container width="300" %}}![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-buttons/events-section.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-buttons/events-section.png"   width="300"  >}}
 
 You can find the list of default actions and properties that need to be configured in the table below. 
 

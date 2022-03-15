@@ -21,7 +21,7 @@ When working with external services there are several microflow activities which
 The activities described in this document are in the **Integration Activities** section of the **Toolbox**:
 
 {{% image_container width="40%" %}}
-![integration activities toolbox](/attachments/refguide8/modeling/application-logic/activities/integration-activities/integration-activities-toolbox.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/integration-activities-toolbox.png" alt="integration activities toolbox" >}}
 {{% /image_container %}}
 
 The following are the list activities you can use in your microflow:

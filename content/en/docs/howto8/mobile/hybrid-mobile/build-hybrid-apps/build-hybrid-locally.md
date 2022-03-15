@@ -66,7 +66,7 @@ This process is shorter than using XCode but might require more work to understa
    1.1 Optionally, if you wish to build for an emulator and do a debug build use the following command instead: `npm run build -- ios --debug --emulator`.
 1. When the build succeeds the generated _IPA_ file can be found in _/build/platforms/ios/build_. That folder should have the following file structure(if you did a build for an emulator an _.app_ file will be available):
 
-   ![Signing screen correctly configured](/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/folder-final.png)
+   {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/folder-final.png" alt="Signing screen correctly configured" >}}
 
 1. The IPA generated can be now uploaded to Testflight for further testing. If you wish to do so, continue with the [Upload tools](https://help.apple.com/app-store-connect/#/dev82a6a9d79) section in the Apple App Store documenation.
 
@@ -76,38 +76,38 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 
 1.  Under **/build/platforms/ios/** open the `.xcworkspace` file by double-clicking it. Xcode should open with the app loaded:
 
-    {{% image_container width="400" %}}![Opening XCWorkspace](/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/xc-workspace.png){{% /image_container %}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/xc-workspace.png" alt="Opening XCWorkspace"   width="400"  >}}
 
 1.  Select the root element from the tree view in the left-side panel:
 
-    {{% image_container width="400" %}}![Selecting the root element](/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/root-element.png){{% /image_container %}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/root-element.png" alt="Selecting the root element"   width="400"  >}}
 
 1.  The screen should change to the following view. If it does not, select the item under **Targets** on the left panel not the item under **App** and select the tab **Signing & Certificates**:
 
-    {{% image_container width="400" %}}![Signing screen with errors](/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/setup-signing-wrong.png){{% /image_container %}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/setup-signing-wrong.png" alt="Signing screen with errors"   width="400"  >}}
 
 1.  Both **Debug** and **Release** might have been configured for **Automatically manage signing**. Clear both check boxes to switch to manual signing. The screen should change to the following:
 
-    {{% image_container width="400" %}}![Signing screen correctly configured](/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/setup-signing-correct.png){{% /image_container %}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/setup-signing-correct.png" alt="Signing screen correctly configured"   width="400"  >}}
 
 1.  Enable **Automatically manage signing** again.
 1.  Select a **Team** using the drop-down menu. If you have not yet signed in with your credentials, XCode will prompt you to do so.
 1.  When configured correctly all errors should be gone.
 1.  Make sure you select the target to be your app's build target and designate **Generic iOS Device** as a device:
 
-    {{% image_container width="400" %}}![Signing screen correctly configured](/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/target-device.png){{% /image_container %}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/target-device.png" alt="Signing screen correctly configured"   width="400"  >}}
 
 1.  Select **Product** and then **Archive** from the menu bar:
 
-    {{% image_container width="400" %}}![Archiving](/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/archiving.png){{% /image_container %}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/archiving.png" alt="Archiving"   width="400"  >}}
 
 1.  After the process finishes successfully the **Organizer** view will come up. Your app should be selected and your latest **Archive** visible. You can always open the organizer yourself through XCode's **Window** menu:
 
-    {{% image_container width="400" %}}![Organizer](/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/organizer.png){{% /image_container %}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/organizer.png" alt="Organizer"   width="400"  >}}
 
 1.  You can now use the **Distribute App** button to distribute your app to the appstore or archive it for local distribution:
 
-    {{% image_container width="400" %}}![Distribute Options](/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/distribute-options.png){{% /image_container %}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/distribute-options.png" alt="Distribute Options"   width="400"  >}}
 
 ## 3 Building Your Android App Locally {#building-android-locally}
 
@@ -169,7 +169,7 @@ The command to build your app locally for release is `npm run build -- android -
 
 1. When the build succeeds the generated *APK* file can be found in **/build/platform/android/app/release**:
 
-	{{% image_container width="400" %}}![Final folder structure](/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/folder-final-android.png){{% /image_container %}}
+	{{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/folder-final-android.png" alt="Final folder structure"   width="400"  >}}
 
 #### 3.3.2 Building Android Using Android Studio
 
@@ -177,28 +177,28 @@ Using Android Studio can be easier than the Cordova CLI due to Android Studio's 
 
 1. Start Android Studio:
 
-	{{% image_container width="400" %}}![Android Studio Welcome Screen](/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-welcome.png){{% /image_container %}}
+	{{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-welcome.png" alt="Android Studio Welcome Screen"   width="400"  >}}
 
 1. Open an existing Android Studio project and select your app's Android folder, for example **/Downloads/localbuild/build/platform/android**:
 
-	{{% image_container width="400" %}}![Android Studio Open Folder](/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-open-folder.png){{% /image_container %}}
+	{{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-open-folder.png" alt="Android Studio Open Folder"   width="400"  >}}
 
 1. Wait for Android Studio to finish syncing your app.
 1. Click the **Build** > **Generate Signed Bundle / APK**:
 
-	{{% image_container width="400" %}}![Android Studio Build Menu](/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-build-menu.png){{% /image_container %}}
+	{{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-build-menu.png" alt="Android Studio Build Menu"   width="400"  >}}
 
 1. Select the *APK* checkbox:
 
-	{{% image_container width="400" %}}![Android Studio Sign Wizard Step 1](/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-sign-wizard-1.png){{% /image_container %}}
+	{{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-sign-wizard-1.png" alt="Android Studio Sign Wizard Step 1"   width="400"  >}}
 
 1. Select your Android keystore and complete the form with the correct keystore password, alias, and password:
 
-	{{% image_container width="400" %}}![Android Studio Sign Wizard Step 2](/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-sign-wizard-2.png){{% /image_container %}}
+	{{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-sign-wizard-2.png" alt="Android Studio Sign Wizard Step 2"   width="400"  >}}
 
 1. Select the destination folder for the *APK*, **Build Variant** release, and **V1 and V2 Signature** versions:
 
-	{{% image_container width="400" %}}![Android Studio Sign Wizard Step 3](/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-sign-wizard-3.png){{% /image_container %}}
+	{{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-sign-wizard-3.png" alt="Android Studio Sign Wizard Step 3"   width="400"  >}}
 
 1. Click **Finish**.
 

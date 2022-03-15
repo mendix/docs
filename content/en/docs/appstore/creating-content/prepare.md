@@ -35,7 +35,7 @@ The Marketplace provides a trustworthy experience for sharing and consuming cont
 
 Mendix uses the industry-standard [Open Service Broker API (OSB API)](https://www.openservicebrokerapi.org/) to enable automatically provisioning, de-provisioning, updating, and connecting users to your content.
 
-![](/attachments/appstore/creating-content/prepare/journey.png)
+{{< figure src="/attachments/appstore/creating-content/prepare/journey.png" >}}
 
 To help us maintain the high quality of content available on the Marketplace, we provide clear guidelines below for what is necessary when preparing and submitting your content. Use these comprehensive resources to turn your idea into reality by learning how to design, develop, market, and monetize your content and get support via best practices and success stories from like-minded Mendix Vendors.
 

@@ -12,7 +12,7 @@ This activity can only be used in microflows, not in nanoflows.
 
 ## 1 Introduction
 
-![](/attachments/refguide7/desktop-modeler/integration/microflow-activities/export-mapping-action/19399019.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/export-mapping-action/19399019.png" >}}
 
 With the Export Mapping action, you can export the data stored in [domain model](/refguide7/domain-model/) entities into an XML document, JSON document, or string variable.
 

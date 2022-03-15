@@ -17,7 +17,7 @@ One implication of this is that you must use the same username (in the form of a
 
 When you log on to Mendix Studio Pro, you have the option to use SAP authentication or Mendix authentication.
 
-![](/attachments/partners/sap/sap-single-sign-on/sign-in.png)
+{{< figure src="/attachments/partners/sap/sap-single-sign-on/sign-in.png" >}}
 
 {{% alert color="warning" %}}
 
@@ -35,11 +35,11 @@ You can enter your **Username** and Mendix **Password** and click **Sign in**. T
 
 You can click **SAP** to ask to use your SAP credentials. These are region based, so you will be asked to select a region:
 
-![](/attachments/partners/sap/sap-single-sign-on/select-sap-region.png)
+{{< figure src="/attachments/partners/sap/sap-single-sign-on/select-sap-region.png" >}}
 
 Select the region and you will be asked for your **SAP credentials**.
 
-![](/attachments/partners/sap/sap-single-sign-on/sap-login-screen.png)
+{{< figure src="/attachments/partners/sap/sap-single-sign-on/sap-login-screen.png" >}}
 
 Enter the correct credentials and you will be signed in to Studio Pro.
 
@@ -51,23 +51,23 @@ This is triggered if you do not already have an active session in the SAP region
 
 First you select a region:
 
-![](/attachments/partners/sap/sap-single-sign-on/app-select-sap-region.png)
+{{< figure src="/attachments/partners/sap/sap-single-sign-on/app-select-sap-region.png" >}}
 
 If you need to enter your credentials you will be asked for them:
 
-![](/attachments/partners/sap/sap-single-sign-on/sap-login-screen.png)
+{{< figure src="/attachments/partners/sap/sap-single-sign-on/sap-login-screen.png" >}}
 
 Enter the correct credentials and you will be signed in to continue the creation of your SAP BTP environment.
 
 ## 4 Resolving "Go back to where you originally came from" Error
 
-![](/attachments/partners/sap/sap-single-sign-on/go-back.png)
+{{< figure src="/attachments/partners/sap/sap-single-sign-on/go-back.png" >}}
 
 This error happens when working with SAP environments from within the Mendix Developer Portal. As described on the error page, it occurs when you are logged in on the Mendix Platform under one username, but logged in to the SAP region in which you are working under a different username.
 
 When you click **Go back to where you originally came from**, you will see a second error message which you will have to clear by clicking **OK**.
 
-![](/attachments/partners/sap/sap-single-sign-on/server-error.png)
+{{< figure src="/attachments/partners/sap/sap-single-sign-on/server-error.png" >}}
 
 There are three possible solutions, depending on why the usernames are different. Some of these can be changed within Mendix itself, but you may also need to make changes directly on the SAP site.
 
@@ -88,7 +88,7 @@ Choose the URL for the correct region.
 
 Select the down arrow next to your username, and this will give the option to **Sign Out**.
 
-![](/attachments/partners/sap/sap-single-sign-on/where-to.png)
+{{< figure src="/attachments/partners/sap/sap-single-sign-on/where-to.png" >}}
 
 Click **Sign Out** and you can then return to Mendix and login again with an account which has the same email address as the username you use for Mendix.
 

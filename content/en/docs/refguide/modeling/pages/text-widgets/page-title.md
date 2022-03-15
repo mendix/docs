@@ -11,7 +11,7 @@ tags: ["studio pro", "page title", "text widgets"]
 
 This widget displays a page title of the current page that is set in [page properties](/refguide/page-properties/#title).
 
-![Page Title Example](/attachments/refguide/modeling/pages/text-widgets/page-title/page-title-example.png)
+{{< figure src="/attachments/refguide/modeling/pages/text-widgets/page-title/page-title-example.png" alt="Page Title Example" >}}
 
 {{% alert color="info" %}}
 
@@ -23,8 +23,7 @@ The page title widget makes it possible to embed the page title in a [layout](/r
 
 An example of page title properties is represented in the image below:
 
-{{% image_container width="300" %}}![Page Title Properties](/attachments/refguide/modeling/pages/text-widgets/page-title/page-title-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide/modeling/pages/text-widgets/page-title/page-title-properties.png" alt="Page Title Properties"   width="300"  >}}
 
 Page title properties consist of the following sections:
 

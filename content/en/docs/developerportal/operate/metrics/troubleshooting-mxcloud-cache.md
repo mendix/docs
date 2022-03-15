@@ -24,21 +24,21 @@ The "Cache" tab can be found on the **Metrics** page of your Cloud node. It can 
 
 It looks something like this (entity names are normally not obfuscated):
 
-![](/attachments/developerportal/operate/metrics/troubleshooting-mxcloud-cache/troubleshooting-mxcloud-cache-img1.png)
+{{< figure src="/attachments/developerportal/operate/metrics/troubleshooting-mxcloud-cache/troubleshooting-mxcloud-cache-img1.png" >}}
 
 The **Totals** data grid will show the current number of Mendix objects in cache and list them by entity type. For example: MyModule.MyEntity (Count: 79)
 
 The **User Sessions** data grid will show the entities per session, you can press the **Details** button to zoom in on the specific user.
 
-![](/attachments/developerportal/operate/metrics/troubleshooting-mxcloud-cache/troubleshooting-mxcloud-cache-img2.png)
+{{< figure src="/attachments/developerportal/operate/metrics/troubleshooting-mxcloud-cache/troubleshooting-mxcloud-cache-img2.png" >}}
 
 The **unknown** user means the entities are part of a system session, for example a [scheduled event](/refguide/scheduled-events/).
 
-![](/attachments/developerportal/operate/metrics/troubleshooting-mxcloud-cache/troubleshooting-mxcloud-cache-img3.png)
+{{< figure src="/attachments/developerportal/operate/metrics/troubleshooting-mxcloud-cache/troubleshooting-mxcloud-cache-img3.png" >}}
 
 If you fear your application might contain a memory leak you should always check this graph to see if an abnormally large amount of objects stay in cache. Especially a graph with the following shape over a long period of time should be worrisome:
 
-![](/attachments/developerportal/operate/metrics/troubleshooting-mxcloud-cache/troubleshooting-mxcloud-cache-img4.png)
+{{< figure src="/attachments/developerportal/operate/metrics/troubleshooting-mxcloud-cache/troubleshooting-mxcloud-cache-img4.png" >}}
 
 In this case, you can refer back to the **Cache** tab. And see how many of each entity type are in cache and what session is keeping them in cache. You might be able to deduce the most likely source of the memory leak this way. 
 For example, if you have 50500 entities in cache and 50000 are of type Car.Tire, you might want to look into all places where you process a lot of Car.Tire entities to see if you made a mistake somewhere that could explain the memory leak.

@@ -36,11 +36,11 @@ To import a complete Mendix project package, follow these steps:
 
 1. Click the **File** menu in the Desktop Modeler and select **Import Project Package...**:
 
-    ![](/attachments/howto7/integration/importing-and-exporting-objects/18582103.png)
+    {{< figure src="/attachments/howto7/integration/importing-and-exporting-objects/18582103.png" >}}
 
 2. Select your Mendix project package file and click **Open**. The **Import Project Package** dialog box will appear:
 
-    ![](/attachments/howto7/integration/importing-and-exporting-objects/18582101.png)
+    {{< figure src="/attachments/howto7/integration/importing-and-exporting-objects/18582101.png" >}}
 
     You have the following options in this dialog box:
 
@@ -58,15 +58,15 @@ To import module packages, follow these steps:
 
 1. Right-click your project in the **Project Explorer** and select **Import Module Package**.
 
-    ![](/attachments/howto7/integration/importing-and-exporting-objects/import-package.png)
+    {{< figure src="/attachments/howto7/integration/importing-and-exporting-objects/import-package.png" >}}
 
 2. Select your Mendix module package file and click **Open**. The **Import Module** dialog box will open.
 
 3. In the dialog box, choose a name for your module and select whether to create a new module or replace an existing one:
 
-    ![](/attachments/howto7/integration/importing-and-exporting-objects/18582113.png)
+    {{< figure src="/attachments/howto7/integration/importing-and-exporting-objects/18582113.png" >}}
 
-    ![](/attachments/howto7/integration/importing-and-exporting-objects/18582112.png)
+    {{< figure src="/attachments/howto7/integration/importing-and-exporting-objects/18582112.png" >}}
 
     {{% alert color="info" %}}If you replace the module with a new version, the existing user data will be retained based on the names of entities, attributes, and associations. If you delete a module and then add a newer version of it, all user data will be lost.
     {{% /alert %}}
@@ -77,7 +77,7 @@ To import module packages, follow these steps:
 
     You will also see your changes in the **Changes** section of the Desktop Modeler. In this example, the existing module has been deleted and replaced by the newly imported module:
 
-    ![](/attachments/howto7/integration/importing-and-exporting-objects/18582109.png)
+    {{< figure src="/attachments/howto7/integration/importing-and-exporting-objects/18582109.png" >}}
 
 ### 2.3 Importing Module Documents
 
@@ -118,7 +118,7 @@ To import module objects, follow these steps:
 
 1. Right-click a module in the **Project Explorer** and select **Import document from file...**:
 
-    ![](/attachments/howto7/integration/importing-and-exporting-objects/18582100.png)
+    {{< figure src="/attachments/howto7/integration/importing-and-exporting-objects/18582100.png" >}}
 
     The **Import Document from File** dialog box will appear.
 
@@ -140,13 +140,13 @@ To import widgets, follow these steps:
 
 1. Click the **Project** menu and select **Show Project Directory in Explorer**:
 
-    ![](/attachments/howto7/integration/importing-and-exporting-objects/18582108.png)
+    {{< figure src="/attachments/howto7/integration/importing-and-exporting-objects/18582108.png" >}}
 
 2. Open the **widgets** folder in your project directory and put your Mendix package file there.
 
 3. Open the **Project** menu and select **Synchronize Project Directory** to synchronize the changes in the project directory:
 
-    ![](/attachments/howto7/integration/importing-and-exporting-objects/18582106.png)
+    {{< figure src="/attachments/howto7/integration/importing-and-exporting-objects/18582106.png" >}}
 
     {{% alert color="info" %}}You can also press **F4** to synchronize your project directory.
     {{% /alert %}}
@@ -165,11 +165,11 @@ To export a project, follow these steps:
 
 1. Click the **File** menu in the Desktop Modeler and select **Export Project Package...**
 
-    ![](/attachments/howto7/integration/importing-and-exporting-objects/18582091.png)
+    {{< figure src="/attachments/howto7/integration/importing-and-exporting-objects/18582091.png" >}}
 
 2. The **Export Project Package** dialog box will appear, which enables you to set the export location and select data to export (if required):
 
-    ![](/attachments/howto7/integration/importing-and-exporting-objects/18582090.png)
+    {{< figure src="/attachments/howto7/integration/importing-and-exporting-objects/18582090.png" >}}
 
     The **Existing snapshot** option will only be available when a data snapshot was created earlier using the **Add snapshot of data** menu option from the **Team** menu. It is also possible to include a new snapshot based on the current state of the local database. This option is only available after the project has been started at least once.
 
@@ -181,15 +181,15 @@ To export a module, follow these steps:
 
 1. Right-click a module in the **Project Explorer**, and select **Export module package...**:
 
-    ![](/attachments/howto7/integration/importing-and-exporting-objects/18582095.png)
+    {{< figure src="/attachments/howto7/integration/importing-and-exporting-objects/18582095.png" >}}
 
     If your module refers to other modules in the project (that is, it is not self-contained), you will see a pop-up window warning you of this.
 
-    ![](/attachments/howto7/integration/importing-and-exporting-objects/18582094.png)
+    {{< figure src="/attachments/howto7/integration/importing-and-exporting-objects/18582094.png" >}}
 
     Select **Find usages of other user modules** to view the references, or click **Continue exporting** and you will see the **Select Dependencies** dialog box:
 
-    ![](/attachments/howto7/integration/importing-and-exporting-objects/18582093.png)
+    {{< figure src="/attachments/howto7/integration/importing-and-exporting-objects/18582093.png" >}}
 
     Here you can select files you would like to include in your package. This list includes any files in the **userlib** or **resources** folders in your project directory. If you don't want to include these files, you can uncheck the boxes.
 
@@ -206,7 +206,7 @@ Mendix module documents can be exported as a Mendix package (*.mpk*) file.
 
 1. Right-click the document you want to export and select **Export document to file...**:
 
-    ![](/attachments/howto7/integration/importing-and-exporting-objects/18582092.png)
+    {{< figure src="/attachments/howto7/integration/importing-and-exporting-objects/18582092.png" >}}
 
     The **Export Page to File** dialog box will open.
     

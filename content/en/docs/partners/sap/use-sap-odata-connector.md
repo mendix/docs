@@ -48,7 +48,7 @@ In this example, you will display a list of products from the GWSAMPLE_BASIC ODa
 
 5. Click **Continue**.
 
-    ![](/attachments/partners/sap/use-sap-odata-connector/login-catalog.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-connector/login-catalog.png" >}}
 
 6. Type *GWSAMPLE* in the search box and press <kbd>Enter</kbd>.
 
@@ -58,7 +58,7 @@ In this example, you will display a list of products from the GWSAMPLE_BASIC ODa
 
 9. Click **Generate .mpk**.
 
-    ![](/attachments/partners/sap/use-sap-odata-connector/generate-mpk.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-connector/generate-mpk.png" >}}
 
 10. Click **Download** once the model is ready.
 
@@ -70,13 +70,13 @@ In this example, you will display a list of products from the GWSAMPLE_BASIC ODa
 
 14. Right-click the project in the **App Explorer** and select **Import module package…**.
 
-    ![](/attachments/partners/sap/use-sap-odata-connector/import-module.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-connector/import-module.png" >}}
 
 15. Find the file that you stored in the /resources folder and import it.
 
     The GWSAMPLE_BASIC data model will now be included as a module in your app.
 
-    ![](/attachments/partners/sap/use-sap-odata-connector/data-model.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-connector/data-model.png" >}}
 
 For more information, see [Use the OData Model Creator for SAP Solutions](/partners/sap/use-sap-odata-model-creator/) and [SAP Data Models](/partners/sap/sap-data-models/).
 
@@ -113,7 +113,7 @@ To create the microflow for this retrieve, follow these steps:
 
 The final result of your microflow should look like this:
 
-![](/attachments/partners/sap/use-sap-odata-connector/get-list.png)
+{{< figure src="/attachments/partners/sap/use-sap-odata-connector/get-list.png" >}}
 
 ### 5.2 Creating a Page
 
@@ -126,7 +126,7 @@ To create a page to show the objects in a list, follow these steps:
 
     Your page should look like this:
 
-    ![](/attachments/partners/sap/use-sap-odata-connector/show-get-list-result.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-connector/show-get-list-result.png" >}}
 
 3. Drag a **open page button** on your homepage.
 4. Select the page you have just created to be displayed.

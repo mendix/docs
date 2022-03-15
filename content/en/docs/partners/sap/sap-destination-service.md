@@ -19,7 +19,7 @@ The SAP Destination Service will only provide the correct information when run o
 
 Your Mendix app will use destinations which are configured as part of your SAP subaccount. From your SAP BTP cockpit, you can see which destinations have been configured.
 
-![SAP BTP cockpit - Destinations screen](/attachments/partners/sap/sap-destination-service/sap-cockpit-destinations.png)
+{{< figure src="/attachments/partners/sap/sap-destination-service/sap-cockpit-destinations.png" alt="SAP BTP cockpit - Destinations screen" >}}
 
 It is not the aim of this document to explain how to configure destinations. For this you need to see the SAP documentation here: [SAP Business Technology Platform Connectivity: Destinations](https://help.sap.com/viewer/cca91383641e40ffbe03bdc78f00f681/Cloud/en-US/e4f1d97cbb571014a247d10f9f9a685d.html).
 
@@ -31,11 +31,11 @@ Although you can use the SAP Destination Service on its own, the main use within
 
 There is one action within the OData Connector for SAP solutions module which allows you to get information about a destination. This is **Get Destination**, which is in the *SAP Destination Service* category of the microflow toolbox.
 
-![Drag a Get Destination action from the toolbox](/attachments/partners/sap/sap-destination-service/drag-get-destination.png)
+{{< figure src="/attachments/partners/sap/sap-destination-service/drag-get-destination.png" alt="Drag a Get Destination action from the toolbox" >}}
 
 The **Get Destination** action properties look like this:
 
-![Get Destination properties dialog](/attachments/partners/sap/sap-destination-service/get-destination-properties.png)
+{{< figure src="/attachments/partners/sap/sap-destination-service/get-destination-properties.png" alt="Get Destination properties dialog" >}}
 
 **Destination** is a string containing the name of the destination. This matches the name of the destination as set up in the SAP BTP cockpit.
 
@@ -45,7 +45,7 @@ The **Get Destination** action properties look like this:
 
 By default, your destination will be found and authenticated using XSUAA. This is controlled using a constant `XSUAAEnabled` which defaults to `true`.
 
-![](/attachments/partners/sap/sap-destination-service/xsuaaenabled.png)
+{{< figure src="/attachments/partners/sap/sap-destination-service/xsuaaenabled.png" >}}
 
 Set `XSUAAEnabled` to `true` if your application is using XSUAA for user authentication, and you want to use the generated access token to authenticate with destination service.
 
@@ -60,7 +60,7 @@ With `XSUAAEnabled` set to `false`, the destination will use the `VCAP` settings
 
 The details of your SAP destination are held in the **Destination** entity which is part of the *SAPODataConnector* domain model. The entity looks like this:
 
-![Destination entity](/attachments/partners/sap/sap-destination-service/destination-entity.png)
+{{< figure src="/attachments/partners/sap/sap-destination-service/destination-entity.png" alt="Destination entity" >}}
 
 This contains attributes for all the possible information about a destination, but only those attributes which are relevant to the chosen *Authentication* method will be populated with values.
 
@@ -170,7 +170,7 @@ You need to get the destination at least once before you perform any actions whi
 
 You should catch any exceptions when using the **Get Destination** to access the service in your microflows.
 
-![](/attachments/partners/sap/sap-destination-service/get-destination-error-flow.png)
+{{< figure src="/attachments/partners/sap/sap-destination-service/get-destination-error-flow.png" >}}
 
 If your access token has expired, you will get a return code of **401**. The access token cannot be refreshed automatically and the end user will be signed out and will need to sign in again to get a new token.
 

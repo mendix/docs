@@ -39,7 +39,7 @@ The **Screen reader caption** property can be set on the following widgets:
 
 ## 3 Common Section{#common-properties}
 
-![Common Section](/attachments/refguide8/modeling/pages/common-widget-properties/common-section.png)
+{{< figure src="/attachments/refguide8/modeling/pages/common-widget-properties/common-section.png" alt="Common Section" >}}
 
 ### 3.1 Name{#name}
 
@@ -65,19 +65,19 @@ Styling is applied in the following order:
 
 You can see which widgets in a page have styling applied via the class or style property by clicking the <strong>Show styles</strong> button.
 
-![](/attachments/refguide8/modeling/pages/common-widget-properties/show-styles.png)
+{{< figure src="/attachments/refguide8/modeling/pages/common-widget-properties/show-styles.png" >}}
 
 ### 3.4 Style{#style}
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied *after* the class. For example, `>background-color:lightblue; color:red;` will result in red text on a blue background:
 
-![](/attachments/refguide8/modeling/pages/common-widget-properties/style-example.png)
+{{< figure src="/attachments/refguide8/modeling/pages/common-widget-properties/style-example.png" >}}
 
 ### 3.5 Dynamic Classes{#dynamicclasses}
 
 The dynamic classes property allows you to specify one or more cascading stylesheet (CSS) class like the class property, but based on an [expression](/refguide8/expressions/). This allows you to dynamically construct classes based on data from an enclosing data container. The dynamic classes constructed in the expression are appended to the classes defined in the [`Class`](#class) property.
 
-![](/attachments/refguide8/modeling/pages/common-widget-properties/dynamic-classes.png)
+{{< figure src="/attachments/refguide8/modeling/pages/common-widget-properties/dynamic-classes.png" >}}
 
 {{% alert color="info" %}}
 The dynamic classes property was introduced in Mendix Studio Pro v8.14.
@@ -91,7 +91,7 @@ Some widgets, for example snippets and building blocks, have a **Documentation**
 
 ## 4 Data Source Section{#data-source}
 
-![Data Source Section](/attachments/refguide8/modeling/pages/common-widget-properties/data-source-section.png)
+{{< figure src="/attachments/refguide8/modeling/pages/common-widget-properties/data-source-section.png" alt="Data Source Section" >}}
 
 ### 4.1 Attribute(Path)
 
@@ -154,7 +154,7 @@ The attribute can be of one of the following [data types](/refguide8/data-types/
 
 ## 5 Editability Section{#editability}
 
-![Common Section](/attachments/refguide8/modeling/pages/common-widget-properties/editability-section.png)
+{{< figure src="/attachments/refguide8/modeling/pages/common-widget-properties/editability-section.png" alt="Common Section" >}}
 
 ### 5.1 Editable
 
@@ -203,7 +203,7 @@ This property determines how the widget is rendered if it is read-only.
 
 ## 6 Label Section {#label}
 
-![Label Section](/attachments/refguide8/modeling/pages/common-widget-properties/label-section.png)
+{{< figure src="/attachments/refguide8/modeling/pages/common-widget-properties/label-section.png" alt="Label Section" >}}
 
 A label can be used to described the purpose of the widget to the user. The label is shown next to the widget in the user interface. If a label is configured, the widget will be rendered in the browser wrapped in a form group. See [Bootstrap documentation](http://getbootstrap.com/css/#forms).
 
@@ -229,7 +229,7 @@ For each parameter in the template, you define an attribute of the context entit
 
 ## 7 Formatting Section{#numeric-formatting}
 
-![Numeric Formatting Section](/attachments/refguide8/modeling/pages/common-widget-properties/numeric-formatting-section.png)
+{{< figure src="/attachments/refguide8/modeling/pages/common-widget-properties/numeric-formatting-section.png" alt="Numeric Formatting Section" >}}
 
 Formatting describes the way that numeric attributes are displayed. These are attributes of the following data types:
 
@@ -297,7 +297,7 @@ For example, with **Group digits** set to `true`, the number `1100100.01` will b
 
 ## 8 Validation Section{#validation}
 
-![Validation Section](/attachments/refguide8/modeling/pages/common-widget-properties/validation-section.png)
+{{< figure src="/attachments/refguide8/modeling/pages/common-widget-properties/validation-section.png" alt="Validation Section" >}}
 
 Input widgets can include validation to ensure that data is correct before it is used by the app.
 
@@ -348,7 +348,7 @@ For example, if an address field is required, the validation message for the tex
 
 ## 9 Visibility Section {#visibility-properties}
 
-![Visibility Section](/attachments/refguide8/modeling/pages/common-widget-properties/visibility-section.png)
+{{< figure src="/attachments/refguide8/modeling/pages/common-widget-properties/visibility-section.png" alt="Visibility Section" >}}
 
 ### 9.1 Visible
 

@@ -23,7 +23,7 @@ A **Retrieve** activity can be used to get one or more objects, either by direct
 
 An example of retrieve properties is represented in the image below:
 
-![retrieve properties](/attachments/refguide8/modeling/application-logic/activities/object-activities/retrieve/retrieve-properties.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/retrieve/retrieve-properties.png" alt="retrieve properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

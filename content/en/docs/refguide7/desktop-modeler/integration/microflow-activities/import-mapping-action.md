@@ -14,7 +14,7 @@ This activity can only be used in microflows, not in nanoflows.
 
 With the Import Mapping action, you can import the data stored in an XML or JSON document into [domain model](/refguide7/domain-model/) entities.
 
-![](/attachments/refguide7/desktop-modeler/integration/microflow-activities/import-mapping-action/import-mapping-action.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/import-mapping-action/import-mapping-action.png" >}}
 
 ## 2 Input
 

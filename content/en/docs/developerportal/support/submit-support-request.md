@@ -43,7 +43,7 @@ To submit a request with Mendix Support, follow these steps:
 1. Click **Submit a request** in the upper-right corner of the portal.
 2.  Select an issue from the drop-down menu:
 
-	![](/attachments/developerportal/support/submit-support-request/issue.png)
+	{{< figure src="/attachments/developerportal/support/submit-support-request/issue.png" >}}
 
 	You can select from the following issues:
 
@@ -92,7 +92,7 @@ To submit a request with Mendix Support, follow these steps:
 
 The Mendix Support Portal will first suggest relevant documentation for you to read before you submit a request. Based on a complexity check, recommendations might be skipped to improve your experience. This complexity check takes your request priority and other factors into consideration.
 
-![](/attachments/developerportal/support/submit-support-request/recommendations.png)
+{{< figure src="/attachments/developerportal/support/submit-support-request/recommendations.png" >}}
 
 If investigating the documentation and searching the [Mendix Forum](https://forum.mendixcloud.com/index4.html) does not help you solve your issue, you can submit the Mendix Support request.	
 
@@ -123,7 +123,7 @@ You can set the priority to the following levels:
 
 The [ticket priority](/developerportal/support/ticket-priority/) that Mendix Support validates is based on this matrix:
 
-![](/attachments/developerportal/support/submit-support-request/204371729-pic5.png)
+{{< figure src="/attachments/developerportal/support/submit-support-request/204371729-pic5.png" >}}
 
 ## 5 Providing Attachments & Additional Information
 
@@ -177,11 +177,11 @@ For Windows Phone, please contact Mendix Support for the current support conditi
 
 By clicking your name on the upper-right side of the screen, you can select **My activities** and see all the requests that you have submitted (**My requests**) as well as all the requests that have been submitted on the apps to which you have access:
 
-![](/attachments/developerportal/support/submit-support-request/activities.png)
+{{< figure src="/attachments/developerportal/support/submit-support-request/activities.png" >}}
 
 On the **All requests** tab, you can click **Follow** for an app to be informed of all the changes on requests on that specific app:
 
-![](/attachments/developerportal/support/submit-support-request/follow.png)
+{{< figure src="/attachments/developerportal/support/submit-support-request/follow.png" >}}
 
 ## 7 Viewing & Updating Tickets
 
@@ -200,7 +200,7 @@ The ticket can have the following statuses:
 	* You can close the ticket yourself by checking the box **Please consider this request solved**
 	* The ticket will be closed for comments automatically after a set number of days, after which you can create a follow-up ticket
 
-![](/attachments/developerportal/support/submit-support-request/request.png)
+{{< figure src="/attachments/developerportal/support/submit-support-request/request.png" >}}
 
 ## 8 Submitting a Feature Request
 

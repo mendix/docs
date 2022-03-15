@@ -8,7 +8,7 @@ parent: "rg-three-apd"
 
 After selecting an app from the [Apps Overview](/addons/apd-addon/rg-three-apps/), an overview of available environments for that app is displayed. It is possible to select an existing environment or add a new environment.
 
-![](/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-environments/environments.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-environments/environments.png" >}}
 
 When selecting an existing environment, the [Dashboard](/addons/apd-addon/rg-three-dashboard/) of that environment will be shown.
 
@@ -22,7 +22,7 @@ When an environment is marked as red instead of green, that means the APD agent 
 
 In order to add a new environment, click **New environment** in the **Environments** overview:
 
-![](/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-environments/new_environment.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-environments/new_environment.png" >}}
 
 All the environments initially start as a Mendix Studio Pro environment. A Mendix Studio Pro environment is only visible for the user that creates it in APD.
 

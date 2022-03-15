@@ -11,7 +11,7 @@ Since the Mendix SDK gives you full access to all aspects of your app model, the
 
 ## 2 Importing Legacy Code {#importing}
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-intro/16844116.png)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/16844116.png" >}}
 
 The longer an organization exists, the larger its installed base of legacy software is. Maintaining this legacy software is often costly and error-prone, not to mention the required expertise for outdated technologies. The Mendix SDK allows you to create legacy software transformation tools that help you convert your legacy applications to cloud-based Mendix apps.
 
@@ -23,7 +23,7 @@ Some of the possibilities:
 
 ## 3 Analyzing Your Apps {#analyzing}
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-intro/16844117.png)
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/16844117.png" >}}
 
 If you are looking to improve your existing Mendix app models, it can be hard to figure out where to start. Especially if you join a project where you need to work on an existing app, it is a lot of work to get a feeling for where the complexity of an app can be found. With the Mendix SDKyou are empowered to access every part of the model, which allows you to analyze your app model and find out where the complex areas reside.
 
@@ -35,7 +35,7 @@ Some of the possibilities are:
 
 ## 4 Exporting Your Apps {#exporting}
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-intro/16844114.png) 
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/16844114.png" >}} 
 
 The SDK allows you to export your Mendix app model and then take it basically anywhere. Every model element (pages, microflows, entities, etc.) and its properties are open and accessible via the Mendix SDK. So take any (or all) of these, and generate whole new representations of your app model.
 
@@ -47,7 +47,7 @@ Some of the possibilities are:
 
 ## 5 Modifying Your Apps {#modifying}
 
-![](/attachments/apidocs-mxsdk/mxsdk/sdk-intro/16844115.png) 
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/16844115.png" >}} 
 
 Your existing Mendix apps will likely need updates and changes. Some of these changes can be tedious to do by hand, whether it's replacing group boxes by div containers, creating a better visual layout for your microflows, or publishing your microflows as Web Service operations. With the Model SDK you can create a script that does these things for you.
 

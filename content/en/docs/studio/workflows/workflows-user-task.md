@@ -29,13 +29,13 @@ User task properties consist of the following sections:
 
 **Caption** defines a title of the user task:
 
-![General Section](/attachments/studio/workflows/workflows-user-task/general.jpg)
+{{< figure src="/attachments/studio/workflows/workflows-user-task/general.jpg" alt="General Section" >}}
 
 ### 2.2 User Assignment Section {#user-assignment}
 
 **Assign user task using** allows you to manage which users can pick up the task. You can filter users or implement a more complicated logic and add several checks using a microflow. 
 
-![User Assignment](/attachments/studio/workflows/workflows-user-task/user-assignment.jpg)
+{{< figure src="/attachments/studio/workflows/workflows-user-task/user-assignment.jpg" alt="User Assignment" >}}
 
 Possible options of this property are described in the table below:
 
@@ -48,13 +48,13 @@ Possible options of this property are described in the table below:
 
 **Page** is the page that an assigned user will use to inspect their task and complete it: 
 
-![Task Page](/attachments/studio/workflows/workflows-user-task/task-page.jpg)
+{{< figure src="/attachments/studio/workflows/workflows-user-task/task-page.jpg" alt="Task Page" >}}
 
 ### 2.4 Display Information Section {#display-info}
 
 The **Display Information** section defines the user task name and its description that are displayed in the running (published) app, for example, in the user's task inbox and on the task page. 
 
-![Display Information](/attachments/studio/workflows/workflows-user-task/display-information.jpg)
+{{< figure src="/attachments/studio/workflows/workflows-user-task/display-information.jpg" alt="Display Information" >}}
 
 The **Display Information** section properties are described in the table below:
 
@@ -67,7 +67,7 @@ The **Display Information** section properties are described in the table below:
 
 The **Due Date** section allows you to set a deadline for the user task and keep track of it. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. For example, you can use this due date to show overdue tasks on a dashboard.
 
-![Due Date Section](/attachments/studio/workflows/workflows-user-task/due-date.jpg)
+{{< figure src="/attachments/studio/workflows/workflows-user-task/due-date.jpg" alt="Due Date Section" >}}
 
 The **Due Date** section properties are described in the table below:
 
@@ -81,13 +81,13 @@ The **Due Date** section properties are described in the table below:
 
 The **Outcomes** property allows you to create new outcomes for the user task. These outcomes can be referred to by other elements, such as buttons. For example, you have a process when you need to approve or reject a request. One button on a [task page](#task-page) can refer to the **Approve** outcome of the user task, while the other one can use the **Reject** outcome:
 
-![Outcomes Section](/attachments/studio/workflows/workflows-user-task/outcomes.jpg)
+{{< figure src="/attachments/studio/workflows/workflows-user-task/outcomes.jpg" alt="Outcomes Section" >}}
 
 ### 2.7 Events Section {#events}
 
 **On Create** event allows you to select a microflow that is executed immediately after users have been determined for a newly created task. For example, you can use this setting for a microflow that will send an email notification about the user task to the assigned users.
 
-![Events Section](/attachments/studio/workflows/workflows-user-task/events.jpg)
+{{< figure src="/attachments/studio/workflows/workflows-user-task/events.jpg" alt="Events Section" >}}
 
 Possible options for this setting are the following:
 
@@ -98,7 +98,7 @@ Possible options for this setting are the following:
 
 **Allowed roles** defines the [user role](/studio/settings-security/#roles-and-permissions) that can execute the user task.
 
-![Permissions Section](/attachments/studio/workflows/workflows-user-task/permissions.jpg)
+{{< figure src="/attachments/studio/workflows/workflows-user-task/permissions.jpg" alt="Permissions Section" >}}
 
 ## 3 Read More
 

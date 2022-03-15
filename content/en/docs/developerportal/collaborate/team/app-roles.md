@@ -37,7 +37,7 @@ Scrum Masters can edit and create new team roles on the [Team](/developerportal/
 
 When you view the [General Settings](/developerportal/settings/general-settings/) for a specific app, you will see the two roles responsible for the app: **App contact** and **Technical contact**. These are users you can contact with questions related to the app.
 
-![](/attachments/developerportal/collaborate/team/app-roles/app-roles.png)
+{{< figure src="/attachments/developerportal/collaborate/team/app-roles/app-roles.png" >}}
 
 The App Contact is visible to regular users and is the go-to person for questions on the app. If you build your own app, you will automatically become the App Contact and you will have the **Scrum Master** [team role](#team-roles). 
 

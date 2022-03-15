@@ -16,15 +16,13 @@ This activity can only be used in **Nanoflows**.
 
 The JavaScript action call activity can be used to call a [JavaScript action](/refguide/javascript-actions/). Arguments can be passed to the action, and the result can be stored.
 
-{{% image_container width="200" %}}
-![javascript action call properties](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/javascript-action-call/javascript-call.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/javascript-action-call/javascript-call.png" alt="javascript action call properties"   width="200"  >}}
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-![JavaScript Action Properties](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/javascript-action-call/javascript-action-call.png)
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/javascript-action-call/javascript-action-call.png" alt="JavaScript Action Properties" >}}
 
 The **JavaScript action call** properties pane consists of the following sections:
 
@@ -55,7 +53,7 @@ An argument is the input data that you are passing to the JavaScript action. For
 
 The values of the arguments are defined using [expressions](/refguide/expressions/):
 
-![argument](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/argument-edit.png)
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/argument-edit.png" alt="argument" >}}
 
 ### 3.3 Return Type {#return-type}
 

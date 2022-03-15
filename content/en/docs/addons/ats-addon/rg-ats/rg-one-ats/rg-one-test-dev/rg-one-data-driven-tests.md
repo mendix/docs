@@ -17,7 +17,7 @@ To use your datasets in test cases you need to select a _Master dataset_ under t
 
 When you run a test with a dataset field set as a parameter a new test will be run for every record in the dataset.
 
-![Set master dataset inside a test case](/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-test-dev/rg-one-data-driven-tests/21168190.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-test-dev/rg-one-data-driven-tests/21168190.png" alt="Set master dataset inside a test case" >}}
 
 The page also gives an overview over the selected dataset:
 
@@ -31,7 +31,7 @@ Shows the fields available in the selected set and their data types
 
 There are 2 error types that can occur when setting a dataset:
 
-![Errors when setting dataset](/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-test-dev/rg-one-data-driven-tests/21168191.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-test-dev/rg-one-data-driven-tests/21168191.png" alt="Errors when setting dataset" >}}
 
 **Missing fields**
 
@@ -51,7 +51,7 @@ If you change the selected dataset the system will remember your set parameters 
 
 When you have selected a master dataset you can use the the contained field as input values for your test steps.
 
-![Setting a filed as input value](/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-test-dev/rg-one-data-driven-tests/21168192.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-test-dev/rg-one-data-driven-tests/21168192.png" alt="Setting a filed as input value" >}}
 
 **Exporting a Test Case**
 

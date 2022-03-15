@@ -14,7 +14,7 @@ The domain model editor uses the following symbols for visualization on entities
 
 | Symbol | Description |
 | --- | --- |
-| ![](/attachments/refguide7/desktop-modeler/domain-model/entities/917594.png) | This entity has one or more event handlers. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/917594.png" >}} | This entity has one or more event handlers. |
 
 {{% alert color="info" %}}
 
@@ -53,7 +53,7 @@ The generalization specifies the entity of which this entity derives her propert
 {{% alert color="info" %}}
 
 This property can be used in a situation where one has an entity 'Student' and an entity 'Professor' which have some generic properties. They both have a name, telephone number and email address and can be a member of one or more courses. Both entities are generalized in the entity 'Member'. Contrary this means that the entity 'Member' can be specialized in the entity 'Student' and the entity 'Professor'.
-![](/attachments/refguide7/desktop-modeler/domain-model/entities/917900.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/917900.png" >}}
 
 {{% /alert %}}
 
@@ -67,7 +67,7 @@ Define whether instances of this entity can be stored in the database. See [pers
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/domain-model/entities/4325380.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/4325380.png" >}}
 
 {{% /alert %}}
 

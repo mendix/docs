@@ -109,7 +109,7 @@ Depending on the use-case, more fine-grained synchronization controls might be r
 
 If you have custom widgets or JavaScript actions which use an entity that cannot be detected by Studio Pro in your offline-first profile (because its only used in the code), you can use customizable synchronization to include such entities.
 
-{{% image_container width="450" %}}![custom synchronization](/attachments/refguide8/mobile/offline-first/custom-sync.png){{% /image_container %}}
+{{< figure src="/attachments/refguide8/mobile/offline-first/custom-sync.png" alt="custom synchronization"   width="450"  >}}
 
 ### 2.5 Limitations
 

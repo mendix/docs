@@ -32,7 +32,7 @@ To get access to the Mendix Cloud environments, an authorized user is needed whe
 
 To be able to use the Mendix APIs to access your environment, you will need to grant API rights to the user that is going to be used to access the APIs. To grant API rights to that user, open your app in the Developer Portal, then go to **Security** > **Node Permissions**, and check the **API RIGHTS** option for the user you created an API key for in the previous step.
 
-![](/attachments/howto/integration/implement-cicd-pipeline/01APIRightsCloudPortal.png)
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/01APIRightsCloudPortal.png" >}}
 
 ### 3.2 Building the Deployment Package
 
@@ -44,7 +44,7 @@ To get the latest revision, use the [Retrieve Branch API call](/apidocs-mxsdk/ap
 
 An example of how to do this call is below. Be aware that `<AppId>` is not a GUID, but the actual name of the cloud node. In the example below, the `<AppId>` is `ukservices`.
 
-![](/attachments/howto/integration/implement-cicd-pipeline/02GetLatestRevision.png)
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/02GetLatestRevision.png" >}}
 
 #### <a name="BuildPackage"></a>3.2.2 Building the Package
 
@@ -52,11 +52,11 @@ After getting the version you want to build the package for, you need to build t
 
 This is a POST call, so you will need to pass the relevant fields in the body (follow the link above to know what to use).
 
-![](/attachments/howto/integration/implement-cicd-pipeline/03StartBuildingPackage.png)
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/03StartBuildingPackage.png" >}}
 
 Before proceeding to the next step, you need to wait for the build of the deployment package to be successful. To do this, use the [Retrieve Package API call](/apidocs-mxsdk/apidocs/build-api/#retrieve-package). This scenario needs to use the `PackageId` (output from the previous call) and check if the status is `Succeeded` (the other possible statuses are Queued, Building, Uploading, and Failed).
 
-![](/attachments/howto/integration/implement-cicd-pipeline/04RetrievePackageStatus.png)
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/04RetrievePackageStatus.png" >}}
 
 ### 3.3 Deploying to the Next Environment {#deploying-to-the-next-environment}
 
@@ -66,7 +66,7 @@ After building the deployment package, you can now deploy the new package to the
 
 First, you need to check if the environment to which you want to deploy is running. You need to know if you need to stop it before deploying the new deployment package to it. To do this, use the [Retrieve Environment API call](/apidocs-mxsdk/apidocs/deploy-api/#retrieve-environment) and check the status.
 
-![](/attachments/howto/integration/implement-cicd-pipeline/05GetEnvironment.png)
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/05GetEnvironment.png" >}}
 
 #### 3.3.2 Stopping the Environment
 
@@ -78,17 +78,17 @@ To deploy/transport a package to the environment, use the [Transporting a Deploy
 
 For this action, you need the `PackageId` from section [3.2.2 Building the Package](#BuildPackage).
 
-![](/attachments/howto/integration/implement-cicd-pipeline/06TransportDeploymentPackageToEnvironment.png)
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/06TransportDeploymentPackageToEnvironment.png" >}}
 
 #### 3.3.4 Starting the Environment
 
 After a successful deployment, you must start the environment. To do that, use the [Start Environment API call](/apidocs-mxsdk/apidocs/deploy-api/#start-environment).
 
-![](/attachments/howto/integration/implement-cicd-pipeline/07StartEnvironment.png)
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/07StartEnvironment.png" >}}
 
 Before proceeding to the next steps (although you might not have any, if all you want to automate is the transport to another environment), you must make sure the environment has started. To do that, use the [Get Environment Status API call](/apidocs-mxsdk/apidocs/deploy-api/#get-start-environment-status) with the `JobId` (output of the previous call). The environment will be ready when the status is **Started**.
 
-![](/attachments/howto/integration/implement-cicd-pipeline/08StartEnvironmentStatusStarting.png)
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/08StartEnvironmentStatusStarting.png" >}}
 
 ### 3.4 Running Tests
 
@@ -102,11 +102,11 @@ One way of doing unit tests in a Mendix app is by using the [Unit Testing](/apps
 
 First, you need to start the tests.
 
-![](/attachments/howto/integration/implement-cicd-pipeline/10StartUnitTests.png)
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/10StartUnitTests.png" >}}
 
 When the tests are completed (check the status for when completed is `true`), you can see how many tests ran, how long they took to run, how many failed, which ones failed, and what the reasons were for failing.
 
-![](/attachments/howto/integration/implement-cicd-pipeline/11UnitTestsStatus.png)
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/11UnitTestsStatus.png" >}}
 
 
 {{% alert color="info" %}}
@@ -133,7 +133,7 @@ To call a REST service with Jenkins (using a groovy script), install the [HTTP R
 
 This code snippet example gets the latest revision number so it can be used when building the deployment package:
 
-![](/attachments/howto/integration/implement-cicd-pipeline/12Jenkins.png)
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/12Jenkins.png" >}}
 
 ### 4.2 VSTS
 
@@ -141,4 +141,4 @@ To call a REST service with VSTS, use the [Invoke REST API task](https://docs.mi
 
 The example below checks the status of the acceptance environment. The task will be successful if the environment is running.
 
-![](/attachments/howto/integration/implement-cicd-pipeline/13RestExampleVSTS_cut.png)
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/13RestExampleVSTS_cut.png" >}}

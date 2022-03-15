@@ -18,7 +18,7 @@ Scroll containers may be placed on navigation layouts as well as on pages.
 
 The scroll container example below divides the layout in three parts: a header containing an image, a part in the middle with a long piece of text, and a footer. You can scroll the long text inside the container, without scrolling the page.
 
-![Scroll Container](/attachments/refguide/modeling/pages/structure-widgets/scroll-container/scroll-container.PNG)
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/scroll-container/scroll-container.PNG" alt="Scroll Container" >}}
 
 
 A scroll container can consist of several scroll container regions. For more information on scroll container regions and their properties, see the [Scroll Container Region](#scroll-container-region) section. 
@@ -27,7 +27,7 @@ A scroll container can consist of several scroll container regions. For more inf
 
 An example of scroll container properties is represented in the image below:
 
-![Scroll Container Properties](/attachments/refguide/modeling/pages/structure-widgets/scroll-container/scroll-container-properties.png)
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/scroll-container/scroll-container-properties.png" alt="Scroll Container Properties" >}}
 
 Scroll container properties consist of the following sections:
 

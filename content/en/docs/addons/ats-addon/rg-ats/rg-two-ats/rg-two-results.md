@@ -8,40 +8,40 @@ parent: "rg-two-ats"
 
 Under **Results**, you find all the running and executed tests from your app. The tests are sorted based on the finishing date.
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/test-runs.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/test-runs.png" >}}
 
 The first column shows the status of a test. If the test is done, a warning and/or a canceled flag can be shown. The following list explains all the different icons:
 
 *  Queued – the test is waiting for a free running slot on the Selenium hub:
 
-    ![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/queued.png)
+    {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/queued.png" >}}
 
 *  Running – the test is currently running:
 
-    ![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/running.gif)
+    {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/running.gif" >}}
     
 *  Warning – the test is passed but may require your attention.
 
-    ![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/warning-flag.png)
+    {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/warning-flag.png" >}}
     
 *  Canceled – the test was canceled before it could be completed.
 
-    ![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/canceled-flag.PNG)
+    {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/canceled-flag.PNG" >}}
     
 
 The second column shows the type of the test. The following list explains all the different icons:
 
 *  Test case:
 
-    ![Test Case](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/test-case-icon.png)
+    {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/test-case-icon.png" alt="Test Case" >}}
 
 *  Test suite:
 
-    ![Test Suite](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/test-suite-icon.png) 
+    {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/test-suite-icon.png" alt="Test Suite" >}} 
 
 *  Data-driven instance:
 
-    ![Datadriven Test Case](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/ddt-icon.png)
+    {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/ddt-icon.png" alt="Datadriven Test Case" >}}
 
 The duration column is formatted as followed: `HH:MM:SS`.
 
@@ -86,17 +86,17 @@ Under **Test steps**, you will find the result, start time, and the duration of 
 
 Drill down deeper into the log by clicking the name of the test step. You can always go back to a parent step by clicking its name in the breadcrumbs:
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/result-log.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/result-log.png" >}}
 
 The following results can be assigned to a test step:
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/passed-icon.png)  Passed – the test has passed
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/passed-icon.png" >}}  Passed – the test has passed
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/failed-icon.png)  Failed – the test has failed
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/failed-icon.png" >}}  Failed – the test has failed
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/not-executed-icon.png)  Not Executed – the test was not executed; this happens if a test step has not met the set precondition
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/not-executed-icon.png" >}}  Not Executed – the test was not executed; this happens if a test step has not met the set precondition
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/mixed-icon.png)  Different Results - some of the containing tests passed, some failed and some where not executed
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/mixed-icon.png" >}}  Different Results - some of the containing tests passed, some failed and some where not executed
 
 ### 2.3 Actions
 
@@ -110,19 +110,19 @@ On the upper-right side the screen, you will find the **Edit** and **Run** butto
 
 The **Run Configuration** tab shows the configuration with which the test was executed. It shows the name of the environment, the Selenium hub, and the icon of the browser.
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/result-log-run-config.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/result-log-run-config.png" >}}
 
 ### 2.5 Error Log
 
 The **Error Log** shows detailed information about a failed test step.
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/result-log-error-log.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/result-log-error-log.png" >}}
 
 ### 2.5 Screenshots
 
 All the screenshots ATS takes during the test run are available under **Screenshots**. Screenshots are only taken if a test step fails.
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/result-log-screenshots.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/result-log-screenshots.png" >}}
 
 ### 2.6 Recording
 

@@ -38,19 +38,19 @@ To install the ATS Helper, follow these steps:
 
 1.  Open ATS and click the information icon in the upper-right corner of the screen:
 
-	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-install-ats-helper-recorder/information-icon.png)
+	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-install-ats-helper-recorder/information-icon.png" >}}
 
 	This opens the **ATS Information** dialog box:
    
-	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-install-ats-helper-recorder/ats-information-screen.png)
+	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-install-ats-helper-recorder/ats-information-screen.png" >}}
 
 2.	Drag the ATS Helper to your bookmark bar to link it there:
 
-	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-install-ats-helper-recorder/drag-drop-ats-helper.png)
+	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-install-ats-helper-recorder/drag-drop-ats-helper.png" >}}
 
 To use the ATS Helper, select the bookmark, press <kbd>Ctrl</kbd>, and hover over a widget. The ATS Helper will show the information of that widget.
 
-![](/attachments/addons/ats-addon/ht/ht-two/ht-two-install-ats-helper-recorder/ats-helper-widget.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-install-ats-helper-recorder/ats-helper-widget.png" >}}
 
 {{% alert color="info" %}}
 The ATS Helper only works on standalone widgets.
@@ -64,17 +64,17 @@ To install the ATS Recorder, follow these steps:
 
 1.	Open ATS and click the information icon in the upper-right corner of the screen:
 
-	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-install-ats-helper-recorder/information-icon.png)
+	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-install-ats-helper-recorder/information-icon.png" >}}
     
 	This opens the **ATS Information** dialog box.    
 
 2.	Click the **ATS Recorder (Chrome Web Store)** link to go to the Chrome Web Store.
 
-	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-install-ats-helper-recorder/ats-information-screen-recorder.png)
+	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-install-ats-helper-recorder/ats-information-screen-recorder.png" >}}
 
 3.  Click **ADD TO CHROME** to add the ATS Recorder extension:
 
-	![](/attachments/addons/ats-addon/ht/ht-two/ht-two-install-ats-helper-recorder/add-ats-recorder.png)
+	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-install-ats-helper-recorder/add-ats-recorder.png" >}}
 
 See [How to Create a Test Case](/addons/ats-addon/ht-two-create-a-test-case/) for more information on how to use the ATS Helper.
 

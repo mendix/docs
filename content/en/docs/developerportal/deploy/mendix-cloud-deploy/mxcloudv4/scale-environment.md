@@ -61,7 +61,7 @@ If you want to scale your licensed app in Mendix Cloud v4, follow these steps:
 
 7. Click **Apply**. This will restart your environment to apply the changes.
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/scale-environment/scale.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/scale-environment/scale.png" >}}
 
 ## 4 Examples
 
@@ -77,7 +77,7 @@ You don't need to allocate all the plan memory at once. You can just allocate pa
 
 For example, you can use one instance with 4GiB RAM. The remaining 12GiB in your plan will be unused.
 
-![](/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/scale-environment/scaling.png)
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/scale-environment/scaling.png" >}}
 
 ## 5 Read More
 

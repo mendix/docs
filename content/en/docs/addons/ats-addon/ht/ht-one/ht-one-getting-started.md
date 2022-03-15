@@ -34,13 +34,13 @@ Before starting with this how-to, make sure you have the following prerequisites
 
 When you [log in to ATS](https://ats.mendix.com) as a user, you see the **My Projects** page. A project is a folder in which all the data related to a specific application will be saved and managed. Every user can create a new project, and, as its owner, manage other users' access to it. If there are no projects on your account yet, you are prompted to create a new project.
 
-![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/my-projects.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/my-projects.png" >}}
 
 To create a new project, follow these steps:
 
 1. Click **Add project/Create new project**, which opens the *Create new project/library* page:
 
-      ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/create-new-project.png)
+      {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/create-new-project.png" >}}
 
 2.  Enter the following information about your project:
 
@@ -55,7 +55,7 @@ To create a new project, follow these steps:
 
 3.  Click **Save & Open** at the bottom of the page to open the **Project Dashboard**.
 
-      ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/project-dashboard-empty.png)
+      {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/project-dashboard-empty.png" >}}
 
 ## 4 Configuring Your Project
 
@@ -67,7 +67,7 @@ Only the Project Administrator role has the rights to edit the settings in **Con
 
 To start configuring your project, click **Configuration** in the navigation bar on the left to open the **Configuration** page. This page contains the **Project**, **Selenium**, and **Applications** tabs.
 
-![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/configuration-getting-started.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/configuration-getting-started.png" >}}
 
 ### 4.1 Project Tab
 
@@ -81,7 +81,7 @@ To add a new Selenium hub, follow these steps:
 
 1. Click **New** in the top bar, which opens the **Selenium hub** dialog box:
 
-      ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/selenium-hub-dialog.png)
+      {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/selenium-hub-dialog.png" >}}
 
 2.  Set the following parameters:
 
@@ -103,7 +103,7 @@ To add a new application, follow these steps:
 
 1. Click **New** in the top bar, which opens the **Application** dialog box.
 
-      ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/application-dialog.png)
+      {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/application-dialog.png" >}}
 
 2.  Set the following parameters:
 
@@ -121,7 +121,7 @@ To add a new application, follow these steps:
 
 The repository is where you create and store all your test cases, test suites, and custom actions. It is the ATS filing system, the heart of ATS.
 
-![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/repository-empty.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/repository-empty.png" >}}
 
 The repository has three tabs:
 
@@ -141,7 +141,7 @@ To create a test case, follow these steps:
 2. Select **Test Case** in the drop-down menu and enter a name for your test case. Since you are likely to create multiple test cases and test suites, using a predefined naming structure is advised.
 3. Enter a clear description for your test case. In case others may need to know what your test case does, use a template to make sure all aspects of the case are described clearly.
 
-      ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/create-new-test-case.png)
+      {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/create-new-test-case.png" >}}
 
 4. Click **Create**.
 5. When the **Test Case** page opens, you are now in the actual test case. In the top left corner of the page, you can see the name and description of your test case. The **Test Case** page also displays the following buttons:
@@ -151,7 +151,7 @@ To create a test case, follow these steps:
       * **Export** – exports the test case as a XML file (this file can be uploaded into another ATS environment)
       * **PDF** – extracts a PDF report of your test case
 
-![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/test-case-page.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/test-case-page.png" >}}
 
 ### 5.2 Building a Test Script
 
@@ -164,7 +164,7 @@ Before you start building your test script, add the following tools:
 3. To use the recorder function, you need to have the Google Chrome browser installed on your system and install the ATS Recorder Chrome plugin. The ATS Recorder only works in Chrome.
 4. Install the ATS Recorder extension in your Chrome browser.
 
-![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/ats-information-dialog.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/ats-information-dialog.png" >}}
 
 #### 5.2.1 Record – Using the Recorder Function
 
@@ -175,7 +175,7 @@ To use the recorder function, follow these steps:
 1. Click **Record** while inside a test case in ATS, which opens the **Recording Session** page. On this page you can manage your recording sessions.
 2. You can now open the Mendix application you want to test in another tab of the browser and start testing the application manually. The test steps you take will now be recorded and saved in the chosen test case.
 
-      ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/recording-session-cp.png)
+      {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/recording-session-cp.png" >}}
 
 3.  Click **Save** to save your actions for this event.
 
@@ -184,7 +184,7 @@ To use the recorder function, follow these steps:
       **Recorded event** | All the registered clicks/entering text will show up here in the sequence where they were done. Select an event to open the **Action mapping** menu of that particular event. The ATS Recorder selects the actions for you.
       **Action mapping** | This shows all the available actions for this event. Click  **Select** if you want to choose a different action.
 
-      ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/recorded-test-steps.png)
+      {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/recorded-test-steps.png" >}}
 
 All the test steps are numbered for easy identification. The up and down arrows can be used to change the sequence of the test steps. You can **delete**, **copy** or **paste** a selected test step. With the **Extract action**, you can combine actions of multiple steps into one step. Select the steps you want to combine and click **Extract action**. For more information on extracting an action, see [Custom Action](/addons/ats-addon/rg-one-custom-actions/).
 
@@ -192,7 +192,7 @@ All the test steps are numbered for easy identification. The up and down arrows 
 
 In this tab, you can connect your datasets to a test case. Use the arrow to select the dataset you need and click **Save**. A new menu will appear in which you can see the dataset fields that are available to select. You can also use this menu to check if you selected the correct dataset.
 
-![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/data-set-test-case.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/data-set-test-case.png" >}}
 
 {{% alert color="info" %}}
 
@@ -204,13 +204,13 @@ If you do not use the dataset, make sure to disconnect it. ATS will remember whe
 
 This tab shows you the actions used in this test case and the test suites that are using this test case. Use this screen to verify that if you make a change to a custom action, it does not affect another test case or test suite.
 
-![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/show-usages-test-case.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/show-usages-test-case.png" >}}
 
 #### 5.2.4 Stories Tab
 
 This tab displays the user stories that are connected to your test case, the test cases within that story, and the success rate of the user story.
 
-![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/stories-test-case.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/stories-test-case.png" >}}
 
 ### 5.3 Creating a Test Suite
 
@@ -220,7 +220,7 @@ To create a test suite, follow these steps:
 2. Enter a name for your test suite. Since you are likely to create multiple test cases and test suites, using a predefined naming structure is advised.
 3. Enter a clear description for your test suite. Others may need to know what your test suite does. It might be handy to use a template to make sure all aspects of the suite are present.
 
-      ![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/create-new-test-suite.png)
+      {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/create-new-test-suite.png" >}}
 
 4. Click **Create**. 
 5. The **Test Suite** page looks similar to the **Test Case** page, but with fewer options. The **Test Suite** page also displays the following buttons:
@@ -229,7 +229,7 @@ To create a test suite, follow these steps:
       * **Quickrun** – immediately executes a test suite with the last set of run configurations (use this option to check your test case while building)
       * **Export** – exports the test suite as a XML file (this file can be uploaded into another ATS environment)
 
-![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/test-suite-page.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/test-suite-page.png" >}}
 
 #### 5.3.1 Test Cases/Suites Tab
 
@@ -237,25 +237,25 @@ Here you can see all the steps that are in your test suite. Each step is either 
 
 Clicking **Add** adds a test case to your test suite. Enter a clear description for this step and **Search** for a test case you want to add to your test suite. You can **Create a new Test Case** if you want to add a complete new test case to your test suite.
 
-![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/select-test.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/select-test.png" >}}
 
 #### 5.3.2 Show Usages Tab
 
 This tab shows you all the **Test Cases used by this Test Suite**, all the **Test Suites used by this Test Suite**, and the **Test Suites using this Test Suite**. Use this screen to make sure that if you make a change, it does not affect other test cases or test suites.
 
-![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/show-usages-test-suite.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/show-usages-test-suite.png" >}}
 
 #### 5.3.3 Stories Tab
 
 This tab displays the user stories that are connected to your test suite, the test cases within that story, and the success rate of the user story. You can **Open**, **Unlink**, or **Link** a user story to your test suite.
 
-![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/stories-test-suite.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/stories-test-suite.png" >}}
 
 ## 6 Run Configuration
 
 When you click **Run** in the upper-right corner of your test case, the **Select Run Configuration** page will open.
 
-![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/run-configuration.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/run-configuration.png" >}}
 
 Here, you can select your AUT and Selenium hub for ATS to use.
 
@@ -271,7 +271,7 @@ Now click **Run** again in the upper-right corner to execute the test case again
 
 When you click **Run**, the **Monitoring / Results** page will open.
 
-![](/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/monitoring-results-pending.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/monitoring-results-pending.png" >}}
 
 Once your test case is executed, the result is shown here. For more information on results, see [Monitoring](/addons/ats-addon/rg-one-monitoring/).
 

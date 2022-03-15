@@ -26,7 +26,7 @@ When the rollback object action is performed in a sub-microflow, it rolls back t
 
 An example of rollback object properties is represented in the image below:
 
-![rollback object properties](/attachments/refguide8/modeling/application-logic/activities/object-activities/rollback-object/rollback-properties.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/rollback-object/rollback-properties.png" alt="rollback object properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -91,4 +91,4 @@ Pressing a **Cancel** button or triggering a rollback activity will initiate the
 * Database: there is no database communication happening during this event unless it is specified in a before- or after-create event
 * Result: an object with the state **Instantiated** will be removed, and an object with any other state will be reverted back to the values it had during the last commit
 
-![](/attachments/refguide8/modeling/application-logic/activities/object-activities/rollback-object/18582170.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/rollback-object/18582170.png" >}}

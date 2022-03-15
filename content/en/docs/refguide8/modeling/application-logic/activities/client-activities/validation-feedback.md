@@ -25,15 +25,13 @@ This action is ignored and does not work when a microflow is called from an offl
 
 The **Validation feedback** activity does a validation check, and if this check fails, it shows a red message to the end-user below the widget that displays the attribute or association which failed the validation. For example, if the customer did not verify their email, a message will be displayed that the customer should verify it before they can log in:
 
-{{% image_container width="200" %}}
-![Validation Feedback](/attachments/refguide8/modeling/application-logic/activities/client-activities/validation-feedback/validation-feedback.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/validation-feedback/validation-feedback.png" alt="Validation Feedback"   width="200"  >}}
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-![Validation Feedback Properties](/attachments/refguide8/modeling/application-logic/activities/client-activities/validation-feedback/validation-feedback-properties.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/validation-feedback/validation-feedback-properties.png" alt="Validation Feedback Properties" >}}
 
 The **Validation feedback** properties pane consists of the following sections:
 

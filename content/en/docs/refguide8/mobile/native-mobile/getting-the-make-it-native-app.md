@@ -42,7 +42,7 @@ iOS archive versions for Make It Native are served via TestFlight links. To join
 
 |                                  Android                                  |                                iOS                                |
 | :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
-| ![Android QR Code](/attachments/refguide8/mobile/native-mobile/getting-the-make-it-native-app/qr-android-8.8.png) | ![iOS QR Code](/attachments/refguide8/mobile/native-mobile/getting-the-make-it-native-app/qr-ios-8.8.png) |
+| {{< figure src="/attachments/refguide8/mobile/native-mobile/getting-the-make-it-native-app/qr-android-8.8.png" alt="Android QR Code" >}} | {{< figure src="/attachments/refguide8/mobile/native-mobile/getting-the-make-it-native-app/qr-ios-8.8.png" alt="iOS QR Code" >}} |
 |   [Link](https://www.dropbox.com/s/z0255q1gcxpvlwl/MiN%208.8.apk?dl=0)    |        [Link](https://testflight.apple.com/join/ra3QR6iG)         |
 
 ## 4 Read More

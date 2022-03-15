@@ -71,7 +71,7 @@ To generate a keystore for Android, follow these steps:
 2. Open your **Command Prompt** and run your new *keytool.exe* located in your JDK’s bin folder.
 3.  The *keytool.exe* program can be found in the bin directory of your Java installation (for example: *C:\Program Files\Java\jre1.8.0_20\bin*):
 
-	![keytool location](/attachments/refguide/mobile/managing-app-signing-keys/cmdjdkexe.png)
+	{{< figure src="/attachments/refguide/mobile/managing-app-signing-keys/cmdjdkexe.png" alt="keytool location" >}}
 	
 4.  Type in the following command line prompt while still pointing to the *keystore.exe*: 
 
@@ -81,10 +81,10 @@ To generate a keystore for Android, follow these steps:
 
 	Be sure to replace `YOUR_ALIAS_NAME` and `YOUR_ALIAS_PWD` with your alias name and password:
 	
-	![name and password](/attachments/refguide/mobile/managing-app-signing-keys/ktoolsetup.png)
+	{{< figure src="/attachments/refguide/mobile/managing-app-signing-keys/ktoolsetup.png" alt="name and password" >}}
 	
 5.  Answer the subsequent questions, click **Enter** after each question, and type *yes* when asked to confirm your information: 
 	
-	![info questions](/attachments/refguide/mobile/managing-app-signing-keys/qanda.png)
+	{{< figure src="/attachments/refguide/mobile/managing-app-signing-keys/qanda.png" alt="info questions" >}}
 	
 6. Finishing these questions generates a keystore which will be saved into a *file.keystore* file in your current working directory. 

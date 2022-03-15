@@ -36,7 +36,7 @@ To build the Docker image, follow these steps:
 4. Open the **Command Prompt** and navigate to the folder where you unzipped the buildpack. 
 5. Open your app in Studio Pro and select the menu option **App** > **Show App Directory in Explorer**:
 
-    ![](/attachments/developerportal/deploy/docker-deploy/create-deployment-package.png)
+    {{< figure src="/attachments/developerportal/deploy/docker-deploy/create-deployment-package.png" >}}
 
 6. Copy the project folder and all its subfolders to the unzipped docker build folder. The project folder needs to be in the same folder as the Docker file, otherwise Docker cannot access it.
 7.  Execute the following command:
@@ -49,7 +49,7 @@ To build the Docker image, follow these steps:
 
     A successful build will resemble the output shown below:
 
-    ![](/attachments/developerportal/deploy/docker-deploy/build-image.png)
+    {{< figure src="/attachments/developerportal/deploy/docker-deploy/build-image.png" >}}
 
 {{% alert color="info" %}}
 You can find much more information and links to relevant Docker documentation in the [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack) GitHub repository.

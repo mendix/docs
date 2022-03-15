@@ -19,13 +19,13 @@ A published REST operation is part of a [published REST resource](/refguide8/pub
 
 In the **Published REST Service** document you can add items to be included in the service as **Resources**:
 
-![Published REST Service](/attachments/refguide8/modeling/integration/published-rest-services/published-rest-service/published-rest-operation/publshed-rest-service.png)
+{{< figure src="/attachments/refguide8/modeling/integration/published-rest-services/published-rest-service/published-rest-operation/publshed-rest-service.png" alt="Published REST Service" >}}
 
 ## 2 Operation Definition
 
 When you **Add** or **Edit** a resource, you can define the resource in the **Operation** definition dialog box for the selected item as follows:
 
-![REST Operation](/attachments/refguide8/modeling/integration/published-rest-services/published-rest-service/published-rest-operation/operation-definition.png)
+{{< figure src="/attachments/refguide8/modeling/integration/published-rest-services/published-rest-service/published-rest-operation/operation-definition.png" alt="REST Operation" >}}
 
 ### 2.1 General
 

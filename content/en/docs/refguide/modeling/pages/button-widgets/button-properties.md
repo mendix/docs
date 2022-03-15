@@ -14,8 +14,7 @@ A button can perform various actions such as calling a microflow or nanoflow or 
 
 An example of button properties is represented in the image below:
 
-{{% image_container width="250" %}}![Button Properties](/attachments/refguide/modeling/pages/button-widgets/button-properties/button-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/button-properties.png" alt="Button Properties"   width="250"  >}}
 
 Button properties consist of the following sections:
 
@@ -78,7 +77,7 @@ Parameters are attributes the value of which will be displayed. To view **Parame
 
 * Double-click the button on the page and click **Edit** in the **General** section > **Caption**:
 
-	![Opening Parameters](/attachments/refguide/modeling/pages/button-widgets/button-properties/opening-parameters.png) 
+	{{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/opening-parameters.png" alt="Opening Parameters" >}} 
 
 Parameters have the following settings:
 
@@ -88,7 +87,7 @@ Parameters have the following settings:
 
 * **Format** – a format in which an attribute value will be displayed
 
-    ![Parameter Settings](/attachments/refguide/modeling/pages/button-widgets/button-properties/button-parameter-settings.png)
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/button-parameter-settings.png" alt="Parameter Settings" >}}
 
 ##### 2.5.2.1 Adding New Parameters
 
@@ -100,13 +99,13 @@ To add parameters, do the following:
 
 3.  In the **Edit Caption** dialog box > **Parameters** section click **New**:
 
-    ![Adding New Parameter](/attachments/refguide/modeling/pages/button-widgets/button-properties/new-parameter.png)
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/new-parameter.png" alt="Adding New Parameter" >}}
 
 4. In the **Edit Template Parameter** dialog box, click **Select**, choose an attribute and confirm your choice.
 
 5. In the **Caption** setting, write the text you would like to display and type **Index** of the parameter you would like to include. In the example below, to include a name of your customer , you need to use indexes {1} for the *Name* attribute:  
 
-    ![Parameter Example](/attachments/refguide/modeling/pages/button-widgets/button-properties/button-parameter-example.png)
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/button-parameter-example.png" alt="Parameter Example" >}}
 
 ##### 2.5.2.2 Performing Other Actions on Parameters
 
@@ -120,7 +119,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
 * **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
 
-    ![Parameter Actions](/attachments/refguide/modeling/pages/button-widgets/button-properties/button-parameter-actions.png)
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/button-parameter-actions.png" alt="Parameter Actions" >}}
 
 #### 2.5.3 Tooltip
 
@@ -188,7 +187,7 @@ Each item has the following properties:
 
 *  **Action** – defines an on-click event performed when the item is clicked (for more information on-click events, see [On Click Event & Events Section](/refguide/on-click-event/))
 
-    ![Properties of Items](/attachments/refguide/modeling/pages/button-widgets/button-properties/items-properties.png)
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/items-properties.png" alt="Properties of Items" >}}
 
 
 #### 2.6.1 Adding New Items
@@ -199,7 +198,7 @@ To add items to a drop-down buttons, do the following:
 
 2.  In the **Edit Items** dialog box, click **New**:
 
-    ![Adding New Item](/attachments/refguide/modeling/pages/button-widgets/button-properties/adding-new-item.png)
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/adding-new-item.png" alt="Adding New Item" >}}
 
 3. In the **Edit Drop-down Button** Item dialog box, do the following:
    1. Specify the caption for the item.

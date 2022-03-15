@@ -35,12 +35,12 @@ In this section, you will retrieve the server ID from your Mendix server, which 
 
 1. Start the Mendix Service Console.
 2. Select your app in the overview on the left side of the console.
-    ![](/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/activate-a-mendix-license-on-microsoft-windows/19398813.png)
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/activate-a-mendix-license-on-microsoft-windows/19398813.png" >}}
 3. The app needs to be running in order for you to be able to activate the license. If the app is not running, click **Start service** to start the app.
 4.  Click **Advanced** and select the **Show or add license...** option.
-    ![](/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/activate-a-mendix-license-on-microsoft-windows/19398814.png) 
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/activate-a-mendix-license-on-microsoft-windows/19398814.png" >}} 
 5. Next to **Server ID**, click **Copy to clipboard**.
-    ![](/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/activate-a-mendix-license-on-microsoft-windows/19398815.png) 
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/activate-a-mendix-license-on-microsoft-windows/19398815.png" >}} 
 
 ## 4 Obtain a License Key from Mendix Support
 
@@ -57,11 +57,11 @@ In this section, you will submit your server ID in the Mendix Support Portal to 
 In this section, you will enter the license key into the Mendix server, thus completing the license activation process.
 
 1. Return to the Mendix Service Console **License** dialog box (as described in [Retrieve the Server ID](#retrieve-the-server-id) section).
-    ![](/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/activate-a-mendix-license-on-microsoft-windows/19398814.png) 
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/activate-a-mendix-license-on-microsoft-windows/19398814.png" >}} 
 2. Paste your license key into the **License key** text box.
-    ![](/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/activate-a-mendix-license-on-microsoft-windows/19398816.png) 
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/activate-a-mendix-license-on-microsoft-windows/19398816.png" >}} 
 3.  Click **Activate license**.
-    ![](/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/activate-a-mendix-license-on-microsoft-windows/19398817.png) 
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/activate-a-mendix-license-on-microsoft-windows/19398817.png" >}} 
 4.  Congratulations! Your license has been activated.
 
 ## 6 Read More

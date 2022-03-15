@@ -19,14 +19,13 @@ A text area must be placed in a [data widget](/refguide8/data-widgets/) and disp
 
 For example, the following text area allows the end-user to see, and set, the **Notes** about a contact.
 
-![](/attachments/refguide8/modeling/pages/input-widgets/text-area/text-area.png)
+{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/text-area/text-area.png" >}}
 
 ## 2 Properties
 
 An example of text area properties is represented in the image below:
 
-{{% image_container width="250" %}}![](/attachments/refguide8/modeling/pages/input-widgets/text-area/text-area-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/text-area/text-area-properties.png"   width="250"  >}}
 
 Text area properties consist of the following sections:
 
@@ -103,7 +102,7 @@ This is the text displayed when typing in the text area. This text has two [para
 
 For example, if you use the counter message `You've used {1} characters of the {2} characters that are allowed.` for your text area, the end-user will see this message displayed below the text area widget:
 
-![](/attachments/refguide8/modeling/pages/input-widgets/text-area/counter-message.png)
+{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/text-area/counter-message.png" >}}
 
 #### 2.6.4 Text Too Long Message
 

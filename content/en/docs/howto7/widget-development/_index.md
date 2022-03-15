@@ -69,7 +69,7 @@ This category of how-to's presents in-depth information on how to build your own
 
 Most of the widgets in the [Mendix Marketplace](https://marketplace.mendix.com/) are open-source and available on GitHub. You can find the **View on GitHub** link on the right side of the Marketplace screen:
 
-![](/attachments/howto7/widget-development/appstore-github-link.png)
+{{< figure src="/attachments/howto7/widget-development/appstore-github-link.png" >}}
 
 ### 4.2 Learn by Doing
 

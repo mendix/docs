@@ -27,7 +27,7 @@ Key | Means
 **\*<sup><small>note</small></sup>** | Conversion is not always possible, or data will be changed during conversion. See related note for more information. If conversion is not possible, the behavior is the same as for "**X**", below.
 **X** | Conversion not possible. The original column will be removed and a new column will be created with default values for the existing rows.
 
-![Table of conversions - click to enlarge](/attachments/refguide7/runtime/data-storage/attributes-type-migration/conversion-table.png)
+{{< figure src="/attachments/refguide7/runtime/data-storage/attributes-type-migration/conversion-table.png" alt="Table of conversions - click to enlarge" >}}
 (*Click the image to enlarge*)
 
 ### 2.3 Manual Conversion

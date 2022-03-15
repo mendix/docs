@@ -15,13 +15,13 @@ This activity can only be used in **Microflows**.
 
 The **Show user task page** activity can be used to open a user task page defined in the user task properties. 
 
-![Show user task page](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/show-task-page/open-task-page.jpg)
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/show-task-page/open-task-page.jpg" alt="Show user task page" >}}
 
 ## 2 Properties
 
 An example of show user task page properties is represented in the image below:
 
-![Show user task page Properties](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/show-task-page/open-task-page-properties.jpg)
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/show-task-page/open-task-page-properties.jpg" alt="Show user task page Properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

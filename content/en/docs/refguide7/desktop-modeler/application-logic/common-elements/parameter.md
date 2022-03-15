@@ -13,7 +13,7 @@ A parameter is data that serves as input for the flow. Parameters are filled at 
 
 When you have an object of the entity 'Customer' that you want to use in a microflow, a parameter is used. The variable name is 'EnclosingCustomer' and is shown in black. The data type is object, therefore the entity name is shown underneath the variable name in blue.
 
-![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/parameter/917903.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/parameter/917903.png" >}}
 
 {{% /alert %}}
 

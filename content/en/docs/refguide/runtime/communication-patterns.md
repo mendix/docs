@@ -48,9 +48,9 @@ The core of most Mendix applications involves variations on the CRUD (create, re
 A basic scenario using an *Employee* entity can be modeled in Mendix using the following two pages:
 
 * An overview page displaying a table of data for a specific entity, like this:
-   ![](/attachments/refguide/runtime/communication-patterns/19399028.png)
+   {{< figure src="/attachments/refguide/runtime/communication-patterns/19399028.png" >}}
 * A details page where a specific object of an entity can be edited, like this:
-   ![](/attachments/refguide/runtime/communication-patterns/19399029.png)
+   {{< figure src="/attachments/refguide/runtime/communication-patterns/19399029.png" >}}
    * This details page can be reached from the first page using the New and Edit buttons
 
 The following sections outline the actions involved when processing these pages. As stated earlier, this pattern can be seen in many Mendix applications, but the exact runtime result depends on many details and design decisions taken while building the application. More advanced data models and pages will result in more (and more complex) queries.
@@ -65,7 +65,7 @@ Displaying a list of objects in a data grid consists of the following steps:
 
 A basic sequence diagram looks like this:
 
-![](/attachments/refguide/runtime/communication-patterns/19399030.png)
+{{< figure src="/attachments/refguide/runtime/communication-patterns/19399030.png" >}}
 
 The Mendix Client uses a REST-like protocol to request data from the Runtime Server. The following example shows what this looks like when requesting objects from the Employee entity:
 
@@ -158,7 +158,7 @@ The typical create-new-object flow consists of these steps:
 3. Change and validate the updated object in the Runtime Server.
 4. Commit the updated object to the database.
 
-![](/attachments/refguide/runtime/communication-patterns/19399031.png)
+{{< figure src="/attachments/refguide/runtime/communication-patterns/19399031.png" >}}
 
 Create a new object:
 
@@ -241,7 +241,7 @@ The typical edit-existing-object flow consists of these steps:
 6. Validate the object changes.
 7. Commit the changes in the database.
 
-![](/attachments/refguide/runtime/communication-patterns/19399032.png)
+{{< figure src="/attachments/refguide/runtime/communication-patterns/19399032.png" >}}
 
 Change and validate the changed attributes of the object in the Runtime Server:
 
@@ -315,7 +315,7 @@ The typical delete flow consists of these steps:
 
 The following sequence diagram outlines the typical delete scenario:
 
-![](/attachments/refguide/runtime/communication-patterns/19399033.png)
+{{< figure src="/attachments/refguide/runtime/communication-patterns/19399033.png" >}}
 
 Delete the object:
 
@@ -384,7 +384,7 @@ The security model of Mendix ensures that attributes that the user cannot see ar
 https://www.plantuml.com/plantuml/uml/ZL9DRzD04BtxLmpD6QajAX8zL7NY-5IaYd3CPUATn4Fsm-pE9WJ2VySV8Tv64U9axvitRzxEs-SWw2KQdRsJcWp1IaVQU3naOSksGOy6LbXjDzv5gsPEEm-JVSr22I7GzqYs8lYLvPKuNpeh9-hjnuTYce_mWdyItDzckVTkVy7fe3Fdxdu4hcXDdLVaXq91r2osXwcEbBtmcbxOKbgVv1_c3-Lqh2NtIUklw8KhRj1AOlK2lZ3pEyFE3iH07JZBf-Mdh1axuEOpMSK_OAQPhDm01gZwt_FOD-mlqGeRWWNv7VcU7lfVc1HtvNrPlA4NABZ2G32PjtFBUTRRUF_qz7V68tprlDcqOEK9XPq5jmPBUt2hRrH9vvvtA7Hgo8PFBp7C7HKCLzwjjTk3k46E4gMbNP10S8O0HJoleb0OvGUnRFWaygt3l6dqeJrMqRCSm4TDOMddfcaFKgToxH6bnxfxBgroBMQTG8qx0gmg2Yt7ZLEIFIp8gfDhTRQyPwbT72HhLefiQbxHXVrqEp7qvWiEZSR3MV5I1NXmg0OUgNz45737TjC597MosYkXmFLKEWNgcizsNZ44K2W8Q-_CwH6c5nka_okdBb_gKqaJSQ1eZL4Bx5172adh-3mVOUQCORcoqkFnc3sJLT7eFm00
 -->
 
-![](/attachments/refguide/runtime/communication-patterns/attribute-security.png)
+{{< figure src="/attachments/refguide/runtime/communication-patterns/attribute-security.png" >}}
 
 ## 4 Executing Business Logic
 
@@ -396,13 +396,13 @@ A data grid on a page is often directly linked to an entity in the domain model.
 
 A microflow retrieving all objects from an entity can be modeled as follows:
 
-![](/attachments/refguide/runtime/communication-patterns/19399034.png) 
+{{< figure src="/attachments/refguide/runtime/communication-patterns/19399034.png" >}} 
 
 In this situation, all objects are transported to the browser in one request. A user can page through all the objects without triggering communication to the Runtime Server.
 
 A high-level sequence diagram for this scenario looks like this:
 
-![](/attachments/refguide/runtime/communication-patterns/19399035.png)
+{{< figure src="/attachments/refguide/runtime/communication-patterns/19399035.png" >}}
 
 JSON action executed from Mendix Client to Runtime Server:
 
@@ -494,7 +494,7 @@ Data is transported between Mendix Client and database as required. The followin
 
 To facilitate (horizontal) scalability, the Mendix Runtime retains no state between requests. The overall strategy is to only have dirty objects in memory during a request. Objects are considered dirty if they have been changed, but the changes have not yet been persisted to the database.
 
-![](/attachments/refguide/runtime/communication-patterns/19399036.png)
+{{< figure src="/attachments/refguide/runtime/communication-patterns/19399036.png" >}}
 
 ### 5.3 Persistency
 

@@ -24,7 +24,7 @@ To edit the server configuration with extra JVM parameters, follow these steps:
 2. Edit the configuration on the **Configurations** tab.
 3.  Go to the **Server** tab of the configuration, add the following line to the **Extra JVM parameters** field: `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005`
 
-    ![](/attachments/howto/monitoring-troubleshooting/debug-java-actions/debug-java-actions-remotely/18580063.png)
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-java-actions/debug-java-actions-remotely/18580063.png" >}}
 
 4. Run your application.
 
@@ -38,7 +38,7 @@ To configure IntelliJ, follow these steps:
 2. Place some breakpoints in your Java code.
 3. Start debugging.
 
-![](/attachments/howto/monitoring-troubleshooting/debug-java-actions/debug-java-actions-remotely/intellij_rundebug_configurations.png)
+{{< figure src="/attachments/howto/monitoring-troubleshooting/debug-java-actions/debug-java-actions-remotely/intellij_rundebug_configurations.png" >}}
 
 To configure Eclipse, follow these steps:
 

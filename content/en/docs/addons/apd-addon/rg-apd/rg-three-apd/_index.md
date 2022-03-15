@@ -23,7 +23,7 @@ This is the reference guide for CLEVR's APD 3 for Mendix. It has the following c
 * [Performance Recorder](/addons/apd-addon/rg-three-recorder/)
 * [Settings](/addons/apd-addon/rg-three-settings/)
 
-![](/attachments/addons/apd-addon/rg-apd/rg-three-apd/APD_Powered_logo.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/APD_Powered_logo.png" >}}
 
 The sections below provide a short explanation of APD along with its features and possible uses.
 
@@ -45,7 +45,7 @@ Mendix APD collects statistical data about microflows, client API requests, and 
 
 In development, adding a check of APD to the generic definition of done is advised.
 
-![](/attachments/addons/apd-addon/rg-apd/rg-three-apd/statistics_history.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/statistics_history.png" >}}
 
 ## 4 Performance Recorder for Collecting Individual Traces
 

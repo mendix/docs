@@ -133,7 +133,7 @@ A property of type Boolean requires the attribute defaultValue.
 
 What it looks like in Mendix Studio Pro:
 
-![](/attachments/howto8/extensibility/widget-development/use-xml-widget/16844049.png)
+{{< figure src="/attachments/howto8/extensibility/widget-development/use-xml-widget/16844049.png" >}}
 
 ### 5.2.1 Entity
 
@@ -182,7 +182,7 @@ It requires a default value to be set, which should correspond with one of the e
 
 What it looks like in Mendix Studio Pro:
 
-![](/attachments/howto8/extensibility/widget-development/use-xml-widget/16844042.jpg)
+{{< figure src="/attachments/howto8/extensibility/widget-development/use-xml-widget/16844042.jpg" >}}
 
 ### 5.2.4 Form
 
@@ -306,7 +306,7 @@ The object property is an array of packaged sub-properties. It packages multiple
 
 What it looks like in Mendix Studio Pro:
 
-![](/attachments/howto8/extensibility/widget-development/use-xml-widget/16844048.png)
+{{< figure src="/attachments/howto8/extensibility/widget-development/use-xml-widget/16844048.png" >}}
 
 ### 5.2.10 String
 
@@ -338,7 +338,7 @@ The translatableString property is similar to a normal string property, except y
 
 What it looks like in Mendix Studio Pro:
 
-![](/attachments/howto8/extensibility/widget-development/use-xml-widget/16844045.png)
+{{< figure src="/attachments/howto8/extensibility/widget-development/use-xml-widget/16844045.png" >}}
 
 {{% alert color="info" %}}
 Remember to use the correct language notation according to the [Java supported locales](http://java.sun.com/javase/6/docs/technotes/guides/intl/locale.doc.html).

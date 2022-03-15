@@ -13,7 +13,7 @@ The template grid shows a list of objects in a tile view. For example, a templat
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/document-templates/918137.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/document-templates/918137.png" >}}
 A template grid showing products with name, description and image.
 
 {{% /alert %}}

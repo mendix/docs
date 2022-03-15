@@ -18,17 +18,17 @@ The app preview shows you what your app will look like after it is published.
 
 To preview your app, click **Preview** in the upper-right corner of Studio. 
 
-![](/attachments/studio7/publishing-app/preview.jpg)
+{{< figure src="/attachments/studio7/publishing-app/preview.jpg" >}}
 
 Your app will now get built and launched in a preview environment, and will appear in your browser window so you can interact with the app.
 
 You can preview your app in the Phone, Tablet, and Responsive (Desktop) mode. Click the corresponding icon to change the mode.
 
-![](/attachments/studio7/publishing-app/preview-modes.jpg)
+{{< figure src="/attachments/studio7/publishing-app/preview-modes.jpg" >}}
 
 To exit the preview environment, click **Close Preview** in the upper-right corner of the screen.
 
-![](/attachments/studio7/publishing-app/close-preview.jpg)
+{{< figure src="/attachments/studio7/publishing-app/close-preview.jpg" >}}
 
 You cannot preview your app if it has [consistency errors](/studio7/consistency-errors/). You will be notified when this is the case, and you will need to fix errors first to preview your app.
 
@@ -69,7 +69,7 @@ After you have updated your app, you are able to instantly view it in your brows
 
 To view your app in a browser in the currently selected view mode (Phone, Tablet, or Responsive), click **View app** in the **Your app is running** dialog window.
 
-To select a different preview mode, click the drop-down menu on the **View app** button.![Preview Modes](/attachments/studio7/publishing-app/view-app-drop-down.png)
+To select a different preview mode, click the drop-down menu on the **View app** button.{{< figure src="/attachments/studio7/publishing-app/view-app-drop-down.png" alt="Preview Modes" >}}
 
 ### 4.2 Viewing your App on a Mobile Device
 
@@ -77,7 +77,7 @@ To view your app on a mobile device, follow these steps:
 
 1.  Click **View on mobile device**.
 
-    ![View on Mobile Device Option](/attachments/studio7/publishing-app/view-on-mobile-device.png)
+    {{< figure src="/attachments/studio7/publishing-app/view-on-mobile-device.png" alt="View on Mobile Device Option" >}}
 
 2. Scan the QR-code with your mobile device or open the link in your mobile device.
 

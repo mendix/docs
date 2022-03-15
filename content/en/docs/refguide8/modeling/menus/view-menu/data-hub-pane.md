@@ -27,7 +27,7 @@ In the Data Hub Catalog, registered published services are referred to as *data 
 
 To display the **Data Hub** pane, click **View** > **Data Hub**:
 
-{{% image_container width="300" %}}![data-hub-pane](/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/data-hub-pane-empty.png){{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/data-hub-pane-empty.png" alt="data-hub-pane"   width="300"  >}}
 
 ## 2 Data Hub Pane in the Domain Model
 
@@ -35,7 +35,7 @@ The Data Hub pane is used to search the Data Hub Catalog for entities that can b
 
 ### 2.1 Data Hub Search
 
-{{% image_container width="300" %}}![](/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/data-hub-pane.png){{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/data-hub-pane.png"   width="300"  >}}
 
 The following functionality is available in the pane:
 
@@ -45,7 +45,7 @@ The following functionality is available in the pane:
 
 * [Search results](#viewing) – The search results displays all elements in the catalog that satisfy the search string. For each "hit" the information that is displayed includes the service name, service version, environment that the service was deployed to, and the elements matching the search string. If attributes or associations satisfy the search criteria, they are displayed. You can drag from the search results into your domain model and they are displayed as [external entities](/refguide8/external-entities/):
 
-![](/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/external-entity.png)
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/external-entity.png" >}}
 
   Services and the entities that are currently being used in the current domain model are indicated with a green check-mark in the search results.
 
@@ -53,7 +53,7 @@ The following functionality is available in the pane:
 
 When no search string has been specified in the **Data Hub** pane, the **Project** pane is displayed. This shows the consumed services and the external entities used in the current project. The list of entities, associations and attributes for the consumed services are shown as for the search results:
 
-{{% image_container width="300" %}}![Project Section](/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/project-section.png){{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/project-section.png" alt="Project Section"   width="300"  >}}
 
 To add entities to your project model, see [Adding an External Entity to a Project](/refguide8/external-entities/#adding-external-entities).
 
@@ -71,7 +71,7 @@ The search strings must be a minimum of 3 alphanumeric characters. Punctuation c
 ### 3.2 Service Environments
 By default, the search will be performed on assets in the **Production** environment. To include all other environments such as **Test**, **Acceptance**, and the Mendix Free App environment, **Sandbox** in the search, click the **Filter** icon and check **Show development environments**:
 
-{{% image_container width="300" %}}![Filter Icon](/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/filter-icon.png){{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/filter-icon.png" alt="Filter Icon"   width="300"  >}}
 
 {{% alert color="info" %}}
 When the **Show development environments** is checked, all subsequent searches results will also include those in non-production environments.
@@ -97,14 +97,14 @@ The search results and Project pane will show the following at a service level:
 
 * **Green check-mark** if the service or entity is consumed in the project. If you right-click a consumed service, you can do the following:
 
-  {{% image_container width="250" %}}![info on a Service](/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/data-hub-pane-menu.png){{% /image_container %}}
+  {{< figure src="/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/data-hub-pane-menu.png" alt="info on a Service"   width="250"  >}}
 
   * **View in Data Hub Catalog** – click this to go to the **Data Source Details** page in the Data Hub Catalog
   * **Go to connection settings** – click this to open the [consumed OData service](/refguide8/consumed-odata-service/) document
 
 *  **Blue** **Update Service** icon to indicate that there is another version of the consumed service available in the Data Hub. Click to update the service that is consumed in the project to the contract that is now available:
 
-	![Data Hub Pane update](/attachments/refguide8/modeling/integration/consumed-odata-services/data-hub-pane-update.png)
+	{{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/data-hub-pane-update.png" alt="Data Hub Pane update" >}}
 
 	{{% alert color="info" %}}If there is an OData Service update available, then the entities that are listed are those that are available in that version of the OData service. These entities will be "grayed-out" to indicate that they cannot be dragged into the domain model as the *current* contract that is consumed in the project does not have these entities. You will have to update the contract to the version shown in the search results by clicking the **Update**. arrow. {{% /alert %}}
 
@@ -112,7 +112,7 @@ The search results and Project pane will show the following at a service level:
 
 * **Information icon** to view further details for the service and a link to go directly to the [Service Details](/data-hub/data-hub-catalog/search/#search-details) screen in the Data Hub Catalog:
 
-  {{% image_container width="250" %}}![Data Hub Pane Information](/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/data-hub-pane-info.png){{% /image_container %}}
+  {{< figure src="/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/data-hub-pane-info.png" alt="Data Hub Pane Information"   width="250"  >}}
 
 ### 4.2 Entities, Attributes, and Associations {#association-attributes}
 
@@ -122,7 +122,7 @@ For any service in the list, you can click **:Show details** to see the full lis
 
 {{% alert color="info" %}}The associations and attributes that are not supported in your Mendix model are shown as non-selectable (gray) and will not be included when you drag them into the domain model.{{% /alert %}}
 
-{{% image_container width="250" %}}![Data Hub Pane Information](/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/expand-service-list.png){{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/expand-service-list.png" alt="Data Hub Pane Information"   width="250"  >}}
 
 ### 4.2.1 Entity
 If you right-click an entity and select **View in Data Hub Catalog**, it will take you to the entity details page in the [Data Hub Catalog](/data-hub/data-hub-catalog/).
@@ -137,7 +137,7 @@ The associations that are exposed in the services are listed before attributes i
 
 In the following example the entity **Customer** has multiple associations with the entity **Order** however, these associations are not supported and cannot be used in your model"
 
-{{% image_container width="250" %}}![multiple associations](/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/multiple-assocs.png){{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/multiple-assocs.png" alt="multiple associations"   width="250"  >}}
 
 ### 4.2.3 Attributes
 
@@ -145,7 +145,7 @@ Attributes for a service are listed in alphabetical order. If you right-click an
 
 In the above example, there are two attributes, **Addresses** and **FavoriteColors** which are not supported and therefore will not be included in your model:
 
-{{% image_container width="300" %}}![multiple associations](/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/unsupported-attributes.png){{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/unsupported-attributes.png" alt="multiple associations"   width="300"  >}}
 
 ##  5 Read More
 

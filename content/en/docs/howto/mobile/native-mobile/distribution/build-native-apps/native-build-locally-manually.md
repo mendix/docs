@@ -58,7 +58,7 @@ To determine which version of the Native Template you should use, do the followi
 
 The keys of the dictionary represent the Mendix Studio Pro version. The `min` and `max` values are the minimum and maximum Native Template versions supported: 
 
-{{% image_container width="200" %}}![iOS output](/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/mendix-version.png){{% /image_container %}}
+{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/mendix-version.png" alt="iOS output"   width="200"  >}}
 
 So like in the example picture shown above, in the case of Mendix Studio Pro 8.9.x, you could choose any Native Template version from 4.0.0 to the latest. Ideally you should choose the most recent supported version.
 
@@ -94,7 +94,7 @@ This method is useful if you do not have Git installed. To get the Native Templa
 1. Scroll to the version you want to download.
 1.  Select the source code binary to download a copy of the code:
 
-	{{% image_container width="250" %}}![iOS output](/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/github-assets.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/github-assets.png" alt="iOS output"   width="250"  >}}
 
 1. Unzip the file.
 1. Run `npm i && cd ios && pod install` to install the required dependencies.
@@ -121,7 +121,7 @@ When completed there should be a folder under the app's deployment folder **app-
 1. Move the **iOS** folder's content to *your-native-template-root/ios/Bundle*.
 1.  The **android** folder structure should be the following:
 
-	{{% image_container width="250" %}}![iOS output](/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/android-output.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/android-output.png" alt="iOS output"   width="250"  >}}
 
 1. Move the **android** folder's content to *your-native-template-root/android/app/src/main*. Choose to overwrite if requested to do so.
 1. Open *your-native-template-root/android/app/src/main/res/raw/runtime_url* using a text editor.
@@ -143,17 +143,17 @@ In the sections below you can see the basic steps to get an app up and running o
 1. Select the `<Native Template root>/android` as the entry point for the app.
 1. After synchronizing the app your Android Studio should look something like this. **Do not accept any suggestions to update to latest Gradle or Kotlin version!**:
 
-	{{% image_container width="350" %}}![Android Studio](/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/as-home.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/as-home.png" alt="Android Studio"   width="350"  >}}
 
    Mendix native mobile apps make use of **Build Variants** to build a release app or a custom developer app. The idea of **Build Variants** is a Gradle build system concept for sharing the same codebase but delivering different experiences.
 
 1. Choose the **appstoreDebug** variant to be able to build and test your app on an emulator or connected device:
 
-	{{% image_container width="350" %}}![Android Build Varients](/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/as-build-variants.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/as-build-variants.png" alt="Android Build Varients"   width="350"  >}}
    
 1. After a short time the app should be synchronized and the play button (**Run Locally**) should be selectable. Select a device or create a device from the drop-down menu and click the play button (**Run Locally**) to build and install your app on the device:
 
-	{{% image_container width="250" %}}![Android Build Toolbar](/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/as-start-build.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/as-start-build.png" alt="Android Build Toolbar"   width="250"  >}}
 
 ### 5.2 Building an iOS App with XCode
 
@@ -165,13 +165,13 @@ In the sections below you can see the basic steps to get an app up and running o
 1. Open *.xcodeworkspace* using XCode.
 1. Navigate to **Signing and Capabilities** and choose your **Team** from the drop-down menu:
 
-	{{% image_container width="350" %}}![XCode Build Toolbar](/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/xc-setup-team.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/xc-setup-team.png" alt="XCode Build Toolbar"   width="350"  >}}
 
 	As with the Android **Build Variants** the iOS app makes use of **Build Targets** to switch between building a custom developer app or a release app.
 
 1. From the drop-down menu choose **nativeTemplate** and the device you would like to run the app on, then click the play button (**Run Locally**) to start a build for your app:
 
-	{{% image_container width="250" %}}![XCode Build Toolbar](/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/xc-start-build.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/xc-start-build.png" alt="XCode Build Toolbar"   width="250"  >}}
 
 After the build succeeds the app should be running on the selected device and connected to the runtime using the runtime URL you provided. 
 

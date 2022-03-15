@@ -35,7 +35,7 @@ To add an external entity to your app model, follow these steps:
     * the **Consumed OData Service** document that contains details of the OData service and the metadata; the logo displayed identifies the originating app of the service
     * the **OData Location** that specifies the location constants for the service
 
-	    ![ Virtual Entity and OData Service files](/attachments/refguide/modeling/domain-model/external-entities/consumed-service-docs.png)
+	    {{< figure src="/attachments/refguide/modeling/domain-model/external-entities/consumed-service-docs.png" alt=" Virtual Entity and OData Service files" >}}
 
 {{% alert color="info" %}}
 When you drag an entity that is associated with an entity from the same service already in your Domain Model, the association will be displayed and established between the entities. For more information on associations between external entities, see [Associations](#properties).
@@ -45,7 +45,7 @@ For further information, see [Consumed OData Service](/refguide/consumed-odata-s
 
 The consumed entities of the current app are listed in the **Used in your App** section of the **Data Hub** pane:
 
-![ Virtual Entity and OData Service files](/attachments/refguide/modeling/domain-model/external-entities/data-hub-app.png)
+{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/data-hub-app.png" alt=" Virtual Entity and OData Service files" >}}
 
 {{% alert color="info" %}}
 When a new version of a consumed service becomes available in the Data Hub Catalog, this will be indicated in the **Data Hub** pane by an update arrow next to the service name. For more information, see the [Updating or Switching a Consumed OData Service](/refguide/consumed-odata-service/#updating) section in *Consumed OData Service*.
@@ -71,7 +71,7 @@ Changes that are made to the properties of external entities are made only in th
 
 This tab displays the general properties of the external entity. The values that are defined in the originating app are displayed but but cannot be edited. The values that can be edited will only apply to the local app:
 
-![External Entity Properties](/attachments/refguide/modeling/domain-model/external-entities/external-entity-properties.png)
+{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/external-entity-properties.png" alt="External Entity Properties" >}}
 
 * **Name** – the name of the entity in the local app
 * **Original name** – this is read-only and shows the name of the entity as defined in the consumed OData service
@@ -93,7 +93,7 @@ The following operations can be done on the displayed attribute list:
 
 The **Edit Attribute** box can be used for specifying a local name for the attribute and adding a local description.
 
-![Edit attributes](/attachments/refguide/modeling/domain-model/external-entities/edit-attributes.png)
+{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/edit-attributes.png" alt="Edit attributes" >}}
 
 * **General Tab**
 	* **Name** – a local name for the attribute can be specified.
@@ -106,7 +106,7 @@ The **Edit Attribute** box can be used for specifying a local name for the attri
 
 This tab displays the associations that the external entity has with other entities that are exposed in the same service and also any associations that have been made with local entities. For further details on association properties in Studio Pro see [Association Tab Properties](/refguide/association-member-properties/).
 
-![Edit attributes](/attachments/refguide/modeling/domain-model/external-entities/external-entity-associations.png)
+{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/external-entity-associations.png" alt="Edit attributes" >}}
 
 The following apply for all associations with the external entity:
 
@@ -132,7 +132,7 @@ If you want to connect two external entities that are not connected in the origi
 
 When you **Edit** an association that is included for two entities exposed in the same OData service, the following properties are displayed and the only local change that can be made is the local Name:
 
-![Edit external associations](/attachments/refguide/modeling/domain-model/external-entities/association-properties.png)
+{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/association-properties.png" alt="Edit external associations" >}}
 
 * **Name** – local name of the association
 * **Original Name** – read-only name of the association given to it in the originating app

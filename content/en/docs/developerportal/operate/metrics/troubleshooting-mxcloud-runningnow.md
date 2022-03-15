@@ -16,13 +16,13 @@ The **Running now** tab can be found on the **Metrics** page of your Cloud node.
 
 It looks like this:
 
-![](/attachments/developerportal/operate/metrics/troubleshooting-mxcloud-runningnow/troubleshooting-mxcloud-runningnow-img1.png)
+{{< figure src="/attachments/developerportal/operate/metrics/troubleshooting-mxcloud-runningnow/troubleshooting-mxcloud-runningnow-img1.png" >}}
 
 This page shows all actions currently running the application. And some general information of each action.
 
 The **Details** button allows you to zoom in on the selected action:
 
-![](/attachments/developerportal/operate/metrics/troubleshooting-mxcloud-runningnow/troubleshooting-mxcloud-runningnow-img2.png)
+{{< figure src="/attachments/developerportal/operate/metrics/troubleshooting-mxcloud-runningnow/troubleshooting-mxcloud-runningnow-img2.png" >}}
 
 Finally, the **Kill request** allows you to try and stop the action which, if successful, will lead to an error for the user executing the action.
 

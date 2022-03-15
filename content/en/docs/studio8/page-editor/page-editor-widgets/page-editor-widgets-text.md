@@ -11,8 +11,7 @@ tags: ["studio", "page editor", "typography", "text widgets", "widgets"]
 
 Text is a group of [widgets](/studio8/page-editor-widgets/) that consists of [Text, Paragraph, Headings (H1-H6)](#text-widget), and the [Page Title](#page-title-widget). They are used to display textual information to the end-user. For example, you can display a text paragraph:
 
-{{% image_container width="350" %}}![](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-text/paragraph-example.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-text/paragraph-example.png"   width="350"  >}}
 
 ## 2 Text, Paragraph, and Headings General Properties {#text-widget}
 
@@ -22,7 +21,7 @@ You can use **Text**, **Paragraph**, or **Heading** widgets to display a text to
 
 In **Content**, you define the text that will be shown. You can also add attributes, and the attribute value will be displayed to the user. For example, when the user logs in to the account, a greeting message can be shown, where *Name* and *NumberOfMessages* are attribute values: 
 
-![](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-text/content-example.png)
+{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-text/content-example.png" >}}
 
 #### 2.1.1 Configuring Content Without Adding Attributes
 
@@ -39,22 +38,19 @@ To configure **Content** and add attributes to it, do the following:
 
 2.  Open **Properties** of the **Text**, **Paragraph**, or **Heading**, delete the default text in the **General** section > **Content** and start typing the message you want to show to the end-user.  
 
-    {{% image_container width="350" %}}![](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-text/content.png)
-    {{% /image_container %}}
+    {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-text/content.png"   width="350"  >}}
 
 3. To insert attribute values into your message, click **Add attribute** or press <kbd>Ctrl</kbd> + <kbd>Space</kbd>.  The list of attributes which can be inserted will be shown. 
 
 4.  Scroll through the list of attributes (you can also use <kbd>Up</kbd> and <kbd>Down</kbd> arrows for that) and select the attribute you want to add to the **Text**. 
 
-    {{% image_container width="350" %}}![](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-text/list-of-attributes.png)
-    {{% /image_container %}}
+    {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-text/list-of-attributes.png"   width="350"  >}}
 
 5. Type the rest of the text, and insert more attributes if required, to finish your message.
 
 You have configured the **Content** of your widget. If you want to edit it, you can double click the widget in the page; the **Edit Text** pop-up dialog will be shown for widgets with attributes in their content.
 
-{{% image_container width="350" %}}![](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-text/edit-text.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-text/edit-text.png"   width="350"  >}}
 
 ### 2.2 Render Mode {#render-mode}
 
@@ -79,7 +75,7 @@ The page title is changed.
 
 The **Title** that you see in the page properties and in widget is one and the same. This means, if you make changes to the title in page properties, this change will be displayed in the widget, and vice versa.  
 
-![](/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-text/page-title-interrelation.png)
+{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-text/page-title-interrelation.png" >}}
 
 
 

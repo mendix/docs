@@ -39,14 +39,14 @@ The JDBC driver jars, for the databases you want to connect to, must be placed i
 1. Look for the Database connector in the Toolbox.
 2. Drag and drop the 'Execute statement' action to your microflow.
 
-    ![](/attachments/howto7/integration/execute-an-sql-statement-on-an-external-database/19399122.png)
+    {{< figure src="/attachments/howto7/integration/execute-an-sql-statement-on-an-external-database/19399122.png" >}}
 
-    ![](/attachments/howto7/integration/execute-an-sql-statement-on-an-external-database/19399123.png)
+    {{< figure src="/attachments/howto7/integration/execute-an-sql-statement-on-an-external-database/19399123.png" >}}
 
 3. Provide all the valid arguments to the _Execute statement_ action and specify output variable name of your choice, which in below mentioned case is `amountOfInsertedRows`.
     `amountOfInsertedRows` is also the output of the SQL Statement which you provided for the `sql` argument within the connector.
 
-![](/attachments/howto7/integration/execute-an-sql-statement-on-an-external-database/19399146.png)
+{{< figure src="/attachments/howto7/integration/execute-an-sql-statement-on-an-external-database/19399146.png" >}}
 
 The Execute statement action's result is either an Integer or a Long value which usually represents the amount of affected rows.
 

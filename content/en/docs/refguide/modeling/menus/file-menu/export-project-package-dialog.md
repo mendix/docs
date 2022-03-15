@@ -14,7 +14,7 @@ App packages can be imported again into a new app using the [Import App Package]
 
 To export the package, open the **File** menu > **Export App Package** and select the relevant options in the **Export App Package** dialog box:
 
-![Export App Package Dialog Window](/attachments/refguide/modeling/menus/file-menu/export-project-package-dialog/export-project-package.png)
+{{< figure src="/attachments/refguide/modeling/menus/file-menu/export-project-package-dialog/export-project-package.png" alt="Export App Package Dialog Window" >}}
 
  For more information on what options you can select, see the sections below. 
 

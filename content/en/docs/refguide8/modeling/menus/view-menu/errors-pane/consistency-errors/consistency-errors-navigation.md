@@ -39,7 +39,7 @@ When you set a page with a data view as a menu item, you get a consistency error
 
 For example, you have created a menu item called **Program** for a **Responsive** [profile](/refguide8/navigation/#profiles). This menu item opens the **Program** page. However, the **Program** page has a data view on it and expects a *ProgramItem* object to be passed to it, so that it can show the program details of a specific *ProgramItem* on the page. As a result, you get a consistency error, as no object is passed to this page from the navigation.
 
-![Scheme Showing the Menu Item Error](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-navigation/page-expects-an-object-error.png)
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-navigation/page-expects-an-object-error.png" alt="Scheme Showing the Menu Item Error" >}}
 
 To fix the error, you can create an object and pass it to the page. Do the following:
 
@@ -53,7 +53,7 @@ To fix the error, you can create an object and pass it to the page. Do the follo
 
     c. Set **Program** as **On click page**. <br/>
 
-    ![Menu Item Properties](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-navigation/menu-item-properties.png)<br/>
+    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-navigation/menu-item-properties.png" alt="Menu Item Properties" >}}<br/>
 
 Now when an end-user clicks the menu item, a new *ProgramItem* object will be created and passed to the page.
 
@@ -63,7 +63,7 @@ If you set a page that expects an object to be passed to it as a home page for a
 
 For example, you have added a data view that expects an object of type *Customer* to the home page of the responsive profile, and you get a consistency error. 
 
-![Home Page Error](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-navigation/home-page-error.png)
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-navigation/home-page-error.png" alt="Home Page Error" >}}
 
 You can fix this error by creating a microflow that will that will create a new *Customer* object and pass it to the page. Do the following:
 
@@ -71,7 +71,7 @@ You can fix this error by creating a microflow that will that will create a new 
 
 2.  In **Default home page field** click **Select**.
 
-    ![Default Home Page Setting](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-navigation/default-home-page-field.png)
+    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-navigation/default-home-page-field.png" alt="Default Home Page Setting" >}}
 
 3. In the **Select Navigation Target** dialog box, click **New**, then select **Create Microflow**.
 
@@ -81,7 +81,7 @@ You can fix this error by creating a microflow that will that will create a new 
 
 6.  For the **Create object** activity, set **Entity** to **Customer**. 
 
-    ![Create Object Properties](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-navigation/create-object-properties.png)
+    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-navigation/create-object-properties.png" alt="Create Object Properties" >}}
 
 7. Add Show Page activity to the microflow and do the following in the **Show Page** pop-up dialog:<br/>
 
@@ -91,7 +91,7 @@ You can fix this error by creating a microflow that will that will create a new 
 
 Now the new object of type *Customer* will be created and passed to the home page.
 
-![Open Home Page Microflow](/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-navigation/open-home-page-microflow.png)
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-navigation/open-home-page-microflow.png" alt="Open Home Page Microflow" >}}
 
 
 ## 3 Read More

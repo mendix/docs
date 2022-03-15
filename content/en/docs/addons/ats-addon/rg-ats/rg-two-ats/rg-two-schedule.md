@@ -8,7 +8,7 @@ parent: "rg-two-ats"
 
 Scheduling allows you to plan the execution of test cases and test suites at defined dates. You can also choose to send alerts when a scheduled run is done.
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-schedule/schedules_tab_with_alerting.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-schedule/schedules_tab_with_alerting.png" >}}
 
 If you want to edit the schedule, click the pencil icon to the right of the schedule. Clicking the "X" icon will delete the schedule. To activate/deactivate a schedule, click the box in front of the schedule.
 

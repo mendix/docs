@@ -9,7 +9,7 @@ The data grid shows a list of objects in a grid. For example, a data grid can sh
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/pages/data-widgets/data-grid/data-grid.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/data-widgets/data-grid/data-grid.png" >}}
 A data grid showing accounts.
 
 {{% /alert %}}

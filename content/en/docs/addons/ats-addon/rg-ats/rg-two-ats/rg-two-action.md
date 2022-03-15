@@ -32,7 +32,7 @@ Click the test step description to open the test step details. For more informat
 
 Under the **Settings** tab, set the **Input Parameters** and **Output Parameters** of the action. These optional parameters pass values to the action or return the outcome of an action.
 
-![](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-action/action.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-action/action.png" >}}
 
 #### 2.2.1 Input Parameters
 

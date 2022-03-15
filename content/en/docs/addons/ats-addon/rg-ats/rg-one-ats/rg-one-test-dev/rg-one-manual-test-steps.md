@@ -9,11 +9,11 @@ Manual test steps are the process to search and select required actions to manua
 
 When you create a new test case it is empty and has no test steps assigned.
 
-![Buttons on the Test Case Window](/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-test-dev/rg-one-manual-test-steps/21168178.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-test-dev/rg-one-manual-test-steps/21168178.png" alt="Buttons on the Test Case Window" >}}
 
 _Buttons on the Test Case Window_
 
-![](/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-test-dev/rg-one-manual-test-steps/21168179.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-test-dev/rg-one-manual-test-steps/21168179.png" >}}
 
 To add a new test step follow these steps:
 
@@ -25,7 +25,7 @@ To add a new test step follow these steps:
 
 You can now select the created test step and edit its parameters under the _Test Step Settings_ to the right.
 
-![](/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-test-dev/rg-one-manual-test-steps/21168180.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-test-dev/rg-one-manual-test-steps/21168180.png" >}}
 
 On the test step settings you can configure the following:
 

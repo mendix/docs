@@ -14,7 +14,7 @@ The iterator which looks the same as an input object represents the variable tha
 
 If you have a situation where you have a list of objects of the entity 'OrderLine' and you want to set the purchase date for every object, you can use a loop with a change activity in it that sets the purchase date.
 
-![](/attachments/refguide7/desktop-modeler/application-logic/common-elements/loop/917942.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/loop/917942.png" >}}
 
 {{% /alert %}}
 

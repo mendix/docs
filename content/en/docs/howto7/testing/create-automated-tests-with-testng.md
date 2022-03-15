@@ -24,7 +24,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 * Download and install [Eclipse](http://www.eclipse.org/downloads/)
 *  Download [Selenium Client & WebDriver](http://www.seleniumhq.org/download/):
-   ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580399.png) 
+   {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580399.png" >}} 
 * Open the [Company Expenses app](https://marketplace.mendix.com/link/component/240/Mendix/Company-Expenses) in the Modeler and run it locally
 
 ## 3 Creating a Java Project
@@ -33,28 +33,28 @@ In this chapter you will install the TestNG plug-in and create a Java project in
 
 1.  Open Eclipse and select **Help** > **Eclipse Marketplace...**:
   
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580411.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580411.png" >}}
 
 2. In the **Find** section of the **Eclipse Marketplace** dialog box, enter *TestNG* and click **Go**. "TestNG for Eclipse" will be shown in the search results. 
 3.  Click **Install** to install the TestNG plug-in for Eclipse:
   
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580410.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580410.png" >}}
 
 4.  Click **Confirm** to confirm the features:
   
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580408.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580408.png" >}}
 
 5.  Review the licenses and click **Finish**. The plug-in will be installed:
   
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580407.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580407.png" >}}
 6. Restart Eclipse for changes to take effect.
 7.  Click the **New** icon:
   
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580406.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580406.png" >}}
 
 8.  Select **Java Project** and click **Next**:
 
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580404.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580404.png" >}}
 
 9. Enter *MyFirstTestNGProject* as the project name and click **Next**.
 10. Select the **Libraries** tab.
@@ -64,11 +64,11 @@ In this chapter you will install the TestNG plug-in and create a Java project in
 14. Click **Add External JARs...** and navigate to where you saved the Selenium JAR files.
 15. Add all the JAR files inside the **selenium-[version]** and **libs** folders:
 
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580403.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580403.png" >}}
 
 16. Click **Finish** to create the Java project. **MyFirstTestNGProject** will be shown in the **Package Explorer**:
 
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580401.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580401.png" >}}
 
 You are now done setting up your project!
 
@@ -79,7 +79,7 @@ To create a new TestNG file, follow these steps:
 1. Right-click the **src** folder and select **New** > **Other...**:
 2.  Select **TestNG class** and then click **Next**:
 
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580398.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580398.png" >}}
 
 3. Click **Browse...** to select a source folder, select **MyFirstTestNGProject** > **src**, and click **OK**.
 4.  Enter the following information:
@@ -88,11 +88,11 @@ To create a new TestNG file, follow these steps:
     * **@BeforeTest**: true
     * **@AfterTest**: true
     
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580393.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580393.png" >}}
 
 5.  Click **Finish**. The template for your first TestNG file will be created automatically:
   
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580392.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580392.png" >}}
 
     The `@Test` annotation is used to state that the method under it is a test case. In this case, the method `f` is a test case. The `@BeforeTest` annotation is used to state that the method under it will be executed before the first test case. The `@AfterTest` annotation is used to state that the method under it will be executed after the last test case.
 
@@ -201,7 +201,7 @@ Now that you are on the login window, you will want to log in. To add the second
 2. Use the developer tools to inspect the element.
 3.   Click the **User name** input field. The ID of the this field is _usernameInput_. The CSS selector of an ID is a hashtag (`#`) + the name of the ID. For the **User name** field, this will be _#usernameInput_. The same principle is used for the other steps. The CSS selector _#usernameInput_ is unique. There is one matching node:
 
-	![](/attachments/howto7/testing/create-automated-tests-with-testng/18580373.png)
+	{{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580373.png" >}}
 
 4. Repeat steps 5–6 for the **Password** input field and the **Sign in** button:
 
@@ -233,15 +233,15 @@ Now that you are logged in, you will want to navigate to the **Expenses** tab. T
 
 1.  Open the Desktop Modeler, and in the **Project Explorer**, open the **Desktop_AdminMenu** page:
   
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580390.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580390.png" >}}
 
 2.  Select the **Expenses** tab:
   
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580389.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580389.png" >}}
 
     The name of the **Expenses** tab is **tabPage4**. Every element will automatically get the CSS class `mx-name-[Name]`, so the expenses tab will get the CSS class `mx-name-tabPage4` when the app is running.
 
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580388.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580388.png" >}}
     
 3. Go back to **Eclipse**.
 4.  Add a new test method called `openExpensesTab`. Use the following code:
@@ -263,11 +263,11 @@ Now that you are on the **Expenses** tab, you will want to create a new expense.
 1. Open the Modeler and then open the **Desktop_AdminMenu** page.
 2.  Select the **New Expense** button:
   
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580387.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580387.png" >}}
 
     The name of the **New Expense** button is `newButton3`, so the button will have the `mx-name-newButton3` CSS class:
 
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580386.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580386.png" >}}
 
 3. Open the **Desktop_Expense_NewEdit_Admin** page.
 4.  Find the names of the following elements (as you did in step 3):
@@ -342,13 +342,13 @@ You are now ready to run the test. To run the test, follow these steps:
 1. Right-click the **MyFirstTestNGProject** folder.
 2.  Select **Run as** > **TestNG Test**:
   
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580385.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580385.png" >}}
 
     The results of the test will be shown in the console window and in the TestNG results window:
 
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580384.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580384.png" >}}
 
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580383.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580383.png" >}}
 
 ## 7 Test Report
 
@@ -356,21 +356,21 @@ TestNG generates reports in the HTML format. To test the report, follow these st
 
 1.  Right-click the **MyFirstTestNGProject** folder and select **Refresh**. A test-output folder will be created:
   
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580382.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580382.png" >}}
 
 2. Open the **test-output** folder.
 3. Right-click the **index.html** file.
 4. Select **Open with** > **Web Browser**. The report will look like this:
 
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580381.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580381.png" >}}
 
 5. Click **(show)**. The test methods are shown alphabetically:
 
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580378.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580378.png" >}}
 
 6. Click the **Chronological** view. An overview with the methods in chronological order will be shown:
 
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580380.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580380.png" >}}
 
 ## 8 Creating a Test Suite
 
@@ -379,17 +379,17 @@ When you run your test as you did in [Run the Test](#RuntheTest), a test suite i
 1. Right-click the **src** folder and select **New** > **Other**.
 2.  Open the **XML** folder and select **XML File**:
 
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580377.png) 
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580377.png" >}} 
 
 3. Click **Next**.
 4. Change the file name to _MyFirstTestSuite.xml_.
 5.  Click **Finish** to create the XML file:
 
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580376.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580376.png" >}}
 
 6. Click the **Source** tab:
 
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580375.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580375.png" >}}
 
 7.  Change the following code:
 
@@ -508,7 +508,7 @@ The test you created is now run on Firefox only. If you want to make sure the fu
 
 6.  Right-click the **MyFirstTestSuite.xml** file and select **Run as** > **TestNG Suite**:
   
-    ![](/attachments/howto7/testing/create-automated-tests-with-testng/18580372.png)
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580372.png" >}}
 
 Well done! You created your first automated cross-browser test with TestNG!
 

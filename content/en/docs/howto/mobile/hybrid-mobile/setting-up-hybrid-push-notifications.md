@@ -33,11 +33,11 @@ To build the hybrid app package, follow these steps:
 2.  Make sure the **Push Notifications** permission is checked under **Permissions**.
 3.  Click **Publish for Mobile App Stores**:
 
-    ![](/attachments/howto/mobile/hybrid-mobile/setting-up-hybrid-push-notifications/download-hybrid-app-package-step1.png)
+    {{< figure src="/attachments/howto/mobile/hybrid-mobile/setting-up-hybrid-push-notifications/download-hybrid-app-package-step1.png" >}}
     
 4.  Select **Do it yourself** and then click **Download Customizable Package**:
 
-    ![](/attachments/howto/mobile/hybrid-mobile/setting-up-hybrid-push-notifications/download-hybrid-app-package-step2.png)
+    {{< figure src="/attachments/howto/mobile/hybrid-mobile/setting-up-hybrid-push-notifications/download-hybrid-app-package-step2.png" >}}
 
     This package you just downloaded is a customizable hybrid app package for your specific Mendix app. You can make changes to it, build a new PhoneGap Build package, and then upload it to PhoneGap Build to create the binaries (*.apk* for Android and *.ipa* for iOS). To better understand the structure of what you just downloaded, see the **Folder Structure** section in the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#folder-structure).
 
@@ -50,4 +50,4 @@ To build the hybrid app package, follow these steps:
     c. In the same folder execute `npm run package`.<br />
 8.  Create an APK or iOS package from the PhoneGap Build package. You can upload the new PhoneGap Build package (in the **dist** folder) to PhoneGap to build the APK or iOS binary.
 
-    ![](/attachments/howto/mobile/hybrid-mobile/setting-up-hybrid-push-notifications/build.phonegap.com.png)
+    {{< figure src="/attachments/howto/mobile/hybrid-mobile/setting-up-hybrid-push-notifications/build.phonegap.com.png" >}}

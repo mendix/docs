@@ -19,9 +19,7 @@ This activity can only be used in **Nanoflows**.
 
 The **Call nanoflow** activity can be used to call another [nanoflow](/refguide8/nanoflows/). 
 
-{{% image_container width="200" %}}
-![Nanoflow Call](/attachments/refguide8/modeling/application-logic/activities/client-activities/nanoflow-call/nanoflow-call.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/nanoflow-call/nanoflow-call.png" alt="Nanoflow Call"   width="200"  >}}
 
 Arguments can be passed to the nanoflow and the result can be stored in a variable.
 
@@ -29,7 +27,7 @@ Arguments can be passed to the nanoflow and the result can be stored in a variab
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-![Nanoflow Call Properties](/attachments/refguide8/modeling/application-logic/activities/client-activities/nanoflow-call/nanoflow-call-properties.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/nanoflow-call/nanoflow-call-properties.png" alt="Nanoflow Call Properties" >}}
 
 The **Nanoflow call** properties pane consists of the following sections:
 

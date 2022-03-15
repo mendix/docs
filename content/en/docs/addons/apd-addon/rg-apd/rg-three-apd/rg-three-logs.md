@@ -8,7 +8,7 @@ parent: "rg-three-apd"
 
 Selecting **Logs** from the menu shows the overview of logs and traps:
 
-![](/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-logs/logs.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-logs/logs.png" >}}
 
 ## 2 Logs
 
@@ -24,7 +24,7 @@ The logging is cleaned up automatically. The pin icon can be used to prevent log
 
 Trap records can be opened. When opening a trap, a list is displayed of all the low-level log records that happened just before the trap was displayed:
 
-![](/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-logs/trap.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-logs/trap.png" >}}
 
 The **Trap now** button can be used to simulate a trap. This trap will be saved and can be used to get insights into what is happening in the application.
 
@@ -34,7 +34,7 @@ If there are traps with errors, warnings, or messages that are known, not of int
 
 On the **Trap exclusions** tab, it is possible to manage which traps to ignore. It is possible to add, edit, copy, and delete exclusions as well as enable or disable them. By excluding certain errors, warnings, or messages, the **Logs** module will only capture information of interest. 
 
-![](/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-logs/exclusions.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-logs/exclusions.png" >}}
 
 An exclusion contains the following:
 
@@ -52,4 +52,4 @@ To make the pattern more generic, you need to escape according to regular expres
 
 Clicking **Test** performs a query on the -[APD Manager](https://apd.mendix.com/) to see if existing logs or traps match the patterns. This is added for convenience to test if the patterns work as expected.
 
-![](/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-logs/exclude_dialog.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-logs/exclude_dialog.png" >}}

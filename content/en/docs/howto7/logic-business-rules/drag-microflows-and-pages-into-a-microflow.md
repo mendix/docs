@@ -23,19 +23,19 @@ None.
 
 If possible, re-using logic is an important procedure while developing apps. The actions that form the reusable logic can be selected and turned into a submicroflow. This just takes two clicks, as shown in this animation:
 
-![](/attachments/howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/18580993.gif)
+{{< figure src="/attachments/howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/18580993.gif" >}}
 
 ## 4 Dragging a Page into a Microflow
 
 Dragging an existing form from the Project Explorer reduces the amount of mouse clicks and mouse pointer hovering:
 
-![](/attachments/howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/18580992.gif)
+{{< figure src="/attachments/howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/18580992.gif" >}}
 
 ## 5 Dragging a Microflow into a Microflow
 
 Instead of creating a new submicroflow action, it can be easier to drag an existing microflow into the current one.
 
-![](/attachments/howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/18580991.gif)
+{{< figure src="/attachments/howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/18580991.gif" >}}
 
 ## 6 Read More
 

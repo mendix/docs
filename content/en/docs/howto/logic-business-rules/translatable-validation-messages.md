@@ -12,19 +12,19 @@ Setting up validation rules should be relatively straight forward. Per object or
 
 These types of validation actions should be used throughout your app. 
 
-![](/attachments/howto/logic-business-rules/translatable-validation-messages/18581628.png)
+{{< figure src="/attachments/howto/logic-business-rules/translatable-validation-messages/18581628.png" >}}
 
 However you will often run into situations where you need to be able to show or process your validation rules in a different way than just as validation feedback. On option that gives you more control is building one large string message variable. The validation microflow should return that message. If anything has been returned, the object is invalid.
 
 Or if you need to differentiate between the different validation messages you can also build a list of (non-)persistable objects, instead of appending a message you should create an object and add the object to a list. Also take a look at the validation best practices.
 
-![](/attachments/howto/logic-business-rules/translatable-validation-messages/18581627.png)
+{{< figure src="/attachments/howto/logic-business-rules/translatable-validation-messages/18581627.png" >}}
 
 ## 2 Simple Alternative for Translating Messages
 
 There is one big problem with this second solution, you loose the ability to translate your validation message. String variables or attributes can not be translated by the platform. If you only have a hand full of these types of validation rules you might want to consider modeling out all language combinations. For each validation message you have to add decisions and activities per language. This could become a lot of work, but as long as you only have to do this one a couple of places it might not be worth to use the more complicated solution described below. 
 
-![](/attachments/howto/logic-business-rules/translatable-validation-messages/18581626.png)
+{{< figure src="/attachments/howto/logic-business-rules/translatable-validation-messages/18581626.png" >}}
 
 ## 3 Translating Validation Rules
 
@@ -32,23 +32,23 @@ If you have to translate multiple validation rules, it will be worth it to devel
 
 Prepare a validation entity in the domain model
 
-![](/attachments/howto/logic-business-rules/translatable-validation-messages/18581625.png)
+{{< figure src="/attachments/howto/logic-business-rules/translatable-validation-messages/18581625.png" >}}
 
 Create an enumeration containing all validation messages
 
-![](/attachments/howto/logic-business-rules/translatable-validation-messages/18581624.png)
+{{< figure src="/attachments/howto/logic-business-rules/translatable-validation-messages/18581624.png" >}}
 
 Reference the model below for messages you should store in the entity:
 
-![](/attachments/howto/logic-business-rules/translatable-validation-messages/model1.jpg)
+{{< figure src="/attachments/howto/logic-business-rules/translatable-validation-messages/model1.jpg" >}}
 
-![](/attachments/howto/logic-business-rules/translatable-validation-messages/model2.jpg)
+{{< figure src="/attachments/howto/logic-business-rules/translatable-validation-messages/model2.jpg" >}}
 
 The GetI18NText microflow validates and acquires the text like this. This is done to prevent any nullpointers in case of incorrect modeling.
 
-![](/attachments/howto/logic-business-rules/translatable-validation-messages/model3.jpg)
+{{< figure src="/attachments/howto/logic-business-rules/translatable-validation-messages/model3.jpg" >}}
 
 The text is replaced by this microflow, the input is the translated text, the variable (parameter) text you want to add to the text, and the token number to indicate the position (as in, {1}, {2}, {3})
 
-![](/attachments/howto/logic-business-rules/translatable-validation-messages/model4.jpg)
+{{< figure src="/attachments/howto/logic-business-rules/translatable-validation-messages/model4.jpg" >}}
 

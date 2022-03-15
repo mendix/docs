@@ -27,7 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 In the [Developer Portal](https://sprintr.home.mendix.com/index.html), click **Create App**.You will see a number of apps marked with **ATLAS UI**, which are Atlas UI-based app templates. You can select one to get started.
 
-![App template in Developer Portal](/attachments/howto8/front-end/atlas-ui/get-started-with-atlasui/start_choose_your_starter_app.png)
+{{< figure src="/attachments/howto8/front-end/atlas-ui/get-started-with-atlasui/start_choose_your_starter_app.png" alt="App template in Developer Portal" >}}
 
 For more information about Atlas UI, see [Atlas UI](/howto8/front-end/atlas-ui/). 
 
@@ -35,9 +35,7 @@ For more information about Atlas UI, see [Atlas UI](/howto8/front-end/atlas-ui/)
 
 You now have access to your app **Buzz** in the [Developer Portal](/developerportal/). From **Buzz**, you can open Mendix Studio clicking **Edit App** in the upper-right corner of the screen:
 
-{{% image_container width="300" %}}
-![Edit App Button in the Developer POrtal](/attachments/howto8/front-end/atlas-ui/get-started-with-atlasui/start_edit_your_app.png)
-{{% /image_container %}}
+{{< figure src="/attachments/howto8/front-end/atlas-ui/get-started-with-atlasui/start_edit_your_app.png" alt="Edit App Button in the Developer POrtal"   width="300"  >}}
 
 Note that when you click **Edit App** for any Atlas UI app, it will automatically open in Mendix Studio. If you need to edit the app in Studio Pro, click the drop-down menu on the **Edit App** button and select **Edit in Studio Pro**.
 
@@ -45,13 +43,11 @@ Note that when you click **Edit App** for any Atlas UI app, it will automaticall
 
 Your app is ready to be built. In the **Toolbox** in the [page editor](/studio8/page-editor/), you will find building blocks and widgets you can build your pages with. 
 
-![Studio Page Example](/attachments/howto8/front-end/atlas-ui/get-started-with-atlasui/start_explore.png)
+{{< figure src="/attachments/howto8/front-end/atlas-ui/get-started-with-atlasui/start_explore.png" alt="Studio Page Example" >}}
 
 All these resources have been created with Atlas UI. Each building block has an information icon that directs you to the Atlas UI website for the relevant information:
 
-{{% image_container width="200" %}}
-![Building Block Example](/attachments/howto8/front-end/atlas-ui/get-started-with-atlasui/start_building_block.png)
-{{% /image_container %}}
+{{< figure src="/attachments/howto8/front-end/atlas-ui/get-started-with-atlasui/start_building_block.png" alt="Building Block Example"   width="200"  >}}
 
 ## 6 Choosing a Page Template
 
@@ -59,7 +55,7 @@ You can choose a page template when you create a new page. For information on ho
 
 For example, **Dashboard Action Tiles**, **Dashboard Charts**, **Dashboard Expenses** are page templates. 
 
-![Page Template](/attachments/howto8/front-end/atlas-ui/get-started-with-atlasui/start_choose_a_page_template.png)
+{{< figure src="/attachments/howto8/front-end/atlas-ui/get-started-with-atlasui/start_choose_a_page_template.png" alt="Page Template" >}}
 
 Once the page is created, you can customize it.
 

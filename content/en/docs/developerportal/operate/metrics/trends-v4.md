@@ -38,7 +38,7 @@ Assign permission by following these steps:
 4. Choose the environment for which you want to grant access.
 5. Check **Access to Monitoring** next to the name of the person to whom you want to grant this permission.
 
-    ![](/attachments/developerportal/operate/metrics/trends-v4/nodepermission.jpg)
+    {{< figure src="/attachments/developerportal/operate/metrics/trends-v4/nodepermission.jpg" >}}
 
 ## 3 Viewing the Trends
 
@@ -50,7 +50,7 @@ You can find the trends by following these steps:
 2. Click **Metrics**.
 3. Select the environment you want to monitor under the tab **Trends**.
 
-![](/attachments/developerportal/operate/metrics/trends-v4/environment.png)
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/environment.png" >}}
 
 ### 3.2 Interpreting the Graphs
 
@@ -78,7 +78,7 @@ This section explains the metrics that represent the current status and statisti
 
 The **Number of handled external requests** graph shows the number of requests that are sent from the client and systems that integrate with your application using web services.
 
-![](/attachments/developerportal/operate/metrics/trends-v4/no-ext-reqs.png)
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/no-ext-reqs.png" >}}
 
 The number of requests per second is split up by request handlers. The key ones are:
 
@@ -119,7 +119,7 @@ Non-persistable entities live in the JVM memory and are garbage-collected regula
 
 The **User Accounts and Login Sessions** graph shows the number of logged-in named and anonymous user sessions for your application.
 
-![](/attachments/developerportal/operate/metrics/trends-v4/user-accounts-logins.png)
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/user-accounts-logins.png" >}}
 
 These are the user types:
 
@@ -133,7 +133,7 @@ User Type | Explanation
 
 The **JVM Object Heap** graph shows the internal distribution of allocated memory inside the application process for *Java* objects. Java objects are created in Java actions, but also include all objects that are used by microflows running in your app at runtime.
 
-![](/attachments/developerportal/operate/metrics/trends-v4/jvm-heap.png)
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/jvm-heap.png" >}}
 
 One of the most important things to know, in order to be able to interpret the values in this graph, is that the JVM does not immediately clean up objects that are no longer in use. This graph will show unused memory as still in use until the so-called *garbage collector*, which analyzes the memory to free up space, is run. So, you cannot see how much of the JVM memory that is in use before a garbage collection will be available after the garbage collection cycle, because the garbage collection process will only find that out when it actually runs.
 
@@ -152,7 +152,7 @@ For example, if the **tenured generation** is shown as 65% of the complete heap 
 
 This **JVM Process Memory Usage** graph is similar to the previous graph, *JVM Object Heap*. It shows a more complete view of the actual size and composition of the operating system memory that is in use by the JVM process.
 
-![](/attachments/developerportal/operate/metrics/trends-v4/jvm-process-memory.png)
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/jvm-process-memory.png" >}}
 
 This graph is primarily present to provide more insight in situations where the part of the real used memory *outside* the JVM Object Heap is growing too much, causing problems with memory shortage in the operating system.
 
@@ -177,7 +177,7 @@ Type | Explanation
 
 The **Application node operating system memory** graph shows the distribution of operating system memory that is available for this server.
 
-![](/attachments/developerportal/operate/metrics/trends-v4/node-os-memory.png)
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/node-os-memory.png" >}}
 
 Performance issues can arise if the apps memory takes up too large a proportion of the operating system memory.
 
@@ -188,7 +188,7 @@ The **Threadpool for handling external requests** graph shows the number of conc
 * they are initiated by a remote API – the way the normal web-based client communicates
 * they are initiated by calling web services
 
-![](/attachments/developerportal/operate/metrics/trends-v4/threadpool-external-reqs.png)
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/threadpool-external-reqs.png" >}}
 
 Because creating a new thread that can concurrently process a request is an expensive operation, Mendix holds a pool of threads that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the number of requests that are flowing through the application.
 
@@ -205,7 +205,7 @@ Value | Explanation
 
 The **Total Number of Threads in the JVM Process** graph shows the total number of threads that exist inside the running JVM process.
 
-![](/attachments/developerportal/operate/metrics/trends-v4/jvm-thread-count.png)
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/jvm-thread-count.png" >}}
 
 Besides the threadpool that is used for *external* HTTP requests, described above, this includes the threadpool used for database connections, internal processes inside the Mendix Runtime, and optional extra threads created by the application itself, for example, using a threadpool in a custom module or custom Java code.
 
@@ -213,7 +213,7 @@ Besides the threadpool that is used for *external* HTTP requests, described abov
 
 The **Application node CPU usage** graph shows the CPU utilization in percentage.
 
-![](/attachments/developerportal/operate/metrics/trends-v4/app-cpu.png)
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/app-cpu.png" >}}
 
 {{% alert color="info" %}}
 CPU usage of the database is shown in [Database Node CPU Usage](#Trends-dbcpu), below.
@@ -231,7 +231,7 @@ Your app will always have access to at least the amount of CPU specified for you
 
 The **Application node disk usage (percentage)** graph shows the relative amounts of data that are stored on disk.
 
-![](/attachments/developerportal/operate/metrics/trends-v4/app-disk-usage-pct.png)
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/app-disk-usage-pct.png" >}}
 
 This graph should be interpreted in combination with other graphs. See [Combining Information](#combine-info), above.
 
@@ -249,7 +249,7 @@ If you are using the [Basic License](/developerportal/deploy/basic-package/) you
 
 The **Number of database queries being executed** graph shows the number of database queries that are executed by your Mendix application.
 
-![](/attachments/developerportal/operate/metrics/trends-v4/no-db-queries.png)
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/no-db-queries.png" >}}
 
 The queries are broken down into queries that actually modify data (**insert**, **update**, and **delete**) and queries that fetch data (**select**).
 
@@ -267,7 +267,7 @@ Type | Explanation
 
 The **Database table vs. index size** graph shows the distribution between disk space used for storing indexes and actual data.
 
-![](/attachments/developerportal/operate/metrics/trends-v4/db-table-vs-index.png)
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/db-table-vs-index.png" >}}
 
 Remember, indexes actually occupy memory space and disk storage, as they are just copies of parts of your data stored and sorted in another way! Besides the data you are processing, the relevant parts of the indexes also have to be read into system memory to be able to use them.
 
@@ -282,7 +282,7 @@ Value | Explanation
 
 The **Number of database tuple mutations** graph shows the number of database objects that were actually changed by database queries from the application.
 
-![](/attachments/developerportal/operate/metrics/trends-v4/db-mutations.png)
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/db-mutations.png" >}}
 
 For a single database operation that affects more than one object, this graph shows the number of objects actually changed, as measured from inside the database. However, the [Number of database queries being executed](#Trends-dbmxruntimeconnectionbus) graph will only show a single database query for the same operation.
 
@@ -308,7 +308,7 @@ The **Number of database connections** graph shows the number of connections to 
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) as you are using a private schema on a shared database server.
 {{% /alert %}}
 
-![](/attachments/developerportal/operate/metrics/trends-v4/no-db-connections.png)
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/no-db-connections.png" >}}
 
 The number of connections will go up and down with the usage of the application.
 
@@ -322,7 +322,7 @@ The **Database node operating system memory** graph shows the distribution of op
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) as you are using a private schema on a shared database server.
 {{% /alert %}}
 
-![](/attachments/developerportal/operate/metrics/trends-v4/db-os-memory.png)
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/db-os-memory.png" >}}
 
 It is crucial to the performance of an application that parts of the database data and indexes that are referenced a lot are always available in the working memory of the server. A lack of Freeable memory on a busy application will result in continuous re-reads of data from disk, which takes several orders of magnitude more time, slowing down the entire application. This may indicate that you have a large number of concurrent database connections from your app and that the environment is not large enough to support these.
 
@@ -344,7 +344,7 @@ This graph is normalized so that 100% is the full capacity of the database node.
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) as you are using a private schema on a shared database server.
 {{% /alert %}}
 
-![](/attachments/developerportal/operate/metrics/trends-v4/db-cpu-usage.png)
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/db-cpu-usage.png" >}}
 
 ### 5.7 Database Node Disk Throughput{#Trends-dbdiskstatsthroughput}
 
@@ -354,7 +354,7 @@ The **Database node disk throughput** graph shows the amount of data that is bei
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) as you are using a private schema on a shared database server.
 {{% /alert %}}
 
-![](/attachments/developerportal/operate/metrics/trends-v4/db-disk-throughput.png)
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/db-disk-throughput.png" >}}
 
 If you see large values here which do not immediately drop back again, it may indicate that your app is continually swapping data to disk. This could be caused by inefficient queries, for example ones which require sorting within the app.
 
@@ -374,7 +374,7 @@ The units on the graph are mebibytes. One gibibyte is 1024 mebibytes, so if the 
 The used storage metric was added in September 2020. The used storage metric will not be present on graphs for times before September 2020. When hovering over the graph for times before September 2020, the value will be shown as "NaN". This is normal.
 {{% /alert %}}
 
-![](/attachments/developerportal/operate/metrics/trends-v4/db-disk-usage-bytes.png)
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/db-disk-usage-bytes.png" >}}
 
 ### 5.9 Database Node Disk I/Os{#Trends-dbdiskstatsiops}
 
@@ -384,7 +384,7 @@ The **Database node disk IO/s** graph shows the *number* of disk read and write 
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) as you are using a private schema on a shared database server.
 {{% /alert %}}
 
-![](/attachments/developerportal/operate/metrics/trends-v4/db-disk-ios.png)
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/db-disk-ios.png" >}}
 
 There are two sets of values:
 
@@ -401,7 +401,7 @@ The **Database node disk latency** graph shows the average waiting times for dis
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) as you are using a private schema on a shared database server.
 {{% /alert %}}
 
-![](/attachments/developerportal/operate/metrics/trends-v4/db-disk-latency.png)
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/db-disk-latency.png" >}}
 
 Interpreting the values in this graph should be done in combination with the other disk stats graphs, together with the type of requests that were made. Sequential or random reads and writes can create a different burden for disk storage.
 
@@ -424,7 +424,7 @@ Databases larger than 1,000 GiB have a base performance that is equal to or grea
 
 The **Database IOPS burst balance** graph shows the number of IOPS credits accrued to support burstable performance. The metric is expressed as percentage; 100% means that the volume has accumulated the maximum number of credits.
 
-![](/attachments/developerportal/operate/metrics/trends-v4/db-burst-balance.png)
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/db-burst-balance.png" >}}
 
 Apps running on Mendix Cloud V4 use AWS databases to store their data. These databases are **burstable**, which means that it has a specified performance baseline. See the AWS document [Overview of Monitoring Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MonitoringOverview.html) for more information.
 

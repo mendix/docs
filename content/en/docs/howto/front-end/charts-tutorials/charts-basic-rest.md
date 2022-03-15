@@ -38,9 +38,9 @@ For more information on publishing a REST API refer to this Mendix document: [Pu
 1. Rename the module to *ChartsREST*.
 1. Open the Domain model.
 1. Create **Value** and **Series** entities with the attributes and association shown in the picture below.
-    ![Chart Rest Domain](/attachments/howto/front-end/charts-tutorials/charts-basic-rest/charts-rest-domain.png)  
+    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-basic-rest/charts-rest-domain.png" alt="Chart Rest Domain" >}}  
 1. Right-click **Value** and select **Generate overview pages...**.
-    ![Chart Rest Enter Data](/attachments/howto/front-end/charts-tutorials/charts-basic-create/charts-rest-generate-overview-pages.png)
+    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-basic-create/charts-rest-generate-overview-pages.png" alt="Chart Rest Enter Data" >}}
 1. Add the **Value_NewEdit** page generated to your navigation.
 1. Run the app.
 1. In your browser, open the NewEdit page.
@@ -53,20 +53,20 @@ To use data from a model in the REST service, you need to create a JSON structur
 ### 4.1 Creating the Structure
 
 1. Create a **JSON Structure**  
-    ![Charts Rest MD](/attachments/howto/front-end/charts-tutorials/charts-basic-rest/chart-series-json-structure.png)
+    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-basic-rest/chart-series-json-structure.png" alt="Charts Rest MD" >}}
 
 ### 4.2 Configuring the REST Service
 
 To configure the REST service, follow these steps:
 
 1. Add **Published REST service**.
-    ![Charts Rest Publish](/attachments/howto/front-end/charts-tutorials/charts-basic-rest/charts-rest-publish.png)
+    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-basic-rest/charts-rest-publish.png" alt="Charts Rest Publish" >}}
 
 1. Add REST Service **Microflow**.
-    ![Charts Rest Microflow](/attachments/howto/front-end/charts-tutorials/charts-basic-rest/charts-rest-microflow.png)
+    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-basic-rest/charts-rest-microflow.png" alt="Charts Rest Microflow" >}}
 
 1. Add **Export mapping**.
-    ![Charts Rest Export Mapping](/attachments/howto/front-end/charts-tutorials/charts-basic-rest/charts-rest-export-mapping.png)
+    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-basic-rest/charts-rest-export-mapping.png" alt="Charts Rest Export Mapping" >}}
 
 ## 5 Using REST as a Data Source
 
@@ -82,23 +82,23 @@ To use the REST Data source endpoint in your chart, follow these steps:
 
 1. Select **Data source** REST endpoint.
 
-    ![Chart Rest Series](/attachments/howto/front-end/charts-tutorials/charts-basic-rest/charts-rest-series.png)
+    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-basic-rest/charts-rest-series.png" alt="Chart Rest Series" >}}
 
 1. Add the **REST URL**.
 
-    ![Chart Rest URL](/attachments/howto/front-end/charts-tutorials/charts-basic-rest/charts-rest-url.png)
+    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-basic-rest/charts-rest-url.png" alt="Chart Rest URL" >}}
 
 1. In the tab **Data points**, select the **X-axis data attribute** and the **Y-axis data attribute**.
 
-    ![select Data Points](/attachments/howto/front-end/charts-tutorials/charts-basic-create/charts-data-points.png)  
+    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-basic-create/charts-data-points.png" alt="select Data Points" >}}  
 
 1. Add Parameters to the REST Request. The **contextId**, **series name** are provided by default.
 
-    ![select Data Points](/attachments/howto/front-end/charts-tutorials/charts-basic-rest/charts-rest-parameters.png) 
+    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-basic-rest/charts-rest-parameters.png" alt="select Data Points" >}} 
 
 1. Run your app and view the chart.
 
-    ![Show Chart](/attachments/howto/front-end/charts-tutorials/charts-basic-rest/charts-rest-area-chart.png)
+    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-basic-rest/charts-rest-area-chart.png" alt="Show Chart" >}}
 
 ## 6 Read More
 

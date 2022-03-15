@@ -12,7 +12,7 @@ tags: ["Documents", "Developer Portal"]
 
 On the **Documents** page, you can upload files to your app and replace existing files with newer versions.
 
-![](/attachments/developerportal/collaborate/documents/documents.png)
+{{< figure src="/attachments/developerportal/collaborate/documents/documents.png" >}}
 
 ## 2 Actions
 
@@ -22,8 +22,7 @@ You can perform the actions described below via the buttons on your app's **Docu
 
 Click **Upload document** to upload a new document:
 
-{{% image_container width="400" %}}![](/attachments/developerportal/collaborate/documents/upload-file.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/collaborate/documents/upload-file.png"   width="400"  >}}
 
 {{% alert color="info" %}}
 All file types are allowed, and they are scanned for viruses by Mendix.
@@ -37,7 +36,7 @@ To download a document, click **Download** on the appropriate line in the overvi
 
 Click on the name of the file in the overview to see the description of the document, comments, and all the versions of the document:
 
-![](/attachments/developerportal/collaborate/documents/document-details.png)
+{{< figure src="/attachments/developerportal/collaborate/documents/document-details.png" >}}
 
 On the **Document Details** page, you can perform the following actions:
 

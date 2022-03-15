@@ -24,16 +24,15 @@ Whether security is enabled for your app by default, depends on app's type and v
 2. If your app has been created in the Developer Portal with Mendix version below 7.23.3, or has been labelled as private content, or has been customized by your team specifically for your company, the security state depends on Studio Pro:<br/>
     a.  If security is off in Studio Pro, then you can enable security in Studio. In this case, when you try to [publish the app](/studio8/publishing-app/), you will be prompted to enable security. <br/>
 
-	{{% image_container width="400" %}}![Secure Your App Pop-up Window](/attachments/studio8/settings/settings-security/security-pop-up.png)
-	{{% /image_container %}}<br/>
+	{{< figure src="/attachments/studio8/settings/settings-security/security-pop-up.png" alt="Secure Your App Pop-up Window"   width="400"  >}}<br/>
 
     b. If security is set to the **Production** level in Studio Pro and settings are compatible with Studio, you can view and edit **Roles and Permissions** in Studio. (For more information on what security settings are compatible with Studio, see the [Studio Compatibility](/refguide8/studio-security-enabled/#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
 
-    ![](/attachments/studio8/settings/settings-security/roles-and-permissions-screen.png)
+    {{< figure src="/attachments/studio8/settings/settings-security/roles-and-permissions-screen.png" >}}
 
     c. If security is set to the **Prototype/demo** or **Production** level in Studio Pro and settings are not compatible with Studio, you can view (not edit) **Roles and Permissions** in Studio. (For more information on security settings compatible with Studio, see the [Studio Compatibility](/refguide8/studio-security-enabled/#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
 
-    ![](/attachments/studio8/settings/settings-security/security-read-only.png)
+    {{< figure src="/attachments/studio8/settings/settings-security/security-read-only.png" >}}
 
 
 If you need to enable security, do one of the following:
@@ -42,7 +41,7 @@ If you need to enable security, do one of the following:
 
 *  Open **App Settings** > **Roles and Permissions** and click **Enable Security**. 
 
-	![The Roles and Permissions Screen](/attachments/studio8/settings/settings-security/enabling-security.png)
+	{{< figure src="/attachments/studio8/settings/settings-security/enabling-security.png" alt="The Roles and Permissions Screen" >}}
 
 {{% alert color="info" %}}
 When you enable security, it is enabled for the whole app, and there are checks and changes applied to the model that are visible in Studio Pro. For more technical information on these checks and changes, see [Model Changes When Security Is Enabled in Studio](/refguide8/studio-security-enabled/).
@@ -83,7 +82,7 @@ To select/deselect all pages or microflows click the ellipsis icon next to the u
 
 As a result, you will get a matrix specific for each role. 
 
-![The Page Access Tab Example](/attachments/studio8/settings/settings-security/page-access-tab.png)
+{{< figure src="/attachments/studio8/settings/settings-security/page-access-tab.png" alt="The Page Access Tab Example" >}}
 
 ### 3.1 Creating a New Role
 
@@ -93,11 +92,11 @@ To create a new app role, do the following:
 
 2.  Click **Add Role** in the right corner.
 
-    ![](/attachments/studio8/settings/settings-security/add-role-button.png)
+    {{< figure src="/attachments/studio8/settings/settings-security/add-role-button.png" >}}
 
 3.  Specify the name of the new role in the **Create Role** dialog box and click **Create**.
 
-    ![Create Role Dialog Box](/attachments/studio8/settings/settings-security/create-role-dialog.png)
+    {{< figure src="/attachments/studio8/settings/settings-security/create-role-dialog.png" alt="Create Role Dialog Box" >}}
 
 The new role is created.
 
@@ -109,11 +108,11 @@ To edit an existing role, do the following:
 
 2.  Click the **More Options** icon and select **Edit**.
 
-    ![](/attachments/studio8/settings/settings-security/edit-role-option.png)
+    {{< figure src="/attachments/studio8/settings/settings-security/edit-role-option.png" >}}
 
 3.  In the **Edit Role** pop-up dialog perform the changes, and click **Save**.
 
-    ![](/attachments/studio8/settings/settings-security/edit-role-dialog.png)    
+    {{< figure src="/attachments/studio8/settings/settings-security/edit-role-dialog.png" >}}    
 
 The role has been edited.
 
@@ -125,11 +124,11 @@ To delete an existing role, do the following:
 
 2.  Click the **More Options** icon and select **Delete**.
 
-    ![](/attachments/studio8/settings/settings-security/delete-role-option.png)
+    {{< figure src="/attachments/studio8/settings/settings-security/delete-role-option.png" >}}
 
 3.  Confirm the deletion in the pop-up dialog.
 
-    ![](/attachments/studio8/settings/settings-security/delete-role-dialog.png)
+    {{< figure src="/attachments/studio8/settings/settings-security/delete-role-dialog.png" >}}
 
 The role has been deleted.
 
@@ -147,13 +146,13 @@ There are two ways to set access for specific pages/microflows in your app:
     1.1  Open **Roles and Permissions** > **Page**/**Microflow Access** tab.<br/>
     1.2 Find the user role in the column and tick the box next to a page/microflow to open access for it, or untick – to restrict access. In the example below, we have restricted page access for the User.<br/>
 
-    ![](/attachments/studio8/settings/settings-security/page-access-example.png)
+    {{< figure src="/attachments/studio8/settings/settings-security/page-access-example.png" >}}
 
 2.  To set access for a page/microflow via properties of this page/microflow , do the following: <br/>
 	2.1 Open the page/microflow.<br/>
     2.2. Go to **Properties** > the **Permissions** section and tick/untick **Allowed Roles** to grant/restrict access.<br/> 
 
-	![](/attachments/studio8/settings/settings-security/permissions-section.png)
+	{{< figure src="/attachments/studio8/settings/settings-security/permissions-section.png" >}}
 
 ## 4 Demo Users {#demo-users}
 
@@ -167,11 +166,11 @@ You can test how your app looks like for different roles the following way:
 
 2. Click a user icon in the right side of the screen:
 
-    ![](/attachments/studio8/settings/settings-security/user-icon.png)
+    {{< figure src="/attachments/studio8/settings/settings-security/user-icon.png" >}}
 
 4. In the displayed menu bar, select a demo user and the app will be viewed from the perspective of the corresponding role.
 
-    ![](/attachments/studio8/settings/settings-security/select-user.png)
+    {{< figure src="/attachments/studio8/settings/settings-security/select-user.png" >}}
 
 ## 5 Managing App Users {#managing-app-users}
 
@@ -183,7 +182,7 @@ You can manage App Users only after you publish your app.
 
 To manage App Users, open **Roles and Permissions** and click **Manage Users** in the top-right of the screen:
 
-![](/attachments/studio8/settings/settings-security/manage-users-button.png)
+{{< figure src="/attachments/studio8/settings/settings-security/manage-users-button.png" >}}
 
 You will be taken to the [App User Management](/developerportal/collaborate/general-settings/#managing-app-users) page in the Developer Portal, where you can invite people to your app and manage their user roles. 
 
@@ -199,9 +198,7 @@ If you have created a new user role on the **Roles and Permissions** page, you n
 
 When you try to publish your app, you may be notified that upgrade of the service that secures your app is required first:
 
-{{% image_container width="300" %}}
-![Upgrade Required](/attachments/studio8/settings/settings-security/upgrade.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio8/settings/settings-security/upgrade.png" alt="Upgrade Required"   width="300"  >}}
 
 A special service makes it possible to manage your app users. The upgrade to the latest version of this service will be done automatically for you when you click **Auto-Upgrade**. 
 

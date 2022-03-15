@@ -10,7 +10,7 @@ The navigation tree widget shows a configured menu in the form of a tree. Items 
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide7/desktop-modeler/pages/menu-widgets/navigation-tree/navigation-tree.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/menu-widgets/navigation-tree/navigation-tree.png" >}}
 
 {{% /alert %}}
 

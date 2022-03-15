@@ -16,7 +16,7 @@ Procedure to simulate cloud security plus APMAgent permissions:
 
 1.  Turn off the emulate cloud security option in project settings, active configuration, server tab
 
-    ![](/attachments/addons/apd-addon/ig/ig-one/ig-one-prerequisites/ig-one-java-security-settings/Java_Command_Line_Options.png)
+    {{< figure src="/attachments/addons/apd-addon/ig/ig-one/ig-one-prerequisites/ig-one-java-security-settings/Java_Command_Line_Options.png" >}}
 
 2.  Copy file =<project-folder>\resources\apmtool\mx5\apm_cloud_template_mx5.policy to a **<new file>**. Change the file replacing <project-folder> with your actual project folder path.
 3.  Add the following switches to the extra JVM parameters in project settings, active configuration, server tab:

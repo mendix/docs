@@ -99,11 +99,11 @@ If you are using building blocks or page templates, please make sure you downloa
 
 For the web platform, download the [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) module:
 
-![Atlas web content](/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-change-summary/atlas-web-content-marketplace.png)
+{{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-change-summary/atlas-web-content-marketplace.png" alt="Atlas web content" >}}
 
 For the native platform, download the [Atlas Native Mobile Content](https://marketplace.mendix.com/link/component/117175) module:
 
-![Atlas native content](/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-change-summary/atlas-native-content-marketplace.png)
+{{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-change-summary/atlas-native-content-marketplace.png" alt="Atlas native content" >}}
 
 ## 4 Design Properties for Web
 

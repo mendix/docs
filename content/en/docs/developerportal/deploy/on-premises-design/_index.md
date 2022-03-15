@@ -30,11 +30,11 @@ The options below are just a few examples of the most commonly used architecture
 
 This is the simplest solution with the fewest configuration and connection problems. This configuration is used in the Mendix cloud as well, except the cloud is Linux-based, with NGINX used instead of IIS and PostgreSQL used as the database server.
 
-![](/attachments/developerportal/deploy/on-premises-design/18580719.jpg)
+{{< figure src="/attachments/developerportal/deploy/on-premises-design/18580719.jpg" >}}
 
 ### <a name="Option2"></a>2.2 Hosting with a Separate Database Server (Option 2)
 
-![](/attachments/developerportal/deploy/on-premises-design/18580718.jpg)
+{{< figure src="/attachments/developerportal/deploy/on-premises-design/18580718.jpg" >}}
 
 ### 2.3 Separate Database Server and a Separate Web Server (Option 3)
 
@@ -42,11 +42,11 @@ This option is the most difficult to maintain, and every update has to be perfor
 
 You should avoid using this option if possible.
 
-![](/attachments/developerportal/deploy/on-premises-design/18580717.jpg)
+{{< figure src="/attachments/developerportal/deploy/on-premises-design/18580717.jpg" >}}
 
 ### 2.4 Separate Mendix Web Server in a DMZ (Option 4)
 
-![](/attachments/developerportal/deploy/on-premises-design/18580720.jpg)
+{{< figure src="/attachments/developerportal/deploy/on-premises-design/18580720.jpg" >}}
 
 ## 3 Load Balancing Support and Configuration
 

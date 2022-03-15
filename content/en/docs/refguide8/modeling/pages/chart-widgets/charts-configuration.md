@@ -24,7 +24,7 @@ This guide covers the following widgets:
 * Line chart
 * Pie chart
 * Time series
-  * Note that some apps may have two *Time series* widgets. This document refers to the one with this icon: ![Image of correct Time series widget](/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/time-series-icon.png)
+  * Note that some apps may have two *Time series* widgets. This document refers to the one with this icon: {{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/time-series-icon.png" alt="Image of correct Time series widget" >}}
 
 The configuration of *Any chart* widgets is in another document, here: [Any Chart Widgets](/refguide8/charts-any-configuration/).
 
@@ -34,7 +34,7 @@ The common configuration for all charts is described here. For chart specific co
 
 ### 2.1 Chart properties
 
-![Generic Chart properties dialog](/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/line-chart-chart-properties.png)
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/line-chart-chart-properties.png" alt="Generic Chart properties dialog" >}}
 
 #### 2.1.1 Series
 
@@ -44,7 +44,7 @@ Add series and configure their properties, each series represents a dataset. For
 
   In this case, the **Data source** and **Data points** are shown as separate tabs in the widget.
 
-  ![Pie chart dialog showing tabs for Data source and Data points](/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/widget-data-source.png)
+  {{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/widget-data-source.png" alt="Pie chart dialog showing tabs for Data source and Data points" >}}
 
   The fields are the same as the ones described in the sections [Data source](#data-source) and [Data points](#data-points), below.
 
@@ -58,7 +58,7 @@ Add series and configure their properties, each series represents a dataset. For
 
     The data for each each series can originate from a different data source. You can add additional data series in the **Chart properties** tab.
   
-    ![Edit series Data source tab](/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/series-item-data-source.png)
+    {{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/series-item-data-source.png" alt="Edit series Data source tab" >}}
 
     * **Static/Dynamic**: Choose whether there is a fixed number of data series (lines, for example), or whether the number of data series is variable and will be decided by the app.
 
@@ -76,7 +76,7 @@ Add series and configure their properties, each series represents a dataset. For
 
     The attribute(s) within the data source used for the values to be plotted.
     
-    ![Edit series Data points tab](/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/series-item-data-points.png)
+    {{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/series-item-data-points.png" alt="Edit series Data points tab" >}}
 
     * **X-axis data attribute**: For data source Database attributes over reference are supported with a maximum of one level deep. For data source Microflow, references are not supported
 
@@ -95,19 +95,19 @@ Add series and configure their properties, each series represents a dataset. For
 
     The appearance of the series. This is customized for each type of chart, see: [3 Configuration per chart type](#configuration-by-chart-type), below.
 
-    ![Edit series Appearance tab](/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/series-item-appearance.png)
+    {{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/series-item-appearance.png" alt="Edit series Appearance tab" >}}
 
 4. Static Series
 
     Additional configuration for the appearance of the series if it is a static series. This is customized for each type of chart, see: [3 Configuration per chart type](#configuration-by-chart-type), below.    
 
-    ![Data series Static series tab](/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/series-item-static.png)
+    {{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/series-item-static.png" alt="Data series Static series tab" >}}
 
 5. Dynamic Series
 
     Configuration of the series if it is a dynamic series.
 
-    ![Data series Dynamic series tab](/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/series-item-dynamic.png)
+    {{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/series-item-dynamic.png" alt="Data series Dynamic series tab" >}}
 
     * **Series entity**: the entity which defines a series – the list of objects of this entity type will be used to construct the series; one series for each object.
     
@@ -125,7 +125,7 @@ Add series and configure their properties, each series represents a dataset. For
 
     The events to be supported if the user interacts with the chart.
     
-    ![Edit series Events tab](/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/series-item-events.png)
+    {{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/series-item-events.png" alt="Edit series Events tab" >}}
 
     {{% alert color="info" %}}The context of the page, microflow, or nanoflow selected for an event or tooltip will be the plotted object from which the point on the chart is drawn. This means you can display or use the x and y values, _and_ any other values stored in that object.<br /><br />For example you could use the tooltip to display the precise y value of a point, plus information on when the data was collected{{% /alert %}}
     
@@ -149,7 +149,7 @@ Add series and configure their properties, each series represents a dataset. For
 
 7. Advanced <a name="advanced"></a>
 
-    ![Edit series Advanced tab](/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/series-item-advanced.png)
+    {{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/series-item-advanced.png" alt="Edit series Advanced tab" >}}
 
     * **Options**: The Plotly *series options* in JSON format; these options will only be used when the *widget* tab **Advanced > Mode** is set to *Advanced* or *Developer*: see [Advanced](#advanced-mode), below.
 
@@ -157,7 +157,7 @@ Add series and configure their properties, each series represents a dataset. For
 
 The **Appearance** settings are used to set the size of the chart on the page.
 
-![Generic Chart Appearance tab](/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/widget-appearance.png)
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/widget-appearance.png" alt="Generic Chart Appearance tab" >}}
 
 * **Width unit**: The type of unit which is used for the **Width** property - *Percentage* or *Pixels*
 
@@ -177,7 +177,7 @@ The **Appearance** settings are used to set the size of the chart on the page.
 
 Add parameters to a REST request (see [Data source](#data-source)). The contextId, and series name are provided by default.
 
-![Generic Chart REST tab](/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/widget-rest.png)
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/widget-rest.png" alt="Generic Chart REST tab" >}}
 
 #### 2.1.4 Advanced {#advanced-mode}
 
@@ -185,7 +185,7 @@ The charts are based on the popular framework plotly.js which uses JSON to confi
 
 See the following link for more information about plotly.js and the options: https://plot.ly/javascript/.
 
-![Generic Chart Advanced Tab](/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/widget-advanced.png)
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/widget-advanced.png" alt="Generic Chart Advanced Tab" >}}
 
 * **Mode**: You can use these charts in three different modes:
 
@@ -193,7 +193,7 @@ See the following link for more information about plotly.js and the options: htt
   * **Advanced**: specify additional JSON configuration
   * **Developer**: this will add a **Toggle Editor** button to the chart at runtime which toggles an editor to play with different advanced configuration options
 
-    ![](/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/toggle-editor.png)
+    {{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/toggle-editor.png" >}}
 
 * **Layout options**: The JSON containing the Plotly layout options
   * [Samples](/refguide8/charts-advanced-cheat-sheet/#layout-all)

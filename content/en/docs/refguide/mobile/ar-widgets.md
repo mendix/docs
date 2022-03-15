@@ -56,7 +56,7 @@ Starts the AR camera view, and contains all other AR widgets. This widget is the
 every AR widget that is embedded in it. For example, if you use a **ImageTracker (AR)** to recognize an image, and put a
 **Cube (AR)** in it, the cube will start in the exact middle of your image:
 
-{{% image_container width="300" %}}![Cube](/attachments/refguide/mobile/ar-widgets/scale-one.jpg){{% /image_container %}}
+{{< figure src="/attachments/refguide/mobile/ar-widgets/scale-one.jpg" alt="Cube"   width="300"  >}}
 
 ### 3.3 Plane Selector (AR)
 
@@ -72,25 +72,25 @@ Visual widgets are widgets that add a virtual object to the scene.
 
 ### 4.1 Cube (AR)
 
-![Cube](/attachments/refguide/mobile/ar-widgets/Cube.gif)
+{{< figure src="/attachments/refguide/mobile/ar-widgets/Cube.gif" alt="Cube" >}}
 
 ### 4.2 Sphere (AR)
 
-![Sphere](/attachments/refguide/mobile/ar-widgets/Sphere.gif)
+{{< figure src="/attachments/refguide/mobile/ar-widgets/Sphere.gif" alt="Sphere" >}}
 
 ### 4.3 Square (AR)
 
-![Square](/attachments/refguide/mobile/ar-widgets/Square.gif)
+{{< figure src="/attachments/refguide/mobile/ar-widgets/Square.gif" alt="Square" >}}
 
 ### 4.4 3D Object (AR)
 
-![3DObject](/attachments/refguide/mobile/ar-widgets/3DObject.gif)
+{{< figure src="/attachments/refguide/mobile/ar-widgets/3DObject.gif" alt="3DObject" >}}
 
 Beyond using simple 3D objects, there are also ways to add more complex and custom objects to your scene. The 3D object widget takes either a URL or a FileDocument (you have to upload its model later). There are currently 3 types supported: *.obj*, *.gltf*, and *.glb*. Each with their own benefits. Using a custom material like with the simple visual widgets is only supported in the *.obj* format.
 
 ### 4.5 Text (AR)
 
-![Text](/attachments/refguide/mobile/ar-widgets/Text.gif)
+{{< figure src="/attachments/refguide/mobile/ar-widgets/Text.gif" alt="Text" >}}
 
 **Text (AR)** can be used to have 3D or 2D text floating in space. It is best practice to add only a few lines of text to the scene in this way. Bigger paragraphs are better communicated through a 2D text field on another place in your app.
 

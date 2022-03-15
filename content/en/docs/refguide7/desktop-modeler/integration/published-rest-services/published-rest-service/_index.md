@@ -169,7 +169,7 @@ When you select a resource, you see the [operations](/refguide7/published-rest-o
 
 Resources and Operations are appended to [Location](#location) to form a URL on which they can be accessed.
 
-![](/attachments/refguide7/desktop-modeler/integration/published-rest-services/published-rest-service/example-location-url.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-rest-services/published-rest-service/example-location-url.png" >}}
 
 ## 7 Example
 

@@ -20,7 +20,7 @@ Wherever an object is initialized, all the events are always executed. The defau
     * The object will have the **Instantiated** state
     * This influences the behavior in the other object actions
 
-![](/attachments/howto7/data-models/working-with-object-events/18582173.png)
+{{< figure src="/attachments/howto7/data-models/working-with-object-events/18582173.png" >}}
 
 ## 2 Commit
 
@@ -37,7 +37,7 @@ If you end up with autocommited objects, it is always because of a modeling erro
     * Depending on the object state, the platform will do an insert for objects with the state **Instantiated** and an update for all other states
 * Result: an object with the state Instantiated will be inserted into the database, and an object with any other state will be updated
 
-![](/attachments/howto7/data-models/working-with-object-events/18582172.png)
+{{< figure src="/attachments/howto7/data-models/working-with-object-events/18582172.png" >}}
 
 ## 3 Rollback
 
@@ -49,7 +49,7 @@ Pressing a Cancel button or triggering a rollback activity will initiate the rol
 * Database: there is no database communication happening during this event unless it is specified in a before- or after-create event
 * Result: an object with the state **Instantiated** will be removed, and an object with any other state will be reverted back to the values it had during the last commit
 
-![](/attachments/howto7/data-models/working-with-object-events/18582170.png)
+{{< figure src="/attachments/howto7/data-models/working-with-object-events/18582170.png" >}}
 
 ## 4 Delete
 
@@ -63,7 +63,7 @@ Clicking a Delete button or triggering a delete activity will initiate the delet
 * Result: the object will be removed from memory and if applicable from the database
     * All delete behavior for the associations is validated, and any associated objects are removed as well
 
-![](/attachments/howto7/data-models/working-with-object-events/18582171.png)
+{{< figure src="/attachments/howto7/data-models/working-with-object-events/18582171.png" >}}
 
 ## 5 Read More
 

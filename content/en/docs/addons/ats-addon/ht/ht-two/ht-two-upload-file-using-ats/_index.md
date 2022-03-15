@@ -16,10 +16,10 @@ Quick summary:
 
 | Selenium Setup | Uploading your own file | Uploading a file | Uploading possible? |
 | :-------------- | :---------------------- | :--------------- | :------------------ |
-| Local Selenium Server (Docker) | ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/grey.png) Limited<sup>1</sup> | ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/green.png) Yes | ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/green.png) Yes |
-| BrowserStack (SaaS) | ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/red.png) No | ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/green.png) Yes | ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/green.png) Yes |
-| SauceLabs (SaaS) | ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/red.png) No | ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/red.png) No | ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/red.png) No |
-| Selenium SaaS Agent | ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/grey.png) Limited<sup>2</sup> | ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/green.png) Yes | ![](/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/red.png) No |
+| Local Selenium Server (Docker) | {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/grey.png" >}} Limited<sup>1</sup> | {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/green.png" >}} Yes | {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/green.png" >}} Yes |
+| BrowserStack (SaaS) | {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/red.png" >}} No | {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/green.png" >}} Yes | {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/green.png" >}} Yes |
+| SauceLabs (SaaS) | {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/red.png" >}} No | {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/red.png" >}} No | {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/red.png" >}} No |
+| Selenium SaaS Agent | {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/grey.png" >}} Limited<sup>2</sup> | {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/green.png" >}} Yes | {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/red.png" >}} No |
 
 <small><sup>1</sup> This only possible when you prepare your own files on that server. <br>
 <sup>2</sup> This depends on where the agent is installed.</small>
@@ -55,7 +55,7 @@ ATS has a standard action for uploading files into your Mendix app. The [Set Fil
 
 _The Set File Manager action_
 
-![](/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/set-file-manager.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/set-file-manager.png" >}}
 
 A possible filepath is:
 
@@ -63,7 +63,7 @@ C:\users\ats\documents\receipt-1.png
 
 _File Uploader widget in the app_
 
-![](/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/file-uploader-widget-app.png)
+{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-upload-file-using-ats/file-uploader-widget-app.png" >}}
 
 ### 3.3 Advice
 

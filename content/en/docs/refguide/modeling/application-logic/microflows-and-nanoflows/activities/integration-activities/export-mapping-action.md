@@ -20,7 +20,7 @@ The **Export with mapping** activity allows you to export the data stored in [do
 
 An example of export with mapping properties is represented in the image below:
 
-![export with mapping properties](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/export-mapping-action/export-with-mapping-properties.png)
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/export-mapping-action/export-with-mapping-properties.png" alt="export with mapping properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

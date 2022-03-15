@@ -21,17 +21,13 @@ The how-to describes the following use case:
 
 You have an HR app where employees can view and edit information about themselves, such as contract details and personal information. You have a page with employee details:
 
-{{% image_container width="600" %}}
-![](/attachments/studio-how-to8/pages/pages-how-to-set-validation-and-editability/employee-details-page.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio-how-to8/pages/pages-how-to-set-validation-and-editability/employee-details-page.png"   width="600"  >}}
 
 You would like to make some fields on this page obligatory to fill in (required) and some read-only.
 
 Domain model is configured the following way in this use case:
 
-{{% image_container width="250" %}}
-![](/attachments/studio-how-to8/pages/pages-how-to-set-validation-and-editability/domain-model.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio-how-to8/pages/pages-how-to-set-validation-and-editability/domain-model.png"   width="250"  >}}
 
 ## 2 Prerequisites
 
@@ -54,21 +50,21 @@ To make a field read-only, do the following:
 
 2. Select the **Contract type** field and open its properties.
 
-    {{% image_container width="600" %}}![](/attachments/studio-how-to8/pages/pages-how-to-set-validation-and-editability/contract-type.png){{% /image_container %}}
+    {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-set-validation-and-editability/contract-type.png"   width="600"  >}}
 
 3. In the **General** section, set the **Editability** property to read-only:
 
-    {{% image_container width="250" %}}![](/attachments/studio-how-to8/pages/pages-how-to-set-validation-and-editability/editability.png){{% /image_container %}}
+    {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-set-validation-and-editability/editability.png"   width="250"  >}}
 
 4. Select the **Employee number** field and open its properties.
 
 5. In the **General** section > **Editability**, you can see that it is already set to read-only and this property cannot be changed. This is because the **EmployeeNumber** attribute in the domain model is of *autonumber* type, which means that this number is generated automatically and cannot be edited:
 
-    ![](/attachments/studio-how-to8/pages/pages-how-to-set-validation-and-editability/autonumber-read-only.png)
+    {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-set-validation-and-editability/autonumber-read-only.png" >}}
 
 Now **Employee number** and **Contract type** fields are read-only, they are grayed out, and end-users will not be able to edit them.
 
-{{% image_container width="600" %}}![](/attachments/studio-how-to8/pages/pages-how-to-set-validation-and-editability/read-only-configured.png){{% /image_container %}}
+{{< figure src="/attachments/studio-how-to8/pages/pages-how-to-set-validation-and-editability/read-only-configured.png"   width="600"  >}}
 
 ## 4 Setting Fields as Required
 
@@ -87,17 +83,17 @@ To set a field as required, do the following:
 
 3. In the **Input Validation** section, set the **Validation Type** property to **Required**:
 
-    {{% image_container width="250" %}}![](/attachments/studio-how-to8/pages/pages-how-to-set-validation-and-editability/validation-type-required.png){{% /image_container %}}
+    {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-set-validation-and-editability/validation-type-required.png"   width="250"  >}}
     
 4. When an employee attempts to leave this fields empty, an error message will be displayed under the field. Specify this message in the **Message** property:
 
-    {{% image_container width="250" %}}![](/attachments/studio-how-to8/pages/pages-how-to-set-validation-and-editability/validation-message.png){{% /image_container %}}
+    {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-set-validation-and-editability/validation-message.png"   width="250"  >}}
     
 5. Repeat steps 2-4 for **Address**, **Email**, and **Phone** fields to set them as required too. 
 
 Good job! Now when an employee attempts to leave **Name**, **Address**, **Email**, or **Phone** fields empty and tries to save changes, an error message will be displayed under the field saying "This field is required":
 
-{{% image_container width="600" %}}![](/attachments/studio-how-to8/pages/pages-how-to-set-validation-and-editability/validation-example.png){{% /image_container %}}
+{{< figure src="/attachments/studio-how-to8/pages/pages-how-to-set-validation-and-editability/validation-example.png"   width="600"  >}}
 
 Changes will not be saved until all required fields are filled in.
 

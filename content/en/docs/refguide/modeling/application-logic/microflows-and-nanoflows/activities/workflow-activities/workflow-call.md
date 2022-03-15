@@ -15,13 +15,13 @@ This activity can only be used in **Microflows**.
 
 The **Workflow call** activity can be used to call and trigger a [workflow](/refguide/workflows/). 
 
-![](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/workflow-call/workflow-call.jpg)
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/workflow-call/workflow-call.jpg" >}}
 
 ## 2 Properties
 
 An example of Workflow call properties is represented in the image below:
 
-![](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/workflow-call/workflow-call-properties.jpg)
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/workflow-call/workflow-call-properties.jpg" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

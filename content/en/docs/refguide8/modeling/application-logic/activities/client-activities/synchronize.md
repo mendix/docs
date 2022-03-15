@@ -21,9 +21,7 @@ The **Synchronize** activity can be used to synchronize your data between your d
 
 ### 1.1 Synchronize All Objects
 
-{{% image_container width="200" %}}
-![Synchronize](/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize.png" alt="Synchronize"   width="200"  >}}
 
 This mode synchronizes the entire local database. The server database is updated with the changes from the local database. The local database is updated with the latest data from the server, including the file contents.
 
@@ -31,15 +29,11 @@ The behavior of this mode can be configured through [**Synchronization configura
 
 ### 1.2 Synchronize Selected Object(s)
 
-{{% image_container width="200" %}}
-![Synchronize](/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize-objects.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize-objects.png" alt="Synchronize"   width="200"  >}}
 
 This mode synchronizes objects partially, based on a selection:
 
-{{% image_container width="600" %}}
-![Synchronize](/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize-objects-selection.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize-objects-selection.png" alt="Synchronize"   width="600"  >}}
 
 With this mode, only the selected objects or lists are synchronized. The synchronization is bi-directional,
 meaning both the server database and the local database is updated for the selected objects.
@@ -63,7 +57,7 @@ The **Synchronize** activity properties consists of the following sections:
 
 * [Common](#common)
 
-	{{% image_container width="300" %}}![Synchronize Action Properties](/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize-properties.png){{% /image_container %}}
+	{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize-properties.png" alt="Synchronize Action Properties"   width="300"  >}}
 
 ## 3 Action Section {#action}
 

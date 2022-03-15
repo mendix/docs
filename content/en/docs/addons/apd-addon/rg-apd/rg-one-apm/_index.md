@@ -59,7 +59,7 @@ The APM Statistics tool collects statistical data about microflows and client AP
 
 This is the statistics tool (for load balanced environments you see the server where the microflow runs):
 
-![](/attachments/addons/apd-addon/rg-apd/rg-one-apm/Overview.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/Overview.png" >}}
 
 ## 4 The Performance Tool to Record Microflows
 
@@ -67,15 +67,15 @@ When support wants to investigate a performance issue, either proactively throug
 
 This is the call tree, which provides an overview of what happens, showing the called microflows and one iteration of a loop, filtered by duration:
 
-![](/attachments/addons/apd-addon/rg-apd/rg-one-apm/Performance_Tool_Tree_View.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/Performance_Tool_Tree_View.png" >}}
 
 Below is the performance tool output. You can double-click all actions and in the case of a microflow call, you can browse to the next microflow. In the case of loops you will see the individual iterations.
 
-![](/attachments/addons/apd-addon/rg-apd/rg-one-apm/Performance_Tool_Browse_Microflow.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/Performance_Tool_Browse_Microflow.png" >}}
 
 This is the SQL statements during an action:
 
-![](/attachments/addons/apd-addon/rg-apd/rg-one-apm/Performance_Tool_Browse_Actions.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/Performance_Tool_Browse_Actions.png" >}}
 
 ## 5 The Trap Tool Is Your Flight Data Recorder
 
@@ -89,7 +89,7 @@ The measurements can be used to trigger events on thresholds. For example, if mo
 
 The trigger can be to trap logging, or to execute a microflow, for example, to send an email or to make a heap dump.
 
-![](/attachments/addons/apd-addon/rg-apd/rg-one-apm/Measurements_Tool.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/Measurements_Tool.png" >}}
 
 ## 7 JVM Browser
 

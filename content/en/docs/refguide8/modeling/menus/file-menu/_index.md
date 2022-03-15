@@ -15,8 +15,7 @@ tags: ["Studio Pro", "file menu", "file"]
 
 The **File** menu allows you to manage documents and projects, for example, to create a new project or save changes:
 
-{{% image_container width="300" %}}![File Menu](/attachments/refguide8/modeling/menus/file-menu/file-menu.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/menus/file-menu/file-menu.png" alt="File Menu"   width="300"  >}}
 
 ## 2 Menu Items Overview {#overview}
 

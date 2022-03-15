@@ -15,13 +15,13 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 With the **Log message** activity you can create messages that appear in the log of your Mendix application:
 
-![Log Message](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/log-message.png)
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/log-message.png" alt="Log Message" >}}
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-![Log Message Properties](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/log-message-properties.png)
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/log-message-properties.png" alt="Log Message Properties" >}}
 
 The **Log message** properties pane consists of the following sections:
 
@@ -45,9 +45,9 @@ The log level defines the severity of the log message. In the [Studio Pro Consol
 | Trace |   | Used for detailed execution traces. |
 | Debug |   | Used to debug execution. |
 | Info  *(default)*  |   | Used to log informative messages. |
-| Warning | {{% image_container width="15%" %}}![Warning](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/warning.png){{% /image_container %}} | Used to log warnings. These messages appear in orange. |
-| Error | {{% image_container width="15%" %}}![Error](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/error.png){{% /image_container %}} | Used to log error messages. These messages appear in red. |
-| Critical | {{% image_container width="15%" %}}![Critical Error](/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/critical-error.png){{% /image_container %}} | Used to log critical errors. These messages appear in white on red. |
+| Warning | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/warning.png" alt="Warning"   width="15%"  >}} | Used to log warnings. These messages appear in orange. |{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/warning.png" alt="Warning"   width="15%"  >}}{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/warning.png" alt="Warning"   width="15%"  >}}
+| Error | {{% image_container width="15%" %}}{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/error.png" alt="Error" >}}{{% /image_container %}} | Used to log error messages. These messages appear in red. |
+| Critical | {{% image_container width="15%" %}}{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/critical-error.png" alt="Critical Error" >}}{{% /image_container %}} | Used to log critical errors. These messages appear in white on red. |
 
 ### 3.2 Log Node Name {#log-node-name}
 

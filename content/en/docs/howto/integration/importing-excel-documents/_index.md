@@ -28,7 +28,7 @@ Before you can start importing data into your application, you first need to set
 
 1.  Create the following domain model:
 
-	![](/attachments/howto/integration/importing-excel-documents/18581969.png)
+	{{< figure src="/attachments/howto/integration/importing-excel-documents/18581969.png" >}}
 
 	Create an enumeration for the **OrderStatus** attribute with the values of **Open**, **Processing**, and **Complete**.
   
@@ -45,7 +45,7 @@ Because an enumeration is used for the **OrderStatus** attribute, you need to cr
 
 1.  Create the following microflow and name it **IVK_ParseStatus**.
   
-    ![](/attachments/howto/integration/importing-excel-documents/18581968.png)
+    {{< figure src="/attachments/howto/integration/importing-excel-documents/18581968.png" >}}
 
 2.  Set the **Return value** as follows:
 
@@ -68,7 +68,7 @@ In order to set up import templates for importing data, your application model m
 4.  Click on the menu item for the **MxObjects_Overview** in your navigation.
 5.  Select the module that contains the objects you want to use in your client by checking the box to the left of it – which in this case  is **MyFirstModule**:
 
-	![](/attachments/howto/integration/importing-excel-documents/18581937.png)
+	{{< figure src="/attachments/howto/integration/importing-excel-documents/18581937.png" >}}
 
 6.  Click the button next to **Synchronize all entities and microflows of checked modules on the left**. Now the two objects and the parse microflow from the **MyFirstModule** module can be seen and used in the client.
 
@@ -78,26 +78,26 @@ Before you can import data from an Excel File into your application, you have to
 
 In this section, you will import data from a simple Excel file example, which can be downloaded here:
 
-[![](/attachments/howto/integration/importing-excel-documents/18581938.png)](/attachments/howto/integration/importing-excel-documents/18581949.xlsx)
+[{{< figure src="/attachments/howto/integration/importing-excel-documents/18581938.png" >}}](/attachments/howto/integration/importing-excel-documents/18581949.xlsx)
 
 Based on the structure of the file you want to import, you need to manually set up your template by following these steps:
 
 1.  Click the menu item for **ExcelImportOverview** in the navigation of your app's home page.
 2.  Click **New Template**:
 
-	![](/attachments/howto/integration/importing-excel-documents/18581971.png)
+	{{< figure src="/attachments/howto/integration/importing-excel-documents/18581971.png" >}}
 
 3.  Give a name to the template.
 4.  Click the arrow next to the **Mendix object** box.
 5.  Double-click the **Customer** object:
   
-	![](/attachments/howto/integration/importing-excel-documents/18581966.png)
+	{{< figure src="/attachments/howto/integration/importing-excel-documents/18581966.png" >}}
 
 6.  Click the arrow next to the **Reference to import objects** box.
 7.  Select the **MyFirstModule.Customer_XLSFile** association. By setting the association to the XLS file, the XLS file is saved on disk and the imported data is linked to the source file.
 8.  Make sure **Import Action** is set to **Synchronize objects**:
 
-	![](/attachments/howto/integration/importing-excel-documents/18581965.png)
+	{{< figure src="/attachments/howto/integration/importing-excel-documents/18581965.png" >}}
 
 	{{% alert color="info" %}}For this example you will be using a simple Excel file that has just one sheet and column headers on the first row. If a more comprehensive Excel file is used, you can change these values via the **Sheet nr**, **Header row nr**, and **Import from row nr** fields.{{% /alert %}}
 
@@ -110,17 +110,17 @@ Based on the structure of the file you want to import, you need to manually set 
 12. Select **Attribute** for the **Type**.
 13. Click the arrow next to the **Attribute** box:
 
-	![](/attachments/howto/integration/importing-excel-documents/18581963.png)
+	{{< figure src="/attachments/howto/integration/importing-excel-documents/18581963.png" >}}
 
 14. Double-click the **Attribute** to which you want to map the Excel value:
 
-	![](/attachments/howto/integration/importing-excel-documents/18581962.png)
+	{{< figure src="/attachments/howto/integration/importing-excel-documents/18581962.png" >}}
 
 15. Repeat steps 9 to 14 above for each attribute of the **Customer** object.
 
 	* For the mapping of attribute **Name**, set the **Key** value to **Yes** to prevent a customer from being duplicated.
 
-	![](/attachments/howto/integration/importing-excel-documents/18581961.png)
+	{{< figure src="/attachments/howto/integration/importing-excel-documents/18581961.png" >}}
 	
 	{{% alert color="info" %}}If the mapping is set up right, a green check appears in front of the row.{{% /alert %}}
 
@@ -133,11 +133,11 @@ Based on the structure of the file you want to import, you need to manually set 
 	f. For the mapping of attribute **Number**, set the **Key** value to **Yes, only for the associated object** in order to prevent orders being duplicated.<br/>
 	g. Click **Save**.
   
-	![](/attachments/howto/integration/importing-excel-documents/18581956.png)
+	{{< figure src="/attachments/howto/integration/importing-excel-documents/18581956.png" >}}
 
 17. For the mapping of the **OrderStatus** attribute, the Excel file value needs to be parsed to an enumeration value. To achieve this, you can use the **IVK_ParseStatus** microflow (created in the [Preparing the Logic for Data Import](#preparing) section above). Click the arrow next to the **Parse with** box and select the **IVK_ParseStatus** microflow:
   
-    ![](/attachments/howto/integration/importing-excel-documents/18581953.png)
+    {{< figure src="/attachments/howto/integration/importing-excel-documents/18581953.png" >}}
 
 18. Save the import template.
 
@@ -150,17 +150,17 @@ Follow these steps to import the Excel file:
 1. Click the menu item for **ExcelImportOverview** in the navigation of your app's home page.
 2.  Go to the **Import files** tab and click **New**:
 
-	![](/attachments/howto/integration/importing-excel-documents/18581952.png)
+	{{< figure src="/attachments/howto/integration/importing-excel-documents/18581952.png" >}}
 
 3. Select the template you just created.
 4.  Click **Browse**:
 
-	![](/attachments/howto/integration/importing-excel-documents/18581951.png)
+	{{< figure src="/attachments/howto/integration/importing-excel-documents/18581951.png" >}}
 
 5. Select the example Excel file you downloaded and click **Save**.
 6.  Click the Excel file under **Filename** to select it, then click **Import file**:
 
-	![](/attachments/howto/integration/importing-excel-documents/18581950.png)
+	{{< figure src="/attachments/howto/integration/importing-excel-documents/18581950.png" >}}
 
 7. Click **OK** when the import has finished.
 
@@ -168,31 +168,31 @@ Follow these steps to import the Excel file:
 
 In the previous steps, you manually added all the columns to your import template. In this section, you will create the same Excel template in an automated way, which you can do this via the specific **New template by excelfile** button. You can use this same Excel file example:
 
-[![](/attachments/howto/integration/importing-excel-documents/18581938.png)](/attachments/howto/integration/importing-excel-documents/18581949.xlsx)
+[{{< figure src="/attachments/howto/integration/importing-excel-documents/18581938.png" >}}](/attachments/howto/integration/importing-excel-documents/18581949.xlsx)
 
 Follow these steps to create the import template via the Excel file:
 
 1.  Click the menu item for **ExcelImportOverview** in the navigation of your app's home page.
 2.  Click **New template by excelfile**:
 
-	![](/attachments/howto/integration/importing-excel-documents/18581948.png)
+	{{< figure src="/attachments/howto/integration/importing-excel-documents/18581948.png" >}}
 
 3.  Select the example Excel file you downloaded.
 4.  Define the **Sheet nr**, **Header row nr**, and **Import from row nr**:
 
-	![](/attachments/howto/integration/importing-excel-documents/18581947.png)
+	{{< figure src="/attachments/howto/integration/importing-excel-documents/18581947.png" >}}
 
 5.  Click **Save & next**. This will automatically create a row for every header of the Excel file:
 
-	![](/attachments/howto/integration/importing-excel-documents/18581936.png)
+	{{< figure src="/attachments/howto/integration/importing-excel-documents/18581936.png" >}}
 
 6.  Back in the top section of the page, click the arrow next to **Mendix object** and select the **Customer** object type:
 
-	![](/attachments/howto/integration/importing-excel-documents/18581935.png)
+	{{< figure src="/attachments/howto/integration/importing-excel-documents/18581935.png" >}}
 
 10.  Under **Connect columns to attributes**, click **Connect matching attributes**:
 
-	![](/attachments/howto/integration/importing-excel-documents/18581934.png)
+	{{< figure src="/attachments/howto/integration/importing-excel-documents/18581934.png" >}}
 
 	This will automatically match attributes of the selected Mendix object that have the same name as the **Caption**.
 
@@ -209,11 +209,11 @@ Follow these steps to export and import your template:
 1.  Click the menu item for **ExcelImportOverview** in the navigation of your app's home page.
 2.  Click the Excel template you created in the [Creating the Import Template](#creating) section above to select it, then click **Export template** and save the file on your computer:
 
-	![](/attachments/howto/integration/importing-excel-documents/18581933.png)
+	{{< figure src="/attachments/howto/integration/importing-excel-documents/18581933.png" >}}
 
 3.  Import the file you just downloaded by clicking **Import template**, selecting the file, and clicking **Import**:
 
-	![](/attachments/howto/integration/importing-excel-documents/18581932.png)
+	{{< figure src="/attachments/howto/integration/importing-excel-documents/18581932.png" >}}
 
 You have now imported a complete import template.
 

@@ -43,7 +43,7 @@ Follow these steps to test and send a push notification to a device:
 3. Open your hybrid mobile app and sign in. If you are testing offline-mode, click the sync button to send the pending device registration request to the server.
 4.  Open the **Push Notifications Administration** page. Back in the administrator view of your web application, navigate to the **Devices** tab in the Push Notifications administration page. Here you should see one device in the list of registered devices, which is the device that you used to sign in to your hybrid mobile application. Continue by selecting the device and click **New Message**.
 
-	![](/attachments/howto8/mobile/hybrid-mobile/push-notifications/testing-the-implementation/21168174.png)
+	{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/testing-the-implementation/21168174.png" >}}
 
 5. Fill in the title and the message in the form and press **Send**. Your device should receive a new push notification. If your hybrid mobile app is currently running in the foreground, the notification will be displayed in the app. Otherwise, it will be shown as a standard push notification.
 

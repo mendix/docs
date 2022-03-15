@@ -28,11 +28,11 @@ The example below shows the design properties of a `"Button"`.
 * `"description"` – a brief explanation of the design property
 * `"options"` – the array of options that shows the name and CSS class specified in the Sass files for Atlas UI
 
-![](/attachments/howto7/front-end/atlas-ui/extend-design-properties-to-customize-the-web-modeler-experience/extend_settings.png)
+{{< figure src="/attachments/howto7/front-end/atlas-ui/extend-design-properties-to-customize-the-web-modeler-experience/extend_settings.png" >}}
 
 These design properties are used in the **Design** section of the Web Modeler.
 
-![Design Properties in the Web Modeler](/attachments/howto7/front-end/atlas-ui/extend-design-properties-to-customize-the-web-modeler-experience/wm-button-design-properties.png)
+{{< figure src="/attachments/howto7/front-end/atlas-ui/extend-design-properties-to-customize-the-web-modeler-experience/wm-button-design-properties.png" alt="Design Properties in the Web Modeler" >}}
 
 {{% alert color="info" %}}
 

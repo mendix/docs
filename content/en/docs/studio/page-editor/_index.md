@@ -12,7 +12,7 @@ Pages define the end-user interface of a Mendix application. Pages are created a
 
 To view the **Pages** of your app in Mendix Studio, click the **Pages** icon in the left menu bar of Studio.
 
-![](/attachments/studio/page-editor/pages-icon.png)
+{{< figure src="/attachments/studio/page-editor/pages-icon.png" >}}
 
 {{% alert color="warning" %}}
 
@@ -32,7 +32,7 @@ Every page is *based on* a layout and a template:
 
 The diagram below explains function of layouts, templates, and widgets:
 
-![](/attachments/studio/page-editor/page-structure.png)
+{{< figure src="/attachments/studio/page-editor/page-structure.png" >}}
 
 All elements described above (layouts, templates, widgets, and building blocks) are powered by Atlas UI. For more information on what Atlas UI is, see [Atlas UI](/howto/front-end/atlas-ui/). 
 
@@ -71,13 +71,13 @@ To create a new page in Studio, do the following:
 
 2.  Select the module you would like to add a new page to and click the plus icon next to this module.
 
-    ![](/attachments/studio/page-editor/new-page.png)
+    {{< figure src="/attachments/studio/page-editor/new-page.png" >}}
     
     For more information on what modules are, see [Domain Model](/studio/domain-models/).
 
 3.  In the **Create new page** dialog box, fill out the title of the page, select a layout and a page template.  
 
-	![](/attachments/studio/page-editor/create-new-page-dialog.png)
+	{{< figure src="/attachments/studio/page-editor/create-new-page-dialog.png" >}}
 
 5. Click **Create**.
 
@@ -91,7 +91,7 @@ To duplicate an existing page, do the following:
 
 2. In the side panel, click the ellipsis icon and select **Duplicate** in the drop-down menu:
 
-    ![Duplicate Page](/attachments/studio/page-editor/duplicate-page.png)
+    {{< figure src="/attachments/studio/page-editor/duplicate-page.png" alt="Duplicate Page" >}}
 
 The page is duplicated.
 
@@ -103,7 +103,7 @@ To copy and paste a page, do the following:
 
 2.  In the side panel, click the ellipsis icon and select **Copy to clipboard** in the drop-down menu:
 
-    ![Copying a Page](/attachments/studio/page-editor/copy-page.png)
+    {{< figure src="/attachments/studio/page-editor/copy-page.png" alt="Copying a Page" >}}
 
 3. Open the Studio app where you want to paste the page and press <kbd>Ctrl</kbd> +<kbd>V</kbd> or <kbd>Cmd</kbd> +<kbd>V</kbd>. 
 
@@ -116,14 +116,13 @@ To delete a page in Studio, do one of the following:
 1. Open the page you want to delete and follow the steps below:
     1. Open the **Properties** tab.
     2. Click **Delete** at the bottom of the **Properties** tab.
-        {{% image_container width="250" %}}![](/attachments/studio/page-editor/page-delete.png)
-        {{% /image_container %}}
+        {{< figure src="/attachments/studio/page-editor/page-delete.png"   width="250"  >}}
 
 2. Click the **Pages** icon in the left menu bar and do the following:
 
     1. In the side panel, click the ellipsis icon and select **Delete** in the drop-down menu:
 
-		![Delete Page](/attachments/studio/page-editor/delete-page.png)
+		{{< figure src="/attachments/studio/page-editor/delete-page.png" alt="Delete Page" >}}
 
 The selected page is deleted.
 
@@ -143,8 +142,7 @@ There are two ways to view an element and its [properties](#page-editor-properti
 
 The selected element is indicated with an blue border. Additionally, if the element is inside a data container (data view or a list view), it will be indicated with a data container icon:
 
-{{% image_container width="350" %}}![](/attachments/studio/page-editor/input-widget-example.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio/page-editor/input-widget-example.png"   width="350"  >}}
 
 ### 2.8 Deleting Elements from a Page {#deleting-elements}
 
@@ -159,7 +157,7 @@ You can create an entity from a page when configuring a data source for a widget
 
 1. Select data view properties > **Entity** property.
 2. In the **Select Entity** dialog box, click the plus icon:
-    {{% image_container width="400" %}}![Select Entity dialog box](/attachments/studio/page-editor/creating-entity.png){{% /image_container %}}
+    {{< figure src="/attachments/studio/page-editor/creating-entity.png" alt="Select Entity dialog box"   width="400"  >}}
 3. In the **Create New Entity** dialog box, set **Name** to **Customer**.
 4. Click **Create**.
 
@@ -176,7 +174,7 @@ For example, you have a [data view](/studio/page-editor-data-view-list-view/) wi
 
 2. In the **Select Entity** dialog box > **Entities Connected to Customer** section, click the plus icon:
 
-    {{% image_container width="400" %}}![Select Entity dialog box](/attachments/studio/page-editor/creating-association.png){{% /image_container %}}
+    {{< figure src="/attachments/studio/page-editor/creating-association.png" alt="Select Entity dialog box"   width="400"  >}}
 
 3. Select **Report** as the entity to connect the **Customer** entity with.
 
@@ -196,7 +194,7 @@ The breadcrumb serves two functions:
 
 * Shows a bottom-up layering of a selected item on a page. For example, when you select a button on a page, you will see that it is placed in a container, which is in a column.  Whereas, the column is in a row, and this row is placed in a layout grid on the page:
 
-	![](/attachments/studio/page-editor/breadcrumb.png)
+	{{< figure src="/attachments/studio/page-editor/breadcrumb.png" >}}
 
 * Allows you to select an element on the page and view its properties. To navigate to an element on a page and view element's properties, click this element in the breadcrumb.
 
@@ -221,9 +219,7 @@ You can update widgets in the [Widget Overview](/studio/settings-widget-overview
 
 Building blocks consist of pre-set widgets that allow you to build a page faster:  
 
-{{% image_container width="300" %}}
-![](/attachments/studio/page-editor/building-blocks.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio/page-editor/building-blocks.png"   width="300"  >}}
 
 Building blocks of Studio are divided into the following categories:
 
@@ -244,8 +240,7 @@ Building blocks of Studio are divided into the following categories:
 
 If you want to read documentation on a particular building block and to know more about how and when to use it, click the small icon in the top right corner of the building block.
 
-{{% image_container width="300" %}}![](/attachments/studio/page-editor/info-icon-building-blocks.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio/page-editor/info-icon-building-blocks.png"   width="300"  >}}
 
 {{% alert color="info" %}}
 
@@ -257,12 +252,11 @@ Building blocks categories may differ because Atlas UI can be customized using S
 
 The **Properties** tab displays the properties of the currently selected element and can differ per element. 
 
-{{% image_container width="250" %}}![](/attachments/studio/page-editor/properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio/page-editor/properties.png"   width="250"  >}}
 
 For example, if you click **Layout**—which is the layout that you choose when [creating a page](#creating-new-page)—in the breadcrumb, properties will display reference information on page-related actions that you can perform, such as changing the page title and customizing pages' look: 
 
-![](/attachments/studio/page-editor/layout.png)
+{{< figure src="/attachments/studio/page-editor/layout.png" >}}
 
 ## 7 Main Documents in This Category
 

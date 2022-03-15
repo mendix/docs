@@ -18,7 +18,7 @@ By adding your Sprints to Mendix, you will have a clear overview of your tasks a
 You can also manage the progress of tasks and Sprints from within Mendix Studio Pro via the [Stories pane](/refguide/stories-pane/).
 {{% /alert %}}
 
-![](/attachments/developerportal/collaborate/stories/stories.png)
+{{< figure src="/attachments/developerportal/collaborate/stories/stories.png" >}}
 
 This page has two tabs, which are described below.
 
@@ -30,9 +30,7 @@ The sections below describe the main actions to be performed on the **Overview**
 
 Click **New Sprint** to open the **Edit Sprint** dialog box:
 
-{{% image_container width="400" %}}
-![](/attachments/developerportal/collaborate/stories/new-sprint.jpg)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/collaborate/stories/new-sprint.jpg"   width="400"  >}}
 
 Fill in the following details:
 
@@ -47,9 +45,7 @@ For more information on Sprints, see the [Sprint Actions](#sprint-actions) secti
 
 Each Sprint contains a number of stories that describe the specific functionality to be implemented, built, or fixed. Click **New Story** to open the **New Story** dialog box:
 
-{{% image_container width="400" %}}
-![](/attachments/developerportal/collaborate/stories/new-story.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/collaborate/stories/new-story.png"   width="400"  >}}
 
 Fill in the following details:
 
@@ -64,9 +60,7 @@ Fill in the following details:
 
 You can also create a story via the [New Story](#new-story) button for Sprint or from within a new Sprint by clicking **Add a new story**:
 
-{{% image_container width="550" %}}
-![](/attachments/developerportal/collaborate/stories/new-story-from-sprint.jpg)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/collaborate/stories/new-story-from-sprint.jpg"   width="550"  >}}
 
 For more information on stories, see the [Story Actions](#story-actions) section below.
 
@@ -74,9 +68,7 @@ For more information on stories, see the [Story Actions](#story-actions) section
 
 Click **New Label** to create a new label for your app:
 
-{{% image_container width="400" %}}
-![](/attachments/developerportal/collaborate/stories/new-label.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/collaborate/stories/new-label.png"   width="400"  >}}
 
 * **Label caption** – the caption of the label
 * **Label color** – select a color from the drop-down list for easy visibility (the small square below the drop-down list shows how the color looks)
@@ -95,9 +87,7 @@ Click **More** to access the following options:
 
 After you click **Import / Export**, you will be asked what you want to do:
 
-{{% image_container width="350" %}}
-![](/attachments/developerportal/collaborate/stories/import-export.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/collaborate/stories/import-export.png"   width="350"  >}}
 
 In Mendix, you can export stories from your app at any time. If you select **Export single sprint to Excel**, you can select just the stories in one Sprint and export these to Excel to work on.
 
@@ -115,9 +105,7 @@ When editing stories in Excel, follow these guidelines:
 
 The **Manage Labels** page is where you can add or remove your labels:
 
-{{% image_container width="550" %}}
-![](/attachments/developerportal/collaborate/stories/labels.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/collaborate/stories/labels.png"   width="550"  >}}
 
 The following buttons are available:
 
@@ -130,9 +118,7 @@ The following buttons are available:
 
 The **Completed Sprints** page presents an overview of Sprints that have been completed and archived:
 
-{{% image_container width="550" %}}
-![](/attachments/developerportal/collaborate/stories/completed-sprints.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/collaborate/stories/completed-sprints.png"   width="550"  >}}
 
 The following buttons are available:
 
@@ -145,9 +131,7 @@ The following buttons are available:
 
 The **Project History** page presents the collaboration actions for the app. On this page, you can see what change was made, who performed it, and when it occurred:
 
-{{% image_container width="550" %}}
-![](/attachments/developerportal/collaborate/stories/history.jpg)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/collaborate/stories/history.jpg"   width="550"  >}}
 
 When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/collaborate/feedback/) will be presented.
 
@@ -155,9 +139,7 @@ When you select a history item and click **Show item**, the details of the story
 
 For each Sprint, the following options are provided via the menu button on the right:
 
-{{% image_container width="350" %}}
-![](/attachments/developerportal/collaborate/stories/sprint-options.jpg)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/collaborate/stories/sprint-options.jpg"   width="350"  >}}
 
 * **Complete Sprint** (only available for the Sprint identified as an **Active Sprint**) – enables completing the Sprint, which will move it to the [Completed Sprints](#completed-sprints) page
 * **Add Story** – enables [creating a new story](#new-story) 
@@ -168,7 +150,7 @@ For each Sprint, the following options are provided via the menu button on the r
 
 When you select a story, you can perform the following actions:
 
-![](/attachments/developerportal/collaborate/stories/story-context-menu.jpg)
+{{< figure src="/attachments/developerportal/collaborate/stories/story-context-menu.jpg" >}}
 
 * **Clone** – enables duplicating a selected story and its tasks, story points, status, and labels into a new user story; this can enable utilizing a user story as a template
 * **Move** –  enables moving a story to another Sprint
@@ -183,9 +165,7 @@ These actions support multi-selection of stories, except for the **Clone** actio
 
 When you click a story title, the story details page opens:
 
-{{% image_container width="500" %}}
-![](/attachments/developerportal/collaborate/stories/story-details.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/collaborate/stories/story-details.png"   width="500"  >}}
 
 On this page, you can perform a number of actions:
 
@@ -212,16 +192,15 @@ If you need to reorder stories or move a story to a different Sprint, there are 
 
 * Select the story, click **Move**, and then select the new Sprint from the **Move Stories** dialog box
 
-	{{% image_container width="500" %}}![](/attachments/developerportal/collaborate/stories/move-story-move-button.jpg)
-	{{% /image_container %}}
+	{{< figure src="/attachments/developerportal/collaborate/stories/move-story-move-button.jpg"   width="500"  >}}
 
 * Select the story and drag it to the desired Sprint location:
 
-	![](/attachments/developerportal/collaborate/stories/move-story-drag-new.jpg)
+	{{< figure src="/attachments/developerportal/collaborate/stories/move-story-drag-new.jpg" >}}
 
 * Click the story title to open the story details page, then click **Move Story**:
 
-	![](/attachments/developerportal/collaborate/stories/move-story-details.png)
+	{{< figure src="/attachments/developerportal/collaborate/stories/move-story-details.png" >}}
 
 {{% alert color="info" %}}
 Moving a story will move the tasks as well.
@@ -240,15 +219,15 @@ To manage stories in Studio Pro, follow these steps:
 1. Open your app in Studio Pro by clicking **Edit in Studio Pro** in the upper-right corner of the page.
 2. Open **View** > **Stories**. You can see your active Sprints in the **Stories** pane.
 
-	![](/attachments/developerportal/collaborate/stories/stories-pane.png)
+	{{< figure src="/attachments/developerportal/collaborate/stories/stories-pane.png" >}}
 
 3. To change the status of a story in Studio Pro, click the current status. For example, click the **To-do** **Status** to change it to **Running**:
 
-![](/attachments/developerportal/collaborate/stories/stories-to-do.png)
+{{< figure src="/attachments/developerportal/collaborate/stories/stories-to-do.png" >}}
 
 When you return to your app in the Developer Portal, you will see the new story status:
 
-![](/attachments/developerportal/collaborate/stories/status-update.png)
+{{< figure src="/attachments/developerportal/collaborate/stories/status-update.png" >}}
 
 {{% alert color="info" %}}
 Changing the status of a story or updating story points automatically synchronizes the updates between the Developer Portal and Studio Pro. For more information on how to change the status of your story, see the [Changing the Status of a Story or a Task](/refguide/stories-pane/#changing-status) section in *Stories Pane*.
@@ -260,7 +239,7 @@ On the **Sprint Status** tab, there is a Kanban overview of the [stories](/devel
 
 There is also a percentage bar of the stories that are done and the deadline date of the current Sprint:
 
-![](/attachments/developerportal/collaborate/stories/sprint-status.jpg)
+{{< figure src="/attachments/developerportal/collaborate/stories/sprint-status.jpg" >}}
 
 You can click **Mark current sprint as completed** only when all stories have the **Done** status.
 

@@ -31,24 +31,24 @@ To open a hybrid example app, follow these steps:
 3. Adjust your configurations (be sure to keep **Enable online services** > **Yes** selected) and then click **Create app**.
 4. Click **Run** to deploy this application to the Mendix Cloud:
 
-    ![](/attachments/howto7/mobile/deploy-your-first-hybrid-mobile-app/18581186.png) 
+    {{< figure src="/attachments/howto7/mobile/deploy-your-first-hybrid-mobile-app/18581186.png" >}} 
 
     Studio Pro will notify you as soon as the application is deployed. While you wait, go to **Navigation**, click the **Hybrid phone app online** tab, and make sure your **Default home page** is set to **MyFirstModule.Dashboard**.
 5. Click the small arrow to open the **View App** menu and select **View Hybrid Mobile App**:
 
-    ![](/attachments/howto7/mobile/deploy-your-first-hybrid-mobile-app/18581185.png) 
+    {{< figure src="/attachments/howto7/mobile/deploy-your-first-hybrid-mobile-app/18581185.png" >}} 
 
     This will open the **View Hybrid Mobile App** pop-up window:
 
-    ![](/attachments/howto7/mobile/deploy-your-first-hybrid-mobile-app/18581184.png)
+    {{< figure src="/attachments/howto7/mobile/deploy-your-first-hybrid-mobile-app/18581184.png" >}}
 
 6. Open the Mendix Mobile app on your device and select **Scan QR Code**:
 
-    ![](/attachments/howto7/mobile/deploy-your-first-hybrid-mobile-app/18581190.png)
+    {{< figure src="/attachments/howto7/mobile/deploy-your-first-hybrid-mobile-app/18581190.png" >}}
 
 7. Scan the QR code on the screen with the Mendix Mobile app:
 
-    ![](/attachments/howto7/mobile/deploy-your-first-hybrid-mobile-app/18581189.png)
+    {{< figure src="/attachments/howto7/mobile/deploy-your-first-hybrid-mobile-app/18581189.png" >}}
 
 You should see the example application running on your device.
 

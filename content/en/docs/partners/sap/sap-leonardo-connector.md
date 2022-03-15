@@ -35,13 +35,13 @@ To use the Connector for SAP Leonardo Machine Learning Foundation, you need the 
 
     2. Select one of the models shown on the page:
 
-        ![An SAP Leonardo Functional Services Model](/attachments/partners/sap/sap-leonardo-connector/leonardo-model.png)
+        {{< figure src="/attachments/partners/sap/sap-leonardo-connector/leonardo-model.png" alt="An SAP Leonardo Functional Services Model" >}}
 
     3. Click Show API Key.
 
     4. Click Copy Key and Close.
 
-        ![Copy the API key](/attachments/partners/sap/sap-leonardo-connector/copy-api-key.png)
+        {{< figure src="/attachments/partners/sap/sap-leonardo-connector/copy-api-key.png" alt="Copy the API key" >}}
 
     5. Use the API key in your app, as described in the next section.
 
@@ -53,7 +53,7 @@ Every call to SAP Leonardo Machine Learning Foundation needs to be authenticated
 
 The API key needs to be pasted as the value of the constant, **APIKey** which is found in **App** > **Marketplace modules** > **LeonardoMachineLearning** > **Constants**.
 
-![Paste the API key](/attachments/partners/sap/sap-leonardo-connector/paste-api-key.png)
+{{< figure src="/attachments/partners/sap/sap-leonardo-connector/paste-api-key.png" alt="Paste the API key" >}}
 
 ## 4 Microflow Actions
 
@@ -63,7 +63,7 @@ Each action from the Connector for SAP Leonardo Machine Learning Foundation is d
 
 This implements the [Inference Service for Customizable Image Classification (classification)](https://api.sap.com/api/image_classification_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes an image and detects the dominant objects present in it from a set of 1000 categories such as trees, animals, food, vehicles, people, and more. A description of the service can be found on the SAP site here: [Inference Service for Customizable Image Classification](https://help.sap.com/viewer/b04a8fe9c04745b98ad8652ccd5d636f/1.0/en-US/d7b4564d6625412c9e50ad1514308043.html). 
 
-![ClassifyImage action](/attachments/partners/sap/sap-leonardo-connector/classify-image-input.png)
+{{< figure src="/attachments/partners/sap/sap-leonardo-connector/classify-image-input.png" alt="ClassifyImage action" >}}
 
 **Input**
 
@@ -89,7 +89,7 @@ The **ClassifyImage** action does not currently support a list of image objects,
 
 The **ClassifyImage** action returns a list of objects of entity type *LeonardoMachineLearning.ImageClassificationResponse*. Note that this list will contain a single object.
 
-![ClassifyImage domain model](/attachments/partners/sap/sap-leonardo-connector/classify-image-output.png)
+{{< figure src="/attachments/partners/sap/sap-leonardo-connector/classify-image-output.png" alt="ClassifyImage domain model" >}}
 
 |Entity/Attribute|Leonardo Equivalent|Description|
 |---|---|---|
@@ -103,7 +103,7 @@ The **ClassifyImage** action returns a list of objects of entity type *LeonardoM
 
 This implements the [Product Image Classification API (inference_sync)](https://api.sap.com/api/product_image_classification_api/overview) service of SAP Leonardo Machine Learning Foundation. It takes an image or archive of images and classifies them into a fixed set of categories of products that are common in eCommerce. A description of the service can be found on the SAP site here: [Inference Service for Product Image Classification](https://help.sap.com/viewer/b04a8fe9c04745b98ad8652ccd5d636f/1.0/en-US/3013afaa529440429a6e63dfd31d1799.html). 
 
-![ClassifyProductFromImage action](/attachments/partners/sap/sap-leonardo-connector/classify-product-from-image-input.png)
+{{< figure src="/attachments/partners/sap/sap-leonardo-connector/classify-product-from-image-input.png" alt="ClassifyProductFromImage action" >}}
 
 **Input**
 
@@ -117,7 +117,7 @@ The **ClassifyProductFromImage** action does not currently support a list of ima
 
 The **ClassifyProductFromImage** action returns a list of objects of entity type *LeonardoMachineLearning.ProductClassificationResponse*.
 
-![ClassifyProductFromImage domain model](/attachments/partners/sap/sap-leonardo-connector/classify-product-from-image-output.png)
+{{< figure src="/attachments/partners/sap/sap-leonardo-connector/classify-product-from-image-output.png" alt="ClassifyProductFromImage domain model" >}}
 
 |Entity/Attribute|Leonardo Equivalent|Description|
 |---|---|---|
@@ -131,7 +131,7 @@ The **ClassifyProductFromImage** action returns a list of objects of entity type
 
 This implements the [Inference Service for Face Detection (face-detection)](https://api.sap.com/api/face_detection_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes an image and detects faces in it, if any. It returns information declaring a boundary box per face. A description of the service can be found on the SAP site here: [Inference Service for Face Detection](https://help.sap.com/viewer/b04a8fe9c04745b98ad8652ccd5d636f/1.0/en-US/3c58688fc6b14c8faf80fa5e99d88e32.html). 
 
-![DetectFace action](/attachments/partners/sap/sap-leonardo-connector/detect-face-input.png)
+{{< figure src="/attachments/partners/sap/sap-leonardo-connector/detect-face-input.png" alt="DetectFace action" >}}
 
 **Input**
 
@@ -145,7 +145,7 @@ The **DetectFace** action does not currently support a list of image objects, or
 
 The **DetectFace** action returns a list of objects of entity type *LeonardoMachineLearning.FaceDetectionResponse*. Note that this list will contain a single object.
 
-![DetectFace domain model](/attachments/partners/sap/sap-leonardo-connector/detect-face-output.png)
+{{< figure src="/attachments/partners/sap/sap-leonardo-connector/detect-face-output.png" alt="DetectFace domain model" >}}
 
 |Entity/Attribute|Leonardo Equivalent|Description|
 |---|---|---|
@@ -161,7 +161,7 @@ The **DetectFace** action returns a list of objects of entity type *LeonardoMach
 
 This implements the [Inference Service for Topic Detection (topic-detection)](https://api.sap.com/api/topic_detection_api/resource) service of SAP Leonardo Machine Learning Foundation. It detects and ranks topics in the input documents. A description of the service can be found on the SAP site here: [Inference Service for Topic Detection](https://help.sap.com/viewer/f09b2311283b4f32a44e106729e11412/1.0/en-US/c90b3a5861f94adbba102164203d5a4b.html). At least two documents must be submitted.
 
-![DetectTopic action](/attachments/partners/sap/sap-leonardo-connector/detect-topic-input.png)
+{{< figure src="/attachments/partners/sap/sap-leonardo-connector/detect-topic-input.png" alt="DetectTopic action" >}}
 
 **Input**
 
@@ -188,7 +188,7 @@ There are two inputs to this action.
 
 The **DetectTopic** action returns an object of entity type *LeonardoMachineLearning.TopicDetectionResponse*.
 
-![ClassifyImage domain model](/attachments/partners/sap/sap-leonardo-connector/detect-topic-output.png)
+{{< figure src="/attachments/partners/sap/sap-leonardo-connector/detect-topic-output.png" alt="ClassifyImage domain model" >}}
 
 |Entity/Attribute|Leonardo Equivalent|Description|
 |---|---|---|
@@ -207,7 +207,7 @@ This implements the [Inference Service For Customizable Image Feature Extraction
 
 The values in the feature vector extracted from the image can be used as input to the ScoreSimilarity action. See the section on [ScoreSimilarity](#score-similarity), below.
 
-![ExtractImageFeature action](/attachments/partners/sap/sap-leonardo-connector/extract-image-feature-input.png)
+{{< figure src="/attachments/partners/sap/sap-leonardo-connector/extract-image-feature-input.png" alt="ExtractImageFeature action" >}}
 
 **Input**
 
@@ -223,7 +223,7 @@ The **ExtractImageFeature** action does not currently support a list of image ob
 
 The **ExtractImageFeature** action returns a list of objects of entity type *LeonardoMachineLearning.ImageFeatureExtratorResponse* [sic]. Note that this list will contain a single object.
 
-![ExtractImageFeature domain model](/attachments/partners/sap/sap-leonardo-connector/extract-image-feature-output.png)
+{{< figure src="/attachments/partners/sap/sap-leonardo-connector/extract-image-feature-output.png" alt="ExtractImageFeature domain model" >}}
 
 |Entity/Attribute|Leonardo Equivalent|Description|
 |---|---|---|
@@ -236,7 +236,7 @@ The **ExtractImageFeature** action returns a list of objects of entity type *Leo
 
 This implements the [Inference Service for Optical Character Recognition (OCR)](https://api.sap.com/api/ocr_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes one portable document file with the .pdf extension, or one image file in .jpeg, .jpe, or .png format as input. It returns the result in text or xml format.
 
-![RecognizeOpticalCharacter (OCR) action](/attachments/partners/sap/sap-leonardo-connector/ocr-input.png)
+{{< figure src="/attachments/partners/sap/sap-leonardo-connector/ocr-input.png" alt="RecognizeOpticalCharacter (OCR) action" >}}
 
 **Input**
 
@@ -269,7 +269,7 @@ The *ocr_options* entity must be passed - the connector does not use the default
 
 The **RecognizeOpticalCharacter (OCR)** action returns an object of entity type *LeonardoMachineLearning.OCRResponse*.
 
-![RecognizeOpticalCharacter (OCR) domain model](/attachments/partners/sap/sap-leonardo-connector/ocr-output.png)
+{{< figure src="/attachments/partners/sap/sap-leonardo-connector/ocr-output.png" alt="RecognizeOpticalCharacter (OCR) domain model" >}}
 
 |Entity/Attribute|Leonardo Equivalent|Description|
 |---|---|---|
@@ -281,7 +281,7 @@ The **RecognizeOpticalCharacter (OCR)** action returns an object of entity type 
 
 This implements the [Inference Service For Similarity Scoring (similarity-scoring)](https://api.sap.com/api/similarity_scoring_api/resource) service of SAP Leonardo Machine Learning Foundation. It compares vectors using a similarity score based on the cosine similarity of the vectors. The vectors retrieved from the **ExtractImageFeature** microflow action or from the *Inference Service for Document Feature Extraction* SAP Leonardo Machine Learning Foundation service can be used as inputs to this service.
 
-![ExtractImageFeature action](/attachments/partners/sap/sap-leonardo-connector/score-similarity-input.png)
+{{< figure src="/attachments/partners/sap/sap-leonardo-connector/score-similarity-input.png" alt="ExtractImageFeature action" >}}
 
 **Input**
 
@@ -304,7 +304,7 @@ The vectors to be scored must be provided as a string in JSON format. The action
 
 The **ScoreSimilarity** action returns an object of entity type *LeonardoMachineLearning.SimilarityScoringResponse*.
 
-![ScoreSimilarity domain model](/attachments/partners/sap/sap-leonardo-connector/score-similarity-output.png)
+{{< figure src="/attachments/partners/sap/sap-leonardo-connector/score-similarity-output.png" alt="ScoreSimilarity domain model" >}}
 
 |Entity/Attribute|Leonardo Equivalent|Description|
 |---|---|---|
@@ -345,13 +345,13 @@ If *numSimilarVectors* is set to *1* then the action will return just the best s
 
 This implements the [Inference Service For Machine Translation (translation)](https://api.sap.com/api/translation_api/resource) service of SAP Leonardo Machine Learning Foundation. It translates one or more strings from a source language to one or more target languages. The Inference Service for Machine Translation is powered by SAP Translation Hub and is trained on SAP-related content to provide accurate domain adaptation and terminology coverage. A description of the service can be found on the SAP site here: [Inference Service for Machine Translation](https://help.sap.com/viewer/f09b2311283b4f32a44e106729e11412/1.0/en-US/c730c916e6e947df9a634b33b66e5ee0.html). 
 
-![Translate action](/attachments/partners/sap/sap-leonardo-connector/translate-input.png)
+{{< figure src="/attachments/partners/sap/sap-leonardo-connector/translate-input.png" alt="Translate action" >}}
 
 **Input**
 
 An object of entity type *LeonardoMachineLearning.Translation*. This must be associated with a number of other entities, as described below.
 
-![Translate input domain model](/attachments/partners/sap/sap-leonardo-connector/translate-input-domain-model.png)
+{{< figure src="/attachments/partners/sap/sap-leonardo-connector/translate-input-domain-model.png" alt="Translate input domain model" >}}
 
 |Entity/Attribute|Description|
 |---|---|
@@ -366,7 +366,7 @@ An object of entity type *LeonardoMachineLearning.Translation*. This must be ass
 
 For example, to translate the two texts *Hello* and *Goodbye* from English to both Spanish and German, you need to create objects as shown below:
 
-![Translate example input](/attachments/partners/sap/sap-leonardo-connector/translate-example.png)
+{{< figure src="/attachments/partners/sap/sap-leonardo-connector/translate-example.png" alt="Translate example input" >}}
 
 *Limitations*
 
@@ -378,7 +378,7 @@ Passing the *key* value is not supported.
 
 The **Translate** action returns an object of entity type *LeonardoMachineLearning.TranslationResponse*.
 
-![Translate output domain model](/attachments/partners/sap/sap-leonardo-connector/translate-output.png)
+{{< figure src="/attachments/partners/sap/sap-leonardo-connector/translate-output.png" alt="Translate output domain model" >}}
 
 |Entity/Attribute|Leonardo Equivalent|Description|
 |---|---|---|
@@ -405,7 +405,7 @@ The ML Foundation Trial is not added automatically to your quota. Therefore, you
 
 3. Click the **Subaccount** where you want to use the ML Foundation Trial services (this will usually be the *trial* subaccount).
 
-    ![Add ML foundation trial entitlement](/attachments/partners/sap/sap-leonardo-connector/ml-entitlement.png)
+    {{< figure src="/attachments/partners/sap/sap-leonardo-connector/ml-entitlement.png" alt="Add ML foundation trial entitlement" >}}
 
 4. You will see your subaccount overview, and can see that ML Foundation Trial has been added.
 
@@ -415,7 +415,7 @@ The ML Foundation Trial is not added automatically to your quota. Therefore, you
 
 2. Select **ml-foundation-trial-beta** from the **Service Marketplace**
 
-    ![choose the machine learning service from the marketplace](/attachments/partners/sap/sap-leonardo-connector/choose-ml-service.png)
+    {{< figure src="/attachments/partners/sap/sap-leonardo-connector/choose-ml-service.png" alt="choose the machine learning service from the marketplace" >}}
 
 3. Go to **Instances** and click **New Instance** to add an instance of the service.
 
@@ -429,7 +429,7 @@ The ML Foundation Trial is not added automatically to your quota. Therefore, you
 
 8. Type an **Instance Name** for the instance and click **Finish**.
 
-    ![Confirm instance creation](/attachments/partners/sap/sap-leonardo-connector/create-instance.png)
+    {{< figure src="/attachments/partners/sap/sap-leonardo-connector/create-instance.png" alt="Confirm instance creation" >}}
 
 ## 6 Read More
 

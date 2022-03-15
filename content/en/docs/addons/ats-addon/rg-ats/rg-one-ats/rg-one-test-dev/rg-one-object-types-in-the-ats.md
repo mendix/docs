@@ -15,7 +15,7 @@ Test cases are being built up by actions and are designed to test one specific r
 
 Test cases are built by utilizing a set of predefined actions, allowing to easily create and manage software test cases.
 
-![A test case in the ATS repository](/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-test-dev/rg-one-object-types-in-the-ats/21168176.png)
+{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-test-dev/rg-one-object-types-in-the-ats/21168176.png" alt="A test case in the ATS repository" >}}
 
 To create a new test case go to the ATS _Repository_ page and click the _Add Test_ button.
 

@@ -22,7 +22,7 @@ After a microflow has run, any new objects or updates to existing objects that w
 
 The following diagram shows the flow of objects in detail:
 
-![](/attachments/howto8/general/minimize-number/object_flow.png)
+{{< figure src="/attachments/howto8/general/minimize-number/object_flow.png" >}}
 
 ## 3 Minimizing the Number of In-Use Objects in Your Session
 
@@ -60,11 +60,11 @@ To prevent this from occurring, you can link non-persistable objects that have l
 
 To do this, first create a reference between your entity and the **Session** entity in the **System** module:
 
-![](/attachments/howto8/general/minimize-number/domain_model_npe.png)
+{{< figure src="/attachments/howto8/general/minimize-number/domain_model_npe.png" >}}
 
 Then link the object to the current session when you create it in a microflow:
 
-![](/attachments/howto8/general/minimize-number/create_object_dialog.png)
+{{< figure src="/attachments/howto8/general/minimize-number/create_object_dialog.png" >}}
 
 Because it is always possible to look at the current **Session** object, any objects related to the current session can also always be retrieved. The Mendix Client must then always keep these objects around; they will never be removed.
 

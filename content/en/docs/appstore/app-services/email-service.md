@@ -43,7 +43,7 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4]
 2.  To add the Email Service to your app in Mendix Studio Pro, follow these steps:
     1.  In the **App Explorer**, right-click the app, click **Import module package**, and then select *SendEmailModule.mpk*. 
 
-        ![pop-up-menu-in-app-explorer](/attachments/appstore/app-services/email-service/import-module-in-app-explorer.png)
+        {{< figure src="/attachments/appstore/app-services/email-service/import-module-in-app-explorer.png" alt="pop-up-menu-in-app-explorer" >}}
 
         In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
@@ -70,7 +70,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 4. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview/#service-management-dashboard).
 5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. The system generates **SecretKey** and **UserName** and also returns **MailFromDomain**, **SPFRecordValue**, and **MXRecordValue**. For more details on SPF and MX configuration, see the [SPF and MX Records](#spf-and-mx-records) section.
 
-   ![secretkey-username-mailfromdomain-spfrecordvalue-mxrecordvalue-generated](/attachments/appstore/app-services/email-service/binding-key-generation.png)
+   {{< figure src="/attachments/appstore/app-services/email-service/binding-key-generation.png" alt="secretkey-username-mailfromdomain-spfrecordvalue-mxrecordvalue-generated" >}}
 
 9. After the order is created successfully, the Technical Owner also receives an email to confirm the email address. Follow the instructions in the email to confirm the email address. Once this email address is confirmed, this email address is used as the sender's email address when the app sends an email.
 
@@ -78,7 +78,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 1.  In the **App Explorer**, go to **SendEmailModule** > **Configurations**. You can see **SecretKey** and **UserName** are defined as constants. 
 
-    ![secretkey-and-username](/attachments/appstore/app-services/email-service/configure-username-secretkey.png)
+    {{< figure src="/attachments/appstore/app-services/email-service/configure-username-secretkey.png" alt="secretkey-and-username" >}}
 
 2. Double-click **SecretKey** and enter the **SecretKey** that you got.
 3. Click **OK** to save the settings.
@@ -93,7 +93,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 You can use the Email Service in a microflow to send HTML or plain text messages. The Email Service comes bundled with predefined entities **EmailAttr** and **SendEmailResponse**.
 
-![emailattr-and-sendemailresponse-entities](/attachments/appstore/app-services/email-service/inbuilt-domain-entities.png)
+{{< figure src="/attachments/appstore/app-services/email-service/inbuilt-domain-entities.png" alt="emailattr-and-sendemailresponse-entities" >}}
 
 You can create a list using the **EmailAttr** entity to specify the **To**, **CC**, **BCC** recipients. For more information, see [Working with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/).
 
@@ -101,11 +101,11 @@ You can create a list using the **EmailAttr** entity to specify the **To**, **CC
 
 This representative microflow contains an entity with the required attributes, an action to send an email that internally calls the Java action, and a placeholder to capture the return code of the sending email action.
 
-![microflow-to-send-emails](/attachments/appstore/app-services/email-service/email-text-microflow.png)
+{{< figure src="/attachments/appstore/app-services/email-service/email-text-microflow.png" alt="microflow-to-send-emails" >}}
 
 To configure the **Send email** activity, double-click the activity and specify the following settings in the **Send Email** dialog box with expression syntax:
 
-![send-email-dialog-box](/attachments/appstore/app-services/email-service/send-email-dialog-box.png)
+{{< figure src="/attachments/appstore/app-services/email-service/send-email-dialog-box.png" alt="send-email-dialog-box" >}}
 
 * **Required Fields**
   * **From name** – Defines the sender of the email
@@ -130,15 +130,15 @@ After the **Send Email** activity is configured, once the microflow that uses th
 
 The following microflow shows a possible way to generate HTML content using a template. The template contains fixed text with some placeholders for variables.
 
-![microflow-to-generate-html-body-content](/attachments/appstore/app-services/email-service/generate-html-body-content-microflow.png)
+{{< figure src="/attachments/appstore/app-services/email-service/generate-html-body-content-microflow.png" alt="microflow-to-generate-html-body-content" >}}
 
 The second step creates an HTML file from the template contents after possible variable substitution.
 
-![generate-document-dialog-box](/attachments/appstore/app-services/email-service/generate-document-dialog-box.png)
+{{< figure src="/attachments/appstore/app-services/email-service/generate-document-dialog-box.png" alt="generate-document-dialog-box" >}}
 
 The third step generates a string from this HTML file using the **String from file** action.
 
-![string-from-file-dialog-box](/attachments/appstore/app-services/email-service/string-from-file-dialog-box.png)
+{{< figure src="/attachments/appstore/app-services/email-service/string-from-file-dialog-box.png" alt="string-from-file-dialog-box" >}}
 
  In the last step, you can add the variable for the generated HTML content into the **Body** field of the **Send email** activity.
 
@@ -147,11 +147,11 @@ The third step generates a string from this HTML file using the **String from fi
 
 This is a representative microflow that sends emails with file attachments. The file attachments should have the file types that are [supported](#unsupported-file-types).
 	
-![microflow-to-send-message-with-attachments](/attachments/appstore/app-services/email-service/microflow.png)
+{{< figure src="/attachments/appstore/app-services/email-service/microflow.png" alt="microflow-to-send-message-with-attachments" >}}
 	
 The **Attachment** attribute accepts a list of **FileDocumentObject**. You can either use **System.FileDocument** or use [File Dropper](https://marketplace.mendix.com/link/component/111497) to create a list of **FileDocumentObject** that will be sent as attachments with the email.
 
-![filedocument-entity](/attachments/appstore/app-services/email-service/system-filedocument-model.png)
+{{< figure src="/attachments/appstore/app-services/email-service/system-filedocument-model.png" alt="filedocument-entity" >}}
 
 {{% alert color="info" %}}The size of the attached file(s) multiplied by the total number of recipients in the "To", "CC", and "BCC" lists is counted against the Data transfer utilization.{{% /alert %}}
 

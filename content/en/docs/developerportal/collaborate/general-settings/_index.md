@@ -22,9 +22,7 @@ The **General** settings page presents an overview of your app with the followin
 * Whether the app is enabled for **Mendix Studio** (for details, see the [Mendix Studio](#web) section below)
 * The **App ID**
 
-{{% image_container width="450" %}}
-![](/attachments/developerportal/collaborate/general-settings/general-settings.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/collaborate/general-settings/general-settings.png"   width="450"  >}}
 
 The sections below describe the actions you can perform on this page.
 
@@ -46,9 +44,7 @@ Click **Cloud Settings** to select the cloud platform on which to deploy your ap
 Only users with the **App Settings** permission can change cloud platforms. For default roles, only the **Scrum Master** has this permission. For more details, see the [Team Roles](/developerportal/collaborate/app-roles/#team-roles) section of *App Roles*.
 {{% /alert %}}
 
-{{% image_container width="450" %}}
-![](/attachments/developerportal/collaborate/general-settings/cloudsettings.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/collaborate/general-settings/cloudsettings.png"   width="450"  >}}
 
 If you select a non-Mendix cloud platform like SAP, you will be redirected to a page to complete the setup. If you select Mendix Cloud, no additional setup is needed.
 
@@ -75,15 +71,13 @@ After clicking **Manage App Users**, you will see a list of environments for you
 * If you manage user roles from Studio, your app should be published (for more information see the [Managing App Users](/studio/settings-security/#managing-app-users) section of *Security, Roles & Permissions* )
 * Your user role allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles/#user-management) section of *User Roles*)
 
-![](/attachments/developerportal/collaborate/general-settings/app-user-management-environments.png)
+{{< figure src="/attachments/developerportal/collaborate/general-settings/app-user-management-environments.png" >}}
 
 ### 4.1 Manage Users
 
 When you click **Manage Users** on for your environment, you will see a page with a list of the current App Users you can remove or edit:
 
-{{% image_container width="450" %}}
-![](/attachments/developerportal/collaborate/general-settings/app-user-management-users.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/collaborate/general-settings/app-user-management-users.png"   width="450"  >}}
 
 To remove an App User from the environment, click **Remove** by their name.
 
@@ -116,8 +110,7 @@ In **API Keys**, there is an overview of the API keys created for your app with 
 *   Date of **Creation**
 *   Date **Last Used**
 
-{{% image_container width="550" %}}![](/attachments/developerportal/collaborate/general-settings/keys.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/collaborate/general-settings/keys.png"   width="550"  >}}
 
 To create a new app API key, click **Create API Key**  and follow these steps:
 
@@ -141,8 +134,7 @@ Click **Edit App Info** to edit the following details:
 * The **Description** of the app
 * The **App Contact**
 
-{{% image_container width="450" %}}![](/attachments/developerportal/collaborate/general-settings/edit.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/collaborate/general-settings/edit.png"   width="450"  >}}
 
 For details on the **Deactivate App**, **Leave App**, and **Delete App** options, see [How to Leave & Delete an App](/developerportal/collaborate/leave-delete-app/).
 
@@ -156,8 +148,7 @@ Only [Mendix Admins](/developerportal/control-center/#company) or users with the
 
 On the **Webhooks** page, you can add a new webhook and edit or delete existing webhooks:
 
-{{% image_container width="550" %}}![](/attachments/developerportal/collaborate/general-settings/webhooks-list.png)
-{{% /image_container %}}
+{{< figure src="/attachments/developerportal/collaborate/general-settings/webhooks-list.png"   width="550"  >}}
 
 After clicking **New Webhook** to create a new webhook, fill in the following details:
 

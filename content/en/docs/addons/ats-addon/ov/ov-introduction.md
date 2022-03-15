@@ -9,7 +9,7 @@ menu_order: 1
 
 When you [log in to Application Test Suite (ATS)](https://ats.mendix.com), you see the **My apps** page. This page displays all the Mendix apps you are a member of and that have an ATS license. Every member of the team in your app has access to ATS.
 
-![The My apps page](/attachments/addons/ats-addon/ov/ov-introduction/my-apps.png)
+{{< figure src="/attachments/addons/ats-addon/ov/ov-introduction/my-apps.png" alt="The My apps page" >}}
 
 Each app has a doughnut chart that displays how many test cases inside that app are passed. This allows for a quick overview of the progress of your apps.
 
@@ -17,11 +17,11 @@ Each app has a doughnut chart that displays how many test cases inside that app 
 
 When you open an app that does not contain any test cases, the dashboard looks like this:
 
-![ATS empty app dashboard](/attachments/addons/ats-addon/ov/ov-introduction/empty-app.png)
+{{< figure src="/attachments/addons/ats-addon/ov/ov-introduction/empty-app.png" alt="ATS empty app dashboard" >}}
 
 If you already have some active test cases in your **ATS app**, the dashboard will give you a summarized overview of the current state of your app at a glance.
 
-![ATS app dashboard](/attachments/addons/ats-addon/ov/ov-introduction/dashboard.png)
+{{< figure src="/attachments/addons/ats-addon/ov/ov-introduction/dashboard.png" alt="ATS app dashboard" >}}
 
 The dashboard can be divided into four parts:
 
@@ -32,11 +32,11 @@ The dashboard can be divided into four parts:
 
 The **current state chart** will show you the total number of test cases in your app. Furthermore, it will present you the state of your test cases as numeral.
 
-![current state chart](/attachments/addons/ats-addon/ov/ov-introduction/doughnutchart.png)
+{{< figure src="/attachments/addons/ats-addon/ov/ov-introduction/doughnutchart.png" alt="current state chart" >}}
 
 The **7-Day history chart** reflects the state of your test cases over the past seven days.
 
-![7day history chart](/attachments/addons/ats-addon/ov/ov-introduction/7dayhistory.png)
+{{< figure src="/attachments/addons/ats-addon/ov/ov-introduction/7dayhistory.png" alt="7day history chart" >}}
 
 The **Recent Tests** section shows you detailed information for all of your test cases and test suites. You can see the passed time since the latest execution and its result. For test suites, the success rate is calculated using the results of all containing test cases.
 
@@ -46,17 +46,17 @@ You can open the latest execution log of a failed test case by pressing **Show L
 
 If your test suites contain one or more test suites/cases, you can open the test suite by clicking the arrow in front of the test suite name. The test suite will expand and you will see all containing test suites/cases.
 
-![Recent Tests](/attachments/addons/ats-addon/ov/ov-introduction/recent-tests.png)
+{{< figure src="/attachments/addons/ats-addon/ov/ov-introduction/recent-tests.png" alt="Recent Tests" >}}
 
 You can export the current results of your test cases by clicking **Download Report**. The **Generate Report** dialog box appears, where you can either generate a report of the entire app or select specific folders to include in the report.
 
-![Dashboard export button](/attachments/addons/ats-addon/ov/ov-introduction/download-report.png)
+{{< figure src="/attachments/addons/ats-addon/ov/ov-introduction/download-report.png" alt="Dashboard export button" >}}
 
 ## 3 Navigation
 
 You can navigate inside ATS using the menu on the left side of the screen.
 
-![Navigation menu](/attachments/addons/ats-addon/ov/ov-introduction/navigation.png)
+{{< figure src="/attachments/addons/ats-addon/ov/ov-introduction/navigation.png" alt="Navigation menu" >}}
 
 Using the menu, you can navigate to different pages inside ATS:
 

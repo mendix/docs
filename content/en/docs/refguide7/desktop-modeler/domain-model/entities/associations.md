@@ -16,7 +16,7 @@ The **Associations** tab is a tab in the entity properties and has the following
 * [Owner](#owner)
 * [Parent/Child](#parent-child)  
 
-![](/attachments/refguide7/desktop-modeler/domain-model/entities/associations/dm-entity-properties-associations-tab.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/associations/dm-entity-properties-associations-tab.png" >}}
 
 For more information on associations, see [Association and Their Properties](/refguide7/association-properties/). 
 
@@ -75,7 +75,7 @@ Parent and child settings show you the direction of the association. Parent defi
 
 Drawing an association from the **Order** entity to the **Customer** entity results in the following:
 
-![](/attachments/refguide7/desktop-modeler/domain-model/association-properties/918217.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/association-properties/918217.png" >}}
 
 The type property has its default value `Reference`. In this example, a customer can have multiple orders, and an order can only have one customer.
 
@@ -100,7 +100,7 @@ A many-to-many association with default ownership is created by drawing an assoc
 
 In this example, a **Customer** can have multiple **Groups**, and a **Group** can have multiple **Customers**:
 
-![](/attachments/refguide7/desktop-modeler/domain-model/entities/associations/918127.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/associations/918127.png" >}}
 
 In XML, instances of these entities and their associations look as follows (note that the association is only stored in the **Customer** element):
 
@@ -126,7 +126,7 @@ A one-to-one association is created by setting the owner property to `Both` (whi
 
 In this example, a **Customer** can have one **Profile**, and a **Profile** can have one **Customer**:
 
-![](/attachments/refguide7/desktop-modeler/domain-model/entities/associations/918128.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/associations/918128.png" >}}
 
 In XML, instances of these entities and their associations look as follows (note that the association is stored both in the **Profile** element and the **Customer** element):
 
@@ -151,8 +151,7 @@ A many-to-many association where both entities are owners is created by setting 
 
 In this example, an **Accountant** can have multiple **Groups** and a **Group** can have multiple **Accountants**:
 
-{{% image_container width="500" %}}![](/attachments/refguide7/desktop-modeler/domain-model/entities/associations/918125.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/associations/918125.png"   width="500"  >}}
 
 In XML, instances of these entities and their association look as follows (note that the association is stored both in the **Accountant** element and the **Group** element):
 

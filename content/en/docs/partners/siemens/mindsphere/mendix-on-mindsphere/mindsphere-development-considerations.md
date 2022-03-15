@@ -31,14 +31,14 @@ The **MindSphereToken** entity contains the *Access_token* attribute which needs
 
 To improve security of your app, it is recommended that you delete the MindSphereToken object returned by the *Access token* action, provided by the MindSphere SSO module, before showing a page or reaching the end of the microflow.
 
-![Section of a microflow showing the Access token action and the Edit Custom HTTP Header dialog in the Call REST action](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/delete-mindspheretoken.png)
+{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/delete-mindspheretoken.png" alt="Section of a microflow showing the Access token action and the Edit Custom HTTP Header dialog in the Call REST action" >}}
 
 
 ### 2.1 Authorizing MindSphere REST Calls from within Scheduled Events
 
 The access token connector *cannot* be used for calling a MindSphere API in a microflow which is executed *without* a user context – for example, called from a **scheduled event**. Therefore the MindSphereSingleSignOn module offers a microflow, **DS_GetAccessTokenForScheduledEvents**, that returns a Token for a given Tenant. You can find this microflow here:
 
-![DS_GetAccessTokenForScheduledEvents](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/DS_GetAccessTokenForScheduledEvents.png)
+{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/DS_GetAccessTokenForScheduledEvents.png" alt="DS_GetAccessTokenForScheduledEvents" >}}
 
 The microflow uses the [MindSphere Application Credentials](#app-creds) functionality to fetch a token, and uses different environment variables depending on the location where the app is running:
 
@@ -76,7 +76,7 @@ The following example shows how to use the microflow **DS_GetAccessTokenForSched
 Do not create a Tenant object yourself as this is done automatically during login.
 {{% /alert %}}
 
-![DS_GetAccessTokenForScheduledEvents](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/sample_getAccessTokenForScheduledEvents.png)
+{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/sample_getAccessTokenForScheduledEvents.png" alt="DS_GetAccessTokenForScheduledEvents" >}}
 
 For more information on how to perform REST calls see the [Importing and Exporting Your Data](https://academy.mendix.com/link/path/44) learning path (you must be signed in to the Mendix Platform to see this learning path).
 
@@ -116,7 +116,7 @@ Instructions for licensing apps are available in the [License Activation](https:
 
 If you need to use a corporate web proxy, the following settings must be applied in Mendix Studio Pro to allow communication with MindSphere during local development.
 
-{{% image_container width="50%" %}}![](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/proxy-settings.png){{% /image_container %}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/proxy-settings.png"   width="50%"  >}}
 
 Contact your local IT department for the `proxyHost` and `proxyPort` values you need.
 
@@ -132,7 +132,7 @@ The SSO module supports you in getting a valid MindSphere token locally via **Ap
 
 When you run your app locally, you will not be able to use SSO to get your credentials. You will be logged in as MxAdmin and will be presented with a login screen on app startup if the constant *AskForCredentialsOnStartUp* is true - otherwise communication to MindSphere is not possible.
 
-{{% image_container width="50%" %}}![](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image19.png){{% /image_container %}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image19.png"   width="50%"  >}}
 
 This will use the credentials you have set up under **App Credentials** in the *Authorization Management* tab of the MindSphere Developer Cockpit for this application.
 
@@ -141,7 +141,7 @@ This will use the credentials you have set up under **App Credentials** in the *
 
 Storing the *Client Secret* inside the project is, from a security perspective, not a good idea. A better approach is to use a local environment variable. Create a user-specific environment variable with *Variable name* equal to your *Client ID* value and the *Variable value* equal to your *Client Secret* value. See step 6 below for information on how to get these values.
 
-{{% image_container width="50%" %}}![](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/envvariables.png){{% /image_container %}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/envvariables.png"   width="50%"  >}}
 
 On startup, the system checks if there is an environment variable present with the name equal to your *Client ID* value and uses its value as *ClientSecret*.
 The *ClientID* is built from the combination of:
@@ -165,21 +165,21 @@ To create the app credentials:
 
 4.  Click **Issue access** to obtain a token.
 
-    ![](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image20.png)
+    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image20.png" >}}
 
 5.  Select the access level and click **Submit**
 
-    ![](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image21.png)
+    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image21.png" >}}
 
 6.  Make a note of the **Client ID** and **Client Secret**
 
-    ![](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image22.png)
+    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image22.png" >}}
 
 For more information about creating app credentials, see the documentation on the MindSphere website here: [Self-Hosted Application – Access MindSphere APIs](https://developer.mindsphere.io/howto/howto-selfhosted-api-access.html).
 
 To ensure that the correct application credentials are requested, you have to set the following constants in the **LocalDevelopment** folder of the **MindSphereSingleSignOn** module in addition to the other configuration constants.
 
-![](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image23.png)
+{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image23.png" >}}
 
 ### 5.3 Configuration
 
@@ -219,7 +219,7 @@ If you are testing different roles in your app, do not use the demo users. If yo
 
 The MxAdmin role is found In the **Administrator** tab of the *Security* settings of your app.
 
-![](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/mxadmin-roles.png)
+{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/mxadmin-roles.png" >}}
 
 ### 5.5 Local User Passwords
 
@@ -244,7 +244,7 @@ You can select MindSphere icons from Siemens MindSphere Web Content to be displa
 3. Select **Image** as the icon type.
 4. Find the image that you want and click **Select**. The MindSphere icons are in the module *Siemens_MindSphere_Web_Content*.
 
-![Add icon as an image](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/svg-icon.png)
+{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/svg-icon.png" alt="Add icon as an image" >}}
 
 {{% alert color="info" %}}
 You cannot change the color of these icons from within Mendix.
@@ -258,13 +258,13 @@ To do this:
 
 1. Find the icon you wish to use. These have the same names as the icons in Siemens MindSphere Web Content and are listed in the *App Explorer* dock under **App** > **Marketplace modules** > **Siemens_MindSphere_Web_Content** > **Icons**.
 
-    ![List of MindSphere icons](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/mindsphere-icons.png)
+    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/mindsphere-icons.png" alt="List of MindSphere icons" >}}
 
 2. Open the properties of the element to which you wish to add an icon.
 3. Set **Icon** to *(none)*.
 3. Add the class `iconMdsp {icon-name}`.
 
-    ![Add an icon as CSS](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/css-icon.png)
+    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/css-icon.png" alt="Add an icon as CSS" >}}
 
 {{% alert color="info" %}}
 You will not see the icon in Studio Pro when it is in *Structure mode*. Switch to *Design mode* to confirm that you have selected the correct icon.
@@ -288,7 +288,7 @@ If no security is placed on persistable Mendix entity objects, these are accessi
 
 MindSphere SSO provides the user’s tenant as the **Name** attribute in the **Tenant** entity.
 
-![](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image25.png)
+{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image25.png" >}}
 
 In addition, MindSphere SSO will identify whether the current user is a subtenant using **IsSubTenantUser** and, if so, will populate the name of the subtenant in **SubtenantId**. More information about subtenants can be found in the MindSphere documentation [Subtenants](https://developer.mindsphere.io/apis/core-tenantmanagement/api-tenantmanagement-overview.html#subtenants).
 
@@ -333,12 +333,12 @@ You have some limits which are set for the user's tenant to be applied to a time
 
 1.  Create the domain model with the **LimitConfig** entity being a specialization of **MindSphereSingleSignOn.TenantObject**.
 
-    ![](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image26.png)
+    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image26.png" >}}
 
 2.  Write a sub-microflow which returns a list of all limits.
 3.  Apply the XPath constraint to the **Retrieve Objects** action.
 
-    {{% image_container width="75%" %}}![](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image27.png){{% /image_container %}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image27.png"   width="75%"  >}}
 
 4.  When you want to retrieve the list of limits, call this microflow instead of using the retrieve objects action. This will ensure that tenant-based security is always applied.
 
@@ -385,7 +385,7 @@ There is a more detailed discussion of MindSphere and Mendix roles and scopes in
 
 If the user signs out from MindSphere, the Mendix app will not delete the session cookie.
 
-![](/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image18.png)
+{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image18.png" >}}
 
 {{% alert color="warning" %}}
 In some circumstances, this could lead to another user *using the same app in the same browser on the same computer*, picking up the session from the previous user if the cookie has not yet expired.

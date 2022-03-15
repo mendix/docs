@@ -16,7 +16,7 @@ tags: ["studio pro", "file manager", "file widget", "widget"]
 
 A file manager is used to upload and/or download files.
 
-![File Manager](/attachments/refguide8/modeling/pages/file-widgets/file-manager/file-manager.png)
+{{< figure src="/attachments/refguide8/modeling/pages/file-widgets/file-manager/file-manager.png" alt="File Manager" >}}
 
 It must be placed inside a data view connected to the entity System.FileDocument or a specialization thereof.
 
@@ -28,8 +28,7 @@ When uploading a file through the file manager, the FileDocument object will be 
 
 An example of file manager properties is represented in the image below:
 
-{{% image_container width="250" %}}![File Manager Properties](/attachments/refguide8/modeling/pages/file-widgets/file-manager/file-manager-properties.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/pages/file-widgets/file-manager/file-manager-properties.png" alt="File Manager Properties"   width="250"  >}}
 
 File manager properties consist of the following sections:
 

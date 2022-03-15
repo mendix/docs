@@ -17,8 +17,7 @@ Studio Pro supports a number of dockable window panes, such as the **Changes** a
 
 Via this menu you can also enable or disable the [full screen mode](#full-screen) or [reset the layout](#reset-layout) of your project to the default.  
 
-{{% image_container width="300" %}}![View Menu](/attachments/refguide8/modeling/menus/view-menu/view-menu.png)
-{{% /image_container %}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/view-menu.png" alt="View Menu"   width="300"  >}}
 
 ## 2 Layout of Panes {#layout-of-panes}
 
@@ -32,7 +31,7 @@ Note that this section describes the behavior of panes, not the behavior of docu
 
 When you drag a pane, you can see arrows that indicate where you can position this pane. You can position the pane either inside the current pane (arrows grouped together) or make it full-window height or width (individual arrows on the borders). Each position is labelled and explained below:
 
-![](/attachments/refguide8/modeling/menus/view-menu/interaction-with-panes.png)
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/interaction-with-panes.png" >}}
 
 1. Within the current *pane* you can position a pane in one of the following ways:
 
@@ -75,7 +74,7 @@ For version control enabled projects (projects with [Team Server](/developerport
 
 This pane has two levels, so when you zoom into a changed document, you can review all the changes within that document without going back and forth between levels. The zoomed-in level of the pane is split into two grids, with elements on the left and properties on the right. Selecting an element on the left presents the changed properties on the right:
 
-![](/attachments/refguide8/modeling/menus/view-menu/changes.gif)
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes.gif" >}}
 
 ### 3.2 Connector {#connector}
 

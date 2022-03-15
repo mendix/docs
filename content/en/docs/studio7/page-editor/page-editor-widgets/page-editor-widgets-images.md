@@ -16,8 +16,7 @@ There are two image widgets in Mendix Studio:
 * Image – allows you to show a static (non-changing) image in your app
 *  Dynamic image – allows you to show a dynamic image (for example, a relevant profile picture that is different for each customer) in your app
 
-   {{% image_container width="350" %}}![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-images/image-widgets.png)
-   {{% /image_container %}}
+   {{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-images/image-widgets.png"   width="350"  >}}
 
 {{% alert color="info" %}}
 
@@ -31,8 +30,7 @@ You can switch between static and dynamic image in the **General** section, as w
 
 Before configuring settings in the **General** section for the **Dynamic Image**, keep in mind that it can only function inside a data container (a list view or a data view). You can either place widget in an existing data container; or click **Wrap with a new data view** in **Properties** to create a data view automatically and place an input element inside it. 
 
-{{% image_container width="350" %}}![](/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-images/dynamic-image-data-view.png)
-{{% /image_container %}}
+{{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-images/dynamic-image-data-view.png"   width="350"  >}}
 
 Settings available for **Static Image** and **Dynamic Image** are described in the table below:
 

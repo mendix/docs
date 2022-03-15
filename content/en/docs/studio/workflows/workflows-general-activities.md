@@ -10,19 +10,19 @@ tags: ["workflow", "workflows", "decision", "parallel split", "end activity"]
 
 **General** activities allow you to manage paths in your workflow. A **Decision** allows you to add a condition and the workflow will follow one of the paths depending on this condition. With the help of the **Jump** activity you can jump to another activity in the workflow. **Parallel Split** adds several parallel paths (processes) to the workflow, and the **End** event ends a path. 
 
-![General Activities](/attachments/studio/workflows/workflows-general-activities/general.jpg)
+{{< figure src="/attachments/studio/workflows/workflows-general-activities/general.jpg" alt="General Activities" >}}
 
 ## 2 Decision {#decision}
 
 A decision is an element that makes a choice based on a condition and follows one and only one of the outgoing paths. For example, you can use it to follow different processes when a new hire works remotely or when they work from the office:
 
-![Decision Example](/attachments/studio/workflows/workflows-general-activities/decision-example.jpg)
+{{< figure src="/attachments/studio/workflows/workflows-general-activities/decision-example.jpg" alt="Decision Example" >}}
 
 ### 2.1 Decision Properties
 
 An example of decision properties is represented in the image below:
 
-![Decision Properties](/attachments/studio/workflows/workflows-general-activities/decision-properties.jpg)
+{{< figure src="/attachments/studio/workflows/workflows-general-activities/decision-properties.jpg" alt="Decision Properties" >}}
 
 Decision properties consist of the following sections:
 
@@ -50,7 +50,7 @@ To change the order of outcomes, click the **Outcome** property and drag it.
 
 The **Jump** activity allows you to jump to other activities in the workflow. This is useful when, for example, you are approving a request and need more details that are provided in one of the previous user tasks:
 
-![Jump Activity Example](/attachments/studio/workflows/workflows-general-activities/jump-example.jpg)
+{{< figure src="/attachments/studio/workflows/workflows-general-activities/jump-example.jpg" alt="Jump Activity Example" >}}
 
 {{% alert color="warning" %}}
 You cannot use the **Jump** activity in a Parallel split or in a path where it would end the workflow without any other path continuing it. 
@@ -60,7 +60,7 @@ You cannot use the **Jump** activity in a Parallel split or in a path where it w
 
 An example of Jump activity properties is represented in the image below:
 
-![](/attachments/studio/workflows/workflows-general-activities/jump-properties.jpg)
+{{< figure src="/attachments/studio/workflows/workflows-general-activities/jump-properties.jpg" >}}
 
 The Jump activity properties consist of the **General** section and are described in the table below:
 
@@ -74,7 +74,7 @@ The Jump activity properties consist of the **General** section and are describe
 
 The parallel split is used to have parallel processes in your workflow. For example, when onboarding a new employee, you can have several processes running in parallel: the HR department preparing necessary documents, the IT department preparing a workstation, and the Administration department scheduling a training for the employee:
 
-![Parallel Split Example](/attachments/studio/workflows/workflows-general-activities/parallel-split-example.jpg)
+{{< figure src="/attachments/studio/workflows/workflows-general-activities/parallel-split-example.jpg" alt="Parallel Split Example" >}}
 
 {{% alert color="info" %}}
 
@@ -86,7 +86,7 @@ The workflow will only continue to the next activity when all paths of the paral
 
 An example of parallel split properties is represented in the image below:
 
-![Parallel Split Properties](/attachments/studio/workflows/workflows-general-activities/parallel-split-properties.jpg)
+{{< figure src="/attachments/studio/workflows/workflows-general-activities/parallel-split-properties.jpg" alt="Parallel Split Properties" >}}
 
 Parallel split properties consist of the following sections:
 

@@ -8,7 +8,7 @@ parent: "rg-three-apd"
 
 The settings displayed in this screenshot are available for an environment:
 
-![](/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-settings/settings.png)
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-settings/settings.png" >}}
 
 By default, the best options are already selected for the most common situations.
 
@@ -40,6 +40,6 @@ The following settings can be changed:
 	* QueryParser
 * **Generate API key** – After clicking this, click **Copy** to copy the API key to the clipboard (when you generate an API key for a runtime/Mendix Studio Pro environment, you see this key only once, so copy-paste and use it immediately; for more information about the installation, see [APD 3 Installation Guide](/addons/apd-addon/ig-three/))
 
-	![](/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-settings/api_key_dialog.png)
+	{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-settings/api_key_dialog.png" >}}
 
 * **Delete this environment** – Clicking this button will delete the environment from the APD Manager

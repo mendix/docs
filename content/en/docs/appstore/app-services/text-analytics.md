@@ -86,7 +86,7 @@ A trial gives everyone in your company one-month access to the app service. The 
 
 The **DominantLanguage** entity is an entity referenced from **DominantLanguageDetector** and **Language** that incorporates all the information of the supported dominant language object to help you get a confident score of the dominant language from given text.
 
-![dominantlanguage](/attachments/appstore/app-services/text-analytics/dominantlanguage.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/dominantlanguage.png" alt="dominantlanguage" >}}
 
 | Attribute | Data Type |Description |
 | --- | --- |---|
@@ -96,7 +96,7 @@ The **DominantLanguage** entity is an entity referenced from **DominantLanguageD
 
 The **Language** entity is a conceptual entity that incorporates all the information of the supported language object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
-![language](/attachments/appstore/app-services/text-analytics/language.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/language.png" alt="language" >}}
 
 | Attribute | Data Type |Description |
 | --- | --- |---|
@@ -107,7 +107,7 @@ The **Language** entity is a conceptual entity that incorporates all the informa
 
 The **Detector** entity is a conceptual entity that incorporates all the information of the supported detector object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
-![detector](/attachments/appstore/app-services/text-analytics/detector.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/detector.png" alt="detector" >}}
 
 | Attribute | Data Type |Description |
 | --- | --- |---|
@@ -117,7 +117,7 @@ The **Detector** entity is a conceptual entity that incorporates all the informa
 
 The **Sentiment** entity is an entity referenced from **SentimentDetector** and **SentimentScore** that incorporates all the information of the supported sentiment object to help you perform sentiment analysis from given text.
 
-![sentiment](/attachments/appstore/app-services/text-analytics/sentiment.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/sentiment.png" alt="sentiment" >}}
 
 | Attribute | Data Type |Description |
 | --- | --- |---|
@@ -127,7 +127,7 @@ The **Sentiment** entity is an entity referenced from **SentimentDetector** and 
 
 The **SentimentScore** entity is a conceptual entity that incorporates all the information of the supported level of confidence of the sentiment score detector object.
 
-![sentimentscore](/attachments/appstore/app-services/text-analytics/sentimentscore.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/sentimentscore.png" alt="sentimentscore" >}}
 
 | Attribute | Data Type |Description |
 | --- | --- |---|
@@ -140,7 +140,7 @@ The **SentimentScore** entity is a conceptual entity that incorporates all the i
 
 The **Entity** entity is a conceptual entity that inherits from the **TextAnalytics.Response** entity and is referenced from **EntityDetector** that incorporates all the information of the supported entity object to help you perform entity detection from given text.
 
-![entity](/attachments/appstore/app-services/text-analytics/entity.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/entity.png" alt="entity" >}}
 
 | Attribute | Data Type |Description |
 | --- | --- |---|
@@ -150,7 +150,7 @@ The **Entity** entity is a conceptual entity that inherits from the **TextAnalyt
 
 The **PiiEntity** entity is a conceptual entity that inherits from the **TextAnalytics.Response** entity and referenced from **PiiEntityDetector** that incorporates all the information of the supported PII entity object to help you perform PII entity detection from given text.
 
-![piientity](/attachments/appstore/app-services/text-analytics/piientity.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/piientity.png" alt="piientity" >}}
 
 | Attribute | Data Type |Description |
 | --- | --- |---|
@@ -160,13 +160,13 @@ The **PiiEntity** entity is a conceptual entity that inherits from the **TextAna
 
 The **KeyPhrase** entity is a conceptual entity that inherits from **TextAnalytics.Response** entity and is referenced from **KeyPhraseDetector** that incorporates all the information of the supported key phrase object to help you perform key phrase detection from given text.
 
-![keyphrase](/attachments/appstore/app-services/text-analytics/keyphrase.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/keyphrase.png" alt="keyphrase" >}}
 
 #### 3.1.9 SyntaxToken
 
 The **SyntaxToken** entity is a conceptual entity that inherits from **TextAnalytics.Response** entity and is referenced from **SyntaxDetector** that incorporates all the information of the supported syntax token object to help you perform syntax token extraction from given text.
 
-![syntaxtoken](/attachments/appstore/app-services/text-analytics/syntaxtoken.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/syntaxtoken.png" alt="syntaxtoken" >}}
 
 | Attribute | Data Type |Description |
 | --- | --- |---|
@@ -177,7 +177,7 @@ The **SyntaxToken** entity is a conceptual entity that inherits from **TextAnaly
 
 The **Response** entity is a conceptual entity that incorporates all the information of the supported response data object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
-![response](/attachments/appstore/app-services/text-analytics/response.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/response.png" alt="response" >}}
 
 | Attribute | Data Type |Description |
 | --- | --- |---|
@@ -202,37 +202,37 @@ The **TokenEndpoint** constant provides a valid endpoint of security token servi
 
 The **CreateDominantLanguageDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create DominantLanguageDetector as a return object from the back-end service.
 
-![createdominantlanguagedetector](/attachments/appstore/app-services/text-analytics/createdominantlanguagedetector.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/createdominantlanguagedetector.png" alt="createdominantlanguagedetector" >}}
 
 #### 3.3.2 CreateEntityDetector
 
 The **CreateEntityDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateEntityDetector as a return object from the back-end service.
 
-![createentitydetector](/attachments/appstore/app-services/text-analytics/createentitydetector.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/createentitydetector.png" alt="createentitydetector" >}}
 
 #### 3.3.3 CreateKeyPhraseDetector
 
 The **CreateKeyPhraseDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateKeyPhraseDetector as a return object from the back-end service.
 
-![createkeyphrasedetector](/attachments/appstore/app-services/text-analytics/createkeyphrasedetector.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/createkeyphrasedetector.png" alt="createkeyphrasedetector" >}}
 
 #### 3.3.4 CreatePiiEntityDetector
 
 The **CreatePiiEntityDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreatePiiEntityDetector as a return object from the back-end service.
 
-![createpiientitydetector](/attachments/appstore/app-services/text-analytics/createpiientitydetector.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/createpiientitydetector.png" alt="createpiientitydetector" >}}
 
 #### 3.3.5 CreateSentimentDetector
 
 The **CreateSentimentDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateSentimentDetector as a return object from the back-end service.
 
-![createsentimentdetector](/attachments/appstore/app-services/text-analytics/createsentimentdetector.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/createsentimentdetector.png" alt="createsentimentdetector" >}}
 
 #### 3.3.6 CreateSyntaxDetector
 
 The **CreateSyntaxDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateSyntaxDetector as a return object from the back-end service.
 
-![createsyntaxdetector](/attachments/appstore/app-services/text-analytics/createsyntaxdetector.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/createsyntaxdetector.png" alt="createsyntaxdetector" >}}
 
 ### 3.4 Nanoflows {#nanoflows}
 
@@ -240,37 +240,37 @@ The **CreateSyntaxDetector** microflow takes **text** (String) and **languageCod
 
 The **DetectDominantLanguage** nanoflow takes the **languageDetector** object as an input parameter to get a list of dominant languages.
 
-![detectdominantlanguage](/attachments/appstore/app-services/text-analytics/detectdominantlanguage.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/detectdominantlanguage.png" alt="detectdominantlanguage" >}}
 
 #### 3.4.2 DetectEntities
 
 The **DetectEntities** nanoflow takes the **entityDetector** object as an input parameter to get a list of entities.
 
-![detectentities](/attachments/appstore/app-services/text-analytics/detectentities.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/detectentities.png" alt="detectentities" >}}
 
 #### 3.4.3 DetectKeyPhrases
 
 The **DetectKeyPhrases** nanoflow takes the **keyPhrasesDetector** object as an input parameter to get a list of key phrases.
 
-![detectkeyphrases](/attachments/appstore/app-services/text-analytics/detectkeyphrases.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/detectkeyphrases.png" alt="detectkeyphrases" >}}
 
 #### 3.4.4 DetectPiiEntities
 
 The **DetectPiiEntities** nanoflow takes the **piiEntitiesDetector** object as an input parameter to get a list of PII entities.
 
-![detectpiientities](/attachments/appstore/app-services/text-analytics/detectpiientities.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/detectpiientities.png" alt="detectpiientities" >}}
 
 #### 3.4.5 DetectPiiEntities
 
 The **DetectSentiment** nanoflow takes the **sentimentDetector** object as an input parameter to get a sentiment object.
 
-![detectsentiment](/attachments/appstore/app-services/text-analytics/detectsentiment.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/detectsentiment.png" alt="detectsentiment" >}}
 
 #### 3.4.6 DetectSyntax
 
 The **DetectSyntax** nanoflow takes the **syntaxDetector** object as an input parameter to get a list of syntax tokens.
 
-![detectsyntax](/attachments/appstore/app-services/text-analytics/detectsyntax.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/detectsyntax.png" alt="detectsyntax" >}}
 
 ### 3.5 Enumerations {#enumerations}
 
@@ -382,7 +382,7 @@ If you deploy your app locally or as a Mendix Free App, configure the license to
 4. Fill in the **Value** with the license token that you [obtained](#obtain-license-token).
 5.  Click **OK** to save the settings.
 
-    ![licensetoken-inmendix](/attachments/appstore/app-services/text-analytics/licensetoken-inmendix.png)
+    {{< figure src="/attachments/appstore/app-services/text-analytics/licensetoken-inmendix.png" alt="licensetoken-inmendix" >}}
 
 6. When you finish building the app, click **Run Locally** to run your app locally or click **Run** to deploy it as a Mendix Free App. Then you can see the app service in your app.
 
@@ -392,11 +392,11 @@ If you deploy your app in the Mendix Cloud, configure the license token in the [
 
 Before you deploy your app, configure the app **Constants** in the deployment package.
 
-![licensetoken-cloudportal](/attachments/appstore/app-services/text-analytics/licensetoken-cloudportal.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/licensetoken-cloudportal.png" alt="licensetoken-cloudportal" >}}
 
 If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app.
 
-![licensetoken-envdetails](/attachments/appstore/app-services/text-analytics/licensetoken-envdetails.png)
+{{< figure src="/attachments/appstore/app-services/text-analytics/licensetoken-envdetails.png" alt="licensetoken-envdetails" >}}
 
 #### 3.7.3 For an App Deployed in Your Own Environment
 
@@ -413,11 +413,11 @@ Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLan
     2. Add the **CreateDominantLanguageDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
     3.  Double-click the **CreateDominantLanguageDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
-        ![call-createdominantlanguagedetector-microflow](/attachments/appstore/app-services/text-analytics/call-createdominantlanguagedetector-microflow.png)
+        {{< figure src="/attachments/appstore/app-services/text-analytics/call-createdominantlanguagedetector-microflow.png" alt="call-createdominantlanguagedetector-microflow" >}}
 
    4.  Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
 
-       ![createdominantlanguagedetector-nanoflow](/attachments/appstore/app-services/text-analytics/createdominantlanguagedetector-nanoflow.png)
+       {{< figure src="/attachments/appstore/app-services/text-analytics/createdominantlanguagedetector-nanoflow.png" alt="createdominantlanguagedetector-nanoflow" >}}
 
 2. From the **Toolbox**, add a **Data view** widget to your page.
 3. Set the **CreateDominantLanguageDetector** nanoflow as the data source of the **Data View** widget as follows:
@@ -460,7 +460,7 @@ Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLan
 14. Make sure you have [configured the license token](#configure-license-token).
 15.  Run your app locally. You can perform language detection directly in the browser:
 
-     ![runlocally-language-detection](/attachments/appstore/app-services/text-analytics/runlocally-language-detection.png)
+     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-language-detection.png" alt="runlocally-language-detection" >}}
 
 ### 4.2 Performing Sentiment Detection in Your Browser
 
@@ -471,11 +471,11 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
     2. Add the **CreateSentimentDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
     3.  Double-click the **CreateSentimentDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
-        ![call-createsentimentdetector-microflow](/attachments/appstore/app-services/text-analytics/call-createsentimentdetector-microflow.png)
+        {{< figure src="/attachments/appstore/app-services/text-analytics/call-createsentimentdetector-microflow.png" alt="call-createsentimentdetector-microflow" >}}
     
     4.  Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
     
-        ![createsentimentdetector-nanoflow](/attachments/appstore/app-services/text-analytics/createsentimentdetector-nanoflow.png)
+        {{< figure src="/attachments/appstore/app-services/text-analytics/createsentimentdetector-nanoflow.png" alt="createsentimentdetector-nanoflow" >}}
     
 2.  Create a microflow as follows:
     1. Name the microflow *GetDetectorSupportedLanguages*. 
@@ -490,7 +490,7 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
     10. In the text box, enter *$detector/TextAnalytics.Detector_SupportedLanguages/TextAnalytics.Language*.
     11.  Click **OK** to save the settings. 
 
-         ![getdetectorsupportedlanguages-microflow](/attachments/appstore/app-services/text-analytics/getdetectorsupportedlanguages-microflow.png)
+         {{< figure src="/attachments/appstore/app-services/text-analytics/getdetectorsupportedlanguages-microflow.png" alt="getdetectorsupportedlanguages-microflow" >}}
 
 3. Add a **Data view** widget to your page.
 4. Set the **CreateSentimentDetector** nanoflow as the data source of the **Data view** widget as follows:
@@ -535,7 +535,7 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
 14. Make sure you have [configured the license token](#configure-license-token).
 15.  Run your app locally. You can perform sentiment detection directly in the browser:
 
-     ![runlocally-sentiment-detection](/attachments/appstore/app-services/text-analytics/runlocally-sentiment-detection.png)
+     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-sentiment-detection.png" alt="runlocally-sentiment-detection" >}}
 
 ### 4.3 Performing Key Phrase Detection in Your Browser
 
@@ -546,11 +546,11 @@ Use the **CreateKeyPhraseDetector** microflow and the **DetectKeyPhrases** nanof
     2. Add the **CreateKeyPhraseDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
     3.  Double-click the **CreateKeyPhraseDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
     
-        ![call-createkeyphrasedetector-microflow](/attachments/appstore/app-services/text-analytics/call-createkeyphrasedetector-microflow.png)
+        {{< figure src="/attachments/appstore/app-services/text-analytics/call-createkeyphrasedetector-microflow.png" alt="call-createkeyphrasedetector-microflow" >}}
     
     4.  Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
       
-        ![createkeyphrasedetector-nanoflow](/attachments/appstore/app-services/text-analytics/createkeyphrasedetector-nanoflow.png)
+        {{< figure src="/attachments/appstore/app-services/text-analytics/createkeyphrasedetector-nanoflow.png" alt="createkeyphrasedetector-nanoflow" >}}
    
 2. Add a **Data view** widget to your page.
 3. Set the **CreateKeyPhraseDetector** nanoflow as the data source of the **Data view** widget as follows:
@@ -592,7 +592,7 @@ Use the **CreateKeyPhraseDetector** microflow and the **DetectKeyPhrases** nanof
 12. Make sure you have [configured the license token](#configure-license-token).
 13.  Run your app locally. You can perform key phrase detection directly in the browser:
 
-     ![runlocally-keyphrase-detection](/attachments/appstore/app-services/text-analytics/runlocally-keyphrase-detection.png)
+     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-keyphrase-detection.png" alt="runlocally-keyphrase-detection" >}}
 
 ### 4.4 Performing Entity Detection in Your Browser
 
@@ -603,11 +603,11 @@ Use the **CreateEntityDetector** microflow and the **DetectEntities** nanoflow t
     2. Add the **CreateEntityDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
     3.  Double-click the **CreateEntityDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
     
-        ![call-createentitydetector-microflow](/attachments/appstore/app-services/text-analytics/call-createentitydetector-microflow.png)
+        {{< figure src="/attachments/appstore/app-services/text-analytics/call-createentitydetector-microflow.png" alt="call-createentitydetector-microflow" >}}
         
     4. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
     
-       ![createentitydetector-nanoflow](/attachments/appstore/app-services/text-analytics/createentitydetector-nanoflow.png)
+       {{< figure src="/attachments/appstore/app-services/text-analytics/createentitydetector-nanoflow.png" alt="createentitydetector-nanoflow" >}}
     
 2. Add a **Data view** widget to your page.
 3. Set the **CreateEntityDetector** nanoflow as the data source of the **Data view** widget as follows:
@@ -649,7 +649,7 @@ Use the **CreateEntityDetector** microflow and the **DetectEntities** nanoflow t
 12. Make sure you have [configured the license token](#configure-license-token).
 13.  Run your app locally. You can perform entity detection directly in the browser:
 
-     ![runlocally-entities-detection](/attachments/appstore/app-services/text-analytics/runlocally-entities-detection.png)
+     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-entities-detection.png" alt="runlocally-entities-detection" >}}
 
 ### 4.5 Performing PII Entity Detection in Your Browser
 
@@ -660,11 +660,11 @@ Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nano
     2. Add the **CreatePiiEntityDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
     3.  Double-click the **CreatePiiEntityDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
-        ![call-createpiientitydetector-microflow](/attachments/appstore/app-services/text-analytics/call-createpiientitydetector-microflow.png)
+        {{< figure src="/attachments/appstore/app-services/text-analytics/call-createpiientitydetector-microflow.png" alt="call-createpiientitydetector-microflow" >}}
       
    4.  Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
    
-       ![createpiientitydetector-nanoflow](/attachments/appstore/app-services/text-analytics/createpiientitydetector-nanoflow.png)
+       {{< figure src="/attachments/appstore/app-services/text-analytics/createpiientitydetector-nanoflow.png" alt="createpiientitydetector-nanoflow" >}}
    
 2. Add a **Data view** widget to your page.
 3. Set the **CreatePiiEntityDetector** nanoflow as the data source of the **Data view** widget as follows:
@@ -706,7 +706,7 @@ Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nano
 12. Make sure you have [configured the license token](#configure-license-token).
 13.  Run your app locally. You can perform PII entity detection directly in the browser:
 
-     ![runlocally-pii-entities-detection](/attachments/appstore/app-services/text-analytics/runlocally-pii-entities-detection.png)
+     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-pii-entities-detection.png" alt="runlocally-pii-entities-detection" >}}
 
 ### 4.6 Performing Syntax Detection in Your Browser
 
@@ -717,11 +717,11 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
     2. Add the **CreateSyntaxDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
     3.  Double-click the **CreateSyntaxDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
-        ![call-createsyntaxdetector-microflow](/attachments/appstore/app-services/text-analytics/call-createsyntaxdetector-microflow.png)
+        {{< figure src="/attachments/appstore/app-services/text-analytics/call-createsyntaxdetector-microflow.png" alt="call-createsyntaxdetector-microflow" >}}
 
     4.  Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
 
-        ![createsyntaxdetector-nanoflow](/attachments/appstore/app-services/text-analytics/createsyntaxdetector-nanoflow.png)
+        {{< figure src="/attachments/appstore/app-services/text-analytics/createsyntaxdetector-nanoflow.png" alt="createsyntaxdetector-nanoflow" >}}
 
 2. Add a **Data view** widget to your page.
 3. Set the **CreateSyntaxDetector** nanoflow as the data source of the **Data view** widget as follows:
@@ -763,7 +763,7 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
 12. Make sure you have [configured the license token](#configure-license-token).
 13.  Run your app locally. You can perform syntax detection directly in the browser:
 
-     ![runlocally-syntax-detection](/attachments/appstore/app-services/text-analytics/runlocally-syntax-detection.png)
+     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-syntax-detection.png" alt="runlocally-syntax-detection" >}}
 
 ### 4.7 Checking Statistics on the Usage Dashboard {#check-usage}
 

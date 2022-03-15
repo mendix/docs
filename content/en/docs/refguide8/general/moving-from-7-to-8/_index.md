@@ -143,15 +143,15 @@ It is possible to fix most of the deprecation errors in one single action. To ac
 
 1. In Studio Pro 8, find the error message which relates to the support of Currency and Float data types.
 
-    ![Error message: currency and float no longer supported](/attachments/refguide8/general/moving-from-7-to-8/currency-float-error.png)
+    {{< figure src="/attachments/refguide8/general/moving-from-7-to-8/currency-float-error.png" alt="Error message: currency and float no longer supported" >}}
 
 2. Right-click the error message.
 
-    ![Change manually or automatically?](/attachments/refguide8/general/moving-from-7-to-8/currency-float-change-options.png)
+    {{< figure src="/attachments/refguide8/general/moving-from-7-to-8/currency-float-change-options.png" alt="Change manually or automatically?" >}}
 
 3. Click **Convert all to Decimal** to convert all the attributes automatically.
 
-    ![Warning when converting all Float and Currency to Decimal](/attachments/refguide8/general/moving-from-7-to-8/convert-to-decimal-warning.png)
+    {{< figure src="/attachments/refguide8/general/moving-from-7-to-8/convert-to-decimal-warning.png" alt="Warning when converting all Float and Currency to Decimal" >}}
 
 4. Click **Convert all to Decimal** to perform the conversion.
 
@@ -238,13 +238,13 @@ This code behaves as expected and works out of the box. However, if you previous
 
 Very rarely, you may receive a message similar to the one below when opening a project in Mendix Studio Pro 8 which needs to be upgraded from a previous version of Mendix.
 
-![Layouts Error Message](/attachments/refguide8/general/moving-from-7-to-8/layout-import-message.png)
+{{< figure src="/attachments/refguide8/general/moving-from-7-to-8/layout-import-message.png" alt="Layouts Error Message" >}}
 
 This happens when a layout has an invalid value for the **Layout type**. This will still cause an error, *even if the invalid layout has been excluded* from the project.
 
 See the image below for an indication of where you might find the error in your project.
 
-![Location of Layouts Error](/attachments/refguide8/general/moving-from-7-to-8/layout-error-location.png)
+{{< figure src="/attachments/refguide8/general/moving-from-7-to-8/layout-error-location.png" alt="Location of Layouts Error" >}}
 
 To resolve this issue, use the previous version of Mendix to change the invalid **Layout type** (in the example above, `Legacy`) to a valid value.
 

@@ -16,7 +16,7 @@ Tables can be used both inside and outside the data view or templategrid widgets
 
 {{% alert color="info" %}}
 
-![](/attachments/refguide/modeling/resources/document-templates/918134.png)
+{{< figure src="/attachments/refguide/modeling/resources/document-templates/918134.png" >}}
 
 This table has four rows and three columns. The last row contains a data view with another table.
 

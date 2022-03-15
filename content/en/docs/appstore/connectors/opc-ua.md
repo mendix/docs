@@ -55,7 +55,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 When you edit a microflow, you will also see five additional actions in the **Toolbox**.
 
-![OPC UA Client connector actions in the microflow toolbox](/attachments/appstore/connectors/opc-ua/opc-ua-toolbox.png)
+{{< figure src="/attachments/appstore/connectors/opc-ua/opc-ua-toolbox.png" alt="OPC UA Client connector actions in the microflow toolbox" >}}
 
 ### 2.1 Configuration
 
@@ -78,7 +78,7 @@ This is all you need to do to use the connector. However, there is also a sample
 The module/app is designed for usage with multiple servers if necessary. The state for each OPC UA server is kept by the client in an object of entity type **OpcUaServerCfg**. This  needs to be populated before the actions of the OPC UA client connector can be used. 
 
 {{% image_container width="300" %}}
-![OPC UA Server configuration entity](/attachments/appstore/connectors/opc-ua/opcuaservercfg.png)
+{{< figure src="/attachments/appstore/connectors/opc-ua/opcuaservercfg.png" alt="OPC UA Server configuration entity" >}}
 {{% /image_container %}}
 
 For each OPC UA server, the following information will need to be stored in a OpcUaServerCfg object.
@@ -102,7 +102,7 @@ Once you have set up the server configuration, you can perform the following act
 
 The **Browse** action allows you to browse the nodes within the OPC UA server. The browse function starts at the specified node and browses 'down' and returns the children of the specified node. 
 
-![Parameters for the browse action](/attachments/appstore/connectors/opc-ua/browse-action.png)
+{{< figure src="/attachments/appstore/connectors/opc-ua/browse-action.png" alt="Parameters for the browse action" >}}
 
 * Opc UA server cfg – an object of entity type OpcUaServerCfg containing the configuration of the server to which the request is made
 * NodeId – The NodeId from where you want to browse to it's children. When requesting the 'Is Root'=true leave this value empty. Expects the full Node Id as referenced by the OPC UA server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
@@ -114,7 +114,7 @@ The **Browse** action allows you to browse the nodes within the OPC UA server. T
 
 The **Read** action allows you to read the current value of a specific node within the OPC UA server. The output of the action is a string formatted value of the Node. While the module supports most OPC UA attribute types the action always returns the value as a string as it was showing in the original message received from the OPC UA Server. Example the decimal value 10.59 will be returned as '10.59'   
 
-![Parameters for the read action](/attachments/appstore/connectors/opc-ua/read-action.png)
+{{< figure src="/attachments/appstore/connectors/opc-ua/read-action.png" alt="Parameters for the read action" >}}
 
 * Opc ua server cfg – an object of entity type OpcUaServerCfg containing the configuration of the server to which the request is made
 * NodeId – The NodeId of the Node you want to read. Expects the full Node Id as referenced by the OPC UA server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
@@ -163,7 +163,7 @@ The **Subscription** influences the connection that is established with the clie
 Each subscription requires a microflow to process the data each time a notification is received. 
 
 **The configuration:**
-![Parameters for the subscribe action](/attachments/appstore/connectors/opc-ua/subscribe-action.png)
+{{< figure src="/attachments/appstore/connectors/opc-ua/subscribe-action.png" alt="Parameters for the subscribe action" >}}
 
 * Opc ua server cfg – an object of entity type OpcUaServerCfg containing the configuration of the server to which the request is made
 * NodeId – The NodeId of the Node you want to subscribe to. Expects the full Node Id as referenced by the OPC UA server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
@@ -181,7 +181,7 @@ Subscriptions and MonitoredItems are automatically kept alive by the app & OPC U
 Information about nodes which are subscribed to is stored in the **MonitoredItem** entity associated with the **OpcUaServerCfg** server configuration & **Subscription** entity.  
 
 {{% image_container width="300" %}}
-![The subscription entity](/attachments/appstore/connectors/opc-ua/monitoreditem.png)
+{{< figure src="/attachments/appstore/connectors/opc-ua/monitoreditem.png" alt="The subscription entity" >}}
 {{% /image_container %}}
 
 An object is created for each Node you request to monitor and contains the following information:
@@ -200,7 +200,7 @@ Information about unique **Subscription**s that are active with the OPC UA Serve
 The subscription reflects the connection configuration with the OPC UA Server. 
 
 {{% image_container width="300" %}}
-![The subscription entity](/attachments/appstore/connectors/opc-ua/subscription.png)
+{{< figure src="/attachments/appstore/connectors/opc-ua/subscription.png" alt="The subscription entity" >}}
 {{% /image_container %}}
 
 This is the only object from the OpcUaClientMx domain that you should create from a microflow, you can create, change and commit this before passing it into the Subscribe action. If you choose to leave the parameter empty then an object is created automatically for each Node you request to monitor. The entity contains the following information:
@@ -217,7 +217,7 @@ The **Unsubscribe** action allows you to end a subscription to item change notif
 
 You can configure if the unsubscribe is permanent (and records are removed) or if the subscription info is kept for restart through the parameters.
 
-![Parameters for the unsubscribe action](/attachments/appstore/connectors/opc-ua/unsubscribe-action.png)
+{{< figure src="/attachments/appstore/connectors/opc-ua/unsubscribe-action.png" alt="Parameters for the unsubscribe action" >}}
 
 * Opc ua server cfg – an object of entity type OpcUaServerCfg containing the configuration of the server to which the request is made
 * Monitored item ID – the ID of the item which is being monitored by the subscription — this is held as the **MonitoredItemID** in the **Subscription** entity
@@ -228,7 +228,7 @@ You can configure if the unsubscribe is permanent (and records are removed) or i
 The **Write** action allows you to write a new value to a node to which you have write permissions.
 If nothing is returned the action was successful, if the OPC UA Server refuses the value an exception will be thrown with the full JSON response included in the exception message. 
 
-![Parameters for the write action](/attachments/appstore/connectors/opc-ua/write-action.png)
+{{< figure src="/attachments/appstore/connectors/opc-ua/write-action.png" alt="Parameters for the write action" >}}
 
 * Opc ua server cfg – an object of entity type OpcUaServerCfg containing the configuration of the server to which the request is made
 * NodeId – The NodeId of the Node you want to write to. Expects the full Node Id as referenced by the OPC UA server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"

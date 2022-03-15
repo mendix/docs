@@ -20,7 +20,7 @@ Project packages can be imported again into a new app using the [Import Project 
 
 To export the package, open the **File** menu > **Export Project Package** and select the relevant options in the **Export Project Package** dialog box:
 
-![Export Project Package Dialog Window](/attachments/refguide8/modeling/menus/file-menu/export-project-package-dialog/export-project-package.png)
+{{< figure src="/attachments/refguide8/modeling/menus/file-menu/export-project-package-dialog/export-project-package.png" alt="Export Project Package Dialog Window" >}}
 
  For more information on what options you can select, see the sections below. 
 

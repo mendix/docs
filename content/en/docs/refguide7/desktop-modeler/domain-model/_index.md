@@ -11,7 +11,7 @@ The domain model is a data model that describes the information in your applicat
 
 Here is a domain model that defines customers and orders. The line between them is an association. The words 'Customer' and 'Order' are the names of the entities. The words below the entity names are the attributes of the entities.
 
-![](/attachments/refguide7/desktop-modeler/domain-model/917531.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/917531.png" >}}
 
 ## Components
 
@@ -25,7 +25,7 @@ In the database every entity is stored in one separate table and has columns for
 
 Take a look at the following domain model.
 
-![](/attachments/refguide7/desktop-modeler/domain-model/917890.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/917890.png" >}}
 
 The entity 'Customer' is stored in the table 'module$customer' which is shown below. Take note of the 'system$owner' and 'system$changedby' columns which contain the IDs of the 'User' objects from the 'System' module.
 

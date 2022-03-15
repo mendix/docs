@@ -45,7 +45,7 @@ The OData Model Creator for SAP solutions is not currently available in the Mark
 
 Open the [OData Model Creator for SAP solutions](https://sapmodelcreator.mendixcloud.com/link/odata), where you will be asked how you want to generate your model:
 
-![](/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-1.png)
+{{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-1.png" >}}
 
 There are four ways to generate your data model.
 
@@ -66,7 +66,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
     You will be presented with a list of packages containing OData API definitions. You can search this list (this includes text in the package description as well as the package name), and page through it using the paging buttons.
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-2-api.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-2-api.png" >}}
 
     {{% alert color="info" %}}You can return to any stage in this process by clicking on the relevant step number.
     {{% /alert %}}
@@ -75,7 +75,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
 3. Click **Continue** to see the APIs within the package.
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-3-api.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-3-api.png" >}}
 
     {{% alert color="info" %}}This will be shown even if only one API exists.
     {{% /alert %}}
@@ -84,7 +84,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
 5. Click **Continue** to see the schemas within the API.
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-4-api.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-4-api.png" >}}
 
     {{% alert color="info" %}}This will be shown even if only one schema exists.
     {{% /alert %}}
@@ -93,11 +93,11 @@ There may be several schemas in the packages of an API. Each of these will gener
 
 7. Click **Continue** to proceed to the confirmation screen.
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-5-api.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-5-api.png" >}}
 
 8. Click **Generate .mpk** to generate the data model module.
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/model-creator-generated-api.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/model-creator-generated-api.png" >}}
 
 9. Click **Download File**.
 
@@ -119,13 +119,13 @@ There may be several schemas in the packages of an API. Each of these will gener
 
     You will be asked to sign in to you SAP Service Catalog. Enter your **User name**, **Password**, and **Server**. Select the correct protocol and **Port** if these are not the default.
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-2-1-catalog.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-2-1-catalog.png" >}}
 
 2. Click **Continue**.
 
     You will be presented with a list of OData API definitions. You can search this list (this includes text in the API description as well as the API name), and page through it using the paging buttons.
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-2-catalog.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-2-catalog.png" >}}
 
     {{% alert color="info" %}}You can return to any stage in this process by clicking on the relevant step number.
     {{% /alert %}}
@@ -134,7 +134,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
 4. Click **Continue** to see the schemas within the API.
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-3-catalog.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-3-catalog.png" >}}
 
     {{% alert color="info" %}}This will be shown even if only one schema exists.
     {{% /alert %}}
@@ -143,11 +143,11 @@ There may be several schemas in the packages of an API. Each of these will gener
 
 6. Click **Continue** to proceed to the confirmation screen.
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-4-catalog.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-4-catalog.png" >}}
 
 7. Click **Generate .mpk** to generate the data model module.
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/model-creator-generated-catalog.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/model-creator-generated-catalog.png" >}}
 
 8. Click **Download**.
 
@@ -165,15 +165,15 @@ One way to do this is by getting the OData metadata XML file. This file can be d
 
 1.  Download the XML metadata file to your local drive.
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/download-xml.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/download-xml.png" >}}
 
 2. Open the OData Model Creator for SAP solutions
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-1.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-1.png" >}}
 
 3. Click **Manual**.
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/upload_metadata.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/upload_metadata.png" >}}
 
 4. Click **Browse** and navigate to the XML file you want to use.
 
@@ -181,7 +181,7 @@ One way to do this is by getting the OData metadata XML file. This file can be d
 
 6. Click **Continue** to see the schemas within the metadata.
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/upload-metadata-schemas.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/upload-metadata-schemas.png" >}}
 
     {{% alert color="info" %}}This will be shown even if only one schema exists.
     {{% /alert %}}
@@ -190,13 +190,13 @@ One way to do this is by getting the OData metadata XML file. This file can be d
 
 8. Click **Continue** to proceed to the confirmation screen.
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/upload-metadata-confirmation.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/upload-metadata-confirmation.png" >}}
 
 9. Click **Generate .mpk**. A progress bar will be shown during the parsing and generation of the module.
 
 10. Once the generation is complete, the **Download File** button appears. Notice that the file name of your data model module is extracted from the metadata file itself.
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/download_metadata.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/download_metadata.png" >}}
 
 11. Click **Download File**.
 
@@ -216,13 +216,13 @@ This method does not work where the destination needs authentication. You cannot
 
 1. Click **URL** on the first page of the OData Model Creator for SAP solutions.
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/metadata-url.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/metadata-url.png" >}}
 
 2. Enter the URL of the service metadata which you want in **Enter a URL**.
 
 3. Click **Continue** to see the schemas within the metadata.
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/upload-metadata-schemas.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/upload-metadata-schemas.png" >}}
 
     {{% alert color="info" %}}This will be shown even if only one schema exists.
     {{% /alert %}}
@@ -231,13 +231,13 @@ This method does not work where the destination needs authentication. You cannot
 
 5. Click **Continue** to proceed to the confirmation screen.
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/metadata-url-confirmation.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/metadata-url-confirmation.png" >}}
 
 6. Click **Generate .mpk**. A progress bar will be shown during the parsing and generation of the module.
 
 7.  Once the generation is complete, the **Download File** button appears. Notice that the file name of your data model module is extracted from the metadata file itself.
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/download-metadata-url.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/download-metadata-url.png" >}}
 
 8. Click **Download File**.
 
@@ -255,13 +255,13 @@ Now you have a Mendix module ready to import into your project.
 
 2. Right-click your project in the **App Explorer** and select **Import module package...**.
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/import_module_package.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/import_module_package.png" >}}
 
 3. Use the navigation dialog to find your module, which will have the suffix **.mpk**.
 
     You now have your service module, for example **GWSAMPLE_BASIC**, available in your project ready to use in combination with the OData Connector for SAP solutions.
 
-    ![](/attachments/partners/sap/use-sap-odata-model-creator/project_explorer.png)
+    {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/project_explorer.png" >}}
 
 {{% alert color="warning" %}}
 Do not change the names of entities, attributes, or associations in the Domain Model of the module; they need to match the names used by the SAP OData service for the OData Connector for SAP solutions to work correctly.

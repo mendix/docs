@@ -37,20 +37,20 @@ To make your two entities, do the following:
 1. Navigate to your domain model.
 2.  Drag and drop a new entity onto your domain model: 
 
-	{{% image_container width="500" %}}![new entity](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/new-entity.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/new-entity.png" alt="new entity"   width="500"  >}}
 
 2.  Double-click it and name it *TestEntity*:
 
-	{{% image_container width="500" %}}![test entity](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/test-entity.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/test-entity.png" alt="test entity"   width="500"  >}}
 
 3.  Click **Attributes** > **New**, name it *StringAttribute_1*, and click **OK**:
 
-	{{% image_container width="400" %}}![string attribute](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/first-string-attribute.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/first-string-attribute.png" alt="string attribute"   width="400"  >}}
 
 4. Click **OK** again until you are back at the domain model.
 5.  Create an entity named *Notification* on your domain model with a string attribute *GUIDString*:
 
-	{{% image_container width="500" %}}![GUID string](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/guid-notification.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/guid-notification.png" alt="GUID string"   width="500"  >}}
 
 To set up a notification nanoflow, do the following:
 
@@ -62,7 +62,7 @@ To set up a notification nanoflow, do the following:
 6. Click **OK**.
 5.  Right-click your create object activity and select **Set $NewNotification as return value**: <br />
 
-	{{% image_container width="500" %}}![create notification nanoflow](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/create-notif-nano.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/create-notif-nano.png" alt="create notification nanoflow"   width="500"  >}}
 
 To set up your microflow, do the following:
 
@@ -76,25 +76,25 @@ To set up your microflow, do the following:
 8. Click **OK**.
 9. Double-click your end event, make sure its **Type** is **Boolean**, type *true* into the value field, and click **OK**:
 
-	{{% image_container width="500" %}}![end event true](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/end-event-true.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/end-event-true.png" alt="end event true"   width="500"  >}}
 
 To make this microflow run after startup, do the following:
 
 1.  Double-click **Settings** in your App Explorer:
 
-	{{% image_container width="400" %}}![app explorer](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/pe-settings.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/pe-settings.png" alt="app explorer"   width="400"  >}}
 
 2.  Click the **Runtime** tab:
 
-	{{% image_container width="400" %}}![click runtime](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/runtime-tab.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/runtime-tab.png" alt="click runtime"   width="400"  >}}
 
 3.  Click **After startup** > **Select**:
 
-	{{% image_container width="500" %}}![select after start up](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/after-startup.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/after-startup.png" alt="select after start up"   width="500"  >}}
 
 4.  Click **DS_TestEntity** then click the **Select** button to achieve this result:
 
-	{{% image_container width="500" %}}![select test entity](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/select-ds-entity.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/select-ds-entity.png" alt="select test entity"   width="500"  >}}
 
 5. Click **OK**
 
@@ -107,13 +107,13 @@ To make your page, do the following:
 5. Click **TestEntity**.
 6.  Click **Select** to see the following:
 
-	![entity test entity](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/data-view-source.png)
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/data-view-source.png" alt="entity test entity" >}}
 
 7.  Click **OK**. 
 8.  When asked **"Do you want to automatically fill the contents of the data view?"** click **Yes**.
 9.  This will be the page your user sees when they tap the notification:
 
-	{{% image_container width="300" %}}![page with data view](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/page-with-data-view.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/page-with-data-view.png" alt="page with data view"   width="300"  >}}
 
 Next you will learn how to pass data to pages after you have tapped a notification. First, make a nanoflow:
 
@@ -121,7 +121,7 @@ Next you will learn how to pass data to pages after you have tapped a notificati
 
 2. Add a retrieve action to your nanoflow, set **Source** to **From Database**, and set **Range** to **First**. Click **Entity** > **Select** and select the **TestEntity**. In **Object name** type *FirstTestEntityObject*. Then click **OK**. This will be the object that gets the GUID: 
 
-	![retrieve object](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/retrieve-object.png)
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/retrieve-object.png" alt="retrieve object" >}}
 
 3. Add a JavaScript Action Call activity to your nanoflow.
 4. Double-click the action call activity.
@@ -132,17 +132,17 @@ Next you will learn how to pass data to pages after you have tapped a notificati
 9. Click **OK**.
 10. Drag and drop four create variable activities onto your nanoflow: *Title*, *Subtitle*, *Body*, and *ActionName*. Give them the values *'title1'*, *'subtitle1'*, *'body1'*, and *'OpenPageWithParams'* respectively:
 	
-	{{% image_container width="400" %}}![title1](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/title1-activity.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/title1-activity.png" alt="title1"   width="400"  >}}
 	
-	{{% image_container width="400" %}}![subtitle1](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/subtitle1-activity.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/subtitle1-activity.png" alt="subtitle1"   width="400"  >}}
 	
-	{{% image_container width="400" %}}![body1](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/body1-activity.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/body1-activity.png" alt="body1"   width="400"  >}}
 	
-	{{% image_container width="400" %}}![actionname](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/actionname-activity.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/actionname-activity.png" alt="actionname"   width="400"  >}}
 
 	This is how all of your activities will look:
 	
-	{{% image_container width="500" %}}![actionname](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/guid-nano-with-four-strings.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/guid-nano-with-four-strings.png" alt="actionname"   width="500"  >}}
 	
 11. Drag and drop a JavaScript action call activity onto your nanoflow. 
 12. Double-click the action call.
@@ -150,12 +150,12 @@ Next you will learn how to pass data to pages after you have tapped a notificati
 14. Type *DisplayNotification* into the search field, click the corresponding JavaScript action, and click **Select**.
 15. Set the **Body**, **Title**, **Subtitle**, **Action name**, and **Action guid** to the corresponding variables you created previously, and set **Play Sound** to **True**:
 
-	{{% image_container width="500" %}}![first guid action](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/first-guid-action.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/first-guid-action.png" alt="first guid action"   width="500"  >}}
 
 16. Click **OK**.
 17. Drag and drop this nanoflow onto your app's **Home_Native** page to create a button which calls it, and name the button *Pass GUID to Notification*:
 	
-	{{% image_container width="500" %}}![guid button](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/pass-guid-button.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/pass-guid-button.png" alt="guid button"   width="500"  >}}
 	
 
 Good job! When a user taps a notification from the **Pass GUID to Notification** button, they will now be brought to the **DetailTestEntity** page. Next you will create a nanoflow which receives **notificationEntity** as a parameter, retrieves an object via this parameter, and passes the object to a page.
@@ -166,7 +166,7 @@ Good job! When a user taps a notification from the **Pass GUID to Notification**
 4. Fill **Name** in as *notificationEntity*.
 5.  Click **OK**:
 
-	![guid button](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/notif-entity.png)
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/notif-entity.png" alt="guid button" >}}
 
 6. Drag and drop a JavaScript action call onto your nanoflow.
 
@@ -184,31 +184,31 @@ Good job! When a user taps a notification from the **Pass GUID to Notification**
 
 13. In **Object name** write *ReturnedObjectByGUID*:
 
-	{{% image_container width="500" %}}![guid settings](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/get-object-by-guid-settings.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/get-object-by-guid-settings.png" alt="guid settings"   width="500"  >}}
 
 14. Click **OK** to save and close your JavaScript Action settings:
 
-	{{% image_container width="500" %}}![guid activity](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/guid-activity.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/guid-activity.png" alt="guid activity"   width="500"  >}}
 
 15. Drop a **Change object** activity onto your nanoflow:
 
-	{{% image_container width="500" %}}![change object](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/new-change-object.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/new-change-object.png" alt="change object"   width="500"  >}}
 
 16. Double-click the change object activity.
 17. Select **Object** > **ReturnedObjectByGUID (NativeMobile.TestEntity)** from the drop-down menu.
 18. Click **Action** > **New**, make sure **Member** is set to the string attribute, and into **Value** type *'Your notification has forwarded you here!'*:
 
-	{{% image_container width="400" %}}![change object action](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/change-object-action.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/change-object-action.png" alt="change object action"   width="400"  >}}
 
 19. Click **OK**. Check that your dialog box looks like this, then click **OK** again to close it: 
 
-	{{% image_container width="400" %}}![change object final](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/change-object-final.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/change-object-final.png" alt="change object final"   width="400"  >}}
 
 Next you are going to create a show page action for **ON_tapNotification**.
 
 1.  Drag a **Show Page** activity onto your nanoflow:
 
-	{{% image_container width="500" %}}![new show page](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/add-show-page.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/add-show-page.png" alt="new show page"   width="500"  >}}
 
 2. Double-click the **Show Page** activity.
 
@@ -216,7 +216,7 @@ Next you are going to create a show page action for **ON_tapNotification**.
 
 4.  Click **Page** > **Select**, click **DetailTestEntity**, then click **OK**:
 
-	{{% image_container width="400" %}}![guid button](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/show-page-settings.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/show-page-settings.png" alt="guid button"   width="400"  >}}
 
 5. Click **OK** to close the **Show Page** activity settings, then navigate to your **Home_Native** page.
 
@@ -230,18 +230,18 @@ Now you will set up a data view on your home page.
 6. Move the **Notifications** widget inside this data view.
 7.  Confirm that the text box in your data flow is using **GUIDString** as its data source:
 
-	{{% image_container width="500" %}}![first guid action](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/GUID-data-source.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/GUID-data-source.png" alt="first guid action"   width="500"  >}}
 
 8. Double-click your notifications widget.
 9. Click **GUID** > **Select**.
 10. Click **GUIDString (String (200))**, then click **Select**. Your results will look like this:
 
-	{{% image_container width="500" %}}![guid string](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/set-guid-string.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/set-guid-string.png" alt="guid string"   width="500"  >}}
 
 9. Click **Actions** > **New**.
 10. Create a **New Action** named *OpenPageWithParams*, set **On open** to **Call a nanoflow**, and select **ON_tapNotification**.
 
-	{{% image_container width="500" %}}![notification action](/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/notif-action-2.png){{% /image_container %}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/notif-action-2.png" alt="notification action"   width="500"  >}}
 
 Great job! Now you will test your data notification functionality.
 

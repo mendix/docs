@@ -12,7 +12,7 @@ tags: ["app", "configuration", "runtime", "Studio Pro", "languages", "certificat
 
 In the **App Settings** dialog box, you can alter the settings that are applicable to the whole app:
 
-![](/attachments/refguide/modeling/menus/view-menu/project-explorer/project/project-settings/project-settings-configuration.png)
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/project/project-settings/project-settings-configuration.png" >}}
 
 The categories described below are available.
 
@@ -256,7 +256,7 @@ Switching from a ZIP file to a UI resources package is straightforward:
 
 Modules that contain theme styling should be marked as UI resources modules. To do so, right-click the **Module {name}** in the App Explorer, then click **Mark as UI resources module**. This will give the modules a green icon, which makes it easy to distinguish theme modules from other modules, and also influences the order in which styling will be applied from those modules:
 
-![green module](/attachments/refguide/modeling/menus/view-menu/project-explorer/project/project-settings/green-module.png)
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/project/project-settings/green-module.png" alt="green module" >}}
 
 ### 6.4 Ordering UI Resource Modules
 
@@ -264,7 +264,7 @@ When a module contains styling (SCSS/CSS), be sure it is added to the compiled C
 
 You can set an explicit order in the theme settings (**App Settings** > **Theme**). This contains a list of all modules that are marked as UI resource modules, and allows you to set the explicit order in which they are added to the CSS file. Note that the lower a module is ordered in the list, the higher its precedence. For example, an app that uses a company theme module could be ordered as follows:
 
-![app theme settings](/attachments/refguide/modeling/menus/view-menu/project-explorer/project/project-settings/app-theme-settings.png)
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/project/project-settings/app-theme-settings.png" alt="app theme settings" >}}
 
 ## 7 Workflows Tab {#workflows}
 

@@ -10,7 +10,7 @@ tags: ["studio pro", "translation", "languages", "translatable text", "add langu
 
 Mendix is designed to be used by users in multiple languages. The **Languages** tab of the **App Settings** allows you to select which languages your app will support.
 
-![](/attachments/refguide/modeling/menus/translatable-texts/language-settings/01_project_settings.png)
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/01_project_settings.png" >}}
 
 You can reach this tab in two ways:
 
@@ -32,7 +32,7 @@ The initial default language is *English, United States*.
 
 You can add as many languages as you like from the list of supported languages by clicking **Add**, selecting the desired language, and clicking **OK**.
 
-![](/attachments/refguide/modeling/menus/translatable-texts/language-settings/add-language.png)
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/add-language.png" >}}
 
 Most languages will be added with an empty dictionary, although some translations have already been set up in the Dutch dictionary.
 
@@ -40,7 +40,7 @@ Most languages will be added with an empty dictionary, although some translation
 
 You can set each language in your app to have additional settings.
 
-![Edit Language](/attachments/refguide/modeling/menus/translatable-texts/language-settings/edit-language.png)
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/edit-language.png" alt="Edit Language" >}}
 
 ### 4.1 Check Completeness
 
@@ -60,7 +60,7 @@ Type a format string in the relevant box and you will see an example of how a da
 
 Click **Edit…** to open a dialog box which will provide a full reference for the format string:
 
-![Date edit dialog](/attachments/refguide/modeling/menus/translatable-texts/language-settings/date-format.png)
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/date-format.png" alt="Date edit dialog" >}}
 
 ## 5 List of Supported Languages
 

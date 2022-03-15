@@ -22,7 +22,7 @@ To open the **Edit Profile** page, do the following:
 
 2.  Click **Show Profile**.
 
-    ![Edit profile page](/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-profile/profile.png)
+    {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-profile/profile.png" alt="Edit profile page" >}}
 
 ### 2.2 Changing the Full Name 
 

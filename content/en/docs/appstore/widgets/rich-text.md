@@ -11,7 +11,7 @@ tags: ["marketplace", "marketplace component", "widget", "rich text", "platform 
 
 The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget provides the user with an WYSIWYG editor, where the user can enter and edit rich-text content. The widget automatically converts the rich-text content into a string in HTML format, which can be stored in an attribute of an entity.
 
-![Example](/attachments/appstore/widgets/rich-text/example.jpg)
+{{< figure src="/attachments/appstore/widgets/rich-text/example.jpg" alt="Example" >}}
 
 ### 1.1 Features
 
@@ -46,10 +46,10 @@ To configure this widget, follow these steps:
 * **Editor style**
     * **Toolbar** (default) – if selected, the toolbar is always displayed
 
-        ![Example of toolbar](/attachments/appstore/widgets/rich-text/basic-toolbar.png)
+        {{< figure src="/attachments/appstore/widgets/rich-text/basic-toolbar.png" alt="Example of toolbar" >}}
 	
 	  * **Inline** – if selected, the toolbar pops up only when the user starts typing in the editor
-        ![Example of toolbar](/attachments/appstore/widgets/rich-text/inline-toolbar.png)
+        {{< figure src="/attachments/appstore/widgets/rich-text/inline-toolbar.png" alt="Example of toolbar" >}}
 	
 * **Value attribute** (required) – sets a String attribute to store the rich-text content
 * **Sanitize content**	
@@ -79,15 +79,15 @@ To configure this widget, follow these steps:
 * **Presets** – defines which pre-set buttons are included in the editor
     * **Basic** – if selected, the editor contains buttons suitable for quick input fields
 
-        ![Example of toolbar](/attachments/appstore/widgets/rich-text/basic-toolbar.png)
+        {{< figure src="/attachments/appstore/widgets/rich-text/basic-toolbar.png" alt="Example of toolbar" >}}
 	
 	  * **Standard** – if selected, the editor contains buttons used for creating standards-compliant content
 	  
-        ![Example of toolbar](/attachments/appstore/widgets/rich-text/standard-toolbar.png)
+        {{< figure src="/attachments/appstore/widgets/rich-text/standard-toolbar.png" alt="Example of toolbar" >}}
 	  
 	  * **Full** – if selected, the editor contains plenty of buttons suitable for various different needs
 
-        ![Example of toolbar](/attachments/appstore/widgets/rich-text/full-toolbar.png)
+        {{< figure src="/attachments/appstore/widgets/rich-text/full-toolbar.png" alt="Example of toolbar" >}}
 	  
     * **Custom** – allows you to make your toolbar with customized options	
         * **Toolbar group** 
@@ -148,7 +148,7 @@ To configure this widget, follow these steps:
 * **Enable code highlight**
     * **Yes** – if selected, the **Insert Code Snippet** button below becomes available in the toolbar, which enables the user to insert a code snippet that is displayed with highlighted syntax in the editor 
     
-        ![insert-code-snippet](/attachments/appstore/widgets/rich-text/insert-code-snippet.png)
+        {{< figure src="/attachments/appstore/widgets/rich-text/insert-code-snippet.png" alt="insert-code-snippet" >}}
     
     * **No** (default) – if selected, the **Insert Code Snippet** button is unavailable in the toolbar
 * **Advanced content filtering**  

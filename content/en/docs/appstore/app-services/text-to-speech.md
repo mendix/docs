@@ -81,7 +81,7 @@ A trial gives everyone in your company one-month access to the app service. The 
 
 The **SpeechSynthesizer** entity is a conceptual entity that incorporates all the information of the synthesized media document. It contains the text and synthesized audio string. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
-![speechsynthesizer](/attachments/appstore/app-services/text-to-speech/speechsynthesizer.png)
+{{< figure src="/attachments/appstore/app-services/text-to-speech/speechsynthesizer.png" alt="speechsynthesizer" >}}
 
 | Attribute |Data Type | Description|
 | --- | --- |---|
@@ -90,7 +90,7 @@ The **SpeechSynthesizer** entity is a conceptual entity that incorporates all th
 
 The **Voice** entity is an entity referenced from **SpeechSynthesizer** that incorporates all the information of the supported voice object.
 
-![voice](/attachments/appstore/app-services/text-to-speech/voice.png)
+{{< figure src="/attachments/appstore/app-services/text-to-speech/voice.png" alt="voice" >}}
 
 | Attribute |Data Type | Description|
 | --- | --- |---|
@@ -119,7 +119,7 @@ The **TokenEndpoint** constant provides a valid endpoint of security token servi
 
 The **CreateSpeechSynthesizer** microflow takes **text** and **languageCode** from a voice object as input parameters, and returns a **speechSynthesizer** object that contains the based64-encoded audio string and text string. For instance, **languageCode** can be set to `en-US`. 
 
-![createspeechsynthesizer](/attachments/appstore/app-services/text-to-speech/createspeechsynthesizer.png)
+{{< figure src="/attachments/appstore/app-services/text-to-speech/createspeechsynthesizer.png" alt="createspeechsynthesizer" >}}
 
 {{% alert color="info" %}}
 For more information about language codes, see the [Supported Languages](#supported-languages) section.
@@ -131,7 +131,7 @@ For more information about language codes, see the [Supported Languages](#suppor
 
 The **SynthesizeSpeech** nanoflow takes a **speechSynthesizer** object as an input parameter, syntheizes audio string from the input parameter, and updates the **speechSynthesizer** audio string parameter.
 
-![synthesizespeech](/attachments/appstore/app-services/text-to-speech/synthesizespeech.png)
+{{< figure src="/attachments/appstore/app-services/text-to-speech/synthesizespeech.png" alt="synthesizespeech" >}}
 
 ### 3.5 Widgets {#widgets}
 
@@ -191,7 +191,7 @@ If you deploy your app locally or as a Mendix Free App, configure the license to
 4. Fill in the **Value** with the license token that you obtained.
 5.  Click **OK** to save the settings.
 
-    ![licensetoken-inmendix](/attachments/appstore/app-services/text-to-speech/licensetoken-inmendix.png)
+    {{< figure src="/attachments/appstore/app-services/text-to-speech/licensetoken-inmendix.png" alt="licensetoken-inmendix" >}}
 
 6. When you finish building the app, click **Run Locally** to run your app locally or click **Run** to deploy it as a Mendix Free App. Then you can see the app service in your app.
 
@@ -201,11 +201,11 @@ If you deploy your app in the Mendix Cloud, configure the license token in the [
 
 Before you deploy your app, configure the app **Constants** in the deployment package.
 
-![licensetoken-cloudportal](/attachments/appstore/app-services/text-to-speech/licensetoken-cloudportal.png)
+{{< figure src="/attachments/appstore/app-services/text-to-speech/licensetoken-cloudportal.png" alt="licensetoken-cloudportal" >}}
 
 If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app.
 
-![licensetoken-envdetails](/attachments/appstore/app-services/text-to-speech/licensetoken-envdetails.png)
+{{< figure src="/attachments/appstore/app-services/text-to-speech/licensetoken-envdetails.png" alt="licensetoken-envdetails" >}}
 
 #### 3.7.3 For an App Deployed in Your Own Environment
 
@@ -224,13 +224,13 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
     
     3.  Double-click the **CreateSpeechSynthesizer** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
        
-        ![call-createspeechsynthesizer-microflow](/attachments/appstore/app-services/text-to-speech/call-createspeechsynthesizer-microflow.png)
+        {{< figure src="/attachments/appstore/app-services/text-to-speech/call-createspeechsynthesizer-microflow.png" alt="call-createspeechsynthesizer-microflow" >}}
       
         In this example, the **languageCode** is set to `''`, then the default language option `en-US` is used. You can also set it to a different [language code](#supported-languages). For more information about the parameters, see [CreateSpeechSynthesizer](#createspeechsynthesizer)
 
     4.  Right-click the **CreateSpeechSynthesizer** microflow and select **Set $speechSynthesizer as return value** in the pop-up menu.
     
-        ![createspeechsynthesizer](/attachments/appstore/app-services/text-to-speech/createspeechsynthesizer-nanoflow.png)
+        {{< figure src="/attachments/appstore/app-services/text-to-speech/createspeechsynthesizer-nanoflow.png" alt="createspeechsynthesizer" >}}
     
 2.  Create a microflow as follows:
     1. Name the microflow *GetSupportedVoices*. 
@@ -246,7 +246,7 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
     11. Click **OK** to save the settings.
     12.  Right-click the **GetSupportedVoices** microflow and select **Set $Voices as return value** in the pop-up menu.
       
-         ![getsupportedvoices-microflow](/attachments/appstore/app-services/text-to-speech/getsupportedvoices-microflow.png)
+         {{< figure src="/attachments/appstore/app-services/text-to-speech/getsupportedvoices-microflow.png" alt="getsupportedvoices-microflow" >}}
    
 3. Add a **Data view** widget to your page.
 4. Set the **CreateSpeechSynthsizer** nanoflow as the data source of the **Data view** widget as follows:
@@ -275,7 +275,7 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
      2.  On the **General** tab, set **Source** to **$currentObject/Audio** to bind the base64-encoded audio data string.
      3.  Set **Controls** to **true**.
 
-         ![audioplayer-datasource](/attachments/appstore/app-services/text-to-speech/audioplayer-datasource.png)
+         {{< figure src="/attachments/appstore/app-services/text-to-speech/audioplayer-datasource.png" alt="audioplayer-datasource" >}}
 
      4. Click **OK** to save the settings.
 11. Inside the **Data view** widget, add a **Button** widget below the **Audio player** widget .
@@ -288,7 +288,7 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
 13. Make sure you have [configured the license token](#configure-license-token).
 14. Run your app locally. You can convert text to speech directly in the browser:
 
-    ![runlocally-text-to-speech](/attachments/appstore/app-services/text-to-speech/runlocally-text-to-speech.png)
+    {{< figure src="/attachments/appstore/app-services/text-to-speech/runlocally-text-to-speech.png" alt="runlocally-text-to-speech" >}}
 
 ### 4.2 Checking Statistics on the Usage Dashboard {#check-usage}
 

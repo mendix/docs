@@ -112,13 +112,13 @@ A Tag is a way of identifying a commit in addition to the *revision* number. It 
 
 The figure below shows how two developers might work on a *Web Modeler enabled* development line of an app. One developer is working in the Web Modeler, and one in the Desktop Modeler. They both work on the same development line (for example, the main line).
 
-![](/attachments/refguide7/version-control/image1.png)
+{{< figure src="/attachments/refguide7/version-control/image1.png" >}}
 
 ### 3.1 Work in Web Modeler Only
 
 The developer works on the app in the Web Modeler. They start with the app in state 1, this can be a new app or a revision of the app. Changes are made continuously to the working copy for the Web Modeler, stored in the cloud.
 
-![](/attachments/refguide7/version-control/image2.png)
+{{< figure src="/attachments/refguide7/version-control/image2.png" >}}
 
 ### 3.2 Work in Desktop Modeler Only
 
@@ -128,13 +128,13 @@ The developer works in the Desktop Modeler on the local working copy of the app.
 
 The developer can commit this to the Team Server repository at any time to make a new revision (state 3). This revision is copied into the Web Modeler working copy and the developer using the Web Modeler will get the changes automatically.
 
-![](/attachments/refguide7/version-control/image3.png)
+{{< figure src="/attachments/refguide7/version-control/image3.png" >}}
 
 ### 3.3 Work in Both Modelers
 
 Two developers are working on the same *development line* of the same app at the same time. One is using the Desktop Modeler, the other is using the Web Modeler. Changes from both Modelers are stored in the respective working copies: on the local machine for the Desktop Modeler and in the cloud for the Web Modeler.
 
-![](/attachments/refguide7/version-control/image4.png)
+{{< figure src="/attachments/refguide7/version-control/image4.png" >}}
 
 ### 3.4 Update Desktop Modeler Working Copy
 
@@ -148,7 +148,7 @@ This will also pick up changes from other developers using the Desktop Modeler, 
 
 If there are conflicts, the developer using the Desktop Modeler will have to resolve them before they can commit the changes to the Team Server repository.
 
-![](/attachments/refguide7/version-control/image5.png)
+{{< figure src="/attachments/refguide7/version-control/image5.png" >}}
 
 ### 3.5 Commit Changes to Team Server Repository
 
@@ -164,7 +164,7 @@ If there are no merge *conflicts*, the updated Desktop Modeler working copy is c
 
 If there are conflicts, the developer using the Desktop Modeler will need to resolve these. The Web Modeler will be unlocked, without receiving any of the changes from the Desktop Modeler, while they do this. The developer using the Desktop Modeler then needs to commit again, and the process starts from the beginning (the Web Modeler is locked ready for a new revision to be committed from the Web Modeler Working Copy).
 
-![](/attachments/refguide7/version-control/image6.png)
+{{< figure src="/attachments/refguide7/version-control/image6.png" >}}
 
 ## 4 Branches{#branches}
 
@@ -176,7 +176,7 @@ This is done using *branch lines*.
 
 All apps are developed along the main line (also referred to as *trunk*). Here you have all development happening along a single line, with all changes built upon the previous revision:
 
-![](/attachments/refguide7/version-control/image7.png)
+{{< figure src="/attachments/refguide7/version-control/image7.png" >}}
 
 This is the case for the version control processes described in section 3, Version Control Processes for a Single Branch.
 
@@ -188,7 +188,7 @@ When you add a branch line, you take a copy of an existing *revision* and work s
 
 In Mendix each revision within a *repository* is given a unique version number. This means that version numbers given to revisions along any chosen branch line may not be consecutive.
 
-![](/attachments/refguide7/version-control/image8.png)
+{{< figure src="/attachments/refguide7/version-control/image8.png" >}}
 
 ### 4.3 Merging Branches{#merging-branches}
 
@@ -201,7 +201,7 @@ On the other hand, you may want to add the features from one branch line into an
 
 You can merge a specific revision of a branch line into your current *working copy*. If, for example, you were working on the main line updated to revision 6, you can *merge* revision 5 from another branch line into your working copy. Then you can commit the result to create revision 7. If you want to merge several different committed changes from a branch, you will need to select a range of revisions which includes all the changes.
 
-![](/attachments/refguide7/version-control/image9.png)
+{{< figure src="/attachments/refguide7/version-control/image9.png" >}}
 
 As with the examples in section 3, Version Control Processes for a Single Branch, there may be conflicts during the merge, and these will have to be resolved before you can commit the changes to your app.
 

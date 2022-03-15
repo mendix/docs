@@ -38,7 +38,7 @@ First step to create a PAT is to navigate to the separate [Warden](https://warde
 
 For first-time users, the Warden application will look like this:
 
-![](/attachments/developerportal/community-tools/mendix-profile/warden/first-time-warden.png)
+{{< figure src="/attachments/developerportal/community-tools/mendix-profile/warden/first-time-warden.png" >}}
 
 ### 3.2 Define a new Personal Access Token
 
@@ -49,7 +49,7 @@ You now need to set the following characteristics of the PAT:
 * a name for the PAT — You may want to give it a name that reflects where/why you intend to use the PAT
 * the scopes (authorizations) that you want to delegate to your PAT
 
-    ![](/attachments/developerportal/community-tools/mendix-profile/warden/create-pat.png)
+    {{< figure src="/attachments/developerportal/community-tools/mendix-profile/warden/create-pat.png" >}}
 
 More details about the various scopes can be found in the documentation for the specific services.
 
@@ -63,7 +63,7 @@ A dialog is shown with your **Token secret**, which is the PAT. You can copy the
 You need to store this in a safe location as it will not be displayed again.
 {{% /alert %}}
 
-![](/attachments/developerportal/community-tools/mendix-profile/warden/token-secret.png)
+{{< figure src="/attachments/developerportal/community-tools/mendix-profile/warden/token-secret.png" >}}
 
 ## 4 Manage your Personal Access Tokens
 
@@ -71,7 +71,7 @@ If you have previously created PATs, the Warden application shows you a list of 
 
 You can delete a PAT. This will prevent anyone who may have obtained the Token secret of the PAT from successfully using it.
 
-![](/attachments/developerportal/community-tools/mendix-profile/warden/manage-pat.png)
+{{< figure src="/attachments/developerportal/community-tools/mendix-profile/warden/manage-pat.png" >}}
 
 {{% alert color="warning" %}}
 You cannot obtain the Token secrets of these PATs. You can only see that they exist. 

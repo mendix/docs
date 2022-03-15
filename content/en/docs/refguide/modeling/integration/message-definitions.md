@@ -51,7 +51,7 @@ To generate mappings, do the following:
 
 4. Click **OK**.
 
-    ![General mappings dialog](/attachments/refguide/modeling/integration/message-definitions/generate-mappings.png)
+    {{< figure src="/attachments/refguide/modeling/integration/message-definitions/generate-mappings.png" alt="General mappings dialog" >}}
 
 ## 4 Defining a Message Definition{#message-definition}
 
@@ -61,7 +61,7 @@ In the message definitions document, click **Add** to create a new message defin
 
 The message definition is defined in the **General** tab.
 
-![The Message Definition General tab](/attachments/refguide/modeling/integration/message-definitions/message-definition.png)
+{{< figure src="/attachments/refguide/modeling/integration/message-definitions/message-definition.png" alt="The Message Definition General tab" >}}
 
 #### 4.1.1 Name
 

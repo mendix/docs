@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 `HttpRequest` is a system entity that represents a request to a server. `HttpResponse` represents the response from the server. Use these entities when [publishing](/refguide/published-rest-services/) or [consuming](/refguide/consumed-rest-services/) REST services.
 
-![](/attachments/refguide/modeling/integration/http-request-and-response-entities/http-request-and-response-domain-model.png)
+{{< figure src="/attachments/refguide/modeling/integration/http-request-and-response-entities/http-request-and-response-domain-model.png" >}}
 
 ## 2 HttpRequest {#http-request}
 

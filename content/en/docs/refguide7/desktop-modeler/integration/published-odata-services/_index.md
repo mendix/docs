@@ -69,7 +69,7 @@ If project security is off, for debugging purposes you can retrieve all data wit
 
 If security is enabled, it is required to configure which users have access rights to a specific OData service document. This can be done by opening the specific Published OData service document, navigating to the Settings tab and changing the allowed roles in the Security section. By default, no allowed user roles are selected. The security settings are reflected in [Module Security](/refguide7/module-security/).
 
-![](/attachments/refguide7/desktop-modeler/integration/published-odata-services/16843927.png)
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-odata-services/16843927.png" >}}
 
 ### 10.5 How Security Works
 

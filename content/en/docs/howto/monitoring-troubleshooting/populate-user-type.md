@@ -25,7 +25,7 @@ Every Mendix app has a system module containing an entity `UserReportInfo`. This
 
 The *Mendix Metering* module relies on this attribute to ascertain the end-user type and report it back to us.
 
-![](/attachments/howto/monitoring-troubleshooting/populate-user-type/user-type-enumeration.png)
+{{< figure src="/attachments/howto/monitoring-troubleshooting/populate-user-type/user-type-enumeration.png" >}}
 
 ## 3 Approach
 
@@ -40,15 +40,15 @@ Outlined below is an example of a module that can be used to update UserType att
 In the example below, our aim is to update UserType attribute of UserReportInfo entity. However, the entity `UserReportInfo` is protected in the System module and has no access rules. As a result, it cannot be exposed directly in the UI pages. 
 Therefore, the approach we take is to create a new non-persistable entity, `UserTypeReport`, which we will populate based on the values of `UserReportInfo` to show in the UI.
 
-![](/attachments/howto/monitoring-troubleshooting/populate-user-type/usertypereport.png)
+{{< figure src="/attachments/howto/monitoring-troubleshooting/populate-user-type/usertypereport.png" >}}
 
-![](/attachments/howto/monitoring-troubleshooting/populate-user-type/usertypereport-properties.png)
+{{< figure src="/attachments/howto/monitoring-troubleshooting/populate-user-type/usertypereport-properties.png" >}}
 
 ### 3.2 Populating **UserType** for Existing Users of an App
 
 1. Create a microflow `User_RetrieveOrCreateUserReportInfo` which will ensure that a `UserReportInfo` object exists for a given `User`.
 
-    ![Microflow: User_RetrieveOrCreateUserReportInfo](/attachments/howto/monitoring-troubleshooting/populate-user-type/retrieve-userreportinfo.png)
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/populate-user-type/retrieve-userreportinfo.png" alt="Microflow: User_RetrieveOrCreateUserReportInfo" >}}
 
 2. Create a microflow `User_EvaluateAndSetUserType` which will populate the `UserType` attribute on the `UserReportInfo` entity for a given `User`. 
 
@@ -56,26 +56,26 @@ Therefore, the approach we take is to create a new non-persistable entity, `User
     
     Here, we show how to do it for two specializations of the `System.User` entity, namely `Administration.Account` and `MendixSSO.MendixSSOUser`. In the `Administration.Account` entity, the email is in attribute named `Email`. And in the `MendixSSO.MendixSSOUser` entity, it’s in an attribute named `EmailAddress`. Hence we need to use an [Object Type Decision](/refguide/object-type-decision/) activity to split the `System.User` into `Administration.Account` and `MendixSSO.MendixSSOUser` and then fetch the email address according to the name of the attribute.
 
-    ![Microflow: User_EvaluateAndSetUserType](/attachments/howto/monitoring-troubleshooting/populate-user-type/set-user-type.png)
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/populate-user-type/set-user-type.png" alt="Microflow: User_EvaluateAndSetUserType" >}}
 
     * The logic to determine whether the end-user is internal or external is up to the developer. The example below returns `true`, to indicate that the user is internal, if the user has no email address, or if the domain for their email address is `mendix.com` or `myorg.com`.
 
-        ![Split: Decide if user is internal](/attachments/howto/monitoring-troubleshooting/populate-user-type/user-type-split.png)
+        {{< figure src="/attachments/howto/monitoring-troubleshooting/populate-user-type/user-type-split.png" alt="Split: Decide if user is internal" >}}
 
 3. Create a new microflow `User_Correct_UserType` which will use the microflows `User_RetrieveOrCreateUserReportInfo`  and `User_EvaluateAndSetUserType` created above. In this microflow, we create and populate the `UserTypeReport` entity and return a list of these entities at the end of the microflow.
 
-    ![Microflow: User_Correct_UserType](/attachments/howto/monitoring-troubleshooting/populate-user-type/correct-user-type.png)
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/populate-user-type/correct-user-type.png" alt="Microflow: User_Correct_UserType" >}}
 
 4. Create a page `UserTypeReport` with a DataGrid which uses the microflow `User_Correct_UserType` as its source.
 
-    ![](/attachments/howto/monitoring-troubleshooting/populate-user-type/grid-general.png)
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/populate-user-type/grid-general.png" >}}
 
-    ![](/attachments/howto/monitoring-troubleshooting/populate-user-type/grid-data-source.png)
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/populate-user-type/grid-data-source.png" >}}
 
 5. Add the page to the **Navigation**.
 6. When you go to that page it will set the `UserType` as per your logic and show you the UserType report.
 
-    ![](/attachments/howto/monitoring-troubleshooting/populate-user-type/user-type-report.png)
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/populate-user-type/user-type-report.png" >}}
 
 7. The report can be exported into an Excel file.
 

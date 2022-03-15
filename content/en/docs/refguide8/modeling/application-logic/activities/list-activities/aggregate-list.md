@@ -28,7 +28,7 @@ The **Aggregate list** activity can be used to calculate aggregated values over 
 
 An example of aggregate list properties is represented in the image below:
 
-![aggregate list properties](/attachments/refguide8/modeling/application-logic/activities/list-activities/aggregate-list/aggregate-list-properties.png)
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/list-activities/aggregate-list/aggregate-list-properties.png" alt="aggregate list properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

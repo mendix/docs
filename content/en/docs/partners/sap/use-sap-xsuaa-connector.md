@@ -30,7 +30,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Set the security level for the app to at least Prototype/demo to use SAP Authentication; for more information see [App Security](/refguide/project-security/) and for instructions on setting security levels, see [How To Create a Secure App](/howto/security/create-a-secure-app/)
 * Set up the app with the following two **User roles** in **App** > **Security**: Supervisor and Inspector
 
-	![](/attachments/partners/sap/use-sap-xsuaa-connector/add-roles-to-app.png)
+	{{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/add-roles-to-app.png" >}}
 
 * Ensure the app behaves differently according to the user role, so you can see the effect of setting up the roles in XSUAA. For example, give each role a different starting page as described here: [How To Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/)
 
@@ -59,7 +59,7 @@ To add the After Startup microflow to your application, follow these steps:
 1. In the **App Explorer**, select **App** > **Settings** and open the **Runtime** tab.
 2. For the **After Startup** microflow, select the microflow **Marketplace modules** > **SapAuthentication** > **USE_ME** > **ASu_StartXSUAA**.
 
-![](/attachments/partners/sap/use-sap-xsuaa-connector/runtime-settings.png)
+{{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/runtime-settings.png" >}}
 
 ### 4.2 Changing the Login Page to Allow XSUAA SSO
 
@@ -102,7 +102,7 @@ If login.html does not support XSUAA then you need to add the SSO login button t
 	```
 6. Deploy and run your app. The XSUAA login button will look like this:
 
-	![](/attachments/partners/sap/use-sap-xsuaa-connector/sso-login-screen.png)
+	{{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/sso-login-screen.png" >}}
 
 #### 4.2.2 Redirecting Your Application to XSUAA Without Showing the Login Page
 
@@ -148,7 +148,7 @@ This section describes actions which are carried out using the SAP BTP cockpit. 
 
 The diagram below shows the relationship between the security structures in your Mendix app (blue), the SAP BTP app environment (yellow), SAP User Account and Authentication (orange), and the IdP (green).
 
-![](/attachments/partners/sap/use-sap-xsuaa-connector/xsuaa-diagram-labeled.png)
+{{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/xsuaa-diagram-labeled.png" >}}
 
 Once the user has been authenticated, various attributes (the user's name, for example) are copied from the IdP **User** (green) to the **User** entity within the Mendix application (blue) so that they can be used by the app. However the authorization credentials remain in the IdP and the user cannot access the app by using credentials stored in the app.
 
@@ -156,13 +156,13 @@ Once the user has been authenticated, various attributes (the user's name, for e
 
 When your app is deployed to SAP BTP, each **User Role** (A) in the Mendix app is exposed as a **Scope** (B) in the SAP environment. You can see this mapping by going to your app in the SAP BTP cockpit. Under **Security** you can view the **Scopes**. You will see that the four **User Roles** in the Mendix app are exposed as scopes in the application space:
 
-![](/attachments/partners/sap/use-sap-xsuaa-connector/app-scopes.png)
+{{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/app-scopes.png" >}}
 
 ### 5.2 Role Template
 
 Each Scope is mapped to a single **Role Template** &#40;C) during deployment. You can see the Role Templates in the Application details of the SAP BTP cockpit. These are also defined during the deployment of the app.
 
-![](/attachments/partners/sap/use-sap-xsuaa-connector/app-role-templates.png)
+{{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/app-role-templates.png" >}}
 
 The **Attribute**s of the **Role Template** are not used by Mendix in linking Mendix Roles to SAP Roles.
 
@@ -170,7 +170,7 @@ The **Attribute**s of the **Role Template** are not used by Mendix in linking Me
 
 In the SAP BTP cockpit, you can view and add additional **Roles** (D) to the Role Template, or you can stay with the generated default role. Note that new roles added here do not have different roles in your Mendix app. However, adding new roles may allow you to obtain additional analytics through the SAP or IdP logs. Here a new *Inspector* role (Inspector 2) has been added to the Inspector Role Template.
 
-![](/attachments/partners/sap/use-sap-xsuaa-connector/app-roles.png)
+{{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/app-roles.png" >}}
 
 ### 5.4 Role Collection
 
@@ -182,25 +182,25 @@ Here, we add a new Role Collection for the Inspector 2 role in the SAP BTP space
 
 1. Give the new Role Collection a name and, optionally, a description.
 
-	![](/attachments/partners/sap/use-sap-xsuaa-connector/new-role-collection.png)
+	{{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/new-role-collection.png" >}}
 
 2. Click on the **Name** of the Role Collection to allocate roles to the Role Collection.
 
-	![](/attachments/partners/sap/use-sap-xsuaa-connector/select-role-collection.png)
+	{{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/select-role-collection.png" >}}
 
 3. Add the Role(s) which you want to include in this Role Collection.
 
-	![](/attachments/partners/sap/use-sap-xsuaa-connector/add-role.png)
+	{{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/add-role.png" >}}
 
 The new role collection can now be seen in the SAP BTP cockpit for this Subaccount, with the Role(s) which it includes.
 
-![](/attachments/partners/sap/use-sap-xsuaa-connector/show-role-collection.png)
+{{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/show-role-collection.png" >}}
 
 ### 5.5 Trust Configuration
 
 Your Subaccount will have one or more **Trust Configurations**. These are the IdPs which you can use to authenticate your users. The default is the **SAP ID Service** but you may add other IdPs.
 
-![](/attachments/partners/sap/use-sap-xsuaa-connector/trust-configurations.png)
+{{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/trust-configurations.png" >}}
 
 Depending on the IdP, you can either map **Users** (G) directly to a Role Collection, or map a **User Group** (F) to a Role Collection. Users are mapped by the IdPs own configuration to the User Group.
 
@@ -218,11 +218,11 @@ This is the method used by the **SAP ID Service**, amongst others.
 
 The selected user now has access to the selected Role Collection and, through that, to the correct User Role in your app.
 
-![](/attachments/partners/sap/use-sap-xsuaa-connector/role-collection-assignment-direct.png)
+{{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/role-collection-assignment-direct.png" >}}
 
 You can picture the authentication as shown below:
 
-![](/attachments/partners/sap/use-sap-xsuaa-connector/xsuaa-diagram-config-direct.png)
+{{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/xsuaa-diagram-config-direct.png" >}}
 
 #### 5.5.2 Map User Group to a Role Collection
 
@@ -236,13 +236,13 @@ Alternatively, you can link a Role Collection to an existing Group within the Id
 
 2. Create a new Role Collection Mapping and map the Role Collection (for example, *Inspector 2 Role Collection*) to an existing Group (for example, *Inspector 2 Group*) in the IdP.
 
-![](/attachments/partners/sap/use-sap-xsuaa-connector/role-collection-mapping.png)
+{{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/role-collection-mapping.png" >}}
 
 Now any user within the IdP which is part of the *Inspector 2 Group* will have access to the correct role in your Mendix app.
 
 You can picture the authentication as shown below:
 
-![](/attachments/partners/sap/use-sap-xsuaa-connector/xsuaa-diagram-config-via-group.png)
+{{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/xsuaa-diagram-config-via-group.png" >}}
 
 ## 6 Read More
 

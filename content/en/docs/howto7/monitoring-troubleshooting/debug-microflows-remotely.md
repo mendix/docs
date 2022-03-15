@@ -43,19 +43,19 @@ Debugging in production is not recommended. However, if you are debugging in the
 
 2. Click **Apps** and navigate to the project that you want to debug:
 
-    ![](/attachments/howto7/monitoring-troubleshooting/debug-microflows-remotely/18580045.png) 
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows-remotely/18580045.png" >}} 
 
 3. Click **Environments** in the left sidebar, and on the **Deploy** tab, click **Details** for the environment:
 
-    ![](/attachments/howto7/monitoring-troubleshooting/debug-microflows-remotely/18580051.png)
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows-remotely/18580051.png" >}}
 
 4. On the **Environment Details** screen, click **Enable Debugging**:
 
-    ![](/attachments/howto7/monitoring-troubleshooting/debug-microflows-remotely/18580050.png)
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows-remotely/18580050.png" >}}
 
     This invokes the **Debugger settings** pop-up window. Usually this presents a URL (such as `http://yourapp.mendixcloud.com`) and a secure password that changes each time you enable and disable the debugger:
 
-    ![](/attachments/howto7/monitoring-troubleshooting/debug-microflows-remotely/18580049.png)
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows-remotely/18580049.png" >}}
 
     If you want to disable the debugger, click **Disable Debugging** on the **Environment Details** screen.
 
@@ -73,11 +73,11 @@ If you do not see an overview similar to the one below, then you do not have suf
 
 1. Go to the **Run** tab and select **Connect debugger...**:
 
-    ![](/attachments/howto7/monitoring-troubleshooting/debug-microflows-remotely/18580048.png)
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows-remotely/18580048.png" >}}
 
 2. In the **Connect Debugger** dialog box, enter the **URL** and the **Password** that you got from the cloud environment (for details, see [3.1 Enabling Debugging in the Cloud](#EnablingDebuggingintheCloud)):
 
-    ![](/attachments/howto7/monitoring-troubleshooting/debug-microflows-remotely/18580047.png)
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows-remotely/18580047.png" >}}
 
 #### 3.2.2 Second Method for Connecting the Modeler to the Cloud Environment
 

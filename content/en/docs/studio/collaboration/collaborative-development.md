@@ -36,14 +36,11 @@ As all Studio changes are auto-saved, the collaborative development is indicated
 
 1. **Committing Your Changes** – if your team members are working on the same development line in Studio Pro and they click **Update**, your screen gets locked for a few moments while your changes are automatically committed to the Team Server and then applied to Studio Pro. For more information on the collaborative development process in Studio Pro, see the [Studio Pro Perspective](/refguide/collaborative-development/) section in *Collaborative Development*.
 
-    {{% image_container width="350" %}}![Committing Changes Dialog Box](/attachments/studio/collaboration/collaborative-development/committing-changes.png)
-   {{% /image_container %}}
+    {{< figure src="/attachments/studio/collaboration/collaborative-development/committing-changes.png" alt="Committing Changes Dialog Box"   width="350"  >}}
 
 2.  **Syncing Changes** – your screen gets locked for a few moments each time the Studio Pro users commit. <br/>
 
-    {{% image_container width="350" %}}![Synching Changes Dialog Box](/attachments/studio/collaboration/collaborative-development/synching-changes.png)<br/>
-
-    {{% /image_container %}}
+    {{< figure src="/attachments/studio/collaboration/collaborative-development/synching-changes.png" alt="Synching Changes Dialog Box"   width="350"  >}}
 
     There are two possible outcomes of this process:<br/>
 
@@ -54,8 +51,7 @@ As all Studio changes are auto-saved, the collaborative development is indicated
 3.  **Switching Contents** – in Studio Pro, users can change the branch line Studio is enabled for. For more information, see the [Managing Studio on Development Lines](/refguide/collaborative-development/#managing-studio) section in the *Collaborative Development* in the *Studio Pro Guide*. 
 	During this process Studio gets locked for a few moments, all changes are auto-saved on the current development line, and a pop-up dialog is shown that the Studio Pro user is changing the branch line for Studio. This means that the contents of your app will change. 
 
-	{{% image_container width="350" %}}![Switching Contents Dialog Box](/attachments/studio/collaboration/collaborative-development/switching-branches.png)
-    {{% /image_container %}}
+	{{< figure src="/attachments/studio/collaboration/collaborative-development/switching-branches.png" alt="Switching Contents Dialog Box"   width="350"  >}}
 
 ## 4 Read More
 

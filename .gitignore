@@ -28,9 +28,8 @@ bin
 # Added for convenience during new Docs Stack testing
 
 /public
-/resources/_gen/assets/scss/
-/tmp/.htmltest/
+/resources/
+/tmp/
 /hugo.exe
 /htmltest.exe
-/.htmltest.yml
 /.hugo_build.lock

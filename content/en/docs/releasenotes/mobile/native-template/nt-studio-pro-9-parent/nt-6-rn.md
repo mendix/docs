@@ -5,6 +5,15 @@ parent: "nt-studio-pro-9-parent"
 weight: 10
 description: "Native Template 6 release notes."
 ---
+
+## 6.2.13
+
+**Release date: March 16th, 2022**
+### Fixes
+
+* We identified and fixed an issue when using `react-native-async-storage` that would fail the iOS build due to duplicated symbols being generated.
+* We identified and fixed the reason why compiling the release flavour of the Android app would fail when building on a Windows machine.
+
 ## 6.2.12
 
 **Release date: January 25th, 2022**

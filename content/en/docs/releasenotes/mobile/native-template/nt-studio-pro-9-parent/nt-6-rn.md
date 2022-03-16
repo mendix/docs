@@ -5,13 +5,23 @@ parent: "nt-studio-pro-9-parent"
 weight: 10
 description: "Native Template 6 release notes."
 ---
+
+## 6.2.13
+
+**Release date: March 16th, 2022**
+
+### Fixes
+
+* We fixed an issue where using `react-native-async-storage` made the iOS build fail due to duplicated symbols being generated.
+* We fixed an issue where compiling an Android app for release would fail when building on a Windows machine.
+
 ## 6.2.12
 
 **Release date: January 25th, 2022**
 
 ### Fixes
 
-* We identified and fixed an issue that would stop the **Navigate To** action from launching Google Maps on Android v11 and above.
+* We fixed an issue that would stop the **Navigate To** action from launching Google Maps on Android v11 and above.
 
 ## 6.2.11
 

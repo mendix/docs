@@ -560,6 +560,6 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 3. Find **3D Viewer** in the list.
 4. Click **Usage Dashboard** to show the usage details.
 
-## 5 Read More
+## 6 Read More
 
 * [Build a 3D Model Inspection App](https://academy.mendix.com/link/paths/115/Build-a-3D-Model-Inspection-App)

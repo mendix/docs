@@ -776,3 +776,7 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
    * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
 3. Find **Text Analytics** in the list.
 4. Click **Usage Dashboard** to show the usage details.
+
+## 5 Read More
+
+* [Text Analytics and Translation App](https://academy.mendix.com/link/paths/118/Text-Analytics-and-Translation-App)

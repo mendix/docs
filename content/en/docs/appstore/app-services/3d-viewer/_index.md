@@ -559,3 +559,7 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 3. On the left navigation menu, click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions). This page gives an overview of all the subscriptions of your organization.
 3. Find **3D Viewer** in the list.
 4. Click **Usage Dashboard** to show the usage details.
+
+## 5 Read More
+
+* [Build a 3D Model Inspection App](https://academy.mendix.com/link/paths/115/Build-a-3D-Model-Inspection-App)

@@ -6,6 +6,8 @@ tags: ["studio pro"]
 aliases:
     - /refguide8/Template+Grid+(document+template).html
     - /refguide8/template-grid-(document-template).html
+    - /refguide8/Template+Grid+(document+template)
+    - /refguide8/template-grid-(document-template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

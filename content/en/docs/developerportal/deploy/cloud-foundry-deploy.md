@@ -9,7 +9,10 @@ aliases:
     - /deployment/cloud-foundry/index.html
     - /howto/deploying-a-mendix-app-to-cloud-foundry.html
     - /howto7/deploying-a-mendix-app-to-cloud-foundry.html
-    - /refguide/deploying-a-mendix-app-to-cloud-foundry.html    
+    - /refguide/deploying-a-mendix-app-to-cloud-foundry.html
+    - /howto/deploying-a-mendix-app-to-cloud-foundry
+    - /howto7/deploying-a-mendix-app-to-cloud-foundry
+    - /refguide/deploying-a-mendix-app-to-cloud-foundry
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

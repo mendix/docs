@@ -9,6 +9,10 @@ aliases:
     - /refguide/drop-down-button.html
     - /refguide/link-button.html
     - /refguide/sign-out-button.html
+    - /refguide/action-button
+    - /refguide/drop-down-button
+    - /refguide/link-button
+    - /refguide/sign-out-button
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

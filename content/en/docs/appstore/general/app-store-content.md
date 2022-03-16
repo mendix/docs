@@ -9,6 +9,9 @@ aliases:
     - /community/app-store/use-app-store-content-in-the-modeler.html
     - /developerportal/app-store/app-store-content.html
     - /developerportal/app-store/use-app-store-content-in-the-modeler.html
+    - /community/app-store/use-app-store-content-in-the-modeler
+    - /developerportal/app-store/app-store-content
+    - /developerportal/app-store/use-app-store-content-in-the-modeler
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchors "downloading", "widget", and "project-layout" below are mapped, so they should not be removed or changed.
 ---

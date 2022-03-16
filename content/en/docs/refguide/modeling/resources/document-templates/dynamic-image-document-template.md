@@ -6,6 +6,8 @@ tags: ["studio pro"]
 aliases:
     - /refguide/Dynamic+Image+(document+template).html
     - /refguide/dynamic-image-(document-template).html
+    - /refguide/Dynamic+Image+(document+template)
+    - /refguide/dynamic-image-(document-template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

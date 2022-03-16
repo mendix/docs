@@ -6,6 +6,7 @@ tags: ["control center", "mendix admin", "developer portal", "role", "permission
 weight: 20
 aliases:
     - /developerportal/company-app-roles/users.html
+    - /developerportal/company-app-roles/users
 ---
 
 ## 1 Introduction

@@ -6,6 +6,7 @@ weight: 70
 tags: ["studio pro", "validation feedback", "client activities"]
 aliases:
     - /refguide8/Validation+Feedback.html
+    - /refguide8/Validation+Feedback
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -78,7 +78,11 @@ Would produce the following button and SVG:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-svg/blue-svg.png" alt="blue svg" >}}
 
-## 5 Using SVGs in Pluggable Native Widgets
+## 5 Images not Being Refreshed
+
+When deploying changed SVG images, it may be necessary to clean the deployment folder first. In Studio Pro, in the top navigation, click on "App" then "Clean Deployment Directory". When recompiling, any new images will now become visible in your native app. 
+
+## 6 Using SVGs in Pluggable Native Widgets
 
 To use an SVG in a pluggable native widget's image property, we recommend using the provided `Image` or `Icon` component. This will allow a static image of any supported format to be used within your pluggable widget, including SVGs.
 
@@ -113,7 +117,7 @@ export const PluggableWidget = () => (
 
 If you want to use SVG elements directly in your pluggable widget, see the [react-native-svg](https://github.com/react-native-community/react-native-svg) library.
 
-## 5 Read More
+## 7 Read More
 
 * [Build a Pluggable Native Widget](/howto/extensibility/build-native-widget/)
 * [Atlas UI](/howto/front-end/atlas-ui/)

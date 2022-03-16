@@ -301,3 +301,7 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
    * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
 3. Find **Text to Speech** in the list.
 4. Click **Usage Dashboard** to show the usage details.
+
+## 5 Read More
+
+* [Build an App with Speech Synthesis and Recognition](https://academy.mendix.com/link/paths/119/Build-an-App-with-Speech-Synthesis-and--Recognition)

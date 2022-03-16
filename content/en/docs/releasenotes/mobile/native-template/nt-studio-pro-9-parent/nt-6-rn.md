@@ -13,7 +13,7 @@ description: "Native Template 6 release notes."
 ### Fixes
 
 * We fixed an issue where using `react-native-async-storage` made the iOS build fail due to duplicated symbols being generated.
-* We fixed an issue where compiling an Android app release would fail when building on a Windows machine.
+* We fixed an issue where compiling an Android app for release would fail when building on a Windows machine.
 
 ## 6.2.12
 

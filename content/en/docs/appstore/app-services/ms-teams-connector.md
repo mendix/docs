@@ -33,7 +33,7 @@ This app service is an add-on module. For more information, see [Add-On Module](
 ### 1.3 Prerequisites
 
 * Your organization should allow you to use Webhooks in Microsoft Teams
-* The app service can only be used with Studio Pro 9 versions starting from [9.10](https://docs.mendix.com/releasenotes/studio-pro/9.10)
+* The app service can only be used with Studio Pro 9 versions starting from [9.10](/releasenotes/studio-pro/9.10/)
 
 ## 2 Installation
 
@@ -86,31 +86,20 @@ To download and install the Microsoft Teams Connector app service in your app, f
 Before you deploy an app, you should configure the binding keys in your app as follows:
 
 1. In the **App Explorer**, go to **Settings**. The **App Settings** dialog box opens. 
-
 2. On the **Configurations**, click **Edit**. The **Edit Configuration** dialog box opens.
-
 3. Go to the **Constants** tab.
-
 4. Click **New**. The **Select Constant** dialog box opens.
-
 5.  Go to **MSTeamsConnectorModule** > **Configurations**. You can see **LicenseSecret** and **LicenseKey** are defined as constants. 
 
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/configuring-license-keys.png" >}}
     
 6. Select **LicenseSecret**.
-
 7. In the **New Constant Value** dialog box, enter the **Value** of the LicenseSecret you got.
-
 8. Click **OK** to save the settings and closes the dialog box.
-
 9. Perform steps 4 and 5 again.
-
 10. Select **LicenseKey**.
-
 11. In the **New Constant Value** dialog box, enter the **Value** of the LicenseKey you got.
-
 12. Click **OK** to save the settings and closes the dialog box.
-
 13. After you finish building the app, click **Run** to deploy your app to the cloud.
 
 ## 4 Usage
@@ -118,7 +107,7 @@ Before you deploy an app, you should configure the binding keys in your app as f
 ### 4.1 Configuring Webhooks in the Communication Services Console
 
 1. In Microsoft Teams, [create a Webhook URL for the channel](https://docs.servicenow.com/bundle/quebec-it-service-management/page/product/site-reliability-ops/task/create-webhook-url-channel-ms-teams.html) to which you want to send messages. 
-2. Go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there.
+2. Go to the Marketplace [Subscriptions](/appstore/general/app-store-overview/#subscriptions) page and log in there.
 3. Click **Microsoft Teams Connector** to open the service management dashboard.
 4.  Click **Manage Instances**.
     {{% todo %}}Provide image when available{{% /todo %}} 
@@ -177,7 +166,6 @@ You can use the **Microsoft Teams Connector** activity in a microflow to send me
 
 3.  Specify the following settings with expression syntax:
     1. Set the **webhookId** parameter to the **Webhook ID** generated in the Communication Services Console.
-    
     2.  For **Message type**, select **Text** or **Card** from the drop-down list:
         
         *  If you want to send message as plain text or in HTML or markdown formatting, select **Text**
@@ -238,7 +226,7 @@ Microsoft Teams support [actionable message cards](https://docs.microsoft.com/en
 The **Usage** dashboard shows the real-time statistics about the usage of an app service. For the Microsoft Teams connector, perform the following steps to check the number of Microsoft Teams webhooks usage:
 
 1. Log into the Marketplace.
-2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview/#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 3. Click on **Usage Dashboard** corresponding to **Microsoft Teams connector** to open the **Usage** dashboard. It shows the following statistics:
    * **This Month** – Shows usage statistics for the current month
    * **Last Month** – Shows usage statistics for last month

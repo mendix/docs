@@ -58,12 +58,12 @@ You can find examples on how to build the request in the demo apps from the Mark
 
 To install this module, follow these steps:
 
-1. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) to import the following two components into your application:
-     * [Community Commons Function Library](https://marketplace.mendix.com/link/component/170) 
-     * [Encryption](https://marketplace.mendix.com/link/component/1011)
+1. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the following two components into your application:
+     * [Community Commons Function Library](https://marketplace.mendix.com/link/component/170/) 
+     * [Encryption](https://marketplace.mendix.com/link/component/1011/)
      
-2. Configure [Encryption](/appstore/modules/encryption#configuration).
-3. Go to the Marketplace and download the *AutomatedPlanningCore.mpk* file for the [Automated Task & Resource Planner](https://marketplace.mendix.com/link/component/118393).
+2. Configure [Encryption](/appstore/modules/encryption/#configuration).
+3. Go to the Marketplace and download the *AutomatedPlanningCore.mpk* file for the [Automated Task & Resource Planner](https://marketplace.mendix.com/link/component/118393/).
 4.  To add the Automated Task & Resource Planner to your app in Mendix Studio Pro, follow these steps:
     1.  In the **App Explorer**, right-click the app, click **Import module package**, and then select **mpk* file.
 
@@ -282,4 +282,4 @@ When there are problems, the easiest way to troubleshoot is to check the logs th
 
 ## 5 Read More {#read-more}
 
-[Automated Task & Resource Planner API](https://saas-acceptance.timeseries.com/swagger-ui/?urls.primaryName=field-service-planner)
+[Automated Task & Resource Planner API](https://saas-acceptance.timeseries.com/swagger-ui/?urls.primaryName=field-service-planner/)

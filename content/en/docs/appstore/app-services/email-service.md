@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "app service", "email"]
 
 ## 1 Introduction
 
-The [Email Service](https://marketplace.mendix.com/link/component/118393) app service enables including an email component in your Mendix application. Just add the minimum required configuration and you are good to go.
+The [Email Service](https://marketplace.mendix.com/link/component/118393/) app service enables including an email component in your Mendix application. Just add the minimum required configuration and you are good to go.
 
 The app service works with [Mendix SSO](/appstore/modules/mendix-sso/), so no additional authentication changes are required.
 
@@ -47,41 +47,33 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 A trial gives everyone in your company one-month access to the app service. To start a trial, perform the following steps:
 
-1. Go to the [Email Service](https://marketplace.mendix.com/link/component/118393) page in the Marketplace.
-
+1. Go to the [Email Service](https://marketplace.mendix.com/link/component/118393/) page in the Marketplace.
 2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
-
 3. Select the check box to agree to the **Terms & Conditions**.
-
 4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
-
 5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used.
-
-6. Click the link in the email to go to the [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) page and log in there. This page shows all the products that you have trials for.
-
-7. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-
-8.  Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
+6. Click the link in the email to go to the [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) page and log in there. This page shows all the products that you have trials for.
+7. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview/#service-management-dashboard).
+8.  Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
 
     {{< figure src="/attachments/appstore/app-services/email-service/binding-key-generation.png" >}}
-    
 
 #### 2.1.2 Starting a Subscription
 
-1. Go to the [Email Service](https://marketplace.mendix.com/link/component/118393) page in the marketplace.
+1. Go to the [Email Service](https://marketplace.mendix.com/link/component/118393/) page in the marketplace.
 2. Click **Subscribe** to start a subscription.
 3. Select your subscription plan.
 4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Contact will receive an email that says the app service is ready to be used.
-6. Click the link in the email to go to the [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-8.  Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
+6. Click the link in the email to go to the [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
+7. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview/#service-management-dashboard).
+8.  Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
 
     {{< figure src="/attachments/appstore/app-services/email-service/binding-key-generation.png" >}}
 
 ### 2.2 Installing the Component in Your App
 
-To download and install the Email Service app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can find it in the **App Explorer** and also in the **Communication Services** category in the **Toolbox**.
+To download and install the Email Service app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can find it in the **App Explorer** and also in the **Communication Services** category in the **Toolbox**.
 
 ## 3 Configuring SecretKey and UserName {#configure-keys}
 
@@ -101,7 +93,7 @@ You can use the Email Service in a microflow to send HTML or plain text messages
 
 {{< figure src="/attachments/appstore/app-services/email-service/inbuilt-domain-entities.png" >}}
 
-You can create a list using the **EmailAttr** entity to specify the **To**, **CC**, **BCC** recipients. For more information, see [Working with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow).
+You can create a list using the **EmailAttr** entity to specify the **To**, **CC**, **BCC** recipients. For more information, see [Working with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/).
 
 {{% alert type="info" %}}Every email address to whom this message is sent is counted as utilization towards the allocated app service quota. If the email addresses are incorrect, the email will bounce back.{{% /alert %}}
 
@@ -148,14 +140,13 @@ The third step of the microflow generates a string from this HTML file using the
 
 In the last step of the microflow, you can add the variable for the generated HTML content into the **Body** field of the **Send email** activity.
 
-
 ### 4.2 Sending Message with Attachment(s) to Recipients
 
 This is a representative microflow that sends emails with file attachments. The file attachments should have the file types that are [supported](#unsupported-file-types).
 
 {{< figure src="/attachments/appstore/app-services/email-service/microflow.png" >}}
 	
-The **Attachment** attribute accepts a list of **FileDocumentObject**. You can either use **System.FileDocument** or use [File Dropper](https://marketplace.mendix.com/link/component/111497) to create a list of **FileDocumentObject** that will be sent as attachments with the email.
+The **Attachment** attribute accepts a list of **FileDocumentObject**. You can either use **System.FileDocument** or use [File Dropper](https://marketplace.mendix.com/link/component/111497/) to create a list of **FileDocumentObject** that will be sent as attachments with the email.
 
 {{< figure src="/attachments/appstore/app-services/email-service/system-filedocument-model.png" >}}
 
@@ -173,8 +164,8 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
 1. Log into the Marketplace.
 2. Go to **My Marketplace** and then do as follows:
-   - If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
-   - If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+   - If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+   - If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
 3. Find **Email Service** in the list.
 4. Click **Usage Dashboard** to show the usage details.
 
@@ -190,7 +181,7 @@ You can use the **Email ID** text input box to provide sender's email address.
 
 {{< figure src="/attachments/appstore/app-services/email-service/console-email-text-input.png" >}}
 
-Optionally you can also provide **Mail From Domain** information that you may wish to use with your [Email Service](https://marketplace.mendix.com/link/component/118393) instance. For more details you can check [Configuring the Mail From Domain](#config-mail-from-domain) section. 
+Optionally you can also provide **Mail From Domain** information that you may wish to use with your [Email Service](https://marketplace.mendix.com/link/component/118393/) instance. For more details you can check [Configuring the Mail From Domain](#config-mail-from-domain) section. 
 
 {{< figure src="/attachments/appstore/app-services/email-service/console-mail-from-domain-text-input.png" >}}
 
@@ -261,4 +252,4 @@ Until the verification process is complete, you shall continue to see a message 
 {{< figure src="/attachments/appstore/app-services/email-service/domain-verification-pending.png" >}}
 
 ## 6 Read More
-* [Send Emails from a Mendix App](https://academy.mendix.com/link/paths/117/Send-Emails-from-a-Mendix-App-)
+* [Send Emails from a Mendix App](https://academy.mendix.com/link/paths/117/Send-Emails-from-a-Mendix-App-/)

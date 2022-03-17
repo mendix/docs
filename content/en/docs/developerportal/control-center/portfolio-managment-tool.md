@@ -14,29 +14,29 @@ The [portfolio management tool](https://portfolio.mendix.com) empowers you to ma
 Mendix Admins can access all portfolios within their company. When a Mendix Admin starts the portfolio management tool for the first time and if their company has no portfolio, the system will automatically create a portfolio for the company.
 {{% /alert %}}
 
-![landing-page](attachments/portfolio-management-tool/landing-page.png)
+{{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/landing-page.png" >}}
 
 ## 2 Projects Overview
 
 When you start the portfolio management tool, click a portfolio to get an overview of all the projects in this portfolio.
 
-![projects-overview](attachments/portfolio-management-tool/projects-overview.png)
+{{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/projects-overview.png" >}}
 
 The **Portfolio Overview** page gives you an overview of all the projects in this portfolio. You can search a project in the search bar.
 
 ### 2.1 Switching Between the Kanban Board and the List View
 
-On the **Projects Overview** page, you can switch between the Kanban board and the list view. You can do so by clicking the view icon![view-icon](attachments/portfolio-management-tool/view-icon.png).
+On the **Projects Overview** page, you can switch between the Kanban board and the list view. You can do so by clicking the view icon {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/view-icon.png" >}}
 
 #### 2.1.1 Kanban Board
 
-![kanban-board](attachments/portfolio-management-tool/kanban-board.png)
+{{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/kanban-board.png" >}}
 
 In the Kanban board, projects are put in different columns. Each column represents a different stage. You can drag a project to a different column to change its stage. You can click the name of a column to sort the table.
 
 #### 2.1.2 List View
 
-![list-view](attachments/portfolio-management-tool/list-view.png)
+{{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/list-view.png" >}}
 
 In the list view, you can select a filter from the drop-down list in the upper-right corner to filter the projects.
 
@@ -48,7 +48,7 @@ In the Kanban board, {{% todo %}}to be determined by the development team{{% /to
 
 In the list view, click the project name to see the project details.
 
-![project-details](attachments/portfolio-management-tool/project-details.png)
+{{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/project-details.png" >}}
 
 {{% alert type="info" %}}
 When you view the project details, you can only **Post Note**. You cannot change any other info. To change other info, you need [edit the project](#edit-project).
@@ -106,25 +106,25 @@ You have successfully created a project. Your new project is displayed on the **
 
 In the Kanban board, click the **...** icon on the upper-right corner of the project card and click **Edit**.
 
-![edit-project](attachments/portfolio-management-tool/edit-project-kanban-board.png)
+{{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/edit-project-kanban-board.png" >}}
 
 In the list view, click the edit icon at the end of the row for the project.
 
-![edit-project-list-view](attachments/portfolio-management-tool/edit-project-list-view.png)
+{{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/edit-project-list-view.png" >}}
 
 ### 2.5 Deleting a Project
 
 In the Kanban board, click the **...** icon on the upper-right corner of the project card and click **Delete**.
 
-![delete-project-kanban-board](attachments/portfolio-management-tool/delete-project-kanban-board.png)
+{{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/delete-project-kanban-board.png" >}}
 
 In the list view, click the delete icon at the end of the row for the project.
 
-![list-view](attachments/portfolio-management-tool/delete-project-list-view.png)
+{{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/delete-project-list-view.png" >}}
 
 ## 3 Access Management {#access-management}
 
-![acess-management](attachments/portfolio-management-tool/acess-management.png)
+{{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/acess-management.png" >}}
 
 The **Access Management** page has a table that shows all the users who have access to this portfolio. Their access roles are either Portfolio Managers or Users. Mendix Admins are Portfolio Mangers by default. Portfolio Managers can give other users access to the portfolio and define their access roles.
 
@@ -134,19 +134,19 @@ At the end of the row for each user, there is an edit icon and a delete icon. Cl
 
 | Action                            | Portfolio Manager                                            | User                                                         |
 | --------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Invite new users                  | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![cross-mark](attachments/portfolio-management-tool/cross-mark.svg) |
-| Remove user permissions and roles | ![check-mark](attachments/portfolio-management-tool/check-mark.svg){{% alert type="info" %}}You cannot remove permissions and roles of Mendix Admins in a company.{{% /alert %}} | ![cross-mark](attachments/portfolio-management-tool/cross-mark.svg) |
-| Update user permissions and roles | ![check-mark](attachments/portfolio-management-tool/check-mark.svg){{% alert type="info" %}}You cannot update permissions and roles of Mendix Admins in a company.{{% /alert %}} | ![cross-mark](attachments/portfolio-management-tool/cross-mark.svg) |
-| View user access information      | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) |
-| Manage portfolio settings         | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![cross-mark](attachments/portfolio-management-tool/cross-mark.svg) |
-| Create new projects               | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![cross-mark](attachments/portfolio-management-tool/cross-mark.svg) |
-| Edit existing projects            | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![cross-mark](attachments/portfolio-management-tool/cross-mark.svg) |
-| Delete projects                   | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![cross-mark](attachments/portfolio-management-tool/cross-mark.svg) |
-| View project details              | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) |
-| Create notes                      | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) |
+| Invite new users                  | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}} |
+| Remove user permissions and roles | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}}{{% alert type="info" %}}You cannot remove permissions and roles of Mendix Admins in a company.{{% /alert %}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}} |
+| Update user permissions and roles | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}}{{% alert type="info" %}}You cannot update permissions and roles of Mendix Admins in a company.{{% /alert %}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}} |
+| View user access information      | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}} |
+| Manage portfolio settings         | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}} |
+| Create new projects               | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}} |
+| Edit existing projects            | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}} |
+| Delete projects                   | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}} |
+| View project details              | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}} |
+| Create notes                      | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}} |
 | Edit notes                        | Own notes                                                    | Own notes                                                    |
 | Delete notes                      | Own notes                                                    | Own notes                                                    |
-| View notes                        | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) |
+| View notes                        | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/check-mark.svg" >}} |
 
 ### 3.2 Adding New Users
 
@@ -181,11 +181,11 @@ You can click the **Add Stage**, **Add Use Case**, **Add Value Type**, **Add Dep
 
 For an existing item, when you hover over the end of the row, then you can see the **Delete** button or the **Edit** button. You can use these two buttons to delete or edit the existing item.
 
-![delete-edit-stage](attachments/portfolio-management-tool/delete-edit-stage.png)
+{{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/delete-edit-stage.png" >}}
 
 For stages, you can click the **^** icon or the **v** icon to move a stage upwards or downwards.
 
-![move-upwards-downwards](attachments/portfolio-management-tool/move-upwards-downwards.png)
+{{< figure src="/attachments/developerportal/control-center/portfolio-management-tool/move-upwards-downwards.png" >}}
 
 ## 5 Read More
 

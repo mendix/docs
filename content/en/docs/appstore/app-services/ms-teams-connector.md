@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "app service", "microsoft", "micr
 
 ## 1 Introduction
 
-{{% todo %}}[**Verify Marketplace Docs tabs**]{{% /todo %}}
+{{% todo %}}[Verify Marketplace Docs tabs]{{% /todo %}}
 
 The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service enables sending messages to a Microsoft Teams channel automatically. You can add and configure the app service in a microflow. Once the microflow that uses the app service is triggered, your app asynchronously sends out the message to the Microsoft Teams channel. 
 
@@ -37,72 +37,80 @@ This app service is an add-on module. For more information, see [Add-On Module](
 
 ## 2 Installation
 
-1. Go to the Marketplace and download the file *MSTeamsConnectorModule.mxmodule* for the [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391).
-2. To add the Microsoft Teams Connector to your app in Mendix Studio Pro, follow these steps:
-    1.  In the **App Explorer**, right-click the app, click **Import module package**, and then select *MSTeamsConnectorModule.mxmodule*. 
+### 2.1  Obtaining the LicenseSecret and the LicenseKey {#obtain-keys}
 
-        ![pop-up-menu-in-app-explorer](attachments/ms-teams-connector/import-module-in-app-explorer.png)
+Microsoft Teams Connector is a premium Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses Microsoft Teams Connector, you need to start a trial or a subscription to get a valid combination of **LicenseSecret** and **LicenseKey**.
 
-        The **Import Module** dialog box opens.
+#### 2.1.1 Starting a Trial
+
+A trial gives everyone in your company one-month access to the app service. To start a trial, perform the following steps:
+
+1. Go to the [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) page in the Marketplace.
+2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
+3. Select the check box to agree to the **Terms & Conditions**.
+4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
+5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used.
+6. Click the link in the email to go to the [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) page and log in there. This page shows all the products that you have trials for.
+7. Click **Microsoft Teams Connector** to open the [service management dashboard]/appstore/general/app-store-overview/#service-management-dashboard).
+8. Follow the instructions in the [Creating Binding Keys]/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create the **LicenseSecret** and the **LicenseKey**. Save them somewhere safe. Later you will need to [configure the LicenseSecret and the LicenseKey]/appstore/app-services/intelligent-document-service/#configure-keys) in your app.
+
+    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/binding-key-generation.png" >}}
+
+#### 2.1.2 Starting a Subscription
+
+1. Go to the [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) page in the marketplace.
+2. Click **Subscribe** to start a subscription.
+3. Select your subscription plan.
+4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
+5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Owner will receive an email that says the app service is ready to be used.
+6. Click the link in the email to go to the [Company Subscriptions]/appstore/general/app-store-overview/#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
+7. Click **Microsoft Teams Connector** to open the [service management dashboard]/appstore/general/app-store-overview/#service-management-dashboard).
+8.  Follow the instructions in the [Creating Binding Keys]/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create the **LicenseSecret** and the **LicenseKey**. Save them somewhere safe. Later you will need to [configure the LicenseSecret and the LicenseKey]/appstore/app-services/intelligent-document-service/#configure-keys) in your app.
     
-    2. Click **Import**.
-    3. Wait until a pop-up window states that the module was successfully imported. Click **OK**.
-    
-
-You can find the app service in the **Add-ons** folder in the **App Explorer** and in the **Communication Services** category in the **Toolbox**.
-
-![connector-in-protected-module](attachments/ms-teams-connector/connector-in-protected-module.png)
-
-{{% alert type="warning" %}}The app cannot contain different versions of the Microsoft Teams Connector at the same time.{{% /alert %}}        
-
-## 3 Configuration
-
-Microsoft Teams Connector is a premium Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses Microsoft Teams Connector, you need to get a valid combination of **LicenseSecret** and **LicenseKey** and configure them as environment variables in the deployment setting.
-
-### 3.1  Subscribing to Get LicenseSecret and LicenseKey {#key-generation}
-
-1. On the [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) page, click **Subscribe** to start a subscription or click **Try for Free** to start a trial.
-
-2.  To start a subscription, fill in [Technical Contact](https://docs.mendix.com/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information and then place the order. The Technical Contact receives an order confirmation email. 
-
-    For the trial, you do not need to fill in this information.
-
-3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
-
-4. Click **Microsoft Teams Connector** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-
-5. Click **Create Binding Keys**.
-
-6. Enter a meaningful name for the binding keys. Make sure that the name includes the name of the app which uses Microsoft Teams Connector.
-
-7.  Click **Create Keys** to generate the **LicenseSecret** and **LicenseKey**. 
-
-    ![](attachments/ms-teams-connector/binding-key-generation.png)
-
-8.  **Copy** the **LicenseSecret** and **LicenseKey**. You will use them later for app deployment.
+    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/binding-key-generation.png" >}}
 
 {{% alert type="info" %}}We recommend that you **Edit Instance Name** for your subscription on the service management dashboard. This is a good practice if you have purchased multiple subscriptions of a service.{{% /alert %}}
 
-![](attachments/ms-teams-connector/edit-instance-name.png)
+{{< figure src="/attachments/appstore/app-services/ms-teams-connector/edit-instance-name.png" >}}
 
+### 2.2 Installing the Component in Your App
 
-### 3.2 Configuring LicenseSecret and LicenseKey for App Deployment
+To download and install the Microsoft Teams Connector app service in your app, follow the instructions in the [Importing Content from the App Explorer]/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **Add-ons** folder in the **App Explorer** and in the **Communication Services** category in the **Toolbox**.
+
+{{< figure src="/attachments/appstore/app-services/ms-teams-connector/connector-in-protected-module.png" >}}
+
+{{% alert type="warning" %}}The app cannot contain different versions of the Microsoft Teams Connector at the same time.{{% /alert %}}        
+
+## 3 Configuring the LicenseSecret and the LicenseKey {#configure-keys}
+
+Before you deploy an app, you should configure the binding keys in your app as follows:
 
 1. In the **App Explorer**, go to **Settings**. The **App Settings** dialog box opens. 
+
 2. On the **Configurations**, click **Edit**. The **Edit Configuration** dialog box opens.
+
 3. Go to the **Constants** tab.
+
 4. Click **New**. The **Select Constant** dialog box opens.
+
 5.  Go to **MSTeamsConnectorModule** > **Configurations**. You can see **LicenseSecret** and **LicenseKey** are defined as constants. 
 
-    ![](attachments/ms-teams-connector/configuring-license-keys.png)
+    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/configuring-license-keys.png" >}}
     
 6. Select **LicenseSecret**.
+
 7. In the **New Constant Value** dialog box, enter the **Value** of the LicenseSecret you got.
+
 8. Click **OK** to save the settings and closes the dialog box.
+
 9. Perform steps 4 and 5 again.
+
 10. Select **LicenseKey**.
+
 11. In the **New Constant Value** dialog box, enter the **Value** of the LicenseKey you got.
+
 12. Click **OK** to save the settings and closes the dialog box.
+
 13. After you finish building the app, click **Run** to deploy your app to the cloud.
 
 ## 4 Usage
@@ -119,24 +127,25 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
     
 5.  Sign in to **Communication Services Console** using Mendix SSO.
     
-    ![](attachments/ms-teams-connector/console-login-view.png)
+    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/console-login-view.png" >}}
     
     The **Communication Services Console** shows all the communication services that you have subscribed.
 
 6.  Go to the **Microsoft Teams Connector** tab. 
 7.  Select the **Developer Instance** from the drop-down list against which you want to configure **Webhook URLs**. The **Add Webhook** button gets enabled.
 
-    ![add-webhook-button-enabled](attachments/ms-teams-connector/add-webhook-button-enabled.png)
+    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/add-webhook-button-enabled.png" >}}
 
 8.  Click **Add Webhook**. The **Webhook Adder** dialog box opens. 
    
-    ![webhook-adder-popup](attachments/ms-teams-connector/webhook-adder-popup.png)
+    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/webhook-adder-popup.png" >}}
     
 9. Enter a **Webhook Name** for the Webhook.
 10. Enter the **Webhook URL** which you configured for your Microsoft Teams Channel.
 11.  **Save** the changes. The Webhook is added to the list.
 
-     ![webhook-data-view](attachments/ms-teams-connector/webhook-data-view.png)
+     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/webhook-data-view.png" >}}
+     
      The system automatically generates a unique **Webhook ID** for each **Webhook URL** you add. You will need to give **Webhook ID** as input to the **Microsoft Teams Connector** activity to send messages. 
      
      {{% alert type="info" %}}Each **Webhook URL** you add is counted as utilization towards the allocated app service quota. If a **Webhook URL** is incorrect, you can edit or delete the Webhook.{{% /alert %}}     
@@ -144,14 +153,13 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 12.  Copy the **Webhook ID** as follows:
      1.  Hover over the **...** icon in the **Action** column to open the pop-up menu.
         
-         ![edit-webhook-popup](attachments/ms-teams-connector/edit-webhook-popup.png) 
+         {{< figure src="/attachments/appstore/app-services/ms-teams-connector/edit-webhook-popup.png" >}}
          
      2.  Click **Copy**. A pop-up window opens and shows the name of the Webhook that you have copied.
         
-         ![copied-popup](attachments/ms-teams-connector/copied-popup.png)
+         {{< figure src="/attachments/appstore/app-services/ms-teams-connector/copied-popup.png" >}}
         
-         {{% alert type="note" %}}You can select **Edit** or **Delete** to edit or delete a Webhook.
-         {{% /alert %}}
+         {{% alert type="note" %}}You can select **Edit** or **Delete** to edit or delete a Webhook.{{% /alert %}}
 
 ### 4.2 Sending Message to a Teams Channel
 
@@ -163,7 +171,7 @@ You can use the **Microsoft Teams Connector** activity in a microflow to send me
     
     The following representative microflow contains activities with the required attributes, the **Microsoft Teams Connector** activity, and a placeholder to capture the returned object.
     
-    ![](attachments/ms-teams-connector/connector-in-microflow.png) 
+    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/connector-in-microflow.png" >}}
     
 2. Double-click the **Microsoft Teams Connector** activity to open the **Microsoft Teams Connector** dialog box.
 
@@ -172,19 +180,20 @@ You can use the **Microsoft Teams Connector** activity in a microflow to send me
     
     2.  For **Message type**, select **Text** or **Card** from the drop-down list:
         
-        * If you want to send message as plain text or in HTML or markdown formatting, select **Text**
+        *  If you want to send message as plain text or in HTML or markdown formatting, select **Text**
         
-         {{% alert type="info" %}}Fore more information about HTML and markdown tags supported by Microsoft Teams, see [*Format Cards in Microsoft Teams*](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format).{{% /alert %}}
-       
-       * If you want to use a actionable message card as message, select **Card**
-       
-         {{% alert type="info" %}}Fore more information about message cards, see [Building a Message Card](#build-message-card).{{% /alert %}}
+            {{% alert type="info" %}}Fore more information about HTML and markdown tags supported by Microsoft Teams, see [*Format Cards in Microsoft Teams*](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format).{{% /alert %}}
+          
+        * If you want to use a actionable message card as message, select **Card**
+        
+            {{% alert type="info" %}}Fore more information about message cards, see [Building a Message Card](#build-message-card).{{% /alert %}}
        
     3.  For the **Message** parameter, set up the message content in the String format. Below is an example:
        
-        ![](attachments/ms-teams-connector/html-message.png)
+        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/html-message.png" >}}
         The example above will render in the Microsoft Teams channel like this:
-        ![](attachments/ms-teams-connector/html-output.png)
+
+        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/html-output.png" >}}
        
     4. Click **OK** to save the changes and close the dialog box.
 
@@ -192,7 +201,7 @@ You can use the **Microsoft Teams Connector** activity in a microflow to send me
 
 After the **Microsoft Teams Connector** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the Microsoft Teams channel. When the message is sent successfully, the activity returns a **SendMessageReponse** object. The **SendMessageReponse** entity for this object comes with the module and is predefined:
 
-![](attachments/ms-teams-connector/send-message-response-entity.png) 
+{{< figure src="/attachments/appstore/app-services/ms-teams-connector/send-message-response-entity.png" >}}
 
 * If the message is successfully sent, the value of the `SentMessage` attribute is `true`
 * If the message could not be sent, the value of the `SentMessage` attribute is `false`
@@ -206,22 +215,21 @@ Microsoft Teams support [actionable message cards](https://docs.microsoft.com/en
 
 2.  Edit a message card sample as follows:
 
-    1. At the upper-right corner of the page, click **Select Sample** to open the drop-down list.
-    
+    1. At the upper-right corner of the page, click **Select Sample** to open the drop-down list. 
     2.  Below the **Legacy MesssageCard samples** category, select a sample message card.
         {{% alert type="info" %}}Do not select any sample card above the **Legcy MessageCard sample**. They are adaptive cards, which do not work with the Microsoft Teams connector.{{% /alert %}}
     
-        ![](attachments/ms-teams-connector/sample-message-cards.png)
+        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/sample-message-cards.png" >}}
     
     3.  Edit the sample message card. The preview of your message card is on the right side of the page. 
     
         Below is the basic structure of a message card and the corresponding fields in JSON:
 
-        ![](attachments/ms-teams-connector/card-json-structure.png)
+        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/card-json-structure.png" >}}
        
         The example above with **Add a comment action** expanded looks like this:
        
-        ![](attachments/ms-teams-connector/add-a-comment-expanded.png) 
+        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/add-a-comment-expanded.png" >}}
 
         {{% alert type="info" %}}For more information about the design of a message card, see [*Design guidelines*](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference#design-guidelines). {{% /alert %}}
 
@@ -238,10 +246,10 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
 ## 6 Troubleshooting
 
-When you get the following pop-up window, then your license is invalid. Check if the configuration of your [LicenseSecret and LicenseKey](#key-generation) is correct.
+When you get the following pop-up window, then your license is invalid. Check if the configuration of your [LicenseSecret and LicenseKey](#obtain-keys) is correct.
 
-![license-invalid-popup](attachments/ms-teams-connector/license-invalid-popup.png)
+{{< figure src="/attachments/appstore/app-services/ms-teams-connector/license-invalid-popup.png" >}}
 
 When you get the following pop-up window, then your quota is used up. You can check your usage statistics on the [Usage dashboard](#statistics).
 
-![quota-exhausted-popup](attachments/ms-teams-connector/quota-exhausted-popup.png)
+{{< figure src="/attachments/appstore/app-services/ms-teams-connector/quota-exhausted-popup.png" >}}

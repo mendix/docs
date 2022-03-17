@@ -48,15 +48,23 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 A trial gives everyone in your company one-month access to the app service. To start a trial, perform the following steps:
 
 1. Go to the [Email Service](https://marketplace.mendix.com/link/component/118393) page in the Marketplace.
+
 2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
+
 3. Select the check box to agree to the **Terms & Conditions**.
+
 4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
+
 5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used.
+
 6. Click the link in the email to go to the [My Subscriptions](/appstore/general/app-store-overview#my-subscriptions) page and log in there. This page shows all the products that you have trials for.
+
 7. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
+
 8.  Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
 
-    ![secretkey-username-generated](attachments/email-service/cs-binding-key-generation.png)
+    {{< figure src="/attachments/appstore/app-services/email-service/binding-key-generation.png" >}}
+    
 
 #### 2.1.2 Starting a Subscription
 
@@ -69,7 +77,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 7. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
 8.  Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
 
-    ![secretkey-username-generated](attachments/email-service/cs-binding-key-generation.png)
+    {{< figure src="/attachments/appstore/app-services/email-service/binding-key-generation.png" >}}
 
 ### 2.2 Installing the Component in Your App
 
@@ -81,7 +89,7 @@ Before you deploy an app, you should configure the binding keys in your app as f
 
 1.  In the **App Explorer**, go to **SendEmailModule** > **Configurations**. You can see **SecretKey** and **UserName** are defined as constants. 
 
-    ![secretkey-and-username](attachments/email-service/configure-username-secretkey.png)
+    {{< figure src="/attachments/appstore/app-services/email-service/configure-username-secretkey.png" >}}
 
 2. For each constant, double-click the constant, enter the key that you saved, and click **OK** to save the changes.
 
@@ -91,7 +99,7 @@ Before you deploy an app, you should configure the binding keys in your app as f
 
 You can use the Email Service in a microflow to send HTML or plain text messages. The Email Service comes bundled with predefined entities **EmailAttr** and **SendEmailResponse**.
 
-![emailattr-and-sendemailresponse-entities](attachments/email-service/inbuilt-domain-entities.png)
+{{< figure src="/attachments/appstore/app-services/email-service/inbuilt-domain-entities.png" >}}
 
 You can create a list using the **EmailAttr** entity to specify the **To**, **CC**, **BCC** recipients. For more information, see [Working with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow).
 
@@ -99,11 +107,11 @@ You can create a list using the **EmailAttr** entity to specify the **To**, **CC
 
 This representative microflow contains an entity with the required attributes, an action to send an email that internally calls the Java action, and a placeholder to capture the return code of the sending email action.
 
-![microflow-to-send-emails](attachments/email-service/email-text-microflow.png)
+{{< figure src="/attachments/appstore/app-services/email-service/email-text-microflow.png" >}}
 
 To configure the **Send email** activity, double-click the activity and specify the following settings in the **Send Email** dialog box with expression syntax:
 
-![send-email-dialog-box](attachments/email-service/send-email-dialog-box.png)
+{{< figure src="/attachments/appstore/app-services/email-service/send-email-dialog-box.png" >}}
 
 * **Required Fields**
     * **From** – Defines the sender's email
@@ -128,15 +136,15 @@ After the **Send Email** activity is configured, once the microflow that uses th
 
 The following microflow shows a possible way to generate HTML content using a template. The template contains fixed text with some placeholders for variables.
 
-![microflow-to-generate-html-body-content](attachments/email-service/generate-html-body-content-microflow.png)
+{{< figure src="/attachments/appstore/app-services/email-service/generate-html-body-content-microflow.png" >}}
 
 The second step of the microflow creates an HTML file from the template contents after possible variable substitution.
 
-![generate-document-dialog-box](attachments/email-service/generate-document-dialog-box.png)
+{{< figure src="/attachments/appstore/app-services/email-service/generate-document-dialog-box.png" >}}
 
 The third step of the microflow generates a string from this HTML file using the **String from file** action.
 
-![string-from-file-dialog-box](attachments/email-service/string-from-file-dialog-box.png)
+{{< figure src="/attachments/appstore/app-services/email-service/string-from-file-dialog-box.png" >}}
 
 In the last step of the microflow, you can add the variable for the generated HTML content into the **Body** field of the **Send email** activity.
 
@@ -144,12 +152,12 @@ In the last step of the microflow, you can add the variable for the generated HT
 ### 4.2 Sending Message with Attachment(s) to Recipients
 
 This is a representative microflow that sends emails with file attachments. The file attachments should have the file types that are [supported](#unsupported-file-types).
-	
-![microflow-to-send-message-with-attachments](attachments/email-service/microflow.png)
+
+{{< figure src="/attachments/appstore/app-services/email-service/microflow.png" >}}
 	
 The **Attachment** attribute accepts a list of **FileDocumentObject**. You can either use **System.FileDocument** or use [File Dropper](https://marketplace.mendix.com/link/component/111497) to create a list of **FileDocumentObject** that will be sent as attachments with the email.
 
-![filedocument-entity](attachments/email-service/system-filedocument-model.png)
+{{< figure src="/attachments/appstore/app-services/email-service/system-filedocument-model.png" >}}
 
 {{% alert type="info" %}}The size of the attached file(s) multiplied by the total number of recipients in the "To", "CC", and "BCC" lists is counted against the Data transfer utilization.{{% /alert %}}
 
@@ -176,19 +184,19 @@ You can make your emails comply with [Domain-based Message Authentication, Repor
 
 You can configure your environments with email addresses that you wish to use to send emails by using the Communication Services Console. 
 
-![cs-console](attachments/email-service/cs-console.png)
+{{< figure src="/attachments/appstore/app-services/email-service/console.png" >}}
 
 You can use the **Email ID** text input box to provide sender's email address. 
 
-![cs-console-email-text-input](attachments/email-service/cs-console-email-text-input.png)
+{{< figure src="/attachments/appstore/app-services/email-service/console-email-text-input.png" >}}
 
 Optionally you can also provide **Mail From Domain** information that you may wish to use with your [Email Service](https://marketplace.mendix.com/link/component/118393) instance. For more details you can check [Configuring the Mail From Domain](#config-mail-from-domain) section. 
 
-![cs-console-mail-from-domain-text-input](attachments/email-service/cs-console-mail-from-domain-text-input.png)
+{{< figure src="/attachments/appstore/app-services/email-service/console-mail-from-domain-text-input.png" >}}
 
 You can also opt for the domain configuration by providing the domain address. Along with the domain, you are required to provide sender's email addresses to be used to send emails. 
 
-![cs-console-domain](attachments/email-service/cs-console-domain.png)
+{{< figure src="/attachments/appstore/app-services/email-service/console-domain.png" >}}
 
 ### 5.1 Configuring the Mail From Domain {#config-mail-from-domain}
 
@@ -220,37 +228,37 @@ The SPF record and MX record use the formats shown in the following table:
 
 You can select either **Email** or **Domain** verification by using the radio option.
 
-![cs-console-email-verification](attachments/email-service/cs-console-email-verification.png)
+{{< figure src="/attachments/appstore/app-services/email-service/console-email-verification.png" >}}
 
-![cs-console-domain-verification](attachments/email-service/cs-console-domain-verification.png)
+{{< figure src="/attachments/appstore/app-services/email-service/console-domain-verification.png" >}}
 
 #### 5.3.1 Email Id Verification
 
 When you configure email address for your environment, you are required to go through a verification process. You can use the **Verify** button to verify individual email addresses. 
 
-![cs-email-verification](attachments/email-service/cs-email-verification.png)
+{{< figure src="/attachments/appstore/app-services/email-service/email-verification.png" >}}
 
 Soon after you should get an alert window indicating that the verification process is in progress.
 
-![cs-email-verification-in-progress](attachments/email-service/cs-email-verification-in-progress.png)
+{{< figure src="/attachments/appstore/app-services/email-service/email-verification-in-progress.png" >}}
 
 You should receive an email from `verify-email@notify.mendix.com` to the configured email address. Click on the link provided in the email to complete the process. Until the verification process is complete, you shall continue to see a message saying the verification is **Pending**.
 
-![cs-email-verification-pending](attachments/email-service/cs-email-verification-pending.png)
+{{< figure src="/attachments/appstore/app-services/email-service/email-verification-pending.png" >}}
 
 #### 5.3.2 Domain Verification
 
 Similarly, you can opt for domain verification. You can use the **Save** button to verify domain address. 
 
-![cs-domain-verification](attachments/email-service/cs-domain-verification.png)
+{{< figure src="/attachments/appstore/app-services/email-service/domain-verification.png" >}}
 
 You should get an alert window indicating that the verification process is in progress.
 
-![cs-domain-verification-in-progress](attachments/email-service/cs-domain-verification-in-progress.png)
+{{< figure src="/attachments/appstore/app-services/email-service/domain-verification-in-progress.png" >}}
 
 Until the verification process is complete, you shall continue to see a message saying the verification is **Pending**.
 
-![cs-domain-verification-pending](attachments/email-service/cs-domain-verification-pending.png)
+{{< figure src="/attachments/appstore/app-services/email-service/domain-verification-pending.png" >}}
 
 ## 6 Read More
 * [Send Emails from a Mendix App](https://academy.mendix.com/link/paths/117/Send-Emails-from-a-Mendix-App-)

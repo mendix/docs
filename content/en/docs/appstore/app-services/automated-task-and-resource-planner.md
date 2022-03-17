@@ -63,13 +63,11 @@ To install this module, follow these steps:
      * [Encryption](https://marketplace.mendix.com/link/component/1011)
      
 2. Configure [Encryption](/appstore/modules/encryption#configuration).
-
 3. Go to the Marketplace and download the *AutomatedPlanningCore.mpk* file for the [Automated Task & Resource Planner](https://marketplace.mendix.com/link/component/118393).
-
 4.  To add the Automated Task & Resource Planner to your app in Mendix Studio Pro, follow these steps:
     1.  In the **App Explorer**, right-click the app, click **Import module package**, and then select **mpk* file.
 
-        ![pop-up-menu-in-app-explorer](attachments/automated-task-and-resource-planner/import-module-in-app-explorer.png)
+        {{< figure src="/attachments/appstore/app-services/automated-task-and-resource-planner/import-module-in-app-explorer.png" >}}
 
     2. In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
@@ -82,7 +80,7 @@ To install this module, follow these steps:
 6. After the deployment, go to your page.
 7. Enter the **Automated planning endpoint** as well as the **username** and **password** of your user account.
 
-![automated-planning-endpoint-username-settings](attachments/automated-task-and-resource-planner/automated-planning-endpoint-username-settings.png)
+{{< figure src="/attachments/appstore/app-services/automated-task-and-resource-planner/automated-planning-endpoint-username-settings.png" >}}
 
 {{% todo %}}[how to get to the **Settings** page? {{% /todo %}}
 
@@ -90,13 +88,13 @@ To install this module, follow these steps:
 
 ### 3.1 Entities {#entities}
 
-![build-request](attachments/automated-task-and-resource-planner/build-request.png)
+{{< figure src="/attachments/appstore/app-services/automated-task-and-resource-planner/build-request.png" >}}
 
 #### 3.1.1 Request
 
 You can build the request using the entities from the module. The description of these entities is below.
 
-![planning-setting](attachments/automated-task-and-resource-planner/planning-request.png)
+{{< figure src="/attachments/appstore/app-services/automated-task-and-resource-planner/planning-request.png" >}}
 
 `PlanningRequest` is the settings for this planning.
 
@@ -119,7 +117,7 @@ You can build the request using the entities from the module. The description of
 | `SoftPinning` | Boolean | Enables soft pinning. A human planner is always able to override the planning suggested by the field service planner application. The human planner can pin tasks to a pre-specified mechanic, a pre-specified time, or a combination of both. There are different types of pins, "hard" pins are always followed by the planner, while "soft" pins are followed by the application as much as possible, but if the situation requires a change, for example, if a higher priority task comes in, then the application changes the plan. |
 | `TaskSplitting` | Boolean | Enables splitting a task. In some cases, tasks can span multiple days. <br/>When the value is `true`, the planner automatically splits these into multiple appointments. It is also possible to specify a minimum appointment duration, so the planner does not make the task start shortly before the end of the day. <br/>When the value is `false`, the planner cannot split up a task. |
 
-![task](attachments/automated-task-and-resource-planner/task.png)
+{{< figure src="/attachments/appstore/app-services/automated-task-and-resource-planner/task.png" >}}
 
 `Task` is a unit of work. A task can be the delivery of an order, a work order, a reservation, etc. Tasks are assigned to the `Resources` and `TimeSlots`. Tasks are associated to `PlanningRequest`, and at least one `Task` is required to make a request. 
 
@@ -139,7 +137,7 @@ You can build the request using the entities from the module. The description of
 | `TimeSlotPinType` | Enumeration | The pin type.<br />If the value is set to `HARD`, the planner will never change this time  slot assignment. <br />If the value is to `SOFT`,  the planner will only change the assignment  if other tasks would be dropped. |
 | `WorkDurationMinutes` | Integer | The expected work duration in  minutes. <br />The value must be set if `TimeSlotPinType` is `NON`. |
 
-![resource](attachments/automated-task-and-resource-planner/resource.png)
+{{< figure src="/attachments/appstore/app-services/automated-task-and-resource-planner/resource.png" >}}
 
 `Resource` is the resource that can be used for planning. This can be a mechanic, a tennis court, a delivery driver, etc. At least one `Resource` is required to make a request.
 
@@ -149,7 +147,7 @@ You can build the request using the entities from the module. The description of
 | `MaxOvertimeMinutes` | Integer | The maximum overtime in minutes that the resource can make. Overtime is only used to finish a task. New tasks are not started within this time. |
 | `Reference`  | String | The reference which can be used by the client to map error messages to client-side entities. This is not used by the planner other than validations. |
 
-![property](attachments/automated-task-and-resource-planner/property.png)
+{{< figure src="/attachments/appstore/app-services/automated-task-and-resource-planner/property.png" >}}
 
 `Property` is used to restrict the tasks that a resource can pick up. A resource needs to have the required properties to pick up a task. `Property` is required if the `RequiredProperties` setting is set to `true`. 
 
@@ -157,14 +155,12 @@ You can build the request using the entities from the module. The description of
 | --------- |--------|--------|
 | `Value`   | String | String that needs to match for the `RequiredProperty` and the `ResourceProperty`. <ul><li>`RequiredProperty`: the set properties on the resource that are required to fix a task.</li> <li>`ResourceProperty`: the properties that the resource possesses to pick up tasks.</li></ul> |
 
-![location](attachments/automated-task-and-resource-planner/location.png)
+{{< figure src="/attachments/appstore/app-services/automated-task-and-resource-planner/location.png" >}}
 
 `Location` is a location with ID and coordinates. A location can be the following:
 
 ●   TaskLocation: location of the task
-
 ●   CurrentLocation: Current location of the resource
-
 ●   DefaultLocation: Default location of the resource (where the resource starts and ends the day)
 
 Locations are optional, but if used, they need to be added to all the tasks and resources.
@@ -175,7 +171,7 @@ Locations are optional, but if used, they need to be added to all the tasks and 
 | `Longitude`  | Decimal | The longitude of the location.|
 | `Reference`  | String | Reference which can be used by the client to map error messages to client-side entities. This is not used by the planner other than validations. |
 
-![timeslot](attachments/automated-task-and-resource-planner/timeslot.png)
+{{< figure src="/attachments/appstore/app-services/automated-task-and-resource-planner/timeslot.png" >}}
 
 `TimeSlot` is a time interval. It is used for the following:
 
@@ -196,7 +192,7 @@ Locations are optional, but if used, they need to be added to all the tasks and 
 | `End`   | Date and time | The end of the interval. |
 | `Reference`  | String | Reference which can be used by the client to map error messages to client-side entities. It is not used by the planner other than validations. |
 
-![dependency](attachments/automated-task-and-resource-planner/dependency.png)
+{{< figure src="/attachments/appstore/app-services/automated-task-and-resource-planner/dependency.png" >}}
 
 `Dependency` is a list of task IDs that must finish before starting the current task.
 
@@ -206,11 +202,11 @@ Locations are optional, but if used, they need to be added to all the tasks and 
 
 #### 3.1.2 Response
 
-![response](attachments/automated-task-and-resource-planner/response.png)
+{{< figure src="/attachments/appstore/app-services/automated-task-and-resource-planner//response.png" >}}
 
 If the response goes well, you can retrieve the `TaskResponse` and map the results to your own entities.
 
-![planning-response](attachments/automated-task-and-resource-planner/planning-response.png)
+{{< figure src="/attachments/appstore/app-services/automated-task-and-resource-planner/planning-response.png" >}}
 
 `PlanningResponse` is the solution to the planning request. 
 
@@ -222,7 +218,7 @@ If the response goes well, you can retrieve the `TaskResponse` and map the resul
 | `Status` | Enumeration | Execution status.<br />The value can be the following: `Canceled`, `Error`, `Finished`, `Received`, `Running`. |
 | `Username`  | String | Username of the user who created the planning. |
 
-![timeslot-response](attachments/automated-task-and-resource-planner/task-response.png)
+{{< figure src="/attachments/appstore/app-services/automated-task-and-resource-planner/task-response.png" >}}
 
 `TaskResponse` is a task in a planning response.
 
@@ -231,7 +227,7 @@ If the response goes well, you can retrieve the `TaskResponse` and map the resul
 | `_id`   | String | The task ID.  |
 | `AssignedResourceID` | String | The ID of the resource to which this task has been assigned. |
 
-![timeslot-response](attachments/automated-task-and-resource-planner/timeslot-response.png)
+{{< figure src="/attachments/appstore/app-services/automated-task-and-resource-planner/timeslot-response.png" >}}
 
 `TimeSlotResponse` is a time slot for a task in the planning response.
 
@@ -243,7 +239,7 @@ If the response goes well, you can retrieve the `TaskResponse` and map the resul
 | `WorkStart`     | Date and time | The time when the resource starts working. |
 | `WorkEnd`       | Date and time | The time when the resource finishes working. |
 
-![warning](attachments/automated-task-and-resource-planner/warning.png)
+{{< figure src="/attachments/appstore/app-services/automated-task-and-resource-planner/warning.png" >}}
 
 `Warning` is the warning for the task. It has one value. `TaskReponse` can contain a list of warnings. The possible values are described in the table:
 
@@ -251,7 +247,7 @@ If the response goes well, you can retrieve the `TaskResponse` and map the resul
 | --------- |--------|--------|
 | `Value`   | Enumeration | The value can be the following: <ul><li>  `MISSING_REQUIRED_PROPERTIES` </li><br/><li>`NO_TIME_SLOTS_PLANNED`</li><li>`NO_VALID_TIME_FOUND`</li><li>`OUTSIDE_EXECUTION_WINDOW`</li><li> `OVERLAP`</li><li> `RESOURCE_MISMATCH`</li><li> `RESOURCE_NOT_AVAILABLE`</li><li> `SOFT_PINNED_RESOURCES_CHANGED`</li><li> `SOFT_PINNED_TIME_SLOTS_CHANGED`</li> </ul> |
 
-![validation-error](attachments/automated-task-and-resource-planner/validation-error.png)
+{{< figure src="/attachments/appstore/app-services/automated-task-and-resource-planner/validation-error.png" >}}
 
 `ValidationError` contains error information.
 
@@ -260,7 +256,7 @@ If the response goes well, you can retrieve the `TaskResponse` and map the resul
 | `ErrorCode`    | Enumeration | A machine readable error code. |
 | `ErrorMessage` | String | A human readable error code. |
 
-![error-reference](attachments/automated-task-and-resource-planner/error-reference.png)
+{{< figure src="/attachments/appstore/app-services/automated-task-and-resource-planner/error-reference.png" >}}
 
 `ErrorReference` points to the object which caused the validation error. This can either be the source of the error or the target.
 

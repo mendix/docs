@@ -1,100 +1,53 @@
-# Mendix Documentation ![badge](https://img.shields.io/badge/hugo-0.31.1-green.svg)
+# Mendix Documentation [![badge](https://img.shields.io/badge/hugo-0.91.0-green.svg)](https://gohugo.io/) [![badge](https://img.shields.io/badge/node-16.14.0-green.svg)](https://nodejs.org/en/) [![badge](https://img.shields.io/badge/docsy-0.1.0-green.svg)](https://www.docsy.dev/)
 
 This repository contains the Mendix documentation, which is served on [https://docs.mendix.com](https://docs.mendix.com).
 
 Build status:
 
-* master [![Build Status](https://secure.travis-ci.org/mendix/docs.png?branch=master)](https://travis-ci.org/mendix/docs)
+* production [![Build Status](https://secure.travis-ci.org/mendix/docs.png?branch=production)](https://travis-ci.org/mendix/docs)
 * development [![Build Status](https://secure.travis-ci.org/mendix/docs.png?branch=development)](https://travis-ci.org/mendix/docs)
 
 ## Contribute
 
-Want to contribute? Take a look at [How to Contribute to the Mendix Documentation](https://docs.mendix.com/developerportal/community-tools/contribute-to-the-mendix-documentation).
+Want to contribute? Take a look at [How to Contribute to the Mendix Documentation](https://docs.mendix.com/developerportal/community-tools/contribute-to-the-mendix-documentation). It will guide you through the process of submitting updates to the docs directly from Github or from a local branch.
 
-## Development
+## Local Build
 
-There are two ways to develop the documentation: you can run it locally (which is faster) or use Docker. With Docker, you will not have to install Hugo and Node, but you need Docker and Docker Compose.
+You can clone a local copy of the repository and build local previews. The Mendix documentation is built on top of Hugo and Node.JS. The theme of the page is based on Docsy. To develop the documentation locally, follow the steps in the next section.
 
-### Local Development
+### Setting Up
 
-The Mendix documentation is built on top of Hugo and Node.JS. When you want to develop the documentation locally, you need to have both installed.
+#### Cloning the Repo
 
-#### Prerequisites
+To clone the repo there are a few things to keep in mind:
 
-Hugo is a static page generator that runs on Go. Make sure you install Hugo following [these guides](https://gohugo.io/getting-started/installing/).
+* If you are running on Windows, the directory path for the local directory should not be too long, otherwise some files will reach the limits of git’s file length. A base path of up to 50 characters works - 64 characters is currently too long.
+* If you are using a Git GUI-based tool (such as Sourcetree), make sure you have **Recurse submodules** checked. Github Desktop does this automatically for you.
+* If you are cloning the repo via Git commands from a terminal, run: `git clone --recurse-submodules https://github.com/mendix/docs`
 
-Node.js is a JavaScript runtime. You can install it by downloading the installer [here](https://nodejs.org/en/download/). We are using version (`12.x.x`).
+Clone the repo through one of the above mentioned methods. Check that you have content within the directory `/themes/docsy/`.
 
 #### Installing Dependencies
 
-1. Open a terminal window. In Windows, you can run this by pressing <kbd>Win</kbd> + <kbd>R</kbd>, typing `cmd`, and pressing <kbd>Enter</kbd>.
-2. Go to the folder where the documentation resides: `cd C:\Projects\Mendix\docs` (assuming you have put it in this folder).
-3. Check if you have both Hugo, Node.JS and yarn installed correctly by typing these commands in your terminal and pressing <kbd>Enter</kbd>):
+1. Download and install [NodeJS](https://nodejs.org/en/download/). Use the version indicated at the top of this readme.
+1. In a terminal at the root of the repository run: `npm install`.
+1. Download the [0.91 Hugo](https://github.com/gohugoio/hugo/releases/tag/v0.91.0) *extended* version.
+1. Extract hugo.exe from the archive and place it in the root of the repo directory. None of the other files are needed.
 
-   `hugo version`
+Changes made to your local repository, such as adding the Hugo executable, should be excluded from git control. If any new/changed files are added to your uncommitted files, please do not commit the changes.
 
-   It should show you the version: `Hugo Static Site Generator v0.31.1 xxxx`. **Note: It is important to match this version number! Because of breaking changes this will not work with Hugo version >= 0.32**
+### Running the Server
 
-   `node -v`
+To run a local version of the site: 
 
-   It should show you the version: `v12.0.0` (the version number you installed)
+1. Run cmd: `hugo server --environment development`
 
-   `yarn -v`
+    Once the site is built you will see a table indicating how many pages have been created. You will need to wait until the server is set up before you can see the site.
 
-   It should show you yarn version
+2. Go to http://localhost:1313/  and see the site live.
 
-4. If both commands work, there is one more command you need to type to install the dependencies:
+See the [Hugo Server](https://gohugo.io/commands/hugo_server/) documentation for more options (for example, if you want to change the port on which the site is published)
 
-   `yarn install`
+#### Potential Issues
 
-   This will take a while. It will install all project dependencies specified in package.json.
-
-#### Running the Server
-
-##### Windows
-
-The steps in this section assume you have installed Hugo and Node in the root directory of your local repository. For example, Hugo is installed in *C:\Projects\Mendix\docs\hugo*. If this is not the case, you will have to edit the commands in step 3 to reflect their install paths.
-
-Running the server is done by performing the following steps:
-
-1. In a terminal window navigate to your local repository directory. 
-2. Run command `SETLOCAL`.
-3. Run command `SET PATH="%PATH%;C:\Projects\Mendix\docs\node;C:\Projects\Mendix\docs\hugo"`.
-4. Run command `npm.cmd run win-serve-test`.
-5. Wait for the site to build, it can take over 30 seconds.
-6. When it's done, open a browser and go to [http://localhost:4000](http://localhost:4000).
-
-##### Other
-
-Running the server is done by executing the following command: `npm run serve-test`.
-
-It takes a few seconds to build the site and setup the server.
-
-When it's done, open a browser and go to [http://localhost:4000](http://localhost:4000).
-
-#### Gulp Tasks
-
-By running `yarn run help`, you can access the different tasks that are used when building the website.
-
-**Please note that the task `check:html` is currently broken in Windows.**
-
-### Using Docker for Development
-
-A Docker setup potentially makes development and deployment easier.
-
-To use it, follow these steps:
-
-1. Install [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/).
-2. Build the Docker images with:
-
-   ```sh
-   docker-compose build
-   ```
-
-3. Then run:
-
-   ```sh
-   docker-compose up
-   ```
-
-   This will start up the server and watches for changes. You should be able to visit [http://localhost:4000/](http://localhost:4000/) to view the site.
+If you are using a Mac, you might get an error `too many open files` or `fatal error: pipe failed`. By default, your Mac is probably set to restrict the number of open files. You will need to override this, see [Docsy known issues](https://www.docsy.dev/docs/getting-started/#known-issues) for more information.

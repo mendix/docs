@@ -17,9 +17,9 @@ The [General Purpose Optical Character Recognition](https://marketplace.mendix.c
 
 ## 3 Configuration
 
-1. Double-click the **General Purpose OCR** activity to open the **General Purpose OCR** dialog window.
+1.  Double-click the **General Purpose OCR** activity to open the **General Purpose OCR** dialog window.
 
-![General Purpose OCR dialog winidow](attachments/general-purpose-ocr/general-purpose-ocr-dialog-window.png)
+    {{< figure src="/attachments/appstore/app-services/general-purpose-ocr/general-purpose-ocr-dialog-window.png" >}}
 
 2. Select an **Image List** which inherits from `System.Image`. You can also click **Edit** to edit it.
 
@@ -39,8 +39,6 @@ The [General Purpose Optical Character Recognition](https://marketplace.mendix.c
    * Encryption_Key
    * Secret_Key
 
-     ![Keys under configurations in a tree view](attachments/general-purpose-ocr/configurations-keys.png)
-
-   {{% alert type="info" %}}
-   Credentials are generated when you create binding keys on Marketplace.
-   {{% /alert %}}
+    {{< figure src="/attachments/appstore/app-services/general-purpose-ocr/configurations-keys.png" >}}
+   
+    {{% alert type="info" %}}Credentials are generated when you create binding keys on Marketplace. {{% /alert %}}

@@ -8,6 +8,8 @@ tags: ["Deploy","Mendix Cloud","Developer Portal", "Free App", "licensed", "limi
 aliases:
     - /developerportal/howto/deploying-to-the-cloud.html
     - /mendixcloud/deploying-to-the-cloud.html
+    - /developerportal/howto/deploying-to-the-cloud
+    - /mendixcloud/deploying-to-the-cloud
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor #plans, below, is mapped from the Control Center within the Developer Portal.

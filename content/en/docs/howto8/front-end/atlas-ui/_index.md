@@ -7,6 +7,8 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 aliases:
     - /howto8/front-end/create-a-custom-theme-with-the-mendix-ui-framework.html
     - /howto8/ux/create-a-custom-theme-with-the-mendix-ui-framework.html
+    - /howto8/front-end/create-a-custom-theme-with-the-mendix-ui-framework
+    - /howto8/ux/create-a-custom-theme-with-the-mendix-ui-framework
 ---
 
 ## 1 Introduction

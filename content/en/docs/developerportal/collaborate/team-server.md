@@ -8,6 +8,8 @@ tags: ["Studio Pro", "Team Server", "Developer Portal", "commit", "branch"]
 aliases:
     - /refguide/team-server.html
     - /developerportal/develop/team-server.html
+    - /refguide/team-server
+    - /developerportal/develop/team-server
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

@@ -15,6 +15,16 @@ aliases:
     - /refguide8/search-button.html
     - /refguide8/select-all-button.html
     - /refguide8/select-button.html
+    - /refguide8/add-button
+    - /refguide8/deselect-all-button
+    - /refguide8/export-to-csv-button
+    - /refguide8/export-to-excel-button
+    - /refguide8/grid-action-button
+    - /refguide8/grid-new-button
+    - /refguide8/remove-button
+    - /refguide8/search-button
+    - /refguide8/select-all-button
+    - /refguide8/select-button
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

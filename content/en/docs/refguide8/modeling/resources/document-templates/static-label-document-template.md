@@ -6,6 +6,8 @@ tags: ["studio pro"]
 aliases:
     - /refguide8/Static+label+(document+template).html
     - /refguide8/static-label-(document-template).html
+    - /refguide8/Static+label+(document+template)
+    - /refguide8/static-label-(document-template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

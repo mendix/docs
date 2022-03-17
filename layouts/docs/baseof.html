@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}" class="no-js">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="td-{{ .Kind }}">
+
+<!-- NK - deactivation of original navbar 
+    <header>
+      {{ partial "navbar.html" . }}
+    </header>
+    </div> 
+-->
+
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap stretch-main">
+          <aside data-stt-ignore class="d-none d-lg-block col-lg-4 col-xl-3 td-sidebar d-print-none"> <!-- NK - adjusted resizing for different screens -->
+            {{ partial "sidebar.html" . }}
+          </aside>
+          <aside data-stt-ignore class="d-none d-xl-block col-xl-3 td-sidebar-toc d-print-none"> <!-- NK - adjusted resizing for different screens -->
+            {{ partial "page-meta-links.html" . }}
+                <!-- NK - insert of layout element for line break and ToC title -->
+                <span class="d-block p-2">
+                    <hr>
+                    <a href="{{ .Permalink }}">{{ .Title }}</a> <!-- NK - insert of title into ToC -->
+                </span>
+            {{ partial "toc.html" . }}
+            {{ partial "taxonomy_terms_clouds.html" . }}
+          </aside>
+          <main class="col-12 col-lg-8 col-xl-6" role="main"> <!-- NK - adjusted resizing for different screens -->
+        <!-- MvM - Do a test for missing Title -->
+        {{ if not .Title }}
+            {{ warnf "File %s \n\t\t\t\thas no title in the front matter\n " .Page.File.Path }}
+        {{ end }}
+		 <!-- NK - START of addition of versions selector menu, 
+		taken from themes\docsy\layouts\partials\navbar.html, 
+		this might get moved again, with further styling changes -->
+			{{ if  .Site.Params.versions }}
+			<li class="nav-item dropdown mr-4 d-none d-lg-block">
+				{{ partial "navbar-version-selector.html" . }}
+			</li>
+			{{ end }}
+		  <!-- END of addition -->
+          <!-- MvM: Move breadcrumb above banner -->
+          {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+		  
+          {{ partial "version-banner.html" . }}
+		  
+            {{ block "main" . }}{{ end }}
+          </main>
+        </div>
+      </div>
+	  {{ partial "footer.html" . }}
+    </div>
+    {{ partial "scripts.html" . }}
+  </body>
+</html>

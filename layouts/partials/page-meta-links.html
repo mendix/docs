@@ -1,0 +1,57 @@
+{{ if .Path }}
+  {{ $pathFormatted := replace .Path "\\" "/" }}
+  {{ $gh_repo := ($.Param "github_repo") }}
+  {{ $gh_url := ($.Param "github_url") }}
+  {{ $gh_subdir := ($.Param "github_subdir") }}
+  {{ $gh_project_repo := ($.Param "github_project_repo") }}
+  {{ $gh_branch := (default "development" ($.Param "github_branch")) }}
+  <!-- NK - added layout elements to menu icons above ToC -->
+  <div class="container" style="padding-top: 0.5rem">
+      <div class="row justify-content-left">
+          <div class="col-3">
+            {{ if $gh_url }}
+              <!-- NK - changed icon properties -->
+              <a data-proofer-ignore href="{{ $gh_url }}" target="_blank"><img class="my-icon" src="/icons/content-paper-edit.svg" title="Edit on Github"></a>
+            {{ else if $gh_repo }}
+              {{ $gh_repo_path := printf "%s/content/%s" $gh_branch $pathFormatted }}
+              {{ if and ($gh_subdir) (.Site.Language.Lang) }}
+                {{ $gh_repo_path = printf "%s/%s/content/%s/%s" $gh_branch $gh_subdir ($.Site.Language.Lang) $pathFormatted }}
+              {{ else if .Site.Language.Lang }}
+                {{ $gh_repo_path = printf "%s/content/%s/%s" $gh_branch ($.Site.Language.Lang) $pathFormatted }}
+              {{ else if $gh_subdir }}
+                {{ $gh_repo_path = printf "%s/%s/content/%s" $gh_branch $gh_subdir $pathFormatted }}
+              {{ end }}
+            {{ $editURL := printf "%s/edit/%s" $gh_repo $gh_repo_path }}
+            {{ $createURL := printf "%s/edit/%s" $gh_repo $gh_repo_path }}
+            {{ $issuesURL := printf "%s/issues/new?title=%s" $gh_repo (safeURL $.Title )}}
+            {{ $newPageStub := resources.Get "stubs/new-page-template.md" }}
+            {{ $newPageQS := querify "value" $newPageStub.Content "filename" "change-me.md" | safeURL }}
+            {{ $newPageURL := printf "%s/new/%s?%s"  $gh_repo $gh_repo_path $newPageQS }}
+              <!-- NK - changed icon properties -->
+              <a data-proofer-ignore href="{{ $editURL }}" target="_blank"><img class="my-icon" src="/icons/content-paper-edit.svg" title="Edit on Github"></a>
+          </div>
+          <div class="col-3">
+              <!-- NK - changed icon properties -->
+              <a href="{{ $issuesURL }}" target="_blank"><img class="my-icon" src="/icons/messages-bubble-text-1.svg" title="Leave feedback"></a>
+              <!-- NK - deactivated icon for project issue -->
+              <!-- {{ if $gh_project_repo }}
+                {{ $project_issueURL := printf "%s/issues/new" $gh_project_repo }}
+                  <a href="{{ $project_issueURL }}" target="_blank"><i class="fas fa-tasks fa-fw"></i> {{ T "post_create_project_issue" }}</a>
+                {{ end }} -->
+            {{ end }}
+        <!-- MvM: get the alternative output formats from the PAGE (in theme it is for Section) and change text to print_page-->
+        {{ with .AlternativeOutputFormats.Get "print" }}
+          </div>
+          <div class="col-3">
+            <!-- NK - changed icon properties -->
+            <a data-proofer-ignore id="print" href="{{ .Permalink | safeURL }}"><img class="my-icon" src="/icons/print-text.svg" title="Go to print view"></a>
+        {{ end }}
+          </div>
+      </div>
+  </div>
+{{ end }}
+
+
+
+
+

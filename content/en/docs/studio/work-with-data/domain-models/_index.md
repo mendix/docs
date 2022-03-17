@@ -56,7 +56,6 @@ You can add different type of entities to your domain model:
 * **Entity** – an entity that can have attributes, associations, and represents a class of real-world objects.
 * **Image Entity** – a special type of entity that allows you to store an image. For example, on pages, users will be able  to view and upload images with the help of an image entity.
 * **File Entity** – a special type of entity that allows you to store a file. For example, on pages, users will be able to upload and download files (such as, a text document, a pdf, a spreadsheet) with the help of a file entity.
-* **Workflow Entity** – a special type of entity that is used as a context for a [workflow](/studio/workflows/). 
 * **External Entity** – only available if you have the Data Hub functionality enabled for your organization. For more information on external entities, see [Data Hub in Studio](/studio/data-hub-in-studio/).
 
 ### 2.2 Entity Properties

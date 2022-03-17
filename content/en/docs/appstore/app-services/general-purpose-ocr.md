@@ -10,7 +10,7 @@ The [General Purpose Optical Character Recognition](https://marketplace.mendix.c
 
 ## 2 Installation
 
-1. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) to import the General Purpose OCR component into your application.
+1. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the General Purpose OCR component into your application.
 
 2. In the **Toolbox**, drag the **General Purpose OCR** activity from the **Document Data Capture Services** category into your microflow.
 
@@ -27,7 +27,7 @@ The [General Purpose Optical Character Recognition](https://marketplace.mendix.c
 
 4. If you want to execute the extraction action in a task queue, select **Execute this Java action in a Task Queue**, then click **Select** and select a task queue.
 
-   For more information, see [Task Queue](/refguide/task-queue) (for Mendix version 9.0.3 and above) or [Process Queue](/appstore/modules/process-queue) (for Mendix version below 9.0.3).
+   For more information, see [Task Queue](/refguide/task-queue/) (for Mendix version 9.0.3 and above) or [Process Queue](/appstore/modules/process-queue/) (for Mendix version below 9.0.3).
 
 5. To use the **Return Value**, select **Yes** and enter a **Variable name**.
 

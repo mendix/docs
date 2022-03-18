@@ -43,12 +43,19 @@ Mendix 9.13.0 and above supports the following schedule types:
 ## 3 Migration
 
 When migrating to Mendix 9.13.0 or above Studio Pro will attempt to convert legacy scheduled events into task queue based events,
-when possible. In the following cases this is not possible and manual conversion is requested:
+when possible. In cases where this is not possible a deprecation warning will be shown. Right-click on the warning to see
+possible options for fixing it. If none of them is suitable, you should perform the conversion manually.
 
-* the event has a start-time in the future; change the start-time to a date in the past or use a task based scheduled event
-* the event has interval type Month or Year, which is translated in 31 and 365 days respectively; use the Monthly or Yearly type 
-* the event has interval type Seconds, which is no longer supported
-* the event has an interval that doesn't divide its interval type nicely, causing it to drift (e.g. every 7 minutes, causing it to 'drift' 4 minutes every hour)
+The following cases cannot be migrated automatically during model conversion:
+
+* The event is not repeating, which we'll stop supporting; remove the scheduled event or use the [Java API](task-queue#scheduling) to schedule a one-time action.
+* The event has a start-time in the future, which we'll stop supporting; change the start-time to a date in the past or switch to a task queue based scheduled event.
+* The event has interval type Month or Year, which is translated to 31 and 365 days respectively; use the Monthly or Yearly type instead.
+* The event has interval type Seconds, which we'll stop supporting; use a schedule event with a 1-minute interval instead.
+* The event has an interval that doesn't divide its interval type nicely (e.g. an event that executes every 7 minutes will execute 8 times per hour,
+  with 4 minutes left, causing it to 'drift' 4 minutes every hour). If it is absolutely critical that a non-supported interval is used,
+  you should schedule the event with interval value 1 (e.g. every minute) and then start your microflow with a decision that
+  checks whether it should be continue executing at that particular time.
 
 {{% alert type="warning" %}}
 Mendix 9.13.0 and above allow legacy scheduled events to be edited, but do not allow new legacy scheduled events to be created.

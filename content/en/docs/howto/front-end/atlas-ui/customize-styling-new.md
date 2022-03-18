@@ -568,7 +568,7 @@ excludeWebView
 excludeHelpers
 ```
 
-## 9 Customizing index.html (Web)
+## 9 Customizing index.html (Web) {#custom-web}
 
 By default, Mendix generates the *index.html* (the page that is loaded to start the app), based on the app configuration. In some cases it may be needed to customize this HTML, which can be done by creating a file called *index.html* in the **theme/web** folder. To make sure that your file has the right structure, we recommend you copy *index-example.html* from the **deployment/web** folder to the **theme/web**, rename it to *index.html*, and then use it as a starting point. This file will be created after you have deployed your app locally at least once.
 

@@ -28,4 +28,4 @@ The entity used by the workflow parameter.
 
 ## 3 Read More
 
-* [Workflows](workflows)
+* [Workflows](/studio/workflows/)

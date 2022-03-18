@@ -15,9 +15,7 @@ This document describes workflow properties. For details on what workflows are f
 Workflow properties consist of the following sections:
 
 * [General](#general)
-* [Data](#data)
 * [Display Information](#display-info)
-* [Permissions](#permissions)
 * [Due Date](#due-date)
 * [Admin Page](#admin-page)
 
@@ -34,17 +32,7 @@ The **General** section properties are described in the table below:
 | Title    | Defines a title of the workflow that you see at the top of the working area. |
 | Name     | The internal name of the workflow that must be unique. When referring to the workflow in the app you will use this name. |
 
-### 2.2 Data Section {#data}
-
-The **Data** section contains information on what data context the workflow is using. 
-
-{{< figure src="/attachments/studio/workflows/workflow-properties/data.jpg" alt="Data Section" >}}
-
-**Workflow entity** is an entity that is used as a workflow context. This entity serves as input for the workflow and can hold the data added during the execution of the workflow. For example, for an expense approval process, it holds the amount to approve and the purpose.
-
-This entity should be of a workflow entity type. For more information, see the [Entities and Their Types](/studio/domain-models/#entity-types) section in the *Domain Model*.
-
-### 2.3 Display Information Section {#display-info}
+### 2.2 Display Information Section {#display-info}
 
 The **Display Information** section defines the workflow name and its description that are displayed in the running (published) app. 
 
@@ -57,17 +45,7 @@ The **Display Information** section properties are described in the table below:
 | Workflow Name        | **Workflow name** is displayed in the running app. The **Workflow name** can contain expression outcomes, which will be displayed to the end-users. For example, you can add the **FullName** attribute value from the **Employee Onboarding** data to display the name of the new employee. The expression should be return a string value. |
 | Workflow Description | **Workflow Description** is a description of the workflow displayed in the running app. The **Workflow name** can contain expression outcomes, which will be displayed to the end-users. For example, you can add the **FirstDay** attribute value from the **Employee Onboarding** data to display the start date of the new employee and assign them to a training group. |
 
-### 2.4 Permissions Section {#permissions}
-
-**Allowed roles** defines the [user role](/studio/settings-security/#roles-and-permissions) that can trigger the workflow.
-
-{{< figure src="/attachments/studio/workflows/workflow-properties/permissions.jpg" alt="Permissions Section" >}}
-
-{{% alert color="info" %}}
-This section is only displayed when the security is on. For more information, see [Security](/studio/settings-security/).
-{{% /alert %}}
-
-### 2.4 Due Date Section {#due-date}
+### 2.3 Due Date Section {#due-date}
 
 The **Due Date** section allows you to set a deadline for the workflow and keep track of it. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. For example, you can use this due date to show workflows that are overdue in a dashboard.
 
@@ -81,7 +59,7 @@ The **Due Date** section properties are described in the table below:
 | Duration   | You can set the deadline for the workflow with the **Due In** option, which indicates the number of hours, days, or weeks the workflow is due in. Possible values of the property are the following ones:<br /><ul><li>Hour(s)</li><li>Day(s)</li><li>Week(s)</li> </ul> |
 | Expression | You can set a due date for the workflow writing an expression. For example, to set a due date to tomorrow, you can use `addDays([%CurrentDateTime%], 1)`. For more information on expressions, see [Expressions](/studio/expressions/). |
 
-### 2.5 Admin Page Section {#admin-page}
+### 2.4 Admin Page Section {#admin-page}
 
 **Override Admin Page** is an optional page used for displaying all running workflows to the workflow admin. This overrides a generic page used to display any running workflow in the app, for example, when you have a **Show Workflow Page** set as an [on-click action](/studio/page-editor-widgets-events-section/#show-workflow-page) or as a [microflow activity](/studio/microflows/#microflow-workflow-activities) and would like to override the page selected for this event/activity. 
 

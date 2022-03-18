@@ -346,7 +346,7 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 
 {{< figure src="/attachments/developerportal/operate/metrics/trends-v4/db-cpu-usage.png" >}}
 
-### 5.7 Database Node Disk Throughput{#Trends-dbdiskstatsthroughput}
+### 5.7 Database Node Disk Throughput (in Bytes){#Trends-dbdiskstatsthroughput}
 
 The **Database node disk throughput** graph shows the amount of data that is being read from and written to disk.
 

@@ -30,7 +30,7 @@ The following steps describe how to install the hub and nodes with Docker-Compos
 
 1. Create a folder or a directory to place your *docker-compose.yml* and *browsers.json* files.
 2. Create a folder or directory to place your video files.
-3.  Create a *browsers.json* in your folder/directory (/docker)
+3. Create a *browsers.json* in your folder/directory (/docker)
 
     ```
       {
@@ -59,7 +59,7 @@ The following steps describe how to install the hub and nodes with Docker-Compos
    }
     ```
 
-4.  Create a docker-compose.yml in your folder/directory (/docker)
+4. Create a docker-compose.yml in your folder/directory (/docker)
 
     ```
    version: '3'
@@ -79,7 +79,7 @@ The following steps describe how to install the hub and nodes with Docker-Compos
          - "4444:4444"
     ```
 
-5.  Open a console and give the following commands to pull the images first:
+5. Open a console and give the following commands to pull the images first:
 
     ```
    sudo docker pull selenoid/chrome:65.0
@@ -88,7 +88,7 @@ The following steps describe how to install the hub and nodes with Docker-Compos
    sudo docker pull aerokube/selenoid
     ```
 
-6.  Open a console and give the following command from the folder/directory where you placed your docker-compose.yml:
+6. Open a console and give the following command from the folder/directory where you placed your docker-compose.yml:
 
     ```
     sudo docker-compose up -d
@@ -96,7 +96,7 @@ The following steps describe how to install the hub and nodes with Docker-Compos
     Starting docker_selenoid_1 ... done
     ```
 
-7.  After it started, you can check the status of the container
+7. After it started, you can check the status of the container
 
     ```
     sudo docker-compose ps
@@ -105,7 +105,7 @@ The following steps describe how to install the hub and nodes with Docker-Compos
    docker_selenoid_1   /usr/bin/selenoid -conf /e ...   Up      0.0.0.0:4444->4444/tcp
     ```
 
-8.  To check the status of the hub:
+8. To check the status of the hub:
 
     ```
     curl -s http://localhost:4444/status
@@ -121,7 +121,7 @@ You can start testing by sending your test script to: `http://yourmachinenameorI
 
 In case you want to record your test case as a video follow these steps:
 
-1.  Add a Custom Capability to your Selenium hub configuration: **enableVideo** with a Boolean set to **true**
+1. Add a Custom Capability to your Selenium hub configuration: **enableVideo** with a Boolean set to **true**
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/add_capability.png" >}}
 
@@ -136,10 +136,10 @@ After executing the test case, don't forget to download the video file or give i
 
 To install a hub with a Portal for "Live-View" you need a different *browsers.json* and *docker-compose.yml* file. To add a "Live-View" follow these steps:
 
-1.  Create a *browsers.json* with VNC browser image:
+1. Create a *browsers.json* with VNC browser image:
 
     ```
-   {
+    {
            "firefox": {
                    "default": "58.0",
                    "versions": {
@@ -162,14 +162,14 @@ To install a hub with a Portal for "Live-View" you need a different *browsers.js
                            }
                    }
            }
-   }
+    }
     ```
 
-2.  Create a docker-compose.yml with added selenoid UI for the portal:
+2. Create a docker-compose.yml with added selenoid UI for the portal:
 
     ```
-   version: '3'
-   services:
+    version: '3'
+    services:
      selenoid:
        network_mode: bridge
        image: aerokube/selenoid
@@ -194,15 +194,15 @@ To install a hub with a Portal for "Live-View" you need a different *browsers.js
        command: ["--selenoid-uri", "http://selenoid:4444"]
     ```
 
-3.  Pull the images first
+3. Pull the images first
 
     ```
-   sudo docker pull selenoid/vnc:chrome_65.0
-   sudo docker pull selenoid/vnc:firefox_58.0
-   sudo docker pull aerokube/selenoid-ui
+    sudo docker pull selenoid/vnc:chrome_65.0
+    sudo docker pull selenoid/vnc:firefox_58.0
+    sudo docker pull aerokube/selenoid-ui
     ```
 
-4.  Start the hub
+4. Start the hub
 
     ```
     # sudo docker-compose up -d
@@ -219,15 +219,15 @@ To install a hub with a Portal for "Live-View" you need a different *browsers.js
     ```
 
 5. You can visit your portal on [http://yourmachinenameorIP:8080](http://localhost:8080)
-6.  To enable "Live-View" you need to add another Custom Capability to your Selenium hub configuration: **enableVNC** with Boolean set to **true**
+6. To enable "Live-View" you need to add another Custom Capability to your Selenium hub configuration: **enableVNC** with Boolean set to **true**
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/enable_vnc.png" >}}
 
-7.  After starting your test case you can view your session in the portal:
+7. After starting your test case you can view your session in the portal:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/selenoidui1.png" >}}
 
-8.  By clicking on your session, you will be able to see your live view:
+8. By clicking on your session, you will be able to see your live view:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/selenoidui2.png" >}}
 

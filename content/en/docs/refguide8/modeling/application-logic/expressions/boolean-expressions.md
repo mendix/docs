@@ -84,7 +84,6 @@ The examples below illustrate which value the expression returns:
 
     ```java
     not('hello' = 'hallo')
-
     ```
 
     The expression will return `true` .

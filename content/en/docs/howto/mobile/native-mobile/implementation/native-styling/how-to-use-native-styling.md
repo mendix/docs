@@ -30,11 +30,11 @@ The [Blank Native Mobile App](https://marketplace.mendix.com/link/component/1095
 These resources let you style your app with a wide variety of interface parts. However, you can customize them further by following these steps:
 
 1. On your **Home_Native** home page, delete the **Intro screen** content.
-1.  Place a button widget on your app's home page:
+1. Place a button widget on your app's home page:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/button-one.png" alt="button" >}}
 
-2.  Click the play button (**Run Locally**) and then click **View App** to see your app. The button will be blue with white text, which is its default styling.
+2. Click the play button (**Run Locally**) and then click **View App** to see your app. The button will be blue with white text, which is its default styling.
 3. Open *theme/native/custom-variables.js* using your IDE of choice.
 4. Change the `brand.primary` from **#0595DB** to *rosybrown*:
 
@@ -49,7 +49,7 @@ These resources let you style your app with a wide variety of interface parts. H
     ```
 
 5. Save your file.
-6.  Click the play button (**Run Locally**) to apply your changes:
+6. Click the play button (**Run Locally**) to apply your changes:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/brand-primary-rosybrown.png" alt="rosybrown button" >}}
 
@@ -62,11 +62,11 @@ Classes are groups of styling properties which define how certain elements of yo
 1. Place a second button widget on your app's home page.
 2. Run your app to view your button.
 3. Select the button widget, and then click the **Properties** panel. Under **Common** you will see the button's **Class** field.
-4.  Type *btnSuccess* into the **Class** field:
+4. Type *btnSuccess* into the **Class** field:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/btn-success.png" alt="class field" >}}
 
-5.  Click the play button (**Run Locally**) to save and refresh your app. Notice the button turned green:
+5. Click the play button (**Run Locally**) to save and refresh your app. Notice the button turned green:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/green-button.png" alt="green button" >}}
     
@@ -78,11 +78,11 @@ Design properties are easy-to-use classes in Mendix Studio Pro which you do not 
 
 1. Place a third button widget on your app's home page.
 2. Select the button, and find its **Design Properties** in the **Properties** panel.
-3.  Click the **Button style** drop-down arrow and select **Warning**.
+3. Click the **Button style** drop-down arrow and select **Warning**.
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/btn-warning.png" alt="warning button" >}}
 
-4.  Run your app again to see the *design* button's new color:
+4. Run your app again to see the *design* button's new color:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/orange-button.png" alt="orange button" >}}
 
@@ -139,10 +139,10 @@ When you have specific design requirements, you will need to build custom classe
 
 8. Save your work.
 9. In Mendix Studio Pro, select your fourth button. In the **Properties** panel, type *btnBordered* into the **Class** field.
-10.  Click the play button (**Run Locally**) to see that your button's background color is transparent:
+10. Click the play button (**Run Locally**) to see that your button's background color is transparent:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/bordered-button.png" alt="bordered button" >}}
-    
+
     You have successfully customized a simple button widget. Using these basic principles, you can go on to customize widgets with distinct looks.
 
 ## 7 Implementing Custom Design Properties
@@ -163,13 +163,13 @@ In this section you will learn to turn the class you made into a design property
     },
     ```
 4. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
-5.  Select the fifth button. In **Properties** > **Design Properties**, your **Bordered** design property should now be visible:
+5. Select the fifth button. In **Properties** > **Design Properties**, your **Bordered** design property should now be visible:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/bordered-design-property.png" alt="bordered design property" >}}
 
-6.  Enable the **Bordered** design property by clicking its drop-down menu and selecting **Yes**.
+6. Enable the **Bordered** design property by clicking its drop-down menu and selecting **Yes**.
 
-7.  Click the play button (**Run Locally**) again and view your app:
+7. Click the play button (**Run Locally**) again and view your app:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/design-property-border-button.png" alt="design properties border" >}}
 

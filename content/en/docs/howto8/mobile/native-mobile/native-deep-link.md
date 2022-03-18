@@ -42,15 +42,15 @@ If you do not already have a native template for your app, you can create one by
 
 Set up a native template with the **Native Mobile App Builder** by following these instructions:
 
-1.  Launch the Native Mobile App Builder from the **Project** menu. Walk through the wizard and configure the project's details and tokens (for more information, see [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/)):
+1. Launch the Native Mobile App Builder from the **Project** menu. Walk through the wizard and configure the project's details and tokens (for more information, see [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/)):
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/launch-native-mobile-app-builder.png" alt="launch native mobile builder"   width="400"  >}}
 
-2.  Once done with the wizard you will enable deep linking capabilities. First, select the **Capabilities** menu item:
+2. Once done with the wizard you will enable deep linking capabilities. First, select the **Capabilities** menu item:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/capability-menu-option.png" alt="capability menu option"   width="400"  >}}
     
-3.  Enter the `schema` name without the appending `://`:
+3. Enter the `schema` name without the appending `://`:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/deep-link-input-field.png" alt="deep link input field"   width="400"  >}}
     
@@ -109,7 +109,7 @@ The *info.plist* file registers the schema and host so that they will be associa
 1. Open the folder that you cloned your template into: `c:/github/native-deeplink-app`.
 1. In Xcode (available on Apple Mac only) open *ios/NativeTemplate.xcworkspace*.
 1. Open *ios/NativeTemplate/Info.plist*
-1.  Add `URL types`, then add `URL Schemes` and `URL identifier`:
+1. Add `URL types`, then add `URL Schemes` and `URL identifier`:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/ios-info-plist.png" alt="ios info plist" >}}
    
@@ -217,13 +217,13 @@ The Register Deep Link nanoflow action will create a new Mendix object, split a 
 Now that the **Native Deep Link** nanoflow actions are available in Studio Pro, you have the utilities to register and process an URL. You will now  use them in your application:
 
 1. In your app add the **App events** widget, which is also part of the Native Mobile Resource module, on your home page.
-1.  Double-click the **App events** widget. In **App events** tab, select **Page load** > **On load** > **Call a nanoflow**, and create a new nanoflow named *OL_RegisterDeepLink*:
+1. Double-click the **App events** widget. In **App events** tab, select **Page load** > **On load** > **Call a nanoflow**, and create a new nanoflow named *OL_RegisterDeepLink*:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/app-events-register-deep-link.png" alt="app event register deeplink" >}}
 
     This nanoflow will be called only once when the app is started.
 
-1.  In the **OL_RegisterDeepLink** nanoflow, add the action **Register DeepLink**, and in that action's **Url handler** create an nanoflow named *DL_ShowUrlDetails*:
+1. In the **OL_RegisterDeepLink** nanoflow, add the action **Register DeepLink**, and in that action's **Url handler** create an nanoflow named *DL_ShowUrlDetails*:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/nanoflow-register-deep-link.png" alt="nanoflow register deeplink" >}}
    

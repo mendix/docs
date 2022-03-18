@@ -30,7 +30,7 @@ The [HTML/JavaScript Snippet](https://marketplace.mendix.com/link/component/56/)
     * **HTML**
     * **JavaScript**
     * **JavaScript with jQuery** – this option will make sure your code can leverage jQuery v3.3.1, for example:
-        
+
         ```
         //for example, this code snippet will set the color of all your paragraph tags on the page to red.
         $('p').css('color', 'red')

@@ -28,7 +28,7 @@ The following components are needed:
 The following steps describe how to install your hub and nodes with Docker-Compose:
 
 1. Create a folder or directory to place your docker-compose file
-2.  Create a docker-compose.yml in your folder/directory: 
+2. Create a docker-compose.yml in your folder/directory: 
 
     ```
     hub: 
@@ -61,7 +61,7 @@ The following steps describe how to install your hub and nodes with Docker-Compo
     privileged: true
     ```
 
-3.  Open a console and give the following command from the folder/directory where you placed your docker-compose.yml:
+3. Open a console and give the following command from the folder/directory where you placed your docker-compose.yml:
 
     ```
     sudo docker-compose up -d
@@ -69,11 +69,10 @@ The following steps describe how to install your hub and nodes with Docker-Compo
 
     The first time it will start pulling the images from the Docker hub.
 
-4.  After the process has started, you can check the status with the following commands:
+4. After the process has started, you can check the status with the following commands:
 
     ```
    sudo docker-compose ps
-
          Name                 Command           State           Ports         
    ---------------------------------------------------------------------
    docker_chrome_1    /opt/bin/entry_point.sh   Up                            

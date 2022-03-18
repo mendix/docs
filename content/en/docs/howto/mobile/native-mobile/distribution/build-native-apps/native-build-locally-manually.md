@@ -75,10 +75,11 @@ The final step differs based on your machine:
 
 For a Windows machine building an Android app, do the following: 
 
-1.  Run `npm i`  to install the required dependencies.
+1. Run `npm i`  to install the required dependencies.
 
     {{% alert color="info" %}}
-    When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and above), it will not apply changes directly to the app. To apply the changes when building locally check out your latest changes, run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`), then make sure to run `npm run configure`.{{% /alert %}}
+When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and above), it will not apply changes directly to the app. To apply the changes when building locally check out your latest changes, run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`), then make sure to run `npm run configure`.
+    {{% /alert %}}
 
 1. Instances of the Native Template v5.1.9 and above include the Native Mobile Toolkit. Therefore, if you are using one of these versions you also must run the `npm run configure` command. This ensures that the changes from the Mendix Native Mobile Builder are applied to your app.
 
@@ -92,7 +93,7 @@ This method is useful if you do not have Git installed. To get the Native Templa
 
 1. Navigate to the [Native Template releases](https://github.com/mendix/native-template/releases).
 1. Scroll to the version you want to download.
-1.  Select the source code binary to download a copy of the code:
+1. Select the source code binary to download a copy of the code:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/github-assets.png" alt="iOS output"   width="250"  >}}
 
@@ -119,7 +120,7 @@ The bundles will be generated relatively to the `app-directory\deployment\native
 When completed there should be a folder under the app's deployment folder **app-directory\deployment\native\bundle** with two folders: one named **iOS** and one named **android**. After confirming these folders are correct, do the following:
 
 1. Move the **iOS** folder's content to *your-native-template-root/ios/Bundle*.
-1.  The **android** folder structure should be the following:
+1. The **android** folder structure should be the following:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/android-output.png" alt="iOS output"   width="250"  >}}
 

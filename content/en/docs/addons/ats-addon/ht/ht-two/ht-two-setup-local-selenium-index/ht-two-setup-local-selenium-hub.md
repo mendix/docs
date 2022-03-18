@@ -35,7 +35,7 @@ The following components are needed:
 The following steps describe how to download the latest Chrome and Gecko (Firefox) drivers:
 
 1. With the following link you can download the latest Chrome driver:[https://sites.google.com/a/chromium.org/chromedriver/downloads](https://sites.google.com/a/chromium.org/chromedriver/downloads) (*chromedriver_win32.zip*)
-2.  With the following link you can download the latest Gecko driver: [https://github.com/mozilla/geckodriver/releases](https://github.com/mozilla/geckodriver/releases) (Make sure it matches the version (win32bits or win64bits) of Firefox you installed on the machine).
+2. With the following link you can download the latest Gecko driver: [https://github.com/mozilla/geckodriver/releases](https://github.com/mozilla/geckodriver/releases) (Make sure it matches the version (win32bits or win64bits) of Firefox you installed on the machine).
 3. Place the unzipped items in the same folder as the Selenium jar.
 
 ## 5 Starting the Selenium Hub
@@ -43,7 +43,7 @@ The following steps describe how to download the latest Chrome and Gecko (Firefo
 The following steps describe how to start the Selenium hub: 
 
 1. Go to the folder and open a command box (Shift+Right click and choose Open command window here)
-2.  Start your Selenium hub (version number can be different):
+2. Start your Selenium hub (version number can be different):
 
     ```
     java -jar selenium-server-standalone-3.8.1.jar -role hub
@@ -68,7 +68,7 @@ The following steps describe how to start the Selenium hub:
     11:30:28.395 INFO - Selenium Grid hub is up and running
     ```
 
-3.  Check with the following link if the hub works: `http://localhost:4444/grid/console`.
+3. Check with the following link if the hub works: `http://localhost:4444/grid/console`.
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-selenium-hub/grid_hub.png" >}}
 
@@ -79,7 +79,7 @@ The following steps describe how to start the Selenium hub:
 The following steps describe how to start the node with three Chrome and three Firefox browsers:
 
 1. Go to the folder and open a command box (Shift+Right click and choose the **Open command** window here)
-2.  Start the node:
+2. Start the node:
 
     ```
    java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe  -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar selenium-    server-standalone-3.8.1.jar -role node -hub http://localhost:4444/grid/register -browser "browserName=firefox, maxInstances=3"  -browser "browserName=chrome, maxInstances=3"
@@ -118,7 +118,7 @@ The following steps describe how to start the node with three Chrome and three F
     13:12:19.416 INFO - The node is registered to the hub and ready to use
     ```
 
-3.  Check in the console whether your Selenium hub node is active `http://localhost:4444/grid/console`:
+3. Check in the console whether your Selenium hub node is active `http://localhost:4444/grid/console`:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-selenium-hub/grid_nodes.png" >}}
 
@@ -136,7 +136,7 @@ This step is recommended because you can easily change options (for example time
 
 The following steps describe how to start the selenium hub and the node with a JSON configuration file:
 
-1.  Create JSON files in the created folder:
+1. Create JSON files in the created folder:
 
     *gridHubConfig.json*:
     ```
@@ -192,13 +192,13 @@ The following steps describe how to start the selenium hub and the node with a J
         }
     ```
 
-2.  Start the hub:
+2. Start the hub:
 
     ```
     java -jar selenium-server-standalone-3.8.1.jar -role hub -hubConfig gridHubConfig.json
     ```
 
-3.  Start the node:
+3. Start the node:
 
     ```
     java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar selenium- server-standalone-3.8.1.jar -role node -nodeConfig node.json   
@@ -208,7 +208,7 @@ The following steps describe how to start the selenium hub and the node with a J
 
 The following steps describe how to create a batch file to start up everything at once:
 
-1.  Create start.bat:
+1. Create start.bat:
 
     ```
     start /B java -jar C:\Selenium\selenium-server-standalone-3.8.1.jar -role hub -hubConfig C:\Selenium \gridHubConfig.json
@@ -217,7 +217,7 @@ The following steps describe how to create a batch file to start up everything a
     exit
     ```
 
-2.  Start from the cmd box:
+2. Start from the cmd box:
 
     ```
     start.bat

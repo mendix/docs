@@ -353,26 +353,32 @@ Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the
 Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
 {{% /alert %}}
 
-### 9.2 Adding Files & Directories
+### 9.2 Authenticating to Teamserver
+
+When using external tools, you might be asked to authenticate separately to teamserver.
+- Connecting to Git is done using a Personal Access Token. How to create a PAT is described in [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/). When connecting, your username is 'pat' and your password is the Personal Access Token you created.
+- Connecting to SVN is done with your Mendix credentials
+
+### 9.3 Adding Files & Directories
 
 If you add files or directories or delete files using Windows Explorer, Studio Pro automatically adds or deletes these from version control, too.
 
 Make sure you use the 'Export' feature of TortoiseSVN/TortoiseGit if you are copying a directory that is already under version control into your app.
 
-### 9.3 Deleting Files & Directories
+### 9.4 Deleting Files & Directories
 
 If you delete a file from your app, Studio Pro will automatically also delete it from the Team Server.
 
 If you are using SVN and want to delete a whole directory, you will have to use the delete command of TortoiseSVN. You can execute this command by right-clicking the directory and choosing 'TortoiseSVN > Delete'. When using Git, a folder will no longer be tracked if all the files in the folder are removed.
 
 
-### 9.4 Branching & Deploying
+### 9.5 Branching & Deploying
 
 If you perform branching outside of Studio Pro, you will not be able to immediately deploy to Mendix Cloud. That is because Studio Pro adds metadata about the Mendix version of your app to each revision when you commit or create a branch, which is needed by the Mendix Cloud deployment. Branching outside of Studio Pro means that metadata is missing from your branch, thus your app cannot successfully be deployed.
 
 To fix this, make a small commit on your branch in Studio Pro (for example, changing a documentation field). Studio Pro will then add the metadata that Mendix Cloud deployment requires, and you will be able to deploy your app.
 
-### 9.5 Reverting Accidental Studio Pro App Model Upgrade
+### 9.6 Reverting Accidental Studio Pro App Model Upgrade
 
 When working in different apps with different Studio Pro versions, you may one day find yourself with an app model upgraded and committed to a newer Studio Pro version, while the the rest of your team is not yet ready to upgrade. 
 

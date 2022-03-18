@@ -143,7 +143,7 @@ To copy and paste a workflow, do the following:
 
 3. Open the Studio app where you want to paste the workflow and press <kbd>Ctrl</kbd> +<kbd>V</kbd> or <kbd>Cmd</kbd> +<kbd>V</kbd>. 
 
-Your workflow is pasted. For more information on copy/paste function in Studio, see the [Copy/Paste Workflows, Pages, Microflows, and Enumerations](/studio/general/#copy-paste-documents/) section in *General Info*. 
+Your workflow is pasted. For more information on copy/paste function in Studio, see the [Copy/Paste Workflows, Pages, Microflows, and Enumerations](/studio/general/#copy-paste-documents) section in *General Info*. 
 
 ### 4.5 Deleting a Workflow {#delete}
 
@@ -187,7 +187,7 @@ You have configured the button to trigger the workflow.
 
 #### 4.7.2 Triggering a Workflow via a Microflow {#trigger-microflow}
 
-To trigger a workflow via a microflow, you can add a **Call workflow** activity to the microflow. For more information on this activity, see [Workflow Activities](/studio/microflows/#microflow-workflow-activities/) section in *Microflows*.  
+To trigger a workflow via a microflow, you can add a **Call workflow** activity to the microflow. For more information on this activity, see [Workflow Activities](/studio/microflows/#microflow-workflow-activities) section in *Microflows*.  
 
 Do the following:
 
@@ -221,11 +221,11 @@ The elements of this section are described in the table below:
 
 | Element                                                      | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Start event                                                  | The starting point of a workflow. Workflows are triggered either by the [Call workflow](/studio/page-editor-widgets-events-section/#call-workflow/) on-click event on pages or by the [Workflow call](/studio/microflows/#microflow-workflow-activities/) action in microflows. <br />Click the start event to open [workflow properties](/studio/workflow-properties/). |
-| [Decision](/studio/workflows-general-activities/#decision/)  | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
-| [Jump activity](/studio/workflows-general-activities/#jump/) | Allows you to jump to other activities in the workflow.      |
-| [Parallel split](/studio/workflows-general-activities/#parallel-split/) | Adds two or more parallel paths to your workflow.            |
-| [End activity](/studio/workflows-general-activities/#end/)   | Ends the path of the workflow                                |
+| Start event                                                  | The starting point of a workflow. Workflows are triggered either by the [Call workflow](/studio/page-editor-widgets-events-section/#call-workflow) on-click event on pages or by the [Workflow call](/studio/microflows/#microflow-workflow-activities) action in microflows. <br />Click the start event to open [workflow properties](/studio/workflow-properties/). |
+| [Decision](/studio/workflows-general-activities/#decision)  | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
+| [Jump activity](/studio/workflows-general-activities/#jump) | Allows you to jump to other activities in the workflow.      |
+| [Parallel split](/studio/workflows-general-activities/#parallel-split) | Adds two or more parallel paths to your workflow.            |
+| [End activity](/studio/workflows-general-activities/#end)   | Ends the path of the workflow                                |
 
 ### 5.2 User Actions {#user-actions}
 

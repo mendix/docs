@@ -14,7 +14,7 @@ Workflow is a visual language in Mendix Studio and Mendix Studio Pro that allows
 Workflows are available in Studio from **Mendix version 9.11**. If you have an app with workflows functionality below this version, this app is likely to be created in Studio Pro and requires a manual migration. For more information on how to migrate your app using Studio Pro, see [Migrate Workflow Apps](/refguide/workflow-beta-migration/). 
 {{% /alert %}}
 
-This how-to explains how to build a workflow manually, without using a wizard. For more information on using the wizard and creating workflows with its help, see the [Creating a Workflow Using the Wizard](/studio/workflows/#wizard/) section in Workflows.
+This how-to explains how to build a workflow manually, without using a wizard. For more information on using the wizard and creating workflows with its help, see the [Creating a Workflow Using the Wizard](/studio/workflows/#wizard) section in Workflows.
 
 **This how-to will teach you how to do the following:**
 
@@ -75,11 +75,11 @@ Good job! You have created a workflow and a Workflow Context parameter.
 In the previous section, you have created the entity that is set for the Workflow Context parameter. You now need to configure attributes for this entity. Do the following:
 
 1. Open the [domain model](/studio/domain-models/). 
-2.  The **EmployeeOnboarding** entity you have created will hold the information about the employee to onboard, as well as capture information added during execution of the workflow, such as the laptop model that the new employee requires. Add the following attributes to the **EmployeeOnboarding** entity (for more information on how to create attributes, see [Adding New Attributes](/studio/domain-models/#adding-new-attributes/) section in the *Domain Model*):
+2.  The **EmployeeOnboarding** entity you have created will hold the information about the employee to onboard, as well as capture information added during execution of the workflow, such as the laptop model that the new employee requires. Add the following attributes to the **EmployeeOnboarding** entity (for more information on how to create attributes, see [Adding New Attributes](/studio/domain-models/#adding-new-attributes) section in the *Domain Model*):
     1. Add the **FullName** attribute and set the type to string.
     2. Add the **FirstDay** attribute and set its type to Date and Time.
     3. Add the **WFH** (Work from home) attribute and set its type to Boolean.
-    4. Add the **PhoneModel** enumeration with the following enumeration items: iPhone, iPhone_Pro, Samsung. For more information on enumerations and how to create them, see the [Creating a New Enumeration](/studio/domain-models/domain-models-enumeration/#create-new-enumeration/) section in *Enumerations*.
+    4. Add the **PhoneModel** enumeration with the following enumeration items: iPhone, iPhone_Pro, Samsung. For more information on enumerations and how to create them, see the [Creating a New Enumeration](/studio/domain-models/domain-models-enumeration/#create-new-enumeration) section in *Enumerations*.
     5. Add the **LaptopModel** enumeration with the following enumeration items: Lenovo, Mac, Dell. 
 
 You have configured the **EmployeeOnboarding** entity:
@@ -101,7 +101,7 @@ Now all necessary roles are created for your app. For more information about sec
 
 To start your workflow, you need to trigger it. In this use case, the workflow is started by an HR specialist who should fill in the new hire's name, the first day, and then click the **Start Onboarding** button that will trigger the workflow. Do the following:
 
-1. Create an **EmployeesToOnboard** page that contains a list view with the **EmployeeOnboarding** entity as its data source. (For more information on how to create a page and add widgets to it, see the [Performing Basic Functions](/studio/page-editor/#page-editor-basic-functions/) section in *Pages*.)
+1. Create an **EmployeesToOnboard** page that contains a list view with the **EmployeeOnboarding** entity as its data source. (For more information on how to create a page and add widgets to it, see the [Performing Basic Functions](/studio/page-editor/#page-editor-basic-functions) section in *Pages*.)
 
     {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/employees-to-onboard-list.png" alt="Employees to Onboard List" >}}
     

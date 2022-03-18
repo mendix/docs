@@ -1,6 +1,6 @@
 ---
 title: "System Entities"
-parent: "entities"
+url: /refguide/system-entities/
 menu_order: 80
 description: "Technical and user information about the system entities FileDocument, Image, and User"
 tags: ["domain model", "entity", "system", "generalization", "specialization", "studio pro", "Image", "FileDocument", "User"]
@@ -44,7 +44,9 @@ The three entities are:
 * [Image](#image)
 * [User](#user)
 
-To learn more about generalizations and specializations, see [Generalization & One-to-One Associations](generalization-and-1-1-association).
+To learn more about generalizations and specializations, see [Generalization & One-to-One Associations](/refguide/generalization-and-association/).
+
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/system-entities/generalizable-dm.png" >}}
 
 ### 2.1 System.FileDocument{#filedocument}
 
@@ -141,7 +143,7 @@ You  6 minutes ago
 
 The URL of the file within your app runtime is `/file?fileID={FILEID}` where `{FILEID}` is the value of the `FileID` attribute in your FileDocument entity. You can find the runtime URL of your app by using the `GetApplicationUrl` activity from the [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/) which you can download from the Mendix App Store.
 
-For more information on working with FileDocuments, see [How to Work with Images & Files](/howto/data-models/working-with-images-and-files).
+For more information on working with FileDocuments, see [How to Work with Images & Files](/howto/data-models/working-with-images-and-files/).
 
 ### 2.2 System.Image{#image}
 
@@ -159,7 +161,7 @@ An entity that inherits from the System.FileDocument entity. Used to store image
 
 Not used internally.
 
-For more information on working with Images, see [How to Work with Images & Files](/howto/data-models/working-with-images-and-files).
+For more information on working with Images, see [How to Work with Images & Files](/howto/data-models/working-with-images-and-files/).
 
 ### 2.3 System.User{#user}
 

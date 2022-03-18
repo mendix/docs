@@ -79,41 +79,41 @@ To release a new version OTA, follow these steps:
 
 1.  Correct the title and message as follows:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/modeller-correct.png" alt="Make some changes"   width="300"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/modeller-correct.png" alt="Make some changes"   width="300"  >}}
 
 2. Save your changes.
 3. Note the version and build number of the app build you want to update. This how-to assumes an app version of 1.0.0 and a build number of 1.
 4. Open a command line interface (CLI) such as Command Prompt.
 5. Navigate to the directory of your Native Builder:
 
-	```
-	cd {path to Native Builder executable file}`
-	```
+    ```
+    cd {path to Native Builder executable file}`
+    ```
 
 6. Run the following command to build and push a new update:
 
-	```
-	native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory
-	```
+    ```
+    native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory
+    ```
 
-	{{% alert color="info" %}}
+    {{% alert color="info" %}}
 This command does the following:<br />
 * Runs Mx Build to build your project<br />
 * Packages your project to be pushed as a new update<br />
 * Pushes the new update package for the app's version 1.0.0<br />
 * Sets the rollout percentage to 100% (all app users)<br />
 * Marks the update as mandatory for the app's users to install
-	{{% /alert %}}
+    {{% /alert %}}
 
 1. Wait for the Native Builder to complete.
 2. Restart the app on your testing device. You should be greeted with the following message:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/phone-update-prompt.png" alt="Update available prompt"   width="300"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/phone-update-prompt.png" alt="Update available prompt"   width="300"  >}}
 
 3.  Tap **Confirm** to update your app.
 4.  The app should reload and greet you with the following dialog box:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/phone-success-prompt.png" alt="Update success prompt"   width="300"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/phone-success-prompt.png" alt="Update success prompt"   width="300"  >}}
 
 ## 5 Rolling Back Updates
 
@@ -123,19 +123,19 @@ Imagine you want to rollback an update. Maybe you released it too early or somet
 
 1. Get your list of available releases by running the following command:
 
-	```
-	`native-builder.exe release list --project-name "CoolApp"`
-	```
+    ```
+    `native-builder.exe release list --project-name "CoolApp"`
+    ```
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/release-list.png" alt="List of available release" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/release-list.png" alt="List of available release" >}}
 
 2. To roll back from {v2} to {v1} type the following command:
 
-	```
-	native-builder.exe release rollback-update --project-name "CoolApp" --label "v1"
-	```
+    ```
+    native-builder.exe release rollback-update --project-name "CoolApp" --label "v1"
+    ```
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/rollback-result.png" alt="Output of rollback command"   width="300"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/rollback-result.png" alt="Output of rollback command"   width="300"  >}}
 
 3. Next time you open your app, you should be greeted with the **Update available** dialog box. Tap **Confirm** to roll your app back on your device.
 

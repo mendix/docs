@@ -356,7 +356,7 @@ Always use the version of TortoiseSVN which matches your app model. If you open 
 ### 9.2 Authenticating to Teamserver
 
 When using external tools, you might be asked to authenticate separately to teamserver.
-- Connecting to Git is done using a Personal Access Token. How to create a PAT is described in [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/). When connecting, your username is 'pat' and your password is the Personal Access Token you created.
+- Connecting to Git is done using a Personal Access Token. How to create a PAT is described in [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/). When connecting, your username is your Mendix account username, and your password is the Personal Access Token you created. Alternatively you can use 'pat' for your username.
 - Connecting to SVN is done with your Mendix credentials
 
 ### 9.3 Adding Files & Directories

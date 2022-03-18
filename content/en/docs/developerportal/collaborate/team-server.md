@@ -25,13 +25,14 @@ On the **Team Server** page of the Developer Portal, an overview is presented of
 
 ## 2 Team Server URL
 
-The **Team Server URL** will take you to the repository for your app. Here, you can see all the files and branches of your app. The URL can have the following form:
+The **Team Server URL** can be used to directly access your app content. On SVN you can see all the files and branches of your app. The URL can have the following form:
 
 * `https://teamserver.sprintr.com/<your AppID>/` if it is an SVN-enabled app
 * `https://git.api.mendix.com/<your AppID>.git` if it is a Git-enabled app
 
 {{% alert color="info" %}}
-You may have to add the final slash (`/`) manually to follow the link. You may also be asked to re-enter your Mendix credentials. Single sign-on (SSO) is not yet implemented for the Team Server.
+You may have to add the final slash (`/`) manually to follow the link. You may also be asked to re-enter your Mendix credentials. Single sign-on (SSO) is not yet implemented for the Team Server. 
+Connecting to Git is done using a Personal Access Token. How to create a PAT is described in [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/). When connecting, your username is your Mendix account username, and your password is the Personal Access Token you created. Alternatively you can use 'pat' for your username.
 {{% /alert %}}
 
 ## 3 Revision History {#revision-history}

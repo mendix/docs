@@ -32,28 +32,28 @@ These resources let you style your app with a wide variety of interface parts. H
 1. On your **Home_Native** home page, delete the **Intro screen** content.
 1.  Place a button widget on your app's home page:
 
-	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/button-one.png" alt="button" >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/button-one.png" alt="button" >}}
 
 2.  Click the play button (**Run Locally**) and then click **View App** to see your app. The button will be blue with white text, which is its default styling.
 3. Open *theme/native/custom-variables.js* using your IDE of choice.
 4. Change the `brand.primary` from **#0595DB** to *rosybrown*:
 
-	```javascript
-	//Brand Style
-	export const brand = {
-		primary: "rosybrown",
-		success: "#76CA02",
-		warning: "#f99b1d",
-		danger: "#ed1c24",
-	};
-	```
+    ```javascript
+    //Brand Style
+    export const brand = {
+        primary: "rosybrown",
+        success: "#76CA02",
+        warning: "#f99b1d",
+        danger: "#ed1c24",
+    };
+    ```
 
 5. Save your file.
 6.  Click the play button (**Run Locally**) to apply your changes:
 
-	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/brand-primary-rosybrown.png" alt="rosybrown button" >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/brand-primary-rosybrown.png" alt="rosybrown button" >}}
 
-	You have successfully altered a default button to look rosy brown These screenshots employ the Make It Native app's [Dark Mode](/releasenotes/mobile/make-it-native-app/#new-features-5).
+    You have successfully altered a default button to look rosy brown These screenshots employ the Make It Native app's [Dark Mode](/releasenotes/mobile/make-it-native-app/#new-features-5).
 
 ## 4 Classes
 
@@ -64,13 +64,13 @@ Classes are groups of styling properties which define how certain elements of yo
 3. Select the button widget, and then click the **Properties** panel. Under **Common** you will see the button's **Class** field.
 4.  Type *btnSuccess* into the **Class** field:
 
-	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/btn-success.png" alt="class field" >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/btn-success.png" alt="class field" >}}
 
 5.  Click the play button (**Run Locally**) to save and refresh your app. Notice the button turned green:
 
-	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/green-button.png" alt="green button" >}}
-	
-	You have successfully applied an Atlas-provided class to a button widget.
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/green-button.png" alt="green button" >}}
+    
+    You have successfully applied an Atlas-provided class to a button widget.
 
 ## 5 Design Properties
 
@@ -80,13 +80,13 @@ Design properties are easy-to-use classes in Mendix Studio Pro which you do not 
 2. Select the button, and find its **Design Properties** in the **Properties** panel.
 3.  Click the **Button style** drop-down arrow and select **Warning**.
 
-	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/btn-warning.png" alt="warning button" >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/btn-warning.png" alt="warning button" >}}
 
 4.  Run your app again to see the *design* button's new color:
 
-	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/orange-button.png" alt="orange button" >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/orange-button.png" alt="orange button" >}}
 
-	Using design properties, you have changed the blue default button widget to orange. For any other warning buttons, you could easily apply the same design property.
+    Using design properties, you have changed the blue default button widget to orange. For any other warning buttons, you could easily apply the same design property.
 
 ## 6 Creating Your Own Classes {#creating-your-own-classes}
 
@@ -98,52 +98,52 @@ When you have specific design requirements, you will need to build custom classe
 4. Open *native/main.js*.
 5. Copy this code snippet into *native/main.js*:
 
-	```javascript
-	export const className = {
-		container: {
-			<ViewStyle properties>
-		},
-		icon: {
-		},
-		caption: {
-			<TextStyle properties>
-		}
-	}
-	```
-	
-	To alter a class on your own, consult the [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide/) to understand widget structures.
+    ```javascript
+    export const className = {
+        container: {
+            <ViewStyle properties>
+        },
+        icon: {
+        },
+        caption: {
+            <TextStyle properties>
+        }
+    }
+    ```
+    
+    To alter a class on your own, consult the [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide/) to understand widget structures.
 
 6. Now you will edit the code you pasted. Apply a transparent background color to customize the the default button widget:
 
-	```javascript
-	export const className = {
-		container: {
-			backgroundColor: "transparent"
-		},
-		icon: {
-		},
-		caption: {
-		}
-	}
-	```
+    ```javascript
+    export const className = {
+        container: {
+            backgroundColor: "transparent"
+        },
+        icon: {
+        },
+        caption: {
+        }
+    }
+    ```
 
 7. Because your app already has default styling, you can remove the icon and caption properties. Also, change the constant to a unique, self-explanatory value such as `btnBordered`: 
 
-	```javascript
-	export const btnBordered = {
-		container: {
-			backgroundColor: "transparent"
-		},
-	}
-	```
+    ```javascript
+    export const btnBordered = {
+        container: {
+            backgroundColor: "transparent"
+        },
+    }
+    ```
 
 8. Save your work.
 9. In Mendix Studio Pro, select your fourth button. In the **Properties** panel, type *btnBordered* into the **Class** field.
 10.  Click the play button (**Run Locally**) to see that your button's background color is transparent:
 
-	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/bordered-button.png" alt="bordered button" >}}
-	
-	You have successfully customized a simple button widget. Using these basic principles, you can go on to customize widgets with distinct looks.
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/bordered-button.png" alt="bordered button" >}}
+    
+    You have successfully customized a simple button widget. Using these basic principles, you can go on to customize widgets with distinct looks.
 
 ## 7 Implementing Custom Design Properties
 
@@ -154,26 +154,26 @@ In this section you will learn to turn the class you made into a design property
 3. Find the `ActionButton` class. There are already design properties in `ActionButton`. Next, you will add some of your own.
 4. Place this object under the first one in `ActionButton`:
 
-	```json
-	{
-		"name": "Bordered",
-		"type": "Toggle",
-		"description": "Create a bordered button.",
-		"class": "btnBordered"
-	},
-	```
+    ```json
+    {
+        "name": "Bordered",
+        "type": "Toggle",
+        "description": "Create a bordered button.",
+        "class": "btnBordered"
+    },
+    ```
 4. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
 5.  Select the fifth button. In **Properties** > **Design Properties**, your **Bordered** design property should now be visible:
 
-	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/bordered-design-property.png" alt="bordered design property" >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/bordered-design-property.png" alt="bordered design property" >}}
 
 6.  Enable the **Bordered** design property by clicking its drop-down menu and selecting **Yes**.
 
 7.  Click the play button (**Run Locally**) again and view your app:
 
-	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/design-property-border-button.png" alt="design properties border" >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/design-property-border-button.png" alt="design properties border" >}}
 
-	You have implemented your own custom design property. Other users can quickly harness your design property without having to consult a class name list.
+    You have implemented your own custom design property. Other users can quickly harness your design property without having to consult a class name list.
 
 Congratulations! By completing this how-to, you have learned how to alter a styling property, apply classes and design properties, and create your own classes and design properties.
 

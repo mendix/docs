@@ -96,13 +96,13 @@ Now you will run your first `prepare` command:
 2. Change directory to the folder you extracted the Native Builder contents to.
 3.  Run `prepare` for the first time, which will produce this warning:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/native-builder-authentication-failure.png" alt="App Center authentication failure" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/native-builder-authentication-failure.png" alt="App Center authentication failure" >}}
 
-	This warning is part of App Center's security policy. 
+    This warning is part of App Center's security policy. 
 
 2. Visit App Center's [dashboard](https://appcenter.ms/) to see your applications created by the Native Builder:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/appcenter-apps.png" alt="App Center Applications" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/appcenter-apps.png" alt="App Center Applications" >}}
 
 To address the warning, complete the following steps (you must do them for both your iOS and Android apps if you have one of each):
 
@@ -140,9 +140,9 @@ Now it is time for you to make your own first build:
 2. Make sure you are in still in your Native Builder directory.
 3. Write this command, with your own information replacing the example text:
 
-	```
-	native-builder.exe build --project-name {ExampleName} --build-number {1} --app-version {0.1.0}
-	```
+    ```
+    native-builder.exe build --project-name {ExampleName} --build-number {1} --app-version {0.1.0}
+    ```
 
 4. Run the command.
 
@@ -181,11 +181,11 @@ The next steps differ depending on the type of app you want to configure.
 
 1.  Click the **Wrench icon** in the upper-right corner to open the **Build configuration** panel:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/ios-build-wrench.png" alt="Build Wrench"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/ios-build-wrench.png" alt="Build Wrench"   width="400"  >}}
 
 2.  Switch the **Sign builds** toggle on:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/ios-sign-upload.png" alt="iOS sign upload"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/ios-sign-upload.png" alt="iOS sign upload"   width="400"  >}}
 
 3. Upload your mobile provisioning profile. A **Distribution** profile is best, as App Center has a 30 minute limit for free accounts signing with a **Developer** profile.
 4. Upload your *.p12* certificate.
@@ -196,15 +196,15 @@ The next steps differ depending on the type of app you want to configure.
 
 1. Select the **Wrench icon** in the upper-right corner to open the **Build configuration** panel:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/android-build-wrench.png" alt="Build Wrench"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/android-build-wrench.png" alt="Build Wrench"   width="400"  >}}
 
 2. In the **Build Variant** drop-down menu, select **release**:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/android-release-variant.png" alt="Android release variant"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/android-release-variant.png" alt="Android release variant"   width="400"  >}}
 
 3. Select **Sign builds**:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/android-sign-upload.png" alt="Android sign upload"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/android-sign-upload.png" alt="Android sign upload"   width="400"  >}}
 
 4. Upload your keystore file.
 5. Provide the password to your keystore.
@@ -226,23 +226,23 @@ After your start your Native Builder build, you will see some or all of the foll
 
 * The Native Builder starting a build:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/native-builder-starting-build.png" alt="Native Builder starting a build"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/native-builder-starting-build.png" alt="Native Builder starting a build"   width="400"  >}}
 
 * App Center starting a build:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/appcenter-building.png" alt="App Center starting a build"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/appcenter-building.png" alt="App Center starting a build"   width="400"  >}}
 
 * A successful App Center build:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/appcenter-successful.png" alt="Successful App Center build"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/appcenter-successful.png" alt="Successful App Center build"   width="400"  >}}
 
 * A successful, downloaded Android build:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/native-builder-successful-android.png" alt="Successful and Downloaded Android build"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/native-builder-successful-android.png" alt="Successful and Downloaded Android build"   width="400"  >}}
 
 * A successful, downloaded iOS build:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/native-builder-successful-ios.png" alt="Successful and Downloaded iOS build"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/native-builder-successful-ios.png" alt="Successful and Downloaded iOS build"   width="400"  >}}
 
 If your build times out, you can either sign your app locally as described in [Android Local Signing](#android-local-signing) and [iOS Local Signing](#ios-local-signing) below, or upgrade to a paid App Center account. This build issue is more likely to affect iOS builds because of how long signing takes with an iOS developer profile.
 
@@ -276,13 +276,13 @@ To install your app via USB, connect your device to a machine via USB. To Instal
 1. Follow the instructions on Google’s [Transfer files between your computer & Android device](https://support.google.com/android/answer/9064445?hl=en) to get the APK onto your device. Note which folder you transfer the APK into.
 2. Open your phone’s file manager, navigate to the folder containing your APK, then tap the APK file to open it.
 3. Tap the **Install** button. 
-	
-	{{% alert color="info" %}}On Android, you might see a dialog box warning you against installing because this is not a Play Store app. Tap **INSTALL ANYWAY**.
-	{{% /alert %}}
-	
+    
+    {{% alert color="info" %}}On Android, you might see a dialog box warning you against installing because this is not a Play Store app. Tap **INSTALL ANYWAY**.
+    {{% /alert %}}
+    
 4. Tap the **Done** button when prompted. You should now be able to access your installed app via your **App Drawer**, as well as by tapping the **Open** button after the installation completes.
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/android-app-launch.gif" alt="android app launch"   width="300"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/android-app-launch.gif" alt="android app launch"   width="300"  >}}
 
 You can also consult Google's [Run apps on a hardware device](https://developer.android.com/studio8/run/device) for detailed instructions on testing your app using a physical Android device instead of an emulator.
 
@@ -310,31 +310,31 @@ In order to deploy the *nativeTemplate.xcarchive* on a device or on the Apple Ap
 
 2.  Click the *Distribute App* button to start the local signing flow.:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/xcode-app-loader-1.png" alt="Xcode Application loader"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/xcode-app-loader-1.png" alt="Xcode Application loader"   width="400"  >}}
 
 3.  Select **Development**:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/xcode-app-loader-2.png" alt="Xcode Application loader"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/xcode-app-loader-2.png" alt="Xcode Application loader"   width="400"  >}}
 
 4. Choose a **Development Team**:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/xcode-app-loader-3.png" alt="Xcode Application loader"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/xcode-app-loader-3.png" alt="Xcode Application loader"   width="400"  >}}
 
 5. Configure your **Development distribution options**:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/xcode-app-loader-4.png" alt="Xcode Application loader"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/xcode-app-loader-4.png" alt="Xcode Application loader"   width="400"  >}}
 
 6. Select a re-signing option:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/xcode-app-loader-5.png" alt="Xcode Application loader"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/xcode-app-loader-5.png" alt="Xcode Application loader"   width="400"  >}}
 
 7. Review your *.ipa* content and click **Export**:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/xcode-app-loader-6.png" alt="Xcode Application loader"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/xcode-app-loader-6.png" alt="Xcode Application loader"   width="400"  >}}
 
 8. Congratulations. You now have a signed *.ipa* file:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/xcode-app-loader-7.png" alt="Xcode Application loader"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/xcode-app-loader-7.png" alt="Xcode Application loader"   width="400"  >}}
 
 #### 6.2.2 Installing on a Device
 
@@ -344,7 +344,7 @@ To install the *ipa* on your device, follow these steps:
 
 1.  Connect your Apple device to your computer. Both will show dialog boxes which ask you to confirm that you trust the devices. Tap **Continue** on your device, and **Trust This Computer?** on your mobile device to proceed:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/appletrust.png" alt="trust dialog"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/appletrust.png" alt="trust dialog"   width="400"  >}}
 
 2. Open iTunes and connect your iOS device to your computer.
 3. Select the *.ipa* package file that you downloaded earlier, and drag it onto your device's **Devices** section on iTunes' left menu. Drop the *.ipa* file there to install it on your device.
@@ -366,13 +366,13 @@ There are two ways to enable tablet mode:
 By default, building for tablets is disabled in XCode. Do the following to enable tablet settings:
 
 1. Select the following options in your XCode workspace:<br />
-	a. **iPad**: this enables tablet mode. By default, if tablet mode in enabled you also have to support any possible orientation.<br />
-	b. **Portrait**.<br />
-	c. **Landscape Left**.<br />
-	d. **Landscape Right.**<br />
-	e.  **Requires full screen**: Mendix requires this because full-screen orientations are easier on Mendix developers than smaller side-by-side forms.
+    a. **iPad**: this enables tablet mode. By default, if tablet mode in enabled you also have to support any possible orientation.<br />
+    b. **Portrait**.<br />
+    c. **Landscape Left**.<br />
+    d. **Landscape Right.**<br />
+    e.  **Requires full screen**: Mendix requires this because full-screen orientations are easier on Mendix developers than smaller side-by-side forms.
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/tablet-workspace.png" alt="select tablet options"   width="300"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/tablet-workspace.png" alt="select tablet options"   width="300"  >}}
 
 1. Commit these changes to your project's master branch so consecutive builds have the tablet settings enabled.
 
@@ -382,43 +382,43 @@ First, navigate to your project's repository. This should be `www.github.com/<yo
 
 1. Using the **Find file** functionality, find and open *project.pbxproj*:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/github-find-file.png" alt="find file toolbar"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/github-find-file.png" alt="find file toolbar"   width="400"  >}}
 
 1.  Click the edit icon:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/github-edit-file.png" alt="find file toolbar"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/github-edit-file.png" alt="find file toolbar"   width="400"  >}}
 
 1. Change both instances of `TARGET_DEVICE_FAMILY = “1”;` to `TARGET_DEVICE_FAMILY = “1,2";`.
 1.  Commit these changes.
 1. Using the **Find file** functionality again, find and open *info.plist*.
 1.  Click the edit icon, then change the code like so: 
 
-	a. Before the final `</dict>` line, add this key:<br />
-	
-	```
-	<key>UIRequiresFullScreen</key>
-	<true/>
-	```
-	
-	b. Change this code:<br />
-	
-	```
-		<key>UISupportedInterfaceOrientations</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
+    a. Before the final `</dict>` line, add this key:<br />
+    
+    ```
+    <key>UIRequiresFullScreen</key>
+    <true/>
+    ```
+    
+    b. Change this code:<br />
+    
+    ```
+        <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
 </array>
-	```
-	
-	to the following:<br />
-	
-	```
-		<key>UISupportedInterfaceOrientations</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	```
+    ```
+    
+    to the following:<br />
+    
+    ```
+        <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    ```
 1. Commit these changes.
 
 #### 6.2.4 Uploading to the Apple App Store
@@ -428,14 +428,14 @@ To upload your app to the iOS App Store, follow these instructions (to continue,
 1. Follow Apple's [Add an app to your account](https://help.apple.com/app-store-connect/#/dev2cd126805) tutorial to add an app entry to your account.
 2.  After adding a new app to your account, follow Apple's [View and edit app information](https://help.apple.com/app-store-connect/#/dev97865727c) tutorial to describe your new app entry. Consult the other pages under the left menu's **Enter app information** category should they apply to your app:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/ios-enter-app-info.png" alt="enter app information"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/ios-enter-app-info.png" alt="enter app information"   width="400"  >}}
 
 3. Follow Apple's [Uploading builds overview](https://help.apple.com/app-store-connect/#/dev82a6a9d79) to upload a build of your app to App Store Connect.
 4. Use Apple's [Upload tools guide](https://help.apple.com/app-store-connect/#/devb1c185036) to upload your *ipa*.
 5. Use Apple's [Choose the build before you submit to review](https://help.apple.com/app-store-connect/#/dev7cbda8c55) to select the build which you will submit to App Review.
 6.  Publish your app by following Apple's [Overview of publishing an app](https://help.apple.com/app-store-connect/#/dev34e9bbb5a) and the subsequent documents in the left menu's **Publish on the App Store** category:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/ios-publishing-an-app.png" alt="publish on the app store"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/ios-publishing-an-app.png" alt="publish on the app store"   width="400"  >}}
 
 ## 7 Read More
 

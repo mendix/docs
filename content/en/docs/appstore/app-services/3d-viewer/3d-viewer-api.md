@@ -24,7 +24,7 @@ If you want to get properties of a selected part on the 3D Viewer, perform the f
 2. Use [`mx.viewer3D.getObjects()`](http://3dviewer-apidoc.s3-website.eu-central-1.amazonaws.com/index/v2.1/apidoc/3dviewer.mx.viewer3d.getobjects.html#mx-viewer3d-getobjects-function) to get the object instances.
 3.  Use [`IPart.getProperties() `](http://3dviewer-apidoc.s3-website.eu-central-1.amazonaws.com/index/v2.1/apidoc/3dviewer.ipart.getproperties.html) to pass the selected object as a parameter. Then you get the properties in key-value pairs. The following is the sample code in a JavaScript action. It takes 2 parameters `selectedObject` and `propertyObject`.
 
-	```
+    ```
         /**
          * @param {string} selectedObject
          * @param {string} propertyObject

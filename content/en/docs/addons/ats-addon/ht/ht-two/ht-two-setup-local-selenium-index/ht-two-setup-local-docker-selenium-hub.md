@@ -30,48 +30,48 @@ The following steps describe how to install your hub and nodes with Docker-Compo
 1. Create a folder or directory to place your docker-compose file
 2.  Create a docker-compose.yml in your folder/directory: 
 
-	```
-	hub: 
-	 image: selenium/hub:3.8.1
-	 environment:
-		- TZ=Europe/Amsterdam
-		- GRID_TIMEOUT=90
-	 ports:
-		- 4444:4444
+    ```
+    hub: 
+     image: selenium/hub:3.8.1
+     environment:
+        - TZ=Europe/Amsterdam
+        - GRID_TIMEOUT=90
+     ports:
+        - 4444:4444
     
-	firefox:
-	 image: selenium/node-firefox:3.8.1
-	 links:
-		- hub:hub
-	 environment:
-		- TZ=Europe/Amsterdam
-		- SCREEN_WIDTH=1600
-		- SCREEN_HEIGHT=900
+    firefox:
+     image: selenium/node-firefox:3.8.1
+     links:
+        - hub:hub
+     environment:
+        - TZ=Europe/Amsterdam
+        - SCREEN_WIDTH=1600
+        - SCREEN_HEIGHT=900
     
-	chrome:
-	 image: selenium/node-chrome:3.8.1
-	 links:
-		- hub:hub
-	environment:
-		- TZ=Europe/Amsterdam
-		- SCREEN_WIDTH=1600
-		- SCREEN_HEIGHT=900
-	volumes:
-		- /dev/shm:/dev/shm
-	privileged: true
-	```
+    chrome:
+     image: selenium/node-chrome:3.8.1
+     links:
+        - hub:hub
+    environment:
+        - TZ=Europe/Amsterdam
+        - SCREEN_WIDTH=1600
+        - SCREEN_HEIGHT=900
+    volumes:
+        - /dev/shm:/dev/shm
+    privileged: true
+    ```
 
 3.  Open a console and give the following command from the folder/directory where you placed your docker-compose.yml:
 
-	```
-	sudo docker-compose up -d
-	```
+    ```
+    sudo docker-compose up -d
+    ```
 
-	The first time it will start pulling the images from the Docker hub.
+    The first time it will start pulling the images from the Docker hub.
 
 4.  After the process has started, you can check the status with the following commands:
 
-	```
+    ```
    sudo docker-compose ps
 
          Name                 Command           State           Ports         
@@ -79,13 +79,13 @@ The following steps describe how to install your hub and nodes with Docker-Compo
    docker_chrome_1    /opt/bin/entry_point.sh   Up                            
    docker_firefox_1   /opt/bin/entry_point.sh   Up                            
    docker_hub_1       /opt/bin/entry_point.sh   Up      0.0.0.0:4444->4444/tcp
-	```
+    ```
 
 5.  Check with the following link if the hub works: `http://localhost:4444/grid/console`. Note: You can also replace localhost with the server name or IP-address of the Docker host.
 
-	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-docker-selenium-hub/docker_grid.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-docker-selenium-hub/docker_grid.png" >}}
 
-	Congratulation, your local Selenium hub is running.
+    Congratulation, your local Selenium hub is running.
 
 ## 4 Starting Testing
 
@@ -95,23 +95,23 @@ You can start testing by sending your test script to: `http://yourmachinenameorI
 
 Each node has one browser, so if you need more nodes of a certain browser, you can scale with docker-compose. With multiple nodes you can run tests in parallel. For example, if you want 3 Chrome browsers:
 
-   ```
-   sudo docker-compose up -d --scale chrome=3
-   docker_hub_1 is up-to-date
-   Starting docker_chrome_1 ... 
-   Starting docker_chrome_1 ... done
-   Creating docker_chrome_2 ... done
-   Creating docker_chrome_3 ... done
+    ```
+    sudo docker-compose up -d --scale chrome=3
+    docker_hub_1 is up-to-date
+    Starting docker_chrome_1 ... 
+    Starting docker_chrome_1 ... done
+    Creating docker_chrome_2 ... done
+    Creating docker_chrome_3 ... done
 
-   sudo docker-compose ps
-         Name                 Command           State           Ports         
-   ---------------------------------------------------------------------------
-   docker_chrome_1    /opt/bin/entry_point.sh   Up                            
-   docker_chrome_2    /opt/bin/entry_point.sh   Up                            
-   docker_chrome_3    /opt/bin/entry_point.sh   Up                            
-   docker_firefox_1   /opt/bin/entry_point.sh   Up                            
-   docker_hub_1       /opt/bin/entry_point.sh   Up      0.0.0.0:4444->4444/tcp
-   ```
+    sudo docker-compose ps
+          Name                 Command           State           Ports         
+    ---------------------------------------------------------------------------
+    docker_chrome_1    /opt/bin/entry_point.sh   Up                            
+    docker_chrome_2    /opt/bin/entry_point.sh   Up                            
+    docker_chrome_3    /opt/bin/entry_point.sh   Up                            
+    docker_firefox_1   /opt/bin/entry_point.sh   Up                            
+    docker_hub_1       /opt/bin/entry_point.sh   Up      0.0.0.0:4444->4444/tcp
+    ```
 
 {{% alert color="info" %}}
 By default the hub only accepts a maximum of 5 sessions to run in parallel at a time, even if you configure more, see the official documentation.

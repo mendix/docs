@@ -95,11 +95,11 @@ This is done from the **Environments** page of the Developer Portal:
 
 3.  Select the **Domain**, **Organization**, and **Space** of your app. The URL of the domain will form part of the application's URL. The URL of the application will be this:  `{appname}-{environment name}.{domain}`
 
-	This is an example URL:
+    This is an example URL:
 
-	```http
-	https://myApp-Development.eu-gb.mybluemix.net
-	```
+    ```http
+    https://myApp-Development.eu-gb.mybluemix.net
+    ```
 
     {{< figure src="/attachments/developerportal/deploy/ibm-cloud/07-ibm-env-1.png" >}}
 

@@ -22,19 +22,19 @@ A custom developer app helps you by serving as a replacement for the Make It Nat
 1. Open a command line interface (CLI) such as Command Prompt.
 2. Navigate to the directory of your Native Builder:
 
-	```
-	cd {path to Native Builder executable file}
-	```
+    ```
+    cd {path to Native Builder executable file}
+    ```
 
 3. Run the following command to build your project's custom developer app:
 
-	```
-	native-builder.exe build dev-app --project-name {your project's name}
-	```
+    ```
+    native-builder.exe build dev-app --project-name {your project's name}
+    ```
 
-	This command does the following: <br />
-	a. Creates a branch named `developer` based on the commited changes to your `master` <br />
-	b. Starts a build using the developer app flavors for your project
+    This command does the following: <br />
+    a. Creates a branch named `developer` based on the commited changes to your `master` <br />
+    b. Starts a build using the developer app flavors for your project
 4. Wait until the Native Builder completes your builds.
 
 As with a release build, when the Native Builder is done building you should have two archives for each build: an iOS and an Android build. These archives can be found under the build output path `{build output path}` with **Dev** prepended to their name. The default `{build output path}` is the `./builds` folder relative to your `native-builder.exe` location.
@@ -92,28 +92,28 @@ Builds with the Native Builder are stripped of simulator artifacts. Therefore, t
 1. Navigate to your GitHub repo.
 2.  Switch to your **developer** branch:
    
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/github-branch-switching.png" alt="Switch branch on Github" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/github-branch-switching.png" alt="Switch branch on Github" >}}
    
 3.  Click **Clone or Download** and then click **Download ZIP**:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/github-download-branch.png" alt="Download repository" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/github-download-branch.png" alt="Download repository" >}}
    
 4. Unzip the downloaded archive.
 5. Open a terminal and change directory into the folder.
 6. Run this command:
 
-	```
-	npm i && cd ios && pod install
-	```
+    ```
+    npm i && cd ios && pod install
+    ```
 
-	This will install the node module dependencies and the iOS Dependencies
+    This will install the node module dependencies and the iOS Dependencies
 7.  In the **ios** folder, open the **NativeTemplate.xcworkspace** file:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/ios-folder.png" alt="iOS folder structure" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/ios-folder.png" alt="iOS folder structure" >}}
 
 8.  In XCode select the **Dev** target and the emulator you want to build your developer app for:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/xcode-target-selection.png" alt="Dev target selection" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/xcode-target-selection.png" alt="Dev target selection" >}}
 
 9. Click **Play**.
 

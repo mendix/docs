@@ -32,7 +32,7 @@ The following steps describe how to install the hub and nodes with Docker-Compos
 2. Create a folder or directory to place your video files.
 3.  Create a *browsers.json* in your folder/directory (/docker)
 
-	```
+    ```
       {
            "firefox": {
                    "default": "58.0",
@@ -57,11 +57,11 @@ The following steps describe how to install the hub and nodes with Docker-Compos
                    }
            }
    }
-	```
+    ```
 
 4.  Create a docker-compose.yml in your folder/directory (/docker)
 
-	```
+    ```
    version: '3'
    services:
      selenoid:
@@ -77,41 +77,41 @@ The following steps describe how to install the hub and nodes with Docker-Compos
        command: ["-conf", "/etc/selenoid/browsers.json", "-video-output-dir", "/opt/selenoid/video"]
        ports:
          - "4444:4444"
-	```
+    ```
 
 5.  Open a console and give the following commands to pull the images first:
 
-	```
+    ```
    sudo docker pull selenoid/chrome:65.0
    sudo docker pull selenoid/firefox:58.0
    sudo docker pull selenoid/video-recorder
    sudo docker pull aerokube/selenoid
-	```
+    ```
 
 6.  Open a console and give the following command from the folder/directory where you placed your docker-compose.yml:
 
-	```
-	sudo docker-compose up -d
-	
-	Starting docker_selenoid_1 ... done
-	```
+    ```
+    sudo docker-compose up -d
+        
+    Starting docker_selenoid_1 ... done
+    ```
 
 7.  After it started, you can check the status of the container
 
-	```
-	sudo docker-compose ps
+    ```
+    sudo docker-compose ps
          Name                     Command               State           Ports         
    ---------------------------------------------------------------------
    docker_selenoid_1   /usr/bin/selenoid -conf /e ...   Up      0.0.0.0:4444->4444/tcp
-	```
+    ```
 
 8.  To check the status of the hub:
 
-	```
-	curl -s http://localhost:4444/status
+    ```
+    curl -s http://localhost:4444/status
 
-	{"total":5,"used":0,"queued":0,"pending":0,"browsers":{"chrome":{"65.0":{}},"firefox":{"58.0":{}}}}
-	```
+    {"total":5,"used":0,"queued":0,"pending":0,"browsers":{"chrome":{"65.0":{}},"firefox":{"58.0":{}}}}
+    ```
 
 ## 4 Starting Testing
 
@@ -123,12 +123,12 @@ In case you want to record your test case as a video follow these steps:
 
 1.  Add a Custom Capability to your Selenium hub configuration: **enableVideo** with a Boolean set to **true**
 
-	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/add_capability.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/add_capability.png" >}}
 
 2. Once the test case finishes you can find your video in: `http://yourmachinenameorIP:4444/video`. The video shows as "session-id.mp4"
 3.  (Optional:) You can give the video file a custom name by adding another Custom Capability: **VideoName** with a string, for example **MyTestVideo.mp4** (don't forget the .mp4!)
 
-	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/video_name.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/video_name.png" >}}
 
 After executing the test case, don't forget to download the video file or give it a different name in the next session, otherwise it is overwritten!
 
@@ -138,7 +138,7 @@ To install a hub with a Portal for "Live-View" you need a different *browsers.js
 
 1.  Create a *browsers.json* with VNC browser image:
 
-	```
+    ```
    {
            "firefox": {
                    "default": "58.0",
@@ -163,11 +163,11 @@ To install a hub with a Portal for "Live-View" you need a different *browsers.js
                    }
            }
    }
-	```
+    ```
 
 2.  Create a docker-compose.yml with added selenoid UI for the portal:
 
-	```
+    ```
    version: '3'
    services:
      selenoid:
@@ -192,19 +192,19 @@ To install a hub with a Portal for "Live-View" you need a different *browsers.js
        ports:
          - "8080:8080"
        command: ["--selenoid-uri", "http://selenoid:4444"]
-	```
+    ```
 
 3.  Pull the images first
 
-	```
+    ```
    sudo docker pull selenoid/vnc:chrome_65.0
    sudo docker pull selenoid/vnc:firefox_58.0
    sudo docker pull aerokube/selenoid-ui
-	```
+    ```
 
 4.  Start the hub
 
-	```
+    ```
     # sudo docker-compose up -d
 
     Creating docker_selenoid_1 ... done
@@ -216,19 +216,19 @@ To install a hub with a Portal for "Live-View" you need a different *browsers.js
     --------------------------------------------------------------------------------------
     docker_selenoid-ui_1   /selenoid-ui --selenoid-ur ...   Up      0.0.0.0:8888->8080/tcp
     docker_selenoid_1      /usr/bin/selenoid -conf /e ...   Up      0.0.0.0:4444->4444/tcp 
-	```
+    ```
 
 5. You can visit your portal on [http://yourmachinenameorIP:8080](http://localhost:8080)
 6.  To enable "Live-View" you need to add another Custom Capability to your Selenium hub configuration: **enableVNC** with Boolean set to **true**
 
-	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/enable_vnc.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/enable_vnc.png" >}}
 
 7.  After starting your test case you can view your session in the portal:
 
-	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/selenoidui1.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/selenoidui1.png" >}}
 
 8.  By clicking on your session, you will be able to see your live view:
 
-	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/selenoidui2.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/selenoidui2.png" >}}
 
 Congratulations you have finished setting up a local Selenoid hub. The next how-to is  [Use ATS in Combination with CI/CD](/addons/ats-addon/ht-two-ats-and-ci-cd/). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.

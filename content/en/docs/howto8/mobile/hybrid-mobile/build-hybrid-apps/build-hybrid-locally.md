@@ -36,7 +36,7 @@ To prepare your app for building, follow these instructions:
    * Packages the Cordova app for deployment.
    * Adds the iOS platform to Cordova.
 
-#### 2.1.1 Customizing a DTAP Endpoint	
+#### 2.1.1 Customizing a DTAP Endpoint    
 
 Optionally, you can set various environments in the **config/environments.json** file. This can help if you are trying to make your build from your own specific test or acceptance environment. 
 
@@ -149,27 +149,27 @@ The command to build your app locally for release is `npm run build -- android -
 
 1.  Run the following command:
    
-	a. **On Mac OSX, as a single command run:**<br />
+    a. **On Mac OSX, as a single command run:**<br />
 
-	```
-	PATH="\$PATH:/Users/<username>/.gradle/wrapper/dists/gradle-5.1.1-all/97z1ksx6lirer3kbvdnh7jtjg/gradle-5.1.1/bin" JAVA_HOME=`/usr/libexec/java_home -v 1.8\` npm run build -- android --release -- --keystore=<keystore-path> --storePassword=<keystore-password> --alias=<keystore-alias> --password=<certificate-password>
-	```
+    ```
+    PATH="\$PATH:/Users/<username>/.gradle/wrapper/dists/gradle-5.1.1-all/97z1ksx6lirer3kbvdnh7jtjg/gradle-5.1.1/bin" JAVA_HOME=`/usr/libexec/java_home -v 1.8\` npm run build -- android --release -- --keystore=<keystore-path> --storePassword=<keystore-password> --alias=<keystore-alias> --password=<certificate-password>
+    ```
 
-	b. **On Windows, in a command line as separate commands run:**<br />
+    b. **On Windows, in a command line as separate commands run:**<br />
 
-	```
-	set PATH=%PATH%;C:\path-to-gradle-distribution
+    ```
+    set PATH=%PATH%;C:\path-to-gradle-distribution
       
-	set JAVA_HOME=C:\path-to-jdk-1.8-directory
+    set JAVA_HOME=C:\path-to-jdk-1.8-directory
       
-	npm run build -- android --release -- --keystore=<keystore-path> --storePassword=<keystore-password> --alias=<keystore-alias> --password=<certificate-password>
-	```
+    npm run build -- android --release -- --keystore=<keystore-path> --storePassword=<keystore-password> --alias=<keystore-alias> --password=<certificate-password>
+    ```
 
-	This command adds the gradle binary to the path, switches the JAVA *JDK* to be 1.8, and runs the build release command to generate a signed *APK*.
+    This command adds the gradle binary to the path, switches the JAVA *JDK* to be 1.8, and runs the build release command to generate a signed *APK*.
 
 1. When the build succeeds the generated *APK* file can be found in **/build/platform/android/app/release**:
 
-	{{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/folder-final-android.png" alt="Final folder structure"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/folder-final-android.png" alt="Final folder structure"   width="400"  >}}
 
 #### 3.3.2 Building Android Using Android Studio
 
@@ -177,28 +177,28 @@ Using Android Studio can be easier than the Cordova CLI due to Android Studio's 
 
 1. Start Android Studio:
 
-	{{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-welcome.png" alt="Android Studio Welcome Screen"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-welcome.png" alt="Android Studio Welcome Screen"   width="400"  >}}
 
 1. Open an existing Android Studio project and select your app's Android folder, for example **/Downloads/localbuild/build/platform/android**:
 
-	{{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-open-folder.png" alt="Android Studio Open Folder"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-open-folder.png" alt="Android Studio Open Folder"   width="400"  >}}
 
 1. Wait for Android Studio to finish syncing your app.
 1. Click the **Build** > **Generate Signed Bundle / APK**:
 
-	{{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-build-menu.png" alt="Android Studio Build Menu"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-build-menu.png" alt="Android Studio Build Menu"   width="400"  >}}
 
 1. Select the *APK* checkbox:
 
-	{{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-sign-wizard-1.png" alt="Android Studio Sign Wizard Step 1"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-sign-wizard-1.png" alt="Android Studio Sign Wizard Step 1"   width="400"  >}}
 
 1. Select your Android keystore and complete the form with the correct keystore password, alias, and password:
 
-	{{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-sign-wizard-2.png" alt="Android Studio Sign Wizard Step 2"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-sign-wizard-2.png" alt="Android Studio Sign Wizard Step 2"   width="400"  >}}
 
 1. Select the destination folder for the *APK*, **Build Variant** release, and **V1 and V2 Signature** versions:
 
-	{{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-sign-wizard-3.png" alt="Android Studio Sign Wizard Step 3"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-sign-wizard-3.png" alt="Android Studio Sign Wizard Step 3"   width="400"  >}}
 
 1. Click **Finish**.
 

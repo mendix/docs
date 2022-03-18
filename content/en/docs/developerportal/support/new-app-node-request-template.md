@@ -22,7 +22,7 @@ These functions, listed below, are described in this document.
 
 ## 2 Requesting a New Licensed App Node{#new-node}
 
-If you want to deploy your app to a new licensed node in the Mendix Cloud or on-premises/virtual private cloud, you can request one from Mendix Support.
+If you want to deploy your app to a new licensed node in the Mendix Cloud, Mendix Cloud Dedicated, or on-premises/virtual private cloud, you can request one from Mendix Support.
 
 Fill in all the required details for this new licensed app node in the [Request New App Node](https://newnode.mendix.com/) app.
 

@@ -1,10 +1,10 @@
 ---
-title: "Use OData Model Creator for SAP Solutions"
+title: "Use the Model Creator for SAP Integrations"
 url: /partners/sap/use-sap-odata-model-creator/
 category: "SAP"
 weight: 35
-description: "Presents the use of the OData functions of the Model Creator for SAP solutions."
-tags: ["SAP", "OData", "integration", "SAP services"]
+description: "Describes how to use the Model Creator for SAP Integrations to generate a Mendix domain model for an SAP OData or BAPI service."
+tags: ["SAP", "OData", "integration", "SAP services", "BAPI"]
 aliases:
     - /howto/sap/use-sap-odata-model-creator.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -28,18 +28,18 @@ There are four ways to create the data model:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Identify the SAP back-end system and OData service you wish to use
-* Create an app in Mendix Studio Pro (version 8.15.1 or above)
+* Create an app in Mendix Studio Pro (version 8.18.10 or above)
 * Obtain authentication credentials, if needed, for the SAP Catalog Service or SAP back-end system you wish to use
 
 {{% alert color="warning" %}}
-The Model Creator for SAP solutions will produce a module which is in Mendix version 8.15.1. To use the module you will have to create your app in, or upgrade your app to, Mendix version 8.15.1 or above.
+The Model Creator for SAP solutions will produce a module which is in Mendix version 8.18.10. To use the module you will have to create your app in, or upgrade your app to, Mendix version 8.18.10 or above.
 {{% /alert %}}
 
 ## 3 Generating a Data Model
 
 The Model Creator for SAP solutions is an app in the Marketplace. Search for it in the Mendix Marketplace, or find it here: [Model Creator for SAP solutions - OData](https://sapmodelcreator.mendixcloud.com/link/odata). If the app gives you a choice between **SAP OData** and **SAP BAPI**, choose **SAP OData**.
 
-{{< figure src="/attachments/use-sap-odata-model-creator/odata-bapi.png" >}}
+{{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/odata-bapi.png" >}}
 
 {{% alert color="info" %}}
 The Model Creator for SAP solutions is not currently available in the Marketplace within Studio Pro. It can only be run in a browser.
@@ -169,7 +169,7 @@ One way to do this is by getting the OData metadata XML file. This file can be d
 
     {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/download-xml.png" >}}
 
-2. Open the OData Model Creator for SAP solutions to generate a Domain Model for an SAP OData Service.
+2. Open the Model Creator for SAP Integrations to generate a Domain Model for an SAP OData Service.
 
     {{< figure src="/attachments/partners/sap/use-sap-odata-model-creator/model-creator-wizard-1.png" >}}
 

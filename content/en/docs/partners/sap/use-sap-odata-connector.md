@@ -38,7 +38,7 @@ For more information, see [How to Use Marketplace Content in Studio Pro](/appsto
 
 In this example, you will display a list of products from the GWSAMPLE_BASIC OData service. You will need to create an SAP data model module for the GWSAMPLE_BASIC OData service. The module contains a pre-built domain model that you can add to your app.
 
-1. Open the [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/).
+1. Open the [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/).
 
 2. Click **SAP Catalog Service**.
 
@@ -78,7 +78,7 @@ In this example, you will display a list of products from the GWSAMPLE_BASIC ODa
 
     {{< figure src="/attachments/partners/sap/use-sap-odata-connector/data-model.png" >}}
 
-For more information, see [Use the OData Model Creator for SAP Solutions](/partners/sap/use-sap-odata-model-creator/) and [SAP Data Models](/partners/sap/sap-data-models/).
+For more information, see [Use the Model Creator for SAP Integrations](/partners/sap/use-sap-odata-model-creator/) and [SAP Data Models](/partners/sap/sap-data-models/).
 
 ## 5 Using the OData Connector for SAP Solutions
 

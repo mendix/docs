@@ -31,7 +31,7 @@ To find out how to deploy your app to SAP Business Technology Platform, see [SAP
 The how-to's in this category will teach you to perform certain actions to integrate Mendix with SAP services like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, SAP S/4HANA Cloud, and SAP SuccessFactors, among others.
 
 * [Use the OData Connector for SAP Solutions](/partners/sap/use-sap-odata-connector/)
-* [Use the OData Model Creator for SAP Solutions](/partners/sap/use-sap-odata-model-creator/)
+* [Use the Model Creator for SAP Integrations](/partners/sap/use-sap-odata-model-creator/)
 * [How to Use the XSUAA Connector for SAP Business Technology Platform](/partners/sap/use-sap-xsuaa-connector/)
 * [Use SAP Connectivity Services with REST and SOAP](/partners/sap/sap-destination-with-rest/)
 

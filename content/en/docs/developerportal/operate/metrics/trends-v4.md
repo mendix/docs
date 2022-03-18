@@ -49,6 +49,7 @@ You can find the trends by following these steps:
 1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
 2. Click **Metrics**.
 3. Select the environment you want to monitor under the tab **Trends**.
+4. Choose the period for which you want to see the trends: **Day**, **Week**, **Month**, or **Quarter**.
 
 {{< figure src="/attachments/developerportal/operate/metrics/trends-v4/environment.png" >}}
 
@@ -56,11 +57,7 @@ You can find the trends by following these steps:
 
 As with all complex IT systems, there are many interrelated components which can cause performance issues. This document cannot cover all possibilities, but is intended as a general introduction to the information which is displayed and a few ideas about where to look for possible areas of concern.
 
-#### 3.2.1 Disk Partitions
-
-If there is more than one disk partition in the system, the `/srv` partition generally contains project files and uploaded files of the application, while `/var` generally holds the database storage.
-
-#### 3.2.2 Combining Information{#combine-info}
+#### 3.2.1 Combining Information{#combine-info}
 
 You can often get more information about the performance of your app by combining the information from several graphs. Useful graphs for this are:
 
@@ -236,6 +233,22 @@ The **Application node disk usage (percentage)** graph shows the relative amount
 This graph should be interpreted in combination with other graphs. See [Combining Information](#combine-info), above.
 
 The disk usage graph shows only the disk usage inside the container. This is usually only relevant if your application creates a lot of temporary files in `/tmp`. This value is not the same as the file document storage.
+
+### 4.11 Application Number of Files{#Trends-appnumberoffiles}
+
+The **Application Number of Files** graph shows the number of files created by entities which are based on `FileDocument` generalizations, that are stored in S3 file storage.
+
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/app-number-of-files.png" >}}
+
+### 4.12 Application Size of Files (in bytes){#Trends-appsizeoffiles}
+
+{{% alert type="info" %}}
+This metric was added on DATE to the [Cloud Foundry Mendix Buildpack](https://github.com/mendix/cf-mendix-buildpack). The data will only be visible once you deploy your Mendix app after that date. Before you redeploy, the graph will show **No Data Available**. After the deployment, data will only be shown on the graph from that date onward.
+{{% /alert %}}
+
+The **Application Size of Files** graph shows the size of files (in bytes) that are stored in file storage.
+
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/app-size-of-files.png" >}}
 
 ## 5 Database Statistics
 

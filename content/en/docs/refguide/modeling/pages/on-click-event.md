@@ -7,6 +7,8 @@ tags: ["studio pro", "events section", "properties", "widget", "on click", "acti
 aliases:
     - /refguide/opening-pages.html
     - /refguide/starting-microflows.html
+    - /refguide/opening-pages
+    - /refguide/starting-microflows
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -8,6 +8,8 @@ description: "Describes the various levels of support available for using Market
 aliases:
     - /community/app-store-content-support.html
     - /developerportal/app-store/app-store-content-support.html
+    - /community/app-store-content-support
+    - /developerportal/app-store/app-store-content-support
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

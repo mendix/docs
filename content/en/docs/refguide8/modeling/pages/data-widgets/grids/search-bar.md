@@ -8,6 +8,9 @@ aliases:
     - /refguide8/comparison-search-field.html
     - /refguide8/drop-down-search-field.html
     - /refguide8/range-search-field.html
+    - /refguide8/comparison-search-field
+    - /refguide8/drop-down-search-field
+    - /refguide8/range-search-field
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

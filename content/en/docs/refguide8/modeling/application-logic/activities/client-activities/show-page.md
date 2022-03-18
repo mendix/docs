@@ -6,6 +6,7 @@ weight: 50
 tags: ["studio pro", "show page", "client activity"]
 aliases:
     - /refguide8/Show+Page.html
+    - /refguide8/Show+Page
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

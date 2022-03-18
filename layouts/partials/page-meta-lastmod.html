@@ -1,0 +1,6 @@
+<div class="text-muted mb-2 date-format"> <!-- NK - changed for smaller spacing -->
+{{ if and (.GitInfo) (.Site.Params.github_repo) }}
+    {{ T "post_last_mod"}}
+    {{ .Lastmod.Format .Site.Params.time_format_default }}
+{{ end }}
+</div>

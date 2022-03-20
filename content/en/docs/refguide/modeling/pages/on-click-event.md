@@ -255,7 +255,7 @@ The **Close page** event closes a pop-up window (for pop-up pages) or navigates 
 
 The **Delete event** deletes an object. Its behavior depends on a data container it is placed in. When placed in a data view, deletes the connected object; it does not delete objects in a nested data view unless configured through delete behavior. When placed in a data grid, template grid, or reference set selector control bar, it deletes the selected object(s). When placed inside a list view, it deletes the corresponding list view item.
 
-This event cannot be used to delete [external objects](/refguide/external-entities). Use a microflow with a [Delete External Object](/refguide/delete-external-object) activity to delete external objects.
+This event cannot be used to delete [external objects](/refguide/external-entities/). Use a microflow with a [Delete External Object](/refguide/delete-external-object/) activity to delete external objects.
 
 Set the **Close page** property to indicate whether the current page should be closed.
 

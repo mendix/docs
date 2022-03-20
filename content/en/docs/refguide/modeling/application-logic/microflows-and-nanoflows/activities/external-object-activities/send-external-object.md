@@ -13,7 +13,7 @@ These activities can only be used in **Microflows**.
 The **Send external object** activity can be used to persist changes to an external object. It can be used to send newly created objects, or objects that have been first retrieved and then changed.
 
 {{% alert color="info" %}}
-The ability to send attributes using this activity was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/). The sending of association members was added in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8/), and sending a new object was added in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12).
+The ability to send attributes using this activity was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/). The sending of association members was added in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8/), and sending a new object was added in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12/).
 {{% /alert %}}
 
 ## 2 Updatable External Entities

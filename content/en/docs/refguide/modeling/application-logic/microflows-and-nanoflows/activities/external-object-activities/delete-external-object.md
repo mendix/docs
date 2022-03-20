@@ -20,7 +20,9 @@ This activity was introduced in Studio Pro [9.12.0](/releasenotes/studio-pro/9.1
 
 When the microflow has **Apply entity access** set to **Yes**, only users with *delete* entity access can execute this activity. Users without *delete* entity access will see an error message.
 
-## 2 Action Section
+## 2 Activity Properties
+
+Double click the **Delete external object** activity, or right-click the activity and select **Properties**, to view the action properties.
 
 ### 2.1 Object
 

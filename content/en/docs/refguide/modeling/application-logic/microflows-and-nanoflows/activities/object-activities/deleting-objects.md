@@ -16,7 +16,7 @@ An example of delete object properties is represented in the image below:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/delete-properties.png" alt="delete object properties" >}}
 
-This activity cannot be used to delete [external objects](/refguide/external-entities). Use the [Delete External Object](/refguide/delete-external-object) activity to delete external objects.
+This activity cannot be used to delete [external objects](/refguide/external-entities/). Use the [Delete External Object](/refguide/delete-external-object/) activity to delete external objects.
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

@@ -18,7 +18,7 @@ The activities described in this document are in the **External Object Activitie
 The following are the integration activities you can use in your microflow:
 
 * [Send external object](/refguide/send-external-object/) – sends changes to an external object to the publishing app
-* [Delete external object](/refguide/delete-external-object) – deletes an external object in the publishing app
+* [Delete external object](/refguide/delete-external-object/) – deletes an external object in the publishing app
 
 {{% alert color="info" %}}
 This group of activities was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/).

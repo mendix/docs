@@ -32,7 +32,7 @@ Vocabulary annotations can be used in a service to indicate features that are no
 * **Sortable** – an entity set marked as `Sortable="false"` sets all properties as non-sortable
 * Marking an entity set as `Filterable="false"` and `Sortable="false"` sets all properties as non-filterable and non-sortable; marking properties with the `NonFilterableProperties` annotation or the `NonSortableProperties` annotation sets specific attributes as non-filterable or non-sortable
 * **Updatable** - an entity marked as `Updatable="true"` with `DeltaUpdateSupported="true"` and `UpdateMethod="2"` will make the entity updatable in the domain model. That means, for instance, that you can model pages that change attributes values and associated objects, and that you can use the entity in the [Change object action](/refguide/change-object/). For updatable entities, the annotations `NonUpdatableProperties` and `NonUpdatableNavigationProperties` can be used to list the (navigation)properties that cannot be updated.
-* **Deletable** - an entity marked as `Deletable="true"` can be used in the [Delete External Object](delete-external-object) activity.
+* **Deletable** - an entity marked as `Deletable="true"` can be used in the [Delete External Object](/refguide/delete-external-object/) activity.
 
 An entity can only be used when it is accessible through an entity set.
 

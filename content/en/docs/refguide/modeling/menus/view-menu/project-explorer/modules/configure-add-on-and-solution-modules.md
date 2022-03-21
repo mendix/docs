@@ -6,6 +6,12 @@ weight: 20
 tags: ["studio pro", "add-on", "solution", "module", "modules"]
 ---
 
+{{% alert color="warning" %}}
+
+Access to this functionality is currently limited and can be gained through ISV program or App Services program. For more information, see [Mendix Vendor Program](/appstore/creating-content/vendor-program/) in the *Marketplace Guide*.
+
+{{% /alert %}}
+
 ## 1 Introduction
 
 Add-on and solution modules are special types of modules that are developed to add functionality to an app. They have Intellectual Property (IP) protection enabled and have the *.mxmodule* extension. For more information on IP protection, see [IP Protection](/appstore/creating-content/sol-ip-protection/). 
@@ -28,7 +34,7 @@ All content of add-on and solution modules is set to be hidden from consumers (h
 
 ### 2.1 Changing Export Level of a Document/Element
 
-Documents and some elements in the add-on and solution module have the **Export level** property. This property defines whether the consumers will be able to see the contents of the document/element and use it. For more information on what documents and elements are supported for add-on and solution modules, see the [Supported Documents](#supported-documents) section below. 
+Documents and some elements in the add-on and solution modules have the **Export level** property. This property defines whether the consumers will be able to see the contents of the document/element and use it. For more information on what documents and elements are supported for add-on and solution modules, see the [Supported Documents](#supported-documents) section below. 
 
 The **Export level** has two values:
 
@@ -100,7 +106,7 @@ It is possible to add files in an add-on module package, you can select them dur
 
 {{% alert color="info" %}}
 
-Resources selected above are not remembered when exporting the module again and need to be selected for every subsequent export.
+Selection made above is not saved when exporting the module again, you need to select files for every subsequent export.
 
 {{% /alert %}}
 

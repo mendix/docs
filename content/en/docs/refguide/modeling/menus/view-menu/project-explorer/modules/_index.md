@@ -35,9 +35,9 @@ Some modules are part of your app by default and are called **app modules**, whi
 
 There are the following type of modules:
 
-* App modules (standard modules)
-* [Add-on modules](/refguide/configure-add-on-and-solution-modules/) 
-* [Solution modules](/refguide/configure-add-on-and-solution-modules/)
+* [App modules](/refguide/module-settings/#app-module) (standard modules)
+* [Add-on modules](/refguide/module-settings/#add-on-module) 
+* [Solution modules](/refguide/module-settings/#solution-module)
 
 
 ##  3 Common

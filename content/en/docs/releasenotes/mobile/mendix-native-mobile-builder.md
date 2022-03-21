@@ -44,7 +44,7 @@ Now, instead of accessing the first MPR file found in the directory, the tool wi
 * We fixed a bug with the Native Template update dialog box that would show the wrong reason for a required update. Now the correct reason for a required update is shown.
 * We fixed a bug that could stop apps from completely  loading when its GitHub or App Center tokens were no longer valid. Now the app will finish loading and the errors are clearly visible in the UI.
 * We fixed a bug with fatal exceptions not being caught correctly at the start of the app. This could result in a blank screen at startup. Now a dialog box is shown correctly.
-* We fixed an issue with compatibility checks where the Mendix Native Mobile Builder would incorrectly warn that a compatible Native Template is incompatible with Mendix Native OTA. Any Native Template from version 6.2.7 or newer is compatible.
+* We fixed an issue with compatibility checks where the tool would incorrectly warn that a compatible Native Template is incompatible with Mendix Native OTA. Any Native Template from version 6.2.7 or newer is compatible.
 
 ### Release 1.0.111
 

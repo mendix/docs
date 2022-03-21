@@ -66,7 +66,7 @@ The **Access rights** tab allows you to assign rights to users with the selected
 
 ##### 2.3.1.1 Allow Creating New Objects
 
-If **Allow creating new objects** is checked, users are allowed to create new objects of this entity. This is not restricted by a potential XPath constraint.
+If **Allow creating new objects** is checked, users are allowed to create new objects of this entity. This is not restricted by any configured XPath constraints.
 
 ##### 2.3.1.2 Allow Deleting Existing Objects
 
@@ -122,15 +122,16 @@ Because of this XPath constraint, the access rule only applies to orders for whi
 XPath constraints can only be applied to persistable entities as they are applied by the database. Defining XPath constraints for non-persistable entities results in consistency errors.
 {{% /alert %}}
 
-## Access Rule Evaluation
+## 3 Access Rule Evaluation
 
-Access rules are defined as part of the application development. This section describes the effects access rules have at runtime - under the assumption that the **App Security** is set to **Production**.
+Access rules are defined as part of application development. This section describes the effects access rules have at runtime, under the assumption that the **App Security** is set to **Production**.
 
-Access rules are abstract descriptions of access rights. To use them they need to be evaluated: given a user with certain user roles and a state of the database it can be determined if an access rule applies. The Mendix runtime stores the result of access rule evaluation in memory. In general, this evaluation happens on retrieval of objects from the database. The results will stay valid for the lifetime of the object, which is usually the request. Access rules are evaluated differently depending on the object state, some more details on their evaluation when accessed through a user context follow.
+Access rules are abstract descriptions of access rights. To apply them they need to be evaluated. Given a user with certain user roles and the state of the database it can be determined if an access rule applies. The Mendix runtime stores the result of access rule evaluations in memory. In general, this evaluation happens on retrieval of objects from the database. The results will stay valid for the lifetime of the object, which is usually the request. Access rules are evaluated differently depending on the object state. More details about their evaluation when accessed through a user context are given below.
 
-### New Objects
-When a new object is created, or when a new object is sent to the runtime server as part of a request, all XPath constraints are assumed to evaluate as `true`. This evaluation result is stored in memory and valid for the lifetime of the request. Committing the object does _not_ lead to access rules / XPath rules being reevaluated.
+### 3.1 New Objects
 
-### Persisted Objects
-When a persisted object is passed to the runtime server as part of the request the object is retrieved from the database. At that time the access rules are evaluated based on the values retrieved from the database. As for new objects the result of this access rule evaluation is stored in memory and not changed for the lifetime of the object / request. In particular changes to attributes, or committing of the object does not cause re-evaluation of access rules.
+When a new object is created, or when a new object is sent to the runtime server as part of a request, all XPath constraints are assumed to evaluate as `true`. This evaluation result is stored in memory and valid for the lifetime of the request. Committing the object does _not_ lead to access rules or XPath rules being re-evaluated.
 
+### 3.2 Persisted Objects
+
+When a persistable object is passed to the runtime server as part of the request, the object is retrieved from the database. At that time the access rules are evaluated based on the values retrieved from the database. As for new objects the result of this access rule evaluation is stored in memory and not changed for the lifetime of the object or request. In particular changes to attributes, or committing of the object does not cause re-evaluation of access rules.

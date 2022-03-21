@@ -225,7 +225,7 @@ Do the following:
 
     {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/decision.png" alt="Adding a Decision" >}}
     
-2. Decision means that the workflow path can split and follow one of the outcomes depending on the condition of the decision. For more information, see the [Decision](/studio/workflows-general-activities/#decision/) section in *General Activities*. Open the decision properties and do the following:
+2. Decision means that the workflow path can split and follow one of the outcomes depending on the condition of the decision. For more information, see the [Decision](/studio/workflows-general-activities/#decision) section in *General Activities*. Open the decision properties and do the following:
 
     1. Set the **Caption** to **WFH?**.
 

@@ -32,7 +32,7 @@ ensuring that they work as expected in the face of daylight saving.
 
 Mendix versions 9.12.0 and above supports the following schedule types:
 
-* **Legacy** – the type that existing before Mendix 9.12.0 — see [Legacy scheduled events](/refguide/scheduled-events-legacy)
+* **Legacy** – the type that existing before Mendix 9.12.0 — see [Legacy scheduled events](/refguide/scheduled-events-legacy/)
 * **Yearly** – an event that occurs once a year on a particular day or date and at a specified time — see [Yearly scheduled events](/refguide/scheduled-events-task-queue/#yearly)
 * **Monthly** – an event that occurs every so many months on a particular day and at a specified time — see [Monthly scheduled events](/refguide/scheduled-events-task-queue/#monthly)
 * **Weekly** – an event that occurs weekly on particular days and at a specified time — see [Weekly scheduled events](/refguide/scheduled-events-task-queue/#weekly)
@@ -48,7 +48,7 @@ possible options for fixing it. If none of the options is suitable, you should p
 
 The following cases cannot be converted automatically when the model is upgraded to Mendix version 9.12.0 or above:
 
-* The event is not repeating — remove the scheduled event or use the [Java API](/refguide/task-queue/#scheduling) to schedule a one-time action — we no-longer support non-repeating scheduled events.
+* The event is not repeating — remove the scheduled event or use the [Java API](/refguide/task-queue/#queuing) to schedule a one-time action — we no-longer support non-repeating scheduled events.
 * The event has a start-time in the future, which we'll stop supporting — change the start-time to a date in the past or switch to a task queue based scheduled event.
 * The event has interval type Month or Year, which is translated to 31 and 365 days respectively — use the Monthly or Yearly type instead.
 * The event has interval type Seconds — use a schedule event with a 1-minute interval instead — we no-longer support scheduled events which repeat in less than a minute.

@@ -14,7 +14,7 @@ With scheduled events you can make the runtime execute a microflow repeatedly at
 A scheduled event is added to your module as a document (right-click your module and you will find it listed under *Add other*).
 
 {{% alert color="warning" %}}
-Scheduled events can be tested locally, but they will not be run if your app is deployed as a Free App. See the Free App section of [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy#free-app) for more information on Free App limitations.
+Scheduled events can be tested locally, but they will not be run if your app is deployed as a Free App. See the Free App section of [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/#free-app) for more information on Free App limitations.
 {{% /alert %}}
 
 ## 2 Common properties

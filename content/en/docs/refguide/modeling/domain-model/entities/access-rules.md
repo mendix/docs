@@ -132,6 +132,6 @@ Access rules are abstract descriptions of access rights. To apply them they need
 
 When a new object is created, or when a new object is sent to the runtime server as part of a request, all XPath constraints are assumed to evaluate as `true`. This evaluation result is stored in memory and valid for the lifetime of the request. Committing the object does _not_ lead to access rules or XPath rules being re-evaluated.
 
-### 3.2 Persisted Objects
+### 3.2 Persistable Objects
 
 When a persistable object is passed to the runtime server as part of the request, the object is retrieved from the database. At that time the access rules are evaluated based on the values retrieved from the database. As for new objects the result of this access rule evaluation is stored in memory and not changed for the lifetime of the object or request. In particular changes to attributes, or committing of the object does not cause re-evaluation of access rules.

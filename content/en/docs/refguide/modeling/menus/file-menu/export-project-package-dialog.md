@@ -24,13 +24,11 @@ You can choose the type to export your package as.
 
 ### 2.1 Solution Package
 
-
-
-Your app will be exported as a *.mxsolution* file.
+Choose this type of package if your develop your app as a solution and it has certain documents/elements hidden from consumers. Your app will be exported as a *.mxsolution* file, add-on and solution modules will be exported in *.mxmodule* format. For more information on add-on and solution modules, see [Configuring Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules).
 
 ### 2.2 Source Package
 
-
+A source package is used to distribute your app in the source format (i.e. no content of your app is hidden from consumers). Your app is exported in *.mpk* format. 
 
 ## 3 Destination
 

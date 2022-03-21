@@ -1,5 +1,6 @@
 ---
-title: "Scheduled Events"
+title: "Scheduled Events - Legacy"
+linktitle: "Legacy Scheduled Events"
 url: /refguide/scheduled-events-legacy/
 weight: 20
 description: "Options for configuring scheduled events"
@@ -7,13 +8,24 @@ tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "schedu
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+
+{{% alert color="warning" %}}
+This page is about **legacy** scheduled events. Please see [Scheduled Events – Task Queue](/refguide/scheduled-events-task-queue/) for information about the current method of implementing scheduled events.
+
+Mendix versions 9.12.0 and above allow legacy scheduled events to be edited, but do not allow new legacy scheduled events to be created.
+
+If your app is Mendix version 9.12.0 or above, legacy scheduled events will have been converted to [task queue scheduled events](/refguide/scheduled-events-task-queue/) automatically unless this is impossible. See the [Migration](/refguide/scheduled-events/#migration) section of *Scheduled Events* for more information.
+
+Legacy scheduled events are deprecated and will no longer be supported from Mendix 10.
+{{% /alert %}}
+
 ## 1 Introduction
 
 With scheduled events you can let the runtime execute a microflow at a specific moment in time. The event can also be repeated with a given interval, for example every day.
 
 A scheduled event is added to your module as a document (right-click your module and you will find it listed under *Add other*).
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 Scheduled events can be tested locally, but they will not be run if your app is deployed as a Free App. See the Free App section of [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy#free-app) for more information on Free App limitations.
 {{% /alert %}}
 
@@ -29,7 +41,7 @@ A `ScheduledEventInformation` object is created every time the scheduled event d
     * **Error** – the event completed with an error — you can find the error on the error log using the *StartTime* and *EndTime* to locate it if necessary
     * **Stopped** – the scheduled event was stopped before completion, for example by the app being stopped or a cluster node becoming unhealthy
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 The `ScheduledEventInformation` objects are not cleared automatically. If you have a large number of scheduled events you will need to decide how long you need to keep this information and remove stale objects when they are no longer required.
 {{% /alert %}}
 
@@ -115,7 +127,7 @@ switch(scheduledEvent.getIntervalType())
 }
 ```
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 If it is absolutely critical to run a scheduled event on a specific day of the month, you should schedule the event to run daily and then check whether this is the right day of the month to run it. 
 
@@ -155,7 +167,7 @@ In Mendix versions 9.9.0 and above, the `System.ScheduledEventInformation` can b
 
 When this setting is not specified, no cleanup is performed.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 When turning on the automatic cleanup after having used scheduled events for a long time, there might be many rows to clean up, which will be initiated when the runtime starts. This may cause additional load on the database, but will not block the startup. It is recommended not to do this during a busy period.
 {{% /alert %}}
 

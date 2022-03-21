@@ -95,7 +95,7 @@ Editability indicates whether the end-user will be able to change the value disp
 
 * **Conditional** – The widget is editable only if specified conditions are met based on an attribute value or based on an expression. 
 
-	{{%alert type="info" %}} If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.{{%/alert %}}
+	{{% alert color="info" %}} If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.{{%/alert %}}
 
 
 ##### 3.3.3.1 Condition Based on {#condition}

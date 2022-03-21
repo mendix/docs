@@ -247,7 +247,7 @@ Once you find the BAPI you need, select it and click **Next** to generate the BA
 
 ## 8 Create a Mendix BAPI Module Using the Model Creator {#create-bapi-module}
 
-See [How to Use the Model Creator for SAP Integrations](/partners/sap/use-sap-odata-model-creator/) for information on how to use the [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/) to generate a Mendix BAPI module containing the domain model for a BAPI using the schema file downloaded from BAPI explorer.
+See [How to Use the Model Creator for SAP Integrations](/partners/sap/use-sap-model-creator/) for information on how to use the [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/) to generate a Mendix BAPI module containing the domain model for a BAPI using the schema file downloaded from BAPI explorer.
 
 ## 9 Limitations
 

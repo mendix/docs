@@ -78,7 +78,7 @@ In this example, you will display a list of products from the GWSAMPLE_BASIC ODa
 
     {{< figure src="/attachments/partners/sap/use-sap-odata-connector/data-model.png" >}}
 
-For more information, see [Use the Model Creator for SAP Integrations](/partners/sap/use-sap-odata-model-creator/) and [SAP Data Models](/partners/sap/sap-data-models/).
+For more information, see [Use the Model Creator for SAP Integrations](/partners/sap/use-sap-model-creator/) and [SAP Data Models](/partners/sap/sap-data-models/).
 
 ## 5 Using the OData Connector for SAP Solutions
 

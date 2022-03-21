@@ -36,7 +36,7 @@ To import a complete Mendix app package, follow these steps:
 
 1. Click the **File** menu in and select **Import App Package**:
 
-    {{< figure src="/attachments/howto/integration/importing-and-exporting-objects/file-import-app-project.png" >}}![](attachments/18448739/file-import-app-project.png)
+    {{< figure src="/attachments/howto/integration/importing-and-exporting-objects/file-import-app-project.png" >}}
 
 2. Select your Mendix app package file and click **Open**. The **Import App Package** dialog box will appear:
 
@@ -64,7 +64,7 @@ To import module packages through the App Explorer in Studio Pro, follow these s
 
 3. In the dialog box, choose a name for your module and select whether to create a new module or replace an existing one:
 
-    {{< figure src="/attachments/howto/integration/importing-and-exporting-{{< figure src="/attachments/howto/integration/importing-and-exporting-objects/18582112.png" >}}
+    {{< figure src="/attachments/howto/integration/importing-and-exporting-objects/18582112.png" >}}
 
     {{% alert color="info" %}}If you replace the module with a new version, the existing user data will be retained based on the names of entities, attributes, and associations. If you delete a module and then add a newer version of it, all user data will be lost.
     {{% /alert %}}

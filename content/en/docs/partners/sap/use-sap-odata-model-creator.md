@@ -13,7 +13,7 @@ aliases:
 
 ## 1 Introduction
 
-SAP data models reflect an OData or BAPI service from SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, and SAP S/4HANA Cloud. Services are exposed via SAP Gateway and are described in a `$metadata` file, which describes all the entities, relationships, and functions that are exposed for that service.
+SAP data models reflect an OData service or BAPI from SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, and SAP S/4HANA Cloud.
 
 Handcrafting a Mendix domain model for these services would be a lot of work. The Model Creator for SAP Integrations automates this process by creating a Mendix module for the selected service containing the Mendix domain model which can be imported in your project. The data model also contains additional information such as the URL of the exposed endpoint, a list of collections in the service, and a list of functions provided by the service.
 
@@ -30,9 +30,9 @@ For an OData service, there are four ways to create the data model:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Identify the SAP back-end system and OData or BAPI service you wish to use
+* Identify the SAP back-end system and OData service or BAPI you wish to use
 * Create an app in Mendix Studio Pro (version 8.18.10 or above)
-* For a BAPI service you will need to download a BAPI Schema – see [BAPI Schema for Model Creator](/partners/sap/sap-bapi-connector/#bapi-schema) in *BAPI Connector for SAP Solutions* for more information
+* For a BAPI you will need to download a BAPI Schema – see [BAPI Schema for Model Creator](/partners/sap/sap-bapi-connector/#bapi-schema) in *BAPI Connector for SAP Solutions* for more information
 * Obtain authentication credentials, if needed, for the SAP Catalog Service or SAP back-end system you wish to use
 
 {{% alert color="warning" %}}

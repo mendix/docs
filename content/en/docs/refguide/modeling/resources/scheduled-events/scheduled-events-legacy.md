@@ -42,9 +42,9 @@ The `ScheduledEventInformation` objects are not cleared automatically. If you ha
 
 ## 3 Execution Properties
 
-| Property | Description                                                                                                                                                                                                                                                                                   |
-| --- |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Microflow | The microflow that is executed when the scheduled event is executed. It should have no parameters and is run with all rights (see [Microflow](microflow)).                                                                                                                                    |
+| Property | Description |
+| --- | --- |
+| Microflow | The microflow that is executed when the scheduled event is executed. It should have no parameters and is run with all rights (see [Microflow](microflow)). |
 | Enabled | The microflow is only executed if the scheduled event is enabled. This setting only applies when running from Studio Pro or from Eclipse. On production environments, scheduled events are enabled/disabled via the platform tools (for example Developer Portal or Windows Service Console). |
 
 ## 4 Timing Properties

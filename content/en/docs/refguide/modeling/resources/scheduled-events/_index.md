@@ -20,19 +20,19 @@ Scheduled events can be tested locally, but they will not be run if your app is 
 
 ## 2 Variants
 
-Until Mendix 9.13.0 scheduled events only execute on the cluster leader node, with an at-most-once guarantee, which means that they
+Until Mendix 9.12.0 scheduled events only execute on the cluster leader node, with an at-most-once guarantee, which means that they
 will not be executed if something happens to the cluster leader node. Also, these scheduled events do not support proper monthly and
-yearly events and potentially suffer from a shift of one hour due to daylight saving. These 'legacy' scheduled events will be
+yearly events and potentially suffer from a shift of one hour due to daylight saving. These 'legacy' scheduled events are
 deprecated and will no longer be supported from Mendix 10 onward.
 
-As of Mendix 9.13.0 scheduled events have been improved and are being executed using the [task queue](task-queue.md), providing an
+As of Mendix 9.12.0 scheduled events have been improved and are being executed using the [task queue](task-queue.md), providing an
 at-least-once guarantee. They will be executed by an arbitrary node in the cluster and support monthly and yearly events properly.
 Most importantly, the task queue based scheduled events no longer have a start-time, but allow specifying a particular time of day,
 ensuring that they work as expected in the face of daylight saving.
 
-Mendix 9.13.0 and above supports the following schedule types:
+Mendix 9.12.0 and above supports the following schedule types:
 
-* **Legacy** - the type that existing before Mendix 9.13.0; see [Legacy scheduled events](scheduled-events-legacy.md)
+* **Legacy** - the type that existing before Mendix 9.12.0; see [Legacy scheduled events](scheduled-events-legacy.md)
 * **Yearly** - an event that occurs once a year on a particular day or date and time; see [Yearly scheduled events](scheduled-events-task-queue.md#yearly)
 * **Monthly** - an event that occurs every so many months on a particular day and time; see [Monthly scheduled events](scheduled-events-task-queue.md#monthly)
 * **Weekly** - an event that occurs weekly on particular days and time; see [Weekly scheduled events](scheduled-events-task-queue.md#weekly)
@@ -42,7 +42,7 @@ Mendix 9.13.0 and above supports the following schedule types:
 
 ## 3 Migration
 
-When migrating to Mendix 9.13.0 or above Studio Pro will attempt to convert legacy scheduled events into task queue based events,
+When migrating to Mendix 9.12.0 or above Studio Pro will attempt to convert legacy scheduled events into task queue based events,
 when possible. In cases where this is not possible a deprecation warning will be shown. Right-click on the warning to see
 possible options for fixing it. If none of them is suitable, you should perform the conversion manually.
 
@@ -58,5 +58,5 @@ The following cases cannot be migrated automatically during model conversion:
   checks whether it should be continue executing at that particular time.
 
 {{% alert type="warning" %}}
-Mendix 9.13.0 and above allow legacy scheduled events to be edited, but do not allow new legacy scheduled events to be created.
+Mendix 9.12.0 and above allow legacy scheduled events to be edited, but do not allow new legacy scheduled events to be created.
 {{% /alert %}}

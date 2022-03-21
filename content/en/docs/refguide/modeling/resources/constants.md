@@ -34,9 +34,9 @@ The name of the constant. This name is used to refer to it.
 
 ### 2.2 Export Level 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
-This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](modules#module-type) section in *Modules*. 
+This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-type) section in *Modules*. 
 
 {{% /alert %}}
 

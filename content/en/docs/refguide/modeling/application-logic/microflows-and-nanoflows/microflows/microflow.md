@@ -31,9 +31,9 @@ Microflow properties consist of the following sections:
 
 #### 2.1.2 Export Level 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
-This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](modules#module-type) section in *Modules*. 
+This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-type) section in *Modules*. 
 
 {{% /alert %}}
 

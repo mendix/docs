@@ -37,9 +37,9 @@ The name used to refer to the association. For example, in forms or microflows.
 
 ### 2.2 Export Level 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
-This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](modules#module-type) section in *Modules*. 
+This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-type) section in *Modules*. 
 
 {{% /alert %}}
 

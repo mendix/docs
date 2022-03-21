@@ -88,9 +88,9 @@ The name has to be unique only within a module domain model. You can have two en
 
 #### 3.3.2 Export Level 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
-**Export level** is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](modules#module-types) section in *Modules*. 
+**Export level** is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-types) section in *Modules*. 
 
 This property will not be shown for attributes if the entity is set to **Hidden**, all attributes will be hidden automatically and cannot be set to **Usable**.
 

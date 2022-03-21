@@ -14,7 +14,7 @@ The main *difference* between an add-on and a solution module is their purpose. 
 
 Solution modules are *always part of a solution* – any Mendix app that is suitable to be sold to multiple different customers. Solution modules are dependent on each other and are inseparable. Solutions modules form the **solution core** of the solution. 
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Add-on and solution modules are not supported in Mendix Studio.
 
@@ -80,7 +80,7 @@ The following documents and elements are supported in add-on and solution module
 * Image collections
 * Custom widgets
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 If the element or document cannot be used in the add-on or solution module, the **Export level** property will not be shown. 
 
@@ -98,7 +98,7 @@ It is possible to add files in an add-on module package, you can select them dur
 
 ![](attachments/add-on-and-solution-modules/select-depencencies-add-on-export.png)
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 
 Resources selected above are not remembered when exporting the module again and need to be selected for every subsequent export.
 
@@ -118,7 +118,7 @@ The solution package gets an *.mxsolution* extension.
 
 When you update an individual add-on or a solution module to another version, you can export this module and distribute the new module package to your consumers. 
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 If, for some reason, you switch the add-on and solution module to an app module, for example, to provide source code to customers, their module data is lost once they upload a new version of this module to their app. 
 

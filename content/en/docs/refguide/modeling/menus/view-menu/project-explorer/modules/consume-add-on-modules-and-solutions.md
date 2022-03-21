@@ -24,7 +24,7 @@ When consuming add-on modules and solutions, you may come across the following l
 
 ## 3 Importing an Add-on Module to Your App
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 When consuming an add-on or a solution, Studio should be disabled for your app. 
 
@@ -44,7 +44,7 @@ When you download an add-on module, it shows up in the **Add-ons** folder in the
 
 You also might not see the full domain model of the module, only entities, attributes, and associations that were specifically exposed by the publisher. The visible parts of the domain model are intended to be reused; hidden elements are not needed for proper use of the module.
 
-{{% alert type="warning" %}}
+{{% alert color="warning" %}}
 
 Mendix Studio does not currently support add-on modules, you will not be able to open apps that use add-on modules in Studio.
 

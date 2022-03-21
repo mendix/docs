@@ -1,7 +1,8 @@
 ---
 title: "Modules"
+url: /refguide/modules/
 parent: "project-explorer"
-menu_order: 20
+weight: 20
 tags: ["studio pro", "module", "modules"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -18,7 +19,7 @@ Within a module you can define [module security](module-security) via module rol
 
 Furthermore, a module can contain many different types of documents. Each type of document is described in its own domain-specific language (DSL). For example, user-interface forms are described by using a visual language with elements like text boxes, tables and grids. Below you see tables grouped by category of all the different kinds of documents you can create within a module.
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Mendix Modules are distinct from React Native modules. 
 
 Mendix modules are portions of your app which can include a data model, logic, and UI with a portable security model. 

@@ -110,7 +110,7 @@ The add-on module gets an *.mxmodule* extension.
 
 Solution package is an app package that will be sold as an out-of-the-box solution and can be used by multiple customers. It has a **solution core** that consists of solution modules. It can also consist of standard modules (app modules) and add-on modules. For more information on solutions, see [Creating Solutions](/appstore/creating-content/sol-solutions-guide/) in the *Marketplace Guide*.
 
-To export the solution package, right-click the name of the app in the **App Explorer** and select **Export app package** or open the **File** menu > **Export App Package**. For more information on exporting, see [Export App Package](/refguide/export-app-package-dialog/).
+To export the solution package, right-click the name of the app in the **App Explorer** and select **Export app package** or open the **File** menu > **Export App Package**. For more information on exporting, see [Export App Package](/refguide/export-project-package-dialog/).
 
 The solution package gets an *.mxsolution* extension.
 

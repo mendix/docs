@@ -52,7 +52,7 @@ To import a complete Mendix app package, follow these steps:
 
 ### 2.2 Importing Module Packages {#import-module}
 
-Mendix modules can either be stored in a Mendix package (*.mpk*) file or have an *.mxmodule* extension if they are [add-on modules](/refguide/add-on-module). 
+Mendix modules can either be stored in a Mendix package (*.mpk*) file or have an *.mxmodule* extension if they are [add-on or solution  modules](/refguide/configure-add-on-and-solution-modules/). 
 
 #### 2.2.1 Importing a Module Package Through the App Explorer
 
@@ -179,7 +179,7 @@ To export an app, follow these steps:
 
     {{< figure src="/attachments/howto/integration/importing-and-exporting-objects/file-export-package.png" >}}
 
-2. The **Export App Package** dialog box will appear, which enables you to set the export location and select data to export (if required):
+2. The **Export App Package** dialog box will appear, which enables you to select the type of the package, set the export location, and select data to export (if required):
 
     {{< figure src="/attachments/howto/integration/importing-and-exporting-objects/18582090.png" >}}
 

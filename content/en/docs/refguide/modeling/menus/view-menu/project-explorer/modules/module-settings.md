@@ -33,7 +33,7 @@ An **App module** is exported as a package file (*.mpk* ) that includes the full
 
 An **add-on module** is a stand-alone module that is not dependent on other modules and is used as a separate element, for example, as a connector. 
 
-An add-on module is exported as an module file (*.mxmodule*) that only exposes the elements with the **Usable** export level. For more information on Export levels, see [Add-on and Solution Modules](/refguide/add-on-and-solution-modules/). Its source cannot be inspected b y the consumer of the module.
+An add-on module is exported as an module file (*.mxmodule*) that only exposes the elements with the **Usable** export level. For more information on Export levels, see [Add-on and Solution Modules](/refguide/configure-add-on-and-solution-modules/). Its source cannot be inspected b y the consumer of the module.
 
 If you are creating functionality that can be exported and used by other users separately and independently of the rest of the app, you can set your module to an add-on type.  
 
@@ -48,7 +48,7 @@ When the module is set as the solution module, it gets the letter S as an icon.
 ## 5 Read More
 
 * [Modules](/refguide/modules/)
-* [Add-on and Solution Modules](/refguide/add-on-and-solution-modules/)
+* [Configuring Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/)
 * [IP Protection](/appstore/creating-content/sol-ip-protection/)
 * [Creating Solutions](/appstore/creating-content/sol-solutions-guide/)
 

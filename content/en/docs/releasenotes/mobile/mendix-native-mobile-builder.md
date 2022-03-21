@@ -22,7 +22,7 @@ A special form of deep app links on Android devices are web links. These are nor
 
 For example, to enhance the user experience for customers on mobile devices, one might wish to funnel new user registrations using the mobile app. To do so, one can register a web link in the form of {my-app-website.com/register}. When such link is opened on a device that has the application installed, a prompt will let the user open the link using their preferred app.
 
-{{% alert color=”info” %}} 
+{{% alert color="info" %}}
 Android users can choose default apps for opening links. If a user opts out of this selection screen by setting a default app, such as their browser, they will not be prompted again until they manually clear the default app choice using the device's preferences.
 {{% /alert %}} 
 

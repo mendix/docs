@@ -79,7 +79,7 @@ In the previous section, you have created the entity that is set for the Workflo
     1. Add the **FullName** attribute and set the type to string.
     2. Add the **FirstDay** attribute and set its type to Date and Time.
     3. Add the **WFH** (Work from home) attribute and set its type to Boolean.
-    4. Add the **PhoneModel** enumeration with the following enumeration items: iPhone, iPhone_Pro, Samsung. For more information on enumerations and how to create them, see the [Creating a New Enumeration](/studio/domain-models/domain-models-enumeration/#create-new-enumeration) section in *Enumerations*.
+    4. Add the **PhoneModel** enumeration with the following enumeration items: iPhone, iPhone_Pro, Samsung. For more information on enumerations and how to create them, see the [Creating a New Enumeration](/studio/domain-models-enumeration/#create-new-enumeration) section in *Enumerations*.
     5. Add the **LaptopModel** enumeration with the following enumeration items: Lenovo, Mac, Dell. 
 
 You have configured the **EmployeeOnboarding** entity:

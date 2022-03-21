@@ -5,6 +5,7 @@ parent: "hybrid-mobile"
 tags: ["studio pro"]
 aliases:
     - /refguide8/Developing+Hybrid+Mobile+Apps.html
+    - /refguide8/Developing+Hybrid+Mobile+Apps
 ---
 
 ## 1 Introduction

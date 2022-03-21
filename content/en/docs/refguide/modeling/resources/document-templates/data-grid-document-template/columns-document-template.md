@@ -6,6 +6,8 @@ tags: ["studio pro"]
 aliases:
     - /refguide/columns-(document-template).html
     - /refguide/Columns+(document+template).html
+    - /refguide/columns-(document-template)
+    - /refguide/Columns+(document+template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

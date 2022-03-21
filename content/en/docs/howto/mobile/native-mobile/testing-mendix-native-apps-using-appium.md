@@ -119,4 +119,4 @@ Once you have the capabilities you want that work with Appium Desktop, you can a
 
 * [How To Debug Native Mobile Apps (Advanced)](/howto/mobile/native-debug/)
 * [How To Troubleshoot Common Native Mobile Issues
-](/howto/mobile/common-issues)
+](/howto/mobile/common-issues/)

@@ -7,6 +7,7 @@ description: "Describes what you need to do with an on-premises app to prepare i
 tags: ["on-premises", "support"]
 aliases:
     - /developerportal/support/change-affected-apps.html
+    - /developerportal/support/change-affected-apps
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

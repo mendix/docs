@@ -16,7 +16,7 @@ In the **App Settings** dialog box, you can alter the settings that are applicab
 
 The categories described below are available.
 
-## 2 Configurations Tab
+## 2 Configurations Tab {#configurations}
 
 A configuration is a group of settings. You can define any number of configurations. The active configuration (meaning, the one that will be used when running your application) is determined by the drop-down menu in the toolbar of Studio Pro.
 
@@ -284,20 +284,24 @@ Defines the maximum number of workflow transactions that the runtime will execut
 
 Defines the maximum number of user task transactions that the runtime will execute simultaneously. The limit is 10.
 
-## 8 Miscellaneous Tab {#miscellaneous}
+## 8 Deployment Tab {#deployment}
+
+This tab allows you to exclude libraries from deployment. For example, you can exclude libraries when you consume a different version of an existing add-on module.
+
+## 9 Miscellaneous Tab {#miscellaneous}
 
 These settings determine the behavior of Studio Pro for this app. The settings apply to everyone that is working on this app.
 
-### 8.1 Bundle Widgets When Running Locally
+### 9.1 Bundle Widgets When Running Locally
 
 When deploying to the cloud, custom widgets are bundled to optimize client-server communication. When deploying locally, this step is skipped to accelerate startup duration. In some cases, this may obfuscate errors triggered by faulty custom widgets.
 
 If this option is set, custom widgets will also be bundled locally. This mimics the production deployment, eliminating risk at the cost of start-up time.
 
-### 8.2 Suggest Lower-Case Variable Names in Microflows
+### 9.2 Suggest Lower-Case Variable Names in Microflows
 
 When enabled, the names that Studio Pro suggests in microflows will start with a lower-case letter instead of an upper-case letter.
 
-### 8.3 Activity Default Colors
+### 9.3 Activity Default Colors
 
 This table allows you to select a default color for each microflow activity type that is available in your app. The selected color will be used as the background color for all microflow activities of that type in your app. It is possible to override this default value for individual activities in the microflow editor. If you change the default color for an activity type, and there are activities of that type present in the app that have an individual background color specified, a dialog will be shown that allows you to apply the new default color to these activities as well.

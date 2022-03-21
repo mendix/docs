@@ -43,7 +43,15 @@ You have added a new enumeration to your app. You can use the same enumeration f
 
 An enumeration has the following properties:
 
-* **Name** – the name of the enumeration
+* **Name** – The name of the enumeration.
+
+* **Export level** – allows you to hide the content of a certain document/element from a consumer (customer) when developing an add-on module or a solution. 
+    {{% alert color="info" %}}This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](studio/modules/#module-type) section in *Modules*. 
+    {{% /alert %}}
+    **Export level** has the following values:   
+
+    * **Hidden** *(default)* – The document/element content is hidden from a consumer. 
+    * **Usable** – Consumers can see the content of the document/element and use and change it in their app. 
 
 *  **Enumeration values** – an enumeration has one or more enumeration values. Each value represents one of the options. For more information on enumeration values and their properties, see the [Enumeration Value Properties](#enum-value-properties) section.
 

@@ -29,7 +29,22 @@ Microflow properties consist of the following sections:
 
 **Name** is the internal name of the microflow. When referring to the microflow in the app you will use this name. It must be unique within the module, but you can have two microflows with the same name in different modules. When referring to the microflow, you will normally prepend the name of the module to ensure uniqueness and allow you to use microflows in other modules.
 
-#### 2.1.2 Documentation
+#### 2.1.2 Export Level 
+
+{{% alert type="info" %}}
+
+This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](modules#module-type) section in *Modules*. 
+
+{{% /alert %}}
+
+**Export level** allows you to hide the content of a certain document/element from a consumer (customer) when developing an add-on module or a solution. 
+
+| Value              | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| Hidden *(default)* | The document/element content is hidden from a consumer.      |
+| Usable             | Consumers can see the content of the document/element and use and change it in their app. |
+
+#### 2.1.3 Documentation
 
 **Documentation** allows you to describe your microflow to make it easier for people to use and modify it.
 

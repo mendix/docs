@@ -86,7 +86,24 @@ The name property defines the name of the entity. This name is used to refer to 
 
 The name has to be unique only within a module domain model. You can have two entities with the same name, provided they are in the domain models of different modules.
 
-#### 3.3.2 Generalization {#generalization}
+#### 3.3.2 Export Level 
+
+{{% alert type="info" %}}
+
+**Export level** is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](modules#module-types) section in *Modules*. 
+
+This property will not be shown for attributes if the entity is set to **Hidden**, all attributes will be hidden automatically and cannot be set to **Usable**.
+
+{{% /alert %}}
+
+**Export level** allows you to hide the content of a certain document/element from a consumer (customer) when developing an add-on module or a solution. 
+
+| Value              | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| Hidden *(default)* | The document/element content is hidden from a consumer.      |
+| Usable             | Consumers can see the content of the document/element and use and change it in their app. |
+
+#### 3.3.3 Generalization {#generalization}
 
 An entity can be a more specialized version of a general entity. This means that the specialized entity has all the attributes, associations, events, and other properties of the more general entity. Using the generalization property you can specify which entity is the generalization of the entity. For example, the **Car** entity could have **Vehicle** as its generalization.
 

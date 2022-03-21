@@ -55,6 +55,23 @@ The **Name** property specifies the name of the attribute. This name is used to 
 If you delete an attribute in your entity and then create a new attribute with the same name, Mendix will consider it a new and different attribute. This means that upon deployment the old column will be dropped, including its data. Then a new, empty, column with the same name will be created.
 {{% /alert %}}
 
+#### 2.1.2  Export Level 
+
+{{% alert type="info" %}}
+
+This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](modules#module-type) section in *Modules*. 
+
+This property will not be shown for attributes if the entity is set to **Hidden**, all attributes will be hidden automatically and cannot be set to **Usable**.
+
+{{% /alert %}}
+
+**Export level** allows you to hide the content of a certain document/element from a consumer (customer) when developing an add-on module or a solution. 
+
+| Value              | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| Hidden *(default)* | The document/element content is hidden from a consumer.      |
+| Usable             | Consumers can see the content of the document/element and use and change it in their app. |
+
 #### 2.1.3 Documentation
 
 This allows you to describe aspects of the entity which may be useful to you or other team members when using the entity within the app.

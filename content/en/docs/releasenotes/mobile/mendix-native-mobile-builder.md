@@ -13,54 +13,38 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 ### Release 1.0.113
 
 **Release date: March 18st, 2022**
+
 ### New Features
 
-#### Support for Android web links
+#### Support for Android Web Links
 
-A special form of deep (app) links on Android devices are web links. These are normal http or https URLs that can be
-registered as actionable by an app. In a case where 2 or more apps can open a web link a user is prompted to choose the
-app he would like to open it with.
+A special form of deep app links on Android devices are web links. These are normal HTTP or HTTPS URLs that can be registered as actionable by an app. In a case where two or more apps can open a web link, a user is prompted to choose an app to open it.
 
-For example, to further enhance the user experience for customers on mobile devices, one might wish to funnel new user
-registrations via the mobile app. To do so, one can register a web link in the form of `my-app-website.com/register`.
-When such link is clicked on a device that has the application installed a prompt will guide a user to select his or her
-preferred app to open it.
+For example, to enhance the user experience for customers on mobile devices, one might wish to funnel new user registrations using the mobile app. To do so, one can register a web link in the form of {my-app-website.com/register}. When such link is opened on a device that has the application installed, a prompt will let the user open the link using their preferred app.
 
-Beware, as users on Android have the option to choose default apps, if a user opts out of this selection screen, by for
-instance setting his browser as the preferred way of opening such links, he will not be prompted any more until he
-manually clears the default app via the device's preferences.
+{{% alert color=”info” %}} 
+Android users can choose default apps for opening links.If a user opts out of this selection screen by setting a default app, such as their browser, they will not be prompted again until they manually clear the default app choice using the device's preferences.
+{{% /alert %}} 
 
-#### Support for project folders with multiple MPR files
+#### Support for Project Folders with Multiple MPR Files
 
-The tool should now be able to handle project folders with multiple MPR files correctly. In earlier versions, Studio Pro
-would provide the project directory and the tool would open the first MPR file found in that directory. In cases where
-multiple MPR files existed in the same directory (i.e. copies of another version of the project) this could result in
-one MPR being worked in Studio Pro but another being opened and build by the tool. This, obviously, was an unwanted side
-effect of an early design limitation.
+The Mendix Native Mobile Builder can now handle project folders with multiple MPR files correctly. In earlier versions, Studio Pro would provide the project directory and the tool would open the first MPR file found in that directory. In cases where multiple MPR files existed in the same directory (for example copies of another version of the project) this could result in one MPR being accessing in Studio Pro but another being opened and built by the tool. This was an unwanted side effect of an early design limitation.
 
-Now instead of assuming the first MPR file found in the directory, the tool will take into account the exact MPR
-provided by Mendix Studio Pro.
+Now, instead of accessing the first MPR file found in the directory, the tool will take into account the exact MPR provided by Mendix Studio Pro.
 
 ### Improvements
 
-* The tool should now be able to handle project with multiple mpr files correctly.
-* The tool will now print the error that led to a Native Template update failing in the error dialog.
-* The tool will now be able to correctly update the App Center build configuration as needed for already configured
-  builds. This will allow for updates to things like the Xcode or Node version to accommodate new requirements.
+* The tool now handles apps with multiple MPR files correctly.
+* The tool now discloses the error that led to a Native Template update failing in the error dialog.
+* The tool now correctly updates the App Center build configuration for already-configured builds. This will allow for updates to things like the XCode or Node versions to accommodate new requirements.
 
 ### Fixes
 
-* We fixed a UI bug where when App Center fails to configure the repository a generic error is shown instead of the
-  visual guide to manually link the repository. Now instead of a generic error, the visual guide should be shown
-  correctly again.
-* We fixed a bug with the native template update dialog that would show the wrong reason for a required update. From
-  here on the correct reason for a required update will be shown.
-* We fixed a bug that could stop the application from finish loading when the GitHub or App Center token are not valid
-  anymore. Now the application should finish loading and the errors should be clearly visible in the UI.
-* We fixed a bug with fatal exceptions not being caught correctly at the start of the application. This could result in
-  a blank screen at startup. Now a dialog should be shown correctly.
-* We fixed an issue with compatibility checks where the tool would incorrectly warn that a compatible Native Template is
-  incompatible with Mendix Native OTA. Any Native Template from version 6.2.7 or newer is compatible.
+* We fixed a UI bug where, when App Center fails to configure the repository, a generic error is shown instead of the visual guide to manually link the repository. Now instead of a generic error, the visual guide is shown correctly again.
+* We fixed a bug with the Native Template update dialog box that would show the wrong reason for a required update. Now the correct reason for a required update is shown.
+* We fixed a bug that could stop apps from completely  loading when its GitHub or App Center tokens were no longer valid. Now the app will finish loading and the errors are clearly visible in the UI.
+* We fixed a bug with fatal exceptions not being caught correctly at the start of the app. This could result in a blank screen at startup. Now a dialog box is shown correctly.
+* We fixed an issue with compatibility checks where the Mendix Native Mobile Builder would incorrectly warn that a compatible Native Template is incompatible with Mendix Native OTA. Any Native Template from version 6.2.7 or newer is compatible.
 
 ### Release 1.0.111
 

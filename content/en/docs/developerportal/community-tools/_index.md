@@ -13,7 +13,7 @@ You can go to the [Mendix Community Hub](https://community.mendix.com/p/communit
 
 ## 2 Main Documents in This Category
 
-* [Mendix Profile] – describes your Mendix user profile, which your main point of contact with members of the Mendix community
+* [Mendix Profile](/developerportal/community-tools/mendix-profile/) – describes your Mendix user profile, which your main point of contact with members of the Mendix community
 * [Set Up Your Partner Profile](/developerportal/community-tools/how-to-set-up-your-partner-profile/) – shows you how to set up the Mendix Partner Profile for your company
 * [Forum](/developerportal/community-tools/mendix-forum/) – describes how to use the Mendix Forum and the Mendix Idea Forum to ask questions, search for answers, and post ideas
 * [Contribute to the Documentation](/developerportal/community-tools/contribute-to-the-mendix-documentation/) – shows you how to edit and write new documentation to help the Mendix community

@@ -8,6 +8,8 @@ tags: ["marketplace", "vendor", "app service"]
 aliases:
     - /appstore/general/sell.html
     - /appstore/creating-content/as-sell.html
+    - /appstore/general/sell
+    - /appstore/creating-content/as-sell
 ---
 
 ## 1 Introduction

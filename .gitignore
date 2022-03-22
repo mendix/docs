@@ -3,7 +3,7 @@
 /public/
 /resources/
 /tmp/
-/hugo.exe
+hugo.exe
 /htmltest.exe
 /.hugo_build.lock
 

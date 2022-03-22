@@ -7,6 +7,8 @@ description: "Provides details on updating your project from Mendix 6 to Mendix 
 aliases:
     - /refguide/moving-from-6-to-7.html
     - /releasenotes/studio-pro/6.10.html
+    - /refguide/moving-from-6-to-7
+    - /releasenotes/studio-pro/6.10
 ---
 
 ## 1 Introduction

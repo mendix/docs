@@ -140,7 +140,7 @@ The following properties are specific for this action:
 
   * **Text Message** – Sends a text message.
 
-    {{%alert type="info" %}}When you configure **Email**, **Phone Call** or **Message** options, the corresponding default app will be opened on the device when the action is triggered, for example, the default email client will be opened to compose a message.
+    {{% alert color="info" %}}When you configure **Email**, **Phone Call** or **Message** options, the corresponding default app will be opened on the device when the action is triggered, for example, the default email client will be opened to compose a message.
     
     {{%/alert %}}
 

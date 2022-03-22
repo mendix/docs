@@ -89,14 +89,14 @@ To add a namespace, do the following:
 1. Click **Details**:
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/empty-cluster.png" >}}
-	
+
 2. Click **Add Namespace**:
-	
+
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/namespace-details.PNG" >}}
 
 3. Enter the following details:
-	* **Namespace** – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name
-	* **Installation type** – if you want to [create environments and deploy your app from the Mendix Developer Portal](/developerportal/deploy/private-cloud-deploy/), choose **Connected**, but if you only want to [control your deployments through the Mendix Operator using the CLI](/developerportal/deploy/private-cloud-operator/), choose **Standalone**
+    * **Namespace** – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name
+    * **Installation type** – if you want to [create environments and deploy your app from the Mendix Developer Portal](/developerportal/deploy/private-cloud-deploy/), choose **Connected**, but if you only want to [control your deployments through the Mendix Operator using the CLI](/developerportal/deploy/private-cloud-operator/), choose **Standalone**
 
 4. Click **Done** to create the namespace.
 
@@ -133,13 +133,13 @@ Now you can download the Configuration Tool by doing the following:
 
 3. Choose the **Mendix Operator Version** that you would like to install. If you have already installed the Mendix Operator, your currently installed version will be highlighted.
 
-	{{% alert color="info" %}}Mendix Operator version 2.\*.\* supports Kubernetes versions 1.19 and later. Mendix Operator version 1.12.\* supports Kubernetes versions 1.12 through 1.21. Choose the latest version that is supported by your Kubernetes cluster.{{% /alert %}}
+    {{% alert color="info" %}}Mendix Operator version 2.\*.\* supports Kubernetes versions 1.19 and later. Mendix Operator version 1.12.\* supports Kubernetes versions 1.12 through 1.21. Choose the latest version that is supported by your Kubernetes cluster.{{% /alert %}}
 
-	{{% alert color="info" %}}Versions earlier than 1.9.0 are only available to allow _configuration_ of previously installed Mendix Operator versions.{{% /alert %}}
+    {{% alert color="info" %}}Versions earlier than 1.9.0 are only available to allow _configuration_ of previously installed Mendix Operator versions.{{% /alert %}}
 
     {{% alert color="warning" %}}Once you've installed a certain version of the Mendix Operator into any namespace in the cluster, you should not install older versions of the Mendix Operator into the same cluster, including other namespaces.{{% /alert %}}
 
-	{{% alert color="info" %}}The installation and configuration tool only supports a limited range of Mendix Operator versions. If the Mendix Operator version in your namespace is too new or too old, the configuration tool will not be able to configure it. Download a version of the Configuration tool that is compatible with the Mendix Operator you have installed.{{% /alert %}}
+    {{% alert color="info" %}}The installation and configuration tool only supports a limited range of Mendix Operator versions. If the Mendix Operator version in your namespace is too new or too old, the configuration tool will not be able to configure it. Download a version of the Configuration tool that is compatible with the Mendix Operator you have installed.{{% /alert %}}
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/download-operator-version.png" >}}
 
@@ -183,9 +183,9 @@ To install in non-interactive mode please see: [Install and Configure Mendix for
 
 2. Paste the command into your command line terminal and press <kbd>Enter</kbd>
 
-	{{% alert color="warning" %}}The Configuration Tool needs a CLI terminal with mouse support. Read the [Terminal limitations](#terminal-limitations) section before running the Configuration Tool.{{% /alert %}}
+    {{% alert color="warning" %}}The Configuration Tool needs a CLI terminal with mouse support. Read the [Terminal limitations](#terminal-limitations) section before running the Configuration Tool.{{% /alert %}}
 
-	You will see the configuration options on the screen and will be guided through filling in the information needed.
+    You will see the configuration options on the screen and will be guided through filling in the information needed.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/post-install-landing-page.png" >}}
 
@@ -195,9 +195,9 @@ If the Mendix Operator and the Mendix Gateway Agent have not been installed in y
 
 1. Click **Base Installation**.
 
-	You will see the screen below.
+    You will see the screen below.
 
-	{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/installer-options.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/installer-options.png" >}}
 
 2. Select the required **Cluster Mode** – *connected* or *standalone*.
 
@@ -207,7 +207,7 @@ If the Mendix Operator and the Mendix Gateway Agent have not been installed in y
 
 4. Click **Run Installer** to install the Mendix Operator and Mendix Gateway Agent in your cluster.
 
-	{{% alert color="info" %}}The installation is successful if the **Installer output** ends with **Done**.{{% /alert %}}
+    {{% alert color="info" %}}The installation is successful if the **Installer output** ends with **Done**.{{% /alert %}}
 
 5. Click **Save Installer** if you want to save these settings to be used later.
 
@@ -244,22 +244,22 @@ The options do the following:
 
 2. Click **Configure Namespace**.
 
-	You will be shown the **Installation wizard** landing page.
+    You will be shown the **Installation wizard** landing page.
 
-	{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/installation-wizard.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/installation-wizard.png" >}}
 
 3. Click the appropriate button at the bottom of the page to navigate to the setup page for each resource which you need to configure. Alternatively, use the allocated function keys (for example <kbd>F2</kbd> for the **Database Plan**). 
 
 4. Each page will lead you through the information you need to supply.
 
-	These are described in the following sections:
+    These are described in the following sections:
 
-	* [Database Plan](#database-plan)
-	* [Storage Plan](#storage-plan)
-	* [Ingress](#ingress)
-	* [Registry](#registry)
-	* [Proxy](#proxy)
-	* [Custom TLS](#custom-tls)
+    * [Database Plan](#database-plan)
+    * [Storage Plan](#storage-plan)
+    * [Ingress](#ingress)
+    * [Registry](#registry)
+    * [Proxy](#proxy)
+    * [Custom TLS](#custom-tls)
 
 ##### 4.3.2.1 Database Plan{#database-plan}
 
@@ -750,13 +750,13 @@ For **Google Cloud Container Registry**, the supported authentication is [worklo
 * `GCP Service Account`: [google service account](https://cloud.google.com/iam/docs/service-accounts) — for example `service-account-name@project-id.iam.gserviceaccount.com`.
 * `Kubernetes Service Account`: the kubernetes service account that will be created and annotated with your google service account during post configuration. You need to [bind](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) the kubernetes service account to your google service account.
 
-	Below is an example how to bind a google cloud service account to a kubernetes service account:
-	```shell
-	gcloud iam service-accounts add-iam-policy-binding \
-    		--role roles/iam.workloadIdentityUser \
-    		--member "serviceAccount:PROJECT_ID.svc.id.goog[K8S_NAMESPACE/KSA_NAME]" \
-    		GSA_NAME@PROJECT_ID.iam.gserviceaccount.com
-	```
+    Below is an example how to bind a google cloud service account to a kubernetes service account:
+    ```shell
+    gcloud iam service-accounts add-iam-policy-binding \
+            --role roles/iam.workloadIdentityUser \
+            --member "serviceAccount:PROJECT_ID.svc.id.goog[K8S_NAMESPACE/KSA_NAME]" \
+            GSA_NAME@PROJECT_ID.iam.gserviceaccount.com
+    ```
 
 
 #### 4.3.3 Proxy{#proxy}
@@ -769,15 +769,15 @@ Hosts which should be excluded from proxying are specified as:
 
 * a string containing comma-separated values
 * each value is
-	* an IP address prefix (`1.2.3.4`)
-	* an IP address prefix in CIDR notation (`1.2.3.4/8`)
-	* a domain name
-	* if you use the special DNS label (`*`) this indicates that there are no exceptions and everything will be proxied 
+    * an IP address prefix (`1.2.3.4`)
+    * an IP address prefix in CIDR notation (`1.2.3.4/8`)
+    * a domain name
+    * if you use the special DNS label (`*`) this indicates that there are no exceptions and everything will be proxied 
 * each IP address prefix or domain name can also include a literal port number (`1.2.3.4:80`)
 * a domain name matches that name and all subdomains
 * a domain name with a leading "." matches subdomains only
 
-	For example "foo.com" matches "foo.com" and "bar.foo.com"; ".y.com" matches "x.y.com" but not "y.com".
+    For example "foo.com" matches "foo.com" and "bar.foo.com"; ".y.com" matches "x.y.com" but not "y.com".
  
 For more information about how to use this field, see the [http proxy documentation used by the Configuration Tool](https://pkg.go.dev/golang.org/x/net/http/httpproxy).
 
@@ -842,25 +842,25 @@ When you have configured all the resources, do the following:
 
 1. Press <kbd>F7</kbd> to **Review and Apply**.
 
-	{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/review-and-apply.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/review-and-apply.png" >}}
 
 2. Click **Evaluate Configuration** to check the configuration.
 
-	Resources which are correctly configured will have a status **Valid configuration**. If an resource is incorrectly configured, it will have a status **Invalid configuration: …** and an explanation of the issue.
+    Resources which are correctly configured will have a status **Valid configuration**. If an resource is incorrectly configured, it will have a status **Invalid configuration: …** and an explanation of the issue.
 
-	{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/evaluate-configuration.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/evaluate-configuration.png" >}}
 
 3. Once you have evaluated the configuration, click **Write YAML** to save a copy of the configuration .yml files on your local machine.
 
-	The **Installer output** panel will display the locations of the saved files.
+    The **Installer output** panel will display the locations of the saved files.
 
-	{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/write-yaml.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/write-yaml.png" >}}
 
 4. Click **Apply Configuration** to apply the configuration to your namespace.
 
-	{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/apply-configuration.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/apply-configuration.png" >}}
 
-	Once the configuration has been applied you will see the message **Successfully applied all the configuration!**.
+    Once the configuration has been applied you will see the message **Successfully applied all the configuration!**.
 
 5. Click **Exit Installer** to return to the landing page.
 

@@ -42,15 +42,15 @@ If you do not already have a native template for your app, you can create one by
 
 Set up a native template with the **Native Mobile App Builder** by following these instructions:
 
-1.  Launch the Native Mobile App Builder from the **Project** menu. Walk through the wizard and configure the project's details and tokens (for more information, see [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/)):
+1. Launch the Native Mobile App Builder from the **Project** menu. Walk through the wizard and configure the project's details and tokens (for more information, see [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/)):
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/launch-native-mobile-app-builder.png" alt="launch native mobile builder"   width="400"  >}}
 
-2.  Once done with the wizard you will enable deep linking capabilities. First, select the **Capabilities** menu item:
+2. Once done with the wizard you will enable deep linking capabilities. First, select the **Capabilities** menu item:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/capability-menu-option.png" alt="capability menu option"   width="400"  >}}
     
-3.  Enter the `schema` name without the appending `://`:
+3. Enter the `schema` name without the appending `://`:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/deep-link-input-field.png" alt="deep link input field"   width="400"  >}}
     
@@ -109,14 +109,14 @@ The *info.plist* file registers the schema and host so that they will be associa
 1. Open the folder that you cloned your template into: `c:/github/native-deeplink-app`.
 1. In Xcode (available on Apple Mac only) open *ios/NativeTemplate.xcworkspace*.
 1. Open *ios/NativeTemplate/Info.plist*
-1.  Add `URL types`, then add `URL Schemes` and `URL identifier`:
+1. Add `URL types`, then add `URL Schemes` and `URL identifier`:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/ios-info-plist.png" alt="ios info plist" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/ios-info-plist.png" alt="ios info plist" >}}
    
-	When viewing *Info.plist* as a text file, you would see that a section is added:
+    When viewing *Info.plist* as a text file, you would see that a section is added:
    
-	```xml
-	<key>CFBundleURLTypes</key>
+    ```xml
+    <key>CFBundleURLTypes</key>
     <array>
         <dict>
             <key>CFBundleURLSchemes</key>
@@ -127,14 +127,14 @@ The *info.plist* file registers the schema and host so that they will be associa
             <string>myapp</string>
         </dict>
     </array>
-	```
+    ```
 
 1. Open *ios/AppDelegate.m* 
 1. Add this import to the existing imports: `#import "React/RCTLinkingManager.h"`.
 1. Change the `openURL` method from this:
 
     ```objc
-	- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
       [MendixAppDelegate application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
       return YES;
     }
@@ -142,15 +142,15 @@ The *info.plist* file registers the schema and host so that they will be associa
 
     to this:
 
-	```objc
-	- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    ```objc
+    - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
       [RCTLinkingManager application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
       [MendixAppDelegate application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
       return YES;
     }
-	```
+    ```
    
-	This method will register the opened URL so it can be used in the **Native Deep Link** nanoflow actions. 
+    This method will register the opened URL so it can be used in the **Native Deep Link** nanoflow actions. 
 
 #### 3.2.3 Rebuilding Your Native Mobile App
 
@@ -217,17 +217,17 @@ The Register Deep Link nanoflow action will create a new Mendix object, split a 
 Now that the **Native Deep Link** nanoflow actions are available in Studio Pro, you have the utilities to register and process an URL. You will now  use them in your application:
 
 1. In your app add the **App events** widget, which is also part of the Native Mobile Resource module, on your home page.
-1.  Double-click the **App events** widget. In **App events** tab, select **Page load** > **On load** > **Call a nanoflow**, and create a new nanoflow named *OL_RegisterDeepLink*:
+1. Double-click the **App events** widget. In **App events** tab, select **Page load** > **On load** > **Call a nanoflow**, and create a new nanoflow named *OL_RegisterDeepLink*:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/app-events-register-deep-link.png" alt="app event register deeplink" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/app-events-register-deep-link.png" alt="app event register deeplink" >}}
 
-	This nanoflow will be called only once when the app is started.
+    This nanoflow will be called only once when the app is started.
 
-1.  In the **OL_RegisterDeepLink** nanoflow, add the action **Register DeepLink**, and in that action's **Url handler** create an nanoflow named *DL_ShowUrlDetails*:
+1. In the **OL_RegisterDeepLink** nanoflow, add the action **Register DeepLink**, and in that action's **Url handler** create an nanoflow named *DL_ShowUrlDetails*:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/nanoflow-register-deep-link.png" alt="nanoflow register deeplink" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/nanoflow-register-deep-link.png" alt="nanoflow register deeplink" >}}
    
-	This nanoflow will be called every time the app is opened using a URL.
+    This nanoflow will be called every time the app is opened using a URL.
 
 1. To parse the URL into an object, you will use a non-persistable entity named **DeepLinkParameter** from the **NativeMobileResources** module in the next step. For now, go to **NativeMobileResources** > **Domain Model** and examine this entity. If you use query strings or more, you can copy this entity to your own module. The attributes are all optional and you should only add the attributes your implementation requires. Besides the standard list of possible URL parts, you can also add the query string's keys (for example `?name=Jhon&title=sir`). The attributes are not case sensitive. You can add attributes for path segments of the URL which will be split into `Path0` , `Path1`, and more:
 
@@ -239,7 +239,7 @@ Next you will implement the deep link handler nanoflow **DL_ShowUrlDetails** so 
 1. Double-click the parameter, give it the name *URL* (which is case sensitive) and the type **String**.
 1. Add a **Parse URL to Object** activity to your nanoflow. Double-click it and configure it like this:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/parse-url.png" alt="parse url" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/parse-url.png" alt="parse url" >}}
    
 1. Add a **Show message** activity to the right of your **Parse URL to Object** activity.
 1. Double-click the **Show message** activity.
@@ -250,7 +250,7 @@ Next you will implement the deep link handler nanoflow **DL_ShowUrlDetails** so 
 1. Drop an **End event** below your **Parse URL to Object** activity. Drag a line from **Parse URL to Object** down to the end event, right click it, and click **Set as error handler**.
 1. Add a **Show message** activity to this line. Set it as type **Error**, and into template type *Failed to parse deep link data.*. Your finished nanoflow will look like this:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/deep-link-nano-full.png" alt="full nanoflow" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/deep-link-nano-full.png" alt="full nanoflow" >}}
 
 ### 4.3 Testing Deep Linking
 

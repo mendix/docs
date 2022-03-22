@@ -4,6 +4,7 @@ url: /refguide7/developing-hybrid-mobile-apps/
 category: "Mobile Development"
 aliases:
     - /refguide7/Developing+Hybrid+Mobile+Apps.html
+    - /refguide7/Developing+Hybrid+Mobile+Apps
 ---
 
 ## 1 Introduction

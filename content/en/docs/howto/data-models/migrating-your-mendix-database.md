@@ -45,11 +45,11 @@ These settings can be configured as follows:
 
 *  Studio Pro – in **App Explorer**, expand **App**, double-click **Settings**, edit a configuration, and go to the **Custom** tab:
 
-	{{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/19398970.png" >}} 
+    {{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/19398970.png" >}} 
 
 *  Service Console – click an app in the left pane, click **Configuration**, click **Advanced**, then see **Custom Mendix settings**:
 
-	{{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/19398971.png" >}} 
+    {{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/19398971.png" >}} 
 
 * m2ee-tools – add the custom settings to the mxruntime section (for more information, see [Full Documented m2ee](https://github.com/mendix/m2ee-tools/blob/develop/examples/full-documented-m2ee.yaml))
 
@@ -78,15 +78,15 @@ To do this, perform the following steps:
 3. Give your configuration a new **Name**.
 
 4. On the **Database** tab, set the following values:
-	* **Type** – **PostgreSQL**
-	* **Database name** – *default*
-	* **URL** – the URL for your local PostgreSQL server
-	* **User name** – the user name of a database administrator in your local PostgreSQL
-	* **Password** – the password for the user specified above
+    * **Type** – **PostgreSQL**
+    * **Database name** – *default*
+    * **URL** – the URL for your local PostgreSQL server
+    * **User name** – the user name of a database administrator in your local PostgreSQL
+    * **Password** – the password for the user specified above
 
-	{{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/postgresql-config.png" >}}
+    {{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/postgresql-config.png" >}}
 
-	Your new configuration will be set as the active configuration.
+    Your new configuration will be set as the active configuration.
 5. Ensure that PostgreSQL is running locally on the correct port.
 6. Run your app locally. Provided your PostgreSQL database is empty, your app will configure the database to support the domain model of your app.
 
@@ -147,31 +147,31 @@ To do this, perform the following steps:
 1. Sign in to the SAP BTP Cloud Foundry environment (containing the PostgreSQL service) using the Cloud Foundry command line.
 2. Get the PostgreSQL service instance details from the environment variables of the application using the following command:
 
-	`cf env {application-name}`
+    `cf env {application-name}`
 
 3. Inspect the **VCAP_SERVICES** list, and note down the values of the following properties in the `postgresql` service:
-	* `dbname` – `{dbname}`
-	* `hostname` – `{hostname}`
-	* `password` – `{password}`
-	* `port` – `{port}`
-	* `username` – `{username}`
+    * `dbname` – `{dbname}`
+    * `hostname` – `{hostname}`
+    * `password` – `{password}`
+    * `port` – `{port}`
+    * `username` – `{username}`
 
- 	as shown in the highlighted image below:
-	
-	{{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/sap-postgres-config.png" >}}
+    as shown in the highlighted image below:
+
+    {{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/sap-postgres-config.png" >}}
 
 4. Create an environment using the SAP HANA database service using Mendix Developer Portal.
 5. Deploy the mda, but **do not start the application**.
 6. Sign in to the SAP BTP Cloud Foundry environment (containing the SAP HANA service) using the Cloud Foundry command line.
 7. Set the following runtime properties in the SAP HANA environment using the command line. Use the values from the PostgreSQL instance values you noted above.
 
-	```bash
-	cf set-env {application-name} MXRUNTIME_SourceDatabaseType POSTGRESQL
-	cf set-env {application-name}  MXRUNTIME_SourceDatabaseHost {hostname}:{port}
-	cf set-env {application-name} MXRUNTIME_SourceDatabaseName {dbname}
-	cf set-env {application-name}  MXRUNTIME_SourceDatabaseUserName {username}
-	cf set-env {application-name}  MXRUNTIME_SourceDatabasePassword {password}
-	```
+    ```bash
+    cf set-env {application-name} MXRUNTIME_SourceDatabaseType POSTGRESQL
+    cf set-env {application-name}  MXRUNTIME_SourceDatabaseHost {hostname}:{port}
+    cf set-env {application-name} MXRUNTIME_SourceDatabaseName {dbname}
+    cf set-env {application-name}  MXRUNTIME_SourceDatabaseUserName {username}
+    cf set-env {application-name}  MXRUNTIME_SourceDatabasePassword {password}
+    ```
 
 8. Start the application either from the Developer Portal or the command line. 
 9. Once the application is started, verify the data in the application.

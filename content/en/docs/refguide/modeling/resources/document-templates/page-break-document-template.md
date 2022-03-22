@@ -6,6 +6,8 @@ tags: ["studio pro"]
 aliases:
     - /refguide/Page+Break+(document+template).html
     - /refguide/page-break-(document-template).html
+    - /refguide/Page+Break+(document+template)
+    - /refguide/page-break-(document-template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

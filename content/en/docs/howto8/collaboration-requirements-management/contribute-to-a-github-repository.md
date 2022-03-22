@@ -6,6 +6,7 @@ weight: 20
 tags: ["GitHub"]
 aliases:
     - /howto8/collaboration-project-management/contribute-to-a-github-repository.html
+    - /howto8/collaboration-project-management/contribute-to-a-github-repository
 ---
 
 ## 1 Introduction

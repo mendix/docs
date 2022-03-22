@@ -50,9 +50,9 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 
 ¹ Unlicensed apps running on a different cloud platform (for example SAP BTP) have similar restrictions to Free Apps. They have additional restrictions, including only allowing six concurrent users.
 
-² The Mendix pricing plans are listed in [Mendix Pricing Plans](#plans), below. More information on the capabilities of different license options is available on [Mendix Platform Pricing](http://www.mendix.com/pricing).
+² The Mendix pricing plans are listed in [Mendix Pricing Plans](#BADplans), below. More information on the capabilities of different license options is available on [Mendix Platform Pricing](http://www.mendix.com/pricing).
 
-{{% alert color="info" %}}
+{{% alert color="info" %}
 Free Apps are part of our Free Edition.
 
 If you are not currently a customer but would prefer to use a licensed cloud node you can find more information on our pricing page: [Mendix Platform Pricing](http://www.mendix.com/pricing).

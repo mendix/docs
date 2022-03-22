@@ -9,7 +9,7 @@ tags: ["studio", "language", "translate", "translations"]
 
 ## 1 Introduction 
 
-Delivering your Mendix app in multiple languages is an important capability for reaching a wide audience. Using the language features of Mendix, you can quickly make your app multilingual and translate the content to many other languages. This means that texts that are presented to end-users, such as button captions, screen titles, menu items, can be translated to other languages.  
+Delivering your Mendix app in multiple languages is an important capability when you want to provide the same app to people speaking different languages. Using the language features of Mendix, you can quickly make your app multilingual and translate your page content to all configured languages. This means that texts that are presented to end-users, such as button captions, screen titles, menu items, can be translated to other languages than the default language.  
 
 {{% alert color="info" %}}
 
@@ -33,7 +33,7 @@ You can translate the following widgets and elements in your app:
 * [Text widget](/studio/page-editor-widgets-text/#content)
 * [Data grid columns](/studio/page-editor-data-grid/#grid-columns)
 * [Menu items](/studio/navigation/#properties-of-menu-items)
-* Messages that are sent from a microflow
+* Messages that are configured in **Show Message** actions of a microflow
 
 When working in a language which is not the default, you can identify texts that have not been translated yet. They show the text in the default language between angle brackets. For example, `<Name>`. You can replace the text with the appropriate translation for the currently selected language. To replace the text, do the following:
 

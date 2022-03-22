@@ -217,3 +217,11 @@ If two access rules differ only by negation, you can try to remove the negating 
 
 Try to avoid negating XPath rules. Otherwise your app may require database tuning if there is a large number of objects.
 
+## 13 Place Create/Update/Delete Activities Closer to the End Event of a Microflow [MXP014] {#mxp014}
+
+A microflow with Create/Update/Delete activities that are placed too close to the start event may cause the database to acquire locks or resources earlier than necessary.
+This may impact app performance.
+
+### 13.1 Steps to Fix
+
+Refactor the microflow so that the Create/Update/Delete activities are closer the end event of the microflow.

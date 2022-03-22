@@ -59,7 +59,7 @@ If you delete an attribute in your entity and then create a new attribute with t
 
 {{% alert color="info" %}}
 
-This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-type) section in *Modules*. 
+This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-types) section in *Modules*. 
 
 This property will not be shown for attributes if the entity is set to **Hidden**, all attributes will be hidden automatically and cannot be set to **Usable**.
 

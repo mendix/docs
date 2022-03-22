@@ -39,7 +39,7 @@ The name used to refer to the association. For example, in forms or microflows.
 
 {{% alert color="info" %}}
 
-This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-type) section in *Modules*. 
+This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-types) section in *Modules*. 
 
 {{% /alert %}}
 

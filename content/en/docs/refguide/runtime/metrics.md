@@ -385,12 +385,9 @@ Metering-related log messages are sent to the `Metering` log node. If a registry
 ## 7 List of Metrics
 
 The Runtime Server produces various metrics. Some of these metrics are controlled by Mendix: these are prefixed with `mx`.
-Other metrics are produced by Micrometer, the library that is used for metrics. This library will output metrics for other
-libraries that it recognizes, such as the Jetty server that is embedded in the Runtime Server. 
 
-{{% alert color="info" %}}
-The additional Micrometer metrics are not under our control and might change unannounced over time.
-{{% /alert %}}
+Other metrics are produced by Micrometer, the library that is used for metrics. This library will output metrics for other
+libraries that it recognizes, such as the Jetty server that is embedded in the Runtime Server. These additional Micrometer metrics are not under our control and might change.
 
 ### 7.1 Runtime Server Metrics
 
@@ -399,7 +396,7 @@ The Runtime Server produces the following metrics out-of-the-box:
 | Name | Type | Tags | Description |
 | --- | --- | --- | --- |
 | `mx.runtime.stats.handler_requests` | counter | `XASId`, `name` | The total number of requests on a request handler (`name`) that was received by a node (`XASId`) since it was started. |
-| `mx.runtime.stats.requests{path}` | counter | | The total number of requests on a request handler (`path`) that was received by a node; deprecated, use the previous one instead. |
+| `mx.runtime.stats.requests{path}` | counter | | The total number of requests on a request handler (`path`) that was received by a node; deprecated, use `mx.runtime.stats.handler_requests` instead. |
 | `mx.runtime.stats.sessions.named_users` | gauge | | The current number of active, named users in the database. |
 | `mx.runtime.stats.sessions.named_user_sessions` | gauge | | The current number of sessions in the database for named users. |
 | `mx.runtime.stats.sessions.anonymous_sessions` | gauge | | The current number of sessions in the database for anonymous users. |
@@ -412,11 +409,15 @@ The Runtime Server produces the following metrics out-of-the-box:
 | `mx.odata.publish.objects` | counter | `entity` | The total number of OData objects that were served for a particular type of object (`entity`). |
 
 {{% alert color="info" %}}
-Note that the actual name may vary slightly per back-end (e.g. Prometheus replaces dots by underscores).
-Additionally, a suffix may be added for the unit of the metric (e.g. `_bytes`).
+Note that the actual name may vary slightly depending on the back-end (for example, Prometheus replaces dots by underscores).
+Additionally, a suffix may be added for the unit of the metric (for example, `_bytes`).
 {{% /alert %}}
 
 ### 7.2 Additional Metrics
+
+{{% alert color="info" %}}
+The additional Micrometer metrics are not under our control and might change unannounced over time.
+{{% /alert %}}
 
 #### 7.2.1 System and Process Metrics 
 
@@ -433,14 +434,14 @@ Additionally, a suffix may be added for the unit of the metric (e.g. `_bytes`).
 | --- | --- | --- | --- |
 | `jvm_info` | gauge | `vendor`, `runtime`, `version` | Details about the Java Virtual Machine (represented in the tags, the value is always 1). |
 | `jvm.classes.loaded` | gauge | | The number of classes that are currently loaded in the Java Virtual Machine. |
-| `jvm.classes.unloaded` | counter | | The total number of classes unloaded since the Java Virtual Machine has started execution. |
+| `jvm.classes.unloaded` | counter | | The total number of classes unloaded since the Java Virtual Machine started execution. |
 | `jvm.buffer.count` | gauge | `id` | An estimate of the number of buffers in a Java Virtual Machine memory pool (`id`). |
 | `jvm.buffer.memory_used` | gauge | `id` | An estimate of the memory (in bytes) that the Java Virtual Machine is using for a buffer pool (`id`). |
 | `jvm.buffer.total_capacity` | gauge | `id` | An estimate of the total capacity (in bytes) of the buffers in a buffer pool (`id`). |
 | `jvm.memory.used` | gauge | `id`, `area` | The amount of memory (in bytes) used for a certain area (`area`): `heap` or `nonheap`. |
 | `jvm.memory.committed` | gauge | `id`, `area` | The amount of memory (in bytes) that is committed for the Java Virtual Machine to use. |
 | `jvm.memory.max` | gauge | `id`, `area` | The maximum amount of memory (in bytes) that can be used for memory management. |
-| `jvm.memory.usage.after.gc` | gauge | `area`, `pool` | The percentage of long-lived heap pool used after the last GC event (in the range [0..1]). |
+| `jvm.memory.usage.after.gc` | gauge | `area`, `pool` | The percentage of long-lived heap pool used after the last Garbage Collection (GC) event (in the range [0..1]). |
 | `jvm.threads.live_threads` | gauge | | The current number of live threads (both daemon and non-daemon threads). |
 | `jvm.threads.daemon_threads` | gauge | | The current number of live daemon threads. |
 | `jvm.threads.peak_threads` | gauge | | The peak live thread count since the Java Virtual Machine started or peak was reset. |

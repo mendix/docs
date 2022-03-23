@@ -17,6 +17,17 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### March 24th, 2022
+
+#### Improvements
+
+* As of today we send all project and app invites, as well as buzz notifications and the Daily Digest from a no-reply address, instead of Leon's personal inbox. You can still reply to buzz notifications, by the way.
+* We started sending the Daily Digest in a slightly different markup.
+
+#### Fixes
+
+* We fixed an issue where the submitter of a feedback issue was no longer able to comment on that issue after they left the project
+
 ### March 10th, 2022
 
 #### Fixes

@@ -11,7 +11,7 @@ description: "Native Template 6 release notes."
 
 ### Fixes
 
-* We identified and fixed an issue with building an iOS custom developer app.
+* We fixed an issue where iOS custom developer apps incurred problems while building.
 
 ## 6.2.13/6.2.14
 

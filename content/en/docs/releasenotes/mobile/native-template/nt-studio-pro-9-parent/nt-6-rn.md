@@ -13,7 +13,7 @@ description: "Native Template 6 release notes."
 
 * We fixed an issue where iOS custom developer apps incurred problems while building.
 
-## 6.2.13/6.2.14
+## 6.2.13 & 6.2.14
 
 **Release date: March 16th, 2022**
 

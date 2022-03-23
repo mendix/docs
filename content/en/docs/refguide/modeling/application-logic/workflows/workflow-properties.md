@@ -18,6 +18,7 @@ Workflow properties consist of the following sections:
 * [Common](#common)
 * [Display information](#display-info)
 * [Due date](#due-date)
+* [Events](#events)
 * [General](#general)
 
 ### 2.1 Admin Page Section {#admin-page} 
@@ -92,7 +93,12 @@ In addition to adding new parameters, you can perform the following actions on p
 * **Move up** – to move a parameter up in the list of parameters and also to change its index, click **Move up**
 * **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
 
-### 2.5 Due Date Section {#due-date}
+### 2.5 Events {#events}
+
+* Workflow state change
+* User task state change
+
+### 2.6 Due Date Section {#due-date}
 
 **Due by** is stored in the System module on the **Workflow** entity as an attribute and its data can be dynamically displayed in the running app. For example, you can use it to set a deadline for the workflow and display it in your app. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. If you are using the **Workflow Commons** module, **Due by** is used in page templates. 
 

@@ -46,6 +46,7 @@ You can select the following operations that represent the new state of the work
 * **Pause workflow** – This operation pauses further processing of the workflow. User tasks cannot be completed when the workflow instance is in the *Pause* state. Use the **Resume workflow** operation to resume processing of the workflow.
 * **Restart workflow** – This operation stops the current task of the workflow and starts it from the initial task in the workflow definition. This action can be used when a workflow instance has become *incompatible* after a modified workflow definition has been deployed. Note that when the workflow instance is restarted, the workflow context object has the same values as before the **Restart workflow** operation was executed.
 * **Resume workflow** – This operation resumes the workflow after it has been paused with the **Pause workflow** operation. User tasks can be completed again.
+* **Retry workflow** – This operation allows you to retry the failed workflow.  
 
 {{% alert color="info" %}}
 

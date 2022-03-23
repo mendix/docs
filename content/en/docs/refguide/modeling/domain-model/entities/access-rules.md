@@ -134,4 +134,8 @@ When a new object is created, or when a new object is sent to the runtime server
 
 ### 3.2 Persistable Objects
 
-When a persistable object is passed to the runtime server as part of the request, the object is retrieved from the database. At that time the access rules are evaluated based on the values retrieved from the database. As for new objects the result of this access rule evaluation is stored in memory and not changed for the lifetime of the object or request. In particular changes to attributes, or committing of the object does not cause re-evaluation of access rules.
+When a persistable object that has been committed is passed to the runtime server the access rules are evaluated based on the current state of the object in the database. More precisely, when passing an object only the 'changes' on the object and an 'object id' are sent. A full object is then reconstructed in two steps. First, the object is retrieved from the database based on its id. At that time the access rules are evaluated based on the values retrieved from the database. Second, changes are applied to the object. As for new objects the result of this access rule evaluation is stored in memory and not changed for the lifetime of the object or request. In particular changes to attributes, or committing of the object does not cause re-evaluation of access rules.
+
+### 3.3 Non-Persistable Objects
+
+Non-persistable objects cannot have XPath constraints.

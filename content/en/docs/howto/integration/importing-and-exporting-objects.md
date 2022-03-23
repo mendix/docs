@@ -28,7 +28,7 @@ Please note throughout this how-to that Mendix packages are stored as Mendix pac
 Be careful when importing objects, as you can overwrite your existing work. Pay attention to prompts and warnings along the way!
 {{% /alert %}}
 
-### 2.1 Importing App Packages
+### 2.1 Importing App Packages {#import-app-package}
 
 A Mendix package (*.mpk*) file can store a complete Mendix app.
 

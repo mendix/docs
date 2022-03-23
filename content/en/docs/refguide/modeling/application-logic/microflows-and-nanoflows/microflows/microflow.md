@@ -37,12 +37,12 @@ This property is only available for add-on and solution modules. For more inform
 
 {{% /alert %}}
 
-**Export level** allows you to hide the content of a certain document/element from a consumer (customer) when developing an add-on module or a solution. 
+**Export level** allows you to define access level to this document on the consumer (customer) side when developing an add-on module or a solution. 
 
 | Value              | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
 | Hidden *(default)* | The document/element content is hidden from a consumer.      |
-| Usable             | Consumers can see the content of the document/element and use and change it in their app. |
+| Usable             | Consumers can see the API and use the microflow in their app. They will not be able to see the contents of the microflow and how it is built. |
 
 #### 2.1.3 Documentation
 

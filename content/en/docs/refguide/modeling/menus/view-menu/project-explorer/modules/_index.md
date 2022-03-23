@@ -9,9 +9,7 @@ tags: ["studio pro", "module", "modules"]
 
 ## 1 Introduction
 
-A Mendix app consists of modules: a **System** module, a [UI resources package](/refguide/ui-resources-package/), one or more user-defined modules, [Marketplace modules](/appstore/modules/), [add-on modules](/refguide/configure-add-on-and-solution-modules/), and [solution modules](/refguide/configure-add-on-and-solution-modules/). Modules are a way to split the functionality of your application into separate parts. For example, a web shop can put order management in a different module than customer and product management. Studio Pro does not enforce any kind of module structure; it is up to you to choose logical modules for your application. Some modules are part of your app by default and are called **app modules**, while others you can download in the [Mendix Marketplace](https://marketplace.mendix.com/) to add functionality to app.
-
-When you create a module, you can choose its type in [Module Settings](/refguide/module-settings/). 
+A Mendix app consists of modules: a **System** module, a [UI resources package](/refguide/ui-resources-package/), one or more user-defined **app modules**, [Marketplace modules](/appstore/modules/), [add-on modules](/refguide/configure-add-on-and-solution-modules/), and [solution modules](/refguide/configure-add-on-and-solution-modules/). Modules are a way to split the functionality of your application into separate parts. For example, a web shop can put order management in a different module than customer and product management. Studio Pro does not enforce any kind of module structure; it is up to you to choose logical modules for your application. Some modules are part of your app by default, while others you can download in the [Mendix Marketplace](https://marketplace.mendix.com/) to add functionality to app.
 
 The domain model is a data model that describes the information in your application domain in an abstract way.
 
@@ -29,9 +27,7 @@ React Native modules expose native Java/Objective-C and C++ objects allowing for
 
 ## 2 Module Types {#module-types}
 
-When you create a module, you can choose the type for it. 
-
-Some modules are part of your app by default and are called **app modules**, while others you can download in the [Mendix Marketplace](https://marketplace.mendix.com/) to add functionality to app.   
+When you create a module, it has a default **app module** type. The type can be changed at any time in [Module Settings](/refguide/module-settings/). 
 
 There are the following type of modules:
 

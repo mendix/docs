@@ -16,7 +16,7 @@ Access to this functionality is currently limited and can be gained through ISV 
 
 Add-on and solution modules are special types of modules that are developed to add functionality to an app. They have Intellectual Property (IP) protection enabled and have the *.mxmodule* extension. For more information on IP protection, see [IP Protection](/appstore/creating-content/sol-ip-protection/). 
 
-The main *difference* between an add-on and a solution module is their purpose. An add-on module is developed to be a *stand-alone functionality* that others users can consume in the their apps, for example, an add-on can be a connector. 
+The main *difference* between an add-on and a solution module is their purpose. An add-on module is developed to be a *stand-alone functionality* that other users can consume in the their apps, for example, an add-on can be a connector. 
 
 Solution modules are *always part of a solution* – any Mendix app that is suitable to be sold to multiple different customers. Solution modules are dependent on each other and are inseparable. Solutions modules form the **solution core** of the solution. 
 
@@ -30,16 +30,16 @@ Add-on and solution modules are not supported in Mendix Studio.
 
 You can mark a standard module (app module) as an add-on or solution module at any time, but we recommend to do so right-away when you start developing. 
 
-All content of add-on and solution modules is set to be hidden from consumers (has IP protection enabled) by default. You can then decide what parts of the module you would like to make usable, if any. For example, you can allow consumers to see how one of the microflows is configured or allow them to use certain entities and attributes. 
+All content of add-on and solution modules is set to be hidden from consumers (has IP protection enabled) by default. You can then decide what parts of the module you would like to make usable, if any. For example, you can allow consumers to use certain entities and attributes. 
 
 ### 2.1 Changing Export Level of a Document/Element
 
-Documents and some elements in the add-on and solution modules have the **Export level** property. This property defines whether the consumers will be able to see the contents of the document/element and use it. For more information on what documents and elements are supported for add-on and solution modules, see the [Supported Documents](#supported-documents) section below. 
+Documents and some elements in the add-on and solution modules have the **Export level** property. This property defines whether the consumers will be able to use a certain document/element in their app. For more information on what documents and elements are supported for add-on and solution modules, see the [Supported Documents](#supported-documents) section below. 
 
 The **Export level** has two values:
 
 * **Hidden** – the document/element content is hidden from a consumer; for example, microflow's implementation can be hidden
-* **Usable** – consumers can see the content of the document/element; for example, you can mark some entities and their attributes as usable
+* **Usable** – consumers are able to use the document/element in their apps; for example, you can mark some entities and their attributes as usable
 
 To change the **Export level** and mark documents/elements as **Usable**, do the following:
 
@@ -132,7 +132,7 @@ If, for some reason, you switch the add-on and solution module to an app module,
 
 ## Read More
 
-*  [Creating Solutions](/appstore/creating-content/sol-solutions-guide/)
+* [Creating Solutions](/appstore/creating-content/sol-solutions-guide/)
 * [IP Protection](/appstore/creating-content/sol-ip-protection/)
 * [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)
 * [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects/)

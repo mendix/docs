@@ -18,7 +18,7 @@ Mendix supports building offline-first applications for [native mobile](/refguid
 
 Mendix Studio Pro performs validations to make sure your app follows an offline-first approach and works even when there is no connection.
 
-During development, the [Make It Native mobile app](/refguide/getting-the-make-it-native-app) can be used to preview and test your Mendix app on a device. The first time your Mendix app is loaded, an internet connection will be required to create a session on the server and download the necessary data and resources. After this initial synchronization, data will remain available in the app even without an internet connection. Subsequent synchronizations will be performed when requested by the user, through application logic or after a model change.
+During development, the [Make It Native mobile app](/refguide/getting-the-make-it-native-app/) can be used to preview and test your Mendix app on a device. The first time your Mendix app is loaded, an internet connection will be required to create a session on the server and download the necessary data and resources. After this initial synchronization, data will remain available in the app even without an internet connection. Subsequent synchronizations will be performed when requested by the user, through application logic or after a model change.
 
 ## 2 Synchronization{#synchronization}
 

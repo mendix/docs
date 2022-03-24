@@ -63,7 +63,7 @@ When you click the **Mobile view**  icon, a pop-up window is displayed that enab
 
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/view-app.png" >}}
 
-You can access this mobile view by installing the [Make it Native App](/refguide/getting-the-make-it-native-app) and then scanning the QR code in the pop-up window. 
+You can access this mobile view by installing the [Make it Native App](/refguide/getting-the-make-it-native-app/) and then scanning the QR code in the pop-up window. 
 
 ### 2.4 Sharing the App
 

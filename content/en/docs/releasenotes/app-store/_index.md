@@ -11,6 +11,12 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2022
 
+### March 24th, 2022
+
+#### Improvements
+
+* We have made changes related to ad-hoc versioning and are now able to support more flexible version numbers as you create components. This means you can also publish components with version numbers that are backward-compatible.
+
 ### February 24th, 2022
 
 #### New Features

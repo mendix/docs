@@ -23,6 +23,10 @@ The Data Hub API v2 is now deprecated and will be removed. You should update you
 The interactive features of the OpenAPI interface are not operational, so the **Try it out** feature does not work.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+Note that curation rights apply to some API activities. 
+{{% /alert %}}
+
 ## 2 Search API {#search}
 
 The [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html) enables users to search and retrieve assets that are registered in Data Hub that satisfy the specified search criteria. For an example API call, see the [Search via the API](/data-hub/data-hub-catalog/search/#search-api) section of *How to Search in the Data Hub Catalog*.

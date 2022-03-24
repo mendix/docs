@@ -17,7 +17,7 @@ The cluster manager does more than just unblocking users. For example, it also r
 {{% /alert %}}
 
 {{% alert color="info" %}}
-In versions of Mendix below 9.11.0, the cluster manager will unblock all blocked users immediately, even if they have been blocked for less than five minutes.
+In versions of Mendix below 9.11.0, the cluster manager will unblock *all* blocked users when it runs, even if they have been blocked for less than five minutes.
 {{% /alert %}}
 
 ## 2 Customizing Login Behavior

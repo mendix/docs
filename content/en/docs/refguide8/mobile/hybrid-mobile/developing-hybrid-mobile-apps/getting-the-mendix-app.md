@@ -10,7 +10,7 @@ The **Mendix Developer App** is a free mobile App that allows you to test the hy
 
 You can get the Mendix Developer App on your mobile device by downloading it from your device's app store. You will need to do this once for every device you're developing on.
 
-For information on which mobile operating systems are supported by the Mendix mobile app, see the [Mobile Operating Systems](/refguide8/system-requirements/#mobileos) section of *System Requirements*.
+For information on which mobile operating systems are supported by the Mendix Developer App, see the [Mobile Operating Systems](/refguide8/system-requirements/#mobileos) section of *System Requirements*.
 
 To download the Mendix Developer App, search for "Mendix Developer App" in your device's app store, or select one of the download links below:
 

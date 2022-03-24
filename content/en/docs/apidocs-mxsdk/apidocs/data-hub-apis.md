@@ -24,7 +24,7 @@ The interactive features of the OpenAPI interface are not operational, so the **
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Note that curation rights apply to some API activities.
+Note that curation rights apply to some API activities. 
 {{% /alert %}}
 
 ## 2 Search API {#search}

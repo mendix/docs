@@ -11,6 +11,16 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### March 24th, 2022
+
+#### Fixes
+
+* We fixed a few styling issues.
+
+#### New Feature
+
+* We added v4 of the **Transform API** to support the unified OData type and version structure. View the [list of Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) or see our [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/) documentation.
+
 ### March 17th, 2022
 
 #### Fixes

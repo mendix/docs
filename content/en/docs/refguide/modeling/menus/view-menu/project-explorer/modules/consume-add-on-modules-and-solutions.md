@@ -17,7 +17,7 @@ A *solution* is a Mendix app that has out-of-the-box solution suitable for multi
 
 When consuming add-on modules and solutions, you may come across the following limitations:
 
-* Add-on and solution modules are not supported in Mendix Studio and it should be disabled for your app, when you consume an add-on module or a solution. 
+* Add-on and solution modules are not supported in Mendix Studio; it should be disabled for your app, when you consume an add-on module or a solution. 
 * Debugging works for app modules (standard modules), you can step into add-on modules, but they will not be shown. If you try to step into a hidden action, Studio Pro will step over it automatically.
 * If app modules and add-on modules or solutions have conflicting custom widgets, you are prompted with a warning showing the sources of the conflicts (module and widget package names) to find a workaround. An automatic fix is not implemented.
 * When a constant is hidden, you cannot configure its value in the **App settings**. For more information on app settings, see the [Configuration Tab](/refguide/project-settings/#configuration) section in *App Settings*. 

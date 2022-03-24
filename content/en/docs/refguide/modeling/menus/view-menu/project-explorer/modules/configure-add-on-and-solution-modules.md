@@ -28,9 +28,9 @@ Add-on and solution modules are not supported in Mendix Studio.
 
 ## 2 Configuring Add-on and Solution Modules
 
-You can mark a standard module (app module) as an add-on or solution module at any time, but we recommend to do so right-away when you start developing. 
+You can mark a standard module (app module) as an add-on or solution module at any time, but we recommend to do so right-away when you start developing. We also recommend changing the module version for add-on and solution modules every time you make changes to them. 
 
-All content of add-on and solution modules is set to be hidden from consumers (has IP protection enabled) by default. You can then decide what parts of the module you would like to make usable, if any. For example, you can allow consumers to use certain entities and attributes. 
+All content of add-on and solution modules is set to be hidden from consumers by default (modules have IP protection enabled). You can then decide what parts of the module you would like to make as usable, if any. For example, you can allow consumers to use certain entities and attributes. 
 
 ### 2.1 Changing Export Level of a Document/Element
 
@@ -38,7 +38,7 @@ Documents and some elements in the add-on and solution modules have the **Export
 
 The **Export level** has two values:
 
-* **Hidden** – the document/element content is hidden from a consumer; for example, microflow's implementation can be hidden
+* **Hidden** – the document/element content is hidden from a consumer
 * **Usable** – consumers are able to use the document/element in their apps; for example, you can mark some entities and their attributes as usable
 
 To change the **Export level** and mark documents/elements as **Usable**, do the following:
@@ -56,7 +56,7 @@ To change the **Export level** and mark documents/elements as **Usable**, do the
    ![](attachments/add-on-and-solution-modules/export-level-property.png)
    
 
-You can see that documents/elements that are marked as usable have an **eye icon**, this means the document is part of the API. The domain model gets an eye icon if any entities are usable. 
+You can see that documents/elements that are marked as usable have an **eye icon**, this means the document is a part of the API. The domain model gets an eye icon if any entity is usable. 
 
 ### 2.2 Supported Documents {#supported-documents}
 
@@ -114,7 +114,7 @@ The add-on module gets an *.mxmodule* extension.
 
 ### 3.2 Exporting Solution Package
 
-Solution package is an app package that will be sold as an out-of-the-box solution and can be used by multiple customers. It has a **solution core** that consists of solution modules. It can also consist of standard modules (app modules) and add-on modules. For more information on solutions, see [Creating Solutions](/appstore/creating-content/sol-solutions-guide/) in the *Marketplace Guide*.
+Solution package is an app package that will be sold as an out-of-the-box solution and can be used by multiple customers. It has a solution core that consists of solution modules. It can also consist of app modules and add-on modules. For more information on solutions, see [Creating Solutions](/appstore/creating-content/sol-solutions-guide/) in the *Marketplace Guide*.
 
 To export the solution package, right-click the name of the app in the **App Explorer** and select **Export app package** or open the **File** menu > **Export App Package**. For more information on exporting, see [Export App Package](/refguide/export-project-package-dialog/).
 

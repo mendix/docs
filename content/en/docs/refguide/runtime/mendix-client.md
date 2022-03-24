@@ -221,17 +221,18 @@ When the app is deployed, the static resources are placed in a structure referre
 #### 4.1.3 Cookies
 
 When the Mendix client is running, it sets a number of technical cookies to record information about the session. These can include:
-| Name  | Source | Purpose | Parameters |
-| ------- | ------- | ------- | ------- |
-| **mx-cookie-test** | Client | Tests whether the browser supports cookies | <ul><li>Path: `/`</li><li>Duration: cookie is deleted immediately after setting it</li></ul><ul><li>HttpOnly: `false`</li></ul> |
-| **OfflineLogout** | Client | Used in offline applications when there is no connection and tells the runtime to logout on the next request | <ul><li>Path: `/`</li><li>Duration: 1 year for offline sessions\*</li></ul><ul><li>HttpOnly: `false`</li></ul> |
-| **originURI** | index.html | Tells the client where to redirect to in case a user is required to log in | <ul><li>Path: `/`</li><li>Duration: until user closes their browser (session cookie)</li></ul><ul><li>HttpOnly: `false`</li></ul> |
-| **DeviceType** | Runtime | Holds the type of the device used for the session | <ul><li>Path: `/`</li><li>Duration: until user closes their browser (session cookie)</li></ul><ul><li>HttpOnly: `true`</li></ul> |
-| **Profile** | Runtime | Holds the navigation profile that is being accessed within the session | <ul><li>Path: `/`</li><li>Duration: until user closes their browser (session cookie)</li></ul><ul><li>HttpOnly: `true`</li></ul> |
-| **SessionTimeZoneOffset** | Runtime | Holds the time zone offset for the sessions | <ul><li>Path: `/`</li><li>Duration: until user closes their browser (session cookie)</li></ul><ul><li>HttpOnly: `true`</li></ul> |
-| **xasid** | Runtime | Used for multi-instance fail-over | <ul><li>Path: `/`</li><li>Duration: until user closes their browser (session cookie)</li></ul><ul><li>HttpOnly: `true`</li></ul> |
-| **reloginReason** | Runtime | Used to let the client know that a relogin reason should be displayed on the sign in page | <ul><li>Path: `/`</li><li>Duration: until user closes their browser (session cookie)</li></ul><ul><li>HttpOnly: `true`</li></ul> |
-| **XASSESSIONID\*\*** | Runtime | Holds the ID of the user's session | <ul><li>Path: `/`</li><li>Duration: 1 year for offline sessions\*, otherwise based on the session timeout</li></ul><ul><li>HttpOnly: `true`</li></ul> |
+| Name  | Source | Purpose | Path | Duration | HttpOnly | 
+| --- | --- | --- | --- | --- | --- |
+| **mx-cookie-test** | Client | Tests whether the browser supports cookies | `/` | deleted immediately after setting it | false |
+| **OfflineLogout** | Client | Used in offline applications when there is no connection and tells the runtime to logout on the next request | `/` | 1 year for offline sessions\* |  `false` | 
+| **originURI** | index.html | Tells the client where to redirect to in case a user is required to log in | `/` | until user closes their browser (session cookie) |  `false` | 
+| **DeviceType** | Runtime | Holds the type of the device used for the session | `/` | until user closes their browser (session cookie) |  `true` | 
+| **Profile** | Runtime | Holds the navigation profile that is being accessed within the session | `/` | until user closes their browser (session cookie) |  `true` | 
+| **SessionTimeZoneOffset** | Runtime | Holds the time zone offset for the sessions | `/` | until user closes their browser (session cookie) |  `true` | 
+| **xasid** | Runtime | Used for mult-instance fail-over | `/` | until user closes their browser (session cookie) |  `true` | 
+| **reloginReason** | Runtime | Used to let the client know that a relogin reason should be displayed on the sign in page | `/` | until user closes their browser (session cookie) |  `true` | 
+| **XASSESSIONID\*\*** | Runtime | Holds the ID of the user's session | `/` | 1 year for offline sessions\*, otherwise based on the session timeout |  `true` | 
+
 
 \* *Offline sessions* are sessions created for users using an offline or native mobile [navigation profile](/refguide/navigation/#profiles).
 

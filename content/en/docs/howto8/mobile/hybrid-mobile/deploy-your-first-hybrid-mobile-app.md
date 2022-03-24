@@ -19,7 +19,7 @@ Besides boasting native functionality, another major advantage of a hybrid mobil
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install the hybrid Mendix mobile app on you device, which makes it easy to see a hybrid application in action without the need to get it approved in the Mendix Marketplace (for details and download links, see [Getting the Mendix App](/refguide8/getting-the-mendix-app/) in the *Studio Pro Guide*)
+* Install the hybrid Mendix Developer App on you device, which makes it easy to see a hybrid application in action without the need to get it approved in the Mendix Marketplace (for details and download links, see [Getting the Mendix Developer App](/refguide8/getting-the-mendix-app/) in the *Studio Pro Guide*)
 
 ## 3 Opening a Hybrid Example App
 
@@ -41,11 +41,11 @@ To open a hybrid example app, follow these steps:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/deploy-your-first-hybrid-mobile-app/18581184.png" >}}
 
-6. Open the hybrid Mendix mobile app on your device and tap **Scan QR Code**:
+6. Open the Mendix Developer App on your device and tap **Scan QR Code**:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/deploy-your-first-hybrid-mobile-app/18581190.png" >}}
 
-7. Scan the QR code on the screen with your hybrid Mendix mobile app:
+7. Scan the QR code on the screen with your Mendix Developer App:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/deploy-your-first-hybrid-mobile-app/18581189.png" >}}
 

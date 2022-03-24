@@ -32,7 +32,9 @@ The [IMAP/POP3 Incoming Email](https://marketplace.mendix.com/link/component/104
 
 ## 2 Configuration
 
-The basic setup and reception of emails can be done using the **EmailAccount_Overview** example page.
+The basic setup and reception of emails can be done using the **EmailAccount_Overview** page, which is in the **ExamplePages** folder under **USE_ME**. Link this page in your app to run the setup.
+
+### 2.1 Account Setup
 
 Select the **Sanitize email to prevent XSS attacks** option to enable the removal of malicious scripts to prevent XSS attacks. This option is unselected by default. To learn more about this option, see [Sanitize untrusted HTML (to prevent XSS)](https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer).
 
@@ -42,4 +44,4 @@ To subscribe to incoming email from an account, call the **SubscribeToIncomingEm
 
 To unsubscribe from incoming email from an account, call the **UnsubscribeFormIncomingEmail** Java action.
 
-Set the **EncryptionKey** constant for email account passowrd encryption.
+Set the **EncryptionKey** constant for email account password encryption.

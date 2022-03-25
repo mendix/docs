@@ -3033,16 +3033,16 @@
     }
 }
 
-.swagger-ui ."Noto Sans" {
-    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica, helvetica neue, ubuntu, roboto, noto, segoe ui, arial, "Noto Sans"
+.swagger-ui .sans-serif {
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica, helvetica neue, ubuntu, roboto, noto, segoe ui, arial, "Noto Sans" /*! NK - changed default font */ 
 }
 
 .swagger-ui .serif {
     font-family: georgia, serif
 }
 
-.swagger-ui .system-"Noto Sans" {
-    font-family: "Noto Sans"
+.swagger-ui .system-sans-serif {
+    font-family: "Noto Sans" /*! NK - changed default font */
 }
 
 .swagger-ui .system-serif {
@@ -3058,11 +3058,11 @@
 }
 
 .swagger-ui .helvetica {
-    font-family: helvetica neue, helvetica, "Noto Sans"
+    font-family: helvetica neue, helvetica, "Noto Sans" /*! NK - changed default font */
 }
 
 .swagger-ui .avenir {
-    font-family: avenir next, avenir, "Noto Sans"
+    font-family: avenir next, avenir, "Noto Sans" /*! NK - changed default font */
 }
 
 .swagger-ui .athelas {
@@ -10418,7 +10418,7 @@
 }
 
 .swagger-ui .servers>label {
-    font-size: 12px;
+    font-size: 12px; /*! NK - removed margin */
     font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }

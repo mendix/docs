@@ -24,11 +24,21 @@ You can choose the type to export your package as.
 
 ### 2.1 Solution Package
 
+{{% alert color="info" %}}
 
+You can only see the **Solution** and **Source Package** settings when you have access to publishing add-on modules and solutions. The access can be gained through ISV program or App Services program. For more information, see [Mendix Vendor Program](/appstore/creating-content/vendor-program/) in the *Marketplace Guide*.
+
+{{% /alert %}}
 
 Choose this type of package if you develop your app as a solution and it has certain documents/elements hidden from consumers. Your app will be exported as a *.mxsolution* file; add-on and solution modules will be converted to the *.mxmodule* format during export. For more information on add-on and solution modules, see [Configuring Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/).
 
 ### 2.2 Source Package
+
+{{% alert color="info" %}}
+
+You can only see the **Solution** and **Source Package** settings when you have access to publishing add-on modules and solutions. The access can be gained through ISV program or App Services program. For more information, see [Mendix Vendor Program](/appstore/creating-content/vendor-program/) in the *Marketplace Guide*.
+
+{{% /alert %}}
 
 A source package is used to distribute your app in the source format (i.e. all content is distributed with source code, which allows documents/elements to be changed on the consumer side). Your app is exported in the *.mpk* format. 
 

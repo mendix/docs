@@ -42,10 +42,10 @@ This property is only available for add-on and solution modules. For more inform
 
 **Export level** allows you to define access level to this document on the consumer (customer) side when developing an add-on module or a solution. 
 
-| Value              | Description                                                  |
-| ------------------ | ------------------------------------------------------------ |
-| Hidden *(default)* | The document/element content is hidden from a consumer.      |
-| Usable             | Consumers can use the constant in their app, but not change it. |
+| Value              | Description                                             |
+| ------------------ | ------------------------------------------------------- |
+| Hidden *(default)* | The document/element content is hidden from a consumer. |
+| Usable             | Consumers can see the constant and use it in their app. |
 
 ### 2.3 Documentation
 

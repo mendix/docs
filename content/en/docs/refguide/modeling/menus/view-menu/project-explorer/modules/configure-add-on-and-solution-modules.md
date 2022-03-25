@@ -60,7 +60,9 @@ You can see that documents/elements that are marked as usable have an **eye icon
 
 ### 2.2 Supported Documents {#supported-documents}
 
-The following documents and elements are supported in add-on and solution modules:
+Not all documents/elements can be marked as **Usable** in add-on and solution modules, some – can be **Hidden** only. 
+
+Below is the list of documents and elements that can be mark as **Usable**:
 
 * Domain Model:
 
@@ -72,25 +74,9 @@ The following documents and elements are supported in add-on and solution module
 * Enumeration
 * Constants (when a constant is hidden, a consumer will not be able to configure its value in the **App settings**)
 * Java Action
-* Integration documents (the **Export level** can be **Hidden** only):
-
-    * Published rest service (**Consume Rest Service** microflow action is also supported)
-    * Consumed web service
-    * Message definitions
-    * Import mapping
-    * Export mapping
-    * JSON structure
-    * XML schema
-* Scheduled Events (the **Export type** can be **Hidden** only)
 * Regular expressions
 * Image collections
 * Custom widgets
-
-{{% alert color="info" %}}
-
-If the element or document cannot be used in the add-on or solution module, the **Export level** property will not be shown. 
-
-{{% /alert %}}
 
 ## 3 Exporting Add-on Modules and Solutions
 

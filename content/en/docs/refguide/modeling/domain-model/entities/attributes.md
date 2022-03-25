@@ -70,7 +70,7 @@ This property will not be shown for attributes if the entity is set to **Hidden*
 | Value              | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
 | Hidden *(default)* | The document/element content is hidden from a consumer.      |
-| Usable             | Consumers can see the attribute in the domain model and use it in their app, but not change it. |
+| Usable             | Consumers can see the attribute in the domain model and use it in their app. |
 
 #### 2.1.3 Documentation
 

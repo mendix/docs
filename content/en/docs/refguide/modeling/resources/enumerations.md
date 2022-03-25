@@ -51,7 +51,7 @@ An enumeration has the following properties:
     **Export level** has the following values:   
 
     * **Hidden** *(default)* – The document/element content is hidden from a consumer. 
-    * **Usable** – Consumers can use the enumeration in their apps, but not change it. 
+    * **Usable** – Consumers can use the enumeration in their apps. 
 
 *  **Enumeration values** – an enumeration has one or more enumeration values. Each value represents one of the options. For more information on enumeration values and their properties, see the [Enumeration Value Properties](#enum-value-properties) section.
 

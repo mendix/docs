@@ -48,7 +48,7 @@ This property is only available for add-on and solution modules. For more inform
 | Value              | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
 | Hidden *(default)* | The document/element content is hidden from a consumer.      |
-| Usable             | Consumers can see the association in the domain model and use it in their app, but not change it. |
+| Usable             | Consumers can see the association in the domain model and use it in their app. |
 
 ### 2.3 Documentation {#documentation}
 

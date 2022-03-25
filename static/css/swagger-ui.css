@@ -1,6 +1,6 @@
 .swagger-ui {
     /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -110,7 +110,7 @@
 }
 
 .swagger-ui button, .swagger-ui input, .swagger-ui optgroup, .swagger-ui select, .swagger-ui textarea {
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     font-size: 100%;
     line-height: 1.15;
     margin: 0
@@ -9068,7 +9068,7 @@
 .swagger-ui .opblock-tag {
     font-size: 24px;
     margin: 0 0 5px;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -9085,7 +9085,7 @@
     font-weight: 400;
     flex: 1;
     padding: 0 10px;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -9203,7 +9203,7 @@
     display: flex;
     align-items: center;
     margin: 0 0 0 auto;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -9215,7 +9215,7 @@
     font-size: 14px;
     flex: 1;
     margin: 0;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -9228,7 +9228,7 @@
     border-radius: 3px;
     background: #000;
     text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #fff
 }
 
@@ -9261,7 +9261,7 @@
     font-size: 13px;
     flex: 1 1 auto;
     word-break: break-word;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -9453,7 +9453,7 @@
     min-width: 60px;
     padding: 0;
     cursor: pointer;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -9481,21 +9481,21 @@
     font-size: 12px;
     margin: 0 0 5px;
     padding: 15px 20px;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
 .swagger-ui .opblock-description-wrapper h4, .swagger-ui .opblock-external-docs-wrapper h4, .swagger-ui .opblock-title_normal h4 {
     font-size: 12px;
     margin: 0 0 5px;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
 .swagger-ui .opblock-description-wrapper p, .swagger-ui .opblock-external-docs-wrapper p, .swagger-ui .opblock-title_normal p {
     font-size: 14px;
     margin: 0;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -9537,13 +9537,13 @@
 .swagger-ui .responses-inner h4, .swagger-ui .responses-inner h5 {
     font-size: 12px;
     margin: 10px 0 5px;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
 .swagger-ui .response-col_status {
     font-size: 14px;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -9558,7 +9558,7 @@
     padding-left: 2em;
     max-width: 40em;
     font-size: 14px;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -9620,7 +9620,7 @@
     text-align: center;
     padding: 5px;
     border-radius: 4px;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     font-weight: 600;
     color: #fff;
     font-size: 14px;
@@ -9646,7 +9646,7 @@
     display: flex;
     flex-direction: column;
     margin: -20px 15px 0 0;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -9679,7 +9679,7 @@
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-transform: uppercase;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -9753,7 +9753,7 @@
 }
 
 .swagger-ui section h3 {
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -9802,7 +9802,7 @@
     border-radius: 4px;
     background: transparent;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -9823,7 +9823,7 @@
 .swagger-ui .btn.cancel {
     border-color: #ff6060;
     background-color: transparent;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #ff6060
 }
 
@@ -9925,7 +9925,7 @@
     background: #f7f7f7 url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PHBhdGggZD0iTTEzLjQxOCA3Ljg1OWEuNjk1LjY5NSAwIDAxLjk3OCAwIC42OC42OCAwIDAxMCAuOTY5bC0zLjkwOCAzLjgzYS42OTcuNjk3IDAgMDEtLjk3OSAwbC0zLjkwOC0zLjgzYS42OC42OCAwIDAxMC0uOTY5LjY5NS42OTUgMCAwMS45NzggMEwxMCAxMWwzLjQxOC0zLjE0MXoiLz48L3N2Zz4=) right 10px center no-repeat;
     background-size: 20px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .25);
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -9959,7 +9959,7 @@
     font-size: 12px;
     font-weight: 700;
     margin: 0 0 5px;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -10166,7 +10166,7 @@
     font-size: 12px;
     margin: 0 0 5px;
     color: #41444e;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -10174,7 +10174,7 @@
     font-size: 18px;
     font-weight: 600;
     margin: 15px 0 0;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -10200,7 +10200,7 @@
     margin: 0;
     padding: 0 20px;
     flex: 1;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -10307,7 +10307,7 @@
     padding: 10px 20px 10px 10px;
     cursor: pointer;
     transition: all .2s;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #606060
 }
 
@@ -10326,7 +10326,7 @@
 .swagger-ui section.models h5 {
     font-size: 16px;
     margin: 0 0 10px;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #707070
 }
 
@@ -10384,7 +10384,7 @@
 
 .swagger-ui .model-title {
     font-size: 16px;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #505050
 }
 
@@ -10392,7 +10392,7 @@
     font-size: 16px;
     font-weight: 600;
     margin-right: 1em;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #f93e3e
 }
 
@@ -10419,7 +10419,7 @@
 
 .swagger-ui .servers>label {
     font-size: 12px;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -10515,7 +10515,7 @@
     padding: 12px 0;
     text-align: left;
     border-bottom: 1px solid rgba(59, 65, 81, .2);
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -10537,7 +10537,7 @@
     font-size: 16px;
     font-weight: 400;
     margin-right: .75em;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -10612,7 +10612,7 @@
     flex: 1;
     max-width: 300px;
     text-decoration: none;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #fff
 }
 
@@ -10666,7 +10666,7 @@
     border: none;
     border-radius: 0 4px 4px 0;
     background: #62a03f;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #fff
 }
 
@@ -10688,20 +10688,20 @@
 
 .swagger-ui .info li, .swagger-ui .info p, .swagger-ui .info table {
     font-size: 14px;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
 .swagger-ui .info h1, .swagger-ui .info h2, .swagger-ui .info h3, .swagger-ui .info h4, .swagger-ui .info h5 {
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
 .swagger-ui .info a {
     font-size: 14px;
     transition: all .4s;
-    font-family: "Noto Sans";
-    color: #0CABF9
+    font-family: "Noto Sans"; /*! NK - changed default font */
+    color: #0CABF9 /*! NK - changed color */
 }
 
 .swagger-ui .info a:hover {
@@ -10724,7 +10724,7 @@
 .swagger-ui .info .title {
     font-size: 36px;
     margin: 0;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -10743,7 +10743,7 @@
 .swagger-ui .info .title small pre {
     margin: 0;
     padding: 0;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #fff;
     background-color: inherit;
 }
@@ -10805,7 +10805,7 @@
 
 .swagger-ui .scopes h2 {
     font-size: 14px;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 
@@ -10848,7 +10848,7 @@
     font-size: 20px;
     margin: 0;
     flex: 1;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans"; /*! NK - changed default font */
     color: #3b4151
 }
 

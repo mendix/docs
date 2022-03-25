@@ -43,21 +43,21 @@ The app will open the corresponding page depending on the grade of a customer, f
 
 3.  For the **Customer** entity, create an attribute (for more information on how to create the attribute, see the [Adding New Attributes](/studio/domain-models/) section) and do the following:
     
-    1. Set the attribute **Name** to *Grade*.
-    2. Set the [Type](/studio/domain-models-attributes/) to **Enumeration**.
-    3. Click **Select enumeration**.
+    1. Set the attribute **Name** to *Grade*.
+    2. Set the [Type](/studio/domain-models-attributes/) to **Enumeration**.
+    3. Click **Select enumeration**.
     4. In the **Select enumeration** dialog box, click the plus icon in the top right corner to create an enumeration.
-    5. In the **Create new enumeration** dialog box, click **Add Item** (*Grade* is filled out automatically for the **Name**).
+    5. In the **Create new enumeration** dialog box, click **Add Item** (*Grade* is filled out automatically for the **Name**).
     
         {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/new-enumeration-add-item.png" >}} 
 
-    6. Enter *Bronze* for the **Caption** (**Name** is filled out as *Bronze* automatically).
+    6. Enter *Bronze* for the **Caption** (**Name** is filled out as *Bronze* automatically).
 
         {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/new-enumeration-add-item-bronze.png" >}}
     
-    7. Click **Add Item** and repeat the step above to create the **Silver** and **Gold** grades.
+    7. Click **Add Item** and repeat the step above to create the **Silver** and **Gold** grades.
     
-    8. Click **Create** to close the dialog boxs and create the attribute.
+    8. Click **Create** to close the dialog boxs and create the attribute.
     
         {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/new-enumeration-bronze-silver-gold.png" >}}
 

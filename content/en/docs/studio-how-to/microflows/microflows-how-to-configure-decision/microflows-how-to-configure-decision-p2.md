@@ -71,7 +71,7 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
 
 10. Delete the following elements from the list view:
 
-    1. The **TEXT** widget with the subtitle. 
+    1. The **TEXT** widget with the subtitle. 
     2. The **IMAGE** widget.
 
 11. Open the **Properties** of the **Details** button, and do the following:

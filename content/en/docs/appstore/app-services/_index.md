@@ -21,7 +21,7 @@ For details on participating in the Mendix Vendor program, see [How to Prepare Y
 ## 2 Main Documents in This Category
 
 * [3D Viewer](/appstore/app-services/3d-viewer/) – enables uploading, visualizing, and operating on 3D JT files in your web apps 
-* [Email Service](/appstore/app-services/email-service/) – enables sending HTML and plain text emails with attachments in your web apps
+* [Email Service](/appstore/app-services/email-service/) – enables sending HTML and plain text emails with attachments in your web apps
 * Cognitive AI Services
     * [Speech To Text](/appstore/app-services/speech-to-text/) – enables converting audio and voice into written text in your web apps
     * [Text To Speech](/appstore/app-services/text-to-speech/) – enables converting text into voice in your web apps

@@ -48,7 +48,7 @@ To configure this widget, follow these steps:
 
         {{< figure src="/attachments/appstore/widgets/rich-text/basic-toolbar.png" alt="Example of toolbar" >}}
 	
-	  * **Inline** – if selected, the toolbar pops up only when the user starts typing in the editor
+	  * **Inline** – if selected, the toolbar pops up only when the user starts typing in the editor
         {{< figure src="/attachments/appstore/widgets/rich-text/inline-toolbar.png" alt="Example of toolbar" >}}
 	
 * **Value attribute** (required) – sets a String attribute to store the rich-text content
@@ -150,7 +150,7 @@ To configure this widget, follow these steps:
     
         {{< figure src="/attachments/appstore/widgets/rich-text/insert-code-snippet.png" alt="insert-code-snippet" >}}
     
-    * **No** (default) – if selected, the **Insert Code Snippet** button is unavailable in the toolbar
+    * **No** (default) – if selected, the **Insert Code Snippet** button is unavailable in the toolbar
 * **Advanced content filtering**  
     * **Auto** (default) – if selected, the content is sanitized automatically
     * **Custom** – if selected, you can customize how content is sanitized with the following items:

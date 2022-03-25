@@ -118,10 +118,11 @@ If you generate the page using the templates in the **Workflows Commons** module
 
 Possible options of this property are described in the table below:
 
-| Option    | Description                                                  |
-| --------- | ------------------------------------------------------------ |
-| XPath     | Allows you to filter users who should be assigned the user task. For example, you can assign a certain task only to users with the Manager user role. You can use attributes of the of the **User Entity** set in [Project Settings](/refguide/project-settings/#workflows). |
-| Microflow | Allows you to assign the user task to certain users. Using microflow you can check, for example, which users have the right to approve user tasks and are currently not on vacation and assign the task only to users who passed the check.<br />The return type of the microflow should be the **User Entity** set in [Project Settings](/refguide/project-settings/#workflows). |
+| Option        | Description                                                  |
+| ------------- | ------------------------------------------------------------ |
+| XPath         | Allows you to filter users who should be assigned the user task. For example, you can assign a certain task only to users with the Manager user role. You can use attributes of the of the **User Entity** set in [Project Settings](/refguide/project-settings/#workflows). |
+| Microflow     | Allows you to assign the user task to certain users. Using microflow you can check, for example, which users have the right to approve user tasks and are currently not on vacation and assign the task only to users who passed the check.<br />The return type of the microflow should be the **User Entity** set in [Project Settings](/refguide/project-settings/#workflows). |
+| No Assignment |                                                              |
 
 #### 2.8.2 XPath Constraint
 
@@ -130,6 +131,10 @@ Specifies the expression used to assign the user task. This option is displayed 
 #### 2.8.3 Microflow
 
 Specifies the microflow used to assign the user task. This option is displayed only when the [Assign user task using](#assign-user-task) is set to **Microflow**.   
+
+#### 2.8.4 Auto Assign When Result Is One User {#auto-assign}
+
+Allows to automatically assign a user task when a single user is targeted. This option is displayed only when the [Assign user task using](#assign-user-task) is set to **XPath** or**Microflow**. 
 
 ## 3 Read More
 

@@ -3,7 +3,7 @@
 //
 
 .table {
-  width: 100%;
+  width: 90%;
   margin-bottom: $spacer;
   color: $table-color;
   background-color: $table-bg; // Reset for nesting within parents with `background-color`.
@@ -175,7 +175,7 @@
     &#{$infix} {
       @include media-breakpoint-down($breakpoint) {
         display: block;
-        width: 100%;
+        width: 90%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
 

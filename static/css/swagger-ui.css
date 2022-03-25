@@ -10745,7 +10745,7 @@
     padding: 0;
     font-family: "Noto Sans"; /*! NK - changed default font */
     color: #fff;
-    background-color: inherit;
+    background-color: inherit;  /*! NK - added backgroud color inherit */
 }
 
 .swagger-ui .auth-btn-wrapper {
@@ -10897,7 +10897,7 @@
 }
 
 .swagger-ui .markdown code, .swagger-ui .renderedMarkdown code {
-    font-size: 14px;
+    font-size: 14px;  /*! NK - removed padding properties */
     border-radius: 4px;
     background: rgba(0, 0, 0, .05);
     font-family: monospace;

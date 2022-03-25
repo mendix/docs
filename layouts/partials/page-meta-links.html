@@ -34,10 +34,10 @@
               <!-- NK - changed icon properties -->
               <a href="{{ $issuesURL }}" target="_blank"><img class="my-icon" src="/icons/messages-bubble-text-1.svg" title="Leave feedback"></a>
               <!-- NK - deactivated icon for project issue -->
-              <!-- {{ if $gh_project_repo }}
+              {{/* {{ if $gh_project_repo }}
                 {{ $project_issueURL := printf "%s/issues/new" $gh_project_repo }}
                   <a href="{{ $project_issueURL }}" target="_blank"><i class="fas fa-tasks fa-fw"></i> {{ T "post_create_project_issue" }}</a>
-                {{ end }} -->
+                {{ end }} */}}
             {{ end }}
         <!-- MvM: get the alternative output formats from the PAGE (in theme it is for Section) and change text to print_page-->
         {{ with .AlternativeOutputFormats.Get "print" }}

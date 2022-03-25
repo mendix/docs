@@ -1,6 +1,6 @@
 <div class="td-content">
 	<h1>{{ .Title }}</h1>
-	<!-- NK - deactivate description {{ with .Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }} -->
+	{{/* NK - deactivate description {{ with .Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }} */}}
 	{{ partial "page-meta-lastmod.html" . }}
 	<header class="article-meta">
 		{{ $context := . }}

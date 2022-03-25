@@ -11,6 +11,16 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### March 24th, 2022
+
+#### New Feature
+
+* We added v4 compatibility for the **Transform API**. This is accessible via the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) under the **Endpoints** section.
+
+#### Fixes
+
+* We fixed a few styling issues.
+
 ### March 17th, 2022
 
 #### Fixes

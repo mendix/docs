@@ -220,17 +220,23 @@ When the app is deployed, the static resources are placed in a structure referre
 
 #### 4.1.3 Cookies
 
-When the Mendix client is running, it creates a number of technical cookies to record information about the session. These expire at the end of the session, and can include:
+When the Mendix client is running, it sets a number of technical cookies to record information about the session. These can include:
+| Name  | Source | Purpose | Path | Duration | HttpOnly | 
+| --- | --- | --- | --- | --- | --- |
+| **mx-cookie-test** | Client | Tests whether the browser supports cookies | `/` | deleted immediately after setting it | `false` |
+| **OfflineLogout** | Client | Used in offline applications when there is no connection and tells the runtime to logout on the next request | `/` | 1 year for offline sessions<sup><small>1</small></sup> |  `false` | 
+| **originURI** | index.html | Tells the client where to redirect to if a user is required to log in | `/` | until user closes their browser (session cookie) |  `false` | 
+| **DeviceType** | Runtime | Holds the type of the device used for the session | `/` | until user closes their browser (session cookie) |  `true` | 
+| **Profile** | Runtime | Holds the navigation profile that is being accessed within the session | `/` | until user closes their browser (session cookie) |  `true` | 
+| **SessionTimeZoneOffset** | Runtime | Holds the time zone offset for the session | `/` | until user closes their browser (session cookie) |  `true` | 
+| **xasid** | Runtime | Used for multi-instance fail-over | `/` | until user closes their browser (session cookie) |  `true` | 
+| **reloginReason** | Runtime | Used to let the client know that a relogin reason should be displayed on the sign in page | `/` | until user closes their browser (session cookie) |  `true` | 
+| **XASSESSIONID**<sup><small>2</small></sup> | Runtime | Holds the ID of the user's session | `/` | 1 year for offline sessions<sup><small>1</small></sup>, otherwise based on the session timeout |  `true` | 
 
-* Device Type
-* JSESSIONID
-* Profile
-* SessionTimeZoneOffset
-* \_\_VCAP\_ID\_\_
-* XASID
-* XASSESSIONID
-* originURI
-* xasid
+
+<sup><small>1</small></sup>*Offline sessions* are sessions created for users using an offline or native mobile [navigation profile](/refguide/navigation/#profiles).
+
+<sup><small>2</small></sup>The name of the **XASSESSIONID** can be changed by changing the value of the **com.mendix.core.SessionIdCookieName** [custom setting](/refguide/custom-settings/).
 
 ### 4.2 Launching Native Mendix Client
 

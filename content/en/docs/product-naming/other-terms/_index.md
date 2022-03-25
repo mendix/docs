@@ -211,12 +211,12 @@ Capitalize in all instances.
 
 ### Mendix mobile app {#mendix-mobile-app}
 
-[Mendix](/refguide8/getting-the-mendix-app/) is the name for the mobile app available for developers to test hybrid mobile apps.
+[Mendix Developer App](/refguide8/getting-the-mendix-app/) is the name for the mobile app available for developers to test hybrid mobile apps.
 
 {{% alert color="info" %}}
-This term replaces "Mendix Developer app" and "Mendix Mobile app" (which are not to be used in the product UI or documentation – for more information, see [Terminology History](/product-naming/terminology-history/)).<br />
+This term replaces "Mendix" and "Mendix Mobile app" (which are not to be used in the product UI or documentation – for more information, see [Terminology History](/product-naming/terminology-history/)).<br />
 <br />
-To avoid confusion with "Mendix" in all its other usages, always use "the Mendix mobile app" and cross-reference [Getting the Mendix Mobile App](/refguide8/getting-the-mendix-app/) where possible.
+Always use "the Mendix Developer App" and cross-reference [Getting the Mendix Developer App](/refguide8/getting-the-mendix-app/) where possible.
 {{% /alert %}}
 
 ### Mendix Client {#client}

@@ -473,6 +473,8 @@ When you have completed the sections above, you may have errors in your error li
 
 * If you have errors saying **Nanoflow commons/Native mobile resources are not compatible** get the new major versions from **Marketplace**.
 
+* If you have errors saying **"CE9500: This feedback widget has an invalid App ID. Right-click this error to update the App ID of all feedback widgets."** your app has online services enabled and is using one or more feedback widgets. However, the app ID configuration property of at least one of them has become invalid due to the configuration revert mentioned above. To update the app IDs of all your feedback widgets to your app's correct app ID, right-click the error and select **Update the App ID of all feedback widgets**. Note that this will update *all* of your feedback widgets. Alternatively, inspecting individual errors will lead you to the individual, erring widgets if you want to deal with them one by one.
+
 ## 4 Edge Case Issues After Upgrading to Atlas 3 {#edge-cases}
 
 In Mendix 9 the Hybrid profile is deprecated. In Atlas 3 all hybrid content is removed. When upgrading from Atlas 2 to Atlas 3, you may have errors about pages used as the default home page for a hybrid profile which no longer exists:

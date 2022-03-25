@@ -27,7 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 In this section, you will create a chart with basic sample data.
 
-## 3.1 Setting up the Domain Model
+### 3.1 Setting up the Domain Model
 
 To use the Charts widget, a specific data structure is set up. This is defined by entities and attributes in the domain model.
 
@@ -36,7 +36,7 @@ To use the Charts widget, a specific data structure is set up. This is defined b
 
     {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-basic-create/charts-entity.png" alt="Value entity" >}}
 
-## 3.2 Creating a Data Entry Page
+### 3.2 Creating a Data Entry Page
 
 To create a basic data entry page from which the Charts widget will fetch data, follow these steps:
 
@@ -47,7 +47,7 @@ To create a basic data entry page from which the Charts widget will fetch data, 
 
 3. Add the **Value_NewEdit** page to user navigation.
 
-## 3.3 Adding the Charts Widget to a New Page
+### 3.3 Adding the Charts Widget to a New Page
 
 1. Create a page named *ShowChart*.
 2. Add it to the user navigation.
@@ -69,7 +69,7 @@ To create a basic data entry page from which the Charts widget will fetch data, 
 
     {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-basic-create/charts-widget-page.png" alt="Final widget Page" >}}
 
-## 3.4 Configuring the Charts Widget
+### 3.4 Configuring the Charts Widget
 
 To configure a Charts widget, follow these steps:
 
@@ -88,7 +88,7 @@ To configure a Charts widget, follow these steps:
 
     {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-basic-create/charts-data-points.png" alt="select Data Points" >}}
 
-## 3.5 Viewing the Chart
+### 3.5 Viewing the Chart
 
 To view the chart, follow these steps:
 

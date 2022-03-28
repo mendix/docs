@@ -61,7 +61,7 @@ It is possible to select the leap day (February 29th). In non-leap years the eve
 | Property | Description |
 | --- | --- |
 | Month | The month in which to execute the event. |
-| Day | The day at which to execute the event. |
+| Day | The day on which to execute the event. |
 | Time | The time of day at which to execute the event. |
 | On overlap | See explanation of options in [Long-running Events](#long-events). |
 
@@ -78,7 +78,7 @@ Monthly events also come in 2 flavors:
 | --- | --- |
 | Interval | The number of months in between executions of the event. This must be a divisor of 12. |
 | Months | The months in which the event will be executed; not visible when executing every month. |
-| Day | The day of the months on which to execute the event. |
+| Day | The day of the month on which to execute the event. |
 | Time | The time of day at which to execute the event. |
 | On overlap | See explanation of options in [Long-running Events](#long-events). |
 

@@ -65,13 +65,16 @@ install:
   # ------------------------
   - ./hugo config --environment $TRAVIS_BRANCH # report the config we are using
   - echo "HUGO was run for environment $TRAVIS_BRANCH" > $TRAVIS_BUILD_DIR/hugo.log
+  # Set pipefail so that if Hugo fails the whole job fails
+  - set -o pipefail
   # put the flags in different config files controlled by environment matching $TRAVIS_BRANCH
   # Append output to hugo.log file to print at the end of the travis job
   # (see https://stackoverflow.com/questions/418896/how-to-redirect-output-to-a-file-and-stdout)
   - ./hugo --environment $TRAVIS_BRANCH 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log
   #
   # normal htmltest takes too much memory - using a modified version which strips <aside> tag content
-  # NB - Travis CI sees the return code from `tee` and not from `htmltest` so it will always build.
+  # NB - Set pipefail so that Travis CI sees the return code from `tee` and not from `htmltest` so it will always build.
+  - set +o pipefail
   - chmod +x ./htmltest/htmltest
   - ./htmltest/htmltest 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log
 

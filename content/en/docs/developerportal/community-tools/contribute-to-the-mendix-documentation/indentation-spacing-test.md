@@ -162,9 +162,7 @@ Lists in alerts:
 
 ### 2.2 TODOs and Comments
 
-[//]: # Comments do NOT work. Use todo shortcode instead: \{\{% todo %\}\}[ToDo comment text]\{\{% /todo %\}\}
-
-{{% todo %}}[ToDo comment text, only visible in development]{{% /todo %}}
+[//]: # Comments do NOT work. Use todo shortcode instead: \{\{% todo %\}\}[ToDo comment text, only visible in development]\{\{% /todo %\}\}
 
 ### 2.3 Details
 

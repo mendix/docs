@@ -106,13 +106,20 @@ An [XPath constraint](/refguide/xpath-constraints/) can be used to constrain the
 
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-xpath-tab.png" >}}
 
-We provided 2 helper buttons to populate the XPath constraint based on the signed-in user:
-1. **Owner** button is useful for access rule that only applies when the **Owner** of the object matches the signed-in user. The following XPath constraint is generated:
+#### 2.4.1 Owner
+
+The **Owner** button adds an XPath constraint so the access rule is only applied to the current user.
+
 ```java
 [System.owner='[%CurrentUser%]']
 ```
 
-2. **Path to user...** button is useful for access rule that only applies when the associated **System.User** entity or its specialization matches the signed-in user.
+This constraint is only valid when the [Store 'owner'](/refguide/entities/#343-store-owner) checkbox in the System members section is checked.
+
+#### 2.4.2
+
+The **Path to user...** button is useful to create an XPath constraint to check if the entity is (indirectly) associated to the current user. When you press **Path to user...** you can select a path to an entity that is a `System.User` or a specialization of `System.User` and converts that into an XPath constraint for the access rule. This means the access rule is only applied when the user path you selected is equal to the current user.
+
 For example, the **Customer** entity is a specialization of the **User** entity. The **Order** entity is associated to the **Customer** entity.
 
 A logged-in customer is allowed to view personal orders, but is not allowed to view the orders of other customers. This is accomplished by using the following XPath constraint in the access rule of the **Order** entity:

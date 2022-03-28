@@ -1,7 +1,6 @@
 ---
 title: "Developer Portal"
 url: /releasenotes/developer-portal/
-description: "Release notes for all project management parts of the Mendix Developer Portal"
 tags: ["developer portal", "buzz", "mendix profile"]
 weight: 20
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.

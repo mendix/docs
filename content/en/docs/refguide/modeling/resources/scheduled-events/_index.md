@@ -27,8 +27,8 @@ deprecated and will no longer be supported from Mendix 10.
 
 As of Mendix 9.12.0 scheduled events have been improved and are being executed using the [task queue](/refguide/task-queue/), providing an
 at-least-once guarantee. They will be executed by an arbitrary node in the cluster and support monthly and yearly events properly.
-Most importantly, the task queue-based scheduled events no longer have a start-time, but allow specifying a particular time of day,
-ensuring that they work as expected in the face of daylight saving.
+Most importantly, you can no longer specify a specific date and time for task queue-based scheduled events — all events will recur at the specified time, depending on the schedule you set up.
+In addition, these recurring events will now work as expected in the face of daylight saving time.
 
 Mendix versions 9.12.0 and above supports the following schedule types:
 

@@ -21,7 +21,7 @@ Scheduled events can be tested locally, but they will not be run if your app is 
 
 | Property | Description |
 | --- | --- |
-| Name | The name of the scheduled event. This name is stored in the `ScheduledEventInformation` objects at runtime, so that runs of the scheduled event are recognizable. |
+| Name | The name of the scheduled event. This name is recorded in the `System.ProcessedQueueTask` objects at runtime, so that you can identify when this scheduled event has been processed. For compatibility with legacy scheduled events, it is also stored in the `ScheduledEventInformation` objects but this is deprecated and will be removed in Mendix version 10. |
 | Documentation | This field is for documentation purposes in the app model only. Its value is not visible to end-users and doesn't influence the behavior of your application. |
 
 ## 3 Execution Properties

@@ -53,8 +53,7 @@ To change the **Export level** and mark documents/elements as **Usable**, do the
 
 3. Set the **Export level** property to **Usable**:
 
-   ![](attachments/add-on-and-solution-modules/export-level-property.png)
-   
+    {{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/modules/configure-add-on-and-solution-modules/export-level-property.png" >}}   
 
 You can see that documents/elements that are marked as usable have an **eye icon**, this means the document is a part of the API. The domain model gets an eye icon if any entity is usable. 
 
@@ -84,11 +83,11 @@ Below is the list of documents and elements that can be mark as **Usable**:
 
 To export the add-on module, right-click it in the App Explorer and select **Export add-on module package**: 
 
-![](attachments/add-on-and-solution-modules/export-add-on.png)
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/modules/configure-add-on-and-solution-modules/export-add-on.png" >}}
 
 It is possible to add files in an add-on module package, you can select them during export and they will be imported. 
 
-![](attachments/add-on-and-solution-modules/select-depencencies-add-on-export.png)
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/modules/configure-add-on-and-solution-modules/select-depencencies-add-on-export.png" >}}
 
 {{% alert color="info" %}}
 

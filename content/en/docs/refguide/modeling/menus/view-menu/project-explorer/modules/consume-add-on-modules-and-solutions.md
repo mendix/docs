@@ -20,7 +20,7 @@ When consuming add-on modules and solutions, you may come across the following l
 * Add-on and solution modules are not supported in Mendix Studio; it should be disabled for your app, when you consume an add-on module or a solution. 
 * When debugging add-on and solution modules, you cannot step into microflows, debugging will automatically use **Step Over**.
 * If app modules and add-on modules or solutions have conflicting custom widgets, you are prompted with a warning showing the sources of the conflicts (module and widget package names) to find a workaround. An automatic fix is not implemented.
-* When a constant is hidden, you cannot configure its value in the **App settings**. For more information on app settings, see the [Configuration Tab](/refguide/project-settings/#configuration) section in *App Settings*. 
+* When a constant is hidden, you cannot configure its value in the **App settings**. For more information on app settings, see the [Configuration Tab](/refguide/project-settings/#configurations) section in *App Settings*. 
 
 ## 3 Importing an Add-on Module 
 
@@ -42,7 +42,7 @@ A solution package is imported to your app as any other app package. For more in
 
 When you import an add-on module, it shows up in the **Add-ons** folder in the App Explorer. The main difference of the add-on module is that the implementation details of some functionality and elements, such as microflows, are *hidden* from consumers so that IP is protected. This means that add-on modules have a clear API: you know which elements you can use. For example, when you open a microflow, you will see its API including the microflow and parameter documentation. You cannot see how the microflow is built, but you are able to use it in your app, for example, you can call the microflow with protected implementation from another microflow:
 
-![Protected Microflow Example](attachments/add-on-and-solution-modules/protected-microflow.png)
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/modules/consume-add-on-modules-and-solutions/protected-microflow.png" >}}
 
 You also might not see the full domain model of the module, only entities, attributes, and associations that were specifically exposed by the publisher. The visible parts of the domain model are intended to be reused; hidden elements are not needed for proper use of the module.
 

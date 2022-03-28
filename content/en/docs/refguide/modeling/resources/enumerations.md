@@ -46,7 +46,7 @@ An enumeration has the following properties:
 * **Name** – The name of the enumeration.
 
 * **Export level** – allows you to define access level to this document on the consumer (customer) side when developing an add-on module or a solution.  
-    {{% alert color="info" %}}This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](studio/modules/#module-types) section in *Modules*. 
+    {{% alert color="info" %}}This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-types) section in *Modules*. 
     {{% /alert %}}
     **Export level** has the following values:   
 

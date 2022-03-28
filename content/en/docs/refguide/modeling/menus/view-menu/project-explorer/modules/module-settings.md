@@ -11,11 +11,11 @@ tags: ["studio pro", "module settings", "module", "add-on", "solution"]
 
 Module settings allow you to choose the type of the module when you build your app and to set a version for certain module types:
 
-![Module Settings Dialog Box](attachments/module-settings/module-settings-dialog.png)
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/modules/module-settings/module-settings-dialog.png" >}}
 
 To open module settings, select the module in the App Explorer and double-click **Settings**:
 
-![Module Settings in the App Explorer](attachments/module-settings/settings.png)
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/modules/module-settings/settings.png" >}}
 
 ## 2 Module Type
 

@@ -20,7 +20,11 @@ To export the package, open the **File** menu > **Export App Package** and selec
 
 ## 2 Package Type
 
-You can choose the type to export your package as. 
+When you have access to publishing add-on modules and solutions, you can select to export you app as the **Solution** or **Source Package**. 
+
+{{< figure src="/attachments/refguide/modeling/menus/file-menu/export-project-package-dialog/export-project-package-types.png" alt="Export App Package Dialog Window with Different Package Types" >}}
+
+The access can be gained through ISV program or App Services program. For more information, see [Mendix Vendor Program](/appstore/creating-content/vendor-program/) in the *Marketplace Guide*.
 
 ### 2.1 Solution Package
 

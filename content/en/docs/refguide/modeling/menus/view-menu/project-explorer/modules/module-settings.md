@@ -7,6 +7,12 @@ tags: ["studio pro", "module settings", "module", "add-on", "solution"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="warning" %}}
+
+Access to this functionality is currently limited and can be gained through ISV program or App Services program. For more information, see [Mendix Vendor Program](/appstore/creating-content/vendor-program/) in the *Marketplace Guide*.
+
+{{% /alert %}}
+
 ## 1 Introduction
 
 Module settings allow you to choose the type of the module when you build your app and to set a version for certain module types:

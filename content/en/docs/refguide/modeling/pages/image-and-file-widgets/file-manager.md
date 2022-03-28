@@ -86,7 +86,9 @@ You can specify file extensions that users are allowed to upload. If no extensio
 
 If a file with an extension that is not allowed is selected, a [system text](/refguide/system-texts/) for **File manager/dynamic image** > **Error: incorrect file extension** will be shown below the file manager.
 
-{{% alert color="warning" %}}The feature to allow extensions is not meant as a security feature: the file manager widget does not check the contents of a file to see if they match the provided extension. You can find more information in [our documentation on implementing best practices for app security](/howto/security/best-practices-security/#scanning-for-malicious-content) for more information for scanning uploaded files for malicious content.{{% /alert %}}
+{{% alert color="warning" %}}
+The feature to allow extensions is not meant as a security feature, as the file manager widget does not check the contents of a file to see if they match the provided extension. For more information, see the [Scanning Uploaded Files for Malicious Content](/howto/security/best-practices-security/#scanning-for-malicious-content) section of *How to Implement Best Practices for App Security*.
+{{% /alert %}}
 
 #### 2.4.4 Show File in Browser
 

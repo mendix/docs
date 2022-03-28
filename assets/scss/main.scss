@@ -12,3 +12,23 @@
 @import "tables";
 
 
+// Adjust anchors vs the fixed menu.
+@include media-breakpoint-up(md) {
+    .td-offset-anchor:target {
+        display: block;
+        position: relative;
+        top: -4rem;
+        visibility: hidden;
+    }
+
+    h2[id]:before,
+    h3[id]:before,
+    h4[id]:before,
+    h5[id]:before {
+        display: block;
+        content: " ";
+        margin-top: 0; // NK - override for default values, to allow selection of items right above headers
+        height: 0; // NK - override for default values, to allow selection of items right above headers
+        visibility: hidden;
+    }
+}

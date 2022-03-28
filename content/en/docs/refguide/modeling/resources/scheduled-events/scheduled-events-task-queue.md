@@ -65,7 +65,7 @@ This allows you to run the event on a certain day of the week every year. For ex
 | Property | Description |
 | --- | --- |
 | Month | The month in which to execute the event. |
-| Day | The day at which to execute the event. |
+| Day | The day on which to execute the event. |
 | Time | The time at which to execute the event. |
 | On overlap | See explanation of options in [Long-running Events](#long-events). |
 
@@ -84,7 +84,7 @@ This allows you to run the event on the same date every month, or number of mont
 | --- | --- |
 | Interval | The number of months in between executions of the event. This must be a divisor of 12. |
 | Months | The months in which the event will be executed; not visible when executing every month. |
-| Day | The day of the months on which to execute the event. |
+| Day | The day of the month on which to execute the event. |
 | Time | The time at which to execute the event. |
 | On overlap | See explanation of options in [Long-running Events](#long-events). |
 

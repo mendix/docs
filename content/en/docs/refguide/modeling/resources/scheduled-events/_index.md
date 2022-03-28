@@ -43,8 +43,7 @@ Mendix versions 9.12.0 and above supports the following schedule types:
 ## 3 Migration{#migration}
 
 When migrating to Mendix version 9.12.0 or above, Studio Pro will attempt to convert legacy scheduled events into task queue-based events,
-when possible. In cases where this is not possible a deprecation warning will be shown. Right-click on the warning to see
-possible options for fixing it. If none of the options is suitable, you should perform the conversion manually.
+when possible.
 
 The following cases cannot be converted automatically when the model is upgraded to Mendix version 9.12.0 or above:
 

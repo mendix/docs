@@ -33,9 +33,9 @@ ensuring that they work as expected in the face of daylight saving.
 Mendix versions 9.12.0 and above supports the following schedule types:
 
 * **Legacy** – the type that existing before Mendix 9.12.0 — see [Legacy scheduled events](/refguide/scheduled-events-legacy/)
-* **Yearly** – an event that occurs once a year on a particular day or date and at a specified time — see [Yearly scheduled events](/refguide/scheduled-events-task-queue/#yearly)
-* **Monthly** – an event that occurs every so many months on a particular day and at a specified time — see [Monthly scheduled events](/refguide/scheduled-events-task-queue/#monthly)
-* **Weekly** – an event that occurs weekly on particular days and at a specified time — see [Weekly scheduled events](/refguide/scheduled-events-task-queue/#weekly)
+* **Yearly** – an event that occurs once a year on a specific day or date and at a specified time — see [Yearly scheduled events](/refguide/scheduled-events-task-queue/#yearly)
+* **Monthly** – an event that occurs every so many months on a specific day and at a specified time — see [Monthly scheduled events](/refguide/scheduled-events-task-queue/#monthly)
+* **Weekly** – an event that occurs weekly on specific days and at a specified time — see [Weekly scheduled events](/refguide/scheduled-events-task-queue/#weekly)
 * **Daily** – an event that occurs daily at a specified time — see [Daily scheduled events](/refguide/scheduled-events-task-queue/#daily)
 * **Hourly** – an event that occurs every so many hours — see [Hourly scheduled events](/refguide/scheduled-events-task-queue/#hourly)
 * **Minutes** – an event that occurs every so many minutes — see [Minute scheduled events](/refguide/scheduled-events-task-queue/#minutes)

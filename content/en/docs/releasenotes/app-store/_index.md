@@ -1,7 +1,6 @@
 ---
 title: "Marketplace"
 url: /releasenotes/app-store/
-description: "Release notes for updates to the Mendix Marketplace"
 tags: ["marketplace", "connector", "module", "add on", "widget"]
 weight: 35
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.

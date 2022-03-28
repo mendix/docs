@@ -27,8 +27,6 @@ For more details on building solutions, see [Architecting Adaptive Solutions](/a
 
 ## 3 Read More
 
-Start with the [General Info](/appstore/creating-content/sol-general/) section, which provides details on the Mendix vendor programs that will support you in building solutions.
-
-Then, proceed to the [Developing Solutions](/appstore/creating-content/sol-development/) section, which presents principles and best practices for developing solutions on the Mendix Platform that are ready to be sold on the Marketplace.
+After you have discovered how the [Mendix Vendor Program](/appstore/creating-content/vendor-program/) will support you in building solutions, proceed to the [Developing Solutions](/appstore/creating-content/sol-development/) section, which presents principles and best practices for developing solutions on the Mendix Platform that are ready to be sold on the Marketplace.
 
 After reading through these sections, [create your app](https://new.mendix.com/) and Go Make It!

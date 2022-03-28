@@ -8,7 +8,7 @@ tags: ["solutions", "adaptive solutions"]
 
 ## 1 Introduction
 
-Mendix introduced the Solution Vendor Program to support the full range of organizations—from startups to large enterprises—looking to develop solutions. Under beneficial terms, Mendix provides independent software vendors (ISVs) and startups with a Mendix license for the development and operation of Mendix apps to implement solutions for their customers.
+Mendix introduced the [Mendix Solution Vendor Program](/appstore/creating-content/vendor-program/) to support the full range of organizations—from startups to large enterprises—looking to develop solutions. Under beneficial terms, Mendix provides independent software vendors (ISVs) and startups with a Mendix license for the development and operation of Mendix apps to implement solutions for their customers.
 
 ## 2 Programs
 

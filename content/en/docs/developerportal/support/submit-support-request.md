@@ -134,7 +134,7 @@ Depending on the type of request, providing attachments and additional informati
 You can add large attachments such as project files to the request. Please note that Mendix recommends not attaching any files that contain personal identifiable data, credit card information, or other sensitive data.
 
 {{% alert color="info" %}}
-Attachments added to support requests will be automatically deleted after 365 days.
+Attachments added to Mendix Support requests will be automatically deleted after 365 days.
 {{% /alert %}}
 
 ### 5.2 Cloud Problems & Deployment Issues

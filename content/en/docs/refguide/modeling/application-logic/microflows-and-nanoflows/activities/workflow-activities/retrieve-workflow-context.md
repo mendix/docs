@@ -16,7 +16,7 @@ A **Retrieve workflow context** activity can be used to retrieve the selected Wo
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflow-context/retrieve-workflow-context.png" alt="Retrieve Workflow Context Activity" >}}
 
-It needs the System.Workflow entity as its input.
+It needs the System.Workflow entity as its input. The action determines the return type based on the selected workflow (the configured Context entity of that workflow). It will break at Runtime if the passed workflow object is not of the right type.
 
 ## 2 Properties
 

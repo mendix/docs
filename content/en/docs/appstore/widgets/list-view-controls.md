@@ -7,6 +7,10 @@ tags: ["marketplace", "marketplace component", "widget", "list view control", "c
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="warning" %}}
+This widget is deprecated. You can use the [Data Widgets](/appstore/modules/data-widgets/) instead.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The [List View Controls](https://marketplace.mendix.com/link/component/105694/) enable filtering and searching a list view with the database and XPath data sources.

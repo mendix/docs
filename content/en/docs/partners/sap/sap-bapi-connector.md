@@ -41,7 +41,7 @@ To use BAPI Connector for SAP Solutions in your Mendix application to call the B
 
     {{% alert color="info" %}}Searching for BAPIs is provided as a microflow rather than a separate app so that you can set up the JCo destination securely. You should not give access to this microflow to any end-users of an app you build using the Mendix BAPI Connector.{{% /alert %}}
 
-4. Search for the BAPI(s) you need, download the schema(s), and [generate Mendix BAPI module(s)](#create-bapi-module) using the [Model Creator for SAP Solutions](https://sapmodelcreator.mendixcloud.com/link/bapi).
+4. Search for the BAPI(s) you need, download the schema(s), and [generate Mendix BAPI module(s)](#create-bapi-module) using the [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/link/bapi).
 5. Import the generated Mendix BAPI module .mpk to your Mendix application using the instructions in [Import & Export Objects](/howto/integration/importing-and-exporting-objects/). A module with the same name as the BAPI is added to the project.
 
     {{< figure src="/attachments/partners/sap/sap-bapi-connector/bapi-material-getall.png" >}}
@@ -123,7 +123,7 @@ This is part of the `SAPBAPIConnector` module and contains the entities which ar
 * **BAPIResponse** – This is a generic entity which represents a BAPI response. Any entity that represents a specific BAPI response is a specialization of the `BAPIResponse` entity. Objects of this entity contain the response from a BAPI Call. Response attributes contain Export and Table parameters.
 *  **BAPIComplexType** – Any entity in a Mendix BAPI module which is associated with the `BAPIRequest` and `BAPIResponse` entity and part of BAPI Import or Export parameters is a specialization of this entity.
 * **BAPITable** – Any entity in a Mendix BAPI module which is associated with the `BAPIRequest` and `BAPIResponse` entity and is a BAPI Table parameter is a specialization of this entity.
-* **BAPIMetadata** – This holds all the attributes which represent the metadata of an SAP BAPI. It is used to generate a metadata.json file which is used in the Model Creator for SAP Solutions to create a domain model for a Mendix BAPI module.
+* **BAPIMetadata** – This holds all the attributes which represent the metadata of an SAP BAPI. It is used to generate a metadata.json file which is used in the Model Creator for SAP Integrations to create a domain model for a Mendix BAPI module.
 * **Destination** – This entity holds the JCo Destination name and properties.
 
 ### 5.2 Mendix BAPI Module Domain Model
@@ -131,7 +131,7 @@ This is part of the `SAPBAPIConnector` module and contains the entities which ar
 This is the domain model which represents a specific BAPI. You can have one or more of these modules in your Mendix application, each defining a single BAPI.
 The microflow actions of the BAPI Connector for SAP solutions make use of the domain model representing an SAP BAPI. The entities in the domain model have attributes which define import, export, and table parameters of an SAP BAPI.
 
-You can create Mendix BAPI modules for the SAP BAPIs you want to use with the [Model Creator for SAP Solutions](https://sapmodelcreator.mendixcloud.com/link/bapi) (see [Create a Mendix BAPI Module Using the Model Creator](#create-bapi-module), below).
+You can create Mendix BAPI modules for the SAP BAPIs you want to use with the [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/link/bapi) (see [Create a Mendix BAPI Module Using the Model Creator](#create-bapi-module), below).
 
 A Mendix BAPI module domain model contains entities which are specializations of the entities defined in section [SAP BAPI Connector Domain Model](#bapi-connector-domain-model), above to model the SAP BAPI you are using.
 
@@ -239,7 +239,7 @@ When you find a BAPI, you can click the info icon (🛈) to see details includin
 
 {{< figure src="/attachments/partners/sap/sap-bapi-connector/bapi-explorer-bapi-info.png" alt="BAPI Explorer – BAPI Info" >}}
 
-Once you find the BAPI you need, select it and click **Next** to generate the BAPI schema file. Download the schema json, which you will use in the [Model Creator for SAP Solutions](#create-bapi-module) to create the Mendix BAPI module containing the domain model which supports this BAPI.
+Once you find the BAPI you need, select it and click **Next** to generate the BAPI schema file. Download the schema json, which you will use in the [Model Creator for SAP Integrations](#create-bapi-module) to create the Mendix BAPI module containing the domain model which supports this BAPI.
 
 {{< figure src="/attachments/partners/sap/sap-bapi-connector/bapi-explorer-select-bapi.png" alt="BAPI Explorer – Select BAPI" >}}
 
@@ -247,46 +247,12 @@ Once you find the BAPI you need, select it and click **Next** to generate the BA
 
 ## 8 Create a Mendix BAPI Module Using the Model Creator {#create-bapi-module}
 
-Use [Model Creator for SAP Solutions](https://sapmodelcreator.mendixcloud.com/) to generate a Mendix BAPI module containing the domain model for a BAPI using the schema file downloaded from BAPI explorer.
-
-1. Go to [Model Creator for SAP Solutions](https://sapmodelcreator.mendixcloud.com/) and click **SAP BAPI**.
-
-    {{< figure src="/attachments/partners/sap/sap-bapi-connector/model-creator-type.png" >}}
-
-2. Upload a BAPI schema file and click **Next**.
-
-    {{< figure src="/attachments/partners/sap/sap-bapi-connector/model-creator-upload-bapi-schema.png" >}}
-
-    {{< figure src="/attachments/partners/sap/sap-bapi-connector/model-creator-schema-uploaded.png" >}}
-
-3. Select the entities you need, then click on the related number of **Included Attributes** to go to attribute selection page for each of the entities.
-
-    {{< figure src="/attachments/partners/sap/sap-bapi-connector/model-creator-select-entities.png" >}}
-
-4. For each entity, select the attributes you need to include and click **Save**. The number of selected attributes number will be reflected in the **Included Attributes** column.
-
-    {{< figure src="/attachments/partners/sap/sap-bapi-connector/model-creator-select-attributes.png" >}}
-
-    {{< figure src="/attachments/partners/sap/sap-bapi-connector/model-creator-select-more-entities.png" >}}
-
-    This step must be repeated for every entity you want to include in the domain model.
-
-5. Once you have selected all the entities and attributes you need, click **Next** to review the selection.
-6. Review the selection and click **Generate Domain Model**.
-    {{< figure src="/attachments/partners/sap/sap-bapi-connector/model-creator-generate-dm.png" >}}
-
-7. Click **Generate .mpk** to create the module containing the BAPI domain model.
-
-    {{< figure src="/attachments/partners/sap/sap-bapi-connector/model-creator-generate-mpk.png" >}}
-
-8. Click **Download** to save the Mendix BAPI module for this BAPI schema.
-
-    {{< figure src="/attachments/partners/sap/sap-bapi-connector/model-creator-download.png" >}}
+See [How to Use the Model Creator for SAP Integrations](/partners/sap/use-sap-model-creator/) for information on how to use the [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/) to generate a Mendix BAPI module containing the domain model for a BAPI using the schema file downloaded from BAPI explorer.
 
 ## 9 Limitations
 
 1. The BAPI Connector for SAP Solutions provides a short description of the SAP BAPI contained in your SAP Business Suite or S/4HANA system. For detailed documentation of an SAP BAPI, please refer to standard SAP BAPI documentation.
-2. The entity description provided by the BAPI is not visible in the Model Creator for SAP Solutions.
+2. The entity description provided by the BAPI is not visible in the Model Creator for SAP Integrations.
 3. The BAPI Connector for SAP Solutions is limited to discovering and using a SAP BAPI. It cannot be used for invoking Remote-enabled Function Modules (RFMs).
 
 {{% alert color="info" %}}

@@ -159,7 +159,7 @@ The 'changedDate' property is only updated on real changes. Simply changing and 
 We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
 {{% /alert %}}
 
-#### 3.4.3 Store 'owner' 
+#### 3.4.3 Store 'owner' {#store-owner}
 
 This property defines whether the entity has the system association 'owner'. This is an association to the system entity 'User' that (initially) stores a reference to the user that created the object. This association is automatically set by the server upon creating an object.
 

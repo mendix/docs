@@ -94,7 +94,7 @@ The **Show a page** event opens the specified page. Select the page which opens 
 
 The **Call a microflow** event executes the specified microflow.
 
-{{%alert type="info" %}}
+{{% alert color="info" %}}
 
 When setting **Call a microflow** as an action for the **On change**, **On enter**, or **On leave** event of a widget, note that microflows require some time to complete. Any changes to the current form made in the meantime (for example, changing values in input widgets) will be overwritten by the results of the microflow.
 Therefore, it is not recommended to change entities/attributes on the current page in a microflow triggered by an **On change**, **On enter**, or **On leave** event.
@@ -221,7 +221,7 @@ The table below described link types available for the **Open link** on click ev
 | Call  | Starts a phone call to this number                   | `+1-202-555-0165`                         |
 | Text  | Specifies a number to which to send a text message   | `+1-202-555-0112`                         |
 
-{{%alert type="info" %}}
+{{% alert color="info" %}}
 
 When you Specify  **Email**, **Call**, or **Text** options, the corresponding default app will be opened on the device when the action is triggered, for example, the default email client will be opened to compose a message.
 

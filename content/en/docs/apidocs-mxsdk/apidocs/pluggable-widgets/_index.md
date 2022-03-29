@@ -23,7 +23,7 @@ Pluggable widgets can also include a preview component for when they are rendere
 For information on which libraries Mendix supports when developing pluggable widgets, see the [Pluggable Widgets](/refguide/mendix-client/#pluggable-widgets) section of *Mendix Client*.
 
 {{% alert color="info" %}}
-Translating texts into the pluggable widgets: This feature to use [System Texts](/refguide/system-texts/) is not available to use on pluggable widgets API.
+Using [System Texts](/refguide/system-texts/) to translate languages is not available for use with the Pluggable Widgets API.
 {{% /alert %}}
 
 ## 2 Client Component {#client-component}

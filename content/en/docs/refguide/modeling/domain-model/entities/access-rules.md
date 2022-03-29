@@ -124,13 +124,12 @@ This constraint is only valid when the [Store 'owner'](/refguide/entities/#store
 
 #### 2.4.2 Path to User
 
-The **Path to user...** button allows you to create an XPath constraint to check that the entity is associated (directly or indirectly) with the current user. When you click **Path to user...**, you can select a path to an entity that is a `System.User` or a specialization of `System.User`. This is converted into an XPath constraint for the access rule. This means that the rule is only applied when the user path you selected is associated with the current user.
+The **Path to user...** button adds an XPath constraint so the access rule is only applied when the object is associated (directly or indirectly) with the current user. When you click **Path to user...**, you can select a path to an entity that is a `System.User` or a specialization of `System.User`. This is converted into an XPath constraint for the access rule. This means that the rule is only applied when the user path you selected is associated with the current user.
 
-#### 2.4.3 Example
-
-Assume that the **Customer** entity is a specialization of the **User** entity. The **Order** entity is associated to the **Customer** entity via the **Order_Customer** association.
-
-A logged-in customer is allowed to view personal orders, but is not allowed to view the orders of other customers. This is accomplished by using the following XPath constraint in the access rule of the **Order** entity:
+For example, 
+1. Assume that the **Customer** entity is a specialization of the **User** entity. The **Order** entity is associated to the **Customer** entity via the **Order_Customer** association.
+2. Assume that a logged-in customer is only allowed to view their orders, but is not allowed to view the orders of other customers.
+This can be appended easily using the **Path to user...** button by selecting **Customer** from **Order** entity access rule, which should look like:
 
 ```java {linenos=false}
 [Module.Order_Customer = '[%CurrentUser%]']
@@ -138,7 +137,7 @@ A logged-in customer is allowed to view personal orders, but is not allowed to v
 
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-order-xpath.png" >}}
 
-Because of this XPath constraint, access defined in the **Access rights** tab is only allowed to orders for which the customer is the currently signed-in user.
+Because of this XPath constraint, access defined in the **Access rights** tab is only applied to orders for which the customer is the current user.
 
 ## 3 Access Rule Evaluation
 

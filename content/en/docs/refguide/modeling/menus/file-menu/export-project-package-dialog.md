@@ -24,13 +24,13 @@ When you have access to publishing add-on modules and solutions, you can select 
 
 {{< figure src="/attachments/refguide/modeling/menus/file-menu/export-project-package-dialog/export-project-package-types.png" alt="Export App Package Dialog Window with Different Package Types" >}}
 
-The access can be gained through ISV program or App Services program. For more information, see [Mendix Vendor Program](/appstore/creating-content/vendor-program/) in the *Marketplace Guide*.
+The access can be gained through Mendix Vendor Program. For more information, see [Mendix Vendor Program](/appstore/creating-content/vendor-program/) in the *Marketplace Guide*.
 
 ### 2.1 Solution Package
 
 {{% alert color="info" %}}
 
-You can only see the **Solution** and **Source Package** settings when you have access to publishing add-on modules and solutions. The access can be gained through ISV program or App Services program. For more information, see [Mendix Vendor Program](/appstore/creating-content/vendor-program/) in the *Marketplace Guide*.
+You can only see the **Solution** and **Source Package** settings when you have access to publishing add-on modules and solutions. The access can be gained through [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
 
 {{% /alert %}}
 
@@ -40,7 +40,7 @@ Choose this type of package if you develop your app as a solution and it has cer
 
 {{% alert color="info" %}}
 
-You can only see the **Solution** and **Source Package** settings when you have access to publishing add-on modules and solutions. The access can be gained through ISV program or App Services program. For more information, see [Mendix Vendor Program](/appstore/creating-content/vendor-program/) in the *Marketplace Guide*.
+You can only see the **Solution** and **Source Package** settings when you have access to publishing add-on modules and solutions. The access can be gained through [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
 
 {{% /alert %}}
 

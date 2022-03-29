@@ -114,7 +114,7 @@ There are two constraints that can be appended easily with a single button click
 
 #### 2.4.1 Owner
 
-The **Owner** button adds an XPath constraint so the access rule is only applied to the current user.
+The **Owner** button adds an XPath constraint so the access rule is only applied if the object owner is the current user.
 
 ```java {linenos=false}
 [System.owner='[%CurrentUser%]']
@@ -124,14 +124,14 @@ This constraint is only valid when the [Store 'owner'](/refguide/entities/#store
 
 #### 2.4.2 Path to User
 
-The **Path to user...** button adds an XPath constraint so the access rule is only applied when the associated object (directly or indirectly) is the current user. When you click **Path to user...**, you can select a path to an associated entity that is either a `System.User` or a specialization of `System.User`. This is then converted into an XPath constraint for the access rule.
+The **Path to user...** button adds an XPath constraint so the access rule is only applied when the User object which is associated (directly or indirectly) is the current user. When you click **Path to user...**, you can select a path to an associated entity that is either a `System.User` or a specialization of `System.User`. This is then converted into an XPath constraint for the access rule.
 
 ```java {linenos=false}
 [Module.Order_Customer = '[%CurrentUser%]']
 ```
 
 As an example:
-1. Assume that the **Customer** entity is a specialization of the **User** entity. The **Order** entity is associated to the **Customer** entity via the **Order_Customer** association.
+1. Assume that the **Customer** entity is a specialization of the **User** entity. The **Order** entity is associated with the **Customer** entity via the **Order_Customer** association.
 2. Assume that a logged-in customer is only allowed to view their orders, but is not allowed to view the orders of other customers.
 The XPath constraint can be constructed easily using the **Path to user...** button by selecting the **Customer** entity in the **Order** entity access rule.
 

@@ -12,7 +12,7 @@ description: "Native Template 5.2 release notes."
 
 ### Improvements
 
-* Android video player fullscreen support - Full screen icon can be found on top of the video if show controls property is set `true`, when the icon is pressed the video will continue working on an overlay modal.
+* Native Template now supports full-screen Android video. The full-screen icon can be found at the top of the video when the show control's property is set to `true`. When the icon is pressed the video will continue working on an overlay modal.
 
 ## 5.2.8
 

@@ -102,38 +102,43 @@ If a user cannot view the value of an attribute because of security constraints,
 
 ### 2.4 XPath Constraint Tab {#xpath-constraint}
 
-An [XPath constraint](/refguide/xpath-constraints/) can be used to constrain the set of objects to which the access rule applies. If the XPath constraint is empty, the rule applies to all objects of the entity.
+An [XPath constraint](/refguide/xpath-constraints/) can be used to constrain the set of objects to which the access rule applies. If the constraint rule is true, the rule applies to that object. If the XPath constraint is empty, the rule applies to all objects of the entity.
 
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-xpath-tab.png" >}}
+
+{{% alert color="warning" %}}
+XPath constraints can only be applied to persistable entities as they are applied by the database. Defining XPath constraints for non-persistable entities results in consistency errors.
+{{% /alert %}}
+
+There are to constraints that can be appended easily with a single button click. 
 
 #### 2.4.1 Owner
 
 The **Owner** button adds an XPath constraint so the access rule is only applied to the current user.
 
-```java
+```java {linenos=false}
 [System.owner='[%CurrentUser%]']
 ```
 
-This constraint is only valid when the [Store 'owner'](/refguide/entities/#343-store-owner) checkbox in the System members section is checked.
+This constraint is only valid when the [Store 'owner'](/refguide/entities/store-owner) checkbox in the **System members** section of the entity properties is checked.
 
-#### 2.4.2
+#### 2.4.2 Path to User
 
-The **Path to user...** button is useful to create an XPath constraint to check if the entity is (indirectly) associated to the current user. When you press **Path to user...** you can select a path to an entity that is a `System.User` or a specialization of `System.User` and converts that into an XPath constraint for the access rule. This means the access rule is only applied when the user path you selected is equal to the current user.
+The **Path to user...** button allows you to create an XPath constraint to check that the entity is associated (directly or indirectly) with the current user. When you click **Path to user...**, you can select a path to an entity that is a `System.User` or a specialization of `System.User`. This is converted into an XPath constraint for the access rule. This means that the rule is only applied when the user path you selected is associated with the current user.
 
-For example, the **Customer** entity is a specialization of the **User** entity. The **Order** entity is associated to the **Customer** entity.
+#### 2.4.3 Example
+
+Assume that the **Customer** entity is a specialization of the **User** entity. The **Order** entity is associated to the **Customer** entity via the **Order_Customer** association.
 
 A logged-in customer is allowed to view personal orders, but is not allowed to view the orders of other customers. This is accomplished by using the following XPath constraint in the access rule of the **Order** entity:
-```java
+
+```java{linenos=false}
 [Module.Order_Customer = '[%CurrentUser%]']
 ```
 
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-order-xpath.png" >}}
 
-Because of this XPath constraint, the access rule only applies to orders for which the customer is the currently signed-in user.
-
-{{% alert color="warning" %}}
-XPath constraints can only be applied to persistable entities as they are applied by the database. Defining XPath constraints for non-persistable entities results in consistency errors.
-{{% /alert %}}
+Because of this XPath constraint, access defined in the **Access rights** tab is only allowed to orders for which the customer is the currently signed-in user.
 
 ## 3 Access Rule Evaluation
 

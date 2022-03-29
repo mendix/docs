@@ -124,16 +124,16 @@ This constraint is only valid when the [Store 'owner'](/refguide/entities/#store
 
 #### 2.4.2 Path to User
 
-The **Path to user...** button adds an XPath constraint so the access rule is only applied when the object is associated (directly or indirectly) with the current user. When you click **Path to user...**, you can select a path to an entity that is a `System.User` or a specialization of `System.User`. This is converted into an XPath constraint for the access rule. This means that the rule is only applied when the user path you selected is associated with the current user.
-
-For example, 
-1. Assume that the **Customer** entity is a specialization of the **User** entity. The **Order** entity is associated to the **Customer** entity via the **Order_Customer** association.
-2. Assume that a logged-in customer is only allowed to view their orders, but is not allowed to view the orders of other customers.
-This can be appended easily using the **Path to user...** button by selecting **Customer** from **Order** entity access rule, which should look like:
+The **Path to user...** button adds an XPath constraint so the access rule is only applied when the associated object (directly or indirectly) is the current user. When you click **Path to user...**, you can select a path to an associated entity that is either a `System.User` or a specialization of `System.User`. This is then converted into an XPath constraint for the access rule.
 
 ```java {linenos=false}
 [Module.Order_Customer = '[%CurrentUser%]']
 ```
+
+As an example:
+1. Assume that the **Customer** entity is a specialization of the **User** entity. The **Order** entity is associated to the **Customer** entity via the **Order_Customer** association.
+2. Assume that a logged-in customer is only allowed to view their orders, but is not allowed to view the orders of other customers.
+The XPath constraint can be constructed easily using the **Path to user...** button by selecting the **Customer** entity in the **Order** entity access rule.
 
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-order-xpath.png" >}}
 

@@ -6,6 +6,14 @@ weight: 10
 description: "Native Template 5.2 release notes."
 ---
 
+## 5.2.9
+
+**Release date: March 29th, 2022** 
+
+### Improvements
+
+* Android video player fullscreen support - Full screen icon can be found on top of the video if show controls property is set `true`, when the icon is pressed the video will continue working on an overlay modal.
+
 ## 5.2.8
 
 **Release date: January 25th, 2022** 

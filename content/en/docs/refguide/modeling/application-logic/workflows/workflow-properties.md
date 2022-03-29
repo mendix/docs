@@ -101,7 +101,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
 {{% alert color="info" %}}
 
-This setting overrides the app-wide setting in the **App Settings**. For more information see the [Workflow State Change]({/refguide/project-settings/#workflow-state-change}) section in *App Settings*.
+This setting overrides the app-wide setting in the **App Settings**. For more information see the [Workflow State Change](/refguide/project-settings/#workflow-state-change) section in *App Settings*.
 
 {{% /alert %}}
 
@@ -111,7 +111,7 @@ This setting overrides the app-wide setting in the **App Settings**. For more in
 
 {{% alert color="info" %}}
 
-This setting overrides the app-wide setting in the **App Settings**. For more information see the [User Task State Change]({/refguide/project-settings/#user-task-state-change}) section in *App Settings*.
+This setting overrides the app-wide setting in the **App Settings**. For more information see the [User Task State Change](/refguide/project-settings/#user-task-state-change) section in *App Settings*.
 
 {{% /alert %}}
 

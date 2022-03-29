@@ -350,7 +350,38 @@ All three subscription microflows lookup the MonitoredItem record, and through t
 
 Alternatives: It is possible for the OPC UA Node to hold a complex JSON structure as value instead of a simple integer in this example. If that is the case you'd implement the same microflow logic, but in addition you'd call an Import Mapping activity before processing the results. 
 
-## 5 Limitations
+## 5 Troubleshooting
+
+### 5.1 "ClosedChannelException"
+When getting a ClosedChannelException like the (partial) stacktrace below you will need to include the Certificates of your OPC UA server in the Runtime configuration. This requires you to upload your server certificate in the Mendix Runtime Settings. 
+      com.mendix.core.CoreRuntimeException: com.mendix.systemwideinterfaces.MendixRuntimeException: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.nio.channels.ClosedChannelException
+         at com.mendix.basis.actionmanagement.ActionManager.executeSync(ActionManager.scala:84)
+
+      Caused by: com.mendix.systemwideinterfaces.MendixRuntimeException: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.nio.channels.ClosedChannelException
+         at com.mendix.util.classloading.Runner.withContextClassLoader(Runner.java:23)
+
+      Caused by: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.nio.channels.ClosedChannelException
+         at opcuaclientmx.impl.OpcUaClientManager.buildNewClient(OpcUaClientManager.java:74)
+
+      Caused by: java.util.concurrent.ExecutionException: java.nio.channels.ClosedChannelException
+
+### 5.2 "no UserTokenPolicy with UserTokenType.UserName found"
+Either the server is expecting a Username but you don't have one configured in your server configuration OR you've configured to authenticate with a username+password but the server does not have that enabled (you'd have to use None or a certificate).
+
+      com.mendix.core.CoreRuntimeException: com.mendix.systemwideinterfaces.MendixRuntimeException: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.lang.Exception: no UserTokenPolicy with UserTokenType.UserName found
+         at com.mendix.basis.actionmanagement.ActionManager.executeSync(ActionManager.scala:84)
+
+      Caused by: com.mendix.systemwideinterfaces.MendixRuntimeException: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.lang.Exception: no UserTokenPolicy with UserTokenType.UserName found
+         at com.mendix.util.classloading.Runner.withContextClassLoader(Runner.java:23)
+
+      Caused by: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.lang.Exception: no UserTokenPolicy with UserTokenType.UserName found
+         at opcuaclientmx.impl.OpcUaClientManager.buildNewClient(OpcUaClientManager.java:86)
+
+      Caused by: java.util.concurrent.ExecutionException: java.lang.Exception: no UserTokenPolicy with UserTokenType.UserName found
+         at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+
+
+## 6 Limitations
 
 1. Limited Value types.
 

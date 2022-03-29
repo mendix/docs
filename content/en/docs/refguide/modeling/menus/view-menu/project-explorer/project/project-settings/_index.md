@@ -284,6 +284,20 @@ Defines the maximum number of workflow transactions that the runtime will execut
 
 Defines the maximum number of user task transactions that the runtime will execute simultaneously. The limit is 10.
 
+### 7.3 Events {#events}
+
+Events allow you to set a microflow for workflow and user task state changes in your app. 
+
+Security settings of workflows and user tasks allow to access workflow or user task data only if you have Admin rights or if the workflow/user task is targeted to you. Data from events allows you to build a dashboard or audit trails. For example, it can be useful for a manager to see progress of an employee onboarding process. 
+
+#### 7.3.1 Workflow State Change {#workflow-state-change}
+
+A microflow selected for this setting will start every time a workflow changes its state, for example, when the workflow is completed or has failed. This setting is app-wide, you can override it by setting a workflow-specific microflow in the [workflow properties](/refguide/workflow-properties/#events).
+
+#### 7.3.2 User Task State Change {#user-task-state-change}
+
+A microflow selected for this setting will start every time a user task changes its state, for example, when a user task is completed or paused. This setting is app-wide, you can override it by setting a workflow-specific microflow in the [workflow properties](/refguide/workflow-properties/#events).
+
 ## 8 Miscellaneous Tab {#miscellaneous}
 
 These settings determine the behavior of Studio Pro for this app. The settings apply to everyone that is working on this app.

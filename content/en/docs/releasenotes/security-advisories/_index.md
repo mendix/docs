@@ -22,6 +22,7 @@ Siemens publishes their CVEs on the second Tuesday of every month.
 
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
+| To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) | 3.1 | To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) | Fixed in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12/#31), [9.6.3](/releasenotes/studio-pro/9.6/#31), [8.18.14](/releasenotes/studio-pro/8.18/#31), [7.23.27](/releasenotes/studio-pro/7.23/#31) |
 | To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) | 5.3 | To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) | Fixed in Studio Pro [9.11.0](/releasenotes/studio-pro/9.11/#53) |
 | CVE-2022-26313 | 9.1 | [Vulnerability in Mendix Forgot Password Marketplace Module](https://cert-portal.siemens.com/productcert/pdf/ssa-134279.pdf) | See the SSA description for remediation details. |
 | CVE-2022-26314 | 7.4 | [Vulnerability in Mendix Forgot Password Marketplace Module](https://cert-portal.siemens.com/productcert/pdf/ssa-134279.pdf) | See the SSA description for remediation details. |

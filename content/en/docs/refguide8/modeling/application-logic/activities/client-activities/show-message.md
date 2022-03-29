@@ -6,6 +6,7 @@ weight: 4
 tags: ["studio pro", "show message", "client activities"]
 aliases:
     - /refguide8/Show+Message.html
+    - /refguide8/Show+Message
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

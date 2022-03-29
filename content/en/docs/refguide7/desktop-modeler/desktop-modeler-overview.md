@@ -8,6 +8,8 @@ tags: ["desktop modeler"]
 aliases:
     - /refguide7/modeler.html
     - /refguide7/Modeler.html
+    - /refguide7/modeler
+    - /refguide7/Modeler
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -155,7 +157,7 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 | Tablet Browser | Shows the tablet mobile client for the currently running project in the browser. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F9</kbd> |
 | Phone Browser | Shows the mobile client for the currently running project in the browser. | <kbd>Ctrl</kbd> + <kbd>F9</kbd> |
 | Hybrid Phone App Online | Views the app as a phone app online. | |
-| View in the Mendix App | Views the app via the [Mendix Mobile app](/refguide7/getting-the-mendix-app/). | |
+| View in the Mendix App | Views the app via the [Mendix Developer App](/refguide7/getting-the-mendix-app/). | |
 
 ### 4.6 Language Menu
 

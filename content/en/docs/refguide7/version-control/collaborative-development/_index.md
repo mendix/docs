@@ -9,6 +9,10 @@ aliases:
     - /refguide7/desktop-webmodeler.html
     - /refguide7/sync-webmodeler-desktopmodeler.html
     - /web-modeler/general-sync-webmodeler-desktopmodeler-wm.html
+    - /howto/web-modeler/syncing-webmodeler-desktop
+    - /refguide7/desktop-webmodeler
+    - /refguide7/sync-webmodeler-desktopmodeler
+    - /web-modeler/general-sync-webmodeler-desktopmodeler-wm
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

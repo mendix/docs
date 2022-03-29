@@ -87,33 +87,33 @@ This is done from the **Environments** page of the Developer Portal:
 
     {{< figure src="/attachments/developerportal/deploy/ibm-cloud/add-environment.png" >}}
 
-2.  Select the region where you want your app to be deployed.
+2. Select the region where you want your app to be deployed.
 
     {{< figure src="/attachments/developerportal/deploy/ibm-cloud/ibm-env-0.png" >}}
 
     If no session is active for that region, or the current session does not have access to that region, you will be asked for your IBM credentials for that region.
 
-3.  Select the **Domain**, **Organization**, and **Space** of your app. The URL of the domain will form part of the application's URL. The URL of the application will be this:  `{appname}-{environment name}.{domain}`
+3. Select the **Domain**, **Organization**, and **Space** of your app. The URL of the domain will form part of the application's URL. The URL of the application will be this:  `{appname}-{environment name}.{domain}`
 
-	This is an example URL:
+    This is an example URL:
 
-	```http
-	https://myApp-Development.eu-gb.mybluemix.net
-	```
+    ```http
+    https://myApp-Development.eu-gb.mybluemix.net
+    ```
 
     {{< figure src="/attachments/developerportal/deploy/ibm-cloud/07-ibm-env-1.png" >}}
 
-4.  Click **Next**.
+4. Click **Next**.
 
-5.  Enter the name of the environment. This can be anything you choose: for example Test, Acceptance, or Production.
+5. Enter the name of the environment. This can be anything you choose: for example Test, Acceptance, or Production.
 
     {{< figure src="/attachments/developerportal/deploy/ibm-cloud/08-ibm-env-2.png" >}}
 
-6.  Set the size of the memory that the app needs in order to run. This can also be changed later.
+6. Set the size of the memory that the app needs in order to run. This can also be changed later.
 
-7.  Set **Development Mode** to Yes if you want the application to run with the Mendix security level of Prototype/demo, or Off (no security). This is not recommended for acceptance or production environments.
+7. Set **Development Mode** to Yes if you want the application to run with the Mendix security level of Prototype/demo, or Off (no security). This is not recommended for acceptance or production environments.
 
-8.  Select the database you would like to use. Be aware that even if a specific database is part of the Marketplace it could still be unavailable because of limitations imposed by the quota of your Organization.
+8. Select the database you would like to use. Be aware that even if a specific database is part of the Marketplace it could still be unavailable because of limitations imposed by the quota of your Organization.
 
     If you choose **Custom database** you will need to enter a name for the database and the plan.
 
@@ -155,19 +155,19 @@ You will still have to deploy your app in the Developer Portal the very first ti
 
 2. Click **Create package from Team Server** to start the wizard.
 
-3.  Select the branch on the Team server which you want to use.
+3. Select the branch on the Team server which you want to use.
 
     {{< figure src="/attachments/developerportal/deploy/ibm-cloud/03-ibm-select-branch.png" >}}
 
-4.  Select the revision of the branch you want to build.
+4. Select the revision of the branch you want to build.
 
     {{< figure src="/attachments/developerportal/deploy/ibm-cloud/04-ibm-select-revision.png" >}}
 
-5.  Add a version number and Tag description as required. The revision number will be added to the version number automatically.
+5. Add a version number and Tag description as required. The revision number will be added to the version number automatically.
 
     {{< figure src="/attachments/developerportal/deploy/ibm-cloud/05-ibm-define-tag.png" >}}
 
-6.  Click **Build this revision** to build the package.
+6. Click **Build this revision** to build the package.
 
     {{< figure src="/attachments/developerportal/deploy/ibm-cloud/06-ibm-build-revision.png" >}}
 
@@ -177,15 +177,15 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
 ### 5.1 Deploy to an Environment
 
-1.  A green tick indicates that the build has finished. Click **Deploy** to deploy the package to IBM Cloud.
+1. A green tick indicates that the build has finished. Click **Deploy** to deploy the package to IBM Cloud.
 
     {{< figure src="/attachments/developerportal/deploy/ibm-cloud/ibm-revision-built.png" >}}
 
-2.  Change the deployment environment if required.
+2. Change the deployment environment if required.
 
     {{< figure src="/attachments/developerportal/deploy/ibm-cloud/ibm-transport.png" >}}
 
-3.  Click **Transport** to deploy the package to the IBM Cloud environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
+3. Click **Transport** to deploy the package to the IBM Cloud environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
 
 ### 5.2 Configure the Application {#ConfigureTheApplication}
 
@@ -225,11 +225,11 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
     {{< figure src="/attachments/developerportal/deploy/ibm-cloud/transport-environments.png" >}}
 
-2.  Change the deployment environment if required by clicking **Change environment**.
+2. Change the deployment environment if required by clicking **Change environment**.
 
     {{< figure src="/attachments/developerportal/deploy/ibm-cloud/transport-from-to.png" >}}
 
-3.  Click **Transport** to deploy the package to the IBM Cloud environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
+3. Click **Transport** to deploy the package to the IBM Cloud environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
 
 When the app has been transported you will be on the page **Configure the Application**. This has the same options as the **Deploy** pages which are described above in the [Configure the Application](#ConfigureTheApplication) section.
 

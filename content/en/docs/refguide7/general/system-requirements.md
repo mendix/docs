@@ -104,7 +104,7 @@ Using a hybrid preview is not the same as using an emulator. A hybrid preview on
 
 ## 7 Mobile Operating Systems
 
-For Mendix apps and the [Mendix Mobile app](/refguide7/getting-the-mendix-app/):
+For Mendix apps and the [Mendix Developer App](/refguide7/getting-the-mendix-app/):
 
 * iOS 9 and above
 * Android 5.0 and above

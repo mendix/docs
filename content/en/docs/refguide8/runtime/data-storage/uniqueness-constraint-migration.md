@@ -6,6 +6,7 @@ weight: 30
 tags: ["studio pro"]
 aliases:
     - /refguide/uniqueness-constraint-migration.html
+    - /refguide/uniqueness-constraint-migration
 # referred to in M2EE error message
 ---
 

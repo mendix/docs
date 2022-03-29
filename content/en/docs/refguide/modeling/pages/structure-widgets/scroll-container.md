@@ -7,6 +7,8 @@ tags: ["studio pro", "scroll container", "container widget", "widget"]
 aliases:
     - /refguide/horizontal-split-pane.html
     - /refguide/vertical-split-pane.html
+    - /refguide/horizontal-split-pane
+    - /refguide/vertical-split-pane
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

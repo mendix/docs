@@ -110,7 +110,7 @@ An [XPath constraint](/refguide/xpath-constraints/) can be used to constrain the
 XPath constraints can only be applied to persistable entities as they are applied by the database. Defining XPath constraints for non-persistable entities results in consistency errors.
 {{% /alert %}}
 
-There are to constraints that can be appended easily with a single button click. 
+There are two constraints that can be appended easily with a single button click. 
 
 #### 2.4.1 Owner
 
@@ -120,7 +120,7 @@ The **Owner** button adds an XPath constraint so the access rule is only applied
 [System.owner='[%CurrentUser%]']
 ```
 
-This constraint is only valid when the [Store 'owner'](/refguide/entities/store-owner) checkbox in the **System members** section of the entity properties is checked.
+This constraint is only valid when the [Store 'owner'](/refguide/entities/#store-owner) checkbox in the **System members** section of the entity properties is checked.
 
 #### 2.4.2 Path to User
 
@@ -132,7 +132,7 @@ Assume that the **Customer** entity is a specialization of the **User** entity. 
 
 A logged-in customer is allowed to view personal orders, but is not allowed to view the orders of other customers. This is accomplished by using the following XPath constraint in the access rule of the **Order** entity:
 
-```java{linenos=false}
+```java {linenos=false}
 [Module.Order_Customer = '[%CurrentUser%]']
 ```
 

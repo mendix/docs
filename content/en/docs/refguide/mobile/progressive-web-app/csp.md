@@ -1,6 +1,7 @@
 ---
 title: "Content Security Policy"
 parent: "progressive-web-app"
+url: /refguide/progressive-web-app/csp/
 menu_order: 10
 tags: ["security", "headers"]
 ---
@@ -53,7 +54,7 @@ if (typeof Symbol !== "function") {
 }
 ```
 
-Finally, the *theme/web/index.html* file needs to be changed to use these files directly. If you lack this file, please follow the [Customizing index.html (Web)](/howto/front-end/customize-styling-new#custom-web/) section of *Customize Styling*.
+Finally, the *theme/web/index.html* file needs to be changed to use these files directly. If you lack this file, please follow the [Customizing index.html (Web)](/howto/front-end/customize-styling-new/#custom-web/) section of *Customize Styling*.
 
 In *theme/web/index.html* do the following:
 
@@ -103,4 +104,4 @@ After you finish testing locally, remember to remove the line of code in the `he
 
 ### 2.2 Enabling the Header in the Cloud
 
-To enable the header in the cloud, follow the instructions in the [HTTP Headers](/developerportal/deploy/environments-details#http-headers/) section of *Environment Details*.
+To enable the header in the cloud, follow the instructions in the [HTTP Headers](/developerportal/deploy/environments-details/#http-headers/) section of *Environment Details*.

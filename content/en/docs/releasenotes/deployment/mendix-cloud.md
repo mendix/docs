@@ -44,7 +44,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 #### Improvements
 
 * We added log entries to the activity log to record changes to members of the app team and any changes to the [permissions](/developerportal/deploy/node-permissions/) that team members have.
-* We now display any documentation associated with [scheduled events](/refguide/scheduled-events/#common-properties) in the [Model Options tab](/developerportal/deploy/environments-details/#model-options) of the environment details.
+* We now display any documentation associated with [scheduled events](/refguide/scheduled-events-legacy/#common-properties) in the [Model Options tab](/developerportal/deploy/environments-details/#model-options) of the environment details.
 
 #### Fixes
 

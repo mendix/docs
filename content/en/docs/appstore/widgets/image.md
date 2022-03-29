@@ -43,6 +43,7 @@ The **Data source** section (required) is used to configure the data for the wid
 * **Image URL** – a text template to configure the image for this widget through a URL
 	* Configurable when **Image type** is set to **Image URL**
 	* Can be used statically or dynamically through the attribute of a context object
+	* Must be a URL prefaced with *https://*
 * **Icon** – used to retrieve a static icon or image for the widget
     * Configurable when **Image type** is set to **Icon**
 * **Background image** – used to render an image as a background

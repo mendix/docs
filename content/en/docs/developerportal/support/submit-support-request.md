@@ -133,6 +133,10 @@ Depending on the type of request, providing attachments and additional informati
 
 You can add large attachments such as project files to the request. Please note that Mendix recommends not attaching any files that contain personal identifiable data, credit card information, or other sensitive data.
 
+{{% alert color="info" %}}
+Attachments added to Mendix Support requests will be automatically deleted after 365 days.
+{{% /alert %}}
+
 ### 5.2 Cloud Problems & Deployment Issues
 
 * Log file (*.txt*)
@@ -163,10 +167,6 @@ Not all Marketplace content is compatible with every version of Studio Pro, and 
 ### 5.6 Mobile Problems
 
 * Operating system and version (Android x.x or iOS x.x; for example, Android 6.1)
-
-{{% alert color="info" %}}
-For Windows Phone, please contact Mendix Support for the current support conditions.
-{{% /alert %}}
 
 ### 5.7 Browser Problems
 

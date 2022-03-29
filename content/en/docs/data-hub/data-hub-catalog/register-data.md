@@ -34,7 +34,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 ## 3 Registering a Service Through the Mendix Cloud {#mendix-cloud}
 
 
-If you have an exposed OData service, that is deployed to the Mendix Cloud, then congratulations! Your service is already registered in the Data Hub Catalog. This is the power of the Mendix Data Hub.
+If you have an exposed OData service, that is deployed to the Mendix Cloud, then congratulations! Your service is already registered in the Data Hub Catalog.
 
 ## 4 Registering a Service Without the Mendix Cloud {#without-mendix-cloud}
 
@@ -53,7 +53,7 @@ First, you need to create an authentication token to get access to the Data Hub 
 
 `Authorization: MxToken <your_Personal_Access_Token>`
 
-For information on how to to create a Personal Access Token, see [Creating a Data Hub Catalog Registration API token](#create-token).
+You can create a Personal Access Token in the Mendix [Warden](/developerportal/community-tools/warden/) application.
 
 Once you have a Personal Access Token, follow this series of REST calls to register the details of our exposed OData service:
 
@@ -64,10 +64,6 @@ Once you have a Personal Access Token, follow this series of REST calls to regis
    If your service contract is not in the right format, use the [Transform API](#transform-api) to get your service contract in the right format before registering them.
 
 The [Data Hub Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html) describes all the optional fields, required formats, other operations on these same paths. You will only fill out the required fields and one operation per path in this how-to. 
-
-#### 4.1.1 Creating a Data Hub Catalog API token {#create-token}
-
-You can create a Personal Access Token in the Mendix [Warden](/developerportal/community-tools/warden/) application.
 
 #### 4.1.2 Registering an Application Through the Data Hub Catalog Registration API {#register-application}
 

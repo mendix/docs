@@ -7,6 +7,7 @@ description: "This document describes the New App flow and the App Settings dial
 tags: ["studio pro", "create app", "new app", "creating new app"]
 aliases:
     - /refguide/app-settings-dialog.html
+    - /refguide/app-settings-dialog
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -7,6 +7,8 @@ tags: ["studio pro", "close page", "client activity"]
 aliases:
     - /refguide8/Close+Form.html
     - /refguide8/close-form.html
+    - /refguide8/Close+Form
+    - /refguide8/close-form
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

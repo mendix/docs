@@ -7,6 +7,7 @@ description: "How to configure the maintenance windows for your node environment
 tags: ["Deploy","App","Developer Portal", "maintenance"]
 aliases:
     - /mendixcloud/maintenance-windows.html
+    - /mendixcloud/maintenance-windows
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

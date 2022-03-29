@@ -6,6 +6,7 @@ weight: 40
 tags: ["studio pro", "tab container", "tab page", "container widget", "widget"]
 aliases:
     - /refguide8/tab-page.html
+    - /refguide8/tab-page
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor <tab-page> below is mapped, so it should not be removed or changed.
 ---

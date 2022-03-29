@@ -1,12 +1,23 @@
 ---
-title: "Scheduled Events"
-url: /refguide/scheduled-events/
-parent: "resources"
-weight: 80
+title: "Scheduled Events - Legacy"
+linktitle: "Legacy Scheduled Events"
+url: /refguide/scheduled-events-legacy/
+weight: 20
 description: "Options for configuring scheduled events"
 tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "scheduling issues", "time zones", "daylight saving"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+
+{{% alert color="warning" %}}
+This page is about **legacy** scheduled events. Please see [Scheduled Events – Task Queue](/refguide/scheduled-events-task-queue/) for information about the current method of implementing scheduled events.
+
+Mendix versions 9.12.0 and above allow legacy scheduled events to be edited, but do not allow new legacy scheduled events to be created.
+
+If your app is Mendix version 9.12.0 or above, legacy scheduled events will have been converted to [task queue scheduled events](/refguide/scheduled-events-task-queue/) automatically unless this is impossible. See the [Migration](/refguide/scheduled-events/#migration) section of *Scheduled Events* for more information.
+
+Legacy scheduled events are deprecated and will no longer be supported from Mendix 10.
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -45,7 +56,7 @@ The `ScheduledEventInformation` objects are not cleared automatically. If you ha
 
 | Property | Description |
 | --- | --- |
-| Microflow | The microflow that is executed when the scheduled event is executed. It should have no parameters and run with all rights (see [Microflow](/refguide/microflow/)). |
+| Microflow | The microflow that is executed when the scheduled event is executed. It should have no parameters and is run with all rights (see [Microflow](/refguide/microflow/)). |
 | Enabled | The microflow is only executed if the scheduled event is enabled. This setting only applies when running from Studio Pro or from Eclipse. On production environments, scheduled events are enabled/disabled via the platform tools (for example Developer Portal or Windows Service Console). |
 
 ## 4 Timing Properties

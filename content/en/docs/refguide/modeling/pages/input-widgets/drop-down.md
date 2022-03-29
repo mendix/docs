@@ -6,6 +6,7 @@ weight: 30
 tags: ["Drop-down", "input", "page", "widget", "enumeration", "studio pro"]
 aliases:
     - /refguide/drop-down-widget.html
+    - /refguide/drop-down-widget
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

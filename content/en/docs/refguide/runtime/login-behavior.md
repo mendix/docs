@@ -8,16 +8,16 @@ tags: ["Runtime", "login", "studio pro"]
 
 ## 1 Default Login Behavior
 
-A user is blocked after 3 consecutive bad login attempts, regardless of the time between the login attempts. The failed login count is reset after a successful login attempt or when a blocked user is unblocked. Blocking users only occurs when the app security level is set to **Production**.
+A user is blocked after three consecutive bad login attempts, regardless of the time between the login attempts. The failed login count is reset after a successful login attempt or when a blocked user is unblocked. Blocking users only occurs when the app security level is set to **Production**.
 
-Users are unblocked each time the cluster manager runs, and at that point, the failed login count is also reset to 0. By default, the cluster manager runs every 5 minutes. This interval can be changed using the [Runtime customization](/refguide/custom-settings/) `ClusterManagerActionInterval` setting.
+Users that have been blocked for at least five minutes are unblocked each time the cluster manager runs and, at that point, the failed login count is reset to 0. By default, the cluster manager runs every five minutes. This interval can be changed using  [Runtime customization](/refguide/custom-settings/) to change the `ClusterManagerActionInterval` setting.
 
 {{% alert color="warning" %}}
-The cluster manager does more than just unblocking users. For example, it also removes expired sessions. So, changing this interval has a broader impact.
+The cluster manager does more than just unblocking users. For example, it also removes expired sessions. So changing this interval has a broader impact.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-If a user is blocked just 1 second before the cluster manager starts to unblock all blocked users, the lock is removed after 1 second.
+In versions of Mendix below 9.11.0, the cluster manager will unblock *all* blocked users when it runs, even if they have been blocked for less than five minutes.
 {{% /alert %}}
 
 ## 2 Customizing Login Behavior

@@ -94,27 +94,27 @@ The result of a division is only an approximation if it has an infinite decimal 
 
 * If you use the following input:
 
-	```java
-	3 : 7
-	```
-	
-	the output is:
-	
-	```java
-	0.4285714285714285714285714285714286
-	```
-	
-	If you continue a calculation with the results of a division, the results might be unexpected. The following input:
-	
-	```java
-	(3 : 7) * 7
-	```
-	
-	results in the output below:
-	
-	```java
-	3.0000000000000000000000000000000002
-	```
+    ```java
+    3 : 7
+    ```
+
+    the output is:
+
+    ```java
+    0.4285714285714285714285714285714286
+    ```
+
+    If you continue a calculation with the results of a division, the results might be unexpected. The following input:
+
+    ```java
+    (3 : 7) * 7
+    ```
+
+    results in the output below:
+
+    ```java
+    3.0000000000000000000000000000000002
+    ```
 
 * If you use the following input:
 

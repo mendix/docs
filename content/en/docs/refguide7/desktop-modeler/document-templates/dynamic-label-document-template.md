@@ -5,6 +5,8 @@ parent: "document-templates"
 aliases:
     - /refguide7/Dynamic+label+(document+template).html
     - /refguide7/dynamic-label-(document-template).html
+    - /refguide7/Dynamic+label+(document+template)
+    - /refguide7/dynamic-label-(document-template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -5,6 +5,8 @@ parent: "document-templates"
 aliases:
     - /refguide7/Page+Break+(document+template).html
     - /refguide7/page-break-(document-template).html
+    - /refguide7/Page+Break+(document+template)
+    - /refguide7/page-break-(document-template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

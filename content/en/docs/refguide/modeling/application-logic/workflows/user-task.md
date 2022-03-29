@@ -131,6 +131,10 @@ Specifies the expression used to assign the user task. This option is displayed 
 
 Specifies the microflow used to assign the user task. This option is displayed only when the [Assign user task using](#assign-user-task) is set to **Microflow**.   
 
+#### 2.8.4 Auto Assign When Result Is One User {#auto-assign}
+
+Enables automatically assigning a user task when a single user is targeted. This option is displayed only when the [Assign user task using](#assign-user-task) is set to **XPath** or **Microflow**. 
+
 ## 3 Read More
 
 * [Workflows](/refguide/workflows/)

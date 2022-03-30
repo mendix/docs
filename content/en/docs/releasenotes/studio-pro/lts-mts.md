@@ -66,7 +66,7 @@ These are the current MTS versions for Studio Pro:
 * [9.12](/releasenotes/studio-pro/9.12/) (started in March 2022)
 * [9.6](/releasenotes/studio-pro/9.6/) (started in September 2021)
 
-{{% alert color=”info” %}}
+{{% alert color="info" %}}
 Older MTS versions (for example, 9.6) remain supported until the next LTS version has been released.
 {{% /alert %}}
 

@@ -17,12 +17,10 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* The Web Application Firewall service is now enabled in Mendix Cloud v4
-  Free Tier EU. Web Application Firewall (WAF) is a security service that
-  protects applications from malicious and unwanted internet traffic
-  without modifying application code. WAF in Mendix Cloud v4 addresses
-  various attack categories including many high risk and commonly occurring
-  vulnerabilities described in OWASP publications such as [OWASP Top 10](https://owasp.org/www-project-top-ten/):
+* We have implemented a Web Application Firewall (WAF) service for Free Apps deployed to the Mendix Cloud.
+
+    The Web Application Firewall (WAF) is a security service that protects applications from malicious and unwanted internet traffic without modifying your application code. WAF for Free Apps addresses various attack categories including many high risk and commonly occurring vulnerabilities described in OWASP publications such as [OWASP Top 10](https://owasp.org/www-project-top-ten/). These include the following:
+    
     * Cross site scripting
     * HTTP protocol violations
     * Bots, crawlers, and scanners

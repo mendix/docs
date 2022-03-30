@@ -63,7 +63,7 @@ An MTS is a minor version released approximately every 6 months after a new majo
 
 This is the current MTS version for Studio Pro:
 
-* [9.6](/releasenotes/studio-pro/9.6/) (started in September 2021)
+* [9.12](/releasenotes/studio-pro/9.12/) (started in March 2022)
 
 If you are on an innovation track with your development and need to get the latest and greatest Mendix has to offer every month, then upgrade to an MTS and stay on that version with its patch releases until the next MTS version is released.
 

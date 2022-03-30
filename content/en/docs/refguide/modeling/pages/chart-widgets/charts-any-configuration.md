@@ -202,3 +202,7 @@ For guidance on how to set up chart theming see: [How to Use the Charts Theme](/
 Please use with caution, as the configuration set up here will be applied to every chart in your application. Only the advanced configurations set up in the widget itself have a higher precedence.
 
 {{% /alert %}}
+
+## 8 Strict CSP Compatibility
+
+This widget is not fully compliant yet with strict Content Security Policy (CSP). If used with strict CSP, it will result in visual defects.

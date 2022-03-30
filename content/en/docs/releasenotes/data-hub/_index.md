@@ -10,6 +10,10 @@ weight: 30
 These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
+### March 31st, 2022
+#### Improvements
+
+* Improvements have been made to security.
 
 ### March 24th, 2022
 

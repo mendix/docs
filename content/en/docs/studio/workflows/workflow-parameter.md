@@ -12,13 +12,13 @@ A parameter is a special kind of variable that is used as input for the workflow
 
 In the workflow editor, you can see the **WorkflowContext** parameter in the upper-left corner. In the picture below, the object is shown in *blue* and the parameter name is shown in *black*.
 
-{< figure src="/attachments/studio/workflows/workflows-general-activities/parameter.jpg" alt="Workflow Context Parameter" >}}
+{< figure src="/attachments/studio/workflows/workflow-parameter/parameter.jpg" alt="Workflow Context Parameter" >}}
 
 The **WorkflowContext** parameter is a business-related data that travels through the workflow. 
 
 ## 2 Properties
 
-### 2.1 Parameter Entity {#entity}
+### 2.1 Workflow Context {#entity}
 
 The entity used by the workflow parameter. 
 

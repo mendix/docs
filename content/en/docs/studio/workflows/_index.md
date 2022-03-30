@@ -79,15 +79,13 @@ To create the workflow for the vacation approval via the wizard, do the followin
     
 3. In the **Create Workflow** dialog box, set the workflow title to **Vacation Approval** and click **Start Wizard**.
 
-4. In the **Create Request Form**, click **Add Field**. 
-
-5. You can now define input fields that will be used by a person submitting the request. For example, an employee who wants to submit vacation days will fill in their name, department, and desired dates of the vacation. Do the following:
+4. In the **Create Request Form**, you can define input fields that will be used by a person submitting the request. For example, an employee who wants to submit vacation days will fill in their name, department, and desired dates of the vacation. Do the following:
 
     1. Fill in *Name* in the **Label** option, leave the **Type** as string, and mark this field as required. On the right you can see the preview of the future form.
     2. Click the plus icon to add more fields. 
     3. Follow steps 1-2 to add the *Department* of type string, *Start Date* of type Date and Time, and *End Date* of type Date and Time. 
     4. Click the **Create** button.
-    
+
 6. Based on this form the app is set up: labels that you filled in are turned into attributes of an entity used by the workflows, workflow and pages are created, security is set up. Click **Take the tour** to get more information about your app.
 
 The app with the workflow is set up.
@@ -109,11 +107,11 @@ To add a workflow to your app in Studio, do the following:
 
 3. In the **Create Workflow** dialog box, fill in the workflow title and click **Set Up Manually**.
 
-4. Click **Parameter Entity** and either select the existing entity or create a new one:
+4. Click **Workflow Context** and either select the existing entity or create a new one:
 
     {{< figure src="/attachments/studio/workflows/create-new-workflow.jpg" alt="Create New Workflow" >}}
 
-    For more information on the Workflow Context parameter and how it is used, see [Workflow Context Parameter](/studio/workflow-parameter/).
+    For more information on the Workflow Context and how it is used, see [Workflow Context Parameter](/studio/workflow-parameter/).
 
 4. Click **Create**.
 

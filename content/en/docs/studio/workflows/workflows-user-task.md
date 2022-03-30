@@ -38,10 +38,11 @@ User task properties consist of the following sections:
 
 Possible options of this property are described in the table below:
 
-| Option    | Description                                                  |
-| --------- | ------------------------------------------------------------ |
-| Filter    | Allows you to filter users who should be assigned to the user task. For example, you can assign a certain task only to users with the Administrator user role. For more information on how to use filters, see [Data Filters](/studio/data-filters/). |
-| Microflow | Allows you to assign the user task to certain users. Using a microflow you can check, for example, what users are in the right department and are currently not on vacation and assign the task only to users who passed the check. For more information on microflows, see [Microflows](/studio/microflows/). |
+| Option             | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| Nothing            | No users will be targeted for the task (no users will see the task in their inbox). This setting could be used if target users were added manually in Studio Pro. |
+| Filter *(default)* | Allows you to filter users who should be assigned to the user task. For example, you can assign a certain task only to users with the Administrator user role. For more information on how to use filters, see [Data Filters](/studio/data-filters/). |
+| Microflow          | Allows you to assign the user task to certain users. Using a microflow you can check, for example, what users are in the right department and are currently not on vacation and assign the task only to users who passed the check. For more information on microflows, see [Microflows](/studio/microflows/). |
 
 ### 2.3 Task Page Section {#task-page}
 

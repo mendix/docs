@@ -13,6 +13,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### March 31st, 2022
+
+#### Improvements
+
+* We now show deactivated users on the [Node Permissions](/developerportal/deploy/node-permissions/) page for consistency with the [Team](/developerportal/collaborate/team/) page. 
+
 ### March 3rd, 2022
 
 #### Fixes

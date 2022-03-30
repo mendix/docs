@@ -48,3 +48,7 @@ The [HTML/JavaScript Snippet](https://marketplace.mendix.com/link/component/56/)
 * **Enclose HTML with DIV** – determines whether the widget will wrap HTML with a DIV when HTML is added
     * If this is set to false, it will just replace the content of the widge 
     * For compatibility purposes, this is set to **Yes** on default
+
+## 3 Strict CSP Compatibility
+
+This widget is not fully compliant yet with strict Content Security Policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget.

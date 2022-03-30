@@ -70,3 +70,7 @@ This widget will place a `META` verification tag inside the `html` tag so that t
 ## 4 Limitations
 
 If you are using an advertisement blocker (such as the AdBlocker browser extension) or have configured your browser to not allow tracking, it might result in your page being broken. This is because certain advertisement blockers and tracking restrictions can block this widget's files. 
+
+## 5 Strict CSP Compatibility
+
+This widget is not fully compliant yet with strict Content Security Policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget.

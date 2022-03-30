@@ -60,7 +60,7 @@ First, you need to enable workflows for your app. Do the following:
 
     {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/set-up-manually.jpg" alt="Set Up Workflow Manually" >}}
 
-5. Click the **Parameter Entity** to create an entity that is used for the [Workflow Context parameter](/studio/workflow-parameter/), a business-related data that travels through the workflow.
+5. Click the **Workflow Context** to create an entity that is used for the [Workflow Context parameter](/studio/workflow-parameter/), a business-related data that travels through the workflow.
 
 6. In the **Select Entity** dialog box, click the plus icon in the upper-right corner to create a new entity.
 

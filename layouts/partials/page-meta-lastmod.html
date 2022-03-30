@@ -1,7 +1,6 @@
-<!-- NK - partial still needs formatting to match Docsy v0.1.0 -->
+{{ if and (.GitInfo) (.Site.Params.github_repo) -}}
 <div class="text-muted mb-2 date-format"> <!-- NK - changed for smaller spacing -->
-{{ if and (.GitInfo) (.Site.Params.github_repo) }}
-    {{ T "post_last_mod"}}
-    {{ .Lastmod.Format .Site.Params.time_format_default }}
-{{ end }}
+  {{ T "post_last_mod" }} {{ .Lastmod.Format .Site.Params.time_format_default -}}
+<!-- NK - template different from Docsy v0.1.0, won't work with commented out lines -->
 </div>
+{{ end -}}

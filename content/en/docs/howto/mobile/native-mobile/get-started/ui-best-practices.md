@@ -4,7 +4,7 @@ url: /howto/mobile/ui-best-practices/
 parent: "get-started"
 weight: 50
 description: "This document will teach you how to build a native mobile app's UI."
-tags: ["ux", "native", "mobile", "ui", "roles"]
+tags: ["ux", "native", "mobile", "ui"]
 ---
 
 ## 1 Introduction

@@ -17,9 +17,9 @@ Before adding the Workflow Commons module to your app, make sure you have comple
 * Upgrade your application to Mendix 9
 * Install Atlas 3 from the Mendix Marketplace, as Workflow Commons depends on it 
 * As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas Core, Atlas Web Content, and Data Widgets
-* The dashboards and metrics in Workflow Commons v2.1.0 and above depend on state change microflows. Make sure to configure the following state change microflows in the **App Settings** > **Workflows** tab:
-    * **Workflow state change**: *OCh_Workflow_State*
-    * **User task state change**: *OCh_WorkflowUserTask_State*
+* Dashboards and metrics in Workflow Commons v2.1.0 and above depend on state change microflows. Make sure to configure the following state change microflows in the **App Settings** > **Workflows** tab:
+    * Set **Workflow state change** to *OCh_Workflow_State*
+    * Set **User task state change** to *OCh_WorkflowUserTask_State*
 
 ## 2 Workflow Commons Components {#components}
 
@@ -31,8 +31,8 @@ Multiple pages are provided with the Workflow Commons module to get you and your
 You can find the following pages in Workflow Commons:
 
 *   **DefaultWorkflowAdmin** – The default workflow admin page that a workflow administrator can use to view and manage a workflow instance. This page can be used in the **Show workflow admin page** microflow activity and button action.
-*   **MyInitiatedWorkflows** – This page gives end users an overview of all their initiated workflows. They can view the current state, task timeline and can withdraw workflows that are in progress, paused, or incompatible.
-*   **TaskDashboard** –  This page gives end-users an overview of their performance in your app's workflows. It contains information such as how many tasks have been completed, how long it took on average to complete a task, and what percentage of tasks were completed within the deadline.
+*   **MyInitiatedWorkflows** – This page gives end-users an overview of all their initiated workflows. They can view the current state, task timeline and can withdraw workflows that are in progress, paused, or incompatible.
+*   **TaskDashboard** –  This page gives end-users an overview of their performance. It contains such information as the number of completed tasks, average time spent to complete a task, and percentage of completed tasks within a deadline.
 *   **TaskInbox** – This page contains a list of all tasks that a user can interact with. **My open tasks** shows the tasks assigned to current users, **All open tasks** is a list of tasks they could pick up and **Unassigned tasks** shows all unassigned tasks.
 *   **WorkflowAdminCenter** – A navigational page for workflow administrators. From here, a workflow administrator can go the the **Workflow Dashboard**, which gives them general statistics of workflows. Workflow administrators also gain access to **Workflow management**, where they can see all the instances of specific workflows and make changes to their data or even abort workflows.
 *   **WorkflowDashboard** – This page gives you workflow/task based metrics and direct access to all *Workflow* and *WorkflowUserTask* data. When you want to use the Workflow Dashboard as your only admin go-to page, add this to the navigation instead of the **WorkflowAdminCenter**. 

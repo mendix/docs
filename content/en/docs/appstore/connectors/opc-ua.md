@@ -98,24 +98,28 @@ For an example of the implementation, install the [sample module](https://market
 
 ### 4.1 Client State
 
-The module/app is designed for usage with multiple Servers if necessary. The state for each OPC UA Server is kept by the Client in an object of entity type **OpcUaServerCfg**. This  needs to be populated before the actions of the OPC UA Client Connector can be used. 
-
+This connector is designed for usage with multiple Servers if necessary. The state for each OPC UA Server is kept by the Client in an object of the entity **OpcUaServerCfg**. This needs to be populated before the actions of the OPC UA Client Connector can be used. 
 
 {{< figure src="/attachments/appstore/connectors/opc-ua/opcuaservercfg.png" alt="OPC UA Server configuration entity" width="300" >}}
 
+For each OPC UA Server, the following information will need to be stored in an **OpcUaServerCfg** object.
 
-For each OPC UA Server, the following information will need to be stored in a OpcUaServerCfg object.
+* **ServerID** (String) – a short nickname assigned to the Server for identification, which is primarily used for error and log messages.
+* **URL** (String) – the full URL of the OPC UA Server (e.g.: opc.tcp://localhost:53530/OPCUA/SimulationServer)
+* **Username** (String) – the username used if **AuthenticatioType** is `CREDENTIALS`
+*  **Password** (String) – the password for the username used if **AuthenticatioType** is `CREDENTIALS`, only used for data-entry
 
-* ServerID (String) – a short nickname that you assign to the Server so that you can identify it easily. Primarily used for error and log messages.
-* URL (String) – the full URL of the OPC UA Server (e.g.: opc.tcp://localhost:53530/OPCUA/SimulationServer)
-* Username (String) – the username used if the authentication type is `CREDENTIALS`
-* Password (String) – the password for the username used if the authentication type is `CREDENTIALS`, only used for data-entry. After saving this field is reset.
-* Password_Encrypted (String) – the encrypted password for the username, automatically takes the 'Password' and encrypts the value
-* AuthenticationType (Enumeration) – the type of authentication required for this Server: `NONE`, `CREDENTIALS`, or `CERTIFICATE`
-* CertificatePassword (String) – the certificate password required when using the `CERTIFICATE` type of authentication, only used for data-entry. After saving this field is reset.
-* CertificatePassword (String) – the encrypted password for the certificate, automatically takes the CertificatePassword and encrypts the value
+   {{% alert color="info" %}}Once saved, this field is reset.{{% /alert %}}
 
-You can see an example of how this can be set up in the [OPC UA Client example implementation](#example-implementation) section.
+* **Password_Encrypted** (String) – an automatically encrypted password for the username
+* **AuthenticationType** (Enumeration) – the type of authentication required for this Server: `NONE`, `CREDENTIALS`, or `CERTIFICATE`
+* **CertificatePassword** (String) – the certificate password required if **AuthenticatioType** is `CERTIFICATE`, only used for data-entry.
+
+   {{% alert color="info" %}}Once saved, this field is reset.{{% /alert %}}
+
+* **CertificatePassword_Encrypted** (String) – an automatically encrypted password
+
+For an example, see the [OPC UA Client example implementation](#example-implementation) section.
 
 ### 4.2 Actions
 
@@ -174,7 +178,6 @@ Node ns=1;id=4; is Monitored with a Sampling Interval of 500ms.
 
 As a result the OPC UA Server will connect with the Mendix client every 2 seconds, it will make a single connection and share all the messages from all monitored items. In this example the subscription message will include: 4 samples from node ns=1;id=2 & 4 samples from node ns=1;id=3 & 4 samples from node ns=1;id=4. (12 samples in total).  
 The Mendix client will evaluate each sample and process it according to it's configuration (see below for details).
-
 
 ##### 4.2.3.2 Subscription Action
 

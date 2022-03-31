@@ -1613,11 +1613,11 @@ You can change the access rights for, or completely remove, existing members.
 
 2. Either:
     
-  1. Make changes and click **Save**.
+    1. Make changes and click **Save**.
     
-  2. Click **Remove member** to remove this member completely. You will be asked to confirm this action.
+    2. Click **Remove member** to remove this member completely. You will be asked to confirm this action.
         
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image30.png" >}}
+        {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image30.png" >}}
 
 #### 6.2.3 Operate {#operate}
 

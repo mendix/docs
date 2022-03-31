@@ -35,27 +35,29 @@ The OPC UA Client Connector supports all three security options offered by OPC U
 * Credentials
 * Client certificates
 
-Only one of the options can be in use any any time. Which one will be determined by the OPC UA Server that you are connecting to. The password from both the user and certificate are automatically encrypted when saving the Server configuration using the Encryption module.  
+Only one of the options can be in use at a time. Which option to use is determined by the OPC UA Server that you are connecting to. The password from both the user and certificate are automatically encrypted by the Encryption module when the Server configuration is saved.
 
 ### 1.2 Limitations
 
-1. Limited Value types.
+1. Limited value types
 
-   Currently only Boolean, Int16, UInt16, Int32, Int64, Float, Double, and String are implemented to be written to the Node in the OPC UA Server. Reading has been tested for limited data types, when reading and subscribing all return values are casted to String through a simple toString() method. This implementation works well for Boolean and the Int values but hasn't been tested for all data types. 
+   Currently only the following value types are implemented to be written to the node in the OPC UA Server: Boolean, Int16, UInt16, Int32, Int64, Float, Double, and String.
+   
+   Reading has been tested for limited data types. During reading and subscribing, all return values are casted to String through a simple `toString()` method. This implementation works well for Boolean and the Int values, but has not been tested for all data types. 
 
-1. High-Availability Architecture *(no horizontal scaling support)*.   
+1. High-availability architecture (no horizontal scaling support)
 
-   At this point the module is relying completely on storing configuration in the Server memory and only supports running on a single Container instance. If you use scaling and run multiple parallel instances of the application the module will likely generate exceptions and loose messages. 
+   At this point, this connector replies completely on storing configuration in the Server memory and only supports running on a single container instance. If you use scaling and run multiple parallel instances of the application, the module may generate exceptions and loose messages. 
 
-1. Complex Events on Nodes.  
+1. Complex events on nodes
 
-   Subscriptions are only possible on value changes of Nodes. At this time Events or aggregates are not implemented yet. The module does support all DataTypes, any OPC UA type is received and passed as a String to the evaluating microflow.
+   Subscriptions are only possible on value changes of nodes. At this time, events or aggregates are not implemented yet. The connector supports all data types. Any OPC UA type is received and passed as a String to the evaluating microflow.
 
 1. Advanced settings on MonitoredItem.  
 
-   OPC UA offers fine-grained control over how values are shared with [this] client. At this time all MonitoredItems are setup with identical default parameters, and these can not yet be influenced. The default parameters are coming from the Apache Milo library. 
+   OPC UA offers fine-grained control over how values are shared with this client. At this time all monitored items are set up with identical default parameters, and these can not yet be influenced. The default parameters come from the Apache Milo library. 
 
-   Some examples of the default values are: SamplingInterval: 500ms; RequestedPublishingInterval: 500ms; QueueSize: 10; DiscardOldest: true;    (This will get a guaranteed value every 500ms, and stores a maximum of 10 values in the queue, if the queue fills up it will discard the oldest and keep the latest 10 values only).
+   Some examples of the default values are:` SamplingInterval: 500ms`; `RequestedPublishingInterval: 500ms`; `QueueSize: 10`; `DiscardOldest: true`. This will get a guaranteed value every 500 ms, and stores a maximum of 10 values in the queue. If the queue fills up, it will discard the oldest and keep the latest 10 values only.
 
 ### 1.3 Prerequisites
 

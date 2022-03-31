@@ -61,13 +61,12 @@ Only one of the options can be in use at a time. Which option to use is determin
 
 ### 1.3 Prerequisites
 
-The OPC UA Client Connector has the following dependencies
+* You use Studio Pro [8.17.0](/releasenotes/studio-pro/8.17/) or higher
+* You have installed the [Encryption](/appstore/modules/encryption/) module in Studio Pro
+* You have an OPC UA Server
+* You are familiar with OPC UA and your OPC UA Server and know how to set up your Server
 
-* Mendix 8.17.0 or higher
-* Encryption Module
-* An OPC UA Server – we assume that you are familiar with OPC UA and your OPC UA Server(s), these instructions do not include information on how to set up your Servers.
-
-Recommended; Having an external OPC UA Client tool will make setup of the connection a lot easier. A commonly-used client is the one from [Unified Automation](https://www.unified-automation.com/downloads/opc-ua-clients.html). With this (non-Mendix) tool you will be able to browse through the Server and find the parameters needed to configure your connection. 
+{{% alert color="info" %}}We recommend that you use an external OPC UA Client tool, for example, the tool from [Unified Automation](https://www.unified-automation.com/downloads/opc-ua-clients.html). Using such a tool will make the setup of the connection a lot easier, because you will be able to browse through the Server and find the parameters needed to configure your connection. {{% /alert %}}
 
 ## 2 Installation
 

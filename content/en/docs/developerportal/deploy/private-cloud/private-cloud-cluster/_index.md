@@ -70,11 +70,11 @@ Should you consider using a connected environment, the following URLs should be 
 
 7. Enter the following information:
     
-  1. **Name** – The name you want to give the cluster you are creating.
+    1. **Name** – The name you want to give the cluster you are creating.
   
-  2. **Type** – choose the correct type for your cluster. See [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) for more information.
+    2. **Type** – choose the correct type for your cluster. See [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) for more information.
 
-  3. **Description** – an optional description of the cluster which will be displayed under the cluster name in the cluster manager.
+    3. **Description** – an optional description of the cluster which will be displayed under the cluster name in the cluster manager.
 
 8. Click **Create**.
 
@@ -1595,9 +1595,9 @@ You can invite additional members to the namespace, and configure their role dep
 
 4. Give them the rights they need. This can be:
     
-  1. **Developer** – a standard set of rights needed by a developer, these are listed on the screen
-  2. **Administrator** – a standard set of rights needed by an administrator, these are listed on the screen
-  3. **Custom** – you can select a custom set of rights by checking the box next to each role you want to give to this person
+    1. **Developer** – a standard set of rights needed by a developer, these are listed on the screen
+    2. **Administrator** – a standard set of rights needed by an administrator, these are listed on the screen
+    3. **Custom** – you can select a custom set of rights by checking the box next to each role you want to give to this person
 
 5. Click **Send Invite** to send an invite to this person.
     

@@ -3,6 +3,7 @@ title: "Prepare Your Commercial Content to Sell"
 url: /appstore/creating-content/prepare/
 category: "Creating Content"
 weight: 2
+linktitle: “Prepare to Sell" 
 description: "Describes how to prepare your your commercial content to sell in the Mendix Marketplace."
 tags: ["marketplace", "vendor", "app service"]
 aliases:

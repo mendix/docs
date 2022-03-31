@@ -2,7 +2,6 @@
 title: "Creating Solutions"
 url: /appstore/creating-content/sol-solutions-guide/
 linktitle: "Creating Solutions"
-url: /appstore/creating-content/sol-solutions-guide/
 category: "Creating Content"
 weight: 2
 description: "A guide to best practices and techniques for using Mendix"
@@ -27,6 +26,8 @@ For more details on building solutions, see [Architecting Adaptive Solutions](/a
 
 ## 3 Read More
 
-After you have discovered how the [Mendix Vendor Program](/appstore/creating-content/vendor-program/) will support you in building solutions, proceed to the [Developing Solutions](/appstore/creating-content/sol-development/) section, which presents principles and best practices for developing solutions on the Mendix Platform that are ready to be sold on the Marketplace.
+After you have discovered how the [Mendix Vendor Program](/appstore/creating-content/vendor-program/) will support you in building solutions, you can check out details on the [Mendix Solution Vendor & Startup Programs](/appstore/creating-content/sol-vendor-programs/). 
+
+Then, proceed to the [Developing Solutions](/appstore/creating-content/sol-development/) section, which presents principles and best practices for developing solutions on the Mendix Platform that are ready to be sold on the Marketplace.
 
 After reading through these sections, [create your app](https://new.mendix.com/) and Go Make It!

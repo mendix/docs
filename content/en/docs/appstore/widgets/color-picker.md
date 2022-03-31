@@ -93,7 +93,7 @@ For more information, see [Common Section](/refguide/common-widget-properties/#c
 
 ## 3 Strict CSP Compatibility
 
-This widget is not fully compliant yet with strict Content Security Policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget.
+This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget.
 
 ## 4 Widgets Below Version 2.0.0
 

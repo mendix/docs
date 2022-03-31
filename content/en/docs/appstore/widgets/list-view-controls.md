@@ -219,4 +219,4 @@ For more information, see [Mendix widget build script](https://github.com/FlockO
 
 ## 9 Strict CSP Compatibility
 
-This widget is not fully compliant yet with strict Content Security Policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget.
+This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget.

@@ -22,7 +22,7 @@ The Data Hub integration is available in Studio Pro version [8.14](/releasenotes
 For more details about which Data Hub features are included in a Mendix license, see the [Data Hub License Limitations](/refguide/consumed-odata-service-requirements/#license-limitations) section of *Consumed OData Service Requirements*.
 {{% /alert %}}
 
-Follow the journey for building an app using available datasets (or entity sets for services from Mendix apps) from the [Data Hub](https://hub.mendix.com) home page, or try building an app by following [How to Share Data Between Apps](/data-hub/share-data/).
+Try building an app by following [How to Share Data Between Apps](/data-hub/share-data/).
 
 ## 2 Overview of Mendix Data Hub
 

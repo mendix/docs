@@ -84,7 +84,7 @@ The information that is registered for data sources and exposed datasets are as 
 	{{% alert color="info" %}}
   You can filter the search results by environment type in the Data Hub Catalog (**Production**, **Non-production**, and the Mendix Free App environment or **Sandbox**). In the [Data Hub pane](/refguide/data-hub-pane/) of Studio Pro, you can remove the default filter on the search results to include non-production environments. {{% /alert %}}
 
-* **Published OData service** – At the service endpoint, there are the OData service metadata contract files that define the service. Available data sources are registered in the Data Hub Catalog by exposing  datasets, attributes,  and associations in the [published OData service](/refguide/published-odata-services/). 
+* **Published OData service** – At the service endpoint, there are the OData service metadata contract files that define the service. Available data sources are registered in the Data Hub Catalog by exposing  datasets, attributes, and associations in the [published OData service](/refguide/published-odata-services/). 
 * **Versions** – The contract exposed at a specific endpoint may be changed over time by the service owner, and if good practice is followed, these changes will be indicated by changing the version number. Every published OData service has a version number. Apps consuming from a service will consume from a specific version of a service deployed to an environment.
 
 	{{% alert color="info" %}}

@@ -53,7 +53,7 @@ For more details, see [How to Search for Registered Assets](/data-hub/data-hub-c
 
 ### 3.2 Consume – Using Registered Datasets
 
-Registered assets in the Data Hub Catalog can be accessed in Mendix Studio Pro to [build apps](/refguide/modeling/). These external data sources are represented in the domain model as *external entities* which can be used with local entities.
+Registered assets in the Data Hub Catalog can be accessed in Mendix Studio Pro to [build apps](/refguide/modeling/). These external data sources are represented in the domain model as [external entities](/refguide/external-entities/) which can be used with local entities.
 
 For further information on consuming from the Data Hub Catalog, see [How to Consume Registered Assets](/data-hub/data-hub-catalog/consume/). For details on using shared entities in Studio Pro, see [Data Hub Pane](/refguide/data-hub-pane/) in the *Studio Pro Guide*.
 

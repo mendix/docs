@@ -55,7 +55,7 @@ Only one of the options can be in use at a time. Which option to use is determin
 
 1. Advanced settings on MonitoredItem.  
 
-   OPC UA offers fine-grained control over how values are shared with this client. At this time all monitored items are set up with identical default parameters, and these can not yet be influenced. The default parameters come from the Apache Milo library. 
+   OPC UA offers fine-grained control over how values are shared with this Client. At this time all monitored items are set up with identical default parameters, and these can not yet be influenced. The default parameters come from the Apache Milo library. 
 
    Some examples of the default values are:` SamplingInterval: 500ms`; `RequestedPublishingInterval: 500ms`; `QueueSize: 10`; `DiscardOldest: true`. This will get a guaranteed value every 500 ms, and stores a maximum of 10 values in the queue. If the queue fills up, it will discard the oldest and keep the latest 10 values only.
 
@@ -80,15 +80,15 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 2. Update the constant **UA_ApplicationName** in the **_USE_ME** folder with the information specific to your Client. The application name must be unique to the OPC UA Server. The connector has no requirements to the contents of this constant. If you have a single Mendix application connecting to the Server, you can use the default value. If you have multiple Mendix applications connecting to the same Server, change the name so that it is unique as per the OPC UA spec.
 
-This setting is only used by the OPC UA Server. See the OPC UA Specification for more details.
+    This setting is only used by the OPC UA Server. See the OPC UA Specification for more details.
 
-3. Update the constant **UA_ApplicationURI** in the **_USE_ME** folder with the information specific to your Client. The application name must be unique to the OPC UA Server. The connector has no requirements for the content of this constant. If you have a single Mendix application connecting to the Server, you can use the default value. If you have multiple Mendix applications connecting to the same Server, change the name so that it is unique as per the OPC UA spec. If you use client certificates for authentication, the URI should match the certificate.
+3. Update the constant **UA_ApplicationURI** in the **_USE_ME** folder with the information specific to your Client. The application name must be unique to the OPC UA Server. The connector has no requirements for the content of this constant. If you have a single Mendix application connecting to the Server, you can use the default value. If you have multiple Mendix applications connecting to the same Server, change the name so that it is unique as per the OPC UA spec. If you use Client certificates for authentication, the URI should match the certificate.
 
-This setting is only used by the OPC UA Server. See the OPC UA Specification for more details.
+    This setting is only used by the OPC UA Server. See the OPC UA Specification for more details.
 
-4. If you use subscriptions, set up the **After startup** and **Before shutdown** microflows in your [App Settings](/refguide/project-settings/) as follows: set the **After startup** microflow to **ASu_ReintializeSubscriptions** in the USE_ME folder, and set the **Before shutdown** microflow to **BSd_GracefullyShutdownSubscriptions** in the USE_ME folder.
+4.  If you use subscriptions, set up the **After startup** and **Before shutdown** microflows in your [App Settings](/refguide/project-settings/) as follows: set the **After startup** microflow to **ASu_ReintializeSubscriptions** in the USE_ME folder, and set the **Before shutdown** microflow to **BSd_GracefullyShutdownSubscriptions** in the USE_ME folder.
 
-{{% alert color="info" %}}If you do not set up the **After startup** microflow, subscriptions will not reconnect after a reboot. If you do not set up the **Before shutdown** microflow, the Server will keep the old subscriptions potentially up to a few hours, and send duplicate messages for this period of time, which can cause exceptions in the Client.{{% /alert %}}
+    {{% alert color="info" %}}If you do not set up the **After startup** microflow, subscriptions will not reconnect after a reboot. If you do not set up the **Before shutdown** microflow, the Server will keep the old subscriptions potentially up to a few hours, and send duplicate messages for this period of time, which can cause exceptions in the Client.{{% /alert %}}
 
 The connector is ready for use.
 
@@ -98,7 +98,7 @@ For an example of the implementation, install the [sample module](https://market
 
 ### 4.1 Client State
 
-The module/app is designed for usage with multiple Servers if necessary. The state for each OPC UA Server is kept by the client in an object of entity type **OpcUaServerCfg**. This  needs to be populated before the actions of the OPC UA Client Connector can be used. 
+The module/app is designed for usage with multiple Servers if necessary. The state for each OPC UA Server is kept by the Client in an object of entity type **OpcUaServerCfg**. This  needs to be populated before the actions of the OPC UA Client Connector can be used. 
 
 
 {{< figure src="/attachments/appstore/connectors/opc-ua/opcuaservercfg.png" alt="OPC UA Server configuration entity" width="300" >}}
@@ -128,7 +128,7 @@ The **Browse** action allows you to browse the nodes within the OPC UA Server. T
 {{< figure src="/attachments/appstore/connectors/opc-ua/browse-action.png" alt="Parameters for the browse action" >}}
 
 * Opc UA Server cfg – an object of entity type OpcUaServerCfg containing the configuration of the Server to which the request is made
-* NodeId – The NodeId from where you want to browse to it's children. When requesting the 'Is Root'=true leave this value empty. Expects the full Node Id as referenced by the OPC UA Server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
+* NodeId – The NodeId from where you want to browse to it's children. When requesting the 'Is Root'=true leave this value empty. Expects the full Node Id as referenced by the OPC UA Server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
 * Is root – is used by the tree widget in the example implementation module — if you are not using the tree widget you, the value here is not important
 * Return Variable – The output of this action is the JSON string with all information about the requested nodes. This string can be parsed with the Import Mapping activity.
 
@@ -140,7 +140,7 @@ The **Read** action allows you to read the current value of a specific node with
 {{< figure src="/attachments/appstore/connectors/opc-ua/read-action.png" alt="Parameters for the read action" >}}
 
 * Opc ua Server cfg – an object of entity type OpcUaServerCfg containing the configuration of the Server to which the request is made
-* NodeId – The NodeId of the Node you want to read. Expects the full Node Id as referenced by the OPC UA Server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
+* NodeId – The NodeId of the Node you want to read. Expects the full Node Id as referenced by the OPC UA Server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
 
 {{% alert color="info" %}}
 All values are read as strings, you will need to convert them if you need a numeric or date value.
@@ -164,7 +164,7 @@ As mentioned before there are two intervals that influence the behavior of the c
 
 The simplest scenario is 1 MonitoredItem with 1 Subscription, both with an Publishing and Sampling interval of 500ms. As a result the OPC UA Server will take a sample every 500ms, place that in a Queue and transmit that sample every 500ms. 
 
-When the Monitored Item has a sample interval of 500ms, but the subscription has a publishing interval of 2seconds, the OPC UA Server will store all samples in a Queue. Every 2 seconds the OPC UA Server will connect with the Mendix client and will send all (4) samples in a single message. The client will process these 4 message individually, in the order that they were send.
+When the Monitored Item has a sample interval of 500ms, but the subscription has a publishing interval of 2seconds, the OPC UA Server will store all samples in a Queue. Every 2 seconds the OPC UA Server will connect with the Mendix client and will send all (4) samples in a single message. The Client will process these 4 message individually, in the order that they were send.
 
 OPC UA allows for bundling of MonitoredItems in a single subscription to reduce the amount of messages that are being exchanged. Example:  
 Subscription 1233, is created with a Publishing Interval of 2 seconds  
@@ -172,7 +172,7 @@ Node ns=1;id=2; is Monitored with a Sampling Interval of 500ms.
 Node ns=1;id=3; is Monitored with a Sampling Interval of 500ms. 
 Node ns=1;id=4; is Monitored with a Sampling Interval of 500ms. 
 
-As a result the OPC UA Server will connect with the mendix client every 2 seconds, it will make a single connection and share all the messages from all monitored items. In this example the subscription message will include: 4 samples from node ns=1;id=2 & 4 samples from node ns=1;id=3 & 4 samples from node ns=1;id=4. (12 samples in total).  
+As a result the OPC UA Server will connect with the Mendix client every 2 seconds, it will make a single connection and share all the messages from all monitored items. In this example the subscription message will include: 4 samples from node ns=1;id=2 & 4 samples from node ns=1;id=3 & 4 samples from node ns=1;id=4. (12 samples in total).  
 The Mendix client will evaluate each sample and process it according to it's configuration (see below for details).
 
 
@@ -181,7 +181,7 @@ The Mendix client will evaluate each sample and process it according to it's con
 The action creates an object of type **MonitoredItem** & **Subscription** which is associated with the OPC UA service and contains details of the subscription and the item which is being monitored. You monitor a **Node**, this creates what OPC UA calls a **MonitoredItem**, the monitored item is what determines the frequency and type of values that you are getting.  
 **Limitation:** A Monitored Item uses the following default settings: samplingInterval = 500ms; queueSize = 10; discardOldest = true; (See OPC UA Documentation for more details on the impact of this)
 
-The **Subscription** influences the connection that is established with the client. Every  *PublishingInterval*-milliseconds the Server will connect with the client to send any new values. 
+The **Subscription** influences the connection that is established with the Client. Every  *PublishingInterval*-milliseconds the Server will connect with the Client to send any new values. 
 
 Each subscription requires a microflow to process the data each time a notification is received. 
 
@@ -189,14 +189,14 @@ Each subscription requires a microflow to process the data each time a notificat
 {{< figure src="/attachments/appstore/connectors/opc-ua/subscribe-action.png" alt="Parameters for the subscribe action" >}}
 
 * Opc ua Server cfg – an object of entity type OpcUaServerCfg containing the configuration of the Server to which the request is made
-* NodeId – The NodeId of the Node you want to subscribe to. Expects the full Node Id as referenced by the OPC UA Server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
+* NodeId – The NodeId of the Node you want to subscribe to. Expects the full Node Id as referenced by the OPC UA Server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
 * On message microflow – defines a microflow to be run every time a message is received from the subscribed service. This microflow must have 1 input parameter of type: OpcUaClientMx.Message and no output.
-* Subscription (optional) – pass a **Subscription** entity to have more control over the frequency in which messages are send to the client. Leave this parameter blank to let the module setup the subscription.
+* Subscription (optional) – pass a **Subscription** entity to have more control over the frequency in which messages are send to the Client. Leave this parameter blank to let the module setup the subscription.
 * Use return value – `Yes` returns an object of type **MonitoredItem** which defines the new subscription and can be used in the microflow, `No` does not return an object. The returned object should not be changed or committed, but can be associated to for your administration/logic.
 * Variable name – the name assigned to the variable containing the return value  
 
 {{% alert color="info" %}}
-Subscriptions and MonitoredItems are automatically kept alive by the app & OPC UA Server and will continue to be sent as long as both the client and Server are running. The OPC UA Connector automatically provides values for `requestedMaxKeepAliveCount` and `requestedLifetimeCount`and will keep the subscription alive. If these values are exceeded, then the subscription will lapse. This can happen, for example, if the app is redeployed.
+Subscriptions and MonitoredItems are automatically kept alive by the app & OPC UA Server and will continue to be sent as long as both the Client and Server are running. The OPC UA Connector automatically provides values for `requestedMaxKeepAliveCount` and `requestedLifetimeCount`and will keep the subscription alive. If these values are exceeded, then the subscription will lapse. This can happen, for example, if the app is redeployed.
 {{% /alert %}}
 
 ##### 4.2.3.3 MonitoredItem
@@ -254,7 +254,7 @@ If nothing is returned the action was successful, if the OPC UA Server refuses t
 {{< figure src="/attachments/appstore/connectors/opc-ua/write-action.png" alt="Parameters for the write action" >}}
 
 * Opc ua Server cfg – an object of entity type OpcUaServerCfg containing the configuration of the Server to which the request is made
-* NodeId – The NodeId of the Node you want to write to. Expects the full Node Id as referenced by the OPC UA Server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
+* NodeId – The NodeId of the Node you want to write to. Expects the full Node Id as referenced by the OPC UA Server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
 * Value to write – the new value which you want to set for this node, this can be any supported type (see the limitations for all types that are currently supported). Make sure the value can easily be parsed as the type, i.e. Doubles must be formatted as 0.0, Integers may not have a decimal point, etc. 
 
 ### 4.3 Pages
@@ -301,7 +301,7 @@ In addition to the usual **Save** and **Cancel** buttons which allow you to save
 
 **Test Messaging:**
 
-* **NodeId** – The NodeId of the Node you want to use. Expects the full Node Id as referenced by the OPC UA Server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
+* **NodeId** – The NodeId of the Node you want to use. Expects the full Node Id as referenced by the OPC UA Server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
 * **Value to write** – the value to write to a node when the **Write** button is clicked. Leave blank if you want to execute any of the other actions.
 * **Result** – the resulting JSON string from performing any of the four test actions. This shows the full response from the OPC UA Server, the connector might at relevant details in case of an error. 
 * **Read** executes the [Read action](#read)
@@ -372,7 +372,7 @@ This can be caused by one of the following reasons:
 
 The OPC UA Client example implementation is a sample app based on the [Prosys OPC UA Server](https://www.prosysopc.com/) and provides basic browsing functionality, this is not intended to replace a UA Client. It implements the following functionality:
 
-* Configure one or more OPC UA Server connections (using the client)
+* Configure one or more OPC UA Server connections (using the Client)
 * View & browse nodes on the Server
 * Example Consumer implementation
 

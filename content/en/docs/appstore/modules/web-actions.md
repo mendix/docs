@@ -46,4 +46,4 @@ To take a picture, follow these steps:
 
 ## 3 Strict CSP Compatibility
 
-This module is not fully compliant yet with strict Content Security Policy (CSP). If the Take picture action is used with strict CSP, it will result in visual defects.
+This module is not yet fully compliant with strict content security policy (CSP). If the Take picture action is used with strict CSP, it will result in visual defects.

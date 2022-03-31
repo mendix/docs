@@ -9,19 +9,17 @@ tags: ["Marketplace", "Marketplace component", "OPC UA", "connector", ]
 
 ## 1 Introduction
 
-The [OPC UA Client](https://marketplace.mendix.com/link/component/117391/) connector allows you to connect your Mendix application to [OPC](https://opcfoundation.org/) enabled Servers using the functionality of [OPC UA](https://opcfoundation.org/about/opc-technologies/opc-ua/). The connector allows you to read from, write to, and subscribe to OPC UA Servers.
+The [OPC UA Client](https://marketplace.mendix.com/link/component/117391/) Connector allows you to connect your Mendix application to [OPC](https://opcfoundation.org/) enabled Servers using the functionality of [OPC UA](https://opcfoundation.org/about/opc-technologies/opc-ua/). The connector allows you to read from, write to, and subscribe to OPC UA Servers.
 
-OPC is the platform-independent, multi-vendor interoperability standard for the secure and reliable exchange of data in the industrial automation space and in other industries. The OPC Unified Architecture (OPC UA) is an architecture that integrates all the OPC specifications into one extensible framework.
+OPC is the platform-independent, multi-vendor interoperability standard for the secure and reliable exchange of data in the industrial automation space and in other industries. The OPC Unified Architecture (OPC UA) is an architecture that integrates all the OPC specifications into one extensible framework. This module uses the [Eclipse Milo library](https://github.com/eclipse/milo) an open-source implementation of OPC UA, and has been tested with the [Prosys OPC UA Server](https://www.prosysopc.com/). All terminology in this module is per the OPC UA Documentation. 
 
-This module uses the [Eclipse Milo library](https://github.com/eclipse/milo) an open-source implementation of OPC UA, and has been tested with the [Prosys OPC UA Server](https://www.prosysopc.com/). All terminology in this module is per the OPC UA Documentation. 
-
-There is a sample module, [OPC UA Client example implementation](https://marketplace.mendix.com/link/component/114876/), which gives an example of how the connector can be used.
+You can check out the [example module](https://marketplace.mendix.com/link/component/114876/), which gives an example of how the connector can be used.
 
 ### 1.1 Features
 
 #### 1.1.1 Actions
 
-The OPC UA Client connector supports the following actions
+The OPC UA Client Connector supports the following actions
 
 * Browse: – browse a list of nodes
 * Read: – reads the value of a node
@@ -31,7 +29,7 @@ The OPC UA Client connector supports the following actions
 
 #### 1.1.2 Security 
 
-The OPC UA Client connector supports all three security options offered by OPC UA:
+The OPC UA Client Connector supports all three security options offered by OPC UA:
 
 * None
 * Credentials
@@ -61,7 +59,7 @@ Only one of the options can be in use any any time. Which one will be determined
 
 ### 1.3 Prerequisites
 
-The OPC UA Client connector has the following dependencies
+The OPC UA Client Connector has the following dependencies
 
 * Mendix 8.17.0 or higher
 * Encryption Module
@@ -71,9 +69,9 @@ Recommended; Having an external OPC UA Client tool will make setup of the connec
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the [OPC UA Client connector](https://marketplace.mendix.com/link/component/117391/) module into your app. You will see the new module in the **Marketplace modules** section of the **App Explorer**. When you edit a microflow, you will also see five additional actions in the **Toolbox**.
+Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the [OPC UA Client Connector](https://marketplace.mendix.com/link/component/117391/) module into your app. You will see the new module in the **Marketplace modules** section of the **App Explorer**. When you edit a microflow, you will also see five additional actions in the **Toolbox**.
 
-{{< figure src="/attachments/appstore/connectors/opc-ua/opc-ua-toolbox.png" alt="OPC UA Client connector actions in the microflow toolbox" >}}
+{{< figure src="/attachments/appstore/connectors/opc-ua/opc-ua-toolbox.png" alt="OPC UA Client Connector actions in the microflow toolbox" >}}
 
 ## 3 Configuration
 
@@ -87,13 +85,13 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 4. If you use subscriptions you **must** setup the After Startup & Before Shutdown microflow. When subscribing these actions make sure that you re-subscribe when you start your app & that you disconnect when shutting down. If you don't use the after startup subscriptions won't reconnect after a reboot. If you don't use the before shutdown, the Server will keep the old subscriptions (potentially up to a few hours) and send duplicate messages for this period of time (and can cause exceptions in the client). 
 
-This is all you need to do to use the connector. However, there is also a sample module, [OPC UA Client example implementation](https://marketplace.mendix.com/link/component/114876/), which gives an example of how the connector can be used. If you want to look at the sample implementation described in [OPC UA Client example implementation](#example-implementation) you will need to import this into your app in addition to the OPC UA Client connector.
+This is all you need to do to use the connector. However, there is also a sample module, [OPC UA Client example implementation](https://marketplace.mendix.com/link/component/114876/), which gives an example of how the connector can be used. If you want to look at the sample implementation described in [OPC UA Client example implementation](#example-implementation) you will need to import this into your app in addition to the OPC UA Client Connector.
 
 ## 4 Usage
 
 ### 4.1 Client State
 
-The module/app is designed for usage with multiple Servers if necessary. The state for each OPC UA Server is kept by the client in an object of entity type **OpcUaServerCfg**. This  needs to be populated before the actions of the OPC UA client connector can be used. 
+The module/app is designed for usage with multiple Servers if necessary. The state for each OPC UA Server is kept by the client in an object of entity type **OpcUaServerCfg**. This  needs to be populated before the actions of the OPC UA Client Connector can be used. 
 
 
 {{< figure src="/attachments/appstore/connectors/opc-ua/opcuaservercfg.png" alt="OPC UA Server configuration entity" width="300" >}}
@@ -254,7 +252,7 @@ If nothing is returned the action was successful, if the OPC UA Server refuses t
 
 ### 4.3 Pages
 
-The OPC UA Client connector comes with a number of pages which you can use to manage and test the connection to your Server(s).
+The OPC UA Client Connector comes with a number of pages which you can use to manage and test the connection to your Server(s).
 
 #### 4.3.1 OpcUaServer_Overview
 
@@ -272,7 +270,7 @@ From this page, you can perform the following actions:
 
 #### 4.3.2 OpcUaServer_NewEdit
 
-This page allows you to create or change the details of an OPC UA Server you want to use within your app. Your app administrator can use this page as is, or you can customize it for your own use. If you customize it, we recommend that you use a copy of it in one of your own modules so that it is not accidentally overwritten if you update the OPC UA Client connector Marketplace module.
+This page allows you to create or change the details of an OPC UA Server you want to use within your app. Your app administrator can use this page as is, or you can customize it for your own use. If you customize it, we recommend that you use a copy of it in one of your own modules so that it is not accidentally overwritten if you update the OPC UA Client Connector Marketplace module.
 
 ##### 4.3.2.1 Data on OpcUaServer_NewEdit Page
 

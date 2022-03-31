@@ -22,7 +22,7 @@ The Data Hub integration is available in Studio Pro version [8.14](/releasenotes
 For more details about which Data Hub features are included in a Mendix license, see the [Data Hub License Limitations](/refguide/consumed-odata-service-requirements/#license-limitations) section of *Consumed OData Service Requirements*.
 {{% /alert %}}
 
-Follow the journey for building an app using available datasets (or entity sets for services from Mendix apps) from the [Data Hub](https://hub.mendix.com) home page, or try building an app by following [How to Share Data Between Apps](/data-hub/share-data/).
+Try building an app by following [How to Share Data Between Apps](/data-hub/share-data/).
 
 ## 2 Overview of Mendix Data Hub
 
@@ -42,7 +42,7 @@ This section describes the general Data Hub user as well as the assigned [Mendix
 
 ### 3.1 Data Hub Users
 
-The typical Mendix user is able to use the Data Hub Catalog to search and consume registered services. Users can also register new services, and as owners, curate them.
+The typical Mendix user is able to use the Data Hub Catalog to search and consume registered OData services. Users can also register new services, and as owners, curate them.
 
 Data Hub users can do the following: 
 
@@ -55,7 +55,7 @@ Data Hub users can do the following:
 
 A Mendix Admin can do the following:
 
-* Act as a [technical administrator](/developerportal/control-center/data-hub-admin/) of the organization’s Data Hub
+* Act as a [Mendix administrator](/developerportal/control-center/data-hub-admin/) of the organization’s Data Hub
 * Assign [Data Hub Curator](#curator) roles
 * Curate the Data Hub according to the organization's data governance policy
 * Access all the registered assets in the Data Hub Catalog for the organization

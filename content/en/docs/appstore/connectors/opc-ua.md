@@ -104,20 +104,20 @@ This connector is designed for usage with multiple Servers if necessary. The sta
 
 For each OPC UA Server, the following information will need to be stored in an **OpcUaServerCfg** object.
 
-* **ServerID** (String) – a short nickname assigned to the Server for identification, which is primarily used for error and log messages.
-* **URL** (String) – the full URL of the OPC UA Server (e.g.: opc.tcp://localhost:53530/OPCUA/SimulationServer)
+* **ServerID** (String) – the short nickname assigned to the Server for identification, which is primarily used for error and log messages.
+* **URL** (String) – the full URL of the OPC UA Server, for example, `opc.tcp://localhost:53530/OPCUA/SimulationServer`
 * **Username** (String) – the username used if **AuthenticatioType** is `CREDENTIALS`
 *  **Password** (String) – the password for the username used if **AuthenticatioType** is `CREDENTIALS`, only used for data-entry
 
    {{% alert color="info" %}}Once saved, this field is reset.{{% /alert %}}
 
-* **Password_Encrypted** (String) – an automatically encrypted password for the username
+* **Password_Encrypted** (String) – a password for the username, automatically encrypted from **Password**
 * **AuthenticationType** (Enumeration) – the type of authentication required for this Server: `NONE`, `CREDENTIALS`, or `CERTIFICATE`
 * **CertificatePassword** (String) – the certificate password required if **AuthenticatioType** is `CERTIFICATE`, only used for data-entry.
 
    {{% alert color="info" %}}Once saved, this field is reset.{{% /alert %}}
 
-* **CertificatePassword_Encrypted** (String) – an automatically encrypted password
+* **CertificatePassword_Encrypted** (String) – a password for the certificate, automatically encrypted from **CertificatePassword**
 
 For an example, see the [OPC UA Client example implementation](#example-implementation) section.
 

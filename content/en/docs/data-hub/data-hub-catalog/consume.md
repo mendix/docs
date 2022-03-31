@@ -42,14 +42,14 @@ You can associate external entities with both [persistable and non-persistable](
 Mendix entities that are [specializations](/refguide/generalization-and-association/) in the originating app will be published and consumed as discrete entities that include the inherited attributes and associations. When the generalized entity is also exposed in the same service as the specialized entities, the inheritance relationship will not be present in the metadata contract or when both are consumed. 
 
 {{% alert color="warning" %}}
-Associations that are inherited from a generalization will be exposed and shown when the specialization is consumed. However the same association of the generalized entity is not supported for the specialization in the same domain model. The same association cannot be exposed and consumed for two different external entities in the same domain model.
+Associations that are inherited from a generalization will be exposed and shown when the specialization is consumed. However, the same association of the generalized entity is not supported for the specialization in the same domain model. The same association cannot be exposed and consumed for two different external entities in the same domain model.
 {{% /alert %}}
 
 ### 2.3 Datasets
 
-Data for external entities is not in the consuming app's database, but in the database of the app that publishes the OData service. The dataset that is associated with the consumed entity is maintained in the publishing app.
+Data for external entities is in the database of the app that publishes the OData service, not in the consuming app's database. The dataset that is associated with the consumed entity is maintained in the publishing app.
 
-Access to the data is through the published REST OData service, with reading, querying, and possibly updating or inserting of the data by the consuming app.
+Access to the data is through the published REST OData service, with reading, querying, and updating or inserting of the data by the consuming app.
 
 ## 3 Operations Affected by Using External Entities
 

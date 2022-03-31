@@ -430,13 +430,13 @@ If you have any issues related to accessing Datadog, please contact their suppor
 | Metric | Description |
 | --- | --- |
 | jmx.com.mendix.* | JMX metrics for the `com.mendix` domain (core runtime). |
-| mx.database.diskstorage_size | Disk storage available to the application database (this is a fixed value) |
-| mx.activity.time | How long a microflow activity takes to run |
-| mx.client.time | The time to handle a request to a request handler that is used by the web ui |
-| mx.microflow.time | How long a microflow takes to run |
-| mx.odata.time | The time to handle an OData request |
-| mx.rest.time | The time to handle a REST request |
-| mx.soap.time | The time to handle a SOAP request |
+| mx.database.diskstorage_size | Disk storage available to the application database (this is a fixed value) |
+| mx.activity.time | How long a microflow activity takes to run |
+| mx.client.time | The time to handle a request to a request handler that is used by the web ui |
+| mx.microflow.time | How long a microflow takes to run |
+| mx.odata.time | The time to handle an OData request |
+| mx.rest.time | The time to handle a REST request |
+| mx.soap.time | The time to handle a SOAP request |
 
 ## 7 Read More
 

@@ -41,7 +41,7 @@ Data view consists of the following properties:
 
 ### 2.1 Data Source Section {#data-source-data-view} 
 
-The data source determines which object will be shown in the data view. For general information on data sources, see [Data Sources](/refguide8/data-sources/) in the *Studio Pro Guide*. 
+The data source determines which object will be shown in the data view. For general information on data sources, see [Data Sources](/refguide8/data-sources/) in the *Studio Pro Guide*. 
 
 | Data Source Property | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
@@ -81,7 +81,7 @@ List view consists of the following properties:
 
 ### 3.1 Data Source Section {#data-source-list-view}
 
-The data source determines which objects will be shown in the list view. For general information about data sources, see [Data Sources](/refguide8/data-sources/) in the *Studio Pro Guide*. 
+The data source determines which objects will be shown in the list view. For general information about data sources, see [Data Sources](/refguide8/data-sources/) in the *Studio Pro Guide*. 
 
 | Data Source Property | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |

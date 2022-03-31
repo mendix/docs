@@ -11,6 +11,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### March 31st, 2022
+
+#### Improvements
+
+* We made various security improvements.
+
 ### March 24th, 2022
 
 #### New Feature

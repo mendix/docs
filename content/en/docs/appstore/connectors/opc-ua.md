@@ -102,7 +102,7 @@ This connector is designed for usage with multiple Servers if necessary. The sta
 
 {{< figure src="/attachments/appstore/connectors/opc-ua/opcuaservercfg.png" alt="OPC UA Server configuration entity" width="300" >}}
 
-For each OPC UA Server, the following information will need to be stored in an **OpcUaServerCfg** object.
+For each OPC UA Server, the following information will need to be stored in an **OpcUaServerCfg** object:
 
 * **ServerID** (String) – the short nickname assigned to the Server for identification, which is primarily used for error and log messages.
 * **URL** (String) – the full URL of the OPC UA Server, for example, `opc.tcp://localhost:53530/OPCUA/SimulationServer`
@@ -125,17 +125,22 @@ For an example, see the [OPC UA Client example implementation](#example-implemen
 
 Once you have set up the Server configuration, you can perform the following actions in your microflows.
 
-#### 4.2.1 **Browse** a List of Nodes{#browse}
+#### 4.2.1 Browse a List of Nodes{#browse}
 
-The **Browse** action allows you to browse the nodes within the OPC UA Server. The browse function starts at the specified node and browses 'down' and returns the children of the specified node. 
+The **Browse** action allows you to browse the nodes within the OPC UA Server. The **Browse** function starts at the specified node, browses down and returns the children of the specified node. 
 
 {{< figure src="/attachments/appstore/connectors/opc-ua/browse-action.png" alt="Parameters for the browse action" >}}
 
-* Opc UA Server cfg – an object of entity type OpcUaServerCfg containing the configuration of the Server to which the request is made
-* NodeId – The NodeId from where you want to browse to it's children. When requesting the 'Is Root'=true leave this value empty. Expects the full Node Id as referenced by the OPC UA Server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
-* Is root – is used by the tree widget in the example implementation module — if you are not using the tree widget you, the value here is not important
-* Return Variable – The output of this action is the JSON string with all information about the requested nodes. This string can be parsed with the Import Mapping activity.
+* **Opc UA Server cfg** – an object of the entity type **OpcUaServerCfg**, which contains the configuration of the Server to which the request is made
+* **Node id** – the node ID from which you want to browse to its children
+    
+    {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example "ns=4;id=3".
+    When **Is Root** is set to `true`, leave this value empty{{% /alert %}}
 
+* **Is root** – is used by the tree widget in the example implementation module
+    {{% alert color="info" %}}If you do not use the tree widget, the value of **Is root** is not important.{{% /alert %}}
+
+* **Output** – the output of the **Browser** action is the JSON string with all information about the requested nodes, which can be parsed with the Import Mapping activity
 
 #### 4.2.2 **Read** the Value of a Node{#read}
 

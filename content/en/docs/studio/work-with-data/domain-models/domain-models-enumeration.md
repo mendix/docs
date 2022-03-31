@@ -31,19 +31,19 @@ To create a new enumeration, do the following:
 2. Select an entity you want to create the attribute for. For more information on how to create the entity, see the [Adding New Entities](/studio/domain-models/#adding-new-entities) section in *Domain Models Overview*.
 
 3.  To create a new attribute of the enumeration type, click **New attribute** and do the following:<br />
-    a. Set the attribute **Name**. In our example, the name of the attribute is *Grade*.<br />
-    b. Set the [Type](/studio/domain-models-attributes/) to **Enumeration**.<br />
-    c. Click **Select enumeration**.<br />d. In the **Select enumeration** dialog box, click the plus icon in the top right corner.<br/>
+    a. Set the attribute **Name**. In our example, the name of the attribute is *Grade*.<br />
+    b. Set the [Type](/studio/domain-models-attributes/) to **Enumeration**.<br />
+    c. Click **Select enumeration**.<br />d. In the **Select enumeration** dialog box, click the plus icon in the top right corner.<br/>
     e. In the **Create new enumeration** dialog box, click **Add Item** to add possible options of the enumeration (**Name** is filled out automatically and is the same as the attribute name).<br />
 
     {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/new-enumeration-add-item.png" >}}<br />
 
-    f. Fill out the name for the **Caption** (**Name** is filled out automatically). In the example below, you need to fill out  *Bronze*, as one of three possible items of the enumeration: Bronze, Silver, and Gold. <br />
+    f. Fill out the name for the **Caption** (**Name** is filled out automatically). In the example below, you need to fill out  *Bronze*, as one of three possible items of the enumeration: Bronze, Silver, and Gold. <br />
 
     {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/new-enumeration-add-item-bronze.png" >}}<br />
 
     g. Click **Add Item** and repeat the step above to create other enumeration items.<br />
-    h. Click **Create** to close the dialog box and create the new attribute.
+    h. Click **Create** to close the dialog box and create the new attribute.
 
     {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/new-enumeration-bronze-silver-gold.png" >}}
 
@@ -59,9 +59,9 @@ You can also set an existing enumeration for attributes of the enumeration type.
 
 3.  To create a new attribute of the enumeration type, click **New attribute** and do the following:<br />
 
-    a. Set the attribute **Name**. In our example, the name of the attribute is *Grade*.<br />
-    b. Set the [Type](/studio/domain-models-attributes/) to **Enumeration**.<br />
-    c. Click **Select enumeration**.<br />
+    a. Set the attribute **Name**. In our example, the name of the attribute is *Grade*.<br />
+    b. Set the [Type](/studio/domain-models-attributes/) to **Enumeration**.<br />
+    c. Click **Select enumeration**.<br />
 
     {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-enumeration/new-attribute-select-enumeration.png" >}} <br/>
 

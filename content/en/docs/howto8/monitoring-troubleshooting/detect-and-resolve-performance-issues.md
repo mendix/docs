@@ -15,12 +15,12 @@ The flow chart below, which is designed like a microflow, presents infrastructur
 
 ## 2 Issues
 
-Performance issues typically manifest themselves for end-users in one of two ways: either an action takes too long to complete (a page feels slow or unresponsive), or an entire page loads slowly. In both cases, some process is running too long or too many times to complete a specific task. Your goal should be to identify which tasks in particular are causing your issue, and then focus your effort on optimizing those tasks.
+Performance issues typically manifest themselves for end-users in one of two ways: either an action takes too long to complete (a page feels slow or unresponsive), or an entire page loads slowly. In both cases, some process is running too long or too many times to complete a specific task. Your goal should be to identify which tasks in particular are causing your issue, and then focus your effort on optimizing those tasks.
 
 First, you will need to identify if your issue is UI-centric or microflow-centric:
 
 * If a page is taking a long time to initially load or if a page gets slow or unresponsive after clicking a microflow button, a microflow is most likely slowing your application down
-* If the UI feels glitchy or slow after the page has loaded, you may have a UI-centric issue
+* If the UI feels glitchy or slow after the page has loaded, you may have a UI-centric issue
 
 {{% alert color="info" %}}
 All performance issues are extremely context-sensitive, which means there is no single cure-all for a performance problem. This document will attempt to address common issues and how you can resolve them.
@@ -68,7 +68,7 @@ If your slow action occurs via microflow, see the [Slow Microflows](#slow-micro)
 
 ## 4 Slow Microflows {#slow-micro}
 
-If your performance issue is caused by a microflow, you need to find which microflow and which activities are the slowest in that microflow.
+If your performance issue is caused by a microflow, you need to find which microflow and which activities are the slowest in that microflow.
 
 Sometimes, identifying the slow activity and activities in your slow microflow will be obvious. You may have a single microflow with just a few steps, and one of them is egregiously slow. If this is the case, move on to the next section and focus on optimization. If not, continue on below.
 
@@ -94,7 +94,7 @@ To set up a timer, first add a **Create variable** activity as the first step, w
 
 {{< figure src="/attachments/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580221.png" >}}
 
-Then, add a **Log message** activity at the end of your microflow:
+Then, add a **Log message** activity at the end of your microflow:
 
 {{< figure src="/attachments/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580219.png" >}}
 
@@ -138,7 +138,7 @@ The **Refresh in client** property of a change or commit activity is quite usefu
 
 ### 5.3 Slow Sub-Microflow
 
-If you find that you have a slow sub-microflow, begin the process of identifying the slow activity within the microflow, based on the [Slow Microflows](#slow-micro) section above.
+If you find that you have a slow sub-microflow, begin the process of identifying the slow activity within the microflow, based on the [Slow Microflows](#slow-micro) section above.
 
 ### 5.4 General Slow Microflow (No Specific Activity Identified)
 
@@ -150,7 +150,7 @@ If you find yourself committing data inside a loop, you can typically optimize t
 
 {{< figure src="/attachments/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580218.png" >}}
 
-Every time the loop executes, an **Order** object is committed. You can optimize this by committing the entire list outside the loop after processing is completed. Simply set the **Commit** property to **No** on the **Change order** activity, then add a commit of the entire OrderList outside the loop:
+Every time the loop executes, an **Order** object is committed. You can optimize this by committing the entire list outside the loop after processing is completed. Simply set the **Commit** property to **No** on the **Change order** activity, then add a commit of the entire OrderList outside the loop:
 
 {{< figure src="/attachments/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580217.png" >}}
 

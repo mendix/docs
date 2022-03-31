@@ -29,7 +29,7 @@ Git is in Beta since Mendix 9.6.0, you can enable Beta features in Studio Pro [P
 
 To commit to the Team Server you will need to have a role in the app which allows you to edit the app. For more information, see the [Team Roles](/developerportal/collaborate/app-roles/#team-roles) section *App Roles*.
 
-For more information on Team Server and the technologies involved, check the [Version Control FAQ]([Team Server](/refguide/version-control-faq/)
+For more information on the Team Server and technologies involved, see [Version Control FAQ](/refguide/version-control-faq/).
 
 ### 2.2 Repository {#repository}
 

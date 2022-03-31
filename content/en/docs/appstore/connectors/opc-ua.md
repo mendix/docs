@@ -134,7 +134,7 @@ The **Browse** action allows you to browse the nodes within the OPC UA Server. T
 * **Opc UA Server cfg** – an object of the entity type **OpcUaServerCfg**, which contains the configuration of the Server to which the request is made
 * **Node id** – the node ID from which you want to browse to its children
     
-    {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example "ns=4;id=3".
+    {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example `ns=4;id=3`.
     When **Is Root** is set to `true`, leave this value empty.{{% /alert %}}
 
 * **Is root** – is used by the tree widget in the example implementation module
@@ -158,39 +158,51 @@ The **Read** action allows you to read the current value of a specific node with
 All values are read as strings, you will need to convert them if you need a numeric or date value.
 {{% /alert %}}
 
-#### 4.2.3 **Subscribe** to Updates of Data from a Node{#subscribe}
+#### 4.2.3 Subscribing to Updates of Data from a Node{#subscribe}
 
 The **Subscribe** action allows you to subscribe to receive a notification every time the value of a node changes. OPC UA allows many different ways to subscribe to different data changes, events, and many variations.  
 
-**Attention:** At this point the module only allows subscriptions on value changes. Events, and aggregates are currently not supported. 
+{{% alert color="info" %}}
+At this point, this action only allows you to subscribe to value changes. The changes of events and aggregates are currently not supported.
+{{% /alert %}}
 
-With the subscription function you can configure exactly how you receive the data. There are two parts that you need to configure
+With the **Subscription** function you can configure exactly how you receive the data. You need to configure the following parts:
 
-1. the frequency with which the OPC UA Server collects the data points
-2. the frequency with which the OPC UA Server sends updates to your Mendix OPC UA Client — this is optional, if you don't specify this all values are requested every 2 seconds
+* The frequency with which the OPC UA Server collects the data points
+* The frequency with which the OPC UA Server sends updates to your Mendix OPC UA Client—this is optional—if you do not specify this, all values are requested every 2 seconds
 
 ##### 4.2.3.1 OPC UA Background
 
-To understand the subscription action it's important to understand the distinction in OPC when monitoring a Node. 
-As mentioned before there are two intervals that influence the behavior of the connection. The Sampling Interval & the Publishing Interval. The Sampling interval is part of the MonitoredItem and determines how frequently the OPC UA Serer records a Sample of the Node. When the OPC UA Server takes a sample, the value is placed in a Queue for transmission. The Publishing interval, which is part of the subscription, determines which Samples from which MonitoredItems get transmitted and how often this transmission occurs. 
+To understand the **Subscription** action, it is important to understand the distinction in OPC when monitoring a node. 
 
-The simplest scenario is 1 MonitoredItem with 1 Subscription, both with an Publishing and Sampling interval of 500ms. As a result the OPC UA Server will take a sample every 500ms, place that in a Queue and transmit that sample every 500ms. 
+As mentioned before, there are two intervals that influence the behavior of the connection: the sampling interval and the publishing interval. The sampling interval is part of the monitored items, and determines how frequently the OPC UA Serer records a sample of the node. When the OPC UA Server takes a sample, the value is placed in a queue for transmission. The publishing interval, which is part of the subscription, determines which samples from which monitored items get transmitted and how often this transmission occurs. 
 
-When the Monitored Item has a sample interval of 500ms, but the subscription has a publishing interval of 2seconds, the OPC UA Server will store all samples in a Queue. Every 2 seconds the OPC UA Server will connect with the Mendix client and will send all (4) samples in a single message. The Client will process these 4 message individually, in the order that they were send.
+The simplest scenario is one monitored item with one subscription, both with an publishing and sampling interval of 500 ms. As a result, the OPC UA Server will take a sample every 500 ms, place that in a queue and transmit that sample every 500 ms. 
 
-OPC UA allows for bundling of MonitoredItems in a single subscription to reduce the amount of messages that are being exchanged. Example:  
-Subscription 1233, is created with a Publishing Interval of 2 seconds  
-Node ns=1;id=2; is Monitored with a Sampling Interval of 500ms. 
-Node ns=1;id=3; is Monitored with a Sampling Interval of 500ms. 
-Node ns=1;id=4; is Monitored with a Sampling Interval of 500ms. 
+When the monitored item has a sample interval of 500 ms, but the subscription has a publishing interval of 2 seconds, the OPC UA Server will store all samples in a queue. Every 2 seconds, the OPC UA Server will connect with the Mendix Client and will send all the samples, 4 in total, in a single message. The Client will process these 4 message individually, in the order that they were sent.
 
-As a result the OPC UA Server will connect with the Mendix client every 2 seconds, it will make a single connection and share all the messages from all monitored items. In this example the subscription message will include: 4 samples from node ns=1;id=2 & 4 samples from node ns=1;id=3 & 4 samples from node ns=1;id=4. (12 samples in total).  
-The Mendix client will evaluate each sample and process it according to it's configuration (see below for details).
+OPC UA allows for bundling of monitored items in a single subscription to reduce the number of messages that are being exchanged, for example:  
+
+* Subscription `1233` is created with a publishing interval of 2 seconds
+
+* Node `ns=1;id=2` is monitored with a sampling interval of 500ms
+
+* Node `ns=1;id=3` is monitored with a sampling interval of 500ms.
+
+* Node `ns=1;id=4` is monitored with a sampling interval of 500ms.
+
+As a result, the OPC UA Server will connect with the Mendix Client every 2 seconds, it will make a single connection and share all the messages from all monitored items. In this example, the subscription message will include: 4 samples from node `ns=1;id=2`, 4 samples from node `ns=1;id=3`, and 4 samples from node `ns=1;id=4` – in total, 12 samples.
+
+The Mendix Client will evaluate each sample and process it according to its configuration (see below for details).
 
 ##### 4.2.3.2 Subscription Action
 
-The action creates an object of type **MonitoredItem** & **Subscription** which is associated with the OPC UA service and contains details of the subscription and the item which is being monitored. You monitor a **Node**, this creates what OPC UA calls a **MonitoredItem**, the monitored item is what determines the frequency and type of values that you are getting.  
-**Limitation:** A Monitored Item uses the following default settings: samplingInterval = 500ms; queueSize = 10; discardOldest = true; (See OPC UA Documentation for more details on the impact of this)
+The action creates an object of type **MonitoredItem** and **Subscription**, which is associated with the OPC UA service and contains details of the subscription and the item which is being monitored. You monitor a **Node**, this creates what OPC UA calls a **MonitoredItem**. The monitored item determines the frequency and type of values that you are getting. 
+
+{{% alert color="info" %}}
+A monitored item uses the following default settings: **samplingInterval** = `500ms`; **queueSize** = `10`; **discardOldest** = `true`. For more details on the impact of these settings, see OPC UA Documentation.
+{{% /alert %}}
+**Limitation:** 
 
 The **Subscription** influences the connection that is established with the Client. Every  *PublishingInterval*-milliseconds the Server will connect with the Client to send any new values. 
 
@@ -414,7 +426,7 @@ As you can see it shows the current status of the PLC, when clicking on the 'Ope
 
 In this use-case the OPC UA Server will receive the instruction through the write action, this will trigger the physical gate to move. When the gate state changes, the OPC UA Server will update the 'State'-node accordingly.  
 
-The application is subscribing on the 3 different nodes, IsUp, IsDown, IsMoving. When either of these nodes changes values, a message is send to the Mendix client and the values are parse by the respective microflows: UA_ProcessEvent_GateUp, UA_ProcessEvent_GateDown, UA_ProcessEvent_GateMoving.    
+The application is subscribing on the 3 different nodes, IsUp, IsDown, IsMoving. When either of these nodes changes values, a message is send to the Mendix Client and the values are parse by the respective microflows: UA_ProcessEvent_GateUp, UA_ProcessEvent_GateDown, UA_ProcessEvent_GateMoving.    
 All three subscription microflows lookup the MonitoredItem record, and through the MonitoredItem find the actual PLC that's changing (you need to follow this pattern when interacting with multiple devices through OPC UA). After retrieving the PLC it will update the state according to the Message. You can extend this microflow with as many complex evaluation and validations as you want. 
 
 Alternatives: It is possible for the OPC UA Node to hold a complex JSON structure as value instead of a simple integer in this example. If that is the case you'd implement the same microflow logic, but in addition you'd call an Import Mapping activity before processing the results. 

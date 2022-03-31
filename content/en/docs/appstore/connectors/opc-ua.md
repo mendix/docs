@@ -13,7 +13,7 @@ The [OPC UA Client](https://marketplace.mendix.com/link/component/117391/) Conne
 
 OPC is the platform-independent, multi-vendor interoperability standard for the secure and reliable exchange of data in the industrial automation space and in other industries. The OPC Unified Architecture (OPC UA) is an architecture that integrates all the OPC specifications into one extensible framework. This module uses the [Eclipse Milo library](https://github.com/eclipse/milo) an open-source implementation of OPC UA, and has been tested with the [Prosys OPC UA Server](https://www.prosysopc.com/). All terminology in this module is per the OPC UA Documentation. 
 
-You can check out the [example module](https://marketplace.mendix.com/link/component/114876/), which gives an example of how the connector can be used.
+You can check out a [sample module](https://marketplace.mendix.com/link/component/114876/), which gives an example of how the connector can be used.
 
 ### 1.1 Features
 
@@ -78,15 +78,21 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 1. Add the **OpcUaServer_Overview** page to the navigation of the app, either through the **Navigation** settings, or by adding an **Open Page** button to a page which is already in the navigation (for example the home page). 
 
-2. Find the constant: **UA_ApplicationName** in the `_USE_ME` folder and update this with the information specific to your Client. The application name must be unique to the OPC UA Server, the connector has no requirements to the contents of this constant. If you have a single Mendix application connecting to the Server you could choose to leave the default value, if you have multiple Mendix applications connecting to the same Server you **must** alter the name to be unique (as per the OPC UA spec).   
-*See the OPC UA Specification for more details, this setting is only used by the OPC UA Server.*
+2. Update the constant **UA_ApplicationName** in the **_USE_ME** folder with the information specific to your Client. The application name must be unique to the OPC UA Server. The connector has no requirements to the contents of this constant. If you have a single Mendix application connecting to the Server, you can use the default value. If you have multiple Mendix applications connecting to the same Server, change the name so that it is unique as per the OPC UA spec.
 
-3. Find the constant: **UA_ApplicationURI** in the `_USE_ME` folder and update this with the information specific to your Client. The application URI must be unique to the OPC UA Server, the connector has no requirements to the contents of this constant. If you have a single Mendix application connecting to the Server you could choose to leave the default value, if you have multiple Mendix applications connecting to the same Server you **must** alter the name to be unique (as per the OPC UA spec).  
-*If you are using client certificates for authentication, the URI should match the certificate. See the OPC UA Specification for more details, this setting is only used by the OPC UA Server.*
+This setting is only used by the OPC UA Server. See the OPC UA Specification for more details.
 
-4. If you use subscriptions you **must** setup the After Startup & Before Shutdown microflow. When subscribing these actions make sure that you re-subscribe when you start your app & that you disconnect when shutting down. If you don't use the after startup subscriptions won't reconnect after a reboot. If you don't use the before shutdown, the Server will keep the old subscriptions (potentially up to a few hours) and send duplicate messages for this period of time (and can cause exceptions in the client). 
+3. Update the constant **UA_ApplicationURI** in the **_USE_ME** folder with the information specific to your Client. The application name must be unique to the OPC UA Server. The connector has no requirements for the content of this constant. If you have a single Mendix application connecting to the Server, you can use the default value. If you have multiple Mendix applications connecting to the same Server, change the name so that it is unique as per the OPC UA spec. If you use client certificates for authentication, the URI should match the certificate.
 
-This is all you need to do to use the connector. However, there is also a sample module, [OPC UA Client example implementation](https://marketplace.mendix.com/link/component/114876/), which gives an example of how the connector can be used. If you want to look at the sample implementation described in [OPC UA Client example implementation](#example-implementation) you will need to import this into your app in addition to the OPC UA Client Connector.
+This setting is only used by the OPC UA Server. See the OPC UA Specification for more details.
+
+4. If you use subscriptions, set up the **After startup** and **Before shutdown** microflows in your [App Settings](/refguide/project-settings/) as follows: set the **After startup** microflow to **ASu_ReintializeSubscriptions** in the USE_ME folder, and set the **Before shutdown** microflow to **BSd_GracefullyShutdownSubscriptions** in the USE_ME folder.
+
+{{% alert color="info" %}}If you do not set up the **After startup** microflow, subscriptions will not reconnect after a reboot. If you do not set up the **Before shutdown** microflow, the Server will keep the old subscriptions potentially up to a few hours, and send duplicate messages for this period of time, which can cause exceptions in the Client.{{% /alert %}}
+
+The connector is ready for use.
+
+For an example of the implementation, install the [sample module](https://marketplace.mendix.com/link/component/114876/) and see the [OPC UA Client example implementation](#example-implementation)section.
 
 ## 4 Usage
 

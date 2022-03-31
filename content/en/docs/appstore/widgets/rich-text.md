@@ -163,7 +163,11 @@ To configure this widget, follow these steps:
 
 For more information, see [Common Section](https://docs.mendix.com/refguide/common-widget-properties#common-properties) in *Properties Common in the Page Editor*.
 
-## 3 Widgets Below Version 2.0.0
+## 3 Strict CSP Compatibility
+
+This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget.
+
+## 4 Widgets Below Version 2.0.0
 
 Features:
 

@@ -20,7 +20,7 @@ Mendix supports mobile web development, and it is also possible to create and pu
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install Mendix Studio Pro (available from the [Marketplace](https://marketplace.mendix.com/link/studiopro/))
-* Install the Mendix Mobile app on you device, which makes it easy to see a hybrid application in action without the need to get it approved in the Mendix Marketplace (for details and download links, see [Getting the Mendix App](/refguide7/getting-the-mendix-app/) in the Mendix Reference Guide)
+* Install the Mendix Developer App on you device, which makes it easy to see a hybrid application in action without the need to get it approved in the Mendix Marketplace (for details and download links, see [Getting the Developer Mendix App](/refguide7/getting-the-mendix-app/) in the Mendix Reference Guide)
 
 ## 3 Opening a Hybrid Example App
 
@@ -42,11 +42,11 @@ To open a hybrid example app, follow these steps:
 
     {{< figure src="/attachments/howto7/mobile/deploy-your-first-hybrid-mobile-app/18581184.png" >}}
 
-6. Open the Mendix Mobile app on your device and select **Scan QR Code**:
+6. Open the Mendix Developer App on your device and select **Scan QR Code**:
 
     {{< figure src="/attachments/howto7/mobile/deploy-your-first-hybrid-mobile-app/18581190.png" >}}
 
-7. Scan the QR code on the screen with the Mendix Mobile app:
+7. Scan the QR code on the screen with the Mendix Developer App:
 
     {{< figure src="/attachments/howto7/mobile/deploy-your-first-hybrid-mobile-app/18581189.png" >}}
 

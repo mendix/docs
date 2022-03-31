@@ -42,7 +42,7 @@ This section describes the general Data Hub user as well as the assigned [Mendix
 
 ### 3.1 Data Hub Users
 
-The typical Mendix user is able to use the Data Hub Catalog to search and consume registered services. Users can also register new services, and as owners, curate them.
+The typical Mendix user is able to use the Data Hub Catalog to search and consume registered OData services. Users can also register new services, and as owners, curate them.
 
 Data Hub users can do the following: 
 

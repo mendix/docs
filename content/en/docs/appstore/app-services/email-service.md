@@ -250,7 +250,7 @@ You should receive an email from `verify-email@notify.mendix.com` to the configu
 
 {{< figure src="/attachments/appstore/app-services/email-service/email-verification-pending.png" >}}
 
-You can add/delete the emailIds and retry for verification as well if verification is still pending after the appropriate time required for verification by clicking on View details/edit button.
+You can add/delete the emailIds and retry for verification as well if verification is still pending after the appropriate time required for verification by clicking on View details/Edit button.
 
 {{< figure src="/attachments/appstore/app-services/email-service/delete:retry_for_email.png" >}}
 

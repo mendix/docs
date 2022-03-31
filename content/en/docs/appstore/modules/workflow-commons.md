@@ -54,7 +54,7 @@ Download and install the following modules:
         2. Views personal performance in the Task Dashboard.
         3. Views workflow progress in the My Initiated Workflows overview.
 3. Make sure the correct user entity is set in the **App Settings**: open **App Settings** > **Workflows** tab and set **User entity** to *Administration.Account*.
-4. For Workflow Commons v2.1.0 and above, you need to configure the state change event microflows in the **App Settings**: open **App Settings** > **Workflows** tab to configure the following state change microflows:
+4. For Workflow Commons v2.1.0 and above, you need to configure the state change microflows in the **App Settings**: open **App Settings** > **Workflows** tab to configure the following state change microflows:
     1. **Workflow state change**: *OCh_Workflow_State*
     2. **User task state change**: *OCh_WorkflowUserTask_State*
 

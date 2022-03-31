@@ -125,7 +125,7 @@ For an example, see the [OPC UA Client example implementation](#example-implemen
 
 Once you have set up the Server configuration, you can perform the following actions in your microflows.
 
-#### 4.2.1 Browse a List of Nodes{#browse}
+#### 4.2.1 Browsing a List of Nodes {#browse}
 
 The **Browse** action allows you to browse the nodes within the OPC UA Server. The **Browse** function starts at the specified node, browses down and returns the children of the specified node. 
 
@@ -135,21 +135,24 @@ The **Browse** action allows you to browse the nodes within the OPC UA Server. T
 * **Node id** – the node ID from which you want to browse to its children
     
     {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example "ns=4;id=3".
-    When **Is Root** is set to `true`, leave this value empty{{% /alert %}}
+    When **Is Root** is set to `true`, leave this value empty.{{% /alert %}}
 
 * **Is root** – is used by the tree widget in the example implementation module
+
     {{% alert color="info" %}}If you do not use the tree widget, the value of **Is root** is not important.{{% /alert %}}
 
 * **Output** – the output of the **Browser** action is the JSON string with all information about the requested nodes, which can be parsed with the Import Mapping activity
 
-#### 4.2.2 **Read** the Value of a Node{#read}
+#### 4.2.2 Reading the Value of a Node {#read}
 
-The **Read** action allows you to read the current value of a specific node within the OPC UA Server. The output of the action is a string formatted value of the Node. While the module supports most OPC UA attribute types the action always returns the value as a string as it was showing in the original message received from the OPC UA Server. Example the decimal value 10.59 will be returned as '10.59'   
+The **Read** action allows you to read the current value of a specific node within the OPC UA Server. The output of the action is a String formatted value of the Node. While the module supports most OPC UA attribute types, the action always returns the value as a String as shown in the original message received from the OPC UA Server. Example the decimal value 10.59 will be returned as '10.59'   
 
 {{< figure src="/attachments/appstore/connectors/opc-ua/read-action.png" alt="Parameters for the read action" >}}
 
-* Opc ua Server cfg – an object of entity type OpcUaServerCfg containing the configuration of the Server to which the request is made
-* NodeId – The NodeId of the Node you want to read. Expects the full Node Id as referenced by the OPC UA Server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
+* **Opc ua Server cfg** – an object of entity type **OpcUaServerCfg**, which contains the configuration of the Server to which the request is made
+* **Node id** – the ID of the node you want to read
+
+    {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example "ns=4;id=3".{{% /alert %}}
 
 {{% alert color="info" %}}
 All values are read as strings, you will need to convert them if you need a numeric or date value.

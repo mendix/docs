@@ -21,11 +21,11 @@ You can check out the [example module](https://marketplace.mendix.com/link/compo
 
 The OPC UA Client Connector supports the following actions
 
-* Browse: – browse a list of nodes
-* Read: – reads the value of a node
-* Write: – write data to a node
-* Subscribe: – to receive data (or events) from a node
-* Unsubscribe: – stop receiving updates for a node
+* Browse – browses a list of nodes
+* Read – reads the value of a node
+* Write – writes data to a node
+* Subscribe – receives data or events from a node
+* Unsubscribe – stops receiving updates for a node
 
 #### 1.1.2 Security 
 

@@ -75,6 +75,7 @@ install:
   # normal htmltest takes too much memory - using a modified version which strips <aside> tag content
   # NB - Set pipefail so that Travis CI sees the return code from `tee` and not from `htmltest` so it will always build.
   - set +o pipefail
+  - echo "Any errors from HTMLTEST will be treated as warnings - the build will continue." >> $TRAVIS_BUILD_DIR/hugo.log 
   - chmod +x ./htmltest/htmltest
   - ./htmltest/htmltest 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log
 

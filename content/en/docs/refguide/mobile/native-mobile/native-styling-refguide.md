@@ -1031,6 +1031,10 @@ The widget’s style properties are as follows:
 | `indicator` | `color` | The loading indicator color. |
 | `video` | This has all ViewStyle properties. |      |
 | `errorMessage` | This has all TextStyle properties. |      |
+| `fullScreenVideoPlayer` | This has all ViewStyle properties. | Android only |
+| `controlBtnContainerStyle` | This has all ViewStyle properties. | Android only |
+| `fullScreenVideoStyle` | This has all ViewStyle properties. | Android only |
+| `fullScreenActivityIndicatorStyle` | This has all ViewStyle properties. | Android only |
 
 The default class to style all video players is named `com_mendix_widget_native_videoplayer_VideoPlayer`.
 

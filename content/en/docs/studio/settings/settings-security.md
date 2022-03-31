@@ -147,7 +147,7 @@ There are two ways to change access for specific pages/microflows/workflows in y
 	3.  Open the page/microflow/workflow. 
 	4.  Go to **Properties** > the **Permissions** section and tick/untick **Allowed Roles** to grant/restrict access. 
 
-		{{< figure src="/attachments/studio/settings/settings-security/permissions-section.png"   width="300"  >}}
+	{{< figure src="/attachments/studio/settings/settings-security/permissions-section.png"   width="300"  >}}
 
 ## 4 Demo Users {#demo-users}
 

@@ -54,7 +54,7 @@ Mendix for Private Cloud has built-in features to create and delete tenants on a
 
 You can also create a “Dedicated” database manually, and the Operator will just pass the database credentials directly to the Mendix Runtime. Dedicated databases cannot be shared between environments.
 
-Mendix for Private Cloud will not install, create, or maintain the database server – you will need to provide the database server and maintain it. You can use any compatible database server, as long as the database server is officially supported by Mendix for Private Cloud (for example a geo-redundant AWS Aurora).
+Mendix for Private Cloud will not install, create, or maintain the database server – you will need to provide the database server and maintain it. You can use any compatible database server, as long as the database server is officially supported by Mendix for Private Cloud (for example AWS RDS).
 
 For apps that don't need persistence (for example demo or frontend apps), an ephemeral database can be used. The Mendix Runtime will use an in-memory database which will not persist any data between restarts.
 

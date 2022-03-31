@@ -175,7 +175,6 @@ A standard PostgreSQL database is an unmodified PostgreSQL database installed fr
 The following managed PostgreSQL databases are supported:
 
 * [Amazon RDS for PostgreSQL](https://aws.amazon.com/rds/postgresql/) 
-* [Amazon Aurora PostgreSQL](https://aws.amazon.com/rds/aurora/)
 * [Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/services/postgresql/).
 * [Google Cloud SQL for PostgreSQL](https://cloud.google.com/sql/docs/postgres).
 

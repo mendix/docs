@@ -199,7 +199,7 @@ Now that you are on the login window, you will want to log in. To add the second
 
 1. Open Firefox and go to `http://localhost:8080/index.html`.
 2. Use the developer tools to inspect the element.
-3.   Click the **User name** input field. The ID of the this field is _usernameInput_. The CSS selector of an ID is a hashtag (`#`) + the name of the ID. For the **User name** field, this will be _#usernameInput_. The same principle is used for the other steps. The CSS selector _#usernameInput_ is unique. There is one matching node:
+3. Click the **User name** input field. The ID of the this field is _usernameInput_. The CSS selector of an ID is a hashtag (`#`) + the name of the ID. For the **User name** field, this will be _#usernameInput_. The same principle is used for the other steps. The CSS selector _#usernameInput_ is unique. There is one matching node:
 
 	{{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580373.png" >}}
 

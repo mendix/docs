@@ -40,19 +40,19 @@ The app will open the corresponding page depending on the grade of a customer, f
 1. Open your [domain model](/studio7/domain-models/).
 2. Create entity *Customer*. For more information on how to create the entity, see section [3 Adding New Entities](/studio7/domain-models/) in *Domain Models Overview*.
 3.  For the **Customer** entity, create attribute (for more information on how to create the attribute, see section [4 Adding New Attributes](/studio7/domain-models/)) and do the following:<br />
-    a. Set the attribute **Name** to *Grade*.<br />
-    b. Set the [**Type**](/studio7/domain-models-attributes/) to **Enumeration**.<br />
-    c. Click **Select enumeration** to create a new enumeration.<br />d. In the **Select enumeration** dialog window, click **New**.<br/>
-    e. In the **Create new enumeration** dialog window, click **Add Item** (*Grade* is filled out automatically for the **Name**).<br />
+    a. Set the attribute **Name** to *Grade*.<br />
+    b. Set the [**Type**](/studio7/domain-models-attributes/) to **Enumeration**.<br />
+    c. Click **Select enumeration** to create a new enumeration.<br />d. In the **Select enumeration** dialog window, click **New**.<br/>
+    e. In the **Create new enumeration** dialog window, click **Add Item** (*Grade* is filled out automatically for the **Name**).<br />
 
     {{< figure src="/attachments/studio7/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/new-enumeration-add-item.png" >}} <br />
 
-    f. Enter *Bronze* for the **Caption** (**Name** is filled out as *Bronze* automatically as well).<br />
+    f. Enter *Bronze* for the **Caption** (**Name** is filled out as *Bronze* automatically as well).<br />
 
     {{< figure src="/attachments/studio7/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/new-enumeration-add-item-bronze.png" >}}<br />
 
-    g. Click **Add Item** and repeat the step above to create the **Silver** and **Gold** grades.<br />
-    h. Click **Create** to close the dialog windows and create the new attribute.
+    g. Click **Add Item** and repeat the step above to create the **Silver** and **Gold** grades.<br />
+    h. Click **Create** to close the dialog windows and create the new attribute.
 
     {{< figure src="/attachments/studio7/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/new-enumeration-bronze-silver-gold.png" >}}
 

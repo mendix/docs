@@ -32,7 +32,22 @@ Constants can be used in the following:
 
 The name of the constant. This name is used to refer to it.
 
-### 2.2 Documentation
+### 2.2 Export Level 
+
+{{% alert color="info" %}}
+
+This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-types) section in *Modules*. 
+
+{{% /alert %}}
+
+**Export level** allows you to define access level to this document on the consumer (customer) side when developing an add-on module or a solution. 
+
+| Value              | Description                                             |
+| ------------------ | ------------------------------------------------------- |
+| Hidden *(default)* | The document/element content is hidden from a consumer. |
+| Usable             | Consumers can see the constant and use it in their app. |
+
+### 2.3 Documentation
 
 This field is for documentation purposes only: end-users will never see it, and it does not influence the behavior of your application
 

@@ -16,12 +16,12 @@ Take a string and try to parse it to an integer.
 *   The string to parse
     Type: String
 *   (Optional) Default value
-    Type: Integer
+    Type: Integer/Long
 
 ### Output
 
 The integer, if it's possible to parse it from the string. If it's not a valid parsable string, the default value will be returned. If no default value is provided, an error will occur.
-Type: Integer
+Type: Integer/Long
 
 ```java
 parseInteger('42')

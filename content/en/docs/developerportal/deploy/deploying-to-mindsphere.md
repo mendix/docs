@@ -442,7 +442,7 @@ To create a new app manually in the MindSphere launchpad, do the following:
 
 16.  Click **Register** to register your app with the MindSphere launchpad.
 
-    {{% alert color="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry.{{% /alert %}}
+        {{% alert color="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry.{{% /alert %}}
 
 ##### 5.3.2.2 Setting Application Scopes in Developer Cockpit{#scopes}
 

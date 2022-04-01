@@ -17,23 +17,39 @@ So, its good idea to start with backup of your current project.
 If something goes wrong, you always may restore previous files and
 start again.
 
-In our case we don't need to backup whole project. All we have to do is make a copy of
+In our case we don't need to back up whole project. All we have to do is make a copy of
 <YOUR_PROJECT>/widgets directory. Just make a copy and put this copy in some safe place.
+
+Use "Show App Directory in Explorer" to open you project in file manager:
+
+{{< figure src="/attachments/appstore/widgets/charts/show-in-file-manager.png" >}}
+
+After that, just make copy of widgets directory:
+
+{{< figure src="/attachments/appstore/widgets/charts/backup-widgets-folder.png" >}}
+
 
 ## Step 2 - Removing existing Charts widget from the project
 
 So now we have to remove previous version of Charts widget.
 To do so, open your project in File Manager. Navigate to <YOUR_PROJECT>/widgets directory
-and find file with name "Charts.mpk". Now you have to remove this file.
+and find file with name "Charts.mpk". Now you have to remove this file. Also, consider removing "AnyChart" widget as 
+new Charts module will include a bunch of awesome charts that will cover most of your needs.
+
+{{< figure src="/attachments/appstore/widgets/charts/remove-old-widgets.png" >}}
+
 And we are done! Now all what's left is to install new version of Charts widget.
+
 
 ## Step 3 - Installing new version of Charts widget.
 
 So, now you can open Studio (Pro), go to marketplace and install new version of Charts widget.
 
+[comment]: <> (Add screenshots of marketplace with Charts module v3)
+
 After this step, you can press F4 on keyboard or find "Sync with ..." in the menu. This action
 will synchronize your project with filesystem. If you see some errors in error tab, do not panic.
-This errors appears because Stuido see new version of Charts and all you have to do is do a right
+These errors appear because Studio see new version of Charts and all you have to do is do a right
 click on any chart, and in context menu click on "Update all widgets" item. This action will
 update all chart widgets in your project.
 

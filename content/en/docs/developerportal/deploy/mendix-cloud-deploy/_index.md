@@ -68,7 +68,7 @@ You can upgrade a Free App to a licensed node with a *node* in the Mendix Cloud.
 
 #### 1.1.1 Free Apps Archival{#free-apps-archival}
 
-If a Free App has been in Sleep Mode for three months or longer, the Technical Contact may be informed that the Free App may be archived in another two weeks. The project and model will be retained, but the running app, database, and files for the Free App will be deleted.
+If a Free App has been in Sleep Mode for three months or longer, it may be archived. For Free Apps which are going to be archived, the Technical Contact will be informed two weeks beforehand. The project and model will be retained, but the running app, database, and files for the Free App will be deleted.
 
 There are two ways to avoid Free Apps Archival:
 

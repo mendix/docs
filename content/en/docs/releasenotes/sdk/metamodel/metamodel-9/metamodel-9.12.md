@@ -47,8 +47,7 @@ parent: "metamodel-9"
 
 #### ScheduledEvent (ModelUnit)
 
-* We introduced the `schedule` property. 
-* We introduced the `onOverlap` property. 
+* We introduced the `schedule` and `onOverlap` properties. 
 
 #### Schedule, YearSchedule, YearDateSchedule, YearWeekdaySchedule, MonthSchedule, MonthDateSchedule, MonthWeekdaySchedule, WeekSchedule, DaySchedule, HourSchedule & MinuteSchedule (Elements)
 

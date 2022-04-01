@@ -2,6 +2,7 @@
 title: "Applying IP Protection"
 url: /appstore/creating-content/sol-ip-protection/
 parent: "sol-development"
+weight: 2
 description: "Protect intellectual property in Solutions, App Services & Connectors"
 tags: ["adaptive solutions", "ip protection"]
 ---

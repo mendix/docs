@@ -1,5 +1,5 @@
 ---
-title: "Architect Adaptive Solutions"
+title: "Architecting Adaptive Solutions"
 url: /appstore/creating-content/sol-architecting/
 parent: "sol-development"
 description: "Architect a solution for adaptation"
@@ -30,9 +30,13 @@ Each solution is useable as is, but it can also be adapted to become even more s
 
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/sol-architecting/mendix-plm-for-fashion-and-retail.png" alt="Mendix PLM for Fashion & Retail" >}}
 
-## 3 Architect a Solution for Adaptation {#adaptation}
+## 3 Architect a Solution for Adaptation
 
-Architect a solution for adaptation requires an understanding of your customers' needs: You need to know which functional requirements are common across your customers and which are specific to individual customers. This enables splitting the application model into the following three main functional parts:
+This section discusses the main parts of architecting your solution.
+
+### 3.1 Three Parts {#three-parts}
+
+Architecting a solution for adaptation requires an understanding of your customers' needs: You need to know which functional requirements are common across your customers and which are specific to individual customers. This enables splitting the application model into the following three main functional parts:
 
 * A shared and immutable common core
 * Common extension modules that can be adapted to a customer's needs
@@ -56,7 +60,7 @@ This requires an iterative approach, where your understanding of the architectur
 
 When designing the interfaces of your solutions, you should do the following:
 
-* Split your adaptive solution architecture into the [three main functional parts](#adaptation) described above
+* Split your adaptive solution architecture into the [three main functional parts](#three-parts) described above
 * Think about which parts of the shared core are reusable in other parts:
 	* Define which shared logic should be reusable and define entry points to the shared logic as APIs
 	* Define which entities (data/state) are required in which parts of the functionality
@@ -67,4 +71,4 @@ When designing the interfaces of your solutions, you should do the following:
 
 ### 3.4 Applying IP Protection 
 
-IP protection can be used to make parts of the application model and the common core immutable by customers. For practical guidance, see [IP Protection](/appstore/creating-content/sol-ip-protection/).
+IP protection can be used to make parts of the application model and the common core immutable by customers. For practical guidance, see [Applying IP Protection](/appstore/creating-content/sol-ip-protection/).

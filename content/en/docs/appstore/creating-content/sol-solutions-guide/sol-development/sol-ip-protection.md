@@ -1,5 +1,5 @@
 ---
-title: "Enable IP Protection"
+title: "Applying IP Protection"
 url: /appstore/creating-content/sol-ip-protection/
 parent: "sol-development"
 description: "Protect intellectual property in Solutions, App Services & Connectors"

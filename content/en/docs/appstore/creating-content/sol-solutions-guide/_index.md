@@ -22,7 +22,7 @@ A solution is any Mendix app that is suitable to be sold to multiple different c
 
 Customers often require more from a solution than it supports out of the box. Whether it is an integration with an existing system in the customer's IT landscape, a change to better match the processes of the customer, or simply an adjusted UI to better match the brand of the customer, these adaptations require more than just a prescriptive software-as-a-service (SaaS) solution. This means you need to enable the solution to be adapted so that it can fit the specific needs of a customer.
 
-For more details on building solutions, see [Architecting Adaptive Solutions](/appstore/creating-content/sol-architecting/).
+For more details on building solutions, see [How to Architect Adaptive Solutions](/appstore/creating-content/sol-architecting/).
 
 ## 3 Read More
 

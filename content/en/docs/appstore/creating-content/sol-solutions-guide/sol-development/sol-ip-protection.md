@@ -1,5 +1,5 @@
 ---
-title: "IP Protection"
+title: "Enable IP Protection"
 url: /appstore/creating-content/sol-ip-protection/
 parent: "sol-development"
 description: "Protect intellectual property in Solutions, App Services & Connectors"
@@ -34,7 +34,7 @@ Not all parts of a component need to be protected. It is often desirable to prot
 IP protection is currently in [Private Beta](/releasenotes/beta-features/) and only available to select early adopters. Reach out to the [Mendix Solutions Vendor Program](https://www.mendix.com/marketplace-vendor-program/solutions/) team to request access.
 {{% /alert %}}
 
-### 4.1 Best Practices for Architecting
+### 4.1 Best Practices for Architect
 
 * Identify your core IP
 	* Think about which parts of the solution are most critical

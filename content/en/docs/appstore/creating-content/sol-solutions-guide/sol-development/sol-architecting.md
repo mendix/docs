@@ -1,5 +1,5 @@
 ---
-title: "Architecting Adaptive Solutions"
+title: "Architect Adaptive Solutions"
 url: /appstore/creating-content/sol-architecting/
 parent: "sol-development"
 description: "Architect a solution for adaptation"
@@ -30,9 +30,9 @@ Each solution is useable as is, but it can also be adapted to become even more s
 
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/sol-architecting/mendix-plm-for-fashion-and-retail.png" alt="Mendix PLM for Fashion & Retail" >}}
 
-## 3 Architecting a Solution for Adaptation {#adaptation}
+## 3 Architect a Solution for Adaptation {#adaptation}
 
-Architecting a solution for adaptation requires an understanding of your customers' needs: You need to know which functional requirements are common across your customers and which are specific to individual customers. This enables splitting the application model into the following three main functional parts:
+Architect a solution for adaptation requires an understanding of your customers' needs: You need to know which functional requirements are common across your customers and which are specific to individual customers. This enables splitting the application model into the following three main functional parts:
 
 * A shared and immutable common core
 * Common extension modules that can be adapted to a customer's needs

@@ -2,7 +2,7 @@
 title: "1"
 url: /releasenotes/sdk/model-sdk-1/
 parent: "model-sdk"
-weight: 97
+weight: 100
 ---
 
 ## 1.2.0

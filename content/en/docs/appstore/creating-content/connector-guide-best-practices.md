@@ -89,11 +89,11 @@ You can extend your app to work with Java and Gradle.
 
 1.   Add an **Implementation** folder next to other project folders. 
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best=practices/implementation-folder.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/implementation-folder.png" >}}
 
 2.   Set up an  **Implementation** folder as a Gradle `java-library` project. Please refer to Gradle documentation on [Building Java Libraries Sample](https://docs.gradle.org/current/samples/sample_building_java_libraries.html#run_the_init_task). This is the expansion of the **Implementation** folder:
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best=practices/gradle-library.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/gradle-library.png" >}}
      
      The **Implementation** folder is now a self contained Gradle project which can be opened in any IDE which understands Gradle and expanded with any code you like.
 
@@ -117,7 +117,7 @@ To ensure that your users can reuse your Mendix build logic as easily as possibl
 
 To ensure a Microflow is visible in the toolbox, you can specify this in the **Expose as microflow action** section of the Microflow properties. This is only available upon right clicking in the whitespace of your Microflow canvas. Additionally, you can specify a caption for the action, a category for the toolbox and an icon. These will be used in the toolbox, and also in the microflows, so these will be easy to read for your user:
 
-{{< figure src="/attachments/appstore/creating-content/connector-guide-best=practices/microflow-action.png" >}}
+{{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/microflow-action.png" >}}
 
 After this is exposed as microflow action, this can be dragged and dropped inside another microflow.
 
@@ -231,27 +231,27 @@ When using Constants in combination with a sandbox, you can use the settings pro
 
 1.   Create a [constant](/refguide/constants/).
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best=practices/simple-config-constant.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/simple-config-constant.png" >}}
 
 2.   Set the value of the constant to the value you want to use in your Free Cloud Node.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best=practices/simple-config-value.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/simple-config-value.png" >}}
 
 3.   Open your application Settings and lookup your Configurations. Click **Duplicate** or **New** to create a new configuration for your local usage.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best=practices/simple-config-settings.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/simple-config-settings.png" >}}
 
 4.   In your configuration, open the **Constants** tab and click **New**.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best=practices/simple-config-new-constants.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/simple-config-new-constants.png" >}}
 
 5.   Look up and select your constant.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best=practices/simple-config-select-constant.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/simple-config-select-constant.png" >}}
 
 6.   Change the configuration value of your constant to the value you want to use on your local environment.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best=practices/simple-config-change-value.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/simple-config-change-value.png" >}}
 
 7.   Save all configuration and publish your application to your Free Node. When you run locally, Studio Pro will now use the **Active** configuration, while the Free Node will keep using the value you specified in the **App Explorer**.
 
@@ -279,19 +279,19 @@ The following steps walk you through complex configuration:
 
 1.   Set up a **Configuration** entity.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best=practices/complex-config-entity.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/complex-config-entity.png" >}}
 
 2.   Create the microflow.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best=practices/complex-config-create-microflow" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/complex-config-create-microflow" >}}
 
      Have a single microflow called **DS_GetOrCreateSettings** that is the only place in your application to acquire your settings. This microflow would retrieve your settings from the database and creates it if this does exist with appropriate default values.
 
 3.   Set up security on the microflow and entity.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best=practices/complex-config-security.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/complex-config-security.png" >}}
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best=practices/complex-config-security.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/complex-config-security.png" >}}
 
 4.   Set up the administrator page.
 

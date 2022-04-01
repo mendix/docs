@@ -107,7 +107,7 @@ String *(default)* | A text containing letters, spaces, numbers and other charac
 | --- | --- | --- | --- |
 | 1 MB | 1 GB | 2 GB | 128 TB or limited by hard disk of server |
 
-<sup><small>[2]</small></sup> Internally, Mendix always uses a long integer, but you will get an error if you assign a value outside the permitted values for an integer to an integer attribute.
+<sup><small>[2]</small></sup> You will get an error if you assign a value outside the permitted values for an integer to an integer attribute.
 
 **Example**
 

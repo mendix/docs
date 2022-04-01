@@ -1,5 +1,5 @@
 ---
-title: "Mendix Solution "
+title: "Mendix Solution Vendor & Startup Programs"
 url: /appstore/creating-content/sol-vendor-programs/
 linktitle: "Solution Vendor & Startup Programs"
 parent: "sol-solutions-guide"

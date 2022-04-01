@@ -94,7 +94,7 @@ To start setting up your app, open Studio Pro and do the following:
 3.  Give your module a name fitting for the type of connector you are building.
 4.  Create the basic folder structure at root level. 
 
-For best practices, see the [App Setup: Best Practices](/appstore/creating-content/connector-guide-best-practices/#app-setup/) section of *Best Practices for Building Connectors*.
+For best practices, see the [App Setup: Best Practices](/appstore/creating-content/connector-guide-best-practices/#app-setup) section of *Best Practices for Building Connectors*.
 
 ### 3.2 Implementing the Connector {#implement}
 

@@ -7,7 +7,7 @@ tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "best
 
 ## 1 Introduction
 
-In [Building Connectors](/app-store/creating-content/connector-guide-build), you learned about the background and basic steps of building connectors. This guide will go into more detail and explore recommended practices for building, testing, and distributing connectors. 
+In [Building Connectors](/app-store/creating-content/connector-guide-build/), you learned about the background and basic steps of building connectors. This guide will go into more detail and explore recommended practices for building, testing, and distributing connectors. 
 
 ## 2 App Setup: Best Practices {#app-setup}
 
@@ -15,7 +15,7 @@ This section dives into best practices for setting up your app in Studio Pro. Fo
 
 ### 2.1 Studio Pro Version
 
-Use the oldest version of the Studio Pro modeler that still seamlessly upgrades to the latest release. For people to use your connector, ensure that you are not only servicing towards those that have the latest version. Try to support at least the latest [LTS](/releasenotes/studio-pro/lts-mts), or if possible even older (as long as Mendix still supports that version). 
+Use the oldest version of the Studio Pro modeler that still seamlessly upgrades to the latest release. For people to use your connector, ensure that you are not only servicing towards those that have the latest version. Try to support at least the latest [LTS](/releasenotes/studio-pro/lts-mts/), or if possible even older (as long as Mendix still supports that version). 
 
 The only reason to deviate from this is when your connector requires a certain platform functionality that is only available in a newer version, or requires another module that is only available on a newer version. In that case, use that newer version as your Mendix required version.
 
@@ -33,7 +33,7 @@ We recommend that the *main module* for your connector include the following:
 
 * **_Docs** (folder) – Contains documentation or a reference to documentation and a version indicator
     * `ReadMe` (snippet) – used to give a reference to documentation and/or some direct documentation on how to use the module
-    * `[ModuleName]_Version` (string constant) – replace the [ModuleName] part with your module name and fill the value with the version of the module using the same standard as the Mendix Marketplace 1.2.3 (see the [Versioning](#72-versioning-versioning) section below)
+    * `[ModuleName]_Version` (string constant) – replace the [ModuleName] part with your module name and fill the value with the version of the module using the same standard as the Mendix Marketplace 1.2.3 (see the [Versioning](#versioning) section below)
         * As an alternative to the version constant, you can place a sub-folder with the version indication.
 * **Private** (folder)– indicates what other developers should not touch when implementing your module by placing all of that logic in this folder
 * **UseMe** (folder) – contains everything the implementing developer could use to implement your module in their application, and might include subfolders for **Microflows**, **Pages**, **Snippets**, **Templates**, and **Constants**
@@ -283,7 +283,7 @@ The following steps walk you through complex configuration:
 
 2.   Create the microflow.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/complex-config-create-microflow" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/complex-config-create-microflow.png" >}}
 
      Have a single microflow called **DS_GetOrCreateSettings** that is the only place in your application to acquire your settings. This microflow would retrieve your settings from the database and creates it if this does exist with appropriate default values.
 
@@ -354,7 +354,7 @@ You can test Mendix by calling microflows with the [UnitTesting](https://marketp
 As with any automated testing, it is a great supplement for capturing known, expected behavior. For capturing known unknowns and unknown unknowns, we recommend risk-based exploratory testing.
 
 ### 6.1 Testing Microflows
-Use the Mendix app where you built the module to test your module. The [UnitTesting](https://marketplace.mendix.com/link/component/390) module can help call microflows and actions to aid in testing. You can learn more about [Unit Testing](/howto/teting/testing-microflows-using-the-unittesting-module/) in the Mendix documentation.
+Use the Mendix app where you built the module to test your module. The [UnitTesting](https://marketplace.mendix.com/link/component/390) module can help call microflows and actions to aid in testing. You can learn more about [Unit Testing](/appstore/modules/unit-testing/) or learn [How to Test Microflows Using the Unit Testing Module](/howto/testing/testing-microflows-using-the-unittesting-module/) in the Mendix documentation.
 
 ### 6.2 Java Unit Tests {#unit-testing}
 Java unit tests are a good way to automate the testing of your Java code. This is helpful when you extend your Mendix app or connector with Java actions.

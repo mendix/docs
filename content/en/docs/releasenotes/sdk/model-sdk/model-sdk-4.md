@@ -2,6 +2,7 @@
 title: "4"
 url: /releasenotes/sdk/model-sdk-4/
 parent: "model-sdk"
+weight: 100
 #When updating, remember to update the Latest Mendix Releases file
 ---
 

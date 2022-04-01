@@ -2,6 +2,7 @@
 title: "9.12"
 url: /releasenotes/sdk/metamodel-9.12/
 parent: "metamodel-9"
+weight: 88
 ---
 
 ## 9.12.0

@@ -132,7 +132,10 @@
     }
 
     &__inner {
-        order: 0;
+                order: 0;
+                overflow-y: auto;
+                max-height: 100vh;
+                scrollbar-width: none;
 
         @include media-breakpoint-up(md) {
             @supports (position: sticky) {

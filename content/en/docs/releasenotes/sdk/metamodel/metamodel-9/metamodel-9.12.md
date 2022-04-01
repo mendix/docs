@@ -6,6 +6,8 @@ parent: "metamodel-9"
 
 ## 9.12.0
 
+**Release date: March 21st, 2022**
+
 ### DomainModels
 
 #### RemoteEntitySource (Element)

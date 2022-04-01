@@ -7,7 +7,7 @@ tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "best
 
 ## 1 Introduction
 
-In [Building Connectors](/app-store/creating-content/connector-guide-build/), you learned about the background and basic steps of building connectors. This guide will go into more detail and explore recommended practices for building, testing, and distributing connectors. 
+In [Building Connectors](/appstore/creating-content/connector-guide-build/), you learned about the background and basic steps of building connectors. This guide will go into more detail and explore recommended practices for building, testing, and distributing connectors. 
 
 ## 2 App Setup: Best Practices {#app-setup}
 

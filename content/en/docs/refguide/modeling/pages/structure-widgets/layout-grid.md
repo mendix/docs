@@ -191,6 +191,12 @@ To add a new column, do the following:
 
 A new column is added, the weight 1 is automatically set for it. 
 
+{{% alert color="info" %}}
+
+For native pages only - Sometimes on a native page,  data is not clearly visible on your device when using a native layout grid, it’s better to nest layout grid inside the scroll container to see the data clearly.
+
+{{% /alert %}}
+
 ### 5.2 Performing Other Actions on Rows
 
 In adding to inserting a new row, you can perform the following actions when right-clicking a row:

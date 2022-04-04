@@ -10,6 +10,9 @@ aliases:
     - /developerportal/howto/how-to-link-a-different-app-to-a-node.html
     - /developerportal/howto/how-to-link-app-to-node.html
     - /mendixcloud/how-to-link-app-to-node.html
+    - /developerportal/howto/how-to-link-a-different-app-to-a-node
+    - /developerportal/howto/how-to-link-app-to-node
+    - /mendixcloud/how-to-link-app-to-node
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

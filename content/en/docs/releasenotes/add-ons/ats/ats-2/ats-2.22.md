@@ -2,6 +2,7 @@
 title: "2.22"
 url: /releasenotes/add-ons/ats-2.22/
 parent: "ats-2"
+weight: 78
 ---
 
 ## 2.22

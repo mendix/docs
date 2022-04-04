@@ -1,5 +1,6 @@
 ---
 title: "Mendix Cloud HTTP Request Headers"
+linktitle: "HTTP Request Headers"
 url: /developerportal/deploy/mendix-cloud-request-headers/
 parent: "mendix-cloud-deploy"
 weight: 36

@@ -7,6 +7,7 @@ description: "Describes the Open Project (app) flow and the Open App dialog box"
 tags: ["studio pro", "open app", "open project"]
 aliases:
     - /refguide8/open-project-dialog.html
+    - /refguide8/open-project-dialog
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

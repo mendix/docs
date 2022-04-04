@@ -7,6 +7,7 @@ weight: 10
 aliases:
     - /data-hub/data-hub-catalog/use-data-catalog.html
     - /datahub/general/share-data/index.html
+    - /data-hub/data-hub-catalog/use-data-catalog
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -14,7 +15,7 @@ aliases:
 
 This how-to will demonstrate how easy it is to build apps using data from different sources using Mendix Data Hub. The steps describe the following: 
 
-* Create a simple app in Mendix Studio Pro
+* Create an app in Mendix Studio Pro
 * Publish an entity from the app and register it in the Data Hub Catalog 
 * Use the Data Hub Catalog to explore the data sources from the organization that are registered as assets 
 * Connect to the registered asset that you published earlier and use it in a new app
@@ -22,7 +23,7 @@ This how-to will demonstrate how easy it is to build apps using data from differ
 * See the network of shared data in the Data Hub Landscape
 
 {{% alert color="info" %}}
-To use the Mendix Data Hub a license is required. The license enables you to discover all the shared assets that are registered in your organization and also use the Data Hub integration in Studio Pro to consume the shared datasets for building apps. For more information, see the [Data Hub License Limitations](/refguide/consumed-odata-service-requirements/#license-limitations) section of *Consumed OData Service Requirements*.
+For more information on the limits of a Data Hub license, see the [Data Hub License Limitations](/refguide/consumed-odata-service-requirements/#license-limitations) section of *Consumed OData Service Requirements*.
 {{% /alert %}}
 
 ## 2 Prerequisites

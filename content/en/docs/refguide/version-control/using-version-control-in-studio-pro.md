@@ -343,9 +343,9 @@ Studio Pro takes care of some file management automatically. If you add or remov
 
 We advise you to always commit and update inside Studio Pro because in this way useful metadata is added to your revisions. Studio Pro has ways to recover from external updates or merges but it is best to not depend on that.
 
-### 9.1 TortoiseSVN & Subclipse {#tortoisesvn-subclipse}
+### 9.1 External Tools {#external-tools}
 
-If you are doing more advanced changes to files, like adding Java actions or resources to your app, you will have to install TortoiseSVN on your computer and perform some operations yourself. You can download it for free at [https://tortoisesvn.net/](https://tortoisesvn.net/).
+If you are doing more advanced changes to files, like adding Java actions or resources to your app, you will have to install a separate tool on your computer and perform some operations yourself. When using SVN, use TortoiseSVN [https://tortoisesvn.net/](https://tortoisesvn.net/). When using Git, use TortoiseGit [https://tortoisegit.org/](https://tortoisegit.org/). Both can be downloaded for free.
 
 {{% alert color="warning" %}}
 Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.
@@ -353,42 +353,52 @@ Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the
 Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
 {{% /alert %}}
 
-Also, if you are developing Java actions using Eclipse, we advise you to install Subclipse to help you with version control of Java files. You can download Subclipse from the Eclipse Marketplace inside Eclipse or from [http://subclipse.tigris.org/](http://subclipse.tigris.org/).
+### 9.2 Authenticating to Team Server
 
-### 9.2 Adding Files & Directories
+When using external tools, you might be asked to authenticate separately to Team Server.
+
+Connecting to Git is done via a Personal Access Token (PAT). For more information on how to create a PAT, see [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/) in the *Developer Portal Guide*. When connecting, your username is your Mendix account username, and your password is the Personal Access Token you created. Alternatively, you can use the word *pat* as your username.
+
+Connecting to SVN is done with your Mendix credentials.
+
+### 9.3 Adding Files & Directories
 
 If you add files or directories or delete files using Windows Explorer, Studio Pro automatically adds or deletes these from version control, too.
 
-Make sure you use the SVN export feature of TortoiseSVN if you are copying a directory that is already under version control into your app.
+Make sure you use the **Export** feature of TortoiseSVN/TortoiseGit if you are copying a directory that is already under version control in your app.
 
-### 9.3 Deleting Files & Directories
+### 9.4 Deleting Files & Directories
 
 If you delete a file from your app, Studio Pro will automatically also delete it from the Team Server.
 
-If you want to delete a whole directory, you will have to use the delete command of TortoiseSVN. You can execute this command by right-clicking the directory and choosing 'TortoiseSVN > Delete'.
+If you are using SVN and want to delete a whole directory, you have to use the delete command of TortoiseSVN. You can execute this command by right-clicking the directory and choosing **TortoiseSVN** > **Delete**. 
 
-### 9.4 Branching & Deploying
+When using Git, a folder is no longer be tracked if all the files in the folder are removed.
+
+
+### 9.5 Branching & Deploying
 
 If you perform branching outside of Studio Pro, you will not be able to immediately deploy to Mendix Cloud. That is because Studio Pro adds metadata about the Mendix version of your app to each revision when you commit or create a branch, which is needed by the Mendix Cloud deployment. Branching outside of Studio Pro means that metadata is missing from your branch, thus your app cannot successfully be deployed.
 
 To fix this, make a small commit on your branch in Studio Pro (for example, changing a documentation field). Studio Pro will then add the metadata that Mendix Cloud deployment requires, and you will be able to deploy your app.
 
-### 9.5 Reverting Accidental Studio Pro App Model Upgrade
+### 9.6 Reverting Accidental Studio Pro App Model Upgrade
 
 When working in different apps with different Studio Pro versions, you may one day find yourself with an app model upgraded and committed to a newer Studio Pro version, while the the rest of your team is not yet ready to upgrade. 
 
-To revert this version upgrade of the app model, follow these steps:
+To revert this version upgrade of the app model, follow these steps, using either TortoiseGit or TortoiseSVN depending on your repository type:
 
 1. Inform your team of the situation and prevent them from making further commits.
 2. Close Studio Pro. 
 3. In Windows Explorer, go to your main app directory.
-4. Right-click the directory and select **TortoiseSVN** > **Show log**. 
-5. In SVN, find the latest revision that was in the desired Studio Pro version.
-6. Right-click that revision, select **Revert to this version**, confirm, and click **OK**.
-7. Back in Windows Explorer, right-click the folder again, select **TortoiseSVN** > **Commit**, enter your commit message, and click **OK**.
-8. Start the desired Studio Pro version and download the app from Team Server.
-9. Check that everything is okay in your app.
-10. Inform your team that they need to do a fresh checkout of the app or run **TortoiseSVN** > **Update** on their app folder before opening the app in the desired Studio Pro version again.
+4. Right-click the directory and select **Tortoise(Git/SVN)** > **Show log**. 
+5. Find the latest revision that was in the desired Studio Pro version.
+6. When using TortoiseGit, select all revisions up to but excluding the desired revision. Right-click and select **Revert changes by these commits**, then confirm and click **Yes**. 
+    When using TortoiseSVN, right-click that the desired revision, select **Revert to this version**, confirm, and click **OK**.
+8. Back in Windows Explorer, right-click the folder again, select **TortoiseSVN** > **Commit**, enter your commit message, and click **OK**.
+9. Start the desired Studio Pro version and download the app from Team Server.
+10. Check that everything is okay in your app.
+11. Inform your team that they need to do a fresh checkout of the app or run **TortoiseSVN** > **Update** on their app folder before opening the app in the desired Studio Pro version again.
 
 ## 10 Read More
 

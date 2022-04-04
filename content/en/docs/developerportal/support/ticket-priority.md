@@ -12,7 +12,7 @@ tags: ["support", "request", "impact", "urgency"]
 
 The priority levels are based on the impact and urgency of the request.
 
-## 2 Prioritization
+## 2 Prioritization
 
 | Impact  | Description |
 | ------- | ------- |

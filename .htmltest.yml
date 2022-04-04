@@ -13,7 +13,7 @@ CheckMailto: false
 CheckScripts: false
 CheckTel: false
 IgnoreAltMissing: true
-IgnoreDirectoryMissingTrailingSlash: true
+IgnoreDirectoryMissingTrailingSlash: false
 IgnoreDirs:
 - "_includes"
 - "_print"

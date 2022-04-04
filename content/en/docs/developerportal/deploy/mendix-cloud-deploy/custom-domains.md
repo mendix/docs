@@ -8,6 +8,8 @@ tags: ["Custom Domain","Mendix Cloud","Developer Portal", "certificates"]
 aliases:
     - /mendixcloud/custom-domains.html
     - /howtogeneral/mendixcloud/custom-domains.html
+    - /mendixcloud/custom-domains
+    - /howtogeneral/mendixcloud/custom-domains
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #Linked from Developer Portal > Environments > Custom Domains

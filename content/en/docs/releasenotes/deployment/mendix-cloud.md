@@ -13,6 +13,28 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### March 31st, 2022
+
+#### Improvements
+
+* We now show deactivated users on the [Node Permissions](/developerportal/deploy/node-permissions/) page for consistency with the [Team](/developerportal/collaborate/team/) page.
+
+### March 30th, 2022
+
+#### Improvements
+
+* We have implemented a Web Application Firewall (WAF) service for Free Apps deployed to the Mendix Cloud.
+
+    The Web Application Firewall (WAF) is a security service that protects applications from malicious and unwanted internet traffic without modifying your application code. WAF for Free Apps addresses various attack categories including many high risk and commonly occurring vulnerabilities described in OWASP publications such as [OWASP Top 10](https://owasp.org/www-project-top-ten/). These include the following:
+    
+    * Cross site scripting
+    * HTTP protocol violations
+    * Bots, crawlers, and scanners
+    * HTTP Denial of Service
+    * Server-side request forgery
+    * Local File Inclusion
+    * Log4j remote code execution
+
 ### March 3rd, 2022
 
 #### Fixes
@@ -44,7 +66,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 #### Improvements
 
 * We added log entries to the activity log to record changes to members of the app team and any changes to the [permissions](/developerportal/deploy/node-permissions/) that team members have.
-* We now display any documentation associated with [scheduled events](/refguide/scheduled-events/#common-properties) in the [Model Options tab](/developerportal/deploy/environments-details/#model-options) of the environment details.
+* We now display any documentation associated with [scheduled events](/refguide/scheduled-events-legacy/#common-properties) in the [Model Options tab](/developerportal/deploy/environments-details/#model-options) of the environment details.
 
 #### Fixes
 

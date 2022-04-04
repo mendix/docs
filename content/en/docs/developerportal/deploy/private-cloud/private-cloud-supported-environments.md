@@ -35,8 +35,8 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 
 Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
-* Kubernetes versions 1.19 through 1.22
-* OpenShift 4.6 through 4.8
+* Kubernetes versions 1.19 through 1.23
+* OpenShift 4.6 through 4.10
 
 {{% alert color="warning" %}}
 Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
@@ -175,7 +175,6 @@ A standard PostgreSQL database is an unmodified PostgreSQL database installed fr
 The following managed PostgreSQL databases are supported:
 
 * [Amazon RDS for PostgreSQL](https://aws.amazon.com/rds/postgresql/) 
-* [Amazon Aurora PostgreSQL](https://aws.amazon.com/rds/aurora/)
 * [Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/services/postgresql/).
 * [Google Cloud SQL for PostgreSQL](https://cloud.google.com/sql/docs/postgres).
 

@@ -175,7 +175,7 @@ You can make your emails comply with [Domain-based Message Authentication, Repor
 
 You can configure your environments with email addresses that you wish to use to send emails by using the Communication Services Console. 
 
-{{% alert type="info" %}}For paid subscriptions, customers can configure up to 5 **from** email addresses. For trial subscriptions, customers can configure at most 1 **from** email address.{{% /alert %}}
+{{% alert type="info" %}}For paid subscriptions, customers can configure up to 5 **From** email addresses in the **Send Email** dialog box. For trial subscriptions, customers can configure at most 1 **From** email address in the **Send Email** dialog box.{{% /alert %}}
 
 {{< figure src="/attachments/appstore/app-services/email-service/console.png" >}}
 

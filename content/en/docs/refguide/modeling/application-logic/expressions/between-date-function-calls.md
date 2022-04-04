@@ -29,7 +29,7 @@ The output is described in the table below:
 
 | Value                                                        | Type    |
 | ------------------------------------------------------------ | ------- |
-| The difference between the two dates measured in milliseconds | Positive Decimal |
+| The difference between the two dates measured in milliseconds | Non-negative Decimal |
 
 ### 2.3 Example
 
@@ -64,7 +64,7 @@ The output is described in the table below:
 
 | Value                                                     | Type    |
 | --------------------------------------------------------- | ------- |
-| The difference between the two dates measured in seconds. | Positive Decimal |
+| The difference between the two dates measured in seconds. | Non-negative Decimal |
 
 ### 3.3 Example
 
@@ -99,7 +99,7 @@ The output is described in the table below:
 
 | Value                                                     | Type    |
 | --------------------------------------------------------- | ------- |
-| The difference between the two dates measured in minutes. | Positive Decimal |
+| The difference between the two dates measured in minutes. | Non-negative Decimal |
 
 ### 4.3 Example
 
@@ -134,7 +134,7 @@ The output is described in the table below:
 
 | Value                                                   | Type    |
 | ------------------------------------------------------- | ------- |
-| The difference between the two dates measured in hours. | Positive Decimal |
+| The difference between the two dates measured in hours. | Non-negative Decimal |
 
 ### 5.3 Example
 
@@ -169,7 +169,7 @@ The output is described in the table below:
 
 | Value                                                        | Type             |
 | ------------------------------------------------------------ | ---------------- |
-| The difference between the two dates as a positive Decimal measured in days. Time is taken into consideration, so comparing `date-x 0:00` with `date-x 06:00` will result in `0.25000000`. | Positive Decimal |
+| The difference between the two dates as a non-negative Decimal measured in days. Time is taken into consideration, so comparing `date-x 0:00` with `date-x 06:00` will result in `0.25000000`. | Non-negative Decimal |
 
 ### 6.3 Example
 
@@ -204,7 +204,7 @@ The output is described in the table below:
 
 | Value                                                   | Type    |
 | ------------------------------------------------------- | ------- |
-| The difference between the two dates measured in weeks. | Positive Decimal |
+| The difference between the two dates measured in weeks. | Non-negative Decimal |
 
 ### 7.3 Example
 
@@ -239,7 +239,7 @@ The output is described in the table below:
 
 | Value                                                    | Type            |
 | -------------------------------------------------------- | --------------- |
-| The difference between the two dates measured in months. | Positive Integer/Long    |
+| The difference between the two dates measured in months. | Non-negative Integer/Long    |
 
 ### 8.3 Example
 
@@ -274,7 +274,7 @@ The output is described in the table below:
 
 | Value                                                   | Type            |
 | ------------------------------------------------------- | --------------- |
-| The difference between the two dates measured in years. | Positive Integer/Long    |
+| The difference between the two dates measured in years. | Non-negative Integer/Long    |
 
 ### 9.3 Example
 

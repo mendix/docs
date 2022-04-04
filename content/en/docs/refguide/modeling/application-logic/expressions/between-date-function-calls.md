@@ -8,7 +8,7 @@ tags: ["studio pro", "between date function calls", "expression", "expressions"]
 
 ## 1 Introduction
 
-Between date function calls calculate the differences between two dates.
+Between date function calls calculate the absolute differences between two dates. The difference will always be zero or a positive number.
 
 ## 2 millisecondsBetween
 
@@ -29,19 +29,19 @@ The output is described in the table below:
 
 | Value                                                        | Type    |
 | ------------------------------------------------------------ | ------- |
-| The difference between the two dates measured in milliseconds | Decimal |
+| The difference between the two dates measured in milliseconds | Positive Decimal |
 
 ### 2.3 Example
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 millisecondsBetween(dateTime(2007, 1, 1, 1, 1, 1), dateTime(2007,1,1,1,1,3))
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 2000
 ```
 
@@ -64,19 +64,19 @@ The output is described in the table below:
 
 | Value                                                     | Type    |
 | --------------------------------------------------------- | ------- |
-| The difference between the two dates measured in seconds. | Decimal |
+| The difference between the two dates measured in seconds. | Positive Decimal |
 
 ### 3.3 Example
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 secondsBetween(dateTime(2007, 1, 1, 1, 1, 1), dateTime(2007,1,1,1,2,3))
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 62
 ```
 
@@ -99,19 +99,19 @@ The output is described in the table below:
 
 | Value                                                     | Type    |
 | --------------------------------------------------------- | ------- |
-| The difference between the two dates measured in minutes. | Decimal |
+| The difference between the two dates measured in minutes. | Positive Decimal |
 
 ### 4.3 Example
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 minutesBetween(dateTime(2007, 1, 1, 1, 2, 1), dateTime(2007,1,1,1,1,1))
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 1
 ```
 
@@ -134,19 +134,19 @@ The output is described in the table below:
 
 | Value                                                   | Type    |
 | ------------------------------------------------------- | ------- |
-| The difference between the two dates measured in hours. | Decimal |
+| The difference between the two dates measured in hours. | Positive Decimal |
 
 ### 5.3 Example
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 hoursBetween(dateTime(2007, 1, 1, 3, 31, 1), dateTime(2007,1,1,1,1,1))
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 2.5
 ```
 
@@ -169,19 +169,19 @@ The output is described in the table below:
 
 | Value                                                        | Type             |
 | ------------------------------------------------------------ | ---------------- |
-| The difference between the two dates as a positive Decimal measured in days. Time is taken into consideration, so comparing `date-x 0:00` with `date-x 06:00` will result in `0.25000000`. | Positive decimal |
+| The difference between the two dates as a positive Decimal measured in days. Time is taken into consideration, so comparing `date-x 0:00` with `date-x 06:00` will result in `0.25000000`. | Positive Decimal |
 
 ### 6.3 Example
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 daysBetween(dateTime(2007, 2, 13, 1, 1, 1), dateTime(2007,1,1,1,1,1))
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 43
 ```
 
@@ -204,19 +204,19 @@ The output is described in the table below:
 
 | Value                                                   | Type    |
 | ------------------------------------------------------- | ------- |
-| The difference between the two dates measured in weeks. | Decimal |
+| The difference between the two dates measured in weeks. | Positive Decimal |
 
 ### 7.3 Example
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 weeksBetween(dateTime(2007, 1, 9, 1, 1, 1), dateTime(2007,1,1,1,1,1))
 ```
 
 The output results in 8 days divided by 7 days in a week:
 
-```java
+```java {linenos=false}
 1.1428571428571428
 ```
 
@@ -239,19 +239,19 @@ The output is described in the table below:
 
 | Value                                                    | Type            |
 | -------------------------------------------------------- | --------------- |
-| The difference between the two dates measured in months. | Integer/Long    |
+| The difference between the two dates measured in months. | Positive Integer/Long    |
 
 ### 8.3 Example
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 calendarMonthsBetween(dateTime(2007, 1, 1, 10, 1, 1), dateTime(2007, 8, 1, 1, 1, 1))
 ```
 
 The output results in the amount of months between the two dates:
 
-```java
+```java {linenos=false}
 7
 ```
 
@@ -274,18 +274,18 @@ The output is described in the table below:
 
 | Value                                                   | Type            |
 | ------------------------------------------------------- | --------------- |
-| The difference between the two dates measured in years. | Integer/Long    |
+| The difference between the two dates measured in years. | Positive Integer/Long    |
 
 ### 9.3 Example
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 calendarYearsBetween(dateTime(2007, 1, 1, 10, 1, 1), dateTime(2017, 1, 1, 1, 1, 1))
 ```
 
 The output results in the amount of years between the two dates:
 
-```java
+```java {linenos=false}
 10
 ```

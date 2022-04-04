@@ -159,14 +159,14 @@ Mendix tries to support the most recent and patched database server versions fro
 
 Current support:
 
-* [IBM DB2](/refguide/db2/) 11.1 and 11.5 for Linux, Unix, and Windows
+* [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 140 or higher
 * [MariaDB](/refguide/mysql/) 10.2, 10.3, 10.4, 10.5, 10.6
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/) 2017, 2019
-* [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 140 or higher
 * [MySQL](/refguide/mysql/) 8.0
 * [Oracle Database](/refguide/oracle/) 19
 * PostgreSQL 10, 11, 12, 13, 14
 * [SAP HANA](/refguide/saphana/) 2.00.040.00.1545918182
+* [IBM DB2](/refguide/db2/) 11.5 for Linux, Unix, and Windows — *Support for DB2 is deprecated and [will be removed in Mendix version 10](/releasenotes/studio-pro/9.12/#deprecations)*
 
 {{% alert color="warning" %}}
 Each app must have its own database. Mendix apps cannot share data by sharing the same database.

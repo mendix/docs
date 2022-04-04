@@ -1,0 +1,109 @@
+---
+title: "AppDynamics for the Mendix Cloud"
+url: /developerportal/operate/appdynamics-metrics/
+parent: "metrics"
+weight: 10
+description: "How to configure Mendix Cloud v4 to enable monitoring and analysis with AppDynamics."
+tags: ["AppDynamics", "Mendix Cloud", "v4", "monitoring", "analysis"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
+---
+
+## 1 Introduction
+
+[AppDynamics](https://www.appdynamics.com/) is a monitoring and analysis tool for cloud applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform. This document explains how to configure your Mendix Cloud v4 app to send data to AppDynamics to provide additional monitoring.
+
+{{% alert color="info" %}}
+AppDynamics logging and application metrics are supported in Mendix version 6.2 and above.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+AppDynamics is not supported in the deprecated Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
+{{% /alert %}}
+
+For more information on the data you can send to AppDynamics, see [Monitoring Your Mendix Apps with Saas](/developerportal/operate/monitoring-with-saas/)
+
+## 2 Prerequisites
+
+To use AppDynamics, and to send data to AppDynamics from your Mendix app, you will need the following:
+
+* Access to a  cloud- or self-hosted AppDynamics controller
+* The following information about AppDynamics
+    * The account name and access key for your AppDynamics account
+    * The hostname or IP address of your AppDynamics controller
+
+## 3 Connect Node to AppDynamics{#connect-node}
+
+To send your runtime information to AppDynamics, you need to set it up using environment variables in the Developer Portal.
+
+1. Go to the **Environments** page of your app in the *Developer Portal*.
+2. Click **Details** to select the environment you wish to monitor with AppDynamics. 
+3. Open the **Runtime** tab.
+4. Add the following **Custom Environment Variable**s.
+    1. APPDYNAMICS_CONTROLLER_PORT
+
+        The HTTP(S) port of the AppDynamics Controller. This is the port used to access the AppDynamics browser-based user interface. If **APPDYNAMICS_CONTROLLER_SSL_ENABLED** is set to `true`, specify the HTTPS port of the Controller; otherwise specify the HTTP port.
+
+    2. APPDYNAMICS_CONTROLLER_SSL_ENABLED
+
+        Set to `true` if the agent should use SSL (HTTPS) to connect to the controller.
+
+    3. APPDYNAMICS_CONTROLLER_HOST_NAME
+
+        The hostname or the IP address of the AppDynamics Controller. Example values are 192.168.1.22 or myhost or myhost.example.com. This is the same host that you use to access the AppDynamics browser-based user interface.
+        
+        For an on-premises Controller, use the value for Application Server Host Name that was configured when the Controller was installed. If you are using the AppDynamics SaaS Controller service, see the Welcome email from AppDynamics.
+
+    4. APPDYNAMICS_AGENT_APPLICATION_NAME
+    5. APPDYNAMICS_AGENT_ACCOUNT_NAME
+    6. APPDYNAMICS_AGENT_ACCOUNT_ACCESS_KEY
+    7. APPDYNAMICS_AGENT_NODE_NAME
+
+        This is how you will identify which app the metrics are coming from. We recommend using the app name.
+
+    8. APPDYNAMICS_AGENT_TIER_NAME
+    9. {{% todo %}}[Set log level?]{{% /todo %}}
+
+5.  Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
+
+	{{% alert color="warning" %}}Your app must be **redeployed** before it is started as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to AppDynamics.{{% /alert %}}
+
+## 4 Additional Information{#additional-info}
+
+### 4.1 Apps with Multiple Instances
+
+The APPDYNAMICS_AGENT_NODE_NAME environment variable will be appended with the value of the CF_INSTANCE_ID variable. If you use my-app for APPDYNAMICS_AGENT_NODE_NAME, the AppDynamics agent will be configured as my-app-0 for instance 0 and my-app-1 for instance 1 , etc.
+
+{{% todo %}}[Is an instance appended for single-instance apps?]{{% /todo %}}
+
+### 4.7 AppDynamics Agent not Started
+
+If you configure your app for AppDynamics but the AppDynamics agent is not started, the events will be sent to the app log files.
+
+### 4.8 AppDynamics Issues
+
+If you have any issues related to accessing AppDynamics, please contact their support here: [Support | AppDynamics](https://help.appdynamics.com/hc/en-us/requests/). You will need an AppDynamics account to request support.
+
+### 4.10 Tagging AppDynamics Metrics
+
+Mendix does not send additional tags to AppDynamics to indicate Resource, Microflow, or Activity names. It is also not possible to add custom tags to the metrics you send to AppDynamics.
+
+### 4.11 AppDynamics Java Agent
+
+Mendix will use AppDynamics Java Agent version 21.11.1.33280.
+
+### 4.12 AppDynamics Default Values
+
+Mendix does not provide any default values. If any of the following environment variables are set for your app, you will need to provide all of them:
+
+* APPDYNAMICS_CONTROLLER_PORT
+* APPDYNAMICS_CONTROLLER_SSL_ENABLED
+* APPDYNAMICS_CONTROLLER_HOST_NAME
+* APPDYNAMICS_AGENT_APPLICATION_NAME
+* APPDYNAMICS_AGENT_ACCOUNT_NAME
+* APPDYNAMICS_AGENT_ACCOUNT_ACCESS_KEY
+* APPDYNAMICS_AGENT_NODE_NAME
+* APPDYNAMICS_AGENT_TIER_NAME
+
+## 5 Read More
+
+* [Metrics](/developerportal/operate/metrics/)

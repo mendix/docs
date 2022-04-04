@@ -62,7 +62,7 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
     {{< figure src="/attachments/studio-how-to8/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/list-view-list4.png" >}} 
 
 10. Delete the following elements from the list view:<br/>
-    a. The **TEXT** widget with the subtitle. <br/>
+    a. The **TEXT** widget with the subtitle. <br/>
     b. The **IMAGE** widget.<br/>
 11. Open the **Properties** of the **Details** button, and do the following:<br/>
     a. Set **Events**>**On Click Action** to **Microflow**.<br/>

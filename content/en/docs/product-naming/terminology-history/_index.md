@@ -113,10 +113,10 @@ Replaced by [Desktop Modeler](#dm) (and eventually [Mendix Studio Pro](/product-
 Replaced by [Mendix Runtime](/product-naming/other-terms/#runtime).
 {{% /alert %}}
 
-## Mendix Developer app, Mendix Mobile app
+## Mendix Mobile app
 
 {{% alert color="info" %}}
-Replaced by [Mendix mobile app](/product-naming/other-terms/#mendix-mobile-app).
+Replaced by [Mendix Developer App](/product-naming/other-terms/#mendix-mobile-app).
 {{% /alert %}}
 
 ## Mendix Model Share

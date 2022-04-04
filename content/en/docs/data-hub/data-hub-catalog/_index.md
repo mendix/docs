@@ -22,8 +22,8 @@ You can navigate to the following tabs:
 
 * **Home** – search in the Data Hub Catalog, manually register a service from different applications, select from the most popular services
 * **Catalog** – [search](/data-hub/data-hub-catalog/search/) for registered assets in the search pane and see details of the metadata of selected asset
-* **Landscape** – gain a graphical view of the organization's available services and exposed datasets showing consuming and publishing dependencies (for further details, see [Data Hub Landscape](/data-hub/data-hub-landscape/)
-* **Curate** – carry out [curate](/data-hub/data-hub-catalog/curate/) functions on registered assets to enrich the registered metdata and increase discoverability by relevant users
+* **Landscape** – gain a graphical view of the organization's available services and exposed datasets showing consuming and publishing dependencies (for further details, see [Data Hub Landscape](/data-hub/data-hub-landscape/))
+* **Curate** – carry out [curate](/data-hub/data-hub-catalog/curate/) functions on registered assets to enrich the registered metadata and increase discoverability
 
 From the **Home** screen, you can do the following:
 
@@ -39,7 +39,7 @@ The Data Hub integration is available in Studio Pro version 8.14 and above. To u
 
 ## 3 Using Mendix Data Hub
 
-The functionality of the Data Hub reflects the process of sharing data in an organization through application APIs from the different systems in an enterprise. The sections below describe the processes involved.
+The functionality of the Data Hub reflects the process of sharing data in an organization through APIs from different systems in an enterprise. The sections below describe the processes involved.
 
 ### 3.1 Search – Finding Connectable Data Sources
 
@@ -53,13 +53,13 @@ For more details, see [How to Search for Registered Assets](/data-hub/data-hub-c
 
 ### 3.2 Consume – Using Registered Datasets
 
-Registered assets in the Data Hub Catalog can be accessed in Mendix Studio Pro to [build apps](/refguide/modeling/). These external data sources are represented in the domain model as *external entities* which can be used with local entities with the difference that external entities connect to data that is maintained in the source application and therefore can only be read or consumed. Changes to this data is done in the originating apps.
+Registered assets in the Data Hub Catalog can be accessed in Mendix Studio Pro to [build apps](/refguide/modeling/). These external data sources are represented in the domain model as [external entities](/refguide/external-entities/) which can be used with local entities.
 
 For further information on consuming from the Data Hub Catalog, see [How to Consume Registered Assets](/data-hub/data-hub-catalog/consume/). For details on using shared entities in Studio Pro, see [Data Hub Pane](/refguide/data-hub-pane/) in the *Studio Pro Guide*.
 
 ### 3.3 Register – Sharing Datasets
 
-If you want to make the data from your apps available for use by others, you can publish the datasets in an OData service and register it in the Data Hub. In a Mendix app, the datasets are the **Entity sets** for a defined **Entity**. Using this REST-based protocol, metadata contracts defining the structure and documentation of the datasets that are included are registered. Further details such as the location of the data associated with a registered dataset are also captured: for Mendix app deploying to the Mendix cloud this information is taken during the deployment process. This information is also obtained during the process of [registering a service without Mendix Cloud](/data-hub/data-hub-catalog/register-data/).
+If you want to make the data from your apps available for use by others, you can publish the datasets in an OData service and register it in the Data Hub. In a Mendix app, the datasets are the **Entity sets** for a defined **Entity**. Using this REST-based protocol, metadata contracts defining the structure and documentation of the datasets that are included are registered. Further details such as the location of the data associated with a registered dataset are also captured. For Mendix apps deploying to the Mendix Cloud, this information is captured during the deployment process. This information can also be collected while [registering a service without Mendix Cloud](/data-hub/data-hub-catalog/register-data/).
 
 OData services can be registered in the Data Hub in the following ways:
 
@@ -69,21 +69,12 @@ OData services can be registered in the Data Hub in the following ways:
 
 ### 3.4 Curate – Maintaining Registered Assets
 
-Registered assets can be curated to ensure that they are discoverable by the relevant users. Findability of registered assets can be enhanced by adding tags and descriptions to the services. Further enhancements to the registered metadata such as specifying the app owners can also be performed.
+You can add tags and descriptions, edit app owners, and toggle discoverability to ensure the right people find your service. For more details, see [How to Curate Registered Assets](/data-hub/data-hub-catalog/curate/).
 
-For more details, see [How to Curate Registered Assets](/data-hub/data-hub-catalog/curate/).
-
-### 3.5 Data Accessibility and Security
-
-Mendix Data Hub enables organizations to manage the data that is shared from the different sources. Security of the shared datasets is crucial, and this includes access to the shared data and authentication of users.
-
-Registered users on the Mendix platform have access to Data Hub. However, to consume data through external entities in your Mendix app, you need a Data Hub license and the type of license that you have determines how much data you can consume. For more information, see the [Data Hub License Limitations](/refguide/consumed-odata-service-requirements/#license-limitations) section of *Consumed OData Service Requirements*.
-
-For details on security and accessibility in the Data Hub Catalog and for registered services and datasets, see [Data Accessibility and Security](/data-hub/data-hub-catalog/security/).
 
 ## 4 Information Available in the Data Hub Catalog
 
-In the Data Hub Catalog, all the information for registered assets is displayed in the [Catalog search details](/data-hub/data-hub-catalog/search/#search-details) screen. This information comes from the metadata in the OData service contract and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners and [Data Hub curators](/data-hub/#curator) and [Mendix Admins](/data-hub/#admin).
+In the Data Hub Catalog, all the information for registered assets is displayed in the [Catalog search details](/data-hub/data-hub-catalog/search/#search-details) screen. This information comes from the metadata in the OData service contract, and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners, [Data Hub curators](/data-hub/#curator), and [Mendix Admins](/data-hub/#admin).
 
 The information that is registered for data sources and exposed datasets are as follows:
 
@@ -91,13 +82,13 @@ The information that is registered for data sources and exposed datasets are as 
 * **Environment** – To complete the location of the asset, the endpoints are published to an environment. The location of the OData service also includes the environment to which the publishing app is deployed. Connecting to a data source in the correct environment is very important. For example, when developing an app, you want to connect to the test data of the app deployed to a non-production test or acceptance environment. However, the final production app will have to access the datasets from the production environment - the actual live or working data. In the Data Hub, the **Environment Type** is also specified which indicates to users the quality of the data.
 
 	{{% alert color="info" %}}
-  You can filter the search results by environment type in the Data Hub Catalog (**Production**, **Non-production**, and the Mendix Free App environment or **Sandbox**). In the [Data Hub pane](/refguide/data-hub-pane/) of Studio Pro, you can expand search results to include non-production environments. {{% /alert %}}
+  You can filter the search results by environment type in the Data Hub Catalog (**Production**, **Non-production**, and the Mendix Free App environment or **Sandbox**). In the [Data Hub pane](/refguide/data-hub-pane/) of Studio Pro, you can remove the default filter on the search results to include non-production environments. {{% /alert %}}
 
-* **Published OData service** – At the service endpoint there are the OData service metadata contract filesthat define the service. Available data sources are registered in the Data Hub Catalog by exposing  datasets in the [published OData service](/refguide/published-odata-services/). This service document or metadata contract also includes the exposed attributes and associations that are relevant for connecting to the data they define.
-* **Versions** – The version number of the OData service contracts is also included in the asset registration. The contract exposed at a specific endpoint may be changed over time by the service owner, and if good practice is followed, these changes will be indicated by changing the version number. Every published OData service has a version number. Apps consuming from a service will consume from a specific version of a service deployed to an environment.
+* **Published OData service** – At the service endpoint, there are the OData service metadata contract files that define the service. Available data sources are registered in the Data Hub Catalog by exposing  datasets, attributes, and associations in the [published OData service](/refguide/published-odata-services/). 
+* **Versions** – The contract exposed at a specific endpoint may be changed over time by the service owner, and if good practice is followed, these changes will be indicated by changing the version number. Every published OData service has a version number. Apps consuming from a service will consume from a specific version of a service deployed to an environment.
 
 	{{% alert color="info" %}}
-  If significant changes are made in the service which would break any consuming apps, then good practice dictates that the service is published with a major update in the version number and also deployed to a different endpoint. In this case the service will be listed twice for the two different endpoints. For more information see [Semantic numbering](/refguide/consumed-odata-service/#semantic) in *Consumed OData Service*. {{% /alert %}}
+  If significant changes are made in the service which would break any consuming apps, then good practice dictates that the service is deployed to a different endpoint with a major update in the version number. In this case the service will be listed twice for the two different endpoints. For more information see [Semantic numbering](/refguide/consumed-odata-service/#semantic) in *Consumed OData Service*. {{% /alert %}}
 
 ## 5 Main Documents in This Category
 

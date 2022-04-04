@@ -31,7 +31,7 @@ Before starting with this how-to, make sure you have the following prerequisites
 To create a test case, follow these steps:
 
 1. Open your project in ATS and go to the **Repository**.
-2.  Click **Add Test** inside the **Tests** tab:
+2. Click **Add Test** inside the **Tests** tab:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/repository-add-test-case.png" >}}
   
@@ -44,9 +44,9 @@ To create a test case, follow these steps:
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/repository-create-new-case.png" >}}
   
 3. Select **Test Case** in the drop-down menu.
-4. Enter a name in the **Name** field (for example, *TC - 001.01 - Create new Expense (Manually)*). Using a predefined naming structure is advised.    
+4. Enter a name in the **Name** field (for example, *TC - 001.01 - Create new Expense (Manually)*). Using a predefined naming structure is advised. 
 5. Enter a description in the **Description** field (for example, *This test case creates a new expense in the company expenses app*). Giving each test case a description of what it does is advised.
-6.  Click **Create**:
+6. Click **Create**:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/repository-create-new-test-case.png" >}}
 
@@ -58,21 +58,21 @@ To create a test case, follow these steps:
 
 The following steps describe how to add test steps manually to your test case. You will add the steps necessary for creating a new expense in the Company Expenses app.
 
-1.  Click **Add** on the **Test Case** page:
+1. Click **Add** on the **Test Case** page:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/test-case-page-add.png" >}}
 
     This will open the **Test Step Setup** dialog box.
 2. The first step is opening the Company Expenses app, which you do this by entering a URL in the browser. ATS does the same by using the [open application](/addons/ats-addon/rg-one-open-application/) action.
 3. Enter a description of the test step in the **Describe Test Step** text box (for example, *Open the company expenses app*).
-4.  Search for the **Open Application** action in the **Search Action** text box. Enter terms like *Find*, *Click*, *Set*, *Assert*, and *Get* to find the right action.
+4. Search for the **Open Application** action in the **Search Action** text box. Enter terms like *Find*, *Click*, *Set*, *Assert*, and *Get* to find the right action.
 5. Select the **Open Application** action from the **Select an Action** data grid. Choose the one for Mendix applications.
-6.  Click **Save**:
+6. Click **Save**:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/add-open-application.png" >}}
 
     Now ATS adds the action to your test step.
-7.  Double-click the **Application URL** input parameter:
+7. Double-click the **Application URL** input parameter:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/open-application-input-parameter.png" >}}
   
@@ -150,7 +150,7 @@ The following steps describe how to add test steps manually to your test case. Y
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/click-widget-save-submit-parameter.png" >}}
 
-29.  You must confirm that the expense is successfully submitted. In the Company Expenses app, a submitted expense appears in the [Find/Assert DataGrid Row](/addons/ats-addon/rg-one-findassert-datagrid-row/) action. Inside your test case, click **Add** and add the **Find/Assert Datagrid Row** action.
+29. You must confirm that the expense is successfully submitted. In the Company Expenses app, a submitted expense appears in the [Find/Assert DataGrid Row](/addons/ats-addon/rg-one-findassert-datagrid-row/) action. Inside your test case, click **Add** and add the **Find/Assert Datagrid Row** action.
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/add-findassert-datagrid-row-new-expense.png" >}}
 
@@ -200,7 +200,7 @@ The following steps describe how to add test steps to your test case using the [
 
 To add test steps using the ATS Recorder, follow these steps:
 
-1.   Click **Record** on the **Test Case** page:
+1. Click **Record** on the **Test Case** page:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/record-test-case-page.png" >}}
 
@@ -208,44 +208,44 @@ To add test steps using the ATS Recorder, follow these steps:
   
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/recording-session-page.png" >}}
 
-2.  Now open a new page in your browser and enter the URL of your Mendix app. When you go back to ATS you see that ATS recorded the URL and the **Open Application** action:
+2. Now open a new page in your browser and enter the URL of your Mendix app. When you go back to ATS you see that ATS recorded the URL and the **Open Application** action:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/open-application-comp-app-recorded.png" >}}
 
-3.  Next go back to the Company Expenses app and enter your login credentials. 
-4.  Click the **New Expense** button.
-5.  Enter an expense amount in the **Amount** field.
-6.  Enter an expense type in the **Type** field.
-7.  Enter an expense description in the **Description** field.
-8.  Click the **Save & Submit** button.
-9.  Inside the data grid, click the description in the **Description** column of your expense to simulate an assert:
+3. Next go back to the Company Expenses app and enter your login credentials. 
+4. Click the **New Expense** button.
+5. Enter an expense amount in the **Amount** field.
+6. Enter an expense type in the **Type** field.
+7. Enter an expense description in the **Description** field.
+8. Click the **Save & Submit** button.
+9. Inside the data grid, click the description in the **Description** column of your expense to simulate an assert:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/expense-description-datagrid-column.png" >}}
 
-10.  Click the **Sign Out** button. On the **Recording Session** page, you see that all the steps are recorded by ATS:
+10. Click the **Sign Out** button. On the **Recording Session** page, you see that all the steps are recorded by ATS:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/recording-session-new-expense.png" >}}
   
-11.  Click **Save** to save the test steps into your test case:
+11. Click **Save** to save the test steps into your test case:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/save-button-recording-session.png" >}}
 
-12.  You must set the input parameter **Application URL** of the **Open Application** action to the **Global Constant**, **Application URL**:
+12. You must set the input parameter **Application URL** of the **Open Application** action to the **Global Constant**, **Application URL**:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/global-constant-open-application.png" >}}
 
-13.  You must manually add the **New Expense** dialog box (you cannot record this). You must add the action between test step 3 and test step 4. A user will visually confirm that the dialog box appears. ATS has an action that finds and asserts a dialog box, which is the [Find/Assert Dialog](/addons/ats-addon/rg-one-findassert-dialog/) action. Inside your test case, click **Add** again and add the **Find/Assert Dialog** action.
+13. You must manually add the **New Expense** dialog box (you cannot record this). You must add the action between test step 3 and test step 4. A user will visually confirm that the dialog box appears. ATS has an action that finds and asserts a dialog box, which is the [Find/Assert Dialog](/addons/ats-addon/rg-one-findassert-dialog/) action. Inside your test case, click **Add** again and add the **Find/Assert Dialog** action.
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/new-expense-dialog-action.png" >}}
 
     Note that you can also add actions manually between recording sessions. 
 
-14.  Double-click the **Dialog Title** input parameter and add the title of the dialog box:
+14. Double-click the **Dialog Title** input parameter and add the title of the dialog box:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/new-expense-dialog-action-input-parameters-recorder.png" >}}
 
-15.  For the logout, you can choose to keep the recorded click the **Sign Out** button or replace it with the **Logout** action.
-16.  The last thing to do is to clarify to ATS what you are testing. This is done by setting the **Call Type** of your test steps to one of the following:
+15. For the logout, you can choose to keep the recorded click the **Sign Out** button or replace it with the **Logout** action.
+16. The last thing to do is to clarify to ATS what you are testing. This is done by setting the **Call Type** of your test steps to one of the following:
   
     * **Setup** for all the steps that you must perform to get to the test situation
     * **Regular** for all the steps that are part of your test situation

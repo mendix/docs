@@ -4,6 +4,8 @@ url: /refguide/consumed-odata-service/
 parent: "consumed-odata-services"
 weight: 10
 tags: ["studio pro", "data hub", "odata service", "consumed odata service"]
+aliases:
+    - /refguide/consumed-odata-service-properties
 ---
 
 ## 1 Introduction

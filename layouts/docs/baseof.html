@@ -3,14 +3,14 @@
   <head>
     {{ partial "head.html" . }}
   </head>
-  <body class="td-{{ .Kind }}">
+  <body class="td-{{ .Kind }}{{ with .Page.Params.body_class }} {{ . }}{{ end }}">
 
-<!-- NK - deactivation of original navbar 
+{{/* NK - deactivation of original navbar 
     <header>
       {{ partial "navbar.html" . }}
     </header>
     </div> 
--->
+*/}}
 
     <div class="container-fluid td-outer">
       <div class="td-main">

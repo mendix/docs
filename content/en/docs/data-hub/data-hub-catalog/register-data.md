@@ -6,7 +6,8 @@ category: "Data Hub Catalog"
 weight: 35
 tags: ["data hub catalog", "data hub", "external entities", "register", "published OData service" ,"how to", "registration"]
 aliases:
-    /data-hub/data-hub-catalog/register.html
+    - /data-hub/data-hub-catalog/register.html
+    - /data-hub/data-hub-catalog/register
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 #The anchor registration-form below is mapped, so it should not be removed or changed.
 ---
@@ -33,7 +34,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 ## 3 Registering a Service Through the Mendix Cloud {#mendix-cloud}
 
 
-If you have an exposed OData service, that is deployed to the Mendix Cloud, then congratulations! Your service is already registered in the Data Hub Catalog. This is the power of the Mendix Data Hub.
+If you have an exposed OData service, that is deployed to the Mendix Cloud, then congratulations! Your service is already registered in the Data Hub Catalog.
 
 ## 4 Registering a Service Without the Mendix Cloud {#without-mendix-cloud}
 
@@ -52,7 +53,7 @@ First, you need to create an authentication token to get access to the Data Hub 
 
 `Authorization: MxToken <your_Personal_Access_Token>`
 
-For information on how to to create a Personal Access Token, see [Creating a Data Hub Catalog Registration API token](#create-token).
+**You can [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/).**
 
 Once you have a Personal Access Token, follow this series of REST calls to register the details of our exposed OData service:
 
@@ -60,15 +61,11 @@ Once you have a Personal Access Token, follow this series of REST calls to regis
 2. Use the application UUID to [register the environment, and retrieve the environment UUID](#register-environment).
 3. Use the application UUID and the environment UUID to [register one or more services](#register-services).
 
-   If your service contract is not in the right format, use the [Transform API](#transform-api) to get your service contract in the right format before registering them.
+    If your service contract is not in the right format, use the [Transform API](#transform-api) to get your service contract in the right format before registering them.
 
 The [Data Hub Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html) describes all the optional fields, required formats, other operations on these same paths. You will only fill out the required fields and one operation per path in this how-to. 
 
-#### 4.1.1 Creating a Data Hub Catalog API token {#create-token}
-
-You can create a Personal Access Token in the Mendix [Warden](/developerportal/community-tools/warden/) application.
-
-#### 4.1.2 Registering an Application Through the Data Hub Catalog Registration API {#register-application}
+#### 4.1.1 Registering an Application Through the Data Hub Catalog Registration API {#register-application}
 
 To register an application, you need:
 
@@ -99,7 +96,7 @@ A successful `POST` call results in a `201` status code and a JSON response body
 
 Use the application UUID to register your environment.
 
-#### 4.1.3 Registering an Environment Through the Data Hub Catalog Registration API {#register-environment}
+#### 4.1.2 Registering an Environment Through the Data Hub Catalog Registration API {#register-environment}
 
 To register an environment, you need the following:
 
@@ -140,7 +137,7 @@ A successful `POST` call results in a `201` status code and a JSON response body
 Use the application UUID and the environment UUID to register one or more services.
 
 
-#### 4.1.4 Registering Services Through the Data Hub Catalog Registration API {#register-services}
+#### 4.1.3 Registering Services Through the Data Hub Catalog Registration API {#register-services}
 
 To register services, you need the following:
 
@@ -209,7 +206,7 @@ A successful `PUT` call will result in a `200` status code and a JSON response b
 ```
 
 
-#### 4.1.5 Preparing Your Service Details Using the Transform API {#transform-api}
+#### 4.1.4 Preparing Your Service Details Using the Transform API {#transform-api}
 
 The Transform API converts the `dependencies.json` file your Mendix app generates into the fields the Registration API requires to registers services. 
 

@@ -11,6 +11,7 @@
 @import "sidebar-tree";
 @import "tables";
 
+
 // Adjust anchors vs the fixed menu.
 @include media-breakpoint-up(md) {
     .td-offset-anchor:target {
@@ -26,8 +27,8 @@
     h5[id]:before {
         display: block;
         content: " ";
-        //margin-top: 0; // NK - override for default values, not best way, deactivated to keep headers visible after clicking anchor link
-        //height: 0; // NK - override for default values, not best way, deactivated to keep headers visible after clicking anchor link
+        margin-top: 0; // NK - override for default values, to allow selection of items right above headers
+        height: 0; // NK - override for default values, to allow selection of items right above headers
         visibility: hidden;
     }
 }

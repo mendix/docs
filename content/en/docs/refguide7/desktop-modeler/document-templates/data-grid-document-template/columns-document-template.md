@@ -5,6 +5,8 @@ parent: "data-grid-document-template"
 aliases:
     - /refguide7/Columns+(document+template).html
     - /refguide7/columns-(document-template).html
+    - /refguide7/Columns+(document+template)
+    - /refguide7/columns-(document-template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

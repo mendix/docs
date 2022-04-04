@@ -55,6 +55,23 @@ The **Name** property specifies the name of the attribute. This name is used to 
 If you delete an attribute in your entity and then create a new attribute with the same name, Mendix will consider it a new and different attribute. This means that upon deployment the old column will be dropped, including its data. Then a new, empty, column with the same name will be created.
 {{% /alert %}}
 
+#### 2.1.2  Export Level 
+
+{{% alert color="info" %}}
+
+This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-types) section in *Modules*. 
+
+This property will not be shown for attributes if the entity is set to **Hidden**, all attributes will be hidden automatically and cannot be set to **Usable**.
+
+{{% /alert %}}
+
+**Export level** allows you to define access level to this document on the consumer (customer) side when developing an add-on module or a solution. 
+
+| Value              | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| Hidden *(default)* | The document/element content is hidden from a consumer.      |
+| Usable             | Consumers can see the attribute in the domain model and use it in their app. |
+
 #### 2.1.3 Documentation
 
 This allows you to describe aspects of the entity which may be useful to you or other team members when using the entity within the app.
@@ -80,15 +97,17 @@ Date and time | A point in time consisting of a date and a time component accura
 Decimal | A positive or negative number that can have digits after the decimal point. The Decimal type can be used for high-precision calculations. Use this type to represent amounts of money for example. When a Decimal type attribute is persisted in the database its value is validated against 2 conditions. In case the number of digits of the integral part (before the decimal separator) is more than 20, an exception is thrown. In case the number of digits of the fractional part (after the decimal separator) is more than 8, the fractional value is automatically rounded according to [the round half to even rule (also known as bankers' rounding)](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even). Therefore, the maximum allowable value for the Decimal type is 99999999999999999999.99999999. | Decimal |
 Enumeration | A list of predefined attributes. For more information, see [Enumerations](/refguide/enumerations/). | Enumeration |
 Hashed string | A string which is hashed using the algorithm specified in the [app settings](/refguide/project-settings/#hash-algorithm). This can be used to store password hashes, for example, so that the original password is not recorded in the database.  | String |
-Integer | A whole number that can be positive (maximum 2<sup>31</sup>-1, thus 2147483647), negative (minimum -2<sup>31</sup>, thus -2147483648), or zero. | Integer/Long |
+Integer | A whole number that can be positive (maximum 2<sup>31</sup>-1, thus 2147483647), negative (minimum -2<sup>31</sup>, thus -2147483648), or zero. | Integer/Long<sup><small>[2]</small></sup> |
 Long | A whole number that can be positive (maximum 2<sup>63</sup>-1), negative (minimum -2<sup>63</sup>), or zero. | Integer/Long |
 String *(default)* | A text containing letters, spaces, numbers and other characters. | String |
 
-<sup><small>[1]</small></sup> The maximum size that can approximately be stored in an attribute of type binary depends on the database:
+<sup><small>[1]</small></sup> The approximate maximum size that can be stored in an attribute of type binary depends on the database:
 
 | HSQLDB | PostgreSQL | SQL Server | Oracle |
 | --- | --- | --- | --- |
 | 1 MB | 1 GB | 2 GB | 128 TB or limited by hard disk of server |
+
+<sup><small>[2]</small></sup> You will get an error if you assign a value outside the permitted values for an integer to an integer attribute.
 
 **Example**
 

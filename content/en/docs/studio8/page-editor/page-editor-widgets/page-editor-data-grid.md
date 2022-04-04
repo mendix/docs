@@ -205,11 +205,11 @@ Data grid specific actions are the following ones:
 
 * **Export to Excel** – export the contents of the grid to an Excel file. The Excel export function relies on a specific data retrieval method, and cannot be used in a data grid with **Database** data source. 
 
-	*  **Maximum Number Of Rows** – defines the maximum number of rows to be exported.
+	* **Maximum Number Of Rows** – defines the maximum number of rows to be exported.
 
-	*  **Date Export Format** – defines how dates will be exported. When *Date value* is selected, date values will be exported as real dates, allowing Excel functions on them. When *Text* is selected, date values will be exported exactly as shown in the data grid without allowing Excel to format them.
+	* **Date Export Format** – defines how dates will be exported. When *Date value* is selected, date values will be exported as real dates, allowing Excel functions on them. When *Text* is selected, date values will be exported exactly as shown in the data grid without allowing Excel to format them.
 
-      {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-data-grid/grid-export-to-excel-button.png" >}}
+        {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-data-grid/grid-export-to-excel-button.png" >}}
 
 #### 2.5.1.1 Grid Create Button {#grid-create-button}
 

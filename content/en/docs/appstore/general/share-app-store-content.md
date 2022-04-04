@@ -7,6 +7,7 @@ description: "Describes how to create and share Mendix Marketplace content."
 tags: ["marketplace", "public app store", "private app store", widget", "module"]
 aliases:
     - /developerportal/app-store/share-app-store-content.html
+    - /developerportal/app-store/share-app-store-content
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

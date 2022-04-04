@@ -7,6 +7,7 @@ description: "Describes where to find the current status of the Mendix Cloud."
 tags: ["Status","Mendix Cloud","Developer Portal", "Issue", "Maintenance", "Subscribe"]
 aliases:
     - /developerportal/operate/mendix-cloud-status.html
+    - /developerportal/operate/mendix-cloud-status
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -18,7 +19,7 @@ The status of all these services is reported on a single page: [https://status.m
 
 ## 2 Mendix Cloud Statuses
 
-By going to the [Mendix status page](https://status.mendix.com/), you can check the status of Mendix Cloud v3 and v4. This will tell you if there are any issues with the cloud which may impact your apps.
+By going to the [Mendix status page](https://status.mendix.com/), you can check the status of Mendix Cloud v3 and v4. This will tell you if there are any issues with the cloud which may impact your apps.
 
 You can expand the status of the clouds to see the status of a particular region: for example *Mendix Cloud v4 EU*.
 

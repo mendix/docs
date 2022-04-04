@@ -6,6 +6,7 @@ weight: 50
 tags: ["studio pro", "sort bar", "grid"]
 aliases:
     - /refguide8/Sort+Bar.html
+    - /refguide8/Sort+Bar
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -1,10 +1,8 @@
 ---
 title: "Building Connectors"
 url: /appstore/creating-content/connector-guide-build/
-linktitle: "Building Connectors"
-url: /appstore/creating-content/connector-guide-build/
 category: "Creating Content"
-weight: 3
+weight: 4
 tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "how to"]
 ---
 

@@ -171,27 +171,34 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
 ## 5 Increasing the Deliverability of Your Emails
 
-You can make your emails comply with [Domain-based Message Authentication, Reporting and Conformance (DMARC)](https://dmarc.org/) to increase the deliverability of your emails. This is a protocol that helps mail servers validate whether an incoming email is authorised by the administrators of the sending domain. To comply with DMARC, you can use the Sender Policy Framework (SPF) method.
+You can make your emails comply with [Domain-based Message Authentication, Reporting and Conformance (DMARC)](https://dmarc.org/) to increase the deliverability of your emails. This is a protocol that helps mail servers validate whether an incoming email is authorized by the administrators of the sending domain. To comply with DMARC, you can use the Sender Policy Framework (SPF) method.
 
-You can configure your environments with email addresses that you wish to use to send emails by using the Communication Services Console. 
+You can configure the sender's email addresses on the as follows:
 
-{{< figure src="/attachments/appstore/app-services/email-service/email_identities_screenshot.png" >}}
+1.  Go to [Communication Services Console](https://communication-appservices.mendixcloud.com/) and log in with your Mendix account.
 
-You can use the **Email ID** text input box to provide sender's email address. 
+    {{< figure src="/attachments/appstore/app-services/email-service/email-identities.png" >}}
 
-{{% alert type="info" %}}For paid subscriptions, customers can configure up to 5 **from** email addresses. For trial subscriptions, customers can configure at most 1 **from** email address.{{% /alert %}}
+2. Select the environment for which you want to configure the sender's email address(es).
 
-{{< figure src="/attachments/appstore/app-services/email-service/console-email-text-input.png" >}}
+3.  Choose your **Verification Type**:
 
-{{< figure src="/attachments/appstore/app-services/email-service/emailid_for_trial.png" >}}
+    *  If you choose **Email ID**, do as follows:
 
-Optionally you can also provide **Mail From Domain** information that you may wish to use with your [Email Service](https://marketplace.mendix.com/link/component/118393/) instance. For more details you can check [Configuring the Mail From Domain](#config-mail-from-domain) section. 
+        {{< figure src="/attachments/appstore/app-services/email-service/verification-type-email-id.png" >}}
 
-{{< figure src="/attachments/appstore/app-services/email-service/mai_from_domain.png" >}}
+        1.  For **Email ID**, enter the sender's email address(es). 
 
-You can also opt for the domain configuration by providing the domain address. Along with the domain, you are required to provide sender's email addresses to be used to send emails. 
+            {{% alert type="info" %}}For paid subscriptions, customers can configure up to five email addresses. For trial subscriptions, customers can configure at most one email address.{{% /alert %}}
 
-{{< figure src="/attachments/appstore/app-services/email-service/console_domain-2.png" >}}
+        2.  Optionally, enter the **Mail From Domain** information that you want to use with your [Email Service](https://marketplace.mendix.com/link/component/118393/) instance. For more details, see the [Configuring the Mail From Domain](#config-mail-from-domain) section. 
+
+    *  If you choose **Domain**, do as follows:
+
+        {{< figure src="/attachments/appstore/app-services/email-service/verification-type-domain.png" >}}
+
+        1. For **Domain**, enter the domain address.
+        2. For **Email ID**, enter the sender's email address(es). 
 
 ### 5.1 Configuring the Mail From Domain {#config-mail-from-domain}
 
@@ -212,8 +219,7 @@ The SPF record is a list of authorized sending hosts and IP addresses for a doma
 
 A mail exchanger record (MX record) shows which mail server is responsible for accepting email messages on behalf of a domain name. It is a resource record in the DNS.
 
-
-{{< figure src="/attachments/appstore/app-services/email-service/Spf_records_for_email:domain.png" >}}
+{{< figure src="/attachments/appstore/app-services/email-service/spf-dns-records.png" >}}
 
 The SPF record and MX record use the formats shown in the following table:
 
@@ -224,9 +230,9 @@ The SPF record and MX record use the formats shown in the following table:
 
 ### 5.3 DKIM and Domain Verification Records {#dkim-and-dns-records}
 
-Domain Keys Identified Mail(DKIM) settings for your domain have been generated.
+Domain Keys Identified Mail (DKIM) settings for your domain have been generated.
 
-{{< figure src="/attachments/appstore/app-services/email-service/Dkim_and_domain_verification records_for_domain.png" >}}
+{{< figure src="/attachments/appstore/app-services/email-service/dkim-and-domain-verification-record.png" >}}
 
 ### 5.4 Verification
 
@@ -246,13 +252,13 @@ Soon after you should get an alert window indicating that the verification proce
 
 {{< figure src="/attachments/appstore/app-services/email-service/email-verification-in-progress.png" >}}
 
-You should receive an email from `verify-email@notify.mendix.com` to the configured email address. Click on the link provided in the email to complete the process. Until the verification process is complete, you shall continue to see a message saying the verification is **Pending**.
+You should receive an email from `verify-email@notify.mendix.com` to the configured email address. Click the link provided in the email to complete the process. Until the verification process is complete, you shall continue to see a message saying the verification is **Pending**.
 
 {{< figure src="/attachments/appstore/app-services/email-service/email-verification-pending.png" >}}
 
 You can add/delete the emailIds and retry for verification as well if verification is still pending after the appropriate time required for verification by clicking on View Details/Edit button.
 
-{{< figure src="/attachments/appstore/app-services/email-service/delete:retry_for_email.png" >}}
+{{< figure src="/attachments/appstore/app-services/email-service/email-identity.png" >}}
 
 #### 5.4.2 Domain Verification
 
@@ -270,7 +276,7 @@ Until the verification process is complete, you shall continue to see a message 
 
 You can view/add/delete emailIds associated with the domain by clicking on "View Details/Edit" button.
 
-{{< figure src="/attachments/appstore/app-services/email-service/View:details_for_domain.png" >}}
+{{< figure src="/attachments/appstore/app-services/email-service/domain-based-email-identities.png" >}}
 
 ## 6 Read More
 * [Send Emails from a Mendix App](https://academy.mendix.com/link/paths/117/Send-Emails-from-a-Mendix-App-/)

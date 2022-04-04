@@ -192,9 +192,7 @@ To add a new column, do the following:
 A new column is added, the weight 1 is automatically set for it. 
 
 {{% alert color="info" %}}
-
-For native pages only - Sometimes on a native page,  data is not clearly visible on your device when using a native layout grid, it’s better to nest layout grid inside the scroll container to see the data clearly.
-
+Sometimes on a native page, data is not clearly visible when using a native layout grid. To see the data more clearly, nest the layout grid inside the scroll container.
 {{% /alert %}}
 
 ### 5.2 Performing Other Actions on Rows

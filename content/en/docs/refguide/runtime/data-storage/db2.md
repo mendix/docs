@@ -6,6 +6,10 @@ weight: 40
 tags: ["studio pro"]
 ---
 
+{{% alert color="warning" %}}
+Support for DB2 is deprecated and [will be removed in Mendix version 10](/releasenotes/studio-pro/9.12/#deprecations).
+{{% /alert %}}
+
 ## 1 Introduction
 
 There are some extra considerations you need to take into account if you are implementing a Mendix app using a DB2 database. In addition, the behavior of Mendix using a DB2 database has some minor differences when compared with using a PostgreSQL database.

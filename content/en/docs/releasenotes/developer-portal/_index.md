@@ -24,10 +24,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
   * A side-bar navigation
   * A bookmark page
   * A breadcrumb
-
-#### Fixes
-
-* We fixed a bug where editing a new task while [creating a story](/developerportal/collaborate/stories/#new-story) threw an error.
+  
 ### March 24th, 2022
 
 #### Improvements

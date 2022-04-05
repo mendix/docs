@@ -13,7 +13,7 @@ The [IMAP/POP3 Incoming Email](https://marketplace.mendix.com/link/component/104
 
 ### 1.1 Typical Usage Scenario
 
-* Retrieve emails and act like an email client, which is the recommended approach when hosting your application in the Mendix Cloud
+* Retrieve emails and act like an email client, which is the recommended approach when hosting your application in the Mendix Cloud.
 
 ### 1.2 Features
 
@@ -32,16 +32,27 @@ The [IMAP/POP3 Incoming Email](https://marketplace.mendix.com/link/component/104
 
 ## 2 Configuration
 
-The basic setup and reception of emails can be done using the **EmailAccount_Overview** page, which is in the **ExamplePages** folder under **USE_ME**. Link this page in your app to run the setup.
+The basic setup and reception of emails can be done using the **EmailAccount_Overview** page, which is in the **ExamplePages** folder under **USE_ME**. Link this page in your app to configure the email server.
 
-### 2.1 Account Setup
+Provide a value for the `EncryptionKey` constant available in the **USE_ME** folder for email account password encryption. 
 
-Select the **Sanitize email to prevent XSS attacks** option to enable the removal of malicious scripts to prevent XSS attacks. This option is unselected by default. To learn more about this option, see [Sanitize untrusted HTML (to prevent XSS)](https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer).
+### 2.1 Account Settings
 
-To invoke receiving emails from an account, call the **RetrieveEmailMessages** Java action.
+The **Account Settings** window includes the following options:
 
-To subscribe to incoming email from an account, call the **SubscribeToIncomingEmail** Java action.
+* Select the **Sanitize email to prevent XSS attacks** option to enable the removal of malicious scripts to prevent XSS attacks. This option is unselected by default. To learn more about this option, see [Sanitize untrusted HTML (to prevent XSS)](https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer).
+* When **Replicate everything in [Folder Name]** is not checked, the module will fetch the number of emails defined in **Number of emails to retrieve from server** configuration based on the selected **Fetch strategy**.
+* When **Replicate everything in [Folder Name]** is checked, then module will fetch all the emails (in order of oldest to newest) from that folder in batch size as mentioned in **Email Batch Size** configuration.
+* The **Timeout** field is the connection timeout for sending and receiving email operations. This can be set in the **Email Account** object.
 
-To unsubscribe from incoming email from an account, call the **UnsubscribeFormIncomingEmail** Java action.
+## 3 Usage
 
-Set the **EncryptionKey** constant for email account password encryption.
+Using a Java action in a microflow requires an email account for input. Please make sure you configure the setup first. 
+
+* To invoke receiving emails from an account, call the **RetrieveEmailMessages** action.
+* To subscribe to incoming email from an account, call the **SubscribeToIncomingEmail** action.
+* To unsubscribe from incoming email from an account, call the **UnsubscribeFormIncomingEmail** action.
+
+{{% alert color="info" %}}
+In the **Private** folder, we provide microflows to support what we have built and provide guidance for your own needs. Any changes you make to these will be overwritten if you upgrade to a new version.
+{{% /alert %}}

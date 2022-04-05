@@ -164,7 +164,7 @@ Each idea specifies the following elements:
 * The category (**3**)
 	* This is set when submitting an idea (for details, see the [Submitting an Idea](#submitting-an-idea) section)
 * Tags (**4**) (for example, **Native-widgets**)
-  * You can add more tags as you want
+  * You can search for one or more tags
 * The number of votes (**5**), comments (**6**), and views (**7**) for the idea
 * The name, avatar, and level of the Mendix community member who created the idea (**8**)
 * * When the idea was created (**9**)

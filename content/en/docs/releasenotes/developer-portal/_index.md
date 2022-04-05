@@ -20,10 +20,11 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 ### April 7th, 2022
 #### Improvements
 
-* We release the new layout of [Mendix Forum](/developerportal/community-tools/mendix-forum/). In this new layout, you can see the following: adjustments:
-  * A side-bar navigation
-  * A bookmark page
-  * A breadcrumb
+* We introduced a new layout of [Mendix Forum](/developerportal/community-tools/mendix-forum/). This layout features the following changes:
+  * moved the main navigation to the left sidebar
+  * dedicated for page for your bookmarks
+  * breadcrumb navigation
+  * dedicated pages for forum content you've interacted with (asked, answered & commented for questions - submitted & commented for ideas)
   
 ### March 24th, 2022
 

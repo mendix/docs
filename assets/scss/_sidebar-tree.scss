@@ -132,14 +132,16 @@
     }
 
     &__inner {
-        order: 0;
+            order: 0;
+            height: calc(100vh - 75px); // NK - added to allow scrolling
+            overflow-x: hidden !important; // NK - added to allow scrolling
 
         @include media-breakpoint-up(md) {
             @supports (position: sticky) {
                 position: sticky;
                 top: 4rem; // NK - added to work with height change
                 z-index: 10;
-                height: max-content;// NK - changed from calc(100vh - 10rem);
+                height: calc(100vh - 75px);// NK - changed to allow scrolling
             }
         }
 

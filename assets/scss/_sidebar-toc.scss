@@ -3,8 +3,8 @@
 //
 .td-sidebar-toc {
     border-left: 0; // NK - changed to 0, the actual border moved to td-main main, to fully span height of screen
-    font-size: 0.9rem; // NK - decrased
-    line-height: 1.2; // NK - decrased
+    font-size: 0.9rem; // NK - decreased
+    line-height: 1.2; // NK - decreased
 
     @supports (position: sticky) {
         position: sticky;
@@ -28,6 +28,9 @@
 }
 
 .td-toc {
+
+    height: calc(100vh - 180px); // NK - added to allow scrolling
+    overflow-x:hidden !important; // NK - added to allow scrolling
 
     a {
         display: block;

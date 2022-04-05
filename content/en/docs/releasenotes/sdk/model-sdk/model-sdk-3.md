@@ -2,6 +2,7 @@
 title: "3"
 url: /releasenotes/sdk/model-sdk-3/
 parent: "model-sdk"
+weight: 98
 ---
 
 ## 3.3.0

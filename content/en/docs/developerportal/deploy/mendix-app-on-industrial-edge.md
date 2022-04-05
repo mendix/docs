@@ -1,5 +1,6 @@
 ---
 title: "Mendix Applications on Industrial Edge"
+linktitle: "Industrial Edge Apps"
 url: /developerportal/deploy/mendix-app-on-industrial-edge/
 category: "Deployment"
 weight: 49

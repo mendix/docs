@@ -604,7 +604,7 @@ To apply this knowledge, reorganize the `properties` section in *TextBox.xml* to
 
 Your code alterations will produce the following result:
 
-    {{< figure src="/attachments/howto8/extensibility/pluggable-widgets/create-a-pluggable-widget-two/property-grouping-studio-pro.png" alt="property dialog Studio Pro"   width="500"  >}}
+{{< figure src="/attachments/howto8/extensibility/pluggable-widgets/create-a-pluggable-widget-two/property-grouping-studio-pro.png" alt="property dialog Studio Pro"   width="500"  >}}
 
 ## 4 Read More
 

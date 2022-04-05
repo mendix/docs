@@ -2,6 +2,7 @@
 title: "1.12"
 url: /releasenotes/add-ons/apm-1.12/
 parent: "apm-1"
+weight: 94
 ---
 
 ## 1.12.1

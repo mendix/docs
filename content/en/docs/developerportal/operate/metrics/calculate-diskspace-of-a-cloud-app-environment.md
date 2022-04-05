@@ -1,8 +1,9 @@
 ---
 title: "Calculate the Total Amount of Disk Space of a v3 Cloud App Environment"
+linktitle: "V3 Disk Space Calculation"
 url: /developerportal/operate/calculate-diskspace-of-a-cloud-app-environment/
 parent: "metrics"
-weight: 25
+weight: 95
 description: "Describes calculating disk space on a Mendix Cloud Version 3 environment."
 tags: ["Mendix Cloud", "cloud", "v3", "Disk Space"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

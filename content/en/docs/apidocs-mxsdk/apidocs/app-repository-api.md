@@ -88,7 +88,7 @@ Returns information about the version control repository for a Mendix app.
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned. You can find this in the General Settings tab of your app in the Developer Portal.|
+|`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned. You can find this in the [General](/developerportal/collaborate/general-settings/) settings tab of your app in the Developer Portal. |
 
 ##### 6.1.1.2 Example
 

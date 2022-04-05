@@ -17,6 +17,17 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### April 7th, 2022
+#### Improvements
+
+* We release the new layout of [Mendix Forum](/developerportal/community-tools/mendix-forum/). In this new layout, you can see the following: adjustments:
+  * A side-bar navigation
+  * A bookmark page
+  * A breadcrumb
+
+#### Fixes
+
+* We fixed a bug where editing a new task while [creating a story](/developerportal/collaborate/stories/#new-story) threw an error.
 ### March 24th, 2022
 
 #### Improvements

@@ -43,11 +43,11 @@ Mendix provides two types of monitoring data:
 * Data from the Mendix Runtime, the Java Virtual Machine (JVM), the database, and the SaaS (Software as a Service, for example Cloud Foundry) environment – this is described in [Environment Metrics](#environment), below
 * Data from within the Mendix app itself – this is described in [App Metrics](#app-metrics), below
 
-### 2.1 Environment Metrics{#environment}
+## 3 Environment Metrics{#environment}
 
 Once you have configured your data analytics platform for your app, it will automatically send information about the environment in which your app is running.
 
-#### 2.1.1 Environment Metrics Namespaces
+### 3.1 Environment Metrics Namespaces
 
 The metrics from your app's environment are supplied in the following namespaces:
 
@@ -58,7 +58,7 @@ The metrics from your app's environment are supplied in the following namespaces
 * postgresql – database metrics specific to PostgreSQL databases
 * system – metrics from the base system running on the platform or PaaS
 
-#### 2.1.2 Useful Metrics for Mendix Apps
+### 3.2 Useful Metrics for Mendix Apps
 
 The following metrics are useful when monitoring the performance of your Mendix app:
 
@@ -80,31 +80,31 @@ The following metrics are useful when monitoring the performance of your Mendix 
 
 Note that the absolute values are often not useful, but looking at trends over time can indicate performance issues or future action which might be required. Some of these trends are similar to those described in [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4/).
 
-## 3 App Metrics {#app-metrics}
+## 4 App Metrics {#app-metrics}
 
 Mendix provides logging of various actions within the app. These are sent to your data analytics platform with the namespace `mx`. Timing values are sent in milliseconds.
 
 By default, Mendix will only pass request handler activity, but you can configure it to provide metrics for microflows and activities as well. You can find how to do this in [Customizing the Metrics Agent](#customizing), below.
 
-### 3.1 What Metrics Can You Get From Your App?
+### 4.1 What Metrics Can You Get From Your App?
 
-#### 3.1.1 Request Handler Metrics
+#### 4.1.1 Request Handler Metrics
 
 Unless you customize your metrics agent, the metrics agent will provide metrics for all your request handlers. The metrics provided are listed below:
 
-##### 3.1.1.1 mx.soap.time
+##### 4.1.1.1 mx.soap.time
 
 A timing/histogram value for SOAP requests.
 
-##### 3.1.1.2 mx.odata.time
+##### 4.1.1.2 mx.odata.time
 
 A timing/histogram value for OData requests.
 
-##### 3.1.1.3 mx.rest.time
+##### 4.1.1.3 mx.rest.time
 
 A timing/histogram value for REST requests.
 
-##### 3.1.1.4 mx.client.time
+##### 4.1.1.4 mx.client.time
 
 The time it takes to handle a request to a request handler used by the web UI. You can get results for all of the following types of request
 * REST, ODATA, SOAP **doc** requests
@@ -114,7 +114,7 @@ The time it takes to handle a request to a request handler used by the web UI. Y
 
 This metric helps you to gain an overview of how long users have to wait for individual requests, and hence indicates overall application performance.
 
-#### 3.1.2 Microflow Metrics
+#### 4.1.2 Microflow Metrics
 
 For the microflows you select (see [Customizing the Metrics Agent](#customizing), below), the metrics agent will provide the following metrics relating to the time the microflow takes to run:
 
@@ -124,7 +124,7 @@ For the microflows you select (see [Customizing the Metrics Agent](#customizing)
 * mx.microflow.time.median
 * mx.microflow.time.95percentile
 
-#### 3.1.3 Activity Metrics
+#### 4.1.3 Activity Metrics
 
 For the activities you select (see [Customizing the Metrics Agent](#customizing), below), the metrics agent will provide the following metrics:
 
@@ -134,11 +134,11 @@ For the activities you select (see [Customizing the Metrics Agent](#customizing)
 * mx.activity.time.median
 * mx.activity.time.95percentile
 
-### 3.2 Customizing the Metrics Agent{#customizing}
+### 4.2 Customizing the Metrics Agent{#customizing}
 
 By default, Mendix will pass a log of *all* **request handler** activity to your data analytics platform and no other information. However, by using JSON to configure the metrics agent, you can add logs of microflows and activities within microflows, and restrict which request handler calls are sent.
 
-#### 3.2.1 Format of Metrics Agent Configuration{#mx-agent-format}
+#### 4.2.1 Format of Metrics Agent Configuration{#mx-agent-format}
 
 <!-- Changes to this should be reflected in "Configuring the Java Instrumentation Agent" in /developerportal/deploy/private-cloud-monitor,
 but replace 'Datadog' with 'Prometheus' and update relative links -->
@@ -246,7 +246,7 @@ The following example will send logs for:
 }
 ```
 
-#### 3.2.2 Passing a Configuration to the Metrics Agent
+#### 4.2.2 Passing a Configuration to the Metrics Agent
 
 You pass the configuration to the metrics agent by adding a *Custom Runtime Setting* to your Mendix Cloud environment.
 
@@ -259,7 +259,7 @@ You pass the configuration to the metrics agent by adding a *Custom Runtime Sett
 4. Click **Save**.
 5. Restart your app to apply the new settings if you have already connected your node to your data analytics. If you are in the process of connecting your node, you must *redeploy* your application to apply the changes.
 
-## 4 Summary of Mendix Metrics{#summary}
+## 5 Summary of Mendix Metrics{#summary}
 
 | Metric | Description |
 | --- | --- |
@@ -272,6 +272,6 @@ You pass the configuration to the metrics agent by adding a *Custom Runtime Sett
 | mx.rest.time | The time to handle a REST request |
 | mx.soap.time | The time to handle a SOAP request |
 
-## 5 Read More
+## 6 Read More
 
 * [Metrics](/developerportal/operate/metrics/)

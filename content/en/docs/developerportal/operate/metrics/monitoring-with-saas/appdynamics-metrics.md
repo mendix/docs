@@ -20,7 +20,7 @@ AppDynamics logging and application metrics are supported in Mendix version 6.2 
 AppDynamics is not supported in the deprecated Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
 {{% /alert %}}
 
-For more information on the data you can send to AppDynamics, see [Monitoring Your Mendix Apps with Saas](/developerportal/operate/monitoring-with-saas/)
+For more information on the data you can send to AppDynamics, see [Monitoring Your Mendix Apps with Saas](/developerportal/operate/monitoring-with-saas/).
 
 ## 2 Prerequisites
 
@@ -30,6 +30,7 @@ To use AppDynamics, and to send data to AppDynamics from your Mendix app, you wi
 * The following information about AppDynamics
     * The account name and access key for your AppDynamics account
     * The hostname or IP address of your AppDynamics controller
+* A licensed Mendix app of which you are the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact)
 
 ## 3 Connect Node to AppDynamics{#connect-node}
 
@@ -37,7 +38,7 @@ To send your runtime information to AppDynamics, you need to set it up using env
 
 1. Go to the **Environments** page of your app in the *Developer Portal*.
 2. Click **Details** to select the environment you wish to monitor with AppDynamics. 
-3. Open the **Runtime** tab.
+3. Open the [**Runtime** tab](/developerportal/deploy/environments-details/#runtime-tab).
 4. Add the following **Custom Environment Variable**s.
     1. APPDYNAMICS_CONTROLLER_PORT
 
@@ -49,18 +50,36 @@ To send your runtime information to AppDynamics, you need to set it up using env
 
     3. APPDYNAMICS_CONTROLLER_HOST_NAME
 
-        The hostname or the IP address of the AppDynamics Controller. Example values are 192.168.1.22 or myhost or myhost.example.com. This is the same host that you use to access the AppDynamics browser-based user interface.
+        The hostname or the IP address of the AppDynamics Controller. This is the same host that you use to access the AppDynamics browser-based user interface. Example values are `192.168.1.22` or `myhost` or `myhost.example.com`.
         
-        For an on-premises Controller, use the value for Application Server Host Name that was configured when the Controller was installed. If you are using the AppDynamics SaaS Controller service, see the Welcome email from AppDynamics.
+        For an on-premises Controller, use the value for Application Server Host Name that was configured when the Controller was installed.
+        
+        For the AppDynamics SaaS Controller service, see the welcome email from AppDynamics.
 
     4. APPDYNAMICS_AGENT_APPLICATION_NAME
+
+        A unique name to identify all the metrics coming from your app. We recommend using the app name.
+
     5. APPDYNAMICS_AGENT_ACCOUNT_NAME
+
+        The name of your AppDynamics account.
+
     6. APPDYNAMICS_AGENT_ACCOUNT_ACCESS_KEY
+
+        The secret key used to authenticate your AppDynamics account.
+
     7. APPDYNAMICS_AGENT_NODE_NAME
 
-        This is how you will identify which app the metrics are coming from. We recommend using the app name.
+        This is how you will identify which node the metrics are coming from. We recommend using the app name.
+
+        The value of the CF_INSTANCE_ID variable will be appended to the node name. For example, if APPDYNAMICS_AGENT_NODE_NAME is set to  `my-app` and the node has multiple instances, the AppDynamics agent will be configured as `my-app-0`, `my-app-1`, … for the different instances.
+
+        {{% todo %}}[Is an instance appended for single-instance apps?]{{% /todo %}}
 
     8. APPDYNAMICS_AGENT_TIER_NAME
+
+        This allows you to classify different environments of your app. We recommend using the **Environment ID** to distinguish between *Test*, *Acceptance*, and *Production* environments. You can find this on the **General** tab of the [Environment Details](/developerportal/deploy/environments-details/) page of your app environment.
+
     9. {{% todo %}}[Set log level?]{{% /todo %}}
 
 5.  Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
@@ -69,29 +88,7 @@ To send your runtime information to AppDynamics, you need to set it up using env
 
 ## 4 Additional Information{#additional-info}
 
-### 4.1 Apps with Multiple Instances
-
-The APPDYNAMICS_AGENT_NODE_NAME environment variable will be appended with the value of the CF_INSTANCE_ID variable. If you use my-app for APPDYNAMICS_AGENT_NODE_NAME, the AppDynamics agent will be configured as my-app-0 for instance 0 and my-app-1 for instance 1 , etc.
-
-{{% todo %}}[Is an instance appended for single-instance apps?]{{% /todo %}}
-
-### 4.7 AppDynamics Agent not Started
-
-If you configure your app for AppDynamics but the AppDynamics agent is not started, the events will be sent to the app log files.
-
-### 4.8 AppDynamics Issues
-
-If you have any issues related to accessing AppDynamics, please contact their support here: [Support | AppDynamics](https://help.appdynamics.com/hc/en-us/requests/). You will need an AppDynamics account to request support.
-
-### 4.10 Tagging AppDynamics Metrics
-
-Mendix does not send additional tags to AppDynamics to indicate Resource, Microflow, or Activity names. It is also not possible to add custom tags to the metrics you send to AppDynamics.
-
-### 4.11 AppDynamics Java Agent
-
-Mendix will use AppDynamics Java Agent version 21.11.1.33280.
-
-### 4.12 AppDynamics Default Values
+### 4.1 AppDynamics Default Values
 
 Mendix does not provide any default values. If any of the following environment variables are set for your app, you will need to provide all of them:
 
@@ -103,6 +100,22 @@ Mendix does not provide any default values. If any of the following environment 
 * APPDYNAMICS_AGENT_ACCOUNT_ACCESS_KEY
 * APPDYNAMICS_AGENT_NODE_NAME
 * APPDYNAMICS_AGENT_TIER_NAME
+
+### 4.2 Tagging AppDynamics Metrics
+
+Mendix does not send additional tags to AppDynamics to indicate Resource, Microflow, or Activity names. It is also not possible to add custom tags to the metrics you send to AppDynamics.
+
+### 4.3 AppDynamics Agent not Started
+
+If you configure your app for AppDynamics but the AppDynamics agent is not started, the events will be sent to the app log files.
+
+### 4.4 AppDynamics Issues
+
+If you have any issues related to accessing AppDynamics, please contact their support here: [Support | AppDynamics](https://help.appdynamics.com/hc/en-us/requests/). You will need an AppDynamics account to request support.
+
+### 4.5 AppDynamics Java Agent
+
+Mendix will use AppDynamics Java Agent version 21.11.1.33280.
 
 ## 5 Read More
 

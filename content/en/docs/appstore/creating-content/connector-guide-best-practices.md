@@ -281,17 +281,15 @@ The following steps walk you through complex configuration:
 
      {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/complex-config-entity.png" >}}
 
-2.   Create the microflow.
+2.   Create the microflow. Have a single microflow called **DS_GetOrCreateSettings** that is the only place in your application to acquire your settings. This microflow would retrieve your settings from the database and creates it if this does exist with appropriate default values.
 
      {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/complex-config-create-microflow.png" >}}
 
-     Have a single microflow called **DS_GetOrCreateSettings** that is the only place in your application to acquire your settings. This microflow would retrieve your settings from the database and creates it if this does exist with appropriate default values.
-
-3.   Set up security on the microflow and entity.
+3.   Set up security on the entity and the microflow.
 
      {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/complex-config-security.png" >}}
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/complex-config-security.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/complex-config-security-2.png" >}}
 
 4.   Set up the administrator page.
 

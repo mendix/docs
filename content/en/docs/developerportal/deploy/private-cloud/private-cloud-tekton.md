@@ -96,16 +96,14 @@ Official installation procedure here: https://github.com/tektoncd/dashboard\
 ## 4 Preparation for Air-gapped Environments{#preparation}
 
 {{% alert color="info" %}}
-If your environment is not air-gapped and has access to the internet, you can skip this block.
+If your cluster is not air-gapped and has access to the internet, you can skip this section and go straight to [Tekton Installation](#tekton-installation).
 {{% /alert %}}
 
-To install Tekton and your CI/CD Pipeline in air-gapped environment you need to provision a list of images in your registry.
+To install Tekton and your CI/CD Pipeline in air-gapped environment you need to provision a list of images in your registry. Mendix has created a tool, **aip**, to perform this on different operating systems. You will need to download them using the following links:
 
-Mendix has created a tool, **aip**, to perform this on different operating systems. You will need to download them using the following links:
-
-* [Mac (amd64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.2-macos-amd64.tar.gz)
-* [Windows](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.2-windows-amd64.zip)
-* [Linux (amd64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.2-linux-amd64.tar.gz)
+* [Aip for Mac (amd64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.2-macos-amd64.tar.gz)
+* [Aip for Windows](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.2-windows-amd64.zip)
+* [Aip for Linux (amd64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.2-linux-amd64.tar.gz)
 
 {{% alert color="info" %}}
 The following steps in this section must be done in an environment which has internet access.
@@ -131,7 +129,7 @@ curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.15.0/re
 curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.15.0/interceptors.yaml -s > interceptors.yaml
 ```
 
-Then you need to transfer the `tekton` folder to the air-gapped environment with aip tool:
+Then you need to transfer the `tekton` folder to the air-gapped environment with the aip tool:
 
 ```bash
 # replace "myprivate.registry.com" with your registry
@@ -164,7 +162,7 @@ aip addimagesquery private-cloud.registry.mendix.com/mxbuild '^8.18.*'
 aip addimagesquery private-cloud.registry.mendix.com/runtime-base '^8.18.*-rhel$'
 ```
 
-Then you need to transfer the `pipeline` folder to the air-gapped environment with aip tool:
+Then you need to transfer the `pipeline` folder to the air-gapped environment with the aip tool:
 
 ```bash
 # replace "myprivate.registry.com" with your registry
@@ -175,7 +173,7 @@ aip login -u user -p mypassword myprivate.registry.com
 aip push
 ```
 
-## 5 Tekton Installation
+## 5 Tekton Installation{#tekton-installation}
 
 If Tekton is already installed in your namespace, you can skip to [Pipelines Installation](#pipelines-installation).
 
@@ -258,7 +256,7 @@ For Tekton Triggers on OpenShift you need to update the deployment objects to ma
 ## 6 Pipeline and Trigger Installation{#pipelines-installation}
 
 To install pipeline you need to have [helm](https://helm.sh) and folder with [helm charts](https://cdn.mendix.com/mendix-for-private-cloud/tekton-pipelines/standalone-cicd/standalone-cicd-v1.0.0.zip).
-Pipelines itself splitted into 2 components:
+Pipelines itself split into 2 components:
 
 1. Pipeline – contains all Tekton related objects;
 2. Triggers – provides HTTP services to trigger (run) pipelines.
@@ -327,7 +325,7 @@ Parameters explanation:
 4. `gitlabwebhook.operatorNamespace` – Name of k8s namespace where Mendix Operator runs.
 5. `gitlabwebhook.mendixEnvironmentInernalName` – Mendix Environment Internal Name. You can get the all internal environment names with the next command: `kubectl get mendixapps -n $namespace_name`.
 6. `gitlabwebhook.kubeConfigSecretName` – Optional. Name of the secret with kube config. Used when Mendix Operator is in another cluster.
-7. `gitlabwebhook.protocol` – Git protocol. Availailable options: `http` or `ssh`.
+7. `gitlabwebhook.protocol` – Git protocol. Available options: `http` or `ssh`.
 8. `gitlabwebhook.scheduledEventsMode` -  
     Scheduled Events Mode has two options: 'manual' and 'auto'. 
     `manual` – throws an error in case if scheduled events in myScheduledEvents field contains not existing events. 
@@ -452,7 +450,7 @@ Parameters explanation:
     D – Development. 
     Always set this to P in production environments.
 6. `set-constants` – Constants to set as JSON map. Replaces the old list with the new one. Value example: {"KEY":"VALUE"}. Optional.
-7. `add-constants` – Constants to add as JSON map. Value example: {"KEY":"VALUE"}. Optinal.
+7. `add-constants` – Constants to add as JSON map. Value example: {"KEY":"VALUE"}. Optional.
 8. `remove-constants` – Constants to delete as JSON array. Value example: ["KEY1","KEY2"]. Optional.
 9. `set-env-vars` – Environment variables to set as JSON map. Replaces the old list with the new one. Value example: {"KEY":"VALUE"}. Optional.
 10. `add-env-vars` – Environment variables to add as JSON map. Value example: {"KEY":"VALUE"}. Optional.

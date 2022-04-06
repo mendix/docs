@@ -58,4 +58,4 @@ If your are building a hybrid mobile app, you need to add the following lines to
 
 ## 3 Strict CSP Compatibility
 
-This widget requires additional configuration to be compliant with strict content security policy (CSP). To make it work, you need to configure the CSP headers to allow the domain you're trying to load videos from. Otherwise, the videos are treated as external resources and are blocked.
+This widget requires additional configuration to be compliant with strict content security policy (CSP). To make it work, you need to configure the CSP headers to allow the domain you are trying to load videos from. Otherwise, the videos are treated as external resources and blocked.

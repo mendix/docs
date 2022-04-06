@@ -187,22 +187,26 @@ You can configure the sender's email addresses on the as follows:
 
         1. For **Email ID**, enter the sender's email address(es). 
 
-           {{% alert type="info" %}}With a paid subscription, you can configure at most five email addresses. With a trial subscription, you can configure at most one email address.{{% /alert %}}
-
         2. Optionally, enter the **Mail From Domain** information that you want to use with your [Email Service](https://marketplace.mendix.com/link/component/118393/) instance. For more details, see the [Configuring the Mail From Domain](#config-mail-from-domain) section. 
 
-        3. Click **Verify** to verify domain address. 
+        3. Click **View Details/Edit** to open the **Email Identity** dialog box.
+        
+        4. For **Email Identity**, enter the sender's email address(es).
+
+           {{% alert type="info" %}}With a paid subscription, you can configure at most five email addresses. With a trial subscription, you can configure at most one email address.{{% /alert %}}
 
            {{< figure src="/attachments/appstore/app-services/email-service/email-verification.png" >}}
-
+    
+        5. Click **Verify** to verify the email address(es). 
+    
            A window opens and tells you that the verification process is in progress.
-
+    
            {{< figure src="/attachments/appstore/app-services/email-service/email-verification-in-progress.png" >}}
-    
+        
            The system sends an email from `verify-email@notify.mendix.com` to your configured email address. 
-    
-        4. Click the link in the email to complete the process. Until the verification process is completed, you should continue to see a message saying the verification is pending.
-    
+        
+        6. Click the link in the email to complete the process. Until the verification process is completed, you should continue to see a message saying the verification is pending.
+        
            {{< figure src="/attachments/appstore/app-services/email-service/email-verification-pending.png" >}}
         
     *  If you choose **Domain** as the **Verification Type**, do as follows:

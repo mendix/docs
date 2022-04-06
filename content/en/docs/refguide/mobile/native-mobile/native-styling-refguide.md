@@ -551,7 +551,7 @@ The widget style properties are as follows:
 | `radioButtonItemContainerDisabledStyle`   | This has all ViewStyle properties | Radio item container style for read-only collection.   |
 | `circularButtonStyle`                     | This has all ViewStyle properties | Radio circular button style.                           |
 | `circularBtnDisabledStyle`                | This has all ViewStyle properties | Disabled radio circular button style.                  |
-| `activeButtonStyle`                       | This has all ViewStyle properties | Active radio inner circular button style.              |
+| `activeButtonStyle`                       | This has all ViewStyle properties | Active radio button style for inner circular region.   |
 | `radioButtonItemTitleStyle`               | This has all TextStyle properties | Radio item label text style.                           |
 
 

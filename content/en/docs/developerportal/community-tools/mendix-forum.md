@@ -164,11 +164,12 @@ Each idea specifies the following elements:
 * The category (**3**)
 	* This is set when submitting an idea (for details, see the [Submitting an Idea](#submitting-an-idea) section)
 * Tags (**4**) (for example, **Native-widgets**)
-  * You can search for one or more tags
+	* You can search for one or more tags
 * The number of votes (**5**), comments (**6**), and views (**7**) for the idea
 * The name, avatar, and level of the Mendix community member who created the idea (**8**)
-* * When the idea was created (**9**)
-* The status of the idea (**10**) (for descriptions of the various statuses, see the [Idea Details Page](#IdeaDetails) section)
+* When the idea was created (**9**)
+* The status of the idea (**10**) (for descriptions of the statuses, see the [Idea Details Page](##idea-details-page) section below)
+
 #### 3.1.1 Sorting the Ideas
 
 The **Sort by** drop-down menu at the top of the screen has three options for sorting the ideas on this page: **Last Updated**, **Newest**, and **Most Votes**.
@@ -189,7 +190,7 @@ To filter the ideas that appear on the overview page, select from the following 
 * **Categories** – the category set when the idea  was submitted (for more information, see the [Submitting an Idea](#submitting-an-idea) section)
 * **Tags** – the tags set when the idea was submitted (for more information, see the [Submitting an Idea](#submitting-an-idea) section)
 
-### 3.2 Idea Details Page {#IdeaDetails}
+### 3.2 Idea Details Page {#idea-details-page}
 
 Clicking the title of an idea will bring you to the details page for that idea:
 

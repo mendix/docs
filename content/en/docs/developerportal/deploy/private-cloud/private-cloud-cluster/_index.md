@@ -1,11 +1,9 @@
 ---
 title: "Creating a Private Cloud Cluster"
 url: /developerportal/deploy/private-cloud-cluster/
-parent: "private-cloud"
 description: "Describes the processes for creating a Private Cloud cluster in the Mendix Developer Portal"
 weight: 10
 tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
-#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -80,7 +78,7 @@ Should you consider using a connected environment, the following URLs should be 
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/create-cluster.png" >}}
 
-### 3.2 Adding a Namespace
+### 3.2 Adding a Namespace{#add-namespace}
 
 You now need to add a namespace to your cluster. Your cluster can contain several namespaces, see [Containerized Mendix App Architecture](#containerized-architecture), below for more information.
 
@@ -104,7 +102,7 @@ To add a namespace, do the following:
 
 {{% alert color="warning" %}} If you have selected a *Connected Installation Type* please verify that the [Connected Environment Pre-requisites](#prerequisites-connected) are configured. {{% /alert %}}
 
-## 4. Installing and Configuring the Mendix Operator
+## 4. Installing and Configuring the Mendix Operator{#install-operator}
 
 Before you can use the Mendix Operator in your namespace you need to install it and configure the services your app will use. Mendix provides you with a **Configuration Tool** which guides you through the process.
 

@@ -1,11 +1,9 @@
 ---
 title: "Upgrading Private Cloud"
 url: /developerportal/deploy/private-cloud-upgrade-guide/
-parent: "private-cloud"
 description: "Describes how to upgrade the Mendix Operator"
 weight: 90
 tags: ["Upgrade", "Private Cloud", "Cluster", "Operator", "Deploy"]
-#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction

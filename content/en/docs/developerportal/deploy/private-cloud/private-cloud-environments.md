@@ -1,11 +1,9 @@
 ---
 title: "Environment Planning for Private Cloud Clusters"
 url: /developerportal/deploy/private-cloud-environments/
-parent: "private-cloud"
 description: "Best Practices for Private Cloud Environments"
-weight: 40
+weight: 70
 tags: ["Environments", "Private Cloud", "Cluster", "Best Practices"]
-#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction

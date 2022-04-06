@@ -164,8 +164,8 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
 1. Log into the Marketplace.
 2. Go to **My Marketplace** and then do as follows:
-   - If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
-   - If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+   * If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+   * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
 3. Find **Email Service** in the list.
 4. Click **Usage Dashboard** to show the usage details.
 
@@ -183,7 +183,7 @@ You can configure the sender's email addresses on the as follows:
 
 3.  Choose your **Verification Type**:
 
-    * If you choose **Email ID**, do as follows:
+    * If you choose **Email ID** as the **Verification Type**, do as follows:
 
         1. For **Email ID**, enter the sender's email address(es). 
 
@@ -205,14 +205,15 @@ You can configure the sender's email addresses on the as follows:
     
            {{< figure src="/attachments/appstore/app-services/email-service/email-verification-pending.png" >}}
         
-    *  If you choose **Domain**, do as follows:
-    
-        {{< figure src="/attachments/appstore/app-services/email-service/verification-type-domain.png" >}}
+    *  If you choose **Domain** as the **Verification Type**, do as follows:
     
         1. For **Domain**, enter the domain address.
-        2. For **Email ID**, enter the sender's email address(es). 
+        2. For **Email ID**, enter the sender's email address(es).         
         3. Optionally, enter the **Mail From Domain** information that you want to use with your [Email Service](https://marketplace.mendix.com/link/component/118393/) instance. For more details, see the [Configuring the Mail From Domain](#config-mail-from-domain) section. 
+        
         4. Click **Save** to verify domain address. 
+        
+           {{< figure src="/attachments/appstore/app-services/email-service/domain-verification.png" >}}
         
            A window opens and tells you that the verification process is in progress.
         
@@ -222,12 +223,12 @@ You can configure the sender's email addresses on the as follows:
         
            {{< figure src="/attachments/appstore/app-services/email-service/domain-verification-pending.png" >}}
         
-           The Domain Keys Identified Mail (DKIM) settings for your domain and domain verification records are also available. You can use these records for email security purposes.
+           The Domain Keys Identified Mail (DKIM) settings for your domain and domain verification records become available. You can use these records for email security purposes.
         
            {{< figure src="/attachments/appstore/app-services/email-service/dkim-and-domain-verification-record.png" >}}
-           
+        
 
-{{% alert type="warning" %}}If you need to view, add, or delete email IDs associated with the domain, click **View Details/Edit**.{{% /alert %}}
+{{% alert type="info" %}}If you need to view, add, or delete email IDs associated with the domain, click **View Details/Edit**.{{% /alert %}}
 
 {{< figure src="/attachments/appstore/app-services/email-service/view-details-edit.png" >}}
 

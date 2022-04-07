@@ -126,11 +126,11 @@ While Java is likely going to be a primary choice for building your connector mo
 
 To ensure that end-users can reuse your Mendix build logic as easily as possible, you will need to make microflows available as microflow or workflow activities (see the [Triggering a Workflow via a Microflow](/refguide/workflows/#trigger-microflow) section of *Workflows*).
 
-Ensure that a microflow is visible in the **Toolbox** in the [Expose as microflow action](/refguide/java-actions/#expose-microflow-action/) section of the microflow properties. You can do this by right-clicking in the whitespace of your microflow canvas. Additionally, you can specify a caption for the action, a category for the **Toolbox**, and an icon. These will be used in the **Toolbox**, and also in the microflows, so these will be easy to read for the end-user:
+Ensure that a microflow is visible in the **Toolbox** in the [Expose as microflow action](/refguide/java-actions/#expose-microflow-action) section of the microflow properties. You can do this by right-clicking in the whitespace of your microflow canvas. Additionally, you can specify a caption for the action, a category for the **Toolbox**, and an icon. These will be used in the **Toolbox**, and also in the microflows, so these will be easy to read for the end-user:
 
 {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/microflow-action.png" >}}
 
-After you [expose as microflow action](/refguide/java-actions/#expose-microflow-action/), this can be dragged and dropped inside another microflow.
+After you [expose as microflow action](/refguide/java-actions/#expose-microflow-action), this can be dragged and dropped inside another microflow.
 
 If you create functionality that requires for example REST API integrations or complex data processing, make sure you have well-documented microflows connecting your  *public* part of the module to the  *private* part. By doing this, you can shield the implementing developer from having to understand the REST API integration or complex data processing logic. 
 
@@ -383,9 +383,9 @@ Gradle can handle managing Java dependencies and running [JUnit](http://junit.or
 
 #### 6.2.2 Using the Java Unit Test Reference
 
-Mendix apps need `Core` classes, and the Core API in Mendix allows you to do things that you usually do in a microflow, like committing an object. CoreProxy serves as a mockable layer between your Java logic and the core API. 
+Mendix apps need `Core` classes, and the [Core API](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/Core.html) allows you to do things that you usually do in a microflow, like committing an object. `CoreProxy` serves as a mockable layer between your Java logic and the `Core` API. 
 
-Our [Java unit test reference](https://Github.com/mendixlabs/javaunittestreference) is available to help you through this process. `MendixUnitTestBase.java` is extendable and reusable for your own purposes. When extended, it enables Mockito on your test classes and mocks Core API behavior.  This does the following:
+Our [Java unit test reference](https://Github.com/mendixlabs/javaunittestreference) is available to help you through this process. `MendixUnitTestBase.java` is extendable and reusable for your own purposes. When extended, it enables Mockito on your test classes and mocks `Core` API behavior.  This does the following:
 
 * Checks that your code sends a certain log message to a log node
 * Verifies that your code calls a microflow with correct parameters

@@ -91,4 +91,4 @@ An addition authentication request is made to the Mendix REST server via `<host>
 
 ## 4 Strict CSP Compatibility
 
-This module requires additional configuration to be compliant with strict content security policy (CSP). The Pusher module makes use of an external service for its  functionalities. To make this module work, you need to configure the CSP headers to allow resources from that domain.
+This module requires additional configuration to be compliant with strict content security policy (CSP). The pusher module makes use of an external service for its  functionalities. To make this module work, you need to configure the CSP headers to allow resources from that domain.

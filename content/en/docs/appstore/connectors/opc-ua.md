@@ -104,10 +104,10 @@ This connector is designed for usage with multiple Servers if necessary. The sta
 
 For each OPC UA Server, the following information will need to be stored in an **OpcUaServerCfg** object:
 
-* **ServerID** (String) – the short nickname assigned to the Server for identification, which is primarily used for error and log messages.
-* **URL** (String) – the full URL of the OPC UA Server, for example, `opc.tcp://localhost:53530/OPCUA/SimulationServer`
-* **Username** (String) – the username used if **AuthenticatioType** is `CREDENTIALS`
-*  **Password** (String) – the password for the username used if **AuthenticatioType** is `CREDENTIALS`, only used for data-entry
+* **ServerID** (String) – The short nickname assigned to the Server for identification, which is primarily used for error and log messages.
+* **URL** (String) – The full URL of the OPC UA Server, for example, `opc.tcp://localhost:53530/OPCUA/SimulationServer`
+* **Username** (String) – The username used if **AuthenticatioType** is `CREDENTIALS`
+*  **Password** (String) – The password for the username used if **AuthenticatioType** is `CREDENTIALS`, only used for data-entry
 
    {{% alert color="info" %}}Once saved, this field is reset.{{% /alert %}}
 
@@ -133,7 +133,7 @@ The **Browse** action allows you to browse the nodes within the OPC UA Server. T
 
 * **Opc UA Server cfg** – an object of the entity type **OpcUaServerCfg**, which contains the configuration of the Server to which the request is made
 * **Node id** – the node ID from which you want to browse to its children
-    
+  
     {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example `ns=4;id=3`.
     When **Is Root** is set to `true`, leave this value empty.{{% /alert %}}
 
@@ -197,14 +197,14 @@ The Mendix Client will evaluate each sample and process it according to its conf
 
 ##### 4.2.3.2 Subscription Action
 
-The action creates an object of type **MonitoredItem** and **Subscription**, which is associated with the OPC UA service and contains details of the subscription and the item which is being monitored. You monitor a **Node**, this creates what OPC UA calls a **MonitoredItem**. The monitored item determines the frequency and type of values that you are getting. 
+The action creates an object of type **MonitoredItem** and **Subscription**. This object is associated with the OPC UA service and contains details of the subscription and the item which is being monitored. You monitor a **Node**, this creates what OPC UA calls a **MonitoredItem**. The monitored item determines the frequency and type of values that you get. 
 
 {{% alert color="info" %}}
 A monitored item uses the following default settings: **samplingInterval** = `500ms`; **queueSize** = `10`; **discardOldest** = `true`. For more details on the impact of these settings, see OPC UA Documentation.
 {{% /alert %}}
 **Limitation:** 
 
-The **Subscription** influences the connection that is established with the Client. Every  *PublishingInterval*-milliseconds the Server will connect with the Client to send any new values. 
+The **Subscription** influences the connection that is established with the Client. Every publishing interval (in millisecond), the Server will connect with the Client to send any new values. 
 
 Each subscription requires a microflow to process the data each time a notification is received. 
 
@@ -381,13 +381,13 @@ This can be caused by one of the following reasons:
 
       com.mendix.core.CoreRuntimeException: com.mendix.systemwideinterfaces.MendixRuntimeException: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.lang.Exception: no UserTokenPolicy with UserTokenType.UserName found
          at com.mendix.basis.actionmanagement.ActionManager.executeSync(ActionManager.scala:84)
-    
+        
       Caused by: com.mendix.systemwideinterfaces.MendixRuntimeException: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.lang.Exception: no UserTokenPolicy with UserTokenType.UserName found
          at com.mendix.util.classloading.Runner.withContextClassLoader(Runner.java:23)
-    
+        
       Caused by: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.lang.Exception: no UserTokenPolicy with UserTokenType.UserName found
          at opcuaclientmx.impl.OpcUaClientManager.buildNewClient(OpcUaClientManager.java:86)
-    
+        
       Caused by: java.util.concurrent.ExecutionException: java.lang.Exception: no UserTokenPolicy with UserTokenType.UserName found
          at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
 

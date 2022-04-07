@@ -106,6 +106,7 @@ To configure the **Send email** activity, double-click the activity and specify 
 {{< figure src="/attachments/appstore/app-services/email-service/send-email-dialog-box.png" >}}
 
 * **Required Fields**
+  
     * **From** – Defines the sender's email
     * **To**  – Defines the recipients of the email
     * **Subject**  – Defines the subject of the email
@@ -169,70 +170,81 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 3. Find **Email Service** in the list.
 4. Click **Usage Dashboard** to show the usage details.
 
-## 5 Increasing the Deliverability of Your Emails
+## 5 Configuring the Sender's Email Addresses on Communication Services Console
 
-You can make your emails comply with [Domain-based Message Authentication, Reporting and Conformance (DMARC)](https://dmarc.org/) to increase the deliverability of your emails. This is a protocol that helps mail servers validate whether an incoming email is authorized by the administrators of the sending domain. To comply with DMARC, you can use the Sender Policy Framework (SPF) method.
+If you are the Technical Contact, you can configure the sender's email addresses on Communication Services Console:
 
-You can configure the sender's email addresses on the as follows:
+1. Go to [Communication Services Console](https://communication-appservices.mendixcloud.com/).
 
-1.  Go to [Communication Services Console](https://communication-appservices.mendixcloud.com/) and log in with your Mendix account.
+2. Log in with your Mendix account.
 
-    {{< figure src="/attachments/appstore/app-services/email-service/email-identities.png" >}}
+   {{< figure src="/attachments/appstore/app-services/email-service/email-identities.png" >}}
 
-2. Select the environment where you want to configure the sender's email address(es).
+3. Select the environment where you want to configure the sender's email address(es).
 
-3.  Choose your **Verification Type**:
+4. Choose your **Verification Type**:
 
-    * If you choose **Email ID** as the **Verification Type**, do as follows:
+   * If you choose **Email ID** as the **Verification Type**, perform the following steps:
 
-        1. For **Email ID**, enter the sender's email address(es). 
+     1. For **Email ID**, enter the sender's email address(es). 
 
-           {{% alert type="info" %}}With a paid subscription, you can configure at most five email addresses. With a trial subscription, you can configure at most one email address.{{% /alert %}}
+     2. Optionally, enter the **Mail From Domain** information that you want to use with your [Email Service](https://marketplace.mendix.com/link/component/118393/) instance. For more details, see the [Configuring the Mail From Domain](#config-mail-from-domain) section. 
 
-        2. Optionally, enter the **Mail From Domain** information that you want to use with your [Email Service](https://marketplace.mendix.com/link/component/118393/) instance. For more details, see the [Configuring the Mail From Domain](#config-mail-from-domain) section. 
+     3. To verify the sender's email address(es), perform the following steps:
 
-        3. Click **Verify** to verify domain address. 
+        1.  Click **View Details/Edit** to open the **Email Identity** dialog box.
 
-           {{< figure src="/attachments/appstore/app-services/email-service/email-verification.png" >}}
+            {{< figure src="/attachments/appstore/app-services/email-service/view-details-edit-email-itentity.png" >}}
 
-           A window opens and tells you that the verification process is in progress.
-
-           {{< figure src="/attachments/appstore/app-services/email-service/email-verification-in-progress.png" >}}
-    
-           The system sends an email from `verify-email@notify.mendix.com` to your configured email address. 
-    
-        4. Click the link in the email to complete the process. Until the verification process is completed, you should continue to see a message saying the verification is pending.
-    
-           {{< figure src="/attachments/appstore/app-services/email-service/email-verification-pending.png" >}}
-        
-    *  If you choose **Domain** as the **Verification Type**, do as follows:
-    
-        1. For **Domain**, enter the domain address.
-        2. For **Email ID**, enter the sender's email address(es).         
-        3. Optionally, enter the **Mail From Domain** information that you want to use with your [Email Service](https://marketplace.mendix.com/link/component/118393/) instance. For more details, see the [Configuring the Mail From Domain](#config-mail-from-domain) section. 
-        
-        4. Click **Save** to verify domain address. 
-        
-           {{< figure src="/attachments/appstore/app-services/email-service/domain-verification.png" >}}
-        
-           A window opens and tells you that the verification process is in progress.
-        
-           {{< figure src="/attachments/appstore/app-services/email-service/domain-verification-in-progress.png" >}}
-        
-           Until the verification process is completed, you should continue to see a message saying the verification is pending.
-        
-           {{< figure src="/attachments/appstore/app-services/email-service/domain-verification-pending.png" >}}
-        
-           The Domain Keys Identified Mail (DKIM) settings for your domain and domain verification records become available. You can use these records for email security purposes.
-        
-           {{< figure src="/attachments/appstore/app-services/email-service/dkim-and-domain-verification-record.png" >}}
-        
+        2.  For **Email Identity**, enter the sender's email address(es).
+   
+            {{% alert type="info" %}}With a paid subscription, you can configure at most five email addresses. With a trial subscription, you can configure at most one email address.{{% /alert %}}
+   
+            {{< figure src="/attachments/appstore/app-services/email-service/email-verification.png" >}}
+   
+        3.  Click **Verify** to verify the email address(es). 
+   
+            A window opens and tells you that the verification process is in progress.
+   
+            {{< figure src="/attachments/appstore/app-services/email-service/email-verification-in-progress.png" >}}
+   
+            The system sends an email from `verify-email@notify.mendix.com` to your configured email address. 
+   
+        4.  Click the link in the email to complete the process. Until the verification process is completed, you should continue to see a message saying the verification is pending.
+   
+            {{< figure src="/attachments/appstore/app-services/email-service/email-verification-pending.png" >}}
+   
+   * If you choose **Domain** as the **Verification Type**, perform the following steps:
+   
+     1. For **Domain**, enter the domain address.
+   
+     2. For **Email ID**, enter the sender's email address(es).         
+   
+     3. Optionally, enter the **Mail From Domain** information that you want to use with your [Email Service](https://marketplace.mendix.com/link/component/118393/) instance. For more details, see the [Configuring the Mail From Domain](#config-mail-from-domain) section. 
+   
+     4. Click **Save** to verify domain address. 
+   
+        {{< figure src="/attachments/appstore/app-services/email-service/domain-verification.png" >}}
+   
+        A window opens and tells you that the verification process is in progress.
+   
+        {{< figure src="/attachments/appstore/app-services/email-service/domain-verification-in-progress.png" >}}
+   
+        Until the verification process is completed, you should continue to see a message saying the verification is pending.
+   
+        {{< figure src="/attachments/appstore/app-services/email-service/domain-verification-pending.png" >}}
+   
+        The Domain Keys Identified Mail (DKIM) settings for your domain and domain verification records become available. You can use these records for email security purposes.
+   
+        {{< figure src="/attachments/appstore/app-services/email-service/dkim-and-domain-verification-record.png" >}}
 
 {{% alert type="info" %}}If you need to view, add, or delete email IDs associated with the domain, click **View Details/Edit**.{{% /alert %}}
 
-{{< figure src="/attachments/appstore/app-services/email-service/view-details-edit.png" >}}
+## 6 Increasing the Deliverability of Your Emails
 
-### 5.1 Configuring the Mail From Domain {#config-mail-from-domain}
+You can make your emails comply with [Domain-based Message Authentication, Reporting and Conformance (DMARC)](https://dmarc.org/) to increase the deliverability of your emails. This is a protocol that helps mail servers validate whether an incoming email is authorized by the administrators of the sending domain. To comply with DMARC, you can use the Sender Policy Framework (SPF) method.
+
+### 6.1 Configuring the Mail From Domain {#config-mail-from-domain}
 
 Sender Policy Framework (SPF) is an email authentication method. During the delivery of an email, SPF allows the mail server to check whether an incoming email claiming to come from a specific domain is submitted by an IP address authorized by the administrators of that domain. 
 
@@ -243,9 +255,9 @@ To achieve The SPF validation, you must meet these two requirements:
 
 If you use the default Mail From domain of the Email Service, you can only meet the first requirement. To meet the second requirement, you must use your own Mail From domain.
 
-To configure your custom Mail From domain, you should work with your IT administrators to add the MX and SPF records.
+To configure your custom Mail From domain, you should work with your IT administrators to add the SPF and MX records.
 
-### 5.2 SPF and MX Records {#spf-and-mx-records}
+### 6.2 SPF and MX Records {#spf-and-mx-records}
 
 The SPF record is a list of authorized sending hosts and IP addresses for a domain, which is published in the domain's DNS records.
 
@@ -260,5 +272,6 @@ The SPF record and MX record use the formats shown in the following table:
 | notification.domain.com | TXT | "v=spf1 include:amazonses.com ~all" |
 |notification.domain.com | MX | 10 feedback-smtp.eu-central-1.amazonses.com|
 
-## 6 Read More
+## 7 Read More
+
 * [Send Emails from a Mendix App](https://academy.mendix.com/link/paths/117/Send-Emails-from-a-Mendix-App-/)

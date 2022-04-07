@@ -106,14 +106,14 @@ For each OPC UA Server, the following information will need to be stored in an *
 
 * **ServerID** (String) – The short nickname assigned to the Server for identification, which is primarily used for error and log messages.
 * **URL** (String) – The full URL of the OPC UA Server, for example, `opc.tcp://localhost:53530/OPCUA/SimulationServer`
-* **Username** (String) – The username used if **AuthenticatioType** is `CREDENTIALS`
-*  **Password** (String) – The password for the username used if **AuthenticatioType** is `CREDENTIALS`, only used for data-entry
+* **Username** (String) – The username used if **AuthenticatioType** is **CREDENTIALS**
+*  **Password** (String) – The password for the username used if **AuthenticatioType** is **CREDENTIALS**, only used for data-entry
 
    {{% alert color="info" %}}Once saved, this field is reset.{{% /alert %}}
 
 * **Password_Encrypted** (String) – a password for the username, automatically encrypted from **Password**
-* **AuthenticationType** (Enumeration) – the type of authentication required for this Server: `NONE`, `CREDENTIALS`, or `CERTIFICATE`
-* **CertificatePassword** (String) – the certificate password required if **AuthenticatioType** is `CERTIFICATE`, only used for data-entry.
+* **AuthenticationType** (Enumeration) – the type of authentication required for this Server: **NONe**, **CREDENTIALS**, or **CERTIFICATE**
+* **CertificatePassword** (String) – the certificate password required if **AuthenticatioType** is **CERTIFICATE**, only used for data-entry.
 
    {{% alert color="info" %}}Once saved, this field is reset.{{% /alert %}}
 
@@ -134,8 +134,8 @@ The **Browse** action allows you to browse the nodes within the OPC UA Server. T
 * **Opc UA Server cfg** – an object of the entity type **OpcUaServerCfg**, which contains the configuration of the Server to which the request is made
 * **Node id** – the node ID from which you want to browse to its children
   
-    {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example `ns=4;id=3`.
-    When **Is Root** is set to `true`, leave this value empty.{{% /alert %}}
+    {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example: `ns=4;id=3`.
+    When **Is Root** is set to **true**, leave this value empty.{{% /alert %}}
 
 * **Is root** – is used by the tree widget in the example implementation module
 
@@ -152,7 +152,7 @@ The **Read** action allows you to read the current value of a specific node with
 * **Opc ua Server cfg** – an object of entity type **OpcUaServerCfg**, which contains the configuration of the Server to which the request is made
 * **Node id** – the ID of the node you want to read
 
-    {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example `ns=4;id=3`.{{% /alert %}}
+    {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example, `ns=4;id=3`.{{% /alert %}}
 
 {{% alert color="info" %}}
 All values are read as strings, you will need to convert them if you need a numeric or date value.
@@ -214,7 +214,7 @@ The configuration of the action is as follows:
 * **Opc ua Server cfg** – an object of entity type **OpcUaServerCfg** containing the configuration of the Server to which the request is made
 * **Node id** – the ID of the node you want to subscribe to
 
-  {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example `ns=4;id=3`.{{% /alert %}}
+  {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example, `ns=4;id=3`.{{% /alert %}}
 * **On message microflow** – defines a microflow to be run every time a message is received from the subscribed service; required to have one input parameter of the **OpcUaClientMx.Message** type and no output.
 * **Subscription** (optional) – passes a **Subscription** entity to have more control over the frequency in which messages are sent to the Client. Leave this parameter blank to let the module setup the subscription.
 * **Use return value**
@@ -241,7 +241,7 @@ An object is created for each node you request to monitor, and contains the foll
 * **NodeId** (String) – the full node ID as referenced by the OPC UA Server.  
 * **SubscriptionID** (String) – a unique identifier generated by the OPC UA Server, which will be identical to the associated **Subscription** entity
 * **MonitoredItemID** (String) – a unique identifier generated by the OPC UA Server, which can be used to identify the unique Monitored Item for cancellation of the subscription  
-* **Status** (Enumeration) – identifies whether the subscription is active or not; possible values are `New`,` Active`,` Failed`, `Deleted`  
+* **Status** (Enumeration) – identifies whether the subscription is active or not; possible values are **New**, **Active**, **Failed**, **Deleted**  
 * **LastSubscribedOn** (DateTime) - the last time the Subscribe function was successfully executed.  
 * **LastStateChange** (DateTime) - the last time the **Status** attribute changed, which is the moment the subscription got active, failed, or was deleted.  
 * **LastMessage** (DateTime) - the moment the last full message was received from the OPC UA Server on this monitored Item.  
@@ -260,7 +260,7 @@ This is the only object from the OpcUaClientMx domain that you should create fro
 
 * **RequestedPublishingInterval_ms** (Decimal) – the publishing interval that is requested from the OPC UA Server in milliseconds (using decimal here to honor the Eclipse Milo implementation)
 * **SubscriptionID** (String) – a unique identifier generated by the OPC UA Server  
-* **Status** (Enumeration) – identifies whether the subscription is active or not; possible values are `New`,` Active`,` Failed`, `Deleted`
+* **Status** (Enumeration) – identifies whether the subscription is active or not; possible values are **New**, **Active**, **Failed**, **Deleted**
 
 #### 4.2.4 Unsubscribing from Updates of Data from a Node
 
@@ -275,8 +275,8 @@ You can configure if the unsubscribe is permanent (and records are removed) or i
 * **Opc ua Server cfg** – an object of entity type **OpcUaServerCfg** containing the configuration of the Server to which the request is made
 * **Monitored item ID** – the ID of the item which is being monitored by the subscription — this is held as the **MonitoredItemID** in the **Subscription** entity
 * **RestartSubscriptionOnNextReboot** – Indicates if the registration entities should be kept by this action
-  * True – the **MonitoredItem** and **Subscription** will be kept in the database and their **Status** will be changed to `New`
-  * False – the **Status** of the monitored item will become `Deleted` and the module will automatically remove the entities from the database
+  * True – the **MonitoredItem** and **Subscription** will be kept in the database and their **Status** will be changed to **New**
+  * False – the **Status** of the monitored item will become **Deleted** and the module will automatically remove the entities from the database
 
 
 #### 4.2.5 Writing Data to a Node{#write}
@@ -290,7 +290,7 @@ If nothing is returned, the action was successful; and if the OPC UA Server refu
 
 * **NodeId** –  the ID of the node you want to write to
 
-  {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example "ns=4;id=3".{{% /alert %}}
+  {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example, `ns=4;id=3`.{{% /alert %}}
 
 * **Value to write** – the new value which you want to set for this node; can be any supported type (see the limitations for all types that are currently supported)
 
@@ -302,7 +302,7 @@ The OPC UA Client Connector comes with a number of pages which you can use to ma
 
 #### 4.3.1 OpcUaServer_Overview
 
-This page shows a summary of all the Servers you have set up in your app and allows you to edit existing Servers and set up a new one. For each Server you will see the name you have given it, the URL where the Server can be reached, and the authentication type.
+This page shows a summary of all the Servers you have set up in your app. It allows you to edit existing Servers and set up a new one. For each Server you will see the name you have given it, the URL where the Server can be reached, and the authentication type.
 
 To use this page, just include it in the navigation for your app, or add an **Open Page** button to an existing page of your app.
 
@@ -311,7 +311,7 @@ From this page, you can perform the following actions:
 * Search – search for a particular Server in the list of Servers
 * New Server – add a new OPC UA Server using the **OpcUaServer_NewEdit** page
 * Edit Server - change the details of the selected Server using the **OpcUaServer_NewEdit** page
-* View Subscription Details – Opens a detail page for your Server with all the active subscriptions with their status. This following page allows you to re-connect or disconnect subscriptions. 
+* View Subscription Details – open a detail page for your Server with all the active subscriptions with their status. This following page allows you to re-connect or disconnect subscriptions. 
 * Delete – delete all the information about the selected Server — you will be asked for confirmation. Only delete a Server if there are no active subscriptions, the module doesn't validate this. 
 
 #### 4.3.2 OpcUaServer_NewEdit
@@ -328,7 +328,7 @@ This page allows you to create or change the details of an OPC UA Server you wan
     * **Certificate file (PFX)** (if **Authentication Type** is **CERTIFICATE**) – the file containing the certificate required to authenticate to the OPC UA Server if a certificate is being used for authentication — you will be able to upload a file held locally, and also download an existing file
     * **Certificate password** (if **Authentication Type** is **CERTIFICATE**) – the password required to authenticate to the OPC UA Server if a certificate is being used for authentication
 
-The password for the credentials & certificate are automatically encrypted/decrypted by the module. After saving the configuration the UI doesn't allow you to read the existing password, the decryption is only programmed in the connector. 
+The password for the credentials and certificate are automatically encrypted and decrypted by the module. After saving the configuration the UI does not allow you to read the existing password, the decryption is only programmed in the connector. 
 
 {{% alert color="warning" %}}
 The OPC UA Server should have only one type of authentication enabled, and the authentication type chosen here must match that type to ensure that the endpoint can be reached.
@@ -336,41 +336,43 @@ The OPC UA Server should have only one type of authentication enabled, and the a
 
 ##### 4.3.2.2 Troubleshoot (test actions) on OpcUaServer_NewEdit Page
 
-In addition to the usual **Save** and **Cancel** buttons which allow you to save the Server settings or cancel the create or edit operation, there are additional options to validate your configuration. If you click the 'Advanced Troubleshooting' button a new page is opened where you can still edit your configuration, but also test by reading/writing/browsing the OPC UA Server. This allows you to test your configuration and run actions directly on the OPC UA Server.
+In addition to the **Save** and **Cancel** buttons, which allow you to save the Server settings or cancel the create or edit operation, there are also options to validate your configuration. If you click **Advanced Troubleshooting** button, a new page opens. There, you can still edit your configuration, and also test by reading, writing, and browsing the OPC UA Server. This allows you to test your configuration and run actions directly on the OPC UA Server.
 
-**Test Messaging:**
+Test Messaging:
 
-* **NodeId** – The NodeId of the Node you want to use. Expects the full Node Id as referenced by the OPC UA Server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
-* **Value to write** – the value to write to a node when the **Write** button is clicked. Leave blank if you want to execute any of the other actions.
-* **Result** – the resulting JSON string from performing any of the four test actions. This shows the full response from the OPC UA Server, the connector might at relevant details in case of an error. 
-* **Read** executes the [Read action](#read)
-* **Write** executes the [Write action](#write)
-* **Browse** executes the [Browse action](#browse)
-* **Subscribe Simple** executes the [Subscribe action](#subscribe). Process response with microflow: `SubscriptionIncomingData_Process_TEST`. Check the log or put a breakpoint on this microflow to checkout the response messages.
-* **Subscribe w/ Msg** executes the [Subscribe action](#subscribe). Process response with microflow: SubscriptionIncomingData_Process_wMessage_TEST. Check the log or put a breakpoint on this microflow to checkout the response messages.
+* **NodeId** – the ID of the node you want to use
+
+  {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example, `ns=4;id=3`.{{% /alert %}}
+* **Value to write** – the value to write to a node when the **Write** button is clicked; should be blank if you want to execute any of the other actions.
+* **Result** – the resulting JSON string from performing any of the four test actions, which shows the full response from the OPC UA Server, the connector might at relevant details in case of an error. 
+* **Read** – executes the [Read action](#read)
+* **Write** – executes the [Write action](#write)
+* **Browse** – executes the [Browse action](#browse)
+* **Subscribe Simple** – this executes the [Subscribe action](#subscribe). Process response with microflow: `SubscriptionIncomingData_Process_TEST`. Check the log or put a breakpoint on this microflow to checkout the response messages.
+* **Subscribe w/ Msg** – this executes the [Subscribe action](#subscribe). Process response with microflow: SubscriptionIncomingData_Process_wMessage_TEST. Check the log or put a breakpoint on this microflow to checkout the response messages.
 
 The result of the tests is displayed in the **Result** field. It shows the raw JSON response which the OPC UA Server provides.
 
-##### 4.3.2.3 Server Subscriptions overview 
+##### 4.3.2.3 Server Subscriptions Overview 
 
-The Subscription Detail page provides insight in the MonitoredItems and Subscriptions that are currently active (or have been recently active). You cannot create new subscriptions from here, but you can interact with existing ones.
+**Subscription Detail** page provides insight in the monitored items and subscriptions that are currently active (or have been recently active). You cannot create new subscriptions from here, but you can interact with existing ones.
 
-The **Monitored Item** Tab:
-Shows a view of all the **MonitoredItem**s that are known to the application. Any object of any status is showing in this view, that is New, Active, Failed, Deleted instances. 
+The **Monitored Item** tab – This shows a view of all the monitored items that are known to the application. Any object of any status is showing in this view, that is **New**, **Active**, **Failed**, **Deleted** instances. 
 
-For each MonitoredItem you are able to perform one of the following actions: 
-*If your Server is correctly configured there is no need to ever execute these actions, but this can be useful to resolve connectivity problems or recover after a previous failure*
+For each monitored item, you are able to perform one of the following actions:
 
-* **Refresh Subscription** Select a MonitoredItem from the list, to re-establishes the connect with the Server. If a previous connection exists it will simply re-negotiate the settings with the Server, if the connection was lost it will be re-established. This action can also be executed on 'Deleted' or 'Failed' objects. A successful refresh will update these objects to the 'Active' status. 
-* **Unsubscribe** Unsubscribe the MonitoredItem from the OPC UA Server updates. If the action was successful the object will receive the status 'Deleted' and will be removed from the database eventually.   
-* **Delete** Remove the selected MonitoredItem from the database. There are no validations on this action, make sure you know that you can delete the record from the database before executing this action. If you remove a MonitoredItem that still has an active subscription at the OPC UA Server the connector could generate duplicate or untraceable messages, or throw exceptions (until the connection expires at the Server). 
-* **Re-connect All New/Active Subscriptions** Refresh all the MonitoredItems that have the status New or Active. Re-establishes the connect with the Server. If a previous connection exists it will simply re-negotiate the settings with the Server, if the connection was lost it will be re-established.  
+{{% alert color="info" %}}If your Server is correctly configured, there is no need to ever execute these actions, but this can be useful to resolve connectivity problems or recover after a previous failure.{{% /alert %}}
 
-The **Subscription (connection)** Tab:  
-Shows a list of all the active Subscriptions with the Server, and all MonitoredItems that are grouped in that same connection. 
-The Subscription objects are managed by the connector, you cannot directly interact with this data. All Subscriptions are automatically created or removed along with MonitoredItems.
+* **Refresh Subscription** – This selects a MonitoredItem from the list, to re-establishes the connect with the Server. If a previous connection exists, it will simply re-negotiate the settings with the Server, if the connection was lost it will be re-established. This action can also be executed on objects that have the status of **Deleted** or **Failed**. A successful refresh will update these objects to the **Active** status. 
+* **Unsubscribe** – This unsubscribes the **MonitoredItem** from the OPC UA Server updates. If the action was successful, the object will receive the status **Deleted** and will be removed from the database eventually.   
+* **Delete** – This removes the selected **MonitoredItem** from the database. There are no validations on this action, make sure you know that you can delete the record from the database before executing this action. If you remove a **MonitoredItem** that still has an active subscription at the OPC UA Server, the connector could generate duplicate or untraceable messages, or throw exceptions (until the connection expires at the Server). 
+* **Re-connect All New/Active Subscriptions** – refresh all the MonitoredItems that have the status **New** or **Active**. Re-establishes the connect with the Server. If a previous connection exists, it will simply re-negotiate the settings with the Server, if the connection was lost it will be re-established.  
 
-The purpose of this tab is to show the Subscriptions with their current Publishing Interval to gain insight in the frequency messages being send by the Server. 
+**Subscription (connection)** tab – shows a list of all the active Subscriptions with the Server, and all monitored items that are grouped in that same connection. 
+
+The **Subscription** objects are managed by the connector, you cannot directly interact with this data. All subscriptions are automatically created or removed along with monitored items.
+
+The purpose of this tab is to show the subscriptions with their current publishing interval to gain insight in the frequency messages being send by the Server. 
 
 ## 5 Troubleshooting
 

@@ -7,6 +7,8 @@
   margin-bottom: $spacer;
   color: $table-color;
   background-color: $table-bg; // Reset for nesting within parents with `background-color`.
+  position: relative; // NK - added to allow movement of horizontal scroll bar, when overlaping with header below
+  z-index: 2; // NK - added to allow movement of horizontal scroll bar, when overlaping with header below
 
   th,
   td {

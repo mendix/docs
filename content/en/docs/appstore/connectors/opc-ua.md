@@ -152,7 +152,7 @@ The **Read** action allows you to read the current value of a specific node with
 * **Opc ua Server cfg** – an object of entity type **OpcUaServerCfg**, which contains the configuration of the Server to which the request is made
 * **Node id** – the ID of the node you want to read
 
-    {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example "ns=4;id=3".{{% /alert %}}
+    {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example `ns=4;id=3`.{{% /alert %}}
 
 {{% alert color="info" %}}
 All values are read as strings, you will need to convert them if you need a numeric or date value.
@@ -202,58 +202,65 @@ The action creates an object of type **MonitoredItem** and **Subscription**. Thi
 {{% alert color="info" %}}
 A monitored item uses the following default settings: **samplingInterval** = `500ms`; **queueSize** = `10`; **discardOldest** = `true`. For more details on the impact of these settings, see OPC UA Documentation.
 {{% /alert %}}
-**Limitation:** 
 
-The **Subscription** influences the connection that is established with the Client. Every publishing interval (in millisecond), the Server will connect with the Client to send any new values. 
+The **Subscription** influences the connection that is established with the Client. Every publishing interval (in millisecond) the Server will connect with the Client to send any new values. 
 
 Each subscription requires a microflow to process the data each time a notification is received. 
 
-**The configuration:**
+The configuration of the action is as follows:
+
 {{< figure src="/attachments/appstore/connectors/opc-ua/subscribe-action.png" alt="Parameters for the subscribe action" >}}
 
-* Opc ua Server cfg – an object of entity type OpcUaServerCfg containing the configuration of the Server to which the request is made
-* NodeId – The NodeId of the Node you want to subscribe to. Expects the full Node Id as referenced by the OPC UA Server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
-* On message microflow – defines a microflow to be run every time a message is received from the subscribed service. This microflow must have 1 input parameter of type: OpcUaClientMx.Message and no output.
-* Subscription (optional) – pass a **Subscription** entity to have more control over the frequency in which messages are send to the Client. Leave this parameter blank to let the module setup the subscription.
-* Use return value – `Yes` returns an object of type **MonitoredItem** which defines the new subscription and can be used in the microflow, `No` does not return an object. The returned object should not be changed or committed, but can be associated to for your administration/logic.
-* Variable name – the name assigned to the variable containing the return value  
+* **Opc ua Server cfg** – an object of entity type **OpcUaServerCfg** containing the configuration of the Server to which the request is made
+* **Node id** – the ID of the node you want to read
+
+  {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example `ns=4;id=3`.{{% /alert %}}
+* **On message microflow** – defines a microflow to be run every time a message is received from the subscribed service; required to have one input parameter of the **OpcUaClientMx.Message** type and no output.
+* **Subscription** (optional) – passes a **Subscription** entity to have more control over the frequency in which messages are sent to the Client. Leave this parameter blank to let the module setup the subscription.
+* **Use return value**
+
+  * **Yes** – This returns an object of type **MonitoredItem** which defines the new subscription and can be used in the microflow
+  * **No** – This does not return an object, and the returned object should not be changed or committed, but can be associated to for your administration and logic.
+
+* **Object name** – the name assigned to the variable containing the return value  
 
 {{% alert color="info" %}}
-Subscriptions and MonitoredItems are automatically kept alive by the app & OPC UA Server and will continue to be sent as long as both the Client and Server are running. The OPC UA Connector automatically provides values for `requestedMaxKeepAliveCount` and `requestedLifetimeCount`and will keep the subscription alive. If these values are exceeded, then the subscription will lapse. This can happen, for example, if the app is redeployed.
+**Subscription** and **MonitoredItems** are automatically kept alive by the app and the OPC UA Server. The values will continue to be sent as long as both the Client and Server are running. The OPC UA Connector automatically provides values for `requestedMaxKeepAliveCount` and `requestedLifetimeCount` and will keep the subscription alive. If these values are exceeded, then the subscription will lapse. This can happen, for example, if the app is redeployed.
 {{% /alert %}}
 
 ##### 4.2.3.3 MonitoredItem
 
-Information about nodes which are subscribed to is stored in the **MonitoredItem** entity associated with the **OpcUaServerCfg** Server configuration & **Subscription** entity.  
+Information about nodes which are subscribed to is stored in the **MonitoredItem** entity associated with the **OpcUaServerCfg** Server configuration and the **Subscription** entity.  
 
 
 {{< figure src="/attachments/appstore/connectors/opc-ua/monitoreditem.png" alt="The subscription entity" width="300" >}}
 
 
-An object is created for each Node you request to monitor and contains the following information:
+An object is created for each node you request to monitor, and contains the following information:
 
-* NodeId (String) – The full NodeId as referenced by the OPC UA Server.  
-* SubscriptionID (String) – a unique identifier generated by the OPC UA Server (will be identical to the associated Subscription entity)  
-* MonitoredItemID (String) – a unique identifier generated by the OPC UA Server — this can be used to identify the unique Monitored Item for cancellation of the subscription  
-* Status (Enum) – identifies whether the subscription is active or not (New, Active, Failed, Deleted)  
-* LastSubscribedOn (DateTime) - The last time the 'Subscribe' function was successfully executed.  
-* LastStateChange (DateTime) - The last time the Status attribute changed, this is the moment the subscription got active, failed or was deleted.  
-* LastMessage (DateTime) - The moment the last full message was received from the OPC UA Server on this monitored Item.  
+* **NodeId** (String) – the full node ID as referenced by the OPC UA Server.  
+* **SubscriptionID** (String) – a unique identifier generated by the OPC UA Server, which will be identical to the associated **Subscription** entity
+* **MonitoredItemID** (String) – a unique identifier generated by the OPC UA Server, which can be used to identify the unique Monitored Item for cancellation of the subscription  
+* **Status** (Enumeration) – identifies whether the subscription is active or not; possible values are `New`,` Active`,` Failed`, `Deleted`  
+* **LastSubscribedOn** (DateTime) - the last time the Subscribe function was successfully executed.  
+* **LastStateChange** (DateTime) - the last time the **Status** attribute changed, which is the moment the subscription got active, failed, or was deleted.  
+* **LastMessage** (DateTime) - the moment the last full message was received from the OPC UA Server on this monitored Item.  
 
 ##### 4.2.3.4 Subscription
 
-Information about unique **Subscription**s that are active with the OPC UA Server. The subscription is associated to a **OpcUaServerCfg** Server configuration & at least one **Monitored Item**.  
+Information about unique subscriptions that are active with the OPC UA Server. The subscription is associated to a **OpcUaServerCfg** Server configuration and at least one **Monitored Item**. 
+
 The subscription reflects the connection configuration with the OPC UA Server. 
 
 
 {{< figure src="/attachments/appstore/connectors/opc-ua/subscription.png" alt="The subscription entity" width="300" >}}
 
 
-This is the only object from the OpcUaClientMx domain that you should create from a microflow, you can create, change and commit this before passing it into the Subscribe action. If you choose to leave the parameter empty then an object is created automatically for each Node you request to monitor. The entity contains the following information:
+This is the only object from the OpcUaClientMx domain that you should create from a microflow, you can create, change, and commit this before passing it into the **Subscribe** action. If you choose to leave the parameter empty, then an object is created automatically for each node you request to monitor. The entity contains the following information:
 
-* RequestedPublishingInterval_ms (Decimal) – The Publishing interval that is requested from the OPC UA Server in milliseconds. *(Using decimal here to honor the Eclipse Milo implementation)*  
-* SubscriptionID (String) – a unique identifier generated by the OPC UA Server  
-* Status (Enum) – identifies whether the subscription is active or not (New, Active, Failed, Deleted)  
+* **RequestedPublishingInterval_ms** (Decimal) – the publishing interval that is requested from the OPC UA Server in milliseconds (using decimal here to honor the Eclipse Milo implementation)
+* **SubscriptionID** (String) – a unique identifier generated by the OPC UA Server  
+* **Status** (Enumeration) – identifies whether the subscription is active or not; possible values are `New`,` Active`,` Failed`, `Deleted`
 
 #### 4.2.4 **Unsubscribe** from Updates of Data from a Node
 

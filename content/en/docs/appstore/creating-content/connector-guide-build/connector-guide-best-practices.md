@@ -1,18 +1,17 @@
 ---
 title: "Best Practices for Building Connectors"
 url: /appstore/creating-content/connector-guide-best-practices/
-parent: "connector-guide-build"
 weight: 7
 tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "best practices"]
 ---
 
 ## 1 Introduction
 
-In [Building Connectors](/appstore/creating-content/connector-guide-build/), you learned about the background and basic steps of building connectors. This guide will go into more detail and explore recommended practices for building, testing, and distributing connectors. 
+In [Building Connectors](/appstore/creating-content/connector-guide-build/_index/), you learned about the background and basic steps of building connectors. This guide will go into more detail and explore recommended practices for building, testing, and distributing connectors. 
 
 ## 2 App Setup {#app-setup}
 
-This section dives into best practices for setting up your app in Studio Pro. For the basic instructions, see the [Setting Up Your App](/appstore/creating-content/connector-guide-build/#app-setup) section of *Building Connectors*.
+This section dives into best practices for setting up your app in Studio Pro. For the basic instructions, see the [Setting Up Your App](/appstore/creating-content/connector-guide-build/_index/#app-setup) section of *Building Connectors*.
 
 ### 2.1 Studio Pro Version
 
@@ -41,7 +40,7 @@ We recommend that the *main module* for your connector include the following:
     
 Your **App Explorer** should look like this after initial setup:
     
-{{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/app-initial-setup.png" >}}
+{{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/app-initial-setup.png" >}}
 
 {{% alert color="info" %}}
 This project folder structure example is based on the **Blank Web App** starter app and contains Mendix Marketplace modules that your project might not have. The important Marketplace module that is shown is the [Unit Testing](/appstore/modules/unit-testing/) module for testing purposes.
@@ -55,7 +54,7 @@ We recommend that you add additional folders to the root of your project (on dis
 
 The app root of your **App Explorer** should look like this after root setup:
 
-{{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/app-post-setup.png" >}}
+{{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/app-post-setup.png" >}}
 
 #### 2.2.3 Importing Dependency Modules
 
@@ -92,11 +91,11 @@ You can extend your app to work with Java and Gradle.
 
 1.   Add an **Implementation** folder next to other app folders. 
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/implementation-folder.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/implementation-folder.png" >}}
 
 2.   Set up an  **Implementation** folder as a Gradle `java-library` project. For details, see Gradle documentation on [Building Java Libraries Sample](https://docs.gradle.org/current/samples/sample_building_java_libraries.html#run_the_init_task). This is the expansion of the **Implementation** folder:
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/gradle-library.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/gradle-library.png" >}}
      
      The **Implementation** folder is now a self contained Gradle project which can be opened in any IDE which understands Gradle and expanded with any code you like.
 
@@ -128,7 +127,7 @@ To ensure that end-users can reuse your Mendix build logic as easily as possible
 
 Ensure that a microflow is visible in the **Toolbox** in the [Expose as microflow action](/refguide/java-actions/#expose-microflow-action) section of the microflow properties. You can do this by right-clicking in the whitespace of your microflow canvas. Additionally, you can specify a caption for the action, a category for the **Toolbox**, and an icon. These will be used in the **Toolbox**, and also in the microflows, so these will be easy to read for the end-user:
 
-{{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/microflow-action.png" >}}
+{{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/microflow-action.png" >}}
 
 After you [expose as microflow action](/refguide/java-actions/#expose-microflow-action), this can be dragged and dropped inside another microflow.
 
@@ -244,27 +243,27 @@ When using constants in combination with a Free App, you can use the settings pr
 
 1.   Create a constant.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/simple-config-constant.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-constant.png" >}}
 
 2.   Set the value of the constant to the value you want to use in your free cloud node.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/simple-config-value.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-value.png" >}}
 
 3.   Open your application **Settings**. Click **Duplicate** or **New** to create a new configuration for your local usage.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/simple-config-settings.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-settings.png" >}}
 
 4.   In your configuration, open the **Constants** tab and click **New**.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/simple-config-new-constants.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-new-constants.png" >}}
 
 5.   Look up and select your constant.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/simple-config-select-constant.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-select-constant.png" >}}
 
 6.   Change the configuration value of your constant to the value you want to use on your local environment.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/simple-config-change-value.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-change-value.png" >}}
 
 7.   Save all configuration and publish your application to your free node. When you run locally, Studio Pro will now use the **Active** configuration, while the free cloud node will keep using the value you specified in the **App Explorer**.
 
@@ -296,17 +295,17 @@ The following steps walk you through complex configuration:
 
 1.   Set up a **Configuration** entity.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/complex-config-entity.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/complex-config-entity.png" >}}
 
 2.   Create the microflow. Have a single microflow called **DS_GetOrCreateSettings** that is the only place in your application to acquire your settings. This microflow would retrieve your settings from the database and creates it if this does exist with appropriate default values.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/complex-config-create-microflow.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/complex-config-create-microflow.png" >}}
 
 3.   Set up security on the entity and the microflow.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/complex-config-security.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/complex-config-security.png" >}}
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-best-practices/complex-config-security-2.png" >}}
+     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/complex-config-security-2.png" >}}
 
 4.   Set up the administrator page. Have an administration page to manage the configuration. For maximum reusability, have all configuration settings available in a single snippet so your consumer can combine all admin sections from all components into a single area in their application.
 
@@ -407,7 +406,7 @@ For another example of a Java unit test, see the [Slack Connector test](https://
 
 ## 7 Release and Versioning
 
-This section addresses best practices for releasing your connector and using a versioning system. For the basic instructions for releasing, versioning, and distributing your connector, see the [Exporting the Connector](/appstore/creating-content/connector-guide-build/#export) and [Distributing the Connector](/appstore/creating-content/connector-guide-build/#distribute) sections in *Building Connectors*. 
+This section addresses best practices for releasing your connector and using a versioning system. For the basic instructions for releasing, versioning, and distributing your connector, see the [Exporting the Connector](/appstore/creating-content/connector-guide-build/_index/#export) and [Distributing the Connector](/appstore/creating-content/connector-guide-build/_index/#distribute) sections in *Building Connectors*. 
 
 ### 7.1 Release
 

@@ -73,4 +73,4 @@ If you are using an advertisement blocker (such as the AdBlocker browser extensi
 
 ## 5 Strict CSP Compatibility
 
-This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget.
+This widget requires additional configuration to be compliant with strict content security policy (CSP). Google Analytics uses an external address to track the analytics. To make this widget work, you need to configure the CSP headers to allow resources from that domain.

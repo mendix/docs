@@ -156,11 +156,11 @@ On the **Ideas** tab, you can see an overview of the ideas and feature requests 
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/ideas_example.png" >}}
 
-All the submitted ideas are publicly visible, and each idea has a descriptive title (**1**). Clicking the idea title opens the specific [idea details page](#IdeaDetails) under the **Ideas** tab.
+All the submitted ideas are publicly visible, and each idea has a descriptive title (**1**). Clicking the idea title opens the specific [idea details page](#idea-details-page) under the **Ideas** tab.
 
 Each idea specifies the following elements:
 
-* The beginning of the idea description (**2**) (this is taken from the [idea details page](#IdeaDetails))
+* The beginning of the idea description (**2**) (this is taken from the [idea details page](#idea-details-page))
 * The category (**3**)
 	* This is set when submitting an idea (for details, see the [Submitting an Idea](#submitting-an-idea) section)
 * Tags (**4**) (for example, **Native-widgets**)
@@ -168,7 +168,7 @@ Each idea specifies the following elements:
 * The number of votes (**5**), comments (**6**), and views (**7**) for the idea
 * The name, avatar, and level of the Mendix community member who created the idea (**8**)
 * When the idea was created (**9**)
-* The status of the idea (**10**) (for descriptions of the statuses, see the [Idea Details Page](##idea-details-page) section below)
+* The status of the idea (**10**) (for descriptions of the statuses, see the [Idea Details Page](#idea-details-page) section below)
 
 #### 3.1.1 Sorting the Ideas
 
@@ -184,9 +184,9 @@ In addition to sorting, you can search the entire forum for both questions and i
 
 To filter the ideas that appear on the overview page, select from the following criteria on the right side of the screen:
 
-* **My favorites** – the ideas you have marked as favorites (for details on how to favorite an idea, see the [Idea Details Page](#IdeaDetails) section)
+* **My favorites** – the ideas you have marked as favorites (for details on how to favorite an idea, see the [Idea Details Page](#idea-details-page) section)
 * **My own ideas** – the ideas you have submitted (for more information, see the [Submitting an Idea](#submitting-an-idea) section)
-* **Status** – the status of the ideas (for descriptions of the various statuses, see the [Idea Details Page](#IdeaDetails) section)
+* **Status** – the status of the ideas (for descriptions of the various statuses, see the [Idea Details Page](#idea-details-page) section)
 * **Categories** – the category set when the idea  was submitted (for more information, see the [Submitting an Idea](#submitting-an-idea) section)
 * **Tags** – the tags set when the idea was submitted (for more information, see the [Submitting an Idea](#submitting-an-idea) section)
 

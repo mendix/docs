@@ -27,8 +27,8 @@
     h5[id]:before {
         display: block;
         content: " ";
-        margin-top: -48px; // NK - set back to default to prevent MxDock from going on top of headings
-        height: 48px; // NK - set back to default to prevent MxDock from going on top of headings
+        margin-top: -48px; // NK - set to height of MxDock, to prevent dock from going on top of headings
+        height: 48px; // NK - set to height of MxDock, to prevent dock from going on top of headings
         visibility: hidden;
     }
 }

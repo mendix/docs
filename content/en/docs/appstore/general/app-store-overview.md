@@ -262,83 +262,13 @@ You can configure user groups for various levels of access to your company conte
 The **User Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/#company) can create and delete user groups. Both [Group Admins](#members) and Mendix Admins can manage user groups.
 {{% /alert %}}
 
-| Roles | Create / Manage Groups | Manage Members | Assign Apps to Group | Manage (Edit / New Version / Unpublish) Content | View / Download Content | View Group List | 
+| Roles | Create / Manage Groups | Manage Members | Assign Apps to Group | Manage (Edit, Add New Version, Unpublish) Content | View & Download Content | View Group List | 
 | --- | --- | --- | --- | --- | --- | --- | 
-|  |  |  |  |  |  |  | 
-
-
-Org Admin
-
- ✔
-
-✔
-
-✔
-
-✔
-
-✔
-
-✔
-
-Group Admin
-
-𝗫
-
-✔
-
-✔
-
-✔
-
-✔
-
-✔
-
-Group Member
-
-𝗫
-
-𝗫
-
-𝗫
-
-✔
-
-✔
-
-✔
-
-Guest
-
-𝗫
-
-𝗫
-
-𝗫
-
-𝗫
-
-✔
-
-𝗫
-
-Org member (not part of any group)
-
-𝗫
-
-𝗫
-
-𝗫
-
-𝗫
-
-✔
-
-✔
-
-
-
+| Org Admin | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | 
+| Group Admin | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ | 
+| Group Member | ✘ | ✘ | ✘ | ✔ | ✔ | ✔ | 
+| Guest | ✘ | ✘ | ✘ | ✘ | ✔ | ✘ | 
+| Org member (not part of any group) | ✘ | ✘ | ✘ | ✘ | ✔ | ✔ | 
 
 #### 4.9.1 Members Tab {#members}
 

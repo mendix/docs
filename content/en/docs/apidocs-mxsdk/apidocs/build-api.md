@@ -250,7 +250,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 
 An object with the following key-value pairs:
 
-*   _Branch_ (String) : Name of the branch. This is 'trunk' for the main line or 'branches/*branch name* for a specific branch.
+*   _Branch_ (String) : Name of the branch. This is 'trunk' for the main line or 'branches/*branch name*' for a specific branch.
 *   _Revision_ (Long) : Number of the revision to build a package from.
 *   _Version_ (String) : Package version. This will also be the name of the tag on the project team server.
 *   _Description_ (String) : Description of the package.

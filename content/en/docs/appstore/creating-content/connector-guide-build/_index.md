@@ -16,7 +16,7 @@ Welcome to the world of Mendix connectors. Mendix connectors allow you to connec
 * How to build a connector
 
 {{% alert color="info" %}}
-For in-depth instructions and best practices, see [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-build/connector-guide-best-practices/).
+For in-depth instructions and best practices, see [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/).
 {{% /alert %}}
 
 ### 1.1 Prerequisites  
@@ -88,7 +88,7 @@ To start setting up your app, open Studio Pro and do the following:
 3.  Give your module a name fitting for the type of connector you are building.
 4.  Create the basic folder structure at root level. 
 
-For more information, see the [App Setup](/appstore/creating-content/connector-guide-build/connector-guide-best-practices/#app-setup) section of *Best Practices for Building Connectors*.
+For more information, see the [App Setup](/appstore/creating-content/connector-guide-best-practices/#app-setup) section of *Best Practices for Building Connectors*.
 
 ### 3.2 Implementing the Connector {#implement}
 
@@ -143,4 +143,4 @@ Because connectors are exported as modules and then published on the Marketplace
 ## 4 Read More
 
 * [How to Share Marketplace Content](/appstore/general/share-app-store-content/)
-* [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-build/connector-guide-best-practices/)
+* [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/)

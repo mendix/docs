@@ -7,11 +7,11 @@ tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "best
 
 ## 1 Introduction
 
-In [Building Connectors](/appstore/creating-content/connector-guide-build/_index/), you learned about the background and basic steps of building connectors. This guide will go into more detail and explore recommended practices for building, testing, and distributing connectors. 
+In [Building Connectors](/appstore/creating-content/connector-guide-build/), you learned about the background and basic steps of building connectors. This guide will go into more detail and explore recommended practices for building, testing, and distributing connectors. 
 
 ## 2 App Setup {#app-setup}
 
-This section dives into best practices for setting up your app in Studio Pro. For the basic instructions, see the [Setting Up Your App](/appstore/creating-content/connector-guide-build/_index/#app-setup) section of *Building Connectors*.
+This section dives into best practices for setting up your app in Studio Pro. For the basic instructions, see the [Setting Up Your App](/appstore/creating-content/connector-guide-build/#app-setup) section of *Building Connectors*.
 
 ### 2.1 Studio Pro Version
 
@@ -406,7 +406,7 @@ For another example of a Java unit test, see the [Slack Connector test](https://
 
 ## 7 Release and Versioning
 
-This section addresses best practices for releasing your connector and using a versioning system. For the basic instructions for releasing, versioning, and distributing your connector, see the [Exporting the Connector](/appstore/creating-content/connector-guide-build/_index/#export) and [Distributing the Connector](/appstore/creating-content/connector-guide-build/_index/#distribute) sections in *Building Connectors*. 
+This section addresses best practices for releasing your connector and using a versioning system. For the basic instructions for releasing, versioning, and distributing your connector, see the [Exporting the Connector](/appstore/creating-content/connector-guide-build/#export) and [Distributing the Connector](/appstore/creating-content/connector-guide-build/#distribute) sections in *Building Connectors*. 
 
 ### 7.1 Release
 

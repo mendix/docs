@@ -271,7 +271,7 @@ Possible values are described in the table below:
 The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
 {{% /alert %}}
 {{% alert color="info" %}}
-A comparison with an empty value evaluates as `false` if and only if the other value is `empty`, is an empty list, or is and empty reference set.
+A comparison with an empty value evaluates as `false` if and only if the other value is `empty`, is an empty list, or is an empty reference set.
 {{% /alert %}}
 
 ### 7.2 Output 

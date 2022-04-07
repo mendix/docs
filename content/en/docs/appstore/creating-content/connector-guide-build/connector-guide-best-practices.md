@@ -79,9 +79,9 @@ This section explores best practices for connector development. You can develop 
 Implementing the bulk of the functionality in Java has the following benefits: 
 
 * Complexity is hidden from end-users and apps are easier to understand.
-    {{% alert color="info" %}}
-    Mendix apps should focus on solving the business requirements. Generic technical constructs should be hidden from the developers. Currently, Java is the best way to achieve this. A module does not have to ship the Java source for its Java functionality. You can also make a (hidden) *.jar* in another app, and place that in the connector module **user lib**.
-    {{% /alert %}}
+{{% alert color="info" %}}
+Mendix apps should focus on solving the business requirements. Generic technical constructs should be hidden from the developers. Currently, Java is the best way to achieve this. A module does not have to ship the Java source for its Java functionality. You can also make a (hidden) *.jar* in another app, and place that in the connector module **user lib**.
+{{% /alert %}}
 * End-users are less likely to change it.
 * You can use [unit tests](#unit-testing).
 
@@ -103,9 +103,9 @@ You can extend your app to work with Java and Gradle.
 
      If your implementation has additional dependencies, consider creating one `fat jar`  containing all dependent *.jar* files. 
      
-     {{% alert color="info" %}}
-     All modules place their *.jar* files in the **userlib** folder. In order to specify that this *.jar* is being used by your connector module, add an additional text file named `<jar-file-name>-<modulename>.requiredLib` .
-     {{% /alert %}}
+{{% alert color="info" %}}
+All modules place their *.jar* files in the **userlib** folder. In order to specify that this *.jar* is being used by your connector module, add an additional text file named `<jar-file-name>-<modulename>.requiredLib` .
+{{% /alert %}}
 
 4.   After implementation libraries are placed into the **userlib** folder, they are available in the Mendix application classpath so they can be used in a Java action in your connector module.
 

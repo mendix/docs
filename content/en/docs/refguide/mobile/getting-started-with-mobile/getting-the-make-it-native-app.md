@@ -35,19 +35,19 @@ For example, you might be working on a time-critical app where updating to the l
 
 To solve this issue and others like it, the apps provided in this document can be installed side by side with the latest Make It Native app. Those apps working together will allow you to continue your work unimpeded.
 
-#### 3.1.1 Android
+#### 2.1.1 Android
 
 To acquire the archive you need, see the [Android Make It Native Archive](https://www.dropbox.com/sh/37s3d4gumhej6j3/AAAdXd97G3s8W0sUE1TQyYW9a?dl=0). To install the APKs, navigate with your device to the link provided, choose the version you would like to install, then download and install it on your device.
 
-#### 3.1.2 iOS
+#### 2.1.2 iOS
 
 iOS archive versions for Make It Native are served via TestFlight links. To join a specific TestFlight version of the Make It Native app and install it, tap the appropriate link using the device with the account you would like to join TestFlight with. Use the TestFlight app to install the version of the app you already joined.
 
-## 4 Direct Download Links {#direct-links}
+### 2.2 Direct Download Links {#direct-links}
 
 For Make it Native 9 apps, please download them in their app stores. If you would like to download an older Make it Native 8 version directly, see the section below.
 
-### 4.1 Make It Native for Studio Pro 8.8 and Below:
+#### 2.2.1 Make It Native for Studio Pro 8.8 and Below:
 
 |                                  Android                                  |                                iOS                                |
 | :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
@@ -55,23 +55,23 @@ For Make it Native 9 apps, please download them in their app stores. If you woul
 |   [Link](https://www.dropbox.com/s/z0255q1gcxpvlwl/MiN%208.8.apk?dl=0)    |        [Link](https://testflight.apple.com/join/ra3QR6iG)         |
 
 
-## 5 Troubleshooting Common Mobile Issues {#troubleshooting}
+## 3 Troubleshooting Common Mobile Issues {#troubleshooting}
 
 Mendix strives to make building and running native mobile apps as simple as possible. But because some complexity is inherent in making apps, problems can come up. If you are having issues while building or running native mobile apps, please consult the sections below to see if your issue has already been solved.
 
-## 6 Make It Native App
+### 3.1 Make It Native App
 
 To troubleshoot issues related to the Make it Native app, see the sections below.
 
-### 6.1 Port Issues
+### 3.1.1 Port Issues
 
 We recommend keeping the **Runtime port** in your [configuration](/refguide/configuration/#server) on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
 
-### 6.2 Wifi Network Settings
+#### 3.1.2 Wifi Network Settings
 
 If you are using Windows, make sure your WiFi network is set to **Private**. Windows often sets WiFi to **Public** by default, which blocks incoming connections.
 
-### 6.3 Error: Unable to Load Script {#unable-load-script}
+#### 3.1.3 Error: Unable to Load Script {#unable-load-script}
 
 Depending on your device settings and network characteristics, the Make it Native app can fail to connect to the runtime. If so, the Make it Native app can show the following error messages:
 
@@ -99,10 +99,10 @@ For the Windows Defender firewall, the most common firewall, do the following:
 
 1. Windows distinguishes between two types of networks: private and public. Windows Defender Firewall applies stricter regulations for public networks. If, and only if, you are connected to a trusted network, configure the network as **Private** on your computer.
 
-### 6.4 Error: Unable to Detect Studio Pro
+#### 3.1.4 Error: Unable to Detect Studio Pro
 
 If your port forwarding settings are correct but you still get an error that the Make It Native app **cannot detect Studio Pro**, please reinstall the Make It Native app on your mobile device.
 
-## 7 Configure Parallels
+### 3.2 Configure Parallels
 
 To use Studio Pro on a Mac device, you will first need to install and configure Parallels. For more information, see [How to Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/).

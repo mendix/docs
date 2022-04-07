@@ -60,7 +60,7 @@ A **task** is a collection of **steps** in order. Tekton runs a task in the form
  
 A **step** is an operation in a CI/CD workflow. Tekton performs each step as a running container in the task pod. 
     
-Tasks and pipelines are specified as custom resources in a Kubernetes cluster.
+Tasks and pipelines are specified as custom resources (CRs) in a Kubernetes cluster.
 
 ### 3.3 Tekton in Mendix for Private Cloud
 
@@ -75,9 +75,9 @@ The Mendix pipelines work together as shown in the diagram below to create the a
 Mendix has created the following Tekton pipelines:
 
 * **build-pipeline** – Build and push a Mendix container image from a Mendix MPR file, hosted in a GIT repository — this can only be run after **create-app-pipeline**
-* **configure-app-pipeline** – Update an existing MendixApp
-* **create-app-pipeline** – Create a basic MendixApp CR — After running of this pipeline, we are ready to run build-pipeline
-* **delete-app-pipeline** – Delete MendixApp CR that triggers deletion of environment
+* **configure-app-pipeline** – Update an existing Mendix App
+* **create-app-pipeline** – Create a basic MendixApp CR — After running this pipeline, we are ready to run build-pipeline
+* **delete-app-pipeline** – Delete the Mendix App CR, which triggers the deletion of the environment
 
 
 #### 3.3.2 Mendix Triggers
@@ -191,7 +191,7 @@ kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers
 
 #### 5.1.2 Air-gapped
 
-For air-gapped environment, assuming you have [performed the preparation steps](#preparation), use the next commands:
+For air-gapped environment, assuming you have [performed the preparation steps](#preparation), use the following commands:
 
 ```bash
 cat tekton.yaml | aip inject-manifest | kubectl apply -f -
@@ -222,7 +222,7 @@ curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.15.0/in
 
 #### 5.1.2 Air-gapped
 
-For air-gapped environment, assuming you have [performed the preparation steps](#preparation), use the next commands to install Tekton and Tekton triggers
+For air-gapped environment, assuming you have [performed the preparation steps](#preparation), use the following commands to install Tekton and Tekton triggers
 
 ```bash
 # Tekton
@@ -255,224 +255,234 @@ For Tekton Triggers on OpenShift you need to update the deployment objects to ma
 
 ## 6 Pipeline and Trigger Installation{#pipelines-installation}
 
-To install pipeline you need to have [helm](https://helm.sh) and folder with [helm charts](https://cdn.mendix.com/mendix-for-private-cloud/tekton-pipelines/standalone-cicd/standalone-cicd-v1.0.0.zip).
-Pipelines itself split into 2 components:
+To install the Mendix pipelines, you need to have [helm](https://helm.sh) installed and a folder containing the [helm charts](https://cdn.mendix.com/mendix-for-private-cloud/tekton-pipelines/standalone-cicd/standalone-cicd-v1.0.0.zip) for configuring the Mendix Tekton pipelines.
 
-1. Pipeline – contains all Tekton related objects;
+There are two components which need to be configured:
+
+1. Pipelines – contains all Tekton related objects;
 2. Triggers – provides HTTP services to trigger (run) pipelines.
 
 ### 6.1 Pipelines
 
-To install pipeline you need to provide url to your private images repository without tag, example: `my.private.registry.com/mxapp`. In this repository will be stored images that the pipeline will build. 
-As namespace you can use the same namespace where Mendix operator lives or create new namespace.
+To install a pipeline you need to provide the url to your private images repository without a tag. For example: `my.private.registry.com/mxapp`. The images that the pipeline builds will be stored in this repository.  
+The namespace can be the same namespace where the  Mendix Operator runs, or you can create a new namespace.
 
-Installation command (for regular, **not air-gapped** environments):
+#### 6.1.1 With Access to the Internet
 
-    cd $PATH_TO_DOWNLOADED_CHARTS
-    helm install -n $YOUR_NAMESPACE mx-tekton-pipeline ./pipeline/ \
-      -f ./pipeline/values.yaml \
-      --set images.imagePushURL=$URL_TO_YOUR_REPO_WITHOUT_TAG
+The installation command for environments with access to the internet is:
 
-For **air-gapped** environment you need to specify images:
+```bash
+cd $PATH_TO_DOWNLOADED_CHARTS
+helm install -n $YOUR_NAMESPACE mx-tekton-pipeline ./pipeline/ \
+  -f ./pipeline/values.yaml \
+  --set images.imagePushURL=$URL_TO_YOUR_REPO_WITHOUT_TAG
+```
 
-    cd $PATH_TO_DOWNLOADED_CHARTS
-    helm install -n $YOUR_NAMESPACE mx-tekton-pipeline ./pipeline/ \
-      -f ./pipeline/values.yaml \
-      --set images.imagePushURL=$URL_TO_YOUR_REPO_WITHOUT_TAG \
-      --set images.fetch=$PRIVATE_REGISTRY/mxpc-pipeline-tools:git-init-0.0.1 \
-      --set images.verExtraction=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
-      --set images.build=$PRIVATE_REGISTRY/mxbuild \
-      --set images.imageBuild=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
-      --set images.constantsAndEventsResolver=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
-      --set images.k8sPatch=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
-      --set images.createAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
-      --set images.deleteAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
-      --set images.configureAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 
+#### 6.1.2 Air-gapped
 
-### 6.2 Triggers
+For **air-gapped** environments, you need to specify the images individually, as well as the private registry you set up in [Preparation for Air-gapped Environments](#preparation):
 
-With triggers you can trigger (run) pipelines like create, configure and delete environments and also there are two options to build a Mendix app:
+```bash
+cd $PATH_TO_DOWNLOADED_CHARTS
+helm install -n $YOUR_NAMESPACE mx-tekton-pipeline ./pipeline/ \
+  -f ./pipeline/values.yaml \
+  --set images.imagePushURL=$URL_TO_YOUR_REPO_WITHOUT_TAG \
+  --set images.fetch=$PRIVATE_REGISTRY/mxpc-pipeline-tools:git-init-0.0.1 \
+  --set images.verExtraction=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
+  --set images.build=$PRIVATE_REGISTRY/mxbuild \
+  --set images.imageBuild=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
+  --set images.constantsAndEventsResolver=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
+  --set images.k8sPatch=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
+  --set images.createAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
+  --set images.deleteAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
+  --set images.configureAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 
+```
 
-1. GitLab webhook;
-2. Generic.
+### 6.2 Installing Triggers{#installing-triggers}
 
-No matter what you choose, create, configure and delete environments triggers will be the same in both options.
+Standard triggers are used to run pipelines like create-app-pipeline, configure-app-pipeline, and delete-app-pipeline to manage app environments.
 
-*PVC.* By default pipelines comes with 5GB PVC with **empty** ***storageClassName****.* You can create your own PVC by following [this instruction](https://tekton.dev/docs/getting-started/#persistent-volumes). **To use your own PVC add `--set pvcName=$your-pvc-name` during triggers installation.
+There are also two options to build a Mendix app using either a generic or a GitLab webhook trigger.
 
-#### 6.2.1 GitLab Webhook Trigger
+After installing the generic trigger or the GitLab webhook trigger you will have service with the name like this - `el-mx-pipeline-listener-someUniqueName`. Make sure that you have access to that service (by creating an ingress or load balancer from a cloud provider, etc).
 
-**GitLab webhook trigger** is trigger for build pipeline that can work only in combination with GitLab and all Mendix environment related parameters should be specified during trigger installation. With this type, you need to create one trigger per environment.
-Creation example:
+#### 6.2.1 Persistent Volume Claims (PVCs)
 
-    cd $PATH_TO_DOWNLOADED_CHARTS
-    helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
-        --set name=someUniqueName \
-        --set triggerType=gitlabwebhook \
-        --set buildPipelineName=build-pipeline \
-        --set gitlabwebhook.operatorNamespace=k8s \
-        --set gitlabwebhook.mendixEnvironmentInernalName=app \
-        --set gitlabwebhook.kubeConfigSecretName=none \
-        --set gitlabwebhook.protocol=ssh \
-        --set gitlabwebhook.scheduledEventsMode=auto \
-        --set gitlabwebhook.constantsMode=auto | kubectl apply -f - -n $YOUR_NAMESPACE
+By default, pipelines comes with a *5GB PVC* with an **empty *storageClassName***. You can create your own PVC by following [these instructions](https://tekton.dev/docs/getting-started/#persistent-volumes) in the Tekton documentation.
 
-Parameters explanation:
+To use your own PVC add `--set pvcName=$your-pvc-name` to each command during installation of the triggers.
 
-1. `name` – All created k8s objects will have this suffix.
-2. `triggerType` – Supported types - `gitlabwebhook` and `generic`.
-3. `buildPipelineName` – Name of the pipeline to trigger. `build-pipeline` is the default pipeline name from pipeline chart.
-4. `gitlabwebhook.operatorNamespace` – Name of k8s namespace where Mendix Operator runs.
-5. `gitlabwebhook.mendixEnvironmentInernalName` – Mendix Environment Internal Name. You can get the all internal environment names with the next command: `kubectl get mendixapps -n $namespace_name`.
-6. `gitlabwebhook.kubeConfigSecretName` – Optional. Name of the secret with kube config. Used when Mendix Operator is in another cluster.
-7. `gitlabwebhook.protocol` – Git protocol. Available options: `http` or `ssh`.
-8. `gitlabwebhook.scheduledEventsMode` -  
-    Scheduled Events Mode has two options: 'manual' and 'auto'. 
-    `manual` – throws an error in case if scheduled events in myScheduledEvents field contains not existing events. 
-    `auto` – removes not existing events from myScheduledEvents.
-9. `gitlabwebhook.constantsMode` - 
-    Constants mode has two options: 'manual' and 'auto'.
-    `manual` – ensures that constants on operator side are the same as inside .mda file otherwise throws an error.
-    `auto` – adds/removes missing constants if any.
+#### 6.2.2 Generic Trigger{#generic-trigger}
 
-#### 6.2.2 Generic Trigger
+A **Generic trigger** is a trigger that can be used as HTTP/curl request. All Mendix-related parameters will be specified in HTTP request body. 
 
-**Generic trigger** is a trigger that can be used as HTTP/curl request. All Mendix related parameters should be specified in HTTP body request. 
-To install generic trigger you can use the next command:
+To install a generic trigger you can use the following command:
 
-    helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
-        --set name=someUniqueName \
-        --set pipelineName=build-pipeline \
-        --set triggerType=generic | kubectl apply -f - -n $YOUR_NAMESPACE
+```bash
+cd $PATH_TO_DOWNLOADED_CHARTS
+helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
+    --set name=someUniqueName \
+    --set pipelineName=build-pipeline \
+    --set triggerType=generic | kubectl apply -f - -n $YOUR_NAMESPACE
+```
 
-Parameters explanation is the same as for gitlabwebhook type.
+| Parameter | Explanation |
+| --- | --- |
+| `name` | All created Kubernetes objects will have this suffix |
+| `pipelineName` | Name of the pipeline to trigger. `build-pipeline` is the default pipeline name from pipeline chart |
+| `triggerType` | Supported types - `gitlabwebhook` and `generic` |
 
-After installing **GitLab webhook trigger** or **Generic trigger** you will have service with the name like this - `el-mx-pipeline-listener-someUniqueName`. Make sure that you have access to that service (by creating an ingress or load balancer from a cloud provider, etc).
+#### 6.2.3 GitLab Webhook Trigger
+
+The **GitLab webhook trigger** triggers the build-pipeline pipeline in combination with GitLab. All Mendix environment related parameters are specified during trigger installation as you create one trigger per environment.
+
+To install a GitLab webhook trigger use the following command:
+
+```bash
+cd $PATH_TO_DOWNLOADED_CHARTS
+helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
+    --set name=someUniqueName \
+    --set triggerType=gitlabwebhook \
+    --set buildPipelineName=build-pipeline \
+    --set gitlabwebhook.operatorNamespace=kubernetes \
+    --set gitlabwebhook.mendixEnvironmentInernalName=app \
+    --set gitlabwebhook.kubeConfigSecretName=none \
+    --set gitlabwebhook.protocol=ssh \
+    --set gitlabwebhook.scheduledEventsMode=auto \
+    --set gitlabwebhook.constantsMode=auto | kubectl apply -f - -n $YOUR_NAMESPACE
+```
+
+| Parameter | Explanation |
+| --- | --- |
+| `name` | all created Kubernetes objects will have this suffix |
+| `triggerType` | supported types - `gitlabwebhook` and `generic` |
+| `buildPipelineName` | name of the pipeline to trigger. `build-pipeline` is the default pipeline name from pipeline chart |
+| `gitlabwebhook.operatorNamespace` | name of Kubernetes namespace where Mendix Operator runs |
+| `gitlabwebhook. mendixEnvironmentInernalName` | Mendix environment internal name. You can get the all internal environment names using the  command `kubectl get mendixapps -n $namespace_name` |
+| `gitlabwebhook. kubeConfigSecretName` (*Optional*) | name of the secret with kube config. Used when Mendix Operator is in another cluster |
+| `gitlabwebhook.protocol` | Git protocol. Available options: `http` or `ssh` |
+| `gitlabwebhook. scheduledEventsMode` | `manual` – throws an error if scheduled events listed in `myScheduledEvents` do not exist<br/>`auto` – removes scheduled events listed in `myScheduledEvents` if they do not exist |
+| `gitlabwebhook.constantsMode` | `manual` – throws an error if constants set by the operator side are different from those in the .mda file<br/>`auto` – adds or removes constants which are missing in the operator |
 
 ### 6.3 Triggering Pipelines
 
-This section documents the HTTP requests which will trigger the various Mendix pipelines, and describes the parameters.
+This section documents the HTTP requests which will trigger the various Mendix pipelines, using the triggers you have installed in the [Installing Triggers](#installing-triggers) section and describes the parameters.
 
 #### 6.3.1 Create App Pipeline
 
-**Examples**
-Example of HTTP request to trigger create environment pipeline:
+The create-app-pipeline creates a basic MendixApp CR. After running this pipeline, we are ready to run the build-pipeline.
 
-    curl -X POST \
-      http://pipeline.trigger.yourdomain.com/ \
-      -H 'Content-Type: application/json' \
-      -H 'Event: create-app' \
-      -d '{
-        "namespace":"your-k8s-namespace",
-        "env-internal-name":"mx-environment-internal-name",
-        "dtap-mode":"D",
-        "storage-plan-name":"file-plan-name",
-        "database-plan-name":"db-plan-name"
-    }'
+```bash
+curl -X POST \
+  http://pipeline.trigger.yourdomain.com/ \
+  -H 'Content-Type: application/json' \
+  -H 'Event: create-app' \
+  -d '{
+    "namespace":"your-kubernetes-namespace",
+    "env-internal-name":"mx-environment-internal-name",
+    "dtap-mode":"D",
+    "storage-plan-name":"file-plan-name",
+    "database-plan-name":"db-plan-name"
+}'
+```
 
-Parameters explanation:
-
-1. `namespace` – the name of the k8s namespace where Mendix Operator runs.
-2. `env-internal-name` – the Mendix Environment Internal Name. With this name, there will be created MendixApp custom resource. 
-3. `dtap-mode` – mode for running the Mendix application. Available options: 
-    P – production;
-    D – Development. 
-    Always set this to P in production environments.
-4. `storage-plan-name` – name of already created storage plan.
-5. `database-plan-name` – name of already created database plan.
+| Parameter | Explanation |
+| --- | --- |
+| `namespace` | name of the Kubernetes namespace where Mendix Operator runs |
+| `env-internal-name` | Mendix environment internal name. The MendixApp CR will be created with this name |
+| `dtap-mode` | mode for running the Mendix application. Available options:<br/>`P` – Production (for all production environments)<br/>`D` – Development |
+| `storage-plan-name` | name of an already-created storage plan |
+| `database-plan-name` | name of an already-created database plan |
 
 #### 6.3.2 Build Pipeline
 
-Example of HTTP request to trigger build and deploy pipeline for **generic** trigger type:
+The build-pipeline builds and pushes a Mendix container image from a Mendix MPR file, hosted in a GIT repository. This can only be run after create-app-pipeline. The example here uses a [Generic Trigger](#generic-trigger).
 
-    curl -X POST \
-      http://pipeline.trigger.yourdomain.com/ \
-      -H 'Content-Type: application/json' \
-      -H 'Event: build' \
-      -d '{
-       "repo": {
-          "url":"https://yourgitdomain.com/user/repo.git",
-          "revision":"main"
-       },
-       "namespace":"your-k8s-namespace",
-       "env-internal-name":"mx-environment-internal-name",
-       "kube-secret-name":"none",
-       "constants-mode":"auto",
-       "scheduled-events-mode":"auto"
-    }'
+```bash
+curl -X POST \
+  http://pipeline.trigger.yourdomain.com/ \
+  -H 'Content-Type: application/json' \
+  -H 'Event: build' \
+  -d '{
+   "repo": {
+      "url":"https://yourgitdomain.com/user/repo.git",
+      "revision":"main"
+   },
+   "namespace":"your-kubernetes-namespace",
+   "env-internal-name":"mx-environment-internal-name",
+   "kube-secret-name":"none",
+   "constants-mode":"auto",
+   "scheduled-events-mode":"auto"
+}'
+```
 
-Parameters explanation:
-
-1. `repo.url` – URL of git repository that will be fetched.
-2. `repo.branch` – a git branch that will be fetched.
-3. `namespace` – the name of the k8s namespace where Mendix Operator runs.
-4. `env-internal-name` – the Mendix Environment Internal Name. You can get all the internal environment names with the next command: `kubectl get mendixapps -n $namespace_name`.
-5. `kube-secret-name` – the name of the secret with kube config. Used when Mendix Operator is in another cluster. If it’s in the same cluster then use `none` value.
-6. `constants-mode` - 
-    Constants mode has two options: 'manual' and 'auto'.
-    `manual` – ensures that constants on operator side are the same as inside .mda file otherwise throws an error.
-    `auto` – adds/removes missing constants if any.
-7. `scheduled-events-mode` - 
-    Scheduled Events Mode has two options: 'manual' and 'auto'. 
-    `manual` – throws an error in case if scheduled events in myScheduledEvents field contains not existing events. 
-    `auto` – removes not existing events from myScheduledEvents.
+| Parameter | Explanation |
+| --- | --- |
+| `repo.url` | URL of git repository that will be fetched |
+| `repo.branch` | a git branch that will be fetched |
+| `namespace` | name of the Kubernetes namespace where Mendix Operator runs |
+| `env-internal-name` | Mendix environment internal name. You can get all the internal environment names with the command `kubectl get mendixapps -n $namespace_name` |
+| `kube-secret-name` | name of the secret with kube config. Used when Mendix Operator is in another cluster. If it is in the same cluster then use `none` as the value |
+| `scheduledEventsMode` | `manual` – throws an error if scheduled events listed in `myScheduledEvents` do not exist<br/>`auto` – removes scheduled events listed in `myScheduledEvents` if they do not exist |
+| `constantsMode` | `manual` – throws an error if constants set by the operator side are different from those in the .mda file<br/>`auto` – adds or removes constants which are missing in the operator |
 
 #### 6.3.3 Configure App Pipeline
 
-Example of HTTP request to trigger configure environment pipeline:
+The configure-app-pipeline updates an existing Mendix App.
 
-    curl -X POST \
-      http://pipeline.trigger.yourdomain.com/ \
-      -H 'Content-Type: application/json' \
-      -H 'Event: configure-app' \
-      -d '{
-        "namespace":"your-k8s-namespace",
-        "env-internal-name":"mx-environment-internal-name",
-        "source-url":"https://example.com/url-to-mda/or/oci-image",
-        "replicas":5,
-        "dtap-mode":"D",
-        "set-constants":"{\"key\":\"value\"}",
-        "add-constants":"{\"key\":\"value\"}",
-        "remove-constants":"[\"key\"]",
-        "set-env-vars":"{\"key\":\"value\"}",
-        "add-env-vars":"{\"key\":\"value\"}",
-        "remove-env-vars":"[\"key\"]"
-    }'
+```bash
+curl -X POST \
+  http://pipeline.trigger.yourdomain.com/ \
+  -H 'Content-Type: application/json' \
+  -H 'Event: configure-app' \
+  -d '{
+    "namespace":"your-kubernetes-namespace",
+    "env-internal-name":"mx-environment-internal-name",
+    "source-url":"https://example.com/url-to-mda/or/oci-image",
+    "replicas":5,
+    "dtap-mode":"D",
+    "set-constants":"{\"key\":\"value\"}",
+    "add-constants":"{\"key\":\"value\"}",
+    "remove-constants":"[\"key\"]",
+    "set-env-vars":"{\"key\":\"value\"}",
+    "add-env-vars":"{\"key\":\"value\"}",
+    "remove-env-vars":"[\"key\"]"
+}'
+```
 
-Parameters explanation:
-
-1. `namespace` – the name of the k8s namespace where Mendix Operator runs.
-2. `env-internal-name` – the Mendix Environment Internal Name. You can get all the internal environment names with the next command: `kubectl get mendixapps -n $namespace_name`.
-3. `source-url` – .mda file url or oci-image url. Optional. Remains the same if empty.
-4. `replicas` – Number of replicas. Optional. Remains the same if empty.
-5. `dtap-mode` – mode for running the Mendix application. Available options: 
-    P – production;
-    D – Development. 
-    Always set this to P in production environments.
-6. `set-constants` – Constants to set as JSON map. Replaces the old list with the new one. Value example: {"KEY":"VALUE"}. Optional.
-7. `add-constants` – Constants to add as JSON map. Value example: {"KEY":"VALUE"}. Optional.
-8. `remove-constants` – Constants to delete as JSON array. Value example: ["KEY1","KEY2"]. Optional.
-9. `set-env-vars` – Environment variables to set as JSON map. Replaces the old list with the new one. Value example: {"KEY":"VALUE"}. Optional.
-10. `add-env-vars` – Environment variables to add as JSON map. Value example: {"KEY":"VALUE"}. Optional.
-11. `remove-env-vars` – Environment variables to delete as JSON array. Value example: ["KEY1","KEY2"]. Optional.
+| Parameter | Explanation |
+| --- | --- |
+| `namespace` | name of the Kubernetes namespace where Mendix Operator runs |
+| `env-internal-name` | Mendix environment internal name. You can get all the internal environment names with the command `kubectl get mendixapps -n $namespace_name` |
+| `source-url` *(Optional)* | .mda file url or oci-image url. If empty, the url is not changed |
+| `replicas` *(Optional)* | number of replicas. If empty, the number of replicas remains the same |
+| `dtap-mode` | mode for running the Mendix application. Available options<br/>`P` – Production (for all production environments)<br/>`D` – Development |
+| `set-constants` *(Optional)* | constants to set provided as a JSON map. Replaces the old list with the new one. Example: {"KEY":"VALUE"} |
+| `add-constants` *(Optional)* | constants to add provided as a JSON map. Example: {"KEY":"VALUE"} |
+| `remove-constants` *(Optional)* | constants to delete provided as a JSON array. Example: ["KEY1","KEY2"] |
+| `set-env-vars` *(Optional)* | environment variables to set provided as a JSON map. Replaces the old list with the new one. Example: {"KEY":"VALUE"} |
+| `add-env-vars` *(Optional)* | environment variables to add provided as a JSON map. Example: {"KEY":"VALUE"} |
+| `remove-env-vars` *(Optional)* | environment variables to delete as JSON array. Example: ["KEY1","KEY2"] |
 
 #### 6.3.4 Delete App Pipeline
 
-Example of HTTP request to trigger delete environment pipeline:
+The delete-app-pipeline deletes the Mendix App CR, which triggers the deletion of the environment.
 
-    curl -X POST \
-      http://pipeline.trigger.yourdomain.com/ \
-      -H 'Content-Type: application/json' \
-      -H 'Event: delete-app' \
-      -d '{
-        "namespace":"your-k8s-namespace",
-        "env-internal-name":"mx-environment-internal-name"
-    }'
+```bash
+curl -X POST \
+  http://pipeline.trigger.yourdomain.com/ \
+  -H 'Content-Type: application/json' \
+  -H 'Event: delete-app' \
+  -d '{
+    "namespace":"your-kubernetes-namespace",
+    "env-internal-name":"mx-environment-internal-name"
+}'
+```
 
-Parameters explanation:
-
-1. `namespace` – the name of the k8s namespace where Mendix Operator runs.
-2. `env-internal-name` – the Mendix Environment Internal Name. You can get all the internal environment names with the next command: `kubectl get mendixapps -n $namespace_name`.
+| Parameter | Explanation |
+| --- | --- |
+| `namespace` | name of the Kubernetes namespace where the Mendix Operator runs |
+| `env-internal-name` | Mendix environment internal name. You can get all the internal environment names  using the command `kubectl get mendixapps -n $namespace_name` |
 
 ## 7 Authentication
 

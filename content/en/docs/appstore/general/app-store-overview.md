@@ -262,7 +262,7 @@ The **User Groups** menu item and page are visible to all users. However, only [
 
 This table breaks down the roles and permissions for user groups:
 
-| Roles | Manage (Create & Delete) Groups | Manage Group Members | Assign Apps to Group | Manage (Edit, Add New Version & Unpublish) Group Content | View & Download Group Content | View Group List |
+| Roles | Manage (Create & Delete) Groups | Manage Group Members | Assign Apps to Group | Manage (Edit, Add New Version & Unpublish) Content | View & Download Group Content | View Group List |
 | --- | --- | --- | --- | --- | --- | --- |
 | Mendix Admin | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | Group Admin | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |

@@ -7,12 +7,11 @@ tags: ["studio pro"]
 aliases:
     - /howto/mobile/
 ---
-
->>>>> /refguide/mobile/_index.md
-
 ## 1 Introduction
 
-Mendix allows you to quickly build true [native mobile apps](#nativemobile) and [progressive web apps](/refguide/progressive-web-app/). This document gives an overview of mobile app development with Mendix. 
+With Mendix, you can use just one platform which supports various styles of mobile app development (native, web, PWA) for multiple devices. Mendix also provides common mobile back-end services.
+
+Mendix allows you to quickly build true [native mobile apps](/refguide/native-mobile/) and [progressive web apps](/refguide/progressive-web-app/). This document gives an overview of mobile app development with Mendix. 
 
 With Mendix, you can create different channels (for example, responsive, native phone) from a single model using navigation profiles. These mobile profiles can be added and removed separately. If you add a profile, you must also provide a home page for it. For more information on navigation profiles, see [Navigation](/refguide/navigation/). 
 
@@ -38,25 +37,12 @@ Progressive web apps have three main characteristics:
 
 With Mendix, you can build apps which work regardless of internet connection. Offline-first applications provide end-users with a continuous experience and the confidence that their data is secure in all situations. Pages and logic interact with an offline database on the device itself, and data is synchronized with the server when possible. This results in a nicer UI, increased reliability, and improved device battery life. For more information on offline-first app capabilities, see [Offline First](/refguide/offline-first/).
 
-Mendix's native mobile apps are always configured with offline-first capabilities. When building an app, you can choose to build an online app which continously connects with a server, or an offline-first app that works even without an internet connection. This can be configured by choosing the corresponding navigation profile in Mendix Studio Pro. For more instructions on setting up such a profile, see [Navigation](/refguide/navigation/).
+Mendix's native mobile apps are always configured with offline-first capabilities. When building an app, you can choose to build an online app which continuously connects with a server, or an offline-first app that works even without an internet connection. This can be configured by choosing the corresponding navigation profile in Mendix Studio Pro. For more instructions on setting up such a profile, see [Navigation](/refguide/navigation/).
 
 ## 5 Main Documents in This Category
 
-* [Native Mobile](/refguide/native-mobile/) – presents information on building fully native mobile apps with the Mendix Platform that utilize native UI elements
-* [Progressive Web Apps](/refguide/progressive-web-app/) – explains the capabilities and configurations of progressive web apps
-* [Hybrid Mobile](/refguide/hybrid-mobile/) – describes the depreciated state of hybrid mobile in Mendix 9 
-* [Offline First](/refguide/offline-first/) – provides details on the architectural concepts of offline-first applications in Mendix
-
-
->>>>> /howto/mobile/_index.md
-
-## 1 Introduction
-
-The Mendix vision for mobile app development is that enterprises can greatly benefit from a single platform that supports the various styles of mobile app development (web, native, and hybrid) for multiple devices and provides common mobile back-end services.
-
-The rapid evolution of standards like HTML and the wide adoption of frameworks to bridge native device functions provide an ever-richer user experience for cross-platform apps. From a logic perspective, JavaScript is powerful as a platform-independent, back-end technology even in native clients. There is a shift occurring from native languages towards JavaScript, where JavaScript is being embedded more and more in native programming languages to raise the level of code reusability across platforms.
-
-## 2 Main Documents in This Category
-
-* [Hybrid Mobile](/howto/mobile/hybrid-mobile/) – describes how to build web applications that run inside containers
-* [Native Mobile](/howto/mobile/native-mobile/) – describes how to build fully native mobile apps
+* [Getting Started with Mobile](/refguide/getting-started-with-mobile/)
+* [Introduction to Mobile Technologies](/refguide/introduction-to-mobile-technologies/)
+* [Designing Mobile User Interfaces](/refguide/designing-mobile-user-interfaces/)
+* [Using Mobile Capabilities](/refguide/using-mobile-capabilities/)
+* [Distributing Mobile Apps](/refguide/distributing-mobile-apps/)

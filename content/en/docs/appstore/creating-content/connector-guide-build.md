@@ -70,12 +70,6 @@ Once you deploy an application, the connector will automatically deploy with it.
 
 As an example, check out the [AWS IoT](/appstore/connectors/aws-iot/) connector. This connector uses AWS-provided Java libraries to interact with the AWS IoT service. The functions from these Java libraries in turn are exposed via a set of Mendix Java actions that are available in the toolbox to use in your logic.
 
-### 2.4 Future Versions of Connectors {#future}
-
-Another approach to connecting to external systems is by creating connector applications that wrap those systems with OData APIs. This approach will be discussed in the future, either here or in a linked document.
-
-In addition, it is important to protect the IP of the connector module, particularly when reselling those modules. Applying IP protection to connector modules will be discussed in the future, either here or in a linked document.
-
 ## 3 Building a Mendix Connector in Studio Pro {#build-connector}
 
 Now that you know what connectors are, you can try building your own.

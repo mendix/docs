@@ -10,18 +10,6 @@ aliases:
     - /howto/mobile/getting-started-with-native-mobile/
 ---
 
->>>>> /howto/mobile/native-mobile/get-started/_index.md
-
-How-to's in this section will help you begin using the power of native apps.
-
-The following how-to’s are available here:
-
-* [Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile/)
-* [Troubleshoot Common Native Mobile Issues](/howto/mobile/common-issues/)
-* [Implement Best Practices for Native Mobile App UI](/howto/mobile/ui-best-practices/)
-
->>>>> /howto/mobile/native-mobile/get-started/getting-started-with-native-mobile.md
-
 ## 1 Introduction
 
 To use Mendix Studio Pro's native mobile app capabilities, you can use the [Blank Native Mobile App](https://marketplace.mendix.com/link/component/109511/) app from the Mendix Marketplace. This app is optimized to quickly build a native mobile app. Out of the box, this app gives you a native page, a native phone profile to enable native device navigation, a native layout with menus, and native widgets and actions which leverage device capabilities.

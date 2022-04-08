@@ -10,19 +10,21 @@ aliases:
     - /howto/mobile/native-custom-fonts/
 ---
 
->>>>> /refguide/mobile/native-mobile/native-svg.md
-
 ## 1 Introduction
 
-When building a native mobile application, you may want to use vector images for icons or other illustrations. For this purpose, you can use Scalable Vector Graphics (SVGs). This reference guide will provide guidance for working with SVGs in native mobile apps.
+When building a native mobile application, you may want to use vector images for icons or other illustrations. To achieve this, you can use Scalable Vector Graphics (SVGs). For information on using SVGs with Mendix, see the [Integrating SVGs into Native Apps](#integrating) section below.
 
-## 2 Optimizing SVGs {#optimizing}
+Want your app to reflect your brand's design even more? By adding a custom font to your native app, you can ensure your app looks and feels unique. See the instructions in the [Adding Custom Fonts to Native Apps](#adding-fonts) section below for information on adding custom fonts to your native app.
+
+## 2 Integrating SVGs into Native Apps {#integrating}
+
+### 2.1 Optimizing SVGs {#optimizing}
 
 When exporting an SVG from an editor, you will often produce an SVG with several unnecessary elements. These elements increase file size, decrease performance, and can cause unwanted side effects. Therefore it is recommended that you run your SVG through an SVG-optimization tool. 
 
 To optimize your SVGs, you can either run them through an online tool such as [SVGOMG](https://jakearchibald.github.io/svgomg/) or use a local tool such as [SVGO](https://github.com/svg/svgo).
 
-## 3 Unsupported Elements
+### 2.2 Unsupported Elements {#unsupported}
 
 SVGs can contain several kinds of elements. However, not all of them are supported in native mobile apps. Unsupported elements will have no effect and should be removed. The following SVG elements are *not* supported for native mobile apps:
 
@@ -35,7 +37,7 @@ SVGs can contain several kinds of elements. However, not all of them are support
 
 We suggest manually removing these elements from your SVGs, or using the tools mentioned in [Optimizing SVGs](#optimizing) above to ensure their compatibility. 
 
-## 4 Styling SVGs
+### 2.3 Styling SVGs {#styling}
 
 You might want to change certain colors in your SVG, for example when adding an image. Mendix allows you to do this by setting the `fill` and `stroke` properties in image's styling. These properties will then be applied to *all* the elements inside the SVG that do not have these properties.
 
@@ -59,7 +61,7 @@ Here is how an SVG with the `fill` property looks:
 
 You can check the list of allowed style properties at the [react-native-svg](https://github.com/react-native-community/react-native-svg#common-props) repository.
 
-### 4.1 Coloring SVG Icons
+#### 2.3.1 Coloring SVG Icons
 
 Icons can only be set for buttons and bottom bar items. When you integrate an SVG icon into a button or bottom bar item, you will have to set the SVG's color yourself. When using an app which employs Atlas UI, by default the colors are all white. For more information on styling, see the [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide/).
 
@@ -83,7 +85,7 @@ Would produce the following button and SVG:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-svg/blue-svg.png" alt="blue svg" >}}
 
-## 5 Using SVGs in Pluggable Native Widgets
+### 2.4 Using SVGs in Pluggable Native Widgets {#svg-pluggable}
 
 To use an SVG in a pluggable native widget's image property, we recommend using the provided `Image` or `Icon` component. This will allow a static image of any supported format to be used within your pluggable widget, including SVGs.
 
@@ -118,20 +120,11 @@ export const PluggableWidget = () => (
 
 If you want to use SVG elements directly in your pluggable widget, see the [react-native-svg](https://github.com/react-native-community/react-native-svg) library.
 
-## 5 Read More
-
-* [Build a Pluggable Native Widget](/howto/extensibility/build-native-widget/)
-* [Atlas UI](/howto/front-end/atlas-ui/)
-* [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets/)
-
-
->>>>> /howto/mobile/native-mobile/implementation/native-custom-fonts.md
-
-## 1 Introduction
+## 3 Adding Custom Fonts to Native Apps {#adding-fonts}
 
 Good typography plays a major role in conveying your app's message while reinforcing your company's brand identity. Setting up the fonts you need is as simple as dragging and dropping the required fonts and setting your app's style. As you can see in the [Prerequisites](#prerecs) section below, Mendix offers two ways for you to add custom fonts: using the Mendix Native Mobile Builder or manually.
 
-### 1.1 Introduction to Fonts in Mendix Native Mobile Apps
+### 3.1 Introduction to Fonts in Mendix Native Mobile Apps
 
 When it comes to fonts files, several standards and types are common. True Type (*.ttf*), Open Type (*.otf* or *.ttf*), and Web Open Font Format (*.woff*) are the most common. 
 
@@ -193,7 +186,7 @@ export const boldText = {
 
 Now wherever you use `boldText`, you will get the expected result on both platforms consistently.
 
-## 2 Prerequisites {#prerecs}
+### 3.2 Prerequisites {#prerecs}
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -208,7 +201,7 @@ Before [adding fonts manually](#manual):
 * Understand git and have a git tool installed
 * Have XCode installed for the iOS sections below
 
-## 3 Adding Custom Fonts With the Mendix Native Mobile Builder {#fonts-nbui}
+### 3.3 Adding Custom Fonts With the Mendix Native Mobile Builder {#fonts-nbui}
 
 The Mendix Native Mobile Builder simplifies adding custom fonts to your app. It configures both Android and iOS app and also provides the snippets needed to simply copy and paste in your Mendix app's native styles. To add custom fonts to your app, follow these steps: 
 
@@ -234,7 +227,7 @@ The Mendix Native Mobile Builder simplifies adding custom fonts to your app. It 
 
 1. Build your app to get a new binary with fonts included. 
 
-## 4 Using Custom Fonts in Your App
+### 3.4 Using Custom Fonts in Your App
 
 To use the new fonts to style your content, follow these instructions:
 
@@ -250,11 +243,11 @@ To use the new fonts to style your content, follow these instructions:
 
 	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-custom-fonts/custom-style.png" alt="Custom style"   width="350"  >}}
 
-## 5 Adding Custom Fonts Manually {#manual}
+### 3.5 Adding Custom Fonts Manually {#manual}
 
 While the Mendix Native Mobile Builder simplifies adding fonts, you might find yourself in a situation where you must add fonts manually instead.
 
-### 5.1 Adding Custom Fonts to an Android App
+#### 3.5.1 Adding Custom Fonts to an Android App
 
 To manually add custom fonts to your Android app, follow these instructions: 
 
@@ -276,7 +269,7 @@ To manually add custom fonts to your Android app, follow these instructions:
 
 Congratulations, you have learned how to add fonts to an Android app.
 
-### 5.2 Adding Custom Fonts to an iOS App
+#### 3.5.2 Adding Custom Fonts to an iOS App
 
 Use XCode to manually add fonts to an iOS app:
 
@@ -319,8 +312,3 @@ Use XCode to manually add fonts to an iOS app:
 1. Build your iOS app with your preferred method.
 
 Congratulations, you have learned how to add fonts to an iOS app. 
-
-## 6 Read More
-
-* [Implement Native Mobile Styling](/howto/mobile/native-styling/)
-* [Troubleshoot Common Native Mobile Issues](/howto/mobile/common-issues/)

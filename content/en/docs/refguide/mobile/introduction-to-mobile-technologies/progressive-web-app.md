@@ -181,9 +181,3 @@ Currently, it is not possible to create a fully offline-first PWA for iOS — ad
 Use the following diagram to decide whether to build a PWA, a native mobile app, or both:
 
 {{< figure src="/attachments/refguide/mobile/progressive-web-app/native-or-pwa.png" alt="Native app or PWA"   width="350"  >}}
-
-## 8 Read More
-
-* [Native Mobile Reference Guide](/refguide/native-mobile/)
-* [Offline-First Reference Guide](/refguide/offline-first/)
-* [Navigation Reference Guide](/refguide/navigation/)

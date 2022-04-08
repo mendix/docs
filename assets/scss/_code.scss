@@ -4,13 +4,13 @@
 	// Highlighted code.
     .highlight {
         @extend .card;
-	
+
         margin: 2rem 0;
         padding: 0;
-	    
+
         pre {
             margin: 0;
-            padding: 1rem;
+            padding: 1.75rem 1rem 1rem 0.75rem;  // NK - changed padding
         }
     }
 
@@ -23,7 +23,7 @@
         word-break: normal;
         background-color: rgba($info, 0.07); // NK - changed background color
         border-radius: $border-radius;
-		border: 1px solid rgba($info, 0.1);  // NK - added border and color
+        border: 1px solid rgba($info, 0.1);  // NK - added border and color
 
         br {
             display: none;
@@ -36,9 +36,8 @@
         word-wrap: normal;
         background-color: $gray-100;
         padding: $spacer;
-		line-height: 1.1; // NK - added to match code text
-		font-size: 1em; // NK - added to match code text
-     
+        line-height: 1.25; // NK - added to match code text
+        font-size: 1em; // NK - added to match code text
 
         > code {
 	    background-color: inherit !important;

@@ -446,8 +446,8 @@ As you can see it shows the current status of the PLC, when clicking **Open** or
 
 In this use case the OPC UA Server will receive the instruction through the **Write** action, this will trigger the physical gate to move. When the gate state changes, the OPC UA Server will update the 'State'-node accordingly.  
 
-The application is subscribing on the 3 different nodes, **IsUp**, **IsDown**, **IsMoving**. When either of these nodes changes values, a message is send to the Mendix Client and the values are parse by the respective microflows: UA_ProcessEvent_GateUp, **UA_ProcessEvent_GateDown**, UA_ProcessEvent_GateMoving.
+The application is subscribing on the 3 different nodes, **IsUp**, **IsDown**, **IsMoving**. When either of these nodes changes values, a message is sent to the Mendix Client and the values are parsed by the respective microflows: **UA_ProcessEvent_GateUp**, **UA_ProcessEvent_GateDown**, **UA_ProcessEvent_GateMoving**.
 
 All three subscription microflows look up the **MonitoredItem** record, and through the **MonitoredItem**, find the actual PLC that's changing (you need to follow this pattern when interacting with multiple devices through OPC UA). After retrieving the PLC, it will update the state according to the Message. You can extend this microflow with as many complex evaluation and validations as you want. 
 
-Alternatives: It is possible for the OPC UA Node to hold a complex JSON structure as value instead of a simple integer in this example. If that is the case you should implement the same microflow logic, and in addition, you should call an Import Mapping activity before processing the results. 
+As an alternative, it is possible for the OPC UA Node to hold a complex JSON structure as value instead of a simple integer in this example. If that is the case you should implement the same microflow logic, and in addition, you should call an Import Mapping activity before processing the results. 

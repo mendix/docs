@@ -19,7 +19,7 @@ You can check out a [sample module](https://marketplace.mendix.com/link/componen
 
 #### 1.1.1 Actions
 
-The OPC UA Client Connector supports the following actions:
+The OPC UA Client connector supports the following actions:
 
 * Browse – browses a list of nodes
 * Read – reads the value of a node
@@ -29,7 +29,7 @@ The OPC UA Client Connector supports the following actions:
 
 #### 1.1.2 Security 
 
-The OPC UA Client Connector supports all three security options offered by OPC UA:
+The OPC UA Client connector supports all three security options offered by OPC UA:
 
 * None
 * Credentials
@@ -53,7 +53,7 @@ Only one of the options can be in use at a time. Which option to use is determin
 
    Subscriptions are only possible on value changes of nodes. At this time, events or aggregates are not implemented yet. The connector supports all data types. Any OPC UA type is received and passed as a String to the evaluating microflow.
 
-1. Advanced settings on MonitoredItem.  
+1. Advanced settings on monitored items
 
    OPC UA offers fine-grained control over how values are shared with this Client. At this time all monitored items are set up with identical default parameters, and these can not yet be influenced. The default parameters come from the Apache Milo library. 
 
@@ -70,9 +70,9 @@ Only one of the options can be in use at a time. Which option to use is determin
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the [OPC UA Client Connector](https://marketplace.mendix.com/link/component/117391/) module into your app. You will see the new module in the **Marketplace modules** section of the **App Explorer**. When you edit a microflow, you will also see five additional actions in the **Toolbox**.
+Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the [OPC UA Client connector](https://marketplace.mendix.com/link/component/117391/) module into your app. You will see the new module in the **Marketplace modules** section of the **App Explorer**. When you edit a microflow, you will also see five additional actions in the **Toolbox**.
 
-{{< figure src="/attachments/appstore/connectors/opc-ua/opc-ua-toolbox.png" alt="OPC UA Client Connector actions in the microflow toolbox" >}}
+{{< figure src="/attachments/appstore/connectors/opc-ua/opc-ua-toolbox.png" alt="OPC UA Client connector actions in the microflow toolbox" >}}
 
 ## 3 Configuration
 
@@ -98,7 +98,7 @@ For an example of the implementation, install the [sample module](https://market
 
 ### 4.1 Client State
 
-This connector is designed for usage with multiple Servers if necessary. The state for each OPC UA Server is kept by the Client in an object of the entity **OpcUaServerCfg**. This needs to be populated before the actions of the OPC UA Client Connector can be used. 
+This connector is designed for usage with multiple Servers if necessary. The state for each OPC UA Server is kept by the Client in an object of the entity **OpcUaServerCfg**. This needs to be populated before the actions of the OPC UA Client connector can be used. 
 
 {{< figure src="/attachments/appstore/connectors/opc-ua/opcuaservercfg.png" alt="OPC UA Server configuration entity" width="300" >}}
 
@@ -225,7 +225,7 @@ The configuration of the action is as follows:
 * **Object name** – the name assigned to the variable containing the return value  
 
 {{% alert color="info" %}}
-**Subscription** and **MonitoredItems** are automatically kept alive by the app and the OPC UA Server. The values will continue to be sent as long as both the Client and Server are running. The OPC UA Connector automatically provides values for `requestedMaxKeepAliveCount` and `requestedLifetimeCount` and will keep the subscription alive. If these values are exceeded, then the subscription will lapse. This can happen, for example, if the app is redeployed.
+**Subscription** and **MonitoredItems** are automatically kept alive by the app and the OPC UA Server. The values will continue to be sent as long as both the Client and Server are running. The OPC UA connector automatically provides values for `requestedMaxKeepAliveCount` and `requestedLifetimeCount` and will keep the subscription alive. If these values are exceeded, then the subscription will lapse. This can happen, for example, if the app is redeployed.
 {{% /alert %}}
 
 ##### 4.2.3.3 MonitoredItem
@@ -298,7 +298,7 @@ If nothing is returned, the action was successful; and if the OPC UA Server refu
 
 ### 4.3 Pages
 
-The OPC UA Client Connector comes with a number of pages which you can use to manage and test the connection to your Server(s).
+The OPC UA Client connector comes with a number of pages which you can use to manage and test the connection to your Server(s).
 
 #### 4.3.1 OpcUaServer_Overview
 
@@ -316,7 +316,7 @@ From this page, you can perform the following actions:
 
 #### 4.3.2 OpcUaServer_NewEdit
 
-This page allows you to create or change the details of an OPC UA Server you want to use within your app. Your app administrator can use this page as is, or you can customize it for your own use. If you customize it, we recommend that you use a copy of it in one of your own modules so that it is not accidentally overwritten if you update the OPC UA Client Connector Marketplace module.
+This page allows you to create or change the details of an OPC UA Server you want to use within your app. Your app administrator can use this page as is, or you can customize it for your own use. If you customize it, we recommend that you use a copy of it in one of your own modules so that it is not accidentally overwritten if you update the OPC UA Client connector Marketplace module.
 
 ##### 4.3.2.1 Data on OpcUaServer_NewEdit Page
 
@@ -425,7 +425,7 @@ You can use the **OpcUaClient_ExampleImplementation** module (link) as a templat
 
 * You use Studio Pro [8.17.0](/releasenotes/studio-pro/8.17/) or higher
 * You have installed [Atlas UI](https://marketplace.mendix.com/link/component/104730) in Studio Pro (for example, you have used the blank starter app as a basis)
-* You have installed the The [OPC UA Client](https://marketplace.mendix.com/link/component/117391/) Connector
+* You have installed the The [OPC UA Client](https://marketplace.mendix.com/link/component/117391/) connector
 * You have an OPC UA Server
 
 ### 6.2 Initial Configuration

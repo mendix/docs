@@ -473,9 +473,23 @@ Refer to the [Java Virtual Machine documentation](https://docs.oracle.com/en/jav
 | `jetty.threads.config.min` | gauge | The minimum number of threads in the Jetty pool. |
 | `jetty.threads.config.max` | gauge | The maximum number of threads in the Jetty pool. |
 
-#### 7.2.4 Other Metrics
+#### 7.2.4 Database Connection Pool Metrics
 
-There can be more metrics for additional libraries that are detected by Micrometer, such as `commons.pool2.*`, `postgres.*`, `kafka.*`, etc.
+| Name | Type | Description |
+| --- | --- | --- |
+| `commons.pool2.num.idle` | gauge | The number of connections currently idle in the pool. |
+| `commons.pool2.num.active` | gauge | The number of connections currently active in the pool. |
+| `commons.pool2.num.waiters` | gauge | The estimate of the number of threads currently blocked waiting for a connection from the pool. |
+| `commons.pool2.mean.active` | gauge | The mean time connections are active. |
+| `commons.pool2.mean.idle` | gauge | The mean time connections are idle. |
+| `commons.pool2.mean.borrow.wait` | gauge | the mean time threads wait to get a connection. |
+| `commons.pool2.max.borrow.wait` | gauge | The maximum time a thread has waited to get a connection from the pool. |
+| `commons.pool2.created` | counter | The total number of connections created for the pool over its lifetime. |
+| `commons.pool2.borrowed` | counter | The total number of connections borrowed from the pool over its lifetime. |
+| `commons.pool2.returned` | counter | The total number of connections returned to the pool over its lifetime. |
+| `commons.pool2.destroyed` | counter | The total number of connections destroyed by the pool over its lifetime. |
+| `commons.pool2.destroyed.by.evictor` | counter | The total number of connections destroyed by the evictor associated with the pool over its lifetime. |
+| `commons.pool2.destroyed.by.borrow.validation` | counter | The total number of connections destroyed by the pool over its lifetime as a result of failing validation during borrowing. |
 
 ## 8 Read More
 

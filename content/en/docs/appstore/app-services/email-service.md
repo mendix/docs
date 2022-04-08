@@ -186,10 +186,10 @@ If you are the Technical Contact, you can configure the sender's email addresses
 
     * If you choose **Email ID** as the **Verification Type**, perform the following steps:
 
-        a. For **Email ID**, enter the sender's email address(es). 
-        b. Optionally, enter the **Mail From Domain** information that you want to use with your [Email Service](https://marketplace.mendix.com/link/component/118393/) instance. For more details, see the [Configuring the Mail From Domain](#config-mail-from-domain) section. 
+        1. For **Email ID**, enter the sender's email address(es). 
+        2. Optionally, enter the **Mail From Domain** information that you want to use with your [Email Service](https://marketplace.mendix.com/link/component/118393/) instance. For more details, see the [Configuring the Mail From Domain](#config-mail-from-domain) section. 
 
-        c. To verify the sender's email address(es), perform the following steps:
+        3. To verify the sender's email address(es), perform the following steps:
             1.  Click **View Details/Edit** to open the **Email Identity** dialog box.
 
                 {{< figure src="/attachments/appstore/app-services/email-service/view-details-edit-email-itentity.png" >}}
@@ -214,14 +214,14 @@ If you are the Technical Contact, you can configure the sender's email addresses
       
     * If you choose **Domain** as the **Verification Type**, perform the following steps:
      
-        a. For **Domain**, enter the domain address.
-        b. For **Email ID**, enter the sender's email address(es). 
-        c. Optionally, enter the **Mail From Domain** information that you want to use with your [Email Service](https://marketplace.mendix.com/link/component/118393/) instance. For more details, see the [Configuring the Mail From Domain](#config-mail-from-domain) section. 
-        d.  Click **Save** to verify domain address.
+        1. For **Domain**, enter the domain address.
+        2. For **Email ID**, enter the sender's email address(es). 
+        3. Optionally, enter the **Mail From Domain** information that you want to use with your [Email Service](https://marketplace.mendix.com/link/component/118393/) instance. For more details, see the [Configuring the Mail From Domain](#config-mail-from-domain) section. 
+        4.  Click **Save** to verify domain address.
          
             {{< figure src="/attachments/appstore/app-services/email-service/domain-verification.png" >}}
          
-        e. If you have a paid subscription, you can add up to five email addresses for the same domain as follows:
+        5. If you have a paid subscription, you can add up to five email addresses for the same domain as follows:
             1.  Click **View Details/Edit** to open the **Domain based Email Identities** dialog box.
             
                {{< figure src="/attachments/appstore/app-services/email-service/domain-based-email-identities.png" >}}

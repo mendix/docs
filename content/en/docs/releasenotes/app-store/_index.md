@@ -243,7 +243,7 @@ Content that was marked as **Protected** as well as content marked as **Shared w
 
 We added the flexibility to label your App Store content with a [custom version number](/appstore/general/share-app-store-content/#updating).
 
-{{% alert color="info" %}}This is based on an [upvoted idea from Andreas Blaesius](https://forum.mendixcloud.com/link/ideas/1324) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com/index4.html). Thanks, Andreas!{{% /alert %}}
+{{% alert color="info" %}}This is based on an [upvoted idea from Andreas Blaesius](https://forum.mendixcloud.com/link/ideas/1324) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com). Thanks, Andreas!{{% /alert %}}
 
 ### August 30th, 2019
 

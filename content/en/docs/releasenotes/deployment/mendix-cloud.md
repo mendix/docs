@@ -415,10 +415,6 @@ Some examples of clients which will no longer be supported are:
 * Safari before version 9 on OS X 10.11
 * Safari before version 9 on iOS 9
 
-**Test your clients**
-
-You can test whether your client (browser or integrating client) will be able to connect to your app after December 1st, 2020, by going to [tls-check.mendix.com](https://tls-check.mendix.com/).
-
 **What we continue to support (expert details)**
 
 SSL/TLS ciphers that are still supported for HTTPS connections after December 1st, 2020:

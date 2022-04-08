@@ -9,7 +9,7 @@ tags: ["workflow", "workflows", "Studio"]
 
 ## 1 Introduction
 
-Workflow is a visual language in Mendix Studio and Mendix Studio Pro that allows you to to solve your business problems that involve processes. It is fully integrated with other visual languages, such as the microflow editor and page editor. 
+Workflow is a visual language in Mendix Studio and Mendix Studio Pro that allows you to build extendable business processes. It is fully integrated with other visual languages, such as the microflow editor and page editor. 
 
 The main difference between workflows and [microflows](/studio/microflows/) is a waiting aspect – the workflow is paused until it gets an input from an end-user. For example, an employee sends a travel request (triggering the start of the workflow) and then the workflow is paused until a manager approves the request by clicking a button. 
 
@@ -22,7 +22,7 @@ Workflows are a visual way of processing logic in your application. A workflow l
 {{< figure src="/attachments/studio/workflows/workflow-example.jpg" alt="Workflow Example" >}}
 
 {{% alert type="note" %}}
-Workflows are available in Studio from **Mendix version 9.12**. If you have an app with workflow functionality below this version, this app is likely to be created in Studio Pro and requires a manual migration. For more information on how to migrate your app using Studio Pro, see [Migrate Workflow Apps](/refguide/workflow-beta-migration/). 
+Workflows are available in Studio from **Mendix version 9.12**. If you have an app with workflow functionality below this version, this app is most likely to be created in Studio Pro and requires a manual migration. For more information on how to migrate your app using Studio Pro, see [Migrate Workflow Apps](/refguide/workflow-beta-migration/). 
 {{% /alert %}}
 
 ## 2 Workflow App Template
@@ -39,7 +39,7 @@ For more information, see [Workflow Context Parameter](/studio/workflow-paramete
 
 ## 4 Performing Basic Functions
 
-You can perform the following basic functions when working on workflows:
+You can perform the following basic functions when configuring workflows:
 
 * [Open a workflow](#open)
 * [Create a workflow](#create)
@@ -61,11 +61,11 @@ The selected workflow is opened.
 
 ### 4.2 Adding a Workflow {#create}
 
-There are two ways to create a workflow: you [use a wizard](#wizard) or [set the workflow up manually](#manual). 
+There are two ways to create a workflow: [using a wizard](#wizard) or [setting the workflow up manually](#manual). 
 
 #### 4.2.1 Creating a Workflow Using the Wizard {#wizard}
 
-The wizard helps you create the Approval Request workflow. If your workflow falls under the approval request use case, for example, approving vacation days for your employees, this is a good starting point that sets the whole app automatically for you, not only the workflow itself but also pages and navigation. 
+The wizard helps you create the Approval Request workflow. If your workflow falls under the approval request use case, for example, approving vacation days for your employees, this is a good starting point that sets the whole app automatically for you – not only the workflow itself but also pages and navigation. 
 
 To create the workflow for the vacation approval via the wizard, do the following:
 
@@ -79,14 +79,18 @@ To create the workflow for the vacation approval via the wizard, do the followin
     
 3. In the **Create Workflow** dialog box, set the workflow title to **Vacation Approval** and click **Start Wizard**.
 
-4. In the **Create Request Form**, you can define input fields that will be used by a person submitting the request. For example, an employee who wants to submit vacation days will fill in their name, department, and desired dates of the vacation. Do the following:
-
+4. In the **Create Request Form**, you can define input fields that will be used by a person submitting the request. For example, an employee will fill in their name, department, and desired dates when submitting their vacation request. Do the following:
     1. Fill in *Name* in the **Label** option, leave the **Type** as string, and mark this field as required. On the right you can see the preview of the future form.
+    
+        {{< figure src="/attachments/studio/workflows/create-request-form.jpg" alt="Create Request Form Example" >}}
+    
     2. Click the plus icon to add more fields. 
-    3. Follow steps 1-2 to add the *Department* of type string, *Start Date* of type Date and Time, and *End Date* of type Date and Time. 
+    
+    3. Follow steps 4a and 4b to add the *Department* of type string, *Start Date* of type Date and Time, and *End Date* of type Date and Time. 
+    
     4. Click the **Create** button.
-
-6. Based on this form the app is set up: labels that you filled in are turned into attributes of an entity used by the workflows, workflow and pages are created, security is set up. Click **Take the tour** to get more information about your app.
+    
+5. Based on this form the app is set up: labels that you filled in are turned into attributes of an entity used by the workflows, workflow and pages are created, security is set up. Click **Take the tour** to get more information about your app.
 
 The app with the workflow is set up.
 
@@ -150,8 +154,11 @@ To delete a workflow in Studio, do one of the following:
 1. Open the workflow you want to delete and follow the steps below:
     1. Open the **Properties** tab.
     2. Click **Delete** at the bottom of the **Properties** tab.
+    
 2. Click the workflows icon in the left menu bar and do the following:
     1. In the side panel, click the ellipsis icon and select **Delete** in the drop-down menu:
+    
+        {{< figure src="/attachments/studio/workflows/delete-workflow.jpg" alt="Delete a Workflow" >}}
 
 The selected workflow is deleted. 
 

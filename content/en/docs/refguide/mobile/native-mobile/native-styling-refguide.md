@@ -1685,6 +1685,25 @@ The widget’s style properties structure is as follows:
 
 The default class to style all check box inputs is named `com_mendix_widget_native_switch_Switch`.
 
+### 11.31 Background Gradient
+
+The background gradient widget allow you to apply a background that transitions between multiple colors in a linear direction..
+
+The widget’s style properties are as follows:
+
+```xml
+<container>
+	content
+</container>
+```
+
+| Element | Style Properties    | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties. |        |
+
+The default class to style all background gradient is named `com_mendix_widget_native_backgroundgradient_BackgroundGradient`.
+
+
 ## 12 Read More
 
 * [How to Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling/)

@@ -48,7 +48,7 @@ To configure this widget, follow these steps:
 
         {{< figure src="/attachments/appstore/widgets/rich-text/basic-toolbar.png" alt="Example of toolbar" >}}
 	
-	  * **Inline** – if selected, the toolbar pops up only when the user starts typing in the editor
+	  * **Inline** – if selected, the toolbar pops up only when the user starts typing in the editor
         {{< figure src="/attachments/appstore/widgets/rich-text/inline-toolbar.png" alt="Example of toolbar" >}}
 	
 * **Value attribute** (required) – sets a String attribute to store the rich-text content
@@ -150,7 +150,7 @@ To configure this widget, follow these steps:
     
         {{< figure src="/attachments/appstore/widgets/rich-text/insert-code-snippet.png" alt="insert-code-snippet" >}}
     
-    * **No** (default) – if selected, the **Insert Code Snippet** button is unavailable in the toolbar
+    * **No** (default) – if selected, the **Insert Code Snippet** button is unavailable in the toolbar
 * **Advanced content filtering**  
     * **Auto** (default) – if selected, the content is sanitized automatically
     * **Custom** – if selected, you can customize how content is sanitized with the following items:
@@ -163,7 +163,11 @@ To configure this widget, follow these steps:
 
 For more information, see [Common Section](https://docs.mendix.com/refguide/common-widget-properties#common-properties) in *Properties Common in the Page Editor*.
 
-## 3 Widgets Below Version 2.0.0
+## 3 Strict CSP Compatibility
+
+This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget.
+
+## 4 Widgets Below Version 2.0.0
 
 Features:
 

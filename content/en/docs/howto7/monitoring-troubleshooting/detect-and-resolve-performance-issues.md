@@ -8,7 +8,7 @@ Any application can run into performance issues. Here are a number of possible p
 
 ## Overview
 
-The flow chart below, designed  like a microflow, provides a great infrastructure for deciding how to troubleshoot and resolve performance-related issues. The rest of this article will be based on this flow.
+The flow chart below, designed  like a microflow, provides a great infrastructure for deciding how to troubleshoot and resolve performance-related issues. The rest of this article will be based on this flow.
 
 {{< figure src="/attachments/howto7/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580226.png" >}}
 
@@ -16,9 +16,9 @@ The flow chart below, designed  like a microflow, provides a great infrastructu
 
 Performance issues typically manifest themselves for users in one of two ways: either an action takes too long to complete (a page feels slow or unresponsive), or an entire page loads slowly.
 
-In either case, some process is running too long or too many times to complete a specific task. Your goal should be to identify _which_ _tasks_ in particular are causing your issue, and focus your effort on optimizing that task. 
+In either case, some process is running too long or too many times to complete a specific task. Your goal should be to identify _which_ _tasks_ in particular are causing your issue, and focus your effort on optimizing that task. 
 
-First, you'll need to identify if your issue is UI-centric or microflow-centric. If a page is taking a long time to initially load, or if a page gets slow or unresponsive after clicking a microflow button, it's most likely a microflow slowing your application down. If the UI feels glitchy or slow _after_ the page has loaded, you may have a UI-centric issue.
+First, you'll need to identify if your issue is UI-centric or microflow-centric. If a page is taking a long time to initially load, or if a page gets slow or unresponsive after clicking a microflow button, it's most likely a microflow slowing your application down. If the UI feels glitchy or slow _after_ the page has loaded, you may have a UI-centric issue.
 
 {{% alert color="info" %}}
 
@@ -68,7 +68,7 @@ If your slow action occurs via microflow, see the next section for information o
 
 ## Slow Microflows
 
-So your performance issue is caused by a microflow. Now you just need to find out _which_ _microflow,_ and _which activities_ are the slowest in that microflow.
+So your performance issue is caused by a microflow. Now you just need to find out _which_ _microflow,_ and _which activities_ are the slowest in that microflow.
 
 Sometimes, identifying the slow activity and activities in your slow microflow will be obvious. You may have a single microflow with just a few steps, and one of them is egregiously slow. If this is the case, move on to the next section and focus on optimization. If not, continue on below.
 
@@ -86,7 +86,7 @@ The Mendix Server and Developer Portal offer a number of performance graphs and 
 
 Once you've identified a slow page, it's pretty easy to identify which microflows are executed on that page. Make sure you look at directly referenced microflows, such as data sources, but also look at any sub-flows, on change event handlers, or domain model event handlers that could be called by your page.
 
-Setting a break point and stepping through these relevant microflows can often give you a quick (although subjective) way to find a slow action. To get started with debugging microflows, see: [Debugging Microflows](/howto7/monitoring-troubleshooting/debug-microflows/). If you cannot subjectively identify your slow process, move on to the next step.
+Setting a break point and stepping through these relevant microflows can often give you a quick (although subjective) way to find a slow action. To get started with debugging microflows, see: [Debugging Microflows](/howto7/monitoring-troubleshooting/debug-microflows/). If you cannot subjectively identify your slow process, move on to the next step.
 
 ### Microflow Time Stamps
 
@@ -98,7 +98,7 @@ To set up a timer, add a _Create Variable_ activity as the first step. Here you'
 
 {{< figure src="/attachments/howto7/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580221.png" >}}
 
-Next, add a _Log Message_ activity at the end of your microflow:
+Next, add a _Log Message_ activity at the end of your microflow:
 
 {{< figure src="/attachments/howto7/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580219.png" >}}
 
@@ -122,7 +122,7 @@ Slow retrieves can occur for a number of different reasons. Here are a few:
 *   Complex calculated attributes
 *   Large # of objects retrieved (See batching below)
 
-Additionally, review this article on denormalization and how it can improve your app performance in some cases: [How to Denormalize Data to Improve Performance](/howto7/data-models/denormalize-data-to-improve-performance/).
+Additionally, review this article on denormalization and how it can improve your app performance in some cases: [How to Denormalize Data to Improve Performance](/howto7/data-models/denormalize-data-to-improve-performance/).
 
 ### Slow Database Commits
 
@@ -132,7 +132,7 @@ If you are commit large amounts of data (1000s of rows), you might consider usin
 
 #### Batches
 
-Below is an example of how to _retrieve_ in batches. You can do something quite similar for commits as well. This article will be expanded in the future to include a complete example of a batch retrieve and a batch commit.
+Below is an example of how to _retrieve_ in batches. You can do something quite similar for commits as well. This article will be expanded in the future to include a complete example of a batch retrieve and a batch commit.
 
 {{< figure src="/attachments/howto7/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580216.png" >}}
 
@@ -142,7 +142,7 @@ The "Refresh in Client" property of a change or commit activity is quite useful 
 
 ### Slow Sub Microflow
 
-If you find that you have a slow sub microflow, begin the process of identifying the slow activity within the microflow, based on the Slow Microflows section above.
+If you find that you have a slow sub microflow, begin the process of identifying the slow activity within the microflow, based on the Slow Microflows section above.
 
 ### General Slow Microflow (No Specific Activity Identified)
 
@@ -158,7 +158,7 @@ If you find yourself committing data inside a loop, you can typically optimize t
 
 {{< figure src="/attachments/howto7/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580218.png" >}}
 
-Every time the loop executes, an Order object is committed. You can optimize this by committing the entire list outside the loop, after processing is completed. Simply set the _commit_ property to _no_ on the _Change Order _activity, then add a commit of the entire OrderList outside the loop:
+Every time the loop executes, an Order object is committed. You can optimize this by committing the entire list outside the loop, after processing is completed. Simply set the _commit_ property to _no_ on the _Change Order _activity, then add a commit of the entire OrderList outside the loop:
 
 {{< figure src="/attachments/howto7/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580217.png" >}}
 

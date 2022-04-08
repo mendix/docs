@@ -33,11 +33,11 @@ Use this page to test how spacing and indents will render with various elements 
 3. And another item.  
     Indenting with **4** spaces and **1** or **2** trailing spaces **works**. The indented sentence is part of the numbered list item, with a `<br>` between.
 
-{{< alert color="info" >}}
+{{% alert color="info" %}}
 The style produced with trailing spaces looks best on page.
 
 We will try to adjust spacing between paragraph (`<p>`) elements, to make the examples in headings 1 and 2 closer.
-{{< / alert >}}
+{{% / alert %}}
 
 ### 1.3 Indents with Tabs and a Line Break - DO NOT USE TABS
 
@@ -50,9 +50,9 @@ We will try to adjust spacing between paragraph (`<p>`) elements, to make the ex
 
 	Indenting with a tab and a line break works for generic list items, but not elements like code blocks. Tabs get treated as four spaces, regardless of tab settings within an editor.
 
-{{< alert color="danger" >}}
+{{% alert color="danger" %}}
 DO NOT USE TABS
-{{< / alert >}}
+{{% / alert %}}
 
 ### 1.4 Indents with Tabs and Trailing Spaces - DO NOT USE TABS
 
@@ -63,9 +63,9 @@ DO NOT USE TABS
 3. And another item.  
 	Indenting with a tab and trailing spaces works for generic list items, but not elements like code blocks.
 
-{{< alert color="danger" >}}
+{{% alert color="danger" %}}
 DO NOT USE TABS
-{{< / alert >}}
+{{% / alert %}}
 
 ### 1.5 Spacing Between List Items and Code Block
 
@@ -87,9 +87,9 @@ Code blocks do NOT need a line break to work. Not part of list indent.
     - a line starts with a hyphen.
     ```
 
-{{< alert color="danger" >}}
+{{% alert color="danger" %}}
 Do not add a double-space between the number (or bullet point) and first letter of first word in a list item. This can break code block formatting.
-{{< / alert >}}
+{{% / alert %}}
 
 ### 1.7 Indent Between List Items and Code Block (Highlight Shortcode) - DO NOT USE HIGHLIGHT
 
@@ -111,9 +111,9 @@ Do not add a double-space between the number (or bullet point) and first letter 
     * Indenting with **4 spaces** and a line break works, keeping the image in line with list item 2. The line break causes the parent element, list item 2 to be wrapped in `<p>`, making a gap between 1 and 2.
 3. Third item
 
-{{< alert color="success" >}}
+{{% alert color="success" %}}
 The style produced with a line break between list and image looks best on page.
-{{< / alert >}}
+{{% / alert %}}
 
 ### 1.9 Spacing Between List Items and Images, No Line Breaks
 
@@ -134,17 +134,17 @@ The style produced with a line break between list and image looks best on page.
 
 1. First list item
 2. Second list item 
-{{< alert color="info" >}}
+{{% alert color="info" %}}
 My alert box
-{{< / alert >}}
+{{% / alert %}}
 3. Third list item
     * Sub-list item
-{{< alert color="info" >}}
+{{% alert color="info" %}}
 My alert box
-{{< / alert >}}
+{{% / alert %}}
 
 
-{{< alert color="warning" >}}
+{{% alert color="warning" %}}
 Lists in alerts:
 1. First list item
 2. Second list item `a code snippet`
@@ -153,7 +153,7 @@ Lists in alerts:
         ```
         A code block
         ```
-{{< / alert >}}
+{{% / alert %}}
 
 ## 2 Use of Markdown Extras
 ### 2.1 Block Quotes
@@ -202,9 +202,9 @@ Key Combination
     | Entity Name | How the [entity](/refguide/entities/) will be referred to in the database | 
     | Event Handler(s) | An indication that one or more [event handlers](/refguide/event-handlers/) have been set up for this entity | 
 
-{{< alert color="warning" >}}
+{{% alert color="warning" %}}
 The current advice is to avoid using tables indented in numbered/bulleted lists, as the table does not get styling applied.
-{{< / alert >}}
+{{% / alert %}}
 
 | Numbered list | Bullet point list |
 | --- | --- |

@@ -288,7 +288,7 @@ Defines the maximum number of user task transactions that the runtime will execu
 
 Events allow you to set a microflow for workflow and user task state changes in your app. 
 
-Security settings of workflows and user tasks allow to access workflow or user task data only if you have Admin rights or if the workflow/user task is targeted to you. Data from events allows you to build a dashboard or audit trails. For example, it can be useful for a manager to see progress of an employee onboarding process. 
+Security settings of workflows and user tasks allow you to access workflow or user task data only if you have Admin rights or if the workflow/user task is targeted to you. Data from events allows you to build a dashboard or audit trails. For example, it can be useful for a manager to see progress of an employee onboarding process. 
 
 #### 7.3.1 Workflow State Change {#workflow-state-change}
 

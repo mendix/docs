@@ -101,7 +101,7 @@ try {
 
 Once you are done with the model changes, you can commit the changes back to the Team Server by calling `workingCopy.commit()`. Finally, in the done block, you print a success message if things went OK, or handle the error otherwise. 
 
-For more information, see [Async Await](https://basarat.gitbooks.io/typescript/docs/async-await.html) and [Using Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises).
+For more information, see [Async Await](https://basarat.gitbook.io/typescript/future-javascript/async-await) and [Using Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises).
 
 ## 4 Compiling & Running the Script
 

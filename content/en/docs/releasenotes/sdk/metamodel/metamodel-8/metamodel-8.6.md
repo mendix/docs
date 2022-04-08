@@ -2,6 +2,7 @@
 title: "8.6"
 url: /releasenotes/sdk/metamodel-8.6/
 parent: "metamodel-8"
+weight: 95
 ---
 
 ## 8.6.0

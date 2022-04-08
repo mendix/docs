@@ -106,7 +106,7 @@ The **Toolbox**, **Properties** , and **Buzz** tabs are described in the table b
 
 ## 7 Top Menu Bar
 
-The top menu bar allows to undo or redo actions, view your recent documents, preview or publish your app, and view checks in your app. You can also access help and learning and view various information in the top menu bar. 
+The top menu bar allows you to undo or redo actions, view your recent documents, preview or publish your app, and view checks in your app. You can also access help and learning and view various information in the top menu bar. 
 
 {{< figure src="/attachments/studio/general/top-bar.png" alt="Top Menu Bar" >}}
 

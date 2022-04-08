@@ -5,6 +5,15 @@ parent: "nt-studio-pro-9-parent"
 weight: 10
 description: "Native Template 6 release notes."
 ---
+
+## 6.2.16
+
+**Release date: March 30th, 2022**
+
+### Fixes
+
+* We fixed an issue with App Center CodePush on Android which would fail to install new OTA updates on devices. (Ticket 145335)
+
 ## 6.2.15
 
 **Release date: March 23rd, 2022**

@@ -94,7 +94,7 @@ The Mendix Support Portal will first suggest relevant documentation for you to r
 
 {{< figure src="/attachments/developerportal/support/submit-support-request/recommendations.png" >}}
 
-If investigating the documentation and searching the [Mendix Forum](https://forum.mendixcloud.com/index4.html) does not help you solve your issue, you can submit the Mendix Support request.	
+If investigating the documentation and searching the [Mendix Forum](https://forum.mendixcloud.com) does not help you solve your issue, you can submit the Mendix Support request.	
 
 ## 4 Request Priority {#request-priority}
 

@@ -7,7 +7,7 @@ description: Implement native mobile features in Mendix Studio Pro.
 tags: ["native", "mobile", "start", "quickstart"]
 ---
 
-How-to's in this section will help you implement key features of native apps.
+How-tos in this section will help you implement key features of native apps.
 
 The following how-to’s are available here:
 

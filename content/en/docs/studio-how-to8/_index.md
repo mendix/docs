@@ -1,10 +1,10 @@
 ---
-title: "Studio 8 How-to's"
+title: "Studio 8 How-tos"
 url: /studio-how-to8/
 tags: ["studio", "how to"]
 weight: 75
 cascade:
-    - space: "Studio 8 How-to's"
+    - space: "Studio 8 How-tos"
     - mendix_version: "8"
     - old_content: true
     - sitemap:
@@ -13,7 +13,7 @@ cascade:
 
 {{% alert color="warning" %}}
 
-The **Studio 8 How-to's** space describes Mendix Studio functionality that corresponds to Mendix 8 version. It describes the latest Studio functionality and features.
+The **Studio 8 How-tos** space describes Mendix Studio functionality that corresponds to Mendix 8 version. It describes the latest Studio functionality and features.
 
 {{% /alert %}}
 
@@ -23,7 +23,7 @@ Studio how-to's contain step-by-step guides that will help you create apps in Me
 
 ## 2 How-to Categories
 
-The *Studio 8 How-to's* are divided into the following categories:
+The *Studio 8 How-tos* are divided into the following categories:
 
 * [Pages](/studio-how-to8/pages/) – focuses on building various page patterns, such as building a form or a list, as well configuring different functionality, for example, filtering data in a list 
 * [How to Configure a Domain Model](/studio-how-to8/domain-model-how-to-configure/) – explains how to configure a domain model and its elements

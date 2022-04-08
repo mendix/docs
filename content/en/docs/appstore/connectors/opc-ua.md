@@ -9,7 +9,7 @@ tags: ["Marketplace", "Marketplace component", "OPC UA", "connector", ]
 
 ## 1 Introduction
 
-The [OPC UA Client](https://marketplace.mendix.com/link/component/117391/) Connector allows you to connect your Mendix application to [OPC](https://opcfoundation.org/) enabled Servers using the functionality of [OPC UA](https://opcfoundation.org/about/opc-technologies/opc-ua/). The connector allows you to read from, write to, and subscribe to OPC UA Servers.
+The [OPC UA Client](https://marketplace.mendix.com/link/component/117391/) connector allows you to connect your Mendix application to [OPC](https://opcfoundation.org/)-enabled Servers using the functionality of [OPC UA](https://opcfoundation.org/about/opc-technologies/opc-ua/). The connector allows you to read from, write to, and subscribe to OPC UA Servers.
 
 OPC is the platform-independent, multi-vendor interoperability standard for the secure and reliable exchange of data in the industrial automation space and in other industries. The OPC Unified Architecture (OPC UA) is an architecture that integrates all the OPC specifications into one extensible framework. This module uses the [Eclipse Milo library](https://github.com/eclipse/milo) an open-source implementation of OPC UA, and has been tested with the [Prosys OPC UA Server](https://www.prosysopc.com/). All terminology in this module is per the OPC UA Documentation. 
 
@@ -19,7 +19,7 @@ You can check out a [sample module](https://marketplace.mendix.com/link/componen
 
 #### 1.1.1 Actions
 
-The OPC UA Client Connector supports the following actions
+The OPC UA Client Connector supports the following actions:
 
 * Browse – browses a list of nodes
 * Read – reads the value of a node

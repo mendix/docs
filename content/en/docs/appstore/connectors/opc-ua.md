@@ -363,10 +363,10 @@ For each monitored item, you are able to perform one of the following actions:
 
 {{% alert color="info" %}}If your Server is correctly configured, there is no need to ever execute these actions, but this can be useful to resolve connectivity problems or recover after a previous failure.{{% /alert %}}
 
-* **Refresh Subscription** – This selects a MonitoredItem from the list, to re-establishes the connect with the Server. If a previous connection exists, it will simply re-negotiate the settings with the Server, if the connection was lost it will be re-established. This action can also be executed on objects that have the status of **Deleted** or **Failed**. A successful refresh will update these objects to the **Active** status. 
+* **Refresh Subscription** – This selects a **MonitoredItem** from the list, to re-establishes the connect with the Server. If a previous connection exists, it will simply re-negotiate the settings with the Server, if the connection was lost it will be re-established. This action can also be executed on objects that have the status of **Deleted** or **Failed**. A successful refresh will update these objects to the **Active** status. 
 * **Unsubscribe** – This unsubscribes the **MonitoredItem** from the OPC UA Server updates. If the action was successful, the object will receive the status **Deleted** and will be removed from the database eventually.   
 * **Delete** – This removes the selected **MonitoredItem** from the database. There are no validations on this action, make sure you know that you can delete the record from the database before executing this action. If you remove a **MonitoredItem** that still has an active subscription at the OPC UA Server, the connector could generate duplicate or untraceable messages, or throw exceptions (until the connection expires at the Server). 
-* **Re-connect All New/Active Subscriptions** – refresh all the MonitoredItems that have the status **New** or **Active**. Re-establishes the connect with the Server. If a previous connection exists, it will simply re-negotiate the settings with the Server, if the connection was lost it will be re-established.  
+* **Re-connect All New/Active Subscriptions** – refresh all the objects of **MonitoredItem** that have the status **New** or **Active**. Re-establishes the connect with the Server. If a previous connection exists, it will simply re-negotiate the settings with the Server, if the connection was lost it will be re-established.  
 
 **Subscription (connection)** tab – shows a list of all the active Subscriptions with the Server, and all monitored items that are grouped in that same connection. 
 
@@ -395,7 +395,7 @@ When getting a `ClosedChannelException` like the partial stacktrace below, you w
 This can be caused by one of the following reasons:
 
 * The Server is expecting a Username, but you do not have one configured in your Server configuration
-* You have configured to authenticate with a username and a password, but the Server does not have that enabled, then you should use `NONE ` or `CERTIFICATE`.
+* You have configured to authenticate with a username and a password, but the Server does not have that enabled, then you should set **AuthenticationType** to **NONE** or **CERTIFICATE**.
 
       com.mendix.core.CoreRuntimeException: com.mendix.systemwideinterfaces.MendixRuntimeException: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.lang.Exception: no UserTokenPolicy with UserTokenType.UserName found
          at com.mendix.basis.actionmanagement.ActionManager.executeSync(ActionManager.scala:84)
@@ -417,34 +417,37 @@ The OPC UA Client example implementation is a sample app based on the [Prosys OP
 * View & browse nodes on the Server
 * Example Consumer implementation
 
-You can use the OpcUaClient_ExampleImplementation module (link) as template to start the consumption of your OPC UA Server information. Bear in mind that the node data structure from all Servers will be different and it could be that the JSON to browse the Nodes is different in your Server, so adjust your imports accordingly if needed.
+You can use the **OpcUaClient_ExampleImplementation** module (link) as a template to start the consumption of your OPC UA Server information.
+
+{{% alert color="info" %}}Bear in mind that the node data structure from all Servers will be different and it could be that the JSON to browse the nodes is different in your Server, so adjust your imports accordingly if needed.{{% /alert %}}
 
 ### 6.1 Prerequisites
 
-* Mendix 8.17.0 or higher
-* Atlas UI (use, for example, the blank starter app as a basis)
-* The OpcUaClientMx module
-* Any OPC UA Server
+* You use Studio Pro [8.17.0](/releasenotes/studio-pro/8.17/) or higher
+* You have installed [Atlas UI](https://marketplace.mendix.com/link/component/104730) in Studio Pro (for example, you have used the blank starter app as a basis)
+* You have installed the The [OPC UA Client](https://marketplace.mendix.com/link/component/117391/) Connector
+* You have an OPC UA Server
 
 ### 6.2 Initial Configuration
 
-1. Install the **OpcUaClientMx** module according to the instructions
-1. Add the **OpcUaServer_Overview** page to the navigation of the app, either through the **Navigation** settings, or by adding an **Open Page** button to a page which is already in the navigation (for example the home page). The page in this module contains the same functionality as the **OpcUaClientMx** module and can be used as a replacement. 
+Add the **OpcUaServer_Overview** page to the navigation of the app, either through the **Navigation** settings, or by adding an **Open Page** button to a page which is already in the navigation (for example the home page). The page in this module contains the same functionality as the **OpcUaClientMx** module and can be used as a replacement. 
 
 ### 6.3 Pages
 
-The **OpcUaServer_View** page adds functionality through the **View server** button on the Server overview page. By opening this page you are able to browse and search through the OPC UA nodes. The Tree view and Node View are different ways to interact with the nodes and open the node structure. For a full detailed view of all node properties either use an actual OPC UA browser or extend the module to parse the additional properties.
+The **OpcUaServer_View** page adds functionality through the **View server** button on the Server overview page. By opening this page, you are able to browse and search through the OPC UA nodes. The tree view and node view are different ways to interact with the nodes and open the node structure. For a full detailed view of all node properties, either use an actual OPC UA browser or extend the module to parse the additional properties.
 
 ### 6.4 Example Consumption
 
-The module contains a folder '_Example Consumer' which shows the best way to structure the integration with an OPC UA Server.
+The module contains a folder **'_Example Consumer**', which shows the best way to structure the integration with an OPC UA Server.
 
-In this example you can see how to interact with a physical gate through a PLC. The dashboard shows an example of the runtime configuration of the Subscriptions, for an actual implementation you'd move this to an admin management page. The left side of the page shows the interaction with the OPC UA Server.  
-As you can see it shows the current status of the PLC, when clicking on the 'Open' or 'Close' button the microflow will perform the required validations before writing an instruction to the OPC UA Server.  
+In this example, you can see how to interact with a physical gate through a PLC. The dashboard shows an example of the runtime configuration of the **Subscriptions**. For an actual implementation you can move this to an admin management page. The left side of the page shows the interaction with the OPC UA Server. 
 
-In this use-case the OPC UA Server will receive the instruction through the write action, this will trigger the physical gate to move. When the gate state changes, the OPC UA Server will update the 'State'-node accordingly.  
+As you can see it shows the current status of the PLC, when clicking **Open** or **Close** button, the microflow will perform the required validations before writing an instruction to the OPC UA Server.  
 
-The application is subscribing on the 3 different nodes, IsUp, IsDown, IsMoving. When either of these nodes changes values, a message is send to the Mendix Client and the values are parse by the respective microflows: UA_ProcessEvent_GateUp, UA_ProcessEvent_GateDown, UA_ProcessEvent_GateMoving.    
-All three subscription microflows lookup the MonitoredItem record, and through the MonitoredItem find the actual PLC that's changing (you need to follow this pattern when interacting with multiple devices through OPC UA). After retrieving the PLC it will update the state according to the Message. You can extend this microflow with as many complex evaluation and validations as you want. 
+In this use case the OPC UA Server will receive the instruction through the **Write** action, this will trigger the physical gate to move. When the gate state changes, the OPC UA Server will update the 'State'-node accordingly.  
 
-Alternatives: It is possible for the OPC UA Node to hold a complex JSON structure as value instead of a simple integer in this example. If that is the case you'd implement the same microflow logic, but in addition you'd call an Import Mapping activity before processing the results. 
+The application is subscribing on the 3 different nodes, **IsUp**, **IsDown**, **IsMoving**. When either of these nodes changes values, a message is send to the Mendix Client and the values are parse by the respective microflows: UA_ProcessEvent_GateUp, **UA_ProcessEvent_GateDown**, UA_ProcessEvent_GateMoving.
+
+All three subscription microflows look up the **MonitoredItem** record, and through the **MonitoredItem**, find the actual PLC that's changing (you need to follow this pattern when interacting with multiple devices through OPC UA). After retrieving the PLC, it will update the state according to the Message. You can extend this microflow with as many complex evaluation and validations as you want. 
+
+Alternatives: It is possible for the OPC UA Node to hold a complex JSON structure as value instead of a simple integer in this example. If that is the case you should implement the same microflow logic, and in addition, you should call an Import Mapping activity before processing the results. 

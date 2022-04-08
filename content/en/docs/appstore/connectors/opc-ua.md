@@ -394,8 +394,8 @@ When getting a `ClosedChannelException` like the partial stacktrace below, you w
 
 This can be caused by one of the following reasons:
 
-* The Server is expecting a Username, but you do not have one configured in your Server configuration
-* You have configured to authenticate with a username and a password, but the Server does not have that enabled, then you should set **AuthenticationType** to **NONE** or **CERTIFICATE**.
+* The Server is expecting a username, but you do not have one configured in your Server configuration
+* You have configured to authenticate with a username and a password, but the Server does not have that enabled. You should then use **NONE** or **CERTIFICATE** as **AuthenticationType**.
 
       com.mendix.core.CoreRuntimeException: com.mendix.systemwideinterfaces.MendixRuntimeException: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.lang.Exception: no UserTokenPolicy with UserTokenType.UserName found
          at com.mendix.basis.actionmanagement.ActionManager.executeSync(ActionManager.scala:84)

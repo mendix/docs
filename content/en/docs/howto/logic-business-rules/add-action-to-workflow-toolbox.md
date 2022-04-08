@@ -69,9 +69,12 @@ To create the calling microflow and add it as the custom action to the workflow 
 
     2. Set **Category** to **Integration**.
 
-    3. Set Icon to **pt_feedback_checkmark**:
+    3. Select an icon and a toolbox image from a disk. The images are optional but they help identify exposed actions in the list view and tile view of the Toolbox pane.
+        
+        - If only icon is specified, the icon image will be used for the toolbox tile view.
+        - It is possible to specify a separate set of images for the icon and tile image to be used in dark mode of Studio Pro if required. 
 
-        {{< figure src="/attachments/howto/logic-business-rules/add-action-to-workflow-toolbox/expose-as-workflow-action-properties.png" alt="Expose as Workflow Action Settings" >}}
+        {{< figure src="/attachments/howto/logic-business-rules/add-action-to-workflow-toolbox/expose-as-workflow-action-properties-update.png" alt="Expose as Workflow Action Settings" >}}
 
 11. Click **OK**.
 

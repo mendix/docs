@@ -10,13 +10,13 @@ tags: ["workflow", "workflows", "call microflow"]
 
 System actions in workflows consist of a **Call microflow** action that is used to call a selected [microflow](/studio/microflows/). 
 
-{{< figure src="/attachments/studio/workflows/workflow-system-actions/call-microflow-example.jpg" >}}" alt="Call Microflow Example" >}}
+{{< figure src="/attachments/studio/workflows/workflow-system-actions/call-microflow-example.jpg" alt="Call Microflow Example" >}}
 
 ## 2 Call Microflow Properties
 
 An example of **Call microflow** properties is represented in the image below:
 
-{{< figure src="/attachments/studio/workflows/workflows-general-activities/general.jpg" alt="Call Microflow Properties" >}}" alt="General Activities" >}}
+{{< figure src="/attachments/studio/workflows/workflows-general-activities/general.jpg" alt="Call Microflow Properties" >}}
 
 Call microflow properties consist of the following sections:
 

@@ -121,4 +121,4 @@ Congratulations, you created a test case using preconditions. This is an example
 
 ## 5 Next Up
 
-The next how-to is [How to Create a Negative Test Case](/addons/ats-addon/ht-two-create-a-negative-test-case/). You can find an overview of all the how-tos and the structure on the [ATS 2 How-to's](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.
+The next how-to is [How to Create a Negative Test Case](/addons/ats-addon/ht-two-create-a-negative-test-case/). You can find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.

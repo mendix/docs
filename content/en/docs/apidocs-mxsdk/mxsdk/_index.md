@@ -14,7 +14,7 @@ Browse the reference documentation below about the Mendix Metamodel:
 * [Understanding the Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel/) – explains the basic components of the Mendix Metamodel as well as the domain model, microflows, pages, and apps in the Mendix Metamodel
 * [JavaScript & TypeScript Resources](/apidocs-mxsdk/mxsdk/javascript-typescript-resources/) – summarizes TypeScript and provides links to useful resources for learning more
 
-## 3 SDK How-to's
+## 3 SDK How-tos
 
 Follow these step-by-step guides to learn everything you need about using the SDK:
 

@@ -96,7 +96,7 @@ Now you will make a nanoflow which takes pictures for your app:
 1. Select the **NativeMobile Module**, click the **New** button, and name your new nanoflow *ACT_TakePicture*.
 1.  Double-click the new button to open its properties, clear the caption field, and then select the **Camera** icon:
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647431496008_Screenshot+2022-03-16+at+11.51.33.png)
+    ![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647431496008_Screenshot+2022-03-16+at+11.51.33.png)
 
 1. Right-click the button then click **Go to on click nanoflow...**:
 

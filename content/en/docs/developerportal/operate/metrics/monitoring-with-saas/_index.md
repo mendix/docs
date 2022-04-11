@@ -51,12 +51,15 @@ Once you have configured your data analytics platform for your app, it will auto
 
 The metrics from your app's environment are supplied in the following namespaces:
 
+* commons.pool2 – database connection pool metrics
 * database – metrics on the database performance — by default, these are just *gauge* metrics (see [Rate and Count Database Metrics](#database-metrics), below)
 * jetty – metrics from the ingress controller of the app
 * jmx – metrics from the Mendix runtime
 * jvm – metrics from the Java virtual machine in which the Mendix runtime runs
 * postgresql – database metrics specific to PostgreSQL databases
 * system – metrics from the base system running on the platform or PaaS
+
+Many of these metrics are described in more detail in [Metrics – Mendix Runtime](/refguide/metrics/).
 
 ### 3.2 Useful Metrics for Mendix Apps
 

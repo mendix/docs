@@ -607,7 +607,7 @@ curl -v -F "file=@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.4
 
 #### 3.11.1 Description
 
-Transports a specific deployment package to a specific environment. This action requires the environment to be in the status *NotRunning*.
+Transports a specific deployment package to a specific environment. 
 
 This call is not available for Free App. For a Free App, the Build API can be used to trigger a deployment.
 

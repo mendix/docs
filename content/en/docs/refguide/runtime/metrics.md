@@ -424,9 +424,9 @@ The additional Micrometer metrics are not under our control and might change una
 | Name | Type | Description |
 | --- | --- | --- |
 | `system.cpu.count` | gauge | The number of processors available to the Java Virtual Machine. |
-| `system.cpu.usage` | gauge | The recent CPU usage of the system the Runtime Server is running on (in the range [0..1]). |
+| `system.cpu.usage` | gauge | The recent CPU usage of the system the Runtime Server is running on (in the range [0…1]). |
 | `system.load.average.1m` | gauge | The average number of runnable (queued and running) threads on the available processors. |
-| `process.cpu.usage` | gauge | The recent CPU usage for the Java Virtual Machine process (in the range [0..1]). |
+| `process.cpu.usage` | gauge | The recent CPU usage for the Java Virtual Machine process (in the range [0…1]). |
 
 #### 7.2.2 Java Virtual Machine Metrics 
 
@@ -441,7 +441,7 @@ The additional Micrometer metrics are not under our control and might change una
 | `jvm.memory.used` | gauge | `id`, `area` | The amount of memory (in bytes) used for a certain area (`area`): `heap` or `nonheap`. |
 | `jvm.memory.committed` | gauge | `id`, `area` | The amount of memory (in bytes) that is committed for the Java Virtual Machine to use. |
 | `jvm.memory.max` | gauge | `id`, `area` | The maximum amount of memory (in bytes) that can be used for memory management. |
-| `jvm.memory.usage.after.gc` | gauge | `area`, `pool` | The percentage of long-lived heap pool used after the last Garbage Collection (GC) event (in the range [0..1]). |
+| `jvm.memory.usage.after.gc` | gauge | `area`, `pool` | The percentage of long-lived heap pool used after the last Garbage Collection (GC) event (in the range [0…1]). |
 | `jvm.threads.live_threads` | gauge | | The current number of live threads (both daemon and non-daemon threads). |
 | `jvm.threads.daemon_threads` | gauge | | The current number of live daemon threads. |
 | `jvm.threads.peak_threads` | gauge | | The peak live thread count since the Java Virtual Machine started or peak was reset. |
@@ -452,7 +452,7 @@ The additional Micrometer metrics are not under our control and might change una
 | `jvm.gc.memory.promoted` | counter | | Count of positive increases in the size of the old generation memory pool before GC or to after GC. |
 | `jvm.gc.pause` | timer | `action`, `cause` | The time spent in GC pause. |
 | `jvm.gc.concurrent.phase.time` | timer | `action`, `cause` | The time spent in the concurrent GC phase. |
-| `jvm.gc.overhead` | gauge | | An approximation of the percent of CPU time used by GC activities over the last lookback period or since monitoring began, whichever is shorter (in the range [0..1]). |
+| `jvm.gc.overhead` | gauge | | An approximation of the percent of CPU time used by GC activities over the last lookback period or since monitoring began, whichever is shorter (in the range [0…1]). |
 
 Refer to the [Java Virtual Machine documentation](https://docs.oracle.com/en/java/javase/11/docs/api/java.management/java/lang/management/ManagementFactory.html) for more details.
 
@@ -479,10 +479,10 @@ Refer to the [Java Virtual Machine documentation](https://docs.oracle.com/en/jav
 | --- | --- | --- |
 | `commons.pool2.num.idle` | gauge | The number of connections currently idle in the pool. |
 | `commons.pool2.num.active` | gauge | The number of connections currently active in the pool. |
-| `commons.pool2.num.waiters` | gauge | The estimate of the number of threads currently blocked waiting for a connection from the pool. |
-| `commons.pool2.mean.active` | gauge | The mean time connections are active. |
-| `commons.pool2.mean.idle` | gauge | The mean time connections are idle. |
-| `commons.pool2.mean.borrow.wait` | gauge | the mean time threads wait to get a connection. |
+| `commons.pool2.num.waiters` | gauge | An estimate of the number of threads currently blocked waiting for a connection from the pool. |
+| `commons.pool2.mean.active` | gauge | The mean time for which connections are active. |
+| `commons.pool2.mean.idle` | gauge | The mean time for which connections are idle. |
+| `commons.pool2.mean.borrow.wait` | gauge | The mean time threads wait to get a connection. |
 | `commons.pool2.max.borrow.wait` | gauge | The maximum time a thread has waited to get a connection from the pool. |
 | `commons.pool2.created` | counter | The total number of connections created for the pool over its lifetime. |
 | `commons.pool2.borrowed` | counter | The total number of connections borrowed from the pool over its lifetime. |

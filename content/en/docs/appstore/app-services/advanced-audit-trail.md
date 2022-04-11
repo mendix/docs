@@ -9,7 +9,13 @@ tags: ["marketplace", "marketplace component", "app service", "audit trail"]
 
 ## I Introduction
 
-With the [Advanced Audit Trail](), you can create Audit snapshots of objects to store an Audit Trail. This Audit Trail is centralized and sent to a long-term data storage, and therefore allows for complex search queries and keeps the operational database small and performant.
+Advanced Audit Trail provides users with the traceability of changes, detailed insight in reading and writing data, infinitely scalable and fully-indexed data search, and dashboards, alerting and connectivity to customer data warehouses.
+
+With Advanced Audit Trail, you can create Audit snapshots of objects to store an Audit Trail. This Audit Trail is centralized and sent to a long-term data storage, and therefore allows for complex search queries and keeps the operational database small and performant.
+
+Advanced Audit Trail uses Kafka and Elasticsearch. See the diagram below:
+
+![integration-diagram](integration-diagram.png)
 
 ### 1.1 Typical Use Cases
 

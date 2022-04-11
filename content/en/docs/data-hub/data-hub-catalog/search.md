@@ -439,7 +439,6 @@ The environment type indicates the quality and the status of the data that the e
 The **Curation Bar** is displayed in the asset detail screen if you are the owner of the selected asset or a curator. In **Edit** > **Edit Metadata**, you can edit the information that is displayed in the Catalog for an asset:
 
 * For the selected data source, you can edit [Application Details](/data-hub/data-hub-catalog/curate/#curate-application) and [Data Source Details](/data-hub/data-hub-catalog/curate/#service-details)
-* For a selected dataset, you can edit [Dataset Details](/data-hub/data-hub-catalog/curate/#curate-datasets)
 
 For further details, see [Curate Registered Assets](/data-hub/data-hub-catalog/curate/).
 

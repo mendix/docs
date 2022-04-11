@@ -94,7 +94,7 @@ The Mendix Support Portal will first suggest relevant documentation for you to r
 
 {{< figure src="/attachments/developerportal/support/submit-support-request/recommendations.png" >}}
 
-If investigating the documentation and searching the [Mendix Forum](https://forum.mendixcloud.com/index4.html) does not help you solve your issue, you can submit the Mendix Support request.	
+If investigating the documentation and searching the [Mendix Forum](https://forum.mendixcloud.com) does not help you solve your issue, you can submit the Mendix Support request.	
 
 ## 4 Request Priority {#request-priority}
 
@@ -204,7 +204,7 @@ The ticket can have the following statuses:
 
 ## 8 Submitting a Feature Request
 
-On the [Mendix Idea Forum](https://forum.mendix.com/ideaforum/), Mendix captures ideas and requests from customers and developers in the Mendix community. Each quarter, the Mendix Idea Forum is treated as a short-list of the top features that the Mendix community supports via topics with the most upvotes.
+On the [Mendix Idea Forum](https://forum.mendixcloud.com/p/ideas), Mendix captures ideas and requests from customers and developers in the Mendix community. Each quarter, the Mendix Idea Forum is treated as a short-list of the top features that the Mendix community supports via topics with the most upvotes.
 
 ## 9 Read More
 

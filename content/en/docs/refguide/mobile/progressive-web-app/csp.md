@@ -14,6 +14,10 @@ In Mendix Studio Pro 9.12.0 and higher, a web app (including progressive web app
 
 For more background information on CSPs, see [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) from Mozilla.
 
+{{% alert type="warning" %}}
+Currently, some of Mendix's pluggable widgets are not fully compliant with CSP. If used with strict CSP, these widgets can result in CSP errors in the console or broken flows. Please consult a widget's documentation page before implementing CSP.
+{{% /alert %}}
+
 ## 2 Setup
 
 In order to be able to use the strictest setting of a CSP (`default-src: self`) you must make some changes in your application. See the sections below for guidance.

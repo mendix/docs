@@ -145,4 +145,4 @@ Congratulations, you created a reusable extracted action to delete a new expense
 
 ## 4 Next Up
 
-The next how-to is [How to Schedule Test Cases/Test Suites](/addons/ats-addon/ht-two-schedule-testcase-testsuite/). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.
+The next how-to is [How to Schedule Test Cases/Test Suites](/addons/ats-addon/ht-two-schedule-testcase-testsuite/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.

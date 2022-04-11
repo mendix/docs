@@ -55,3 +55,7 @@ If your are building a hybrid mobile app, you need to add the following lines to
 {{% alert color="info" %}}
 [Noembed](https://noembed.com/) is the API used to request video sizes in order to calculate aspect ratios.
 {{% /alert %}}
+
+## 3 Strict CSP Compatibility
+
+This widget requires additional configuration to be compliant with strict content security policy (CSP). To make it work, you need to configure the CSP headers to allow the domain you are trying to load videos from. Otherwise, the videos are treated as external resources and blocked.

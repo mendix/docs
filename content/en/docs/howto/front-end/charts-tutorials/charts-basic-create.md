@@ -45,7 +45,7 @@ To create a basic data entry page from which the Charts widget will fetch data, 
 
     {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-basic-create/charts-rest-generate-overview-pages.png" alt="Generate overview pages for Value entity" >}}
 
-3. Add the **Value_NewEdit** page to user navigation.
+3. Add the **Value_Overview** page to user navigation.
 
 ### 3.3 Adding the Charts Widget to a New Page
 

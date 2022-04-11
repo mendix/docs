@@ -122,4 +122,4 @@ For this reason, recording this widget is still not possible.
 
 ## 5 Next Up
 
-With these tips you increase the ATS Recorder and ATS Helper coverage of your AUT. The next how-to is [How to Create Custom Actions](/addons/ats-addon/ht-two-create-custom-actions/). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.
+With these tips you increase the ATS Recorder and ATS Helper coverage of your AUT. The next how-to is [How to Create Custom Actions](/addons/ats-addon/ht-two-create-custom-actions/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.

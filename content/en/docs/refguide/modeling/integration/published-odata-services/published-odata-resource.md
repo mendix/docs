@@ -138,10 +138,20 @@ This is the behavior when you choose the action **Write to database**.
 
 ## 8.4 Call a Microflow Instead of Write to Database
 
-The **Call a microflow** action allows you to replace the last step (committing to the database) of the *Insertable* or *Updatable* capability with your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Commit](/refguide/committing-objects/) activity to commit the changes to the database. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the update request has failed.
+The **Call a microflow** action allows you to replace the last step (committing to the database) of the *Insertable* or *Updatable* capability with your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Commit](/refguide/committing-objects/) activity to commit the changes to the database. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed.
 
 {{% alert color="info" %}}
 This **Call a microflow** action was introduced in Studio Pro [9.11.0](/releasenotes/studio-pro/9.11/).
 {{% /alert %}}
 
 For more information, see [OData query options](/refguide/odata-query-options/#updating-objects).
+
+## 8.5 Deletable
+
+Check the check box for **Deletable** to indicate that clients can update the values of attributes and associations.
+
+Choose whether the object should be deleted in the database directly, or whether to call a microflow. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Delete](/refguide/deleting-objects/) activity to delete the object in the database. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed.
+
+{{% alert type="info" %}}
+The *Deletable* capability was introduced in Studio Pro [9.13.0](/releasenotes/studio-pro/9.13/).
+{{% /alert %}}

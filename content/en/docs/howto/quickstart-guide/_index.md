@@ -109,28 +109,24 @@ Now you will make a nanoflow which takes pictures for your app:
 
     {{< figure src="/attachments/quickstart-guide/create-object-activity.png" alt="Drag and drop object activity"   width="350"  >}}
 
-1. Double-click the activity to open its properties window and then select your **Picture** entity as the object to be created:
+1.  Double-click the activity to open its properties window, click **Select**, then choose your **Picture** entity as the object to be created:
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647431715880_Screenshot+2022-03-16+at+11.55.12.png)
+    {{< figure src="/attachments/quickstart-guide/select-entity.png" alt="Select entity"   width="350"  >}}
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647431756670_Screenshot+2022-03-16+at+11.55.53.png)
+1.  Go back to the toolbox, search for the **Take Picture** action, and drag it onto the line after the **Create object** action:
 
-1. Go back to the toolbox, search for the **Take Picture** action, and drag it onto the line after the **Create object** action:
+    {{< figure src="/attachments/quickstart-guide/drag-take-picture.png" alt="Drag take picture action"   width="350"  >}}
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647431879877_Screenshot+2022-03-16+at+11.57.57.png)
+1.  Double-click the action again to open its properties and then configure each drop-down as follows: 
+    1. Picture: *$NewPicture*
+    1. Picture Source: *camera*
+    1. Picture Quality: *Original*
+    1. Maximum width: *empty*
+    1. Maximum height: *empty*
+    1. Use return value: *Yes*
+    1. Variable name: *PictureTaken*
 
-
-1. Double-click the action again to open its properties and then configure each drop-down as follows: 
-
-* Picture: *$NewPicture*
-* Picture Source: *camera*
-* Picture Quality: *Original*
-* Maximum width: *empty*
-* Maximum height: *empty*
-* Use return value: *Yes*
-* Variable name: *PictureTaken*
-
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647432100350_Screenshot+2022-03-16+at+12.01.37.png)
+    {{< figure src="/attachments/quickstart-guide/configure-take-picture.png" alt="Configure take picture action"   width="350"  >}}
 
 1. In the toolbox, search for the **Commit object(s)** action, and commit the **New Picture** entity to the database:
 

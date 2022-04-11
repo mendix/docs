@@ -107,3 +107,11 @@ For OQL, many of the same best practices apply as for XPath.
 * Use SSHA256 instead of BCrypt.
 * Validating against schema slows down the processing.
 * Using sub-transactions for microflows slows down processing.
+
+## 11 Use Performance Bot
+
+*MxAssist Performance Bot* can help you find potential improvements to your app for better performance.
+
+*Performance Bot* can be accessed via the `View | MxAssist Performance Bot` menu.
+
+For more information, see the [Performance Bot Best Practices documentation](/refguide/performance-best-practices/).

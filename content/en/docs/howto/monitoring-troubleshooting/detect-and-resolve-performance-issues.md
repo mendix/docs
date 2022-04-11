@@ -171,3 +171,11 @@ As always, make sure you look at the retrieves and commits performed in your loo
 ## 6 Read More
 
 * [Expert Webinar Series: Performance](http://ww2.mendix.com/Expert-Webinar.Performance.html)
+
+## 7 Use Performance Bot
+
+*MxAssist Performance Bot* can help you find potential improvements to your app for better performance.
+
+*Performance Bot* can be accessed via the `View | MxAssist Performance Bot` menu.
+
+For more information, see the [Performance Bot Best Practices documentation](/refguide/performance-best-practices/).

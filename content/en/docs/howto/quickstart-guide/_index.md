@@ -93,19 +93,21 @@ Now you will make a nanoflow which takes pictures for your app:
 
 1. In the Toolbox window find **Nanoflow button** and drag it into the empty space above the **List view**. This will automatically open a dialog box.
 1. Choose your nanoflow.
-1. Select the **NativeMobile Module**, click the **New** button, and name your new nanoflow *ACT_TakePicture*.
+1.  Select the **NativeMobile Module**, click the **New** button, and name your new nanoflow *ACT_TakePicture*.
+
+    {{< figure src="/attachments/quickstart-guide/name-nanoflow.png" alt="Name nanoflow"   width="350"  >}}
+
 1.  Double-click the new button to open its properties, clear the caption field, and then select the **Camera** icon:
 
-    ![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647431496008_Screenshot+2022-03-16+at+11.51.33.png)
+    {{< figure src="/attachments/quickstart-guide/camera-icon.png" alt="Camera icon"   width="350"  >}}
 
-1. Right-click the button then click **Go to on click nanoflow...**:
+1.  Right-click the button then click **Go to on click nanoflow...**:
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647431547758_Screenshot+2022-03-16+at+11.52.25.png)
+    {{< figure src="/attachments/quickstart-guide/go-to-nanoflow.png" alt="Go to nanoflow"   width="350"  >}}
 
-1. With your nanoflow editor open go to your toolbox window, find the **Create object** activity, and drag it onto the line between the green start and red stop points:
+1.  With your nanoflow editor open go to your toolbox window, find the **Create object** activity, and drag it onto the line between the green start and red stop points:
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647431694475_Screenshot+2022-03-16+at+11.54.52.png)
-
+    {{< figure src="/attachments/quickstart-guide/create-object-activity.png" alt="Drag and drop object activity"   width="350"  >}}
 
 1. Double-click the activity to open its properties window and then select your **Picture** entity as the object to be created:
 

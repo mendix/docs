@@ -1698,7 +1698,7 @@ kubectl -n {namespace} scale deployment mendix-operator --replicas=1
 The Windows version of the Configuration Tool must be run in a terminal that supports the Windows console API and has mouse support. PowerShell and the Windows Command Prompt are supported.
 
 {{% alert color="info" %}}
-When running PowerShell or the Windows Command Prompt from the [new Windows Terminal](https://aka.ms/terminal), mouse clicks are [not supported](https://github.com/microsoft/terminal/issues/376).
+When running PowerShell or the Windows Command Prompt from the [new Windows Terminal](https://www.microsoft.com/en-US/p/windows-terminal/9n0dx20hk701), mouse clicks are [not supported](https://github.com/microsoft/terminal/issues/376).
 Run PowerShell or the Windows Command Prompt terminal as a standalone app.
 {{% /alert %}}
 

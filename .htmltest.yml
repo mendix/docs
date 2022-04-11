@@ -33,6 +33,9 @@ IgnoreInternalURLs:
 IgnoreTagAttribute: "data-proofer-ignore"
 IgnoreURLs:
 - "example.com"
+- "support.mendix.com.*"
+- "sapes5.sapdevcenter.com/sap/opu/odata/iwbep/GWSAMPLE_BASIC.*"
+- "www.microsoft.com/en-us/download/details.aspx?id=11774"
 
 # ==========================================================
 # Speed up using concurrent testing by changing flag to true

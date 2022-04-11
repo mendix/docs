@@ -2,7 +2,7 @@
 title: "CI/CD for Mendix for Private Cloud using Tekton"
 linktitle: "CI/CD with Tekton"
 url: /developerportal/deploy/private-cloud-tekton/
-description: "Describes the processes for setting up a monitoring solution for Mendix environments in the Private Cloud"
+description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in the Private Cloud"
 weight: 40
 tags: ["CI/CD", "Tekton", "Private Cloud", "Environment"]
 ---
@@ -56,7 +56,7 @@ Each activity needed for management of the Mendix for Private Cloud environments
 
 A **pipeline** is a collection of **tasks** in order. Tekton creates a number of Kubernetes pods and ensures that each pod completes running successfully as desired. 
 
-A **task** is a collection of **steps** in order. Tekton runs a task in the form of a Kubernetes pod, where . This design allows you to set up a shared environment for a number of related steps; for example, you may mount a Kubernetes volume in a task, which will be accessible inside each step of the task.
+A **task** is a collection of **steps** in order. Tekton runs a task in the form of a Kubernetes pod, where each step becomes a running container in the pod. This design allows you to set up a shared environment for a number of related steps; for example, you may mount a Kubernetes volume in a task, which will be accessible inside each step of the task.
  
 A **step** is an operation in a CI/CD workflow. Tekton performs each step as a running container in the task pod. 
     
@@ -255,7 +255,10 @@ For Tekton Triggers on OpenShift you need to update the deployment objects to ma
 
 ## 6 Pipeline and Trigger Installation{#pipelines-installation}
 
-To install the Mendix pipelines, you need to have [helm](https://helm.sh) installed and a folder containing the [helm charts](https://cdn.mendix.com/mendix-for-private-cloud/tekton-pipelines/standalone-cicd/standalone-cicd-v1.0.0.zip) for configuring the Mendix Tekton pipelines.
+Before you install the Mendix pipelines you need to do the following:
+
+1. Install [helm](https://helm.sh)
+2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines – you can download these from [Mendix for Private Cloud Standalone Tekton Pipelines](https://cdn.mendix.com/mendix-for-private-cloud/tekton-pipelines/standalone-cicd/standalone-cicd-v1.0.0.zip).
 
 There are two components which need to be configured:
 
@@ -396,7 +399,9 @@ curl -X POST \
 
 #### 6.3.2 Build Pipeline
 
-The build-pipeline builds and pushes a Mendix container image from a Mendix MPR file, hosted in a GIT repository. This can only be run after create-app-pipeline. The example here uses a [Generic Trigger](#generic-trigger).
+The build-pipeline builds and pushes a Mendix container image from a Mendix MPR file, hosted in a GIT repository. The environment is then updated with the new image.
+
+This can only be run after create-app-pipeline. The example here uses a [Generic Trigger](#generic-trigger).
 
 ```bash
 curl -X POST \
@@ -419,7 +424,7 @@ curl -X POST \
 | Parameter | Explanation |
 | --- | --- |
 | `repo.url` | URL of git repository that will be fetched |
-| `repo.branch` | a git branch that will be fetched |
+| `repo.revision` | a git revision (for example, branch, tag, or sha) that will be fetched |
 | `namespace` | name of the Kubernetes namespace where Mendix Operator runs |
 | `env-internal-name` | Mendix environment internal name. You can get all the internal environment names with the command `kubectl get mendixapps -n $namespace_name` |
 | `kube-secret-name` | name of the secret with kube config. Used when Mendix Operator is in another cluster. If it is in the same cluster then use `none` as the value |

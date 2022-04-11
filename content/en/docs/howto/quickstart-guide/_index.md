@@ -128,21 +128,19 @@ Now you will make a nanoflow which takes pictures for your app:
 
     {{< figure src="/attachments/quickstart-guide/configure-take-picture.png" alt="Configure take picture action"   width="350"  >}}
 
-1. In the toolbox, search for the **Commit object(s)** action, and commit the **New Picture** entity to the database:
+1.  In the toolbox, search for the **Commit object(s)** action, and commit the **New Picture** entity to the database:
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647432281853_Screenshot+2022-03-16+at+12.04.39.png)
+    {{< figure src="/attachments/quickstart-guide/commit-new-picture.png" alt="Commit new picture action"   width="350"  >}}
 
 Finally, we need to make sure data is synced from the app's mobile device to its server:
 
-1. In the **Toolbox**, find **Synchronize** action and drag it onto the end of your flow:
+1.  In the **Toolbox**, find **Synchronize** action and drag it onto the end of your flow:
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647432463188_Screenshot+2022-03-16+at+12.07.40.png)
+    {{< figure src="/attachments/quickstart-guide/sync-everything.png" alt="Sync everything"   width="350"  >}}
 
 1. You can now run your app by pressing <kbd>F5</kbd> or by clicking the green play button at the top-right corner. Once your app is running you will receive a notification:
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647432569072_Screenshot+2022-03-16+at+12.09.27.png)
-
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647432698123_Screenshot+2022-03-16+at+12.11.34.png)
+    {{< figure src="/attachments/quickstart-guide/running-console.png" alt="Running Console Message"   width="350"  >}}
 
 1. Click the arrow next to the **View App** button, click **View on Your Device**, then open the **View Native Mobile App** tab:
 

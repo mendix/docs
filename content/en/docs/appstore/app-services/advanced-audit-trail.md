@@ -9,9 +9,7 @@ tags: ["marketplace", "marketplace component", "app service", "audit trail"]
 
 ## I Introduction
 
-Advanced Audit Trail allows you to trace changes, gain detailed insight in reading and writing data, use infinitely-scalable and fully-indexed data search, and have dashboards, alerting and connectivity to customer data warehouses.
-
-With this app service, you can create audit snapshots of objects to store an Audit Trail. This Audit Trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
+Advanced Audit Trail allows you to trace changes, use infinitely-scalable and fully-indexed data search, and have dashboards. Once configured, the system creates audit snapshots of objects to store an Audit Trail. This Audit Trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
 
 Advanced Audit Trail uses Kafka and Elasticsearch, shown in the intergration diagram below:
 
@@ -27,7 +25,7 @@ Advanced Audit Trail uses Kafka and Elasticsearch, shown in the intergration dia
 ### 1.2 Features
 
 *  Scheduled event that will regularly send the stored snapshots to an external system
-*  Decoupling: when the external system is down, the snapshots will be stored in the local database, thus ensuring that the main system will keep on working without a dependency on the external database
+*  Decoupling: when the external system cannot be reached, the snapshots will be stored in the local database, thus ensuring that the main system will keep on working without a dependency on the external database
 *  Admin interface to search through the external database (across entities)
 *  Microflows and pages to open a generalized view that can be shown to users for a trail of a specific object
 
@@ -86,12 +84,14 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
   
 * **Integration**
 
-  * Environment Name: the name of the environment, which sould be unique in your audit data storage, for example, *myApp-prod*
+  * Environment Name: the name of the environment, which should be unique in your audit data storage, for example, *myApp-prod*
+
+    {{% alert color="warning" %}}If two applications use the same name, the Audit Trail will not be able to distinguish between the two, effectively breaking the Audit Trail for both applications irreversibly.{% /alert %}}
 
   * Environment URL (optional): the URL used to identify the environment; If left empty, the Application Runtime URL is used instead.
 
   * Kafka Endpoint / Username and Password: the credentials for the kafka environment for sending the data into the long term storage
-
+  
   * Kibana Endpoint / Username and Password: the credentials for the Kibana environment for receiving the data from the long term storage
 
 #### 3.3 Schedule Event 
@@ -121,7 +121,7 @@ Use the Formatter microflows to change how the String value will be calculated f
 
   #### 3.8 Getting Microflow Stack Trace (Optional)
 
-Use this action to create custom logging / entities and identify in what microflow the action was triggered.
+Use this action to create custom logging/entities and identify in what microflow the action was triggered.
 
   #### 3.9 Changing the Module Layout (Optional)
 

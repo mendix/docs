@@ -21,4 +21,4 @@ This category of the Marketplace Guide covers all the things you need to know wh
 * [Mendix Vendor Program](/appstore/creating-content/vendor-program/) – describes the Mendix Vendor program and how to apply
 * [Prepare Your Commercial Content to Sell in Marketplace](/appstore/creating-content/prepare/) – details how to prepare and sell your app service as a Mendix Vendor
 * [Creating Solutions](/appstore/creating-content/sol-solutions-guide/) – presents detailed considerations to keep in mind when developing solutions
-* [Building Connectors](/appstore/creating-content/connector-guide-build/) – outlines the basic steps for building connectors for the Marketplace
+* [Building Connectors](/appstore/creating-content/connector-guide-build/) – outlines the basic steps for building Mendix connectors for the Marketplace

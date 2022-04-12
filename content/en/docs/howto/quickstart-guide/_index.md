@@ -50,7 +50,7 @@ Some of the screenshots below are extra friendly on the eyes due to Studio Pro's
 
 1.  In the **App Explorer** on the left, open the **Domain model** in the **NativeMobile** module. The domain model is a visual representation of your app's underlying data structure:
 
-    {{< figure src="/attachments/howto/quickstart-guide/native-mobile-mobule.png" alt="Native mobile module"   width="350"  >}}
+    {{< figure src="/attachments/howto/quickstart-guide/native-mobile-module.png" alt="Native mobile module"   width="350"  >}}
 
 1.  Right-click anywhere in the domain model, select **Add Entity**, then double-click the new entity to open its properties.
 1. Name your entity *Picture*.

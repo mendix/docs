@@ -9,11 +9,11 @@ tags: ["marketplace", "marketplace component", "app service", "audit trail"]
 
 ## I Introduction
 
-Advanced Audit Trail provides users with the traceability of changes, detailed insight in reading and writing data, infinitely scalable and fully-indexed data search, and dashboards, alerting and connectivity to customer data warehouses.
+Advanced Audit Trail allows you to trace changes, gain detailed insight in reading and writing data, use infinitely scalable and fully-indexed data search, and have dashboards, alerting and connectivity to customer data warehouses.
 
-With Advanced Audit Trail, you can create Audit snapshots of objects to store an Audit Trail. This Audit Trail is centralized and sent to a long-term data storage, and therefore allows for complex search queries and keeps the operational database small and performant.
+With this app service, you can create audit snapshots of objects to store an Audit Trail. This Audit Trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
 
-Advanced Audit Trail uses Kafka and Elasticsearch. See the intergration diagram below:
+Advanced Audit Trail uses Kafka and Elasticsearch, shown in the intergration diagram below:
 
 ![integration-diagram](integration-diagram.png)
 
@@ -27,26 +27,14 @@ Advanced Audit Trail uses Kafka and Elasticsearch. See the intergration diagram 
 ### 1.2 Features
 
 *  Scheduled event that will regularly send the stored snapshots to an external system
-
-*  Decoupling: when the external system is down, the snapshots will be stored in the local database, thus ensuring that the main system will keep on working without a dependency on the external database.
-
+*  Decoupling: when the external system is down, the snapshots will be stored in the local database, thus ensuring that the main system will keep on working without a dependency on the external database
 *  Admin interface to search through the external database (across entities)
-
 *  Microflows and pages to open a generalized view that can be shown to users for a trail of a specific object
-
-*  Due to an issue with IP protected modules it is not possible to build the project in the cloud, or create a local versioned deployment. The workaround is to create an unversioned deployment package using Studio Pro (valid for Mendix: 9.10.1, 9.11 and 9.11.1)
 
 ### 1.3 Limitations
 
-*  Scheduled event that will regularly send the stored snapshots to an external system
+*  Due to an issue with IP protected modules, it is not possible to build the project in the cloud, or create a local versioned deployment (the workaround is to create an unversioned deployment package using Studio Pro 9.10.1, 9.11, or 9.11.1)
 
-*  Decoupling: when the external system is down, the snapshots will be stored in the local database, thus ensuring that the main system will keep on working without a dependency on the external database
-
-*  Admin interface to search through the external database (across entities)
-
-*  Microflows & pages to open a generalized view that can be shown to users for a trail of a specific object
-
-*  Due to an issue with IP protected modules it is not possible to build the project in the cloud, or create a local versioned deployment. The workaround is to create an unversioned deployment package using Studio Pro (valid for Mendix: 9.10.1, 9.11 and 9.11.1)
 
 ### 1.4 Prerequisites
 

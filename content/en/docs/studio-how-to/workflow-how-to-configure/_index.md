@@ -11,7 +11,7 @@ tags: ["studio", "workflow", "how to", task", "onboarding"]
 Workflow is a visual language in Mendix Studio and Mendix Studio Pro that allows you to build extendable processes. It is fully integrated with other visual languages, such as microflow editor and page editor. 
 
 {{% alert type="note" %}}
-Workflows are available in Studio from **Mendix version 9.12**. If you have an app with workflows functionality below this version, this app is likely to be created in Studio Pro and requires a manual migration. For more information on how to migrate your app using Studio Pro, see [Migrate Workflow Apps](/refguide/workflow-beta-migration/). 
+Workflows are available in Studio from **Mendix version 9.12.1**. If you have an app with workflows functionality below this version, this app is likely to be created in Studio Pro and requires a manual migration. For more information on how to migrate your app using Studio Pro, see [Migrate Workflow Apps](/refguide/workflow-beta-migration/). 
 {{% /alert %}}
 
 This how-to explains how to build a workflow manually, without using a wizard. For more information on using the wizard and creating workflows with its help, see the [Creating a Workflow Using the Wizard](/studio/workflows/#wizard) section in Workflows.

@@ -13,7 +13,7 @@ Advanced Audit Trail provides users with the traceability of changes, detailed i
 
 With Advanced Audit Trail, you can create Audit snapshots of objects to store an Audit Trail. This Audit Trail is centralized and sent to a long-term data storage, and therefore allows for complex search queries and keeps the operational database small and performant.
 
-Advanced Audit Trail uses Kafka and Elasticsearch. See the diagram below:
+Advanced Audit Trail uses Kafka and Elasticsearch. See the intergration diagram below:
 
 ![integration-diagram](integration-diagram.png)
 
@@ -125,42 +125,22 @@ Implement the before commit (**BCo**) and before delete (**BDe**) events (see th
 Create CommitList microflows flows that commit a list of objects without events, but use the Create Snapshot (List) action. This will ensure that the snapshots are committed in a list as well, and therefore minimizing performance impact of the module.
 {{% /alert %}}
 
-  ### 4.3 Implementing Custom User Logging
-
-{{% alert color="info" %}}
-The implementation of custom user logging is optional.
-{{% /alert %}}
+  ### 4.3 Implementing Custom User Logging (Optional)
 
 It is possible to override the logged user for a request (e.g. the request is a published REST services that runs in a System Context, while the user is known). Use the “Override User for Snapshots in this Context“ action for that.
 
-  ### 4.4 Implementing User Name Scrambling
-
-{{% alert color="info" %}}
-The implementation of user name scrambling is optional.
-{{% /alert %}}
+  ### 4.4 Implementing User Name Scrambling (Optional)
 
 Use Configure Username mapping to store a username differently in the long term data storage. This can be used for anonymizing data (e.g. due to GDPR).
 
-  ### 4.5 Implementing Display Formatters
-
-{{% alert color="info" %}}
-The implementation of display formatters is optional.
-{{% /alert %}}
+  ### 4.5 Implementing Display Formatters (Optional)
 
 Use the Formatter microflows to change how the String value will be calculated for Decimals, Dates and Mendix Object Identifiers. See the Example app for more details.
 
-  ### 4.6 Getting Microflow Stack Trace
-
-{{% alert color="info" %}}
-Getting microflow stack trace is optional.
-{{% /alert %}}
+  ### 4.6 Getting Microflow Stack Trace (Optional)
 
 Use this action to create custom logging / entities and identify in what microflow the action was triggered.
 
-  ### 4.7 Changing the Module Layout
-
-{{% alert color="info" %}}
-Changing the module layout is optional.
-{{% /alert %}}
+  ### 4.7 Changing the Module Layout (Optional)
 
 Update the **AuditSnapshots_ResponsiveLayout** to update the layouts without changing the pages.

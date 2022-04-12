@@ -126,3 +126,17 @@ Use this action to create custom logging / entities and identify in what microfl
   #### 3.9 Changing the Module Layout (Optional)
 
 Update the **AuditSnapshots_ResponsiveLayout** to update the layouts without changing the pages.
+
+## 4 Usage
+
+### 4.1 Using Kibana
+
+Kibana has search and data visualization capabilities for data indexed in Elasticsearch. Kibana works as the user interface for monitoring, managing, and securing an Elastic Stack cluster.
+
+### 4.2 Using Kafka and Elasticsearch
+
+Apache Kafka is a distributed data store optimized for ingesting and processing streaming data in real-time. Kafka is used to build real-time streaming data pipelines and real-time streaming applications. For more details, see [What is Apache Kafka](https://aws.amazon.com/msk/what-is-kafka/).
+
+Elasticsearch is a distributed, RESTful search and analytics engine built on Apache Lucene. Elasticsearch can be used for use cases such as log analytics, full-text search, security intelligence, business analytics, and operational intelligence.
+
+### 4.3 Deployment Options 

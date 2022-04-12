@@ -15,6 +15,8 @@ Using this guide, you will learn how easy building and hosting apps with Mendix 
 
 This 25-minute tutorial will cover the essentials of Mendix development, and when you finish you will have your first app. Specifically, you will build a native mobile app that can take pictures. After that you will adapt it for web and PWA apps.
 
+Some of the screenshots below are extra friendly on the eyes due to Studio Pro's dark mode. For more information, see our 9.11 release blog [A Colorful Future With Dark Mode](https://www.mendix.com/blog/release-9-11-a-colorful-future-with-dark-mode/). 
+
 ## 2 Prerequisites
 
 * Create your [free account](https://signup.mendix.com/link/signup/?source=direct) in two minutes or less
@@ -142,23 +144,17 @@ Finally, we need to make sure data is synced from the app's mobile device to its
 
     {{< figure src="/attachments/quickstart-guide/running-console.png" alt="Running Console Message"   width="350"  >}}
 
-1. Click the arrow next to the **View App** button, click **View on Your Device**, then open the **View Native Mobile App** tab:
+1.  Click the arrow next to the **View App** button, click **View on Your Device**, then open the **View Native Mobile App** tab:
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647432763376_Screenshot+2022-03-16+at+12.12.40.png)
-
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647432864478_Screenshot+2022-03-16+at+12.14.21.png)
+    {{< figure src="/attachments/quickstart-guide/view-native-mobile-tab.png" alt="Native mobile tab"   width="350"  >}}
 
 1. Open the Make it Native app on your mobile device.
 1. Scan the QR code shown in Studio Pro to open your app on your testing device.
-1. Press the camera button you created and take a picture of your nearest desk stegosaurus (or anything else you would like): 
+1.  Press the camera button you created and take a picture of your nearest desk stegosaurus (or anything else you would like): 
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647433469005_file.jpeg)
+    {{< figure src="/attachments/quickstart-guide/smile-steggy.png" alt="Smile steggy"   width="350"  >}}
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647433891249_file.jpeg)
-
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647433474104_file.jpeg)
-
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647433985771_file.jpeg)
+    {{< figure src="/attachments/quickstart-guide/confirm-steggy.png" alt="Confirm steggy"   width="350"  >}}
 
 ## 4 Adapting for Web and PWA Apps
 
@@ -168,13 +164,13 @@ Congratulations, the hardest development tasks are done! Now you can see how eas
 1. Click **Add navigation profile**. 
 1.  For profile type, choose **Phone Web** and then select **Copy settings from an existing profile**:
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647964253854_Screenshot+2022-03-22+at+15.50.50.png)
+    {{< figure src="/attachments/quickstart-guide/nav-profile.png" alt="Navigation profile"   width="350"  >}}
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647964611700_Screenshot+2022-03-22+at+15.56.48.png)
+    {{< figure src="/attachments/quickstart-guide/add-phone-web.png" alt="Add phone web profile"   width="350"  >}}
 
-1. In the newly created profile, select **Progressive Web App** > **Publish as a Progressive Web App**:
+1.  In the newly created profile, select **Progressive Web App** > **Publish as a Progressive Web App**:
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647964641552_Screenshot+2022-03-22+at+15.57.18.png)
+    {{< figure src="/attachments/quickstart-guide/publish-as-prog.png" alt="Publish as progressive web app"   width="350"  >}}
 
 1. Open the the home page for web, **Home_Web**. 
 1. Like before, add a List view to the page from the toolbox and set its data source to be from the database to display your picture entity:

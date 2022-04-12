@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "app service", "audit trail"]
 
 ## I Introduction
 
-Advanced Audit Trail allows you to trace changes, gain detailed insight in reading and writing data, use infinitely scalable and fully-indexed data search, and have dashboards, alerting and connectivity to customer data warehouses.
+Advanced Audit Trail allows you to trace changes, gain detailed insight in reading and writing data, use infinitely-scalable and fully-indexed data search, and have dashboards, alerting and connectivity to customer data warehouses.
 
 With this app service, you can create audit snapshots of objects to store an Audit Trail. This Audit Trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
 
@@ -38,38 +38,37 @@ Advanced Audit Trail uses Kafka and Elasticsearch, shown in the intergration dia
 
 ### 1.4 Prerequisites
 
-This app service can only be used with Studio Pro 9 versions starting with [9.11.1](https://docs.mendix.com/releasenotes/studio-pro/9.11/).
+Advanced Audit Trail can only be used with Studio Pro 9 versions starting with [9.11.1](https://docs.mendix.com/releasenotes/studio-pro/9.11/).
 
 ## 2 Installation
 
-1. Followed the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the **AdvancedAuditSnapshots** and **AdvancedAuditSnapshotsUI** modules into your project
-2. Set up your application roles to include the [module roles](#module-rules) correctly.
-3. Make sure to configure the right [constant values](#constants) for the right snapshots.
-4. [Create the **Before Commit** and **Before Delete** events correctly](#create-before-commit-and-before-delete-events).
-5. Add search to the navigation, or implement the Query Snapshots for object action
-6. Make sure that the scheduled events are enabled in the deployment environments
+Followed the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the **AdvancedAuditSnapshots** and **AdvancedAuditSnapshotsUI** modules into your project
 
 ## 3 Configuration
+
+1. Set up your application roles to include the [module roles](#module-rules) correctly.
+
+2. Configure the right [constant values](#constants) for the right snapshots.
+
+3. Implement the **Before Commit** (**BCo**) and **Before Delete** **(Bde)** events correctly (see the examples). Use the events on the domain model settings (**BCo** / **BDe**).
+
+   You can create **CommitList** microflows flows that commit a list of objects without events, but use the **Create Snapshot (List)** action. This will ensure that the snapshots are committed in a list as well, and therefore minimizing performance impact of the module.
+   
+4.   Add search to the navigation, or implement the Query Snapshots for object action.
+   
+5. Make sure that the scheduled events are enabled in the deployment environments.
 
 #### 3.1 Module Roles {#module-roles}
 
 *  **Admin** : The admin can query the entire for the current application and can access the debug pages
- 
+
 *  **_AddOn_CanChangeEnvironmentInQuery**: An additional role for the Admin, which allows the Admin to change the environment in search queries, so that they can also search in other applications
- 
-*  **DisplayOnly**: The display-only user can view queries that are prepared in microflows, but cannot change any of them. This can restrict the user to only see that information that they are allowed to see. The role is tested against cross site scripting (XSS)
 
-{{% alert color="warning" %}}
-Note that access from and to the long-term data storage is based on service accounts. This means that once a user can access the **Snippet_Settings**, they can access all data in the long-term storage, even if it belongs to other applications in the same environment. Any user-based authentication needs to be implemented in the runtime, for example, by using the **DisplayUser** module role and the **ACT_Object_OpenAuditTrailPrettyView** setup.
-{{% /alert %}}
+*  **DisplayOnly**: The display-only user can view queries that are prepared in microflows, but cannot change any of them. This can restrict the user to seeing information they are allowed to see. The role is tested against cross site scripting (XSS).
 
-#### 3.2 Schedule Event 
+    {{% alert color="warning" %}}Access from and to the long-term data storage is based on service accounts. This means that once a user can access the **Snippet_Settings**, they can access all data in the long-term storage, even if it belongs to other applications in the same environment. Any user-based authentication needs to be implemented in the runtime, for example, by using the **DisplayUser** module role and the **ACT_Object_OpenAuditTrailPrettyView** setup.{{% /alert %}}
 
-- **SE_SendAuditSnapshots**: sends the cached data to the external data storage
-- **SE_CleanupSnapshotCache**: cleans up the cached data based on the retention settings – **OnlyDeleteProcessedItems** and **LogRetentionDays**
-- **SE_PeriodicVacuum**: runs a periodic vacuum on Postgres databases (see below)
-
-#### 3.3 Constants {#constants}
+#### 3.2 Constants {#constants}
 
 * Retention settings for the local cached data
 
@@ -95,40 +94,35 @@ Note that access from and to the long-term data storage is based on service acco
 
   * Kibana Endpoint / Username and Password: the credentials for the Kibana environment for receiving the data from the long term storage
 
+#### 3.3 Schedule Event 
 
-## 4. Usage
+- **SE_SendAuditSnapshots**: sends the cached data to the external data storage
+- **SE_CleanupSnapshotCache**: cleans up the cached data based on the retention settings – **OnlyDeleteProcessedItems** and **LogRetentionDays**
+- **SE_PeriodicVacuum**: runs a periodic vacuum on Postgres databases (see below)
 
-### 4.1 Optional Advanced Features
+#### 3.4 Optional Advanced Features
 
-  - Link **NAV_AdvancedSettings** for accessing debug settings. Typically not needed, the features in here are subject to change)
-  - Link **NAV_CachedSnapshot_Overview** to access the local cache of   snapshot data. 
-  - Check the default values of the NPE Settings object in the domain model, since they'll be used for configuring the app. 
+  - Link **NAV_AdvancedSettings** for accessing debug settings. Typically not needed, the features in here are subject to change.
+  - Link **NAV_CachedSnapshot_Overview** to access the local cache of snapshot data. 
+  - Check the default values of the **NPE Settings** object in the domain model, since they will be used for configuring the app. 
   - Enable **SE_CleanupAuditSnapshots** if you want to use the retention settings and delete objects.
 
-  ### 4.2 Implementation per Entity
+  #### 3.5 Implementing Custom User Logging (Optional)
 
-Implement the before commit (**BCo**) and before delete (**BDe**) events (see the examples). Use the events on the domain model settings (**BCo** / **BDe**).
+It is possible to override the logged user for a request (e.g. the request is a published REST service that runs in a System Context, while the user is known). Use the **Override User for Snapshots in this Context** action for this.
 
-{{% alert color="info" %}}
-Create CommitList microflows flows that commit a list of objects without events, but use the Create Snapshot (List) action. This will ensure that the snapshots are committed in a list as well, and therefore minimizing performance impact of the module.
-{{% /alert %}}
-
-  ### 4.3 Implementing Custom User Logging (Optional)
-
-It is possible to override the logged user for a request (e.g. the request is a published REST services that runs in a System Context, while the user is known). Use the “Override User for Snapshots in this Context“ action for that.
-
-  ### 4.4 Implementing User Name Scrambling (Optional)
+  #### 3.6 Implementing User Name Scrambling (Optional)
 
 Use Configure Username mapping to store a username differently in the long term data storage. This can be used for anonymizing data (e.g. due to GDPR).
 
-  ### 4.5 Implementing Display Formatters (Optional)
+  #### 3.7 Implementing Display Formatters (Optional)
 
-Use the Formatter microflows to change how the String value will be calculated for Decimals, Dates and Mendix Object Identifiers. See the Example app for more details.
+Use the Formatter microflows to change how the String value will be calculated for Decimals, Dates, and Mendix Object Identifiers. See the example app for more details.
 
-  ### 4.6 Getting Microflow Stack Trace (Optional)
+  #### 3.8 Getting Microflow Stack Trace (Optional)
 
 Use this action to create custom logging / entities and identify in what microflow the action was triggered.
 
-  ### 4.7 Changing the Module Layout (Optional)
+  #### 3.9 Changing the Module Layout (Optional)
 
 Update the **AuditSnapshots_ResponsiveLayout** to update the layouts without changing the pages.

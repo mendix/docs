@@ -231,6 +231,6 @@ On your device you should be able to take pictures using the widgets, buttons, a
 
 Congratulations Mendix developer, you successfully completed this Quickstart guide! You have your first Mendix app which works on almost any device, and now you can start planning your next app.
 
-To learn more about the power of Mendix apps, visit academy.mendix.com for use-case specific lessons or docs.mendix.com to explore any part of Mendix that interests you.
+To learn more about the power of Mendix apps, visit [Mendix Academy](https://academy.mendix.com/link/home) for use-case specific lessons or the [Mendix Documentation Homepage](https://docs.mendix.com/) to explore any part of Mendix that interests you.
 
 

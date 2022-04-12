@@ -149,9 +149,9 @@ Finally, we need to make sure data is synced from the app's mobile device to its
 1. Scan the QR code shown in Studio Pro to open your app on your testing device.
 1.  Press the camera button you created and take a picture of your nearest desk stegosaurus (or anything else you would like): 
 
-    {{< figure src="/attachments/howto/quickstart-guide/smile-steggy.png" alt="Smile steggy"   width="350"  >}}
+    {{< figure src="/attachments/howto/quickstart-guide/smile-steggy.jpeg" alt="Smile steggy"   width="350"  >}}
 
-    {{< figure src="/attachments/howto/quickstart-guide/confirm-steggy.png" alt="Confirm steggy"   width="350"  >}}
+    {{< figure src="/attachments/howto/quickstart-guide/confirm-steggy.jpeg" alt="Confirm steggy"   width="350"  >}}
 
 ## 4 Adapting for Web and PWA Apps
 

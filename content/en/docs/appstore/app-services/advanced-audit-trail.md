@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "app service", "audit trail"]
 
 ## I Introduction
 
-Advanced Audit Trail allows you to trace changes, use infinitely-scalable and fully-indexed data search, and have dashboards. Once configured, the system creates audit snapshots of objects to store an Audit Trail. This Audit Trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
+Advanced Audit Trail allows you to trace changes, use infinitely-scalable and fully-indexed data search, and have dashboards. Once configured, the system automatically creates audit snapshots of objects to store an audit trail. This audit trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
 
 Advanced Audit Trail uses Kafka and Elasticsearch, shown in the intergration diagram below:
 
@@ -24,7 +24,7 @@ Advanced Audit Trail uses Kafka and Elasticsearch, shown in the intergration dia
 
 ### 1.2 Features
 
-*  Scheduled event that will regularly send the stored snapshots to an external system
+*  Scheduled events that will regularly send the stored snapshots to an external system
 *  Decoupling: when the external system cannot be reached, the snapshots will be stored in the local database, thus ensuring that the main system will keep on working without a dependency on the external database
 *  Admin interface to search through the external database (across entities)
 *  Microflows and pages to open a generalized view that can be shown to users for a trail of a specific object
@@ -36,31 +36,28 @@ Advanced Audit Trail uses Kafka and Elasticsearch, shown in the intergration dia
 
 ### 1.4 Prerequisites
 
-Advanced Audit Trail can only be used with Studio Pro 9 versions starting with [9.11.1](https://docs.mendix.com/releasenotes/studio-pro/9.11/).
+* Advanced Audit Trail can only be used with Studio Pro 9 versions starting with [9.11.1](https://docs.mendix.com/releasenotes/studio-pro/9.11/).
 
 ## 2 Installation
 
-Followed the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the **AdvancedAuditSnapshots** and **AdvancedAuditSnapshotsUI** modules into your project
+Followed the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the **AdvancedAuditSnapshots** and **AdvancedAuditSnapshotsUI** modules into your project.
 
 ## 3 Configuration
 
-1. Set up your application roles to include the [module roles](#module-rules) correctly.
-
+1. Set up your application roles to include the right [module roles](#module-rules).
 2. Configure the right [constant values](#constants) for the right snapshots.
+3. Implement the **Before Commit** (**BCo**) and **Before Delete** **(Bde)** events (see the examples). Use the events on the domain model settings (**BCo** / **BDe**).
 
-3. Implement the **Before Commit** (**BCo**) and **Before Delete** **(Bde)** events correctly (see the examples). Use the events on the domain model settings (**BCo** / **BDe**).
-
-   You can create **CommitList** microflows flows that commit a list of objects without events, but use the **Create Snapshot (List)** action. This will ensure that the snapshots are committed in a list as well, and therefore minimizing performance impact of the module.
+   You can create **CommitList** microflows that commit a list of objects without events, but use the **Create Snapshot (List)** action. This will ensure that the snapshots are committed in a list as well, and therefore minimizing performance impact of the module.
    
-4.   Add search to the navigation, or implement the Query Snapshots for object action.
-   
+4. Add search to the navigation, or implement the Query Snapshots for object action.
 5. Make sure that the scheduled events are enabled in the deployment environments.
 
 #### 3.1 Module Roles {#module-roles}
 
-*  **Admin** : The admin can query the entire for the current application and can access the debug pages
+*  **Admin**: The admin can query the entire database for the current application and can access the debug pages
 
-*  **_AddOn_CanChangeEnvironmentInQuery**: An additional role for the Admin, which allows the Admin to change the environment in search queries, so that they can also search in other applications
+*  **_AddOn_CanChangeEnvironmentInQuery**: This is an additional role for the Admin, which allows the Admin to change the environment in search queries, so that they can also search in other applications
 
 *  **DisplayOnly**: The display-only user can view queries that are prepared in microflows, but cannot change any of them. This can restrict the user to seeing information they are allowed to see. The role is tested against cross site scripting (XSS).
 
@@ -70,31 +67,32 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 
 * Retention settings for the local cached data
 
-  * **LogRetentionDays**: the days that the records be kept in the database
+    *  **LogRetentionDays**: the days that the records be kept in the database
 
-  * **OnlyDeleteProcessedItems**: whether items are deleted only if they are sent to the external data storage
+    *  **OnlyDeleteProcessedItems**: whether items should be deleted only if they are sent to the external data storage
 
-    {{% alert color="warning" %}}Setting this to **false** will lead to a gap in the audit trail in the external data storage. This is only to be used in combination with the **NAV_CachedSnapshot_Overview**.{{% /alert %}}
+        {{% alert color="warning" %}}Setting this to **false** will lead to a gap in the audit trail in the external data storage. This is only used in combination with the **NAV_CachedSnapshot_Overview**.{{% /alert %}}
 
-* **Snapshots**
+*  Snapshots
   
-  * **IncludeHashedStrings**: whether to include attributes of type Hashed String (e.g. password fields) in the snapshots
+    *  **IncludeHashedStrings**: whether to include attributes of type Hashed String (e.g. password fields) in the snapshots
 
-     {{% alert color="info" %}}Manually encrypted (e.g. using the Encryption module) Strings are not of type Hashed String and will not be affected by this setting. If set to **true**, Hashed Strings will be included (storing bcrypt / or other hashed value). If set to **false**, Hashed Strings will be excluded and therefore not audited.{{% /alert %}}
+        * **True**: Hashed Strings will be included (storing bcrypt/or other hashed value)
+        * **False**: Hashed Strings will be excluded and therefore not audited
+    
+        {{% alert color="info" %}}Manually encrypted (e.g. using the [Encryption](/appstore/modules/encryption/) module) Strings are not of type Hashed String and will not be affected by this setting.{{% /alert %}}
   
-* **Integration**
+* Integration
 
-  * Environment Name: the name of the environment, which should be unique in your audit data storage, for example, *myApp-prod*
+    *  Environment Name: the name of the environment, which should be unique in your audit data storage, for example, *myApp-prod*
 
-    {{% alert color="warning" %}}If two applications use the same name, the Audit Trail will not be able to distinguish between the two, effectively breaking the Audit Trail for both applications irreversibly.{% /alert %}}
-
-  * Environment URL (optional): the URL used to identify the environment; If left empty, the Application Runtime URL is used instead.
-
-  * Kafka Endpoint / Username and Password: the credentials for the kafka environment for sending the data into the long term storage
-  
-  * Kibana Endpoint / Username and Password: the credentials for the Kibana environment for receiving the data from the long term storage
-
-#### 3.3 Schedule Event 
+        {{% alert color="warning" %}}If two applications use the same name, the audit trail will not be able to distinguish between the two, effectively breaking the audit trail for both applications irreversibly.{{% /alert %}}
+        
+    *  Environment URL (optional): the URL used to identify the environment; If left empty, the Application Runtime URL is used instead. 
+    *  Kafka Endpoint / Username and Password: the credentials for the kafka environment for sending the data into the long term storage
+    *  Kibana Endpoint / Username and Password: the credentials for the Kibana environment for receiving the data from the long term storage
+       
+#### 3.3 Schedule Events 
 
 - **SE_SendAuditSnapshots**: sends the cached data to the external data storage
 - **SE_CleanupSnapshotCache**: cleans up the cached data based on the retention settings – **OnlyDeleteProcessedItems** and **LogRetentionDays**
@@ -109,15 +107,15 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 
   #### 3.5 Implementing Custom User Logging (Optional)
 
-It is possible to override the logged user for a request (e.g. the request is a published REST service that runs in a System Context, while the user is known). Use the **Override User for Snapshots in this Context** action for this.
+Use the **Override User for Snapshots in this Context** action to override the logged user for a request. For example, the request is a published REST service that runs in a system context, while the user is known.
 
   #### 3.6 Implementing User Name Scrambling (Optional)
 
-Use Configure Username mapping to store a username differently in the long term data storage. This can be used for anonymizing data (e.g. due to GDPR).
+Use Configure Username mapping to store a username differently in the long-term data storage. This can be used for anonymizing data (e.g. due to GDPR).
 
   #### 3.7 Implementing Display Formatters (Optional)
 
-Use the Formatter microflows to change how the String value will be calculated for Decimals, Dates, and Mendix Object Identifiers. See the example app for more details.
+Use the **Formatter** microflows to change how the String value will be calculated for Decimals, Dates, and Mendix Object Identifiers. See the example app for more details.
 
   #### 3.8 Getting Microflow Stack Trace (Optional)
 

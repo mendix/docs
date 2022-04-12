@@ -52,10 +52,7 @@ Some of the screenshots below are extra friendly on the eyes due to Studio Pro's
 
     {{< figure src="/attachments/quickstart-guide/native-mobile-mobule.png" alt="Native mobile module"   width="350"  >}}
 
-1.  Right-click anywhere in the domain model, select **Add Entity**, then double-click the new entity to open its properties:
-
-    {{< figure src="/attachments/quickstart-guide/add-entity.png" alt="Add entity"   width="350"  >}}
-
+1.  Right-click anywhere in the domain model, select **Add Entity**, then double-click the new entity to open its properties.
 1. Name your entity *Picture*.
 1.  Click **Select** next to Generalization, search for **image** and select it, and then click okay to close all open windows. This will cause your entity to inherit the properties of System.Image:
 
@@ -221,8 +218,8 @@ On the true path, you can simply set the return value on the End Event as the pi
 
     {{< figure src="/attachments/quickstart-guide/set-picture.png" alt="Set picture as return value"   width="350"  >}}
 
-1. Return to your app's home page and add an image uploader widget inside your dataview. 
-1. Add a save button to the footer of the dataview. 
+1. Return to your app's home page and add an image uploader widget inside your data view. 
+1. Add a save button to the footer of the data view. 
 1. Re-run your app. 
 1. Once it is running click the dropdown arrow next to the **View App** button and choose **view on your device**.
 1. Scan the QR code to open in your device’s browser. 

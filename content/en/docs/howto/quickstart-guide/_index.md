@@ -173,37 +173,34 @@ Congratulations, the hardest development tasks are done! Now you can see how eas
     {{< figure src="/attachments/quickstart-guide/publish-as-prog.png" alt="Publish as progressive web app"   width="350"  >}}
 
 1. Open the the home page for web, **Home_Web**. 
-1. Like before, add a List view to the page from the toolbox and set its data source to be from the database to display your picture entity:
+1.  Like before, add a list view to the page from the toolbox and set its data source to be from the database to display your picture entity:
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647964904364_Screenshot+2022-03-22+at+16.01.40.png)
+    {{< figure src="/attachments/quickstart-guide/add-list-view-2.png" alt="Add second list view"   width="350"  >}}
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647964965283_Screenshot+2022-03-22+at+16.02.41.png)
-
+    {{< figure src="/attachments/quickstart-guide/set-data-source.png" alt="Set data source"   width="350"  >}}
 
 This time instead of a button, you will use a file upload widget to utilize mobile device cameras. This widget needs to be placed in context (meaning in a data view, list view, or template grid). 
+ Drag in a data view from the toolbox and place it above the list view:
 
-1. Drag in a data view from the toolbox and place it above the list view:
+    {{< figure src="/attachments/quickstart-guide/place-data-view.png" alt="Place data view"   width="350"  >}}
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647965094091_Screenshot+2022-03-22+at+16.04.51.png)
-
-1. Double-click the dataview to open its properties window. 
+1. Double-click the data view to open its properties window. 
 1. Set the Data source to be a microflow, click select next to the microflow box, and create a new microflow called *DS_CreatePicture*.
-1. Click **Show** to quickly jump to the new flow:
+1.  Click **Show** to quickly jump to the new flow:
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647965289642_Screenshot+2022-03-22+at+16.08.05.png)
+    {{< figure src="/attachments/quickstart-guide/data-view-props.png" alt="Data view props"   width="350"  >}}
 
 1. In the microflow, add a retrieve action from the toolbox. 
 1. Open the action, set it to retrieve from database, and select the picture entity. 
-1. For range choose first and provide the xpath constraint as `[hasContents = false()]`. This will look for any empty picture records (without file contents) in the database or memory and return them for your use:
+1.  For range choose first and provide the xpath constraint as `[hasContents = false()]`. This will look for any empty picture records (without file contents) in the database or memory and return them for your use:
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647965461692_Screenshot+2022-03-22+at+16.10.56.png)
-
+    {{< figure src="/attachments/quickstart-guide/retrieve-action.png" alt="Configure retrieve action"   width="350"  >}}
 
 1. Next add an exclusive split (the orange diamond shape). This is the equivalent of creating an "if" statement in other languages. 
 1. Add the caption “Found”.
-1. Under expression type *$Picture != empty*: 
+1.  Under expression type *$Picture != empty*: 
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647965634951_Screenshot+2022-03-22+at+16.13.51.png)
+    {{< figure src="/attachments/quickstart-guide/exclusive-split.png" alt="Exclusive split"   width="350"  >}}
 
 {{% alert type="info" %}}
 Use <kbd>Ctrl</kbd> + <kbd>Space</kbd> to use autocomplete in an expression editor.
@@ -212,22 +209,17 @@ Use <kbd>Ctrl</kbd> + <kbd>Space</kbd> to use autocomplete in an expression edit
 That expression checks if the `Picture` object was found. This will result in a true or false result. To make sure the flow accounts for this, make the following changes:
 
 1. Add a new branch from the exclusive split. 
-1. Set the condition values for both paths, one for true and one for false:
+1.  Set the condition values for both paths, one for true and one for false:
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647965882417_Screenshot+2022-03-22+at+16.17.55.png)
+    {{< figure src="/attachments/quickstart-guide/true-false.png" alt="Add true and false"   width="350"  >}}
 
 On the true path, you can simply set the return value on the End Event as the picture which was retrieved. On the false path you have to create an object because nothing was found: 
 
 1. Drag in a “Create Object” action, once again from the toolbar. 
 1. Set the newly created entity to be your picture entity, and then click OK. 
-1. Right-click on the new entity and choose **Set $NewPicture as return value**:
+1.  Right-click on the new entity and choose **Set $NewPicture as return value**:
 
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647965998337_Screenshot+2022-03-22+at+16.19.55.png)
-
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647966064841_Screenshot+2022-03-22+at+16.20.59.png)
-
-![](https://paper-attachments.dropbox.com/s_A24CF16B5F978C4E7ECE0D85EB7BCF682E534747C1ABF7CDA69C26A5FE7EEF76_1647966216286_Screenshot+2022-03-22+at+16.23.33.png)
-
+    {{< figure src="/attachments/quickstart-guide/set-picture.png" alt="Set picture as return value"   width="350"  >}}
 
 1. Return to your app's home page and add an image uploader widget inside your dataview. 
 1. Add a save button to the footer of the dataview. 

@@ -137,7 +137,49 @@ There is a way to use more the convenient `displayValue`  and `setTextValue` whi
 
 The optional field `universe` is used to indicate the set of all possible values that can be passed to a `setValue` if a set is limited. Currently, `universe` is provided only when the edited attribute is of the Boolean or enumeration [types](/refguide/attributes/#type).
 
-### 4.4 IconValue {#icon-value}
+### 4.4 ModifiableValue {#modifiable-value}
+
+ModifiableValue is used to represent values that can be changed by a pluggable widget client component and is passed only to [association properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#association). It is defined as follows:
+
+```ts
+export interface ModifiableValue<T> {
+	readonly status: ValueStatus;
+	readonly readOnly: boolean;
+    
+	readonly value: Option<T>;
+	readonly setValue: (value: Option<T>) => void;
+	readonly validation: Option<string>;
+	readonly setValidator: (validator?: (value: Option<T>) => Option<string>) => void;
+}
+```
+
+The type the component receives for the association property depends on the allowed association types. If only references are allowed the component receives a `ReferenceValue` which is defined as `ModifiableValue<ObjectItem> & { type: "Reference" };`, if only reference sets are allowed the client gets a `ReferenceSetValue` which is defined as `ModifiableValue<ObjectItem[]> & { type: "ReferenceSet" };`. 
+
+When both association types are allowed the type is a union of `ReferenceValue` and `ReferenceSetValue` and the widget should check the `type` to determine if a reference or reference set is configured and act accordingly in the code. Checking the type will also [narrow](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#handbook-content) to the correct type in TypeScript.
+
+```ts
+if (association.value === undefined) {
+	return "None";
+}
+
+if (association.type === "Reference") {
+	return textTemplate.get(association.value);
+} else {
+	return association.value.map((objectItem) => textTemplate.get(objectItem)).join(",");
+}
+```
+
+`status` is similar to the one exposed for `DynamicValue`. It indicates if the value's loading has finished and if loading was successful. Similarly to `DynamicValue`, `EditableValue` keeps returning the previous `value` when `status` changes from `Available` to `Loading` to help a widget avoid flickering.
+
+The flag `readOnly` indicates whether a value can actually be edited. It will be true, for example, when a widget is placed inside a Data view that is not [editable](/refguide/data-view/#editable), or when a selected attribute is not editable due to [access rules](/refguide/access-rules/). The `readOnly` flag is always true when a `status` is not `ValueStatus.Available`. Any attempt to edit a value set to read-only will have no affect and incur a debug-level warning message.
+
+The value can be read from the `value` field and modified using `setValue` function.  The `value` contains an `ObjectItem` or an `ObjectItem[]` based on the configured association. The `ObjectItem` can be passed to the `get` function of any [linked property value](pluggable-widgets-client-apis-list-values.md#3-linked-property-values) which is linked to the selectable objects datasource. 
+
+When setting a value the `ObjectItem`(s) must be items from the selectable objects data source. Note that `setValue` returns nothing and does not guarantee that the value is changed synchronously. But when a change is propagated, a component receives a new prop reflecting the change.
+
+It is possible for a component to extend the defined set of validation rules. A new validator — a function that checks a passed value and returns a validation message string if any — can be provided through the `setValidator` function. A component can have only a single custom validator. The Mendix platform ensures that custom validators are executed whenever necessary, for example when a page is being saved by an end-user. It is best practice to call `setValidator` early in a component's lifecycle — specifically in the [componentDidMount](https://en.reactjs.org/docs/react-component.html#componentdidmount) function.
+
+### 4.5 IconValue {#icon-value}
 
 `DynamicValue<IconValue>` is used to represent icons: small pictograms in the Mendix platform. Those can be static or dynamic file- or font-based images. An icon can only be configured through an [icon](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute) property. `IconValue` is defined as follows:
 
@@ -164,7 +206,7 @@ export type IconValue = WebIcon | NativeIcon;
 
 In practice, `WebIcon` and `NativeIcon` are usually passed to a `Icon` component provided by Mendix, since this provides a convenient way of handling all types of icons at once. For more information on `Icon`, see the [Icon](#icon) section below.
 
-### 4.5 ImageValue{#imagevalue}
+### 4.6 ImageValue{#imagevalue}
 
 `DynamicValue<ImageValue>` is used to represent static or dynamic images. An image can be configured only through an [image](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#image) property. `ImageValue` is defined as follows:
 
@@ -180,7 +222,7 @@ export type ImageValue = WebImage | NativeImage;
 
 `NativeImage` can be passed to a `mendix/components/native/Image` component provided by Mendix for native widgets. `WebImage` can be passed to react-dom’s `img` component.
 
-### 4.6 FileValue {#filevalue}
+### 4.7 FileValue {#filevalue}
 
 `DynamicValue<FileValue>` is used to represent files. A file can be configured only through a [file](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#file) property. `FileValue` is defined as follows:
 
@@ -191,7 +233,7 @@ export interface FileValue {
 }
 ```
 
-### 4.7 List values{#list-values}
+### 4.8 List values{#list-values}
 
 `ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#datasource) property. See [List Values](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/) for more information about usage of `ListValue` and associated property values.
 

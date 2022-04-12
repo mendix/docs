@@ -390,10 +390,10 @@ Our [Java unit test reference](https://Github.com/mendixlabs/javaunittestreferen
 * Makes constants available to your Java code
 
 {{% alert color="warning" %}}
-The Java unit test reference is compatible up to and including Studio Pro [9.4](/releasenotes/studio-pro/9.4/). Support for Studio Pro 9.5 and above is in development.
+The Java unit test reference is compatible up to and including Studio Pro [9.12](/releasenotes/studio-pro/9.12/).
 {{% /alert %}}
 
-Java unit testing is discussed in more detail in this Mendix World presentation, [Run Modern Unit Tests for Your Custom Java Actions](https://events.mendixworld.com/widget/mendix/world21/catalog/session/1615903746739001d8JX). You will need to Register with your business email address to view this video.
+Java unit testing is discussed in more detail in this Mendix World presentation, [Run Modern Unit Tests for Your Custom Java Actions](https://events.mendixworld.com/widget/mendix/world21/catalog/session/1615903746739001d8JX). You will need to register with your business email address to view this video.
 
 #### 6.2.3 Writing Java Code
 

@@ -225,7 +225,7 @@ The *inserting objects* functionality was introduced in Studio Pro [9.12.0](/rel
 
 ## 11 Deleting Objects {#deleting-objects}
 
-When a published resource has the [Deletable](/refguide/published-odata-resource/#capabilities) capability, clients can update its attributes and associations by sending a `DELETE` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Exployees(8444249301330581)`).
+When a published resource has the [Deletable](/refguide/published-odata-resource/#capabilities) capability, clients can delete an object by sending a `DELETE` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Exployees(8444249301330581)`).
 
 {{% alert type="info" %}}
 The *deleting objects* functionality was introduced in Studio Pro [9.13.0](/releasenotes/studio-pro/9.13/).

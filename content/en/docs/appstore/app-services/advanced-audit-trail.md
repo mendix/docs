@@ -11,27 +11,38 @@ tags: ["marketplace", "marketplace component", "app service", "audit trail"]
 
 Advanced Audit Trail allows you to trace changes, use infinitely-scalable and fully-indexed data search. Once configured, the system automatically creates audit snapshots of objects to store an audit trail. This audit trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
 
-Advanced Audit Trail employs a software stack on top of [Kafka](https://kafka.apache.org/documentation/) and [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/index.html) to leverage their utility. Below you can find the integration diagram:
+Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, and Kibana to leverage their utility. Kafka is used for long-term immutable data storage for audit data, and Elasticserach and Kibana are used to index the audit data. You can find an integration diagram below:
 
 {{< figure src="/attachments/appstore/app-services/advanced-audit-trail/integration-diagram.png >}}
 
+{{% alert color="info" %}}This app service is different from the Audit Trail module because it needs less work to implement, and delivers better search user experience and better performance.{{% /alert %}}
+
 ### 1.1 Typical Use Cases
 
-* Prove who changed what at which moment
-* Debug why an object is in a specific stage
+* Tracks changes to data—who made what changes at what time in what context— to make your operation GxP and FDA CFR 21 Part 11 compliant
+* Allows the developer to easily configure tracking changes per entity, with no changes to domain models required
+* Helps the developer debug why an object is in a specific stage
 
 ### 1.2 Features
 
+*  Records the timestamp, the old value and the changed value, the microflow that triggered the change, and whether the object was created, modified, or deleted, and the user who made the change and their user roles
+*  Supports viewing all changes that happened in the same microflow, which helps the auditor understand the context better
+*  Captures the checksum, file size, and name of files which can be used for validation
 *  Supports scheduled events that will regularly send the stored snapshots to an external system
+*  Allows the user to add a page to the interface where they have to specify why a change is made – once added, this will be automatically added to all the tracked changes 
+*  Offers microflows and pages that open a generalized view to show users the trail of a specific object
 *  Supports decoupling: when the external system cannot be reached, the snapshots will be stored in the local database, thus ensuring that the main system will keep on working without a dependency on the external database
 *  Offers admin interface to search through the external database (across entities)
-*  Allows users to search the data on specific properties of the tracked objects using [Kibana](https://www.elastic.co/guide/en/kibana/index.html)
-*  Offers microflows and pages that open a generalized view to show users a trail of a specific object
+*  Supports searching full-text search on the data, search on changed data, and exporting data to CSV format using [Kibana](https://www.elastic.co/guide/en/kibana/index.html)
+*  Support configuring different permissions for audit data for different users
 
 ### 1.3 Prerequisites
 
 * You need to use Advanced Audit Trail with Studio Pro 9 versions starting with [9.12](https://docs.mendix.com/releasenotes/studio-pro/9.12/).
-* You need to have an external data storage
+
+* You need to have external data storage to store your audit data that runs in the Mendix Cloud.
+
+  {{% alert color="info" %}}Your applications do not have to be deployed in the Mendix Cloud, as long as they can connect to the external data storage. So it is possible to have a multi-cloud setup with Mendix Cloud to store your audit data and a different cloud to deploy your applications.{{% /alert %}}
 
 ## 2 Installation
 
@@ -109,7 +120,7 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 
 Use the **Override User for Snapshots in this Context** action to override the logged user for a request. For example, the request is a published REST service that runs in a system context, while the user is known.
 
-#### 3.6 Implementing User Name Scrambling (Optional)
+### 3.6 Implementing User Name Scrambling (Optional)
 
 Use Configure Username mapping to store a username differently in the long-term data storage. This can be used for anonymizing data (e.g. due to GDPR).
 

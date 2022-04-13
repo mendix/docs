@@ -10,7 +10,7 @@ aliases:
 
 >>>>> /howto/mobile/native-mobile/distribution/_index.md
 
-How-to's in this section will help you distribute native apps to app stores, as well as push changes using over-the-air updates.
+Guides in this section will help you distribute native apps to app stores, as well as push changes using over-the-air updates.
 
 The following how-to’s are available here:
 

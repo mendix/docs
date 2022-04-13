@@ -10,7 +10,7 @@ aliases:
 
 >>>>> /howto/mobile/native-mobile/implementation/_index.md
 
-How-to's in this section will help you implement key features of native apps.
+Guides in this section will help you implement key features of native apps.
 
 The following how-to’s are available here:
 

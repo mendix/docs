@@ -37,7 +37,7 @@ These guides will teach you to configure push notifications (also known as remot
 * [Build a Native App with Push Notifications Enabled](/howto/mobile/notif-build-native/) — Build a native app with push notifications enabled.
 * [Send Your First Test Push Notification](/howto/mobile/notif-send-test/) — Send a test notification to confirm your app is working properly.
 
-After you complete the how-to's above, you may wish to do more advanced tasks with notifications. For information on **sending push notifications to multiple devices**, use this how-to:
+After you complete the guides above, you may wish to do more advanced tasks with notifications. For information on **sending push notifications to multiple devices**, use this how-to:
 
 * [Send Notifications to Multiple Devices](/howto/mobile/notif-mult-devices/)
 

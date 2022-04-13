@@ -24,13 +24,13 @@ The following actions need to be taken to use the AWS Authentication Module in y
 
 2. Download the [AWS Authentication Module](/needlinkhere/) from the Marketplace (see [How To Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/))
 
-3. Add the `AfterStartup` microflow **App** > **Marketplace modules** > **AWSAuthentication** > **USE_ME** > **microflows** > **AfterStartup** to the [Runtime Tab](/refguide/project-settings/#after-startup) of the app settings. If there is already an after startup microflow, you will need to call this after startup microflow from the existing microflow.
+3. Add the `AfterStartup` microflow **App** > **Marketplace modules** > **AWSAuthentication** > **_USE_ME** > **microflows** > **AfterStartup** to the [Runtime Tab](/refguide/project-settings/#after-startup) of the app settings. If there is already an after startup microflow, you will need to call this after startup microflow from the existing microflow.
 
 4. Ensure that an appropriate user role (for example, an administrator) can add AWS credentials to the `Credentials` and `StaticCredentials` entities in the AWSAuthentication module domain model. You will have to adjust the security settings to ensure the user roles have the correct access.
 
     For example, you can [generate overview pages](howto/front-end/create-your-first-two-overview-and-detail-pages/) for these entities, give access only to the administrator user role, and then add the pages to the  navigation for the administrator user role.
 
-You can now use the AWS Authentication Module in your app by using the `Get_Credentials` microflow (**App** > **Marketplace modules** > **AWSAuthentication** > **USE_ME** > **microflows** > **GET_Credentials**) when using your connector. See the documentation for your specific connector for more information.
+You can now use the AWS Authentication Module in your app by using the `Get_Credentials` microflow (**App** > **Marketplace modules** > **AWSAuthentication** > **_USE_ME** > **microflows** > **GET_Credentials**) when using your connector. See the documentation for your specific connector for more information.
 
 ## 3 Obtaining Credentials from AWS
 
@@ -74,7 +74,7 @@ The AWS Authentication Module contains two entities which contain the credential
 
 ### 4.2 Microflows
 
-The AWS Authentication Module contains two microflows which can be used by in your app. These are in the folder **App** > **Marketplace modules** > **AWSAuthentication** > **USE_ME** > **microflows**:
+The AWS Authentication Module contains two microflows which can be used by in your app. These are in the folder **App** > **Marketplace modules** > **AWSAuthentication** > **_USE_ME** > **microflows**:
 
 * GET_Credentials – returns a `Credentials` object when passed a string containing the **Name** — returns an empty object if the string does not match the name of any credentials object
 * AfterStartup – needs to be added to your app as an after startup microflow

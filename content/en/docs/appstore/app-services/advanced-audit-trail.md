@@ -11,7 +11,7 @@ tags: ["marketplace", "marketplace component", "app service", "audit trail"]
 
 Advanced Audit Trail allows you to trace changes, use infinitely-scalable and fully-indexed data search. Once configured, the system automatically creates audit snapshots of objects to store an audit trail. This audit trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
 
-We have built a software stack on top of [Kafka](https://kafka.apache.org/documentation/) and [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/index.html) to leverage their utility for audit trail in Mendix. See the integration diagram below:
+Advanced Audit Trail employs a software stack on top of [Kafka](https://kafka.apache.org/documentation/) and [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/index.html) to leverage their utility. Below you can find the integration diagram:
 
 {{< figure src="/attachments/appstore/app-services/advanced-audit-trail/integration-diagram.png >}}
 

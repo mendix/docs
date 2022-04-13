@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "charts", "platform support", "ar
 
 ## Introduction
 
-
+{{% alert color="danger" %}} **TODO:** Add introduction {{% /alert%}}
 
 ## Migration from Charts v1 and v2 to Charts Module
 
@@ -82,13 +82,25 @@ If you see some errors in error tab, do not panic — errors appears quite often
 
 Go to next section to see example of updating settings for the column chart.
 
-
-
-### Step 4 - Updating your widgets
+### Step 4 - Updating chart widgets
 
 This step assume that you go over all chart widgets in your project and update them one by one.
 
-Below you can find example of migrating column chart, but you can apply this steps to any chart, regardless of the chart type.
+The easiest way is by dropping new charts widget right next to your existing widget, copying or changing settings and then removing old widget. If you prefer step-by-step guide:
+
+1. Go to old chart widget.
+2. Add new version fo the widget of the same chart type.
+3. Copy properties from old widget to the new widget.
+4. Remove old widget.
+5. If there any other old chart widgets in your project, repeat steps 1-5.
+
+
+
+{{% alert color="warning" %}}
+
+**Warning**: If your project was created in Studio Pro version < v9.18.0 then you probably may see some additional errors in **Errors List** tab from **Atlas_Web_Content** module. They coming from some page templates that we shipping by default with Studio Pro distribution. Simplest solution would be go to the template and remove all chart widgets from the template. If you are using this templates in your app, then just repeat steps in "Updating chart widgets" section.
+
+{{% /alert %}}
 
 ### Step 5 - Testing your project
 

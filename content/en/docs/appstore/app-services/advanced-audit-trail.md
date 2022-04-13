@@ -13,9 +13,9 @@ Advanced Audit Trail allows you to trace changes, use infinitely-scalable and fu
 
 Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, and Kibana to leverage their utility. Kafka is used for long-term immutable data storage for audit data, and Elasticserach and Kibana are used to index the audit data. You can find an integration diagram below:
 
-{{< figure src="/attachments/appstore/app-services/advanced-audit-trail/integration-diagram.png >}}
+{{< figure src="/attachments/appstore/app-services/advanced-audit-trail/integration-diagram.png" >}}
 
-{{% alert color="info" %}}This app service is different from the Audit Trail module because it needs less work to implement, and delivers better search user experience and better performance.{{% /alert %}}
+{{% alert color="info" %}}This app service is different from the [Audit Trail](/appstore/modules/audit-trail/) module because it needs less work to implement, and delivers better search user experience and better performance.{{% /alert %}}
 
 ### 1.1 Typical Use Cases
 

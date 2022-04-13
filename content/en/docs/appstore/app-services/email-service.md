@@ -83,7 +83,7 @@ Before you deploy an app, you should configure the binding keys in your app as f
 
     {{< figure src="/attachments/appstore/app-services/email-service/configure-username-secretkey.png" >}}
 
-2. For **SecretKey** and **UserName**, add the values that were generated when you created the binding keys. Click OK to save the changes.
+2. For **SecretKey** and **UserName**, add the values that were generated when you created the binding keys, and click **OK** to save the changes.
 
 ## 4 Usage
 

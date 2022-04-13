@@ -16,7 +16,7 @@ Mendix provides out-of-the-box configuration to use Datadog and AppDynamics to p
 {{% alert color="info" %}}
 Monitoring using a Saas solution is only available to apps running on Mendix Cloud v4.
 
-[AppDynamics](https://www.appdynamics.com/) logging and application metrics are supported in Mendix version 6.2 and above.
+[AppDynamics](https://www.appdynamics.com/) application monitoring is supported in Mendix version 6.2 and above.
 
 [Datadog](https://www.datadoghq.com/) logging and application metrics are supported in Mendix version 7.15 and above.
 
@@ -52,7 +52,7 @@ Once you have configured your data analytics platform for your app, it will auto
 The metrics from your app's environment are supplied in the following namespaces:
 
 * commons.pool2 – database connection pool metrics
-* database – metrics on the database performance — by default, these are just *gauge* metrics (see [Rate and Count Database Metrics](#database-metrics), below)
+* database – metrics on the database performance
 * jetty – metrics from the ingress controller of the app
 * jmx – metrics from the Mendix runtime
 * jvm – metrics from the Java virtual machine in which the Mendix runtime runs

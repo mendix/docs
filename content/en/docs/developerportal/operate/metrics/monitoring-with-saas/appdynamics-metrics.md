@@ -80,7 +80,7 @@ To send your runtime information to AppDynamics, you need to set it up using env
 
         This allows you to classify different environments of your app. We recommend using the **Environment ID** to distinguish between *Test*, *Acceptance*, and *Production* environments. You can find this on the **General** tab of the [Environment Details](/developerportal/deploy/environments-details/) page of your app environment.
 
-    9. {{% todo %}}[Set log level?]{{% /todo %}}
+For more information on Nodes and Tiers in AppDynamics, see the [Overview of Application Monitoring](https://docs.appdynamics.com/22.1/en/application-monitoring/overview-of-application-monitoring)(https://docs.appdynamics.com/22.1/en/application-monitoring/overview-of-application-monitoring#OverviewofApplicationMonitoring-Nodes) in the AppDynamics documentation.
 
 5.  Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
 
@@ -105,17 +105,9 @@ Mendix does not provide any default values. If any of the following environment 
 
 Mendix does not send additional tags to AppDynamics to indicate Resource, Microflow, or Activity names. It is also not possible to add custom tags to the metrics you send to AppDynamics.
 
-### 4.3 AppDynamics Agent not Started
-
-If you configure your app for AppDynamics but the AppDynamics agent is not started, the events will be sent to the app log files.
-
-### 4.4 AppDynamics Issues
+### 4.3 AppDynamics Issues
 
 If you have any issues related to accessing AppDynamics, please contact their support here: [Support | AppDynamics](https://help.appdynamics.com/hc/en-us/requests/). You will need an AppDynamics account to request support.
-
-### 4.5 AppDynamics Java Agent
-
-Mendix will use AppDynamics Java Agent version 21.11.1.33280.
 
 ## 5 Read More
 

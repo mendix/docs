@@ -18,7 +18,7 @@ pre[class*="language-"] {
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
-	line-height: 1.1; /* NK - changed from 1.5 */
+	line-height: 1.25; /* NK - changed from 1.5 */
 
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
@@ -155,7 +155,7 @@ pre[class*="language-"].line-numbers > code {
 .line-numbers .line-numbers-rows {
 	position: absolute;
 	pointer-events: none;
-	top: 0;
+	top: 0.3em; /* NK - to accomodate moving toolbar buttons left */
 	font-size: 100%;
 	left: -3.8em;
 	width: 3em; /* works for line-numbers below 1000 lines */
@@ -189,7 +189,7 @@ div.code-toolbar {
 div.code-toolbar > .toolbar {
 	position: absolute;
 	top: .3em;
-	right: .2em;
+	left: .1em; /* NK - move toolbar buttons left */
 	transition: opacity 0.3s ease-in-out;
 	opacity: 0;
 }

@@ -81,4 +81,4 @@ See [How to Create a Test Case](/addons/ats-addon/ht-one-create-a-test-case/) fo
 
 You have now learned how to install the ATS tools, so the next how-to is [How to Create a Test Case](/addons/ats-addon/ht-one-create-a-test-case/).
 
-For an overview of all the how-tos and the structure, see [ATS 1 How-to's](/addons/ats-addon/ht-one/). We advise following the how-to's in the order listed there.
+For an overview of all the how-tos and the structure, see [ATS 1 How-tos](/addons/ats-addon/ht-one/). We advise following the how-to's in the order listed there.

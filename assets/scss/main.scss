@@ -27,8 +27,8 @@
     h5[id]:before {
         display: block;
         content: " ";
-        margin-top: 0; // NK - override for default values, to allow selection of items right above headers
-        height: 0; // NK - override for default values, to allow selection of items right above headers
+        margin-top: -48px; // NK - set to height of MxDock, to prevent dock from going on top of headings
+        height: 48px; // NK - set to height of MxDock, to prevent dock from going on top of headings
         visibility: hidden;
     }
 }

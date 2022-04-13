@@ -20,7 +20,7 @@ Before installing Studio Pro 9, please read [System Requirements](/refguide/syst
 
 If you have been using Studio Pro version 8, we recommend reading [Moving from Mendix Studio Pro 8 to 9](/refguide/moving-from-8-to-9/).
 
-If you are looking for step-by-step guides on performing various Mendix actions, browse the [Studio Pro 9 How-to's](/howto/).
+If you are looking for step-by-step guides on performing various Mendix actions, browse the [Studio Pro 9 How-tos](/howto/).
 
 ## 2 Studio Pro Functionality
 

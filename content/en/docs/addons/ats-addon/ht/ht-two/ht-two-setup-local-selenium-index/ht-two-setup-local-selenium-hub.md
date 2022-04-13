@@ -223,4 +223,4 @@ The following steps describe how to create a batch file to start up everything a
     start.bat
     ```
 
-Congratulations you have finished setting up a local selenium hub. The next how-to is [How to Set Up a Local Docker Selenium Hub](/addons/ats-addon/ht-two-setup-local-docker-selenium-hub/). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.
+Congratulations you have finished setting up a local selenium hub. The next how-to is [How to Set Up a Local Docker Selenium Hub](/addons/ats-addon/ht-two-setup-local-docker-selenium-hub/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.

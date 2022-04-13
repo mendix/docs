@@ -17,6 +17,16 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### April 7th, 2022
+
+#### Improvements
+
+* We introduced a new layout of the [Mendix Forum](/developerportal/community-tools/mendix-forum/) that features the following changes:
+	* The main navigation has been moved to the left sidebar
+	* There is a dedicated for page for your bookmarks
+	* Breadcrumb navigation
+	* Dedicated pages for Forum content you have interacted with (asked, answered, and commented for questions, and submitted and commented for ideas)
+  
 ### March 24th, 2022
 
 #### Improvements
@@ -721,7 +731,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* It is now possible to go to a Mendix community member's new [Mendix Profile](/developerportal/community-tools/mendix-profile/) directly from the [Buzz](/developerportal/collaborate/buzz/) and [People](https://sprintr.home.mendix.com/link/people) pages. (Ticket 69702)
+* It is now possible to go to a Mendix community member's new [Mendix Profile](/developerportal/community-tools/mendix-profile/) directly from the [Buzz](/developerportal/collaborate/buzz/) and [People](https://developer.mendixcloud.com/link/people) pages. (Ticket 69702)
 
 ### October 11th, 2018
 

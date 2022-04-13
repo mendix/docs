@@ -9,49 +9,58 @@ tags: ["marketplace", "marketplace component", "app service", "audit trail"]
 
 ## I Introduction
 
-Advanced Audit Trail allows you to trace changes, use infinitely-scalable and fully-indexed data search, and have dashboards. Once configured, the system automatically creates audit snapshots of objects to store an audit trail. This audit trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
+Advanced Audit Trail allows you to trace changes, use infinitely-scalable and fully-indexed data search. Once configured, the system automatically creates audit snapshots of objects to store an audit trail. This audit trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
 
-Advanced Audit Trail uses Kafka and Elasticsearch, shown in the intergration diagram below:
+We have built a software stack on top of [Kafka](https://kafka.apache.org/documentation/) and [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/index.html) to leverage their utility for audit trail in Mendix. See the integration diagram below:
 
-![integration-diagram](integration-diagram.png)
+{{< figure src="/attachments/appstore/app-services/advanced-audit-trail/integration-diagram.png >}}
 
 ### 1.1 Typical Use Cases
 
 * Prove who changed what at which moment
 * Debug why an object is in a specific stage
-* Create, store, and display a trail of open actions
-* Trace a list of events, instead of persistent data, by logging a non-persistent entity (use the Object Code for making the trail recognizable)
 
 ### 1.2 Features
 
-*  Scheduled events that will regularly send the stored snapshots to an external system
-*  Decoupling: when the external system cannot be reached, the snapshots will be stored in the local database, thus ensuring that the main system will keep on working without a dependency on the external database
-*  Admin interface to search through the external database (across entities)
-*  Microflows and pages to open a generalized view that can be shown to users for a trail of a specific object
-
-### 1.3 Limitations
-
-*  Due to an issue with IP protected modules, it is not possible to build the project in the cloud, or create a local versioned deployment (the workaround is to create an unversioned deployment package using Studio Pro 9.10.1, 9.11, or 9.11.1)
+*  Supports scheduled events that will regularly send the stored snapshots to an external system
+*  Supports decoupling: when the external system cannot be reached, the snapshots will be stored in the local database, thus ensuring that the main system will keep on working without a dependency on the external database
+*  Offers admin interface to search through the external database (across entities)
+*  Allows users to search the data on specific properties of the tracked objects using [Kibana](https://www.elastic.co/guide/en/kibana/index.html)
+*  Offers microflows and pages that open a generalized view to show users a trail of a specific object
 
 
-### 1.4 Prerequisites
+### 1.3 Prerequisites
 
-* Advanced Audit Trail can only be used with Studio Pro 9 versions starting with [9.11.1](https://docs.mendix.com/releasenotes/studio-pro/9.11/).
+* You need to use Advanced Audit Trail with Studio Pro 9 versions starting with [9.12](https://docs.mendix.com/releasenotes/studio-pro/9.12/).
+* You need to have an external data storage
 
 ## 2 Installation
 
+### 2.1 Starting a Subscription
+
+Advanced Audit Trail is a premium Mendix product that is subject to a purchase and subscription fee. You can deploy Advanced Audit Trail locally or in a Mendix Free App for free. However, to deploy Advanced Audit Trial on the cloud, you need to start a subscription to get a license token and configure it later. To start a subscription, contact your Customer Success Manager (CSM) or the Mendix Sales organization.
+
+### 2.2 Installing the Component in Your app
+
 Followed the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the **AdvancedAuditSnapshots** and **AdvancedAuditSnapshotsUI** modules into your project.
+
+{{% alert color="info" %}}If you update the **AdvancedAuditSnapshots** module, make sure that you update the **AdvancedAuditSnapshotsUI** module to the same version.{{% /alert %}}
 
 ## 3 Configuration
 
 1. Set up your application roles to include the right [module roles](#module-rules).
+
 2. Configure the right [constant values](#constants) for the right snapshots.
+
 3. Implement the **Before Commit** (**BCo**) and **Before Delete** **(Bde)** events (see the examples). Use the events on the domain model settings (**BCo** / **BDe**).
 
    You can create **CommitList** microflows that commit a list of objects without events, but use the **Create Snapshot (List)** action. This will ensure that the snapshots are committed in a list as well, and therefore minimizing performance impact of the module.
-   
+
 4. Add search to the navigation, or implement the Query Snapshots for object action.
-5. Make sure that the scheduled events are enabled in the deployment environments.
+
+5. Make sure that the [scheduled events](#scheduled-events) are enabled in the cloud portal.
+
+   {{% alert color="info" %}}Due to protected modules, we don not show scheduled events in Studio Pro.{{% /alert %}}
 
 #### 3.1 Module Roles {#module-roles}
 
@@ -61,7 +70,7 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 
 *  **DisplayOnly**: The display-only user can view queries that are prepared in microflows, but cannot change any of them. This can restrict the user to seeing information they are allowed to see. The role is tested against cross site scripting (XSS).
 
-    {{% alert color="warning" %}}Access from and to the long-term data storage is based on service accounts. This means that once a user can access the **Snippet_Settings**, they can access all data in the long-term storage, even if it belongs to other applications in the same environment. Any user-based authentication needs to be implemented in the runtime, for example, by using the **DisplayUser** module role and the **ACT_Object_OpenAuditTrailPrettyView** setup.{{% /alert %}}
+    {{% alert color="warning" %}}Access from and to the long-term data storage is based on service accounts. This means that once a user can access the **Snippet_Settings**, they can access all data in the long-term storage, even if it belongs to other applications in the same environment. Any user-based authentication needs to be implemented in the runtime, for example, by using the **DisplayOnly** module role and the **ACT_Object_OpenAuditTrailPrettyView** setup.{{% /alert %}}
 
 #### 3.2 Constants {#constants}
 
@@ -92,18 +101,22 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
     *  Kafka Endpoint / Username and Password: the credentials for the kafka environment for sending the data into the long term storage
     *  Kibana Endpoint / Username and Password: the credentials for the Kibana environment for receiving the data from the long term storage
        
-#### 3.3 Schedule Events 
+#### 3.3 Scheduled Events {#scheduled-events}
 
 - **SE_SendAuditSnapshots**: sends the cached data to the external data storage
-- **SE_CleanupSnapshotCache**: cleans up the cached data based on the retention settings – **OnlyDeleteProcessedItems** and **LogRetentionDays**
-- **SE_PeriodicVacuum**: runs a periodic vacuum on Postgres databases (see below)
 
-#### 3.4 Optional Advanced Features
+- **SE_CleanupSnapshotCache**: cleans up the cached data based on the retention settings – **OnlyDeleteProcessedItems** and **LogRetentionDays**
+
+- **SE_PeriodicVacuum**: runs a periodic VACUUM on PostgreSQL databases when these is no user logged in
+
+  {{% alert color="info" %}}Enable the scheduled event **SE_PeriodicVacuum** in the cloud portal for PostgreSQL databases. PostgreSQL databases require a regular VACUUM when the application creates and deletes a lot of objects in order to stay quick and not to grow out of disk space. The default Mendix Cloud settings will not always perform the VACUUM when needed. The scheduled event **SE_PeriodicVacuum** performs the VACUUM regularly. This scheduled event is for PostgreSQL only. For more info, see PostgreSQL documentation on [VACUUM]( https://www.postgresql.org/docs/9.6/sql-vacuum.html ) and [ANALYZE](https://www.postgresql.org/docs/9.6/sql-analyze.html).{{% /alert %}}
+
+#### 3.4 Advanced Features (Optional)
 
   - Link **NAV_AdvancedSettings** for accessing debug settings. Typically not needed, the features in here are subject to change.
-  - Link **NAV_CachedSnapshot_Overview** to access the local cache of snapshot data. 
-  - Check the default values of the **NPE Settings** object in the domain model, since they will be used for configuring the app. 
-  - Enable **SE_CleanupAuditSnapshots** if you want to use the retention settings and delete objects.
+  - Link **NAV_CachedSnapshot_Overview** to access the local cache of snapshot data.
+  - Check the default values of the **NPE Settings** object in the domain model, since they will be used for configuring the app
+  - Enable **SE_CleanupAuditSnapshots** if you want to use the retention settings and delete objects
 
   #### 3.5 Implementing Custom User Logging (Optional)
 
@@ -124,17 +137,3 @@ Use this action to create custom logging/entities and identify in what microflow
   #### 3.9 Changing the Module Layout (Optional)
 
 Update the **AuditSnapshots_ResponsiveLayout** to update the layouts without changing the pages.
-
-## 4 Usage
-
-### 4.1 Using Kibana
-
-Kibana has search and data visualization capabilities for data indexed in Elasticsearch. Kibana works as the user interface for monitoring, managing, and securing an Elastic Stack cluster.
-
-### 4.2 Using Kafka and Elasticsearch
-
-Apache Kafka is a distributed data store optimized for ingesting and processing streaming data in real-time. Kafka is used to build real-time streaming data pipelines and real-time streaming applications. For more details, see [What is Apache Kafka](https://aws.amazon.com/msk/what-is-kafka/).
-
-Elasticsearch is a distributed, RESTful search and analytics engine built on Apache Lucene. Elasticsearch can be used for use cases such as log analytics, full-text search, security intelligence, business analytics, and operational intelligence.
-
-### 4.3 Deployment Options 

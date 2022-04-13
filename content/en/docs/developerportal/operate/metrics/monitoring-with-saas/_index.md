@@ -19,8 +19,6 @@ Monitoring using a Saas solution is only available to apps running on Mendix Clo
 [AppDynamics](https://www.appdynamics.com/) application monitoring is supported in Mendix version 6.2 and above.
 
 [Datadog](https://www.datadoghq.com/) logging and application metrics are supported in Mendix version 7.15 and above.
-
-AppDynamics and Datadog do not conflict, so you can use both if you need to.
 {{% /alert %}}
 
 This document explains what information can be provided to an Saas-based data analytics platform.
@@ -42,6 +40,12 @@ Mendix provides two types of monitoring data:
 
 * Data from the Mendix Runtime, the Java Virtual Machine (JVM), the database, and the SaaS (Software as a Service, for example Cloud Foundry) environment – this is described in [Environment Metrics](#environment), below
 * Data from within the Mendix app itself – this is described in [App Metrics](#app-metrics), below
+
+{{% alert color="info" %}}
+If you are using AppDynamics with `APPDYNAMICS_MACHINE_AGENT_ENABLED` set to `false`, you will only receive the general AppDynamics metrics, provided by the AppDynamics Java Agent.
+
+We recommend you set this to `true` to receive the analytics which will help you monitor your app environment.
+{{% /alert %}}
 
 ## 3 Environment Metrics{#environment}
 

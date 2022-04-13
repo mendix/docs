@@ -12,10 +12,6 @@ tags: ["AppDynamics", "Mendix Cloud", "v4", "monitoring", "analysis"]
 
 [AppDynamics](https://www.appdynamics.com/) is a monitoring and analysis tool for cloud applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform. This document explains how to configure your Mendix Cloud v4 app to send data to AppDynamics to provide additional monitoring.
 
-{{% alert color="info" %}}
-AppDynamics logging and application metrics are supported in Mendix version 6.2 and above.
-{{% /alert %}}
-
 {{% alert color="warning" %}}
 AppDynamics is not supported in the deprecated Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
 {{% /alert %}}
@@ -40,35 +36,40 @@ To send your runtime information to AppDynamics, you need to set it up using env
 2. Click **Details** to select the environment you wish to monitor with AppDynamics. 
 3. Open the [**Runtime** tab](/developerportal/deploy/environments-details/#runtime-tab).
 4. Add the following **Custom Environment Variable**s.
-    1. APPDYNAMICS_CONTROLLER_PORT
+
+    1. APPDYNAMICS_MACHINE_AGENT_ENABLED
+
+        Set to `true` to enable specific Mendix metrics. If this is not set, or set to `false` AppDynamics will only receive the general AppDynamics metrics, provided by the AppDynamics Java Agent.
+
+    2. APPDYNAMICS_CONTROLLER_PORT
 
         The HTTP(S) port of the AppDynamics Controller. This is the port used to access the AppDynamics browser-based user interface. If **APPDYNAMICS_CONTROLLER_SSL_ENABLED** is set to `true`, specify the HTTPS port of the Controller; otherwise specify the HTTP port.
 
-    2. APPDYNAMICS_CONTROLLER_SSL_ENABLED
+    3. APPDYNAMICS_CONTROLLER_SSL_ENABLED
 
         Set to `true` if the agent should use SSL (HTTPS) to connect to the controller.
 
-    3. APPDYNAMICS_CONTROLLER_HOST_NAME
+    4. APPDYNAMICS_CONTROLLER_HOST_NAME
 
-        The hostname or the IP address of the AppDynamics Controller. This is the same host that you use to access the AppDynamics browser-based user interface. Example values are `192.168.1.22` or `myhost` or `myhost.example.com`.
+        The hostname or the IP address of the AppDynamics Controller without the *scheme* (protocol). This is the same host that you use to access the AppDynamics browser-based user interface. Example values are `192.168.1.22` or `myhost` or `myhost.example.com`.
         
         For an on-premises Controller, use the value for Application Server Host Name that was configured when the Controller was installed.
         
         For the AppDynamics SaaS Controller service, see the welcome email from AppDynamics.
 
-    4. APPDYNAMICS_AGENT_APPLICATION_NAME
+    5. APPDYNAMICS_AGENT_APPLICATION_NAME
 
         A unique name to identify all the metrics coming from your app. We recommend using the app name.
 
-    5. APPDYNAMICS_AGENT_ACCOUNT_NAME
+    6. APPDYNAMICS_AGENT_ACCOUNT_NAME
 
-        The name of your AppDynamics account.
+        The name of your AppDynamics account. This can be found in the **license** section of your AppDynamics Controller dashboard.
 
-    6. APPDYNAMICS_AGENT_ACCOUNT_ACCESS_KEY
+    7. APPDYNAMICS_AGENT_ACCOUNT_ACCESS_KEY
 
         The secret key used to authenticate your AppDynamics account.
 
-    7. APPDYNAMICS_AGENT_NODE_NAME
+    8. APPDYNAMICS_AGENT_NODE_NAME
 
         This is how you will identify which node the metrics are coming from. We recommend using the app name.
 
@@ -76,7 +77,7 @@ To send your runtime information to AppDynamics, you need to set it up using env
 
         {{% todo %}}[Is an instance appended for single-instance apps?]{{% /todo %}}
 
-    8. APPDYNAMICS_AGENT_TIER_NAME
+    9. APPDYNAMICS_AGENT_TIER_NAME
 
         This allows you to classify different environments of your app. We recommend using the **Environment ID** to distinguish between *Test*, *Acceptance*, and *Production* environments. You can find this on the **General** tab of the [Environment Details](/developerportal/deploy/environments-details/) page of your app environment.
 

@@ -161,7 +161,16 @@ This action deletes a single object defined by an object of entity type `S3Objec
 
 #### 3.2.7 Move Object
 
-This action moves an object from one bucket to another bucket. The original object is deleted.
+This action moves an object from one bucket to another bucket. The new object has the same key as the original object and the original object is deleted.
+
+{{% alert color="info" %}}
+You cannot change the key of an existing object. To do this, you should:
+
+* Get the object
+* Update the `Document/Name`
+* Put the object with its new name (key)
+* Delete the original object
+{{% /alert %}}
 
 **Parameters**
 
@@ -175,7 +184,7 @@ This action moves an object from one bucket to another bucket. The original obje
 
 #### 3.2.8 Copy Object
 
-This action copies an object from one bucket to another bucket. The original object remains in its original bucket.
+This action copies an object from one bucket to another bucket.  The new object has the same key as the original object and the original object remains in its original bucket.
 
 **Parameters**
 

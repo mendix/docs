@@ -98,6 +98,9 @@ If you would like to import an add-on module (the *.mxmodule* file) to your app,
 
 The add-on module is added to the **App Explorer**.
 
+A dialog informing about imported add-on module shows up.
+{{< figure src="/attachments/howto/integration/importing-and-exporting-objects/18582109.png" >}}
+
 
 ### 2.3 Importing Module Documents
 

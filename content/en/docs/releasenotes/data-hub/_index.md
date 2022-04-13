@@ -11,6 +11,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### April 14th, 2022
+
+#### New Feature
+
+* Deletion of Applications through the Registration API are now possible
+
 ### April 7th, 2022
 
 #### Fixes

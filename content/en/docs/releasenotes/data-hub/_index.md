@@ -7,7 +7,7 @@ weight: 30
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
+These release notes cover changes made to the [Mendix Data Hub](/data-hub/). 
 
 ## 2022
 
@@ -15,7 +15,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### New Feature
 
-* Deletion of Applications through the Registration API are now possible
+* You can now delete applications through the **Registration API**. Check out the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html), or read the documentation in the [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration/) section of *Data Hub APIs*.
 
 ### April 7th, 2022
 

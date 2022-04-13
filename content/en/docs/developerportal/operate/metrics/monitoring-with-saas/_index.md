@@ -83,8 +83,6 @@ The following metrics are useful when monitoring the performance of your Mendix 
 * postgresql.max_connections
 * postgresql.percent_usage_connections
 
-{{% todo %}}[What are Commons metrics - should they be documented here?]{{% /todo %}}
-
 Note that the absolute values are often not useful, but looking at trends over time can indicate performance issues or future action which might be required. Some of these trends are similar to those described in [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4/).
 
 ## 4 App Metrics {#app-metrics}

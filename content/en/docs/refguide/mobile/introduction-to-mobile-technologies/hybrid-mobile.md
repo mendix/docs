@@ -12,8 +12,6 @@ aliases:
     - /howto/mobile/push-notifications/
 ---
 
->>>>> /refguide/mobile/hybrid-mobile.md
-
 ## 1 Introduction
 
 Hybrid mobile apps are deprecated as of Mendix 9. This means that hybrid mobile apps are still supported in Mendix 9 but their usage is discouraged. Accordingly, the creation of new hybrid navigation profiles is disabled.
@@ -25,25 +23,7 @@ For hybrid mobile documentation see these Mendix 8 documents:
 * [Hybrid Mobile How To Documentation](/howto8/mobile/hybrid-mobile/)
 * [Hybrid Mobile Reference Guide](/refguide8/hybrid-mobile/)
 
-
-
-
->>>>> /howto/mobile/hybrid-mobile/_index.md
-
-## 1 Introduction
-
-Hybrid mobile apps are deprecated as of Mendix 9. This means that hybrid mobile apps are still supported in Mendix 9 but their usage is discouraged. Accordingly, the creation of new hybrid navigation profiles is disabled.
-
-For more information see this [Hybrid Mobile Apps Deprecation with Mendix 9](https://www.mendix.com/blog/hybrid-mobile-apps-deprecation-with-mendix-9/) blog entry.
-
-For hybrid mobile documentation see these Mendix 8 documents:
-
-* [Hybrid Mobile How To Documentation](/howto8/mobile/hybrid-mobile/)
-* [Hybrid Mobile Reference Guide](/refguide8/hybrid-mobile/)
-
->>>>> /howto/mobile/hybrid-mobile/build-hybrid-apps.md
-
-## 1 Introduction
+## 2 Building Hybrid Apps
 
 {{% alert color="warning" %}}
 Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. PhoneGap does not allow you to create  iOS 13 builds, but the Apple App Store requires builds be iOS 13 or higher. As a result, as of April 30th 2020, hybrid iOS apps built using the PhoneGap Build service are not being accepted on Apple's App Store. 
@@ -51,26 +31,23 @@ Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Un
 
 Hybrid apps are built by using Cordova to wrap a web app in a native wrapper. If you want more immersive native experiences, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps/).
 
-The documents in this section focus on building and publishing hybrid apps in the Apple and Google app stores. For more details on platform-specific installation packages see [Mobile App](/developerportal/deploy/mobileapp/) in the Developer Portal Guide.
+To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally/) for information on local building.
 
+## 3 Set Up Hybrid Push Notifications
 
->>>>> /howto/mobile/hybrid-mobile/setting-up-hybrid-push-notifications.md
+In this section we will set up hybrid push notifications.
 
-## 1 Introduction
-
-In this how to we will set up hybrid push notifications.
-
-**This how-to will teach you how to do the following:**
+**This section will teach you how to do the following:**
 
 * Customize your hybrid template to enable push notifications
 
-## 2 Prerequisites
+### 3.1 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Complete [How to Set Up the Google Firebase Cloud Messaging Server](/howto/mobile/setting-up-google-firebase-cloud-messaging-server/)
 
-## 3 Building Your Mobile Application
+### 3.2 Building Your Mobile Application
 
 If your app supports push notifications, you are required to set up a Firebase account for your app and include Google service description files (*google-services.json* and *GoogleService-Info.plist*) in your hybrid app.
 
@@ -101,9 +78,7 @@ To build the hybrid app package, follow these steps:
 
     {{< figure src="/attachments/howto/mobile/hybrid-mobile/setting-up-hybrid-push-notifications/build.phonegap.com.png" >}}
 
->>>>> /howto/mobile/hybrid-mobile/push-notifications.md
-
-## 1 Introduction
+## 4 Include Push Notifications
 
 Push notifications enable your app to notify a user of events, even if the user is not actively using the app. This is a native capability available on both Android and iOS devices, and it is controlled through external services via, for example, Firebase Cloud Messaging (FCM) or Apple Push Notifications service (APNs).
 
@@ -114,7 +89,7 @@ The Mendix push notifications solution consists of these two parts:
 
 The Mendix push notifications functionality makes it easy for developers to include push notification capabilities in their Mendix hybrid mobile apps.
 
-## 2 Prerequisites
+### 4.1 Prerequisites
 
 To use push notifications, make sure you have the following:
 
@@ -122,16 +97,16 @@ To use push notifications, make sure you have the following:
 * The Mendix [Push Notifications Connector](/appstore/modules/push-notifications/)
 * A mobile device (to get started, we recommend an Android device connected to your development machine via a data cable)
 
-## 3 Supported Platforms
+### 4.4 Supported Platforms
 
 * Android 5.0 and above
 * iOS 9.0 and above
 
-## 4 GCM vs. FCM
+### 4.5 GCM vs. FCM
 
 Earlier versions of the Mendix Push Notifications Connector supported Google Cloud Messaging (GCM) and APNs. Google has replaced GCM with FCM.
 
-## 5 Dependencies
+### 4.6 Dependencies
 
 * Apache Commons IO: Apache 2.0
 * Jackson (core+databind+annotations): Apache 2.0
@@ -144,6 +119,6 @@ Earlier versions of the Mendix Push Notifications Connector supported Google Clo
 * Netty Tomcat Native Fork: Apache 2.0
 * Pushy: MIT
 
-## 6 Contributing
+### 4.7 Contributing
 
 For more information on contributing to this repository, see [How to Contribute to a Mendix GitHub Repository](/howto/collaboration-requirements-management/contribute-to-a-github-repository/).

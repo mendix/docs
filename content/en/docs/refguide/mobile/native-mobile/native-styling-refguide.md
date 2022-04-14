@@ -1687,7 +1687,7 @@ The default class to style all check box inputs is named `com_mendix_widget_nati
 
 ### 11.31 Background Gradient
 
-The background gradient widget allow you to apply a background that transitions between multiple colors in a linear direction..
+The background gradient widget allows you to apply a background that transitions between multiple colors in a linear direction..
 
 The widget’s style properties are as follows:
 
@@ -1701,8 +1701,7 @@ The widget’s style properties are as follows:
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |        |
 
-The default class to style all background gradient is named `com_mendix_widget_native_backgroundgradient_BackgroundGradient`.
-
+The default class to style all background gradient properties is named `com_mendix_widget_native_backgroundgradient_BackgroundGradient`.
 
 ## 12 Read More
 

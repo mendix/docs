@@ -206,7 +206,7 @@ The most up-to-date list of supported languages in your version of Studio Pro is
 | Vietnamese | Vietnam | vi_VN | 9.0.5 |
 | Welsh | Wales | cy_GB | 9.0.5 |
 
-## 6 List of Deprecated Langauges
+## 6 List of Deprecated Languages
 
 | Language | Region | Locale | Available Since | Deprecated In |
 | --- | --- | --- | --- | --- |

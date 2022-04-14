@@ -168,6 +168,13 @@ If you find that your microflow has a large number of objects to loop over, or e
 
 As always, make sure you look at the retrieves and commits performed in your loops, and try to minimize them wherever possible.
 
-## 6 Read More
+## 6 Using MxAssist Performance Bot
+
+[MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) can help you find potential improvements to your app for better performance. It can be accessed via **View** > **MxAssist Performance Bot**.
+
+For more information on performance best practices, see [Performance Best Practices](/refguide/performance-best-practices/).
+
+## 7 Read More
 
 * [Expert Webinar Series: Performance](http://ww2.mendix.com/Expert-Webinar.Performance.html)
+

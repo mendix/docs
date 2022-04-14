@@ -18,11 +18,15 @@ Powered by AI and OCR technologies, the [Receipt Processing](https://marketplace
 
 ### 1.2 Limitation
 
-* Currently only supports images in JPG and JPEG formats
+* Currently only supports images in JPG and JPEG formats.
 
 ### 1.3 Prerequisites
 
 This app service works best with Studio Pro 8 versions starting with [8.18.15](/releasenotes/studio-pro/8.18/#81815) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0/).
+* For optimal recognition results, make sure that documents with small fonts have high resolutions:
+  * If images are made using a scanner, it is recommended to use 300 dpi for texts in font size 10 pt or larger and 400-600 dpi for texts in font size 9 pt or smaller
+  * If images are taken using a digital camera, it is recommend to use at least a 5-megapixel sensor with auto focusing and flash disabling features, fit the page entirely within the camera frame, and distribute lighting evenly across the page to avoid any dark areas or shadows on the image
+
 
 ## 2 Installation
 
@@ -85,7 +89,10 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
         {{< figure src="/attachments/appstore/app-services/receipt-processing/document-model-training-app.png" alt="Document model training app login page" >}}
       
     5. Log into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account. 
-    6. Click **Environment** to show the **Existing Models** list.   
+    6. Click **Environment** to show the **Existing Models** list.
+
+{{% alert color="info" %}}Recommendation – Do not use browser navigation controls but instead use appropriate buttons in the web app to refresh page, go to previous page etc. e.g. Using the “Refresh” button on the web app page rather than using F5 or Refresh control from the Browser. We recommend using Chrome browser.{{% /alert %}}
+
     7.  Select pre-trained model. Make sure that the **Status** of the model is **Published**.
 
         {{< figure src="/attachments/appstore/app-services/receipt-processing/pre-trained-receipt-model-pub.png" alt="pre trained model published" >}}
@@ -97,6 +104,8 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
       
     10. Click **Download** to get the JSON structure.
    
+    {{% alert color="info" %}}As this action is actually extracting data from the input sample receipt to generate JSON structure, usage is counted against allocated quota for your provisioned instance.{{% /alert %}}
+    
     {{% alert color="info" %}}Since the document model is pre-trained, the system does not generate a `confidence level` during the receipt processing; instead, it generates a `not applicable` string.{{% /alert %}}
    
 2.  To add the JSON structure to your app, perform the following steps:
@@ -124,7 +133,11 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
     {{< figure src="/attachments/appstore/app-services/receipt-processing/receipt-processing-microflow.png" alt="receipt-processing-microflow" >}}
 
-2. Create a list of image that inherits from `System.Image`. Images from where data are extracted should be passed as a list, as shown in the microflow above.
+2. Create a list of image that inherits from `System.Image`. Images from where data is extracted should be passed as a list, as shown in the microflow above.
+{{% alert color="info" %}} The total size of the images being passed for extraction should not exceed **20MB**. If you have multiple images to extract data from, you can process them in smaller batches. {{% /alert %}}
+
+{{% alert color="info" %}}The number of images passed as a List in the microflow and processed by **Receipt Processing** activity will be counted against allocated quota for your provisioned instance.{{% /alert %}}
+
 3.  Double-click the **Receipt Processing** activity to open the **Receipt Processing** dialog box.
 
     {{< figure src="/attachments/appstore/app-services/receipt-processing/receipt-processing-dialog-box.png" alt="Receipt Processing" >}}

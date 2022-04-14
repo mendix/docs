@@ -78,7 +78,14 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
 ### 4.1 Training a Document Model {#document-model-training}
 
+{{% alert color="info" %}}Quick tips for training a model -
+1) At a minimum 3-5 samples should be used to train your model for improving the accuracy of data extraction.
+2) All input images used for training must have a similar structure.
+3) Proper usage of the marker tool is key to enhanced quality of extracted data; hence while selecting a field, kindly select the complete field area properly to mark it.
+{{% /alert %}}
+
 1.  Perform the following steps to log into the **Document Model Training** application:
+
     1. Log into the Marketplace with your Mendix account.
     
     2.  Go to **My Marketplace** and then do as follows:
@@ -97,6 +104,8 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/existing-models-list.png" alt="Existing models list" >}}
 
+    {{% alert color="info" %}}Recommendation – Do not use browser navigation controls but instead use appropriate buttons in the web app to refresh page, go to previous page etc. e.g. Using the “Refresh” button on the web app page rather than using F5 or Refresh control from the Browser. We recommend using Chrome browser.{{% /alert %}}
+    
     {{% alert color="info" %}} The model is ready to use only when the **Status** of this model is **Published**. {{% /alert %}}
 
 3.  To train a new model, click **Create New Model** on the page. The **Create New Model** dialog box opens.
@@ -112,7 +121,7 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/import-file-page.png" alt="Import File page" >}}
     
-    {{% alert color="warning" %}}If you upload multiple files, all your images must have a similar structure. Each image file size should not exceed 50 MB.{{% /alert %}}
+    {{% alert color="warning" %}}If you upload multiple files, all your images must have a similar structure.{{% /alert %}}
     
 7.  Click **Next**. The **Add Marker and IDs** page opens. The status of the images you imported shows **Not Marked**.
 
@@ -162,7 +171,9 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
     6. Click **Download** to get the JSON structure.
 
-    {{% alert color="info" %}} Generated JSON structure file size cannot exceed 50MB. {{% /alert %}}
+    {{% alert color="info" %}}As this action is actually extracting data from the input samples to generate JSON structure, usage is counted against allocated quota for your provisioned instance.{{% /alert %}}
+    
+    {{% alert color="info" %}} You may get blank value(s) in extracted response for some fields as our intelligence component returns empty field if it is not confident about the extraction result. To improve the accuracy of extraction please follow the Quick-tips. {{% /alert %}}
     
 2.  To add the JSON structure to your app, perform the following steps:
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the generated JSON structure.
@@ -189,6 +200,11 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/intelligent-document-microflow.png" alt="intelligent-document-microflow" >}}
 
 2. Create a list of image that inherits from `System.Image`. Images from where data are extracted should be passed as a list, as shown in the microflow above.
+
+{{% alert color="info" %}} The total size of the images being passed for extraction should not exceed **20MB**. If you have multiple images to extract data from, you can process them in smaller batches. {{% /alert %}}
+
+{{% alert color="info" %}}The number of images passed as a List in the microflow and processed by **Intelligent Document Service** activity will be counted against allocated quota for your provisioned instance.{{% /alert %}}
+
 3.  Double-click the **Intelligent Document Service** activity to open the dialog box.
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/intelligent-document-service-dialog-box.png" alt="Intelligent Document Service dialog box" >}}

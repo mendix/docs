@@ -51,7 +51,7 @@ So now we have to remove previous version of Charts widget.
 To do so, open your project in File Manager. Navigate to **<YOUR_PROJECT>/widgets** directory
 and find file with name **Charts.mpk**. Now you have to remove this file.
 
-{{< figure src="/attachments/appstore/modules/charts/delete-chart-widget.png" >}}
+{{< figure src="/attachments/appstore/modules/charts/delete-chart-widget.png" alt="File manager window with list of widgets. Charts.mpk file is selected with open context menu next to it. Delete item is hovered." >}}
 
 And we are done! Now all what's left is to install new version of Charts widget.
 

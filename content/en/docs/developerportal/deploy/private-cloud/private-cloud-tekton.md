@@ -12,18 +12,18 @@ tags: ["CI/CD", "Tekton", "Private Cloud", "Environment"]
 Mendix recommends using [Tekton](https://tekton.dev/) to create a CI/CD (Continuous Integration and Delivery/Deployment) solution for your Mendix for Private Cloud apps. This document explains how to install:
 
 * Tekton
-* Pipelines containing the appropriate Tasks and Steps to manage apps and environments
-* Triggers to run the Pipelines
+* Pipelines containing the appropriate tasks and steps to manage apps and environments
+* Triggers to run the pipelines
 
 After following the steps in this document you will be able to:
 
 * Create a Mendix app environment with an HTTP request.
-* Build and deploy a Mendix app from a Git repository with GitLab webhook or HTTP request.
+* Build and deploy a Mendix app from a Git repository using a GitLab webhook or HTTP request.
 * Configure a Mendix app environment with an HTTP request.
 * Delete a Mendix app environment with an HTTP request.
 
 {{% alert color="info" %}}
-All commands should be executed in a Bash (or bash-compatible) terminal.
+All commands used in this document should be executed in a Bash (or bash-compatible) terminal.
 {{% /alert %}}
 
 ## 2 Prerequisites
@@ -35,7 +35,7 @@ To follow these instructions you will need:
 * A [namespace added](/developerportal/deploy/private-cloud-cluster/#add-namespace) to the cluster
 * The [Mendix Operator installed](/developerportal/deploy/private-cloud-cluster/#install-operator) and configured in the cluster
 * The [Helm](https://helm.sh) package manager
-* Access to the internet to copy images to your air-gapped registry, or to install images directly
+* Access to the internet to copy images to your air-gapped registry, or to install images directly onto your cluster
 
 If you have any issues when following these instructions, see the [Troubleshooting](#troubleshooting) section to see if there is a solution.
 
@@ -45,18 +45,18 @@ If you have any issues when following these instructions, see the [Troubleshooti
 
 [Tekton](https://tekton.dev/) is an open-source cloud native CI/CD solution which consists of 4 components:
 
-* Pipelines: Basic building blocks (tasks and pipelines) of a CI/CD workflow
-* Triggers: Event triggers for a CI/CD workflow
-* CLI: Command-line interface for CI/CD workflow management (not installed as part of these instructions)
-* Dashboard: General-purpose, web-based UI for Pipelines
+* Pipelines – basic building blocks (tasks and steps) of a CI/CD workflow
+* Triggers – event triggers for a CI/CD workflow
+* CLI – command-line interface for CI/CD workflow management (not installed as part of these instructions)
+* Dashboard – general-purpose, web-based UI for Pipelines
     
 ### 3.2 Tekton Pipelines
 
-Each activity needed for management of the Mendix for Private Cloud environments and apps is mapped to a Tekton **pipeline**. These pipelines are run when a **trigger** condition is met. Each pipeline needs its own trigger and cannot automatically run subsequent pipelines.
+Each activity needed for management of Mendix for Private Cloud environments and apps is mapped to a Tekton **pipeline**. These pipelines are run when a **trigger** condition is met. Each pipeline needs its own trigger and cannot automatically run subsequent pipelines.
 
-A **pipeline** is a collection of **tasks** in order. Tekton creates a number of Kubernetes pods and ensures that each pod completes running successfully as desired. 
+A **pipeline** is a collection of **tasks** in order. Tekton creates tasks in a number of Kubernetes pods and ensures that each pod successfully completes its task. 
 
-A **task** is a collection of **steps** in order. Tekton runs a task in the form of a Kubernetes pod, where each step becomes a running container in the pod. This design allows you to set up a shared environment for a number of related steps; for example, you may mount a Kubernetes volume in a task, which will be accessible inside each step of the task.
+A **task** is a collection of **steps** in order. Tekton runs a task in the form of a Kubernetes pod, where each step becomes a running container in the pod. This design allows you to set up a shared environment for a number of related steps. For example, you may mount a Kubernetes volume in a task; this will be accessible from each step of the task.
  
 A **step** is an operation in a CI/CD workflow. Tekton performs each step as a running container in the task pod. 
     
@@ -74,15 +74,15 @@ The Mendix pipelines work together as shown in the diagram below to create the a
 
 Mendix has created the following Tekton pipelines:
 
-* **build-pipeline** – Build and push a Mendix container image from a Mendix MPR file, hosted in a GIT repository — this can only be run after **create-app-pipeline**
-* **configure-app-pipeline** – Update an existing Mendix App
-* **create-app-pipeline** – Create a basic MendixApp CR — After running this pipeline, we are ready to run build-pipeline
-* **delete-app-pipeline** – Delete the Mendix App CR, which triggers the deletion of the environment
+* **build-pipeline** – build and push a Mendix container image from a Mendix MPR file, hosted in a GIT repository — this can only be run after **create-app-pipeline**
+* **configure-app-pipeline** – update an existing Mendix App
+* **create-app-pipeline** – create a basic MendixApp CR — After running this pipeline, we are ready to run build-pipeline
+* **delete-app-pipeline** – delete a Mendix App CR, which triggers the deletion of the environment
 
 
 #### 3.3.2 Mendix Triggers
 
-Triggers are set up to trigger the Mendix pipelines in two ways 
+Triggers are set up to trigger the Mendix pipelines in two ways:
 
 * HTTP Trigger – triggers the build-pipeline pipeline 
 * Tekton Dashboard Triggers – trigger the remaining pipelines
@@ -91,7 +91,7 @@ Triggers are set up to trigger the Mendix pipelines in two ways
 
 These instructions install the Tekton Dashboard in the same namespace as the Tekton pipelines. It is run on port 9097.
 
-Official installation procedure here: https://github.com/tektoncd/dashboard\
+You can read the official installation procedure on the [Tekton Dashboard](https://github.com/tektoncd/dashboard/#readme) GitHub repo.
 
 ## 4 Preparation for Air-gapped Environments{#preparation}
 
@@ -99,7 +99,7 @@ Official installation procedure here: https://github.com/tektoncd/dashboard\
 If your cluster is not air-gapped and has access to the internet, you can skip this section and go straight to [Tekton Installation](#tekton-installation).
 {{% /alert %}}
 
-To install Tekton and your CI/CD Pipeline in air-gapped environment you need to provision a list of images in your registry. Mendix has created a tool, **aip**, to perform this on different operating systems. You will need to download them using the following links:
+To install Tekton and your CI/CD Pipeline in air-gapped environment you need to provision a list of images in your registry. Mendix has created a tool, **aip**, to perform this on different operating systems. You will need to download it using one of the following links:
 
 * [Aip for Mac (amd64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.2-macos-amd64.tar.gz)
 * [Aip for Windows](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.2-windows-amd64.zip)

@@ -7,7 +7,7 @@ weight: 30
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes made to the [Mendix Data Hub](/data-hub/). 
+These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 

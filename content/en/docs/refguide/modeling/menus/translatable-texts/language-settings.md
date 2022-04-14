@@ -136,7 +136,6 @@ The most up-to-date list of supported languages in your version of Studio Pro is
 | Italian | Italy | it_IT | 9.0.5 |
 | Italian | Switzerland | it_CH | 9.0.5 |
 | Japanese (Gregorian calendar) | Japan | ja_JP | 9.0.5 |
-| Japanese (Imperial calendar) | Japan | ja_JP_JP | 9.0.5 |
 | Kazakh | Kazakhstan | kk_KZ | 9.10.0 |
 | Khmer | Cambodia | km_KH | 9.0.5 |
 | Kinyarwanda | Rwanda | rw_RW | 9.3.0 |
@@ -163,7 +162,8 @@ The most up-to-date list of supported languages in your version of Studio Pro is
 | Romanian | Romania | ro_RO | 9.0.5 |
 | Russian | Russia | ru_RU | 9.0.5 |
 | Serbian (Cyrillic) | Bosnia and Herzegovina | sr_BA | 9.0.5 |
-| Serbian (Cyrillic) | Serbia and Montenegro | sr_CS | 9.0.5 |
+| Serbian (Cyrillic) | Montenegro | sr_ME | 9.14.0 |
+| Serbian (Cyrillic) | Serbia | sr_RS | 9.14.0 |
 | Sinhala | Sri Lanka | si_LK | 9.3.0 |
 | Slovak | Slovakia | sk_SK | 9.0.5 |
 | Slovenian | Slovenia | sl_SI | 9.0.5 |
@@ -205,3 +205,10 @@ The most up-to-date list of supported languages in your version of Studio Pro is
 | Urdu | Pakistan | ur_PK | 9.2.0 |
 | Vietnamese | Vietnam | vi_VN | 9.0.5 |
 | Welsh | Wales | cy_GB | 9.0.5 |
+
+## 6 List of Deprecated Langauges
+
+| Language | Region | Locale | Available Since | Deprecated In |
+| --- | --- | --- | --- | --- |
+| Japanese (Imperial calendar) | Japan | ja_JP_JP | 9.0.5 | 9.6.0 |
+| Serbian (Cyrillic) | Serbia and Montenegro | sr_CS | 9.0.5 | 9.14.0 |

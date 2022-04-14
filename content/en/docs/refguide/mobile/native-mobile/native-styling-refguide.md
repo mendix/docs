@@ -1701,7 +1701,7 @@ The widget’s style properties are as follows:
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |        |
 
-The default class to style all background gradient properties is named `com_mendix_widget_native_backgroundgradient_BackgroundGradient`.
+The default class to style all background gradients is named `com_mendix_widget_native_backgroundgradient_BackgroundGradient`.
 
 ## 12 Read More
 

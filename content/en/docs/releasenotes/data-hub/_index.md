@@ -11,6 +11,17 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### April 14th, 2022
+
+#### New Feature
+
+* You can now delete applications through the **Registration API**. Check out the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html), or read the documentation in the [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration/) section of *Data Hub APIs*.
+* When a person is assigned to an application as a Technical Owner or Business Owner, they will receive an MxDock notification confirming their new role.
+
+#### Fixes
+
+* We fixed a `NullPointerException` that occured when the **Versions** of an endpoint was empty on the **Registration API** `GET` service call.
+
 ### April 7th, 2022
 
 #### Fixes

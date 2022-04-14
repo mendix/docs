@@ -54,7 +54,7 @@
                 {{ end -}} */}}
             {{ end -}}
         <!-- MvM: get the alternative output formats from the PAGE (in theme it is for Section) and change text to print_page-->
-            {{ with .CurrentSection.AlternativeOutputFormats.Get "print" -}}
+            {{ with .AlternativeOutputFormats.Get "print" -}}
           </div>
           <div class="col-3">
             <!-- NK - changed icon properties -->

@@ -33,10 +33,10 @@ There are three different types of search fields that can be used for different 
 {{% alert color="info" %}}
 You cannot change the type of a search field, you will need to delete it and then add a new one of a different type.
 {{% /alert %}}
-{{% alert color="info" %}}
-When using a date type in the search field, is only possible apply the filtering for the date component. That doesn't apply to the time or a custom format containing time.
-{{% /alert %}}
 
+{{% alert color="info" %}}
+When using a date type in the search field, is only possible apply filtering to the **date** component. Filtering cannot be applied to the **time** component or a **custom format** containing time.
+{{% /alert %}}
 
 ## 3 Search Field Properties {#search-field-properties}
 

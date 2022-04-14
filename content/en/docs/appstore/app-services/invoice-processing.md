@@ -22,6 +22,9 @@ Powered by AI and OCR technologies, the [Invoice Processing](https://marketplace
 ### 1.3 Prerequisites
 
 This app service works best with Studio Pro 8 versions starting with [8.18.5](/releasenotes/studio-pro/8.18/#8185) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0/).
+* For optimal recognition results, make sure that documents with small fonts have high resolutions:
+  * If images are made using a scanner, it is recommended to use 300 dpi for texts in font size 10 pt or larger and 400-600 dpi for texts in font size 9 pt or smaller
+  * If images are taken using a digital camera, it is recommend to use at least a 5-megapixel sensor with auto focusing and flash disabling features, fit the page entirely within the camera frame, and distribute lighting evenly across the page to avoid any dark areas or shadows on the image
 
 ## 2 Installation
 
@@ -87,6 +90,8 @@ To use the Invoice Processing app service, first you need to create a model, the
     
     5. Log into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account.    
     
+    {{% alert color="info" %}}Recommendation – Do not use browser navigation controls but instead use appropriate buttons in the web app to refresh page, go to previous page etc. e.g. Using the “Refresh” button on the web app page rather than using F5 or Refresh control from the Browser. We recommend using Chrome browser.{{% /alert %}}
+    
 2.  From the drop-down list below **Select an environment to continue**, select an environment that you use to train models for the Invoice Processing app service. The **Existing Models** in this environment are displayed.
 
     {{< figure src="/attachments/appstore/app-services/invoice-processing/existing-invoice-models.png" alt="Existing Invoice models list" >}}
@@ -126,6 +131,9 @@ You need to use an [Import Mapping](/refguide/mapping-documents/#import-mappings
         {{< figure src="/attachments/appstore/app-services/invoice-processing/sample-extraction-dialog-box.png" alt="Sample Extraction dialog box" >}}
 
     6. Click **Download JSON** to get the JSON structure.
+    
+    {{% alert color="info" %}}As this action is actually extracting data from the input samples to generate JSON structure, usage is counted against allocated quota for your provisioned instance.{{% /alert %}}
+    
 2.  To add the JSON structure to your app, perform the following steps:
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON structure.
     2.  From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures/).
@@ -152,6 +160,11 @@ You need to use an [Import Mapping](/refguide/mapping-documents/#import-mappings
     {{< figure src="/attachments/appstore/app-services/invoice-processing/invoice-processing-microflow.png" alt="intelligent-document-microflow" >}}
 
 2. Create a list of image that inherits from `System.Image`. Images where data are extracted should be passed as a list, as shown in the microflow above.
+
+{{% alert color="info" %}} The total size of the images being passed for extraction should not exceed **20MB**. If you have multiple images to extract data from, you can process them in smaller batches. {{% /alert %}}
+
+{{% alert color="info" %}}The number of images passed as a List in the microflow and processed by **Invoice Processing** activity will be counted against allocated quota for your provisioned instance.{{% /alert %}}
+
 3.  Double-click the **Invoice Processing** activity to open the dialog box.
 
     {{< figure src="/attachments/appstore/app-services/invoice-processing/invoice-processing-dialog-box.png" alt="Intelligent Document Service dialog box" >}}

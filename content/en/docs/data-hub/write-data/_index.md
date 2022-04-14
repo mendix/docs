@@ -32,20 +32,16 @@ Note the following terminology differences described in the table below:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install Studio Pro version [9.9.1 or above](https://marketplace.mendix.com/link/studiopro/)
+* Install Studio Pro version [9.13.0 or above](https://marketplace.mendix.com/link/studiopro/)
 * Understand how read-only external entities behave by reading [How to Share Data Between Apps](/data-hub/share-data/)
 
 ## 3 Exposing OData Contracts in Mendix Studio Pro
 
-When you publish an entity in a published OData service, clients can read the data by default. To allow clients to update the data as well, do the following:
+When you publish an entity in a published OData service, clients can read the data by default. To allow clients to update, insert or delete the data as well, do the following:
 
 1. Open the published OData service in **MyFirstModule** > **APIs** > **{yourname}CustomerODataService**.
 2. Select the **Customer** entity and click **Edit**.
-3. Check the **Updatable** checkbox.
-
-{{% alert color="info" %}}
-Studio Pro version 9.9.1 does not support publishing insertable or deletable resources yet.
-{{% /alert %}}
+3. Use the checkboxes to indicate whether the entity should be **Insertable**, **Updatable**, and/or **Deletable**.
 
 ## 4 Viewing OData Capabilities in Data Hub Catalog
 

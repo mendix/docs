@@ -20,7 +20,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Fixes
 
-* We fixed a `NullPointerException` that occured when the **Versions** field of an endpoint was empty on the **Registration API** `GET` service call.
+* We fixed a `NullPointerException` that occured when the **Versions** of an endpoint was empty on the **Registration API** `GET` service call.
 
 ### April 7th, 2022
 

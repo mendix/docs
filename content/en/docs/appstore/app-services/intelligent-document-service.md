@@ -19,8 +19,7 @@ The [Intelligent Document Service](https://marketplace.mendix.com/link/component
 
 ### 1.2 Limitation
 
-* Currently only supports images in JPG and JPEG formats
-* Each image file size cannot exceed 50 MB
+* Currently only supports images in JPG and JPEG formats.
 
 ### 1.3 Prerequisites
 

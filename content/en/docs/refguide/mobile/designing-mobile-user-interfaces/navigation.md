@@ -7,8 +7,6 @@ aliases:
     - /refguide/native-navigation/
 ---
 
->>>>> /refguide/mobile/native-mobile/native-navigation.md
-
 ## 1 Introduction
 
 Although you model native mobile apps in similar ways to web applications, some aspects of navigation in native mobile apps differ from those in web applications. This guide will explain those navigation differences.

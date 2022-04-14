@@ -97,6 +97,7 @@ div.image-card{
 	box-sizing: border-box;
 	border-radius: 4px;
 	margin: 0.5rem 0.75rem 1rem 0rem;
+    height: 300px; // NK - fixed height for most popular cards
 }
 div.image-card-row{
 	padding: 0;
@@ -144,7 +145,7 @@ h4.card-title{
 h4.card-title-w-50{
 	color: $gray-900;
 	font-weight: 600;
-	margin: 0.5rem 0rem 0.5rem 1.5rem;
+	margin: 0.5rem 0rem 0.5rem 1rem; // NK - bring title closer to icon
 
 		&:hover {
 			color: $blue;

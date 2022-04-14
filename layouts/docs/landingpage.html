@@ -47,7 +47,7 @@
              <!-- MvM: Move breadcrumb above banner -->
             {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
             {{ partial "version-banner.html" . }}
-            <div class="row" style="margin-left: 0.5rem;margin-bottom: 1rem;">
+            <div class="row" style="margin-top: 2rem;margin-left: 0.5rem;margin-bottom: 1rem;"> <!-- NK - addded more visual padding -->
               <div class="col-lg-6 col-xl-7">
                 <h1 class="page-title">{{ .Page.Title}}</h1>
                 <br>

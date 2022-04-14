@@ -21,7 +21,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 #### Fixes
 
 * We fixed a `NullPointerException` that occured when the **Versions** of an endpoint was empty on the **Registration API** `GET` service call.
-* We fixed a script that inadvertently defaulted to the new dark theme while there was no way to restore the default (light) theme.
+* We fixed an issue where the Catalog loaded in our unreleased dark mode. Dark mode is not ready yet, but we will let you know when that feature is ready to go!
 
 ### April 7th, 2022
 

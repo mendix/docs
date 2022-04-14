@@ -7,8 +7,6 @@ aliases:
     - /refguide/progressive-web-app/
 ---
 
->>>>> /refguide/mobile/progressive-web-app/_index.md
-
 ## 1 Introduction
 
 Progressive web apps (PWAs) are an evolution of traditional web apps. Overall, PWAs tend to behave more like native mobile apps, and their popularity is increasing. One difference and possible advantage of PWAs compared to hybrid and native mobile apps is that PWAs do not need to be distributed via an app store but can be accessed directly via the browser.

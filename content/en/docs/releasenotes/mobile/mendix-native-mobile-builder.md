@@ -205,7 +205,7 @@ Research has shown that animal sounds can relieve stress. As we work to simplify
 
 ##### OTA based on App Center CodePush
 
-We added OTA support based on App Center CodePush. Look for it under the Capabilities pages. For more information, see [How to Release Over the Air Updates with App Center's CodePush](/howto/mobile/how-to-ota-appcenter/).
+We added OTA support based on App Center CodePush. Look for it under the Capabilities pages. For more information, see [App Center's CodePush OTA updates solution](/refguide/mobile/distributing-mobile-apps/ota-appcenter/).
 
 #### Improvements 
 

@@ -14,7 +14,7 @@
 
     <div class="container-fluid td-outer">
       <div class="td-main">
-        <div class="row flex-xl-nowrap stretch-main">
+        <div class="row flex-xl-nowrap stretch-main" style="overflow-x:hidden !important;">
           <aside data-stt-ignore class="d-none d-lg-block col-lg-4 col-xl-3 td-sidebar d-print-none"> <!-- NK - adjusted resizing for different screens -->
             {{ partial "sidebar.html" . }}
           </aside>
@@ -88,6 +88,7 @@
             </div>
           </div>
         </main>
+          <!-- NK - aside below gives right side grey surface in landing page -->
           <aside data-stt-ignore class="d-none d-xl-block col-xl-3 td-sidebar d-print-none">
           </aside>
         </div>

@@ -37,11 +37,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Exposing OData Contracts in Mendix Studio Pro
 
-When you publish an entity in a published OData service, clients can read the data by default. To allow clients to update, insert or delete the data as well, do the following:
+When you publish an entity in a published OData service, clients can read the data by default. To allow clients to update, insert, or delete the data as well, do the following:
 
 1. Open the published OData service in **MyFirstModule** > **APIs** > **{yourname}CustomerODataService**.
 2. Select the **Customer** entity and click **Edit**.
-3. Use the checkboxes to indicate whether the entity should be **Insertable**, **Updatable**, and/or **Deletable**.
+3. Select the checkboxes to indicate whether the entity should be **Insertable**, **Updatable**, and/or **Deletable**.
 
 ## 4 Viewing OData Capabilities in Data Hub Catalog
 

@@ -140,7 +140,7 @@ This is the behavior when you choose the action **Write to database**.
 
 You can also choose the **Call a microflow** action to use your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Commit](/refguide/committing-objects/) activity to commit the changes to the database. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed. For more information, see [OData query options](/refguide/odata-query-options/#updating-objects).
 
-### 8.4 Deletable
+### 8.4 Deletable {#deletable}
 
 Select the check box for **Deletable** to indicate that clients can delete the values of attributes and associations.
 

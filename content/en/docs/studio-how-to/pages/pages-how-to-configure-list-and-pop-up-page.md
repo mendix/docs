@@ -1,28 +1,26 @@
 ---
-title: "Configure a List and Show List Item Details on One Page"
+title: "Configure a List and Edit Item Details on a Pop-Up Page"
 url: /studio-how-to/pages-how-to-configure-list/
 category: "Pages"
 description: "Describes how to configure a list of items in Mendix Studio."
-weight: 40
+weight: 35
 tags: ["studio", "pages", "list", "how to"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 
 
-This how-to explains how you can configure a list of items and view the item details selected in this list. 
+This how-to explains how you can configure a list of items and view the item details on a pop-up page. 
 
 **This how-to will teach you how to do the following:**
 
 * Create a new page
 * Configure a list view
-* Configure a data view that shows the details of an item selected in the list view
+* Configure pop-up page where you can edit the details of a list
 
 The how-to describes the following use case: 
 
-Sales Representatives in your company would like to view a list of opportunity contacts – potential customers. When Sales Representatives click a row in this list, the details of the corresponding opportunity contact are displayed next to the list:
-
-{{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/configured-page.png" >}}
+Sales Representatives in your company would like to view a list of opportunity contacts – potential customers. When Sales Representatives click a row in this list, the details of the corresponding opportunity contact are displayed in a pop-up page:
 
 ## 2 Prerequisites
 

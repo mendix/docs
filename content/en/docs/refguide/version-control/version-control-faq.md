@@ -9,7 +9,7 @@ tags: ["git", "svn", "subversion", "teamserver", "byo-git", "byo-svn" ]
 ## 1 Introduction
 [Mendix Team Server](/developerportal/collaborate/team-server/) is the Mendix-hosted environment that hosts all Mendix apps. It facilitates versioning your apps by integrating them into a version control system. Mendix Studio and Mendix Studio Pro integrate into the Team Server allowing you to create and update apps, commit changes, and merge model versions in one click.
 
-## 2 What Version Control System Is Team Server Build On?
+## 2 What Version Control System Is Team Server Built On?
 
 Mendix Team Server is based on proven technology. Initially it was based only on top of Subversion (SVN), also called Team Server SVN. Starting from Mendix version 9.12.0, the Team Server also supports storing apps using Git technology, referred to as Team Server Git. 
 
@@ -30,16 +30,16 @@ In Git, conflict resolution can only be done on committed changes. This means yo
 
 Team Server Git has the following advantages over Team Server SVN:
 
-* Git is the standard for software version control as offered by, for example, GitHub, Gitlab, Azure, AWS, and Atlassian; and Subversion (SVN) has become outdated. So, this is modernization of the Mendix platform to align with the broader market and developer ecosystems.
+* Git is the standard for software version control as offered by, for example, GitHub, Gitlab, Azure, AWS, and Atlassian; Subversion (SVN) has become outdated. So, this is modernization of the Mendix platform to align with the broader market and developer ecosystems.
 * As Git stores a local version of the repository, developers are less dependent on a high speed internet connection and the need to synchronize their work with a central repository continuously. 
 * Git has a technically more advanced and optimized communication protocol, which makes synchronizing changes to and from the central repository faster and more reliable.
-* It is possible to commit your changes, essentially creating a save point, without pushing those changes to the central repository immediately. This enables creating a coherent set of changes that can be pushed at once, while also allowing to commit those changes intermittently.
-* When retrieving changes from other developers, these changes might cause conflicts. When doing an update, a developer has to resolve these, and then commit the resolved changes. With Git, it is required to commit locally before retrieving these changes. Though this can seem cumbersome, it has the benefit that if the developer made a mistake when resolving conflicts, they can still view the changes they and their colleagues made and resolve them properly.
-* Developers can use modern third-party Git tooling for advanced version control cases like handling file changes.
+* It is possible to commit your changes, essentially creating a save point, without pushing those changes to the central repository immediately. This enables creating a coherent set of changes that can be pushed at once, while also allowing you to commit those changes intermittently.
+* Your locally-committed changes may cause conflicts with changes retrieved from your colleagues. When doing an update, you have to resolve these, and then commit the resolved changes. With Git, you have to commit locally before retrieving these changes. Though this can seem cumbersome, it has the benefit that if you made a mistake when resolving conflicts, you can still view the changes you and your colleagues made and resolve them properly.
+* You can use modern third-party Git tooling for advanced version control cases like handling file changes.
 
 ## 5 Can I Keep Using the Subversion Version of the Team Server?
 Yes, as we are introducing Team Server Git, we will maintain support for Team Server SVN. As we improve our offering for Team Server Git, we will introduce options to migrate your apps to Team Server Git from Team Server SVN.
-Mendix focuses on improving Team Server Git support and migrating customers to Team Server Git.
+Mendix  is focusing on improving Team Server Git support and migrating customers to Team Server Git.
 
 
 ## 6 Can I Migrate from Team Server SVN to Git?
@@ -69,7 +69,7 @@ Yes, it is possible to connect to a third-party Subversion or Git version contro
 However, in this case the following products and capabilities are not available:
 
 * [Mendix Studio](/studio/general/) and the [collaborative development in Studio](/studio/collaboration/)
-* Deployment in the Developer Portal directly from the Team Server
+* Deployment using the Developer Portal directly from the Team Server
 * Integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Permissions API](/apidocs-mxsdk/apidocs/permissions-api/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Stories API](/apidocs-mxsdk/apidocs/stories-api/), [User management API](/apidocs-mxsdk/apidocs/user-management-api/), and [Developer portal webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints/)
 * [AQM](/addons/aqm-addon/) 
 
@@ -81,5 +81,7 @@ For Git, connecting to a third-party Git version control repository is in Beta. 
 ## 9 Will Mendix 9 Support Pull Requests and Peer Reviews? 
 
 Studio Pro supports peer review and merging through the version control functionalities available in Studio Pro. For more information on how to set this process up, see [Using Version Control in Studio Pro](refguide/using-version-control-in-studio-pro/).
-Currently, Mendix does not support pull or merge requests through the Team Server for Mendix. When using third-party tools it is possible to review code extensions: all code for Java & JavaScript actions, HTML/CSS for theming.
+Currently, Mendix does not support pull or merge requests through the Team Server for Mendix. When using third-party tools it is possible to review the following code extensions:
+* code for Java & JavaScript actions
+* HTML/CSS for theming
 

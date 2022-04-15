@@ -389,8 +389,8 @@ Our [Java unit test reference](https://Github.com/mendixlabs/javaunittestreferen
 * Verifies that your code calls a microflow with correct parameters
 * Makes constants available to your Java code
 
-{{% alert color="warning" %}}
-The Java unit test reference is compatible up to and including Studio Pro [9.12](/releasenotes/studio-pro/9.12/).
+{{% alert color="info" %}}
+The Java unit test reference has been tested up to and including Studio Pro [9.12](/releasenotes/studio-pro/9.12/).
 {{% /alert %}}
 
 Java unit testing is discussed in more detail in this Mendix World presentation, [Run Modern Unit Tests for Your Custom Java Actions](https://events.mendixworld.com/widget/mendix/world21/catalog/session/1615903746739001d8JX). You will need to register with your business email address to view this video.

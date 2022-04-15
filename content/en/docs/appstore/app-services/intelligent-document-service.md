@@ -25,8 +25,8 @@ The [Intelligent Document Service](https://marketplace.mendix.com/link/component
 
 * This app service works best with Studio Pro 8 versions starting with [8.18.15](/releasenotes/studio-pro/8.18/#81815) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0/).
 * For optimal recognition results, make sure that documents with small fonts have high resolutions:
-  * If images are made using a scanner, it is recommended to use 300 dpi for texts in font size 10 pt or larger and 400-600 dpi for texts in font size 9 pt or smaller
-  * If images are taken using a digital camera, it is recommend to use at least a 5-megapixel sensor with auto focusing and flash disabling features, fit the page entirely within the camera frame, and distribute lighting evenly across the page to avoid any dark areas or shadows on the image
+  * If images are made using a scanner, it is recommended to use 300 dpi for texts in font size 10 pt or larger and 400-600 dpi for texts in font size 9 pt or smaller.
+  * If images are taken using a digital camera, it is recommend to use at least a 5-megapixel sensor with auto focusing and flash disabling features, fit the page entirely within the camera frame, and distribute lighting evenly across the page to avoid any dark areas or shadows on the image.
 
 ## 2 Installation
 
@@ -78,11 +78,15 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
 ### 4.1 Training a Document Model {#document-model-training}
 
-{{% alert color="info" %}}Quick tips for training a model -
-1) At a minimum 3-5 samples should be used to train your model for improving the accuracy of data extraction.
-2) All input images used for training must have a similar structure.
-3) Proper usage of the marker tool is key to enhanced quality of extracted data; hence while selecting a field, kindly select the complete field area properly to mark it.
-{{% /alert %}}
+#### 4.1.1 Quick Tips {#quick-tips}
+
+You should use at least 3 samples to train your model to reach the higher accuracy of data extraction. All samples used for one training must have a similar structure. 
+
+You should use the marker tool properly – this is key to extracting data in higher quality. This means, when selecting a field, select the complete field area properly to mark the area.
+
+#### 4.1.2 Procedure
+
+To train a document model, do as follows:
 
 1.  Perform the following steps to log into the **Document Model Training** application:
 
@@ -104,7 +108,7 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/existing-models-list.png" alt="Existing models list" >}}
 
-    {{% alert color="info" %}}Recommendation – Do not use browser navigation controls but instead use appropriate buttons in the web app to refresh page, go to previous page etc. e.g. Using the “Refresh” button on the web app page rather than using F5 or Refresh control from the Browser. We recommend using Chrome browser.{{% /alert %}}
+    {{% alert color="info" %}}We recommend using the Google Chrome browser. We also recommend that you use the appropriate buttons on the web app page instead of using the browser navigation controls, in order to refresh a page, go to the previous page, etc. For example, to refresh a page, use the **Refresh** button on the app page rather than click the refresh control from the browser or press <kbd>F5</kbd> on the keyboard. {{% /alert %}}
     
     {{% alert color="info" %}} The model is ready to use only when the **Status** of this model is **Published**. {{% /alert %}}
 
@@ -161,19 +165,23 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 You need to use an [import mapping](/refguide/mapping-documents/#import-mappings) to populate extracted data into an entity. If necessary, you can further process the entity with [event handlers](/refguide/event-handlers/).
 
 1.  To create an import mapping, you need a JSON structure. Perform the following steps to generate the JSON structure:
-    1.  Log into the [Document Model Training](#document-model-training) application with your Mendix account.
-    2.  Click **Environment** to show the **Existing Models** list.
-    3.  Select your trained model. Make sure that the **Status** of the model is **Published**. Note down the **Model Id**. You will need it when you [extract data with the trained model ](#extraction-activity).
-    4.  Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens.
-    5.  Drag one of the sample images, which you used to train the document model, into the box where it says **Drag image files here**. You can also click **Browse** and select the file.
-
-        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/sample-extraction-dialog-box.png" alt="Sample Extraction dialog box" >}}
-
-    6. Click **Download** to get the JSON structure.
-
-    {{% alert color="info" %}}As this action is actually extracting data from the input samples to generate JSON structure, usage is counted against allocated quota for your provisioned instance.{{% /alert %}}
+    1. Log into the [Document Model Training](#document-model-training) application with your Mendix account.
     
-    {{% alert color="info" %}} You may get blank value(s) in extracted response for some fields as our intelligence component returns empty field if it is not confident about the extraction result. To improve the accuracy of extraction please follow the Quick-tips. {{% /alert %}}
+    2. Click **Environment** to show the **Existing Models** list.
+    
+    3. Select your trained model. Make sure that the **Status** of the model is **Published**. Note down the **Model Id**. You will need it when you [extract data with the trained model ](#extraction-activity).
+
+    4. Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens.
+
+    5. Drag one of the sample images, which you used to train the document model, into the box where it says **Drag image files here**. You can also click **Browse** and select the file.
+
+       {{< figure src="/attachments/appstore/app-services/intelligent-document-service/sample-extraction-dialog-box.png" alt="Sample Extraction dialog box" >}}
+    
+    6. Click **Download** to get the JSON structure.
+    
+       {{% alert color="info" %}}As this action actually exacts data from the input samples to generate the JSON structure, the usage is counted against the allocated quota for your provisioned instance.{{% /alert %}}
+    
+       {{% alert color="info" %}}You may get blank value(s) in the extracted response for some fields, as our intelligent component returns an empty field when it is not confident about the extraction result. To improve the accuracy of data extraction, follow the [quick tips](#quick-tips). {{% /alert %}}
     
 2.  To add the JSON structure to your app, perform the following steps:
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the generated JSON structure.
@@ -184,6 +192,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
     3. In the **Add JSON Structure** dialog box, enter a **Name** for the JSON structure and click **OK**. The **JSON Structure** dialog box opens.
     4. In the **JSON Snippet** box, add the content of the JSON structure that you have generated. The system converts the JSON snippet into a schema structure automatically. You will need this schema structure to create the import mapping.
     5. Click **OK** to save the changes and close the dialog box.
+    
 3.  To create the import mapping, perform the following steps:
     1. In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the import mapping.     
     2. From the pop-up menu, select **Add other** > **Import mapping**.
@@ -195,15 +204,15 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
 ### 4.3 Extracting the Data with the Trained Document Model {#extraction-activity}
 
-1.  In the **Toolbox**, drag **Intelligent Document Service** activity from the **Document Data Capture Service** category into your microflow.
+1. In the **Toolbox**, drag the **Intelligent Document Service** activity from the **Document Data Capture Service** category into your microflow.
 
-    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/intelligent-document-microflow.png" alt="intelligent-document-microflow" >}}
+   {{< figure src="/attachments/appstore/app-services/intelligent-document-service/intelligent-document-microflow.png" alt="intelligent-document-microflow" >}}
 
 2. Create a list of image that inherits from `System.Image`. Images from where data are extracted should be passed as a list, as shown in the microflow above.
 
-{{% alert color="info" %}} The total size of the images being passed for extraction should not exceed **20MB**. If you have multiple images to extract data from, you can process them in smaller batches. {{% /alert %}}
+   {{% alert color="info" %}} The total size of the images being passed for extraction should not exceed 20 MB. If you have multiple images to extract data from, you can process them in smaller batches. {{% /alert %}}
 
-{{% alert color="info" %}}The number of images passed as a List in the microflow and processed by **Intelligent Document Service** activity will be counted against allocated quota for your provisioned instance.{{% /alert %}}
+   {{% alert color="info" %}}The number of images passed as a list in the microflow and processed by the **Invoice Processing** activity will be counted against the allocated quota for your provisioned instance.{{% /alert %}}
 
 3.  Double-click the **Intelligent Document Service** activity to open the dialog box.
 

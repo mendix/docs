@@ -2,9 +2,13 @@ h1.page-title{
 	font-weight: 700;
 	font-size: 2.5rem;
 	margin-left: 0.75rem;
+    color: $secondary;
+    opacity: 0.85; //#232B3B;
 }
 h5.lp{
 	margin-left: 0.75rem;
+    color: $secondary;
+    opacity: 0.7; //#474E5C;
 }
 div.card-icon{
 	margin: auto; 
@@ -162,12 +166,13 @@ p.card-text{
 div.my-container{
 	padding: 0;
 	margin: 0;
-	max-width: 1280px;
 }
 a.doc-link{
-	margin-left: 55%;
 	border-radius: 0.5rem;
 	padding: 0.375rem 0.375rem;
+    position: absolute; // NK - fixed position of button
+    bottom: 1rem; // NK - fixed position of button
+    right: 1rem; // NK - fixed position of button
 }
 // 404 page
 a.home-btn{

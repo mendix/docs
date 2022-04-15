@@ -52,22 +52,28 @@ Advanced Audit Trail is a premium Mendix product that is subject to a purchase a
 
 ### 2.2 Installing the Component in Your app
 
-Followed the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the **AdvancedAuditSnapshots** and **AdvancedAuditSnapshotsUI** modules into your project.
+Followed the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the **AdvancedAuditTrail** and **AdvancedAuditTrailUI** modules into your project.
 
-{{% alert color="info" %}}If you update the **AdvancedAuditSnapshots** module, make sure that you update the **AdvancedAuditSnapshotsUI** module to the same version.{{% /alert %}}
+{{% alert color="info" %}}If you update the **AdvancedAuditTrail** module, make sure that you update the **AdvancedAuditTrailUI** module to the same version.{{% /alert %}}
 
 ## 3 Configuration
 
 1. Set up your application roles to include the right [module roles](#module-rules).
 2. Configure the right [constant values](#constants) for the right snapshots.
-3. Implement the **Before Commit** (**BCo**) and **Before Delete** **(Bde)** events (see the examples). Use the events on the domain model settings (**BCo** / **BDe**).
+3.  Implement the **Before Commit** (**BCo**) and **Before Delete** **(Bde)** events (see the examples). Use the events on the domain model settings (**BCo** / **BDe**).
 
-   You can create **CommitList** microflows that commit a list of objects without events, but use the **Create Snapshot (List)** action. This will ensure that the snapshots are committed in a list as well, and therefore minimizing performance impact of the module.
+    You can create **CommitList** microflows that commit a list of objects without events, but use the **Create Snapshot (List)** action. This will ensure that the snapshots are committed in a list as well, and therefore minimizing performance impact of the module.
+    
+    {{% alert color="warning" %}}When an object is committed without events, this change is not audited unless you explicitly add a `Create Snapshot` or `Create Snapshot (List)` action before the commit.</br></br>When there are multiple  **Before Commit** (**BCo**) or **Before Delete** **(Bde)** events that may change the object, the order is not guaranteed. see [Event Handlers](/refguide/event-handlers/). This means that some changes could theoretically fall outside the context of an audit.{{% /alert %}}
+    
+    {{% alert color="warning" %}}For specializations and generalizations, you should either add the event to the generalized object *or* to all the specializations; otherwise the event can be triggered twice.{{% /alert %}}
+
+    {{% alert color="info" %}}Some compliances may require you to never delete an object. In that case, you should implement this outside the context of the audit trail module.{{% /alert %}}
 
 4. Add search to the navigation, or implement the Query Snapshots for object action.
-5. Make sure that the [scheduled events](#scheduled-events) are enabled in the cloud portal.
+5.  Make sure that the [scheduled events](#scheduled-events) are enabled in the cloud portal.
 
-   {{% alert color="info" %}}Due to protected modules, we don not show scheduled events in Studio Pro.{{% /alert %}}
+    {{% alert color="info" %}}Due to protected modules, we do not show scheduled events in Studio Pro.{{% /alert %}}
 
 ### 3.1 Module Roles {#module-roles}
 
@@ -75,7 +81,7 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 *  **_AddOn_CanChangeEnvironmentInQuery**: This is an additional role for the Admin, which allows the Admin to change the environment in search queries, so that they can also search in other applications
 *  **DisplayOnly**: The display-only user can view queries that are prepared in microflows, but cannot change any of them. This can restrict the user to seeing information they are allowed to see. The role is tested against cross site scripting (XSS).
 
-    {{% alert color="warning" %}}Access from and to the long-term data storage is based on service accounts. This means that once a user can access the **Snippet_Settings**, they can access all data in the long-term storage, even if it belongs to other applications in the same environment. Any user-based authentication needs to be implemented in the runtime, for example, by using the **DisplayOnly** module role and the **ACT_Object_OpenAuditTrailPrettyView** setup.{{% /alert %}}
+    {{% alert color="warning" %}}Access from and to the long-term data storage is based on service accounts. This means that once a user can access the **Snippet_Settings**, they can access all data in the long-term storage, even if it belongs to other applications in the same environment. Any user-based authentication needs to be implemented in the runtime, for example, by using the **DisplayOnly** module role and the **Query Snapshots for object** setup.{{% /alert %}}
 
 ### 3.2 Constants {#constants}
 
@@ -116,22 +122,26 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
   - Check the default values of the **NPE Settings** object in the domain model, since they will be used for configuring the app
   - Enable **SE_CleanupAuditSnapshots** if you want to use the retention settings and delete objects
 
-### 3.5 Implementing Custom User Logging (Optional)
+### 3.5 Adding Additional Info to a Snapshot (Optional)
+
+It is possible to add additional info to the snapshot (e.g. to capture why a user has done a specific change). Use `Set additional info for snapshots`. All snapshots that will be created in this microflow, after this action runs, will have this additional info.
+
+### 3.6 Implementing Custom User Logging (Optional)
 
 Use the **Override User for Snapshots in this Context** action to override the logged user for a request. For example, the request is a published REST service that runs in a system context, while the user is known.
 
-### 3.6 Implementing User Name Scrambling (Optional)
+### 3.7 Implementing User Name Scrambling (Optional)
 
 Use Configure Username mapping to store a username differently in the long-term data storage. This can be used for anonymizing data (e.g. due to GDPR).
 
-### 3.7 Implementing Display Formatters (Optional)
+### 3.8 Implementing Display Formatters (Optional)
 
 Use the **Formatter** microflows to change how the String value will be calculated for Decimals, Dates, and Mendix Object Identifiers. See the example app for more details.
 
-### 3.8 Getting Microflow Stack Trace (Optional)
+### 3.9 Getting Microflow Stack Trace (Optional)
 
 Use this action to create custom logging/entities and identify in what microflow the action was triggered.
 
-### 3.9 Changing the Module Layout (Optional)
+### 3.10 Changing the Module Layout (Optional)
 
 Update the **AuditSnapshots_ResponsiveLayout** to update the layouts without changing the pages.

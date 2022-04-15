@@ -126,7 +126,7 @@ This property is accessible by right-clicking in the microflow and selecting **P
 
 By selecting the **Expose as microflow action**  option, you can expose the microflow as a microflow action and use the return type of the microflow to generate outcomes / paths in the workflow. Exposing the microflow will make it appear in the **Toolbox** when you are editing a microflow in the category of your choice. When this action is used in a microflow, it will show the provided caption and icon.
 
-The caption and category of the microflow action are required, but the icon is optional. When no icon is selected, the default microflow call action icon is used. The recommended size for the icon is 16x16 pixels.
+The caption and category of the microflow action are required, but the icon and tile image are optional. It is possible to specify icon and tile image independenty for light and dark modes of Studio Pro. When no icon or no tile image are selected, the default microflow call action icon and tile image are used. The size for the icon must be 64x64 pixels and 256x192 pixels for the tile image.
 
 ## 4 Expose as Workflow Action {#expose-as-workflow-action}
 
@@ -136,4 +136,4 @@ This property is accessible by right-clicking in the microflow and selecting **P
 
 By selecting the **Expose as workflow action**  option, you can expose the microflow as a [workflow](/refguide/workflows/) action. Exposing the workflow will make it appear in the **Toolbox** of a [workflow editor](/refguide/workflows/) in the category of your choice. When this action is used in a workflow, it will show the provided caption and icon.
 
-The caption and category of the workflow action are required, but the icon is optional. When no icon is selected, the default workflow call action icon is used. The recommended size for the icon is 16x16 pixels.
+The caption and category of the workflow action are required, but the icon and tile image are optional. It is possible to specify icon and tile image independenty for light and dark modes of Studio Pro. When no icon or no tile image are selected, the default workflow call action icon tile image are used. The size for the icon must be 64x64 pixels and 256x192 pixels for the tile image.

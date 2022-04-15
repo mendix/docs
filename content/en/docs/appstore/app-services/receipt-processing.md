@@ -18,14 +18,14 @@ Powered by AI and OCR technologies, the [Receipt Processing](https://marketplace
 
 ### 1.2 Limitation
 
-* Currently only supports images in JPG and JPEG formats.
+* Currently only supports images in JPG and JPEG formats
 
 ### 1.3 Prerequisites
 
 This app service works best with Studio Pro 8 versions starting with [8.18.15](/releasenotes/studio-pro/8.18/#81815) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0/).
 * For optimal recognition results, make sure that documents with small fonts have high resolutions:
-  * If images are made using a scanner, it is recommended to use 300 dpi for texts in font size 10 pt or larger and 400-600 dpi for texts in font size 9 pt or smaller
-  * If images are taken using a digital camera, it is recommend to use at least a 5-megapixel sensor with auto focusing and flash disabling features, fit the page entirely within the camera frame, and distribute lighting evenly across the page to avoid any dark areas or shadows on the image
+  * If images are made using a scanner, it is recommended to use 300 dpi for texts in font size 10 pt or larger and 400-600 dpi for texts in font size 9 pt or smaller.
+  * If images are taken using a digital camera, it is recommend to use at least a 5-megapixel sensor with auto focusing and flash disabling features, fit the page entirely within the camera frame, and distribute lighting evenly across the page to avoid any dark areas or shadows on the image.
 
 
 ## 2 Installation
@@ -82,19 +82,19 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
 1.  To create an import mapping, you need a JSON structure. Perform the following steps to generate the JSON structure:
     1. Log into the Marketplace with your Mendix account.
-    2. Go to **My Marketplace** and Click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) on the left navigation menu. The **Compmany Subscriptions** page gives an overview of all the subscriptions of your organization.    
+    2. Go to **My Marketplace** and Click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) on the left navigation menu. The **Compmany Subscriptions** page gives an overview of all the subscriptions of your organization.
     3. Click **Receipt Processing** to open the service management dashboard.
-    4.  Click **Manage Instance** to open the **Document Model Training** application.
-      
-        {{< figure src="/attachments/appstore/app-services/receipt-processing/document-model-training-app.png" alt="Document model training app login page" >}}
-      
+    4. Click **Manage Instance** to open the **Document Model Training** application.
+    
+       {{< figure src="/attachments/appstore/app-services/receipt-processing/document-model-training-app.png" alt="Document model training app login page" >}}
+    
     5. Log into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account. 
-    6. Click **Environment** to show the **Existing Models** list.
-
-{{% alert color="info" %}}Recommendation – Do not use browser navigation controls but instead use appropriate buttons in the web app to refresh page, go to previous page etc. e.g. Using the “Refresh” button on the web app page rather than using F5 or Refresh control from the Browser. We recommend using Chrome browser.{{% /alert %}}
+    6.  Click **Environment** to show the **Existing Models** list.
+    
+        {{% alert color="info" %}}We recommend using the Google Chrome browser. We also recommend that you use the appropriate buttons on the web app page instead of using the browser navigation controls, in order to refresh a page, go to the previous page, etc. For example, to refresh a page, use the **Refresh** button on the app page rather than click the refresh control from the browser or press <kbd>F5</kbd> on the keyboard. {{% /alert %}}
 
     7.  Select pre-trained model. Make sure that the **Status** of the model is **Published**.
-
+    
         {{< figure src="/attachments/appstore/app-services/receipt-processing/pre-trained-receipt-model-pub.png" alt="pre trained model published" >}}
        
     8. Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens. 
@@ -103,11 +103,11 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
         {{< figure src="/attachments/appstore/app-services/receipt-processing/sample-extraction-dialog-box.png" alt="Sample Extraction dialog box" >}}
       
     10. Click **Download** to get the JSON structure.
-   
-    {{% alert color="info" %}}As this action is actually extracting data from the input sample receipt to generate JSON structure, usage is counted against allocated quota for your provisioned instance.{{% /alert %}}
+    
+    {{% alert color="info" %}}As this action actually exacts data from the input sample receipt to generate the JSON structure, the usage is counted against the allocated quota for your provisioned instance.{{% /alert %}}
     
     {{% alert color="info" %}}Since the document model is pre-trained, the system does not generate a `confidence level` during the receipt processing; instead, it generates a `not applicable` string.{{% /alert %}}
-   
+
 2.  To add the JSON structure to your app, perform the following steps:
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON structure.
     2.  From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures/).
@@ -129,14 +129,15 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
 ### 4.2 Extracting the Data with the Trained Document Model {#extraction-activity}
 
-1.  In the **Toolbox**, drag **Receipt Processing** activity from the **Document Data Capture Service** category into your microflow.
+1.  In the **Toolbox**, drag the **Receipt Processing** activity from the **Document Data Capture Service** category into your microflow.
 
     {{< figure src="/attachments/appstore/app-services/receipt-processing/receipt-processing-microflow.png" alt="receipt-processing-microflow" >}}
 
-2. Create a list of image that inherits from `System.Image`. Images from where data is extracted should be passed as a list, as shown in the microflow above.
-{{% alert color="info" %}} The total size of the images being passed for extraction should not exceed **20MB**. If you have multiple images to extract data from, you can process them in smaller batches. {{% /alert %}}
+2.  Create a list of image that inherits from `System.Image`. Images from where data is extracted should be passed as a list, as shown in the microflow above.
 
-{{% alert color="info" %}}The number of images passed as a List in the microflow and processed by **Receipt Processing** activity will be counted against allocated quota for your provisioned instance.{{% /alert %}}
+    {{% alert color="info" %}} The total size of the images being passed for extraction should not exceed 20 MB. If you have multiple images to extract data from, you can process them in smaller batches. {{% /alert %}}
+
+    {{% alert color="info" %}}The number of images passed as a list in the microflow and processed by the **Invoice Processing** activity will be counted against the allocated quota for your provisioned instance.{{% /alert %}}
 
 3.  Double-click the **Receipt Processing** activity to open the **Receipt Processing** dialog box.
 

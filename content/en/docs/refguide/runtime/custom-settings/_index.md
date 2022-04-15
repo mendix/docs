@@ -57,7 +57,7 @@ The following custom settings can be configured:
 | **NoClientCertificateUsages** | Comma-separated list of host names or imported web service names that should never be contacted using a client certificate. |   |
 | **PersistentSessions** | Defines whether sessions will be persisted in the database or not. When sessions are persisted, statistics will be made about logged-in users. When the Runtime server restarts, sessions still exist and users don't have to sign in again. In a clustered environment you must have persistent sessions. The only exception is for on-premises installations which have implemented sticky sessions. The value can be true or false. | true |
 | **ScheduledEventExecution** | Specify which scheduled events should be executed. Choices are `ALL`, `NONE`, or `SPECIFIED`. In the case of `SPECIFIED`, enumerate the scheduled events using the `MyScheduledEvents` configuration option described below. | NONE |
-| **SessionKeepAliveUpdatesInterval** | Defines after how much time expired sessions will be removed from the database. | 100000 (100s) |
+| **SessionKeepAliveUpdatesInterval** | Defines after how much time expired sessions can be removed from the database. | 100000 (100s) |
 | **SessionTimeout** | Defines after how much time session becomes invalid (in milliseconds). After that timeout a session becomes applicable for removal. The session will not be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 (10 minutes) |
 | **TaskQueue.ShutdownGracePeriod** | Time in ms to wait for task in a task queue to finish when shutting down. | 10000 |
 | **TempPath** | The location of the temporary files. | [deployment folder]\data\tmp |

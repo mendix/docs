@@ -1,7 +1,7 @@
 ---
 title: "Email Connector"
-url: /appstore/modules/email-connector/
-category: "Modules"
+url: /appstore/connectors/email-connector/
+category: "Connectors"
 description: "Describes the configuration and usage of the Email Connector module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "imap", "pop3", "email", "encryption", "platform support", "encryption", "templates"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -81,7 +81,7 @@ From (USE_ME UI)
 
 There are some other email account settings which user can use 
 
-{{< figure src="/attachments/appstore/modules/email-connector/other-account-settings.png" >}}
+{{< figure src="/attachments/appstore/connectors/email-connector/other-account-settings.png" >}}
 
 
 * Subscribe to incoming emails > user can select this option to get notified about the new incoming emails for modelling use `SubscribeToIncomingEmail` java action. Read more about this in the section below.
@@ -151,7 +151,7 @@ You can choose to configure a digital signature and email encryption when the mo
 
 In Studio Pro, these settings are found in the domain model of the Email Connector:
 
-{{< figure src="/attachments/appstore/modules/email-connector/sign-encrypt-domain-model.png" >}}
+{{< figure src="/attachments/appstore/connectors/email-connector/sign-encrypt-domain-model.png" >}}
 
 
 #### 4.4.1 Digital Signing
@@ -159,7 +159,7 @@ In Studio Pro, these settings are found in the domain model of the Email Connect
 Digitally signed emails support only PKCS#12 certificates.
 
 
-{{< figure src="/attachments/appstore/modules/email-connector/digital-signature.png" >}}
+{{< figure src="/attachments/appstore/connectors/email-connector/digital-signature.png" >}}
 
 
 #### 4.4.2 Email Encryption
@@ -171,7 +171,7 @@ Encryption for emails using the Email Connector module includes the following:
     * Supports SSL/TLS and non-SSL connection type
     * While encrypting email recipients certificate will be searched on `Base DN` 
 
-{{< figure src="/attachments/appstore/modules/email-connector/email-encryption.png" >}}
+{{< figure src="/attachments/appstore/connectors/email-connector/email-encryption.png" >}}
 
 ### 4.5 Subscribing to Incoming Email
 

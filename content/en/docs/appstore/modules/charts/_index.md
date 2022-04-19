@@ -11,6 +11,43 @@ tags: ["marketplace", "marketplace component", "charts", "platform support", "ar
 
 {{% alert color="danger" %}} **TODO:** Add introduction {{% /alert%}}
 
+
+
+## Data Source
+
+We reworked **Data Source** property for most of the charts. Now it should be much easer to configure, control and modify chart series.
+
+{{< figure src="/attachments/appstore/modules/charts/data-source-example.png" >}}
+
+
+
+Now you don't need put chart into Data View to feed data into widget.
+
+
+
+When you press **New** button on series panel the **Edit Series** dialog will be shown.
+
+{{< figure src="/attachments/appstore/modules/charts/series-item-example.png" >}}
+
+
+
+In this dialog you will find next properties:
+
+- **Data set** — **Single** or **Multiple**. Single represents controls single set of date. This is good option to start as you can have multiple **Single** series. If you have more complex data model or you have Microflow which could be used as data source for your chart — you can use **Multiple** option. In this case you have to specify which attribute to use as **Series name**, otherwise widget will be unable to visualise your data correctly.
+- **Data source** — this property controls type and source of your data set. If you press **Edit** , you will be presented with Data source edit dialog where you can chose from where data series should be retrieved.
+- **Series name** — this property available only when **Single** data set is used. It controls legend of a data series.
+- **Aggregation function** — this prop allow you configure aggregation function for Y attribute of data series.
+
+
+
+Beside **General** tab, you will find 3 more tabs in **Edit Seris** dialog, which can be described as following:
+
+**Appearance** — on this tab you will find properties that allow you to modify styling for current data series. In most cases there will be color properties.
+
+**Events** — on this tab you will find possible event triggers.
+
+**Advanced** — this tab has only one field which will hold JSON object with advanced configuration for this data series.
+
 ## Migration from Charts v1 and v2 to Charts Module
 
 In this guide we would like to give you instructions on how to migrate Charts,

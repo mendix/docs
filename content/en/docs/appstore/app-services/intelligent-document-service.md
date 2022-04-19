@@ -82,7 +82,7 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
 You should use at least three samples to train your model to reach the higher accuracy of data extraction. The more samples that you use to train your model, the higher accuracy of data extraction you can achieve. However, all samples that are used for one training must have a similar structure. 
 
-You should use the marker tool properly – this is key to extracting data in higher quality. When you mark a field, think carefully about how much space the value could possibly take. Make sure the space that you mark is large enough – it should not only cover the value in your sample, but also the longest possible value that will be extracted.
+You should use the marker tool properly – this is key to extracting data in higher quality. The areas you mark determine where the document model will extract the data. Make sure that you mark the complete field area. Only in this way, will the document model read the complete field area and accurately extract a long value.
 
 #### 4.1.2 Procedure
 
@@ -109,9 +109,9 @@ To train a document model, do as follows:
 
    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/existing-models-list.png" alt="Existing models list" >}}
 
-   {{% alert color="info" %}}We recommend using the Google Chrome browser. We also recommend that you use the appropriate buttons on the web app page instead of using the browser navigation controls, in order to refresh a page, go to the previous page, etc. For example, to refresh a page, use the **Refresh** button on the app page rather than click the refresh control from the browser or press <kbd>F5</kbd> on the keyboard. {{% /alert %}}
-
    {{% alert color="info" %}} The model is ready to use only when the **Status** of this model is **Published**. {{% /alert %}}
+
+   {{% alert color="warning" %}}We recommend using the Google Chrome browser. We also recommend that you use the appropriate buttons on the web app page instead of using the browser navigation controls, in order to refresh a page, go to the previous page, etc. For example, to refresh a page, use the **Refresh** button on the app page rather than click the refresh control from the browser or press <kbd>F5</kbd> on the keyboard. {{% /alert %}}
 
 3. To train a new model, click **Create New Model** on the page. The **Create New Model** dialog box opens.
 
@@ -138,7 +138,7 @@ To train a document model, do as follows:
 
    2. In the **Mark the fields to be extracted** pane, select a field of interest from which some meaningful data needs to be extracted.
 
-      {{% alert color="warning" %}}When you mark a field, think carefully about how much space the value could possibly take. For example, the value of a field in your sample can be '1', which takes up only a little space; however, the value that will be extracted could be '999,999,999,999', which takes up a lot of space. Therefore, make sure the space that you mark is large enough – it should not only cover the value in your sample, but also the longest possible value that will be extracted.{{% /alert %}}
+      {{% alert color="warning" %}}The areas you mark in this step determine where the document model will extract the data. Make sure that you mark the complete field area. Only in this way, will the document model read the complete field area and accurately extract a long value.{{% /alert %}}
 
       {{< figure src="/attachments/appstore/app-services/intelligent-document-service/mark-document-dialog-box.png" alt="Mark Document page" >}}
 
@@ -187,7 +187,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
     
        {{% alert color="info" %}}As this action actually exacts data from the input samples to generate the JSON structure, the usage is counted against the allocated quota for your provisioned instance.{{% /alert %}}
     
-       {{% alert color="info" %}}You may get blank value(s) in the extracted response for some fields, as our intelligent component returns an empty field when it is not confident about the extraction result. To improve the accuracy of data extraction, follow the [Guidelines](#guidelines) section. {{% /alert %}}
+       {{% alert color="info" %}}You may get blank value(s) in the extracted response for some fields, as our intelligent component returns an empty field when it is not confident about the extraction result. To improve the accuracy of data extraction, see the [Guidelines for Improving the Accuracy of Data Extraction](#guidelines) section. {{% /alert %}}
     
 2.  To add the JSON structure to your app, perform the following steps:
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the generated JSON structure.
@@ -218,7 +218,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
    {{% alert color="info" %}} The total size of the images being passed for extraction should not exceed 20 MB. If you have multiple images to extract data from, you can process them in smaller batches. {{% /alert %}}
 
-   {{% alert color="info" %}}The number of images passed as a list in the microflow and processed by the **Invoice Processing** activity will be counted against the allocated quota for your provisioned instance.{{% /alert %}}
+   {{% alert color="info" %}}The number of images passed as a list in the microflow and processed by the **Intelligent Document Service** activity will be counted against the allocated quota for your provisioned instance.{{% /alert %}}
 
 3.  Double-click the **Intelligent Document Service** activity to open the dialog box.
 

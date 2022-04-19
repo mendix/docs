@@ -80,7 +80,7 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
 #### 4.1.1 Guidelines for Improving the Accuracy of Data Extraction {#guidelines}
 
-You should use at least three samples to train your model to reach the higher accuracy of data extraction. The more samples that you use to train your model, the higher the accuracy of data extraction you can achieve. However, all samples that are used for one training must have a similar structure. 
+You should use at least three samples to train your model to reach the higher accuracy of data extraction. The more samples that you use to train your model, the higher accuracy of data extraction you can achieve. However, all samples that are used for one training must have a similar structure. 
 
 You should use the marker tool properly – this is key to extracting data in higher quality. When you mark a field, think carefully about how much space the value could possibly take. Make sure the space that you mark is large enough – it should not only cover the value in your sample, but also the longest possible value that will be extracted.
 

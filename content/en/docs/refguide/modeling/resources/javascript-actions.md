@@ -105,11 +105,11 @@ A JavaScript action can have zero or more type parameters. Each type parameter s
 
 ## 4 Expose as Nanoflow Action
 
-In the **Expose as nanoflow action** tab, it is possible to expose a JavaScript action as a nanoflow action. This sample action has been given *Sample Action* caption text, assigned *Workshop* as its category, and given no icon:
+In the **Expose as nanoflow action** tab, it is possible to expose a JavaScript action as a nanoflow action. This sample action has been given *Sample Action* caption text, assigned *Workshop* as its category, and given no icon or tile image:
 
 {{< figure src="/attachments/refguide/modeling/resources/javascript-actions/expose-jsaction.png" alt="expose action"   width="450"  >}}
 
-Exposing the JavaScript action will make it appear in the **Toolbox** window when editing a nanoflow in the category of your choice. When this action is used in a nanoflow, it will show the caption and icon you provided. The category and caption are apparent here, and the default icon is being displayed as no custom one was assigned: 
+Exposing the JavaScript action will make it appear in the **Toolbox** window when editing a nanoflow in the category of your choice. When this action is used in a nanoflow, it will show the caption and icon you provided. The category and caption are apparent here, and the default icon and tile image are being displayed as no custom icon or tile image were assigned: 
 
 {{< figure src="/attachments/refguide/modeling/resources/javascript-actions/workshop-exposed.png" alt="workshop exposed" >}}
 
@@ -123,7 +123,11 @@ A category is required when exposing a JavaScript action. Use categories to orga
 
 ### 4.3 Icon
 
-An icon is optional when exposing a JavaScript action. When no icon is selected, the default JavaScript action icon is used. The recommended size for an icon is 16x16 pixels.
+An icon is optional when exposing a JavaScript action. When no icon is selected, the default JavaScript action icon is used. The icon size must be 64x64 pixels and the icon format must be PNG. A separate icon can be provided to be used in dark mode of Studio Pro. 
+
+### 4.4 Tile Image
+
+A tile image is optional when exposing a JavaScript action. When no tile image and no icon is selected, the default JavaScript action tile image is used. Otherwise provided icon is used as a tile image. The tile image size must be 256x192 pixels and the image format must be PNG. A separate tile image can be provided to be used in dark mode of Studio Pro.
 
 ## 5 Documentation
 

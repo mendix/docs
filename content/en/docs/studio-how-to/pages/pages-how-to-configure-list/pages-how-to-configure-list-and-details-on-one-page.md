@@ -1,11 +1,10 @@
 ---
 title: "Configure a List and Show List Item Details on One Page"
-url: /studio-how-to/pages-how-to-configure-list/
-category: "Pages"
+url: /studio-how-to/pages-how-to-configure-list-and-details-on-one-page/
+parent: "pages-how-to-configure-list"
 description: "Describes how to configure a list of items in Mendix Studio."
-weight: 40
+weight: 20
 tags: ["studio", "pages", "list", "how to"]
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 

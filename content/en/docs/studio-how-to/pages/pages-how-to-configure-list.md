@@ -155,3 +155,7 @@ Congratulations! You have a page that displays a list of opportunity contacts an
 You can now preview your app and test your page. For more information on how to preview your page, see [Previewing & Publishing Your App](/studio/publishing-app/).
 
 You can also work on the page details, for example, add a dynamic image to the list to display a profile picture of an opportunity contact next to their name. For more information on dynamic images, see [Images & Files](/studio/page-editor-widgets-images-and-files/).
+
+## 6 Read More
+
+* [How to Configure a List and a Pop-Up Page with List Item Details](/studio-how-to/pages-how-to-configure-list-and-pop-up-page/)

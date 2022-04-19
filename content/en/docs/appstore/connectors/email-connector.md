@@ -33,7 +33,14 @@ The Email Connector includes the following features:
 
 ### 1.2 Prerequisites
 
-Before you use the Email Connector module, download the [**Mx Model**](https://marketplace.mendix.com/link/component/69) [**R**](https://marketplace.mendix.com/link/component/69)[**eflection**](https://marketplace.mendix.com/link/component/69) module from the Mendix Marketplace and add it to your Studio Pro app. This module is required to work with the Email Connector, and you will see errors in the Error Pane if it is not installed.
+Before you use the Email Connector, do the following:
+
+1. Download and configure the [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module from the Mendix Marketplace.
+2. Following the steps in the [Configuration](/appstore/modules/model-reflection/#configuration) section of the *Mx Model Reflection* page.
+
+{{% alert color="warning" %}}
+The Email Connector will not work correctly if the **Mx Model Reflection** module is not configured.
+{{% /alert %}}
 
 ### 1.3 Included Widgets
 

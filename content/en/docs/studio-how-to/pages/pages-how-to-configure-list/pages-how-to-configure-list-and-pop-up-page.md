@@ -146,4 +146,4 @@ Make sure that you have added the page with the list in your navigation bar. For
 
 ## 6 Read More
 
-* [How to Configure a List and Show List Item Details on One Page](/studio-how-to/pages-how-to-configure-list-and-details-on-one-page/)
+* [How to Configure a List and View List Item Details on One Page](/studio-how-to/pages-how-to-configure-list-and-details-on-one-page/)

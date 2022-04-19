@@ -1,5 +1,5 @@
 ---
-title: "Configure a List and Show List Item Details on One Page"
+title: "Configure a List and View List Item Details on One Page"
 url: /studio-how-to/pages-how-to-configure-list-and-details-on-one-page/
 parent: "pages-how-to-configure-list"
 description: "Describes how to configure a list of items in Mendix Studio."

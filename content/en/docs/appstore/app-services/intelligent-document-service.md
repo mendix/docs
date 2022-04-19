@@ -78,87 +78,93 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
 ### 4.1 Training a Document Model {#document-model-training}
 
-#### 4.1.1 Quick Tips {#quick-tips}
+#### 4.1.1 Guidelines for Improving the Accuracy of Data Extraction {#guidelines}
 
-You should use at least 3 samples to train your model to reach the higher accuracy of data extraction. All samples used for one training must have a similar structure. 
+You should use at least three samples to train your model to reach the higher accuracy of data extraction. The more samples that you use to train your model, the higher the accuracy of data extraction you can achieve. However, all samples that are used for one training must have a similar structure. 
 
-You should use the marker tool properly – this is key to extracting data in higher quality. This means, when selecting a field, select the complete field area properly to mark the area.
+You should use the marker tool properly – this is key to extracting data in higher quality. When you mark a field, think carefully about how much space the value could possibly take. Make sure the space that you mark is large enough – it should not only cover the value in your sample, but also the longest possible value that will be extracted.
 
 #### 4.1.2 Procedure
 
 To train a document model, do as follows:
 
-1.  Perform the following steps to log into the **Document Model Training** application:
+1. Perform the following steps to log into the **Document Model Training** application:
 
-    1. Log into the Marketplace with your Mendix account.
-    
-    2.  Go to **My Marketplace** and then do as follows:
+   1. Log into the Marketplace with your Mendix account.
 
-        * If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
-        * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
-    
-    3. Click **Intelligent Document Service** to open the service management dashboard.
+   2.  Go to **My Marketplace** and then do as follows:
 
-    4.  Click **Manage Instance** to open the **Document Model Training** application.
+       * If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+       * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
 
-        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/document-model-training-app.png" alt="Document model training app login page" >}}
-    
-    5. Sign into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account.
-2.  Click **Environment** to show the **Existing Models** list.
+   3. Click **Intelligent Document Service** to open the service management dashboard.
 
-    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/existing-models-list.png" alt="Existing models list" >}}
+   4.  Click **Manage Instance** to open the **Document Model Training** application.
 
-    {{% alert color="info" %}}We recommend using the Google Chrome browser. We also recommend that you use the appropriate buttons on the web app page instead of using the browser navigation controls, in order to refresh a page, go to the previous page, etc. For example, to refresh a page, use the **Refresh** button on the app page rather than click the refresh control from the browser or press <kbd>F5</kbd> on the keyboard. {{% /alert %}}
-    
-    {{% alert color="info" %}} The model is ready to use only when the **Status** of this model is **Published**. {{% /alert %}}
+       {{< figure src="/attachments/appstore/app-services/intelligent-document-service/document-model-training-app.png" alt="Document model training app login page" >}}
 
-3.  To train a new model, click **Create New Model** on the page. The **Create New Model** dialog box opens.
+   5. Sign into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account.
 
-    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/create-new-model-dialog-box.png" alt="Create New Model dialog box" >}}
+2. Click **Environment** to show the **Existing Models** list.
 
-4.  Enter a unique **Model Name**. select a **Language**, and then click **Create Model**.
+   {{< figure src="/attachments/appstore/app-services/intelligent-document-service/existing-models-list.png" alt="Existing models list" >}}
 
-    {{% alert color="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
+   {{% alert color="info" %}}We recommend using the Google Chrome browser. We also recommend that you use the appropriate buttons on the web app page instead of using the browser navigation controls, in order to refresh a page, go to the previous page, etc. For example, to refresh a page, use the **Refresh** button on the app page rather than click the refresh control from the browser or press <kbd>F5</kbd> on the keyboard. {{% /alert %}}
+
+   {{% alert color="info" %}} The model is ready to use only when the **Status** of this model is **Published**. {{% /alert %}}
+
+3. To train a new model, click **Create New Model** on the page. The **Create New Model** dialog box opens.
+
+   {{< figure src="/attachments/appstore/app-services/intelligent-document-service/create-new-model-dialog-box.png" alt="Create New Model dialog box" >}}
+
+4. Enter a unique **Model Name**. select a **Language**, and then click **Create Model**.
+
+   {{% alert color="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
 
 5. Wait until the **Import File** page opens.
-6.  Drag sample images in JPG or JPEG format into the box where it says **Drag image files here**. You can also click **Browse** and select the files.
 
-    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/import-file-page.png" alt="Import File page" >}}
-    
-    {{% alert color="warning" %}}If you upload multiple files, all your images must have a similar structure.{{% /alert %}}
-    
-7.  Click **Next**. The **Add Marker and IDs** page opens. The status of the images you imported shows **Not Marked**.
+6. Drag sample images in JPG or JPEG format into the box where it says **Drag image files here**. You can also click **Browse** and select the files.
 
-    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-marker-and-ids-image-unmarked.png" alt="Add Marker and IDs page" >}}
+   {{< figure src="/attachments/appstore/app-services/intelligent-document-service/import-file-page.png" alt="Import File page" >}}
 
-8.  To mark an image, perform the following steps:
-    1. Click **Add Marker**. The **Mark Document** dialog box opens.
-    
-    2.  In the **Mark the fields to be extracted** pane, select a field of interest from which some meaningful data needs to be extracted.
-    
-        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/mark-document-dialog-box.png" alt="Mark Document page" >}}
-        
-    3.  On the right side, enter a **Marker Id** that is used for the area that you selected. 
-    
-    4. Select the **Marker Type**. It can be **Text** or **Checkmark**.
-    
-    5. Click **Add Marker** to add the marker to the list of **Markers**.
-    
-    6. To delete a marker from the **Markers** list, select the marker and click **Delete**.
-    
-    7.  When you add all the markers for this image, click **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.
-    
-        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-marker-and-ids-image-status-marked.png" alt="add markers and id status is marked" >}}
-    
-    8. Repeat the steps above until you mark all the images, and then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
-9.  Wait until the **Status** of the model becomes **Published**.
-10. Once the model is published, this pop-up window opens:
-    
-    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/new-model-status-popup.png" alt="new model status included" >}}
-    
-    Click **OK** to close the pop-up window. The model is ready to use. 
-    
-    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/new-model-status-completed.png" alt="new model status published" >}}
+   {{% alert color="warning" %}}To reach the higher accuracy of data extraction, you should upload at least 3 samples to train your model, and all these images must have a similar structure.{{% /alert %}}
+
+   Click **Next**. The **Add Marker and IDs** page opens. The status of the images you imported shows **Not Marked**.
+
+   {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-marker-and-ids-image-unmarked.png" alt="Add Marker and IDs page" >}}
+
+7. To mark an image, use the marker tool properly:
+   1. Click **Add Marker**. The **Mark Document** dialog box opens.
+
+   2. In the **Mark the fields to be extracted** pane, select a field of interest from which some meaningful data needs to be extracted.
+
+      {{% alert color="warning" %}}When you mark a field, think carefully about how much space the value could possibly take. For example, the value of a field in your sample can be '1', which takes up only a little space, but it could be '999,999,999,999' in another document, which takes up a lot of space. Therefore, make sure the space that you mark is large enough – it should not only cover the value in your sample, but also the longest possible value that will be extracted.{{% /alert %}}
+
+      {{< figure src="/attachments/appstore/app-services/intelligent-document-service/mark-document-dialog-box.png" alt="Mark Document page" >}}
+
+   3. On the right side, enter a **Marker Id** that is used for the area that you selected. 
+
+   4. Select the **Marker Type**. It can be **Text** or **Checkmark**.
+
+   5. Click **Add Marker** to add the marker to the list of **Markers**.
+
+   6. To delete a marker from the **Markers** list, select the marker and click **Delete**.
+
+   7. When you add all the markers for this image, click **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.
+
+      {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-marker-and-ids-image-status-marked.png" alt="add markers and id status is marked" >}}
+
+   8. Repeat the steps above until you mark all the images, and then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
+
+8. Wait until the **Status** of the model becomes **Published**.
+
+9. Once the model is published, this pop-up window opens:
+
+   {{< figure src="/attachments/appstore/app-services/intelligent-document-service/new-model-status-popup.png" alt="new model status included" >}}
+
+   Click **OK** to close the pop-up window. The model is ready to use. 
+
+   {{< figure src="/attachments/appstore/app-services/intelligent-document-service/new-model-status-completed.png" alt="new model status published" >}}
 
 ### 4.2 Creating an Import Mapping{#mapping-file}
 
@@ -181,7 +187,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
     
        {{% alert color="info" %}}As this action actually exacts data from the input samples to generate the JSON structure, the usage is counted against the allocated quota for your provisioned instance.{{% /alert %}}
     
-       {{% alert color="info" %}}You may get blank value(s) in the extracted response for some fields, as our intelligent component returns an empty field when it is not confident about the extraction result. To improve the accuracy of data extraction, follow the [quick tips](#quick-tips). {{% /alert %}}
+       {{% alert color="info" %}}You may get blank value(s) in the extracted response for some fields, as our intelligent component returns an empty field when it is not confident about the extraction result. To improve the accuracy of data extraction, follow the [Guidelines](#guidelines) section. {{% /alert %}}
     
 2.  To add the JSON structure to your app, perform the following steps:
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the generated JSON structure.
@@ -197,9 +203,9 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
     1. In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the import mapping.     
     2. From the pop-up menu, select **Add other** > **Import mapping**.
     3. In the **Add Import Mapping** dialog box, enter a **Name** for the import mapping and click **OK**. The **Select schema elements for import mapping** dialog box opens.    
-    4.  For **Schema source**, select **JSON structure** and **Select** the JSON structure that you created.
+    4. For **Schema source**, select **JSON structure** and **Select** the JSON structure that you created.
     
-        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/schema-source-json-structure.png" alt="schema-source-json-structure" >}}
+       {{< figure src="/attachments/appstore/app-services/intelligent-document-service/schema-source-json-structure.png" alt="schema-source-json-structure" >}}
     5. Click **OK** to save the changes and close the dialog box.
 
 ### 4.3 Extracting the Data with the Trained Document Model {#extraction-activity}

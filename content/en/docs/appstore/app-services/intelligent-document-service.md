@@ -127,7 +127,7 @@ To train a document model, do as follows:
 
    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/import-file-page.png" alt="Import File page" >}}
 
-   {{% alert color="warning" %}}To reach the higher accuracy of data extraction, you should upload at least 3 samples to train your model, and all these images must have a similar structure.{{% /alert %}}
+   {{% alert color="warning" %}}To reach the higher accuracy of data extraction, you should upload at least three samples to train your model, and all these images must have a similar structure.{{% /alert %}}
 
    Click **Next**. The **Add Marker and IDs** page opens. The status of the images you imported shows **Not Marked**.
 

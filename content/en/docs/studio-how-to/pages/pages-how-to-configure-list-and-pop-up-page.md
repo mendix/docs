@@ -1,8 +1,8 @@
 ---
 title: "Configure a List and a Pop-Up Page with List Item Details"
-url: /studio-how-to/pages-how-to-configure-list/
+url: /studio-how-to/pages-how-to-configure-list-and-pop-up-page/
 category: "Pages"
-description: "Describes how to configure a list of items in Mendix Studio."
+description: "Describes how to configure a list of items and show their details on a pop-up page in Mendix Studio."
 weight: 35
 tags: ["studio", "pages", "list", "list view", "how to"]
 ---
@@ -20,9 +20,13 @@ This how-to explains how you can configure a list of items and view and edit the
 
 The how-to describes the following use case: 
 
-Sales Representatives in your company would like to view a list of opportunity contacts (potential customers) on an existing page. When a Sales Representative clicks a row in this list, the details of the corresponding opportunity contact are displayed in a pop-up page where they can view contact details. The Sales Representative can also add a new contact and fill in its details.
+Sales Representatives in your company would like to view a list of opportunity contacts (potential customers) on an existing page: 
 
- {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/configured-page" >}}
+ {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/configured-page.jpg" >}}
+
+![](attachments/pages-how-to-configure-list-and-pop-up-page/configured-page.jpg)
+
+When a Sales Representative clicks a row in this list, the details of the corresponding opportunity contact are displayed in a pop-up page where they can view contact details. The Sales Representative can also add a new contact and fill in its details.
 
 ## 2 Prerequisites
 
@@ -35,6 +39,8 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Make sure your domain model is configured the following way:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/domain-model.png"   width="200"  >}} 
+    
+    ![](attachments/pages-how-to-configure-list-and-pop-up-page/domain-model.png)
 
 ## 3 Adding a List View to a Page
 
@@ -46,7 +52,9 @@ You would like to add an opportunity contact list to an existing blank page. Do 
 
 3. Now you need to connect data to the list. Open list view properties and select the **Entity** property:
 
-    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/entity-property.png" >}}
+    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/entity-property.jpg" >}}
+
+    ![](attachments/pages-how-to-configure-list-and-pop-up-page/entity-property.jpg)
 
 4. In the **Select Entity** dialog box, select **OpportunityContact** and confirm your choice by clicking **Select**. Now the list is connected to the **OpportunityContact** entity.
 
@@ -54,21 +62,26 @@ You would like to add an opportunity contact list to an existing blank page. Do 
 
 6. Search for **Text** and drag and drop it inside the list view:
 
-    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/text-inside-list-view.png" >}}
+    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/text-inside-list-view.jpg" >}}
+
+    ![](attachments/pages-how-to-configure-list-and-pop-up-page/text-inside-list-view.jpg)
 
 7. Open the **Properties** tab of the text widget.
 
 8. In the **Content** property, delete *Text* and click **Add** > **Attribute**:
 
-    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/attribute-property.png" >}}
+    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/attribute-property.jpg" >}}
+
+    ![](attachments/pages-how-to-configure-list-and-pop-up-page/attribute-property.jpg)
 
 9. In the **Select Attribute** dialog box, choose **Name** and click **Select**.
 
-    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/select-attribute.png" >}}
 
 The page now has a list that shows opportunity contacts by their name:
 
-{{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/list-view-showing-name.png" >}}
+{{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/list-view-showing-name.jpg" >}}
+
+![](attachments/pages-how-to-configure-list-and-pop-up-page/list-view-showing-name.jpg)
 
 ## 4 Showing a Pop-Up Page with Details {#pop-up-page}
 
@@ -87,7 +100,9 @@ Follow the steps below:
     
     3. Delete the text *Page* from the **Caption** property.
     
-        {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/button-general-section.png" >}}
+        {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/button-general-section.jpg" >}}
+    
+        ![](attachments/pages-how-to-configure-list-and-pop-up-page/button-general-section.jpg)
     
     4. Set the **Align Self** property to **Right**.
     
@@ -95,19 +110,25 @@ Follow the steps below:
     
     6. In the **Select Page** dialog box, click the plus icon in the top right corner to create a new page:
     
-        {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/plus-icon" >}}
+        {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/plus-icon.jpg" >}}
+    
+        ![](attachments/pages-how-to-configure-list-and-pop-up-page/plus-icon.jpg)
     
     7. In the **Create new page** dialog box, set the **Title** to *OpportunityContact_NewEdit* and the **Layout** to **PopupLayout**.
     
     8. The **Pre-fill page contents based on the OpportunityContact entity** option is on and the page template (*Forms*) is selected automatically for you. Choose **Forms Horizontal**:
     
-        {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/create-page" >}}
+        {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/create-page.jpg" >}}
+    
+        ![](attachments/pages-how-to-configure-list-and-pop-up-page/create-page.jpg)
     
     9. Click **Create**.
 
 A page that shows the Opportunity Contact details is created:
 
-{{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/new-page" >}}
+{{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/new-page.jpg" >}}
+
+![](attachments/pages-how-to-configure-list-and-pop-up-page/new-page.jpg)
 
 ## 5 Adding a Button that Enables Creating a New Contact
 
@@ -129,14 +150,24 @@ Do the following:
 
 6. In the **Select Page** dialog box, select **OpportunityContact_NewEdit** and click **Select**.
 
-    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/new-button-properties" >}}
+    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/new-button-properties.jpg" >}}
+
+    ![](attachments/pages-how-to-configure-list-and-pop-up-page/new-button-properties.jpg)
 
 7. To adjust button's place on the page, set the **Spacing Left** to **Large** and **Spacing Top** to **Medium**.
 
-The button allows Sales Representatives to add new items to the list:
+The button now allows Sales Representatives to add new items to the list:
 
- {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/new-button-on-the-page" >}}
+ {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/new-button-on-the-page.jpg" >}}
+
+![](attachments/pages-how-to-configure-list-and-pop-up-page/new-button-on-the-page.jpg)
+
+Congratulations! You have configured the list showing opportunity contacts by name. The button inside the list opens the pop-up page with list item details. The **New** button above the list allows users to add a new item to the list.
 
 You can now preview your app and test your page. For more information on how to preview your page, see [Previewing & Publishing Your App](/studio/publishing-app/).
 
-You can also work on the page details, for example, show more details in the list then just the contact's name. 
+Make sure that you have added the page with the list in your navigation bar. For more information on how to configure navigation in your app, see [How to Configure a Navigation Bar](/studio-how-to/navigation-how-to-configure/). You can also work on the page details, for example, show more details in the list then the contact's name. 
+
+## 6 Read More
+
+* [How to Configure a List and Show List Item Details on One Page](/studio-how-to/pages-how-to-configure-list/)

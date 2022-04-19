@@ -137,7 +137,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
     {{% alert color="info" %}} The total size of the images being passed for extraction should not exceed 20 MB. If you have multiple images to extract data from, you can process them in smaller batches. {{% /alert %}}
 
-    {{% alert color="info" %}}The number of images passed as a list in the microflow and processed by the **Invoice Processing** activity will be counted against the allocated quota for your provisioned instance.{{% /alert %}}
+    {{% alert color="info" %}}The number of images passed as a list in the microflow and processed by the **Receipt Processing** activity will be counted against the allocated quota for your provisioned instance.{{% /alert %}}
 
 3.  Double-click the **Receipt Processing** activity to open the **Receipt Processing** dialog box.
 

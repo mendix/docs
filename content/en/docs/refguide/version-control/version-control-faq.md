@@ -70,7 +70,7 @@ However, in this case the following products and capabilities are not available:
 
 * [Mendix Studio](/studio/general/) and the [collaborative development in Studio](/studio/collaboration/)
 * Deployment using the Developer Portal directly from the Team Server
-* Integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Permissions API](/apidocs-mxsdk/apidocs/permissions-api/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Stories API](/apidocs-mxsdk/apidocs/stories-api/), [User management API](/apidocs-mxsdk/apidocs/user-management-api/), and [Developer portal webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints/)
+* Integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Permissions API](/apidocs-mxsdk/apidocs/permissions-api/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Stories API](/apidocs-mxsdk/apidocs/stories-api/), [User management API](/apidocs-mxsdk/apidocs/user-management-api/), and [Developer portal webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints/)
 * [AQM](/addons/aqm-addon/) 
 
 {{% alert color="info" %}}
@@ -80,7 +80,7 @@ For Git, connecting to a third-party Git version control repository is in Beta. 
 
 ## 9 Will Mendix 9 Support Pull Requests and Peer Reviews? 
 
-Studio Pro supports peer review and merging through the version control functionalities available in Studio Pro. For more information on how to set this process up, see [Using Version Control in Studio Pro](refguide/using-version-control-in-studio-pro/).
+Studio Pro supports peer review and merging through the version control functionalities available in Studio Pro. For more information on how to set this process up, see [Using Version Control in Studio Pro](/refguide/using-version-control-in-studio-pro/).
 Currently, Mendix does not support pull or merge requests through the Team Server for Mendix. When using third-party tools it is possible to review the following code extensions:
 * code for Java & JavaScript actions
 * HTML/CSS for theming

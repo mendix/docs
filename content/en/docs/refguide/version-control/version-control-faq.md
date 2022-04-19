@@ -44,7 +44,7 @@ Mendix  is focusing on improving Team Server Git support and migrating customers
 
 ## 6 Can I Migrate from Team Server SVN to Git?
 
-Currently, there is no out-of-the-box migration service available that keeps historical data. This service is planned for 2022.
+Currently, there is no out-of-the-box migration service available that keeps historical data. This service is planned later in 2022.
 However, you can migrate manually by creating a new app based on Team Server Git, exporting the Team Server SVN app, and copying that to the new app repository. This does **not** preserve your app history.
 
 
@@ -55,7 +55,7 @@ Yes, as the Team Server is based on a full implementation of Git or SVN. You can
 * Team Server SVN: `https://teamserver.sprintr.com/<your AppID>/` 
 * Team Server Git: `https://git.api.mendix.com/<your AppID>.git`
 
-If you have Git-based apps, you can also connect to the local repository. 
+If you have Git-based apps, you can also connect to a local repository. 
 
 {{% alert color="info" %}}
 Studio Pro adds metadata on the Mendix version of your app to each revision when you commit or create a branch. Therefore, when committing or merging using third-party tools, it may no longer be possible to deploy to the Mendix Cloud. This can be fixed by making a commit using Studio Pro, so the correct metadata is present again.

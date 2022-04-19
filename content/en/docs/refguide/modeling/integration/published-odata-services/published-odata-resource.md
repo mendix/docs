@@ -128,7 +128,7 @@ A published OData resource is always readable.
 
 ### 8.3 Updatable
 
-Check the check box for **Updatable** to indicate that clients can update the values of attributes and associations.
+Select the check box for **Updatable** to indicate that clients can update the values of attributes and associations.
 
 When the app receives a request to change values, it does the following:
 

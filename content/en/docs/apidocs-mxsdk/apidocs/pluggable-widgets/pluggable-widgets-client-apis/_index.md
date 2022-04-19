@@ -48,7 +48,7 @@ If a widget uses a TabIndex prop [system property](/apidocs-mxsdk/apidocs/plugga
 
 ### 4.1 ActionValue {#actionvalue}
 
-ActionValue is used to represent actions, like the [On click](/refguide/on-click-event/#on-click) property of an action button. For any action except **Do nothing**, your component will receive a value adhering to the following interface. For **Do nothing** it will receive `undefined`. The `ActionValue` prop appears like this:
+`ActionValue` is used to represent actions, like the [On click](/refguide/on-click-event/#on-click) property of an action button. For any action except **Do nothing**, your component will receive a value adhering to the following interface. For **Do nothing** it will receive `undefined`. The `ActionValue` prop appears like this:
 
 ```ts
 export interface ActionValue {
@@ -68,7 +68,7 @@ The method `execute` triggers the action. It returns nothing and does not guaran
 
 ### 4.2 DynamicValue {#dynamic-value}
 
-DynamicValue is used to represent values that can change over time and is used by many property types. It is defined as follows:
+`DynamicValue` is used to represent values that can change over time and is used by many property types. It is defined as follows:
 
 ```ts
 export type DynamicValue<X> =
@@ -97,7 +97,7 @@ Though the type definition above looks complex, it is fairly simply to use becau
 
 ### 4.3 EditableValue {#editable-value}
 
-EditableValue is used to represent values that can be changed by a pluggable widget client component and is passed only to [attribute properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute). It is defined as follows:
+`EditableValue` is used to represent values that can be changed by a pluggable widget client component and is passed only to [attribute properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute). It is defined as follows:
 
 ```ts
 export interface EditableValue<T extends AttributeValue> {
@@ -139,7 +139,7 @@ The optional field `universe` is used to indicate the set of all possible values
 
 ### 4.4 ModifiableValue {#modifiable-value}
 
-ModifiableValue is used to represent values that can be changed by a pluggable widget client component and is passed only to [association properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#association). It is defined as follows:
+`ModifiableValue` is used to represent values that can be changed by a pluggable widget client component and is passed only to [association properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#association). It is defined as follows:
 
 ```ts
 export interface ModifiableValue<T> {
@@ -153,7 +153,7 @@ export interface ModifiableValue<T> {
 }
 ```
 
-The type the component receives for the association property depends on the allowed association types. If only references are allowed the component receives a `ReferenceValue` which is defined as `ModifiableValue<ObjectItem> & { type: "Reference" };`, if only reference sets are allowed the client gets a `ReferenceSetValue` which is defined as `ModifiableValue<ObjectItem[]> & { type: "ReferenceSet" };`. 
+The type received by the component for the association property depends on the allowed association types. If only references are allowed the component receives a `ReferenceValue` which is defined as `ModifiableValue<ObjectItem> & { type: "Reference" };`, if only reference sets are allowed the client gets a `ReferenceSetValue` which is defined as `ModifiableValue<ObjectItem[]> & { type: "ReferenceSet" };`. 
 
 When both association types are allowed the type is a union of `ReferenceValue` and `ReferenceSetValue` and the widget should check the `type` to determine if a reference or reference set is configured and act accordingly in the code. Checking the type will also [narrow](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#handbook-content) to the correct type in TypeScript.
 
@@ -169,7 +169,7 @@ if (association.type === "Reference") {
 }
 ```
 
-`status` is similar to the one exposed for `DynamicValue`. It indicates if the value's loading has finished and if loading was successful. Similarly to `DynamicValue`, `EditableValue` keeps returning the previous `value` when `status` changes from `Available` to `Loading` to help a widget avoid flickering.
+`status` is similar to the one exposed for `DynamicValue`. It indicates if the value's loading has finished and if loading was successful. Similarly to `DynamicValue`, `ModifiableValue` keeps returning the previous `value` when `status` changes from `Available` to `Loading` to help a widget avoid flickering.
 
 The flag `readOnly` indicates whether a value can actually be edited. It will be true, for example, when a widget is placed inside a Data view that is not [editable](/refguide/data-view/#editable), or when a selected attribute is not editable due to [access rules](/refguide/access-rules/). The `readOnly` flag is always true when a `status` is not `ValueStatus.Available`. Any attempt to edit a value set to read-only will have no affect and incur a debug-level warning message.
 

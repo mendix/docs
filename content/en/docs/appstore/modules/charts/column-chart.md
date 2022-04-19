@@ -1,6 +1,6 @@
 ---
 title: "Column Chart"
-url: /appstore/modules/charts/column
+url: /appstore/modules/charts/column-chart
 parent: "charts"
 description: "Describes the configuration and usage of the Column Chart widget, which is available as part of Charts module in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "charts", "platform support", "column", "data", "visualisation"]

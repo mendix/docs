@@ -138,7 +138,7 @@ To train a document model, do as follows:
 
    2. In the **Mark the fields to be extracted** pane, select a field of interest from which some meaningful data needs to be extracted.
 
-      {{% alert color="warning" %}}When you mark a field, think carefully about how much space the value could possibly take. For example, the value of a field in your sample can be '1', which takes up only a little space, but it could be '999,999,999,999' in another document, which takes up a lot of space. Therefore, make sure the space that you mark is large enough – it should not only cover the value in your sample, but also the longest possible value that will be extracted.{{% /alert %}}
+      {{% alert color="warning" %}}When you mark a field, think carefully about how much space the value could possibly take. For example, the value of a field in your sample can be '1', which takes up only a little space; however, the value that will be extracted could be '999,999,999,999', which takes up a lot of space. Therefore, make sure the space that you mark is large enough – it should not only cover the value in your sample, but also the longest possible value that will be extracted.{{% /alert %}}
 
       {{< figure src="/attachments/appstore/app-services/intelligent-document-service/mark-document-dialog-box.png" alt="Mark Document page" >}}
 

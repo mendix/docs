@@ -19,7 +19,7 @@ Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, an
 
 ### 1.1 Typical Use Cases
 
-* Tracks changes to data—who made what changes at what time in what context— to make your operation GxP and FDA CFR 21 Part 11 compliant
+* Tracks changes to data—who made what changes at what time in what context—to make your operation GxP and FDA CFR 21 Part 11 compliant, which is required in scenarios such as credit transaction, internal IT audit for user access, etc.
 * Allows the developer to easily configure tracking changes per entity, with no changes to domain models required
 * Helps the developer debug why an object is in a specific stage
 

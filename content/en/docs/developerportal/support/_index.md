@@ -14,7 +14,7 @@ Mendix Support is here to answer any questions and solve any issues that you mig
 
 ### 1.1 Service Level Agreements {#sla}
 
-We are available for all users of the Mendix Platform, and we are bound by service-level agreements (SLAs) with our licensed customers. Licensed customers can select their SLA level: **Gold** or **Platinum**. The SLA level determines the specific agreement in the following areas:
+We are available for all users of the Mendix Platform, and we are bound by service-level agreements (SLAs) with our licensed customers. Licensed customers can select their SLA level: **Standard** or **Premium**. The SLA level determines the specific agreement in the following areas:
 
 * Support availability
 * Platform availability

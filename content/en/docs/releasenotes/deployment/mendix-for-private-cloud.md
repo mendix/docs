@@ -13,6 +13,14 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
+### April 21st, 2022
+
+#### Portal Fixes
+
+* We fixed an issue where dates set in an environment variable was malformed when passed to the Mendix Runtime. (Ticket 144314)
+* We fixed an issue where the name was not displayed when listing cluster members.
+* We fixed an issue where constants and scheduled events were not shown correctly after being edited.
+
 ### March 22nd, 2022
 
 #### Fixes

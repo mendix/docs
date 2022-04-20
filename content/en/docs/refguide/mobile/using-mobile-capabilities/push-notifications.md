@@ -49,7 +49,7 @@ To get started, begin with the series' first entry: [Add Module Dependencies](/h
 
 ## 1 Introduction
 
-This how-to will help you add module dependencies for the [Push Notifications Connector](https://marketplace.mendix.com/link/component/3003) module. You only need to install the modules your use case requires. Once your app has the modules it needs, you may move on to [Implement the Push Notifications Module](/howto/mobile/notif-implement-module/).
+This how-to will help you add module dependencies for the [Push Notifications Connector](/appstore/modules/push-notifications/) module. You only need to install the modules your use case requires. Once your app has the modules it needs, you may move on to [Implement the Push Notifications Module](/howto/mobile/notif-implement-module/).
 
 ## 2 Implementing the Encryption Module
 
@@ -128,7 +128,7 @@ Now that you have installed the dependencies you need, you can move on to [Imple
 
 ## 1 Introduction
 
-Now that you have implemented the prerequisites in your app, you must implement the [Push Notifications Connector](https://marketplace.mendix.com/link/component/3003) module. Complete the steps below to enable the basic configuration.
+Now that you have implemented the prerequisites in your app, you must implement the [Push Notifications Connector](/appstore/modules/push-notifications/) module. Complete the steps below to enable the basic configuration.
 
 ## 2 Downloading From Marketplace
 

@@ -162,9 +162,10 @@ To create a re-usable theme module, do the following:
 To open your Mendix app directory from Studio Pro, click **App** in the top menu-bar, then click **Show App Directory in Explorer**.
 {{% /alert %}}
 
-3. Cut the variables from *theme/web/custom-variables.scss* and paste them in *themesource/mytheme/web/custom-variables.scss*.
+3. Copy the variables from *theme/web/custom-variables.scss* and paste them in *themesource/mytheme/web/custom-variables.scss*. Remove all the variables from the *theme/web/custom-variables.scss*. The *theme/web/custom-variables.scss* file should now be empty.
+
    
-4. In *theme/web/custom-variables.scss* add `@import "../../themesource/mytheme/web/custom-variables.scss` to the top of the file, replacing “mytheme” with your module name.
+4. In *theme/web/custom-variables.scss* add `@import "../../themesource/mytheme/web/custom-variables.scss` to the top of the file, replacing “mytheme” with your module name. The *theme/web/custom-variables.scss* file should only contain an import statement to your "mytheme" custom variables.
 
 The two files should end up looking like this:
 
@@ -173,6 +174,8 @@ The two files should end up looking like this:
 ```scss
 @import "../../themesource/mytheme/web/custom-variables.scss";
 ```
+
+Any variables still in the *theme/web/custom-variables.scss* will overide the variables in *themesource/mytheme/web/custom-variables.scss* 
 
 *themesource/mytheme/web/custom-variables.scss*:
 

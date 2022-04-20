@@ -2,7 +2,7 @@
 title: "Mendix Support"
 url: /developerportal/support/
 description: ""
-tags: ["Support", "SLA", "Gold", "Platinum"]
+tags: ["Support", "SLA", "standard", "premium"]
 weight: 30
 aliases:
     - /howtogeneral/support/index.html
@@ -28,7 +28,7 @@ You can check the Mendix SLA [here](https://mendix.com/sla).
 
 ### 1.2 Premier Support
 
-In addition to our Platinum SLA, Mendix offers **Premier Support**, with elevated support levels, specifically for customers with business critical apps.
+In addition to our Premium SLA, Mendix offers **Premier Support**, with elevated support levels, specifically for customers with business critical apps.
 The Premier Support package contains the following for customers on the Mendix Public or Dedicated Cloud:
 
 * 24/7 support availability for critical and high tickets

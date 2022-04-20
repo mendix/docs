@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "app service", "audit trail"]
 
 ## I Introduction
 
-Advanced Audit Trail is an add-on module that allows you to trace changes, use infinitely-scalable and fully-indexed data search. Once configured, the system automatically creates audit snapshots of objects to store an audit trail. This audit trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
+Advanced Audit Trail allows you to trace changes, use infinitely-scalable and fully-indexed data search. Once configured, the system automatically creates audit snapshots of objects to store an audit trail. This audit trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
 
 Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, and Kibana to leverage their utility. Kafka is used for long-term immutable data storage for audit data, and Elasticserach and Kibana are used to index the audit data. You can find an integration diagram below:
 
@@ -36,7 +36,11 @@ Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, an
 *  Supports searching full-text search on the data, search on changed data, and exporting data to CSV format using [Kibana](https://www.elastic.co/guide/en/kibana/index.html)
 *  Support configuring different permissions for audit data for different users
 
-### 1.3 Prerequisites
+### 1.3 Limitations 
+
+Advanced Audit Trail contains an [add-on module](refguide/consume-add-on-modules-and-solutions/). Mendix Studio does not support add-on modules. It should be disabled for your app.
+
+### 1.4 Prerequisites
 
 * You need to use Advanced Audit Trail with Studio Pro 9 versions starting with [9.12](https://docs.mendix.com/releasenotes/studio-pro/9.12/).
 
@@ -148,4 +152,4 @@ Update the **AuditSnapshots_ResponsiveLayout** to update the layouts without cha
 
 ## 4 Read More
 
-* [Consuming Add-on Modules and Solutions](/refguide/consume-add-on-modules-and-solutions/)
+* [Consuming Add-on Modules and Solutions]()

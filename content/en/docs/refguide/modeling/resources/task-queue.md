@@ -248,7 +248,7 @@ In Mendix versions 9.9.0 and above, the `System.ProcessedQueueTask` can be clean
 When this setting is not specified, no cleanup is performed.
 
 {{% alert color="info" %}}
-When turning on the automatic cleanup after having used tasks for a long time, there might be many rows to clean up, which will be initiated when the runtime starts. This may cause additional load on the database, but will nog block the startup. It is recommended not to do this during a busy period.
+When turning on the automatic cleanup after having used tasks for a long time, there might be many rows to clean up, which will be initiated when the runtime starts. This may cause additional load on the database, but will not block the startup. It is recommended not to do this during a busy period.
 {{% /alert %}}
 
 In versions of Mendix below 9.9.0, you can clean up old tasks by creating a microflow for administrators to use if the table gets too large.

@@ -191,7 +191,7 @@ kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers
 
 #### 5.1.2 Air-gapped
 
-For air-gapped environment, assuming you have [performed the preparation steps](#preparation), use the following commands:
+For an air-gapped environment, assuming you have [performed the preparation steps](#preparation), use the following commands:
 
 ```bash
 cat tekton.yaml | aip inject-manifest | kubectl apply -f -
@@ -203,7 +203,7 @@ cat interceptors.yaml | aip inject-manifest | kubectl apply -f -
 
 Follow the instructions for either clusters with access to the internet or for air-gapped clusters, and then follow the instructions for updating OpenShift security.
 
-#### 5.1.1 With Access to the Internet
+#### 5.2.1 With Access to the Internet
 
 To install Tekton and Tekton Triggers on OpenShift when your environment has access to the internet, use the following commands:
 
@@ -220,9 +220,9 @@ curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.15.0/re
 curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.15.0/interceptors.yaml -s > interceptors.yaml
 ```
 
-#### 5.1.2 Air-gapped
+#### 5.2.2 Air-gapped
 
-For air-gapped environment, assuming you have [performed the preparation steps](#preparation), use the following commands to install Tekton and Tekton triggers
+For an air-gapped environment, assuming you have [performed the preparation steps](#preparation), use the following commands to install Tekton and Tekton triggers
 
 ```bash
 # Tekton
@@ -237,7 +237,7 @@ cat tekton-triggers.yaml | aip inject-manifest | kubectl apply -f -
 cat interceptors.yaml | aip inject-manifest | kubectl apply -f -
 ```
 
-#### 5.1.3 Updating OpenShift Security
+#### 5.2.3 Updating OpenShift Security
 
 For Tekton Triggers on OpenShift you need to update the deployment objects to make them compatible with OpenShift security. Perform the following steps:
 
@@ -257,13 +257,13 @@ For Tekton Triggers on OpenShift you need to update the deployment objects to ma
 
 Before you install the Mendix pipelines you need to do the following:
 
-1. Install [helm](https://helm.sh)
+1. Install [helm](https://helm.sh).
 2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines – you can download these from [Mendix for Private Cloud Standalone Tekton Pipelines](https://cdn.mendix.com/mendix-for-private-cloud/tekton-pipelines/standalone-cicd/standalone-cicd-v1.0.0.zip).
 
 There are two components which need to be configured:
 
-1. Pipelines – contains all Tekton related objects;
-2. Triggers – provides HTTP services to trigger (run) pipelines.
+1. Pipelines – contains all Tekton related objects
+2. Triggers – provides HTTP services to trigger (run) pipelines
 
 ### 6.1 Pipelines
 
@@ -283,7 +283,7 @@ helm install -n $YOUR_NAMESPACE mx-tekton-pipeline ./pipeline/ \
 
 #### 6.1.2 Air-gapped
 
-For **air-gapped** environments, you need to specify the images individually, as well as the private registry you set up in [Preparation for Air-gapped Environments](#preparation):
+For air-gapped environments, you need to specify the images individually, as well as the private registry you set up in [Preparation for Air-gapped Environments](#preparation):
 
 ```bash
 cd $PATH_TO_DOWNLOADED_CHARTS
@@ -307,7 +307,7 @@ Standard triggers are used to run pipelines like create-app-pipeline, configure-
 
 There are also two options to build a Mendix app using either a generic or a GitLab webhook trigger.
 
-After installing the generic trigger or the GitLab webhook trigger you will have service with the name like this - `el-mx-pipeline-listener-someUniqueName`. Make sure that you have access to that service (by creating an ingress or load balancer from a cloud provider, etc).
+After installing the generic trigger or the GitLab webhook trigger you will have a service with a name like `el-mx-pipeline-listener-someUniqueName`. Make sure that you have access to that service (by creating an ingress or load balancer from a cloud provider, etc).
 
 #### 6.2.1 Persistent Volume Claims (PVCs)
 
@@ -332,7 +332,7 @@ helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
 | Parameter | Explanation |
 | --- | --- |
 | `name` | All created Kubernetes objects will have this suffix |
-| `pipelineName` | Name of the pipeline to trigger. `build-pipeline` is the default pipeline name from pipeline chart |
+| `pipelineName` | Name of the pipeline to trigger. `build-pipeline` is the default pipeline name from the pipeline chart |
 | `triggerType` | Supported types - `gitlabwebhook` and `generic` |
 
 #### 6.2.3 GitLab Webhook Trigger
@@ -359,7 +359,7 @@ helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
 | --- | --- |
 | `name` | all created Kubernetes objects will have this suffix |
 | `triggerType` | supported types - `gitlabwebhook` and `generic` |
-| `buildPipelineName` | name of the pipeline to trigger. `build-pipeline` is the default pipeline name from pipeline chart |
+| `buildPipelineName` | name of the pipeline to trigger. `build-pipeline` is the default pipeline name from the pipeline chart |
 | `gitlabwebhook.operatorNamespace` | name of Kubernetes namespace where Mendix Operator runs |
 | `gitlabwebhook. mendixEnvironmentInernalName` | Mendix environment internal name. You can get the all internal environment names using the  command `kubectl get mendixapps -n $namespace_name` |
 | `gitlabwebhook. kubeConfigSecretName` (*Optional*) | name of the secret with kube config. Used when Mendix Operator is in another cluster |
@@ -369,7 +369,7 @@ helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
 
 ### 6.3 Triggering Pipelines
 
-This section documents the HTTP requests which will trigger the various Mendix pipelines, using the triggers you have installed in the [Installing Triggers](#installing-triggers) section and describes the parameters.
+This section documents the HTTP requests which will trigger the various Mendix pipelines, using the triggers you have installed in the [Installing Triggers](#installing-triggers) section, and describes their parameters.
 
 #### 6.3.1 Create App Pipeline
 
@@ -391,7 +391,7 @@ curl -X POST \
 
 | Parameter | Explanation |
 | --- | --- |
-| `namespace` | name of the Kubernetes namespace where Mendix Operator runs |
+| `namespace` | name of the Kubernetes namespace where the Mendix Operator runs |
 | `env-internal-name` | Mendix environment internal name. The MendixApp CR will be created with this name |
 | `dtap-mode` | mode for running the Mendix application. Available options:<br/>`P` – Production (for all production environments)<br/>`D` – Development |
 | `storage-plan-name` | name of an already-created storage plan |
@@ -505,7 +505,7 @@ If you have a private registry with authentication, you need to follow [these in
 
 #### 7.2.2 OpenShift Registry
 
-For OpenShift you need to provide an SSL cert file for the registry and give the `system:image-builders` role to the `tekton-triggers-mx-sa` service account. Use the following commands replacing `$YOUR_NAMESPACE_WITH_PIPELINES` with the correct namespace name:
+For OpenShift you need to provide an SSL certificate file for the registry and give the `system:image-builders` role to the `tekton-triggers-mx-sa` service account. Use the following commands replacing `$YOUR_NAMESPACE_WITH_PIPELINES` with the correct namespace name:
 
 ```bash
 oc patch rolebindings system:image-builders -p '{"subjects":[{"name":"tekton-triggers-mx-sa","kind":"ServiceAccount","namespace":"$YOUR_NAMESPACE_WITH_PIPELINES"}]}'
@@ -516,7 +516,7 @@ oc patch tasks build-push-image --type='json' --patch '[{"op": "add", "path": "/
 
 ### 8.1 `Context Deadline Exceeded` when Installing for Kubernetes
 
-When installing Tekton and the Pipelines for Kubernetes, you can face with the issue such as:
+When installing Tekton and the Pipelines for Kubernetes, you can face an issue such as:
 
 `Error from server (InternalError): error when creating "STDIN": Internal error occurred: failed calling webhook "webhook.triggers.tekton.dev": Post "https://tekton-triggers-webhook.tekton-pipelines.svc:443/defaulting?timeout=10s": context deadline exceeded`
 

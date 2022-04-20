@@ -13,6 +13,10 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### April 21st, 2022
+
+* We have introduced support for [AppDynamics](/developerportal/operate/appdynamics-metrics/) monitoring in Mendix Cloud V4.
+
 ### March 31st, 2022
 
 #### Improvements

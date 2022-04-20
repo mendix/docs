@@ -189,7 +189,13 @@ If these additional metrics are enabled, the rate and counter metrics will be se
 
 *Default value: false*
 
-### 4.6 Datadog Events Log
+### 4.6 System Metrics{#system-metrics}
+
+System metrics are disabled by default as they usually reflect metrics for a host, rather than for a specific container. You can enable these additional metrics by setting **DATADOG_ENABLE_CHECKS** to *true*.
+
+*Default value: false*
+
+### 4.7 Datadog Events Log
 
 The Datadog Events log contains events which come from your app: those are the same events that would appear in the Mendix Console. It does not contain events from the environment.
 
@@ -197,15 +203,15 @@ The Datadog Events log contains events which come from your app: those are the s
 
 By default all email addresses contained in log events will be redacted. You can change this – see [Email Address Redaction](#redact-emails), above.
 
-### 4.7 Datadog Agent not Started
+### 4.8 Datadog Agent not Started
 
 If you configure your app for Datadog but the Datadog agent is not started, the events will be sent to the app log files.
 
-### 4.8 Datadog Issues
+### 4.9 Datadog Issues
 
 If you have any issues related to accessing Datadog, please contact their support here: [Support | Datadog](https://www.datadoghq.com/support/), or by email at [support@datadoghq.com](mailto:support@datadoghq.com).
 
-### 4.9 Metrics on Datadog Usage
+### 4.10 Metrics on Datadog Usage
 
 Metrics on Datadog can include an additional namespace, **datadog** which contains metrics on Datadog usage.
 

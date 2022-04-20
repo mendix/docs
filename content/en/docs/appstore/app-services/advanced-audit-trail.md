@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "app service", "audit trail"]
 
 ## I Introduction
 
-Advanced Audit Trail allows you to trace changes, use infinitely-scalable and fully-indexed data search. Once configured, the system automatically creates audit snapshots of objects to store an audit trail. This audit trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
+Advanced Audit Trail is an add-on module that allows you to trace changes, use infinitely-scalable and fully-indexed data search. Once configured, the system automatically creates audit snapshots of objects to store an audit trail. This audit trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
 
 Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, and Kibana to leverage their utility. Kafka is used for long-term immutable data storage for audit data, and Elasticserach and Kibana are used to index the audit data. You can find an integration diagram below:
 
@@ -19,7 +19,7 @@ Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, an
 
 ### 1.1 Typical Use Cases
 
-* Tracks changes to data—who made what changes at what time in what context—to make your operation GxP and FDA CFR 21 Part 11 compliant, which is required in scenarios such as credit transaction, internal IT audit for user access, etc.
+* Tracks changes to data (who made what changes at what time in what context) to make your operation GxP and FDA CFR 21 Part 11 compliant, which is required in processes such as credit transaction, internal IT audit for user access, etc.
 * Allows the developer to easily configure tracking changes per entity, with no changes to domain models required
 * Helps the developer debug why an object is in a specific stage
 
@@ -145,3 +145,7 @@ Use this action to create custom logging/entities and identify in what microflow
 ### 3.10 Changing the Module Layout (Optional)
 
 Update the **AuditSnapshots_ResponsiveLayout** to update the layouts without changing the pages.
+
+## 4 Read More
+
+* [Consuming Add-on Modules and Solutions](/refguide/consume-add-on-modules-and-solutions/)

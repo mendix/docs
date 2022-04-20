@@ -77,7 +77,6 @@ The name of an enumeration value must be a technical name, starting with a lette
 
 <details><summary>It cannot be a reserved word (click to see a list of reserved words)</summary>
 
-* `__filename__`
 * `abstract`
 * `assert`
 * `boolean`

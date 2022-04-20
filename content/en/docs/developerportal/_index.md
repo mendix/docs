@@ -108,7 +108,7 @@ Clicking the question icon in the Developer Portal brings up the options Mendix 
 
 * **Ask the Community** – click this to go to the [Mendix Forum](https://forum.mendixcloud.com/)
 * **Check the documentation** – click this to go to the [Mendix Documentation](https://docs.mendix.com/)
-* **Contact Mendix Support** – click this to go to [Mendix Support](https://support.mendix.com/hc/en-us)
+* **Contact Mendix Support** – click this to go to [Mendix Support](https://support.mendix.com/)
 
 ## 6 Guide Categories
 

@@ -29,7 +29,7 @@ You can use this module when you want your application's end-users to sign in wi
 
 ### 1.3 Limitations
 
-* Due to the large number of app creations, synchronizing newly created apps might take some time. When an app is not yet synchronized, the deployment will not work when you attempt to deploy your app to the Mendix Developer Portal, as it will not recognize your app. In these cases, please be patient and try again later or contact [Mendix Support](https://support.mendix.com/hc/en-us) if the problem persists. Mendix is working on resolving the volume throughput issues.
+* Due to the large number of app creations, synchronizing newly created apps might take some time. When an app is not yet synchronized, the deployment will not work when you attempt to deploy your app to the Mendix Developer Portal, as it will not recognize your app. In these cases, please be patient and try again later or contact [Mendix Support](https://support.mendix.com/) if the problem persists. Mendix is working on resolving the volume throughput issues.
 * This module does not work for [native mobile](/refguide/native-mobile/) apps.
 * The default app `Logout` action resolves to the origin location found in a session cookie, which (re)triggers the `/openid/login/` endpoint, which logs the end-user in again. 
 

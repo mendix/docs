@@ -50,9 +50,9 @@ Advanced Audit Trail contains an [add-on module](refguide/consume-add-on-modules
 
 ## 2 Installation
 
-### 2.1 Starting a Subscription
+### 2.1 Starting a Subscription {#obtain-license-key}
 
-Advanced Audit Trail is a premium Mendix product that is subject to a purchase and subscription fee. You can deploy Advanced Audit Trail locally or in a Mendix Free App for free. However, to deploy Advanced Audit Trial on the cloud, you need to start a subscription to get a license token and configure it later. To start a subscription, contact your Customer Success Manager (CSM) or the Mendix Sales organization.
+Advanced Audit Trail is a premium Mendix product that is subject to a purchase and subscription fee. You can deploy Advanced Audit Trail locally or in a Mendix Free App for free. However, to deploy Advanced Audit Trial on the cloud, you need to start a subscription to get a license token and [configure](#configure-license-key) it later. To start a subscription, contact your Customer Success Manager (CSM) or the Mendix Sales organization.
 
 ### 2.2 Installing the Component in Your app
 
@@ -149,6 +149,14 @@ Use this action to create custom logging/entities and identify in what microflow
 ### 3.10 Changing the Module Layout (Optional)
 
 Update the **AuditSnapshots_ResponsiveLayout** to update the layouts without changing the pages.
+
+### 3.11 Configuring the License Key {#configure-license-key}
+
+You can deploy Advanced Audit Trail locally or in a Mendix Free App for free. However, to deploy Advanced Audit Trail in the Mendix Cloud, you need to start a subscription to [obtain a license key](/#obtain-license-key), and then configure it.
+
+Before you deploy your app, configure the app **Constants** in the deployment package in the [Developer Portal](https://docs.mendix.com/developerportal/deploy/environments-details/).
+
+If you have already deployed your app, change the existing **Licensekey** constant value on the **Model Options** tab and restart the app.
 
 ## 4 Read More
 

@@ -20,7 +20,7 @@ weight: 99
 #### Entity (Element)
 
 * We made the `isRemote` property public.
-* We introduced the `remoteSourceDocument` (experimental) property, which indicates the source document of the remote entity.
+* We introduced the `remoteSourceDocument` (experimental) property, which indicates the source document of the external entity.
 
 #### NoGeneralization (Element)
 
@@ -33,7 +33,7 @@ We made the following properties public:
 
 #### RemoteEntitySourceDocument (ModelUnit)
 
-* We introduced this experimental property, which indicates a source document of a remote entity.
+* We introduced this experimental property, which indicates a source document of an external entity.
 
 ### CustomWidgets
 

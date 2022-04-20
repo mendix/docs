@@ -521,7 +521,7 @@ Then the Studio Pro UI for the property appears like this:
 
 The association property type allows a widget to work directly with associations between entities, both reading and writing associations. Depending on the widget's purposes, a widget should define association types it supports.
 
-The client will receive an `ModifiableValue<T>` where `T` depends on the configured `<associationType>`. For more information, see the [ModifiableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-value) section of *Client APIs Available to Pluggable Widgets*.
+The client will receive an `ModifiableValue<T>` where `T` depends on the configured `<associationType>`. For more information, see the [ModifiableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#modifiable-value) section of *Client APIs Available to Pluggable Widgets*.
 
 #### 4.5.1 XML Attributes
 

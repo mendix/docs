@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We expanded the export-to-Excel functionality in [Control Center](/developerportal/control-center/) for both the [Apps](/developerportal/control-center/#apps) tab (which now includes the App ID) and the [Cloud](/developerportal/control-center/#cloud) tab (which now includes the App id, Environment ID, and Environment URL).
+* We expanded the export-to-Excel functionality in [Control Center](/developerportal/control-center/) for both the [Apps](/developerportal/control-center/#apps) tab (which includes the **App ID**) and the [Cloud](/developerportal/control-center/#cloud) tab (which includes the **App ID**, **Environment ID**, and **Environment URL**).
 
 ### April 7th, 2022
 

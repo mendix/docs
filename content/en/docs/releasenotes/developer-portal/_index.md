@@ -17,6 +17,16 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### April 21st, 2022
+
+#### Improvements
+
+* We removed the old Stories UI in preparation for a brand new Mendix tool for agile project management (which will eventually replace [Stories](/developerportal/collaborate/stories) completely) - stay tuned!
+
+#### Known issues
+
+* Under certain circumstances, the project image is not displayed properly on the [MyApps](/developerportal/#my-apps) page.
+
 ### April 7th, 2022
 
 #### Improvements

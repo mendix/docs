@@ -97,8 +97,8 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | Feature | Expected Release |
 | --- | --- |
 | External entity create, update, and delete (AKA write) | GA: Apr 2022 |
-| Connector framework (OData publish with microflows and Marketplace integration) | Public Beta:  May 2022 |
-| Business events and event broker | Public Beta: Jun 2022 |
+| Connector Kit 2.0 (OData publish with microflows and Marketplace integration) | GA:  Jun 2022 |
+| Business events and event broker | Public Beta: Jul 2022 |
 
 ## 10 Intelligent Automation
 

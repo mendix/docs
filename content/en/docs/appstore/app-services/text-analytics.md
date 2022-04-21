@@ -200,7 +200,7 @@ The **TokenEndpoint** constant provides a valid endpoint of security token servi
 
 #### 3.3.1 CreateDominantLanguageDetector
 
-The **CreateDominantLanguageDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create DominantLanguageDetector as a return object from the back-end service.
+The **CreateDominantLanguageDetector** microflow takes **text** (String) as input parameters to create DominantLanguageDetector as a return object from the back-end service.
 
 {{< figure src="/attachments/appstore/app-services/text-analytics/createdominantlanguagedetector.png" alt="createdominantlanguagedetector" >}}
 

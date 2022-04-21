@@ -126,7 +126,19 @@ This property is accessible by right-clicking in the microflow and selecting **P
 
 By selecting the **Expose as microflow action**  option, you can expose the microflow as a microflow action and use the return type of the microflow to generate outcomes / paths in the workflow. Exposing the microflow will make it appear in the **Toolbox** when you are editing a microflow in the category of your choice. When this action is used in a microflow, it will show the provided caption and icon.
 
-The caption and category of the microflow action are required, but the icon and tile image are optional. It is possible to specify icon and tile image independenty for light and dark modes of Studio Pro. When no icon or no tile image are selected, the default microflow call action icon and tile image are used. The size for the icon must be 64x64 pixels and 256x192 pixels for the tile image.
+The **Caption** and **Category** of the workflow action are required, but the **Icon** and **Image** are optional. The image in the **Icon** property is used for the list view of the **Toolbox**, and the image in the **Image** property – for the toolbox tile view. For more information, see the [Toolbox](/refguide/view-menu/#toolbox) section in the **View Menu**.
+
+The required size for the icon is 64x64 pixels, and 256x192 pixels for the image; the required image format for both is PNG. 
+
+A separate icon and image can be provided for the [dark mode](/refguide/preferences-dialog/#dark-mode) of Studio Pro to fit its color scheme.
+
+{{% alert type="info" %}}
+
+When no icon and no image are selected, the default microflow call action icon and image are used.
+
+If only icon is specified, the icon image will be used for the toolbox tile view.
+
+{{% /alert %}}
 
 ## 4 Expose as Workflow Action {#expose-as-workflow-action}
 
@@ -134,6 +146,18 @@ This property is accessible by right-clicking in the microflow and selecting **P
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/workflow-expose.jpg" alt="Expose As Workflow Action" >}}
 
-By selecting the **Expose as workflow action**  option, you can expose the microflow as a [workflow](/refguide/workflows/) action. Exposing the workflow will make it appear in the **Toolbox** of a [workflow editor](/refguide/workflows/) in the category of your choice. When this action is used in a workflow, it will show the provided caption and icon.
+By selecting the **Expose as workflow action** option, you can expose the microflow as a [workflow](/refguide/workflows/) action. Exposing the workflow will make it appear in the **Toolbox** of a [workflow editor](/refguide/workflows/) in the category of your choice. When this action is used in a workflow, it will show the provided caption and icon.
 
-The caption and category of the workflow action are required, but the icon and tile image are optional. It is possible to specify icon and tile image independenty for light and dark modes of Studio Pro. When no icon or no tile image are selected, the default workflow call action icon tile image are used. The size for the icon must be 64x64 pixels and 256x192 pixels for the tile image.
+The **Caption** and **Category** of the workflow action are required, but the **Icon** and **Image** are optional. The image in the **Icon** property is used for the list view of the **Toolbox**, and the image in the **Image** property – for the toolbox tile view. For more information, see the [Toolbox](/refguide/view-menu/#toolbox) section in the *View Menu*.
+
+The required size for the icon is 64x64 pixels, and 256x192 pixels for the image; the required image format for both is PNG. 
+
+A separate icon and image can be provided for the [dark mode](/refguide/preferences-dialog/#dark-mode) of Studio Pro to fit its color scheme.
+
+{{% alert type="info" %}}
+
+When no icon and no image are selected, the default workflow call action icon and image are used.
+
+If only icon is specified, the icon image will be used for the toolbox tile view.
+
+{{% /alert %}}

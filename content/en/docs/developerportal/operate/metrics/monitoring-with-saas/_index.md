@@ -21,9 +21,9 @@ Monitoring using a Saas solution is only available to apps running on Mendix Clo
 [Datadog](https://www.datadoghq.com/) logging and application metrics are supported in Mendix version 7.15 and above.
 {{% /alert %}}
 
-This document explains what information can be provided to an Saas-based data analytics platform.
+This document explains what information can be provided to a Saas-based data analytics platform.
 
-For details on how to add a specific Saas monitoring solution to your app see one of the following documents:
+For details on how to add a specific Saas monitoring solution to your app, see one of the following documents:
 
 * [AppDynamics for the Mendix Cloud](/developerportal/operate/appdynamics-metrics/)
 * [Datadog for the Mendix Cloud](/developerportal/operate/datadog-metrics/)

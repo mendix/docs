@@ -54,7 +54,7 @@ Currently, there is no out-of-the-box migration service available that keeps his
 However, you can migrate manually by creating a new app based on Team Server Git, exporting the Team Server SVN app, and copying that to the new app repository. This does **not** preserve your app history.
 
 
-## 7 Can I Use Third-Party Tools to Connect to the Team Server?
+## 8 Can I Use Third-Party Tools to Connect to the Team Server?
 
 Yes, as the Team Server is based on a full implementation of Git or SVN. You can directly use third-party tools like TurtoiseSVN, TurtoiseGit, or GitHub Desktop by using the following repository URLs:
 

@@ -73,7 +73,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 
 ### 2.2 Installing the Component in Your App
 
-To download and install the Microsoft Teams Connector app service in your app, follow the instructions in the [Importing Content from the App Explorer]/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **Add-ons** folder in the **App Explorer** and in the **Communication Services** category in the **Toolbox**.
+To download and install the Microsoft Teams Connector app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **Add-ons** folder in the **App Explorer** and in the **Communication Services** category in the **Toolbox**.
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/connector-in-protected-module.png" >}}
 

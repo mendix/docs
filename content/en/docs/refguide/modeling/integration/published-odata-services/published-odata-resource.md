@@ -21,7 +21,7 @@ An alternative way to add a resource is by right-clicking an entity in the **Dom
 
 ### 2.2 Edit a Resource
 
-In the **Entitiies** pane of the **Published OData Service** window, select a resource and click **Edit** to display the **Edit published resource** window. 
+In the **Entities** pane of the **Published OData Service** window, select a resource and click **Edit** to display the **Edit published resource** window. 
 
 It is possible to select another **Entity** or view the entity in the domain model by clicking **Show**.
 

@@ -424,7 +424,7 @@ JavaScript Actions can be used in a nanoflow with a JavaScript action call activ
 
 Use **Category** to group actions, **Icon** and **Image** to give the exposed nanoflow action easy recognition inside the nanoflow:
 
-{{< figure src="/attachments/howto/extensibility/best-practices-javascript-actions/narrow-expose.png" alt="exposed nanoflow with info" >}}
+{{< figure src="/attachments/howto/extensibility/best-practices-javascript-actions/narrow-expose.png" alt="exposed nanoflow with info" width="650" >}}
 
 ### 3.3 Publishing JavaScript Actions
 

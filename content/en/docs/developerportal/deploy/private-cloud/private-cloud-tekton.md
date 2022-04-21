@@ -131,13 +131,23 @@ curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.15.0/in
 
 Then you need to transfer the `tekton` folder to the air-gapped environment with the aip tool:
 
+{{% todo %}}[Add command to create repositories]{{% /todo %}}
+
 ```bash
 # replace "myprivate.registry.com" with your registry
 aip set-base-destination myprivate.registry.com
 
+# get list of required repositories - these will need to be created before you can push to them
+cat state.json | jq '.images[].destination'
+
+# create the repositories listed by the command above.
+# WHAT COMMAND SHOULD THEY USE HERE?
+
 # use your credentials here
 aip login -u user -p mypassword myprivate.registry.com
 aip push
+
+cd ..
 ```
 
 ### 4.2 Mendix Pipelines and Triggers for Tekton
@@ -160,6 +170,8 @@ aip addimage runtime-base8.18.11 private-cloud.registry.mendix.com/runtime-base:
 # add multiple versions (in this example all patch versions of 8.18)
 aip addimagesquery private-cloud.registry.mendix.com/mxbuild '^8.18.*'
 aip addimagesquery private-cloud.registry.mendix.com/runtime-base '^8.18.*-rhel$'
+
+aip pull
 ```
 
 Then you need to transfer the `pipeline` folder to the air-gapped environment with the aip tool:
@@ -244,7 +256,7 @@ For Tekton Triggers on OpenShift you need to update the deployment objects to ma
 1. Edit the `tekton-triggers-controller` deployment.
 2. Add the following line to the `args` section:
     ```bash{linenos=false}
-    `- '--el-security-context=false'`
+    - '--el-security-context=false'
     ```
 3. Change `runAsUser:` to a valid OpenShift user (like `1001000000`).
 4. Edit the `tekton-triggers-core-interceptors` deployment.
@@ -275,7 +287,7 @@ The namespace can be the same namespace where the  Mendix Operator runs, or you 
 The installation command for environments with access to the internet is:
 
 ```bash
-cd $PATH_TO_DOWNLOADED_CHARTS
+cd $PATH_TO_DOWNLOADED_FOLDERS && cd helm/charts
 helm install -n $YOUR_NAMESPACE mx-tekton-pipeline ./pipeline/ \
   -f ./pipeline/values.yaml \
   --set images.imagePushURL=$URL_TO_YOUR_REPO_WITHOUT_TAG
@@ -286,7 +298,7 @@ helm install -n $YOUR_NAMESPACE mx-tekton-pipeline ./pipeline/ \
 For air-gapped environments, you need to specify the images individually, as well as the private registry you set up in [Preparation for Air-gapped Environments](#preparation):
 
 ```bash
-cd $PATH_TO_DOWNLOADED_CHARTS
+cd $PATH_TO_DOWNLOADED_FOLDERS && cd helm/charts
 helm install -n $YOUR_NAMESPACE mx-tekton-pipeline ./pipeline/ \
   -f ./pipeline/values.yaml \
   --set images.imagePushURL=$URL_TO_YOUR_REPO_WITHOUT_TAG \
@@ -322,7 +334,7 @@ A **Generic trigger** is a trigger that can be used as HTTP/curl request. All Me
 To install a generic trigger you can use the following command:
 
 ```bash
-cd $PATH_TO_DOWNLOADED_CHARTS
+cd $PATH_TO_DOWNLOADED_FOLDERS && cd helm/charts
 helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
     --set name=someUniqueName \
     --set pipelineName=build-pipeline \
@@ -333,23 +345,22 @@ helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
 | --- | --- |
 | `name` | All created Kubernetes objects will have this suffix |
 | `pipelineName` | Name of the pipeline to trigger. `build-pipeline` is the default pipeline name from the pipeline chart |
-| `triggerType` | Supported types - `gitlabwebhook` and `generic` |
+| `triggerType` | Supported types - `generic` (as used in this section) and `gitlabwebhook` (see next section) |
 
-#### 6.2.3 GitLab Webhook Trigger
+#### 6.2.3 GitLab Webhook Trigger{#gitlab-webhook}
 
 The **GitLab webhook trigger** triggers the build-pipeline pipeline in combination with GitLab. All Mendix environment related parameters are specified during trigger installation as you create one trigger per environment.
 
 To install a GitLab webhook trigger use the following command:
 
 ```bash
-cd $PATH_TO_DOWNLOADED_CHARTS
+cd $PATH_TO_DOWNLOADED_FOLDERS && cd helm/charts
 helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
-    --set name=someUniqueName \
+    --set name=$SOME_UNIQUE_NAME \
     --set triggerType=gitlabwebhook \
     --set buildPipelineName=build-pipeline \
     --set gitlabwebhook.operatorNamespace=kubernetes \
-    --set gitlabwebhook.mendixEnvironmentInernalName=app \
-    --set gitlabwebhook.kubeConfigSecretName=none \
+    --set gitlabwebhook.mendixEnvironmentInternalName=app \
     --set gitlabwebhook.protocol=ssh \
     --set gitlabwebhook.scheduledEventsMode=auto \
     --set gitlabwebhook.constantsMode=auto | kubectl apply -f - -n $YOUR_NAMESPACE
@@ -358,20 +369,44 @@ helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
 | Parameter | Explanation |
 | --- | --- |
 | `name` | all created Kubernetes objects will have this suffix |
-| `triggerType` | supported types - `gitlabwebhook` and `generic` |
+| `triggerType` | supported types - `gitlabwebhook` (as used in this section) and `generic` (see previous section) |
 | `buildPipelineName` | name of the pipeline to trigger. `build-pipeline` is the default pipeline name from the pipeline chart |
 | `gitlabwebhook.operatorNamespace` | name of Kubernetes namespace where Mendix Operator runs |
 | `gitlabwebhook. mendixEnvironmentInernalName` | Mendix environment internal name. You can get the all internal environment names using the  command `kubectl get mendixapps -n $namespace_name` |
-| `gitlabwebhook. kubeConfigSecretName` (*Optional*) | name of the secret with kube config. Used when Mendix Operator is in another cluster |
 | `gitlabwebhook.protocol` | Git protocol. Available options: `http` or `ssh` |
 | `gitlabwebhook. scheduledEventsMode` | `manual` – throws an error if scheduled events listed in `myScheduledEvents` do not exist<br/>`auto` – removes scheduled events listed in `myScheduledEvents` if they do not exist |
 | `gitlabwebhook.constantsMode` | `manual` – throws an error if constants set by the operator side are different from those in the .mda file<br/>`auto` – adds or removes constants which are missing in the operator |
 
-### 6.3 Triggering Pipelines
+### 6.3 Authentication
+
+This needs to be configured before you trigger any pipelines.
+
+#### 6.3.1 Git Access
+
+Your Tekton pipeline needs to have access to the git repository. To provide access, you need to use a `basic-auth` type `Secret`. To do this, follow the [instruction in the tektoncd GitHub repo](https://github.com/tektoncd/pipeline/blob/main/docs/auth.md#configuring-basic-auth-authentication-for-git) and link that secret to the `tekton-triggers-mx-sa` service account.
+
+#### 6.3.2 Registry Push Access
+
+The Tekton pipeline requires access to the registry to push built images.
+
+##### 6.3.2.1 Private Registry
+
+If you have a private registry with authentication, you need to follow [these instructions](https://github.com/tektoncd/pipeline/blob/main/docs/auth.md#configuring-authentication-for-docker) to create a secret, and link the secret to the `tekton-triggers-mx-sa` service account.
+
+##### 6.3.2.2 OpenShift Registry
+
+For OpenShift you need to provide an SSL certificate file for the registry and give the `system:image-builders` role to the `tekton-triggers-mx-sa` service account. Use the following commands replacing `$YOUR_NAMESPACE_WITH_PIPELINES` with the correct namespace name:
+
+```bash
+oc patch rolebindings system:image-builders -p '{"subjects":[{"name":"tekton-triggers-mx-sa","kind":"ServiceAccount","namespace":"$YOUR_NAMESPACE_WITH_PIPELINES"}]}'
+oc patch tasks build-push-image --type='json' --patch '[{"op": "add", "path": "/spec/steps/0/env/-", "value": {"name":"SSL_CERT_FILE","value":"/var/run/secrets/kubernetes.io/serviceaccount/service-ca.crt"}}]'
+```
+
+### 6.4 Triggering Pipelines
 
 This section documents the HTTP requests which will trigger the various Mendix pipelines, using the triggers you have installed in the [Installing Triggers](#installing-triggers) section, and describes their parameters.
 
-#### 6.3.1 Create App Pipeline
+#### 6.4.1 Create App Pipeline
 
 The create-app-pipeline creates a basic MendixApp CR. After running this pipeline, we are ready to run the build-pipeline.
 
@@ -397,11 +432,11 @@ curl -X POST \
 | `storage-plan-name` | name of an already-created storage plan |
 | `database-plan-name` | name of an already-created database plan |
 
-#### 6.3.2 Build Pipeline
+#### 6.4.2 Build Pipeline
 
 The build-pipeline builds and pushes a Mendix container image from a Mendix MPR file, hosted in a GIT repository. The environment is then updated with the new image.
 
-This can only be run after create-app-pipeline. The example here uses a [Generic Trigger](#generic-trigger).
+This can only be run after create-app-pipeline. The example here uses a [Generic Trigger](#generic-trigger). If you have set up a [GitLab Webhook Trigger](#gitlab-webhook), the build request will be generated automatically when you push a new MPR file to the GitLab repository.
 
 ```bash
 curl -X POST \
@@ -415,7 +450,6 @@ curl -X POST \
    },
    "namespace":"your-kubernetes-namespace",
    "env-internal-name":"mx-environment-internal-name",
-   "kube-secret-name":"none",
    "constants-mode":"auto",
    "scheduled-events-mode":"auto"
 }'
@@ -427,11 +461,10 @@ curl -X POST \
 | `repo.revision` | a git revision (for example, branch, tag, or sha) that will be fetched |
 | `namespace` | name of the Kubernetes namespace where Mendix Operator runs |
 | `env-internal-name` | Mendix environment internal name. You can get all the internal environment names with the command `kubectl get mendixapps -n $namespace_name` |
-| `kube-secret-name` | name of the secret with kube config. Used when Mendix Operator is in another cluster. If it is in the same cluster then use `none` as the value |
-| `scheduledEventsMode` | `manual` – throws an error if scheduled events listed in `myScheduledEvents` do not exist<br/>`auto` – removes scheduled events listed in `myScheduledEvents` if they do not exist |
+| `scheduledEventsMode` | `manual` – throws an error if scheduled events listed in `myScheduledEvents` in the MendixApp CR do not exist in the Mendix MPR<br/><br/>`auto` – removes scheduled events listed in `myScheduledEvents` in the MendixApp CR if they do not exist in the Mendix MPR |
 | `constantsMode` | `manual` – throws an error if constants set by the operator side are different from those in the .mda file<br/>`auto` – adds or removes constants which are missing in the operator |
 
-#### 6.3.3 Configure App Pipeline
+#### 6.4.3 Configure App Pipeline
 
 The configure-app-pipeline updates an existing Mendix App.
 
@@ -459,9 +492,9 @@ curl -X POST \
 | --- | --- |
 | `namespace` | name of the Kubernetes namespace where Mendix Operator runs |
 | `env-internal-name` | Mendix environment internal name. You can get all the internal environment names with the command `kubectl get mendixapps -n $namespace_name` |
-| `source-url` *(Optional)* | .mda file url or oci-image url. If empty, the url is not changed |
+| `source-url` *(Optional)* | .mda file url or oci-image (using `oci-image://` scheme) url. If empty, the url is not changed |
 | `replicas` *(Optional)* | number of replicas. If empty, the number of replicas remains the same |
-| `dtap-mode` | mode for running the Mendix application. Available options<br/>`P` – Production (for all production environments)<br/>`D` – Development |
+| `dtap-mode` *(Optional)* | mode for running the Mendix application. Available options<br/>`P` – Production (for all production environments)<br/>`D` – Development |
 | `set-constants` *(Optional)* | constants to set provided as a JSON map. Replaces the old list with the new one. Example: {"KEY":"VALUE"} |
 | `add-constants` *(Optional)* | constants to add provided as a JSON map. Example: {"KEY":"VALUE"} |
 | `remove-constants` *(Optional)* | constants to delete provided as a JSON array. Example: ["KEY1","KEY2"] |
@@ -469,7 +502,7 @@ curl -X POST \
 | `add-env-vars` *(Optional)* | environment variables to add provided as a JSON map. Example: {"KEY":"VALUE"} |
 | `remove-env-vars` *(Optional)* | environment variables to delete as JSON array. Example: ["KEY1","KEY2"] |
 
-#### 6.3.4 Delete App Pipeline
+#### 6.4.4 Delete App Pipeline
 
 The delete-app-pipeline deletes the Mendix App CR, which triggers the deletion of the environment.
 
@@ -488,29 +521,6 @@ curl -X POST \
 | --- | --- |
 | `namespace` | name of the Kubernetes namespace where the Mendix Operator runs |
 | `env-internal-name` | Mendix environment internal name. You can get all the internal environment names  using the command `kubectl get mendixapps -n $namespace_name` |
-
-## 7 Authentication
-
-### 7.1 Git Access
-
-Your Tekton pipeline needs to have access to the git repository. To provide access, you need to use a `basic-auth` type `Secret`. To do this, follow the [instruction in the tektoncd GitHub repo](https://github.com/tektoncd/pipeline/blob/main/docs/auth.md#configuring-basic-auth-authentication-for-git) and link that secret to the `tekton-triggers-mx-sa` service account.
-
-### 7.2 Registry Push Access
-
-The Tekton pipeline requires access to the registry to push built images.
-
-#### 7.2.1 Private Registry
-
-If you have a private registry with authentication, you need to follow [these instructions](https://github.com/tektoncd/pipeline/blob/main/docs/auth.md#configuring-authentication-for-docker) to create a secret, and link the secret to the `tekton-triggers-mx-sa` service account.
-
-#### 7.2.2 OpenShift Registry
-
-For OpenShift you need to provide an SSL certificate file for the registry and give the `system:image-builders` role to the `tekton-triggers-mx-sa` service account. Use the following commands replacing `$YOUR_NAMESPACE_WITH_PIPELINES` with the correct namespace name:
-
-```bash
-oc patch rolebindings system:image-builders -p '{"subjects":[{"name":"tekton-triggers-mx-sa","kind":"ServiceAccount","namespace":"$YOUR_NAMESPACE_WITH_PIPELINES"}]}'
-oc patch tasks build-push-image --type='json' --patch '[{"op": "add", "path": "/spec/steps/0/env/-", "value": {"name":"SSL_CERT_FILE","value":"/var/run/secrets/kubernetes.io/serviceaccount/service-ca.crt"}}]'
-```
 
 ## 8 Troubleshooting{#troubleshooting}
 

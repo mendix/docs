@@ -258,7 +258,7 @@ The Excel importer cannot do this automatically. To do this, map your sheet to t
 
 ### 5.7 Why Does Mapping a Date to a MendixDateTime Attribute Sometimes Change the Value or Throw an Exception?
 
-This is because Excel had an historical workaround to maintain compatibility with Excel on Mac computers. Excel stores the dates as floats, counting the days either from `1-1-1900` or (when using compatibility) from `1-1-1904`. This is a difference of 1462 days. For now, only the dates stored using the `1900` format are supported. Excel cannot actually store dates before `1900`, so it could happen that those dates throw an exception. If you find an Excel sheet with any of these cases, please contact [Mendix Suppport](https://support.mendix.com/hc/en-us), as we might be able to fix this problem.
+This is because Excel had an historical workaround to maintain compatibility with Excel on Mac computers. Excel stores the dates as floats, counting the days either from `1-1-1900` or (when using compatibility) from `1-1-1904`. This is a difference of 1462 days. For now, only the dates stored using the `1900` format are supported. Excel cannot actually store dates before `1900`, so it could happen that those dates throw an exception. If you find an Excel sheet with any of these cases, please contact [Mendix Support](https://support.mendix.com/), as we might be able to fix this problem.
 
 ### 5.8 My Import Does Not Import My Column Value, or an Exception Is Thrown While Processing the Sheet. How Can I Locate the Problem?
 

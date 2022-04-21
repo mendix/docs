@@ -13,7 +13,7 @@ aliases:
 
 ## 1 Introduction
 
-In the [Mendix Support Portal](https://support.mendix.com/hc/en-us), users can select an affected app for a submitted request. The apps that can be selected are based on the app authorization of the user (regardless of their organization). Users that have an **Edit** permission for **Deploy** or **Capture** are able to submit and view tickets for that app.
+In the [Mendix Support Portal](https://support.mendix.com/), users can select an affected app for a submitted request. The apps that can be selected are based on the app authorization of the user (regardless of their organization). Users that have an **Edit** permission for **Deploy** or **Capture** are able to submit and view tickets for that app.
 
 Mendix Support needs to know the app identification for on-premises apps so it can show the correct apps. Therefore, Mendix asks that on-premises users provide the **App ID** of their apps. Please invite all the [Team](/developerportal/collaborate/team/) members who should be able to submit tickets and provide them with the specified role, then contact Mendix Support with the app information.
 

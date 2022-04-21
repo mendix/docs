@@ -88,7 +88,7 @@ In future, You will get a six-digit number that expires every minute. You will n
 
 ## 4 Changing your Device or Phone Number
 
-If you change your device or phone number, you must contact [Mendix Support](https://support.mendix.com/hc/en-us) to disable the authenticator on your Mendix account.
+If you change your device or phone number, you must contact [Mendix Support](https://support.mendix.com/) to disable the authenticator on your Mendix account.
 
 You can re-activate 2FA by triggering any action that requires 2FA on your production environment.
 
@@ -96,7 +96,7 @@ You can re-activate 2FA by triggering any action that requires 2FA on your produ
 
 After you have set up your authentication method, you cannot change the authentication method yourself. Only [Mendix Support](https://support.mendix.com) is able to disable the current authentication method. After the authentication method has been disabled, it can be set to a different method.
 
-For example, if you want to change your authentication method from **SMS Authentication** to **Google Authentication**, submit a [Mendix support request](https://support.mendix.com/hc/en-us/requests/new) citing **Standard change: Reset Google authenticator**.
+For example, if you want to change your authentication method from **SMS Authentication** to **Google Authentication**, submit a [Mendix support request](https://support.mendix.com//requests/new) citing **Standard change: Reset Google authenticator**.
 
 ## 6 Technical Contact
 

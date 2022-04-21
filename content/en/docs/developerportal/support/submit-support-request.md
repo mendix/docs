@@ -84,7 +84,7 @@ To submit a request with Mendix Support, follow these steps:
 		* **Developer Platform - Data Hub** – issues/questions regarding [Data Hub](/data-hub/) (for example, when you have difficulties accessing the Data Hub Catalog)
 		* **Developer Platform - Control Center** - issues/questions regarding [Control Center](/developerportal/control-center/) (for example, when you have difficulties deactivating applications from the Control Center) 
 		* **Developer Platform - Studio** - issues/questions regarding [Mendix Studio](/studio/) (for example, when you have difficulties opening Mendix Studio)
-		* **Developer Platform - Support Portal** - issues/questions regarding the [Support Portal](https://support.mendix.com/hc) (for example, when you have difficulties creating Support tickets)
+		* **Developer Platform - Support Portal** - issues/questions regarding the [Support Portal](https://support.mendix.com/) (for example, when you have difficulties creating Support tickets)
 		* **Developer Platform - Other** – any other issues/questions regarding the Mendix Platform itself
 	* **Licensing** – select this component when you have issues/questions regarding your Mendix licenses
 

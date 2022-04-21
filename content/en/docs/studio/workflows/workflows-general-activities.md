@@ -53,7 +53,7 @@ The **Jump** activity allows you to jump to other activities in the workflow. Th
 {{< figure src="/attachments/studio/workflows/workflows-general-activities/jump-example.jpg" alt="Jump Activity Example" >}}
 
 {{% alert color="warning" %}}
-You cannot use the **Jump** activity in a Parallel split or in a path where it would end the workflow without any other path continuing it. 
+You cannot use the **Jump** activity in a parallel split or in a path where it would end the workflow without any other path continuing it. 
 {{% /alert %}}
 
 ### 3.1 Jump Activity Properties

@@ -207,7 +207,7 @@ This endpoint forwards all calls to \api… from within native HTML pages, and a
 
 This should be the tenant where your credentials are stored. It is needed when retrieving your Service Credentials.
 
-The definition of a tenant on MindSphere is available in the MindSphere document [Definition of Tenant](https://documentation.mindsphere.io/resources/html/settings/en-US/118273564939.html).
+The definition of a tenant on MindSphere is available in the MindSphere document [Definition of Tenant](https://developer.mindsphere.io/apis/core-identitymanagement/api-identitymanagement-overview.html#tenants).
 
 **UserTenant**
 

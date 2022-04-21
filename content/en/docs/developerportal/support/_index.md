@@ -2,7 +2,7 @@
 title: "Mendix Support"
 url: /developerportal/support/
 description: ""
-tags: ["Support", "SLA", "Gold", "Platinum"]
+tags: ["Support", "SLA", "standard", "premium"]
 weight: 30
 aliases:
     - /howtogeneral/support/index.html
@@ -14,7 +14,7 @@ Mendix Support is here to answer any questions and solve any issues that you mig
 
 ### 1.1 Service Level Agreements {#sla}
 
-We are available for all users of the Mendix Platform, and we are bound by service-level agreements (SLAs) with our licensed customers. Licensed customers can select their SLA level: **Gold** or **Platinum**. The SLA level determines the specific agreement in the following areas:
+We are available for all users of the Mendix Platform, and we are bound by service-level agreements (SLAs) with our licensed customers. Licensed customers can select their SLA level: **Standard** or **Premium**. The SLA level determines the specific agreement in the following areas:
 
 * Support availability
 * Platform availability
@@ -28,7 +28,7 @@ You can check the Mendix SLA [here](https://mendix.com/sla).
 
 ### 1.2 Premier Support
 
-In addition to our Platinum SLA, Mendix offers **Premier Support**, with elevated support levels, specifically for customers with business critical apps.
+In addition to our Premium SLA, Mendix offers **Premier Support**, with elevated support levels, specifically for customers with business critical apps.
 The Premier Support package contains the following for customers on the Mendix Public or Dedicated Cloud:
 
 * 24/7 support availability for critical and high tickets
@@ -332,11 +332,11 @@ If you want to run Mendix apps on a Unix-like server you will need the [m2ee too
 
 Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Support diagnose these components. Because Mendix has no control over the context in which the buildpack or m2ee tools are run outside of the Mendix Public Cloud and Cloud Dedicated, you will have to demonstrate that the bug is in the supported component by showing the behavior independently from the context in which you are using it.
 
-If you want additional features or some other change in a buildpack or m2ee tools, you can make a Pull Request , create an Issue in the GitHub repository, or contact [Mendix Support](https://support.mendix.com/hc/en-us).
+If you want additional features or some other change in a buildpack or m2ee tools, you can make a Pull Request , create an Issue in the GitHub repository, or contact [Mendix Support](https://support.mendix.com/).
 
 If you wan to run Mendix apps on Windows server you will need the [Windows Service](/releasenotes/studio-pro/windows-service/). The release notes and installation manual can be found in the [Windows Service](/releasenotes/studio-pro/windows-service/) release notes. Read more about installing on systems running Windows operating systems in [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/).
 
-If you want additional features or some other change in the Windows Service, you can contact [Mendix Support](https://support.mendix.com/hc/en-us).
+If you want additional features or some other change in the Windows Service, you can contact [Mendix Support](https://support.mendix.com/).
 
 ### 10.5 Application Operation
 

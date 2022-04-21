@@ -17,6 +17,27 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### April 21st, 2022
+
+#### Improvements
+
+* We removed the old [Stories](/developerportal/collaborate/stories/) UI in preparation for a brand new Mendix tool for Agile project management that will eventually replace **Stories** completely – stay tuned!
+* We expanded the export-to-Excel functionality in [Control Center](/developerportal/control-center/) for both the [Apps](/developerportal/control-center/#apps) tab (which includes the **App ID**) and the [Cloud](/developerportal/control-center/#cloud) tab (which includes the **App ID**, **Environment ID**, and **Environment URL**).
+
+#### Known Issues
+
+* Under certain circumstances, the app image is not displayed properly on the [My Apps](/developerportal/#my-apps) page.
+
+### April 7th, 2022
+
+#### Improvements
+
+* We introduced a new layout of the [Mendix Forum](/developerportal/community-tools/mendix-forum/) that features the following changes:
+	* The main navigation has been moved to the left sidebar
+	* There is a dedicated for page for your bookmarks
+	* Breadcrumb navigation
+	* Dedicated pages for Forum content you have interacted with (asked, answered, and commented for questions, and submitted and commented for ideas)
+  
 ### March 24th, 2022
 
 #### Improvements
@@ -721,7 +742,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* It is now possible to go to a Mendix community member's new [Mendix Profile](/developerportal/community-tools/mendix-profile/) directly from the [Buzz](/developerportal/collaborate/buzz/) and [People](https://sprintr.home.mendix.com/link/people) pages. (Ticket 69702)
+* It is now possible to go to a Mendix community member's new [Mendix Profile](/developerportal/community-tools/mendix-profile/) directly from the [Buzz](/developerportal/collaborate/buzz/) and [People](https://developer.mendixcloud.com/link/people) pages. (Ticket 69702)
 
 ### October 11th, 2018
 

@@ -28,16 +28,15 @@ Each question has a descriptive title (**1**). Clicking the question title opens
 Each question specifies the following elements:
 
 * The beginning of the question description (**2**), which is taken from the [question details and answers page](#question-description-page)
-* The number of votes (**3**), answers (**4**), and views (**5**) the question has received
-* The category (**6**)
+* The category (**3**)
   * This is set when asking a question (for details, see the [Asking Your Question](#asking-your-question) section)
   * When you click a category, the overview page will list questions in that category
-* The tags applied to question (**7**) 
+* The tags applied to question (**4**) 
 	* These are set when asking a question (for details, see the [Asking Your Question](#asking-your-question) section)
 	* When you click a tag, the overview page will list questions with that same tag
-* When the question was created (**8**)
-* The name, avatar, and level of the Mendix community member who asked the question (**9**)
-* The Mendix community members(s) who answered the question (**10**)
+* The number of votes (**5**), answers (**6**), and views (**7**) the question has received
+* The name, avatar, and level of the Mendix community member who asked the question (**8**)
+* When the question was created (**9**)
 
 Hovering over the developer name brings up the profile card:
 
@@ -49,7 +48,7 @@ The profile card presents the Mendix points for the developer. Clicking the deve
 
 The **Sort by** drop-down menu at the top of the screen has three options for sorting the questions on this page: **Last Updated**, **Newest**, and **Most Popular**.
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_sort_by.jpg"   width="200"  >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_sort_by.png"   width="200"  >}}
 
 #### 2.1.2 Searching {#searching}
 
@@ -157,24 +156,25 @@ On the **Ideas** tab, you can see an overview of the ideas and feature requests 
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/ideas_example.png" >}}
 
-All the submitted ideas are publicly visible, and each idea has a descriptive title (**1**). Clicking the idea title opens the specific [idea details page](#IdeaDetails) under the **Ideas** tab.
+All the submitted ideas are publicly visible, and each idea has a descriptive title (**1**). Clicking the idea title opens the specific [idea details page](#idea-details-page) under the **Ideas** tab.
 
 Each idea specifies the following elements:
 
-* The beginning of the idea description (**2**) (this is taken from the [idea details page](#IdeaDetails))
-* The number of votes (**3**), comments (**4**), and views (**5**) for the idea
-* The category (**6**)
+* The beginning of the idea description (**2**) (this is taken from the [idea details page](#idea-details-page))
+* The category (**3**)
 	* This is set when submitting an idea (for details, see the [Submitting an Idea](#submitting-an-idea) section)
-* Tags (**7**) (for example, **datagrid**, **listen-target**, **conditional-visibility**)
-* The status of the idea (**8**) (for descriptions of the various statuses, see the [Idea Details Page](#IdeaDetails) section)
+* Tags (**4**) (for example, **Native-widgets**)
+	* You can search for one or more tags
+* The number of votes (**5**), comments (**6**), and views (**7**) for the idea
+* The name, avatar, and level of the Mendix community member who created the idea (**8**)
 * When the idea was created (**9**)
-* The name, avatar, and level of the Mendix community member who created the idea (**10**)
+* The status of the idea (**10**) (for descriptions of the statuses, see the [Idea Details Page](#idea-details-page) section below)
 
 #### 3.1.1 Sorting the Ideas
 
 The **Sort by** drop-down menu at the top of the screen has three options for sorting the ideas on this page: **Last Updated**, **Newest**, and **Most Votes**.
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/ideas_sort_by.jpg"   width="200"  >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/ideas_sort_by.png"   width="200"  >}}
 
 #### 3.1.2 Searching
 
@@ -184,13 +184,13 @@ In addition to sorting, you can search the entire forum for both questions and i
 
 To filter the ideas that appear on the overview page, select from the following criteria on the right side of the screen:
 
-* **My favorites** – the ideas you have marked as favorites (for details on how to favorite an idea, see the [Idea Details Page](#IdeaDetails) section)
+* **My favorites** – the ideas you have marked as favorites (for details on how to favorite an idea, see the [Idea Details Page](#idea-details-page) section)
 * **My own ideas** – the ideas you have submitted (for more information, see the [Submitting an Idea](#submitting-an-idea) section)
-* **Status** – the status of the ideas (for descriptions of the various statuses, see the [Idea Details Page](#IdeaDetails) section)
+* **Status** – the status of the ideas (for descriptions of the various statuses, see the [Idea Details Page](#idea-details-page) section)
 * **Categories** – the category set when the idea  was submitted (for more information, see the [Submitting an Idea](#submitting-an-idea) section)
 * **Tags** – the tags set when the idea was submitted (for more information, see the [Submitting an Idea](#submitting-an-idea) section)
 
-### 3.2 Idea Details Page {#IdeaDetails}
+### 3.2 Idea Details Page {#idea-details-page}
 
 Clicking the title of an idea will bring you to the details page for that idea:
 

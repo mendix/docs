@@ -32,11 +32,11 @@ Should you consider using a connected environment, the following URLs should be 
 
 | URL | Description |
 |-----|-------------|
-| https://interactor-bridge.private-cloud.api.mendix.com | Websocket based main communication API |
-| https://privatecloud.mendixcloud.com | Registry for downloading MDA artifacts |
-| https://private-cloud.registry.mendix.com | Docker registry for downloading Runtime base images |
-| https://cdn.mendix.com | Registry for downloading placeholder MDA artifacts |
-| https://subscription-api.mendix.com | Service to verify call-home licence |
+| `https://interactor-bridge.private-cloud.api.mendix.com` | Websocket based main communication API |
+| `https://privatecloud.mendixcloud.com` | Registry for downloading MDA artifacts |
+| `https://private-cloud.registry.mendix.com` | Docker registry for downloading Runtime base images |
+| `https://cdn.mendix.com` | Registry for downloading placeholder MDA artifacts |
+| `https://subscription-api.mendix.com` | Service to verify call-home licence |
 
 ## 3 Creating a Cluster & Namespace
 
@@ -1696,7 +1696,7 @@ kubectl -n {namespace} scale deployment mendix-operator --replicas=1
 The Windows version of the Configuration Tool must be run in a terminal that supports the Windows console API and has mouse support. PowerShell and the Windows Command Prompt are supported.
 
 {{% alert color="info" %}}
-When running PowerShell or the Windows Command Prompt from the [new Windows Terminal](https://aka.ms/terminal), mouse clicks are [not supported](https://github.com/microsoft/terminal/issues/376).
+When running PowerShell or the Windows Command Prompt from the [new Windows Terminal](https://www.microsoft.com/en-US/p/windows-terminal/9n0dx20hk701), mouse clicks are [not supported](https://github.com/microsoft/terminal/issues/376).
 Run PowerShell or the Windows Command Prompt terminal as a standalone app.
 {{% /alert %}}
 

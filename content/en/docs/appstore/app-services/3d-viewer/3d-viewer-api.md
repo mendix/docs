@@ -79,4 +79,4 @@ Starting from version 2.2.0, 3D Viewer module includes some out-of-box API actio
 
 ## 4 Feedback
 
-If you have problem using the 3D Viewer API listed in [3D Viewer API Reference](http://3dviewer-apidoc.s3-website.eu-central-1.amazonaws.com/index/v2.1/apidoc/3dviewer.html) or you would like more APIs to be exposed, raise a ticket in [Mendix Support portal](https://support.mendix.com/hc/en-us). We will address them accordingly. 
+If you have problem using the 3D Viewer API listed in [3D Viewer API Reference](http://3dviewer-apidoc.s3-website.eu-central-1.amazonaws.com/index/v2.1/apidoc/3dviewer.html) or you would like more APIs to be exposed, raise a ticket in [Mendix Support portal](https://support.mendix.com/). We will address them accordingly. 

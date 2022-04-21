@@ -220,7 +220,12 @@ For integrations, you have the following types of microflow:
 
 | Document Type                             | Prefix    |
 |-------------------------------------------|-----------|
-| Layout                                    | LAY\_  |
+| Layout for responsive (web)               | Responsive\_  |
+| Layout for tablet (web)                   | Tablet\_  |
+| Layout for phone (web)                    | Phone\_  |
+| Layout for native phone                   | NativePhone\_  |
+| Layout for popup                          | Popup\_  |
+| Layout Atlas specific                     | Atlas\_  |
 | Snippet                                   | SNIP\_ |
 
 #### 3.5.2 Enumerations

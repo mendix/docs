@@ -161,6 +161,8 @@ The **Paid Environments** tab on this page presents an overview of the licensed 
 
 {{< figure src="/attachments/developerportal/control-center/cloud.jpg" >}}
 
+When you select one or more environments via the check boxes on the **Paid Environments** or **Free Environments** tab, a context menu appears at the bottom of the screen with the option for exporting environment details to an *.xlsx* file.
+
 There are links to three other pages from this tab to allow you to [make requests to Mendix Support](/developerportal/support/submit-support-request/#submitting) to do the following:
 
 * [Add Node](/developerportal/support/new-app-node-request-template/#new-node) – requests a new app node for a specific app and environment

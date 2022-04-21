@@ -522,9 +522,9 @@ curl -X POST \
 | `namespace` | name of the Kubernetes namespace where the Mendix Operator runs |
 | `env-internal-name` | Mendix environment internal name. You can get all the internal environment names  using the command `kubectl get mendixapps -n $namespace_name` |
 
-## 8 Troubleshooting{#troubleshooting}
+## 7 Troubleshooting{#troubleshooting}
 
-### 8.1 `Context Deadline Exceeded` when Installing for Kubernetes
+### 7.1 `Context Deadline Exceeded` when Installing for Kubernetes
 
 When installing Tekton and the Pipelines for Kubernetes, you can face an issue such as:
 

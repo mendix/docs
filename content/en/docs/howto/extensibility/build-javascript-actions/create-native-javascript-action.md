@@ -500,5 +500,4 @@ The Native Builder will locally run MxBuild. The output is a *bundles.js* file w
 * [JavaScript Actions Reference Guide](/refguide/javascript-actions/)
 * [How To Build JavaScript actions](/howto/extensibility/build-javascript-actions/)
 * [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/)
-* Google's [Read and write NFC Tags NFC Tools](https://play.google.com/store/apps/details?id=com.wakdev.wdnfc)
 * GitHub's [NFC React Native Library](https://github.com/whitedogg13/react-native-nfc-manager)

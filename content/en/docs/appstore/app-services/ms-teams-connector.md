@@ -49,8 +49,8 @@ A trial gives everyone in your company one-month access to the app service. To s
 4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used.
 6. Click the link in the email to go to the [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) page and log in there. This page shows all the products that you have trials for.
-7. Click **Microsoft Teams Connector** to open the [service management dashboard]/appstore/general/app-store-overview/#service-management-dashboard).
-8. Follow the instructions in the [Creating Binding Keys]/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create the **LicenseSecret** and the **LicenseKey**. Save them somewhere safe. Later you will need to [configure the LicenseSecret and the LicenseKey](/appstore/app-services/intelligent-document-service/#configure-keys) in your app.
+7. Click **Microsoft Teams Connector** to open the [service management dashboard](/appstore/general/app-store-overview/#service-management-dashboard).
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create the **LicenseSecret** and the **LicenseKey**. Save them somewhere safe. Later you will need to [configure the LicenseSecret and the LicenseKey](/appstore/app-services/intelligent-document-service/#configure-keys) in your app.
 
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/binding-key-generation.png" >}}
 
@@ -61,9 +61,9 @@ A trial gives everyone in your company one-month access to the app service. To s
 3. Select your subscription plan.
 4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Owner will receive an email that says the app service is ready to be used.
-6. Click the link in the email to go to the [Company Subscriptions]/appstore/general/app-store-overview/#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **Microsoft Teams Connector** to open the [service management dashboard]/appstore/general/app-store-overview/#service-management-dashboard).
-8.  Follow the instructions in the [Creating Binding Keys]/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create the **LicenseSecret** and the **LicenseKey**. Save them somewhere safe. Later you will need to [configure the LicenseSecret and the LicenseKey]/appstore/app-services/intelligent-document-service/#configure-keys) in your app.
+6. Click the link in the email to go to the [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
+7. Click **Microsoft Teams Connector** to open the [service management dashboard](/appstore/general/app-store-overview/#service-management-dashboard).
+8.  Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create the **LicenseSecret** and the **LicenseKey**. Save them somewhere safe. Later you will need to [configure the LicenseSecret and the LicenseKey](/appstore/app-services/intelligent-document-service/#configure-keys) in your app.
     
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/binding-key-generation.png" >}}
 

@@ -10,7 +10,7 @@ tags: ["marketplace", "marketplace component", "aws", "authentication"]
 
 When using AWS connectors, you need to authenticate to the services being connected to. This is done using the [AWS Authentication Module](/needlinkhere/) available from the Mendix Marketplace.
 
-The AWS Authentication Module records static credentials in your app's database which are used to authenticate to an AWS Service.
+The AWS Authentication Module records encrypted static credentials in your app's database which are used to authenticate to an AWS Service.
 
 ### 1.1 Typical Use Cases
 
@@ -42,7 +42,7 @@ Within AWS, you can create IAM Credentials using the AWS console.
 
 3. For the chosen user, switch to the **Security credentials** tab.
 
-4. Either create an access key by clicking **Create access key** or use an existing **Access key ID**. This is the value to be stored in the `AccessKey` attribute of `StaticCredentials`.
+4. Either create an access key by clicking **Create access key** or use an existing **Access key ID**. This is the value to be stored in the `AccessKeyId` attribute of `StaticCredentials`.
 
 5. Use the **Secret Access Key** associated with the Access Key ID as the `SecretKey` attribute of `StaticCredentials`.
 
@@ -64,7 +64,7 @@ The AWS Authentication Module contains two entities which contain the credential
 
 **StaticCredentials** contains the credentials required to authenticate to AWS:
 
-* AccessKey – the access key id which can be obtained from the AWS Console
+* AccessKeyId – the access key id which can be obtained from the AWS Console
 * SecretKey – the secret access key which you need to store securely when you create your access key in the AWS console
 
 **Credentials** contains information to identify the associated static credentials:

@@ -139,7 +139,7 @@ This action puts the contents of a `Document` object into a single object define
 **Parameters**
 
 * Object of entity type `Credentials` – these belong to a AWS user managed using the `AWSAuthentication` module
-* Object of type `Document` – contains the data you want to upload to AWS S3 Storage — the `Name` attribute of the document contains the `Key` of the S3 object where the content is put
+* Object of type `Document` – contains the data you want to upload to AWS S3 Storage — the `Name` attribute of the document contains the `Key` of the S3 object where the content is put, see [Creating object key names](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) in the AWS S3 documentation for information about creating valid object keys
 * Object of type `Bucket` – the destination bucket where you want to upload the object
 
 **Returns**

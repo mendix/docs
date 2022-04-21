@@ -8,8 +8,6 @@ tags: ["marketplace", "marketplace component", "app service", "microsoft", "micr
 
 ## 1 Introduction
 
-{{% todo %}}[Verify Marketplace Docs tabs]{{% /todo %}}
-
 The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service enables sending messages to a Microsoft Teams channel automatically. You can add and configure the app service in a microflow. Once the microflow that uses the app service is triggered, your app asynchronously sends out the message to the Microsoft Teams channel. 
 
 This app service is an [add-on module](/refguide/consume-add-on-modules-and-solutions/).
@@ -107,10 +105,7 @@ Before you deploy an app, you should configure the binding keys in your app as f
 1. In Microsoft Teams, [create a Webhook URL for the channel](https://docs.servicenow.com/bundle/quebec-it-service-management/page/product/site-reliability-ops/task/create-webhook-url-channel-ms-teams.html) to which you want to send messages. 
 2. Go to the Marketplace [Subscriptions](/appstore/general/app-store-overview/#subscriptions) page and log in there.
 3. Click **Microsoft Teams Connector** to open the service management dashboard.
-4.  Click **Manage Instances**.
-    {{% todo %}}Provide image when available{{% /todo %}} 
-    
-    You are redirected to the **Communication Services Console** login page.
+4.  Click **Manage Instances**. You are redirected to the **Communication Services Console** login page.
     
 5.  Sign in to **Communication Services Console** using Mendix SSO.
     

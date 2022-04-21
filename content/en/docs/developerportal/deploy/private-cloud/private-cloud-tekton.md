@@ -336,7 +336,7 @@ To install a generic trigger you can use the following command:
 ```bash
 cd $PATH_TO_DOWNLOADED_FOLDERS && cd helm/charts
 helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
-    --set name=someUniqueName \
+    --set name=$SOME_UNIQUE_NAME \
     --set pipelineName=build-pipeline \
     --set triggerType=generic | kubectl apply -f - -n $YOUR_NAMESPACE
 ```

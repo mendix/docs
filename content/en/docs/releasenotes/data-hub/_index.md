@@ -11,6 +11,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### April 21st, 2022
+
+#### Fixes
+
+* We fixed a bug where the **Delete Data Source** button incorrectly appeared on a **Dataset** detail page.
+
 ### April 14th, 2022
 
 #### New Features

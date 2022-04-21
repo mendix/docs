@@ -21,7 +21,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
+* We removed the old [Stories](/developerportal/collaborate/stories/) UI in preparation for a brand new Mendix tool for Agile project management that will eventually replace **Stories** completely – stay tuned!
 * We expanded the export-to-Excel functionality in [Control Center](/developerportal/control-center/) for both the [Apps](/developerportal/control-center/#apps) tab (which includes the **App ID**) and the [Cloud](/developerportal/control-center/#cloud) tab (which includes the **App ID**, **Environment ID**, and **Environment URL**).
+
+#### Known Issues
+
+* Under certain circumstances, the app image is not displayed properly on the [My Apps](/developerportal/#my-apps) page.
 
 ### April 7th, 2022
 

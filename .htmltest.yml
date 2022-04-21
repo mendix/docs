@@ -31,8 +31,13 @@ IgnoreInternalURLs:
 - "/js/"
 # HUGO generates a lot of tags which don't need to be tested
 IgnoreTagAttribute: "data-proofer-ignore"
+# Ignore URLs which return a 401/403 authentication error - might want to check these ignored URLs occasionally to ensure they are still valid.
+# NOTE DOUBLE \\ needed to escape special characters in the string
 IgnoreURLs:
 - "example.com"
+- "support.mendix.com.*"
+- "sapes5.sapdevcenter.com/sap/opu/odata/iwbep/GWSAMPLE_BASIC.*"
+- "www.microsoft.com/en-us/download/details.aspx\\?id=11774"
 
 # ==========================================================
 # Speed up using concurrent testing by changing flag to true

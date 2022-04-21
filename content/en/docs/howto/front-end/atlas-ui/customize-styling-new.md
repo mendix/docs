@@ -130,7 +130,7 @@ Modules that contain theme styling should be marked as UI resources modules. To 
 
 #### 4.2 Ordering UI Resource Modules
 
-When a module contains styling (SCSS/CSS), be sure it is added to the compiled CSS file in the correct order relative to other files. For example, if a theme module should override styling that is defined in **Atlas_Core**, it is important that the theme module is added *after* **Atlas_Core**. 
+When a module contains styling (SCSS/CSS), be sure it is added to the compiled CSS file in the correct order relative to other files. For example, if a theme module should overwrite styling that is defined in **Atlas_Core**, it is important that the theme module is added *after* **Atlas_Core**. 
 
 You can set an explicit order in the theme settings (**App Settings** > **Theme**). This contains a list of all modules that are marked as UI resource modules, and allows you to set the explicit order in which they are added to the CSS file. Note that the lower a module is ordered in the list, the higher its precedence. For example, an app that uses a company theme module could be ordered as follows:
 
@@ -175,7 +175,7 @@ The two files should end up looking like this:
 @import "../../themesource/mytheme/web/custom-variables.scss";
 ```
 
-Any variables still in the *theme/web/custom-variables.scss* will overide the variables in *themesource/mytheme/web/custom-variables.scss* 
+Any variables still in the *theme/web/custom-variables.scss* will override the variables in *themesource/mytheme/web/custom-variables.scss* 
 
 *themesource/mytheme/web/custom-variables.scss*:
 

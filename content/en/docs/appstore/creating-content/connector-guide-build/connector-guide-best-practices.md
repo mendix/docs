@@ -189,7 +189,7 @@ Any dependencies your module has should be well documented including the minimum
 
 ### 3.9 IP Protection
 
-Right now, you will not be able to protect your IP or prevent end-users from changing any logic that you ship in a module using Mendix tooling. Access to this functionality is currently limited and can be gained through [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
+Right now, you will not be able to protect your IP or prevent end-users from changing any logic that you ship in a module using Mendix tooling. Access to this functionality is currently limited and can be gained through the [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
 
 If protecting your IP or preventing end-users from changing your logic is not a requirement, you can use all the tooling that Mendix provides to build a connector using available Mendix tools. If you want IP protection today, you need to implement the sensitive parts of the module in a hidden Java library. 
 

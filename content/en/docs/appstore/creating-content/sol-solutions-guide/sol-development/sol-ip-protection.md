@@ -13,7 +13,7 @@ Because subscriptions for solutions, app services, connectors, and modules are s
 
 {{% alert color="info" %}}
 
-Access to this functionality is currently limited and can be gained through [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
+Access to this functionality is currently limited and can be gained through the [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
 
 {{% /alert %}}
 

@@ -27,6 +27,10 @@ To create a new app click **Create App**, which will open a page where you can c
 
 On the right side of the top bar, you can search and access your [Mendix Profile](/developerportal/community-tools/mendix-profile/). You can also click the **+** icon to create a new app.
 
+{{% alert color="warning" %}}
+A notification in the form of a red dot next to **Get Started with Mendix** will remain there for 30 days after your signup.
+{{% /alert %}}
+
 On the left side of the top bar, you open an access menu by clicking the **Switch to** menu:
 
 {{< figure src="/attachments/developerportal/switcher.png"   width="300"  >}}

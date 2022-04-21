@@ -79,8 +79,6 @@ To send your runtime information to AppDynamics, you need to set it up using env
 
         The value of the CF_INSTANCE_ID variable will be appended to the node name. For example, if APPDYNAMICS_AGENT_NODE_NAME is set to  `my-app` and the node has multiple instances, the AppDynamics agent will be configured as `my-app-0`, `my-app-1`, … for the different instances.
 
-        {{% todo %}}[Is an instance appended for single-instance apps?]{{% /todo %}}
-
     9. APPDYNAMICS_AGENT_TIER_NAME
 
         This allows you to classify different environments of your app. We recommend using the **Environment ID** to distinguish between *Test*, *Acceptance*, and *Production* environments. You can find this on the **General** tab of the [Environment Details](/developerportal/deploy/environments-details/) page of your app environment.

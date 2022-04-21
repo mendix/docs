@@ -146,7 +146,7 @@ By default, Mendix will pass a log of *all* **request handler** activity to your
 #### 4.2.1 Format of Metrics Agent Configuration{#mx-agent-format}
 
 <!-- Changes to this should be reflected in "Configuring the Java Instrumentation Agent" in /developerportal/deploy/private-cloud-monitor,
-but replace 'Datadog' with 'Prometheus' and update relative links -->
+updating relative links -->
 
 You can specify which request handlers, microflows, and activities are reported using a JSON configuration with the following format (note that this is the syntax and not an example of this custom setting):
 

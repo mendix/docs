@@ -116,7 +116,7 @@ In the **Metadata** tab, you can select a metadata file or use metadata obtained
 
 ### 3.1 Metadata Editor
 
-The metadata editor allows to open OData contracts from a file or URL. When you already consumed a contract, you can use this editor to update your existing contract with a new version from file or URL.
+The metadata editor allows you to open OData contracts from a file or URL. When you already consumed a contract, you can use this editor to update your existing contract with a new version from file or URL.
 
 To open the **Metadata Editor**, click **Edit**. In the editor, you can specify a URL or file for the metadata:
 

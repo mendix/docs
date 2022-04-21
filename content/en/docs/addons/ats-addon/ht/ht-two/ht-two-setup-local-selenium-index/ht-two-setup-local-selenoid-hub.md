@@ -231,4 +231,4 @@ To install a hub with a Portal for "Live-View" you need a different *browsers.js
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/selenoidui2.png" >}}
 
-Congratulations you have finished setting up a local Selenoid hub. The next how-to is  [Use ATS in Combination with CI/CD](/addons/ats-addon/ht-two-ats-and-ci-cd/). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.
+Congratulations you have finished setting up a local Selenoid hub. The next how-to is  [Use ATS in Combination with CI/CD](/addons/ats-addon/ht-two-ats-and-ci-cd/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.

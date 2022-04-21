@@ -35,7 +35,7 @@ The method specifies what type of operation is performed by the microflow:
 * 'HEAD' - the operation retrieves information about the entry or entries at the specified location; this is identical to _GET_, except for the fact that it doesn't return a message body
 * 'OPTIONS' - the operation returns information about the available communication options
 
-### <a name="operation-path"></a>2.2 Operation Path
+### 2.2 Operation Path{#operation-path}
 
 The location where the operation can be reached starts with the location of the resource.
 
@@ -45,7 +45,7 @@ You can use [path parameters](/refguide7/published-rest-path-parameters/) to cap
 
 The method and operation path determine [which operation gets executed for a given request URL](/refguide7/published-rest-routing/).
 
-### <a name="example-location"></a>2.3 Example Location
+### 2.3 Example Location{#example-location}
 
 The example location gives an example of a URL on which the operation can be reached. It shows path parameters and query parameter values as placeholders between '{' and '}'.
 
@@ -164,11 +164,11 @@ The export mapping is also used to generate object schemas for operation respons
 
 The public documentation is used in the service's [OpenAPI (Swagger) documentation page](/refguide7/published-rest-services/#interactive-documentation).
 
-### <a name="summary"></a>3.1 Summary
+### 3.1 Summary{#summary}
 
 The summary provides a short description of what the operation does.
 
-### <a name="description"></a>3.2 Description
+### 3.2 Description{#description}
 
 The description provides a complete overview of what the operation does. You can use [GitHub-flavored markdown](/refguide7/gfm-syntax/) for rich text.
 

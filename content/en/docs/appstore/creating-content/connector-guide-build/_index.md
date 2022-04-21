@@ -8,14 +8,16 @@ tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "how 
 
 ## 1 Introduction
 
-Welcome to the world of Mendix connectors! Mendix connectors allow you to connect your Mendix application to other systems. You can find them on the [Mendix Marketplace](https://marketplace.mendix.com/), or add them to the Marketplace for others to use. 
+Welcome to the world of Mendix connectors. Mendix connectors allow you to connect your Mendix application to other systems. You can find them on the [Mendix Marketplace](https://marketplace.mendix.com/), or add them to the Marketplace for others to use. 
 
 **This how-to will teach you the following:**
 
 * What connectors are and how they work
 * How to build a connector
 
-Check back later for a link to a future document about recommended practices for building connectors.
+{{% alert color="info" %}}
+For in-depth instructions and best practices, see [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/).
+{{% /alert %}}
 
 ### 1.1 Prerequisites  
 
@@ -68,19 +70,13 @@ Once you deploy an application, the connector will automatically deploy with it.
 
 As an example, check out the [AWS IoT](/appstore/connectors/aws-iot/) connector. This connector uses AWS-provided Java libraries to interact with the AWS IoT service. The functions from these Java libraries in turn are exposed via a set of Mendix Java actions that are available in the toolbox to use in your logic.
 
-### 2.4 Future Versions of Connectors
+## 3 Building a Mendix Connector in Studio Pro {#build-connector}
 
-Another approach to connecting to external systems is by creating connector applications that wrap those systems with OData APIs. This approach will be discussed in the future, either here or in a linked document.
-
-In addition, it is important to protect the IP of the connector module, particularly when reselling those modules. Applying IP protection to connector modules will be discussed in the future, either here or in a linked document.
-
-## 3 Building a Mendix Connector in Studio Pro
-
-Now that you know what connectors are, you can try building your own!
+Now that you know what connectors are, you can try building your own.
 
 When creating a new Mendix connector, it is advised to have an app in which you both develop and test your connector. This means that you will have a module that contains all your connector logic, along with one or more additional modules that assist in the testing and development. The logic in the additional modules are not required for the operation of the module and therefore need to be separated.
 
-### 3.1 Setting Up Your App
+### 3.1 Setting Up Your App {#app-setup}
 
 To start setting up your app, open Studio Pro and do the following:
 
@@ -92,7 +88,9 @@ To start setting up your app, open Studio Pro and do the following:
 3.  Give your module a name fitting for the type of connector you are building.
 4.  Create the basic folder structure at root level. 
 
-### 3.2 Implementing the Connector
+For more information, see the [App Setup](/appstore/creating-content/connector-guide-best-practices/#app-setup) section of *Best Practices for Building Connectors*.
+
+### 3.2 Implementing the Connector {#implement}
 
 How you implement the module is entirely up to you and your use case, but it is good to keep the following in mind:
 
@@ -103,7 +101,7 @@ How you implement the module is entirely up to you and your use case, but it is 
 * Contain all your core code in your connector module. Anything assisting you during development or testing should be in separate modules using the connector module but never the other way around.
 * Test your connector.
 
-### 3.3 Exporting the Connector
+### 3.3 Exporting the Connector {#export}
 
 Because Mendix connectors are like any other Mendix [module](/appstore/modules/), you can export them from your app. When a connector module is exported, the following will also export:
 
@@ -124,7 +122,7 @@ To export your connector as an *.mpk* file, do the following:
 2. Generate the export module package using your [Gradle script](https://github.com/ako/CsvServices/blob/cd219e71249c194bca26b374716b88628237a6dd/build.gradle#L72).
 3. Build and export release candidate with versioning and put it in the Marketplace **DIST** folder. You can create this folder to contain the releases of your module for reference.
 
-### 3.4 Distributing the Connector
+### 3.4 Distributing the Connector {#distribute}
 
 To share your connector with other developers and the wider community, you can publish it in the Mendix Marketplace. While publishing, you may choose to publish it for everyone or just for your company. In case you choose the second option, it will only be available to other developers belonging to the same company. For more information on how to publish to the Marketplace, and the difference between public and private publishing, see the [Getting Started](/appstore/general/share-app-store-content/#get-started) section of *Share Marketplace Content*.
 
@@ -145,3 +143,4 @@ Because connectors are exported as modules and then published on the Marketplace
 ## 4 Read More
 
 * [How to Share Marketplace Content](/appstore/general/share-app-store-content/)
+* [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/)

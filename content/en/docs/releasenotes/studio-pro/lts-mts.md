@@ -16,7 +16,7 @@ To define different types of versions and releases, consider the example of [8.1
 	* Includes new features and fixes
 	* Can include breaking changes
 	* In relation to our SLA and to clarify our current offering, today Mendix supports major versions 7, 8, and 9
-		* Once version 10 has been released, suppport on version 7 will end
+		* Once version 10 has been released, support on version 7 will end
 * **18** – the second number in a release indicates the minor version 
 	* A minor version is generally released every month
 	* Includes new features and fixes

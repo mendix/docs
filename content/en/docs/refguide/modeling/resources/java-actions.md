@@ -79,7 +79,7 @@ A type parameter is a placeholder for an entity type which will be filled in wit
 
 A Java action has zero or more type parameters. Each type parameter should have a unique name.
 
-## 4 Expose as Microflow Action
+## 4 Expose as Microflow Action {#expose-microflow-action}
 
 By selecting the **Expose as microflow action** option, it is possible to expose the Java action as a microflow action. Exposing the Java action will make it appear in the the **Toolbox** window when editing a microflow in the category of your choice. When this action is used in a microflow, it will show the provided caption and icon.
 

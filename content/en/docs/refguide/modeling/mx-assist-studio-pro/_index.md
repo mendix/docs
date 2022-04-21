@@ -1,7 +1,8 @@
 ---
 title: "Mendix Assist"
 url: /refguide/mx-assist-studio-pro/
-parent: "studio-pro-overview"
+category: "App Modeling"
+weight: 120
 description: "Describes Mendix Assist in Mendix Studio Pro."
 tags: ["studio pro", "mendix assist", "AI", "assistant"]
 ---

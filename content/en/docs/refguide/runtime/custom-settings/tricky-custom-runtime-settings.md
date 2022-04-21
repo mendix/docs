@@ -92,16 +92,14 @@ The most interesting setting is `ConnectionPoolingMaxActive`, as this caps the t
 * `WARNING - ConnectionBus: Database connections: 50 active, 0 idle.`
 * `ERROR - ConnectionBus: Opening JDBC connection to 1.2.3.4:5432 failed with SQLState: null Error code: 0 Message: Cannot get a connection, pool error Timeout waiting for idle object Retrying...(1/4)`
 
-And/or you get a DB connection pool graph that looks like this:
-
-{{< figure src="/attachments/refguide/runtime/custom-settings/tricky-custom-runtime-settings/mendix-customsettings-tricky-img1.png" >}}
+And/or you get a **Number of database connections** graph that regularly peaks, or stays, at the maximum number of active connections.
 
 It will be tempting to increase the `ConnectionPoolingMaxActive` value to a (much) higher number. But if any of the following are true, this is not the right action to take:
 
 * Long running queries show up in the application log – in that case, it makes more sense to try and fix those first, as otherwise you will eventually run in to the same problem, but it will take a bit longer to occur after a (re)start of the application
 * A database is running low on memory or is even out of memory regularly — in that case, it makes more sense to upgrade the database node size first
-    * In this case, it  will also be likely you can find long running queries in your application log
-* Only a few user sessions are active at any given time — your application might need refactoring unless you can explain why three users constantly use 50 parallel database connections
+    * In this case, there will probably also be long running queries in your application log
+* Only a few user sessions are active at any given time — your application might need refactoring unless you can explain why each user is constantly using several parallel database connections
 
 However, if all of the following are true, you should increase the `ConnectionPoolingMaxActive` value to a (much) higher number:
 
@@ -111,7 +109,7 @@ However, if all of the following are true, you should increase the `ConnectionPo
 
 In general, we see that increasing the `ConnectionPoolingMaxActive` value to a (much) higher number is very rarely the right action to take, even if it is unfortunately the action usually taken when you run into connection pooling issues.
 
-In addition, keep in mind that changing this value for an application running in Mendix Cloud v3 will also require an adjustment on the database node that only Mendix can make. So, before changing the value, please file a ticket in the [Mendix Support Portal](https://support.mendix.com/hc/en-us) stating the number to which you intend to change the value. When your application is running in Mendix Cloud v4, you can change the value without a change on the database node.
+In addition, keep in mind that changing this value for an application running in Mendix Cloud v3 will also require an adjustment on the database node that only Mendix can make. So, before changing the value, please file a ticket in the [Mendix Support Portal](https://support.mendix.com/) stating the number to which you intend to change the value. When your application is running in Mendix Cloud v4, you can change the value without a change on the database node.
 
 ## 5 Read More
 

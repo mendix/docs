@@ -27,6 +27,10 @@ To create a new app click **Create App**, which will open a page where you can c
 
 On the right side of the top bar, you can search and access your [Mendix Profile](/developerportal/community-tools/mendix-profile/). You can also click the **+** icon to create a new app.
 
+{{% alert color="warning" %}}
+A notification in the form of a red dot next to **Get Started with Mendix** will remain there for 30 days after your signup.
+{{% /alert %}}
+
 On the left side of the top bar, you open an access menu by clicking the **Switch to** menu:
 
 {{< figure src="/attachments/developerportal/switcher.png"   width="300"  >}}
@@ -106,9 +110,9 @@ Clicking the question icon in the Developer Portal brings up the options Mendix 
 
 {{< figure src="/attachments/developerportal/developerportal-assistance.jpg" >}}
 
-* **Ask the Community** – click this to go to the [Mendix Forum](https://forum.mendixcloud.com/index4.html)
+* **Ask the Community** – click this to go to the [Mendix Forum](https://forum.mendixcloud.com/)
 * **Check the documentation** – click this to go to the [Mendix Documentation](https://docs.mendix.com/)
-* **Contact Mendix Support** – click this to go to [Mendix Support](https://support.mendix.com/hc/en-us)
+* **Contact Mendix Support** – click this to go to [Mendix Support](https://support.mendix.com/)
 
 ## 6 Guide Categories
 

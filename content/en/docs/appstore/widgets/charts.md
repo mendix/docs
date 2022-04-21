@@ -6,6 +6,9 @@ description: "Describes the configuration and usage of the Charts widget, which 
 tags: ["marketplace", "marketplace component", "widget", "chart", "line chart", "area chart", "column chart", "bar chart", "heat map", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+{{% alert color="warning" %}}
+This widget is experiencing rendering issues in Studio's page editor and Studio Pro's design mode. The behavior is under investigation.
+{{% /alert %}}
 
 ## 1 Introduction
 

@@ -29,7 +29,7 @@ React Native modules expose native Java/Objective-C and C++ objects allowing for
 
 {{% alert color="info" %}}
 
-Access to this functionality is currently limited and can be gained through [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
+Access to this functionality is currently limited and can be gained through the [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
 
 {{% /alert %}}
 

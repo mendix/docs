@@ -8,7 +8,7 @@ tags: ["studio pro", "add-on", "solution", "module", "modules"]
 
 {{% alert color="warning" %}}
 
-Access to this functionality is currently limited and can be gained through [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
+Access to this functionality is currently limited and can be gained through the [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
 
 {{% /alert %}}
 

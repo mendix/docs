@@ -166,11 +166,11 @@ You can use the **Microsoft Teams Connector** activity in a microflow to send me
     1. Set the **webhookId** parameter to the **Webhook ID** generated in the Communication Services Console.
     2.  For **Message type**, select **Text** or **Card** from the drop-down list:
         
-        *  If you want to send message as plain text or in HTML or markdown formatting, select **Text**
+        *  If you want to send message as plain text or in HTML or markdown formatting, select **Text**.
         
             {{% alert type="info" %}}Fore more information about HTML and markdown tags supported by Microsoft Teams, see [*Format Cards in Microsoft Teams*](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format).{{% /alert %}}
           
-        * If you want to use a actionable message card as message, select **Card**
+        * If you want to use an actionable message card as message, select **Card**.
         
             {{% alert type="info" %}}Fore more information about message cards, see [Building a Message Card](#build-message-card).{{% /alert %}}
        

@@ -20,7 +20,7 @@ Datadog logging and application metrics are supported in Mendix version 7.15 and
 Datadog is not supported in the deprecated Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
 {{% /alert %}}
 
-For more information on the data you can send to Datadog, see [Monitoring Your Mendix Apps with Saas](/developerportal/operate/monitoring-with-saas/)
+For more information on the data you can send to Datadog, see [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/)
 
 ## 2 Setting Up Datadog For Your Mendix App
 
@@ -87,7 +87,7 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 
 ## 3 Tagging Metrics for Datadog
 
-To help you with analyzing your app metrics as described in the [App Metrics](/developerportal/operate/monitoring-with-saas/#app-metrics) section of *Monitoring Your Mendix Apps with Saas*, Mendix adds tags to metrics from microflows and activities when using Datadog.
+To help you with analyzing your app metrics as described in the [App Metrics](/developerportal/operate/monitoring-with-apm/#app-metrics) section of *Monitoring Your Mendix Apps with Saas*, Mendix adds tags to metrics from microflows and activities when using Datadog.
 
 ### 3.1 Request Handler Tags
 

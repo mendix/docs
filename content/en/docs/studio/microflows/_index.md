@@ -145,6 +145,7 @@ The **Toolbox** tab contains elements that you can drag and drop on to a microfl
 * [Object Activities](#microflow-object-activities)
 * [Client Activities](#microflow-client-activities)
 * [Workflow Activities](#microflow-workflow-activities)
+* [Workflow Administration](#workflow-administration)
 * [Variable Activities](#microflow-variable-activities)
 
 ### 4.1 General {#microflow-general-section}
@@ -171,9 +172,7 @@ Elements available in the **General** section are described in the table below.
 
 The **Object Activities** section contains activities that interact with an object or objects (for more information on what an object is, see [Domain Model](/studio/domain-models/)): 
 
-{{< figure src="/attachments/studio/microflows/object-activities.png" alt="Microflow Object Activities"   width="350"  >}}
-
-
+{{< figure src="/attachments/studio/microflows/object-activities.png" alt="Microflow Object Activities"   width="300"  >}}
 
 The **Object Activities** are described in the table below.
 
@@ -205,18 +204,24 @@ The **Client Activities** are described in the table below.
 
 The **Workflow Activities** section contain activities that interact with workflows:
 
-{{< figure src="/attachments/studio/microflows/workflow-activities.jpg" alt="Workflow Activities" >}} 
+{{< figure src="/attachments/studio/microflows/workflow-activities.jpg" alt="Workflow Activities" width="350"  >}} 
 
 The **Workflow Activities** are described in the table below:
 
-| Activity            | Description                                                  |
-| ------------------- | ------------------------------------------------------------ |
-| Call Workflow       | The **Call Workflow** activity starts the selected workflow. |
-| Complete Task       | The **Complete Task** activity sets an outcome the specified [user task](/studio/workflows-user-task/) should follow. When a user task has several outcomes, you can choose the one the user task will follow. For example, when end-users select that an employee is working from home, the user task will follow the dedicated path for it. |
-| Show User Task Page | The **Show User Task Page** activity opens a user task page specified in [user task properties](/studio/workflows-user-task/). |
-| Show Workflow Page  | The **Show Workflow Page** activity opens a workflow overview page. |
+| Activity               | Description                                                  |
+| ---------------------- | ------------------------------------------------------------ |
+| Call Workflow          | The **Call Workflow** activity starts the selected workflow. |
+| Complete Task          | The **Complete Task** activity sets an outcome the specified [user task](/studio/workflows-user-task/) should follow. When a user task has several outcomes, you can choose the one the user task will follow. For example, when end-users select that an employee is working from home, the user task will follow the dedicated path for it. |
+| Retrieve Workflow Data | The **Retrieve Workflow Data** activity can be used to retrieve the selected Workflow Context entity. The action determines the return type based on the selected workflow (the configured Workflow Context entity of that workflow). |
+| Show User Task Page    | The **Show User Task Page** activity opens a user task page specified in [user task properties](/studio/workflows-user-task/). |
 
-### 4.5 Variable Activities {#microflow-variable-activities}
+### 4.5 Workflow Administration {#workflow-administration}
+
+This section contains the **Show Workflow Page** activity that opens a workflow overview page.
+
+{{< figure src="/attachments/studio/microflows/workflow-administration.jpg" alt="Workflow Administration" width="300"  >}} 
+
+### 4.6 Variable Activities {#microflow-variable-activities}
 
 The **Variable Activities** section contain activities that manipulate variables: 
 

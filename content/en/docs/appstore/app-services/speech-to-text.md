@@ -125,10 +125,10 @@ The only core widget required is the **Microphone** widget. You can make the fol
 * **Events** tab
   * **On transcript** – by binding a string attribute to the **transcript** property, which stores the real-time speech-to-text transcription result of a natural speech segment (for example a sentence), you can then set your custom **Action** that is executed when a transcript is received
      * **transcript**  – stores the transcription result of a real-time natural language segment (for example a sentence) upon successful speech-to-text conversion
-     * **Action** – sets which action is executed when the transcript is received (if empty, no action is executed)
+     * **Action** – sets which action is executed when the transcript is received (if empty, no action is executed)
   * **On error** – by binding a string attribute to the **Error** property, you can obtain the error message raised by the back-end service and set a custom action that is executed when an error occurs
      * **Error** – sets a string attribute as the error message
-     * **Action** – sets which action is executed when an error occurs
+     * **Action** – sets which action is executed when an error occurs
 * **Voice to Action** tab
    *  **Enable action** – when set to **Yes**, the following custom settings for actions are enabled:
      * **Actions** – a list of actions to execute when a transcript matches an utterance

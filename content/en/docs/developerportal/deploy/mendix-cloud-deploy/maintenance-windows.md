@@ -1,5 +1,6 @@
 ---
 title: "Maintenance Windows: Configuration"
+title: "Maintenance Windows"
 url: /developerportal/deploy/maintenance-windows/
 parent: "mendix-cloud-deploy"
 weight: 33

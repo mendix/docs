@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "pusher", "platform support"]
 
 ## 1 Introduction
 
-The [Pusher](https://marketplace.mendix.com/link/component/107957/) module allows you to trigger a microflow or nanoflow directly from the server on the client app. This means it is triggered from the other session, without waiting for end-users to interact with the page.
+The [Pusher](https://marketplace.mendix.com/link/component/107957/) module allows you to trigger a microflow or nanoflow directly from the server on non-native client apps. This means it is triggered from the other session, without waiting for end-users to interact with the page.
 
 In the standard situation, updates in the client are triggered by a user interaction, by timed actions, or by data-grid refresh time. For information not created by the same user session that needs to be updated immediately in the client app, the Mendix core product does not support a viable option to accomplish this. As an alternative, you need need to refresh the page constantly with timers or constant clicking. This is not user-friendly, and it is not preferred when scaling.
 
@@ -88,3 +88,7 @@ The notify messages are sent to anybody who is listening.
 A message will contain limited data (entity name, ID, changed date, notifier user name). To send a notify message, it is required to have the private key that is stored on the server in the `NotifyListen.secret` constant. This secret should not be shared with anybody. The listening widget will use the public `NotifyListen.key` to receive a signal and perform the action as the logged-in user.
 
 An addition authentication request is made to the Mendix REST server via `<host>/rest/pusher/key` and `<host>/rest/pusher/auth`. Only when successful is the user allowed to access the lists. The service will only allow a logged-in user with the **NotifyListen.User** module role to listen when the user has entity access to the object of the data in which the the widget is placed.
+
+## 4 Strict CSP Compatibility
+
+This module requires additional configuration to be compliant with strict content security policy (CSP). The pusher module makes use of an external service for its  functionalities. To make this module work, you need to configure the CSP headers to allow resources from that domain.

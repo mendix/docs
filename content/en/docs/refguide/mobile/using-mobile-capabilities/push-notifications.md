@@ -192,13 +192,13 @@ To import your project, do the following:
 
 With that done, continue with [Configuring APNs Credentials](#configuring) below.
 
-### 4.3 Creating a New FCM Project
+#### 4.3.1 Creating a New FCM Project
 
-#### 4.3.1 Signing into the Developers Console
+##### 4.3.1.1 Signing into the Developers Console
 
 Open up the [Firebase developers console](https://console.firebase.google.com/) and sign in with your Google ID.
 
-#### 4.3.2 Creating the Project
+##### 4.3.1.2 Creating the Project
 
 To create a project, do the following:
 
@@ -208,7 +208,7 @@ To create a project, do the following:
 
 	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/setting-up-google-firebase-cloud-messaging-server/Create_Firebase_Project.png"   width="350"  >}}
 
-## 5 Adding an Android or iOS App {#native-apps}
+### 4.4 Adding an Android or iOS App {#native-apps}
 
 Before you add an app to FCM, you must retrieve your app's bundle ID. Its location depends on your type of your mobile app.
 
@@ -237,7 +237,7 @@ Do the following to add your app to FCM:
 
 Bundle ID must be matching with your package ID. Make sure to repeat this step for iOS as well.
 
-## 6 Configuring APNs Credentials (Optional) {#configuring}
+### 4.5 Configuring APNs Credentials (Optional) {#configuring}
 
 If you wish to send push notifications to iOS devices through FCM, you will need to configure your APNs credentials:
 
@@ -248,7 +248,7 @@ If you wish to send push notifications to iOS devices through FCM, you will need
 
 1. On this tab, upload either your APNs key or your APNs certificate(s) as configured in your [Apple Developer account](https://developer.apple.com).
 
-## 7 Setting Up a Service Account {#setting-up-a-service-account}
+### 4.6 Setting Up a Service Account {#setting-up-a-service-account}
 
 In the upper-left corner of the screen, click the cogwheel and select **Project settings**. Then navigate to the **Service accounts** tab.
 
@@ -258,7 +258,7 @@ On this page, press **Generate new private key**. Store the resulting file in a 
 
 The file you just created gives API access to all available Firebase services for your app. If you want a more restrictive service account, click **Manage all service accounts** in the upper-right side of the screen, then create a service account that is restricted to using the Cloud Messaging functionality.
 
-## 8 Downloading the Google Services Config Files {#downloading-the-google-services-config-files}
+### 4.7 Downloading the Google Services Config Files {#downloading-the-google-services-config-files}
 
 In addition to the back-end configuration set up in the previous steps, you will need additional files that will be bundled as part of your mobile application. To obtain these, again click the cogwheel on the upper-left side of the screen and select **Project settings**. Then navigate to the **General** tab:
 

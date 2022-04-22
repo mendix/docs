@@ -54,6 +54,10 @@ This list gives an overview of all entities published as [OData resources](/refg
 
 This list gives an overview of all published attributes and associations.
 
+### 2.7 Documentation
+
+Here you can add a description of the service. This is available to other users working on this app and is not published when the OData service is deployed.
+
 ## 3 Settings
 
 ### 3.1 OData Version
@@ -141,11 +145,7 @@ In the properties pane when an OData service document is displayed, you can edit
 
 This section describes the additional values that you can set.
 
-### 4.1 Documentation
-
-Here you can add a description of the service. This is available to other users working on this app and is not published when the OData service is deployed.
-
-### 4.2 Replace Illegal XML Characters
+### 4.1 Replace Illegal XML Characters
 
 Some special characters cannot be used in XML. If your data contains these
 characters, the client will get an error. If you set this setting to *Yes*,
@@ -157,10 +157,6 @@ This *Replace Illegal XML Characters* option is not available when the OData
 version is OData 4, because OData 4 returns data in JSON format.
 
 Default value: *No*
-
-### 4.3 Public Documentation
-
-You can write a *summary* and a *description* intended for people using the service.
 
 ## 5 Runtime Considerations
 

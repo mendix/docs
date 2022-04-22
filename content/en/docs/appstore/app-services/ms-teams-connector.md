@@ -234,3 +234,11 @@ When you get the following pop-up window, then your license is invalid. Check if
 When you get the following pop-up window, then your quota is used up. You can check your usage statistics on the [Usage dashboard](#statistics).
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/quota-exhausted-popup.png" >}}
+
+## Using Mendix sandbox and license node to deploy your app
+
+ If the application falls into sleep mode in the sandbox,after the app resumes, you may have to wait up to 5 minutes  to use the most recent webhook Url configured in the communication services console.
+ Although an app deployed in licensed node would never go into sleep node, each new webhook url defined to be used would still require 5 minutes before its first usage.
+  
+
+ 

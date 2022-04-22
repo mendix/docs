@@ -237,5 +237,8 @@ When you get the following pop-up window, then your quota is used up. You can ch
 
 ## Using Mendix sandbox and license node to deploy your app
 
- If the application falls into sleep mode in the sandbox, you may have to wait up to 5 minutes after resuming to use the most recent webhook Url configured in the communication services console.
- Although an app deployed in licencing node would never go into sleep node, each new webhook url defined to be used would still require 5 minutes.
+ If the application falls into sleep mode in the sandbox,after the app resumes, you may have to wait up to 5 minutes  to use the most recent webhook Url configured in the communication services console.
+ Although an app deployed in licensed node would never go into sleep node, each new webhook url defined to be used would still require 5 minutes before its first usage.
+  
+
+ 

@@ -216,7 +216,7 @@ Microsoft Teams support [actionable message cards](https://docs.microsoft.com/en
 
 ## 5 Checking Statistics Using the Usage Dashboard {#statistics}
 
-The **Usage** dashboard shows the real-time statistics about the usage of an app service. For the Microsoft Teams connector, perform the following steps to check the number of Microsoft Teams webhooks usage:
+The **Usage** dashboard shows the real-time statistics about the usage of an app service. For the Microsoft Teams connector, perform the following steps to check the number of Microsoft Teams Webhooks usage:
 
 1. Log into the Marketplace.
 2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview/#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
@@ -227,18 +227,19 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
 ## 6 Troubleshooting
 
+### 6.1 License
+
 When you get the following pop-up window, then your license is invalid. Check if the configuration of your [LicenseSecret and LicenseKey](#obtain-keys) is correct.
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/license-invalid-popup.png" >}}
+
+### 6.2 Quota
 
 When you get the following pop-up window, then your quota is used up. You can check your usage statistics on the [Usage dashboard](#statistics).
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/quota-exhausted-popup.png" >}}
 
-## Using Mendix sandbox and license node to deploy your app
+### 6.3 Waiting Time for Using Webhook URLs
 
- If the application falls into sleep mode in the sandbox,after the app resumes, you may have to wait up to 5 minutes  to use the most recent webhook Url configured in the communication services console.
- Although an app deployed in licensed node would never go into sleep node, each new webhook url defined to be used would still require 5 minutes before its first usage.
-  
-
- 
+If the app deployed in the sandbox goes into the sleep mode, after the app resumes, you may have to wait up to five minutes before you can use the latest-configured Webhook URL.
+Although an app deployed to the licensed node would never go into the sleep node, you still need to wait for five minutes before you can use each newly-configured Webhook URL for the first time.

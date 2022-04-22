@@ -34,7 +34,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 In this section, we will walk through all the steps to configure AppDynamics so that it can be used for the [application performance diagnostics](/addons/apd-addon/) of your Mendix application.
 
-## 3.1 Setting Up AppDynamics
+### 3.1 Setting Up AppDynamics
 
 To set up AppDynamics, follow these steps:
 
@@ -49,13 +49,13 @@ To set up AppDynamics, follow these steps:
    {{< figure src="/attachments/howto/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-appdynamics/download-installer.png" >}}
    
 
-## 3.2 Setting Up Your Mendix Deployment
+### 3.2 Setting Up Your Mendix Deployment
 
-### 3.2.1 Cloud Foundry
+#### 3.2.1 Cloud Foundry
 
 Follow the the buildpack instructions to set up AppDynamics for Cloud Foundry deployments that are described here: [https://github.com/mendix/cf-mendix-buildpack#appdynamics](https://github.com/mendix/cf-mendix-buildpack#appdynamics).
 
-### 3.2.2 On-Premises Linux & Windows Service Console
+#### 3.2.2 On-Premises Linux & Windows Service Console
 
 To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaagent>javaagent.jar". For example:
 
@@ -67,7 +67,7 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
  ]
 ```
 
-### 3.2.3 Mendix Studio Pro (Development Mode Only)
+#### 3.2.3 Mendix Studio Pro (Development Mode Only)
 
 1. Open your Mendix application, and then select **Settings** in the **App Explorer**:
 2. Open a configuration:

@@ -1,18 +1,21 @@
 ---
 title: "9.13"
-parent: "metamodel-9"
+url: /releasenotes/sdk/metamodel-9.13/
+weight: 87
 ---
 
 ## 9.13.0
 
+**Release date: April 20th, 2022**
+
 ### Queues
 
 #### BasicQueueConfig (Element)
+
 * We introduced the `clusterWide` property. 
 
 ### Rest
 
 #### PublishedODataService (ModelUnit)
-* We introduced the `serviceFeedJson` property. Info: "The serialised service feed in JSON format"
 
-This page has been generated automatically.
+* We introduced the `serviceFeedJson` property for a serialized service feed in the JSON format.

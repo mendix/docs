@@ -35,7 +35,7 @@ This app service is an [add-on module](/refguide/consume-add-on-modules-and-solu
 
 ### 2.1  Obtaining the LicenseSecret and the LicenseKey {#obtain-keys}
 
-Microsoft Teams Connector is a premium Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses Microsoft Teams Connector, you need to start a trial or a subscription to get a valid combination of **LicenseSecret** and **LicenseKey**.
+Microsoft Teams Connector is a premium Mendix product that is subject to a purchase and subscription. To successfully deploy an app that uses Microsoft Teams Connector, you need to start a trial or a subscription to get a valid combination of **LicenseSecret** and **LicenseKey**.
 
 #### 2.1.1 Starting a Trial
 

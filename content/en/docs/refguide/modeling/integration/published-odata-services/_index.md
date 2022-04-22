@@ -54,10 +54,6 @@ This list gives an overview of all entities published as [OData resources](/refg
 
 This list gives an overview of all published attributes and associations.
 
-### 2.7 Documentation
-
-Here you can add a description of the service. This is available to other users working on this app and is not published when the OData service is deployed.
-
 ## 3 Settings
 
 ### 3.1 OData Version
@@ -139,13 +135,21 @@ The allowed roles define which [module role](/refguide/module-security/#module-r
 Web service users cannot access OData services.
 {{% /alert %}}
 
-## 4 Properties
+## 4 Public Documentation
+
+In the **Public documentation** tab, you can write a summary and a description intended for people using the service.
+
+## 5 Properties
 
 In the properties pane when an OData service document is displayed, you can edit some of the values that you can also set in the **General** tab, such as **Service name**, **Version**, and **Namespace**.
 
 This section describes the additional values that you can set.
 
-### 4.1 Replace Illegal XML Characters
+### 5.1 Documentation
+
+Here you can add a description of the service. This is available to other users working on this app and is not published when the OData service is deployed.
+
+### 5.2 Replace Illegal XML Characters
 
 Some special characters cannot be used in XML. If your data contains these
 characters, the client will get an error. If you set this setting to *Yes*,
@@ -158,9 +162,9 @@ version is OData 4, because OData 4 returns data in JSON format.
 
 Default value: *No*
 
-## 5 Runtime Considerations
+## 6 Runtime Considerations
 
-### 5.1 General
+### 6.1 General
 
 Once your app is published, a list of the published OData services will be available on the root URL of the app followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/`.
 
@@ -174,7 +178,7 @@ For details on how Mendix attributes are represented in OData, refer to [OData R
 
 When exposing entities through OData, the entities are retrieved from the Mendix database in a streaming fashion, to avoid out-of-memory errors in the Mendix Runtime.
 
-### 5.2 On-Premises Deployments
+### 6.2 On-Premises Deployments
 
 Some on-premises servers, in particular those using Microsoft IIS, will strip the host header from requests. This means that your OData service and documentation will be published on an unexpected URL.
 

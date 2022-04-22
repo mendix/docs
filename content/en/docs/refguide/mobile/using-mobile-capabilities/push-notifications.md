@@ -29,17 +29,17 @@ aliases:
 
 These guides will teach you to configure push notifications (also known as remote notifications) for your Mendix apps. The guides are meant to be completed in order, and will teach you to **send a test push notification to a single device**. Depending on your app's starting template your app may already satisfy certain prerequisites and conditions. Complete only the steps which apply to your use case, and skip what does not apply.
 
-* [Adding Module Dependencies](/howto/mobile/notif-add-module-depends/) — Install the required dependency modules so your app can use push notifications.
-* [Implementing the Push Notifications Module](/howto/mobile/notif-implement-module/) — Learn to implement the Push Notifications Connector module.
-* [Setting Up the Google Firebase Cloud Messaging Server](/howto/mobile/setting-up-google-firebase-cloud-messaging-server/) — Set up a Firebase account and configure the service in your app so that you can send push notifications.
-* [Configuring Push Notifications](/howto/mobile/notif-config-push/) — Learn to configure push notifications in the runtime.
-* [Implementing Push Notifications in Your Native App](/howto/mobile/notif-implement-native/) — Implement push notifications for a native app.
-* [Building a Native App with Push Notifications Enabled](/howto/mobile/notif-build-native/) — Build a native app with push notifications enabled.
-* [Sending Your First Test Push Notification](/howto/mobile/notif-send-test/) — Send a test notification to confirm your app is working properly.
+* [Adding Module Dependencies](#add-module-dependencies) — Install the required dependency modules so your app can use push notifications.
+* [Implementing the Push Notifications Module](#implement-module) — Learn to implement the Push Notifications Connector module.
+* [Setting Up the Google Firebase Cloud Messaging Server](#set-up-firebase) — Set up a Firebase account and configure the service in your app so that you can send push notifications.
+* [Configuring Push Notifications](#config-notifs) — Learn to configure push notifications in the runtime.
+* [Implementing Push Notifications in Your Native App](#implement-native) — Implement push notifications for a native app.
+* [Building a Native App with Push Notifications Enabled](#build-native) — Build a native app with push notifications enabled.
+* [Sending Your First Test Push Notification](#send-first-test) — Send a test notification to confirm your app is working properly.
 
 After you complete the tasks above, you may wish to do more advanced tasks with notifications. For information on **sending push notifications to multiple devices**, use this documentation:
 
-* [Sending Notifications to Multiple Devices](/howto/mobile/notif-mult-devices/)
+* [Sending Notifications to Multiple Devices](#mult-devices)
 
 The documentation described above is specifically for native mobile apps. For information on push notifications in hybrid apps, see [Set Up Hybrid Push Notifications](/howto/mobile/setting-up-hybrid-push-notifications/). For information on local notifications, see [Use Local Notifications](/howto/mobile/local-notif-parent/).
 
@@ -125,7 +125,7 @@ Now that you have installed the dependencies you need, you can move on to [Imple
 
 >>>>> /howto/mobile/native-mobile/implementation/notifications/notif-implement-module.md
 
-## 3 Implementing the Push Notifications Module
+## 3 Implementing the Push Notifications Module {#implement-module}
 
 Now that you have implemented the prerequisites in your app, you must implement the [Push Notifications Connector](/appstore/modules/push-notifications/) module. Complete the steps below to enable the basic configuration.
 
@@ -298,7 +298,7 @@ Now you completed the initial setup wizard, you can move on to [Native Push Noti
 
 >>>>> /howto/mobile/native-mobile/implementation/notifications/notif-implement-native.md
 
-## 6 Implementing Push Notifications in Your Native App {#implement-push}
+## 6 Implementing Push Notifications in Your Native App {#implement-native}
 
 This how-to will help you set up the elements which allow your native app to handle push notifications sent from your server Mendix application. After completing this step you will be able to build a native app with support for push notifications.
 

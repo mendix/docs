@@ -25,7 +25,7 @@ You can switch the selected language in the top menu bar:
 
 ## 3 Translating Texts
 
-When multiple languages are set up in your app, one language is set as default language. All untranslated texts in other languages will be displayed in the default language when you run the app.
+When multiple languages are set up in your app, one language is set as default language. All untranslated texts in other languages will be displayed in the default language when you run the app. When you change the text in the default language, all untranslated texts will fall back to the new text. 
 
 You can translate the following widgets and elements in your app:
 
@@ -34,6 +34,7 @@ You can translate the following widgets and elements in your app:
 * [Data grid columns](/studio/page-editor-data-grid/#grid-columns)
 * [Menu items](/studio/navigation/#properties-of-menu-items)
 * Messages that are configured in **Show Message** actions of a microflow
+* [Enumeration](/studio/domain-models-enumeration/) texts
 
 When working in a language which is not the default, you can identify texts that have not been translated yet. They show the text in the default language between angle brackets. For example, `<Name>`. You can replace the text with the appropriate translation for the currently selected language. To replace the text, do the following:
 
@@ -43,7 +44,9 @@ When working in a language which is not the default, you can identify texts that
 
     ![Translations Drop-Down Menu](attachments/language-support/translations-drop-down.png)
 
-3. You will see a drop-down menu where you can scroll through languages available in your app and type in translations for the text. 
+3. You will see a drop-down menu where you can scroll through languages available in your app and type in translations for the text. The order you see languages in depends on the currently selected language in the top menu bar and to the default language:
+
+    ![](attachments/language-support/language-diagram.png)
 
 If you edit your app to add new widgets while not in the default language, any new translatable texts for those widgets will be added to the current language. The text in the default language will either be left blank or will have the placeholder text for the widget.
 

@@ -49,11 +49,11 @@ To get started, begin with the series' first entry: [Add Module Dependencies](/h
 
 ## 2 Adding Module Dependencies {#add-module-dependencies}
 
-This how-to will help you add module dependencies for the [Push Notifications Connector](/appstore/modules/push-notifications/) module. You only need to install the modules your use case requires. Once your app has the modules it needs, you may move on to [Implement the Push Notifications Module](/howto/mobile/notif-implement-module/).
+This section will help you add module dependencies for the [Push Notifications Connector](/appstore/modules/push-notifications/) module. You only need to install the modules your use case requires. Once your app has the modules it needs, you may move on to [Implement the Push Notifications Module](/howto/mobile/notif-implement-module/).
 
 ### 2.1 Implementing the Encryption Module
 
-Skip this section if the [Encryption](https://marketplace.mendix.com/link/component/1011) module is already implemented in your app. Implement this module by doing the following:
+Skip this section if the [Encryption](/appstore/modules/encryption/) module is already implemented in your app. Implement this module by doing the following:
 
 1. Open up the Marketplace from Studio Pro.
 1. Search for *Encryption*.
@@ -121,7 +121,7 @@ Implement the Pop-Up Menu widget for apps in Mendix Studio Pro 9.0 and above. Sk
 1. Click **Download**.
 1. No further installation is required. If you want to know more about the widget visit the [Pop-Up Menu marketplace guide](https://docs.mendix.com/appstore/widgets/popup-menu).
 
-Now that you have installed the dependencies you need, you can move on to [Implement the Push Notifications Module](/howto/mobile/notif-implement-module/).
+Now that you have installed the dependencies you need, you can move on to the next section.
 
 >>>>> /howto/mobile/native-mobile/implementation/notifications/notif-implement-module.md
 
@@ -155,17 +155,17 @@ In order for your app to use to use the Push Connections Module, configure the f
 1. Add a microflow sub-call to your **Afterstartup** microflow for the microflow **AfterStartup_PushNotifications**:<br />
 	a. If you do not have an **Afterstartup** microflow configured yet, read the [After Startup](/refguide/project-settings/#after-startup) section of *App Settings* for more information.
 
-Now you are able to start your app and move on to the next step: [Set Up the Google Firebase Cloud Messaging Server](/howto/mobile/setting-up-google-firebase-cloud-messaging-server/).
+Now you are able to start your app and move on to the next section.
 
 >>>>> /howto/mobile/native-mobile/implementation/notifications/setting-up-google-firebase-cloud-messaging-server.md
 
 ## 4 Setting Up the Google Firebase Cloud Messaging Server {#set-up-firebase}
 
-You can use Google's Firebase Cloud Messaging (FCM) service to send push notifications to both Android and iOS devices. To send push notifications using FCM from the Push Notifications Connector module, you must set up a Firebase account with FCM enabled. This how-to will teach you how to register for FCM and configure the service in your app.
+You can use Google's Firebase Cloud Messaging (FCM) service to send push notifications to both Android and iOS devices. To send push notifications using FCM from the Push Notifications Connector module, you must set up a Firebase account with FCM enabled. This section will teach you how to register for FCM and configure the service in your app.
 
 ### 4.1 Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this section, make sure you have completed the following prerequisites:
 
 * Have a Firebase account (https://firebase.google.com)
 
@@ -274,7 +274,7 @@ Only create an iOS application in your Firebase project when you plan on using F
 
 ## 5 Configuring Push Notifications {#config-notifs}
 
-This how-to will teach you to configure the runtime for using push notifications in native apps. 
+This section will teach you to configure the runtime for using push notifications in native apps. 
 
 ### 5.1 Configuring Your Notifications
 
@@ -294,13 +294,13 @@ When selecting a platform to support, the wizard will ask for the Google Firebas
 | -------- | -------- | ------- |
 | **{project_id}-firebase-adminsdk-{identifier}.json** | Google Firebase | Private key for the Firebase service account, used in runtime configuration. |  
 
-Now you completed the initial setup wizard, you can move on to [Native Push Notification Implementation](/howto/mobile/notif-implement-native/).
+Now you completed the initial setup wizard, you can move on the next section.
 
 >>>>> /howto/mobile/native-mobile/implementation/notifications/notif-implement-native.md
 
 ## 6 Implementing Push Notifications in Your Native App {#implement-native}
 
-This how-to will help you set up the elements which allow your native app to handle push notifications sent from your server Mendix application. After completing this step you will be able to build a native app with support for push notifications.
+This section will help you set up the elements which allow your native app to handle push notifications sent from your server Mendix application. After completing this step you will be able to build a native app with support for push notifications.
 
 To make setup easy, the Push Notifications Connector module includes snippets that will help you with the initial setup. Do the following:
 
@@ -371,7 +371,7 @@ Now that you have implemented push notifications, it is time to build and deploy
 
 When building for local development, keep in mind that Mendix's Make it Native does not support push notifications. In order to use and test push notifications, you will have to build your own native app as described above and distribute it to an emulator (Android only) or test device.
 
-Now you are able to build, the next step is to run your app in an emulator or test device so you can try to [Send Your First Test Push Notification](/howto/mobile/notif-send-test/). 
+Now you are able to build, the next step is to run your app in an emulator or test device. This will let you send your first test push notification in the next section.
 
 >>>>> /howto/mobile/native-mobile/implementation/notifications/notif-send-test.md
 
@@ -424,7 +424,7 @@ Push notifications only work with apps created through the Mendix Native Mobile 
 
 ### 9.1 Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisite:
+Before starting this section, make sure you have completed the following prerequisite:
 
 * Send one test push notification as described in [Use Notifications](/howto/mobile/notifications/)
 

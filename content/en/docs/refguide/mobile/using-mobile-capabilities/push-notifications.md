@@ -29,15 +29,15 @@ aliases:
 
 These guides will teach you to configure push notifications (also known as remote notifications) for your Mendix apps. The guides are meant to be completed in order, and will teach you to **send a test push notification to a single device**. Depending on your app's starting template your app may already satisfy certain prerequisites and conditions. Complete only the steps which apply to your use case, and skip what does not apply.
 
-* [Add Module Dependencies](/howto/mobile/notif-add-module-depends/) — Install the required dependency modules so your app can use push notifications.
-* [Implement the Push Notifications Module](/howto/mobile/notif-implement-module/) — Learn to implement the Push Notifications Connector module.
-* [Set Up the Google Firebase Cloud Messaging Server](/howto/mobile/setting-up-google-firebase-cloud-messaging-server/) — Set up a Firebase account and configure the service in your app so that you can send push notifications.
-* [Configure Push Notifications](/howto/mobile/notif-config-push/) — Learn to configure push notifications in the runtime.
-* [Implement Push Notifications in Your Native App](/howto/mobile/notif-implement-native/) — Implement push notifications for a native app.
-* [Build a Native App with Push Notifications Enabled](/howto/mobile/notif-build-native/) — Build a native app with push notifications enabled.
-* [Send Your First Test Push Notification](/howto/mobile/notif-send-test/) — Send a test notification to confirm your app is working properly.
+* [Adding Module Dependencies](/howto/mobile/notif-add-module-depends/) — Install the required dependency modules so your app can use push notifications.
+* [Implementing the Push Notifications Module](/howto/mobile/notif-implement-module/) — Learn to implement the Push Notifications Connector module.
+* [Setting Up the Google Firebase Cloud Messaging Server](/howto/mobile/setting-up-google-firebase-cloud-messaging-server/) — Set up a Firebase account and configure the service in your app so that you can send push notifications.
+* [Configuring Push Notifications](/howto/mobile/notif-config-push/) — Learn to configure push notifications in the runtime.
+* [Implementing Push Notifications in Your Native App](/howto/mobile/notif-implement-native/) — Implement push notifications for a native app.
+* [Building a Native App with Push Notifications Enabled](/howto/mobile/notif-build-native/) — Build a native app with push notifications enabled.
+* [Sending Your First Test Push Notification](/howto/mobile/notif-send-test/) — Send a test notification to confirm your app is working properly.
 
-After you complete the guides above, you may wish to do more advanced tasks with notifications. For information on **sending push notifications to multiple devices**, use this how-to:
+After you complete the tasks above, you may wish to do more advanced tasks with notifications. For information on **sending push notifications to multiple devices**, use this documentation:
 
 * [Send Notifications to Multiple Devices](/howto/mobile/notif-mult-devices/)
 
@@ -47,11 +47,11 @@ To get started, begin with the series' first entry: [Add Module Dependencies](/h
 
 >>>>> /howto/mobile/native-mobile/implementation/notifications/notif-add-module-depends.md
 
-## 1 Introduction
+## 1 Adding Module Dependencies {#add-module-dependencies}
 
 This how-to will help you add module dependencies for the [Push Notifications Connector](/appstore/modules/push-notifications/) module. You only need to install the modules your use case requires. Once your app has the modules it needs, you may move on to [Implement the Push Notifications Module](/howto/mobile/notif-implement-module/).
 
-## 2 Implementing the Encryption Module
+### 1.1 Implementing the Encryption Module
 
 Skip this section if the [Encryption](https://marketplace.mendix.com/link/component/1011) module is already implemented in your app. Implement this module by doing the following:
 
@@ -61,7 +61,7 @@ Skip this section if the [Encryption](https://marketplace.mendix.com/link/compon
 1. Click **Download**.
 1. Follow the instructions on the [Encryption marketplace guide](https://docs.mendix.com/appstore/modules/encryption) to set up this module.
 
-## 3 Implementing the Community Commons Module
+### 1.2 Implementing the Community Commons Module
 
 Skip this section if the [Community Commons](https://marketplace.mendix.com/link/component/170) module is already implemented in your app. Implement this module by doing the following:
 
@@ -71,7 +71,7 @@ Skip this section if the [Community Commons](https://marketplace.mendix.com/link
 1. Click **Download**.
 1. No further installation is required. If you want to know more about the module visit the [Community Commons marketplace guide](https://docs.mendix.com/appstore/modules/community-commons-function-library).
 
-## 4 Implementing the Nanoflow Commons Module
+### 1.3 Implementing the Nanoflow Commons Module
 
 Skip this section if the [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515/Mendix/Nanoflow-Commons) module is already implemented in your app, or if you do not plan on using using local or native push notifications. Implement this module by doing the following:
 
@@ -81,7 +81,7 @@ Skip this section if the [Nanoflow Commons](https://marketplace.mendix.com/link/
 1. Click **Download**.
 1. No further installation is required. If you want to know more about the module visit the [Nanoflow Commons marketplace guide](https://docs.mendix.com/appstore/modules/nanoflow-commons).
 
-## 5 Implementing the Native Mobile Resources Module
+### 1.4 Implementing the Native Mobile Resources Module
 
 Skip this section if the [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513/Mendix/Native-Mobile-Resources) module is already implemented in your app, or if you do not plan on using using local or native push notifications. Implement this module by doing the following:
 
@@ -91,7 +91,7 @@ Skip this section if the [Native Mobile Resources](https://marketplace.mendix.co
 1. Click **Download**.
 1. No further installation is required. If you want to know more about the module visit the [Native mobile resources marketplace guide](https://docs.mendix.com/appstore/modules/native-mobile-resources).
 
-## 6 Implementing the Atlas Core Module
+### 1.5 Implementing the Atlas Core Module
 
 Implement the Atlas Core module for apps in Mendix Studio Pro 9.0 and above. Skip this section if the [Atlas Core](https://marketplace.mendix.com/link/component/117187/Mendix/Atlas-Core) module is already implemented in your app. Implement this module by doing the following:
 
@@ -101,7 +101,7 @@ Implement the Atlas Core module for apps in Mendix Studio Pro 9.0 and above. Ski
 1. Click **Download**.
 1. No further installation is required. If you want to know more about the module visit the [Atlas UI marketplace guide](https://docs.mendix.com/appstore/modules/atlas-ui-resources).
 
-## 7 Implementing the Data Widgets Module
+### 1.6 Implementing the Data Widgets Module
 
 Implement the Data Widgets module for apps in Mendix Studio Pro 9.0 and above. Skip this section if the [Data Widgets](https://marketplace.mendix.com/link/component/116540/Mendix/Data-Widgets) module is already implemented in your app. Implement this module by doing the following:
 
@@ -111,7 +111,7 @@ Implement the Data Widgets module for apps in Mendix Studio Pro 9.0 and above. S
 1. Click **Download**.
 1. No further installation is required. If you want to know more about the module visit the [Data Widgets marketplace guide](https://docs.mendix.com/appstore/modules/data-widgets).
 
-## 8 Implementing the Pop-Up Menu Widget
+### 1.7 Implementing the Pop-Up Menu Widget
 
 Implement the Pop-Up Menu widget for apps in Mendix Studio Pro 9.0 and above. Skip this section if the [Pop-Up Menu](https://marketplace.mendix.com/link/component/115826/Mendix/Pop-Up-Menu) widget is already implemented in your app. Implement this widget by doing the following:
 

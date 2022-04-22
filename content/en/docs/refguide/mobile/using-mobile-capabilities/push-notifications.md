@@ -39,7 +39,7 @@ These guides will teach you to configure push notifications (also known as remot
 
 After you complete the tasks above, you may wish to do more advanced tasks with notifications. For information on **sending push notifications to multiple devices**, use this documentation:
 
-* [Send Notifications to Multiple Devices](/howto/mobile/notif-mult-devices/)
+* [Sending Notifications to Multiple Devices](/howto/mobile/notif-mult-devices/)
 
 The documentation described above is specifically for native mobile apps. For information on push notifications in hybrid apps, see [Set Up Hybrid Push Notifications](/howto/mobile/setting-up-hybrid-push-notifications/). For information on local notifications, see [Use Local Notifications](/howto/mobile/local-notif-parent/).
 
@@ -272,11 +272,11 @@ Only create an iOS application in your Firebase project when you plan on using F
 
 >>>>> /howto/mobile/native-mobile/implementation/notifications/notif-config-push.md
 
-## 1 Introduction 
+## 5 Configuring Push Notifications {#config-notifs}
 
 This how-to will teach you to configure the runtime for using push notifications in native apps. 
 
-## 2 Configuring Your Notifications
+### 5.1 Configuring Your Notifications
 
 If you have completed [Add Module Dependencies](/howto/mobile/notif-add-module-depends/) and [Implement the Push Notifications Module](/howto/mobile/notif-implement-module/) per your use case, do the following to configure your push notifications:
 
@@ -298,7 +298,7 @@ Now you completed the initial setup wizard, you can move on to [Native Push Noti
 
 >>>>> /howto/mobile/native-mobile/implementation/notifications/notif-implement-native.md
 
-## 1 Introduction
+## 6 Implementing Push Notifications in Your Native App {#implement-push}
 
 This how-to will help you set up the elements which allow your native app to handle push notifications sent from your server Mendix application. After completing this step you will be able to build a native app with support for push notifications.
 
@@ -311,7 +311,7 @@ To make setup easy, the Push Notifications Connector module includes snippets th
 1. Copy the **NativeHomepage_Snippet** snippet.
 1. Paste the snippet into your Native navigation’s homepage.
 
-## 2 App Events Widget
+### 6.1 App Events Widget
 
 Completing the previous section brings the **App events** widget into your app. This widget is already configured and part of a snippet, so you should not need to change it. 
 
@@ -325,13 +325,13 @@ If you already had an **App events** widget on your homepage, follow these steps
 1. For **Nanoflow**, click and specify the nanoflow **OnPageLoad_RegisterPushNotifications** from the **PushNotifications** module: <br />
     a. If you already have a nanoflow selected, make a **Call nanoflow** activity to the  nanoflow in that existing nanoflow. <br /> 
 
-## 3 Notifications Widget
+### 6.2 Notifications Widget
 
 The snippet also adds the **Notifications** widget which lets users interact with the notifications the app receives.
 
 By default this widget is configured with an **Example** action. It uses a non-persistable entity ([NPE](/refguide/persistability/#non-persistable)) that stores data received from the notifications. It then uses that data in the nanoflow upon receiving or opening the notification. Use this example to make your own actions. 
 
-## 4 Customizing Offline Synchronization
+### 6.3 Customizing Offline Synchronization
 
 To ensure push notification integration executes properly on your native app you must adjust the objects that are synchronized to your mobile device:
 
@@ -347,11 +347,11 @@ Now that you have everything set up, it is time to deploy your native app. See [
 
 >>>>> /howto/mobile/native-mobile/implementation/notifications/notif-build-native.md
 
-## 1 Introduction
+## 7 Building a Native App with Push Notifications Enabled {#build-native}
 
 Now that you have implemented push notifications, it is time to build and deploy the native mobile app. Deploying your iOS or Android app allows the server to send push notifications to mobile devices which have your app installed.
 
-## 2 Building Your Native App {#build-native-app}
+### 7.1 Building Your Native App {#build-native-app}
 
 1.  In Studio Pro top bar navigation, click **App** > **Build Native Mobile App**: </br>
 	a. If you are building your native app for the first time, click [here](/howto/mobile/native-build-locally/) for instructions.</br>
@@ -375,11 +375,11 @@ Now you are able to build, the next step is to run your app in an emulator or te
 
 >>>>> /howto/mobile/native-mobile/implementation/notifications/notif-send-test.md
 
-## 1 Introduction
+## 8 Sending Your First Test Push Notification {#send-first-test}
 
 After setting up your configuration on the server, and deploying your native app it is now time to send your first test push notification.
 
-## 2 Sending the Test Notification
+### 8.1 Sending the Test Notification
 
 To send your first test notification, do the following:
 
@@ -403,7 +403,7 @@ Congratulations, you have just sent your first push notification!
 
 If you did not receive the message, check the application's logs to see if the message was sent successfully. See the troubleshooting section below for solutions to the most common issues.
 
-## 3 Troubleshooting Notification Issues {#troubleshoot}
+### 8.2 Troubleshooting Notification Issues {#troubleshoot}
 
 | Issue | Cause | Solution |
 |-----|----|-----|
@@ -414,7 +414,7 @@ If you did not receive the message, check the application's logs to see if the m
 
 >>>>> /howto/mobile/native-mobile/implementation/notifications/notif-mult-devices.md
 
-## 1 Introduction
+## 9 Sending Notifications to Multiple Devices {#mult-devices}
 
 This tutorial will teach you to send test push notifications to multiple devices.
 
@@ -422,7 +422,7 @@ This tutorial will teach you to send test push notifications to multiple devices
 Push notifications only work with apps created through the Mendix Native Mobile Builder. You cannot send notifications to an app inside the Make it Native app.
 {{% /alert %}}
 
-## 2 Prerequisites
+### 9.1 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
@@ -432,11 +432,11 @@ If you want to use push notifications with custom apps created with Mendix Nativ
 
 * Complete [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app/) through the end of the *Making Your First Build* section
 
-## 3 Sending Notifications to Multiple Devices
+### 9.2 Sending Notifications to Multiple Devices
 
 What if you want to send messages to all your users' devices with a single button push, but you do not want to handle the GUID retrieval? The section below will address this scenario. Specifically, you will send a push notification containing a data object to your users' devices via the Push Notifications API.
 
-### 3.1 Creating a Microflow to Send a Data Object Push Notification 
+#### 9.2.1 Creating a Microflow to Send a Data Object Push Notification 
 
 Create a microflow *ACT_SendProductToAllDevices* with the following elements:
 
@@ -470,7 +470,7 @@ Create a microflow *ACT_SendProductToAllDevices* with the following elements:
 
 	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/sendProductToAllButton.png" alt="sendProductToAllButton"   width="300"  >}}
 
-### 3.2 Testing the Implementation
+#### 9.2.2 Testing the Implementation
 
 Test your new push notification capabilities by doing the following:
 
@@ -479,15 +479,15 @@ Test your new push notification capabilities by doing the following:
 
 This will send a notification to all available devices. When you tap the notification, you will be redirected to the particular product page you modeled.
 
-## 4 More Java Action Explanations
+### 9.3 More Java Action Explanations
 
 For more detail on Java actions available in the Push notifications module, see the sections below.
 
-### 4.1 PrepareMessageData Microflow
+#### 9.3.1 PrepareMessageData Microflow
 
 This allows users to create their own user interfaces in order to alter and create a push notification message. 
 
-### 4.2 SendMessageToDevice and SendMessageToDevices Java Actions
+#### 9.3.2 SendMessageToDevice and SendMessageToDevices Java Actions
 
 These Java actions have the following parameters:
 
@@ -495,13 +495,13 @@ These Java actions have the following parameters:
 * **DeviceParam** (List of PushNotifications.Device or PushNotification.Device): this parameter can be used to send the same message to a list of devices
 * **ContextObject**: this parameter will allow any Mendix object to be passed to the notification
 
-### 4.3 SendMessageToUsers and SendMessageToUser Java Actions
+#### 9.3.4 SendMessageToUsers and SendMessageToUser Java Actions
 
 Every user is allowed to have more than one device. When sending push notifications to every device of a particular user, use  the **SendMessageToUser** Java action.
 
 To send a push notification to all users, use the **SendMessageToUsers** Java action.
 
-## 5 Troubleshooting Notification Issues
+### 9.4 Troubleshooting Notification Issues
 
 If you run into issues, see the [Troubleshoot Notification Issues](/howto/mobile/notif-send-test/#troubleshoot) section of *Send Your First Test Push Notification*.
 

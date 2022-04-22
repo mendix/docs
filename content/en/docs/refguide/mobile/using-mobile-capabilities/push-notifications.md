@@ -47,11 +47,11 @@ To get started, begin with the series' first entry: [Add Module Dependencies](/h
 
 >>>>> /howto/mobile/native-mobile/implementation/notifications/notif-add-module-depends.md
 
-## 1 Adding Module Dependencies {#add-module-dependencies}
+## 2 Adding Module Dependencies {#add-module-dependencies}
 
 This how-to will help you add module dependencies for the [Push Notifications Connector](/appstore/modules/push-notifications/) module. You only need to install the modules your use case requires. Once your app has the modules it needs, you may move on to [Implement the Push Notifications Module](/howto/mobile/notif-implement-module/).
 
-### 1.1 Implementing the Encryption Module
+### 2.1 Implementing the Encryption Module
 
 Skip this section if the [Encryption](https://marketplace.mendix.com/link/component/1011) module is already implemented in your app. Implement this module by doing the following:
 
@@ -61,7 +61,7 @@ Skip this section if the [Encryption](https://marketplace.mendix.com/link/compon
 1. Click **Download**.
 1. Follow the instructions on the [Encryption marketplace guide](https://docs.mendix.com/appstore/modules/encryption) to set up this module.
 
-### 1.2 Implementing the Community Commons Module
+### 2.2 Implementing the Community Commons Module
 
 Skip this section if the [Community Commons](https://marketplace.mendix.com/link/component/170) module is already implemented in your app. Implement this module by doing the following:
 
@@ -71,7 +71,7 @@ Skip this section if the [Community Commons](https://marketplace.mendix.com/link
 1. Click **Download**.
 1. No further installation is required. If you want to know more about the module visit the [Community Commons marketplace guide](https://docs.mendix.com/appstore/modules/community-commons-function-library).
 
-### 1.3 Implementing the Nanoflow Commons Module
+### 2.3 Implementing the Nanoflow Commons Module
 
 Skip this section if the [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515/Mendix/Nanoflow-Commons) module is already implemented in your app, or if you do not plan on using using local or native push notifications. Implement this module by doing the following:
 
@@ -81,7 +81,7 @@ Skip this section if the [Nanoflow Commons](https://marketplace.mendix.com/link/
 1. Click **Download**.
 1. No further installation is required. If you want to know more about the module visit the [Nanoflow Commons marketplace guide](https://docs.mendix.com/appstore/modules/nanoflow-commons).
 
-### 1.4 Implementing the Native Mobile Resources Module
+### 2.4 Implementing the Native Mobile Resources Module
 
 Skip this section if the [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513/Mendix/Native-Mobile-Resources) module is already implemented in your app, or if you do not plan on using using local or native push notifications. Implement this module by doing the following:
 
@@ -91,7 +91,7 @@ Skip this section if the [Native Mobile Resources](https://marketplace.mendix.co
 1. Click **Download**.
 1. No further installation is required. If you want to know more about the module visit the [Native mobile resources marketplace guide](https://docs.mendix.com/appstore/modules/native-mobile-resources).
 
-### 1.5 Implementing the Atlas Core Module
+### 2.5 Implementing the Atlas Core Module
 
 Implement the Atlas Core module for apps in Mendix Studio Pro 9.0 and above. Skip this section if the [Atlas Core](https://marketplace.mendix.com/link/component/117187/Mendix/Atlas-Core) module is already implemented in your app. Implement this module by doing the following:
 
@@ -101,7 +101,7 @@ Implement the Atlas Core module for apps in Mendix Studio Pro 9.0 and above. Ski
 1. Click **Download**.
 1. No further installation is required. If you want to know more about the module visit the [Atlas UI marketplace guide](https://docs.mendix.com/appstore/modules/atlas-ui-resources).
 
-### 1.6 Implementing the Data Widgets Module
+### 2.6 Implementing the Data Widgets Module
 
 Implement the Data Widgets module for apps in Mendix Studio Pro 9.0 and above. Skip this section if the [Data Widgets](https://marketplace.mendix.com/link/component/116540/Mendix/Data-Widgets) module is already implemented in your app. Implement this module by doing the following:
 
@@ -111,7 +111,7 @@ Implement the Data Widgets module for apps in Mendix Studio Pro 9.0 and above. S
 1. Click **Download**.
 1. No further installation is required. If you want to know more about the module visit the [Data Widgets marketplace guide](https://docs.mendix.com/appstore/modules/data-widgets).
 
-### 1.7 Implementing the Pop-Up Menu Widget
+### 2.7 Implementing the Pop-Up Menu Widget
 
 Implement the Pop-Up Menu widget for apps in Mendix Studio Pro 9.0 and above. Skip this section if the [Pop-Up Menu](https://marketplace.mendix.com/link/component/115826/Mendix/Pop-Up-Menu) widget is already implemented in your app. Implement this widget by doing the following:
 
@@ -123,14 +123,13 @@ Implement the Pop-Up Menu widget for apps in Mendix Studio Pro 9.0 and above. Sk
 
 Now that you have installed the dependencies you need, you can move on to [Implement the Push Notifications Module](/howto/mobile/notif-implement-module/).
 
-
 >>>>> /howto/mobile/native-mobile/implementation/notifications/notif-implement-module.md
 
-## 1 Introduction
+## 3 Implementing the Push Notifications Module
 
 Now that you have implemented the prerequisites in your app, you must implement the [Push Notifications Connector](/appstore/modules/push-notifications/) module. Complete the steps below to enable the basic configuration.
 
-## 2 Downloading From Marketplace
+### 3.1 Downloading From Marketplace
 
 If you have not done so, make sure to download the **Push Notification Connector** module from the Marketplace:
 
@@ -139,7 +138,7 @@ If you have not done so, make sure to download the **Push Notification Connector
 1. Open the **Push Notification Connector** module.
 1. Click **Download**.
 
-## 3 Configuring Your App {#config}
+### 3.2 Configuring Your App {#config}
 
 In order for your app to use to use the Push Connections Module, configure the following things:
 
@@ -158,32 +157,31 @@ In order for your app to use to use the Push Connections Module, configure the f
 
 Now you are able to start your app and move on to the next step: [Set Up the Google Firebase Cloud Messaging Server](/howto/mobile/setting-up-google-firebase-cloud-messaging-server/).
 
-
 >>>>> /howto/mobile/native-mobile/implementation/notifications/setting-up-google-firebase-cloud-messaging-server.md
 
-## 1 Introduction
+## 4 Setting Up the Google Firebase Cloud Messaging Server {#set-up-firebase}
 
 You can use Google's Firebase Cloud Messaging (FCM) service to send push notifications to both Android and iOS devices. To send push notifications using FCM from the Push Notifications Connector module, you must set up a Firebase account with FCM enabled. This how-to will teach you how to register for FCM and configure the service in your app.
 
-## 2 Prerequisites
+### 4.1 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a Firebase account (https://firebase.google.com)
 
-## 3 Setting up a Firebase Project
+### 4.2 Setting up a Firebase Project
 
 There are two possible scenarios: you can create a new FCM project, or you can update your existing GCM project to FCM. Both scenarios are described below.
 
-### 3.1 Migrating a GCM project to FCM
+#### 4.2.1 Migrating a GCM project to FCM
 
 To prevent the degraded reliability of push notifications delivery, you should migrate existing GCM projects to FCM and upgrade credentials if needed.
 
-#### 3.1.1 Signing into the Developer's Console
+##### 4.2.1.1 Signing into the Developer's Console
 
 Open the [Firebase developer's console](https://console.firebase.google.com/) and sign in with your Google ID.
 
-#### 3.1.2 Importing the Project
+##### 4.2.1.2 Importing the Project
 
 To import your project, do the following:
 
@@ -194,13 +192,13 @@ To import your project, do the following:
 
 With that done, continue with [Configuring APNs Credentials](#configuring) below.
 
-### 3.2 Creating a New FCM Project
+### 4.3 Creating a New FCM Project
 
-#### 3.2.1 Signing into the Developers Console
+#### 4.3.1 Signing into the Developers Console
 
 Open up the [Firebase developers console](https://console.firebase.google.com/) and sign in with your Google ID.
 
-#### 3.2.2 Creating the Project
+#### 4.3.2 Creating the Project
 
 To create a project, do the following:
 
@@ -210,7 +208,7 @@ To create a project, do the following:
 
 	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/setting-up-google-firebase-cloud-messaging-server/Create_Firebase_Project.png"   width="350"  >}}
 
-## 4 Adding an Android or iOS App {#native-apps}
+## 5 Adding an Android or iOS App {#native-apps}
 
 Before you add an app to FCM, you must retrieve your app's bundle ID. Its location depends on your type of your mobile app.
 
@@ -239,7 +237,7 @@ Do the following to add your app to FCM:
 
 Bundle ID must be matching with your package ID. Make sure to repeat this step for iOS as well.
 
-## 5 Configuring APNs Credentials (Optional) {#configuring}
+## 6 Configuring APNs Credentials (Optional) {#configuring}
 
 If you wish to send push notifications to iOS devices through FCM, you will need to configure your APNs credentials:
 
@@ -250,7 +248,7 @@ If you wish to send push notifications to iOS devices through FCM, you will need
 
 1. On this tab, upload either your APNs key or your APNs certificate(s) as configured in your [Apple Developer account](https://developer.apple.com).
 
-## 6 Setting Up a Service Account {#setting-up-a-service-account}
+## 7 Setting Up a Service Account {#setting-up-a-service-account}
 
 In the upper-left corner of the screen, click the cogwheel and select **Project settings**. Then navigate to the **Service accounts** tab.
 
@@ -260,7 +258,7 @@ On this page, press **Generate new private key**. Store the resulting file in a 
 
 The file you just created gives API access to all available Firebase services for your app. If you want a more restrictive service account, click **Manage all service accounts** in the upper-right side of the screen, then create a service account that is restricted to using the Cloud Messaging functionality.
 
-## 7 Downloading the Google Services Config Files {#downloading-the-google-services-config-files}
+## 8 Downloading the Google Services Config Files {#downloading-the-google-services-config-files}
 
 In addition to the back-end configuration set up in the previous steps, you will need additional files that will be bundled as part of your mobile application. To obtain these, again click the cogwheel on the upper-left side of the screen and select **Project settings**. Then navigate to the **General** tab:
 

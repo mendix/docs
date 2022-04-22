@@ -45,7 +45,7 @@ Team Server Git has the following advantages over Team Server SVN:
 
 ## 5 Retrieve and Commit + Push Actions Are Getting Slower
 
-This may be caused by the way the storage format of Git interacts with the way the Mendix Model stores changes, which can accumulate substantial disk space over time. 
+This may be caused by the way the storage format of Git interacts with the way the Mendix model stores changes, which can accumulate substantial disk space over time. 
 
 You can run `git gc` in the command line to mitigate this. `git gc` runs a number of housekeeping tasks, but primarily pack files are created. Pack files store just the changes to the files, which reduces the amount of data which needs to be stored. 
 

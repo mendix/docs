@@ -272,11 +272,6 @@ The list at the bottom shows the Android and iOS applications that you have conf
 Only create an iOS application in your Firebase project when you plan on using FCM for sending push notifications to iOS devices. If you plan to keep using APNS to send push notifications to iOS devices, you do not have to create an iOS application in your Firebase project, and you do not have to download a *GoogleService-Info.plist* config file.
 {{% /alert %}}
 
-## 8 Read More
-
-* [Set Up Push Notifications](/howto/mobile/notifications/)
-* [Set Up Hybrid Push Notifications](/howto/mobile/setting-up-hybrid-push-notifications/)
-
 >>>>> /howto/mobile/native-mobile/implementation/notifications/notif-config-push.md
 
 ## 1 Introduction 
@@ -512,6 +507,3 @@ To send a push notification to all users, use the **SendMessageToUsers** Java ac
 
 If you run into issues, see the [Troubleshoot Notification Issues](/howto/mobile/notif-send-test/#troubleshoot) section of *Send Your First Test Push Notification*.
 
-## 6 Read More
-
-* [Use Notifications](/howto/mobile/notifications/)

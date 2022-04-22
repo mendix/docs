@@ -44,7 +44,8 @@ Team Server Git has the following advantages over Team Server SVN:
 * You can use modern third-party Git tooling for advanced version control cases like handling file changes.
 
 ## 5 Retrieve and Commit + Push Actions Are Getting Slower
-This may be caused by the way the Git storage format interacts with the Mendix model storage changes, which can accumulate substantial disk space over time. 
+
+This may be caused by the way the storage format of Git interacts with the way the Mendix Model stores changes, which can accumulate substantial disk space over time. 
 
 You can run `git gc` in the command line to mitigate this. `git gc` runs a number of housekeeping tasks, but primarily pack files are created. Pack files store just the changes to the files, which reduces the amount of data which needs to be stored. 
 
@@ -52,6 +53,7 @@ We already do these housekeeping operations automatically on the Team Server, so
 
 
 ## 6 Can I Keep Using the Subversion Version of the Team Server?
+
 Yes, as we are introducing Team Server Git, we will maintain support for Team Server SVN. As we improve our offering for Team Server Git, we will introduce options to migrate your apps to Team Server Git from Team Server SVN.
 Mendix  is focusing on improving Team Server Git support and migrating customers to Team Server Git.
 

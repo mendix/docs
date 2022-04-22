@@ -1,20 +1,20 @@
 ---
-title: "Monitoring Your Mendix Apps with Saas"
-linktitle: "Monitoring with Saas"
-url: /developerportal/operate/monitoring-with-saas/
+title: "Monitoring Your Mendix Apps with an APM Tool"
+linktitle: "Monitoring with APM"
+url: /developerportal/operate/monitoring-with-apm/
 weight: 30
-description: "How to use a Saas solution to monitor your Mendix Cloud v4 app."
-tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis", "Saas", "AppDynamics"]
+description: "How to use an APM (Application Performance Monitoring) tool to monitor your Mendix Cloud v4 app."
+tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis", "Saas", "AppDynamics", "APM"]
 ---
 
 ## 1 Introduction
 
-There are a number of monitoring and analysis tools for cloud applications which are available through a Software-as-a-service-based (Saas-based) data analytics platform. They provide comprehensive monitoring of servers, databases, tools, and services.
+There are a number of application performance monitoring (APM) tools for cloud applications which are available through a Software-as-a-service-based (Saas-based) data analytics platform. They provide comprehensive monitoring of servers, databases, tools, and services.
 
 Mendix provides out-of-the-box configuration to use Datadog and AppDynamics to provide additional monitoring for your Mendix Apps running on the Mendix Cloud.
 
 {{% alert color="info" %}}
-Monitoring using a Saas solution is only available to apps running on Mendix Cloud v4.
+Monitoring using an APM tool is only available to apps running on Mendix Cloud v4.
 
 [AppDynamics](https://www.appdynamics.com/) application monitoring is fully supported in Mendix version 9.7 and above. For older supported versions, only the basic AppDynamics Java Agent metrics are available, along with the `postgresql` and `mx.client` namespaces. 
 
@@ -23,7 +23,7 @@ Monitoring using a Saas solution is only available to apps running on Mendix Clo
 
 This document explains what information can be provided to a Saas-based data analytics platform.
 
-For details on how to add a specific Saas monitoring solution to your app, see one of the following documents:
+For details on how to add a specific APM tool to your app, see one of the following documents:
 
 * [AppDynamics for the Mendix Cloud](/developerportal/operate/appdynamics-metrics/)
 * [Datadog for the Mendix Cloud](/developerportal/operate/datadog-metrics/)
@@ -31,7 +31,7 @@ For details on how to add a specific Saas monitoring solution to your app, see o
 A summary of the useful metrics provided by Mendix is in the section [Summary of Mendix Metrics](#summary), below.
 
 {{% alert color="warning" %}}
-Monitoring using a Saas is not supported in the deprecated Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
+Monitoring using an APM tool is not supported in the deprecated Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
 {{% /alert %}}
 
 ## 2 What Information Can Mendix Supply to a Saas-based Data Analytics Platform?

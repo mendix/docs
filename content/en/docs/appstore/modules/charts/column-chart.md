@@ -95,32 +95,6 @@ This setting controls chart format. In group format, columns go one after anothe
 
 
 
-## Dimensions
-
-### Width unit
-
-Width unit controls type of unit for measuring widget with. Could be **percentage** or **pixels**.
-
-### Width
-
-This property controls width of the widget.
-
-
-
-### Height unit
-
-Hight unit controls type of unit for measuring widget height. Possible values are:
-
-- **Percentage of width** — height is measuring relative to widget width (use this mode when you need to keep width and height in aspect ratio).
-- **Pixels** — use pixels as height unit (good option for most cases).
-- **Percentage of parent** — height is measuring relative to parent **height** property (only works when parent have **height** CSS property).
-
-
-
-### Height
-
-This property controls height of the widget.
-
 ## Advanced
 
 ### Enable theme folder config

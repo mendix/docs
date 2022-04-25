@@ -34,17 +34,19 @@ The Email Connector includes the following features:
 
 Before you use the Email Connector, do the following:
 
-1. Add the following widgets to your app:
-     * HTMLSnippet
-     * FileDocumentViewer
-     * FormatString
-     * RichText
-2. Download and configure the [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module from the Mendix Marketplace.
-3. Following the steps in the [Configuration](/appstore/modules/model-reflection/#configuration) section of the *Mx Model Reflection* page.
+1. Download and configure the [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module from the Mendix Marketplace.
+2. Following the steps in the [Configuration](/appstore/modules/model-reflection/#configuration) section of the *Mx Model Reflection* page.
 
 {{% alert color="warning" %}}
-The Email Connector will not work correctly if the **Mx Model Reflection** module is not configured.
+Certain functionalities of the Email Connector will not work correctly if the **Mx Model Reflection** module is not configured.
 {{% /alert %}}
+
+### 1.3 Included Widgets
+
+The following widgets are bundled in the module:
+* [HTML/JavaScript Snippet](/appstore/widgets/html-javascript-snippet/)
+* [Format String](/appstore/widgets/format-string/)
+* [Rich Text](/appstore/widgets/rich-text/)
 
 ## 2 Setup in Studio Pro
 
@@ -53,7 +55,7 @@ After you install the module, configure the following in Studio Pro:
 1. Provide a value for the **EncryptionKey** constant available under **USE_ME** folder. 
 2. Launch the UI by referring to the Snippet in the **USE_ME** folder, or use the **EmailConnector_OverviewPage** microflow from the same folder.
 
-## 3 Configure Email Accounts
+## 3 Email Account Configuration
 
 Once you run your Studio Pro app, you can start configuring your email accounts.
 
@@ -86,10 +88,10 @@ This is only supported for IMAP protocols, and some servers may not support it a
 {{% /alert %}}
 
 * **Sanitize email to prevent XSS attacks** – option to enable the removal of malicious scripts to prevent XSS attacks. This option is unselected by default. To learn more about this option, see [Sanitize untrusted HTML (to prevent XSS)](https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer).
-* **Replicate everything in 'X' folder** – 
-     * When this setting is not selected, the connector will fetch the number of emails mentioned in `Number of emails to retrieve from server` configuration based on the selected `Fetch strategy`
-     * When this setting is selected, checked then module will fetch all the emails (in order of oldest to newest) from that folder in batch size as mentioned in `Email Batch Size` configuration
-* **Timeout** – the connection timeout for send email/receive emails operations. This can be set in the `Email Account` object.
+* **Replicate everything in 'X' folder** – option to fetch emails
+     * When this setting is not selected, the connector will fetch the number of emails mentioned in the **Number of emails to retrieve from server** configuration based on the selected **Fetch strategy**
+     * When this setting is selected, checked then module will fetch all the emails (in order of oldest to newest) from that folder in batch size as mentioned in **Email Batch Size** configuration
+* **Timeout** – the connection timeout for send email/receive emails operations. This can be set in the **Email Account** object.
 
 ## 4 Usage
 
@@ -99,7 +101,7 @@ Once you have set up an account, you can use it in microflow activities to send 
 
 When the module is running, click **New** to compose and send new emails.
 
-When modeling your app in Studio Pro, use the **SendEmail** java action to send emails. The input parameters are the following:
+When modeling your app in Studio Pro, use the **SendEmail** Java action to send emails. The input parameters are the following:
 
 * **Email Account** Email account consisting of incoming email configuration and/or outgoing email configuration.
 * **Email Message** Email Message object to be sent
@@ -112,13 +114,19 @@ The **To**, **Subject**, and **Email Content** fields are mandatory.
 
 Click **Refresh** to receive emails. Emails will be fetched and processed by server as configured in the email account.
 
-When modeling your app in Studio Pro, use **RetrieveEmailMessages** java action. Once this java action is called at background emails will be fetched over multiple java threads and would be returned back to user in async manner. Email fetching will continue till the conditions defined in the email account settings at the Mendix side (like fetch Latest 1000 emails etc)
+When modeling your app in Studio Pro, use **RetrieveEmailMessages** Java action. Once this Java action is called at background emails will be fetched over multiple Java threads and would be returned back to user in async manner. Email fetching will continue till the conditions defined in the email account settings at the Mendix side (like fetch Latest 1000 emails etc)
 
-* Parameter
-    1. **EmailAccount** * Email account consisting of incoming email configuration and/or outgoing email configuration.
-    2. **onEmailFetchMicroflow** * a Microflow that will be triggered when **List of EmailMessage**  is fetched successfully from the email server. You can process the list per your need. Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. Refer sample microflow **Sample_OCH_EmailFetchMicroflow**, while duplicating this microflow do not change input parameters’ name and data type. 
-    3. **onFetchCompleteMicroflow** * a Microflow that will be triggered when the fetch is complete and there are no more emails for the particular java action call
-    4. **onFetchErrorMicroflow** * a Microflow that will be triggered in case of any error during the fetch from email server operation
+The input parameters for receiving email are the following: 
+
+* **EmailAccount** – email account consisting of incoming email configuration and/or outgoing email configuration
+* **onEmailFetchMicroflow** – a microflow that will be triggered when **List of EmailMessage**  is fetched successfully from the email server. You can process the list per your need. Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. Refer to the sample microflow, **Sample_OCH_EmailFetchMicroflow**
+
+{{% alert color="warning" %}}
+When duplicating this microflow, do not change input parameters’ name and data type.
+{{% /alert %}}
+
+* **onFetchCompleteMicroflow** – a microflow that will be triggered when the fetch is complete and there are no more emails for the particular Java action call
+* ***onFetchErrorMicroflow** – a microflow that will be triggered if there are errors during the fetch from email server operation
 
 ### 4.3 Using Email Templates
 
@@ -128,14 +136,13 @@ In Studio Pro, you can configure this with the **SNIP_EmailTemplate_Overview** u
 
 #### 4.3.1 Sending an email with a template
 
-When modeling your app in Studio Pro, use the  **SendEmailWithTemplate** java action.
+When modeling your app in Studio Pro, use the  **SendEmailWithTemplate** Java action.
 
-* Parameter
-    * **Data Object** * Entity object from which you want to extract the placeholder tokens
-    * **Email account** * Email account consisting of incoming email configuration and/or outgoing email configuration.
-    * **Email template** * Email Message object to be sent
-    * **Queued** * If true email message will be stored in the **EmailMessage** entity with status as **QUEUED** queued and user can sent it later using scheduled event or future.  
-
+The input parameters are the following:
+* **Data Object** – entity object from which you want to extract the placeholder tokens
+* **Email account** – email account consisting of incoming email configuration and/or outgoing email configuration
+* **Email template** – email message object to be sent
+* **Queued** – when *true*, email message will be stored in the **EmailMessage** entity with status as **QUEUED** queued and user can sent it later using scheduled event or future
 
 ### 4.4 Signed and Encrypted Emails
 
@@ -155,44 +162,48 @@ Digitally signed emails support only PKCS#12 certificates.
 
 Encryption for emails using the Email Connector module includes the following:
 
-    * Supports LDAP servers for sending encrypted emails
-    * Supports `Simple` and `No` (annonymous) authentication method
-    * Supports SSL/TLS and non-SSL connection type
-    * While encrypting email recipients certificate will be searched on `Base DN` 
+* Supports LDAP servers for sending encrypted emails
+* Supports **Simple** and **No** (anonymous) authentication method
+* Supports SSL/TLS and non-SSL connection types
+* While encrypting email, the recipient's certificate will be searched for on the Base DN
 
 {{< figure src="/attachments/appstore/connectors/email-connector/email-encryption.png" >}}
 
 ### 4.5 Subscribing to Incoming Email
 
-To subscribe to incoming email from an account, call the **SubscribeToIncomingEmail** Java action.
+When modeling your app in Studio Pro, call the **SubscribeToIncomingEmail** Java action to subscribe to incoming email from an account.
 
-* Parameter
-    1. `account` * Email account consisting of incoming email configuration and/or outgoing email configuration.
-    2. `onNewEmailReceivedMicroflow` * a Microflow that will be triggered when new email (List) is received from the server, You can process the list per your need. Make sure you have list of `Email_Connector.EmailMessage` as a parameter to this microflow. Refer sample microflow `Sample_OCH_EmailFetchMicroflow`, while duplicating this microflow do not change input parameters’ name and data type.
-    3. `onSubscriptionStateChangedMicroflow` * a Microflow that will be triggered when subscription state is changed state can any of the following:
-        * SUBSCRIPTIONFAILED
-        * CONNECTIONTOSERVERLOST
-        * CONNECTIONRETRYEXHAUSTED
-        Make sure that microflow is accepting the string parameters `State` and `Comment`. Refer sample microflow `Sample_OCH_SubscriptionStateChanged`, while duplicating this microflow do not change input parameters’ name and data type.
-* Return type
-    `Nothing`
+The input parameters are the following:
 
-Note: It is recommended that, before subscribing to incoming email one should attempt for unsubscribe from incoming email so that application will not end up having duplicate subscription for a single email account. The complete flow of subscription is shown in the microflow `ACT_SubscribeForEmailNotification` 
+* **Email account** – email account consisting of incoming email configuration and/or outgoing email configuration.
+* **onNewEmailReceivedMicroflow** – a microflow that will be triggered when new email (List) is received from the server, You can process the list per your need. Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. Refer to the sample microflow **Sample_OCH_EmailFetchMicroflow**
+
+{{% alert color="warning" %}}
+When duplicating this microflow, do not change input parameters’ name and data type.
+{{% /alert %}}
+
+* **onSubscriptionStateChangedMicroflow** – a microflow that will be triggered when subscription state is changed state can any of the following:
+     * SUBSCRIPTIONFAILED
+     * CONNECTIONTOSERVERLOST
+     * CONNECTIONRETRYEXHAUSTED
+     Make sure that microflow is accepting the string parameters `State` and `Comment`. Refer sample microflow `Sample_OCH_SubscriptionStateChanged`,
+     {{% alert color="warning" %}}
+     When duplicating this microflow, do not change input parameters’ name and data type.
+    {{% /alert %}}
+
+{{% alert color="info" %}}
+Before subscribing to incoming email, it is recommended to attempt to unsubscribe from incoming email so that application will not end up having duplicate subscription for a single email account. The complete flow of subscription is shown in the microflow **ACT_SubscribeForEmailNotification**.
+{{% /alert %}}
 
 ### 4.6 Unsubscribing from Incoming Email
 
-java action to `UnsubscribeFromIncomingEmail` when used with account parameter user(for the provided account) will be unsubscribed from incoming email subscription.
+When modeling your app in Studio Pro, use the **UnsubscribeFromIncomingEmail** Java action. When used with account parameter, the user (for the provided account) will be unsubscribed from incoming email.
 
-* Parameter
-    `account` * Email account consisting of incoming email configuration and/or outgoing email configuration.
+The input paramater includes the following:
 
+* **Email account** – email account consisting of incoming email configuration and/or outgoing email configuration
 
 ## 5 Key Microflows
 
-* Sample_ACT_SendEmailWithTemplate
-
-This microflow will help you to set up send email using the template
-
-* EmailConnector_OverviewPage
-
-In case of protected add-on module due to limitations we are not able to `Set export level to Usable` to circumvent this limitation we have used microflow to open the page and have set export level to usable.
+* **Sample_ACT_SendEmailWithTemplate** – a microflow that helps you set up send email using the template
+* **EmailConnector_OverviewPage** – if unable to **Set export level to Usable** because of a protected add-on module because of limitations, use this microflow to open the page and have set export level to usable

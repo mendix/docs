@@ -21,7 +21,7 @@ Translating your app to other languages is available in Mendix Studio if multipl
 
 You can switch the selected language in the top menu bar:
 
-![Switching Languages](attachments/language-support/selected-language.png)
+{{< figure src="/attachments/studio/general/language-support/selected-language.png" >}}
 
 ## 3 Translating Texts
 
@@ -42,12 +42,12 @@ When working in a language which is not the default, you can identify texts that
 
 2. Depending on the element, find the **Content**, **Caption**, or **Template** property and click the **Translations** drop-down menu:
 
-    ![Translations Drop-Down Menu](attachments/language-support/translations-drop-down.png)
+    {{< figure src="/attachments/studio/general/language-support/translations-drop-down.png" >}}
 
 3. You will see a drop-down menu where you can scroll through languages available in your app and type in translations for the text. The order you see languages in depends on the currently selected language in the top menu bar and to the default language:
 
-    ![](attachments/language-support/language-diagram.png)
-
+    {{< figure src="/attachments/studio/general/language-support/language-diagram.png" >}}
+        
 If you edit your app to add new widgets while not in the default language, any new translatable texts for those widgets will be added to the current language. The text in the default language will either be left blank or will have the placeholder text for the widget.
 
 ## 4 Read More

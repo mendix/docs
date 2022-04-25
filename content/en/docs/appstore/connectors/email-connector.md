@@ -48,16 +48,18 @@ The following widgets are bundled in the module:
 * [Format String](/appstore/widgets/format-string/)
 * [Rich Text](/appstore/widgets/rich-text/)
 
-## 2 Setup in Studio Pro
+## 2 Setup in Studio Pro {#setup}
 
 After you install the module, configure the following in Studio Pro:
 
-1. Provide a value for the **EncryptionKey** constant available under **USE_ME** folder. 
+1. Provide a value for the **EncryptionKey** constant available under **USE_ME** folder for password storage.
 2. Launch the UI by referring to the Snippet in the **USE_ME** folder, or use the **EmailConnector_OverviewPage** microflow from the same folder.
 
-## 3 Email Account Configuration
 
-Once you run your Studio Pro app, you can start configuring your email accounts.
+
+## 3 Email Account Configuration {#accountconfig}
+
+Once you run your Studio Pro app, you can start configuring your email accounts in the Email Connector UI.
 
 ### 3.1 Adding Email Account
 
@@ -202,6 +204,14 @@ When modeling your app in Studio Pro, use the **UnsubscribeFromIncomingEmail** J
 The input paramater includes the following:
 
 * **Email account** – email account consisting of incoming email configuration and/or outgoing email configuration
+
+### 4.6 Creating a Account Using Custom Encryption
+
+In most cases, following the steps in the [Setup in Studio Pro](#setup) and [Email Account Configuration](#accountconfig) sections above are sufficient. You might prefer to use custom encryption for storing the email account password, instead of using the [Encryption](/appstore/modules/encryption/) module or storing the password as plain text.
+
+When modelling your app in Studio Pro, use the [Create Object](/refguide/create-object/) activity to create the account, and then include the **Encrypt** Java action included in the Email Connector. The **Encrypt** Java action takes a *plain string* parameter and an *encryption key* of 32 characters. 
+
+If you do not encrypt the password, all functions will still work as expected.
 
 ## 5 Key Microflows
 

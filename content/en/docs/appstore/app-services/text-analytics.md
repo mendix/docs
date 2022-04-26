@@ -200,7 +200,7 @@ The **TokenEndpoint** constant provides a valid endpoint of security token servi
 
 #### 3.3.1 CreateDominantLanguageDetector
 
-The **CreateDominantLanguageDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create DominantLanguageDetector as a return object from the back-end service.
+The **CreateDominantLanguageDetector** microflow takes **text** (String) as input parameters to create DominantLanguageDetector as a return object from the back-end service.
 
 {{< figure src="/attachments/appstore/app-services/text-analytics/createdominantlanguagedetector.png" alt="createdominantlanguagedetector" >}}
 
@@ -404,7 +404,7 @@ If you deploy your app in your own environment, you need to configure the licens
 
 ## 4 Usage
 
-### 4.1 Performing Language Detection in Your Browser
+### 4.1 Performing Dominant Language Detection in Your Browser
 
 Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLanguage** nanoflow to perform language detection. Follow these steps to configure the language detection:
 
@@ -415,7 +415,7 @@ Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLan
 
         {{< figure src="/attachments/appstore/app-services/text-analytics/call-createdominantlanguagedetector-microflow.png" alt="call-createdominantlanguagedetector-microflow" >}}
 
-   4.  Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
+   4.  Right-click the microflow activity you just added and select **Set $detector as return value** in the pop-up menu.
 
        {{< figure src="/attachments/appstore/app-services/text-analytics/createdominantlanguagedetector-nanoflow.png" alt="createdominantlanguagedetector-nanoflow" >}}
 

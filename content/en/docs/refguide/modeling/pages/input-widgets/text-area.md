@@ -68,9 +68,8 @@ The On Change Behaviour property lets users select how **on change** is handled 
 
 ##### 2.5.2.1 When user leaves input field (Default)
 
-This option will work as in previous versions of Studio Pro. Text Area will apply changes when a value is not the same as previously saved value in the database and one of the following conditions is met:
+Text Area will apply changes when a value is not the same as previously saved value in the database and one of the following condition is met:
 
-* On enter key pressed: This will trigger on change and on enter key press events
 * Blurred: This will trigger on change and on leave events
 
 This means that there is no way for users to trigger an on change event while typing. That use case requires the second option: **While user is entering data**.

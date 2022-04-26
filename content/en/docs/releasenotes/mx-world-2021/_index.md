@@ -53,7 +53,6 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | --- | --- |
 | Platform user onboarding experience | Released for GA on [Oct 1st, 2021](/releasenotes/developer-portal/#oct1) |
 | Dashboards with insights on platform employees and app activity | Released for GA in April 2022 |
-| Marketplace subscription dashboards | GA: Mar 2022 |
 | Overview of cloud environments | Currently in Public Beta<br/>GA: Jun 2022 |
 | Self-service subscription management | GA: Jul 2022 |
 

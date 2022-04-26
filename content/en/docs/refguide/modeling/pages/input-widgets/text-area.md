@@ -129,6 +129,11 @@ The autocomplete property specifies if a text area should have autocomplete enab
 {{% alert color="info" %}}This option is only available in native pages.{{% /alert %}}
 {{% alert color="info" %}}In Android when autocomplete is turned off it will remove support for new lines.{{% /alert %}}
 
+#### 2.8.5 AutoFocus
+
+If `true`,  the TextArea will be rendered focused and the device keyboard is opened.
+{{% alert color="info" %}}This option is only available in native pages.{{% /alert %}}
+
 ### 2.7 Label Section{#label}
 
 {{% snippet file="/static/_includes/refguide/label-section-link.md" %}}

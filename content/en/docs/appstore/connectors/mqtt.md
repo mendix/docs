@@ -27,9 +27,15 @@ The MQTT Connector allows you to publish to, subscribe to, and unsubscribe from 
 
 ### 2.1 Broker 
 
-Configure your broker connection information using the **ConnectionAdministration** page. The **Connection Name**, **Broker host**, and **Broker port** fields point to the MQTT broker. This data is stored in the domain model.
+Configure your broker connection information using the **ConnectionAdministration** page. The **Connection Name**, **Broker host**, and **Broker port** fields point to the MQTT broker. If MQTT broker needs basic authentication for connection, then user name and password is also can be set as explained in 2.1.1.  This data is stored in the domain model.
 
-#### 2.1.1 Enabling SSL
+#### 2.1.1 Authentication
+
+If a MQTT broker needs username and password for connection then one can set credentials in **ConnectionAdministration** page. In that case `Authentication method` should be set to `BASIC` and set value for `UserName` and `Password`. 
+
+Setting `Authentication method` to `NONE` indicates that authentication is not required to connect to MQTT broker. 
+
+#### 2.1.2 Enabling SSL
 
 Enabling SSL will establish a secure connection to the broker. To input your SSL certificates, follow these steps:
 

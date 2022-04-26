@@ -16,7 +16,7 @@ The Data Hub Catalog collects metadata from exposed services and currently suppo
 
 ## 2 Expose OData via a Mendix App {#use-mendix-app}
 
-To expose OData via a Mendix app, replicate and save your persistent entity data in a module. In this module, expose the persistent entities as published OData services. This will allow read-only access to the external entity data within the Mendix landscape. For more information, see [Published OData Services](/refguide/published-odata-services/). 
+To expose OData via a Mendix app, replicate and save your persistent entity data in a module. In this module, expose the persistent entities as published OData services. This will allow read-only access to the external entity data within the Mendix landscape. For more information, see [Published OData Services](/refguide/published-odata-services/) and [Building Connectors](/appstore/creating-content/connector-guide-build/).
 
 An example of this approach is the [SalesForce Connector](https://marketplace.mendix.com/link/component/111393) module – it converts the SalesForce Rest API into an OData service to be used in Mendix Data Hub.
 

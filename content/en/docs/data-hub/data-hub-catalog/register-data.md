@@ -16,7 +16,7 @@ aliases:
 
 There are three ways to register exposed OData services in the Data Hub Catalog. We support all OData versions.
 
-**This how-to will teach you how to register a service:**
+**This how-to will teach you how to register a service in the following ways:**
 
 * [Through the Mendix Cloud](#mendix-cloud)
 * [Through the Data Hub Catalog Registration API](#registration-api)
@@ -34,7 +34,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 ## 3 Registering a Service Through the Mendix Cloud {#mendix-cloud}
 
 
-If you have an exposed OData service, that is deployed to the Mendix Cloud, then congratulations! Your service is already registered in the Data Hub Catalog.
+If you have an exposed OData service that is deployed to the Mendix Cloud, then congratulations! Your service is already registered in the Data Hub Catalog.
 
 ## 4 Registering a Service Without the Mendix Cloud {#without-mendix-cloud}
 
@@ -47,7 +47,7 @@ The Data Hub Catalog collects metadata about the application and environment whe
 
 ### 4.1 Registering a Service Through the Data Hub Catalog Registration API {#registration-api}
 
-Calling the Data Hub Catalog Registration APIs allows you to register one (or several at a time) exposed OData service(s). 
+Calling the Data Hub Catalog Registration APIs allows you to register one or more exposed OData service(s). 
 
 First, you need to create an authentication token to get access to the Data Hub Catalog APIs. The Data Hub Catalog Registration API requires authentication through a Personal Access Token. For every API request you make to a Data Hub Catalog API, include the following key-value pair with your headers:
 

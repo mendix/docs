@@ -88,41 +88,43 @@ A trial gives everyone in your company one-month access to the app service. The 
 
 #### 3.1.1 BotContext
 
-The **BotContext** is Context entity which captures all input and output info for Chatbot widget, the context is uniquely identified via its Name attribute.
+{{% todo %}}Check the description{{% /todo %}}
+
+The **BotContext** is Context entity which captures all input and output info for the Chatbot widget. The context is uniquely identified via its Name attribute.
 
 ![botcontext](attachments/chatbot/botcontext.png)
 
 | Attribute        | Data Type | Description|
 | ---------------- | ---- | -----------|
-| `Uid`   | String | The Unique identifier of the bot context.     |
+| `Uid`   | String | The unique identifier of the bot context.  |
 | `LocaleId` | Enumeration | The enumeration to gets or sets the bot locale. |
 
 #### 3.1.2 BotConfig
 
-The **BotConfig** is the read only entity that shows the context of a bot which performs automated tasks such as ordering a pizza, booking a hotel, ordering flowers, and so on.
+The **BotConfig** is a read-only entity that shows the context of a bot which performs automated tasks such as ordering a pizza, booking a hotel, ordering flowers, and so on.
 
 ![botconfig](attachments/chatbot/botconfig.png)
 
 | Attribute        | Data Type | Description|
 | ---------------- | ---- | -----------|
-| `Name`   | String | The name of the bot.   |
+| `Name`   | String | The name of the bot.  |
 | `Status` | Enumeration | The status of the bot. |
-| `Tag`    | String | The underlying cloud identifier, internal use only.   |
-| `Hash`   | String | The hash string to identify if bot config has modified.     |
+| `Tag`    | String | The underlying cloud identifier, internal use only. |
+| `Hash`   | String | The hash string to identify if bot config has modified.    |
 
 #### 3.1.3 LanguageConfig
 
-The **LanguageConfig** is the read only entity that shows the language config of bot.
+The **LanguageConfig** is a read-only entity that shows the language config of bot.
 
 ![languageconfig](attachments/chatbot/languageconfig.png)
 
 | Attribute        | Data Type | Description|
 | ---------------- | ---- | -----------|
-| `LocaleId`   | Enumeration | The identifier of the language and locale where this intent is used. All of the bots, slot types, and slots used by the intent must have the same locale.     |
+| `LocaleId`   | Enumeration | The identifier of the language and locale where this intent is used. All of the bots, slot types, and slots used by the intent must have the same locale.   |
 | `VoiceId` | String | The UUID of the voice object. |
 | `Status` | Enumeration | The status of the bot. |
-| `Tag`    | String | The underlying cloud identifier, internal use only.   |
-| `Hash`   | String | The hash string to identify if bot config has modified.     |
+| `Tag`    | String | The underlying cloud identifier, internal use only.  |
+| `Hash`   | String | The hash string to identify if bot config has modified.    |
 
 #### 3.1.4 SlotArgument
 
@@ -132,7 +134,7 @@ The **SlotArgument** is the entity that captures the user input value of slots f
 
 | Attribute        | Data Type | Description|
 | ---------------- | ---- | -----------|
-| `Name`   | String | The name of the slot.     |
+| `Name`   | String | The name of the slot.    |
 | `Value` | String | The value of slot. |
 
 #### 3.1.5 TestBotContext
@@ -143,7 +145,7 @@ The **TestBotContext** is the entity that shows config of the test bot context.
 
 | Attribute        | Data Type | Description|
 | ---------------- | ---- | -----------|
-| `IsReady`   | Boolean | The ready status of the test bot.     |
+| `IsReady`   | Boolean | Whether the test bot is ready. |
 
 #### 3.1.6 ClientConfig
 
@@ -153,7 +155,7 @@ The **ClientConfig** is the entity that shows the user data configurations.
 
 | Attribute        | Data Type | Description|
 | ---------------- | ---- | -----------|
-| `BotName`   | String | The name of the bot.     |
+| `BotName`   | String | The name of the bot.    |
 | `SelectedLanguageLocale` | Enumeration | The selected language locale of target bot. |
 
 
@@ -177,13 +179,15 @@ The **StartService** microflow is a Java action which starts the Chatbot service
 
 #### 3.3.2 GetSlotArgument {#getslotargument}
 
-The **GetSlotArgument** microflow takes **botContext** object and **slotName** as input parameters to extract slot argument from provided **botContext**.
+The **GetSlotArgument** microflow takes **botContext** object and **slotName** as the input parameters to extract the slot argument from provided **botContext**.
 
 ![getslotargument](attachments/chatbot/getslotargument.png)
 
 ### 3.4 Java actions {#java-actions}
 
 #### 3.4.1 CreateBotContext {#createbotcontext}
+
+{{% todo %}}Check the description{{% /todo %}}
 
 The **CreateBotContext** Java action takes entityType and botName as input parameters, it creates bot and its associated context given the bot name and bot description, you could pass microflow to initialize the context. 
 
@@ -299,8 +303,8 @@ The **AddLanguageMethod** is an enumeration that incorporates all the options to
 The core widget required is the **Chatbot** widget. You can make the following settings for the **Chatbot** widget:
 
 * **Context** tab
-  * **Intents** – Intent is chatbot jargon for the motive of a given chatbot user. It’s the intention behind each message that the chatbot receives. Intent is all about what the user wants to get out of the interaction. For example, a user says, ‘I need new shoes.’
-     * **Intent actions** – The action lists of user intent.
+  * **Intents** – the intention behind each message that the chatbot receive, namely, what the user wants to get out of the interaction, for example, a user says, ‘I need new shoes.’
+     * **Intent actions** – the action lists of user intent
          * **Dialog action** – Action is executed at every turn of the conversations. You can use this function to initialize values or validate user input.
          * **Fulfillment action** – The action is invoked after slot elicitation and confirmation. Use this action to fullfill your intent.
          * **Name** – the name of intent.
@@ -321,13 +325,13 @@ The core widget required is the **Chatbot** widget. You can make the following s
      * **Is ready** – A flag indicating if the current bot is ready for conversing.
      * **Action** – Action triggered when bot is ready
 
-<!-- #### 3.5.2 InputElement {#inputelement}
+#### 3.5.2 InputElement {#inputelement}
 
 The core widget required is the **InputElement** widget. You can make the following settings for the **InputElement** widget:
 
 * **General** tab
 	* **Source**  – the value of the **Audio** attribute of a **speechSynthesizer** object
-	* **Controls**  – determines if it offers controls to allow the end user to control audio playback, including volume, seeking, and pause/resume playback; this accepts a Boolean value -->
+	* **Controls**  – determines if it offers controls to allow the end user to control audio playback, including volume, seeking, and pause/resume playback; this accepts a Boolean value
 
 ### 3.6 Configuring the LicenseToken {#configure-license-token}
 
@@ -368,7 +372,7 @@ It can be useful to run the Chatbot service automatically when your app starts. 
 3. Select the **StartService** microflow from the **Chatbot** > **USE_ME** folder.
 4. Set **After startup** to the microflow that calls the **StartService** microflow.
 
-### 4.2 Configure Chatbot design time in Your Browser {#configure-chatbot-design-time}
+### 4.2 Configure Chatbot Design Time in Your Browser {#configure-chatbot-design-time}
 
 You can use provided **ChatbotConsole** page in module to design bot context. To let the **ChatbotConsole** page works, you need to take few steps as following.
 
@@ -379,7 +383,7 @@ You can use provided **ChatbotConsole** page in module to design bot context. To
 5. Make sure that you have [configured the license token](#configure-license-token).
 6. Run your app locally. Navigate to chatbot console page and you will be guided into next phase.
 
-### 4.3 Design Chatbot context in Your Browser {#design-chatbot-context}
+### 4.3 Design Chatbot Context in Your Browser {#design-chatbot-context}
 
 1. Go to the chatbot console page in your browser as Administrator.
 2. Start design your own chatbot by clicking **Create bot** button in Chatbot console page.

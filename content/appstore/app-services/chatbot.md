@@ -1,13 +1,15 @@
 ---
 title: "Chatbot"
 category: "App Services"
-description: " "
+description: "Describes the configuration and usage of the Chatbot app service, which is available in the Mendix Marketplace. "
 tags: ["chatbot", "service", "app store", "marketplace", "component", "platform support"]
 ---
 
 ## 1 Introduction
 
-The [Chatbot](https://marketplace.mendix.com/link/component/118408) app service enables you to build a chat app with human-like conversations with users via text messages, which is fully managed artificial intelligence (AI) service with advanced natural language models to design, build, test, and deploy conversational interfaces.
+{{% todo %}} Add the component page link{{% /todo %}}
+
+The [Chatbot]() app service enables you to build a chatbot app that can make human-like conversations with users via text messages. This is a fully-managed artificial intelligence (AI) service that allows you to design, build, test, and deploy conversational interfaces with advanced natural language models.
 
 Here is an overview of what Chatbot contains:
 
@@ -24,16 +26,16 @@ In most cases, you will only need what is contained in the **Chatbot** > **USE_M
 
 ### 1.1 Typical Use Cases
 
-You can use this app service to build a chat app with human-like conversations with users via text messages. You can also customize these chatbot intent actions in your Mendix app.
+You can use this app service to build a chatbot app that can make human-like conversations with users via text messages. You can also customize these chatbot intent actions in your Mendix app.
 
 ### 1.2 Features
 
 This app service enables doing the following:
 
-* Create chatbot with human-like conversations with users via text messages in UI.
-* Support customize chatbot intent actions.
-* Easily add AI that understands intent, and automates actions across many languages.
-* Design and deploy omnichannel conversational AI in drag and drop.
+* Create a chatbot app to make human-like conversations with users via text messages in UI
+* Support customizing chatbot intent actions
+* Easily add AI that understands intent and automates actions across many languages
+* Design and deploy omnichannel conversational AI in drag and drop
 
 ### 1.3 Prerequisites
 
@@ -49,7 +51,9 @@ Chatbot is a premium Mendix product that is subject to a purchase and subscripti
 
 A trial gives everyone in your company one-month access to the app service. The trial has a limitation with [data usage](#check-usage) up to 300 minutes. To start a trial, perform the following steps:
 
-1. Go to the [Chatbot](https://marketplace.mendix.com/link/component/118408) page in the marketplace.
+{{% todo %}}Add the component page link{{% /todo %}}
+
+1. Go to the [Chatbot]() page in the marketplace.
 2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
 3. Select the check box to agree to the **Terms & Conditions**.
 4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
@@ -60,7 +64,9 @@ A trial gives everyone in your company one-month access to the app service. The 
 
 #### 2.1.2 Subscribing to the App Service
 
-1. Go to the [Chatbot](https://marketplace.mendix.com/link/component/118408) page in the marketplace.
+{{% todo %}}Add the component page link{{% /todo %}}
+
+1. Go to the [Chatbot]() page in the marketplace.
 2. Click **Subscribe** to start a subscription.
 3. Select your subscription plan.
 4. Fill in [Technical Contact](https://docs.mendix.com/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
@@ -69,27 +75,12 @@ A trial gives everyone in your company one-month access to the app service. The 
 7. Click **Chatbot** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
 8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
 
-### 2.2 Downloading the Component from the Marketplace
+### 2.2 Installing the Component in Your App
 
-1. Go to the [Chatbot](https://marketplace.mendix.com/link/component/118408) page in the marketplace.
-2. **Download** the *Chatbot.mpk* file.
-3.  To add the Chatbot app service to your app in Mendix Studio Pro, follow these steps:
+{{% todo %}}Add the component page link{{% /todo %}}
 
-    1.  In the **App Explorer**, right-click the app.
-    2.  Click **Import module package** and then select *Chatbot.mpk*.
-
-        In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
-
-        ![import-chatbot](attachments/chatbot/import-chatbot.png)
-
-        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
-
-   3.  In the **Import Module** dialog box, click **Import**. 
-   4.  Wait until a pop-up box states that the module was successfully imported. Click **OK**.
-   5.  Open the **App Explorer**  to view the **Chatbot** module. You can also find the app service in the **Cognitive AI widgets** category in the **Toolbox**.
-4. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
-
-You have successfully added the Chatbot resources to your app.
+1. To download and install the Chatbot app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **App Explorer** and also in the **Cognitive AI widgets** category in the **Toolbox**.
+2. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
 ## 3 Configuration
 

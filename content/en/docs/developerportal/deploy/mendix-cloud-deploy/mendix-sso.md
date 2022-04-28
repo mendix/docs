@@ -155,7 +155,7 @@ To enable Mendix SSO in your app, follow these steps:
 
         {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/module-user-roles.png" alt="Confirmation of user roles" >}}
 
-5. Change the page that Mendix uses to log you in (`login.html`) to allow logging in using SSO. To do this, perform the following steps::
+5. Change the page that Mendix uses to log you in (`login.html`) to allow logging in using SSO. To do this, perform the following steps:
 
     1. Go to **App** > **Show App Directory in Explorer** in Studio Pro to open the app directory in your file explorer.
     2. Go to the **theme** folder.

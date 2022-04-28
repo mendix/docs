@@ -77,7 +77,7 @@ To import module packages through the App Explorer in Studio Pro, follow these s
 
 5. Click **OK**. 
 
-A dialog informing about imported add-on module shows up.
+If you are importing a module with the *.mxmodule* extension, a dialog informing you about the imported add-on module will be displayed.
 {{< figure src="/attachments/howto/integration/importing-and-exporting-objects/mxmodule-notification.png" >}}
 
 You see a new or replaced module in the **App Explorer**. You also see your changes in the **Changes** section. In this example, the existing module has been deleted and replaced by the newly imported module:
@@ -98,7 +98,7 @@ If you would like to import an add-on module (the *.mxmodule* file) to your app,
 2. Add *.mxmodule* file to the **modules** folder (you need to create this folder if it is not there). 
 3. In Studio Pro, go to **App** > **Synchronize App Directory** on the menu bar.
 
-A dialog informing about imported add-on module shows up.
+A dialog informing you about the imported add-on module will be displayed.
 {{< figure src="/attachments/howto/integration/importing-and-exporting-objects/mxmodule-notification.png" >}}
 
 The add-on module is added to the **App Explorer**.

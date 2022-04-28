@@ -41,15 +41,21 @@ You can navigate through your app using the App Explorer, the window on the left
 
 {{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
 
-At the bottom of Studio Pro, you will find several panels:
+At the bottom of Studio Pro you will find several panels:
 
-* **Stories**: - displays your active user stories added on your App’s Stories page in the Developer Portal.
-* **Changes**: - displays a list of all changes in the project since the last commit to the team server (also used to resolve conflicts with other team members when updating).
-* **Errors**: - displays any errors found within your project. Can also display deprecations and Warnings.
-* **MxAssist Performance Bot**: - an AI peer programmer bot which analyzes your app's model and identifies any issues which may negatively impact your app’s performance.
-* **Console**: - a live feed of your app’s console as the app runs (you can filter for additional log levels by clicking on the **Advanced** drop-down list).
+* **Stories**: displays your active user stories added on your App’s Stories page in the Developer Portal
+* **Changes**: displays a list of all changes in the project since the last commit to the team server (also used to resolve conflicts with other team members when updating)
+* **Errors**: displays any errors found within your project. Can also display deprecations and Warnings
+* **MxAssist Performance Bot**: an AI peer programmer bot which analyzes your app's model and identifies any issues which may negatively impact your app’s performance
+* **Console**: a live feed of your app’s console as the app runs (you can filter for additional log levels by clicking on the **Advanced** drop-down list)
 
+On the right side of Studio Pro you will find more panels:
 
+* **Datahub**: displays remote entities (entities from other apps) which are available for use in your app
+* **Properties**: displays all the properties of the currently selected context element
+* **Toolbox**: a list of things you can add to the current document⁠—the **Toolbox** changes depending on context: it displays page elements while in the page editor or displays actions when editing a microflow or nanoflow
+* **Connector**: quickly links data to pages⁠—using the connector you could drag an entity onto a data view or data grid to quickly display your app’s data on a page
 
+The view you see above is completely editable. You can add or remove panels as desired (you can find more windows under **View** as well as reset your view back to default settings if you wish). You can also quickly hide all of Studio Pro's panels by enabling Distraction Free Mode with <kbd>Shift</kbd> + <kbd>F11</kbd>.
 
 ## 4 Creating Your App's Domain Model

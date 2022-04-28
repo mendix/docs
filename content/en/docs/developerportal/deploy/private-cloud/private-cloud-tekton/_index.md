@@ -93,121 +93,19 @@ These instructions install the Tekton Dashboard in the same namespace as the Tek
 
 You can read the official installation procedure on the [Tekton Dashboard](https://github.com/tektoncd/dashboard/#readme) GitHub repo.
 
-## 4 Preparation for Air-gapped Environments{#preparation}
+## 4 Air-gapped Environments
 
 {{% alert color="info" %}}
-If your cluster is not air-gapped and has access to the internet, you can skip this section and go straight to [Tekton Installation](#tekton-installation).
+If your cluster is air-gapped and does not have access to the internet, you will need to follow a different set of installation instructions. These can be found in [Air-gapped Installation of Tekton CI/CD for Mendix for Private Cloud](/developerportal/deploy/private-cloud-tekton-airgapped/)
+    
+When you have followed those instructions, you can continue with [Installing Triggers](#installing-triggers), below.
 {{% /alert %}}
 
-To install Tekton and your CI/CD Pipeline in air-gapped environment you need to provision a list of images in your registry. Mendix has created a tool, **aip**, to perform this on different operating systems. You will need to download it using one of the following links:
-
-* [Aip for Mac (amd64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.2-macos-amd64.tar.gz)
-* [Aip for Windows](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.2-windows-amd64.zip)
-* [Aip for Linux (amd64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.2-linux-amd64.tar.gz)
-
-{{% alert color="info" %}}
-The following steps in this section must be done in an environment which has internet access.
-{{% /alert %}}
-
-### 4.1 Tekton Images
-
-If you have not installed Tekton from this registry before, you will need to put all the Tekton images into your registry.
-
-Get the Tekton package:
-
-```bash
-mkdir tekton && cd tekton
-aip init https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/packages/tekton-package-v1.0.0.json
-aip pull
-```
-
-Get the yaml manifest for the Tekton installation:
-
-```bash
-curl https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.26.0/release.yaml -s > tekton.yaml
-curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.15.0/release.yaml -s > tekton-triggers.yaml
-curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.15.0/interceptors.yaml -s > interceptors.yaml
-```
-
-Then you need to transfer the `tekton` folder to the air-gapped environment with the aip tool:
-
-```bash
-# replace "myprivate.registry.com" with your registry
-aip set-base-destination myprivate.registry.com
-
-# get list of required repositories - these will need to be created before you can push to them
-cat state.json | jq '.images[].destination'
-```
-
-You will now need to create the repositories listed by the command above. The commands needed to do this depends on which registry you are using. Please see the documentation for your registry for information on how to create the repositories.
-
-{{% alert color="info" %}}
-Some registries cannot support complex repository addresses such as `my.registry.com/tekton-releases/github.com/tektoncd/pipeline/cmd/webhook:v0.26.0` and you may have to use a simpler format such as `my.registry.com/tekton/webhook:v0.26.0`. You will then need to update the `state.json` file (in your current directory) which is used by aip to push information to your repositories.
-
-You will need to update the `destination: ` value for each of the repositories as shown below:
-
-```json {linenos=table,hl_lines=[6],linenostart=22}
-…
-{
-	"name": "mxbuild8.18.11",
-	"address": "private-cloud.registry.mendix.com/mxbuild:8.18.11.27969",
-	"tarPath": "mxbuild8.18.11/mxbuild_8.18.11.27969.tar",
-	"destination": "127.0.0.1:5000/pipeline/mxbuild:8.18.11.27969"
-},
-…
-```
-{{% /alert %}}
-
-```bash
-# use your credentials here
-aip login -u user -p mypassword myprivate.registry.com
-aip push
-
-cd ..
-```
-
-### 4.2 Mendix Pipelines and Triggers for Tekton
-
-Get the pipeline package:
-
-```bash
-mkdir pipeline && cd pipeline
-aip init https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/packages/pipeline-package-v1.0.0.json
-aip pull
-```
-
-Add build and runtime images for a specific Mendix version, or for a range of versions:
-
-```bash
-# add one specific version (in this example 8.18.11.27969)
-aip addimage mxbuild8.18.11 private-cloud.registry.mendix.com/mxbuild:8.18.11.27969
-aip addimage runtime-base8.18.11 private-cloud.registry.mendix.com/runtime-base:8.18.11.27969-rhel
-
-# add multiple versions (in this example all patch versions of 8.18)
-aip addimagesquery private-cloud.registry.mendix.com/mxbuild '^8.18.*'
-aip addimagesquery private-cloud.registry.mendix.com/runtime-base '^8.18.*-rhel$'
-
-aip pull
-```
-
-Then you need to transfer the `pipeline` folder to the air-gapped environment with the aip tool:
-
-```bash
-# replace "myprivate.registry.com" with your registry
-aip set-base-destination myprivate.registry.com
-
-# use your credentials here
-aip login -u user -p mypassword myprivate.registry.com
-aip push
-```
-
-## 5 Tekton Installation{#tekton-installation}
+## 5 Tekton Installation for Connected Environments{#tekton-installation}
 
 If Tekton is already installed in your namespace, you can skip to [Pipelines Installation](#pipelines-installation).
 
-### 5.1 Installing on Kubernetes
-
-#### 5.1.1 With Access to the Internet
+### 5.1 Installing on Connected Kubernetes
 
 To install Tekton with Tekton Triggers you need to apply 3 yaml manifests:
 
@@ -217,22 +115,7 @@ kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers
 kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.15.0/interceptors.yaml
 ```
 
-#### 5.1.2 Air-gapped
-
-For an air-gapped environment, assuming you have [performed the preparation steps](#preparation), use the following commands:
-
-```bash
-cd ../tekton
-cat tekton.yaml | aip inject-manifest | kubectl apply -f -
-cat tekton-triggers.yaml | aip inject-manifest | kubectl apply -f -
-cat interceptors.yaml | aip inject-manifest | kubectl apply -f -
-```
-
-### 5.2 Installing on OpenShift
-
-Follow the instructions for either clusters with access to the internet or for air-gapped clusters, and then follow the instructions for updating OpenShift security.
-
-#### 5.2.1 With Access to the Internet
+### 5.2 Installing on Connected OpenShift
 
 To install Tekton and Tekton Triggers on OpenShift when your environment has access to the internet, use the following commands:
 
@@ -253,25 +136,6 @@ curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.15.0/in
 cd ..
 ```
 
-#### 5.2.2 Air-gapped
-
-For an air-gapped environment, assuming you have [performed the preparation steps](#preparation), use the following commands to install Tekton and Tekton triggers
-
-```bash
-# Tekton
-oc new-project tekton-pipelines
-oc adm policy add-scc-to-user anyuid -z tekton-pipelines-controller
-oc adm policy add-scc-to-user anyuid -z tekton-pipelines-webhook
-    
-cat tekton.yaml | aip inject-manifest | kubectl apply -f -
-
-# Tekton triggers 
-cat tekton-triggers.yaml | aip inject-manifest | kubectl apply -f -
-cat interceptors.yaml | aip inject-manifest | kubectl apply -f -
-```
-
-#### 5.2.3 Updating OpenShift Security
-
 For Tekton Triggers on OpenShift you need to update the deployment objects to make them compatible with OpenShift security. Perform the following steps:
 
 1. Edit the `tekton-triggers-controller` deployment.
@@ -286,26 +150,17 @@ For Tekton Triggers on OpenShift you need to update the deployment objects to ma
 7. Edit the `tekton-triggers-webhook` deployment.
 8. Change `runAsUser:` to a valid OpenShift user (like `1001000000`).
 
-## 6 Pipeline and Trigger Installation{#pipelines-installation}
+## 6 Pipeline Installation for Connected Environments{#pipelines-installation}
 
-Before you install the Mendix pipelines you need to do the following:
+Before you install the Mendix pipelines, which contain all Tekton-related objects, you need to do the following:
 
 1. Install [helm](https://helm.sh).
 2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines – you can download these from [Mendix for Private Cloud Standalone Tekton Pipelines](https://cdn.mendix.com/mendix-for-private-cloud/tekton-pipelines/standalone-cicd/standalone-cicd-v1.0.0.zip).
 
-There are two components which need to be configured:
-
-1. Pipelines – contains all Tekton related objects
-2. Triggers – provides HTTP services to trigger (run) pipelines
-
-### 6.1 Pipelines
-
 To install a pipeline you need to provide the url to your private images repository without a tag. For example: `my.private.registry.com/mxapp`. The images that the pipeline builds will be stored in this repository.  
 The namespace can be the same namespace where the  Mendix Operator runs, or you can create a new namespace.
 
-#### 6.1.1 With Access to the Internet
-
-The installation command for environments with access to the internet is:
+The installation command is:
 
 ```bash
 cd $PATH_TO_DOWNLOADED_FOLDERS && cd helm/charts
@@ -314,41 +169,27 @@ helm install -n $YOUR_NAMESPACE mx-tekton-pipeline ./pipeline/ \
   --set images.imagePushURL=$URL_TO_YOUR_REPO_WITHOUT_TAG
 ```
 
-#### 6.1.2 Air-gapped
+## 7 Installing Triggers{#installing-triggers}
 
-For air-gapped environments, you need to specify the images individually, as well as the private registry you set up in [Preparation for Air-gapped Environments](#preparation):
+{{% alert color="info" %}}
+Installing triggers is the same for both connected and air-gapped environments.
+{{% /alert %}}
 
-```bash
-cd $PATH_TO_DOWNLOADED_FOLDERS && cd helm/charts
-helm install -n $YOUR_NAMESPACE mx-tekton-pipeline ./pipeline/ \
-  -f ./pipeline/values.yaml \
-  --set images.imagePushURL=$URL_TO_YOUR_REPO_WITHOUT_TAG \
-  --set images.fetch=$PRIVATE_REGISTRY/mxpc-pipeline-tools:git-init-0.0.1 \
-  --set images.verExtraction=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
-  --set images.build=$PRIVATE_REGISTRY/mxbuild \
-  --set images.imageBuild=$PRIVATE_REGISTRY/mxpc-pipeline-tools:imagebuild-0.0.1 \
-  --set images.constantsAndEventsResolver=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
-  --set images.k8sPatch=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
-  --set images.createAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
-  --set images.deleteAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
-  --set images.configureAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 
-```
-
-### 6.2 Installing Triggers{#installing-triggers}
-
-Standard triggers are used to run pipelines like create-app-pipeline, configure-app-pipeline, and delete-app-pipeline to manage app environments.
+Standard triggers provide HTTP services to trigger (run) pipelines like create-app-pipeline, configure-app-pipeline, and delete-app-pipeline to manage app environments.
 
 There are also two options to build a Mendix app using either a generic or a GitLab webhook trigger.
 
+{{% alert color="info" %}}
 After installing the generic trigger or the GitLab webhook trigger you will have a service with a name like `el-mx-pipeline-listener-someUniqueName`. Make sure that you have access to that service (by creating an ingress or load balancer from a cloud provider, etc). This will provide the URL which you can use to activate the trigger. In the rest of this document, we will use `http://pipeline.trigger.yourdomain.com/` to refer to this trigger.
+{{% /alert %}}
 
-#### 6.2.1 Persistent Volume Claims (PVCs)
+### 7.1 Persistent Volume Claims (PVCs)
 
 By default, pipelines comes with a *5GB PVC* with an **empty *storageClassName***. You can create your own PVC by following [these instructions](https://tekton.dev/docs/getting-started/#persistent-volumes) in the Tekton documentation.
 
 To use your own PVC add `--set pvcName=$your-pvc-name` to each command during installation of the triggers.
 
-#### 6.2.2 Generic Trigger{#generic-trigger}
+### 7.2 Generic Trigger{#generic-trigger}
 
 A **Generic trigger** is a trigger that can be used as HTTP/curl request. All Mendix-related parameters will be specified in HTTP request body. 
 
@@ -368,7 +209,7 @@ helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
 | `pipelineName` | Name of the pipeline to trigger. `build-pipeline` is the default pipeline name from the pipeline chart |
 | `triggerType` | Supported types - `generic` (as used in this section) and `gitlabwebhook` (see next section) |
 
-#### 6.2.3 GitLab Webhook Trigger{#gitlab-webhook}
+### 7.3 GitLab Webhook Trigger{#gitlab-webhook}
 
 The **GitLab webhook trigger** triggers the build-pipeline pipeline in combination with GitLab. All Mendix environment related parameters are specified during trigger installation as you create one trigger per environment.
 
@@ -398,23 +239,23 @@ helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
 | `gitlabwebhook. scheduledEventsMode` | `manual` – throws an error if scheduled events listed in `myScheduledEvents` do not exist<br/>`auto` – removes scheduled events listed in `myScheduledEvents` if they do not exist |
 | `gitlabwebhook.constantsMode` | `manual` – throws an error if constants set by the operator side are different from those in the .mda file<br/>`auto` – adds or removes constants which are missing in the operator |
 
-### 6.3 Authentication
+## 8 Authentication
 
 This needs to be configured before you trigger any pipelines.
 
-#### 6.3.1 Git Access
+### 8.1 Git Access
 
 Your Tekton pipeline needs to have access to the git repository. To provide access, you need to use a `basic-auth` type `Secret`. To do this, follow the [instruction in the tektoncd GitHub repo](https://github.com/tektoncd/pipeline/blob/main/docs/auth.md#configuring-basic-auth-authentication-for-git) and link that secret to the `tekton-triggers-mx-sa` service account.
 
-#### 6.3.2 Registry Push Access
+### 8.2 Registry Push Access
 
 The Tekton pipeline requires access to the registry to push built images.
 
-##### 6.3.2.1 Private Registry
+#### 8.2.1 Private Registry
 
 If you have a private registry with authentication, you need to follow [these instructions](https://github.com/tektoncd/pipeline/blob/main/docs/auth.md#configuring-authentication-for-docker) to create a secret, and link the secret to the `tekton-triggers-mx-sa` service account.
 
-##### 6.3.2.2 OpenShift Registry
+#### 8.2.2 OpenShift Registry
 
 For OpenShift you need to provide an SSL certificate file for the registry and give the `system:image-builders` role to the `tekton-triggers-mx-sa` service account. Use the following commands replacing `$YOUR_NAMESPACE_WITH_PIPELINES` with the correct namespace name:
 
@@ -423,11 +264,11 @@ oc patch rolebindings system:image-builders -p '{"subjects":[{"name":"tekton-tri
 oc patch tasks build-push-image --type='json' --patch '[{"op": "add", "path": "/spec/steps/0/env/-", "value": {"name":"SSL_CERT_FILE","value":"/var/run/secrets/kubernetes.io/serviceaccount/service-ca.crt"}}]'
 ```
 
-### 6.4 Triggering Pipelines
+## 9 Triggering Pipelines
 
 This section documents the HTTP requests which will trigger the various Mendix pipelines, using the triggers you have installed in the [Installing Triggers](#installing-triggers) section, and describes their parameters.
 
-#### 6.4.1 Create App Pipeline
+### 9.1 Create App Pipeline
 
 The create-app-pipeline creates a basic MendixApp CR. After running this pipeline, we are ready to run the build-pipeline.
 
@@ -453,13 +294,13 @@ curl -X POST \
 | `storage-plan-name` | name of an already-created storage plan |
 | `database-plan-name` | name of an already-created database plan |
 
-#### 6.4.2 Build Pipeline
+### 9.2 Build Pipeline
 
 The build-pipeline builds and pushes a Mendix container image from a Mendix MPR file, hosted in a GIT repository. The environment is then updated with the new image.
 
 This can only be run after create-app-pipeline.
 
-##### 6.4.2.1 Build Pipeline Using a Generic Trigger
+#### 9.2.1 Build Pipeline Using a Generic Trigger
 
 The example here uses a [Generic Trigger](#generic-trigger).
 
@@ -489,7 +330,7 @@ curl -X POST \
 | `scheduledEventsMode` | `manual` – throws an error if scheduled events listed in `myScheduledEvents` in the MendixApp CR do not exist in the Mendix MPR<br/><br/>`auto` – removes scheduled events listed in `myScheduledEvents` in the MendixApp CR if they do not exist in the Mendix MPR |
 | `constantsMode` | `manual` – throws an error if constants set by the operator side are different from those in the .mda file<br/>`auto` – adds or removes constants which are missing in the operator |
 
-##### 6.4.2.2 Build Pipeline Using a GitLab Webhook Trigger
+#### 9.2.2 Build Pipeline Using a GitLab Webhook Trigger
 
 You can set up a [GitLab Webhook Trigger](#gitlab-webhook) to generate the build request automatically when you push a new MPR file to the GitLab repository.
 
@@ -501,7 +342,7 @@ Within GitLab, set up a webhook. Use the trigger URL of the trigger you installe
 We do not currently support the **Secret token**; this can be left blank.
 {{% /alert %}}
 
-#### 6.4.3 Configure App Pipeline
+### 9.3 Configure App Pipeline
 
 The configure-app-pipeline updates an existing Mendix App.
 
@@ -539,7 +380,7 @@ curl -X POST \
 | `add-env-vars` *(Optional)* | environment variables to add provided as a JSON map. Example: {"KEY":"VALUE"} |
 | `remove-env-vars` *(Optional)* | environment variables to delete as JSON array. Example: ["KEY1","KEY2"] |
 
-#### 6.4.4 Delete App Pipeline
+### 9.4 Delete App Pipeline
 
 The delete-app-pipeline deletes the Mendix App CR, which triggers the deletion of the environment.
 
@@ -559,9 +400,9 @@ curl -X POST \
 | `namespace` | name of the Kubernetes namespace where the Mendix Operator runs |
 | `env-internal-name` | Mendix environment internal name. You can get all the internal environment names  using the command `kubectl get mendixapps -n $namespace_name` |
 
-## 7 Troubleshooting{#troubleshooting}
+## 10 Troubleshooting{#troubleshooting}
 
-### 7.1 `Context Deadline Exceeded` when Installing for Kubernetes
+### 10.1 `Context Deadline Exceeded` when Installing for Kubernetes
 
 When installing Tekton and the Pipelines for Kubernetes, you can face an issue such as:
 

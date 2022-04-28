@@ -74,4 +74,19 @@ Mendix by default uses its own built-in HSSQL database, but Mendix also supports
 
 ### 4.2 Creating an Entity to Store the Images
 
+1.  To open the domain model for the native mobile module, double-click it in the **App Explorer** pane on the left side. 
+    *  There is already an entity here: **Login** (it is part of the template and is used only for native mobile authentication,so you can ignore it for now)
 
+    {{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
+
+1. Add an entity, *Picture*, to store all your uploaded images in the database. Drag a new **Entity** from the Toolbox and drop it into the domain model (or right-click anywhere in the domain model to add a new entity). 
+1.  Double-click the new entity to open its properties window:
+
+    {{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
+
+    {{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
+
+1. Name the entity *Picture*, then click **Select** next to **Generalization**. 
+1. Search for and select the **Image** entity (found in the system module).
+
+### 4.3 Understanding Generalizations

@@ -256,7 +256,22 @@ To update content that has already been published, follow these steps:
 
 5.  On the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
 
-## 6 Read More
+## 6 Reviewing Outdated Components
+
+As the Mendix Marketplace grows, it is important for users to be able to find up-to-date and relevant components. In order to reduce the likelihood that users find outdated or obsolete components, we review Marketplace content and evaluate for the following points:
+
+* Whether the component supports the versions of Studio Pro that Mendix supports (meaning, the current major version plus two previous major versions – for more information, see [LTS, MTS & Monthly Releases](/releasenotes/studio-pro/lts-mts/))
+* Whether the component has been updated recently or not for ages (for example, it was published in2016 and has not been updated since)
+* Whether it is being actively used or if it has limited usage or very few downloads, reviews, or ratings
+
+For a component that is outdated based on the above points, this is the review and remediation process: 
+
+1. Mendix sends a notification to the owner of the outdated component, who then has to submit an update within 30 days in order for their component to remain active on the Marketplace. This update needs to be based on support for an active version of Studio Pro.
+2. Mendix sends two reminders during these 30 days: the first on the 15th day, and the second on the 25th day.
+3. If the component owner is unable to make the required update within the stipulated timeframe, Mendix unpublishes their component from the Marketplace. Unpublishing means the component is not listed on the Marketplace, but a copy of the component remains in the database.
+4. If the owner wants to restore their unpublished component on the Marketplace, they make the required update and create a [Mendix Support](/developerportal/support/) request.
+
+## 7 Read More
 
 * [Marketplace Overview](/appstore/general/app-store-overview/)
 * [How to Prepare Your Commercial Content to Sell in the Marketplace](/appstore/creating-content/prepare/)

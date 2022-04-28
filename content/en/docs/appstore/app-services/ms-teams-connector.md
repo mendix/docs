@@ -198,7 +198,7 @@ Microsoft Teams support [actionable message cards](https://docs.microsoft.com/en
 
     1. At the upper-right corner of the page, click **Select Sample** to open the drop-down list. 
     2.  Below the **Legacy MesssageCard samples** category, select a sample message card.
-        {{% alert type="info" %}}Do not select any sample card above the **Legcy MessageCard sample**. They are adaptive cards, which do not work with the Microsoft Teams connector.{{% /alert %}}
+        {{% alert type="info" %}}Do not select any sample card above the Legacy MessageCard sample**. They are adaptive cards, which do not work with the Microsoft Teams connector.{{% /alert %}}
     
         {{< figure src="/attachments/appstore/app-services/ms-teams-connector/sample-message-cards.png" >}}
     

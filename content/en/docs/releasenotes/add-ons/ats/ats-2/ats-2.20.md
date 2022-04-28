@@ -14,7 +14,7 @@ weight: 80
 * We fixed a bug where running a test case for the first time showed a message to select a Selenium hub instead of pre-selecting the default Selenium hub.
 * Due to a bug, if an error occurred while starting a job, a generic error was thrown instead of collecting the error as part of the job log. This is now fixed.
 
-## 2.20
+## 2.20.0
 
 **Release date: August 17th, 2020**
 

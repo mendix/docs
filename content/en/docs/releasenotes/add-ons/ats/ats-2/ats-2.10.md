@@ -7,7 +7,6 @@ weight: 90
 
 ## 2.10.0
 
-
 **Release date: May 18th 2019**
 
 ### Alerting Improvements

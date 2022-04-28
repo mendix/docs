@@ -10,10 +10,11 @@ weight: 75
 **Release date: April 27th, 2022**
 
 ### Fixes
-* Fixed a bug when modifying a testcase to link the testcase to a story. Bug resulted in a generic error message.
-* Fixed typo in the generic error message 
 
-## 2.25
+* We fixed a bug that occurred when modifying a test case and linking the test case to a story.
+* We fixed a typo in the generic error message.
+
+## 2.25.0
 
 **Release date: November 2nd, 2021**
 

@@ -155,19 +155,14 @@ To enable Mendix SSO in your app, follow these steps:
 
         {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/module-user-roles.png" alt="Confirmation of user roles" >}}
 
-5. Change the page that Mendix uses to log you in (`login.html`) to allow logging in using SSO.
+5. Change the page that Mendix uses to log you in (`login.html`) to allow logging in using SSO. To do this, perform the following steps::
 
-    There are two versions of the file which you can use to replace `login.html`:
-
-    * `login-with-mendixsso-button.html` – adds a button to the standard sign in page which the end user can click to initiate the single sign-on process — this gives the end user the possibility to sign in using a user name and password if desired
-    * `login-with-mendixsso-automatically.html` – automatically initiates the single sign-on process without needing to click a button
-
-    Rename one of the two files discussed above (`login-with-mendixsso-button.html` or `login-with-mendixsso-automatically.html`) in the **theme** folder of your app to *login.html* by performing the following steps:
-
-    1. Open your app directory in File Explorer by selecting the menu item **App** > **Show App Directory in Explorer**.
+    1. Go to **App** > **Show App Directory in Explorer** in Studio Pro to open the app directory in your file explorer.
     2. Go to the **theme** folder.
     3. Rename *login.html* to  *login-without-sso.html*.
-    4. Rename your chosen file to *login.html*.
+    4. Rename *login-with-mendixsso-button.html* or *login-with-mendixsso-automatically.html* to *login.html*. The differences between two versions of the file which you can use to replace `login.html` are as follows:
+        * `login-with-mendixsso-button.html` – adds a button to the standard sign in page which the end user can click to initiate the single sign-on process — this gives the end user the possibility to sign in using a user name and password if desired
+        * `login-with-mendixsso-automatically.html` – automatically initiates the single sign-on process without needing to click a button
 
 Your app is now configured to use Mendix Single Sign-on when it is deployed to the Cloud.
 

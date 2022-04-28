@@ -89,4 +89,21 @@ Mendix by default uses its own built-in HSSQL database, but Mendix also supports
 1. Name the entity *Picture*, then click **Select** next to **Generalization**. 
 1. Search for and select the **Image** entity (found in the system module).
 
-### 4.3 Understanding Generalizations
+A generalization is a parent entity your child entity inherits properties from. This is the Mendix equivalent of inheritance. You can have multiple levels of generalizations. 
+
+For example you have created a new entity **Picture** which inherits from the system entity **Image**. However, the **Image** entity also inherits some of its properties from another system entity called **FileDocument**.
+
+Next you must add some attributes. Remember, your entity now inherits many properties from its parent entity **-Image**. Therefore you only have to add fields for the image's **Title** and **Description** information:
+
+1.  Under the **Attributes** tab in the entity’s properties, click **New**, name your attribute *Title*, and click **OK**:
+
+    {{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
+
+1. Repeat the process for the description, except select **Unlimited** for the string's **Length**.
+1.  Click **OK** to close the entity’s properties window:
+
+    {{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
+
+## 5 Creating Your App's User Interface
+
+

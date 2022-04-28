@@ -28,8 +28,8 @@ This app service is an [add-on module](/refguide/consume-add-on-modules-and-solu
 
 ### 1.3 Prerequisites
 
-* Your organization should allow you to use Webhooks in Microsoft Teams
-* The app service can only be used with Studio Pro 9 versions starting from [9.10](/releasenotes/studio-pro/9.10/)
+* Your organization should allow you to use Webhooks in Microsoft Teams.
+* The app service can only be used with Studio Pro 9 versions starting from [9.10](/releasenotes/studio-pro/9.10/).
 
 ## 2 Installation
 
@@ -130,7 +130,7 @@ Before you deploy an app, you should configure the binding keys in your app as f
      
      The system automatically generates a unique **Webhook ID** for each **Webhook URL** you add. You will need to give **Webhook ID** as input to the **Microsoft Teams Connector** activity to send messages. 
      
-     {{% alert type="info" %}}Each **Webhook URL** you add is counted as utilization towards the allocated app service quota. If a **Webhook URL** is incorrect, you can edit or delete the Webhook.{{% /alert %}}     
+     {{% alert type="info" %}}Each **Webhook URL** you add is counted as utilization towards the allocated app service quota. If a **Webhook URL** is incorrect, you can click the **...** icon and then edit or delete the Webhook.{{% /alert %}}     
     
 12.  Copy the **Webhook ID** as follows:
      1.  Hover over the **...** icon in the **Action** column to open the pop-up menu.
@@ -161,11 +161,11 @@ You can use the **Microsoft Teams Connector** activity in a microflow to send me
     1. Set the **webhookId** parameter to the **Webhook ID** generated in the Communication Services Console.
     2.  For **Message type**, select **Text** or **Card** from the drop-down list:
         
-        *  If you want to send message as plain text or in HTML or markdown formatting, select **Text**.
+        *  If you want to send a message as plain text or in HTML or markdown formatting, select **Text**.
         
             {{% alert type="info" %}}Fore more information about HTML and markdown tags supported by Microsoft Teams, see [*Format Cards in Microsoft Teams*](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format).{{% /alert %}}
           
-        * If you want to use an actionable message card as message, select **Card**.
+        * If you want to use an actionable message card as a message, select **Card**.
         
             {{% alert type="info" %}}Fore more information about message cards, see [Building a Message Card](#build-message-card).{{% /alert %}}
        
@@ -180,39 +180,41 @@ You can use the **Microsoft Teams Connector** activity in a microflow to send me
 
 {{% alert type="warning" %}}All parameters are mandatory. Setting any value to be empty or **none** will cause an error.{{% /alert %}}
 
-After the **Microsoft Teams Connector** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the Microsoft Teams channel. When the message is sent successfully, the activity returns a **SendMessageReponse** object. The **SendMessageReponse** entity for this object comes with the module and is predefined:
+After the **Microsoft Teams Connector** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the Microsoft Teams channel. When the message is sent successfully, the activity returns a **SendMessageReponse** object. The **SendMessageReponse** entity for this object comes with the module and is pre-defined:
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/send-message-response-entity.png" >}}
 
-* If the message is successfully sent, the value of the `SentMessage` attribute is `true`
-* If the message could not be sent, the value of the `SentMessage` attribute is `false`
-* The `Message` attribute contains the respective response message
+* If the message is successfully sent, the value of the **SentMessage** attribute is `true`.
+* If the message could not be sent, the value of the **SentMessage** attribute is `false`.
+* The **Message** attribute contains the respective response message.
 
 #### 4.2.2 Building a Message Card {#build-message-card}
 
-Microsoft Teams support [actionable message cards](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference). You can build a message card and send it to a Microsoft Teams channel using the Microsoft Teams connector. To build a message card, perform the following steps:
+Microsoft Teams supports [actionable message cards](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference). You can build a message card and send it to a Microsoft Teams channel using the Microsoft Teams connector. To build a message card, perform the following steps:
 
 1. Go to the [Card Playground](https://messagecardplayground.azurewebsites.net/). This playground contains sample message cards. You can modify the JSON for any sample message card and view the corresponding generated message card on the fly.
 
 2.  Edit a message card sample as follows:
 
     1. At the upper-right corner of the page, click **Select Sample** to open the drop-down list. 
-    2.  Below the **Legacy MesssageCard samples** category, select a sample message card.
-        {{% alert type="info" %}}Do not select any sample card above the Legacy MessageCard sample**. They are adaptive cards, which do not work with the Microsoft Teams connector.{{% /alert %}}
     
-        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/sample-message-cards.png" >}}
+    2. Below the **Legacy MesssageCard samples** category, select a sample message card.
     
-    3.  Edit the sample message card. The preview of your message card is on the right side of the page. 
+       {{< figure src="/attachments/appstore/app-services/ms-teams-connector/sample-message-cards.png" >}}
     
-        Below is the basic structure of a message card and the corresponding fields in JSON:
+       {{% alert type="info" %}}Do not select any sample card above the **Legacy MessageCard samples**. They are adaptive cards, which do not work with the Microsoft Teams connector.{{% /alert %}}
+    
+    3. Edit the sample message card. The preview of your message card is on the right side of the page. 
 
-        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/card-json-structure.png" >}}
-       
-        The example above with **Add a comment action** expanded looks like this:
-       
-        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/add-a-comment-expanded.png" >}}
+       Below is the basic structure of a message card and the corresponding fields in JSON:
+    
+       {{< figure src="/attachments/appstore/app-services/ms-teams-connector/card-json-structure.png" >}}
+    
+       The example above with **Add a comment action** expanded looks like this:
 
-        {{% alert type="info" %}}For more information about the design of a message card, see [*Design guidelines*](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference#design-guidelines). {{% /alert %}}
+       {{< figure src="/attachments/appstore/app-services/ms-teams-connector/add-a-comment-expanded.png" >}}
+    
+       {{% alert type="info" %}}For more information about the design of a message card, see [*Design guidelines*](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference#design-guidelines). {{% /alert %}}
 
 ## 5 Checking Statistics Using the Usage Dashboard {#statistics}
 
@@ -242,4 +244,5 @@ When you get the following pop-up window, then your quota is used up. You can ch
 ### 6.3 Waiting Time for Using Webhook URLs
 
 If the app deployed in the sandbox goes into the sleep mode, after the app resumes, you may have to wait up to five minutes before you can use the latest-configured Webhook URL.
+
 Although an app deployed to the licensed node would never go into the sleep node, you still need to wait for five minutes before you can use each newly-configured Webhook URL for the first time.

@@ -106,4 +106,31 @@ Next you must add some attributes. Remember, your entity now inherits many prope
 
 ## 5 Creating Your App's User Interface
 
+Now that you have created your domain model, it’s time to create your app’s front end:
 
+1. Open the **Home_Web** page from the App Explorer. 
+1. Drag and drop a **Template Grid** from the **Toolbox** onto the page. 
+1.  In Mendix, in order to display data from the domain model on a page element it needs to be within a context. Double-click the template grid to open its properties, then go to the **Datasource** tab:
+
+    {{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
+
+    {{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
+
+1.  Leave the **Datasource type** as **Database** and under **Entity** select the **Picture** entity we created earlier, then click **OK** to close the window.
+
+    {{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
+
+1. When Studio Pro prompts you to automatically fill the contents of the template grid, click **Yes**. 
+1.  Note the red error pointers on the **New** and **Edit** buttons of the template grid. This is because there is no page connected to the buttons. To resolve this, click one of the buttons and choose to **Generate Page**:
+
+    {{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
+
+1.  Leave the page name as is and choose the **Form Vertical** template for the page:
+
+    {{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
+
+Next we want to replace some of the auto-generated content inside the template grid with some sleeker building blocks:
+
+1. Delete all the display widgets inside the grid.
+1. Right-click in the empty space and select **Add building block**.
+1. Search for and select **Card with image**.

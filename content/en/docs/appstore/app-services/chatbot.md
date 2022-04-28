@@ -47,8 +47,6 @@ This app service can only be used with Studio Pro 9 versions starting with [9.12
 
 ### 1.5 Demo App
 
-For an example, you can check out the [demo app](https://cogniso1-sandbox.mxapps.io/index.html?profile=Responsive).
-
 ## 2 Installation
 
 ### 2.1 Obtaining a License Token {#obtain-license-token}

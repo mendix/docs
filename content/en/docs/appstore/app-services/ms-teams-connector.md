@@ -24,7 +24,7 @@ This app service is an [add-on module](/refguide/consume-add-on-modules-and-solu
 ### 1.2 Features
 
 * Send HTML, markdown, or plain text messages
-* Send Microsoft Teams actionable message sards
+* Send Microsoft Teams actionable message cards
 
 ### 1.3 Prerequisites
 

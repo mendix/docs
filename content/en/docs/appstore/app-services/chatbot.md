@@ -45,8 +45,6 @@ This app service can only be used with Studio Pro 9 versions starting with [9.12
 
 * [Dropdown Container](https://marketplace.mendix.com/link/component/111568) widget
 
-### 1.5 Demo App
-
 ## 2 Installation
 
 ### 2.1 Obtaining a License Token {#obtain-license-token}

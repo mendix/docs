@@ -59,3 +59,19 @@ On the right side of Studio Pro you will find more panels:
 The view you see above is completely editable. You can add or remove panels as desired (you can find more windows under **View** as well as reset your view back to default settings if you wish). You can also quickly hide all of Studio Pro's panels by enabling Distraction Free Mode with <kbd>Shift</kbd> + <kbd>F11</kbd>.
 
 ## 4 Creating Your App's Domain Model
+
+In Mendix you define your app's data structure in the Domain Model.
+
+### 4.1 Understanding the Domain Model
+
+The domain model is a visual representation of your app’s database. Each module in your app (modules created by you or your team, downloaded from the Marketplace, or System Modules) can all have their own individual models which are combined and translated into a database automatically at runtime. 
+
+Domain models are comprised of entities similar to a table in traditional SQL. Entities have attributes (similar to fields), and they can relate to other entities (including ones in other modules or even other apps). They can relate to each other either as a one-to-one association, one-to-many, or many-to-many.
+
+When you run your app locally or deploy it for the first time,  the runtime compiles your app’s domain models and creates the underlying database. Any subsequent changes will be seen as updates to the database.
+
+Mendix by default uses its own built-in HSSQL database, but Mendix also supports several alternative database types such as IBM DB2, PostgreSQL, Microsoft SQL Server, and others. 
+
+### 4.2 Creating an Entity to Store the Images
+
+

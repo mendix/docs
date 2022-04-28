@@ -57,7 +57,7 @@ Access to the data by specific users of the final app is defined in the *publish
 
 You can use a custom HTTP headers microflow and a custom HTTP validation microflow to generate, set, and validate authentication tokens. 
 
-The following steps describe how the security proposal is set with [ADFS](https://docs.microsoft.com/en-us/windows-server/identity/active-directory-federation-services) (Active Directory Federation Services) and the [SAML](/appstore/modules/saml/) (Security Assertion Markup Language) Mendix Marketplace module:
+The following steps describe how the security proposal is set with [Active Directory Federation Services](https://docs.microsoft.com/en-us/windows-server/identity/active-directory-federation-services) (ADFS) and the [SAML](/appstore/modules/saml/) Mendix Marketplace module:
 
 {{< figure src="/attachments/data-hub/data-hub-catalog/security/federation-with-ADFS-SAML-schematic.png" >}}
 

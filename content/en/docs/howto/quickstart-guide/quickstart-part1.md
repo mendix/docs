@@ -21,6 +21,14 @@ The [Make it Native 9](/refguide/getting-the-make-it-native-app/) mobile app is 
 
 ## 2 Create an Image Gallery in the Responsive Navigation Profile
 
-1. Starting from Studio Pro, click **Create New App**:
+1.  Starting from Studio Pro, click **Create New App**:
 
-{{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
+    {{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
+
+1. Search for the **Blank Native Mobile App** and click **Use this starting point**.
+    * **Why choose this template?** — Choosing the **Blank Native Mobile App** template lets you start with an already configured native mobile navigation profile setup for your app. 
+    * **Does that mean this app is native mobile only?** — No. The blank native mobile app template also comes with a responsive web navigation profile configured. This means your app is accessible by both web browser and natively on mobile devices.
+1. Name your app *Quickstart App* and click the **Create app** button.
+1. Wait a few minutes for your app to be created, its team server to be initialized, and a local copy of the project to be downloaded to your development machine. Once it is finished the project will open on your app’s home page called **Home_Web**:
+
+    {{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}

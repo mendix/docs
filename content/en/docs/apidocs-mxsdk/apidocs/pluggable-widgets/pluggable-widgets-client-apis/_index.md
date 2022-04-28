@@ -175,7 +175,7 @@ if (association.type === "Reference") {
 
 The flag `readOnly` indicates whether a value can actually be edited. It will be true, for example, when a widget is placed inside a data view that is not [editable](/refguide/data-view/#editable), or when a selected attribute is not editable due to [access rules](/refguide/access-rules/). The `readOnly` flag is always true when a `status` is not `ValueStatus.Available`. Any attempt to edit a value set to read-only will have no affect and incur a debug-level warning message.
 
-The value can be read from the `value` field and modified using the `setValue` function.  The `value` contains an `ObjectItem` or an `ObjectItem[]` based on the configured association. The `ObjectItem` can be passed to the `get` function of any [linked property value](/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-client-apis/pluggable-widgets-client-apis-list-values/#linked-values/) which is linked to the selectable object's datasource. 
+The value can be read from the `value` field and modified using the `setValue` function.  The `value` contains an `ObjectItem` or an `ObjectItem[]` based on the configured association. The `ObjectItem` can be passed to the `get` function of any [linked property value](/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-client-apis/pluggable-widgets-client-apis-list-values/#linked-values) which is linked to the selectable object's datasource. 
 
 When setting a value, the `ObjectItem`(s) must be items from the selectable object's data source. Note that `setValue` returns nothing and does not guarantee that the value is changed synchronously. But when a change is propagated, a component receives a new prop reflecting the change.
 

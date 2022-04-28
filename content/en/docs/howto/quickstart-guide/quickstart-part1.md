@@ -32,3 +32,24 @@ The [Make it Native 9](/refguide/getting-the-make-it-native-app/) mobile app is 
 1. Wait a few minutes for your app to be created, its team server to be initialized, and a local copy of the project to be downloaded to your development machine. Once it is finished the project will open on your app’s home page called **Home_Web**:
 
     {{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
+
+## 3 Explore Studio Pro
+
+Now that you have completed your first basic tasks in Studio Pro, this section will give you a quick and optional tour. If you know Studio Pro well already, you can skip this section.
+
+You can navigate through your app using the App Explorer, the window on the left side of your screen. This is where you can create and explore new documents and modules in your app. Any modules you download from the Marketplace will appear under **Marketplace Modules** > **App** section:
+
+{{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
+
+At the bottom of Studio Pro, you will find several panels:
+
+* **Stories**: - displays your active user stories added on your App’s Stories page in the Developer Portal.
+* **Changes**: - displays a list of all changes in the project since the last commit to the team server (also used to resolve conflicts with other team members when updating).
+* **Errors**: - displays any errors found within your project. Can also display deprecations and Warnings.
+* **MxAssist Performance Bot**: - an AI peer programmer bot which analyzes your app's model and identifies any issues which may negatively impact your app’s performance.
+* **Console**: - a live feed of your app’s console as the app runs (you can filter for additional log levels by clicking on the **Advanced** drop-down list).
+
+
+
+
+## 4 Creating Your App's Domain Model

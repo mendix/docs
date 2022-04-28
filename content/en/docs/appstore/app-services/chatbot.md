@@ -41,6 +41,14 @@ This app service enables doing the following:
 
 This app service can only be used with Studio Pro 9 versions starting with [9.12.0](/releasenotes/studio-pro/9.12.0).
 
+### 1.4 Dependencies
+
+* [Dropdown Container](https://marketplace.mendix.com/link/component/111568) widget
+
+### 1.5 Demo App
+
+For an example, you can check out the [demo app](https://cogniso1-sandbox.mxapps.io/index.html?profile=Responsive).
+
 ## 2 Installation
 
 ### 2.1 Obtaining a License Token {#obtain-license-token}
@@ -189,7 +197,7 @@ The **GetSlotArgument** microflow takes **botContext** object and **slotName** a
 
 {{% todo %}}Check the description{{% /todo %}}
 
-The **CreateBotContext** Java action takes entityType and botName as input parameters, it creates bot and its associated context given the bot name and bot description, you could pass microflow to initialize the context. 
+The **CreateBotContext** Java action takes entityType and botName as input parameters. It creates bot and its associated context given the bot name and bot description. You could pass the microflow to initialize the context. 
 
 ### 3.5 Enumerations {#enumerations}
 
@@ -303,27 +311,36 @@ The **AddLanguageMethod** is an enumeration that incorporates all the options to
 The core widget required is the **Chatbot** widget. You can make the following settings for the **Chatbot** widget:
 
 * **Context** tab
-  * **Intents** – the intention behind each message that the chatbot receive, namely, what the user wants to get out of the interaction, for example, a user says, ‘I need new shoes.’
+  * **Intents** – the intention behind each message that the chatbot receive, namely, what the user wants to get out of the interaction (for example, when a user says "I need new shoes", their intent is to order new shoes)
+     
      * **Intent actions** – the action lists of user intent
-         * **Dialog action** – Action is executed at every turn of the conversations. You can use this function to initialize values or validate user input.
-         * **Fulfillment action** – The action is invoked after slot elicitation and confirmation. Use this action to fullfill your intent.
-         * **Name** – the name of intent.
-         * **Failure** – The action is invoked in case of intent failure
-     * **Fallback** – The action is invoked when the built-in Fallbackintent is fulfilled.
-  * **Bot Context** – The bot context is the current position of the bot defines its possibilities and options. The context changes every time the bot moves along the story and opens newly possible interactions as well as closes the previous ones.
-     * **Bot Context Uid** – The Unique identifier for bot context.
-     * **Locale** – The active locale constant of the bot.
-     * **Chatbot Mode** – The working mode for chatbot, which works either on Text or Audio. 
-  * **Options** – The setting options for chatbot conversational UI/UX.
-     * **Use toggle button** – Use a toggle button to show or hide chat panel.
-     * **Show inspection panel** – A flags to toggle the display of inspection panel.
+         * **Dialog action** – the action that is executed at every turn of the conversations; used to initialize values or validate user input
+         * **Fulfillment action** – the action that is invoked after slot elicitation and confirmation; used to fullfill your intent
+         * **Name** – the name of intent
+         * **Failure** – the action that is invoked in case of intent failure
+     * **Fallback** – the action that is invoked when the built-in fallback intent is fulfilled.
+     
+  * **Bot Context** – the current position of the bot that defines its possibilities and options, which changes every time the bot moves along the story and opens newly possible interactions as well as closes the previous ones
+     
+     * **Bot Context Uid** – the Unique identifier for bot context
+     * **Locale** – the active locale constant of the bot
+     * **Chatbot Mode** – the working mode for chatbot, which works either on text or audio
+     
+  * **Options** – the setting options for chatbot conversational UI/UX
+     
+     * **Use toggle button** – whether to use a toggle button to show or hide chat panel.
+     
+     * **Show inspection panel** – whether to use a flag to toggle the display of inspection panel
+     
+       {{% todo %}}Check the description above against the UI{{% /todo %}}
+  
 * **Events** tab
-  * **On error** – by binding a string attribute to the **Error** property, you can obtain the error message raised by the back-end service and set a custom action that is executed when an error occurs
-     * **Error** – sets a string attribute as the error message
+  * **On error** – By binding a String attribute to the **Error** property, you can obtain the error message raised by the back-end service and set a custom action that is executed when an error occurs
+     * **Error** – sets a String attribute as the error message
      * **Action** – sets which action is executed when an error occurs
-  * **On ready** – by binding a string attribute to the **Is ready** property, you can set this property to verify if the current bot is ready for conversing.
-     * **Is ready** – A flag indicating if the current bot is ready for conversing.
-     * **Action** – Action triggered when bot is ready
+  * **On ready** – by binding a String attribute to the **Is ready** property, you can set this property to verify if the current bot is ready for conversing.
+     * **Is ready** – a flag indicating if the current bot is ready for conversing
+     * **Action** – the action triggered when bot is ready
 
 #### 3.5.2 InputElement {#inputelement}
 
@@ -331,7 +348,7 @@ The core widget required is the **InputElement** widget. You can make the follow
 
 * **General** tab
 	* **Source**  – the value of the **Audio** attribute of a **speechSynthesizer** object
-	* **Controls**  – determines if it offers controls to allow the end user to control audio playback, including volume, seeking, and pause/resume playback; this accepts a Boolean value
+	* **Controls**  – determines if it offers controls to allow the end user to control audio playback, including volume, seeking, and pause/resume playback; accepts a Boolean value
 
 ### 3.6 Configuring the LicenseToken {#configure-license-token}
 
@@ -372,46 +389,58 @@ It can be useful to run the Chatbot service automatically when your app starts. 
 3. Select the **StartService** microflow from the **Chatbot** > **USE_ME** folder.
 4. Set **After startup** to the microflow that calls the **StartService** microflow.
 
-### 4.2 Configure Chatbot Design Time in Your Browser {#configure-chatbot-design-time}
+### 4.2 Configuring Chatbot Design Time in Your Browser {#configure-chatbot-design-time}
 
-You can use provided **ChatbotConsole** page in module to design bot context. To let the **ChatbotConsole** page works, you need to take few steps as following.
+You can use the **ChatbotConsole** page in a module to design bot context. To let the **ChatbotConsole** page work, you need to take a few steps as follows:
 
-1. Download DropDown Container widget from Marketplace as Chatbot module dependency.
-2. Go to the **Marketplace** in your app project on Mendix Studio Pro. Search for the **Dropdown Container** widget and download the latest version.
-3. Import the Dropdown Container widget and Update all the widgets in Chatbot console page if necessary.
-4. Go to Navigation page in your app project, Add ChatbotConsole page as new item in your navigation profiles.
+1. Follow the instructions in the [Downloading Content from the Marketplace Within Studio Pro](/appstore/general/app-store-content/#downloading) section in *Use Marketplace Content in Studio Pro* to download the latest version of the [DropDown Container](https://marketplace.mendix.com/link/component/111568) widget from the Marketplace.
+2. Update all the widgets in Chatbot console page if necessary. {{% todo %}}Check what this step is about exactly{{% /todo %}}
+3. In the **App Explorer**, go to **Navigation**. 
+4. Add the **ChatbotConsole** page as a new item in your [navigation profiles](/refguide/navigation/#profiles).
 5. Make sure that you have [configured the license token](#configure-license-token).
-6. Run your app locally. Navigate to chatbot console page and you will be guided into next phase.
+6. Run your app locally.
+7. Navigate to Chatbot Console page. You can start designing chatbot context in your browser.
 
-### 4.3 Design Chatbot Context in Your Browser {#design-chatbot-context}
+### 4.3 Designing Chatbot Context in Your Browser {#design-chatbot-context}
 
-1. Go to the chatbot console page in your browser as Administrator.
-2. Start design your own chatbot by clicking **Create bot** button in Chatbot console page.
-3. Configure bot settings with bot name and description.
-4. Add languages with a preset bot template **OrderFlowers**.
+1. Go to the Chatbot Console page in your browser as the administrator.
+2. Click **Create bot** on the page to start designing your own chatbot.
+3. Configure bot settings with a bot name and a description.
+4. Add languages with the preset bot template **OrderFlowers**.
 5. Add **Language details** and **Voice**.
-6. Run Test. Navigate to bot conversation page. See if the whole bot workflow works.
+6. Run Test. {{% todo %}}How to run the test?{{% /todo %}}
+7. Navigate to the Bot Conversation page to see if the whole bot workflow works.  
 
 ### 4.4 Adding Intent Actions to Your Defined Chatbot
 
 1. In your app module's domain model, create an entity and name it *BotContext*, with the following attributes:
    * `OrderFlowerIntent` (String)
    * `Error` (String)
+
 2. Create a microflow as follows:
+
+    {{% todo %}} Check this procedure{{% /todo %}}
+
     1. Name the microflow *CreateBotContext*.
-    2. Add a Java action call activity to the microflow, select Java action **CreateBotContext** from Chatbot module.
-    3. Double-click the Java action call activity, set **BotContext** from Chatbot as Entity type in Bot Context.
-    4. Set Bot name as **MendixSampleBot** from the bot designed in Chatbot console page.
+    2. Add a Java action call activity to the microflow, select the Java action **CreateBotContext** from the **Chatbot** module.
+    3. Double-click the Java action call activity, set **BotContext** from **Chatbot** as the Entity type in Bot Context.
+    4. Set Bot name as **MendixSampleBot** from the bot designed in the Chatbot Console page.
     5. Add a Change object activity to the microflow.
     6. Set input object as botContext from Java action all activity.
     7. Set member **OrderFlowerIntent** as **OrderFlowers**, and set member **LocaleId** as **Chatbot.Locale.en_US**.
     8. Right-click the Java action call activity and select **Set $botContext as return value** in the pop-up menu.
-4. Create new Blank page named Chatbot
-5. Drag drop a **Data View** widget in the page, set data source as microflow, chose the microflow as CreateBotContext created in step 2.
-6. Drag drop a **Chatbot** widget and start config the bot configuration
-7. In context tab, you need to add **Intent actions** and config **Bot Context**
-8. Add new intent actions item and edit the microflow and the name of intent.
-9. Create a microflow as follows:
+
+3. Create new Blank page named Chatbot
+
+4. Drag drop a **Data View** widget in the page, set data source as microflow, chose the microflow as CreateBotContext created in step 2.
+
+5. Drag drop a **Chatbot** widget and start config the bot configuration
+
+6. In context tab, you need to add **Intent actions** and config **Bot Context**
+
+7. Add new intent actions item and edit the microflow and the name of intent.
+
+8. Create a microflow as follows:
     1. Name the microflow *OrderFlower*.
     2. Add a Parameter and select **BotContext** as data type of output
     3. Add a Microflow call activity, select Microflow **GetSlotArgument** from Chatbot module.
@@ -421,10 +450,14 @@ You can use provided **ChatbotConsole** page in module to design bot context. To
     7. Add a Microflow call activity, select Microflow **GetSlotArgument** from Chatbot module.
     8. Edit the parameter botContext as $botContext, and slotName as PickupDate.
     9. Add a log message to print all the informations.
-10. Edit the name of intent as **OrderFlowerIntent**, which created in chatbot console page. Click OK to save the intent actions item.
-11. In Bot Context Uid, select **Uid** from the object created by data view.
-12. In Locale, select **LocaleId** from the object created by data view. Click OK to save the widget configuration.
-13. Run your app locally. Navigate to bot conversation page and you can start your conversation with chatbot.
+
+9. Edit the name of intent as **OrderFlowerIntent**, which created in chatbot console page. Click OK to save the intent actions item.
+
+10. In Bot Context Uid, select **Uid** from the object created by data view.
+
+11. In Locale, select **LocaleId** from the object created by data view. Click OK to save the widget configuration.
+
+12. Run your app locally. Navigate to bot conversation page and you can start your conversation with chatbot.
 
 ### 4.5 Handling Chatbot Events
 
@@ -436,7 +469,7 @@ There are two main types of events that can be picked up by the **Chatbot** widg
 
 By binding an attribute to the **Error** event, the app can pick up an error raised by the back-end service.
 
-**Error** takes a string attribute. You can define an attribute and bind this attribute to **Error**. In a running app, when chatbot transcription fails, an error event will be triggered, and the error information will be populated to this **Error** attribute. The app can obtain this error message and trigger a custom action. You can select the custom **Action** from a list of actions.
+**Error** takes a String attribute. You can define an attribute and bind this attribute to **Error**. In a running app, when chatbot transcription fails, an error event will be triggered, and the error information will be populated to this **Error** attribute. The app can obtain this error message and trigger a custom action. You can select the custom **Action** from a list of actions.
 
 ![chatbot-onerror-sample](attachments/chatbot/chatbot-onerror-sample.png) 
 
@@ -448,7 +481,7 @@ For example, you can set up the **Action** to make the app show a pop-up window 
 
 By binding an attribute to the **Is ready** event, the app will trigger an action event when bot is ready.
 
-**Is ready** takes a string attribute. You can define an attribute and bind this attribute to **Is ready**. In an app, when chatbot is runnning, A flags to indicating if the current bot is ready for conversing. The app can trigger an action when bot is ready. You can select the custom **Action** from a list of actions.
+**Is ready** takes a String attribute. You can define an attribute and bind this attribute to **Is ready**. In an app, when chatbot is runnning, a flag indicates if the current bot is ready for conversing. The app can trigger an action when bot is ready. You can select the custom **Action** from a list of actions.
 
 ### 4.6 Checking Statistics on the Usage Dashboard {#check-usage}
 

@@ -230,6 +230,8 @@ oc apply --filename https://storage.googleapis.com/tekton-releases/pipeline/prev
 # Tekton triggers
 curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.15.0/release.yaml -s > tekton-triggers.yaml
 curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.15.0/interceptors.yaml -s > interceptors.yaml
+
+cd ..
 ```
 
 #### 5.2.2 Air-gapped
@@ -305,7 +307,7 @@ helm install -n $YOUR_NAMESPACE mx-tekton-pipeline ./pipeline/ \
   --set images.fetch=$PRIVATE_REGISTRY/mxpc-pipeline-tools:git-init-0.0.1 \
   --set images.verExtraction=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
   --set images.build=$PRIVATE_REGISTRY/mxbuild \
-  --set images.imageBuild=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
+  --set images.imageBuild=$PRIVATE_REGISTRY/mxpc-pipeline-tools:imagebuild-0.0.1 \
   --set images.constantsAndEventsResolver=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
   --set images.k8sPatch=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
   --set images.createAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \

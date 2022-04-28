@@ -131,18 +131,34 @@ curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.15.0/in
 
 Then you need to transfer the `tekton` folder to the air-gapped environment with the aip tool:
 
-{{% todo %}}[Add command to create repositories]{{% /todo %}}
-
 ```bash
 # replace "myprivate.registry.com" with your registry
 aip set-base-destination myprivate.registry.com
 
 # get list of required repositories - these will need to be created before you can push to them
 cat state.json | jq '.images[].destination'
+```
 
-# create the repositories listed by the command above.
-# WHAT COMMAND SHOULD THEY USE HERE?
+You will now need to create the repositories listed by the command above. The commands needed to do this depends on which registry you are using. Please see the documentation for your registry for information on how to create the repositories.
 
+{{% alert color="info" %}}
+Some registries cannot support complex repository addresses such as `my.registry.com/tekton-releases/github.com/tektoncd/pipeline/cmd/webhook:v0.26.0` and you may have to use a simpler format such as `my.registry.com/tekton/webhook:v0.26.0`. You will then need to update the `state.json` file (in your current directory) which is used by aip to push information to your repositories.
+
+You will need to update the `destination: ` value for each of the repositories as shown below:
+
+```json {linenos=table,hl_lines=[6],linenostart=22}
+…
+{
+	"name": "mxbuild8.18.11",
+	"address": "private-cloud.registry.mendix.com/mxbuild:8.18.11.27969",
+	"tarPath": "mxbuild8.18.11/mxbuild_8.18.11.27969.tar",
+	"destination": "127.0.0.1:5000/pipeline/mxbuild:8.18.11.27969"
+},
+…
+```
+{{% /alert %}}
+
+```bash
 # use your credentials here
 aip login -u user -p mypassword myprivate.registry.com
 aip push
@@ -206,6 +222,7 @@ kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers
 For an air-gapped environment, assuming you have [performed the preparation steps](#preparation), use the following commands:
 
 ```bash
+cd ../tekton
 cat tekton.yaml | aip inject-manifest | kubectl apply -f -
 cat tekton-triggers.yaml | aip inject-manifest | kubectl apply -f -
 cat interceptors.yaml | aip inject-manifest | kubectl apply -f -
@@ -221,6 +238,8 @@ To install Tekton and Tekton Triggers on OpenShift when your environment has acc
 
 ```bash
 # Tekton
+cd ..
+mkdir tekton-pipelines
 oc new-project tekton-pipelines
 oc adm policy add-scc-to-user anyuid -z tekton-pipelines-controller
 oc adm policy add-scc-to-user anyuid -z tekton-pipelines-webhook
@@ -321,7 +340,7 @@ Standard triggers are used to run pipelines like create-app-pipeline, configure-
 
 There are also two options to build a Mendix app using either a generic or a GitLab webhook trigger.
 
-After installing the generic trigger or the GitLab webhook trigger you will have a service with a name like `el-mx-pipeline-listener-someUniqueName`. Make sure that you have access to that service (by creating an ingress or load balancer from a cloud provider, etc).
+After installing the generic trigger or the GitLab webhook trigger you will have a service with a name like `el-mx-pipeline-listener-someUniqueName`. Make sure that you have access to that service (by creating an ingress or load balancer from a cloud provider, etc). This will provide the URL which you can use to activate the trigger. In the rest of this document, we will use `http://pipeline.trigger.yourdomain.com/` to refer to this trigger.
 
 #### 6.2.1 Persistent Volume Claims (PVCs)
 
@@ -438,7 +457,11 @@ curl -X POST \
 
 The build-pipeline builds and pushes a Mendix container image from a Mendix MPR file, hosted in a GIT repository. The environment is then updated with the new image.
 
-This can only be run after create-app-pipeline. The example here uses a [Generic Trigger](#generic-trigger). If you have set up a [GitLab Webhook Trigger](#gitlab-webhook), the build request will be generated automatically when you push a new MPR file to the GitLab repository.
+This can only be run after create-app-pipeline.
+
+##### 6.4.2.1 Build Pipeline Using a Generic Trigger
+
+The example here uses a [Generic Trigger](#generic-trigger).
 
 ```bash
 curl -X POST \
@@ -465,6 +488,18 @@ curl -X POST \
 | `env-internal-name` | Mendix environment internal name. You can get all the internal environment names with the command `kubectl get mendixapps -n $namespace_name` |
 | `scheduledEventsMode` | `manual` – throws an error if scheduled events listed in `myScheduledEvents` in the MendixApp CR do not exist in the Mendix MPR<br/><br/>`auto` – removes scheduled events listed in `myScheduledEvents` in the MendixApp CR if they do not exist in the Mendix MPR |
 | `constantsMode` | `manual` – throws an error if constants set by the operator side are different from those in the .mda file<br/>`auto` – adds or removes constants which are missing in the operator |
+
+##### 6.4.2.2 Build Pipeline Using a GitLab Webhook Trigger
+
+You can set up a [GitLab Webhook Trigger](#gitlab-webhook) to generate the build request automatically when you push a new MPR file to the GitLab repository.
+
+Within GitLab, set up a webhook. Use the trigger URL of the trigger you installed in the [Installing Triggers](#installing-triggers) section, and choose which push events you want to trigger the build.
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/gitlab-webhook.png" >}}
+
+{{% alert color="info" %}}
+We do not currently support the **Secret token**; this can be left blank.
+{{% /alert %}}
 
 #### 6.4.3 Configure App Pipeline
 

@@ -50,7 +50,7 @@ Advanced Audit Trail contains an [add-on module](refguide/consume-add-on-modules
 
 ### 1.5 Dependencies
 
-To use Advanced Audit Trail, you need to install [Atlas UI Resources](/appstore/modules/atlas-ui-resources/) in your app.
+To use Advanced Audit Trail, you need to install [Atlas Core](https://marketplace.mendix.com/link/component/117187) and [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) in your application.
 
 ## 2 Installation
 
@@ -164,4 +164,4 @@ If you have already deployed your app, change the existing **Licensekey** consta
 
 ## 4 Read More
 
-* [Consuming Add-on Modules and Solutions](refguide/consume-add-on-modules-and-solutions/)
+* [Consuming Add-on Modules and Solutions](refguide/consume-add-on-modules-and-solutions/) 

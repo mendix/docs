@@ -91,9 +91,6 @@ BitBucket Server and BitBucket Data Center, on the other hand, still use the ter
 
 In both cases you need `repository write` permission.
 
-##### 2.4.5 AWS CodeCommit Limitation
-
-We have a compatibility limitation with AWS CodeCommit in Git Technology Preview for Studio Pro.
 
 ### 2.5 Graphics Card
 

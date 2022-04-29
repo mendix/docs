@@ -87,7 +87,7 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | Feature | Expected Release |
 | --- | --- |
 | Studio Pro modernization | Released for GA on [Sep 28th, 2021](/releasenotes/studio-pro/9.6/#studio-pro-new-design) |
-| Team Server Git (Mendix Cloud) | Released for GA on [29th Mar 2022](/releasenotes/studio-pro/9.12//#team-server-git) |
+| Team Server Git (Mendix Cloud) | Released for GA on [Mar 29th, 2022](/releasenotes/studio-pro/9.12//#team-server-git) |
 | BYO Git (Bring Your Own) | Currently in Public Beta<br/>GA: Jun 2022 |
 | Studio Pro dark theme | Public Beta: Mar 2022 |
 
@@ -109,7 +109,7 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | Smart app services integrated in workflows | Invoice Processing |Released for GA on [Mar 9th, 2022](https://marketplace.mendix.com/link/component/118389)|
 | Smart app services integrated in workflows | MS Team Connector |GA: Apr 2022|
 | Workflow | | Released for GA on [Jan 25th, 2022](/releasenotes/studio-pro/9.10/#new-features) |
-| Smart app services integrated in workflows | Speech to Text | Released for GA on [Feb 16th 2022](https://marketplace.mendix.com/link/component/118408) (except in China) |
+| Smart app services integrated in workflows | Speech to Text | Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118408) (except in China) |
 | Smart app services integrated in workflows | Text to Speech |Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118409) (except in China)|
 | Smart app services integrated in workflows | Text Analytics |Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118412) (except in China)|
 | Smart app services integrated in workflows | Translation |Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118411)  (except in China)|

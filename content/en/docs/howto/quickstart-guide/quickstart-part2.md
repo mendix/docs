@@ -39,3 +39,34 @@ The content on the page comes pre-made as a part of the template. To get started
 1. When prompted to automatically fill the contents of the list view, click **No**.
 
 {{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
+
+### 2.1 Creating the User Interface
+
+Next you are going to create the user interface for your native app:
+
+1. Right-click the empty space inside the list view and select **Add building block**.
+1. Search for and select the **Image** building block.
+
+Just as in Part 1, you must replace the auto-generated content with our content from the database.
+
+Start by replacing the static image with the image the user uploads to the database:
+
+1. Right-click the **Static Image** viewer and choose **Convert to dynamic image**. 
+1. Right-click the image viewer and choose **Select datasource**.
+1. Search for your **Picture** entity, select it, and when prompted to automatically fill the contents of the widget click **Yes**.
+
+Our images will now be displayed from the database, but the labels on the page will still be displaying their default text. To fix this, do the following:
+
+1. Double-click the label captioned **Card title** to open its properties.
+1. Click the **Edit** button next to **Caption**.
+1. In the new window, replace the caption field with a place holder (a number in curly braces starting from 1). 
+1.  Then click **Parameter** > **New** to add a new parameter and select the **Title** attribute.
+
+    {{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
+
+1. Repeat the steps for the second label beneath the **Tile** field, this time linking it to the **Description** attribute instead.
+
+Now your existing images are being displayed from the database. Next, you will develop functionality which allows the user to take new pictures with the app and then upload them to the server.
+
+## 3 Using a Nanoflow to Call the Take Picture JSAction
+

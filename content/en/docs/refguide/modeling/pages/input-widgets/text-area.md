@@ -68,7 +68,7 @@ The On Change Behaviour property lets users select how **on change** is handled 
 
 ##### 2.5.2.1 When user leaves input field (Default)
 
-Text Area will apply changes when a value is not the same as previously saved value in the database and one of the following condition is met:
+Text Area will apply changes when a value is not the same as previously saved value in the database and the following condition is met:
 
 * Blurred: This will trigger on change and on leave events
 

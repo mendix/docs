@@ -34,7 +34,7 @@ This section presents guidelines for developing content that you will submit to 
 Submitted Marketplace content will be reviewed within five working days.
 {{% /alert %}}
 
-### 3.1 General
+### 3.1 General {#general}
 
 These are some general guidelines for creating new Marketplace content:
 
@@ -44,7 +44,18 @@ These are some general guidelines for creating new Marketplace content:
 
 You can add information the end-user should know to the component [Documentation](#doc) when you are adding the content to the Marketplace.
 
-### 3.2 For Widgets
+### 3.2 Intellectual Property
+
+When considering intellectual property (IP) in the Mendix Marketplace, follow these guidelines:
+
+* Do not copy any text, names,or other data from other components published i the Marketplace, since you do not own the copyright. Do not create unnecessary ambiguity or confusion that would mislead consumers of Marketplace components.
+* Do not mention components published by others within your content on the Marketplace. 
+* Make sure your component documentation only includes intellectual property that you have created. Your component should not include information or content published by others on the Marketplace, as this may lead to removing your component from the Marketplace. This also means other components can also be removed if they are using your component information or content. 
+* If you come across instances of intellectual property abuse, let us know at someemail@mendix.com.
+
+For more information, see [Applying IP Protection](/appstore/creating-content/sol-ip-protection/).
+    
+### 3.3For Widgets
 
 To develop widgets and submit them to Marketplace, follow these guidelines:
 
@@ -58,7 +69,7 @@ To develop widgets and submit them to Marketplace, follow these guidelines:
 * Use TypeScript instead of JavaScript
 * Create test pages for mobile when content is made for mobile platforms
 
-### 3.3 For Modules
+### 3.4 For Modules
 
 To develop modules and submit them to the Marketplace, follow these guidelines:
 
@@ -77,7 +88,7 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 * Do not rename entities and attributes when creating new versions, as data in these entities will get lost (replacing an existing module is based on the entity names)
 * The module should include the English language
 
-### 3.4 For Selling App Services
+### 3.5 For Selling Content
 
 For details on preparing and selling your component, see [How to Prepare Your Commercial Content to Sell in the Marketplace](/appstore/creating-content/prepare/).
 
@@ -92,7 +103,6 @@ To start, click **Add content** in the top bar of the Marketplace home screen. F
 On the **Upload Content** page, select the type of content you would like to publish (the available types correspond to the [Marketplace home page](/appstore/general/app-store-overview/#home)):
 
 {{< figure src="/attachments/appstore/general/share-app-store-content/category.JPG"   width="600"  >}}
-	
 
 ### 4.2 General {#general}
 

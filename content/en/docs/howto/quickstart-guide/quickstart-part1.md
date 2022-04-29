@@ -156,8 +156,54 @@ Your **Images** will now be displayed from the database, but the **Labels** on t
 
 ## 6 Defining Logic Using Microflows
 
-Only 1 step left before you can run and test out your app. We have created a place to store our images, a page to display them on and most of the functionality for creating, editing and deleting image has been automatically handled. But what if you want you app to do some custom logic? In this case we want to validate the user has entered text for the Title and Description fields before they click save. To do this in Mendix we can use a Microflow.
+There is only one step left before you can run and test your app. You have created a place to store images and a page to display them on. Most of the functionality for creating, editing, and deleting images has been handled automatically. But what if you want your app to do some custom logic? For example, what if you wanted to validate that the user has entered text for the **Title** and **Description** fields before they click **Save**? In Mendix, you can achieve this using a Microflow.
 
-What is a Microflow? A Microflow is a piece of custom logic, which is represented visually in Business Process Modelling Notation (Or BPMN). Think of a function in traditional code, except written visually. When your app compiles, it translates all your Microflows into code which is executable by your browser. Microflows are based on Java and are executed on the server, this means a connection is required in order for it to execute. A microflow can only have 1 start point, but can often have multiple end points.
+A microflow is a piece of custom logic which is represented visually in Business Process Model and Notation (BPMN). Think of a function in traditional code, except written visually. When your app compiles, it translates all your microflows into code executable by your browser. Microflows are based on Java and are executed on the server. This means an internet connection is required in order for it to execute. A microflow can only have one start point, but can often have multiple end points.
 
-Open the Page “Picture_NewEdit” using the App Explorer, and scroll down to the save button at the bottom of the page. Right click the button and choose to “Edit on click action”. Set the on click action type to call a microflow, and choose to create a new microflow in the Native Mobile module, called “ACT_ValidateAndSavePicture” (Click the show button to quickly navigate to the new Microflow)
+Implement custom logic with a microflow by doing the following:
+
+1. Open the page **Picture_NewEdit** using the App Explorer.
+1. Scroll down to the **Save** button at the bottom of the page. 
+1. Right-click the button then click **Edit on click action**. 
+1. Set the on click action type to call a microflow.
+1.  Choose to create a new microflow in the **Native Mobile** module called *ACT_ValidateAndSavePicture* (click the **Show** button to quickly navigate to the new microflow):
+
+    {{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
+
+1. You should now see the microflow open in your editor:
+
+    {{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
+
+1. Add a decision to the flow (The orange diamond shape) from the toolbox. 
+1. Give it the caption `Has title?` and provide the expression `$Picture/Title != empty and $Picture/Title != ''`:
+
+    {{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
+
+1. Click OK to close the window. 
+
+Notice the line has changed to red. This is because a decision creates multiple paths within the microflow. You need to add another path for when this expression evaluates as false:
+
+1. Add the additional path and make sure to select the **False** path as the one which goes down. 
+1. You should also add the **Validation feedback** action to the false path to provide feedback to the user. 
+1.  Repeat these steps for the **Description** attribute until your microflow looks like this:
+
+    {{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
+
+Finally we need to commit the image to the database, and then close the page:
+
+1. Add a commit action from the toolbox to the true path.
+1.  (Select the picture Entity to commit, without events, but Refresh in client set to true):
+
+    {{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
+
+1. Add a **Close page** action to the end of the microflow to ensure the user is directed back to the home page after clicking **Save**. 
+
+You have finished your responsive app! You can run your app and test it out by pressing <kbd>F5</kbd> or by clicking the green play icon in the top-right corner of Studio Pro (next to the **Publish** button):
+
+{{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
+
+Congratulations! You successfully completed Part 1 of the Quickstart guide, you have your first Mendix App to prove it, and it works on almost any device. Well done! 
+
+To continue learning, carry on with Part 2 of the Quickstart Guide: [Upgrade to a Native Mobile App](/howto/quickstart-part2/).
+
+You can also go to [Mendix Academy](https://academy.mendix.com/) or [Mendix Documentation](https://docs.mendix.com/) to learn more about the Mendix topics which interest you most.

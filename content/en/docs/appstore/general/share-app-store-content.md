@@ -55,7 +55,7 @@ When considering intellectual property (IP) in the Mendix Marketplace, follow th
 
 For more information, see [Applying IP Protection](/appstore/creating-content/sol-ip-protection/).
     
-### 3.3For Widgets
+### 3.3 For Widgets
 
 To develop widgets and submit them to Marketplace, follow these guidelines:
 
@@ -134,14 +134,17 @@ Follow these steps to describe your content:
 7. <a name="license"></a>Select the type of **License** you want applied to your app (if applicable):
 
 	* [Apache V2](https://www.apache.org/licenses/LICENSE-2.0)
-	* [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)
-	* [Mendix EULA](https://www.mendix.com/terms-of-use/)
+	* [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.en.html) – please note that everything licensed under GNU GPL is public and that GNU GPL has strong copyleft effect, which means that all consuming applications should make their code public as well; using this license is not recommended
+	* [Mendix EULA](https://www.mendix.com/terms-of-use/) – this license is to be used when the component is released by Mendix
 	* [MindSphere Development License Agreement](https://siemens.mindsphere.io/en/terms)
 	* [MIT](https://opensource.org/licenses/MIT)
 	* SDISW Development License Agreement for Mendix Sample Apps EXTERNAL
 	* SDISW End-User License Agreement for Mendix Connectors and Widgets
 	* SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL
 	* SDISW End-User License Agreement for Mendix Sample Apps
+
+	{{% alert color="info" %}}After you select a license, make sure you add a specific *license.txt* file in your artifacts (meaning, in the *.mpk*).
+	/alert %}}
 
 	{{< figure src="/attachments/appstore/general/share-app-store-content/general.jpg"   width="600"  >}}
 

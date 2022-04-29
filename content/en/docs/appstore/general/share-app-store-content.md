@@ -48,7 +48,7 @@ You can add information the end-user should know to the component [Documentation
 
 When considering intellectual property (IP) in the Mendix Marketplace, follow these guidelines:
 
-* Do not copy any text, names,or other data from other components published i the Marketplace, since you do not own the copyright. Do not create unnecessary ambiguity or confusion that would mislead consumers of Marketplace components.
+* Do not copy any text, names,or other data from other components published in the Marketplace, since you do not own the copyright. Do not create unnecessary ambiguity or confusion that would mislead consumers of Marketplace components.
 * Do not mention components published by others within your content on the Marketplace. 
 * Make sure your component documentation only includes intellectual property that you have created. Your component should not include information or content published by others on the Marketplace, as this may lead to removing your component from the Marketplace. This also means other components can also be removed if they are using your component information or content. 
 * If you come across instances of intellectual property abuse, let us know at someemail@mendix.com.
@@ -274,7 +274,7 @@ To update content that has already been published, follow these steps:
 As the Mendix Marketplace grows, it is important for users to be able to find up-to-date and relevant components. In order to reduce the likelihood that users find outdated or obsolete components, we review Marketplace content and evaluate for the following points:
 
 * Whether the component supports the versions of Studio Pro that Mendix supports (meaning, the current major version plus two previous major versions – for more information, see [LTS, MTS & Monthly Releases](/releasenotes/studio-pro/lts-mts/))
-* Whether the component has been updated recently or not for ages (for example, it was published in2016 and has not been updated since)
+* Whether the component has been updated recently or not for ages (for example, it was published in 2016 and has not been updated since)
 * Whether it is being actively used or if it has limited usage or very few downloads, reviews, or ratings
 
 For a component that is outdated based on the above points, this is the review and remediation process: 

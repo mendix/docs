@@ -100,162 +100,23 @@ With our Multi-Cloud strategy, Mendix allows the apps that you build to be deplo
 
 The full stack is depicted in the table below. This indicates which components are **Mendix** supported, or supported by a **Mendix Partner** or 3rd party. If no support is indicated, then you will need to arrange support of this component yourself. Each of the components is described in more detail in [Components of the Mendix Stack](#components), below.
 
-<!-- TABLE BELOW CONVERTED TO HTML SO THAT FIRST COLUMN CAN BE WIDER
-| | Public Cloud | Cloud Dedi&shy;cated | Private Cloud - Con&shy;nected | Private Cloud - Stand&shy;alone | SAP BTP | Cloud Foundry/ Docker & Kuber&shy;netes | Tradi&shy;tional |
+| Stack (see [below](#components) for more information) | Public Cloud | Cloud Dedi&shy;cated | Private Cloud - Con&shy;nected | Private Cloud - Stand&shy;alone | SAP BTP or Tencent | Cloud Foundry/ Docker & Kuber&shy;netes | Tradi&shy;tional² |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Appli&shy;cation** | | | | | | | |
 | **Platform Support&shy;ed Marketplace content** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
 | **Commun&shy;ity Support&shy;ed Marketplace content** | | | | | | | |
 | **Runtime** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
 | **Deploy&shy;ment Pipe&shy;line** | Mendix | Mendix | Mendix | | | | |
-| **Logs/ Metrics** | Mendix | Mendix | | | Mendix Partner | | |
+| **Logs/ Metrics** | Mendix | Mendix | | | Mendix Partner¹ | | |
 | **Appli&shy;cation Opera&shy;tion** | Mendix | Mendix | Mendix | Mendix | Mendix | | |
 | **Buildpack** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
-| **Contain&shy;er Platform/ OS/ Java/ Web Server** | Mendix | Mendix | | | Mendix Partner | | |
-| **Infra&shy;structure** | Mendix | Mendix | | | Mendix Partner | | |
-| **Database/ File Storage/ Network** | Mendix | Mendix | | | Mendix Partner | | |
--->
-
-<table>
-<thead>
-<tr>
-<!-- Width added to first column -->
-<th class="has-expand" width=25%><div class="expand-table"><i class="glyphicon glyphicon-fullscreen"></i></div>Stack (see <a href="#components">below</a> for more information)</th>
-<th>Public Cloud</th>
-<th>Cloud Dedi­cated</th>
-<th>Private Cloud – Con­nected</th>
-<th>Private Cloud – Stand­alone</th>
-<th>SAP BTP<br />or<br />Tencent</th>
-<th>Cloud Foundry/ Docker &amp; Kuber­netes</th>
-<th>Tradi­tional</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><strong>Appli­cation</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td><strong>Platform Support­ed Marketplace content</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-</tr>
-
-<tr>
-<td><strong>Commun­ity Support­ed Marketplace content</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td><strong>Runtime</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-</tr>
-
-<tr>
-<td><strong>Deploy­ment Pipe­line</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td><strong>Logs/ Metrics</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td></td>
-<td></td>
-<td>Mendix Partner¹</td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td><strong>Appli­cation Opera­tion</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td><strong>Buildpack</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-</tr>
-
-<tr>
-<td><strong>Contain­er Platform/ OS/ Java/ Web Server</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td></td>
-<td></td>
-<td>Mendix Partner¹</td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td><strong>Infra­structure</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td></td>
-<td></td>
-<td>Mendix Partner¹</td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td><strong>Database/ File Storage/ Network</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td></td>
-<td></td>
-<td>Mendix Partner¹</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+| **Contain&shy;er Platform/ OS/ Java/ Web Server** | Mendix | Mendix | | | Mendix Partner¹ | | |
+| **Infra&shy;structure** | Mendix | Mendix | | | Mendix Partner¹ | | |
+| **Database/ File Storage/ Network** | Mendix | Mendix | | | Mendix Partner¹ | | |
 
 ¹Support will go through [SAP Support](https://launchpad.support.sap.com/#/incident/create/prefilled/comp_name=XX-PART-MDX-RAD) or Tencent Support.
+
+²Traditional means deploying directly on Windows or Linux without using containerization.
 
 In the diagrams below, the following colors are used:
 

@@ -29,7 +29,7 @@ You can use this app service on Mendix cloud that enables you to easily perform 
 
 This app service enables doing the following:
 
-* Customize text tranlation
+* Customize text translation
 * Switch different language options
 
 ### 1.3 Prerequisites
@@ -84,7 +84,7 @@ The **Translator** entity is a conceptual entity that incorporates all the infor
 
 | Attribute | Description |
 | --- | --- |
-| **InputText** | The input text string. |
+| **InputText** | The input text string (minimum length: 1, maximum length: 5000). |
 | **OutputText** | The output text string. |
 
 #### 3.1.2 Language
@@ -96,7 +96,7 @@ The **Language** entity is an entity referenced from **Translator** that incorpo
 | Attribute | Description |
 | --- | --- |
 | **Name** | The language name, equivalent to the locale name. |
-| **Code** | The [language code](#supported-languages) that assigns letters or numbers as identifiers or classifiers for languages. |
+| **Code** | The [language code](#supported-languages) that assigns letters or numbers as identifiers or classifiers for languages (minimum length: 2, maximum length: 5). |
 
 ### 3.2 Constants {#constants}
 

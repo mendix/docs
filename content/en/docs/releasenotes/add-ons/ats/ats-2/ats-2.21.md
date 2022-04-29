@@ -5,7 +5,7 @@ parent: "ats-2"
 weight: 79
 ---
 
-## 2.21
+## 2.21.0
 
 **Release date: December 1st, 2020**
 

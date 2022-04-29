@@ -486,5 +486,4 @@ The Native Builder will locally run MxBuild. The output is a *bundles.js* file w
 * [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/)
 * [JavaScript Actions Reference Guide](/refguide8/javascript-actions/)
 * [How To Build JavaScript actions](/howto8/extensibility/build-javascript-actions/)
-* Google's [Read and write NFC Tags NFC Tools](https://play.google.com/store/apps/details?id=com.wakdev.wdnfc)
 * GitHub's [NFC React Native Library](https://github.com/whitedogg13/react-native-nfc-manager)

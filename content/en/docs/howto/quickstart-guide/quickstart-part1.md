@@ -134,3 +134,30 @@ Next we want to replace some of the auto-generated content inside the template g
 1. Delete all the display widgets inside the grid.
 1. Right-click in the empty space and select **Add building block**.
 1. Search for and select **Card with image**.
+
+A building block is a collection of pre-styled display widgets. A building block is similar to a component in React.js. Building blocks are data agnostic, meaning they are created without data and you need to link the relevant data sources for the building block’s components when including them in the page.
+
+Next you will connect your data to the display widgets because your page is currently displaying only static resources:
+
+{{< figure src="/attachments/howto/quickstart-guide/part1/REPLACE_THIS.png" >}}
+
+To start, replace the static image with the image the user uploads to the database: 
+
+1. Right-click on the static image viewer and click **Convert to dynamic image**. 
+1. Right-click on the image viewer again, click **Select datasource**, and then search for your **Picture** entity (click **Yes** when prompted to automatically fill the contents of the widget).
+
+Your **Images** will now be displayed from the database, but the **Labels** on the page will still be displaying their default text. To fix this, do the following:
+
+1. Double-click to open the properties of the label captioned **Card title**.
+1. Click the **Edit** button next to **Caption**.
+1. In the new window, replace the caption field with a place holder (a number in curly braces starting from 1). 
+1. Click to add a new **Parameter** and select the **Title** attribute.
+1. Repeat this process for the label below with the caption **Supporting text**, making sure to select the **Description** attribute this time.
+
+## 6 Defining Logic Using Microflows
+
+Only 1 step left before you can run and test out your app. We have created a place to store our images, a page to display them on and most of the functionality for creating, editing and deleting image has been automatically handled. But what if you want you app to do some custom logic? In this case we want to validate the user has entered text for the Title and Description fields before they click save. To do this in Mendix we can use a Microflow.
+
+What is a Microflow? A Microflow is a piece of custom logic, which is represented visually in Business Process Modelling Notation (Or BPMN). Think of a function in traditional code, except written visually. When your app compiles, it translates all your Microflows into code which is executable by your browser. Microflows are based on Java and are executed on the server, this means a connection is required in order for it to execute. A microflow can only have 1 start point, but can often have multiple end points.
+
+Open the Page “Picture_NewEdit” using the App Explorer, and scroll down to the save button at the bottom of the page. Right click the button and choose to “Edit on click action”. Set the on click action type to call a microflow, and choose to create a new microflow in the Native Mobile module, called “ACT_ValidateAndSavePicture” (Click the show button to quickly navigate to the new Microflow)

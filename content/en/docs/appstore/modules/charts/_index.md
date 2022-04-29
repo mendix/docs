@@ -177,8 +177,6 @@ This object will be merged with default settings and passed to underlying [plotl
 
 
 
-## 
-
 ## Chart specific settings
 
 ### Column Chart
@@ -289,7 +287,7 @@ Optional expression that when evaluated will return uniq color for single series
 
 Controls hole radius at the center of the chart. When value is zero the hole is not visible.
 
-## Migration from Charts v1 and v2 to Charts Module
+## Migration to Charts v3
 
 In this guide we would like to give you instructions on how to migrate Charts,
 and it's widget to new version.
@@ -297,7 +295,7 @@ Don't be afraid this just easy as copy and paste few files and directories and s
 take just couple of minutes.
 
 Again, this steps only required if you're already using Charts widget, and you want to update
-this widget to version 2. If you're starting new project you don't need to do any extra steps ---
+this widget to **version 3.x.x**. If you're starting new project you don't need to do any extra steps ---
 just download latest Charts widget from marketplace.
 
 To update your Charts widget follow steps below.
@@ -346,7 +344,6 @@ And we are done! Now all what's left is to install new version of Charts widget.
 
 So, now you can open Studio Pro, go to marketplace and install brand new Charts module.
 
-<!-- Add screenshots of marketplace with Charts module -->
 
 After this step you need to synchronize open project and file system. You can do it by pressing **F4** on the keyboard or through the app menu by running **App** > **Synchronize App Directory** command. This action will notify Studio Pro about new Chart widgets. 
 

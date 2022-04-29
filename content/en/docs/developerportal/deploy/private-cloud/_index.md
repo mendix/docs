@@ -16,7 +16,7 @@ Your organization may have a requirement to use a private cloud, perhaps as part
 
 You can use Mendix for Private Cloud with the *connected* option to keep the simplicity of one-click deployments from the Developer Portal, or utilize the *standalone* Mendix Operator to deploy Mendix apps through your own DevOps process, which is particularly useful for private clouds with an *air-gap* isolating them from the internet. See [Connected and Standalone Clusters](#connected-standalone), below, for more information.
 
-Please see [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) for a list of platforms supported by Mendix for Private Cloud.
+Please see [Supported Providers](/developerportal/deploy/private-cloud-badlink-supported-environments/) for a list of platforms supported by Mendix for Private Cloud.
 
 There are two steps required to achieve this, listed below.
 
@@ -53,7 +53,7 @@ If you have chosen to register a connected cluster, the Mendix Gateway Agent wil
 
 Using this channel, any Mendix user who has been given the correct authority can pass instructions to the Mendix Operator and receive status information about the cluster. This includes instructions needed to deploy an app, or to configure the environment.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/mx4pc-architecture.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/mx4pc-badlinkarchitecture.png" >}}
 
 ### 2.2 Standalone Architecture
 

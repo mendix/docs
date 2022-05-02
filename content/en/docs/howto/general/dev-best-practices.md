@@ -113,7 +113,7 @@ Every app has documents that are needed for specific entities. Think of overview
 
 ### 3.4 Microflows
 
-Generally, [microflow](/refguide/microflows/) names should include the type of event which triggers them, the name of the main entity being processed, and the operation being performed: **{PREFIX}\_{Entity}\_{Operation}**. For example,  **ACT_Vendor_StartWorkflow**.
+Generally, [microflow](/refguide/microflows/) names should include the type of event which triggers them, the name of the main entity being processed, and the operation being performed: **{PREFIX}\_{Entity}\_{Operation}**. For example,  **Act_Vendor_StartWorkflow**.
 
 There are exceptions, such as where there is no main entity, or there is another reason to use a different name to improve understandability. The important thing is to make sure the name of the microflow clearly indicates its purpose.
 
@@ -129,13 +129,13 @@ The microflows related to such an event handler should have the following prefix
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
-| Before commit   | BCO\_{Entity name} |
-| After commit    | ACO\_{Entity name} |
-| Before create   | BCR\_{Entity name} |
-| After create    | ACR\_{Entity name} |
-| Before delete   | BDE\_{Entity name} |
-| After delete    | ADE\_{Entity name} |
-| Before rollback | BRO\_{Entity name} |
+| Before commit   | BCo\_{Entity name} |
+| After commit    | ACo\_{Entity name} |
+| Before create   | BCr\_{Entity name} |
+| After create    | ACr\_{Entity name} |
+| Before delete   | BDe\_{Entity name} |
+| After delete    | ADe\_{Entity name} |
+| Before rollback | BRo\_{Entity name} |
 | After rollback  | ARO\_{Entity name} |
 
 #### 3.4.2 Calculated Attribute Microflows
@@ -144,7 +144,7 @@ For attributes, you can choose to store the value in the database or to calculat
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
-| Calculation     | CAL\_{Entity name}\_{Attribute name}    |
+| Calculation     | Cal\_{Entity name}\_{Attribute name}    |
 
 #### 3.4.3 Page-Based Microflows
 
@@ -152,11 +152,11 @@ For attributes, you can choose to store the value in the database or to calculat
 
 | Event Type                | Prefix             | Used In |
 |---------------------------|--------------------|---- |
-| On enter event            | OEN\_{Purpose}   | Input elements   |
-| On change event           | OCH\_{Purpose}   | Input elements   |
-| On leave event            | OLE\_{Purpose}   | Input elements   |
+| On enter event            | OEn\_{Purpose}   | Input elements   |
+| On change event           | OCh\_{Purpose}   | Input elements   |
+| On leave event            | OLe\_{Purpose}   | Input elements   |
 | Data source               | DS\_{Purpose}    | Data view, list view, data grid, template grid |
-| Action button             | ACT\_{Purpose}   | Menu item, navigation item, microflow and action button, drop-down button<br />(“IVK\_” is used historically) |
+| Action button             | Act\_{Purpose}   | Menu item, navigation item, microflow and action button, drop-down button<br />(“IVK\_” is used historically) |
 
 #### 3.4.4 Workflow Microflows
 
@@ -170,19 +170,19 @@ You can call a microflow from a [workflow](/refguide/workflows/). See the list o
 
 #### 3.4.5 Validation Microflows
 
-Microflows that are used for [data validation](/howto/data-models/setting-up-data-validation/) use the prefix **VAL_**.
+Microflows that are used for [data validation](/howto/data-models/setting-up-data-validation/) use the prefix **Val_**.
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
-| Validation      | VAL\_                 |
+| Validation      | Val\_                 |
 
 #### 3.4.6 Scheduled Event Microflows
 
-For the microflow that you use in your [scheduled events](/refguide/scheduled-events/), use the prefix **SCE_**. The event itself should have a descriptive name since it will be shown in the cloud configuration portal. The scheduled event and the microflow should have the same name.
+For the microflow that you use in your [scheduled events](/refguide/scheduled-events/), use the prefix **ScE_**. The event itself should have a descriptive name since it will be shown in the cloud configuration portal. The scheduled event and the microflow should have the same name.
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
-| Scheduled Event | SCE\_                 |
+| Scheduled Event | ScE\_                 |
 
 #### 3.4.7 App Microflows
 
@@ -190,9 +190,9 @@ Your [app settings](/refguide/project-settings/) provide three events that can t
 
 | Event Type      | Microflow Name | Sub-Microflow Prefix |
 |-----------------|----------------|----------------------|
-| After startup   | AfterStartUp   | ASU\_                 |
-| Before shutdown | BeforeShutDown | BSD\_                 |
-| Health check    | HealthCheck    | HCH\_                 |
+| After startup   | AfterStartUp   | ASu\_                 |
+| Before shutdown | BeforeShutDown | BSd\_                 |
+| Health check    | HealthCheck    | HCh\_                 |
 
 #### 3.4.8 Unit Test Microflows
 
@@ -234,7 +234,7 @@ For integrations, you have the following types of microflow:
 
 | Document Type                             | Prefix    |
 |-------------------------------------------|-----------|
-| Enumeration                               | ENUM\_ |
+| Enumeration                               | Enum\_ |
 
 #### 3.5.3 Pages
 
@@ -268,8 +268,8 @@ Documents used to support integration should have the prefixes listed below.
 
 | Document Type                             | Prefix |
 |-------------------------------------------|--------|
-| Import mapping                            | IMM\_  |
-| Export mapping                            | EXM\_  |
+| Import mapping                            | ImM\_  |
+| Export mapping                            | ExM\_  |
 | XML schema definition                     | XSD\_  |
 | JSON structure                            | JSON\_ |
 | Deeplink                                  | DL\_   |

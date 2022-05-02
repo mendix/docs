@@ -29,7 +29,7 @@ This app service is an [add-on module](/refguide/consume-add-on-modules-and-solu
 ### 1.3 Prerequisites
 
 * Your organization should allow you to use Webhooks in Microsoft Teams.
-* The app service can only be used with Studio Pro 9 versions starting from [9.10](/releasenotes/studio-pro/9.10/).
+* The app service can only be used with Studio Pro 9 versions starting from [9.12.1](/releasenotes/studio-pro/9.12/).
 
 ## 2 Installation
 

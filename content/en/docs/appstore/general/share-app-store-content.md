@@ -51,7 +51,7 @@ When considering intellectual property (IP) in the Mendix Marketplace, follow th
 * Do not copy any text, names,or other data from other components published in the Marketplace, since you do not own the copyright. Do not create unnecessary ambiguity or confusion that would mislead consumers of Marketplace components.
 * Do not mention components published by others within your content on the Marketplace. 
 * Make sure your component documentation only includes intellectual property that you have created. Your component should not include information or content published by others on the Marketplace, as this may lead to removing your component from the Marketplace. This also means other components can also be removed if they are using your component information or content. 
-* If you come across instances of intellectual property abuse, let us know at someemail@mendix.com.
+* If you come across instances of intellectual property abuse, let us know at *AppServices_Supplier_Team@mendix.com*.
 
 For more information, see [Applying IP Protection](/appstore/creating-content/sol-ip-protection/).
     
@@ -136,12 +136,12 @@ Follow these steps to describe your content:
 	* [Apache V2](https://www.apache.org/licenses/LICENSE-2.0)
 	* [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.en.html) – please note that everything licensed under GNU GPL is public and that GNU GPL has strong copyleft effect, which means that all consuming applications should make their code public as well; using this license is not recommended
 	* [Mendix EULA](https://www.mendix.com/terms-of-use/) – this license is to be used when the component is released by Mendix
-	* [MindSphere Development License Agreement](https://siemens.mindsphere.io/en/terms)
+	* [MindSphere Development License Agreement](https://siemens.mindsphere.io/en/terms) – this license is to be used when the component is released by Siemens
 	* [MIT](https://opensource.org/licenses/MIT)
-	* SDISW Development License Agreement for Mendix Sample Apps EXTERNAL
-	* SDISW End-User License Agreement for Mendix Connectors and Widgets
-	* SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL
-	* SDISW End-User License Agreement for Mendix Sample Apps
+	* SDISW Development License Agreement for Mendix Sample Apps EXTERNAL – this license is to be used when the component is released by Siemens
+	* SDISW End-User License Agreement for Mendix Connectors and Widgets – this license is to be used when the component is released by Siemens
+	* SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL – this license is to be used when the component is released by Siemens
+	* SDISW End-User License Agreement for Mendix Sample Apps – this license is to be used when the component is released by Siemens
 
 	{{% alert color="info" %}}After you select a license, make sure you add a specific *license.txt* file in your artifacts (meaning, in the *.mpk*).
 	/alert %}}
@@ -279,10 +279,10 @@ As the Mendix Marketplace grows, it is important for users to be able to find up
 
 For a component that is outdated based on the above points, this is the review and remediation process: 
 
-1. Mendix sends a notification to the owner of the outdated component, who then has to submit an update within 30 days in order for their component to remain active on the Marketplace. This update needs to be based on support for an active version of Studio Pro.
+1. Mendix sends a notification to the owner of the outdated component and the [Mendix Admin](/developerportal/control-center/#company), who then has to submit an update within 30 days in order for their component to remain active on the Marketplace. This update needs to be based on support for an active version of Studio Pro.
 2. Mendix sends two reminders during these 30 days: the first on the 15th day, and the second on the 25th day.
-3. If the component owner is unable to make the required update within the stipulated timeframe, Mendix unpublishes their component from the Marketplace. Unpublishing means the component is not listed on the Marketplace, but a copy of the component remains in the database.
-4. If the owner wants to restore their unpublished component on the Marketplace, they make the required update and create a [Mendix Support](/developerportal/support/) request.
+3. If the component owner or Mendix Admin is unable to make the required update within the stipulated timeframe, Mendix unpublishes their component from the Marketplace. Unpublishing means the component is not listed on the Marketplace, but a copy of the component remains in the database.
+4. If the owner or Mendix Admin wants to restore their unpublished component on the Marketplace, they make the required update and create a [Mendix Support](/developerportal/support/) request.
 
 ## 7 Read More
 

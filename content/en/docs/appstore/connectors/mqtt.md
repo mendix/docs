@@ -21,7 +21,7 @@ The MQTT Connector consists of microflow actions that enable doing the following
 
 ### 1.2 Features
 
-The MQTT Connector allows you to publish to, subscribe to, and unsubscribe from an MQTT broker.
+The MQTT connector allows you to publish to, subscribe to, and unsubscribe from an MQTT broker.
 
 ## 2 Configuration {#configuration}
 
@@ -37,7 +37,7 @@ If an MQTT broker needs a username and password for connection, you set credenti
 
 Setting the **Authentication method** to **NONE** indicates that authentication is not required to connect to the MQTT broker. 
 
-**Password** is encrypted using **EncryptionKey** constant. For better security, it is advised to change the **EncryptionKey** constant after module import.
+The **Password** is encrypted using the **EncryptionKey** constant. For better security, it is advised to change the **EncryptionKey** constant after importing the MQTT connector.
 
 #### 2.1.2 Enabling SSL
 

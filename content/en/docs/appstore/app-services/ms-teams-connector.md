@@ -103,7 +103,7 @@ Before you deploy an app, you should configure the binding keys in your app as f
 
 ### 4.1 Configuring Webhooks in the Communication Services Console
 
-1. In Microsoft Teams, [create a Webhook URL for the channel](https://docs.servicenow.com/bundle/quebec-it-service-management/page/product/site-reliability-ops/task/create-webhook-url-channel-ms-teams.html) to which you want to send messages. 
+1. In Microsoft Teams, [create a Webhook URL for the channel](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook) to which you want to send messages. 
 2. Log into the Marketplace.
 3. Go to **My Marketplace** and then do as follows:
 

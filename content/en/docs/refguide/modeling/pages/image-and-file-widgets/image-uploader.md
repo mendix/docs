@@ -53,9 +53,11 @@ Default: *5*
 
 #### 2.4.2 Allowed Extensions {#allowed-extensions}
 
-You can specify file extensions that users are allowed to upload. If no extension is specified, all file extensions are allowed. Separate multiple extensions by a semi-colon (for example, `txt;doc`).
+You can specify file extensions that users are allowed to upload. If no extension is specified, all file extensions are allowed. Separate multiple extensions by a semi-colon (for example, `jpeg;png`).
 
 If a file with an extension that is not allowed is selected, a [system text](/refguide/system-texts/) for **File manager/dynamic image** > **Error: incorrect file extension** will be shown below the file manager.
+
+Uploaded images are read by the runtime. We currently use the [TwelveMonkeys ImageIO library](https://haraldk.github.io/TwelveMonkeys/) which supports a wide variety of image formats.
 
 #### 2.4.3 Thumbnail Width
 

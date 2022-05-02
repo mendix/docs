@@ -47,8 +47,6 @@ There are a few other differences between the way you develop and deploy apps in
 * In Mendix Cloud v4, there are some circumstances in which your app can run out of file connections
     * The default number of file connections is 50, but this can be increased and you may need to ensure that file connections are not being held open unnecessarily – see the [Other Considerations](/developerportal/deploy/mxcloudv4/#other-considerations) section of *Mendix Cloud v4* for further advice
 * In Mendix Cloud v4, there are some monitoring features which are available in v3 which are not currently available – in particular:
-    * File storage usage is not visible
-    * Application CPU alerts are not sent
     * Archived logs can only be downloaded, not viewed in the browser
     * The database status is not visible on the node details screen
 * Mendix Cloud v4 only supports TLS 1.2 or above for incoming requests

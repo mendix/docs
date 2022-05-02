@@ -86,4 +86,37 @@ Your app needs a button which allows the user to take a picture. Instead of a re
 1. Make sure the on click action is set to **Call a nanoflow**.
 1. Click **Nanoflow** > **Select** then create a new nanoflow called **ACT_TakeNewPicture**.
 
-[Nanoflows](/refguide/nanoflows/) are the native mobile equivalent of microflows, but with several key differences. Nanoflows are offline-first, meaning they cannot always be assured of a data connection when executing. Therefore, certain functionality which is available in microflows is not available in nanoflows. This is because nanoflows are based on JavaScript and execute on mobile devices instead of the server. Nanoflows also interact with the database on the user's mobile device, which is a copy of the server's database. All database transactions need to be synchronized from the device to the server in order for the data to reflect online.
+[Nanoflows](/refguide/nanoflows/) are the native mobile equivalent of microflows, but with several key differences. Nanoflows are offline-first, meaning they can execute without an online data connection. Therefore, certain functionality which is available in microflows is not available in nanoflows. This is because nanoflows are based on JavaScript and execute on mobile devices instead of the server. Nanoflows also interact with the database on the user's mobile device, which is a copy of the server's database. All database transactions need to be synchronized from the device to the server in order for the data to reflect online.
+
+As you look at your new **ACT_TakeNewPicture** nanoflow, do the following:
+
+1. Drag and drop a **Create object** action from the **Toolbox** onto the nanoflow. 
+1. Double-click the create object action and select the entity type as **Picture**. 
+1. Drag and drop a **Take Picture** action from the **Toolbox** onto the nanoflow after the create object activity:
+
+    {{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
+
+1.  Configure the **Take Picture** action by double-clicking it and configuring the properties like this:
+    1. Picture: $NewPicture
+    1. Picture source: empty
+    1. Picture quality: original
+    1. Maximum width: empty
+    1. Maximum height: empty
+    1. Use return value: yes
+    1. Variable name: PictureTaken
+
+    {{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
+
+Finally you need to create a page in which the user can view and edit their new picture:
+
+1. Add a **Show page** action to the nanoflow. 
+1. Open the action's properties:
+    1. Select the **Object to pass** as the **$NewPicture entity**. 
+    1. Click **Page** > **Select** and choose to create a new page. 
+    1. Name the page *Picture_NewEdit_Native*.
+    1. Change the profile type to **Native mobile** at the top of the screen.
+    1. Select the **Edit with Dataview** template.
+
+You should see the new page which should look like this:
+
+{{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}

@@ -45,13 +45,19 @@ To send your runtime information to AppDynamics, you need to set it up using env
 
         Set to `true` to enable specific Mendix metrics. If this is not set, or set to `false` AppDynamics will only receive the general AppDynamics metrics, provided by the AppDynamics Java Agent.
 
+        *Default: `false`*
+
     2. APPDYNAMICS_CONTROLLER_PORT
 
         The HTTP(S) port of the AppDynamics Controller. This is the port used to access the AppDynamics browser-based user interface. If **APPDYNAMICS_CONTROLLER_SSL_ENABLED** is set to `true`, specify the HTTPS port of the Controller; otherwise specify the HTTP port.
 
+        *Default: `443`*
+
     3. APPDYNAMICS_CONTROLLER_SSL_ENABLED
 
         Set to `true` if the agent should use SSL (HTTPS) to connect to the controller.
+
+        *Default: `true`*
 
     4. APPDYNAMICS_CONTROLLER_HOST_NAME
 
@@ -65,6 +71,8 @@ To send your runtime information to AppDynamics, you need to set it up using env
 
         A unique name to identify all the metrics coming from your app. We recommend using the app name.
 
+        *Default: App Name*
+
     6. APPDYNAMICS_AGENT_ACCOUNT_NAME
 
         The name of your AppDynamics account. This can be found in the **license** section of your AppDynamics Controller dashboard.
@@ -75,13 +83,17 @@ To send your runtime information to AppDynamics, you need to set it up using env
 
     8. APPDYNAMICS_AGENT_NODE_NAME
 
-        This is how you will identify which node the metrics are coming from. We recommend using the app name.
+        This is how you will identify which node the metrics are coming from.
 
-        The value of the CF_INSTANCE_ID variable will be appended to the node name. For example, if APPDYNAMICS_AGENT_NODE_NAME is set to  `my-app` and the node has multiple instances, the AppDynamics agent will be configured as `my-app-0`, `my-app-1`, … for the different instances.
+        The value of the CF_INSTANCE_ID variable will be appended to the node name. For example, if APPDYNAMICS_AGENT_NODE_NAME is set to  `node` and the node has multiple instances, the AppDynamics agent will be configured as `node_0`, `node_1`, … for the different instances.
+
+        *Default: `"node"`*
 
     9. APPDYNAMICS_AGENT_TIER_NAME
 
         This allows you to classify different environments of your app. We recommend using the **Environment ID** to distinguish between *Test*, *Acceptance*, and *Production* environments. You can find this on the **General** tab of the [Environment Details](/developerportal/deploy/environments-details/) page of your app environment.
+
+        *Default: Environment ID of the app*
 
 For more information on Nodes and Tiers in AppDynamics, see the [Overview of Application Monitoring](https://docs.appdynamics.com/22.1/en/application-monitoring/overview-of-application-monitoring)(https://docs.appdynamics.com/22.1/en/application-monitoring/overview-of-application-monitoring#OverviewofApplicationMonitoring-Nodes) in the AppDynamics documentation.
 
@@ -93,16 +105,11 @@ For more information on Nodes and Tiers in AppDynamics, see the [Overview of App
 
 ### 4.1 AppDynamics Default Values
 
-Mendix does not provide any default values. If any of the following environment variables are set for your app, you will need to provide all of them:
+Mendix provides default values for most of the AppDynamics environment variables. However, the following variables cannot be defaulted and if any of the following environment variables are set for your app, you will need to provide all of them:
 
-* APPDYNAMICS_CONTROLLER_PORT
-* APPDYNAMICS_CONTROLLER_SSL_ENABLED
 * APPDYNAMICS_CONTROLLER_HOST_NAME
-* APPDYNAMICS_AGENT_APPLICATION_NAME
 * APPDYNAMICS_AGENT_ACCOUNT_NAME
 * APPDYNAMICS_AGENT_ACCOUNT_ACCESS_KEY
-* APPDYNAMICS_AGENT_NODE_NAME
-* APPDYNAMICS_AGENT_TIER_NAME
 
 ### 4.2 Tagging AppDynamics Metrics
 

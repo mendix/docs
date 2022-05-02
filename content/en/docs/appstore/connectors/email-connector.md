@@ -185,9 +185,9 @@ When duplicating this microflow, do not change input parameters’ name and data
 {{% /alert %}}
 
 * **onSubscriptionStateChangedMicroflow** – a microflow that will be triggered when subscription state is changed state can any of the following:
-     * SUBSCRIPTIONFAILED
-     * CONNECTIONTOSERVERLOST
-     * CONNECTIONRETRYEXHAUSTED
+     * `SUBSCRIPTIONFAILED`
+     * `CONNECTIONTOSERVERLOST`
+     * `CONNECTIONRETRYEXHAUSTED`
      Make sure that microflow is accepting the string parameters `State` and `Comment`. Refer sample microflow `Sample_OCH_SubscriptionStateChanged`,
      {{% alert color="warning" %}}
      When duplicating this microflow, do not change input parameters’ name and data type.

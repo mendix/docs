@@ -139,7 +139,7 @@ The output is described in the table below:
 {{% alert color="warning" %}}
 The function will output an error for the following:
 * When the start position of the substring is after the last character in the string
-* When the desired length of the result is larger than the length of the substring
+* When the desired length of the result is longer than the substring
 {{% /alert %}}
 
 ### 5.3 Example

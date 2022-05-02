@@ -117,6 +117,43 @@ Finally you need to create a page in which the user can view and edit their new 
     1. Change the profile type to **Native mobile** at the top of the screen.
     1. Select the **Edit with Dataview** template.
 
-You should see the new page which should look like this:
+You should see the new page:
 
 {{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
+
+Just like before, you need to validate that the user has entered the title and description. Instead of validating that data in a nanoflow, you can simply configure validation on the text boxes themselves:
+
+1. Double-click the **Title** field to open its properties. 
+1. Find **Validation Type** at the bottom. 
+1. Set **Validation Type** to **Required** and provide the message *Please provide a title for this Picture*.
+1. Repeat this for the **Description** field, and provide a unique message to the user.
+
+The final thing to do is ensure all the data captured by the user is synchronized from the device to the server. You can do this quickly by editing the properties of this page's save button: 
+
+1. Double-click the **Save** button. 
+1.  Set **Auto-synchronize** to **Yes**:
+
+    {{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
+
+All done! You can now run your app and test all the features you have built. To test your native mobile app without creating a deployable package, do the following:
+
+1. Open the Make it Native app on your mobile device,
+1. Click the drop-down menu in Studio Pro and select **View app on your device**
+1. Click the View Native Mobile App tab
+1. Scan the QR code with the Make it Native app on your mobile device to begin testing.
+
+This will automatically begin testing. If you have issues, see [Troubleshoot Common Native Mobile Issues](/howto/mobile/common-issues/) for troubleshooting information.
+
+When we tested our native mobile photo app, we were lucky to sight a stegosaurus nearby:
+
+{{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
+{{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
+{{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
+
+After taking a photo with your native mobile app and tapping the **Save** button, you should be able to see your new pictures automatically appear in the responsive profile after reloading the page in your browser:
+
+{{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
+
+Congratulations on successfully completing the Quickstart guide! You are definitely on your way to succeed with the Mendix platform.
+
+To continue learning, go to [Mendix Academy](https://academy.mendix.com/) and choose a learning path that interests you (we recommend the [Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) for new users who are also experienced developers) or go the [Mendix Documentation](https://docs.mendix.com/) home page to learn more about the Mendix topics which interest you most.

@@ -1,5 +1,6 @@
 ---
 title: "Microsoft Teams Connector"
+url: /appstore/app-services/ms-teams-connector/
 category: "App Services"
 description: " "
 tags: ["marketplace", "marketplace component", "app service", "microsoft", "microsoft teams", "connector"]

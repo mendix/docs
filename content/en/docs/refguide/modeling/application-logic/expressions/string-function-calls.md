@@ -137,7 +137,9 @@ The output is described in the table below:
 | A part of the original string, starting at the start position with a length equal to the desired length. If no desired length is specified, will return a substring starting at the start position and ending at the end of the string. | String |
 
 {{% alert color="warning" %}}
-If the length of the string is less than the start position of the string, the function will output an error. The same will happen if the (optional) desired length of the result is larger than the length of the substring.
+The function will output an error for the following:
+* When the start position of the substring is larger than the position of the last character
+* When the desired length of the result is larger than the length of the substring
 {{% /alert %}}
 
 ### 5.3 Example

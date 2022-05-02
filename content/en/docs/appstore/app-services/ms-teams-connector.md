@@ -47,10 +47,11 @@ A trial gives everyone in your company one-month access to the app service. To s
 3. Select the check box to agree to the **Terms & Conditions**.
 4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used.
-6. Click the link in the email to go to the [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) page and log in there. This page shows all the products that you have trials for.
-7. Click **Microsoft Teams Connector** to open the [service management dashboard](/appstore/general/app-store-overview/#service-management-dashboard).
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create the **LicenseSecret** and the **LicenseKey**. Save them somewhere safe. Later you will need to [configure the LicenseSecret and the LicenseKey](/appstore/app-services/intelligent-document-service/#configure-keys) in your app.
-
+6. Click the link in the email to go to the [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) page and log in there. This page shows all the products that you have trials for.
+7. Click **Microsoft Teams Connector** to open the **service management dashboard**.
+8. In the service management dashboard, click on **Create Binding Keys** to generate the **LicenseSecret** and the **LicenseKey**. Save them somewhere safe. Later you will need to configure the LicenseSecret and the LicenseKey in your app.
+    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/create_binding_keys.png" >}}
+    
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/binding-key-generation.png" >}}
 
 #### 2.1.2 Starting a Subscription
@@ -60,11 +61,9 @@ A trial gives everyone in your company one-month access to the app service. To s
 3. Select your subscription plan.
 4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Owner will receive an email that says the app service is ready to be used.
-6. Click the link in the email to go to the [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **Microsoft Teams Connector** to open the [service management dashboard](/appstore/general/app-store-overview/#service-management-dashboard).
-8.  Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create the **LicenseSecret** and the **LicenseKey**. Save them somewhere safe. Later you will need to [configure the LicenseSecret and the LicenseKey](/appstore/app-services/intelligent-document-service/#configure-keys) in your app.
-    
-    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/binding-key-generation.png" >}}
+6. Click the link in the email to go to the [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
+7. Click **Microsoft Teams Connector** to open the service management dashboard.
+8. To generate binding keys, follow step no 8 in for Starting a Trial section.
 
 {{% alert type="info" %}}We recommend that you **Edit Instance Name** for your subscription on the service management dashboard. This is a good practice if you have purchased multiple subscriptions of a service.{{% /alert %}}
 
@@ -107,13 +106,13 @@ Before you deploy an app, you should configure the binding keys in your app as f
 2. Log into the Marketplace.
 3. Go to **My Marketplace** and then do as follows:
 
-   * If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
-   * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+   * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+   * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
 
 4. Click **Microsoft Teams Connector** to open the service management dashboard.
-5. Click **Manage Instances**. You are redirected to the **Communication Services Console** login page.
+5. Click **Manage Instances**. You are redirected to the [Communication Services Console](https://communication-appservices.mendixcloud.com/login.html) login page.
 
-6. Sign in to **Communication Services Console** using Mendix SSO.
+6. Sign in to [Communication Services Console](https://communication-appservices.mendixcloud.com/login.html) using Mendix SSO.
 
    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/console-login-view.png" >}}
 
@@ -229,8 +228,8 @@ The **Usage Dashboard** shows the real-time statistics about the usage of an app
 1. Log into the Marketplace.
 2. Go to **My Marketplace** and then do as follows:
 
-   * If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
-   * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+   * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+   * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
 3. Find **Microsoft Teams connector** in the list.
 4. Click **Usage Dashboard** to see the following statistics:
    * **This Month** – shows usage statistics for the current month
@@ -241,7 +240,7 @@ The **Usage Dashboard** shows the real-time statistics about the usage of an app
 
 ### 6.1 License
 
-When you get the following pop-up window, then your license is invalid. Check if the configuration of your [LicenseSecret and LicenseKey](#obtain-keys) is correct.
+When you get the following pop-up window, then your license is invalid. Check if the configuration of your LicenseSecret and LicenseKey is correct.
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/license-invalid-popup.png" >}}
 

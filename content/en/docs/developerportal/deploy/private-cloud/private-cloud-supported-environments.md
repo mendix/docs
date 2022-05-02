@@ -61,9 +61,30 @@ To install the Mendix Operator, the cluster administrator will need permissions 
 * Create roles in the target namespace or project
 * Create role bindings in the target namespace or project
 
-The cluster should have at least 2 CPU cores and 2 GB memory *available*. This is enough to run one simple app - but does not include additional resources required by Kubernetes core components .
+The cluster should have at least 2 CPU cores and 2 GB memory *available*. This is enough to run one simple app - but does not include additional resources required by Kubernetes core components.
 
 In OpenShift, the cluster administrator must have a `system:admin` role.
+
+#### 2.2.1 CPU requirements
+
+Mendix Operator runs on CPUs with the [x86-64](https://en.wikipedia.org/wiki/X86-64) achitecture.
+
+{{% alert color="info" %}}
+
+Starting with Mendix Operator v2.5.0, container images used in the *Connected Mode* also support [ARM64/AArch64](https://en.wikipedia.org/wiki/AArch64). *ARM64* support is experimental at this moment and should only be used for non-production environments.
+
+Only core, *Connected mode* features support *ARM64*. The following features **do not** support *ARM64* CPUs at the moment:
+
+* [Migrating to Your Own Registry](/developerportal/deploy/private-cloud-migrating/)
+* CI/CD pipelines in *Standalone mode*
+
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+If the cluster is running nodes with multiple architectures (for example, *x86-64* and *ARM64*), the namespace where Mendix for Private Cloud is installed should use a fixed (specified) architecture. For example, this can be done by configuring a [PodNodeSelector](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#podnodeselector) for that namespace, and only use nodes with a specific architecture (for example, `amd64`).
+
+The image builder doesn't build multiarch images at the moment.
+{{% /alert %}}
 
 ### 2.3 Unsupported Cluster Types
 
@@ -383,3 +404,14 @@ Mendix for Private Cloud can create Services that are compatible with:
 
 * [AWS Network Load Balancer](https://docs.aws.amazon.com/eks/latest/userguide/network-load-balancing.html)
 * AWS Classic Load Balancer
+
+### 6.4 Service mesh support
+
+Starting from Mendix Operator v2.5.0, the following service meshes can be enabled for the entire Mendix for Private Cloud namespace:
+
+* [Istio](https://istio.io/)
+* [Linkerd](https://linkerd.io)
+
+If service mesh sidecar injection is enabled, all communication between pods in the Mendix for Private Cloud namespace would happen through the service mesh.
+
+Mendix Operator v1.11.0 added support for service mesh sidecar injection, but only for app environment pods.

@@ -70,3 +70,20 @@ Now your existing images are being displayed from the database. Next, you will d
 
 ## 3 Using a Nanoflow to Call the Take Picture JSAction
 
+Your app needs a button which allows the user to take a picture. Instead of a regular button, you can use a floating action button optimized for mobile users:
+
+1.  Drag the **Floating Action Button** from the **Toolbox** onto the page:
+
+    {{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
+
+    {{% alert type="info" %}}
+    The location is managed in the widget's properties, so it does not matter where the widget is placed on the page. You can place it above the list view and still have it display in the bottom-right corner by configuring the widget correctly.
+    {{% /alert %}}
+
+1. Double-click the button to open its properties. 
+1. Select an **Icon** for the button, then search for the camera icon. 
+1. Set the position to the lower-right side of the page. 
+1. Make sure the on click action is set to **Call a nanoflow**.
+1. Click **Nanoflow** > **Select** then create a new nanoflow called **ACT_TakeNewPicture**.
+
+[Nanoflows](/refguide/nanoflows/) are the native mobile equivalent of microflows, but with several key differences. Nanoflows are offline-first, meaning they cannot always be assured of a data connection when executing. Therefore, certain functionality which is available in microflows is not available in nanoflows. This is because nanoflows are based on JavaScript and execute on mobile devices instead of the server. Nanoflows also interact with the database on the user's mobile device, which is a copy of the server's database. All database transactions need to be synchronized from the device to the server in order for the data to reflect online.

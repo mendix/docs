@@ -436,7 +436,7 @@ There are four main types of events that can be picked up on the Viewer widget, 
 
 #### 5.5.1 On Selection Change {#on-selection-change}
 
-By selecting one attribute to set **Selection**, you can get information on the selected part (for this you might need to work with Viewer APIs; if you have inquiries on how to use the Viewer APIs, please contact [Mendix Support](https://support.mendix.com/hc/en-us)).
+By selecting one attribute to set **Selection**, you can get information on the selected part (for this you might need to work with Viewer APIs; if you have inquiries on how to use the Viewer APIs, please contact [Mendix Support](https://support.mendix.com/)).
 
 **Selection** takes a String attribute. You can define an attribute and bind that attribute to Selection property. In a running app, when user select on a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (psid and viewer)and use it in the actions. 
 	
@@ -552,7 +552,7 @@ The sections below describe these tools.
 
 ### 5.8 Checking Statistics on the Usage Dashboard {#check-usage}
 
-The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
+The **Usage Dashboard** shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
 1. Log into the Marketplace.
 2. Go to **My Marketplace**.

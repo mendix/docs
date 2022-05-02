@@ -27,14 +27,14 @@ AppDynamics is currently in private beta, and thus not supported. We plan to off
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
-* Create an AppDynamics account by signing up [here](https://portal.appdynamics.com/account/signup/community/)
+* Create an [AppDynamics](https://www.appdynamics.com/) account
 * AppDynamics provides two different options for hosting their environment: the SaaS or on-premises solution; if you want to install AppDynamics on-premises, see [Get Started with AppDynamics On-Premise](https://docs.appdynamics.com/display/PRO14S/Get+Started+with+AppDynamics+On-Premise)
 
 ## 3 Setting Up
 
 In this section, we will walk through all the steps to configure AppDynamics so that it can be used for the [application performance diagnostics](/addons/apd-addon/) of your Mendix application.
 
-## 3.1 Setting Up AppDynamics
+### 3.1 Setting Up AppDynamics
 
 To set up AppDynamics, follow these steps:
 
@@ -49,13 +49,13 @@ To set up AppDynamics, follow these steps:
    {{< figure src="/attachments/howto/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-appdynamics/download-installer.png" >}}
    
 
-## 3.2 Setting Up Your Mendix Deployment
+### 3.2 Setting Up Your Mendix Deployment
 
-### 3.2.1 Cloud Foundry
+#### 3.2.1 Cloud Foundry
 
 Follow the the buildpack instructions to set up AppDynamics for Cloud Foundry deployments that are described here: [https://github.com/mendix/cf-mendix-buildpack#appdynamics](https://github.com/mendix/cf-mendix-buildpack#appdynamics).
 
-### 3.2.2 On-Premises Linux & Windows Service Console
+#### 3.2.2 On-Premises Linux & Windows Service Console
 
 To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaagent>javaagent.jar". For example:
 
@@ -67,7 +67,7 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
  ]
 ```
 
-### 3.2.3 Mendix Studio Pro (Development Mode Only)
+#### 3.2.3 Mendix Studio Pro (Development Mode Only)
 
 1. Open your Mendix application, and then select **Settings** in the **App Explorer**:
 2. Open a configuration:

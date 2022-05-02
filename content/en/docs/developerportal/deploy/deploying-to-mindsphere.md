@@ -248,7 +248,7 @@ To deploy your deployment package, do the following:
     cf target –o {org_name} -s {space_name}
     ```
 
-    {{% alert color="info" %}}If you cannot target your org or space, you probably need to be added to your org. See [Cloud Foundry How Tos](https://developer.mindsphere.io/paas/paas-cloudfoundry-howtos.html) in the MindSphere documentation.{{% /alert %}}
+    {{% alert color="info" %}}If you cannot target your org or space, you probably need to be added to your org. See [Cloud Foundry How Tos](https://developer.mindsphere.io/paas/howtos/index.html) in the MindSphere documentation.{{% /alert %}}
 
 3.  Create a PostgreSQL instance using the command:
 
@@ -317,7 +317,7 @@ cf app {app_name}
 ```
 {{% /alert %}}
 
-For more information about Cloud Foundry stacks on MindSphere, see [How Can I Find the Stack my App is using?](https://developer.mindsphere.io/paas/paas-cloudfoundry-howtos.html#how-can-i-find-the-stack-my-app-is-using) in *Cloud Foundry How Tos* on the *MindSphere Developer* site.
+For more information about Cloud Foundry stacks on MindSphere, see [How Can I Find the Stack my App is using?](https://developer.mindsphere.io/paas/howtos/howtos-stacks.html#find-out-which-stack-an-app-uses) in *Cloud Foundry How Tos* on the *MindSphere Developer* site.
 
 #### 5.2.1.4 Troubleshooting
 

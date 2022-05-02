@@ -83,7 +83,7 @@ Before you deploy an app, you should configure the binding keys in your app as f
 
     {{< figure src="/attachments/appstore/app-services/email-service/configure-username-secretkey.png" >}}
 
-2. For each constant, double-click the constant, enter the key that you saved, and click **OK** to save the changes.
+2. For **SecretKey** and **UserName**, add the values that were generated when you created the binding keys, and click **OK** to save the changes.
 
 ## 4 Usage
 
@@ -161,7 +161,7 @@ The following file types are not supported as attachments:
 
 ### 4.3 Checking Statistics on the Usage Dashboard
 
-The **Usage** dashboard shows the real-time statistics about the usage of an app service. For the Email Service, perform the following steps to check the number of emails sent and data transfer usage:
+The **Usage Dashboard** shows the real-time statistics about the usage of an app service. For the Email Service, perform the following steps to check the number of emails sent and data transfer usage:
 
 1. Log into the Marketplace.
 2. Go to **My Marketplace** and then do as follows:
@@ -213,14 +213,14 @@ If you are the Technical Contact, you can configure the sender's email addresses
                 {{< figure src="/attachments/appstore/app-services/email-service/email-verification-pending.png" >}}
       
     * If you choose **Domain** as the **Verification Type**, perform the following steps:
-     
+    
         1. For **Domain**, enter the domain address.
         2. For **Email ID**, enter the sender's email address(es). 
         3. Optionally, enter the **Mail From Domain** information that you want to use with your [Email Service](https://marketplace.mendix.com/link/component/118393/) instance. For more details, see the [Configuring the Mail From Domain](#config-mail-from-domain) section. 
         4.  Click **Save** to verify domain address.
-         
+        
             {{< figure src="/attachments/appstore/app-services/email-service/domain-verification.png" >}}
-         
+        
         5. If you have a paid subscription, you can add up to five email addresses for the same domain as follows:
             1.  Click **View Details/Edit** to open the **Domain based Email Identities** dialog box.
             

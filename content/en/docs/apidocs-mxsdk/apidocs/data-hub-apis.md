@@ -35,8 +35,14 @@ The [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html)
 
 The [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html) can be used to register applications, environments, and services or data sources. See an example API call at [Register an Application](https://docs.mendix.com/data-hub/data-hub-catalog/register-data#register-application).
 
-The API includes `POST` methods for registering new assets where a UUID is generated and returned for the asset in the response body. There are also `PUT` calls to *update* assets for existing UUIDs or create new applications and environments for new UUIDs.
+The API includes the following:
+
+* `POST` methods for registering new assets where a UUID is generated and returned for the asset in the response body
+* `PUT` calls to *update* assets for existing UUIDs or create new applications and environments for new UUIDs
+* `DELETE` calls to *delete* applications
 
 ## 4 Transform API {#transform}
 
 Mendix users who deploy to *non-Mendix clouds* can make use of the [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) to generate the request body for the Registration API. The Transform API reconfigures information from the *dependencies.json* file into the correct fields. For an example API, see the [Preparing Your Service Details Using the Transform API](/data-hub/data-hub-catalog/register-data/#transform-api) section of *How to Register OData Resources in the Data Hub Catalog*.
+
+V4 compatibility for the **Transform API** is accessible via the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) under the **Endpoints** section.

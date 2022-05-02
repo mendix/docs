@@ -27,7 +27,7 @@ AppDynamics is currently in private beta, and thus not supported. We plan to off
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
-* Create an AppDynamics account by signing up [here](https://portal.appdynamics.com/account/signup/community/)
+* Create an [AppDynamics](https://www.appdynamics.com/) account
 * AppDynamics provides two different options for hosting their environment: the SaaS or on-premises solution; if you want to install AppDynamics on-premises, see [Get Started with AppDynamics On-Premise](https://docs.appdynamics.com/display/PRO14S/Get+Started+with+AppDynamics+On-Premise)
 
 ## 3 Setting Up

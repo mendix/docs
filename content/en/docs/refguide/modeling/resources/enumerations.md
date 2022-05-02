@@ -61,14 +61,100 @@ An enumeration has the following properties:
 
 Enumeration value properties are described below:
 
-* **Caption** – the caption of an enumeration value is the text that the end-user sees for this enumeration value. This is a translatable text. For more information, see [Language Menu](/refguide/translatable-texts/). 
+#### 3.1.1 Caption 
 
-* **Name** – the name of an enumeration value is a technical name of the value which is used to refer to the enumeration value in your app.
+This is the caption of an enumeration value is the text that the end-user sees for this enumeration value.
 
-    {{% alert color="warning" %}}The name of an enumeration value is also used for storing the enumeration value in the database. That is why changing the **Name** of an enumeration value is not allowed; it would invalidate the data in your database. The **Caption**, however, can be changed and this is the text that is displayed to the end-users.<br />The name of an enumeration value must be a technical name without spaces and special characters. The caption of an enumeration value can any character. For example, an enumeration value can have *In_Progress* as its name and *In Progress* as its caption.  
-    {{% /alert %}}
+The caption can be changed and can contain any character. For example, *In Progress* is a valid caption even though it contains a space.  
+
+This is a translatable text. For more information, see [Language Menu](/refguide/translatable-texts/). 
+
+#### 3.1.2 Name
+
+This is the name of an enumeration value. It is a technical name of the value which is used to refer to the enumeration value in your app.
+
+The name of an enumeration value must be a technical name, starting with a letter and only containing letters, digits, and underscores.
+
+<details><summary>It cannot be a reserved word (click to see a list of reserved words)</summary>
+
+* `abstract`
+* `assert`
+* `boolean`
+* `break`
+* `byte`
+* `case`
+* `catch`
+* `changedby`
+* `changeddate`
+* `char`
+* `class`
+* `con`
+* `const`
+* `context`
+* `continue`
+* `createddate`
+* `currentUser`
+* `default`
+* `do`
+* `double`
+* `else`
+* `empty`
+* `enum`
+* `extends`
+* `false`
+* `final`
+* `finally`
+* `float`
+* `for`
+* `goto`
+* `guid`
+* `id`
+* `if`
+* `implements`
+* `import`
+* `instanceof`
+* `int`
+* `interface`
+* `long`
+* `MendixObject`
+* `native`
+* `new`
+* `null`
+* `object`
+* `owner`
+* `package`
+* `private`
+* `protected`
+* `public`
+* `return`
+* `short`
+* `static`
+* `strictfp`
+* `submetaobjectname`
+* `super`
+* `switch`
+* `synchronized`
+* `this`
+* `throw`
+* `throws`
+* `transient`
+* `true`
+* `try`
+* `type`
+* `void`
+* `volatile`
+* `while`
+</details>
+
+{{% alert color="warning" %}}
+The name of an enumeration value is also used for storing the enumeration value in the database. Therefore, changing the **Name** of an enumeration value is not allowed; it would invalidate the data in your database.
+{{% /alert %}}
   
-* **Image** –  an image selected for an enumeration value can be displayed in a data grid column. In this case, the enumeration format of the column should be *Image*. For more information on data grid columns, see [Grid Columns](/refguide/columns/).
+#### 3.1.3 Image
+
+This is an image selected for an enumeration value to be displayed in a data grid column.
+
+To use the image in a data grid, set the enumeration format of the column to *Image*. For more information on data grid columns, see [Grid Columns](/refguide/columns/).
 
 ## 4 Read More
 

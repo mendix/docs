@@ -163,6 +163,7 @@ The following standard PostgreSQL databases are supported:
 * PostgreSQL 11
 * PostgreSQL 12
 * PostgreSQL 13
+* PostgreSQL 14
 
 {{% alert color="info" %}}
 While Mendix for Private Cloud supports all Postgres versions listed above, the Mendix Runtime might require a more specific Postgres version.

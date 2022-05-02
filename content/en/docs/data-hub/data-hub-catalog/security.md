@@ -9,7 +9,7 @@ tags: ["data hub", "data hub catalog", "security", "entity security", "dataset s
 
 ## 1 Introduction
 
-In Data Hub, the [Access Level](#access-level) indicates if you can access a registered data source.
+In Data Hub, the [Access Level](#access-level) indicates whether you can access a registered data source.
 
 Security for a Mendix app can be defined at the app-level, module-level, and entity-level. Further authentication methods can also be specified to control access to the data associated with published datasets.
 
@@ -21,7 +21,7 @@ Access to data is determined by the identification protocols of the organization
 
 For Mendix apps that publish or consume [external entities](/refguide/external-entities/), the following details apply:
 
-* The security for the OData-based service is defined in the publishing app – at the app, module, and entity level
+* The security for the OData-based service is defined in the publishing app at the app, module, and entity level
 * The security that is defined at the module level will apply to the OData services that are published from the module and enforced when the entities from the service are used in a consuming app when end-users try to access the data
 	{{% alert color="info" %}}The security for an OData service can only be set if the [project security](/refguide/project-security/) is enabled.{{% /alert %}}
 
@@ -51,19 +51,20 @@ The access level for a registered OData service is shown in the **Service Metada
 
 ## 4 Using Custom HTTP Header Validation for Published Entities {#http-header-validation}
 
-Access to the data by specific users of the final app is defined in the publishing app of the data source.
+Access to the data by specific users of the final app is defined in the *publishing app* of the data source.
 
-For an example of how to implement authentication using security assertion markup language (SAML) and Active Directory Federation Services (ADFS),  the following procedure illustrates how to use a custom HTTP headers microflow and a custom HTTP validation microflow to generate, set, and validate authentication tokens.
+### 4.1 Implementing Authentication with ADFS and SAML
 
-The following steps describe how the security proposal is set with [ADFS](https://docs.microsoft.com/en-us/windows-server/identity/active-directory-federation-services) and the [SAML](/appstore/modules/saml/) Mendix Marketplace module:
+You can use a custom HTTP headers microflow and a custom HTTP validation microflow to generate, set, and validate authentication tokens. 
+
+The following steps describe how the security proposal is set with [Active Directory Federation Services](https://docs.microsoft.com/en-us/windows-server/identity/active-directory-federation-services) (ADFS) and the [SAML](/appstore/modules/saml/) Mendix Marketplace module:
 
 {{< figure src="/attachments/data-hub/data-hub-catalog/security/federation-with-ADFS-SAML-schematic.png" >}}
 
 1. The app end-user logs into an app that uses external entities.
 2. The end-user is not yet authenticated, so the SAML module forwards the user to ADFS for authentication.
 3. If the correct credentials are provided, ADFS returns a cookie for SSO.
-
-4. When the end-user performs a query on a external entity, the JSON web tokens (JWTs) are set on the API call (and are validated with a microflow in the consumed OData service):
+4. When the end-user performs a query on a external entity, the JSON web tokens (JWTs) are set on the API call, and are validated with a microflow in the consumed OData service:
 
     {{< figure src="/attachments/data-hub/data-hub-catalog/security/authentication-headers-from-microflow.png" alt="authentication flow" >}}
 
@@ -72,4 +73,4 @@ The following steps describe how the security proposal is set with [ADFS](https:
     {{< figure src="/attachments/data-hub/data-hub-catalog/security/authentication-microflow.png" alt="authentication microflow" >}}
 
 6. ADFS returns the user validation.
-7. The customer authentication microflow on the OData service document returns the appropriate user which is used for retrieving the data. The entity access rules will use this user for authorization.
+7. The customer authentication microflow on the OData service document returns the appropriate user, which is used for retrieving the data. The entity access rules will use this user for authorization.

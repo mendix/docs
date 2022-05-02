@@ -28,4 +28,6 @@ For details on participating in the Mendix Vendor program, see [How to Prepare Y
     * [Text Analytics](/appstore/app-services/text-analytics/) – enables performing text analytics in your web apps
     * [Translation](/appstore/app-services/translation/) – enables performing text translation in your web apps
 * [Intelligent Document Service](/appstore/app-services/intelligent-document-service/) – extracts text and key value pairs from documents
+* [Invoice Processing](/appstore/app-services/invoice-processing/) – automates the processing of invoices in bulk
 * [Receipt Processing](/appstore/app-services/receipt-processing/) – automates the processing of receipts in bulk, without additional document training
+* [Microsoft Teams Connector](/appstore/app-services/ms-teams-connector/) – enables sending messages and actionable message cards to a Microsoft Teams channel automatically

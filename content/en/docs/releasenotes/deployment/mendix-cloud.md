@@ -13,6 +13,20 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### April 22nd, 2022
+
+#### Improvements
+
+* We have added two new graphs on the [Metrics page for Cloud V4](/developerportal/operate/trends-v4/):
+   * Number of files in storage
+   * Size of files in storage (in bytes)
+* We have updated the alert order on the [Alerts page](/developerportal/operate/monitoring-application-health/) for better visibility
+* We have made improvements to the email alert subscription service to make it more reliable
+
+### April 21st, 2022
+
+* We have introduced support for [AppDynamics](/developerportal/operate/appdynamics-metrics/) monitoring in Mendix Cloud V4.
+
 ### March 31st, 2022
 
 #### Improvements

@@ -37,7 +37,7 @@
               {{ $viewURL := printf "%s/tree/%s" $gh_repo $gh_repo_path -}}
               <!-- NK - changed editUrl to blob -->
               {{ $editURL := printf "%s/blob/%s" $gh_repo $gh_repo_path -}}
-              {{ $issuesURL := printf "%s/issues/new?title=%s" $gh_repo (safeURL $.Title ) -}}
+              {{ $issuesURL := printf "%s/issues/new?title=%s&body=Please+use+the+form+below,+leaving+the+prefilled+data+to+help+us.+Thank+you.\n\nPage+link:+[%s](%s)\n\nDocument+link:+[%s](%s/blob/%s)\n\n%23%23%23%23+My+Issue/Suggestion\n\n" $gh_repo (safeURL $.Title ) (safeURL $.Title ) .Permalink .File.LogicalName $gh_repo $gh_repo_path -}}
               {{ $newPageStub := resources.Get "stubs/new-page-template.md" -}}
               {{ $newPageQS := querify "value" $newPageStub.Content "filename" "change-me.md" | safeURL -}}
               {{ $newPageURL := printf "%s/new/%s?%s"  $gh_repo $gh_repo_path $newPageQS -}}
@@ -54,7 +54,7 @@
                 {{ end -}} */}}
             {{ end -}}
         <!-- MvM: get the alternative output formats from the PAGE (in theme it is for Section) and change text to print_page-->
-            {{ with .CurrentSection.AlternativeOutputFormats.Get "print" -}}
+            {{ with .AlternativeOutputFormats.Get "print" -}}
           </div>
           <div class="col-3">
             <!-- NK - changed icon properties -->

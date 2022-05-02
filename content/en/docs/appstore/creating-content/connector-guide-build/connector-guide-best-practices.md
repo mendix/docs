@@ -37,7 +37,8 @@ We recommend that the *main module* for your connector include the following:
         * As an alternative to the version constant, you can place a subfolder with the version indication
 * **Private** (folder)– indicates what other developers should not touch when implementing your module by placing all of that logic in this folder
 * **UseMe** (folder) – contains everything the implementing developer could use to implement your module in their application, and might include subfolders for **Microflows**, **Pages**, **Snippets**, **Templates**, and **Constants**
-    
+  
+
 Your **App Explorer** should look like this after initial setup:
     
 {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/app-initial-setup.png" >}}
@@ -188,7 +189,7 @@ Any dependencies your module has should be well documented including the minimum
 
 ### 3.9 IP Protection
 
-Right now, you will not be able to protect your IP or prevent end-users from changing any logic that you ship in a module using Mendix tooling. This functionality is currently in Private Beta (see [Applying IP Protection](/appstore/creating-content/sol-ip-protection/) for more information).
+Right now, you will not be able to protect your IP or prevent end-users from changing any logic that you ship in a module using Mendix tooling. Access to this functionality is currently limited and can be gained through the [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
 
 If protecting your IP or preventing end-users from changing your logic is not a requirement, you can use all the tooling that Mendix provides to build a connector using available Mendix tools. If you want IP protection today, you need to implement the sensitive parts of the module in a hidden Java library. 
 
@@ -389,8 +390,8 @@ Our [Java unit test reference](https://Github.com/mendixlabs/javaunittestreferen
 * Verifies that your code calls a microflow with correct parameters
 * Makes constants available to your Java code
 
-{{% alert color="warning" %}}
-The Java unit test reference is compatible up to and including Studio Pro [9.12](/releasenotes/studio-pro/9.12/).
+{{% alert color="info" %}}
+The Java unit test reference has been tested up to and including Studio Pro [9.12](/releasenotes/studio-pro/9.12/).
 {{% /alert %}}
 
 Java unit testing is discussed in more detail in this Mendix World presentation, [Run Modern Unit Tests for Your Custom Java Actions](https://events.mendixworld.com/widget/mendix/world21/catalog/session/1615903746739001d8JX). You will need to register with your business email address to view this video.

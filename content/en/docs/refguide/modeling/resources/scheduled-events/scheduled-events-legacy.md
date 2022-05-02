@@ -8,7 +8,6 @@ tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "schedu
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-
 {{% alert color="warning" %}}
 This page is about **legacy** scheduled events. Please see [Scheduled Events – Task Queue](/refguide/scheduled-events-task-queue/) for information about the current method of implementing scheduled events.
 
@@ -45,7 +44,7 @@ A `ScheduledEventInformation` object is created every time the scheduled event d
 The `ScheduledEventInformation` objects are not cleared automatically. If you have a large number of scheduled events you will need to decide how long you need to keep this information and remove stale objects when they are no longer required.
 {{% /alert %}}
 
-## 2 Common Properties{#common-properties}
+## 2 Common Properties {#common-properties}
 
 | Property | Description |
 | --- | --- |
@@ -68,7 +67,7 @@ The `ScheduledEventInformation` objects are not cleared automatically. If you ha
 | Interval | This number together with the interval type indicates how large the interval is between two events. This number should be greater than zero. |
 | Interval type | The interval type determines the unit of the interval. Together with the interval number it indicates how large the interval between two events is. For example, 1 day or 10 minutes. |
 
-## 5 Additional information
+## 5 Additional Information
 
 ### 5.1 Running Concurrently
 
@@ -138,7 +137,7 @@ parseInteger( formatDateTime( [%CurrentDateTime%], 'dd') ) = 15
 // This will run the scheduled event on the 15th of the month
 ```
 
-To run it on the last day of the month, you can use this suggestion from [Herbert Vujik](https://mxforum.mendix.com/questions/6934/How-are-monthly-Scheduled-Events-planned#10518):
+To run it on the last day of the month, you can use this suggestion from [Herbert Vujik](https://forum.mendixcloud.com/link/questions/6934):
 
 ```java
 formatDateTime([%CurrentDateTime%], 'dd') = formatDateTime([%EndOfCurrentMonth%], 'dd') 
@@ -159,7 +158,7 @@ Unfortunately there isn't a great workaround for this issue. If the scheduled ev
 
 If a repeated scheduled event takes longer than the interval then the next scheduled event will be delayed, the events will not run concurrently. For example, if a scheduled event is repeated every 5 minutes but the event takes 10 minutes then the next event is delayed by 5 minutes.
 
-### 5.5 Cleaning up old events {#cleanup}
+### 5.5 Cleaning Up Old Events {#cleanup}
 
 The execution of a scheduled event produces a `System.ScheduledEventInformation` row in the database. Over time these accumulate and the table can grow large.
 

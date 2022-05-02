@@ -33,9 +33,11 @@ If the broker needs basic authentication for connection, then you can set up a u
 
 #### 2.1.1 Setting Up Authentication {#auth}
 
-If an MQTT broker needs a username and password for connection, you set credentials on the **ConnectionAdministration** page. Set the **Authentication method** to **BASIC**, and then set the values for **UserName** and **Password**. 
+If an MQTT broker needs a username and password for connection, you set credentials on the **ConnectionAdministration** page. Set the **Authentication method** to **BASIC**, and then set the values for **UserName** and **Password**.
 
 Setting the **Authentication method** to **NONE** indicates that authentication is not required to connect to the MQTT broker. 
+
+**Password** is encrypted using **EncryptionKey** constant. For better security, it is advised to change the **EncryptionKey** constant after module import.
 
 #### 2.1.2 Enabling SSL
 

@@ -59,6 +59,8 @@ If a file with an extension that is not allowed is selected, a [system text](/re
 
 Uploaded images are read by the runtime. We currently use the [TwelveMonkeys ImageIO library](https://haraldk.github.io/TwelveMonkeys/) which supports a wide variety of image formats.
 
+For SVG files TwelveMonkeys ImageIO itself delegates to the Batik library which is known to have some issues with specifically formatted files. An overview of Batik's feature support can be found [here](https://xmlgraphics.apache.org/batik/status.html).
+
 #### 2.4.3 Thumbnail Width
 
 **Thumbnail width** determines the width of the generated thumbnail in pixels. However, the aspect ratio of the image will remain the same during thumbnail generation.

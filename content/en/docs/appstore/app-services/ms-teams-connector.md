@@ -111,7 +111,7 @@ Before you deploy an app, you should configure the binding keys in your app as f
    * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
 
 4. Click **Microsoft Teams Connector** to open the service management dashboard.
-5. Click **Manage Instances**. You are redirected to the **Communication Services Console** login page.
+5. Click **Manage Instances**. You are redirected to the [Communication Services Console](https://communication-appservices.mendixcloud.com/login.html) login page.
 
 6. Sign in to **Communication Services Console** using Mendix SSO.
 

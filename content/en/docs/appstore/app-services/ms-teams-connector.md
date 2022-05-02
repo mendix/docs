@@ -223,7 +223,7 @@ Microsoft Teams supports [actionable message cards](https://docs.microsoft.com/e
 
 ## 5 Checking Statistics Using the Usage Dashboard {#statistics}
 
-The **Usage** dashboard shows the real-time statistics about the usage of an app service. For the Microsoft Teams connector, perform the following steps to check the number of Microsoft Teams Webhooks usage:
+The **Usage Dashboard** shows the real-time statistics about the usage of an app service. For the Microsoft Teams connector, perform the following steps to check the number of Microsoft Teams Webhooks usage:
 
 1. Log into the Marketplace.
 2. Go to **My Marketplace** and then do as follows:

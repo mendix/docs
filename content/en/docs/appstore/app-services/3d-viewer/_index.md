@@ -552,7 +552,7 @@ The sections below describe these tools.
 
 ### 5.8 Checking Statistics on the Usage Dashboard {#check-usage}
 
-The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
+The **Usage Dashboard** shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
 1. Log into the Marketplace.
 2. Go to **My Marketplace**.

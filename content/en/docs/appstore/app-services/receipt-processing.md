@@ -153,7 +153,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
 ### 4.3 Checking Statistics on the Usage Dashboard
 
-The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
+The **Usage Dashboard** shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
 1. Log into the Marketplace.
 2. Go to **My Marketplace** and then do as follows:

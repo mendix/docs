@@ -339,7 +339,7 @@ If you deploy your app in your own environment, you need to configure the licens
 
 ### 4.2 Checking Statistics on the Usage Dashboard {#check-usage}
 
-The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
+The **Usage Dashboard** shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
 1. Log into the Marketplace.
 2. Go to **My Marketplace** and then do as follows:

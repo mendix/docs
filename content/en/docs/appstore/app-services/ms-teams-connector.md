@@ -103,45 +103,50 @@ Before you deploy an app, you should configure the binding keys in your app as f
 ### 4.1 Configuring Webhooks in the Communication Services Console
 
 1. In Microsoft Teams, [create a Webhook URL for the channel](https://docs.servicenow.com/bundle/quebec-it-service-management/page/product/site-reliability-ops/task/create-webhook-url-channel-ms-teams.html) to which you want to send messages. 
-2. Go to the Marketplace [Subscriptions](/appstore/general/app-store-overview/#subscriptions) page and log in there.
-3. Click **Microsoft Teams Connector** to open the service management dashboard.
-4.  Click **Manage Instances**. You are redirected to the **Communication Services Console** login page.
-    
-5.  Sign in to **Communication Services Console** using Mendix SSO.
-    
-    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/console-login-view.png" >}}
-    
-    The **Communication Services Console** shows all the communication services that you have subscribed.
+2. Log into the Marketplace.
+3. Go to **My Marketplace** and then do as follows:
 
-6.  Go to the **Microsoft Teams Connector** tab. 
-7.  Select the **Developer Instance** from the drop-down list against which you want to configure **Webhook URLs**. The **Add Webhook** button gets enabled.
+   * If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+   * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
 
-    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/add-webhook-button-enabled.png" >}}
+4. Click **Microsoft Teams Connector** to open the service management dashboard.
+5. Click **Manage Instances**. You are redirected to the **Communication Services Console** login page.
 
-8.  Click **Add Webhook**. The **Webhook Adder** dialog box opens. 
-   
-    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/webhook-adder-popup.png" >}}
-    
-9. Enter a **Webhook Name** for the Webhook.
-10. Enter the **Webhook URL** which you configured for your Microsoft Teams Channel.
-11.  **Save** the changes. The Webhook is added to the list.
+6. Sign in to **Communication Services Console** using Mendix SSO.
 
-     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/webhook-data-view.png" >}}
-     
-     The system automatically generates a unique **Webhook ID** for each **Webhook URL** you add. You will need to give **Webhook ID** as input to the **Microsoft Teams Connector** activity to send messages. 
-     
-     {{% alert type="info" %}}Each **Webhook URL** you add is counted as utilization towards the allocated app service quota. If a **Webhook URL** is incorrect, you can click the **...** icon and then edit or delete the Webhook.{{% /alert %}}     
-    
-12.  Copy the **Webhook ID** as follows:
-     1.  Hover over the **...** icon in the **Action** column to open the pop-up menu.
+   {{< figure src="/attachments/appstore/app-services/ms-teams-connector/console-login-view.png" >}}
+
+   The **Communication Services Console** shows all the communication services that you have subscribed.
+
+7. Go to the **Microsoft Teams Connector** tab. 
+8. Select the **Developer Instance** from the drop-down list against which you want to configure **Webhook URLs**. The **Add Webhook** button gets enabled.
+
+   {{< figure src="/attachments/appstore/app-services/ms-teams-connector/add-webhook-button-enabled.png" >}}
+
+9. Click **Add Webhook**. The **Webhook Adder** dialog box opens. 
+
+   {{< figure src="/attachments/appstore/app-services/ms-teams-connector/webhook-adder-popup.png" >}}
+
+10. Enter a **Webhook Name** for the Webhook.
+11. Enter the **Webhook URL** which you configured for your Microsoft Teams Channel.
+12. **Save** the changes. The Webhook is added to the list.
+
+    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/webhook-data-view.png" >}}
+
+    The system automatically generates a unique **Webhook ID** for each **Webhook URL** you add. You will need to give **Webhook ID** as input to the **Microsoft Teams Connector** activity to send messages. 
+
+    {{% alert type="info" %}}Each **Webhook URL** you add is counted as utilization towards the allocated app service quota. If a **Webhook URL** is incorrect, you can click the **...** icon and then edit or delete the Webhook.{{% /alert %}}     
+
+13. Copy the **Webhook ID** as follows:
+    1.  Hover over the **...** icon in the **Action** column to open the pop-up menu.
+       
+        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/edit-webhook-popup.png" >}}
         
-         {{< figure src="/attachments/appstore/app-services/ms-teams-connector/edit-webhook-popup.png" >}}
-         
-     2.  Click **Copy**. A pop-up window opens and shows the name of the Webhook that you have copied.
-        
-         {{< figure src="/attachments/appstore/app-services/ms-teams-connector/copied-popup.png" >}}
-        
-         {{% alert type="note" %}}You can select **Edit** or **Delete** to edit or delete a Webhook.{{% /alert %}}
+    2.  Click **Copy**. A pop-up window opens and shows the name of the Webhook that you have copied.
+       
+        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/copied-popup.png" >}}
+       
+        {{% alert type="note" %}}You can select **Edit** or **Delete** to edit or delete a Webhook.{{% /alert %}}
 
 ### 4.2 Sending Message to a Teams Channel
 
@@ -221,11 +226,15 @@ Microsoft Teams supports [actionable message cards](https://docs.microsoft.com/e
 The **Usage** dashboard shows the real-time statistics about the usage of an app service. For the Microsoft Teams connector, perform the following steps to check the number of Microsoft Teams Webhooks usage:
 
 1. Log into the Marketplace.
-2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview/#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
-3. Click on **Usage Dashboard** corresponding to **Microsoft Teams connector** to open the **Usage** dashboard. It shows the following statistics:
-   * **This Month** – Shows usage statistics for the current month
-   * **Last Month** – Shows usage statistics for last month
-   * **Total** – Shows usage statistics from the start of the subscription date to today
+2. Go to **My Marketplace** and then do as follows:
+
+   * If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+   * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+3. Find **Microsoft Teams connector** in the list.
+4. Click **Usage Dashboard** to see the following statistics:
+   * **This Month** – shows usage statistics for the current month
+   * **Last Month** – shows usage statistics for last month
+   * **Total** – shows usage statistics from the start of the subscription date to today
 
 ## 6 Troubleshooting
 

@@ -2,7 +2,7 @@
 title: "Write Data to Another App"
 url: /data-hub/write-data/
 description: "Describes add annotations to an OData service in Mendix Studio Pro, see external entities with these features in the Data Hub Catalog, and use them to build your app."
-tags: ["Data Hub", "external entities", "published OData service" ,"how to","OData", "Data Hub Catalog", "validation", "validate inserted data"]
+tags: ["Data Hub", "external entities", "published OData service" ,"how to","OData", "Data Hub Catalog"]
 weight: 20
 ---
 
@@ -15,7 +15,6 @@ This how-to builds on the information provided in [How to Share Data Between App
 * Expose updatable OData entities, attributes, and associations in Mendix Studio Pro
 * See which capabilities a particular entity, attribute, or association has in the Data Hub Catalog
 * Consume an updatable OData resource in your Mendix app
-* Set up error handling for data validation
 
 The OData protocol allows data to be read, created, updated, and deleted. Mendix Studio Pro takes advantage of some of these capabilities. The Data Hub Catalog uses developer-familiar shorthand for these features, while Mendix Studio Pro sticks with the OData definitions.
 
@@ -69,17 +68,3 @@ To consume an OData entity, do the following:
  3. Drag the entity to the domain model.
 
 Now you have an external entity in your domain model. Depending on the capabilities, for example the **CRUD** capabilities, you can generally use external entities to model your app as you would normally do, although there are some limitations. For more information on limitations, see the [External Entities Limitations](/refguide/external-entities/#limitations) section in *External Entities*. 
-
-## Validating Data and Error Handling
-
-You can [set up data validation](/howto/data-models/setting-up-data-validation/) to check on inserted or updated data between your apps. An insert validation microflow in the domain model of the client application - the application consuming the service - can check on the data that is inserted or updated.
-
-How does the published service know that that an insert fails? In the publishing app, you can use a validation message action to report the error. The client app can include a custom error handler on the [Send External Object](/refguide/send-external-object/) activity to handle the error.
-
-The domain model for the publishing app's validation message would look like this:
-
-{{< figure src="/attachments/data-hub/write-data/validate-data-publishing-app.png" alt="publishing app validation" >}}
-
-In the client app, the error handler would look like this:
-
-{{< figure src="/attachments/data-hub/write-data/validate-data-client-app.png" alt="client app validation" >}}

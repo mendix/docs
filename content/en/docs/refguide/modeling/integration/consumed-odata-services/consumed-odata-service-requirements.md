@@ -133,3 +133,17 @@ For each call, the app instance logs how many objects it has retrieved and how m
 {{% alert color="warning" %}}
 It is up to the application to communicate to its end-users that the daily limit has been reached. If this is not done, the end-user gets a message that an error occurred.
 {{% /alert %}}
+
+## 5 Validating Data and Error Handling
+
+You can [set up data validation](/howto/data-models/setting-up-data-validation/) to check on inserted or updated data between your apps. An insert validation microflow in the domain model of the client application - the application consuming the service - can check on the data that is inserted or updated.
+
+How does the published service know that that an insert fails? In the publishing app, you can use a validation message action to report the error. The client app can include a custom error handler on the [Send External Object](/refguide/send-external-object/) activity to handle the error.
+
+The domain model for the publishing app's validation message would look like this:
+
+{{< figure src="/attachments/refguide/modeling/integration/consumed-odata-service-requirements/validate-data-publishing-app.png" alt="publishing app validation" >}}
+
+In the client app, the error handler would look like this:
+
+{{< figure src="/attachments/refguide/modeling/integration/consumed-odata-service-requirements/validate-data-client-app.png" alt="client app validation" >}}

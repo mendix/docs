@@ -48,6 +48,7 @@ This defines a property's type. A `type` must be one of the following:
 	* [textTemplate](#texttemplate)
 	* [action](#action)
 	* [attribute](#attribute)
+	* [association](#association)
 	* [object](#object)
 	* [file](#file)
 	* [datasource](#datasource)
@@ -463,7 +464,7 @@ If a `dataSource` attribute is not specified, the client will receive an `Editab
 
 When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListAttributeValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listattributevalue). For more information, see the [Datasource](#datasource) section below.
 
-#### 4.4.1 XML 
+#### 4.4.1 XML Attributes
 
 | Attribute    | Required | Attribute Type | Description                                                  |
 | ------------ | -------- | -------------- | ------------------------------------------------------------ |
@@ -516,11 +517,61 @@ Then the Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/attribute.png" >}}
 
-### 4.5 Object{#object}
+### 4.5 Association{#association}
+
+The association property type allows a widget to work directly with both reading and writing associations between entities. Depending on the widget's purposes, a widget should define association types it supports.
+
+The client will receive an `ModifiableValue<T>` where `T` depends on the configured `<associationType>`. For more information, see the [ModifiableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#modifiable-value) section of *Client APIs Available to Pluggable Widgets*.
+
+#### 4.5.1 XML Attributes
+
+| Attribute           | Required | Attribute Type | Description                                                                                                        |
+|---------------------| -------- | -------------- |--------------------------------------------------------------------------------------------------------------------|
+| `type`              | Yes      | String         | Must be `association`                                                                                              |
+| `key`               | Yes      | String         | See [key](#key)                                                                                                    |
+| `required`          | No       | Boolean        | Decides if the property must be specified by the user, `true` by default                                           |
+| `selectableObjects` | Yes      | Property Path  | The path to a Datasource property that will provide selectable objects for the association                         | 
+
+#### 4.5.2 XML Elements
+
+`<associationTypes>` (required) — This element encapsulates `<associationType>` elements which declare supported association types available while configuring the association property in the Studios.
+
+`<associationType>` (required one or more) — this element defines the allowed attribute type in the `name` attribute.
+
+| Supported Attribute Types | Corresponding Types Client Components Receive |
+|---------------------------|-----------------------------------------------|
+| `Reference`               | `ReferenceValue`                              |
+| `ReferenceSet`            | `ReferenceSetValue`                           |
+
+#### 4.5.3 Studio Pro UI
+
+When the property is defined as follows:
+
+```xml
+<property key="ref" type="association" selectableObjects="objectsDatasource">
+    <caption>Reference</caption>
+    <description>Reference</description>
+    <associationTypes>
+        <associationType name="Reference"/>
+        <associationType name="ReferenceSet"/>
+    </associationTypes>
+</property>
+
+<property key="objectsDatasource" type="datasource" isList="true">
+    <caption>Selectable objects</caption>
+    <description/>
+</property>
+```
+
+Then the Studio Pro UI for the property appears like this:
+
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/association.png" >}}
+
+### 4.6 Object{#object}
 
 The object property type allows to create an arbitrary list of properties.
 
-#### 4.5.1 XML Attributes
+#### 4.6.1 XML Attributes
 
 | Attribute | Required | Attribute Type | Description                                                                                                                                                          |
 | ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -529,11 +580,11 @@ The object property type allows to create an arbitrary list of properties.
 | `isList`   | Yes      | Boolean        | Must be `true`                                                                                                                                                       |
 | `required` | No       | Boolean        | This decides if the user is required to specify items in the list, `true` by default |
 
-#### 4.5.2 XML Elements
+#### 4.6.2 XML Elements
 
 `<properties>` (required) — This encapsulates the list or properties to be configured. For more information on property groups, see the [Property Groups](/apidocs-mxsdk/apidocs/pluggable-widgets/#property-groups) section of *Pluggable Widgets API*. Properties must be grouped by `<propertyGroup>` elements. Nested object properties are not supported.
 
-#### 4.5.3 Studio Pro UI
+#### 4.6.3 Studio Pro UI
 
 When the property is defined as follows:
 
@@ -560,18 +611,18 @@ Then the Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/object.png" >}}
 
-### 4.6 File {#file}
+### 4.7 File {#file}
 
 The file property type allows a user to configure a file from an object that is a specialization of **System.File**. It is passed as a [`DynamicValue<FileValue>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#filevalue) prop to a client component.
 
-#### 4.6.1 XML Attributes
+#### 4.7.1 XML Attributes
 
 | Attribute  | Required | Attribute Type | Description |
 | ---------- | -------- | -------------- | ----------- |
 | `type`     | Yes      | String         | Must be `file` |
 | `key`      | Yes      | String         | See [key](#key)  |
 
-#### 4.6.2 Studio Pro UI
+#### 4.7.2 Studio Pro UI
 
 When the property is defined as follows:
 
@@ -587,7 +638,7 @@ Then the Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/file.png" >}}
 
-### 4.7 Datasource {#datasource}
+### 4.8 Datasource {#datasource}
 
 The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listvalue) and may be used with [`action`](#action), [`attribute`](#attribute), [`expression`](#expression), [`text template`](#texttemplate) and [`widgets`](#widgets) properties. See [Data Sources](/refguide/data-sources/#list-widgets) for available data source types.
 
@@ -597,7 +648,7 @@ If no data source has been configured by the user, any properties that are linke
 Only list datasources are supported, therefore specifying `isList="true"` is required.
 {{% /alert %}}
 
-#### 4.7.1 XML Attributes
+#### 4.8.1 XML Attributes
 
 | Attribute  | Required | Attribute Type | Description |
 | ---------- | -------- | -------------- | ----------- |
@@ -606,7 +657,7 @@ Only list datasources are supported, therefore specifying `isList="true"` is req
 | `isList`   | Yes      | Boolean        | Must be `true` |
 | `required` | No       | Boolean        | This decides if the user is required to specify a datasource, `true` by default |
 
-#### 4.7.2 Studio Pro UI
+#### 4.8.2 Studio Pro UI
 
 When the property is defined as follows:
 

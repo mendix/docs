@@ -69,10 +69,10 @@ To create the calling microflow and add it as the custom action to the workflow 
 
     2. Set **Category** to **Integration**.
 
-    3. Set Icon to **pt_feedback_checkmark**:
-
+    3. Select an icon and a toolbox image from a disk for **Icon** and **Image** properties. For more information on properties, see the [Expose as Workflow Action](/refguide/microflow/#expose-as-workflow-action) section in *Microflow Properties*.
+       
         {{< figure src="/attachments/howto/logic-business-rules/add-action-to-workflow-toolbox/expose-as-workflow-action-properties.png" alt="Expose as Workflow Action Settings" >}}
-
+    
 11. Click **OK**.
 
 Good job! You have configured the custom workflow action.

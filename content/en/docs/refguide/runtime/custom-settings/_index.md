@@ -26,6 +26,14 @@ When you are running your app locally, you can set these values in a [Configurat
 
 There is more information on how this is done in the Cloud Foundry buildpack in [Configuring Custom Runtime Settings](https://github.com/mendix/cf-mendix-buildpack#configuring-custom-runtime-settings) in the GitHub repo.
 
+### 1.1 Duration/Interval Settings
+
+In versions of Mendix below 9.13.0, durations, intervals, and timeouts have to be specified as a number. This can be somewhat confusing because
+different units are used for different settings. Also, specifying long durations in milliseconds can be a bit cumbersome.
+In Mendix 9.13.0 and above it is possible to specify durations in more user-friendly formats:
+* **ISO 8601 Periods**, such as `P7D`, `PT1H30M`, or `PT1S` (See https://en.wikipedia.org/wiki/ISO_8601#Durations for more information)
+* **HOCON durations**, such as `7 days`, `90m`, or `1 second` (See https://github.com/lightbend/config/blob/main/HOCON.md#duration-format for more information)
+
 ## 2 General Settings {#general}
 
 The following custom settings can be configured:
@@ -48,7 +56,7 @@ The following custom settings can be configured:
 | com.<wbr>mendix.<wbr>core.<wbr>ProcessedTasksCleanupAge | This setting specifies (in milliseconds) how old rows in the System.<wbr>ProcessedQueueTask have to be before they are removed from the database. See [Task Queue](/refguide/task-queue/#cleanup) for more details. |
 | EnableApacheCommonsLogging | Some libraries used by the Mendix runtime use [Apache Commons](http://commons.apache.org/) for logging. By default these log messages are suppressed. Set this value to `true` to receive the log messages from these libraries in the Mendix logs. This setting is available in Mendix 9.1.0 and later. | false |
 | HashAlgorithm | Specifies the hash algorithm used to generate hash values for attributes of the HashString type, such as the password of a user. This setting overrides the setting in Studio Pro, see [Hash Algorithm](/refguide/project-settings/#hash-algorithm). Possible values are `BCRYPT`, `SSHA256`, `SHA256` (not recommended) and `MD5` (not recommended). To override the default BCrypt cost, you can specify `BCRYPT:cost`, where 'cost' is a number between 10 and 30. An example value is `BCRYPT:12`. | BCRYPT |
-| http.<wbr>client.<wbr>CleanupAfterSeconds | For the call REST service and call web service activities, the first request to a new host will create an HTTP client that will handle subsequent requests. When there are no new requests to the host for the specified time, the HTTP client will be cleaned up. A value of `0` means no cleanup.<br/>{{% alert color="warning" %}}If the infrastructure provider closes this connection before this cleanup time, you can receive a `java.net. SocketException: Connection reset` error. You can reduce this value to prevent this, or handle the error in your [REST call](/refguide/call-rest-action/#troubleshooting).{{% /alert %}} | 355 |
+| http.<wbr>client.<wbr>CleanupAfterSeconds | For the call REST service and call web service activities, the first request to a new host will create an HTTP client that will handle subsequent requests. When there are no new requests to the host for the specified time, the HTTP client will be cleaned up. A value of `0` means no cleanup.<br/>{{% alert color="warning" %}}If the infrastructure provider closes this connection before this cleanup time, you can receive a `java.net. SocketException: Connection reset` error. You can reduce this value to prevent this, or handle the error in your [REST call](/refguide/call-rest-action/#troubleshooting).{{% /alert %}} | 355 (355 seconds) |
 | http.<wbr>client.<wbr>MaxConnectionsPerRoute | The [maximum number of connections for a route](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnPerRoute(int)) for call REST service and call web service activities.<br/>{{% alert color="warning" %}}If your app uses these calls, it is strongly recommended that this value is increased. The default could prevent multiple end-users accessing the API simultaneously. A good value is around the number of concurrent users you expect, with a maximum of 250. The value of `http.client. MaxConnectionsTotal` may also need to increase.{{% /alert %}} | 2 |
 | http.<wbr>client.<wbr>MaxConnectionsTotal | The [maximum number of connections allowed across all routes](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnTotal(int)) for the call REST service and call web service activities.<br/>{{% alert color="warning" %}}If you change the value of `http.client. MaxConnectionsPerRoute`, you will need to increase this value in line with that, up to a maximum of 250.{{% /alert %}} | 20 |
 | JavaKeyStorePassword | Password for the default Java keystore. | changeit |
@@ -57,8 +65,9 @@ The following custom settings can be configured:
 | NoClientCertificateUsages | Comma-separated list of host names or imported web service names that should never be contacted using a client certificate. |   |
 | PersistentSessions | Defines whether sessions will be persisted in the database or not. When sessions are persisted, statistics will be made about logged-in users. When the Runtime server restarts, sessions still exist and users don't have to sign in again. In a clustered environment you must have persistent sessions. The only exception is for on-premises installations which have implemented sticky sessions. The value can be true or false. | true |
 | ScheduledEventExecution | Specify which scheduled events should be executed. Choices are `ALL`, `NONE`, or `SPECIFIED`. In the case of `SPECIFIED`, enumerate the scheduled events using the `MyScheduledEvents` configuration option described below. | NONE |
+| SessionKeepAliveUpdatesInterval | Defines after how much time expired sessions can be removed from the database. | 100000 (100s) |
 | SessionTimeout | Defines after how much time session becomes invalid (in milliseconds). After that timeout a session becomes applicable for removal. The session will not be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 (10 minutes) |
-| TaskQueue.<wbr>ShutdownGracePeriod | Time in ms to wait for task in a task queue to finish when shutting down. | 10000 |
+| TaskQueue.<wbr>ShutdownGracePeriod | Time in ms to wait for task in a task queue to finish when shutting down. | 10000 (10 seconds) |
 | TempPath | The location of the temporary files. | [deployment folder]\data\tmp |
 | TrackWebServiceUserLastLogin | Defines whether to update the web service user's `LastLogin` field on each login. When this happens a database update query has to be sent and this can have performance consequences on heavy load systems. When this setting is set to false, no database interaction is necessary. | true |
 | UploadedFilesPath | The location of the uploaded files. A valid path can be: `\\FileServer\CustomerPortalFiles`. | [deployment folder]\data\files |
@@ -92,7 +101,7 @@ The settings below influence the behavior of the log files. These settings can o
 | OracleServiceName | Defines the `SERVICE_NAME` when you have a connection with an Oracle DBMS. |   |
 | DataStorage.EnableDiagnostics | This setting can be used to generate a uniqueness constraint violation report. | false |
 | UseNetworkTimeout | This setting is applied to PostgreSQL and DB2. It affects the timeout mechanism used when reserving new ids for Mendix objects. If set to true, the socket level request timeout is used. In that case, the request timeout is handled within the operating system. If set to false, the timeout is handled by Mendix runtime. For other databases, timeouts are always handled by Mendix runtime. | true |
-| JdbcLoginTimeout | This setting defines the database connection establishment time in milliseconds. | 5000 |
+| JdbcLoginTimeout | This setting defines the database connection establishment time in milliseconds. | 5000 (5 seconds) |
 
 ### 4.2 Connection Pooling
 
@@ -102,7 +111,7 @@ These settings are configured *per runtime instance*. If you have [scaled your a
 
 | Name | Value | Default Value |
 | --- | --- | --- |
-| ConnectionPoolingMaxWait | When the maximum number of "active" objects has been reached, the pool is said to be "exhausted." The "when exhausted" action used by the connection bus is `WHEN_EXHAUSTED_BLOCK`. Sets the maximum amount of time (in milliseconds) the `borrowObject()` method should block before throwing an exception when the pool is exhausted. When less than or equal to `0`, the `borrowObject()` method may block indefinitely. (!) | 10000 |
+| ConnectionPoolingMaxWait | When the maximum number of "active" objects has been reached, the pool is said to be "exhausted." The "when exhausted" action used by the connection bus is `WHEN_EXHAUSTED_BLOCK`. Sets the maximum amount of time (in milliseconds) the `borrowObject()` method should block before throwing an exception when the pool is exhausted. When less than or equal to `0`, the `borrowObject()` method may block indefinitely. (!) | 10000 (10 seconds) |
 | ConnectionPoolingMaxActive | Sets the cap on the total number of active instances from the pool. | 50 |
 | ConnectionPoolingMaxIdle | Sets the cap on the number of "idle" instances in the pool. | 50 |
 | ConnectionPoolingMinIdle | Sets the minimum number of objects allowed in the pool before the evictor thread (if active) spawns new objects. Note that no objects are created when `numActive` + `numIdle` >= `maxActive`.  This setting has no effect if the idle object evictor is disabled (as in, if `timeBetweenEvictionRunsMillis` <= 0). | 0 |

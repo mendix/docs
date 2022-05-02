@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "app service", "microsoft", "micr
 
 ## 1 Introduction
 
-The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service enables sending messages to a Microsoft Teams channel automatically. You can add and configure the app service in a microflow. Once the microflow that uses the app service is triggered, your app asynchronously sends out the message to the Microsoft Teams channel. 
+The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service enables sending messages and actionable message cards to a Microsoft Teams channel automatically. You can add and configure the app service in a microflow. Once the microflow that uses the app service is triggered, your app asynchronously sends out the message to the Microsoft Teams channel. 
 
 This app service is an [add-on module](/refguide/consume-add-on-modules-and-solutions/).
 

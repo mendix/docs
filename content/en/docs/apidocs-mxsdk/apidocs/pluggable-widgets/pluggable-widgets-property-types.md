@@ -524,7 +524,7 @@ The association property type allows a widget to work directly with both reading
 The client will receive an `ModifiableValue<T>` where `T` depends on the configured `<associationType>`. For more information, see the [ModifiableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#modifiable-value) section of *Client APIs Available to Pluggable Widgets*.
 
 {{% alert color="info" %}}
-This property type was introduced in Mendix 9.13.
+This property type was introduced in Mendix [9.13](/releasenotes/studio-pro/9.13/).
 {{% /alert %}}
 
 #### 4.5.1 XML Attributes

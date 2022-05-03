@@ -108,6 +108,8 @@ On the **Upload Content** page, select the type of content you would like to pub
 
 On the **General** page,  you need to provide some details about your component. The information you entered above is pre-filled on this page.
 
+#### 4.2.1 Describing Your Content
+
 Follow these steps to describe your content:
 
 1. Enter a **Name** for your component.
@@ -131,25 +133,58 @@ Follow these steps to describe your content:
 	{{% /alert %}}
 
 6. Select the **Studio Pro Version** on which you built the content.
-7. <a name="license"></a>Select the type of **License** you want applied to your app (if applicable):
 
-	* [Apache V2](https://www.apache.org/licenses/LICENSE-2.0)
-	* [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.en.html) – please note that everything licensed under GNU GPL is public and that GNU GPL has strong copyleft effect, which means that all consuming applications should make their code public as well; using this license is not recommended
-	* [Mendix EULA](https://www.mendix.com/terms-of-use/) – this license is to be used when the component is released by Mendix
-	* [MindSphere Development License Agreement](https://siemens.mindsphere.io/en/terms) – this license is to be used when the component is released by Siemens
-	* [MIT](https://opensource.org/licenses/MIT)
-	* SDISW Development License Agreement for Mendix Sample Apps EXTERNAL – this license is to be used when the component is released by Siemens
-	* SDISW End-User License Agreement for Mendix Connectors and Widgets – this license is to be used when the component is released by Siemens
-	* SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL – this license is to be used when the component is released by Siemens
-	* SDISW End-User License Agreement for Mendix Sample Apps – this license is to be used when the component is released by Siemens
+#### 4.2.2 Providing License Details {#license)}
 
-	{{% alert color="info" %}}After you select a license, make sure you add a specific *license.txt* file in your artifacts (meaning, in the *.mpk*).
-	/alert %}}
+Select the type of **License** you want applied to your app (if applicable):
+
+* [Apache V2](https://www.apache.org/licenses/LICENSE-2.0)
+* [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.en.html) – please note that everything licensed under GNU GPL is public and that GNU GPL has strong copyleft effect, which means that all consuming applications should make their code public as well; using this license is not recommended
+* [Mendix EULA](https://www.mendix.com/terms-of-use/) – this license is to be used when the component is released by Mendix
+* [MindSphere Development License Agreement](https://siemens.mindsphere.io/en/terms) – this license is to be used when the component is released by Siemens
+* [MIT](https://opensource.org/licenses/MIT)
+* SDISW Development License Agreement for Mendix Sample Apps EXTERNAL – this license is to be used when the component is released by Siemens
+* SDISW End-User License Agreement for Mendix Connectors and Widgets – this license is to be used when the component is released by Siemens
+* SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL – this license is to be used when the component is released by Siemens
+* SDISW End-User License Agreement for Mendix Sample Apps – this license is to be used when the component is released by Siemens
+
+{{% alert color="info" %}}After you select a license, make sure you add a specific *license.txt* file in your artifacts (meaning, in the *.mpk*).
+{{% /alert %}}
+
+These are the OSS license requirements:
+
+| **License Name (of the Marketplace Component)** | **Commercial Use allowed?** | **Code of the Marketplace component needs to be in public repo?** | **License Text required along with Copyright Information in the code & distribution artifact?** | **Can Modify?** (Modifications to the code should be mentioned) | **Can consuming applications use without publicly putting their code?** | **Notice files should be distributed along with artifact?** | **Source code of original component to be distributed along with consuming application?** | **Can sub-license?** |
+| --- | --- | --- | --- | --- | --- |  --- | --- | --- |
+| Apache 2.0 | Y | Y | Y | Y | Y | Y | N | Y |
+| MIT | Y | Y | Y | Y | Y | Y | N | Y |
+| BSD 2.0,3.0 | Y | Y | Y | Y | Y | Y | N | Y |
+| Apache 1.0 | Y | Y | Y | Y | Y | Y | N | Y |
+| GPL v1,v2,v3 | Y | Y | Y | N (Modification has strong copyleft, discouraged) | N | Y | Y | N |
+| MPL 2.0 | Y | Y | Y | Y (Modified code files should be public) | Y | Y | N | Y |
+| LGPL v2.1 | Y | Y | Y | Y (Must disclose source if statically linked) | Y (Must disclose source if statically linked) | Y | Y | N |
+| LGPL v3.0 | Y | Y | Y Must also include installation instructions | Y | Y (If you distribute this library in an executable, you must make the source available for 3 years.) | Y | Y If you distribute this library in an executable, you must make the source available for 3 years. | N |
+| Creative Commons CC0 1.0 Universal (CC-0)<br>(Public Domain) | Y | N | N | Y | Y | N | N | Y |
+| Mendix EULA (Commercial) | Y (Should only be used by components developed by Mendix R&D team) | N | Y (Or a link to Mendix Common Terms & Conditions) | N | Y | Y | N | ?? (As per governing terms & conditions) |
+
+These are the SDISW and Mindsphere license requirements:
+
+| **License Name (of the Marketplace Component)** | **Commercial Use allowed?** | **Code of the Marketplace component needs to be in public repo?** | **License Text required along with Copyright Information in the code & distribution artifact?** | **Can Modify?** (Modifications to the code should be mentioned) | **Can consuming applications use without publicly putting their code?** | **Notice files should be distributed along with artifact?** | **Source code of original component to be distributed along with consuming application?** | **Can sub-license?** |
+| --- | --- | --- | --- | --- | --- |  --- | --- | --- |
+| SDISW Development License Agreement for Mendix Sample Apps EXTERNAL | Y (Should only be used by components developed by Siemens developers) | N | Y | N | Y | Y | N | ?? (As per governing terms & conditions) |
+| SDISW End-User License Agreement for Mendix Connectors and Widgets | Y (Should only be used by components developed by Siemens developers) | N | Y | N | Y | Y | N | ?? (As per governing terms & conditions) |
+| SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL | Y (Should only be used by components developed by Siemens developers) | N | Y | N | Y | Y | N | ?? (As per governing terms & conditions) |
+| SDISW End-User License Agreement for Mendix Sample Apps | Y (Should only be used by components developed by Siemens developers) | N | Y | N | Y | Y | N | ?? (As per governing terms & conditions) |
+| MindSphere Development License Agreement | Y (Should only be used by components developed by Siemens developers) | N | Y | N | Y | Y | N | ?? (As per governing terms & conditions) |
+
+#### 4.2.3 Finishing Up
+
+To finish up configuring this page, follow these steps:
+
+1. Click **Upload an Image** to upload an icon for the component.
 
 	{{< figure src="/attachments/appstore/general/share-app-store-content/general.jpg"   width="600"  >}}
 
-6. Click **Upload an Image** to upload an icon for the component.
-7. <a name="draft"></a>On each page of the upload flow, click one of the following buttons:
+2. <a name="draft"></a>On each page of the upload flow, click one of the following buttons:
 
 	* **Save Draft** to save the details you have entered so far to the [Drafts](/appstore/general/app-store-overview/#my-content) page of your Marketplace (which you can access via the **My Drafts** button in the upper right of the page)
 	* **Save & Continue** to go to the next page of the upload flow

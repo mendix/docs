@@ -29,12 +29,19 @@ You can use the same model concepts (domain model, pages, microflows, etc.) and 
 
 Visit [this page](best-practices) to learn more about best practices when designing offline-first apps.
 
-## Deploying offline-first applications 
+## Distributing offline-first applications 
 
-When you model a web application and deploy it to the production, all users immediately have access to it. However, this is often not the case with offline-first apps. The apps installed on your users' devices do not immediately update, especially for native mobile apps. Typically, you create and distribute a new release of your app in the Google PlayStore and AppStore, which may take some time. Alternatively, Mendix provides an Over-the-Air (OTA) update mechanism to update the apps without going through the release process. In both cases, your users may keep working with the previous application model until they receive an update. Even after your users update their apps on the devices, there may be data created using the old model domain that needs to be synchronized with the server. That's why you need to ensure that your app's model changes are backward-compatible.
+When you model a web application and deploy it to the production, all users immediately have access to it. However, this is often not the case with offline-first apps. The apps installed on your users' devices do not immediately update, especially for native mobile apps. Typically, you create and distribute a new release of your app in the Google PlayStore and AppStore, which may take some time. Alternatively, Mendix provides an Over-the-Air (OTA) update mechanism to update the apps without going through the release process. In both cases, your users may keep working with the previous application model until they receive an update. Even after your users update the app on their devices, there may be data created using the old model domain that needs to be synchronized with the server. That's why you need to ensure that your app's model changes are backward-compatible.
 
 Imagine that you've deployed the first version of your native mobile app, and users have downloaded the app and started using it. At this point - you should be thoughtful of the changes you introduce to the model. Assume you rename an entity and deploy it to the Mendix cloud. However, the local databases in your users' devices still have the old entity name. This may cause synchronization errors if your users attempt to synchronize a new object of the entity you renamed because the server no longer has an entity with the old name.
 
 A similar issue may occur regarding changes to other model elements, including microflows and constants available to the client.
 
 You can find in-depth documentation about updating your offline-first apps safely here: [Distributing Mobile Apps](/refguide/mobile/distributing-mobile-apps/)
+
+## Session management 
+
+Typically, when a user visits or logs in to a web app, the Mendix runtime creates a session. The Mendix runtime keeps the session alive as long as the user works with the app. The session expires after a certain amount of inactivity determined by the time of the last request to the server.
+
+Session management in offline-first apps uses the same system mentioned above, but this introduces some challenges. Offline-first apps perform few requests to Mendix runtime as the app works with the local database. This causes the session on the runtime to expire while the user is still using the app. Mendix has employed solutions that differ per application type (native or PWA) to overcome this situation. To learn more about how Mendix handles sessions for offline-first users, read the following doc: [Session Management](refguide/mobile/offlinefirst-data/session-management)
+

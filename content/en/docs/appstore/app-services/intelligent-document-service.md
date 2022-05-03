@@ -2,7 +2,7 @@
 title: "Intelligent Document Service"
 url: /appstore/app-services/intelligent-document-service/
 category: "App Services"
-description: "Describes the configuration and usage of the Intelligent Document Service app service, which is available in the Mendix Marketplace."
+description: "This document describes the configuration and usage of the Intelligent Document Service app service, which can extract text and key value pairs from documents."
 tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 ---
 

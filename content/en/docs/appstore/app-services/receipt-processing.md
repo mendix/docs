@@ -2,7 +2,7 @@
 title: "Receipt Processing"
 url: /appstore/app-services/receipt-processing/
 category: "App Services"
-description: "Describes the configuration and usage of the Receipt Processing app service, which is available in the Mendix Marketplace."
+description: "This document describes the configuration and usage of the Receipt Processing app service, which can automate the processing of receipts in bulk, without additional document training."
 tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 ---
 

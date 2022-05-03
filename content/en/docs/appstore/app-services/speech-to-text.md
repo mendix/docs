@@ -2,7 +2,7 @@
 title: "Speech to Text"
 url: /appstore/app-services/speech-to-text/
 category: "App Services"
-description: " "
+description: "This document describes the configuration and usage of the Speech to Text app service, which enables converting audio and voice into written text in your web apps."
 tags: ["speech to text", "service", "app store", "marketplace", "component", "platform support"]
 ---
 

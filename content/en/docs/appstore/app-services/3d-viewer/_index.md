@@ -3,7 +3,7 @@ title: "3D Viewer"
 url: /appstore/app-services/3d-viewer/
 category: "App Services"
 weight: 1
-description: "Describes the configuration and usage of the 3D Viewer app service, which is available in the Mendix Marketplace."
+description: "This document describes the configuration and usage of the 3D Viewer app service, which enables uploading, visualizing, and operating on 3D JT files in your web apps."
 tags: ["3d visualization", "cad", "app store", "marketplace", "component", "platform support"]
 ---
 

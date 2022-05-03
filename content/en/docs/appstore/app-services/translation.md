@@ -2,7 +2,7 @@
 title: "Translation"
 url: /appstore/app-services/translation/
 category: "App Services"
-description: " "
+description: "This document describes the configuration and usage of the Translation app service, which enables performing text translation in your web apps."
 tags: ["translation", "service", "app store", "marketplace", "component", "platform support"]
 ---
 

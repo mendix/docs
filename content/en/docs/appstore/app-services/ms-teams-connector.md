@@ -2,7 +2,7 @@
 title: "Microsoft Teams Connector"
 url: /appstore/app-services/ms-teams-connector/
 category: "App Services"
-description: " "
+description: "This document describes the configuration and usage of the Microsoft Teams Connector app service, which enables sending messages and actionable message cards to a Microsoft Teams channel automatically."
 tags: ["marketplace", "marketplace component", "app service", "microsoft", "microsoft teams", "connector"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---

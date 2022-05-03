@@ -2,6 +2,7 @@
 title: "Invoice Processing"
 url: /appstore/app-services/invoice-processing/
 category: "App Services"
+description: "This document describes the configuration and usage of the Invoice Processing app service, which can automate the processing of invoices in bulk."
 tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 ---
 

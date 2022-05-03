@@ -2,7 +2,7 @@
 title: "Text Analytics"
 url: /appstore/app-services/text-analytics/
 category: "App Services"
-description: " "
+description: "This document describes the configuration and usage of the Text Analystics app service, which enables performing text analytics in your web apps。"
 tags: ["text analytics", "service", "app store", "marketplace", "component", "platform support"]
 ---
 

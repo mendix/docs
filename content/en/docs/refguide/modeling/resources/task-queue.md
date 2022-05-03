@@ -35,7 +35,7 @@ In a single node scenario, the tasks in a task queue will simply be executed on 
 
 In a clustered setting, the Mendix runtime distributes these tasks transparently throughout the cluster. Should a cluster node be shutdown or fail halfway during executing a task, then the remaining cluster nodes will pick it up (eventually, when the node is detected to be down) and re-execute it. This happens automatically and does not need to be managed.
 
-You can control how many tasks can run in parallel on each node when you create your task queue. See [Creating Task Queues](#create-queue), below, for more information.
+You can control how many tasks can run in parallel on each node or in the overall cluster when you create your task queue. See [Creating Task Queues](#create-queue), below, for more information.
 
 #### 2.1.3 Context in Task Queues
 
@@ -55,7 +55,11 @@ Background execution is done in so called **Task Queues**. They can be created i
 
 3. Click **Task Queue**.
 
-4. Enter the value for **Threads** for each cluster node.
+4. Enter the value for **Threads** for the Taks Queue.
+
+5. Select the **Scope** for the threads (since Mendix 9.13):
+    - with "Per Node" the maximum thread count will be limited per node. When this option is selected, adding new nodes to the cluster will also increase the total thread count in overall cluster.
+    - with "Cluster-wide" the maximum thread count will be limited cluster-wide. When this option is selected, total thread count in the cluster will be fixed and adding/removing new nodes will not have any impact on the thread count.
 
 Task Queues have a number threads. Each of these threads can process one task at a time. That is, a queue will pick up as many concurrent tasks as it has threads. Whenever a task is finished, the next one will be picked up.
     
@@ -65,7 +69,7 @@ Task Queues have a number threads. Each of these threads can process one task at
 In versions of Mendix below 9.9.0, there is a limit of 40 threads per cluster node.
 {{% /alert %}}
 
-In general, one or two threads should be enough, unless there is a large number of tasks or tasks take a long time and need to execute in parallel. Having many threads will put additional load on the database and should not be done if not needed. Remember that, in a horizontally-scaled app, this is the number of threads for each *node*, not the total number of threads.
+In general, one or two threads should be enough, unless there is a large number of tasks or tasks take a long time and need to execute in parallel. Having many threads will put additional load on the database and should not be done if not needed.
 
 When choosing the number of threads for a task queue, use the following guidelines:
 * If there are only a few tasks use a single thread.

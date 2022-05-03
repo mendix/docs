@@ -38,7 +38,7 @@ The domain model used by the AWS S3 Connector is shown below.
 
 {{< figure src="/attachments/appstore/connectors/aws-s3-connector/domain-model.png" >}}
 
-When using the Java actions, results will be stored in the following entity types, which also need to be passed to other Java actions to specify on which object(s) an action is to be performed.
+When using the Java actions, results will be stored as objects of the following entity types. These objects can be passed to other Java actions to specify on which object(s) an action is to be performed.
 
 | Entity | Persistable | Description |
 | --- | --- | --- |
@@ -51,17 +51,21 @@ When using the Java actions, results will be stored in the following entity type
 
 ### 3.2 Java Actions
 
-You can drag the following Java actions into your microflows to connect to your S3 bucket(s). The module comes with some example microflows which you can find in **App** > **Marketplace modules** > **AWSS3Connector** > **Examples**.
+You can drag Java actions from the **Toolbox** into your microflows to connect to your S3 bucket(s).
+
+The module comes with some example microflows which you can find in **App** > **Marketplace modules** > **AWSS3Connector** > **Examples**.
 
 To use these Java Actions you must do the following:
 
-1. Provide a **Credentials** object which you have retrieved using the `GET_Credentials` microflow in the [AWS Authenticator Module](/appstore/connectors/aws-authentication/) — this needs to be passed to all the Java actions as a parameter to allow authentication to take place.
+1. Provide a **Credentials** object which you have retrieved using the `GetStaticCredentials` microflow in the [AWS Authenticator Module](/appstore/connectors/aws-authentication/) — this needs to be passed to all the Java actions as a parameter to allow authentication to take place.
 
 2. Provide other parameters to the action as objects of entities in the AWSS3Connector domain model. 
 
 3. Have an [error handler](/howto/logic-business-rules/set-up-error-handling/) defined for the Java action to deal with any errors.
 
-The Java Actions you can use are listed below. You can drag them into your microflows from **App** > **Marketplace modules** > **AWSS3Connector** > **_USE_ME**.
+The Java Actions you can use are listed below. You can drag them into your microflows from the **Toolbox**.
+
+{{< figure src="/attachments/appstore/connectors/aws-s3-connector/s3-connector-actions.png" >}}
 
 Here is a summary of the Java actions - see the sections below for more detail.
 
@@ -76,10 +80,20 @@ Here is a summary of the Java actions - see the sections below for more detail.
 | Move Object   | Move an S3 Object to a different bucket | `Credentials` object | `S3Object` object | `Bucket` object | Success Boolean |
 | Copy Object   | Copy an S3 Object to a different bucket | `Credentials` object | `S3Object` object | `Bucket` object | Success Boolean |
 
-
 #### 3.2.1 List Bucket
 
 This action lists all the S3 buckets which are visible using the supplied credentials.
+
+{{% alert color="info" %}}
+When List Bucket is first used, a connection will be made to the region stored in the constant **App** > **Marketplace modules** > **AWSS3Connector** > **_USE_ME** > **AWS_Default_Region**.
+
+This can be changed to the AWS Region of your choice. You may wish to do this for one of the following reasons:
+
+* To reduce latency by choosing a region which is geographically close to you
+* To choose a region to which you have access, if you do not have access to some regions
+
+**For technical reasons, you cannot set AWS_Default_Region to `aws-global` or `us-east-1`**.
+{{% /alert %}}
 
 **Parameters**
 
@@ -114,10 +128,6 @@ This action lists all the objects in an S3 bucket.
 **Returns**
 
 * List of objects of entity type `S3Object` which are in the bucket you supplied as a parameter
-
-    {{% alert color="warning" %}}
-This will return a maximum of 1000 objects from your S3 bucket.
-    {{% /alert %}}
 
 #### 3.2.4 Get Object
 

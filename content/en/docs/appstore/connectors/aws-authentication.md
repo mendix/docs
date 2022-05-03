@@ -24,14 +24,6 @@ The following actions need to be taken to use the AWS Authentication Module in y
 
 2. Download the [AWS Authentication Module](/needlinkhere/) from the Marketplace (see [How To Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/))
 
-3. Add the `AfterStartup` microflow **App** > **Marketplace modules** > **AWSAuthentication** > **_USE_ME** > **microflows** > **AfterStartup** to the [Runtime Tab](/refguide/project-settings/#after-startup) of the app settings. If there is already an after startup microflow, you will need to call this after startup microflow from the existing microflow.
-
-4. Ensure that an appropriate user role (for example, an administrator) can add AWS credentials to the `Credentials` and `StaticCredentials` entities in the AWSAuthentication module domain model. You will have to adjust the security settings to ensure the user roles have the correct access.
-
-    For example, you can [generate overview pages](howto/front-end/create-your-first-two-overview-and-detail-pages/) for these entities, give access only to the administrator user role, and then add the pages to the  navigation for the administrator user role.
-
-You can now use the AWS Authentication Module in your app by using the `Get_Credentials` microflow (**App** > **Marketplace modules** > **AWSAuthentication** > **_USE_ME** > **microflows** > **GET_Credentials**) when using your connector. See the documentation for your specific connector for more information.
-
 ## 3 Obtaining Credentials from AWS
 
 Within AWS, you can create IAM Credentials using the AWS console.
@@ -42,39 +34,31 @@ Within AWS, you can create IAM Credentials using the AWS console.
 
 3. For the chosen user, switch to the **Security credentials** tab.
 
-4. Either create an access key by clicking **Create access key** or use an existing **Access key ID**. This is the value to be stored in the `AccessKeyId` attribute of `StaticCredentials`.
+4. Either create an access key by clicking **Create access key** or use an existing **Access key ID**.
 
-5. Use the **Secret Access Key** associated with the Access Key ID as the `SecretKey` attribute of `StaticCredentials`.
+5. Make a note of the **Secret Access Key** associated with the Access Key ID.
 
     {{< figure src="/attachments/appstore/connectors/aws-authentication/iam-user-keys.png" >}}
 
-    {{% alert color="warning" %}}
+{{% alert color="warning" %}}
 Once you have downloaded the credentials, you cannot retrieve your **Secret Access Key** from the AWS Console again. You will need to store it somewhere safely, or create a new Access Key if you have lost it.
 
-Each user can only have two access keys set up.
-    {{% /alert %}}
+You can only set up two access keys for each user.
+{{% /alert %}}
 
-## 4 Overview of Module
+## 4 Using the AWS Authentication Module
 
-### 4.1 Domain Model
+You can now use the AWS Authentication Module in your app by using the `Get Static Credentials` microflow action, available in the **Toolbox**.
 
-The AWS Authentication Module contains two entities which contain the credentials for one or more AWS services: 
+{{< figure src="/attachments/appstore/connectors/aws-authentication/get-static-credentials.png" >}}
 
-{{< figure src="/attachments/appstore/connectors/aws-authentication/domain-model.png" >}}
+You will need to provide the following values, obtained from the AWS Console:
 
-**StaticCredentials** contains the credentials required to authenticate to AWS:
+* Access key ID
+* Secret access key
 
-* AccessKeyId – the access key id which can be obtained from the AWS Console
-* SecretKey – the secret access key which you need to store securely when you create your access key in the AWS console
+{{< figure src="/attachments/appstore/connectors/aws-authentication/get-static-credentials-dialog.png" >}}
 
-**Credentials** contains information to identify the associated static credentials:
+You can decide how to provide these securely within your app.
 
-* Name – a unique name you can give to these credentials - the credentials will always be accessed using this name
-* Provider – an enumeration indicating the type of credentials being stored — currently always `_STATIC`
-
-### 4.2 Microflows
-
-The AWS Authentication Module contains two microflows which can be used by in your app. These are in the folder **App** > **Marketplace modules** > **AWSAuthentication** > **_USE_ME** > **microflows**:
-
-* GET_Credentials – returns a `Credentials` object when passed a string containing the **Name** — returns an empty object if the string does not match the name of any credentials object
-* AfterStartup – needs to be added to your app as an after startup microflow
+The action returns a `Credentials` object. See the documentation for your specific connector for more information on how to use the Credentials object.

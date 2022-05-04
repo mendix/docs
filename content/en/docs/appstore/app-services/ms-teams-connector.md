@@ -240,7 +240,7 @@ The **Usage Dashboard** shows the real-time statistics about the usage of an app
 
 ### 6.1 License
 
-When you get the following pop-up window, then your license is invalid. Check if the configuration of your LicenseSecret and LicenseKey is correct.
+When you get the following pop-up window, then your license is invalid. Check if the configuration of your [LicenseSecret and LicenseKey](#obtain-keys) is correct.
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/license-invalid-popup.png" >}}
 

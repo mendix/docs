@@ -19,10 +19,6 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ### May 5th, 2022
 
-#### Improvements
-
-* We improved the display options of a screenshot attached to a [Feedback](/developerportal/collaborate/feedback/) item. You can now also download the screenshot
-
 #### Fixes
 
 * We fixed a known issue where not all project images were displayed correctly on th [My Apps](/developerportal/#my-apps) page (Ticket 148379)

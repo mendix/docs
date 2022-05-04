@@ -125,9 +125,7 @@ Now that you have created your domain model, it’s time to create your app’s 
 
     {{< figure src="/attachments/howto/quickstart-guide/part1/13-generate-page.png" >}}
 
-1.  Leave the page name as is and choose the **Form Vertical** template for the page:
-
-    {{< figure src="/attachments/howto/quickstart-guide/part1/14-page-check.png" >}}
+1.  Leave the page name as is and choose the **Form Vertical** template for the page.
 
 Next we want to replace some of the auto-generated content inside the template grid with some sleeker building blocks:
 
@@ -151,7 +149,10 @@ Your **Images** will now be displayed from the database, but the **Labels** on t
 1. Double-click to open the properties of the label captioned **Card title**.
 1. Click the **Edit** button next to **Caption**.
 1. In the new window, replace the caption field with a place holder (a number in curly braces starting from 1). 
-1. Click to add a new **Parameter** and select the **Title** attribute.
+1.  Click to add a new **Parameter** and select the **Title** attribute:
+
+    {{< figure src="/attachments/howto/quickstart-guide/part1/14.1-parameter.png" >}}
+
 1. Repeat this process for the label below with the caption **Supporting text**, making sure to select the **Description** attribute this time.
 
 ## 6 Defining Logic Using Microflows

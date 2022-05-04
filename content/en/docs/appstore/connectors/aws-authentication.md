@@ -10,11 +10,9 @@ tags: ["marketplace", "marketplace component", "aws", "authentication"]
 
 When using AWS connectors, you need to authenticate to the services being connected to. This is done using the [AWS Authentication Module](/needlinkhere/) available from the Mendix Marketplace.
 
-The AWS Authentication Module records encrypted static credentials in your app's database which are used to authenticate to an AWS Service.
-
 ### 1.1 Typical Use Cases
 
-You want to use the [AWS S3 Connector](/appstore/connectors/aws-s3-connector/). You can only connect to your S3 bucket when you have the correct credentials. These are held and supplied by the AWS Authentication Module.
+You want to use the [AWS S3 Connector](/appstore/connectors/aws-s3-connector/). You can only connect to your S3 bucket when you have the correct credentials. These are provided by the AWS Authentication Module.
 
 ## 2 Configuration
 
@@ -41,7 +39,7 @@ Within AWS, you can create IAM Credentials using the AWS console.
     {{< figure src="/attachments/appstore/connectors/aws-authentication/iam-user-keys.png" >}}
 
 {{% alert color="warning" %}}
-Once you have downloaded the credentials, you cannot retrieve your **Secret Access Key** from the AWS Console again. You will need to store it somewhere safely, or create a new Access Key if you have lost it.
+Once you have created the credentials, you cannot retrieve your **Secret Access Key** from the AWS Console again. You will need to store it somewhere safely, or create a new Access Key if you have lost it.
 
 You can only set up two access keys for each user.
 {{% /alert %}}

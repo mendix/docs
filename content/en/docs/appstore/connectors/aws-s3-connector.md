@@ -16,11 +16,11 @@ Your app uses objects which you want to store independently from the database. U
 
 ### 1.2  Dependencies
 
-This connector uses the AWS Authentication Module to obtain the credentials with which to authenticate to the S3 bucket. You need to have the downloaded and configured the AWS Authentication Module to use the AWS S3 Connector. See [AWS Authenticator Module](/appstore/connectors/aws-authentication/) for more information.
+This connector uses the AWS Authentication Module to provide the credentials with which to authenticate to the S3 bucket. You need to have the downloaded and configured the AWS Authentication Module to use the AWS S3 Connector. See [AWS Authenticator Module](/appstore/connectors/aws-authentication/) for more information.
 
 ## 2 Configuration
 
-The Java actions provided in the module need AWS credentials. These are stored using the [AWS Authenticator Module](/appstore/connectors/aws-authentication/). This needs to be set up as described in the linked document.
+The Java actions provided in the module need AWS credentials. These are provided using the [AWS Authenticator Module](/appstore/connectors/aws-authentication/). This needs to be set up as described in the linked document.
 
 To include the AWS S3 Connector module in your app, do the following.
 

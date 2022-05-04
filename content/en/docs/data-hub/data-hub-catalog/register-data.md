@@ -63,7 +63,7 @@ Once you have a Personal Access Token, follow this series of REST calls to regis
 
     If your service contract is not in the right format, use the [Transform API](#transform-api) to get your service contract in the right format before registering them.
 
-The [Data Hub Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html) describes all the optional fields, required formats, other operations on these same paths. You will only fill out the required fields and one operation per path in this how-to. 
+The [Data Hub Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) describes all the optional fields, required formats, other operations on these same paths. You will only fill out the required fields and one operation per path in this how-to. 
 
 #### 4.1.1 Registering an Application Through the Data Hub Catalog Registration API {#register-application}
 
@@ -72,7 +72,7 @@ To register an application, you need:
 - Personal Access Token
 - Application `Name`
 
-For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html#/Register/post_applications).
+For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Register/post_applications).
 
 You can see an example of a request below:
 
@@ -106,7 +106,7 @@ To register an environment, you need the following:
 - Environment `Location`
 - Environment `Type`
 
-For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html#/Register/post_applications__AppUUID__environments). 
+For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Register/post_applications__AppUUID__environments). 
 
 You can see an example of a request below:
 
@@ -148,7 +148,7 @@ To register services, you need the following:
 - Service version `Version` and `Security Scheme`
 - Service `Contract` with `Type` and `Value`
 
-For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html#/Register/put_applications__AppUUID__environments__EnvironmentUUID__published_endpoints). 
+For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Register/put_applications__AppUUID__environments__EnvironmentUUID__published_endpoints). 
 
 You can see an example of a request below:
 

@@ -14,15 +14,15 @@ The [Intelligent Document Service](https://marketplace.mendix.com/link/component
 
 Intelligent Document Service uses machine learning models to recognize and extract data from documents. With proper training, these models can automatically find data in your documents and extract them. Documents with different structures require different models.
 
-How well a model is trained depends on the input you provide for the training. The quality of your input relies on three factors:
+How well a model is trained depends on the input you provide for the training. The quality of the training input relies on three factors:
 
 * the number of the sample documents that you provide as input – the more sample documents you provide, the better the training results are
-* the similarity in the structures of the sample documents – the same document structure leads to high-quality training results
-* the accuracy of the marks on the locations of the data in the sample documents – high-quality training results require accurate marks on the locations of the data in the sample documents
+* the similarity in the structures of the sample documents – the training results are better when all the sample documents have the same (or similar) document structure
+* the accuracy of the marks on the locations of the data in the sample documents – you should mark the locations of the data very accurately in the sample documents to achieve optimal training results
 
 After the training is completed, the model is published automatically in the model repository, which enables model reuse and sharing. 
 
-Once a model is published, you can use it to recognize and extra data on the documents. The documents must have the similar structure as the sample documents that were used to train the model. You can set up a microflow to store the extracted data as objects for other use.
+Once a model is published, you can use it to recognize and extra data in your documents. Your documents must have the same or similar structure as the sample documents that were used to train the model. You can set up a microflow to store the extracted data as objects for other use.
 
 ### 1.2 Features
 

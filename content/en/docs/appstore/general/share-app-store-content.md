@@ -140,8 +140,6 @@ Select the type of **License** you want applied to your app (if applicable). The
 
 These are the OSS licenses and requirements available from the list on this page:
 
-* **Mendix Marketplace Content Master Terms**
-
 | **License** | **Notes** | **Commercial Use allowed?** | **Component Code Needs to Be in Public Repo?** | **License Text Required with Copyright Information in Code & Distribution Artifact?** | **Can Modify?** (Modifications to the code should be mentioned) | **Can Consuming Apps Use Without Making Their Code Public?** | **Notice Files Should Be Distributed with Artifact?** | **Original Component Source Code to Be Distributed with Consuming App?** | **Can Sub-License?** |
 | --- | --- | --- | --- | --- | --- | --- |  --- | --- | --- |
 | [Apache V2](https://www.apache.org/licenses/LICENSE-2.0) | Make sure you add a specific *license.txt* file in your artifacts (meaning, in the *.mpk*). | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}}  |

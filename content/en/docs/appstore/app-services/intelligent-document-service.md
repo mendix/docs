@@ -16,8 +16,8 @@ Intelligent Document Service uses machine learning models to recognize and extra
 
 How well a model is trained depends on the input you provide for the training. The quality of the training input relies on three factors:
 
-* the number of the sample documents that you provide as input – the more sample documents you provide, the better the training results are
-* the similarity in the structures of the sample documents – the training results are satisfying when all the sample documents have the same or similar document structure
+* the number of the sample documents that you provide as input – the more sample documents you provide as input, the better the training results are
+* the similarity in the structures of the sample documents – when all the sample documents have the same or similar document structure, you can get better training results
 * the accuracy of the marks on the locations of the data in the sample documents – you should mark the locations of the data accurately in the sample documents to achieve optimal training results
 
 After the training is completed, the model is published automatically in the model repository, which enables model reuse and sharing. 

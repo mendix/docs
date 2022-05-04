@@ -49,8 +49,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used.
 6. Click the link in the email to go to the [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) page and log in there. This page shows all the products that you have trials for.
 7. Click **Microsoft Teams Connector** to open the **service management dashboard**.
-8. In the service management dashboard, click on **Create Binding Keys** to generate the **LicenseSecret** and the **LicenseKey**. Save them somewhere safe. Later you will need to configure the LicenseSecret and the LicenseKey in your app.
-    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/create_binding_keys.png" >}}
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create the **LicenseSecret** and the **LicenseKey**. Save them somewhere safe. Later you will need to [configure the LicenseSecret and the LicenseKey](/appstore/app-services/intelligent-document-service/#configure-keys) in your app.
     
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/binding-key-generation.png" >}}
 
@@ -62,8 +61,8 @@ A trial gives everyone in your company one-month access to the app service. To s
 4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Owner will receive an email that says the app service is ready to be used.
 6. Click the link in the email to go to the [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **Microsoft Teams Connector** to open the service management dashboard.
-8. To generate binding keys, follow step no 8 in for Starting a Trial section.
+7. Click **Microsoft Teams Connector** to open the **service management dashboard**.
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create the **LicenseSecret** and the **LicenseKey**. Save them somewhere safe. Later you will need to [configure the LicenseSecret and the LicenseKey](/appstore/app-services/intelligent-document-service/#configure-keys) in your app.
 
 {{% alert type="info" %}}We recommend that you **Edit Instance Name** for your subscription on the service management dashboard. This is a good practice if you have purchased multiple subscriptions of a service.{{% /alert %}}
 

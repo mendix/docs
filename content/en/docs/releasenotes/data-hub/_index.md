@@ -13,11 +13,9 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### May 5th, 2022
 
-#### New Features
+#### New Feature
 
-* When a person is removed as a Technical Owner or Business Owner of an individual application, they will receive a MxDock notification confirming they are no longer the point of contact
-
-## 2022
+* When a person is removed as a Technical Owner or Business Owner of an individual application, they will receive an MxDock notification confirming that they are no longer the point of contact.
 
 ### April 21st, 2022
 

@@ -10,18 +10,31 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 The [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) app service uses AI and OCR technologies to extract text and key value pairs from images of documents in bulk. For more information, see the [Technical Provider](#technical-provider) section.
 
+### 1.1 How Intelligent Document Service Works
 
-### 1.1 Features
+Intelligent Document Service uses machine learning models to recognize and extract data from documents. With proper training, these models can automatically find data in your documents and extract them. Documents with different structures require different models.
+
+How well a model is trained depends on the input you provide for the training. The quality of the input relies on three factors:
+
+* the number of the documents that you provide as input – more documents lead to better training results
+* the similarity in the structures of the input documents – same structures result in high-quality training results
+* the accuracy of the marks on the locations of the data in the input documents – high-quality training results require accurate marks on the locations of the data in the input documents
+
+After the training is completed, the model is published automatically in the model repository, which enables model reuse and sharing. 
+
+Once a model is published, you can use it to recognize and extra data on the documents. The documents must have the similar structure as the input documents that were used to train the model. You can set up a microflow to store the extracted data as objects for other use.
+
+### 1.2 Features
 
 * Extract data from images in bulk and map data to an entity
 * Train a model using sample images by marking specific areas in images
 * Support [Mendix SSO](/appstore/modules/mendix-sso/)
 
-### 1.2 Limitation
+### 1.3 Limitation
 
-* Currently only supports images in JPG and JPEG formats.
+* Currently only supports images in JPG and JPEG formats
 
-### 1.3 Prerequisites
+### 1.4 Prerequisites
 
 * This app service works best with Studio Pro 8 versions starting with [8.18.15](/releasenotes/studio-pro/8.18/#81815) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0/).
 * For optimal recognition results, make sure that documents with small fonts have high resolutions:

@@ -35,7 +35,7 @@ In a single node scenario, the tasks in a task queue will simply be executed on 
 
 In a clustered setting, the Mendix runtime distributes these tasks transparently throughout the cluster. Should a cluster node be shutdown or fail halfway during executing a task, then the remaining cluster nodes will pick it up (eventually, when the node is detected to be down) and re-execute it. This happens automatically and does not need to be managed.
 
-You can control how many tasks can run in parallel on each node or in the overall cluster when you create your task queue. See [Creating Task Queues](#create-queue), below, for more information.
+You can control how many tasks can run in parallel on each node or in the whole cluster when you create your task queue. See [Creating Task Queues](#create-queue), below, for more information.
 
 #### 2.1.3 Context in Task Queues
 
@@ -55,7 +55,7 @@ Background execution is done in so called **Task Queues**. They can be created i
 
 3. Click **Task Queue**.
 
-4. Enter the value for **Threads** for the Taks Queue.
+4. Enter the value for **Threads** for the Task Queue.
 
 5. Select the **Scope** for the threads (since Mendix 9.13):
     - with "Per Node" the maximum thread count will be limited per node. When this option is selected, adding new nodes to the cluster will also increase the total thread count in overall cluster.

@@ -8,17 +8,17 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 ## 1 Introduction
 
-The [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) app service uses AI and OCR technologies to extract text and key value pairs from images of documents in bulk. For more information, see the [Technical Provider](#technical-provider) section.
+The [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) app service uses AI and OCR technologies to extract text and key value pairs from images of documents in bulk.
 
 ### 1.1 How Intelligent Document Service Works?
+
+To use Intelligent Document Service, you need to first train a machine learning model and then publish the model. Once published, the model can automatically extract important data in your documents.
 
 {{< figure src="/attachments/appstore/app-services/intelligent-document-service/document-model-training-diagram.png" alt="Document Model Training Diagram" >}}
 
 #### 1.1.1 Training the Document Model
 
-Intelligent Document Service uses machine learning models to recognize and extract important fields from documents. With proper training, these models can automatically find important fields in your documents and extract them. Documents with different structures require different models.
-
-To train a model, first you need to upload sample documents. Then you need to mark the important fields for each sample document. At last, you should publish the model.
+To train a model, first you need to upload sample documents. Then you need to mark the important fields for each sample document. After that, you should publish the model.
 
 {{< figure src="/attachments/appstore/app-services/intelligent-document-service/training-steps.png" alt="Training Steps" >}}
 
@@ -26,9 +26,9 @@ How well a model is trained depends on the input you provide for the training. T
 
 * the number of the sample documents that you provide as input – the more sample documents you provide as input, the better the training results are
 
-* the similarity in the structures of the sample documents – when all the sample documents have the same or similar document structure, you can get better training results
+* the similarity in the structures of the sample documents – when all the sample documents have the same or similar document structure, you can get best training results
 
-* the accuracy of the marks on the locations of the important fields in the sample documents – you should mark the locations of the important fields accurately in the sample documents to achieve optimal training results
+* the accuracy of the marks on the locations of the important fields in the sample documents – you should mark the locations of the important fields accurately in the sample documents to achieve optimal training results, for example:
 
   {{< figure src="/attachments/appstore/app-services/intelligent-document-service/invoice-marks.png" alt="" >}}
 

@@ -12,6 +12,8 @@ The [Intelligent Document Service](https://marketplace.mendix.com/link/component
 
 ### 1.1 How Intelligent Document Service Works
 
+#### 1.1.1 Training
+
 Intelligent Document Service uses machine learning models to recognize and extract data from documents. With proper training, these models can automatically find data in your documents and extract them. Documents with different structures require different models.
 
 How well a model is trained depends on the input you provide for the training. The quality of the training input relies on three factors:
@@ -20,9 +22,13 @@ How well a model is trained depends on the input you provide for the training. T
 * the similarity in the structures of the sample documents – when all the sample documents have the same or similar document structure, you can get better training results
 * the accuracy of the marks on the locations of the data in the sample documents – you should mark the locations of the data accurately in the sample documents to achieve optimal training results
 
-After the training is completed, the model is published automatically in the model repository, which enables model reuse and sharing. 
+#### 1.1.2 Publishing
 
-Once a model is published, you can use it to recognize and extra data in your documents. Your documents must have the same or similar structure as the sample documents that were used to train the model. You can set up a microflow to store the extracted data as objects for other use.
+After you upload the sample documents and mark the locations of the data in the sample documents, you can publish the model. During the publishing process, the model gets trained internally and the training project gets saved. After the publishing process is completed successfully, the model is published.
+
+#### 1.1.3 Consuming
+
+Once a model is published, you can download the JSON structure of this model, and then create the Import Mapping using this JSON structure. Then you can use the Import Mapping in an activity in a microflow to extract data from the documents that are fed to the activity. The documents that you feed to the activity must have the same or similar structure as the sample documents that were used to train the model. You can set up a microflow to store the extracted data as objects for other use.
 
 ### 1.2 Features
 

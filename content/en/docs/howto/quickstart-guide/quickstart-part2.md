@@ -37,7 +37,7 @@ The **Home_Native** page has a different icon than the **Home_Web** page. Mendix
 
 You should see this in Studio Pro:
 
-{{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
+{{< figure src="/attachments/howto/quickstart-guide/part2/studio-pro-check.png" >}}
 
 The content on the page comes pre-made as a part of the template. To get started, do the following:
 
@@ -48,7 +48,7 @@ The content on the page comes pre-made as a part of the template. To get started
 1. Leave the **Type** as **Database**, click **Select** next to **Entity**, and search for the **Picture** entity. 
 1. When prompted to automatically fill the contents of the list view, click **No**.
 
-{{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
+{{< figure src="/attachments/howto/quickstart-guide/part2/list-view-fill.png" >}}
 
 ### 2.1 Creating the User Interface
 
@@ -72,7 +72,7 @@ Our images will now be displayed from the database, but the labels on the page w
 1. In the new window, replace the caption field with a place holder (a number in curly braces starting from 1). 
 1.  Then click **Parameter** > **New** to add a new parameter and select the **Title** attribute.
 
-    {{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
+    {{< figure src="/attachments/howto/quickstart-guide/part2/add-title-param.png" >}}
 
 1. Repeat the steps for the second label beneath the **Tile** field, this time linking it to the **Description** attribute instead.
 
@@ -84,7 +84,7 @@ Your app needs a button which allows the user to take a picture. Instead of a re
 
 1.  Drag the **Floating Action Button** from the **Toolbox** onto the page:
 
-    {{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
+    {{< figure src="/attachments/howto/quickstart-guide/part2/floating-action-button.png" >}}
 
     {{% alert type="info" %}}
     The location is managed in the widget's properties, so it does not matter where the widget is placed on the page. You can place it above the list view and still have it display in the bottom-right corner by configuring the widget correctly.
@@ -94,7 +94,9 @@ Your app needs a button which allows the user to take a picture. Instead of a re
 1. Select an **Icon** for the button, then search for the camera icon. 
 1. Set the position to the lower-right side of the page. 
 1. Make sure the on click action is set to **Call a nanoflow**.
-1. Click **Nanoflow** > **Select** then create a new nanoflow called **ACT_TakeNewPicture**.
+1. Click **Nanoflow** > **Select** then create a new nanoflow called **ACT_TakeNewPicture**:
+
+    {{< figure src="/attachments/howto/quickstart-guide/part2/make-pic-nano.png" >}}
 
 [Nanoflows](/refguide/nanoflows/) are the native mobile equivalent of microflows, but with several key differences. Nanoflows are offline-first, meaning they can execute without an online data connection. Therefore certain functionality like calling a REST API, which is available in Microflows, is not in Nanoflows. This is because nanoflows are based on JavaScript and execute on mobile devices instead of the server. Nanoflows also interact with the database on the user's mobile device, which is a copy of the server's database. All database transactions need to be synchronized from the device to the server in order for the data to reflect online.
 
@@ -104,7 +106,7 @@ As you look at your new **ACT_TakeNewPicture** nanoflow, do the following:
 1. Double-click the create object action and select the entity type as **Picture**. 
 1. Drag and drop a **Take Picture** action from the **Toolbox** onto the nanoflow after the create object activity:
 
-    {{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
+    {{< figure src="/attachments/howto/quickstart-guide/part2/add-activities.png" >}}
 
 1.  Configure the **Take Picture** action by double-clicking it and configuring the properties like this:
     1. Picture: $NewPicture
@@ -115,7 +117,7 @@ As you look at your new **ACT_TakeNewPicture** nanoflow, do the following:
     1. Use return value: yes
     1. Variable name: PictureTaken
 
-    {{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
+    {{< figure src="/attachments/howto/quickstart-guide/part2/config-take-pic.png" >}}
 
 Finally you need to create a page in which the user can view and edit their new picture:
 
@@ -129,7 +131,7 @@ Finally you need to create a page in which the user can view and edit their new 
 
 You should see the new page:
 
-{{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
+{{< figure src="/attachments/howto/quickstart-guide/part2/native-pic-page.png" >}}
 
 Just like before, you need to validate that the user has entered the title and description. Instead of validating that data in a nanoflow, you can simply configure validation on the text boxes themselves:
 
@@ -143,26 +145,28 @@ The final thing to do is ensure all the data captured by the user is synchronize
 1. Double-click the **Save** button. 
 1.  Set **Auto-synchronize** to **Yes**:
 
-    {{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
+    {{< figure src="/attachments/howto/quickstart-guide/part2/edit-button-props.png" >}}
 
 All done! You can now run your app and test all the features you have built. To test your native mobile app without creating a deployable package, do the following:
 
 1. Open the Make it Native app on your mobile device,
 1. Click the drop-down menu in Studio Pro and select **View app on your device**
 1. Click the View Native Mobile App tab
-1. Scan the QR code with the Make it Native app on your mobile device to begin testing (Mac users: be sure to use forward ports 8080/8083 as [explained here](/howto/general/using-mendix-studio-pro-on-a-mac/)).
+1. Scan the QR code with the Make it Native app on your mobile device to begin testing (Mac users: be sure to use forward ports 8080/8083 as [explained here](/howto/general/using-mendix-studio-pro-on-a-mac/)):
+
+    {{< figure src="/attachments/howto/quickstart-guide/part2/min-qr.png" >}}
 
 This will automatically begin testing. If you have issues, see [Troubleshoot Common Native Mobile Issues](/howto/mobile/common-issues/) for troubleshooting information.
 
 When we tested our native mobile photo app, we were lucky to sight a stegosaurus nearby:
 
-{{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
-{{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
-{{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
+{{< figure src="/attachments/howto/quickstart-guide/part2/mobile-pic-1.png" >}}
+{{< figure src="/attachments/howto/quickstart-guide/part2/mobile-pic-2.png" >}}
+{{< figure src="/attachments/howto/quickstart-guide/part2/mobile-pic-3.png" >}}
 
 After taking a photo with your native mobile app and tapping the **Save** button, you should be able to see your new pictures automatically appear in the responsive profile after reloading the page in your browser:
 
-{{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
+{{< figure src="/attachments/howto/quickstart-guide/part2/responsive-app.png" >}}
 
 Congratulations on successfully completing the Quickstart guide! You are definitely on your way to succeed with the Mendix platform.
 

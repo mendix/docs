@@ -10,25 +10,35 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 The [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) app service uses AI and OCR technologies to extract text and key value pairs from images of documents in bulk. For more information, see the [Technical Provider](#technical-provider) section.
 
-### 1.1 How Intelligent Document Service Works
+### 1.1 How Intelligent Document Service Works?
 
-#### 1.1.1 Training
+{{< figure src="/attachments/appstore/app-services/intelligent-document-service/document-model-training-diagram.png" alt="Document Model Training Diagram" >}}
 
-Intelligent Document Service uses machine learning models to recognize and extract data from documents. With proper training, these models can automatically find data in your documents and extract them. Documents with different structures require different models.
+#### 1.1.1 Training the Document Model
+
+Intelligent Document Service uses machine learning models to recognize and extract important fields from documents. With proper training, these models can automatically find important fields in your documents and extract them. Documents with different structures require different models.
+
+To train a model, first you need to upload sample documents. Then you need to identify the important fields for each sample document. At last, you should publish the model.
+
+{{< figure src="/attachments/appstore/app-services/intelligent-document-service/training-steps.png" alt="Training Steps" >}}
 
 How well a model is trained depends on the input you provide for the training. The quality of the training input relies on three factors:
 
 * the number of the sample documents that you provide as input – the more sample documents you provide as input, the better the training results are
+
 * the similarity in the structures of the sample documents – when all the sample documents have the same or similar document structure, you can get better training results
-* the accuracy of the marks on the locations of the data in the sample documents – you should mark the locations of the data accurately in the sample documents to achieve optimal training results
 
-#### 1.1.2 Publishing
+* the accuracy of the marks on the locations of the important fields in the sample documents – you should mark the locations of the important fields accurately in the sample documents to achieve optimal training results
 
-After you upload the sample documents and mark the locations of the data in the sample documents, you can publish the model. During the publishing process, the model gets trained internally and the training project gets saved. After the publishing process is completed successfully, the model is published.
+  {{< figure src="/attachments/appstore/app-services/intelligent-document-service/invoice-marks.png" alt="" >}}
 
-#### 1.1.3 Consuming
+#### 1.1.2 Publishing the Model
 
-Once a model is published, you can download the JSON structure of this model, and then create the Import Mapping using this JSON structure. Then you can use the Import Mapping in an activity in a microflow to extract data from the documents that are fed to the activity. The documents that you feed to the activity must have the same or similar structure as the sample documents that were used to train the model. You can set up a microflow to store the extracted data as objects for other use.
+After you upload the sample documents and mark the locations of the important fields in the sample documents, you can publish the model. During the publishing process, the model gets trained internally and the training project gets saved. After the publishing process is completed successfully, the model is published.
+
+#### 1.1.3 Extracting Data
+
+Once a model is published, you can download the JSON structure of this model, and then create the Import Mapping using this JSON structure. Then you can use the Import Mapping in an activity in a microflow to extract data from the documents that are fed to the activity. The documents that you feed to the activity should have the same or similar structure as the sample documents that were used to train the model. You can set up a microflow to store the extracted data as objects for other use.
 
 ### 1.2 Features
 

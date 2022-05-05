@@ -13,9 +13,19 @@ This document is Part 2 of the [Quickstart Guide](/howto/quickstart-guide/). Her
 
 {{< figure src="PUT IN DOWNLOADABLE PROJECT LINK HERE" >}}
 
+If you are working on a Mac, please complete [How To Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac.
+
+In order to test your app later in this guide, please download the [Make It Native 9](/refguide/getting-the-make-it-native-app/) app on your mobile device.
+
 In this document you will learn to use a native mobile navigation profile. You will create a small native mobile app to take pictures and upload them to the same database so they can be viewed in a browser or in a native app on your mobile device.
 
 Mendix native mobile apps are native mobile apps based on React Native. These apps use native UI elements which means faster performance and advanced features like gesture functionality (swiping, multi-tap, and more), and improved access to device functionalities like geolocation and the camera. Native mobile apps are offline first and only fetch data from the server when programmed to do so.
+
+### 1.2 What is the Make It Native 9 App?
+
+The [Make it Native 9](/refguide/getting-the-make-it-native-app/) mobile app is available for Android and iOS devices. Once installed, the app lets you quickly test your native mobile app as you develop it. 
+
+Specifically, the Make it Native 9 app connects to your local development machine’s running copy of your app and then displays your app inside its mobile testing environment. This lets you make changes to your app on your development machine, then instantly see those changes in the mobile app.
 
 ## 2 Creating a Native Mobile Picture App
 

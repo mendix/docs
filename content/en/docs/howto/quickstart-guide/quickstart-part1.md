@@ -9,15 +9,13 @@ tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
 
 ## 1 Introduction 
 
-Before starting this tutorial, please [download](https://marketplace.mendix.com/index3.html) and [install](/howto/general/install/) Mendix Studio Pro as well as the [Make It Native 9](/refguide/getting-the-make-it-native-app/) app. You will not need any additional software configured on your device in order to start.
+Before starting this tutorial, please [download](https://marketplace.mendix.com/index3.html) and [install](/howto/general/install/) Mendix Studio Pro. You will not need any additional software configured on your device in order to start.
+
+If you are working on a Mac, please complete [How To Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac.
 
 ### 1.1 What is Mendix Studio Pro?
 
 [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. This tutorial will use Studio Pro version 9.12.1, but you can use a later version if one is available.
-
-### 1.2 What is the Make It Native 9 App?
-
-The [Make it Native 9](/refguide/getting-the-make-it-native-app/) mobile app is available for Android and iOS devices. Once installed, the app lets you quickly test your native mobile app as you develop it. Specifically, the Make it Native 9 app connects to your local development machine’s running copy of your app and then displays your app inside its mobile testing environment. This lets you make changes to your app on your development machine, then instantly see those changes in the mobile app.
 
 ## 2 Create an Image Gallery in the Responsive Navigation Profile
 
@@ -176,7 +174,13 @@ Implement custom logic with a microflow by doing the following:
     {{< figure src="/attachments/howto/quickstart-guide/part1/17-microflow.png" >}}
 
 1. Add a decision to the flow (The orange diamond shape) from the toolbox. 
-1. Give it the caption `Has title?` and provide the expression `$Picture/Title != empty and $Picture/Title != ''`:
+1.  Give it the caption `Has title?` and provide the following expression:
+    
+    ```
+    trim($Picture/Title) != empty
+        and
+    trim($Picture/Title) != ''
+    ```
 
     {{< figure src="/attachments/howto/quickstart-guide/part1/18-decision.png" >}}
 
@@ -202,6 +206,11 @@ Finally we need to commit the image to the database, and then close the page:
 You have finished your responsive app! You can run your app and test it out by pressing <kbd>F5</kbd> or by clicking the green play icon in the top-right corner of Studio Pro (next to the **Publish** button):
 
 {{< figure src="/attachments/howto/quickstart-guide/part1/21-complete.png" >}}
+
+
+{{% alert type="info" %}}
+Launching your app compiles your app locally on your development machine, your local host. Publishing your app will push your app to a cloud environment or web container connected to your app. If none exists, an environment will be initialized for your app on the Mendix Cloud v4 Free Tier.
+{{% /alert %}}
 
 Congratulations! You successfully completed Part 1 of the Quickstart guide, you have your first Mendix App to prove it, and it works on almost any device. Well done! 
 

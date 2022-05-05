@@ -9,9 +9,7 @@ tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
 
 ## 1 Introduction 
 
-This document is Part 2 of the [Quickstart Guide](/howto/quickstart-guide/). Here you will be adding on to the app created in [Part 1: Design in a Responsive Web Profile](/howto/quickstart-part1/). If you decided to skip Part 1, you can download a copy of its completed app package in order to start this document right away:
-
-{{< figure src="PUT IN DOWNLOADABLE PROJECT LINK HERE" >}}
+This document is Part 2 of the [Quickstart Guide](/howto/quickstart-guide/). Here you will be adding on to the app created in [Part 1: Design in a Responsive Web Profile](/howto/quickstart-part1/). If you decided to skip Part 1, you can [download a copy of its completed app package](https://www.dropbox.com/s/pw4aonaxvnobmlz/Quickstart_App.mpk?dl=0) in order to start this document right away:
 
 If you are working on a Mac, please complete [How To Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac.
 

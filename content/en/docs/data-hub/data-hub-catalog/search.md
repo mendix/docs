@@ -18,7 +18,7 @@ To use the Data Hub Catalog Search API, you need the following:
 * A [Personal Access Token](https://docs.mendix.com/data-hub/data-hub-catalog/register-data#create-token)
 * A search term
 
-For more details on what can and cannot be provided in your search query, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html#/Search/get_data).
+For more details on what can and cannot be provided in your search query, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/search_v4.html#/Search/get_data).
 
 You can see an example of a request below where the search term is `Customer`:
 

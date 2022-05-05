@@ -9,17 +9,15 @@ tags: ["marketplace", "marketplace component", "Advanced Audit Trail", "UI"]
 
 ## 1 Introduction
 
-The [Advanced Audit Trail UI]() module contains pre-configured snippets, pages, and layout, which help you create search queries and display query results from your Elasticsearch environment inside your own Mendix application. An extensive search interface allows you to create a search query flexibly: inside a time frame (start date time, end date time), by object (code, GUID, entity), by object action (creation, deletion), by user (username, user role), and by snapshot context (additional info, transaction ID, execution ID, stack trace). Additionally, various pre-configured pages display the results of a single object query or a multi-object query.
+The [Advanced Audit Trail UI](https://marketplace.mendix.com/link/component/120204) module contains pre-configured snippets, pages, and layout, which help you create search queries and display query results from your Elasticsearch environment inside your own Mendix application. An extensive search interface allows you to create a search query flexibly: inside a time frame (start date time, end date time), by object (code, GUID, entity), by object action (creation, deletion), by user (username, user role), and by snapshot context (additional info, transaction ID, execution ID, stack trace). Additionally, various pre-configured pages display the results of a single object query or a multi-object query.
 
 ### 1.1 Dependencies
 
-You should use this module with the [Advanced Audit Trail module]().
+You should use this module with the [Advanced Audit Trail module](https://marketplace.mendix.com/link/component/120237).
 
-### 1.2 Demo App
+### 1.2 Solution Package
 
-For a demo app, see Advanced [Audit Trail solution package]().
-
-{{% todo %}}Add links to the module pages in 1, 1.1, 1.2{{% / todo %}}
+For a working copy, see [Advanced Audit Trail solution package](https://marketplace.mendix.com/link/component/120236).
 
 ## 2 Installation
 
@@ -27,45 +25,31 @@ To download and install the Advanced Audit Trail UI module in your app, follow t
 
 ## 3 Configuration
 
-### 3.1 Pages
+### 3.1 User Roles
 
-#### 3.1.1 Search
+* **DisplayOnly**: DisplayOnly is typically used for users that may only view certain audit trails.
+* **Administrator**: The Administrator additionally has access to the search interface.
 
-* ACT_SnapshotQuery_CreateAndShowSearch
-* ACT_SnapshotQuery_ExecuteAndViewResult
-* Search
-* Snippet_SnapshotQuery
+### 3.2 Pages
 
-#### 3.1.2 Search Results
+#### 3.2.1 Search
 
-* General
-  * Snapshot Cards
-    * Snippet_PropertyMutation_CurrentAndPrevious
-    * Snippet_PropertyMutation_CurrentOnly
-    * Snippet_Snapshot_Context
-    * Snippet_Snapshot_ObjectIdentification
-    * Snippet_Snapshot_User
-  * ACT_Snapshot_SeeSnapshotsForObject
-  * ACT_Snapshot_SeeSnapshotsInTransaction
-  * ACT_SnapshotQuery_LoadMore
-  * DS_Snapshot_GetPropertyMutations
-  * DS_SnapshotQuery_GetPropertyMutations
-  * DS_SnapshotQuery_GetResults
-  * Snippet_Snapshot_Details
-  * Snippet_Snapshot_Details_Sidebar
-* Snapshot_View
-* SnapshotQuery_SearchResults
-* SnapshotQuery_SearchResults_Popup
-* SnapshotQuery_SearchResults_SingleObject
-* SnapshotQuery_SearchResults_SingleObject_Popup
-* Snippet_SnapshotQuery_SearchResults
-* Snippet_SnapshotQuery_SearchResults_SingleObject
+* **ACT_SnapshotQuery_CreateAndShowSearch**: pre-creates the search query object and shows the search interface
+* **ACT_SnapshotQuery_ExecuteAndViewResult**: pushes the configured query to Elasticsearch and displays the query results if at least one snapshot was returned
+* **Search**: search interface, only accessible to the Administrator
 
-### 3.2 Resources
+#### 3.2.2 Search Results
 
-* AuditSnapshots_ResponsiveLayout
+* **General**
+  * **ACT_Snapshot_SeeSnapshotsForObject**: pushes a search query for a specific object, which will then display the object-specific audit trail
+  * **ACT_Snapshot_SeeSnapshotsInTransaction**: pushes a search query for a specific transaction ID, which will then display snapshots created within the same transaction context
+  * **ACT_SnapshotQuery_LoadMore**: loads an additional batch of snapshots from Elasticsearch
+* **Snapshot_View**: displays the selected snapshot in a pop-up window
+*  **SnapshotQuery_SearchResults**: displays the query results in the left column
 
-## 4 Usage
+    {{% alert color="info" %}}Selecting a snapshot will display its information in the right column.{{% /alert %}}
 
-{Optional: Provide more info for general use cases here if desired. You should provide this info in a reference guide page or how-to for more specific or advanced use cases.}
+* **SnapshotQuery_SearchResults_Popup**: displays the query results in a pop-up window
+* **SnapshotQuery_SearchResults_SingleObject**: displays the results for an object-specific query
+* **SnapshotQuery_SearchResults_SingleObject_Popup**: displays the results for an object-specific query in a pop-up window
 

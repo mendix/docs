@@ -18,6 +18,8 @@ Each call also requires the parameters 'username' and 'password'. These are the 
 
 {{% /alert %}}
 
+You can create and manage your [API keys](/developerportal/collaborate/general-settings/#api-keys) in the General Settings of your Project.
+
 To use the API, you need to set up a **Consumed Web Service** using the WDSL for this service, available here: [Get WSDL](/attachments/apidocs-mxsdk/apidocs/stories-api/19398865.wsdl). You can find out how to do this in [How to Consume a Complex Web Service](/howto/integration/consume-a-complex-web-service/).
 
 

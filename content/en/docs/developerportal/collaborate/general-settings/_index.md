@@ -26,17 +26,7 @@ The **General** settings page presents an overview of your app with the followin
 
 The sections below describe the actions you can perform on this page.
 
-## 2 Mendix Studio {#web}
-
-In the **Mendix Studio** section, you can see whether Studio is enabled for the app. 
-
-You can enable Studio if it has not been enabled yet by clicking **Enable Mendix Studio**.
-
-{{% alert color="info" %}}
-Only Scrum Masters or custom team roles with the **App Settings** permission are allowed to enable Studio.
-{{% /alert %}}    
-
-## 3 Editing Cloud Settings
+## 2 Editing Cloud Settings
 
 Click **Cloud Settings** to select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
 
@@ -55,7 +45,7 @@ Specific steps for configuring different cloud platforms are provided here:
 * [IBM Cloud](/developerportal/deploy/ibm-cloud/)
 * [On-Premises](/developerportal/deploy/on-premises-design/)
 
-## 4 Managing App Users {#managing-app-users}
+## 3 Managing App Users {#managing-app-users}
 
 Click **Manage App Users** to manage and invite App Users, who are end-users who can access the deployed app on specific environments to use it, test it, and provide feedback.
 
@@ -73,7 +63,7 @@ After clicking **Manage App Users**, you will see a list of environments for you
 
 {{< figure src="/attachments/developerportal/collaborate/general-settings/app-user-management-environments.png" >}}
 
-### 4.1 Manage Users
+### 3.1 Manage Users
 
 When you click **Manage Users** on for your environment, you will see a page with a list of the current App Users you can remove or edit:
 
@@ -87,7 +77,7 @@ To edit an App User's roles, click **Edit** by their name. Permissions for these
 If an App User has been granted access to an app environment through a [Group](/developerportal/control-center/#groups), only a Mendix Admin can remove them from that environment (by removing them from that group) or edit the roles granted by that group policy.
 {{% /alert %}}
 
-### 4.2 Invite Users
+### 3.2 Invite Users
 
 To invite new App Users to your app, click **Invite Users** on the **App User Management** page or on the page with a list of current App Users and follow these steps:
 
@@ -102,7 +92,7 @@ The invitee will receive an email asking them to authorize access to their Mendi
 
 After they provide authorization, they will be brought to your deployed app.
 
-## 5 API Keys {#api-keys}
+## 4 API Keys {#api-keys}
 
 In **API Keys**, there is an overview of the API keys created for your app with the following information:
 
@@ -124,7 +114,7 @@ You use these API keys to authenticate requests to the [Stories API](/apidocs-mx
 
 Click **Revoke** to delete an app API key.
 
-## 6 Editing App Info {#editing}
+## 5 Editing App Info {#editing}
 
 {{% alert color="info" %}}
 Only users with the **App Settings** permission can edit the application information.
@@ -140,7 +130,7 @@ Click **Edit App Info** to edit the following details:
 
 For details on the **Deactivate App**, **Leave App**, and **Delete App** options, see [How to Leave & Delete an App](/developerportal/collaborate/leave-delete-app/).
 
-## 7 Managing Webhooks {#webhooks}
+## 6 Managing Webhooks {#webhooks}
 
 Click **Manage Webhooks** to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if [CLEVR](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app in the Developer Portal are then sent to that URL.
 
@@ -170,11 +160,11 @@ To delete an existing webhook, click **Delete**.
 For details on the technical configuration of webhooks, see [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints/) in the *API Documentation*.
 {{% /alert %}}
 
-## 8 Leaving the App
+## 7 Leaving the App
 
 To leave the app, click **Leave App**. For details on leaving, deleting, and deactivating an app, see [How to Leave & Delete an App](/developerportal/collaborate/leave-delete-app/).
 
-## 9 Read More
+## 8 Read More
 
 * [Leave & Delete an App](/developerportal/collaborate/leave-delete-app/)
 * [Manage Deep Links](/developerportal/collaborate/manage-deeplinks/)

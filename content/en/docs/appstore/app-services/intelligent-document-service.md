@@ -18,7 +18,7 @@ The [Intelligent Document Service](https://marketplace.mendix.com/link/component
 
 Intelligent Document Service uses machine learning models to recognize and extract important fields from documents. With proper training, these models can automatically find important fields in your documents and extract them. Documents with different structures require different models.
 
-To train a model, first you need to upload sample documents. Then you need to identify the important fields for each sample document. At last, you should publish the model.
+To train a model, first you need to upload sample documents. Then you need to mark the important fields for each sample document. At last, you should publish the model.
 
 {{< figure src="/attachments/appstore/app-services/intelligent-document-service/training-steps.png" alt="Training Steps" >}}
 

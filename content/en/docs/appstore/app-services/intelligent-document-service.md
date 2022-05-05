@@ -206,10 +206,14 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
     
     3. Select your trained model. Make sure that the **Status** of the model is **Published**. Note down the **Model Id**. You will need it when you [extract data with the trained model ](#extraction-activity).
 
-    4. Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens.
+    4. Click **...** in the **Actions** column of the published model and then click **Download JSON Structure**.
 
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/ids-download-json-structure.png" alt="" >}}
+
+        The **Generate JSON Structure** dialog box opens.
+    
     5. Drag one of the sample images, which you used to train the document model, into the box where it says **Drag image files here**. You can also click **Browse** and select the file.
-
+    
        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/sample-extraction-dialog-box.png" alt="Sample Extraction dialog box" >}}
     
     6. Click **Download** to get the JSON structure.

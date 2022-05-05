@@ -96,7 +96,7 @@ Your app needs a button which allows the user to take a picture. Instead of a re
 1. Make sure the on click action is set to **Call a nanoflow**.
 1. Click **Nanoflow** > **Select** then create a new nanoflow called **ACT_TakeNewPicture**.
 
-[Nanoflows](/refguide/nanoflows/) are the native mobile equivalent of microflows, but with several key differences. Nanoflows are offline-first, meaning they can execute without an online data connection. Therefore, certain functionality which is available in microflows is not available in nanoflows. This is because nanoflows are based on JavaScript and execute on mobile devices instead of the server. Nanoflows also interact with the database on the user's mobile device, which is a copy of the server's database. All database transactions need to be synchronized from the device to the server in order for the data to reflect online.
+[Nanoflows](/refguide/nanoflows/) are the native mobile equivalent of microflows, but with several key differences. Nanoflows are offline-first, meaning they can execute without an online data connection. Therefore certain functionality like calling a REST API, which is available in Microflows, is not in Nanoflows. This is because nanoflows are based on JavaScript and execute on mobile devices instead of the server. Nanoflows also interact with the database on the user's mobile device, which is a copy of the server's database. All database transactions need to be synchronized from the device to the server in order for the data to reflect online.
 
 As you look at your new **ACT_TakeNewPicture** nanoflow, do the following:
 
@@ -150,7 +150,7 @@ All done! You can now run your app and test all the features you have built. To 
 1. Open the Make it Native app on your mobile device,
 1. Click the drop-down menu in Studio Pro and select **View app on your device**
 1. Click the View Native Mobile App tab
-1. Scan the QR code with the Make it Native app on your mobile device to begin testing.
+1. Scan the QR code with the Make it Native app on your mobile device to begin testing (Mac users: be sure to use forward ports 8080/8083 as [explained here](/howto/general/using-mendix-studio-pro-on-a-mac/)).
 
 This will automatically begin testing. If you have issues, see [Troubleshoot Common Native Mobile Issues](/howto/mobile/common-issues/) for troubleshooting information.
 

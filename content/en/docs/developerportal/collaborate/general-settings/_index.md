@@ -120,6 +120,8 @@ To create a new app API key, click **Create API Key**  and follow these steps:
 	{{% alert color="warning" %}}For security reasons, the app API key will only be displayed once, during **Step 2 of 2**. It will not be displayed again.
 	{{% /alert %}}
 	
+You use these API keys to authenticate requests to the [Stories API](/apidocs-mxsdk/apidocs/stories-api/).
+
 Click **Revoke** to delete an app API key.
 
 ## 6 Editing App Info {#editing}

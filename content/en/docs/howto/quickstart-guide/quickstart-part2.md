@@ -108,7 +108,7 @@ As you look at your new **ACT_TakeNewPicture** nanoflow, do the following:
 
 1.  Configure the **Take Picture** action by double-clicking it and configuring the properties like this:
     1. Picture: $NewPicture
-    1. Picture source: empty
+    1. Picture source: Camera
     1. Picture quality: original
     1. Maximum width: empty
     1. Maximum height: empty
@@ -165,5 +165,7 @@ After taking a photo with your native mobile app and tapping the **Save** button
 {{< figure src="/attachments/howto/quickstart-guide/part2/REPLACE_THIS.png" >}}
 
 Congratulations on successfully completing the Quickstart guide! You are definitely on your way to succeed with the Mendix platform.
+
+For more information on building and deploying apps with Mendix, see [Build Native Apps](/howto/mobile/build-native-apps/). Put simply, Mendix lets you [build an app for distribution](/howto/mobile/deploying-native-app/) and get it running on a native device. After you develop further, you can [debug native app issues](/howto/mobile/native-debug/) to improve your users' experience. Then, you can add [custom fonts](/howto/mobile/native-custom-fonts/) to make your app feel more like your brand. And if you ever need help, we have [troubleshooting help](/howto/mobile/common-issues/) for you just in case.
 
 To continue learning, go to [Mendix Academy](https://academy.mendix.com/) and choose a learning path that interests you (we recommend the [Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) for new users who are also experienced developers) or go the [Mendix Documentation](https://docs.mendix.com/) home page to learn more about the Mendix topics which interest you most.

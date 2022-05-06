@@ -13,7 +13,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
-### May 3rd, 2022
+### May 6th, 2022
 
 * We have updated AppDynamics monitoring to provide default values where possible.
 

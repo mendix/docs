@@ -9,13 +9,17 @@ tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
 
 ## 1 Introduction 
 
-Before starting this tutorial, please [download](https://marketplace.mendix.com/index3.html) and [install](/howto/general/install/) Mendix Studio Pro. You will not need any additional software configured on your device in order to start.
+Get up and running with the Mendix Platform and start developing your first app after you create your [free account](https://signup.mendix.com/link/signup/?source=direct)⁠—which takes only two minutes to finish. Then [download](https://marketplace.mendix.com/index3.html) and [install](/howto/general/install/) Mendix Studio Pro. 
 
 If you are working on a Mac, please complete [How To Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac.
 
+Every app created with us automatically provisions a [Free Cloud Environment](/developerportal/deploy/mendix-cloud-deploy/#free-app) the first time it is deployed, so you do not have to waste time provisioning a testing environment.
+
+You will not need any additional software configured on your device in order to start.
+
 ### 1.1 What is Mendix Studio Pro?
 
-[Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. This tutorial will use Studio Pro version 9.12.1, but you can use a later version if one is available.
+[Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. This tutorial will use Studio Pro version 9.12.1, but you can use a later version if you wish.
 
 ## 2 Create an Image Gallery in the Responsive Navigation Profile
 
@@ -23,17 +27,17 @@ If you are working on a Mac, please complete [How To Configure Parallels](/howto
 
     {{< figure src="/attachments/howto/quickstart-guide/part1/starting-point.png" >}}
 
-1. Search for the **Blank Native Mobile App** and click **Use this starting point**.
-    * **Why choose this template?** — Choosing the **Blank Native Mobile App** template lets you start with an already configured native mobile navigation profile setup for your app. 
-    * **Does that mean this app is native mobile only?** — No. The blank native mobile app template also comes with a responsive web navigation profile configured. This means your app is accessible by both web browser and natively on mobile devices.
+1. Search for the **Blank Native Mobile App** and click **Use this starting point**:
+    * **Why choose this template?** — Choosing the **Blank Native Mobile App** template lets you start with an already-configured native mobile navigation profile setup for your app. 
+    * **Does that mean this app is native mobile only?** — No. The blank native mobile app template also comes with a responsive web navigation profile configured. This means your app is accessible on both web browsers and natively on mobile devices.
 1. Name your app *Quickstart App* and click the **Create app** button.
-1. Wait a few minutes for your app to be created, its team server to be initialized, and a local copy of the project to be downloaded to your development machine. Once it is finished the project will open on your app’s home page called **Home_Web**:
+1. Wait a few minutes for your app to be created, its team server to be initialized, and a local copy of the project to be downloaded to your development machine. After that the project will open on your app’s home page called **Home_Web**:
 
     {{< figure src="/attachments/howto/quickstart-guide/part1/home-web.png" >}}
 
 ## 3 Explore Studio Pro
 
-Now that you have completed your first basic tasks in Studio Pro, this section will give you a quick and optional tour. If you know Studio Pro well already, you can skip this section.
+Now that you have completed your first tasks in Studio Pro, this section will give you a quick and optional tour. If you know Studio Pro well already, you can skip this section.
 
 You can navigate through your app using the App Explorer, the window on the left side of your screen. This is where you can create and explore new documents and modules in your app. Any modules you download from the Marketplace will appear under **Marketplace Modules** > **App** section:
 
@@ -43,7 +47,7 @@ At the bottom of Studio Pro you will find several panels:
 
 * **Stories**: displays your active user stories added on your App’s Stories page in the Developer Portal
 * **Changes**: displays a list of all changes in the project since the last commit to the team server (also used to resolve conflicts with other team members when updating)
-* **Errors**: displays any errors found within your project. Can also display deprecations and Warnings
+* **Errors**: displays any errors found within your project (can also display deprecations and warnings)
 * **MxAssist Performance Bot**: an AI peer programmer bot which analyzes your app's model and identifies any issues which may negatively impact your app’s performance
 * **Console**: a live feed of your app’s console as the app runs (you can filter for additional log levels by clicking on the **Advanced** drop-down list)
 
@@ -51,7 +55,7 @@ On the right side of Studio Pro you will find more panels:
 
 * **Datahub**: displays remote entities (entities from other apps) which are available for use in your app
 * **Properties**: displays all the properties of the currently selected context element
-* **Toolbox**: a list of things you can add to the current document⁠—the **Toolbox** changes depending on context: it displays page elements while in the page editor or displays actions when editing a microflow or nanoflow
+* **Toolbox**: a list of things you can add to the current document⁠—the **Toolbox** changes depending on context (it displays page elements while in the page editor or displays actions when editing a microflow or nanoflow)
 * **Connector**: quickly links data to pages⁠—using the connector you could drag an entity onto a data view or data grid to quickly display your app’s data on a page
 
 The view you see above is completely editable. You can add or remove panels as desired (you can find more windows under **View** as well as reset your view back to default settings if you wish). You can also quickly hide all of Studio Pro's panels by enabling Distraction Free Mode with <kbd>Shift</kbd> + <kbd>F11</kbd>.
@@ -72,8 +76,8 @@ Mendix by default uses its own built-in HSSQL database, but Mendix also supports
 
 ### 4.2 Creating an Entity to Store the Images
 
-1.  To open the domain model for the native mobile module, double-click it in the **App Explorer** pane on the left side. 
-    *  There is already an entity here: **Login** (it is part of the template and is used only for native mobile authentication,so you can ignore it for now)
+1.  To open the domain model for the native mobile module, double-click it in the **App Explorer** pane on the left side: 
+    * There is already an entity here: **Login** (it is part of the template and is used only for native mobile authentication,so you can ignore it for now)
 
     {{< figure src="/attachments/howto/quickstart-guide/part1/create-entity.png" >}}
 
@@ -114,7 +118,7 @@ Now that you have created your domain model, it’s time to create your app’s 
 
     {{< figure src="/attachments/howto/quickstart-guide/part1/template-datasource-cont.png" >}}
 
-1.  Leave the **Datasource type** as **Database** and under **Entity** select the **Picture** entity we created earlier, then click **OK** to close the window.
+1.  Leave the **Datasource type** as **Database** and under **Entity** select the **Picture** entity we created earlier, then click **OK** to close the window:
 
     {{< figure src="/attachments/howto/quickstart-guide/part1/template-edits.png" >}}
 
@@ -197,23 +201,22 @@ Notice the line has changed to red. This is because a decision creates multiple 
 Finally we need to commit the image to the database, and then close the page:
 
 1. Add a commit action from the toolbox to the true path.
-1. Select the picture Entity to commit, without events, but Refresh in client set to true:
+1. Select the **Picture** entity to commit, select With **Events** > **No**, and select **Refresh in Client** > **Yes**:
 
     {{< figure src="/attachments/howto/quickstart-guide/part1/commit-objects.png" >}}
 
 1. Add a **Close page** action to the end of the microflow to ensure the user is directed back to the home page after clicking **Save**. 
 
-You have finished your responsive app! You can run your app and test it out by pressing <kbd>F5</kbd> or by clicking the green play icon in the top-right corner of Studio Pro (next to the **Publish** button):
+You have finished your responsive app! You can run your app and test it by pressing <kbd>F5</kbd> or by clicking the green play icon in the top-right corner of Studio Pro (next to the **Publish** button):
 
 {{< figure src="/attachments/howto/quickstart-guide/part1/complete.png" >}}
-
 
 {{% alert type="info" %}}
 Launching your app compiles your app locally on your development machine, your local host. Publishing your app will push your app to a cloud environment or web container connected to your app. If none exists, an environment will be initialized for your app on the Mendix Cloud v4 Free Tier.
 {{% /alert %}}
 
-Congratulations! You successfully completed Part 1 of the Quickstart guide, you have your first Mendix App to prove it, and it works on almost any device. Well done! 
+Congratulations! You successfully completed Part 1 of the quickstart guide, you have your first Mendix App to prove it, and it works on almost any device. Well done! 
 
-To continue learning, carry on with Part 2 of the Quickstart Guide: [Upgrade to a Native Mobile App](/howto/quickstart-part2/).
+To continue learning, carry on with Part 2 of the quickstart Guide: [Upgrade to a Native Mobile App](/howto/quickstart-part2/).
 
 You can also go to [Mendix Academy](https://academy.mendix.com/) or [Mendix Documentation](https://docs.mendix.com/) to learn more about the Mendix topics which interest you most.

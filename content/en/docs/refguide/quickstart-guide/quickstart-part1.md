@@ -1,6 +1,6 @@
 ---
 title: "Design in a Responsive Web Profile"
-url: /howto/quickstart-part1/
+url: /refguide/quickstart-part1/
 parent: "_index"
 weight: 10
 description: "Learn the basics of making an app in a Responsive Web profile."
@@ -218,6 +218,6 @@ Launching your app compiles your app locally on your development machine, your l
 
 Congratulations! You successfully completed Part 1, you have your first Mendix App to prove it, and it works on almost any device. Well done! 
 
-To continue learning, see Part 2: [Upgrade to a Native Mobile App](/howto/quickstart-part2/).
+To continue learning, see Part 2: [Upgrade to a Native Mobile App](/refguide/quickstart-part2/).
 
 You can also go to [Mendix Academy](https://academy.mendix.com/) or [Mendix Documentation](https://docs.mendix.com/) to learn more about the Mendix topics which interest you most.

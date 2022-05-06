@@ -1,6 +1,6 @@
 ---
 title: "Upgrade to a Native Mobile App"
-url: /howto/quickstart-part2/
+url: /refguide/quickstart-part2/
 parent: "_index"
 weight: 20
 description: "Learn the basics of making a native mobile app."
@@ -9,7 +9,7 @@ tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
 
 ## 1 Introduction 
 
-This document is Part 2 of the [Quickstart for Building an App](/refguide/quickstart-guide/). Here you will be adding on to the app created in [Part 1: Design in a Responsive Web Profile](/howto/quickstart-part1/). If you decided to skip Part 1, you can [download a copy of its completed app package](https://quickstartguidev1.s3.eu-west-2.amazonaws.com/Quickstart_App.mpk) in order to start this document right away.
+This document is Part 2 of the [Quickstart for Building an App](/refguide/quickstart-guide/). Here you will be adding on to the app created in [Part 1: Design in a Responsive Web Profile](/refguide/quickstart-part1/). If you decided to skip Part 1, you can [download a copy of its completed app package](https://quickstartguidev1.s3.eu-west-2.amazonaws.com/Quickstart_App.mpk) in order to start this document right away.
 
 In this document you will learn to use a native mobile navigation profile. You will create a small native mobile app to take pictures and upload them to the same database so they can be viewed in a browser or in a native app on your mobile device. You will also use the Make it Native app to test your app on a mobile device.
 
@@ -19,7 +19,7 @@ Mendix native mobile apps are native mobile apps based on React Native. These ap
 
 Before starting this guide, make sure you have completed the following prerequisite:
 
-* Read through [Part 1: Design in a Responsive Web Profile](/howto/quickstart-part1/)
+* Read through [Part 1: Design in a Responsive Web Profile](/refguide/quickstart-part1/)
 * Download the [Make It Native 9](/refguide/getting-the-make-it-native-app/) app on your mobile device
 * If you are working on a Mac, please complete [How To Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
@@ -44,7 +44,7 @@ You should see this in Studio Pro:
 The content on the page comes pre-made as a part of the template. To get started, do the following:
 
 1. Delete everything from the page.
-1. Add a **List view** to the page via the Toolbox. A list view works like the template grid (used in [Part 1]((/howto/quickstart-part1/))) except it can scroll, which is better for mobile users.
+1. Add a **List view** to the page via the Toolbox. A list view works like the template grid (used in [Part 1](/refguide/quickstart-part1/)) except it can scroll, which is better for mobile users.
 1. Right-click the list view, then click **Select data source**, 
 1. Leave the **Type** as **Database**, click **Select** next to **Entity**, and search for the **Picture** entity. 
 1.  When prompted to automatically fill the contents of the list view, click **No**:

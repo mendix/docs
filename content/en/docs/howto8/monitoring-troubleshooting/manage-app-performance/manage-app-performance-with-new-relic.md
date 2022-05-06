@@ -70,7 +70,7 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
 
 2. Open a configuration:
 
-     {{< figure src="/attachments/howto8/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-appdynamics/19398903.png" >}}
+     {{< figure src="/attachments/howto8/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398903.png" >}}
 
 3. In the **Extra JVM parameters** field on the **Server** tab, add: `-javaagent:<path-to-javaagent>javaagent.jar`:
 

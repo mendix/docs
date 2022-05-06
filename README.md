@@ -4,8 +4,8 @@ This repository contains the Mendix documentation, which is served on [https://d
 
 Build status:
 
-* production [![Build Status](https://secure.travis-ci.org/mendix/docs.png?branch=production)](https://travis-ci.org/mendix/docs)
-* development [![Build Status](https://secure.travis-ci.org/mendix/docs.png?branch=development)](https://travis-ci.org/mendix/docs)
+* production [![Build Status](https://secure.travis-ci.org/mendix/docs.png?branch=production)](https://app.travis-ci.com/github/mendix/docs)
+* development [![Build Status](https://secure.travis-ci.org/mendix/docs.png?branch=development)](https://app.travis-ci.com/github/mendix/docs)
 
 ## Contribute
 

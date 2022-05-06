@@ -2,7 +2,7 @@
 title: "Email Service"
 url: /appstore/app-services/email-service/
 category: "App Services"
-description: "Describes the configuration and usage of the Email Service app service, which is available in the Mendix Marketplace."
+description: "This document describes the configuration and usage of the Email Service app service, which enables sending HTML and plain text emails with attachments in your web apps."
 tags: ["marketplace", "marketplace component", "app service", "email"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
@@ -52,8 +52,8 @@ A trial gives everyone in your company one-month access to the app service. To s
 3. Select the check box to agree to the **Terms & Conditions**.
 4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used.
-6. Click the link in the email to go to the [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) page and log in there. This page shows all the products that you have trials for.
-7. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview/#service-management-dashboard).
+6. Click the link in the email to go to the [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) page and log in there. This page shows all the products that you have trials for.
+7. Click **Email Service** to open the service management dashboard.
 8.  Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
 
     {{< figure src="/attachments/appstore/app-services/email-service/binding-key-generation.png" >}}
@@ -65,8 +65,8 @@ A trial gives everyone in your company one-month access to the app service. To s
 3. Select your subscription plan.
 4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Contact will receive an email that says the app service is ready to be used.
-6. Click the link in the email to go to the [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview/#service-management-dashboard).
+6. Click the link in the email to go to the [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
+7. Click **Email Service** to open the service management dashboard.
 8.  Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
 
     {{< figure src="/attachments/appstore/app-services/email-service/binding-key-generation.png" >}}
@@ -165,8 +165,8 @@ The **Usage Dashboard** shows the real-time statistics about the usage of an app
 
 1. Log into the Marketplace.
 2. Go to **My Marketplace** and then do as follows:
-   * If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
-   * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+   * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+   * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
 3. Find **Email Service** in the list.
 4. Click **Usage Dashboard** to show the usage details.
 

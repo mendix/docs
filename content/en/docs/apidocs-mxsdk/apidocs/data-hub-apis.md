@@ -29,11 +29,11 @@ Note that curation rights apply to some API activities.
 
 ## 2 Search API {#search}
 
-The [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html) enables users to search and retrieve assets that are registered in Data Hub that satisfy the specified search criteria. For an example API call, see the [Search via the API](/data-hub/data-hub-catalog/search/#search-api) section of *How to Search in the Data Hub Catalog*.
+The [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search_v4.html) enables users to search and retrieve assets that are registered in Data Hub that satisfy the specified search criteria. For an example API call, see the [Search via the API](/data-hub/data-hub-catalog/search/#search-api) section of *How to Search in the Data Hub Catalog*.
 
 ## 3 Registration API {#registration}
 
-The [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html) can be used to register applications, environments, and services or data sources. See an example API call at [Register an Application](https://docs.mendix.com/data-hub/data-hub-catalog/register-data#register-application).
+The [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) can be used to register applications, environments, and services or data sources. See an example API call at [Register an Application](https://docs.mendix.com/data-hub/data-hub-catalog/register-data#register-application).
 
 The API includes the following:
 

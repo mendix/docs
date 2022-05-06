@@ -177,7 +177,7 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 | --- | --- | --- |
 | Help | Opens the documentation page about the currently selected element. If an entity is selected, for example, the documentation for entities will be shown. | <kbd>F1</kbd> |
 | Help Contents | Opens the start page of the documentaton in the default web browser. |   |
-| Ask a Question | Opens the [Mendix Forum](https://forum.mendixcloud.com/index4.html) in the default web browser. |   |
+| Ask a Question | Opens the [Mendix Forum](https://forum.mendix.com/p/questions) in the default web browser. |   |
 | Open Log File Directory | Opens the log files for your app locally. |   |
 | About Mendix Modeler | Shows information about the current version of the Mendix Modeler. |   |
 

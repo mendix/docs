@@ -101,7 +101,7 @@ Next you must add some attributes. Remember, your entity now inherits many prope
 
     {{< figure src="/attachments/howto/quickstart-guide/part1/add-attributes.png" >}}
 
-1. Repeat the process for the description, except select **Unlimited** for the string's **Length**.
+1. Repeat the process while adding an attribute called *Description*, except select **Unlimited** for the string's **Length**.
 1.  Click **OK** to close the entity’s properties window:
 
     {{< figure src="/attachments/howto/quickstart-guide/part1/description-attributes.png" >}}
@@ -112,7 +112,7 @@ Now that you have created your domain model, it’s time to create your app’s 
 
 1. Open the **Home_Web** page from the App Explorer. 
 1. Drag and drop a **Template Grid** from the **Toolbox** onto the page. 
-1.  In Mendix, in order to display data from the domain model on a page element it needs to be within a context. Double-click the template grid to open its properties, then go to the **Datasource** tab:
+1.  In Mendix, in order to display data from the domain model on a page element it needs to be within a context. Double-click the template grid to open its properties, then go to the **Data source** tab:
 
     {{< figure src="/attachments/howto/quickstart-guide/part1/template-datasource.png" >}}
 
@@ -123,7 +123,7 @@ Now that you have created your domain model, it’s time to create your app’s 
     {{< figure src="/attachments/howto/quickstart-guide/part1/template-edits.png" >}}
 
 1. When Studio Pro prompts you to automatically fill the contents of the template grid, click **Yes**. 
-1.  Note the red error pointers on the **New** and **Edit** buttons of the template grid. This is because there is no page connected to the buttons. To resolve this, click one of the buttons and choose to **Generate Page**:
+1.  Note the red error pointers on the **New** and **Edit** buttons of the template grid. This is because there is no page connected to the buttons. To resolve this, right-click one of the buttons and select **Generate Page**:
 
     {{< figure src="/attachments/howto/quickstart-guide/part1/generate-page.png" >}}
 
@@ -133,7 +133,7 @@ Next we want to replace some of the auto-generated content inside the template g
 
 1. Delete all the display widgets inside the grid.
 1. Right-click in the empty space and select **Add building block**.
-1. Search for and select **Card with image**.
+1. Search for and select **Card action with image**.
 
 A building block is a collection of pre-styled display widgets. A building block is similar to a component in React.js. Building blocks are data agnostic, meaning they are created without data and you need to link the relevant data sources for the building block’s components when including them in the page.
 
@@ -144,13 +144,13 @@ Next you will connect your data to the display widgets because your page is curr
 To start, replace the static image with the image the user uploads to the database: 
 
 1. Right-click on the static image viewer and click **Convert to dynamic image**. 
-1. Right-click on the image viewer again, click **Select datasource**, and then search for your **Picture** entity (click **Yes** when prompted to automatically fill the contents of the widget).
+1. Right-click on the image viewer again, click **Select data source**, and then search for your **Picture** entity (click **Yes** when prompted to automatically fill the contents of the widget).
 
 Your **Images** will now be displayed from the database, but the **Labels** on the page will still be displaying their default text. To fix this, do the following:
 
 1. Double-click to open the properties of the label captioned **Card title**.
 1. Click the **Edit** button next to **Caption**.
-1. In the new window, replace the caption field with a place holder (a number in curly braces starting from 1). 
+1. In the new window, replace the caption field with the place holder *{1}*. 
 1.  Click to add a new **Parameter** and select the **Title** attribute:
 
     {{< figure src="/attachments/howto/quickstart-guide/part1/parameter.png" >}}
@@ -193,15 +193,16 @@ Implement custom logic with a microflow by doing the following:
 Notice the line has changed to red. This is because a decision creates multiple paths within the microflow. You need to add another path for when this expression evaluates as false:
 
 1. Add the additional path and make sure to select the **False** path as the one which goes down. 
-1. You should also add the **Validation feedback** action to the false path to provide feedback to the user. 
+1. You should also add the **Validation feedback** action to the false path to provide feedback to the user.
+1. Double-click your validation feedback action, select **Variable** > **Picture (NativeMobile.Picture)**, **Member** > **Title**, and in **Template** add some error text such as *Please provide a title for your picture.*.
 1.  Repeat these steps for the **Description** attribute until your microflow looks like this:
 
     {{< figure src="/attachments/howto/quickstart-guide/part1/expand-microflow.png" >}}
 
 Finally we need to commit the image to the database, and then close the page:
 
-1. Add a commit action from the toolbox to the true path.
-1. Select the **Picture** entity to commit, select With **Events** > **No**, and select **Refresh in Client** > **Yes**:
+1. Add a **Commit object(s)** action from the toolbox to the true path.
+1. Select the **Picture (NativeMobile.Picture)** entity to commit, select With **Events** > **No**, and select **Refresh in Client** > **Yes**:
 
     {{< figure src="/attachments/howto/quickstart-guide/part1/commit-objects.png" >}}
 

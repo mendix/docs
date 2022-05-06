@@ -58,7 +58,7 @@ Next you are going to create the user interface for your native app:
 1. Right-click the empty space inside the list view and select **Add building block**.
 1. Search for and select the **Image** building block under **Cards**.
 
-Just as in [Part 1](/howto/quickstart-part1/), you must replace the auto-generated content with your content from the database.
+Just as in [Part 1](/refguide/quickstart-part1/), you must replace the auto-generated content with your content from the database.
 
 Start by replacing the static image with the image the user uploads to the database:
 

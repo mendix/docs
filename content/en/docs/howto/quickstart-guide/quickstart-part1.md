@@ -215,8 +215,8 @@ You have finished your responsive app! You can run your app and test it by press
 Launching your app compiles your app locally on your development machine, your local host. Publishing your app will push your app to a cloud environment or web container connected to your app. If none exists, an environment will be initialized for your app on the Mendix Cloud v4 Free Tier.
 {{% /alert %}}
 
-Congratulations! You successfully completed Part 1 of the quickstart guide, you have your first Mendix App to prove it, and it works on almost any device. Well done! 
+Congratulations! You successfully completed Quickstart Guide Part 1, you have your first Mendix App to prove it, and it works on almost any device. Well done! 
 
-To continue learning, carry on with Part 2 of the quickstart Guide: [Upgrade to a Native Mobile App](/howto/quickstart-part2/).
+To continue learning, carry on with the Quickstart Guide Part 2: [Upgrade to a Native Mobile App](/howto/quickstart-part2/).
 
 You can also go to [Mendix Academy](https://academy.mendix.com/) or [Mendix Documentation](https://docs.mendix.com/) to learn more about the Mendix topics which interest you most.

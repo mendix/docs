@@ -9,23 +9,27 @@ tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
 
 ## 1 Introduction 
 
-This document is Part 2 of the [Quickstart Guide](/howto/quickstart-guide/). Here you will be adding on to the app created in [Part 1: Design in a Responsive Web Profile](/howto/quickstart-part1/). If you decided to skip Part 1, you can [download a copy of its completed app package](https://www.dropbox.com/s/pw4aonaxvnobmlz/Quickstart_App.mpk?dl=0) in order to start this document right away:
+This document is Part 2 of the [Quickstart Guide](/howto/quickstart-guide/). Here you will be adding on to the app created in [Part 1: Design in a Responsive Web Profile](/howto/quickstart-part1/). If you decided to skip Part 1, you can [download a copy of its completed app package](https://quickstartguidev1.s3.eu-west-2.amazonaws.com/Quickstart_App.mpk) in order to start this document right away.
 
-If you are working on a Mac, please complete [How To Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac.
-
-In order to test your app later in this guide, please download the [Make It Native 9](/refguide/getting-the-make-it-native-app/) app on your mobile device.
-
-In this document you will learn to use a native mobile navigation profile. You will create a small native mobile app to take pictures and upload them to the same database so they can be viewed in a browser or in a native app on your mobile device.
+In this document you will learn to use a native mobile navigation profile. You will create a small native mobile app to take pictures and upload them to the same database so they can be viewed in a browser or in a native app on your mobile device. You will also use the Make it Native app to test your app on a mobile device.
 
 Mendix native mobile apps are native mobile apps based on React Native. These apps use native UI elements which means faster performance and advanced features like gesture functionality (swiping, multi-tap, and more), and improved access to device functionalities like geolocation and the camera. Native mobile apps are offline first and only fetch data from the server when programmed to do so.
 
-### 1.2 What is the Make It Native 9 App?
+## 2 Prerequisites
+
+Before starting this guide, make sure you have completed the following prerequisite:
+
+* Read through [Part 1: Design in a Responsive Web Profile](/howto/quickstart-part1/)
+* Download the [Make It Native 9](/refguide/getting-the-make-it-native-app/) app on your mobile device
+* If you are working on a Mac, please complete [How To Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
+
+### 2.2 What is the Make It Native 9 App?
 
 The [Make it Native 9](/refguide/getting-the-make-it-native-app/) mobile app is available for Android and iOS devices. Once installed, the app lets you quickly test your native mobile app as you develop it. 
 
 Specifically, the Make it Native 9 app connects to your local development machine’s running copy of your app and then displays your app inside its mobile testing environment. This lets you make changes to your app on your development machine, then instantly see those changes in the mobile app.
 
-## 2 Creating a Native Mobile Picture App
+## 3 Creating a Native Mobile Picture App
 
 Starting in Studio Pro, open the page **Home_Native** by double-clicking it in the App Explorer or by pressing <kbd>CTRL</kbd> + <kbd>G</kbd> to open your **Go to** menu and search for the page. The **Go to** menu is used for quick navigation in the project—for more Mendix shortcuts see [Edit Menu](/refguide/edit-menu/).
 
@@ -48,7 +52,7 @@ The content on the page comes pre-made as a part of the template. To get started
 
     {{< figure src="/attachments/howto/quickstart-guide/part2/list-view-fill.png" >}}
 
-### 2.1 Creating the User Interface
+### 3.1 Creating the User Interface
 
 Next you are going to create the user interface for your native app:
 
@@ -76,7 +80,7 @@ Our images will now be displayed from the database, but the labels on the page w
 
 Now your existing images are being displayed from the database. Next, you will develop functionality which allows the user to take new pictures with the app and then upload them to the server.
 
-## 3 Using a Nanoflow to Call the Take Picture JSAction
+## 4 Using a Nanoflow to Call the Take Picture JSAction
 
 Your app needs a button which allows the user to take a picture. Instead of a regular button, you can use a floating action button optimized for mobile users:
 
@@ -171,5 +175,7 @@ After taking a photo with your native mobile app and tapping the **Save** button
 Congratulations on successfully completing the quickstart guide! You are definitely on your way to succeed with the Mendix platform.
 
 For more information on building and deploying apps with Mendix, see [Build Native Apps](/howto/mobile/build-native-apps/). Put simply, Mendix lets you [build an app for distribution](/howto/mobile/deploying-native-app/) and get it running on a native device. After you develop further, you can [debug native app issues](/howto/mobile/native-debug/) to improve your users' experience. Then, you can add [custom fonts](/howto/mobile/native-custom-fonts/) to make your app feel more like your brand. And if you ever need help, we have [troubleshooting help](/howto/mobile/common-issues/) for you just in case.
+
+## 5 Read More
 
 To continue learning, go to [Mendix Academy](https://academy.mendix.com/) and choose a learning path that interests you (we recommend the [Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) for new users who are also experienced developers) or go the [Mendix Documentation](https://docs.mendix.com/) home page to learn more about the Mendix topics which interest you most.

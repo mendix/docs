@@ -115,7 +115,7 @@ You can configure the widget for certain actions in your app (for example, to al
 
 The feedback feature requires the following properties to be set:
 
-* **Project** tab > **App ID** – the unique identifier of your app. You can find this in the Developer Portal — go to  **Collaborate** > **[General Settings](/developerportal/collaborate/general-settings/)** – you will find the ID at the bottom of the page:
+* **Project** tab > **App ID** – This is the unique identifier of your app. You can find this in the Developer Portal — go to **Collaborate** > [General Settings](/developerportal/collaborate/general-settings/) – you will find the ID at the bottom of the page:
 
 	{{< figure src="/attachments/appstore/widgets/mendix-feedback/app-id.png" >}}
 

@@ -44,8 +44,7 @@ You should see this in Studio Pro:
 The content on the page comes pre-made as a part of the template. To get started, do the following:
 
 1. Delete everything from the page.
-1. Add a list view to the page. A list view works like the template grid (used in [Part 1]((/howto/quickstart-part1/))) except it can scroll, which is better for mobile users.
-1. Drag the list view onto the page,
+1. Add a **List view** to the page via the Toolbox. A list view works like the template grid (used in [Part 1]((/howto/quickstart-part1/))) except it can scroll, which is better for mobile users.
 1. Right-click the list view, then click **Select data source**, 
 1. Leave the **Type** as **Database**, click **Select** next to **Entity**, and search for the **Picture** entity. 
 1.  When prompted to automatically fill the contents of the list view, click **No**:
@@ -57,7 +56,7 @@ The content on the page comes pre-made as a part of the template. To get started
 Next you are going to create the user interface for your native app:
 
 1. Right-click the empty space inside the list view and select **Add building block**.
-1. Search for and select the **Image** building block.
+1. Search for and select the **Image** building block under **Cards**.
 
 Just as in [Part 1](/howto/quickstart-part1/), you must replace the auto-generated content with your content from the database.
 
@@ -67,11 +66,11 @@ Start by replacing the static image with the image the user uploads to the datab
 1. Right-click the image viewer and choose **Select datasource**.
 1. Search for your **Picture** entity, select it, and when prompted to automatically fill the contents of the widget click **Yes**.
 
-Our images will now be displayed from the database, but the labels on the page will still be displaying their default text. To fix this, do the following:
+Your images will now be displayed from the database, but the labels on the page will still be displaying their default text. To fix this, do the following:
 
 1. Double-click the label captioned **Card title** to open its properties.
 1. Click the **Edit** button next to **Caption**.
-1. In the new window, replace the caption field with a place holder (a number in curly braces starting from 1). 
+1. In the new window, replace the caption field with the place holder *{1}*. 
 1.  Then click **Parameter** > **New** to add a new parameter and select the **Title** attribute:
 
     {{< figure src="/attachments/howto/quickstart-guide/part2/add-title-param.png" >}}
@@ -84,7 +83,7 @@ Now your existing images are being displayed from the database. Next, you will d
 
 Your app needs a button which allows the user to take a picture. Instead of a regular button, you can use a floating action button optimized for mobile users:
 
-1.  Drag the **Floating Action Button** from the **Toolbox** onto the page:
+1.  Drag the **Floating action button** from the **Toolbox** onto the page:
 
     {{< figure src="/attachments/howto/quickstart-guide/part2/floating-action-button.png" >}}
 
@@ -93,9 +92,9 @@ Your app needs a button which allows the user to take a picture. Instead of a re
     {{% /alert %}}
 
 1. Double-click the button to open its properties. 
-1. Select an **Icon** for the button, then search for the camera icon. 
-1. Set the position to the lower-right side of the page. 
-1. Make sure the on click action is set to **Call a nanoflow**.
+1. Select an **Icon** for the button, then search for the **camera** icon. 
+1. Set the position to the **right** and **bottom** side of the page. 
+1. Set the on click action is set to **Call a nanoflow**.
 1. Click **Nanoflow** > **Select** then create a new nanoflow called **ACT_TakeNewPicture**:
 
     {{< figure src="/attachments/howto/quickstart-guide/part2/make-pic-nano.png" >}}
@@ -107,14 +106,14 @@ Nanoflows also interact with the database on the user's mobile device, which is 
 As you look at your new **ACT_TakeNewPicture** nanoflow, do the following:
 
 1. Drag and drop a **Create object** action from the **Toolbox** onto the nanoflow. 
-1. Double-click the create object action and select the entity type as **Picture**. 
+1. Double-click the create object action and select the entity type as **Picture**, then click **OK**. 
 1. Drag and drop a **Take Picture** action from the **Toolbox** onto the nanoflow after the create object activity:
 
     {{< figure src="/attachments/howto/quickstart-guide/part2/add-activities.png" >}}
 
 1.  Configure the **Take Picture** action by double-clicking it and configuring the properties like this:
     1. Picture: $NewPicture
-    1. Picture source: Camera
+    1. Picture source: camera
     1. Picture quality: original
     1. Maximum width: empty
     1. Maximum height: empty
@@ -129,7 +128,7 @@ Finally you need to create a page in which the user can view and edit their new 
 1. Open the action's properties:
     1. Select the **Object to pass** as the **$NewPicture entity**. 
     1. Click **Page** > **Select** and choose to create a new page. 
-    1. Name the page *Picture_NewEdit_Native*.
+    1. Give the page the **Page name** *Picture_NewEdit_Native* at the top of the screen.
     1. Change the profile type to **Native mobile** at the top of the screen.
     1. Select the **Edit with Dataview** template.
 
@@ -141,8 +140,8 @@ Just like before, you need to validate that the user has entered the title and d
 
 1. Double-click the **Title** field to open its properties. 
 1. Find **Validation Type** at the bottom. 
-1. Set **Validation Type** to **Required** and provide the message *Please provide a title for this Picture*.
-1. Repeat this for the **Description** field, and provide a unique message to the user.
+1. Set **Validation Type** to **Required** and provide the message *Please provide a title for this picture*.
+1. Repeat this for the **Description** field, and provide the message *Please provide a description for this picture*.
 
 The final thing to do is ensure all the data captured by the user is synchronized from the device to the server. You can do this quickly by editing the properties of this page's save button: 
 

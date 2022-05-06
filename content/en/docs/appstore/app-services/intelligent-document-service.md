@@ -211,7 +211,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
     
         {{% alert color="info" %}}As this action actually exacts data from the input samples to generate the JSON structure, the usage is counted against the allocated quota for your provisioned instance.{{% /alert %}}
     
-       {{% alert color="info" %}}You may get blank value(s) in the extracted response for some fields, as our intelligent component returns an empty field when it is not confident about the extraction result. To improve the accuracy of data extraction, see the [Guidelines for Improving the Accuracy of Data Extraction](#guidelines) section. {{% /alert %}}
+        {{% alert color="info" %}}You may get blank value(s) in the extracted response for some fields, as our intelligent component returns an empty field when it is not confident about the extraction result. To improve the accuracy of data extraction, see the [Guidelines for Improving the Accuracy of Data Extraction](#guidelines) section. {{% /alert %}}
     
 2.  To add the JSON structure to your app, perform the following steps:
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the generated JSON structure.

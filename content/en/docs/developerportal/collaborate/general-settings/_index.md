@@ -19,10 +19,9 @@ The **General** settings page presents an overview of your app with the followin
 
 * A **Description** of the app
 * The [App Contact](/developerportal/collaborate/app-roles/#app-contact) and [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) for the app
-* Whether the app is enabled for **Mendix Studio** (for details, see the [Mendix Studio](#web) section below)
 * The **App ID**
 
-{{< figure src="/attachments/developerportal/collaborate/general-settings/general-settings.png"   width="450"  >}}
+{{< figure src="/attachments/developerportal/collaborate/general-settings/general-settings.png" width="800" >}}
 
 The sections below describe the actions you can perform on this page.
 
@@ -34,7 +33,7 @@ Click **Cloud Settings** to select the cloud platform on which to deploy your ap
 Only users with the **App Settings** permission can change cloud platforms. For default roles, only the **Scrum Master** has this permission. For more details, see the [Team Roles](/developerportal/collaborate/app-roles/#team-roles) section of *App Roles*.
 {{% /alert %}}
 
-{{< figure src="/attachments/developerportal/collaborate/general-settings/cloudsettings.png"   width="450"  >}}
+{{< figure src="/attachments/developerportal/collaborate/general-settings/cloudsettings.png"   width="800"  >}}
 
 If you select a non-Mendix cloud platform like SAP, you will be redirected to a page to complete the setup. If you select Mendix Cloud, no additional setup is needed.
 
@@ -61,13 +60,13 @@ After clicking **Manage App Users**, you will see a list of environments for you
 * If you manage user roles from Studio, your app should be published (for more information see the [Managing App Users](/studio/settings-security/#managing-app-users) section of *Security, Roles & Permissions* )
 * Your user role allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles/#user-management) section of *User Roles*)
 
-{{< figure src="/attachments/developerportal/collaborate/general-settings/app-user-management-environments.png" >}}
+{{< figure src="/attachments/developerportal/collaborate/general-settings/app-user-management-environments.png"  width="400">}}
 
 ### 3.1 Manage Users
 
 When you click **Manage Users** on for your environment, you will see a page with a list of the current App Users you can remove or edit:
 
-{{< figure src="/attachments/developerportal/collaborate/general-settings/app-user-management-users.png"   width="450"  >}}
+{{< figure src="/attachments/developerportal/collaborate/general-settings/app-user-management-users.png"   width="800"  >}}
 
 To remove an App User from the environment, click **Remove** by their name.
 
@@ -100,7 +99,7 @@ In **API Keys**, there is an overview of the API keys created for your app with 
 *   Date of **Creation**
 *   Date **Last Used**
 
-{{< figure src="/attachments/developerportal/collaborate/general-settings/keys.png"   width="550"  >}}
+{{< figure src="/attachments/developerportal/collaborate/general-settings/keys.png"   width="800"  >}}
 
 To create a new app API key, click **Create API Key**  and follow these steps:
 
@@ -110,6 +109,7 @@ To create a new app API key, click **Create API Key**  and follow these steps:
 	{{% alert color="warning" %}}For security reasons, the app API key will only be displayed once, during **Step 2 of 2**. It will not be displayed again.
 	{{% /alert %}}
 	
+
 You use these API keys to authenticate requests to the [Stories API](/apidocs-mxsdk/apidocs/stories-api/).
 
 Click **Revoke** to delete an app API key.
@@ -126,7 +126,7 @@ Click **Edit App Info** to edit the following details:
 * The **Description** of the app
 * The **App Contact**
 
-{{< figure src="/attachments/developerportal/collaborate/general-settings/edit.png"   width="450"  >}}
+{{< figure src="/attachments/developerportal/collaborate/general-settings/edit.png"   width="650"  >}}
 
 For details on the **Deactivate App**, **Leave App**, and **Delete App** options, see [How to Leave & Delete an App](/developerportal/collaborate/leave-delete-app/).
 
@@ -140,7 +140,7 @@ Only [Mendix Admins](/developerportal/control-center/#company) or users with the
 
 On the **Webhooks** page, you can add a new webhook and edit or delete existing webhooks:
 
-{{< figure src="/attachments/developerportal/collaborate/general-settings/webhooks-list.png"   width="550"  >}}
+{{< figure src="/attachments/developerportal/collaborate/general-settings/webhooks-list.png"   width="800"  >}}
 
 After clicking **New Webhook** to create a new webhook, fill in the following details:
 

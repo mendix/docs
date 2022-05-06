@@ -30,7 +30,7 @@ Specifically, the Make it Native 9 app connects to your local development machin
 Starting in Studio Pro, open the page **Home_Native** by double-clicking it in the App Explorer or by pressing <kbd>CTRL</kbd> + <kbd>G</kbd> to open your **Go to** menu and search for the page. The **Go to** menu is used for quick navigation in the project—for more Mendix shortcuts see [Edit Menu](/refguide/edit-menu/).
 
 {{% alert type="info" %}}
-The **Home_Native** page has a different icon than the **Home_Web** page. Mendix uses these icons to help you clearly develop for the right aspect of your app.
+The **Home_Native** page has a different icon than the **Home_Web** page. Mendix uses these icons to help you develop the right aspect of your app.
 {{% /alert %}}
 
 You should see this in Studio Pro:
@@ -40,13 +40,13 @@ You should see this in Studio Pro:
 The content on the page comes pre-made as a part of the template. To get started, do the following:
 
 1. Delete everything from the page.
-1. Add a list view to the page. A list view works like the template grid ( used in [Part 1]((/howto/quickstart-part1/))) except it can scroll, which is better for mobile users.
+1. Add a list view to the page. A list view works like the template grid (used in [Part 1]((/howto/quickstart-part1/))) except it can scroll, which is better for mobile users.
 1. Drag the list view onto the page,
 1. Right-click the list view, then click **Select data source**, 
 1. Leave the **Type** as **Database**, click **Select** next to **Entity**, and search for the **Picture** entity. 
-1. When prompted to automatically fill the contents of the list view, click **No**.
+1.  When prompted to automatically fill the contents of the list view, click **No**:
 
-{{< figure src="/attachments/howto/quickstart-guide/part2/list-view-fill.png" >}}
+    {{< figure src="/attachments/howto/quickstart-guide/part2/list-view-fill.png" >}}
 
 ### 2.1 Creating the User Interface
 
@@ -55,7 +55,7 @@ Next you are going to create the user interface for your native app:
 1. Right-click the empty space inside the list view and select **Add building block**.
 1. Search for and select the **Image** building block.
 
-Just as in Part 1, you must replace the auto-generated content with our content from the database.
+Just as in [Part 1](/howto/quickstart-part1/), you must replace the auto-generated content with your content from the database.
 
 Start by replacing the static image with the image the user uploads to the database:
 
@@ -68,7 +68,7 @@ Our images will now be displayed from the database, but the labels on the page w
 1. Double-click the label captioned **Card title** to open its properties.
 1. Click the **Edit** button next to **Caption**.
 1. In the new window, replace the caption field with a place holder (a number in curly braces starting from 1). 
-1.  Then click **Parameter** > **New** to add a new parameter and select the **Title** attribute.
+1.  Then click **Parameter** > **New** to add a new parameter and select the **Title** attribute:
 
     {{< figure src="/attachments/howto/quickstart-guide/part2/add-title-param.png" >}}
 
@@ -96,7 +96,9 @@ Your app needs a button which allows the user to take a picture. Instead of a re
 
     {{< figure src="/attachments/howto/quickstart-guide/part2/make-pic-nano.png" >}}
 
-[Nanoflows](/refguide/nanoflows/) are the native mobile equivalent of microflows, but with several key differences. Nanoflows are offline-first, meaning they can execute without an online data connection. Therefore certain functionality like calling a REST API, which is available in Microflows, is not in Nanoflows. This is because nanoflows are based on JavaScript and execute on mobile devices instead of the server. Nanoflows also interact with the database on the user's mobile device, which is a copy of the server's database. All database transactions need to be synchronized from the device to the server in order for the data to reflect online.
+[Nanoflows](/refguide/nanoflows/) are the native mobile equivalent of microflows, but with several key differences. Nanoflows are offline-first, meaning they can execute without an online data connection. Therefore certain functionality like calling a REST API, which is available in microflows, is not in nanoflows. This is because nanoflows are based on JavaScript and execute on mobile devices instead of the server. 
+
+Nanoflows also interact with the database on the user's mobile device, which is a copy of the server's database. All database transactions need to be synchronized from the device to the server in order for the data to reflect online.
 
 As you look at your new **ACT_TakeNewPicture** nanoflow, do the following:
 
@@ -147,9 +149,9 @@ The final thing to do is ensure all the data captured by the user is synchronize
 
 All done! You can now run your app and test all the features you have built. To test your native mobile app without creating a deployable package, do the following:
 
-1. Open the Make it Native app on your mobile device,
-1. Click the drop-down menu in Studio Pro and select **View app on your device**
-1. Click the View Native Mobile App tab
+1. Open the Make it Native app on your mobile device.
+1. Click the drop-down menu in Studio Pro and select **View app on your device**.
+1. Click the **View Native Mobile App** tab.
 1. Scan the QR code with the Make it Native app on your mobile device to begin testing (Mac users: be sure to use forward ports 8080/8083 as [explained here](/howto/general/using-mendix-studio-pro-on-a-mac/)):
 
     {{< figure src="/attachments/howto/quickstart-guide/part2/min-qr.png" >}}
@@ -166,7 +168,7 @@ After taking a photo with your native mobile app and tapping the **Save** button
 
 {{< figure src="/attachments/howto/quickstart-guide/part2/responsive-app.png" >}}
 
-Congratulations on successfully completing the Quickstart guide! You are definitely on your way to succeed with the Mendix platform.
+Congratulations on successfully completing the quickstart guide! You are definitely on your way to succeed with the Mendix platform.
 
 For more information on building and deploying apps with Mendix, see [Build Native Apps](/howto/mobile/build-native-apps/). Put simply, Mendix lets you [build an app for distribution](/howto/mobile/deploying-native-app/) and get it running on a native device. After you develop further, you can [debug native app issues](/howto/mobile/native-debug/) to improve your users' experience. Then, you can add [custom fonts](/howto/mobile/native-custom-fonts/) to make your app feel more like your brand. And if you ever need help, we have [troubleshooting help](/howto/mobile/common-issues/) for you just in case.
 

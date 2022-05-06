@@ -106,7 +106,6 @@ To configure the **Send email** activity, double-click the activity and specify 
 {{< figure src="/attachments/appstore/app-services/email-service/send-email-dialog-box.png" >}}
 
 * **Required Fields**
-  
     * **From** – Defines the sender's email
     * **To**  – Defines the recipients of the email
     * **Subject**  – Defines the subject of the email
@@ -119,7 +118,7 @@ To configure the **Send email** activity, double-click the activity and specify 
     * **Content type** – Defines whether the email is a **Text** or **HTML** message
     *  **Body** – Defines the body of the email
 
-    {{% alert type="info" %}}If you want to send an HTML message, you can generate HTML content, and add the generated HTML string in the **Body** field. For more information, see the [Generating HTML Body Content](#generate-html-body) section below.{{% /alert %}}
+        {{% alert type="info" %}}If you want to send an HTML message, you can generate HTML content, and add the generated HTML string in the **Body** field. For more information, see the [Generating HTML Body Content](#generate-html-body) section below.{{% /alert %}}
   
     * **Attachment** – Defines the attachment to the email
 
@@ -164,9 +163,11 @@ The following file types are not supported as attachments:
 The **Usage Dashboard** shows the real-time statistics about the usage of an app service. For the Email Service, perform the following steps to check the number of emails sent and data transfer usage:
 
 1. Log into the Marketplace.
-2. Go to **My Marketplace** and then do as follows:
-   * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
-   * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+2.  Go to **My Marketplace** and then do as follows:
+
+    * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+    * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+
 3. Find **Email Service** in the list.
 4. Click **Usage Dashboard** to show the usage details.
 
@@ -175,21 +176,22 @@ The **Usage Dashboard** shows the real-time statistics about the usage of an app
 If you are the Technical Contact, you can configure the sender's email addresses or domain on Communication Services Console:
 
 1. Go to [Communication Services Console](https://communication-appservices.mendixcloud.com/).
+2.  Log in with your Mendix account.
 
-2. Log in with your Mendix account.
-
-   {{< figure src="/attachments/appstore/app-services/email-service/email-identities.png" >}}
+    {{< figure src="/attachments/appstore/app-services/email-service/email-identities.png" >}}
 
 3. Select the environment where you want to configure the sender's email address(es) or domain.
 
-4. Choose your **Verification Type**:
+4.  Choose your **Verification Type**:
 
     * If you choose **Email ID** as the **Verification Type**, perform the following steps:
 
-        1. For **Email ID**, enter the sender's email address(es). 
-        2. Optionally, enter the **Mail From Domain** information that you want to use with your [Email Service](https://marketplace.mendix.com/link/component/118393/) instance. For more details, see the [Configuring the Mail From Domain](#config-mail-from-domain) section. 
+        1.  For **Email ID**, enter the sender's email address(es). 
 
-        3. To verify the sender's email address(es), perform the following steps:
+        2.  Optionally, enter the **Mail From Domain** information that you want to use with your [Email Service](https://marketplace.mendix.com/link/component/118393/) instance. For more details, see the [Configuring the Mail From Domain](#config-mail-from-domain) section. 
+
+        3.  To verify the sender's email address(es), perform the following steps:
+
             1.  Click **View Details/Edit** to open the **Email Identity** dialog box.
 
                 {{< figure src="/attachments/appstore/app-services/email-service/view-details-edit-email-itentity.png" >}}
@@ -200,9 +202,7 @@ If you are the Technical Contact, you can configure the sender's email addresses
             
                 {{< figure src="/attachments/appstore/app-services/email-service/email-verification.png" >}}
             
-            3.  Click **Verify** to verify the email address(es). 
-            
-                A window opens and tells you that the verification process is in progress.
+            3.  Click **Verify** to verify the email address(es). A window opens and tells you that the verification process is in progress.
             
                 {{< figure src="/attachments/appstore/app-services/email-service/email-verification-in-progress.png" >}}
             
@@ -221,27 +221,27 @@ If you are the Technical Contact, you can configure the sender's email addresses
         
             {{< figure src="/attachments/appstore/app-services/email-service/domain-verification.png" >}}
         
-        5. If you have a paid subscription, you can add up to five email addresses for the same domain as follows:
+        5.  If you have a paid subscription, you can add up to five email addresses for the same domain as follows:
             1.  Click **View Details/Edit** to open the **Domain based Email Identities** dialog box.
             
-               {{< figure src="/attachments/appstore/app-services/email-service/domain-based-email-identities.png" >}}
+                {{< figure src="/attachments/appstore/app-services/email-service/domain-based-email-identities.png" >}}
             
             2. Enter the sender's email addresses.
             3.  Click **Verify** to verify the email address(es). 
         
                 {{% alert type="info" %}}You can view, add, or delete the email addresses associated with the domain in the **Domain based Email Identities** dialog box.{{% /alert %}}
    
-    A window opens and tells you that the verification process is in progress.
+                A window opens and tells you that the verification process is in progress.
 
-    {{< figure src="/attachments/appstore/app-services/email-service/domain-verification-in-progress.png" >}}
+                {{< figure src="/attachments/appstore/app-services/email-service/domain-verification-in-progress.png" >}}
    
-    Until the verification process is completed, you should continue to see a message saying the verification is pending.
+                Until the verification process is completed, you should continue to see a message saying the verification is pending.
    
-    {{< figure src="/attachments/appstore/app-services/email-service/domain-verification-pending.png" >}}
+                {{< figure src="/attachments/appstore/app-services/email-service/domain-verification-pending.png" >}}
    
-    The Domain Keys Identified Mail (DKIM) settings for your domain and domain verification records become available. You can use these records for email security purposes.
+        The Domain Keys Identified Mail (DKIM) settings for your domain and domain verification records become available. You can use these records for email security purposes.
    
-    {{< figure src="/attachments/appstore/app-services/email-service/dkim-and-domain-verification-record.png" >}}
+        {{< figure src="/attachments/appstore/app-services/email-service/dkim-and-domain-verification-record.png" >}}
 
 ## 6 Increasing the Deliverability of Your Emails
 

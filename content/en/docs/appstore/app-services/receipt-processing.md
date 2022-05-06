@@ -84,30 +84,34 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
     1. Log into the Marketplace with your Mendix account.
     2. Go to **My Marketplace** and Click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. The **Compmany Subscriptions** page gives an overview of all the subscriptions of your organization.
     3. Click **Receipt Processing** to open the service management dashboard.
-    4. Click **Manage Instance** to open the **Document Model Training** application.
+    4.  Click **Manage Instance** to open the **Document Model Training** application.
     
-       {{< figure src="/attachments/appstore/app-services/receipt-processing/document-model-training-app.png" alt="Document model training app login page" >}}
+        {{< figure src="/attachments/appstore/app-services/receipt-processing/document-model-training-app.png" alt="Document model training app login page" >}}
     
     5. Log into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account. 
     6.  Click **Environment** to show the **Existing Models** list.
     
         {{% alert color="info" %}}We recommend using the Google Chrome browser. We also recommend that you use the appropriate buttons on the web app page instead of using the browser navigation controls, in order to refresh a page, go to the previous page, etc. For example, to refresh a page, use the **Refresh** button on the app page rather than click the refresh control from the browser or press <kbd>F5</kbd> on the keyboard. {{% /alert %}}
 
-    7.  Select pre-trained model. Make sure that the **Status** of the model is **Published**.
+    7.  Select the pre-trained model. Make sure that the **Status** of the model is **Published**.
     
         {{< figure src="/attachments/appstore/app-services/receipt-processing/pre-trained-receipt-model-pub.png" alt="pre trained model published" >}}
-       
-    8. Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens. 
+    
+    8.  Click **...** in the **Actions** column of the published model and then click **Download JSON Structure**.
+    
+        {{< figure src="/attachments/appstore/app-services/receipt-processing/rp-download-json-structure.png" alt="" >}}
+    
+        The **Generate JSON Structure** dialog box opens.
     9.  Drag a sample receipt into the box where it says **Drag image files here**. You can also click **Browser** and select the file. The sample receipt should represent the receipts from which data will be extracted. You can also click the box and select the file.
-      
+    
         {{< figure src="/attachments/appstore/app-services/receipt-processing/sample-extraction-dialog-box.png" alt="Sample Extraction dialog box" >}}
-      
-    10. Click **Download** to get the JSON structure.
     
-    {{% alert color="info" %}}As this action actually exacts data from the input sample receipt to generate the JSON structure, the usage is counted against the allocated quota for your provisioned instance.{{% /alert %}}
-    
-    {{% alert color="info" %}}Since the document model is pre-trained, the system does not generate a `confidence level` during the receipt processing; instead, it generates a `not applicable` string.{{% /alert %}}
+    10.  Click **Download** to get the JSON structure.
 
+     {{% alert color="info" %}}As this action actually exacts data from the input sample receipt to generate the JSON structure, the usage is counted against the allocated quota for your provisioned instance.{{% /alert %}}
+    
+     {{% alert color="info" %}}Since the document model is pre-trained, the system does not generate a `confidence level` during the receipt processing; instead, it generates a `not applicable` string.{{% /alert %}}
+    
 2.  To add the JSON structure to your app, perform the following steps:
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON structure.
     2.  From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures/).
@@ -156,10 +160,11 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 The **Usage Dashboard** shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
 1. Log into the Marketplace.
-2. Go to **My Marketplace** and then do as follows:
+2.  Go to **My Marketplace** and then do as follows:
 
-   * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
-   * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+    * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+    * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+
 3. Find **Receipt Processing** in the list.
 4. Click **Usage Dashboard** to show the usage details.
 

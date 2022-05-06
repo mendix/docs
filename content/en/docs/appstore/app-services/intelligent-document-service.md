@@ -8,20 +8,49 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 ## 1 Introduction
 
-The [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) app service uses AI and OCR technologies to extract text and key value pairs from images of documents in bulk. For more information, see the [Technical Provider](#technical-provider) section.
+The [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) app service uses AI and OCR technologies to extract text and key value pairs from images of documents in bulk.
 
+### 1.1 How Intelligent Document Service Works?
 
-### 1.1 Features
+To use Intelligent Document Service, you need to first train a machine learning model and then publish the model. Once published, the model can automatically extract important data in your documents.
+
+{{< figure src="/attachments/appstore/app-services/intelligent-document-service/document-model-training-diagram.png" alt="Document Model Training Diagram" >}}
+
+#### 1.1.1 Training the Document Model
+
+To train a model, first you need to upload sample documents. Then you need to mark the important fields for each sample document. After that, you should publish the model.
+
+{{< figure src="/attachments/appstore/app-services/intelligent-document-service/training-steps.png" alt="Training Steps" >}}
+
+How well a model is trained depends on the input you provide for the training. The quality of the training input relies on three factors:
+
+* the number of the sample documents that you provide as input – the more sample documents you provide as input, the better the training results are
+
+* the similarity in the structures of the sample documents – when all the sample documents have the same or similar document structure, you can get best training results
+
+* the accuracy of the marks on the locations of the important fields in the sample documents – you should mark the locations of the important fields accurately in the sample documents to achieve optimal training results, for example:
+
+  {{< figure src="/attachments/appstore/app-services/intelligent-document-service/invoice-marks.png" alt="" >}}
+
+#### 1.1.2 Publishing the Model
+
+After you upload the sample documents and mark the locations of the important fields in the sample documents, you can publish the model. During the publishing process, the model gets trained internally and the training project gets saved. After the publishing process is completed successfully, the model is published.
+
+#### 1.1.3 Extracting Data
+
+Once a model is published, you can download the JSON structure of this model, and then create the Import Mapping using this JSON structure. Then you can use the Import Mapping in an activity in a microflow to extract data from the documents that are fed to the activity. The documents that you feed to the activity should have the same or similar structure as the sample documents that were used to train the model. You can set up a microflow to store the extracted data as objects for other use.
+
+### 1.2 Features
 
 * Extract data from images in bulk and map data to an entity
 * Train a model using sample images by marking specific areas in images
 * Support [Mendix SSO](/appstore/modules/mendix-sso/)
 
-### 1.2 Limitation
+### 1.3 Limitation
 
-* Currently only supports images in JPG and JPEG formats.
+* Currently only supports images in JPG and JPEG formats
 
-### 1.3 Prerequisites
+### 1.4 Prerequisites
 
 * This app service works best with Studio Pro 8 versions starting with [8.18.15](/releasenotes/studio-pro/8.18/#81815) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0/).
 * For optimal recognition results, make sure that documents with small fonts have high resolutions:
@@ -177,10 +206,14 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
     
     3. Select your trained model. Make sure that the **Status** of the model is **Published**. Note down the **Model Id**. You will need it when you [extract data with the trained model ](#extraction-activity).
 
-    4. Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens.
+    4. Click **...** in the **Actions** column of the published model and then click **Download JSON Structure**.
 
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/ids-download-json-structure.png" alt="" >}}
+
+        The **Generate JSON Structure** dialog box opens.
+    
     5. Drag one of the sample images, which you used to train the document model, into the box where it says **Drag image files here**. You can also click **Browse** and select the file.
-
+    
        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/sample-extraction-dialog-box.png" alt="Sample Extraction dialog box" >}}
     
     6. Click **Download** to get the JSON structure.

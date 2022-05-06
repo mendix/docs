@@ -23,7 +23,7 @@ Before starting this guide, make sure you have completed the following prerequis
 * Download the [Make It Native 9](/refguide/getting-the-make-it-native-app/) app on your mobile device
 * If you are working on a Mac, please complete [How To Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
-### 2.2 What is the Make It Native 9 App?
+### 2.1 What is the Make It Native 9 App?
 
 The [Make it Native 9](/refguide/getting-the-make-it-native-app/) mobile app is available for Android and iOS devices. Once installed, the app lets you quickly test your native mobile app as you develop it. 
 

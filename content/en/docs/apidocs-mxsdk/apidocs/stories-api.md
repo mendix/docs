@@ -7,18 +7,20 @@ weight: 60
 
 ## 1 Introduction
 
-The Mendix Stories API allows you to retrieve, create and update the sprints, stories and tasks in your Mendix projects.
+The Mendix Stories API allows you to retrieve, create, and update the sprints, stories, and tasks in your Mendix projects.
 
 {{% alert color="info" %}}
 
-Each call also requires the parameters 'username' and 'password'. These are the public credentials you will find below; actual authentication of requests is done through API keys.
+Each call also requires the parameters `username` and `password`. These are the public credentials you will find below; actual authentication of requests is done through API keys.
 
-* username: PlatformAPIUser
-* password: PlatformAPIPassword
+* `username`: PlatformAPIUser
+* `password`: PlatformAPIPassword
 
 {{% /alert %}}
 
-You can create and manage your [API keys](/developerportal/collaborate/general-settings/#api-keys) in the General Settings of your Project.
+{{% alert color="info" %}}
+You can create and manage your [API keys](/developerportal/collaborate/general-settings/#api-keys) in the **General Settings** of your project.
+{{% /alert %}}
 
 To use the API, you need to set up a **Consumed Web Service** using the WDSL for this service, available here: [Get WSDL](/attachments/apidocs-mxsdk/apidocs/stories-api/19398865.wsdl). You can find out how to do this in [How to Consume a Complex Web Service](/howto/integration/consume-a-complex-web-service/).
 
@@ -29,14 +31,14 @@ To use the API, you need to set up a **Consumed Web Service** using the WDSL for
 
 This microflow creates a new sprint for the specified project and returns the ID of the new sprint.
 
-| Parameter Name | Parameter Type | Description
+| Parameter Name | Parameter Type | Description|
 | --- | --- | --- |
-| ApiKey | String | The API Key the application uses to access the Stories API for this project. 
-| DurationInWeeks | Integer/Long | Duration of the new sprint in weeks.
-| Name | String | Name of the new sprint.
-| ProjectID | String | The ID of the project. 
-| StartDate | Date and time | Start date for the new sprint. If not filled, the sprint will automatically start directly after * the previous sprint. (optional)
-| StartsAfterSprint | Integer/Long | ID of the Sprint directly preceding the new sprint. 
+| ApiKey | String | The API Key the application uses to access the Stories API for this project. |
+| DurationInWeeks | Integer/Long | Duration of the new sprint in weeks.|
+| Name | String | Name of the new sprint.|
+| ProjectID | String | The ID of the project. |
+| StartDate | Date and time | Start date for the new sprint. If not filled, the sprint will automatically start directly after * the previous sprint. (optional)|
+| StartsAfterSprint | Integer/Long | ID of the Sprint directly preceding the new sprint. |
 
 * Return value – Integer/Long
 

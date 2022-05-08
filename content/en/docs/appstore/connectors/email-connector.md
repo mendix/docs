@@ -47,6 +47,7 @@ The following widgets are bundled in the module:
 * [HTML/JavaScript Snippet](/appstore/widgets/html-javascript-snippet/)
 * [Format String](/appstore/widgets/format-string/)
 * [Rich Text](/appstore/widgets/rich-text/)
+* [FileDocumentViewer](https://github.com/mendixlabs/FileDocumentViewer)
 
 ## 2 Setup in Studio Pro {#setup}
 
@@ -110,7 +111,7 @@ When modeling your app in Studio Pro, use the **SendEmail** Java action to send 
 
 The **Return type** is a boolean value. The Java action would connect to email server using the provided details and send an email, and would return **True** if successful.
 
-The **To**, **Subject**, and **Email Content** fields are mandatory.
+The **To**, **Subject**, and **Email Content** fields are mandatory. Multiple email addresses can be specified in **To**, **CC**, or **BCC​** separated by a semicolon (**;**).
 
 ### 4.2 Receiving Email
 

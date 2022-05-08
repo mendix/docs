@@ -74,7 +74,7 @@ Once the external user receives the invitation, they log into the Data Hub Catal
 
 ### 4.1 Revoking Rights for External Users
 
-It is currently not possible for Data Hub Admins to revoke rights for external users. If you need to revoke the permissions of an external user that you have invited, please create a support ticket.
+It is currently not possible for Data Hub Admins to revoke rights for external users. If you need to revoke the permissions of an external user, please create a support ticket.
 
 ## 5 Settings {#settings}
 

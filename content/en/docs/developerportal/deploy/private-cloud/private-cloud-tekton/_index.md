@@ -117,45 +117,14 @@ kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers
 
 ### 5.2 Installing on Connected OpenShift
 
-To install Tekton and Tekton Triggers on OpenShift when your environment has access to the internet, use the following commands:
-
-```bash
-# Tekton
-cd ..
-mkdir tekton-pipelines
-oc new-project tekton-pipelines
-oc adm policy add-scc-to-user anyuid -z tekton-pipelines-controller
-oc adm policy add-scc-to-user anyuid -z tekton-pipelines-webhook
-
-oc apply --filename https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.26.0/release.notags.yaml
-
-# Tekton triggers
-curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.15.0/release.yaml -s > tekton-triggers.yaml
-curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.15.0/interceptors.yaml -s > interceptors.yaml
-
-cd ..
-```
-
-For Tekton Triggers on OpenShift you need to update the deployment objects to make them compatible with OpenShift security. Perform the following steps:
-
-1. Edit the `tekton-triggers-controller` deployment.
-2. Add the following line to the `args` section:
-    ```bash{linenos=false}
-    - '--el-security-context=false'
-    ```
-3. Change `runAsUser:` to a valid OpenShift user (like `1001000000`).
-4. Edit the `tekton-triggers-core-interceptors` deployment.
-5. Change `runAsUser:` to a valid OpenShift user (like `1001000000`).
-6. Change `runAsGroup:` to a valid OpenShift group (like `1001000000`).
-7. Edit the `tekton-triggers-webhook` deployment.
-8. Change `runAsUser:` to a valid OpenShift user (like `1001000000`).
+To install Tekton and Tekton Triggers on OpenShift when your environment has access to the internet, follow the instructions on the [Installing OpenShift Pipelines](https://docs.openshift.com/container-platform/4.7/cicd/pipelines/installing-pipelines.html) page of the OpenShift documentation.
 
 ## 6 Pipeline Installation for Connected Environments{#pipelines-installation}
 
 Before you install the Mendix pipelines, which contain all Tekton-related objects, you need to do the following:
 
 1. Install [helm](https://helm.sh).
-2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines – you can download these from [Mendix for Private Cloud Standalone Tekton Pipelines](https://cdn.mendix.com/mendix-for-private-cloud/tekton-pipelines/standalone-cicd/standalone-cicd-v1.0.0.zip).
+2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines – you can download these from [Mendix for Private Cloud Standalone Tekton Pipelines](https://cdn.mendix.com/mendix-for-private-cloud/tekton-pipelines/standalone-cicd/standalone-cicd-v1.0.1.zip).
 
 To install a pipeline you need to provide the url to your private images repository without a tag. For example: `my.private.registry.com/mxapp`. The images that the pipeline builds will be stored in this repository.  
 The namespace can be the same namespace where the  Mendix Operator runs, or you can create a new namespace.

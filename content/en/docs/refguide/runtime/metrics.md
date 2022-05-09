@@ -407,8 +407,8 @@ The Runtime Server produces the following metrics out-of-the-box:
 | `mx.runtime.stats.connectionbus.deletes` | counter | `XASId` | The total number of `DELETE` statements that were executed on the database by a node (`XASId`) since it was started. |
 | `mx.odata.retrieve` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were retrieved from an [OData service](/refguide/consumed-odata-service). (introduced in Studio Pro 9.12) |
 | `mx.odata.consume.created` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created using the [Send External Object activity](/refguide/send-external-object). (introduced in Studio Pro 9.13) |
-| `mx.odata.consume.updated` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were updated using the [Send External Object activity](/refguide/send-external-object). (introduced in since Studio Pro 9.13) |
-| `mx.odata.consume.deleted` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created using the [Delete External Object activity](/refguide/delete-external-object). (introduced in since Studio Pro 9.13) |
+| `mx.odata.consume.updated` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were updated using the [Send External Object activity](/refguide/send-external-object). (introduced in Studio Pro 9.13) |
+| `mx.odata.consume.deleted` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created using the [Delete External Object activity](/refguide/delete-external-object). (introduced in Studio Pro 9.13) |
 | `mx.odata.publish.objects` | counter | `entity` | The total number of objects that were served for a particular type of object (`entity`) by a [published OData service](/refguide/published-odata-service). (introduced in Studio Pro 9.12) |
 
 {{% alert color="info" %}}

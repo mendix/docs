@@ -319,11 +319,7 @@ If you are new to Datadog, you will need to get an account first.
 
 1. Go to the Datadog site (for example, [https://www.datadoghq.com/](https://www.datadoghq.com/)) and choose **GET STARTED FREE**.
 2. Enter your Datadog account details. Once you have entered your details you cannot continue until you have set up your agent.
-3.  Choose the option **From Source**.
-
-    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/from-source.png" alt="The From Source option on the Agent setup screen" >}}
-
-4.  Copy the value of *DD_API_KEY* key shown on the install script.
+3. Find your API Key in one of the installation instructions on the *Install your first Datadog Agent* page.
 
     {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/dd-api-key.png" alt="Source install script shows DD_API_KEY=your API key" >}}
 

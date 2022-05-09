@@ -38,7 +38,7 @@ A published OData service can be used by third-party applications to read data f
 
 1.   Open Studio Pro and add a folder named *OData Services* to **MyFirstModule**.
 2.   Right-click the new folder and select **Add other** > **Published OData service**.
-3.   Enter the name **Assets** and click **OK**:
+3.   Enter a descriptive name for the service and click **OK**:
 4.   Under **Entities**, click **Add**:
 5.   In the **Select Persistable Entity** window, select the entity you want to expose and click **Select**. 
 	 {{% alert color="info" %}}Security in OData is managed by the **App Security** settings and the entity-level access rules; therefore, if you have already configured access rules in your app, you do not have to configure security separately for OData.{{% /alert %}}
@@ -63,7 +63,7 @@ The data of the Mendix application is now available in Excel.
 
 In this section, we will outline the steps for adding more than one published entity so you can compare data from different data sources. 
 
-Imagine that you have a Published OData Service called Assets, with persistable entites called **SmartTask** and **Employee**. To visualize data from your app in Tableau, follow these steps:
+Imagine that you have a Published OData Service with persistable entites called **SmartTask** and **Employee**. To visualize data from your app in Tableau, follow these steps:
 
 1.  Open **Tableau** and select **Connect** > **To a Server** > **OData**:
 
@@ -142,7 +142,7 @@ To filter data with query parameters, follow these steps:
 
 6. You can combine filters by using the `&` character. Repeat steps 1–4, but now use `http://localhost:8080/odata/Expenses/Expenses?$skip=1` as the server URL. You should now see a bar chart showing the data of  2 and 3.
 
-These are some other query examples if your exposed data include *Engineers* and *SmartTasks*:
+These are some other query examples if your exposed data includes *Engineers* and *SmartTasks*:
 
 * `http://localhost:8080/odata/publishedservicename/v1/Engineers(7881299347898469)`
 * `http://localhost:8080/odata/publishedservicename/v1/Engineers/$count`

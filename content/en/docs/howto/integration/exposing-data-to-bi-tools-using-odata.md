@@ -4,7 +4,7 @@ url: /howto/integration/exposing-data-to-bi-tools-using-odata/
 category: "Integration"
 weight: 13
 description: "Presents how to create a published OData service with resources, add the OData server to Tableau and Excel, combine resources in Tableau, and create qustom queries."
-tags: ["expose", "bi tools", "odata", "integration"]
+tags: ["expose", "bi tools", "odata", "integration", "reporting tools", "excel", "tableau"]
 ---
 
 ## 1 Introduction
@@ -13,11 +13,11 @@ Mendix apps encourage the application of a services-oriented architecture, with 
 
 One important aspect of services is that all access to data and logic is handled by the service operations. Direct access to databases used for storing the service data is discouraged, because this would bypass the business rules and security handled by the service. This creates a challenge for generic reporting, data warehousing, and ETL tooling.
 
-A new standard called OData is being adopted more and more, as this enables generic data access within a services-oriented architecture. [OData](http://www.odata.org) is “an open protocol to allow the creation and consumption of queryable and interoperable Restful APIs in a simple and standard way.". In other words, it enables tools to use any REST/OData service by providing metadata that describes the data being provided and by standardizing the messages exchanged with the OData services.
+The OData standard is being adopted because it enables generic data access within a services-oriented architecture. [OData](http://www.odata.org) is “an open protocol to allow the creation and consumption of queryable and interoperable Restful APIs in a simple and standard way.". In other words, it enables tools to use any REST/OData service by providing metadata that describes the data being provided, and by standardizing the messages exchanged with the OData services.
 
-A reporting tool like Tableau or Excel can discover what data and functionality is available in an OData service and provide a generic way for users to build new queries for the data.
+A reporting tool like Excel or Tableau can discover what data and functionality is available in an OData service, and provide a generic way for users to build new queries for the data.
 
-**This how-to will teach you how to do the following:**
+**This guide will outline how to do the following:**
 
 * Create a published OData service with resources
 * Add the OData server to Tableau and Excel
@@ -26,116 +26,90 @@ A reporting tool like Tableau or Excel can discover what data and functionality 
 
 ## 2 Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before checking out this guide, make sure you do the following:
 
-* Create an app using the [Asset Manager](https://marketplace.mendix.com/link/component/69674/0) template
-* Install Excel (we will use Excel for Office 365)
-* Download and install [Tableau](https://public.tableau.com) (The public version of Tableau is free)
+* Create an app that includes data you want to expose. You can either have published OData services already, or follow the steps in the [Creating a Published OData Service](#create-service) section below. For detailed steps to publishing an OData service,see the [Creating an App](/data-hub/share-data/#createapp) and [Publishing to the Data Hub Catalog](/data-hub/share-data/#publishing) sections of *Share Data Between Apps*. 
+* Install Excel (we will use Excel for Office 365).
+* Download and install the public version of [Tableau](https://public.tableau.com).
 
-## 3 Creating a Published OData Service
+## 3 Creating a Published OData Service {#create-service}
 
-A published OData service can be used by third-party applications to read data from a Mendix application. In this chapter, you will create and configure such a service.
+A published OData service can be used by third-party applications to read data from a Mendix application. For detailed steps on publishing an OData service, see the [Creating an App](/data-hub/share-data/#createapp) and [Publishing to the Data Hub Catalog](/data-hub/share-data/#publishing) sections of *Share Data Between Apps*. The basic steps are as follows:
 
-1. Open Studio Pro and add a folder named *OData Services* to **MyFirstModule**.
-2. Right-click the new folder and select **Add other** > **Published OData service**.
+1.   Open Studio Pro and add a folder named *OData Services* to **MyFirstModule**.
+2.   Right-click the new folder and select **Add other** > **Published OData service**.
+3.   Enter a descriptive name for the service and click **OK**.
+4.   Under **Entities**, click **Add**:
+5.   In the **Select Persistable Entity** window, select the entity you want to expose and click **Select**. 
+	 {{% alert color="info" %}}Security in OData is managed by the **App Security** settings and the entity-level access rules; therefore, if you have already configured access rules in your app, you do not have to configure security separately for OData.{{% /alert %}}
+6.   On the **Settings** tab, choose **As an associated id** for **Associations**. Excel can handle the setting **As a link**, but Tableau does not support it.
+7.   Start the application. 
 
-3.  Enter the name **Assets** and click **OK**:
-
-	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582027.png" >}}
-
-4.  Under **Resources**, click **Add**:
-
-	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18581979.png" >}}
-
-5.  In the **Select Persistable Entity** window, select the **SmartTask** entity and click **Select**:
-
-	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582024.png" >}}
-
-	Security in OData is managed by the **App Security** settings and the entity-level access rules; therefore, if you have already configured access rules in your app, you do not have to configure security separately for OData.
-
-6.  Repeat steps 4 and 5 for the **Engineer** entity:
-
-	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18581976.png" >}}
-
-7.  On the **Settings** tab, choose **As an associated id** for **Associations**. Excel can handle the setting **As a link**, but Tableau does not support it.
-
-	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18581982.png" >}}
-
-Start the application. The OData service is now ready to be consumed.
+The OData service is now ready to be consumed.
 
 ## 4 Working with Mendix Data in Excel for Office 365
 
-1. Open Excel.
-2.  Open the **DATA** tab and select **Get Data** > **From Other Sources** > **From OData Feed**:
+1.   Open Excel.
+2.   Open the **DATA** tab and select **Get Data** > **From Other Sources** > **From OData Feed**.
+3.   Retun to Studio Pro, and double-click the published OData service. Copy the link in the **Location** field to the clipboard.
+4.   Back in Excel, on the **OData Feed** dialog box, enter the copied link for the **URL** and Click **OK**:
+5.   Select the name of the published entity in the Navigator and click **Load**.
 
-	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18581994.png" >}}
-
-3.  On the **OData Feed** dialog box, enter `http://localhost:8080/odata/Assets/v1/` for the **URL** and Click **OK**:
-
-	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18581993.png" >}}
-
-4.  Select **SmartTasks** in the Navigator and click **Load**:
-
-	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18581990.png" >}}
-
-5. The data of the Mendix application is now available in Excel:
-
-	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18581987.png" >}}
+The data of the Mendix application is now available in Excel.
 
 ## 5 Working with Mendix Data in Tableau
 
-To visualize data from the Asset Manager app in Tableau, follow these steps:
+In this section, we will outline the steps for adding more than one published entity so you can compare data from different data sources. 
 
-1.  Open **Tableau** and select **Connect** > **To a Server** > **OData**:
+### 5.1 Use Case
 
-	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582022.png" >}}
+Imagine that you have an app that helps with asset management. You have a Published OData Service with persistable entities called **SmartTask** and **Employee** that expose information. The domain model looks like this:
 
-2.  On the **Server Connection** dialog box, enter `http://localhost:8080/odata/Assets/v1/SmartTasks` for the **Server**   address:
+{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/asset-manager-domain-model.png" >}}
 
-	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582020.png" >}}
+To visualize data from your app in Tableau, follow these steps:
 
-3.  Click **Sign In** to save the server connection. You should now see the data source details:
+1.   Open **Tableau** and select **Connect** > **To a Server** > **OData**:
+2.   Return to Studio Pro, and double-click the published OData service. Copy the link the **Location** field to the clipboard.
+3.   On the **Server Connection** dialog box, enter the copied OData service **Location** link for the **Server**  address:
 
-	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582016.png" >}}
+	 {{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582020.png" >}}
 
-4.  Click the name of the server connection and change it to *SmartTasks* for readability:
+	 Include authentication credentials if you set them up.
 
-	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582015.png" >}}
-
-5.  Click **Data** > **New Data Source** and repeat step 1–4 to add a server connection for `http://localhost:8080/odata/Assets/v1/Engineers`.
-6.  Open **Sheet1**. Under **Data**, click **Engineers** and drag **ID** from **Measures** to **Dimensions**:
+4.   Click **Sign In** to save the server connection. You should now see the data source details.
+5.   Click the name of the server connection and change it to a name related to your entity (in this case, **SmartTasks**) for readability.
+6.   Click **Data** > **New Data Source** and repeat step 1–5 to add a server connection for other published OData services.
+7.   Open **Sheet1**. Under **Data**, click the first entity and drag a desired entity **Attribute** from **Measures** to **Dimensions**. In this case, click **Engineers** and drag **ID** from **Measures** to **Dimensions**:
 
 	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582012.png" >}}
 
-7.  Similarly, click **SmartTasks** and drag **SmartTask_Engineer** from **Measures** to **Dimensions**.
-8.  Select **Data** > **Edit Relationships...** in order to define the relation between the different data sources:
-
-	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582014.png" >}}
-
-8.  On the **Relationships** window, do the following:<br />
-	a. Select **SmartTasks** for the **Primary data source**.<br />
-	b. Select **Engineers** for the **Secondary data source**.<br />
-	c. Switch to **Custom** mapping.<br />
-	d. Remove any default mappings.<br />
-	e. Click **Add...** to configure a field mapping.
+8.   Similarly, click and drag an attribute from the second entity from **Measures** to **Dimensions**. In this case, click **SmartTasks** and drag **SmartTask_Engineer** from **Measures** to **Dimensions**.
+9.   Go to **Data** > **Edit Relationships...** to define the relationship between the different data sources.
+10.  On the **Relationships** window, do the following:<br />
+	 a. Select your first entity for the **Primary data source**. In our imagined scenario, that is **SmartTasks**.<br />
+     b. Select your second entity for the **Secondary data source**. In our imagined scenario, that is **Engineers**.<br />
+	 c. Switch to **Custom** mapping.<br />
+	 d. Remove any default mappings.<br />
+	 e. Click **Add...** to configure a field mapping.
 
 	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582013.png" >}}
 
-9.  In the **Add/Edit Field Mapping** window, select **ID** for the **Primary data source field** and **SmartTask_Engineer** for the **Secondary data source field**, then click **OK** to save the field mapping:
+11.  In the **Add/Edit Field Mapping** window, select the attribute for the first entity for the **Primary data source field** and **Entity1_Entity2** for the **Secondary data source field**, then click **OK** to save the field mapping. In this case, select **ID** for the **Primary data source field** and **SmartTask_Engineer** for the **Secondary data source field**: 
 
 	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582011.png" >}}
 
-10. In the **Relationships** window, click **OK** to save the relationships:
+12. In the **Relationships** window, click **OK** to save the relationships:
 
 	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582007.png" >}}
 
-11. Select **Engineers** for the data source and drag the **Name** attribute from the **Dimensions** section to **Rows**:
+13. Select the second entity for the data source (in this case, **Engineers**) and drag the **Name** attribute from the **Dimensions** section to **Rows**:
 
 	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582006.png" >}}
 
-14. Select **SmartTasks** for the data source and do the following:<br />
+14. Select your first published entity (in this case, **SmartTasks**) for the data source and do the following:<br />
 	a. Click the **SmartTask_Engineer** attribute to use it as the linking field.<br />
-	b. Drag. **Number of Records** from the **Measures** section to **Columns**.
+	b. Drag **Number of Records** from the **Measures** section to **Columns**.
 
 	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582005.png" >}}
 
@@ -147,15 +121,9 @@ By default, all data is retrieved by Tableau, but Mendix allows you to add filte
 
 To filter data with query parameters, follow these steps:
 
-1.  Right-click the **Engineers** data source and select **Edit Data Source...**:
-
-	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582001.png" >}}
-
-2.  Click the OData URL to change the connection settings:
-
-	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582000.png" >}}
-
-3.  Add *?$top=2* to the server URL (in order to only retrieve the first two engineers) and click **Sign In**:
+1.  Right-click a data source and select **Edit Data Source...**.
+2.  Click the OData URL to change the connection settings.
+3.  Add *?$top=2* to the server URL (in order to only retrieve the first two values, engineers in this case) and click **Sign In**:
 
 	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18581998.png" >}}
 
@@ -164,16 +132,16 @@ To filter data with query parameters, follow these steps:
 
 	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18581997.png" >}}
 
-6. You can combine filters by using the `&` character. Repeat steps 1–4, but now use `http://localhost:8080/odata/Expenses/Expenses?$skip=1` as the server URL. You should now see a bar chart showing the data of engineers 2 and 3.
+6. You can combine filters by using the `&` character. Repeat steps 1–4, but now use `http://localhost:8080/odata/Expenses/Expenses?$skip=1` as the server URL. You should now see a bar chart showing the data of  2 and 3.
 
 These are some other query examples:
 
-* `http://localhost:8080/odata/Assets/v1/Engineers(7881299347898469)`
-* `http://localhost:8080/odata/Assets/v1/Engineers/$count`
-* `http://localhost:8080/odata/Assets/v1/Engineers?$filter=Name+eq+'Kim'`
-* `http://localhost:8080/odata/Assets/v1/Engineers?$filter=Name+ne+'Kim'`
-* `http://localhost:8080/odata/Assets/v1/SmartTasks?$filter=DueDate+gt+datetime'1995-01-01T00:00:00'`
-* `http://localhost:8080/odata/Assets/v1/SmartTasks?$filter=Created+gt+datetime'2005-01-01T00:00:00'&$orderby=DueDate`
+* `http://localhost:8080/odata/publishedservicename/v1/Engineers(7881299347898469)`
+* `http://localhost:8080/odata/publishedservicename/v1/Engineers/$count`
+* `http://localhost:8080/odata/publishedservicename/v1/Engineers?$filter=Name+eq+'Kim'`
+* `http://localhost:8080/odata/publishedservicename/v1/Engineers?$filter=Name+ne+'Kim'`
+* `http://localhost:8080/odata/publishedservicename/v1/SmartTasks?$filter=DueDate+gt+datetime'1995-01-01T00:00:00'`
+* `http://localhost:8080/odata/publishedservicename/v1/SmartTasks?$filter=Created+gt+datetime'2005-01-01T00:00:00'&$orderby=DueDate`
 
 ## 7 Read More
 

@@ -26,8 +26,8 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 
 | Feature | Expected Release |
 | --- | --- |
-| Consuming add-on modules | GA: Jan 2022 |
-| Publishing add-on modules | Currently in Private Beta<br/>GA: Mar 2022 |
+| Consuming add-on modules | Released in Limited Access in [Studio Pro 9.12](/releasenotes/studio-pro/9.12/#add-on-and-solution-modules) (March 2022) |
+| Publishing add-on modules | Released in Limited Access in [Studio Pro 9.12](/releasenotes/studio-pro/9.12/#add-on-and-solution-modules) (March 2022) |
 
 ## 3 App Services Framework
 

@@ -26,8 +26,8 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 
 | Feature | Expected Release |
 | --- | --- |
-| Consuming add-on modules | Released for Mendix Vendor Program on [Mar 29th, 2022](/releasenotes/studio-pro/9.12/#add-on-and-solution-modules) |
-| Publishing add-on modules | Released for Mendix Vendor Program on [Mar 29th, 2022](/releasenotes/studio-pro/9.12/#add-on-and-solution-modules) |
+| Consuming add-on modules | Released for Mendix Vendor Program on [Mar 29th, 2022](/releasenotes/studio-pro/9.12/#add-on) |
+| Publishing add-on modules | Released for Mendix Vendor Program on [Mar 29th, 2022](/releasenotes/studio-pro/9.12/#add-on) |
 
 ## 3 App Services Framework
 

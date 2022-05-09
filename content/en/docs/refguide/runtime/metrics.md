@@ -407,6 +407,9 @@ The Runtime Server produces the following metrics out-of-the-box:
 | `mx.runtime.stats.connectionbus.deletes` | counter | `XASId` | The total number of `DELETE` statements that were executed on the database by a node (`XASId`) since it was started. |
 | `mx.odata.retrieve` | counter | `entity` | The total number of OData requests that were sent for a particular type of object (`entity`). |
 | `mx.odata.publish.objects` | counter | `entity` | The total number of OData objects that were served for a particular type of object (`entity`). |
+| `mx.odata.publish.created` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created due to client requests to a [published OData service](/refguide/published-odata-service). (introduced in Studio Pro 9.14) |
+| `mx.odata.publish.updated` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were updated due to client requests to a [published OData service](/refguide/published-odata-service). (introduced in Studio Pro 9.14) |
+| `mx.odata.publish.deleted` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were deleted due to client requests to a [published OData service](/refguide/published-odata-service). (introduced in Studio Pro 9.14) |
 
 {{% alert color="info" %}}
 Note that the actual name may vary slightly depending on the back-end (for example, Prometheus replaces dots by underscores).

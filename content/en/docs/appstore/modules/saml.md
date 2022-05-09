@@ -9,22 +9,49 @@ tags: ["marketplace", "marketplace component", "saml", "idp", "identity provider
 
 ## 1 Introduction
 
-The [SAML](https://marketplace.mendix.com/link/component/1174/) module can be used as a replacement or extension of your supported authentication methods. The module allows you to authenticate your user using SAML 2.0 or the Shibboleth protocol.
+The [SAML](https://marketplace.mendix.com/link/component/1174/) module can be used to give end-users access to your Mendix application based on their identity in your Identity Provider. A Mendix application that uses the SAML SSO module will delegate user login to your Identity Provider (IdP) using SAML 2.0.
 
 By configuring the information about all identity providers in this module, you will allow the users to sign in using the correct identity provider (IdP). There is no limit on the number of different identity providers you can configure.
 
 ### 1.1 Typical Use Cases
 
-With this module, you can authenticate against your Microsoft Active Directory server in a secure manner. The SAML protocol allows for the encryption of all the information transferred between the two servers, so VPN connections, LDAP, or Kerberos authentication are no longer needed.
+With this module, you can authenticate against your Microsoft Active Directory server in a secure manner, utilizing the SAML capabilities of Active Directory Federation Services (ADFS). The SAML protocol allows for the encryption of all the information transferred between the two servers, so VPN connections, LDAP, or Kerberos authentication are no longer needed.
 
 ### 1.2 Features
 
-* Configure all the options allowed in the SAML 2.0 specification. 
+The SAML SSO module supports the following [SAML 2.0](https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf) profiles for your Mendix app acting as a Service Provider (SP):
+
+* Web browser SSO profile using one of the following bindings
+    * HTTP redirect, 
+    * HTTP POST bindings
+    * HTTP artifact
+* Single Logout profile
+
+The Mendix SAML SSO supports usage of SAML metadata in the following way:
+
+* Daily synchronization of the IdP metadata, so your Mendix app will always have the latest IdP metadata.
+    * For daily synchronization of IdP metadata, configure the SE_SynchronizeIdPMetadata scheduled event. For local development this can be done from Studio Pro. In the Mendix Cloud, you can do this on the [Environments Details](/developerportal/deploy/environments-details/#model-options) page for your app.
+* Downloading of the metadata for your Mendix application that acts as an SP in the SAML protocol
+
+For encryption of SAML messages the following options are supported:
+
+* No Encryption
+* 1024 or 2048 bit encryption
+* SHA1 or  SHA256 algorithms
+
+Logging / audit trail
+
+* The SAML module keeps a log of login attempts. These can be downloaded.
+
+Configurability:
+
+* The solution features a SAML administration screen that allows you to configure one or multiple SAML IdP’s. IdP discovery is supported by an endpoint that returns all configured IdP’s.
+* Various options as per  SAML 2.0 specification and as indicated on this page.
 
 ### 1.3 Limitations
 
-* There is no support (yet) for the SOAP binding
 * SAML1.0 is not supported.
+* The Mendix SAML SSO module does not support Enhanced Client/Proxy SSO profile.
 
 ### 1.4 Dependencies
 
@@ -33,6 +60,13 @@ If you are running your app outside of the Mendix Cloud, make sure you have [ext
 {{% /alert %}}
 
 * [MxModelReflection](/appstore/modules/model-reflection/)
+
+There are different versions of the module, depending on which version of Mendix you are using. These versions may change, see the versions available in the [SAML module](https://marketplace.mendix.com/link/component/1174/).
+
+* Mendix version 7 – SAML module version 1.16.5
+* Mendix version 8 – SAML module version 2.2.1
+* Mendix version 9 (upgraded from version 8) – SAML module version 3.2.0
+* Mendix version 9 (new app using Atlas version 3.0) – SAML module version 3.2.1
 
 ## 2 Installation
 
@@ -103,6 +137,28 @@ If you want to automatically synchronize the IdP metadata, go to **\_USE ME** > 
 * **Just in Time Provisioning** – During the login process, all fields from the assertions can be copied into the user account entity. All the **Claim** fields from the assertion will be copied into the selected **Mx User Attribute**. 
 	* **Claim**
 	* **Mx User attribute**
+
+##### 3.2.3.1 Additional Functionality
+
+{{% alert color="info" %}}
+These settings are only available in the following versions of the module (depending on which Mendix version you are using)
+
+* v3.1.8/v3.1.9 and above for Mendix version 9
+* v2.2.0 and above for Mendix version 8
+* v1.16.4 and above for Mendix version 7
+{{% /alert %}}
+    
+* **Use custom logic for user provisioning** and **Use custom after sign-in logic**
+
+    If you want to add your own logic to the user provisioning, enable one, or both, of these functions.The microflow you select will be executed after the user signs in.
+
+    1. If the **Custom microflow** field is *None* then the default Mendix custom microflows `CustomUserProvisioning` and `CustomAfterSigninLogic`, respectively, is/are executed
+    2. You can also implement your own custom microflow and then select that in the Custom microflow field to override the Mendix custom microflows. For this:
+        * the custom microflow name must begin with the string “Custom”, (for example, `CustomMyUserProvisioning`)
+        * to see the latest custom microflows in the dropdown, refresh the modules in the *Model Reflection* of your application whenever you add/remove any custom microflow — see [Mx Model Reflection](/appstore/modules/model-reflection/) for information on how to do this
+* **Enable delegated authentication** - If enabled, you allow the module to keep the access token for the app alive automatically. Only enable this functionality if you are actually using delegated authentication.
+* **Enable mobile authentication Token** - If you are using a [hybrid mobile](/refguide/hybrid-mobile/) app and you enable this, you can log in to your Mendix hybrid mobile app after the app is closed, using an auth token cookie. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix & SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
+
 
 #### 3.2.4 Authentication Context
 

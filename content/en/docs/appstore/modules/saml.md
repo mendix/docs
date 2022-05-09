@@ -17,6 +17,8 @@ By configuring the information about all identity providers in this module, you 
 
 With this module, you can authenticate against your Microsoft Active Directory server in a secure manner, utilizing the SAML capabilities of Active Directory Federation Services (ADFS). The SAML protocol allows for the encryption of all the information transferred between the two servers, so VPN connections, LDAP, or Kerberos authentication are no longer needed.
 
+You can also use the SAML module if you want to your Mendix App to have SSO with a Shibboleth identity Provider.
+
 ### 1.2 Features
 
 The SAML SSO module supports the following [SAML 2.0](https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf) profiles for your Mendix app acting as a Service Provider (SP):

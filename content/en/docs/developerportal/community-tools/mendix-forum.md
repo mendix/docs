@@ -13,7 +13,7 @@ The [Mendix Forum](https://forum.mendixcloud.com) is where the Mendix community 
 
 The Mendix Forum is closely integrated with the [Mendix Profile](/developerportal/community-tools/mendix-profile/) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Forum. If someone clicks your name anywhere on the Mendix Forum, your Mendix Profile will open, so make sure you [set your profile to public](/developerportal/community-tools/mendix-profile/#public) so everyone can see your details and progress!
 
-There are two tabs available in the Mendix Forum: **Questions** and **Ideas**. On each tab, you can see the **Top contributors**, which lists the five Mendix community developers who have the most Mendix Forum points in the last 30 days.
+On the right side of the Mendix Forum, you can see the **Top contributors**, which lists the five Mendix community developers who have the most Mendix Forum points in the last 30 days.
 
 ## 2 Questions  {#questions-tab}
 
@@ -23,20 +23,20 @@ On the **All Questions** page, you can see an overview of the questions that hav
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_example.png" >}}
 
-Each question has a descriptive title (**1**). Clicking the question title opens the specific [question and answers details page](#question-description-page) under the **Question** tab. After you click the question title, the dot ( • ) before the question title will disappear.
+Each question has a descriptive title (①). Clicking the question title opens the specific [question details page](#question-description-page).
 
 Each question specifies the following elements:
 
-* The beginning of the question description (**2**), which is taken from the [question details and answers page](#question-description-page)
-* The category (**3**)
-  * This is set when asking a question (for details, see the [Asking Your Question](#asking-your-question) section)
-  * When you click a category, the overview page will list questions in that category
-* The tags applied to question (**4**) 
-	* These are set when asking a question (for details, see the [Asking Your Question](#asking-your-question) section)
-	* When you click a tag, the overview page will list questions with that same tag
-* The number of votes (**5**), answers (**6**), and views (**7**) the question has received
-* The name, avatar, and level of the Mendix community member who asked the question (**8**)
-* When the question was created (**9**)
+* The beginning of the question description (②), which is taken from the [question details page](#question-description-page)
+* The category (③)
+  * This is set when asking a question (for details, see the [Asking Your Question](#asking-your-question) section).
+  * Clicking a category opens an overview page that lists all the questions in the same category.
+* The tags applied to question (④) 
+	* These are set when asking a question (for details, see the [Asking Your Question](#asking-your-question) section).
+	* Clicking a tag opens an overview page that lists questions with that same tag.
+* The number of votes (⑤), answers (⑥), and views (⑦) the question has received
+* The name, avatar, and level of the Mendix community member who asked the question (⑧)
+* When the question was created (⑨)
 
 Hovering over the developer name brings up the profile card:
 
@@ -46,16 +46,16 @@ The profile card presents the Mendix points for the developer. Clicking the deve
 
 #### 2.1.1 Searching and Filtering Questions {#searching}
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/search-and-filter-questions.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/search-filter-questions.png" >}}
 
 To search for a question, enter your keywords in the **Search** text box.
 
 To filter the searching results, you can use the following filters:
 
 * **Status**
-  * **Unanswered** – the question is not answered
-  * **Answered** – the question is answered 
-  * **Answer Accepted** – the question is answered and the answer has been accepted)
+  * **Unanswered** – the question has not been answered
+  * **Answered** – the question has been answered
+  * **Answer Accepted** – the question has been answered and the answer has been accepted)
 * **Sort by** – the default is **Last Updated**; you can set it to **Newest** or **Most Popular**
 * **Categories** – the category set when the question was asked (for more information, see the [Asking Your Question](#asking-your-question) section)
 * **Type in a Tag** – the tags set when the question was asked (for more information, see the [Asking Your Question](#asking-your-question) section)
@@ -76,16 +76,16 @@ Clicking the title of a question will bring you to the details page for that que
 
 On this page, you can read the full descriptive text of the question and do the following:
 
-* View the following question details (**1**):
+* View the following question details (①):
   * When the question was **Submitted**
   * The date and time of the **Last activity** on the question (meaning, when it was last updated)
   * How many times the question has been **Viewed**
   * The **Category** of the question
-  * The **Tags** applied to the question (when you click a tag, the overview page will list questions with that same tag)
+  * The **Tags** applied to the question (clicking a tag opens an overview page that lists questions with that same tag)
   * The **Mendix version** set when the question was asked (for more information, see the [Asking Your Question](#asking-your-question) section)
-* Click the **▲** or **▼** button to upvote or downvote the question based on its usefulness (**2**)
-* Click **Comment** to write and submit a comment on the question (**3**)
-* Click **Bookmark** to bookmark the question (**4**)
+* Click the **▲** or **▼** button to upvote or downvote the question based on its usefulness (②)
+* Click **Comment** to write and submit a comment on the question (③)
+* Click **Bookmark** to bookmark the question (④)
 
 If you want to follow the discussion on a question via email notifications, click **Subscribe to Email Notifications** below the question details. Please note that you are automatically subscribed for email notifications on questions that you have asked; if you want to unsubscribe from these notifications, click **Unsubscribe from Email Notifications** on a specific question that you have asked.
 
@@ -107,11 +107,11 @@ It has never been easier to ask a question on the Mendix Forum. But before you s
 
 To ask your own question on the Mendix Forum, follow these steps:
 
-1. Click **Ask a question** on the main page of the [Questions tab](#questions-tab).
+1. Click **Ask a question** on the upper-right corner of the **All Questions** page. 
 
 2. On the **Ask your question** page, fill in the following details in the editor:
 
-   {{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_ask_screen.jpg"   width="500"  >}}
+   {{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_ask_screen.jpg"   width="800"  >}}
 
    * The **Title** of your question (which is how Mendix Forum users will first see your question, so make the title descriptive and interesting)
    * The text of your question (add all the details about your question to make it searchable and so other users can answer it; consider including steps to reproduce the issue)
@@ -133,13 +133,9 @@ Below the answer(s), you can contribute to the Mendix Forum by writing your own 
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_answer_editor.png" >}}
 
-{{% alert color="info" %}}
-
 You can easily upload your images in the Mendix Forum by dragging them directly into the text editors. In order to resize and position an image, double-click it in the editor or click the image button in the toolbar:
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_image_button.png" >}}
-
-{{% /alert %}}
 
 ### 2.2 My Questions
 
@@ -147,7 +143,7 @@ On the **My Questions** page, you can find the following questions:
 
 * **Asked** – the questions you have asked (for more information, see the [Asking Your Question](#asking-your-question) section)
 * **Answered** – the questions you have answered (for more information, see the [Answering a Question](#answering-question) section)
-* **Commented** – the questions that you have commented on (for details on how to comment on a question, see the [Question Details and Answers Page](#question-description-page) section)
+* **Commented** – the questions that you have commented on (for details on how to comment on a question, see the [Question Details Page](#question-description-page) section)
 
 ## 3 Ideas
 
@@ -157,23 +153,23 @@ On the **All Ideas** page, you can see an overview of the ideas and feature requ
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/ideas_example.png" >}}
 
-All the submitted ideas are publicly visible, and each idea has a descriptive title (**1**). Clicking the idea title opens the specific [idea details page](#idea-details-page) under the **Ideas** tab.
+All the submitted ideas are publicly visible, and each idea has a descriptive title (①). Clicking the idea title opens the specific [idea details page](#idea-details-page).
 
 Each idea specifies the following elements:
 
-* The beginning of the idea description (**2**) (this is taken from the [idea details page](#idea-details-page))
-* The category (**3**)
+* The beginning of the idea description (②) (this is taken from the [idea details page](#idea-details-page))
+* The category (③)
   * This is set when submitting an idea (for details, see the [Submitting an Idea](#submitting-an-idea) section)
-* Tags (**4**) (for example, **Native-widgets**)
+* Tags (④) (for example, **Native-widgets**)
   * You can search for one or more tags
-* The number of votes (**5**), comments (**6**), and views (**7**) for the idea
-* The name, avatar, and level of the Mendix community member who created the idea (**8**)
-* When the idea was created (**9**)
-* The status of the idea (**10**) (for descriptions of the statuses, see the [Idea Details Page](#idea-details-page) section below)
+* The number of votes (⑤), comments (⑥), and views (⑦) for the idea
+* The name, avatar, and level of the Mendix community member who created the idea (⑧)
+* When the idea was created (⑨)
+* The status of the idea (⑩) (for descriptions of the statuses, see the [Idea Details Page](#idea-details-page) section below)
 
 #### 3.1.1 Searching and Filtering Ideas {#searching}
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/search-and-filter-ideas" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/search-filter-ideas.png" >}}
 
 To search for an idea, enter your keywords in the **Search** text box.
 
@@ -202,7 +198,7 @@ Clicking the title of an idea will bring you to the details page for that idea:
 
 On this page, you can read the full descriptive text of the idea and do the following:
 
-* View the following idea details (**1**):
+* View the following idea details (①):
 
   * The **Status** of the idea – these are the possible statuses:
     * **Open** – the idea has not been reviewed yet
@@ -213,18 +209,16 @@ On this page, you can read the full descriptive text of the idea and do the foll
   * The date and time of the **Last activity** on the idea (meaning, when it was last updated)
   * How many times the idea has been **Viewed**
   * The **Category** of the idea
-  * The **Tags** applied to the idea (clicking a tag will list ideas with that same tag under the **Ideas** tab)
+  * The **Tags** applied to the idea (clicking a tag opens an overview page that lists all the ideas with that same tag.)
 
-* <a name="upvoting"></a>Click **Vote** to upvote the idea (**2**)
+* Click **Vote** to upvote the idea (②)
 
-  * By upvoting ideas, you can show the Mendix community and Product Managers what you would like to see added to the Mendix Platform
+  * By upvoting ideas, you can show the Mendix community and Product Managers what you would like to see added to the Mendix Platform.
 
     {{% alert color="info" %}}The upvotes will be used as input for the Product Managers and Mendix community MVPs to decide which features will be nominated for implementation. Please note that the level of impact also needs to be considered.
     {{% /alert %}}
 
-* Click **Bookmark** to bookmark the idea (**3**)
-
-* Submit a comment on the idea (**4**)
+* Click **Bookmark** to bookmark the idea (③)
 
 If you want to follow the discussion on an idea via email notifications, click **Subscribe to Email Notifications** below the idea details. Please note that you are automatically subscribed for email notifications on ideas that you have submitted; if you want to unsubscribe from these notifications, click **Unsubscribe from Email Notifications** on a specific idea that you have submitted.
 
@@ -238,11 +232,11 @@ If you have a great idea that you would like to see implemented on the Mendix Pl
 
 To submit your own idea to the idea forum, follow these steps:
 
-1. Click **Submit idea** on the main page of the [Ideas tab](#ideas-tab).
+1. Click **Submit idea** on the upper-right corner of the **All Ideas** page.
 
 2. On the **Submit your idea** page, fill in the following details in the editor:
 
-   {{< figure src="/attachments/developerportal/community-tools/mendix-forum/ideas_submit_screen.jpg"   width="500"  >}}
+   {{< figure src="/attachments/developerportal/community-tools/mendix-forum/ideas_submit_screen.png"   width="800"  >}}
 
    * The **Title** of your idea (which is how Mendix Forum users will first see your idea, so make the title descriptive and interesting)
    * The text of your idea (add all the details about your idea to make it searchable and so other users can vote and comment on it)
@@ -264,6 +258,6 @@ Mendix looks forward to hearing all of your ideas!
 
 **Ideas** – the ideas you have bookmarked (for details on how to bookmark an idea, see the [Idea Details Page](#idea-details-page) section)
 
-## 4 Read More
+## 5 Read More
 
 * [How to Contribute to the Documentation](/developerportal/community-tools/contribute-to-the-mendix-documentation/)

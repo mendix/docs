@@ -13,9 +13,9 @@ Mendix apps encourage the application of a services-oriented architecture, with 
 
 One important aspect of services is that all access to data and logic is handled by the service operations. Direct access to databases used for storing the service data is discouraged, because this would bypass the business rules and security handled by the service. This creates a challenge for generic reporting, data warehousing, and ETL tooling.
 
-A new standard called OData is being adopted more and more, as this enables generic data access within a services-oriented architecture. [OData](http://www.odata.org) is “an open protocol to allow the creation and consumption of queryable and interoperable Restful APIs in a simple and standard way.". In other words, it enables tools to use any REST/OData service by providing metadata that describes the data being provided, and by standardizing the messages exchanged with the OData services.
+The OData standard is being adopted because it enables generic data access within a services-oriented architecture. [OData](http://www.odata.org) is “an open protocol to allow the creation and consumption of queryable and interoperable Restful APIs in a simple and standard way.". In other words, it enables tools to use any REST/OData service by providing metadata that describes the data being provided, and by standardizing the messages exchanged with the OData services.
 
-A reporting tool like Tableau or Excel can discover what data and functionality is available in an OData service and provide a generic way for users to build new queries for the data.
+A reporting tool like Excel or Tableau can discover what data and functionality is available in an OData service, and provide a generic way for users to build new queries for the data.
 
 **This guide will outline how to do the following:**
 
@@ -63,7 +63,7 @@ In this section, we will outline the steps for adding more than one published en
 
 ### 5.1 Use Case
 
-Imagine that you have an app that helps with asset management. You have a Published OData Service with persistable entities called **SmartTask** and **Employee** that expose information . The domain model looks like this:
+Imagine that you have an app that helps with asset management. You have a Published OData Service with persistable entities called **SmartTask** and **Employee** that expose information. The domain model looks like this:
 
 {{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/asset-manager-domain-model.png" >}}
 
@@ -85,10 +85,7 @@ To visualize data from your app in Tableau, follow these steps:
 	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582012.png" >}}
 
 8.   Similarly, click and drag an attribute from the second entity from **Measures** to **Dimensions**. In this case, click **SmartTasks** and drag **SmartTask_Engineer** from **Measures** to **Dimensions**.
-9.   Select **Data** > **Edit Relationships...** in order to define the relation between the different data sources:
-
-	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582014.png" >}}
-
+9.   Go to **Data** > **Edit Relationships...** to define the relationship between the different data sources.
 10.  On the **Relationships** window, do the following:<br />
 	 a. Select your first entity for the **Primary data source**. In our imagined scenario, that is **SmartTasks**.<br />
      b. Select your second entity for the **Secondary data source**. In our imagined scenario, that is **Engineers**.<br />
@@ -124,12 +121,8 @@ By default, all data is retrieved by Tableau, but Mendix allows you to add filte
 
 To filter data with query parameters, follow these steps:
 
-1.  Right-click a data source and select **Edit Data Source...**:
-
-2.  Click the OData URL to change the connection settings:
-
-	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582000.png" >}}
-
+1.  Right-click a data source and select **Edit Data Source...**.
+2.  Click the OData URL to change the connection settings.
 3.  Add *?$top=2* to the server URL (in order to only retrieve the first two values, engineers in this case) and click **Sign In**:
 
 	{{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18581998.png" >}}

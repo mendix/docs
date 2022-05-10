@@ -29,7 +29,7 @@ This documentation is describing certificates for *incoming* connections. For in
 You may not immediately see changes which affect DNS routing. This is because of DNS caching, where changes are not visible until the cache is updated.
 {{% /alert %}}
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Generate a certificate request for your custom domain
 * Upload a custom domain certificate to the Mendix Cloud

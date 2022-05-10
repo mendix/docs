@@ -16,7 +16,7 @@ tags: ["security", "on-premises", "user account", "reverse proxy", "firewall", "
 
 This how-to serves as a checklist for implementing security for your on-premises installation.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Use a Mendix version containing the latest security patches
 * Configure file system access

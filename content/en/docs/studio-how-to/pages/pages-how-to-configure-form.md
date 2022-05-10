@@ -12,7 +12,7 @@ tags: ["studio", "pages", "list", "how to"]
 
 This how-to explains how you can configure a page with a form and how to show items related to this form on the same page. For example, to show a report and a checklist associated with this report. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Configure a form (a data view)
 * Show items related to this form in a table 

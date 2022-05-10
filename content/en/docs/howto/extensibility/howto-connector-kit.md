@@ -27,7 +27,7 @@ This image shows what the microflow toolbox looks like after including all the m
 
 For the basics of building toolbox actions, see the blog post [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/). 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Use advanced features when creating your own microflow actions
 * Create the **Create object list** action

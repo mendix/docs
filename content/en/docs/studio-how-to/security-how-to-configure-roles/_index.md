@@ -11,7 +11,7 @@ tags: ["studio", "security", "user roles", "secure your app", "conditional visib
 
 This how-to explains how you can secure your app, create user roles, and open access to certain pages and microflows for specific user roles. As a result, your end-users will be able to view only those pages that they have access to. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Enable security
 * Create user roles

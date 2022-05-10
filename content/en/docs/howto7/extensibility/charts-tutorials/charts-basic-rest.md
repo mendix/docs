@@ -10,7 +10,7 @@ tags: ["Charts", "Widgets", "REST", "Desktop Modeler"]
 
 With the Charts widgets, you can use data from a REST Service to plot graphs.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Publish a REST API
 * Use a REST end point as a data source for the Charts widget

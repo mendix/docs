@@ -10,7 +10,7 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 
 Atlas UI and Mendix Studio bring a lot of features to the process of building an app. But what if you already have a Mendix app that looks great and runs smoothly? No problem! To get an existing Mendix app to work with Atlas UI and Studio, there are a couple of steps to follow. This how-to describes how to upgrade existing Mendix projects to Atlas UI.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Prepare your app for Atlas UI
 * Replace the UI Framework module

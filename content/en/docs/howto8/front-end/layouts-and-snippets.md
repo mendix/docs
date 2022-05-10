@@ -10,7 +10,7 @@ tags: ["front end"]
 
 This document will cover the basics of how to create pages using layouts and snippets.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create style layouts
 * Create snippets

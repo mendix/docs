@@ -13,7 +13,7 @@ Workflow is a new visual language in Mendix Studio Pro and Mendix Studio that al
 
 This how-to explains how to build an employee onboarding process using the workflow editor. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Creating a workflow
 * Creating user tasks for different user roles

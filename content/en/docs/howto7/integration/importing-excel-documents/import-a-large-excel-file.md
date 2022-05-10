@@ -15,7 +15,7 @@ The trick is to use XML-to-domain mapping.
 
 We will use XML-to-domain mapping to create a new import entity from an Excel sheet quickly in a semi-automated way.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Quickly import a large Excel file with a lot of columns
 

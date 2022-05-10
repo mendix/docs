@@ -16,7 +16,7 @@ In the Company Expenses app I want to click the following expense to view the de
 
 {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-use-precondition-in-test-cases/expense-to-click-on.png" >}}
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * How to use preconditions in test cases
 * Analyzing the results of a test case with preconditions

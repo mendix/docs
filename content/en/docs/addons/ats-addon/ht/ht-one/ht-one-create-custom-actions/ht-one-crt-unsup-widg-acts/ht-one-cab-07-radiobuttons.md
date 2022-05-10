@@ -14,7 +14,7 @@ The how-to assumes that you must build your own action.
 
 The how-to applies to all widgets like the radio button widget, which means that, if you must click a child element based on text, you can follow this how-to. Keep in mind that it might need some adjustments according to the widget!
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Approach a radio button option that ATS must click
 * Create the custom action to click the radio button option

@@ -10,7 +10,7 @@ tags: ["monitoring", "troubleshooting", "log level", "logging", "log"]
 
 Each application has a log and log messages to monitor the health of the running of the application. Log levels are used to distinguish the log messages and to highlight the highest priority ones so that they can receive the immediate intervention they require.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Configure the log levels for the various occurrence of logging within your app
 

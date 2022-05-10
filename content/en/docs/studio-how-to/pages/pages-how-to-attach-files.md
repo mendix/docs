@@ -12,7 +12,7 @@ tags: ["studio", "pages", "file", "upload files", "attachment", "file manager"]
 
 This how-to explains how you can enable your end-users to attach and download files, such as PDF files or Microsoft Word documents. They will be able to attach files from different devices: phone, tablet, or desktop; as well as download attached files from a list.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create file entities
 * Create a page with a form that allows your end-users to upload files

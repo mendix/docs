@@ -12,7 +12,7 @@ Asserting a row of a data grid is very useful in automated testing, as you shoul
 
 In ATS you can assert rows in a data grid With the [Find/Assert DataGrid Row](/addons/ats-addon/rg-one-findassert-datagrid-row/) action. As the action has many input parameters this how to explains how-to use the action. 
 
-**This how-to will teach you how to do the following**
+This how-to will teach you how to do the following
 
 * Assert data grid rows
 

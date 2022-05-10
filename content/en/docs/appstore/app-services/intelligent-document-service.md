@@ -170,23 +170,21 @@ To train a document model, do as follows:
 
         {{< figure src="/attachments/appstore/app-services/intelligent-document-service/mark-document-dialog-box.png" alt="Mark Document page" >}}
 
-   3. On the right side, enter a **Marker Id** that is used for the area that you selected. 
-   4. Select the **Marker Type**. It can be **Text** or **Checkmark**.
-   5. Click **Add Marker** to add the marker to the list of **Markers**.
-   6. To delete a marker from the **Markers** list, select the marker and click **Delete**.
-   7.  When you add all the markers for this image, click **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.
+    3. On the right side, enter a **Marker Id** that is used for the area that you selected. 
+    4. Select the **Marker Type**. It can be **Text** or **Checkmark**.
+    5. Click **Add Marker** to add the marker to the list of **Markers**.
+    6. To delete a marker from the **Markers** list, select the marker and click **Delete**.
+    7.  When you add all the markers for this image, click **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.
 
         {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-marker-and-ids-image-status-marked.png" alt="add markers and id status is marked" >}}
 
-   8. Repeat the steps above until you mark all the images, and then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
+    8. Repeat the steps above until you mark all the images, and then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
 
 9.  Wait until the **Status** of the model becomes **Published**. Once the model is published, this pop-up window opens:
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/new-model-status-popup.png" alt="new model status included" >}}
 
-10.  Click **OK** to close the pop-up window. The model is ready to use. 
-
-    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/new-model-status-completed.png" alt="new model status published" >}}
+10. Click **Refresh** to see the status of the model. The model is ready to use once its **Status** changes to **Published**.
 
 ### 4.2 Creating an Import Mapping{#mapping-file}
 

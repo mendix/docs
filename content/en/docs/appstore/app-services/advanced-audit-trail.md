@@ -15,7 +15,7 @@ Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, an
 
 {{< figure src="/attachments/appstore/app-services/advanced-audit-trail/integration-diagram.png" >}}
 
-{{% alert color="info" %}}This app service is different from the [Audit Trail](/appstore/modules/audit-trail/) module because it needs less work to implement, and delivers better search user experience and better performance.{{% /alert %}}
+{{% alert color="info" %}}This app service is different from the [Audit Trail](/appstore/modules/audit-trail/) module, because it needs less work to implement, and delivers better search user experience and better performance.{{% /alert %}}
 
 ### 1.1 Typical Use Cases
 
@@ -51,6 +51,10 @@ Advanced Audit Trail contains an [add-on module](refguide/consume-add-on-modules
 ### 1.5 Dependencies
 
 To use Advanced Audit Trail, you need to install [Atlas Core](https://marketplace.mendix.com/link/component/117187) and [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) in your application.
+
+### 1.6 Solution Package
+
+For a working copy, see [Advanced Audit Trail solution package](https://marketplace.mendix.com/link/component/120236).
 
 ## 2 Installation
 
@@ -144,7 +148,15 @@ Use Configure Username mapping to store a username differently in the long-term 
 
 ### 3.8 Implementing Display Formatters (Optional)
 
-Use the **Formatter** microflows to change how the String value will be calculated for Decimals, Dates, and Mendix Object Identifiers. See the example app for more details.
+Use the formatter microflows to change how externally stored values will be displayed inside your Mendix application.
+
+| Microflow | Formater | Description |
+| --------- | -------- |---|
+| GetAttributes_ConvertDate | Date formatter |Date formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the date follows the US format (month/day/year).|
+| GetAttributes_ConvertDecimal | Decimal formatter |Decimal formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the decimal formatting follows the US format (period — ".") to separate an integer from its partial fractional part|
+| GetAttributes_ConvertMxIdentifier | Mendix object identifier formatter |Mendix object formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, what is displayed in a reference is `[ModuleName].[EntityName] (ObjectGUID)`. One may prefer to display (a combination of) an attribute of the said object as a reference.|
+
+For an example implementation of each display formatter, see the module **ExampleImplementation** in the [Advanced Audit Trail solution package](https://marketplace.mendix.com/link/component/120236).
 
 ### 3.9 Getting Microflow Stack Trace (Optional)
 

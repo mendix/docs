@@ -259,6 +259,7 @@ Rule | Name | Pattern | Rewrite URL
 6 | rest | `^(rest/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 7 | rest-doc | `^(rest-doc/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 8 | debugger | `^(debugger/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
+9 | oauth | `^(oauth/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 
 Follow the instructions below and replace *[Name]* with the name of the rule in the table above, *[Pattern]* with the regular expression pattern, and *[Rewrite URL]* with the Rewrite URL. Note that some patterns contain a trailing slash, `/`, when they need to point to an exact path (for example, `/ws-doc/mydoc/1234`).
 

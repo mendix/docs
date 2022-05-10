@@ -171,7 +171,7 @@ To train a document model, do as follows:
         {{< figure src="/attachments/appstore/app-services/intelligent-document-service/mark-document-dialog-box.png" alt="Mark Document page" >}}
 
     3. On the right side, enter a **Marker Id** that is used for the area that you selected. 
-    4. Select the **Marker Type**. It can be **Text** or **Checkmark**.
+    4. Select the **Marker Type**.
     5. Click **Add Marker** to add the marker to the list of **Markers**.
     6. To delete a marker from the **Markers** list, select the marker and click **Delete**.
     7.  When you add all the markers for this image, click **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.

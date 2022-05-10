@@ -16,7 +16,7 @@ Workflows are available in Studio from **Mendix version 9.12.1**. If you have an
 
 This how-to explains how to build a workflow manually, without using a wizard. For more information on using the wizard and creating workflows with its help, see the [Creating a Workflow Using the Wizard](/studio/workflows/#wizard) section in Workflows.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Enabling and creating workflows
 * Configuring attributes for an entity

@@ -10,7 +10,7 @@ tags: ["monitoring", "troubleshooting", "sso", "single sign on", "error"]
 
 Below you will find solutions for some of the most common problems you may encounter when developing an AppCloud-enabled app.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Monitor and troubleshoot common Mendix SSO errors
 

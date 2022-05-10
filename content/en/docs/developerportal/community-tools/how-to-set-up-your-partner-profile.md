@@ -11,7 +11,7 @@ tags: ["authorized", "expert", "professional", "4 p's"]
 
 The purpose of the Partner Profile is to provide the Mendix community and customers with a transparent overview of each partner company's knowledge, skills, experience, reviews, and culture. The profile is a simple and clear way for each partner to present themselves through an aggregated view of the developers in the organization, including the number of certified developers. It is also possible to add projects, customer reviews, contact information, a company video, and a description to each profile.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Set up and edit the Mendix Partner Profile
 * Add projects to the profile

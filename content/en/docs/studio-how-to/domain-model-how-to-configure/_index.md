@@ -10,7 +10,7 @@ tags: ["studio", "domain model", "decision", "domain model"]
 
 This how-to explains how you can configure a domain model in Mendix Studio. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Define what data to include to your domain model
 * Create different type of entities

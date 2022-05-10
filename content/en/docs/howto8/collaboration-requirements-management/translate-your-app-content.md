@@ -10,7 +10,7 @@ tags: ["studio pro", "translate app", "batch translate", "translate"]
 
 Delivering your Mendix app in multiple languages is an important capability for reaching a wide audience. Most of the text that the end-user sees is stored as translatable texts (for example, labels, button names, and menu items). Using the language features of Mendix, you can quickly make your app multilingual and translate the content to many other languages.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Add a new language to your app
 * Change the working language

@@ -15,7 +15,7 @@ A Mendix application is role-based. Using the SAP BTP cockpit, you can assign th
 
 In this document, you will see how to use the XSUAA Connector for SAP Business Technology Platform to provide SSO in an app which has two roles: Supervisor and Inspector. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Add the XSUAA Connector to your app
 * Configure the XSUAA connector within your app

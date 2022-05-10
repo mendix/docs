@@ -10,7 +10,7 @@ tags: ["monitoring", "troubleshooting", "debug", "java action"]
 
 Mendix Studio Pro has a built-in debugger to solve errors on the microflow level. A microflow can be extended with custom Java actions, but because these actions are text-based, they can only be checked on compile errors. If you run into an error in any of the Java actions, you can easily debug them by utilizing the debugger of Eclipse.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Set breakpoints
 * Debug in Eclipse

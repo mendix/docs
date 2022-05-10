@@ -18,7 +18,7 @@ This documentation is describing certificates for *incoming* connections. For in
 {{% alert color="warning" %}} You may not immediately see changes which affect DNS routing. This is because of DNS caching, where changes are not visible until the cache is updated.
 {{% /alert %}}
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Configure a custom domain for your environment
 * Upload a custom domain certificate

@@ -10,7 +10,7 @@ weight: 20
 
 This how-to builds on the information provided in [How to Share Data Between Apps](/data-hub/share-data/) and shows you how OData annotations give you the power to create, update, and delete data.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Expose updatable OData entities, attributes, and associations in Mendix Studio Pro
 * See which capabilities a particular entity, attribute, or association has in the Data Hub Catalog

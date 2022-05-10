@@ -15,7 +15,7 @@ To ensure your applications run smoothly, they need to be actively monitored so 
 
 New Relic is a flexible application performance management tool that provides information to help you achieve the above goals.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Set up application performance management for your Mendix application on New Relic
 

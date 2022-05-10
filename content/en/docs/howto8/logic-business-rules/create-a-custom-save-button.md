@@ -9,7 +9,7 @@ tags: ["microflow", "logic", "save button", "how-to"]
 
 Mendix uses visual models called microflows to define the logic of your application. A microflow is a visual way of expressing what traditionally would be written in code. This how-to explains how you can create a custom save button on a detail page using a microflow. You will replace a default save button with the save button that shows a message to end-users after they click it. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Recreate the logic of the default **Save** button
 * Create a custom **Save** button

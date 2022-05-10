@@ -20,7 +20,7 @@ aliases:
 
 This how-to covers the basics of accessing the Marketplace from Studio Pro and provides examples of how to add a widget and a module to your application.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Download content from the Marketplace via Studio Pro
 * Use content (for example, widgets, modules, and others) downloaded from the Marketplace in Studio Pro

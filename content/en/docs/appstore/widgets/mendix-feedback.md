@@ -30,7 +30,7 @@ The Mendix Feedback widget is easy to set up and automatically attaches addition
 ### 1.3 Limitations
 
 * Only usable in combination with Mendix apps
-* The [Native Feeback widget](https://docs.mendix.com/appstore/modules/native-mobile-resources/) can be found in [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513). In Native Mobile apps, some of the feedback metadata, such as username, email address and document name, will be hard-coded, as they can't be retrieved dynamically.
+* In Native Mobile apps, some of the feedback metadata, such as username, email address and document name, will be hard-coded, as they can't be retrieved dynamically. The [Native Feeback widget](https://docs.mendix.com/appstore/modules/native-mobile-resources/) can be found in [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513).
 
 
 ## 2 Using the Widget

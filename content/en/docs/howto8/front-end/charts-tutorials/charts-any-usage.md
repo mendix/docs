@@ -15,7 +15,7 @@ When the advanced options are not enough, the **Any Chart** widget can be used.
 
 With **Any Chart** you can build all the chart types that are possible with Plotly.js as well as options for configuring charts dynamically. So, if you want to build a 3D chart or have a dynamic set of series, **Any Chart** is your friend.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create a line chart with sample data
 * Export data for a chart

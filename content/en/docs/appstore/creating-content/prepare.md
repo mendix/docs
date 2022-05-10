@@ -21,7 +21,7 @@ To bring your commercial product to the Mendix Marketplace, you need to first si
 The process for becoming a vendor is currently restricted to Beta suppliers, so you have to be part of the Mendix Vendor Beta program.
 {{% /alert %}}
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Make your commercial content ready to sell on the Marketplace
 * Complete specific tasks before you submit, as you submit, and after you submit your content to the Marketplace

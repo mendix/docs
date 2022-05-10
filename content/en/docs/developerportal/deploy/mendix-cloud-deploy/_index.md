@@ -103,7 +103,7 @@ Mendix apps cannot use custom ports. They communicate on the standard HTTP and H
 
 It has never been easier to deploy a Mendix application to the cloud. This how-to will explain the options a developer has to deploy applications to a connected cloud node.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Deploy a licensed app to the Mendix Cloud
 * Deploy via Mendix Studio Pro

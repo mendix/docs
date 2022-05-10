@@ -10,7 +10,7 @@ tags: []
 
 This how-to explains how you can improve performance by de-normalizing data in Mendix.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Denormalize data
 * Keep denormalized data in sync

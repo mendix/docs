@@ -12,7 +12,7 @@ tags: ["studio", "pages", "image", "image uploader", "attachment", "attach image
 
 This how-to explains how you can enable your end-users to attach images. They will be able to attach images from different devices: phone, tablet, or desktop; or they can take a new image on their phone camera. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create image entities
 * Create a page with a form that allows your end-users to attach images

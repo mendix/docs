@@ -16,7 +16,7 @@ There are *.mpk* packages that can contain apps, modules, or widgets; *.mxmodule
 When you have an app package, you cannot import individual modules or widgets separately from it. 
 {{% /alert %}}
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Import and export the following Studio Pro objects:
     * apps

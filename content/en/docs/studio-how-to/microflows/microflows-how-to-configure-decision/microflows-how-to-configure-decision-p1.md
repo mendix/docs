@@ -13,7 +13,7 @@ This how-to explains how you can configure a decision in the microflow editor of
 
 A decision is an activity which is used to model conditions in your app logic. For more information on what Decision is and how to configure it, see [Decision](/studio/microflows-decision/). 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Add entities and attributes necessary to configure the decision
 * Configure the decision with the Boolean type of parameter or attribute

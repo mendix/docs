@@ -10,7 +10,7 @@ tags: ["Samba", "share"]
 
 You can use a Samba connection to pull or push files to a Windows share. When doing this, you need to use a static IP address in the connection string. The library could support the usage of a servername, but that requires extensive configuration to specify the DNS server location, DFS address, etc. It is far more efficient to use the IP address.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Access a Samba share from the MxCloud
 * Use a servername instead of an IP address

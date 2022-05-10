@@ -10,7 +10,7 @@ tags: ["Atlas", "UI", "UX", "user experience", "customize", "custom", "studio"]
 
 There is a customizable **settings.json** file for the Atlas UI that can be found in the **theme** folder of your Mendix app. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Change Atlas UI to Old Mendix UI Framework
 * Extend design properties applied in the Web Modeler

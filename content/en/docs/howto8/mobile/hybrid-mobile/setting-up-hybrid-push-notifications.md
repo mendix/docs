@@ -11,7 +11,7 @@ tags: ["mobile", "push notification", "remote", "push", "notification"]
 
 In this how to we will set up hybrid push notifications.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Customize your hybrid template to enable push notifications
 

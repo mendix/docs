@@ -23,7 +23,7 @@ OTA updates are bound to a specific app version and build number. Therefore, you
 Currently OTA  does not update your app while the app is open or minimized.
 {{% /alert %}}
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Build an app that can use CodePush OTA updates
 * Push an OTA update for a released app

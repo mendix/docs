@@ -11,7 +11,7 @@ tags: ["Studio Pro", "Charts", "Layout", "Chart Type"]
 
 The individual Charts widgets can be fine-tuned with advanced settings. The settings can affect the layout, configuration and data.
 
-**This how-to will teach you how to do the following:**  
+This how-to will teach you how to do the following:  
 
 * Change font style (layout)
 * Change chart type (data series)

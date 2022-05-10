@@ -9,7 +9,7 @@ tags: ["image", "preview", "widget", "custom"]
 
 This how-to will show you how to specify a preview image that will be rendered in the Modeler.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Configure a preview image for custom widgets
 

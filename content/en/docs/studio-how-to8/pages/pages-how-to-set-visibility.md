@@ -12,7 +12,7 @@ tags: ["studio", "pages", "how to", "visibility", "visible"]
 
 This how-to explains how you show fields to your end-users only when certain conditions are met, which can be achieved by setting conditional visibility. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Make fields visible only when an end-user chooses a certain attribute value
 * Make fields visible for a certain user role only

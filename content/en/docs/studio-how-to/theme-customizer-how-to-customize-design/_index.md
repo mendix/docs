@@ -10,7 +10,7 @@ tags: ["studio", "theme customizer", "how to", "customize", "design"]
 
 This how-to explains how to customize your app in Mendix Studio and use your company's logo, change its colors, fonts, adjust header sizes. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Upload your company logo
 * Customize colors of widgets in your app

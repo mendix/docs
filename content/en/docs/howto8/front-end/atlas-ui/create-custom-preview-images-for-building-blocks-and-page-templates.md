@@ -10,7 +10,7 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 
 To make your custom UI resources easy to browse, you can create custom preview images for your building blocks and page templates. We’ve provided downloadable templates in the *.sketch* and *.psd* formats, which are available on the [Atlas UI site](https://atlas2.mendix.com).
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create building block preview images in various editors
 * Create page template preview images in various editors

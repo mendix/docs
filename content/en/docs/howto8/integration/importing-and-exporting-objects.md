@@ -14,7 +14,7 @@ In Mendix, you don't need to reinvent the wheel. You can save time by importing 
 Please note throughout this how-to that Mendix packages are stored as Mendix package (*.mpk*) files. These are not compatible with each other; you cannot, for example, import individual *modules* from a *project* package.
 {{% /alert %}}
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Import and export the following Studio Pro objects:
     * projects

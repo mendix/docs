@@ -11,7 +11,7 @@ tags: ["studio", "pages", "list", "list view", "how to"]
 
 This how-to explains how you can configure a list of items and view and edit the item details on a pop-up page. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Configure a list view
 * Configure a pop-up page where you can view the details of a list

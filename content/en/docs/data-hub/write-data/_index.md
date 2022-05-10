@@ -22,8 +22,8 @@ Note the following terminology differences described in the table below:
 
 | Data Hub | Studio Pro |
 | -------- | ---------- |
-| Create   | Creatable  |
-| Read     | Insertable |
+| Create   | Insertable |
+| Read     | Readable   |
 | Update   | Updatable  |
 | Delete   | Deletable  |
 

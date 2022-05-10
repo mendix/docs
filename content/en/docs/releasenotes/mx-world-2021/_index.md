@@ -26,8 +26,8 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 
 | Feature | Expected Release |
 | --- | --- |
-| Consuming add-on modules | GA: Jan 2022 |
-| Publishing add-on modules | Currently in Private Beta<br/>GA: Mar 2022 |
+| Consuming add-on modules | Released for Mendix Vendor Program on [Mar 29th, 2022](/releasenotes/studio-pro/9.12/#add-on) |
+| Publishing add-on modules | Released for Mendix Vendor Program on [Mar 29th, 2022](/releasenotes/studio-pro/9.12/#add-on) |
 
 ## 3 App Services Framework
 
@@ -79,7 +79,7 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | --- | --- |
 | MxAssist Logic Bot improvements | Released for GA on [Oct 26th, 2021](/releasenotes/studio-pro/9.7/#mx-assist-logic-bot) |
 | MxAssist Performance Bot new best practices | Released for GA on  [Oct 26th, 2021](/releasenotes/studio-pro/9.7/), [Nov 30th, 2021](/releasenotes/studio-pro/9.8/), and [Dec 17th, 2021](/releasenotes/studio-pro/9.9/) |
-| MxAssist Page Bot | Private Beta: Apr 2022 |
+| MxAssist Page Bot | Currently in Private Beta<br/>GA: TBD |
 | Machine learning toolkit | Currently in Private Beta<br/>GA: TBD |
 
 ## 8 Studio Pro Experience

@@ -8,6 +8,7 @@
 
     p, li, td {
         font-weight: $font-weight-body-text;
+        margin-bottom: 0; // NK - decrease vertical space after paragraph
     }
 
     > h1 {
@@ -22,7 +23,7 @@
     }
 
     > h2:not(:first-child) {
-        margin-top: 2rem;  // NK - decrease space between sections
+        margin-top: 1rem;  // NK - decrease space between sections
     }
 
     > h2 + h3 {
@@ -31,7 +32,7 @@
 
     > h3, > h4, > h5, > h6 {
         margin-bottom: 1rem;
-        margin-top: 2rem;
+        margin-top: 1rem; // NK - decrease space between sections
     }
 
     img {
@@ -60,7 +61,12 @@
     /* ordered lists inside ordered lists will be displayed using letters */
     ol ol {
         list-style-type: lower-alpha;
+        padding-left: 2rem; // NK - decrease indent
     }
+    ul ol, ul ul, ol ul {
+        padding-left: 2rem; // NK - decrease indent
+    }
+
 
     strong {
         font-weight: $font-weight-bold;

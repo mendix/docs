@@ -33,7 +33,7 @@ For details, see [Style](/refguide/style/).
 
 If you set the property 'Render XHTML' to true, the attribute connected to this label is assumed to contain XHTML and will be rendered as such. This is useful when you want to incorporate rich text in a document template. This property can only be true for attributes of type String.
 
-The contents MUST be valid XHTML to render without errors.
+The contents MUST be valid XHTML and cannot contain HTML entities such as "\&rdquo;" to render without errors. HTML entities that are reserved to escape HTML characters are supported, e.g.: "\&lt;", "\&gt;", "\&apos;", "\&amp;". For other HTML entities, their unicode equivalent may be used instead. For example: instead of "\&rdquo;" you can use "\&#8221;"
 
 Default: *False*
 

@@ -94,7 +94,7 @@ A trial gives everyone in your company one-month access to the app service. The 
 
 {{% todo %}}Check the description{{% /todo %}}
 
-The **BotContext** is Context entity which captures all input and output info for the Chatbot widget. The context is uniquely identified via its Name attribute.
+The **BotContext** is a context entity which captures all input and output info for the Chatbot widget. The context is uniquely identified via its Name attribute.
 
 ![botcontext](attachments/chatbot/botcontext.png)
 
@@ -114,11 +114,11 @@ The **BotConfig** is a read-only entity that shows the context of a bot which pe
 | `Name`   | String | The name of the bot.  |
 | `Status` | Enumeration | The status of the bot. |
 | `Tag`    | String | The underlying cloud identifier, internal use only. |
-| `Hash`   | String | The hash string to identify if bot config has modified.    |
+| `Hash`   | String | The hash string to identify if bot configuration has modified. |
 
 #### 3.1.3 LanguageConfig
 
-The **LanguageConfig** is a read-only entity that shows the language config of bot.
+The **LanguageConfig** is a read-only entity that shows the language configuration of bot.
 
 ![languageconfig](attachments/chatbot/languageconfig.png)
 
@@ -127,8 +127,8 @@ The **LanguageConfig** is a read-only entity that shows the language config of b
 | `LocaleId`   | Enumeration | The identifier of the language and locale where this intent is used. All of the bots, slot types, and slots used by the intent must have the same locale.   |
 | `VoiceId` | String | The UUID of the voice object. |
 | `Status` | Enumeration | The status of the bot. |
-| `Tag`    | String | The underlying cloud identifier, internal use only.  |
-| `Hash`   | String | The hash string to identify if bot config has modified.    |
+| `Tag`    | String | The underlying cloud identifier, internal-use only. |
+| `Hash`   | String | The hash string to identify if bot configuration has modified. |
 
 #### 3.1.4 SlotArgument
 
@@ -143,7 +143,7 @@ The **SlotArgument** is the entity that captures the user input value of slots f
 
 #### 3.1.5 TestBotContext
 
-The **TestBotContext** is the entity that shows config of the test bot context.
+The **TestBotContext** is the entity that shows configuration of the test bot context.
 
 ![testbotcontext](attachments/chatbot/testbotcontext.png)
 
@@ -191,9 +191,7 @@ The **GetSlotArgument** microflow takes **botContext** object and **slotName** a
 
 #### 3.4.1 CreateBotContext {#createbotcontext}
 
-{{% todo %}}Check the description{{% /todo %}}
-
-The **CreateBotContext** Java action takes entityType and botName as input parameters. It creates bot and its associated context given the bot name and bot description. You could pass the microflow to initialize the context. 
+The **CreateBotContext** Java action takes **entityType** and **botName** as input parameters. It creates bot and its associated context given the bot name and bot description. You could pass a microflow to initialize the context. 
 
 ### 3.5 Enumerations {#enumerations}
 
@@ -307,36 +305,47 @@ The **AddLanguageMethod** is an enumeration that incorporates all the options to
 The core widget required is the **Chatbot** widget. You can make the following settings for the **Chatbot** widget:
 
 * **Context** tab
-  * **Intents** – the intention behind each message that the chatbot receive, namely, what the user wants to get out of the interaction (for example, when a user says "I need new shoes", their intent is to order new shoes)
-     
-     * **Intent actions** – the action lists of user intent
-         * **Dialog action** – the action that is executed at every turn of the conversations; used to initialize values or validate user input
-         * **Fulfillment action** – the action that is invoked after slot elicitation and confirmation; used to fullfill your intent
-         * **Name** – the name of intent
-         * **Failure** – the action that is invoked in case of intent failure
-     * **Fallback** – the action that is invoked when the built-in fallback intent is fulfilled.
-     
   * **Bot Context** – the current position of the bot that defines its possibilities and options, which changes every time the bot moves along the story and opens newly possible interactions as well as closes the previous ones
-     
-     * **Bot Context Uid** – the Unique identifier for bot context
+    * **Bot Context Uid** – the unique identifier for bot context
      * **Locale** – the active locale constant of the bot
      * **Chatbot Mode** – the working mode for chatbot, which works either on text or audio
      
+  * **Intents** – the intention behind each message that the chatbot receives, namely, what the user wants to get out of the interaction (for example, when a user says "I need new shoes", their intent is to order new shoes)
+    * **Intent actions** – the action lists of user intent
+         * New – creates a new intent action with the following settings:
+             * **Name** – the name of intent
+             * **Dialog action** – the action that is executed at every turn of the conversations; used to initialize values or validate user input
+             * **Fulfillment action** – the action that is invoked after slot elicitation and confirmation; used to fullfill your intent
+             * **Failure** – the action that is invoked in case of intent failure
+         * **Delete** – deletes the selected intent action
+         * **Edit** – edits the selected intent action
+         * **Move up** – moves the selected intent action up in the list
+         * **Move down** – moves the selected intent action down in the list
+     * **Fallback** – the action that is invoked when the built-in fallback intent is fulfilled
+     
   * **Options** – the setting options for chatbot conversational UI/UX
+    * **Chatbot Mode**
+        * **Text**(default) – users can interact with the chatbot using text
      
-     * **Use toggle button** – whether to use a toggle button to show or hide chat panel.
+        * **Audio** – users can interact with the chatbot using audio
      
-     * **Show inspection panel** – whether to use a flag to toggle the display of inspection panel
+     * **Use toggle button**
+        * **Yes** (default) – a toggle button is available to show or hide chat panel
      
-       {{% todo %}}Check the description above against the UI{{% /todo %}}
+        * **No** (default) –  no toggle button is available; the chat panel always available
+     
+     * **Show inspection panel**
+       * **True** – a flag is available to toggle the display of the inspection panel
+       * **False** (default) – no flag is available to toggle the display of the inspection panel
+     
   
 * **Events** tab
-  * **On error** – By binding a String attribute to the **Error** property, you can obtain the error message raised by the back-end service and set a custom action that is executed when an error occurs
-     * **Error** – sets a String attribute as the error message
-     * **Action** – sets which action is executed when an error occurs
   * **On ready** – by binding a String attribute to the **Is ready** property, you can set this property to verify if the current bot is ready for conversing.
      * **Is ready** – a flag indicating if the current bot is ready for conversing
      * **Action** – the action triggered when bot is ready
+  * **On error** – By binding a String attribute to the **Error** property, you can obtain the error message raised by the back-end service and set a custom action that is executed when an error occurs.
+     * **Error** – sets a String attribute as the error message
+     * **Action** – sets which action is executed when an error occurs
 
 #### 3.5.2 InputElement {#inputelement}
 
@@ -344,7 +353,7 @@ The core widget required is the **InputElement** widget. You can make the follow
 
 * **General** tab
 	* **Source**  – the value of the **Audio** attribute of a **speechSynthesizer** object
-	* **Controls**  – determines if it offers controls to allow the end user to control audio playback, including volume, seeking, and pause/resume playback; accepts a Boolean value
+	* **Controls**  – determines if it offers controls to allow the end user to control audio playback, including volume, seeking, and pause or resume playback; accepts a Boolean value
 
 ### 3.6 Configuring the LicenseToken {#configure-license-token}
 
@@ -418,7 +427,7 @@ You can use the **ChatbotConsole** page in a module to design bot context. To le
     {{% todo %}} Check this procedure{{% /todo %}}
 
     1. Name the microflow *CreateBotContext*.
-    2. Add a Java action call activity to the microflow, select the Java action **CreateBotContext** from the **Chatbot** module.
+    2. Add a **Java action call** activity to the microflow, and select the Java action **CreateBotContext** from the **Chatbot** module.
     3. Double-click the Java action call activity, set **BotContext** from **Chatbot** as the Entity type in Bot Context.
     4. Set Bot name as **MendixSampleBot** from the bot designed in the Chatbot Console page.
     5. Add a Change object activity to the microflow.
@@ -430,9 +439,9 @@ You can use the **ChatbotConsole** page in a module to design bot context. To le
 
 4. Drag drop a **Data View** widget in the page, set data source as microflow, chose the microflow as CreateBotContext created in step 2.
 
-5. Drag drop a **Chatbot** widget and start config the bot configuration
+5. Drag drop a **Chatbot** widget and start configuring the bot configuration.
 
-6. In context tab, you need to add **Intent actions** and config **Bot Context**
+6. In context tab, you need to add **Intent actions** and configure **Bot Context**
 
 7. Add new intent actions item and edit the microflow and the name of intent.
 

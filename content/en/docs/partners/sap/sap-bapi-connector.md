@@ -42,7 +42,7 @@ To use BAPI Connector for SAP Solutions in your Mendix application to call the B
     {{% alert color="info" %}}Searching for BAPIs is provided as a microflow rather than a separate app so that you can set up the JCo destination securely. You should not give access to this microflow to any end-users of an app you build using the Mendix BAPI Connector.{{% /alert %}}
 
 4. Search for the BAPI(s) you need, download the schema(s), and [generate Mendix BAPI module(s)](#create-bapi-module) using the [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/link/bapi).
-5. Import the generated Mendix BAPI module .mpk to your Mendix application using the instructions in [Import & Export Objects](/howto/integration/importing-and-exporting-objects/). A module with the same name as the BAPI is added to the project.
+5. Import the generated Mendix BAPI module .mpk to your Mendix application using the instructions in [Importing and Exporting Apps, Modules, Widgets, and Module Documents](/refguide/import-and-export/). A module with the same name as the BAPI is added to the project.
 
     {{< figure src="/attachments/partners/sap/sap-bapi-connector/bapi-material-getall.png" >}}
 

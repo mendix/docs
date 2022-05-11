@@ -1,9 +1,9 @@
 ---
-title: "Import & Export Objects"
-url: /howto/integration/importing-and-exporting-objects/
-category: "Integration"
+title: "Importing and Exporting Apps, Modules, Widgets, and Module Documents"
+url: /refguide/import-and-export/
+parent: "project-explorer"
 weight: 2
-tags: ["mpk", "import", "export", "document", "module", "widget"]
+tags: ["mpk", "import", "export", "document", "module", "widget", "app package"]
 ---
 
 ## 1 Introduction
@@ -24,7 +24,7 @@ This how-to will teach you how to do the following:
     * widgets
     * module documents such as pages or microflows
 
-## 2 Importing Objects
+## 2 Importing Various Elements
 
 {{% alert color="warning" %}}
 Be careful when importing objects, as you can overwrite your existing work. Pay attention to prompts and warnings along the way!
@@ -136,7 +136,7 @@ The package can contain a single example of one of the following:
 * Published web service
 * Published OData service
 
-To import module objects, follow these steps:
+To import module documents, follow these steps:
 
 1. Right-click a module in the **App Explorer** and select **Import document from file...**
 
@@ -177,7 +177,7 @@ To import widgets, follow these steps:
 
 To learn more about importing content from the Marketplace, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
 
-## 3 Exporting Objects
+## 3 Exporting Various Elements
 
 ### 3.1 Exporting Complete App Packages
 

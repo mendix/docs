@@ -71,9 +71,9 @@ Mendix Operator runs on CPUs with the [x86-64](https://en.wikipedia.org/wiki/X86
 
 {{% alert color="info" %}}
 
-Starting with Mendix Operator v2.5.0, container images used in the *Connected Mode* also support [ARM64/AArch64](https://en.wikipedia.org/wiki/AArch64). *ARM64* support is experimental at this moment and should only be used for non-production environments.
+Starting with Mendix Operator v2.5.0, container images used in *Connected Mode* also support [ARM64/AArch64](https://en.wikipedia.org/wiki/AArch64). *ARM64* support is experimental at this moment and should only be used for non-production environments.
 
-Only core, *Connected mode* features support *ARM64*. The following features **do not** support *ARM64* CPUs at the moment:
+Only core *Connected mode* features support *ARM64*. The following features **do not** support *ARM64* CPUs at the moment:
 
 * [Migrating to Your Own Registry](/developerportal/deploy/private-cloud-migrating/)
 * CI/CD pipelines in *Standalone mode*
@@ -81,9 +81,9 @@ Only core, *Connected mode* features support *ARM64*. The following features **d
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-If the cluster is running nodes with multiple architectures (for example, *x86-64* and *ARM64*), the namespace where Mendix for Private Cloud is installed should use a fixed (specified) architecture. For example, this can be done by configuring a [PodNodeSelector](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#podnodeselector) for that namespace, and only use nodes with a specific architecture (for example, `amd64`).
+If the cluster is running nodes with multiple architectures (for example, *x86-64* and *ARM64*), the namespace where Mendix for Private Cloud is installed should use a fixed (specified) architecture. One way to do this is by configuring a [PodNodeSelector](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#podnodeselector) for that namespace, and only using nodes with a specific architecture (for example, `amd64`).
 
-The image builder doesn't build multiarch images at the moment.
+The image builder doesn't build multiple architecture images at the moment.
 {{% /alert %}}
 
 ### 2.3 Unsupported Cluster Types
@@ -407,11 +407,11 @@ Mendix for Private Cloud can create Services that are compatible with:
 
 ### 6.4 Service mesh support
 
-Starting from Mendix Operator v2.5.0, the following service meshes can be enabled for the entire Mendix for Private Cloud namespace:
+Starting with Mendix Operator v2.5.0, the following service meshes can be enabled for the entire Mendix for Private Cloud namespace:
 
 * [Istio](https://istio.io/)
 * [Linkerd](https://linkerd.io)
 
-If service mesh sidecar injection is enabled, all communication between pods in the Mendix for Private Cloud namespace would happen through the service mesh.
+If service mesh sidecar injection is enabled, all communication between pods in the Mendix for Private Cloud namespace will happen through the service mesh.
 
 Mendix Operator v1.11.0 added support for service mesh sidecar injection, but only for app environment pods.

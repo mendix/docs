@@ -76,7 +76,6 @@ Starting with Mendix Operator v2.5.0, container images used in *Connected Mode* 
 Only core *Connected mode* features support *ARM64*. The following features **do not** support *ARM64* CPUs at the moment:
 
 * [Migrating to Your Own Registry](/developerportal/deploy/private-cloud-migrating/)
-* CI/CD pipelines in *Standalone mode*
 
 {{% /alert %}}
 

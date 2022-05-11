@@ -55,11 +55,11 @@ Text area properties consist of the following sections:
 
 #### 2.5.1 On Change{#on-change}
 
-The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
+The on change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
-#### 2.5.2 On-Change Behavior
+#### 2.5.2 On Change Behavior
 
 The on change behavior property lets users select how **on change** is handled in Studio Pro via the following options: 
 
@@ -70,15 +70,15 @@ The on change behavior property lets users select how **on change** is handled i
 
 Text area will apply changes when a value is not the same as a previously saved value in the database and the following condition is met:
 
-* Blurred: this will trigger on-change and on-leave events
+* Blurred: this will trigger on change and on leave events
 
-This means that there is no way for users to trigger an on-change event while typing. To address that use case, please use the second option: [While user is entering data](#user-enters-data).
+This means that there is no way for users to trigger an on change event while typing. To address that use case, please use the second option: [While user is entering data](#user-enters-data).
 
 ##### 2.5.2.2 While User is Entering Data {#user-enters-data}
 
-This option makes it so users trigger an on-change event while they are typing. Text area will save changes when the value is not the same as the previously saved value in the database and if the last change made took place after the configured **Apply after (ms)** length of time.
+This option makes it so users trigger an on change event while they are typing. Text area will save changes when the value is not the same as the previously saved value in the database and if the last change made took place after the configured **Apply after (ms)** length of time.
 
-With **While user is entering data**, users can adjust one more property called **Apply after (ms)** (described above). This will reduce the amount of the calls made for an on-change event, thus improving app performance.
+With **While user is entering data**, users can adjust one more property called **Apply after (ms)** (described above). This will reduce the amount of the calls made for an on change event, thus improving app performance.
 
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 

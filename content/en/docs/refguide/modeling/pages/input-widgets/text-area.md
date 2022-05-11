@@ -63,8 +63,8 @@ The on change property specifies an action that will be executed when leaving th
 
 The on change behavior property lets users select how **on change** is handled in Studio Pro via the following options: 
 
-* When user leaves input field (Default)
-* While user is entering data
+* **When user leaves input field (Default)**
+* **While user is entering data**
 
 ##### 2.5.2.1 When User Leaves Input Field (Default)
 

@@ -152,8 +152,8 @@ See [Deploying the Deployment Package](#deploy-package), below, for instructions
 
 You can also deploy an existing deployment package to an environment without having to create a new one. This also allows you to specify constant values and control scheduled events before the app is started.
 
-{{% alert color="warning" %}}
-Currently, deployment packages are only valid for two weeks. Deployment packages up to two months old will still be visible, but if you try to deploy a package that was created more than two weeks ago, the deployment will fail and return a 403 error. The solution is to [recreate the deployment package](#create-deployment-package).
+{{% alert color="info" %}}
+Deployment packages which are not deployed to any environment will be removed if they were created from the Teamserver or uploaded over two months ago. You can  [recreate the deployment package](#create-deployment-package) if you need to use it again.
 {{% /alert %}}
 
 If creation of the environment fails, then contact your cluster manager. If they cannot solve the problem, contact Mendix Support for help.

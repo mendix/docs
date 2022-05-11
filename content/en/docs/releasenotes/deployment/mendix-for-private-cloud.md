@@ -13,7 +13,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
-### May ???th, 2022
+### May 12th, 2022
 
 #### Mendix Operator v2.5.0 and Mendix Gateway Agent v2.5.0
 

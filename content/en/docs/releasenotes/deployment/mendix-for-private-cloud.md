@@ -17,10 +17,10 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Mendix Operator v2.5.0 and Mendix Gateway Agent v2.5.0
 
-* We've improved support for injected sidecars - the Operator now works correctly with sidecars injected into any pod, not just app pods. It's now possible to install a service mesh such as [Istio](https://istio.io/) or [Linkerd](https://linkerd.io) in the whole namespace, and route all traffic between pods through the service mesh.
-* We've refactored our internal build process - images now share layers as much as possible, reducing download sizes and making it easier to patch CVEs from the base OS layers.
-  * Among other changes, a subset of Mendix for Private Cloud components are available for the ARM64 architecture - allowing to deploy Mendix apps to machines running Apple Silicon, Raspberry Pi 4 and server-grade ARM64 chips.
-* We've made preparations to support a new, simplified process for obtaining licenses, which will become available soon.
+* We improved support for injected sidecars - the Operator now works correctly with sidecars injected into any pod, not just app pods. It is now possible to install a service mesh such as [Istio](https://istio.io/) or [Linkerd](https://linkerd.io) for the whole namespace, and route all traffic between pods through the service mesh.
+* We refactored our internal build process - images now share layers as much as possible, reducing download sizes and making it easier to patch CVEs from the base OS layers.
+* A subset of Mendix for Private Cloud components are now available for the ARM64 architecture, allowing you to deploy Mendix apps to machines running Apple Silicon, Raspberry Pi 4, and server-grade ARM64 chips.
+* We have made preparations to support a new, simplified process for obtaining licenses, which will become available soon.
 
 ### April 21st, 2022
 

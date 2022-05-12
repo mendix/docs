@@ -274,7 +274,7 @@ The theme is removed from your app.
 ## 6 Read More
 
 * [Marketplace Overview](/appstore/general/app-store-overview/)
-* [Import & Export Objects](/howto/integration/importing-and-exporting-objects/#3-exporting-objects)
+* [Importing and Exporting Apps, Modules, Widgets, and Module Documents](/refguide/import-and-export/)
 * [How to Share Marketplace Content](/appstore/general/share-app-store-content/)
 * [Marketplace Content Support](/appstore/general/app-store-content-support/)
 * [Properties Common in the Page Editor](/refguide/common-widget-properties/)

@@ -1,14 +1,14 @@
 ---
-title: "Importing and Exporting Apps, Modules, Widgets, and Module Documents"
+title: "Importing and Exporting Apps, Modules, Widgets, and Documents"
 url: /refguide/import-and-export/
 parent: "project-explorer"
-weight: 2
+weight: 40
 tags: ["mpk", "import", "export", "document", "module", "widget", "app package"]
 ---
 
 ## 1 Introduction
 
-In Mendix, you can save time by importing modules others have created and by exporting new modules for others to use. The Marketplace provides this functionality on a macro level. You can also use built-in import and export functions to share content between your own apps, import unofficial modules, and share entire apps.
+In Mendix, you can import various elements others have created (apps, solutions, modules, etc.) and export elements for others to use. The Marketplace provides this functionality on a macro level. You can also use built-in import and export functions to share content between your own apps, import unofficial modules, and share entire apps.
 
 There are *.mpk* packages that can contain apps, modules, or widgets; *.mxmodule* packages with add-ons and *.mxsolution* packages solutions. 
 
@@ -16,25 +16,23 @@ There are *.mpk* packages that can contain apps, modules, or widgets; *.mxmodule
 When you have an app package, you cannot import individual modules or widgets separately from it. 
 {{% /alert %}}
 
-This how-to will teach you how to do the following:
-
-* Import and export the following Studio Pro objects:
-    * apps
-    * modules
-    * widgets
-    * module documents such as pages or microflows
+You can import and export the following:
+* apps
+* modules
+* widgets
+* documents such as pages or microflows
 
 ## 2 Importing Various Elements
 
 {{% alert color="warning" %}}
-Be careful when importing objects, as you can overwrite your existing work. Pay attention to prompts and warnings along the way!
+Be careful when importing elements, as you can overwrite your existing work. Pay attention to prompts and warnings along the way!
 {{% /alert %}}
 
 ### 2.1 Importing App and Solution Packages {#import-app-package}
 
 A Mendix package (*.mpk*) file can store a complete Mendix app. 
 
-You can also import a solution package (*.mxsolution*), which is also a complete Mendix app that was developed as out of the box solution.  
+You can also import a solution package (*.mxsolution*), which is also a complete Mendix app that was developed as out-of-the-box solution.  
 
 To import a complete an app or solution package, follow these steps:
 
@@ -44,7 +42,7 @@ To import a complete an app or solution package, follow these steps:
 
 2. Select your Mendix app package file and click **Open**. The **Import App Package** dialog box will appear:
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/import-and-export/18582101.png" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/import-and-export/import-app-package.png" >}}
 
     You have the following options in this dialog box:
 
@@ -52,11 +50,13 @@ To import a complete an app or solution package, follow these steps:
     * Provide an **App name** (by default, it will be named as it was in the Mendix package file)
     * Determine the local folder where you would like to store your app in **App directory**
    
-3.  Click **OK**, and your app will be loaded in.
+3. Click **OK**.
+
+The app is imported. 
 
 ### 2.2 Importing Module Packages {#import-module}
 
-Mendix modules can either be stored in a Mendix package (*.mpk*) file or have an *.mxmodule* extension if they are [add-on or solution  modules](/refguide/configure-add-on-and-solution-modules/). 
+Mendix modules can either be stored in a Mendix package (*.mpk*) file or have an *.mxmodule* extension if they are [add-on or solution modules](/refguide/configure-add-on-and-solution-modules/). 
 
 #### 2.2.1 Importing a Module Package Through the App Explorer
 
@@ -68,7 +68,7 @@ To import module packages through the App Explorer in Studio Pro, follow these s
 
 3. In the dialog box, choose a name for your module and select whether to create a new module or replace an existing one:
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/import-and-export/18582112.png" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/import-and-export/import-module.png" >}}
 
     {{% alert color="info" %}}If you replace the module with a new version, the existing user data will be retained based on the names of entities, attributes, and associations. If you delete a module and then add a newer version of it, all user data will be lost.
     {{% /alert %}}
@@ -77,12 +77,10 @@ To import module packages through the App Explorer in Studio Pro, follow these s
 
 5. Click **OK**. 
 
-If you are importing a module with the *.mxmodule* extension, a dialog informing you about the imported add-on module will be displayed.
+If you are importing a module with the *.mxmodule* extension, a dialog informing you about the imported add-on module is displayed:
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/import-and-export/mxmodule-notification.png" >}}
 
-You see a new or replaced module in the **App Explorer**. You also see your changes in the **Changes** section. In this example, the existing module has been deleted and replaced by the newly imported module:
-
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/import-and-export/18582109.png" >}}
+You see a new or replaced module in the **App Explorer**. You also see your changes in the **Changes** pane. 
 
 #### 2.2.2 Importing a Add-On Module Package Through the App Directory
 
@@ -103,7 +101,7 @@ A dialog informing you about the imported add-on module will be displayed.
 
 The add-on module is added to the **App Explorer**.
 
-### 2.3 Importing Module Documents
+### 2.3 Importing Documents
 
 A Mendix package (*.mpk*) file can store a Mendix module document.
 
@@ -138,18 +136,16 @@ The package can contain a single example of one of the following:
 
 To import module documents, follow these steps:
 
-1. Right-click a module in the **App Explorer** and select **Import document from file...**
+1. Right-click a module in the **App Explorer** and select **Import document from file...**.
 
-    The **Import Document from File** dialog box appears.
+2.  In the **Import Document from File** dialog box, select your Mendix package file containing the document you want to import and click **Open**.
 
-2.  Select your Mendix package file containing the document you want to import, and click **Open**.
-
-    {{% alert color="info" %}}If a document with the same name already exists, you will see the **Warning** pop-up window. In that case, you can either select **Rename** to rename the object or **Cancel**.
+    {{% alert color="info" %}}If a document with the same name already exists, you will see the **Warning** pop-up window. In that case, you can either select **Rename** to rename the element or **Cancel**.
     {{% /alert %}}
 
-3. Click **OK** to import the object into your module:
+3. Click **OK** to import the element into your module.
 
-    {{% alert color="info" %}}You may need to update the new object's permissions, depending on where it was originally exported from. For consistency, be sure to check the permissions on any objects imported.
+    {{% alert color="info" %}}You may need to update the new element's permissions, depending on where it was originally exported from. For consistency, be sure to check the permissions on any elements imported.
     {{% /alert %}}
 
 ### 2.4 Importing Widgets
@@ -160,13 +156,13 @@ To import widgets, follow these steps:
 
 1. Click the **App** menu and select **Show App Directory in Explorer**:
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/import-and-export/18582108.png" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/import-and-export/show-app-directory.png" >}}
 
 2. Open the **widgets** folder in your app directory and put your Mendix package file there.
 
 3. Open the **App** menu and select **Synchronize App Directory** to synchronize the changes in the app directory:
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/import-and-export/18582106.png" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/import-and-export/synchronize-app-directory.png" >}}
 
     {{% alert color="info" %}}You can also press **F4** to synchronize your app directory.
     {{% /alert %}}
@@ -179,7 +175,7 @@ To learn more about importing content from the Marketplace, see [How to Use Mark
 
 ## 3 Exporting Various Elements
 
-### 3.1 Exporting Complete App Packages
+### 3.1 Exporting App Packages
 
 To export an app, follow these steps:
 
@@ -187,59 +183,46 @@ To export an app, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/import-and-export/file-export-package.png" >}}
 
-2. The **Export App Package** dialog box will appear, which enables you to select the type of the package, set the export location, and select data to export (if required):
+2. In the **Export App Package** dialog box, which enables you to select the type of the package, set the export location, and select data to export (if required):
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/import-and-export/18582090.png" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/import-and-export/export-app-package.png" >}}
 
-    For more information on types of packages, see [Export App Package](/refguide/export-project-package-dialog/) in *Mendix Studio Pro 9 Guide*.
+    For more information on types of packages, see [Export App Package](/refguide/export-project-package-dialog/).
 
     The **Existing snapshot** option will only be available when a data snapshot was created earlier using the **Add snapshot of data** menu option from the **Team** menu. It is also possible to include a new snapshot based on the current state of the local database. This option is only available after the app has been started at least once.
 
 3. Click **Export** to create the package.
 
+The app package is created and exported.
+
 ### 3.2 Exporting Modules
 
-To export a module, follow these steps:
+To export a module, right-click a module in the **App Explorer**, and select **Export module package**.
 
-1. Right-click a module in the **App Explorer**, and select **Export module package**.
+If your module refers to other modules in the app (that is, it is not self-contained), you will see a warning pop-up window.
 
-    If your module refers to other modules in the app (that is, it is not self-contained), you will see a pop-up window warning you of this.
+Select **Find usages of other user modules** to view the references, or click **Continue exporting** and you will see the **Select Dependencies** dialog box:
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/import-and-export/18582094.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/import-and-export/select-dependencies.png" >}}
 
-    Select **Find usages of other user modules** to view the references, or click **Continue exporting** and you will see the **Select Dependencies** dialog box:
+Here you can select files you would like to include in your package. This list includes any files in the **userlib** or **resources** folders in your app directory. If you do not want to include these files, you can uncheck the boxes.
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/import-and-export/18582093.png" >}}
-
-    Here you can select files you would like to include in your package. This list includes any files in the **userlib** or **resources** folders in your app directory. If you do not want to include these files, you can uncheck the boxes.
-
-    {{% alert color="info" %}}To uncheck all the files quickly, press **<kbd>Ctrl</kbd>+<kbd>A</kbd>** to select all of the items then press the <kbd>spacebar</kbd> to uncheck all the objects.
+{{% alert color="info" %}}To uncheck all the files quickly, press **<kbd>Ctrl</kbd>+<kbd>A</kbd>** to select all of the items then press the <kbd>spacebar</kbd> to uncheck all the elements.
 {{% /alert %}}
 
 ### 3.3 Exporting Widgets
 
 Widgets are automatically available in the **widgets** folder in your app directory as *.mpk* files.
 
-### 3.4 Exporting Module Documents
+### 3.4 Exporting Documents
 
 Mendix module documents can be exported as a Mendix package (*.mpk*) file.
 
 1. Right-click the document you want to export and select **Export document to file...**.
 
-    The **Export Page to File** dialog box opens.
-
-2. Enter the **Name** for your package and click **Save**.
+2. In the  **Export Page to File** dialog box, enter the **Name** for your package and click **Save**.
 
 ## 4 Read More
 
-* [Consume a Complex Web Service](/howto/integration/consume-a-complex-web-service/)
-* [Consume a Simple Web Service](/howto/integration/consume-a-simple-web-service/)
-* [Export XML Documents](/howto/integration/export-xml-documents/)
-* [Import Excel Documents](/howto/integration/importing-excel-documents/)
-* [Expose a Web Service](/howto/integration/expose-a-web-service/)
-* [Configure Selenium Support](/howto/integration/selenium-support/)
-* [Import XML Documents](/howto/integration/importing-xml-documents/)
-* [Consume a REST Service](/howto/integration/consume-a-rest-service/)
-* [Expose Data to BI Tools Using OData](/howto/integration/exposing-data-to-bi-tools-using-odata/)
 * [Modules](/refguide/modules/)
 * [App](/refguide/project/)

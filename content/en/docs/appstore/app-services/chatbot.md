@@ -347,14 +347,6 @@ The core widget required is the **Chatbot** widget. You can make the following s
      * **Error** – sets a String attribute as the error message
      * **Action** – sets which action is executed when an error occurs
 
-#### 3.5.2 InputElement {#inputelement}
-
-The core widget required is the **InputElement** widget. You can make the following settings for the **InputElement** widget:
-
-* **General** tab
-	* **Source**  – the value of the **Audio** attribute of a **speechSynthesizer** object
-	* **Controls**  – determines if it offers controls to allow the end user to control audio playback, including volume, seeking, and pause or resume playback; accepts a Boolean value
-
 ### 3.6 Configuring the LicenseToken {#configure-license-token}
 
 #### 3.6.1 For an App Run Locally or Deployed as a Mendix Free App

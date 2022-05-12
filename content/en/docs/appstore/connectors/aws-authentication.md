@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "aws", "authentication"]
 
 ## 1 Introduction
 
-When using AWS connectors, you need to authenticate to the services being connected to. This is done using the [AWS Authentication Module](/needlinkhere/) available from the Mendix Marketplace.
+When using AWS connectors, you need to authenticate to the services being connected to. This is done using the [AWS Authentication Module](https://marketplace.mendix.com/link/component/120333) available from the Mendix Marketplace.
 
 ### 1.1 Typical Use Cases
 
@@ -20,7 +20,7 @@ The following actions need to be taken to use the AWS Authentication Module in y
 
 1. Open your app in Studio Pro
 
-2. Download the [AWS Authentication Module](/needlinkhere/) from the Marketplace (see [How To Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/))
+2. Download the [AWS Authentication Module](https://marketplace.mendix.com/link/component/120333) from the Marketplace (see [How To Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/))
 
 ## 3 Obtaining Credentials from AWS
 

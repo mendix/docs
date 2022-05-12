@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "aws", "s3", "connector"]
 
 ## 1 Introduction
 
-The [AWS S3 Connector](/needlinkhere/) allows your app to use AWS S3 buckets directly.
+The [AWS S3 Connector](https://marketplace.mendix.com/link/component/120340) allows your app to use AWS S3 buckets directly.
 
 ### 1.1 Typical Use Cases
 
@@ -26,7 +26,7 @@ To include the AWS S3 Connector module in your app, do the following.
 
 1. Open your app in Studio Pro
 
-2. Download the [AWS S3 Connector](/needlinkhere/) from the Marketplace (see [How To Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/))
+2. Download the [AWS S3 Connector](https://marketplace.mendix.com/link/component/120340) from the Marketplace (see [How To Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/))
 
 ## 3 Using the AWS S3 Connector Module
 

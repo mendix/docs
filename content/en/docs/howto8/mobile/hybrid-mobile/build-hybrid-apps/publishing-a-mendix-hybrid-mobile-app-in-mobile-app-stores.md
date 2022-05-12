@@ -20,7 +20,7 @@ To publish your app in an app store, we recommend you build native iOS apps inst
 
 Once you have finished developing a Mendix hybrid mobile application, you will want to make it available as an app for mobile platforms such as Apple iOS and Google Android. We make it possible to produce platform-specific installation packages. For more details on deploying platform-specific installation packages, see [Mobile App](/developerportal/deploy/mobileapp/).
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Set up app signing keys
 * Complete the app-packaging process

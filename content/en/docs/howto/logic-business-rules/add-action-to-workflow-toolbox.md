@@ -15,7 +15,7 @@ You can expose a microflow as a workflow action and add it to the workflow toolb
 * The workflow process is more visualized and understandable.
 * It saves you time: dragging and dropping a ready-to-use action is faster than configuring the **Call microflow** action.  
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Call a microflow
 * Add microflow input parameters and return values

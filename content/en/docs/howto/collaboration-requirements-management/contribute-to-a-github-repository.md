@@ -10,7 +10,7 @@ tags: ["GitHub", "contribute", "community"]
 
 We like to work with our community, and we encourage you to create and contribute using pull requests!
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Contribute to a Mendix GitHub Repository according to Mendix guidelines
 

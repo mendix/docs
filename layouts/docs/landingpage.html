@@ -14,8 +14,8 @@
 
     <div class="container-fluid td-outer">
       <div class="td-main">
-        <div class="row flex-xl-nowrap stretch-main">
-          <aside data-stt-ignore class="d-none d-lg-block col-lg-4 col-xl-3 td-sidebar d-print-none"> <!-- NK - adjusted resizing for different screens -->
+        <div class="row flex-xl-nowrap stretch-main" style="overflow-x:hidden !important;">
+          <aside data-stt-ignore class="d-none d-lg-block col-lg-4 col-xl-3 td-sidebar d-print-none" data-proofer-ignore> <!-- NK - adjusted resizing for different screens -->
             {{ partial "sidebar.html" . }}
           </aside>
           {{/* NK - deactivated toc
@@ -47,7 +47,7 @@
              <!-- MvM: Move breadcrumb above banner -->
             {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
             {{ partial "version-banner.html" . }}
-            <div class="row" style="margin-left: 0.5rem;margin-bottom: 1rem;">
+            <div class="row" style="margin-top: 2rem;margin-left: 0.5rem;margin-bottom: 1rem;"> <!-- NK - addded more visual padding -->
               <div class="col-lg-6 col-xl-7">
                 <h1 class="page-title">{{ .Page.Title}}</h1>
                 <br>
@@ -88,7 +88,8 @@
             </div>
           </div>
         </main>
-          <aside data-stt-ignore class="d-none d-xl-block col-xl-3 td-sidebar d-print-none">
+          <!-- NK - aside below gives right side grey surface in landing page -->
+          <aside data-stt-ignore class="d-none d-xl-block col-xl-3 td-sidebar d-print-none" data-proofer-ignore>
           </aside>
         </div>
       </div>

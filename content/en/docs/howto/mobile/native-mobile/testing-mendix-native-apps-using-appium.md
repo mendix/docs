@@ -11,7 +11,7 @@ tags: ["test", "testing", "appium", "mobile", "native"]
 
 Mendix lets you create native mobile apps for both Android and iOS from a single app. To verify that your apps work as expected, you can test them using Appium. Using Appium can help you because it supports both iOS and Android with a single API that resembles Selenium's. This how-to will teach you how to write end-to-end tests once and run them on both platforms, all while using a familiar API. You will also learn how to run and test your apps on emulators.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Understand how Mendix Studio and Studio Pro widgets relate to your native app
 * Set up Appium GUI to spy on a Mendix native iOS app

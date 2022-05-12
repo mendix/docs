@@ -13,7 +13,7 @@ Mendix applications frequently need to communicate with existing systems. Whethe
 
 This how-to shows you how to do this using an example in which you create an app that retrieves Wikipedia pages from a REST service. The resulting app is [available for download](/attachments/howto8/integration/consume-a-rest-service/WikipediaApi.mpk).
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Integrate with an existing system using a REST service
 * Call the REST service in a microflow

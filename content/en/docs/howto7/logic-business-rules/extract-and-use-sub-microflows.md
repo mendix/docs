@@ -10,7 +10,7 @@ tags: ["microflow", "sub-microflow", "extract"]
 
 When you are building large microflows that span multiple functions, the best practice is to break down the large microflow into more manageable parts based on those functions. To better manage your logic, you can create sub-microflows. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Extract sub-microflows
 * Use sub-microflows

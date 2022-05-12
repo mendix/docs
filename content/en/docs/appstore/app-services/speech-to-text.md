@@ -2,7 +2,7 @@
 title: "Speech to Text"
 url: /appstore/app-services/speech-to-text/
 category: "App Services"
-description: " "
+description: "This document describes the configuration and usage of the Speech to Text app service, which enables converting audio and voice into written text in your web apps."
 tags: ["speech to text", "service", "app store", "marketplace", "component", "platform support"]
 ---
 
@@ -54,8 +54,8 @@ A trial gives everyone in your company one-month access to the app service. The 
 3. Select the check box to agree to the **Terms & Conditions**.
 4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used. 
-6. Click the link in the email to go to the [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) page and log in there. This page shows all the products that you have trials for.
-7. Click **Speech to Text** to open the [service management dashboard](/appstore/general/app-store-overview/#service-management-dashboard).
+6. Click the link in the email to go to the [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) page and log in there. This page shows all the products that you have trials for.
+7. Click **Speech to Text** to open the service management dashboard.
 8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. Later you will need to [configure the license token](#configure-license-token) in your app.
 
 #### 2.1.2 Starting a Subscription
@@ -65,8 +65,8 @@ A trial gives everyone in your company one-month access to the app service. The 
 3. Select your subscription plan.
 4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Owner will receive an email that says the app service is ready to be used. 
-6. Click the link in the email to go to the [Company Subscriptions](https://docs.mendix.com/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **Speech to Text** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
+6. Click the link in the email to go to the [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
+7. Click **Speech to Text** to open the service management dashboard.
 8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. Later you will need to [configure the license token](#configure-license-token) in your app.
 
 ### 2.2 Installing the Component in Your App
@@ -335,13 +335,13 @@ When you need to implement the speech conversion as a back-end service rather th
 
 ### 4.6 Checking Statistics on the Usage Dashboard {#check-usage}
 
-The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
+The **Usage Dashboard** shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
 1. Log into the Marketplace.
 2. Go to **My Marketplace** and then do as follows:
 
-   * If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
-   * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+   * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+   * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
    
 3. Find **Speech to Text** in the list.
 4. Click **Usage Dashboard** to show the usage details.

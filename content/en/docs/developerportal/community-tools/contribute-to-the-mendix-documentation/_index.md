@@ -28,7 +28,7 @@ All documentation contributions may be edited to conform to our internal style g
 3. Create a pull request with our **development** branch as the base.
 {{% /alert %}}
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Add to and edit existing documentation
 * Create new documentation

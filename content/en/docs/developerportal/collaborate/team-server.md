@@ -15,7 +15,7 @@ aliases:
 
 ## 1 Introduction
 
-Written on top of Subversion and delivered via the Developer Portal, Mendix Team Server is designed to make the life of a Mendix developer easier. Mendix Studio Pro and Studio are tightly integrated with Team Server, and actions like creating a new app (including a versioned model repository), updating an app, committing changes, and merging model versions are all available from within Mendix Studio Pro as single-click actions.
+Written on top of modern version control technology and delivered via the Developer Portal, Mendix Team Server is designed to make the life of a Mendix developer easier. Mendix Studio Pro and Studio are tightly integrated with Team Server, and actions like creating a new app (including a versioned model repository), updating an app, committing changes, and merging model versions are all available from within Mendix Studio Pro as single-click actions.
 
 You can manage Team Server access from the Developer Portal, which allows you to combine requirements, implementation, and feedback. When you commit your app model changes to Team Server from within Studio Pro, you can select the user stories (reflecting the requirements) that you have been working on. Team Server automatically creates links between these user stories and the model changes you made, providing you with a way to navigate from commits to the associated requirements. Furthermore, the Mendix Platform creates links between feedback, forms, changesets, and user stories.
 

@@ -26,8 +26,8 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 
 | Feature | Expected Release |
 | --- | --- |
-| Consuming add-on modules | GA: Jan 2022 |
-| Publishing add-on modules | Currently in Private Beta<br/>GA: Mar 2022 |
+| Consuming add-on modules | Released for Mendix Vendor Program on [Mar 29th, 2022](/releasenotes/studio-pro/9.12/#add-on) |
+| Publishing add-on modules | Released for Mendix Vendor Program on [Mar 29th, 2022](/releasenotes/studio-pro/9.12/#add-on) |
 
 ## 3 App Services Framework
 
@@ -79,7 +79,7 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | --- | --- |
 | MxAssist Logic Bot improvements | Released for GA on [Oct 26th, 2021](/releasenotes/studio-pro/9.7/#mx-assist-logic-bot) |
 | MxAssist Performance Bot new best practices | Released for GA on  [Oct 26th, 2021](/releasenotes/studio-pro/9.7/), [Nov 30th, 2021](/releasenotes/studio-pro/9.8/), and [Dec 17th, 2021](/releasenotes/studio-pro/9.9/) |
-| MxAssist Page Bot | Private Beta: Apr 2022 |
+| MxAssist Page Bot | Currently in Private Beta<br/>GA: TBD |
 | Machine learning toolkit | Currently in Private Beta<br/>GA: TBD |
 
 ## 8 Studio Pro Experience
@@ -107,7 +107,7 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | Smart app services integrated in workflows | Intelligent Document Service | Released for GA on [Feb 17th, 2022](https://marketplace.mendix.com/link/component/118388) |
 | Smart app services integrated in workflows | Receipt Processing |Released for GA on [Feb 17th, 2022](https://marketplace.mendix.com/link/component/118390)|
 | Smart app services integrated in workflows | Invoice Processing |Released for GA on [Mar 9th, 2022](https://marketplace.mendix.com/link/component/118389)|
-| Smart app services integrated in workflows | MS Team Connector |GA: Apr 2022|
+| Smart app services integrated in workflows | MS Teams Connector |Released for GA on [May 2nd, 2022](https://marketplace.mendix.com/link/component/118391)|
 | Workflow | | Released for GA on [Jan 25th, 2022](/releasenotes/studio-pro/9.10/#new-features) |
 | Smart app services integrated in workflows | Speech to Text | Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118408) (except in China) |
 | Smart app services integrated in workflows | Text to Speech |Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118409) (except in China)|

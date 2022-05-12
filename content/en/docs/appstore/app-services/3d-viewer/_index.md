@@ -3,7 +3,7 @@ title: "3D Viewer"
 url: /appstore/app-services/3d-viewer/
 category: "App Services"
 weight: 1
-description: "Describes the configuration and usage of the 3D Viewer app service, which is available in the Mendix Marketplace."
+description: "This document describes the configuration and usage of the 3D Viewer app service, which enables uploading, visualizing, and operating on 3D JT files in your web apps."
 tags: ["3d visualization", "cad", "app store", "marketplace", "component", "platform support"]
 ---
 
@@ -80,8 +80,8 @@ The 3D Viewer app service includes a few 3D widgets. These are some limitations 
 3. Select your subscription plan.
 4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Owner will receive an email that says the app service is ready to be used.
-6. Click the link in the email to go to the [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **3D Viewer** to open the [service management dashboard](/appstore/general/app-store-overview/#service-management-dashboard).
+6. Click the link in the email to go to the [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
+7. Click **3D Viewer** to open the service management dashboard.
 8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. Later you will need to [configure the license token](#configure-license-token) in your app.
 
 ### 2.2 Installing the Component in Your App
@@ -552,11 +552,11 @@ The sections below describe these tools.
 
 ### 5.8 Checking Statistics on the Usage Dashboard {#check-usage}
 
-The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
+The **Usage Dashboard** shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
 1. Log into the Marketplace.
 2. Go to **My Marketplace**.
-3. On the left navigation menu, click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions). This page gives an overview of all the subscriptions of your organization.
+3. On the left navigation menu, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions). This page gives an overview of all the subscriptions of your organization.
 3. Find **3D Viewer** in the list.
 4. Click **Usage Dashboard** to show the usage details.
 

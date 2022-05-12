@@ -25,6 +25,12 @@ A single object can be retrieved by passing the object identifier in the URI. Fo
 
 ### 2.3 Retrieving Associated Objects
 
+For this example, imagine that you have four entities in your domain model: **Employee**, **Car**, **Address**, and **City**. They include the following:
+
+* An association between **Employee** and **Car**
+* An association between **Employee** and **Address**
+* An association between **City** and **Address**
+
 Associated objects can be retrieved by passing the `$expand` query parameter. For example: `/odata/myservice/v1/Employees?$expand=Cars,Address($expand=City)` (OData 4) or `/odata/myservice/v1/Employees?$expand=Cars,Address/City` (OData 3).
 
 ## 3 Counting the Number of Objects

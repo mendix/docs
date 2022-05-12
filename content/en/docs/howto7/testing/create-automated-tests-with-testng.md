@@ -12,7 +12,7 @@ Automated tests can be created with different tools, depending on the type of te
 
 TestNG is a Java testing framework that can be used to drive Selenium. In this how-to you will learn how to create an automated test with TestNG.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create TestNG test files
 * Run automated tests with TestNG

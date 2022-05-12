@@ -58,7 +58,7 @@ On this tab, you can do the following:
 
 ## 4 External Users {#external-users}
 
-Mendix Admins can invite and manage external users on the **External Users** tab. An external user is a user from outside of your organization who can search for published data sources and use them in apps. External users cannot register or curate content unless they are an owner of the data source.
+Mendix Admins can invite external users on the **External Users** tab. An external user is a user from outside of your organization who can search for published data sources and use them in apps. External users cannot register or curate content unless they are an owner of the data source.
 
 {{< figure src="/attachments/developerportal/control-center/data-hub-admin/external_users.png" alt="External users" >}}
 
@@ -71,6 +71,10 @@ You can only invite users with a Mendix account. The invitation email will not b
 Once the external user receives the invitation, they log into the Data Hub Catalog with their Mendix credentials and accept. An external user can only access resources from one organization at a time; therefore, they need to select the company that sent the invitation in the **Company** drop-down list in the Data Hub [Home](/data-hub/data-hub-catalog/#data-hub-home) page:
 
 {{< figure src="/attachments/developerportal/control-center/data-hub-admin/company_selector.png" alt="Company selector" >}}
+
+{{% alert color="info" %}}
+It is currently not possible for Data Hub Admins to revoke rights for external users. If you need to revoke the permissions of an external user, please create a ticket with [Mendix Support](https://support.mendix.com).
+{{% /alert %}}
 
 ## 5 Settings {#settings}
 

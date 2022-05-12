@@ -406,13 +406,13 @@ You can use the **ChatbotConsole** page in a module to design bot context. To le
 
 ### 4.3 Designing Chatbot Context in Your Browser {#design-chatbot-context}
 
-1. Go to the Chatbot Console page in your browser as the administrator.
+1. Go to the **Chatbot Console** page in your browser as the administrator.
 2. Click **Create bot** on the page to start designing your own chatbot.
 3. Configure bot settings with a bot name and a description.
 4. Add languages with the preset bot template **OrderFlowers**.
 5. Add **Language details** and **Voice**.
-6. Run Test. {{% todo %}}How to run the test?{{% /todo %}}
-7. Navigate to the Bot Conversation page to see if the whole bot workflow works.  
+6. On the lower-right corner, click **Test**.
+7. Navigate to the **Bot Conversation** page to see if the whole bot workflow works.  
 
 ### 4.4 Adding Intent Actions to Your Defined Chatbot
 

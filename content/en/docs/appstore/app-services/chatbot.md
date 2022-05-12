@@ -309,7 +309,7 @@ The core widget required is the **Chatbot** widget. You can make the following s
     * **Bot Context Uid** – the unique identifier for bot context
      * **Locale** – the active locale constant of the bot
      * **Chatbot Mode** – the working mode for chatbot, which works either on text or audio
-     
+    
   * **Intents** – the intention behind each message that the chatbot receives, namely, what the user wants to get out of the interaction (for example, when a user says "I need new shoes", their intent is to order new shoes)
     * **Intent actions** – the action lists of user intent
          * New – creates a new intent action with the following settings:
@@ -322,22 +322,22 @@ The core widget required is the **Chatbot** widget. You can make the following s
          * **Move up** – moves the selected intent action up in the list
          * **Move down** – moves the selected intent action down in the list
      * **Fallback** – the action that is invoked when the built-in fallback intent is fulfilled
-     
+    
   * **Options** – the setting options for chatbot conversational UI/UX
     * **Chatbot Mode**
         * **Text**(default) – users can interact with the chatbot using text
-     
+    
         * **Audio** – users can interact with the chatbot using audio
-     
+    
      * **Use toggle button**
         * **Yes** (default) – a toggle button is available to show or hide chat panel
-     
+    
         * **No** (default) –  no toggle button is available; the chat panel always available
-     
+    
      * **Show inspection panel**
        * **True** – a flag is available to toggle the display of the inspection panel
        * **False** (default) – no flag is available to toggle the display of the inspection panel
-     
+    
   
 * **Events** tab
   * **On ready** – by binding a String attribute to the **Is ready** property, you can set this property to verify if the current bot is ready for conversing.
@@ -398,13 +398,11 @@ It can be useful to run the Chatbot service automatically when your app starts. 
 
 You can use the **ChatbotConsole** page in a module to design bot context. To let the **ChatbotConsole** page work, you need to take a few steps as follows:
 
-1. Follow the instructions in the [Downloading Content from the Marketplace Within Studio Pro](/appstore/general/app-store-content/#downloading) section in *Use Marketplace Content in Studio Pro* to download the latest version of the [DropDown Container](https://marketplace.mendix.com/link/component/111568) widget from the Marketplace.
-2. Update all the widgets in Chatbot console page if necessary. {{% todo %}}Check what this step is about exactly{{% /todo %}}
-3. In the **App Explorer**, go to **Navigation**. 
-4. Add the **ChatbotConsole** page as a new item in your [navigation profiles](/refguide/navigation/#profiles).
-5. Make sure that you have [configured the license token](#configure-license-token).
-6. Run your app locally.
-7. Navigate to Chatbot Console page. You can start designing chatbot context in your browser.
+1. In the **App Explorer**, go to **Navigation**. 
+2. Add the **ChatbotConsole** page as a new item in your [navigation profiles](/refguide/navigation/#profiles).
+3. Make sure that you have [configured the license token](#configure-license-token).
+4. Run your app locally.
+5. Navigate to Chatbot Console page. You can start designing chatbot context in your browser.
 
 ### 4.3 Designing Chatbot Context in Your Browser {#design-chatbot-context}
 
@@ -428,20 +426,23 @@ You can use the **ChatbotConsole** page in a module to design bot context. To le
 
     1. Name the microflow *CreateBotContext*.
     2. Add a **Java action call** activity to the microflow, and select the Java action **CreateBotContext** from the **Chatbot** module.
-    3. Double-click the Java action call activity, set **BotContext** from **Chatbot** as the Entity type in Bot Context.
-    4. Set Bot name as **MendixSampleBot** from the bot designed in the Chatbot Console page.
-    5. Add a Change object activity to the microflow.
-    6. Set input object as botContext from Java action all activity.
-    7. Set member **OrderFlowerIntent** as **OrderFlowers**, and set member **LocaleId** as **Chatbot.Locale.en_US**.
-    8. Right-click the Java action call activity and select **Set $botContext as return value** in the pop-up menu.
+    3. Double-click the Java action call activity. The **Create Bot Context** dialog box opens.
+    4. For the **Entity type**, select **BotContext** from **Chatbot**.
+    5. For **Bot name**, select **MendixSampleBot** from the bot designed in the Chatbot Console page.
+    6. Add a **Change object** activity to the microflow.
+    7. Set **Input Object** as **botContext** from the Java action call activity.
+    8. Set member **OrderFlowerIntent** as **OrderFlowers**, and set member **LocaleId** as **Chatbot.Locale.en_US**.
+    9. Right-click the Java action call activity and select **Set $botContext as return value** in the pop-up menu.
 
-3. Create new Blank page named Chatbot
+3. Create a new Blank page and name it **Chatbot**.
 
-4. Drag drop a **Data View** widget in the page, set data source as microflow, chose the microflow as CreateBotContext created in step 2.
+4. Add a **Data View** widget in the page, set data source as microflow, and set the microflow to **CreateBotContext** that you just created.
 
-5. Drag drop a **Chatbot** widget and start configuring the bot configuration.
+5. Inside the **Data View** widget, add a **Chatbot** widget.
 
-6. In context tab, you need to add **Intent actions** and configure **Bot Context**
+6. Double-click the **Chatbot** widget to configuring the settings in the **Edit Chatbot** dialog box:
+
+    1. On the **Context** tab, you need to add **Intent actions** and configure **Bot Context**
 
 7. Add new intent actions item and edit the microflow and the name of intent.
 

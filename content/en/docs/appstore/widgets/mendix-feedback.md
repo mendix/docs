@@ -39,7 +39,7 @@ You can configure the widget for certain actions in your app. All the configurat
     
         {{% alert color="info" %}}The original value of **App ID** is 1, but this value should automatically change to your correct app ID. if it does not change automatically, see [Updating App ID](#update-app-id) in the Troubleshooting section.{{% /alert %}}
         
-        **Allow screenshots**
+        **Allow screenshots** – controls whether the app user can take a screenshot
         
     
 

@@ -94,7 +94,7 @@ A trial gives everyone in your company one-month access to the app service. The 
 
 {{% todo %}}Check the description{{% /todo %}}
 
-The **BotContext** is a context entity which captures all input and output info for the Chatbot widget. The context is uniquely identified via its Name attribute.
+The **BotContext** is a context entity which captures all input and output info for the Chatbot widget. The context is uniquely identified via its bot name attribute.
 
 {{< figure src="/attachments/appstore/app-services/chatbot/botcontext.png" >}}
 
@@ -381,26 +381,26 @@ If you deploy your app in your own environment, you need to configure the licens
 
 It can be useful to run the Chatbot service automatically when your app starts. The app service contains a Java action – the **StartService** microflow, which can start the Chatbot service for you. You can use the [After startup](/refguide/project-settings#after-startup) setting in your app to call the **StartService** microflow.
 
-1. In the App Explorer, go to **Settings**. The [App Settings](/refguide/project-settings) dialog box opens.
+1. In the **App Explorer**, click **Settings**. The [App Settings](/refguide/project-settings) dialog box opens.
 2. Go to the **Runtime** tab. 
-3. Select the **StartService** microflow from the **Chatbot** > **USE_ME** folder.
+3. Select the **StartService** microflow from the **Chatbot** > **USE_ME** folder.{{% todo %}}What is this?{{% /todo %}}
 4. Set **After startup** to the microflow that calls the **StartService** microflow.
 
 ### 4.2 Configuring Chatbot Design Time in Your Browser {#configure-chatbot-design-time}
 
 You can use the **ChatbotConsole** page in a module to design bot context. To let the **ChatbotConsole** page work, you need to take a few steps as follows:
 
-1. In the **App Explorer**, go to **Navigation**. 
-2. Add the **ChatbotConsole** page as a new item in your [navigation profiles](/refguide/navigation/#profiles).
+1. In the **App Explorer**, click **Navigation**. 
+2. Add the **ChatbotConsole** page as a new item in your [navigation profile](/refguide/navigation/#profiles).
 3. Make sure that you have [configured the license token](#configure-license-token).
 4. Run your app locally.
-5. Navigate to Chatbot Console page. You can start designing chatbot context in your browser.
+5. Navigate to **Chatbot Console** page. You can start designing chatbot context in your browser.
 
 ### 4.3 Designing Chatbot Context in Your Browser {#design-chatbot-context}
 
 1. Go to the **Chatbot Console** page in your browser as the administrator.
 2. Click **Create bot** on the page to start designing your own chatbot.
-3. Configure bot settings with a bot name and a description.
+3. Configure the bot settings with a bot name and a description.
 4. Add languages with the preset bot template **OrderFlowers**.
 5. Add **Language details** and **Voice**.
 6. On the lower-right corner, click **Test**.
@@ -414,48 +414,60 @@ You can use the **ChatbotConsole** page in a module to design bot context. To le
 
 2. Create a microflow as follows:
 
-    {{% todo %}} Check this procedure{{% /todo %}}
-
     1. Name the microflow *CreateBotContext*.
     2. Add a **Java action call** activity to the microflow, and select the Java action **CreateBotContext** from the **Chatbot** module.
     3. Double-click the Java action call activity. The **Create Bot Context** dialog box opens.
-    4. For the **Entity type**, select **BotContext** from **Chatbot**.
-    5. For **Bot name**, select **MendixSampleBot** from the bot designed in the Chatbot Console page.
+    4. For the **Entity type**, select **BotContext** from the **Chatbot** module.
+    5. For **Bot name**, select **MendixSampleBot** from the bot designed in the **Chatbot Console** page.
     6. Add a **Change object** activity to the microflow.
     7. Set **Input Object** as **botContext** from the Java action call activity.
-    8. Set member **OrderFlowerIntent** as **OrderFlowers**, and set member **LocaleId** as **Chatbot.Locale.en_US**.
+    8. Set the member **OrderFlowerIntent** as **OrderFlowers**, and set the member **LocaleId** as **Chatbot.Locale.en_US**.
     9. Right-click the Java action call activity and select **Set $botContext as return value** in the pop-up menu.
 
 3. Create a new Blank page and name it **Chatbot**.
 
-4. Add a **Data View** widget in the page, set data source as microflow, and set the microflow to **CreateBotContext** that you just created.
+4. Add a **Data View** widget in the page.
 
-5. Inside the **Data View** widget, add a **Chatbot** widget.
+5. Configure the settings of the **Data View** widget as follows:
+    1. Double-click the **Data View** widget to open the **Edit Data View** dialog box.
 
-6. Double-click the **Chatbot** widget to configuring the settings in the **Edit Chatbot** dialog box:
+    2. Set the **Type** of **Data source** to **Microflow**.
 
+    3. Set the **Microflow** to **CreateBotContext** that you just created.
+
+6. Inside the **Data View** widget, add a **Chatbot** widget.
+
+7. Double-click the **Chatbot** widget to configuring the settings in the **Edit Chatbot** dialog box:
     1. On the **Context** tab, you need to add **Intent actions** and configure **Bot Context**
 
-7. Add new intent actions item and edit the microflow and the name of intent.
+    2. Add new intent actions item and edit the microflow and the name of intent.{{% todo %}}How to do this?{{% /todo %}}
 
 8. Create a microflow as follows:
     1. Name the microflow *OrderFlower*.
-    2. Add a Parameter and select **BotContext** as data type of output
-    3. Add a Microflow call activity, select Microflow **GetSlotArgument** from Chatbot module.
-    4. Edit the parameter botContext as $botContext, and slotName as FlowerType.
-    5. Add a Microflow call activity, select Microflow **GetSlotArgument** from Chatbot module.
-    6. Edit the parameter botContext as $botContext, and slotName as PickupTime.
-    7. Add a Microflow call activity, select Microflow **GetSlotArgument** from Chatbot module.
-    8. Edit the parameter botContext as $botContext, and slotName as PickupDate.
-    9. Add a log message to print all the informations.
+    2. Right click to add a **Parameter**.
+    3. Double-click the **Parameter** to set **BotContext** as **Data type** of output.
+    4. Add a **Microflow call** activity.
+    5. Set **Microflow** to **GetSlotArgument** from **Chatbot** module.
+    6. Change the parameter **botContext** to **$botContext**, and **slotName** to **FlowerType**.
+    7. Add the second **Microflow call** activity.
+    8. Set **Microflow** to **GetSlotArgument** from Chatbot module.
+    9. Change the parameter **botContext** to **$botContext**, and **slotName** to **PickupTime**.
+    10. Add the third **Microflow call** activity.
+    11. Set **Microflow** to **GetSlotArgument** from **Chatbot** module.
+    12. Change the parameter **botContext** to **$botContext**, and **slotName** as **PickupDate**.
+    13. Add a log message to print all the informations.
 
-9. Edit the name of intent as **OrderFlowerIntent**, which created in chatbot console page. Click OK to save the intent actions item.
+9. Edit the name of intent as **OrderFlowerIntent**, which created in chatbot console page. 
 
-10. In Bot Context Uid, select **Uid** from the object created by data view.
+10. Click **OK** to save the intent actions item.
 
-11. In Locale, select **LocaleId** from the object created by data view. Click OK to save the widget configuration.
+11. In **Bot Context Uid**, select **Uid** from the object created by data view.
 
-12. Run your app locally. Navigate to bot conversation page and you can start your conversation with chatbot.
+12. In Locale, select **LocaleId** from the object created by data view. Click OK to save the widget configuration.
+
+13. Run your app locally. 
+
+14. Navigate to the bot conversation page and you can start your conversation with chatbot.
 
 ### 4.5 Handling Chatbot Events
 

@@ -95,19 +95,21 @@ To help us maintain the high quality of content available on the Marketplace, we
 
 ### 4.1 OSB API Compatibility for App Services
 
-Prior uploading your product in Mendix Marketplace publicly, there are certain technical requirements which need to be considered in order to establish a successful end to end flow between Mendix Makers and you as a content provider.  
-For non-downloadable components, such as app services ,we require Service Broker configuration during service development, which would handle such processes as: 
+Prior to uploading your product in the public Mendix Marketplace, there are certain technical requirements that need to be considered in order to establish a successful end-to-end flow between end-users and you as a content provider.
 
-* Mapping required pricing plans with service features’ limits
-* Allowing provisioning of your service to customers
-* Granting access to your service to the customers, by generating and using access keys
-* Getting consumption usage details of your customers
-* Providing usage insights to the customers on their consumption
-* Allowing controlling the consumption as part of the defined plan
+For non-downloadable components (for example, app services), Mendix requires a service broker configuration during the service development. This configuration handles such processes as the following: 
 
-In this chapter we explain what is Service Broker, what the technical requirements are, and how can you, as service provider configure Service Broker.
+* Mapping required pricing plans with service feature limits
+* Allowing for the provisioning of your service to customers
+* Granting access to your service to customers by generating and using access keys
+* Getting the consumption usage details of your customers
+* Providing usage insights to customers on their consumption
+* Allowing for controlling the consumption as part of the defined plan
 
-#### 4.1.1 Procedure to create Service Broker
+This section explains what the service broker is, what the technical requirements are, and how you as a service provider can configure the service broker.
+
+#### 4.1.1 Creating the Service Broker
+
 Service broker is set of API endpoints based on OSB specification, which can be used to provision, gain access to and manage service offerings.
 The service broker will help service providers to expose their services and define plans to users.
 
@@ -115,6 +117,7 @@ All the service brokers should follow Open Service Broker API (v2.14) as a Stand
 Below you can find the API’s that platforms consume from any Service Broker.
 
 **Catalog Management Implementation**
+
 * Catalog Management contains various Service Offerings and Service Plans with some additional parameters. For implementing Catalog Management, service broker should create catalog API for onboarding broker services and plans to platform. 
 * Request details:  `GET /v2/catalog`
         Below is the sample catalog response
@@ -141,6 +144,7 @@ Below you can find the API’s that platforms consume from any Service Broker.
                                                 }]}}]}
                 
 **Synchronous and Asynchronous Operation**
+
 * Support for synchronous and asynchronous response operations may vary by Service Offering, even by Service Plan. 
 * Synchronous: To execute a request synchronously, the Service Broker need only return the usual status codes: `201 Created` for provision and bind, and `200 OK` for update, unbind.
 * Asynchronous: If the service should be in asynchronous, then the query parameter `accepts_incomplete=true` MUST be included the request.Service Broker request MUST return the asynchronous response with `202 Accepted`.

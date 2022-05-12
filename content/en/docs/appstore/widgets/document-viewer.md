@@ -2,7 +2,7 @@
 title: "Document Viewer"
 url: /appstore/widgets/document-viewer/
 category: "Widgets"
-description: "Documentation for Document Viewer widget. Describes the usecase, features, and configuration of the Document Viewer widget which is available in the Mendix Marketplace."
+description: "Describes the features and configurations of the Document Viewer widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "document", "viewer", "platform support", "pdf", "preview"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

@@ -19,7 +19,6 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 * We improved the experience of uploading a deployment package to your deployment package repository.
 * We improved database performance.
-* We now remove unused deployment packages from your repository if they are more than two months old.
 
 #### Portal Fixes
 

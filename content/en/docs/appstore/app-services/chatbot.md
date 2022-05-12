@@ -96,7 +96,7 @@ A trial gives everyone in your company one-month access to the app service. The 
 
 The **BotContext** is a context entity which captures all input and output info for the Chatbot widget. The context is uniquely identified via its Name attribute.
 
-![botcontext](attachments/chatbot/botcontext.png)
+{{< figure src="/attachments/appstore/app-services/chatbot/botcontext.png" >}}
 
 | Attribute        | Data Type | Description|
 | ---------------- | ---- | -----------|
@@ -107,7 +107,7 @@ The **BotContext** is a context entity which captures all input and output info 
 
 The **BotConfig** is a read-only entity that shows the context of a bot which performs automated tasks such as ordering a pizza, booking a hotel, ordering flowers, and so on.
 
-![botconfig](attachments/chatbot/botconfig.png)
+{{< figure src="/attachments/appstore/app-services/chatbot/botconfig.png" >}}
 
 | Attribute        | Data Type | Description|
 | ---------------- | ---- | -----------|
@@ -120,7 +120,7 @@ The **BotConfig** is a read-only entity that shows the context of a bot which pe
 
 The **LanguageConfig** is a read-only entity that shows the language configuration of bot.
 
-![languageconfig](attachments/chatbot/languageconfig.png)
+{{< figure src="/attachments/appstore/app-services/chatbot/languageconfig.png" >}}
 
 | Attribute        | Data Type | Description|
 | ---------------- | ---- | -----------|
@@ -134,7 +134,7 @@ The **LanguageConfig** is a read-only entity that shows the language configurati
 
 The **SlotArgument** is the entity that captures the user input value of slots for current fullfilled intent.
 
-![slotargument](attachments/chatbot/slotargument.png)
+{{< figure src="/attachments/appstore/app-services/chatbot/slotargument.png" >}}
 
 | Attribute        | Data Type | Description|
 | ---------------- | ---- | -----------|
@@ -145,7 +145,7 @@ The **SlotArgument** is the entity that captures the user input value of slots f
 
 The **TestBotContext** is the entity that shows configuration of the test bot context.
 
-![testbotcontext](attachments/chatbot/testbotcontext.png)
+{{< figure src="/attachments/appstore/app-services/chatbot/testbotcontext.png" >}}
 
 | Attribute        | Data Type | Description|
 | ---------------- | ---- | -----------|
@@ -155,7 +155,7 @@ The **TestBotContext** is the entity that shows configuration of the test bot co
 
 The **ClientConfig** is the entity that shows the user data configurations.
 
-![clientconfig](attachments/chatbot/clientconfig.png)
+{{< figure src="/attachments/appstore/app-services/chatbot/clientconfig.png" >}}
 
 | Attribute        | Data Type | Description|
 | ---------------- | ---- | -----------|
@@ -179,13 +179,13 @@ The **TokenEndpoint** constant provides a valid endpoint of security token servi
 
 The **StartService** microflow is a Java action which starts the Chatbot service. It is used to set up a cognitive chatbot back-end server infrastructure, which is critical for realizing all the features that Chatbot provides.
 
-![startservice](attachments/chatbot/startservice.png)
+{{< figure src="/attachments/appstore/app-services/chatbot/startservice.png" >}}
 
 #### 3.3.2 GetSlotArgument {#getslotargument}
 
 The **GetSlotArgument** microflow takes **botContext** object and **slotName** as the input parameters to extract the slot argument from provided **botContext**.
 
-![getslotargument](attachments/chatbot/getslotargument.png)
+{{< figure src="/attachments/appstore/app-services/chatbot/getslotargument.png" >}}
 
 ### 3.4 Java actions {#java-actions}
 
@@ -359,7 +359,7 @@ If you run your app locally or deploy it as a Mendix Free App, configure the lic
 4. Fill in the **Value** with the license token that you [obtained](#obtain-license-token).
 5.  Click **OK** to save the settings.
 
-    ![licensetoken-inmendix](attachments/chatbot/licensetoken-inmendix.png)
+    {{< figure src="/attachments/appstore/app-services/chatbot/licensetoken-inmendix.png" >}}
 
 6. When you finish building the app, click **Run Locally** to run your app locally or click **Run** to deploy it as a Mendix Free App. Then you can see the app service in your app.
 
@@ -469,11 +469,11 @@ By binding an attribute to the **Error** event, the app can pick up an error rai
 
 **Error** takes a String attribute. You can define an attribute and bind this attribute to **Error**. In a running app, when chatbot transcription fails, an error event will be triggered, and the error information will be populated to this **Error** attribute. The app can obtain this error message and trigger a custom action. You can select the custom **Action** from a list of actions.
 
-![chatbot-onerror-sample](attachments/chatbot/chatbot-onerror-sample.png) 
+{{< figure src="/attachments/appstore/app-services/chatbot/chatbot-onerror-sample.png" >}} 
 
 For example, you can set up the **Action** to make the app show a pop-up window to show error details to users.
 
-![chatbot-event-onerror](attachments/chatbot/chatbot-event-onerror.jpg)
+{{< figure src="/attachments/appstore/app-services/chatbot/chatbot-event-onerror.jpg" >}}
 
 #### 4.5.2 On Ready {#on-ready}
 

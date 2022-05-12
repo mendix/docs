@@ -76,7 +76,7 @@ This means that there is no way for users to trigger an on change event while ty
 
 ##### 2.5.2.2 While User is Entering Data {#user-enters-data}
 
-This option makes it so users trigger an on change event while they are typing. Text area will save changes when the value is not the same as the previously saved value in the database and if the last change made took place after the configured **Apply after (ms)** length of time.
+This option allows users to trigger an on change event while they are typing. Text area will save changes when the value is not the same as the previously saved value in the database and if the last change made took place after the configured **Apply after (ms)** length of time.
 
 With **While user is entering data**, users can adjust one more property called **Apply after (ms)** (described above). This will reduce the amount of the calls made for an on change event, thus improving app performance.
 

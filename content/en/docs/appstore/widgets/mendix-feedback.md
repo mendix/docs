@@ -37,7 +37,7 @@ You can configure the widget for certain actions in your app. All the configurat
   
     *  **App ID** – the unique identifier of your app, which you can find in your app’s [General Settings](/developerportal/collaborate/general-settings/) in the Developer Portal
     
-        {{% alert color="info" %}}The original value of **App ID** is 1, but this value should automatically change to your correct app ID. if it does not change automatically, see [Updating App ID](update-app-id) in the Troubleshooting section.{{% /alert %}}
+        {{% alert color="info" %}}The original value of **App ID** is 1, but this value should automatically change to your correct app ID. if it does not change automatically, see [Updating App ID](#update-app-id) in the Troubleshooting section.{{% /alert %}}
         
         **Allow screenshots**
         

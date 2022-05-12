@@ -8,7 +8,6 @@
 
     p, li, td {
         font-weight: $font-weight-body-text;
-        margin-bottom: 0; // NK - decrease vertical space after paragraph
     }
 
     > h1 {
@@ -23,16 +22,16 @@
     }
 
     > h2:not(:first-child) {
-        margin-top: 1rem;  // NK - decrease space between sections
+        margin-top: 1.5rem; // NK - decrease space between sections
     }
 
     > h2 + h3 {
-         margin-top: 1rem;
+         margin-top: 1.5rem; // NK - decrease space between sections
     }
 
     > h3, > h4, > h5, > h6 {
         margin-bottom: 1rem;
-        margin-top: 1rem; // NK - decrease space between sections
+        margin-top: 1.5rem; // NK - decrease space between sections
     }
 
     img {

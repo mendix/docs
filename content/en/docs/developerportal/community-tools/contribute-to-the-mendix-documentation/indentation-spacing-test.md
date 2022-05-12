@@ -7,23 +7,67 @@ banner: "This is a draft and will not be rendered in the production website.
 Use this page to test how spacing and indents will render with various elements and shortcodes."
 ---
 
+## Heading 2
+
+Paragraph text here.
+
+### Heading 3
+
+Paragraph text here.
+
+#### Heading 4
+
+Paragraph text here.
+
+##### Heading 5
+
+Paragraph text here.
+
+Another paragraph here.
+
 ## 1 Indents and Spacing
 
 ### 1.1 Indents with Four Spaces
 
+Paragraph text here.
+
+* unordered list
+    1. ordered list
+        * unordered list
+
+Paragraph text here.
+
 1. First list item
 1. Second list item
     * Unordered sub-list indenting **works with 4** spaces.
+        * another sub-list
 1. Third list item
     1. Ordered sub-list **works with 4** spaces.
         1. Another level of sublist
-3. And another item. Line break below this line.
+3. And another item.
+    A new line with an indentation of **4** spaces and no trailing spaces does nothing. 
 
-    Indenting with **4** spaces **works**, but each parent element is wrapped in `<p>`, adding a gap around each parent, and above the child.
+Without this text, the lower list was treated as part of the upper numbered list.
 
-    Adding a line break between this line and the one above gives the same result.
+1. Another list.
+1. Another list.
+1. Another list. Line break below this line.
+
+    If a line break is placed between the list and indented line, each parent element gets wrapped in `<p>`, adding a gap around each entry.
+
+{{% alert color="warning" %}}
+Two line breaks between the numbered lists were not enough to make them separate lists.
+{{% / alert %}}
 
 ### 1.2 Indents with Four Spaces and Trailing Space(s)
+
+Paragraph text here.
+
+* unordered list  
+    1. ordered list  
+        * unordered list
+
+Paragraph text here.
 
 1. First list item  
 1. Second list item  
@@ -31,15 +75,17 @@ Use this page to test how spacing and indents will render with various elements 
 1. Third list item  
     1. Ordered sub-list **works with 4** spaces.
 3. And another item.  
-    Indenting with **4** spaces and **1** or **2** trailing spaces **works**. The indented sentence is part of the numbered list item, with a `<br>` between.
-
-{{% alert color="info" %}}
-The style produced with trailing spaces looks best on page.
-
-We will try to adjust spacing between paragraph (`<p>`) elements, to make the examples in headings 1 and 2 closer.
-{{% / alert %}}
+    Indenting with **4** spaces and **1** or **2** trailing spaces **works**.
 
 ### 1.3 Indents with Tabs and a Line Break - DO NOT USE TABS
+
+Paragraph text here.
+
+* unordered list
+	1. ordered list
+		* unordered list
+
+Paragraph text here.
 
 1. First list item
 1. Second list item
@@ -55,6 +101,14 @@ DO NOT USE TABS
 {{% / alert %}}
 
 ### 1.4 Indents with Tabs and Trailing Spaces - DO NOT USE TABS
+
+Paragraph text here.
+
+* unordered list  
+	1. ordered list  
+		* unordered list  
+
+Paragraph text here.
 
 1. First list item  
 	* Unordered sub-list.
@@ -79,7 +133,6 @@ Code blocks do NOT need a line break to work. Not part of list indent.
 
 1. First list item
 2. Second list item
-
     ```
     Code blocks do NOT need trailing spaces to be indented.
     Indents must be spaces, not tabs, otherwise a bug shows in rendering an extra '`' symbol.
@@ -95,7 +148,6 @@ Do not add a double-space between the number (or bullet point) and first letter 
 
 1. First list item
 2. Second list item
-
     {{< highlight go >}}
     Code blocks with shortcode HIGHLIGHT do NOT need trailing spaces to be indented. They don't need to be indented either, as long as there is no blank line between.
     Highight does NEED a language specified, otherwise the shortcode errors.
@@ -110,10 +162,6 @@ Do not add a double-space between the number (or bullet point) and first letter 
     {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" >}}
     * Indenting with **4 spaces** and a line break works, keeping the image in line with list item 2. The line break causes the parent element, list item 2 to be wrapped in `<p>`, making a gap between 1 and 2.
 3. Third item
-
-{{% alert color="success" %}}
-The style produced with a line break between list and image looks best on page.
-{{% / alert %}}
 
 ### 1.9 Spacing Between List Items and Images, No Line Breaks
 

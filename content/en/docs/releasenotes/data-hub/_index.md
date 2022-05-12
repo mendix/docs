@@ -11,9 +11,15 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### May 12th, 2022
+
+#### Improvements
+
+* We added a description about the curation rights that apply for `DELETE` and `PUT` operations.
+
 ### May 5th, 2022
 
-#### New Feature
+#### New Features
 
 * When a person is removed as a Technical Owner or Business Owner of an individual application, they will receive an MxDock notification confirming that they are no longer the point of contact.
 
@@ -49,7 +55,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### March 24th, 2022
 
-#### New Feature
+#### New Features
 
 * We added v4 compatibility for the **Transform API**. This is accessible via the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) under the **Endpoints** section.
 

@@ -41,7 +41,7 @@ To submit changes, follow these guidelines:
 * Push your changes to the branch in your fork of the repository
 * Submit a pull request to the appropriate repository in the Mendix organization (for more information, see [About Pull Requests](https://help.github.com/articles/using-pull-requests/))
 * Mention the numbers of any issues that are fixed by the changes (for more information, see [Closing Issues Using Keywords](https://help.github.com/articles/closing-issues-via-commit-messages#closing-issues-with-pull-requests))
-* After feedback has been given, Mendix expects a response within two weeks – after two weeks, we may close the pull request if it is not showing any activity
+* After feedback has been given, Mendix expects a response within two weeks (after two weeks, we may close the pull request if it is not showing any activity)
 
 ## 5 Read More
 

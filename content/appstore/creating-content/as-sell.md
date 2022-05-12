@@ -30,7 +30,7 @@ Whether you are supplying an app service as an individual with your own business
 
 Before you can create a Mendix Vendor account, there are a few prerequisites to take care of. For paid app services, whether you are an individual supplier with your own business or you are supplying on behalf of your company, you need a [Mendix Platform account](https://signup.mendix.com/) before you can create a Mendix Vendor account.
 
-In addition to defining the business case for your app service (including how it will be licensed, priced, and supported), make sure you meet the export control requirements for your product. We know export control can be confusing, so if you are unclear on what you need to do, contact Mendix at *DIS_AppServices_Supplier_Team@mendix.com*.
+In addition to defining the business case for your app service (including how it will be licensed, priced, and supported), make sure you meet the export control requirements for your product. We know export control can be confusing, so if you are unclear on what you need to do, contact Mendix at *AppServices_Supplier_Team@mendix.com*.
 
 ### 2.2 Applying to the Mendix Vendor Program
 
@@ -95,15 +95,169 @@ To help us maintain the high quality of content available on the Marketplace, we
 
 ### 4.1 OSB API Compatibility for App Services
 
-To submit an app service to the Marketplace, it needs to be compatible to the OSB API.  This allows the service to be automatically provisioned, and it provides the connection details for users when they try or buy it.
+Prior uploading your product in Mendix Marketplace publicly, there are certain technical requirements which need to be considered in order to establish a successful end to end flow between Mendix Makers and you as a content provider.  
+For non-downloadable components, such as app services ,we require Service Broker configuration during service development, which would handle such processes as: 
 
-Although OSB API supports endpoints for many operations (as specified in the [Open Service Broker API specification](https://github.com/openservicebrokerapi/servicebroker/blob/master/spec.md), these are the three main concepts to consider while implementing your service broker for your app service:
+* Mapping required pricing plans with service features’ limits
+* Allowing provisioning of your service to customers
+* Granting access to your service to the customers, by generating and using access keys
+* Getting consumption usage details of your customers
+* Providing usage insights to the customers on their consumption
+* Allowing controlling the consumption as part of the defined plan
 
-* **Service Catalog** (`GET /v2/catalog`) – for listing your services available to the broker
-* **Provisioning** (`PUT /v2/service_instances/{instance_id}`) – for provisioning your service
-* **Binding** (`PUT /v2/service_instances/{instance_id}/service_bindings/{binding_id}`)  – for creating the connection and connection details to connect your service to an application during provisioning
+In this chapter we explain what is Service Broker, what the technical requirements are, and how can you, as service provider configure Service Broker.
 
-For additional assistance and an example of how to provision and bind an app to a logging service, contact *DIS_AppServices_Supplier_Team@mendix.com*.
+#### 4.1.1 Procedure to create Service Broker
+Service broker is set of API endpoints based on OSB specification, which can be used to provision, gain access to and manage service offerings.
+The service broker will help service providers to expose their services and define plans to users.
+
+All the service brokers should follow Open Service Broker API (v2.14) as a Standard HTTP(S) interface.
+Below you can find the API’s that platforms consume from any Service Broker.
+
+**Catalog Management Implementation**
+* Catalog Management contains various Service Offerings and Service Plans with some additional parameters. For implementing Catalog Management, service broker should create catalog API for onboarding broker services and plans to platform. 
+* Request details:  `GET /v2/catalog`
+        Below is the sample catalog response
+        
+	
+        {"services": [{
+                                "id": "test-id",
+                                "name": "test-name",
+                                "description": "test-description",
+                                "bindable": true,
+                                "bindings_retrievable": false,
+                                "plans": [{
+                                                "id": "test-plan-id",
+                                                "name": "test-plan-name",
+                                                "description": "test-description",
+                                                "free": false }],
+                                "metadata": {
+                                        "features": [{
+                                                        "id": "test-feature-id",
+                                                        "name": "test-feature-name",
+                                                        "type": "number",
+                                                        "metric_reported": true,
+                                                        "unit_of_measure": "GB"
+                                                }]}}]}
+                
+**Synchronous and Asynchronous Operation**
+* Support for synchronous and asynchronous response operations may vary by Service Offering, even by Service Plan. 
+* Synchronous: To execute a request synchronously, the Service Broker need only return the usual status codes: `201 Created` for provision and bind, and `200 OK` for update, unbind.
+* Asynchronous: If the service should be in asynchronous, then the query parameter `accepts_incomplete=true` MUST be included the request.Service Broker request MUST return the asynchronous response with `202 Accepted`.
+
+Note: Document for reference of Synchronous and Asynchronous. Resource Management Platform supports Asynchronous and Synchronous Operations for Provisioning Management, and only support Synchronous for Binding Creations.
+
+**Provisioning Management**
+
+Create Service Instance:
+* Provisioning management is mainly helpful for Instance Provision. Instance provisioning will be done using Service Id and Plan Id. For every Instance Provision request the instance id should be generated uniquely. 
+* As Provisioning request contains service and plan id, Instance provision can be synchronous or asynchronous call. 
+* For all the asynchronous call, broker will send the status as In-progress, once completion of successful process, the status is updated at broker side. Platforms will connect with Service Brokers for last instance operation status using Last Operation API. 
+* Request Details  `PUT /v2/``service_instances/:instance_id`  
+
+Note: Sample Request, Route, parameters and Response for Instance Provisioning. 
+
+Update of a Service Instance:
+* Users can enable upgrade or downgrade their Service instance to other plans by modifying parameter (plan_updateable: true) in it’s service catalog.
+* Request Details  `PATCH /v2/``service_instances/:instance_id`  
+
+Note: Sample Request, Route, Parameters and Response for Updating Service Instance.
+
+Fetch Service Instance:
+* If service catalog endpoint response contains instance_retrievable as true, then brokers must support this endpoint for all plans of the services. If instance_retrievable is mentioned as false, then Platforms should not attempts to call the endpoint from broker.
+* Request Details  `GET /v2/``service_instances/:instance_id`  
+
+Note: Sample Request, Route, Parameters and Response for Fetching Service Instance.
+
+**Binding Management**
+
+Binding Creation:
+* This End point is dependent on how the parameters are defined in Service catalog. If bindable is declared as true for a service or plan in catalog endpoint, then brokers must implement Service Bindings. 
+* Binding creation API’s can be in synchronous or asynchronous calls based on services/plans set by the Service Brokers.
+* Request Details  `PUT /v2/``service_instances/:instance_id/service_bindings/:binding_id`  
+
+Note: Sample Request, Route, Parameters and Response for Binding Creation.
+
+Fetching a Service Binding:
+* Service brokers must support this end point if bindings_retrievable is declared as true in service catalog endpoint
+* Request Details  `GET /v2/``service_instances/:instance_id/service_bindings/:binding_id`  
+
+Note: Request, Route, Parameters and Response for Fetching a service Bindings.
+
+**Deprovisioning**
+
+Instance Delete:
+* Deprovisioning API is helpful for deleting any Service instance from broker. it MUST delete any resources it created during the provision. Usually this means that all resources are immediately reclaimed for future provisions.
+* Request Details  `DELETE /v2/``service_instances/:instance_id`  
+
+Note: Sample Request, Route and Response for Deprovision of Instance.
+
+**Unbinding**
+
+Binding Delete:
+* When a Service Broker receives an unbind request from a Platform, it MUST delete any resources associated with the binding. In the case where credentials were generated, this might result in requests to the Service Instance failing to authenticate.
+* Service Brokers that do not provide any bindable services or plans do not need to implement this endpoint.
+* Request Details  `DELETE /v2/``service_instances/:instance_id/service_bindings/:binding_id`  
+
+Note: Sample Request, Route and Response for Unbinding
+
+#### 4.1.2 Service Broker Template
+
+To support you in Service Broker configuration, we have created a template, which you can use together with the learning material below. This information will help you understand the configuration requirements and allow you to implement the knowledge to your service development.
+
+Template *provides skeleton* for following Service Broker API implementation:
+
+* Advertising a catalog of their service offerings and plans
+* Provisioning (creating or updating) service instances
+* Creating bindings between a service instance and a client application
+* Deleting bindings between a service instance and a client application
+* Deprovisioning (deleting) service instances
+
+**How to create Service broker using skeleton**
+
+*Clone this repository*
+* Use following command to clone this repository
+    
+    git@ssh.gitlab.rnd.mendix.com:appservices/appserviceresourcemanager/sample-service-broker/service-broker-skeleton.git
+        
+Note: For Service Specific Implementation user need to update code between `// BEGIN USER CODE` and `// END USER CODE`
+*Catalog Management*
+ 
+  Catalog management is about defining service and plan.
+  Here update the service and plan details:
+  
+![](https://paper-attachments.dropbox.com/s_EE9C13CEAA495AEBCD14B970B275A2C1ACA57844CCA1E0AC2DF19A844D0F4DF0_1651059241742_image.png)
+
+*Instance Service Implementation*
+  
+  Service instance is an instantiation of a Service Offering and Service Plan. There are several methods related to service instance.
+  
+  Navigate to InstanceService.java and notice method implementation for service instance lifecycle such as create instance, update instance, delete instance etc. For example, `createServiceInstance` method to provision service instance
+
+
+![](https://paper-attachments.dropbox.com/s_EE9C13CEAA495AEBCD14B970B275A2C1ACA57844CCA1E0AC2DF19A844D0F4DF0_1651058770926_image.png)
+
+  For mono details please refer Mono.
+  Similarly, there are following methods to manage lifecycle on instance:
+* updateServiceInstance - for asynchronous update of instance
+* deleteServiceInstance - for asynchronous deletion of instance
+* getServiceInstance - to  retrieve the details of the specified service instance
+* getLastOperation - determine the status of the operation in progress respectively.
+
+**Service Instance Binding Implementation**
+Service Binding - Represents the request to use a Service Instance. Service Bindings will often contain the credentials that can then be used to communicate with the Service Instance.
+
+Navigate to InstanceBindingService.java and notice method implementation for Service Bindings lifecycle such as create binding, delete bindings etc.
+
+For example, `createServiceInstanceBinding` method to create a binding for provisioned service instance
+        
+![](https://paper-attachments.dropbox.com/s_EE9C13CEAA495AEBCD14B970B275A2C1ACA57844CCA1E0AC2DF19A844D0F4DF0_1651058902556_image.png)
+
+Similarly, there are following methods related to service bindings such as
+* deleteServiceInstanceBinding - delete any binding  credentials
+* getServiceInstanceBinding - to retrieve the details of the specified service binding
+
+For additional assistance and an example of how to provision and bind an app to a logging service, contact *AppServices_Supplier_Team@mendix.com*.
 
 ### 4.2 Identity & Access Management (IAM)
 
@@ -118,7 +272,7 @@ The Mendix Platform’s foundational IAM service is evolving quickly to support 
 * Enabling Mendix developers and app end-users to use the Mendix IAM system to have an SSO experience between apps, app services, and the Mendix Platform
 * Enabling end-user for access control to your app service from within an app
 
-For more information about IAM integration, contact *DIS_AppServices_Supplier_Team@mendix.com*.
+For more information about IAM integration, contact *AppServices_Supplier_Team@mendix.com*.
 
 ### 4.3 Metering
 
@@ -145,7 +299,7 @@ Export control is an area of legislation that regulates and restricts the export
 
 If your app service is a controlled item, Mendix needs to ensure it is prevented from being sent to destinations where it may be used in a harmful way. In these cases, you typically need to request an export control license from a local government department, and you need to confirm ownership of such a license before we can list your app service in the Marketplace.
 
-If you are unclear what this means to you and your app service, there are useful resources online.  If you are stuck, contact *DIS_AppServices_Supplier_Team@mendix.com* for guidance.
+If you are unclear what this means to you and your app service, there are useful resources online.  If you are stuck, contact *AppServices_Supplier_Team@mendix.com* for guidance.
 
 ### 4.6 Pricing & Free Trials {#pricing}
 
@@ -159,7 +313,7 @@ The Marketplace supports three pricing models:
 * **Per User**  – As you submit your app service, you specify price per user per month. 
 * **Usage-Based** – In this model, users pay for what they consume. In this way, it directly relates the price your users pay for your app service to their usage. The more they use, the more they pay. You can determine the metrics on which the cost is based, along with the price per unit for each of the metrics.
 
-Since you need to specify the plan in your service broker implementation before you submit your app service, contact *DIS_AppServices_Supplier_Team@mendix.com*.
+Since you need to specify the plan in your service broker implementation before you submit your app service, contact *AppServices_Supplier_Team@mendix.com*.
 
 #### 4.6.2 Free Trials
 
@@ -177,7 +331,7 @@ The Mendix Marketplace is free to use unless you want to sell a paid app service
 
 The geographical regions supported by the Marketplace depend on the compliance requirements for your specific app service and the location of your company.
 
-Since the terms of payment, Marketplace operating fees, and supported regions are highly dependent on your app service, please contact *DIS_AppServices_Supplier_Team@mendix.com* to discuss your requirements in more detail.
+Since the terms of payment, Marketplace operating fees, and supported regions are highly dependent on your app service, please contact *AppServices_Supplier_Team@mendix.com* to discuss your requirements in more detail.
 
 ## 5 Submitting Your App Service
 
@@ -248,6 +402,6 @@ When your app service is submitted to the Marketplace, [Mendix reviews it for ap
 
 Mendix's mission in regards to the governance of Marketplace content is to manage quality while keeping the submission process as frictionless as possible. We achieve this by maintaining the comprehensive set of guidelines above, which when followed will maximize your chances of being approved for publication right away. The more complex your app service is, the more likely it will require multiple approval iterations to get it Marketplace-ready. We are on hand to advise you throughout the process.
 
-You can keep track of your submission by subscribing to receive status notifications. If you need more help, contact *DIS_AppServices_Supplier_Team@mendix.com*.
+You can keep track of your submission by subscribing to receive status notifications. If you need more help, contact *AppServices_Supplier_Team@mendix.com*.
 
 Once your app service is available in the public Marketplace, you can engage with your customers as they use your app service via [Reviews](/appstore/general/app-store-overview#my-reviews).

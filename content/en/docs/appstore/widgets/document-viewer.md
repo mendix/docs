@@ -15,7 +15,7 @@ The Document Viewer widget allows you to preview document content.
 
 ### 1.1 Features {#features}
 
-* Preview documents form storage
+* Preview documents from storage
 * Preview external documents (by using static URL)
 
 {{% alert color="alert" %}} 

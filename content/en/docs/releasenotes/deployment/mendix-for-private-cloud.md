@@ -13,6 +13,18 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
+### May 12th, 2022
+
+#### Portal Improvement
+
+* We improved the experience of uploading a deployment package to your deployment package repository.
+* We improved database performance.
+
+#### Portal Fixes
+
+* We resolved an issue where the wrong number of replicas was reported after a restart. (Ticket 148333)
+* We resolved an issue where the refresh button did not always display all the environments.
+
 ### April 21st, 2022
 
 #### Portal Fixes

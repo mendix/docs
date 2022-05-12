@@ -58,7 +58,7 @@ When you first create your app, it will be set to deploy to the Mendix Cloud. Yo
 
 Before you can create an environment, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
 
-1. On the **Environments** page for your app in the Developer Portal, click **Create Package**.
+1. On the **Environments** page for your app in the Developer Portal, click **Create Package From Teamserver**.
    
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image9.png" >}}
 
@@ -81,7 +81,7 @@ Before you can create an environment, you will need to create a deployment packa
 7. Confirm the information message and you will be returned to the **Environments** page.
 
 {{% alert color="info" %}}
-Alternatively, you can upload an existing MDA by clicking **Upload Package**.
+Alternatively, you can upload an existing MDA by clicking **Upload**.
 {{% /alert %}}
 
 ### 3.3 Creating an Environment{#create-environment}
@@ -152,8 +152,8 @@ See [Deploying the Deployment Package](#deploy-package), below, for instructions
 
 You can also deploy an existing deployment package to an environment without having to create a new one. This also allows you to specify constant values and control scheduled events before the app is started.
 
-{{% alert color="warning" %}}
-Currently, deployment packages are only valid for two weeks. Older deployment packages will still be visible, but if you try to deploy a package that was created more than two weeks ago, the deployment will fail and return a 403 error. The solution is to [recreate the deployment package](#create-deployment-package).
+{{% alert color="info" %}}
+Deployment packages which are not deployed to any environment will be removed if they were created from the Teamserver or uploaded over two months ago. You can  [recreate the deployment package](#create-deployment-package) if you need to use it again.
 {{% /alert %}}
 
 If creation of the environment fails, then contact your cluster manager. If they cannot solve the problem, contact Mendix Support for help.
@@ -201,8 +201,8 @@ This lists the deployment packages which have been created for this app.
 There are five buttons:
 
 * Refresh
-* Create Package
-* Upload Package
+* Upload
+* Create Package From Teamserver
 * Details
 * Deploy
 
@@ -216,13 +216,13 @@ Sometimes the page will not be automatically refreshed with the latest informati
 Using the browser refresh button will take you away from this environments page, so use this button instead.
 {{% /alert %}}
 
-#### 4.1.2 Create Package
+#### 4.1.2 Upload
+
+This allows you to upload an MDA package you have already created, using Studio Pro for instance. The uploaded package is added to the list of packages for the app and can be deployed in the same way as a package created using **Create Package From Teamserver**.
+
+#### 4.1.3 Create Package From Teamserver
 
 This creates a new package as described in [Creating a Deployment Package](#create-deployment-package), above.
-
-#### 4.1.3 Upload Package
-
-This allows you to upload an MDA package you have already created, using Studio Pro for instance. The uploaded package is added to the list of packages for the app and can be deployed in the same way as a package created using **Create Package**.
 
 #### 4.1.4 Details
 

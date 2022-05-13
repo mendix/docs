@@ -1,5 +1,5 @@
 ---
-title: "Configure a Workflow in Studio Manually"
+title: "Configure a Workflow in Studio"
 url: /studio-how-to/workflow-how-to-configure/
 description: "Describes how to configure a workflow in Mendix Studio."
 weight: 05
@@ -14,6 +14,106 @@ Workflow is a visual language in Mendix Studio and Mendix Studio Pro that allows
 Workflows are available in Studio from **Mendix version 9.12.1**. If you have an app with workflows functionality below this version, this app is likely to be created in Studio Pro and requires a manual migration. For more information on how to migrate your app using Studio Pro, see [Migrate Workflow Apps](/refguide/workflow-beta-migration/). 
 {{% /alert %}}
 
+## 2 Prerequisites
+
+Before starting this how-to, make sure you have completed the following prerequisites:
+
+* Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows/). 
+* Make sure your app has Mendix version 9.12
+* Make sure your app is based on the Blank app template 
+
+There are two ways to create a workflow: 
+* [using a wizard to build an approval workflow](#wizard) 
+* [setting the workflow up manually](#manual). 
+
+The wizard helps you create the Approval Request workflow. If your workflow falls under the approval request use case, for example, approving vacation days for your employees, this is a good starting point that sets the whole app automatically for you – not only the workflow itself but also pages and navigation.
+
+If your use case does not fall under an approval request, then you might want to set your workflow manually instead of using the wizard.
+
+## 3 How to create an Approval workflow using the wizard
+
+### 3.1 Enabling Workflows {#enable-workflows}
+
+First, you need to enable workflows for your app. Do the following:
+
+1. Click the workflow icon in the left menu bar.
+
+2. Before enabling workflows, you need to enable security. Click **Enable Security**:
+
+    {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/enable-security.png" alt="Enable Security" >}}
+
+3. After security is enabled, click **Enable Workflows**.
+
+4. In the **Workflows Enabled** pop-up menu, click **Create Workflow**:
+
+    {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/create-workflow.png" alt="Create Workflow" >}}
+
+5. In the **Create Workflow** dialog box, set the **Title** to **Employee_Onboarding** and click the **Start Wizard** button:
+
+    {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/set-up-manually.jpg" alt="Set Up Workflow Manually" >}}
+
+### 3.2 Creating a Workflow Using the Wizard {#wizard}
+
+The wizard helps you create the Approval Request workflow. If your workflow falls under the approval request use case, for example, approving vacation days for your employees, this is a good starting point that sets the whole app automatically for you – not only the workflow itself but also pages and navigation. 
+
+To create the workflow for the vacation approval via the wizard, do the following:
+
+1. Click the workflow icon in the left menu bar.
+
+2. Select the module you would like to add a new workflow to and click the plus icon next to this module:
+
+    {{< figure src="/attachments/studio/workflows/new-workflow.jpg" alt="New Workflow" >}}
+    
+    For more information on what modules are, see [Domain Model](/studio/domain-models/).
+    
+3. In the **Create Workflow** dialog box, set the workflow title to **Vacation Approval** and click **Start Wizard**.
+
+4. In the **Create Request Form**, you can define input fields that will be used by a person submitting the request. For example, an employee will fill in their name, department, and desired dates when submitting their vacation request. Do the following:
+    1. Fill in *Name* in the **Label** option, leave the **Type** as string, and mark this field as required. On the right you can see the preview of the future form.
+    
+        {{< figure src="/attachments/studio/workflows/create-request-form.jpg" alt="Create Request Form Example" >}}
+    
+    2. Click the plus icon to add more fields. 
+    
+    3. Follow steps 4a and 4b to add the *Department* of type string, *Start Date* of type Date and Time, and *End Date* of type Date and Time. 
+    
+    4. Click the **Create** button.
+    
+5. Based on this form the app is set up: labels that you filled in are turned into attributes of an entity used by the workflows, workflow and pages are created, security is set up. Click **Take the tour** to get more information about your app.
+
+The app with the workflow is set up an fully functional. 
+
+### 3.2 Testing the Workflow {#test-workflow-from-wizard}
+
+Now you can test your workflow in the Preview from the perspective of different user roles. 
+
+For example, users who have tasks assigned to them (Manager, Facilities roles) will see their task inbox and dashboards pages where they can manage and monitor tasks assigned to them:
+
+{{< figure src="/attachments/studio-how-to/workflow-how-to-configure/task-inbox.png" alt="Task Inbox" >}}
+
+The Workflow Admin role has access to the Workflow Admin Center and can monitor all workflows, can view the progress of workflows, and change the workflow settings.
+
+The Admin role is able to manage users.
+
+To test your workflow, you need to switch between different user roles. Follow the steps below:
+
+1. Click  the **Preview** button. (For more information on how to preview your app, see [Previewing & Publishing Your App](/studio/publishing-app/).)
+
+2. Click the user icon on the right and select a user role:
+
+    {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/user-roles.png" alt="Demo User Role" >}}
+
+3. You can switch between different demo user roles to test the use case. Do can do the following:
+    1. Select the demo_hr user role and start the onboarding process: add a new employee on the **EmployeesToOnboard** page, and then click **Start Onboarding**:
+        {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/demo_hr.png" alt="Start Onboarding Button" >}}
+    2. Switch to the Manager role, see a new task in the inbox, open the task, add data to it, and complete the task.
+    3. Switch to the Facilities user role and complete the process.
+
+4. Open the Workflow Admin Center.
+
+5. Open the Workflow Dashboard.
+
+## 4 Advanced - How to create a workflow manually
 This how-to explains how to build a workflow manually, without using a wizard. For more information on using the wizard and creating workflows with its help, see the [Creating a Workflow Using the Wizard](/studio/workflows/#wizard) section in Workflows.
 
 This how-to will teach you how to do the following:
@@ -32,15 +132,7 @@ The how-to describes the following use case:
 
 You would like to build an employee onboarding process. At first, an HR specialist needs to initiate the onboarding process for a new employee. The employee's manager then steps in, select devices for the employee and specify whether the new hire is working from the office or home . The Facilities department then need to prepare a workspace. Depending on where the new hire works from (the office or home), the Facilities department either prepare a desk or ship the devices to the employee's address. 
 
-## 2 Prerequisites
-
-Before starting this how-to, make sure you have completed the following prerequisites:
-
-* Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows/). 
-* Make sure your app has Mendix version 9.12
-* Make sure your app is based on the Blank app template 
-
-## 3 Enabling Workflows {#enable-workflows}
+### 4.1 Enabling Workflows {#enable-workflows}
 
 First, you need to enable workflows for your app. Do the following:
 
@@ -70,7 +162,7 @@ First, you need to enable workflows for your app. Do the following:
 
 Good job! You have created a workflow and a Workflow Context parameter.
 
-## 4 Configuring a Domain Model
+### 4.2 Configuring a Domain Model
 
 In the previous section, you have created the entity that is set for the Workflow Context parameter. You now need to configure attributes for this entity. Do the following:
 
@@ -86,7 +178,7 @@ You have configured the **EmployeeOnboarding** entity:
 
 {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/domain-model.png" alt="Domain Model" >}}
 
-## 5 Configuring Security
+### 4.3 Configuring Security
 
 In the [Enabling Workflows](#enable-workflows) section, you have enabled security for your app, and several roles and permissions were added automatically. However, you need to add more roles to your app: HR, Manager, and Facilities roles. Follow the steps below:
 
@@ -97,7 +189,7 @@ In the [Enabling Workflows](#enable-workflows) section, you have enabled securit
 
 Now all necessary roles are created for your app. For more information about security, see [Security, Roles & Permissions](/studio/settings-security/). 
 
-## 6 Triggering the Workflow from a Page
+### 4.4 Triggering the Workflow from a Page
 
 To start your workflow, you need to trigger it. In this use case, the workflow is started by an HR specialist who should fill in the new hire's name, the first day, and then click the **Start Onboarding** button that will trigger the workflow. Do the following:
 
@@ -147,7 +239,7 @@ To start your workflow, you need to trigger it. In this use case, the workflow i
 
 Good job! Now you have a page where the HR specialist can start the workflow.
 
-## 7 Specifying Details of the New Hire {#specify-details}
+### 4.5 Specifying Details of the New Hire {#specify-details}
 
 The manager of a new employee will get a task to specify devices for the new hire. The manager also needs to indicate whether the new hire is working from home (WFH) or not. For this functionality you need to add activities to the workflow. Follow the steps below: 
 
@@ -215,7 +307,7 @@ Great job! You have created the user task for the Manager role:
 
 {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/user-task-configured.png" alt="Configured User Task" >}}
 
-## 8 Following Different Paths for the Hire's Location
+### 4.6 Following Different Paths for the Hire's Location
 
 Depending on whether the new hire is working from the office or home, there are two different processes to onboard this hire: prepare a desk in the office or send the laptop and phone to the home address. This step of the onboarding process should be done by the Facilities department.
 
@@ -283,7 +375,7 @@ Great job! You have created the decision and user tasks on whether the new hire 
 
 {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/worfklow-configured.png" alt="Configured Workflow" >}}
 
-## 9 Configuring Navigation
+### 4.7 Configuring Navigation
 
 You need to configure navigation otherwise the user roles will not be able to reach any pages and interact with their tasks. Follow the steps below:
 
@@ -323,7 +415,7 @@ You have configured the navigation for your app and now you can preview and test
 
 {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/configured-navigation.png" alt="Configured Navigation" >}}
 
-## 10 Testing the Workflow {#test-workflow}
+### 4.8 Testing the Workflow {#test-workflow}
 
 Now you can test your workflow from the perspective of different users. 
 
@@ -355,7 +447,7 @@ To test your workflow, you need to switch between different user roles. Follow t
 
 Great job! You have previewed your app locally and tested your workflow from the perspective of different users. You can now work on adding more functionality to your app or share your app with other users to try it out in real life. 
 
-## 11 Read More
+## 4 Read More
 
 * [Workflows](/studio/workflows/)
 * [How to Configure a Navigation Bar](/studio-how-to/navigation-how-to-configure/) 

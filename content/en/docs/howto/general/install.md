@@ -94,9 +94,10 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
  	* The `latest` executable to `mendix_native_mobile_builder.exe`
 6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.
 
-If during installation the following error is reported `AdoptOpenJDK 11 x64 failed; code 1639`, try the following:
+If during installation the **AdoptOpenJDK 11 x64 failed; code 1639** error occurs, try the following:
+
 * Abort the installation process
-* Install Adopt Open JDK dependency manually from the dependencies folder using Administrator privileges
+* Install the Adopt Open JDK dependency manually from the dependencies folder using Administrator privileges
 * Try to install Studio Pro again
 
 ## 7 Read More

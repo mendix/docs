@@ -45,7 +45,7 @@ To upgrade an APD 3 agent, follow these steps:
 
 ## 5 Security
 
-Apply these steps if needed:
+Apply these steps as necessary:
 
 1. In Cloud v3, allow the request handler `/apm`.
 2. The agent initiates all communication to the [APD 3 manager](https://apmmanager100.mendixcloud.com) in HTTPS over port 443. So, for some on-premises installations, a firewall might need to be opened.

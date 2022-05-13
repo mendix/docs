@@ -48,7 +48,30 @@ You can perform the following basic functions when configuring workflows:
 * [Delete a workflow](#delete)
 * [Add elements to a workflow](#add-elements)
 
-### 4.1 Opening a Workflow {#open}
+
+### 4.1 Creating a Workflow {#create}
+
+To create a workflow do the following:
+
+1. Click the workflow icon in the left menu bar.
+
+2. Select the module you would like to add a new workflow to and click the plus icon next to this module:
+
+    {{< figure src="/attachments/studio/workflows/new-workflow.jpg" alt="New Workflow" >}}
+    
+    For more information on what modules are, see [Domain Model](/studio/domain-models/).
+    
+3. In the **Create Workflow** dialog box, set the workflow title and click **Start Wizard** or **Set up manually**.
+
+There are two ways to create a workflow: 
+* [using a wizard to build an approval workflow](#wizard) 
+* [setting the workflow up manually](#manual). 
+
+The wizard helps you create the Approval Request workflow. If your workflow falls under the approval request use case, for example, approving vacation days for your employees, this is a good starting point that sets the whole app automatically for you – not only the workflow itself but also pages and navigation.
+
+If your use case does not fall under an approval request, then you might want to set your workflow manually instead of using the wizard.
+
+### 4.2 Opening a Workflow {#open}
 
 To open a workflow in Studio, do the following:
 
@@ -58,68 +81,6 @@ To open a workflow in Studio, do the following:
 
 
 The selected workflow is opened.
-
-### 4.2 Adding a Workflow {#create}
-
-There are two ways to create a workflow: [using a wizard](#wizard) or [setting the workflow up manually](#manual). 
-
-#### 4.2.1 Creating a Workflow Using the Wizard {#wizard}
-
-The wizard helps you create the Approval Request workflow. If your workflow falls under the approval request use case, for example, approving vacation days for your employees, this is a good starting point that sets the whole app automatically for you – not only the workflow itself but also pages and navigation. 
-
-To create the workflow for the vacation approval via the wizard, do the following:
-
-1. Click the workflow icon in the left menu bar.
-
-2. Select the module you would like to add a new workflow to and click the plus icon next to this module:
-
-    {{< figure src="/attachments/studio/workflows/new-workflow.jpg" alt="New Workflow" >}}
-    
-    For more information on what modules are, see [Domain Model](/studio/domain-models/).
-    
-3. In the **Create Workflow** dialog box, set the workflow title to **Vacation Approval** and click **Start Wizard**.
-
-4. In the **Create Request Form**, you can define input fields that will be used by a person submitting the request. For example, an employee will fill in their name, department, and desired dates when submitting their vacation request. Do the following:
-    1. Fill in *Name* in the **Label** option, leave the **Type** as string, and mark this field as required. On the right you can see the preview of the future form.
-    
-        {{< figure src="/attachments/studio/workflows/create-request-form.jpg" alt="Create Request Form Example" >}}
-    
-    2. Click the plus icon to add more fields. 
-    
-    3. Follow steps 4a and 4b to add the *Department* of type string, *Start Date* of type Date and Time, and *End Date* of type Date and Time. 
-    
-    4. Click the **Create** button.
-    
-5. Based on this form the app is set up: labels that you filled in are turned into attributes of an entity used by the workflows, workflow and pages are created, security is set up. Click **Take the tour** to get more information about your app.
-
-The app with the workflow is set up.
-
-
-#### 4.2.2 Creating a Workflow Manually {#manual}
-
-If your use case does not fall under an approval request, then you might want to set your workflow manually instead of using the wizard. Follow the steps below:
-
-To add a workflow to your app in Studio, do the following:
-
-1. Click the workflow icon in the left menu bar.
-
-2. Select the module you would like to add a new workflow to and click the plus icon next to this module:
-
-    {{< figure src="/attachments/studio/workflows/new-workflow.jpg" alt="New Workflow" >}}
-
-    For more information on what modules are, see [Domain Model](/studio/domain-models/).
-
-3. In the **Create Workflow** dialog box, fill in the workflow title and click **Set Up Manually**.
-
-4. Click **Workflow Context** and either select the existing entity or create a new one:
-
-    {{< figure src="/attachments/studio/workflows/create-new-workflow.jpg" alt="Create New Workflow" >}}
-
-    For more information on the Workflow Context and how it is used, see [Workflow Context Parameter](/studio/workflow-parameter/).
-
-4. Click **Create**.
-
-The workflow is created. For a more information on how to configure the workflow manually, see [Configure a Workflow in Studio Manually](/studio-how-to/workflow-how-to-configure/).
 
 ### 4.3 Duplicating a Workflow {#duplicate}
 

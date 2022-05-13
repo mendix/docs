@@ -19,7 +19,7 @@ Here is an overview of what Chatbot contains:
 | [Constants](#constants)                     | LicenseToken, TokenEndpoint      |
 | [Microflows](#microflows)                   | GetSlotArgument, StartService |
 | [Widgets](#widgets)                         | Chatbot, InputElement         |
-| [Pages](#pages)                             | ChatbotConsole                |
+| Pages                             | ChatbotConsole                |
 | [Enumerations](#enumerations)               | BotStatus, BuiltinIntent, BuiltinSlotType,LanguageStatus, Locale, SlotConstraint, SlotValueResolutionStrategy    |
 
 In most cases, you will only need what is contained in the **Chatbot** > **USE_ME** folder. The content in the **Chatbot** > **Internal** folder is for internal use only and you will not need it.
@@ -39,7 +39,7 @@ This app service enables doing the following:
 
 ### 1.3 Prerequisites
 
-This app service can only be used with Studio Pro 9 versions starting with [9.12.0](/releasenotes/studio-pro/9.12.0).
+This app service can only be used with Studio Pro 9 versions starting with [9.12.0](/releasenotes/studio-pro/9.12/).
 
 ### 1.4 Dependencies
 
@@ -63,8 +63,8 @@ A trial gives everyone in your company one-month access to the app service. The 
 4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used. 
 6. Click the link in the email to go to the [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) page and log in there. This page shows all the products that you have trials for.
-7. Click **Chatbot** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. Later you will need to [configure the license token](/#configure-license-token) in your app.
+7. Click **Chatbot** to open the [service management dashboard](/appstore/general/app-store-overview/#service-management-dashboard).
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. Later you will need to [configure the license token](/#configure-license-token) in your app.
 
 #### 2.1.2 Subscribing to the App Service
 
@@ -76,8 +76,8 @@ A trial gives everyone in your company one-month access to the app service. The 
 4. Fill in [Technical Contact](https://docs.mendix.com/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Contact will receive an email that says the app service is ready to be used. 
 6. Click the link in the email to go to the [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **Chatbot** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.Save the license token somewhere safe. Later you will need to [configure the license token](/#configure-license-token) in your app.
+7. Click **Chatbot** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview/#service-management-dashboard).
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a license token.Save the license token somewhere safe. Later you will need to [configure the license token](/#configure-license-token) in your app.
 
 ### 2.2 Installing the Component in Your App
 
@@ -165,7 +165,7 @@ The **ClientConfig** is the entity that shows the user data configurations.
 
 #### 3.2.1 LicenseToken
 
-The **LicenseToken** constant provides a valid license token for an app that uses this app service. As Chatbot is a commercial product, no matter your app is deployed in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), your own environment, or locally in Studio Pro, you need to have a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token) section.
+The **LicenseToken** constant provides a valid license token for an app that uses this app service. As Chatbot is a commercial product, no matter your app is deployed in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), your own environment, or locally in Studio Pro, you need to have a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token) section.
 
 #### 3.2.2 TokenEndpoint
 
@@ -351,7 +351,7 @@ The core widget required is the **Chatbot** widget. You can configure the follow
 
 If you run your app locally or deploy it as a Mendix Free App, configure the license token in Studio Pro. Perform the following steps:
 
-1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
+1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings/) dialog box.
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
 3. On the **Constants** tab, create a new constant with the predefined constant **Chatbot.LicenseToken**.
 4. Fill in the **Value** with the license token that you [obtained](#obtain-license-token).
@@ -363,7 +363,7 @@ If you run your app locally or deploy it as a Mendix Free App, configure the lic
 
 #### 3.6.2 For an App Deployed in the Mendix Cloud
 
-If you deploy your app in the Mendix Cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details).
+If you deploy your app in the Mendix Cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details/).
 
 Before you deploy your app, configure the app **Constants** in the deployment package.
 
@@ -371,15 +371,15 @@ If you have already deployed your app, change the existing **LicenseToken** cons
 
 #### 3.6.3 For an App Deployed in Your Own Environment
 
-If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](/developerportal/deploy/index).
+If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](/developerportal/deploy/index/).
 
 ## 4 Usage
 
 ### 4.1 Initializing Chatbot When App Starts
 
-It can be useful to run the Chatbot service automatically when your app starts. The app service contains a Java action – the **StartService** microflow, which can start the Chatbot service for you. You can use the [After startup](/refguide/project-settings#after-startup) setting in your app to call the **StartService** microflow.
+It can be useful to run the Chatbot service automatically when your app starts. The app service contains a Java action – the **StartService** microflow, which can start the Chatbot service for you. You can use the [After startup](/refguide/project-settings//#after-startup) setting in your app to call the **StartService** microflow.
 
-1. In the **App Explorer**, click **Settings**. The [App Settings](/refguide/project-settings) dialog box opens.
+1. In the **App Explorer**, click **Settings**. The [App Settings](/refguide/project-settings/) dialog box opens.
 2. Go to the **Runtime** tab. 
 3. Set **After startup** to the **StartService** microflow from the **Chatbot** > **USE_ME** folder, or to a microflow that calls the **StartService** microflow.
 
@@ -518,4 +518,4 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 2. Go to **My Marketplace** and then do as follows:
    * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
    * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
-3. Click **Chatbot** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
+3. Click **Chatbot** to open the [service management dashboard](/appstore/general/app-store-overview/#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.

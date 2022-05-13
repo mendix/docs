@@ -21,6 +21,10 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We refactored our internal build process - images now share layers as much as possible, reducing download sizes and making it easier to patch CVEs from the base OS layers.
 * A subset of Mendix for Private Cloud components are now available for the ARM64 architecture, allowing you to deploy Mendix apps to machines running Apple Silicon, Raspberry Pi 4, and server-grade ARM64 chips.
 
+{{% alert color="info" %}}
+The Developer Portal improvements and fixes mentioned below have had to be temporarily reverted. We plan to re-introduce them next week.
+{{% /alert %}}
+
 #### Portal Improvement
 
 * We improved the experience of uploading a deployment package to your deployment package repository.

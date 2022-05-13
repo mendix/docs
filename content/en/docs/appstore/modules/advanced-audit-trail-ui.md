@@ -36,7 +36,7 @@ To download and install the Advanced Audit Trail UI module in your app, follow t
 
 * **ACT_SnapshotQuery_CreateAndShowSearch**: pre-creates the search query object and shows the search interface
 * **ACT_SnapshotQuery_ExecuteAndViewResult**: pushes the configured query to Elasticsearch and displays the query results if at least one snapshot was returned
-* **Search**: search interface, only accessible to the Administrator
+* **Search**: the search interface, only accessible to the Administrator
 
 #### 3.2.2 Search Results
 

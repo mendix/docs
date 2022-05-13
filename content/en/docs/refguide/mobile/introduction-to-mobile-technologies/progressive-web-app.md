@@ -171,9 +171,9 @@ In order to test the features requiring HTTPS protocol, use [ngrok](https://ngro
 Mendix offers options to build both native mobile apps and PWAs. Depending on your app's requirements or constraints, one or the other can be a better fit. It is also possible to have both native mobile and PWA profiles in a single app, which can run next to each other and overlap significantly.
 
 {{% alert color="info" %}}
-Important limitation: Apple does not support push notifications for PWAs on iOS.
-
-Currently, it is not possible to create a fully offline-first PWA for iOS — adding that support is part of our 2022 roadmap.
+Important limitations:
+ *  Push notifications are not supported for PWAs on iOS.
+ *  Offline data is not supported for PWAs on iOS.
 {{% /alert %}}
 
 Use the following diagram to decide whether to build a PWA, a native mobile app, or both:

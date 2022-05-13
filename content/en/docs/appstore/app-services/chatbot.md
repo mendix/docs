@@ -508,7 +508,7 @@ For example, you can set up the **Action** to make the app show a pop-up window 
 
 By binding an attribute to the **Is ready** event, the app will trigger an action event when the bot is ready.
 
-**Is ready** takes a String attribute. You can define an attribute and bind this attribute to **Is ready**. In an app, when chatbot is runnning, a flag indicates if the current bot is ready for conversing. The app can trigger an action when the bot is ready. You can select the custom **Action** from a list of actions.
+**Is ready** takes a String attribute. You can define an attribute and bind this attribute to **Is ready**. In an app, when chatbot is running, a flag indicates if the current bot is ready for conversing. The app can trigger an action when the bot is ready. You can select the custom **Action** from a list of actions.
 
 ### 4.6 Checking Statistics on the Usage Dashboard {#check-usage}
 

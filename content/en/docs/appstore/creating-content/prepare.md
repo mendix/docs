@@ -176,32 +176,25 @@ The template provides a skeleton for the following Service Broker API implementa
 
 ##### 4.1.2.1 Creating a Service Broker Using the Template
 
-Follow these steps in the template: 
+Follow these steps in the template to learn about creating a service broker: 
 
-1. Use the following command to clone a repository: `git@ssh.gitlab.rnd.mendix.com:appservices/appserviceresourcemanager/sample-service-broker/service-broker-skeleton.git`
+1. Use the following command to clone a repository: `git@ssh.gitlab.rnd.mendix.com:appservices/appserviceresourcemanager/sample-service-broker/service-broker-skeleton.git`. Please note that for a service-specific implementation, update the the code between `// BEGIN USER CODE` and `// END USER CODE`.
+2. Catalog management is about defining a service and plan. Update the service and plan with these details: 
 
-Note: For Service Specific Implementation, you need to update code between `// BEGIN USER CODE` and `// END USER CODE`
-*Catalog Management*
+    {{< figure src="/attachments/appstore/creating-content/prepare/creating1.png" >}}
 
-  Catalog management is about defining service and plan.
-  Here update the service and plan details:
+3. A service instance is an instantiation of a service offering and a service plan, and there are several methods related to service instances. Navigate to `InstanceService.java` and notice the method implementation for the service instance lifecycle such as creating an instance, updating the instance, and deleting the instance. For example, `createServiceInstance` method is used to provision the service instance.
 
-{{< figure src="/attachments/appstore/creating-content/prepare/creating1.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/prepare/creating2.png" >}}
 
-*Instance Service Implementation*
+	For mono details, please refer to `Mono`.
 
-  Service instance is an instantiation of a Service Offering and Service Plan. There are several methods related to service instance.
+4. There are other methods to manage the lifecycle of the instance:
 
-  Navigate to InstanceService.java and notice method implementation for service instance lifecycle such as create instance, update instance, delete instance etc. For example, `createServiceInstance` method to provision service instance
-
-{{< figure src="/attachments/appstore/creating-content/prepare/creating2.png" >}}
-
-  For mono details please refer Mono.
-  Similarly, there are following methods to manage lifecycle on instance:
-* updateServiceInstance - for asynchronous update of instance
-* deleteServiceInstance - for asynchronous deletion of instance
-* getServiceInstance - to  retrieve the details of the specified service instance
-* getLastOperation - determine the status of the operation in progress respectively.
+	* `updateServiceInstance`– for the asynchronous update of the instance
+	* `deleteServiceInstance` – for the asynchronous deletion of the instance
+	* `getServiceInstance` – to retrieve the details of the specified instance
+	* `getLastOperation` – to respectively determine the status of the operation in progress
 
 ##### 4.1.2.2 Service Instance Binding Implementation
 

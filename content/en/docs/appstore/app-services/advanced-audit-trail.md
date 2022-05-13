@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "app service", "audit trail"]
 
 ## I Introduction
 
-Advanced Audit Trail allows you to trace changes, use infinitely-scalable and fully-indexed data search. Once configured, the system automatically creates audit snapshots of objects to store an audit trail. This audit trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
+Advanced Audit Trail allows you to trace changes and use infinitely-scalable and fully-indexed data search. Once configured, the system automatically creates audit snapshots of objects to store an audit trail. This audit trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
 
 Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, and Kibana to leverage their utility. Kafka is used for long-term immutable data storage for audit data, and Elasticserach and Kibana are used to index the audit data. You can find an integration diagram below:
 
@@ -74,14 +74,10 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 2. Configure the right [constant values](#constants) for the right snapshots.
 3.  Implement the **Before Commit** (**BCo**) and **Before Delete** **(Bde)** events (see the examples). Use the events on the domain model settings (**BCo** / **BDe**).
 
-    You can create **CommitList** microflows that commit a list of objects without events, but use the **Create Snapshot (List)** action. This will ensure that the snapshots are committed in a list as well, and therefore minimizing performance impact of the module.
+    You can create **CommitList** microflows that commit a list of objects without events, but use the **Create Snapshot (List)** action. This ensures that the snapshots are committed in a list as well, and therefore minimizing performance impact of the module.
     
-    {{% alert color="warning" %}}When an object is committed without events, this change is not audited unless you explicitly add a `Create Snapshot` or `Create Snapshot (List)` action before the commit.</br></br>When there are multiple  **Before Commit** (**BCo**) or **Before Delete** **(Bde)** events that may change the object, the order is not guaranteed. see [Event Handlers](/refguide/event-handlers/). This means that some changes could theoretically fall outside the context of an audit.{{% /alert %}}
+    {{% alert color="info" %}}When an object is committed without events, this change is not audited unless you explicitly add a `Create Snapshot` or `Create Snapshot (List)` action before the commit.</br></br>When there are multiple  **Before Commit** (**BCo**) or **Before Delete** **(Bde)** events that may change the object, the order is not guaranteed. see [Event Handlers](/refguide/event-handlers/). This means that some changes could theoretically fall outside the context of an audit.</br></br>For specializations and generalizations, you should either add the event to the generalized object *or* to all the specializations; otherwise the event can be triggered twice.</br></br>Some compliances may require you to never delete an object. In that case, you should implement this outside the context of the audit trail module.{{% /alert %}}
     
-    {{% alert color="warning" %}}For specializations and generalizations, you should either add the event to the generalized object *or* to all the specializations; otherwise the event can be triggered twice.{{% /alert %}}
-
-    {{% alert color="info" %}}Some compliances may require you to never delete an object. In that case, you should implement this outside the context of the audit trail module.{{% /alert %}}
-
 4. Add search to the navigation, or implement the Query Snapshots for object action.
 5.  Make sure that the [scheduled events](#scheduled-events) are enabled in the cloud portal.
 
@@ -93,7 +89,7 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 *  **_AddOn_CanChangeEnvironmentInQuery**: This is an additional role for the Admin, which allows the Admin to change the environment in search queries, so that they can also search in other applications
 *  **DisplayOnly**: The display-only user can view queries that are prepared in microflows, but cannot change any of them. This can restrict the user to seeing information they are allowed to see. The role is tested against cross site scripting (XSS).
 
-    {{% alert color="warning" %}}Access from and to the long-term data storage is based on service accounts. This means that once a user can access the **Snippet_Settings**, they can access all data in the long-term storage, even if it belongs to other applications in the same environment. Any user-based authentication needs to be implemented in the runtime, for example, by using the **DisplayOnly** module role and the **Query Snapshots for object** setup.{{% /alert %}}
+    {{% alert color="info" %}}Access from and to the long-term data storage is based on service accounts. This means that once a user can access the **Snippet_Settings**, they can access all data in the long-term storage, even if it belongs to other applications in the same environment. Any user-based authentication needs to be implemented in the runtime, for example, by using the **DisplayOnly** module role and the **Query Snapshots for object** setup.{{% /alert %}}
 
 ### 3.2 Constants {#constants}
 
@@ -101,19 +97,19 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
     *  **LogRetentionDays**: the days that the records be kept in the database
     *  **OnlyDeleteProcessedItems**: whether items should be deleted only if they are sent to the external data storage
 
-        {{% alert color="warning" %}}Setting this to **false** will lead to a gap in the audit trail in the external data storage. This is only used in combination with the **NAV_CachedSnapshot_Overview**.{{% /alert %}}
+        {{% alert color="info" %}}Setting this to **false** will lead to a gap in the audit trail in the external data storage. This is only used in combination with the **NAV_CachedSnapshot_Overview**.{{% /alert %}}
 
 *  Snapshots
     *  **IncludeHashedStrings**: whether to include attributes of type Hashed String (e.g. password fields) in the snapshots
         * **True**: Hashed Strings will be included (storing bcrypt/or other hashed value)
         * **False**: Hashed Strings will be excluded and therefore not audited
     
-        {{% alert color="info" %}}Manually encrypted (e.g. using the [Encryption](/appstore/modules/encryption/) module) Strings are not of type Hashed String and will not be affected by this setting.{{% /alert %}}
+        {{% alert color="info" %}}Manually-encrypted (e.g. using the [Encryption](/appstore/modules/encryption/) module) Strings are not the type of Hashed String and will not be affected by this setting.{{% /alert %}}
   
 * Integration
     *  Environment Name: the name of the environment, which should be unique in your audit data storage, for example, *myApp-prod*
 
-        {{% alert color="warning" %}}If two applications use the same name, the audit trail will not be able to distinguish between the two, effectively breaking the audit trail for both applications irreversibly.{{% /alert %}}
+        {{% alert color="info" %}}If two applications use the same name, the audit trail will not be able to distinguish between the two, effectively breaking the audit trail for both applications irreversibly.{{% /alert %}}
         
     *  Environment URL (optional): the URL used to identify the environment; If left empty, the Application Runtime URL is used instead. 
     *  Kafka Endpoint / Username and Password: the credentials for the kafka environment for sending the data into the long term storage
@@ -156,7 +152,7 @@ Use the formatter microflows to change how externally stored values will be disp
 | GetAttributes_ConvertDecimal | Decimal formatter |Decimal formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the decimal formatting follows the US format (period — ".") to separate an integer from its partial fractional part|
 | GetAttributes_ConvertMxIdentifier | Mendix object identifier formatter |Mendix object formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, what is displayed in a reference is `[ModuleName].[EntityName] (ObjectGUID)`. One may prefer to display (a combination of) an attribute of the said object as a reference.|
 
-For an example implementation of each display formatter, see the module **ExampleImplementation** in the [Advanced Audit Trail solution package](https://marketplace.mendix.com/link/component/120236).
+For an example implementation of each display formatter, see the **ExampleImplementation** module in the [Advanced Audit Trail solution package](https://marketplace.mendix.com/link/component/120236).
 
 ### 3.9 Getting Microflow Stack Trace (Optional)
 

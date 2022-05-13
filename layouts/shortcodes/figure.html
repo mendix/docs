@@ -1,10 +1,10 @@
 {{ $src := (.Page.Resources.GetMatch (printf "**%s*" (.Get "src"))) }}
 <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
     {{- if .Get "link" -}}
-        <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+        <a href="{{ .Get "link" }}" target="_blank"{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
     <!-- NK - added automatic insertion of link parameter so image can be opened in new tab on click -->
     {{- else -}}
-        <a href="{{ .Get "src" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+        <a href="{{ .Get "src" }}" target="_blank"{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
     {{- end }}
     <img src="{{ if $src }}{{ $src.RelPermalink }}{{ else }}{{ .Get "src" }}{{ end }}" 
          {{- if or (.Get "alt") (.Get "caption") }}

@@ -36,8 +36,8 @@ Before starting this how-to, make sure you have completed the following prerequi
 There are three ways to install a Marketplace component:
 
 * [Download]( #downloading) the component from the Marketplace within Studio Pro – this works for all types of marketplace components, except [app services](/appstore/app-services/)
-* [Import](#import) the component from the **App Explorer** – this works for [connectors](/appstore/connectors/), [modules](/appstore/modules/), and [app services](/appstore/app-services/)
-* [Manually add](#add) the component into the app directory – this only works for [widgets](/appstore/widgets/)
+* [Import](#import) the component from the **App Explorer** – this works for [connectors](/appstore/connectors/), [modules](/appstore/modules/) (including [add-on and solution modules](/refguide/consume-add-on-modules-and-solutions/)), and [app services](/appstore/app-services/)
+* [Manually add](#add) the component into the app directory – this only works for [widgets](/appstore/widgets/) and [add-on modules](/refguide/consume-add-on-modules-and-solutions/)
 
 ### 3.1 Downloading Content from the Marketplace Within Studio Pro {#downloading}
 
@@ -89,7 +89,7 @@ There are three ways to install a Marketplace component:
 
 ### 3.2 Importing Content from the App Explorer {#import}
 
-{{% alert color="info" %}}This procedure works for [connectors](/appstore/connectors/), [modules](/appstore/modules/), and [app services](/appstore/app-services/).{{% /alert %}}
+{{% alert color="info" %}}This procedure works for [connectors](/appstore/connectors/), [modules](/appstore/modules/) (including [add-on and solution modules](/refguide/consume-add-on-modules-and-solutions/)), and [app services](/appstore/app-services/).{{% /alert %}}
 
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and sign in with your Mendix credentials.
 2. **Search** the component and open the component page.
@@ -121,7 +121,7 @@ You can find the imported module or connector in the **App Explorer**.
 
 ### 3.3 Manually Adding Content into the App Directory {#add}
 
-{{% alert color="info" %}}This procedure only works for [widgets](/appstore/widgets/).{{% /alert %}}
+{{% alert color="info" %}}This procedure only works for [widgets](/appstore/widgets/) and [add-on modules](/refguide/consume-add-on-modules-and-solutions/).{{% /alert %}}
 
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and sign in with your Mendix credentials.
 2. **Search** the component to find the component.
@@ -274,7 +274,7 @@ The theme is removed from your app.
 ## 6 Read More
 
 * [Marketplace Overview](/appstore/general/app-store-overview/)
-* [Importing and Exporting Apps, Modules, Widgets, and Module Documents](/refguide/import-and-export/)
+* [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/)
 * [How to Share Marketplace Content](/appstore/general/share-app-store-content/)
 * [Marketplace Content Support](/appstore/general/app-store-content-support/)
 * [Properties Common in the Page Editor](/refguide/common-widget-properties/)

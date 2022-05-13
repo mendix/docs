@@ -46,37 +46,34 @@ To help us maintain the high quality of content available on the Marketplace, we
 
 ### 4.1 OSB API Compatibility for Content
 
-Prior to uploading your product in the public Mendix Marketplace, there are certain technical requirements that need to be considered in order to establish a successful end-to-end flow between end-users and you as a content provider.
+Prior to uploading your component in the public Mendix Marketplace, you need to consider certain technical requirements in order to establish a successful end-to-end flow between you as the content provider and your end-users.
 
 For non-downloadable components (for example, app services), Mendix requires a service broker configuration during the service development. This configuration handles such processes as the following: 
 
 * Mapping required pricing plans with service feature limits
-* Allowing for the provisioning of your service to customers
-* Granting access to your service to customers by generating and using access keys
-* Getting the consumption usage details of your customers
-* Providing usage insights to customers on their consumption
-* Allowing for controlling the consumption as part of the defined plan
+* Enabling the provisioning of your service to end-users
+* Granting access to your service to end-users by generating and using access keys
+* Getting the consumption usage details of your end-users
+* Providing usage insights to end-users on their consumption
+* Enabling consumption control as part of a defined plan
 
 This section explains what the service broker is, what the technical requirements are, and how you as a service provider can configure the service broker.
 
-
-
-
 #### 4.1.1 Creating the Service Broker
 
-Service broker is set of API endpoints based on OSB specification, which can be used to provision, gain access to and manage service offerings.
-The service broker will help service providers to expose their services and define plans to users.
+The service broker is a set of API endpoints based on OSB specification that can be used to provision, gain access to, and manage service offerings. The service broker helps service providers expose their services and define plans for end-users.
 
-All the service brokers should follow Open Service Broker API (v2.14) as a Standard HTTP(S) interface.
-Below you can find the API’s that platforms consume from any Service Broker.
+Each service broker should follow the Open Service Broker API (v2.14) as a Standard HTTP(S) interface.
 
-**Catalog Management Implementation**
+The sections below present the APIs that platforms consume from a service broker.
+
+##### 4.1.1.1 Catalog Management Implementation
 
 * Catalog Management contains various Service Offerings and Service Plans with some additional parameters. For implementing Catalog Management, service broker should create catalog API for onboarding broker services and plans to platform. 
 * Request details:  `GET /v2/catalog`
         Below is the sample catalog response
-        
-	
+
+```
         {"services": [{
                                 "id": "test-id",
                                 "name": "test-name",
@@ -96,8 +93,9 @@ Below you can find the API’s that platforms consume from any Service Broker.
                                                         "metric_reported": true,
                                                         "unit_of_measure": "GB"
                                                 }]}}]}
+```
 
-**Synchronous and Asynchronous Operation**
+##### 4.1.1.2 Synchronous and Asynchronous Operation
 
 * Support for synchronous and asynchronous response operations may vary by Service Offering, even by Service Plan. 
 * Synchronous: To execute a request synchronously, the Service Broker need only return the usual status codes: `201 Created` for provision and bind, and `200 OK` for update, unbind.
@@ -105,7 +103,7 @@ Below you can find the API’s that platforms consume from any Service Broker.
 
 Note: Document for reference of Synchronous and Asynchronous. Resource Management Platform supports Asynchronous and Synchronous Operations for Provisioning Management, and only support Synchronous for Binding Creations.
 
-**Provisioning Management**
+##### 4.1.1.3 Provisioning Management
 
 Create Service Instance:
 * Provisioning management is mainly helpful for Instance Provision. Instance provisioning will be done using Service Id and Plan Id. For every Instance Provision request the instance id should be generated uniquely. 
@@ -127,7 +125,7 @@ Fetch Service Instance:
 
 Note: Sample Request, Route, Parameters and Response for Fetching Service Instance.
 
-**Binding Management**
+##### 4.1.1.4 Binding Management
 
 Binding Creation:
 * This End point is dependent on how the parameters are defined in Service catalog. If bindable is declared as true for a service or plan in catalog endpoint, then brokers must implement Service Bindings. 
@@ -142,7 +140,7 @@ Fetching a Service Binding:
 
 Note: Request, Route, Parameters and Response for Fetching a service Bindings.
 
-**Deprovisioning**
+##### 4.1.1.5 Deprovisioning
 
 Instance Delete:
 * Deprovisioning API is helpful for deleting any Service instance from broker. it MUST delete any resources it created during the provision. Usually this means that all resources are immediately reclaimed for future provisions.
@@ -150,7 +148,7 @@ Instance Delete:
 
 Note: Sample Request, Route and Response for Deprovision of Instance.
 
-**Unbinding**
+##### 4.1.1.6 Unbinding
 
 Binding Delete:
 * When a Service Broker receives an unbind request from a Platform, it MUST delete any resources associated with the binding. In the case where credentials were generated, this might result in requests to the Service Instance failing to authenticate.
@@ -171,7 +169,7 @@ Template *provides skeleton* for following Service Broker API implementation:
 * Deleting bindings between a service instance and a client application
 * Deprovisioning (deleting) service instances
 
-**How to create Service broker using skeleton**
+##### 4.1.2.1 How to create Service broker using skeleton
 
 *Clone this repository*
 * Use following command to clone this repository
@@ -183,7 +181,7 @@ Note: For Service Specific Implementation user need to update code between `// B
   Catalog management is about defining service and plan.
   Here update the service and plan details:
 
-![](https://paper-attachments.dropbox.com/s_EE9C13CEAA495AEBCD14B970B275A2C1ACA57844CCA1E0AC2DF19A844D0F4DF0_1651059241742_image.png)
+{{< figure src="/attachments/appstore/creating-content/prepare/creating1.png" >}}
 
 *Instance Service Implementation*
 
@@ -191,7 +189,7 @@ Note: For Service Specific Implementation user need to update code between `// B
 
   Navigate to InstanceService.java and notice method implementation for service instance lifecycle such as create instance, update instance, delete instance etc. For example, `createServiceInstance` method to provision service instance
 
-![](https://paper-attachments.dropbox.com/s_EE9C13CEAA495AEBCD14B970B275A2C1ACA57844CCA1E0AC2DF19A844D0F4DF0_1651058770926_image.png)
+{{< figure src="/attachments/appstore/creating-content/prepare/creating2.png" >}}
 
   For mono details please refer Mono.
   Similarly, there are following methods to manage lifecycle on instance:
@@ -200,14 +198,15 @@ Note: For Service Specific Implementation user need to update code between `// B
 * getServiceInstance - to  retrieve the details of the specified service instance
 * getLastOperation - determine the status of the operation in progress respectively.
 
-**Service Instance Binding Implementation**
+##### 4.1.2.2 Service Instance Binding Implementation
+
 Service Binding - Represents the request to use a Service Instance. Service Bindings will often contain the credentials that can then be used to communicate with the Service Instance.
 
 Navigate to InstanceBindingService.java and notice method implementation for Service Bindings lifecycle such as create binding, delete bindings etc.
 
 For example, `createServiceInstanceBinding` method to create a binding for provisioned service instance
         
-![](https://paper-attachments.dropbox.com/s_EE9C13CEAA495AEBCD14B970B275A2C1ACA57844CCA1E0AC2DF19A844D0F4DF0_1651058902556_image.png)
+{{< figure src="/attachments/appstore/creating-content/prepare/binding.png" >}}
 
 Similarly, there are following methods related to service bindings such as
 * deleteServiceInstanceBinding - delete any binding  credentials

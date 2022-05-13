@@ -3,6 +3,8 @@ title: Offline Troubleshooting
 url: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/troubleshooting/
 parent: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/
 weight: 50
+description: "Describes how to troubleshoot synchronization issues and optimize app performance."
+tags: ["offline", "offline-first"]
 ---
 
 ## Synchronization

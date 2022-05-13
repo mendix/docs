@@ -3,6 +3,8 @@ title: Offline Best Practices
 url: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/
 parent: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/
 weight: 30
+description: "Describes how to make secure, high-performing offline-first apps."
+tags: ["offline", "offline-first"]
 ---
 
 TODO: Merge 4.2 with Generic best practices (or create a new section for Microflow best practices)

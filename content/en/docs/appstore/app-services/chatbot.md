@@ -26,7 +26,7 @@ In most cases, you will only need what is contained in the **Chatbot** > **USE_M
 
 ### 1.1 Typical Use Cases
 
-You can use this app service to build a chatbot app that can make human-like conversations with users via text messages. You can also customize these chatbot intent actions in your Mendix app.
+You can use this app service to build a chatbot app that can make human-like conversations with users via text messages or audio. You can also customize these chatbot intent actions in your Mendix app.
 
 ### 1.2 Features
 
@@ -34,8 +34,8 @@ This app service enables doing the following:
 
 * Create a chatbot app to make human-like conversations with users via text messages in UI
 * Support customizing chatbot intent actions
-* Easily add AI that understands intent and automates actions across many languages
-* Design and deploy omnichannel conversational AI in drag and drop
+* Easily add AI that understands users' intents and automates actions across many languages
+* Design and deploy omnichannel conversational AI with drag and drop
 
 ### 1.3 Prerequisites
 
@@ -62,9 +62,9 @@ A trial gives everyone in your company one-month access to the app service. The 
 3. Select the check box to agree to the **Terms & Conditions**.
 4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used. 
-6. Click the link in the email to go to the Marketplace [Subscriptions](https://docs.mendix.com/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
-7. Click **Chatbot** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
+6. Click the link in the email to go to the [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) page and log in there. This page shows all the products that you have trials for.
+7. Click **Chatbot** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. Later you will need to [configure the license token](/#configure-license-token) in your app.
 
 #### 2.1.2 Subscribing to the App Service
 
@@ -75,9 +75,9 @@ A trial gives everyone in your company one-month access to the app service. The 
 3. Select your subscription plan.
 4. Fill in [Technical Contact](https://docs.mendix.com/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Contact will receive an email that says the app service is ready to be used. 
-6. Click the link in the email to go to the Marketplace [Subscriptions](https://docs.mendix.com/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+6. Click the link in the email to go to the [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
 7. Click **Chatbot** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.Save the license token somewhere safe. Later you will need to [configure the license token](/#configure-license-token) in your app.
 
 ### 2.2 Installing the Component in Your App
 
@@ -92,16 +92,14 @@ A trial gives everyone in your company one-month access to the app service. The 
 
 #### 3.1.1 BotContext
 
-{{% todo %}}Check the description{{% /todo %}}
-
-The **BotContext** is a context entity which captures all input and output info for the Chatbot widget. The context is uniquely identified via its bot name attribute.
+The **BotContext** is a context entity which captures all input and output info for the Chatbot widget. The context is uniquely identified by the bot name defined in the [Create Bot Context](#createbotcontext) activity .
 
 {{< figure src="/attachments/appstore/app-services/chatbot/botcontext.png" >}}
 
 | Attribute        | Data Type | Description|
 | ---------------- | ---- | -----------|
 | `Uid`   | String | The unique identifier of the bot context.  |
-| `LocaleId` | Enumeration | The enumeration to gets or sets the bot locale. |
+| `LocaleId` | Enumeration | The enumeration to get or set the bot locale. |
 
 #### 3.1.2 BotConfig
 
@@ -113,8 +111,8 @@ The **BotConfig** is a read-only entity that shows the context of a bot which pe
 | ---------------- | ---- | -----------|
 | `Name`   | String | The name of the bot.  |
 | `Status` | Enumeration | The status of the bot. |
-| `Tag`    | String | The underlying cloud identifier, internal use only. |
-| `Hash`   | String | The hash string to identify if bot configuration has modified. |
+| `Tag`    | String | The underlying cloud identifier, internal-use only. |
+| `Hash`   | String | The hash string to identify if bot configuration has been modified. |
 
 #### 3.1.3 LanguageConfig
 
@@ -128,7 +126,7 @@ The **LanguageConfig** is a read-only entity that shows the language configurati
 | `VoiceId` | String | The UUID of the voice object. |
 | `Status` | Enumeration | The status of the bot. |
 | `Tag`    | String | The underlying cloud identifier, internal-use only. |
-| `Hash`   | String | The hash string to identify if bot configuration has modified. |
+| `Hash`   | String | The hash string to identify if bot configuration has been modified. |
 
 #### 3.1.4 SlotArgument
 
@@ -143,7 +141,7 @@ The **SlotArgument** is the entity that captures the user input value of slots f
 
 #### 3.1.5 TestBotContext
 
-The **TestBotContext** is the entity that shows configuration of the test bot context.
+The **TestBotContext** is the entity that shows the configuration of the test bot context.
 
 {{< figure src="/attachments/appstore/app-services/chatbot/testbotcontext.png" >}}
 
@@ -160,7 +158,7 @@ The **ClientConfig** is the entity that shows the user data configurations.
 | Attribute        | Data Type | Description|
 | ---------------- | ---- | -----------|
 | `BotName`   | String | The name of the bot.    |
-| `SelectedLanguageLocale` | Enumeration | The selected language locale of target bot. |
+| `SelectedLanguageLocale` | Enumeration | The selected language locale of the target bot. |
 
 
 ### 3.2 Constants {#constants}
@@ -183,7 +181,7 @@ The **StartService** microflow is a Java action which starts the Chatbot service
 
 #### 3.3.2 GetSlotArgument {#getslotargument}
 
-The **GetSlotArgument** microflow takes **botContext** object and **slotName** as the input parameters to extract the slot argument from provided **botContext**.
+The **GetSlotArgument** microflow takes **botContext** object and **slotName** as the input parameters to extract the slot argument from the provided **botContext**.
 
 {{< figure src="/attachments/appstore/app-services/chatbot/getslotargument.png" >}}
 
@@ -191,7 +189,7 @@ The **GetSlotArgument** microflow takes **botContext** object and **slotName** a
 
 #### 3.4.1 CreateBotContext {#createbotcontext}
 
-The **CreateBotContext** Java action takes **entityType** and **botName** as input parameters. It creates bot and its associated context given the bot name and bot description. You could pass a microflow to initialize the context. 
+The **CreateBotContext** Java action takes **entityType** and **botName** as the input parameters. It creates bot and its associated context given the bot name and bot description. You could pass a microflow to initialize the context. {{% todo %}}Check the description{{% /todo %}}
 
 ### 3.5 Enumerations {#enumerations}
 
@@ -302,21 +300,21 @@ The **AddLanguageMethod** is an enumeration that incorporates all the options to
 
 #### 3.5.1 Chatbot {#chatbot}
 
-The core widget required is the **Chatbot** widget. You can make the following settings for the **Chatbot** widget:
+The core widget required is the **Chatbot** widget. You can configure the following settings for the **Chatbot** widget:
 
 * **Context** tab
   * **Bot Context** – the current position of the bot that defines its possibilities and options, which changes every time the bot moves along the story and opens newly possible interactions as well as closes the previous ones
     * **Bot Context Uid** – the unique identifier for bot context
      * **Locale** – the active locale constant of the bot
-     * **Chatbot Mode** – the working mode for chatbot, which works either on text or audio
+     * **Chatbot Mode** – the working mode for chatbot, which works in either text or audio
     
   * **Intents** – the intention behind each message that the chatbot receives, namely, what the user wants to get out of the interaction (for example, when a user says "I need new shoes", their intent is to order new shoes)
     * **Intent actions** – the action lists of user intent
-         * New – creates a new intent action with the following settings:
+         * **New** – creates a new intent action with the following settings:
              * **Name** – the name of intent
              * **Dialog action** – the action that is executed at every turn of the conversations; used to initialize values or validate user input
              * **Fulfillment action** – the action that is invoked after slot elicitation and confirmation; used to fullfill your intent
-             * **Failure** – the action that is invoked in case of intent failure
+             * **Failure** – the action that is invoked in case of an intent failure
          * **Delete** – deletes the selected intent action
          * **Edit** – edits the selected intent action
          * **Move up** – moves the selected intent action up in the list
@@ -325,14 +323,14 @@ The core widget required is the **Chatbot** widget. You can make the following s
     
   * **Options** – the setting options for chatbot conversational UI/UX
     * **Chatbot Mode**
-        * **Text**(default) – users can interact with the chatbot using text
+        * **Text **(default) – users can interact with the chatbot in text
     
-        * **Audio** – users can interact with the chatbot using audio
+        * **Audio** – users can interact with the chatbot in audio
     
      * **Use toggle button**
         * **Yes** (default) – a toggle button is available to show or hide chat panel
     
-        * **No** (default) –  no toggle button is available; the chat panel always available
+        * **No** (default) – no toggle button is available; the chat panel always available
     
      * **Show inspection panel**
        * **True** – a flag is available to toggle the display of the inspection panel
@@ -340,14 +338,14 @@ The core widget required is the **Chatbot** widget. You can make the following s
     
   
 * **Events** tab
-  * **On ready** – by binding a String attribute to the **Is ready** property, you can set this property to verify if the current bot is ready for conversing.
+  * **On ready** – By binding a String attribute to the **Is ready** property, you can set this property to verify if the current bot is ready for conversing.
      * **Is ready** – a flag indicating if the current bot is ready for conversing
      * **Action** – the action triggered when bot is ready
   * **On error** – By binding a String attribute to the **Error** property, you can obtain the error message raised by the back-end service and set a custom action that is executed when an error occurs.
      * **Error** – sets a String attribute as the error message
      * **Action** – sets which action is executed when an error occurs
 
-### 3.6 Configuring the LicenseToken {#configure-license-token}
+### 3.6 Configuring the License Token {#configure-license-token}
 
 #### 3.6.1 For an App Run Locally or Deployed as a Mendix Free App
 
@@ -383,7 +381,7 @@ It can be useful to run the Chatbot service automatically when your app starts. 
 
 1. In the **App Explorer**, click **Settings**. The [App Settings](/refguide/project-settings) dialog box opens.
 2. Go to the **Runtime** tab. 
-3. Set **After startup** to the **StartService** microflow from the **Chatbot** > **USE_ME** folder or a microflow that calls the **StartService** microflow.
+3. Set **After startup** to the **StartService** microflow from the **Chatbot** > **USE_ME** folder, or to a microflow that calls the **StartService** microflow.
 
 ### 4.2 Configuring Chatbot Design Time in Your Browser {#configure-chatbot-design-time}
 
@@ -400,7 +398,7 @@ You can use the **ChatbotConsole** page in a module to design bot context. To le
 1. Go to the **Chatbot Console** page in your browser as the administrator.
 2. Click **Create bot** on the page to start designing your own chatbot.
 3. Configure the bot settings with a bot name and a description.
-4. Add languages with the preset bot template **OrderFlowers**.
+4. Add languages with the pre-set bot template **OrderFlowers**.
 5. Add **Language details** and **Voice**.
 6. On the lower-right corner, click **Test**.
 7. Navigate to the **Bot Conversation** page to see if the whole bot workflow works.  
@@ -415,21 +413,20 @@ You can use the **ChatbotConsole** page in a module to design bot context. To le
 
     1. Name the microflow *CreateBotContext*.
 
-    2. Add a **Java action call** activity to the microflow, and select the Java action **CreateBotContext** from the **Chatbot** module.
+    2. Add a **Java action call** activity to the microflow, and configure the settings as follows:
 
-    3. Double-click the Java action call activity. The **Create Bot Context** dialog box opens.
+       1. Double-click the **Java action call** activity  and set the **Java action** to **CreateBotContext** from the **Chatbot** > **USE_ME** folder.
+       2. For the **Entity type**, select **BotContext** from the **Chatbot** module.
+       3. For **Bot name**, select **MendixSampleBot** from the bot designed in the **Chatbot Console** page.
+       4. Click **OK** to save the changes.
 
-    4. For the **Entity type**, select **BotContext** from the **Chatbot** module.
+    3. Add a **Change object** activity to the microflow, and configure the settings as follows:
 
-    5. For **Bot name**, select **MendixSampleBot** from the bot designed in the **Chatbot Console** page.
-
-    6. Add a **Change object** activity to the microflow.
-
-    7. Set **Input Object** as **botContext** from the Java action call activity.
-
-    8. Set the member **OrderFlowerIntent** as **OrderFlowers**, and set the member **LocaleId** as **Chatbot.Locale.en_US**.
-
-    9. Right-click the Java action call activity and select **Set $botContext as return value** in the pop-up menu.
+       1. Set  **Object** as **botContext** from the Java action call activity.
+       2. Set the member **OrderFlowerIntent** to **OrderFlowers**.
+       3. Set the member **LocaleId** to **Chatbot.Locale.en_US**.
+       4. Click **OK** to save the changes.
+       5. Right-click the activity and select **Set $botContext as return value** in the pop-up menu.
 
        {{< figure src="/attachments/appstore/app-services/chatbot/createbotcontext-microflow.png" >}}
 
@@ -441,54 +438,53 @@ You can use the **ChatbotConsole** page in a module to design bot context. To le
 
     3. Double-click the **Parameter** to set **BotContext** as **Data type** of output.
 
-    4. Add a **Microflow call** activity.
+    4. Add a **Microflow call** activity, and configure the settings as follows:
 
-    5. Set **Microflow** to **GetSlotArgument** from **Chatbot** module.
+       1. Set **Microflow** to **GetSlotArgument** from **Chatbot** module.
+       2. Change the parameter **botContext** to **$botContext**, and **slotName** to **FlowerType**.
+       3. Click **OK** to save the changes.
 
-    6. Change the parameter **botContext** to **$botContext**, and **slotName** to **FlowerType**.
+    5. Add the second **Microflow call** activity, and configure the settings as follows:
 
-    7. Add the second **Microflow call** activity.
+       1. Set **Microflow** to **GetSlotArgument** from Chatbot module.
+       2. Change the parameter **botContext** to **$botContext**, and **slotName** to **PickupTime**.
+       3. Click **OK** to save the changes.
 
-    8. Set **Microflow** to **GetSlotArgument** from Chatbot module.
+    6. Add the third **Microflow call** activity, and configure the settings as follows:
 
-    9. Change the parameter **botContext** to **$botContext**, and **slotName** to **PickupTime**.
+       1. Set **Microflow** to **GetSlotArgument** from **Chatbot** module.
+       2. Change the parameter **botContext** to **$botContext**, and **slotName** as **PickupDate**.
+       3. Click **OK** to save the changes.
 
-    10. Add the third **Microflow call** activity.
+    7. Add a **Log message** activity to print all the informations.
 
-    11. Set **Microflow** to **GetSlotArgument** from **Chatbot** module.
-
-    12. Change the parameter **botContext** to **$botContext**, and **slotName** as **PickupDate**.
-
-    13. Add a log message to print all the informations.
-
-        {{< figure src="/attachments/appstore/app-services/chatbot/orderflower-microflow.png" >}}
+       {{< figure src="/attachments/appstore/app-services/chatbot/orderflower-microflow.png" >}}
 
 4. Create a new blank page and name it **Chatbot**.
 
-5. Add a **Data View** widget in the page.
+5. Add a **Data View** widget in the page, and configure the settings as follows:
 
-6. Configure the settings of the **Data View** widget as follows:
     1. Double-click the **Data View** widget to open the **Edit Data View** dialog box.
 
     2. Set the **Type** of **Data source** to **Microflow**.
 
     3. Set the **Microflow** to **CreateBotContext** that you just created.
 
-7. Inside the **Data View** widget, add a **Chatbot** widget.
+6. Inside the **Data View** widget, add a **Chatbot** widget, and configure the settings as follows:
 
-8. Double-click the **Chatbot** widget to configuring the settings in the **Edit Chatbot** dialog box:
-    1. On the **Context** tab, click **New** to add a new intent action.
-    2. In the **Edit Intent Actions Item** dialog box, set Name to **OrderFlowerIntent**, which created in the **Chatbot Console** page. 
-    3. For **Fulfilment action**, select **Call a microflow**.
-    4. Set the **Microflow** to the **Orderflow** microflow that you created.
-    5. Click **OK** to save the changes.
-    6. For **Bot Context Uid**, select **Uid** from the object created by data view.
-    7. For **Locale**, select **LocaleId** from the object created by data view. 
-    8. Click **OK** to save the changes.
+    1. Double-click the **Chatbot** widget to open the **Edit Chatbot** dialog box:
+    2. On the **Context** tab, click **New** to add a new intent action.
+    3. In the **Edit Intent Actions Item** dialog box, set **Name** to **OrderFlowerIntent**, which was created in the **Chatbot Console** page. 
+    4. Set **Fulfilment action** to **Call a microflow**.
+    5. Set the **Microflow** to the **Orderflow** microflow that you created.
+    6. Click **OK** to save the changes.
+    7. For **Bot Context Uid**, select **Uid** from the object created by data view.
+    8. For **Locale**, select **LocaleId** from the object created by data view. 
+    9. Click **OK** to save the changes.
 
-9. Run your app locally. 
+7. Run your app locally. 
 
-10. Navigate to the bot conversation page and you can start your conversation with chatbot.
+8. Navigate to the bot conversation page and you can start your conversation with chatbot.
 
 ### 4.5 Handling Chatbot Events
 
@@ -510,14 +506,16 @@ For example, you can set up the **Action** to make the app show a pop-up window 
 
 #### 4.5.2 On Ready {#on-ready}
 
-By binding an attribute to the **Is ready** event, the app will trigger an action event when bot is ready.
+By binding an attribute to the **Is ready** event, the app will trigger an action event when the bot is ready.
 
-**Is ready** takes a String attribute. You can define an attribute and bind this attribute to **Is ready**. In an app, when chatbot is runnning, a flag indicates if the current bot is ready for conversing. The app can trigger an action when bot is ready. You can select the custom **Action** from a list of actions.
+**Is ready** takes a String attribute. You can define an attribute and bind this attribute to **Is ready**. In an app, when chatbot is runnning, a flag indicates if the current bot is ready for conversing. The app can trigger an action when the bot is ready. You can select the custom **Action** from a list of actions.
 
 ### 4.6 Checking Statistics on the Usage Dashboard {#check-usage}
 
 The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
 1. Log into the Marketplace.
-2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+2. Go to **My Marketplace** and then do as follows:
+   * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+   * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
 3. Click **Chatbot** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.

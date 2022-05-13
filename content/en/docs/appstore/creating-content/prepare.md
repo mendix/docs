@@ -69,113 +69,118 @@ The sections below present the APIs that platforms consume from a service broker
 
 ##### 4.1.1.1 Catalog Management Implementation
 
-* Catalog Management contains various Service Offerings and Service Plans with some additional parameters. For implementing Catalog Management, service broker should create catalog API for onboarding broker services and plans to platform. 
-* Request details:  `GET /v2/catalog`
-        Below is the sample catalog response
+The Catalog Management API contains various service offerings and service plans with some additional parameters. For implementing Catalog Management, the service broker should create a catalog API for onboarding the broker services and plans to the platform.
+
+Request details: `GET /v2/catalog`
+
+This is a sample catalog response:
 
 ```
-        {"services": [{
-                                "id": "test-id",
-                                "name": "test-name",
+{"services": [{
+        "id": "test-id",
+        "name": "test-name",
+        "description": "test-description",
+        "bindable": true,
+        "bindings_retrievable": false,
+        "plans": [{
+                                "id": "test-plan-id",
+                                "name": "test-plan-name",
                                 "description": "test-description",
-                                "bindable": true,
-                                "bindings_retrievable": false,
-                                "plans": [{
-                                                "id": "test-plan-id",
-                                                "name": "test-plan-name",
-                                                "description": "test-description",
-                                                "free": false }],
-                                "metadata": {
-                                        "features": [{
-                                                        "id": "test-feature-id",
-                                                        "name": "test-feature-name",
-                                                        "type": "number",
-                                                        "metric_reported": true,
-                                                        "unit_of_measure": "GB"
+                                "free": false }],
+         "metadata": {
+                                "features": [{
+                                        "id": "test-feature-id",
+                                        "name": "test-feature-name",
+                                        "type": "number",
+                                        "metric_reported": true,
+                                        "unit_of_measure": "GB"
                                                 }]}}]}
 ```
 
-##### 4.1.1.2 Synchronous and Asynchronous Operation
+##### 4.1.1.2 Synchronous & Asynchronous Operation
 
-* Support for synchronous and asynchronous response operations may vary by Service Offering, even by Service Plan. 
-* Synchronous: To execute a request synchronously, the Service Broker need only return the usual status codes: `201 Created` for provision and bind, and `200 OK` for update, unbind.
-* Asynchronous: If the service should be in asynchronous, then the query parameter `accepts_incomplete=true` MUST be included the request.Service Broker request MUST return the asynchronous response with `202 Accepted`.
+Support for synchronous and asynchronous response operations may vary by service offering (or even by service plan).
 
-Note: Document for reference of Synchronous and Asynchronous. Resource Management Platform supports Asynchronous and Synchronous Operations for Provisioning Management, and only support Synchronous for Binding Creations.
+To execute a request synchronously, the service broker need only return the usual status codes: `201 Created` for provision and bind, and `200 OK` for update or unbind.
+
+If the service should be asynchronous, then the query parameter `accepts_incomplete=true`must be included in the request. The service broker request must return the asynchronous response with `202 Accepted`.
+
+{{% alert color="warning" %}}
+The resource management platform supports synchronous and asynchronous operations for provisioning management, but only supports synchronous for binding creations.
+{{% /alert %}}
 
 ##### 4.1.1.3 Provisioning Management
 
-Create Service Instance:
-* Provisioning management is mainly helpful for Instance Provision. Instance provisioning will be done using Service Id and Plan Id. For every Instance Provision request the instance id should be generated uniquely. 
-* As Provisioning request contains service and plan id, Instance provision can be synchronous or asynchronous call. 
-* For all the asynchronous call, broker will send the status as In-progress, once completion of successful process, the status is updated at broker side. Platforms will connect with Service Brokers for last instance operation status using Last Operation API. 
-* Request Details  `PUT /v2/``service_instances/:instance_id`  
+When creating a service instance, consider these guidelines:
 
-Note: Sample Request, Route, parameters and Response for Instance Provisioning. 
+* Provisioning management is mainly helpful for instance provision. Instance provisioning is done using the service ID and plan ID. For every Instance of the provision request, the instance ID should be generated uniquely. 
+* As the provisioning request contains the service ID and plan ID, the instance provision can be a synchronous or an asynchronous call. 
+* For each asynchronous call, the broker sends the status as in-progress. Once the process is completed successfully, the status is updated on the broker side. Platforms will connect with service brokers for the last instance operation status using the Last Operation API. 
+* Request details: `PUT /v2/``service_instances/:instance_id`.
+* Note the sample request, route, parameters, and response
 
-Update of a Service Instance:
-* Users can enable upgrade or downgrade their Service instance to other plans by modifying parameter (plan_updateable: true) in it’s service catalog.
-* Request Details  `PATCH /v2/``service_instances/:instance_id`  
+When updating a service instance, consider these guidelines 
 
-Note: Sample Request, Route, Parameters and Response for Updating Service Instance.
+* You can upgrade or downgrade your service instance to other plans by modifying the parameter `plan_updateable: true` in the service catalog.
+* Request details: `PATCH /v2/``service_instances/:instance_id`.
+* Note the sample request, route, parameters, and response
 
-Fetch Service Instance:
-* If service catalog endpoint response contains instance_retrievable as true, then brokers must support this endpoint for all plans of the services. If instance_retrievable is mentioned as false, then Platforms should not attempts to call the endpoint from broker.
-* Request Details  `GET /v2/``service_instances/:instance_id`  
+When fetching a service instance, consider these guidelines:
 
-Note: Sample Request, Route, Parameters and Response for Fetching Service Instance.
+* If the service catalog endpoint response contains `instance_retrievable` as `true`, brokers must support this endpoint for all plans of the services. If `instance_retrievable` is `false`, then the platforms should not attempt to call the endpoint from the broker.
+* Request details: `GET /v2/``service_instances/:instance_id`.
+* Note the sample request, route, parameters, and response
 
 ##### 4.1.1.4 Binding Management
 
-Binding Creation:
-* This End point is dependent on how the parameters are defined in Service catalog. If bindable is declared as true for a service or plan in catalog endpoint, then brokers must implement Service Bindings. 
-* Binding creation API’s can be in synchronous or asynchronous calls based on services/plans set by the Service Brokers.
-* Request Details  `PUT /v2/``service_instances/:instance_id/service_bindings/:binding_id`  
+When creating a service binding, consider these guidelines:
 
-Note: Sample Request, Route, Parameters and Response for Binding Creation.
+* The endpoint is dependent on how the parameters are defined in the service catalog. If `bindable` is declared as `true` for a service or plan in the catalog endpoint, then the brokers must implement the service bindings. 
+* The binding creation APIs can be in synchronous or asynchronous calls based on the services and plans set by the service brokers.
+* Request details: `PUT /v2/``service_instances/:instance_id/service_bindings/:binding_id`. 
+* Note the sample request, route, parameters, and response
 
-Fetching a Service Binding:
-* Service brokers must support this end point if bindings_retrievable is declared as true in service catalog endpoint
-* Request Details  `GET /v2/``service_instances/:instance_id/service_bindings/:binding_id`  
+When fetching a binding, consider these guidelines:
 
-Note: Request, Route, Parameters and Response for Fetching a service Bindings.
+* Service brokers must support the endpoint if `bindings_retrievable` is declared as `true` in the service catalog endpoint.
+* Request details: `GET /v2/``service_instances/:instance_id/service_bindings/:binding_id`.
+* Note the sample request, route, parameters, and response
 
 ##### 4.1.1.5 Deprovisioning
 
-Instance Delete:
-* Deprovisioning API is helpful for deleting any Service instance from broker. it MUST delete any resources it created during the provision. Usually this means that all resources are immediately reclaimed for future provisions.
-* Request Details  `DELETE /v2/``service_instances/:instance_id`  
+When deprovisioning/deleting an instance, consider these guidelines:
 
-Note: Sample Request, Route and Response for Deprovision of Instance.
+* The deprovisioning API is helpful for deleting any service instance from the broker. THis must delete any resources created during the provisioning. Usually, this means that all resources are immediately reclaimed for future provisions.
+* Request details: `DELETE /v2/``service_instances/:instance_id`.
+* Note the sample request, route, and response
 
 ##### 4.1.1.6 Unbinding
 
-Binding Delete:
-* When a Service Broker receives an unbind request from a Platform, it MUST delete any resources associated with the binding. In the case where credentials were generated, this might result in requests to the Service Instance failing to authenticate.
-* Service Brokers that do not provide any bindable services or plans do not need to implement this endpoint.
-* Request Details  `DELETE /v2/``service_instances/:instance_id/service_bindings/:binding_id`  
+When deleting a binding, consider these guidelines:
 
-Note: Sample Request, Route and Response for Unbinding
+* When the service broker receives an unbind request from a platform, it must delete any resources associated with the binding. If credentials were generated, this might result in requests to the service instance failing to authenticate.
+* Service brokers that do not provide any bindable services or plans do not need to implement this endpoint.
+* Request details: `DELETE /v2/``service_instances/:instance_id/service_bindings/:binding_id`
+* Note the sample request, route, and response
 
 #### 4.1.2 Service Broker Template
 
-To support you in Service Broker configuration, we have created a template, which you can use together with the learning material below. This information will help you understand the configuration requirements and allow you to implement the knowledge to your service development.
+To support you in the service broker configuration, Mendix has created a template you can use together with the learning material below. This information will help you understand the configuration requirements and allow you to implement the knowledge to your service development.
 
-Template *provides skeleton* for following Service Broker API implementation:
+The template provides a skeleton for the following Service Broker API implementation:
 
-* Advertising a catalog of their service offerings and plans
+* Advertising a catalog of service offerings and plans
 * Provisioning (creating or updating) service instances
-* Creating bindings between a service instance and a client application
-* Deleting bindings between a service instance and a client application
+* Creating and deleting bindings between a service instance and a client application
 * Deprovisioning (deleting) service instances
 
-##### 4.1.2.1 How to create Service broker using skeleton
+##### 4.1.2.1 Creating a Service Broker Using the Template
 
-*Clone this repository*
-* Use following command to clone this repository
-    git@ssh.gitlab.rnd.mendix.com:appservices/appserviceresourcemanager/sample-service-broker/service-broker-skeleton.git
+Follow these steps in the template: 
 
-Note: For Service Specific Implementation user need to update code between `// BEGIN USER CODE` and `// END USER CODE`
+1. Use the following command to clone a repository: `git@ssh.gitlab.rnd.mendix.com:appservices/appserviceresourcemanager/sample-service-broker/service-broker-skeleton.git`
+
+Note: For Service Specific Implementation, you need to update code between `// BEGIN USER CODE` and `// END USER CODE`
 *Catalog Management*
 
   Catalog management is about defining service and plan.
@@ -213,6 +218,9 @@ Similarly, there are following methods related to service bindings such as
 * getServiceInstanceBinding - to retrieve the details of the specified service binding
 
 For additional assistance and an example of how to provision and bind an app to a logging service, contact *AppServices_Supplier_Team@mendix.com*.
+
+
+
 
 
 

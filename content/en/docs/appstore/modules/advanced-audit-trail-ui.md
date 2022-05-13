@@ -13,7 +13,7 @@ The [Advanced Audit Trail UI](https://marketplace.mendix.com/link/component/1202
 
 ### 1.1 Dependencies
 
-You should use this module with the [Advanced Audit Trail module](https://marketplace.mendix.com/link/component/120237).
+You should use this module with the [Advanced Audit Trail](https://marketplace.mendix.com/link/component/120237) module.
 
 ### 1.2 Solution Package
 

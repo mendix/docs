@@ -46,7 +46,7 @@ To help us maintain the high quality of content available on the Marketplace, we
 
 ### 4.1 OSB API Compatibility for Content
 
-Prior to uploading your component in the public Mendix Marketplace, you need to consider certain technical requirements in order to establish a successful end-to-end flow between you as the content provider and your end-users.
+Prior to uploading your component in the public Mendix Marketplace, you need to look at certain technical requirements in order to establish a successful end-to-end flow between you as the content provider and your end-users.
 
 For non-downloadable components (for example, app services), Mendix requires a service broker configuration during the service development. This configuration handles such processes as the following: 
 
@@ -196,29 +196,20 @@ Follow these steps in the template to learn about creating a service broker:
 	* `getServiceInstance` – to retrieve the details of the specified instance
 	* `getLastOperation` – to respectively determine the status of the operation in progress
 
-##### 4.1.2.2 Service Instance Binding Implementation
+##### 4.1.2.2 Implementing the Service Instance Binding
 
-Service Binding - Represents the request to use a Service Instance. Service Bindings will often contain the credentials that can then be used to communicate with the Service Instance.
+The service binding represents the request to use a service instance. Service bindings often contain credentials that can be used to communicate with the service instance.
 
-Navigate to InstanceBindingService.java and notice method implementation for Service Bindings lifecycle such as create binding, delete bindings etc.
-
-For example, `createServiceInstanceBinding` method to create a binding for provisioned service instance
+Navigate to `InstanceBindingService.java` and notice the method implementation for the service bindings lifecycle (such as creating binding and deleting bindings). For example, the `createServiceInstanceBinding` method is used to create a binding for the provisioned service instance.
         
 {{< figure src="/attachments/appstore/creating-content/prepare/binding.png" >}}
 
-Similarly, there are following methods related to service bindings such as
-* deleteServiceInstanceBinding - delete any binding  credentials
-* getServiceInstanceBinding - to retrieve the details of the specified service binding
+Similarly, other methods are related to service bindings, such as the following:
+
+* `deleteServiceInstanceBinding` – to delete any binding credentials
+* `getServiceInstanceBinding` – to retrieve the details of the specified service binding
 
 For additional assistance and an example of how to provision and bind an app to a logging service, contact *AppServices_Supplier_Team@mendix.com*.
-
-
-
-
-
-
-
-
 
 ### 4.2 Identity & Access Management (IAM)
 

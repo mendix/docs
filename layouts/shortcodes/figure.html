@@ -1,11 +1,11 @@
 {{ $src := (.Page.Resources.GetMatch (printf "**%s*" (.Get "src"))) }}
 <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
+    <!-- NK - adds on-click link to images, default target is in new tab/window -->
     {{- if .Get "link" -}}
-        <a href="{{ .Get "link" }}" target="_blank"{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
-    <!-- NK - added automatic insertion of link parameter so image can be opened in new tab on click -->
+        <a href="{{ .Get "link" }}"
     {{- else -}}
-        <a href="{{ .Get "src" }}" target="_blank"{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
-    {{- end }}
+        <a href="{{ .Get "src" }}"
+    {{- end }} target="{{ with .Get "target" }}{{ . }}{{ else }}_blank{{ end }}"{{ with .Get "rel" }} rel="{{ . }}"{{ end }}></a>
     <img src="{{ if $src }}{{ $src.RelPermalink }}{{ else }}{{ .Get "src" }}{{ end }}" 
          {{- if or (.Get "alt") (.Get "caption") }}
          alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
@@ -13,7 +13,7 @@
          {{- with .Get "width" }} width="{{ . }}"{{ end -}}
          {{- with .Get "height" }} height="{{ . }}"{{ end -}}
     /> <!-- Closing img tag -->
-    {{- if .Get "link" }}</a>{{ end -}}
+    </a>
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
         <figcaption>
             {{ with (.Get "title") -}}

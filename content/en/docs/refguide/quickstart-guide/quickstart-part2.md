@@ -175,4 +175,7 @@ For more information on building and deploying apps with Mendix, see [Build Nati
 
 ## 5 Read More
 
-To continue learning, go to [Mendix Academy](https://academy.mendix.com/) and choose a learning path that interests you (we recommend the [Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) for new users who are also experienced developers) or go the [Mendix Documentation](https://docs.mendix.com/) home page to learn more about the Mendix topics which interest you most.
+* [Mendix Academy](https://academy.mendix.com/) – complete learning paths to build general Mendix skills
+    * [Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) – the course we recommend for new users who are also experienced developers
+* [Mendix Documentation](https://docs.mendix.com/) – learn about the parts of Mendix which interest you most
+* [General Info](/refguide/general/) – learn more about the fundamentals of Studio Pro

@@ -9,7 +9,7 @@ tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
 
 ## 1 Introduction 
 
-Get up and running with the Mendix Platform and start developing your first app in Mendix Studio Pro. During this part of the Quickstart, you will learn the basics of the Studio Pro, handle data using the Domain Model, populate your app's pages with dynamic data, and create custom app logic using a microflow.
+Get up and running with the Mendix Platform and start developing your first app in Mendix Studio Pro. This is Part 1 of the quickstart, where you will learn the basics of the Studio Pro, handle data using the Domain Model, populate your app's pages with dynamic data, and create custom app logic using a microflow.
 
 [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. This tutorial will use Studio Pro version 9.12.1, but you can use a later version if you wish.
 
@@ -227,4 +227,9 @@ Congratulations! You successfully completed Part 1, you have your first Mendix A
 
 To continue learning, see Part 2: [Upgrade to a Native Mobile App](/refguide/quickstart-part2/).
 
-You can also go to [Mendix Academy](https://academy.mendix.com/) or [Mendix Documentation](https://docs.mendix.com/) to learn more about the Mendix topics which interest you most.
+## 6 Read More
+
+* [Mendix Academy](https://academy.mendix.com/) – complete learning paths to build general Mendix skills
+    * [Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) – the course we recommend for new users who are also experienced developers
+* [Mendix Documentation](https://docs.mendix.com/) – learn about the parts of Mendix which interest you most
+* [General Info](/refguide/general/) – learn more about the fundamentals of Studio Pro

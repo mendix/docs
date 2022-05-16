@@ -18,7 +18,9 @@ Powered by AI and OCR technologies, the [Invoice Processing](https://marketplace
 
 ### 1.2 Limitation
 
-* Currently only supports images in JPG and JPEG formats
+Currently supported file formats
+ * images in JPG, JPEG, bmp, and png formats
+ * PDF documents
 
 ### 1.3 Prerequisites
 
@@ -74,7 +76,7 @@ Before you deploy an app, you should configure the binding keys in your app as f
 
 ## 4 Usage
 
-To use the Invoice Processing app service, first you need to create a model, then create an [Import Mapping](#mapping-file) using a sample invoice. The Import Mapping defines how to map extracted data from images to an entity. After you create the Import Mapping, include the [Invoice Processing activity](#extraction-activity) into a microflow. This microflow should be set up to accept the invoice image(s), your trained model, and the Import Mapping. The microflow should extract data from the invoice images in bulk and then map the data to an entity using the Import Mapping that you created.
+To use the Invoice Processing app service, first you need to create a model, then create an [Import Mapping](#mapping-file) using a sample invoice. The Import Mapping defines how to map extracted data from images to an entity. After you create the Import Mapping, include the [Invoice Processing activity](#extraction-activity) into a microflow. This microflow should be set up to accept the list of documents (Invoice images and Invoice PDFs), your trained model, and the Import Mapping. The microflow should extract data from the Invoice files in bulk and then map the data to an entity using the Import Mapping that you created.
 
 ### 4.1 Training a Document Model {#document-model-training}
 
@@ -133,13 +135,13 @@ You need to use an [Import Mapping](/refguide/mapping-documents/#import-mappings
     
         The **Generate JSON Structure** dialog box opens.
     
-    5.  Drag the sample invoice into the box where it says **Drag & drop your image file here**. You can also click **Browse** and select the file.
+    5.  Drag the sample invoice into the box where it says **Drag & drop your file here**. You can also click **Browse** and select the file.
     
         {{< figure src="/attachments/appstore/app-services/invoice-processing/sample-extraction-dialog-box.png" alt="Sample Extraction dialog box" >}}
     
     6.  Click **Download JSON** to get the JSON structure.
     
-        {{% alert color="info" %}}As this action actually exacts data from the input samples to generate the JSON structure, the usage is counted against the allocated quota for your provisioned instance.{{% /alert %}}
+        {{% alert color="info" %}}As this action actually exacts data from the provided input sample to generate JSON structure, the usage is counted against the allocated quota for your provisioned instance.{{% /alert %}}
     
 2.  To add the JSON structure to your app, perform the following steps:
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON structure.
@@ -166,18 +168,18 @@ You need to use an [Import Mapping](/refguide/mapping-documents/#import-mappings
 
     {{< figure src="/attachments/appstore/app-services/invoice-processing/invoice-processing-microflow.png" alt="intelligent-document-microflow" >}}
 
-2.  Create a list of image that inherits from `System.Image`. Images where data are extracted should be passed as a list, as shown in the microflow above.
+2.  Create a list of documents that inherits from `System.FileDocument`. Image files and documents where data needs to be extracted from should be passed as a list, as shown in the microflow above.
 
-    {{% alert color="info" %}} The total size of the images being passed for extraction should not exceed 20 MB. If you have multiple images to extract data from, you can process them in smaller batches. {{% /alert %}}
+    {{% alert color="info" %}} The total size of the Images & documents being passed for extraction should not exceed 20 MB. If you have multiple files to extract data from, you can process them in smaller batches. {{% /alert %}}
 
-    {{% alert color="info" %}}The number of images passed as a list in the microflow and processed by the **Invoice Processing** activity will be counted against the allocated quota for your provisioned instance.{{% /alert %}}
+    {{% alert color="info" %}}The number of pages of PDF document(s) and number of images passed as a list in the microflow and processed by the **Invoice Processing** activity will be counted against the allocated quota for your provisioned instance.{{% /alert %}}
 
 3.  Double-click the **Invoice Processing** activity to open the dialog box.
 
     {{< figure src="/attachments/appstore/app-services/invoice-processing/invoice-processing-dialog-box.png" alt="Intelligent Document Service dialog box" >}}
 
-4.  Click **Edit** to enter the **Model Id** of your model.
-5. Click **Edit** to select the **Image List** which inherits from `System.Image`.
+4. Click **Edit** to enter the **Model Id** of your model.
+5. Click **Edit** to select the **Document List** which inherits from `System.FileDocument`.
 6. In the **Mapping** box, **Select** the Import Mapping that you created to define how extracted data should be mapped into an entity.
 7. Click **OK** to save the changes and close the dialog box.
 

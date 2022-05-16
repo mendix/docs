@@ -54,9 +54,9 @@ First, you need to enable workflows for your app. Do the following:
 
 ### 3.2 Creating a Workflow Using the Wizard {#wizard}
 
-The wizard helps you create the Approval Request workflow. If your workflow falls under the approval request use case, for example, approving vacation days for your employees, this is a good starting point that sets the whole app automatically for you – not only the workflow itself but also pages and navigation. 
+The wizard helps you create the Approval Request workflow. If your workflow falls under the approval request use case, for example, approving travel requests for your employees, this is a good starting point that sets the whole app automatically for you – not only the workflow itself but also pages and navigation. 
 
-To create the workflow for the vacation approval via the wizard, do the following:
+To create the workflow for the travel approval request via the wizard, do the following:
 
 1. Click the workflow icon in the left menu bar.
 
@@ -66,16 +66,16 @@ To create the workflow for the vacation approval via the wizard, do the followin
     
     For more information on what modules are, see [Domain Model](/studio/domain-models/).
     
-3. In the **Create Workflow** dialog box, set the workflow title to **Vacation Approval** and click **Start Wizard**.
+3. In the **Create Workflow** dialog box, set the workflow title to **Travel approoval** and click **Start Wizard**.
 
-4. In the **Create Request Form**, you can define input fields that will be used by a person submitting the request. For example, an employee will fill in their name, department, and desired dates when submitting their vacation request. Do the following:
-    1. Fill in *Name* in the **Label** option, leave the **Type** as string, and mark this field as required. On the right you can see the preview of the future form.
+4. In the **Create Request Form**, you can define input fields that will be used by a person submitting the request. For example, an employee will fill in their name, Date, Destination, Cost, and a Document as attached file. Do the following:
+    1. Fill in *Employee name* in the **Label** option, leave the **Type** as string, and mark this field as required. On the right you can see the preview of the future form.
     
         {{< figure src="/attachments/studio/workflows/create-request-form.jpg" alt="Create Request Form Example" >}}
     
     2. Click the plus icon to add more fields. 
     
-    3. Follow steps 4a and 4b to add the *Department* of type string, *Start Date* of type Date and Time, and *End Date* of type Date and Time. 
+    3. Follow steps 4a and 4b to add the *Date* of type Date and Time, *Destination* of type String, *Cost* of type Decimal and *Document* as type File.
     
     4. Click the **Create** button.
     
@@ -83,17 +83,16 @@ To create the workflow for the vacation approval via the wizard, do the followin
 
 The app with the workflow is set up an fully functional. 
 
-### 3.2 Testing the Workflow {#test-workflow-from-wizard}
+### 3.3 Testing the Workflow {#test-workflow-from-wizard}
 
 Now you can test your workflow in the Preview from the perspective of different user roles. 
 
-For example, users who have tasks assigned to them (Manager, Facilities roles) will see their task inbox and dashboards pages where they can manage and monitor tasks assigned to them:
+For example, users who have tasks assigned to them (Approver) will see their task inbox and dashboards pages where they can manage and monitor tasks assigned to them:
 
 {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/task-inbox.png" alt="Task Inbox" >}}
 
-The Workflow Admin role has access to the Workflow Admin Center and can monitor all workflows, can view the progress of workflows, and change the workflow settings.
+The Administrator role has access to the Workflow Admin Center and can monitor all workflows, can view the progress of workflows, and change the workflow settings.
 
-The Admin role is able to manage users.
 
 To test your workflow, you need to switch between different user roles. Follow the steps below:
 
@@ -104,14 +103,10 @@ To test your workflow, you need to switch between different user roles. Follow t
     {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/user-roles.png" alt="Demo User Role" >}}
 
 3. You can switch between different demo user roles to test the use case. Do can do the following:
-    1. Select the demo_hr user role and start the onboarding process: add a new employee on the **EmployeesToOnboard** page, and then click **Start Onboarding**:
+    1. Select the demo_user user role and submit a travel approval request: fill in the request fields on the **Submit Travel approval request** page, and then click **Submit**:
         {{< figure src="/attachments/studio-how-to/workflow-how-to-configure/demo_hr.png" alt="Start Onboarding Button" >}}
-    2. Switch to the Manager role, see a new task in the inbox, open the task, add data to it, and complete the task.
-    3. Switch to the Facilities user role and complete the process.
-
-4. Open the Workflow Admin Center.
-
-5. Open the Workflow Dashboard.
+    2. Switch to the Approver user role, see a new task in the inbox, assign the task to you, open the task, and approve the request.
+    3. Switch to the Administrator user role and open the Admin center option from the navigation bar. Open the Workflow Dashboard to see information about all workflow instances.
 
 ## 4 Advanced - How to create a workflow manually
 This how-to explains how to build a workflow manually, without using a wizard. For more information on using the wizard and creating workflows with its help, see the [Creating a Workflow Using the Wizard](/studio/workflows/#wizard) section in Workflows.

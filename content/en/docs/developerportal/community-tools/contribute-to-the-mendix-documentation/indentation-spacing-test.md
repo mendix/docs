@@ -27,6 +27,8 @@ Another paragraph here.
 
 ## 1 Indents and Spacing
 
+See [Section Spacing Tests](#spacing) for multiple examples of spacing. 
+
 ### 1.1 Indents with Four Spaces
 
 Paragraph text here.
@@ -77,7 +79,7 @@ Paragraph text here.
 3. And another item.  
     Indenting with **4** spaces and **1** or **2** trailing spaces **works**.
 
-### 1.3 Indents with Tabs and a Line Break - DO NOT USE TABS
+### 1.3 Indents with Tabs and a Line Break – DO NOT USE TABS
 
 Paragraph text here.
 
@@ -100,7 +102,7 @@ Paragraph text here.
 DO NOT USE TABS
 {{% / alert %}}
 
-### 1.4 Indents with Tabs and Trailing Spaces - DO NOT USE TABS
+### 1.4 Indents with Tabs and Trailing Spaces – DO NOT USE TABS
 
 Paragraph text here.
 
@@ -137,14 +139,14 @@ Code blocks do NOT need a line break to work. Not part of list indent.
     Code blocks do NOT need trailing spaces to be indented.
     Indents must be spaces, not tabs, otherwise a bug shows in rendering an extra '`' symbol.
     It does not matter if a code block contains special characters, like {{}}, neither if
-    - a line starts with a hyphen.
+    – a line starts with a hyphen.
     ```
 
 {{% alert color="danger" %}}
 Do not add a double-space between the number (or bullet point) and first letter of first word in a list item. This can break code block formatting.
 {{% / alert %}}
 
-### 1.7 Indent Between List Items and Code Block (Highlight Shortcode) - DO NOT USE HIGHLIGHT
+### 1.7 Indent Between List Items and Code Block (Highlight Shortcode) – DO NOT USE HIGHLIGHT
 
 1. First list item
 2. Second list item
@@ -257,3 +259,99 @@ The current advice is to avoid using tables indented in numbered/bulleted lists,
 | Numbered list | Bullet point list |
 | --- | --- |
 | <ol><li>numbered item</li><li>numbered item</li><li>numbered item</li></ol> | <ul><li>bullet point</li><li>bullet point</li><li>bullet point</li></ul> |
+
+## 3 Section Spacing Tests<br />==================={#spacing}
+
+## Level 2 Section – Paragraph after
+
+With a paragraph
+
+## Level 2 Section – Level 2 after
+
+## Level 2 Section – Level 3  after
+
+### Level 3 Section – Level 2 after
+
+## Level 2 Section – List after
+
+* List item 1
+* List item 2
+* List item 3
+
+### Level 3 section after list – list after
+
+* List item 1
+* List item 2
+* List item 3
+
+## Level 2 section – followed by deeper levels
+
+### Level 3 section
+
+#### Level 4 section
+
+##### Level 5 section
+
+###### Level 6 section
+
+## Level 2 section – followed by deeper levels separated by paragraphs
+
+With a paragraph
+
+### Level 3 section
+
+With a paragraph
+
+#### Level 4 section
+
+With a paragraph
+
+##### Level 5 section
+
+With a paragraph
+
+###### Level 6 section
+
+## Paragraphs and lists
+
+Paragraph followed by a list
+
+* List item 1
+* List item 2
+* List item 3
+
+A new list
+
+* A new list with multiple indents
+* Item 2
+    * Subitem 1
+    * Subitem 2
+        * Subsubitem 1
+        * Subsubitem 2
+    * Subitem 3
+    * Subitem 4
+* Item 3
+
+Several paragraphs one
+
+after another, which should be nicely spaced
+
+And clearly different from Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Parturient montes nascetur ridiculus mus mauris. In eu mi bibendum neque egestas congue. Pellentesque sit amet porttitor eget dolor. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Pulvinar etiam non quam lacus. Non quam lacus suspendisse faucibus interdum posuere lorem. Non tellus orci ac auctor augue mauris augue neque. Id ornare arcu odio ut sem nulla pharetra diam. Ultricies tristique nulla aliquet enim tortor at auctor urna.
+
+Paragraph followed by a list
+
+1. List item 1
+1. List item 2
+1. List item 3
+
+A new list
+
+1. A new list with multiple indents
+1. Item 2
+    1. Subitem 1
+    1. Subitem 2
+        * Subsubitem 1
+        * Subsubitem 2
+    1. Subitem 3
+    1. Subitem 4
+1. Item 3

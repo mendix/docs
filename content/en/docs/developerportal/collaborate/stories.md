@@ -211,10 +211,6 @@ To manage stories in Studio Pro, follow these steps:
 
 {{< figure src="/attachments/developerportal/collaborate/stories/stories-to-do.jpg" >}}
 
-When you return to your app in the Developer Portal, you will see the new story status:
-
-{{< figure src="/attachments/developerportal/collaborate/stories/status-update.png" >}}
-
 {{% alert color="info" %}}
 Changing the status of a story or updating story points automatically synchronizes the updates between the Developer Portal and Studio Pro. For more information on how to change the status of your story, see the [Changing the Status of a Story or a Task](/refguide/stories-pane/#changing-status) section in *Stories Pane*.
 {{% /alert %}}

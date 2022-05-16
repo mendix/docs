@@ -146,7 +146,7 @@ When you select a story, you can perform the following actions:
 These actions support multi-selection of stories, except for the **Clone** action.
 {{% /alert %}}
 
-#### 2.6.1 Accessing Story Details  {#story-details}
+#### 2.6.1 Accessing Story Details {#story-details}
 
 When you click a story title, the story details page opens:
 
@@ -168,7 +168,7 @@ You can also do this following on this page:
 * **Duplicate** a story and its tasks, story points, status, and labels into a new user story
 * View the **Feedback** on which this story is based (if applicable; for details, see the [Adding a Feedback Item to Your Backlog](/developerportal/collaborate/feedback/#adding) section of *Feedback Management*)
 * View the committed **Revisions** linked to the story (which are configured in the [Related stories](/refguide/commit-dialog/#stories) tab of the **Commit** dialog box in Studio Pro)
-* **Change to 'Bug'** button toggles the story type between 'Bug' and 'Feature'. By default, the story is created as a **Feature**.
+* **Change to Bug** to toggle the story type between **Bug** and **Feature** (by default, a story is created as a **Feature**)
 * Click **History** to view the history of changes to the story
 * **Delete** the story
 
@@ -237,7 +237,7 @@ On the **Story Archive** tab, you can see a list of all stories that belong in c
 
 You can search for a specific archived story through its **ID**, **Title**, **Description**, or the **Sprint's Name**. The search can be performed with both partial and exact matches.  
 
-By clicking a story's ID, you can see story details page.
+By clicking a story's ID, you can see the [story details](#story-details).
 
 {{< figure src="/attachments/developerportal/collaborate/stories/story-archive.png" >}}
 

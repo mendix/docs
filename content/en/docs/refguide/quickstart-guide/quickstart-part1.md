@@ -1,5 +1,5 @@
 ---
-title: "Design in a Responsive Web Profile"
+title: "Build a Responsive Web App"
 url: /refguide/quickstart-part1/
 parent: "_index"
 weight: 10
@@ -10,6 +10,8 @@ tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
 ## 1 Introduction 
 
 Get up and running with the Mendix Platform and start developing your first app in Mendix Studio Pro. This is Part 1 of the quickstart, where you will learn the basics of the Studio Pro, handle data using the Domain Model, populate your app's pages with dynamic data, and create custom app logic using a microflow.
+
+When you complete Part 1, you will have an app that can capture and save images using dynamic data.
 
 [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. This tutorial will use Studio Pro version 9.12.1, but you can use a later version if you wish.
 
@@ -223,9 +225,9 @@ You have finished your responsive app! You can run your app and test it by press
 Launching your app compiles your app locally on your development machine, your local host. Publishing your app will push your app to a cloud environment or web container connected to your app. If none exists, an environment will be initialized for your app on the Mendix Cloud v4 Free Tier.
 {{% /alert %}}
 
-Congratulations! You successfully completed Part 1, you have your first Mendix App to prove it, and it works on almost any device. Well done! 
+Congratulations! You successfully completed Part 1 of the quickstart guide. You have your first Mendix app to prove it, and it works on almost any device. Well done! 
 
-To continue learning, see Part 2: [Upgrade to a Native Mobile App](/refguide/quickstart-part2/).
+To continue learning, see Part 2: [Add a Native Mobile App](/refguide/quickstart-part2/).
 
 ## 6 Read More
 

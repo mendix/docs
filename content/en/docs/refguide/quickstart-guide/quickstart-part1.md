@@ -229,7 +229,7 @@ Congratulations! You successfully completed Part 1 of the quickstart guide. You 
 
 To continue learning, see Part 2: [Add a Native Mobile App](/refguide/quickstart-part2/).
 
-## 6 Read More
+## 7 Read More
 
 * [Mendix Academy](https://academy.mendix.com/) – complete learning paths to build general Mendix skills
     * [Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) – the course we recommend for new users who are also experienced developers

@@ -516,17 +516,50 @@ The widget’s style properties are as follows:
 
 The default class to style all date picker inputs is named `DatePicker`.
 
-### 6.6 Reference selector
+### 6.6 Reference Selector
 
 The reference selector is an input widget that can be used to display and edit associations. For more information on this widget, see [Reference Selector](/refguide/reference-selector/). This widget supports the same style properties and structure as the [drop-down](#drop-down) widget above.
 
 The default class to style all reference selector inputs is named `ReferenceSelector`.
 
+### 6.7 Radio Buttons
+
+The radio buttons widget is a collection of radio buttons representing a set of related options. This is how a radio buttons widget could look in an app:
+
+{{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/radio-buttons.png" alt="radio buttons"   width="300"  >}}
+
+The widget style properties are as follows:
+
+```xml
+	<labelTextStyle />
+	<containerHorizontal/>
+	<radioButtonItemContainerStyle/>
+	<radioButtonItemContainerHorizontalStyle/>
+	<radioButtonItemContainerDisabledStyle/>
+	<circularButtonStyle/>
+	<circularBtnDisabledStyle/>
+	<activeButtonStyle/>
+	<radioButtonItemTitleStyle/>
+```
+
+| Element                                   | Style Properties                  | Description                                            |
+| ----------------------------------------- | --------------------------------- | ------------------------------------------------------ |
+| `labelTextStyle`                          | This has all TextStyle properties | Collection label style.                                |
+| `containerHorizontal`                     | This has all ViewStyle properties | Styles for horizontal orientation.                     |
+| `radioButtonItemContainerStyle`           | This has all ViewStyle properties | Radio item container style.                            |
+| `radioButtonItemContainerHorizontalStyle` | This has all ViewStyle properties | Radio item container style for horizontal orientation. |
+| `radioButtonItemContainerDisabledStyle`   | This has all ViewStyle properties | Radio item container style for read-only collection.   |
+| `circularButtonStyle`                     | This has all ViewStyle properties | Radio circular button style.                           |
+| `circularBtnDisabledStyle`                | This has all ViewStyle properties | Disabled radio circular button style.                  |
+| `activeButtonStyle`                       | This has all ViewStyle properties | Active radio button style for inner circular region.   |
+| `radioButtonItemTitleStyle`               | This has all TextStyle properties | Radio item label text style.                           |
+
+
 ## 7 Images, Videos & Files
 
 Images, videos & files help your user app manage images and other files. For more information on these widgets, see [Images, Videos & Files](/refguide/image-and-file-widgets/).
 
-### 4.2 Static Image {#image}
+### 7.1 Static Image {#image}
 
 The static image widget can be used to show a predefined image on a page, layout, or snippet. For more information on this widgets, see [Static Image](/refguide/image/). The widget’s style properties are as follows:
 
@@ -547,7 +580,7 @@ The static image widget can be used to show a predefined image on a page, layout
 
 The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `NativeDynamicImage` as described in the [Dynamic Image](#dynamic-image) section below.
 
-### 7.1 Dynamic Image {#dynamic-image}
+### 7.2 Dynamic Image {#dynamic-image}
 
 A dynamic image can be used to display an image. This widget supports the same style properties and structure as the [Static Image](#image) widget above.
 
@@ -1031,6 +1064,10 @@ The widget’s style properties are as follows:
 | `indicator` | `color` | The loading indicator color. |
 | `video` | This has all ViewStyle properties. |      |
 | `errorMessage` | This has all TextStyle properties. |      |
+| `fullScreenVideoPlayer` | This has all ViewStyle properties. | Android only |
+| `controlBtnContainerStyle` | This has all ViewStyle properties. | Android only |
+| `fullScreenVideoStyle` | This has all ViewStyle properties. | Android only |
+| `fullScreenActivityIndicatorStyle` | This has all ViewStyle properties. | Android only |
 
 The default class to style all video players is named `com_mendix_widget_native_videoplayer_VideoPlayer`.
 
@@ -1240,7 +1277,7 @@ A main object has four objects.
 | buttonContainer | This has all ViewStyle properties. | Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. |
 | container       | This has all ViewStyle properties. | Styles the wrapper view around the whole menu.     |
 
-#### BasicItemStyle
+#### 11.24.1 BasicItemStyle
 
 | Element                   | Style Properties |  Description                                      |
 | ---------------------------| ---- | ------------------------------------------------ |
@@ -1248,7 +1285,7 @@ A main object has four objects.
 | itemStyle | ItemStyle      | Styles the basic items.                         |
 | dividerColor | `string`      | Styles the divider color.                         |
 
-#### ItemStyle
+#### 11.24.2 ItemStyle
 
 | Element                | Style Properties                     | Description                                                                                      |
 | ----------------------------------------| ----- | ------------------------------------------------------------------------------------------------ |
@@ -1260,7 +1297,7 @@ A main object has four objects.
 | customStyle |  This has all TextStyle properties.                 | Styles all basic menu items which have the `custom` style selected.                                  |
 
 
-#### CustomItemStyle
+#### 11.24.3 CustomItemStyle
 
 | Element                   | Style Properties |  Description                                      |
 | ---------------------------| ---- | ------------------------------------------------ |
@@ -1320,7 +1357,7 @@ export myCarouselStyle = {
 | cardLayout | LayoutStyle | Styles the carousel when the layout is set to card  |
 | fullWidthLayout | LayoutStyle                             | Styles the carousel when the layout is set to full width.                 |
 
-#### LayoutStyle
+#### 11.25.1 LayoutStyle
 
 | Element                | Style Properties                               | Description                                                                                    |
 | -----------------------|-------------------------------- | ---------------------------------------------------------------------------------------------- |
@@ -1329,7 +1366,7 @@ export myCarouselStyle = {
 | indicator | `color: string`                             | Styles the loading indicator which will be shown while the carousel is loading.                 |
 | pagination | Pagination                                 | Styles pagination container, dots, active dots, and text.                                        |
 
-#### Pagination
+#### 11.25.2 Pagination
 
 | Element | Style Properties                                                                         | Description                                                                                                    |
 | ---------|------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
@@ -1647,6 +1684,24 @@ The widget’s style properties structure is as follows:
 | `validationMessage` | This has all TextStyle properties.   |  |
 
 The default class to style all check box inputs is named `com_mendix_widget_native_switch_Switch`.
+
+### 11.31 Background Gradient
+
+The background gradient widget allows you to apply a background that transitions between multiple colors in a linear direction..
+
+The widget’s style properties are as follows:
+
+```xml
+<container>
+	content
+</container>
+```
+
+| Element | Style Properties    | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties. |        |
+
+The default class to style all background gradients is named `com_mendix_widget_native_backgroundgradient_BackgroundGradient`.
 
 ## 12 Read More
 

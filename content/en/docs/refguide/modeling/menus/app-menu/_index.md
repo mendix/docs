@@ -37,7 +37,7 @@ The **Check Widgets** option checks that the widgets you have implemented in the
 
 The **Convert classes to design properties** option allows you to convert classes in widgets into design properties to assist in changing the widget styling. See [How To Implement Native Mobile Styling](/howto/mobile/native-styling/) for more information.
 
-## 3 Synchronize App Directory
+## 3 Synchronize App Directory {#synchronize}
 
 The **Synchronize App Directory** option creates folders inside the app directory (resources, widgets, theme, etc.), if necessary. It also reads the widget packages that are currently inside the widgets folders. For example, if you add widgets to the widgets folder, you needs to synchronize the app directory for them to appear in the **Toolbox**.
 

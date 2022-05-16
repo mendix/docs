@@ -12,7 +12,7 @@ title: "Enter the title of the document"
 
 {Describe what this how-to will cover and what the user will learn.}
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create...
 * Build...

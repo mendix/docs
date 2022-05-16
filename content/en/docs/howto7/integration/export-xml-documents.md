@@ -10,7 +10,7 @@ tags: ["export", "xml", "integration"]
 
 In enterprise software, it is not likely that you work in a [greenfield](https://en.wikipedia.org/wiki/Greenfield_project). In almost every situation, you will need to integrate with existing systems. Mendix supports many ways of integration, but this how-to focuses on how you can export XML documents.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Add an XML schema
 * Create domain-to-XML mapping and export logic

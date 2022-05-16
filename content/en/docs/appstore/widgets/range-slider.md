@@ -97,11 +97,11 @@ To configure this widget, follow these steps:
 - **Number of markers** – sets the number of the markers that appear along the slider's track
 - **Decimal places** – sets the number of decimal places for marker values
 - **Orientation** – determines the orientation of the slider
-    - **Horizontal** – if selected, the orientation of the slider is horizontal
+    - **Horizontal** – if selected, the orientation of the slider is horizontal
     - **Vertical** – if selected, the orientation of the slider is vertical and you must set **Height unit** and **Height**
         - **Height unit** – specifies the type of unit which is used for the **Height** property
-            - **Percentage** (default) – if selected, the aspect ratio is used to specify the height
-            - **Pixels** – if selected, an absolute value is used to specify the height
+            - **Percentage** (default) – if selected, the aspect ratio is used to specify the height
+            - **Pixels** – if selected, an absolute value is used to specify the height
         - **Height** – the height in pixels or percentage based on the setting of **Height unit**
 
 ### 2.3 Events Tab

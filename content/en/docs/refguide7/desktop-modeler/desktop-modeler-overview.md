@@ -157,7 +157,7 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 | Tablet Browser | Shows the tablet mobile client for the currently running project in the browser. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F9</kbd> |
 | Phone Browser | Shows the mobile client for the currently running project in the browser. | <kbd>Ctrl</kbd> + <kbd>F9</kbd> |
 | Hybrid Phone App Online | Views the app as a phone app online. | |
-| View in the Mendix App | Views the app via the [Mendix Mobile app](/refguide7/getting-the-mendix-app/). | |
+| View in the Mendix App | Views the app via the [Mendix Developer App](/refguide7/getting-the-mendix-app/). | |
 
 ### 4.6 Language Menu
 
@@ -177,7 +177,7 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 | --- | --- | --- |
 | Help | Opens the documentation page about the currently selected element. If an entity is selected, for example, the documentation for entities will be shown. | <kbd>F1</kbd> |
 | Help Contents | Opens the start page of the documentaton in the default web browser. |   |
-| Ask a Question | Opens the [Mendix Forum](https://forum.mendixcloud.com/index4.html) in the default web browser. |   |
+| Ask a Question | Opens the [Mendix Forum](https://forum.mendix.com/p/questions) in the default web browser. |   |
 | Open Log File Directory | Opens the log files for your app locally. |   |
 | About Mendix Modeler | Shows information about the current version of the Mendix Modeler. |   |
 

@@ -9,7 +9,7 @@ tags: ["mobile", "native", "push", "local", "firebase"]
 
 ## 1 Introduction
 
-This how-to will help you add module dependencies for the [Push Notifications Connector](https://marketplace.mendix.com/link/component/3003) module. You only need to install the modules your use case requires. Once your app has the modules it needs, you may move on to [Implement the Push Notifications Module](/howto/mobile/notif-implement-module/).
+This how-to will help you add module dependencies for the [Push Notifications Connector](/appstore/modules/push-notifications/) module. You only need to install the modules your use case requires. Once your app has the modules it needs, you may move on to [Implement the Push Notifications Module](/howto/mobile/notif-implement-module/).
 
 ## 2 Implementing the Encryption Module
 

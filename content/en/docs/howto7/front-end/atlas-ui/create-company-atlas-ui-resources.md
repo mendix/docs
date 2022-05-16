@@ -10,7 +10,7 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 
 Creating Atlas UI resources for your company is a great way to keep your company's apps in sync with your company brand. It’s easier to scale and manage apps throughout your app landscape when all the resources are neatly organized in a single module. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create your own UI resources
 * Create page templates

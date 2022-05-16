@@ -11,7 +11,9 @@ tags: ["studio pro", "expressions", "parsing", "formatting"]
 
 This document describes functions that are used to parse Date and time values from strings using a specified pattern, or to produce a string from a Date and time value.
 
-For details on all pattern possibilities, see [Class SimpleDateFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/SimpleDateFormat.html). 
+{{% alert color="info" %}}
+For details on all pattern possibilities, see the Java class [SimpleDateFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/SimpleDateFormat.html). 
+{{% /alert %}}
 
 ## 2 parseDateTime[UTC] {#parsedatetime-utc}
 
@@ -23,7 +25,7 @@ The input parameters are described in the table below:
 
 | Value                        | Type                                                         |
 | ---------------------------- | ------------------------------------------------------------ |
-| Date                         | A string which contains the textual representation of a date, meaning, `dd/mm/yyyy` , `mm/dd/yyyy`, etc. |
+| Date                         | A string which contains the textual representation of a date — for example `dd/mm/yyyy` or `mm/dd/yyyy` |
 | Format                       | String                                                       |
 | Default value (**optional**) | Date and time                                                |
 
@@ -35,32 +37,40 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------------- |
 | The parsed date or the default value if a date could not be parsed. | Date and time |
 
+{{% alert color="info" %}}
+If the `Date` string is date-like, but not a valid date, the function will be able to parse it and will return a valid `Date and time` value.
+
+For example `parseDateTime('35-11-2015', 'dd-MM-yyyy', dateTime(2015))` will return `05 December 2015 12:00 AM`.
+{{% /alert %}}
+
 ### 2.3 Example
 
 The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     parseDateTime('2015-05-21', 'yyyy-MM-dd')
     ```
 
     the output is:
 
-    ```java
-    The date May 21st, 2015\. The time will be 12 o'clock at night  because it is not specified.
+    ```java {linenos=false}
+    May 21st, 2015 12:00 AM.
     ```
+
+    The time is 00:00 because it is not specified.
     
 * If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     parseDateTime('noDateTime', 'dd-MM-yyyy', dateTime(2007))
     ```
 
     the output is:
 
-    ```java
-    'Mon Jan 01 00:00:00 CET 2007'
+    ```java {linenos=false}
+    Mon Jan 01 00:00:00 CET 2007
     ```
 
 ## 3 formatDateTime[UTC]
@@ -88,19 +98,19 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 formatDateTime($object/Date1,'EEE, d MMM yyyy HH:mm:ss Z')
 ```
 
 the output is:
 
-```java
+```java {linenos=false}
 'Sun, 8 Jun 2008 10:12:01 +0200'
 ```
 
-To get '1987-12-31T23:59:00', you need to concatenate two formatDateTime[UTC] functions:
+To get a format like `'2008-06-08T10:12:01'`, you need to concatenate two formatDateTime[UTC] functions:
 
-```java
+```java {linenos=false}
 formatDateTime($object/Date1,'yyyy-MM-dd') + 'T' + formatDateTime($object/Date1,'HH:mm:ss')
 ```
 
@@ -128,13 +138,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 formatTime(dateTime(1974, 7, 2, 9, 50, 10))
 ```
 
 the output is:
 
-```java
+```java {linenos=false}
 '9:50 AM'
 ```
 
@@ -162,13 +172,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 formatDate(dateTime(1974, 7, 2, 9, 50, 10))
 ```
 
 the output is:
 
-```java
+```java {linenos=false}
 '7/2/74'
 ```
 
@@ -196,19 +206,19 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 dateTimeToEpoch(dateTime(1974, 7, 2, 9, 50, 10))
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 141990610000
 ```
 
 ## 7 epochToDateTime
 
-Creates a Datetime that represents the specified number of milliseconds since January 1, 1970, 00:00:00 GMT.
+Creates a Date and time that represents the specified number of milliseconds since January 1, 1970, 00:00:00 GMT.
 
 ### 7.1 Input Parameters
 
@@ -224,18 +234,18 @@ The output is described in the table below:
 
 | Value                                                        | Type   |
 | ------------------------------------------------------------ | ------ |
-| A Datetime that represents the specified number of milliseconds since January 1, 1970, 00:00:00 GMT. | Date and time |
+| A Date and time that represents the specified number of milliseconds since January 1, 1970, 00:00:00 GMT. | Date and time |
 
 ### 7.3 Example
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 epochToDateTime(141990610000)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 dateTime(1974, 7, 2, 9, 50, 10)
 ```

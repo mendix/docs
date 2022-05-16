@@ -11,7 +11,7 @@ tags: ["error", "error handling", "rollback", "microflow", "logic"]
 
 When working with microflows, it is important to realize that there are always transactions. These transactions help in achieving the correct result, and in case something goes wrong, they also help us to keep all the information in our application consistent. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Set up the various error handling components
 

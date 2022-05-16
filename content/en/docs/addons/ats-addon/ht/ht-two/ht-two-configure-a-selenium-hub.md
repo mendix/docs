@@ -10,7 +10,7 @@ tags: ["ATS", "testing"]
 
 This how-to explains how to configure a selenium hub in ATS. There are four selenium hub possibilities in ATS. How to configure all the four selenium hubs and where you can retrieve the necessary information is explained.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Configure a Browserstack Selenium Hub
 * Configure a Saucelabs Selenium Hub
@@ -271,4 +271,4 @@ You now configured your Custom Selenium Hub. You can create as many variations a
 
 ## 9 Next Up
 
-You now learned how to configure the different selenium hubs. The next how-to is [How to Create a Test Case](/addons/ats-addon/ht-two-create-a-test-case/). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.
+You now learned how to configure the different selenium hubs. The next how-to is [How to Create a Test Case](/addons/ats-addon/ht-two-create-a-test-case/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.

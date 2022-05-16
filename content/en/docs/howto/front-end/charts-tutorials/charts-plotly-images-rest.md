@@ -10,7 +10,7 @@ tags: ["Charts", "Plotly", "REST", "Studio Pro", "Widget"]
 
 The [Plotly API images endpoint](https://api.plot.ly/v2/images) turns a plot into an image of the desired format. A set of body parameters and headers are passed to the endpoint, which returns an image when a request is made.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Call *Plotly API Images*' REST Endpoint
 

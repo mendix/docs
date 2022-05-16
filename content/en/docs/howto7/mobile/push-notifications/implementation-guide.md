@@ -10,7 +10,7 @@ tags: ["mobile", "push notification"]
 
 This how-to will walk you through the steps needed to implement push notifications in your application.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Import the PushNotifications module
 * Add the push notification widget and administrator pages

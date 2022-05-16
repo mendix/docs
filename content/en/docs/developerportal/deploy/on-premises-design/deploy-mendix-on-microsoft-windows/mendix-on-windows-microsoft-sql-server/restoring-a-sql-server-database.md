@@ -14,7 +14,7 @@ weight: 70
 
 In certain situations (for example, unwanted database updates or data corruption), it might be necessary to restore the Mendix database from a backup. This document describes the actions needed to perform a complete database restore and defines the prerequisites for restoring backups.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Restore the database
 

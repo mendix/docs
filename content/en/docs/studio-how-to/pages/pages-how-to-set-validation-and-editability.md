@@ -12,7 +12,7 @@ tags: ["studio", "pages", "form", "how to", "validation", "required", "read-only
 
 This how-to explains how you can configure fields in a form as required or read-only. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Configure fields as read-only by setting editability
 * Configure fields as required by setting validation

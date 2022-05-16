@@ -22,7 +22,7 @@ If you do not create these files, the default "green monsters" will be used inst
 
 {{< figure src="/attachments/howto7/front-end/custom-error-page/monsters.png" >}}
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create a custom error page
 

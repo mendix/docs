@@ -2,7 +2,7 @@
 title: "Database"
 url: /appstore/connectors/database-connector/
 category: "Connectors"
-description: "Describes the configuration and usage of the Database connector, which is available in the Mendix Marketplace."
+description: "Describes the configuration and usage of the Database connector, which incorporates your external data directly in your Mendix app."
 tags: ["marketplace",  "marketplace component", "database connector", "jdbc", "hikari", "query" ]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
@@ -144,7 +144,7 @@ The many-to-many-association with `DatabaseConnector.Parameter` is also used her
 * [OrientDB](https://orientdb.org/)
 * [PostgreSQL](https://jdbc.postgresql.org/download.html)
 * [Presto](https://prestodb.github.io/docs/current/installation/jdbc.html)
-* [SQLite](https://bitbucket.org/xerial/sqlite-jdbc/downloads/)
+* [SQLite](https://www.sqlite.org/src/tree?ci=trunk)
 
 {{% alert color="info" %}}
 If you intend to connect to SQL Server using integrated security, please be aware that the JDBC driver in the **userlib** folder needs to match the version supplied with the Mendix Platform (via the **runtime/bundles/** folder inside the Mendix installation directory).

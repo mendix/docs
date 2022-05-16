@@ -19,9 +19,9 @@ To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Loca
 To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps/).
 {{% /alert %}}
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
-* Build and run a Mendix mobile app that connects to your local development machine
+* Build and run a hybrid Mendix mobile app that connects to your local development machine
 * Debug the mobile app using Mendix debugging tools, Chrome DevTools and the Safari Web Inspector
 
 ## 2 Prerequisites

@@ -10,7 +10,7 @@ tags: ["monitoring", "troubleshooting", "warning", "error", "warning message"]
 
 This how-to explains how to eliminate design time warnings. While these warnings will not cause the application to break, it is important to fix them to keep a clean app.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * View warning messages
 * Clear warning messages

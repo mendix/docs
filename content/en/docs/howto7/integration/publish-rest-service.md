@@ -11,7 +11,7 @@ tags: ["rest", "rest service", "web service", "integration"]
 
 Mendix allows you to publish REST web services natively from the Desktop Modeler. This how-to will show you how to publish a REST service in an example project. This example will demonstrate the GET operation for a published REST service.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create a published REST service and return the results in JSON or XML
 
@@ -132,7 +132,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 	{{< figure src="/attachments/howto7/integration/publish-rest-service/CompleteMFNoErrorHandling.png" >}}
 
-### <a name="viewing"></a>4.3 Viewing the App
+### 4.3 Viewing the App{#viewing}
 
 To view and try out your app, follow these steps:
 

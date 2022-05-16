@@ -11,7 +11,7 @@ tags: ["studio", "navigation", "how to", "navigation bar"]
 
 This how-to explains how to configure a navigation bar for your app such as creating menu items and sub-items. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Setting a page as home page
 * Create new menu bar items and sub-items

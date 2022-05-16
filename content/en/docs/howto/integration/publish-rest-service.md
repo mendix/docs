@@ -11,7 +11,7 @@ tags: ["rest", "rest service", "web service", "integration"]
 
 Mendix allows you to publish REST web services natively from Studio Pro. This how-to will show you how to publish a REST service in an example project. This example will demonstrate the GET operation for a published REST service.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create a published REST service and return the results in JSON or XML
 
@@ -125,7 +125,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 	{{< figure src="/attachments/howto/integration/publish-rest-service/CompleteMFNoErrorHandling.png" >}}
 
-### <a name="viewing"></a>4.3 Viewing the App
+### 4.3 Viewing the App{#viewing}
 
 To view and try out your app, follow these steps:
 
@@ -173,7 +173,7 @@ In this new service, no error handling has been implemented. For example, if you
 
 	{{< figure src="/attachments/howto/integration/publish-rest-service/ParsingErrorMicroflow.png" >}}
 
-6.  Test your error handler as you did with the app in section [4.3 Viewing the App](#viewing). Enter some characters in the **OrderID** parameter and observe the response of the request, like this:
+6.  Test your error handler as you did with the app in the [Viewing the App](#viewing) section. Enter some characters in the **OrderID** parameter and observe the response of the request, like this:
 
 	{{< figure src="/attachments/howto/integration/publish-rest-service/ParsingErrorRESTResult.png" >}}
 
@@ -195,7 +195,7 @@ To add the error handling for those situations when the OrderID parameter is fil
 
 	{{< figure src="/attachments/howto/integration/publish-rest-service/CompleteMFWithErrorHandling.png" >}}
 
-3. Test your new error responses as you did with the app in section [4.3 Viewing the App](#viewing).
+3. Test your new error responses as you did with the app in the [Viewing the App](#viewing) section.
 
 ## 6 Read More
 

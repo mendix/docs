@@ -10,7 +10,7 @@ tags: ["ATS", "testing"]
 
 ATS provides two different tools to help build test scripts: the ATS Helper and ATS Recorder. The ATS Helper identifies the mx-name of widgets on the application under test (AUT). But, not all widgets have an mx-name, in which case the ATS Helper cannot interact with them. The ATS Recorder is a function/plugin within ATS that records your manual test steps in the AUT and automatically selects the correct action for each step. However, sometimes the ATS Recorder does not record the step you are performing. There are ways to increase the ATS Recorder coverage of your AUT. This how-to describes how to increase the overall coverage of the ATS tools for your AUT.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Increase recorder coverage of your AUT with the ATS Recorder.
 * Increase ATS Helper coverage of your AUT.
@@ -122,4 +122,4 @@ For this reason, recording this widget is still not possible.
 
 ## 5 Next Up
 
-With these tips you increase the ATS Recorder and ATS Helper coverage of your AUT. The next how-to is [How to Create Custom Actions](/addons/ats-addon/ht-two-create-custom-actions/). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.
+With these tips you increase the ATS Recorder and ATS Helper coverage of your AUT. The next how-to is [How to Create Custom Actions](/addons/ats-addon/ht-two-create-custom-actions/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.

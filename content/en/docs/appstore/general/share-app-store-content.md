@@ -15,7 +15,7 @@ aliases:
 
 The Mendix Marketplace is driven by contributions from members of the community who share the connectors, modules, and apps they have built with the Mendix Platform. This how-to shows how to add and update Marketplace content.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Add new content and promotions to share in the Marketplace
 * Update existing Marketplace content

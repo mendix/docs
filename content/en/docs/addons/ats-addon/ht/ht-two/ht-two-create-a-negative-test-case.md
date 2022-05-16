@@ -26,7 +26,7 @@ This is the navigation menu for an administrator:
 
 {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-negative-test-case/navigation-menu-administrator-company-expenses-app.png" >}}
 
-**This how-to will teach you how to do the following**
+This how-to will teach you how to do the following
 
 * Create a negative test case
 
@@ -89,4 +89,4 @@ You can also add the **Assert not false** action with the **Assert value** set t
 
 ## 4 Next Up
 
-The next how-to is [How to Create Extracted Actions](/addons/ats-addon/ht-two-create-extracted-actions/). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.
+The next how-to is [How to Create Extracted Actions](/addons/ats-addon/ht-two-create-extracted-actions/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.

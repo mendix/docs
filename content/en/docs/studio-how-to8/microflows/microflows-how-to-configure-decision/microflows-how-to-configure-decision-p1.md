@@ -13,7 +13,7 @@ This how-to explains how you can configure a decision in the microflow editor of
 
 A decision is an activity which is used to model conditions in your app logic. For more information on what Decision is and how to configure it, see [Decision](/studio8/microflows-decision/). 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Add entities and attributes necessary to configure the decision
 * Configure the decision with the Boolean type of parameter or attribute
@@ -40,19 +40,19 @@ The app will open the corresponding page depending on the grade of a customer, f
 1. Open your [domain model](/studio8/domain-models/).
 2. Create entity *Customer*. For more information on how to create a new entity, see the [Adding New Entities](/studio8/domain-models/) section in *Domain Models Overview*.
 3.  For the **Customer** entity, create an attribute (for more information on how to create the attribute, see the [Adding New Attributes](/studio8/domain-models/) section) and do the following:<br />
-    a. Set the attribute **Name** to *Grade*.<br />
-    b. Set the [Type](/studio8/domain-models-attributes/) to **Enumeration**.<br />
-    c. Click **Select enumeration** to create a new enumeration.<br />d. In the **Select enumeration** dialog box, click **New**.<br/>
-    e. In the **Create new enumeration** dialog box, click **Add Item** (*Grade* is filled out automatically for the **Name**).<br />
+    a. Set the attribute **Name** to *Grade*.<br />
+    b. Set the [Type](/studio8/domain-models-attributes/) to **Enumeration**.<br />
+    c. Click **Select enumeration** to create a new enumeration.<br />d. In the **Select enumeration** dialog box, click **New**.<br/>
+    e. In the **Create new enumeration** dialog box, click **Add Item** (*Grade* is filled out automatically for the **Name**).<br />
 
     {{< figure src="/attachments/studio-how-to8/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/new-enumeration-add-item.png" >}} <br />
 
-    f. Enter *Bronze* for the **Caption** (**Name** is filled out as *Bronze* automatically).<br />
+    f. Enter *Bronze* for the **Caption** (**Name** is filled out as *Bronze* automatically).<br />
 
     {{< figure src="/attachments/studio-how-to8/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/new-enumeration-add-item-bronze.png" >}}<br />
 
-    g. Click **Add Item** and repeat the step above to create the **Silver** and **Gold** grades.<br />
-    h. Click **Create** to close the dialog boxs and create the attribute.
+    g. Click **Add Item** and repeat the step above to create the **Silver** and **Gold** grades.<br />
+    h. Click **Create** to close the dialog boxs and create the attribute.
 
     {{< figure src="/attachments/studio-how-to8/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/new-enumeration-bronze-silver-gold.png" >}}
 

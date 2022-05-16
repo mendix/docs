@@ -12,7 +12,7 @@ The access rules of an entity define what a user is allowed to do with the objec
 
 In this how-to, you will prepare a data structure (including security), a GUI, and some example data for customers, orders, and a financial administrator account. After this preparation, you will define the access rules for the Order entity using XPath on the payment status. The XPath will constrain the order so it can only be seen by a financial administrator when the payment status of the order is set to "paid."
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Define access rules for an entity using XPath
 

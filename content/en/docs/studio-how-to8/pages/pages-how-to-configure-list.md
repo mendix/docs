@@ -12,7 +12,7 @@ tags: ["studio", "pages", "list", "how to"]
 
 This how-to explains how you can configure a list of items and view the item details selected in this list. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create a new page
 * Configure a list view

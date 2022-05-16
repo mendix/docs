@@ -12,7 +12,7 @@ This how-to explains how to create a test case, add test steps manually, and add
 
 This how-to uses the Mendix Company Expenses app as an example, and you will create a test case that submits a new expense in this app. You create the same test case twice, once manually, and once with the ATS Recorder. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create a new test case
 * Add test steps to your test case manually
@@ -267,4 +267,4 @@ We advise you to use the recorder as much as possible to add test steps. But, th
 
 ## 6 Next Up
 
-You now learned how to create a test case. The next how-to is [How to Create a Test Suite](/addons/ats-addon/ht-two-create-a-test-suite/). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.
+You now learned how to create a test case. The next how-to is [How to Create a Test Suite](/addons/ats-addon/ht-two-create-a-test-suite/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.

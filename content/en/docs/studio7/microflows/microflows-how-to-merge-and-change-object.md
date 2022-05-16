@@ -13,7 +13,7 @@ This how-to explains how you can add advanced logic to a microflow by configurin
 
 A merge is used to combine flows into one. If you split the microflow flow (with a decision) and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) flows using a merge. For more information on decision, see [Decision](/studio7/microflows-decision/).
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Configure the merge in the microflow that contains a decision
 * Configure the change object activity after the merge

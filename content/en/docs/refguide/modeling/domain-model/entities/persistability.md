@@ -28,6 +28,6 @@ However, performing a rollback on persistable autocommitted objects or objects w
 
 ## 3 Non-Persistable Entities {#non-persistable}
 
-Non-persistable entities are stored in the runtime memory and never get committed to the database. Therefore, they have no table in the database.
+Non-persistable entities are stored in the runtime memory and never get committed to the database. Therefore, they have no table in the database and the only way to retrieve them is [over associations](/refguide/retrieve/#association).
 
 Committing non-persistable entities records the current attribute values and association values in memory, allowing a rollback to revert to these values.

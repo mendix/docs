@@ -91,10 +91,6 @@ BitBucket Server and BitBucket Data Center, on the other hand, still use the ter
 
 In both cases you need `repository write` permission.
 
-##### 2.4.5 AWS CodeCommit Limitation
-
-We have a compatibility limitation with AWS CodeCommit in Git Technology Preview for Studio Pro.
-
 ### 2.5 Graphics Card
 
 If you are using the Intel® UHD Graphics 630 graphics processor, please ensure that you are using [driver version 27.20.100.9664](https://www.catalog.update.microsoft.com/Search.aspx?q=Intel(R)+UHD+Graphics+630) or above.
@@ -150,7 +146,7 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from AdoptOpenJDK, see [AdoptOpenJDK Installation](https://adoptopenjdk.net/installation.html). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 {{% alert color="info" %}}
-There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. Mendix Studio Pro will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself. For more information about this issue, see [HotSpot (64bit server) hangs on socket read (JVM 1.7 bug?) - updated](http://blog.bielu.com/2011/11/hotspot-64bit-server-hangs-on-socket.html) and [Possible Bug in Java 7](https://forums.oracle.com/forums/thread.jspa?messageID=9985748).
+There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. Mendix Studio Pro will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself. For more information about this issue, see [Possible Bug in Java 7](https://community.oracle.com/tech/developers/discussion/comment/9987709).
 {{% /alert %}}
 
 ## 8 Databases {#databases}
@@ -159,14 +155,14 @@ Mendix tries to support the most recent and patched database server versions fro
 
 Current support:
 
-* [IBM DB2](/refguide/db2/) 11.1 and 11.5 for Linux, Unix, and Windows
-* [MariaDB](/refguide/mysql/) 10.2, 10.3, 10.4, 10.5, 10.6
-* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/) 2017, 2019
-* [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 140 or higher
-* [MySQL](/refguide/mysql/) 8.0
-* [Oracle Database](/refguide/oracle/) 19
-* PostgreSQL 10, 11, 12, 13, 14
-* [SAP HANA](/refguide/saphana/) 2.00.040.00.1545918182
+* [MariaDB](/refguide/mysql/): 10.2, 10.3, 10.4, 10.5, 10.6
+* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2017, 2019
+* [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
+* [MySQL](/refguide/mysql/): 8.0
+* [Oracle Database](/refguide/oracle/): 19
+* PostgreSQL: 10, 11, 12, 13, 14
+* [SAP HANA](/refguide/saphana/): 2.00.040.00.1545918182
+* [IBM DB2](/refguide/db2/): 11.5 for Linux, Unix, and Windows — *Support for DB2 is deprecated and [will be removed in Mendix version 10](/releasenotes/studio-pro/9.12/#deprecations)*
 
 {{% alert color="warning" %}}
 Each app must have its own database. Mendix apps cannot share data by sharing the same database.
@@ -216,7 +212,7 @@ If you still need to support IE11, note that Studio Pro [8](/releasenotes/studio
 
 ## 11 Mobile Operating Systems {#mobileos}
 
-For Mendix native apps, hybrid apps, and the Mendix Mobile app the following operating systems are supported:
+For Mendix native apps, hybrid apps, and the Mendix Developer App the following operating systems are supported:
 
 * Latest two major versions of iOS
 * Android 5.0 and above

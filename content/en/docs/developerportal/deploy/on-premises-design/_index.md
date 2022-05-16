@@ -21,7 +21,7 @@ When designing your server architecture, there are an infinite number of possibi
 
 The options below are just a few examples of the most commonly used architecture setups. The Mendix cloud uses a (more complex) architecture based on hosting with a separate database server (for details, see [Hosting with a Separate Database Server (Option 2)](#Option2)) without a separate file server and with a proxy server to redirect traffic to the correct environment.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Select the best architecture option
 
@@ -33,7 +33,7 @@ This is the simplest solution with the fewest configuration and connection probl
 
 {{< figure src="/attachments/developerportal/deploy/on-premises-design/18580719.jpg" >}}
 
-### <a name="Option2"></a>2.2 Hosting with a Separate Database Server (Option 2)
+### 2.2 Hosting with a Separate Database Server (Option 2){#Option2}
 
 {{< figure src="/attachments/developerportal/deploy/on-premises-design/18580718.jpg" >}}
 

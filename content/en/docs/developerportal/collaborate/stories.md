@@ -126,7 +126,7 @@ For each Sprint, the following options are provided via the menu button on the r
 
 {{< figure src="/attachments/developerportal/collaborate/stories/sprint-options.jpg"   width="350"  >}}
 
-* **Complete Sprint** (only available for the Sprint identified as an **Active Sprint**) – enables completing the Sprint, which will move it to the [Completed Sprints](#completed-sprints) page
+* **Complete Sprint** (only available for the Sprint identified as an **Active Sprint**) – enables completing the Sprint
 * **Add Story** – enables [creating a new story](#new-story) 
 * **Edit** – opens the [Edit Sprint](#new-sprint) dialog box
 * **Delete** – delete the Sprint

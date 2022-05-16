@@ -9,7 +9,7 @@ tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
 
 ## 1 Introduction 
 
-This document is Part 2 of the [Quickstart for Building an App](/refguide/quickstart-guide/). Here you will be adding on to the app created in [Part 1: Design in a Responsive Web Profile](/refguide/quickstart-part1/). If you decided to skip Part 1, you can [download a copy of its completed app package](https://quickstartguidev1.s3.eu-west-2.amazonaws.com/Quickstart_App.mpk) in order to start this document right away.
+This document is Part 2 of the [Quickstart](/refguide/quickstart-guide/) for building an app. Here you will be adding on to the app created in [Part 1: Design in a Responsive Web Profile](/refguide/quickstart-part1/). If you decided to skip Part 1, you can [download a copy of its completed app package](https://quickstartguidev1.s3.eu-west-2.amazonaws.com/Quickstart_App.mpk) in order to start this document right away.
 
 In this document you will learn to use a native mobile navigation profile. You will create a small native mobile app to take pictures and upload them to the same database so they can be viewed in a browser or in a native app on your mobile device. You will also use the Make it Native app to test your app on a mobile device.
 

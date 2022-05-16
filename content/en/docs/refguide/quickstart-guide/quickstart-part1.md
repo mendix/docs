@@ -9,17 +9,21 @@ tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
 
 ## 1 Introduction 
 
-Get up and running with the Mendix Platform and start developing your first app after you create your [free account](https://signup.mendix.com/link/signup/?source=direct)⁠—which takes only two minutes to finish. Then [download](https://marketplace.mendix.com/index3.html) and [install](/howto/general/install/) Mendix Studio Pro. 
+Get up and running with the Mendix Platform and start developing your first app in Mendix Studio Pro. During this part of the Quickstart, you will learn the basics of the Studio Pro, handle data using the Domain Model, populate your app's pages with dynamic data, and create custom app logic using a microflow.
 
-If you are working on a Mac, please complete [How To Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac.
+[Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. This tutorial will use Studio Pro version 9.12.1, but you can use a later version if you wish.
 
 Every app created with us automatically provisions a [Free Cloud Environment](/developerportal/deploy/mendix-cloud-deploy/#free-app) the first time it is deployed, so you do not have to waste time provisioning a testing environment.
 
 You will not need any additional software configured on your device in order to start.
 
-### 1.1 What is Mendix Studio Pro?
+## 2 Prerequisites 
 
-[Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. This tutorial will use Studio Pro version 9.12.1, but you can use a later version if you wish.
+Before starting this guide, make sure you have completed the following prerequisites:
+
+* Create your [free account](https://signup.mendix.com/link/signup/?source=direct)⁠—which takes only two minutes to finish
+* [Download](https://marketplace.mendix.com/index3.html) and [install](/howto/general/install/) Mendix Studio Pro
+* If you are working on a Mac, please complete [How To Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
 ## 2 Choosing an App Template with a Responsive Navigation Profile
 

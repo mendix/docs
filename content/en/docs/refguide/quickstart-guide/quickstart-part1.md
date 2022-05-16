@@ -21,7 +21,9 @@ You will not need any additional software configured on your device in order to 
 
 [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. This tutorial will use Studio Pro version 9.12.1, but you can use a later version if you wish.
 
-## 2 Create an Image Gallery in the Responsive Navigation Profile
+## 2 Choosing an App Template with a Responsive Navigation Profile
+
+Here you will choose an app starting point. It is key that you choose a starting point with a configured responsive web navigation profile, as the app you will make in this guide needs to work for web browsers:
 
 1.  Starting from Studio Pro, click **Create New App**:
 
@@ -35,7 +37,7 @@ You will not need any additional software configured on your device in order to 
 
     {{< figure src="/attachments/refguide/quickstart-guide/part1/home-web.png" width="450px" alt="Home Web page">}}
 
-## 3 Explore Studio Pro
+## 3 Exploring Studio Pro
 
 Now that you have completed your first tasks in Studio Pro, this section will give you a quick and optional tour. If you know Studio Pro well already, you can skip this section.
 

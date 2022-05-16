@@ -1,5 +1,5 @@
 ---
-title: "Quickstart for Building an App"
+title: "Quickstart"
 url: /refguide/quickstart-guide/
 parent: "_index"
 weight: 9

@@ -25,18 +25,6 @@ Workflows are a visual way of processing logic in your application. A workflow l
 Workflows are available in Studio from **Mendix version 9.12.1**. If you have an app with workflow functionality below this version, this app is most likely to be created in Studio Pro and requires a manual migration. For more information on how to migrate your app using Studio Pro, see [Migrate Workflow Apps](/refguide/workflow-beta-migration/). 
 {{% /alert %}}
 
-## 2 Workflow App Template
-
-You can use workflow-specific app templates as a starting point for using workflows. For example, you can configure an approval request form for end-users based on which the app is be created. It contains preconfigured elements, such as dashboards, admin pages, dashboards, and a workflow that you can afterwards customize even more. You can discover these templates when creating a new app.
-
-## 3 Workflow Context Parameter
-
-A [workflow parameter](/studio/workflow-parameter/) is input data for your workflow. The **WorkflowContext** parameter represents a business-related data that travels through the workflow:
-
-{{< figure src="/attachments/studio/workflows/parameter.jpg" alt="Workflow Parameter Example" >}}
-
-For more information, see [Workflow Context Parameter](/studio/workflow-parameter/). 
-
 ## 4 Performing Basic Functions
 
 You can perform the following basic functions when configuring workflows:
@@ -169,7 +157,15 @@ Now this microflow triggers the selected workflow:
 
 {{< figure src="/attachments/studio/workflows/call-workflow-example.jpg" alt="Call Workflow Example" >}}
 
-## 5 Toolbox Elements
+## 5 Workflow Context Parameter
+
+A [workflow parameter](/studio/workflow-parameter/) is input data for your workflow. The **WorkflowContext** parameter represents a business-related data that travels through the workflow:
+
+{{< figure src="/attachments/studio/workflows/parameter.jpg" alt="Workflow Parameter Example" >}}
+
+For more information, see [Workflow Context Parameter](/studio/workflow-parameter/). 
+
+## 6 Toolbox Elements
 
 The **Toolbox** tab contains elements that you can drag and drop on a path. Below is a categorized overview of all elements. The following sections are used:
 
@@ -177,7 +173,7 @@ The **Toolbox** tab contains elements that you can drag and drop on a path. Belo
 * [User actions](#user-actions)
 * [System actions](#system)
 
-### 5.1 General {#general}
+### 6.1 General {#general}
 
 Elements in the **General** section help you control the workflow path, for example, add parallel paths or end them:
 
@@ -193,19 +189,19 @@ The elements of this section are described in the table below:
 | [Parallel split](/studio/workflows-general-activities/#parallel-split) | Adds two or more parallel paths to your workflow.            |
 | [End activity](/studio/workflows-general-activities/#end)   | Ends the path of the workflow                                |
 
-### 5.2 User Actions {#user-actions}
+### 6.2 User Actions {#user-actions}
 
 [User task](/studio/workflows-user-task/) – a central element in a workflow that allows you to assign a task to a certain user or a group of users using filters or microflows. 
 
 {{< figure src="/attachments/studio/workflows/user-actions.jpg" alt="User Actions" >}}
 
-### 5.3 System Actions {#system}
+### 6.3 System Actions {#system}
 
 [Call microflow](/studio/workflow-system-actions/) activity calls a selected microflow. You can use this activity to add application logic to the path of the workflow that does not need user interaction. 
 
 {{< figure src="/attachments/studio/workflows/system-actions.jpg" alt="System Actions" >}}
 
-## 6 Main Documents in This Category
+## 7 Main Documents in This Category
 
 * [Workflow Context Parameter](/studio/workflow-parameter/) – describes the Workflow Context parameter and its properties 
 * [Workflow Properties](/studio/workflow-properties/) – describes workflow properties 

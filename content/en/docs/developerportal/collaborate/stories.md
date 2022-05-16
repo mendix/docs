@@ -196,7 +196,7 @@ Moving a story will move the tasks as well.
 
 To add a task to a story, access the [story details](#story-details) page and under **Tasks**, start typing in the **Add a new task** box.
 
-### 2.7 Managing Stories in Mendix Studio Pro 
+### 2.7 Managing Stories in Studio Pro 
 
 In addition to managing your Sprints in the Developer Portal, you can view them in Studio Pro.
 

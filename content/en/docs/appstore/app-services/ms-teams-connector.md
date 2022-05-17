@@ -219,6 +219,43 @@ Microsoft Teams supports [actionable message cards](https://docs.microsoft.com/e
        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/add-a-comment-expanded.png" >}}
     
        {{% alert type="info" %}}For more information about the design of a message card, see [*Design guidelines*](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference#design-guidelines). {{% /alert %}}
+       
+### 4.2 Sending Message using Microsoft credentials
+ 
+This feature will be available from module version 1.0.2 onwards. A new drag-and-drop activity with name **Send Message** in the microflow toolbox.
+
+Prerequisite :
+   1) Deeplink (Available in the Mendix app store)
+   2) Microsoft Account in Azure Active Directory 
+
+There are few configurations required to be performed which are explained in the following sections.
+
+#### 4.2.1 Registering your application in the Azure Portal
+
+1. Login to [Azure Portal](https://portal.azure.com/#home) at Microsoft Azure with your company account.    
+2. If your account gives you access to more than one tenant, select your account in the top right corner, and set your portal session to the Azure AD tenant of your company.
+{{% alert type="info" %}} Note : If you get Access Denied, contact your IT team.{{% /alert %}}
+
+3. In the left-hand navigation pane, select the Azure Active Directory service, and then select App registrations > New registration.                                   
+
+4. When the Register an application page appears, enter your application's registration information:
+
+    i) Name - Enter a meaningful application name for the app.
+
+   ii) Supported account types : Select Accounts in this organizational directory only.
+
+   iii) Redirect URI : Select the type of app to Web  and then enter the redirect URI (or reply URL) for your application.
+         
+         Note: Link must be set as per deep link configuration. Format: (base URL of your app)/link/(deeplink_name)
+         Example : https://contosoapp1/link/auth
+   
+         {{% alert type="info" %}} Note : Make sure you make a note of this URI as it will be needed as a configuration to use the activtiy{{% /alert %}}       
+
+    iv. When finished, select Register.
+   
+   {{< figure src="/attachments/appstore/app-services/ms-teams-connector/clickOnRegisterButton.png" >}}
+
+
 
 ## 5 Checking Statistics Using the Usage Dashboard {#statistics}
 

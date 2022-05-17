@@ -63,7 +63,7 @@ To create the workflow for the travel approval request via the wizard, do the fo
 
     5. Click the **Create** button.
 
-        {{< figure src="/attachments/studio/workflows/request-form-fields.png" alt="Filled-In Fields for the Request Form" >}}
+        {{< figure src="/attachments/studio/workflows/workflow-how-to-configure-using-wizard/request-form-fields.png" alt="Filled-In Fields for the Request Form" >}}
 
 10. Based on this form the app is set up: labels that you filled in are turned into attributes of an entity used by the workflows, workflow and pages are created, security is set up. Click **Take the tour** to get more information about your app.
 

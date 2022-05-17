@@ -41,7 +41,7 @@ There are three ways to install a Marketplace component:
 
 ### 3.1 Downloading Content from the Marketplace Within Studio Pro {#downloading}
 
-{{% alert color="info" %}}This procedure only works for all types of marketplace components, except [app services](/appstore/app-services/).{{% /alert %}}
+{{% alert color="info" %}}This procedure works for all types of marketplace components, except [app services](/appstore/app-services/).{{% /alert %}}
 
 1. Open Studio Pro and sign in with your Mendix credentials.
 2. Open the app in which you want to install the component from the Marketplace.

@@ -249,13 +249,22 @@ There are few configurations required to be performed which are explained in the
          Note: Link must be set as per deep link configuration. Format: (base URL of your app)/link/(deeplink_name)
          Example : https://contosoapp1/link/auth
    
-         {{% alert type="info" %}} Note : Make sure you make a note of this URI as it will be needed as a configuration to use the activtiy{{% /alert %}}       
+         {{% alert type="info" %}} Make sure you make a note of this URI as it will be needed as a configuration to use the activtiy{{% /alert %}}       
 
-    iv. When finished, select Register.
+ 5. When finished, select Register.
    
    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/clickOnRegisterButton.png" >}}
-
-
+   
+ 6. Azure AD assigns a unique application (client) ID to your app, and you're taken to your application's Overview page.
+   {{< figure src="/attachments/appstore/app-services/ms-teams-connector/overviewPage.png" >}}
+   
+   {{% alert type="info" %}} Make note of the client Id and tenant Id visible in above overview page.{{% /alert %}}
+   
+ 7. In the overview page, click on **Certificates and secrets** under the Manage section. 
+ 8. To configure a new clinet secret, click on **New client secret**.
+ 
+         {{% alert type="info" %}}Client secret values cannot be viewed, except for immediately after creation. Be sure to save the secret when created before leaving the page. This value will be required as a configuration item.{{% /alert %}}
+         
 
 ## 5 Checking Statistics Using the Usage Dashboard {#statistics}
 

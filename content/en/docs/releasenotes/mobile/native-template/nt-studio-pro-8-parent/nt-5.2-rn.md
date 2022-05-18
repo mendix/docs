@@ -8,11 +8,11 @@ description: "Native Template 5.2 release notes."
 
 ## 5.2.12
 
-** Release date: May 11th, 2022**
+**Release date: May 11th, 2022**
 
 ### Fixes
 
-* We fixed an issue with CocoaPods on iOS, which would fail to build, as the CocoaPods service was temporarily unavailable.
+* We fixed an issue with CocoaPods on iOS, which would fail to build when the CocoaPods service was temporarily unavailable.
 
 ## 5.2.11
 
@@ -20,7 +20,7 @@ description: "Native Template 5.2 release notes."
 
 ### Fixes
 
-* We fixed an issue with JCenter on Android, which would fail to build (Ticket #148798 #148819 #148830 #148840). JCenter has become unstable and is not supported anymore, therefore we now host Android dependencies ourselves.
+* We fixed an issue with JCenter on Android which would fail to build. JCenter has become unstable and is no longer supported, therefore we now host Android dependencies ourselves. (Tickets 148798, 148819, 148830, 148840)
 
 ## 5.2.9
 

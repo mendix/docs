@@ -32,11 +32,11 @@ When consuming an add-on or a solution, Studio should be disabled for your app.
 
 There are several ways to import an add-on module from the Marketplace. For more information, see the [Installing Marketplace Content](/appstore/general/app-store-content/#install) section in *Use Marketplace Content in Studio Pro*.
 
-You can also add an add-on module to your app not through the Marketplace. For more information, see the [Importing Module Package](/howto/integration/importing-and-exporting-objects/#import-module) section in *How to Import & Export Objects*. 
+You can also add an add-on module to your app not through the Marketplace. For more information, see the [Importing Module Package](/refguide/import-and-export/#import-module) section in *Importing and Exporting Apps, Modules, Widgets, and Documents*. 
 
 ## 4 Importing a Solution Package 
 
-A solution package is imported to your app as any other app package. For more information, see  the [Importing App Packages](/howto/integration/importing-and-exporting-objects/#import-app-package) section in *How to Import & Export Objects*. 
+A solution package is imported to your app as any other app package. For more information, see  the [Importing App Packages](/refguide/import-and-export/#import-app-package) section in *Importing and Exporting Apps, Modules, Widgets, and Documents*. 
 
 ## 5 Working with Add-on Modules and Solutions in Your App
 
@@ -65,5 +65,5 @@ The module is deleted from your app.
 
 * [IP Protection](/appstore/creating-content/sol-ip-protection/)
 * [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)
-* [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects/)
+* [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/)
 

@@ -120,5 +120,5 @@ If, for some reason, you switch the add-on and solution module to an app module,
 * [Creating Solutions](/appstore/creating-content/sol-solutions-guide/)
 * [IP Protection](/appstore/creating-content/sol-ip-protection/)
 * [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)
-* [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects/)
+* [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/)
 

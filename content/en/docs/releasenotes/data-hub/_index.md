@@ -11,6 +11,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### May 19th, 2022
+
+#### Improvements
+
+* We made several improvements to the Catalog UI and its dark theme
+
 ### May 12th, 2022
 
 #### Improvements

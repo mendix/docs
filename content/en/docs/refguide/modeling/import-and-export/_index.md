@@ -8,7 +8,7 @@ tags: ["mpk", "import", "export", "document", "module", "widget", "app package"]
 
 ## 1 Introduction
 
-In Mendix, you can import various elements others have created (apps, solutions, modules, etc.) and export elements for others to use. The Marketplace provides this functionality on a macro level. You can also use built-in import and export functions to share content between your own apps, import unofficial modules, and share entire apps.
+In Mendix, you can import various elements others have created (apps, solutions, modules, etc.) and export elements for others to use. The Marketplace provides a platform to share components among the whole Mendix community. You can also use built-in import and export functions to share content between your own apps, import unofficial modules, and share entire apps.
 
 There are *.mpk* packages that can contain apps, modules, or widgets, *.mxmodule* packages containing add-ons, and *.mxsolution* packages containing solutions. 
 
@@ -46,7 +46,7 @@ To import a complete app or solution package, follow these steps:
 
     You have the following options in this dialog box:
 
-    * Decide whether to store your app in a **New Mendix Team Server** (recommended), an **Existing Mendix Team Server**, or **Locally on disk**
+    * Decide whether to store your app in a **New Mendix Team Server** (recommended), an **Existing Mendix Team Server**, **Private server** or **Locally on disk**
     * Provide an **App name** (by default, it will be named as it was in the Mendix package file)
     * Determine the local folder where you would like to store your app in **App directory**
    

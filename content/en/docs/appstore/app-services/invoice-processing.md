@@ -69,7 +69,7 @@ To download and install the Invoice Processing app service in your app, follow t
 
 Before you deploy an app, you should configure the binding keys in your app as follows:
 
-1.  In the **App Explorer** or the **Project Explorer**, go to **InvoiceProcessing** > **Configurations**. **Access_Key**, **Secret_Key**, and **Encryption_Key** are defined as constants.
+1.  In the **App Explorer** (or **Project Explorer**), go to **InvoiceProcessing** > **Constants**. **Access_Key**, **Secret_Key**, and **Encryption_Key** are defined as constants.
 
     {{< figure src="/attachments/appstore/app-services/invoice-processing/configurations-keys.png" alt="Keys under Configurations in a tree view" >}}
 

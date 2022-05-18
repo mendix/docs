@@ -1,6 +1,7 @@
 ---
-title: "Configure a Workflow in Studio Using the Wizard"
+title: "Configure a Workflow Using the Wizard in Studio"
 url: /studio-how-to/workflow-how-to-configure-using-wizard/
+linktitle: "Configure a Workflow Using the Wizard"
 category: "Workflows"
 description: "Describes how to configure a workflow using the wizard in Mendix Studio."
 weight: 10
@@ -51,7 +52,7 @@ To create the workflow for the travel approval request via the wizard, do the fo
 
     {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-using-wizard/start-wizard.png" alt="Creating a Workflow with the Wizard" >}}
 
-6. In the **Create Request Form**, you can define input fields that will be used by a person submitting the request. An employee will fill in their name, date,destination, cost, and a travel document (an attached file). Do the following:
+6. In the **Create Request Form**, you can define input fields that will be used by a person submitting the request. An employee will fill in their name, date, destination, cost, and a travel document (an attached file). Do the following:
 
     1. Fill in *Name* in the **Label** option, leave the **Type** as string, and mark this field as required. On the right you can see the preview of the future form.
 
@@ -59,25 +60,25 @@ To create the workflow for the travel approval request via the wizard, do the fo
 
     3. Follow steps 4a and 4b to add the *Date* of type Date and Time, *Destination* of type String, *Cost* of type Decimal. 
 
-    3. Follow step 4a to add the *Document* of type File (this type cannot be marked as **Required**).
+    4. Follow step 4a to add the *Document* of type File (this type cannot be marked as **Required**).
+
+        {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-using-wizard/request-form-fields.png" alt="Filled-In Fields for the Request Form" >}}
 
     5. Click the **Create** button.
 
-        {{< figure src="/attachments/studio/workflows/workflow-how-to-configure-using-wizard/request-form-fields.png" alt="Filled-In Fields for the Request Form" >}}
-
 10. Based on this form the app is set up: labels that you filled in are turned into attributes of an entity used by the workflows, workflow and pages are created, security is set up. Click **Take the tour** to get more information about your app.
 
-The app with the workflow is set up and fully functional. 
+Congratulations! The app with the workflow is set up and fully functional. 
 
 ## 5 Testing the Workflow {#test-workflow-from-wizard}
 
 Now you can test your workflow in the **Preview** from the perspective of different roles. 
 
-For example, users who have tasks assigned to them (Approver) will see their task inbox and dashboards pages where they can manage and monitor tasks assigned to them:
+For example, users who have tasks assigned to them (Approvers) will see their task inbox and dashboards pages where they can manage and monitor tasks assigned to them:
 
 {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-using-wizard/task-inbox.png" alt="Task Inbox" >}}
 
-The Administrator role has access to the Workflow Dashboard and Workflow Management and can monitor all workflows, can view the progress of workflows, and change the workflow settings.
+The Administrator role has access to the Workflow Dashboard and the Workflow Management and can monitor all workflows, can view the progress of workflows, and change the workflow settings.
 
 
 To test your workflow, you need to switch between different user roles. Follow the steps below:
@@ -86,13 +87,15 @@ To test your workflow, you need to switch between different user roles. Follow t
 
 2. Click the user icon on the right and select a user role:
 
-    {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-using-wizard/user-roles.png" alt="Demo User Role" >}}
+    {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-using-wizard/user-roles.png" alt="Demo User Role"  width="350" >}}
 
 3. You can switch between different demo user roles to test the use case. You can do the following:
     1. Select the demo_user user role and submit a travel approval request: fill in the request fields on the **Submit Travel Approval Request Overview** page and click **Submit**:
         {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-using-wizard/submit-request.png" alt="Submit Travel Request" >}}
     2. Switch to the demo_approver role, make sure a new task is in the inbox, assign the task to you, open the task, and approve the request.
     3. Switch to the demo_administrator and open the Admin Center from the navigation bar. Then open the Workflow Dashboard to see information about all workflow instances.
+    
+    Great job! You have previewed your app locally and tested your workflow from the perspective of different users. You can share the app with other users to try it out in real life or extend functionality in your app. 
 
 ## 6 Read More
 

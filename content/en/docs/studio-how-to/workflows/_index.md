@@ -12,10 +12,10 @@ Workflow is a visual language in Mendix Studio and Mendix Studio Pro that allows
 
 The **Workflow** category contains Studio how-tos on workflows and will help you build a workflow using the wizard or manually depending on your use case. 
 
-For more general guidelines on how to create a page, drag and drop elements on it, see [Workflows](/studio/workflows/) in the *Studio 9 Guide*.
+For more general guidelines on workflows, see [Workflows](/studio/workflows/) in the *Studio 9 Guide*.
 
 ## 2 Documents in This Category
 
-* [How to Configure a Workflow in Studio Using the Wizard](/studio-how-to/workflow-how-to-configure-using-wizard/) – describes an automated process of creating and configuring a workflow using the wizard; available for Approval Request use cases
-* [How to Configure a Workflow in Studio Manually](/studio-how-to/workflow-how-to-configure/) – describes a manual process of creating and configuring a workflow
+* [How to Configure a Workflow Using the Wizard in Studio](/studio-how-to/workflow-how-to-configure-using-wizard/) – describes an automated process of creating and configuring a workflow using the wizard; available for approval request use cases
+* [How to Configure a Workflow Manually in Studio](/studio-how-to/workflow-how-to-configure/) – describes a manual process of creating and configuring a workflow
 

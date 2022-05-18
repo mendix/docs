@@ -1,8 +1,9 @@
 ---
-title: "Configure a Workflow in Studio Manually"
+title: "Configure a Workflow Manually in Studio"
 url: /studio-how-to/workflow-how-to-configure/
+linktitle: "Configure a Workflow Manually"
 description: "Describes how to configure a workflow in Mendix Studio."
-weight: 05
+weight: 20
 tags: ["studio", "workflow", "how to", task", "onboarding"]
 ---
 
@@ -356,6 +357,6 @@ Great job! You have previewed your app locally and tested your workflow from the
 ## 11 Read More
 
 * [Workflows](/studio/workflows/)
-* [How to Configure a Workflow in Studio Using the Wizard](/studio-how-to/workflow-how-to-configure-using-wizard/)
+* [How to Configure a Workflow Using the Wizard in Studio ](/studio-how-to/workflow-how-to-configure-using-wizard/)
 * [How to Configure a Navigation Bar](/studio-how-to/navigation-how-to-configure/) 
 * [How to Set Fields as Read-Only or Required](/studio-how-to/pages-how-to-set-validation-and-editability/)

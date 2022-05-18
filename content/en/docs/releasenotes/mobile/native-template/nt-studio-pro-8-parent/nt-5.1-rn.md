@@ -6,6 +6,13 @@ weight: 20
 description: "Native Template 5.1 release notes."
 ---
 
+## 5.1.19
+
+**Release date: May 11th, 2022**
+
+### Fixes
+
+* We fixed an issue with JCenter on Android, which would fail to build (Ticket #148798 #148819 #148830 #148840). JCenter has become unstable and is not supported anymore, therefore we now host Android dependencies ourselves.
 
 ## 5.1.17
 

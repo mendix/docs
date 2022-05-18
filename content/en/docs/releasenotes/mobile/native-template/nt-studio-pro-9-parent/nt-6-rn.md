@@ -6,6 +6,21 @@ weight: 10
 description: "Native Template 6 release notes."
 ---
 
+## 6.2.19
+**Release date: May 11th, 2022**
+
+### Fixes
+
+* We fixed an issue with CocoaPods on iOS, which would fail to build when the CocoaPods service was temporarily unavailable.
+
+## 6.2.18
+
+**Release date: May 10th, 2022**
+
+### Fixes
+
+* We fixed an issue with JCenter on Android which would fail to build. JCenter has become unstable and is no longer supported, therefore we now host Android dependencies ourselves. (Tickets 148798, 148819, 148830, 148840)
+
 ## 6.2.16
 
 **Release date: March 30th, 2022**

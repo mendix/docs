@@ -6,13 +6,21 @@ weight: 30
 description: "Native Template 5.0 release notes."
 ---
 
+## 5.0.14
+
+**Release date: May 17th, 2022**
+
+### Fixes
+
+* We fixed an issue with JCenter on Android which would fail to build. JCenter has become unstable and is no longer supported, therefore we now host Android dependencies ourselves. (Tickets 148798, 148819, 148830, 148840)
+
 ## 5.0.12
 
 **Release date: March 31st, 2021**
 
 ### Fixes
 
-* We fixed another case where Firebase might crash the Custom Developer app when enabling debug mode.
+* We fixed another case where Firebase could crash a custom developer app when enabling debug mode.
 
 ## 5.0.12 {#5012}
 

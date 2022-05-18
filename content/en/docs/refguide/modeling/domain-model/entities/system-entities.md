@@ -88,6 +88,8 @@ JS
 Jan-David Salchow  2 days ago
 ​​I wouldn’t want to make such promises. For example when you delete a file document it might stay in S3, Azure, or on the disk for quite some time before it actually gets deleted (so that you can rollback a transaction). We didn’t think about the implications for security of this design. I would think of this feature more like a “garbage collection”.
 
+Whether the S3 file is deleted also depends on the runtime setting `com.mendix.storage.PerformDeleteFromStorage`. We recommend that this is left as `false`, otherwise your database and S3 files can get out of step if you have to restore a previous version of the database.
+
 
 ## **Contents**
 

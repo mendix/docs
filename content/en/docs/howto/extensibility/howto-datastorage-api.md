@@ -156,7 +156,7 @@ The definition of the Java action resembles the OQL action, but instead of an OQ
 
 The Java implementation below implements the following steps:
 
-*	Use *Core.dataStorage().executeWithConnection()* to execute some Java statements that receive a JDBC connection from the internal connection pool. This API is constructed to enable the Mendix platform to guarantee that connections are returned to the pool after usage.
+*	Use *Core.dataStorage().executeWithConnection()* to execute some Java statements that receive a JDBC connection from the internal connection pool. This API is constructed to enable the Mendix Platform to guarantee that connections are returned to the pool after usage.
 
 {{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image026.png" >}}
 

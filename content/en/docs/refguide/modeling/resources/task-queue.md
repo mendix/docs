@@ -180,7 +180,7 @@ This grace period is applied twice during the [shutdown](#shutdown) (described b
 
 ### 2.8 Interfacing the Queue {#interfacing-queue}
 
-Besides scheduling and executing tasks, the Mendix platform keeps track of tasks that have been executed in the background: for example, which completed and which failed.
+Besides scheduling and executing tasks, the Mendix Platform keeps track of tasks that have been executed in the background: for example, which completed and which failed.
 
 Internally, a scheduled or running task is represented by the Mendix entity `System.QueuedTask`. In a high performance setting, this entity should *not* be used directly by user code, because the underlying database table is heavily used. For example counting how many `System.QueuedTask` objects exist at the moment will lock the table and might cause a serious slowdown in task processing. You should also not Write directly to `System.QueuedTask`. Instead, mark a task for background execution in the **Call Microflow** or **Call Java Action** activity or using the Java API.
 

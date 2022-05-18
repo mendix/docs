@@ -348,7 +348,7 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
 ### 4.8 Cloud Verification
 
-1. Once the local test passes, go to the App deployment page via **Environment** in the Mendix platform
+1. Once the local test passes, go to the App deployment page via **Environment** in the Mendix Platform
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image53.png" >}}
 

@@ -84,7 +84,7 @@ We expect your support team to be trained and certified on Studio Pro and the De
 
 ## 6 Platform Status
 
-If there is an issue with the Mendix platform that affects multiple customers, or if there is planned maintenance, we will communicate this through our [status page](https://status.mendix.com/) and send updates on the progress through email if you have subscribed to this service. It is recommended that your service desk team subscribes to updates from this page.
+If there is an issue with the Mendix Platform that affects multiple customers, or if there is planned maintenance, we will communicate this through our [status page](https://status.mendix.com/) and send updates on the progress through email if you have subscribed to this service. It is recommended that your service desk team subscribes to updates from this page.
 
 ## 7 Reach Out to Mendix Support
 

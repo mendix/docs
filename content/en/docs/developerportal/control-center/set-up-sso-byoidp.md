@@ -11,15 +11,15 @@ tags: ["BYOIDP", "IDP", "Bring Your Own IDP", "Microsoft Azure", "SSO", "Single 
 
 The Mendix Cloud solution offers an Identity Provider (IdP) that allows users to sign in to:
 
-* Mendix platform services
+* Mendix Platform services
 * Mendix applications that have been built with Mendix SSO
 
-Rather than using Mendix credentials to login, it is also possible to set up an identity federation between the Mendix platform and your corporate identity provider. In other words, you can Bring Your Own Identity Provider (BYOIDP).
+Rather than using Mendix credentials to login, it is also possible to set up an identity federation between the Mendix Platform and your corporate identity provider. In other words, you can Bring Your Own Identity Provider (BYOIDP).
 
 Benefits of using the BYOIDP SSO are:
 
 * Convenience for platform users
-* Governance: access to the Mendix platform is only possible for users that have an active account with your identity provider
+* Governance: access to the Mendix Platform is only possible for users that have an active account with your identity provider
 * Security: your identity provider can enforce your preferred authentication policy, which may include 2-factor authentication (2FA)
 
 Mendix calls this feature BYOIDP, which is short for Bring-Your-Own-IDentity-Provider (also known as ‘customer IDP’)
@@ -28,7 +28,7 @@ The purpose of this document is to describe the steps to set up a ‘Single Sign
 
 ## 2 Prerequisites
 
-To set up an IDP configuration for the Mendix platform and your Mendix app, you will need the following:
+To set up an IDP configuration for the Mendix Platform and your Mendix app, you will need the following:
 
 * A subscription to an OpenID Connect compliant identity provider. Validate that your Identity Provider supports OpenID Connect
     * If you are using Azure AD, Okta, Auth0, or ADFS you will be okay
@@ -63,7 +63,7 @@ When adding a configuration, you will need to provide the information described 
 
 ### 3.2 Testing Your Configuration
 
-Once you have configured the endpoint and the scope, you are ready to perform a first test of your configuration. This test will perform a round trip from the Mendix platform to your IDP and back to the platform. The test will be performed in a new tab page of your browser. In order to perform the test, your browser must allow popup windows.
+Once you have configured the endpoint and the scope, you are ready to perform a first test of your configuration. This test will perform a round trip from the Mendix Platform to your IDP and back to the platform. The test will be performed in a new tab page of your browser. In order to perform the test, your browser must allow popup windows.
 
 {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/customer-idp-wizard-page-3.png" alt="Customer IDP setup - step 3" >}}
 
@@ -84,11 +84,11 @@ When you have completed your IDP setup, you can perform a test sign-in before ac
 You can test in one of two ways:
 
 1. Click on the test endpoint of your configuration. It will redirect you to the login page of your IDP. Enter the credentials of a user known to your IDP. If the test succeeds the Developer Portal Buzz will open.
-2. Go to https://login.mendix.com/ and, in the username field, enter the test email domain of your configuration exactly as printed on the overview page. The password field should disappear. Click the ‘Sign in with SSO' button. This will redirect you to a login page of your IDP. Enter credentials known to your IDP. If the test succeeds the Mendix platform home page will open.
+2. Go to https://login.mendix.com/ and, in the username field, enter the test email domain of your configuration exactly as printed on the overview page. The password field should disappear. Click the ‘Sign in with SSO' button. This will redirect you to a login page of your IDP. Enter credentials known to your IDP. If the test succeeds the Mendix Platform home page will open.
 
 ## 5 Activating
 
-When you are ready, you can activate the IDP configuration from the overview page. Your users will immediately benefit from logging into the Mendix Developer Portal with the same credentials as they use in the IDP. Any user passwords currently held in the Mendix platform will be scrambled to prevent the users from bypassing your IDP authentication.
+When you are ready, you can activate the IDP configuration from the overview page. Your users will immediately benefit from logging into the Mendix Developer Portal with the same credentials as they use in the IDP. Any user passwords currently held in the Mendix Platform will be scrambled to prevent the users from bypassing your IDP authentication.
 
 As an option, you can inform your users of the change in the sign-in process via a standard email message. This email is a fixed template which cannot be configured. 
 
@@ -154,9 +154,9 @@ For more information on setting up federation with a Microsoft Azure IdP, see []
 
 ### 8.1 Onboarding
 
-Users who do not currently have a Mendix account can login to the Mendix platform via your own IDP and will then be taken through onboarding onto the Mendix Developer Portal platform. They will not need to sign up explicitly.
+Users who do not currently have a Mendix account can login to the Mendix Platform via your own IDP and will then be taken through onboarding onto the Mendix Developer Portal platform. They will not need to sign up explicitly.
 
-Existing users of the Developer Portal can continue to use their accounts, but will have to use the authentication provided by BYOIDP; they can no longer use the password they created on the Mendix platform.
+Existing users of the Developer Portal can continue to use their accounts, but will have to use the authentication provided by BYOIDP; they can no longer use the password they created on the Mendix Platform.
 
 ### 8.2 Mendix Version
 

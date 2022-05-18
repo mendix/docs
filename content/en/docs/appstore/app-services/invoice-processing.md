@@ -77,7 +77,7 @@ Before you deploy an app, you should configure the binding keys in your app as f
 
 ## 4 Usage
 
-To use the Invoice Processing app service, first you need to create a model, then create an [import mapping](#mapping-file) using a sample invoice. The import mapping defines how to map extracted data from images to an entity. After you create this, include the [Invoice Processing activity](#extraction-activity) into a microflow. This microflow should be set up to accept the list of documents (invoice images and PDFs), your trained model, and the import mapping. The microflow should extract data from the iInvoice files in bulk and then map the data to an entity using the import mapping that you created.
+To use the Invoice Processing app service, first you need to create a model, then create an [import mapping](#mapping-file) using a sample invoice. The import mapping defines how to map extracted data from images to an entity. After you create this, include the [Invoice Processing activity](#extraction-activity) into a microflow. This microflow should be set up to accept the list of documents (invoice images and PDFs), your trained model, and the import mapping. The microflow should extract data from the invoice files in bulk and then map the data to an entity using the import mapping that you created.
 
 ### 4.1 Training a Document Model {#document-model-training}
 
@@ -171,7 +171,7 @@ You need to use an [Import Mapping](/refguide/mapping-documents/#import-mappings
 
 2.  Create a list of documents that inherits from `System.FileDocument`. Image files and documents from which data needs to be extracted should be passed as a list, as shown in the microflow above.
 
-    {{% alert color="info" %}} The total size of the images & documents being passed for extraction should not exceed 20 MB. If you have multiple files to extract data from, you can process them in smaller batches. {{% /alert %}}
+    {{% alert color="info" %}} The total size of the images and documents being passed for extraction should not exceed 20 MB. If you have multiple files to extract data from, you can process them in smaller batches. {{% /alert %}}
 
     {{% alert color="info" %}}The number of pages of PDF document(s) and number of images passed as a list in the microflow and processed by the **Invoice Processing** activity will be counted against the allocated quota for your provisioned instance.{{% /alert %}}
 

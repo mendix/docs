@@ -68,7 +68,7 @@ There are three ways to install a Marketplace component:
 
         {{< figure src="/attachments/appstore/general/app-store-content/versions.png" alt="All Versions tab" >}}
 
-7. If you download a widget, wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported widget in the **Toobox**.
+7. If you download a widget, wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported widget in the **Toolbox**.
 8. If you download a component or a connector, the **Import Module** dialog box opens. Perform the following steps:
     1.  In the **Import Module** dialog box, select one of these options:
 

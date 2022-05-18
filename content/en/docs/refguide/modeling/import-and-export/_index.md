@@ -10,10 +10,10 @@ tags: ["mpk", "import", "export", "document", "module", "widget", "app package"]
 
 In Mendix, you can import various elements others have created (apps, solutions, modules, etc.) and export elements for others to use. The Marketplace provides this functionality on a macro level. You can also use built-in import and export functions to share content between your own apps, import unofficial modules, and share entire apps.
 
-There are *.mpk* packages that can contain apps, modules, or widgets; *.mxmodule* packages with add-ons and *.mxsolution* packages solutions. 
+There are *.mpk* packages that can contain apps, modules, or widgets, *.mxmodule* packages containing add-ons, and *.mxsolution* packages containing solutions. 
 
 {{% alert color="warning" %}}
-When you have an app package, you cannot import individual modules or widgets separately from it. 
+When you have an app package, you cannot import individual modules or widgets from within it. 
 {{% /alert %}}
 
 You can import and export the following:
@@ -32,11 +32,11 @@ Be careful when importing elements, as you can overwrite your existing work. Pay
 
 A Mendix package (*.mpk*) file can store a complete Mendix app. 
 
-You can also import a solution package (*.mxsolution*), which is also a complete Mendix app that was developed as out-of-the-box solution.  
+You can also import a solution package (*.mxsolution*), which is a complete Mendix app that was developed as out-of-the-box solution.  
 
-To import a complete an app or solution package, follow these steps:
+To import a complete app or solution package, follow these steps:
 
-1. Click the **File** menu in and select **Import App Package**:
+1. Select **Import App Package…** from the **File** menu:
 
     {{< figure src="/attachments/refguide/modeling/import-and-export/file-import-app-project.png" >}}
 
@@ -179,11 +179,11 @@ To learn more about importing content from the Marketplace, see [How to Use Mark
 
 To export an app, follow these steps:
 
-1. Click the **File** menu in  and select **Export App Package**.
+1. Select **Export App Package…** from the **File** menu:
 
     {{< figure src="/attachments/refguide/modeling/import-and-export/file-export-package.png" >}}
 
-2. In the **Export App Package** dialog box, which enables you to select the type of the package, set the export location, and select data to export (if required):
+2. In the **Export App Package** dialog box, select the **Package Type**, the **Package destination**, and whether you want to export a snapshot of the data in the current development database:
 
     {{< figure src="/attachments/refguide/modeling/import-and-export/export-app-package.png" >}}
 

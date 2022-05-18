@@ -152,7 +152,7 @@ To fill in the CreateInput microflow, follow these steps:
 3. Double-click the activity.
 4. For **Entity**, click **Select** and double-click **Input**, then click **OK**.
 5. Double-click the red **End event**.
-6. Under **Return value**, enter `$NewInput`, then click **OK**
+6. Under **Return value**, enter `$NewInput`, then click **OK**.
 
 Congratulations! You can now start your app and get summaries from Wikipedia.
 

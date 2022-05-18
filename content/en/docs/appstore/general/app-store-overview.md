@@ -66,7 +66,7 @@ The header for a component presents the following details:
 * The **Share** button, which allows you to copy the URL of the component and share it to your networks
 * **Download** – click this to download the component
 	* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
-	* The best practice is to download a component from the Marketplace that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see the [Installing Marketplace Content](/appstore/general/app-store-content/#install) section in *Use Marketplace Content in Studio Pro*))
+	* The best practice is to download a component from the Marketplace functionality built into Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see the [Installing Marketplace Content](/appstore/general/app-store-content/#install) section in *Use Marketplace Content in Studio Pro*))
 * The **Premium** label is applied to components like [app services](#types) that require a subscription; some premium services (like [Email Service](/appstore/app-services/email-service/)) also offer a free trial based on a predefined quota/limit
 	* These components have a **Subscribe** button to configure your subscription (by selecting a specific plan and setting a **Technical Owner**) and a **Try for Free** button to start your free trial
 	* If your company has an active subscription, click **Buy More** to buy more instances on the same or different plan.

@@ -8,7 +8,6 @@ tags: ["marketplace", "marketplace component", "app service", "microsoft", "micr
 ---
 
 ## 1 Introduction
-
 The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service enables sending messages and actionable message cards to a Microsoft Teams channel automatically. You can add and configure the app service in a microflow. Once the microflow that uses the app service is triggered, your app asynchronously sends out the message to the Microsoft Teams channel. 
 
 This app service is an [add-on module](/refguide/consume-add-on-modules-and-solutions/).
@@ -263,8 +262,33 @@ There are few configurations required to be performed which are explained in the
  7. In the overview page, click on **Certificates and secrets** under the Manage section. 
  8. To configure a new clinet secret, click on **New client secret**.
  
-         {{% alert type="info" %}}Client secret values cannot be viewed, except for immediately after creation. Be sure to save the secret when created before leaving the page. This value will be required as a configuration item.{{% /alert %}}
+         {{% alert type="info" %}}Client secret values cannot be viewed after leaving the page, except for immediately after creation. Be sure to save the secret when created before leaving the page. This value will be required as a configuration item.{{% /alert %}}
          
+      To know more about registering an application in Azure portal, you can go through [Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/graph/auth-register-app-v2))
+   
+         
+#### 4.2.2 Configuring Constants
+ 1) Inside the configurations folder, configure the LicenseSecret and LicenseKey following the same steps as in section 3 if not already done.
+
+         {{% alert type="info" %}} The keys needs to be configured only once. You can use both the activities using the these keys {{% /alert %}}
+         
+ 2) Navigate to **Azure App** folder inside the **Configurations folder**.
+ 3) Configure the values of constants AzureClientId,AzureClientSecret,AzureTenantId and RedirectURI with the values used and generated while registering application on Azure portal.
+ 4) The constant **DeepLinkName** must contain the text after last slash in the RedirectURI value.
+    Example : If your RedirectURI is  https://contosoapp1/link/auth then the **DeepLinkName** will be **auth**
+
+
+#### 4.2.3 Configuring Microflows
+
+ 1. Download the deeplink module from markeplace.
+ 2. Configure the **After startup** in settings -> Runtime to the **StartupMicroflow** provided in the MicrosoftTeamsConnector module.
+      {{< figure src="/attachments/appstore/app-services/ms-teams-connector/configureStartupMicroflow.png" >}}
+ 3. Go to the App's Navigation settings. Configure the **Default home page** option to execute a microflow that will display your application's home page.
+ 4. The activity that shows the home page must be precedded by a microflow call to **Configure_HomePage_Prerequisite** available in the connector module.
+ {{< figure src="/attachments/appstore/app-services/ms-teams-connector/BeforeHomepageMicroflow.png" >}}
+
+#### 4.2.4 Configuring Send Message Activity
+
 
 ## 5 Checking Statistics Using the Usage Dashboard {#statistics}
 

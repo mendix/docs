@@ -227,6 +227,9 @@ Prerequisite :
    1) Deeplink (Available in the Mendix app store)
    2) Microsoft Account in Azure Active Directory 
 
+Limitation:
+    1) Supports cards designed using HTML and plain text
+
 There are few configurations required to be performed which are explained in the following sections.
 
 #### 4.2.1 Registering your application in the Azure Portal
@@ -286,49 +289,50 @@ There are few configurations required to be performed which are explained in the
  3. Go to the App's Navigation settings. Configure the **Default home page** option to execute a microflow that will display your application's home page.
  4. The activity that shows the home page must be preceded by a microflow call to **Configure_HomePage_Prerequisite** available in the connector module.
  {{< figure src="/attachments/appstore/app-services/ms-teams-connector/BeforeHomepageMicroflow.png" >}}
+ 
+ 
 
 #### 4.2.4 Configuring Send Message Activity and SignInMicroflow
 
 1.  From the toolbox, drag and drop the **Send Message** activity into your microflow.
     
-    The following representative microflow contains activities with the required attributes, the **Send Message to Webhook** activity, and a placeholder to capture the returned object.
+    The following representative microflow contains activities with the required attributes, the **Send Message** activity, and a placeholder to capture the returned object.
     
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/connector-in-microflow.png" >}}
     
-2. Double-click the **Send Message to Webhook** activity to open the **Send Message to Webhook** dialog box.
+2. Double-click the **Send Message** activity to open the **Send Message** dialog box.
 
 3.  Specify the following settings with expression syntax:
-    1. Set the **webhookId** parameter to the **Webhook ID** generated in the Communication Services Console.
+    1. Set the **channelLink** parameter with the channelLink obtained from Microsoft Teams.
     2.  For **Message type**, select **Text** or **Card** from the drop-down list:
         
         *  If you want to send a message as plain text or in HTML or markdown formatting, select **Text**.
         
             {{% alert type="info" %}}Fore more information about HTML and markdown tags supported by Microsoft Teams, see [*Format Cards in Microsoft Teams*](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format).{{% /alert %}}
           
-        * If you want to use an actionable message card as a message, select **Card**.
+        *  If you want to send a card designed using HTML nd text, select **Card**.
         
-            {{% alert type="info" %}}Fore more information about message cards, see [Building a Message Card](#build-message-card).{{% /alert %}}
+            {{% alert type="info" %}}Fore more information on designing message cards , see [Building a Message Card using HTML](https://docs.microsoft.com/en-us/graph/api/chatmessage-post?view=graph-rest-beta&tabs=http#example-3-send-message-that-contains-cards).{{% /alert %}}
        
-    3.  For the **Message** parameter, set up the message content in the String format. Below is an example:
-       
-        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/html-message.png" >}}
-        The example above will render in the Microsoft Teams channel like this:
-
-        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/html-output.png" >}}
-       
+    3.  For the **Message** parameter, set up the message content as a String value. 
+     
     4. Click **OK** to save the changes and close the dialog box.
 
 {{% alert type="warning" %}}All parameters are mandatory. Setting any value to be empty or **none** will cause an error.{{% /alert %}}
 
-After the **Send Message to Webhook** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the Microsoft Teams channel. When the message is sent successfully, the activity returns a **SendMessageReponse** object. The **SendMessageReponse** entity for this object comes with the module and is pre-defined:
+4. Once this activity is triggered, it checks whether the user is logged in. If already logged in, the activity return a true in the MessageSent attribute of 
+   **SendMessageReponse** object else it returns false. If false is returned, you need to execute the **SignIn Microflow** to log in using your credentials.
+   
+    The **SendMessageReponse** entity for this object comes with the module and is pre-defined:
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/send-message-response-entity.png" >}}
 
-* If the message is successfully sent, the value of the **SentMessage** attribute is `true`.
-* If the message could not be sent, the value of the **SentMessage** attribute is `false`.
 * The **Message** attribute contains the respective response message.
+   
+5. Below microflow describes one of the approach to use the **SignIn Microflow** effectively. Introduce a decision activity after SendMessage activity that would check the SentMessage value. If false, then execute the **SignIn Microflow**.
 
-You can use the **Send Message** activity in a microflow to send messages to a Teams channel using Microsoft credentials. If you are not logged in, the activity will return the respective message in the response.
+{{< figure src="/attachments/appstore/app-services/ms-teams-connector/usingSignInMicroflow.png" >}}
+
 
 
 ## 5 Checking Statistics Using the Usage Dashboard {#statistics}

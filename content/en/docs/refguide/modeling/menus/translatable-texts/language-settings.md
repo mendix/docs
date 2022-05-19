@@ -208,6 +208,8 @@ The most up-to-date list of supported languages in your version of Studio Pro is
 
 ## 6 List of Deprecated Languages
 
+You can find the list of deprecated languages in the table below:
+
 | Language | Region | Locale | Available Since | Deprecated In |
 | --- | --- | --- | --- | --- |
 | Japanese (Imperial calendar) | Japan | ja_JP_JP | 9.0.5 | 9.6.0 |

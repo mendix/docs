@@ -3,7 +3,8 @@ title: Distributing Mobile Apps
 url: /refguide/mobile/distributing-mobile-apps/
 category: Mobile
 weight: 50
-description: Distribute native mobile apps.
+description: "Distribute native mobile apps."
+tags: ["distribution", "native", "app stores", "ios", "android"]
 aliases:
     - /howto/mobile/distribution/
 ---

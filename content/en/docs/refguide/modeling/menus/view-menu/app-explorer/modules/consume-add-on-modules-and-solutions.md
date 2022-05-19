@@ -42,7 +42,7 @@ A solution package is imported to your app as any other app package. For more in
 
 When you import an add-on module, it shows up in the **Add-ons** folder in the App Explorer. The main difference of the add-on module is that the implementation details of some functionality and elements, such as microflows, are *hidden* from consumers so that IP is protected. This means that add-on modules have a clear API: you know which elements you can use. For example, when you open a microflow, you will see its API including the microflow and parameter documentation. You cannot see how the microflow is built, but you are able to use it in your app, for example, you can call the microflow with protected implementation from another microflow:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/modules/consume-add-on-modules-and-solutions/protected-microflow.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/modules/consume-add-on-modules-and-solutions/protected-microflow.png" >}}
 
 You also might not see the full domain model of the module, only entities, attributes, and associations that were specifically exposed by the publisher. The visible parts of the domain model are intended to be reused; hidden elements are not needed for proper use of the module.
 

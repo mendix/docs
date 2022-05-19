@@ -32,7 +32,7 @@ The new app is created and opened.
 
 When creating a new app, the **App Settings** dialog box is opened where you can specify an app name, whether or not to enable the online services provided by the Mendix Platform, the default language, and the location on disk where the app files for your app are stored:
 
-{{< figure src="/attachments/refguide/modeling/menus/file-menu/new-project/app-settings-dialog.png" alt="App Settings" >}}
+{{< figure src="/attachments/refguide/modeling/menus/file-menu/new-app/app-settings-dialog.png" alt="App Settings" >}}
 
 ### 2.1 App Name
 

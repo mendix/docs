@@ -16,7 +16,7 @@ App packages can be imported again into a new app using the [Import App Package]
 
 To export the package, open the **File** menu > **Export App Package** and select the relevant options in the **Export App Package** dialog box:
 
-{{< figure src="/attachments/refguide/modeling/menus/file-menu/export-project-package-dialog/export-project-package.png" alt="Export App Package Dialog Window" >}}
+{{< figure src="/attachments/refguide/modeling/menus/file-menu/export-app-package-dialog/export-app-package.png" alt="Export App Package Dialog Window" >}}
 
  For more information on what options you can select, see the sections below. 
 
@@ -24,7 +24,7 @@ To export the package, open the **File** menu > **Export App Package** and selec
 
 When you have access to publishing add-on modules and solutions, you can select to export you app as the **Solution** or **Source Package**. 
 
-{{< figure src="/attachments/refguide/modeling/menus/file-menu/export-project-package-dialog/export-project-package-types.png" alt="Export App Package Dialog Window with Different Package Types" >}}
+{{< figure src="/attachments/refguide/modeling/menus/file-menu/export-app-package-dialog/export-app-package-types.png" alt="Export App Package Dialog Window with Different Package Types" >}}
 
 The access can be gained through Mendix Vendor Program. For more information, see [Mendix Vendor Program](/appstore/creating-content/vendor-program/) in the *Marketplace Guide*.
 

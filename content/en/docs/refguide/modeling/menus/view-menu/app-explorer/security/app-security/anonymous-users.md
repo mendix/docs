@@ -14,7 +14,7 @@ You can use anonymous users to allow end-users access your application without h
 
 Open **App Security** > the **Anonymous users** tab to access the properties:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/security/project-security/anonymous-users/anonymous-users-tab.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/security/app-security/anonymous-users/anonymous-users-tab.png" >}}
 
 The properties of anonymous users are described in the table below:
 
@@ -30,7 +30,6 @@ The properties of anonymous users are described in the table below:
 * [Administrator](/refguide/administrator/)
 * [Demo Users](/refguide/demo-users/)
 * [Password Policy](/refguide/password-policy/)
-
 
 
 

@@ -1,7 +1,7 @@
 ---
 title: "Security"
 url: /refguide/security/
-parent: "project-explorer"
+parent: "app-explorer"
 weight: 30
 tags: ["studio pro", "security"]
 ---

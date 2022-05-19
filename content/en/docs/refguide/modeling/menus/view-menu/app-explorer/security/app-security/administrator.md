@@ -10,7 +10,7 @@ tags: ["studio pro", "administrator", "app security", "security"]
 
 In the **Administrator** tab of **App Security**, you can change the default credentials and a user role for the Administrator user:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/security/project-security/administrator/project-security-administrator.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/security/app-security/administrator/app-security-administrator.png" >}}
 
 ## 2 Administrator Properties {#administrator-properties}
 

@@ -22,7 +22,7 @@ End-users of your application only see the user roles and not the module roles.
 
 To access user roles, open **App Security** > **User roles** tab:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/security/project-security/user-roles/user-roles-example.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/security/app-security/user-roles/user-roles-example.png" >}}
 
 ## 2 User Role Properties
 
@@ -33,7 +33,7 @@ The user role has the following properties:
 *  [General properties](#general)
 *  [User management properties](#user-management)
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/security/project-security/user-roles/user-role-properties.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/security/app-security/user-roles/user-role-properties.png" >}}
 
 ### 2.1 General Properties {#general}
 
@@ -55,7 +55,7 @@ A user role can be allowed to manage users with a number of other user roles (in
 | All | End-users with this user role can manage all users and grant all user roles. Usually this option should only be configured for an administrator. |
 | Selected | End-users with this user role can manage users that have at most the selected user roles, and can grant only the selected user roles. Select **(No user roles)** to only manage users without a user role (for example, newly created users). If nothing is selected, end-users with this user role cannot manage users at all.  |
 
-Internally, user manangement properties are translated into entity access rules for **System.User**. This means that they are not applied in microflows that do not check entity access.
+Internally, user management properties are translated into entity access rules for **System.User**. This means that they are not applied in microflows that do not check entity access.
 
 ## 3 Read More
 

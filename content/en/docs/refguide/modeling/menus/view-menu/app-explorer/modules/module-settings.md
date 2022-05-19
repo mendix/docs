@@ -17,7 +17,7 @@ Access to this functionality is currently limited and can be gained through the 
 
 Module settings allow you to choose the type of the module when you build your app and to set a version for certain module types:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/modules/module-settings/module-settings-dialog.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/modules/module-settings/module-settings-dialog.png" >}}
 
 To open module settings, select the module in the App Explorer and double-click **Settings**:
 

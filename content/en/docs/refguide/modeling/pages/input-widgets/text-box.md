@@ -178,8 +178,11 @@ It can be used, for example, to give a hint to the end-user what kind of text sh
 
 #### 2.8.5 AutoFocus
 
-If `true`,  the text box will be rendered focused and the device keyboard is opened.
-{{% alert color="info" %}}This option is only available in native pages.{{% /alert %}}
+If `true`, the text area will be rendered focused and with the device keyboard opened.
+
+{{% alert color="info" %}}
+This option is only available in native pages.
+{{% /alert %}}
 
 <a name="label-properties"></a>
 ### 2.9 Label Section{#label}

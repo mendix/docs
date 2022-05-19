@@ -3,8 +3,8 @@ title: Images, Icons and Fonts
 url: /refguide/mobile/designing-mobile-user-interfaces/images-icons-and-fonts/
 parent: /refguide/mobile/designing-mobile-user-interfaces/
 weight: 30
-description: Learn how to integrate SVGs into your native mobile apps.
-description: This tutorial will teach you to enrich the design of your native mobile app with custom fonts.
+description: "This tutorial will teach you to enrich the design of your native mobile app with images and custom fonts."
+tags: ["images", "svg", "custom fonts", "font"]
 aliases:
     - /refguide/native-svg/
     - /howto/mobile/native-custom-fonts/

@@ -3,7 +3,8 @@ title: Widget Styling Guide
 url: /refguide/mobile/designing-mobile-user-interfaces/widget-styling-guide/
 parent: /refguide/mobile/native-styling/
 weight: 45
-description: This reference guide will contextualize the style elements Mendix uses in native mobile apps, as well as explain the classes and style properties of Mendix’s widgets.
+description: "This reference guide will contextualize the style elements Mendix uses in native mobile apps, as well as explain the classes and style properties of Mendix’s widgets."
+tags: ["widgets", "styling"]
 aliases:
     - /refguide/native-styling-refguide/
 ---

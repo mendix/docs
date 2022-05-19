@@ -3,8 +3,8 @@ title: Native Styling
 url: /refguide/mobile/designing-mobile-user-interfaces/native-styling/
 parent: /refguide/mobile/designing-mobile-user-interfaces/
 weight: 40
-description: General information for native styling in Mendix.
-description: A how-to for styling your first Mendix Native App.
+description: "General information for native styling in Mendix."
+tags: ["native", "styling"]
 aliases:
     - /howto/mobile/native-styling/
     - /howto/mobile/how-to-use-native-styling/

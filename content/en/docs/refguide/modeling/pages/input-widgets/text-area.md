@@ -81,7 +81,7 @@ This option allows users to trigger an on change event while they are typing.
 Text area will save changes if both these conditions are met:
 
 * The value is different than the previously saved value in the database 
-* The last change occured after the configured **Apply after (ms)** length of time
+* The last change occurred after the configured **Apply after (ms)** length of time
 
 With **While user is entering data**, users can adjust one more property called **Apply after (ms)** (described above). This will reduce the amount of the calls made for an on change event, thus improving app performance.
 

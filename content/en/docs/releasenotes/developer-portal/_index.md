@@ -21,11 +21,11 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue where replies on feedback emails were not correctly processed into comments.
+* We fixed an issue where replies on [Feedback](/developerportal/collaborate/feedback/) emails were not correctly processed into comments.
 
 #### Improvements
 
-* We added a download button for feedback images, so that you can see them in full size more easily.
+* We added a download button for Feedback images, so that you can see them in full size more easily.
 
 ### May 5th, 2022 {#may-fifth}
 

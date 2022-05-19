@@ -131,7 +131,7 @@ The autocomplete property specifies if a text area should have autocomplete enab
 
 #### 2.8.5 AutoFocus
 
-If `true`,  the TextArea will be rendered focused and the device keyboard is opened.
+If `true`,  the text area will be rendered focused and the device keyboard is opened.
 {{% alert color="info" %}}This option is only available in native pages.{{% /alert %}}
 
 ### 2.7 Label Section{#label}

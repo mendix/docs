@@ -69,7 +69,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 
 ### 2.2 Installing the Component in Your App
 
-To download and install the Microsoft Teams Connector app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **Add-ons** folder in the **App Explorer** and in the **Communication Services** category in the **Toolbox**.
+To download and install the Microsoft Teams Connector app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **Add-ons** folder in the **App Explorer** and in the **Microsoft Teams Connector** category in the **Toolbox**.
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/connector-in-protected-module.png" >}}
 
@@ -83,7 +83,7 @@ Before you deploy an app, you should configure the binding keys in your app as f
 2. On the **Configurations**, click **Edit**. The **Edit Configuration** dialog box opens.
 3. Go to the **Constants** tab.
 4. Click **New**. The **Select Constant** dialog box opens.
-5.  Go to **MSTeamsConnectorModule** > **Configurations**. You can see **LicenseSecret** and **LicenseKey** are defined as constants. 
+5.  Go to **MicrosoftTeamsConnectorModule** > **Configurations**. You can see **LicenseSecret** and **LicenseKey** are defined as constants. 
 
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/configuring-license-keys.png" >}}
     
@@ -150,15 +150,15 @@ Before you deploy an app, you should configure the binding keys in your app as f
 
 #### 4.2.1 Using Microflow
 
-You can use the **Microsoft Teams Connector** activity in a microflow to send messages to a Teams channel:
+You can use the **Send Message to Webhook** activity in a microflow to send messages to a Teams channel:
 
-1.  From the toolbox, drag and drop the **Microsoft Teams Connector** activity into your microflow.
+1.  From the toolbox, drag and drop the **Send Message to Webhook** activity into your microflow.
     
-    The following representative microflow contains activities with the required attributes, the **Microsoft Teams Connector** activity, and a placeholder to capture the returned object.
+    The following representative microflow contains activities with the required attributes, the **Send Message to Webhook** activity, and a placeholder to capture the returned object.
     
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/connector-in-microflow.png" >}}
     
-2. Double-click the **Microsoft Teams Connector** activity to open the **Microsoft Teams Connector** dialog box.
+2. Double-click the **Send Message to Webhook** activity to open the **Send Message to Webhook** dialog box.
 
 3.  Specify the following settings with expression syntax:
     1. Set the **webhookId** parameter to the **Webhook ID** generated in the Communication Services Console.
@@ -183,7 +183,7 @@ You can use the **Microsoft Teams Connector** activity in a microflow to send me
 
 {{% alert type="warning" %}}All parameters are mandatory. Setting any value to be empty or **none** will cause an error.{{% /alert %}}
 
-After the **Microsoft Teams Connector** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the Microsoft Teams channel. When the message is sent successfully, the activity returns a **SendMessageReponse** object. The **SendMessageReponse** entity for this object comes with the module and is pre-defined:
+After the **Send Message to Webhook** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the Microsoft Teams channel. When the message is sent successfully, the activity returns a **SendMessageReponse** object. The **SendMessageReponse** entity for this object comes with the module and is pre-defined:
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/send-message-response-entity.png" >}}
 
@@ -231,7 +231,7 @@ There are few configurations required to be performed which are explained in the
 
 #### 4.2.1 Registering your application in the Azure Portal
 
-1. Login to [Azure Portal](https://portal.azure.com/#home) at Microsoft Azure with your company account.    
+1. Login to [Azure Portal](https://portal.azure.com/#home) with your company account.    
 2. If your account gives you access to more than one tenant, select your account in the top right corner, and set your portal session to the Azure AD tenant of your company.
 {{% alert type="info" %}} Note : If you get Access Denied, contact your IT team.{{% /alert %}}
 
@@ -284,10 +284,51 @@ There are few configurations required to be performed which are explained in the
  2. Configure the **After startup** in settings -> Runtime to the **StartupMicroflow** provided in the MicrosoftTeamsConnector module.
       {{< figure src="/attachments/appstore/app-services/ms-teams-connector/configureStartupMicroflow.png" >}}
  3. Go to the App's Navigation settings. Configure the **Default home page** option to execute a microflow that will display your application's home page.
- 4. The activity that shows the home page must be precedded by a microflow call to **Configure_HomePage_Prerequisite** available in the connector module.
+ 4. The activity that shows the home page must be preceded by a microflow call to **Configure_HomePage_Prerequisite** available in the connector module.
  {{< figure src="/attachments/appstore/app-services/ms-teams-connector/BeforeHomepageMicroflow.png" >}}
 
-#### 4.2.4 Configuring Send Message Activity
+#### 4.2.4 Configuring Send Message Activity and SignInMicroflow
+
+1.  From the toolbox, drag and drop the **Send Message** activity into your microflow.
+    
+    The following representative microflow contains activities with the required attributes, the **Send Message to Webhook** activity, and a placeholder to capture the returned object.
+    
+    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/connector-in-microflow.png" >}}
+    
+2. Double-click the **Send Message to Webhook** activity to open the **Send Message to Webhook** dialog box.
+
+3.  Specify the following settings with expression syntax:
+    1. Set the **webhookId** parameter to the **Webhook ID** generated in the Communication Services Console.
+    2.  For **Message type**, select **Text** or **Card** from the drop-down list:
+        
+        *  If you want to send a message as plain text or in HTML or markdown formatting, select **Text**.
+        
+            {{% alert type="info" %}}Fore more information about HTML and markdown tags supported by Microsoft Teams, see [*Format Cards in Microsoft Teams*](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format).{{% /alert %}}
+          
+        * If you want to use an actionable message card as a message, select **Card**.
+        
+            {{% alert type="info" %}}Fore more information about message cards, see [Building a Message Card](#build-message-card).{{% /alert %}}
+       
+    3.  For the **Message** parameter, set up the message content in the String format. Below is an example:
+       
+        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/html-message.png" >}}
+        The example above will render in the Microsoft Teams channel like this:
+
+        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/html-output.png" >}}
+       
+    4. Click **OK** to save the changes and close the dialog box.
+
+{{% alert type="warning" %}}All parameters are mandatory. Setting any value to be empty or **none** will cause an error.{{% /alert %}}
+
+After the **Send Message to Webhook** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the Microsoft Teams channel. When the message is sent successfully, the activity returns a **SendMessageReponse** object. The **SendMessageReponse** entity for this object comes with the module and is pre-defined:
+
+{{< figure src="/attachments/appstore/app-services/ms-teams-connector/send-message-response-entity.png" >}}
+
+* If the message is successfully sent, the value of the **SentMessage** attribute is `true`.
+* If the message could not be sent, the value of the **SentMessage** attribute is `false`.
+* The **Message** attribute contains the respective response message.
+
+You can use the **Send Message** activity in a microflow to send messages to a Teams channel using Microsoft credentials. If you are not logged in, the activity will return the respective message in the response.
 
 
 ## 5 Checking Statistics Using the Usage Dashboard {#statistics}

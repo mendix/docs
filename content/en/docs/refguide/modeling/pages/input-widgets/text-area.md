@@ -79,6 +79,7 @@ This means that there is no way for users to trigger an on change event while ty
 This option allows users to trigger an on change event while they are typing. 
 
 Text area will save changes if both these conditions are met:
+
 * The value is different than the previously saved value in the database 
 * The last change occured after the configured **Apply after (ms)** length of time
 

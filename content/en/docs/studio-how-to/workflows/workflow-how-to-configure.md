@@ -36,8 +36,7 @@ You would like to build an employee onboarding process. At first, an HR speciali
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows/). 
-* Make sure your app has Mendix version 9.12.1
-* Make sure your app is based on the Blank app template 
+* Make sure your app has Mendix version 9.12.1 (you can look up your app version by clicking the ellipsis icon > **About Studio**)
 
 ## 3 Enabling Workflows {#enable-workflows}
 

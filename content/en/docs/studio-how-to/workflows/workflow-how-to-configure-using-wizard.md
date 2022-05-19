@@ -29,8 +29,7 @@ If your use case does not fall under an approval request, then you might want to
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows/). 
-* Make sure your app has Mendix version 9.12.1
-* Make sure your app is based on the Blank app template 
+* Make sure your app has Mendix version 9.12.1 (you can look up your app version by clicking **More options** (three dots) icon > **About Studio**)
 
 ## 3 Creating a Workflow Using the Wizard {#wizard}
 
@@ -70,7 +69,7 @@ To create the workflow for the travel approval request via the wizard, do the fo
 
 Congratulations! The app with the workflow is set up and fully functional. 
 
-## 5 Testing the Workflow {#test-workflow-from-wizard}
+## 4 Testing the Workflow {#test-workflow-from-wizard}
 
 Now you can test your workflow in the **Preview** from the perspective of different roles. 
 
@@ -97,7 +96,7 @@ To test your workflow, you need to switch between different user roles. Follow t
     
     Great job! You have previewed your app locally and tested your workflow from the perspective of different users. You can share the app with other users to try it out in real life or extend functionality in your app. 
 
-## 6 Read More
+## 5 Read More
 
 * [Workflows](/studio/workflows/)
 * [How to Configure a Workflow in Studio Manually](/studio-how-to/workflow-how-to-configure/)

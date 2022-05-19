@@ -9,7 +9,7 @@ tags: ["native", "mobile", "start", "quickstart"]
 
 How-tos in this section will help you begin using the power of native apps.
 
-The following how-to’s are available here:
+The following how-tos are available here:
 
 * [Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile/)
 * [Troubleshoot Common Native Mobile Issues](/howto/mobile/common-issues/)

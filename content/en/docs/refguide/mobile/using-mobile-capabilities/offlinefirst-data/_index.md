@@ -17,7 +17,7 @@ Offline-first applications work regardless of the connection to provide a contin
 It is essential to understand that offline-first is an architectural concept and not an approach based on the device's network state. Offline-first apps do not rely on a connection. Still, they can use network connections (for example, you can call microflows, use a Google Maps widget, or use push notifications).
 {{% /alert %}}
 
-Mendix supports building offline-first applications for [native mobile](/refguide/native-mobile/) and [progressive web apps](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/). Both native and progressive web apps share the same core, giving them the same offline-first capabilities. Native mobile apps are always offline-first, but for progressive web apps, it depends on the navigation profile that is configured.
+Mendix supports building offline-first applications for [native mobile](/refguide/native-mobile/) and [progressive web apps](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/). Both native and progressive web apps share the same core, giving them the same offline-first capabilities. Native mobile apps are always offline-first, but for progressive web apps you can choose if you want to build as an offline-first app. You can configure this by adding an offline-first PWA navigation profile to your app. To learn more about this, please visit [progressive web apps](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/).
 
 ## 2 Synchronization
 
@@ -27,17 +27,21 @@ Synchronization is the process of copying data and files from the app's server t
 
 You can use the same model concepts (domain model, pages, microflows, and more) and editors for modeling web applications to model an offline-first application. However, offline-first apps are fundamentally different compared to web apps. Mendix Studio Pro performs validations to ensure your app follows an offline-first approach and works even when there is no connection.
 
+### Local database
+The most notable difference of offline-first apps is that the app works with a local database instead of the server database. This means you need to synchronize the  objects you need in your app to the offline client's local database. However, synchronizing too many objects may result in performance issues. Changes made by the user are stored in this offline-first database, too. This means such changes will not be reflected to other users until the changes are synchronized with the server. There are several aspects you need to consider when synchronizing the changes made in the app, too. For example, the same object may have been edited or removed by a different user, or may no longer be accessible due to access rules you define in your app's model.
+
+### Backwards-compatibility
+Another important aspect you need to consider while developing offline-first apps is backwards-compatibility. Typically when you deploy a new version of a web app to the cloud, all users immediately have access to the latest model. However, that's not the case with offline-first apps. Some parts of your app model are distributed as part of the native mobile app package such as pages, nanoflows and JavaScript actions. This means even if you change and deploy a new version of them, your users do not access to the latest version like in the web apps.
+
+Imagine that you have deployed the first version of your native mobile app, your users have downloaded it, and now they are using it. At this point you should be thoughtful of the changes you introduce to the model. Assume you rename an entity and deploy it to the Mendix Cloud. The local databases in your users' devices will still be using the old entity name. This may cause synchronization errors if your users attempt to synchronize a new object of the entity you renamed, because the server no longer has an entity with the old name. Even after your users update the apps on their devices, there may be data created using the old model domain that needs to be synchronized with the server. That is why you need to ensure that your app's model changes are backward-compatible.
+
+A similar issue may occur regarding changes to other app elements, including microflows and constants available to the client. For example, if your new deployment renames a microflow or modify its parameters, users who haven't updated their apps will be working with the previous model of the app where it references the microflow with the old name. 
+
 For more information on offline-first app design, see [Offline Best Practices](best-practices).
 
 ## 4 Distributing Mobile Apps 
 
 When you model a web app and deploy it to production, all users immediately have access to it. However, this is often not the case with offline-first apps. The apps installed on your users' devices do not immediately update (especially true for native mobile apps). Typically, you create and distribute a new release of your app in the Google Play store and Apple App Store, which may take some time. Alternatively, Mendix provides an over-the-air (OTA) update mechanism to update your apps without going through the release process. For more information, see [Over the Air Updates](/refguide/mobile/distributing-mobile-apps/overtheair-updates/).
-
-In both cases, your users may keep working with the previous app models until they receive an update. Even after your users update the apps on their devices, there may be data created using the old model domain that needs to be synchronized with the server. That is why you need to ensure that your app's model changes are backward-compatible.
-
-Imagine that you have deployed the first version of your native mobile app, your users have downloaded it, and now they are using it. At this point you should be thoughtful of the changes you introduce to the model. Assume you rename an entity and deploy it to the Mendix Cloud. The local databases in your users' devices will still be using the old entity name. This may cause synchronization errors if your users attempt to synchronize a new object of the entity you renamed, because the server no longer has an entity with the old name.
-
-A similar issue may occur regarding changes to other app elements, including microflows and constants available to the client.
 
 For information on safely updating your offline-first apps, see [Distributing Mobile Apps](/refguide/mobile/distributing-mobile-apps/).
 

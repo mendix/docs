@@ -1,9 +1,11 @@
 ---
 title: "App"
-url: /refguide/project/
-parent: "project-explorer"
+url: /refguide/app/
+parent: "app-explorer"
 weight: 10
 tags: ["studio pro", "app"]
+aliases:
+    - /refguide/project/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

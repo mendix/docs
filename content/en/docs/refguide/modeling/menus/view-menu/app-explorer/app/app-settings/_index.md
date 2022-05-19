@@ -1,10 +1,12 @@
 ---
 title: "App Settings"
-url: /refguide/project-settings/
+url: /refguide/app-settings/
 parent: "project"
 weight: 10
 description: "Settings which apply to the app as a whole."
 tags: ["app", "configuration", "runtime", "Studio Pro", "languages", "certificate", "theme", "hashing", "hashing algorithm"]
+aliases:
+    - /refguide/project-settings/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -1,10 +1,12 @@
 ---
 title: "Import App Package"
-url: /refguide/import-project-package-dialog/
+url: /refguide/import-app-package-dialog/
 parent: "file-menu"
 weight: 40
 description: "Describes the Import App Package process and Import App Package dialog box."
 tags: ["studio pro", "import app package"]
+aliases:
+    - /refguide/import-project-package-dialog/
 ---
 ## 1 Introduction
 

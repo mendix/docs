@@ -56,7 +56,7 @@ Follow these instructions to set up your NFC app:
 1. Rename module **NativeMobile** to *NativeNFC*. You will add your implementation in this module.
 1. Right-click the module and select **Add other** > **JavaScript action**. Name the new JavaScript action *HasNFCSupport*. You will create the implementation later.
 1. Open the **Home_Native** page and add some welcome text for you test app.
-1. Add an action button with caption *Scan NFC Tag* on your home page.
+1. Add an action button with caption *Read NFC Tag* on your home page:
     1. Right-click your home page and click **Add widget**.
     1. Select **Call nanoflow button**.
     1. Click **new**.
@@ -72,38 +72,7 @@ Your Mendix app should looks something like this:
 
 {{< figure src="/attachments/howto/extensibility/build-javascript-actions/create-native-javascript-action/native-nfc-app-home-studio-pro.png" alt="native nfc app home"   width="550"  >}}
 
-### 3.2 Installing a Dependency in Your App {#install-dependency-project}
-
-The dependency is split into two parts: the native device part, and the client JavaScript part. In this section we will add the dependency JavaScript for the client bundle. For the bundling we need to add the dependency builder, so that we can add the `react-native-nfc-manager` JavaScript code.
-
-1. In your CLI, open the module folder which contains your JavaScript action:
-    ```
-    cd C:\MendixApps\NativeNFC\javascriptsource\nativenfc\actions
-    ```
-1. Make sure *HasNFCSupport.js* is in this folder so you know you are in the right place.
-1. Install the dependency with the command `npm install react-native-nfc-manager@1.2.2`.
-
-{{% alert type="info" %}}
-
-This will create a **node_module** folder inside your **actions** folder. There is a known issue that when you try to commit the *node_modules* folder using Apache Subversion, there could be problems if your commit contains a large number of files. To solve this, try removing unnecessary files before committing.
-
-{{% /alert %}}
-
-#### 3.2.1 Declaring Native Dependencies
-
-To make Mendix install and link native dependencies automatically while creating production-like builds of a native app, create JSON files next to your JavaScript actions: *HasNFCSupport.json* and *ReadNFCTag.json*. Define the same native dependencies in each of them:
-
-```json
-{
-    "nativeDependencies": {
-        "react-native-nfc-manager": "1.2.2"
-    }
-}
-```
-
-For more information see [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/).
-
-### 3.3 Creating NFC JavaScript Actions {#nfc-ja-action}
+### 3.2 Creating NFC JavaScript Actions {#nfc-ja-action}
 
 JavaScript actions for web and native platforms are similar. However, they have their own set of dependencies which they can build on.
 
@@ -155,6 +124,37 @@ Now make a JavaScript action to read the NFC tag information:
     {{< figure src="/attachments/howto/extensibility/build-javascript-actions/create-native-javascript-action/action-read-nfc-tag-code.png" alt="Read NFC tag action code" >}}
 1. Optionally, click the **Expose as nanoflow action** tab, select **Expose as nanoflow action**, and **Select** an icon for your JavaScript action.
 
+### 3.3 Installing a Dependency in Your App {#install-dependency-project}
+
+The dependency is split into two parts: the native device part, and the client JavaScript part. In this section we will add the dependency JavaScript for the client bundle. For the bundling we need to add the dependency builder, so that we can add the `react-native-nfc-manager` JavaScript code.
+
+1. In your CLI, open the module folder which contains your JavaScript action:
+    ```
+    cd C:\MendixApps\NativeNFC\javascriptsource\nativenfc\actions
+    ```
+1. Make sure *HasNFCSupport.js* is in this folder so you know you are in the right place.
+1. Install the dependency with the command `npm install react-native-nfc-manager@1.2.2`.
+
+{{% alert type="info" %}}
+
+This will create a **node_module** folder inside your **actions** folder. There is a known issue that when you try to commit the *node_modules* folder using Apache Subversion, there could be problems if your commit contains a large number of files. To solve this, try removing unnecessary files before committing.
+
+{{% /alert %}}
+
+#### 3.3.1 Declaring Native Dependencies
+
+To make Mendix install and link native dependencies automatically while creating production-like builds of a native app, create JSON files next to your JavaScript actions: *HasNFCSupport.json* and *ReadNFCTag.json*. Define the same native dependencies in each of them:
+
+```json
+{
+    "nativeDependencies": {
+        "react-native-nfc-manager": "1.2.2"
+    }
+}
+```
+
+For more information see [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/).
+
 ### 3.4 Using NFC JavaScript Actions {#use-nfc-action}
 
 Make a nanoflow to use your new actions:
@@ -167,17 +167,16 @@ To make the nanoflow shown above, do the following:
 1. Double-click the **Has NFC Support** action, set the **Variable name** as *HasNFCSupport*, and click **OK**.
 1. Right-click the **Has NFC Support** action, select **Set error handling**, and set the type to **Custom without rollback**.
 1. Create a **Show message** action, set the type as **Error**, and set the template as: *Error occurred while checking NFC support: {1}*. Add a parameter containing *$latestError*.
-1. Connect the **Has NFC Support** activity to the **Show message** activity. Right-click the connection and select **Set as error handler**.
+1. Connect the **Has NFC Support** activity to the **Show message** activity. Right-click the connection to the **Show message** action and select **Set as error handler**.
 1. Add an end event under your error message, then connect the message to the end event. 
 1. Add a **Decision** action. In its **Expression** check for the return variable with the expression *$HasNFCSupport*, write *Has NFC support?* in **Caption**, then click **OK**. Add an end event under this show message activity.
 1. If a device is not supported, show a message of type warning. Create a **Show message** action with template text *Sorry, your device does not support NFC.* and then connect this error message to the decision.
-1. If a device is supported, add the **Read NFC Tag** action and store the response in the variable `TagValue`.
+1. If a device is supported, add the **Read NFC Tag** action and store the response in the variable *TagValue*.
 1. Set the sequence flows from the decision to **True** (going left) and **False** (going down).
 1. Right-click the **Read NFC Tag** action and select **Set error handling**. Set the type to **Custom without rollback**.
-1. Create a **Show message** action, set the type as error, and set the template text to *Error occurred while reading an NFC tag: {1}*. Use *$lastError* as the single parameter.
-1. Connect the **Read NFC Tag** activity with a **Show message** activity. Right-click it, and select **Set as error handler**.
-1. Connect this **Show message** action to an end point.
-1. Create a **Show message** action, set the type as information, and set the template as *Your NFC tags says: {1}*. Use *$TagValue* as a parameter.
+1. Create a **Show message** action, set the type as error, and set the template text to *Error occurred while reading an NFC tag: {1}*. Use *$latestError* as the single parameter.
+1. Connect the **Read NFC Tag** activity with a **Show message** activity. Right-click the connection to the **Show message** action and select **Set as error handler**.
+1. Connect this **Show message** action to an end point. Set the type as information, and set the template as *Your NFC tags says: {1}*. Use *$TagValue* as a parameter.
 1. Optionally you can add **Show progress** and **Hide progress** activities to give your user more information while using the NFC reader. This action can be found in the **Nanoflow Commons** module.
 1. Deploy your app to the sandbox.
 

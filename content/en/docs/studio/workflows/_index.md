@@ -29,21 +29,35 @@ Workflows are available in Studio from **Mendix version 9.12.1**. If you have an
 
 You can perform the following basic functions when configuring workflows:
 
-* [Open a workflow](#open)
+* [Enable workflow functionality](#enable)
 * [Create a workflow](#create)
+* [Open a workflow](#open)
 * [Duplicate a workflow](#duplicate)
 * [Copy and paste a workflow](#copy-paste)
 * [Delete a workflow](#delete)
 * [Add elements to a workflow](#add-elements)
 
+### 2.1 Enabling Workflows
 
-### 2.1 Creating a Workflow {#create}
+To enable workflow functionality, do the following:
+
+1. Click the workflow icon in the left menu bar.
+
+2. Before enabling workflows, you need to enable security. Click **Enable Security**:
+
+   {{< figure src="/attachments/studio/workflows/enable-security.png" alt="Enable Security" >}}
+
+3. After security is enabled, click **Enable Workflows**.
+
+Workflows are enabled in your app and you can create a workflow. 
+
+### 2.2 Creating a Workflow {#create}
 
 There are two ways to create a workflow: 
 * [Using a wizard to build an approval workflow](/studio-how-to/workflow-how-to-configure-using-wizard/) – the wizard helps you create the Approval Request workflow. If your workflow falls under the approval request use case, for example, approving vacation days for your employees, this is a good starting point that sets the whole app automatically for you – not only the workflow itself but also pages and navigation
 * [Setting the workflow up manually](/studio-how-to/workflow-how-to-configure/) – if your use case does not fall under an approval request, then you can configure your workflow manually instead of using the wizard
 
-### 2.2 Opening a Workflow {#open}
+### 2.3 Opening a Workflow {#open}
 
 To open a workflow in Studio, do the following:
 
@@ -54,7 +68,7 @@ To open a workflow in Studio, do the following:
 
 The selected workflow is opened.
 
-### 2.3 Duplicating a Workflow {#duplicate}
+### 2.4 Duplicating a Workflow {#duplicate}
 
 To duplicate a workflow, do the following:
 
@@ -66,7 +80,7 @@ To duplicate a workflow, do the following:
 
 The workflow is duplicated.
 
-### 2.4 Copying and Pasting a Workflow {#copy-paste}
+### 2.5 Copying and Pasting a Workflow {#copy-paste}
 
 To copy and paste a workflow, do the following:
 
@@ -80,7 +94,7 @@ To copy and paste a workflow, do the following:
 
 Your workflow is pasted. For more information on copy/paste function in Studio, see the [Copy/Paste Workflows, Pages, Microflows, and Enumerations](/studio/general/#copy-paste-documents) section in *General Info*. 
 
-### 2.5 Deleting a Workflow {#delete}
+### 2.6 Deleting a Workflow {#delete}
 
 To delete a workflow in Studio, do one of the following:
 
@@ -95,7 +109,7 @@ To delete a workflow in Studio, do one of the following:
 
 The selected workflow is deleted. 
 
-### 2.6 Adding Elements to a Workflow {#add-elements}
+### 2.7 Adding Elements to a Workflow {#add-elements}
 
 To add an element to a workflow, do the following:
 
@@ -104,11 +118,11 @@ To add an element to a workflow, do the following:
 
 The selected element is added.
 
-### 2.7 Triggering a Workflow
+### 2.8 Triggering a Workflow
 
 You can trigger a workflow [from a page](#trigger-page) or [via a microflow](#trigger-microflow). 
 
-#### 2.7.1 Triggering a Workflow from a Page {#trigger-page}
+#### 2.8.1 Triggering a Workflow from a Page {#trigger-page}
 
 To start the workflow, you can add a widget with a specific on-click action on a page. For more information on on-click actions, see [Events Section](/studio/page-editor-widgets-events-section/).
 
@@ -123,7 +137,7 @@ Do the following:
 
 You have configured the button to trigger the workflow.
 
-#### 2.7.2 Triggering a Workflow via a Microflow {#trigger-microflow}
+#### 2.8.2 Triggering a Workflow via a Microflow {#trigger-microflow}
 
 To trigger a workflow via a microflow, you can add a **Call workflow** activity to the microflow. For more information on this activity, see [Workflow Activities](/studio/microflows/#microflow-workflow-activities) section in *Microflows*.  
 

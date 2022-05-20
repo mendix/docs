@@ -16,7 +16,7 @@ aliases:
 Workflows are available in Studio from **Mendix version 9.12.1**. If you have an app with workflows functionality below this version, this app is likely to be created in Studio Pro and requires a manual migration. For more information on how to migrate your app using Studio Pro, see [Migrate Workflow Apps](/refguide/workflow-beta-migration/). 
 {{% /alert %}}
 
-This how-to explains how to build a workflow manually, without using a wizard. For more information on using the wizard and creating workflows with its help, see the [Creating a Workflow Using the Wizard](/studio/workflows/#wizard) section in Workflows.
+This how-to explains how to build a workflow manually, without using a wizard. For more information on using the wizard and creating workflows with its help, see [How to Configure a Workflow Using the Wizard in Studio](/studio-how-to/workflow-how-to-configure-using-wizard/).
 
 This how-to will teach you how to do the following:
 
@@ -38,9 +38,9 @@ You would like to build an employee onboarding process. At first, an HR speciali
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows/). 
+* Familiarize yourself with workflow terms. For more information, see [Workflows](/studio/workflows/). 
 * Make sure your app has Mendix version 9.12.1 (you can look up your app version by clicking the ellipsis icon > **About Studio**).
-* Make sure that your app has workflow functionality enabled. For more information, see the [Enabling Workflows](/refguide/workflows/#enable) section in *Workflows*. 
+* Make sure that your app has workflow functionality enabled. For more information, see the [Enabling Workflows](/studio/workflows/#enable) section in *Workflows*. 
 
 ## 3 Creating a Workflow Manually {#create-workflow}
 
@@ -48,7 +48,7 @@ To create a workflow manually, do the following:
 
 1.  Click the workflow icon in the left menu bar and click a plus icon next to the module you would like to add a workflow to:
 
-   {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-manually/new-workflow.png" alt="Creating a Workflow" >}}
+   {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-manually/new-workflow.jpg" alt="Creating a Workflow" >}}
 
 2. In the **Create Workflow** dialog box, set the **Title** to **Employee_Onboarding** and click the **Set Up Manually** button:
 

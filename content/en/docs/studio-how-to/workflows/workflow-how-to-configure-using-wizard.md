@@ -29,7 +29,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows/). 
 * Make sure your app has Mendix version 9.12.1 (you can look up your app version by clicking **More options** (three dots) icon > **About Studio**).
-* Make sure that your app has workflow functionality enabled. For more information, see the [Enabling Workflows](/refguide/workflows/#enable) section in *Workflows*. 
+* Make sure that your app has workflow functionality enabled. For more information, see the [Enabling Workflows](/studio/workflows/#enable) section in *Workflows*. 
 
 ## 3 Creating a Workflow Using the Wizard {#wizard}
 
@@ -37,7 +37,7 @@ To create the workflow for the travel approval request via the wizard, do the fo
 
 1.  Click the workflow icon in the left menu bar and click a plus icon next to the module you would like to add a workflow to:
 
-    {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-using-wizard/new-workflow.png" alt="Creating a Workflow" >}}
+    {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-using-wizard/new-workflow.jpg" alt="Creating a Workflow" >}}
 
 5. In the **Create Workflow** dialog box, set the **Title** to **Travel Approval** and click the **Start Wizard** button:
 

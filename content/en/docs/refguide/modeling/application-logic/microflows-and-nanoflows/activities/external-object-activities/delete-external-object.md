@@ -33,3 +33,11 @@ Choose a variable that contains a single deletable external object.
 ### 2.2 Refresh in Client
 
 This setting defines how changes are reflected in the pages presented to the end-user. The default for this setting is *No*.
+
+## 3 Response Handling
+
+### 3.1 $latestHttpResponse Variable
+
+The $latestHttpResponse variable is of the HttpResponse type. It is available after a **Delete External Object** activity.
+
+This variable can be accessed from any microflow activity in the scope.

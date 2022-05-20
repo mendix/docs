@@ -32,7 +32,15 @@ Some services may have updatable attributes that are part of the key of the enti
 
 This activity sends new objects and their attributes and owned associations to be inserted in the external app.
 
-## 4 Related
+## 4 Response Handling
+
+### 4.1 $latestHttpResponse Variable
+
+The $latestHttpResponse variable is of the HttpResponse type. It is available after a **Send External Object** activity.
+
+This variable can be accessed from any microflow activity in the scope.
+
+## 5 Related
 
 Persistable objects are persisted by using the [commit](/refguide/committing-objects/)activity. External entities cannot be committed. Use this activity instead.
 

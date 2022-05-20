@@ -1,5 +1,5 @@
 ---
-title: Hybrid Mobile (Deprecated)
+title: "Hybrid Mobile (Deprecated)"
 url: /refguide/mobile/introduction-to-mobile-technologies/hybrid-mobile/
 parent: /refguide/mobile/introduction-to-mobile-technologies/
 weight: 30

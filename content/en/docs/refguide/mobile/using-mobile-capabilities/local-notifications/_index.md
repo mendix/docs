@@ -1,5 +1,5 @@
 ---
-title: Local Notifications
+title: "Local Notifications"
 url: /refguide/mobile/using-mobile-capabilities/local-notifications/
 parent: /refguide/mobile/using-mobile-capabilities/
 weight: 69

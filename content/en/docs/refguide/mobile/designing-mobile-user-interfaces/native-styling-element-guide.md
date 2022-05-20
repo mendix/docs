@@ -1,5 +1,5 @@
 ---
-title: Widget Styling Guide
+title: "Widget Styling Guide"
 url: /refguide/mobile/designing-mobile-user-interfaces/widget-styling-guide/
 parent: /refguide/mobile/native-styling/
 weight: 45

@@ -1,5 +1,5 @@
 ---
-title: Testing Mobile Apps
+title: "Testing Mobile Apps"
 url: /refguide/mobile/distributing-mobile-apps/testing-mobile-apps/
 parent: /refguide/mobile/distributing-mobile-apps/
 weight: 60

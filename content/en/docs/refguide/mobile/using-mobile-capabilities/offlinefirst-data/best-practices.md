@@ -1,5 +1,5 @@
 ---
-title: Offline Best Practices
+title: "Offline Best Practices"
 url: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/
 parent: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/
 weight: 30

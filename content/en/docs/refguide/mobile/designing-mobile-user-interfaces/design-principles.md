@@ -1,5 +1,5 @@
 ---
-title: Design Principles
+title: "Design Principles"
 url: /refguide/mobile/designing-mobile-user-interfaces/design-principles/
 parent: /refguide/mobile/designing-mobile-user-interfaces/
 weight: 10

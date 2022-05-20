@@ -1,9 +1,10 @@
 ---
-title: Over the Air Updates
+title: "Over the Air Updates"
 url: /refguide/mobile/distributing-mobile-apps/overtheair-updates/
 parent: /refguide/mobile/distributing-mobile-apps/
 weight: 40
-description: Describes enabling over the air updates using built-in functionality.
+description: "Describes enabling over the air updates using built-in functionality."
+tags: ["ota", "over the air", "update"]
 aliases:
     - /howto/mobile/how-to-ota/
 ---

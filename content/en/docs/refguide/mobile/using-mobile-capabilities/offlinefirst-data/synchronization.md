@@ -1,5 +1,5 @@
 ---
-title: Offline Synchronization
+title: "Offline Synchronization"
 url: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/
 parent: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/
 weight: 20

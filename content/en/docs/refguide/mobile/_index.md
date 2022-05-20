@@ -1,5 +1,5 @@
 ---
-title: Mobile
+title: "Mobile"
 url: /refguide/mobile/
 weight: 50
 tags: ["studio pro"]

@@ -1,5 +1,5 @@
 ---
-title: Distributing Mobile Apps
+title: "Distributing Mobile Apps"
 url: /refguide/mobile/distributing-mobile-apps/
 category: Mobile
 weight: 50

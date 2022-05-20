@@ -1,9 +1,10 @@
 ---
-title: Release Over the Air Updates with App Center's CodePush (Deprecated)
+title: "Release Over the Air Updates with App Center's CodePush (Deprecated)"
 url: /refguide/mobile/distributing-mobile-apps/overtheair-updates/
 parent: /refguide/mobile/distributing-mobile-apps/overtheair-updates/ota-appcenter
 weight: 20
-description: Describes pushing over the air updates (OTA) using App Center's CodePush.
+description: "Describes pushing over the air updates (OTA) using App Center's CodePush."
+tags: ["OTA", "app center"]
 aliases:
     - /howto/mobile/how-to-ota-appcenter/
 ---

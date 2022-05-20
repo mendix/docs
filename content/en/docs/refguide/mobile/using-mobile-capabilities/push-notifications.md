@@ -1,5 +1,5 @@
 ---
-title: Push Notifications
+title: "Push Notifications"
 url: /refguide/mobile/using-mobile-capabilities/push-notifications/
 parent: /refguide/mobile/using-mobile-capabilities/
 weight: 70

@@ -1,5 +1,5 @@
 ---
-title: Augmented Reality
+title: "Augmented Reality"
 url: /refguide/mobile/using-mobile-capabilities/augmented-reality/
 parent: /refguide/mobile/using-mobile-capabilities/
 weight: 80

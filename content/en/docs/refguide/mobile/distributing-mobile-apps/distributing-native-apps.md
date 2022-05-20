@@ -1,13 +1,13 @@
 ---
-title: Distributing Native Apps
+title: "Distributing Native Apps"
 url: /refguide/mobile/distributing-mobile-apps/distributing-native-apps/
 parent: /refguide/mobile/distributing-mobile-apps/
 weight: 30
+description: "This guide will help you distribute a mobile app to a mobile app store."
+tags: ["distribution", "app store", "ios", "android"]
 aliases:
     - /refguide/managing-app-signing-keys/
 ---
-
->>>>> /refguide/mobile/managing-app-signing-keys.md
 
 ## 1 Introduction
 

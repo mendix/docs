@@ -1,5 +1,5 @@
 ---
-title: Navigation
+title: "Navigation"
 url: /refguide/mobile/designing-mobile-user-interfaces/navigation/
 parent: /refguide/mobile/designing-mobile-user-interfaces/
 weight: 20

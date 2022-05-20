@@ -1,5 +1,5 @@
 ---
-title: Native Styling
+title: "Native Styling"
 url: /refguide/mobile/designing-mobile-user-interfaces/native-styling/
 parent: /refguide/mobile/designing-mobile-user-interfaces/
 weight: 40

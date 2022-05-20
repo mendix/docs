@@ -1,5 +1,5 @@
 ---
-title: Deep Links
+title: "Deep Links"
 url: /refguide/mobile/using-mobile-capabilities/deep-links/
 parent: /refguide/mobile/using-mobile-capabilities/
 weight: 30

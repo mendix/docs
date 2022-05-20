@@ -1,5 +1,5 @@
 ---
-title: Getting Started with Mobile
+title: "Getting Started with Mobile"
 url: /refguide/mobile/getting-started-with-mobile/
 category: Mobile
 weight: 10

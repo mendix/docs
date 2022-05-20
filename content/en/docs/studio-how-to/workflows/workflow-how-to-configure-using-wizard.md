@@ -22,7 +22,7 @@ This how-to will teach you how to do the following:
 * Creating a workflow using the workflow wizard
 * Testing the workflow
 
-If your use case does not fall under an approval request, then you might want to set your workflow manually instead of using the wizard. For more information on configuring the workflow manually, see [How to Configure a Workflow Manually in Studio](/studio-how-to/workflow-how-to-configure/).
+If your use case does not fall under an approval request, then you might want to set your workflow manually instead of using the wizard. For more information on configuring the workflow manually, see [How to Configure a Workflow Manually in Studio](/studio-how-to/workflow-how-to-configure-manually/).
 
 ## 2 Prerequisites
 
@@ -99,6 +99,6 @@ To test your workflow, you need to switch between different user roles. Follow t
 ## 5 Read More
 
 * [Workflows](/studio/workflows/)
-* [How to Configure a Workflow in Studio Manually](/studio-how-to/workflow-how-to-configure/)
+* [How to Configure a Workflow in Studio Manually](/studio-how-to/workflow-how-to-configure-manually/)
 * [How to Configure a Navigation Bar](/studio-how-to/navigation-how-to-configure/) 
 * [How to Set Fields as Read-Only or Required](/studio-how-to/pages-how-to-set-validation-and-editability/)

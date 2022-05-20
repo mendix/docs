@@ -17,5 +17,5 @@ For more general guidelines on workflows, see [Workflows](/studio/workflows/) in
 ## 2 Documents in This Category
 
 * [How to Configure a Workflow Using the Wizard in Studio](/studio-how-to/workflow-how-to-configure-using-wizard/) – describes an automated process of creating and configuring a workflow using the wizard; available for approval request use cases
-* [How to Configure a Workflow Manually in Studio](/studio-how-to/workflow-how-to-configure/) – describes a manual process of creating and configuring a workflow
+* [How to Configure a Workflow Manually in Studio](/studio-how-to/workflow-how-to-configure-manually/) – describes a manual process of creating and configuring a workflow
 

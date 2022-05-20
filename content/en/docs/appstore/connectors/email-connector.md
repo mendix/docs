@@ -53,9 +53,9 @@ The following widgets are bundled in the module:
 
 After you install the module, configure the following in Studio Pro:
 
-1. Provide a value for the **EncryptionKey** constant available under **USE_ME** folder for password storage.
-2. Launch the UI by referring to the Snippet in the **USE_ME** folder, or use the **EmailConnector_OverviewPage** microflow from the same folder.
-
+1. Provide a value for the **EncryptionKey** constant available under **USE_ME** folder for password storage. For add-on modules, you can set constants by going to the **App Explorer > App 'Name’ > Settings > Configuration > Edit > Constants**.
+2. Launch the UI by using the **ACT_EmailConnector_OverviewPage** microflow in the **USE_ME** folder.
+3. Link [User Roles](/refguide/user-roles/) in app **Security**.
 
 
 ## 3 Email Account Configuration {#accountconfig}
@@ -218,3 +218,4 @@ If you do not encrypt the password, all functions will still work as expected.
 
 * **Sample_ACT_SendEmailWithTemplate** – a microflow that helps you set up send email using the template
 * **EmailConnector_OverviewPage** – if unable to **Set export level to Usable** because of a protected add-on module because of limitations, use this microflow to open the page and have set export level to usable
+* **SCE_Cleanup** – found in the **USE_ME** folder, this microflow can be added to a schedule event and deletes email sent logs and sent emails of the past 30 days

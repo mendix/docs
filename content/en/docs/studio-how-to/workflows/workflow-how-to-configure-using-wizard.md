@@ -91,6 +91,6 @@ To test your workflow, you need to switch between different user roles. Follow t
 ## 5 Read More
 
 * [Workflows](/studio/workflows/)
-* [How to Configure a Workflow Manually in Studio](/studio-how-to/workflow-how-to-configure-manually/)
+* [How to Configure a Workflow in Studio Manually](/studio-how-to/workflow-how-to-configure-manually/)
 * [How to Configure a Navigation Bar](/studio-how-to/navigation-how-to-configure/) 
 * [How to Set Fields as Read-Only or Required](/studio-how-to/pages-how-to-set-validation-and-editability/)

@@ -189,7 +189,7 @@ These settings are only available in the following versions of the module (depen
     2. You can also implement your own custom microflow and then select that in the Custom microflow field to override the Mendix custom microflows. For this:
         * the custom microflow name must begin with the string “Custom”, (for example, `CustomMyUserProvisioning`)
         * to see the latest custom microflows in the dropdown, refresh the modules in the *Model Reflection* of your application whenever you add/remove any custom microflow — see [Mx Model Reflection](/appstore/modules/model-reflection/) for information on how to do this
-* **Enable delegated authentication** - If enabled, you allow the module to keep the access token for the app alive automatically. Only enable this functionality if you are actually using delegated authentication.
+* **Enable delegated authentication** *(deprecated)* - See [Multi-tier Delegated Authentication](#delegated-auth), below, for information on when you might set this.
 * **Enable mobile authentication Token** - If you are using a [hybrid mobile](/refguide/hybrid-mobile/) app and you enable this, you can log in to your Mendix hybrid mobile app after the app is closed, using an auth token cookie. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix & SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
 
 
@@ -204,11 +204,29 @@ These settings are only available in the following versions of the module (depen
 
 ## 4 Advanced Configuration
 
+### 4.1 Multi-tenant Behavior
+
 The resource folder contains a file called *SAMLConfig.properties*. In this file, you can optionally override advanced settings from the SAML module. Usage of this file is optional. When the file does not exist or you do not specify a setting, the module will use its default behavior.
 
 This file contains the documented properties, and example lines show the default values of these options.
 
 With these settings, you can configure the behavior of this module and improve multi-tenant behavior of your application. For plain SAML authentication, it is best to leave this file unchanged. 
+
+### 4.2 Multi-tier Delegated Authentication{#delegated-auth}
+
+{{% alert color="warning" %}}
+This feature is deprecated. The complexity of the necessary configurations doesn’t correspond with Mendix's ambition to provide an easy ‘low code experience’ and Mendix cannot provide support for it.
+
+Customers are advised to use OAuth bearer tokens instead.
+{{% /alert %}}
+
+When you use the SAML SSO module in your app, your app will typically be a front-end app that redirects the user to their IDP via the browser for login.
+
+Using SAML protocols to secure the APIs of your back-end app is more challenging. We advise you to use OAuth access tokens by installing the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module instead of the SAML module. This is a common, and a best, practice.
+
+The SAML module does currently allow you to use multi-tier delegation (which makes use of the SAML ECP profile) if you need it. Your front-end app can request a token during login that has the right characteristics so it can be shared with a back-end app.  This is an advanced scenario which requires in-depth knowledge of the SAML protocol and the configuration of all integrating systems to get it working.
+
+In the SAML module, you can enable this by checking “Enable delegated authentication” on the provisioning tab. By checking this box you are able to access the authorized SAML token, the module will automatically keep the token alive. Only enable this functionality if you are actually using multi-tier delegated authentication.
 
 ## 5 Debugging the Configuration
 

@@ -10,6 +10,14 @@
         font-weight: $font-weight-body-text;
     }
 
+    // NK - custom additions for margin styling in lists
+    li p:first-child {
+        margin-bottom: 0.25rem;
+    }
+    li p:not(:first-child), li figure, li .alert {
+        margin-bottom: 0.5rem;
+    }
+
     > h1 {
         font-weight: $font-weight-light; // NK - changed from bold
         margin-bottom: 1rem;
@@ -38,7 +46,8 @@
         @extend .img-fluid;
     }
 
-    > table {
+    // NK - added li table to have stying applied to tables in lists
+    > table, li table {
         @extend .table-striped;
 
         @extend .table-responsive;

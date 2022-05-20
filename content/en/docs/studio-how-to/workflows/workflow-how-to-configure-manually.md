@@ -82,7 +82,7 @@ You have configured the **EmployeeOnboarding** entity:
 
 ## 5 Configuring Security
 
-In the [Enabling Workflows](#enable-workflows) section, you have enabled security for your app, and several roles and permissions were added automatically. However, you need to add more roles to your app: HR, Manager, and Facilities roles. Follow the steps below:
+When you enable security for your app, several roles and permissions are added automatically. However, you need to add more roles to your app: HR, Manager, and Facilities roles. Follow the steps below:
 
 1. Open **App Settings** > **Roles and Permissions**. 
 2. Click **Add Role** in the right corner.

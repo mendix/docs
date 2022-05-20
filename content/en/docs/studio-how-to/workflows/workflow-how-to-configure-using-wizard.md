@@ -18,7 +18,6 @@ The workflow wizard helps you create the Approval Request workflow. If your work
 
 This how-to will teach you how to do the following:
 
-* Enabling workflows
 * Creating a workflow using the workflow wizard
 * Testing the workflow
 
@@ -29,23 +28,16 @@ If your use case does not fall under an approval request, then you might want to
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows/). 
-* Make sure your app has Mendix version 9.12.1 (you can look up your app version by clicking **More options** (three dots) icon > **About Studio**)
+* Make sure your app has Mendix version 9.12.1 (you can look up your app version by clicking **More options** (three dots) icon > **About Studio**).
+* Make sure that your app has workflow functionality enabled. For more information, see the [Enabling Workflows](/refguide/workflows/#enable) section in *Workflows*. 
 
 ## 3 Creating a Workflow Using the Wizard {#wizard}
 
 To create the workflow for the travel approval request via the wizard, do the following:
 
-1. First, you need to enable workflows for your app. Click the workflow icon in the left menu bar.
+1.  Click the workflow icon in the left menu bar and click a plus icon next to the module you would like to add a workflow to:
 
-2. Before enabling workflows, you need to enable security. Click **Enable Security**:
-
-    {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-using-wizard/enable-security.png" alt="Enable Security" >}}
-
-3. After security is enabled, click **Enable Workflows**.
-
-4. In the **Workflows Enabled** pop-up menu, click **Create Workflow**:
-
-    {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-using-wizard/create-workflow.png" alt="Create Workflow" >}}
+    {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-using-wizard/new-workflow.png" alt="Creating a Workflow" >}}
 
 5. In the **Create Workflow** dialog box, set the **Title** to **Travel Approval** and click the **Start Wizard** button:
 

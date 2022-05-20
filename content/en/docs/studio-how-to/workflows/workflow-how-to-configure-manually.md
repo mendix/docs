@@ -39,35 +39,28 @@ You would like to build an employee onboarding process. At first, an HR speciali
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows/). 
-* Make sure your app has Mendix version 9.12.1 (you can look up your app version by clicking the ellipsis icon > **About Studio**)
+* Make sure your app has Mendix version 9.12.1 (you can look up your app version by clicking the ellipsis icon > **About Studio**).
+* Make sure that your app has workflow functionality enabled. For more information, see the [Enabling Workflows](/refguide/workflows/#enable) section in *Workflows*. 
 
-## 3 Enabling Workflows {#enable-workflows}
+## 3 Creating a Workflow Manually {#create-workflow}
 
-First, you need to enable workflows for your app. Do the following:
+To create a workflow manually, do the following:
 
-1. Click the workflow icon in the left menu bar.
+1.  Click the workflow icon in the left menu bar and click a plus icon next to the module you would like to add a workflow to:
 
-2. Before enabling workflows, you need to enable security. Click **Enable Security**:
+   {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-manually/new-workflow.png" alt="Creating a Workflow" >}}
 
-    {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-manually/enable-security.png" alt="Enable Security" >}}
-
-3. After security is enabled, click **Enable Workflows**.
-
-4. In the **Workflows Enabled** pop-up menu, click **Create Workflow**:
-
-    {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-manually/create-workflow.png" alt="Create Workflow" >}}
-
-5. In the **Create Workflow** dialog box, set the **Title** to **Employee_Onboarding** and click the **Set Up Manually** button:
+2. In the **Create Workflow** dialog box, set the **Title** to **Employee_Onboarding** and click the **Set Up Manually** button:
 
     {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-manually/set-up-manually.jpg" alt="Set Up Workflow Manually" >}}
 
-5. Click the **Workflow Context** to create an entity that is used for the [Workflow Context parameter](/studio/workflow-parameter/), a business-related data that travels through the workflow.
+3. Click the **Workflow Context** to create an entity that is used for the [Workflow Context parameter](/studio/workflow-parameter/), a business-related data that travels through the workflow.
 
-6. In the **Select Entity** dialog box, click the plus icon in the upper-right corner to create a new entity.
+4. In the **Select Entity** dialog box, click the plus icon in the upper-right corner to create a new entity.
 
-7. In the **Create Entity** dialog box, set the **Name** to **EmployeeOnboarding** and click **Create**. 
+5. In the **Create Entity** dialog box, set the **Name** to **EmployeeOnboarding** and click **Create**. 
 
-8. Click **Create** to confirm your choice once again.
+6. Click **Create** to confirm your choice once again.
 
 Good job! You have created a workflow and a Workflow Context parameter.
 

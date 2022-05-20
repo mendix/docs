@@ -100,7 +100,7 @@ Accessing the metadata can be done by downloading the XML file or by opening `ht
 ### 3.1 Creating a New IdP Configuration
 
 {{% alert color="warning" %}}
-If you have multiple IdPs, please make sure each IdP has a unique **Entity descriptor**. If you add multiple IdPs with the same entity descriptor, you might experience unexepected behavior where a different SSO configuration is selected than the alias provided.
+If you have multiple IdPs, please make sure each IdP has a unique **Entity descriptor**. If you add multiple IdPs with the same entity descriptor, you might experience unexpected behavior where a different SSO configuration is selected than the alias provided.
 {{% /alert %}}
 
 When creating a new IdP configuration, you are guided through a workflow to help you configure everything required for the IdP configuration. Each option in the workflow is explained below.
@@ -184,7 +184,7 @@ With these settings, you can configure the behavior of this module and improve m
 ### 4.2 Multi-tier Delegated Authentication{#delegated-auth}
 
 {{% alert color="warning" %}}
-This feature is deprecated. The complexity of the necessary configurations doesn’t correspond with Mendix ambition to provide an easy ‘low code experience’ and Mendix cannot provide support for it.
+This feature is deprecated. The complexity of the necessary configurations doesn’t correspond with Mendix's ambition to provide an easy ‘low code experience’ and Mendix cannot provide support for it.
 
 Customers are advised to use OAuth bearer tokens instead.
 {{% /alert %}}

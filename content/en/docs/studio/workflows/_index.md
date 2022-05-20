@@ -37,7 +37,7 @@ You can perform the following basic functions when configuring workflows:
 * [Delete a workflow](#delete)
 * [Add elements to a workflow](#add-elements)
 
-### 2.1 Enabling Workflows
+### 2.1 Enabling Workflows {#enable}
 
 To enable workflow functionality, do the following:
 

@@ -5,7 +5,7 @@ category: "Studio Pro"
 description: "The release notes for version 9 of Mendix Studio Pro."
 weight: 10
 no_list: false
-description_list: true
+simple_list: true
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -25,10 +25,10 @@ The Mendix Feedback widget is easy to set up and automatically attaches addition
 
 ### 1.3 Limitations
 
-* This widget can only be usable in combination with Mendix apps.
-* In Native Mobile apps, some of the feedback metadata, such as username, email address, and document name, will be hard-coded, as they can't be retrieved dynamically. The [Native Feeback widget](https://docs.mendix.com/appstore/modules/native-mobile-resources/) can be found in [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513).
+* This widget can only be used in combination with Mendix apps.
+* In Native Mobile apps, some of the feedback metadata, such as username, email address, and document name, will be hard-coded, as they can't be retrieved dynamically. The [Native Feedback widget](https://docs.mendix.com/appstore/modules/native-mobile-resources/) can be found in [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513).
 
-## 2 Configuration
+## 2 Configuration {#configuration}
 You can configure the widget for certain actions in your app. All the configuration properties are explained on the various tabs of the properties dialog box for the widget. The feedback feature requires the following properties to be set:
 
 * **Project** tab
@@ -40,11 +40,11 @@ You can configure the widget for certain actions in your app. All the configurat
         **Allow screenshots** – controls whether the app user can take a screenshot
 * **Advanced** tab
 
-  * **Feedback server location** – the URL of the Developer Portal server (usually `https://feedback-api.mendix.com`)
+  * **Feedback server location** – the URL of the Developer Portal server (usually `https://feedback-api.mendix.com`). Only change it when you are using a different environment.
   * **Screenshot Foreign Rendering**
 
     * **No** (default)
-    * **Yes** –  only used when necessary
+    * **Yes** –  only used when the page includes sensitive information
 
 * **Authentication** tab
   
@@ -115,3 +115,13 @@ If you are trying to upgrade your Mendix Feedback widget, Studio Pro will not re
 The value of the **App ID** on the **Project** tab will be changed to your correct app ID automatically from the original value 1. 
 
 If it did not change to your app ID because of an unexpected error, you can update the app ID manually. You can find the app ID in your app's [General Settings](/developerportal/collaborate/general-settings/) in the Developer Portal.
+
+### 4.2 Page doesn’t scroll in the screenshot image
+The Feedback widget uses the **HTML2Canvas** library that makes an attempt to make an image of a webpage based on the content that is currently loaded on the page. Since HTML2Canvas tries to repaint the current content it can make many mistakes in doing so. There are two solutions for the issue:
+ 
+* Turn off **Screenshot foreign rendering**
+
+* Change the **CSS selector** for a scrollable container - Some variations are difficult to spot for HTML2Canvas; thus, this sometimes causes the image not to be rendered correctly. To fix this quite some CSS, HTML and JS technical knowledge is required but it is possible to fill in a CSS selector that will determine where the scrolling is happening.
+
+### 4.3 Feedback item doesn't show on the Developer portal
+If you can't see your feedback items on the Feedback page of the Developer portal. It is possible that you have configured a wrong **App ID** or **Feedback server location**. Please check if all the configurations are filled as mentioned above in the [Configuration](#configuration) section.

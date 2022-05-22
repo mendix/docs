@@ -221,7 +221,7 @@ Microsoft Teams supports [actionable message cards](https://docs.microsoft.com/e
        
 ### 4.2 Sending Message using Microsoft credentials
  
-This feature will be available from module version 1.0.2 onwards. A new drag-and-drop activity with name **Send Message** in the microflow toolbox.
+   Alongside **Send Message to Webhook**, a new drag-and-drop activity .with name **Send Message** in the microflow toolbox.
 
 Prerequisite :
    1) Deeplink (Available in the Mendix app store)
@@ -290,9 +290,14 @@ There are few configurations required to be performed which are explained in the
  4. The activity that shows the home page must be preceded by a microflow call to **Configure_HomePage_Prerequisite** available in the connector module.
  {{< figure src="/attachments/appstore/app-services/ms-teams-connector/BeforeHomepageMicroflow.png" >}}
  
- 
+ #### 4.2.4 Getting the channel link
+   1. One of the inputs required for the **Send Message** actvity is the channelLink.
+   2. To get this link for your channel, right cick on the three ellipses on the channel name and click on **Get link to channel**. 
+   {{< figure src="/attachments/appstore/app-services/ms-teams-connector/channelLink.png" >}}   
+   3. This will popup a window containing the channelLink.
+ {{< figure src="/attachments/appstore/app-services/ms-teams-connector/linkPopup.png" >}}
 
-#### 4.2.4 Configuring Send Message Activity and SignInMicroflow
+#### 4.2.5 Configuring Send Message Activity and SignInMicroflow
 
 1.  From the toolbox, drag and drop the **Send Message** activity into your microflow.
     

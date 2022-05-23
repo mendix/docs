@@ -43,7 +43,7 @@ To send your runtime information to AppDynamics, you need to set it up using env
 
     1. APPDYNAMICS_MACHINE_AGENT_ENABLED
 
-        Set to `true` to enable specific Mendix metrics. If this is not set, or set to `false` AppDynamics will only receive the general AppDynamics metrics, provided by the AppDynamics Java Agent.
+        Set to `true` to enable metrics specific to Mendix. If this is not set, or set to `false` AppDynamics will only receive the general AppDynamics metrics, provided by the AppDynamics Java Agent.
 
         *Default: `false`*
 

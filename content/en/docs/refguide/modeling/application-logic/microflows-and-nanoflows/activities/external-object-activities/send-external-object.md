@@ -16,7 +16,9 @@ The **Send external object** activity can be used to persist changes to an exter
 The ability to send attributes using this activity was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/). The sending of association members was added in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8/), and sending a new object was added in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12/).
 {{% /alert %}}
 
-## 2 Updatable External Entities
+## 2 When to Use this Activity
+
+### 2.1 Updatable External Entities
 
 External entities may have updatable attributes. The values of these attributes can change, for instance in a widget or by using the [change object activity](/refguide/change-object/). Associations between two external entities from the same OData service may be updatable as well.
 
@@ -28,11 +30,33 @@ This activity can only send objects from an OData service.
 
 Some services may have updatable attributes that are part of the key of the entity. Services published by Mendix apps do not have this, but other services might. It's not recommended to change those attributes.
 
-## 3 Creatable External Entities
+### 2.2 Creatable External Entities
 
 This activity sends new objects and their attributes and owned associations to be inserted in the external app.
 
-## 4 Related
+## 3 Activity Properties
+
+To manage the properties of the activity, double click the **Send external object** activity, or right-click the activity and select **Properties**. 
+
+Single-clicking on the activity displays the properties in the **Properties** pane.
+
+### 3.1 Object
+
+Choose a variable that contains a single insertable or updatable external object.
+
+### 3.2 Refresh in Client
+
+This setting defines how changes are reflected in the pages presented to the end-user. The default for this setting is *No*.
+
+## 4 After the Activity
+
+After this activity, the `$latestHttpResponse` variable (of the [HttpResponse](/refguide/http-request-and-response-entities/#http-response) type) is available to inspect the response returned by the service.
+
+{{% alert color="info" %}}
+The feature to set `$latestHttpResponse` was introduced in Studio Pro [9.15.0](/releasenotes/studio-pro/9.15/).
+{{% /alert %}}
+
+## 5 Related
 
 Persistable objects are persisted by using the [commit](/refguide/committing-objects/)activity. External entities cannot be committed. Use this activity instead.
 

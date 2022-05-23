@@ -24,7 +24,7 @@ If you are running on SAP Cloud, you can add custom settings as User-Provided Va
 
 When you are running your app locally, you can set these values in a [Configuration](/refguide/configuration/#custom).
 
-There is more information on how this is done in the Cloud Foundry buildpack in [Configuring Custom Runtime Settings](https://github.com/mendix/cf-mendix-buildpack#configuring-custom-runtime-settings) in the GitHub repo.
+There is more information on how this is done in the Cloud Foundry buildpack in [Custom Runtime Settings](https://github.com/mendix/cf-mendix-buildpack#custom-runtime-settings) in the GitHub repo.
 
 ### 1.1 Duration/Interval Settings
 

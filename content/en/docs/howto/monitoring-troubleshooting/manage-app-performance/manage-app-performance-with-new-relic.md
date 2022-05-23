@@ -101,4 +101,4 @@ For more information on New Relic, see the [New Relic documentation](https://doc
 * [Clear Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages/)
 * [Monitor Mendix Using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Debug Java Actions Remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
-* [Monitoring Tools](https://github.com/mendix/cf-mendix-buildpack#monitoring-tools) in the *cf-mendix-buildpack* repo on GitHub
+* [Telemetry Configuration](https://github.com/mendix/cf-mendix-buildpack#telemetry-configuration) in the *cf-mendix-buildpack* repo on GitHub

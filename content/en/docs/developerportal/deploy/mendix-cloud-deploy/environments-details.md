@@ -64,7 +64,7 @@ During a [maintenance window](/developerportal/deploy/maintenance-windows/), you
 You can use the **Clear Environment** button to clear your environment so that you can use it for another purpose. This option is only available if the environment is stopped.
 
 {{% alert color="info" %}}
-You do not need to clear your environment if you are restoring an existing backup of the currently deployed app. The restore process will remove the current data from the database and replace it with the data from the backup.
+You do not need to clear your environment if you are restoring an existing backup of the currently deployed app. The restore process will remove the current database and replace it with the data from the backup.
 {{% /alert %}}
 
 When you click **Clear Environment** you will have two options:

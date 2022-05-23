@@ -17,13 +17,13 @@ A Mendix app consists of app-level documents and a number of modules. Each modul
 
 App settings include the languages for the end-user, app directory and database and server settings.
 
-See [App Settings](/refguide/project-settings/).
+See [App Settings](/refguide/app-settings/).
 
 ## 3 Security
 
 At the app level you can change the security level, manage user roles and manage administrator and anonymous user access.
 
-See [App Security](/refguide/project-security/).
+See [App Security](/refguide/app-security/).
 
 ## 4 Navigation
 

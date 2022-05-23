@@ -1,7 +1,7 @@
 ---
 title: "User Roles"
 url: /refguide/user-roles/
-parent: "project-security"
+parent: "app-security"
 weight: 10
 tags: ["studio pro", "user role", "app security", "security"]
 aliases:
@@ -44,7 +44,7 @@ General properties of user roles are described in the table below:
 | Name           | The name property defines the name of the user role. This name is shown to end-users who can create or edit user accounts in the application. |
 | Documentation  | In this property you can document additional information about the user role. This information is shown to end-users who can create or edit user accounts in the application. |
 | Module roles   | A list of module roles of which the access rights are accumulated in the user role. An end-user that is assigned a user role gets all access rights of the module roles of that user role. |
-| Check security | This specifies whether the consistency of security settings is checked for this user role. You can choose to not check security for a user role. For example, user roles that are used only for web service users do not need to be checked because they never sign in to the client. For more information on the security check, see [App Security](/refguide/project-security/). |
+| Check security | This specifies whether the consistency of security settings is checked for this user role. You can choose to not check security for a user role. For example, user roles that are used only for web service users do not need to be checked because they never sign in to the client. For more information on the security check, see [App Security](/refguide/app-security/). |
 
 ### 2.2 User Management Properties {#user-management}
 
@@ -59,7 +59,7 @@ Internally, user management properties are translated into entity access rules f
 
 ## 3 Read More
 
-* [App Security](/refguide/project-security/)
+* [App Security](/refguide/app-security/)
 * [Administrator](/refguide/administrator/)
 * [Demo Users](/refguide/demo-users/)
 * [Anonymous Users](/refguide/anonymous-users/)

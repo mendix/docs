@@ -12,11 +12,11 @@ aliases:
 
 The **App Explorer** shows the complete structure of your app including all documents inside the modules:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/app-explorer.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/app-explorer.png" >}}
 
 The **App Explorer** consists of the following:
 
-* **App** folder – contains settings and documents that apply to your app as a whole (for more information, see [Apps](/refguide/project/))
+* **App** folder – contains settings and documents that apply to your app as a whole (for more information, see [Apps](/refguide/app/))
 * **Modules**  – contain settings, a domain model, and *documents* that apply to this module (for more information, see [Modules](/refguide/modules/)) 
   * **Domain model** – a model that describes the information (or *data*) used by your application in an abstract way; one module can have one domain model only 
   * **Document** – an individual file, for example, a [page](/refguide/pages/), [microflow](/refguide/microflows/), or a [scheduled event](/refguide/scheduled-events/). 
@@ -38,6 +38,6 @@ In the **App Explorer**, you can do the following:
 
 ## 3 Read More
 
-* [Apps](/refguide/project/)
+* [Apps](/refguide/app/)
 * [Modules](/refguide/modules/)
 * [Security](/refguide/security/)

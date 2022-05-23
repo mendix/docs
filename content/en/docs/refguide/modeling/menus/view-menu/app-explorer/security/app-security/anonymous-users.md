@@ -1,9 +1,9 @@
 ---
 title: "Anonymous Users"
 url: /refguide/anonymous-users/
-parent: "project-security"
+parent: "app-security"
 weight: 40
-tags: ["studio pro", "anonymous users", "project security", "security"]
+tags: ["studio pro", "anonymous users", "app security", "security"]
 ---
 
 ## 1 Introduction
@@ -25,7 +25,7 @@ The properties of anonymous users are described in the table below:
 
 ## 3 Read More
 
-* [App Security](/refguide/project-security/)
+* [App Security](/refguide/app-security/)
 * [User Roles](/refguide/user-roles/)
 * [Administrator](/refguide/administrator/)
 * [Demo Users](/refguide/demo-users/)

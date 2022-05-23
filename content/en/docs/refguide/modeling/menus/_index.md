@@ -17,7 +17,7 @@ The top-bar of Studio Pro contains the following menus:
 * [File](#file) – allows you to manage documents and apps
 * [Edit](#edit) – allows you to perform editing functions such as search or copy within Studio Pro
 * [View](#view) – allows you to choose how Studio Pro and dockable panes within Studio Pro are displayed
-* [App](#project) – contains app-wide settings
+* [App](#app) – contains app-wide settings
 * [Run](#run) – contains actions for deploying and monitoring your app 
 * [Version Control](#version-control) – contains setting for version control
 * [Language](#language) – contains language and translation settings
@@ -39,7 +39,7 @@ The **Edit** menu allows you to perform editing functions, such as cut/copy/past
 
 The **View** menu allows you to view dockable panes, to enable the full screen mode, and reset the projappect layout. For more information on the **View** menu and its items, see [View Menu](/refguide/view-menu/).
 
-## 6 App Menu {#project}
+## 6 App Menu {#app}
 
 In the **App** menu, you can view and/or manipulate settings that are connected to your app and deployment. For more information on the **App** menu, see [App Menu](/refguide/app-menu/).
 

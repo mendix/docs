@@ -50,7 +50,7 @@ The language in which the titles and labels of the document should appear is des
 | Option | Description |
 | --- | --- |
 | Current user *(default)*  | Use the language of the current user. |
-| Project default | Use the default language that is specified in the [App Settings](/refguide/project-settings/). |
+| Project default | Use the default language that is specified in the [App Settings](/refguide/app-settings/). |
 | Variable | Use the language stored in the selected object, which must be of type *System.Language*. |
 
 ### 3.3 Document Type{#document-type}

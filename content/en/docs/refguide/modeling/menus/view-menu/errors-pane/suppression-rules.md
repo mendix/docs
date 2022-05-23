@@ -25,7 +25,7 @@ With **Suppression rules** it is possible to disable warnings. You can [suppress
 
 Suppression rules are for one user and for one instance of an app. The warnings that you suppress are not shared between users or apps, so warnings will not be suppressed for your team members working on the same app. 
 
-Suppression rules are stored locally in the app directory, in a file called *project-settings.user.json*. When committing your changes to the Team Server, Studio Pro will ignore this file. 
+Suppression rules are stored locally in the app directory, in a file called *app-settings.user.json*. When committing your changes to the Team Server, Studio Pro will ignore this file. 
 
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/suppression-rules/windows-explorer-showing-settings-files.png" alt="The settings file shown in Windows Explorer" >}}
 
@@ -60,7 +60,7 @@ The warning is suppressed for the whole module. If the same warning appears in a
 To suppress a warning for the entire app, do the following:
 
 1. Right-click the warning you would like to suppress.
-2. Select **Suppress this warning** > **For the entire project**.
+2. Select **Suppress this warning** > **For the entire app**.
 
 The warning is suppressed for the whole app and the list of warnings is updated in the **Errors** pane.
 

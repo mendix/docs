@@ -61,7 +61,7 @@ Note that these roles are only checked when the microflow is executed from the c
 
 The **Nanoflow access** tab is displayed as a matrix showing nanoflows and modules roles. You can choose to show the unused nanoflows in the matrix or hide them by enabling/disabling the **Show unused nanoflows** setting. 
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/security/module-security/nanoflow-access-tab.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/security/module-security/nanoflow-access-tab.png" >}}
 
 For each combination you can indicate whether or not the module role has access to the nanoflow. You can also edit this information in the [nanoflow](/refguide/nanoflow/) using the **Allowed roles** property.
 

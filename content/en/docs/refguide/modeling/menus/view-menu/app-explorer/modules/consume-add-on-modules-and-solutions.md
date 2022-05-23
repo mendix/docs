@@ -20,7 +20,7 @@ When consuming add-on modules and solutions, you may come across the following l
 * Add-on and solution modules are not supported in Mendix Studio; it should be disabled for your app, when you consume an add-on module or a solution. 
 * When debugging add-on and solution modules, you cannot step into microflows, debugging will automatically use **Step Over**.
 * If app modules and add-on modules or solutions have conflicting custom widgets, you are prompted with a warning showing the sources of the conflicts (module and widget package names) to find a workaround. An automatic fix is not implemented.
-* When a constant is hidden, you cannot configure its value in the **App settings**. For more information on app settings, see the [Configuration Tab](/refguide/project-settings/#configurations) section in *App Settings*. 
+* When a constant is hidden, you cannot configure its value in the **App settings**. For more information on app settings, see the [Configuration Tab](/refguide/app-settings/#configurations) section in *App Settings*. 
 
 ## 3 Importing an Add-on Module 
 

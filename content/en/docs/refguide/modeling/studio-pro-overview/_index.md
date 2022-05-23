@@ -46,7 +46,7 @@ You can deploy your app by clicking the **Publish** or play (**Run locally**) bu
 
 For more information on deployment in Mendix, see [Deployment](/developerportal/deploy/).
 
-For more information on deploying your app and versioning it, see  the [Versioning an App Deployed to the Cloud](/refguide/using-version-control-in-studio-pro/#versioning-project) section in *Using Version Control in Studio Pro*. 
+For more information on deploying your app and versioning it, see  the [Versioning an App Deployed to the Cloud](/refguide/using-version-control-in-studio-pro/#versioning-app) section in *Using Version Control in Studio Pro*. 
 
 ### 2.3 Links and User Profile Menu {#links}
 
@@ -56,7 +56,7 @@ Your profile picture is displayed next to them if you are signed in. When you cl
 
 ## 3 App Structure
 
-An app consists of individual files (*documents*) and settings that are grouped in folders and [modules](/refguide/modules/). The complete structure of your app can be viewed in the [App Explorer](/refguide/project-explorer/). 
+An app consists of individual files (*documents*) and settings that are grouped in folders and [modules](/refguide/modules/). The complete structure of your app can be viewed in the [App Explorer](/refguide/app-explorer/). 
 
 ## 4 Working Area
 
@@ -169,7 +169,7 @@ The following shortcut keys control the currently selected language:
 
 ## 8 Read More
 
-* [App Explorer](/refguide/project-explorer/)
+* [App Explorer](/refguide/app-explorer/)
 * [Menus](/refguide/menus/)
 
   

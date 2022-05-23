@@ -21,7 +21,7 @@ Module settings allow you to choose the type of the module when you build your a
 
 To open module settings, select the module in the App Explorer and double-click **Settings**:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/modules/module-settings/settings.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/modules/module-settings/settings.png" >}}
 
 ## 2 Module Type {#module-type}
 

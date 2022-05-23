@@ -76,4 +76,4 @@ For settings overview, see [Runtime Customization](/refguide/custom-settings/).
 
 ## 3 Read More
 
-* [App Settings](/refguide/project-settings/)
+* [App Settings](/refguide/app-settings/)

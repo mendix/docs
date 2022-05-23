@@ -1,7 +1,7 @@
 ---
 title: "Password Policy"
 url: /refguide/password-policy/
-parent: "project-security"
+parent: "app-security"
 weight: 50
 tags: ["studio pro", "password policy", "app security", "security"]
 ---
@@ -27,7 +27,7 @@ Password policy properties are described in the table below:
 
 ## 3 Read More
 
-* [App Security](/refguide/project-security/)
+* [App Security](/refguide/app-security/)
 * [User Roles](/refguide/user-roles/)
 * [Administrator](/refguide/administrator/)
 * [Demo Users](/refguide/demo-users/)

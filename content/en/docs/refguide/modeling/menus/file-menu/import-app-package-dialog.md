@@ -22,7 +22,7 @@ To import an app package, do the following:
 
     {{< figure src="/attachments/refguide/modeling/menus/file-menu/import-app-package-dialog/import-app-package.png" alt="Import App Package Dialog Window" >}}
 
-App packages can be created using [Export App Package](/refguide/export-project-package-dialog/).
+App packages can be created using [Export App Package](/refguide/export-app-package-dialog/).
 
 ## 2 Where Should We Store Your App?
 

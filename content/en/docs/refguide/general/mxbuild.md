@@ -95,7 +95,7 @@ When MxBuild exits, one of the following codes will be returned:
 
 If the exit code is larger than 0, MxBuild will show you the message describing the error.
 
-## 4 App Errors {#project-errors}
+## 4 App Errors {#app-errors}
 
 When your Mendix app contains errors, deployment will fail and MxBuild will report these errors. You can use the `--write-errors=FILENAME` command-line option to tell MxBuild to write the errors to a file.
 

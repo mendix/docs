@@ -1,7 +1,7 @@
 ---
 title: "Administrator"
 url: /refguide/administrator/
-parent: "project-security"
+parent: "app-security"
 weight: 20
 tags: ["studio pro", "administrator", "app security", "security"]
 ---
@@ -51,12 +51,12 @@ When your Free App *has never been deployed and the database still needs to be c
 1. In Studio Pro, go to **App > Security**.
 2. With **Security level** set to **Production**, open the **Administrator** tab.
 3. Change the default password of the administrator user.
-4. Run you project locally. This will create a local database that includes the MxAdmin user.
+4. Run you app locally. This will create a local database that includes the MxAdmin user.
 5. Once your app is running locally, stop it again.
 6. Open **Version Control > Add Snapshot of Data**.
 7. Click **Yes** to confirm committing the new data snapshot.
 
-Your app now contains a data snapshot. If you deploy this project for a Free App for the first time, the snapshot will be restored to the database of the Free App. If there is already a database for your Free App, the snapshot will not be restored.
+Your app now contains a data snapshot. If you deploy this app for a Free App for the first time, the snapshot will be restored to the database of the Free App. If there is already a database for your Free App, the snapshot will not be restored.
 
 Alternatively you can log in as an administrator to a Free App deployed to the cloud, by doing the following:
 
@@ -87,7 +87,7 @@ When your app is not deployed locally, for example to the Mendix Cloud, changes 
 
 ## 3 Read More
 
-* [App Security](/refguide/project-security/)
+* [App Security](/refguide/app-security/)
 * [User Roles](/refguide/user-roles/)
 * [Demo Users](/refguide/demo-users/)
 * [Anonymous Users](/refguide/anonymous-users/)

@@ -18,21 +18,21 @@ Security in Mendix does not include scanning files that end-users upload or down
 
 If you want full security, you need to explicitly give access to forms, entities, microflows, and workflows before someone can access them. By default, no one can access anything. To make it easier to create prototypes and demos there are security levels that require less security settings than are needed for a production system.
 
-See [App Security](/refguide/project-security/) for a description of the security levels.
+See [App Security](/refguide/app-security/) for a description of the security levels.
 
-## 3 Project vs. Module Security
+## 3 App vs. Module Security
 
-At the level of a project some global settings can be specified: the security level, the administrator account and whether or not to allow anonymous access.
+At the level of an app some global settings can be specified: the security level, the administrator account and whether or not to allow anonymous access.
 
-See [App Security](/refguide/project-security/).
+See [App Security](/refguide/app-security/).
 
-Most of the security settings take place at the module level. This has the advantage that a module can specify its own security and can be distributed and reused in other projects. Access to forms, entities, microflows, workflows, and datasets can be configured.
+Most of the security settings take place at the module level. This has the advantage that a module can specify its own security and can be distributed and reused in other apps. Access to forms, entities, microflows, workflows, and datasets can be configured.
 
 See [Module Security](/refguide/module-security/).
 
 ## 4 User Roles vs. Module Roles {#user-role}
 
-An end-user in a Mendix application has one or more user roles. These roles can be assigned from within the client when creating or editing a user. User roles are at the level of a project and can be edited in [App Security](/refguide/project-security/).
+An end-user in a Mendix application has one or more user roles. These roles can be assigned from within the client when creating or editing a user. User roles are at the level of an app and can be edited in [App Security](/refguide/app-security/).
 
 See [User Roles](/refguide/user-roles/).
 
@@ -44,7 +44,7 @@ A user role is a combination of module roles. A user that signs into the system 
 
 {{% alert color="info" %}}
 
-Let us say you have a project with two modules: System and ProjectManagement (PM). The PM module has three module roles: TeamMember, TeamLeader and Administrator. And let us say that in this case, we only need two user roles because we do not need the distinction between team leaders and administrators. You define those two user roles and assign module roles to them. The table below shows which module roles are contained within the user roles. Note that you always need at least the User role in System.
+Let us say you have an app with two modules: System and ProjectManagement (PM). The PM module has three module roles: TeamMember, TeamLeader and Administrator. And let us say that in this case, we only need two user roles because we do not need the distinction between team leaders and administrators. You define those two user roles and assign module roles to them. The table below shows which module roles are contained within the user roles. Note that you always need at least the User role in System.
 
 | User Role 'TeamMember' | User Role 'TeamLeader' |
 | --- | --- |

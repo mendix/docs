@@ -21,7 +21,7 @@ When security is enabled, a number of checks and changes are done at several lev
 3. Studio does checks and changes (if necessary) to [demo users](/refguide/demo-users/) , [module roles](/refguide/module-security/) , and [user roles](/refguide/user-roles/) (for more information on this process, see the [Module Roles and Demo Users Set Up](#module-roles-and-demo-users) section).
 4. Studio sets access rules for entities (and their attributes and associations), if entities do not have access rules yet (for more information on this process, see the [Entity Access Set Up](#entity-access) section).
 5. Studio checks if the *login.html* file exists, backs it up, and replaces it with a new version (for more information on this process, see the [File Set Up](#file-set-up) section).
-6. Studio does checks and changes (if necessary) at the [App Security](/refguide/project-security/) level (for more information on this process, see the [App Security Level Set Up](#project-security-level) section).
+6. Studio does checks and changes (if necessary) at the [App Security](/refguide/app-security/) level (for more information on this process, see the [App Security Level Set Up](#app-security-level) section).
 
 {{% alert color="info" %}}
 
@@ -35,7 +35,7 @@ When security is enabled in Studio, the Mendix SSO module is set up. This module
 
 To enable single sign-on the following checks and changes are performed:
 
-1. The Mendix SSO startup microflow (MendixSSO.MendixSSO_AfterStartup) is created. For more information on possible outcomes of this process, see the [App Security Level Set Up](#project-security-level) section.
+1. The Mendix SSO startup microflow (MendixSSO.MendixSSO_AfterStartup) is created. For more information on possible outcomes of this process, see the [App Security Level Set Up](#app-security-level) section.
 2. *login.html* file is checked and changed if necessary. For more information, see the [File Set Up](#file-set-up) section.
 
 The Mendix SSO module also adds user management to your app. With user management you can manage app users.
@@ -119,7 +119,7 @@ If the *login.html* file does not exist, Studio creates it under the name *login
 
 This procedure enables single sign-on and allows existing users to automatically sign in to your app using their Mendix accounts. 
 
-## 7 App Security Level Set Up {#project-security-level}
+## 7 App Security Level Set Up {#app-security-level}
 
 On the **App** level, Studio does the following:
 
@@ -149,5 +149,5 @@ Studio Pro security settings are compatible with Studio (that means that roles a
 ## 9 Read More
 
 * [Security, Roles & Permissions](/studio/settings-security/) 
-* [App Security](/refguide/project-security/)
+* [App Security](/refguide/app-security/)
 * [Module Security](/refguide/module-security/)

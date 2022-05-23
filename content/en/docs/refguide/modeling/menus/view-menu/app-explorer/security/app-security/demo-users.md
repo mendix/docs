@@ -1,7 +1,7 @@
 ---
 title: "Demo Users"
 url: /refguide/demo-users/
-parent: "project-security"
+parent: "app-security"
 weight: 30
 tags: ["studio pro", "demo users", "demo-users", "app security"]
 ---
@@ -60,7 +60,7 @@ You can use demo user to test what your application looks like to different user
 
 ## 5 Read More
 
-* [App Security](/refguide/project-security/)
+* [App Security](/refguide/app-security/)
 * [User Roles](/refguide/user-roles/)
 * [Administrator](/refguide/administrator/)
 * [Anonymous Users](/refguide/anonymous-users/)

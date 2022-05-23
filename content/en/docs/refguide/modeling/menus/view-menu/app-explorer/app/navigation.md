@@ -123,7 +123,7 @@ If the sign-in page is set to none, a built-in pop-up window will appear instead
 Each device type contains a default menu. You can use these menus in [Menus & Navigation](/refguide/menu-widgets/). Defining the menu for a device type works the same as when editing a menu document. For more details, see [Menu](/refguide/menu/).
 
 {{% alert color="warning" %}}
-If [security](/refguide/project-security/) is enabled, the menu will only show the items to which the user has access.
+If [security](/refguide/app-security/) is enabled, the menu will only show the items to which the user has access.
 {{% /alert %}}
 
 ### 4.5 Profile Buttons
@@ -146,5 +146,5 @@ This opens the **Customize offline synchronization** dialog box that is used for
 
 ## 5 Read More
 
-* [App Explorer](/refguide/project-explorer/)
+* [App Explorer](/refguide/app-explorer/)
 * [Navigation Tree](/refguide/navigation-tree/)

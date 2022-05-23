@@ -18,7 +18,7 @@ Consult these sections below for information on theme folder structure, classes,
 
 * [Theme Folder Structure](#folder-structure)
 * [Classes](#classes)
-* [Design Properties](#design-props)
+* [Design Properties](#design-properties)
 
 Read [Using Native Styling](#using-styling) to practice basic Mendix styling tasks in a simple app.
 
@@ -54,12 +54,12 @@ Available in Mendix Studio and Mendix Studio Pro, design properties are an easie
 
 ## 5 Using Native Styling {#using-styling}
 
-You have the capacity to alter design properties with Mendix Studio Pro. Furthermore, because all native mobile styling is written in JavaScript, you have new ways of applying your styling customizations. For more details on native styling, class names, and widget styling, see the [Widget Styling Guide](/refguide/mobile/widget-styling-guide).
+You have the capacity to alter design properties with Mendix Studio Pro. Furthermore, because all native mobile styling is written in JavaScript, you have new ways of applying your styling customizations. For more details on native styling, class names, and widget styling, see the [Widget Styling Guide](/refguide/mobile/designing-mobile-user-interfaces/widget-styling-guide/).
 
 ### 5.1 Prerequisites 
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
-* Create a Mendix app based on the Blank Native Mobile App template by following the [Creating a New App Based on the Quickstart App](/howto/mobile/getting-started-with-native-mobile/#quickstartapp) section of *Get Started with Native Mobile*
+* Create a Mendix app based on the Blank Native Mobile App template by following the [Creating a New App Based on the Quickstart App](/refguide/mobile/getting-started-with-mobile/#quickstartapp) section of *Get Started with Native Mobile*
 * Download the Make It Native 9 app on your mobile device via either the [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9) store or the [Apple App Store](https://apps.apple.com/us/app/make-it-native-9/id1542182000) so you can text your app and see your styling changes
 
 ### 5.2 Customizing the Quickstart App

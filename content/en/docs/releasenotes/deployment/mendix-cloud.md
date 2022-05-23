@@ -7,11 +7,55 @@ description: "Release notes for deployment to Mendix Clouds v3 and v4"
 tags: ["release notes", "deployment", "cloud environment", "Mendix Cloud", "free app"]
 ---
 
-These release notes cover changes to deployment to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/). There are separate release notes for other deployment targets, see [Deployment](/releasenotes/developer-portal/deployment/) release notes page for further information.
+These release notes cover changes to deployment to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
+
+Mendix Cloud deployments are also dependent on the latest version of the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack). The [Mendix Cloud Foundry Buildpack release notes](https://github.com/mendix/cf-mendix-buildpack/releases) are published separately as other deployment targets are also dependent on the buildpack.
+
+There are separate release notes for other deployment targets, see [Deployment](/releasenotes/developer-portal/deployment/) release notes page for further information.
 
 For information on the current status of deployment to Mendix Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
 ## 2022
+
+### May 6th, 2022
+
+* We have updated AppDynamics monitoring to provide default values where possible.
+
+### April 22nd, 2022
+
+#### Improvements
+
+* We have added two new graphs on the [Metrics page for Cloud V4](/developerportal/operate/trends-v4/):
+   * Number of files in storage
+   * Size of files in storage (in bytes)
+* We have updated the alert order on the [Alerts page](/developerportal/operate/monitoring-application-health/) for better visibility
+* We have made improvements to the email alert subscription service to make it more reliable
+
+### April 21st, 2022
+
+* We have introduced support for [AppDynamics](/developerportal/operate/appdynamics-metrics/) monitoring in Mendix Cloud V4.
+
+### March 31st, 2022
+
+#### Improvements
+
+* We now show deactivated users on the [Node Permissions](/developerportal/deploy/node-permissions/) page for consistency with the [Team](/developerportal/collaborate/team/) page.
+
+### March 30th, 2022
+
+#### Improvements
+
+* We have implemented a Web Application Firewall (WAF) service for Free Apps deployed to the Mendix Cloud.
+
+    The Web Application Firewall (WAF) is a security service that protects applications from malicious and unwanted internet traffic without modifying your application code. WAF for Free Apps addresses various attack categories including many high risk and commonly occurring vulnerabilities described in OWASP publications such as [OWASP Top 10](https://owasp.org/www-project-top-ten/). These include the following:
+    
+    * Cross site scripting
+    * HTTP protocol violations
+    * Bots, crawlers, and scanners
+    * HTTP Denial of Service
+    * Server-side request forgery
+    * Local File Inclusion
+    * Log4j remote code execution
 
 ### March 3rd, 2022
 
@@ -392,10 +436,6 @@ Some examples of clients which will no longer be supported are:
 * Internet Explorer version 11 on Windows 8.1
 * Safari before version 9 on OS X 10.11
 * Safari before version 9 on iOS 9
-
-**Test your clients**
-
-You can test whether your client (browser or integrating client) will be able to connect to your app after December 1st, 2020, by going to [tls-check.mendix.com](https://tls-check.mendix.com/).
 
 **What we continue to support (expert details)**
 

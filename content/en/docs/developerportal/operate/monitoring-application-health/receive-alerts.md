@@ -14,7 +14,7 @@ You can manage the email alerts for each environment without the Technical Conta
 
 You can switch the alerts on and off for each environment to which you are entitled.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Switch alerts on and off for separate environments
 

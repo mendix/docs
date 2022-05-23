@@ -13,7 +13,7 @@ A test suite enables the user to execute test cases and test suites in a specifi
 
 This how-to uses the Company Expenses app as an example. You will create a test suite and add the test cases you created in [How to Create a Test Case](/addons/ats-addon/ht-one-create-a-test-case/). If you don't have them anymore, create two new test cases without any test steps to walk through this how-to. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create a test suite
 * Add test cases and test suites to a test suite
@@ -98,4 +98,4 @@ You can add as many test cases and test suites as you want.
 
 You have now learned how to create a test suite, so the next how-to is [How to Create Custom Actions](/addons/ats-addon/ht-one-create-custom-actions/), which will cover creating your own actions. You can also proceed with [How to Upload a File in Your App Using ATS](/addons/ats-addon/ht-one-upload-file-using-ats/).
 
-For an overview of all the how-tos and the structure, see [ATS 1 How-to's](/addons/ats-addon/ht-one/). We advise following the how-to's in the order listed there.
+For an overview of all the how-tos and the structure, see [ATS 1 How-tos](/addons/ats-addon/ht-one/). We advise following the how-to's in the order listed there.

@@ -17,21 +17,27 @@ We currently only support the options described here.
 
 ### 2.1 Retrieving All Objects
 
-All objects can be retrieved by specifying the URI. For example: `/odata/myservice/v1/Exployees`. You can see this if you specify the URI in a browser.
+All objects can be retrieved by specifying the URI. For example: `/odata/myservice/v1/Employees`. You can see this if you specify the URI in a browser.
 
 ### 2.2 Retrieving a Single Object
 
-A single object can be retrieved by passing the object identifier in the URI. For example: `/odata/myservice/v1/Exployees(8444249301330581)`.
+A single object can be retrieved by passing the object identifier in the URI. For example: `/odata/myservice/v1/Employees(8444249301330581)`.
 
 ### 2.3 Retrieving Associated Objects
 
-Associated objects can be retrieved by passing the `$expand` query parameter. For example: `/odata/myservice/v1/Exployees?$expand=Cars,Address($expand=City)` (OData 4) or `/odata/myservice/v1/Exployees?$expand=Cars,Address/City` (OData 3).
+For this example, imagine that you have four entities in your domain model: **Employee**, **Car**, **Address**, and **City**. They include the following:
+
+* An association between **Employee** and **Car**
+* An association between **Employee** and **Address**
+* An association between **City** and **Address**
+
+Associated objects can be retrieved by passing the `$expand` query parameter. For example: `/odata/myservice/v1/Employees?$expand=Cars,Address($expand=City)` (OData 4) or `/odata/myservice/v1/Employees?$expand=Cars,Address/City` (OData 3).
 
 ## 3 Counting the Number of Objects
 
 ### 3.1 Retrieving a Count of Objects
 
-You can find out how many objects there are by passing the `$count` query option. In this case, the result is an integer which is the number of objects. For example: `/odata/myservice/v1/Exployees/$count`.
+You can find out how many objects there are by passing the `$count` query option. In this case, the result is an integer which is the number of objects. For example: `/odata/myservice/v1/Employees/$count`.
 
 ### 3.2 (Inline) Count
 
@@ -157,7 +163,7 @@ The body must adhere to *URL encoding* principles. So, for instance, spaces, tab
 
 ## 10 Updating Objects {#updating-objects}
 
-When a published resource has the [Updatable](/refguide/published-odata-resource/#capabilities) capability, clients can update its attributes and associations by sending a `PATCH` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Exployees(8444249301330581)`).
+When a published resource has the [Updatable](/refguide/published-odata-resource/#capabilities) capability, clients can update its attributes and associations by sending a `PATCH` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Employees(8444249301330581)`).
 
 Specify new values for attributes in the body of the request. Here is an example:
 
@@ -204,7 +210,7 @@ The *updating attributes* functionality was introduced in Studio Pro [9.6.0](/re
 
 ## 10 Inserting Objects {#inserting-objects}
 
-When a published resource has the [Insertable](/refguide/published-odata-resource/#capabilities) capability, clients can create new objects by sending a `POST` request to the URL of the entity set (for example, `POST /odata/myservice/v1/Exployees`). 
+When a published resource has the [Insertable](/refguide/published-odata-resource/#capabilities) capability, clients can create new objects by sending a `POST` request to the URL of the entity set (for example, `POST /odata/myservice/v1/Employees`). 
 
 The body of the request may specify attribute and association values just as with updates. There is one difference: when the association refers to multiple objects, objects are specified without using `@delta`. For example:
 
@@ -221,3 +227,12 @@ Clients can only set values for an association from the entity that is the [owne
 
 {{% alert type="info" %}}
 The *inserting objects* functionality was introduced in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12/).
+{{% /alert %}}
+
+## 11 Deleting Objects {#deleting-objects}
+
+When a published resource has the [Deletable](/refguide/published-odata-resource/#capabilities) capability, clients can delete an object by sending a `DELETE` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Employees(8444249301330581)`).
+
+{{% alert type="info" %}}
+The *deleting objects* functionality was introduced in Studio Pro [9.13.0](/releasenotes/studio-pro/9.13/).
+{{% /alert %}}

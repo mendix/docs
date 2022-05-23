@@ -3,6 +3,7 @@ title: "Prepare Your Commercial Content to Sell"
 url: /appstore/creating-content/prepare/
 category: "Creating Content"
 weight: 2
+linktitle: "Prepare Your Content to Sell"
 description: "Describes how to prepare your your commercial content to sell in the Mendix Marketplace."
 tags: ["marketplace", "vendor", "app service"]
 aliases:
@@ -20,7 +21,7 @@ To bring your commercial product to the Mendix Marketplace, you need to first si
 The process for becoming a vendor is currently restricted to Beta suppliers, so you have to be part of the Mendix Vendor Beta program.
 {{% /alert %}}
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Make your commercial content ready to sell on the Marketplace
 * Complete specific tasks before you submit, as you submit, and after you submit your content to the Marketplace

@@ -10,7 +10,7 @@ tags: ["microflow", "logic", "java", "extend", "jdk", "custom", "UnsupportedClas
 
 Most application logic can be developed using microflows. Microflows are very powerful and contain a lot of the features that you need in every application. To prevent you from getting stuck due to a missing feature, Mendix microflows are extendable. So, whenever you feel something is missing, you can add it yourself with the use of Java actions. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Extend your application with custom Java code
 

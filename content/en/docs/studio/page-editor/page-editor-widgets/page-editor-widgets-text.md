@@ -31,6 +31,16 @@ You can also configure an expression and display the expression outcome (for mor
 
 To edit **Content**, double-click the widget on the page.
 
+#### 2.1.1 Translations
+
+{{% alert color="info" %}}
+
+Only available if multiple languages are set up in your app in Mendix Studio Pro. 
+
+{{% /alert %}}
+
+This option allows you to add translations of the button caption to other languages. For more information on how to add translations, see [Translating Your App to Multiple Languages](/studio/language-support/).
+
 
 ### 2.2 Render Mode {#render-mode}
 

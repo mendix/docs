@@ -17,7 +17,10 @@ In the Landscape, you will see, at a glance, the network of deployments of the a
 * The dependencies between consuming and publishing apps
 * All the services published from an app (deployed to a specific environment) and the datasets that are exposed in the service
 * Details of the selected nodes
+
+
 This visual display of registered assets will enable you to:
+
 * Decide on the relevance of available assets by seeing the apps that they are consumed by
 * Discover the context of the data being shared by the network of nodes for a service and the deploying app
 * From the displayed network of dependencies, ascertain the differences between the services by seeing how the shared data is used

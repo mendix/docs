@@ -10,7 +10,7 @@ tags: ["translate", "collaboration"]
 
 Delivering your Mendix app in multiple languages is an important capability for reaching a wide audience. Using translatable texts (for example, labels, button names, menu items) that are tracked and stored in your app, you can quickly make your app multilingual and translate the content from English to many other languages.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Set the development language
 * Import and export translations
@@ -47,7 +47,7 @@ After selecting your development language, the pages will display their labels a
 
 When your app is deployed with labels that don’t yet have a translation, these labels will also display the default language label (without the angle brackets). You can configure how strict the Modeler is in checking for a translation in the **Language Operations** settings of your app (see [3.1 Configuring Language Operations](#toconfigurelanguageoperations)).
 
-### <a name="toconfigurelanguageoperations"></a>3.1 Configuring Language Operations
+### 3.1 Configuring Language Operations{#toconfigurelanguageoperations}
 
 To update the language settings in the Modeler, go to **Language > Language Operations**.
 

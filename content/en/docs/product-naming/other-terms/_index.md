@@ -149,7 +149,7 @@ Do not use "Sandbox." For more information, see [Terminology History](/product-n
 
 This is the package of offerings that users can employ without requiring a paid license.
 
-"Free Edition" replaced [Community Edition](/product-naming/terminology-history/#community-edition) in 2015, and was made a focus of the announcements at [Mendix World 2019](https://www.mendix.com/blog/a-3-step-leap-into-your-digital-future-highlights-from-mendix-world/).
+"Free Edition" replaced [Community Edition](/product-naming/terminology-history/#community-edition) in 2015, and was made a focus of the announcements at Mendix World 2019.
 
 {{% alert color="info" %}}
 Use to refer to the whole package of Mendix free offerings (Studio Pro, Studio, and Free Apps), not individual parts of the offering.<br />

@@ -79,9 +79,7 @@ Click **More** to access the following options:
 
 * **Import / Export** – opens the **Import / Export** page; for details, see the [Importing & Exporting to Excel](#import-export) section below
 * **Manage Labels** – opens a page where you can manage labels at the app level; for details, see the [Managing Labels](#managing-labels) section below
-* **Completed Sprints** – opens a page where completed Sprints are archived; for details, see the [Completed Sprints](#completed-sprints) section below
 * **History** – opens the **Project History** page; for details, see the [History](#history) section below
-* **Switch To Old UI** – opens the old Stories UI
 
 #### 2.4.1 Importing & Exporting to Excel {#import-export}
 
@@ -114,20 +112,7 @@ The following buttons are available:
 * **Merge Label** – enables merging the selected label into another label; all stories which have the selected label are labeled with the other label and the selected label is deleted
 * **Remove Label** – enables removing the selected label from any stories to which it has been applied; the label is then deleted
 
-#### 2.4.3 Completed Sprints {#completed-sprints}
-
-The **Completed Sprints** page presents an overview of Sprints that have been completed and archived:
-
-{{< figure src="/attachments/developerportal/collaborate/stories/completed-sprints.png"   width="550"  >}}
-
-The following buttons are available:
-
-* **Search** – enables searching Sprints based on their ID or title
-* **View** – shows the full details of the archived Sprint
-* **View Stories** – enables viewing the stories of the selected Sprint
-* **Delete** – enables deleting the selected Sprint and its stories
-
-#### 2.4.4 History {#history}
+#### 2.4.3 History {#history}
 
 The **Project History** page presents the collaboration actions for the app. On this page, you can see what change was made, who performed it, and when it occurred:
 
@@ -141,7 +126,7 @@ For each Sprint, the following options are provided via the menu button on the r
 
 {{< figure src="/attachments/developerportal/collaborate/stories/sprint-options.jpg"   width="350"  >}}
 
-* **Complete Sprint** (only available for the Sprint identified as an **Active Sprint**) – enables completing the Sprint, which will move it to the [Completed Sprints](#completed-sprints) page
+* **Complete Sprint** (only available for the Sprint identified as an **Active Sprint**) – enables completing the Sprint
 * **Add Story** – enables [creating a new story](#new-story) 
 * **Edit** – opens the [Edit Sprint](#new-sprint) dialog box
 * **Delete** – delete the Sprint
@@ -150,7 +135,7 @@ For each Sprint, the following options are provided via the menu button on the r
 
 When you select a story, you can perform the following actions:
 
-{{< figure src="/attachments/developerportal/collaborate/stories/story-context-menu.jpg" >}}
+{{< figure src="/attachments/developerportal/collaborate/stories/story-context-menu.png" >}}
 
 * **Clone** – enables duplicating a selected story and its tasks, story points, status, and labels into a new user story; this can enable utilizing a user story as a template
 * **Move** –  enables moving a story to another Sprint
@@ -161,7 +146,7 @@ When you select a story, you can perform the following actions:
 These actions support multi-selection of stories, except for the **Clone** action.
 {{% /alert %}}
 
-#### 2.6.1 Accessing Story Details  {#story-details}
+#### 2.6.1 Accessing Story Details {#story-details}
 
 When you click a story title, the story details page opens:
 
@@ -183,6 +168,7 @@ You can also do this following on this page:
 * **Duplicate** a story and its tasks, story points, status, and labels into a new user story
 * View the **Feedback** on which this story is based (if applicable; for details, see the [Adding a Feedback Item to Your Backlog](/developerportal/collaborate/feedback/#adding) section of *Feedback Management*)
 * View the committed **Revisions** linked to the story (which are configured in the [Related stories](/refguide/commit-dialog/#stories) tab of the **Commit** dialog box in Studio Pro)
+* **Change to Bug** to toggle the story type between **Bug** and **Feature** (by default, a story is created as a **Feature**)
 * Click **History** to view the history of changes to the story
 * **Delete** the story
 
@@ -196,7 +182,7 @@ If you need to reorder stories or move a story to a different Sprint, there are 
 
 * Select the story and drag it to the desired Sprint location:
 
-	{{< figure src="/attachments/developerportal/collaborate/stories/move-story-drag-new.jpg" >}}
+	{{< figure src="/attachments/developerportal/collaborate/stories/move-story-drag-new.png" >}}
 
 * Click the story title to open the story details page, then click **Move Story**:
 
@@ -210,7 +196,7 @@ Moving a story will move the tasks as well.
 
 To add a task to a story, access the [story details](#story-details) page and under **Tasks**, start typing in the **Add a new task** box.
 
-### 2.7 Managing Stories in Mendix Studio Pro 
+### 2.7 Managing Stories in Studio Pro 
 
 In addition to managing your Sprints in the Developer Portal, you can view them in Studio Pro.
 
@@ -223,11 +209,7 @@ To manage stories in Studio Pro, follow these steps:
 
 3. To change the status of a story in Studio Pro, click the current status. For example, click the **To-do** **Status** to change it to **Running**:
 
-{{< figure src="/attachments/developerportal/collaborate/stories/stories-to-do.png" >}}
-
-When you return to your app in the Developer Portal, you will see the new story status:
-
-{{< figure src="/attachments/developerportal/collaborate/stories/status-update.png" >}}
+{{< figure src="/attachments/developerportal/collaborate/stories/stories-to-do.jpg" >}}
 
 {{% alert color="info" %}}
 Changing the status of a story or updating story points automatically synchronizes the updates between the Developer Portal and Studio Pro. For more information on how to change the status of your story, see the [Changing the Status of a Story or a Task](/refguide/stories-pane/#changing-status) section in *Stories Pane*.
@@ -249,7 +231,17 @@ When you click **Details** for a story, you will be taken to the [story details]
 All the changes made on this page are directly passed on to the **Stories** page and vice versa.
 {{% /alert %}}
 
-## 4 Read More
+## 4 Story Archive
+
+On the **Story Archive** tab, you can see a list of all stories that belong in completed Sprints. 
+
+You can search for a specific archived story through its **ID**, **Title**, **Description**, or the **Sprint's Name**. The search can be performed with both partial and exact matches.  
+
+By clicking a story's ID, you can see the [story details](#story-details).
+
+{{< figure src="/attachments/developerportal/collaborate/stories/story-archive.png" >}}
+
+## 5 Read More
 
 * [Buzz](/developerportal/collaborate/buzz/)
 * [Team](/developerportal/collaborate/team/)

@@ -20,7 +20,7 @@ This how-to will not describe how to set up an SVN server from scratch; typicall
 You will not be able to use Mendix Studio for collaborative development if you use an on-premises version control server. Collaborative development between Studio and Studio Pro will only work if you use the Mendix Team Server.	
 {{% /alert %}}	
 
-**This how-to will teach you how to do the following:**	
+This how-to will teach you how to do the following:	
 
 * Configure your Mendix apps to work with SVN (on-premises) version control system	
 
@@ -77,7 +77,7 @@ For the purpose of creating an app to store in your on-premises SVN server, this
 
 1. Click **Create App** in the [Developer Portal](https://sprintr.home.mendix.com/index.html).
 2. After you have created your app, click the arrow next to **Edit App**, select **Edit in Mendix Studio Pro**, then open the app in the relevant Studio Pro version. You need to open your app in Studio Pro in order to download it to your local machine (for more information, see [Version Control](/refguide/version-control/)).
-3. Your app contains a link to the location of the Mendix Team Server by default. To replace this with the address of your own SVN server, create a ticket in the [Mendix Support Portal](https://support.mendix.com/hc/en-us) specifying your app and the address of your SVN server. This address must include the name of the repository you are going to use for your app (for example, `https://svn.example.com:9876/repos/myapp`). This will allow Mendix Support to change the URL of your app.
+3. Your app contains a link to the location of the Mendix Team Server by default. To replace this with the address of your own SVN server, create a ticket in the [Mendix Support Portal](https://support.mendix.com/) specifying your app and the address of your SVN server. This address must include the name of the repository you are going to use for your app (for example, `https://svn.example.com:9876/repos/myapp`). This will allow Mendix Support to change the URL of your app.
 4. Wait for confirmation from Mendix Support before continuing the process.
 5. With all instances of Studio Pro closed, open the folder in which your app is stored locally.
 6. Delete the **.svn** and **.mendix-cache** folders (note that these folders may be hidden, in which case you will need to enable the option in your file explorer to make them visible). By deleting these folders, references to the Mendix Team Server are removed. Now, your app is ready to be uploaded to your own SVN server.

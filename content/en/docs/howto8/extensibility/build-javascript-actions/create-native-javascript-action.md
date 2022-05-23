@@ -11,7 +11,7 @@ tags: ["NFC", "Near Field Communication", "JavaScript", "native", "mobile"]
 
 Native mobile applications have faster performance and give you the ability to use device hardware features. This tutorial will teach you to build your own JavaScript actions, specifically ones that harness your native mobile device's hardware to read Near Field Communication (NFC) tags. If you would like to use third-party modules other than an NFC scanner, refer to this tutorial as a general overview.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Build a JavaScript action for a native mobile app
 * Add a dependency to the native JavaScript action
@@ -486,5 +486,4 @@ The Native Builder will locally run MxBuild. The output is a *bundles.js* file w
 * [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/)
 * [JavaScript Actions Reference Guide](/refguide8/javascript-actions/)
 * [How To Build JavaScript actions](/howto8/extensibility/build-javascript-actions/)
-* Google's [Read and write NFC Tags NFC Tools](https://play.google.com/store/apps/details?id=com.wakdev.wdnfc)
 * GitHub's [NFC React Native Library](https://github.com/whitedogg13/react-native-nfc-manager)

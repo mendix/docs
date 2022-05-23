@@ -10,7 +10,7 @@ tags: ["ATS", "testing", "maintainability"]
 
 You often reuse some of the same test steps in your test cases. For example, to open the application and logging into the application. Adding these separate steps each time you create a test case is time-consuming. Besides, if the password of the user changes you have to change the password in each test case that uses it. ATS has the functionality to create your own actions, this makes your test cases easier to maintain. You create your own actions from within a test case or by creating a new action from the **repository**. This how-to explains both ways of creating such actions.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Extract actions
 * Create an extracted action from a test case
@@ -145,4 +145,4 @@ Congratulations, you created a reusable extracted action to delete a new expense
 
 ## 4 Next Up
 
-The next how-to is [How to Schedule Test Cases/Test Suites](/addons/ats-addon/ht-two-schedule-testcase-testsuite/). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.
+The next how-to is [How to Schedule Test Cases/Test Suites](/addons/ats-addon/ht-two-schedule-testcase-testsuite/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.

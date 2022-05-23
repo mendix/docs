@@ -11,7 +11,7 @@ tags: ["studio", "microflows", "decision", "pages"]
 
 In the [previous step](/studio-how-to/microflows-how-to-configure-decision-p1/), you have configured microflows and decisions with enumeration attribute type and Boolean attribute type, now you can validate the microflows by adding them to pages. This how-to explains how you can add microflows with decisions to pages in Mendix Studio. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Embed the created microflows with decisions to your page
 
@@ -71,7 +71,7 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
 
 10. Delete the following elements from the list view:
 
-    1. The **TEXT** widget with the subtitle. 
+    1. The **TEXT** widget with the subtitle. 
     2. The **IMAGE** widget.
 
 11. Open the **Properties** of the **Details** button, and do the following:

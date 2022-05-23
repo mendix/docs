@@ -248,7 +248,7 @@ Below is an example of using an external dependency based on [pdf-lib](https://g
     // Other code you write will be lost the next time you deploy the app.
     import { Big } from "big.js";
     import { PDFDocument } from "pdf-lib"
-
+    
     // BEGIN EXTRA CODE
     ```
 
@@ -422,9 +422,9 @@ Consider these additional technical suggestions for best API practices:
 
 JavaScript Actions can be used in a nanoflow with a JavaScript action call activity. It is also possible to expose the actions in the activity list. This will make it easier for developers to find the actions. It is recommended to expose only the actions that will be reused often. 
 
-Use **Category** to group actions, and **Icon** to give the exposed nanoflow action easy recognition inside the nanoflow:
+Use **Category** to group actions, **Icon** and **Image** to give the exposed nanoflow action easy recognition inside the nanoflow:
 
-{{< figure src="/attachments/howto/extensibility/best-practices-javascript-actions/narrow-expose.png" alt="exposed nanoflow with info" >}}
+{{< figure src="/attachments/howto/extensibility/best-practices-javascript-actions/narrow-expose.png" alt="exposed nanoflow with info" width="650" >}}
 
 ### 3.3 Publishing JavaScript Actions
 

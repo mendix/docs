@@ -66,7 +66,7 @@ The header for a component presents the following details:
 * The **Share** button, which allows you to copy the URL of the component and share it to your networks
 * **Download** – click this to download the component
 	* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
-	* The best practice is to download a component from the Marketplace that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects/))
+	* The best practice is to download a component from the Marketplace functionality built into Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see the [Installing Marketplace Content](/appstore/general/app-store-content/#install) section in *Use Marketplace Content in Studio Pro*))
 * The **Premium** label is applied to components like [app services](#types) that require a subscription; some premium services (like [Email Service](/appstore/app-services/email-service/)) also offer a free trial based on a predefined quota/limit
 	* These components have a **Subscribe** button to configure your subscription (by selecting a specific plan and setting a **Technical Owner**) and a **Try for Free** button to start your free trial
 	* If your company has an active subscription, click **Buy More** to buy more instances on the same or different plan.
@@ -258,9 +258,17 @@ This page contains reviews of **Your company's content** as well as **Your compa
 
 You can configure user groups for various levels of access to your company content. The available configuration tabs for each user group page are described in the sections below.
 
-{{% alert color="info" %}}
-The **User Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/#company) can create and delete user groups. Both [Group Admins](#members) and Mendix Admins can manage user groups.
-{{% /alert %}}
+The **User Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/#company) can create and delete user groups. Both [Group Admins](#members) and Mendix Admins can manage user group members. 
+
+This table breaks down the roles and permissions for user groups:
+
+| Roles | Manage (Create & Delete) Groups | Manage Group Members | Assign Apps to Group | Manage (Edit, Add New Version & Unpublish) Content | View & Download Group Content | View Group List |
+| --- | --- | --- | --- | --- | --- | --- |
+| Mendix Admin | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Group Admin | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Group Member | ✘ | ✘ | ✘ | ✔ | ✔ | ✔ |
+| Organization member (not part of any group) | ✘ | ✘ | ✘ | ✘ | ✔ | ✔ |
+| Guest | ✘ | ✘ | ✘ | ✘ | ✔ | ✘ |
 
 #### 4.9.1 Members Tab {#members}
 

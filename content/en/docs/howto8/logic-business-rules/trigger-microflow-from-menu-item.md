@@ -10,7 +10,7 @@ tags: ["how-to", "microflow", "create microflow"]
 
 Mendix uses visual models called microflows to define the logic of your application. Microflows are visual ways of expressing what traditionally would be written in code. This how-to explains how you can create a very simple "Hello World" microflow.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create a menu item
 * Create and edit a microflow

@@ -3,7 +3,7 @@ title: "Configure Parallels"
 url: /howto/general/using-mendix-studio-pro-on-a-mac/
 category: "General Info"
 weight: 2
-description: "This how-to will allow you to start making Mendix apps on your Mac device."
+description: "This how-to will help you to start making Mendix apps on your Mac device."
 tags: ["Native", "Parallels", "Mac", "Mobile"]
 ---
 
@@ -17,7 +17,7 @@ To run Studio Pro on Apple Silicon Macs, such as the M1(X), an MTS version start
 
 To start making Mendix apps on your Mac, follow this how-to.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Configure your Windows virtual machine for Mendix Studio Pro
 * Run a Mendix app on a test device using your Windows virtual machine

@@ -147,6 +147,8 @@ If a menu item has a sub-item, the **On Click Action** should be **Nothing**.
 The properties that can be configured in the **General** section are the following:
 
 * **Caption** – Allows you to fill in the name of the menu item.
+    * **Translations** – Only available if multiple languages are set up in your app in Mendix Studio Pro. This option allows you to add translations of the button caption to other languages. For more information on how to add translations, see [Translating Your App to Multiple Languages](/studio/language-support/).
+
 * **Icon** – Allows you to set the icon of the menu item.
 
 ## 4 Read More

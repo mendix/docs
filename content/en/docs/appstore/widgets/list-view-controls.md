@@ -216,3 +216,7 @@ exports.settings = {
 ```
 
 For more information, see [Mendix widget build script](https://github.com/FlockOfBirds/mendix-widget-build-script).
+
+## 9 Strict CSP Compatibility
+
+This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget.

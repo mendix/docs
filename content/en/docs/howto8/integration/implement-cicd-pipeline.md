@@ -46,7 +46,7 @@ An example of how to do this call is below. Be aware that `<AppId>` is not a GUI
 
 {{< figure src="/attachments/howto8/integration/implement-cicd-pipeline/02GetLatestRevision.png" >}}
 
-#### <a name="BuildPackage"></a>3.2.2 Building the Package
+#### 3.2.2 Building the Package{#BuildPackage}
 
 After getting the version you want to build the package for, you need to build the package. To do this, use the [Start Building a Deployment Package API call](/apidocs-mxsdk/apidocs/build-api/#start-building-deployment-package).
 

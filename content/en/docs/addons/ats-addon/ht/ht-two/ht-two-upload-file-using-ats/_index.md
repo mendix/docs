@@ -24,7 +24,7 @@ Quick summary:
 <small><sup>1</sup> This only possible when you prepare your own files on that server. <br>
 <sup>2</sup> This depends on where the agent is installed.</small>
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Understand why it is difficult to upload files in your app using automated testing
 * Uploading a file using ATS
@@ -99,4 +99,4 @@ When you use a Selenium SaaS provider you can also use their agent. Each provide
 
 ## 7 Next Up
 
-You now learned how to upload a file and if it is possible with your selenium set up. The next how-to is [How to Assert Data Grid Rows](/addons/ats-addon/ht-two-assert-datagrid-rows/). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.
+You now learned how to upload a file and if it is possible with your selenium set up. The next how-to is [How to Assert Data Grid Rows](/addons/ats-addon/ht-two-assert-datagrid-rows/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.

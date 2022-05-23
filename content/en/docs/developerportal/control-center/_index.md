@@ -25,10 +25,6 @@ If you are a Mendix Admin, you will immediately see the [Dashboard](#dashboard) 
 
 ## 2 Dashboard {#dashboard}
 
-{{% alert color="info" %}}
-This new feature is currently in Beta. Please provide feedback via the feedback button on the right of the page. For more information, see [Beta Releases](/releasenotes/beta-features/).
-{{% /alert %}}
-
 The Control Center dashboard gives you an overview of various activities for your company on the Mendix Platform:
 
 {{< figure src="/attachments/developerportal/control-center/dashboard.png" >}}
@@ -145,7 +141,7 @@ On the **Onboarding Email** tab, you can customize the onboarding email that use
 
 On the **Password Policy** tab of this page, you can set the password expiration policy for all company members. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.
 
-On the **Single Sign-On** tab, you can set up an identity federation between the Mendix platform and your corporate identity provider. We call this feature *Bring Your Own Identity Provider (BYOIDP)* and you can find more information in [How to Set Up an SSO (BYOIDP)](/developerportal/control-center/set-up-sso-byoidp/).
+On the **Single Sign-On** tab, you can set up an identity federation between the Mendix Platform and your corporate identity provider. We call this feature *Bring Your Own Identity Provider (BYOIDP)* and you can find more information in [How to Set Up an SSO (BYOIDP)](/developerportal/control-center/set-up-sso-byoidp/).
 
 On the **Security History** tab, you can click **Show Security History** to open a page (in a new browser tab) that presents an audit trail of security-related changes in **App History** and **Member History**. You can search through and view details on these changes as well as export the audit trail to a CSV file.
 
@@ -160,6 +156,8 @@ This feature is not yet publicly available. Please talk to your Customer Success
 The **Paid Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) and whether the [Fallback](/developerportal/deploy/mendix-cloud-deploy/#fallback) option has been purchased as part of a Premium plan.   
 
 {{< figure src="/attachments/developerportal/control-center/cloud.jpg" >}}
+
+When you select one or more environments via the check boxes on the **Paid Environments** or **Free Environments** tab, a context menu appears at the bottom of the screen with the option for exporting environment details to an *.xlsx* file.
 
 There are links to three other pages from this tab to allow you to [make requests to Mendix Support](/developerportal/support/submit-support-request/#submitting) to do the following:
 

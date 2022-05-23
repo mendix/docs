@@ -10,7 +10,7 @@ tags: ["legacy", "legacy system", "integration"]
 
 Mendix applications frequently need to communicate with existing systems. Whether replacing an older platform entirely or leveraging an existing database to enhance your app, the ability to integrate with legacy systems is key to your success. This how-to introduces a range of options that exist within the Mendix Platform to integrate with legacy systems.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Assess potential options for integrating an existing system with a Mendix app
 * Integrate with a legacy system using REST

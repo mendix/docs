@@ -11,7 +11,7 @@ description: "Describes how to get information from a REST service."
 
 In your Mendix app, you can use information from REST services. This how-to shows you how to do that through an example in which you create an app that retrieves Wikipedia pages from a REST service. The resulting app is [available for download](/attachments/howto/integration/consume-a-rest-service/WikipediaApi.mpk).
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Call the REST service in a microflow
 
@@ -78,7 +78,7 @@ To add an input entity to the domain model, follow these steps:
 
 11. Click **OK**. 
 
-## 5 Calling the REST Service in a Microflow
+## 5 Calling the REST Service in a Microflow {#call-microflow}
 
 You will now call the REST service in a [microflow](/refguide/microflows/) to build the integration with Wikipedia. The input parameter for the microflow is **Input** and this is associated with **Summary**.
 
@@ -127,17 +127,18 @@ To create a page for this app, follow these steps:
 3. For the **Data source – Type** select **Microflow**.
 4. For the **Microflow Name**, enter *CreateInput*. Note that when this page loads, it needs a new **Input** object – you will define the **CreateInput** microflow that creates this object in [Filling In the Create Input Microflow](#createinput).
 5. Click **OK**.
-6. From **Structure**, add a new **Table** with one row and two columns.
+6. In the **App Explorer** under **Structure**, add a new **Table** with one row and two columns.
 7. Drag the **Title** field onto the left column.
 8. Delete the **Summary** field.
-9. From the **App Explorer**, drag **Microflow** into the right column.
-10. Double-click the **Microflow** button and in the **Edit Action Button** dialog box, enter *Get summary* for the caption of the button.
-11. Add a **Data view** below the table (inside the other data view).
-12. From the **Connector**, drag the **Summary** entity onto the **[Unknown]** bar and click **OK**.
-13. From this data view, delete all the fields except **Extract**.
-14. Double-click **Extract**.
-15. For **Show label**, select **No**, then click **OK**.
-16. Delete the **Save** and **Cancel** buttons.
+9. From the **App Explorer**, drag a **Call Microflow button** into the right column.
+10. In the **Select Microflow** dialog box, expand **RESTconsume** and select **Microflow**. This is the microflow you created in the [Calling the REST Service in a Microflow](#call-microflow) section above.
+11. Double-click the **Microflow** button and in the **Edit Action Button** dialog box, enter *Get summary* for the caption of the button.
+12. Add a **Data view** below the table (inside the other data view).
+13. From the **Connector**, drag the **Summary** entity onto the **[Unknown]** bar and click **OK**.
+14. From this data view, delete all the fields except **Extract**.
+15. Double-click **Extract**.
+16. For **Show label**, select **No**, then click **OK**.
+17. Delete the **Save** and **Cancel** buttons.
 
 	{{< figure src="/attachments/howto/integration/consume-a-rest-service/page.png" >}}
 
@@ -151,8 +152,8 @@ To fill in the CreateInput microflow, follow these steps:
 2. From the **Toolbox**, drag a **Create object** activity to the microflow.
 3. Double-click the activity.
 4. For **Entity**, click **Select** and double-click **Input**, then click **OK**.
-5 Double-click the red **End event**.
-6. Under **Return value**, enter `$NewInput`, then click **OK**
+5. Double-click the red **End event**.
+6. Under **Return value**, enter `$NewInput`, then click **OK**.
 
 Congratulations! You can now start your app and get summaries from Wikipedia.
 

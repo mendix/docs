@@ -27,7 +27,7 @@ As the objects that are still available are returned with the server call automa
 
 ## 3 Client Side Garbage Collection
 
-The Mendix Client has a garbage collector. This garbage collector will automatically free up memory by deleting objects that are no longer used or necessary to keep in memory. Objects are used when they are visible in a widget. For non-persistable objects it also means that they are seen as in-use when other used objects refer to them. Unchanged persistable objects are removed from memory when they aren't used because they can be reloaded from the Mendix Database when necessary.
+The Mendix Client has a garbage collector. This garbage collector will automatically free up memory by deleting objects that are no longer used or necessary to keep in memory. Objects are used when they are visible in a widget. For non-persistable objects it also means that they are seen as used when other used objects refer to them. Unchanged persistable objects are removed from memory when they aren't used because they can be reloaded from the Mendix Database when necessary. Changed persistable objects are removed from memory if they are not used and there are no used objects that refer to them.
 
 ### 3.1 Exceptional Cases
 

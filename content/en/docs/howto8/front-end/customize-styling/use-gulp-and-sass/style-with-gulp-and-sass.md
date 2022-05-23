@@ -18,7 +18,7 @@ For the majority of styling needs, you can use Mendix's styling tool: Calypso. F
 
 You can use [Gulp](https://gulpjs.com/) to watch the files for any changes you make when styling with Sass. Gulp triggers auto-refresh by default so that your changes are immediately visible in the browser.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Set up the Gulp project
 * Run Gulp

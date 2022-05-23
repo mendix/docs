@@ -4,41 +4,50 @@
 
 .td-content {
     order: 1;
-    margin-left: 2rem;
+    margin-left: 2rem; // NK - custom edit
 
     p, li, td {
         font-weight: $font-weight-body-text;
     }
 
+    // NK - custom additions for margin styling in lists
+    li p:first-child {
+        margin-bottom: 0.25rem;
+    }
+    li p:not(:first-child), li figure, li .alert {
+        margin-bottom: 0.5rem;
+    }
+
     > h1 {
-        font-weight: $font-weight-light;
+        font-weight: $font-weight-light; // NK - changed from bold
         margin-bottom: 1rem;
-        font-size: 2rem;
+        font-size: 2rem; // NK - custom edit
     }
 
     > h2 {
         margin-bottom: 1rem;
-        font-size: 1.7rem;
+        font-size: 1.7rem; // NK - custom edit
     }
 
     > h2:not(:first-child) {
-        margin-top: 2rem;  // NK - decrease space between sections
+        margin-top: 1.5rem; // NK - decrease space between sections
     }
 
     > h2 + h3 {
-         margin-top: 1rem;
+         margin-top: 1.5rem; // NK - decrease space between sections
     }
 
     > h3, > h4, > h5, > h6 {
         margin-bottom: 1rem;
-        margin-top: 2rem;
+        margin-top: 1.5rem; // NK - decrease space between sections
     }
 
     img {
         @extend .img-fluid;
     }
 
-    > table {
+    // NK - added li table to have stying applied to tables in lists
+    > table, li table {
         @extend .table-striped;
 
         @extend .table-responsive;
@@ -56,6 +65,16 @@
     > ul li, > ol li {
         margin-bottom: .25rem;
     }
+
+    /* ordered lists inside ordered lists will be displayed using letters */
+    ol ol {
+        list-style-type: lower-alpha;
+        padding-left: 2rem; // NK - decrease indent
+    }
+    ul ol, ul ul, ol ul {
+        padding-left: 2rem; // NK - decrease indent
+    }
+
 
     strong {
         font-weight: $font-weight-bold;

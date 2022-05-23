@@ -68,7 +68,7 @@ You can upgrade a Free App to a licensed node with a *node* in the Mendix Cloud.
 
 #### 1.1.1 Free Apps Archival{#free-apps-archival}
 
-If a Free App has been in Sleep Mode for three months or longer, the Technical Contact will be informed that the Free App will be archived in another two weeks. The project and model will be retained, but the running app, database, and files for the Free App will be deleted.
+If a Free App has been in Sleep Mode for three months or longer, it may be archived. For Free Apps which are going to be archived, the Technical Contact will be informed two weeks beforehand. The project and model will be retained, but the running app, database, and files for the Free App will be deleted.
 
 There are two ways to avoid Free Apps Archival:
 
@@ -103,7 +103,7 @@ Mendix apps cannot use custom ports. They communicate on the standard HTTP and H
 
 It has never been easier to deploy a Mendix application to the cloud. This how-to will explain the options a developer has to deploy applications to a connected cloud node.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Deploy a licensed app to the Mendix Cloud
 * Deploy via Mendix Studio Pro

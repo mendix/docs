@@ -76,7 +76,7 @@ export const com_mendix_widget_native_badge_Badge = (Badge = {
 });
 ```
 
-For more information on creating your own classes, see the [Creating Your Own Classes](/howto/mobile/how-to-use-native-styling/#creating-your-own-classes) section in *Style Your Mendix Native Mobile App*. That document also shows how to use custom classes as design properties.
+For more information on creating your own classes, see the [Creating Your Own Classes](/refguide/mobile/designing-mobile-user-interfaces/native-styling/#creating-your-own-classes) section in *Style Your Mendix Native Mobile App*. That document also shows how to use custom classes as design properties.
 
 ## 3  Data Containers {#understanding-data-widgets}
 

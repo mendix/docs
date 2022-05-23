@@ -24,7 +24,7 @@ As PWAs are basically web apps with additional features, Mendix offers these fea
 To create a full offline-first PWA, choose and add one of the following profiles (depending on which form factor you need): Responsive Web Offline, Phone Web Offline, or Tablet Web Offline. For more information about offline-first apps, see the [Offline-First Reference Guide](/refguide/offline-first/).
 
 {{% alert color="info" %}}
-Offline-first progressive web apps have some restrictions to make sure they can fully work offline. For more information, see the [Ensuring Your App Is Offline-First ](/refguide/offline-first/#limitations) section of the *Offline-First Reference Guide*.
+Offline-first progressive web apps have some restrictions to make sure they can fully work offline. For more information, see [Offline Best Practices](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/).
 {{% /alert %}}
 
 Within the navigation profiles the following PWA features can be configured:

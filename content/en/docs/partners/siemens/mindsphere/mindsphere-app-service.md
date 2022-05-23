@@ -236,7 +236,7 @@ If you want to use the [Siemens MindSphere Web Components Widgets](https://marke
 To enable this, you will have to do two things:
 
 1. Ensure that the constant **EnableMindSphereApiReverseProxy** is set to *true* to ensure this can happen.
-2. Add the microflow **Register ApiReverseProxy** to the [After Startup](/refguide/project-settings/#after-startup) microflow(s) which are run when the app is started.
+2. Add the microflow **Register ApiReverseProxy** to the [After Startup](/refguide/app-settings/#after-startup) microflow(s) which are run when the app is started.
 
 ## 8 Data Hub Limitations{#dh-limitations}
 

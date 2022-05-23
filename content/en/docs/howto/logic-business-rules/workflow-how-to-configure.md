@@ -42,7 +42,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows/). 
 
-* Make sure that the **User entity** is set to *Administration.Account* in your [App Settings](/refguide/project-settings/#workflows) > **Workflows** tab. 
+* Make sure that the **User entity** is set to *Administration.Account* in your [App Settings](/refguide/app-settings/#workflows) > **Workflows** tab. 
 
 * Make sure that the domain model of the module you are working in looks the following way:
 
@@ -123,7 +123,7 @@ You need to create demo users for the newly created app roles to be able to test
 1. In the App Explorer, open **App** > **Security** > the **Demo users** tab. 
 1. Click **New**.
 2. In the **Add Demo User** dialog box, set the **User name** to **demo_facilities**.
-3. Set the same entity you selected for the **User entity** setting in  [App Settings](/refguide/project-settings/#workflows) > **Workflows** tab: set **Entity** to **Administration.Account**.
+3. Set the same entity you selected for the **User entity** setting in  [App Settings](/refguide/app-settings/#workflows) > **Workflows** tab: set **Entity** to **Administration.Account**.
 4. Assign the corresponding user role in the **User roles** section: select the **Facilities** role and click **OK**.
 6. Repeat steps 2-5 to add the **demo_manager** demo user.
 7. Repeat steps 2-5 to add the **demo_hr** demo user.

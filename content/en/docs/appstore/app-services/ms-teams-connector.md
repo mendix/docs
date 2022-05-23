@@ -25,6 +25,7 @@ This app service is an [add-on module](/refguide/consume-add-on-modules-and-solu
 
 * Send HTML, markdown, or plain text messages
 * Send Microsoft Teams actionable message cards
+* Send message using microsoft credentials
 
 ### 1.3 Prerequisites
 
@@ -221,7 +222,9 @@ Microsoft Teams supports [actionable message cards](https://docs.microsoft.com/e
        
 ### 4.2 Sending Message using Microsoft credentials
  
-   Alongside **Send Message to Webhook**, a new drag-and-drop activity .with name **Send Message** in the microflow toolbox.
+   Alongside **Send Message to Webhook**,a drag-and-drop activity with name **Send Message** will be present in the microflow toolbox.
+   {{< figure src="/attachments/appstore/app-services/ms-teams-connector/activitiesInToolbox.png" >}}
+   
 
 Prerequisite :
    1) Deeplink (Available in the Mendix app store)
@@ -301,16 +304,13 @@ There are few configurations required to be performed which are explained in the
 
 1.  From the toolbox, drag and drop the **Send Message** activity into your microflow.
     
-    The following representative microflow contains activities with the required attributes, the **Send Message** activity, and a placeholder to capture the returned object.
-    
-    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/connector-in-microflow.png" >}}
-    
 2. Double-click the **Send Message** activity to open the **Send Message** dialog box.
 
 3.  Specify the following settings with expression syntax:
     1. Set the **channelLink** parameter with the channelLink obtained from Microsoft Teams.
-    2.  For **Message type**, select **Text** or **Card** from the drop-down list:
-        
+    2.  For **Message type**, select **Text** or **Card** using the **Message_Types** enumeration provided in the module.
+         {{< figure src="/attachments/appstore/app-services/ms-teams-connector/selectingMessageType.png" >}}
+              
         *  If you want to send a message as plain text or in HTML or markdown formatting, select **Text**.
         
             {{% alert type="info" %}}Fore more information about HTML and markdown tags supported by Microsoft Teams, see [*Format Cards in Microsoft Teams*](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format).{{% /alert %}}
@@ -326,17 +326,16 @@ There are few configurations required to be performed which are explained in the
 {{% alert type="warning" %}}All parameters are mandatory. Setting any value to be empty or **none** will cause an error.{{% /alert %}}
 
 4. Once this activity is triggered, it checks whether the user is logged in. If already logged in, the activity return a true in the MessageSent attribute of 
-   **SendMessageReponse** object else it returns false. If false is returned, you need to execute the **SignIn Microflow** to log in using your credentials.
-   
-    The **SendMessageReponse** entity for this object comes with the module and is pre-defined:
+   **SendMessageReponse** object which means the message was successfully sent else it returns false. If false is returned, you need to execute the **SignIn     Microflow** to log in using your credentials.
 
-{{< figure src="/attachments/appstore/app-services/ms-teams-connector/send-message-response-entity.png" >}}
+{{% alert type="info" %}} The **Message** attribute of **SendMessageReponse** object will contain the respective response message. {{% /alert %}}
 
-* The **Message** attribute contains the respective response message.
-   
-5. Below microflow describes one of the approach to use the **SignIn Microflow** effectively. Introduce a decision activity after SendMessage activity that would check the SentMessage value. If false, then execute the **SignIn Microflow**.
+Below microflow describes one of the approach to use the **SignIn Microflow** effectively. Introduce a decision activity after SendMessage activity that would check the SentMessage value. If false, then execute the **SignIn Microflow**.
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/usingSignInMicroflow.png" >}}
+
+{{% alert type="info" %}} Once you are logged in by using the **SignIn Microflow**, you need to call this  microflow again to send the message.{{% /alert %}}
+
 
 
 

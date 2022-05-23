@@ -9,11 +9,11 @@ aliases:
     - /howto/mobile/distribution/
 ---
 
->>>>> /howto/mobile/native-mobile/distribution/_index.md
+## 1 Introduction
 
 Guides in this section will help you distribute native apps to app stores, as well as push changes using over-the-air updates.
 
-The following how-to’s are available here:
+## 2 Main Documents in this Category
 
 * [Build Native Apps](/howto/mobile/build-native-apps/)
 * [Release Over the Air Updates with Mendix](/howto/mobile/how-to-ota/)

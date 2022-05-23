@@ -1,6 +1,6 @@
 ---
 title: "Create a Custom Developer App"
-url: /refguide/mobile/using-mobile-capabilities/debugging-native-apps/
+url: /refguide/mobile/using-mobile-capabilities/custom-dev-app/
 parent: /refguide/mobile/using-mobile-capabilities/
 weight: 92
 description: "Learn to build a custom developer app which supports expanded functionality like custom widgets and modules."

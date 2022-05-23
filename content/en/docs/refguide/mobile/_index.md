@@ -41,8 +41,8 @@ Mendix's native mobile apps are always configured with offline-first capabilitie
 
 ## 5 Main Documents in This Category
 
-* [Getting Started with Mobile](/refguide/getting-started-with-mobile/)
-* [Introduction to Mobile Technologies](/refguide/introduction-to-mobile-technologies/)
-* [Designing Mobile User Interfaces](/refguide/designing-mobile-user-interfaces/)
-* [Using Mobile Capabilities](/refguide/using-mobile-capabilities/)
-* [Distributing Mobile Apps](/refguide/distributing-mobile-apps/)
+* [Getting Started with Mobile](/refguide/mobile/getting-started-with-mobile/)
+* [Introduction to Mobile Technologies](/refguide/mobile/introduction-to-mobile-technologies/)
+* [Designing Mobile User Interfaces](/refguide/mobile/designing-mobile-user-interfaces/)
+* [Using Mobile Capabilities](/refguide/mobile/using-mobile-capabilities/)
+* [Distributing Mobile Apps](/refguide/mobile/distributing-mobile-apps/)

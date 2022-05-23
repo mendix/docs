@@ -10,7 +10,7 @@
 @import "sidebar-toc";
 @import "sidebar-tree";
 @import "tables";
-
+@import "section-index";
 
 // Adjust anchors vs the fixed menu.
 @include media-breakpoint-up(md) {

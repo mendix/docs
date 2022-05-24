@@ -21,7 +21,7 @@ Mendix supports building offline-first applications for [native mobile](/refguid
 
 ## 2 Synchronization
 
-Synchronization is the process of copying data and files from the app's server to the device and updating the server with the changes made on the local device. The local database is populated when the app starts for the first time. After this initial synchronization, data will remain available in the app so that it can work without an internet connection. You can model when and how to perform the subsequent synchronizations. In some cases, the Mendix Client may perform a synchronization automatically. Designing an efficient synchronization strategy is crucial for a high-performance app and a smooth UX. For more information, see the [Synchronization Guide](/synchronization).
+Synchronization is the process of copying data and files from the app's server to the device and updating the server with the changes made on the local device. The local database is populated when the app starts for the first time. After this initial synchronization, data will remain available in the app so that it can work without an internet connection. You can model when and how to perform the subsequent synchronizations. In some cases, the Mendix Client may perform a synchronization automatically. Designing an efficient synchronization strategy is crucial for a high-performance app and a smooth UX. For more information, see the [Synchronization Guide](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/).
 
 ## 3 Modeling Offline-First Apps
 
@@ -41,7 +41,7 @@ Imagine that you have deployed the first version of your native mobile app, your
 
 A similar issue may occur regarding changes to other app elements, including microflows and constants available to the client. For example, if your new deployment renames a microflow or modifies its parameters, users who have not updated their apps will be working with the previous model of the app where it references the microflow with the old name. 
 
-For more information on offline-first app design, see [Offline Best Practices](best-practices).
+For more information on offline-first app design, see [Offline Best Practices](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/).
 
 ## 4 Distributing Mobile Apps 
 
@@ -53,12 +53,12 @@ For information on safely updating your offline-first apps, see [Distributing Mo
 
 Typically, when a user visits or logs into a web app, the Mendix Runtime creates a session. The Mendix Runtime keeps the session alive as long as the user works in the app. The session expires after a certain amount of inactivity determined by the time of the last request to the server.
 
-Session management in offline-first apps uses the same system mentioned above, but this introduces some challenges. Offline-first apps perform few requests to Mendix Runtime, because these apps work mostly with the local database. This causes the session on the runtime to expire while the user is still using the app. Mendix has employed solutions that differ per app type (native or PWA) to overcome this situation. To learn more about how Mendix handles sessions for offline-first users, see [Session Management](refguide/mobile/offlinefirst-data/session-management).
+Session management in offline-first apps uses the same system mentioned above, but this introduces some challenges. Offline-first apps perform few requests to Mendix Runtime, because these apps work mostly with the local database. This causes the session on the runtime to expire while the user is still using the app. Mendix has employed solutions that differ per app type (native or PWA) to overcome this situation. To learn more about how Mendix handles sessions for offline-first users, see the [Session Management](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/troubleshooting/#session-mgmt) section of *Offline Troubleshooting*.
 
 ## 6 Main Documents in This Category
 
-* [Offline Synchronization](synchronization) – Describes how and when synchronization occurs, and how to resolve sync errors.
-* [Offline Best Practices](best-practices) – Describes how to make secure, high-performing offline-first apps.
-* [Offline Troubleshooting](troubleshooting) – Describes how to troubleshoot synchronization issues and optimize app performance.
+* [Offline Synchronization](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/) – describes how and when synchronization occurs, and how to resolve sync errors.
+* [Offline Best Practices](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/) – describes how to make secure, high-performing offline-first apps.
+* [Offline Troubleshooting](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/troubleshooting/) – describes how to troubleshoot synchronization issues and optimize app performance.
 
 

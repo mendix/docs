@@ -36,6 +36,6 @@ tags: ["offline", "offline-first"]
 - I have changed a nanoflow in my app and redeployed to the cloud. Will the apps on user’s devices automatically update?
     - No. You need to do OTA to complete to update. (Give link to OTA resources)
     
-## Session management
+## Session Management {#session-mgmt}
 - I want to automatically logout a user after certain amount of inactivity. How can I do that?
     - We recommend to model this out by yourself and also decide to really logout the user (losing unsynced data) or relogin the current user instead. (Link to the pattern docs). We don’t recommend using a short authentication token duration for that.

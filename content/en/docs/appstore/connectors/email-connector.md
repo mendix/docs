@@ -49,13 +49,17 @@ The following widgets are bundled in the module:
 * [Rich Text](/appstore/widgets/rich-text/)
 * [FileDocumentViewer](https://github.com/mendixlabs/FileDocumentViewer)
 
+{{% alert color="warning" %}}
+If you already have these widgets in your app, and they are not up-to-date, you may get a `Some widgets can not be read` error. 
+{{% /alert %}}
+
 ## 2 Setup in Studio Pro {#setup}
 
 After you install the module, configure the following in Studio Pro:
 
 1. Provide a value for the **EncryptionKey** constant available under **USE_ME** folder for password storage. For add-on modules, you can set constants by going to the **App Explorer > App 'Name’ > Settings > Configuration > Edit > Constants**.
 2. Launch the UI by using the **ACT_EmailConnector_OverviewPage** microflow in the **USE_ME** folder.
-3. Link [User Roles](/refguide/user-roles/) in app **Security**.
+3. Link [User Roles](/refguide/user-roles/) in app **Security** to ensure that the configuration page displays when you locally run the app.
 
 
 ## 3 Email Account Configuration {#accountconfig}

@@ -47,19 +47,19 @@ You can configure the widget for certain actions in your app. All the configurat
     {{% alert color="info" %}}For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the Mendix SSO module to the Mendix Feedback widget version 8.2.1 or above. Choose only one of the authentication methods: either **MendixSSO** or **Custom Authentication**.
     {{% /alert %}}
     *  **MendixSSO** – if Mendix SSO is applied and the following settings are configured correctly, the end-user can leave feedback without having to enter their name and email address
-        * **ID token microflow** – select the **DS_GetCurrentIdToken** microflow from the Mendix SSO module. 
-        {{% alert color="info" %}}If you are using MendixSSO 3, please follow the [Create a new microflow to retrieve Decrypted Token](#create-a-new-microflow-to-retrieve-decryptedtoken) section.{{% /alert %}}
-        * **Decrypted Token Value** – select the **Value** attribute from it. The default if **Value** in the MendixSSO module. 
+        * **ID token microflow** – recommended that you select the **DS_GetCurrentIdToken** microflow from the Mendix SSO module. 
+        {{% alert color="info" %}}If you are using MendixSSO 3, please follow the [Create a New Microflow to Retrieve DecryptedToken](#create-a-new-microflow-to-retrieve-decryptedtoken) section below.{{% /alert %}}
+        * **Decrypted Token Value** – recommended that you select the **Value** attribute from it (the default if **Value** in the MendixSSO module). 
         
         See the screenshot below for an example:
         
         {{< figure src="/attachments/appstore/widgets/mendix-feedback/mendixsso-authentication.png" >}}
     
     * **Custom Authentication** – if you are using an SSO solution other than the Mendix SSO module, you should configure the following settings. With these settings, you can provide a microflow that should return a valid username and email when the end-user is signed in with your authentication solution. If the end-user is not signed in (meaning the **User Object Provider** microflow returns an empty username or an invalid email address) the end-user will have to manually enter their name and email address when they leave feedback.
-        * **User object microflow** – select the microflow that returns **User** entity from your module
-        * **User object** – select the **User** entity
-        * **User name attribute**– select the attribute of **name** from the User entity
-        * **Email attribute** – select the attribute of **email** from the User entity
+        * **User object microflow** – selects the microflow that returns **User** entity from your module
+        * **User object** – selects the **User** entity
+        * **User name attribute**– selects the attribute of **name** from the **User** entity
+        * **Email attribute** – selects the attribute of **email** from the **User** entity
     
         See the screenshot below for an example:
         
@@ -125,13 +125,14 @@ The Feedback widget uses the HTML2Canvas library which attempts to make an image
 
 If you cannot see your feedback items on the Developer Portal's **Feedback** page, it is possible that you have configured a wrong **App ID** or **Feedback server location**. Please check if all the configurations are filled in per the [Configuration](#configuration) section above.
 
-### 4.4 Create a new Microflow to retrieve DecryptedToken {#create-a-new-microflow-to-retrieve-decryptedtoken}
+### 4.4 Create a New Microflow to Retrieve DecryptedToken {#create-a-new-microflow-to-retrieve-decryptedtoken}
 
-In MendixSSO 3, the Microflow **DS_GetCurrentIdToken** is deprecated. You will need to create a new microflow in your own module to retrive the **DecryptedToken**. Place **SUB_GetDecryptedTokenByTypeForCurrentSessionn** in this new Microflow, and then use it in MendixSSO Authentication.
+In MendixSSO 3, the Microflow **DS_GetCurrentIdToken** is deprecated. You will need to create a new microflow in your own module to retrive the **DecryptedToken**. Place **SUB_GetDecryptedTokenByTypeForCurrentSessionn** in this new microflow, and then use it in MendixSSO Authentication:
 
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/MF_GetCurrentIdToken.png" >}}
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/MF_expample.png" >}}
 
 
-The tokenType argument is **MendixSSO.TokenType.ID_TOKEN**
+The tokenType argument is **MendixSSO.TokenType.ID_TOKEN**:
+
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/token_type.png" >}}

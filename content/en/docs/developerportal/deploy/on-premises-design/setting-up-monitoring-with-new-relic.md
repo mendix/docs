@@ -59,4 +59,4 @@ After you restart the application, your data should show up in New Relic. This r
 * [Finding the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Clearing Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages/)
 * [Testing Web Services Using SoapUI](/howto/testing/testing-web-services-using-soapui/)
-* [Monitoring Tools](https://github.com/mendix/cf-mendix-buildpack#monitoring-tools) in the *cf-mendix-buildpack* repo on GitHub
+* [New Relic](https://github.com/mendix/cf-mendix-buildpack#new-relic) in the *cf-mendix-buildpack* repo on GitHub

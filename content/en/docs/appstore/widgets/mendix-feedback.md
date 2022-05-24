@@ -47,18 +47,19 @@ You can configure the widget for certain actions in your app. All the configurat
     {{% alert color="info" %}}For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the Mendix SSO module to the Mendix Feedback widget version 8.2.1 or above. Choose only one of the authentication methods: either **MendixSSO** or **Custom Authentication**.
     {{% /alert %}}
     *  **MendixSSO** – if Mendix SSO is applied and the following settings are configured correctly, the end-user can leave feedback without having to enter their name and email address
-        * **ID token microflow** – select the **DS_GetCurrentIdToken** microflow from the Mendix SSO module
-        * **Decrypted Token Value** – select the **Value** attribute from it
+        * **ID token microflow** – recommended that you select the **DS_GetCurrentIdToken** microflow from the Mendix SSO module. 
+        {{% alert color="info" %}}If you are using MendixSSO 3, please follow the [Create a New Microflow to Retrieve DecryptedToken](#create-a-new-microflow-to-retrieve-decryptedtoken) section below.{{% /alert %}}
+        * **Decrypted Token Value** – recommended that you select the **Value** attribute from it (the default if **Value** in the MendixSSO module). 
         
         See the screenshot below for an example:
         
         {{< figure src="/attachments/appstore/widgets/mendix-feedback/mendixsso-authentication.png" >}}
     
     * **Custom Authentication** – if you are using an SSO solution other than the Mendix SSO module, you should configure the following settings. With these settings, you can provide a microflow that should return a valid username and email when the end-user is signed in with your authentication solution. If the end-user is not signed in (meaning the **User Object Provider** microflow returns an empty username or an invalid email address) the end-user will have to manually enter their name and email address when they leave feedback.
-        * **User object microflow** – select the microflow that returns **User** entity from your module
-        * **User object** – select the **User** entity
-        * **User name attribute**– select the attribute of **name** from the User entity
-        * **Email attribute** – select the attribute of **email** from the User entity
+        * **User object microflow** – selects the microflow that returns **User** entity from your module
+        * **User object** – selects the **User** entity
+        * **User name attribute**– selects the attribute of **name** from the **User** entity
+        * **Email attribute** – selects the attribute of **email** from the **User** entity
     
         See the screenshot below for an example:
         
@@ -88,11 +89,11 @@ You can place the widget on any form in your app, but it needs to be placed on o
 
 When you click the **Feedback icon**, the Mendix Platform first checks if you are signed in. If you are not signed in, you will need to either **Sign in to Mendix** or **Continue as a guest** to enter feedback mode:
 
-{{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-mode.png" >}}
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-login.png" >}}
 
 Once you are in feedback mode, you can click anywhere on the screen to **leave a comment**:
 
-{{< figure src="/attachments/appstore/widgets/mendix-feedback/add-comment.png" >}}
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/comment.png" >}}
 
 And voila! A screenshot of the current page is created, which you can choose to attach to your feedback. After clicking **Submit**, your feedback will go straight to the [Feedback](/developerportal/collaborate/feedback/) page of the app in the Developer Portal.
 
@@ -123,3 +124,15 @@ The Feedback widget uses the HTML2Canvas library which attempts to make an image
 ### 4.3 Feedback Item Does Not Show on the Developer portal
 
 If you cannot see your feedback items on the Developer Portal's **Feedback** page, it is possible that you have configured a wrong **App ID** or **Feedback server location**. Please check if all the configurations are filled in per the [Configuration](#configuration) section above.
+
+### 4.4 Create a New Microflow to Retrieve DecryptedToken {#create-a-new-microflow-to-retrieve-decryptedtoken}
+
+In MendixSSO 3, the Microflow **DS_GetCurrentIdToken** is deprecated. You will need to create a new microflow in your own module to retrive the **DecryptedToken**. Place **SUB_GetDecryptedTokenByTypeForCurrentSessionn** in this new microflow, and then use it in MendixSSO Authentication:
+
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/MF_GetCurrentIdToken.png" >}}
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/MF_expample.png" >}}
+
+
+The tokenType argument is **MendixSSO.TokenType.ID_TOKEN**:
+
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/token_type.png" >}}

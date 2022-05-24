@@ -5,6 +5,7 @@ category: "Studio Pro"
 description: "The release notes for version 7 of the Mendix Desktop Modeler."
 weight: 30
 no_list: false
+simple_list: true
 ---
 
 These are the release notes for the Mendix Desktop Modeler version 7:

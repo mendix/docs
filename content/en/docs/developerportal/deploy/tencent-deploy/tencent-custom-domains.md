@@ -62,7 +62,7 @@ You then need to configure an A Record.
 
 3. Choose **add records** (添加记录) and make a record of type **A**.
 
-You can bind the IP address, which you get during onboarding to the Mendix platform, to a specific domain name, like `myapp.mxapps.cn` as in the example below. You can also bind it to a wildcard domain name like `*.mxapps.cn` or `*.mendix.mxapps.cn`. If you use a wildcard domain name, you don’t need to bind the IP for every Mendix app.
+You can bind the IP address, which you get during onboarding to the Mendix Platform, to a specific domain name, like `myapp.mxapps.cn` as in the example below. You can also bind it to a wildcard domain name like `*.mxapps.cn` or `*.mendix.mxapps.cn`. If you use a wildcard domain name, you don’t need to bind the IP for every Mendix app.
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/tencent-custom-domains/create-a-records.png" >}}
 

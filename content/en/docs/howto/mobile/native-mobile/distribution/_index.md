@@ -9,7 +9,7 @@ tags: ["native", "mobile", "start", "quickstart"]
 
 How-tos in this section will help you distribute native apps to app stores, as well as push changes using over-the-air updates.
 
-The following how-to’s are available here:
+The following how-tos are available here:
 
 * [Build Native Apps](/howto/mobile/build-native-apps/)
 * [Release Over the Air Updates with Mendix](/howto/mobile/how-to-ota/)

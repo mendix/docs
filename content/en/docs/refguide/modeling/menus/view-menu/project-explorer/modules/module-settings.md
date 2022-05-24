@@ -23,7 +23,7 @@ To open module settings, select the module in the App Explorer and double-click 
 
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/project-explorer/modules/module-settings/settings.png" >}}
 
-## 2 Module Type
+## 2 Module Type {#module-type}
 
 There are three different types of modules and the choice of the type depends on the purpose of the module. You can choose one the following:
 

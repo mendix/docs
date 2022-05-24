@@ -34,7 +34,7 @@ This section presents guidelines for developing content that you will submit to 
 Submitted Marketplace content will be reviewed within five working days.
 {{% /alert %}}
 
-### 3.1 General
+### 3.1 General {#general}
 
 These are some general guidelines for creating new Marketplace content:
 
@@ -44,7 +44,18 @@ These are some general guidelines for creating new Marketplace content:
 
 You can add information the end-user should know to the component [Documentation](#doc) when you are adding the content to the Marketplace.
 
-### 3.2 For Widgets
+### 3.2 Intellectual Property
+
+When considering intellectual property (IP) in the Mendix Marketplace, follow these guidelines:
+
+* Do not copy any text, names,or other data from other components published in the Marketplace, since you do not own the copyright. Do not create unnecessary ambiguity or confusion that would mislead consumers of Marketplace components.
+* Do not mention components published by others within your content on the Marketplace. 
+* Make sure your component documentation only includes intellectual property that you have created. Your component should not include information or content published by others on the Marketplace, as this may lead to removing your component from the Marketplace. This also means other components can also be removed if they are using your component information or content. 
+* If you come across instances of intellectual property abuse, let us know at *AppServices_Supplier_Team@mendix.com*.
+
+For more information, see [Applying IP Protection](/appstore/creating-content/sol-ip-protection/).
+    
+### 3.3 For Widgets
 
 To develop widgets and submit them to Marketplace, follow these guidelines:
 
@@ -58,7 +69,7 @@ To develop widgets and submit them to Marketplace, follow these guidelines:
 * Use TypeScript instead of JavaScript
 * Create test pages for mobile when content is made for mobile platforms
 
-### 3.3 For Modules
+### 3.4 For Modules
 
 To develop modules and submit them to the Marketplace, follow these guidelines:
 
@@ -77,7 +88,7 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 * Do not rename entities and attributes when creating new versions, as data in these entities will get lost (replacing an existing module is based on the entity names)
 * The module should include the English language
 
-### 3.4 For Selling App Services
+### 3.5 For Selling Content
 
 For details on preparing and selling your component, see [How to Prepare Your Commercial Content to Sell in the Marketplace](/appstore/creating-content/prepare/).
 
@@ -92,11 +103,12 @@ To start, click **Add content** in the top bar of the Marketplace home screen. F
 On the **Upload Content** page, select the type of content you would like to publish (the available types correspond to the [Marketplace home page](/appstore/general/app-store-overview/#home)):
 
 {{< figure src="/attachments/appstore/general/share-app-store-content/category.JPG"   width="600"  >}}
-	
 
 ### 4.2 General {#general}
 
 On the **General** page,  you need to provide some details about your component. The information you entered above is pre-filled on this page.
+
+#### 4.2.1 Describing Your Content
 
 Follow these steps to describe your content:
 
@@ -121,22 +133,39 @@ Follow these steps to describe your content:
 	{{% /alert %}}
 
 6. Select the **Studio Pro Version** on which you built the content.
-7. <a name="license"></a>Select the type of **License** you want applied to your app (if applicable):
 
-	* [Apache V2](https://www.apache.org/licenses/LICENSE-2.0)
-	* [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)
-	* [Mendix EULA](https://www.mendix.com/terms-of-use/)
-	* [MindSphere Development License Agreement](https://siemens.mindsphere.io/en/terms)
-	* [MIT](https://opensource.org/licenses/MIT)
-	* SDISW Development License Agreement for Mendix Sample Apps EXTERNAL
-	* SDISW End-User License Agreement for Mendix Connectors and Widgets
-	* SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL
-	* SDISW End-User License Agreement for Mendix Sample Apps
+#### 4.2.2 Providing License Details {#license}
+
+Select the type of **License** you want applied to your app (if applicable). The lists and tables below describe the different considerations and requirements for these licenses.
+
+These are the open-source software licenses and requirements available from the list on this page:
+
+| | **Notes** | **Commercial use allowed?** | **Component code needs to be in public repo?** | **License text required with copyright info in code & distribution artifact?** | **Can modify?** (mention modifications to code) | **Can consuming apps use without making their code public?** | **Notice files should be distributed with artifact?** | **Original component source code to be distributed with consuming app?** | **Can sub-license?** |
+| --- | --- | --- | --- | --- | --- | --- |  --- | --- | --- |
+| [Apache V2](https://www.apache.org/licenses/LICENSE-2.0) | Add a specific *license.txt* file in your artifacts (meaning, in the *.mpk*). | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}}  |
+| [GNU General Public License (GPL), version 3](https://www.gnu.org/licenses/gpl-3.0.en.html) | Everything licensed under GNU GPL is public. GNU GPL has a strong copyleft effect, so all consuming apps should make their code public. Using this license is not recommended. | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} (Modification has strong copyleft effect, so this is discouraged) | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} |
+| [Mendix EULA](https://www.mendix.com/terms-of-use/) (Commercial) | This license is to be used when the component is released by Mendix. | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}}  (Should only be used by components developed by Mendix R&D) | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} (Or a link to Mendix Common Terms & Conditions) | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | (As per governing terms & conditions) |
+| [MIT](https://opensource.org/licenses/MIT) | Add a specific *license.txt* file in your artifacts (meaning, in the *.mpk*). | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} |
+
+These licenses should only be used when the component is developed and released by Siemens:
+
+| | **Commercial use allowed?** | **Component code needs to be in public repo?** | **License text required with copyright info in code & distribution artifact?** | **Can modify?** (mention modifications to code) | **Can consuming apps use without making their code public?** | **Notice files should be distributed with artifact?** | **Original component source code to be distributed with consuming app?** | **Can sub-license?** |
+| --- | --- | --- | --- | --- | --- |  --- | --- | --- |
+| [MindSphere Development License Agreement](https://siemens.mindsphere.io/en/terms) | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | (As per governing terms & conditions) |
+| **SDISW Development License Agreement for Mendix Sample Apps EXTERNAL** | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | (As per governing terms & conditions) |
+| **SDISW End-User License Agreement for Mendix Connectors and Widgets** | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | (As per governing terms & conditions) |
+| **SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL** | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | (As per governing terms & conditions) |
+| **SDISW End-User License Agreement for Mendix Sample Apps** | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | (As per governing terms & conditions) |
+
+#### 4.2.3 Finishing Up
+
+To finish up configuring this page, follow these steps:
+
+1. Click **Upload an Image** to upload an icon for the component.
 
 	{{< figure src="/attachments/appstore/general/share-app-store-content/general.jpg"   width="600"  >}}
 
-6. Click **Upload an Image** to upload an icon for the component.
-7. <a name="draft"></a>On each page of the upload flow, click one of the following buttons:
+2. <a name="draft"></a>On each page of the upload flow, click one of the following buttons:
 
 	* **Save Draft** to save the details you have entered so far to the [Drafts](/appstore/general/app-store-overview/#my-content) page of your Marketplace (which you can access via the **My Drafts** button in the upper right of the page)
 	* **Save & Continue** to go to the next page of the upload flow
@@ -256,7 +285,22 @@ To update content that has already been published, follow these steps:
 
 5.  On the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
 
-## 6 Read More
+## 6 Reviewing Outdated Components
+
+As the Mendix Marketplace grows, it is important for users to be able to find up-to-date and relevant components. In order to reduce the likelihood that users find outdated or obsolete components, we review Marketplace content and evaluate for the following points:
+
+* Whether the component supports the versions of Studio Pro that Mendix supports (meaning, the current major version plus two previous major versions – for more information, see [LTS, MTS & Monthly Releases](/releasenotes/studio-pro/lts-mts/))
+* Whether the component has been updated recently or not for ages (for example, it was published in 2016 and has not been updated since)
+* Whether it is being actively used or if it has limited usage or very few downloads, reviews, or ratings
+
+For a component that is outdated based on the above points, this is the review and remediation process: 
+
+1. Mendix sends a notification to the owner of the outdated component and the [Mendix Admin](/developerportal/control-center/#company), who then has to submit an update within 30 days in order for their component to remain active on the Marketplace. This update needs to be based on support for an active version of Studio Pro.
+2. Mendix sends two reminders during these 30 days: the first on the 15th day, and the second on the 25th day.
+3. If the component owner or Mendix Admin is unable to make the required update within the stipulated timeframe, Mendix unpublishes their component from the Marketplace. Unpublishing means the component is not listed on the Marketplace, but a copy of the component remains in the database.
+4. If the owner or Mendix Admin wants to restore their unpublished component on the Marketplace, they make the required update and create a [Mendix Support](/developerportal/support/) request.
+
+## 7 Read More
 
 * [Marketplace Overview](/appstore/general/app-store-overview/)
 * [How to Prepare Your Commercial Content to Sell in the Marketplace](/appstore/creating-content/prepare/)

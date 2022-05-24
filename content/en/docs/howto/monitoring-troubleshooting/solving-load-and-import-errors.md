@@ -43,7 +43,7 @@ If the latest change on your branch line was committed by someone other than you
 
 ### 3.2 Did You Obtain the Model from Someone Else?
 
-If you received the model from someone else, for example as a [app package](/howto/integration/importing-and-exporting-objects/) (.mpk) file, then it's possible they created the model with the Mendix Model SDK. Please inform the person about the problem and ask them for a solution.
+If you received the model from someone else, for example as an app package (.mpk) file, then it is possible they created the model with the Mendix Model SDK. Please inform the person about the problem and ask them for a solution.
 
 ### 3.3 Did You Create the App Yourself?
 

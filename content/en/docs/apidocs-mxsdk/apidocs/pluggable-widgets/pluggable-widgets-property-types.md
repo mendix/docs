@@ -356,7 +356,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 
 #### 4.1.2 XML Elements
 
-`<returnType>` (required) — An expression property must contain a `<returnType>` element in order to define allowed return types for the expression. The Mendix platform will ensure the that configured expression returns the correct data type.
+`<returnType>` (required) — An expression property must contain a `<returnType>` element in order to define allowed return types for the expression. The Mendix Platform will ensure the that configured expression returns the correct data type.
 
 | Supported Return Types | Corresponding Types Client Components Receive |
 | -------------------- | --------------------------------------------- |

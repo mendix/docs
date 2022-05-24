@@ -7,7 +7,11 @@ description: "Release notes for deployment to Mendix Clouds v3 and v4"
 tags: ["release notes", "deployment", "cloud environment", "Mendix Cloud", "free app"]
 ---
 
-These release notes cover changes to deployment to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/). There are separate release notes for other deployment targets, see [Deployment](/releasenotes/developer-portal/deployment/) release notes page for further information.
+These release notes cover changes to deployment to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
+
+Mendix Cloud deployments are also dependent on the latest version of the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack). The [Mendix Cloud Foundry Buildpack release notes](https://github.com/mendix/cf-mendix-buildpack/releases) are published separately as other deployment targets are also dependent on the buildpack.
+
+There are separate release notes for other deployment targets, see [Deployment](/releasenotes/developer-portal/deployment/) release notes page for further information.
 
 For information on the current status of deployment to Mendix Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 

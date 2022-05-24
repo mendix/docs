@@ -61,7 +61,7 @@ At the bottom of Studio Pro you will find several panels:
 
 On the right side of Studio Pro you will find more panels:
 
-* **Datahub**: displays remote entities (entities from other apps) which are available for use in your app
+* **Data Hub**: displays [External Entities](/refguide/external-entities/) (entities from other apps) which are available for use in your app
 * **Properties**: displays all the properties of the currently selected context element
 * **Toolbox**: a list of things you can add to the current document⁠—the **Toolbox** changes depending on context (it displays page elements while in the page editor or displays actions when editing a microflow or nanoflow)
 * **Connector**: quickly links data to pages⁠—using the connector you could drag an entity onto a data view or data grid to quickly display your app’s data on a page

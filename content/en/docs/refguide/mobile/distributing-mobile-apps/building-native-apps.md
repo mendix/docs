@@ -1137,6 +1137,7 @@ To remove dependencies which do not support auto-linking, revert the steps you a
 
 
 >>>>> /howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally.md
+
 ## 1 Introduction
 
 By default when building your native mobile app binaries, Mendix uses [Visual Studio App Center](https://appcenter.ms/sign-in?original_url=%2Fapps) as a service so that users can build without having to install tools like XCode or Android Studio. However, there are cases when using App Center is not allowed or possible. In those situations, you can build your apps locally.

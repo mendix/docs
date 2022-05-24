@@ -8,8 +8,6 @@ aliases:
     - /howto/mobile/how-to-maps/
 ---
 
->>>>> /howto/mobile/native-mobile/implementation/how-to-maps.md
-
 ## 1 Introduction
 
 The Maps module allows you to work with maps. Consult the instructions below to include map capabilities in your native mobile apps.

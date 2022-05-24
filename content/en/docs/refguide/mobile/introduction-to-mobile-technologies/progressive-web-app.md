@@ -21,6 +21,12 @@ Progressive web apps have three main characteristics:
 
 As PWAs are basically web apps with additional features, Mendix offers these features as a part of web navigation profiles. Based on what is needed, you can create a fully offline-capable PWA, or a web application that requires an internet connection but still uses PWA features.
 
+{{% alert color="warning" %}}
+PWAs have the following limitations on iOS:
+*  Push notifications are not supported for PWAs on iOS
+*  Offline data is not supported for PWAs on iOS
+{{% /alert %}}
+
 To create a full offline-first PWA, choose and add one of the following profiles (depending on which form factor you need): Responsive Web Offline, Phone Web Offline, or Tablet Web Offline. For more information about offline-first apps, see the [Offline-First Reference Guide](/refguide/offline-first/).
 
 {{% alert color="info" %}}
@@ -165,17 +171,3 @@ For more information on browser support for certain device features, see the thi
 {{% alert color="info" %}}
 In order to test the features requiring HTTPS protocol, use [ngrok](https://ngrok.com/) to enable features in your localhost.
 {{% /alert %}}
-
-## 7 Deciding Between a PWA or Native Mobile App
-
-Mendix offers options to build both native mobile apps and PWAs. Depending on your app's requirements or constraints, one or the other can be a better fit. It is also possible to have both native mobile and PWA profiles in a single app, which can run next to each other and overlap significantly.
-
-{{% alert color="info" %}}
-Important limitations:
-*  Push notifications are not supported for PWAs on iOS
-*  Offline data is not supported for PWAs on iOS
-{{% /alert %}}
-
-Use the following diagram to decide whether to build a PWA, a native mobile app, or both:
-
-{{< figure src="/attachments/refguide/mobile/progressive-web-app/native-or-pwa.png" alt="Native app or PWA"   width="350"  >}}

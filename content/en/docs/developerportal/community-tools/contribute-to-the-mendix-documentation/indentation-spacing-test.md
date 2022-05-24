@@ -252,9 +252,7 @@ Key Combination
     | Entity Name | How the [entity](/refguide/entities/) will be referred to in the database | 
     | Event Handler(s) | An indication that one or more [event handlers](/refguide/event-handlers/) have been set up for this entity | 
 
-{{% alert color="warning" %}}
-The current advice is to avoid using tables indented in numbered/bulleted lists, as the table does not get styling applied.
-{{% / alert %}}
+A table with list items:
 
 | Numbered list | Bullet point list |
 | --- | --- |

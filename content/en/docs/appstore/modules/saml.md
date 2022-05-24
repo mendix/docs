@@ -75,7 +75,7 @@ There are different versions of the module, depending on which version of Mendix
 1. Configure the **Startup** microflow to run as the startup microflow. This microflow will initialize the custom request handler `/SSO/` (please note the importance of using the final `/` for all instances of `/SSO/`), validate all IdP configurations, and prepare the configuration entities required during the configuration.
 2. Add the **OpenConfiguration** microflow to the navigation, and then allow the administrator to access this page.
 3.  Review and configure all the constants:
-	* **DefaultLoginPage** – You can specify a different login page here (for example, configuring the `index.html` page to redirect to `/SSO/`). This constant is only used when the login process fails. When the end-user cannot be authenticated in Mendix, they are presented with a page. If this constant is specified, a button will appear, and by clicking this button, you will be redirected to the default login page (for example, `index.html` or `login.html`).
+	* **DefaultLoginPage** – You can specify a different login page here for when the login process fails. When the end-user cannot be authenticated in the external Identity Provider, a button will appear, and by clicking this button, they will be redirected to the specified login page. If this is left blank, an unauthenticated user will be redirected to `/login.html`.
 	* **DefaultLogoutPage** – Removing the sign-out button is recommended, but if you choose to keep it, the end-user will be redirected to a page. You can choose where the end-user is redirected to (for example, back to `/SSO/` or your `login.html` page). Every user signed in via SAML is redirected to this location when they are logged out.
 	* **SSOLandingPage** – Set this if you redirect the `index.html` to log into your app automatically. See [Using SSOLandingPage](#ssolandingpage) for further information about this.
 4. Sign in to the application and configure the SAML module.
@@ -120,7 +120,7 @@ Resetting the key store or uploading another key store will require all the IdPs
 
 Click **Upload** to upload a key store file. Use the **Entity Id** as the the alias of the key store.
 
-You can create your own key store file, which you can use when configuring other SAML SPs by clicking **Download**.
+You can download the key store file and use it when configuring other SAML SPs by clicking **Download**.
 
 {{% alert color="info" %}}
 Remember to set the new key store password in the `KeystorePassword` constant of your app.
@@ -140,7 +140,7 @@ If you have multiple IdPs, please make sure each IdP has a unique **Entity descr
 
 When creating a new IdP configuration, you are guided through a workflow to help you configure everything required for the IdP configuration. Each option in the workflow is explained below, and can be changed by editing an existing IdP Configuration.
 
-Upon completing these steps, you only need to send the metadata file to the IdP and have them configure the authentication on their end. 
+Upon completing these steps, you only need to send the SP metadata file to the IdP and have them configure the authentication on their end. 
 
 #### 3.2.2 General
 
@@ -153,7 +153,7 @@ Upon completing these steps, you only need to send the metadata file to the IdP 
 	* **Metadata Overview** – This overview shows all the information that has been found in the IdP metadata information. It is usually not necessary to do anything here, but it can be useful in order to review the possible IdP and SP configuration options.
 
 {{% alert color="info" %}}
-If you want to automatically synchronize the IdP metadata, go to **\_USE ME** > **Scheduled Events** in the **App Explorer**, double-click **SE_SynchronizeIdPMetadata** and select **Yes** for **Enabled** to enable the automatic synchronization of the IdP metadata. 
+If you want to automatically synchronize the IdP metadata, make sure the **SE_SynchronizeIdPMetadata** [scheduled event](/refguide/scheduled-events/) is enabled. This is in the **\_USE ME** > **Scheduled Events** folder of the SAML module.
 {{% /alert %}}
 
 #### 3.2.4 User Provisioning 

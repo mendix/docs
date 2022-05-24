@@ -17,8 +17,8 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Mendix Operator v2.5.1
 
-* We addressed an regression where build and storage provisioner pods were restarting error
-  * When the build or storage provisioner pod failed with an error, it should not be restarted - to collect error logs and inspect other defailt
+* We addressed a regression where build and storage provisioner pods were restarting with an error
+  * When the build or storage provisioner pod failed with an error, it should not be restarted - to collect error logs and inspect other default
   * The regression caused such failed pods to be restarted (recreated) immediately
   * This regression only affects Mendix Operator v2.5.0
 * We addressed an issue with deleting Minio storage from [Minio RELEASE.2021-11-05T09-16-26Z](https://github.com/minio/minio/releases/tag/RELEASE.2021-11-05T09-16-26Z) and later versions

@@ -1,7 +1,7 @@
 ---
 title: "Part 1: Local Notifications"
 url: /refguide/mobile/using-mobile-capabilities/local-notifications/native-local-notifications/
-parent: /refguide/mobile/using-mobile-capabilities/local-notifications/_index/
+parent: /refguide/mobile/using-mobile-capabilities/local-notifications/
 weight: 10
 description: A tutorial for setting up local push notifications which do not use an internet connection.
 ---

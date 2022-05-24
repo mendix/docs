@@ -1,7 +1,7 @@
 ---
 title: "Part 4: Data"
 url: /refguide/mobile/using-mobile-capabilities/local-notifications/local-notif-data/
-parent: /refguide/mobile/using-mobile-capabilities/local-notifications/_index/
+parent: /refguide/mobile/using-mobile-capabilities/local-notifications/
 weight: 40
 description: A tutorial for integrating data into your push notifications.
 ---

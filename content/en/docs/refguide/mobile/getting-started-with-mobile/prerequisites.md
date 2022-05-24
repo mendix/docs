@@ -1,6 +1,6 @@
 ---
 title: "Prerequisites" 
-url: /refguide/mobile/getting-started-with-mobile/getting-the-make-it-native-app/
+url: /refguide/mobile/getting-started-with-mobile/prerequisites/
 parent: /refguide/mobile/getting-started-with-mobile/
 weight: 10
 description: Troubleshoot common issues associated with building and running native mobile apps.

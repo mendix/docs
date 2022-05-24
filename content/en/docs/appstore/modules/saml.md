@@ -26,7 +26,6 @@ The SAML SSO module supports the following [SAML 2.0](https://docs.oasis-open.or
 * Web browser SSO profile using one of the following bindings
     * HTTP redirect, 
     * HTTP POST bindings
-    * HTTP artifact
 * Single Logout profile
 
 The Mendix SAML SSO supports usage of SAML metadata in the following way:
@@ -52,8 +51,11 @@ Configurability:
 
 ### 1.3 Limitations
 
-* SAML1.0 is not supported.
-* The Mendix SAML SSO module does not support Enhanced Client/Proxy SSO profile.
+The Mendix SAML SSO module does not support the following:
+
+* SAML1.0
+* Enhanced Client/Proxy SSO profile
+* HTTP artifact binding
 
 ### 1.4 Dependencies
 

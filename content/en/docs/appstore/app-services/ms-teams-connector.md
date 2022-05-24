@@ -231,7 +231,7 @@ Prerequisite :
    2) Microsoft Account in Azure Active Directory 
 
 Limitation:
-    1) Supports cards designed using HTML and plain text
+    1) Supports only custom made cards designed using HTML and plain text.
 
 There are few configurations required to be performed which are explained in the following sections.
 
@@ -287,6 +287,8 @@ There are few configurations required to be performed which are explained in the
 #### 4.2.3 Configuring Microflows
 
  1. Download the deeplink module from markeplace.
+ {{% alert type="warning" %}}Make sure to grant your user role acccess to the deep link module roles.{{% /alert %}}
+ 
  2. Configure the **After startup** in settings -> Runtime to the **StartupMicroflow** provided in the MicrosoftTeamsConnector module.
       {{< figure src="/attachments/appstore/app-services/ms-teams-connector/configureStartupMicroflow.png" >}}
  3. Go to the App's Navigation settings. Configure the **Default home page** option to execute a microflow that will display your application's home page.
@@ -315,7 +317,7 @@ There are few configurations required to be performed which are explained in the
         
             {{% alert type="info" %}}Fore more information about HTML and markdown tags supported by Microsoft Teams, see [*Format Cards in Microsoft Teams*](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format).{{% /alert %}}
           
-        *  If you want to send a card designed using HTML nd text, select **Card**.
+        *  If you want to send a card designed using HTML and text, select **Card**.
         
             {{% alert type="info" %}}Fore more information on designing message cards , see [Building a Message Card using HTML](https://docs.microsoft.com/en-us/graph/api/chatmessage-post?view=graph-rest-beta&tabs=http#example-3-send-message-that-contains-cards).{{% /alert %}}
        
@@ -330,7 +332,7 @@ There are few configurations required to be performed which are explained in the
 
 {{% alert type="info" %}} The **Message** attribute of **SendMessageReponse** object will contain the respective response message. {{% /alert %}}
 
-Below microflow describes one of the approach to use the **SignIn Microflow** effectively. Introduce a decision activity after SendMessage activity that would check the SentMessage value. If false, then execute the **SignIn Microflow**.
+Below microflow describes one of the approach to use the **SignIn Microflow** effectively. Introduce a decision activity after SendMessage activity that would check the SentMessage attribute value. If false, then execute the **SignIn Microflow**.
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/usingSignInMicroflow.png" >}}
 

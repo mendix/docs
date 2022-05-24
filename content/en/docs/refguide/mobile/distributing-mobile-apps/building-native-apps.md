@@ -948,7 +948,7 @@ In a similar fashion, MXBuild and the Mendix Native Template follow these rules:
 * When using MXBuild, the JS code and static assets are bundled together
 * The bundled code and assets are put into the Mendix Native Template that provides a foundation for both an iOS and Android version of your app
 
-## 2 Prerequisites {#prerequisites}
+## 2 Prerequisites {#local-manual-prerecs}
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -1144,7 +1144,7 @@ By default when building your native mobile app binaries, Mendix uses [Visual St
 
 Follow the sections below through [Building Your Native App](#building-app-project) to complete your builds. To go beyond those instructions, see [Adding Dependencies](#adding-dependencies) and [Removing Dependencies](#removing-dependencies) sections below. These sections will allow you to further customize your local builds.
 
-## 2 Prerequisites {#prerequisites}
+## 2 Prerequisites {#local-prerecs}
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -1385,7 +1385,7 @@ After running `react-devtools` you will see the React developer tools GUI. To us
 
 When your Mendix app is crashing or the logging in Mendix Studio Pro is incomplete, you might want to dive into your operating system's log files for information. There are 2 options:
 
-1. You could start the app in [XCode or Android Studio](/howto/mobile/native-build-locally/#building-app-project), either of which will give you more information and allow you to set breakpoint and inspect variable values. This approach is a bit more cumbersome. 
+1. You could start the app in [XCode or Android Studio](#building-app-project), either of which will give you more information and allow you to set breakpoint and inspect variable values. This approach is a bit more cumbersome. 
 1. Get the log files directly from your device.
 
 The first approach is self-explanatory. For information on getting log files directly from your device, however, see below.
@@ -1489,7 +1489,7 @@ There are various ways install an app on a device. Installing using a USB is det
 
 ### 4.2 iOS
 
-By default your custom developer app will be unsigned. To get a signed *IPA*, follow the steps in the [Signing Your Build](/howto/mobile/deploying-native-app/#signing-a-build) section of *How to Deploy Your First Mendix Native Mobile App*. Your custom developer app branch is named **developer**.
+By default your custom developer app will be unsigned. To get a signed *IPA*, follow the steps in the [Signing Your Build](#signing-a-build) section of *How to Deploy Your First Mendix Native Mobile App*. Your custom developer app branch is named **developer**.
 
 The unsigned output of an iOS build is an *XCArchive* file. *XCArchive* files require manual signing before they are ready to be installed on a device.
 

@@ -95,13 +95,13 @@ In addition to adding new parameters, you can perform the following actions on p
 
 ### 2.5 Events {#events}
 
-**Events** section properties allow you to override app-wide events in the **App Settings** and to set a workflow-specific microflow that will be triggered on a state change of the current workflow and its user tasks. For more information on app-wide events, see the [Events](/refguide/project-settings/#events) section in *App Settings*.
+**Events** section properties allow you to override app-wide events in the **App Settings** and to set a workflow-specific microflow that will be triggered on a state change of the current workflow and its user tasks. For more information on app-wide events, see the [Events](/refguide/app-settings/#events) section in *App Settings*.
 
 #### 2.5.1 Workflow State Change 
 
 {{% alert color="info" %}}
 
-This setting overrides the app-wide setting in the **App Settings**. For more information see the [Workflow State Change](/refguide/project-settings/#workflow-state-change) section in *App Settings*.
+This setting overrides the app-wide setting in the **App Settings**. For more information see the [Workflow State Change](/refguide/app-settings/#workflow-state-change) section in *App Settings*.
 
 {{% /alert %}}
 
@@ -111,7 +111,7 @@ This setting overrides the app-wide setting in the **App Settings**. For more in
 
 {{% alert color="info" %}}
 
-This setting overrides the app-wide setting in the **App Settings**. For more information see the [User Task State Change](/refguide/project-settings/#user-task-state-change) section in *App Settings*.
+This setting overrides the app-wide setting in the **App Settings**. For more information see the [User Task State Change](/refguide/app-settings/#user-task-state-change) section in *App Settings*.
 
 {{% /alert %}}
 

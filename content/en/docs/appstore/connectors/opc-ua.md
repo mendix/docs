@@ -86,7 +86,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
     This setting is only used by the OPC UA Server. See the OPC UA Specification for more details.
 
-4.  If you use subscriptions, set up the **After startup** and **Before shutdown** microflows in your [App Settings](/refguide/project-settings/) as follows: set the **After startup** microflow to **ASu_ReintializeSubscriptions** in the USE_ME folder, and set the **Before shutdown** microflow to **BSd_GracefullyShutdownSubscriptions** in the USE_ME folder.
+4.  If you use subscriptions, set up the **After startup** and **Before shutdown** microflows in your [App Settings](/refguide/app-settings/) as follows: set the **After startup** microflow to **ASu_ReintializeSubscriptions** in the USE_ME folder, and set the **Before shutdown** microflow to **BSd_GracefullyShutdownSubscriptions** in the USE_ME folder.
 
     {{% alert color="info" %}}If you do not set up the **After startup** microflow, subscriptions will not reconnect after a reboot. If you do not set up the **Before shutdown** microflow, the Server will keep the old subscriptions potentially up to a few hours, and send duplicate messages for this period of time, which can cause exceptions in the Client.{{% /alert %}}
 

@@ -60,7 +60,7 @@ The log node name is a microflow expression that defines the source of the log m
 {{% alert color="info" %}}
 It is advised to use a [constant](/refguide/constants/) for the log node name. This prevents errors when entering the node name and makes it easier to change the log node name afterwards.
 
-You can only set custom [log node levels](/developerportal/deploy/environments-details/#log-levels) for the environment if your app has posted a message to that log node. It is therefore recommended that you send an initial message to all your custom log nodes in an [after startup microflow](/refguide/project-settings/#after-startup).
+You can only set custom [log node levels](/developerportal/deploy/environments-details/#log-levels) for the environment if your app has posted a message to that log node. It is therefore recommended that you send an initial message to all your custom log nodes in an [after startup microflow](/refguide/app-settings/#after-startup).
 {{% /alert %}}
 
 ### 3.3 Template

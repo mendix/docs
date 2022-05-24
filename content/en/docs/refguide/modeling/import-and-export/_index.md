@@ -187,7 +187,7 @@ To export an app, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/import-and-export/export-app-package.png" >}}
 
-    For more information on types of packages, see [Export App Package](/refguide/export-project-package-dialog/).
+    For more information on types of packages, see [Export App Package](/refguide/export-app-package-dialog/).
 
     The **Existing snapshot** option will only be available when a data snapshot was created earlier using the **Add snapshot of data** menu option from the **Team** menu. It is also possible to include a new snapshot based on the current state of the local database. This option is only available after the app has been started at least once.
 
@@ -225,4 +225,4 @@ Mendix module documents can be exported as a Mendix package (*.mpk*) file.
 ## 4 Read More
 
 * [Modules](/refguide/modules/)
-* [App](/refguide/project/)
+* [App](/refguide/app/)

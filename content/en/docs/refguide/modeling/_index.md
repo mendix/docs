@@ -24,7 +24,7 @@ For more introductory information, see [Studio Pro Overview](/refguide/studio-pr
 
 ## 2 Main Documents in This Category
 
-* [App Explorer](/refguide/project-explorer/) – presents information on structuring your app, including important details on [security](/refguide/security/)
+* [App Explorer](/refguide/app-explorer/) – presents information on structuring your app, including important details on [security](/refguide/security/)
 * [Domain Model](/refguide/domain-model/) – contains information on creating and maintaining the data model for your app
 * [Pages](/refguide/pages/) – gives information on creating and configuring pages, as well as various elements on them
 * [Application Logic](/refguide/application-logic/) – gives details on how to use and configure microflows, nanoflows, and workflows: elements that add logic to your app

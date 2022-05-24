@@ -17,7 +17,7 @@ With Mendix, you can create different channels (for example, responsive, native 
 
 ## 2 Native Mobile Apps {#nativemobile}
 
-With Mendix 9, it is possible to build fully native mobile apps. Native mobile apps they do not render inside a web view, but use native UI elements instead. This results in fast performance, smooth animations, natural interaction patterns (like swipe gestures), and improved access to all native device capabilities.  To make such responsive native mobile apps, Mendix leverages the popular open-source framework [React Native](https://facebook.github.io/react-native/).
+With Mendix 9, it is possible to build fully native mobile apps. Native mobile apps do not render inside a web view, but use native UI elements instead. This results in fast performance, smooth animations, natural interaction patterns (like swipe gestures), and improved access to all native device capabilities.  To make such responsive native mobile apps, Mendix leverages the popular open-source framework [React Native](https://facebook.github.io/react-native/).
 
 You can use pages, widgets, nanoflows, JavaScript actions, microflows, and many other familiar elements to build your app. For more information on how to to build a native mobile app, see [Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile/).
 

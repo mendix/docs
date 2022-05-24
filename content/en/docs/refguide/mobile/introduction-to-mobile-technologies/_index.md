@@ -15,9 +15,7 @@ These different technologies (for example, responsive, native phone) can be conf
 
 With Mendix 9, it is possible to build fully native mobile apps. Native mobile apps do not render inside a web view, but use native UI elements instead. This results in fast performance, smooth animations, natural interaction patterns (like swipe gestures), and improved access to all native device capabilities.  To make such responsive native mobile apps, Mendix leverages the popular open-source framework [React Native](https://facebook.github.io/react-native/).
 
-For more information on how to to build a native mobile app, see [Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile/).
-
-Native mobile apps' theming and styling is based on JavaScript. For more information on styling, see [Native Styling](/refguide/native-styling-refguide/). 
+For more information, see [Native Mobile](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/).
 
 ## 3 Progressive Web Apps {#pwa}
 
@@ -29,26 +27,28 @@ Progressive web apps have three main characteristics:
 * **Reliable —** Using service workers, PWAs can work offline or partially offline. Mendix PWAs can work partially offline (resources like styling, pages, and images are cached) or fully offline (like native mobile apps).
 * **Capable —** PWAs can leverage several device capabilities like the camera and location, and can offer support for web push notifications. Note that support for features depend on which browser is used.
 
+For more information, see [Progressive Web App](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/).
 
-## Native Mobile
+## 4 Hybrid Mobile
 
-Short summary
-[native-mobile]
+Hybrid mobile applications are web applications that run inside a native application. They can access device capabilities via JavaScript or by relying on the native application to provide the required functionality in native code.
 
-## Progress-Web-App
+{{% alert color="warning" %}}
+Hybrid mobile apps are deprecated as of Mendix 9. This means that hybrid mobile apps are still supported in Mendix 9 but their usage is discouraged. Accordingly, the creation of new hybrid navigation profiles is disabled.
+{{% /alert %}}
 
-Short summary
-[progressive-web-app]
+For more information, see [Hybrid Mobile (Deprecated)](/refguide/mobile/introduction-to-mobile-technologies/hybrid-mobile/).
 
-## Hybrid Mobile (Deprecated)
+## 5 Deciding Between a PWA or Native Mobile App
 
-Warning box: Hybrid is deprecated
+Mendix offers options to build both native mobile apps and PWAs. Depending on your app's requirements or constraints, one or the other can be a better fit. It is also possible to have both native mobile and PWA profiles in a single app, which can run next to each other and overlap significantly.
 
-Short summary
-[hybrid-mobile]
+{{% alert color="warning" %}}
+PWAs have the following limitations on iOS:
+*  Push notifications are not supported for PWAs on iOS
+*  Offline data is not supported for PWAs on iOS
+{{% /alert %}}
 
-## Help me Choose
+Use the following diagram to decide whether to build a PWA, a native mobile app, or both:
 
-Strengths of Native
-Strengths of PWA
-Diagram
+{{< figure src="/attachments/refguide/mobile/progressive-web-app/native-or-pwa.png" alt="Native app or PWA"   width="350"  >}}

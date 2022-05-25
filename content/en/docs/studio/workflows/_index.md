@@ -159,7 +159,7 @@ Now this microflow triggers the selected workflow:
 
 You can use a workflow-specific **Approval app** template to configure an approval request form for end-users. Based on this form the app is be created that contains preconfigured elements, such as dashboards, admin pages, dashboards, and a workflow that you can afterwards customize even more.
 
-When [creating an app in the Developer Portal]([new.mendix.com](http://new.mendix.com/)), choose the **Approval app** in the **Starting Point** section to use the app template. 
+When [creating an app in the Developer Portal](http://new.mendix.com/), choose the **Approval app** in the **Starting Point** section to use the app template. 
 
 ## 4 Workflow Context Parameter
 

@@ -15,7 +15,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ### May 25th, 2022
 
-#### Mendix Operator v2.5.1
+#### Mendix Operator v2.5.1{#2.5.1}
 
 * We addressed a regression in Mendix Operator v2.5.0 where an error would show a spinner icon in the Developer Portal (instead of an error icon)
 * We addressed an issue with deleting Minio storage from [Minio RELEASE.2021-11-05T09-16-26Z](https://github.com/minio/minio/releases/tag/RELEASE.2021-11-05T09-16-26Z) and later versions

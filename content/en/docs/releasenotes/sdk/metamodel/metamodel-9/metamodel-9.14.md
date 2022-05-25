@@ -12,57 +12,56 @@ weight: 86
 
 #### AssociationBase (Element)
 
-* We introduced the `navigability` property. Info: "Indicates in which direction(s) the association can be navigated"
+* We introduced the `navigability` property for indicating in which direction(s) the association can be navigated.
 
 ### Microflows
 
 #### GenerateJumpToOptionsAction (Element)
 
-* We introduced this element. 
+* We introduced this element.
 
 ### Rest
 
 #### PublishedODataService (ModelUnit)
 
-* We deleted the `serviceFeed` property. Info: "Moved to contract.metadata.serviceFeed.xml"
-* We deleted the `serviceFeedJson` property. Info: "Moved to contract.metadata.serviceFeed.json"
-* We deleted the `metadata` property. Info: "Moved to contract.metadata"
-* We introduced the `contract` property. Info: "The generated contract for this service"
+* We introduced the `contract` property, which is for the generated contract for this service.
+* We deleted the `serviceFeed` property, which has been moved to `contract.metadata.serviceFeed.xml`.
+* We deleted the `serviceFeedJson` property, which has been moved to `contract.metadata.serviceFeed.json`.
+* We deleted the `metadata` property, which has been moved to `contract.metadata`.
 
 #### PublishedRestResource (Element)
 
-* We introduced the `readMode` property. Info: "The ChangeMode that defines the read functionality"
-* We deleted the `queryMicroflow` property. Info: "Replaced by readMode"
-* We deleted the `countMicroflow` property. Info: "Replaced by readMode"
+* We introduced the `readMode` property for the `ChangeMode` that defines the read functionality.
+* We deleted the `queryMicroflow` and `countMicroflow` properties, which have been replaced by `readMode.`
 
 #### ReadMode (Element)
 
-* We introduced this element. Info: "Details about read functionality"
+* We introduced this element for details about read functionality.
 
 #### ReadSource (Element)
 
-* We introduced this element. Info: "Default read functionality that changes the source"
+* We introduced this element fpr the default read functionality that changes the source.
 
 #### CallMicroflowToRead (Element)
 
-* We introduced this element. Info: "Call a microflow that implements the read functionality"
+* We introduced this element for calling a microflow that implements the read functionality.
 
 #### ODataRemoteAssociationSource (Element)
 
-* We deleted the `navigability` property. Info: "Replaced by navigability2"
-* We introduced the `navigability2` property. Info: "In which direction(s) can this association be traversed?"
+* We introduced the `navigability2` property for describing the direction(s) in which the association can be traversed.
+* We deleted the `navigability` property, which has been replaced by `navigability2`.
 
 #### PublishedODataContract (Element)
 
-* We introduced this element. Info: "The contract of a published OData service"
+* We introduced this element for the contract of a published OData service.
 
 #### ServiceFeed (Element)
 
-* We introduced this element. Info: "The service feed of a published OData service"
+* We introduced this element for the service feed of a published OData service.
 
 ### Pages
 
 #### TextArea (Element)
 
-* We introduced the `submitBehaviour` property. 
-* We introduced the `submitOnInputDelay` property. 
+* We introduced the `submitBehaviour` property.
+* We introduced the `submitOnInputDelay` property.

@@ -17,6 +17,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### May 25th, 2022
+
+#### Fix – AppDynamics
+
+* We changed the naming format for AppDynamics metrics when adding the instance to the node name to use a hyphen instead of an underscore. So `node_1` becomes `node-1`. This is in line with AppDynamics naming conventions.
+
 ### May 6th, 2022
 
 * We have updated AppDynamics monitoring to provide default values where possible.

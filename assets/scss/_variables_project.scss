@@ -69,7 +69,7 @@ $link-hover-decoration: none !default;
 // Fonts
 
 $google_font_name: "Noto Sans" !default; // NK - changed to Mendix font
-$google_font_family: "Noto+Sans" !default; // NK - changed to Mendix font
+$google_font_family: "Noto+Sans@300,400,500,700" !default; // NK - changed to Mendix font
 $web-font-path: "https://fonts.googleapis.com/css2?family=#{$google_font_family}&display=swap"; // NK - changed to Mendix font
 $font-family: "Noto Sans"; // NK - changed to Mendix font
 $td-fonts-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

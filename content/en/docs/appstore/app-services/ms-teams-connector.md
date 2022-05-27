@@ -300,7 +300,7 @@ To get this link for your channel, do as follows:
 
 A pop-up window opens and shows containing the channel link.
 
-{{< figure src="/attachments/appstore/app-services/ms-teams-connector/linkPopup.png" >}}
+{{< figure src="/attachments/appstore/app-services/ms-teams-connector/channel-link.png" >}}
 
 #### 4.3.5 Configuring the Send Message and SignInMicroflow Activities
 

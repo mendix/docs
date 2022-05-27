@@ -121,7 +121,7 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 
 - **SE_SendAuditSnapshots**: This sends the cached data to the external data storage. This occurs each minute.
 
-- **SE_CleanupSnapshotCache**: This cleans up the cached data based on the retention settings – **OnlyDeleteProcessedItems** and **LogRetentionDays**.This occurs daily at 3:00 AM UTC
+- **SE_CleanupSnapshotCache**: This cleans up the cached data based on the retention settings – **OnlyDeleteProcessedItems** and **LogRetentionDays**.This occurs daily at 3:00 AM UTC.
 
 - **SE_PeriodicVacuum**: This runs a periodic vacuum on a PostgreSQL database. This is not needed on Microsoft SQL. Other database types are not supported. This occurs every 2 hours.
 

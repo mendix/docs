@@ -2,7 +2,7 @@
 title: "Distributing Native Apps"
 url: /refguide/mobile/distributing-mobile-apps/distributing-native-apps/
 parent: /refguide/mobile/distributing-mobile-apps/
-weight: 30
+weight: 50
 description: "This guide will help you distribute a mobile app to a mobile app store."
 tags: ["distribution", "app store", "ios", "android"]
 aliases:
@@ -14,10 +14,6 @@ aliases:
 To create a mobile app, you need platform-specific app signing keys. A mobile app is signed with a digital signature by its developers before publication. These signatures are used by both app stores and devices to verify that the app is authentic.
 
 Depending on which platforms you want to target, you will need to create the required signing keys. The following sections describe (per platform) how to create those keys.
-
-{{% alert color="warning" %}} Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible.
-
-The parts of this document mentioning PhoneGap Build will be updated with instructions soon. {{% /alert %}}
 
 ## 2 iOS{#ios}
 
@@ -63,7 +59,7 @@ Once you have the certificate file, you need to obtain a distribution profile. T
 
 ## 3 Android{#android}
 
-Android apps can be developed and deployed to Android devices without signing the apps. However, to publish to app stores, signed apps are required. This requires you generate a keystore and then upload it to Adobe PhoneGap Build.
+Android apps can be developed and deployed to Android devices without signing the apps. However, to publish to app stores, signed apps are required.
 
 ### 3.1 Generating a Keystore {#generating-a-keystore}
 

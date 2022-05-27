@@ -107,19 +107,23 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
         {{% alert color="info" %}}Manually-encrypted (e.g. using the [Encryption](/appstore/modules/encryption/) module) Strings are not the type of Hashed String and will not be affected by this setting.{{% /alert %}}
   
 * Integration
-    *  Environment Name: the name of the environment, which should be unique in your audit data storage, for example, *myApp-prod*
+    *  Environment Name: This is the name of the environment within Kibana, which should be unique in your audit data storage, for example, *myApp-prod*. Do not use any whitespace for environment.
 
         {{% alert color="info" %}}If two applications use the same name, the audit trail will not be able to distinguish between the two, effectively breaking the audit trail for both applications irreversibly.{{% /alert %}}
         
-    *  Environment URL (optional): the URL used to identify the environment; If left empty, the Application Runtime URL is used instead. 
-    *  Kafka Endpoint / Username and Password: the credentials for the kafka environment for sending the data into the long term storage
+    * Environment URL (optional): This is the URL used to identify the environment; If left empty, the Application Runtime URL is used instead. 
+    
+    * Kafka Endpoint / Username and Password: the credentials for the kafka environment for sending the data into the long term storage
+    
     *  Kibana Endpoint / Username and Password: the credentials for the Kibana environment for receiving the data from the long term storage
        
 ### 3.3 Scheduled Events {#scheduled-events}
 
-- **SE_SendAuditSnapshots**: sends the cached data to the external data storage
-- **SE_CleanupSnapshotCache**: cleans up the cached data based on the retention settings – **OnlyDeleteProcessedItems** and **LogRetentionDays**
-- **SE_PeriodicVacuum**: runs a periodic VACUUM on PostgreSQL databases when these is no user logged in
+- **SE_SendAuditSnapshots**: This sends the cached data to the external data storage. This occurs each minute.
+
+- **SE_CleanupSnapshotCache**: This cleans up the cached data based on the retention settings – **OnlyDeleteProcessedItems** and **LogRetentionDays**.This occurs daily at 3:00 AM UTC
+
+- **SE_PeriodicVacuum**: This runs a periodic vacuum on a PostgreSQL database. This is not needed on Microsoft SQL. Other database types are not supported. This occurs every 2 hours.
 
   {{% alert color="info" %}}Enable the scheduled event **SE_PeriodicVacuum** in the cloud portal for PostgreSQL databases. PostgreSQL databases require a regular VACUUM when the application creates and deletes a lot of objects in order to stay quick and not to grow out of disk space. The default Mendix Cloud settings will not always perform the VACUUM when needed. The scheduled event **SE_PeriodicVacuum** performs the VACUUM regularly. This scheduled event is for PostgreSQL only. For more info, see PostgreSQL documentation on [VACUUM]( https://www.postgresql.org/docs/9.6/sql-vacuum.html ) and [ANALYZE](https://www.postgresql.org/docs/9.6/sql-analyze.html).{{% /alert %}}
 

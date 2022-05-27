@@ -107,11 +107,11 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
         {{% alert color="info" %}}Manually-encrypted (e.g. using the [Encryption](/appstore/modules/encryption/) module) Strings are not the type of Hashed String and will not be affected by this setting.{{% /alert %}}
   
 * Integration
-    *  Environment Name: This is the name of the environment within Kibana, which should be unique in your audit data storage, for example, *myApp-prod*. Do not use any whitespace for environment.
+    *  Environment Name: This is the name of the environment within Kibana, which should be unique in your audit data storage, for example, *myApp-prod*. Do not use any whitespace for the environment name.
 
         {{% alert color="info" %}}If two applications use the same name, the audit trail will not be able to distinguish between the two, effectively breaking the audit trail for both applications irreversibly.{{% /alert %}}
         
-    * Environment URL (optional): This is the URL used to identify the environment; If left empty, the Application Runtime URL is used instead. 
+    * Environment URL (optional): This is the URL used to identify the environment. If left empty, the Application Runtime URL is used instead. 
     
     * Kafka Endpoint / Username and Password: the credentials for the kafka environment for sending the data into the long term storage
     

@@ -117,7 +117,7 @@ If it did not change to your app ID because of an unexpected error, you can upda
 ### 4.2 Page Does Not Scroll in the Screenshot Image
 
 The Feedback widget uses the HTML2Canvas library which attempts to make an image of a web page based on the content currently loaded on the page. Since HTML2Canvas tries to repaint the current content, it can make mistakes while doing so. There are two solutions for the issue:
- 
+
 * Turn off **Screenshot foreign rendering**
 * Change the **CSS selector** for a scrollable container - Some variations are difficult to spot for HTML2Canvas. This sometimes causes the image to render incorrectly. Fixing this requires significant CSS, HTML, and JS knowledge, but it is possible to fill in a CSS selector that will determine where the scrolling is happening.
 
@@ -129,10 +129,10 @@ If you cannot see your feedback items on the Developer Portal's **Feedback** pag
 
 In MendixSSO 3, the Microflow **DS_GetCurrentIdToken** is deprecated. You will need to create a new microflow in your own module to retrieve the **DecryptedToken**. Place **SUB_GetDecryptedTokenByTypeForCurrentSessionn** in this new microflow, and then use it in MendixSSO Authentication:
 
-{{< figure src="/attachments/appstore/widgets/mendix-feedback/MF_GetCurrentIdToken.png" >}}
-{{< figure src="/attachments/appstore/widgets/mendix-feedback/MF_example.png" >}}
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/get-current-token.png" >}}
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/example.png" >}}
 
 
 The tokenType argument is **MendixSSO.TokenType.ID_TOKEN**:
 
-{{< figure src="/attachments/appstore/widgets/mendix-feedback/token_type.png" >}}
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/token-type.png" >}}

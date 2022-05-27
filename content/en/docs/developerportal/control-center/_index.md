@@ -39,7 +39,13 @@ These are some examples of what you can find on the dashboard:
 
 ## 3 Apps {#apps}
 
-On the **Active Apps** tab of this page, you can see a list of the active apps that belong to your company. The **Deactivated Apps** tab lists your company's deactivated apps. The following details apply to deactivated apps:
+On the **Active Apps** tab of this page, you can see a list of the active apps that belong to your company. For each app, you can see the Mendix Public Cloud Environment, either free or licensed appended to the app. For an app that has a free Mendix Public Cloud, you can do the following actions:
+
+- **Delete App**: The entire application, repository, free Mendix Public Cloud environment, and associated project information will be deleted and no longer accessible.
+- **Deactivate App**: The application will be deactivated and no longer accessible in the free Mendix Public Cloud environment. Data will likewise will be deleted. To re-activate the app, please go to the Apps section in Control Center. The associated project and app repository can be accessed via the Developer Portal.
+- **Delete Environment**: Only the free Mendix Public Cloud environment can be deleted, and all data will be removed. Creators will still be able to access the associated project and app repository in the Developer Portal.
+
+The **Deactivated Apps** tab lists your company's deactivated apps. The following details apply to deactivated apps:
 
 * A deactivated app still exists in the company, but it is invisible to regular users
 * You can only deactivate Free Apps that are not attached to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) nodes

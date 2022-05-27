@@ -165,7 +165,7 @@ To configure the dynamic column data, follow these steps:
     {{< figure src="/attachments/howto/integration/using-the-excel-exporter/18581905.png" >}}
 
 2. The **Column number** will be set automatically, but can be overwritten to the desired ordinal number.
-3.  Define a **Name** for the column and specify if that **Name** should be the **Column Header** as well when exported.
+3. Define a **Name** for the column.
 
     {{% alert color="info" %}}If you use an uploaded Excel file as a template, the column name defined in your Excel template file will be used, and the **Name** you enter here will not be used. For more information, see [Using an Uploaded Excel File as a Template](#upload-excel-file-template).
     {{% /alert %}}

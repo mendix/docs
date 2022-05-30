@@ -46,6 +46,10 @@ You can configure the widget for certain actions in your app. All the configurat
 * **Authentication** tab
     {{% alert color="info" %}}For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the Mendix SSO module to the Mendix Feedback widget version 8.2.1 or above. Choose only one of the authentication methods: either **MendixSSO** or **Custom Authentication**.
     {{% /alert %}}
+    
+    {{% alert color="info" %}}The current pluggable widget doens't support a drop-down menu for selecting microflow or entity's attributes; thus, the value of authentication items need to be entered manually.  
+    {{% /alert %}}
+    
     *  **MendixSSO** – if Mendix SSO is applied and the following settings are configured correctly, the end-user can leave feedback without having to enter their name and email address
         * **ID token microflow** – recommended that you select the **DS_GetCurrentIdToken** microflow from the Mendix SSO module. 
         {{% alert color="info" %}}If you are using MendixSSO 3, please follow the [Create a New Microflow to Retrieve DecryptedToken](#create-a-new-microflow-to-retrieve-decryptedtoken) section below.{{% /alert %}}
@@ -64,6 +68,7 @@ You can configure the widget for certain actions in your app. All the configurat
         See the screenshot below for an example:
         
         {{< figure src="/attachments/appstore/widgets/mendix-feedback/custom-authentication.png" >}}
+        
 
 ## 3 Usage
 

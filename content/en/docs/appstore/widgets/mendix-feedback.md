@@ -42,13 +42,9 @@ You can configure the widget for certain actions in your app. All the configurat
     * **Feedback server location** – the URL of the Developer Portal server (usually `https://feedback-api.mendix.com`), which you should only change when you are using a different environment
     * **Screenshot Foreign Rendering**
         * **No** (default)
-        * **Yes** –  only used when the page includes sensitive information
+        * **Yes** – only used when the page includes sensitive information
 * **Authentication** tab
-    {{% alert color="info" %}}For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the Mendix SSO module to the Mendix Feedback widget version 8.2.1 or above. Choose only one of the authentication methods: either **MendixSSO** or **Custom Authentication**.
-    {{% /alert %}}
-    
-    {{% alert color="info" %}}The current pluggable widget doens't support a drop-down menu for selecting microflow or entity's attributes; thus, the value of authentication items need to be entered manually.  
-    {{% /alert %}}
+    {{% alert color="info" %}}For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the Mendix SSO module to the Mendix Feedback widget version 8.2.1 or above. Choose only one of the authentication methods: either **MendixSSO** or **Custom Authentication**.</br></br>You need to enter the value of authentication items manually as currently the widget does not support a drop-down menu for selecting microflow or the attributes of an entity.{{% /alert %}}
     
     *  **MendixSSO** – if Mendix SSO is applied and the following settings are configured correctly, the end-user can leave feedback without having to enter their name and email address
         * **ID token microflow** – recommended that you select the **DS_GetCurrentIdToken** microflow from the Mendix SSO module. 

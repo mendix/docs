@@ -50,7 +50,8 @@ Advanced Audit Trail contains an [add-on module](refguide/consume-add-on-modules
 
 ### 1.5 Dependencies
 
-To use Advanced Audit Trail, you need to install [Atlas Core](https://marketplace.mendix.com/link/component/117187) and [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) in your application.
+* You need to install [Atlas Core](https://marketplace.mendix.com/link/component/117187) and [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) in your application
+* You need to install [Advanced Audit Trail UI](https://marketplace.mendix.com/link/component/120204) in your application
 
 ## 2 Installation
 

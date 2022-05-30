@@ -96,7 +96,7 @@ If you app does not have an after-startup microflow set,  follow these steps:
 
 1. Create a **Startup** microflow and add the **Viewer3D/USE_ME/VisServerAction** Java action to it.
 2. Set the return type of the microflow to **Boolean** with a **Value** of **true**.
-3.  Set this microflow as the **After startup** step via **Project Settings** > **Runtime** > [After startup](/refguide/project-settings/#after-startup).
+3.  Set this microflow as the **After startup** step via **Project Settings** > **Runtime** > [After startup](/refguide/app-settings/#after-startup).
 
 If your project already has a microflow set to execute after startup, you need to extend it with the **Viewer3D/USE_ME/VisServerAction** Java action and configure it as described in the above steps. 
 

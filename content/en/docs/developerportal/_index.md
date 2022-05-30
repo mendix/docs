@@ -5,6 +5,7 @@ description: "Describes the sections of the Mendix Developer Portal and links to
 tags: ["mendix", "developer portal", "platform services", "buzz", "apps", "community", "marketplace", "academy", "forum", "docs", "documentation"]
 weight: 30
 no_list: false
+description_list: true
 cascade:
     - space: "Developer Portal Guide"
     - mendix_version: ""

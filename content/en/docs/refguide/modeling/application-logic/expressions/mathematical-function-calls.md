@@ -95,7 +95,7 @@ The input parameters are described in the table below:
 
 ### 4.2 Output
 
-In the [App Settings](/refguide/project-settings/), your option for **Round numbers** can be set which determines how half numbers (0.5) are treated:
+In the [App Settings](/refguide/app-settings/), your option for **Round numbers** can be set which determines how half numbers (0.5) are treated:
 *   For the **Half away from zero** option (also called "commercial rounding"), +2.5 becomes +3 and -1.5 becomes -2
 *   The **Half to the nearest even number** option (also called "bankers' rounding") is the default rounding mode used in [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point "IEEE floating point") computing functions and operators; for example, +23.5 becomes +24, as does +24.5; and -22.5 becomes -22, as does -21.5
 

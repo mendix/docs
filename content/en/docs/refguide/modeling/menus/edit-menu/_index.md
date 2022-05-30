@@ -40,5 +40,5 @@ The **Edit** menu items are described in the table below:
 
 * [Changes Pane](/refguide/changes-pane/)
 * [Errors Pane](/refguide/errors-pane/)
-* [App Explorer](/refguide/project-explorer/)
+* [App Explorer](/refguide/app-explorer/)
 * [Studio Pro Overview](/refguide/studio-pro-overview/)

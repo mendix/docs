@@ -97,5 +97,5 @@ To send a push notification to all users, use the **SendMessageToUsers** Java ac
 
 ## 5 Troubleshooting Notification Issues
 
-If you run into issues, see the [Troubleshoot Notification Issues](/howto/mobile/notif-send-test/#troubleshoot) section of *Send Your First Test Push Notification*.
+If you run into issues, see the [Troubleshoot Notification Issues](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-send-test/#troubleshoot) section of *Send Your First Test Push Notification*.
 

@@ -52,10 +52,6 @@ Advanced Audit Trail contains an [add-on module](refguide/consume-add-on-modules
 
 To use Advanced Audit Trail, you need to install [Atlas Core](https://marketplace.mendix.com/link/component/117187) and [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) in your application.
 
-### 1.6 Solution Package
-
-For a working copy, see [Advanced Audit Trail solution package](https://marketplace.mendix.com/link/component/120236).
-
 ## 2 Installation
 
 ### 2.1 Starting a Subscription {#obtain-license-key}
@@ -155,8 +151,6 @@ Use the formatter microflows to change how externally stored values will be disp
 | GetAttributes_ConvertDate | Date formatter |Date formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the date follows the US format (month/day/year).|
 | GetAttributes_ConvertDecimal | Decimal formatter |Decimal formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the decimal formatting follows the US format (period — ".") to separate an integer from its partial fractional part|
 | GetAttributes_ConvertMxIdentifier | Mendix object identifier formatter |Mendix object formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, what is displayed in a reference is `[ModuleName].[EntityName] (ObjectGUID)`. One may prefer to display (a combination of) an attribute of the said object as a reference.|
-
-For an example implementation of each display formatter, see the **ExampleImplementation** module in the [Advanced Audit Trail solution package](https://marketplace.mendix.com/link/component/120236).
 
 ### 3.9 Getting Microflow Stack Trace (Optional)
 

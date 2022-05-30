@@ -104,7 +104,13 @@ For details on how to see all the [Feedback](/developerportal/collaborate/feedba
 
 ### 3.3 Upgrading the Widget 
 
-If you are trying to upgrade your Mendix Feedback widget, Studio Pro will not recognize the current configuration of this widget. Add the Mendix Feedback widget into your page again and configure it accordingly. Then remove the old feedback widget (*SprintrFeedbackWidget.mpk*) from your widget folder.
+If you are trying to upgrade your Mendix Feedback widget, simply download and replace the existing widget with the new one from [Marektplace](https://marketplace.mendix.com/link/component/199/). After that, press F4 to **synchronize app directory**. You will then encounter the following error: 
+
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/install-error.png" >}}
+
+Don't worry! Click right key on the mouse and choose **Update widget** or **Update all widgets**. You will see the name of the widget has been changed to **Feedback**. The widget is ready!
+
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/new-name.png" >}}
 
 ## 4 Troubleshooting
 

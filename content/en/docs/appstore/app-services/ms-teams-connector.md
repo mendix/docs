@@ -23,7 +23,7 @@ This app service is an [add-on module](/refguide/consume-add-on-modules-and-solu
 
 * Send HTML, markdown, or plain text messages
 * Send Microsoft Teams actionable message cards
-* Send message using microsoft credentials
+* Send message using Microsoft credentials
 
 ### 1.3 Limitation
 
@@ -153,7 +153,7 @@ Before you deploy an app, you should configure the binding keys in your app as f
 
 ### 4.2 Sending Message to a Teams Channel
 
-#### 4.2.1 Configuring the end Message to Webhook Activity
+#### 4.2.1 Configuring the Send Message to Webhook Activity
 
 You can use the **Send Message to Webhook** activity in a microflow to send messages to a Teams channel:
 
@@ -193,9 +193,9 @@ After the **Send Message to Webhook** activity is configured, once the microflow
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/send-message-response-entity.png" >}}
 
+* The **Message** attribute contains the respective response message.
 * If the message is successfully sent, the value of the **SentMessage** attribute is `true`.
 * If the message could not be sent, the value of the **SentMessage** attribute is `false`.
-* The **Message** attribute contains the respective response message.
 
 #### 4.2.2 Building a Message Card {#build-message-card}
 
@@ -225,19 +225,22 @@ Microsoft Teams supports [actionable message cards](https://docs.microsoft.com/e
        
 ### 4.3 Sending Message Using Microsoft Credentials
 
-Alongside **Send Message to Webhook**, you can also find another activity with name **Send Message** in the microflow toolbox. You can use this activity to send messages with Microflow credentials.
+Alongside the **Send Message to Webhook** activity, you can also find the **Send Message** activity in the microflow toolbox. You can use the Send Message** activity to send messages with Microflow credentials.
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/activities-in-toolbox.png" >}}
 
 #### 4.3.1 Registering Your Application on the Microsoft Azure Portal{#register-application-on-azure-portal}
 
 1. Log in to the  [MicrosoftAzurel](https://portal.azure.com/#home) portal with your company account.
+
 2. If your account gives you access to more than one tenant, select your account on the upper-right corner, and set your portal session to the Azure AD tenant of your company.
 
     {{% alert type="info" %}}If your access is denied, contact your IT team.{{% /alert %}}
 
 3. On the left-hand navigation pane, select **Azure Active Directory**, and then select **App registrations**. The **App registrations** page opens.
+
 4. Click **New registration**.
+
 5. When the **Register an application** page opens, do as follows:
 
     1. For **Name**, enter a meaningful application name for the app.
@@ -248,16 +251,21 @@ Alongside **Send Message to Webhook**, you can also find another activity with n
 
         {{< figure src="/attachments/appstore/app-services/ms-teams-connector/register-an-application.png" >}}
 
-     Azure AD assigns a unique application (client) ID to your app. An overview page for your application opens.
+        Azure AD assigns a unique application (client) ID to your app. An overview page for your application opens.
 
-     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/app-overview.png" >}}
+        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/app-overview.png" >}}
 
-6. Make a note of the **Application (client) ID** and the **Directory (tenant) ID** on this page.
-7. Under the **Manage** section, Click **Certificates and secrets** . 
+6. Make a note of the **Application (client) ID** and the **Directory (tenant) ID** on the overview page.
+
+7. On the left-side menu, click **Certificates and secrets** under the **Manage** section.
+
 8. To configure a new client secret, click **New client secret**.
-9. Make a note of the client secret that you created before you leave the page. Once you leave the page, you cannot view the client secret anymore. You will need this value for configuration later.
 
-{{% alert type="info" %}}For more information bout registering an application in Azure portal, see [Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/graph/auth-register-app-v2)).{{% /alert %}}
+9. Make a note of the client secret that you created before you leave the page. 
+
+    {{% alert type="warning" %}}Once you leave the page, you cannot view the client secret anymore. You will need this value for configuration later.{{% /alert %}}
+
+    {{% alert type="info" %}}For more information bout registering an application in Azure portal, see [Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/graph/auth-register-app-v2)).{{% /alert %}}
 
 #### 4.3.2 Configuring Constants
 
@@ -265,20 +273,20 @@ Alongside **Send Message to Webhook**, you can also find another activity with n
 
     {{% alert type="info" %}}You only need to configure LicenseSecret and LicenseKey once. Once they are configured, you can use both the **Send Message** and Send **MessagetoWebhook** activities.{{% /alert %}}
 
-2. Navigate to **Azure App** folder inside the **Configurations** folder.
-3. Configure the values of constants **AzureClientId**, **AzureClientSecret**, **AzureTenantId** and **RedirectURI** with the values used and generated when you [register the application on the Microsoft Azure portal](#register-application-on-azure-portal).
+2. Go to **Azure App** folder inside the **Configurations** folder.
+3. Configure the values of constants **AzureClientId**, **AzureClientSecret**, **AzureTenantId** and **RedirectURI** with the values that were used and generated when you [register the application on the Microsoft Azure portal](#register-application-on-azure-portal).
 4. Make sure that the constant **DeepLinkName** contains the text after the last slash in the **RedirectURI** value. For example, if your **RedirectURI** is  `https://contosoapp1/link/auth`, then the **DeepLinkName** should be `auth`.
 
 #### 4.3.3 Configuring the Microflows
 
 1. Go to the Marketplace and log in with your Mendix account.
-2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to install the [Deep link](https://marketplace.mendix.com/link/component/43) module to your app.
+2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to install the [Deep Link](https://marketplace.mendix.com/link/component/43) module to your app.
 
-3. Give your user role access to the deep link module roles.
+3. Give your user role access to the Deep Link module roles.
 
 4. In the **App Explorer**, click **Settings** to open the **App Settings** dialog box.
 
-5.  Go to the **Runtime** tab, and set **After startup** to the **StartupMicroflow** provided in the **MicrosoftTeamsConnector** module.
+5.  Go to the **Runtime** tab, and set **After startup** to the **StartupMicroflow** from the **MicrosoftTeamsConnector** module.
 
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/after-startup.png" >}}
 
@@ -288,9 +296,7 @@ Alongside **Send Message to Webhook**, you can also find another activity with n
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/configure-home-page-microflow.png" >}}
 
 #### 4.3.4 Obtaining the Channel Link on Microsoft Teams{#obtain-channel-link}
-One of the input items required for the **Send Message** activity is the channel link. 
-
-To get this link for your channel, do as follows:
+One of the input items required for the **Send Message** activity is the channel link. To get this link for your channel, do as follows:
 
 1. Open Microsoft Teams.
 2. Right click **...** on the channel name.
@@ -313,7 +319,7 @@ A pop-up window opens and shows containing the channel link.
    {{% alert type="warning" %}}All parameters are mandatory. Setting any value to be empty or **none** will cause an error.{{% /alert %}}
 
    1. Set the **channelLink** parameter with the [channel link that you obtained](#obtain-channel-link) from Microsoft Teams.
-   2.  For **Message type**, select **Text** or **Card** using the **Message_Types** enumeration provided in the module.
+   2.  For **Message type**, select **Text** or **Card** using the Enumeration **Message_Types** from the **MicrosoftTeamsConnector** module.
 
        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/message-type.png" >}}  
 
@@ -330,17 +336,17 @@ A pop-up window opens and shows containing the channel link.
 
        {{% alert type="warning" %}}All parameters are mandatory. Setting any value to be empty or **none** will cause an error.{{% /alert %}}
 
-After the **Send Message** activity is configured, once it is triggered, it checks whether the user is logged in. If the user is already logged in, the activity returns a **SendMessageReponse** object. The **SendMessageReponse** entity for this object comes with the module and is pre-defined:
+After the **Send Message** activity is configured, once triggered, the activity checks whether the user is logged in. If the user is already logged in, the activity returns a **SendMessageReponse** object. The **SendMessageReponse** entity for this object comes with the module and is pre-defined:
+
+* The **Message** attribute contains the respective response message.
 
 * If the message is successfully sent, the value of the **SendMessageReponse** attribute is `true`.
 
-* If the message could not be sent, the value of the **SendMessageReponse** attribute is `false`.  Then you should execute the **SignIn Microflow** to log in using your credentials. The microflow below shows one of the approaches to use the **SignIn Microflow** effectively. Introduce a decision activity after **SendMessage** activity that would check the **SentMessage** attribute value. If the value is false, then execute the **SignIn Microflow** activity.
+* If the message could not be sent, the value of the **SendMessageReponse** attribute is `false`.  Then you should execute the **SignIn Microflow** to log in using your Microsoft credentials. The microflow below shows one of the approaches to use the **SignIn Microflow** effectively. Introduce a decision activity after **SendMessage** activity that checks the **SentMessage** attribute value. If the value is false, then execute the **SignIn Microflow** activity.
 
   {{< figure src="/attachments/appstore/app-services/ms-teams-connector/sign-in-microflow.png" >}}
 
   {{% alert type="info" %}}Once you are logged in by using the **SignInMicroflow** activity, you need to call this microflow again to send the message.{{% /alert %}}
-
-* The **Message** attribute contains the respective response message.
 
 ## 5 Checking Statistics Using the Usage Dashboard {#statistics}
 

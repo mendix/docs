@@ -152,7 +152,7 @@ To train a document model, do as follows:
 
 5. Wait until the **Import File** page opens.
 
-6.  Drag sample images in JPG or JPEG format into the box where it says **Drag image files here**. You can also click **Browse** and select the files.
+6.  Drag sample images in JPG, JPEG, BMP or PNG format into the box where it says **Drag and drop your image files here**. You can also click **Browse** and select the files.
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/import-file-page.png" alt="Import File page" >}}
 
@@ -201,7 +201,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
         The **Generate JSON Structure** dialog box opens.
     
-    5.  Drag one of the sample images, which you used to train the document model, into the box where it says **Drag image files here**. You can also click **Browse** and select the file.
+    5.  Drag one of the sample documents, which you used to train the document model, into the box where it says **Drag and drop your files here**. You can also click **Browse** and select the file.
     
         {{< figure src="/attachments/appstore/app-services/intelligent-document-service/sample-extraction-dialog-box.png" alt="Sample Extraction dialog box" >}}
     
@@ -235,7 +235,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/intelligent-document-microflow.png" alt="intelligent-document-microflow" >}}
 
-2.  Create a list of image that inherits from `System.Image`. Images from where data are extracted should be passed as a list, as shown in the microflow above.
+2.  Create a list of document that inherits from `System.FileDocument`. Documents from where data are extracted should be passed as a list, as shown in the microflow above.
 
     {{% alert color="info" %}} The total size of the images being passed for extraction should not exceed 20 MB. If you have multiple images to extract data from, you can process them in smaller batches. {{% /alert %}}
 
@@ -246,7 +246,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/intelligent-document-service-dialog-box.png" alt="Intelligent Document Service dialog box" >}}
 
 4. For **Model Id**, click **Edit** to enter the **Model Id** of your model.
-5. For **Image List**, click **Edit** to select the **Image List** which inherits from `System.Image`.
+5. For **Document List**, click **Edit** to select the **Document List** which inherits from `System.FileDocument`.
 6. For **Mapping**, **Select** the import mapping that you created to define how extracted data should be mapped into an entity.
 7. Click **OK** to save the changes and close the dialog box.
 

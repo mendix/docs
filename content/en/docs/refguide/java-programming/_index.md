@@ -3,6 +3,8 @@ title: "Java Programming"
 url: /refguide/java-programming/
 description: "Describes how to use the Mendix Java library and use Eclipse as an environment to write your Mendix Java Actions."
 weight: 60
+no_list: false 
+description_list: true 
 tags: ["studio pro"]
 ---
 
@@ -84,7 +86,4 @@ You should therefore ensure that you always set a timeout for any connections yo
 
 For details on this topic, see [Using Eclipse](/refguide/using-eclipse/).
 
-## 6 Main Documents in This Category
-
-* [Troubleshooting](/refguide/troubleshooting/) – presents problematic JAR files and workarounds
-* [Using Eclipse](/refguide/using-eclipse/) – describes how to use Eclipse to write and debug the Java actions in your Mendix app
+## 6 Documents in This Category

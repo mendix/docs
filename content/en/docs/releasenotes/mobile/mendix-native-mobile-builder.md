@@ -16,7 +16,7 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 #### Fixes
 
-* We fixed a bug with updating data on the capabilities details screen.
+* We fixed a bug affecting updating data on the capabilities details screen.
 
 ### Release 1.0.113
 

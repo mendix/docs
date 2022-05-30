@@ -2,13 +2,15 @@
 title: "Data Hub Guide"
 url: /data-hub/
 description: "This guide describes Mendix Data Hub for finding and sharing enterprise data assets."
-tags: ["data hub", "data hub catalog", "data hub landscape"]
 weight: 40
-aliases:
-    - /data-hub/data-catalog/index.html
+no_list: false 
+description_list: true 
 cascade:
     - space: "Data Hub Guide"
     - mendix_version: ""
+tags: ["data hub", "data hub catalog", "data hub landscape"]
+aliases:
+    - /data-hub/data-catalog/index.html
 ---
 
 ## 1 Introduction
@@ -80,9 +82,3 @@ Contact your [Mendix Admin](/developerportal/control-center/#company) to find ou
 
 ## 5 Guide Categories
 
-The *Data Hub Guide* is divided into the following categories:
-
-* [How to Share Data Between Apps](/data-hub/share-data/)
-* [How to Write Data to Another App](/data-hub/write-data/)
-* [Data Hub Catalog](/data-hub/data-hub-catalog/)
-* [Data Hub Landscape](/data-hub/data-hub-landscape/)

@@ -132,21 +132,19 @@ The Feedback widget uses the HTML2Canvas library which attempts to make an image
 
 If you cannot see your feedback items on the Developer Portal's **Feedback** page, it is possible that you have configured a wrong **App ID** or **Feedback server location**. Please check if all the configurations are filled in per the [Configuration](#configuration) section above.
 
-### 4.4 Create a New Microflow to Retrieve DecryptedToken {#create-a-new-microflow-to-retrieve-decryptedtoken}
+### 4.4 Creating a New Microflow to Retrieve DecryptedToken {#create-a-new-microflow-to-retrieve-decryptedtoken}
 
-In MendixSSO 3, the Microflow **DS_GetCurrentIdToken** is deprecated. You will need to create a new microflow in your own module to retrieve the **DecryptedToken**. Place **SUB_GetDecryptedTokenByTypeForCurrentSessionn** in this new microflow, and then use it in MendixSSO Authentication:
+In MendixSSO 3, the Microflow **DS_GetCurrentIdToken** is deprecated. You will need to create a new microflow in your own module to retrieve the **DecryptedToken**. Place **SUB_GetDecryptedTokenByTypeForCurrentSessionn** in this new microflow, and then use it in MendixSS authentication:
 
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/get-current-token.png" >}}
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/example.png" >}}
 
-
-The tokenType argument is **MendixSSO.TokenType.ID_TOKEN**:
+The **tokenType** argument is **MendixSSO.TokenType.ID_TOKEN**:
 
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/token-type.png" >}}
 
+### 4.5 Widget Cannot Be Read 
 
-### 4.5 Widget cannot be read error
-
-If you see the following error, simply click **close** and then go to your widget folder to remove the duplicate old widget. 
+If you see the following error, click **close** and then go to your widget folder to remove the duplicate old widget. 
 
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/widget-error.png" >}}

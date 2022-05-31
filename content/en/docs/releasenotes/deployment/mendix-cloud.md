@@ -17,7 +17,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
-### May 27th, 2022
+### May 31st, 2022
 
 #### Fix – AppDynamics
 

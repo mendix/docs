@@ -14,7 +14,7 @@ tags: ["marketplace", "marketplace component", "oidc", "idp", "identity provider
 
 The [OpenID Connect (OIDC) SSO module](https://marketplace.mendix.com/link/component/120371) allows end-users of your Mendix app to login via Single Sign-on (SSO) using the OIDC protocol.  Besides delegating end-user authentication (OIDC), your app can also delegate authorization (OAuth).
 
-OIDC is an extension of OAuth2 that propagates the end-user`s identity to your application.
+OIDC is an extension of OAuth2 that propagates the end-user's identity to your application.
 
 {{% alert color="warning" %}}
 This OIDC SSO module works with Mendix version 9.0 and above. If you are using a previous version of Mendix, you can use the *community-supported* module [OpenIDConnect Single Sign-on (OIDC, OAuth2, SSO)](https://marketplace.mendix.com/link/component/117529).
@@ -31,9 +31,9 @@ Alternatives to using OIDC SSO for managing single sign on are:
 
 ### 1.1 Typical Usage Scenarios
 
-* **B2C-apps:** Your app is aimed at consumers who have an identity at a `social IdP` which uses OIDC, such as Google. In this case your app will only delegate the authentication to the IdP, no further user information is available to the app.
-* **B2E-app:** Your app is aimed at your company`s employees and you want these employees to sign in to your app using corporate credentials hosted by your identity provider (IdP) that supports the OIDC protocol. In this case your app may have its own logic to assign user roles or you may use authorization information from your IdP as provided to your app using an access token.
-* **API-consumption.** If your app makes calls to `downstream` APIs on behalf of your end-user, you can use the access token obtained via the “OIDC SSO” module. This scenario is not supported when using SAML SSO. This makes the OIDC SSO module suitable for Mendix customers using Mendix Data Hub.
+* **B2C-apps:** Your app is aimed at consumers who have an identity at a 'social IdP' which uses OIDC, such as Google. In this case your app will only delegate the authentication to the IdP, no further user information is available to the app.
+* **B2E-app:** Your app is aimed at your company's employees and you want these employees to sign in to your app using corporate credentials hosted by your identity provider (IdP) that supports the OIDC protocol. In this case your app may have its own logic to assign user roles or you may use authorization information from your IdP as provided to your app using an access token.
+* **API-consumption.** If your app makes calls to 'downstream' APIs on behalf of your end-user, you can use the access token obtained via the “OIDC SSO” module. This scenario is not supported when using SAML SSO. This makes the OIDC SSO module suitable for Mendix customers using Mendix Data Hub.
 * **Xcelerator-apps.** Your Siemens Xcelerator app is designed to be integrated with Siemens' SAM IdP.  The Siemens SAM IdP supports the OIDC protocol and allows your app to delegate both authentication (login) and authorization (roles).
 
 ### 1.2 Features and Limitations
@@ -54,8 +54,8 @@ Alternatives to using OIDC SSO for managing single sign on are:
 
 The OIDC SSO module does not yet support
 
-* `Nonce` parameter, as per OIDC specs
-* Requesting claims via the `claims` query parameter, as per OIDC specs
+* 'Nonce' parameter, as per OIDC specs
+* Requesting claims via the 'claims' query parameter, as per OIDC specs
 * Other client authentication methods such as basic authentication (“Client_secret_basic”) or using asymmetric keys (“private_key_jwt”)
 * Delegating authorization using OAuth-scopes; this currently requires a custom microflow for parsing of Access Tokens.
 * Mobile apps
@@ -241,7 +241,7 @@ The OIDC SSO module supports multiple identity providers. Since each provider ca
 
 ### 7.1 Performing API Calls on Behalf of an Authenticated User
 
-You might want to make API calls to other apps/services on behalf of the end-user. As you have used the OIDC module to authenticate the end-user to your app, your app also has an access token for this end-user. You can use this access token to propagate the end-user`s identity to the API so the API does not need to have a user identifier in the payload.
+You might want to make API calls to other apps/services on behalf of the end-user. As you have used the OIDC module to authenticate the end-user to your app, your app also has an access token for this end-user. You can use this access token to propagate the end-user's identity to the API so the API does not need to have a user identifier in the payload.
 
 Access tokens have a short lifespan for security reasons, so you need to ensure that it has not expired. If the access token has expired, you can retrieve a new one using the refresh token that was acquired together with the access token.
 

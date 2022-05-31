@@ -165,9 +165,9 @@ Not all versions of the SAML module will work correctly when implementing SSO fo
 {{% /alert %}}
 
 {{% alert color="info" %}}
-The **SAML20.HybridAppLoginTimeOutInMinutes** constant is only available in the following module versions:
-* v3.2.2 and above for Mendix v9 (only for apps migrated from Mendix v8)
-* v2.2.2 and above for Mendix v8
+The **SAML20.HybridAppLoginTimeOutInMinutes** constant is only available in the following module versions:<br />
+* v3.2.2 and above for Mendix v9 (only for apps migrated from Mendix v8)<br />
+* v2.2.2 and above for Mendix v8<br />
 * v1.16.6 and above for Mendix v7
 {{% /alert %}}
 

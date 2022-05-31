@@ -159,7 +159,7 @@ The OIDC SSO module works without a specified sign-in page. Therefore, in the na
 
 In addition, administrators will need to have access to configure OIDC and also manage users. You can do this by including the pages `Administration.Account_Overview` and `OIDC.OIDC_Client_Overview` into the app navigation, or a separate administration page.
 
-#### 4.2.4 Setting Encryption Key
+### 4.4 Setting Encryption Key
 
 Follow the instructions to [set an encryption key in the Encryption module](/appstore/modules/encryption/#configuration). The constant to set is called `Encryption.EncryptionKey` and should be a random value 32 characters long. This key will be used to encrypt and decrypt values.
 
@@ -177,7 +177,7 @@ Follow the instructions to [set an encryption key in the Encryption module](/app
 If your IDP does not support a custom URL scheme as a callback URL, that`s ok. Simply change the setting *Provider supports custom URL schemes* to false.
 {{% /alert %}}
 
-### 5.2 OIDC Client Configuration
+### 5.2 OIDC Client Configuration{#client-configuration}
 
 In this case, the OIDC client is the app you are making.
 
@@ -196,115 +196,120 @@ Your client configuration is not yet complete, but you have to save at this poin
     * If you need refresh tokens for your users, you also need the `offline` scope.
     * Add other scopes as needed.
 4. Select your user provisioning flow. By default, this module will use a standard OpenID claims to provision users in your app. Also included is a flow that uses the standard UserInfo endpoint in OIDC, which is useful in the case that your identity provider uses "thin tokens". Also included is a salesforce-specific example. You may need to make changes in order to implement provisioning logic fits your business needs. To do so, read the section on [Custom User Provisioning](#custom-provisioning).
-5. Optionally, enable access token processing assignment of user roles based on information from the OIDC identity provider
+5. Optionally, check **Enable Access Token Processing** if you want to use additional information from the OIDC identity provider. This can be used, for example, to assign end user roles based on information from the IdP – see [Access Token Processing](#access-token-processing) for more information.
 
 Once you have completed these steps, the SSO-configuration is ready for testing. See the section on [Testing and troubleshooting](#testing) for more information.
 
-See the section [Optional Features](#optional) information on additional optional features you may want to implement. 
-
-{{% todo %}}[Edited to here - need to finish]{{% /todo %}}
+See the section [Optional Features](#optional) information on additional optional features you may want to implement.
 
 ## 6 User Provisioning
 
-Initially your app will not have any users. The OIDC module provides so-called Just-In-Time (JIT) user provisioning. This means that a user will be created in your app (as an Administration.Account object ) when she logs in for the first time.
-The user provisioning works by default and you can customize if needed.
+Initially your app will not have any end users. The OIDC module provides so-called Just-In-Time (JIT) user provisioning. This means that an end user will be created in your app (as an `Account` object in the Administration module) when they log in for the first time.
+The user provisioning works by default but you can customize it if needed.
 
 ### 6.1 Default User Provisioning
 
-By default, the CUSTOM_UserProvisioning microflow uses the UserProvisioning_StandardOIDC microflow. By default the following mapping is applied:
+By default, the `CUSTOM_UserProvisioning` microflow in the **USE_ME** > **1. Configuration** folder of the OIDC module uses the `UserProvisioning_StandardOIDC` microflow. By default the following mapping is applied:
 
-| ID-token provided by your IDP | Administration.Account object |
+| ID-token Provided by your IDP | Attribute of `Administration.Account` Object |
 | ----------------------------- | ----------------------------- |
 | sub                           | Name                          |
 | name                          | Fullname                      |
 | email                         | Email                         |
 
 {{% alert color="warning" %}}
-Do not change the UserProvisioning_StandardOIDC microflow. This may give problems when you want to upgrade to a newer version of the OIDC SSO module. Apply customizations in the CUSTOM_UserProvisioning microflow only.
+Do not change the `UserProvisioning_StandardOIDC` microflow. This may give problems if you upgrade to a newer version of the OIDC SSO module. Apply customizations to the `CUSTOM_UserProvisioning` microflow only.
 {{% /alert %}}
 
 ### 6.2 Custom User Provisioning{#custom-provisioning}
-Review the microflow CUSTOM_UserProvisioning. This is where should go to change the way that users are provisioned in your app. Here you receive the ID token. Use that data to find/create and return an Administration.Account object for the user. You can find examples included in the "User Provisioning Examples" folder. Make a single call from this microflow to your own module where you implement the provisioning flow you need. This way, it will be easy to install new versions of this module over time without overwriting your changes.
+Review the microflow `CUSTOM_UserProvisioning` in the **USE_ME** > **1. Configuration** folder of the OIDC module. This is where you can change the way that users are provisioned in your app. The OpenID token is passed to the microflow as a parameter. Use this object to find an existing, or create a new, `Administration.Account` object for the user. This is set as the return value of the microflow.
 
-This module support multiple identity providers. Since each provider might provide user data in a slightly different way, you may want to use multiple provisioning flows. See the microflow UserProvisioning_Sample for a sample and details on how to do this.
+You can find examples included in the "User Provisioning Examples" folder. Make a single call from this microflow to your own module where you implement the provisioning flow you need. This way, it will be easy to install new versions of this module over time without overwriting your custom provisioning.
+
+This module support multiple identity providers. Since each provider can provide user data in a different format, you may want to use multiple provisioning flows. See the microflow `UserProvisioning_Sample` for a sample and details on how to do this.
 
 ## 7 Optional Features{#optional}
 
-### 7.1 Perform API Calls on Behalf of an Authenticated User
+### 7.1 Performing API Calls on Behalf of an Authenticated User
 
-In your app, that is utilizing this OIDC module, you might want to do API calls to other apps/services on behalf of the user. As your user is already authenticated within your app, your app also has an access token for this user. This allows you to propagate the user`s identity to the API via the access token and the API doesn`t need to have a user identifier in the payload.
+You might want to make API calls to other apps/services on behalf of the end user. As you have used the OIDC module to authenticate the end user to your app, your app also has an access token for this end user. You can use this access token to propagate the user`s identity to the API so the API does not need to have a user identifier in the payload.
 
-In using this access token you need to be careful that it has not expired yet (typically access tokens have a short lifespan for security reasons). If an access token has expired, you can retrieve a new one using the refresh token that was acquired together with the access token.
+Access tokens have a short lifespan for security reasons, so you need to ensure that it has not expired. If the access token has expired, you can retrieve a new one using the refresh token that was acquired together with the access token.
 
-Instead of you having to build this logic into a microflow yourself, we offer some microflows that already do this for you. These microflows all make use of the OIDC.Token object that reflect both the Access Token (from OAuth protocol) and the ID-token (from the OIDC specs).
+The OIDC SSO module contains microflows that do this for you. These microflows all make use of the `OIDC.Token` object that contains both the Access Token (from OAuth protocol) and the ID-token (from the OIDC specs).
 
-![](https://paper-attachments.dropbox.com/s_7E7F4C5598FAE3D407C0161AAF8F6A9D593D1F3E51E3D0BE6D428FEFD8E249E5_1652169683486_image.png)
+You can find the following microflows in the **USE_ME** > **3. Make Authorized API Calls** folder of the OIDC module.
 
-**GET**
+#### 7.1.1 DELETE
+
 Takes as input:
 
-* **Request:** the URL you actually want to GET data from
-* **Token:** the *OIDC.Token* object that should be used, typically retrieved via the *Token_Account* association (to find the token of the current user/session)
+* **Location:** – a string containing the URL you want to do the DELETE on
+* **Request:**  – a string containing the content of the DELETE request (most likely a formatted JSON)
+* **Token:**  – the `OIDC.Token` object that should be used for authentication, typically retrieved via the `Token_Account` association (to find the token of the current user/session)
 
-The microflow returns an HTTP response object (which could be an error!).
+The microflow returns an object of type `System.HttpResponse`. This could indicate an error.
 
-**PATCH**
+#### 7.1.2 GET
+
 Takes as input:
 
-* **Location:** the URL you want to do the PATCH on
-* **Request:** the content of the PATCH request (most likely a formatted JSON)
-* **Token:** the *OIDC.Token* object that should be used, typically retrieved via the *Token_Account* association (to find the token of the current user/session)
+* **Request:**  – a string containing the URL you want to GET data from
+* **Token:**  – the `OIDC.Token` object that should be used for authentication, typically retrieved via the `Token_Account` association (to find the token of the current user/session)
 
-The microflow returns an HTTP response object (which could be an error!).
+The microflow returns an object of type `System.HttpResponse`. This could indicate an error.
 
-**POST**
+#### 7.1.3 PATCH
+
 Takes as input:
 
-* **Location:** the URL you want to do the POST on
-* **Request:** the content of the POST request (most likely a formatted JSON)
-* **Token:** the *OIDC.Token* object that should be used, typically retrieved via the *Token_Account* association (to find the token of the current user/session)
+* **Location:** – a string containing the URL you want to do the PATCH on
+* **Request:**  – a string containing the content of the PATCH request (most likely a formatted JSON)
+* **Token:**  – the `OIDC.Token` object that should be used for authentication, typically retrieved via the `Token_Account` association (to find the token of the current user/session)
 
-The microflow returns an HTTP response object (which could be an error!).
+The microflow returns an object of type `System.HttpResponse`. This could indicate an error.
 
-**PUT**
+#### 7.1.4 POST
+
 Takes as input:
 
-* **Location:** the URL you want to do the PUT on
-* **Request:** the content of the PUT request (most likely a formatted JSON)
-* **Token:** the *OIDC.Token* object that should be used, typically retrieved via the *Token_Account* association (to find the token of the current user/session)
+* **Location:** – a string containing the URL you want to do the POST on
+* **Request:**  – a string containing the content of the POST request (most likely a formatted JSON)
+* **Token:**  – the `OIDC.Token` object that should be used for authentication, typically retrieved via the `Token_Account` association (to find the token of the current user/session)
 
-The microflow returns an HTTP response object (which could be an error!).
+The microflow returns an object of type `System.HttpResponse`. This could indicate an error.
 
-**DELETE**
+#### 7.1.5 PUT
+
 Takes as input:
 
-* **Location:** the URL you want to do the DELETE on
-* **Request:** the content of the DELETE request (most likely a formatted JSON)
-* **Token:** the *OIDC.Token* object that should be used, typically retrieved via the *Token_Account* association (to find the token of the current user/session)
+* **Location:** – a string containing the URL you want to do the PUT on
+* **Request:**  – a string containing the content of the PUT request (most likely a formatted JSON)
+* **Token:**  – the `OIDC.Token` object that should be used for authentication, typically retrieved via the `Token_Account` association (to find the token of the current user/session)
 
-The microflow returns an HTTP response object (which could be an error!).
+The microflow returns an object of type `System.HttpResponse`. This could indicate an error.
 
-### 7.2 Access Token Processing
+### 7.2 Access Token Processing{#access-token-processing}
 
-With the OAuth/OIDC protocol, access tokens can be opaque or can be a Json Web Token (JWT).
-In case you just want to delegate only authentication to the IDP you typically only need to cater for the User Provisioning and you don`t need to process the access token.
+With the OAuth/OIDC protocol, access tokens can be opaque or can be a JSON Web Token (JWT).
+If you are just delegating authentication for your app to the IdP you will not need to know the contents of the access token.
 
-In case the access token is a JWT and you want to use the information in the JWT for your app`s logic, you need to parse the access token A typical example is to assign user roles in your app based on the contents of the access token JWT.
+If you want to use the information in an access token which is a JWT, you need to parse the access token. For example, you may want to assign user roles in your app based on the contents of the access token JWT.
 
-For parsing of access tokens you need a microflow and you have two options:
+You can parse an access token in a microflow.
 
-* If you are using Siemens SAM as IDP, the OIDC SSO module provides you with a default microflow for parsing of SAM access Tokens.
+* If you are using Siemens SAM as your IDP, the OIDC SSO module provides you with a default microflow for parsing of SAM access tokens.
 * If you are using another IDP, you can create a custom microflow to parse the access token.
 
-For parsing of access tokens you need to mark the “Enable Access Token parsing” checkbox.
+To parse access tokens, you need to check **Enable Access Token Parsing”** when performing [OIDC Client Configuration](#client-configuration).
 
-![](https://paper-attachments.dropbox.com/s_DF03B05E92BB549ED0E0F9A0BA29FAD1C2D4BACE81754CD517E8B981F034D3BB_1651149691958_image.png)
+#### 7.2.1 Processing SAM Access Tokens
 
-**Process SAM access tokens**
+{{% alert color="info" %}}
+This section is only relevant if you are a Mendix partner and you want to integrate your app with the Siemens SAM IDP.
+{{% /alert %}}
 
-> This section is only relevant if you are a Mendix partner and you want to integrate your app with the Siemens SAM IDP.
-
-For processing of SAM access tokens you need to cater for the following:
+To parse of SAM access tokens you need to cater for the following:
 
 * When your using the “OIDC SSO” module with SAM, you need to set-up the connectivity between your app and SAM as described in previous sections <include reference>.
 *  Make sure you have installed the MxModelReflection

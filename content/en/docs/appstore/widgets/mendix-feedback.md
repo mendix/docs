@@ -143,3 +143,10 @@ In MendixSSO 3, the Microflow **DS_GetCurrentIdToken** is deprecated. You will n
 The tokenType argument is **MendixSSO.TokenType.ID_TOKEN**:
 
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/token-type.png" >}}
+
+
+### 4.5 Widget cannot be read error
+
+If you see the following error, simply click **close** and then go to your widget folder to remove the duplicate old widget. 
+
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/widget-error.png" >}}

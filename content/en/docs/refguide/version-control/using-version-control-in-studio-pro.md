@@ -185,7 +185,7 @@ App conflicts are conflicts are conflicts at the level of the app. There are two
 
 The involved document is marked as conflicted and you can see the reason in the details column of the **Changes** pane.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/project-conflicts.png" alt="Example of app conflicts" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/app-conflicts.png" alt="Example of app conflicts" >}}
 
 {{% alert color="info" %}}
 If a whole folder (or module) was *deleted* and another person changes a document inside that folder, the folder/module is restored and also marked as conflicted. This way you know that the intention was to delete that folder but it has been restored to show you the context of the changed document.
@@ -303,7 +303,7 @@ The second method should be used if the first method is not possible for some re
 3. Commit your changes using Studio Pro. 
 4. Reopen the main line app in Studio Pro only after overwriting the files.
 
-## 8 Versioning an App Deployed to the Cloud {#versioning-project}
+## 8 Versioning an App Deployed to the Cloud {#versioning-app}
 
 ### 8.1 Deploying Locally
 

@@ -44,7 +44,7 @@ Depending on the layout selected when the app was created, errors in Studio Pro 
 
 In this section, you will learn how to add the required pages in the app's **Navigation** that are needed to configure both the Mx Model Reflection and the Excel Export templates that will be used within the app.
 
-1.  In the [App Explorer](/refguide/project-explorer/), go to **Navigation**.
+1.  In the [App Explorer](/refguide/app-explorer/), go to **Navigation**.
 2.  Add a **New item** to the navigation to open the page **MxModelReflection.MxObjects_Overview**:
 
   	{{< figure src="/attachments/howto/integration/using-the-excel-exporter/new-menu-item-mxreflection.png" alt="new-menu-item-mxreflection" >}}
@@ -165,7 +165,7 @@ To configure the dynamic column data, follow these steps:
     {{< figure src="/attachments/howto/integration/using-the-excel-exporter/18581905.png" >}}
 
 2. The **Column number** will be set automatically, but can be overwritten to the desired ordinal number.
-3.  Define a **Name** for the column and specify if that **Name** should be the **Column Header** as well when exported.
+3. Define a **Name** for the column. This will be the **Column Header** when exported.
 
     {{% alert color="info" %}}If you use an uploaded Excel file as a template, the column name defined in your Excel template file will be used, and the **Name** you enter here will not be used. For more information, see [Using an Uploaded Excel File as a Template](#upload-excel-file-template).
     {{% /alert %}}

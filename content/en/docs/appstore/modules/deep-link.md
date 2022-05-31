@@ -47,7 +47,7 @@ After importing the Deep Link module into your app, you need to configure it.
 You need to add the `/link/` path as a request handler in your app. To achieve this, add the **DeepLink.Startdeeplink** microflow to the startup microflow of your app.
 
 * If your app does not have an after-startup microflow, perform the following steps:
-    1. In the **App Explorer**, go to **Settings** to open the [App Settings](/refguide/project-settings/) dialog box.
+    1. In the **App Explorer**, go to **Settings** to open the [App Settings](/refguide/app-settings/) dialog box.
     2. Go to the **Runtime** tab.
     3. For **After startup**, **Select** the **DeepLink.StartDeeplink** microflow.
 * If your app has an after-startup microflow, extend it with a [sub-microflow activity](/howto/logic-business-rules/extract-and-use-sub-microflows/) that calls the **DeepLink.StartDeeplink** microflow

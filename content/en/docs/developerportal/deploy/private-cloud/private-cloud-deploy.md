@@ -111,7 +111,7 @@ When deploying your app for the first time, there will be no environments availa
    1. For development of the app, for example acceptance testing, choose **Development**.
    2. For production deployment, select **Production**. If you select **Production**, then you will be asked for the **Subscription Secret** which ensures that your app runs as a licensed app. These restrictions on unlicensed/test apps are very similar to those listed in the [Free Apps](/developerportal/deploy/mendix-cloud-deploy/#free-app) section of *Mendix Cloud*.
 
-        {{% alert color="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/project-security/). You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
+        {{% alert color="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/app-security/). You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
 
 7. Click **Next**.
 
@@ -442,7 +442,7 @@ This enables you to change the purpose of your app environment. You can label an
 For production deployment, select **Production**. If you select **Production**, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. For the differences between unlicensed/test apps and licensed apps, see the [Free App](/developerportal/deploy/mendix-cloud-deploy/#free-app) section in *Mendix Cloud*.
 
 {{% alert color="warning" %}}
-Your app can only be deployed to a production environment if [security in the app is set on](/refguide/project-security/). You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
+Your app can only be deployed to a production environment if [security in the app is set on](/refguide/app-security/). You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
 {{% /alert %}}
 
 ##### 5.1.3.8 Change Subscription Secret{#change-subscription-secret}

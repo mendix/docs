@@ -30,7 +30,7 @@ Access rules are defined via entity's **Properties** > **Access rules**, or on t
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-tab.png" alt="Access Rules for Entities" >}}
 
 {{% alert color="info" %}}
-The **Access rules** section is visible only if the [App Security](/refguide/project-security/) is set to **Production**.
+The **Access rules** section is visible only if the [App Security](/refguide/app-security/) is set to **Production**.
 {{% /alert %}}
 
 An example of the access rules properties is represented in the image below:

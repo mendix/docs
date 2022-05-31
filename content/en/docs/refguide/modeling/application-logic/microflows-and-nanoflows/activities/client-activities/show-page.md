@@ -24,7 +24,7 @@ With this activity, you can show a selected page to an end-user. Mendix apps run
 
 You can directly drag a page from the **App Explorer** into your microflow:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/show-page/show-page-from-project-explorer.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/show-page/show-page-from-app-explorer.png" >}}
 
 ## 2 Properties
 

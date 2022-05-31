@@ -5,6 +5,7 @@
 .td-content {
     order: 1;
     margin-left: 2rem; // NK - custom edit
+    max-width: 90%;  // NK - fixed width of all content to 90%
 
     p, li, td {
         font-weight: $font-weight-body-text;
@@ -46,8 +47,8 @@
         @extend .img-fluid;
     }
 
-    // NK - added li table to have stying applied to tables in lists
-    > table, li table {
+    // NK - removed '>' before table so the styling applies to all table elements in td-content, not just direct children
+    table {
         @extend .table-striped;
 
         @extend .table-responsive;

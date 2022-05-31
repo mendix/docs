@@ -376,7 +376,7 @@ The **PiiEntityType** is an enumeration that incorporates all the information of
 
 If you deploy your app locally or as a Mendix Free App, configure the license token in Studio Pro. Perform the following steps:
 
-1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings/) dialog box.
+1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/app-settings/) dialog box.
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
 3. On the **Constants** tab, create a new constant with the predefined constant **TextAnalytics.LicenseToken**.
 4. Fill in the **Value** with the license token that you [obtained](#obtain-license-token).

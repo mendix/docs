@@ -10,12 +10,12 @@ tags: ["studio pro", "translation", "languages", "translatable text", "add langu
 
 Mendix is designed to be used by users in multiple languages. The **Languages** tab of the **App Settings** allows you to select which languages your app will support.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/01_project_settings.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/01_app_settings.png" >}}
 
 You can reach this tab in two ways:
 
 1. Select the menu option **Language > Language Settings…**.
-2. Open the **App{Name} > Settings** dialog box from the [App Explorer](/refguide/project-explorer/) and select the **Language** tab.
+2. Open the **App{Name} > Settings** dialog box from the [App Explorer](/refguide/app-explorer/) and select the **Language** tab.
 
 ## 2 Setting Default Language
 

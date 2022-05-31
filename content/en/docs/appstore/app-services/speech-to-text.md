@@ -185,7 +185,7 @@ The only core widget required is the **Microphone** widget. You can make the fol
 
 If you deploy your app locally or as a Mendix Free App, configure the license token in Studio Pro. Perform the following steps:
 
-1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings/) dialog box.
+1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/app-settings/) dialog box.
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
 3. On the **Constants** tab, create a new constant with the predefined constant **SpeechToText.LicenseToken**.
 4. Fill in the **Value** with the license token that you [obtained](#obtain-license-token).
@@ -215,9 +215,9 @@ If you deploy your app in your own environment, you need to configure the licens
 
 ### 4.1 Initializing Speech To Text When App Starts
 
-It can be useful to run the Speech to Text service automatically when your app starts. The app service contains a Java action – the **StartService** microflow, which can start the Speech To Text service for you. You can use the [After startup](/refguide/project-settings/#after-startup) setting in your app to call the **StartService** microflow.
+It can be useful to run the Speech to Text service automatically when your app starts. The app service contains a Java action – the **StartService** microflow, which can start the Speech To Text service for you. You can use the [After startup](/refguide/app-settings/#after-startup) setting in your app to call the **StartService** microflow.
 
-1. In the App Explorer, go to **Settings**. The [App Settings](/refguide/project-settings/) dialog box opens.
+1. In the App Explorer, go to **Settings**. The [App Settings](/refguide/app-settings/) dialog box opens.
 2. Go to the **Runtime** tab. 
 3. Select the **StartService** microflow from the **SpeechToText** > **USE_ME** folder.
 4. Set **After startup** to the microflow that calls the **StartService** microflow.

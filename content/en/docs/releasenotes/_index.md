@@ -5,6 +5,7 @@ notoc: true
 description: "The release notes for the Mendix Platform are divided into various product categories and versions."
 weight: 5
 no_list: false
+simple_list: true
 cascade:
     - space: "Release Notes"
     - mendix_version: ""

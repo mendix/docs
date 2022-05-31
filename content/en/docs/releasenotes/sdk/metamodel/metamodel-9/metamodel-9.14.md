@@ -40,7 +40,7 @@ weight: 86
 
 #### ReadSource (Element)
 
-* We introduced this element fpr the default read functionality that changes the source.
+* We introduced this element for the default read functionality that changes the source.
 
 #### CallMicroflowToRead (Element)
 

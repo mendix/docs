@@ -2,6 +2,8 @@
 title: "Mobile"
 url: /refguide/mobile/
 weight: 50
+no_list: false 
+description_list: true 
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -36,9 +38,5 @@ With Mendix, you can build apps which work regardless of internet connection. Of
 
 Mendix's native mobile apps are always configured with offline-first capabilities. When building an app, you can choose to build an online app which continously connects with a server, or an offline-first app that works even without an internet connection. This can be configured by choosing the corresponding navigation profile in Mendix Studio Pro. For more instructions on setting up such a profile, see [Navigation](/refguide/navigation/).
 
-## 5 Main Documents in This Category
+## 5 Documents in This Category
 
-* [Native Mobile](/refguide/native-mobile/) – presents information on building fully native mobile apps with the Mendix Platform that utilize native UI elements
-* [Progressive Web Apps](/refguide/progressive-web-app/) – explains the capabilities and configurations of progressive web apps
-* [Hybrid Mobile](/refguide/hybrid-mobile/) – describes the depreciated state of hybrid mobile in Mendix 9 
-* [Offline First](/refguide/offline-first/) – provides details on the architectural concepts of offline-first applications in Mendix

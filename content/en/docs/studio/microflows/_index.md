@@ -152,7 +152,7 @@ To disable an activity, do the following:
 
 3. Click **Disable**. 
 
-The activity is excluded from the flow.
+The activity is excluded from the flow. You can re-enable the activity back in the **Properties** tab.
 
 ## 4 Toolbox Elements {#microflows-toolbox}
 

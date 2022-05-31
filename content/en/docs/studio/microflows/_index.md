@@ -57,6 +57,7 @@ You can perform the following basic functions when working on microflows:
 * [Copy and paste a microflow](#copy-paste)
 * [Delete a microflow](#delete)
 * [Add elements to a microflow](#add-elements)
+* [Disable an activity](#disable)
 
 ### 3.1 Opening a Microflow {#open}
 
@@ -136,6 +137,22 @@ To add a new activity or event to the microflow, do the following:
 2. Open the **Toolbox** tab.
 3. Select the event or activity in the **General**, **Object Activities** or **Client Activities** section.
 4. Drag and drop the event or activity in the microflow. 
+
+### 3.7 Disabling an Activity {#disable}
+
+You can disable an activity from the flow, which means that when running your microflow these disabled activities are skipped. This can be useful when you are in the process of building and testing your microflow and want to temporary exclude an activity from the flow. 
+
+To disable an activity, do the following:
+
+1. Select the activity you would like to disable from the flow.
+
+2. In the **Properties** tab, click the **More** icon at the bottom (next to the **Delete** button):
+
+    {{< figure src="/attachments/studio/microflows/disable-activity.png" alt="Disabling an Activity" >}}
+
+3. Click **Disable**. 
+
+The activity is excluded from the flow.
 
 ## 4 Toolbox Elements {#microflows-toolbox}
 

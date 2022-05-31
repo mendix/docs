@@ -6,6 +6,14 @@ weight: 10
 description: "Native Template 6 release notes."
 ---
 
+## 6.2.21
+
+**Release date: May 31th, 2022**
+
+### Fixes
+
+* We fixed an iOS build issue for projects using Crashlytics.
+
 ## 6.2.20
 
 **Release date: May 30th, 2022**

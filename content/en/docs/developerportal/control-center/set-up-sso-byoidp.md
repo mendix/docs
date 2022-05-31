@@ -7,6 +7,10 @@ description: "Describes how you can use your company IdP to authenticate to Mend
 tags: ["BYOIDP", "IDP", "Bring Your Own IDP", "Microsoft Azure", "SSO", "Single Sign-on"]
 ---
 
+{{% alert color="info" %}}
+This feature is currently in [Public Beta](/releasenotes/beta-features/).
+{{% /alert %}}
+
 ## 1 Introduction
 
 The Mendix Cloud solution offers an Identity Provider (IdP) that allows users to sign in to:

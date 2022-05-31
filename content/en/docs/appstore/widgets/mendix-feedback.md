@@ -42,10 +42,10 @@ You can configure the widget for certain actions in your app. All the configurat
     * **Feedback server location** – the URL of the Developer Portal server (usually `https://feedback-api.mendix.com`), which you should only change when you are using a different environment
     * **Screenshot Foreign Rendering**
         * **No** (default)
-        * **Yes** –  only used when the page includes sensitive information
+        * **Yes** – only used when the page includes sensitive information
 * **Authentication** tab
-    {{% alert color="info" %}}For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the Mendix SSO module to the Mendix Feedback widget version 8.2.1 or above. Choose only one of the authentication methods: either **MendixSSO** or **Custom Authentication**.
-    {{% /alert %}}
+    {{% alert color="info" %}}For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the Mendix SSO module to the Mendix Feedback widget version 8.2.1 or above. Choose only one of the authentication methods: either **MendixSSO** or **Custom Authentication**.</br></br>You need to enter the value of authentication items manually as currently the widget does not support a drop-down menu for selecting microflow or the attributes of an entity.{{% /alert %}}
+    
     *  **MendixSSO** – if Mendix SSO is applied and the following settings are configured correctly, the end-user can leave feedback without having to enter their name and email address
         * **ID token microflow** – recommended that you select the **DS_GetCurrentIdToken** microflow from the Mendix SSO module. 
         {{% alert color="info" %}}If you are using MendixSSO 3, please follow the [Create a New Microflow to Retrieve DecryptedToken](#create-a-new-microflow-to-retrieve-decryptedtoken) section below.{{% /alert %}}
@@ -64,6 +64,7 @@ You can configure the widget for certain actions in your app. All the configurat
         See the screenshot below for an example:
         
         {{< figure src="/attachments/appstore/widgets/mendix-feedback/custom-authentication.png" >}}
+        
 
 ## 3 Usage
 
@@ -104,7 +105,13 @@ For details on how to see all the [Feedback](/developerportal/collaborate/feedba
 
 ### 3.3 Upgrading the Widget 
 
-If you are trying to upgrade your Mendix Feedback widget, Studio Pro will not recognize the current configuration of this widget. Add the Mendix Feedback widget into your page again and configure it accordingly. Then remove the old feedback widget (*SprintrFeedbackWidget.mpk*) from your widget folder.
+To upgrade your Mendix Feedback widget, follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/#update-module). You can encounter the following error: 
+
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/install-error.png" >}}
+
+When this happens, right-click the error message, and choose **Update widget** or **Update all widgets**. Then the name of the widget is changed to **Feedback**. The updated widget is ready for use.
+
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/new-name.png" >}}
 
 ## 4 Troubleshooting
 
@@ -125,14 +132,19 @@ The Feedback widget uses the HTML2Canvas library which attempts to make an image
 
 If you cannot see your feedback items on the Developer Portal's **Feedback** page, it is possible that you have configured a wrong **App ID** or **Feedback server location**. Please check if all the configurations are filled in per the [Configuration](#configuration) section above.
 
-### 4.4 Create a New Microflow to Retrieve DecryptedToken {#create-a-new-microflow-to-retrieve-decryptedtoken}
+### 4.4 Creating a New Microflow to Retrieve DecryptedToken {#create-a-new-microflow-to-retrieve-decryptedtoken}
 
-In MendixSSO 3, the Microflow **DS_GetCurrentIdToken** is deprecated. You will need to create a new microflow in your own module to retrieve the **DecryptedToken**. Place **SUB_GetDecryptedTokenByTypeForCurrentSessionn** in this new microflow, and then use it in MendixSSO Authentication:
+In MendixSSO 3, the Microflow **DS_GetCurrentIdToken** is deprecated. You will need to create a new microflow in your own module to retrieve the **DecryptedToken**. Place **SUB_GetDecryptedTokenByTypeForCurrentSessionn** in this new microflow, and then use it in MendixSS authentication:
 
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/get-current-token.png" >}}
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/example.png" >}}
 
-
-The tokenType argument is **MendixSSO.TokenType.ID_TOKEN**:
+The **tokenType** argument is **MendixSSO.TokenType.ID_TOKEN**:
 
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/token-type.png" >}}
+
+### 4.5 Widget Cannot Be Read 
+
+If you see the following error, click **close** and then go to your widget folder to remove the duplicate old widget. 
+
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/widget-error.png" >}}

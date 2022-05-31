@@ -20,7 +20,7 @@ Encrypt and decrypt plain texts using the [AES](https://en.wikipedia.org/wiki/Ad
 
 ### 2.1 Typical Use Cases
 
-The typical usage scenario is when a project/module consumes a service where a user name and password are required, you can store the password in an encrypted way in the database. 
+The typical usage scenario is when a app/module consumes a service where a user name and password are required, you can store the password in an encrypted way in the database. 
 
 ### 2.2 Limitations
 

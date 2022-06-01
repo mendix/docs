@@ -17,7 +17,7 @@ A custom developer app helps you by serving as a replacement for the Make It Nat
 ## 2 Prerequisites
 
 * Complete [How to Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile/)
-* Complete the Mendix Native Mobile Builder wizard as found in [Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app/)
+* Complete the Mendix Native Mobile Builder wizard as found in [Build a Mendix Native App Locally](refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally-manually/)
 
 ## 3 Building Your Developer App {#build-your-developer-app}
 
@@ -78,7 +78,7 @@ There are various ways install an app on a device. Installing using a USB is det
 
 ### 4.2 iOS
 
-By default your custom developer app will be unsigned. To get a signed *IPA*, follow the steps in the [Signing Your Build](/howto/mobile/deploying-native-app/#signing-a-build) section of *How to Deploy Your First Mendix Native Mobile App*. Your custom developer app branch is named **developer**.
+By default your custom developer app will be unsigned. To get a signed *IPA*, follow the steps in  [Distributing Native Apps](/refguide/mobile/distributing-mobile-apps/distributing-native-apps/). Your custom developer app branch is named **developer**.
 
 The unsigned output of an iOS build is an *XCArchive* file. *XCArchive* files require manual signing before they are ready to be installed on a device.
 
@@ -129,7 +129,3 @@ To run your custom developer app on a device which is not registered as a test d
 
 Read more on TestFlight in the [official documentation](https://testflight.apple.com/).
 
-## 5 Read More
-
-* [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app/)
-* [Release Over the Air Updates with Mendix](/howto/mobile/how-to-ota/)

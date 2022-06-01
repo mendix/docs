@@ -13,6 +13,12 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
+### June 2nd, 2022
+
+#### Portal Improvements
+
+* We now provide the `mxpc-cli` configuration tool in versions which run on ARM64 architectures.
+
 ### May 25th, 2022
 
 #### Mendix Operator v2.5.1{#2.5.1}

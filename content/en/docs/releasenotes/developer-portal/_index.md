@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue where users would appear twice in the Node Permission screen. (Tickets 146549, 147049, 148041)
+* We fixed an issue where users appeared twice in the [Node Permissions](/developerportal/deploy/node-permissions/) page. (Tickets 146549, 147049, 148041)
 
 ### May 19th, 2022
 

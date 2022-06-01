@@ -15,12 +15,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Improvements
 
-* We made navigating to the new datasource the default action after using the registration form.
-* We made the forum link open it with the DataHub category pre-selected.
+* After completing the registration form, you will now be directed immediately to the new data source.
+* Forum links now open with the Data Hub category pre-selected.
 
 #### Fixes
 
-* We fixed a bug where the `GET ServiceVersion` operation of the DataHub V2 API would not always return the `ContractType` of a `Service`.
+* We fixed a bug where the `GET ServiceVersion` operation of the DataHub V2 API would not always return the `ContractType` of a `Service`. See [Data Hub APIs](https://platformcore.pages.rnd.mendix.com/datahub-spec/) for a list of all available APIs.
 
 ### May 19th, 2022
 

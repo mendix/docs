@@ -13,7 +13,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
-### June 2nd, 2022
+### June 2nd, 2022 
 
 #### Portal Improvements
 

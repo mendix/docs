@@ -11,6 +11,17 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### June 2nd, 2022
+
+#### Improvements
+
+* We made navigating to the new datasource the default action after using the registration form.
+* We made the forum link open it with the DataHub category pre-selected.
+
+#### Fixes
+
+* We fixed a bug where the `GET ServiceVersion` operation of the DataHub V2 API would not always return the `ContractType` of a `Service`.
+
 ### May 19th, 2022
 
 #### Improvements

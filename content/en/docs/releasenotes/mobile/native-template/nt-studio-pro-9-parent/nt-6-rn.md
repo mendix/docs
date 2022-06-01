@@ -8,7 +8,7 @@ description: "Native Template 6 release notes."
 
 ## 6.2.21
 
-**Release date: May 31th, 2022**
+**Release date: May 31st, 2022**
 
 ### Fixes
 

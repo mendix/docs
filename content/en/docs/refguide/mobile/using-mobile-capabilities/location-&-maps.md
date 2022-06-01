@@ -38,7 +38,7 @@ Next you will configure the **Maps** widget provider. You will have two choices:
 
 ### 3.2 Configuring Maps Capability 
 
-1. Set up a native template with the **Native Mobile App Builder**. This can be launched from the **App** menu as shown in [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app/). Complete the wizard and configure the app's details and tokens:
+1. Set up a native template with the **Native Mobile App Builder**. This can be launched from the **App** menu as shown in [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/). Complete the wizard and configure the app's details and tokens:
 
 	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/how-to-maps/launch-native-mobile-app-builder.png" alt="launch native mobile builder"   width="400"  >}}
 
@@ -64,6 +64,6 @@ When running locally from source, on iOS you have to run `pod install` once more
 
 ## 4 Read More
 
-* [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app/)
+* [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/)
 * [How to Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile/)
 

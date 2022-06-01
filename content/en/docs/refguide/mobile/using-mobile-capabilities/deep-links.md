@@ -22,7 +22,7 @@ When an app is installed it registers the `schema` and optionally the `host` so 
 
 ### 1.1 Testing With the Make It Native App
 
-For this tutorial we recommend running your app from source against a local instance of Mendix Studio Pro. This will save you time when rebuilding and redeploying your app. To do this, follow the steps in [Get Started with Mobile](/refguide/mobile/getting-started-with-mobile/) to make an app and link it to the Make It Native mobile testing app.
+For this tutorial we recommend running your app from source against a local instance of Mendix Studio Pro. This will save you time when rebuilding and redeploying your app. To do this, follow the steps in [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) to make an app and link it to the Make It Native mobile testing app.
 
 Please note that the Make It Native app has already the registered schema `makeitnative://` and can be used out of the box. To use the Make It Native app with that schema, see the [Using Deep Linking in Your App](#using-deep-linking) section below. If you want to change this schema, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps/) to build your own custom developer app and then use the [Setting up App Deep Linking](#set-up) section below to change its schema.
 
@@ -43,7 +43,7 @@ If you do not already have a native template for your app, you can create one by
 
 Set up a native template with the **Native Mobile App Builder** by following these instructions:
 
-1.  Launch the Native Mobile App Builder from the **App** menu. Walk through the wizard and configure the app's details and tokens (for more information, see [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app/)):
+1.  Launch the Native Mobile App Builder from the **App** menu. Walk through the wizard and configure the app's details and tokens (for more information, see [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/)):
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-deep-link/launch-native-mobile-app-builder.png" alt="launch native mobile builder"   width="400"  >}}
 
@@ -150,9 +150,9 @@ Add a few test link buttons, for example {app://myapp/task/123} or {makeitnative
 
 ## 5. Read more
 
-*   [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app/)
-*   [React Native Linking](https://facebook.github.io/react-native/docs/linking)
-*   [Deep Linking Android](https://developer.android.com/training/app-links/deep-linking)
-*   [Deep Linking iOS](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app)
-*   [Universal Linking iOS](https://developer.apple.com/ios/universal-links/)
-*   [URL Schema vs Universal Link](https://medium.com/wolox-driving-innovation/ios-deep-linking-url-scheme-vs-universal-links-50abd3802f97)
+* [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/)
+* [React Native Linking](https://facebook.github.io/react-native/docs/linking)
+* [Deep Linking Android](https://developer.android.com/training/app-links/deep-linking)
+* [Deep Linking iOS](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app)
+* [Universal Linking iOS](https://developer.apple.com/ios/universal-links/)
+* [URL Schema vs Universal Link](https://medium.com/wolox-driving-innovation/ios-deep-linking-url-scheme-vs-universal-links-50abd3802f97)

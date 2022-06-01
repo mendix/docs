@@ -47,7 +47,7 @@ With these shortcomings in mind, we developed a Mendix OTA update mechanism whic
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Use Mendix Studio Pro v9.7 and above.
-* Deploy your app by completing [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app/).
+* Deploy your app by completing [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/).
 * Install your app on a test device or emulator.
 * Read the [Offline-First](/refguide/offline-first/) reference guide. Understand this document before issuing OTA updates or releasing new versions.
 

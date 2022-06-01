@@ -51,10 +51,10 @@ However, which operations are allowed depends on how the app is deployed:
 
 |                                   | Delete an app                                                | Deactivate an app                                            | Delete a free Mendix Cloud environment                       |
 | --------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Licensed Mendix Cloud environment | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | Not applicable                                               |
+| Licensed Mendix Cloud environment | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
 | Free Mendix Cloud Environment     | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} |
-| No cloud resource                 | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | Not applicable                                               |
-| Private cloud environment         | Not supported                                                | Not supported                                                | Not supported                                                |
+| No cloud resource                 | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+| Private cloud environment         | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
 
 The consequences of the operations are shown in the table below:
 
@@ -71,7 +71,7 @@ On the **Active Apps** tab of this page, you can see a list of the active apps t
 {{< figure src="/attachments/developerportal/control-center/active-apps-overview.png" >}}
 
 
-When you select one or more apps via the check boxes on the **Active Apps** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating apps, and deleting apps.
+When you select one or more apps via the check boxes on the **Active Apps** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating apps, and deleting an app.
 
 {{% alert color="info" %}}
 Currently, you can only deactivate up to 20 apps and delete one app in one go. You cannot deactivate and delete an app that is deployed in the licensed Mendix Cloud environment. For details, see the two tables at the beginning of [the current section](#active-apps-tab).
@@ -88,13 +88,13 @@ If the app is deployed in the free Mendix Cloud environment, you can find the **
 Th profile page has the following tabs:
 
 * **App Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings/) page for your app in the Developer Portal.
-*  **Members** – This tab presents the active members and external members of the app.
+*  **Members** – This tab presents the internal members and external members of the app.
 
     * You can directly deactivate a member from the app by clicking their name and selecting **Deactivate Member**.
     * For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/collaborate/team/#managing) page.
     * As a Mendix Admin, you can also add yourself to a team via this page.
 
-*  **Environments** – This tab shows all the environments that this app is deployed
+*  **Environments** – This tab shows all the Mendix Public Cloud environments
 
     * You can directly delete a free Mendix Cloud environment on this tab. For details, see the two tables at the beginning of [the current section](#active-apps-tab).
 

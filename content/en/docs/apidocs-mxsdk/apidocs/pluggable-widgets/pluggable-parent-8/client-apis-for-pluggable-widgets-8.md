@@ -35,7 +35,7 @@ A user can specify multiple classes for every widget. They can do this either di
 
 A user can specify a custom CSS for every widget on a web page by using the [style](/refguide/common-widget-properties/#style) property. This styling is passed to a client component through an optional `style` prop of the type `CSSProperties`.
 
-On native pages, the meaning of a `style` prop is very different. First of all, a user cannot specify the aforementioned inline styles for widgets on a native page. So a `style` prop is used to pass styles computed based on configured classes. A client component will receive an array with a single [style object](/refguide/native-styling-refguide/#style-objects) with all applicable styles combined.
+On native pages, the meaning of a `style` prop is very different. First of all, a user cannot specify the aforementioned inline styles for widgets on a native page. So a `style` prop is used to pass styles computed based on configured classes. A client component will receive an array with a single [style object](/refguide/mobile/designing-mobile-user-interfaces/widget-styling-guide/#style-objects) with all applicable styles combined.
 
 {{% alert color="info" %}}
 This property was introduced in Mendix 8.0 with an array of style objects. This array was changed to contain a single style object in Mendix 8.6.

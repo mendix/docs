@@ -112,7 +112,7 @@ If the entity contains one-way navigable associations there will be a note at th
 
 The following apply for all associations with the external entity:
 
-**Navigability indicator** – an icon icon indicating whether an association is one way navigable or not
+**Navigability indicator** – an icon indicating whether an association is one-way navigable or not
 **Name** – name of the association as displayed in the current app
 **Type** – read-only for associations between two external entities
 **Owner** – read-only for associations between two external entities
@@ -143,9 +143,9 @@ When you **Edit** an association that is included for two entities exposed in th
 * **Multiplicity** – read-only multiplicity values from the originating app
 * **Documentation** – go to this tab to add a local description for the external entity association
 
-If the association is one-way naviagable there will be a note at the top of the dialog.
+If the association is one-way navigable there will be a note at the top of the dialog.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/association-properties-one-way-navigable.png" alt="Edit external associations one way navigable" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/association-properties-one-way-navigable.png" alt="Edit external associations one-way navigable" >}}
 
 ### 2.3.2 Connecting Two External Entities
 

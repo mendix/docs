@@ -39,9 +39,7 @@ These are some examples of what you can find on the dashboard:
 
 ## 3 Apps {#apps}
 
-### 3.1 Active Apps Tab {#active-apps-tab}
-
-On the **Active Apps** tab, you may do the following operations to an app:
+You may do the following operations to an app:
 
 * Delete an app
 * Deactivate an app
@@ -64,6 +62,9 @@ The consequences of the operations are shown in the table below:
 | App project stays persistent                                 | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} |
 | Project members can access the app project on the Developer Portal | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} |
 | Cloud environment stays persistent                           | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+
+### 3.1 Active Apps Tab
+
 #### 3.1.1 Overview of Active Apps
 
 On the **Active Apps** tab of this page, you can see a list of the active apps that belong to your company.
@@ -71,17 +72,17 @@ On the **Active Apps** tab of this page, you can see a list of the active apps t
 {{< figure src="/attachments/developerportal/control-center/active-apps-overview.png" >}}
 
 
-When you select one or more apps via the check boxes on the **Active Apps** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating apps, and deleting an app.
+When you select one or more apps via the check boxes on the **Active Apps** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating apps, and deleting an app. For details, see the two tables at the beginning of [the current section](#apps).
 
 {{% alert color="info" %}}
-Currently, you can only deactivate up to 20 apps and delete one app in one go. You cannot deactivate and delete an app that is deployed in the licensed Mendix Cloud environment. For details, see the two tables at the beginning of [the current section](#active-apps-tab).
+Currently, you can only deactivate up to 20 apps and delete one app in one go.
 {{% /alert %}}
 
 #### 3.1.2 Profile Page of an Active App
 
 When you click the name of an active app, a profile page opens with the app profile.
 
-If the app is deployed in the free Mendix Cloud environment, you can find the **...** icon on the upper-right corner of the profile page. You can click the icon and deactivate the app or delete the app. 
+If the app is deployed in the free Mendix Cloud environment, you can find the **...** icon on the upper-right corner of the profile page. You can click the icon and deactivate the app or delete the app. For details, see the two tables at the beginning of [the current section](#apps).
 
 {{< figure src="/attachments/developerportal/control-center/deactivate-delete-app.png" >}}
 
@@ -96,7 +97,7 @@ Th profile page has the following tabs:
 
 *  **Environments** – This tab shows all the Mendix Public Cloud environments
 
-    * You can directly delete a free Mendix Cloud environment on this tab. For details, see the two tables at the beginning of [the current section](#active-apps-tab).
+    * You can directly delete a free Mendix Cloud environment on this tab. For details, see the two tables at the beginning of [the current section](#apps).
 
         {{< figure src="/attachments/developerportal/control-center/delete-free-environment.png" >}}
 
@@ -104,9 +105,33 @@ Th profile page has the following tabs:
 
 ### 3.2 Deactivated Apps Tab
 
+#### 3.2.1 Overview of Deactivated Apps
+
 The **Deactivated Apps** tab lists your company's deactivated apps.
 
-When you select one or more apps via the check boxes on **Deactivated Apps** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, activating apps, and deleting apps.
+When you select one or more apps via the check boxes on **Deactivated Apps** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, activating apps, and deleting an app. For details, see the two tables at the beginning of [the current section](#apps).
+
+{{% alert color="info" %}}
+Currently, you can only activate up to 20 apps and delete one app in one go.
+{{% /alert %}}
+
+#### 3.1.2 Profile Page of an Deactivated App
+
+When you click the name of a deactivated app, a profile page opens with the app profile.
+
+If the app is deployed in the free Mendix Cloud environment, you can find the **...** icon on the upper-right corner of the profile page. You can click the icon and activate the app or delete the app. 
+
+{{% todo %}}Image needed{{% / todo %}}
+
+Th profile page has the following tabs:
+
+* **App Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings/) page for your app in the Developer Portal.
+* **Members** – This tab presents the internal members and external members of the app.
+
+  * You can directly deactivate a member from the app by clicking their name and selecting **Deactivate Member**.
+  * For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/collaborate/team/#managing) page.
+  * As a Mendix Admin, you can also add yourself to a team via this page.
+* **App Roles** –  this tab presents the team roles defined via the **Default App Roles** tab and/or customized for a particular app
 
 ### 3.3 App Roles Tab
 

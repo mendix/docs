@@ -17,7 +17,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Portal Improvements
 
-* We now provide the `mxpc-cli` configuration tool in versions which run on ARM64 architectures.
+* We now provide the `mxpc-cli` configuration tool (version 2.5.1 and above) in versions which run on ARM64 architectures.
 
 ### May 25th, 2022
 

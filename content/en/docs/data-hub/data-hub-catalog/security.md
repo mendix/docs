@@ -52,4 +52,3 @@ The access level for a registered OData service is shown in the **Service Metada
 ## 4 Using Custom HTTP Header Validation for Published Entities {#http-header-validation}
 
 Access to the data by specific users of the final app is defined in the *publishing app* of the data source.
-

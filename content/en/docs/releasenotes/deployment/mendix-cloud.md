@@ -17,6 +17,16 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### June 2nd, 2022
+
+#### Fix
+
+* We fixed an issue where some customers were seeing an error message when leaving the permissions tab of the environments page when there were no actual errors. (Ticket 146866)
+
+#### Improvements
+
+* We improved the UX for setting up two-factor authentication.
+
 ### May 31st, 2022
 
 #### Fix – AppDynamics

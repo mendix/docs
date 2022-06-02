@@ -33,7 +33,7 @@ Alternatives to using OIDC SSO for managing single sign on are:
 
 * **B2C-apps:** Your app is aimed at consumers who have an identity at a 'social IdP' which uses OIDC, such as Google. In this case your app will only delegate the authentication to the IdP, no further user information is available to the app.
 * **B2E-app:** Your app is aimed at your company's employees and you want these employees to sign in to your app using corporate credentials hosted by your identity provider (IdP) that supports the OIDC protocol. In this case your app may have its own logic to assign user roles or you may use authorization information from your IdP as provided to your app using an access token.
-* **API-consumption.** If your app makes calls to 'downstream' APIs on behalf of your end-user, you can use the access token obtained via the “OIDC SSO” module. This scenario is not supported when using SAML SSO. This makes the OIDC SSO module suitable for Mendix customers using Mendix Data Hub.
+* **API-consumption.** If your app makes calls to APIs of other services on behalf of your end-user, you can use the access token obtained via the “OIDC SSO” module. This scenario is not supported when using SAML SSO. This makes the OIDC SSO module suitable for Mendix customers using Mendix Data Hub.
 * **Xcelerator-apps.** Your Siemens Xcelerator app is designed to be integrated with Siemens' SAM IdP.  The Siemens SAM IdP supports the OIDC protocol and allows your app to delegate both authentication (login) and authorization (roles).
 
 ### 1.2 Features and Limitations
@@ -241,7 +241,13 @@ The OIDC SSO module supports multiple identity providers. Since each provider ca
 
 ### 7.1 Performing API Calls on Behalf of an Authenticated User
 
-You might want to make API calls to other apps/services on behalf of the end-user. As you have used the OIDC module to authenticate the end-user to your app, your app also has an access token for this end-user. You can use this access token to propagate the end-user's identity to the API so the API does not need to have a user identifier in the payload.
+You might want to make API calls to other apps/services on behalf of the end-user. As you have used the OIDC module to authenticate the end-user to your app, your app also has an access token for this end-user. 
+
+If the API supports OAuth and/or OIDC, you can use this access token to propagate the end-user's identity to the API so the API does not need to have a user identifier in the payload. To do this, the API needs to:
+
+* accept OAuth bearer tokens in the HTTP `Authorization` request header field, as per [section 7 of RFC 6749](https://datatracker.ietf.org/doc/html/rfc6749#section-7)
+* accept Access Tokens from the same IdP where your user was authenticated
+* parse the Access Token as JWT (as suggested by [RFC 9068](https://datatracker.ietf.org/doc/html/rfc9068) – although your Access Tokens do not necessarily have to be fully compliant with that RFC) or be able to invoke the UserInfo endpoint (as suggested by the [OIDC specs](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo))
 
 Access tokens have a short lifespan for security reasons, so you need to ensure that it has not expired. If the access token has expired, you can retrieve a new one using the refresh token that was acquired together with the access token.
 
@@ -300,7 +306,7 @@ The microflow returns an object of type `System.HttpResponse`. This could indica
 
 ### 7.2 PKCE Configuration{#pkce}
 
-PKCE (pronounced as “pixie”) adds enhanced security to the original OAuth protocol. It is generally recommended to use this feature for better protection against hackers who try to get access to your app. You need to check if your IdP supports PKCE. When it does, it will have “S256” as the value for `code_challenge_methods_supported` on its well-known endpoint.
+PKCE (pronounced as “pixie”) adds enhanced security to the original OAuth protocol. It is generally recommended to use this feature for better protection against hackers who try to get access to your app. You need to check if your IdP supports PKCE. When it does, it will have “S256” as the value for `code_challenge_methods_supported` which you can discover by manually querying its well-known endpoint.
 
 To enable PKCE, check the **Use PKCE** radio button when performing [OIDC Client Configuration](#client-configuration).
 

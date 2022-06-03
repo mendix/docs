@@ -44,7 +44,7 @@ Only team members who have permission to *Deploy, Publish, and Monitor* can view
 
 {{% alert color="info" %}}
 
-Only team members with a *user role* which includes permission to *Deploy, Publish, and Monitor* the app will be listed in the Node Permissions tab. For completeness, you will also see deactivated users who have been given these permissions, even though they no longer have access to your project. 
+Note that only team members with a *user role* which includes permission to *Deploy, Publish, and Monitor* the app will be listed in the Node Permissions tab.
 
 You can change permissions for team members in [Team](/developerportal/collaborate/team/).
 

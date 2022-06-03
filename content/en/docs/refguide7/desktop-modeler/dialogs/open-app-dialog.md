@@ -4,7 +4,6 @@ url: /refguide7/open-app-dialog/
 parent: "dialogs"
 aliases:
     - /refguide7/open-project-dialog.html
-    - /refguide7/open-project-dialog
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

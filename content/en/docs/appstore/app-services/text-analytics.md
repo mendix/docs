@@ -2,7 +2,7 @@
 title: "Text Analytics"
 url: /appstore/app-services/text-analytics/
 category: "App Services"
-description: "This document describes the configuration and usage of the Text Analystics app service, which enables performing text analytics in your web apps。"
+description: " "
 tags: ["text analytics", "service", "app store", "marketplace", "component", "platform support"]
 ---
 
@@ -58,8 +58,8 @@ A trial gives everyone in your company one-month access to the app service. The 
 3. Select the check box to agree to the **Terms & Conditions**.
 4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used. 
-6. Click the link in the email to go to the [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **Text Analytics** to open the service management dashboard.
+6. Click the link in the email to go to the [Company Subscriptions](https://docs.mendix.com/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
+7. Click **Text Analytics** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
 8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. Later you will need to [configure the license token](#configure-license-token) in your app.
 
 #### 2.1.2 Starting a Subscription
@@ -69,8 +69,8 @@ A trial gives everyone in your company one-month access to the app service. The 
 3. Select your subscription plan.
 4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Owner will receive an email that says the app service is ready to be used. 
-6. Click the link in the email to go to the [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **Text Analytics** to open the service management dashboard.
+6. Click the link in the email to go to the [Company Subscriptions](https://docs.mendix.com/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
+7. Click **Text Analytics** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
 8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. Later you will need to [configure the license token](#configure-license-token) in your app.
 
 ### 2.2 Installing the Component in Your App
@@ -200,7 +200,7 @@ The **TokenEndpoint** constant provides a valid endpoint of security token servi
 
 #### 3.3.1 CreateDominantLanguageDetector
 
-The **CreateDominantLanguageDetector** microflow takes **text** (String) as input parameters to create DominantLanguageDetector as a return object from the back-end service.
+The **CreateDominantLanguageDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create DominantLanguageDetector as a return object from the back-end service.
 
 {{< figure src="/attachments/appstore/app-services/text-analytics/createdominantlanguagedetector.png" alt="createdominantlanguagedetector" >}}
 
@@ -404,7 +404,7 @@ If you deploy your app in your own environment, you need to configure the licens
 
 ## 4 Usage
 
-### 4.1 Performing Dominant Language Detection in Your Browser
+### 4.1 Performing Language Detection in Your Browser
 
 Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLanguage** nanoflow to perform language detection. Follow these steps to configure the language detection:
 
@@ -415,7 +415,7 @@ Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLan
 
         {{< figure src="/attachments/appstore/app-services/text-analytics/call-createdominantlanguagedetector-microflow.png" alt="call-createdominantlanguagedetector-microflow" >}}
 
-   4.  Right-click the microflow activity you just added and select **Set $detector as return value** in the pop-up menu.
+   4.  Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
 
        {{< figure src="/attachments/appstore/app-services/text-analytics/createdominantlanguagedetector-nanoflow.png" alt="createdominantlanguagedetector-nanoflow" >}}
 
@@ -767,13 +767,13 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
 
 ### 4.7 Checking Statistics on the Usage Dashboard {#check-usage}
 
-The **Usage Dashboard** shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
+The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
 1. Log into the Marketplace.
 2. Go to **My Marketplace** and then do as follows:
 
-   * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
-   * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+   * If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+   * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
 3. Find **Text Analytics** in the list.
 4. Click **Usage Dashboard** to show the usage details.
 

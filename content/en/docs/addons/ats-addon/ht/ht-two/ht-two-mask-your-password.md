@@ -111,4 +111,4 @@ You can now unmask your password using ATS. You can use these steps as well to m
 
 ## 4 Next Up
 
-You have now learned how to unmask your password in a login action. The next how-to to complete is [How to Upload a File in Your App Using ATS](/addons/ats-addon/ht-two-upload-file-using-ats/). You can find an overview of all the how-tos and the structure on [ATS 2 How-tos](/addons/ats-addon/ht-two/). We advise you to follow the predefined structure.
+You have now learned how to unmask your password in a login action. The next how-to to complete is [How to Upload a File in Your App Using ATS](/addons/ats-addon/ht-two-upload-file-using-ats/). You can find an overview of all the how-tos and the structure on [ATS 2 How-to's](/addons/ats-addon/ht-two/). We advise you to follow the predefined structure.

@@ -6,7 +6,6 @@ weight: 20
 tags: ["mobile", "marketplace", "phonegap"]
 aliases:
     - /refguide8/publish-packages-to-mobile-stores.html
-    - /refguide8/publish-packages-to-mobile-stores
 ---
 ## 1 Introduction
 

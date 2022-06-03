@@ -2,10 +2,10 @@
 title: "2.10"
 url: /releasenotes/add-ons/ats-2.10/
 parent: "ats-2"
-weight: 90
 ---
 
 ## 2.10.0
+
 
 **Release date: May 18th 2019**
 

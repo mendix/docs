@@ -1,6 +1,5 @@
 ---
 title: "Migrate a Free App to Mendix Basic"
-linktitle: "Free App to Basic Package"
 url: /developerportal/deploy/migrate-free-app-to-basic/
 parent: "licensing-apps"
 weight: 40

@@ -2,7 +2,6 @@
 title: "2.6"
 url: /releasenotes/add-ons/ats-2.6/
 parent: "ats-2"
-weight: 94
 ---
 
 ## 2.6.1
@@ -57,6 +56,6 @@ Mendix applications built on Mendix versions 7.11 or 7.12 can now be tested and 
 * Recording the login step did not capture the password properly, so it had to be set again after recording. Also, the login via Mendix SSO (MxID) was not recorded. Both issues have been been fixed.
 * The **Find Element by ID** function did not work in ATS 2.5. This has been fixed.
 
-### Limitations
+### Known Issues
 
 * When you click **Download** on the newly added **Download report** dialog box before the doughnut chart has finished rendering, the chart will not be shown in the PDF. 

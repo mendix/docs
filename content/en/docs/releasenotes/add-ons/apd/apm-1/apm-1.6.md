@@ -2,7 +2,6 @@
 title: "1.6"
 url: /releasenotes/add-ons/apm-1.6/
 parent: "apm-1"
-weight: 100
 ---
 
 ## 1.6.0

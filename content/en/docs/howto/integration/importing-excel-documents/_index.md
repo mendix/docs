@@ -190,13 +190,13 @@ Follow these steps to create the import template via the Excel file:
 
 	{{< figure src="/attachments/howto/integration/importing-excel-documents/18581935.png" >}}
 
-7. Under **Connect columns to attributes**, click **Connect matching attributes**:
+10.  Under **Connect columns to attributes**, click **Connect matching attributes**:
 
 	{{< figure src="/attachments/howto/integration/importing-excel-documents/18581934.png" >}}
 
 	This will automatically match attributes of the selected Mendix object that have the same name as the **Caption**.
 
-8. Complete the template as you did in the [Creating the Import Template](#creating) section above.
+11.  Complete the template as you did in the [Creating the Import Template](#creating) section above.
 
 	{{% alert color="info" %}}Remember that you have to set a key attribute for the **Customer** object as well as the **Order** object.{{% /alert %}}
 

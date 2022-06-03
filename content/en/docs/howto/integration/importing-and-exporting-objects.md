@@ -8,18 +8,16 @@ tags: ["mpk", "import", "export", "document", "module", "widget"]
 
 ## 1 Introduction
 
-In Mendix, you can save time by importing modules others have created and by exporting new modules for others to use. The Marketplace provides this functionality on a macro level. You can also use built-in import and export functions to share content between your own apps, import unofficial modules, and share entire apps.
-
-There are *.mpk* packages that can contain apps, modules, or widgets; *.mxmodule* packages with add-ons and *.mxsolution* packages solutions. 
+In Mendix, you don't need to reinvent the wheel. You can save time by importing modules others have created and by exporting new modules for others to use. The Marketplace provides this functionality on a macro level. You can also use 's built-in import and export functions to share content between your own apps, import unofficial modules, and share entire projects.
 
 {{% alert color="warning" %}}
-When you have an app package, you cannot import individual modules or widgets separately from it. 
+Please note throughout this how-to that Mendix packages are stored as Mendix package (*.mpk*) files. These are not compatible with each other; you cannot, for example, import individual *modules* from a *project* package.
 {{% /alert %}}
 
 **This how-to will teach you how to do the following:**
 
 * Import and export the following Studio Pro objects:
-    * apps
+    * projects
     * modules
     * widgets
     * module documents such as pages or microflows
@@ -30,15 +28,13 @@ When you have an app package, you cannot import individual modules or widgets se
 Be careful when importing objects, as you can overwrite your existing work. Pay attention to prompts and warnings along the way!
 {{% /alert %}}
 
-### 2.1 Importing App and Solution Packages {#import-app-package}
+### 2.1 Importing App Packages
 
-A Mendix package (*.mpk*) file can store a complete Mendix app. 
+A Mendix package (*.mpk*) file can store a complete Mendix project.
 
-You can also import a solution package (*.mxsolution*), which is also a complete Mendix app that was developed as out of the box solution.  
+To import a complete Mendix app package, follow these steps:
 
-To import a complete an app or solution package, follow these steps:
-
-1. Click the **File** menu in and select **Import App Package**:
+1. Click the **File** menu in  and select **Import App Package**:
 
     {{< figure src="/attachments/howto/integration/importing-and-exporting-objects/file-import-app-project.png" >}}
 
@@ -52,15 +48,13 @@ To import a complete an app or solution package, follow these steps:
     * Provide an **App name** (by default, it will be named as it was in the Mendix package file)
     * Determine the local folder where you would like to store your app in **App directory**
    
-3.  Click **OK**, and your app will be loaded in.
+3.  Click **OK**, and your app will be loaded in .
 
-### 2.2 Importing Module Packages {#import-module}
+### 2.2 Importing Module Packages
 
-Mendix modules can either be stored in a Mendix package (*.mpk*) file or have an *.mxmodule* extension if they are [add-on or solution  modules](/refguide/configure-add-on-and-solution-modules/). 
+A Mendix package (*.mpk*) file can store a Mendix app module.
 
-#### 2.2.1 Importing a Module Package Through the App Explorer
-
-To import module packages through the App Explorer in Studio Pro, follow these steps:
+To import module packages, follow these steps:
 
 1. Right-click your app in the **App Explorer** and select **Import Module Package**.
 
@@ -68,40 +62,20 @@ To import module packages through the App Explorer in Studio Pro, follow these s
 
 3. In the dialog box, choose a name for your module and select whether to create a new module or replace an existing one:
 
+    {{< figure src="/attachments/howto/integration/importing-and-exporting-objects/18582113.png" >}}
+
     {{< figure src="/attachments/howto/integration/importing-and-exporting-objects/18582112.png" >}}
 
     {{% alert color="info" %}}If you replace the module with a new version, the existing user data will be retained based on the names of entities, attributes, and associations. If you delete a module and then add a newer version of it, all user data will be lost.
     {{% /alert %}}
-    
+
 4. Click **Import**. You may see a **Warning** pop-up window that will inform you of any included module dependencies that will be overwritten in your app.
 
-5. Click **OK**. 
+5. Click **OK**. You will see your new or replaced module in the **App Explorer**.
 
-If you are importing a module with the *.mxmodule* extension, a dialog informing you about the imported add-on module will be displayed.
-{{< figure src="/attachments/howto/integration/importing-and-exporting-objects/mxmodule-notification.png" >}}
+    You will also see your changes in the **Changes** section. In this example, the existing module has been deleted and replaced by the newly imported module:
 
-You see a new or replaced module in the **App Explorer**. You also see your changes in the **Changes** section. In this example, the existing module has been deleted and replaced by the newly imported module:
-
-{{< figure src="/attachments/howto/integration/importing-and-exporting-objects/18582109.png" >}}
-
-#### 2.2.2 Importing a Add-On Module Package Through the App Directory
-
-{{% alert color="info" %}}
-
-You can only use this procedure to import add-on modules (*.mxmodule* files).
-
-{{% /alert %}}
-
-If you would like to import an add-on module (the *.mxmodule* file) to your app, you can add it manually to the app directory. Follow the steps below:
-
-1. Go to **App** > **Show App Directory in Explorer**. 
-2. Add *.mxmodule* file to the **modules** folder (you need to create this folder if it is not there). 
-3. In Studio Pro, go to **App** > **Synchronize App Directory** on the menu bar.
-
-A dialog informing you about the imported add-on module will be displayed.
-{{< figure src="/attachments/howto/integration/importing-and-exporting-objects/mxmodule-notification.png" >}}
-
-The add-on module is added to the **App Explorer**.
+    {{< figure src="/attachments/howto/integration/importing-and-exporting-objects/18582109.png" >}}
 
 ### 2.3 Importing Module Documents
 
@@ -187,11 +161,9 @@ To export an app, follow these steps:
 
     {{< figure src="/attachments/howto/integration/importing-and-exporting-objects/file-export-package.png" >}}
 
-2. The **Export App Package** dialog box will appear, which enables you to select the type of the package, set the export location, and select data to export (if required):
+2. The **Export App Package** dialog box will appear, which enables you to set the export location and select data to export (if required):
 
     {{< figure src="/attachments/howto/integration/importing-and-exporting-objects/18582090.png" >}}
-
-    For more information on types of packages, see [Export App Package](/refguide/export-project-package-dialog/) in *Mendix Studio Pro 9 Guide*.
 
     The **Existing snapshot** option will only be available when a data snapshot was created earlier using the **Add snapshot of data** menu option from the **Team** menu. It is also possible to include a new snapshot based on the current state of the local database. This option is only available after the app has been started at least once.
 
@@ -211,7 +183,7 @@ To export a module, follow these steps:
 
     {{< figure src="/attachments/howto/integration/importing-and-exporting-objects/18582093.png" >}}
 
-    Here you can select files you would like to include in your package. This list includes any files in the **userlib** or **resources** folders in your app directory. If you do not want to include these files, you can uncheck the boxes.
+    Here you can select files you would like to include in your package. This list includes any files in the **userlib** or **resources** folders in your app directory. If you don't want to include these files, you can uncheck the boxes.
 
     {{% alert color="info" %}}To uncheck all the files quickly, press **<kbd>Ctrl</kbd>+<kbd>A</kbd>** to select all of the items then press the <kbd>spacebar</kbd> to uncheck all the objects.
 {{% /alert %}}

@@ -1,8 +1,7 @@
 ---
-title: "Applying IP Protection"
+title: "IP Protection"
 url: /appstore/creating-content/sol-ip-protection/
 parent: "sol-development"
-weight: 2
 description: "Protect intellectual property in Solutions, App Services & Connectors"
 tags: ["adaptive solutions", "ip protection"]
 ---
@@ -11,17 +10,13 @@ tags: ["adaptive solutions", "ip protection"]
 
 Because subscriptions for solutions, app services, connectors, and modules are sold on the Mendix Marketplace, you will have intellectual property (IP) protection concerns as a publisher. You will want to protect the IP contained within the model that makes up the content you are selling. In addition, you will want to protect any custom usage metering so that customers cannot accidentally (or intentionally) disable usage metering. Therefore, it is a good idea to consider applying at least some IP protection in your Marketplace components.
 
-{{% alert color="info" %}}
-
-Access to this functionality is currently limited and can be gained through the [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
-
-{{% /alert %}}
-
 ## 2 Why IP Protection?
 
-Reusable solutions, app services, connectors, and other modules contain IP in the form of app model content like microflows that is reusable and which can be monetized. When you build a business around these types of sellable content, there is a risk associated with the loss of your IP. If customers copy your IP without compensating you as the publisher, then you lose out on part of your potential revenue.
+### 2.1 Protecting Intellectual Property
 
-Therefore, when distributing such content, it is desirable to hide parts of the implementation from the eyes of your customers while making sure that the functionality can be used through well-designed APIs.
+Reusable solutions, app services, connectors, and other modules contain IP in the form of app model content like microflows that is reusable and which can be monetized. When you build a business around these types of sellable content, there is a risk associated with the loss of your IP. If customers copy your IP without compensating you as the publisher, then you lose out on part of your potential revenue. Therefore, when distributing such content, it is desirable to hide parts of the implementation from the eyes of your customers while making sure that the functionality can be used through well-designed APIs.
+
+### 2.2 Guaranteeing Proper Functioning & Guarding Against Misuse
 
 You can also apply the concept of IP protection to protect your modules from being used in your organization and thus avoid the misuse of their functionality. In this case, rather than protecting your IP for monetary reasons, you are protecting your IP to guarantee the functionality is used as intended. This will help streamline your maintenance and upgrade paths. 
 
@@ -34,6 +29,10 @@ Not all parts of a component need to be protected. It is often desirable to prot
 * **Any part of the solution that the customer should never modify** – hide implementation details behind APIs to ensure customers or implementation teams focusing on extensions are not distracted by implementation details
 
 ## 4 Applying IP Protection Effectively
+
+{{% alert color="info" %}}
+IP protection is currently in [Private Beta](/releasenotes/beta-features/) and only available to select early adopters. Reach out to the [Mendix Solutions Vendor Program](https://www.mendix.com/marketplace-vendor-program/solutions/) team to request access.
+{{% /alert %}}
 
 ### 4.1 Best Practices for Architecting
 

@@ -1,7 +1,7 @@
 ---
 title: "9.9"
 url: /releasenotes/sdk/metamodel-9.9/
-weight: 91
+parent: "metamodel-9"
 ---
 
 ## 9.9.0

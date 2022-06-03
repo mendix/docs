@@ -22,4 +22,5 @@ Stay updated on the health of your app and reference these documents troubleshoo
 * [Set Log Levels](/howto7/monitoring-troubleshooting/log-levels/)
 * [Monitor Mendix Using JMX](/howto7/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Solve Load & Import Errors](/howto7/monitoring-troubleshooting/solving-load-and-import-errors/)
+* [Manage Application Performance with AppDynamics](/howto7/monitoring-troubleshooting/manage-application-performance-with-appdynamics/)
 * [Manage Application Performance with New Relic](/howto7/monitoring-troubleshooting/manage-application-performance-with-new-relic/)

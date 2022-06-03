@@ -35,7 +35,7 @@ In a single node scenario, the tasks in a task queue will simply be executed on 
 
 In a clustered setting, the Mendix runtime distributes these tasks transparently throughout the cluster. Should a cluster node be shutdown or fail halfway during executing a task, then the remaining cluster nodes will pick it up (eventually, when the node is detected to be down) and re-execute it. This happens automatically and does not need to be managed.
 
-You can control how many tasks can run in parallel on each node or in the whole cluster when you create your task queue. See [Creating Task Queues](#create-queue), below, for more information.
+You can control how many tasks can run in parallel on each node when you create your task queue. See [Creating Task Queues](#create-queue), below, for more information.
 
 #### 2.1.3 Context in Task Queues
 
@@ -55,11 +55,7 @@ Background execution is done in so called **Task Queues**. They can be created i
 
 3. Click **Task Queue**.
 
-4. Enter the value for **Threads** for the Task Queue.
-
-5. Select the **Scope** for the threads (since Mendix 9.13):
-    - with "Per Node" the maximum thread count will be limited per node. When this option is selected, adding new nodes to the cluster will also increase the total thread count in overall cluster.
-    - with "Cluster-wide" the maximum thread count will be limited cluster-wide. When this option is selected, total thread count in the cluster will be fixed and adding/removing new nodes will not have any impact on the thread count.
+4. Enter the value for **Threads** for each cluster node.
 
 Task Queues have a number threads. Each of these threads can process one task at a time. That is, a queue will pick up as many concurrent tasks as it has threads. Whenever a task is finished, the next one will be picked up.
     
@@ -69,7 +65,7 @@ Task Queues have a number threads. Each of these threads can process one task at
 In versions of Mendix below 9.9.0, there is a limit of 40 threads per cluster node.
 {{% /alert %}}
 
-In general, one or two threads should be enough, unless there is a large number of tasks or tasks take a long time and need to execute in parallel. Having many threads will put additional load on the database and should not be done if not needed.
+In general, one or two threads should be enough, unless there is a large number of tasks or tasks take a long time and need to execute in parallel. Having many threads will put additional load on the database and should not be done if not needed. Remember that, in a horizontally-scaled app, this is the number of threads for each *node*, not the total number of threads.
 
 When choosing the number of threads for a task queue, use the following guidelines:
 * If there are only a few tasks use a single thread.
@@ -77,7 +73,7 @@ When choosing the number of threads for a task queue, use the following guidelin
 * Only use more threads than the available number of cores if there are a lot of tasks and they perform blocking calls.
 * Keep in mind that using more threads than the number of cores will require additional scheduling and will not necessarily improve the queued task throughput.
     
-### 2.3 Queueing Microflow Executions{#queuing}
+### 2.3 Queueing Microflow Executions
 
 #### 2.3.1 In Studio Pro {#sp}
 
@@ -125,25 +121,7 @@ Core.userActionCall("AModule.SomeJavaAction")
 
 The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the task; executing the task will be done with a [new, but equivalent context](#context). See the [API documentation](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/Core.html#userActionCall(java.lang.String)) for more information.
 
-### 2.5 Task scheduling {#scheduling}
-
-In Mendix version 9.12.0 and above, it is possible to schedule a task to be executed at a specified date/time. This can be done through the API, for instance:
-
-```java
-Calendar calendar = Calendar.getInstance();
-calendar.add(Calendar.DATE, 1); // add 1 day to the current date
-Date date = calendar.getTime();
-Core.microflowCall("AModule.SomeMicroflow")
-  .withParam("Param1", "Value1")
-  .withParam("Param2", "Value2")
-  .executeInBackground(context, "AModule.SomeQueueName", date);
-Core.userActionCall("AModule.SomeJavaAction")
-  .withParams(context, "Value1", "Value2")
-  .executeInBackground(context, "AModule.SomeQueueName", date);
-// the tasks will be executed 1 day from this point in time
-```
-
-### 2.6 Retry on Failure {#retry}
+#### 2.4.3 Retry on Failure {#retry}
 
 In Mendix version 9.9.0 and above, it is possible to automatically retry a task when it fails. The following options are available:
 
@@ -163,9 +141,7 @@ Core.userActionCall("AModule.SomeJavaAction")
   .executeInBackground(context, "AModule.SomeQueueName");
 ```
 
-Retries can also be combined with [scheduling](#scheduling) using the API.
-
-### 2.7 Configuration Options {#configuration}
+### 2.5 Configuration Options {#configuration}
 
 The period for a graceful shutdown of queues can be configured as a [custom runtime](/refguide/custom-settings/) setting in Studio Pro. 
 
@@ -178,7 +154,7 @@ The period for a graceful shutdown of queues can be configured as a [custom runt
 This grace period is applied twice during the [shutdown](#shutdown) (described below) so the maximum time that the runtime will wait for tasks to end is twice this value.
 {{% /alert %}}
 
-### 2.8 Interfacing the Queue {#interfacing-queue}
+### 2.6 Interfacing the Queue {#interfacing-queue}
 
 Besides scheduling and executing tasks, the Mendix platform keeps track of tasks that have been executed in the background: for example, which completed and which failed.
 
@@ -193,7 +169,7 @@ Tasks that have been processed, that is have completed or failed, are saved as o
 `System.ProcessedQueueTasks` objects are by default never deleted. The user is free to delete them when desired.
 If you are using Mendix version 9.9.0 or above, you can use the `com.mendix.core.ProcessedTasksCleanupAge` runtime setting if automatic cleanup is desired.
 
-### 2.9 Execution Context {#context}
+### 2.7 Execution Context {#context}
 
 Prior to Mendix 9.6 tasks were always executed in a system context, even if the scheduling microflow had **Apply entity access** set to *true* (see [Microflow Properties](/refguide/microflow/) for more information). As of Mendix 9.6 this behavior has been deprecated and tasks now run in an equivalent context to the one in which they were scheduled. This has the following effect:
 
@@ -213,7 +189,7 @@ You can remove this warning in the **Runtime** tab of the app **Settings** in St
 You will be asked to confirm this change as, after choosing *no*, you cannot switch back to *yes* because executing tasks in system contexts (unless scheduled from a system session) is deprecated.
 {{% /alert %}}
 
-### 2.10 Task Status
+### 2.8 Task Status
 
 The **Status** attribute of `System.QueuedTask` and `System.ProcessedQueueTask` reflects the state that a background task is in. The values are:
 
@@ -221,11 +197,10 @@ The **Status** attribute of `System.QueuedTask` and `System.ProcessedQueueTask` 
 * `Running`: The task is being executed.
 * `Completed`: The task executed successfully. A `System.ProcessedQueueTask` is added to reflect this.
 * `Failed`: The task is no longer executing, because an exception occurred. A `System.ProcessedQueueTask` containing the exception is added to reflect the failure. The task will not be retried.
-* `Retrying`: Same as `Failed` but the task will be retried.
 * `Aborted`: The task is no longer executing, because the cluster node that was executing it went down. A `System.ProcessedQueueTask` is added to reflect this. The task will be retried on another cluster node.
 * `Incompatible`: The task never executed, because the model changed in such a way that it cannot be executed anymore. This could be because the microflow was removed/renamed, the arguments were changed or the Task Queue was removed.
 
-### 2.11 Model Changes
+### 2.9 Model Changes
 
 During the startup of the Mendix runtime, there is a check to ensure that scheduled tasks in the database fit the current model. The following conditions are checked:
 
@@ -235,7 +210,7 @@ During the startup of the Mendix runtime, there is a check to ensure that schedu
 
 If any of these condition checks fail, tasks are moved to `System.ProcessedQueueTask` with **Status** `Incompatible`. The Runtime will only start after all scheduled tasks have been checked. This should in general not take very long, even if there are thousands of tasks.
 
-### 2.12 Shutdown {#shutdown}
+### 2.10 Shutdown {#shutdown}
 
 During shutdown, the `TaskQueueExecutors` will stop accepting new tasks. Running tasks are allowed a [grace period](#configuration) to finish. After this period, the runtime will send an interrupt to all task threads that are still running and again allow a grace period for them to finish. After the second grace period the runtime just continues shutting down, eventually aborting the execution of the tasks. The aborted tasks will be reset, so that they are re-executed later or on another cluster node. In development mode, the first grace period is shortened to 1 second.
 
@@ -243,16 +218,16 @@ During shutdown, the `TaskQueueExecutors` will stop accepting new tasks. Running
 Interrupting task threads may cause them to fail. These tasks will be marked as `Aborted` and retried at a later time.
 {{% /alert %}}
 
-### 2.13 Cleaning up old processed tasks {#cleanup}
+### 2.11 Cleaning up old processed tasks {#cleanup}
 
 The execution of a task produces a `System.ProcessedQueueTask` row in the database. Over time these accumulate and the table can grow large.
 
-In Mendix versions 9.9.0 and above, the `System.ProcessedQueueTask` can be cleaned up automatically by specifying the `com.mendix.core.ProcessedTasksCleanupAge` runtime setting. This setting specifies (in milliseconds) how old rows in the table have to be before they are automatically cleaned up. Only rows with the "Completed" status are cleaned up.
+In Mendix versions 9.9.0 and above, the `System.ProcessedQueueTask` can be cleaned up automatically by specifying the `com.mendix.core.ProcessedTaskCleanupAge` runtime setting. This setting specifies (in milliseconds) how old rows in the table have to be before they are automatically cleaned up. Only rows with the "Completed" status are cleaned up.
 
 When this setting is not specified, no cleanup is performed.
 
 {{% alert color="info" %}}
-When turning on the automatic cleanup after having used tasks for a long time, there might be many rows to clean up, which will be initiated when the runtime starts. This may cause additional load on the database, but will not block the startup. It is recommended not to do this during a busy period.
+When turning on the automatic cleanup after having used tasks for a long time, there might be many rows to clean up, which will be initiated when the runtime starts. This may cause additional load on the database, but will nog block the startup. It is recommended not to do this during a busy period.
 {{% /alert %}}
 
 In versions of Mendix below 9.9.0, you can clean up old tasks by creating a microflow for administrators to use if the table gets too large.

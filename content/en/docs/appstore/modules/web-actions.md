@@ -42,8 +42,3 @@ To take a picture, follow these steps:
 5.  After the execution, check if the picture was taken or not. The value returned from the action is a Boolean:
 
     {{< figure src="/attachments/appstore/modules/web-actions/check.png" alt="Check" >}}
-
-
-## 3 Strict CSP Compatibility
-
-This module is not yet fully compliant with strict content security policy (CSP). If the Take picture action is used with strict CSP, it will result in visual defects.

@@ -21,7 +21,7 @@ An alternative way to add a resource is by right-clicking an entity in the **Dom
 
 ### 2.2 Edit a Resource
 
-In the **Entities** pane of the **Published OData Service** window, select a resource and click **Edit** to display the **Edit published resource** window. 
+In the **Entitiies** pane of the **Published OData Service** window, select a resource and click **Edit** to display the **Edit published resource** window. 
 
 It is possible to select another **Entity** or view the entity in the domain model by clicking **Show**.
 
@@ -103,32 +103,13 @@ The **Capabilities** section gives an overview of what operations the resource s
 This *Capabilities* section was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/).
 {{% /alert %}}
 
-### 8.1 Insertable
-
-Select the check box for **Insertable** to indicate that clients can insert new objects.
-
-When the app receives a request to insert a new object, it does the following:
-
-1. It checks that the request is formatted correctly, rejecting things like specifying a string value for an integer attribute.
-2. It checks that the requested changes are valid, rejecting things like strings that are longer than the maximum length and empty values for required attributes.
-3. It creates a new object with the values specified in the request.
-4. It commits the object to the database.
-
-This is the behavior when you choose the action **Write to database**.
-
-You can also choose the **Call a microflow** action to use your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Commit](/refguide/committing-objects/) activity to commit the changes to the database. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed. For more information, see [OData query options](/refguide/odata-query-options/#updating-objects).
-
-{{% alert color="info" %}}
-This **Call a microflow** action was introduced in Studio Pro [9.11.0](/releasenotes/studio-pro/9.11/). The *Insertable* capability was introduced in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12/).
-{{% /alert %}}
-
-### 8.2 Readable
+## 8.1 Readable
 
 A published OData resource is always readable.
 
-### 8.3 Updatable
+## 8.2 Updatable
 
-Select the check box for **Updatable** to indicate that clients can update the values of attributes and associations.
+Select the check box for **Updatable (write)** to indicate that clients can update the values of attributes and associations.
 
 When the app receives a request to change values, it does the following:
 
@@ -138,14 +119,12 @@ When the app receives a request to change values, it does the following:
 
 This is the behavior when you choose the action **Write to database**.
 
-You can also choose the **Call a microflow** action to use your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Commit](/refguide/committing-objects/) activity to commit the changes to the database. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed. For more information, see [OData query options](/refguide/odata-query-options/#updating-objects).
+### 8.2.1 Call a Microflow Instead of Writing to Database
 
-### 8.4 Deletable {#deletable}
+The **Call a microflow** action allows you to replace the third step (committing the changes to the database) with your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Commit](/refguide/committing-objects/) activity to commit the changes to the database. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the update request has failed.
 
-Select the check box for **Deletable** to indicate that clients can delete the values of attributes and associations.
-
-Choose whether the object should be deleted from the database directly, or whether to call a microflow. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Delete](/refguide/deleting-objects/) activity to delete the object from the database. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed.
-
-{{% alert type="info" %}}
-The *Deletable* capability was introduced in Studio Pro [9.13.0](/releasenotes/studio-pro/9.13/).
+{{% alert color="info" %}}
+This **Call a microflow** action was introduced in Studio Pro [9.11.0](/releasenotes/studio-pro/9.11/).
 {{% /alert %}}
+
+For more information, see [OData query options](/refguide/odata-query-options/#updating-objects).

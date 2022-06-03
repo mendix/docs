@@ -21,7 +21,7 @@ You can generate a published REST resource from an entity in your domain model. 
 
 ## 2 General
 
-### 2.1 Resource Name{#name}
+### <a name="name"></a>2.1 Resource Name
 
 The resource name uniquely identifies the resource in the [service](/refguide8/published-rest-service/). It is part of the location of the operations, so it cannot contain spaces or special characters.
 

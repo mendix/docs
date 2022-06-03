@@ -172,4 +172,4 @@ The JavaScript actions have three different versions, based on the data types:
 
 They all produce outputs based on their data type. This means that you cannot return a string inside the Execute Javascript web element action.
 
-Good luck building custom actions! Please post any questions about customer actions on the [Mendix Forum](https://forum.mendixcloud.com/p/questions) under the category **Testing**.
+Good luck building custom actions! Please post any questions about customer actions on the [Mendix Forum](https://forum.mendixcloud.com/index4.html) under the category **Testing**.

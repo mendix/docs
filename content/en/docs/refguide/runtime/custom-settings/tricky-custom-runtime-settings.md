@@ -31,14 +31,10 @@ The following custom settings can be configured:
 | `SessionTimeout` | Defines after how much time the session becomes invalid (in milliseconds). After that timeout, a session becomes applicable for removal. The session won't be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 (10 minutes) |
 | `LongLivedSessionTimeout` | This setting is the same as `SessionTimeout`, but specific to offline-first progressive web apps. | 604800000 (7 days) |
 | `ClusterManagerActionInterval` | The interval (in milliseconds) used for performing all cluster manager actions. These actions include unblocking users and removing invalid sessions. If nothing is specified, the interval is half the `SessionTimeout`. | 300000 (5 minutes) |
-| `SessionKeepAliveUpdatesInterval` | Defines after how much time expired sessions can be removed from the database. | 100000 (100s) |
 
 Increasing the session timeout can improve the user experience, especially on mobile devices. It is important to keep in mind that entities used to present data to the user or entities that are created or retrieved when a user executes a microflow are tied to that user's session, and those entities can remain in memory for long periods of time. When a user signs out, these entities will be removed from memory, but if the user idles but does not sign out (for example, if they leave the browser tab open while executing other tasks or simply close the browser without signing out), the session timeout can act as a safeguard that prevents memory usage from being tied up by idle sessions. The first case can also be mitigated by setting the `EnableKeepAlive` custom setting to false. On most browsers, this setting will ensure that any idle browser tab will be affected by the session timeout as well.
 
 Since the frequency of the session timeout checks and other important events is tied to the `ClusterManagerActionInterval`, it makes sense to not use the default of half the session timeout when the value is increased by a lot (for example, 24 hours or more). It might make sense to put a maximum value on `ClusterManagerActionInterval`, regardless of how high the value of `SessionTimeout` is set. An approximate figure is 15 minutes, but ultimately this will depend on the functional requirements of the application.
-
-Another consideration is that configuring `ClusterManagerActionInterval` to be much longer than the `SessionTimeout` will lead to expired sessions remaining in the database longer.
-Configuring `SessionKeepAliveUpdatesInterval` to be longer than the `ClusterManagerActionInterval` or configuring `SessionKeepAliveUpdatesInterval` to be longer than the `SessionTimeout` will cause active sessions to be cleaned up. In Studio Pro 9.13 and later the runtime will fail to start if these three settings are not configured correctly.
 
 With stateless runtime, the potential of memory usage leading to problems has been reduced for two reasons. The first reason is the ability to run in a horizontally scaled environment. Multiple runtimes will mean unintended memory usage is also divided over those runtimes, reducing the impact of any one idle user session. But the main (and second) reason is that most of the memory usage has been moved to the client. So instead of all entities in the memory ending up on the application node, a large share of them will end up in the browser of the client. This should significantly reduce the potential strain on the application node that can be caused by increasing the `SessionTimeout` default value to a much higher value.
 
@@ -96,14 +92,16 @@ The most interesting setting is `ConnectionPoolingMaxActive`, as this caps the t
 * `WARNING - ConnectionBus: Database connections: 50 active, 0 idle.`
 * `ERROR - ConnectionBus: Opening JDBC connection to 1.2.3.4:5432 failed with SQLState: null Error code: 0 Message: Cannot get a connection, pool error Timeout waiting for idle object Retrying...(1/4)`
 
-And/or you get a **Number of database connections** graph that regularly peaks, or stays, at the maximum number of active connections.
+And/or you get a DB connection pool graph that looks like this:
+
+{{< figure src="/attachments/refguide/runtime/custom-settings/tricky-custom-runtime-settings/mendix-customsettings-tricky-img1.png" >}}
 
 It will be tempting to increase the `ConnectionPoolingMaxActive` value to a (much) higher number. But if any of the following are true, this is not the right action to take:
 
 * Long running queries show up in the application log – in that case, it makes more sense to try and fix those first, as otherwise you will eventually run in to the same problem, but it will take a bit longer to occur after a (re)start of the application
 * A database is running low on memory or is even out of memory regularly — in that case, it makes more sense to upgrade the database node size first
-    * In this case, there will probably also be long running queries in your application log
-* Only a few user sessions are active at any given time — your application might need refactoring unless you can explain why each user is constantly using several parallel database connections
+    * In this case, it  will also be likely you can find long running queries in your application log
+* Only a few user sessions are active at any given time — your application might need refactoring unless you can explain why three users constantly use 50 parallel database connections
 
 However, if all of the following are true, you should increase the `ConnectionPoolingMaxActive` value to a (much) higher number:
 
@@ -113,7 +111,7 @@ However, if all of the following are true, you should increase the `ConnectionPo
 
 In general, we see that increasing the `ConnectionPoolingMaxActive` value to a (much) higher number is very rarely the right action to take, even if it is unfortunately the action usually taken when you run into connection pooling issues.
 
-In addition, keep in mind that changing this value for an application running in Mendix Cloud v3 will also require an adjustment on the database node that only Mendix can make. So, before changing the value, please file a ticket in the [Mendix Support Portal](https://support.mendix.com/) stating the number to which you intend to change the value. When your application is running in Mendix Cloud v4, you can change the value without a change on the database node.
+In addition, keep in mind that changing this value for an application running in Mendix Cloud v3 will also require an adjustment on the database node that only Mendix can make. So, before changing the value, please file a ticket in the [Mendix Support Portal](https://support.mendix.com/hc/en-us) stating the number to which you intend to change the value. When your application is running in Mendix Cloud v4, you can change the value without a change on the database node.
 
 ## 5 Read More
 

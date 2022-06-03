@@ -22,10 +22,6 @@ Pluggable widgets can also include a preview component for when they are rendere
 
 For information on which libraries Mendix supports when developing pluggable widgets, see the [Pluggable Widgets](/refguide/mendix-client/#pluggable-widgets) section of *Mendix Client*.
 
-{{% alert color="info" %}}
-Using [System Texts](/refguide/system-texts/) to translate languages is not available for use with the Pluggable Widgets API.
-{{% /alert %}}
-
 ## 2 Client Component {#client-component}
 
 The essential part of a pluggable widget is its client component: a React component rendered inside the end-user’s app. Creating this component requires some basic React knowledge. Read React's [tutorial](https://reactjs.org/tutorial/tutorial.html) if you have not worked with React before. Note that if you are building a widget to be used in [Native Mobile](/refguide/mobile/#nativemobile) apps, you should use [React Native](https://facebook.github.io/react-native/) instead of React.

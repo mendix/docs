@@ -5,7 +5,6 @@ parent: "mapping-documents"
 tags: ["studio pro"]
 aliases:
     - /refguide/Select++Elements.html
-    - /refguide/Select++Elements
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

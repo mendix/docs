@@ -16,8 +16,8 @@ For more general guidelines on how to create a page, drag and drop elements on i
 
 * [Configure a Form and Show Items Related to It](/studio-how-to/pages-how-to-configure-form/) – shows how to configure a page with a form on it and how to show items related to this form on the same page
 * [Set Fields as Read-Only or Required](/studio-how-to/pages-how-to-set-validation-and-editability/) – describes how to set fields in a form as read-only or required to fill in
-* [Show Fields Only When Certain Conditions Are Met](/studio-how-to/pages-how-to-set-visibility/) – explains how to set conditional visibility that allows you to show field only when certain conditions are met
-* [Configure a List and View List Item Details](/studio-how-to/pages-how-to-configure-list/) – contains documents describing how to configure a list and show item details either on a separate pages or on the same page
+* [Show Fields Only When Certain Conditions Are Met](/studio-how-to/pages-how-to-set-visibility/) – explains how to set conditional visibility that allows to show field only when certain conditions are met
+* [Configure a List and View List Item Details](/studio-how-to/pages-how-to-configure-list/) – shows how to create a list of items and view the item details selected in this list
 * [Filter and Sort Items in a List](/studio-how-to/pages-how-to-filter-and-sort/) – teaches you how to set up a filter for a list of items and sort these items
 * [Enable End-Users to Attach Images](/studio-how-to/pages-how-to-attach-images/) – shows how to enable your end-users to attach images
 * [Configure File Upload and Download](/studio-how-to/pages-how-to-attach-files/) – describes how to enable your end-users upload and download files

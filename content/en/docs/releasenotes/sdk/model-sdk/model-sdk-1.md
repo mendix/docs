@@ -1,7 +1,7 @@
 ---
 title: "1"
 url: /releasenotes/sdk/model-sdk-1/
-weight: 100
+parent: "model-sdk"
 ---
 
 ## 1.2.0
@@ -28,7 +28,7 @@ weight: 100
 
 The following changes are made per 600896 and pertain exclusively to models made with Mendix version 6.1.0 and above:
 
-*   Introduced a new modeling construct `SelectorDatabaseSource` for pages.
+*   Introduced a new modeling construct `SelectorDatabaseSource` for pages.
 *   `DatabaseConstraint` cannot be created directly in a `DatabaseSourceBase` instance anymore. Instead, use the `create` method of `DatabaseConstraint` and assign the instance explicitly to a suitable container, as in, `databaseConstraints` of either an instance of (a sub type of) `DatabaseSourceBase` or `SelectorDatabaseSource`.
 *   These properties have been deleted, so should not be accessed on models with Mendix version 6.1.0 and above:
     *   `systemEntityType` of both `MsdMicroflow` and `MsdMicroflowParameter`,

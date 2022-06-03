@@ -25,6 +25,7 @@ If you have any additional useful resources, feel free to mention them in the co
 
 *   [Official TypeScript website](http://www.typescriptlang.org/Handbook) - Tutorial, handbook, samples
 *   [Definitive Guide to TypeScript](https://www.sitepen.com/blog/2013/12/31/definitive-guide-to-typescript/) - covers TypeScript 1.5,slightly older than the current release, but still useful
+*   [Consuming Promises](http://know.cujojs.com/tutorials/promises/consuming-promises) with when.js
 *   [Editing TypeScript](https://code.visualstudio.com/docs/languages/typescript) with Visual Studio Code
 *   Debugging your project with [Node Inspector](https://www.npmjs.com/package/node-inspector)
 

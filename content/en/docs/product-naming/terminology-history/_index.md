@@ -45,7 +45,7 @@ Deployment facilities should be described within the name/context of the [Mendix
 
 ## Community Edition {#community-edition}
 
-The Mendix Community Edition was introduced with Mendix 5.18, which included the ability to deploy a Free App. This was replaced by the [Mendix Free Edition (DX Release)](https://www.mendix.com/blog/powering-continuous-innovation-with-the-mendix-free-edition/) in 2015, a move which was reinforced by announcements at Mendix World 2019.
+The Mendix Community Edition was introduced with Mendix 5.18, which included the ability to deploy a Free App. This was replaced by the [Mendix Free Edition (DX Release)](https://www.mendix.com/blog/powering-continuous-innovation-with-the-mendix-free-edition/) in 2015, a move which was reinforced by [announcements at Mendix World 2019](https://www.mendix.com/blog/a-3-step-leap-into-your-digital-future-highlights-from-mendix-world/).
 
 {{% alert color="info" %}}
 Replaced by [Free Edition](/product-naming/other-terms/#free-edition).
@@ -113,10 +113,10 @@ Replaced by [Desktop Modeler](#dm) (and eventually [Mendix Studio Pro](/product-
 Replaced by [Mendix Runtime](/product-naming/other-terms/#runtime).
 {{% /alert %}}
 
-## Mendix Mobile app
+## Mendix Developer app, Mendix Mobile app
 
 {{% alert color="info" %}}
-Replaced by [Mendix Developer App](/product-naming/other-terms/#mendix-mobile-app).
+Replaced by [Mendix mobile app](/product-naming/other-terms/#mendix-mobile-app).
 {{% /alert %}}
 
 ## Mendix Model Share

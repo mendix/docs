@@ -271,4 +271,4 @@ You now configured your Custom Selenium Hub. You can create as many variations a
 
 ## 9 Next Up
 
-You now learned how to configure the different selenium hubs. The next how-to is [How to Create a Test Case](/addons/ats-addon/ht-two-create-a-test-case/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.
+You now learned how to configure the different selenium hubs. The next how-to is [How to Create a Test Case](/addons/ats-addon/ht-two-create-a-test-case/). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.

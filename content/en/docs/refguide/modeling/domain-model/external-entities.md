@@ -150,7 +150,7 @@ You can add any local information about the external entity in this tab.
 
 ## 3 External Entity Limitations {#limitations}
 
-External entities are the endpoints that are defined in the published OData service from the originating app. The consumed OData service document displays the values from the service metadata when the external entity is used through the **Data Hub** pane. The datasets associated with the entities are maintained in the originating apps.
+External entities are the endpoints that are defined in the published OData service from the originating app. The consumed OData service document displays the values from the service metadata when the external entity is used through the **Data Hub** pane. The limitation on external entities is that they are consume-only entities. The datasets associated with the entities are maintained in the originating apps.
 
 External entities cannot be committed. Use the [Send External Object activity](/refguide/send-external-object/) to persist changes to external entities. This means the following:
  

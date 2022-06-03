@@ -6,7 +6,6 @@ weight: 10
 tags: ["ux", "ui", "ux designer", "user experience", "design", "menu", "button", "typography", "card", "front end"]
 aliases:
     - /howtogeneral/bestpractices/ux-best-practices.html
-    - /howtogeneral/bestpractices/ux-best-practices
 ---
 
 ## 1 Introduction

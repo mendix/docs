@@ -1,5 +1,5 @@
 ---
-title: "ATS 1 How-tos"
+title: "ATS 1 How-to's"
 url: /addons/ats-addon/ht-one/
 parent: "ht"
 weight: 20

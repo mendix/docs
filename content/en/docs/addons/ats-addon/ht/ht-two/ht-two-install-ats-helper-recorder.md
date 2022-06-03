@@ -80,4 +80,4 @@ See [How to Create a Test Case](/addons/ats-addon/ht-two-create-a-test-case/) fo
 
 ## 5 Next Up
 
-You now learned how to install the ATS tools. The next how-to is [How to Configure a Selenium Hub](/addons/ats-addon/ht-two-configure-a-selenium-hub/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.
+You now learned how to install the ATS tools. The next how-to is [How to Configure a Selenium Hub](/addons/ats-addon/ht-two-configure-a-selenium-hub/). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.

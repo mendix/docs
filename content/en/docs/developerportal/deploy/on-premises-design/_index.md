@@ -7,7 +7,6 @@ weight: 80
 tags: ["Deployment", "On premises", "Environment"]
 aliases:
     - /deployment/on-premises.html
-    - /deployment/on-premises
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -33,7 +32,7 @@ This is the simplest solution with the fewest configuration and connection probl
 
 {{< figure src="/attachments/developerportal/deploy/on-premises-design/18580719.jpg" >}}
 
-### 2.2 Hosting with a Separate Database Server (Option 2){#Option2}
+### <a name="Option2"></a>2.2 Hosting with a Separate Database Server (Option 2)
 
 {{< figure src="/attachments/developerportal/deploy/on-premises-design/18580718.jpg" >}}
 

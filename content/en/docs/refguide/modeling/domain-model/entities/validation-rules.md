@@ -1,6 +1,7 @@
 ---
 title: "Validation Rules"
 url: /refguide/validation-rules/
+parent: "entities"
 weight: 40
 tags: ["domain model", "entity", "validation rule"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -106,7 +107,7 @@ There are limitations on using database uniqueness validation if you are using a
 
 With the database uniqueness validation option enabled, you cannot define the unique validation rule in the specialization entity for attributes which come from the generalization of this entity. If you do this, a consistency error is reported, as in this image:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/validation-rules/unique-validation-rule-error.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/validation-rules/unique-validation-rule-unresolved.png" >}}
 
 You can, however, define a unique validation rule for attributes which are added in the specialized entity.
 
@@ -125,7 +126,7 @@ You can, however, set a validation rule to make *EmailAddress* unique, as that a
 
 You can resolve this issue simply, by moving unique validation rules of these attributes to the generalization entity where the attribute it defined.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/validation-rules/unique-validation-rule-no-error.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/validation-rules/unique-validation-rule-resolved.png" >}}
 
 ### 3.2 Association Uniqueness
 

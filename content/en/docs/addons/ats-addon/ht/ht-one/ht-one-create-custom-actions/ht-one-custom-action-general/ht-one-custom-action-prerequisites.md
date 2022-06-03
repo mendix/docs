@@ -1,5 +1,5 @@
 ---
-title: "Prerequisites for How-tos"
+title: "Prerequisites for How-to's"
 url: /addons/ats-addon/ht-one-custom-action-prerequisites/
 parent: "ht-one-custom-action-general"
 description: "Names and explains the different prerequisites for all the how-to's in this category."

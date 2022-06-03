@@ -1,7 +1,7 @@
 ---
 title: "8.18"
 url: /releasenotes/sdk/metamodel-8.18/
-weight: 84
+parent: "metamodel-8"
 ---
 
 ## 8.18.0

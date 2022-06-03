@@ -1,6 +1,5 @@
 ---
 title: "Cloud Version and Region in the Mendix Cloud"
-linktitle: "Mendix Cloud Version & Region"
 url: /developerportal/deploy/cloud-version-region/
 parent: "mendix-cloud-deploy"
 weight: 24

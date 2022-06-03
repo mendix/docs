@@ -1,5 +1,5 @@
 ---
-title: "SDK How-tos"
+title: "SDK How-to's"
 url: /apidocs-mxsdk/mxsdk/sdk-howtos/
 category: "Mendix Platform SDK"
 weight: 4
@@ -11,7 +11,7 @@ Before the Mendix SDK can make your life easier, there's some learning to do. Fo
 
 If you'd rather find your own way, just scroll through this page to get an overview of the available documents and examples, and start wherever you want. To get set up quickly, take a look at [How to Set Up Your Development Environment](/apidocs-mxsdk/mxsdk/setting-up-your-development-environment/).
 
-## 2 How-tos
+## 2 How-to's
 
 ### 2.1 How to Set Up Your Development Environment
 

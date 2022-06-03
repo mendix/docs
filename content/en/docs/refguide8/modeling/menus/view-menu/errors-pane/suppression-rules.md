@@ -149,7 +149,7 @@ To delete the existing rule, follow the steps below:
 
 1. Click the **Suppression rules** button in the **Errors** pane.
 
-2. In the **Manage Suppression Rules** dialog box, click the **Delete** button:
+2.   In the **Manage Suppression Rules** dialog box, click the **Delete** button:
 
     {{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/suppression-rules/rules-dialog-delete-button.png" alt="Rules window - delete button" >}}
 

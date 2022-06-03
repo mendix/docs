@@ -13,46 +13,6 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
-### May 6th, 2022
-
-* We have updated AppDynamics monitoring to provide default values where possible.
-
-### April 22nd, 2022
-
-#### Improvements
-
-* We have added two new graphs on the [Metrics page for Cloud V4](/developerportal/operate/trends-v4/):
-   * Number of files in storage
-   * Size of files in storage (in bytes)
-* We have updated the alert order on the [Alerts page](/developerportal/operate/monitoring-application-health/) for better visibility
-* We have made improvements to the email alert subscription service to make it more reliable
-
-### April 21st, 2022
-
-* We have introduced support for [AppDynamics](/developerportal/operate/appdynamics-metrics/) monitoring in Mendix Cloud V4.
-
-### March 31st, 2022
-
-#### Improvements
-
-* We now show deactivated users on the [Node Permissions](/developerportal/deploy/node-permissions/) page for consistency with the [Team](/developerportal/collaborate/team/) page.
-
-### March 30th, 2022
-
-#### Improvements
-
-* We have implemented a Web Application Firewall (WAF) service for Free Apps deployed to the Mendix Cloud.
-
-    The Web Application Firewall (WAF) is a security service that protects applications from malicious and unwanted internet traffic without modifying your application code. WAF for Free Apps addresses various attack categories including many high risk and commonly occurring vulnerabilities described in OWASP publications such as [OWASP Top 10](https://owasp.org/www-project-top-ten/). These include the following:
-    
-    * Cross site scripting
-    * HTTP protocol violations
-    * Bots, crawlers, and scanners
-    * HTTP Denial of Service
-    * Server-side request forgery
-    * Local File Inclusion
-    * Log4j remote code execution
-
 ### March 3rd, 2022
 
 #### Fixes
@@ -84,7 +44,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 #### Improvements
 
 * We added log entries to the activity log to record changes to members of the app team and any changes to the [permissions](/developerportal/deploy/node-permissions/) that team members have.
-* We now display any documentation associated with [scheduled events](/refguide/scheduled-events-legacy/#common-properties) in the [Model Options tab](/developerportal/deploy/environments-details/#model-options) of the environment details.
+* We now display any documentation associated with [scheduled events](/refguide/scheduled-events/#common-properties) in the [Model Options tab](/developerportal/deploy/environments-details/#model-options) of the environment details.
 
 #### Fixes
 
@@ -432,6 +392,10 @@ Some examples of clients which will no longer be supported are:
 * Internet Explorer version 11 on Windows 8.1
 * Safari before version 9 on OS X 10.11
 * Safari before version 9 on iOS 9
+
+**Test your clients**
+
+You can test whether your client (browser or integrating client) will be able to connect to your app after December 1st, 2020, by going to [tls-check.mendix.com](https://tls-check.mendix.com/).
 
 **What we continue to support (expert details)**
 

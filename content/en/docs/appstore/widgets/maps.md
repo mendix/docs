@@ -106,11 +106,7 @@ Under the **Dimensions** properties tab, you can adjust the following settings t
 	* The available options are: **Automatic**, **World**, **Continent**, **City**, **Street**, and **Buildings**
 	* Note that when using this setting with multiple marked locations, the level of zoom chosen here will be applied after the map has centered to a position in which all markers are visible
 
-## 4 Strict CSP Compatibility
-
-This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget.
-
-## 5 Widgets Below Version 2.0.0
+## 4 Widgets Below Version 2.0.0
 
 The Maps widget enables showing locations on maps. These are the available map types:
 

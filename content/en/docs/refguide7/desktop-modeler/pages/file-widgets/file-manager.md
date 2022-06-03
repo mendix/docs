@@ -42,10 +42,6 @@ You can specify the file extensions that are allowed to be uploaded. If no exten
 
 If a file with an extension that is not allowed is selected, a system text (File manager > Incorrect file extension) will be shown underneath the file manager.
 
-{{% alert color="warning" %}}
-The feature to allow extensions is not meant as a security feature, as the file manager widget does not check the contents of a file to see if they match the provided extension.
-{{% /alert %}}
-
 ### Show file in browser
 
 This property indicates whether the file will be shown in the browser, instead of being downloaded.

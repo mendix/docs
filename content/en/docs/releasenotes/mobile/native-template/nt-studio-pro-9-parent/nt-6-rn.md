@@ -5,6 +5,13 @@ parent: "nt-studio-pro-9-parent"
 weight: 10
 description: "Native Template 6 release notes."
 ---
+## 6.2.22
+
+**Release date: June 1st, 2022**
+
+### Fixes
+
+* We fixed an iOS build issue (Tickets 150964, 150934)
 
 ## 6.2.21
 

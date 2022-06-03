@@ -1,6 +1,5 @@
 ---
 title: "Restrict Access for Incoming Requests"
-linktitle: "Restrict Incoming Access"
 url: /developerportal/deploy/access-restrictions/
 parent: "mendix-cloud-deploy"
 weight: 36

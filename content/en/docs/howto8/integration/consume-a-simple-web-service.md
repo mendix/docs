@@ -119,4 +119,4 @@ To create logic to call the web service, follow these steps:
 * [Import Excel Documents](/howto8/integration/importing-excel-documents/)
 * [Expose a Web Service](/howto8/integration/expose-a-web-service/)
 * [Use Selenium Support](/howto8/integration/selenium-support/)
-* [Security How-tos](/howto8/security/)
+* [Security How-to's](/howto8/security/)

@@ -4,21 +4,21 @@
 
 .td-content {
     order: 1;
-    margin-left: 2rem; // NK - custom edit
+    margin-left: 2rem;
 
     p, li, td {
         font-weight: $font-weight-body-text;
     }
 
     > h1 {
-        font-weight: $font-weight-light; // NK - changed from bold
+        font-weight: $font-weight-light;
         margin-bottom: 1rem;
-        font-size: 2rem; // NK - custom edit
+        font-size: 2rem;
     }
 
     > h2 {
         margin-bottom: 1rem;
-        font-size: 1.7rem; // NK - custom edit
+        font-size: 1.7rem;
     }
 
     > h2:not(:first-child) {
@@ -55,11 +55,6 @@
 
     > ul li, > ol li {
         margin-bottom: .25rem;
-    }
-
-    /* ordered lists inside ordered lists will be displayed using letters */
-    ol ol {
-        list-style-type: lower-alpha;
     }
 
     strong {

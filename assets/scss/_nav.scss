@@ -32,7 +32,6 @@
 
     @include media-breakpoint-up(md) {
         position: fixed;
-        top: 0; // NK - copied from Docsy v0.1.0 file
         width: 100%;
     }
 
@@ -60,7 +59,7 @@
 
     .td-search-input {
         border: none;
-        color: $navbar-dark-color; // NK - copied from Docsy v0.1.0 file
+
         @include placeholder {
             color: $navbar-dark-color;
         }
@@ -129,7 +128,7 @@
         }
     }  
 }
- // NK - custom edit
+
 .dropdown-toggle.lang-arrow {
     &::after {
         border-left: 0.4em solid transparent;
@@ -155,9 +154,9 @@ nav.foldable-nav {
         list-style: none;
         padding: 0;
         margin: 0;
-        text-overflow: ellipsis; // NK - custom edit
-        overflow: hidden; // NK - custom edit
-        white-space: nowrap; // NK - custom edit
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
     
     .ul-1 > li {

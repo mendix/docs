@@ -56,7 +56,7 @@ Reference this microflow:
 
 ## 4 Best Practices for Expression Breakdown
 
-The most flexible solution is to break the string concatenate down into separate activities. This allows you to easily add or remove text from the concatenate function. It should not create an additional level of complexity either, simply create a subflow to combine the string values and use that in your microflow.
+The most flexible solution is to break the string concatenate down into separate activities. This allows to easily add or remove text from the concatenate function. It should not create an additional level of complexity either, simply create a subflow to combine the string values and use that in your microflow.
 
 In this example we went even one step further in the stability of the expression. By adding an additional trim to the attribute we prevent adding additional white spaces that might have been added by the user. Using the microflow below we are absolutely sure never to get any white spaces or null values in our text.
 

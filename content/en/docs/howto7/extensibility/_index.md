@@ -1,7 +1,7 @@
 ---
 title: "Extensibility"
 url: /howto7/extensibility/
-description: "A selection of how-tos that explain how to use connectors and adapters from the Marketplace."
+description: "A selection of how to's that explain how to use connectors and adapters from the Marketplace."
 weight: 80
 tags: ["widget", "marketplace", "connectors", "adapters", "charts"]
 ---
@@ -14,5 +14,6 @@ One of the strengths of Mendix is that it is easy to connect your Mendix applica
 
 * [Use the Charts Widgets](/howto7/extensibility/charts-tutorials/)
 * [Access a Samba Share from the MxCloud](/howto7/extensibility/access-a-samba-share-from-the-mxcloud/)
+* [Get Started with the TimeSeries Connector](/howto7/extensibility/get-started-with-the-timeseries-connector/)
 * [Build Microflow Actions Using the Mendix Connector Kit](/howto7/extensibility/howto-connector-kit/)
 * [Use Mendix DataStorage APIs to Build Reusable Microflow Actions](/howto7/extensibility/howto-datastorage-api/)

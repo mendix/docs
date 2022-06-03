@@ -97,7 +97,7 @@ In the sections below you can see the basic steps to get an app up and running o
 
 	If no device is available use **AVD Manager** to add a device:
 
-	{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally/avd-manager.png" alt="AVD Manager"   width="250"  >}}
+		{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally/avd-manager.png" alt="AVD Manager"   width="250"  >}}
 
 
 ### 4.2 Building an iOS App with XCode

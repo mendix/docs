@@ -26,7 +26,7 @@ Unlicensed apps, running outside the Mendix Cloud, have a number of restrictions
 | **Number of Concurrent Users** | 6 | Depends on your pricing plan.¹ |
 | **Time limitation** | Runtime stops after 2-4 hours (randomly chosen) regardless of user activity². | Does not have a time limitation. |
 | **Number of Named Users** | No Limit | Depends on your pricing plan.¹ |
-| **Data Hub** | 1000 objects per day | Depends on your pricing plan.¹ |
+| **Data Hub** | No Limit | Depends on your pricing plan.¹ |
 
 ¹ More information on the capabilities of different license options is available on [Mendix Platform Pricing](http://www.mendix.com/pricing).
 

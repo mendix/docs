@@ -2,7 +2,6 @@
 title: "1.7"
 url: /releasenotes/add-ons/apm-1.7/
 parent: "apm-1"
-weight: 99
 ---
 
 ## 1.7.0

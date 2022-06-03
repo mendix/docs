@@ -334,7 +334,7 @@ More specifically, the `status` property functions as follows:
 	* In other cases, the `items` is `undefined`. This happens if a page is still being loaded or if the previous state was `ValueStatus.Unavailable`.
 
 
-## 3 Linked Property Values {#linked-values}
+## 3 Linked Property Values
 
 ### 3.1 ListActionValue {#listactionvalue}
 

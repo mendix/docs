@@ -8,8 +8,6 @@ description: "Describes the various levels of support available for using Market
 aliases:
     - /community/app-store-content-support.html
     - /developerportal/app-store/app-store-content-support.html
-    - /community/app-store-content-support
-    - /developerportal/app-store/app-store-content-support
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -19,7 +17,7 @@ Support for Marketplace content is determined by the content support category an
 
 | Category | Description |
 | --- | --- |
-| Platform | Mendix supports all the content in this category as-is when you are equipped with an SLA (**Platform**, **Standard**, or **Premium**) with Mendix. Content in this category is proactively incorporated into Mendix R&D test cycles as part of our platform release management. Please note that this category replaces the former **Extended** category, which has been deprecated. |
+| Platform | Mendix supports all the content in this category as-is when you are equipped with an SLA (**Platform**, **Gold**, or **Platinum**) with Mendix. Content in this category is proactively incorporated into Mendix R&D test cycles as part of our platform release management. Please note that this category replaces the former **Extended** category, which has been deprecated. |
 | Deprecated | The content in this category is considered end-of-life and will be dropped to the **Community support** status in the next major release of Mendix. Content is provided as-is by Mendix R&D, and support depends on the severity of the reported issue and the effort required to resolve it. |
 | Community | Content is provided as-is by members of the Mendix community, and support depends on the availability and effort of the owner. | 
 
@@ -56,10 +54,10 @@ The level of support depends on the availability and effort of the developer and
 
 ### 2.4 Support Category & Feedback Process Summary
 
-| Support Category  | Standard/Premium SLA | Platform SLA | No SLA |
+| Support Category  | Gold/Platinum SLA | Platform SLA | No SLA |
 | --- | --- | --- | --- |
-| Platform support | [Mendix Support](https://support.mendix.com/)   | [Mendix Support](https://support.mendix.com/) | Mendix community |
-| Deprecated | [Mendix Support](https://support.mendix.com/)   | [Mendix Support](https://support.mendix.com/) | Mendix community |
+| Platform support | [Mendix Support](https://developers.mendix.com/support/)   | [Mendix Support](https://developers.mendix.com/support/) | Mendix community |
+| Deprecated | [Mendix Support](https://developers.mendix.com/support/)   | [Mendix Support](https://developers.mendix.com/support/) | Mendix community |
 | Community support | Mendix community | Mendix community | Mendix community |
 
 ## 3 Read More

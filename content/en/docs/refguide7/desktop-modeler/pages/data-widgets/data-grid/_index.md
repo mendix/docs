@@ -78,7 +78,7 @@ This property indicates whether the first item will be selected initially. This 
 
 _Default value:_ False
 
-#### Default Button Trigger{#dbt}
+#### <a name="dbt"></a>Default Button Trigger
 
 The default button can be triggered by a single or a double click a row.
 

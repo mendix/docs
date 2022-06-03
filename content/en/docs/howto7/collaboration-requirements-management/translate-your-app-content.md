@@ -47,7 +47,7 @@ After selecting your development language, the pages will display their labels a
 
 When your app is deployed with labels that don’t yet have a translation, these labels will also display the default language label (without the angle brackets). You can configure how strict the Modeler is in checking for a translation in the **Language Operations** settings of your app (see [3.1 Configuring Language Operations](#toconfigurelanguageoperations)).
 
-### 3.1 Configuring Language Operations{#toconfigurelanguageoperations}
+### <a name="toconfigurelanguageoperations"></a>3.1 Configuring Language Operations
 
 To update the language settings in the Modeler, go to **Language > Language Operations**.
 

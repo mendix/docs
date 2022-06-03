@@ -9,9 +9,11 @@ tags: ["studio pro", "module", "modules"]
 
 ## 1 Introduction
 
-A Mendix app consists of modules: a **System** module, a [UI resources package](/refguide/ui-resources-package/), one or more user-defined **app modules**, [Marketplace modules](/appstore/modules/), [add-on modules](/refguide/configure-add-on-and-solution-modules/), and [solution modules](/refguide/configure-add-on-and-solution-modules/). Modules are a way to split the functionality of your application into separate parts. For example, a web shop can put order management in a different module than customer and product management. Studio Pro does not enforce any kind of module structure; it is up to you to choose logical modules for your application. Some modules are part of your app by default, while others you can download in the [Mendix Marketplace](https://marketplace.mendix.com/) to add functionality to app.
+A Mendix app consists of modules: a **System** module, a [UI resources package](/refguide/ui-resources-package/), and one or more user-defined modules. Modules are a way to split the functionality of your application into separate parts. For example, a web shop can put order management in a different module than customer and product management. Studio Pro does not enforce any kind of module structure; it is up to you to choose logical modules for your application.
 
-The domain model is a data model that describes the information in your application domain in an abstract way.
+Some modules are part of your app by default, while others you can download in the [Mendix Marketplace](https://marketplace.mendix.com/) to add functionality to app. For more information on downloading and installing a module from the Marketplace, see [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) in the *Marketplace Guide*.
+
+A module always contains exactly one [domain model](/refguide/domain-model/). The domain model is a data model that describes the information in your application domain in an abstract way.
 
 Within a module you can define [module security](/refguide/module-security/) via module roles and specify security settings of those module roles for pages, microflows, entities and datasets.
 
@@ -25,24 +27,7 @@ Mendix modules are portions of your app which can include a data model, logic, a
 React Native modules expose native Java/Objective-C and C++ objects allowing for React Native apps (in Mendix apps you can leverage these modules via widgets or JavaScript actions to use device sensors or capabilities).
 {{% /alert %}}
 
-## 2 Module Types {#module-types}
-
-{{% alert color="info" %}}
-
-Access to this functionality is currently limited and can be gained through the [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
-
-{{% /alert %}}
-
-When you create a module, it has a default **app module** type. The type can be changed at any time in [Module Settings](/refguide/module-settings/). 
-
-There are the following type of modules:
-
-* [App modules](/refguide/module-settings/#app-module) (standard modules)
-* [Add-on modules](/refguide/module-settings/#add-on-module) 
-* [Solution modules](/refguide/module-settings/#solution-module)
-
-
-##  3 Common
+## 2 Common
 
 | Document type | Typical elements | Description |
 | --- | --- | --- |
@@ -50,7 +35,7 @@ There are the following type of modules:
 | [Microflows](/refguide/microflows/) | [Activities](/refguide/activities/), [Sequence Flow](/refguide/sequence-flow/) | Microflows describe the the logic of your application. They are composed of activities that manipulate objects, interact with the client etcetera. |
 | [Enumerations](/refguide/enumerations/) |   | An enumeration is a set of predefined values, for example: in a web shop, an enumeration called MemberType could have the values Gold and Silver. |
 
-## 4 Page Resources
+## 3 Page Resources
 
 | Document type | Description |
 | --- | --- |
@@ -59,7 +44,7 @@ There are the following type of modules:
 | [Menus](/refguide/menu/) | A menu document defines a navigation menu that can be used by a  [menu widget](/refguide/menu-widgets/). |
 | [Snippets](/refguide/snippet/) | Snippets define reusable interface parts. They can be used on  [pages](/refguide/page/) and  [layouts](/refguide/layout/) . |
 
-## 5 Resources
+## 4 Resources
 
 | Document type | Description |
 | --- | --- |
@@ -72,7 +57,7 @@ There are the following type of modules:
 | [Task Queue](/refguide/task-queue/) | A task queue runs continuously to check if any microflow tasks have been added to it and executes the tasks in the background. |
 | [Scheduled Events](/refguide/scheduled-events/) | A scheduled event is used to execute a microflow at a certain point in time. You can also schedule it to repeat after a given time. For example, a scheduled event can run every morning at 6 A.M. |
 
-## 6 Consumed Services
+## 5 Consumed Services
 
 | Document type | Description |
 | --- | --- |
@@ -81,7 +66,7 @@ There are the following type of modules:
 |  | An XML-to-domain mapping defines a translation from XML objects to domain model objects. |
 | [XML Schemas](/refguide/xml-schemas/) | An XML schema is defined in an XML Schema Definition (XSD) file and can be imported in your model. It describes what a certain XML document should look like. |
 
-## 7 Published Services
+## 6 Published Services
 
 | Document type | Description |
 | --- | --- |

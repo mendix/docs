@@ -2,12 +2,11 @@
 title: "9"
 url: /releasenotes/sdk/metamodel-9/
 weight: 1
+parent: "metamodel" 
 ---
 
 These are the release notes for the Mendix Metamodel version 9:
 
-* [9.13](/releasenotes/sdk/metamodel-9.13/)
-* [9.12](/releasenotes/sdk/metamodel-9.12/)
 * [9.11](/releasenotes/sdk/metamodel-9.11/)
 * [9.10](/releasenotes/sdk/metamodel-9.10/)
 * [9.9](/releasenotes/sdk/metamodel-9.9/)

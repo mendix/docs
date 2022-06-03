@@ -7,7 +7,7 @@ description: Get started with native mobile in Mendix Studio Pro.
 tags: ["native", "mobile", "start", "quickstart"]
 ---
 
-How-tos in this section will help you begin using the power of native apps.
+How-to's in this section will help you begin using the power of native apps.
 
 The following how-to’s are available here:
 

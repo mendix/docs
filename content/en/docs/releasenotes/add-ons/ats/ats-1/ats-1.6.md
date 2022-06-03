@@ -2,7 +2,6 @@
 title: "1.6"
 url: /releasenotes/add-ons/ats-1.6/
 parent: "ats-1"
-weight: 99
 ---
 
 ## 1.6.0

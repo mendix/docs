@@ -7,7 +7,7 @@ description: Distribute native mobile apps.
 tags: ["native", "mobile", "start", "quickstart"]
 ---
 
-How-tos in this section will help you distribute native apps to app stores, as well as push changes using over-the-air updates.
+How-to's in this section will help you distribute native apps to app stores, as well as push changes using over-the-air updates.
 
 The following how-to’s are available here:
 

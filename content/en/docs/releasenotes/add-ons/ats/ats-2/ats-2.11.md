@@ -2,7 +2,6 @@
 title: "2.11"
 url: /releasenotes/add-ons/ats-2.11/
 parent: "ats-2"
-weight: 89
 #Known issues here need to be followed up on for fixes.
 ---
 
@@ -24,7 +23,7 @@ On the information side, we added options to retrieve the following data for a j
 
 For more details, see the [ATS 2 Reference Guide](/addons/ats-addon/rg-two-cicd-api/).
 
-### Linmitations
+### Known Issues
 
 * The customizable **Mendix Wait** function does not time out properly on Mozilla Firefox when configured with a timeout less than the default of 60 seconds.
 
@@ -36,7 +35,7 @@ For more details, see the [ATS 2 Reference Guide](/addons/ats-addon/rg-two-cicd-
 
 * We fixed a bug introduced with release [2.11.0](#2-11-0) that caused tests on Mozilla Firefox to fail during login.
 
-### Linmitations
+### Known Issues
 
 * The customizable **Mendix Wait** function does not time out properly on Mozilla Firefox when configured with a timeout less than the default of 60 seconds.
 

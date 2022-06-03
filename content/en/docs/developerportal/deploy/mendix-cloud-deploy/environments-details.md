@@ -272,10 +272,9 @@ A number of non-configurable response headers are added automatically by Mendix 
 
 | Response Header | Added in |
 | --- | --- |
-| `cache-control`| the buildpack for index.html and login.html — the Mendix Runtime for other pages |
-| `permissions-policy: interest-cohort=()` | exclude from Federated Learning of Cohorts (FLoC) calculation |
-| `strict-transport-security` | TLS terminating webservers - this is set to `max-age=31536000` |
-| `x-vcap-request-id` | Cloud Foundry to track requests through CF |
+| cache-control| the buildpack for index.html and login.html — the Mendix Runtime for other pages |
+| strict-transport-security | TLS terminating webservers - this is set to `max-age=31536000` |
+| x-vcap-request-id | Cloud Foundry to track requests through CF |
 
 #### 4.2.2 Running Your App in an Iframe {#iframe}
 

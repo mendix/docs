@@ -283,4 +283,4 @@ Good luck testing your Mendix app with ATS!
 
 You have now learned a few basics of working with ATS, so the next how-to is [How to Install the ATS Helper and ATS Recorder](/addons/ats-addon/ht-one-install-ats-helper-recorder/).
 
-For an overview of all the how-tos and the structure, see [ATS 1 How-tos](/addons/ats-addon/ht-one/). We advise following the how-to's in the order listed there.
+For an overview of all the how-tos and the structure, see [ATS 1 How-to's](/addons/ats-addon/ht-one/). We advise following the how-to's in the order listed there.

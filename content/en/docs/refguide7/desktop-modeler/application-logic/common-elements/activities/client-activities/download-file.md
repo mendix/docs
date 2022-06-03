@@ -4,7 +4,6 @@ url: /refguide7/download-file/
 parent: "client-activities"
 aliases:
     - /refguide7/Download+File.html
-    - /refguide7/Download+File
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

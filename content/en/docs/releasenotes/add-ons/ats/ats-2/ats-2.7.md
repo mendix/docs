@@ -2,14 +2,13 @@
 title: "2.7"
 url: /releasenotes/add-ons/ats-2.7/
 parent: "ats-2"
-weight: 93
 ---
 
 ## 2.7.1
 
 **Release date: May 15th, 2018**
 
-### Mobile Testing
+### Mobile testing
 
 We are happy to announce that ATS now supports mobile testing for web applications. With a Browserstack account, you can test on Android 6 and 7 on real mobile devices. 
 
@@ -21,11 +20,11 @@ For more details, refer to [Mobile](/addons/ats-addon/rg-two-mobile/) in the *AT
 
 _Please note that this feature is still in beta._
 
-### Option
+### Add an option to rerun only the not passed test cases from a test suite or a job
 
 When a job or a test suite has not passed it is now possible to do another run of it with only those test cases that not passed. We think that this feature will save time both by not having to manually select the not passed test cases and also by not having to run the whole test suite again.
 
-### Changes in Calculation
+### Changes in how the result is calculated for test cases and test suites
 
 In order to make it easier to read and understand the results of a test run we are making some changes. Here are the main points: 
 * The result **Skipped** has been renamed to **Not executed**.
@@ -37,22 +36,22 @@ In order to make it easier to read and understand the results of a test run we a
 
 For all the details please refer to [results section in the ATS reference guide](/addons/ats-addon/rg-two-results/).
 
-### Changes in Provider and platform support
+### Changes in provider and platform support
 
-#### Removed Support for Windows XP, MacOS 9, and MacOS 10
+#### Removed support for Windows XP, MacOS 9 and MacOS 10
 
 These platforms were not able to work properly with the browser versions that we officially support. In some cases for example, MacOS10 in combination with Firefox browser, the selenium driver v3.8.1, which is the official selenium version that we support, is simply not supported for MacOS10. By removing support for these outdated platforms we are able to focus on the performance and stability for the platforms that are used much more in the real world.
 
-#### Removed Support for Testingbot
+#### Removed support for Testingbot
 
 Testingbot did not support the latest browsers versions and/or the latest selenium driver versions for some platforms. Because of this and the fact that it was almost not used in ATS we decided to drop support for it, choosing instead to focus on the other providers which support the newest versions of browsers and drivers. If you still have this provider configured as a hub, you can no longer use it to run jobs. Any schedules or job templates that are configured to use this provider will return an error when executed.
 
-### Integrated Function Documentation
+### Integrated function documentation in ATS
 
 We understand that it is not optimal to have to switch to another page in order to check the documentation for a certain function in a test case. Therefore we integrated the function documentation into ATS itself. When searching for functions and also when editing a test step in a test case you can see the function documentation by hovering over the function name.
 The same holds for the function parameters.
 
-### Data-Driven Test Cases
+### Data driven test cases
 
 * We added the option to sequentially execute data driven test cases (DDTC). Until now DDTCs were always executed in parallel. We have now made it possible to chose if you want to execute DDTCs parallel or sequentially, as in, one-by-one. The selection works in exactly the way it works for test suites, but it is only available for test cases that are related to a dataset. This overcomes issues where DDTC could be interfering with each other because they were always running in parallel.
 * We have also added the screenshot feature to data driven test cases. Whenever a data driven test case fails for a given record in the dataset, a screen shot will be recorded and will be accessible in the logs. This will work in the same way as it is working now for standard test cases.
@@ -97,7 +96,7 @@ The same holds for the function parameters.
 * We fixed several bugs related to the results on the dashboard.
 * We fixed a major issue where the toolbar buttons to cut/copy/paste/delete were not working in an action/test case/test suite if the item was opened by searching for it in the repository.
 
-### Limitations
+### Known Limitations
 
 * When opening a folder after searching for it in the repository, the toolbar buttons do not work anymore. Please open folders by navigating to them in the repository.
 * A data-driven test case, which was executed before ATS 2.7, doesn't show a passed bar on the monitoring page and on the test runs page

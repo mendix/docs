@@ -5,7 +5,6 @@ category: "Studio Pro"
 weight: 40
 aliases:
     - /releasenotes/desktop-modeler/windows-service.html
-    - /releasenotes/desktop-modeler/windows-service
 ---
 
 To download the Windows Service, go to the [Get Studio Pro](https://marketplace.mendix.com/link/studiopro/) page in the Mendix Marketplace and click the **Related Downloads** button.

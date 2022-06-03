@@ -24,7 +24,7 @@ Select the application database as the default database.
 
 The user does not require any special server roles. SQL server requires every user to be part of the public role, so it is sufficient to keep the ‘public’ server role as the only role for the user.
 
-You can find more information about the authorization level of the server roles on this page: [Server-level roles](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles?view=sql-server-ver15) in the Microsoft SQL documentation.
+You can find more information about the authorization level of the server roles on this page: [http://msdn.microsoft.com/en-us/library/ms188659.aspx](http://msdn.microsoft.com/en-us/library/ms188659.aspx)
 
 {{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/mendix-on-windows-microsoft-sql-server/setting-up-the-database-user/18580673.png" >}}
 

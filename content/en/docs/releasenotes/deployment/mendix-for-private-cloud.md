@@ -13,19 +13,6 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
-### April 21st, 2022
-
-#### Portal Fixes
-
-* We fixed an issue where dates set in an environment variable was malformed when passed to the Mendix Runtime. (Ticket 144314)
-
-### March 22nd, 2022
-
-#### Fixes
-
-* We fixed an issue where the number of replicas was not correctly reported
-* We fixed an issue where some users could not deploy MDAs (Tickets 144512 and 144908)
-
 ### March 10th, 2022
 
 #### Portal Improvement

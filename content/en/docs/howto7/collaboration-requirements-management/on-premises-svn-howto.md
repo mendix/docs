@@ -58,7 +58,7 @@ Currently, there is no direct way of creating and storing a new application in y
 1. Create a new Mendix application from either the [Developer Portal](https://sprintr.home.mendix.com/index.html) or the Mendix Desktop Modeler.<br>
     * If you create the app from the Developer Portal, open it in the Mendix Desktop Modeler to download it to your local machine <br>
     * If you create the app from the Desktop Modeler, click **Yes** when asked whether you want to enable the Team Server
-2. The new app now contains a link to the location of the Mendix Team Server. To replace this with the address of your own SVN server, please create a ticket in the [Mendix Support Portal](https://support.mendix.com/) specifying your app and the address of your SVN server. This address must include the name of the repository you're going to use for your app (for example, `https://svn.example.com:9876/repos/myapp`).
+2. The new app now contains a link to the location of the Mendix Team Server. To replace this with the address of your own SVN server, please create a ticket in the [Mendix Support Portal](https://support.mendix.com/hc/en-us) specifying your app and the address of your SVN server. This address must include the name of the repository you're going to use for your app (for example, `https://svn.example.com:9876/repos/myapp`).
 3. **Please wait for confirmation from Mendix before continuing the process**.
 4. Close all the running Mendix Modelers.
 5. Open the folder in which your app is stored.

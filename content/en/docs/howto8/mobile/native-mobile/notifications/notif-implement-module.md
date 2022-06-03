@@ -9,7 +9,7 @@ tags: ["mobile", "native", "push", "local", "firebase, ios, android"]
 
 ## 1 Introduction
 
-Now that you have implemented the prerequisites in your app, you must implement the [Push Notifications Connector](/appstore/modules/push-notifications/) module. Complete the steps below to enable the basic configuration.
+Now that you have implemented the prerequisites in your app, you must implement the [Push Notifications Connector](https://marketplace.mendix.com/link/component/3003) module. Complete the steps below to enable the basic configuration.
 
 ## 2 Download From Marketplace
 

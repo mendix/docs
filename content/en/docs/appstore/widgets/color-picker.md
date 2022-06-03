@@ -65,10 +65,10 @@ To configure this widget, follow these steps:
                 * **Color** – defines the default color in hex, RGB, or RGBA format
             * **Delete** – deletes the selected default color
             * **Edit** – opens the **Edit Default Colors Item** dialog box where you can make changes to the selected default color
-            * **Move up** – moves up the selected default color
+            * **Move up** – moves up the selected default color
             * **Move down** – moves down the selected default color
             * **Color** – the list of the existing default colors
-    * **No** (default) – if selected, the advanced options are disabled.
+    * **No** (default) – if selected, the advanced options are disabled.
 * **Invalid format message** – defines the message that is shown when the user provides a wrong input
 * **Show label** 
     * **Yes** – if selected, you can define the label caption
@@ -90,10 +90,6 @@ For more information, see [Visibility Section](/refguide/common-widget-propertie
 ### 2.6 Common Tab
 
 For more information, see [Common Section](/refguide/common-widget-properties/#common-properties) in *Properties Common in the Page Editor*.
-
-## 3 Strict CSP Compatibility
-
-This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget.
 
 ## 4 Widgets Below Version 2.0.0
 

@@ -29,16 +29,15 @@ The following backups are retained:
 
 The **Start Time** of nightly backups in UTC is shown below. The **Local Time** indicates the time at the regional data center – this may vary if *Summer Time* or other adjustments are in place. The **Estimated Duration** indicates the period during which backups are expected to be taken from apps in that region – your app can be backed up at any time during this period and the exact period during which backups are taken can change due to factors at the data center which are outside Mendix's control.
 
-| Region | Replication Region | Start Time (UTC) | Local Time | Estimated Duration |
-| --- | --- | --- | --- |  --- |
-| Dublin | Frankfurt | 23:00 | 00:00 |  3 hours | 
-| Frankfurt | Dublin | 00:00 | 01:00 | 3 hours |
-| London | Frankfurt | 23:00 | 23:00 | 2 hours |
-| Oregon | Ohio | 07:00 | 00:00 | 1 hour |
-| Singapore | Sydney | 17:00 | 01:00 | 1 hour |
-| Tokyo | Osaka | 16:00 | 01:00 | 1 hour |
-| N. Virginia | N. California | 05:00 | 00:00 | 4 hours |
-| Canada | Oregon | 05:00 | 00:00 | 1 hours |
+| Region | Start Time (UTC) | Local Time | Estimated Duration |
+| --- | --- | --- | --- |
+| Dublin | 23:00 | 00:00 |  3 hours |
+| Frankfurt | 00:00 | 01:00 | 3 hours |
+| London | 23:00 | 23:00 | 2 hours |
+| Oregon | 07:00 | 00:00 | 1 hour |
+| Singapore | 17:00 | 01:00 | 1 hour |
+| Tokyo | 16:00 | 01:00 | 1 hour |
+| N. Virginia | 05:00 | 00:00 | 4 hours |
 
 Nightly backups will start once an app has been successfully deployed to, and started in, the environment.
 

@@ -2,10 +2,9 @@
 title: "2.19"
 url: /releasenotes/add-ons/ats-2.19/
 parent: "ats-2"
-weight: 81
 ---
 
-## 2.19.0
+## 2.19
 
 **Release date: June 9th 2020**
 

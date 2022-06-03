@@ -132,7 +132,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 	{{< figure src="/attachments/howto7/integration/publish-rest-service/CompleteMFNoErrorHandling.png" >}}
 
-### 4.3 Viewing the App{#viewing}
+### <a name="viewing"></a>4.3 Viewing the App
 
 To view and try out your app, follow these steps:
 

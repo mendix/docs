@@ -3,10 +3,10 @@
 //
 .td-sidebar-nav {
     padding-right: 0.5rem;
-    margin-right: -5px; // NK - decreased
+    margin-right: -5px;
     margin-left: -15px;
-    font-size: 0.95rem; // NK - decreased from inherited
-    line-height: 1.2; // NK - decreased from inherited
+    font-size: 0.95rem; // NK - decrased
+    line-height: 1.2; // NK - decrased
 
     @include media-breakpoint-up(md) {
         @supports (position: sticky) {
@@ -113,7 +113,7 @@
         padding-top: 4rem;
         background-color: $td-sidebar-bg-color;
         padding-right: 1rem;
-        border-right: none;//border-right: 1px solid $td-sidebar-border-color; // NK - moved to td-main main, to fully span height of screen
+        //border-right: 1px solid $td-sidebar-border-color; // NK - moved to td-main main, to fully span height of screen
     }
 
 
@@ -132,16 +132,14 @@
     }
 
     &__inner {
-            order: 0;
-            height: calc(100vh - 75px); // NK - added to allow scrolling
-            overflow-x: hidden !important; // NK - added to allow scrolling
+        order: 0;
 
         @include media-breakpoint-up(md) {
             @supports (position: sticky) {
                 position: sticky;
                 top: 4rem; // NK - added to work with height change
                 z-index: 10;
-                height: calc(100vh - 75px);// NK - changed to allow scrolling
+                height: max-content;// NK - changed from calc(100vh - 10rem);
             }
         }
 

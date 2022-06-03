@@ -21,25 +21,15 @@ The MQTT Connector consists of microflow actions that enable doing the following
 
 ### 1.2 Features
 
-The MQTT connector allows you to publish to, subscribe to, and unsubscribe from an MQTT broker.
+The MQTT Connector allows you to publish to, subscribe to, and unsubscribe from an MQTT broker.
 
 ## 2 Configuration {#configuration}
 
 ### 2.1 Broker 
 
-Configure your broker connection information using the **ConnectionAdministration** page. The **Connection Name**, **Broker host**, and **Broker port** fields point to the MQTT broker. 
+Configure your broker connection information using the **ConnectionAdministration** page. The **Connection Name**, **Broker host**, and **Broker port** fields point to the MQTT broker. This data is stored in the domain model.
 
-If the broker needs basic authentication for connection, then you can set up a username and password that will be stored in the domain model. See the [Authentication](#auth) section below.
-
-#### 2.1.1 Setting Up Authentication {#auth}
-
-If an MQTT broker needs a username and password for connection, you set credentials on the **ConnectionAdministration** page. Set the **Authentication method** to **BASIC**, and then set the values for **UserName** and **Password**.
-
-Setting the **Authentication method** to **NONE** indicates that authentication is not required to connect to the MQTT broker. 
-
-The **Password** is encrypted using the **EncryptionKey** constant. For better security, it is advised to change the **EncryptionKey** constant after importing the MQTT connector.
-
-#### 2.1.2 Enabling SSL
+#### 2.1.1 Enabling SSL
 
 Enabling SSL will establish a secure connection to the broker. To input your SSL certificates, follow these steps:
 
@@ -53,7 +43,7 @@ Enabling SSL will establish a secure connection to the broker. To input your SSL
 
 After you have set up the connection with the broker (in the [Configuration](#configuration) section or in a microflow), you can use the actions Publish, Subscribe, or Unsubscribe. These actions are used in microflows. The **SampleUses** microflow gives a sample setup for your reference.
 
-### 3.1 Creating a Broker Connection in a Microflow
+### 3.1 Creating a broker connection directly in a microflow
 
 You can set up a broker connection in a microflow directly if you do not want it to be stored in the domain model. To do this, follow these steps:
 

@@ -6,8 +6,7 @@ category: "Data Hub Catalog"
 weight: 35
 tags: ["data hub catalog", "data hub", "external entities", "register", "published OData service" ,"how to", "registration"]
 aliases:
-    - /data-hub/data-hub-catalog/register.html
-    - /data-hub/data-hub-catalog/register
+    /data-hub/data-hub-catalog/register.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 #The anchor registration-form below is mapped, so it should not be removed or changed.
 ---
@@ -16,7 +15,7 @@ aliases:
 
 There are three ways to register exposed OData services in the Data Hub Catalog. We support all OData versions.
 
-**This how-to will teach you how to register a service in the following ways:**
+**This how-to will teach you how to register a service:**
 
 * [Through the Mendix Cloud](#mendix-cloud)
 * [Through the Data Hub Catalog Registration API](#registration-api)
@@ -34,7 +33,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 ## 3 Registering a Service Through the Mendix Cloud {#mendix-cloud}
 
 
-If you have an exposed OData service that is deployed to the Mendix Cloud, then congratulations! Your service is already registered in the Data Hub Catalog.
+If you have an exposed OData service, that is deployed to the Mendix Cloud, then congratulations! Your service is already registered in the Data Hub Catalog. This is the power of the Mendix Data Hub.
 
 ## 4 Registering a Service Without the Mendix Cloud {#without-mendix-cloud}
 
@@ -47,13 +46,13 @@ The Data Hub Catalog collects metadata about the application and environment whe
 
 ### 4.1 Registering a Service Through the Data Hub Catalog Registration API {#registration-api}
 
-Calling the Data Hub Catalog Registration APIs allows you to register one or more exposed OData service(s). 
+Calling the Data Hub Catalog Registration APIs allows you to register one (or several at a time) exposed OData service(s). 
 
 First, you need to create an authentication token to get access to the Data Hub Catalog APIs. The Data Hub Catalog Registration API requires authentication through a Personal Access Token. For every API request you make to a Data Hub Catalog API, include the following key-value pair with your headers:
 
 `Authorization: MxToken <your_Personal_Access_Token>`
 
-**You can [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/).**
+For information on how to to create a Personal Access Token, see [Creating a Data Hub Catalog Registration API token](#create-token).
 
 Once you have a Personal Access Token, follow this series of REST calls to register the details of our exposed OData service:
 
@@ -61,18 +60,22 @@ Once you have a Personal Access Token, follow this series of REST calls to regis
 2. Use the application UUID to [register the environment, and retrieve the environment UUID](#register-environment).
 3. Use the application UUID and the environment UUID to [register one or more services](#register-services).
 
-    If your service contract is not in the right format, use the [Transform API](#transform-api) to get your service contract in the right format before registering them.
+   If your service contract is not in the right format, use the [Transform API](#transform-api) to get your service contract in the right format before registering them.
 
-The [Data Hub Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) describes all the optional fields, required formats, other operations on these same paths. You will only fill out the required fields and one operation per path in this how-to. 
+The [Data Hub Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html) describes all the optional fields, required formats, other operations on these same paths. You will only fill out the required fields and one operation per path in this how-to. 
 
-#### 4.1.1 Registering an Application Through the Data Hub Catalog Registration API {#register-application}
+#### 4.1.1 Creating a Data Hub Catalog API token {#create-token}
+
+You can create a Personal Access Token in the Mendix [Warden](/developerportal/community-tools/warden/) application.
+
+#### 4.1.2 Registering an Application Through the Data Hub Catalog Registration API {#register-application}
 
 To register an application, you need:
 
 - Personal Access Token
 - Application `Name`
 
-For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Register/post_applications).
+For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html#/Register/post_applications).
 
 You can see an example of a request below:
 
@@ -96,7 +99,7 @@ A successful `POST` call results in a `201` status code and a JSON response body
 
 Use the application UUID to register your environment.
 
-#### 4.1.2 Registering an Environment Through the Data Hub Catalog Registration API {#register-environment}
+#### 4.1.3 Registering an Environment Through the Data Hub Catalog Registration API {#register-environment}
 
 To register an environment, you need the following:
 
@@ -106,7 +109,7 @@ To register an environment, you need the following:
 - Environment `Location`
 - Environment `Type`
 
-For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Register/post_applications__AppUUID__environments). 
+For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html#/Register/post_applications__AppUUID__environments). 
 
 You can see an example of a request below:
 
@@ -137,7 +140,7 @@ A successful `POST` call results in a `201` status code and a JSON response body
 Use the application UUID and the environment UUID to register one or more services.
 
 
-#### 4.1.3 Registering Services Through the Data Hub Catalog Registration API {#register-services}
+#### 4.1.4 Registering Services Through the Data Hub Catalog Registration API {#register-services}
 
 To register services, you need the following:
 
@@ -148,7 +151,7 @@ To register services, you need the following:
 - Service version `Version` and `Security Scheme`
 - Service `Contract` with `Type` and `Value`
 
-For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Register/put_applications__AppUUID__environments__EnvironmentUUID__published_endpoints). 
+For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html#/Register/put_applications__AppUUID__environments__EnvironmentUUID__published_endpoints). 
 
 You can see an example of a request below:
 
@@ -206,7 +209,7 @@ A successful `PUT` call will result in a `200` status code and a JSON response b
 ```
 
 
-#### 4.1.4 Preparing Your Service Details Using the Transform API {#transform-api}
+#### 4.1.5 Preparing Your Service Details Using the Transform API {#transform-api}
 
 The Transform API converts the `dependencies.json` file your Mendix app generates into the fields the Registration API requires to registers services. 
 

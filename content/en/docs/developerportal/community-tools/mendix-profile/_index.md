@@ -215,7 +215,7 @@ Under **Contact**, you can select how much information you want to receive from 
 * **Receive daily digest** – disabled by default
 * **Receive updates for threads in which I am active** – enabled by default
 
-There is also a link to [Mendix Support](https://support.mendix.com/) if you need to perform certain account actions that require their assistance.
+There is also a link to [Mendix Support](https://support.mendix.com/hc/en-us) if you need to perform certain account actions that require their assistance.
 
 ### 10.2 Work Experience
 

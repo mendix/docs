@@ -154,7 +154,7 @@ If you have trouble signing in to your application, it is a good idea to clear t
 
 ### 2.5 Next steps
 
-You now have a blank application which supports authentication for your specific MindSphere application, which is an excellent starting point for developing your app further. We also recommend investigating the basic tutorial for MindSphere web applications [Build a MindSphere app with Mendix](https://academy.mendixcloud.com/link/path/80/Build-a-MindSphere-app-with-Mendix) to learn more about MindSphere application development in general.
+You now have a blank application which supports authentication for your specific MindSphere application, which is an excellent starting point for developing your app further. We also recommend investigating the basic tutorial for MindSphere web applications [Build a MindSphere app with Mendix](https://gettingstarted.mendixcloud.com/link/path/80/Build-a-MindSphere-app-with-Mendix) to learn more about MindSphere application development in general.
 
 When you enhance your application with MindSphere API calls to use the IoT capabilities of MindSphere you must consider the following two steps:
 

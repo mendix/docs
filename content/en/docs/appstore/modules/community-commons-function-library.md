@@ -112,7 +112,6 @@ The Community Commons container project contains a variety of predesigned unit t
 * `StringLeftPad` – This pads a string on the left to a certain length.
 * `StringRightPad` – This pads a string on the right to a certain length.
 * `StringSimplify` – This removes all the diacritics from a string.
-* `StringSplit` – This splits a string using a regex separator.
 * `StringTrim` – This trims a string to the left and right (meaning, it removes all the surrounding whitespace characters such as tabs, spaces, and returns).
 * `SubstituteTemplate` – Given an object and a template, this substitutes all the fields in the template. This supports attributes, references, reference sets, and constants. Enums are displayed using their caption instead of the key.
 * `Base64Encode` – This converts a plain string to a base-64 encoded string.

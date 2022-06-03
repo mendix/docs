@@ -1,7 +1,7 @@
 ---
 title: "Extensibility"
 url: /howto8/extensibility/
-description: "A selection of how-tos that explain how to use connectors and adapters from the Marketplace."
+description: "A selection of how to's that explain how to use connectors and adapters from the Marketplace."
 weight: 80
 tags: ["widget", "marketplace", "connectors", "adapters"]
 ---
@@ -20,3 +20,4 @@ One of the strengths of Mendix is that it is easy to connect your Mendix applica
 * [Explore Connectors & Adapters](/howto8/extensibility/explore-connectors-and-adapters/) — presents some choice examples from the [Mendix Marketplace](https://marketplace.mendix.com/) to consider for your app development
 * [Build Microflow Actions Using the Mendix Connector Kit](/howto8/extensibility/howto-connector-kit/) — introduces you to using the Mendix Connector Kit to add powerful microflow actions to your apps
 * [Use Mendix DataStorage APIs to Build Reusable Microflow Actions](/howto8/extensibility/howto-datastorage-api/) — teaches you how to build microflow actions that, for example, retrieve advanced XPath and OQL as well register global entity listeners
+* [Get Started with the TimeSeries Connector](/howto8/extensibility/get-started-with-the-timeseries-connector/) — shows you how to use the TimeSeries Connector by first signing up for it, configuring the module settings, and finally implementing actions

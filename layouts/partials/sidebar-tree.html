@@ -1,7 +1,7 @@
 {{/* We cache this partial for bigger sites and set the active class client side. */}}
 {{ $sidebarCacheLimit := cond (isset .Site.Params.ui "sidebar_cache_limit") .Site.Params.ui.sidebar_cache_limit 2000 -}}
 {{ $shouldDelayActive := ge (len .Site.Pages) $sidebarCacheLimit -}}
-<div id="td-sidebar-menu" class="td-sidebar__inner{{ if $shouldDelayActive }} d-none{{ end }} overflow-auto"> <!-- NK - added overflow-auto for scrolling -->
+<div id="td-sidebar-menu" class="td-sidebar__inner{{ if $shouldDelayActive }} d-none{{ end }}">
   {{ if not .Site.Params.ui.sidebar_search_disable -}}
   <form class="td-sidebar__search d-flex align-items-center">
     {{ partial "search-input.html" . }}
@@ -20,11 +20,11 @@
   {{ end -}}
   <nav class="collapse td-sidebar-nav{{ if .Site.Params.ui.sidebar_menu_foldable }} foldable-nav{{ end }}" id="td-section-nav">
     <!-- NK - deactivated the lang bar from appearing on left side after window resize -->
-	{{/* {{ if  (gt (len .Site.Home.Translations) 0) -}}
+	<!-- {{ if  (gt (len .Site.Home.Translations) 0) -}}
     <div class="nav-item dropdown d-block d-lg-none">
       {{ partial "navbar-lang-selector.html" . }}
     </div>
-    {{ end -}} */}}
+    {{ end -}} -->
     {{ $navRoot := cond (and (ne .Params.toc_root true) (eq .Site.Home.Type "docs")) .Site.Home .FirstSection -}}
     {{ $ulNr := 0 -}}
     {{ $ulShow := cond (isset .Site.Params.ui "ul_show") .Site.Params.ui.ul_show 1 -}}

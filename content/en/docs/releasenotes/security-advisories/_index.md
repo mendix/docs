@@ -22,8 +22,6 @@ Siemens publishes their CVEs on the second Tuesday of every month.
 
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
-| <a name="25650"></a>CVE-2022-25650 | 3.1 | [Improper Access Control Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-870917.pdf) | See the SSA description for remediation details. |
-| <a name="27241"></a>CVE-2022-27241 | 5.3 | [Information Disclosure Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-414513.pdf) | See the SSA description for remediation details. |
 | CVE-2022-26313 | 9.1 | [Vulnerability in Mendix Forgot Password Marketplace Module](https://cert-portal.siemens.com/productcert/pdf/ssa-134279.pdf) | See the SSA description for remediation details. |
 | CVE-2022-26314 | 7.4 | [Vulnerability in Mendix Forgot Password Marketplace Module](https://cert-portal.siemens.com/productcert/pdf/ssa-134279.pdf) | See the SSA description for remediation details. |
 | <a name="24309"></a>CVE-2022-24309 | 5.9 | [XPath Constraint Vulnerability in Mendix Runtime](https://cert-portal.siemens.com/productcert/pdf/ssa-148641.pdf) | See the SSA description for remediation details. |

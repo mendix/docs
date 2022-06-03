@@ -172,6 +172,5 @@ The resources folder contains the *SAMLConfig.properties* file, and through this
 
 *  [SSO Using SAML](https://academy.mendix.com/link/module/115/lecture/938)
 
-    {{% alert color="info" %}}You must log into the Mendix Platform to see the lecture above.{{% /alert %}}
-    
-    {{% alert color="warning" %}}When using the [SAML](/appstore/modules/saml/) module for SSO in Mendix 9 and above, you might get stuck in an endless redirect loop. This is because the default value for SameSite cookies is `"Strict"`, and the session cookies cannot be forwarded. To avoid this issue, make sure your IdP (identity provider) and your app are in the same domain, and thus on the same site. For example, if your app is on `app.domain.com` and you open the deep link `app.domain.com/link/test`, then you are redirected to your IdP to sign in on `idp.domain.com/SSO`. After you sign in successfully, you are sent back to `app.domain.com/SSO/assertion`. Finally, you are forwarded to `app.domain.com/link/test`. Since your requests always stay on the same site, the cookie can be forwarded each time. If it is not an option to have the IdP and the app in the same domain, set the value for the SameSite cookies to `"None"` or`"Lax"` to solve the problem. See also [Runtime Customization](/refguide/custom-settings/).{{% /alert %}}
+	{{% alert color="info" %}}You must be signed in to the Mendix Platform to see the above lecture.
+	{{% /alert %}}

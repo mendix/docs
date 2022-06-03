@@ -52,7 +52,7 @@ The entry point into the Mendix escalation process is through your support case.
 
 This is the normal process for a support case:
 
-1. Navigate to the [Mendix Support](https://support.mendix.com/).
+1. Navigate to the [Mendix Support](https://support.mendix.com/hc/en-us).
 2.  Click **Submit a request**, which will open this form:
 
 	{{< figure src="/attachments/developerportal/support/escalation-management-process/zendesk.png" >}}

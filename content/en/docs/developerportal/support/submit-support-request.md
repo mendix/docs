@@ -84,7 +84,7 @@ To submit a request with Mendix Support, follow these steps:
 		* **Developer Platform - Data Hub** – issues/questions regarding [Data Hub](/data-hub/) (for example, when you have difficulties accessing the Data Hub Catalog)
 		* **Developer Platform - Control Center** - issues/questions regarding [Control Center](/developerportal/control-center/) (for example, when you have difficulties deactivating applications from the Control Center) 
 		* **Developer Platform - Studio** - issues/questions regarding [Mendix Studio](/studio/) (for example, when you have difficulties opening Mendix Studio)
-		* **Developer Platform - Support Portal** - issues/questions regarding the [Support Portal](https://support.mendix.com/) (for example, when you have difficulties creating Support tickets)
+		* **Developer Platform - Support Portal** - issues/questions regarding the [Support Portal](https://support.mendix.com/hc) (for example, when you have difficulties creating Support tickets)
 		* **Developer Platform - Other** – any other issues/questions regarding the Mendix Platform itself
 	* **Licensing** – select this component when you have issues/questions regarding your Mendix licenses
 
@@ -94,7 +94,7 @@ The Mendix Support Portal will first suggest relevant documentation for you to r
 
 {{< figure src="/attachments/developerportal/support/submit-support-request/recommendations.png" >}}
 
-If investigating the documentation and searching the [Mendix Forum](https://forum.mendixcloud.com) does not help you solve your issue, you can submit the Mendix Support request.	
+If investigating the documentation and searching the [Mendix Forum](https://forum.mendixcloud.com/index4.html) does not help you solve your issue, you can submit the Mendix Support request.	
 
 ## 4 Request Priority {#request-priority}
 
@@ -133,10 +133,6 @@ Depending on the type of request, providing attachments and additional informati
 
 You can add large attachments such as project files to the request. Please note that Mendix recommends not attaching any files that contain personal identifiable data, credit card information, or other sensitive data.
 
-{{% alert color="info" %}}
-Attachments added to Mendix Support requests will be automatically deleted after 365 days.
-{{% /alert %}}
-
 ### 5.2 Cloud Problems & Deployment Issues
 
 * Log file (*.txt*)
@@ -167,6 +163,10 @@ Not all Marketplace content is compatible with every version of Studio Pro, and 
 ### 5.6 Mobile Problems
 
 * Operating system and version (Android x.x or iOS x.x; for example, Android 6.1)
+
+{{% alert color="info" %}}
+For Windows Phone, please contact Mendix Support for the current support conditions.
+{{% /alert %}}
 
 ### 5.7 Browser Problems
 
@@ -204,7 +204,7 @@ The ticket can have the following statuses:
 
 ## 8 Submitting a Feature Request
 
-On the [Mendix Idea Forum](https://forum.mendixcloud.com/p/ideas), Mendix captures ideas and requests from customers and developers in the Mendix community. Each quarter, the Mendix Idea Forum is treated as a short-list of the top features that the Mendix community supports via topics with the most upvotes.
+On the [Mendix Idea Forum](https://forum.mendix.com/ideaforum/), Mendix captures ideas and requests from customers and developers in the Mendix community. Each quarter, the Mendix Idea Forum is treated as a short-list of the top features that the Mendix community supports via topics with the most upvotes.
 
 ## 9 Read More
 

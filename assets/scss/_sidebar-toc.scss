@@ -2,9 +2,9 @@
 // Right side toc
 //
 .td-sidebar-toc {
-    border-left: 0; // NK - changed to 0, the actual border moved to td-main main, to fully span height of screen
-    font-size: 0.9rem; // NK - decreased
-    line-height: 1.2; // NK - decreased
+    //border-left: 1px solid $border-color; // NK - moved to td-main main, to fully span height of screen
+    font-size: 0.9rem; // NK - decrased
+    line-height: 1.2; // NK - decrased
 
     @supports (position: sticky) {
         position: sticky;
@@ -16,7 +16,7 @@
     order: 2;
     padding-top: 0.75rem;
     padding-bottom: 1.5rem;
-    vertical-align: top;
+    //vertical-align: top;
 
 }
 
@@ -28,9 +28,6 @@
 }
 
 .td-toc {
-
-    height: calc(100vh - 180px); // NK - added to allow scrolling
-    overflow-x:hidden !important; // NK - added to allow scrolling
 
     a {
         display: block;

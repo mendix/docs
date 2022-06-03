@@ -181,4 +181,4 @@ You can now link test cases to stories and link stories to test cases.
 
 ## 7 Next Up
 
-You now learned how to link user stories to your test cases. The next how-to is [Use ATS in Combination with CI/CD](/addons/ats-addon/ht-two-ats-and-ci-cd/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.
+You now learned how to link user stories to your test cases. The next how-to is [Use ATS in Combination with CI/CD](/addons/ats-addon/ht-two-ats-and-ci-cd/). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.

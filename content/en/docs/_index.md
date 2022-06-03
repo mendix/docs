@@ -8,8 +8,6 @@ description: Browse the documentation per product, read about latest releases, a
 aliases:
     - /docs/index.html
     - /docs/Overview.html
-    - /docs/Overview
-    - /search.html
     - /search/
 cascade:
     - no_list: true

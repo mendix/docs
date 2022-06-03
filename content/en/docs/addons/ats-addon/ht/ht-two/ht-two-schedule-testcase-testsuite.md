@@ -130,4 +130,4 @@ Now you can schedule your own test cases and test suites. You can add as many sc
 
 ## 5 Next Up
 
-You now learned how to schedule test cases and test suites. The next how-to is [How to Mask Your Password](/addons/ats-addon/ht-two-mask-your-password/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.
+You now learned how to schedule test cases and test suites. The next how-to is [How to Mask Your Password](/addons/ats-addon/ht-two-mask-your-password/). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](/addons/ats-addon/ht-two/) page. We advise you to follow the predefined structure.

@@ -26,7 +26,7 @@ When contributing to the Mendix documentation, please consider these style guide
 
 Need an extra hand with spelling and grammar? Load your article into [Hemmingway](http://www.hemingwayapp.com/) to spot any potential errors.
 
-## 3 Guidelines for the Mendix Studio Pro How-tos
+## 3 Guidelines for the Mendix Studio Pro How-to's
 
 {{% alert color="info" %}}
 
@@ -34,9 +34,9 @@ This section presents detailed guidelines for writing a how-to. Read this sectio
 
 {{% /alert %}}
 
-The [Studio Pro How-tos](/howto/) are contextual and version-specific guides on Mendix topics that take you through the necessary steps to achieve a goal, whether it is adding a widget to your app's UI, importing Excel files, or consuming a web service. The *Studio Pro How-tos* use relevant information on Mendix components to create realistic scenarios with specific contexts and they should deliver functionality.
+The [Studio Pro How-to's](/howto/) are contextual and version-specific guides on Mendix topics that take you through the necessary steps to achieve a goal, whether it is adding a widget to your app's UI, importing Excel files, or consuming a web service. The *Studio Pro How-to's* use relevant information on Mendix components to create realistic scenarios with specific contexts and they should deliver functionality.
 
-Here are some important details on the *Studio Pro How-tos*:
+Here are some important details on the *Studio Pro How-to's*:
 
 * This documentation should provide solutions and insights to common scenarios, business cases, and frequently asked questions
 * At the end of each how-to, the reader should have increased knowledge about Mendix functionality and should know how to apply it in relevant situations
@@ -57,7 +57,7 @@ In the **This how-to will teach you . . .** section, sum up the key points that 
 
 Use the prerequisites section to let end-users know what they should have completed before starting the how-to. This prevents having to explain certain steps in detail.
 
-You can tell end-users that they need to have installed certain software requirements or have performed specific configurations before starting the how-to. You can also list other *Studio Pro How-tos* here that should be referenced.
+You can tell end-users that they need to have installed certain software requirements or have performed specific configurations before starting the how-to. You can also list other *Studio Pro How-to's* here that should be referenced.
 
 ### 3.4 Images
 

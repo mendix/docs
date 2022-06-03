@@ -48,15 +48,10 @@ Download and install the following modules:
 2. Add Administrator and User module roles to the required App roles:
     1. Administrator role does the following:
         1. Administers workflows.
-        2. Views workflow and task performance in the **Admin Workflow Dashboard**.
+        2. Views workflow performance in the Admin Workflow Dashboard.
     2. User role does the following:
         1. Executes workflows by completing user tasks.
-        2. Views personal performance in the **Task Dashboard**.
-        3. Views workflow progress in the **My Initiated Workflows** overview.
 3. Make sure the correct user entity is set in the **App Settings**: open **App Settings** > **Workflows** tab and set **User entity** to *Administration.Account*.
-4. For Workflow Commons v2.1.0 and above, you need to configure the state change microflows in the **App Settings**: open **App Settings** > **Workflows** tab to configure the following state change microflows:
-    1. Set **Workflow state change** to *OCh_Workflow_State*
-    2. Set **User task state change** to *OCh_WorkflowUserTask_State*
 
 ## 4 Usage
 

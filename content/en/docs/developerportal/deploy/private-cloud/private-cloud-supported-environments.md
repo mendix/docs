@@ -35,8 +35,8 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 
 Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
-* Kubernetes versions 1.19 through 1.23
-* OpenShift 4.6 through 4.10
+* Kubernetes versions 1.19 through 1.22
+* OpenShift 4.6 through 4.8
 
 {{% alert color="warning" %}}
 Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
@@ -163,7 +163,6 @@ The following standard PostgreSQL databases are supported:
 * PostgreSQL 11
 * PostgreSQL 12
 * PostgreSQL 13
-* PostgreSQL 14
 
 {{% alert color="info" %}}
 While Mendix for Private Cloud supports all Postgres versions listed above, the Mendix Runtime might require a more specific Postgres version.
@@ -176,6 +175,7 @@ A standard PostgreSQL database is an unmodified PostgreSQL database installed fr
 The following managed PostgreSQL databases are supported:
 
 * [Amazon RDS for PostgreSQL](https://aws.amazon.com/rds/postgresql/) 
+* [Amazon Aurora PostgreSQL](https://aws.amazon.com/rds/aurora/)
 * [Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/services/postgresql/).
 * [Google Cloud SQL for PostgreSQL](https://cloud.google.com/sql/docs/postgres).
 
@@ -310,7 +310,7 @@ Mendix for Private Cloud will use the existing ingress controller.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-We strongly recommend using the [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/), even if other Ingress controllers or OpenShift Routes are available. You may need to check which of the [several versions of the NGINX Ingress Controller](https://www.nginx.com/blog/guide-to-choosing-ingress-controller-part-4-nginx-ingress-controller-options/#NGINX-vs.-Kubernetes-Community-Ingress-Controller) is installed in your cluster. We recommend the "community version".
+We strongly recommend using the [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/), even if other Ingress controllers or OpenShift Routes are available.
 
 NGINX Ingress can be used to deny access to sensitive URLs, add HTTP headers, enable compression, and cache static content.
 NGINX Ingress is fully compatible with [cert-manager](https://cert-manager.io/), removing the need to manually manage TLS certificates. In addition, NGINX Ingress can use a [Linkerd](https://linkerd.io/) Service Mesh to encrypt network traffic between the Ingress Controller  and the Pod running a Mendix app.

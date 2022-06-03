@@ -327,11 +327,11 @@ The Modeler takes care of some file management automatically. If you add or remo
 
 We advise you to always commit and update inside the Modeler because in this way useful metadata is added to your revisions. The Modeler has ways to recover from external updates or merges but it is best to not depend on that.
 
-### 9.1 TortoiseSVN and Subclipse {#tortoisesvn-subclipse}
+### 9.1 TortoiseSVN and Subclipse{#tortoisesvn-subclipse}
 
-If you are doing more advanced changes to files, like adding Java actions or resources to your project, you will have to install TortoiseSVN on your computer and perform some operations yourself. You can download it for free at [TortoiseSVN](https://tortoisesvn.net/) (choose version 1.7).
+If you are doing more advanced changes to files, like adding Java actions or resources to your project, you will have to install TortoiseSVN on your computer and perform some operations yourself. You can download it for free at [http://tortoisesvn.tigris.org/](http://tortoisesvn.tigris.org/) (choose version 1.7).
 
-Also, if you are developing Java actions using Eclipse, we advise you to install Subclipse to help you with version control of Java files. You can download Subclipse inside Eclipse or from the [Eclipse Marketplace](https://marketplace.eclipse.org/content/subclipse).
+Also, if you are developing Java actions using Eclipse, we advise you to install Subclipse to help you with version control of Java files. You can download Subclipse from the Eclipse Marketplace inside Eclipse or from [http://subclipse.tigris.org/](http://subclipse.tigris.org/).
 
 ### 9.2 Adding Files and Directories
 

@@ -42,7 +42,11 @@ These are some examples of what you can find on the dashboard:
 You may do the following operations to an app:
 
 * Delete an app
-* Deactivate an app
+
+* Deactivate an active app
+
+  {{% alert color=“info” %}}After an app is deactivated, you can re-activate it.{{% /alert %}}
+
 * Delete a free Mendix Cloud environment
 
 However, which operations are allowed depends on how the app is deployed:
@@ -59,6 +63,7 @@ The consequences of the operations are shown in the table below:
 |                                                              | Delete an app                                                | Deactivate an app                                            | Delete a free Mendix Cloud environment                       |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Project code repository stays persistent                     | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} |
+| Project members can access the project code repository       | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} |
 | App project stays persistent                                 | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} |
 | Project members can access the app project on the Developer Portal | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} |
 | Cloud environment stays persistent                           | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
@@ -121,7 +126,7 @@ When you click the name of a deactivated app, a profile page opens with the app 
 
 If the app is deployed in the free Mendix Cloud environment, you can find the **...** icon on the upper-right corner of the profile page. You can click the icon and activate the app or delete the app. 
 
-{{% todo %}}Image needed{{% / todo %}}
+{{< figure src="/attachments/developerportal/control-center/activate-delete-app.png" >}}
 
 Th profile page has the following tabs:
 
@@ -131,9 +136,14 @@ Th profile page has the following tabs:
   * You can directly deactivate a member from the app by clicking their name and selecting **Deactivate Member**.
   * For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/collaborate/team/#managing) page.
   * As a Mendix Admin, you can also add yourself to a team via this page.
+* **Environments** – This tab shows all the Mendix Public Cloud environments
+
+  * You can directly delete a free Mendix Cloud environment on this tab. For details, see the two tables at the beginning of [the current section](#apps).
+  
+    {{% todo %}}Check if this is correct & screenshot{{% / todo %}}
 * **App Roles** –  this tab presents the team roles defined via the **Default App Roles** tab and/or customized for a particular app
 
-### 3.3 App Roles Tab
+### 3.3 Default App Roles Tab
 
 The **Default App Roles** tab shows the default [team roles](/developerportal/collaborate/app-roles/#team-roles) assigned for every new app created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/collaborate/team-server/) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) information.
 

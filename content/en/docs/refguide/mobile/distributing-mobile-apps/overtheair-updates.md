@@ -1,8 +1,8 @@
 ---
-title: "Over the Air Updates"
+title: "Updating Native Apps"
 url: /refguide/mobile/distributing-mobile-apps/overtheair-updates/
 parent: /refguide/mobile/distributing-mobile-apps/
-weight: 40
+weight: 30
 description: "Describes enabling over the air updates using built-in functionality."
 tags: ["ota", "over the air", "update"]
 aliases:
@@ -10,7 +10,9 @@ aliases:
 ---
 ## 1 Introduction
 
-Using Mendix Studio Pro v9.7 and above, you can update your Mendix native apps over-the-air (OTA). OTA updates are a fast and painless way of updating elements like layouts, pages, assets, or even your app's business logic (such as nanoflows and JavaScript actions) without going through the entire release process.
+Native apps can be updated by building and releasing an updated version to the appropriate app stores. The app-users are then asked to update their app and once they choose so the updated app is installed.
+
+Using Mendix Studio Pro v9.7 and above, you can also update your Mendix native apps over-the-air (OTA). OTA updates are a fast and painless way of updating elements like layouts, pages, assets, or even your app's business logic (such as nanoflows and JavaScript actions) without going through the entire release process.
 
 Native apps are separated into two parts: a wrapper that functions as a native iOS or Android app, and a bundle loaded dynamically by the wrapper. Elements like your business logic and static assets are part of this dynamically-loaded bundle. 
 

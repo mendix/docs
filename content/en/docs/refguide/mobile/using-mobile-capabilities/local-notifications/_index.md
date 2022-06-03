@@ -2,7 +2,7 @@
 title: "Local Notifications"
 url: /refguide/mobile/using-mobile-capabilities/local-notifications/
 parent: /refguide/mobile/using-mobile-capabilities/
-weight: 69
+weight: 50
 description: Tutorials for setting up local push notifications which do not use an internet connection.
 aliases:
     - /howto/mobile/local-notif-parent/

@@ -7,6 +7,7 @@ description: "A set of security aspects and checks to use when developing your M
 tags: ["security", "best practices", "access rules", "authentication", "encryption", "password", "ssl", "identity provider", "mendix cloud"]
 aliases:
     - /howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications.html
+    - /howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications
 #The anchor request-handlers below is mapped, so it should not be removed or changed.
 ---
 

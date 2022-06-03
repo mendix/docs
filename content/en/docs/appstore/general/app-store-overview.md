@@ -8,6 +8,8 @@ tags: ["marketplace",  "widget", "connector", "module", "partner"]
 aliases:
     - /community/app-store/app-store-overview.html
     - /developerportal/app-store/app-store-overview.html
+    - /community/app-store/app-store-overview
+    - /developerportal/app-store/app-store-overview
 ---
 
 ## 1 Introduction
@@ -256,9 +258,17 @@ This page contains reviews of **Your company's content** as well as **Your compa
 
 You can configure user groups for various levels of access to your company content. The available configuration tabs for each user group page are described in the sections below.
 
-{{% alert color="info" %}}
-The **User Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/#company) can create and delete user groups. Both [Group Admins](#members) and Mendix Admins can manage user groups.
-{{% /alert %}}
+The **User Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/#company) can create and delete user groups. Both [Group Admins](#members) and Mendix Admins can manage user group members. 
+
+This table breaks down the roles and permissions for user groups:
+
+| Roles | Manage (Create & Delete) Groups | Manage Group Members | Assign Apps to Group | Manage (Edit, Add New Version & Unpublish) Content | View & Download Group Content | View Group List |
+| --- | --- | --- | --- | --- | --- | --- |
+| Mendix Admin | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Group Admin | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Group Member | ✘ | ✘ | ✘ | ✔ | ✔ | ✔ |
+| Organization member (not part of any group) | ✘ | ✘ | ✘ | ✘ | ✔ | ✔ |
+| Guest | ✘ | ✘ | ✘ | ✘ | ✔ | ✘ |
 
 #### 4.9.1 Members Tab {#members}
 

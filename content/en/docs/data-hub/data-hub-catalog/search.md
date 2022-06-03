@@ -18,7 +18,7 @@ To use the Data Hub Catalog Search API, you need the following:
 * A [Personal Access Token](https://docs.mendix.com/data-hub/data-hub-catalog/register-data#create-token)
 * A search term
 
-For more details on what can and cannot be provided in your search query, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html#/Search/get_data).
+For more details on what can and cannot be provided in your search query, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/search_v4.html#/Search/get_data).
 
 You can see an example of a request below where the search term is `Customer`:
 
@@ -439,7 +439,6 @@ The environment type indicates the quality and the status of the data that the e
 The **Curation Bar** is displayed in the asset detail screen if you are the owner of the selected asset or a curator. In **Edit** > **Edit Metadata**, you can edit the information that is displayed in the Catalog for an asset:
 
 * For the selected data source, you can edit [Application Details](/data-hub/data-hub-catalog/curate/#curate-application) and [Data Source Details](/data-hub/data-hub-catalog/curate/#service-details)
-* For a selected dataset, you can edit [Dataset Details](/data-hub/data-hub-catalog/curate/#curate-datasets)
 
 For further details, see [Curate Registered Assets](/data-hub/data-hub-catalog/curate/).
 

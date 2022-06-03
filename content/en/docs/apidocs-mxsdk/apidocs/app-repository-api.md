@@ -88,7 +88,7 @@ Returns information about the version control repository for a Mendix app.
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`AppId`|String|Yes|The App ID (sometimes also known as Project ID) of the Mendix app for which the repository information should be returned.|
+|`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned. You can find this in the [General](/developerportal/collaborate/general-settings/) settings tab of your app in the Developer Portal. |
 
 ##### 6.1.1.2 Example
 
@@ -111,7 +111,7 @@ List of objects with the following key-value pairs:
 
 |Name|Type|Description|
 |---|---|---|
-|`appId`|String|The App ID (sometimes also known as Project ID) of the Mendix app.|
+|`appId`|String|The App ID of the Mendix app.|
 |`type`|String|The type of repository. At the moment this is either `"svn"` or `"git"`, but later on other repository types may be introduced.|
 |`url`|String|The URL of the repository.|
 
@@ -142,7 +142,7 @@ HTTP Method: GET
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`AppId`|String|Yes|The App ID (sometimes also known as Project ID) of the Mendix app for which the repository information should be returned.|
+|`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned.|
 
 ##### 6.2.1.2 Query Parameter
 
@@ -224,7 +224,7 @@ HTTP Method: GET
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`AppId`|String|Yes|The App ID (sometimes also known as Project ID) of the Mendix app for which the repository information should be returned.|
+|`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned.|
 |`Name`|String|Yes|The name of the branch for which to return information. The name of the branch should be [URL-encoded](https://www.w3schools.com/tags/ref_urlencode.asp).|
 
 ##### 6.3.1.2 Example
@@ -301,7 +301,7 @@ HTTP Method: GET
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`AppId`|String|Yes|The App ID (sometimes also known as Project ID) of the Mendix app for which the repository information should be returned.|
+|`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned.|
 |`Name`|String|Yes|The name of the branch for which to return information. The name of the branch should be [URL-encoded](https://www.w3schools.com/tags/ref_urlencode.asp).|
 
 ##### 6.4.1.2 Query Parameters

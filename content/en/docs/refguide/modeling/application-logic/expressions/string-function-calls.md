@@ -136,6 +136,12 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------ |
 | A part of the original string, starting at the start position with a length equal to the desired length. If no desired length is specified, will return a substring starting at the start position and ending at the end of the string. | String |
 
+{{% alert color="warning" %}}
+The function will output an error for the following:
+* When the start position of the substring is after the last character in the string
+* When the desired length of the result is longer than the substring
+{{% /alert %}}
+
 ### 5.3 Example
 
 If you use the following input:
@@ -153,13 +159,13 @@ The output is the following:
 Another example of an input is:
 
 ```java
-substring('mendixapp', 6,3)
+substring('funwithmendixapps', 7,6)
 ```
 
 The output is the following:
 
 ```java
-'app'
+'mendix'
 ```
 
 ## 6 find

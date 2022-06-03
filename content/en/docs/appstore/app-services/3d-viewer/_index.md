@@ -3,7 +3,7 @@ title: "3D Viewer"
 url: /appstore/app-services/3d-viewer/
 category: "App Services"
 weight: 1
-description: "Describes the configuration and usage of the 3D Viewer app service, which is available in the Mendix Marketplace."
+description: "This document describes the configuration and usage of the 3D Viewer app service, which enables uploading, visualizing, and operating on 3D JT files in your web apps."
 tags: ["3d visualization", "cad", "app store", "marketplace", "component", "platform support"]
 ---
 
@@ -67,7 +67,7 @@ The 3D Viewer app service includes a few 3D widgets. These are some limitations 
 
 ### 1.4 Prerequisites
 
-This app service can only be used with Studio Pro 8 versions starting with [8.15.1](/releasenotes/studio-pro/8.15/#8151).
+3D Viewer version 2.2.0 and higher can be used with Studio Pro 9 versions starting with [9.4.0](/releasenotes/studio-pro/9.4/), and version 2.1.2 can be used with Studio Pro 8 versions starting with [8.15.1](/releasenotes/studio-pro/8.15/#8151).
 
 ## 2 Installation
 
@@ -80,8 +80,8 @@ This app service can only be used with Studio Pro 8 versions starting with [8.15
 3. Select your subscription plan.
 4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Owner will receive an email that says the app service is ready to be used.
-6. Click the link in the email to go to the [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **3D Viewer** to open the [service management dashboard](/appstore/general/app-store-overview/#service-management-dashboard).
+6. Click the link in the email to go to the [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
+7. Click **3D Viewer** to open the service management dashboard.
 8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. Later you will need to [configure the license token](#configure-license-token) in your app.
 
 ### 2.2 Installing the Component in Your App
@@ -96,7 +96,7 @@ If you app does not have an after-startup microflow set,  follow these steps:
 
 1. Create a **Startup** microflow and add the **Viewer3D/USE_ME/VisServerAction** Java action to it.
 2. Set the return type of the microflow to **Boolean** with a **Value** of **true**.
-3.  Set this microflow as the **After startup** step via **Project Settings** > **Runtime** > [After startup](/refguide8/project-settings/#after-startup).
+3.  Set this microflow as the **After startup** step via **Project Settings** > **Runtime** > [After startup](/refguide/project-settings/#after-startup).
 
 If your project already has a microflow set to execute after startup, you need to extend it with the **Viewer3D/USE_ME/VisServerAction** Java action and configure it as described in the above steps. 
 
@@ -379,10 +379,10 @@ Usually, you will also need to manage the models that are uploaded and stored in
 
 #### 5.4.1 Building a Model List
 
-The Mendix native [list view](/refguide8/list-view/) can be used to display the model list by following these steps:
+The Mendix native [list view](/refguide/list-view/) can be used to display the model list by following these steps:
 
 1. Use the **View3D/USE_ME/GetModelListFromMendix** nanoflow or copy it to your app module. A list of **ModelDocument** objects will be returned after calling the nanoflow.
-2. Add a [pop-up page](/refguide8/page-properties/#pop-up) to display the model list via a button click or another event of your choice.
+2. Add a [pop-up page](/refguide/page-properties/#pop-up) to display the model list via a button click or another event of your choice.
 3. Place a list view in the page and set the **GetModelListFromMendix** nanoflow as the **Data source**.
 4. As **GetModelListFromMendix** requires a **Pagination** parameter input, wrap the list view with a data view. Then, create a nanoflow called *CreatePaginationObject* nanoflow and set that nanoflow as the list view's **Data source**.
 5.  Fill in the list item with the information you are interested in:
@@ -418,7 +418,7 @@ There might be some models that you do not want in the database, so you can dele
 Follow these steps to delete a model from the database:
 
 1. Use the **Viewer3D/USE_ME/DeleteModelFromMendix** microflow directly or copy it to one of your app modules.
-2.  DeleteModelFromMendix expects a **ModelDocument** (which represents a model stored in Mendix file storage) as an input parameter. After successful execution, the model will be deleted from Mendix file storage. In the previous steps, a model list was built, each list item of which is a ModelDocument. For a model list item, add a [Delete button](/refguide8/button-widgets/).
+2.  DeleteModelFromMendix expects a **ModelDocument** (which represents a model stored in Mendix file storage) as an input parameter. After successful execution, the model will be deleted from Mendix file storage. In the previous steps, a model list was built, each list item of which is a ModelDocument. For a model list item, add a [Delete button](/refguide/button-widgets/).
 3.  Create a nanoflow called *DeleteModel* and set **ModelDocument** as the input parameter. Then, call the **DeleteModelFromMendix** microflow and commit the **ModelDocument**:
 
 	{{< figure src="/attachments/appstore/app-services/3d-viewer/deletemodel-nanoflow.jpg" alt="deletemodel-nanoflow" >}}
@@ -436,7 +436,7 @@ There are four main types of events that can be picked up on the Viewer widget, 
 
 #### 5.5.1 On Selection Change {#on-selection-change}
 
-By selecting one attribute to set **Selection**, you can get information on the selected part (for this you might need to work with Viewer APIs; if you have inquiries on how to use the Viewer APIs, please contact [Mendix Support](https://support.mendix.com/hc/en-us)).
+By selecting one attribute to set **Selection**, you can get information on the selected part (for this you might need to work with Viewer APIs; if you have inquiries on how to use the Viewer APIs, please contact [Mendix Support](https://support.mendix.com/)).
 
 **Selection** takes a String attribute. You can define an attribute and bind that attribute to Selection property. In a running app, when user select on a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (psid and viewer)and use it in the actions. 
 	
@@ -552,11 +552,11 @@ The sections below describe these tools.
 
 ### 5.8 Checking Statistics on the Usage Dashboard {#check-usage}
 
-The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
+The **Usage Dashboard** shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
 1. Log into the Marketplace.
 2. Go to **My Marketplace**.
-3. On the left navigation menu, click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions). This page gives an overview of all the subscriptions of your organization.
+3. On the left navigation menu, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions). This page gives an overview of all the subscriptions of your organization.
 3. Find **3D Viewer** in the list.
 4. Click **Usage Dashboard** to show the usage details.
 

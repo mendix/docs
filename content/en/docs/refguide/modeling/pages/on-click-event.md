@@ -7,6 +7,8 @@ tags: ["studio pro", "events section", "properties", "widget", "on click", "acti
 aliases:
     - /refguide/opening-pages.html
     - /refguide/starting-microflows.html
+    - /refguide/opening-pages
+    - /refguide/starting-microflows
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -92,7 +94,7 @@ The **Show a page** event opens the specified page. Select the page which opens 
 
 The **Call a microflow** event executes the specified microflow.
 
-{{%alert type="info" %}}
+{{% alert color="info" %}}
 
 When setting **Call a microflow** as an action for the **On change**, **On enter**, or **On leave** event of a widget, note that microflows require some time to complete. Any changes to the current form made in the meantime (for example, changing values in input elements) will be overwritten by the results of the microflow.
 Therefore, it is not recommended to change entities/attributes on the current page in a microflow triggered by an **On change**, **On enter**, or **On leave** event.
@@ -219,7 +221,7 @@ The table below described link types available for the **Open link** on click ev
 | Call  | Starts a phone call to this number                   | `+1-202-555-0165`                         |
 | Text  | Specifies a number to which to send a text message   | `+1-202-555-0112`                         |
 
-{{%alert type="info" %}}
+{{% alert color="info" %}}
 
 When you Specify  **Email**, **Call**, or **Text** options, the corresponding default app will be opened on the device when the action is triggered, for example, the default email client will be opened to compose a message.
 
@@ -254,6 +256,8 @@ The **Close page** event closes a pop-up window (for pop-up pages) or navigates 
 ### 3.10 Delete {#delete}
 
 The **Delete event** deletes an object. Its behavior depends on a data container it is placed in. When placed in a data view, deletes the connected object; it does not delete objects in a nested data view unless configured through delete behavior. When placed in a data grid, template grid, or reference set selector control bar, it deletes the selected object(s). When placed inside a list view, it deletes the corresponding list view item.
+
+This event cannot be used to delete [external objects](/refguide/external-entities/). Use a microflow with a [Delete External Object](/refguide/delete-external-object/) activity to delete external objects.
 
 Set the **Close page** property to indicate whether the current page should be closed.
 

@@ -67,6 +67,9 @@ Possible values are described in the table below:
 {{% alert color="info" %}}
 The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
 {{% /alert %}}
+{{% alert color="warning" %}}
+An error is raised if at least one value is `empty`.
+{{% /alert %}}
 
 ### 3.3 Output
 
@@ -105,6 +108,9 @@ Possible values are described in the table below:
 
 {{% alert color="info" %}}
 The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
+{{% /alert %}}
+{{% alert color="warning" %}}
+An error is raised if at least one value is `empty`.
 {{% /alert %}}
 
 ### 4.2 Output
@@ -160,6 +166,9 @@ Possible values are described in the table below:
 {{% alert color="info" %}}
 The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
 {{% /alert %}}
+{{% alert color="warning" %}}
+An error is raised if at least one value is `empty`.
+{{% /alert %}}
 
 ### 5.2 Output
 
@@ -200,6 +209,9 @@ Possible values are described in the table below:
 
 {{% alert color="info" %}}
 The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
+{{% /alert %}}
+{{% alert color="info" %}}
+A comparison with an empty value evaluates as `true` if and only if the other value is `empty` or is an empty list.
 {{% /alert %}}
 
 ### 6.2 Output
@@ -257,6 +269,9 @@ Possible values are described in the table below:
 
 {{% alert color="info" %}}
 The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
+{{% /alert %}}
+{{% alert color="info" %}}
+A comparison with an empty value evaluates as `true` if and only if the other value is `empty` or is an empty list.
 {{% /alert %}}
 
 ### 7.2 Output 

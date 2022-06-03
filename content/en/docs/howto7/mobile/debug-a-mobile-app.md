@@ -21,7 +21,7 @@ To publish your app in an app store, we recommend you build native iOS apps inst
 
 **This how-to will teach you how to do the following:**
 
-* Build and run a Mendix mobile app that connects to your local development machine
+* Build and run a hybrid Mendix mobile app that connects to your local development machine
 * Debug the mobile app using Mendix debugging tools, Chrome DevTools and the Safari Web Inspector
 
 ## 2 Prerequisites

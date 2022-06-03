@@ -8,6 +8,9 @@ aliases:
     - /refguide/comparison-search-field.html
     - /refguide/drop-down-search-field.html
     - /refguide/range-search-field.html
+    - /refguide/comparison-search-field
+    - /refguide/drop-down-search-field
+    - /refguide/range-search-field
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -29,6 +32,10 @@ There are three different types of search fields that can be used for different 
 
 {{% alert color="info" %}}
 You cannot change the type of a search field, you will need to delete it and then add a new one of a different type.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+When using a date type in the search field, it is only possible to apply filtering to the **date** component. Filtering cannot be applied to the **time** component or a **custom format** containing time.
 {{% /alert %}}
 
 ## 3 Search Field Properties {#search-field-properties}

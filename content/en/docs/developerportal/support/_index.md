@@ -2,7 +2,7 @@
 title: "Mendix Support"
 url: /developerportal/support/
 description: ""
-tags: ["Support", "SLA", "Gold", "Platinum"]
+tags: ["Support", "SLA", "standard", "premium"]
 weight: 30
 aliases:
     - /howtogeneral/support/index.html
@@ -14,7 +14,7 @@ Mendix Support is here to answer any questions and solve any issues that you mig
 
 ### 1.1 Service Level Agreements {#sla}
 
-We are available for all users of the Mendix Platform, and we are bound by service-level agreements (SLAs) with our licensed customers. Licensed customers can select their SLA level: **Gold** or **Platinum**. The SLA level determines the specific agreement in the following areas:
+We are available for all users of the Mendix Platform, and we are bound by service-level agreements (SLAs) with our licensed customers. Licensed customers can select their SLA level: **Standard** or **Premium**. The SLA level determines the specific agreement in the following areas:
 
 * Support availability
 * Platform availability
@@ -28,7 +28,7 @@ You can check the Mendix SLA [here](https://mendix.com/sla).
 
 ### 1.2 Premier Support
 
-In addition to our Platinum SLA, Mendix offers **Premier Support**, with elevated support levels, specifically for customers with business critical apps.
+In addition to our Premium SLA, Mendix offers **Premier Support**, with elevated support levels, specifically for customers with business critical apps.
 The Premier Support package contains the following for customers on the Mendix Public or Dedicated Cloud:
 
 * 24/7 support availability for critical and high tickets
@@ -100,162 +100,23 @@ With our Multi-Cloud strategy, Mendix allows the apps that you build to be deplo
 
 The full stack is depicted in the table below. This indicates which components are **Mendix** supported, or supported by a **Mendix Partner** or 3rd party. If no support is indicated, then you will need to arrange support of this component yourself. Each of the components is described in more detail in [Components of the Mendix Stack](#components), below.
 
-<!-- TABLE BELOW CONVERTED TO HTML SO THAT FIRST COLUMN CAN BE WIDER
-| | Public Cloud | Cloud Dedi&shy;cated | Private Cloud - Con&shy;nected | Private Cloud - Stand&shy;alone | SAP BTP | Cloud Foundry/ Docker & Kuber&shy;netes | Tradi&shy;tional |
+| Stack (see [below](#components) for more information) | Public Cloud | Cloud Dedi&shy;cated | Private Cloud - Con&shy;nected | Private Cloud - Stand&shy;alone | SAP BTP or Tencent | Cloud Foundry/ Docker & Kuber&shy;netes | Tradi&shy;tional² |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Appli&shy;cation** | | | | | | | |
 | **Platform Support&shy;ed Marketplace content** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
 | **Commun&shy;ity Support&shy;ed Marketplace content** | | | | | | | |
 | **Runtime** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
 | **Deploy&shy;ment Pipe&shy;line** | Mendix | Mendix | Mendix | | | | |
-| **Logs/ Metrics** | Mendix | Mendix | | | Mendix Partner | | |
+| **Logs/ Metrics** | Mendix | Mendix | | | Mendix Partner¹ | | |
 | **Appli&shy;cation Opera&shy;tion** | Mendix | Mendix | Mendix | Mendix | Mendix | | |
 | **Buildpack** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
-| **Contain&shy;er Platform/ OS/ Java/ Web Server** | Mendix | Mendix | | | Mendix Partner | | |
-| **Infra&shy;structure** | Mendix | Mendix | | | Mendix Partner | | |
-| **Database/ File Storage/ Network** | Mendix | Mendix | | | Mendix Partner | | |
--->
-
-<table>
-<thead>
-<tr>
-<!-- Width added to first column -->
-<th class="has-expand" width=25%><div class="expand-table"><i class="glyphicon glyphicon-fullscreen"></i></div>Stack (see <a href="#components">below</a> for more information)</th>
-<th>Public Cloud</th>
-<th>Cloud Dedi­cated</th>
-<th>Private Cloud – Con­nected</th>
-<th>Private Cloud – Stand­alone</th>
-<th>SAP BTP<br />or<br />Tencent</th>
-<th>Cloud Foundry/ Docker &amp; Kuber­netes</th>
-<th>Tradi­tional</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><strong>Appli­cation</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td><strong>Platform Support­ed Marketplace content</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-</tr>
-
-<tr>
-<td><strong>Commun­ity Support­ed Marketplace content</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td><strong>Runtime</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-</tr>
-
-<tr>
-<td><strong>Deploy­ment Pipe­line</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td><strong>Logs/ Metrics</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td></td>
-<td></td>
-<td>Mendix Partner¹</td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td><strong>Appli­cation Opera­tion</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td><strong>Buildpack</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-</tr>
-
-<tr>
-<td><strong>Contain­er Platform/ OS/ Java/ Web Server</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td></td>
-<td></td>
-<td>Mendix Partner¹</td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td><strong>Infra­structure</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td></td>
-<td></td>
-<td>Mendix Partner¹</td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td><strong>Database/ File Storage/ Network</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td></td>
-<td></td>
-<td>Mendix Partner¹</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+| **Contain&shy;er Platform/ OS/ Java/ Web Server** | Mendix | Mendix | | | Mendix Partner¹ | | |
+| **Infra&shy;structure** | Mendix | Mendix | | | Mendix Partner¹ | | |
+| **Database/ File Storage/ Network** | Mendix | Mendix | | | Mendix Partner¹ | | |
 
 ¹Support will go through [SAP Support](https://launchpad.support.sap.com/#/incident/create/prefilled/comp_name=XX-PART-MDX-RAD) or Tencent Support.
+
+²Traditional means deploying directly on Windows or Linux without using containerization.
 
 In the diagrams below, the following colors are used:
 
@@ -332,11 +193,11 @@ If you want to run Mendix apps on a Unix-like server you will need the [m2ee too
 
 Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Support diagnose these components. Because Mendix has no control over the context in which the buildpack or m2ee tools are run outside of the Mendix Public Cloud and Cloud Dedicated, you will have to demonstrate that the bug is in the supported component by showing the behavior independently from the context in which you are using it.
 
-If you want additional features or some other change in a buildpack or m2ee tools, you can make a Pull Request , create an Issue in the GitHub repository, or contact [Mendix Support](https://support.mendix.com/hc/en-us).
+If you want additional features or some other change in a buildpack or m2ee tools, you can make a Pull Request , create an Issue in the GitHub repository, or contact [Mendix Support](https://support.mendix.com/).
 
 If you wan to run Mendix apps on Windows server you will need the [Windows Service](/releasenotes/studio-pro/windows-service/). The release notes and installation manual can be found in the [Windows Service](/releasenotes/studio-pro/windows-service/) release notes. Read more about installing on systems running Windows operating systems in [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/).
 
-If you want additional features or some other change in the Windows Service, you can contact [Mendix Support](https://support.mendix.com/hc/en-us).
+If you want additional features or some other change in the Windows Service, you can contact [Mendix Support](https://support.mendix.com/).
 
 ### 10.5 Application Operation
 

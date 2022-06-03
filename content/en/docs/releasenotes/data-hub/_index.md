@@ -11,7 +11,53 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
-### March 11th, 2022
+### May 5th, 2022
+
+#### New Feature
+
+* When a person is removed as a Technical Owner or Business Owner of an individual application, they will receive an MxDock notification confirming that they are no longer the point of contact.
+
+### April 21st, 2022
+
+#### Fixes
+
+* We fixed a bug where the **Delete Data Source** button incorrectly appeared on a **Dataset** detail page.
+
+### April 14th, 2022
+
+#### New Features
+
+* You can now delete applications through the **Registration API**. Check out the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html), or read the documentation in the [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) section of *Data Hub APIs*.
+* When a person is assigned to an application as a Technical Owner or Business Owner, they will receive an MxDock notification confirming their new role.
+
+#### Fixes
+
+* We fixed a `NullPointerException` that occured when the **Versions** of an endpoint was empty on the **Registration API** `GET` service call.
+* We fixed an issue where the Catalog loaded in our unreleased dark mode. Dark mode is not ready yet, but we will let you know when that feature is available!
+
+### April 7th, 2022
+
+#### Fixes
+
+* We corrected the OData file upload message that was incorrectly indicating the maximum file size as 1MB, when in fact the allowed maximum file size is 5MB.
+
+### March 31st, 2022
+
+#### Improvements
+
+* We made various security improvements.
+
+### March 24th, 2022
+
+#### New Feature
+
+* We added v4 compatibility for the **Transform API**. This is accessible via the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) under the **Endpoints** section.
+
+#### Fixes
+
+* We fixed a few styling issues.
+
+### March 17th, 2022
 
 #### Fixes
 

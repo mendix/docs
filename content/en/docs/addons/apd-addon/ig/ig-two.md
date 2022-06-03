@@ -5,6 +5,7 @@ parent: "ig"
 weight: 1
 aliases:
     - /apm/installation-guide.html
+    - /apm/installation-guide
 ---
 
 ## 1 Introduction

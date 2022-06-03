@@ -7,6 +7,7 @@ description: "Describes how the Mendix Community MVP program works."
 tags: ["community", "mvp"]
 aliases:
     - /community/tools/the-mendix-mvp-program.html
+    - /community/tools/the-mendix-mvp-program
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

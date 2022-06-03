@@ -1,7 +1,7 @@
 ---
 title: "2"
 url: /releasenotes/sdk/model-sdk-2/
-parent: "model-sdk"
+weight: 99
 ---
 
 ## 2.9.1
@@ -65,7 +65,7 @@ Note that Model SDK 2.6.1 and 2.6.2 have been skipped (and unpublished from NPM)
 
 | Impact | Description |
 | --- | --- |
-| Low |  `getFilePaths` has been deprecated and renamed to `getFiles`. |
+| Low |  `getFilePaths` has been deprecated and renamed to `getFiles`. |
 | Low | Improved the typings of some (internal) APIs. |
 | None | Added support for Mendix 6.6.0. |
 | None | `getFilePaths` accepts an option objects which can define `format` (either `zip` or `json`), `filter` (glob pattern) and `path` (output filename if format is `zip`). |
@@ -108,7 +108,7 @@ SDK version 2.2.0 and 2.2.1 were unpublished because they were published in a br
 | Low | Working copies that are connected to sprintr projects can now be deployed and their runtime status can be requested |
 | Low | Unit-loading now has an extra optional forceRefresh option. If set, it will then bypass the Mendix MOdel SDK cache, and get the fresh unit straight from the source/server. |
 | Minor | All classes that could be useful for reflection on the model are now exposed through `mendixmodelsdk`, so imports from `mendixmodelsdk/dist/sdk/internal/...` should no longer be needed. |
-| Minor | Private members (starting with an underscore `_`) where not available in the docs but where available in the public typings and therefor in the IDE's. This has been fixed. It should not ever be necessary to ever access these members. But if you did access them, you now need to access the object to `any` first before the typechecker allows you to access these members. The method `allProperties()` is now available on all structures for reflection purposes. |
+| Minor | Private members (starting with an underscore `_`) were not available in the docs but were available in the public typings and therefore in the IDEs. This has been fixed. It should never be necessary to access these members. However, if you did access them you now need to access the object to `any` before the typechecker allows you to access these members. The method `allProperties()` is now available on all structures for reflection purposes. |
 
 ## 2.0.0
 
@@ -125,7 +125,7 @@ This release introduces a number of breaking changes in the SDK's API, so becaus
 | 631960 | None | Added support for checking deployment status. |
 | 623906 | None | Added support for deploying from the SDK. Note that this is currently **not** supported on non-trusted back ends! |
 
-The following **breaking** changes are made per 612773 and as a result of new insights on interference between containment and versioning/history of the Mendix modeling language.
+The following **breaking** changes are made per 612773 and as a result of new insights on interference between containment and versioning/history of the Mendix modeling language.
 This interference leads to elements having different kinds of containment throughout their history.
 In turn, this necessitated us to make some fundamental changes to avoid having to have breaking changes in the future.
 
@@ -135,4 +135,4 @@ In turn, this necessitated us to make some fundamental changes to avoid having t
 *   Elements that are contained by one property in at least one version will have a `createIn` method that works as expected for those versions and throws for other versions.
 *   Elements that are always (as in, in all versions) contained by properties that are derived, will not have any `createIn...` methods.
 
-Dependent code can be easily fixed by using the `containerAs<T>` property instead of the `container` property, and (in a few specific cases) by using a `createIn<T>Under<P>` method instead of the `createIn` method.
+Dependent code can be easily fixed by using the `containerAs<T>` property instead of the `container` property, and (in a few specific cases) by using a `createIn<T>Under<P>` method instead of the `createIn` method.

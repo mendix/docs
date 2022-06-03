@@ -2,7 +2,7 @@
 title: "Trends in Mendix Cloud v4"
 url: /developerportal/operate/trends-v4/
 parent: "metrics"
-weight: 20
+weight: 10
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v4."
 tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
@@ -49,6 +49,7 @@ You can find the trends by following these steps:
 1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
 2. Click **Metrics**.
 3. Select the environment you want to monitor under the tab **Trends**.
+4. Choose the period for which you want to see the trends: **Day**, **Week**, **Month**, or **Quarter**.
 
 {{< figure src="/attachments/developerportal/operate/metrics/trends-v4/environment.png" >}}
 
@@ -56,11 +57,7 @@ You can find the trends by following these steps:
 
 As with all complex IT systems, there are many interrelated components which can cause performance issues. This document cannot cover all possibilities, but is intended as a general introduction to the information which is displayed and a few ideas about where to look for possible areas of concern.
 
-#### 3.2.1 Disk Partitions
-
-If there is more than one disk partition in the system, the `/srv` partition generally contains project files and uploaded files of the application, while `/var` generally holds the database storage.
-
-#### 3.2.2 Combining Information{#combine-info}
+#### 3.2.1 Combining Information{#combine-info}
 
 You can often get more information about the performance of your app by combining the information from several graphs. Useful graphs for this are:
 
@@ -237,6 +234,22 @@ This graph should be interpreted in combination with other graphs. See [Combinin
 
 The disk usage graph shows only the disk usage inside the container. This is usually only relevant if your application creates a lot of temporary files in `/tmp`. This value is not the same as the file document storage.
 
+### 4.11 Application Number of Files{#Trends-appnumberoffiles}
+
+The **Application Number of Files** graph shows the number of files created by entities which are based on `FileDocument` generalizations, that are stored in S3 file storage.
+
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/app-number-of-files.png" >}}
+
+### 4.12 Application Size of Files (in bytes){#Trends-appsizeoffiles}
+
+{{% alert type="info" %}}
+This metric was added on 21 January 2022 to the [Cloud Foundry Mendix Buildpack](https://github.com/mendix/cf-mendix-buildpack). The data will only be visible once you deploy your Mendix app after that date. Before you redeploy, the graph will show **No Data Available**. After the deployment, data will only be shown on the graph from that date onward.
+{{% /alert %}}
+
+The **Application Size of Files** graph shows the size of files (in bytes) that are stored in file storage.
+
+{{< figure src="/attachments/developerportal/operate/metrics/trends-v4/app-size-of-files.png" >}}
+
 ## 5 Database Statistics
 
 In this section you will find the statistics about the database that the application uses.
@@ -346,7 +359,7 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 
 {{< figure src="/attachments/developerportal/operate/metrics/trends-v4/db-cpu-usage.png" >}}
 
-### 5.7 Database Node Disk Throughput{#Trends-dbdiskstatsthroughput}
+### 5.7 Database Node Disk Throughput (in Bytes){#Trends-dbdiskstatsthroughput}
 
 The **Database node disk throughput** graph shows the amount of data that is being read from and written to disk.
 
@@ -357,8 +370,8 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 {{< figure src="/attachments/developerportal/operate/metrics/trends-v4/db-disk-throughput.png" >}}
 
 If you see large values here which do not immediately drop back again, it may indicate that your app is continually swapping data to disk. This could be caused by inefficient queries, for example ones which require sorting within the app.
-
-### <a name="Trends-dbdf"></a>5.8 Database Node Disk Usage (in Bytes){#Trends-dbdfabs}
+<a name="Trends-dbdf"></a>
+### 5.8 Database Node Disk Usage (in Bytes){#Trends-dbdfabs}
 
 The **Database node disk usage (in bytes)** graph displays both used storage (the absolute amount of data that is stored on disk), and free space (the remaining space on the database node). When hovering over the graph, you will also see the total size of your database.
 

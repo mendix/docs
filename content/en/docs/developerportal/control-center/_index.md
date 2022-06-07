@@ -39,59 +39,40 @@ These are some examples of what you can find on the dashboard:
 
 ## 3 Apps {#apps}
 
-You may do the following operations to an app:
+### 3.1 Active Apps Tab and Deactivated Apps Tab
 
-* Delete an app
+#### 3.1.1 Overview of Apps {#overview}
 
-* Deactivate an active app
-
-  {{% alert color="info" %}}After an app is deactivated, you can re-activate it.{{% /alert %}}
-
-* Delete a free Mendix Cloud environment
-
-Which operations are allowed depends on how the app is deployed:
-
-|                                     | Delete an app                                                | Deactivate an app                                            | Delete a free Mendix Cloud environment                       |
-| ----------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Free Mendix Cloud                   | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} |
-| No cloud resource                   | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | Not applicable                                               |
-| Licensed Mendix Cloud               | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | Not applicable                                               |
-| Private cloud, SAP Cloud, IBM Cloud | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | Not applicable                                               |
-
-The consequences of the operations above are as below:
-
-|                                                              | Delete an app                                                | Deactivate an app                                            | Delete a free Mendix Cloud environment                       |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Project code repository stays persistent                     | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} |
-| Project members can access the project code repository       | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} |
-| App project stays persistent                                 | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} |
-| Project members can access the app project on the Developer Portal | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} |
-| Cloud environment stays persistent                           | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
-
-### 3.1 Active Apps Tab
-
-#### 3.1.1 Overview of Active Apps
-
-On the **Active Apps** tab of this page, you can see a list of the active apps that belong to your company.
-
-{{< figure src="/attachments/developerportal/control-center/active-apps-overview.png" >}}
+On the **Active Apps** tab and the **Deactivated Apps** tab, you can see an overview of the active and deactivated apps that belong to your company.
 
 
-When you select one or more apps via the check boxes on the **Active Apps** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating apps, and deleting an app. For more information about the operations to an app, see the two tables at the beginning of [the current section](#apps).
+When you select one or more apps via the check boxes in the list, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating apps (on the **Deactivated Apps** tab) or activating (on the **Active Apps** tab), and deleting an app.
 
 {{% alert color="info" %}}
-Currently, you can only deactivate up to 20 apps and delete one app in one go.
+Currently, deleting and deactivating apps are currently not supported for licensed apps or apps that are not running on the Mendix Cloud. You can only activate or deactivate up to 20 apps and delete one app in one go on the overview tab.
 {{% /alert %}}
 
-#### 3.1.2 Profile Page of an Active App
+The consequences of the deleting an deactivating an app are as below:
 
-When you click the name of an active app, a profile page opens with the app profile.
+|                                                              | Consequences of deleting an app                              | Consequences of deactivating an app                          |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Project code repository stays persistent                     | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} |
+| Project members can access the project code repository       | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+| App project stays persistent                                 | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} |
+| Project members can access the app project on the Developer Portal | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+| Cloud environment stays persistent                           | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
 
-If the app is deployed in the free Mendix Cloud, SAP Cloud, or IBM Cloud or private cloud environment, you can find the **...** icon on the upper-right corner of the profile page. You can click the icon and deactivate the app or delete an app that is deployed in the free Mendix Cloud environment. For details, see the two tables at the beginning of [the current section](#apps).
+#### 3.1.2 Profile Page of an App
 
-{{< figure src="/attachments/developerportal/control-center/deactivate-delete-app.png" >}}
+If you click the name of an app in the overview list, a profile page opens with the app profile.
 
-Th profile page has the following tabs:
+If the app is deployed in the free Mendix Cloud, SAP Cloud, or private cloud environment, you can see the **...** icon on the upper-right corner of the profile page. If the app is active, then you have the options to deactivate the app or delete the app; and if the app is deactivated, then you have the options to activate the app or delete the app.
+
+{{% alert color="info" %}}
+Currently, deleting and deactivating apps are currently not supported for licensed apps or apps that are not running on the Mendix Cloud. For the consequences of these operations, see the table in the [Overview of Apps](#overview) section.
+{{% /alert %}} 
+
+The profile page has the following tabs:
 
 * **App Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings/) page for your app in the Developer Portal.
 *  **Members** – This tab presents the internal members and external members of the app.
@@ -100,50 +81,22 @@ Th profile page has the following tabs:
     * For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/collaborate/team/#managing) page.
     * As a Mendix Admin, you can also add yourself to a team via this page.
 
-*  **Environments** – This tab shows all the Mendix Public Cloud environments
+* **Environments** – This tab shows all the Mendix Public Cloud environments
 
-    * You can directly delete a free Mendix Cloud environment on this tab.  For more information about the operations to an app, see the two tables at the beginning of [the current section](#apps).
+    * You can delete a free Mendix Cloud environment on this tab. The consequences of the deleting a free Mendix Cloud environment are as below:
 
-        {{< figure src="/attachments/developerportal/control-center/delete-free-environment.png" >}}
+        |                                                              | Consequences of deleting a free Mendix Cloud environment     |
+        | ------------------------------------------------------------ | ------------------------------------------------------------ |
+        | Project code repository stays persistent                     | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} |
+        | Project members can access the project code repository       | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} |
+        | App project stays persistent                                 | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} |
+        | Project members can access the app project on the Developer Portal | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} |
+        | Cloud environment stays persistent                           | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+        
 
 * **App Roles** – This tab presents the team roles defined via the **Default App Roles** tab and/or customized for a particular app
 
-### 3.2 Deactivated Apps Tab
-
-#### 3.2.1 Overview of Deactivated Apps
-
-The **Deactivated Apps** tab lists your company's deactivated apps.
-
-When you select one or more apps via the check boxes on **Deactivated Apps** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, activating apps, and deleting an app.  For more information about the operations to an app, see the two tables at the beginning of [the current section](#apps).
-
-{{% alert color="info" %}}
-Currently, you can only activate up to 20 apps and delete one app in one go.
-{{% /alert %}}
-
-#### 3.1.2 Profile Page of an Deactivated App
-
-When you click the name of a deactivated app, a profile page opens with the app profile.
-
-If the app is deployed in the free Mendix Cloud environment, you can find the **...** icon on the upper-right corner of the profile page. You can click the icon and activate the app or delete the app. 
-
-{{< figure src="/attachments/developerportal/control-center/activate-delete-app.png" >}}
-
-Th profile page has the following tabs:
-
-* **App Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings/) page for your app in the Developer Portal.
-* **Members** – This tab presents the internal members and external members of the app.
-
-  * You can directly deactivate a member from the app by clicking their name and selecting **Deactivate Member**.
-  * For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/collaborate/team/#managing) page.
-  * As a Mendix Admin, you can also add yourself to a team via this page.
-* **Environments** – This tab shows all the Mendix Public Cloud environments
-
-  * You can directly delete a free Mendix Cloud environment on this tab. For more information about the operations to an app, see the two tables at the beginning of [the current section](#apps).
-  
-    {{% todo %}}Check if this is correct & screenshot{{% / todo %}}
-* **App Roles** –  this tab presents the team roles defined via the **Default App Roles** tab and/or customized for a particular app
-
-### 3.3 Default App Roles Tab
+### 3.2 Default App Roles Tab
 
 The **Default App Roles** tab shows the default [team roles](/developerportal/collaborate/app-roles/#team-roles) assigned for every new app created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/collaborate/team-server/) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) information.
 

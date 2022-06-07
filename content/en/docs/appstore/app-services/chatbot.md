@@ -47,6 +47,10 @@ This app service enables doing the following:
 
 This app service can only be used with Studio Pro 9 versions starting with [9.12.0](/releasenotes/studio-pro/9.12/).
 
+### 1.4 Dependencies
+
+* [Dropdown Container](https://marketplace.mendix.com/link/component/111568) widget
+
 ## 2 Installation
 
 ### 2.1 Obtaining a License Token {#obtain-license-token}
@@ -401,10 +405,10 @@ You can use the **ChatbotConsole** page in a module to design bot context. To le
 2. Click **Create bot** on the page to start designing your own chatbot.
 3. Configure the bot settings with a bot name and a description.
 4. Configure **Add methods** as start with an example.
-4. Configure the bot languages settings with **Language details**, **Voice** and **Confidence score threshold**.
-5. Add **Language details** and **Voice**.
-6. On the lower-right corner, click **Test**.
-7. Navigate to the **Bot Conversation** page to see if the whole bot workflow works.  
+5. Configure the bot languages settings with **Language details**, **Voice** and **Confidence score threshold**.
+6. Add **Language details** and **Voice**.
+7. On the lower-right corner, click **Test**.
+8. Navigate to the **Bot Conversation** page to see if the whole bot workflow works.  
 
 ### 4.4 Designing Chatbot Context From Scratch in Your Browser {#design-chatbot-context}
 

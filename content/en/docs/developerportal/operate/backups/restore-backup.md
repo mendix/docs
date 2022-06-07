@@ -151,17 +151,7 @@ The dump must be created with `pg_dump` version 1.14 or below, which is currentl
 
 ### tree folder
 
-This contains the files which are stored in external file storage. Each file has the name of the uuid used within Mendix to identify the resource.
-
-#### Mendix Cloud V4
-
-For Mendix Cloud V4 the files are stored in a flat structure.
-
-#### Mendix Cloud V3
-
-The situation for the deprecated Mendix Cloud v3 is slightly different. If you need to restore a backup to Mendix Cloud V3, you will need to implement the structure described below. The restore functionality in Mendix Cloud V4 will also recognize this structure if you are restoring a backup taken on V3 to a V4 environment.
-
-Each file is stored in a second level location:
+This contains the files which are stored in external file storage. Each file has the name of the uuid used within Mendix to identify the resource. They are also stored in the following tree structure where each file is stored in a second level location:
 
 ```
 /tree

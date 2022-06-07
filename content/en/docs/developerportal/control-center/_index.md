@@ -51,12 +51,12 @@ You may do the following operations to an app:
 
 Which operations are allowed depends on how the app is deployed:
 
-|                                   | Delete an app                                                | Deactivate an app                                            | Delete a free Mendix Cloud environment                       |
-| --------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Licensed Mendix Cloud environment | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
-| Free Mendix Cloud Environment     | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} |
-| No cloud resource                 | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
-| Private cloud environment         | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+|                                     | Delete an app                                                | Deactivate an app                                            | Delete a free Mendix Cloud environment                       |
+| ----------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Free Mendix Cloud                   | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} |
+| No cloud resource                   | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | Not applicable                                               |
+| Licensed Mendix Cloud               | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | Not applicable                                               |
+| Private cloud, SAP Cloud, IBM Cloud | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | Not applicable                                               |
 
 The consequences of the operations above are as below:
 
@@ -87,7 +87,7 @@ Currently, you can only deactivate up to 20 apps and delete one app in one go.
 
 When you click the name of an active app, a profile page opens with the app profile.
 
-If the app is deployed in the free Mendix Cloud environment, you can find the **...** icon on the upper-right corner of the profile page. You can click the icon and deactivate the app or delete the app. For details, see the two tables at the beginning of [the current section](#apps).
+If the app is deployed in the free Mendix Cloud, SAP Cloud, or IBM Cloud or private cloud environment, you can find the **...** icon on the upper-right corner of the profile page. You can click the icon and deactivate the app or delete an app that is deployed in the free Mendix Cloud environment. For details, see the two tables at the beginning of [the current section](#apps).
 
 {{< figure src="/attachments/developerportal/control-center/deactivate-delete-app.png" >}}
 

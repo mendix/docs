@@ -57,7 +57,7 @@ The Mendix SAML SSO module does not support the following:
 * Enhanced Client/Proxy SSO profile
 * HTTP artifact binding
 
-### 1.4 Dependencies
+### 1.4 Dependencies{#dependencies}
 
 {{% alert color="warning" %}}
 If you are running your app outside of the Mendix Cloud, make sure you have [external file storage](/refguide/system-requirements/#file-storage) configured. The SAML module writes configuration data to a file document on the file storage to read it later. Without external file storage, this configuration will be lost when you restart your app. The SAML module will not work correctly without reading the configuration data from the file storage.
@@ -80,10 +80,12 @@ There are different versions of the module, depending on which version of Mendix
 	* **DefaultLoginPage** – You can specify another login page here (for example, configuring the *index.html* page to redirect to `/SSO/`). This constant is only used when the login process fails. When the end-user cannot be authenticated in Mendix, they are presented with a page. If this constant is specified, a button will appear, and by clicking this button, you will be redirected to the default login page (for example, *index.html* or *login.html*).
 	* **DefaultLogoutPage** – Removing the sign-out button is recommended, but if you choose to keep it, the end-user will be redirected to a page. You can choose where the end-user is redirected to (for example, back to `/SSO/` or your *login.html* page). Every user signed in via SAML is redirected to this location when they are logged out.
 	* **SSOLandingPage** – You can specify a different landing page here (for example, redirecting each user accessing the application URL to the SAML login). This requires you to change the *index.html* page by adding `<meta http-equiv="refresh" content="0;URL=/SSO/" />` (so the end-user does not end up on *index.html* again after a login attempt).  By changing this constant to `/index3.html`, the end-user will land on *index3.html* instead of *index.html*.  In this case, you will of course need to add an *index3.html* page to your theme (and you can copy the original *index.html* into *index3.html*).
-	* **HybridAppLoginTimeOutInMinutes** – If you are using a [hybrid mobile](/refguide/hybrid-mobile/) app and have the **com.mendix.webui.HybridAppLoginTimeOut** [custom runtime setting](/refguide/custom-settings/#9-web-client-settings) configured to customize the expiration of mobile authentication tokens, you will have to set the value of the **HybridAppLoginTimeOutInMinutes** constant to match the value of the custom runtime setting. When you use the SAML module for SSO in your Mendix app, the authentication token is not created by the Mendix runtime, which uses the custom runtime setting. Instead, the authentication token is created by the Java code in the SAML module. This Java code does not have access to the custom runtime setting value, and thus requires the constant value to be set. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires mobile authentication tokens to be enabled in your [IdP Configuration](#3231-additional-functionality) as well as changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix & SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
+	* **HybridAppLoginTimeOutInMinutes** – If you are using a [hybrid mobile](/refguide/hybrid-mobile/) app and have the **com.mendix.webui.HybridAppLoginTimeOut** [custom runtime setting](/refguide/custom-settings/#web-client-settings) configured to customize the expiration of mobile authentication tokens, you will have to set the value of the **HybridAppLoginTimeOutInMinutes** constant to match the value of the custom runtime setting. When you use the SAML module for SSO in your Mendix app, the authentication token is not created by the Mendix runtime, which uses the custom runtime setting. Instead, the authentication token is created by the Java code in the SAML module. This Java code does not have access to the custom runtime setting value, and thus requires the constant value to be set. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires mobile authentication tokens to be enabled in your [IdP Configuration](#additional-functionality) as well as changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix & SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
 		* If you use the default login handler in your hybrid app, you must change the **com.mendix.webui.HybridAppLoginTimeOut** custom runtime setting to change the validity of the authentication token used by the hybrid mobile app.
 		* If you use the SAML module in your hybrid app, you must change the **SAML20.HybridAppLoginTimeOutInMinutes** constant to change the validity of the authentication token used by the hybrid mobile app.
 		* If you use both the default login handler and the SAML module in your hybrid app, you must change both.
+
+        {{% alert color="warning" %}}Hybrid mobile apps are deprecated in Mendix version 9{{% /alert %}}
 4. Sign in to the application and configure the SAML module.
 
 ## 3 Configuration
@@ -146,7 +148,7 @@ If you want to automatically synchronize the IdP metadata, go to **\_USE ME** > 
 	* **Claim**
 	* **Mx User attribute**
 
-##### 3.2.3.1 Additional Functionality
+##### 3.2.3.1 Additional Functionality{#additional-functionality}
 
 {{% alert color="info" %}}
 These settings are only available in the following versions of the module (depending on which Mendix version you are using)

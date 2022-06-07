@@ -59,4 +59,4 @@ Allow the user to connect to the database. If the user is Denied the privilege t
 *   [Security Checklist for Your On-Premises Installation](/developerportal/deploy/security-checklist-for-your-on-premises-installation/)
 *   [Mendix on Windows - Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/)
 *   [Deploying Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/)
-*   [U*ix Deployment](/developerportal/deploy/unix-like/)
+*   [Unix Deployment](/developerportal/deploy/unix-like/)

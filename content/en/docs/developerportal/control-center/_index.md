@@ -45,11 +45,11 @@ You may do the following operations to an app:
 
 * Deactivate an active app
 
-  {{% alert color=“info” %}}After an app is deactivated, you can re-activate it.{{% /alert %}}
+  {{% alert color="info" %}}After an app is deactivated, you can re-activate it.{{% /alert %}}
 
 * Delete a free Mendix Cloud environment
 
-However, which operations are allowed depends on how the app is deployed:
+Which operations are allowed depends on how the app is deployed:
 
 |                                   | Delete an app                                                | Deactivate an app                                            | Delete a free Mendix Cloud environment                       |
 | --------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -58,7 +58,7 @@ However, which operations are allowed depends on how the app is deployed:
 | No cloud resource                 | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
 | Private cloud environment         | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
 
-The consequences of the operations are shown in the table below:
+The consequences of the operations above are as below:
 
 |                                                              | Delete an app                                                | Deactivate an app                                            | Delete a free Mendix Cloud environment                       |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -77,7 +77,7 @@ On the **Active Apps** tab of this page, you can see a list of the active apps t
 {{< figure src="/attachments/developerportal/control-center/active-apps-overview.png" >}}
 
 
-When you select one or more apps via the check boxes on the **Active Apps** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating apps, and deleting an app. For details, see the two tables at the beginning of [the current section](#apps).
+When you select one or more apps via the check boxes on the **Active Apps** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating apps, and deleting an app. For more information about the operations to an app, see the two tables at the beginning of [the current section](#apps).
 
 {{% alert color="info" %}}
 Currently, you can only deactivate up to 20 apps and delete one app in one go.
@@ -102,11 +102,11 @@ Th profile page has the following tabs:
 
 *  **Environments** – This tab shows all the Mendix Public Cloud environments
 
-    * You can directly delete a free Mendix Cloud environment on this tab. For details, see the two tables at the beginning of [the current section](#apps).
+    * You can directly delete a free Mendix Cloud environment on this tab.  For more information about the operations to an app, see the two tables at the beginning of [the current section](#apps).
 
         {{< figure src="/attachments/developerportal/control-center/delete-free-environment.png" >}}
 
-* **App Roles** –  this tab presents the team roles defined via the **Default App Roles** tab and/or customized for a particular app
+* **App Roles** – This tab presents the team roles defined via the **Default App Roles** tab and/or customized for a particular app
 
 ### 3.2 Deactivated Apps Tab
 
@@ -114,7 +114,7 @@ Th profile page has the following tabs:
 
 The **Deactivated Apps** tab lists your company's deactivated apps.
 
-When you select one or more apps via the check boxes on **Deactivated Apps** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, activating apps, and deleting an app. For details, see the two tables at the beginning of [the current section](#apps).
+When you select one or more apps via the check boxes on **Deactivated Apps** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, activating apps, and deleting an app.  For more information about the operations to an app, see the two tables at the beginning of [the current section](#apps).
 
 {{% alert color="info" %}}
 Currently, you can only activate up to 20 apps and delete one app in one go.
@@ -138,7 +138,7 @@ Th profile page has the following tabs:
   * As a Mendix Admin, you can also add yourself to a team via this page.
 * **Environments** – This tab shows all the Mendix Public Cloud environments
 
-  * You can directly delete a free Mendix Cloud environment on this tab. For details, see the two tables at the beginning of [the current section](#apps).
+  * You can directly delete a free Mendix Cloud environment on this tab. For more information about the operations to an app, see the two tables at the beginning of [the current section](#apps).
   
     {{% todo %}}Check if this is correct & screenshot{{% / todo %}}
 * **App Roles** –  this tab presents the team roles defined via the **Default App Roles** tab and/or customized for a particular app

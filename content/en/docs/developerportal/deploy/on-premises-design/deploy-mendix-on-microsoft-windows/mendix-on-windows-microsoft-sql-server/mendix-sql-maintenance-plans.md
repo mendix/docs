@@ -168,4 +168,4 @@ In this section, you are going to create a new maintenance plan called **MP_SYSD
 * [How to Set Up an SQL Server User](/developerportal/deploy/setting-up-a-sql-server-user/)
 * [How to Configure a Security Checklist for Your On-Premises Installation](/developerportal/deploy/security-checklist-for-your-on-premises-installation/)
 * [How to Deploy Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/)
-* [U*ix Deployment](/developerportal/deploy/unix-like/)
+* [Unix-like Deployment](/developerportal/deploy/unix-like/)

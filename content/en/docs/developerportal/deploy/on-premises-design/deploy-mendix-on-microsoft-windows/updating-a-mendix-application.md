@@ -84,4 +84,4 @@ After updating, don't forget to start your app service again!
 *   [Security checklist for your on-premises installation](/developerportal/deploy/security-checklist-for-your-on-premises-installation/)
 *   [Mendix on Windows - Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/)
 *   [Deploying Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/)
-*   [U*ix Deployment](/developerportal/deploy/unix-like/)
+*   [Unix-like Deployment](/developerportal/deploy/unix-like/)

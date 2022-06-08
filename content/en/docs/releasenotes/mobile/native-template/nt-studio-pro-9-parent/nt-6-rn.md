@@ -11,7 +11,7 @@ description: "Native Template 6 release notes."
 
 ### Fixes
 
-* We fixed an iOS build issue (Tickets 150964, 150934)
+* We fixed an iOS build issue. (Tickets 150964, 150934)
 
 ## 6.2.21
 

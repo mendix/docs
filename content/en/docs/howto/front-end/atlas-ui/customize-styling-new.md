@@ -581,9 +581,9 @@ When an end-user opens a Mendix app in an unsupported browser, a page is shown t
 
 ## 11 Serving Fonts Locally (Web) {#local-fonts}
 
-By default, Atlas uses the font *Open Sans* and the font files are loaded from Google Fonts Content Delivery Network (CDN). While Google Fonts CDN is convenient, you might need to change where your fonts files are served from. 
+By default, Atlas uses the font *Open Sans* and the font files are loaded from the Google Fonts Content Delivery Network (CDN). While the Google Fonts CDN is convenient, you might need to change where your fonts files are served from. 
 
-You may need to change your font file service location in order to comply with stricter [CSP]( /refguide/progressive-web-app/csp/) policies, or if you cannot use Google Fonts CDN due to your business requirements. Read on to learn how to move from Google Fonts CDN to serving fonts from your own server.
+You may need to change your font file service location in order to comply with stricter [CSP]( /refguide/progressive-web-app/csp/) policies, or if you cannot use Google Fonts CDN due to your business requirements. Read on to learn how to move from the Google Fonts CDN to serving fonts from your own server.
 
 ### 11.1 Downloading Font Files
 

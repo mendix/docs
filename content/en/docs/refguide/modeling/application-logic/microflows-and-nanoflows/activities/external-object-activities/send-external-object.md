@@ -37,3 +37,7 @@ This activity sends new objects and their attributes and owned associations to b
 Persistable objects are persisted by using the [commit](/refguide/committing-objects/)activity. External entities cannot be committed. Use this activity instead.
 
 The [Save](/refguide/button-widgets/) button does not work for external entities, either. To persist changes to an external object on a page, use a microflow that has this activity.
+
+## Read More
+
+See the [Validating Data and Error Handling](/data-hub/write-data/index/#data-validation) section of *Write Data to Another App* to learn about handling validation errors.

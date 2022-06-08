@@ -69,7 +69,7 @@ To consume an OData entity, do the following:
 
 Now you have an external entity in your domain model. Depending on the capabilities, for example the **CRUD** capabilities, you can generally use external entities to model your app as you would normally do, although there are some limitations. For more information on limitations, see the [External Entities Limitations](/refguide/external-entities/#limitations) section in *External Entities*. 
 
-## 6 Validating Data and Error Handling
+## 6 Validating Data and Error Handling {#data-validation}
 
 You can [set up data validation](/howto/data-models/setting-up-data-validation/) to check on inserted or updated data between your apps. An insert validation microflow in the domain model of the client application - the application consuming the service - can check on the data that is inserted or updated.
 

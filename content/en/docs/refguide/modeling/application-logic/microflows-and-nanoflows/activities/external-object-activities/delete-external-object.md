@@ -33,3 +33,7 @@ Choose a variable that contains a single deletable external object.
 ### 2.2 Refresh in Client
 
 This setting defines how changes are reflected in the pages presented to the end-user. The default for this setting is *No*.
+
+## Read More
+
+See the [Validating Data and Error Handling](/data-hub/write-data/index/#data-validation) section of *Write Data to Another App* to learn about handling validation errors.

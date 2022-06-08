@@ -21,11 +21,11 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* The free Mendix Cloud environment of an app can now be deleted from the [App Profile](/developerportal/control-center/#apps) page in Control Center.
+* The free Mendix Cloud environment of an app can now be deleted from the [App Details](/developerportal/control-center/#app-details) page in Control Center.
 
 #### Improvements
 
-* The free and licensed Mendix Cloud environments of an app are now visualized on the [App Profile](/developerportal/control-center/#apps) page in Control Center.
+* The free and licensed Mendix Cloud environments of an app are now visualized on the [App Details](/developerportal/control-center/#app-details) page in Control Center.
 * From now on, the free Mendix Cloud environment of an app will be deleted whenever the app is deactivated or deleted.
 
 ### May 19th, 2022

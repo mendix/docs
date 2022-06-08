@@ -14,7 +14,7 @@ For Java applications, most monitoring tools provide a way to hook into [JMX](ht
 
 Mendix doesn’t provide any runtime or application specific MBeans, which means that without writing your own MBeans, you will only be able to monitor generic JVM statistics. This how-to will also describe enabling JMX on your Mendix Runtime as well as writing custom MBeans to expose Mendix Runtime information and app-specific information.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Start Mendix Runtime with JMX
 * Expose management information with an MBean

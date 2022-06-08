@@ -11,7 +11,7 @@ tags: ["Atlas UI", "User Experience", "Navigation", "Responsive Design", "Sideba
 
 This document will cover the basics of how you work with navigation layouts. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Select the right navigation layout
 * Understand the difference between top and left navigation

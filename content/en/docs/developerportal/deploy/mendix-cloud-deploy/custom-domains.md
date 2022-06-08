@@ -29,7 +29,7 @@ This documentation is describing certificates for *incoming* connections. For in
 You may not immediately see changes which affect DNS routing. This is because of DNS caching, where changes are not visible until the cache is updated.
 {{% /alert %}}
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Generate a certificate request for your custom domain
 * Upload a custom domain certificate to the Mendix Cloud
@@ -250,7 +250,7 @@ Your certificate is signed by the certificate authority (CA). They sign your cer
 
 To reach the root certificate, you have to link your certificate via the intermediate certificate chain, which is usually just one intermediate certificate. Occasionally a CA requires more than one intermediate certificate. You do not need to provide the root certificate, as every web browser has it in its trusted keystore.
 
-### 8.3 How Do I Get my SAML Metadata or CommunityCommons.GetApplicationUrl to Use the Custom URL?
+### 8.3 How Do I Get my SAML Metadata or CommunityCommons.GetApplicationUrl to Use the Custom URL?{#use-custom-url}
 
 For certain use cases, it is important for the Mendix runtime to know the public URL of your applications. This is most commonly needed when your app generates links back to itself. To tell the runtime where it lives, set the ApplicationRootUrl [custom runtime setting](/refguide/custom-settings/#general). To set the custom runtime setting, follow the instructions in the [Custom Runtime Settings](/developerportal/deploy/environments-details/#custom-runtime-settings) section of *Environment Details*.
 

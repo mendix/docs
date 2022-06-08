@@ -7,11 +7,37 @@ description: "Release notes for deployment to Mendix Clouds v3 and v4"
 tags: ["release notes", "deployment", "cloud environment", "Mendix Cloud", "free app"]
 ---
 
-These release notes cover changes to deployment to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/). There are separate release notes for other deployment targets, see [Deployment](/releasenotes/developer-portal/deployment/) release notes page for further information.
+These release notes cover changes to deployment to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
+
+Mendix Cloud deployments are also dependent on the latest version of the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack). The [Mendix Cloud Foundry Buildpack release notes](https://github.com/mendix/cf-mendix-buildpack/releases) are published separately as other deployment targets are also dependent on the buildpack.
+
+There are separate release notes for other deployment targets, see [Deployment](/releasenotes/developer-portal/deployment/) release notes page for further information.
 
 For information on the current status of deployment to Mendix Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
 ## 2022
+
+### June 2nd, 2022
+
+#### Fix
+
+* We fixed an issue where some customers were seeing an error message when leaving the permissions tab of the environments page when there were no actual errors. (Ticket 146866)
+
+#### Improvements
+
+* We improved the UX for setting up two-factor authentication.
+
+### May 31st, 2022
+
+#### Fix – AppDynamics
+
+* We changed the naming format for nodes when using AppDynamics metrics. When the instance is added to the node name, we now use a hyphen instead of an underscore. So `node_1` becomes `node-1`. This is in line with AppDynamics naming conventions.
+
+### May 6th, 2022
+
+#### Improvements
+
+* We have updated AppDynamics monitoring to provide default values where possible.
 
 ### April 22nd, 2022
 

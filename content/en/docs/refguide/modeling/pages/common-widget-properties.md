@@ -237,7 +237,7 @@ There are three options, described below:
 This mode only applies to attributes of type Decimal.
 {{% /alert %}}
 
-If set to _Fixed_, the decimal part always will be displayed with the number of places specified in the [Decimal precision](#decimal-precision) property. The value will be rounded using the method defined in the [Rounding](/refguide/project-settings/#rounding) section of **App Settings**.
+If set to _Fixed_, the decimal part always will be displayed with the number of places specified in the [Decimal precision](#decimal-precision) property. The value will be rounded using the method defined in the [Rounding](/refguide/app-settings/#rounding) section of **App Settings**.
 
 If set to _Auto_, the whole decimal part of the attribute value will be displayed. No decimal part will be be displayed if the attribute value is an integer.
 
@@ -263,7 +263,7 @@ This only applies to attributes of type Decimal and is available only when the [
 
 The precision of a value describes the number of decimal places that are used to express that value. This property indicates the number of decimal places (the number of digits following the point).
 
-The way that the number is rounded when displayed is defined in the [Rounding](/refguide/project-settings/#rounding) section of **App Settings**.
+The way that the number is rounded when displayed is defined in the [Rounding](/refguide/app-settings/#rounding) section of **App Settings**.
 
 Default: *2*
 
@@ -344,7 +344,11 @@ By default, whether or not an element is displayed in the browser is determined 
 You can choose both **Context** conditions and **Module roles** conditions to apply to the widget.
 {{% /alert %}}
 
-Note that with the **Visible** property, you only hide data and do not protect it. You can hide a tab or a table row from an end-user, but if they still have access to the data then they could see it some other way. To restrict access to sensitive data, use a constraint on the domain model, not on individual pages. 
+{{% alert color="warning" %}}
+With the **Visible** property, you only hide data and do not protect it. You can hide a tab or a table row from an end-user, but if they still have access to the data then they could see it some other way. To restrict access to sensitive data, use a constraint on the domain model, not on individual pages.
+
+Depending on the condition used to set the **Visible** property, hiding an element containing a microflow or snippet will not necessarily prevent the microflow or snippet from being triggered. We recommend that you do not use this method to control whether a microflow is run or not, but include the condition in the microflow itself.
+{{% /alert %}}
 
 #### 9.1.1 Context
 

@@ -141,7 +141,7 @@ To license a Mendix app on Microsoft Windows you need to:
 
 Full instructions on how to do this can be found in [MS Windows: Activate a Mendix License on Microsoft Windows](/developerportal/deploy/activate-a-mendix-license-on-microsoft-windows/).
 
-### 3.9 Unix-like Server
+### 3.9 Unix-Like Server
 
 To license a Mendix app on Linux, or another Unix-like operating system, you need to:
 
@@ -150,7 +150,7 @@ To license a Mendix app on Linux, or another Unix-like operating system, you nee
 3. Request a license key from Mendix Support.
 4. Activate your license on the server using the m2ee command `activate_license`.
 
-More instructions on how to do this can be found in [Unix Deployment](/developerportal/deploy/unix-like/).
+More instructions on how to do this can be found in [Unix-Like Deployment](/developerportal/deploy/unix-like/).
 
 ## 4 Read More
 

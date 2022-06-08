@@ -19,7 +19,7 @@ A menu consists of a list of menu items, which optionally contain sub-items. Dep
 
 {{% alert color="info" %}}
 
-If [security](/refguide/project-security/) is enabled, the menu will only show items that the user has access to.
+If [security](/refguide/app-security/) is enabled, the menu will only show items that the user has access to.
 
 {{% /alert %}}
 

@@ -36,7 +36,7 @@ In Git, committing is first done locally. Commits are then sent to other reposit
 
 Team Server Git has the following advantages over Team Server SVN:
 
-* Git is the standard for software version control as offered by, for example, GitHub, Gitlab, Azure, AWS, and Atlassian; Subversion (SVN) has become outdated. So, this is modernization of the Mendix platform to align with the broader market and developer ecosystems.
+* Git is the standard for software version control as offered by, for example, GitHub, Gitlab, Azure, AWS, and Atlassian; Subversion (SVN) has become outdated. So, this is modernization of the Mendix Platform to align with the broader market and developer ecosystems.
 * As Git stores a local version of the repository, developers are less dependent on a high speed internet connection and the need to synchronize their work with a central repository continuously. 
 * Git has a technically more advanced and optimized communication protocol, which makes synchronizing changes to and from the central repository faster and more reliable.
 * It is possible to commit your changes, essentially creating a save point, without pushing those changes to the central repository immediately. This enables creating a coherent set of changes that can be pushed at once, while also allowing you to commit those changes intermittently.

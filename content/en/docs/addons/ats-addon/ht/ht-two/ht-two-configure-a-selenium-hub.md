@@ -10,7 +10,7 @@ tags: ["ATS", "testing"]
 
 This how-to explains how to configure a selenium hub in ATS. There are four selenium hub possibilities in ATS. How to configure all the four selenium hubs and where you can retrieve the necessary information is explained.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Configure a Browserstack Selenium Hub
 * Configure a Saucelabs Selenium Hub

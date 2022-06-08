@@ -10,7 +10,7 @@ tags: ["ATS", "testing"]
 
 To test your application, you need to open it and log in. For this, you need to enter a username and a password in the **Login** action. Your password will automatically be encrypted to anonymize the data. But you might not want to have your login password masked. ATS has the functionality that makes unmasking your password possible. This how-to explains how to do that.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Unmask your password
 

@@ -15,7 +15,7 @@ To ensure your applications run smoothly, they need to be actively monitored so 
 
 New Relic is a flexible application performance management tool that provides information to help you achieve the above goals.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Set up application performance management for your Mendix application on New Relic
 
@@ -74,7 +74,7 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
 
 2. Open a configuration:
 
-     {{< figure src="/attachments/howto/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-appdynamics/19398903.png" >}}
+     {{< figure src="/attachments/howto/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398903.png" >}}
 
 3. In the **Extra JVM parameters** field on the **Server** tab, add: `-javaagent:<path-to-javaagent>javaagent.jar`:
 
@@ -101,4 +101,4 @@ For more information on New Relic, see the [New Relic documentation](https://doc
 * [Clear Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages/)
 * [Monitor Mendix Using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Debug Java Actions Remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
-* [Monitoring Tools](https://github.com/mendix/cf-mendix-buildpack#monitoring-tools) in the *cf-mendix-buildpack* repo on GitHub
+* [Telemetry Configuration](https://github.com/mendix/cf-mendix-buildpack#telemetry-configuration) in the *cf-mendix-buildpack* repo on GitHub

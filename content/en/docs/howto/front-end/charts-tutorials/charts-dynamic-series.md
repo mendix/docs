@@ -10,7 +10,7 @@ tags: ["Charts", "Dynamic Series", "Studio Pro", "Widgets"]
 
 The charts widget provides a basic implementation of dynamic series. This allows you to vary the number of data series (for example lines on a line chart) in your chart at runtime, based on the data in your app.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create a chart with dynamic series
 

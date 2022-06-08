@@ -8,7 +8,7 @@ parent: "ht-two-create-custom-actions"
 
 This how-to explains the basics of creating a custom action. You must complete this how-to before proceeding with [How to Create Custom Actions](/addons/ats-addon/ht-two-create-custom-actions/).
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create a custom action
 * Add parameters

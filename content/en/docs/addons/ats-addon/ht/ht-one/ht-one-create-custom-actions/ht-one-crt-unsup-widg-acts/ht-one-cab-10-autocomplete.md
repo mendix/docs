@@ -14,7 +14,7 @@ The how-to assumes that you must build your own action.
 
 The how-to applies to all widgets like the AutoComplete widget. If the widget has a drop-down menu that pops up elsewhere, you can follow this how-to. Keep in mind that it might need some adjustments according to the widget!
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Approach an AutoComplete option that ATS must click
 * Create the custom action to click the AutoComplete option

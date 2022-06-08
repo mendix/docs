@@ -13,7 +13,7 @@ Workflow is a new visual language in Mendix Studio Pro and Mendix Studio that al
 
 This how-to explains how to build an employee onboarding process using the workflow editor. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Creating a workflow
 * Creating user tasks for different user roles
@@ -31,13 +31,18 @@ You would like to build an employee onboarding process. At first, an HR speciali
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Your app has the following [Workflow Commons](https://marketplace.mendix.com/link/component/117066) module. Fore more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app/).
+* Your app has the following [Workflow Commons](https://marketplace.mendix.com/link/component/117066) module. Fore more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app/). 
+
+* Dashboards and metrics in Workflow Commons v2.1.0 and above depend on state change microflows. Make sure to do the following:
+
+    * In the **App Settings** > **Workflows** tab, set **Workflow state change** to *OCh_Workflow_State*.
+    * In the **App Settings** > **Workflows** tab, set **User task state change** to *OCh_WorkflowUserTask_State*.
 
 * Make sure your app has Atlas 3. As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas_Core, Atlas_Web_Content, and DataGrid.
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows/). 
 
-* Make sure that the **User entity** is set to *Administration.Account* in your [App Settings](/refguide/project-settings/#workflows) > **Workflows** tab. 
+* Make sure that the **User entity** is set to *Administration.Account* in your [App Settings](/refguide/app-settings/#workflows) > **Workflows** tab. 
 
 * Make sure that the domain model of the module you are working in looks the following way:
 
@@ -46,13 +51,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Make sure you have the following enumerations configured:
 
     * The PhoneModel enumeration:
-    
+
         {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/enumeration-phone-model.png" >}}
-    
+
     * The LaptopModel enumeration:
-    
+
         {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/enumeration-laptop-model.png" >}}
-  
+
 * Make sure you have an **EmployeesToOnboard** page that contains a list view and has the **EmployeeOnboarding** entity as the data source:
 
     {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/employees-page.png" alt="Employees Page" >}}
@@ -118,7 +123,7 @@ You need to create demo users for the newly created app roles to be able to test
 1. In the App Explorer, open **App** > **Security** > the **Demo users** tab. 
 1. Click **New**.
 2. In the **Add Demo User** dialog box, set the **User name** to **demo_facilities**.
-3. Set **Entity** to **Administration.Account**.
+3. Set the same entity you selected for the **User entity** setting in  [App Settings](/refguide/app-settings/#workflows) > **Workflows** tab: set **Entity** to **Administration.Account**.
 4. Assign the corresponding user role in the **User roles** section: select the **Facilities** role and click **OK**.
 6. Repeat steps 2-5 to add the **demo_manager** demo user.
 7. Repeat steps 2-5 to add the **demo_hr** demo user.

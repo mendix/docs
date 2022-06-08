@@ -15,7 +15,7 @@ A Mendix application is role-based. Using the SAP BTP cockpit, you can assign th
 
 In this document, you will see how to use the XSUAA Connector for SAP Business Technology Platform to provide SSO in an app which has two roles: Supervisor and Inspector. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Add the XSUAA Connector to your app
 * Configure the XSUAA connector within your app
@@ -27,7 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Create an SAP app using an SAP app template
 * Select and deploy the app to an SAP account and subaccount where you have authority to configure security
-* Set the security level for the app to at least Prototype/demo to use SAP Authentication; for more information see [App Security](/refguide/project-security/) and for instructions on setting security levels, see [How To Create a Secure App](/howto/security/create-a-secure-app/)
+* Set the security level for the app to at least Prototype/demo to use SAP Authentication; for more information see [App Security](/refguide/app-security/) and for instructions on setting security levels, see [How To Create a Secure App](/howto/security/create-a-secure-app/)
 * Set up the app with the following two **User roles** in **App** > **Security**: Supervisor and Inspector
 
     {{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/add-roles-to-app.png" >}}
@@ -250,6 +250,6 @@ You can picture the authentication as shown below:
 
 * [How to Create a Secure App](/howto/security/create-a-secure-app/)
 * [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)
-* [App Security](/refguide/project-security/)
+* [App Security](/refguide/app-security/)
 * [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector/) (documentation)
 * [SAP Business Technology Platform cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts)

@@ -14,7 +14,7 @@ The how-to assumes that you must build your own action.
 
 The how-to applies to all widgets like the text box widget, which means that, if ATS needs to enter text in a widget, you can follow this how-to. Keep in mind that it might need some adjustments according to the widget!
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Approach a widget in which ATS must enter text
 * Create a custom action for entering text in the widget

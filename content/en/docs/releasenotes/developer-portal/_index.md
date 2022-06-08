@@ -17,6 +17,22 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### May 19th, 2022
+
+#### Fixes
+
+* We fixed an issue where replies on [Feedback](/developerportal/collaborate/feedback/) emails were not correctly processed into comments.
+
+#### Improvements
+
+* We added a download button for Feedback images, so that you can see them in full size more easily.
+
+### May 5th, 2022 {#may-fifth}
+
+#### Fixes
+
+* We fixed a known issue where not all app images were displayed correctly on the [My Apps](/developerportal/#my-apps) page. (Ticket 148379)
+
 ### April 21st, 2022
 
 #### Improvements
@@ -27,6 +43,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Known Issues
 
 * Under certain circumstances, the app image is not displayed properly on the [My Apps](/developerportal/#my-apps) page.
+    * Fixed on [May 5th, 2022](#may-fifth).
 
 ### April 7th, 2022
 

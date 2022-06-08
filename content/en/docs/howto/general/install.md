@@ -68,7 +68,7 @@ The prerequisites are the following:
 * [Microsoft .NET Desktop Runtime 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 * [AdoptOpenJDK 11](https://cdn.mendix.com/installer/AdoptOpenJDK/OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi)
 * [Microsoft Visual C++ 2010 SP1 Redistributable Package](https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x64.exe)
-* [Microsoft Visual C++ 2015 Redistributable Package](https://download.microsoft.com/download/6/A/A/6AA4EDFF-645B-48C5-81CC-ED5963AEAD48/vc_redist.x64.exe)
+* [Microsoft Visual C++ 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://artifacts.rnd.mendix.com/native-builders/latest.exe)
 
 Based on the error message you get from the installer you can decide to install a single prerequisite, or you can try to manually install them all.
@@ -86,13 +86,19 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
 3. Create a folder with the name **Dependencies** in the same location where the Mendix Studio Pro installer was placed.
 4. Download the prerequisites listed in the [Troubleshooting](#troubleshooting) section above and move them into the **Dependencies** folder.
 5. Rename the following dependencies:
-	* The `.NET Framework 4.7.2` executable to `dotnetfx472.exe`
+	* The `Microsoft .NET Desktop Runtime 6.0` executable to `windowsdesktop-runtime-6.0.3-win-x64.exe`
 	* The `Java Development Kit 11 (x64)` *msi* to `adoptopenjdk_11_x64.msi`
 
  	* The `Visual C++ 2010 SP1 Redistributable (x64)` executable to `vcredist2010_x64.exe`
- 	* The `Visual C++ Redistributable for Visual Studio 2015 (x64)` executable to `vcredist2015_x64.exe`
+ 	* The `Visual C++ Redistributable for Visual Studio 2019 (x64)` executable to `vcredist2019_x64.exe`
  	* The `latest` executable to `mendix_native_mobile_builder.exe`
 6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.
+
+If during installation the **AdoptOpenJDK 11 x64 failed; code 1639** error occurs, try the following:
+
+* Abort the installation process
+* Install the Adopt Open JDK dependency manually from the dependencies folder using Administrator privileges
+* Try to install Studio Pro again
 
 ## 7 Read More
 

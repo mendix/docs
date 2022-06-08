@@ -35,15 +35,15 @@ At the top of the **MxAssist Performance Bot** pane you can see the following op
 
 * **Inspect now** – Inspects your app model on performance issues. 
 * **Limit to current  tab** – Limits the messages displayed in the pane to the current document.
-* **Configuration** – Defines the modules and documents that the MxAssist Performance Bot will analyze. Click the **Configuration** button to open the **MxAssist Performance Bot Configuration** dialog box that contains the **Project Model** and **Best Practice** tabs.
+* **Configuration** – Defines the modules and documents that the MxAssist Performance Bot will analyze. Click the **Configuration** button to open the **MxAssist Performance Bot Configuration** dialog box that contains the **App Model** and **Best Practice** tabs.
 
-    * The **Project Model** tab lists all relevant documents in your app. You can choose which specific modules or documents to inspect or leave out. 
+    * The **App Model** tab lists all relevant documents in your app. You can choose which specific modules or documents to inspect or leave out. 
 
-        {{< figure src="/attachments/refguide/modeling/menus/view-menu/mx-assist-performance-bot/project-model.jpg" alt="Project Model" >}}
+        {{< figure src="/attachments/refguide/modeling/menus/view-menu/mx-assist-performance-bot/app-model.png" alt="App Model" >}}
 
     * The **Best Practice** tab lists the available best practice. You can choose your preferred best practices and inspect your model against it: 
 
-        {{< figure src="/attachments/refguide/modeling/menus/view-menu/mx-assist-performance-bot/best-practice.jpg" alt="Best Practice" >}}
+        {{< figure src="/attachments/refguide/modeling/menus/view-menu/mx-assist-performance-bot/best-practice.png" alt="Best Practice" >}}
 
 You can use both app model and best practice configuration together. 
 

@@ -349,7 +349,7 @@ As your Mendix app matures, you may want to expand its functionality (such as by
 
 ## 5 When to Regenerate Your Native Template {#sync-your-repository}
 
-The Native Template is being continuously developed. This means new versions are regularly released to accommodate new features of the Mendix platform or to fix issues. When a new version is available, the Native Builder will suggest you run `regenerate` to update your base template. 
+The Native Template is being continuously developed. This means new versions are regularly released to accommodate new features of the Mendix Platform or to fix issues. When a new version is available, the Native Builder will suggest you run `regenerate` to update your base template. 
 
 You should update your project's template in the following scenarios:
 

@@ -110,7 +110,7 @@ Once you have created the Mendix app on IEM side, you must create a version of y
 
 Mendix Applications on Industrial Edge support Configuration Files. You can add a configuration file for each Edge device, with specific environment variables in addition to the default variables which are configured within the docker compose file.
 
-The container will search the location, specified in the environment variable: `IEM_CONFIG_PATH`, for files with the extention `.env`. The `.env` files can contain one or more environment variables, which will be added to the environment variables of the container. This can be used to set Edge device specific constants, scheduled events, or custom runtime settings. Check the [configuring constants](https://github.com/mendix/cf-mendix-buildpack#configuring-constants) section of the Mendix buildpack for the syntax to use. 
+The container will search the location, specified in the environment variable: `IEM_CONFIG_PATH`, for files with the extention `.env`. The `.env` files can contain one or more environment variables, which will be added to the environment variables of the container. This can be used to set Edge device specific constants, scheduled events, or custom runtime settings. Check the [Constants](https://github.com/mendix/cf-mendix-buildpack#constants) section of the Mendix buildpack for the syntax to use. 
 
 See the next section for an example compose file including the `IEM_CONFIG_PATH`, which is set in the example to `/cfg-data'.
 

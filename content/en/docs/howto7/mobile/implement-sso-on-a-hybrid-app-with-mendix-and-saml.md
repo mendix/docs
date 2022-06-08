@@ -173,7 +173,21 @@ To use the hybrid app package, follow these steps:
 
 {{% alert color="warning" %}}
 Not all versions of the SAML module will work correctly when implementing SSO for your hybrid app. Please make sure you use a version of the SAML module that is capable of creating mobile app tokens (that is, version 1.9.3 or above). We recommend updating the SAML module to the latest version available, and if needed, updating the Mendix version of your application.
+
+See the [Dependencies](/appstore/modules/saml/#dependencies) section of the *SAML* documentation for more information.
 {{% /alert %}}
+
+{{% alert color="info" %}}
+The **SAML20.HybridAppLoginTimeOutInMinutes** constant is only available in version 1.16.6 and above for Mendix version 7.
+{{% /alert %}}
+
+If you have the **com.mendix.webui.HybridAppLoginTimeOut** [custom runtime setting](/refguide7/custom-settings/#web-client-settings) configured to customize the expiration of mobile authentication tokens, you will have to set the value of the **SAML20.HybridAppLoginTimeOutInMinutes** constant to match the value of the custom runtime setting. When you use the SAML module for SSO in your Mendix app, the authentication token is not created by the Mendix runtime, which uses the custom runtime setting. Instead, the authentication token is created by the Java code in the SAML module. This Java code does not have access to the custom runtime setting value, and thus requires the constant value to be set. 
+
+Be sure to take these actions based on your use case:
+
+* If you use the default login handler in your hybrid app, you must change the **com.mendix.webui.HybridAppLoginTimeOut** custom runtime setting to change the validity of the authentication token used by the hybrid mobile app
+* If you use the SAML module in your hybrid app, you must change the **SAML20.HybridAppLoginTimeOutInMinutes** constant to change the validity of the authentication token used by the hybrid mobile app
+* If you use both the default login handler and the SAML module in your hybrid app, you must change both
 
 The last thing to do is to check the **Enable mobile authentication token** box in the **Provisioning** tab when configuring an identity provider in the Mendix SAML module. This will make sure the SAML module provides the correct login token to the JavaScript part.
 

@@ -10,7 +10,7 @@ tags: ["translate", "collaboration"]
 
 Delivering your Mendix app in multiple languages is an important capability for reaching a wide audience. Using translatable texts (for example, labels, button names, menu items) that are tracked and stored in your app, you can quickly make your app multilingual and translate the content from English to many other languages.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Set the development language
 * Import and export translations

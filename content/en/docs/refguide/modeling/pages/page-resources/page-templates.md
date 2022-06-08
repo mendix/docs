@@ -18,13 +18,13 @@ When creating a new page, the user is presented with an overview of all the comp
 
 ## 2 Custom Page Templates
 
-By mapping out the common design patterns of a project, a great deal of the initial work involved in creating new pages can be mitigated. 
+By mapping out the common design patterns of an app, a great deal of the initial work involved in creating new pages can be mitigated. 
 
 Generally, page templates are stored in the app's [UI resources package](/refguide/ui-resources-package/). This keeps them in sync with the app theme, as well as providing a handy place to consolidate all design-related data. 
 
 To create a page template, right-click a page in either the **App Explorer** or an empty section of the canvas and select **Create page template**. The page will be added as a new page template, which will automatically make it available in the **Create Page** wizard.
 
-As the purpose of page templates is to facilitate design rather than functionality, page templates should be devoid of references to other documents. This is to prevent users from facing confusing errors when creating a new page. It also mitigates the chance of errors when importing page templates from a different project.
+As the purpose of page templates is to facilitate design rather than functionality, page templates should be devoid of references to other documents. This is to prevent users from facing confusing errors when creating a new page. It also mitigates the chance of errors when importing page templates from a different app.
 
 Page template properties are described in the sections below.
 

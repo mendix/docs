@@ -2,11 +2,13 @@
 title: "Marketplace Guide"
 url: /appstore/
 description: "Presents documentation on configuring and using the latest versions of platform-supported components."
-tags: ["marketplace",  "component", "platform support"]
 weight: 35
+no_list: false 
+description_list: true 
 cascade:
     - space: "Marketplace Guide"
     - mendix_version: ""
+tags: ["marketplace",  "component", "platform support"]
 ---
 
 ## 1 Introduction
@@ -21,11 +23,3 @@ For details on the Studio Pro version required for use and when the component wa
 
 ## 2 Guide Categories
 
-The *Marketplace Guide* is divided into the following categories:
-
-* [General Info](/appstore/general/)
-* [Creating Content](/appstore/creating-content/)
-* [App Services](/appstore/app-services/)
-* [Connectors](/appstore/connectors/)
-* [Modules](/appstore/modules/)
-* [Widgets](/appstore/widgets/)

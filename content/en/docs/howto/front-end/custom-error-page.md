@@ -22,7 +22,7 @@ If you do not create these files, the default error page will be used for each s
 
 {{< figure src="/attachments/howto/front-end/custom-error-page/custom-error-page.png" >}}
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create a custom error page
 

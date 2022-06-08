@@ -19,7 +19,7 @@ To publish your app in an app store, we recommend you build native iOS apps inst
 
 The hybrid mobile app publishing process is based on Adobe PhoneGap. We have integrated the [Adobe PhoneGap Build](https://build.phonegap.com/) service into Mendix to provide support for automatically building the required hybrid mobile packages. Instead of worrying about technical details, you can focus on what matters most: rapidly developing an app to support your business processes.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Set up app signing keys
 * Complete the app-packaging process

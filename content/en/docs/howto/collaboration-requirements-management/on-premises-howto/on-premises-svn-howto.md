@@ -20,7 +20,7 @@ This how-to will not describe how to set up an SVN server from scratch; typicall
 You will not be able to use Mendix Studio for collaborative development if you use an on-premises version control server. Collaborative development between Studio and Studio Pro will only work if you use the Mendix Team Server.	
 {{% /alert %}}	
 
-**This how-to will teach you how to do the following:**	
+This how-to will teach you how to do the following:	
 
 * Configure your Mendix apps to work with SVN (on-premises) version control system	
 

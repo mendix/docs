@@ -376,7 +376,7 @@ Support for the `dataSource` attribute was introduced in Mendix 8.14.
 
 #### 4.1.2 XML Elements
 
-`<returnType>` (required) — An expression property must contain a `<returnType>` element in order to define allowed return types for the expression. The Mendix platform will ensure the that configured expression returns the correct data type.
+`<returnType>` (required) — An expression property must contain a `<returnType>` element in order to define allowed return types for the expression. The Mendix Platform will ensure the that configured expression returns the correct data type.
 
 | Supported Return Types | Corresponding Types Client Components Receive |
 | -------------------- | --------------------------------------------- |
@@ -428,7 +428,7 @@ Support for the `dataSource` attribute was introduced in Mendix 8.14.
 
 #### 4.2.2 XML Elements
 
-`<translations>` — Allows a user to set a default value for text templates for different languages using `<translation>` elements with a `lang` attribute representing [ISO 639](https://en.wikipedia.org/wiki/ISO_639) code of the language. Available languages are listed in the [Languages Tab](/refguide/project-settings/#languages-tab) in Studio Pro.
+`<translations>` — Allows a user to set a default value for text templates for different languages using `<translation>` elements with a `lang` attribute representing [ISO 639](https://en.wikipedia.org/wiki/ISO_639) code of the language. Available languages are listed in the [Languages Tab](/refguide/app-settings/#languages-tab) in Studio Pro.
 
 #### 4.2.3 Studio Pro UI
 
@@ -659,7 +659,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ## 5 System Properties {#system-properties}
 
-System properties is a way for a pluggable widget to adopt extended widget functionality provided by Mendix platform. System properties should be defined as `<systemProperty>` elements. The only property XML attribute `<systemProperty>` requires is `key` attribute, which defines a system property's type. The following values are allowed:
+System properties is a way for a pluggable widget to adopt extended widget functionality provided by Mendix Platform. System properties should be defined as `<systemProperty>` elements. The only property XML attribute `<systemProperty>` requires is `key` attribute, which defines a system property's type. The following values are allowed:
 
 * `Label`
 * `Name`

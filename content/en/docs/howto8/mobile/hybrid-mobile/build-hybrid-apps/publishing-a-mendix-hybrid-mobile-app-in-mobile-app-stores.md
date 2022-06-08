@@ -20,7 +20,7 @@ To publish your app in an app store, we recommend you build native iOS apps inst
 
 Once you have finished developing a Mendix hybrid mobile application, you will want to make it available as an app for mobile platforms such as Apple iOS and Google Android. We make it possible to produce platform-specific installation packages. For more details on deploying platform-specific installation packages, see [Mobile App](/developerportal/deploy/mobileapp/).
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Set up app signing keys
 * Complete the app-packaging process
@@ -227,11 +227,11 @@ Using your new app, ensure all pages, buttons, and functionality work the way yo
 
 ### 7.4 Upload to Play Console
 
-Upload your Mendix app to the Play Console by following the instructions on Google's [Upload your app to the Play Console](https://developer.android.com/studio8/publish/upload-bundle) site. Before uploading to the Play Console you will have to complete the [signup steps](https://play.google.com/apps/publish/signup/) of signing-in with your Google account, accepting the developer agreement, paying the registration fee, and completing your account details. Once you have satisfied those requirements, you can [upload your app](https://support.google.com/googleplay/android-developer/answer/7159011) to the Play Console.
+Upload your Mendix app to the Play Console by following the instructions on Google's [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle) site. Before uploading to the Play Console you will have to complete the [signup steps](https://play.google.com/apps/publish/signup/) of signing-in with your Google account, accepting the developer agreement, paying the registration fee, and completing your account details. Once you have satisfied those requirements, you can [upload your app](https://support.google.com/googleplay/android-developer/answer/7159011) to the Play Console.
 
 ### 7.5 Create, Review, and Roll Out a Release
 
-Follow the steps in Google's [Prepare & roll out releases](https://support.google.com/googleplay/android-developer/answer/7159011) to create, prepare, review, and roll out your app release. You can also consult Google's [Run apps on a hardware device](https://developer.android.com/studio8/run/device) for detailed instructions on testing your app using a physical Android device instead of an emulator.
+Follow the steps in Google's [Prepare & roll out releases](https://support.google.com/googleplay/android-developer/answer/7159011) to create, prepare, review, and roll out your app release. You can also consult Google's [Run apps on a hardware device](https://developer.android.com/studio/run/device) for detailed instructions on testing your app using a physical Android device instead of an emulator.
 
 ## 8 Read More
 

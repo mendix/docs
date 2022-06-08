@@ -11,6 +11,35 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### June 2nd, 2022
+
+#### Improvements
+
+* After completing the registration form, you will now be directed immediately to the new data source.
+* Forum links now open with the Data Hub category pre-selected.
+
+#### Fixes
+
+* We fixed a bug where the `GET ServiceVersion` operation of the DataHub V2 API would not always return the `ContractType` of a `Service`. See [Data Hub APIs](https://platformcore.pages.rnd.mendix.com/datahub-spec/) for a list of all available APIs.
+
+### May 19th, 2022
+
+#### Improvements
+
+* We made several improvements to the UI.
+
+### May 12th, 2022
+
+#### Improvements
+
+* We added a description about the curation rights that apply for `DELETE` and `PUT` operations.
+
+### May 5th, 2022
+
+#### New Features
+
+* When a person is removed as a Technical Owner or Business Owner of an individual application, they will receive an MxDock notification confirming that they are no longer the point of contact.
+
 ### April 21st, 2022
 
 #### Fixes
@@ -43,7 +72,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### March 24th, 2022
 
-#### New Feature
+#### New Features
 
 * We added v4 compatibility for the **Transform API**. This is accessible via the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) under the **Endpoints** section.
 

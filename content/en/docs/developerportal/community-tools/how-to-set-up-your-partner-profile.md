@@ -11,7 +11,7 @@ tags: ["authorized", "expert", "professional", "4 p's"]
 
 The purpose of the Partner Profile is to provide the Mendix community and customers with a transparent overview of each partner company's knowledge, skills, experience, reviews, and culture. The profile is a simple and clear way for each partner to present themselves through an aggregated view of the developers in the organization, including the number of certified developers. It is also possible to add projects, customer reviews, contact information, a company video, and a description to each profile.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Set up and edit the Mendix Partner Profile
 * Add projects to the profile
@@ -43,7 +43,7 @@ To sign in to the Partner Profile, edit it, and make it public, follow these ste
     
 5.  After you have finished editing, you can make the profile public so that the Mendix community and customers can view it. To do this, simply click **Save and Exit**:
 
-    {{< figure src="/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/close-edit.png" >}}
+    {{< figure src="/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/close-edit.png"  width="343px" >}}
 
 ## 4 Editing the Partner Profile Header
 
@@ -73,31 +73,31 @@ Follow these steps to edit the most important fields on your Partner Profile:
 
 1.  Add a **Summary Title** and a company **Summary**:
 
-	{{< figure src="/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/summary.png"   width="550"  >}}
+	{{< figure src="/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/summary.png" >}}
 
 2.  Add a company **Video** (YouTube or Vimeo) or **Project**:
 
-	{{< figure src="/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/video.png"   width="550"  >}}
+	{{< figure src="/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/video.png"  >}}
 
 	Selecting **Project** will link a project that you have have added on the **Projects** tab of the Partner Profile (for more details, see the section [Adding Projects](#projects) below).<br>
 
 3.  Add your company's focus **Industries**. These will be used in the filter options on the **Meet our partners** page so that Mendix customers can search for partners in a specific industry.
 
-	{{< figure src="/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/industries.png"   width="250"  >}}
+	{{< figure src="/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/industries.png" >}}
 
 4.  Select the **Types of Service** your company provides:
 
-	{{< figure src="/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/service.png"   width="550"  >}}
+	{{< figure src="/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/service.png" >}}
 
 5.  Under **Skills**, add the types of skills your company team members can perform:
 
-	{{< figure src="/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/skills.png"   width="550"  >}}
+	{{< figure src="/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/skills.png" >}}
 
 	For more information on company team members, see the [Editing Team Members](#team) section.
 
 6.  In **Geographical Focus**, add the countries where your company is active and/or has coverage. This will be used in the filter option on the **Meet our partners** page so that Mendix customers can search for partners in a specific country.
 
-	{{< figure src="/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/geo-focus.png"   width="550"  >}}
+	{{< figure src="/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/geo-focus.png" >}}
 
 {{% alert color="info" %}}
 If you're missing an input option (for example, an industry or skill), click **Feedback** on the right side of the screen and let us know!
@@ -107,15 +107,15 @@ If you're missing an input option (for example, an industry or skill), click **F
 
 To add a project to your Partner Profile, go to the **Projects** tab and click **Add Project**:
 
-{{< figure src="/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/add-project.png"   width="600"  >}}
+{{< figure src="/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/add-project.png" >}}
 
 This will open the project editor. There are tips in the editor for what you should enter in each field:
 
-{{< figure src="/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/project-editor.png"   width="500"  >}}
+{{< figure src="/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/project-editor.png" >}}
 
 All of the fields in the project editor must be filled out before submitting the project. Click **Submit** to save and submit your project:
 
-{{< figure src="/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/project-buttons.png"   width="300"  >}}
+{{< figure src="/attachments/developerportal/community-tools/how-to-set-up-your-partner-profile/project-buttons.png"   width="245px"  >}}
 
 {{% alert color="warning" %}}
 All projects are reviewed by Mendix upon submission. After approval, the project will be shown in the **Published** project section.

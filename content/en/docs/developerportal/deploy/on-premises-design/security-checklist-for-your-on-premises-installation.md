@@ -16,7 +16,7 @@ tags: ["security", "on-premises", "user account", "reverse proxy", "firewall", "
 
 This how-to serves as a checklist for implementing security for your on-premises installation.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Use a Mendix version containing the latest security patches
 * Configure file system access
@@ -80,4 +80,4 @@ For example, Content Security Policy (CSP) is not enabled for you. There is no d
 * [How to Set Up a New SQL Server Database](/developerportal/deploy/setting-up-a-new-sql-server-database/)
 * [How to Set Up a SQL Server User](/developerportal/deploy/setting-up-a-sql-server-user/)
 * [How to Deploy Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/)
-* [U*ix Deployment](/developerportal/deploy/unix-like/)
+* [Unix-Like Deployment](/developerportal/deploy/unix-like/)

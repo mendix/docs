@@ -2,7 +2,6 @@
 title: "Restore a Backup Locally"
 url: /developerportal/operate/restore-backup-locally/
 # try using linktitle rather than having to rename everything to add the -a-
-linktitle: "restore backup locally"
 url: /developerportal/operate/restore-backup-locally/
 parent: "backups"
 weight: 40
@@ -15,7 +14,7 @@ tags: ["Backup","Restore","Local","Developer Portal"]
 
 Restoring a backup locally can be useful if you want to test your cloud environment's data without interrupting your live cloud environment. In this way you can see locally how your app behaves when using data in your cloud environment. By using Mendix Studio Pro and a PostgreSQL database, you can debug your app using backups of your cloud test/acceptance/production data.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Download a backup from your cloud environment
 * Create a new database

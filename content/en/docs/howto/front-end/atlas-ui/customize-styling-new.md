@@ -581,9 +581,9 @@ When an end-user opens a Mendix app in an unsupported browser, a page is shown t
 
 ## 11 Serving Fonts Locally (Web) {#local-fonts}
 
-By default, Atlas uses the font *Open Sans* and the font files are loaded from the Google Fonts Content Delivery Network (CDN). While the Google Fonts CDN is convenient, you might need to change where your fonts files are served from. 
+By default, Atlas uses the font Open Sans and the font files are loaded from the Google Fonts Content Delivery Network (CDN). While the Google Fonts CDN is convenient, you might need to change where your fonts files are served from. 
 
-You may need to change your font file service location in order to comply with stricter [CSP]( /refguide/progressive-web-app/csp/) policies, or if you cannot use Google Fonts CDN due to your business requirements. Read on to learn how to move from the Google Fonts CDN to serving fonts from your own server.
+For example, you may need to change your font file service location in order to comply with stricter [CSP]( /refguide/progressive-web-app/csp/) policies, or if you cannot use Google Fonts CDN due to your business requirements. Fortunately, you can serve fonts from your own local server instead of using the Google Fonts CDN using the sections below.
 
 ### 11.1 Downloading Font Files
 
@@ -593,13 +593,13 @@ Unzip the ZIP file and place the **fonts** folder into the **/theme/web/** folde
 
 ### 11.2 Using Local Font Files
 
-Open *theme/custom-variables.scss* file of your Mendix app and locate the following line:
+Open your Mendix app's *theme/custom-variables.scss* file and locate the following line:
 
 ```
 $font-family-import: https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700
 ```
 
-Change this line to the following:
+Replace that line with the following code:
 
 ```
 $font-family-import: ./fonts/open-sans.css

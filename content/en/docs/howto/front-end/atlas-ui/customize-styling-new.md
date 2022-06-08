@@ -578,3 +578,29 @@ By default, Mendix generates the *index.html* (the page that is loaded to start 
 ## 10 Customizing Unsupported Browsers (Web) {#customize-unsupported-browsers}
 
 When an end-user opens a Mendix app in an unsupported browser, a page is shown that the current browser is not supported and explain which other browsers can be used. To customize this screen, you can create a custom html file called *unsupported-browser.html* in the **theme/web** folder. If desired, you can copy *unsupported-browser.html* from the **deployment/web** folder to the **theme/web** folder and use it as a starting point. This file will be created after you have deployed your app locally at least once.
+
+## 11 Serving Fonts Locally (Web) {#local-fonts}
+
+By default Atlas uses a font called *Open Sans* and the font files are loaded from Google Fonts CDN. While Google Fonts CDN provides a convinient way of working with fonts there might be a need to change where the fonts files are served from. For example in order to comply with stricter CSP policies or when Google Fonts CDN may not be used. This section guides you through the proccess of moving from Google Fonts CDN to serving font from own server.
+
+### 11.1 Downloading Font Files
+
+Font files prepared for use with Atlas are available at GitHub repository [https://github.com/mendix/open-sans](https://github.com/mendix/open-sans). Download content of the repository by using **Code** button and selecting **Download ZIP**. Unzip the ZIP file and place `fonts` folder into the `/theme/web/` folder of your Mendix project. Make sure the `open-sans.css` and font files are located directly in `/theme/web/fonts/` folder of your Mendix project.
+
+### 11.2 Use Local Font Files
+
+Open `theme/custom-variables.scss` file of your Mendix project and locate the following line:
+```
+$font-family-import: https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700
+```
+
+Change this line to:
+```
+$font-family-import: ./fonts/open-sans.css
+```
+
+And save the changes
+
+### 11.3 Check Your App
+
+Run your App and check that fonts are rendered correctly.

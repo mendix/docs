@@ -1,5 +1,5 @@
 ---
-title: "Unix-like Deployment"
+title: "Unix-Like Deployment"
 url: /developerportal/deploy/unix-like/
 description: "How to install and configure Mendix on a Unix-like system"
 weight: 99

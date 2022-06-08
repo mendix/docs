@@ -89,7 +89,7 @@ Deploying to Azure is possible from the [Azure Marketplace](https://azuremarketp
 
 ## 11 On-Premises
 
-To learn how to deploy your Mendix application on premises, see [How to Deploy Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/) and [Unix-like Deployment](/developerportal/deploy/unix-like/).
+To learn how to deploy your Mendix application on premises, see [How to Deploy Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/) and [Unix-Like Deployment](/developerportal/deploy/unix-like/).
 
 ## 12 Mendix Applications on Industrial Edge
 

@@ -80,4 +80,4 @@ For example, Content Security Policy (CSP) is not enabled for you. There is no d
 * [How to Set Up a New SQL Server Database](/developerportal/deploy/setting-up-a-new-sql-server-database/)
 * [How to Set Up a SQL Server User](/developerportal/deploy/setting-up-a-sql-server-user/)
 * [How to Deploy Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/)
-* [Unix-like Deployment](/developerportal/deploy/unix-like/)
+* [Unix-Like Deployment](/developerportal/deploy/unix-like/)

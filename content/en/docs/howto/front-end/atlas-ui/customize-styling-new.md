@@ -581,26 +581,28 @@ When an end-user opens a Mendix app in an unsupported browser, a page is shown t
 
 ## 11 Serving Fonts Locally (Web) {#local-fonts}
 
-By default Atlas uses a font called *Open Sans* and the font files are loaded from Google Fonts CDN. While Google Fonts CDN provides a convinient way of working with fonts there might be a need to change where the fonts files are served from. For example in order to comply with stricter CSP policies or when Google Fonts CDN may not be used. This section guides you through the proccess of moving from Google Fonts CDN to serving font from own server.
+By default, Atlas uses the font *Open Sans* and the font files are loaded from Google Fonts Content Delivery Network (CDN). While Google Fonts CDN is convenient, you might need to change where your fonts files are served from. 
+
+You may need to change your font file service location in order to comply with stricter [CSP]( /refguide/progressive-web-app/csp/) policies, or if you cannot use Google Fonts CDN due to your business requirements. Read on to learn how to move from Google Fonts CDN to serving fonts from your own server.
 
 ### 11.1 Downloading Font Files
 
-Font files prepared for use with Atlas are available at GitHub repository [https://github.com/mendix/open-sans](https://github.com/mendix/open-sans). Download content of the repository by using **Code** button and selecting **Download ZIP**. Unzip the ZIP file and place `fonts` folder into the `/theme/web/` folder of your Mendix project. Make sure the `open-sans.css` and font files are located directly in `/theme/web/fonts/` folder of your Mendix project.
+Font files prepared for use with Atlas are available at this [GitHub repository](https://github.com/mendix/open-sans). Download the repository’s content by clicking the **Code** button and selecting **Download ZIP**. 
 
-### 11.2 Use Local Font Files
+Unzip the ZIP file and place the **fonts** folder into the **/theme/web/** folder of your Mendix app. Make sure that *open-sans.css* and the font files are located directly in the **/theme/web/fonts/** folder of your Mendix app.
 
-Open `theme/custom-variables.scss` file of your Mendix project and locate the following line:
+### 11.2 Using Local Font Files
+
+Open *theme/custom-variables.scss* file of your Mendix app and locate the following line:
+
 ```
 $font-family-import: https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700
 ```
 
-Change this line to:
+Change this line to the following:
+
 ```
 $font-family-import: ./fonts/open-sans.css
 ```
 
-And save the changes
-
-### 11.3 Check Your App
-
-Run your App and check that fonts are rendered correctly.
+Then, save your changes. Run your app and you should see fonts rendered correctly

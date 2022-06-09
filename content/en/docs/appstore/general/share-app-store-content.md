@@ -157,7 +157,27 @@ These licenses should only be used when the component is developed and released 
 | **SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL** | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | (As per governing terms & conditions) |
 | **SDISW End-User License Agreement for Mendix Sample Apps** | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | (As per governing terms & conditions) |
 
-#### 4.2.3 Finishing Up
+#### 4.2.3 Providing Lead Generation Details {#leadgeneration}
+
+A sales lead is a potential sales contact that expresses an interest in your product or service.
+
+Lead routing is the end-to-end process of collecting the leads and distributing them to the supplier. There is a possibility to configure lead routing for several content types in the marketplace:
+1. Solutions
+2. Solution Templates
+3. Platform Services
+
+When the prospective customers are interested in the product, they can leave their contact information using the Marketplace product listing. This is done by clicking on the call-to-action button and filling in the form. To be able to send this information to the supplier correctly, it is required to specify the email address(es) where notifications and information will be sent.
+
+Please configure what is the name of your Call to Action: 
+1. Contact Us
+2. Notify Me
+3. Request Demo
+4. Download
+
+In case you select Download option, no lead routing is established but customers can directly download your product.
+If you select the first 3 options, kindly provide the email address which will receive the customer’s interest.
+
+#### 4.2.4 Finishing Up
 
 To finish up configuring this page, follow these steps:
 

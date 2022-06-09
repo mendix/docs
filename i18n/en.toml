@@ -1,0 +1,10 @@
+
+# MvM: Additional translations for Mendix customization
+
+# Print support
+[print_page]
+other = "Print this page"
+[print_printable_page]
+other = "This a printable view of this page."
+[post_last_mod]
+other = "Last modified:"

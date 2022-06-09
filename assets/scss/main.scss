@@ -1,0 +1,34 @@
+@import "variables_project";
+@import "../../themes/docsy/assets/scss/main.scss";
+@import "support/_utilities";
+@import "alerts";
+@import "code";
+@import "content";
+@import "front-page";
+@import "main-container";
+@import "nav";
+@import "sidebar-toc";
+@import "sidebar-tree";
+@import "tables";
+@import "section-index";
+
+// Adjust anchors vs the fixed menu.
+@include media-breakpoint-up(md) {
+    .td-offset-anchor:target {
+        display: block;
+        position: relative;
+        top: -4rem;
+        visibility: hidden;
+    }
+
+    h2[id]:before,
+    h3[id]:before,
+    h4[id]:before,
+    h5[id]:before {
+        display: block;
+        content: " ";
+        margin-top: -48px; // NK - set to height of MxDock, to prevent dock from going on top of headings
+        height: 48px; // NK - set to height of MxDock, to prevent dock from going on top of headings
+        visibility: hidden;
+    }
+}

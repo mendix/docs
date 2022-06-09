@@ -1,0 +1,57 @@
+// Code formatting.
+
+.td-content {
+	// Highlighted code.
+    .highlight {
+        @extend .card;
+
+        margin: 2rem 0;
+        padding: 0;
+
+        pre {
+            margin: 0;
+            padding: 1.75rem 1rem 1rem 0.75rem;  // NK - changed padding
+        }
+    }
+
+    // Inline code
+    p code, li > code, table code {
+        color: inherit;
+        padding: 0.1em 0.1em;  // NK - made padding smaller
+        margin: 0;
+        font-size: 85%; // NK - copied from Docsy v0.1.0 file
+        word-break: normal;
+        background-color: rgba($info, 0.07); // NK - changed background color
+        border-radius: $border-radius;
+        border: 1px solid rgba($info, 0.1);  // NK - added border and color
+
+        br {
+            display: none;
+        }
+    }
+
+
+    // Code blocks
+    pre {
+        word-wrap: normal;
+        background-color: $gray-100;
+        padding: $spacer;
+        line-height: 1.25; // NK - added to match code text
+        font-size: 1em; // NK - added to match code text
+
+        > code {
+	    background-color: inherit !important;
+            padding: 0;
+            margin: 0;
+            font-size: 100%;
+            word-break: normal;
+            white-space: pre;
+            border: 0;
+        }
+    }
+
+    pre.mermaid {
+        background-color: inherit;
+        font-size: 0;
+    }
+}

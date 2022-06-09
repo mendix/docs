@@ -26,7 +26,7 @@ Here is an overview of what Chatbot contains:
 
 In most cases, you will only need what is contained in the **Chatbot** > **USE_ME** folder. The content in the **Chatbot** > **Internal** folder is for internal use only and you will not need it.
 
-The Chatbot module contain the ChatbotConsole page, which could define a chatbot in conversational UI with local developer mode in Mendix Studio Pro. During the chatbot configuration, you need to use the provided template bot config or make a complete new design. The conversation bot design including elements like, Intent, Utterance, Prompt, Slot, Fulfillment, you could following the section 4.4 step by step to get to know how it works.
+The Chatbot module contains the ChatbotConsole page, which can define a chatbot in conversational UI with the local developer mode in Mendix Studio Pro. During the chatbot configuration, you need to use the provided template bot configuration or make a complete new design. The conversation bot design includes elements like, intent, utterance, prompt, slot, fulfillment. You can follow the [Designing Chatbot Content from Scratch in Your Browser](#design-chatbot-context) section to get to know how it works.
 
 {{< figure src="/attachments/appstore/app-services/chatbot/chatbotconsole-page.png" >}}
 
@@ -395,43 +395,43 @@ You can use the **ChatbotConsole** page in a module to design bot context. To le
 4. Run your app locally.
 5. Navigate to **Chatbot Console** page. You can start designing chatbot context in your browser.
 
-### 4.3 Designing Chatbot Context From Template in Your Browser {#design-chatbot-context}
+### 4.3 Designing Chatbot Context from Template in Your Browser {#design-chatbot-context}
 
 1. Go to the **Chatbot Console** page in your browser as the administrator.
 2. Click **Create bot** on the page to start designing your own chatbot.
 3. Configure the bot settings with a bot name and a description.
-4. Configure **Add methods** as start with an example.
+4. Configure **Add methods** to start with an example.
 4. Configure the bot languages settings with **Language details**, **Voice** and **Confidence score threshold**.
 5. Add **Language details** and **Voice**.
 6. On the lower-right corner, click **Test**.
 7. Navigate to the **Bot Conversation** page to see if the whole bot workflow works.  
 
-### 4.4 Designing Chatbot Context From Scratch in Your Browser {#design-chatbot-context}
+### 4.4 Designing Chatbot Context from Scratch in Your Browser {#design-chatbot-context}
 
 1. Go to the **ChatbotConsole** page in your browser as the administrator.
-2. Click **Create bot** on the page to start designing your own chatbot.
+2.  Click **Create bot** on the page to start designing your own chatbot.
 
-{{< figure src="/attachments/appstore/app-services/chatbot/create-bot.png" >}}
+    {{< figure src="/attachments/appstore/app-services/chatbot/create-bot.png" >}}
+    
+3.  Configure the bot settings with a bot name and a description, and then click **Next**.
 
-3. Configure the bot settings with a bot name and a description.
+    {{< figure src="/attachments/appstore/app-services/chatbot/bot-configuration.png" >}}
 
-{{< figure src="/attachments/appstore/app-services/chatbot/bot-configuration.png" >}}
+4.  Configure the bot languages settings with **Language details**, **Voice** and **Confidence score threshold**, and then click **Next**.
 
-4. Configure the bot languages settings with **Language details**, **Voice** and **Confidence score threshold**.
+    {{< figure src="/attachments/appstore/app-services/chatbot/add-language.png" >}}
 
-{{< figure src="/attachments/appstore/app-services/chatbot/add-language.png" >}}
+5.  Configure the user intent with **Intent name** and **Description** in the **Add intent** page to fullfill your goals during the design. You can also check the intent design in the **Conversation flow** block.
 
-6. Configure the user intent with **Intent name** and **Description** in **Add intent** page to fullfill your goals during the design, you can also check the intent design in **Conversation flow** block.
+    {{< figure src="/attachments/appstore/app-services/chatbot/add-intent.png" >}}
 
-{{< figure src="/attachments/appstore/app-services/chatbot/add-intent.png" >}}
-
-7. In order to design a complete conversation flow, you need to add **Sample utterance**, **Confirmation prompt**, and **Closing response** in the current page.
-8. Fill **Intent details** with Intent name and Description.
-9. Add **Sample utterances** as initial request, you can add more than one options in here.
+7. In order to design a complete conversation flow, add **Sample utterance**, **Confirmation prompt**, and **Closing response** in the **Add intent** page.
+8. Fill **Intent details** with **Intent name** and **Description**.
+9. Add **Sample utterances** as an initial request. You can add more than one options in here.
 10. Add **Slots** with **Name**, **Slot type** and **Prompts** to define the values that users can supply for your intent variables.
 11. Add **Confirmation prompt** with **Message** and **Variations** in **Message group** to confirm the user intent.
-12. Add **Declination response** with **Message** and **Variations** in **Message group** to confirm the user intent when say No to the confirmation prompt.
-13. Add **Closing response** with **Message** and **Variations** in **Message group** to sent response to the user after the intent is fulfilled.
+12. Add **Declination response** with **Message** and **Variations** in **Message group** to confirm the user intent when a user says no to the confirmation prompt.
+13. Add **Closing response** with **Message** and **Variations** in **Message group** to sent the response to the user after the intent is fulfilled.
 14. Click **Test** to run chatbot and navigate to the **Bot Conversation** page to see if the whole bot workflow works.  
 
 ### 4.5 Adding Intent Actions to Your Defined Chatbot

@@ -266,7 +266,7 @@ Review and approval by Mendix is required only for the first version of a public
 
 After you publish a component in the Mendix Marketplace, it is your responsibility to make sure that components are updated on a regular cadence. This is important so that components work with the latest versions of dependencies (especially Mendix Studio Pro), and it is required so Mendix can ensure the quality of components in the Marketplace. This means you need to monitor, maintain, and evolve the component so that the Marketplace listing is more noticeable, you can build user loyalty, and you can maintain the good reputation of your company. If the component is not updated regularly, the Marketplace listing will be analyzed for removal from public visibility.
 
-Mendix expects the following updates:
+Mendix expects the following updates for all Platform-supported, Community-supported, and Premium components:
 
 * Bug fixes
 * New features

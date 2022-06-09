@@ -20,15 +20,27 @@ Translating your app to other languages is available in Mendix Studio if multipl
 
 ## 2 App Languages Screen
 
-##  
+You can see what the default language of your app is, what other languages your app currently has, and add or delete languages in the **App Languages** screen. You can also change the default language of the app.
 
-## Switching the Currently Selected Language
+To access the screen, go to **Settings** >**App Languages**. 
+
+{{< figure src="/attachments/studio/general/language-support/app-languages-screen.png" >}}\
+
+The *default language* is the main language of your app. Texts that are not translated to other languages will be displayed in the default language. For example, your default language is English. If you switch to the Dutch language, add a button to a page, and do not translate the button caption, the caption will automatically display the text it has in the English language when you run the app. 
+
+To *change the default language*, simple click the drop-down menu and choose one of the available languages from the list.
+
+To *add a new language* to your app, click the **Add Language** button, search for the language you would like to add and confirm your choose.
+
+To *delete* a language, click the **More** icon next to the language and select **Delete**.
+
+## 3 Switching the Currently Selected Language
 
 You can switch the selected language in the top menu bar:
 
 {{< figure src="/attachments/studio/general/language-support/selected-language.png" >}}
 
-## 3 Translating Texts
+## 4 Translating Texts
 
 When multiple languages are set up in your app, one language is set as the default language. All untranslated texts in other languages will be displayed in the default language when you run the app. When you change the text in the default language, all untranslated texts will fall back to the new text. 
 
@@ -56,7 +68,7 @@ To be able to switch between languages in the previewed or published app, ask yo
 
 {{% /alert %}}
 
-## 4 Widgets and Elements Available for Translation
+## 5 Widgets and Elements Available for Translation
 
 You can translate the following widgets and elements in your app:
 
@@ -67,7 +79,7 @@ You can translate the following widgets and elements in your app:
 * Messages that are configured in **Show Message** actions of a microflow
 * [Enumeration](/studio/domain-models-enumeration/) texts
 
-## Read More
+## 6 Read More
 
 * [General Info](/studio/general/)
 * [Language Menu](/refguide/translatable-texts/)

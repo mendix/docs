@@ -105,7 +105,7 @@ Before you deploy an app, you should configure the binding keys in your app as f
 
 ## 4 Usage
 
-To use the General Purpose OCR, first create an [import mapping](/refguide/import-mappings) that defines how to map extracted data from documents to an entity, and then include the [General Purpose OCR activity](#extraction-activity) in a microflow. This microflow should be set up to accept your input documents, extract data from the documents in bulk and then map the data to an entity using the import mapping that you created.
+To use the General Purpose OCR, first create an [import mapping](/refguide/import-mappings/) that defines how to map extracted data from documents to an entity, and then include the [General Purpose OCR activity](#extraction-activity) in a microflow. This microflow should be set up to accept your input documents, extract data from the documents in bulk and then map the data to an entity using the import mapping that you created.
 
 ### 4.1 Extracting the Data {#extraction-activity}
 
@@ -130,7 +130,7 @@ To extract the data, perform the following steps:
    * [Configure the General Purpose OCR in Background activity](#general-purpose-ocr-in-background-activity)
 
 
-#### 4.1.1 Configuring the General Purpose OCR Activity (Synchronous Behavior) {#general-purpose-ocr-activity}
+#### 4.1.1 Configuring the General Purpose OCR Activity (Synchronous Behavior) {#general-purpose-ocr-in-background-activity}
 
 {{< figure src="/attachments/appstore/app-services/general-purpose-ocr/general-purpose-ocr-sync.png" >}}
 
@@ -149,7 +149,7 @@ To configure the activity, perform the following steps:
     
     - **FAILED**
 
-#### 4.1.2 Configuring the General Purpose OCR In Background Activity (Asynchronous Behaviour) {#general-purpose-ocr-activity-in-background-activity}
+#### 4.1.2 Configuring the General Purpose OCR In Background Activity (Asynchronous Behavior {#general-purpose-ocr-in-background-activity}
 
 {{< figure src="/attachments/appstore/app-services/general-purpose-ocr/general-purpose-ocr-in-background.png" >}}
 

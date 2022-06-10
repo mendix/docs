@@ -105,7 +105,7 @@ Before you deploy an app, you should configure the binding keys in your app as f
 
 ## 4 Usage
 
-To use the General Purpose OCR, first create an [import mapping](#mapping-file) that defines how to map extracted data from documents to an entity, and then include the [General Purpose OCR activity](#extraction-activity) in a microflow. This microflow should be set up to accept your input documents, extract data from the documents in bulk and then map the data to an entity using the import mapping that you created.
+To use the General Purpose OCR, first create an [import mapping](/refguide/import-mappings) that defines how to map extracted data from documents to an entity, and then include the [General Purpose OCR activity](#extraction-activity) in a microflow. This microflow should be set up to accept your input documents, extract data from the documents in bulk and then map the data to an entity using the import mapping that you created.
 
 ### 4.1 Extracting the Data {#extraction-activity}
 
@@ -144,12 +144,12 @@ To configure the activity, perform the following steps:
 3.  For **Object name**, enter the response object of the **ExtractionResponse** entity. Check the **Status** attribute of this entity and based on that need to retrieve extraction result from associated entities. Possible values for status are as follows:
    
     - **IN_PROGRESS**
-     
+    
     - **COMPLETED**
-     
+    
     - **FAILED**
 
-#### 4.1.2 Configuring the General Purpose OCR In Background Activity (Asynchronous Behaviour) {#general-purpose-ocr-activity-in-background}
+#### 4.1.2 Configuring the General Purpose OCR In Background Activity (Asynchronous Behaviour) {#general-purpose-ocr-activity-in-background-activity}
 
 {{< figure src="/attachments/appstore/app-services/general-purpose-ocr/general-purpose-ocr-in-background.png" >}}
 

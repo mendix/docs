@@ -97,7 +97,7 @@ Integration activities can be used to integrate with other systems, for example 
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/generate-document.png" alt="generate document" >}}](/refguide/generate-document/) | [Generate document](/refguide/generate-document/) *(only in nanoflows)* | Allows you to create a document of a certain type based on a [template](/refguide/document-templates/). |
+| [{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/generate-document.png" alt="generate document" >}}](/refguide/generate-document/) | [Generate document](/refguide/generate-document/) *(only in microflows)* | Allows you to create a document of a certain type based on a [template](/refguide/document-templates/). |
 
 ## 10 Workflow Activities
 

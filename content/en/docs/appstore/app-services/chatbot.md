@@ -395,15 +395,14 @@ You can use the **ChatbotConsole** page in a module to design bot context. To le
 4. Run your app locally.
 5. Navigate to **Chatbot Console** page. You can start designing chatbot context in your browser.
 
-### 4.3 Designing Chatbot Context from Template in Your Browser {#design-chatbot-context}
+### 4.3 Designing Chatbot Context with a Template in Your Browser {#design-chatbot-context}
 
 1. Go to the **Chatbot Console** page in your browser as the administrator.
 2. Click **Create bot** on the page to start designing your own chatbot.
-3. Configure the bot settings with a bot name and a description.
+3. Configure the bot settings with a bot name and a description, and then click **Next**.
 4. Configure **Add methods** to start with an example.
-4. Configure the bot languages settings with **Language details**, **Voice** and **Confidence score threshold**.
-5. Add **Language details** and **Voice**.
-6. On the lower-right corner, click **Test**.
+4. Configure the bot languages settings with **Language details**, **Voice** and **Confidence score threshold**, and then click **Next**.
+5. On the lower-right corner, click **Test**.
 7. Navigate to the **Bot Conversation** page to see if the whole bot workflow works.  
 
 ### 4.4 Designing Chatbot Context from Scratch in Your Browser {#design-chatbot-context}
@@ -453,7 +452,7 @@ You can use the **ChatbotConsole** page in a module to design bot context. To le
 
     3. Add a **Change object** activity to the microflow, and configure the settings as follows:
 
-       1. Set  **Object** as **botContext** from the Java action call activity.
+       1. Set **Object** as **botContext** from the Java action call activity.
        2. Set the member **OrderFlowerIntent** to **OrderFlowers**.
        3. Set the member **LocaleId** to **Chatbot.Locale.en_US**.
        4. Click **OK** to save the changes.

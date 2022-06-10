@@ -212,16 +212,16 @@ If you still need to support IE11, note that Studio Pro [8](/releasenotes/studio
 
 ## 11 Mobile Operating Systems {#mobileos}
 
-For native apps built with Mendix the following operating system versions are supported:
+For native and hybrid apps built with Mendix the following operating system versions are supported:
 
 * Latest version of iOS
 * Latest three versions of Android
 
 Only devices running on these operating system versions receive up-to-date security fixes from their vendors and thus minimize being vulnerable to known exploits.
 
-You can build native apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
+You can build native and hybrid apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
 
-We recommend the following minimum hardware requirements for all mobile devices running native Mendix apps:
+We recommend the following minimum hardware requirements for all mobile devices running native and hybrid Mendix apps:
 
 * CPU: minimum 2 cores with 2 GHz
 * Memory: minimum 2 GB

@@ -157,24 +157,22 @@ These licenses should only be used when the component is developed and released 
 | **SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL** | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | (As per governing terms & conditions) |
 | **SDISW End-User License Agreement for Mendix Sample Apps** | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | (As per governing terms & conditions) |
 
-#### 4.2.3 Providing Lead Generation Details {#lead-generation}
+#### 4.2.3 Generating New Leads {#lead-generation}
 
-A sales lead is a potential sales contact that expresses an interest in your product or service.
-
-Lead routing is the end-to-end process of collecting the leads and distributing them to the supplier. There is a possibility to configure lead routing for the following content types in the Marketplace:
+A lead is a potential sales contact that expresses interest in your product or service. Lead routing is the end-to-end process of collecting the leads and distributing them to you. It is possible to configure lead routing for the following content types in the Marketplace:
 
 * Solutions
 * Solution templates
 * Platform services
 
-When prospective customers are interested in your product, they can leave their contact information using the Marketplace product listing. This is done by clicking the call-to-action button and filling in the form. To send this information to you correctly, you must specify the email address(es) where notifications and information can be sent.
+When prospective customers are interested in your product, they can leave their contact information using the Marketplace product listing. This is done by clicking a call-to-action button and filling in a form.
 
-You can configure what the name of your call-to-action button from the following choices: 
+You can configure the name of your **Call-to-action (CTA)** button from the following choices: 
 
-* **Contact Us** – requires the email address that will receive the customer's interest
-* **Notify Me** – requires the email address that will receive the customer's interest
-* **Request Demo** – requires the email address that will receive the customer's interest
+* **Contact Us**, **Notify Me**, and **Request Demo** – requires the email address that will receive the customer information
 * **Download** – no lead routing is established, but customers can directly download your product.
+
+In the **Provide one or more emails** field, you must specify the email address(es) where notifications and information can be sent.
 
 #### 4.2.4 Finishing Up
 

@@ -17,6 +17,10 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### June ????, 2022
+
+* We have introduced support for runtime application logs to be sent from Mendix Cloud V4 to [Splunk Cloud Platform](/developerportal/operate/splunk-metrics/).
+
 ### June 2nd, 2022
 
 #### Fix

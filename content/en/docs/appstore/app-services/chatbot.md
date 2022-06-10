@@ -379,7 +379,7 @@ If you deploy your app in your own environment, you need to configure the licens
 
 ### 4.1 Initializing Chatbot When App Starts
 
-It can be useful to run the Chatbot service automatically when your app starts. The app service contains a Java action – the **StartService** microflow, which can start the Chatbot service for you. You can use the [After startup](/refguide/project-settings//#after-startup) setting in your app to call the **StartService** microflow.
+It can be useful to run the Chatbot service automatically when your app starts. The app service contains a Java action – the **StartService** microflow, which can start the Chatbot service for you. You can use the [After startup](/refguide/project-settings/#after-startup) setting in your app to call the **StartService** microflow.
 
 1. In the **App Explorer**, click **Settings**. The [App Settings](/refguide/project-settings/) dialog box opens.
 2. Go to the **Runtime** tab. 

@@ -77,7 +77,13 @@ Below is the list of documents and elements that can be mark as **Usable**:
 * Image collections
 * Custom widgets
 
-## 3 Exporting Add-on Modules and Solutions
+## 3 Exporting Add-on Modules and Solutions {#export}
+
+{{% alert color="info" %}}
+
+Before exporting an add-on module or a solution to customers, note that the Dutch language translation is shipped with it by default. This may be important if your customers decide to translate their app to other languages. To avoid this, open the **Language** menu > **Language Operations** and select the **Delete** operation for the Dutch language. For more information on the **Language** menu, see [Language Menu](/refguide/translatable-texts/). For more information on how to perform a certain operation, see [Language Operations](/refguide/language-operations/). 
+
+{{% /alert %}}
 
 ### 3.1 Exporting Add-on Module Package
 

@@ -150,5 +150,4 @@ Mind the following characteristics when using cut/copy/paste:
 ## 9 Main Documents in This Category
 
 * [Studio Ranges & Mendix Versions](/studio/general-versions/) – explains how Studio version correlates to the Mendix version
-* [Translating Your App to Multiple Languages](/studio/language-support/) – describes how to translate you app to multiple languages
 

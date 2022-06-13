@@ -12,25 +12,23 @@ tags: ["studio", "language", "lingual", "app language", "translate"]
 
 Delivering your Mendix app in multiple languages is an important capability when you want to provide the same app to people speaking different languages. Using the language features of Mendix, you can quickly make your app multilingual and translate your page content to all configured languages. This means that texts that are presented to end-users, such as button captions, screen titles, menu items, can be translated to other languages than the default language.  
 
-{{% alert color="info" %}}
-
-Translating your app to other languages is available in Mendix Studio if multiple languages were set up in your app in Mendix Studio Pro. For more information on language settings, see [Language Menu](/refguide/translatable-texts/) in *Studio Pro 9 Guide*.  
-
-{{% /alert %}}
-
 ## 2 App Languages Screen
 
-You can see what the default language of your app is, what other languages your app currently has, and add or delete languages in the **App Languages** screen. You can also change the default language of the app.
+The **App Languages** screens shows the default language of your app and other languages that your app currently has. You can add or delete languages in and change the default language of the app.
 
-To access the screen, go to **Settings** >**App Languages**. 
+To access the screen, go to **Settings** > **App Languages**.  
 
-{{< figure src="/attachments/studio/general/language-support/app-languages-screen.png" >}}\
+{{< figure src="/attachments/studio/settings/settings-languages/app-languages-screen.png" >}}
 
-The *default language* is the main language of your app. Texts that are not translated to other languages will be displayed in the default language. For example, your default language is English. If you switch to the Dutch language, add a button to a page, and do not translate the button caption, the caption will automatically display the text it has in the English language when you run the app. 
+Alternatively, you can click the currently selected language in the top menu bar and choose **Manage Languages**. 
 
-To *change the default language*, simple click the drop-down menu and choose one of the available languages from the list.
+{{< figure src="/attachments/studio/settings/settings-languages/manage-languages.png" >}}
 
-To *add a new language* to your app, click the **Add Language** button, search for the language you would like to add and confirm your choose.
+The *default language* is the main language of your app. Texts that are not translated to other languages will be displayed in the default language. For example, your default language is English. If you switch to the Dutch language, add a button to a page, and do not translate the button caption, the caption will automatically display the text in the English language when you run the app. For more information, see the [Translating Your App to Multiple Languages](#translate) section below. 
+
+To *change the default language*, click the **Default Language** setting and select one of the available languages from the drop-down list.
+
+To *add a new language* to your app, click the **Add Language** button, search for the language you would like to add and confirm your choice.
 
 To *delete* a language, click the **More** icon next to the language and select **Delete**.
 
@@ -38,9 +36,9 @@ To *delete* a language, click the **More** icon next to the language and select 
 
 You can switch the selected language in the top menu bar:
 
-{{< figure src="/attachments/studio/general/language-support/selected-language.png" >}}
+{{< figure src="/attachments/studio/settings/settings-languages/selected-language.png" >}}
 
-## 4 Translating Texts
+## 4 Translating Your App to Multiple Languages {#translate}
 
 When multiple languages are set up in your app, one language is set as the default language. All untranslated texts in other languages will be displayed in the default language when you run the app. When you change the text in the default language, all untranslated texts will fall back to the new text. 
 
@@ -52,15 +50,15 @@ You can replace the text with the appropriate translation for the currently sele
 
 2. Depending on the element, find the **Content**, **Caption**, or **Template** property and click the **Translations** drop-down menu:
 
-   {{< figure src="/attachments/studio/general/language-support/translations-drop-down.png" >}}
+   {{< figure src="/attachments/studio/settings/settings-languages/translations-drop-down.png" >}}
 
 3. You will see a drop-down menu where you can scroll through languages available in your app and type in translations for the text. The order you see languages in depends on the currently selected language in the top menu bar and to the default language:
 
-   {{< figure src="/attachments/studio/general/language-support/language-diagram.png" >}}   
+   {{< figure src="/attachments/studio/settings/settings-languages/language-diagram.png" >}}   
 
 If you add new widgets to your app while you are not in the default language, any new translatable texts for those widgets will be added to the currently selected language. The text in the default language will either be left blank or will have the placeholder text for the widget:
 
-{{< figure src="/attachments/studio/general/language-support/current-language.png" >}}   
+{{< figure src="/attachments/studio/settings/settings-languages/current-language.png" >}}   
 
 {{% alert color="info" %}}
 

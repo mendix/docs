@@ -7,6 +7,12 @@ weight: 40
 tags: ["CI/CD", "Tekton", "Private Cloud", "Environment"]
 ---
 
+{{% alert color="info" %}}
+The Tekton pipelines for Mendix are available to all customers using licensed Operators in Mendix for Private Cloud.
+
+Please make a request through [Mendix support](https://support.mendix.com) and your Customer Success Manager (CSM) will get in contact to arrange for access to these pipelines.
+{{% /alert %}}
+
 ## 1 Introduction
 
 Mendix recommends using [Tekton](https://tekton.dev/) to create a CI/CD (Continuous Integration and Delivery/Deployment) solution for your Mendix for Private Cloud apps. This document explains how to install:
@@ -35,6 +41,7 @@ To follow these instructions you will need:
 * A [namespace added](/developerportal/deploy/private-cloud-cluster/#add-namespace) to the cluster
 * The [Mendix Operator installed](/developerportal/deploy/private-cloud-cluster/#install-operator) and configured in the cluster
 * The [Helm](https://helm.sh) package manager
+* The Mendix Tekton pipelines, obtainable through [Mendix support](https://support.mendix.com)
 * Access to the internet to copy images to your air-gapped registry, or to install images directly onto your cluster
 
 If you have any issues when following these instructions, see the [Troubleshooting](#troubleshooting) section to see if there is a solution.
@@ -103,7 +110,7 @@ When you have followed those instructions, you can continue with [Installing Tri
 
 ## 5 Tekton Installation for Connected Environments{#tekton-installation}
 
-If Tekton is already installed in your namespace, you can skip to [Pipelines Installation](#pipelines-installation).
+If Tekton is already installed in your namespace, you can skip to [Pipeline Installation for Connected Environments](#pipelines-installation).
 
 ### 5.1 Installing on Connected Kubernetes
 
@@ -124,7 +131,7 @@ To install Tekton and Tekton Triggers on OpenShift when your environment has acc
 Before you install the Mendix pipelines, which contain all Tekton-related objects, you need to do the following:
 
 1. Install [helm](https://helm.sh).
-2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines – you can download these from [Mendix for Private Cloud Standalone Tekton Pipelines](https://cdn.mendix.com/mendix-for-private-cloud/tekton-pipelines/standalone-cicd/standalone-cicd-v1.0.1.zip).
+2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines – you can get these by making a request through [Mendix support](https://support.mendix.com) for your CSM to get in contact so they can arrange for access to these pipelines.
 
 To install a pipeline you need to provide the url to your private images repository without a tag. For example: `my.private.registry.com/mxapp`. The images that the pipeline builds will be stored in this repository.  
 The namespace can be the same namespace where the  Mendix Operator runs, or you can create a new namespace.

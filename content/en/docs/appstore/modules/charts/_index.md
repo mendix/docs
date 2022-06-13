@@ -17,7 +17,7 @@ tags: ["marketplace", "marketplace component", "charts", "platform support", "ar
 
 #### Series
 
-We reworked **Data Source** property for most of the charts. Now it is easer to configure, control, and modify a chart series:
+We reworked the **Data Source** property for several charts. Now it is easer to configure, control, and modify a chart series:
 
 {{< figure src="/attachments/appstore/modules/charts/data-source-example.png" >}}
 
@@ -27,20 +27,18 @@ Now you do not need to put a chart into a wata view to feed data into a widget. 
 
 In this dialog box you will find next properties:
 
-* **Data set** — **Single** or **Multiple**. Single represents controls single set of date. This is good option to start as you can have multiple **Single** series. If you have more complex data model or you have Microflow which could be used as data source for your chart — you can use **Multiple** option. In this case you have to specify which attribute to use as **Series name**, otherwise widget will be unable to visualise your data correctly.
-* **Data source** — this property controls type and source of your data set. If you press **Edit** , you will be presented with Data source edit dialog box where you can chose from where data series should be retrieved.
-* **Series name** — this property available only when **Single** data set is used. It controls legend of a data series.
-* **Aggregation function** — this prop allow you configure aggregation function for Y attribute of data series.
+* **Data set**
+  *  **Single** — This represents controls for a single set of dates. This is good option to start, as you can have multiple **Single** series. 
+  *   **Multiple** — Useful if you have a more complex data model or you have a microflow which could be used as data source for your chart. In this case you have to specify which attribute to use as **Series name**, otherwise your widget will be unable to visualise your data correctly.
+* **Data source** — This property controls type and source of your data set. If you click **Edit** you will be presented with a **Data source edit** dialog box where you the data series retrieval location.
+* **Series name** — This property is available only when a **Single** data set is used. It controls the legend of a data series.
+* **Aggregation function** — This property allows you configure the aggregation function for a data series' Y attribute.
 
+Beside the **General** tab, you will find three more tabs in the **Edit Seris** dialog box:
 
-
-Beside **General** tab, you will find 3 more tabs in **Edit Seris** dialog box, which can be described as following:
-
-**Appearance** — on this tab you will find properties that allow you to modify styling for current data series. In most cases there will be color properties.
-
-**Events** — on this tab you will find possible event triggers.
-
-**Advanced** — this tab has only one field which will hold JSON object with advanced configuration for this data series.
+* **Appearance** — on this tab you will find properties that allow you to modify styling for current data series. In most cases there will be color properties.
+* **Events** — on this tab you will find possible event triggers.
+* **Advanced** — this tab has only one field which will hold JSON object with advanced configuration for this data series.
 
 
 

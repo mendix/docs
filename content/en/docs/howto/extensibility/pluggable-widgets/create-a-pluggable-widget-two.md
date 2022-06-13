@@ -11,7 +11,7 @@ tags: ["mobile", "javascript", "widget"]
 
 The new pluggable widget API makes building feature-complete widgets much easier. This how-to will go beyond [How to Build a Pluggable Web Widget: Part 1](/howto/extensibility/create-a-pluggable-widget-one/) and teach you how to add advanced features to your TextBox input widget.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Configure widget edit permissions
 * Add validation feedback

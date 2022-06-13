@@ -10,7 +10,7 @@ weight: 20
 
 This how-to builds on the information provided in [How to Share Data Between Apps](/data-hub/share-data/) and shows you how OData annotations give you the power to create, update, and delete data.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Expose updatable OData entities, attributes, and associations in Mendix Studio Pro
 * See which capabilities a particular entity, attribute, or association has in the Data Hub Catalog
@@ -22,8 +22,8 @@ Note the following terminology differences described in the table below:
 
 | Data Hub | Studio Pro |
 | -------- | ---------- |
-| Create   | Creatable  |
-| Read     | Insertable |
+| Create   | Insertable |
+| Read     | Readable   |
 | Update   | Updatable  |
 | Delete   | Deletable  |
 
@@ -68,3 +68,17 @@ To consume an OData entity, do the following:
  3. Drag the entity to the domain model.
 
 Now you have an external entity in your domain model. Depending on the capabilities, for example the **CRUD** capabilities, you can generally use external entities to model your app as you would normally do, although there are some limitations. For more information on limitations, see the [External Entities Limitations](/refguide/external-entities/#limitations) section in *External Entities*. 
+
+## 6 Validating Data and Error Handling {#data-validation}
+
+You can [set up data validation](/howto/data-models/setting-up-data-validation/) to check on inserted or updated data between your apps. An insert validation microflow in the domain model of the client application - the application consuming the service - can check on the data that is inserted or updated.
+
+How does the published service know that that an insert fails? In the publishing app, you can use a validation message action to report the error. The client app can include a custom error handler on the [Send External Object](/refguide/send-external-object/) activity to handle the error.
+
+The domain model for the publishing app's validation message would look like this:
+
+{{< figure src="/attachments/data-hub/write-data/validate-data-publishing-app.png" alt="publishing app validation" >}}
+
+In the client app, the error handler would look like this:
+
+{{< figure src="/attachments/data-hub/write-data/validate-data-client-app.png" alt="client app validation" >}}

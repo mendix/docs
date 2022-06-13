@@ -11,7 +11,7 @@ tags: ["Team Server", "network", "troubleshoot", "firewall"]
 
 The Mendix Modeler needs to connect to Team Server, which is where all your projects are stored.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 *   How to troubleshoot network issues when downloading projects from and uploading projects to Team Server
 *   Which permissions and settings are required to connect to Team Server

@@ -10,7 +10,7 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 
 Atlas UI and the Web Modeler bring a lot of features to the process of building an app. But what if you already have a Mendix app that looks great and runs smoothly? No problem! To get an existing Mendix app to work with Atlas UI and the Web Modeler, there are a couple of steps to follow. This how-to describes how to upgrade existing Mendix apps to Atlas UI.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Prepare your app for Atlas UI
 * Replace the UI Framework module

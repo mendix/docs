@@ -12,7 +12,7 @@ A test suite enables the user to execute test cases and test suites in a specifi
 
 This how-to uses the Company Expenses app as an example. You will create a test suite and add the test cases you created in [How to Create a Test Case](/addons/ats-addon/ht-two-create-a-test-case/). If you do not have them anymore, create two new test cases without any test steps to walk through this how-to.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create a test suite
 * Add test cases and test suites to a test suite

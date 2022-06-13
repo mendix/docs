@@ -70,8 +70,8 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | Multiple page parameters | GA: Jun 2022 |
 | Native mobile – simplified monitoring | GA: Jun 2022 |
 | Native mobile – file and image background sync | GA: Jun 2022 |
-| Data widgets – Tree Table | GA: Jun 2022 |
-| Data widgets – Spread Sheet Grid | GA: Jun 2022 |
+| Data widgets – Tree Table | GA: Sep 2022 |
+| Data widgets – Spread Sheet Grid | GA: Dec 2022 |
 
 ## 7 Page Bot & Machine Learning Toolkit
 
@@ -79,7 +79,7 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | --- | --- |
 | MxAssist Logic Bot improvements | Released for GA on [Oct 26th, 2021](/releasenotes/studio-pro/9.7/#mx-assist-logic-bot) |
 | MxAssist Performance Bot new best practices | Released for GA on  [Oct 26th, 2021](/releasenotes/studio-pro/9.7/), [Nov 30th, 2021](/releasenotes/studio-pro/9.8/), and [Dec 17th, 2021](/releasenotes/studio-pro/9.9/) |
-| MxAssist Page Bot | Private Beta: Apr 2022 |
+| MxAssist Page Bot | Currently in Private Beta<br/>GA: TBD |
 | Machine learning toolkit | Currently in Private Beta<br/>GA: TBD |
 
 ## 8 Studio Pro Experience

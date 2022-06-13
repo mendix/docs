@@ -10,7 +10,7 @@ tags: ["monitoring", "troubleshooting", "warning", "error", "warning message"]
 
 This how-to explains how to eliminate design time warnings. While these warnings will not cause the application to break, it is important to fix them to keep a clean app.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * View warning messages
 * Clear warning messages
@@ -179,4 +179,4 @@ Variable ‘Variable’ is never used.
 * [Debug Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/)
 * [Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely/)
 
-Several warnings relate to improper security. For more information on this, see [App Security](/refguide/project-security/) in the *Studio Pro Guide*.
+Several warnings relate to improper security. For more information on this, see [App Security](/refguide/app-security/) in the *Studio Pro Guide*.

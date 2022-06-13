@@ -5,6 +5,7 @@ notoc: true
 description: "The various sections of the reference guide provide details on the features and functionality of the Mendix Platform."
 weight: 80
 no_list: false
+description_list: true
 cascade:
     - space: "Mendix 7 Reference Guide"
     - mendix_version: "7"

@@ -25,7 +25,7 @@ For more details on Kubernetes, see the [Kubernetes Documentation](https://kuber
 
 All the configuration files used in this how-to are also available on GitHub.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Deploy and run a Mendix app on Kubernetes using Minikube
 * Separate the database deployment from your app

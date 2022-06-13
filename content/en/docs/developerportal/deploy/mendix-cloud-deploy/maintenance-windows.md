@@ -24,7 +24,11 @@ This window will only be used when planned maintenance is being scheduled.
 
 ### 1.2 Planned Maintenance
 
-**Planned Maintenance** is a maintenance operation that will be carried out within your configured maintenance window. This is shown in local time, together with an offset from UTC.
+**Planned Maintenance** is a maintenance operation that will be (or has been) carried out. This is shown in local time, together with an offset from UTC.
+
+Where possible, planned maintenance will be carried out within your preferred maintenance window.
+
+Where infrastructure maintenance is needed, it is not always possible to do this within your preferred maintenance window. Infrastructure maintenance uses rolling updates, so multi-instance apps will continue to be available. Only apps with a single instance will see any downtime (~1-2 minutes) during infrastructure maintenance, as the instance will be restarted.
 
 ## 2 Prerequisites
 

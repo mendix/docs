@@ -115,7 +115,7 @@ You can restructure the menu by dragging and dropping menu items.
 
 ## 7 Adding Navigation Menu to Pages
 
-Now that you have created a menu structure it is time to start using it on pages. Do the following:
+Now that you have created a menu structure, it is time to start using it on pages. Do the following:
 
 1. Open a page.
 

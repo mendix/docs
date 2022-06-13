@@ -10,7 +10,7 @@ tags: ["monitoring", "troubleshooting", "runtime error", "runtime", "error"]
 
 This how to will show you how to find the information necessary to locate the root cause of a runtime error. The message displayed in the application is often vague and non-descript. Depending on the environment in which the error occurred, there are two methods for finding this information.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Find the root cause of runtime errors via two methods
 

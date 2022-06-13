@@ -24,15 +24,8 @@ See [Databases and Apps](#databases), below, for an overview of this.
 
 For apps deployed to the Mendix Cloud, Mendix uses a PostgreSQL database for storing the data defined in the app domain model(s).
 
-If you are deploying to a different infrastructure, Mendix supports the following databases.
-
-* IBM DB2
-* HSQLDB
-* MySQL
-* Oracle RDBMS
-* PostgreSQL
-* SAP HANA
-* Microsoft SQL Server
+If you are deploying to a different infrastructure, you will need to provide your own database.
+See [System Requirements](/refguide/system-requirements/#databases) for the list of supported databases.
 
 ## 3 Databases and Apps{#databases}
 

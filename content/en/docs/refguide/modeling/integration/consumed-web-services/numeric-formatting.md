@@ -7,7 +7,7 @@ tags: ["studio pro"]
 
 ## 1 Behavior in Your Mendix Application
 
-A number will be translated into XML untouched, except that any trailing zeroes will be stripped and the representation will always be in non-scientific notation. The rounding mode used is configured in the [App Settings](/refguide/project-settings/).
+A number will be translated into XML untouched, except that any trailing zeroes will be stripped and the representation will always be in non-scientific notation. The rounding mode used is configured in the [App Settings](/refguide/app-settings/).
 
 ## 2 XML Schema Facets
 

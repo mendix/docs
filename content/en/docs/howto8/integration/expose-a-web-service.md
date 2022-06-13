@@ -11,7 +11,7 @@ tags: ["web service", "expose", "integration"]
 
 Mendix supports many ways to expose the functionality and data of your application to others. The easiest way is to use web services. A web service can contain multiple operations.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create a web service
 * Publish a microflow as web service operation

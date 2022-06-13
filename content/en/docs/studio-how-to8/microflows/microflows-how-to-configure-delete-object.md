@@ -12,7 +12,7 @@ tags: ["studio", "page editor", "delete object", "list view", "data view", "how 
 
 This how-to explains how you can configure a delete object action in Mendix Studio. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * configure the **Delete Object** action in a [list view](/studio8/page-editor-data-view-list-view/#list-view-properties)
 * configure the **Delete Object** action in a [data view](/studio8/page-editor-data-view-list-view/#data-view-properties)

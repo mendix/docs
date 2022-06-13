@@ -11,7 +11,7 @@ tags: ["SAP", "integration", "OData"]
 
 The OData Connector for SAP solutions is a specific SAP connector for integrating with SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, SAP S/4HANA Cloud, and SAP SuccessFactors.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Add the OData Connector for SAP solutions to your Mendix app
 * Configure the OData Connector for SAP solutions

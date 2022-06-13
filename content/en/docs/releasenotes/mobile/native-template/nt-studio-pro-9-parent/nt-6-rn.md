@@ -5,6 +5,45 @@ parent: "nt-studio-pro-9-parent"
 weight: 10
 description: "Native Template 6 release notes."
 ---
+## 6.2.22
+
+**Release date: June 2nd, 2022**
+
+### Fixes
+
+* We fixed an iOS build issue. (Tickets 150964, 150934)
+
+## 6.2.21
+
+**Release date: May 31st, 2022**
+
+### Fixes
+
+* We fixed an iOS build issue for projects using Crashlytics.
+
+## 6.2.20
+
+**Release date: May 30th, 2022**
+
+### Fixes
+
+* We fixed an issue with the logout action. (Ticket 147429)
+
+## 6.2.19
+
+**Release date: May 11th, 2022**
+
+### Fixes
+
+* We fixed an issue with CocoaPods on iOS, which would fail to build when the CocoaPods service was temporarily unavailable.
+
+## 6.2.18
+
+**Release date: May 10th, 2022**
+
+### Fixes
+
+* We fixed an issue with JCenter on Android which would fail to build. JCenter has become unstable and is no longer supported, therefore we now host Android dependencies ourselves. (Tickets 148798, 148819, 148830, 148840)
 
 ## 6.2.16
 

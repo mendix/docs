@@ -112,7 +112,7 @@ The top menu bar items are described in the table below:
 
 | Menu item | Description |
 |------|------|
-| **Switch-to** menu | The **Switch-to** menu allows you to switch to other parts of the Mendix platform. This menu contains the following options: <ul><li>**Mendix Home** – takes you to the [Developer Portal](/developerportal/)</li><li>**Studio** – opens **My Apps** screen in the Developer Portal</li><li>**Get Studio Pro** – downloads the latest version of Mendix Studio Pro</li><li>**Academy** – a link to the [Mendix Academy](https://gettingstarted.mendixcloud.com)</li><li>**Docs** – a link to the [Mendix Documentation](https://docs.mendix.com/)</li></ul> |
+| **Switch-to** menu | The **Switch-to** menu allows you to switch to other parts of the Mendix Platform. This menu contains the following options: <ul><li>**Mendix Home** – takes you to the [Developer Portal](/developerportal/)</li><li>**Studio** – opens **My Apps** screen in the Developer Portal</li><li>**Get Studio Pro** – downloads the latest version of Mendix Studio Pro</li><li>**Academy** – a link to the [Mendix Academy](https://academy.mendix.com)</li><li>**Docs** – a link to the [Mendix Documentation](https://docs.mendix.com/)</li></ul> |
 | Undo/Redo actions | There buttons undo or redo the last action. You can also use <kbd>Ctrl</kbd>+<kbd>Z</kbd> and <kbd>Ctrl</kbd>+<kbd>Y</kbd> shortcuts correspondingly. |
 | Recent documents drop-down menu | A document that you are currently viewing is displayed in this option. When you click the drop-down menu, documents that you have recently viewed are displayed in the list. Click the document to open it. |
 | [Language drop-down list](/studio/language-support/) | If you have several languages enabled in Studio Pro, you can see a language drop-down list with languages that you can translate your app to. |
@@ -124,13 +124,13 @@ The top menu bar items are described in the table below:
 
 ## 8 Cut/Copy/Paste Function 
 
-You can copy and paste pages and microflows. You can also cut, copy, and paste separate elements such as widgets or microflow activities. 
+You can copy and paste workflows, pages, microflows, and enumerations. You can also cut, copy, and paste separate elements such as widgets or microflow activities. 
 
 ### 8.1 Copy/Paste Workflows, Pages, Microflows, and Enumerations {#copy-paste-documents}
 
 Workflows, pages, microflows, and enumerations can be copied to clipboard and then pasted to a different Studio app. You can also copy and paste them to the same app, however, there is the **Duplicate** option you can use for this purpose. For more information on how to copy, paste, or duplicate workflows, pages, microflows, and enumerations, see [Workflows](/studio/workflows/), [Pages](/studio/page-editor/), [Microflows](/studio/microflows/), and [Enumerations](/studio/domain-models-enumeration/) respectively.  
 
-Mind the following when copying and pasting pages, microflows, and enumerations:
+Mind the following when copying and pasting workflows, pages, microflows, and enumerations:
 
 * You can copy/paste workflows, pages, microflows, and enumerations only to Studio apps that have the same Mendix version 
 * You can copy/paste workflows, pages, microflows, and enumerations only between instances of the same browser
@@ -150,4 +150,5 @@ Mind the following characteristics when using cut/copy/paste:
 ## 9 Main Documents in This Category
 
 * [Studio Ranges & Mendix Versions](/studio/general-versions/) – explains how Studio version correlates to the Mendix version
+* [Translating Your App to Multiple Languages](/studio/language-support/) – describes how to translate you app to multiple languages
 

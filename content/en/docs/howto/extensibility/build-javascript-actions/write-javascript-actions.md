@@ -11,7 +11,7 @@ tags: ["widget", "TexttoSpeech", "SpeechtoText", "JavaScript", "API", "JavaScrip
 
 Nanoflows are more powerful with pluggable nanoflow actions — called JavaScript actions. With JavaScript actions, the standard set of actions can be extended with new functionality. A JavaScript action is a reusable action based on JavaScript that runs in the client just like the nanoflow, and can use capabilities such as HTML5 browser functions, Cordova plugins, and React Native modules. JavaScript actions are similar to [Java actions](/refguide/java-actions/), but run on the client instead of the server. To share them inside your organization, JavaScript actions can be distributed and downloaded through the private [Mendix Marketplace](https://marketplace.mendix.com/).
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create a JavaScript action
 * Configure input and output parameters

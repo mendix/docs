@@ -1,5 +1,5 @@
 ---
-title: "Upgrade to a Native Mobile App"
+title: "Add a Native Mobile App"
 url: /refguide/quickstart-part2/
 parent: "_index"
 weight: 20
@@ -9,7 +9,7 @@ tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
 
 ## 1 Introduction 
 
-This document is Part 2 of the [Quickstart for Building an App](/refguide/quickstart-guide/). Here you will be adding on to the app created in [Part 1: Design in a Responsive Web Profile](/refguide/quickstart-part1/). If you decided to skip Part 1, you can [download a copy of its completed app package](https://quickstartguidev1.s3.eu-west-2.amazonaws.com/Quickstart_App.mpk) in order to start this document right away.
+This document is Part 2 of the [Quickstart](/refguide/quickstart-guide/) guide for building an app. Here you will be adding on to the app created in [Part 1: Build a Responsive Web App](/refguide/quickstart-part1/). If you decided to skip Part 1, you can [download a copy of its completed app package](https://quickstartguidev1.s3.eu-west-2.amazonaws.com/Quickstart_App.mpk) in order to start this document right away.
 
 In this document you will learn to use a native mobile navigation profile. You will create a small native mobile app to take pictures and upload them to the same database so they can be viewed in a browser or in a native app on your mobile device. You will also use the Make it Native app to test your app on a mobile device.
 
@@ -19,11 +19,11 @@ Mendix native mobile apps are native mobile apps based on React Native. These ap
 
 Before starting this guide, make sure you have completed the following prerequisite:
 
-* Read through [Part 1: Design in a Responsive Web Profile](/refguide/quickstart-part1/)
+* Read through [Part 1: Build a Responsive Web App](/refguide/quickstart-part1/)
 * Download the [Make It Native 9](/refguide/getting-the-make-it-native-app/) app on your mobile device
 * If you are working on a Mac, please complete [How To Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
-### 2.1 What is the Make It Native 9 App?
+### 2.1 Downloading the Make It Native 9 App
 
 The [Make it Native 9](/refguide/getting-the-make-it-native-app/) mobile app is available for Android and iOS devices. Once installed, the app lets you quickly test your native mobile app as you develop it. 
 
@@ -169,10 +169,13 @@ After taking a photo with your native mobile app and tapping the **Save** button
 
 {{< figure src="/attachments/refguide/quickstart-guide/part2/responsive-app.png" width="450px" alt="Browser view">}}
 
-Congratulations on successfully completing the quickstart guide for building an app! You are definitely on your way to succeed with the Mendix platform.
+Congratulations on successfully completing Part 2 of the quickstart guide! You are definitely on your way to succeed with the Mendix Platform.
 
 For more information on building and deploying apps with Mendix, see [Build Native Apps](/howto/mobile/build-native-apps/). Put simply, Mendix lets you [build an app for distribution](/howto/mobile/deploying-native-app/) and get it running on a native device. After you develop further, you can [debug native app issues](/howto/mobile/native-debug/) to improve your users' experience. Then, you can add [custom fonts](/howto/mobile/native-custom-fonts/) to make your app feel more like your brand. And if you ever need help, we have [troubleshooting help](/howto/mobile/common-issues/) for you just in case.
 
 ## 5 Read More
 
-To continue learning, go to [Mendix Academy](https://academy.mendix.com/) and choose a learning path that interests you (we recommend the [Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) for new users who are also experienced developers) or go the [Mendix Documentation](https://docs.mendix.com/) home page to learn more about the Mendix topics which interest you most.
+* [Mendix Academy](https://academy.mendix.com/) – complete learning paths to build general Mendix skills
+    * [Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) – the course we recommend for new users who are also experienced developers
+* [Mendix Documentation](https://docs.mendix.com/) – learn about the parts of Mendix which interest you most
+* [General Info](/refguide/general/) – learn more about the fundamentals of Studio Pro

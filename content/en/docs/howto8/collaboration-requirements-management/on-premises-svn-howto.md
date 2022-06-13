@@ -16,7 +16,7 @@ While this is the recommended way of working for almost all Mendix developers, y
 You will not be able to use Mendix Studio for collaborative development if you use an on-premises version control server. Collaborative development between Studio and Studio Pro will only work if you use the Mendix Team Server.
 {{% /alert %}}
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Configure your Mendix apps to work with your own (on-premises) version control system
 

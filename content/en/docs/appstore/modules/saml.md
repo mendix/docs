@@ -26,7 +26,6 @@ The SAML SSO module supports the following [SAML 2.0](https://docs.oasis-open.or
 * Web browser SSO profile using one of the following bindings
     * HTTP redirect, 
     * HTTP POST bindings
-    * HTTP artifact
 * Single Logout profile
 
 The Mendix SAML SSO supports usage of SAML metadata in the following way:
@@ -52,10 +51,13 @@ Configurability:
 
 ### 1.3 Limitations
 
-* SAML1.0 is not supported.
-* The Mendix SAML SSO module does not support Enhanced Client/Proxy SSO profile.
+The Mendix SAML SSO module does not support the following:
 
-### 1.4 Dependencies
+* SAML1.0
+* Enhanced Client/Proxy SSO profile
+* HTTP artifact binding
+
+### 1.4 Dependencies{#dependencies}
 
 {{% alert color="warning" %}}
 If you are running your app outside of the Mendix Cloud, make sure you have [external file storage](/refguide/system-requirements/#file-storage) configured. The SAML module writes configuration data to a file document on the file storage to read it later. Without external file storage, this configuration will be lost when you restart your app. The SAML module will not work correctly without reading the configuration data from the file storage.
@@ -78,6 +80,12 @@ There are different versions of the module, depending on which version of Mendix
 	* **DefaultLoginPage** – You can specify a different login page here for when the login process fails. When the end-user cannot be authenticated in the external Identity Provider, a button will appear, and by clicking this button, they will be redirected to the specified login page. If this is left blank, an unauthenticated user will be redirected to `/login.html`.
 	* **DefaultLogoutPage** – Removing the sign-out button is recommended, but if you choose to keep it, the end-user will be redirected to a page. You can choose where the end-user is redirected to (for example, back to `/SSO/` or your `login.html` page). Every user signed in via SAML is redirected to this location when they are logged out.
 	* **SSOLandingPage** – Set this if you redirect the `index.html` to log into your app automatically. See [Using SSOLandingPage](#ssolandingpage) for further information about this.
+	* **HybridAppLoginTimeOutInMinutes** – If you are using a [hybrid mobile](/refguide/hybrid-mobile/) app and have the **com.mendix.webui.HybridAppLoginTimeOut** [custom runtime setting](/refguide/custom-settings/#web-client-settings) configured to customize the expiration of mobile authentication tokens, you will have to set the value of the **HybridAppLoginTimeOutInMinutes** constant to match the value of the custom runtime setting. When you use the SAML module for SSO in your Mendix app, the authentication token is not created by the Mendix runtime, which uses the custom runtime setting. Instead, the authentication token is created by the Java code in the SAML module. This Java code does not have access to the custom runtime setting value, and thus requires the constant value to be set. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires mobile authentication tokens to be enabled in your [IdP Configuration](#additional-functionality) as well as changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix & SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
+		* If you use the default login handler in your hybrid app, you must change the **com.mendix.webui.HybridAppLoginTimeOut** custom runtime setting to change the validity of the authentication token used by the hybrid mobile app.
+		* If you use the SAML module in your hybrid app, you must change the **SAML20.HybridAppLoginTimeOutInMinutes** constant to change the validity of the authentication token used by the hybrid mobile app.
+		* If you use both the default login handler and the SAML module in your hybrid app, you must change both.
+
+        {{% alert color="warning" %}}Hybrid mobile apps are deprecated in Mendix version 9{{% /alert %}}
 4. Sign in to the application and configure the SAML module.
 
 ### 2.1 Using SSOLandingPage{#ssolandingpage}
@@ -135,7 +143,7 @@ Each IdP (entity descriptor) should have its own configuration set. Every IdP ca
 #### 3.2.1 Creating a New IdP Configuration
 
 {{% alert color="warning" %}}
-If you have multiple IdPs, please make sure each IdP has a unique **Entity descriptor**. If you add multiple IdPs with the same entity descriptor, you might experience unexepected behavior where a different SSO configuration is selected than the alias provided.
+If you have multiple IdPs, please make sure each IdP has a unique **Entity descriptor**. If you add multiple IdPs with the same entity descriptor, you might experience unexpected behavior where a different SSO configuration is selected than the alias provided.
 {{% /alert %}}
 
 When creating a new IdP configuration, you are guided through a workflow to help you configure everything required for the IdP configuration. Each option in the workflow is explained below, and can be changed by editing an existing IdP Configuration.
@@ -171,7 +179,7 @@ If you want to automatically synchronize the IdP metadata, make sure the **SE_Sy
 	* **Claim**
 	* **Mx User attribute**
 
-##### 3.2.3.1 Additional Functionality
+##### 3.2.3.1 Additional Functionality{#additional-functionality}
 
 {{% alert color="info" %}}
 These settings are only available in the following versions of the module (depending on which Mendix version you are using)
@@ -274,6 +282,8 @@ After a new session is created for the user, this microflow can be called to cop
 ## 8 Custom Settings
 
 The resources folder contains the *SAMLConfig.properties* file, and through this file, advanced settings can be configured for the module. This file contains the settings along with documentation on the settings. Through this file, it is possible to alter the URLs used as well as how the application behaves in a multi-tenant environment. The file also specifies all the default values and behavior in more detail.
+
+If you are using a custom URL, see [How Do I Get my SAML Metadata or CommunityCommons.GetApplicationUrl to Use the Custom URL?](/developerportal/deploy/custom-domains/#use-custom-url) in the *Custom Domains* documentation.
 
 ## 9 Read More
 

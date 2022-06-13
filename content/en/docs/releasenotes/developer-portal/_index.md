@@ -17,6 +17,27 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### June 9th, 2022
+
+#### New Features
+
+* The free Mendix Cloud environment of an app can now be deleted from the [app details](/developerportal/control-center/#app-details) page in Control Center.
+
+#### Improvements
+
+* The free and licensed Mendix Cloud environments of an app are now visualized on the [app details](/developerportal/control-center/#app-details) page in Control Center.
+* From now on, the free Mendix Cloud environment of an app will be deleted whenever the app is deactivated or deleted.
+
+### May 19th, 2022
+
+#### Fixes
+
+* We fixed an issue where replies on [Feedback](/developerportal/collaborate/feedback/) emails were not correctly processed into comments.
+
+#### Improvements
+
+* We added a download button for Feedback images, so that you can see them in full size more easily.
+
 ### May 5th, 2022 {#may-fifth}
 
 #### Fixes

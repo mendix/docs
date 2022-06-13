@@ -16,7 +16,7 @@ The how-to applies to all widgets like the button widget. If ATS needs to click 
 
 Sections [6 Adding Logic to Make Your Action "Smarter"](#AddingLogic) and [7 Final Check](#FinalCheck) apply "logic" to an action that is of the check box type. If a widget is of the check box type, you can follow these steps to apply logic. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Approach a widget that ATS must click.
 * Create the custom action to click the widget.

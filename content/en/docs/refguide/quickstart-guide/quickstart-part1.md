@@ -1,5 +1,5 @@
 ---
-title: "Design in a Responsive Web Profile"
+title: "Build a Responsive Web App"
 url: /refguide/quickstart-part1/
 parent: "_index"
 weight: 10
@@ -9,19 +9,27 @@ tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
 
 ## 1 Introduction 
 
-Get up and running with the Mendix Platform and start developing your first app after you create your [free account](https://signup.mendix.com/link/signup/?source=direct)⁠—which takes only two minutes to finish. Then [download](https://marketplace.mendix.com/index3.html) and [install](/howto/general/install/) Mendix Studio Pro. 
+Get up and running with the Mendix Platform and start developing your first app in Mendix Studio Pro. This is Part 1 of the quickstart, where you will learn the basics of Studio Pro, handle data using the Domain Model, populate your app's pages with dynamic data, and create custom app logic using a microflow.
 
-If you are working on a Mac, please complete [How To Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac.
+When you complete Part 1, you will have an app that can capture and save images using dynamic data.
+
+[Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. This tutorial will use Studio Pro version 9.12.1, but you can use a later version if you wish.
 
 Every app created with us automatically provisions a [Free Cloud Environment](/developerportal/deploy/mendix-cloud-deploy/#free-app) the first time it is deployed, so you do not have to waste time provisioning a testing environment.
 
 You will not need any additional software configured on your device in order to start.
 
-### 1.1 What is Mendix Studio Pro?
+## 2 Prerequisites 
 
-[Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. This tutorial will use Studio Pro version 9.12.1, but you can use a later version if you wish.
+Before starting this guide, make sure you have completed the following prerequisites:
 
-## 2 Create an Image Gallery in the Responsive Navigation Profile
+* Create your [free account](https://signup.mendix.com/link/signup/?source=direct)⁠—which takes only two minutes to finish
+* [Download](https://marketplace.mendix.com/index3.html) and [install](/howto/general/install/) Mendix Studio Pro
+* If you are working on a Mac, please complete [How To Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
+
+## 2 Choosing an App Template with a Responsive Navigation Profile
+
+Here you will choose an app starting point. It is key that you choose a starting point with a configured responsive web navigation profile, as the app you will make in this guide needs to work for web browsers:
 
 1.  Starting from Studio Pro, click **Create New App**:
 
@@ -35,7 +43,7 @@ You will not need any additional software configured on your device in order to 
 
     {{< figure src="/attachments/refguide/quickstart-guide/part1/home-web.png" width="450px" alt="Home Web page">}}
 
-## 3 Explore Studio Pro
+## 3 Exploring Studio Pro
 
 Now that you have completed your first tasks in Studio Pro, this section will give you a quick and optional tour. If you know Studio Pro well already, you can skip this section.
 
@@ -53,7 +61,7 @@ At the bottom of Studio Pro you will find several panels:
 
 On the right side of Studio Pro you will find more panels:
 
-* **Datahub**: displays remote entities (entities from other apps) which are available for use in your app
+* **Data Hub**: displays [External Entities](/refguide/external-entities/) (entities from other apps) which are available for use in your app
 * **Properties**: displays all the properties of the currently selected context element
 * **Toolbox**: a list of things you can add to the current document⁠—the **Toolbox** changes depending on context (it displays page elements while in the page editor or displays actions when editing a microflow or nanoflow)
 * **Connector**: quickly links data to pages⁠—using the connector you could drag an entity onto a data view or data grid to quickly display your app’s data on a page
@@ -217,8 +225,13 @@ You have finished your responsive app! You can run your app and test it by press
 Launching your app compiles your app locally on your development machine, your local host. Publishing your app will push your app to a cloud environment or web container connected to your app. If none exists, an environment will be initialized for your app on the Mendix Cloud v4 Free Tier.
 {{% /alert %}}
 
-Congratulations! You successfully completed Part 1, you have your first Mendix App to prove it, and it works on almost any device. Well done! 
+Congratulations! You successfully completed Part 1 of the quickstart guide. You have your first Mendix app to prove it, and it works on almost any device. Well done! 
 
-To continue learning, see Part 2: [Upgrade to a Native Mobile App](/refguide/quickstart-part2/).
+To continue learning, see Part 2: [Add a Native Mobile App](/refguide/quickstart-part2/).
 
-You can also go to [Mendix Academy](https://academy.mendix.com/) or [Mendix Documentation](https://docs.mendix.com/) to learn more about the Mendix topics which interest you most.
+## 7 Read More
+
+* [Mendix Academy](https://academy.mendix.com/) – complete learning paths to build general Mendix skills
+    * [Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) – the course we recommend for new users who are also experienced developers
+* [Mendix Documentation](https://docs.mendix.com/) – learn about the parts of Mendix which interest you most
+* [General Info](/refguide/general/) – learn more about the fundamentals of Studio Pro

@@ -12,7 +12,7 @@ This how-to explains how to create a Search Context action. That returns an item
 
 This how-to applies to all situations in which you must find an item/row using a unique text value inside. If you need to get an item/row by its child element, you can follow this how-to. Keep in mind that it might need some adjustments according to the widget!
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Approach a situation where there are multiple widgets with the same `mx-name`
 * Create the custom action needed to return an item/row that is used to find the right widget

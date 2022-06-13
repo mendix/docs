@@ -122,7 +122,7 @@ The Android Debug Bridge (ADB) can get the log files via command line (specifica
 1. Open *output.txt* in a text editor.
 1. Search for your issue.
 
-For more detailed steps how to set up ADB, see [Install ADB](https://www.xda-developers.com/install-adb-windows-macos-linux/). To learn more about ADB in general, see [Command ADB](https://developer.android.com/studio8/command-line/adb).
+For more detailed steps how to set up ADB, see [Install ADB](https://www.xda-developers.com/install-adb-windows-macos-linux/). To learn more about ADB in general, see [Command ADB](https://developer.android.com/studio/command-line/adb).
 
 ## 5 Read More
 

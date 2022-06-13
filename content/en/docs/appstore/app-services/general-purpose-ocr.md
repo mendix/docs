@@ -41,23 +41,21 @@ Below is the document model used for the extracted data:
 
 {{< figure src="/attachments/appstore/app-services/general-purpose-ocr/domain-model.png" >}}
 
-The **ExtractionResponse** entity will be created automatically for storing the response from the backend API call. The **ExtractionResponse** entity contains the **Status** attribute, and is associated with the **Output** entity.
-
-The **ExtractionResponse** entity contains the Response Status; the Status can be  IN_PROGRESS, COMPLETED, or FAILED. 
+The **ExtractionResponse** entity will be created automatically for storing the response from the backend API call. The **ExtractionResponse** entity contains the **Status** attribute, which is the response status of the extraction response. The value of the Status can be  **IN_PROGRESS**, **COMPLETED**, or **FAILED**. The **ExtractionResponse** entity is associated with the **Output** entity.
 
 The **Output** entity is further divided into two domains **Aborted** and **Extracted**.
 
-The documents which are not successfully extracted in the backend API call due to errors or exceptions will be stored inside the **AbortedDocument** entity. The **AbortedDocument** entity stores the **DocumentId** attribute and the **Name** attribute of the corresponding aborted documents.
+The documents which are not successfully extracted in the backend API call due to errors or exceptions are stored inside the **AbortedDocument** entity. The **AbortedDocument** entity stores the **DocumentId** attribute and the **Name** attribute of the corresponding aborted documents.
 
-The documents which are successfully extracted in the backend API call will be stored inside the **ExtractedDocument** entity. The **ExtractedDocument** entity contains the **DocumentID** attribute and the **Name** attribute of the corresponding documents, and is associated with the **Content** entity.
+The documents which are successfully extracted in the backend API call are stored inside the **ExtractedDocument** entity. The **ExtractedDocument** entity contains the **DocumentID** attribute and the **Name** attribute of the corresponding documents, and is associated with the **Content** entity.
 
-The **Content** entity is basically in XML format. 
+The **Content** entity is basically in the XML format. 
 
-Firstly, the document is divided into multiple pages, so there is a **Page** entity. Each page can contain multiple blocks, so there is a **Block** entity, which contains the **BlockType** attribute. The **BlockType** attribute can have three values: **Text**, **Table**, and **Barcode**. The document is further divided based on the value of **BlockType**.
+The document is divided into multiple pages, so there is a **Page** entity. Each page can contain multiple blocks, so there is a **Block** entity, which contains the **BlockType** attribute. The **BlockType** attribute can be one of these three values: **Text**, **Table**, and **Barcode**. The document is further divided based on the value of **BlockType**.
 
-If the block is text or a barcode, it goes to the **Text** entity, and then go to the **Paragraph** entity A paragraph can have multiple lines, so the **Paragraph** entity has the **LineContent** attribute.
+If the block is text or a barcode, it goes to the **Text** entity, and then go to the **Paragraph** entity. A paragraph can have multiple lines, so the **Paragraph** entity has the **LineContent** attribute.
 
-If the block type is a table, then the table will be divided multiple rows, so it goes to the **Row** entity. Each row can have multiple cells and text, so there is a **CellText** entity. Each cell will contain multiple paragraphs, so there is **CellParagraph** entity. A paragraph can have multiple lines, so **CellParagraph** entity has the **LineContent** attribute. This **Linecontent** attribute will contain the actual data.
+If the block type is a table, as a table can be divided multiple rows, it goes to the **Row** entity. Each row can have multiple cells and text, so there is a **CellText** entity. Each cell can contain multiple paragraphs, so there is **CellParagraph** entity. A paragraph can have multiple lines, so **CellParagraph** entity has the **LineContent** attribute. This **Linecontent** attribute contains the actual data.
 
 ## 2 Installation
 
@@ -109,16 +107,14 @@ To use the General Purpose OCR, first create an [import mapping](/refguide/impor
 
 ### 4.1 Extracting the Data {#extraction-activity}
 
-The General Purpose OCR contains two separate activities. You can choose to use one of these activities based on your needs:
-
-* The **General Purpose OCR** activity has synchronous behaviour, which will directly get the extraction result in the response.
-* The **General Purpose OCR  In Background** activity has an asynchronous behaviour, which provides a microflow that further takes the response of the data-extraction results in the parameter and will use the results further.
-
 To extract the data, perform the following steps:
 
-1.  In the **Toolbox**, drag the **General Purpose OCR** activity or the **General Purpose OCR in Background** activity from the **Document Data Capture Service** category into your microflow.
+1. In the **Toolbox**, drag the **General Purpose OCR** activity or the **General Purpose OCR in Background** activity from the **Document Data Capture Service** category into your microflow. You can decide which activity to use based on your needs:
 
-    {{% todo %}}Add the screenshot of the microflow{{% /todo %}}
+   * The **General Purpose OCR** activity has synchronous behaviour, which will directly get the extraction result in the response
+   * The **General Purpose OCR  In Background** activity has an asynchronous behaviour, which provides a microflow that further takes the response of the data-extraction results in the parameter and will use the results further
+
+   {{% todo %}}Add the screenshot of the microflow{{% /todo %}}
 
 2. Create a list of documents that inherits from `System.FileDocument`. Documents from which data are extracted should be passed as a list, as shown in the microflow above.
 
@@ -139,7 +135,7 @@ To configure the activity, perform the following steps:
 1. For **Document List**, click **Edit** to select the **Document List** which inherits from `System.FileDocument`. 
 
 2. For **Use return value**, if you want to use the response results, select **Yes**; otherwise, select **No**. This 
-   **Note:** Boolean value true/false, to indicated that we have accepted/declined the request for data extraction. 
+   **Note:** Boolean value true/false, to indicated that we have accepted/declined the request for data extraction. {{% todo %}}What does this mean?{{% /todo %}}
 
 3.  For **Object name**, enter the response object of the **ExtractionResponse** entity. Check the **Status** attribute of this entity and based on that need to retrieve extraction result from associated entities. Possible values for status are as follows:
    
@@ -161,12 +157,10 @@ To configure the activity, perform the following steps:
 
    {{% alert type="info" %}}This microflow will be called internally from the java action once the extraction result is received from backend, and this extraction result will be passed as a parameter to this selected microflow.{{% /alert %}}
 
-3. For **Microflow Input Parameter**, click **Edit** and enter a string as the name of the input parameter for the microflow.
-
-   {{% alert type="info" %}} This should be name of the parameter of object type "GPO.ExtractionResponse" present in "Extraction Result Microflow".{{% /alert %}}{{% todo %}}What does this mean?{{% /todo %}}
+3. For **Microflow Input Parameter**, click **Edit** and enter a string as the name of the input parameter for the microflow. This should be name of the parameter of the object of **GPO.ExtractionResponse** used in the microflow that you set for the **Extraction Result Microflow** field.
 
 4. For **Use return value**, if you want to use the response results, select **Yes**; otherwise, select **No**. This 
-   **Note:** Boolean value true/false, to indicated that we have accepted/declined the request for data extraction. 
+   **Note:** Boolean value true/false, to indicated that we have accepted/declined the request for data extraction.  {{% todo %}}What does this mean?{{% /todo %}}
 
 5. For **Variable name**, the user can type the response object name as **ReturnValueName**.
 

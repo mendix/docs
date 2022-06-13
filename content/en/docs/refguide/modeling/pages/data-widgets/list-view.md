@@ -15,6 +15,10 @@ A list view shows a list of objects. For example, you can display a list of all 
 
 Each object is shown using a template. This template is defined by placing widgets inside the list view's drop-zone. The list of objects shown is determined by a [data source](#data-source).
 
+{{% alert color="warning" %}}On native mobile the list view provides its own scrolling behavior. Consequently, you cannot place a list view inside a scroll view on native mobile. Furthermore, you cannot place input widgets below a list view on native mobile.
+
+If this is undesirable, use the Repeater widget from [Native Mobile Resources](/appstore/modules/native-mobile-resources/) instead.{{% /alert %}}
+
 ## 2 Properties
 
 An example of list view properties is represented in the image below:

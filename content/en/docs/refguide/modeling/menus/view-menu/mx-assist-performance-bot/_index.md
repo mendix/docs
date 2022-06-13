@@ -39,11 +39,11 @@ At the top of the **MxAssist Performance Bot** pane you can see the following op
 
     * The **App Model** tab lists all relevant documents in your app. You can choose which specific modules or documents to inspect or leave out. 
 
-        {{< figure src="/attachments/refguide/modeling/menus/view-menu/mx-assist-performance-bot/app-model.jpg" alt="App Model" >}}
+        {{< figure src="/attachments/refguide/modeling/menus/view-menu/mx-assist-performance-bot/app-model.png" alt="App Model" >}}
 
     * The **Best Practice** tab lists the available best practice. You can choose your preferred best practices and inspect your model against it: 
 
-        {{< figure src="/attachments/refguide/modeling/menus/view-menu/mx-assist-performance-bot/best-practice.jpg" alt="Best Practice" >}}
+        {{< figure src="/attachments/refguide/modeling/menus/view-menu/mx-assist-performance-bot/best-practice.png" alt="Best Practice" >}}
 
 You can use both app model and best practice configuration together. 
 

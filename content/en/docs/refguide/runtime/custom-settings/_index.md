@@ -234,7 +234,7 @@ Unlike other storage services, IBM Cloud does not provide server-side encryption
 | **com.<wbr>mendix.<wbr>storage.<wbr>swift.<wbr>credentials.<wbr>Password** | Password |   |
 | **com.<wbr>mendix.<wbr>storage.<wbr>swift.<wbr>credentials.<wbr>Region** | Region |   |
 
-## 9 Web Client Settings
+## 9 Web Client Settings{#web-client-settings}
 
 The settings below influence the behavior of the Mendix web client.
 

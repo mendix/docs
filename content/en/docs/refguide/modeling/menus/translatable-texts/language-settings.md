@@ -34,9 +34,7 @@ You can add as many languages as you like from the list of supported languages b
 
 {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/add-language.png" >}}
 
-Most languages will be added with an empty dictionary, although some translations have already been set up in the Dutch dictionary. You may want to delete all Dutch translations in case you do not plan to translate your app to Dutch or to avoid confusion on what texts still need a translation. For more information on how to delete translations, see the [Delete](/refguide/language-operations/#delete) section in *Language Operations*.  
-
-If you plan to export your module/app as an add-on/solution, it is also not the best practice to leave Dutch translations. For more information, see the [Exporting Add-on Modules and Solutions](/refguide/configure-add-on-and-solution-modules/#export) section in *Configuring Add-on and Solution Modules for Publishing*.  
+Most languages will be added with an empty dictionary, although some translations have already been set up in the Dutch dictionary. 
 
 ## 4 Advanced Language Settings{#advanced}
 

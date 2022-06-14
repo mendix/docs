@@ -25,9 +25,11 @@ If you want to copy data to another app, we recommend using the [Database Replic
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-If the database in your plan is not large enough to contain all the restored data, the restore operation will fail. This will leave the database only partially restored. You will need to upgrade your plan to increase the database size or restore a smaller database to ensure that the database is complete. 
+If the database in your plan is not large enough to contain all the restored data, the restore operation will fail. This will leave the database only partially restored. You will need to upgrade your plan to increase the database size or restore a smaller database to ensure that the database is complete.
 
 Your database must be large enough to hold the decompressed size of the database as stored in the [db folder](#db-folder) of your backup file, plus an overhead of 2.25GB used during the restoration process.
+
+Please contact [Mendix Support](https://support.mendix.com/) if you need further assistance with this issue.
 {{% /alert %}}
 
 ## 2 Restoring a Backup for the Same Licensed Cloud Node{#restore-cloud-backup}

@@ -92,22 +92,32 @@ The **Default App Roles** tab shows the default [team roles](/developerportal/co
 
 ## 4 Members {#members}
 
-Members are users who can view and/or edit an app. On the **Active Members** tab, you can see the active members of your company who can access certain apps: 
+Members are users who can view and/or edit an app.
 
-{{< figure src="/attachments/developerportal/control-center/members.jpg" >}}
+### 4.1 Active Members Tab and Deactivated Members Tab
 
-When you click a company member's name, a pop-up window opens with their member profile. The profile displays the **Apps** of which they are a member as well as their **App role** for each app. Click an app name to go to the [details page](#app-details) of this app.
+On the **Active Members** tab and the **Deactivated Members** tab, you can see an overview of the active and deactivated members of your company.
 
-On the **Deactivated Members** tab, you can see former members of your company who have been deactivated.
+When you click a member's name, a pop-up window opens with their member profile. The profile displays the apps of which they are a member as well as their **App role** for each app. Click an app name to go to the [details page](#app-details) of this app.
 
-On the **External Members** tab, you can see the members outside of your company who have access to at least one of your company apps.
+When you select members in the lists on these tabs, a context menu appears with options for exporting member details to an *.xlsx* file and deactivating (on the **Active Members** tab) or activating (on the **Deactivated Members** tab) members.
 
-When you select members in the lists on these tabs, a context menu appears with options for exporting member details to an *.xlsx* file and deactivating/activating members.
-
-For security reasons, deactivating an employee that is leaving your company is recommended (if the employee returns to your company, they can be activated as a member again).
+For security reasons, we recommend that you deactivate an employee that is leaving your company (if the employee returns to your company, they can be activated as a member again).
 
 {{% alert color="info" %}}
 You cannot deactivate yourself.
+{{% /alert %}}
+
+### 4.2 External Members Tab
+
+On the **External Members** tab, you can see the members outside of your company who have access to at least one of your company apps.
+
+When you click a member's name, a pop-up window opens with their member profile. The profile displays the apps of which they are a member as well as their **App role** for each app. Click an app name to go to the [details page](#app-details) of this app.
+
+When you select members in the lists, a context menu appears with options for exporting member details to an *.xlsx* file.
+
+{{% alert color="info" %}}
+You cannot activate/deactivate external members, because they belong to a different company than you.
 {{% /alert %}}
 
 ## 5 Groups {#groups}

@@ -1,5 +1,5 @@
 h1.page-title{
-	font-weight: 700;
+	font-weight: $font-weight-normal; // NK - adjusted for use with multiple Noto Sans weights
 	font-size: 2.5rem;
 	margin-left: 0.75rem;
     color: $secondary;
@@ -118,8 +118,8 @@ div.inner-row{
 	margin: 0rem 1rem 0rem 0rem;
 }
 h3.title-row{
-	font-weight: 700;
-	margin: 0rem 0rem 1rem 1.75rem;
+	font-weight: $font-weight-medium;
+	margin: 0.5rem 0rem 1rem 1.75rem;
 }
 p.landing-page-note{
 	margin: 1rem 0rem 1rem 1.75rem;
@@ -143,12 +143,14 @@ img.nav-icon{
 }
 h4.card-title{
 	color: $gray-900;
-	font-weight: 600;
+	font-weight: $font-weight-medium; // NK - adjusted weight
 	margin: 0.5rem 0;
+	font-size: $h3-font-size; // NK - adjusted size
 }
 h4.card-title-w-50{
 	color: $gray-900;
-	font-weight: 600;
+	font-weight: $font-weight-medium; // NK - adjusted weight
+	font-size: $h3-font-size; // NK - adjusted size
 	margin: 0.5rem 0rem 0.5rem 1rem; // NK - bring title closer to icon
 
 		&:hover {

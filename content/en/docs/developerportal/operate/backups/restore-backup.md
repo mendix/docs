@@ -24,6 +24,12 @@ You cannot transfer data from one app to another by restoring a backup from one 
 If you want to copy data to another app, we recommend using the [Database Replication](/appstore/modules/database-replication/) module.
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+If the database in your plan is not large enough to contain all the restored data, the restore operation will fail.
+
+Your database must be large enough to hold the decompressed size of the database as stored in the [db folder](#db-folder) of your backup file, plus an overhead of 2.25GB used during the restoration process.
+{{% /alert %}}
+
 ## 2 Restoring a Backup for the Same Licensed Cloud Node{#restore-cloud-backup}
 
 Mendix Cloud makes nightly backups, and you can also manually request that a backup is made. If you want to restore one of these backups to the node from which it was backed-up just follow the steps below.
@@ -139,7 +145,7 @@ This contains json describing the backup. For example:
 }
 ```
 
-### db folder
+### db folder{#db-folder}
 
 This contains the *db.backup* file. This is a PostgreSQL dump file created using the command `pg_dump -O -x -Fc`.
 

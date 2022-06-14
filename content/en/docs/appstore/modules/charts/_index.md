@@ -17,11 +17,11 @@ tags: ["marketplace", "marketplace component", "charts", "platform support", "ar
 
 #### 2.1.1 Series
 
-We reworked the **Data Source** property for several charts. Now it is easer to configure, control, and modify a chart series:
+The **Data Source** property makes it easy to configure, control, and modify a chart series:
 
 {{< figure src="/attachments/appstore/modules/charts/data-source-example.png" >}}
 
-Now you do not need to put a chart into a wata view to feed data into a widget. When you press the **New** button on a series panel, the **Edit Series** dialog box will be shown:
+You do not need to put a chart into a data view to feed data into a widget. When you click the **New** button on a series panel, the **Edit Series** dialog box will be shown:
 
 {{< figure src="/attachments/appstore/modules/charts/series-item-example.png" >}}
 
@@ -36,44 +36,45 @@ In this dialog box you will find next properties:
 
 Beside the **General** tab, you will find three more tabs in the **Edit Seris** dialog box:
 
-* **Appearance** — on this tab you will find properties that allow you to modify styling for current data series. In most cases there will be color properties.
-* **Events** — on this tab you will find possible event triggers.
-* **Advanced** — this tab has only one field which will hold JSON object with advanced configuration for this data series.
+* **Appearance** — This lists properties that allow you to modify styling for current data series. In most cases there will be color properties.
+* **Events** — This lists possible event triggers.
+* **Advanced** — Uses one field which will hold a JSON object with advanced configuration for this data series.
 
 ### 2.2 General
 
 #### 2.2.1 Enable Developer Mode
 
 {{% alert color="warning" %}}
-**Warning**: All changes made in dveloper editor are not permanent. That means that to save your progress you should copy settings from "Custom settings" area to chart settings in Studio Pro.
+All changes made in developer editor are temporary. To save your progress you should copy settings from the **Custom settings** area to **Chart settings** in Studio Pro.
 {{% /alert %}}
 
-This property when set to "yes" enables *Developer mode* for selected chart. After enabling Developer mode you will see "Toggle Editor" button which when clicked should open chart settings panel:
+When set to **Yes** this property enables **Developer mode** for the selected chart. After enabling **Developer mode** you will see a **Toggle Editor** button. When clicked, this button opens the **Chart settings** panel:
 
 {{< figure src="/attachments/appstore/modules/charts/toggle-editor-button.png" alt="Toggle Editor button in top right corner of the chart widget." >}}
 
-This dev mode panel is "live" settings editor which means that all your changes will be instantly applied to the current chart.
+This developer mode panel is a "live" settings editor, which means that all your changes will be instantly applied to the current chart.
 
-At the top of the panel you should see dropdown which controls which settings group is currently selected. By default each chart has **Layout** group and **Configuration** group — this groups control chart and layout settings. Also, in this dropdown you will find named groups that allow you to configure chart settings per series.
+At the top of the panel you should see drop-down list which controls which shows which settings group is currently selected. By default each chart has a **Layout** group and **Configuration** group — these groups control chart and layout settings. Also, in this drop-down list you will find named groups that allow you to configure chart settings per series.
 
 {{< figure src="/attachments/appstore/modules/charts/charts-dev-panel.png" title="Custom settings for Microsoft series in column chart" alt="Panel with dropdown on top and textarea below. Textarea content is a JSON object." >}}
 
 {{% alert color="info" %}} 
-To get in deep docs on available options and many useful examples, see Plotly's [Figure Reference](https://plotly.com/javascript/reference/index/) guide. 
+To see available options and useful examples, see Plotly's [JavaScript Figure Reference](https://plotly.com/javascript/reference/index/) guide. 
 {{% /alert %}}
 
 For more information on saving custom settings for a chart, see the [Custom Layout](#custom-layout) and [Custom Configurations](#custom-configurations) sections.
 
-#### 2.2.2 Custom series settings
+#### 2.2.2 Custom Series Settings
 
-Our underlying graphics library has really flexible API which allow you configure each *series* in chart individually.
+Our underlying graphics library has a flexible API which allows you to configure each series in a chart individually.
 
-To navigate to series custom settings perform next simple steps:
+To navigate to a series' custom settings, do the following:
+
+1. Go to **Chart settings** > **Data Source** > **Series**. 
+1. Select the series you want to configure, then click **Edit**.
+1. Open the **Advanced** tab and paste your custom series settings object there (in JSON format):
 
 {{< figure src="/attachments/appstore/modules/charts/custom-series-settings-step-1.png" alt="Two dialog boxes. First shows Data source property with list of series records. Second dialog box show settings for the first series in list. Big red arrow pointing to the Advanced tab of the second dialog box." >}}
-
-1. Go to chart settings, Data Source, Series. Select series you want to configure. Click Edit.
-2. Open "Advanced" tab and paste your custom series settings object (in JSON format).
 
 {{< figure src="/attachments/appstore/modules/charts/custom-series-settings-step-2.png" alt="Settings dialog box window with Advanced tab being active and single textarea elemnt." >}}
 
@@ -81,7 +82,7 @@ To navigate to series custom settings perform next simple steps:
 
 {{< figure src="/attachments/appstore/modules/charts/chart-with-legend.png" alt="Column chart. The legend list on right side is highlighted with red square." >}}
 
-This settings controls visibility of charts legend block (highlighted with red square). If set to "no" then legend block is hidden.
+This setting controls the visibility of a chart's legend block (highlighted with a red square). If set to **no**, then the legend block is hidden.
 
 #### 2.2.4 Y Axis Label and X Axis Label
 

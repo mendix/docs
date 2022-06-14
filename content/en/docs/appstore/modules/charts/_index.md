@@ -259,32 +259,35 @@ To update your Charts widget follow sections below.
 
 ### 6.1 Making a Backup
 
-So, its good idea to start with backup of your current project. If something goes wrong, you always may restore previous files and
-start again. In our case we don't need to back up whole project. All we have to do is make a copy of **<YOUR_PROJECT>/widgets** directory.
+In this section you will make a backup of your current app. If something goes wrong, you always may restore previous files and start again. You do not need to back up your entire app, you only need to make a copy of your **<YOUR_APP>/widgets** folder.
 
 {{% alert color="info" %}} 
 You can use **App** > **Show App Directory in Explorer** command from app menu to open you project in file manager. 
 {{% /alert%}}
 
-For now you can just make **widgets** copy in project folder:
+Make a copy of your **widgets** folder in your app folder called *widgets - Copy*:
 
 {{< figure src="/attachments/appstore/modules/charts/copy-widgets-folder.png" alt="File manager window with list of Mendix project files and directories and two directories is being selected: widgets and widgets - Copy" >}}
 
-Now we should have two folders: **widgets** and **widgets - Copy**.
+Now your should have two folders: **widgets** and **widgets - Copy**.
 
-If something go wrong, you can delete current **widgets** folder and rename **widgets - Copy** to **widgets**.
+If something goes wrong, you can delete your current **widgets** folder and rename **widgets - Copy** to **widgets**.
 
 ### 6.2 Removing Existing Charts Widget From Your App
 
-So now we have to remove previous version of Charts widget. To do so, open your project in File Manager. Navigate to **<YOUR_PROJECT>/widgets** directory
-and find file with name **Charts.mpk**. Now you have to remove this file:
+Now you must remove previous version of the Charts widget:
+
+1. Open your app in **File Manager**. 
+2. Navigate to your **<YOUR_App>/widgets** directory.
+3. Find the *Charts.mpk* file. 
+4. Delete the *Charts.mpk* file:
 
 {{< figure src="/attachments/appstore/modules/charts/delete-chart-widget.png" alt="File manager window with list of widgets. Charts.mpk file is selected with open context menu next to it. Delete item is hovered." >}}
 
-And we are done! Now all what's left is to install new version of Charts widget.
+Now all that is left is to install the new version of the Charts widget.
 
 {{% alert color="info" %}}
-If you using AnyChart widget in your project we highly recommend you to migrate your charts to new charts module — it has better developer experience and give you advanced set of chart widgets to visualize your data.
+If you using an AnyChart widget in your app we highly recommend you migrate your charts to the new charts module. The new module has a better developer experience and gives you advanced set of chart widgets to visualize your data.
 {{% /alert %}}
 
 ### 6.3 Installing the Charts Module from Marketplace

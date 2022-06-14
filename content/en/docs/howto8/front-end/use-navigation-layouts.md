@@ -203,7 +203,7 @@ To toggle the sidebar for Pushing content aside, follow these steps:
 
 5.  In your emulated device's browser window, click the toggle button:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.6_pushingcontentaside.gif"   width="350"  >}}
+	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/2.2_pushingcontentaside.gif"   width="350"  >}}
 
 ### 3.7 Set the Toggled Sidebar to Slide Over Content
 
@@ -252,7 +252,7 @@ To toggle the sidebar for **Slide over content**, follow these steps:
 
 5.  In your emulated device's browser window, click the toggle button:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.8_slidingovercontent.gif"   width="350"  >}}
+	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/2.2_slidingovercontent.gif"   width="350"  >}}
 
 ## 4 Read More
 

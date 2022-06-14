@@ -9,7 +9,11 @@ tags: ["marketplace", "marketplace component", "charts", "platform support", "ar
 
 ## 1 Introduction
 
-**TODO:** Add introduction 
+This [Charts module](https://marketplace.mendix.com/link/component/120527) hosts a collection of updated and improved chart widgets. Beside widget improvements, this module introduces a shared settings file that allows you to define common properties for all your charts in your app.
+
+For information on migrating an older version of the charts widget to version 3 the Charts module, see the [Migrating to the Charts Module](#migrate-to-module) section.
+
+For information on this module's properties and configurations, see all other sections.
 
 ## 2 Common Chart Properties
 
@@ -249,13 +253,13 @@ This is an optional expression that, when evaluated, will return a unique color 
 
 This property controls hole radius at the center of the chart (a value of *0* renders the hole invisible).
 
-## 6 Migrating to Charts v3
+## 6 Migrating to the Charts Module {#migrate-to-module}
 
-Follow these sections to migrate older Charts widget versions to version 3. This process only requires you copy and paste a few files and directories. It should take just couple of minutes.
+Follow these sections to migrate older charts widget versions to the new module version. This process only requires you copy and paste a few files and directories. It should take just couple of minutes.
 
-These steps are only required if you are already using the Charts widget and you want to update it widget to **version 3.x.x**. If you are starting new app you do not need to do any extra steps: just download the latest Charts widget from Marketplace.
+These steps are only required if you are already using the Charts widget and you want to update it widget to the new module version. If you are starting new app you do not need to do any extra steps: just download the latest [Charts module](https://marketplace.mendix.com/link/component/120527) from Marketplace.
 
-To update your Charts widget follow sections below.
+To update your charts widget follow sections below.
 
 ### 6.1 Making a Backup
 
@@ -284,7 +288,7 @@ Now you must remove previous version of the Charts widget:
 
 {{< figure src="/attachments/appstore/modules/charts/delete-chart-widget.png" alt="File manager window with list of widgets. Charts.mpk file is selected with open context menu next to it. Delete item is hovered." >}}
 
-Now all that is left is to install the new version of the Charts widget.
+Now all that is left is to install the new version of the charts module.
 
 {{% alert color="info" %}}
 If you using an AnyChart widget in your app we highly recommend you migrate your charts to the new charts module. The new module has a better developer experience and gives you advanced set of chart widgets to visualize your data.
@@ -292,34 +296,33 @@ If you using an AnyChart widget in your app we highly recommend you migrate your
 
 ### 6.3 Installing the Charts Module from Marketplace
 
-Now you can open Studio Pro, go to marketplace and install brand new Charts module.
+Now do the following:
 
-After this step you need to synchronize open project and file system. You can do it by pressing **F4** on the keyboard or through the app menu by running **App** > **Synchronize App Directory** command. This action will notify Studio Pro about new Chart widgets. 
+1. Open Studio Pro.
+1. Navigate to Marketplace.
+1. Install the new Charts module.
+1. Press <kbd>{F4}</kbd> (or click **App** > **Synchronize App Directory**) to synchronize your open app with your file system. This action will notify Studio Pro about new Chart widgets. 
 
-If you see some errors in error tab, do not panic — errors appears quite often when you migrate your widget to new version. One of this errors will be about new widget version.
+If you see errors in your **Errors List** tab, do not worry. Errors often appear after migration to a new version. Follow the next section to see examples of widget updating which will solve your charts errors.
 
 {{% alert color="warning" %}}
-Although new widgets from charts module has same settings and behaviour, they also introduce some breaking changes. The main breaking change is **Data Source** property. That means that migration process can't be fully automated and it's up to you as a developer to update each widget individually.
+Although new widgets from charts module have similar settings and behavior as the old widget, they also introduce some breaking changes. The main breaking change is the **Data Source** property. That means that migration process cannot be fully automated and it is up to you as a developer to update each widget individually.
 {{% /alert %}}
-
-Go to next section to see example of updating settings for the column chart.
 
 ### 6.4 Updating Chart Widgets
 
-This step assume that you go over all chart widgets in your project and update them one by one.
+This section will show you how to update a charts widget to the new charts module. You must apply this workflow to each chart widget in your app, updating them one by one.
 
-The easiest way is by dropping new charts widget right next to your existing widget, copying or changing settings and then removing old widget. If you prefer step-by-step guide:
+The easiest way to update a charts widget is to drop a new charts module next to your existing widget, copy or change the settings, and then remove old widget. Here is a step-by-step guide:
 
 1. Go to old chart widget.
-2. Add new version fo the widget of the same chart type.
-3. Copy properties from old widget to the new widget.
-4. Remove old widget.
-5. If there any other old chart widgets in your project, repeat steps 1-5.
+1. Add new version for the widget of the same chart type.
+1. Copy properties from old widget to the new module.
+1. Remove the old widget.
+1. If there any other old chart widgets in your app, repeat the previous steps.
 
 {{% alert color="warning" %}}
-If your project was created in Studio Pro version < v9.18.0 then you probably may see some additional errors in **Errors List** tab from **Atlas_Web_Content** module. They coming from some page templates that we shipping by default with Studio Pro distribution. Simplest solution would be go to the template and remove all chart widgets from the template. If you are using this templates in your app, then just repeat steps in "Updating chart widgets" section.
+If your app was created in a Studio Pro version below v9.18.0 then you may see some additional errors in the **Errors List** tab from the **Atlas_Web_Content** module. These errors come from some page templates shipped by default with Studio Pro. The simplest solution for these errors is to go to the template and remove all chart widgets from it. If you are using these templates in your app, apply the steps in the *Updating Chart Widgets* section to your templates.
 {{% /alert %}}
 
-### 6.5 Testing Your App
-
-Congratulations! We successfully updated Charts widget and now we can run our project to make sure that all works fine and app can do a successful start.
+Congratulations! You successfully updated your Charts module. After you troubleshoot your errors, run your app to enjoy the new Charts module.

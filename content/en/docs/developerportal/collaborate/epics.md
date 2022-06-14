@@ -128,7 +128,7 @@ If you use the Kanban layout, you can see the **To Do**, **Refinement**, **Backl
 
 ## 4 Epics
 
-The **Epics** page shows an overview of all the epics, with a progress bar indicating how many stories are completed for each epic. You can open the [details of an epic](#epic-details) by clicking the card.
+The **Epics** page shows an overview of all the epics, with a progress bar indicating how many stories are completed for each epic. You can open the [details of an epic](#epic-details) by clicking the card of the epic.
 
 ### 4.1 Epic Details Page
 

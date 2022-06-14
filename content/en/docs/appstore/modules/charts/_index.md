@@ -139,7 +139,7 @@ These layout settings will be passed to the underlying Plotly JavaScript library
 
 This property allows you to save your custom **Configuration** settings for this widget.
 
-This object will be merged with default settings and passed to underlying [plotly javascript](https://plotly.com/javascript/) library. To see available settings and examples check [Configuration Options in JavaScript](https://plotly.com/javascript/configuration-options/) section on plotly docs website.
+This object will be merged with default settings and passed to the underlying [Plotly JavaScript](https://plotly.com/javascript/) library. To see available settings and examples check the [Configuration Options in JavaScript](https://plotly.com/javascript/configuration-options/) section of the *Plotly Reference Guide*.
 
 {{< figure src="/attachments/appstore/modules/charts/custom-config.png" alt="Settings dialog box with Advanced tab being active. Tab includes two text area on of which is focused." >}}
 
@@ -149,7 +149,7 @@ This object will be merged with default settings and passed to underlying [plotl
 
 #### 5.1.1 Chart Format
 
-This setting controls chart format. In group format, columns go one after another. In stacked format columns from each series will be stacked on top of each other. 
+This setting controls a chart's format. In the **group** format, columns go one after another. In the **stacked** format columns from each series will be stacked on top of each other. 
 
 {{< figure src="/attachments/appstore/modules/charts/column-chart-format-grouped-vs-stacked.png" alt="Two column charts. On the left chart columns go one after another. On the right chart pairs of columns stacked on each other, each pair go one after another." title="Two format types of column chart, where group format is present on the left and stack format is present on the right." >}}
 
@@ -157,7 +157,7 @@ This setting controls chart format. In group format, columns go one after anothe
 
 #### 5.2.1 Bar format
 
-This setting controls bar format. In group format, bars go one below another. In stacked format bars are stacked on top of one another, forming one line.
+This setting controls bar format. In the **group** format, bars go one below the other. In the **stacked** format bars are stacked on top of one another, forming one line.
 
 {{< figure src="/attachments/appstore/modules/charts/bar-chart-formats.png" alt="Two bar charts. On the left bar chart lines in group go one below other. On the right chart, lines in group stacked on top of each other, forming one big line." >}}
 
@@ -165,71 +165,71 @@ This setting controls bar format. In group format, bars go one below another. In
 
 #### 5.3.1  Bubble Size Attribute
 
-The attribute to control bubbles size for given item in series.
+This attribute controls bubble size for a given item in series.
 
 #### 5.3.2 Auto Scale
 
-If **Yes** then bubble size and proportions will be computed automatically. Otherwise value from **Scale factor** will be used.
+If **Yes** then bubble size and proportions will be computed automatically (otherwise the value from **Scale factor** will be used).
 
 #### 5.3.3 Scale Factor
 
-The scale factor of bubbles on chart. This value will be used to determine final bubble size by multiplying current scale factor value and value from bubble size attribute.
+This controls the scale factor of bubbles on a chart. This value will be used to determine the final bubble size by multiplying current scale factor value and value from the bubble size attribute.
 
-### 5.3 Heat map
+### 5.3 Heat Map
 
 #### 5.3.1  Data Source
 
-Controls single data series. Entity in his series should have at least three attributes:
+This property controls a single data series. An entity in this series should have at least three attributes:
 
-* **x** — for x axis
-* **y** — for y axis
-* **value (z)** — for displaying "heat" at [x y] location.
+* **x** — This controls the x axis.
+* **y** — This controls the y axis.
+* **value (z)** — This displays "heat" at an "x y" location.
 
 #### 5.3.2 Horizontal Axis Attribute
 
-Value for horizontal (x) axis of the chart.
+This is a value for a chart's horizontal (x) axis.
 
 #### 5.3.3 Horizontal Sort Attribute
 
-Attribute to sort values on horizontal (x) axis.
+This attribute sorts values on a horizontal (x) axis.
 
 {{% alert color="warning" %}} 
-This property works only when data source is **Database**
+This property works only when data source is **Database**.
 {{% /alert%}}
 
 #### 5.3.4 Horizontal Sort Order
 
-Controls order of items along horizontal axis.
+This property controls the order of items along a horizontal axis.
 
 #### 5.3.5 Vertical Axis Attribute
 
-Value for vertical (y) axis of the chart.
+This is a value for a chart's vertical (y) axis.
 
 #### 5.3.6 Vertical Sort Attribute
 
-Attribute to sort values on vertical (y) axis.
+This attribute sorts values on a vertical (y) axis.
 
 {{% alert color="warning" %}} 
-This property works only when data source is **Database** 
+This property works only when data source is **Database**. 
 {{% /alert%}}
 
 #### 5.3.7 Vertical Sort Order
 
-Controls order of items along vertical axis.
+This property controls the order of items along a vertical axis.
 
 #### 5.3.8 Value Attribute
 
-Attribute that will be used as heat value for given single entity.
+This is the attribute that will be used as a heat value for given single entity.
 
 ### 5.4 Pie Chart
 
 #### 5.4.1 Series
 
-Series data source for pie chart.
+This property is the series data source for a pie chart.
 
-#### 5.4.2 Series name
+#### 5.4.2 Series Name
 
-Should an expression that when evaluated will return unique name for single series:
+This property allows for an expression that when evaluated will return a unique name for a single series:
 
 {{< figure src="/attachments/appstore/modules/charts/pie-chart-series-name-example.png" >}}
 
@@ -239,15 +239,15 @@ This property is required.
 
 #### 5.4.3 Value Attribute
 
-Attribute that will serve as source of value for current series.
+This attribute serves as a value source for the current series.
 
 #### 5.4.4 Slice Color
 
-Optional expression that when evaluated will return unique color for single series.
+This is an optional expression that, when evaluated, will return a unique color for a single series.
 
 #### 5.4.5 Hole Radius
 
-Controls hole radius at the center of the chart. When value is zero the hole is not visible.
+This property controls hole radius at the center of the chart (a value of *0* renders the hole invisible).
 
 ## 6 Migrating to Charts v3
 

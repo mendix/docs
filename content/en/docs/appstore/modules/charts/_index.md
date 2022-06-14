@@ -7,15 +7,15 @@ tags: ["marketplace", "marketplace component", "charts", "platform support", "ar
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## Introduction
+## 1 Introduction
 
 **TODO:** Add introduction 
 
-## Common Chart Properties
+## 2 Common Chart Properties
 
-### Data Source
+### 2.1 Data Source
 
-#### Series
+#### 2.1.1 Series
 
 We reworked the **Data Source** property for several charts. Now it is easer to configure, control, and modify a chart series:
 
@@ -40,41 +40,33 @@ Beside the **General** tab, you will find three more tabs in the **Edit Seris** 
 * **Events** — on this tab you will find possible event triggers.
 * **Advanced** — this tab has only one field which will hold JSON object with advanced configuration for this data series.
 
+### 2.2 General
 
-
-### General
-
-#### Enable developer mode
+#### 2.2.1 Enable Developer Mode
 
 {{% alert color="warning" %}}
 **Warning**: All changes made in dveloper editor are not permanent. That means that to save your progress you should copy settings from "Custom settings" area to chart settings in Studio Pro.
 {{% /alert %}}
 
-
-This property when set to "yes" enable *Developer mode* for selected chart. After enabling Developer mode you will see "Toggle Editor" button which when clicked should open chart settings panel. 
-
+This property when set to "yes" enables *Developer mode* for selected chart. After enabling Developer mode you will see "Toggle Editor" button which when clicked should open chart settings panel:
 
 {{< figure src="/attachments/appstore/modules/charts/toggle-editor-button.png" alt="Toggle Editor button in top right corner of the chart widget." >}}
-
 
 This dev mode panel is "live" settings editor which means that all your changes will be instantly applied to the current chart.
 
 At the top of the panel you should see dropdown which controls which settings group is currently selected. By default each chart has **Layout** group and **Configuration** group — this groups control chart and layout settings. Also, in this dropdown you will find named groups that allow you to configure chart settings per series.
 
-
 {{< figure src="/attachments/appstore/modules/charts/charts-dev-panel.png" title="Custom settings for Microsoft series in column chart" alt="Panel with dropdown on top and textarea below. Textarea content is a JSON object." >}}
 
-{{% alert color="info" %}} **Note**: To get in deep docs on available options and many useful examples you can visit [Figure Reference](https://plotly.com/javascript/reference/index/) guide on plotly website. {{% /alert %}}
+{{% alert color="info" %}} 
+To get in deep docs on available options and many useful examples, see Plotly's [Figure Reference](https://plotly.com/javascript/reference/index/) guide. 
+{{% /alert %}}
 
+For more information on saving custom settings for a chart, see the [Custom Layout](#custom-layout) and [Custom Configurations](#custom-configurations) sections.
 
+#### 2.2.2 Custom series settings
 
-Please, visit [Advanced/Custom layout](#custom-layout) and [Advanced/Custom configurations](#custom-configurations) sections to get more information on how you can save your custom settings for the chart.
-
-
-
-#### Custom series settings
-
-Our underlying graphics library has really flexible API which allow you configure each *series* in char individually.
+Our underlying graphics library has really flexible API which allow you configure each *series* in chart individually.
 
 To navigate to series custom settings perform next simple steps:
 
@@ -85,17 +77,17 @@ To navigate to series custom settings perform next simple steps:
 
 {{< figure src="/attachments/appstore/modules/charts/custom-series-settings-step-2.png" alt="Settings dialog box window with Advanced tab being active and single textarea elemnt." >}}
 
-#### Show legend
+#### 2.2.3 Show Legend
 
 {{< figure src="/attachments/appstore/modules/charts/chart-with-legend.png" alt="Column chart. The legend list on right side is highlighted with red square." >}}
 
 This settings controls visibility of charts legend block (highlighted with red square). If set to "no" then legend block is hidden.
 
-#### Y Axis Label and X Axis Label
+#### 2.2.4 Y Axis Label and X Axis Label
 
 These two properties control labels for each axis respectively.
 
-#### Grid Lines
+#### 2.2.5 Grid Lines
 
 This property controls horizontal and vertical rulers of the chart:
 
@@ -104,17 +96,17 @@ This property controls horizontal and vertical rulers of the chart:
 * **Vertical** — only vertical ruler is visible.
 * **Both** — both types of rulers are visible.
 
-### Dimensions
+### 3 Dimensions
 
-#### Width Unit
+#### 3.1 Width Unit
 
 Width unit controls type of unit for measuring widget with. Could be **percentage** or **pixels**.
 
-#### Width
+#### 3.2 Width
 
 This property controls width of the widget.
 
-#### Height Unit
+#### 3.3 Height Unit
 
 Hight unit controls type of unit for measuring widget height. Possible values are:
 
@@ -122,17 +114,17 @@ Hight unit controls type of unit for measuring widget height. Possible values ar
 * **Pixels** — use pixels as height unit (good option for most cases).
 * **Percentage of parent** — height is measuring relative to parent **height** property (only works when parent have **height** CSS property).
 
-#### Height
+#### 3.4 Height
 
 This property controls height of the widget.
 
-### Advanced
+### 4 Advanced
 
-#### Enable Theme Folder Config
+#### 4.1 Enable Theme Folder Config
 
 If set to **Yes** then this widget will try to load global chart settings specified in the *theme/web/com.mendix.charts.json* file. Before using this feature make sure this file is present in your project.
 
-#### Custom layout
+#### 4.2 Custom Layout {#custom-layout}
 
 This property allows you to save your custom **Layout** settings for this widget.
 
@@ -142,7 +134,7 @@ To save your custom settings that related to **Layout** group you need go to **A
 
 This layout settings will be passed to underlying plotly javascript library. To see available options and their description. Visit [layout seciton in plotly reference guide](https://plotly.com/javascript/reference/#layout).
 
-#### Custom Configurations
+#### 4.3 Custom Configurations {#custom-configurations}
 
 This property allows you to save your custom **Configuration** settings for this widget.
 
@@ -150,41 +142,41 @@ This object will be merged with default settings and passed to underlying [plotl
 
 {{< figure src="/attachments/appstore/modules/charts/custom-config.png" alt="Settings dialog box with Advanced tab being active. Tab includes two text area on of which is focused." >}}
 
-## Chart Specific Settings
+## 5 Chart-Specific Settings
 
-### Column Chart
+### 5.1 Column Chart
 
-#### Chart Format
+#### 5.1.1 Chart Format
 
 This setting controls chart format. In group format, columns go one after another. In stacked format columns from each series will be stacked on top of each other. 
 
 {{< figure src="/attachments/appstore/modules/charts/column-chart-format-grouped-vs-stacked.png" alt="Two column charts. On the left chart columns go one after another. On the right chart pairs of columns stacked on each other, each pair go one after another." title="Two format types of column chart, where group format is present on the left and stack format is present on the right." >}}
 
-### Bar Chart
+### 5.2 Bar Chart
 
-#### Bar format
+#### 5.2.1 Bar format
 
 This setting controls bar format. In group format, bars go one below another. In stacked format bars are stacked on top of one another, forming one line.
 
 {{< figure src="/attachments/appstore/modules/charts/bar-chart-formats.png" alt="Two bar charts. On the left bar chart lines in group go one below other. On the right chart, lines in group stacked on top of each other, forming one big line." >}}
 
-### Bubble Chart
+### 5.3 Bubble Chart
 
-#### Bubble Size Attribute
+#### 5.3.1  Bubble Size Attribute
 
 The attribute to control bubbles size for given item in series.
 
-#### Auto Scale
+#### 5.3.2 Auto Scale
 
 If **Yes** then bubble size and proportions will be computed automatically. Otherwise value from **Scale factor** will be used.
 
-#### Scale Factor
+#### 5.3.3 Scale Factor
 
 The scale factor of bubbles on chart. This value will be used to determine final bubble size by multiplying current scale factor value and value from bubble size attribute.
 
-### Heat map
+### 5.3 Heat map
 
-#### Data Source
+#### 5.3.1  Data Source
 
 Controls single data series. Entity in his series should have at least three attributes:
 
@@ -192,11 +184,11 @@ Controls single data series. Entity in his series should have at least three att
 * **y** — for y axis
 * **value (z)** — for displaying "heat" at [x y] location.
 
-#### Horizontal Axis Attribute
+#### 5.3.2 Horizontal Axis Attribute
 
 Value for horizontal (x) axis of the chart.
 
-#### Horizontal Sort Attribute
+#### 5.3.3 Horizontal Sort Attribute
 
 Attribute to sort values on horizontal (x) axis.
 
@@ -204,15 +196,15 @@ Attribute to sort values on horizontal (x) axis.
 This property works only when data source is **Database**
 {{% /alert%}}
 
-#### Horizontal Sort Order
+#### 5.3.4 Horizontal Sort Order
 
 Controls order of items along horizontal axis.
 
-#### Vertical Axis Attribute
+#### 5.3.5 Vertical Axis Attribute
 
 Value for vertical (y) axis of the chart.
 
-#### Vertical Sort Attribute
+#### 5.3.6 Vertical Sort Attribute
 
 Attribute to sort values on vertical (y) axis.
 
@@ -220,21 +212,21 @@ Attribute to sort values on vertical (y) axis.
 This property works only when data source is **Database** 
 {{% /alert%}}
 
-#### Vertical Sort Order
+#### 5.3.7 Vertical Sort Order
 
 Controls order of items along vertical axis.
 
-#### Value Attribute
+#### 5.3.8 Value Attribute
 
 Attribute that will be used as heat value for given single entity.
 
-### Pie Chart
+### 5.4 Pie Chart
 
-#### Series
+#### 5.4.1 Series
 
 Series data source for pie chart.
 
-#### Series name
+#### 5.4.2 Series name
 
 Should an expression that when evaluated will return unique name for single series:
 
@@ -244,28 +236,27 @@ Should an expression that when evaluated will return unique name for single seri
 This property is required. 
 {{% /alert%}}
 
-#### Value Attribute
+#### 5.4.3 Value Attribute
 
 Attribute that will serve as source of value for current series.
 
-#### Slice Color
+#### 5.4.4 Slice Color
 
 Optional expression that when evaluated will return unique color for single series.
 
-#### Hole Radius
+#### 5.4.5 Hole Radius
 
 Controls hole radius at the center of the chart. When value is zero the hole is not visible.
 
-## Migration to Charts v3
+## 6 Migrating to Charts v3
 
-In this guide we would like to give you instructions on how to migrate Charts, and it's widget to new version.
-Don't be afraid this just easy as copy and paste few files and directories and should take just couple of minutes.
+Follow these sections to migrate older Charts widget versions to version 3. This process only requires you copy and paste a few files and directories. It should take just couple of minutes.
 
-Again, this steps only required if you're already using Charts widget, and you want to update this widget to **version 3.x.x**. If you're starting new project you don't need to do any extra steps --- just download latest Charts widget from marketplace.
+These steps are only required if you are already using the Charts widget and you want to update it widget to **version 3.x.x**. If you are starting new app you do not need to do any extra steps: just download the latest Charts widget from Marketplace.
 
-To update your Charts widget follow steps below.
+To update your Charts widget follow sections below.
 
-### Step 1 - Making backup
+### 6.1 Making a Backup
 
 So, its good idea to start with backup of your current project. If something goes wrong, you always may restore previous files and
 start again. In our case we don't need to back up whole project. All we have to do is make a copy of **<YOUR_PROJECT>/widgets** directory.
@@ -282,7 +273,7 @@ Now we should have two folders: **widgets** and **widgets - Copy**.
 
 If something go wrong, you can delete current **widgets** folder and rename **widgets - Copy** to **widgets**.
 
-### Step 2 - Removing Existing Charts Widget From Your App
+### 6.2 Removing Existing Charts Widget From Your App
 
 So now we have to remove previous version of Charts widget. To do so, open your project in File Manager. Navigate to **<YOUR_PROJECT>/widgets** directory
 and find file with name **Charts.mpk**. Now you have to remove this file:
@@ -295,8 +286,7 @@ And we are done! Now all what's left is to install new version of Charts widget.
 If you using AnyChart widget in your project we highly recommend you to migrate your charts to new charts module — it has better developer experience and give you advanced set of chart widgets to visualize your data.
 {{% /alert %}}
 
-
-### Step 3 - Installing Charts Module from Marketplace
+### 6.3 Installing the Charts Module from Marketplace
 
 Now you can open Studio Pro, go to marketplace and install brand new Charts module.
 
@@ -310,7 +300,7 @@ Although new widgets from charts module has same settings and behaviour, they al
 
 Go to next section to see example of updating settings for the column chart.
 
-### Step 4 - Updating chart widgets
+### 6.4 Updating Chart Widgets
 
 This step assume that you go over all chart widgets in your project and update them one by one.
 
@@ -326,7 +316,6 @@ The easiest way is by dropping new charts widget right next to your existing wid
 If your project was created in Studio Pro version < v9.18.0 then you probably may see some additional errors in **Errors List** tab from **Atlas_Web_Content** module. They coming from some page templates that we shipping by default with Studio Pro distribution. Simplest solution would be go to the template and remove all chart widgets from the template. If you are using this templates in your app, then just repeat steps in "Updating chart widgets" section.
 {{% /alert %}}
 
-### Step 5 - Testing your project
+### 6.5 Testing Your App
 
-Congratulations! We successfully updated Charts widget and now we can run our project to make
-sure that all works fine and app can do a successful start.
+Congratulations! We successfully updated Charts widget and now we can run our project to make sure that all works fine and app can do a successful start.

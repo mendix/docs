@@ -92,16 +92,16 @@ These two properties control labels for each axis respectively.
 
 This property controls horizontal and vertical rulers of the chart:
 
-* **None** — no rulers visible.
-* **Horizontal** — only horizontal ruler is visible.
-* **Vertical** — only vertical ruler is visible.
-* **Both** — both types of rulers are visible.
+* **None** — No rulers are visible.
+* **Horizontal** — Only a horizontal ruler is visible.
+* **Vertical** — Only a vertical ruler is visible.
+* **Both** — Both types of rulers are visible.
 
 ### 3 Dimensions
 
 #### 3.1 Width Unit
 
-Width unit controls type of unit for measuring widget with. Could be **percentage** or **pixels**.
+This property controls the unit measuring the widget (it can be **percentage** or **pixels**).
 
 #### 3.2 Width
 
@@ -109,11 +109,11 @@ This property controls width of the widget.
 
 #### 3.3 Height Unit
 
-Hight unit controls type of unit for measuring widget height. Possible values are:
+This property controls the unit for measuring widget height:
 
-* **Percentage of width** — height is measuring relative to widget width (use this mode when you need to keep width and height in aspect ratio).
-* **Pixels** — use pixels as height unit (good option for most cases).
-* **Percentage of parent** — height is measuring relative to parent **height** property (only works when parent have **height** CSS property).
+* **Percentage of width** — Height is measured relative to widget width (use this mode to keep width and height in aspect ratio).
+* **Pixels** — This uses pixels as height unit (a good option for most cases).
+* **Percentage of parent** — Height is measured relative to a parent **height** property (only works when parent has **height** CSS property).
 
 #### 3.4 Height
 
@@ -123,17 +123,17 @@ This property controls height of the widget.
 
 #### 4.1 Enable Theme Folder Config
 
-If set to **Yes** then this widget will try to load global chart settings specified in the *theme/web/com.mendix.charts.json* file. Before using this feature make sure this file is present in your project.
+If set to **Yes** this widget will try to load global chart settings specified in the *theme/web/com.mendix.charts.json* file. Before using this feature make sure this file is present in your app.
 
 #### 4.2 Custom Layout {#custom-layout}
 
 This property allows you to save your custom **Layout** settings for this widget.
 
-To save your custom settings that related to **Layout** group you need go to **Advanced** tab and paste you JSON in **Custom layout** text area:
+To save your custom settings that related to the **Layout** group, navigate to the **Advanced** tab and paste your JSON in **Custom layout** text area:
 
 {{< figure src="/attachments/appstore/modules/charts/custom-layout-settings.png" alt="Settings dialog box with Advanced tab being active. Tab includes two text area on of which is focused." >}}
 
-This layout settings will be passed to underlying plotly javascript library. To see available options and their description. Visit [layout seciton in plotly reference guide](https://plotly.com/javascript/reference/#layout).
+These layout settings will be passed to the underlying Plotly JavaScript library. To see available options and their description. Visit the [Layout](https://plotly.com/javascript/reference/#layout) section of the *Plotly Reference Guide*. 
 
 #### 4.3 Custom Configurations {#custom-configurations}
 

@@ -81,7 +81,7 @@ Below is the list of documents and elements that can be mark as **Usable**:
 
 {{% alert color="info" %}}
 
-Before exporting an add-on module or a solution to customers, note that English (US) and Dutch language translation is shipped with it by default. This may be important if your customers decide to translate their app to other languages. To avoid this, open the **Language** menu > **Language Operations** and select the **Delete** operation for the English or Dutch language. For more information on the **Language** menu, see [Language Menu](/refguide/translatable-texts/). For more information on how to perform a certain operation, see [Language Operations](/refguide/language-operations/). 
+Before exporting an add-on module or a solution to customers, note that English (US) and Dutch language translations are shipped with it by default. This may be important *if your app is in another language*, not English (US) or Dutch, and *your customers decide to translate the consumed solution or add-on to other languages*. To avoid the confusion, open the **Language** menu > **Language Operations** and select the **Delete** operation for English (US) or Dutch. For more information on the **Language** menu, see [Language Menu](/refguide/translatable-texts/). For more information on how to perform a certain operation, see [Language Operations](/refguide/language-operations/). 
 
 {{% /alert %}}
 

@@ -208,11 +208,11 @@ The following shortcut keys are assigned to menu actions that can be used in all
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F9</kbd> | Show the currently running app in the browser (tablet simulation). |
 | <kbd>F11</kbd> | Enable and disable full screen mode. |
 | <kbd>Shift</kbd> + <kbd>F11</kbd> | Enable and disable distraction free mode. |
-| <kbd>Ctrl</kbd>&nbsp;+&nbsp;(<kbd>Shift</kbd>)&nbsp;+&nbsp;<kbd>L</kbd> | Cycle through the configured languages. |
 | <kbd>Ctrl</kbd> + <kbd>F</kbd> | Open search dialog box. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> | Opens advanced search dialog box. |
 | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> | Display usages of the selected object. |
 | <kbd>Ctrl</kbd> + <kbd>G</kbd> | Go to any document or domain model element. |
+| <kbd>Ctrl</kbd>&nbsp;+&nbsp;(<kbd>Shift</kbd>)&nbsp;+&nbsp;<kbd>L</kbd> | Cycle through the configured languages. |
 | <kbd>Ctrl</kbd> + <kbd>N</kbd> | Create a new document. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd> | Create a new app. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> | Opens an existing app or app package. |

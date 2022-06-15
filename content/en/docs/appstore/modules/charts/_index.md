@@ -284,7 +284,7 @@ Now you must remove previous version of the charts widget:
 1. Open your app in **File Manager**. 
 1. Navigate to your **<YOUR_App>/widgets** directory.
 1. Find the *Charts.mpk* file. 
-1.  Delete the *Charts.mpk* file:
+1. Delete the *Charts.mpk* file:
 
   {{< figure src="/attachments/appstore/modules/charts/delete-chart-widget.png" width="450px" alt="File manager window with list of widgets. Charts.mpk file is selected with open context menu next to it. Delete item is hovered." >}}
 

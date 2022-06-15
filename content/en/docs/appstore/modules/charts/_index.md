@@ -23,11 +23,11 @@ For information on this module's properties and configurations, see all other se
 
 The **Data Source** property makes it easy to configure, control, and modify a chart series:
 
-{{< figure src="/attachments/appstore/modules/charts/data-source-example.png" >}}
+{{< figure src="/attachments/appstore/modules/charts/data-source-example.png" width="450px">}}
 
 You do not need to put a chart into a data view to feed data into a widget. When you click the **New** button on a series panel, the **Edit Series** dialog box will be shown:
 
-{{< figure src="/attachments/appstore/modules/charts/series-item-example.png" >}}
+{{< figure src="/attachments/appstore/modules/charts/series-item-example.png" width="450px">}}
 
 In this dialog box you will find next properties:
 
@@ -54,13 +54,13 @@ All changes made in developer editor are temporary. To save your progress you sh
 
 When set to **Yes** this property enables **Developer mode** for the selected chart. After enabling **Developer mode** you will see a **Toggle Editor** button. When clicked, this button opens the **Chart settings** panel:
 
-{{< figure src="/attachments/appstore/modules/charts/toggle-editor-button.png" alt="Toggle Editor button in top right corner of the chart widget." >}}
+{{< figure src="/attachments/appstore/modules/charts/toggle-editor-button.png" width="450px" alt="Toggle Editor button in top right corner of the chart widget." >}}
 
 This developer mode panel is a "live" settings editor, which means that all your changes will be instantly applied to the current chart.
 
 At the top of the panel you should see drop-down list which controls which shows which settings group is currently selected. By default each chart has a **Layout** group and **Configuration** group—these groups control chart and layout settings. Also, in this drop-down list you will find named groups that allow you to configure chart settings per series.
 
-{{< figure src="/attachments/appstore/modules/charts/charts-dev-panel.png" title="Custom settings for Microsoft series in column chart" alt="Panel with dropdown on top and textarea below. Textarea content is a JSON object." >}}
+{{< figure src="/attachments/appstore/modules/charts/charts-dev-panel.png" width="450px" title="Custom settings for Microsoft series in column chart" alt="Panel with dropdown on top and textarea below. Textarea content is a JSON object." >}}
 
 {{% alert color="info" %}} 
 To see available options and useful examples, see Plotly's [JavaScript Figure Reference](https://plotly.com/javascript/reference/index/) guide. 
@@ -78,13 +78,13 @@ To navigate to a series' custom settings, do the following:
 1. Select the series you want to configure, then click **Edit**.
 1. Open the **Advanced** tab and paste your custom series settings object there (in JSON format):
 
-{{< figure src="/attachments/appstore/modules/charts/custom-series-settings-step-1.png" alt="Two dialog boxes. First shows Data source property with list of series records. Second dialog box show settings for the first series in list. Big red arrow pointing to the Advanced tab of the second dialog box." >}}
+{{< figure src="/attachments/appstore/modules/charts/custom-series-settings-step-1.png" width="450px" alt="Two dialog boxes. First shows Data source property with list of series records. Second dialog box show settings for the first series in list. Big red arrow pointing to the Advanced tab of the second dialog box." >}}
 
-{{< figure src="/attachments/appstore/modules/charts/custom-series-settings-step-2.png" alt="Settings dialog box window with Advanced tab being active and single textarea elemnt." >}}
+{{< figure src="/attachments/appstore/modules/charts/custom-series-settings-step-2.png" width="450px" alt="Settings dialog box window with Advanced tab being active and single textarea elemnt." >}}
 
 #### 2.2.3 Show Legend
 
-{{< figure src="/attachments/appstore/modules/charts/chart-with-legend.png" alt="Column chart. The legend list on right side is highlighted with red square." >}}
+{{< figure src="/attachments/appstore/modules/charts/chart-with-legend.png" width="450px" alt="Column chart. The legend list on right side is highlighted with red square." >}}
 
 This setting controls the visibility of a chart's legend block (highlighted with a red square). If set to **no**, then the legend block is hidden.
 
@@ -135,7 +135,7 @@ This property allows you to save your custom **Layout** settings for this widget
 
 To save your custom settings that related to the **Layout** group, navigate to the **Advanced** tab and paste your JSON in **Custom layout** text area:
 
-{{< figure src="/attachments/appstore/modules/charts/custom-layout-settings.png" alt="Settings dialog box with Advanced tab being active. Tab includes two text area on of which is focused." >}}
+{{< figure src="/attachments/appstore/modules/charts/custom-layout-settings.png" width="450px" alt="Settings dialog box with Advanced tab being active. Tab includes two text area on of which is focused." >}}
 
 These layout settings will be passed to the underlying Plotly JavaScript library. To see available options and their description. Visit the [Layout](https://plotly.com/javascript/reference/#layout) section of the *Plotly Reference Guide*. 
 
@@ -145,7 +145,7 @@ This property allows you to save your custom **Configuration** settings for this
 
 This object will be merged with default settings and passed to the underlying [Plotly JavaScript](https://plotly.com/javascript/) library. To see available settings and examples check the [Configuration Options in JavaScript](https://plotly.com/javascript/configuration-options/) section of the *Plotly Reference Guide*.
 
-{{< figure src="/attachments/appstore/modules/charts/custom-config.png" alt="Settings dialog box with Advanced tab being active. Tab includes two text area on of which is focused." >}}
+{{< figure src="/attachments/appstore/modules/charts/custom-config.png" width="450px" alt="Settings dialog box with Advanced tab being active. Tab includes two text area on of which is focused." >}}
 
 ## 5 Chart-Specific Settings
 
@@ -163,7 +163,7 @@ This setting controls a chart's format. In the **group** format, columns go one 
 
 This setting controls bar format. In the **group** format, bars go one below the other. In the **stacked** format bars are stacked on top of one another, forming one line.
 
-{{< figure src="/attachments/appstore/modules/charts/bar-chart-formats.png" alt="Two bar charts. On the left bar chart lines in group go one below other. On the right chart, lines in group stacked on top of each other, forming one big line." >}}
+{{< figure src="/attachments/appstore/modules/charts/bar-chart-formats.png" width="450px" alt="Two bar charts. On the left bar chart lines in group go one below other. On the right chart, lines in group stacked on top of each other, forming one big line." >}}
 
 ### 5.3 Bubble Chart
 
@@ -235,7 +235,7 @@ This property is the series data source for a pie chart.
 
 This property allows for an expression that when evaluated will return a unique name for a single series:
 
-{{< figure src="/attachments/appstore/modules/charts/pie-chart-series-name-example.png" >}}
+{{< figure src="/attachments/appstore/modules/charts/pie-chart-series-name-example.png" width="450px">}}
 
 {{% alert color="warning" %}} 
 This property is required. 
@@ -271,7 +271,7 @@ You can use **App** > **Show App Directory in Explorer** command from app menu t
 
 Make a copy of your **widgets** folder in your app folder called *widgets - Copy*:
 
-{{< figure src="/attachments/appstore/modules/charts/copy-widgets-folder.png" alt="File manager window with list of Mendix project files and directories and two directories is being selected: widgets and widgets - Copy" >}}
+{{< figure src="/attachments/appstore/modules/charts/copy-widgets-folder.png" width="450px" alt="File manager window with list of Mendix project files and directories and two directories is being selected: widgets and widgets - Copy" >}}
 
 Now your should have two folders: **widgets** and **widgets - Copy**.
 
@@ -286,7 +286,7 @@ Now you must remove previous version of the charts widget:
 1. Find the *Charts.mpk* file. 
 1. Delete the *Charts.mpk* file:
 
-{{< figure src="/attachments/appstore/modules/charts/delete-chart-widget.png" alt="File manager window with list of widgets. Charts.mpk file is selected with open context menu next to it. Delete item is hovered." >}}
+{{< figure src="/attachments/appstore/modules/charts/delete-chart-widget.png" width="450px" alt="File manager window with list of widgets. Charts.mpk file is selected with open context menu next to it. Delete item is hovered." >}}
 
 Now all that is left is to install the new version of the charts module.
 

@@ -1703,6 +1703,91 @@ The widget’s style properties are as follows:
 
 The default class to style all background gradients is named `com_mendix_widget_native_backgroundgradient_BackgroundGradient`.
 
+### 11.32 Column Chart
+
+The [column chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/column-chart-native) widget renders a vertical column graph based on static and dynamic data sets.
+
+The widget consists of the following elements:
+
+```xml
+<container/>
+<errorMessage/>
+<chart/>
+<grid/>
+<xAxis>
+	<label/>
+</xAxis>
+<yAxis>
+	<label/>
+</yAxis>
+<legend>
+	<container/>
+	<item/>
+	<indicator/>
+	<label/>
+</legend>
+<domain>
+    </padding>
+</domain>
+<columns>
+    <columnsOffset/>
+    <columnColorPalette/>
+	<customColumnStyles>
+		<any_custom_column_style_name>
+			</column>
+			</label>
+		</any_custom_column_style_name>
+	</customColumnStyles>
+</columns>
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `errorMessage` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `chart` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `grid` | `backgroundColor` | Applies a color to the grid background (string). |
+| `grid` | `dashArray` | Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
+| `grid` | `lineColor` | Applies a color to the grid lines (string). |
+| `grid` | `width` | Applies a width to the grid lines (number). |
+| `grid` | `padding` | Applies padding to all sides of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingBottom` | Applies padding to the bottom side of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingHorizontal` | Applies padding to the horizontal sides of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingLeft` | Applies padding to the left side of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingRight` | Applies padding to the right side of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingTop` | Applies padding to the top side of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingVertical` | Applies padding to the vertical sides of the grid (number). This makes axis value labels visible. |
+| `xAxis` | `color` | Applies a color to the axis value labels (string). |
+| `xAxis` | `dashArray` | Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
+| `xAxis` | `fontFamily` | Applies a font type to the axis value labels (string). |
+| `xAxis` | `fontSize` | Applies a size to the axis value labels (number). |
+| `xAxis` | `fontStyle` | Applies a font style to the axis value labels ("normal" or "italic"). |
+| `xAxis` | `fontWeight` | Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
+| `xAxis` | `lineColor` | Applies a color to the axis line (string). |
+| `xAxis` | `width` | Applies a width to the axis line (number). |
+| `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **bottom** or **right** side of the grid. |
+| `yAxis` | All `xAxis` element styles. | |
+| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. |
+| `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **top** or **left** side of the grid. |
+| `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `legend` > `indicator` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `legend` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `domain` > `padding` | `x` | Applies a number of pixels of padding to add the beginning and end of the X axis domain (number). |
+| `domain` > `padding` | `y` | Applies a number of pixels of padding to add the beginning and end of the Y axis domain (number). |
+| `columns` | `columnColorPalette` | Provides colors to columns that do not have a column color configured (string with list of colors separated by ';', one color for each series). |
+| `columns` | `columnsOffset` | Determines the number of pixels each column in a group should be offset from its original position on the Y axis (number). This is only applicable when presentation mode is **Grouped**. |
+| `columns` > `customColumnStyles` > `any_custom_column_style_name` > `column` | `ending` | Specifies a radius to apply to each column. |
+| `columns` > `customColumnStyles` > `any_custom_column_style_name` > `column` | `columnColor` | Applies a color to the column (string). If columns are configured to have labels, the labels will be the same color as the column. |
+| `columns` > `customColumnStyles` > `any_custom_column_style_name` > `column` | `width` | Applies a width to the column (number). |
+| `columns` > `customColumnStyles` > `any_custom_column_style_name` > `label` | `fontFamily` | Applies a font type to the column label (string). |
+| `columns` > `customColumnStyles` > `any_custom_column_style_name` > `label` | `fontSize` | Applies a size to the column label (number). |
+| `columns` > `customColumnStyles` > `any_custom_column_style_name` > `label` | `fontStyle` | Applies a font style to the column label (**normal** or **italic**). |
+| `columns` > `customColumnStyles` > `any_custom_column_style_name` > `label` | `fontWeight` | Applies a font weight to the column label ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
+
+The default class to style all column chart widgets is named `com_mendix_widget_native_columnchart_ColumnChart`.
+
 ## 12 Read More
 
 * [How to Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling/)

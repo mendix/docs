@@ -60,7 +60,7 @@ This developer mode panel is a "live" settings editor, which means that all your
 
 At the top of the panel you should see drop-down list which controls which shows which settings group is currently selected. By default each chart has a **Layout** group and **Configuration** group—these groups control chart and layout settings. Also, in this drop-down list you will find named groups that allow you to configure chart settings per series.
 
-{{< figure src="/attachments/appstore/modules/charts/charts-dev-panel.png" width="350px" title="Custom settings for Microsoft series in column chart" alt="Panel with dropdown on top and textarea below. Textarea content is a JSON object." >}}
+{{< figure src="/attachments/appstore/modules/charts/charts-dev-panel.png" width="350px" alt="Panel with dropdown on top and textarea below. Textarea content is a JSON object." >}}
 
 {{% alert color="info" %}} 
 To see available options and useful examples, see Plotly's [JavaScript Figure Reference](https://plotly.com/javascript/reference/index/) guide. 
@@ -284,9 +284,9 @@ Now you must remove previous version of the charts widget:
 1. Open your app in **File Manager**. 
 1. Navigate to your **<YOUR_App>/widgets** directory.
 1. Find the *Charts.mpk* file. 
-1. Delete the *Charts.mpk* file:
+1.  Delete the *Charts.mpk* file:
 
-  {{< figure src="/attachments/appstore/modules/charts/delete-chart-widget.png" width="450px" alt="File manager window with list of widgets. Charts.mpk file is selected with open context menu next to it. Delete item is hovered." >}}
+    {{< figure src="/attachments/appstore/modules/charts/delete-chart-widget.png" width="450px" alt="File manager window with list of widgets. Charts.mpk file is selected with open context menu next to it. Delete item is hovered." >}}
 
 Now all that is left is to install the new version of the charts module.
 

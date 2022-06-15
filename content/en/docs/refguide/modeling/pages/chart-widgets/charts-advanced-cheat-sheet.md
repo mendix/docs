@@ -266,7 +266,7 @@ Add the following to the index.html of the theme:
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_SVG"></script>
 ```
 
-More information on LatTex Syntax is available here: https://en.wikibooks.org/wiki/LaTeX/Mathematics.
+More information on LaTex Syntax is available here: https://en.wikibooks.org/wiki/LaTeX/Mathematics.
 
 ### 2.6 Title
 

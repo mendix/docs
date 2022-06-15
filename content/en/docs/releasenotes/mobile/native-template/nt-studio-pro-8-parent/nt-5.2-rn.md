@@ -6,6 +6,14 @@ weight: 10
 description: "Native Template 5.2 release notes."
 ---
 
+## 5.2.13
+
+**Release date: June 15th, 2022**
+
+### Fixes
+
+* We fixed an issue with the date picker not being visible in dark mode.
+
 ## 5.2.12
 
 **Release date: May 11th, 2022**

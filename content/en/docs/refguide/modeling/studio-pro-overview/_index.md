@@ -46,13 +46,13 @@ You can deploy your app by clicking the **Publish** or play (**Run locally**) bu
 
 For more information on deployment in Mendix, see [Deployment](/developerportal/deploy/).
 
-For more information on deploying your app and versioning it, see  the [Versioning an App Deployed to the Cloud](/refguide/using-version-control-in-studio-pro/#versioning-app) section in *Using Version Control in Studio Pro*. 
+For more information on deploying your app and versioning it, see the [Versioning an App Deployed to the Cloud](/refguide/using-version-control-in-studio-pro/#versioning-app) section in *Using Version Control in Studio Pro*. 
 
 ### 2.3 Links and User Profile Menu {#links}
 
 You can find links to the [Mendix Studio](/studio/) (if enabled), [Developer Portal](/developerportal/), and [Marketplace](/appstore/) in the upper-right corner of Studio Pro.
 
-Your profile picture is displayed next to them if you are signed in. When you click the profile picture, the drop-down menu is displayed with your full name and email, as well as links to your user profile, My Apps screen, and signing out option.  
+Your profile picture is displayed next to them if you are signed in. When you click the profile picture, the drop-down menu is displayed with your full name and email, as well as links to your user profile, My Apps screen, and signing out option. 
 
 ## 3 App Structure
 
@@ -60,7 +60,7 @@ An app consists of individual files (*documents*) and settings that are grouped 
 
 ## 4 Working Area
 
-A working area is a current document tab that you work in. The working area and its settings differs depending on an editor (for example, pages, microflows, domain model editors) and type of the document.  
+A working area is a current document tab that you work in. The working area and its settings differs depending on an editor (for example, pages, microflows, domain model editors) and type of the document. 
 
 ### 4.1 Document Tabs {#documents}
 
@@ -92,7 +92,26 @@ On the right is the currently selected language. If you have set up multiple lan
 
 ### 7.1 General Shortcut Keys
 
-In the main window pane, <kbd>Ctrl</kbd> + <kbd>Tab</kbd> can be used to navigate between all open documents. Other shortcut keys that can be used in the main window pane can be found next to their relevant menu item in  [Menus](/refguide/menus/).
+#### 7.1.1 Panes
+
+##### 7.1.1.1 All Panes
+
+You can navigate between Studio Pro panes (for example, the Domain model editor or the Errors pane) using <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd>. This opens a selection dialog where you can choose a pane using the mouse, <kbd>Ctrl</kbd> + arrow keys, or <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd>. You are taken to the selected pane when you click the main mouse button or release the <kbd>Ctrl</kbd> key.
+
+{{< figure src="/attachments/refguide/modeling/studio-pro-overview/ctrl-tab-navigation.png" >}}
+
+Most menu items also have shortcut keys assigned to them that can be used in all panes. These are shown in the menus, listed in [Menu Shortcut Keys](#menu-shortcuts), below, and also listed on the documentation page for each menu under [Menus](/refguide/menus/).
+
+##### 7.1.1.2 Editor Panes Only
+
+The following key combinations work in the editor panes for the Domain Model, Pages, Microflow, and Nanoflows.
+
+| Key | Description |
+| --- | --- |
+| <kbd>Ctrl</kbd> + Mouse scroll wheel | Zooms in or out. This works in all editors. |
+| <kbd>Shift</kbd> + Mouse scroll wheel | Scrolls left or right. Works as if you were using the horizontal scroll bars. |
+
+#### 7.1.2 Dialog Boxes
 
 In most dialog boxes for editing properties, the following shortcut keys can be used:
 
@@ -100,8 +119,7 @@ In most dialog boxes for editing properties, the following shortcut keys can be 
 | --- | --- |
 | <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | Confirms all changes and closes the dialog box. Works as if the **OK** button was clicked. This is especially useful if the focus is on a multi-line text box; otherwise, pressing <kbd>Enter</kbd> will have the same effect. |
 | <kbd>Esc</kbd> | Cancels all changes and closes the dialog box. Works as if the **Cancel** button was clicked. |
-| <kbd>Ctrl</kbd> + Mouse scroll wheel | Zooms in or out. This works in all editors. |
-| <kbd>Shift</kbd> + Mouse scroll wheel | Scrolls left or right. Works as if you were using the horizontal scroll bars. |
+| <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd> | Switches between tabs in a tabbed dialog box. |
 
 In most edit grids (such as the list of attributes in the entity properties), the following shortcut keys can be used:
 
@@ -110,6 +128,8 @@ In most edit grids (such as the list of attributes in the entity properties), th
 | <kbd>Ctrl</kbd> + <kbd>N</kbd> | Creates a new item. |
 | <kbd>Enter</kbd> | Edits the currently selected item. |
 | <kbd>Delete</kbd> | Deletes the currently selected item(s). |
+| <kbd>↑</kbd> / <kbd>↓</kbd> | Selected previous/next item. |
+| <kbd>Ctrl</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd> | Move selected item(s) up/down. |
 
 ### 7.2 Domain Model Editor Shortcut Keys
 
@@ -153,23 +173,56 @@ The following shortcut keys are available for the microflow debugger:
 
 | Key | Description |
 | --- | --- |
-| <kbd>Alt</kbd> + <kbd>F5</kbd> | *Step into* – moves the debugger into the sub-microflow or loop.  |
+| <kbd>Alt</kbd> + <kbd>F5</kbd> | *Step into* – moves the debugger into the sub-microflow or loop. |
 | <kbd>Alt</kbd> + <kbd>F6</kbd> | *Step over* – moves the debugger to the next step in the same microflow. |
-| <kbd>Alt</kbd> + <kbd>F7</kbd> | *Step out* – instructs the debugger to leave the sub-microflow or loop.  |
+| <kbd>Alt</kbd> + <kbd>F7</kbd> | *Step out* – instructs the debugger to leave the sub-microflow or loop. |
 | <kbd>Alt</kbd> + <kbd>F8</kbd> | *Continue* – instructs the debugger to continue until it reaches another breakpoint. |
 
-### 7.6 Language Shortcut Keys
+### 7.6 Menu Shortcut Keys {#menu-shortcuts}
 
-The following shortcut keys control the currently selected language:
+The following shortcut keys are assigned to menu actions that can be used in all panes. These are also shown in the menus and listed on the documentation page for each menu under [Menus](/refguide/menus/).
 
 | Key | Description |
 | --- | --- |
-| <kbd>Ctrl</kbd> + <kbd>L</kbd> | Choose the next language in the list of languages chosen in **Language Settings…**. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd> | Choose the previous language in the list of languages chosen in **Language Settings…**. |
+| <kbd>F1</kbd> | Help. |
+| <kbd>F3</kbd> | Highlight the next find result in the **Find Results** pane and open it in an editor. |
+| <kbd>Shift</kbd> + <kbd>F3</kbd> | Highlight the previous find result in the **Find Results** pane and open it in an editor. |
+| <kbd>F4</kbd> | Synchronize app directory. |
+| <kbd>Ctrl</kbd> + <kbd>F4</kbd> | Exit. |
+| <kbd>F5</kbd> | Run the app locally so you can view the app. |
+| <kbd>Shift</kbd> + <kbd>F5</kbd> | Stop the currently running app. |
+| <kbd>Ctrl</kbd> + <kbd>F5</kbd> | Deploy to licensed cloud node. |
+| <kbd>F6</kbd> | Deploy for Eclipse. |
+| <kbd>F7</kbd> | Create deployment package. |
+| <kbd>F8</kbd> | Highlight the next error in the **Error List** pane and open it in an editor. |
+| <kbd>Shift</kbd> + <kbd>F8</kbd> | Highlight the previous error result in the **Error List** pane and open it in an editor. |
+| <kbd>F9</kbd> | Show the currently running app in the browser (responsive). |
+| <kbd>Ctrl</kbd> + <kbd>F9</kbd> | Show the currently running app in the browser (phone simulation). |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F9</kbd> | Show the currently running app in the browser (tablet simulation). |
+| <kbd>F11</kbd> | Enable and disable full screen mode. |
+| <kbd>Shift</kbd> + <kbd>F11</kbd> | Enable and disable distraction free mode. |
+| <kbd>Ctrl</kbd> + <kbd>C</kbd> | Copy the selected element to the clipboard. |
+| <kbd>Ctrl</kbd>&nbsp;+&nbsp;(<kbd>Shift</kbd>)&nbsp;+&nbsp;<kbd>L</kbd> | Cycle through the configured languages. |
+| <kbd>Ctrl</kbd> + <kbd>F</kbd> | Open search dialog box. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> | Opens advanced search dialog box. |
+| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> | Display usages of the selected object. |
+| <kbd>Ctrl</kbd> + <kbd>G</kbd> | Go to any document or domain model element. |
+| <kbd>Ctrl</kbd> + <kbd>N</kbd> | Create a new document. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd> | Create a new app. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> | Opens an existing app or app package. |
+| <kbd>Ctrl</kbd> + <kbd>S</kbd> | Save the changes in the currently active document tab. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> | Save the changes in all open documents. |
+| <kbd>Ctrl</kbd> + <kbd>V</kbd> | Paste the contents of the clipboard in the current editor. |
+| <kbd>Ctrl</kbd> + <kbd>W</kbd> | Close the current document. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | Close all document tabs. |
+| <kbd>Ctrl</kbd> + <kbd>X</kbd> | Move the selected element to the clipboard. |
+| <kbd>Ctrl</kbd> + <kbd>Y</kbd> | Redo the last undone action in a document tab. |
+| <kbd>Ctrl</kbd> + <kbd>Z</kbd> | Undo the last action in a document tab. |
+| <kbd>Delete</kbd> | Delete the selected element. |
 
 ## 8 Read More
 
 * [App Explorer](/refguide/app-explorer/)
 * [Menus](/refguide/menus/)
 
-  
+ 

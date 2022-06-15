@@ -78,9 +78,9 @@ To navigate to a series' custom settings, do the following:
 1. Select the series you want to configure, then click **Edit**.
 1. Open the **Advanced** tab and paste your custom series settings object there (in JSON format):
 
-{{< figure src="/attachments/appstore/modules/charts/custom-series-settings-step-1.png" width="450px" alt="Two dialog boxes. First shows Data source property with list of series records. Second dialog box show settings for the first series in list. Big red arrow pointing to the Advanced tab of the second dialog box." >}}
+  {{< figure src="/attachments/appstore/modules/charts/custom-series-settings-step-1.png" width="450px" alt="Two dialog boxes. First shows Data source property with list of series records. Second dialog box show settings for the first series in list. Big red arrow pointing to the Advanced tab of the second dialog box." >}}
 
-{{< figure src="/attachments/appstore/modules/charts/custom-series-settings-step-2.png" width="450px" alt="Settings dialog box window with Advanced tab being active and single textarea elemnt." >}}
+  {{< figure src="/attachments/appstore/modules/charts/custom-series-settings-step-2.png" width="450px" alt="Settings dialog box window with Advanced tab being active and single textarea elemnt." >}}
 
 #### 2.2.3 Show Legend
 
@@ -286,7 +286,7 @@ Now you must remove previous version of the charts widget:
 1. Find the *Charts.mpk* file. 
 1. Delete the *Charts.mpk* file:
 
-{{< figure src="/attachments/appstore/modules/charts/delete-chart-widget.png" width="450px" alt="File manager window with list of widgets. Charts.mpk file is selected with open context menu next to it. Delete item is hovered." >}}
+  {{< figure src="/attachments/appstore/modules/charts/delete-chart-widget.png" width="450px" alt="File manager window with list of widgets. Charts.mpk file is selected with open context menu next to it. Delete item is hovered." >}}
 
 Now all that is left is to install the new version of the charts module.
 

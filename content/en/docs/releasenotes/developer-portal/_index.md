@@ -16,6 +16,12 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](/rele
 To see the current status of the Mendix Developer Portal and Control Center, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
 ## 2022
+### June 16th, 2022
+
+#### Fixes
+
+* We fixed an issue where users who had included invalid Twitter URLs in their social profile tab, couldn't change their password.
+* We fixed an issue where users could have a duplicated project membership, resulting in two identical projects on the developer's portal.
 
 ### June 9th, 2022
 

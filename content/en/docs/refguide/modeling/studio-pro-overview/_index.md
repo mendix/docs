@@ -60,7 +60,7 @@ An app consists of individual files (*documents*) and settings that are grouped 
 
 ## 4 Working Area
 
-A working area is a current document tab that you work in. The working area and its settings differs depending on an editor (for example, pages, microflows, domain model editors) and type of the document. 
+A working area is a current document tab that you work in. The working area and its settings differs depending on the editor (for example, pages, microflows, domain model editors) and type of the document. 
 
 ### 4.1 Document Tabs {#documents}
 
@@ -159,9 +159,9 @@ The following shortcut keys are available in the page editor:
 | <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
 | <kbd>F2</kbd> | Edits the caption of a label or button, or the contents of text, inline on the page. You can also just start typing a letter or a digit and the caption will be replaced by what you type. |
 
-### 7.4 Microflow Editor Shortcut Keys
+### 7.4 Microflow and Nanoflow Editor Shortcut Keys
 
-The following shortcut keys are available in the microflow editor:
+The following shortcut keys are available in the microflow and nanoflow editors:
 
 | Key | Description |
 | --- | --- |
@@ -169,20 +169,20 @@ The following shortcut keys are available in the microflow editor:
 | <kbd>Ctrl</kbd> + arrow keys | Moves the currently selected item up/down or left/right. |
 | <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
 | <kbd>F2</kbd> | Edits the name of the return value of the currently selected activity. This shortcut will not function on activities that do not return a result. |
-| <kbd>Home</kbd> | Highlights and focus on the start event of the current microflow. |
-| <kbd>End</kbd> | Highlights and focus on an end event in the current microflow. If there are multiple end events, clicking **End** multiple times will toggle between the different events. |
-| <kbd>Shift</kbd> when resizing an activity | When resizing the entity, by holding <kbd>Shift</kbd> , the microflow component will stay centered at its current position and will expand equally in all directions. |
-| <kbd>Ctrl</kbd> when selecting multiple activities | When pressing the <kbd>Ctrl</kbd>, you can select additional microflow components. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
+| <kbd>Home</kbd> | Highlights and focus on the start event of the current flow. |
+| <kbd>End</kbd> | Highlights and focus on an end event in the current flow. If there are multiple end events, clicking **End** multiple times will toggle between the different events. |
+| <kbd>Shift</kbd> when resizing an activity | When resizing the entity, by holding <kbd>Shift</kbd> , the flow component will stay centered at its current position and will expand equally in all directions. |
+| <kbd>Ctrl</kbd> when selecting multiple activities | When pressing the <kbd>Ctrl</kbd>, you can select additional flow components. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 
-### 7.5 Microflow Debugger Shortcut Keys {#debugger-shortcuts}
+### 7.5 Debugger Shortcut Keys {#debugger-shortcuts}
 
-The following shortcut keys are available for the microflow debugger:
+The following shortcut keys are available for the debugger:
 
 | Key | Description |
 | --- | --- |
-| <kbd>Alt</kbd> + <kbd>F5</kbd> | *Step into* – moves the debugger into the sub-microflow or loop. |
-| <kbd>Alt</kbd> + <kbd>F6</kbd> | *Step over* – moves the debugger to the next step in the same microflow. |
-| <kbd>Alt</kbd> + <kbd>F7</kbd> | *Step out* – instructs the debugger to leave the sub-microflow or loop. |
+| <kbd>Alt</kbd> + <kbd>F5</kbd> | *Step into* – moves the debugger into the sub-flow or loop. |
+| <kbd>Alt</kbd> + <kbd>F6</kbd> | *Step over* – moves the debugger to the next step in the same flow. |
+| <kbd>Alt</kbd> + <kbd>F7</kbd> | *Step out* – instructs the debugger to leave the sub-flow or loop. |
 | <kbd>Alt</kbd> + <kbd>F8</kbd> | *Continue* – instructs the debugger to continue until it reaches another breakpoint. |
 
 ### 7.6 Menu Shortcut Keys {#menu-shortcuts}

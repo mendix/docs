@@ -1560,7 +1560,7 @@ The widget consists of the following elements:
 | `xAxis` | `fontStyle` | Applies a font style to the axis value labels ("normal" or "italic"). |
 | `xAxis` | `fontWeight` | Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
 | `xAxis` | `lineColor` | Applies a color to the axis line (string). |
-| `xAxis` | `lineWidth` | Applies a width to the axis line (number). |
+| `xAxis` | `width` | Applies a width to the axis line (number). |
 | `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
 | `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **bottom** or **right** side of the grid. |
 | `yAxis` | All `xAxis` element styles. | |
@@ -1572,10 +1572,10 @@ The widget consists of the following elements:
 | `legend` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
 | `domain` > `padding` | `x` | Applies a number of pixels of padding to add the beginning and end of the X axis domain (number). |
 | `domain` > `padding` | `y` | Applies a number of pixels of padding to add the beginning and end of the Y axis domain (number). |
-| `bars` | `barColorPalette` | Provides colors to bars that do not have a bar color configured (string with list of colors separated by ';'). |
+| `bars` | `barColorPalette` | Provides colors to bars that do not have a bar color configured (string with list of colors separated by ';', one color for each series). |
 | `bars` | `barsOffset` | Determines the number of pixels each bar in a group should be offset from its original position on the Y axis (number). This is only applicable when presentation mode is **Grouped**. |
 | `bars` > `customBarStyles` > `any_custom_bar_style_name` > `bar` | `ending` | Specifies a radius to apply to each bar. |
-| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `bar` | `color` | Applies a color to the bar (string). If bars are configured to have labels, the labels will be the same color as the bar. |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `bar` | `barColor` | Applies a color to the bar (string). If bars are configured to have labels, the labels will be the same color as the bar. |
 | `bars` > `customBarStyles` > `any_custom_bar_style_name` > `bar` | `width` | Applies a width to the bar (number). |
 | `bars` > `customBarStyles` > `any_custom_bar_style_name` > `label` | `fontFamily` | Applies a font type to the bar label (string). |
 | `bars` > `customBarStyles` > `any_custom_bar_style_name` > `label` | `fontSize` | Applies a size to the bar label (number). |

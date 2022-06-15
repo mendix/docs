@@ -277,7 +277,7 @@ Now your should have two folders: **widgets** and **widgets - Copy**.
 
 If something goes wrong, you can delete your current **widgets** folder and rename **widgets - Copy** to **widgets**.
 
-### 6.2 Removing Existing Charts Widget From Your App
+### 6.2 Removing Existing Charts Widget from Your App
 
 Now you must remove previous version of the charts widget:
 

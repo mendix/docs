@@ -54,13 +54,13 @@ All changes made in developer editor are temporary. To save your progress you sh
 
 When set to **Yes** this property enables **Developer mode** for the selected chart. After enabling **Developer mode** you will see a **Toggle Editor** button. When clicked, this button opens the **Chart settings** panel:
 
-{{< figure src="/attachments/appstore/modules/charts/toggle-editor-button.png" width="450px" alt="Toggle Editor button in top right corner of the chart widget." >}}
+{{< figure src="/attachments/appstore/modules/charts/toggle-editor-button.png" width="350px" alt="Toggle Editor button in top right corner of the chart widget." >}}
 
 This developer mode panel is a "live" settings editor, which means that all your changes will be instantly applied to the current chart.
 
 At the top of the panel you should see drop-down list which controls which shows which settings group is currently selected. By default each chart has a **Layout** group and **Configuration** group—these groups control chart and layout settings. Also, in this drop-down list you will find named groups that allow you to configure chart settings per series.
 
-{{< figure src="/attachments/appstore/modules/charts/charts-dev-panel.png" width="450px" title="Custom settings for Microsoft series in column chart" alt="Panel with dropdown on top and textarea below. Textarea content is a JSON object." >}}
+{{< figure src="/attachments/appstore/modules/charts/charts-dev-panel.png" width="350px" title="Custom settings for Microsoft series in column chart" alt="Panel with dropdown on top and textarea below. Textarea content is a JSON object." >}}
 
 {{% alert color="info" %}} 
 To see available options and useful examples, see Plotly's [JavaScript Figure Reference](https://plotly.com/javascript/reference/index/) guide. 

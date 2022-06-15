@@ -108,7 +108,12 @@ The following key combinations work in the editor panes for the Domain Model, Pa
 
 | Key | Description |
 | --- | --- |
-| <kbd>Ctrl</kbd> + Mouse scroll wheel | Zooms in or out. This works in all editors. |
+| <kbd>Ctrl</kbd> + <kbd>C</kbd> | Copy the selected element to the clipboard. |
+| <kbd>Ctrl</kbd> + <kbd>V</kbd> | Paste the contents of the clipboard in the current editor. |
+| <kbd>Ctrl</kbd> + <kbd>X</kbd> | Move the selected element to the clipboard. |
+| <kbd>Ctrl</kbd> + <kbd>Y</kbd> | Redo the last undone action in an editor pane. |
+| <kbd>Ctrl</kbd> + <kbd>Z</kbd> | Undo the last action in an editor pane. |
+| <kbd>Ctrl</kbd> + Mouse scroll wheel | Zooms in or out. |
 | <kbd>Shift</kbd> + Mouse scroll wheel | Scrolls left or right. Works as if you were using the horizontal scroll bars. |
 
 #### 7.1.2 Dialog Boxes
@@ -137,9 +142,11 @@ The following shortcut keys are available in the domain model editor:
 
 | Key | Description |
 | --- | --- |
-| <kbd>F2</kbd> | Edits the name of the selected element. |
+| <kbd>F2</kbd> | Edits the name of the selected entity, attribute, or association. |
 | <kbd>Ctrl</kbd> + <kbd>A</kbd> | Selects all entities. |
+| <kbd>Ctrl</kbd> when selecting multiple entities | When pressing the <kbd>Ctrl</kbd>, you can select additional entities components. Clicking a selected entity while holding <kbd>Ctrl</kbd> will deselect it. || <kbd>Enter</kbd> | Edits the properties of the currently selected entity, attribute, or association in a dialog box. |
 | <kbd>Esc</kbd> | Clears selection. |
+
 
 ### 7.3 Page Editor Shortcut Keys
 
@@ -150,7 +157,7 @@ The following shortcut keys are available in the page editor:
 | Arrow keys | Moves the selection box to the widget or element in the direction of the arrow key. For example, if currently a label is selected and you press the right arrow key, the text box to the right of it becomes selected. |
 | <kbd>Ctrl</kbd> + arrow keys | Moves the currently selected item up/down or left/right. This works on table columns and rows, tab pages, grid and data view buttons, search fields, etc. |
 | <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
-| <kbd>F2</kbd> | Edits the caption of a label or button inline on the page. You can also just start typing a letter or a digit and the caption will be replaced by what you type. |
+| <kbd>F2</kbd> | Edits the caption of a label or button, or the contents of text, inline on the page. You can also just start typing a letter or a digit and the caption will be replaced by what you type. |
 
 ### 7.4 Microflow Editor Shortcut Keys
 
@@ -201,7 +208,6 @@ The following shortcut keys are assigned to menu actions that can be used in all
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F9</kbd> | Show the currently running app in the browser (tablet simulation). |
 | <kbd>F11</kbd> | Enable and disable full screen mode. |
 | <kbd>Shift</kbd> + <kbd>F11</kbd> | Enable and disable distraction free mode. |
-| <kbd>Ctrl</kbd> + <kbd>C</kbd> | Copy the selected element to the clipboard. |
 | <kbd>Ctrl</kbd>&nbsp;+&nbsp;(<kbd>Shift</kbd>)&nbsp;+&nbsp;<kbd>L</kbd> | Cycle through the configured languages. |
 | <kbd>Ctrl</kbd> + <kbd>F</kbd> | Open search dialog box. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> | Opens advanced search dialog box. |
@@ -212,12 +218,8 @@ The following shortcut keys are assigned to menu actions that can be used in all
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> | Opens an existing app or app package. |
 | <kbd>Ctrl</kbd> + <kbd>S</kbd> | Save the changes in the currently active document tab. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> | Save the changes in all open documents. |
-| <kbd>Ctrl</kbd> + <kbd>V</kbd> | Paste the contents of the clipboard in the current editor. |
 | <kbd>Ctrl</kbd> + <kbd>W</kbd> | Close the current document. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | Close all document tabs. |
-| <kbd>Ctrl</kbd> + <kbd>X</kbd> | Move the selected element to the clipboard. |
-| <kbd>Ctrl</kbd> + <kbd>Y</kbd> | Redo the last undone action in a document tab. |
-| <kbd>Ctrl</kbd> + <kbd>Z</kbd> | Undo the last action in a document tab. |
 | <kbd>Delete</kbd> | Delete the selected element. |
 
 ## 8 Read More

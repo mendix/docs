@@ -2,7 +2,7 @@
 title: "Charts"
 url: /appstore/modules/charts/
 category: "Modules"
-description: "Describes the configuration and usage of the Charts module, which is available in the Mendix Marketplace."
+description: "Describes the configuration and usage of the charts module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "charts", "platform support", "area chart", "bar chart", "bubble chart", "column chart", "heatmap chart", "line chart", "pie chart", "time series chart"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -11,7 +11,7 @@ tags: ["marketplace", "marketplace component", "charts", "platform support", "ar
 
 This [Charts module](https://marketplace.mendix.com/link/component/120527) hosts a collection of updated and improved chart widgets. Beside widget improvements, this module introduces a shared settings file that allows you to define common properties for all your charts in your app.
 
-For information on migrating an older version of the charts widget to version 3 the Charts module, see the [Migrating to the Charts Module](#migrate-to-module) section.
+For information on migrating an older version of the charts widget to the newer charts module, see the [Migrating to the Charts Module](#migrate-to-module) section below.
 
 For information on this module's properties and configurations, see all other sections.
 
@@ -32,17 +32,17 @@ You do not need to put a chart into a data view to feed data into a widget. When
 In this dialog box you will find next properties:
 
 * **Data set**
-  *  **Single** — This represents controls for a single set of dates. This is good option to start, as you can have multiple **Single** series. 
-  *   **Multiple** — Useful if you have a more complex data model or you have a microflow which could be used as data source for your chart. In this case you have to specify which attribute to use as **Series name**, otherwise your widget will be unable to visualise your data correctly.
-* **Data source** — This property controls type and source of your data set. If you click **Edit** you will be presented with a **Data source edit** dialog box where you the data series retrieval location.
-* **Series name** — This property is available only when a **Single** data set is used. It controls the legend of a data series.
-* **Aggregation function** — This property allows you configure the aggregation function for a data series' Y attribute.
+  *  **Single** – This represents controls for a single set of dates. This is good option to start, as you can have multiple **Single** series. 
+  *   **Multiple** – This is useful if you have a more complex data model or you have a microflow which could be used as data source for your chart. In this case you have to specify which attribute to use as **Series name**, otherwise your widget will be unable to visualize your data correctly.
+* **Data source** – This property controls type and source of your data set. If you click **Edit** you will be presented with a **Data source edit** dialog box where you the data series retrieval location.
+* **Series name** – This property is available only when a **Single** data set is used. It controls the legend of a data series.
+* **Aggregation function** – This property allows you configure the aggregation function for a data series' Y attribute.
 
-Beside the **General** tab, you will find three more tabs in the **Edit Seris** dialog box:
+Beside the **General** tab, you will find three more tabs in the **Edit Series** dialog box:
 
-* **Appearance** — This lists properties that allow you to modify styling for current data series. In most cases there will be color properties.
-* **Events** — This lists possible event triggers.
-* **Advanced** — Uses one field which will hold a JSON object with advanced configuration for this data series.
+* **Appearance** – This lists properties that allow you to modify styling for current data series. In most cases there will be color properties.
+* **Events** – This lists possible event triggers.
+* **Advanced** – Uses one field which will hold a JSON object with advanced configuration for this data series.
 
 ### 2.2 General
 
@@ -58,7 +58,7 @@ When set to **Yes** this property enables **Developer mode** for the selected ch
 
 This developer mode panel is a "live" settings editor, which means that all your changes will be instantly applied to the current chart.
 
-At the top of the panel you should see drop-down list which controls which shows which settings group is currently selected. By default each chart has a **Layout** group and **Configuration** group — these groups control chart and layout settings. Also, in this drop-down list you will find named groups that allow you to configure chart settings per series.
+At the top of the panel you should see drop-down list which controls which shows which settings group is currently selected. By default each chart has a **Layout** group and **Configuration** group—these groups control chart and layout settings. Also, in this drop-down list you will find named groups that allow you to configure chart settings per series.
 
 {{< figure src="/attachments/appstore/modules/charts/charts-dev-panel.png" title="Custom settings for Microsoft series in column chart" alt="Panel with dropdown on top and textarea below. Textarea content is a JSON object." >}}
 
@@ -96,10 +96,10 @@ These two properties control labels for each axis respectively.
 
 This property controls horizontal and vertical rulers of the chart:
 
-* **None** — No rulers are visible.
-* **Horizontal** — Only a horizontal ruler is visible.
-* **Vertical** — Only a vertical ruler is visible.
-* **Both** — Both types of rulers are visible.
+* **None** – No rulers are visible.
+* **Horizontal** – Only a horizontal ruler is visible.
+* **Vertical** – Only a vertical ruler is visible.
+* **Both** – Both types of rulers are visible.
 
 ### 3 Dimensions
 
@@ -115,9 +115,9 @@ This property controls width of the widget.
 
 This property controls the unit for measuring widget height:
 
-* **Percentage of width** — Height is measured relative to widget width (use this mode to keep width and height in aspect ratio).
-* **Pixels** — This uses pixels as height unit (a good option for most cases).
-* **Percentage of parent** — Height is measured relative to a parent **height** property (only works when parent has **height** CSS property).
+* **Percentage of width** – Height is measured relative to widget width (use this mode to keep width and height in aspect ratio).
+* **Pixels** – This uses pixels as height unit (a good option for most cases).
+* **Percentage of parent** – Height is measured relative to a parent **height** property (only works when parent has **height** CSS property).
 
 #### 3.4 Height
 
@@ -185,9 +185,9 @@ This controls the scale factor of bubbles on a chart. This value will be used to
 
 This property controls a single data series. An entity in this series should have at least three attributes:
 
-* **x** — This controls the x axis.
-* **y** — This controls the y axis.
-* **value (z)** — This displays "heat" at an "x y" location.
+* **x** – This controls the x axis.
+* **y** – This controls the y axis.
+* **value (z)** – This displays "heat" at an "x y" location.
 
 #### 5.3.2 Horizontal Axis Attribute
 
@@ -257,7 +257,7 @@ This property controls hole radius at the center of the chart (a value of *0* re
 
 Follow these sections to migrate older charts widget versions to the new module version. This process only requires you copy and paste a few files and directories. It should take just couple of minutes.
 
-These steps are only required if you are already using the Charts widget and you want to update it widget to the new module version. If you are starting new app you do not need to do any extra steps: just download the latest [Charts module](https://marketplace.mendix.com/link/component/120527) from Marketplace.
+These steps are only required if you are already using the charts widget and you want to update it widget to the new module version. If you are starting new app you do not need to do any extra steps: just download the latest [Charts module](https://marketplace.mendix.com/link/component/120527) from Marketplace.
 
 To update your charts widget follow sections below.
 
@@ -279,12 +279,12 @@ If something goes wrong, you can delete your current **widgets** folder and rena
 
 ### 6.2 Removing Existing Charts Widget From Your App
 
-Now you must remove previous version of the Charts widget:
+Now you must remove previous version of the charts widget:
 
 1. Open your app in **File Manager**. 
-2. Navigate to your **<YOUR_App>/widgets** directory.
-3. Find the *Charts.mpk* file. 
-4. Delete the *Charts.mpk* file:
+1. Navigate to your **<YOUR_App>/widgets** directory.
+1. Find the *Charts.mpk* file. 
+1. Delete the *Charts.mpk* file:
 
 {{< figure src="/attachments/appstore/modules/charts/delete-chart-widget.png" alt="File manager window with list of widgets. Charts.mpk file is selected with open context menu next to it. Delete item is hovered." >}}
 
@@ -300,7 +300,7 @@ Now do the following:
 
 1. Open Studio Pro.
 1. Navigate to Marketplace.
-1. Install the new Charts module.
+1. Install the new charts module.
 1. Press <kbd>{F4}</kbd> (or click **App** > **Synchronize App Directory**) to synchronize your open app with your file system. This action will notify Studio Pro about new Chart widgets. 
 
 If you see errors in your **Errors List** tab, do not worry. Errors often appear after migration to a new version. Follow the next section to see examples of widget updating which will solve your charts errors.
@@ -325,4 +325,4 @@ The easiest way to update a charts widget is to drop a new charts module next to
 If your app was created in a Studio Pro version below v9.18.0 then you may see some additional errors in the **Errors List** tab from the **Atlas_Web_Content** module. These errors come from some page templates shipped by default with Studio Pro. The simplest solution for these errors is to go to the template and remove all chart widgets from it. If you are using these templates in your app, apply the steps in the *Updating Chart Widgets* section to your templates.
 {{% /alert %}}
 
-Congratulations! You successfully updated your Charts module. After you troubleshoot your errors, run your app to enjoy the new Charts module.
+Congratulations! You successfully updated your charts module. After you troubleshoot your errors, run your app to enjoy the new charts module.

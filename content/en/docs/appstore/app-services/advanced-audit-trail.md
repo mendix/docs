@@ -43,10 +43,7 @@ Advanced Audit Trail contains an [add-on module](refguide/consume-add-on-modules
 ### 1.4 Prerequisites
 
 * You need to use Advanced Audit Trail with Studio Pro 9 versions starting with [9.12](https://docs.mendix.com/releasenotes/studio-pro/9.12/).
-
-* You need to have external data storage to store your audit data that runs in the Mendix Cloud.
-
-  {{% alert color="info" %}}Your applications do not have to be deployed in the Mendix Cloud, as long as they can connect to the external data storage. So it is possible to have a multi-cloud setup with Mendix Cloud to store your audit data and a different cloud to deploy your applications.{{% /alert %}}
+* You need to have a subscription for the Advanced Audit Trail app service to store your data in an external data store that runs in the Mendix Cloud
 
 ### 1.5 Dependencies
 

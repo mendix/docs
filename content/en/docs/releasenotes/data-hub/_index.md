@@ -11,6 +11,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### June 16th, 2022
+
+#### Improvements
+
+* We improved the UI performance during registration of large contracts.
+
 ### June 2nd, 2022
 
 #### Improvements

@@ -9,13 +9,13 @@ tags: ["marketplace", "marketplace component", "app service", "audit trail"]
 
 ## I Introduction
 
-Advanced Audit Trail allows you to trace changes and use infinitely-scalable and fully-indexed data search. Once configured, the system automatically creates audit snapshots of objects to store in the audit trail. This audit trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
+Advanced Audit Trail allows you to trace changes and use infinitely-scalable and fully-indexed data search. Once configured, the system automatically creates audit snapshots of objects to store in the audit trail. The audit trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
 
-Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, and Kibana to leverage their utility. Kafka is used for long-term immutable data storage for audit data, and Elasticserach and Kibana are used to index the audit data. You can find an integration diagram below:
+Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, and Kibana to leverage their utility. Kafka is used for long-term immutable data storage for audit data, and Elasticserach and Kibana are used to index audit data. You can find an integration diagram below:
 
 {{< figure src="/attachments/appstore/app-services/advanced-audit-trail/integration-diagram.png" >}}
 
-{{% alert color="info" %}}This app service is different from the [Audit Trail](/appstore/modules/audit-trail/) module, because it needs less work to implement, and delivers better search user experience and better performance.{{% /alert %}}
+{{% alert color="info" %}}The Advanced Audit Trail app service is different from the [Audit Trail](/appstore/modules/audit-trail/) module, because it needs less work to implement, and delivers a better search experience and better performance.{{% /alert %}}
 
 ### 1.1 Typical Use Cases
 
@@ -25,15 +25,15 @@ Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, an
 
 ### 1.2 Features
 
-*  Records the timestamp, the old value and the changed value, the microflow that triggered the change, and whether the object was created, modified, or deleted, and the user who made the change and their user roles
+*  Records the timestamp, the old value and the changed value, the microflow that triggered the change, and whether the object was created, modified, or deleted, and the user who made the change and their user role
 *  Supports viewing all changes that happened in the same microflow, which helps the auditor understand the context better
 *  Captures the checksum, file size, and name of files which can be used for validation
-*  Supports scheduled events that will regularly send the stored snapshots to an external system
+*  Supports scheduled events that regularly sends the stored snapshots to an external system
 *  Allows the developer to configure an input field where additional information can be supplied about the snapshot to be created—once added, this category will be automatically added to all snapshots
 *  Offers microflows and pages that open a generalized view to show users the trail of a specific object
 *  Supports decoupling: when the external system cannot be reached, the snapshots will be stored in the local database, thus ensuring that the main system will keep on working without a dependency on the external database
 *  Offers auditor interface to search through the external database (across entities)
-*  Supports searching full-text search on the data, search on changed data, and exporting data to CSV format using Kibana
+*  Supports full-text search on data and search on changed data, and export of data to the CSV format using Kibana
 *  Support configuring different permissions for audit data for different users
 
 ### 1.3 Limitations 
@@ -43,7 +43,7 @@ Advanced Audit Trail contains an [add-on module](refguide/consume-add-on-modules
 ### 1.4 Prerequisites
 
 * You need to use Advanced Audit Trail with Studio Pro 9 versions starting with [9.12](https://docs.mendix.com/releasenotes/studio-pro/9.12/).
-* You need to have a [subscription](#obtain-license-key) for the Advanced Audit Trail app service to store your data in an external data storage that runs in the Mendix Cloud
+* You need to have a [subscription](#obtain-license-key) to the Advanced Audit Trail app service to store your data in an external data storage that runs in the Mendix Cloud
 
 ### 1.5 Dependencies
 
@@ -56,7 +56,7 @@ Advanced Audit Trail contains an [add-on module](refguide/consume-add-on-modules
 
 Advanced Audit Trail is a premium Mendix product that is subject to a purchase and subscription fee. You can deploy Advanced Audit Trail locally or in a Mendix Free App for free. However, to deploy Advanced Audit Trial on the cloud, you need to start a subscription to get a license token and [configure](#configure-license-key) it later. To start a subscription, contact your Customer Success Manager (CSM) or the Mendix Sales organization.
 
-### 2.2 Installing the Component in Your app
+### 2.2 Installing the Components in Your app
 
 Followed the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the **Advanced Audit Trail Core** and **AdvancedAuditTrailUI** modules into your project.
 
@@ -65,14 +65,17 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 ## 3 Configuration
 
 1. Set up your application roles to include the right [module roles](#module-rules).
+
 2. Configure the right [constant values](#constants) for the right snapshots.
-3. Implement the **Before Commit** (**BCo**) and **Before Delete** **(Bde)** events. Use the events on the domain model settings (**BCo** / **BDe**).
 
-   You can create **CommitList** microflows that commit a list of objects without events, but use the **Create Snapshot (List)** action. This ensures that the snapshots are committed in a list as well, and therefore minimizing performance impact of the module.
+3. Implement the **Before Commit** (**BCo**) and **Before Delete** **(Bde)** events. Use the events on the domain model settings (**BCo** / **BDe**). In case you need to follow a compliance that requires you to never delete an object, implement this outside the context of the audit trail module.
 
-   {{% alert color="info" %}}When an object is committed without events, this change is not audited unless you explicitly add a `Create Snapshot` or `Create Snapshot (List)` action before the commit.</br></br>When there are multiple **Before Commit** (**BCo**) or **Before Delete** **(Bde)** events that may change the object, the order is not guaranteed. see [Event Handlers](/refguide/event-handlers/). This means that some changes could theoretically fall outside the context of an audit.</br></br>When your Mendix application includes entities with inheritance, we recommend you to only apply the event handler on the generalization of this entity. There are cases where it makes sense to apply the event handler on the specialization instead, but note that applying the event handler to both the generalization and specialization will lead to duplicate snapshots of the same action.</br></br>Some compliances may require you to never delete an object. In that case, you should implement this outside the context of the audit trail module.{{% /alert %}}
+   You can create **CommitList** microflows that commit a list of objects without events, but use the **Create Snapshot (List)** action. This ensures that the snapshots are committed in a list as well, and therefore minimizing performance impact of the module. When an object is committed without events, this change is not audited unless you explicitly add a **Create Snapshot** or **Create Snapshot (List)** action before the commit.
 
-4. Add the open search page microflow (**AdvancedAuditTrailUI.ACT_SnapshotQuery_CreateAndShowSearch**) to the navigation.
+   {{% alert color="info" %}}When your Mendix application includes entities with inheritance, we recommend you to only apply the event handler on the generalization of this entity. There are cases where it makes sense to apply the event handler on the specialization instead, but applying the event handler to both the generalization and specialization will lead to duplicate snapshots of the same action.</br></br>When there are multiple **Before Commit** (**BCo**) or **Before Delete** **(Bde)** events that may change the object, the order is not guaranteed. see [Event Handlers](/refguide/event-handlers/). This means that some changes could theoretically fall outside the context of an audit.{{% /alert %}}
+
+4. Add the open search page microflow **AdvancedAuditTrailUI.ACT_SnapshotQuery_CreateAndShowSearch** to the navigation.
+
 5. Make sure that the [scheduled events](#scheduled-events) are enabled in the cloud portal.
 
    {{% alert color="info" %}}Due to protected modules, we do not show scheduled events in Studio Pro.{{% /alert %}}
@@ -119,7 +122,7 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 
 - **SE_PeriodicVacuum**: This runs a periodic vacuum on a PostgreSQL database. This is not needed on Microsoft SQL. Other database types are not supported. This occurs every 2 hours.
 
-  {{% alert color="info" %}}Enable the scheduled event **SE_PeriodicVacuum** in the cloud portal for PostgreSQL databases. PostgreSQL databases require a regular VACUUM when the application creates and deletes a lot of objects in order to stay quick and not to grow out of disk space. The default Mendix Cloud settings will not always perform the VACUUM when needed. The scheduled event **SE_PeriodicVacuum** performs the VACUUM regularly. This scheduled event is for PostgreSQL only. For more info, see PostgreSQL documentation on [VACUUM]( https://www.postgresql.org/docs/9.6/sql-vacuum.html ) and [ANALYZE](https://www.postgresql.org/docs/9.6/sql-analyze.html).{{% /alert %}}
+  {{% alert color="info" %}}Enable the scheduled event **SE_PeriodicVacuum** in the cloud portal for PostgreSQL databases. PostgreSQL databases require a regular VACUUM when the application creates and deletes a lot of objects in order to stay quick and not to grow out of disk space. The default Mendix Cloud settings will not always perform the VACUUM when needed. The scheduled event **SE_PeriodicVacuum** performs the VACUUM regularly. This scheduled event is for PostgreSQL only. For more information, see PostgreSQL documentation on [VACUUM]( https://www.postgresql.org/docs/9.6/sql-vacuum.html ) and [ANALYZE](https://www.postgresql.org/docs/9.6/sql-analyze.html).{{% /alert %}}
 
 ### 3.4 Advanced Features (Optional)
 
@@ -130,7 +133,7 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 
 ### 3.5 Adding Additional Info to a Snapshot (Optional)
 
-It is possible to submit additional information to the snapshot (e.g., in order to provide a rationale on why the said action has taken place on the object in question). Developers can configure this feature for certain actions (creation, deletion, updating). To use this feature the developer must use the `Set additional info for snapshots` java action (**JA_SetAdditionalInfo**) that is included in the module.
+It is possible to submit additional information to the snapshot (e.g., in order to provide a rationale on why the said action has taken place on the object in question). Developers can configure this feature for certain actions (creation, deletion, updating). To use this feature the developer must use the **Set additional info for snapshots** action (**JA_SetAdditionalInfo**) that is included in the module.
 
 ### 3.6 Implementing Custom User Logging (Optional)
 
@@ -146,9 +149,9 @@ Use the formatter microflows to change how externally stored values will be disp
 
 | Microflow | Formater | Description |
 | --------- | -------- |---|
-| GetAttributes_ConvertDate | Date formatter |Date formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the date follows the US format (month/day/year).|
-| GetAttributes_ConvertDecimal | Decimal formatter |Decimal formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the decimal formatting follows the US format (period — ".") to separate an integer from its partial fractional part|
-| GetAttributes_ConvertMxIdentifier | Mendix object identifier formatter |Mendix object formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, what is displayed in a reference is `[ModuleName].[EntityName] (ObjectGUID)`. One may prefer to display (a combination of) an attribute of the said object as a reference.|
+| **GetAttributes_ConvertDate** | Date formatter |Date formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the date follows the US format (month/day/year).|
+| **GetAttributes_ConvertDecimal** | Decimal formatter |Decimal formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the decimal formatting follows the US format (period – ".") to separate an integer from its partial fractional part|
+| **GetAttributes_ConvertMxIdentifier** | Mendix object identifier formatter |Mendix object formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, what is displayed in a reference is `[ModuleName].[EntityName] (ObjectGUID)`. One may prefer to display (a combination of) an attribute of the said object as a reference.|
 
 ### 3.9 Getting Microflow Stack Trace (Optional)
 

@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue where users with an invalid Twitter URL in the [Social](/developerportal/community-tools/mendix-profile/#social) section of their Mendix Profile Settings couldn't change their password.
+* We fixed an issue where users with an invalid Twitter URL in the [Social](/developerportal/community-tools/mendix-profile/#social) section of their Mendix Profile Settings could not change their password.
 * We fixed an issue where users could have a duplicated project membership, resulting in two identical projects in the Developer Portal
 
 ### June 9th, 2022

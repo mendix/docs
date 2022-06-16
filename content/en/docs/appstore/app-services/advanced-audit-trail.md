@@ -43,12 +43,12 @@ Advanced Audit Trail contains an [add-on module](refguide/consume-add-on-modules
 ### 1.4 Prerequisites
 
 * You need to use Advanced Audit Trail with Studio Pro 9 versions starting with [9.12](https://docs.mendix.com/releasenotes/studio-pro/9.12/).
-* You need to have a [subscription](#obtain-license-key) for the Advanced Audit Trail app service to store your data in an external data store that runs in the Mendix Cloud
+* You need to have a [subscription](#obtain-license-key) for the Advanced Audit Trail app service to store your data in an external data storage that runs in the Mendix Cloud
 
 ### 1.5 Dependencies
 
 * You need to install [Atlas Core](https://marketplace.mendix.com/link/component/117187) and [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) in your application
-* You need to install [Advanced Audit Trail UI](https://marketplace.mendix.com/link/component/120204) in your application
+* You need to install Advanced Audit Trail Core and Advanced Audit Trail UI in your application
 
 ## 2 Installation
 
@@ -79,8 +79,8 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 
 ### 3.1 Module Roles {#module-roles}
 
-*  **Admin**: The admin can query the entire database for the current application and can access the debug pages
-*  **_AddOn_CanChangeEnvironmentInQuery**: This is an additional role for the Admin, which allows the Admin to change the environment in search queries, so that they can also search in other applications
+*  **Admin**: The admin can query the entire database for the current application and can access the debug pages.
+*  **_AddOn_CanChangeEnvironmentInQuery**: This is an additional role for the Admin, which allows the Admin to change the environment in search queries, so that they can also search in other applications.
 *  **DisplayOnly**: The display-only user can view queries that are prepared in microflows, but cannot change any of them. This can restrict the user to seeing information they are allowed to see. The role is tested against cross site scripting (XSS).
 
     {{% alert color="info" %}}Access from and to the long-term data storage is based on service accounts. This means that once a user can access the **Snippet_Settings**, they can access all data in the long-term storage, even if it belongs to other applications in the same environment. Any user-based authentication needs to be implemented in the runtime, for example, by using the **DisplayOnly** module role and the **Query Snapshots for object** setup.{{% /alert %}}
@@ -88,17 +88,17 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 ### 3.2 Constants {#constants}
 
 * Retention settings for the local cached data
-    *  **SnapshotRetentionDays**: the days that the records be kept in the database
-    *  **OnlyDeleteProcessedItems**: whether items should be deleted only if they are sent to the external data storage
-        * If **OnlyDeleteProcessedItems** is set to **True**, the **SnapshotRetentionDays** is only applicable to processed items
-        * If **OnlyDeleteProcessedItems** is set to **False**, it will cause a gap in the audit trail in the external data storage; only used in combination with the **NAV_CachedSnapshot_Overview**.
-
-*  Snapshots
-    *  **IncludeHashedStrings**: whether to include attributes of type Hashed String (e.g. password fields) in the snapshots
-        * **True**: Hashed Strings will be included (storing bcrypt/or other hashed value)
-        * **False**: Hashed Strings will be excluded and therefore not audited
+    *  **SnapshotRetentionDays**: This is the days that the records be kept in the local snapshot cache.
+    *  **OnlyDeleteProcessedItems**: This indicates whether items should be deleted only if they are sent to the external data storage.
+        * If **OnlyDeleteProcessedItems** is set to **True**, the **SnapshotRetentionDays** is only applicable to processed snapshots.
     
-        {{% alert color="info" %}}Manually-encrypted (e.g. using the [Encryption](/appstore/modules/encryption/) module) Strings are not the type of Hashed String and will not be affected by this setting.{{% /alert %}}
+*  Snapshots
+    *  **IncludeHashedStrings**: This indicates whether to include attributes of type Hashed String (e.g. password fields) in the snapshots.
+        
+        * **True**: Hashed Strings will be included (storing bcrypt/or other hashed value).
+        * **False**: Hashed Strings will be excluded and therefore not audited.
+        
+      {{% alert color="info" %}}Manually-encrypted (e.g. using the [Encryption](/appstore/modules/encryption/) module) Strings are not the type of Hashed String and will not be affected by this setting.{{% /alert %}}
   
 * Integration
     *  Environment Name: This is the name of the environment within Kibana, which should be unique in your audit data storage, for example, *myApp-prod*. Do not use any whitespace or tilde (~) for the environment name.
@@ -107,9 +107,9 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
         
     * Environment URL (optional): This is the URL used to identify the environment. If left empty, the Application Runtime URL is used instead. 
     
-    * Kafka Endpoint / Username and Password: the credentials for the kafka environment for sending the data into the long term storage
+    * Kafka Endpoint / Username and Password: These are the credentials for the kafka environment for sending the data into the long-term storage.
     
-    *  Kibana Endpoint / Username and Password: the credentials for the Kibana environment for receiving the data from the long term storage
+    *  Kibana Endpoint / Username and Password: These are the credentials for the Kibana environment for receiving the data from the long-term storage.
        
 ### 3.3 Scheduled Events {#scheduled-events}
 

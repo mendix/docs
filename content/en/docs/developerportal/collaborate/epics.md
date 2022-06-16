@@ -144,7 +144,7 @@ The **Epics** page has a list that shows all the epics for your current app proj
 
 You can create an epic by clicking **Create Epic** on the upper-right corner of the page.
 
-### 4.1 Epic Details Page
+### 4.1 Epic Details Page {#epic-details}
 
 If you click the row of an epic, the epic details page opens and shows the following items:
 

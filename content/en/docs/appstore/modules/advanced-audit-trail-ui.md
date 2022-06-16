@@ -15,10 +15,6 @@ The [Advanced Audit Trail UI](https://marketplace.mendix.com/link/component/1202
 
 You should use this module with the [Advanced Audit Trail](https://marketplace.mendix.com/link/component/120237) module.
 
-### 1.2 Solution Package
-
-For a working copy, see [Advanced Audit Trail solution package](https://marketplace.mendix.com/link/component/120236).
-
 ## 2 Installation
 
 To download and install the Advanced Audit Trail UI module in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can find it in the **App Explorer**.
@@ -52,4 +48,3 @@ To download and install the Advanced Audit Trail UI module in your app, follow t
 * **SnapshotQuery_SearchResults_Popup**: displays the query results in a pop-up window
 * **SnapshotQuery_SearchResults_SingleObject**: displays the results for an object-specific query
 * **SnapshotQuery_SearchResults_SingleObject_Popup**: displays the results for an object-specific query in a pop-up window
-

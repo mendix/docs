@@ -100,6 +100,14 @@ You can navigate between Studio Pro panes (for example, the Domain model editor 
 
 {{< figure src="/attachments/refguide/modeling/studio-pro-overview/ctrl-tab-navigation.png" >}}
 
+There are alternative ways to navigate between tabs within panes: 
+
+| Key | Description |
+| --- | --- |
+| <kbd>Ctrl</kbd> + <kbd>1</kbd> - <kbd>0</kbd> | Switch to tab at selected tab position in active pane. |
+| <kbd>Ctrl</kbd> + <kbd>PgUp</kbd> / <kbd>PgDn</kbd> | Switch to next/previous tab in active pane. |
+| <kbd>Ctrl</kbd>&nbsp;+&nbsp;(<kbd>Shift</kbd>)&nbsp;+&nbsp;<kbd>Tab</kbd> | Open pane navigation dialog. |
+
 Most menu items also have shortcut keys assigned to them that can be used in all panes. These are shown in the menus, listed in [Menu Shortcut Keys](#menu-shortcuts), below, and also listed on the documentation page for each menu under [Menus](/refguide/menus/).
 
 ##### 7.1.1.2 Editor Panes Only
@@ -114,7 +122,7 @@ The following key combinations work in the editor panes for the Domain Model, Pa
 | <kbd>Ctrl</kbd> + <kbd>Y</kbd> | Redo the last undone action in an editor pane. |
 | <kbd>Ctrl</kbd> + <kbd>Z</kbd> | Undo the last action in an editor pane. |
 | <kbd>Ctrl</kbd> + Mouse scroll wheel | Zooms in or out. |
-| <kbd>Shift</kbd> + Mouse scroll wheel | Scrolls left or right. Works as if you were using the horizontal scroll bars. |
+| <kbd>Shift</kbd>&nbsp;+&nbsp;Mouse&nbsp;scroll&nbsp;wheel | Scrolls left or right. Works as if you were using the horizontal scroll bars. |
 
 #### 7.1.2 Dialog Boxes
 
@@ -124,7 +132,7 @@ In most dialog boxes for editing properties, the following shortcut keys can be 
 | --- | --- |
 | <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | Confirms all changes and closes the dialog box. Works as if the **OK** button was clicked. This is especially useful if the focus is on a multi-line text box; otherwise, pressing <kbd>Enter</kbd> will have the same effect. |
 | <kbd>Esc</kbd> | Cancels all changes and closes the dialog box. Works as if the **Cancel** button was clicked. |
-| <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd> | Switches between tabs in a tabbed dialog box. |
+| <kbd>Ctrl</kbd>&nbsp;+&nbsp;(<kbd>Shift</kbd>)&nbsp;+&nbsp;<kbd>Tab</kbd> | Switches between tabs in a tabbed dialog box. |
 
 In most edit grids (such as the list of attributes in the entity properties), the following shortcut keys can be used:
 
@@ -143,8 +151,9 @@ The following shortcut keys are available in the domain model editor:
 | Key | Description |
 | --- | --- |
 | <kbd>F2</kbd> | Edits the name of the selected entity, attribute, or association. |
-| <kbd>Ctrl</kbd> + <kbd>A</kbd> | Selects all entities. |
-| <kbd>Ctrl</kbd> when selecting multiple entities | When pressing the <kbd>Ctrl</kbd>, you can select additional entities components. Clicking a selected entity while holding <kbd>Ctrl</kbd> will deselect it. || <kbd>Enter</kbd> | Edits the properties of the currently selected entity, attribute, or association in a dialog box. |
+| <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>A</kbd> | Selects all entities. |
+| <kbd>Ctrl</kbd> | When pressing the <kbd>Ctrl</kbd>, you can select additional entities components. Clicking a selected entity while holding <kbd>Ctrl</kbd> will deselect it. |
+| <kbd>Enter</kbd> | Edits the properties of the currently selected entity, attribute, or association in a dialog box. |
 | <kbd>Esc</kbd> | Clears selection. |
 
 
@@ -155,7 +164,7 @@ The following shortcut keys are available in the page editor:
 | Key | Description |
 | --- | --- |
 | Arrow keys | Moves the selection box to the widget or element in the direction of the arrow key. For example, if currently a label is selected and you press the right arrow key, the text box to the right of it becomes selected. |
-| <kbd>Ctrl</kbd> + arrow keys | Moves the currently selected item up/down or left/right. This works on table columns and rows, tab pages, grid and data view buttons, search fields, etc. |
+| <kbd>Ctrl</kbd>&nbsp;+&nbsp;arrow&nbsp;keys | Moves the currently selected item up/down or left/right. This works on table columns and rows, tab pages, grid and data view buttons, search fields, etc. |
 | <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
 | <kbd>F2</kbd> | Edits the caption of a label or button, or the contents of text, inline on the page. You can also just start typing a letter or a digit and the caption will be replaced by what you type. |
 
@@ -166,13 +175,13 @@ The following shortcut keys are available in the microflow and nanoflow editors:
 | Key | Description |
 | --- | --- |
 | Arrow keys | Moves the selection box to the activity or element in the direction of the arrow key. For example, if currently a show page activity is selected and you press the right arrow key, the end event to the right of it becomes selected. |
-| <kbd>Ctrl</kbd> + arrow keys | Moves the currently selected item up/down or left/right. |
+| <kbd>Ctrl</kbd>&nbsp;+&nbsp;arrow&nbsp;keys | Moves the currently selected item up/down or left/right. |
 | <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
 | <kbd>F2</kbd> | Edits the name of the return value of the currently selected activity. This shortcut will not function on activities that do not return a result. |
 | <kbd>Home</kbd> | Highlights and focus on the start event of the current flow. |
 | <kbd>End</kbd> | Highlights and focus on an end event in the current flow. If there are multiple end events, clicking **End** multiple times will toggle between the different events. |
-| <kbd>Shift</kbd> when resizing an activity | When resizing the entity, by holding <kbd>Shift</kbd> , the flow component will stay centered at its current position and will expand equally in all directions. |
-| <kbd>Ctrl</kbd> when selecting multiple activities | When pressing the <kbd>Ctrl</kbd>, you can select additional flow components. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
+| <kbd>Shift</kbd>  | When resizing the entity, by holding <kbd>Shift</kbd> , the flow component will stay centered at its current position and will expand equally in all directions. |
+| <kbd>Ctrl</kbd>  | When pressing the <kbd>Ctrl</kbd>, you can select additional flow components. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 
 ### 7.5 Debugger Shortcut Keys {#debugger-shortcuts}
 
@@ -180,7 +189,7 @@ The following shortcut keys are available for the debugger:
 
 | Key | Description |
 | --- | --- |
-| <kbd>Alt</kbd> + <kbd>F5</kbd> | *Step into* – moves the debugger into the sub-flow or loop. |
+| <kbd>Alt</kbd>&nbsp;+&nbsp;<kbd>F5</kbd> | *Step into* – moves the debugger into the sub-flow or loop. |
 | <kbd>Alt</kbd> + <kbd>F6</kbd> | *Step over* – moves the debugger to the next step in the same flow. |
 | <kbd>Alt</kbd> + <kbd>F7</kbd> | *Step out* – instructs the debugger to leave the sub-flow or loop. |
 | <kbd>Alt</kbd> + <kbd>F8</kbd> | *Continue* – instructs the debugger to continue until it reaches another breakpoint. |

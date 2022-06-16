@@ -1,15 +1,15 @@
 ---
-title: "Business Events"
-url: /appstore/modules/business-events/
+title: "Mendix Business Events"
+url: /appstore/modules/mendix-business-events/
 category: "Modules"
-description: "Describes the configuration and usage of the Business Events module, which is available in the Mendix Marketplace."
+description: "Describes the configuration and usage of the Mendix Business Events module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "business events", "data broker", "event broker", "kafka", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Business Events](https://marketplace.mendix.com/link/component/117555) module enables your Mendix apps to be event-driven. With Business Events, applications can signal when something important happens, and apps can independently subscribe to these events if they want to be informed. Mendix Business Events are like a mailing list to share event notification between apps.
+The [Mendix Business Events](https://marketplace.mendix.com/link/component/117555) module enables your Mendix apps to be event-driven. With Mendix Business Events, applications can signal when something important happens, and apps can independently subscribe to these events if they want to be informed. Mendix Business Events are like a mailing list to share event notification between apps.
 
 The key difference doing this with Business Events compared to traditional communication between apps like you may know from REST or Web Services is that there is no direct communication between the different apps. Applications publish events to the Mendix Event Broker, or subscribe to events with the Mendix Event Broker.
 
@@ -29,7 +29,7 @@ To use the Business Events module, you will need the following:
 
 ## 2 Configuration
 
-When you want to publish or consume business events, the **Business Events** module must be imported and setup in your app. Follow these steps for *first time* setup.
+When you want to publish or consume business events, the **Mendix Business Events** module must be imported and setup in your app. Follow these steps for *first time* setup.
 
 After downloading the module from the Marketplace and adding it to your app.
 
@@ -201,11 +201,11 @@ The Outbox will publish each Business Event only once.  This however does not pr
 
 7. Are business events guaranteed to be delivered in the original sequence?
 
-Events will be delivered in the sequence that they where produced in.  The Business Events module however persists the event to the Entity table in this order.  Once the entity is persisted it triggers the microflow for the persisted entity.  A failure in the microflow can cause data to become out of sequence.  Event ordering is not currently a feature of Business Events.
+Events will be delivered in the sequence that they where produced in.  The Mendix Business Events module however persists the event to the Entity table in this order.  Once the entity is persisted it triggers the microflow for the persisted entity.  A failure in the microflow can cause data to become out of sequence.  Event ordering is not currently a feature of Business Events.
 
 8. How do I detect and correct failed processing of received events?
 
-The Business Events module uses Mendix 9 Task queue to publish/consume events, so all the capabilities of observability of task queue can be used here as well.
+The Mendix Business Events module uses Mendix 9 Task queue to publish/consume events, so all the capabilities of observability of task queue can be used here as well.
 
 9. How do I configure which Kafka cluster to use?
 

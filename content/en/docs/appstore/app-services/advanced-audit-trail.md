@@ -43,7 +43,7 @@ Advanced Audit Trail contains an [add-on module](refguide/consume-add-on-modules
 ### 1.4 Prerequisites
 
 * You need to use Advanced Audit Trail with Studio Pro 9 versions starting with [9.12](https://docs.mendix.com/releasenotes/studio-pro/9.12/).
-* You need to have a subscription for the Advanced Audit Trail app service to store your data in an external data store that runs in the Mendix Cloud
+* You need to have a [subscription](#obtain-license-key) for the Advanced Audit Trail app service to store your data in an external data store that runs in the Mendix Cloud
 
 ### 1.5 Dependencies
 
@@ -58,9 +58,9 @@ Advanced Audit Trail is a premium Mendix product that is subject to a purchase a
 
 ### 2.2 Installing the Component in Your app
 
-Followed the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the **AdvancedAuditTrail** and **AdvancedAuditTrailUI** modules into your project.
+Followed the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the **Advanced Audit Trail Core** and **AdvancedAuditTrailUI** modules into your project.
 
-{{% alert color="info" %}}If you update the **AdvancedAuditTrail** module, make sure that you update the **AdvancedAuditTrailUI** module to the same version.{{% /alert %}}
+{{% alert color="info" %}}If you update the **Advanced Audit Trail Core** module, make sure that you update the **AdvancedAuditTrailUI** module to the same version.{{% /alert %}}
 
 ## 3 Configuration
 
@@ -101,7 +101,7 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
         {{% alert color="info" %}}Manually-encrypted (e.g. using the [Encryption](/appstore/modules/encryption/) module) Strings are not the type of Hashed String and will not be affected by this setting.{{% /alert %}}
   
 * Integration
-    *  Environment Name: This is the name of the environment within Kibana, which should be unique in your audit data storage, for example, *myApp-prod*. Do not use any whitespace for the environment name.
+    *  Environment Name: This is the name of the environment within Kibana, which should be unique in your audit data storage, for example, *myApp-prod*. Do not use any whitespace or tilde (~) for the environment name.
 
         {{% alert color="info" %}}If two applications use the same name, the audit trail will not be able to distinguish between the two, effectively breaking the audit trail for both applications irreversibly.{{% /alert %}}
         

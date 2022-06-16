@@ -66,16 +66,16 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 
 1. Set up your application roles to include the right [module roles](#module-rules).
 2. Configure the right [constant values](#constants) for the right snapshots.
-3.  Implement the **Before Commit** (**BCo**) and **Before Delete** **(Bde)** events. Use the events on the domain model settings (**BCo** / **BDe**).
+3. Implement the **Before Commit** (**BCo**) and **Before Delete** **(Bde)** events. Use the events on the domain model settings (**BCo** / **BDe**).
 
-    You can create **CommitList** microflows that commit a list of objects without events, but use the **Create Snapshot (List)** action. This ensures that the snapshots are committed in a list as well, and therefore minimizing performance impact of the module.
-    
-    {{% alert color="info" %}}When an object is committed without events, this change is not audited unless you explicitly add a `Create Snapshot` or `Create Snapshot (List)` action before the commit.</br></br>When there are multiple  **Before Commit** (**BCo**) or **Before Delete** **(Bde)** events that may change the object, the order is not guaranteed. see [Event Handlers](/refguide/event-handlers/). This means that some changes could theoretically fall outside the context of an audit.</br></br>For specializations and generalizations, you should either add the event to the generalized object *or* to all the specializations; otherwise the event can be triggered twice.</br></br>Some compliances may require you to never delete an object. In that case, you should implement this outside the context of the audit trail module.{{% /alert %}}
-    
-4. Add search to the navigation, or implement the Query Snapshots for object action.
-5.  Make sure that the [scheduled events](#scheduled-events) are enabled in the cloud portal.
+   You can create **CommitList** microflows that commit a list of objects without events, but use the **Create Snapshot (List)** action. This ensures that the snapshots are committed in a list as well, and therefore minimizing performance impact of the module.
 
-    {{% alert color="info" %}}Due to protected modules, we do not show scheduled events in Studio Pro.{{% /alert %}}
+   {{% alert color="info" %}}When an object is committed without events, this change is not audited unless you explicitly add a `Create Snapshot` or `Create Snapshot (List)` action before the commit.</br></br>When there are multiple  **Before Commit** (**BCo**) or **Before Delete** **(Bde)** events that may change the object, the order is not guaranteed. see [Event Handlers](/refguide/event-handlers/). This means that some changes could theoretically fall outside the context of an audit.</br></br>For specializations and generalizations, you should either add the event to the generalized object *or* to all the specializations; otherwise the event can be triggered twice.</br></br>Some compliances may require you to never delete an object. In that case, you should implement this outside the context of the audit trail module.{{% /alert %}}
+
+4. Add the open search page microflow (**AdvancedAuditTrailUI.ACT_SnapshotQuery_CreateAndShowSearch**) to the navigation.
+5. Make sure that the [scheduled events](#scheduled-events) are enabled in the cloud portal.
+
+   {{% alert color="info" %}}Due to protected modules, we do not show scheduled events in Studio Pro.{{% /alert %}}
 
 ### 3.1 Module Roles {#module-roles}
 
@@ -90,8 +90,8 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 * Retention settings for the local cached data
     *  **SnapshotRetentionDays**: the days that the records be kept in the database
     *  **OnlyDeleteProcessedItems**: whether items should be deleted only if they are sent to the external data storage
-
-        {{% alert color="info" %}}Setting this to **false** will lead to a gap in the audit trail in the external data storage. This is only used in combination with the **NAV_CachedSnapshot_Overview**.{{% /alert %}}
+        * If **OnlyDeleteProcessedItems** is set to **True**, the **SnapshotRetentionDays** is only applicable to processed items
+        * If **OnlyDeleteProcessedItems** is set to **False**, it will cause a gap in the audit trail in the external data storage; only used in combination with the **NAV_CachedSnapshot_Overview**.
 
 *  Snapshots
     *  **IncludeHashedStrings**: whether to include attributes of type Hashed String (e.g. password fields) in the snapshots

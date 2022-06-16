@@ -29,7 +29,7 @@ Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, an
 *  Supports viewing all changes that happened in the same microflow, which helps the auditor understand the context better
 *  Captures the checksum, file size, and name of files which can be used for validation
 *  Supports scheduled events that will regularly send the stored snapshots to an external system
-*  Allows the user to add a page to the interface where they have to specify why a change is made – once added, this will be automatically added to all the tracked changes 
+*  Allows the developer to configure an input field where additional information can be supplied about the snapshot to be created—once added, this category will be automatically added to all snapshots
 *  Offers microflows and pages that open a generalized view to show users the trail of a specific object
 *  Supports decoupling: when the external system cannot be reached, the snapshots will be stored in the local database, thus ensuring that the main system will keep on working without a dependency on the external database
 *  Offers auditor interface to search through the external database (across entities)
@@ -88,7 +88,7 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 ### 3.2 Constants {#constants}
 
 * Retention settings for the local cached data
-    *  **LogRetentionDays**: the days that the records be kept in the database
+    *  **SnapshotRetentionDays**: the days that the records be kept in the database
     *  **OnlyDeleteProcessedItems**: whether items should be deleted only if they are sent to the external data storage
 
         {{% alert color="info" %}}Setting this to **false** will lead to a gap in the audit trail in the external data storage. This is only used in combination with the **NAV_CachedSnapshot_Overview**.{{% /alert %}}
@@ -115,7 +115,7 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 
 - **SE_SendAuditSnapshots**: This sends the cached data to the external data storage. This occurs each minute.
 
-- **SE_CleanupSnapshotCache**: This cleans up the cached data based on the retention settings – **OnlyDeleteProcessedItems** and **LogRetentionDays**.This occurs daily at 3:00 AM UTC.
+- **SE_CleanupSnapshotCache**: This cleans up the cached data based on the retention settings – **OnlyDeleteProcessedItems** and **SnapshotRetentionDays**. This occurs daily at 3:00 AM UTC.
 
 - **SE_PeriodicVacuum**: This runs a periodic vacuum on a PostgreSQL database. This is not needed on Microsoft SQL. Other database types are not supported. This occurs every 2 hours.
 
@@ -130,7 +130,7 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 
 ### 3.5 Adding Additional Info to a Snapshot (Optional)
 
-It is possible to add additional info to the snapshot (e.g. to capture why a user has done a specific change). Use `Set additional info for snapshots`. All snapshots that will be created in this microflow, after this action runs, will have this additional info.
+It is possible to submit additional information to the snapshot (e.g., in order to provide a rationale on why the said action has taken place on the object in question). Developers can configure this feature for certain actions (creation, deletion, updating). To use this feature the developer must use the `Set additional info for snapshots` java action (**JA_SetAdditionalInfo**) that is included in the module.
 
 ### 3.6 Implementing Custom User Logging (Optional)
 

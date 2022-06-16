@@ -284,7 +284,7 @@ The following should be taken into account when configuring the metrics registri
 
 2. If you have a metric and another metric with the same name but with additional tags, these will be considered as different metrics. Example, Metric ("app.counter1") and ("app.counter1" with tag ("version" -> "1")) are different.
 
-3. Filters are executed on a first come, first served basis. Hence the first applied filter gets the priority. For example, If you have a below setup,
+3. Filters are executed in the order they are listed. The metric must pass all the criteria to be accepted. For example, if you have a below setup,
 
     ```json
     [

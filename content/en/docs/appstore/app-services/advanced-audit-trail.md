@@ -66,7 +66,7 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 
 1. Set up your application roles to include the right [module roles](#module-rules).
 2. Configure the right [constant values](#constants) for the right snapshots.
-3.  Implement the **Before Commit** (**BCo**) and **Before Delete** **(Bde)** events (see the examples). Use the events on the domain model settings (**BCo** / **BDe**).
+3.  Implement the **Before Commit** (**BCo**) and **Before Delete** **(Bde)** events. Use the events on the domain model settings (**BCo** / **BDe**).
 
     You can create **CommitList** microflows that commit a list of objects without events, but use the **Create Snapshot (List)** action. This ensures that the snapshots are committed in a list as well, and therefore minimizing performance impact of the module.
     

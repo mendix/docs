@@ -104,16 +104,15 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
       {{% alert color="info" %}}Manually-encrypted (e.g. using the [Encryption](/appstore/modules/encryption/) module) Strings are not the type of Hashed String and will not be affected by this setting.{{% /alert %}}
   
 * Integration
-    *  Environment Name: This is the name of the environment within Kibana, which should be unique in your audit data storage, for example, *myApp-prod*. Do not use any whitespace or tilde (~) for the environment name.
+    *  **EnvironmentName**: This is the name of the environment within Kibana, which should be unique in your audit data storage, for example, *myApp-prod*. Do not use any whitespace or tilde (~) for the environment name.
 
         {{% alert color="info" %}}If two applications use the same name, the audit trail will not be able to distinguish between the two, effectively breaking the audit trail for both applications irreversibly.{{% /alert %}}
         
-    * Environment URL (optional): This is the URL used to identify the environment. If left empty, the Application Runtime URL is used instead. 
+    * **EnvironmentURL** (optional): This is the URL used to identify the environment. If left empty, the Application Runtime URL is used instead. 
     
-    * Kafka Endpoint / Username and Password: These are the credentials for the kafka environment for sending the data into the long-term storage.
+    * **Kafka_Endpoint** / **Kafka_Username** and **Kafka_Password**: These are the credentials for the kafka environment for sending the data into the long-term storage.
     
-    *  Kibana Endpoint / Username and Password: These are the credentials for the Kibana environment for receiving the data from the long-term storage.
-       
+    * **Kibana_Endpoint** / **Kibana_Username** and **Kibana_Password**: These are the credentials for the Kibana environment for receiving the data from the long-term storage.
 ### 3.3 Scheduled Events {#scheduled-events}
 
 - **SE_SendAuditSnapshots**: This sends the cached data to the external data storage. This occurs each minute.
@@ -131,9 +130,9 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
   - Check the default values of the **NPE Settings** object in the domain model, since they will be used for configuring the app
   - Enable **SE_CleanupAuditSnapshots** if you want to use the retention settings and delete objects
 
-### 3.5 Adding Additional Info to a Snapshot (Optional)
+### 3.5 Setting Additional Info to a Snapshot (Optional)
 
-It is possible to submit additional information to the snapshot (e.g., in order to provide a rationale on why the said action has taken place on the object in question). Developers can configure this feature for certain actions (creation, deletion, updating). To use this feature the developer must use the **Set additional info for snapshots** action (**JA_SetAdditionalInfo**) that is included in the module.
+It is possible to submit additional information to the snapshot (e.g., in order to provide a rationale on why the said action has taken place on the object in question). Developers can configure this feature for certain actions (creation, deletion, updating). To use this feature the developer must use the action **JA_SetAdditionalInfo** that is included in the module to set additional info for snapshots.
 
 ### 3.6 Implementing Custom User Logging (Optional)
 

@@ -32,7 +32,7 @@ Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, an
 *  Allows the user to add a page to the interface where they have to specify why a change is made – once added, this will be automatically added to all the tracked changes 
 *  Offers microflows and pages that open a generalized view to show users the trail of a specific object
 *  Supports decoupling: when the external system cannot be reached, the snapshots will be stored in the local database, thus ensuring that the main system will keep on working without a dependency on the external database
-*  Offers admin interface to search through the external database (across entities)
+*  Offers auditor interface to search through the external database (across entities)
 *  Supports searching full-text search on the data, search on changed data, and exporting data to CSV format using Kibana
 *  Support configuring different permissions for audit data for different users
 

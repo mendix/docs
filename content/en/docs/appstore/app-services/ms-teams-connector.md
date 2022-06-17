@@ -58,7 +58,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 1. Go to the [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) page in the marketplace.
 2. Click **Subscribe** to start a subscription.
 3. Select your subscription plan.
-4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
+4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments, and other required information and then place the order. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Owner will receive an email that says the app service is ready to be used.
 6. Click the link in the email to go to the [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
 7. Click **Microsoft Teams Connector** to open the service management dashboard.

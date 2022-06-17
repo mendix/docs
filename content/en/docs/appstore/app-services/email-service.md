@@ -63,7 +63,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 1. Go to the [Email Service](https://marketplace.mendix.com/link/component/118393/) page in the marketplace.
 2. Click **Subscribe** to start a subscription.
 3. Select your subscription plan.
-4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
+4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments, and other required information and then place the order. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Contact will receive an email that says the app service is ready to be used.
 6. Click the link in the email to go to the [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
 7. Click **Email Service** to open the service management dashboard.
@@ -119,7 +119,7 @@ To configure the **Send email** activity, double-click the activity and specify 
     *  **Body** – Defines the body of the email
 
         {{% alert type="info" %}}If you want to send an HTML message, you can generate HTML content, and add the generated HTML string in the **Body** field. For more information, see the [Generating HTML Body Content](#generate-html-body) section below.{{% /alert %}}
-  
+    
     * **Attachment** – Defines the attachment to the email
 
 After the **Send Email** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the recipients.
@@ -230,17 +230,17 @@ If you are the Technical Contact, you can configure the sender's email addresses
             3.  Click **Verify** to verify the email address(es). 
         
                 {{% alert type="info" %}}You can view, add, or delete the email addresses associated with the domain in the **Domain based Email Identities** dialog box.{{% /alert %}}
-   
+            
                 A window opens and tells you that the verification process is in progress.
 
                 {{< figure src="/attachments/appstore/app-services/email-service/domain-verification-in-progress.png" >}}
-   
+            
                 Until the verification process is completed, you should continue to see a message saying the verification is pending.
-   
+            
                 {{< figure src="/attachments/appstore/app-services/email-service/domain-verification-pending.png" >}}
-   
+      
         The Domain Keys Identified Mail (DKIM) settings for your domain and domain verification records become available. You can use these records for email security purposes.
-   
+      
         {{< figure src="/attachments/appstore/app-services/email-service/dkim-and-domain-verification-record.png" >}}
 
 ## 6 Increasing the Deliverability of Your Emails

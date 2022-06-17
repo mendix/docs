@@ -51,7 +51,7 @@ A trial gives everyone in your company access to the app service. To start a tri
 1. Go to the [General Purpose OCR](https://marketplace.mendix.com/link/component/118388) page in the Marketplace.
 2. Click **Subscribe** to start a subscription.
 3. Select your subscription plan.
-4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that your request has been received.
+4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments, and other required information and then place the order. A page opens and confirms that your request has been received.
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Owner will receive an email that says the app service is ready to be used.
 6. Click the link in the email to go to the [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
 7. Click **General Purpose OCR** to open the [service management dashboard](/appstore/general/app-store-overview/#service-management-dashboard).
@@ -89,7 +89,7 @@ A document can have multiple pages, so there is a **Page** entity. A page can co
 
 If the block is text or a barcode, it is associated with a **Text** entity, which is associated with a **Paragraph** entity. A paragraph can have multiple lines, so the **Paragraph** entity has a **LineContent** attribute.
 
-If the block is a table,  it is associated with a **Row** entity, as a table can be divided multiple rows. A row can have multiple cells and text, so there is a **CellText** entity. A cell can contain multiple paragraphs, so there is **CellParagraph** entity. A paragraph can have multiple lines, so **CellParagraph** entity has a **LineContent** attribute. The **Linecontent** attribute contains the actual data.
+If the block is a table,  it is associated with a **Row** entity, as a table can be divided multiple rows. A row can have multiple cells and text, so there is a **CellText** entity. A cell can contain multiple paragraphs, so there is **CellParagraph** entity. A paragraph can have multiple lines, so **CellParagraph** entity has a **LineContent** attribute. The **LineContent** attribute contains the actual data.
 
 ### 3.2 Configuring the Binding Keys {#configure-keys}
 
@@ -101,9 +101,9 @@ Before you deploy an app, you should configure the binding keys in your app as f
 
 ## 4 Usage
 
-To use the General Purpose OCR, first create an [import mapping](/refguide/import-mappings/) that defines how to map extracted data from documents to an entity, and then include the [General Purpose OCR activity](#extraction-activity) in a microflow. This microflow should be set up to accept your input documents, extract data from the documents in bulk, and then map the data to an entity using the import mapping that you created.
+To use the General Purpose OCR, first create an [import mapping](/refguide/import-mappings/) that defines how to map extracted data from documents to an entity, and then include the General Purpose OCR or the General Purpose OCR in Background activity in a microflow. This microflow should be set up to accept your input documents, extract data from the documents in bulk, and then map the data to an entity using the import mapping that you created.
 
-### 4.1 Extracting Data {#extraction-activity}
+### 4.1 Extracting Data
 
 To extract the data, perform the following steps:
 
@@ -153,7 +153,7 @@ To configure the activity, perform the following steps:
 
     {{% alert type="info" %}}This microflow will be called internally from the java action once the extraction result is received from backend, and this extraction result will be passed as a parameter to this selected microflow.{{% /alert %}}
 
-3. For **Microflow Input Parameter**, click **Edit** and enter a string as the name of the input parameter for the microflow. This should be the name of the parameter of the object of **GPO.ExtractionResponse** used in the microflow that you set for **Extraction Result Microflow**.
+3. For **Microflow Input Parameter**, click **Edit** and enter a string as the name of the input parameter for the microflow. This should be the name of the parameter of the object from **GPO.ExtractionResponse** used in the microflow that you set for **Extraction Result Microflow**.
 4. For **Use return value**, if you want to use the response results, select **Yes**; otherwise, select **No**. The Boolean value indicates whether you accept or decline the request for data extraction.
 5. For **Variable name**, enter **ReturnValueName**.
 6. Click **OK** to save the changes.

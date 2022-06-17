@@ -133,3 +133,5 @@ Be sure to import `com.mendix.core.Core` so you are able to execute `Core.retrie
 {{% /alert %}}
 
 When setting the `Reverse` Boolean to true and using the `Specialization` object as the input, the returned list will contain all the generalizations associated to the specialization.
+
+You can view a brief video demonstrating how to use reversed() here:  https://www.youtube.com/watch?v=5tznw5ZUQgk&t=14s

@@ -64,7 +64,7 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 
 ## 3 Configuration
 
-1. Set up your application roles to include the right [module roles](#module-rules).
+1. Set up your application roles to include the right [module roles](#module-roles).
 2. Configure the right [constant values](#constants) for the right snapshots.
 3.  Implement the **Before Commit** (**BCo**) and **Before Delete** (**Bde**) events. Use the events on the domain model settings (**BCo** / **BDe**). In case you need to follow a compliance that requires you to never delete an object, implement this outside the context of the audit trail module.
 
@@ -165,4 +165,4 @@ If you have already deployed your app, change the existing **Licensekey** consta
 
 ## 4 Read More
 
-* [Consuming Add-on Modules and Solutions](refguide/consume-add-on-modules-and-solutions/)
+* [Consuming Add-on Modules and Solutions](/refguide/consume-add-on-modules-and-solutions/)

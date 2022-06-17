@@ -17,7 +17,9 @@ You should use this module with the Advanced Audit Trail Core module.
 
 ## 2 Installation
 
-To download and install the Advanced Audit Trail UI module in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the module is installed, you can find it in the **App Explorer**.
+Followed the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the **Advanced Audit Trail Core** and **AdvancedAuditTrailUI** modules into your project.
+
+{{% alert color="info" %}}If you update the **Advanced Audit Trail Core** module, make sure that you update the **AdvancedAuditTrailUI** module to the same version.{{% /alert %}}
 
 ## 3 Configuration
 

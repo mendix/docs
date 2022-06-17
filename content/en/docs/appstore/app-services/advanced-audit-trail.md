@@ -38,7 +38,7 @@ Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, an
 
 ### 1.3 Limitations 
 
-Advanced Audit Trail contains an [add-on module](/refguide/consume-add-on-modules-and-solutions/). Mendix Studio does not support add-on modules. It should be disabled for your app.
+* Advanced Audit Trail contains an [add-on module](/refguide/consume-add-on-modules-and-solutions/). Mendix Studio does not support add-on modules. It should be disabled for your app.
 
 ### 1.4 Prerequisites
 

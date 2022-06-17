@@ -75,7 +75,13 @@ For more information about association types, see the [Type](/refguide/associati
 
 This corresponds to the **Owner** property for **Reference sets**. See the [Owner](/refguide/association-member-properties/#owner) section of *Association Tab Properties* for a more detailed discussion of the impact of changing navigability.
 
-Despite it's name, navigability is usually only important when adding or changing associations. Making one object owner of an association does not prevent you reading the association from the non-owner end.
+Despite its name, navigability is usually only important when adding or changing associations. Making one object owner of an association does not prevent you reading the association from the non-owner end.
+
+#### 2.5.1 One-Way Navigable Associations {#one-way-navigable}
+
+One-way navigable associations are associations that allow navigation to associated entities only in a single direction: from parent to child. These associations are typically introduced by OData service integration, either through an external provider or the Mendix Data Hub. The major implications of one-way navigability are related to XPath use cases such as constraints and queries.
+
+All other domain model associations can be traversed in both directions.
 
 ### 2.6 Delete Behavior {#delete-behavior}
 

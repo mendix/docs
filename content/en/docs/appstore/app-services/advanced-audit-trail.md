@@ -38,7 +38,7 @@ Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, an
 
 ### 1.3 Limitations 
 
-Advanced Audit Trail contains an [add-on module](refguide/consume-add-on-modules-and-solutions/). Mendix Studio does not support add-on modules. It should be disabled for your app.
+Advanced Audit Trail contains an [add-on module](/refguide/consume-add-on-modules-and-solutions/). Mendix Studio does not support add-on modules. It should be disabled for your app.
 
 ### 1.4 Prerequisites
 
@@ -157,7 +157,7 @@ Update the **AuditSnapshots_ResponsiveLayout** to update the layouts without cha
 
 ### 3.11 Configuring the License Key {#configure-license-key}
 
-You can deploy Advanced Audit Trail locally or in a Mendix Free App for free. However, to deploy Advanced Audit Trail in the Mendix Cloud, you need to start a subscription to [obtain a license key](/#obtain-license-key), and then configure it.
+You can deploy Advanced Audit Trail locally or in a Mendix Free App for free. However, to deploy Advanced Audit Trail in the Mendix Cloud, you need to start a subscription to [obtain a license key](#obtain-license-key), and then configure it.
 
 Before you deploy your app, configure the app **Constants** in the deployment package in the [Developer Portal](https://docs.mendix.com/developerportal/deploy/environments-details/).
 

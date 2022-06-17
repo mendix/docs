@@ -13,7 +13,7 @@ The Advanced Audit Trail UI module contains pre-configured snippets, pages, and 
 
 ### 1.1 Dependencies
 
-You should use this module with the Advanced Audit Trail Core module.
+You should use this module with the [Advanced Audit Trail Core](/appstore/app-services/advanced-audit-trail/) module.
 
 ## 2 Installation
 

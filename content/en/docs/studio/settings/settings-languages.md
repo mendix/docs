@@ -10,7 +10,7 @@ tags: ["studio", "language", "lingual", "app language", "translate"]
 
 ## 1 Introduction 
 
-Delivering your Mendix app in multiple languages is an important capability when you want to provide the same app to people speaking different languages. Using the language features of Mendix, you can quickly make your app multilingual and translate your page content to all configured languages. This means that texts that are presented to end-users, such as button captions, screen titles, menu items, can be translated to other languages than the default language.  
+Delivering your Mendix app in multiple languages is an important capability when you want to provide the same app to people speaking different languages. Using the language features of Mendix, you can quickly make your app multilingual and translate your page content to all configured languages. This means that texts that are presented to end-users, such as button captions, screen texts, menu items, can be translated to other languages than the default language.  
 
 ## 2 App Languages Screen
 
@@ -30,7 +30,7 @@ To *change the default language*, click the **Default Language** setting and sel
 
 To *add a new language* to your app, click the **Add Language** button, search for the language you would like to add and confirm your choice.
 
-To *delete* a language, click the **More** icon next to the language and select **Delete**.
+To *delete* a language, click the **More** icon next to the language and select **Delete**. Note: Deleting a language from your app will also result in the deletion of all translations in that language you provided on your pages and microflows.
 
 ## 3 Switching the Currently Selected Language
 
@@ -42,7 +42,7 @@ This toggle switches languages in the app while you are editing it, it does not 
 
 ## 4 Translating Your App to Multiple Languages {#translate}
 
-When multiple languages are set up in your app, one language is set as the default language. All untranslated texts in other languages will be displayed in the default language when you run the app. When you change the text in the default language, all untranslated texts will fall back to the new text. 
+When multiple languages are set up in your app, one language is set as the default language. All untranslated texts in other languages will be displayed in the default language when you run the app. When you change the text in the default language, all untranslated texts will automatically fall back to the changed text. 
 
 When working in a language which is not the default, you can identify texts that have not been translated yet. They show the text in the default language between angle brackets. For example, `<Name>`. 
 
@@ -62,11 +62,6 @@ If you add new widgets to your app while you are not in the default language, an
 
 {{< figure src="/attachments/studio/settings/settings-languages/current-language.png" >}}   
 
-{{% alert color="info" %}}
-
-To be able to switch between languages in the previewed or published app, ask your team members to implement the language toggling behavior in Studio Pro.
-
-{{% /alert %}}
 
 ## 5 Widgets and Elements Available for Translation
 

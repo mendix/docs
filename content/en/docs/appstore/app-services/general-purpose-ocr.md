@@ -126,7 +126,7 @@ To extract the data, perform the following steps:
     * [Configure the General Purpose OCR activity](#general-purpose-ocr-activity)
     * [Configure the General Purpose OCR in Background activity](#general-purpose-ocr-in-background-activity)
 
-#### 4.1.1 Configuring the General Purpose OCR Activity (Synchronous Behavior) {#general-purpose-ocr-in-background-activity}
+#### 4.1.1 Configuring the General Purpose OCR Activity (Synchronous Behavior) {#general-purpose-ocr-activity}}
 
 {{< figure src="/attachments/appstore/app-services/general-purpose-ocr/general-purpose-ocr-sync.png" >}}
 

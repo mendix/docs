@@ -11,7 +11,6 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 The [General Purpose Optical Character Recognition](https://marketplace.mendix.com/link/component/118392) app service can help you extract text, tables, and barcodes from images or PDF documents in XML formats in bulk, and map the extracted data to an entity.
 
-
 ### 1.1 Features
 
 * Extract data (text, table, and barcode) in XML format from images and PDF documents in bulk
@@ -72,7 +71,6 @@ Below is a sample document:
 
 {{< figure src="/attachments/appstore/app-services/general-purpose-ocr/sample-document.png" >}}
 
-
 Below is the document model used for the extracted data:
 
 {{< figure src="/attachments/appstore/app-services/general-purpose-ocr/domain-model.png" >}}
@@ -101,7 +99,7 @@ Before you deploy an app, you should configure the binding keys in your app as f
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/configurations-keys.png" alt="Keys under Configurations in a tree view" >}}
 
-2. Double-click the constant for each constant, enter the key you saved and click **OK** to save the changes.    
+2. Double-click the constant for each constant, enter the key you saved and click **OK** to save the changes.
 
 ## 4 Usage
 
@@ -111,22 +109,19 @@ To use the General Purpose OCR, first create an [import mapping](/refguide/impor
 
 To extract the data, perform the following steps:
 
-1. In the **Toolbox**, drag the **General Purpose OCR** activity or the **General Purpose OCR in Background** activity from the **Document Data Capture Service** category into your microflow. Which activity to use here is based on your needs:
+1.  In the **Toolbox**, drag the **General Purpose OCR** activity or the **General Purpose OCR in Background** activity from the **Document Data Capture Service** category into your microflow. Which activity to use here is based on your needs:
 
-   * The **General Purpose OCR** activity has synchronous behaviour, which will directly get the extraction result in the response
-   * The **General Purpose OCR  In Background** activity has an asynchronous behaviour, which provides a microflow that further takes the response of the data-extraction results in the parameter and will use the results further
+    * The **General Purpose OCR** activity has synchronous behaviour, which will directly get the extraction result in the response
+    * The **General Purpose OCR  In Background** activity has an asynchronous behaviour, which provides a microflow that further takes the response of the data-extraction results in the parameter and will use the results further
 
-   {{% todo %}}Add the screenshot of the microflow{{% /todo %}}
+    {{% todo %}}Add the screenshot of the microflow{{% /todo %}}
 
 2. Create a list of documents that inherits from `System.FileDocument`. Documents from which data are extracted should be passed as a list, as shown in the microflow above.
-
 3. Double-click the **General Purpose OCR** activity or the **General Purpose OCR in Background** activity to open the dialog box.
+4.  Follow the corresponding procedure to configure the settings of the activity:
 
-4. Follow the corresponding procedure to configure the settings of the activity:
-
-   * [Configure the General Purpose OCR activity](#general-purpose-ocr-activity)
-   * [Configure the General Purpose OCR in Background activity](#general-purpose-ocr-in-background-activity)
-
+    * [Configure the General Purpose OCR activity](#general-purpose-ocr-activity)
+    * [Configure the General Purpose OCR in Background activity](#general-purpose-ocr-in-background-activity)
 
 #### 4.1.1 Configuring the General Purpose OCR Activity (Synchronous Behavior) {#general-purpose-ocr-in-background-activity}
 
@@ -135,16 +130,14 @@ To extract the data, perform the following steps:
 To configure the activity, perform the following steps:
 
 1. For **Document List**, click **Edit** to select the **Document List** which inherits from `System.FileDocument`. 
-
 2. For **Use return value**, if you want to use the response results, select **Yes**; otherwise, select **No**. The Boolean value indicates whether you accept or decline the request for data extraction.
-   
 3.  For **Object name**, enter the response object of the **ExtractionResponse** entity. Check the **Status** attribute of this entity and based on that need to retrieve extraction result from associated entities. Possible values for status are as follows:
    
     - **IN_PROGRESS**
-    
     - **COMPLETED**
-    
     - **FAILED**
+
+4. Click **OK** to save the changes.
 
 #### 4.1.2 Configuring the General Purpose OCR In Background Activity (Asynchronous Behavior){#general-purpose-ocr-in-background-activity}
 
@@ -153,30 +146,26 @@ To configure the activity, perform the following steps:
 To configure the activity, perform the following steps:
 
 1. For **Document List**, click **Edit** to select the **Document List** which inherits from `System.FileDocument`.
+2.  For **Extraction Result Microflow**, click **Select** to select the **Microflow** created by the user.
 
-2. For **Extraction Result Microflow**, click **Select** to select the **Microflow** created by the user.
-
-   {{% alert type="info" %}}This microflow will be called internally from the java action once the extraction result is received from backend, and this extraction result will be passed as a parameter to this selected microflow.{{% /alert %}}
+    {{% alert type="info" %}}This microflow will be called internally from the java action once the extraction result is received from backend, and this extraction result will be passed as a parameter to this selected microflow.{{% /alert %}}
 
 3. For **Microflow Input Parameter**, click **Edit** and enter a string as the name of the input parameter for the microflow. This should be name of the parameter of the object of **GPO.ExtractionResponse** used in the microflow that you set for the **Extraction Result Microflow** field.
-
 4. For **Use return value**, if you want to use the response results, select **Yes**; otherwise, select **No**. The Boolean value indicates whether you accept or decline the request for data extraction.
-   
 5. For **Variable name**, the user can type the response object name as **ReturnValueName**.
-
+6. Click **OK** to save the changes.
 
 ### 4.2 Checking Statistics on the Usage Dashboard
 
 The **Usage** dashboard shows real-time statistics about the usage of an App Service. Perform the following steps to check the real-time statistics:
 
 1. Log into the Marketplace.
-2. Go to **My Marketplace** and then do as follows:
+2.  Go to **My Marketplace** and then do as follows:
 
     * If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
     * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
 3. Find **General Purpose OCR** in the list.
 4. Click **Usage Dashboard** to show the usage details.
-
 
 ## 5 Technical Provider{#technical-provider}
 

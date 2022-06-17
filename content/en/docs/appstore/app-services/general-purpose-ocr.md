@@ -62,11 +62,11 @@ A trial gives everyone in your company access to the App Service. To start a tri
 
 To download and install the General Purpose OCR App Service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the App Service is installed, you can see it in the **App Explorer** and also in the **Document Data Capture Service** category in the **Toolbox**.
 
-## 3 Configuraiton
+## 3 Configuration
 
 ### 3.1 Domain Model
 
-A pre-configured domain model is included in the module. The section describes how data are stored int he pre-configured domain model.
+A pre-configured domain model is included in the module. The section describes how data are stored in the pre-configured domain model.
 
 Below is a sample document:
 

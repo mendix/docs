@@ -30,7 +30,13 @@ To *change the default language*, click the **Default Language** setting and sel
 
 To *add a new language* to your app, click the **Add Language** button, search for the language you would like to add and confirm your choice.
 
-To *delete* a language, click the **More** icon next to the language and select **Delete**. Note: Deleting a language from your app will also result in the deletion of all translations in that language you provided on your pages and microflows.
+To *delete* a language, click the **More** icon next to the language and select **Delete**. 
+
+{{% alert type="info" %}}
+
+Deleting a language from your app deletes all translations you provided on your pages and microflows for that language.
+
+{{% /alert %}}
 
 ## 3 Switching the Currently Selected Language
 
@@ -38,7 +44,7 @@ You can switch the currently selected language in the top menu bar:
 
 {{< figure src="/attachments/studio/settings/settings-languages/selected-language.png" >}}
 
-This toggle switches languages in the app while you are editing it, it does not switch the language of the previewed/published app. A language toggle is available in the previewed/published apps with the latest Atlas UI. If your app has only one language, the toggle is hidden. 
+This setting switches languages in the app while you are editing it, it does not influence the language of the previewed/published app. A separate language drop-down list is available with the latest Atlas UI to switch languages in the previewed/published apps. If your app has only one language, the toggle is hidden. 
 
 ## 4 Translating Your App to Multiple Languages {#translate}
 

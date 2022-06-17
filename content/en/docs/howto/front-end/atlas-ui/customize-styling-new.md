@@ -594,7 +594,7 @@ Unzip the ZIP file and place the **fonts** folder into the **/theme/web/** folde
 
 ### 11.2 Using Local Font Files
 
-Open your Mendix app's *theme/custom-variables.scss* file and locate the following line:
+Open your Mendix app's *theme/web/custom-variables.scss* file and locate the following line:
 
 ```
 $font-family-import: https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700

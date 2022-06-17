@@ -66,7 +66,7 @@ To download and install the General Purpose OCR App Service in your app, follow 
 
 ### 3.1 Domain Model
 
-A pre-configured domain model is included in the module. The section describes how data are stored in the pre-configured domain model.
+This section describes how data are stored in the pre-configured domain modes included in this module.
 
 Below is a sample document:
 
@@ -77,7 +77,7 @@ Below is the document model used for the extracted data:
 
 {{< figure src="/attachments/appstore/app-services/general-purpose-ocr/domain-model.png" >}}
 
-The **ExtractionResponse** entity will be created automatically for storing the response from the backend API call. The **ExtractionResponse** entity contains the **Status** attribute, which is the response status of the extraction response. The value of the Status can be  **IN_PROGRESS**, **COMPLETED**, or **FAILED**. The **ExtractionResponse** entity is associated with the **Output** entity.
+The **ExtractionResponse** entity will be created automatically for storing the response from the backend API call. The **ExtractionResponse** entity contains the **Status** attribute, which is the response status of the extraction response. The value of the **Status** can be **IN_PROGRESS**, **COMPLETED**, or **FAILED**. The **ExtractionResponse** entity is associated with the **Output** entity.
 
 The **Output** entity is further divided into two domains **Aborted** and **Extracted**.
 
@@ -111,7 +111,7 @@ To use the General Purpose OCR, first create an [import mapping](/refguide/impor
 
 To extract the data, perform the following steps:
 
-1. In the **Toolbox**, drag the **General Purpose OCR** activity or the **General Purpose OCR in Background** activity from the **Document Data Capture Service** category into your microflow. You can decide which activity to use based on your needs:
+1. In the **Toolbox**, drag the **General Purpose OCR** activity or the **General Purpose OCR in Background** activity from the **Document Data Capture Service** category into your microflow. Which activity to use here is based on your needs:
 
    * The **General Purpose OCR** activity has synchronous behaviour, which will directly get the extraction result in the response
    * The **General Purpose OCR  In Background** activity has an asynchronous behaviour, which provides a microflow that further takes the response of the data-extraction results in the parameter and will use the results further
@@ -136,9 +136,8 @@ To configure the activity, perform the following steps:
 
 1. For **Document List**, click **Edit** to select the **Document List** which inherits from `System.FileDocument`. 
 
-2. For **Use return value**, if you want to use the response results, select **Yes**; otherwise, select **No**. This 
-   **Note:** Boolean value true/false, to indicated that we have accepted/declined the request for data extraction. {{% todo %}}What does this mean?{{% /todo %}}
-
+2. For **Use return value**, if you want to use the response results, select **Yes**; otherwise, select **No**. The Boolean value indicates whether you accept or decline the request for data extraction.
+   
 3.  For **Object name**, enter the response object of the **ExtractionResponse** entity. Check the **Status** attribute of this entity and based on that need to retrieve extraction result from associated entities. Possible values for status are as follows:
    
     - **IN_PROGRESS**
@@ -147,7 +146,7 @@ To configure the activity, perform the following steps:
     
     - **FAILED**
 
-#### 4.1.2 Configuring the General Purpose OCR In Background Activity (Asynchronous Behavior {#general-purpose-ocr-in-background-activity}
+#### 4.1.2 Configuring the General Purpose OCR In Background Activity (Asynchronous Behavior){#general-purpose-ocr-in-background-activity}
 
 {{< figure src="/attachments/appstore/app-services/general-purpose-ocr/general-purpose-ocr-in-background.png" >}}
 
@@ -161,9 +160,8 @@ To configure the activity, perform the following steps:
 
 3. For **Microflow Input Parameter**, click **Edit** and enter a string as the name of the input parameter for the microflow. This should be name of the parameter of the object of **GPO.ExtractionResponse** used in the microflow that you set for the **Extraction Result Microflow** field.
 
-4. For **Use return value**, if you want to use the response results, select **Yes**; otherwise, select **No**. This 
-   **Note:** Boolean value true/false, to indicated that we have accepted/declined the request for data extraction.  {{% todo %}}What does this mean?{{% /todo %}}
-
+4. For **Use return value**, if you want to use the response results, select **Yes**; otherwise, select **No**. The Boolean value indicates whether you accept or decline the request for data extraction.
+   
 5. For **Variable name**, the user can type the response object name as **ReturnValueName**.
 
 

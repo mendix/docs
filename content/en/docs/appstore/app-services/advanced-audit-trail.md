@@ -65,22 +65,19 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 ## 3 Configuration
 
 1. Set up your application roles to include the right [module roles](#module-rules).
-
 2. Configure the right [constant values](#constants) for the right snapshots.
+3.  Implement the **Before Commit** (**BCo**) and **Before Delete** (**Bde**) events. Use the events on the domain model settings (**BCo** / **BDe**). In case you need to follow a compliance that requires you to never delete an object, implement this outside the context of the audit trail module.
 
-3. Implement the **Before Commit** (**BCo**) and **Before Delete** **(Bde)** events. Use the events on the domain model settings (**BCo** / **BDe**). In case you need to follow a compliance that requires you to never delete an object, implement this outside the context of the audit trail module.
+    You can create **CommitList** microflows that commit a list of objects without events, but use **Create Snapshot (List)** from the **Toolbox** (the **JA_Object_CreateSnapshot_List** action). This ensures that the snapshots are committed in a list as well, and therefore minimizing performance impact of the module. When an object is committed without events, this change is not audited unless you explicitly add **Create Snapshot** (the **JA_Object_CreateSnapshot** action) or **Create Snapshot (List)** (the **JA_Object_CreateSnapshot_List** action) before the commit.
 
-   You can create **CommitList** microflows that commit a list of objects without events, but use the **Create Snapshot (List)** action. This ensures that the snapshots are committed in a list as well, and therefore minimizing performance impact of the module. When an object is committed without events, this change is not audited unless you explicitly add a **Create Snapshot** or **Create Snapshot (List)** action before the commit.
-
-   {{% alert color="info" %}}When your Mendix application includes entities with inheritance, we recommend you to only apply the event handler on the generalization of this entity. There are cases where it makes sense to apply the event handler on the specialization instead, but applying the event handler to both the generalization and specialization will lead to duplicate snapshots of the same action.</br></br>When there are multiple **Before Commit** (**BCo**) or **Before Delete** **(Bde)** events that may change the object, the order is not guaranteed. see [Event Handlers](/refguide/event-handlers/). This means that some changes could theoretically fall outside the context of an audit.{{% /alert %}}
+    {{% alert color="info" %}}When your Mendix application includes entities with inheritance, we recommend you to only apply the event handler on the generalization of this entity. There are cases where it makes sense to apply the event handler on the specialization instead, but applying the event handler to both the generalization and specialization will lead to duplicate snapshots of the same action.</br></br>When there are multiple **Before Commit** (**BCo**) or **Before Delete** **(Bde)** events that may change the object, the order is not guaranteed. see [Event Handlers](/refguide/event-handlers/). This means that some changes could theoretically fall outside the context of an audit.{{% /alert %}}
 
 4. Add the open search page microflow **AdvancedAuditTrailUI.ACT_SnapshotQuery_CreateAndShowSearch** to the navigation.
+5.  Make sure that the [scheduled events](#scheduled-events) are enabled in the cloud portal.
 
-5. Make sure that the [scheduled events](#scheduled-events) are enabled in the cloud portal.
+    {{% alert color="info" %}}Due to protected modules, we do not show scheduled events in Studio Pro.{{% /alert %}}
 
-   {{% alert color="info" %}}Due to protected modules, we do not show scheduled events in Studio Pro.{{% /alert %}}
-
-### 3.1 Module Roles {#module-roles}
+### 3.1 Configuring Module Roles {#module-roles}
 
 *  **Admin**: The admin can query the entire database for the current application and can access the debug pages.
 *  **_AddOn_CanChangeEnvironmentInQuery**: This is an additional role for the Admin, which allows the Admin to change the environment in search queries, so that they can also search in other applications.
@@ -88,7 +85,7 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
 
     {{% alert color="info" %}}Access from and to the long-term data storage is based on service accounts. This means that once a user can access the **Snippet_Settings**, they can access all data in the long-term storage, even if it belongs to other applications in the same environment. Any user-based authentication needs to be implemented in the runtime, for example, by using the **DisplayOnly** module role and the **Query Snapshots for object** setup.{{% /alert %}}
 
-### 3.2 Constants {#constants}
+### 3.2 Configuring Constants {#constants}
 
 * Retention settings for the local cached data
     *  **SnapshotRetentionDays**: This is the days that the records be kept in the local snapshot cache.
@@ -96,12 +93,12 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
         * If **OnlyDeleteProcessedItems** is set to **True**, the **SnapshotRetentionDays** is only applicable to processed snapshots.
     
 *  Snapshots
-    *  **IncludeHashedStrings**: This indicates whether to include attributes of type Hashed String (e.g. password fields) in the snapshots.
-        
+    *  **IncludeHashedStrings**: This indicates whether to include attributes of type Hashed String (e.g., password fields) in the snapshots.
+       
         * **True**: Hashed Strings will be included (storing bcrypt/or other hashed value).
         * **False**: Hashed Strings will be excluded and therefore not audited.
         
-      {{% alert color="info" %}}Manually-encrypted (e.g. using the [Encryption](/appstore/modules/encryption/) module) Strings are not the type of Hashed String and will not be affected by this setting.{{% /alert %}}
+        {{% alert color="info" %}}Manually-encrypted (e.g., using the [Encryption](/appstore/modules/encryption/) module) Strings are not the type of Hashed String and will not be affected by this setting.{{% /alert %}}
   
 * Integration
     *  **EnvironmentName**: This is the name of the environment within Kibana, which should be unique in your audit data storage, for example, *myApp-prod*. Do not use any whitespace or tilde (~) for the environment name.
@@ -109,38 +106,35 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
         {{% alert color="info" %}}If two applications use the same name, the audit trail will not be able to distinguish between the two, effectively breaking the audit trail for both applications irreversibly.{{% /alert %}}
         
     * **EnvironmentURL** (optional): This is the URL used to identify the environment. If left empty, the Application Runtime URL is used instead. 
-    
     * **Kafka_Endpoint** / **Kafka_Username** and **Kafka_Password**: These are the credentials for the kafka environment for sending the data into the long-term storage.
-    
     * **Kibana_Endpoint** / **Kibana_Username** and **Kibana_Password**: These are the credentials for the Kibana environment for receiving the data from the long-term storage.
-### 3.3 Scheduled Events {#scheduled-events}
+    * 
+### 3.3 Configuring Scheduled Events {#scheduled-events}
 
-- **SE_SendAuditSnapshots**: This sends the cached data to the external data storage. This occurs each minute.
+* **SE_SendAuditSnapshots**: This sends the cached data to the external data storage. This occurs each minute.
+* **SE_CleanupSnapshotCache**: This cleans up the cached data based on the retention settings – **OnlyDeleteProcessedItems** and **SnapshotRetentionDays**. This occurs daily at 3:00 AM UTC.
+*  **SE_PeriodicVacuum**: This runs a periodic vacuum on a PostgreSQL database. This is not needed on Microsoft SQL. Other database types are not supported. This occurs every 2 hours.
 
-- **SE_CleanupSnapshotCache**: This cleans up the cached data based on the retention settings – **OnlyDeleteProcessedItems** and **SnapshotRetentionDays**. This occurs daily at 3:00 AM UTC.
+    {{% alert color="info" %}}Enable the scheduled event **SE_PeriodicVacuum** in the cloud portal for PostgreSQL databases. PostgreSQL databases require a regular VACUUM when the application creates and deletes a lot of objects in order to stay quick and not to grow out of disk space. The default Mendix Cloud settings will not always perform the VACUUM when needed. The scheduled event **SE_PeriodicVacuum** performs the VACUUM regularly. This scheduled event is for PostgreSQL only. For more information, see PostgreSQL documentation on [VACUUM]( https://www.postgresql.org/docs/9.6/sql-vacuum.html ) and [ANALYZE](https://www.postgresql.org/docs/9.6/sql-analyze.html).{{% /alert %}}
 
-- **SE_PeriodicVacuum**: This runs a periodic vacuum on a PostgreSQL database. This is not needed on Microsoft SQL. Other database types are not supported. This occurs every 2 hours.
+### 3.4 Configuring Advanced Features (Optional)
 
-  {{% alert color="info" %}}Enable the scheduled event **SE_PeriodicVacuum** in the cloud portal for PostgreSQL databases. PostgreSQL databases require a regular VACUUM when the application creates and deletes a lot of objects in order to stay quick and not to grow out of disk space. The default Mendix Cloud settings will not always perform the VACUUM when needed. The scheduled event **SE_PeriodicVacuum** performs the VACUUM regularly. This scheduled event is for PostgreSQL only. For more information, see PostgreSQL documentation on [VACUUM]( https://www.postgresql.org/docs/9.6/sql-vacuum.html ) and [ANALYZE](https://www.postgresql.org/docs/9.6/sql-analyze.html).{{% /alert %}}
+* Link **NAV_AdvancedSettings** for accessing debug settings. Typically not needed, the features in here are subject to change.
+* Link **NAV_CachedSnapshot_Overview** to access the local cache of snapshot data.
+* Check the default values of the **NPE Settings** object in the domain model, since they will be used for configuring the app
+* Enable **SE_CleanupAuditSnapshots** if you want to use the retention settings and delete objects
 
-### 3.4 Advanced Features (Optional)
+### 3.5 Adding Additional Information to a Snapshot (Optional)
 
-  - Link **NAV_AdvancedSettings** for accessing debug settings. Typically not needed, the features in here are subject to change.
-  - Link **NAV_CachedSnapshot_Overview** to access the local cache of snapshot data.
-  - Check the default values of the **NPE Settings** object in the domain model, since they will be used for configuring the app
-  - Enable **SE_CleanupAuditSnapshots** if you want to use the retention settings and delete objects
-
-### 3.5 Setting Additional Info to a Snapshot (Optional)
-
-It is possible to submit additional information to the snapshot (e.g., in order to provide a rationale on why the said action has taken place on the object in question). Developers can configure this feature for certain actions (creation, deletion, updating). To use this feature the developer must use the action **JA_SetAdditionalInfo** that is included in the module to set additional info for snapshots.
+It is possible to submit additional information for a snapshot (e.g., in order to provide a rationale on why the said action has taken place on the object in question). Developers can configure this feature for certain actions (creation, deletion, updating). To use this feature the developer must use **Set additional info for snapshots** from the **Toolbox** (the **JA_SetAdditionalInfo** action) to set additional information for snapshots.
 
 ### 3.6 Implementing Custom User Logging (Optional)
 
-Use the **Override User for Snapshots in this Context** action to override the logged user for a request. For example, the request is a published REST service that runs in a system context, while the user is known.
+Use **Override User for Snapshots in this Context** from the **Toolbox** (the **JA_SetUserForSnapshotsaction** action) to override the logged user for a request. For example, the request is a published REST service that runs in a system context, while the user is known.
 
 ### 3.7 Implementing User Name Scrambling (Optional)
 
-Use Configure Username mapping to store a username differently in the long-term data storage. This can be used for anonymizing data (e.g. due to GDPR).
+Use **Configure Username mapping** from the **Toolbox** (the **JA_ConfigureUsernameMapping** action) to store a username differently in the long-term data storage. This can be used for anonymizing data (e.g. due to GDPR).
 
 ### 3.8 Implementing Display Formatters (Optional)
 
@@ -154,7 +148,7 @@ Use the formatter microflows to change how externally stored values will be disp
 
 ### 3.9 Getting Microflow Stack Trace (Optional)
 
-Use this action to create custom logging/entities and identify in what microflow the action was triggered.
+Use **Get microflow stack trace** from the **Toolbox** (the **JA_GetMicroflowTrace** action) to create custom logging/entities and identify in what microflow the action was triggered.
 
 ### 3.10 Changing the Module Layout (Optional)
 
@@ -170,4 +164,4 @@ If you have already deployed your app, change the existing **Licensekey** consta
 
 ## 4 Read More
 
-* [Consuming Add-on Modules and Solutions](refguide/consume-add-on-modules-and-solutions/) 
+* [Consuming Add-on Modules and Solutions](refguide/consume-add-on-modules-and-solutions/)

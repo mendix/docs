@@ -48,7 +48,7 @@ Advanced Audit Trail contains an [add-on module](refguide/consume-add-on-modules
 ### 1.5 Dependencies
 
 * You need to install [Atlas Core](https://marketplace.mendix.com/link/component/117187) and [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) in your application
-* You need to install Advanced Audit Trail Core and Advanced Audit Trail UI in your application
+* You need to install Advanced Audit Trail Core and [Advanced Audit Trail UI](/appstore/modules/advanced-audit-trail-ui) in your application
 
 ## 2 Installation
 
@@ -106,9 +106,10 @@ Followed the instructions in the [Importing Content from the App Explorer](/apps
         {{% alert color="info" %}}If two applications use the same name, the audit trail will not be able to distinguish between the two, effectively breaking the audit trail for both applications irreversibly.{{% /alert %}}
         
     * **EnvironmentURL** (optional): This is the URL used to identify the environment. If left empty, the Application Runtime URL is used instead. 
+    
     * **Kafka_Endpoint** / **Kafka_Username** and **Kafka_Password**: These are the credentials for the kafka environment for sending the data into the long-term storage.
+    
     * **Kibana_Endpoint** / **Kibana_Username** and **Kibana_Password**: These are the credentials for the Kibana environment for receiving the data from the long-term storage.
-    * 
 ### 3.3 Configuring Scheduled Events {#scheduled-events}
 
 * **SE_SendAuditSnapshots**: This sends the cached data to the external data storage. This occurs each minute.

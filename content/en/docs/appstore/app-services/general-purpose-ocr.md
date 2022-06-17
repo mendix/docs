@@ -28,35 +28,6 @@ The [General Purpose Optical Character Recognition](https://marketplace.mendix.c
 
 * This App Service works best with Studio Pro 8 versions starting with [8.18.15](/releasenotes/studio-pro/8.18/#81815) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0/).
 
-### 1.4 How Data Are Stored in the Pre-configured Domain Model
-
-{{% todo %}}Is this domain model shipped with the model? If so, it should be in the Configuration section.{{% /todo %}}
-
-Below is a sample document:
-
-{{< figure src="/attachments/appstore/app-services/general-purpose-ocr/sample-document.png" >}}
-
-
-Below is the document model used for the extracted data:
-
-{{< figure src="/attachments/appstore/app-services/general-purpose-ocr/domain-model.png" >}}
-
-The **ExtractionResponse** entity will be created automatically for storing the response from the backend API call. The **ExtractionResponse** entity contains the **Status** attribute, which is the response status of the extraction response. The value of the Status can be  **IN_PROGRESS**, **COMPLETED**, or **FAILED**. The **ExtractionResponse** entity is associated with the **Output** entity.
-
-The **Output** entity is further divided into two domains **Aborted** and **Extracted**.
-
-The documents which are not successfully extracted in the backend API call due to errors or exceptions are stored inside the **AbortedDocument** entity. The **AbortedDocument** entity stores the **DocumentId** attribute and the **Name** attribute of the corresponding aborted documents.
-
-The documents which are successfully extracted in the backend API call are stored inside the **ExtractedDocument** entity. The **ExtractedDocument** entity contains the **DocumentID** attribute and the **Name** attribute of the corresponding documents, and is associated with the **Content** entity.
-
-The **Content** entity is basically in the XML format. 
-
-The document is divided into multiple pages, so there is a **Page** entity. Each page can contain multiple blocks, so there is a **Block** entity, which contains the **BlockType** attribute. The **BlockType** attribute can be one of these three values: **Text**, **Table**, and **Barcode**. The document is further divided based on the value of **BlockType**.
-
-If the block is text or a barcode, it goes to the **Text** entity, and then go to the **Paragraph** entity. A paragraph can have multiple lines, so the **Paragraph** entity has the **LineContent** attribute.
-
-If the block type is a table, as a table can be divided multiple rows, it goes to the **Row** entity. Each row can have multiple cells and text, so there is a **CellText** entity. Each cell can contain multiple paragraphs, so there is **CellParagraph** entity. A paragraph can have multiple lines, so **CellParagraph** entity has the **LineContent** attribute. This **Linecontent** attribute contains the actual data.
-
 ## 2 Installation
 
 ### 2.1 Obtaining the Binding Keys {#obtain-keys}
@@ -91,7 +62,38 @@ A trial gives everyone in your company access to the App Service. To start a tri
 
 To download and install the General Purpose OCR App Service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the App Service is installed, you can see it in the **App Explorer** and also in the **Document Data Capture Service** category in the **Toolbox**.
 
-## 3 Configuring the Binding Keys {#configure-keys}
+## 3 Configuraiton
+
+### 3.1 Domain Model
+
+A pre-configured domain model is included in the module. The section describes how data are stored int he pre-configured domain model.
+
+Below is a sample document:
+
+{{< figure src="/attachments/appstore/app-services/general-purpose-ocr/sample-document.png" >}}
+
+
+Below is the document model used for the extracted data:
+
+{{< figure src="/attachments/appstore/app-services/general-purpose-ocr/domain-model.png" >}}
+
+The **ExtractionResponse** entity will be created automatically for storing the response from the backend API call. The **ExtractionResponse** entity contains the **Status** attribute, which is the response status of the extraction response. The value of the Status can be  **IN_PROGRESS**, **COMPLETED**, or **FAILED**. The **ExtractionResponse** entity is associated with the **Output** entity.
+
+The **Output** entity is further divided into two domains **Aborted** and **Extracted**.
+
+The documents which are not successfully extracted in the backend API call due to errors or exceptions are stored inside the **AbortedDocument** entity. The **AbortedDocument** entity stores the **DocumentId** attribute and the **Name** attribute of the corresponding aborted documents.
+
+The documents which are successfully extracted in the backend API call are stored inside the **ExtractedDocument** entity. The **ExtractedDocument** entity contains the **DocumentID** attribute and the **Name** attribute of the corresponding documents, and is associated with the **Content** entity.
+
+The **Content** entity is basically in the XML format. 
+
+The document is divided into multiple pages, so there is a **Page** entity. Each page can contain multiple blocks, so there is a **Block** entity, which contains the **BlockType** attribute. The **BlockType** attribute can be one of these three values: **Text**, **Table**, and **Barcode**. The document is further divided based on the value of **BlockType**.
+
+If the block is text or a barcode, it goes to the **Text** entity, and then go to the **Paragraph** entity. A paragraph can have multiple lines, so the **Paragraph** entity has the **LineContent** attribute.
+
+If the block type is a table, as a table can be divided multiple rows, it goes to the **Row** entity. Each row can have multiple cells and text, so there is a **CellText** entity. Each cell can contain multiple paragraphs, so there is **CellParagraph** entity. A paragraph can have multiple lines, so **CellParagraph** entity has the **LineContent** attribute. This **Linecontent** attribute contains the actual data.
+
+### 3.2 Configuring the Binding Keys {#configure-keys}
 
 Before you deploy an app, you should configure the binding keys in your app as follows:
 

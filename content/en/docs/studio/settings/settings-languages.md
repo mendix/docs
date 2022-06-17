@@ -34,9 +34,11 @@ To *delete* a language, click the **More** icon next to the language and select 
 
 ## 3 Switching the Currently Selected Language
 
-You can switch the selected language in the top menu bar:
+You can switch the currently selected language in the top menu bar:
 
 {{< figure src="/attachments/studio/settings/settings-languages/selected-language.png" >}}
+
+This toggle switches languages in the app while you are editing it, it does not switch the language of the previewed/published app. A language toggle is available in the previewed/published apps with the latest Atlas UI. If your app has only one language, the toggle is hidden. 
 
 ## 4 Translating Your App to Multiple Languages {#translate}
 

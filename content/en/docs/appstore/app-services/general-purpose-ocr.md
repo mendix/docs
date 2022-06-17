@@ -109,7 +109,7 @@ To use the General Purpose OCR, first create an [import mapping](/refguide/impor
 
 To extract the data, perform the following steps:
 
-1.  In the **Toolbox**, drag the **General Purpose OCR** activity or the **General Purpose OCR in Background** activity from the **Document Data Capture Service** category into your microflow. Which activity to use here is based on your needs:
+1.  In the **Toolbox**, drag the **General Purpose OCR** activity or the **General Purpose OCR in Background** activity from the **Document Data Capture Service** category into your microflow. Which activity to use here depends on your needs:
 
     * The **General Purpose OCR** activity has synchronous behaviour, which will directly get the extraction result in the response
     * The **General Purpose OCR  In Background** activity has an asynchronous behaviour, which provides a microflow that further takes the response of the data-extraction results in the parameter and will use the results further

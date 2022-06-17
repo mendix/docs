@@ -144,7 +144,7 @@ Column properties consist of the following sections:
 
 #### 3.3.1 Expand Section {#expand-section-column}
 
-The Expand section of a column allows you to add a row or a column.
+The **Expand** section of a column allows you to add a row or a column.
 
 
 ##### 3.3.1.1 Add Row
@@ -153,7 +153,7 @@ The Expand section of a column allows you to add a row or a column.
 
 ##### 3.3.1.2 Add Column
 
-**Add Column** allows you to add a column to the left or to the right of the selected one.
+**Add Column** allows you to add a column to the left or to the right of the selected one. You can also resize columns in the working area: select a column and click a plus icon in its top-right corner. 
 
 #### 3.3.2 General Section {#general-section-column}
 
@@ -195,7 +195,9 @@ For *phone*, it can be a good idea to place two columns one under another, setti
 
 ##### 3.3.2.2 Align Vertically {#align-column}
 
-The **Align Vertically** property overrides the [Align Columns Vertically](#align-columns) property on the row and sets alignment for an individual column. 
+The **Align Vertically** property overrides the [Align Columns Vertically](#align-columns) property on the row and sets alignment for an individual column:
+
+{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/align-vertically.gif" >}}
 
 ## 4 Container Overview {#container-overview}
 

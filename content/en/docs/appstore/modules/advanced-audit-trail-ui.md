@@ -1,7 +1,7 @@
 ---
 title: "Advanced Audit Trail UI"
 url: /appstore/modules/advanced-audit-trail-ui/
-category: "App Services"
+category: "Modules"
 description: "Describes the configuration and usage of the Advanced Audit Trail UI module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "Advanced Audit Trail", "UI"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
@@ -9,11 +9,11 @@ tags: ["marketplace", "marketplace component", "Advanced Audit Trail", "UI"]
 
 ## 1 Introduction
 
-The [Advanced Audit Trail UI](https://marketplace.mendix.com/link/component/120204) module contains pre-configured snippets, pages, and layout, which help you create search queries and display query results from your Elasticsearch environment inside your own Mendix application. An extensive search interface allows you to create a search query flexibly: inside a time frame (start date time, end date time), by object (code, GUID, entity), by object action (creation, deletion), by user (username, user role), and by snapshot context (additional info, transaction ID, execution ID, stack trace). Additionally, various pre-configured pages display the results of a single object query or a multi-object query.
+The Advanced Audit Trail UI module contains pre-configured snippets, pages, and layout, which help you create search queries and display query results from your Elasticsearch environment inside your own Mendix application. An extensive search interface allows you to create a search query flexibly: inside a time frame (start date time, end date time), by object (code, GUID, entity), by object action (creation, deletion), by user (username, user role), and by snapshot context (additional info, transaction ID, execution ID, stack trace). Additionally, various pre-configured pages display the results of a single object query or a multi-object query.
 
 ### 1.1 Dependencies
 
-You should use this module with the [Advanced Audit Trail](https://marketplace.mendix.com/link/component/120237) module.
+You should use this module with the Advanced Audit Trail Core module.
 
 ## 2 Installation
 
@@ -23,8 +23,8 @@ To download and install the Advanced Audit Trail UI module in your app, follow t
 
 ### 3.1 User Roles
 
-* **DisplayOnly**: DisplayOnly is typically used for users that may only view certain audit trails.
-* **Administrator**: The Administrator additionally has access to the search interface.
+* **DisplayOnly**: This role is typically used for users that may only view certain audit trails.
+* **Administrator**: This role additionally has access to the search interface.
 
 ### 3.2 Pages
 
@@ -32,7 +32,7 @@ To download and install the Advanced Audit Trail UI module in your app, follow t
 
 * **ACT_SnapshotQuery_CreateAndShowSearch**: pre-creates the search query object and shows the search interface
 * **ACT_SnapshotQuery_ExecuteAndViewResult**: pushes the configured query to Elasticsearch and displays the query results if at least one snapshot was returned
-* **Search**: the search interface, only accessible to the Administrator
+* **Search**: the search interface, only accessible to the Administrator role
 
 #### 3.2.2 Search Results
 

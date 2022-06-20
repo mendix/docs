@@ -75,6 +75,7 @@ There are different versions of the module, depending on which version of Mendix
 ## 2 Installation
 
 1. Configure the **Startup** microflow to run as the startup microflow. This microflow will initialize the custom request handler `/SSO/` (please note the importance of using the final `/` for all instances of `/SSO/`), validate all IdP configurations, and prepare the configuration entities required during the configuration.
+    {{% alert color="info" %}}If you have set up path based access restrictions in your cloud (for example [Path-Based Access Restrictions](/developerportal/deploy/environments-details/#path-based-restrictions) in the Mendix Cloud), ensure that access to `/SSO/` is allowed.{{% /alert %}}
 2. Add the **OpenConfiguration** microflow to the navigation, and then allow the administrator to access this page.
 3.  Review and configure all the constants:
 	* **DefaultLoginPage** – You can specify a different login page here for when the login process fails. When the end-user cannot be authenticated in the external Identity Provider, a button will appear, and by clicking this button, they will be redirected to the specified login page. If this is left blank, an unauthenticated user will be redirected to `/login.html`.

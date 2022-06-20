@@ -31,14 +31,16 @@ For a broader introduction to Mendix development, you may also use the [Quicksta
 
 With Mendix Studio Pro, you can build both native mobile apps and progressive web apps. Progressive web apps are the next evolution of web apps, and your users can access them directly from the browser instead of downloading them from an app store. Native mobile apps are distributed via app stores, and offer improved access to native device capabilities as well as fast performance.
 
-For more information on the capabilities of various mobile apps, see the [Introduction to Mobile Technologies](/refguide/mobile/introduction-to-mobile-technologies/) guide.
+For more information on the capabilities of various mobile apps, see [Introduction to Mobile Technologies](/refguide/mobile/introduction-to-mobile-technologies/).
 
 ## 4 Designing Mobile User Interfaces
 
-* Mobile Apps require special considerations for design
+Well-designed mobile apps take various design requirements into consideration. For example, users frequently change location while using them, often do so on a small screen, and might only use the app in short bursts of activity. Luckily Mendix uses technology that addresses these requirements, and provides design documentation to help you build user-friendly apps.
+
 * Native Apps are styled using React Native
 * Summarize the differences (JSON vs CSS, RN Widget vs Web Widget)
-* [Designing Mobile User Interfaces](/refguide/mobile/designing-mobile-user-interfaces/)
+
+For more information on design and styling, see [Designing Mobile User Interfaces](/refguide/mobile/designing-mobile-user-interfaces/).
 
 ## 5 Using Mobile Capabilities
 
@@ -46,7 +48,7 @@ For more information on the capabilities of various mobile apps, see the [Introd
 * List the capabilities and explain each in one sentence
 * [Using Mobile Capabilities](/refguide/mobile/using-mobile-capabilities/)
 
-## 6 Building, Testing and Distributing Aps
+## 6 Building, Testing, and Distributing Apps
 
 * Summarize the necessary steps to build and distribute a mobile app
 * Explain briefly why testing/debugging works different from web apps

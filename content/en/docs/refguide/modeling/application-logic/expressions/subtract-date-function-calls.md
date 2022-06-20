@@ -1,9 +1,9 @@
 ---
-title: "Add Date Function Calls"
-url: /refguide/add-date-function-calls/
+title: "Subtract Date Function Calls"
+url: /refguide/subtract-date-function-calls/
 parent: "expressions"
-weight: 110
-tags: ["studio pro", "expressions", "add date function"]
+weight: 115
+tags: ["studio pro", "expressions", "subtract date function"]
 ---
 
 ## 1 Introduction
@@ -14,18 +14,18 @@ The first parameter can be an attribute of a domain model entity of type **Date 
 
 The second parameter specifies the time period to be added - you can use a negative time period to subtract it from the specified date.
 
-## 2 addMilliseconds
+## 2 subtractMilliseconds
 
-The `addMilliseconds` function adds a specified number of milliseconds to a date.
+The `subtractMilliseconds` function subtracts a specified number of milliseconds to a date.
 
 ### 2.1 Input Parameters
 
 The input parameters are described in the table below:
 
-| Value                                  | Type          |
-| -------------------------------------- | ------------- |
-| Initial date                           | Date and time |
-| The number of milliseconds to be added | Integer       |
+| Value                                       | Type          |
+| ------------------------------------------- | ------------- |
+| Initial date                                | Date and time |
+| The number of milliseconds to be subtracted | Integer       |
 
 ### 2.2 Output
 
@@ -49,18 +49,18 @@ The output is:
 "Mon Jan 01 01:01:02:400 CET 2007"
 ```
 
-## 3 addSeconds
+## 3 subtractSeconds
 
-The `addSeconds` function adds a specified number of seconds to a date.
+The `subtractSeconds` function subtracts a specified number of seconds to a date.
 
 ### 3.1 Input Parameters
 
 The input parameters are described in the table below:
 
-| Value                             | Type          |
-| --------------------------------- | ------------- |
-| Initial date                      | Date and time |
-| The number of seconds to be added | Integer       |
+| Value                                  | Type          |
+| -------------------------------------- | ------------- |
+| Initial date                           | Date and time |
+| The number of seconds to be subtracted | Integer       |
 
 ### 3.2 Output
 
@@ -75,7 +75,7 @@ The output is described in the table below:
 If you use the following input:
 
 ```java
-addSeconds(dateTime(2007, 1, 1, 1, 1, 1), 2)
+subtractSeconds(dateTime(2007, 1, 1, 1, 1, 1), 2)
 ```
 
 The output is:
@@ -84,18 +84,18 @@ The output is:
 "Mon Jan 01 01:01:03 CET 2007"
 ```
 
-## 4 addMinutes
+## 4 subtractMinutes
 
-The `addMinutes` function adds a number of minutes to a date.
+The `subtractMinutes` function subtracts a number of minutes to a date.
 
 ### 4.1 Input Parameters
 
 The input parameters are described in the table below:
 
-| Value                             | Type          |
-| --------------------------------- | ------------- |
-| Initial date                      | Date and time |
-| The number of minutes to be added | Integer       |
+| Value                                  | Type          |
+| -------------------------------------- | ------------- |
+| Initial date                           | Date and time |
+| The number of minutes to be subtracted | Integer       |
 
 ### 4.2 Output
 
@@ -119,18 +119,18 @@ The output is:
 "Mon Jan 01 01:04:01 CET 2007"
 ```
 
-## 5 addHours
+## 5 subtractHours
 
-The `addHours` function adds a number of hours to a date.
+The `subtractHours` function subtracts a number of hours to a date.
 
 ### 5.1 Input Parameters
 
 The input parameters are described in the table below:
 
-| Value                           | Type          |
-| ------------------------------- | ------------- |
-| Initial date                    | Date and time |
-| The number of hours to be added | Integer       |
+| Value                                | Type          |
+| ------------------------------------ | ------------- |
+| Initial date                         | Date and time |
+| The number of hours to be subtracted | Integer       |
 
 ### 5.2 Output
 
@@ -154,18 +154,18 @@ The output is:
 "Mon Jan 02 02:01:01 CET 2007"
 ```
 
-## 6 addDays[UTC]
+## 6 subtractDays[UTC]
 
-The `addDaysUTC` function adds a number of days to a date. `addDays` uses the server's calendar and `addDaysUTC` uses the UTC calendar.
+The `subtractDaysUTC` function subtracts a number of days to a date. `subtractDays` uses the server's calendar and `subtractDaysUTC` uses the UTC calendar.
 
 ### 6.1 Input Parameters
 
 The input parameters are described in the table below:
 
-| Value                          | Type          |
-| ------------------------------ | ------------- |
-| Initial date                   | Date and time |
-| The number of days to be added | Integer       |
+| Value                               | Type          |
+| ----------------------------------- | ------------- |
+| Initial date                        | Date and time |
+| The number of days to be subtracted | Integer       |
 
 ### 6.2 Output
 
@@ -189,18 +189,18 @@ The output is:
 "Mon Jan 04 01:01:01 CET 2007"
 ```
 
-## 7 addWeeks[UTC]
+## 7 subtractWeeks[UTC]
 
-The `addWeeksUTC` function adds a number of weeks to a date using the UTC calendar as opposed to  `addWeeks` which uses the server's one. 
+The `subtractWeeksUTC` function subtracts a number of weeks to a date using the UTC calendar as opposed to  `subtractWeeks` which uses the server's one. 
 
 ### 7.1 Input Parameters
 
 The input parameters are described in the table below:
 
-| Value                           | Type          |
-| ------------------------------- | ------------- |
-| Initial date                    | Date and time |
-| The number of weeks to be added | Integer       |
+| Value                                | Type          |
+| ------------------------------------ | ------------- |
+| Initial date                         | Date and time |
+| The number of weeks to be subtracted | Integer       |
 
 ### 7.2 Output
 
@@ -224,18 +224,18 @@ The output is:
 "Mon Jan 15 01:01:01 CET 2007"
 ```
 
-## 8 addMonths[UTC]
+## 8 subtractMonths[UTC]
 
-The `addMonthsUTC` function adds a number of months to a date using the UTC calendar as opposed to  `addMonths` which uses the server's one.
+The `subtractMonthsUTC` function subtracts a number of months to a date using the UTC calendar as opposed to  `subtractMonths` which uses the server's one.
 
 ### 8.1 Input Parameters
 
 The input parameters are described in the table below:
 
-| Value                            | Type          |
-| -------------------------------- | ------------- |
-| Initial date                     | Date and time |
-| The number of months to be added | Integer       |
+| Value                                 | Type          |
+| ------------------------------------- | ------------- |
+| Initial date                          | Date and time |
+| The number of months to be subtracted | Integer       |
 
 ### 8.2 Output
 
@@ -259,7 +259,7 @@ The output is:
 "Mon Feb 01 01:01:01 CET 2008"
 ```
 
-## 9 addQuarters
+## 9 subtractQuarters
 
 ### 9.1 Input Parameters
 
@@ -271,18 +271,18 @@ If you use the following input:
 
 The output is:
 
-## 10 addQuarters[UTC]
+## 10 subtractQuarters[UTC]
 
-The `addQuartersUTC` function adds a number of quarters to a date using the UTC calendar as opposed to  `addQuarters` which uses the server's one.
+The `subtractQuartersUTC` function subtracts a number of quarters to a date using the UTC calendar as opposed to  `subtractQuarters` which uses the server's one.
 
 ### 10.1 Input Parameters
 
 The input parameters are described in the table below:
 
-| Value                           | Type          |
-| ------------------------------- | ------------- |
-| Initial date                    | Date and time |
-| The number of years to be added | Integer       |
+| Value                                | Type          |
+| ------------------------------------ | ------------- |
+| Initial date                         | Date and time |
+| The number of years to be subtracted | Integer       |
 
 ### 10.2 Output
 
@@ -298,18 +298,18 @@ If you use the following input:
 
 The output is:
 
-## 11 addYears[UTC]
+## 11 subtractYears[UTC]
 
-The `addYearsUTC` function adds a number of years to a date using the UTC calendar as opposed to  `addYears` which uses the server's one.
+The `subtractYearsUTC` function subtracts a number of years to a date using the UTC calendar as opposed to  `subtractYears` which uses the server's one.
 
 ### 11.1 Input Parameters
 
 The input parameters are described in the table below:
 
-| Value                           | Type          |
-| ------------------------------- | ------------- |
-| Initial date                    | Date and time |
-| The number of years to be added | Integer       |
+| Value                                | Type          |
+| ------------------------------------ | ------------- |
+| Initial date                         | Date and time |
+| The number of years to be subtracted | Integer       |
 
 ### 11.2 Output
 
@@ -331,21 +331,5 @@ The output is:
 
 ```java
 "Mon Jan 01 01:01:01 CET 2018"
-```
-
-## 12 Passing Values of the Long Type
-
-It is possible to pass values of the Long type to different **Add date function** calls:
-
-If you use the following input:
-
-```java
-addSeconds(dateTime(1970, 1, 1, 0, 0, 0), (long)(2147483647 + 100))
-```
-
-The output is:
-
-```java
-"Tue Jan 19 04:15:47 CET 2038"
 ```
 

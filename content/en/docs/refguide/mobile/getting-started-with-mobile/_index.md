@@ -3,8 +3,7 @@ title: "Getting Started with Mobile"
 url: /refguide/mobile/getting-started-with-mobile/
 category: Mobile
 weight: 10
-description: Get started with native mobile in Mendix Studio Pro.
-description: A how-to for creating a native mobile Mendix app and viewing it on a mobile device.
+description: Create a native mobile Mendix app and view it on a mobile device using the Make It Native test app.
 aliases:
     - /howto/mobile/get-started/
     - /howto/mobile/getting-started-with-native-mobile/

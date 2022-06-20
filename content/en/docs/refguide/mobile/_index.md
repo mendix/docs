@@ -29,12 +29,12 @@ For a broader introduction to Mendix development, you may also use the [Quicksta
 
 ## 3 Mobile Technologies
 
-* Mendix supports native mobile and PWA
-* Explain each in one sentence
-* Point to the "choose the right technology"
-* [Introduction to Mobile Technologies](/refguide/mobile/introduction-to-mobile-technologies/)
+With Mendix Studio Pro, you can build both native mobile apps and progressive web apps. Progressive web apps are the next evolution of web apps, and your users can access them directly from the browser instead of downloading them from an app store. Native mobile apps are distributed via app stores, and offer improved access to native device capabilities as well as fast performance.
+
+For more information on the capabilities of various mobile apps, see the [Introduction to Mobile Technologies](/refguide/mobile/introduction-to-mobile-technologies/) guide.
 
 ## 4 Designing Mobile User Interfaces
+
 * Mobile Apps require special considerations for design
 * Native Apps are styled using React Native
 * Summarize the differences (JSON vs CSS, RN Widget vs Web Widget)

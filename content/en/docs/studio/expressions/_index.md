@@ -176,9 +176,22 @@ The list of expressions that are used in Studio the most is represented below. F
 * [`addDays`](/refguide/add-date-function-calls/) – adds days to a date
 * [`addWeeks`](/refguide/add-date-function-calls/) – adds weeks to a date
 * [`addMonths`](/refguide/add-date-function-calls/) – adds months to a date
+* [`addQuarters`](/refguide/add-date-function-calls/) – adds quarters to a date
 * [`addYears`](/refguide/add-date-function-calls/) – adds years to a date
 
-### 3.11 Parse & Format Decimal Function Calls
+### 3.11 Subtract Date Function Calls
+
+* [`subtractMilliseconds`](/refguide/subtract-date-function-calls/) – subtracts milliseconds from a date
+* [`subtractSeconds`](/refguide/subtract-date-function-calls/) – subtracts seconds from a date
+* [`subtractMinutes`](/refguide/subtract-date-function-calls/) – subtracts minutes from a date
+* [`subtractHours`](/refguide/subtract-date-function-calls/) – subtracts hours from a date
+* [`subtractDays`](/refguide/subtract-date-function-calls/) – subtracts days from a date
+* [`subtractWeeks`](/refguide/subtract-date-function-calls/) – subtracts weeks from a date
+* [`subtractMonths`](/refguide/subtract-date-function-calls/)  – subtracts months from a date
+* [`subtractQuarters`](/refguide/subtract-date-function-calls/) – subtracts quarters from a date
+* [`subtractYears`](/refguide/subtract-date-function-calls/) – subtracts years from a date
+
+### 3.12 Parse & Format Decimal Function Calls
 
 * [`formatDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a decimal to a string 
 

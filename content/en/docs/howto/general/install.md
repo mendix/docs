@@ -8,7 +8,7 @@ toc-level: "2"
 tags: ["studio pro", "install", "install studio pro", "download"]
 ---
 
-[{{< figure src="/attachments/howto/general/install/download.png" >}}](https://marketplace.mendix.com/link/studiopro/)
+[{{< figure src="/attachments/howto/general/install/download.png" link="https://marketplace.mendix.com/link/studiopro/" >}}](https://marketplace.mendix.com/link/studiopro/)
 
 ## 1 Introduction
 

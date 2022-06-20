@@ -76,7 +76,7 @@ To configure a loop, do the following:
     1. Set **Select an Attribute or Association** to **Processed (Boolean)**.
     2. Set the **New value** of this attribute to *true*.
     
-        {{< figure src="/attachments/studio/microflows/microflows-loop/change-value-dialogue- example.png" alt="Example of Change Value Dialog Window" >}}
+        {{< figure src="/attachments/studio/microflows/microflows-loop/change-value-dialogue-example.png" alt="Example of Change Value Dialog Window" >}}
     
     3. Click **Add** to save the changes. 
 

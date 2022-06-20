@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "imap", "pop3", "email", "encrypt
 
 ## 1 Introduction
 
-The Email Connector combines the functionalities of the [IMAP/POP3](/appstore/modules/imap/) module and [Email with Templates](/appstore/modules/email-with-templates/) module. It is available for Studio Pro 9.11 and above.
+The Email Connector combines the functionalities of the [IMAP/POP3](/appstore/modules/imap/) module and [Email with Templates](/appstore/modules/email-with-templates/) module. It is available for Studio Pro 8.18 and above.
 
 ### 1.1 Features
 
@@ -58,7 +58,7 @@ If you already have these widgets in your app, and they are not up-to-date, you 
 After you install the module, configure the following in Studio Pro:
 
 1. Provide a value for the **EncryptionKey** constant available under **USE_ME** folder for password storage. For add-on modules, you can set constants by going to the **App Explorer > App 'Name’ > Settings > Configuration > Edit > Constants**.
-2. Launch the UI by using the **ACT_EmailConnector_OverviewPage** microflow in the **USE_ME** folder.
+2. Launch the UI by using the **EmailConnector_OverviewPage** in the **USE_ME** folder.
 3. Link [User Roles](/refguide/user-roles/) in app **Security** to ensure that the configuration page displays when you locally run the app.
 
 

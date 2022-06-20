@@ -174,6 +174,3 @@ You can see the following information of an archived story:
 * Which sprint the story belongs to – if you click it, you can see the details of this sprint
 * Linked epic – if you click it, you can see the details of this epic
 * Archive date and time – if you click it, you can see the details of the story
-
-
-

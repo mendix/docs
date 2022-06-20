@@ -49,7 +49,7 @@ The **Source** defines the way the objects are retrieved:
 If you have changes in the memory, this action will retrieve objects from the database, and also apply the changes in the client.
 
 In this case, a change is not the entire object, but just an attribute of the object (for example, a *Name* attribute on a *Person* entity). If you retrieve the *Person* entity from the database, you will still retrieve the *Age* and *Height* attributes that are stored in the database.
-{{% /alert %}}|
+{{% /alert %}}
 
 ### 3.2 Retrieve by Association Properties {#association}
 

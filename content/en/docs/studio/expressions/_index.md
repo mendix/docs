@@ -36,8 +36,6 @@ Expressions can be used for the following activities in a microflow:
 *  [Decision](/studio/microflows-decision/)
 *  End Event
 
-For more information on setting and changing values for microflow activities, see [Set & Change a Value for Different Activities in the Microflows](/studio/microflows-setting-and-changing-value/).
-
 ## 2 Writing an Expression
 
 Named items in microflows and workflows (for example, objects, lists, or variables) can be called in an expression by inserting the name of the item and adding a dollar sign (for example,  `$Customer` could refer to an object named `Customer`).
@@ -186,5 +184,4 @@ The list of expressions that are used in Studio the most is represented below. F
 
 * [Microflows](/studio/microflows/)
 * [Workflows](/studio/workflows/)
-* [Set & Change a Value for Different Activities in the Microflows](/studio/microflows-setting-and-changing-value/)
 * [Expressions](/refguide/expressions/)

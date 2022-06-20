@@ -299,7 +299,7 @@ The following should be taken into account when configuring the metrics registri
     ]
     ```
 
-    This will still allow metrics like **app.others.counter** as it passes the first `accept` filter, `app.`. However, if you reverse the filters, **app.others.counter** will be denied, while **app.somethingelse.** would still be accepted.
+    This will still allow metrics like **app.others.counter** as they pass the first `accept` filter, `app.`. However, if you reverse the filters, **app.others.counter** will be denied, while **app.somethingelse.** would still be accepted.
 
     {{% alert color="info" %}}Ensure that more specific filters are defined before less specific ones so that they are applied correctly.{{% /alert %}}
 

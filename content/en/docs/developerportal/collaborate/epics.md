@@ -18,7 +18,7 @@ To open an app project in Epics, go to the [Developer Portal](https://sprintr.ho
 
 {{< figure src="/attachments/developerportal/collaborate/epics/epics-check-it-out.png" >}}
 
-{{% todo %}}Check with Jelena the final way to access Epics, and whether **Epics** is added on the menu on the left side of the page.{{% / todo %}}
+{{% todo %}}Check with Jelena the final way to access Epics, and whether Epic is added on the menu on the left side of the page.{{% / todo %}}
 
 Once you open an app project in Epics, you can easily switch to a different app project in Epics. To do so, click the name of the current app project on the upper-left corner, and then select a different app project from the drop-down list.
 
@@ -38,7 +38,7 @@ If you work in the Kanban workflow, the **Board** page gives an overview of all 
 
 You can create an epic or a story by clicking **Create Epic** or **Create Story** on the upper-right corner of the page. In the search box below, you can search stories based on story titles.
 
-{{% todo %}}Check with Jelena if more information can be used for search, for example epics or labels.{{% / todo %}}
+{{% todo %}}Check with Jelena if more information can be used for search, for example, epic titles or labels.{{% / todo %}}
 
 {{< figure src="/attachments/developerportal/collaborate/epics/create-epic-story-search.png" >}}
 
@@ -129,7 +129,7 @@ If you use the Kanban workflow, the **Planning** page shows the following catego
 
 No matter which workflow you use, you can always create an epic or a story by clicking **Create Epic** or **Create Story** on the upper-right corner of the page. In the search box below, you can search stories based on the story title.
 
-{{% todo %}}Check with Jelena if more information can be used for search, for example epics or labels.{{% / todo %}}
+{{% todo %}}Check with Jelena if more information can be used for search, for example, epic titles or labels.{{% / todo %}}
 
 Each row in a category shows the following information about a story:
 
@@ -163,9 +163,20 @@ Clicking a row opens the [story details](#story-details) page.
 
 ## 4 Epics
 
-The **Epics** page shows all the epics for your current app project. At the end of each row, a progress bar indicates how many stories are completed for that epic. You can open the [details of an epic](#epic-details) by clicking the row of the epic.
+The **Epics** page shows all the epics for your current app project. 
+
+Each row shows the following information about an epic:
+
+* Unique epic ID, which consists of a prefix and a number
+* Epic title
+* To whom the epic is assigned
+* How many stories are completed for that epic. 
+
+{{< figure src="/attachments/developerportal/collaborate/epics/epic.png" >}}
 
 You can create an epic by clicking **Create Epic** on the upper-right corner of the page.
+
+Clicking a row opens the [epic details](#epic-details) page.
 
 ### 4.1 Epic Details Page {#epic-details}
 
@@ -205,4 +216,4 @@ All the archived stories are shown on the **Archive** page. You can see the foll
 
 You can search stories based on story titles in the search box.
 
-{{% todo %}}Check with Jelena if more information can be used for search, for example epics or labels.{{% / todo %}}
+{{% todo %}}Check with Jelena if more information can be used for search, for example, epic titles or labels.{{% / todo %}}

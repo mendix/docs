@@ -36,7 +36,7 @@ The Studio Pro top bar contains the following items:
 
 ### 2.1 Menus {#menus}
 
-In the Studio Pro top bar, you can see several menus, such as **Switch-to** menu, [Edit](/refguide/edit-menu/), [View](/refguide/view-menu/), and [Version Control](/refguide/version-control-menu/). Each menu contains menu items that allow you to perform various actions, for example, to [create a deployment package](/refguide/create-deployment-package-dialog/), set [preferences](/refguide/preferences-dialog/), or view the [Errors](/refguide/errors-pane/) pane. 
+In the Studio Pro top bar, you can see several menus, such as **Switch-to** menu, [Edit](/refguide/edit-menu/), [View](/refguide/view-menu/), and [Version Control](/refguide/version-control-menu/). Each menu contains menu items that allow you to perform various actions, for example, to [create a deployment package](/refguide/create-deployment-package-dialog/), set [preferences](/refguide/preferences-dialog/), or view the [errors](/refguide/errors-pane/) pane. 
 
 For more information on menus, see [Menus](/refguide/menus/). 
 
@@ -76,7 +76,7 @@ You can have a number of tabs open, just like in a modern web browser. They can 
 
 Each document has its own save state, history, and future, so undo and redo actions are unlimited.
 
-## 5 Dockable Panes
+## 5 Dockable Panes {#panes}
 
 Dockable panes can be positioned around the working area and contain various elements and settings. For example, you can view list of errors, configure properties of a specific document or an element, view toolbox. Panes are opened via [Menus](/refguide/menus/).
 
@@ -90,13 +90,19 @@ On the right is the currently selected language. If you have set up multiple lan
 
 ## 7 Shortcut Keys
 
+This section summarizes the shortcut keys available in Studio Pro. It is broken into sections which indicate where you can use the keys.
+
 ### 7.1 General Shortcut Keys
+
+These keys are available in multiple places within Studio Pro and work generically.
 
 #### 7.1.1 Panes
 
+These keys are active within the [Dockable Panes](#panes) of Studio Pro.
+
 ##### 7.1.1.1 All Panes
 
-You can navigate between Studio Pro panes (for example, the Domain model editor or the Errors pane) using <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd>. This opens a selection dialog where you can choose a pane using the mouse, <kbd>Ctrl</kbd> + arrow keys, or <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd>. You are taken to the selected pane when you click the main mouse button or release the <kbd>Ctrl</kbd> key.
+You can navigate between Studio Pro panes (for example, the domain model editor or the errors pane) using <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd>. This opens a selection dialog where you can choose a pane using the mouse, <kbd>Ctrl</kbd> + arrow keys, or <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd>. You are taken to the selected pane when you click the main mouse button or release the <kbd>Ctrl</kbd> key.
 
 {{< figure src="/attachments/refguide/modeling/studio-pro-overview/ctrl-tab-navigation.png" >}}
 
@@ -108,11 +114,11 @@ There are alternative ways to navigate between tabs within panes:
 | <kbd>Ctrl</kbd> + <kbd>PgUp</kbd> / <kbd>PgDn</kbd> | Switch to next/previous tab in active pane. |
 | <kbd>Ctrl</kbd>&nbsp;+&nbsp;(<kbd>Shift</kbd>)&nbsp;+&nbsp;<kbd>Tab</kbd> | Open pane navigation dialog. |
 
-Most menu items also have shortcut keys assigned to them that can be used in all panes. These are shown in the menus, listed in [Menu Shortcut Keys](#menu-shortcuts), below, and also listed on the documentation page for each menu under [Menus](/refguide/menus/).
+Most menu items also have shortcut keys assigned to them that can be used in all panes. These are shown in the menus, listed in the [Menu Shortcut Keys](#menu-shortcuts) section, below, and also listed on the documentation page for each menu under [Menus](/refguide/menus/).
 
 ##### 7.1.1.2 Editor Panes Only
 
-The following key combinations work in the editor panes for the Domain Model, Pages, Microflow, and Nanoflows.
+The following key combinations work in the editor panes for the Domain Model, Pages, Workflows, Microflow, and Nanoflows.
 
 | Key | Description |
 | --- | --- |
@@ -122,7 +128,7 @@ The following key combinations work in the editor panes for the Domain Model, Pa
 | <kbd>Ctrl</kbd> + <kbd>Y</kbd> | Redo the last undone action in an editor pane. |
 | <kbd>Ctrl</kbd> + <kbd>Z</kbd> | Undo the last action in an editor pane. |
 | <kbd>Ctrl</kbd> + Mouse scroll wheel | Zooms in or out. |
-| <kbd>Shift</kbd>&nbsp;+&nbsp;Mouse&nbsp;scroll&nbsp;wheel | Scrolls left or right. Works as if you were using the horizontal scroll bars. |
+| <kbd>Shift</kbd>&nbsp;+&nbsp;Mouse&nbsp;scroll&nbsp;wheel | Scrolls left or right. Works as if you were using the horizontal scroll bar. |
 
 #### 7.1.2 Dialog Boxes
 
@@ -141,8 +147,8 @@ In most edit grids (such as the list of attributes in the entity properties), th
 | <kbd>Ctrl</kbd> + <kbd>N</kbd> | Creates a new item. |
 | <kbd>Enter</kbd> | Edits the currently selected item. |
 | <kbd>Delete</kbd> | Deletes the currently selected item(s). |
-| <kbd>↑</kbd> / <kbd>↓</kbd> | Selected previous/next item. |
-| <kbd>Ctrl</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd> | Move selected item(s) up/down. |
+| <kbd>↑</kbd> / <kbd>↓</kbd> | Selects previous/next item. |
+| <kbd>Ctrl</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd> | Moves selected item(s) up/down. |
 
 ### 7.2 Domain Model Editor Shortcut Keys
 
@@ -164,7 +170,7 @@ The following shortcut keys are available in the page editor:
 | Key | Description |
 | --- | --- |
 | Arrow keys | Moves the selection box to the widget or element in the direction of the arrow key. For example, if currently a label is selected and you press the right arrow key, the text box to the right of it becomes selected. |
-| <kbd>Ctrl</kbd>&nbsp;+&nbsp;arrow&nbsp;keys | Moves the currently selected item up/down or left/right. This works on table columns and rows, tab pages, grid and data view buttons, search fields, etc. |
+| <kbd>Ctrl</kbd>&nbsp;+&nbsp;arrow&nbsp;keys | Moves the currently selected item up/down or left/right. This works on table columns and rows, tab pages, data grid and data view buttons, search fields, etc. |
 | <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
 | <kbd>F2</kbd> | Edits the caption of a label or button, or the contents of text, inline on the page. You can also just start typing a letter or a digit and the caption will be replaced by what you type. |
 
@@ -180,8 +186,8 @@ The following shortcut keys are available in the microflow and nanoflow editors:
 | <kbd>F2</kbd> | Edits the name of the return value of the currently selected activity. This shortcut will not function on activities that do not return a result. |
 | <kbd>Home</kbd> | Highlights and focus on the start event of the current flow. |
 | <kbd>End</kbd> | Highlights and focus on an end event in the current flow. If there are multiple end events, clicking **End** multiple times will toggle between the different events. |
-| <kbd>Shift</kbd>  | When resizing the entity, by holding <kbd>Shift</kbd> , the flow component will stay centered at its current position and will expand equally in all directions. |
-| <kbd>Ctrl</kbd>  | When pressing the <kbd>Ctrl</kbd>, you can select additional flow components. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
+| <kbd>Shift</kbd>  | By holding <kbd>Shift</kbd> when resizing an activity, it will stay centered at its current position and expand equally in all directions. |
+| <kbd>Ctrl</kbd>  | When pressing the <kbd>Ctrl</kbd>, you can select additional activities. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 
 ### 7.5 Debugger Shortcut Keys {#debugger-shortcuts}
 
@@ -201,35 +207,35 @@ The following shortcut keys are assigned to menu actions that can be used in all
 | Key | Description |
 | --- | --- |
 | <kbd>F1</kbd> | Help. |
-| <kbd>F3</kbd> | Highlight the next find result in the **Find Results** pane and open it in an editor. |
-| <kbd>Shift</kbd> + <kbd>F3</kbd> | Highlight the previous find result in the **Find Results** pane and open it in an editor. |
-| <kbd>F4</kbd> | Synchronize app directory. |
-| <kbd>Ctrl</kbd> + <kbd>F4</kbd> | Exit. |
-| <kbd>F5</kbd> | Run the app locally so you can view the app. |
-| <kbd>Shift</kbd> + <kbd>F5</kbd> | Stop the currently running app. |
-| <kbd>Ctrl</kbd> + <kbd>F5</kbd> | Deploy to licensed cloud node. |
-| <kbd>F6</kbd> | Deploy for Eclipse. |
-| <kbd>F7</kbd> | Create deployment package. |
-| <kbd>F8</kbd> | Highlight the next error in the **Error List** pane and open it in an editor. |
-| <kbd>Shift</kbd> + <kbd>F8</kbd> | Highlight the previous error result in the **Error List** pane and open it in an editor. |
-| <kbd>F9</kbd> | Show the currently running app in the browser (responsive). |
-| <kbd>Ctrl</kbd> + <kbd>F9</kbd> | Show the currently running app in the browser (phone simulation). |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F9</kbd> | Show the currently running app in the browser (tablet simulation). |
-| <kbd>F11</kbd> | Enable and disable full screen mode. |
-| <kbd>Shift</kbd> + <kbd>F11</kbd> | Enable and disable distraction free mode. |
-| <kbd>Ctrl</kbd> + <kbd>F</kbd> | Open search dialog box. |
+| <kbd>F3</kbd> | Highlights the next find result in the **Find Results** pane and open it in an editor. |
+| <kbd>Shift</kbd> + <kbd>F3</kbd> | Highlights the previous find result in the **Find Results** pane and open it in an editor. |
+| <kbd>F4</kbd> | Synchronizes the app directory. |
+| <kbd>Ctrl</kbd> + <kbd>F4</kbd> | Exits. |
+| <kbd>F5</kbd> | Runs the app locally so you can view the app. |
+| <kbd>Shift</kbd> + <kbd>F5</kbd> | Stops the currently running app. |
+| <kbd>Ctrl</kbd> + <kbd>F5</kbd> | Deploys to licensed cloud node. |
+| <kbd>F6</kbd> | Deploys for Eclipse. |
+| <kbd>F7</kbd> | Creates a deployment package. |
+| <kbd>F8</kbd> | Highlights the next error in the **Error List** pane and open it in an editor. |
+| <kbd>Shift</kbd> + <kbd>F8</kbd> | Highlights the previous error result in the **Error List** pane and open it in an editor. |
+| <kbd>F9</kbd> | Shows the currently running app in the browser (responsive). |
+| <kbd>Ctrl</kbd> + <kbd>F9</kbd> | Shows the currently running app in the browser (phone simulation). |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F9</kbd> | Shows the currently running app in the browser (tablet simulation). |
+| <kbd>F11</kbd> | Enables and disable full screen mode. |
+| <kbd>Shift</kbd> + <kbd>F11</kbd> | Enables and disable distraction free mode. |
+| <kbd>Ctrl</kbd> + <kbd>F</kbd> | Opens search dialog box. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> | Opens advanced search dialog box. |
-| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> | Display usages of the selected object. |
-| <kbd>Ctrl</kbd> + <kbd>G</kbd> | Go to any document or domain model element. |
-| <kbd>Ctrl</kbd>&nbsp;+&nbsp;(<kbd>Shift</kbd>)&nbsp;+&nbsp;<kbd>L</kbd> | Cycle through the configured languages. |
-| <kbd>Ctrl</kbd> + <kbd>N</kbd> | Create a new document. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd> | Create a new app. |
+| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> | Displays usages of the selected object. |
+| <kbd>Ctrl</kbd> + <kbd>G</kbd> | Goes to any document or domain model element. |
+| <kbd>Ctrl</kbd>&nbsp;+&nbsp;(<kbd>Shift</kbd>)&nbsp;+&nbsp;<kbd>L</kbd> | Cycles through the configured languages. |
+| <kbd>Ctrl</kbd> + <kbd>N</kbd> | Creates a new document. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd> | Creates a new app. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> | Opens an existing app or app package. |
-| <kbd>Ctrl</kbd> + <kbd>S</kbd> | Save the changes in the currently active document tab. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> | Save the changes in all open documents. |
-| <kbd>Ctrl</kbd> + <kbd>W</kbd> | Close the current document. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | Close all document tabs. |
-| <kbd>Delete</kbd> | Delete the selected element. |
+| <kbd>Ctrl</kbd> + <kbd>S</kbd> | Saves the changes in the currently active document tab. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> | Saves the changes in all open documents. |
+| <kbd>Ctrl</kbd> + <kbd>W</kbd> | Closes the current document. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | Closes all document tabs. |
+| <kbd>Delete</kbd> | Deletes the selected element. |
 
 ## 8 Read More
 

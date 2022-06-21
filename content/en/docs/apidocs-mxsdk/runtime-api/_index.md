@@ -8,7 +8,7 @@ tags: ["Runtime API", "API"]
 
 ## 1 Introduction
 
-Extend your application model using Java. All functionality and information from both the application model and Mendix Runtime is accessible via the Runtime API.
+Extend your application model using Java. All functionality and information from both the application model and Mendix Runtime is accessible via the Runtime API. The Runtime API is available under the [End User License Mendix Runtime API](/apidocs-mxsdk/apidocs/runtime-api/license/).
 
 ## 2 Runtime API
 

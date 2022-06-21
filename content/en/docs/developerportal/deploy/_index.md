@@ -16,6 +16,12 @@ tags: ["Deploy","Manage", "Mendix Cloud", "IBM", "SAP", "Cloud Foundry", "Kubern
 
 A Mendix application can be deployed in different ways. You can deploy to your local machine for development and testing. You can deploy to the Mendix cloud, which is the default location for both free and licensed apps. You can also deploy to IBM Cloud, SAP Business Technology (SAP BTP) Platform, Cloud Foundry-based platforms, Docker containers, Azure, or to a server you configured yourself.
 
+{{% alert color="warning" %}}
+* Each app can only be deployed to one type of target platform (for example Mendix Cloud nodes) in addition to local testing
+* Some features which rely on the target platform can work differently depending on what is supported (for example in Cloud Foundry, Kubernetes, or Windows server)
+    * If you want to use a particular feature, check that it is supported by your chosen target platform
+{{% /alert %}}
+
 This section of the *Developer Portal Guide* contains step-by-step instructions, and additional reference material, to help you to deploy and manage your Mendix apps in the cloud or on premises. It is split into a number of sections:
 
 * [General](/developerportal/deploy/general/) – contains information which applies to deployments in many different environments

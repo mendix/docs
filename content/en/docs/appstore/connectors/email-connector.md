@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "imap", "pop3", "email", "encrypt
 
 ## 1 Introduction
 
-The Email Connector combines the functionalities of the [IMAP/POP3](/appstore/modules/imap/) module and [Email with Templates](/appstore/modules/email-with-templates/) module along with some additional features like sending signed and encrypted emails. It is available for Studio Pro 8.18.18 and above.
+The Email Connector combines the functionalities of the [IMAP/POP3](/appstore/modules/imap/) module and [Email with Templates](/appstore/modules/email-with-templates/) module, and adds new features like sending signed and encrypted emails. It is available for Studio Pro [8.18.18](/releasenotes/studio-pro/8.18/) and above.
 
 ### 1.1 Features
 
@@ -115,7 +115,7 @@ When modeling your app in Studio Pro, use the **SendEmail** Java action to send 
 
 The **Return type** is a boolean value. The Java action would connect to email server using the provided details and send an email, and would return **True** if successful otherwise the exception along with the cause.
 
-The **To**, **Subject**, and **Email Content** fields are mandatory. Multiple email addresses can be specified in **To**, **CC**, or **BCC​** separated by a semicolon (**;**).
+The **To**, **Subject**, and **Email Content** fields are mandatory. Multiple email addresses can be specified in **To**, **CC**, or **BCC** separated by a semicolon (**;**).
 
 ### 4.2 Receiving Email
 
@@ -126,14 +126,14 @@ When modeling your app in Studio Pro, use **RetrieveEmailMessages** Java action.
 The input parameters for receiving email are the following: 
 
 * **EmailAccount** – email account consisting of incoming email configuration
-* **onEmailFetchMicroflow** – a callback microflow that will be triggered when **List of EmailMessage** is fetched from the email server as per batch size configured in email account. You can process the list per your need. Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. Refer to the sample microflow, **Sample_OCH_EmailFetchMicroflow**
+* **onEmailFetchMicroflow** – a callback microflow that will be triggered when **List of EmailMessage** is fetched from the email server per the batch size configured in the email account. You can process the list per your need. Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. Refer to the sample microflow, **Sample_OCH_EmailFetchMicroflow**
 
 {{% alert color="warning" %}}
 When duplicating this microflow, do not change input parameters’ name and data type.
 {{% /alert %}}
 
 * **onFetchCompleteMicroflow** – a callback microflow that will be triggered when the fetch is complete and there are no more emails for the particular Java action call
-* ***onFetchErrorMicroflow** – a callback microflow that will be triggered if there are errors during the fetch from email server operation
+* **onFetchErrorMicroflow** – a callback microflow that will be triggered if there are errors during the fetch from email server operation
 
 ### 4.3 Using Email Templates
 
@@ -148,7 +148,7 @@ When modeling your app in Studio Pro, use the  **SendEmailWithTemplate** Java ac
 The input parameters are the following:
 * **Data Object** – entity object from which you want to extract the placeholder tokens
 * **Email account** – email account consisting of outgoing email configuration
-* **Email template** – email template from which email message object is created and to be sent
+* **Email template** – email template from which email message object is created and sent
 * **Queued** – when *true*, email message will be stored in the **EmailMessage** entity with status as **QUEUED** queued and user can sent it later using scheduled event or future. You can use microflow **SE_SendQueuedEmails** to create scheduled events.
 
 ### 4.4 Signed and Encrypted Emails
@@ -202,7 +202,9 @@ When duplicating this microflow, do not change input parameters’ name and data
 Before subscribing to incoming email, it is recommended to attempt to unsubscribe from incoming email so that application will not end up having duplicate subscription for a single email account. The complete flow of subscription is shown in the microflow **ACT_SubscribeForEmailNotification**.
 {{% /alert %}}
 
-Please note that this subscription for new emails will only work if email account is configured with IMAP/S protocol and if email server supports notification. Also subscription will end if anyhow app is stopped. To subscribe again in between app restarts the microflow **Sample_ASU_SubscribeForEmailNotification** should be registered in **After Startup** option. 
+{{% alert color="info" %}}
+The subscription to new emails will only work if email account is configured with IMAP/S protocol and if the email server supports notifications. The subscription will end if the app is stopped. To subscribe again in between app restarts, register the **Sample_ASU_SubscribeForEmailNotification** microflow in the **After Startup** option. 
+{{% /alert %}}
 
 ### 4.6 Unsubscribing from Incoming Email
 

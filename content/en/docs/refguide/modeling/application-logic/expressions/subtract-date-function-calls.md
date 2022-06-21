@@ -40,13 +40,13 @@ The output is described in the table below:
 If you use the following input:
 
 ```java
-
+subtractMilliseconds(dateTime(2007, 1, 1, 1, 1, 1), 1000)
 ```
 
 The output is:
 
 ```java
-
+Mon Jan 01 01:01:00 CET 2007
 ```
 
 ## 3 subtractSeconds
@@ -75,13 +75,13 @@ The output is described in the table below:
 If you use the following input:
 
 ```java
-
+subtractSeconds(dateTime(2007, 1, 1, 1, 1, 1), 30)
 ```
 
 The output is:
 
 ```java
-
+Mon Jan 01 01:00:30 CET 2007
 ```
 
 ## 4 subtractMinutes
@@ -110,13 +110,13 @@ The output is described in the table below:
 If you use the following input:
 
 ```java
-
+subtractMinutes(dateTime(2007, 1, 1, 1, 1, 1), 30)
 ```
 
 The output is:
 
 ```java
-
+Mon Jan 01 00:30:01 CET 2007
 ```
 
 ## 5 subtractHours
@@ -145,13 +145,13 @@ The output is described in the table below:
 If you use the following input: 
 
 ```java
-
+subtractHours(dateTime(2007, 1, 1, 1, 1, 1), 1)
 ```
 
 The output is:
 
 ```java
-
+Mon Jan 01 00:01:01 CET 2007
 ```
 
 ## 6 subtractDays and subtractDays[UTC]
@@ -180,13 +180,13 @@ The output is described in the table below:
 If you use the following input: 
 
 ```java
-
+subtractDays(dateTime(2007, 1, 5, 1, 1, 1), 5)
 ```
 
 The output is:
 
 ```java
-
+Mon Jan 01 01:01:01 CET 2007
 ```
 
 ## 7 subtractWeeks and subtractWeeks[UTC]
@@ -215,13 +215,13 @@ The output is described in the table below:
 If you use the following input: 
 
 ```java
-
+subtractWeeks(dateTime(2007, 1, 15, 1, 1, 1), 2)
 ```
 
 The output is:
 
 ```java
-
+Mon Jan 01 01:01:01 CET 2007
 ```
 
 ## 8 subtractMonths and subtractMonths[UTC]
@@ -250,13 +250,13 @@ The output is described in the table below:
 If you use the following input: 
 
 ```java
-
+subtractWeeks(dateTime(2007, 3, 1, 1, 1, 1), 2)
 ```
 
 The output is:
 
 ```java
-
+Mon Jan 01 01:01:01 CET 2007
 ```
 
 ## 9 subtractQuarters and subtractQuarters[UTC]
@@ -284,7 +284,15 @@ The output is described in the table below:
 
 If you use the following input: 
 
+```java
+Input: subtractQuarters(dateTime(2007, 4, 1, 1, 1, 1), 1)
+```
+
 The output is:
+
+```java
+Mon Jan 01 01:01:01 CET 2007
+```
 
 ## 10 subtractYears and subtractYears[UTC]
 
@@ -312,12 +320,12 @@ The output is described in the table below:
 If you use the following input: 
 
 ```java
-
+Input: subtractYears(dateTime(2007, 1, 1, 1, 1, 1), 1)
 ```
 
 The output is:
 
 ```java
-
+Mon Jan 01 01:01:01 CET 2006
 ```
 

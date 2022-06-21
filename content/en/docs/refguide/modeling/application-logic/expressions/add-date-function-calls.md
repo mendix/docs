@@ -296,7 +296,15 @@ The output is described in the table below:
 
 If you use the following input: 
 
+```java
+addQuarters(dateTime(2007, 1, 1, 1, 1, 1), 1)
+```
+
 The output is:
+
+```java
+Mon Apr 01 01:01:01 CET 2007
+```
 
 ## 11 addYears[UTC]
 

@@ -61,6 +61,7 @@ To publish or consume business events, you must first download and import the [M
 
 Follow these steps to deploy locally. The settings are all located in the **_USE_ME/Constants** folder of the module.
 ![](https://paper-attachments.dropbox.com/s_5112255A543DA3FFC2AEF04899EBEAD5076372C39E9A1EE9612BC93B1906A44D_1653392738981_Screenshot+2022-05-24+at+13.39.55.png)
+{{< figure src="/attachments/appstore/modules/business-events/use-me-constants-folder.png" >}}
 
 Only the **ChannelName** and **ServerUrl** have to be specified.
 * **ChannelName**: `local`

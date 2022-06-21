@@ -81,7 +81,7 @@ Despite its name, navigability is usually only important when adding or changing
 
 One-way navigable associations are associations that allow navigation to associated entities only in a single direction: from parent to child. These associations are typically introduced by OData service integration, either through an external provider or the Mendix Data Hub, in [external entities](/refguide/external-entities/#associations). The major implications of one-way navigability are related to XPath use cases such as constraints and queries.
 
-All other domain model associations can be traversed in both directions.
+You can retrieve data from all other domain model associations in both directions.
 
 ### 2.6 Delete Behavior {#delete-behavior}
 

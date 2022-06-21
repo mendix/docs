@@ -72,4 +72,4 @@ See [Microflow Activities](/refguide7/microflow-activities/).
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/918124.png" link="/refguide7/generate-document/" >}}](/refguide7/generate-document/) | [Generate document](/refguide7/generate-document/) | Generate document can be used to create a document of a certain type based on a [template](/refguide7/document-templates/). |
+| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/918124.png" link="/refguide7/generate-document/" >}} | [Generate document](/refguide7/generate-document/) | Generate document can be used to create a document of a certain type based on a [template](/refguide7/document-templates/). |

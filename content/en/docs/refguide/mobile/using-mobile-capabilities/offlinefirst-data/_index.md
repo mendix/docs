@@ -7,9 +7,9 @@ aliases:
     - /refguide/offline-first/
 ---
 
-The Mendix platform offers support to build fully offline-first applications, whether it is a native mobile app or a progressive web app.
-
 ## 1 Introduction
+
+The Mendix platform offers support to build fully offline-first applications, whether it is a native mobile app or a progressive web app.
 
 Offline-first applications work regardless of the connection to provide a continuous experience. Pages and logic interact with an offline database on the device, and the client synchronizes the data with the server. Working against local database results in a snappier UI, increased reliability, and improved device battery life. Please note that offline-first apps need a network connection for several operations, such as when starting the app for the first time or when a user attempts to log in.
 

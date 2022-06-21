@@ -132,7 +132,7 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 * Microsoft Windows Server 2008 SP2 and above
 * Debian 8 (Jessie) and above
-* Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7
+* Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7, and Red Hat Enterprise Linux 8
 * CentOS 6, CentOS 7
 
 ### 7.2 Web Server
@@ -143,7 +143,7 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 ### 7.3 Java {#java}
 
-When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from AdoptOpenJDK, see [AdoptOpenJDK Installation](https://adoptopenjdk.net/installation.html). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 {{% alert color="info" %}}
 There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. Mendix Studio Pro will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself. For more information about this issue, see [Possible Bug in Java 7](https://community.oracle.com/tech/developers/discussion/comment/9987709).
@@ -212,10 +212,21 @@ If you still need to support IE11, note that Studio Pro [8](/releasenotes/studio
 
 ## 11 Mobile Operating Systems {#mobileos}
 
-For Mendix native apps, hybrid apps, and the Mendix Developer App the following operating systems are supported:
+For native and hybrid apps built with Mendix the following operating system versions are supported:
 
-* Latest two major versions of iOS
-* Android 5.0 and above
+* Latest version of iOS
+* Latest three versions of Android
+
+Only devices running on these operating system versions receive up-to-date security fixes from their vendors and thus minimize being vulnerable to known exploits.
+
+You can build native and hybrid apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
+
+We recommend the following minimum hardware requirements for all mobile devices running native and hybrid Mendix apps:
+
+* CPU: minimum 2 cores with 2 GHz
+* Memory: minimum 2 GB
+
+Depending on your app's complexity, these minimum hardware requirements might not be sufficient and should be adjusted.
 
 ### 11.1 Hybrid Apps Preview
 

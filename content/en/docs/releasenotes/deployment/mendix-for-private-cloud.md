@@ -13,6 +13,19 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
+### June 2nd, 2022 
+
+#### Portal Improvements
+
+* We now provide the `mxpc-cli` configuration tool (version 2.5.1 and above) in versions which run on ARM64 architectures.
+
+### May 25th, 2022
+
+#### Mendix Operator v2.5.1{#2.5.1}
+
+* We addressed a regression in Mendix Operator v2.5.0 where an error would show a spinner icon in the Developer Portal (instead of an error icon)
+* We addressed an issue with deleting Minio storage from [Minio RELEASE.2021-11-05T09-16-26Z](https://github.com/minio/minio/releases/tag/RELEASE.2021-11-05T09-16-26Z) and later versions
+
 ### May 19th, 2022
 
 #### Portal Improvement
@@ -33,6 +46,14 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We improved support for injected sidecars - the Operator now works correctly with sidecars injected into any pod, not just app pods. It is now possible to install a service mesh such as [Istio](https://istio.io/) or [Linkerd](https://linkerd.io) for the whole namespace, and route all traffic between pods through the service mesh.
 * We refactored our internal build process - images now share layers as much as possible, reducing download sizes and making it easier to patch CVEs from the base OS layers.
 * A subset of Mendix for Private Cloud components are now available for the ARM64 architecture, allowing you to deploy Mendix apps to machines running Apple Silicon, Raspberry Pi 4, and server-grade ARM64 chips.
+
+##### Known Issue
+
+This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
+
+* If an error occurs in these scenarios, it will show a spinner icon in the Developer Portal (instead of an error icon):
+  * Building an app image
+  * Requesting a database or file storage for a new environment
 
 ### April 21st, 2022
 

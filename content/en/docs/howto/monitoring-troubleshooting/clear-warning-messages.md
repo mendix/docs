@@ -179,4 +179,4 @@ Variable ‘Variable’ is never used.
 * [Debug Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/)
 * [Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely/)
 
-Several warnings relate to improper security. For more information on this, see [App Security](/refguide/project-security/) in the *Studio Pro Guide*.
+Several warnings relate to improper security. For more information on this, see [App Security](/refguide/app-security/) in the *Studio Pro Guide*.

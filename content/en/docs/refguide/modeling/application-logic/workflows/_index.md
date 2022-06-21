@@ -69,7 +69,7 @@ You can perform the following basic functions when working on workflows:
 
 To open a workflow in Studio Pro, do the following:
 
-1. In the [App Explorer](/refguide/project-explorer/), open a module where this workflow is located.
+1. In the [App Explorer](/refguide/app-explorer/), open a module where this workflow is located.
 2. Navigate to the workflow’s location inside the module and double-click the workflow.
 
 The selected workflow is opened.
@@ -78,7 +78,7 @@ The selected workflow is opened.
 
 To add a workflow to your app, do the following:
 
-1. In the [App Explorer](/refguide/project-explorer/), right-click the module or a folder you want to create a page in and select **Add workflow**.
+1. In the [App Explorer](/refguide/app-explorer/), right-click the module or a folder you want to create a page in and select **Add workflow**.
 
 2. In the **Add workflow** dialog box, fill in Name and click **OK**:
 
@@ -90,7 +90,7 @@ The workflow is created and the **WorkflowInstance** entity is added to the doma
 
 To delete a workflow, do the following:
 
-1. In the [App Explorer](/refguide/project-explorer/), select a workflow you would like to delete and right-click it.
+1. In the [App Explorer](/refguide/app-explorer/), select a workflow you would like to delete and right-click it.
 2. In the displayed list, select **Delete** and confirm your choice by clicking **Delete** in the pop-up dialog.
 
 The selected workflow is deleted. 

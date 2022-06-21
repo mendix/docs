@@ -70,7 +70,7 @@ You can select how you want to represent associations. For more information, see
 
 ### 3.3 Security {#security}
 
-You can configure security for the OData service when [App Security](/refguide/project-security/) is enabled.
+You can configure security for the OData service when [App Security](/refguide/app-security/) is enabled.
 
 #### 3.3.1 Requires Authentication {#authentication}
 

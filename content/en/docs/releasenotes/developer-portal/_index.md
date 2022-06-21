@@ -17,6 +17,24 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### June 16th, 2022
+
+#### Fixes
+
+* We fixed an issue where users with an invalid Twitter URL in the [Social](/developerportal/community-tools/mendix-profile/#social) section of their Mendix Profile Settings could not change their password.
+* We fixed an issue where users could have a duplicated project membership, resulting in two identical projects in the Developer Portal.
+
+### June 9th, 2022
+
+#### New Features
+
+* The free Mendix Cloud environment of an app can now be deleted from the [app details](/developerportal/control-center/#app-details) page in Control Center.
+
+#### Improvements
+
+* The free and licensed Mendix Cloud environments of an app are now visualized on the [app details](/developerportal/control-center/#app-details) page in Control Center.
+* From now on, the free Mendix Cloud environment of an app will be deleted whenever the app is deactivated or deleted.
+
 ### May 19th, 2022
 
 #### Fixes

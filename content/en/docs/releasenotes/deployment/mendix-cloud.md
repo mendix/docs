@@ -17,7 +17,37 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### June 15th, 2022
+
+#### Improvements
+
+* We have enabled a Web Application Firewall (WAF) service for the licensed regions of the Mendix Cloud. See the [release note for March 30th](#waf) for more information over WAF.
+
+    | Region | Date Enabled |
+    | --- | --- |
+    | Asia Pacific | June 13th |
+    | US and Canada | June 14th |
+    | EU and UK | June 15th |
+
+### June 2nd, 2022
+
+#### Fix
+
+* We fixed an issue where some customers were seeing an error message when leaving the permissions tab of the environments page when there were no actual errors. (Ticket 146866)
+
+#### Improvements
+
+* We improved the UX for setting up two-factor authentication.
+
+### May 31st, 2022
+
+#### Fix – AppDynamics
+
+* We changed the naming format for nodes when using AppDynamics metrics. When the instance is added to the node name, we now use a hyphen instead of an underscore. So `node_1` becomes `node-1`. This is in line with AppDynamics naming conventions.
+
 ### May 6th, 2022
+
+#### Improvements
 
 * We have updated AppDynamics monitoring to provide default values where possible.
 
@@ -41,7 +71,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We now show deactivated users on the [Node Permissions](/developerportal/deploy/node-permissions/) page for consistency with the [Team](/developerportal/collaborate/team/) page.
 
-### March 30th, 2022
+### March 30th, 2022{#waf}
 
 #### Improvements
 

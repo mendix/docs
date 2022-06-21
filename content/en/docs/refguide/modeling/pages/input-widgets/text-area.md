@@ -55,21 +55,53 @@ Text area properties consist of the following sections:
 
 #### 2.5.1 On Change{#on-change}
 
-The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
+The on change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget after the value has been changed.
 
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
-#### 2.5.2 On Enter
+#### 2.5.2 On Change Behavior
 
-The on-enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
+{{% alert type="info" %}}
+Will be available in Studio Pro 9.14.
+{{% /alert %}}
+
+The on change behavior property lets users select how **on change** is handled in Studio Pro via the following options: 
+
+* **When user leaves input field (Default)**
+* **While user is entering data**
+
+##### 2.5.2.1 When User Leaves Input Field (Default)
+
+Text area will apply changes when a value is different than a previously saved value in the database and the following condition is met:
+
+* Blurred: this will trigger on change and on leave events
+
+This means that there is no way for users to trigger an on change event while typing. To address that use case, please use the second option: [While user is entering data](#user-enters-data).
+
+##### 2.5.2.2 While User is Entering Data {#user-enters-data}
+
+This option allows users to trigger an on change event while they are typing. 
+
+Text area will save changes if both these conditions are met:
+
+* The value is different than the previously saved value in the database 
+* The last change occurred after the configured **Apply after (ms)** length of time
+
+With **While user is entering data**, users can adjust one more property called **Apply after (ms)** (described above). This will reduce the amount of the calls made for an on change event, thus improving app performance.
 
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
-#### 2.5.3 On Leave
+#### 2.5.3 On Enter
 
-The on-leave property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
+The on enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it.
 
-This differs from the [On change](#on-change) property in that the event will always be triggered, even if the value has not been changed.
+{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
+
+#### 2.5.4 On Leave
+
+The on leave property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
+
+This differs from the [on change](#on-change) property in that the event will always be triggered, even if the value has not been changed.
 
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 

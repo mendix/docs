@@ -15,7 +15,7 @@ A Mendix app model starts with a project. A project contains several top-level o
 
 Studio Pro Guide | Model SDK API docs
 | --- | --- |
-| [App](/refguide/project/) | TypeScript module [projects](https://apidocs.rnd.mendix.com/modelsdk/latest/modules/projects.html) |
+| [App](/refguide/app/) | TypeScript module [projects](https://apidocs.rnd.mendix.com/modelsdk/latest/modules/projects.html) |
 | [Modules](/refguide/modules/) |[Project](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.project.html) |
 | |[Module](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.module.html) | |
 | |[ProjectDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) | |
@@ -30,8 +30,8 @@ Project-level documents describe project security, app settings, app navigation 
 
 Studio Pro Guide | Model SDK API docs
 | --- | --- |
-| | [App Settings](/refguide/project-settings/) | [ProjectDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) and its inheritance hierarchy |
-| [Project Security](/refguide/project-security/) | |
+| | [App Settings](/refguide/app-settings/) | [ProjectDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) and its inheritance hierarchy |
+| [App Security](/refguide/app-security/) | |
 | [Navigation](/refguide/navigation/) | |
 | [System Texts](/refguide/system-texts/) | |
 

@@ -113,7 +113,7 @@ When you publish a self-referencing association, you can only publish one side o
 
 Mendix Data Hub is a separately licensed product. 
 
-Without a license, an app can retrieve a total of 1000 OData objects per day for each runtime instance. After that limit is exceeded, an error occurs when users try to retrieve more data. The number of consumed objects per day is reset at midnight in the time zone of the Mendix Runtime scheduler (which can be defined in the [Scheduled Event Time Zone](/refguide/project-settings/#scheduled) of the **App Settings**).
+Without a license, an app can retrieve a total of 1000 OData objects per day for each runtime instance. After that limit is exceeded, an error occurs when users try to retrieve more data. The number of consumed objects per day is reset at midnight in the time zone of the Mendix Runtime scheduler (which can be defined in the [Scheduled Event Time Zone](/refguide/app-settings/#scheduled) of the **App Settings**).
 
 With a Data Hub license, apps are not limited in retrieving OData objects.
 

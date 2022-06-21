@@ -5,6 +5,7 @@ description: "The various sections of the Mendix Studio Pro Guide provide detail
 tags: ["studio pro"]
 weight: 60
 no_list: false
+description_list: true
 cascade:
     - space: "Studio Pro 8 Guide"
     - mendix_version: "8"

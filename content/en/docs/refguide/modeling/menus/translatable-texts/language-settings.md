@@ -10,12 +10,12 @@ tags: ["studio pro", "translation", "languages", "translatable text", "add langu
 
 Mendix is designed to be used by users in multiple languages. The **Languages** tab of the **App Settings** allows you to select which languages your app will support.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/01_project_settings.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/01_app_settings.png" >}}
 
 You can reach this tab in two ways:
 
 1. Select the menu option **Language > Language Settings…**.
-2. Open the **App{Name} > Settings** dialog box from the [App Explorer](/refguide/project-explorer/) and select the **Language** tab.
+2. Open the **App{Name} > Settings** dialog box from the [App Explorer](/refguide/app-explorer/) and select the **Language** tab.
 
 ## 2 Setting Default Language
 
@@ -34,7 +34,7 @@ You can add as many languages as you like from the list of supported languages b
 
 {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/add-language.png" >}}
 
-Most languages will be added with an empty dictionary, although some translations have already been set up in the Dutch dictionary.
+Most languages will be added with an empty dictionary, although some translations have already been set up in the Dutch dictionary. 
 
 ## 4 Advanced Language Settings{#advanced}
 
@@ -163,7 +163,8 @@ The most up-to-date list of supported languages in your version of Studio Pro is
 | Romanian | Romania | ro_RO | 9.0.5 |
 | Russian | Russia | ru_RU | 9.0.5 |
 | Serbian (Cyrillic) | Bosnia and Herzegovina | sr_BA | 9.0.5 |
-| Serbian (Cyrillic) | Serbia and Montenegro | sr_CS | 9.0.5 |
+| Serbian (Cyrillic) | Montenegro | sr_ME | 9.14.0 |
+| Serbian (Cyrillic) | Serbia | sr_RS | 9.14.0 |
 | Sinhala | Sri Lanka | si_LK | 9.3.0 |
 | Slovak | Slovakia | sk_SK | 9.0.5 |
 | Slovenian | Slovenia | sl_SI | 9.0.5 |
@@ -205,3 +206,12 @@ The most up-to-date list of supported languages in your version of Studio Pro is
 | Urdu | Pakistan | ur_PK | 9.2.0 |
 | Vietnamese | Vietnam | vi_VN | 9.0.5 |
 | Welsh | Wales | cy_GB | 9.0.5 |
+
+## 6 List of Deprecated Languages
+
+You can find the list of deprecated languages in the table below:
+
+| Language                     | Region                | Locale   | Available Since | Deprecated In |
+| ---------------------------- | --------------------- | -------- | --------------- | ------------- |
+| Japanese (Imperial calendar) | Japan                 | ja_JP_JP | 9.0.5           | 9.6.0         |
+| Serbian (Cyrillic)           | Serbia and Montenegro | sr_CS    | 9.0.5           | 9.14.0        |

@@ -155,7 +155,13 @@ Now this microflow triggers the selected workflow:
 
 {{< figure src="/attachments/studio/workflows/call-workflow-example.jpg" alt="Call Workflow Example" >}}
 
-## 3 Workflow Context Parameter
+## 3 Workflow App Template
+
+You can use a workflow-specific **Approval app** template to configure an approval request form for end-users. Based on this form the app is be created that contains preconfigured elements, such as dashboards, admin pages, dashboards, and a workflow that you can afterwards customize even more.
+
+When [creating an app in the Developer Portal](http://new.mendix.com/), choose the **Approval app** in the **Starting Point** section to use the app template. 
+
+## 4 Workflow Context Parameter
 
 A [workflow parameter](/studio/workflow-parameter/) is input data for your workflow. The **WorkflowContext** parameter represents a business-related data that travels through the workflow:
 
@@ -163,7 +169,7 @@ A [workflow parameter](/studio/workflow-parameter/) is input data for your workf
 
 For more information, see [Workflow Context Parameter](/studio/workflow-parameter/). 
 
-## 4 Toolbox Elements
+## 5 Toolbox Elements
 
 The **Toolbox** tab contains elements that you can drag and drop on a path. Below is a categorized overview of all elements. The following sections are used:
 
@@ -171,7 +177,7 @@ The **Toolbox** tab contains elements that you can drag and drop on a path. Belo
 * [User actions](#user-actions)
 * [System actions](#system)
 
-### 4.1 General {#general}
+### 5.1 General {#general}
 
 Elements in the **General** section help you control the workflow path, for example, add parallel paths or end them:
 
@@ -187,19 +193,19 @@ The elements of this section are described in the table below:
 | [Parallel split](/studio/workflows-general-activities/#parallel-split) | Adds two or more parallel paths to your workflow.            |
 | [End activity](/studio/workflows-general-activities/#end)   | Ends the path of the workflow                                |
 
-### 4.2 User Actions {#user-actions}
+### 5.2 User Actions {#user-actions}
 
 [User task](/studio/workflows-user-task/) – a central element in a workflow that allows you to assign a task to a certain user or a group of users using filters or microflows. 
 
 {{< figure src="/attachments/studio/workflows/user-actions.jpg" alt="User Actions" >}}
 
-### 4.3 System Actions {#system}
+### 5.3 System Actions {#system}
 
 [Call microflow](/studio/workflow-system-actions/) activity calls a selected microflow. You can use this activity to add application logic to the path of the workflow that does not need user interaction. 
 
 {{< figure src="/attachments/studio/workflows/system-actions.jpg" alt="System Actions" >}}
 
-## 5 Main Documents in This Category
+## 6 Main Documents in This Category
 
 * [Workflow Context Parameter](/studio/workflow-parameter/) – describes the Workflow Context parameter and its properties 
 * [Workflow Properties](/studio/workflow-properties/) – describes workflow properties 

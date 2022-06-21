@@ -1,9 +1,10 @@
 ---
 title: "Deployment"
 url: /developerportal/deploy/
-description: "Deployment section of the Developer Portal Guide: How to deploy Mendix apps to different environments and how to manage those deployments."
-tags: ["Deploy","Manage", "Mendix Cloud", "IBM", "SAP", "Cloud Foundry", "Kubernetes", "On-premises", "Environment", "Mendix Cloud Dedicated"]
 weight: 10
+description: "Deployment section of the Developer Portal Guide: How to deploy Mendix apps to different environments and how to manage those deployments."
+weight: 5
+tags: ["Deploy","Manage", "Mendix Cloud", "IBM", "SAP", "Cloud Foundry", "Kubernetes", "On-premises", "Environment", "Mendix Cloud Dedicated"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -14,6 +15,12 @@ weight: 10
 ## 1 Introduction
 
 A Mendix application can be deployed in different ways. You can deploy to your local machine for development and testing. You can deploy to the Mendix cloud, which is the default location for both free and licensed apps. You can also deploy to IBM Cloud, SAP Business Technology (SAP BTP) Platform, Cloud Foundry-based platforms, Docker containers, Azure, or to a server you configured yourself.
+
+{{% alert color="warning" %}}
+* Each app can only be deployed to one type of target platform (for example Mendix Cloud nodes) in addition to local testing
+* Some features which rely on the target platform can work differently depending on what is supported (for example in Cloud Foundry, Kubernetes, or Windows server)
+    * If you want to use a particular feature, check that it is supported by your chosen target platform
+{{% /alert %}}
 
 This section of the *Developer Portal Guide* contains step-by-step instructions, and additional reference material, to help you to deploy and manage your Mendix apps in the cloud or on premises. It is split into a number of sections:
 
@@ -88,25 +95,13 @@ Deploying to Azure is possible from the [Azure Marketplace](https://azuremarketp
 
 ## 11 On-Premises
 
-To learn how to deploy your Mendix application on premises, see [How to Deploy Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/) and [Unix Deployment](/developerportal/deploy/unix-like/).
+To learn how to deploy your Mendix application on premises, see [How to Deploy Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/) and [Unix-Like Deployment](/developerportal/deploy/unix-like/).
 
 ## 12 Mendix Applications on Industrial Edge
 
-You can bring your Mendix app to Industrial Edge, the SIEMENS platform to host applications from different vendors on a computing platform close to the shopfloor. Thus enables the extensions of automation, deployment of demanding streamprocessing and learning algorithms as well as the hosting from integration code to site automation.
+You can bring your Mendix app to Industrial Edge, the SIEMENS platform to host applications from different vendors on a computing platform close to the shop floor. Thus enables the extensions of automation, deployment of demanding streamprocessing and learning algorithms as well as the hosting from integration code to site automation.
 
 To find out how to do this, read [Mendix Applications on Industrial Edge](/developerportal/deploy/mendix-app-on-industrial-edge/).
 
-## 13 Main Documents in This Category
+## 13 Documents in This Category
 
-* [General](/developerportal/deploy/general/) – information which applies to deployments in many different environments
-* [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) – how to deploy to, and configure, the Mendix Cloud
-* [IBM Cloud](/developerportal/deploy/ibm-cloud/) – how to deploy to the IBM Cloud
-* [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/) – how to deploy to SAP BTP
-* [Siemens MindSphere](/developerportal/deploy/deploying-to-mindsphere/) – how to deploy to Siemens MindSphere
-* [Private Cloud](/developerportal/deploy/private-cloud/) – how to deploy to a supported private cloud through the Developer Portal
-* [Cloud Foundry](/developerportal/deploy/cloud-foundry-deploy/) – how to deploy to a Cloud Foundry-based platform
-* [Docker](/developerportal/deploy/docker-deploy/) – how to deploy directly in a Docker container
-* [On-Premises](/developerportal/deploy/on-premises-design/) – how to deploy on premises using Microsoft Windows or Un*x
-* [Mendix Applications on Industrial Edge](/developerportal/deploy/mendix-app-on-industrial-edge/) – how to bring Mendix application on to the Industrial Edge
-* [Mobile App](/developerportal/deploy/mobileapp/) – how to publish your mobile app
-* [App Services](/developerportal/deploy/app-services/) – how to publish to the Mendix Marketplace

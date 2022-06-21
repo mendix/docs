@@ -13,13 +13,13 @@ Custom metrics were introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.
 
 Mendix supports reporting metrics through [Micrometer](https://micrometer.io/docs).
 
-The Metrics can be configured and used with:
+The Metrics can be configured in the following ways:
 
-* [Metrics registries configuration](#registries-configuration): To configure the metrics supported by Mendix
-* [Application tags](#application-tags): To include tags in all the metrics in application level
-* [Microflow activities](#microflow-activities): To handle metrics in microflow activities
-* [Java API](#java-api): To handle metrics using a Java API in a Java action
-* [Logging](#logging): To log metrics to a log node
+* [Metrics registries configuration](#registries-configuration) – to configure the metrics supported by Mendix
+* [Application tags](#application-tags) – to include tags in all the metrics in application level
+* [Microflow activities](#microflow-activities) – to handle metrics in microflow activities
+* [Java API](#java-api) – to handle metrics using a Java API in a Java action
+* [Logging](#logging) – to log metrics to a log node
 
 ## 2 Metrics Registries Configuration {#registries-configuration}
 
@@ -39,27 +39,45 @@ Micrometer can send metrics to multiple registries. To configure micrometer for 
     "settings": { <settings> },
     "filters": [ <list-of-filters> ]
   },
-  ...
+  …
 ]
 ```
 
 The details of each settings are listed below:
 
-### type (mandatory)
+* `type` *(mandatory)* – the type of the registry to use. Currently supported types are [`prometheus`](https://prometheus.io/docs/introduction/overview/), [`jmx`](https://www.oracle.com/java/technologies/javase/javamanagement.html), [`influx`](https://www.influxdata.com/), and [`statsd`](https://www.datadoghq.com/dg/monitor/ts/statsd/) — Depending on the type of the registry the `settings` may vary.
+* `settings` *(conditional mandatory)* – settings for the registry – each registry has different settings depending upon the **type** specified:
+    * [Prometheus](#prometheus)
+    * [jmx](#jmx)
+    * [influx](#influx)
+    * [statsd](#statsd)
+* `filters` *(optional)* – instructions on which metrics to accept or deny — see [Filters](#filters) for more information
 
-The type of the registry to use. Currently supported types are : `prometheus`, `jmx`, `influx`, and `statsd`. Depending on the type of the registry the `settings` may vary.
+### 2.1 Settings
 
-### settings (conditional mandatory)
+The following settings can be used, depending on the type of metrics being generated:
 
-These are settings for the registry. Each registry has different settings depending upon the **type** specified. Supported settings for each type are as follows:.
+| Setting | DataType | Manda-tory | Type | Description | Default Value | Examples |
+| --- | --- | --- | --- | --- | --- | --- |
+| `db` | _String_ | No | influx | The db to send metrics to | mydb | customDb, metricDb |
+| `password` | _String_ | Yes | influx | Authenticate requests with this password | - | - |
+| `uri` | _String_ | No | influx | The URI for backend | http://localhost:8086 (for Influx) | - |
+| `userName` | _String_ | Yes | influx | Authenticate requests with this user | - | - |
+| `protocol` | _String_ | No | influx | Protocol of the statsd connection | UDP | TCP, UDP |
+| `domain` | _String_ | No | jmx | Jmx domain to publish the metrics | metrics | "Mendix", "Employee" |
+| `enabled` | _Boolean_ | No | influx / statsd | Enables / Disables the meter | true | true, false |
+| `flavor` | _StatsdFlavor_ | No | statsd | The variant of the StatsD protocol | DATADOG | ETSY, TELEGRAF, SYSDIG |
+| `host` | _String_ | No | statsd | The host name of the StatsD agent | localhost | - |
+| `port` | _Int_ | No | statsd | The port of the StatsD agent | 8125 | - |
+| `step` | _Duration_ | No | all | The step size (reporting frequency) to use | 1m | `1ms`, `2s`, `3m`, `4h`, `5d` or [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) -> `P3Y6M4DT12H30M5S` | |
+| `filters` | _Json_ | No | all | Custom setting from Mendix to filter metrics | - | [See below](#filters)    
 
-#### [Prometheus](https://prometheus.io/docs/introduction/overview/)
+#### 2.1.1 Prometheus{#prometheus}
+Multiple [Prometheus](https://prometheus.io/docs/introduction/overview/) registrations are **NOT supported**. When the Prometheus registry is set, it can be accessed through the `/prometheus` context path over the admin endpoint.
 
-  Multiple Prometheus registrations are **NOT supported**. When the Prometheus registry is set, it can be accessed through the `/prometheus` context path over the admin endpoint.
+* `step`: The step size or reporting frequency to use.
 
-  `step`: The step size or reporting frequency to use.
-
-##### Example 1
+Example 1
 
   ```json
   [
@@ -72,7 +90,7 @@ These are settings for the registry. Each registry has different settings depend
   ]
   ```
 
-##### Example 2
+Example 2
 
   ```json
   [
@@ -85,12 +103,12 @@ These are settings for the registry. Each registry has different settings depend
   ]
   ```
 
-#### [Jmx](https://www.oracle.com/java/technologies/javase/javamanagement.html)
+#### 2.1.2 Jmx{#jmx}
 
-  `step`: The step size or reporting frequency to use.
-  `domain`: The Jmx domain to which to publish the metrics.
+* `step`: The step size or reporting frequency to use.
+* `domain`: The Jmx domain to which to publish the metrics.
 
-##### Example 1
+Example 1
 
   ```json
   [
@@ -104,7 +122,7 @@ These are settings for the registry. Each registry has different settings depend
   ]
   ```
 
- ##### Example 2
+ Example 2
 
   ```json
   [
@@ -117,16 +135,16 @@ These are settings for the registry. Each registry has different settings depend
   ]
   ```
 
-#### [Influx](https://www.influxdata.com/)
+#### 2.1.3 Influx{#influx}
 
-  `uri`: The URI for the Influx backend.
-  `db`: The database name to which to send the metrics.
-  `userName`: The userName for authentication.
-  `password`: The password for authentication.
-  `step`: The step size or reporting frequency to use.
-  `enabled`: set to `true` to enable the registry. This helps in switching the meter _on_ and _off_ while keeping the settings in the configuration.
+* `uri`: The URI for the Influx backend.
+* `db`: The database name to which to send the metrics.
+* `userName`: The userName for authentication.
+* `password`: The password for authentication.
+* `step`: The step size or reporting frequency to use.
+* `enabled`: set to `true` to enable the registry. This helps in switching the meter _on_ and _off_ while keeping the settings in the configuration.
 
-##### Example 1
+Example 1
 
   ```json
   [
@@ -140,7 +158,7 @@ These are settings for the registry. Each registry has different settings depend
   ]
   ```
 
-##### Example 2
+Example 2
 
   ```json
   [
@@ -157,7 +175,7 @@ These are settings for the registry. Each registry has different settings depend
   ]
   ```
 
-#### [StatsD](https://www.datadoghq.com/dg/monitor/ts/statsd/)
+#### 2.1.4 StatsD{#statsd}
 
   `flavor`: Specifies the variant of the StatsD protocol to use.
   `host`: The host name of the StatsD agent.
@@ -166,7 +184,7 @@ These are settings for the registry. Each registry has different settings depend
   `protocol`: The protocol of the connection.
   `enabled`: set to `true` to enable the registry. This helps in switching the meter _on_ and _off_ while keeping the settings in the configuration.
   
-##### Example 1
+Example 1
 
   ```json
   [
@@ -182,7 +200,7 @@ These are settings for the registry. Each registry has different settings depend
   ]
   ```
 
-##### Example 2
+Example 2
 
   ```json
   [
@@ -196,28 +214,9 @@ These are settings for the registry. Each registry has different settings depend
   ]
   ```
 
-#### All settings details
+### 2.2 Filters {#filters}
 
-More information about all the settings,
-
-| Setting      | DataType       | Mandatory | Type           | Description                                   | Default Value                      | Examples                                                                                                 |
-| ------------ | -------------- | ----------| -------------- | --------------------------------------------- | ---------------------------------- | ---------------------------------------------------------------------------------------------------------|
-| `db`         | _String_       | No        | influx         | The db to send metrics to                     | mydb                               | customDb, metricDb                                                                                       |
-| `password`   | _String_       | Yes       | influx         | Authenticate requests with this password      | -                                  | -                                                                                                        |
-| `uri`        | _String_       | No        | influx         | The URI for backend                           | http://localhost:8086 (for Influx) | -                                                                                                        |
-| `userName`   | _String_       | Yes       | influx         | Authenticate requests with this user          | -                                  | -                                                                                                        |
-| `protocol`   | _String_       | No        | influx         | Protocol of the statsd connection             | UDP                                | TCP, UDP                                                                                                 |
-| `domain`     | _String_       | No        | jmx            | Jmx domain to publish the metrics             | metrics                            | "Mendix", "Employee"                                                                                     |
-| `enabled`    | _Boolean_      | No        | influx/statsd  | Enables/Disables the meter                    | true                               | true, false                                                                                              |
-| `flavor`     | _StatsdFlavor_ | No        | statsd         | The variant of the StatsD protocol            | DATADOG                            | ETSY, TELEGRAF, SYSDIG                                                                                   |
-| `host`       | _String_       | No        | statsd         | The host name of the StatsD agent             | localhost                          | -                                                                                                        |
-| `port`       | _Int_          | No        | statsd         | The port of the StatsD agent                  | 8125                               | -                                                                                                        |
-| `step`       | _Duration_     | No        | all            | The step size (reporting frequency) to use    | 1m                                 | `1ms`, `2s`, `3m`, `4h`, `5d` or [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) -> `P3Y6M4DT12H30M5S` |                                                                 |
-| `filters`    | _Json_         | No        | all            | Custom setting from Mendix to filter metrics  | -                                  | [See below](#filters)                                                                                    |
-
-### filters (optional) {#filters}
-
-Filters help in filtering metrics based on given criteria. Below is the syntax,
+Filters are optional, but can help in filtering metrics based on given criteria. Below is the syntax:
 
 ```json
 "filters" : [
@@ -225,21 +224,14 @@ Filters help in filtering metrics based on given criteria. Below is the syntax,
 ]
 ```
 
-#### type
+* `type` – the type of filter to apply. Currently we support the following:
+    * `nameStartsWith` : Filters the metric if it begins with the given values.
+* `result` – the result of applying the filter – if the metric matches the criteria, this action will be applied to the metric. Supported values are:
+    * `accept`
+    * `deny`
+* `values` – a list of values to be applied in the given filter type
 
-The type of filter to apply. Currently we support the following:
-
-* `nameStartsWith` : Filters the metric if it begins with the given values.
-
-#### result
-
-The result of applying the filter. If the filter matches the criteria, the result value will be applied to the metric. Supported values are: `accept` (or) `deny`.
-
-#### values
-
-A list of values to be applied in the given filter type.
-
-##### Example 1
+#### 2.2.1 Filter Example 1
 
 ```json
 [
@@ -255,7 +247,7 @@ A list of values to be applied in the given filter type.
 
 The above filter accepts metrics which starts with **"app."**, **"employee."**, or **"myapp."**
 
-##### Example 2
+#### 2.2.2 Filter Example 2
 
 ```json
 [
@@ -274,7 +266,7 @@ The above filter accepts metrics which starts with **"app."**, **"employee."**, 
 
 The above filter discards metrics which starts with **"Unnamed."**, **"Invalid."**, or **"Internal."**
 
-### Notes
+### 2.3 Notes
 
 {{% alert color="info" %}}
 The following should be taken into account when configuring the metrics registries.
@@ -351,7 +343,7 @@ To create the metrics,
 import com.mendix.metrics.Counter;
 import com.mendix.core.Core;
 
-...
+…
 // Create a counter
 Counter counter1 = Core.metrics().createCounter("app.strikes")
                                 .withTag("app", "myapp")

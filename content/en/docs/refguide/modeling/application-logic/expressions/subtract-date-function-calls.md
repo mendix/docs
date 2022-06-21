@@ -10,9 +10,9 @@ tags: ["studio pro", "expressions", "subtract date function"]
 
 Subtract date function calls subtract a time period from a date and time and return the modified value. 
 
-The first parameter can be an attribute of a domain model entity of type **Date and time**, a variable of type **Date and time**, or a **Date and time** value created using a [Date Creation](/refguide/date-creation/) function.
+The first parameter can be an attribute of a domain model entity of type **Date and time**, a variable of type **Date and time**, or a **Date and time** value created using a [Date Creation](/refguide/date-creation/) function. The second parameter specifies the time period to be subtracted. It is also possible to pass values of the Long type to different **Subtract date function** calls.
 
-The second parameter specifies the time period to be subtracted.
+You can also add a time period to the specified date. For more information, see [Add Date Function Calls](/refguide/add-date-function-calls/).
 
 ## 2 subtractMilliseconds
 

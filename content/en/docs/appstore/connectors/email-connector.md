@@ -202,7 +202,7 @@ When duplicating this microflow, do not change input parameters’ name and data
 Before subscribing to incoming email, it is recommended to attempt to unsubscribe from incoming email so that application will not end up having duplicate subscription for a single email account. The complete flow of subscription is shown in the microflow **ACT_SubscribeForEmailNotification**.
 {{% /alert %}}
 
-Please note that this subscription for new emails will only work if email account is configured with IMAP/S protocol and if email server supports notification. Also subscription will end if anyhow app is stopped. To subscribe again in between app restarts the microflow **IVK_SubscribeForEmailNotification_AfterStartup** should be registered in **After Startup** option. 
+Please note that this subscription for new emails will only work if email account is configured with IMAP/S protocol and if email server supports notification. Also subscription will end if anyhow app is stopped. To subscribe again in between app restarts the microflow **Sample_ASU_SubscribeForEmailNotification** should be registered in **After Startup** option. 
 
 ### 4.6 Unsubscribing from Incoming Email
 

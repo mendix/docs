@@ -21,7 +21,11 @@ title: "Enter the title of the document"
 
 [//]: #	"Include links/references to Idea Forum ideas when available."
 
+#### Performance Improvements
+
 #### {Major improvement specifically named in heading}
+
+#### Other Improvements
 
 ### Fixes
 

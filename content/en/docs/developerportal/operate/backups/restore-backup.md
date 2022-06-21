@@ -24,6 +24,14 @@ You cannot transfer data from one app to another by restoring a backup from one 
 If you want to copy data to another app, we recommend using the [Database Replication](/appstore/modules/database-replication/) module.
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+If the database in your plan is not large enough to contain all the restored data, the restore operation will fail. This will leave the database only partially restored. You will need to upgrade your plan to increase the database size or restore a smaller database to ensure that the database is complete.
+
+Your database must be large enough to hold the decompressed size of the database as stored in the [db folder](#db-folder) of your backup file, plus an overhead of 2.25GB used during the restoration process.
+
+Please contact [Mendix Support](https://support.mendix.com/) if you need further assistance with this issue.
+{{% /alert %}}
+
 ## 2 Restoring a Backup for the Same Licensed Cloud Node{#restore-cloud-backup}
 
 Mendix Cloud makes nightly backups, and you can also manually request that a backup is made. If you want to restore one of these backups to the node from which it was backed-up just follow the steps below.
@@ -139,7 +147,7 @@ This contains json describing the backup. For example:
 }
 ```
 
-### db folder
+### db folder{#db-folder}
 
 This contains the *db.backup* file. This is a PostgreSQL dump file created using the command `pg_dump -O -x -Fc`.
 
@@ -151,17 +159,7 @@ The dump must be created with `pg_dump` version 1.14 or below, which is currentl
 
 ### tree folder
 
-This contains the files which are stored in external file storage. Each file has the name of the uuid used within Mendix to identify the resource.
-
-#### Mendix Cloud V4
-
-For Mendix Cloud V4 the files are stored in a flat structure.
-
-#### Mendix Cloud V3
-
-The situation for the deprecated Mendix Cloud v3 is slightly different. If you need to restore a backup to Mendix Cloud V3, you will need to implement the structure described below. The restore functionality in Mendix Cloud V4 will also recognize this structure if you are restoring a backup taken on V3 to a V4 environment.
-
-Each file is stored in a second level location:
+This contains the files which are stored in external file storage. Each file has the name of the uuid used within Mendix to identify the resource. They are also stored in the following tree structure where each file is stored in a second level location:
 
 ```
 /tree

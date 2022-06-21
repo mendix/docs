@@ -187,7 +187,7 @@ Note that unlike other storage services, IBM Cloud does not provide server-side 
 | com.mendix.storage.swift.credentials.Password | Password |   |
 | com.mendix.storage.swift.credentials.Region | Region |   |
 
-## 9 Web Client Settings
+## 9 Web Client Settings{#web-client-settings}
 
 The following settings influence the behavior of the Mendix web client.
 

@@ -284,7 +284,7 @@ The following should be taken into account when configuring the metrics registri
 
 2. If you have a metric and another metric with the same name but with additional tags, these will be considered as different metrics. Example, Metric ("app.counter1") and ("app.counter1" with tag ("version" -> "1")) are different.
 
-3. Filters are executed on a first come, first served basis. Hence the first applied filter gets the priority. For example, If you have a below setup,
+3. Filters are executed on a first come, first served basis. In other words, the first matching filter gets the priority. For example, take the filters defined below:
 
     ```json
     [
@@ -299,7 +299,9 @@ The following should be taken into account when configuring the metrics registri
     ]
     ```
 
-    This will deny metrics like **"app.others.counter"** due to the contradiction with the first `accept` filter **"app."**.
+    This will still allow metrics like **app.others.counter** as they pass the first `accept` filter, `app.`. However, if you reverse the filters, **app.others.counter** will be denied, while **app.somethingelse.** would still be accepted.
+
+    {{% alert color="info" %}}Ensure that more specific filters are defined before less specific ones so that they are applied correctly.{{% /alert %}}
 
 4. To accept only specific filters and deny all others, ensure to deny with value **""**. For example, to accept only "app."
 
@@ -405,11 +407,14 @@ The Runtime Server produces the following metrics out-of-the-box:
 | `mx.runtime.stats.connectionbus.inserts` | counter | `XASId` | The total number of `INSERT` statements that were executed on the database by a node (`XASId`) since it was started. |
 | `mx.runtime.stats.connectionbus.updates` | counter | `XASId` | The total number of `UPDATE` statements that were executed on the database by a node (`XASId`) since it was started. |
 | `mx.runtime.stats.connectionbus.deletes` | counter | `XASId` | The total number of `DELETE` statements that were executed on the database by a node (`XASId`) since it was started. |
-| `mx.odata.retrieve` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were retrieved from an [OData service](/refguide/consumed-odata-service/). (introduced in Studio Pro 9.12) |
 | `mx.odata.consume.created` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created using the [Send External Object activity](/refguide/send-external-object/). (introduced in Studio Pro 9.13) |
 | `mx.odata.consume.updated` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were updated using the [Send External Object activity](/refguide/send-external-object/). (introduced in Studio Pro 9.13) |
 | `mx.odata.consume.deleted` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created using the [Delete External Object activity](/refguide/delete-external-object/). (introduced in Studio Pro 9.13) |
 | `mx.odata.publish.objects` | counter | `entity` | The total number of objects that were served for a particular type of object (`entity`) by a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.12) |
+| `mx.odata.publish.created` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created due to client requests to a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.14) |
+| `mx.odata.publish.updated` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were updated due to client requests to a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.14) |
+| `mx.odata.publish.deleted` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were deleted due to client requests to a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.14) |
+| `mx.odata.retrieve` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were retrieved from an [OData service](/refguide/consumed-odata-service/). (introduced in Studio Pro 9.12) |
 
 {{% alert color="info" %}}
 Note that the actual name may vary slightly depending on the back-end (for example, Prometheus replaces dots by underscores).

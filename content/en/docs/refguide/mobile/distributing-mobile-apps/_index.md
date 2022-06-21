@@ -1,5 +1,5 @@
 ---
-title: "Distributing Mobile Apps"
+title: "Building, Testing and Distributing Apps"
 url: /refguide/mobile/distributing-mobile-apps/
 category: Mobile
 weight: 50
@@ -11,12 +11,10 @@ aliases:
 
 ## 1 Introduction
 
-Guides in this section will help you distribute native apps to app stores, as well as push changes using over-the-air updates.
+Guides in this section will help you build, test and distribute mobile apps. While web-based applications, including Progressive Web Apps, can be distributed using our built-in publishing process, distributing a Native App requires a few additional steps. Therefore, the guides in this section focus on Native Apps.
 
-## 2 Main Documents in this Category
-
-* [Building Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/)
-* [Debugging Native Apps](/refguide/mobile/distributing-mobile-apps/native-debug/)
-* [Testing Mobile Apps](/refguide/mobile/distributing-mobile-apps/testing-mobile-apps/)
-* [Distributing Native Apps](/refguide/mobile/distributing-mobile-apps/distributing-native-apps/)
-* [Over the Air Updates](/refguide/mobile/distributing-mobile-apps/overtheair-updates/)
+* [Building Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/): The first step to install a Native App on a mobile device is to create an application package (IPA on iOS and APK on Android).
+* [Distributing Native Apps](/refguide/mobile/distributing-mobile-apps/distributing-native-apps/): To install an application package, it must be signed and submitted to the appropriate app stores (AppStore on iOS or PlayStore on Android) or installed via a mobile device management (MDM) solution.
+* [Updating Native Apps](/refguide/mobile/distributing-mobile-apps/overtheair-updates/): Native Apps are normally updated by building and distributing the updated version. In some situations (mainly for smaller changes) these steps can be skipped with an over-the-air-update.
+* [Debugging Native Apps](/refguide/mobile/distributing-mobile-apps/native-debug/): Web applications can be debugged directly in the web browser. For Native Apps, this is also possible but requires a few extra steps to set up.
+* [Testing Native Apps](/refguide/mobile/distributing-mobile-apps/testing-mobile-apps/): To test Native Apps, third party software is required. This guide explains how to use Appium to test native apps.

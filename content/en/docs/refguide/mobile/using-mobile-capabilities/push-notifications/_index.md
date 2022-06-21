@@ -2,7 +2,7 @@
 title: "Push Notifications"
 url: /refguide/mobile/using-mobile-capabilities/push-notifications/
 parent: /refguide/mobile/using-mobile-capabilities/
-weight: 10
+weight: 40
 description: Tutorials for configuring push and local notifications.
 aliases:
     - /howto/mobile/notifications/

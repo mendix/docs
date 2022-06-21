@@ -2,7 +2,7 @@
 title: "Distributing Native Apps"
 url: /refguide/mobile/distributing-mobile-apps/distributing-native-apps/
 parent: /refguide/mobile/distributing-mobile-apps/
-weight: 50
+weight: 20
 description: "This guide will help you distribute a mobile app to a mobile app store."
 tags: ["distribution", "app store", "ios", "android"]
 aliases:

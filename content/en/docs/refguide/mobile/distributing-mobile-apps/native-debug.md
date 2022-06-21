@@ -2,7 +2,7 @@
 title: "Debugging Native Apps"
 url: /refguide/mobile/distributing-mobile-apps/native-debug/
 parent: /refguide/mobile/distributing-mobile-apps/
-weight: 30
+weight: 40
 description: "A guide for debugging native mobile apps using the Make It Native app."
 tags: ["debug", "testing"]
 aliases:

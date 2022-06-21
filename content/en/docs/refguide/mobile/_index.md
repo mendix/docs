@@ -17,35 +17,45 @@ Mendix allows you to quickly build true [native mobile apps](/refguide/native-mo
 
 With Mendix, you can create different channels (for example, responsive, native phone) from a single model using navigation profiles. These mobile profiles can be added and removed separately. If you add a profile, you must also provide a home page for it. For more information on navigation profiles, see [Navigation](/refguide/navigation/). 
 
-## 2 Native Mobile Apps {#nativemobile}
+## 2 Getting Started with Mobile
 
-With Mendix 9, it is possible to build fully native mobile apps. Native mobile apps do not render inside a web view, but use native UI elements instead. This results in fast performance, smooth animations, natural interaction patterns (like swipe gestures), and improved access to all native device capabilities.  To make such responsive native mobile apps, Mendix leverages the popular open-source framework [React Native](https://facebook.github.io/react-native/).
+As you begin mobile development with Mendix, our [Getting Started with Mobile](/refguide/mobile/getting-started-with-mobile/) guide can help you learn the basics. This simple guide will teach you to create a native mobile Mendix app. After you create it, you will view your app on a mobile device using our [Make It Native](/releasenotes/mobile/make-it-native-parent/) testing app. Getting Started with Mobile is a lean guide designed to show the basics of mobile development.
 
-You can use pages, widgets, nanoflows, JavaScript actions, microflows, and many other familiar elements to build your app. For more information on how to to build a native mobile app, see [Get Started with Mobile](/refguide/mobile/getting-started-with-mobile/).
+For a broader introduction to Mendix development, you may also use the [Quickstart](/refguide/quickstart-guide/) guide to learn some Studio Pro fundamentals:
+* Learn Mendix Studio Pro's UI 
+* Make a web app that uses the Domain Model, dynamic data, and handles logic with a microflow
+* Add a native mobile navigation profile to your web app
+* Give your native app the ability to take pictures and upload them to a database, then test it with the Make it Native app
 
-Native mobile apps' theming and styling is based on JavaScript. For more information on styling, see [Native Styling](/refguide/native-styling-refguide/). 
+## 3 Mobile Technologies
 
-## 3 Progressive Web Apps {#pwa}
+With Mendix Studio Pro, you can build both native mobile apps and progressive web apps. Progressive web apps are the next evolution of web apps, and your users can access them directly from the browser instead of downloading them from an app store. Native mobile apps are distributed via app stores, and offer improved access to native device capabilities as well as fast performance.
 
-Progressive web apps (PWAs) are an evolution of traditional web apps. Overall, PWAs tend to behave more like native mobile apps. One key difference, however, is that PWAs do not need to be distributed via an app store but can be accessed directly via the browser.
+For more information on the capabilities of various mobile apps, see [Introduction to Mobile Technologies](/refguide/mobile/introduction-to-mobile-technologies/).
 
-Progressive web apps have three main characteristics:
+## 4 Designing Mobile User Interfaces
 
-* **Installable —** PWAs let you add your app to your user’s home screen and start a full screen app. This makes PWAs feel more fully-capable native apps.
-* **Reliable —** Using service workers, PWAs can work offline or partially offline. Mendix PWAs can work partially offline (resources like styling, pages, and images are cached) or fully offline (like native mobile apps).
-* **Capable —** PWAs can leverage several device capabilities like the camera and location, and can offer support for web push notifications. Note that support for features depend on which browser is used.
+Well-designed mobile apps take various design requirements into consideration. For example, users frequently change location while using them, often do so on a small screen, and might only use the app in short bursts of activity. Luckily Mendix uses technology that addresses these requirements, and provides design documentation to help you build user-friendly apps.
 
-## 4 Offline-First Apps
+In web apps, you can use CSS to style the user interface. Styling in native mobile is different. Mendix's native mobile apps are based on React Native, which has its own styling system that uses JavaScript instead. You can style the UI elements by using JSON objects and setting their names to the corresponding widget’s class properties.
 
-With Mendix, you can build apps which work regardless of internet connection. Offline-first applications provide end-users with a continuous experience and the confidence that their data is secure in all situations. Pages and logic interact with an offline database on the device itself, and data is synchronized with the server when possible. This results in a nicer UI, increased reliability, and improved device battery life. For more information on offline-first app capabilities, see [Offline First](/refguide/offline-first/).
+For more information on design and styling, see [Designing Mobile User Interfaces](/refguide/mobile/designing-mobile-user-interfaces/).
 
-Mendix's native mobile apps are always configured with offline-first capabilities. When building an app, you can choose to build an online app which continuously connects with a server, or an offline-first app that works even without an internet connection. This can be configured by choosing the corresponding navigation profile in Mendix Studio Pro. For more instructions on setting up such a profile, see [Navigation](/refguide/navigation/).
+## 5 Using Mobile Capabilities
 
-## 5 Documents in This Category
+Building apps with Mendix gives you access to several mobile capabilities:
 
-* [Getting Started with Mobile](/refguide/mobile/getting-started-with-mobile/)
-* [Introduction to Mobile Technologies](/refguide/mobile/introduction-to-mobile-technologies/)
-* [Designing Mobile User Interfaces](/refguide/mobile/designing-mobile-user-interfaces/)
-* [Using Mobile Capabilities](/refguide/mobile/using-mobile-capabilities/)
-* [Distributing Mobile Apps](/refguide/mobile/distributing-mobile-apps/)
+* [Local Push Notifications](/refguide/mobile/using-mobile-capabilities/local-notifications/): these allow you to schedule and send notifications confined to one mobile device
+* [Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/): sometimes referred to as "remote" notifications, push notifications allow you to send notifications to multiple devices
+* [Augmented Reality](/refguide/mobile/using-mobile-capabilities/augmented-reality/): add virtual objects to the real world through the mobile phone camera view, then allow users to interact with them
+* [Offline-First Data](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/): consult our guides and best practices to make offline-first apps which work regardless of internet connection 
+* [Locations & Maps](/refguide/mobile/using-mobile-capabilities/location-&-maps/): use the Maps module to include map capabilities in your native mobile apps
+* [Deep Links](/refguide/mobile/using-mobile-capabilities/deep-links/): learn how to make a tailored URL that can open an app and pass additional data
 
+For more information on empowering your apps, see [Using Mobile Capabilities](/refguide/mobile/using-mobile-capabilities/).
+
+## 6 Building, Testing, and Distributing Apps
+
+Distributing web apps is a single step; deploying to the production environment lets your end-users access the latest version of the web app. However, native mobile apps require more steps. Part of the application model (pages, nanoflows, and JavaScript actions) are distributed as part of the native mobile app. Even if you deploy a new version of the app, your end users will be interacting with the old version. That is why a second step is needed: distribution. To distribute the latest version of a native mobile app to users, you can either build a new version using the Native Mobile Builder and then release it to online app stores, or you can use the [over-the-air](/refguide/mobile/distributing-mobile-apps/overtheair-updates/) update mechanism to update the app elements stored in the apps without releasing a new version of your native mobile app. For more information on all aspects of the app life cycle, see [Building, Testing, and Distributing Apps](/refguide/mobile/distributing-mobile-apps/).
+
+We also have the information you need to [test](/refguide/mobile/distributing-mobile-apps/testing-mobile-apps/) and [debug](/refguide/mobile/distributing-mobile-apps/native-debug/) your Mendix apps. To debug a web app's JavaScript, you simply open the developer console. But to debug a Mendix native app, you can use the Make It Native testing app's **Enable Remote JS Debugging** function to open the app up to normal debugging with Chrome.

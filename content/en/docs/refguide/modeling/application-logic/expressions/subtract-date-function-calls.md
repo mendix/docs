@@ -154,7 +154,7 @@ The output is:
 Mon Jan 01 00:01:01 CET 2007
 ```
 
-## 6 subtractDays and subtractDays[UTC]
+## 6 subtractDays[UTC]
 
 The `subtractDaysUTC` function subtracts a number of days from a date. `subtractDays` uses the server's calendar and `subtractDaysUTC` uses the UTC calendar.
 
@@ -189,7 +189,7 @@ The output is:
 Mon Jan 01 01:01:01 CET 2007
 ```
 
-## 7 subtractWeeks and subtractWeeks[UTC]
+## 7 subtractWeeks[UTC]
 
 The `subtractWeeksUTC` function subtracts a number of weeks from a date using the UTC calendar as opposed to  `subtractWeeks` which uses the server's one. 
 
@@ -224,7 +224,7 @@ The output is:
 Mon Jan 01 01:01:01 CET 2007
 ```
 
-## 8 subtractMonths and subtractMonths[UTC]
+## 8 subtractMonths[UTC]
 
 The `subtractMonthsUTC` function subtracts a number of months from a date using the UTC calendar as opposed to  `subtractMonths` which uses the server's one.
 
@@ -259,7 +259,7 @@ The output is:
 Mon Jan 01 01:01:01 CET 2007
 ```
 
-## 9 subtractQuarters and subtractQuarters[UTC]
+## 9 subtractQuarters[UTC]
 
 The `subtractQuartersUTC` function subtracts a number of quarters from a date using the UTC calendar as opposed to  `subtractQuarters` which uses the server's one.
 
@@ -294,7 +294,7 @@ The output is:
 Mon Jan 01 01:01:01 CET 2007
 ```
 
-## 10 subtractYears and subtractYears[UTC]
+## 10 subtractYears[UTC]
 
 The `subtractYearsUTC` function subtracts a number of years from a date using the UTC calendar as opposed to  `subtractYears` which uses the server's one.
 

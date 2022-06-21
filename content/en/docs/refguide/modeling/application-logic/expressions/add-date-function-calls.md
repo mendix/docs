@@ -259,21 +259,44 @@ The output is:
 "Mon Feb 01 01:01:01 CET 2008"
 ```
 
-## 9 addQuarters
+## 9 addQuarters[UTC]
+
+The `addQuartersUTC` function adds a number of quarters to a date using the UTC calendar as opposed to  `addQuarters` which uses the server's one.
 
 ### 9.1 Input Parameters
 
+The input parameters are described in the table below:
+
+| Value                           | Type          |
+| ------------------------------- | ------------- |
+| Initial date                    | Date and time |
+| The number of years to be added | Integer       |
+
 ### 9.2 Output
+
+The output is described in the table below:
+
+| Value                                                        | Type          |
+| ------------------------------------------------------------ | ------------- |
+| A Date and time value that is the sum of the *initial date* and the specified number of *quarters*. | Date and time |
 
 ### 9.3 Example
 
 If you use the following input: 
 
+```java
+addQuarters(dateTime(2007, 1, 1, 1, 1, 1), 1)
+```
+
 The output is:
 
-## 10 addQuarters[UTC]
+```java
+Mon Apr 01 01:01:01 CET 2007
+```
 
-The `addQuartersUTC` function adds a number of quarters to a date using the UTC calendar as opposed to  `addQuarters` which uses the server's one.
+## 10 addYears[UTC]
+
+The `addYearsUTC` function adds a number of years to a date using the UTC calendar as opposed to  `addYears` which uses the server's one.
 
 ### 10.1 Input Parameters
 
@@ -290,44 +313,9 @@ The output is described in the table below:
 
 | Value                                                        | Type          |
 | ------------------------------------------------------------ | ------------- |
-| A Date and time value that is the sum of the *initial date* and the specified number of *quarters*. | Date and time |
-
-### 10.3 Example
-
-If you use the following input: 
-
-```java
-addQuarters(dateTime(2007, 1, 1, 1, 1, 1), 1)
-```
-
-The output is:
-
-```java
-Mon Apr 01 01:01:01 CET 2007
-```
-
-## 11 addYears[UTC]
-
-The `addYearsUTC` function adds a number of years to a date using the UTC calendar as opposed to  `addYears` which uses the server's one.
-
-### 11.1 Input Parameters
-
-The input parameters are described in the table below:
-
-| Value                           | Type          |
-| ------------------------------- | ------------- |
-| Initial date                    | Date and time |
-| The number of years to be added | Integer       |
-
-### 11.2 Output
-
-The output is described in the table below:
-
-| Value                                                        | Type          |
-| ------------------------------------------------------------ | ------------- |
 | A Date and time value that is the sum of the *initial date* and the specified number of *years*. | Date and time |
 
-### 11.3 Example
+### 10.3 Example
 
 If you use the following input: 
 
@@ -341,7 +329,7 @@ The output is:
 "Mon Jan 01 01:01:01 CET 2018"
 ```
 
-## 12 Passing Values of the Long Type
+## 11 Passing Values of the Long Type
 
 It is possible to pass values of the Long type to different **Add date function** calls:
 

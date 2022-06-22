@@ -126,7 +126,7 @@ When modeling your app in Studio Pro, use **RetrieveEmailMessages** Java action.
 The input parameters for receiving email are the following: 
 
 * **EmailAccount** – email account consisting of incoming email configuration
-* **onEmailFetchMicroflow** – a callback microflow that will be triggered when **List of EmailMessage** is fetched from the email server per the batch size configured in the email account
+* **onEmailFetchMicroflow** – a microflow that will be triggered when **List of EmailMessage** is fetched from the email server per the batch size configured in the email account
     * You can process the list according to what you need. 
     * Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. 
     * Refer to the sample microflow, **Sample_OCH_EmailFetchMicroflow**.
@@ -135,12 +135,8 @@ The input parameters for receiving email are the following:
 When duplicating this microflow, do not change input parameters’ name and data type.
 {{% /alert %}}
 
-* **onFetchCompleteMicroflow** – a callback microflow that will be triggered when the fetch is complete and there are no more emails for the particular Java action call
-* **onFetchErrorMicroflow** – a callback microflow that will be triggered if there are errors during the fetch from email server operation
-
-{{% alert color="info" %}}
-Callback microflows are not meant to be called directly, like on a button click, but are used by other microflows or Java actions to trigger events.
-{{% /alert %}}
+* **onFetchCompleteMicroflow** – a microflow that will be triggered when the fetch is complete and there are no more emails for the particular Java action call
+* **onFetchErrorMicroflow** – a microflow that will be triggered if there are errors during the fetch from email server operation
 
 ### 4.3 Using Email Templates
 
@@ -190,14 +186,10 @@ When modeling your app in Studio Pro, call the **SubscribeToIncomingEmail** Java
 The input parameters are the following:
 
 * **Email account** – email account consisting of incoming email configuration
-* **onNewEmailReceivedMicroflow** – a callback microflow that will be triggered when new email (List) is received from the server. You can process the list per your need. Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. Refer to the sample microflow **Sample_OCH_EmailFetchMicroflow**.
+* **onNewEmailReceivedMicroflow** – a microflow that will be triggered when new email (List) is received from the server. You can process the list per your need. Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. Refer to the sample microflow **Sample_OCH_EmailFetchMicroflow**.
 
 {{% alert color="warning" %}}
 When duplicating this microflow, do not change the input parameter name and data type.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-Callback microflows are not meant to be called directly, like on a button click, but are used by other microflows or Java actions to trigger events.
 {{% /alert %}}
 
 * **onSubscriptionStateChangedMicroflow** – a microflow that will be triggered when subscription state is changed state can any of the following:

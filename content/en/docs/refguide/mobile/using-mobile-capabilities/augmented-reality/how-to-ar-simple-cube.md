@@ -4,8 +4,6 @@ url: /refguide/mobile/using-mobile-capabilities/augmented-reality/how-to-ar-simp
 parent: /refguide/mobile/using-mobile-capabilities/augmented-reality/
 weight: 10
 description: Tutorials for setting up and using AR in Mendix Studio Pro.
-description: In this how-to you will make an augmented reality business card app.
-description: In this how-to you will make a 3D cube by dragging and dropping widgets into your Mendix app.
 aliases:
     - /howto/mobile/how-to-ar-simple-cube/
 ---

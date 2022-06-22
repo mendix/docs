@@ -250,7 +250,7 @@ The output is described in the table below:
 If you use the following input: 
 
 ```java
-subtractWeeks(dateTime(2007, 3, 1, 1, 1, 1), 2)
+subtractMonths(dateTime(2007, 3, 1, 1, 1, 1), 2)
 ```
 
 The output is:

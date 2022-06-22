@@ -11,6 +11,18 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### June 23rd, 2022
+
+#### Improvements
+
+* Consumed Data sources which are Deleted are now indicated in the Landscape
+* Endpoints(existing) which are not present in the PUT operation of the **Registration API** will be Deleted. Check out the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html), or read the documentation in the [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) section of *Data Hub APIs*.
+* app_uuid is now present in the 409 CONFLICT response from **Registration API** when registering an environment on a location that is already in use. Check out the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html), or read the documentation in the [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) section of *Data Hub APIs*.
+
+#### Fixes
+
+* We fixed an issue where Popular tags were not displayed on the home page for users without curation rights
+
 ### June 16th, 2022
 
 #### Improvements

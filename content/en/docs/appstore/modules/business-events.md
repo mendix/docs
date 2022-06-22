@@ -75,7 +75,7 @@ Optionally you can set **SummaryLogIntervalSeconds** to a different value. The d
 
 ## 3 Usage
 
-
+This section explains how to publish and consume business events in Mendix apps.
 
 ### 3.1 Publishing Business Events
 
@@ -146,7 +146,7 @@ When publishing an event you need to provide some context for the business event
 * **Event name** - Indicates what event this is, for example Customer Support Ticket Filed Event, or Customer Support Ticket Solved Event, or Order Shipped, etc.
 * **Event data** - the actual event entity which contains the properties of the event.
 
-#### 3.1.1 Required Entities in Domain Model
+#### 3.1.4 Required Entities in Domain Model
 
 Four entities are necessary to include in your domain model to publish business events: 
 

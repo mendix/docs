@@ -38,7 +38,7 @@ The [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/regist
 The API includes the following:
 
 * `POST` methods for registering new assets where a UUID is generated and returned for the asset in the response body
-* `PUT` calls to *update* assets for existing UUIDs or create new applications and environments for new UUIDs
+* `PUT` calls to *update* assets for existing UUIDs or create new applications and environments for new UUIDs. If existing endpoints are not present in a PUT call, these endpoints will be deleted.
 * `DELETE` calls to *delete* applications
 
 ## 4 Transform API {#transform}

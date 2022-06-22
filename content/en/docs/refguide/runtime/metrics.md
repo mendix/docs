@@ -330,7 +330,7 @@ You can use activities to provide custom metrics from your app. See [Metrics Act
 
 ## 5 Java API {#java-api}
 
-Micrometer metrics can be accessed through Java APIs as well inside Mendix. This can be achieved by setting `com.mendix.metrics.Type`. This setting defaults to `micrometer`.
+Micrometer metrics can be accessed through [Java Runtime APIs](https://docs.mendix.com/apidocs-mxsdk/apidocs/runtime-api/) as well inside Mendix. This can be achieved by using the custom runtime setting `com.mendix.metrics.Type`. This setting defaults to `micrometer`.
 
 * Custom Runtime Setting – **Name**: `com.mendix.metrics.Type`
 * **Value**: `micrometer`
@@ -369,10 +369,10 @@ It is recommended to use a common prefix that uniquely defines your organisation
 
 ### 5.2 Deprecated usages
 
-Below are deprecated usages which will be removed in the future releases,
+The following deprecated usages will be removed in the future releases,
 
-1. `com.mendix.metrics.Type` setting `logger` and `statsd` are deprecated. You will also get a warning message to advise you to start using the `micrometer` metric type.
-2. The Java API methods `counter()`, `timer()`, `gauges()`, and `sets()` are deprecated in `Core.metrics()`
+1. Setting `com.mendix.metrics.Type` to `logger` and `statsd` is deprecated. You will get a warning message to advise you to start using the `micrometer` metric type.
+2. The [`Core.metrics()` Java Runtime API methods](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/metrics/Metrics.html) `counter()`, `timer()`, `gauges()`, and `sets()` are deprecated
 
 ## 6 Logging {#logging}
 
@@ -391,24 +391,24 @@ The Runtime Server produces the following metrics out-of-the-box:
 
 | Name | Type | Tags | Description |
 | --- | --- | --- | --- |
-| `mx.runtime.stats.handler_requests` | counter | `XASId`, `name` | The total number of requests on a request handler (`name`) that was received by a node (`XASId`) since it was started. |
-| `mx.runtime.stats.requests{path}` | counter | | The total number of requests on a request handler (`path`) that was received by a node; deprecated, use `mx.runtime.stats.handler_requests` instead. |
-| `mx.runtime.stats.sessions.named_users` | gauge | | The current number of active, named users in the database. |
-| `mx.runtime.stats.sessions.named_user_sessions` | gauge | | The current number of sessions in the database for named users. |
-| `mx.runtime.stats.sessions.anonymous_sessions` | gauge | | The current number of sessions in the database for anonymous users. |
-| `mx.runtime.stats.connectionbus.transactions` | counter | `XASId` | The total number of transactions on the database that were created by a node (`XASId`) since it was started. |
-| `mx.runtime.stats.connectionbus.selects` | counter | `XASId` | The total number of `SELECT` statements that were executed on the database by a node (`XASId`) since it was started. |
-| `mx.runtime.stats.connectionbus.inserts` | counter | `XASId` | The total number of `INSERT` statements that were executed on the database by a node (`XASId`) since it was started. |
-| `mx.runtime.stats.connectionbus.updates` | counter | `XASId` | The total number of `UPDATE` statements that were executed on the database by a node (`XASId`) since it was started. |
-| `mx.runtime.stats.connectionbus.deletes` | counter | `XASId` | The total number of `DELETE` statements that were executed on the database by a node (`XASId`) since it was started. |
-| `mx.odata.consume.created` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created using the [Send External Object activity](/refguide/send-external-object/). (introduced in Studio Pro 9.13) |
-| `mx.odata.consume.updated` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were updated using the [Send External Object activity](/refguide/send-external-object/). (introduced in Studio Pro 9.13) |
-| `mx.odata.consume.deleted` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created using the [Delete External Object activity](/refguide/delete-external-object/). (introduced in Studio Pro 9.13) |
-| `mx.odata.publish.objects` | counter | `entity` | The total number of objects that were served for a particular type of object (`entity`) by a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.12) |
-| `mx.odata.publish.created` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created due to client requests to a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.14) |
-| `mx.odata.publish.updated` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were updated due to client requests to a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.14) |
-| `mx.odata.publish.deleted` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were deleted due to client requests to a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.14) |
-| `mx.odata.retrieve` | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were retrieved from an [OData service](/refguide/consumed-odata-service/). (introduced in Studio Pro 9.12) |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>handler_requests** | counter | `XASId`, `name` | The total number of requests on a request handler (`name`) that was received by a node (`XASId`) since it was started. |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>requests{path}** | counter | | The total number of requests on a request handler (`path`) that was received by a node;<br/>*deprecated, use `mx.runtime.stats.handler_requests` instead*. |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>sessions.<wbr>named_users** | gauge | | The current number of active, named users in the database. |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>sessions.<wbr>named_user_sessions** | gauge | | The current number of sessions in the database for named users. |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>sessions.<wbr>anonymous_sessions** | gauge | | The current number of sessions in the database for anonymous users. |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>connectionbus.<wbr>transactions** | counter | `XASId` | The total number of transactions on the database that were created by a node (`XASId`) since it was started. |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>connectionbus.<wbr>selects** | counter | `XASId` | The total number of `SELECT` statements that were executed on the database by a node (`XASId`) since it was started. |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>connectionbus.<wbr>inserts** | counter | `XASId` | The total number of `INSERT` statements that were executed on the database by a node (`XASId`) since it was started. |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>connectionbus.<wbr>updates** | counter | `XASId` | The total number of `UPDATE` statements that were executed on the database by a node (`XASId`) since it was started. |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>connectionbus.<wbr>deletes** | counter | `XASId` | The total number of `DELETE` statements that were executed on the database by a node (`XASId`) since it was started. |
+| **mx.<wbr>odata.<wbr>consume.<wbr>created** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created using the [Send External Object activity](/refguide/send-external-object/). (introduced in Studio Pro 9.13) |
+| **mx.<wbr>odata.<wbr>consume.<wbr>updated** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were updated using the [Send External Object activity](/refguide/send-external-object/). (introduced in Studio Pro 9.13) |
+| **mx.<wbr>odata.<wbr>consume.<wbr>deleted** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created using the [Delete External Object activity](/refguide/delete-external-object/). (introduced in Studio Pro 9.13) |
+| **mx.<wbr>odata.<wbr>publish.<wbr>objects** | counter | `entity` | The total number of objects that were served for a particular type of object (`entity`) by a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.12) |
+| **mx.<wbr>odata.<wbr>publish.<wbr>created** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created due to client requests to a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.14) |
+| **mx.<wbr>odata.<wbr>publish.<wbr>updated** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were updated due to client requests to a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.14) |
+| **mx.<wbr>odata.<wbr>publish.<wbr>deleted** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were deleted due to client requests to a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.14) |
+| **mx.<wbr>odata.<wbr>retrieve** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were retrieved from an [OData service](/refguide/consumed-odata-service/). (introduced in Studio Pro 9.12) |
 
 {{% alert color="info" %}}
 Note that the actual name may vary slightly depending on the back-end (for example, Prometheus replaces dots by underscores).

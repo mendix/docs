@@ -8,13 +8,15 @@ tags: ["workflow", "workflows", "decision", "parallel split", "end activity"]
 
 ## 1 Introduction
 
-**General** activities allow you to manage paths in your workflow. A **Decision** allows you to add a condition and the workflow will follow one of the paths depending on this condition. With the help of the **Jump** activity you can jump to another activity in the workflow. **Parallel Split** adds several parallel paths (processes) to the workflow, and the **End** event ends a path. 
+**General** activities allow you to manage paths in your workflow. You can add comments to the flow with an **Annotation**. A **Decision** allows you to add a condition and the workflow will follow one of the paths depending on this condition. With the help of the **Jump** activity you can jump to another activity in the workflow. **Parallel Split** adds several parallel paths (processes) to the workflow, and the **End** event ends a path. 
 
 {{< figure src="/attachments/studio/workflows/workflows-general-activities/general.jpg" alt="General Activities" >}}
 
 ## 2 Annotation {#annotation} 
 
-An annotation is an element that can be used to put comments to a flow. For example, you can add a comment for your team that one of the user tasks needs to be changed later.
+An annotation is an element that can be used to put comments to a flow. For example, you can add a comment for your team that one of the user tasks needs to be changed later:
+
+{{< figure src="/attachments/studio/workflows/workflows-general-activities/annotation.jpg" alt="Annotation Example"  width="400" >}}
 
 ## 3 Decision {#decision}
 

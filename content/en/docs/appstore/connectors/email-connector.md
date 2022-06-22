@@ -113,7 +113,7 @@ When modeling your app in Studio Pro, use the **SendEmail** Java action to send 
 * **Email Account** Email account consisting of outgoing email configuration.
 * **Email Message** Email Message object to be sent
 
-The **Return type** is a boolean value. The Java action would connect to email server using the provided details and send an email, and would return **True** if successful otherwise the exception along with the cause.
+The **Return type** is a boolean value. The Java action will connect to the email server using the provided details and send an email, and will return **True** if successful. If the action fails, the error object and cause will display.
 
 The **To**, **Subject**, and **Email Content** fields are mandatory. Multiple email addresses can be specified in **To**, **CC**, or **BCC** separated by a semicolon (**;**).
 
@@ -126,7 +126,10 @@ When modeling your app in Studio Pro, use **RetrieveEmailMessages** Java action.
 The input parameters for receiving email are the following: 
 
 * **EmailAccount** – email account consisting of incoming email configuration
-* **onEmailFetchMicroflow** – a callback microflow that will be triggered when **List of EmailMessage** is fetched from the email server per the batch size configured in the email account. You can process the list per your need. Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. Refer to the sample microflow, **Sample_OCH_EmailFetchMicroflow**
+* **onEmailFetchMicroflow** – a callback microflow that will be triggered when **List of EmailMessage** is fetched from the email server per the batch size configured in the email account
+    * You can process the list according to what you need. 
+    * Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. 
+    * Refer to the sample microflow, **Sample_OCH_EmailFetchMicroflow**.
 
 {{% alert color="warning" %}}
 When duplicating this microflow, do not change input parameters’ name and data type.
@@ -134,6 +137,10 @@ When duplicating this microflow, do not change input parameters’ name and data
 
 * **onFetchCompleteMicroflow** – a callback microflow that will be triggered when the fetch is complete and there are no more emails for the particular Java action call
 * **onFetchErrorMicroflow** – a callback microflow that will be triggered if there are errors during the fetch from email server operation
+
+{{% alert color="info" %}}
+Callback microflows are not meant to be called directly, like on a button click, but are used by other microflows or Java actions to trigger events.
+{{% /alert %}}
 
 ### 4.3 Using Email Templates
 
@@ -182,11 +189,15 @@ When modeling your app in Studio Pro, call the **SubscribeToIncomingEmail** Java
 
 The input parameters are the following:
 
-* **Email account** – email account consisting of incoming email configuration.
-* **onNewEmailReceivedMicroflow** – a callback microflow that will be triggered when new email (List) is received from the server, You can process the list per your need. Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. Refer to the sample microflow **Sample_OCH_EmailFetchMicroflow**
+* **Email account** – email account consisting of incoming email configuration
+* **onNewEmailReceivedMicroflow** – a callback microflow that will be triggered when new email (List) is received from the server. You can process the list per your need. Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. Refer to the sample microflow **Sample_OCH_EmailFetchMicroflow**.
 
 {{% alert color="warning" %}}
-When duplicating this microflow, do not change input parameters’ name and data type.
+When duplicating this microflow, do not change the input parameter name and data type.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+Callback microflows are not meant to be called directly, like on a button click, but are used by other microflows or Java actions to trigger events.
 {{% /alert %}}
 
 * **onSubscriptionStateChangedMicroflow** – a microflow that will be triggered when subscription state is changed state can any of the following:

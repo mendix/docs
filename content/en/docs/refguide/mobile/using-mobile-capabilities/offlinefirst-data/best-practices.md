@@ -7,9 +7,7 @@ description: "Describes how to make secure, high-performing offline-first apps."
 tags: ["offline", "offline-first"]
 ---
 
-TODO: Merge 4.2 with Generic best practices (or create a new section for Microflow best practices)
-
-## Generic best practices
+## 1 Generic Best Practices
 
 To ensure the best user experience for your Mendix application, follow these best practices:
 
@@ -22,7 +20,7 @@ To ensure the best user experience for your Mendix application, follow these bes
 * Use a [microflow call](/refguide/microflow-call/) in your nanoflows to perform additional server-side logic such as retrieving data from a REST service, or accessing and using complex logic such as Java actions
 * Help your user remember to synchronize their data so it is processed as soon as possible: you can check for connectivity and automatically synchronize in the nanoflow that commits your object, or remind a user to synchronize while using a notification or before signing out to ensure no data is lost
 
-## Preventing synchronization issues
+## 2 Preventing Synchronization Issues
 
 To avoid the problems mentioned above, we suggest following these best practices:
 
@@ -33,13 +31,13 @@ To avoid the problems mentioned above, we suggest following these best practices
 
 If synchronization is triggered using a synchronize action in a nanoflow and an error occurs, it is possible to handle the error gracefully using the nanoflow error handling.
 
-## Conflict resolution
+## 3 Conflict Resolution
 
 It can happen that multiple users synchronize the same state of an object on their device, change it, and then synchronize this object back to the server. In this case, the last synchronization overwrites the entire content of the object on the server. This is also called a "last wins" approach.
 
 If another approach is needed, conflicts can be detected in a before-commit microflow (for example, by using a revision ID attribute on the entity). Based on that, custom conflict resolution can be performed.
 
-## Differences with regular web apps
+## 4 Differences with Regular Web Apps
 
 Mendix helps developers build rich offline-first apps. However, there are some limitations. See the subsections below for details.
 

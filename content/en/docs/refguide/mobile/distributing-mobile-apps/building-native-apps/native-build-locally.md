@@ -34,7 +34,9 @@ For Android Builds:
 
 ## 3 Using Mendix Native Mobile Builder to Set Up Your Local App
 
-1.  Run Mendix Native Mobile Builder from your app: 
+To set up your local app, do the following:
+
+1.  Run the Mendix Native Mobile Builder from your app: 
 
 	{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/deploying-native-app/start-nbui.png" alt="Start Mendix Native Mobiler Builder"   width="350"  >}}
 
@@ -80,6 +82,8 @@ In the sections below you can see the basic steps to get an app up and running o
 
 ### 4.1 Building an Android App with Android Studio
 
+To build an Android app with Android Studio, do the following:
+
 1. Run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) in the app root to install the required dependencies.
 1. Open Android Studio.
 1. Select the `<Native Template root>/android` as the entry point for the app.
@@ -101,8 +105,9 @@ In the sections below you can see the basic steps to get an app up and running o
 
 		{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally/avd-manager.png" alt="AVD Manager"   width="250"  >}}
 
-
 ### 4.2 Building an iOS App with XCode
+
+To build an iOS app with XCode, do the following:
 
 1. If you have not ran it yet, run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) in the app root to install the required dependencies.
 1. Change directory by running `cd ios` and run `pod install` to install the iOS dependencies.

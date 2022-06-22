@@ -23,9 +23,9 @@ The Metrics can be configured in the following ways:
 
 ## 2 Metrics Registries Configuration {#registries-configuration}
 
-Micrometer can send metrics to multiple registries. To configure micrometer for a specific registry, use the following syntax in `runtime settings` with configuration key as `Metrics.Registries`. See [Runtime Customization](/refguide/custom-settings/) for more information. The setting is in JSON format.
+Micrometer can send metrics to multiple registries. To configure micrometer for a specific registry, use the following syntax in `runtime settings` with custom runtime setting name as `Metrics.Registries`. See [Runtime Customization](/refguide/custom-settings/#metrics-settings) for more information. The setting is in JSON format.
 
-**Configuration Key:** `Metrics.Registries`
+* Custom Runtime Setting – **Name**: `Metrics.Registries`
 
 ```json
 [
@@ -43,15 +43,15 @@ Micrometer can send metrics to multiple registries. To configure micrometer for 
 ]
 ```
 
-The details of each settings are listed below:
+The details of each settings are listed below.
 
-* `type` *(mandatory)* – the type of the registry to use. Currently supported types are [`prometheus`](https://prometheus.io/docs/introduction/overview/), [`jmx`](https://www.oracle.com/java/technologies/javase/javamanagement.html), [`influx`](https://www.influxdata.com/), and [`statsd`](https://www.datadoghq.com/dg/monitor/ts/statsd/) — Depending on the type of the registry the `settings` may vary.
-* `settings` *(conditional mandatory)* – settings for the registry – each registry has different settings depending upon the **type** specified:
+* `type` *(mandatory)* – the type of the registry to use. Currently supported types are [`prometheus`](https://prometheus.io/docs/introduction/overview/), [`jmx`](https://www.oracle.com/java/technologies/javase/javamanagement.html), [`influx`](https://www.influxdata.com/), and [`statsd`](https://www.datadoghq.com/dg/monitor/ts/statsd/). Depending on the type of the registry the `settings` may vary.
+* `settings` *(conditional mandatory)* – settings for the registry. Each registry has different settings depending upon the **type** specified. Follow the links below to see the settings for each type:
     * [Prometheus](#prometheus)
     * [jmx](#jmx)
     * [influx](#influx)
     * [statsd](#statsd)
-* `filters` *(optional)* – instructions on which metrics to accept or deny — see [Filters](#filters) for more information
+* `filters` *(optional)* – instructions on which metrics to accept or deny. See the [Filters](#filters) section, below, for more information.
 
 ### 2.1 Settings
 
@@ -73,146 +73,147 @@ The following settings can be used, depending on the type of metrics being gener
 | `filters` | _Json_ | No | all | Custom setting from Mendix to filter metrics | - | [See below](#filters)    
 
 #### 2.1.1 Prometheus{#prometheus}
-Multiple [Prometheus](https://prometheus.io/docs/introduction/overview/) registrations are **NOT supported**. When the Prometheus registry is set, it can be accessed through the `/prometheus` context path over the admin endpoint.
 
-* `step`: The step size or reporting frequency to use.
+We do not support multiple [Prometheus](https://prometheus.io/docs/introduction/overview/). When the Prometheus registry is set, it can be accessed through the `/prometheus` context path over the admin endpoint.
+
+* `step` – the step size or reporting frequency to use.
 
 Example 1
 
-  ```json
-  [
-    {
-      "type": "prometheus",
-      "settings": {
-        "step": "3m"
-      }
+```json
+[
+  {
+    "type": "prometheus",
+    "settings": {
+      "step": "3m"
     }
-  ]
+  }
+]
   ```
 
 Example 2
 
-  ```json
-  [
-    {
-      "type": "prometheus",
-      "settings": {
-        "step": "P3Y6M4DT12H30M5S"
-      }
+```json
+[
+  {
+    "type": "prometheus",
+    "settings": {
+      "step": "P3Y6M4DT12H30M5S"
     }
-  ]
-  ```
+  }
+]
+```
 
 #### 2.1.2 Jmx{#jmx}
 
-* `step`: The step size or reporting frequency to use.
-* `domain`: The Jmx domain to which to publish the metrics.
+* `step` – The step size or reporting frequency to use.
+* `domain` – The Jmx domain to which to publish the metrics.
 
 Example 1
 
-  ```json
-  [
-    {
-      "type": "jmx",
-      "settings": {
-        "step": "3m",
-        "domain": "Mendix"
-      }
+```json
+[
+  {
+    "type": "jmx",
+    "settings": {
+      "step": "3m",
+      "domain": "Mendix"
     }
-  ]
-  ```
+  }
+]
+```
 
  Example 2
 
-  ```json
-  [
-    {
-      "type": "jmx",
-      "settings": {
-        "step": "P3Y6M4DT12H30M5S"
-      }
+```json
+[
+  {
+    "type": "jmx",
+    "settings": {
+      "step": "P3Y6M4DT12H30M5S"
     }
-  ]
-  ```
+  }
+]
+```
 
 #### 2.1.3 Influx{#influx}
 
-* `uri`: The URI for the Influx backend.
-* `db`: The database name to which to send the metrics.
-* `userName`: The userName for authentication.
-* `password`: The password for authentication.
-* `step`: The step size or reporting frequency to use.
-* `enabled`: set to `true` to enable the registry. This helps in switching the meter _on_ and _off_ while keeping the settings in the configuration.
+* `uri` – the URI for the Influx backend.
+* `db` – the database name to which to send the metrics.
+* `userName` – the userName for authentication.
+* `password` – the password for authentication.
+* `step` – the step size or reporting frequency to use.
+* `enabled` – set to `true` to enable the registry. This means you can switch the meter on and off while keeping the settings in the configuration.
 
 Example 1
 
-  ```json
-  [
-    {
-      "type": "influx",
-      "settings": {
-        "userName": "mendix",
-        "password": "MayBeThis**"
-      }
+```json
+[
+  {
+    "type": "influx",
+    "settings": {
+      "userName": "mendix",
+      "password": "MayBeThis**"
     }
-  ]
-  ```
+  }
+]
+```
 
 Example 2
 
-  ```json
-  [
-    {
-      "type": "influx",
-      "settings": {
-        "uri": "http://mendix.influx.com",
-        "db": "mx.metrics",
-        "userName": "mendix",
-        "password": "MayBeThis**",
-        "step": "P2Y6M4DT12H21M5S"
-      }
+```json
+[
+  {
+    "type": "influx",
+    "settings": {
+      "uri": "http://mendix.influx.com",
+      "db": "mx.metrics",
+      "userName": "mendix",
+      "password": "MayBeThis**",
+      "step": "P2Y6M4DT12H21M5S"
     }
-  ]
-  ```
+  }
+]
+```
 
 #### 2.1.4 StatsD{#statsd}
 
-  `flavor`: Specifies the variant of the StatsD protocol to use.
-  `host`: The host name of the StatsD agent.
-  `port`: The port used by the StatsD agent.
-  `step`: The step size or reporting frequency to use.
-  `protocol`: The protocol of the connection.
-  `enabled`: set to `true` to enable the registry. This helps in switching the meter _on_ and _off_ while keeping the settings in the configuration.
+* `flavor` – specifies the variant of the StatsD protocol to use.
+* `host` – the host name of the StatsD agent.
+* `port` – the port used by the StatsD agent.
+* `step` – the step size or reporting frequency to use.
+* `protocol` – the protocol of the connection.
+* `enabled` – set to `true` to enable the registry. This means you can switch the meter on and off while keeping the settings in the configuration.
   
 Example 1
 
-  ```json
-  [
-    {
-      "type": "statsd",
-      "settings": {
-        "host": "mx.datadog.com",
-        "port": "8181",
-        "protocol": "TCP",
-        "flavor": "TELEGRAF"
-      }
+```json
+[
+  {
+    "type": "statsd",
+    "settings": {
+      "host": "mx.datadog.com",
+      "port": "8181",
+      "protocol": "TCP",
+      "flavor": "TELEGRAF"
     }
-  ]
-  ```
+  }
+]
+```
 
 Example 2
 
-  ```json
-  [
-    {
-      "type": "statsd",
-      "settings": {
-        "flavor": "SYSDIG",
-        "step": "3m"
-      }
+```json
+[
+  {
+    "type": "statsd",
+    "settings": {
+      "flavor": "SYSDIG",
+      "step": "3m"
     }
-  ]
-  ```
+  }
+]
+```
 
 ### 2.2 Filters {#filters}
 
@@ -224,12 +225,12 @@ Filters are optional, but can help in filtering metrics based on given criteria.
 ]
 ```
 
-* `type` – the type of filter to apply. Currently we support the following:
-    * `nameStartsWith` : Filters the metric if it begins with the given values.
-* `result` – the result of applying the filter – if the metric matches the criteria, this action will be applied to the metric. Supported values are:
-    * `accept`
-    * `deny`
-* `values` – a list of values to be applied in the given filter type
+* `filter-type` – the type of filter to apply. Currently we support the following:
+    * `nameStartsWith` – matches the metric if its name begins with the given list-of-filter-values.
+* `filter-result` – the desired result of applying the filter-type to the list-of-filter-values. Supported values are:
+    * `accept` – metrics matching the criteria will be passed to the registry
+    * `deny` – metrics matching the criteria will not be passed to the registry
+* `list-of-filter-values` – a list of values to be used in the given filter type
 
 #### 2.2.1 Filter Example 1
 
@@ -245,7 +246,7 @@ Filters are optional, but can help in filtering metrics based on given criteria.
 ]
 ```
 
-The above filter accepts metrics which starts with **"app."**, **"employee."**, or **"myapp."**
+The above filter accepts metrics which starts with `app.`, `employee.`, or `myapp.`.
 
 #### 2.2.2 Filter Example 2
 
@@ -264,7 +265,7 @@ The above filter accepts metrics which starts with **"app."**, **"employee."**, 
 ]
 ```
 
-The above filter discards metrics which starts with **"Unnamed."**, **"Invalid."**, or **"Internal."**
+The above filter discards metrics which start with `Unnamed.`, `Invalid.`, or `Internal.`.
 
 ### 2.3 Notes
 
@@ -272,9 +273,9 @@ The above filter discards metrics which starts with **"Unnamed."**, **"Invalid."
 The following should be taken into account when configuring the metrics registries.
 {{% /alert %}}
 
-1. There are also some internal metrics used by Mendix. Filters will also have an effect on them. For example metrics emitted by Mendix which start with "mx.".
+1. Filters will also have an effect on internal metrics used by Mendix. For example, metrics emitted by Mendix which start with `mx.`.
 
-2. If you have a metric and another metric with the same name but with additional tags, these will be considered as different metrics. Example, Metric ("app.counter1") and ("app.counter1" with tag ("version" -> "1")) are different.
+2. If you have two metrics with the same name but one has additional tags, these will be considered as different metrics. For example, metrics `app.counter1` with tag `"version" -> "1"` and `app.counter1` with no tag are different.
 
 3. Filters are executed on a first come, first served basis. In other words, the first matching filter gets the priority. For example, take the filters defined below:
 
@@ -291,11 +292,11 @@ The following should be taken into account when configuring the metrics registri
     ]
     ```
 
-    This will still allow metrics like **app.others.counter** as they pass the first `accept` filter, `app.`. However, if you reverse the filters, **app.others.counter** will be denied, while **app.somethingelse.** would still be accepted.
+    This will allow metrics like `app.others.counter` as they pass the first `accept` filter, `nameStartsWith "app."`. However, if you reverse the filters, `app.others.counter` will be denied, while `app.somethingelse.` would still be accepted.
 
     {{% alert color="info" %}}Ensure that more specific filters are defined before less specific ones so that they are applied correctly.{{% /alert %}}
 
-4. To accept only specific filters and deny all others, ensure to deny with value **""**. For example, to accept only "app."
+4. To accept only specific filters and deny all others, add a deny filter with the value `""` as the last filter. For example, to accept only metrics starting with `app.`
 
     ```json
     [
@@ -314,7 +315,7 @@ The following should be taken into account when configuring the metrics registri
 
 Common tags which should be reported by every metric can be specified using the `Metrics.ApplicationTags` setting. This setting should be in JSON format.
 
-**Configuration Key:** `Metrics.ApplicationTags`
+* Custom Runtime Setting – **Name**: `Metrics.ApplicationTags`
 
 ```json
 {
@@ -324,14 +325,15 @@ Common tags which should be reported by every metric can be specified using the 
 ```
 
 ## 4 Microflow Activities {#microflow-activities}
-See the description of these activities [here](/refguide/metrics-activities/).
+
+You can use activities to provide custom metrics from your app. See [Metrics Activities](/refguide/metrics-activities/) for information about these activities .
 
 ## 5 Java API {#java-api}
 
 Micrometer metrics can be accessed through Java APIs as well inside Mendix. This can be achieved by setting `com.mendix.metrics.Type`. This setting defaults to `micrometer`.
 
-**Configuration Key:** `com.mendix.metrics.Type`
-**Configuration Value:** `micrometer`
+* Custom Runtime Setting – **Name**: `com.mendix.metrics.Type`
+* **Value**: `micrometer`
 
 ### 5.1 Current Metrics and Usage
 
@@ -342,8 +344,8 @@ To create the metrics,
 ```Java
 import com.mendix.metrics.Counter;
 import com.mendix.core.Core;
-
 …
+
 // Create a counter
 Counter counter1 = Core.metrics().createCounter("app.strikes")
                                 .withTag("app", "myapp")

@@ -19,7 +19,60 @@ Mendix Studio Pro comes with the mx command-line tool. The executable `mx.exe` f
 
 The mx tool enables the options described below.
 
-### 3.1 mx convert Command
+### 3.1 mx check Command
+
+The `mx check` command checks the app for issues such as Errors, Warnings, Deprecations or Performance recommendations.
+
+The input is an MPR file.
+
+#### 3.1.1 Usage
+
+Use the following command pattern for `mx check`:
+
+`mx convert [OPTIONS] INPUT`
+
+The `OPTIONS` are described in the table below:
+
+| Option | Shortcut | Result |
+| --- | --- | --- |
+| `--help` | `-h` | Displays the help text and exits. |
+| `--warnings` | `-w` | Include warnings in the output (errors are always included) |
+| `--deprecations` | `-d` | Include deprecations in the output (errors are always included) |
+| `--performance` | `-p` | Include performance checks in the output (errors are always included) (performance recommendations are only output, if there are no errors) |
+
+For `INPUT`, enter a single *.mpr* file.
+
+#### 3.1.2 Examples
+
+Examples of commands are described in the table below:
+
+| Example | Result |
+| --- | --- |
+| `mx check --help` | Displays the help text for the check command. |
+| `mx check C:\MxProjects\App-main\App-main.mpr` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors. |
+| `mx check C:\MxProjects\App-main\App-main.mpr -p` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors and performance recommendations. |
+| `mx check C:\MxProjects\App-main\App-main.mpr --warnings --deprecations` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors, warnings and deprecations. |
+| `mx check C:\MxProjects\App-main\App-main.mpr -w -d -p` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors, warnings, deprecations and performance recommendations. |
+
+#### 3.1.3 Return Codes
+
+Return codes are described in the table below:
+
+| Exit Code | Description |
+| --- | --- |
+| 0 | No issues found. |
+| 1 | Errors were found. |
+| 2 | Warnings were found. |
+| 4 | Deprecations found. |
+| 8 | Performance recommendations were found. |
+
+Those values are logically OR combined to indicate when there are a mix of errors, warnings, deprecations or performance recommendations.
+
+For example:
+- 3 if errors and warnings found
+- 7 if errors, warnings and deprecations found
+
+### 3.2 mx convert Command
 
 The `mx convert` command converts the app(s) to a specific Studio Pro version. For example, if you are using the mx command-line tool for Mendix version 8.1.0.58215, then `mx convert` will convert the app to that version. 
 
@@ -29,7 +82,7 @@ The input can be a single file, directory, or multiple files.
 The mx tool can only upgrade your app, but you cannot use it to downgrade the version.
 {{% /alert %}}
 
-#### 3.1.1 Usage
+#### 3.2.1 Usage
 
 Use the following command pattern for `mx convert`:
 
@@ -50,7 +103,7 @@ For `OUTPUT`, enter the output location for the converted results. Mind the foll
 * When `INPUT...` is a single file, `OUTPUT` can be a single file or directory; otherwise, `OUTPUT` must be a directory.
 * When using the `--in-place` option, the `INPUT...` folder will also be used as the `OUTPUT` folder, so you do not need to specify a separate `OUTPUT` folder
 
-#### 3.1.2 Examples
+#### 3.2.2 Examples
 
 Examples of commands are described in the table below:
 
@@ -60,7 +113,7 @@ Examples of commands are described in the table below:
 | `mx convert C:\Mendix\App1.mpk C:\Mendix\App2.mpk C:\Mendix\ConvertedProjects\` | Converts the *App1.mpk* and *App2.mpk* app packages that are in the *C:\Mendix\* folder and puts the results in the `C:\Mendix\ConvertedProjects\` folder. |
 | `mx convert --skip-error-check C:\Mendix\Packages\ C:\Mendix\ConvertedPackages\` | Converts all app packages in the `C:\Mendix\Packages\` folder to the `C:\Mendix\ConvertedPackages\` folder without checking for errors. |
 
-#### 3.1.3 Return Codes 
+#### 3.2.3 Return Codes
 
 Return codes are described in the table below:
 
@@ -71,11 +124,11 @@ Return codes are described in the table below:
 | 2 | There is something wrong with the command-line options. |
 | 3 | Converting failed. |
 
-### 3.2 mx create-project Command
+### 3.3 mx create-project Command
 
 The `mx create-project` command creates a new app in the Studio Pro. The app version depends on the version the tool was bundled with. For example, if you are using the mx tool for Studio Pro version 8.1.0.58215,  `mx create project` will create a new app in that version. 
 
-#### 3.2.1 Usage
+#### 3.3.1 Usage
 
 Use the following command pattern: `mx create-project [OPTIONS] [TEMPLATE-MPK-FILE]`
 
@@ -90,7 +143,7 @@ The `OPTIONS` are described in the table below:
 
 `TEMPLATE-MPK-FILE` is an optional path to a Mendix app package (*.mpk*) file. If this argument is omitted, the app is created with a default empty project template.
 
-#### 3.2.2 Examples
+#### 3.3.2 Examples
 
 Examples of commands are described in the table below:
 
@@ -100,7 +153,7 @@ Examples of commands are described in the table below:
 | `mx create-project --app-name "MyFirstApp" --output-dir "C:/Projects/MyFirstApp"` | Creates an app named `MyFirstApp` in the *C:/Projects/MyFirstApp* folder using all the default parameters. |
 | `mx create-project "C:/Templates/ExpenseReportTemplate.mpk"` | Creates an app with the default parameters from a template located at *C:/Templates/ExpenseReportTemplate.mpk*. |
 
-#### 3.2.3 Return Codes 
+#### 3.3.3 Return Codes
 
 Return codes are described in the table below:
 
@@ -110,6 +163,44 @@ Return codes are described in the table below:
 | 1 | An internal error occurred. |
 | 2 | There is something wrong with the command-line options. |
 
-### 3.3 Undocumented Options
+
+### 3.4 mx show-version Command
+
+The `mx show-version` command reports on which version of Studio Pro was used to last open the app.
+
+The input is a single MPR file.
+
+#### 3.4.1 Usage
+
+Use the following command pattern for `mx show-version`:
+
+`mx show-version [OPTIONS] INPUT`
+
+The `OPTIONS` are described in the table below:
+
+| Option | Shortcut | Result |
+| --- | --- | --- |
+| `--help` | `-h` | Displays the help text and exits. |
+
+For `INPUT`, enter a *.mpr* file.
+
+#### 3.4.2 Examples
+
+Examples of commands are described in the table below:
+
+| Example | Result |
+| --- | --- |
+| `mx show-version --help` | Displays the help text for the `show-version` command. |
+| `mx show-version C:\Mendix\App1\App1.mpr` | Displays the version of Studio Pro that was last used to open the app. |
+
+#### 3.4.3 Return Codes
+
+Return codes are described in the table below:
+
+| Exit Code | Description |
+| --- | --- |
+| 0 | The command ran successfully. |
+
+### 3.5 Undocumented Options
 
 The mx tool contains options that are not described in this document. Those are for internal Mendix usage and are not officially supported. This might change in the future, but these options can be used only at your own risk.

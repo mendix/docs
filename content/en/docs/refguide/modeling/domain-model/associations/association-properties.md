@@ -83,6 +83,8 @@ One-way navigable associations are associations that allow navigation to associa
 
 You can retrieve data from all other domain model associations in both directions.
 
+One-way navigable associations are represented by a dashed arrow in Domain model editor. An indicator shows the direction of its navigability.
+
 ### 2.6 Delete Behavior {#delete-behavior}
 
 | Value | Description |

@@ -1,5 +1,5 @@
 ---
-title: "Images, Icons and Fonts"
+title: "Images, Icons, and Fonts"
 url: /refguide/mobile/designing-mobile-user-interfaces/images-icons-and-fonts/
 parent: /refguide/mobile/designing-mobile-user-interfaces/
 weight: 30

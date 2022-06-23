@@ -45,7 +45,7 @@ For more information on offline-first app design, see [Offline Best Practices](/
 
 ## 4 Distributing Mobile Apps 
 
-When you model a web app and deploy it to production, all users immediately have access to it. However, this is often not the case with offline-first apps. The apps installed on your users' devices do not immediately update (especially true for native mobile apps). Typically, you create and distribute a new release of your app in the Google Play store and Apple App Store, which may take some time. Alternatively, Mendix provides an over-the-air (OTA) update mechanism to update your apps without going through the release process. For more information, see [Over the Air Updates](/refguide/mobile/distributing-mobile-apps/overtheair-updates/).
+When you model a web app and deploy it to production, all users immediately have access to it. However, this is often not the case with offline-first apps. The apps installed on your users' devices do not immediately update (especially true for native mobile apps). Typically, you create and distribute a new release of your app in the Google Play store and Apple App Store, which may take some time. Alternatively, Mendix provides an over-the-air (OTA) update mechanism to update your apps without going through the release process. For more information, see [Updating Native Apps](/refguide/mobile/distributing-mobile-apps/overtheair-updates/).
 
 For information on safely updating your offline-first apps, see [Distributing Mobile Apps](/refguide/mobile/distributing-mobile-apps/).
 

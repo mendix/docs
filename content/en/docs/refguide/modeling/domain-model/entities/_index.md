@@ -152,7 +152,7 @@ This property defines whether the entity contains the system attribute 'changedD
 | False *(default)* | Entity does not contain the system attribute 'changedDate'. |
 
 {{% alert color="info" %}}
-The 'changedDate' property is only updated on real changes. Simply changing and committing an entity with the same attribute values does not update 'changedDate'.
+The 'changedDate' property is updated whenever a value is set. Even setting an attribute to the value it already had and committing the entity updates the 'changedDate'.
 {{% /alert %}}
 
 {{% alert color="info" %}}

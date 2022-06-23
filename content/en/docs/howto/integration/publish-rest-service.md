@@ -32,7 +32,7 @@ To create the example project you will use in the next sections for publishing y
 	{{< figure src="/attachments/howto/integration/publish-rest-service/domainmodel.png" >}}
 
 4. You need pages for entering order data, so create an overview page for the **Order** entity In the RESTExample module.
-5. Create a **NewEdit** page for the OrderItem entity, then add a data grid to the **Order_NewEdit** page that displays the **OrderItems** over an association.
+5. Create a **NewEdit** page for the **OrderItem** entity, then add a data grid to the **Order_NewEdit** page that displays the **OrderItems** over an association.
 
 Your page should now look like this:
 

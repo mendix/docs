@@ -73,7 +73,7 @@ Great job setting up your notification. Now you can test it:
 4. Tap the notification to navigate to the page you selected.
 5. Tap the **Return to home page** button to navigate back to your home page.
 
-Now you can show pages after notifications are tapped. Next, in [How to Use Local Notifications Part 4: Data](/howto/mobile/local-notif-data/), you will learn to pass data to such pages.
+Now you can show pages after notifications are tapped. Next, in [Use Local Notifications Part 4: Data](/howto/mobile/local-notif-data/), you will learn to pass data to such pages.
 
 ## 4 Read More
 

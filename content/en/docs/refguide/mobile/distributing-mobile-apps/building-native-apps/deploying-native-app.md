@@ -24,7 +24,7 @@ The Mendix Native Mobile Builder does not currently support connections behind p
 Before starting this guide, make sure you have completed the following prerequisites:
 
 * Mendix Studio Pro v8.15 and above installed using the online installer. The offline installer does not include the Mendix Native Mobile Builder dependency.
-* Read [How to Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile/) to see how to create, style and debug an application with Mendix Studio Pro
+* Read [Get Started with Native Mobile](/refguide/mobile/getting-started-with-mobile/) to see how to create, style and debug an application with Mendix Studio Pro
 * Deploy your native mobile app to the cloud via Studio Pro and have the cloud address of your deployed application available
 * A [GitHub](https://github.com/) account.
 * An [App Center](https://appcenter.ms/) account. We recommend a paid account if you will be building and deploying regularly.
@@ -243,4 +243,4 @@ A signed Android APK can be uploaded to Google Play store directly. For more inf
 
 ## 7 Read More
 
-* [How To Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile/)
+* [Get Started with Native Mobile](/refguide/mobile/getting-started-with-mobile/)

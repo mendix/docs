@@ -63,7 +63,7 @@ To set up Appium Desktop for native iOS testing, do the following:
 To set up Appium Desktop for native Android testing, do the following:
 
 1. Add the Espresso dependencies by following the setup instructions [here](https://developer.android.com/training/testing/espresso/setup).
-1. Build a native Android app for your Mendix app (See [How to Build Native Apps](/howto/mobile/build-native-apps/) for more information).
+1. Build a native Android app for your Mendix app (See [Building Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/) for more information).
 1. Start Appium Desktop.
 1. Click **Start Server**.
 1. On the new screen, click the **Start Inspector Session** magnifier image in the top-right.

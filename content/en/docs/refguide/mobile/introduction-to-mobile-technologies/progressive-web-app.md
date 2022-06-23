@@ -135,6 +135,20 @@ Browsers offer access to device features through APIs that can be leveraged in P
 
 This table lists the most used device features and APIs, and also documents their compatibility with common browsers:
 
+**Legend** — The symbols above correspond to the following definitions:
+
+*  Fully compatible:
+
+	{{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}}
+	
+*  Compatible only when using HTTPS protocol:
+
+	{{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}}
+	
+*  Not compatible:
+
+	{{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}}
+
 | Feature | Chrome/Edge | Firefox | Safari |
 |---------|-----------|-------|------|
 | [Camera](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} |
@@ -151,20 +165,6 @@ This table lists the most used device features and APIs, and also documents thei
 | [Vibrate](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
 | [Memory](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
 | [Connection](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
-
-**Legend** — The symbols above correspond to the following definitions:
-
-*  Fully compatible:
-
-	{{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}}
-	
-*  Compatible only when using HTTPS protocol:
-
-	{{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}}
-	
-*  Not compatible:
-
-	{{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}}
 
 For more information on browser support for certain device features, see the third-party website [Can I Use](https://caniuse.com/).
 

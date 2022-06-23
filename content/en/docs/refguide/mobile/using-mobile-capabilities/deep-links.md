@@ -8,7 +8,7 @@ aliases:
     - /howto/mobile/native-deep-link/
 ---
 
-## 1. Introduction
+## 1 Introduction
 
 While URLs typically open websites, they can also open an installed app on your mobile device. With this tutorial you will learn how to connect the URL `app://myapp` to your Mendix native app installed on your Android or iOS device. It is also possible to pass additional data using paths, query parameters, and hashes. Passing additional data could look like this: `app://myapp/task/123?action=close#info`.
 
@@ -26,7 +26,7 @@ For this tutorial we recommend running your app from source against a local inst
 
 Please note that the Make It Native app has already the registered schema `makeitnative://` and can be used out of the box. To use the Make It Native app with that schema, see the [Using Deep Linking in Your App](#using-deep-linking) section below. If you want to change this schema, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps/) to build your own custom developer app and then use the [Setting up App Deep Linking](#set-up) section below to change its schema.
 
-## 2. Prerequisites
+## 2 Prerequisites
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
@@ -35,7 +35,7 @@ Before starting this guide, make sure you have completed the following prerequis
 * Install git [command line](https://git-scm.com/downloads) tool for working with the Native Mobile App Builder CLI
 * Install Mendix Studio Pro v 8.15.0 or above in order to use the Native Mobile App Builder
 
-## 3. Setting up App Deep Linking {#set-up}
+## 3 Setting up App Deep Linking {#set-up}
 
 If you do not already have a native template for your app, you can create one by following the section below.
 
@@ -148,7 +148,7 @@ Next you will implement the deep link handler nanoflow **DL_ShowUrlDetails** so 
 
 Add a few test link buttons, for example {app://myapp/task/123} or {makeitnative://task/123}, to your web page, then re-run your app. Open the your app in your device's browser by typing *{your local IP address}:8080* into the browser. With the app loaded, tap the links to test. You should be brought out of your browser and into your app's page!
 
-## 5. Read more
+## 5 Read more
 
 * [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/)
 * [React Native Linking](https://facebook.github.io/react-native/docs/linking)

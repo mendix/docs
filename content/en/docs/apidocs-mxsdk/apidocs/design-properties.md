@@ -245,6 +245,6 @@ The design property above is a replacement for the removed option **Styling opti
 
 ## 7 Read More
 
-* [How to Style Your Mendix App](/howto/mobile/how-to-use-native-styling/)
+* [Native Styling](refguide/mobile/designing-mobile-user-interfaces/native-styling/)
 * [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide/)
 * [How to Extend Design Properties](/howto/front-end/extend-design-properties/)

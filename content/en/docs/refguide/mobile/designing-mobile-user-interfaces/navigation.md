@@ -147,6 +147,6 @@ Out of the box, the bottom bar and top bar have a default styling. To change thi
 
 ## 7 Read More
 
-* [Show Page Reference Guide](/refguide/show-page/)
-* [Close Page Reference Guide](/refguide/close-page/)
+* [Show Page Guide](/refguide/show-page/)
+* [Close Page Guide](/refguide/close-page/)
 * [Navigation Widget](/refguide/mobile/designing-mobile-user-interfaces/widget-styling-guide/#navigation-widget) section of the *Widget Styling Guide*

@@ -3,7 +3,7 @@ title: "Widget Styling Guide"
 url: /refguide/mobile/designing-mobile-user-interfaces/widget-styling-guide/
 parent: /refguide/mobile/native-styling/
 weight: 45
-description: "This reference guide will contextualize the style elements Mendix uses in native mobile apps, as well as explain the classes and style properties of Mendix’s widgets."
+description: "This guide will contextualize the style elements Mendix uses in native mobile apps, as well as explain the classes and style properties of Mendix’s widgets."
 tags: ["widgets", "styling"]
 aliases:
     - /refguide/native-styling-refguide/
@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction {#native-mobile-styling}
 
-This reference guide will contextualize the style elements Mendix uses in native mobile apps, as well as explain the classes and style properties of Mendix’s widgets. To learn the basics of native styling, you can consult [How to Implement Native Mobile Styling](/howto/mobile/native-styling/) and then follow [How to Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling/).
+This guide will contextualize the style elements Mendix uses in native mobile apps, as well as explain the classes and style properties of Mendix’s widgets. To learn the basics of native styling, you can consult [How to Implement Native Mobile Styling](/howto/mobile/native-styling/) and then follow [How to Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling/).
 
 Mendix apps use layouts to dictate how pages can look and function. For native mobile apps specifically, you can use a native layout to easily integrate navigation and settings optimized for native functionality. For more information on layouts, see [Layout](/refguide/layout/).
 

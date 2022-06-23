@@ -51,7 +51,7 @@ Before starting this guide, make sure you have completed the following prerequis
 * Use Mendix Studio Pro v9.7 and above.
 * Deploy your app by completing [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/).
 * Install your app on a test device or emulator.
-* Read the [Offline-First](/refguide/offline-first/) reference guide. Understand this document before issuing OTA updates or releasing new versions.
+* Read the [Offline-First](/refguide/offline-first/) guide. Understand this document before issuing OTA updates or releasing new versions.
 
 ## 4 When to Use OTA Updates
 

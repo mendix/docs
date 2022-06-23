@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-This reference guide will place the Augmented Reality (AR) widgets into context, as well as explain how they can be used
+This guide will place the Augmented Reality (AR) widgets into context, as well as explain how they can be used
 to create AR experiences. The following terms will be used frequently:
 
 * Augmented reality (AR): adding virtual objects to the real world, through the mobile phone camera view

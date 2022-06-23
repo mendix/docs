@@ -27,7 +27,7 @@ PWAs have the following limitations on iOS:
 *  Offline data is not supported for PWAs on iOS
 {{% /alert %}}
 
-To create a full offline-first PWA, choose and add one of the following profiles (depending on which form factor you need): Responsive Web Offline, Phone Web Offline, or Tablet Web Offline. For more information about offline-first apps, see the [Offline-First Reference Guide](/refguide/offline-first/).
+To create a full offline-first PWA, choose and add one of the following profiles (depending on which form factor you need): Responsive Web Offline, Phone Web Offline, or Tablet Web Offline. For more information about offline-first apps, see the [Offline-First Guide](/refguide/offline-first/).
 
 {{% alert color="info" %}}
 Offline-first progressive web apps have some restrictions to make sure they can fully work offline. For more information, see [Offline Best Practices](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/).

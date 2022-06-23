@@ -656,4 +656,4 @@ solutions, on premise or as a service, that can be used for this purpose. We do 
 
 ## 9 Read More
 
-* [Offline First Reference Guide](/refguide/offline-first/)
+* [Offline First Guide](/refguide/offline-first/)

@@ -65,5 +65,5 @@ When running locally from source, on iOS you have to run `pod install` once more
 ## 4 Read More
 
 * [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/)
-* [How to Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile/)
+* [Getting Started with Mobile](/refguide/mobile/getting-started-with-mobile/)
 

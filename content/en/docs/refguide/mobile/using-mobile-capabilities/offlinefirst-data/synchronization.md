@@ -7,15 +7,7 @@ description: "Describes how and when synchronization occurs, and how to resolve 
 tags: ["offline", "offline-first"]
 ---
 
-TODO:
-Add somewhere when startup sync is triggered:
-It will sync on startup if either:
-- There domain model change
-- They are using a new mendix version
-- A change in the sync configs
-
-
-## Synchronization
+## 1 Introduction
 
 Mendix automatically analyzes your app's data model to determine which entities should be synchronized based on the pages and nanoflows used within your offline navigation profile. In addition, the platform takes entity access into account so that only the data the user is allowed to access is synchronized.
 
@@ -26,6 +18,8 @@ Synchronization is automatically triggered during the following scenarios:
 	* There is a network connection
 	* You are using a new Mendix version or the domain model used in the offline-first app has changed
 * After the app user logs in or out. Note that synchronization after log out does not synchronize the data of the logged-out user, but rather synchronizes the data for the anonymous user.
+
+## 2 Synchronization
 
 Synchronization can also be configured via different places in your Mendix app, for example:
 

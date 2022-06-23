@@ -10,7 +10,7 @@ aliases:
 
 These step-by-step guides will teach you to set up and use augmented reality (AR) using Mendix Studio Pro and your native mobile device.
 
-The following how-to’s are available here:
+The following guides are available here:
 
 * [Get Started with AR](/refguide/mobile/using-mobile-capabilities/augmented-reality/how-to-ar-simple-cube/)
 * [Create An AR Business Card](/refguide/mobile/using-mobile-capabilities/augmented-reality/how-to-ar-business-card/)

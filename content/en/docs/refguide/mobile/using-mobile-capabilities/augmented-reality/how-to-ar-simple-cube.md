@@ -10,13 +10,11 @@ aliases:
 
 ## 1 Introduction
 
-Working with augmented reality (AR) is not all that different from implementing any other piece of Native functionality.
-Using just a few widgets, you can add two-or-three dimensional AR to your native mobile application. In this how-to you
-will make a 3D cube by dragging and dropping widgets into your Mendix app and then configuring them.
+Working with augmented reality (AR) is not all that different from implementing any other piece of Native functionality. Using just a few widgets, you can add two-or-three dimensional AR to your native mobile application. In this guide you will make a 3D cube by dragging and dropping widgets into your Mendix app and then configuring them.
 
 ## 2 Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this guide, make sure you have completed the following prerequisites:
 
 For Android:
 
@@ -183,7 +181,7 @@ The **Material** tab contains properties for configuring appearance:
 
 *  **Lighting type** — the way light from the scene will fall on your object. 
 	**Phong**, **Blinn**, and **Lambert**  are standard configurations of adding light and shadows to your objects. They are also have relatively slight  processor power requirements. 		**Constant** means no light is added — just pure colors are shown. 
-	**PBR** — (Physically Based Rendering) is the most advanced. PBR takes the entire scene into account when creating its  lighting, the intricacies of which are beyond this how-to. Change between the various **Lighting type** options to  see them in action:
+	**PBR** — (Physically Based Rendering) is the most advanced. PBR takes the entire scene into account when creating its  lighting, the intricacies of which are beyond this guide. Change between the various **Lighting type** options to  see them in action:
 
 	Here is a cube with **Lighting type** > **Phong**:
    

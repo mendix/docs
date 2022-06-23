@@ -30,7 +30,7 @@ In a similar fashion, MXBuild and the Mendix Native Template follow these rules:
 
 ## 2 Prerequisites {#local-manual-prerecs}
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this guide, make sure you have completed the following prerequisites:
 
 * Install [Node and NPM](https://nodejs.org/en/download/) and [Python](https://www.python.org/downloads/)
 

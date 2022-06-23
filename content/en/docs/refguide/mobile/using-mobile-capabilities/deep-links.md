@@ -28,7 +28,7 @@ Please note that the Make It Native app has already the registered schema `makei
 
 ## 2. Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this guide, make sure you have completed the following prerequisites:
 
 * Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploy Your First Mendix Native Mobile App*
 * Make sure your [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module is up to date

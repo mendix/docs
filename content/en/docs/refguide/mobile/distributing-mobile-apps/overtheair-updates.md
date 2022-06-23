@@ -26,7 +26,7 @@ Currently OTA does not update your app while the app is open or minimized.
 Mendix OTA updates are the replacement for the deprecated [Release Over the Air Updates with App Center's CodePush (Deprecated)](/refguide/mobile/distributing-mobile-apps/overtheair-updates/). When opting in for OTA updates via the Mendix Runtime, CodePush OTA updates will be disabled. 
 {{% /alert %}}
 
-This how-to will teach you how to do the following:
+This guide will teach you how to do the following:
 
 * Understand the rational behind Mendix's OTA solution
 * Enable OTA updates in your Native Mobile Profile
@@ -46,7 +46,7 @@ With these shortcomings in mind, we developed a Mendix OTA update mechanism whic
 
 ## 3 Prerequisites {#prerequisites}
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this guide, make sure you have completed the following prerequisites:
 
 * Use Mendix Studio Pro v9.7 and above.
 * Deploy your app by completing [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/).

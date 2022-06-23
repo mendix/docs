@@ -3,16 +3,16 @@ title: "Testing Native Apps"
 url: /refguide/mobile/distributing-mobile-apps/testing-mobile-apps/
 parent: /refguide/mobile/distributing-mobile-apps/
 weight: 50
-description: This how-to will teach you how to write end-to-end tests once and run them on both platforms using Appium.
+description: This guide will teach you how to write end-to-end tests once and run them on both platforms using Appium.
 aliases:
     - /howto/mobile/testing-mendix-native-apps-using-appium/
 ---
 
 ## 1 Introduction
 
-Mendix lets you create native mobile apps for both Android and iOS from a single app. To verify that your apps work as expected, you can test them using Appium. Using Appium can help you because it supports both iOS and Android with a single API that resembles Selenium's. This how-to will teach you how to write end-to-end tests once and run them on both platforms, all while using a familiar API. You will also learn how to run and test your apps on emulators.
+Mendix lets you create native mobile apps for both Android and iOS from a single app. To verify that your apps work as expected, you can test them using Appium. Using Appium can help you because it supports both iOS and Android with a single API that resembles Selenium's. This guide will teach you how to write end-to-end tests once and run them on both platforms, all while using a familiar API. You will also learn how to run and test your apps on emulators.
 
-This how-to will teach you how to do the following:
+This guide will teach you how to do the following:
 
 * Understand how Mendix Studio and Studio Pro widgets relate to your native app
 * Set up Appium GUI to spy on a Mendix native iOS app
@@ -21,7 +21,7 @@ This how-to will teach you how to do the following:
 
 ## 2 Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this guide, make sure you have completed the following prerequisites:
 
 * Install [Appium Desktop](https://github.com/appium/appium-desktop)
 * Install, run, and fix any issues found by [appium-doctor](https://github.com/appium/appium-doctor)

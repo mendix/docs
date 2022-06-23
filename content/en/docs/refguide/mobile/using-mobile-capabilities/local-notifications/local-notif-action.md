@@ -16,7 +16,7 @@ The Make It Native app is currently experiencing limitations which interfere wit
 
 ## 2 Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this guide, make sure you have completed the following prerequisites:
 
 * Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
 * Install the [Make It Native](/refguide/getting-the-make-it-native-app/) app on your mobile device

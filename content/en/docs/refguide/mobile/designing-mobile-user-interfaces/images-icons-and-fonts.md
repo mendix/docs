@@ -188,7 +188,7 @@ Now wherever you use `boldText`, you will get the expected result on both platfo
 
 ### 3.2 Prerequisites {#prerecs}
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this guide, make sure you have completed the following prerequisites:
 
 Before adding fonts [using the Mendix Native Mobile Builder](#fonts-nbui):
 

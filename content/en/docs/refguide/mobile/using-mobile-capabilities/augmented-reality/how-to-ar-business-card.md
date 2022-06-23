@@ -3,7 +3,7 @@ title: "Create An AR Business Card"
 url: /refguide/mobile/using-mobile-capabilities/augmented-reality/how-to-ar-business-card/
 parent: /refguide/mobile/using-mobile-capabilities/augmented-reality/
 weight: 20
-description: In this how-to you will make an augmented reality business card app.
+description: In this guide you will make an augmented reality business card app.
 aliases:
     - /howto/mobile/how-to-ar-business-card/
 ---
@@ -14,7 +14,7 @@ Follow the sections below to build a demo. While doing so, you will become famil
 
 ## 2 Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this guide, make sure you have completed the following prerequisites:
 
 * Install Studio Pro and Developer Apps with AR capabilities
 * Download the AR widgets from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/117209)

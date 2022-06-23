@@ -219,4 +219,4 @@ In this section you will learn to turn the class you made into a design property
 
     You have implemented your own custom design property. Other users can quickly harness your design property without having to consult a class name list.
 
-Congratulations! By completing this how-to, you have learned how to alter a styling property, apply classes and design properties, and create your own classes and design properties.
+Congratulations! By completing this guide, you have learned how to alter a styling property, apply classes and design properties, and create your own classes and design properties.

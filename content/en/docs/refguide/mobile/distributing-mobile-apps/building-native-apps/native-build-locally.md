@@ -16,7 +16,7 @@ Follow the sections below through [Building Your Native App](#building-app-proje
 
 ## 2 Prerequisites {#prerequisites}
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this guide, make sure you have completed the following prerequisites:
 
 * Install [Node and NPM](https://nodejs.org/en/download/)
 

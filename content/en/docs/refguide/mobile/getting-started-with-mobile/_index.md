@@ -24,7 +24,7 @@ The Blank Native Mobile App also includes six modules:
 
 ## 2 Prerequisites {#prerequisites}
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this guide, make sure you have completed the following prerequisites:
 
 * Have a mobile device to test your native mobile app 
 * For information on device requirements, see [System Requirements](/refguide/system-requirements/)

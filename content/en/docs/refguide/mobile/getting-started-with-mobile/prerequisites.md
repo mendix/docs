@@ -1,5 +1,5 @@
 ---
-title: "Prerequisites" 
+title: "Native App Prerequisites and Troubleshooting" 
 url: /refguide/mobile/getting-started-with-mobile/prerequisites/
 parent: /refguide/mobile/getting-started-with-mobile/
 weight: 10

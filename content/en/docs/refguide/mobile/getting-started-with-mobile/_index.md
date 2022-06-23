@@ -105,7 +105,7 @@ For more detailed instructions on debugging a native mobile app, see [Debug Nati
 
 ## 4 Read More
 
-* [Prerequisites](/refguide/mobile/getting-started-with-mobile/prerequisites/)
+* [Native App Prerequisites and Troubleshooting](/refguide/mobile/getting-started-with-mobile/prerequisites/)
 * [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets/)
 * [Native Mobile Styling Guide](/refguide/native-styling-refguide/)
 * [How to Debug Native Mobile Apps (Advanced)](/howto/mobile/native-debug/)

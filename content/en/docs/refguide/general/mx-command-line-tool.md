@@ -19,15 +19,19 @@ Mendix Studio Pro comes with the mx command-line tool. The executable `mx.exe` f
 
 The mx tool performs the commands described below.
 
-### 3.1 mx check Command
+### 3.1 mx check Command [version 9.10+]
 
 The `mx check` command checks the app MPR file for issues such as Errors, Warnings, Deprecations or Performance recommendations.
+
+{{% alert color="info" %}}
+The MPR file must be the same version as mx.
+{{% /alert %}}
 
 #### 3.1.1 Usage
 
 Use the following command pattern for `mx check`:
 
-`mx convert [OPTIONS] INPUT`
+`mx check [OPTIONS] INPUT`
 
 The `OPTIONS` are described in the table below:
 
@@ -74,7 +78,7 @@ For example:
 - 3 if errors and warnings found
 - 7 if errors, warnings, and deprecations found
 
-### 3.2 mx convert Command
+### 3.2 mx convert Command [version 9+]
 
 The `mx convert` command converts the app(s) MPK file(s) to a specific Studio Pro version. For example, if you are using the mx command-line tool for Mendix version 9.12.2.44241, then `mx convert` will convert the app to that version. 
 
@@ -126,7 +130,7 @@ Return codes are described in the table below:
 | 2 | There is something wrong with the command-line options. |
 | 3 | Converting failed. |
 
-### 3.3 mx create-project Command
+### 3.3 mx create-project Command [version 9+]
 
 The `mx create-project` command creates a new app in the Studio Pro. The app version depends on the version the tool was bundled with. For example, if you are using the mx tool for Studio Pro version 8.1.0.58215,  `mx create project` will create a new app in that version. 
 
@@ -141,7 +145,7 @@ The `OPTIONS` are described in the table below:
 | `app-name` | App | Assigns the specified app name to the app. |
 | `output-dir` | Current directory | The directory in which to create the app. |
 | `language-code` | Optional | The default language of the app. | 
-| `sprintr-app-id` | Optional | Associates the app [feedback features](/developerportal/collaborate/feedback/) with the provided [Developer Portal app](/developerportal/#my-apps). |
+| `sprintr-app-id` | Optional | Associates the app [feedback features](/developerportal/collaborate/feedback/) with the provided [Developer Portal app](/developerportal/#my-apps). The value is a GUID. When accessing the app portal (on sprintr or on Team Server) it can be seen in the browser's URL - for example `1a428ea7-b00e-4166-9b23-20b7be88a40e`. |
 
 `TEMPLATE-MPK-FILE` is an optional path to a Mendix app package (*.mpk*) file. If this argument is omitted, the app is created with a default empty project template.
 
@@ -165,11 +169,15 @@ Return codes are described in the table below:
 | 1 | An internal error occurred. |
 | 2 | There is something wrong with the command-line options. |
 
-### 3.4 mx show-version Command
+### 3.4 mx show-version Command [version 9.4+]
 
 The `mx show-version` command reports which version of Studio Pro was used last time the app was opened.
 
 The input is a single MPR file.
+
+{{% alert color="info" %}}
+The MPR file must be the same version as mx.
+{{% /alert %}}
 
 #### 3.4.1 Usage
 

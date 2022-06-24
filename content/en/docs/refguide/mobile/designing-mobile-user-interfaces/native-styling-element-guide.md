@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction {#native-mobile-styling}
 
-This guide will contextualize the style elements Mendix uses in native mobile apps, as well as explain the classes and style properties of Mendix’s widgets. To learn the basics of native styling, you can consult [How to Implement Native Mobile Styling](/howto/mobile/native-styling/) and then follow [How to Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling/).
+This guide will contextualize the style elements Mendix uses in native mobile apps, as well as explain the classes and style properties of Mendix’s widgets. To learn the basics of native styling, you can consult [Designing Mobile User Interfaces](/refguide/mobile/designing-mobile-user-interfaces/).
 
 Mendix apps use layouts to dictate how pages can look and function. For native mobile apps specifically, you can use a native layout to easily integrate navigation and settings optimized for native functionality. For more information on layouts, see [Layout](/refguide/layout/).
 
@@ -1760,5 +1760,4 @@ The default class to style all column chart widgets is named `com_mendix_widget_
 ## 12 Read More
 
 * [How to Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling/)
-* [How to Implement Native Mobile Styling](/howto/mobile/native-styling/)
 * [Design Properties Documentation](/apidocs-mxsdk/apidocs/design-properties/)

@@ -7,6 +7,7 @@ description: "Describes enabling over the air updates using built-in functionali
 tags: ["ota", "over the air", "update"]
 aliases:
     - /howto/mobile/how-to-ota/
+    - /howto/mobile/how-to-ota-appcenter/
 ---
 ## 1 Introduction
 

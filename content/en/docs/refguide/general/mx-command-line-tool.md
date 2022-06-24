@@ -74,7 +74,7 @@ For example:
 - 3 if errors and warnings found
 - 7 if errors, warnings, and deprecations found
 
-### 3.2 mx convert Command [version 9+]
+### 3.2 mx convert Command
 
 The `mx convert` command converts the app(s) MPK file(s) to a specific Studio Pro version. For example, if you are using the mx command-line tool for Mendix version 9.12.2.44241, then `mx convert` will convert the app to that version. 
 

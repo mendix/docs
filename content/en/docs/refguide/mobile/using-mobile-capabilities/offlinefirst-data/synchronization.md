@@ -19,7 +19,7 @@ Synchronization is automatically triggered during the following scenarios:
 	* You are using a new Mendix version or the domain model used in the offline-first app has changed
 * After the app user logs in or out. Note that synchronization after log out does not synchronize the data of the logged-out user, but rather synchronizes the data for the anonymous user.
 
-## 2 Synchronization
+## 2 Synchronization{#synchronization}
 
 Synchronization can also be configured via different places in your Mendix app, for example:
 

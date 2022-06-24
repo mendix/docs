@@ -53,7 +53,7 @@ For information on safely updating your offline-first apps, see [Building, Testi
 
 Typically, when a user visits or logs into a web app, the Mendix Runtime creates a session. The Mendix Runtime keeps the session alive as long as the user works in the app. The session expires after a certain amount of inactivity determined by the time of the last request to the server.
 
-Session management in offline-first apps uses the same system mentioned above, but this introduces some challenges. Offline-first apps perform few requests to Mendix Runtime, because these apps work mostly with the local database. This causes the session on the runtime to expire while the user is still using the app. Mendix has employed solutions that differ per app type (native or PWA) to overcome this situation. To learn more about how Mendix handles sessions for offline-first users, see the [Session Management](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/troubleshooting/#session-mgmt) section of *Offline Troubleshooting*.
+Session management in offline-first apps uses the same system mentioned above, but this introduces some challenges. Offline-first apps perform few requests to Mendix Runtime, because these apps work mostly with the local database. This causes the session on the runtime to expire while the user is still using the app. Mendix has employed solutions that differ per app type (native or PWA) to overcome this situation. 
 
 ## 6 Main Documents in This Category
 

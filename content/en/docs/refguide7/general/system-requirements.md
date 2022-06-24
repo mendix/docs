@@ -104,10 +104,21 @@ Using a hybrid preview is not the same as using an emulator. A hybrid preview on
 
 ## 7 Mobile Operating Systems
 
-For Mendix apps and the [Mendix Developer App](/refguide7/getting-the-mendix-app/):
+For hybrid apps built with Mendix (and the [Mendix Developer App](/refguide7/getting-the-mendix-app/)) the following operating system versions are supported:
 
-* iOS 9 and above
-* Android 5.0 and above
+* Latest version of iOS
+* Latest three versions of Android
+
+Only devices running on these operating system versions receive up-to-date security fixes from their vendors and thus minimize being vulnerable to known exploits.
+
+You can build hybrid apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
+
+We recommend the following minimum hardware requirements for all mobile devices running hybrid Mendix apps:
+
+* CPU: minimum 2 cores with 2 GHz
+* Memory: minimum 2 GB
+
+Depending on your app's complexity, these minimum hardware requirements might not be sufficient and should be adjusted.
 
 ## 8 MxBuild{#mxbuild}
 

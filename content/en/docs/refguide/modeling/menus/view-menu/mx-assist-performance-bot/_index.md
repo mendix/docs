@@ -123,7 +123,11 @@ To auto-fix the issue, follow the steps below:
 
 After the issue is auto-fixed, a pop-up window listing the changes appears. You can click **Show the fix** to view the changed document and element. 
 
-## 4 Read More
+## 4 Using Performance Bot from the command line
+
+Performance Bot may also be executed from the command line, via the [mx Command-Line Tool](/refguide/mx-command-line-tool/#check).
+
+## 5 Read More
 
 * [Mendix Assist](/refguide/mx-assist-studio-pro/)
 * [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/)

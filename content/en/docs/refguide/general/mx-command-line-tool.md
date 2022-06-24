@@ -19,7 +19,7 @@ Mendix Studio Pro comes with the mx command-line tool. The executable `mx.exe` f
 
 The mx tool performs the commands described below.
 
-### 3.1 mx check Command [version 9.10+]
+### 3.1 mx check Command [version 9.10+] {#check}
 
 The `mx check` command checks the app MPR file for issues such as Errors, Warnings, Deprecations or Performance Recommendations.
 

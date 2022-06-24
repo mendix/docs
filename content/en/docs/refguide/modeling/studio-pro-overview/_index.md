@@ -36,7 +36,7 @@ The Studio Pro top bar contains the following items:
 
 ### 2.1 Menus {#menus}
 
-In the Studio Pro top bar, you can see several menus, such as **Switch-to** menu, [Edit](/refguide/edit-menu/), [View](/refguide/view-menu/), and [Version Control](/refguide/version-control-menu/). Each menu contains menu items that allow you to perform various actions, for example, to [create a deployment package](/refguide/create-deployment-package-dialog/), set [preferences](/refguide/preferences-dialog/), or view the [errors](/refguide/errors-pane/) pane. 
+In the Studio Pro top bar, you can see several menus, such as **Switch-to** menu, [Edit](/refguide/edit-menu/), [View](/refguide/view-menu/), and [Version Control](/refguide/version-control-menu/). Each menu contains menu items that allow you to perform various actions, for example, to [create a deployment package](/refguide/create-deployment-package-dialog/), set [preferences](/refguide/preferences-dialog/), or view the [**Errors**](/refguide/errors-pane/) pane. 
 
 For more information on menus, see [Menus](/refguide/menus/). 
 
@@ -102,7 +102,7 @@ These keys are active within the [Dockable Panes](#panes) of Studio Pro.
 
 ##### 7.1.1.1 All Panes
 
-You can navigate between Studio Pro panes (for example, the domain model editor or the errors pane) using <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd>. This opens a selection dialog where you can choose a pane using the mouse, <kbd>Ctrl</kbd> + arrow keys, or <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd>. You are taken to the selected pane when you click the main mouse button or release the <kbd>Ctrl</kbd> key.
+You can navigate between Studio Pro panes (for example, the domain model editor or the **Errors** pane) using <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd>. This opens a selection dialog where you can choose a pane using the mouse, <kbd>Ctrl</kbd> + arrow keys, or <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd>. You are taken to the selected pane when you click the main mouse button or release the <kbd>Ctrl</kbd> key.
 
 {{< figure src="/attachments/refguide/modeling/studio-pro-overview/ctrl-tab-navigation.png" >}}
 
@@ -184,8 +184,8 @@ The following shortcut keys are available in the microflow and nanoflow editors:
 | <kbd>Ctrl</kbd>&nbsp;+&nbsp;arrow&nbsp;keys | Moves the currently selected item up/down or left/right. |
 | <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
 | <kbd>F2</kbd> | Edits the name of the return value of the currently selected activity. This shortcut will not function on activities that do not return a result. |
-| <kbd>Home</kbd> | Highlights and focus on the start event of the current flow. |
-| <kbd>End</kbd> | Highlights and focus on an end event in the current flow. If there are multiple end events, clicking **End** multiple times will toggle between the different events. |
+| <kbd>Home</kbd> | Highlights and focus on the start event of the current workflow/microflow/nanoflow. |
+| <kbd>End</kbd> | Highlights and focus on an end event in the current workflow/microflow/nanoflow. If there are multiple end events, clicking **End** multiple times will toggle between the different events. |
 | <kbd>Shift</kbd>  | By holding <kbd>Shift</kbd> when resizing an activity, it will stay centered at its current position and expand equally in all directions. |
 | <kbd>Ctrl</kbd>  | When pressing the <kbd>Ctrl</kbd>, you can select additional activities. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 
@@ -195,9 +195,9 @@ The following shortcut keys are available for the debugger:
 
 | Key | Description |
 | --- | --- |
-| <kbd>Alt</kbd>&nbsp;+&nbsp;<kbd>F5</kbd> | *Step into* – moves the debugger into the sub-flow or loop. |
-| <kbd>Alt</kbd> + <kbd>F6</kbd> | *Step over* – moves the debugger to the next step in the same flow. |
-| <kbd>Alt</kbd> + <kbd>F7</kbd> | *Step out* – instructs the debugger to leave the sub-flow or loop. |
+| <kbd>Alt</kbd>&nbsp;+&nbsp;<kbd>F5</kbd> | *Step into* – moves the debugger into the sub-microflow/sub-nanoflow or loop. |
+| <kbd>Alt</kbd> + <kbd>F6</kbd> | *Step over* – moves the debugger to the next step in the same workflow/microflow/nanoflow. |
+| <kbd>Alt</kbd> + <kbd>F7</kbd> | *Step out* – instructs the debugger to leave the sub-microflow/sub-nanoflow or loop. |
 | <kbd>Alt</kbd> + <kbd>F8</kbd> | *Continue* – instructs the debugger to continue until it reaches another breakpoint. |
 
 ### 7.6 Menu Shortcut Keys {#menu-shortcuts}
@@ -216,8 +216,8 @@ The following shortcut keys are assigned to menu actions that can be used in all
 | <kbd>Ctrl</kbd> + <kbd>F5</kbd> | Deploys to licensed cloud node. |
 | <kbd>F6</kbd> | Deploys for Eclipse. |
 | <kbd>F7</kbd> | Creates a deployment package. |
-| <kbd>F8</kbd> | Highlights the next error in the **Error List** pane and open it in an editor. |
-| <kbd>Shift</kbd> + <kbd>F8</kbd> | Highlights the previous error result in the **Error List** pane and open it in an editor. |
+| <kbd>F8</kbd> | Highlights the next error in the **Errors** pane and open it in an editor. |
+| <kbd>Shift</kbd> + <kbd>F8</kbd> | Highlights the previous error result in the **Errors** pane and open it in an editor. |
 | <kbd>F9</kbd> | Shows the currently running app in the browser (responsive). |
 | <kbd>Ctrl</kbd> + <kbd>F9</kbd> | Shows the currently running app in the browser (phone simulation). |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F9</kbd> | Shows the currently running app in the browser (tablet simulation). |

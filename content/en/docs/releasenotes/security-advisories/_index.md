@@ -22,7 +22,7 @@ Siemens publishes their CVEs on the second Tuesday of every month.
 
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
-| To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) | 6.5 | To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) | Fixed in module versions 9.2.2 and 10.1.2 |
+| To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) | 6.5 | To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) | Fixed in [module](https://marketplace.mendix.com/link/component/72) v.9.2.2 and v.10.1.2 |
 | CVE-2022-32285 | 8.3 | [Privilege Escalation Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/pdf/ssa-740594.pdf) | See the SSA description for remediation details. |
 | CVE-2022-32286 | 7.6 | [Privilege Escalation Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/pdf/ssa-740594.pdf) | See the SSA description for remediation details. |
 | <a name="25650"></a>CVE-2022-25650 | 3.1 | [Improper Access Control Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-870917.pdf) | See the SSA description for remediation details. |

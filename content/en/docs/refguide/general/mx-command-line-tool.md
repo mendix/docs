@@ -126,7 +126,7 @@ Return codes are described in the table below:
 | 2 | There is something wrong with the command-line options. |
 | 3 | Converting failed. |
 
-### 3.3 mx create-project Command [version 9+]
+### 3.3 mx create-project Command
 
 The `mx create-project` command creates a new app in the Studio Pro. The app version depends on the version the tool was bundled with. For example, if you are using the mx tool for Studio Pro version 8.1.0.58215,  `mx create project` will create a new app in that version. 
 

@@ -40,7 +40,7 @@ The `OPTIONS` are described in the table below:
 | `--help` | `-h` | Displays the help text and exits. |
 | `--warnings` | `-w` | Include warnings in the output |
 | `--deprecations` | `-d` | Include deprecations in the output |
-| `--performance` | `-p` | Include performance checks in the output (performance recommendations are only output if there are no errors) |
+| `--performance` | `-p` | [version 9.16+] Include performance checks in the output (performance recommendations are only output if there are no errors) |
 
 {{% alert color="info" %}}
 Errors in the MPR are always reported.
@@ -58,7 +58,7 @@ Examples of commands are described in the table below:
 | `mx check C:\MxProjects\App-main\App-main.mpr` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors. |
 | `mx check C:\MxProjects\App-main\App-main.mpr -p` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors and performance recommendations. |
 | `mx check C:\MxProjects\App-main\App-main.mpr --warnings --deprecations` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors, warnings, and deprecations. |
-| `mx check C:\MxProjects\App-main\App-main.mpr -w -d -p` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors, warnings, deprecations, and performance recommendations. |
+| `mx check C:\MxProjects\App-main\App-main.mpr -w -d -p` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors, warnings, deprecations and performance recommendations. |
 
 #### 3.1.3 Return Codes
 

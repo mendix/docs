@@ -74,7 +74,7 @@ If you have made any changes directly to your iOS or Android app, you will have 
 
 * The initial release of your app
 * A Studio Pro version upgrade that requires a new [Native Template](/refguide/native-template/) version
-* You fundamentally changed your app's functionality (this is an Apple App Store limitation, and will require a re-release and re-review of your app by Apple — your app might be removed if you do not comply)
+* You fundamentally changed your app's functionality (this is an Apple App Store limitation, and will require a re-release and re-review of your app by Apple—your app might be removed if you do not comply)
 * A new native module has been added (such as the [Native Mobile AR](https://marketplace.mendix.com/link/component/117209) module — for more information see [Modules](/refguide/modules/)
 * The app has been renamed
 * The app's launcher icons have been changed
@@ -85,10 +85,10 @@ If you have made any changes directly to your iOS or Android app, you will have 
 By default OTA updates are disabled for your Native Mobile Profile. To enable them, do the following: 
 
 1. Open your app in Studio Pro v9.7 or above.
-1. Navigate to the Native Mobile Profile
-1.  Select **Enable over-the-air updates**: 
+1. Navigate to the Native Mobile Profile.
+1. Select **Enable over-the-air updates**: 
 
-  {{< figure src="/attachments/howto/mobile/native-mobile/distribution/how-to-ota/ota-profile-screen.png" alt="Startup option ota checkbox"   width="350"  >}}
+  {{< figure src="/attachments/howto/mobile/native-mobile/distribution/how-to-ota/ota-profile-screen.png" alt="Startup option ota checkbox"   width="400"  >}}
 
 1. Deploy your app to the cloud.
 

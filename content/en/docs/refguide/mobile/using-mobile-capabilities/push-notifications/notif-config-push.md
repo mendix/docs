@@ -22,7 +22,7 @@ If you have completed [Add Module Dependencies](/refguide/mobile/using-mobile-ca
 
 The first time you open this page it will present you with a wizard to set up the Firebase configuration. If you have not set up Firebase yet, see [Set Up the Google Firebase Cloud Messaging Server](/refguide/mobile/using-mobile-capabilities/push-notifications/setting-up-google-firebase-cloud-messaging-server/). 
 
-{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-config-push/push-setup-wizard.png" alt="test entity"   width="350"  >}}
+{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-config-push/push-setup-wizard.png" alt="test entity"   width="400"  >}}
 
 When selecting a platform to support, the wizard will ask for the Google Firebase project ID and service account private key. Upload the private key file here.
 

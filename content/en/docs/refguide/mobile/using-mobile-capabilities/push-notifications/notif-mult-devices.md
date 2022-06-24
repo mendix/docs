@@ -34,12 +34,12 @@ What if you want to send messages to all your users' devices with a single butto
 
 Create a microflow *ACT_SendProductToAllDevices* with the following elements:
 
-{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/SendProductToAll.png" alt="SendProductToAll"   width="300"  >}}
+{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/SendProductToAll.png" alt="SendProductToAll"    width="400"  >}}
 
 1. Add a *Product* data parameter to your microflow.
 2. Retrieve the *PushNotifications.Device* entity list from a database:
 
-	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/retrieveDevices.png" alt="retrieveDevices"   width="300"  >}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/retrieveDevices.png" alt="retrieveDevices"    width="400"  >}}
     
 3. Drag and drop the **PrepareMessageData** microflow from *PushNotifications/_USE ME/API* onto **ACT_SendProductToAllDevices** and configure the following:<br />
 	a. Title: *myTitle*.<br />
@@ -49,7 +49,7 @@ Create a microflow *ACT_SendProductToAllDevices* with the following elements:
 	e. ActionName: *sendProduct*.<br />
 	f. ContextObjectGuid: *empty*:
 	
-	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/prepareMessageData.png" alt="prepareMessageData"   width="300"  >}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/prepareMessageData.png" alt="prepareMessageData"    width="400"  >}}
 
 	**ContextObjectGuid** is set to empty since you will pass the object itself to the **SendMessageToDevices** Java action where it will be retrieved automatically. 
 
@@ -58,11 +58,11 @@ Create a microflow *ACT_SendProductToAllDevices* with the following elements:
 	b. **Device param**: **$Devices**.<br />
 	c. **Context object**: **$Product**:
 	
-	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/sendMessagesJava.png" alt="sendMessagesJava"   width="300"  >}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/sendMessagesJava.png" alt="sendMessagesJava"    width="400"  >}}
   
 5. Go to **Product_NewEdit** and drag and drop **ACT_SendProductToAllDevices** inside of that page's data view:
 
-	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/sendProductToAllButton.png" alt="sendProductToAllButton"   width="300"  >}}
+	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/sendProductToAllButton.png" alt="sendProductToAllButton"    width="400"  >}}
 
 ### 3.2 Testing the Implementation
 

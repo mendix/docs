@@ -152,8 +152,8 @@ Examples of commands are described in the table below:
 | Example | Result |
 | --- | --- |
 | `mx create-project` | Creates an app in the current folder using all the default parameters. |
-| `mx create-project --app-name "MyFirstApp" --output-dir "C:/Projects/MyFirstApp"` | Creates an app named `MyFirstApp` in the *C:/Projects/MyFirstApp* folder using all the default parameters. |
-| `mx create-project "C:/Templates/ExpenseReportTemplate.mpk"` | Creates an app with the default parameters from a template located at *C:/Templates/ExpenseReportTemplate.mpk*. |
+| `mx create-project --app-name MyFirstApp --output-dir C:\Projects\MyFirstApp` | Creates an app named `MyFirstApp` in the *C:\Projects\MyFirstApp* folder using all the default parameters. |
+| `mx create-project C:\Templates\ExpenseReportTemplate.mpk` | Creates an app with the default parameters from a template located at *C:\Templates\ExpenseReportTemplate.mpk*. |
 
 #### 3.3.3 Return Codes
 

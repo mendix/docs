@@ -28,7 +28,7 @@ The initial app *.mpk* file that is uploaded is not allowed to exceed 250Mb (wit
 The maximum number of files allowed in a working copy is 10,000.
 
 ### 1.6 What Apps Can I Access With the Model API?
-You can access all apps stored on [Mendix Team Server](/developerportal/collaborate/team-server/).
+You can access all apps stored on [Mendix Team Server](/developerportal/collaborate/team-server/). Apps stored elsewhere, for example in your on-premises Git server, cannot be accessed with the model API.
 
 ### 1.7 Which Parts of the Mendix App Model Can I Access with the Model API?
 

@@ -74,7 +74,7 @@ For example:
 - 3 if errors and warnings found
 - 7 if errors, warnings, and deprecations found
 
-### 3.2 mx convert Command [version 9+]
+### 3.2 mx convert Command
 
 The `mx convert` command converts the app(s) MPK file(s) to a specific Studio Pro version. For example, if you are using the mx command-line tool for Mendix version 9.12.2.44241, then `mx convert` will convert the app to that version. 
 
@@ -126,7 +126,7 @@ Return codes are described in the table below:
 | 2 | There is something wrong with the command-line options. |
 | 3 | Converting failed. |
 
-### 3.3 mx create-project Command [version 9+]
+### 3.3 mx create-project Command
 
 The `mx create-project` command creates a new app in the Studio Pro. The app version depends on the version the tool was bundled with. For example, if you are using the mx tool for Studio Pro version 8.1.0.58215,  `mx create project` will create a new app in that version. 
 
@@ -140,7 +140,7 @@ The `OPTIONS` are described in the table below:
 | --- | --- | --- |
 | `app-name` | App | Assigns the specified app name to the app. |
 | `output-dir` | Current directory | The directory in which to create the app. |
-| `language-code` | Optional | The default language of the app. | 
+| `language-code` | en_US | The default language of the app. | 
 | `sprintr-app-id` | Optional | Associates the app [feedback features](/developerportal/collaborate/feedback/) with the provided [Developer Portal app](/developerportal/#my-apps). The value is a GUID. When accessing the app portal (on sprintr or on Team Server) it can be seen in the browser's URL - for example `1a428ea7-b00e-4166-9b23-20b7be88a40e`. |
 
 `TEMPLATE-MPK-FILE` is an optional path to a Mendix app package (*.mpk*) file. If this argument is omitted, the app is created with a default empty project template.

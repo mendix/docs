@@ -1,5 +1,5 @@
 ---
-title: "Create An AR Business Card"
+title: "Create an AR Business Card"
 url: /howto/mobile/how-to-ar-business-card/
 parent: "ar-parent"
 weight: 10
@@ -54,14 +54,12 @@ Next you will add a virtual image of your business card to overlap the physical 
 1. Double click the **Square (AR)** widget.
 1. Select the **Material** tab.
 1. Select **Material type** > **Texture**.
-1. Select the image of your business card for the **Texture**. This should be the same image as you selected for your
-   **Image Tracker (AR)**. When finished your dialog box will look like this:
+1. Select the image of your business card for the **Texture**. This should be the same image as you selected for your **Image Tracker (AR)**. When finished your dialog box will look like this:
 
-{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-business-card/square-material-dialogue.png" alt="Square dialog"   width="300"  >}}
+   {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-business-card/square-material-dialogue.png" alt="Square dialog"   width="300"  >}}
 
-5. Go back to the **General** tab and fill out the size of your business card. The important sizes are X for the width of
-   your business card and Y for the height.
-6. Set **Rotation > X** to *-90* to ensure the virtual image is rotated correctly.
+1. Go back to the **General** tab and fill out the size of your business card. The important sizes are X for the width of your business card and Y for the height.
+1. Set **Rotation > X** to *-90* to ensure the virtual image is rotated correctly.
 
 Once this is all set up, run the app and check if it works in the Make It Native app. Here you should see the
 virtual business card overlaying your physical card:

@@ -27,7 +27,7 @@ Before starting this guide, make sure you have completed the following prerequis
 
 * Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
 * Install the [Make It Native](/refguide/getting-the-make-it-native-app/) app on your mobile device
-* Complete the preceding tutorials in this [Use Local Notifications](/howto/mobile/local-notif-parent/) series
+* Complete the preceding tutorials in this [Use Local Notifications](/refguide/mobile/using-mobile-capabilities/local-notifications/) series
 
 ## 3 Sending Data to Pages
 
@@ -248,7 +248,7 @@ Great job! Now you will test your data notification functionality.
 2. Tap the button which sends a notification.
 3. Tap the notification to navigate to the **DetailTestEntity** page with the proper object.
 
-Congratulations! You have harnessed the power of data to enhance your push notifications. Next, in [How to Use Local Notifications Part 5: Scheduling](/howto/mobile/local-notif-schedule-cancel/), you will learn how to schedule notifications for specific times and cancel them.
+Congratulations! You have harnessed the power of data to enhance your push notifications. Next, in [How to Use Local Notifications Part 5: Scheduling](/refguide/mobile/using-mobile-capabilities/local-notifications/local-notif-schedule-cancel/), you will learn how to schedule notifications for specific times and cancel them.
 
 ## 4 Read More
 

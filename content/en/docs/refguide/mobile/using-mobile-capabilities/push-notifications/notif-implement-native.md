@@ -53,4 +53,4 @@ To ensure push notification integration executes properly on your native app you
 
 This will ensure that the correct objects are synchronized to your native apps.
 
-Now that you have everything set up, it is time to deploy your native app. See [Build a Native Mobile App with Push Notifications](/howto/mobile/notif-build-native/) for instructions on enabling push notifications when building a native app. 
+Now that you have everything set up, it is time to deploy your native app. See [Build a Native Mobile App with Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-build-native/) for instructions on enabling push notifications when building a native app. 

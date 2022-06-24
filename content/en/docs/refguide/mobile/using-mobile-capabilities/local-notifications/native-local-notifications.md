@@ -23,7 +23,7 @@ Before starting this guide, make sure you have completed the following prerequis
 * Install the [Make It Native](/refguide/getting-the-make-it-native-app/) app on your mobile device
 
 {{% alert color="info" %}}
-To use push notifications with apps created with the Native Builder, make sure you have completed [How To Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app/) and the guides described in [Use Notifications](/howto/mobile/notifications/)
+To use push notifications with apps created with the Native Builder, make sure you have completed [How To Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app/) and the guides described in [Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/)
 {{% /alert %}}
 
 ## 3 Creating an App and Configuring Notifications
@@ -177,7 +177,7 @@ Now you can run your app and see if your notification works.
 
 	If you did not see a notification, try clicking **Run Locally** to reload your app. Then, tap the **Send Notification** button again.
 
-Congratulations! You can now see local notifications on your device. Next, in [How to Use Local Notifications Part 2: Badges](/howto/mobile/local-notif-badges/), you will learn how to configure notification badges.
+Congratulations! You can now see local notifications on your device. Next, in [How to Use Local Notifications Part 2: Badges](/refguide/mobile/using-mobile-capabilities/local-notifications/local-notif-badges/), you will learn how to configure notification badges.
 
 ## 4 Read More
 

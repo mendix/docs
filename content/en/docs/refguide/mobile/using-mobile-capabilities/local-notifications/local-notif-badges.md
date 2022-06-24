@@ -21,7 +21,7 @@ Before starting this guide, make sure you have completed the following prerequis
 
 * Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
 * Install the [Make It Native](/refguide/getting-the-make-it-native-app/) app on your mobile device
-* Complete the preceding tutorial in this [Use Local Notifications](/howto/mobile/local-notif-parent/) series
+* Complete the preceding tutorial in this [Use Local Notifications](/refguide/mobile/using-mobile-capabilities/local-notifications/) series
 
 ## 3 Setting a Badge Number
 
@@ -104,7 +104,7 @@ You can now test your badge clearing.
 
 5. Check your Studio Pro **Console** to read the **Your notification has been cleared** text you set up.
 
-Congratulations! You successfully implemented basic badge clearing. Next, in [How to Use Local Notifications Part 3: Actions](/howto/mobile/local-notif-action/), you will learn how to configure a notification so that when a user taps a notification, they are brought to a page.
+Congratulations! You successfully implemented basic badge clearing. Next, in [How to Use Local Notifications Part 3: Actions](/refguide/mobile/using-mobile-capabilities/local-notifications/local-notif-action/), you will learn how to configure a notification so that when a user taps a notification, they are brought to a page.
 
 ## 5 Read More
 

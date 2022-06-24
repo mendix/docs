@@ -20,7 +20,7 @@ Before starting this guide, make sure you have completed the following prerequis
 
 * Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
 * Install the [Make It Native](/refguide/getting-the-make-it-native-app/) app on your mobile device
-* Complete the preceding tutorials in this [Use Local Notifications](/howto/mobile/local-notif-parent/) series
+* Complete the preceding tutorials in this [Use Local Notifications](/refguide/mobile/using-mobile-capabilities/local-notifications/) series
 
 ## 3 Setting an Action for When a Notification is Tapped
 
@@ -73,7 +73,7 @@ Great job setting up your notification. Now you can test it:
 4. Tap the notification to navigate to the page you selected.
 5. Tap the **Return to home page** button to navigate back to your home page.
 
-Now you can show pages after notifications are tapped. Next, in [Use Local Notifications Part 4: Data](/howto/mobile/local-notif-data/), you will learn to pass data to such pages.
+Now you can show pages after notifications are tapped. Next, in [Use Local Notifications Part 4: Data](/refguide/mobile/using-mobile-capabilities/local-notifications/local-notif-data/), you will learn to pass data to such pages.
 
 ## 4 Read More
 

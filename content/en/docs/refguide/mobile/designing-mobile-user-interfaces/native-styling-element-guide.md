@@ -1759,5 +1759,5 @@ The default class to style all column chart widgets is named `com_mendix_widget_
 
 ## 12 Read More
 
-* [How to Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling/)
+* [Native Styling](/refguide/mobile/designing-mobile-user-interfaces/native-styling/)
 * [Design Properties Documentation](/apidocs-mxsdk/apidocs/design-properties/)

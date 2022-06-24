@@ -134,5 +134,4 @@ Now the upload speed becomes faster! For more information, see [Parallels Forum]
 
 ## 8 Read More
 
-* [Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile/)
-* [Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling/)
+* [Getting Started with Mobile](/refguide/mobile/getting-started-with-mobile/)

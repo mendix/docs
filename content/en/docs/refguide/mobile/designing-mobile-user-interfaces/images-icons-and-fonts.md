@@ -235,7 +235,7 @@ To use the new fonts to style your content, follow these instructions:
 
 	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-custom-fonts/advanced-fonts4.png" alt="Custom fonts screen code snippet"   width="400"  >}}
 
-1.  Open your styles *js* file and paste the snippet there. For this example, the *custom-variables.js* file is being used. For more information on styling your app, see [How to Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling/):
+1.  Open your styles *js* file and paste the snippet there. For this example, the *custom-variables.js* file is being used. For more information on styling your app, see [Native Styling](/refguide/mobile/designing-mobile-user-interfaces/native-styling/):
 
 	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-custom-fonts/custom-variables.png" alt="Custom variables file"   width="400"  >}}
 

@@ -129,7 +129,7 @@ The input parameters for receiving email are the following:
 * **onEmailFetchMicroflow** – a microflow that will be triggered when **List of EmailMessage** is fetched from the email server per the batch size configured in the email account
     * You can process the list according to what you need. 
     * Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. 
-    * Refer to the sample microflow, **Sample_OCH_EmailFetchMicroflow**.
+    * Refer to the sample microflow **OCH_EmailFetchMicroflow**.
 
 {{% alert color="warning" %}}
 When duplicating this microflow, do not change input parameters’ name and data type.
@@ -186,7 +186,7 @@ When modeling your app in Studio Pro, call the **SubscribeToIncomingEmail** Java
 The input parameters are the following:
 
 * **Email account** – email account consisting of incoming email configuration
-* **onNewEmailReceivedMicroflow** – a microflow that will be triggered when new email (List) is received from the server. You can process the list per your need. Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. Refer to the sample microflow **Sample_OCH_EmailFetchMicroflow**.
+* **onNewEmailReceivedMicroflow** – a microflow that will be triggered when new email (List) is received from the server. You can process the list per your need. Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. Refer to the sample microflow **OCH_EmailFetchMicroflow*.
 
 {{% alert color="warning" %}}
 When duplicating this microflow, do not change the input parameter name and data type.
@@ -196,7 +196,7 @@ When duplicating this microflow, do not change the input parameter name and data
      * `SUBSCRIPTIONFAILED`
      * `CONNECTIONTOSERVERLOST`
      * `CONNECTIONRETRYEXHAUSTED`
-     Make sure that microflow is accepting the string parameters `State` and `Comment`. Refer sample microflow `Sample_OCH_SubscriptionStateChanged`,
+     Make sure that microflow is accepting the string parameters `State` and `Comment`. Refer sample microflow `OCH_SubscriptionStateChanged`,
      {{% alert color="warning" %}}
      When duplicating this microflow, do not change input parameters’ name and data type.
     {{% /alert %}}
@@ -227,5 +227,6 @@ If you do not encrypt the password, all functions will still work as expected.
 
 ## 5 Key Microflows
 
+* **Sample_ASU_SubscribeForEmailNotification** - a after startup microflow which will subscribe to email notification based on account settings
 * **Sample_ACT_SendEmailWithTemplate** – a microflow that helps you set up send email using the template
-* **SCE_Cleanup** – found in the **USE_ME** folder, this microflow can be added to a schedule event and deletes email sent logs and sent emails of the past 30 days
+* **SE_Cleanup** – found in the **USE_ME** folder, this microflow can be added to a schedule event and deletes email sent logs and sent emails of the past 30 days

@@ -354,7 +354,7 @@ This information can be an aid in figuring out which objects cause a lot of memo
 
 The server statistics monitor action gives information about the embedded Jetty web server. The "jetty" section lists the number of current open connections and the maximum number of open connections. In addition, it lists the maximum idle time of the connection before it is closed, if Jetty is running under normal circumstances.
 
-The "threadpool" section gives information about the threadpool of the handler which processes all requests which go through the runtime port. See the [Jetty QueuedThreadPool documentation](https://www.eclipse.org/jetty/javadoc/9.4.11.v20180605/org/eclipse/jetty/util/thread/QueuedThreadPool.html) for more information.
+The "threadpool" section gives information about the threadpool of the handler which processes all requests which go through the runtime port. See the [Jetty QueuedThreadPool documentation](https://www.eclipse.org/jetty/javadoc/jetty-10/org/eclipse/jetty/util/thread/QueuedThreadPool.html) for more information.
 
 ## 6 Logged-In Users
 

@@ -45,12 +45,13 @@ For more information on design and styling, see [Designing Mobile User Interface
 
 Building apps with Mendix gives you access to several mobile capabilities:
 
-* [Local Push Notifications](/refguide/mobile/using-mobile-capabilities/local-notifications/): these allow you to schedule and send notifications confined to one mobile device
-* [Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/): sometimes referred to as "remote" notifications, push notifications allow you to send notifications to multiple devices
-* [Augmented Reality](/refguide/mobile/using-mobile-capabilities/augmented-reality/): add virtual objects to the real world through the mobile phone camera view, then allow users to interact with them
-* [Offline-First Data](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/): consult our guides and best practices to make offline-first apps which work regardless of internet connection 
-* [Locations & Maps](/refguide/mobile/using-mobile-capabilities/location-&-maps/): use the Maps module to include map capabilities in your native mobile apps
-* [Deep Links](/refguide/mobile/using-mobile-capabilities/deep-links/): learn how to make a tailored URL that can open an app and pass additional data
+* [Offline-First Data](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/): native and progressive web apps use an offline database and a synchronization mechanism to replicate data on the client for efficient access and offline capabilities
+* [Deep Links](/refguide/mobile/using-mobile-capabilities/deep-links/): native apps can define a custom URL scheme (for instance, `my-app://`) that allows other apps to access pages and functionalities of the app
+* [Location & Maps](/refguide/mobile/using-mobile-capabilities/location-&-maps/): native apps can access the user location and display native maps inside the application
+* [Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/): native apps can present a notification to the user that is triggered by the runtime even if the app is not running
+* [Local Notifications](/refguide/mobile/using-mobile-capabilities/location-&-maps/): in addition to push notifications, native apps can schedule notifications to be shown at a specific time even if the app is not running
+* [Augmented Reality](/refguide/mobile/using-mobile-capabilities/augmented-reality/): native apps can render 3D objects in the physical environments via the camera stream of a mobile device
+* [Content Security Policy](/refguide/mobile/using-mobile-capabilities/csp/): by employing a content security policy (CSP) in your app, you can protect it from malicious content which might try to take advantage of the app's trusted web page context
 
 For more information on empowering your apps, see [Using Mobile Capabilities](/refguide/mobile/using-mobile-capabilities/).
 

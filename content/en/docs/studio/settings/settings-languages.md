@@ -4,7 +4,7 @@ url: /studio/settings-languages/
 category: "Settings"
 description: "Describes language settings."
 weight: 25
-tags: ["studio", "language", "lingual", "app language", "translate"]
+tags: ["studio", "language", "lingual", "app language", "translate", "system texts"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -14,7 +14,7 @@ Delivering your Mendix app in multiple languages is an important capability when
 
 ## 2 App Languages Screen
 
-The **App Languages** screens allows you to [manage languages](#manage-languages) and translate [system texts](##system-texts) – texts that are shown to the end-user by the server or client. 
+The **App Languages** screens allows you to [manage languages](#manage-languages) and translate [system texts](##system-texts) – texts that are shown to the end-user by the server or the client. 
 
 To access the screen, go to **Settings** > **App Languages**.  
 
@@ -38,13 +38,13 @@ To *delete* a language, click the **More** icon next to the language and select 
 
 {{% alert type="info" %}}
 
-Deleting a language from your app deletes all translations you provided on your pages and microflows for that language.
+Deleting a language from your app deletes all translations you provided on your pages and in microflows for that language.
 
 {{% /alert %}}
 
 ### 2.2 System Texts {#system-texts}
 
-System texts are shown to the end-user by the server or client. They are translatable texts but you cannot change them in the page editor or the microflow editor while creating the app. An example of a system text is buttons in the data grid widget. You can change system texts and add translations for them on the **System Texts** tab. 
+System texts are texts that are shown to the end-user by the server or the client. They are translatable but you cannot change them in the page editor or the microflow editor while creating the app. An example of a system text is buttons in a data grid. You can change system texts and add translations for them on the **System Texts** tab: 
 
 {{< figure src="/attachments/studio/settings/settings-languages/system-texts.png" >}}
 

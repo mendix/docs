@@ -126,21 +126,25 @@ To enable Mendix SSO in your app, follow these steps:
 
 1. Import the [Mendix SSO module](https://marketplace.mendix.com/link/component/111349/) from the Mendix Marketplace.
 
-2. Add the microflow **MendixSSO_AfterStartup** to the **After startup** microflow by performing the following steps:
+2. Optionally, import the [Administration module](https://marketplace.mendix.com/link/component/23513) from the Mendix Marketplace.
+
+3. Add the microflow **MendixSSO_AfterStartup** to the **After startup** microflow by performing the following steps:
     1. Open **App Settings** from the **App Explorer**.
     2. Click the **Runtime** tab.
     3. Click **Select…** for the **After startup** microflow.
-    4. Choose the microflow **Marketplace modules** > **MendixSSO** > **MOVE_THIS** > **CustomizableMendixSSOMicroflows** > **MendixSSO_AfterStartup** (you can use the filter to find it quickly) and click **Select**.
+    4. Choose the microflow **Marketplace modules** > **Administration** > **Mendix SSO** >  **MendixSSO_AfterStartup** (you can use the filter to find it quickly) and click **Select**.
         {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/after-startup.png" >}}
     5. Click **OK** to close the **App Settings**.
 
+    {{% alert color="info" %}}If you do not want to use the [Administration module](https://marketplace.mendix.com/link/component/23513), you can use the microflows in **Marketplace modules** > **MendixSSO** > **MOVE_THIS** > **CustomizableMendixSSOMicroflows** instead{{% /alert %}}
+
     {{% alert color="info" %}}If there is already an After startup microflow, you should not replace it, but rather add the MendixSSO_AfterStartup microflow as an action in the existing microflow{{% /alert %}}
 
-3.  Add your own administration pages to monitor usage, if required.
+4.  Add your own administration pages to monitor usage, if required.
 
     {{% alert color="info" %}}If you are using Mendix SSO version 2, you can use the *default* user administration pages, see [Customizing Mendix SSO](#customizing), below, for more information.{{% /alert %}}
 
-4. Turn on **Production** security level and configure **User roles** *User* and *Administrator* to have access to the appropriate **MendixSSO** module roles by performing the following steps:
+5. Turn on **Production** security level and configure **User roles** *User* and *Administrator* to have access to the appropriate **MendixSSO** module roles by performing the following steps:
     1. Open **Project Security** from the **App Explorer**.
     2. Set **Security level** to **Production**.
     3. Switch to the **User roles** tab.
@@ -155,7 +159,7 @@ To enable Mendix SSO in your app, follow these steps:
 
         {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/module-user-roles.png" alt="Confirmation of user roles" >}}
 
-5. Change the page that Mendix uses to log you in (`login.html`) to allow logging in using SSO. To do this, perform the following steps:
+6. Change the page that Mendix uses to log you in (`login.html`) to allow logging in using SSO. To do this, perform the following steps:
 
     1. Go to **App** > **Show App Directory in Explorer** in Studio Pro to open the app directory in your file explorer.
     2. Go to the **theme** folder.

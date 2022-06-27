@@ -23,7 +23,7 @@ The Metrics can be configured in the following ways:
 
 ## 2 Metrics Registries Configuration {#registries-configuration}
 
-Micrometer can send metrics to multiple registries. To configure micrometer for a specific registry, use the following syntax in `runtime settings` with custom runtime setting name as `Metrics.Registries`. See [Runtime Customization](/refguide/custom-settings/#metrics-settings) for more information. The setting is in JSON format.
+Micrometer can send metrics to multiple registries. To configure micrometer for a specific registry, use the following syntax in `runtime settings` with the custom runtime setting name `Metrics.Registries`. See [Runtime Customization](/refguide/custom-settings/#metrics-settings) for more information. The setting is in JSON format.
 
 * Custom Runtime Setting – **Name**: `Metrics.Registries`
 
@@ -45,7 +45,7 @@ Micrometer can send metrics to multiple registries. To configure micrometer for 
 
 The details of each settings are listed below.
 
-* `type` *(mandatory)* – the type of the registry to use. Currently supported types are [`prometheus`](https://prometheus.io/docs/introduction/overview/), [`jmx`](https://www.oracle.com/java/technologies/javase/javamanagement.html), [`influx`](https://www.influxdata.com/), and [`statsd`](https://www.datadoghq.com/dg/monitor/ts/statsd/). Depending on the type of the registry the `settings` may vary.
+* `type` *(mandatory)* – the type of registry to use. Currently supported types are [`prometheus`](https://prometheus.io/docs/introduction/overview/), [`jmx`](https://www.oracle.com/java/technologies/javase/javamanagement.html), [`influx`](https://www.influxdata.com/), and [`statsd`](https://www.datadoghq.com/dg/monitor/ts/statsd/). Depending on the type of the registry the `settings` may vary.
 * `settings` *(conditional mandatory)* – settings for the registry. Each registry has different settings depending upon the **type** specified. Follow the links below to see the settings for each type:
     * [Prometheus](#prometheus)
     * [jmx](#jmx)
@@ -61,10 +61,10 @@ The following settings can be used, depending on the type of metrics being gener
 | --- | --- | --- | --- | --- | --- | --- |
 | `db` | _String_ | No | influx | The db to send metrics to | mydb | customDb, metricDb |
 | `password` | _String_ | Yes | influx | Authenticate requests with this password | - | - |
-| `uri` | _String_ | No | influx | The URI for backend | http://localhost:8086 (for Influx) | - |
+| `uri` | _String_ | No | influx | The URI for the back end | http://localhost:8086 (for Influx) | - |
 | `userName` | _String_ | Yes | influx | Authenticate requests with this user | - | - |
 | `protocol` | _String_ | No | influx | Protocol of the statsd connection | UDP | TCP, UDP |
-| `domain` | _String_ | No | jmx | Jmx domain to publish the metrics | metrics | "Mendix", "Employee" |
+| `domain` | _String_ | No | jmx | Jmx domain to publish the metrics to | metrics | "Mendix", "Employee" |
 | `enabled` | _Boolean_ | No | influx / statsd | Enables / Disables the meter | true | true, false |
 | `flavor` | _StatsdFlavor_ | No | statsd | The variant of the StatsD protocol | DATADOG | ETSY, TELEGRAF, SYSDIG |
 | `host` | _String_ | No | statsd | The host name of the StatsD agent | localhost | - |
@@ -138,7 +138,7 @@ Example 1
 
 #### 2.1.3 Influx{#influx}
 
-* `uri` – the URI for the Influx backend.
+* `uri` – the URI for the Influx back end.
 * `db` – the database name to which to send the metrics.
 * `userName` – the userName for authentication.
 * `password` – the password for authentication.
@@ -228,11 +228,11 @@ Filters are optional, but can help in filtering metrics based on given criteria.
 * `filter-type` – the type of filter to apply. Currently we support the following:
     * `nameStartsWith` – matches the metric if its name begins with the given list-of-filter-values.
 * `filter-result` – the desired result of applying the filter-type to the list-of-filter-values. Supported values are:
-    * `accept` – metrics matching the criteria will be passed to the registry
-    * `deny` – metrics matching the criteria will not be passed to the registry
-* `list-of-filter-values` – a list of values to be used in the given filter type
+    * `accept` – metrics matching the criteria are passed to the registry
+    * `deny` – metrics matching the criteria are not passed to the registry
+* `list-of-filter-values` – a list of values used in the given filter type
 
-#### 2.2.1 Filter Example 1
+Example 1
 
 ```json
 [
@@ -248,7 +248,7 @@ Filters are optional, but can help in filtering metrics based on given criteria.
 
 The above filter accepts metrics which starts with `app.`, `employee.`, or `myapp.`.
 
-#### 2.2.2 Filter Example 2
+Example 2
 
 ```json
 [
@@ -273,9 +273,9 @@ The above filter discards metrics which start with `Unnamed.`, `Invalid.`, or `I
 The following should be taken into account when configuring the metrics registries.
 {{% /alert %}}
 
-1. Filters will also have an effect on internal metrics used by Mendix. For example, metrics emitted by Mendix which start with `mx.`.
+1. Filters also affect internal metrics used by Mendix. For example, metrics emitted by Mendix which start with `mx.`.
 
-2. If you have two metrics with the same name but one has additional tags, these will be considered as different metrics. For example, metrics `app.counter1` with tag `"version" -> "1"` and `app.counter1` with no tag are different.
+2. If you have two metrics with the same name but one has additional tags, these are considered as different metrics. For example, metrics `app.counter1` with tag `"version" -> "1"` and `app.counter1` with no tag are different.
 
 3. Filters are executed on a first come, first served basis. In other words, the first matching filter gets the priority. For example, take the filters defined below:
 
@@ -292,7 +292,7 @@ The following should be taken into account when configuring the metrics registri
     ]
     ```
 
-    This will allow metrics like `app.others.counter` as they pass the first `accept` filter, `nameStartsWith "app."`. However, if you reverse the filters, `app.others.counter` will be denied, while `app.somethingelse.` would still be accepted.
+    This example allows metrics like `app.others.counter` as they pass the first `accept` filter, `nameStartsWith "app."`. However, if you reverse the filters, `app.others.counter` would be denied, while `app.somethingelse.` would still be accepted.
 
     {{% alert color="info" %}}Ensure that more specific filters are defined before less specific ones so that they are applied correctly.{{% /alert %}}
 
@@ -372,7 +372,7 @@ It is recommended to use a common prefix that uniquely defines your organisation
 The following deprecated usages will be removed in the future releases,
 
 1. Setting `com.mendix.metrics.Type` to `logger` and `statsd` is deprecated. You will get a warning message to advise you to start using the `micrometer` metric type.
-2. The [`Core.metrics()` Java Runtime API methods](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/metrics/Metrics.html) `counter()`, `timer()`, `gauges()`, and `sets()` are deprecated
+2. The [`Core.metrics()` Java Runtime API methods](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/metrics/Metrics.html) `counter()`, `timer()`, `gauges()`, and `sets()` are deprecated.
 
 ## 6 Logging {#logging}
 
@@ -382,8 +382,7 @@ Metering-related log messages are sent to the `Metering` log node. If a registry
 
 The Runtime Server produces various metrics. Some of these metrics are controlled by Mendix: these are prefixed with `mx`.
 
-Other metrics are produced by Micrometer, the library that is used for metrics. This library will output metrics for other
-libraries that it recognizes, such as the Jetty server that is embedded in the Runtime Server. These additional Micrometer metrics are not under our control and might change.
+Other metrics are produced by Micrometer, the library that is used for metrics. This library outputs metrics for other libraries that it recognizes, such as the Jetty server that is embedded in the Runtime Server. These additional Micrometer metrics are not under our control and might change.
 
 ### 7.1 Runtime Server Metrics
 
@@ -391,8 +390,8 @@ The Runtime Server produces the following metrics out-of-the-box:
 
 | Name | Type | Tags | Description |
 | --- | --- | --- | --- |
-| **mx.<wbr>runtime.<wbr>stats.<wbr>handler_requests** | counter | `XASId`, `name` | The total number of requests on a request handler (`name`) that was received by a node (`XASId`) since it was started. |
-| **mx.<wbr>runtime.<wbr>stats.<wbr>requests{path}** | counter | | The total number of requests on a request handler (`path`) that was received by a node;<br/>*deprecated, use `mx.runtime.stats.handler_requests` instead*. |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>handler_requests** | counter | `XASId`, `name` | The total number of requests on a request handler (`name`) that were received by a node (`XASId`) since it was started. |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>requests{path}** | counter | | The total number of requests on a request handler (`path`) that were received by a node;<br/>*deprecated, use `mx.runtime.stats.handler_requests` instead*. |
 | **mx.<wbr>runtime.<wbr>stats.<wbr>sessions.<wbr>named_users** | gauge | | The current number of active, named users in the database. |
 | **mx.<wbr>runtime.<wbr>stats.<wbr>sessions.<wbr>named_user_sessions** | gauge | | The current number of sessions in the database for named users. |
 | **mx.<wbr>runtime.<wbr>stats.<wbr>sessions.<wbr>anonymous_sessions** | gauge | | The current number of sessions in the database for anonymous users. |
@@ -411,7 +410,7 @@ The Runtime Server produces the following metrics out-of-the-box:
 | **mx.<wbr>odata.<wbr>retrieve** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were retrieved from an [OData service](/refguide/consumed-odata-service/). (introduced in Studio Pro 9.12) |
 
 {{% alert color="info" %}}
-Note that the actual name may vary slightly depending on the back-end (for example, Prometheus replaces dots by underscores).
+Note that the actual name may vary slightly depending on the back end (for example, Prometheus replaces dots by underscores).
 Additionally, a suffix may be added for the unit of the metric (for example, `_bytes`).
 {{% /alert %}}
 

@@ -253,9 +253,9 @@ The settings below configure metrics through [micrometer](https://micrometer.io/
 
 | Name | Description | Default Value |
 | --- | --- | --- |
+| **com.mendix.metrics.Type** | Enable access to Micrometer metrics through Java APIs | micrometer |
 | **Metrics.Registries** | Registries to send metrics to |   |
 | **Metrics.ApplicationTags** | Common tags used for every meter |   |
-| **com.mendix.metrics.Type** | Enable access to Micrometer metrics through Java APIs | micrometer |
 
 ## 11 Proxy Settings
 

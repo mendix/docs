@@ -1,5 +1,5 @@
 ---
-title: "Overview of all AR Widgets"
+title: "AR Widget Overview"
 url: /refguide/mobile/using-mobile-capabilities/augmented-reality/ar-widgets/
 parent: /refguide/mobile/using-mobile-capabilities/augmented-reality/
 weight: 30

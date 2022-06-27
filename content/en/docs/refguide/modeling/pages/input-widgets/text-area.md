@@ -61,10 +61,6 @@ The on change property specifies an action that will be executed when leaving th
 
 #### 2.5.2 On Change Behavior
 
-{{% alert type="info" %}}
-Will be available in Studio Pro 9.14.
-{{% /alert %}}
-
 The on change behavior property lets users select how **on change** is handled in Studio Pro via the following options: 
 
 * **When user leaves input field (Default)**

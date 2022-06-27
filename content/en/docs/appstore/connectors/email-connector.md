@@ -154,6 +154,8 @@ The input parameters are the following:
 * **Email template** – email template from which email message object is created and sent
 * **Queued** – when *true*, email message will be stored in the **EmailMessage** entity with status as **QUEUED** queued and user can sent it later using scheduled event or future. You can use microflow **SE_SendQueuedEmails** to create scheduled events.
 
+You can refer to sample microflow **Sample_ACT_SendEmailWithTemplate**
+
 ### 4.4 Signed and Encrypted Emails
 
 You can choose to configure a digital signature and email encryption when the module is running.

@@ -126,7 +126,7 @@ To enable Mendix SSO in your app, follow these steps:
 
 1. Import the [Mendix SSO module](https://marketplace.mendix.com/link/component/111349/) from the Mendix Marketplace.
 
-2. Optionally, import the [Administration module](https://marketplace.mendix.com/link/component/23513) from the Mendix Marketplace.
+2. Optionally, import the [Administration module](https://marketplace.mendix.com/link/component/23513) from the Mendix Marketplace (recommended).
 
 3. Add the microflow **MendixSSO_AfterStartup** to the **After startup** microflow by performing the following steps:
     1. Open **App Settings** from the **App Explorer**.

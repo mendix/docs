@@ -34,8 +34,7 @@ The Email Connector includes the following features:
 
 Before you use the Email Connector, do the following:
 
-1. Download and configure the [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module from the Mendix Marketplace.
-2. Following the steps in the [Configuration](/appstore/modules/model-reflection/#configuration) section of the *Mx Model Reflection* page.
+1. Download and [configure](/appstore/modules/model-reflection/#configuration) the [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module from the Mendix Marketplace
 
 {{% alert color="warning" %}}
 Certain functionalities of the Email Connector will not work correctly if the **Mx Model Reflection** module is not configured.
@@ -154,7 +153,7 @@ The input parameters are the following:
 * **Email template** – email template from which email message object is created and sent
 * **Queued** – when *true*, email message will be stored in the **EmailMessage** entity with status as **QUEUED** queued and user can sent it later using scheduled event or future. You can use microflow **SE_SendQueuedEmails** to create scheduled events.
 
-You can refer to sample microflow **Sample_ACT_SendEmailWithTemplate**
+You can refer to sample microflow **Sample_ACT_SendEmailWithTemplate**.
 
 ### 4.4 Signed and Encrypted Emails
 
@@ -231,5 +230,5 @@ If you do not encrypt the password, all functions will still work as expected.
 
 * **Sample_ASU_SubscribeForEmailNotification** - a after startup microflow which will subscribe to email notification based on account settings
 * **Sample_ACT_SendEmailWithTemplate** – a microflow that helps you set up send email using the template
-* **SE_Cleanup** – This microflow can be added to a schedule event and deletes email sent logs and sent emails of the past 30 days. The **EmailLogRetention** constant defines the amount of days to preserve messages.
-* **SE_SendQueuedEmails** - This microflow can be added to a schedule event which will send emails which are marked as **QueuedForSending**.
+* **SE_Cleanup** – a microflow that can be added to a schedule event and deletes email sent logs and sent emails of the past 30 days. The **EmailLogRetention** constant defines the amount of days to preserve messages.
+* **SE_SendQueuedEmails** - a microflow can be added to a schedule event which will send emails which are marked as **QueuedForSending**

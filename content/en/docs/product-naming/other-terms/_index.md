@@ -107,7 +107,7 @@ Capitalize in all instances.
 
 ### Custom Developer App
 
-For a definition of this term, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps/).
+For a definition of this term, see [Create a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/).
 
 {{% alert color="info" %}}
 Do not capitalize.

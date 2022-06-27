@@ -17,7 +17,7 @@ The **Synchronize** activity can be used to synchronize your data between your d
 
 ## 2 Synchronization Modes
 
-All three modes perform synchronization in two phases: upload and download. For more information, see the [Synchronization Behavior](#synchronization-behavior) section below and the [Synchronization types](/refguide/offline-first/#synchronization-types) section of the Offline-first Reference Guide.
+All three modes perform synchronization in two phases: upload and download. For more information, see the [Synchronization Behavior](#synchronization-behavior) section below and the [Synchronization types](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/) section of *Offline Synchronization*.
 
 ### 2.1 All Objects
 
@@ -25,7 +25,7 @@ All three modes perform synchronization in two phases: upload and download. For 
 
 The **All objects** mode synchronizes the entire local database. The server database is updated with the changes from the local database. The local database is updated with the latest data from the server, including the file contents.
 
-The behavior of this mode can be configured through [synchronization configuration](/refguide/offline-first/#customizable-synchronization).
+The behavior of this mode can be configured through [synchronization configuration](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/#customizable-synchronization).
 
 ### 2.2 Unsynchronized Objects {#unsynchronized-objects}
 
@@ -48,7 +48,7 @@ Using this mode, only the selected objects or lists are synchronized. Deleted ob
 This section describes the behavior for the [Unsynchronized objects](#unsynchronized-objects) and [Selected object(s)](#selected-objects) modes.
 
 {{% alert color="warning" %}}
-The settings in [synchronization configuration](/refguide/offline-first/#customizable-synchronization) are not applied for the **Unsynchronized objects** and **Selected object(s)** modes.
+The settings in [synchronization configuration](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/#customizable-synchronization) are not applied for the **Unsynchronized objects** and **Selected object(s)** modes.
 {{% /alert %}}
 
 In the **Selected object(s)** mode, if the set of objects selected for synchronization contains any objects that have not been committed yet, those objects will be skipped and thus not synchronized.
@@ -90,4 +90,4 @@ Such an error can be handled in the nanoflow from which the synchronization atte
 ## 8 Read More
 
 * [Activities](/refguide/activities/)
-* [Offline-first](/refguide/offline-first/)
+* [Offline Synchronization](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/)

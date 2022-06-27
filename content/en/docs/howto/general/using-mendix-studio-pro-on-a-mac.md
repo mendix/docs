@@ -106,12 +106,12 @@ Instead, you must enter your Mac's IP address into your Make It Native app. To r
 Congratulations! You have successfully viewed your app on a test device.
 
 {{% alert color="info" %}}
-If you experience issues connecting with the Make It Native app, make sure your firewall is not preventing a connection. For information resolving Windows Defender and other firewall-related issues, see the [Error: Unable to Load Script](/howto/mobile/common-issues/#unable-load-script) section of *Troubleshoot Common Native Mobile Issues*
+If you experience issues connecting with the Make It Native app, make sure your firewall is not preventing a connection. For information resolving Windows Defender and other firewall-related issues, see the [Error: Unable to Load Script](/refguide/mobile/getting-started-with-mobile/prerequisites/#unable-load-script) section of *Prerequisites*
 {{% /alert %}}
 
 ## 6 Viewing Changes to Your App on Your Testing Device
 
-For information on how to change to your app and then see that change on your device, see the [Viewing Changes to Your App on Your Testing Device](/howto/mobile/getting-started-with-native-mobile/#viewingchanges) section in *Get Started with Native Mobile*.
+For information on how to change to your app and then see that change on your device, see the [Viewing Changes to Your App on Your Testing Device](/refguide/mobile/getting-started-with-mobile/#viewingchanges) section in *Getting Started with Mobile*.
 
 ## 7 Improving Performance
 
@@ -134,5 +134,4 @@ Now the upload speed becomes faster! For more information, see [Parallels Forum]
 
 ## 8 Read More
 
-* [Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile/)
-* [Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling/)
+* [Getting Started with Mobile](/refguide/mobile/getting-started-with-mobile/)

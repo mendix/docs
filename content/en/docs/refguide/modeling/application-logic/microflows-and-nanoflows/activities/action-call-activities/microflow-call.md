@@ -61,7 +61,7 @@ The **Edit parameter value** button allows you to edit the argument value. For e
   * Primitive types (strings, numbers, etc.) are passed as values (meaning, they are immutable, and not changeable via sub-microflows)
 
 {{% alert color="warning" %}}
-When used inside a nanoflow in an offline profile, only primitives and non-persistable entities that have no associations with persistable entities are allowed as arguments for the call. For more information, see the [Microflows](/refguide/offline-first/#microflows) section of the *Offline-First Reference Guide*.
+When used inside a nanoflow in an offline profile, only primitives and non-persistable entities that have no associations with persistable entities are allowed as arguments for the call. For more information, see the [Microflows](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/#microflows) section of *Offline Best Practices*.
 {{% /alert %}}
 
 ### 3.3 Task Queue
@@ -92,7 +92,8 @@ The name of the variable, list, or object returned by the activity.
 
 ## 4 Microflow Calls in Offline-First Apps
 
-It is possible to perform a microflow call from an offline-first app. However, it works a bit differently than in online applications. For more information on the differences, see the [Microflows](/refguide/offline-first/#microflows) section of the *Offline-First Reference Guide*. 
+It is possible to perform a microflow call from an offline-first app. However, it works a bit differently than in online applications. For more information, see the [Microflows](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/#microflows) section of *Offline Best Practices*
+
 
 ## 5 Common Section {#common}
 

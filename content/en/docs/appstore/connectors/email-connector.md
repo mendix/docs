@@ -231,4 +231,5 @@ If you do not encrypt the password, all functions will still work as expected.
 
 * **Sample_ASU_SubscribeForEmailNotification** - a after startup microflow which will subscribe to email notification based on account settings
 * **Sample_ACT_SendEmailWithTemplate** – a microflow that helps you set up send email using the template
-* **SE_Cleanup** – found in the **USE_ME** folder, this microflow can be added to a schedule event and deletes email sent logs and sent emails of the past 30 days
+* **SE_Cleanup** – This microflow can be added to a schedule event and deletes email sent logs and sent emails of the past 30 days. The **EmailLogRetention** constant defines the amount of days to preserve messages.
+* **SE_SendQueuedEmails** - This microflow can be added to a schedule event which will send emails which are marked as **QueuedForSending**.

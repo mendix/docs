@@ -247,12 +247,13 @@ The settings below influence the behavior of the Mendix web client.
 | **com.<wbr>mendix.<wbr>webui.<wbr>StateSizeWarningThreshold** | A warning is logged when the state size exceeds the threshold. The state consists of changes in objects and of objects not committed to the database (yet). If there is too much state, this will have performance implications, as the whole state has to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 100 |
 | **com.<wbr>mendix.<wbr>webui.<wbr>CommittedObjectsThreshold** | The threshold controls how much data is sent back to the client after executing a microflow. By default, we send back full objects when they are changed or committed. When this threshold is reached, only object GUIDs are sent back instead so that the client knows about the changes while the amount of data sent over the network is reduced. The client will then retrieve the objects later on, if needed. | 100 |
 
-## 10 Metrics Settings
+## 10 Metrics Settings{#metrics-settings}
 
 The settings below configure metrics through [micrometer](https://micrometer.io/docs). See [Metrics](/refguide/metrics/) for more information and the specification of the settings format. 
 
 | Name | Description | Default Value |
 | --- | --- | --- |
+| **com.mendix.metrics.Type** | Enable access to Micrometer metrics through Java APIs | micrometer |
 | **Metrics.Registries** | Registries to send metrics to |   |
 | **Metrics.ApplicationTags** | Common tags used for every meter |   |
 

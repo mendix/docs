@@ -13,9 +13,9 @@ Progressive web apps (PWAs) are an evolution of traditional web apps. Overall, P
 
 Progressive web apps have three main characteristics:
 
-* **Installable —** PWAs let you add your app to your user's home screen and start a full screen app. This makes PWAs feel more fully-capable native apps.
-* **Reliable —** Using service workers, PWAs can work offline or partially offline. Mendix PWAs can work partially offline (resources like styling, pages, and images are cached) or fully offline (like hybrid offline and native mobile apps).
-* **Capable —** PWAs can leverage several device capabilities like the camera and location, and can offer support for web push notifications. Note that support for features depend on which browser is used.
+* **Installable** – PWAs let you add your app to your user's home screen and start a full screen app. This makes PWAs feel more fully-capable native apps.
+* **Reliable** – Using service workers, PWAs can work offline or partially offline. Mendix PWAs can work partially offline (resources like styling, pages, and images are cached) or fully offline (like hybrid offline and native mobile apps).
+* **Capable** – PWAs can leverage several device capabilities like the camera and location, and can offer support for web push notifications. Note that support for features depend on which browser is used.
 
 ## 2 Enabling PWA Features
 

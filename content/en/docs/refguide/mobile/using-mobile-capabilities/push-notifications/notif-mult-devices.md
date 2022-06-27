@@ -89,7 +89,7 @@ These Java actions have the following parameters:
 * **DeviceParam** (List of PushNotifications.Device or PushNotification.Device): this parameter can be used to send the same message to a list of devices
 * **ContextObject**: this parameter will allow any Mendix object to be passed to the notification
 
-### 4.4 SendMessageToUsers and SendMessageToUser Java Actions
+### 4.3 SendMessageToUsers and SendMessageToUser Java Actions
 
 Every user is allowed to have more than one device. When sending push notifications to every device of a particular user, use  the **SendMessageToUser** Java action.
 

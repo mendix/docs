@@ -20,7 +20,7 @@ To start a debugging session, do the following:
 1. Run your Mendix app locally on your desktop.
 2. Start the Make It Native app.
 3. Select **Enable dev mode** in the Make It Native app.
-4. Start your app on your mobile device in Mendix Studio Pro by clicking the **View App** drop-down list> **View on your device**.
+4. Start your app on your mobile device in Mendix Studio Pro by clicking **View App** > **View on your device**.
 5. With your mobile device, tap **Scan QR code**, then scan the QR code on your desktop.
 
 When the Make It Native app finishes loading your app, do the following:
@@ -98,7 +98,7 @@ After running `react-devtools` you will see the React developer tools GUI. To us
 
 ## 4 Debugging the OS Logs
 
-When your Mendix app is crashing or the logging in Mendix Studio Pro is incomplete, you might want to dive into your operating system's log files for information. There are 2 options:
+When your Mendix app is crashing or the logging in Mendix Studio Pro is incomplete, you might want to dive into your operating system's log files for information. There are two options:
 
 1. You could start the app in [XCode or Android Studio](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/#building-app-project), either of which will give you more information and allow you to set breakpoint and inspect variable values. This approach is a bit more cumbersome. 
 1. Get the log files directly from your device.

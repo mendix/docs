@@ -63,7 +63,7 @@ Mendix strives to make building and running native mobile apps as simple as poss
 
 To troubleshoot issues related to the Make it Native app, see the sections below.
 
-### 3.1.1 Port Issues
+#### 3.1.1 Port Issues
 
 We recommend keeping the **Runtime port** in your [configuration](/refguide/configuration/#server) on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
 

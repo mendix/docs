@@ -18,14 +18,14 @@ Before starting this guide, make sure you have completed the following prerequis
 
 For Android:
 
-- Have an Android mobile device that can [support ARCore](https://developers.google.com/ar/discover/supported*devices#android_play).
-- Install [Google Play Services for AR](https://play.google.com/store/apps/details?id=com.google.ar.core&hl=en) on your device.
-- Install the Make It Native app on your Android mobile device for testing purposes.
+* Have an Android mobile device that can [support ARCore](https://developers.google.com/ar/discover/supported*devices#android_play).
+* Install [Google Play Services for AR](https://play.google.com/store/apps/details?id=com.google.ar.core&hl=en) on your device.
+* Install the Make It Native app on your Android mobile device for testing purposes.
 
 For iOS:
 
-- Have an iOS mobile device that supports ARKit (iPhone 6S and up).
-- Install the Make It Native app on your iOS mobile device for testing purposes.
+* Have an iOS mobile device that supports ARKit (iPhone 6S and up).
+* Install the Make It Native app on your iOS mobile device for testing purposes.
 
 ## 3 Embedding Widgets in Your App
 
@@ -39,9 +39,9 @@ Create a new app by following these steps:
 
 You will begin by embedding the following widgets into your Mendix app:
 
-- Container (AR)
-- ImageTracker (AR)
-- Cube (AR)
+* Container (AR)
+* ImageTracker (AR)
+* Cube (AR)
 
 Embed the widgets in this order:
 
@@ -80,13 +80,15 @@ The **ImageTracker (AR)** widget allows you to track an image. Like Container (A
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/ar-image-tracker.png" alt="ImageTracker (AR)"   width="400"  >}}
 
-**Image** — in the **General** tab, you can provide your own image to this widget by clicking **Image** > **Edit**. While it is possible to add any image, some images work better for AR tracking than others. Images can best be tracked when they have high contrast and several edges:
+The **ImageTracker (AR)** properties are as follows:
 
-{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/sample-tracker-image.png" alt="Sample Tracker Image"   width="400"  >}}
+* **Image** – In the **General** tab, you can provide your own image to this widget by clicking **Image** > **Edit**. While it is possible to add any image, some images work better for AR tracking than others. Images can best be tracked when they have high contrast and several edges:
 
-It is possible to use a more conventional image, like a company logo, as long as it has enough contrast and edges. If your image does not posses these qualities, you will notice AR elements floating in incorrect places and motion tracking failures as you move your camera. It is also possible that your image will not be recognized at all.
+	{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/sample-tracker-image.png" alt="Sample Tracker Image"   width="400"  >}}
 
-**Orientation** — this dictates the orientation of 3D objects on your tracker, not the orientation of the tracker itself. Leaving it on **Up** will make your 3D object appear right side up when you have it lying on a table.
+	It is possible to use a more conventional image, like a company logo, as long as it has enough contrast and edges. If your image does not posses these qualities, you will notice AR elements floating in incorrect places and motion tracking failures as you move your camera. It is also possible that your image will not be recognized at all.
+
+* **Orientation** – This dictates the orientation of 3D objects on your tracker, not the orientation of the tracker itself. Leaving it on **Up** will make your 3D object appear right side up when you have it lying on a table.
 
 Your standard cube will not look different when turned around. To show orientation, this tutorial has temporarily added the following texture (see the [Material](#material) section below to learn how to add your own texture to an object):
 
@@ -118,7 +120,7 @@ The **General** tab contains basic properties for configuring position:
 
 In the **General** tab you can configure **Position**, **Rotation**, and **Scale** (**X** stands for left/right, **Y** for up/down, and **Z** for depth):
 
-*  **Position** — the position relative to the image tracker. For example, since the position is relative to the tracker size, set **X** to _0.1_ to make your object appear right beside the tracker instead of on top of it:
+*  **Position** – the position relative to the image tracker. For example, since the position is relative to the tracker size, set **X** to _0.1_ to make your object appear right beside the tracker instead of on top of it:
 
 	Here is a cube in **Position** (0.1,0,0):
    
@@ -132,7 +134,7 @@ In the **General** tab you can configure **Position**, **Rotation**, and **Scale
    
 	{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/third-position.jpg" alt="Cube on Position (0,0,0.1)"   width="400"  >}}
 
-*  **Rotation** — the rotation of the cube in 360 degrees. Set **Rotation** **X** to _45_ to see your cube rotated 45 degrees on its X axis:
+*  **Rotation** – the rotation of the cube in 360 degrees. Set **Rotation** **X** to _45_ to see your cube rotated 45 degrees on its X axis:
 
 	Here is a cube with **Rotation** (0,0,0):
    
@@ -142,7 +144,7 @@ In the **General** tab you can configure **Position**, **Rotation**, and **Scale
    
 	{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/rotation-forty-five.jpg" alt="Cube with Rotation (45,0,0)"   width="400"  >}}
 
-*  **Scale** — the size of the object, also relative to the tracker it is embedded in. When the **Scale** is set to _(0,0,0)_ the object will be invisible. Because **0.1** is exactly the size of the tracker, set **Scale X**, **Y**  and **Z** to _0.05_ to see your cube shrink in the tracker:
+*  **Scale** – the size of the object, also relative to the tracker it is embedded in. When the **Scale** is set to _(0,0,0)_ the object will be invisible. Because **0.1** is exactly the size of the tracker, set **Scale X**, **Y**  and **Z** to _0.05_ to see your cube shrink in the tracker:
 
 	Here is a cube with **Scale** (0.1,0.1,0.1):
    
@@ -163,22 +165,22 @@ The **Material** tab contains properties for configuring appearance:
 * **Material type** - can be either **Texture**, **Color** or **Video**. **Material type** determains what will be put
   onto the cube, an image, a color or a looping video.
 
-* **Texture** — an image you can place on the cube by clicking **Edit**. The image will appear on each face of the cube. Put the example tracker here as a texture to end up with this colorful cube (note that the cube now ignores  any **Color** value — if you want to make your cube one solid color, make sure the Texture is set to **none**):
+* **Texture** – an image you can place on the cube by clicking **Edit**. The image will appear on each face of the cube. Put the example tracker here as a texture to end up with this colorful cube (note that the cube now ignores  any **Color** value – if you want to make your cube one solid color, make sure the Texture is set to **none**):
 
 	{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/sample-texture.jpg" alt="Texture"   width="400"  >}}
 
-* **Color** — the color of the cube. You can have either a **Texture** or **Color**, but not both. _White_ is the  standard color. Change the value to _green_ to make your cube appear this way:
+* **Color** – the color of the cube. You can have either a **Texture** or **Color**, but not both. _White_ is the  standard color. Change the value to _green_ to make your cube appear this way:
 
 	{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/green-color.jpg" alt="Color"   width="400"  >}}
 
 * **Video** - a link to a .mp4 video. This will play a looping video on the object.
-* **Opacity** — the clarity or opacity of the cube. _1_ is fully opaque, while _0_ is fully transparent. Change the color of your cube back to _white_ and change the opacity value to _0.5_ to see your cube become partly transparent:
+* **Opacity** – the clarity or opacity of the cube. _1_ is fully opaque, while _0_ is fully transparent. Change the color of your cube back to _white_ and change the opacity value to _0.5_ to see your cube become partly transparent:
 
 	{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/opacity.jpg" alt="Opacity"   width="400"  >}}
 
-*  **Lighting type** — the way light from the scene will fall on your object. 
-	**Phong**, **Blinn**, and **Lambert**  are standard configurations of adding light and shadows to your objects. They are also have relatively slight  processor power requirements. 		**Constant** means no light is added — just pure colors are shown. 
-	**PBR** — (Physically Based Rendering) is the most advanced. PBR takes the entire scene into account when creating its  lighting, the intricacies of which are beyond this guide. Change between the various **Lighting type** options to  see them in action:
+*  **Lighting type** – the way light from the scene will fall on your object. 
+	**Phong**, **Blinn**, and **Lambert**  are standard configurations of adding light and shadows to your objects. They are also have relatively slight  processor power requirements. 		**Constant** means no light is added – just pure colors are shown. 
+	**PBR** – (Physically Based Rendering) is the most advanced. PBR takes the entire scene into account when creating its  lighting, the intricacies of which are beyond this guide. Change between the various **Lighting type** options to  see them in action:
 
 	Here is a cube with **Lighting type** > **Phong**:
    
@@ -194,20 +196,20 @@ The **Material** tab contains properties for configuring appearance:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/interaction-tab.png" alt="Interaction tab"   width="400"  >}}
 
-* **Physics** — dictates how your object interacts with other 3D objects. Enabling it will not show an immediate  visible difference, but it will make it possible for other objects to collide with this object. 
-* **Physics type** —  how the object should physically behave. Selecting **Kinematic** will make your object move only when manipulated.  **Dynamic** objects will react to everything. **Static** objects will never move.
-* **On collision** — an event that  is triggered when this objects collides with another 3D object with physics enabled. When this objects **Physics  type** is not **Dynamic** but is enabled, it can still collide with objects that are **Dynamic** and vice versa. However, **Kinematic** and **Static** object cannot generate this event with other objects that are **Kinematic** or  **Static**. 
-* **Use gravity** — sets if the object should be affected by gravity. Setting it to ‘Yes’ will make your object fall until it meets another object with physics enabled. To put this information into practice, select  **Enable Physics** > **Yes**, select **Physics Type** > **Dynamic**, and select **Use Gravity** > **Yes** to enable  your cube’s physics:
+* **Physics** – dictates how your object interacts with other 3D objects. Enabling it will not show an immediate  visible difference, but it will make it possible for other objects to collide with this object. 
+* **Physics type** –  how the object should physically behave. Selecting **Kinematic** will make your object move only when manipulated.  **Dynamic** objects will react to everything. **Static** objects will never move.
+* **On collision** – an event that  is triggered when this objects collides with another 3D object with physics enabled. When this objects **Physics  type** is not **Dynamic** but is enabled, it can still collide with objects that are **Dynamic** and vice versa. However, **Kinematic** and **Static** object cannot generate this event with other objects that are **Kinematic** or  **Static**. 
+* **Use gravity** – sets if the object should be affected by gravity. Setting it to ‘Yes’ will make your object fall until it meets another object with physics enabled. To put this information into practice, select  **Enable Physics** > **Yes**, select **Physics Type** > **Dynamic**, and select **Use Gravity** > **Yes** to enable  your cube’s physics:
 
 	{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/physics.gif" alt="Physics gif"   width="400"  >}}
 
-* **Dragging** — allows a user to manipulate an object by dragging it with their finger. This property gives users a very instinctive way to move objects. 
-* **Dragging type** — the type of dragging behaviour you want, **Fixed  Distance** will make the object follow you at always the same distance as it started. **Fixed to world** will make the object stick to the world, for example objects like floors, desks, walls etc.
-*  **On drag** — an event that is triggered when the object is moved through dragging:
+* **Dragging** – allows a user to manipulate an object by dragging it with their finger. This property gives users a very instinctive way to move objects. 
+* **Dragging type** – the type of dragging behaviour you want, **Fixed  Distance** will make the object follow you at always the same distance as it started. **Fixed to world** will make the object stick to the world, for example objects like floors, desks, walls etc.
+*  **On drag** – an event that is triggered when the object is moved through dragging:
 
 	{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/dragging.gif" alt="Dragging gif"   width="400"  >}}
 
-*  **Pinching** — can be used to scale the object, similar to zooming in and out on a maps widget. Select **Enable  Pinching** > **Yes**, select **Enable Pinch to Scale** > **Yes**, and set the **Scale Factor** to 0.5, then pinch  out on your object to examine it in detail:
+*  **Pinching** – can be used to scale the object, similar to zooming in and out on a maps widget. Select **Enable  Pinching** > **Yes**, select **Enable Pinch to Scale** > **Yes**, and set the **Scale Factor** to 0.5, then pinch  out on your object to examine it in detail:
 
 	{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/pinching.gif" alt="Pinching gif"   width="400"  >}}
 
@@ -227,8 +229,8 @@ The **Common** tab appears this way:
 
 The **Common** tab has two important properties:
 
-* **Name** — is used internally in all AR Widgets and must be unique. It can be changed, but we recommend keeping its generated name.
-*  **Visible** — is used to dictate the visibility of the AR component. This can be conditional just like most other widgets:
+* **Name** – is used internally in all AR Widgets and must be unique. It can be changed, but we recommend keeping its generated name.
+*  **Visible** – is used to dictate the visibility of the AR component. This can be conditional just like most other widgets:
 
 	{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/visibility.png" alt="Visibility"   width="400"  >}}
 

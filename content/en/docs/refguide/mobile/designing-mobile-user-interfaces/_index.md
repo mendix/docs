@@ -19,6 +19,6 @@ This section guide you through the process of shaping great mobile user experien
 
 * [Design Principles](/refguide/mobile/designing-mobile-user-interfaces/design-principles/) – This guide teaches you how to build a native mobile app's UI.
 * [Navigation](/refguide/mobile/designing-mobile-user-interfaces/navigation/) – This guide gives general information for native navigation in Mendix test.
-* [Images, Icons and Fonts](/refguide/mobile/designing-mobile-user-interfaces/images-icons-and-fonts/) – This guide helps you enrich your native mobile app's design with images and custom fonts.
+* [Images, Icons, and Fonts](/refguide/mobile/designing-mobile-user-interfaces/images-icons-and-fonts/) – This guide helps you enrich your native mobile app's design with images and custom fonts.
 * [Native Styling](/refguide/mobile/designing-mobile-user-interfaces/native-styling/) – This guide gives general information for native styling in Mendix.
 * [Widget Styling Guide](/refguide/mobile/designing-mobile-user-interfaces/widget-styling-guide/) – This guide contextualizes the style elements Mendix uses in native mobile apps and explains the classes and style properties of Mendix’s widgets.

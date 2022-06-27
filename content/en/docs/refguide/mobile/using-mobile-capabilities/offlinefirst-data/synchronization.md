@@ -74,11 +74,10 @@ The upload phase executes the following operations:
 
 #### 2.2.2 Download Phase {#download}
 
-If the upload phase was successful, the download phase starts in which the local database is updated with the newest data from the server database. The behavior of download phase differs per synchronization type.
+If the upload phase was successful, the download phase starts in which the local database is updated with the newest data from the server database. The behavior of download phase differs per synchronization type:
 
-**Full synchronization** — A network request is made to the server per entity to retrieve the newest data from the server database. You can manage which entities are synchronized to the local database by customizing your app's synchronization behavior. For more details on this procedure, see the [Customizable Synchronization](#customizable-synchronization) section below. The download process also downloads the file entities' contents and saves that to your device storage. This process is incremental. The app only downloads the contents of a file object if the file has not been downloaded before, or if the file has been changed since it was last downloaded. The changed date attribute of the file entity is used to determine if the contents of a file object have changed.
-
-**Selective synchronization** — Only the objects selected for synchronization are synchronized to the local database. There are no extra network requests made to retrieve these objects. The objects are returned in the response of a network request made during the upload phase. If a file entity is selected for synchronization, its content is also updated on the device storage incrementally. The logic is the same in the full synchronization.
+* **Full synchronization** – A network request is made to the server per entity to retrieve the newest data from the server database. You can manage which entities are synchronized to the local database by customizing your app's synchronization behavior. For more details on this procedure, see the [Customizable Synchronization](#customizable-synchronization) section below. The download process also downloads the file entities' contents and saves that to your device storage. This process is incremental. The app only downloads the contents of a file object if the file has not been downloaded before, or if the file has been changed since it was last downloaded. The changed date attribute of the file entity is used to determine if the contents of a file object have changed.
+* **Selective synchronization** – Only the objects selected for synchronization are synchronized to the local database. There are no extra network requests made to retrieve these objects. The objects are returned in the response of a network request made during the upload phase. If a file entity is selected for synchronization, its content is also updated on the device storage incrementally. The logic is the same in the full synchronization.
 
 ### 2.3 After Synchronization
 
@@ -90,7 +89,7 @@ Please note that a nanoflow object variable's value might become `empty` after s
 * The current user does not have enough access to the object (defined by the security access rules)
 * The entity is configured with an XPath constraint on the [customizable synchronization](#customizable-synchronization) screen, and the object no longer matches the specified XPath constraint
 * The entity is configured with **Nothing (clear data)** option on the customizable synchronization screen
-* The upload phase fails for the object — for example when a before commit event handler returns false, or committing fails due to violation of a unique validation
+* The upload phase fails for the object—for example when a before commit event handler returns false, or committing fails due to violation of a unique validation
 
 ### 2.4 Customizable Synchronization {#customizable-synchronization}
 
@@ -102,10 +101,10 @@ By default, Mendix automatically determines which objects need to be synchronize
 
 Depending on the use-case, more fine-grained synchronization controls might be required. Therefore, it is possible to change the download behavior for an entity. You can choose between the following options:
 
-* **All Objects** — Download all objects applying the regular security constraints.
-* **By XPath** — Only download the objects which match the [XPath Constraints](/refguide/xpath-constraints/) in addition to the regular security constraints. This means all previously synchronized objects that do not match the XPath constraint will be removed.
-* **Nothing (clear data)** — Do not download any objects automatically, but do clear the data stored in the database for this entity when performing a synchronization (this can be useful in cases where the objects should only be uploaded, for example a `Feedback` entity).
-* **Nothing (preserve data)** — Do not download any objects automatically, and do not clear the data stored in the database for this entity when performing a synchronization  (this can be useful in cases where you want have full control over the synchronization and should be used in combination with the [Synchronize to device](/refguide/synchronize-to-device/) or [Synchronize](/refguide/synchronize/) activity with specific objects selected).
+* **All Objects** – Download all objects applying the regular security constraints.
+* **By XPath** – Only download the objects which match the [XPath Constraints](/refguide/xpath-constraints/) in addition to the regular security constraints. This means all previously synchronized objects that do not match the XPath constraint will be removed.
+* **Nothing (clear data)** – Do not download any objects automatically, but do clear the data stored in the database for this entity when performing a synchronization (this can be useful in cases where the objects should only be uploaded, for example a `Feedback` entity).
+* **Nothing (preserve data)** – Do not download any objects automatically, and do not clear the data stored in the database for this entity when performing a synchronization  (this can be useful in cases where you want have full control over the synchronization and should be used in combination with the [Synchronize to device](/refguide/synchronize-to-device/) or [Synchronize](/refguide/synchronize/) activity with specific objects selected).
 
 If you have custom widgets or JavaScript actions which use an entity that cannot be detected by Studio Pro in your offline-first profile (because its only used in the code), you can use customizable synchronization to include such entities.
 

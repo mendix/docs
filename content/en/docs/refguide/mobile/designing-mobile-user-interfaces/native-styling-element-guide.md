@@ -528,7 +528,7 @@ The default class to style all reference selector inputs is named `ReferenceSele
 
 Images, videos & files help your user app manage images and other files. For more information on these widgets, see [Images, Videos & Files](/refguide/image-and-file-widgets/).
 
-### 7.2 Static Image {#image}
+### 7.1 Static Image {#image}
 
 The static image widget can be used to show a predefined image on a page, layout, or snippet. For more information on this widgets, see [Static Image](/refguide/image/). The widget’s style properties are as follows:
 
@@ -549,7 +549,7 @@ The static image widget can be used to show a predefined image on a page, layout
 
 The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `NativeDynamicImage` as described in the [Dynamic Image](#dynamic-image) section below.
 
-### 7.1 Dynamic Image {#dynamic-image}
+### 7.2 Dynamic Image {#dynamic-image}
 
 A dynamic image can be used to display an image. This widget supports the same style properties and structure as the [Static Image](#image) widget above.
 
@@ -1246,7 +1246,7 @@ A main object has four objects.
 | buttonContainer | This has all ViewStyle properties. | Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. |
 | container       | This has all ViewStyle properties. | Styles the wrapper view around the whole menu.     |
 
-#### BasicItemStyle
+#### 24.1 BasicItemStyle
 
 | Element                   | Style Properties |  Description                                      |
 | ---------------------------| ---- | ------------------------------------------------ |
@@ -1254,7 +1254,7 @@ A main object has four objects.
 | itemStyle | ItemStyle      | Styles the basic items.                         |
 | dividerColor | `string`      | Styles the divider color.                         |
 
-#### ItemStyle
+#### 24.2 ItemStyle
 
 | Element                | Style Properties                     | Description                                                                                      |
 | ----------------------------------------| ----- | ------------------------------------------------------------------------------------------------ |
@@ -1266,7 +1266,7 @@ A main object has four objects.
 | customStyle |  This has all TextStyle properties.                 | Styles all basic menu items which have the `custom` style selected.                                  |
 
 
-#### CustomItemStyle
+#### 24.3 CustomItemStyle
 
 | Element                   | Style Properties |  Description                                      |
 | ---------------------------| ---- | ------------------------------------------------ |
@@ -1326,7 +1326,7 @@ export myCarouselStyle = {
 | cardLayout | LayoutStyle | Styles the carousel when the layout is set to card  |
 | fullWidthLayout | LayoutStyle                             | Styles the carousel when the layout is set to full width.                 |
 
-#### LayoutStyle
+#### 25.1 LayoutStyle
 
 | Element                | Style Properties                               | Description                                                                                    |
 | -----------------------|-------------------------------- | ---------------------------------------------------------------------------------------------- |
@@ -1335,7 +1335,7 @@ export myCarouselStyle = {
 | indicator | `color: string`                             | Styles the loading indicator which will be shown while the carousel is loading.                 |
 | pagination | Pagination                                 | Styles pagination container, dots, active dots, and text.                                        |
 
-#### Pagination
+#### 25.2 Pagination
 
 | Element | Style Properties                                                                         | Description                                                                                                    |
 | ---------|------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |

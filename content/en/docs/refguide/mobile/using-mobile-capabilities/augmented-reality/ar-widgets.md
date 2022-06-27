@@ -137,10 +137,10 @@ Interaction is used for all actions your 3D objects can do that interact with th
 
 Physics allows your 3D object to react to the world, using gravity, or other object using the collision event. Note that the real world environment will not automatically stop your 3D object from falling when gravity is enabled. You have to add these objects yourself. These are the different physics types: 
 
-* **Kinematic** — Objects with this physics type can only be moved by user input, not by other objects in the scene.
-* **Dynamic** — Dynamic objects can be moved both by user input and by other objects in the scene. For example, if another object with gravity
+* **Kinematic** – Objects with this physics type can only be moved by user input, not by other objects in the scene.
+* **Dynamic** – Dynamic objects can be moved both by user input and by other objects in the scene. For example, if another object with gravity
 falls onto this object, the object will move. 
-* **Static** — Static objects will never move and cannot move through any physics interactions. Static objects can still be moved when specifically changing the position on them.
+* **Static** – Static objects will never move and cannot move through any physics interactions. Static objects can still be moved when specifically changing the position on them.
 
 #### 5.5.2 Dragging
 

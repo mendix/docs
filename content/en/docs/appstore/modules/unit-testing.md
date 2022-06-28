@@ -36,7 +36,7 @@ Use the [Unit Testing](https://marketplace.mendix.com/link/component/390/) modul
 
 ## 3 Usage
 
-To run a unit test, first navigate to the test suite overview on the left side of the page. A test suite reflects all the unit tests that are available in a module of your project. When you select  a test suite, all the unit tests inside the suite are displayed, including their last result, if applicable.
+To run a unit test, first navigate to the test suite overview on the left side of the page. A test suite reflects all the unit tests that are available in a module of your app. When you select  a test suite, all the unit tests inside the suite are displayed, including their last result, if applicable.
 
 Click **Run all module tests** to run all the unit tests in all the suites or all the unit tests in the selected suite. When the unit tests are running, the progress will be tracked.
 

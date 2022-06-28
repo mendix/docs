@@ -55,7 +55,7 @@ Encrypt and decrypt the contents of FileDocument entities using the [PGP](https:
 
 ### 3.1 Typical Use Cases
 
-One of the typical usage scenarios may be a project/module that stores customer sensitive documents such as photos. In such a case, you may want to encrypt those documents in a way that only the owner can see.
+One of the typical usage scenarios may be a app/module that stores customer sensitive documents such as photos. In such a case, you may want to encrypt those documents in a way that only the owner can see.
 
 ### 3.2 Configuration
 

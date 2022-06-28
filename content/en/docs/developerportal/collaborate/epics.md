@@ -229,5 +229,5 @@ On the top, it shows the sprint name, the time when the sprint was archived, and
 * **Sprint Goal** – the goal of this sprint
 * **Was the sprint goal reached?** – shows the answer provided by the person who ended the sprint
 * **Archived by** – person who ended the sprint
-* **Completed stories** – the stories in this sprint that were completed
-* **Incomplete stories** – the stories in this sprint that were not completed
+* **Completed stories** – stories in this sprint that were completed
+* **Incomplete stories** – stories in this sprint that were not completed

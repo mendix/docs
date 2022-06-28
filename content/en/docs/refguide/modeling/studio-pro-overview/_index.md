@@ -184,8 +184,6 @@ The following shortcut keys are available in the microflow and nanoflow editors:
 | <kbd>Ctrl</kbd>&nbsp;+&nbsp;arrow&nbsp;keys | Moves the currently selected item up/down or left/right. |
 | <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
 | <kbd>F2</kbd> | Edits the name of the return value of the currently selected activity. This shortcut will not function on activities that do not return a result. |
-| <kbd>Home</kbd> | Highlights and focus on the start event of the current workflow/microflow/nanoflow. |
-| <kbd>End</kbd> | Highlights and focus on an end event in the current workflow/microflow/nanoflow. If there are multiple end events, clicking **End** multiple times will toggle between the different events. |
 | <kbd>Shift</kbd>  | By holding <kbd>Shift</kbd> when resizing an activity, it will stay centered at its current position and expand equally in all directions. |
 | <kbd>Ctrl</kbd>  | When pressing the <kbd>Ctrl</kbd>, you can select additional activities. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 

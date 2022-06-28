@@ -43,7 +43,7 @@
 
     &__section-title {
         display: block;
-        font-weight: $font-weight-medium;
+        font-weight: $font-weight-normal; // NK - adjusted for use with multiple Noto Sans weights
 
         .active {
             font-weight: $font-weight-bold;

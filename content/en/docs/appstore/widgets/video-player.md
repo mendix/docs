@@ -24,6 +24,7 @@ The [Video Player](https://marketplace.mendix.com/link/component/110700/) widget
 ### 1.2 Limitations
 
 * File hosted in Mendix Server cannot be played in the Safari browser
+* Using this widget with video files stored in file documents is not recommended, as the Mendix Runtime is not designed to perform as a media server
 
 ## 2 Configuration
 

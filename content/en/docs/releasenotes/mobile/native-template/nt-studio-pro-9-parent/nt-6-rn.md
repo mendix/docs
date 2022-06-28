@@ -5,6 +5,21 @@ parent: "nt-studio-pro-9-parent"
 weight: 10
 description: "Native Template 6 release notes."
 ---
+## 6.2.22
+
+**Release date: June 2nd, 2022**
+
+### Fixes
+
+* We fixed an iOS build issue. (Tickets 150964, 150934)
+
+## 6.2.21
+
+**Release date: May 31st, 2022**
+
+### Fixes
+
+* We fixed an iOS build issue for projects using Crashlytics.
 
 ## 6.2.20
 
@@ -110,7 +125,7 @@ description: "Native Template 6 release notes."
 
 ### Improvements
 
-* Mendix Studio Pro v9.7 brings with it a new over-the-air update mechanism. With this new mechanism you can update your apps directly via your app's runtime without using third-party services. For more information on OTA updates, see [Release Over the Air Updates with Mendix](/howto/mobile/how-to-ota/).
+* Mendix Studio Pro v9.7 brings with it a new over-the-air update mechanism. With this new mechanism you can update your apps directly via your app's runtime without using third-party services. For more information on OTA updates, see [Release Over the Air Updates with Mendix](/refguide/mobile/using-mobile-capabilities/deep-links/).
 
 ### Fixes
 
@@ -190,7 +205,7 @@ This is a re-release of Native Template [6.2.0](#620).
 
 ### Improvements
 
-* Custom developer apps now fully support deep links. This allows you to use custom developer apps to test deeplink use cases. For more information, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps/) and [How to Set Up Deep Links in Native Mobile Apps](/howto/mobile/native-deep-link/).
+* Custom developer apps now fully support deep links. This allows you to use custom developer apps to test deeplink use cases. For more information, see [Create a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) and [Set Up Deep Links in Native Mobile Apps](/refguide/mobile/using-mobile-capabilities/deep-links/).
 
 ### Breaking Change
 

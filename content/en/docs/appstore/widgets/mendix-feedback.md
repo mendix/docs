@@ -134,7 +134,7 @@ If you cannot see your feedback items on the Developer Portal's **Feedback** pag
 
 ### 4.4 Creating a New Microflow to Retrieve DecryptedToken {#create-a-new-microflow-to-retrieve-decryptedtoken}
 
-In MendixSSO 3, the Microflow **DS_GetCurrentIdToken** is deprecated. You will need to create a new microflow in your own module to retrieve the **DecryptedToken**. Place **SUB_GetDecryptedTokenByTypeForCurrentSessionn** in this new microflow, and then use it in MendixSS authentication:
+In MendixSSO 3, the Microflow **DS_GetCurrentIdToken** is deprecated. You will need to create a new microflow in your own module to retrieve the **DecryptedToken**. Place **SUB_GetDecryptedTokenByTypeForCurrentSession** in this new microflow, and then use it in MendixSS authentication:
 
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/get-current-token.png" >}}
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/example.png" >}}

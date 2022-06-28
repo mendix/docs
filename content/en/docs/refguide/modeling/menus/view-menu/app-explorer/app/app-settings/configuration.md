@@ -70,7 +70,7 @@ Only use this functionality if you know exactly what you are doing. Wrong values
 
 {{% /alert %}}
 
-Each custom setting consists of a name and a value. For example, to enable persistent sessions you add a custom setting with name `PersistentSessions` and value `true`.
+Each custom setting consists of a name and a value. For example, to set the hash algorithm to BCRYPT you add a custom setting with name `HashAlgorithm` and value `BCRYPT`.
 
 For settings overview, see [Runtime Customization](/refguide/custom-settings/).
 

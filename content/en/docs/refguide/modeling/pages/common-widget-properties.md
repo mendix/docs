@@ -344,7 +344,11 @@ By default, whether or not an element is displayed in the browser is determined 
 You can choose both **Context** conditions and **Module roles** conditions to apply to the widget.
 {{% /alert %}}
 
-Note that with the **Visible** property, you only hide data and do not protect it. You can hide a tab or a table row from an end-user, but if they still have access to the data then they could see it some other way. To restrict access to sensitive data, use a constraint on the domain model, not on individual pages. 
+{{% alert color="warning" %}}
+With the **Visible** property, you only hide data and do not protect it. You can hide a tab or a table row from an end-user, but if they still have access to the data then they could see it some other way. To restrict access to sensitive data, use a constraint on the domain model, not on individual pages.
+
+Depending on the condition used to set the **Visible** property, hiding an element containing a microflow or snippet will not necessarily prevent the microflow or snippet from being triggered. We recommend that you do not use this method to control whether a microflow is run or not, but include the condition in the microflow itself.
+{{% /alert %}}
 
 #### 9.1.1 Context
 

@@ -18,6 +18,8 @@ An annotation is an element that can be used to put comments to a flow. For exam
 
 {{< figure src="/attachments/studio/workflows/workflows-general-activities/annotation.jpg" alt="Annotation Example"  width="400" >}}
 
+You can add annotations to the workflow or to individual activities. To add the annotation to the workflow, drag and drop the annotation in the editor's working area. To add the annotation to the activity, drag and drop it inside the activity. 
+
 ## 3 Decision {#decision}
 
 A decision is an element that makes a choice based on a condition and follows one and only one of the outgoing paths. For example, you can use it to follow different processes when a new hire works remotely or when they work from the office:

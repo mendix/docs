@@ -162,9 +162,9 @@ These licenses should only be used when the component is developed and released 
 A lead is a potential sales contact that expresses interest in your product or service. Lead routing is the end-to-end process of collecting the leads and distributing them to you. It is possible to configure lead routing for the following content types in the Marketplace:
 
 * Solutions
-* Solution Templates
-* App Services
-* Platform Services
+* Solution templates
+* App services
+* Platform services
 
 When prospective customers are interested in your product, they can leave their contact information using the Marketplace product listing. This is done by clicking a call-to-action button and filling in a form.
 

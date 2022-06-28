@@ -15,7 +15,7 @@ To use these building blocks, you can either
 
 * use the **Blank App for SAP Fiori themed apps** app template; this can chosen when creating a new app, or be downloaded from the Marketplace here – https://marketplace.mendix.com/link/component/53585/
 
-* add the *UI Package for SAP Fiori themed apps* to your app: this can be downloaded from the Marketplace here – https://marketplace.mendix.com/link/component/107625/
+* add the *UI Package for SAP Fiori themed apps* to your app: this can be downloaded from the Marketplace here – https://marketplace.mendix.com/link/component/107625/ — see the instructions in the [Add Fiori to Your App](/partners/sap/sap-fiori-3-0/#add-fiori) section of *SAP Fiori 3.0 Styling*, and use the SAP Fiori 2.5 module instead of SAP Fiori 3.0
 
 ## 2 Building Blocks
 

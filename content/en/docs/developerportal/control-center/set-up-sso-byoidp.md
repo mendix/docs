@@ -16,7 +16,7 @@ This feature is currently in [Public Beta](/releasenotes/beta-features/).
 The Mendix Cloud solution offers an Identity Provider (IdP) that allows users to sign in to:
 
 * Mendix Platform services
-* Mendix applications that have been built with Mendix SSO
+* Mendix applications that have been built with [Mendix SSO](/developerportal/deploy/mendix-sso/)
 
 Rather than using Mendix credentials to login, it is also possible to set up an identity federation between the Mendix Platform and your corporate identity provider. In other words, you can Bring Your Own Identity Provider (BYOIDP).
 

@@ -24,10 +24,11 @@ For **mobile applications** Mendix Client acts as a React Native application. Th
 The three supported types of wrappers for mobile applications are as follows:
 
 * [Make It Native app](/refguide/getting-the-make-it-native-app/)
-* [Custom Developer apps](/howto/mobile/how-to-devapps/)
-* [Native apps](/howto/mobile/deploying-native-app/)
+* [Custom developer apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/
+parent: /refguide/mobile/distributing-mobile-apps/building-native-apps/)
+* [Native apps](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/)
 
-The first two of these load a bundle dynamically, while the last one includes a pre-packaged bundle that can be [updated](/howto/mobile/how-to-ota/) later.
+The first two of these load a bundle dynamically, while the last one includes a pre-packaged bundle that can be [updated](/refguide/mobile/distributing-mobile-apps/overtheair-updates/) later.
 
 A **Hybrid application**, for most purposes, can be treated as an app running in a browser. In this case, however, the browser is embedded in a mobile application and has access to some features of a mobile device through [Cordova](https://cordova.apache.org/) plugins. We recommend that you use a native mobile app rather than a hybrid app if you want to make Mendix apps which run on mobile devices.
 

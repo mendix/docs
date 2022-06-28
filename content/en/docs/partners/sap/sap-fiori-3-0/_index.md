@@ -19,7 +19,9 @@ The SAP Fiori user experience creates a consistent UI across SAP products. SAP F
 
 The Mendix module gives you access to designing your pages with SAP Fiori-styled widgets and building blocks as part of your layout. You can also allow end-users to select a theme and apply it immediately. The module supports SAP Quartz Light and Dark themes.
 
-You can experience the SAP Fiori 3 design by using the [SAP Fiori 3 Starter App](https://marketplace.mendix.com/link/component/116366) as the basis for a new app, or by including the [SAP Fiori 3 UI Resources](https://marketplace.mendix.com/link/component/116359) module in your app.
+You can experience the SAP Fiori 3 design by using the [SAP Fiori 3 Starter App](https://marketplace.mendix.com/link/component/116366) as the basis for a new app.
+
+Alternatively, you can include the [SAP Fiori 3 UI Resources](https://marketplace.mendix.com/link/component/116359) module in your existing app. See [Add Fiori to Your App](#add-fiori), below, for instructions on how to do this.
 
 More information on using SAP Fiori 3 design in your Mendix app is available in the following sections:
 
@@ -179,3 +181,14 @@ The demo apps are:
 * Manage Products – a list of products which demonstrates the use of the count badge and navigation to see the product details
 * Bulletin Board – a list of items with navigation to see the details of each item
 * Shopping Cart Master Slider – the same as the Shopping Cart demo but using dynamic side content
+
+## 8 Add Fiori to Your App{#add-fiori}
+
+If you want to include the SAP Fiori 3 UI Resources in an existing app perform the following steps:
+
+1. Ensure that your app is using Mendix version 9.6.11 or above. 
+2. [Import](/appstore/general/app-store-content/) the  [SAP Fiori 3 UI Resource](https://marketplace.mendix.com/link/component/116359) module into your app.
+3. Import the [Atlas Core](https://marketplace.mendix.com/link/component/117187) module into your app if it is not already there. Atlas Core must be version 3.2.2 or above.
+4. Look in the **Theme** tab of the app settings. This must contain the `SAP_3_0_UI_Resources` module below the `Atlas_Core` module.
+
+    {{< figure src="/attachments/partners/sap/sap-fiori-3-0/theme-order.png"  width="617px"  >}}

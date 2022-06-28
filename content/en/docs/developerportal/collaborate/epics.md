@@ -12,7 +12,9 @@ tags: ["Epics", "Sprint", "Developer Portal"]
 
 Epics enables your team members to collaborate efficiently during the app development process. It supports the Scrum workflow and Kanban workflow.
 
-{{% alert color="info" %}}To obtain access to Epics, contact your Mendix Customer Success Manager.{{% /alert %}}
+### 1.1 Obtaining Access to Epics
+
+To obtain access to Epics, contact your Mendix Customer Success Manager.
 
 To open an app project in Epics, go to the [Developer Portal](https://sprintr.home.mendix.com/link/myapps) and open the app, then go to the [Stories](/developerportal/collaborate/stories/) page. On the top of the **Stories** page, there is a notification, as shown in the screenshot below. Then click **Check it Out** to open the app project in Epics.
 
@@ -149,7 +151,7 @@ Each row in a category shows the following information about a story:
 
 * Story points
 
-* To whom the story is assigned.
+* To whom the story is assigned
 
 {{< figure src="/attachments/developerportal/collaborate/epics/story-kanban.png" >}}
 
@@ -170,7 +172,7 @@ Each row shows the following information about an epic:
 * Unique epic ID, which consists of a prefix and a number
 * Epic title
 * To whom the epic is assigned
-* How many stories are completed for that epic. 
+* How many stories are completed for that epic
 
 {{< figure src="/attachments/developerportal/collaborate/epics/epic.png" >}}
 
@@ -206,14 +208,26 @@ Every time you complete a sprint, all the stories that are **Done** are archived
 
 All the archived stories are shown on the **Archive** page. You can see the following information of an archived story:
 
-* Unique story ID – clicking it shows the details of the story
-* Story title – clicking it shows the details of the story.
-* Which sprint the story belongs to – clicking it shows the details of the sprint
-* Linked epic – clicking it shows the details of this epic
-* Archive date and time – clicking it shows the details of the story
+* Unique story ID – Clicking it shows the details of the story
+* Story title – Clicking it shows the details of the story.
+* Which sprint the story belongs to – Clicking it opens the [archived sprint details page](archived-sprint-details).
+* Linked epic – Clicking it shows the details of this epic.
+* Archive date and time – Clicking it shows the details of the story.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/archive.png" >}}
 
 You can search stories based on story titles in the search box.
 
 {{% todo %}}Check with Jelena if more information can be used for search, for example, epic titles or labels.{{% / todo %}}
+
+### 5.1 Archived Sprint Details Page {#archived-sprint-details}
+
+When you click the sprint icon at the end of an archived story row, the archived sprint details page opens and shows the details of the sprint.
+
+On the top, it shows the sprint name, the time when the sprint was archived, and the start time and the end time of the sprint. Below, it shows the following items:
+
+* **Sprint Goal** – the goal of this sprint
+* **Was the sprint goal reached?** – shows the answer provided by the person who ended the sprint
+* **Archived by** – person who ended the sprint
+* **Completed stories** – the stories in this sprint that were completed
+* **Incomplete stories** – the stories in this sprint that were not completed

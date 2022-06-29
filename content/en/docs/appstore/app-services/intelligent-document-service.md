@@ -163,29 +163,58 @@ To train a document model, do as follows:
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-marker-and-ids-image-unmarked.png" alt="Add Marker and IDs page" >}}
 
-8.  To mark an image, use the marker tool properly:
+#### 4.1.3 Text Markers
+8.  To mark Text fields on an image, use the marker tool properly:
     1. Click **Add Marker**. The **Mark Document** dialog box opens.
-    2.  In the **Mark the fields to be extracted** pane, select a field of interest from which some meaningful data needs to be extracted.
+    2.  In the **Choose fields to mark** pane, select a field of interest from which some meaningful data needs to be extracted.
 
         {{% alert color="warning" %}}The areas you mark in this step determine where the document model will extract the data. Make sure that you mark the complete field area. Only in this way, will the document model read the complete field area and accurately extract a long value.{{% /alert %}}
 
         {{< figure src="/attachments/appstore/app-services/intelligent-document-service/mark-document-dialog-box.png" alt="Mark Document page" >}}
 
     3. On the right side, enter a **Marker Id** that is used for the area that you selected. 
-    4. Select the **Marker Type**.
-    5. Click **Add Marker** to add the marker to the list of **Markers**.
-    6. To delete a marker from the **Markers** list, select the marker and click **Delete**.
-    7.  When you add all the markers for this image, click **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.
+    4. Select "Text" as the **Marker Type** from dropdown.
+    5. Click **Generate Marker ID** to add the marker to the list of **Markers**.
+ 
+ #### 4.1.4 Table Markers
+ 9. Tables are often used to organize and present information for ease of understanding and analysis. Marking "Table" data is different from marking Text fields. If there is a Table element in the document, then please follow these steps to train your document model for extracting table data.
+
+     1. A Table is made up of rows and columns. The intersection of a row and column is called a cell. To train your model to extract data from Table structure, first you will have to define and denote the table from which you want to extract data.
+     2. Using the Marker tool, you can outline the table and create a Table type marker. Provide a valid name for the Marker and then select "Table" from the **Marker Type** dropdown. Refer the representative image below for defining the Table type marker.
+     
+     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-table-type-marker.png" alt="add table type marker" >}}
+     
+     3. Post the creation of Table marker, you will be navigated to another screen to define *markers for table*.
+     4. Choose a column of interest (e.g. First Name), including the column header, as shown in the image below.
+     
+     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-column-marker-for-table.png" alt="add column markers for the table" >}}
+     
+     5. Provide a name for this marker in the "Marker Name" field and choose "Column" from the selection type dropdown and click on "Add Selection".
+     6. Repeat above 2 steps to choose other column(s) of interest from the table and complete column marking.
+     7. Now you can proceed to marking the rows from the table. Choose the entire row using the marker tool and provide a valid name in the "Marker Name" field and choose "Row" from the selection type dropdown and click on "Add Selection". Refer the representative image below for marking a row from table.
+     
+     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-row-marker-for-table.png" alt="add row markers for the table" >}}
+     
+     8. Repeat step# 7 to choose all the remaining rows from the table and add their respective markers.
+     9. Please observe the Column and Row markers added into the **Markers** for Table component as shown in the image below.
+     
+     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/markers-of-table-component.png" alt="list of markers for the table" >}}
+     
+     10. Once the required columns and all the rows from the table are marked, you can click on **Save Table Selection** to save all the markers for the table.
+
+ 10. To delete a marker from the **Markers** list, select the marker and click **Delete**.
+ 11. When you add all the markers for this image, click **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.
 
         {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-marker-and-ids-image-status-marked.png" alt="add markers and id status is marked" >}}
+        
+12. Repeat the steps above until you mark all the images, and then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
 
-    8. Repeat the steps above until you mark all the images, and then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
-
-9.  Wait until the **Status** of the model becomes **Published**. Once the model is published, this pop-up window opens:
+13.  Wait until the **Status** of the model becomes **Published**. Once the model is published, this pop-up window opens:
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/new-model-status-popup.png" alt="new model status included" >}}
 
-10. Click **Refresh** to see the status of the model. The model is ready to use once its **Status** changes to **Published**.
+14. Click **Refresh** to see the status of the model. The model is ready to use once its **Status** changes to **Published**.
+15. If you wish to **Delete** a model irrespective of its status, you can click **...** from under the **Actions** column and select **Delete**. Click **Delete** in the confirmation window and the model will be deleted.
 
 ### 4.2 Creating an Import Mapping{#mapping-file}
 

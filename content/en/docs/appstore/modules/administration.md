@@ -20,7 +20,7 @@ The [Administration](https://marketplace.mendix.com/link/component/23513) module
   - all runtime instances
 - Support viewing runtime statistics
 
-## 1.3 Dependencies
+## 1.2 Dependencies
 
 - [Atlas UI Resources](https://marketplace.mendix.com/link/component/104730)
 - [Mendix SSO](https://marketplace.mendix.com/link/component/111349)

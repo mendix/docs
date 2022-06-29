@@ -6,6 +6,8 @@ weight: 85
 
 ## 9.15.0
 
+**Release date: June 22nd, 2022**
+
 ### DomainModels
 
 #### Annotation (Element)

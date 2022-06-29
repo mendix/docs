@@ -1673,23 +1673,23 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `angle` | | Line of direction. A value of 0 is equivalent to top; increasing values rotates clockwise. |
-| `colorList` | [gradient_color_object\[\]](/refguide/native-styling-refguide/#gradient_color_object) | Pass the colors you want to display in an array. Example: `[{ color: "#fff", offset: 0 }, { color: "#000", offset: 1 }]` |
+| `angle` | | Line of direction. A value of 0 is equivalent to top; increasing values rotate the design clockwise. |
+| `colorList` | [gradient_color_object](/refguide/native-styling-refguide/#gradient-color-object) | Passes the colors you want to display in an array. Example: `[{ color: "#fff", offset: 0 }, { color: "#000", offset: 1 }]` |
 | `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
 | `opacity` | | Takes a value from `0.0` to `1.0`. The lower the value, the more transparent. |
 
 The default class to style all background gradients is named `com_mendix_widget_native_backgroundgradient_BackgroundGradient`.
 
-#### **Background Gradient Types**
----
-#### **gradient_color_object**
+#### 11.31.1 Background Gradient Types
 
-An object `{ color: string, offset: number }` that represent the color and the offset.
+##### 11.31.1.1 gradient_color_object {#gradient-color-object}
+
+An object `{ color: string, offset: number }` that represents the color and the offset.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| color | `string` | Colors can be passed in different formats. Valid color value format: `#d0d0d0`, `rgb(115,155,155)`, or `rgba(195,226,226,0.5)` |
-| offset | `number` | A color-stop's value, followed by one or more optional stop positions. Should be between `0.0` and `1.0` |
+| color | `string` | Colors can be passed in different formats. Valid color value formats are `#d0d0d0`, `rgb(115,155,155)`, or `rgba(195,226,226,0.5)` |
+| offset | `number` | A color-stop's value, followed by one or more optional stop positions (should be between `0.0` and `1.0`) |
 
 ### 11.32 Column Chart
 

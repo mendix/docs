@@ -5,6 +5,13 @@ weight: 97
 #When updating, remember to update the Latest Mendix Releases file
 ---
 
+## 4.64.0 {#464}
+
+**Release date: June 22nd, 2022**
+
+* We added support for Mendix [9.15.0](../studio-pro/9).
+* We added support for Mendix Metamodel [9.15.0](metamodel-9.15).
+
 ## 4.63.0 {#463}
 
 **Release date: May 20th, 2022**

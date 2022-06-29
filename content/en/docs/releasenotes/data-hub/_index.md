@@ -11,6 +11,17 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### June 30th, 2022
+
+#### Improvements
+
+* You can now filter the search results by CRUD capabilities.
+* We improved the UX by moving the top menu items to the MxDock.
+
+#### Fixes
+
+* We fixed an issue where applying filter on *Environment* in search pane resulted in an error.
+
 ### June 23rd, 2022
 
 #### Improvements

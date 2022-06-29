@@ -14,7 +14,6 @@ Mendix uses various third-party libraries that have their own licenses. All the 
 | ------------------------ | ------------------------------------------------------------ |
 | Runtime Server libraries | **runtime\bundles**                                          |
 | Studio Pro libraries     | **modeler\Licenses**                                         |
-| Client licenses          | **modeler\tools\node\licenses.csv**<br>For the Dojo and all other client dependecies licenses: **runtime\mxclientsystem\licenses.txt**|
-
+| Client licenses          | Client licenses can be found in the following locations: <ul><li>**modeler\tools\node\licenses.csv**</li><li>For the Dojo and all other client dependencies licenses: **runtime\mxclientsystem\licenses.txt**</li></ul>|
 
 

@@ -142,7 +142,6 @@ Attributes of the data type `String` or `Hashed string` can have their value hid
 #### 2.8.2 Input Mask
 
 {{% alert color="info" %}}Input masks are not supported on native mobile pages.
-
 Input masks are designed for string data types. Be cautious when using them with numeric or hashed string data types.
 {{% /alert %}}
 
@@ -175,6 +174,14 @@ This property specifies the maximum number of characters that can be typed in th
 The placeholder text is shown when no text has been entered yet, or when a displayed attribute is empty.
 
 It can be used, for example, to give a hint to the end-user what kind of text should be entered.
+
+#### 2.8.5 AutoFocus {#autofocus}
+
+If `true`, the text area will be rendered focused with the device keyboard opened.
+
+{{% alert color="info" %}}
+This option is only available in native pages.
+{{% /alert %}}
 
 <a name="label-properties"></a>
 ### 2.9 Label Section{#label}

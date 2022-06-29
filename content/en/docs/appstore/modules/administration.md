@@ -9,16 +9,16 @@ tags: ["marketplace", "marketplace component", "any chart", "plotly.js", "platfo
 
 ## 1 Introduction
 
-The [Administration](https://marketplace.mendix.com/link/component/23513) module contains the administration functionality to manage local accounts and to see app statistics like runtime information, sessions, and schedules events.
+The [Administration](https://marketplace.mendix.com/link/component/23513) module contains the administration functionality, which allows you to manage local accounts and to view app statistics, such as runtime information, sessions, and schedules events.
 
 ## 1.1 Features
 
-- Enables managing user accounts
-- Provides a read-only overview to show the following information
+- Support managing user accounts
+- Provide a read-only overview to show the following information
   - all active sessions
   - all schedules events
   - all runtime instances
-- Offers runtime statistics
+- Support viewing runtime statistics
 
 ## 1.3 Dependencies
 

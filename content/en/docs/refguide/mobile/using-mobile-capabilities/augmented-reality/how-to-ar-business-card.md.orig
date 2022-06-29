@@ -2,14 +2,12 @@
 title: "Create an AR Business Card"
 <<<<<<< HEAD:content/en/docs/refguide/mobile/using-mobile-capabilities/augmented-reality/how-to-ar-business-card.md
 url: /refguide/mobile/using-mobile-capabilities/augmented-reality/how-to-ar-business-card/
-parent: /refguide/mobile/using-mobile-capabilities/augmented-reality/
 weight: 20
 description: In this guide you will make an augmented reality business card app.
 aliases:
     - /howto/mobile/how-to-ar-business-card/
 =======
 url: /howto/mobile/how-to-ar-business-card/
-parent: "ar-parent"
 weight: 10
 description: "In this how-to you will make an augmented reality business card app."
 tags: ["AR", "VR", "mixed reality", "augmented reality", "virtual reality"]

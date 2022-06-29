@@ -1,7 +1,6 @@
 ---
 title: "2.0"
 url: /releasenotes/add-ons/aqm-2.0/
-parent: "aqm"
 ---
 
 ## 2.0.0

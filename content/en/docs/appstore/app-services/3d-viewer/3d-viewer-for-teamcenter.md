@@ -1,7 +1,6 @@
 ---
 title: "3D Viewer for Teamcenter"
 url: /appstore/app-services/3d-viewer-for-teamcenter/
-parent: "3d-viewer"
 description: "3D Viewer for Teamcenter is an add-on module for the 3D Viewer app service. It adds additional functionality to enable fetching a JT model from a Teamcenter instance and visualize it using existing 3D Viewer widgets."
 tags: ["3d visualization", "3d viewer", "cad", "app store", "marketplace", "component", "platform support", "teamcenter"]
 ---

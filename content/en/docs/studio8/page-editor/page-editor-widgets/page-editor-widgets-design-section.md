@@ -1,7 +1,6 @@
 ---
 title: "Design Section"
 url: /studio8/page-editor-widgets-design-section/
-parent: "page-editor-widgets"
 description: "Describes the Design section in widgets properties in Mendix Studio."
 tags: ["studio", "page editor", "widgets", "on click action", "events"]
 ---

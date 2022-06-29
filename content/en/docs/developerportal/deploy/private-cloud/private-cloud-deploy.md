@@ -1,7 +1,6 @@
 ---
 title: "Deploying a Mendix App to a Private Cloud Cluster"
 url: /developerportal/deploy/private-cloud-deploy/
-parent: "private-cloud"
 description: "Describes the processes for deploying a Mendix app in the Private Cloud"
 weight: 20
 tags: ["Deploy", "Private Cloud", "Environment"]

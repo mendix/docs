@@ -1,7 +1,6 @@
 ---
 title: "Configure a List and a Pop-Up Page with List Item Details"
 url: /studio-how-to/pages-how-to-configure-list-and-pop-up-page/
-parent: "pages-how-to-configure-list"
 description: "Describes how to configure a list of items and show their details on a pop-up page in Mendix Studio."
 weight: 10
 tags: ["studio", "pages", "list", "list view", "how to"]

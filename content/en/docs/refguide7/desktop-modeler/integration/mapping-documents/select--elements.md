@@ -1,7 +1,6 @@
 ---
 title: "Select Elements"
 url: /refguide7/select--elements/
-parent: "mapping-documents"
 aliases:
     - /refguide7/Select++Elements.html
     - /refguide7/Select++Elements

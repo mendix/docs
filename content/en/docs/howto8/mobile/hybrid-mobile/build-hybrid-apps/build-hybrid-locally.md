@@ -1,7 +1,6 @@
 ---
 title: "Build a Mendix Hybrid App Locally"
 url: /howto8/mobile/build-hybrid-locally/
-parent: "build-hybrid-apps"
 weight: 9
 tags: ["mobile", "deploy", "hybrid", "local"]
 ---

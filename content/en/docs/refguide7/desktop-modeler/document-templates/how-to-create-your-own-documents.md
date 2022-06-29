@@ -1,7 +1,6 @@
 ---
 title: "Creating Your Own Documents"
 url: /refguide7/how-to-create-your-own-documents/
-parent: "document-templates"
 description: "This documentation will give you insight into creating documents with Mendix."
 tags: ["Document", "Generate", "Word", "PDF"]
 ---

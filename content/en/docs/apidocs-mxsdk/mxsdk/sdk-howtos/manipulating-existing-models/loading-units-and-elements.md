@@ -1,7 +1,6 @@
 ---
 title: "Work with Load Units & Elements"
 url: /apidocs-mxsdk/mxsdk/loading-units-and-elements/
-parent: "manipulating-existing-models"
 ---
 
 After finding your unit or element you have to obtain it in its fully-loaded form to be able to change it, or to analyze the information which is not available in just the interface. Changing an element in interface form will result in an exception being thrown.

@@ -1,7 +1,6 @@
 ---
 title: "Assert Data Grid Rows"
 url: /addons/ats-addon/ht-two-assert-datagrid-rows/
-parent: "ht-two"
 description: "Describes how to assert data grid rows with the **Find/Assert DataGrid Row** action."
 tags: ["ATS", "testing"]
 ---

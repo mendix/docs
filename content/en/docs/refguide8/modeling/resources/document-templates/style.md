@@ -1,7 +1,6 @@
 ---
 title: "Style"
 url: /refguide8/style/
-parent: "document-templates"
 tags: ["studio pro"]
 ---
 

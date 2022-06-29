@@ -1,7 +1,6 @@
 ---
 title: "Performance Recorder"
 url: /addons/apd-addon/rg-two-recorder/
-parent: "rg-two-apm"
 ---
 
 ## 1 Introduction

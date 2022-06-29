@@ -1,7 +1,6 @@
 ---
 title: "Dashboard"
 url: /addons/apd-addon/rg-one-dashboard/
-parent: "rg-one-apm"
 ---
 The Application Performance Monitor (APM) dashboard is the home screen of APM:
 

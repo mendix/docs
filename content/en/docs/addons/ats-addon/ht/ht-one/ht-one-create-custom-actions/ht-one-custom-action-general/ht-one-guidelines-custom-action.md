@@ -1,7 +1,6 @@
 ---
 title: "Guidelines for Creating a Custom Action"
 url: /addons/ats-addon/ht-one-guidelines-custom-action/
-parent: "ht-one-custom-action-general"
 ---
 
 ## 1 Introduction

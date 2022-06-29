@@ -1,7 +1,6 @@
 ---
 title: "Microflows in the Mendix Metamodel"
 url: /apidocs-mxsdk/mxsdk/microflows-metamodel/
-parent: "understanding-the-metamodel"
 weight: 4
 ---
 

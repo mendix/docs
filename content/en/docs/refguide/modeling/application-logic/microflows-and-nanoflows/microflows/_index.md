@@ -1,7 +1,6 @@
 ---
 title: "Microflows"
 url: /refguide/microflows/
-parent: "microflows-and-nanoflows"
 weight: 10
 description: "Presents an overview of all the elements that can be used in a microflow."
 tags: ["studio pro"]

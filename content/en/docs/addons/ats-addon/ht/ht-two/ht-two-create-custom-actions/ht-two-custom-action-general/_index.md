@@ -1,7 +1,6 @@
 ---
 title: "General"
 url: /addons/ats-addon/ht-two-custom-action-general/
-parent: "ht-two-create-custom-actions"
 ---
 
 All the necessary information for the Create Custom Action how-to's is found here:

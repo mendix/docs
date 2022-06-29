@@ -1,7 +1,6 @@
 ---
 title: "Task Queue"
 url: /refguide/task-queue/
-parent: "resources"
 weight: 85
 description: "Concepts and usage of the task queue"
 tags: ["task queue", "process queue", "parallel", "scheduling", "microflow"]

@@ -1,7 +1,6 @@
 ---
 title: "1.5"
 url: /releasenotes/add-ons/ats-1.5/
-parent: "ats-1"
 weight: 100
 ---
 

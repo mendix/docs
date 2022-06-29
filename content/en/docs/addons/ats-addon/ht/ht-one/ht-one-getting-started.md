@@ -1,7 +1,6 @@
 ---
 title: "Get Started"
 url: /addons/ats-addon/ht-one-getting-started/
-parent: "ht-one"
 weight: 1
 description: "Describes the initial steps for automatically testing your apps using ATS."
 tags: ["ATS", "testing"]

@@ -1,7 +1,6 @@
 ---
 title: "Assert CKEditor Value"
 url: /addons/ats-addon/rg-one-assert-ckeditor-value/
-parent: "rg-one-ckeditor"
 ---
 
 ## 1 Description

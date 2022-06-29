@@ -1,7 +1,6 @@
 ---
 title: "Navigation"
 url: /refguide8/navigation/
-parent: "project"
 weight: 20
 description: "Describes the concept of navigation in apps and the properties of a profile."
 tags: ["studio pro", "navigation"]

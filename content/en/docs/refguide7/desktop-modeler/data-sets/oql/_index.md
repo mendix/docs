@@ -1,7 +1,6 @@
 ---
 title: "OQL"
 url: /refguide7/oql/
-parent: "data-sets"
 ---
 
 

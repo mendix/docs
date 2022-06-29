@@ -1,7 +1,6 @@
 ---
 title: "Build Widgets with XML"
 url: /howto8/extensibility/use-xml-widget/
-parent: "widget-development"
 tags: ["xml", "widget"]
 ---
 

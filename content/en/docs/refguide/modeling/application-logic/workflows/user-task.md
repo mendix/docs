@@ -1,7 +1,6 @@
 ---
 title: "User Task"
 url: /refguide/user-task/
-parent: "workflows"
 weight: 15
 tags: ["workflow", "workflows", "user task", "task", "Studio Pro"]
 ---

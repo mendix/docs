@@ -1,7 +1,6 @@
 ---
 title: "Add date function calls"
 url: /refguide7/add-date-function-calls/
-parent: "expressions"
 ---
 
 

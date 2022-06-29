@@ -1,7 +1,6 @@
 ---
 title: "DataGrid, TemplateGrid, and ListView"
 url: /addons/ats-addon/rg-one-datagrid-templategrid-listview/
-parent: "rg-one-mendix-actions"
 ---
 
 This section contains these documents:

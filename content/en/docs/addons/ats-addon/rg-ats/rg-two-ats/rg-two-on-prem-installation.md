@@ -1,7 +1,6 @@
 ---
 title: "On-Premises Installation"
 url: /addons/ats-addon/rg-two-on-prem-installation/
-parent: "rg-two-ats"
 description: "Describes installation requirements."
 tags: ["ats", "installation", "requirements"]
 ---

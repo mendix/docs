@@ -1,7 +1,6 @@
 ---
 title: "Get Index"
 url: /addons/ats-addon/rg-one-get-index/
-parent: "rg-one-input"
 ---
 
 ## 1 Description

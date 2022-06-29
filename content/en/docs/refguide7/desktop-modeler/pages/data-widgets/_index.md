@@ -1,7 +1,6 @@
 ---
 title: "Data Widgets"
 url: /refguide7/data-widgets/
-parent: "pages"
 ---
 
 

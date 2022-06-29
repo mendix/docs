@@ -1,7 +1,6 @@
 ---
 title: "Test Run"
 url: /addons/ats-addon/rg-one-test-run/
-parent: "rg-one-test-dev"
 ---
 
 To run an existing test, you have to open the test case or test suite by clicking its name in the repository.

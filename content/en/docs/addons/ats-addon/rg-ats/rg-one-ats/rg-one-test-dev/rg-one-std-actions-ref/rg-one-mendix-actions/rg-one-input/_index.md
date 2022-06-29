@@ -1,7 +1,6 @@
 ---
 title: "Input"
 url: /addons/ats-addon/rg-one-input/
-parent: "rg-one-mendix-actions"
 ---
 
 This section contains these documents:

@@ -1,7 +1,6 @@
 ---
 title: "Get Current Page Title"
 url: /addons/ats-addon/rg-one-get-current-page-title/
-parent: "rg-one-system"
 ---
 
 ## 1 Description

@@ -1,7 +1,6 @@
 ---
 title: "XPath Contains"
 url: /refguide8/xpath-contains/
-parent: "xpath-constraint-functions"
 tags: ["studio pro"]
 ---
 

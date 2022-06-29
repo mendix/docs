@@ -1,7 +1,6 @@
 ---
 title: "Project Settings"
 url: /refguide8/project-settings/
-parent: "project"
 weight: 10
 description: "Settings which apply to the project app as a whole."
 tags: ["project", "app", "configuration", "runtime", "Studio Pro", "languages", "certificate", "theme", "hashing", "hashing algorithm"]

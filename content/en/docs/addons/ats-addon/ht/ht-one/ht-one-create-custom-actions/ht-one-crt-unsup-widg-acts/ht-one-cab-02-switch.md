@@ -1,7 +1,6 @@
 ---
 title: "CAB.02 - Switch"
 url: /addons/ats-addon/ht-one-cab-02-switch/
-parent: "ht-one-crt-unsup-widg-acts"
 description: "This how-to explains step by step how to create an Unsupported Widget action for the Mendix switch widget."
 tags: ["ATS", "testing"]
 ---

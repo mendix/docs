@@ -1,7 +1,6 @@
 ---
 title: "User Roles"
 url: /refguide/user-roles/
-parent: "app-security"
 weight: 10
 tags: ["studio pro", "user role", "app security", "security"]
 aliases:

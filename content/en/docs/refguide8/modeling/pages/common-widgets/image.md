@@ -1,7 +1,6 @@
 ---
 title: "Image"
 url: /refguide8/image/
-parent: "common-widgets"
 weight: 20
 tags: ["studio pro", "image", "image widget"]
 aliases:

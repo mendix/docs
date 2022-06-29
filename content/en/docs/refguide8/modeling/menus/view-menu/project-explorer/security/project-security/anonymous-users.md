@@ -1,7 +1,6 @@
 ---
 title: "Anonymous Users"
 url: /refguide8/anonymous-users/
-parent: "project-security"
 weight: 40
 tags: ["studio pro", "anonymous users", "project security", "security"]
 ---

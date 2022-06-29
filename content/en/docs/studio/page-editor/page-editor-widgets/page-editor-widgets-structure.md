@@ -2,7 +2,6 @@
 
 title: "Structure"
 url: /studio/page-editor-widgets-structure/
-parent: "page-editor-widgets"
 description: "Describes Structure widgets in Mendix Studio."
 weight: 60
 tags: ["studio", "page editor", "layout", "layout widgets", "structure widgets"]

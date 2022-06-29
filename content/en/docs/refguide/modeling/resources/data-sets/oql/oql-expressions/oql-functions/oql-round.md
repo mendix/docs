@@ -1,7 +1,6 @@
 ---
 title: "OQL ROUND"
 url: /refguide/oql-round/
-parent: "oql-functions"
 tags: ["studio pro"]
 ---
 

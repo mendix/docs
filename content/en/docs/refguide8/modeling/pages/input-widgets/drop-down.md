@@ -1,7 +1,6 @@
 ---
 title: "Drop-Down"
 url: /refguide8/drop-down/
-parent: "input-widgets"
 weight: 30
 tags: ["Drop-down", "input", "page", "widget", "enumeration", "studio pro"]
 aliases:

@@ -1,7 +1,6 @@
 ---
 title: "Select app service"
 url: /refguide7/select-app-service/
-parent: "consumed-app-services"
 ---
 
 {{% alert color="info" %}}

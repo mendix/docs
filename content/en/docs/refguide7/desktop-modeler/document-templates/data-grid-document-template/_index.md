@@ -1,7 +1,6 @@
 ---
 title: "Data Grid (Document Template)"
 url: /refguide7/data-grid-document-template/
-parent: "document-templates"
 aliases:
     - /refguide7/Data+Grid+(document+template).html
     - /refguide7/data-grid-(document-template).html

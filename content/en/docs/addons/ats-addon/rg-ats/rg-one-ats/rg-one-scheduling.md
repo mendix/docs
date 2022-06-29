@@ -1,7 +1,6 @@
 ---
 title: "Scheduling"
 url: /addons/ats-addon/rg-one-scheduling/
-parent: "rg-one-ats"
 ---
 
 Scheduling allows to plan the execution of test cases and test suites at defined dates. You can add test cases and test suites by clicking the respective button.

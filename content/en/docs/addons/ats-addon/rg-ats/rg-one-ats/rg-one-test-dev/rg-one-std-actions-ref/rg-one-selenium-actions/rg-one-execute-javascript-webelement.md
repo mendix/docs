@@ -1,7 +1,6 @@
 ---
 title: "Execute Javascript WebElement"
 url: /addons/ats-addon/rg-one-execute-javascript-webelement/
-parent: "rg-one-selenium-actions"
 ---
 
 ## 1 Description

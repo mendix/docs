@@ -1,7 +1,6 @@
 ---
 title: "XPath Ends-With"
 url: /refguide8/xpath-ends-with/
-parent: "xpath-constraint-functions"
 tags: ["studio pro"]
 ---
 

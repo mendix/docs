@@ -1,7 +1,6 @@
 ---
 title: "Model Changes When Security Is Enabled in Studio"
 url: /refguide8/studio-security-enabled/
-parent: "security"
 description: "Describes checks and changes in the project when security is enabled in Mendix Studio."
 tags: ["studio pro", "security", "studio"]
 ---

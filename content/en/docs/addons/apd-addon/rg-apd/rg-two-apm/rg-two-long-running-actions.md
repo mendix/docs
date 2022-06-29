@@ -1,7 +1,6 @@
 ---
 title: "Long-Running Actions"
 url: /addons/apd-addon/rg-two-long-running-actions/
-parent: "rg-two-apm"
 ---
 
 After clicking the **Long running microflow** indicator, a pop-up window with long-running microflows will be displayed.

@@ -1,7 +1,6 @@
 ---
 title: "Microflow Properties"
 url: /refguide7/microflow/
-parent: "microflows"
 tags: ["microflow", "entity access"]
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Navigation Before Mendix Version 7.2"
 url: /refguide7/navigation-before-72/
-parent: "project"
 description: "Describes the concept of navigation in apps and the properties of a profile for Mendix versions 7.0 and 7.1."
 ---
 

@@ -21,11 +21,11 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ### Fixes
 
-* We introduced improvements in the performance of the Feedback API
+* We introduced improvements in the performance of the Feedback API.
 
 ### New Features
 
-* We redesigned the General Settings section to make it more intuitive and user friendly
+* We redesigned the General Settings section to make it more intuitive and user friendly.
 * We prepared the integration of Studio Pro with our new project management tool, Epics (coming soon!).
 
 ### June 16th, 2022

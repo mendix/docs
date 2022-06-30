@@ -32,7 +32,7 @@ For more information on roles, see [App Roles](/developerportal/collaborate/app-
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* To leave, delete, or deactivate an app, have the **Scrum Master** role on your team (or a custom role with the **App Settings** permission)
+* To delete, or deactivate an app, have the **Scrum Master** role on your team (or a custom role with the **App Settings** permission)
 
 ## 3 Leaving & Deleting (or Deactivating) an App
 
@@ -46,21 +46,17 @@ If you want to leave and delete your app, follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com), click **Apps** in the top menu bar, and select the app that you want to leave.
 2. In the app's sidebar menu, select **Collaborate** > **General Settings**.
-3.  In the upper-right corner of that page, click **Leave app**:
+3. At the  bottom of the General tab, click **Leave App**:
 
 	{{< figure src="/attachments/developerportal/collaborate/general-settings/leave-delete-app/leave-app.png" >}} 
 
-4.  Confirm leaving the app by clicking **Yes**. The pop-up window states the app will be deactivated if you are the only/last member of the team. If you leave an app that still has team members, the app will still exist in the company and it will be available for other team members. If you want to return to the team, other team members can invite you to the app again.
-5.  If the app will be made inaccessible upon your leaving, a final confirmation is necessary:
+4. If you leave an app that still has team members, you will leave the app directly after clicking **Leave App**. The app will still exist in the company and it will be available for other team members. If you want to return to the team, other team members can invite you to the app again.
+5. If you are the only/last member of the team, you will get a final confirmation message. The pop-up window states the app will be **permanently deleted**, when leaving as the last member. Confirm leaving and deleting the app by clicking **Leave and Delete App**. This change cannot be reverted and will be fully deleted from your company.
 
-	* Click **Continue** to just leave your app 
-		* If you are the only team member of the app, clicking **Continue** allows you to leave the app and deactivates the app
-		* Note that because a deactivated app will still exist in the company, only a [Mendix Admin](/developerportal/control-center/) can re-activate the app and invite members to it
-	* Click **Continue and delete app** to leave and fully delete the app from your company
 
 ## 4 Alternative Method
 
-If you are the only team member of an app, you can also delete it directly from your list of apps. For more information, see [My Apps](/developerportal/#my-apps).
+If you are the only team member of an app, you can also leave and delete it directly from your list of apps. For more information, see [My Apps](/developerportal/#my-apps).
 
 ## 5 Read More
 

@@ -29,7 +29,7 @@ The [Administration](https://marketplace.mendix.com/link/component/23513) module
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](https://docs.mendix.com/appstore/general/app-store-content/) to import the Administrator module into your app.
 
-## 3 Using Administration Module with Mendix SSO
+## 3 Using the Administration Module with Mendix SSO
 
 To use the Administration module with Mendix SSO, perform the following steps:
 

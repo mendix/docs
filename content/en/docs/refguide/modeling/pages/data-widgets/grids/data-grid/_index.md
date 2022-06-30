@@ -15,6 +15,8 @@ A data grid shows a list of objects in a table format. For example, a data grid 
 {{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/data-grid/data-grid.png" >}}
 Using controls provided by the data grid you can browse, search, and edit those objects.
 
+Any changes made to an object are visible in all widgets. This is because changes are stored globally in the client. See [Object Activities](/refguide/object-activities/) for more information.
+
 ## 2 Components
 
 A data grid contains the following components: 

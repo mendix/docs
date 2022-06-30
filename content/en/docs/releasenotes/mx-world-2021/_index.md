@@ -88,7 +88,7 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | --- | --- |
 | Studio Pro modernization | Released for GA on [Sep 28th, 2021](/releasenotes/studio-pro/9.6/#studio-pro-new-design) |
 | Team Server Git (Mendix Cloud) | Released for GA on [Mar 29th, 2022](/releasenotes/studio-pro/9.12//#team-server-git) |
-| BYO Git (Bring Your Own) | Currently in Public Beta<br/>GA: Jun 2022 |
+| BYO Git (Bring Your Own) | Currently in Public Beta<br/>GA: Apr 2023 |
 | Studio Pro dark theme | Public Beta: Mar 2022 |
 
 ## 9 Data Hub 2.0

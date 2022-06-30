@@ -46,6 +46,10 @@ To configure this module, follow these steps:
 	* `Post-deployment` – after deploying, you have to set up your email settings and insert your own email templates using the newly created navigation items under **Administrator**
 6. Go to `MxObjects_Overview` and synchronize the objects. Make sure you do this every time you have added new objects.
 
+### 2.1 Security
+
+For security resons it is highly recommended for the **Server configuration** to set the **Use SSL** option in combination with **Use SSL check server identity**.
+
 ## 3 Read More
 
 * [Sending Email](/developerportal/deploy/sending-email/)

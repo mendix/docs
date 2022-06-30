@@ -13,27 +13,77 @@ aliases:
 #The anchor #managing-app-users below is mapped from App > General > Settings > Manage App Users and the Mendix SSO module, so it should not be removed or changed.
 ---
 
-## 1 Introduction
+## Introduction
 
-The **General** settings page presents an overview of your app with the following details:
+The **General Settings** page presents an overview of your app with the following tabs:
 
-* A **Description** of the app
-* The [App Contact](/developerportal/collaborate/app-roles/#app-contact) and [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) for the app
-* The **App ID**
+* General
+* Cloud Settings
+* Access Management
+* API Keys
+* Stories
+* Webhooks
 
 {{< figure src="/attachments/developerportal/collaborate/general-settings/general-settings.png" width="800" >}}
 
-The sections below describe the actions you can perform on this page.
-
-## 2 Editing Cloud Settings
-
-Click **Cloud Settings** to select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
 
 {{% alert color="info" %}}
-Only users with the **App Settings** permission can change cloud platforms. For default roles, only the **Scrum Master** has this permission. For more details, see the [Team Roles](/developerportal/collaborate/app-roles/#team-roles) section of *App Roles*.
+Only users with the **App Settings** permission can see the tabs below. For default roles, only the **Scrum Master** has this permission. For more details, see the [Team Roles](/developerportal/collaborate/app-roles/#team-roles) section of *App Roles*.
+{{% /alert %}}
+
+* Cloud Settings
+* API Keys
+* Stories
+* Webhooks
+
+
+## 1 General
+
+In this tab you can find the following details:
+
+* A **Description** of the app
+* The **App ID**
+* The [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) for the app
+* **Danger Zone** 
+
+{{% alert color="info" %}}
+Only users with the **App Settings** permission can deactivate or delete an app.
+{{% /alert %}}
+
+In the Danger Zone you can:
+* Leave the app, by clicking **Leave App**. 
+* Deactivate the app, by clicking **Deactivate App**
+* Delete the app, by clicking **Delete App**
+
+For details on leaving, deleting, and deactivating an app, see [How to Leave & Delete an App](/developerportal/collaborate/leave-delete-app/).
+
+
+## 2 Editing App Info {#editing}
+
+{{% alert color="info" %}}
+Only users with the **App Settings** permission can edit the application information.
+{{% /alert %}}
+
+Click the **Pencil** to edit the following details:
+
+* The **Name** of the app
+* The **Description** of the app
+
+By hovering over the **Image** you can edit and upload a new image.
+
+{{< figure src="/attachments/developerportal/collaborate/general-settings/edit.png"   width="650"  >}}
+
+
+## 3 Cloud Settings
+
+Click the **Cloud Settings** tab to select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
+
+{{% alert color="info" %}}
+Only users with the **App Settings** permission can change cloud platforms.
 {{% /alert %}}
 
 {{< figure src="/attachments/developerportal/collaborate/general-settings/cloudsettings.png"   width="800"  >}}
+
 
 If you select a non-Mendix cloud platform like SAP, you will be redirected to a page to complete the setup. If you select Mendix Cloud, no additional setup is needed.
 
@@ -42,17 +92,18 @@ Specific steps for configuring different cloud platforms are provided here:
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
 * [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/)
 * [IBM Cloud](/developerportal/deploy/ibm-cloud/)
-* [On-Premises](/developerportal/deploy/on-premises-design/)
+* [Mendix Private Cloud](/developerportal/deploy/private-cloud/)
 
-## 3 Managing App Users {#managing-app-users}
 
-Click **Manage App Users** to manage and invite App Users, who are end-users who can access the deployed app on specific environments to use it, test it, and provide feedback.
+## 4 Access Management {#access-management}
+
+Click the **Access Management** tab to manage and invite App Users, who are end-users who can access the deployed app on specific environments to use it, test it, and provide feedback.
 
 {{% alert color="info" %}}
 You can also manage app users from Studio, by clicking **Manage Users** on the **Settings > Roles and Permissions** page within Studio.
 {{% /alert %}}
 
-After clicking **Manage App Users**, you will see a list of environments for your app on the **App User Management** page. You will only be able to see environments that satisfy these requirements:
+Here you will see a list of environments for your app. You will only be able to see environments that satisfy these requirements:
 
 * [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/) is implemented:
 	* In Studio, SSO is automatically implemented for your app by enabling security for your app – for details, see the [Security Overview](/studio/settings-security/#overview) section of *Security, Roles & Permissions*
@@ -62,9 +113,9 @@ After clicking **Manage App Users**, you will see a list of environments for you
 
 {{< figure src="/attachments/developerportal/collaborate/general-settings/app-user-management-environments.png"  width="400">}}
 
-### 3.1 Manage Users
+### 4.1 Manage Users
 
-When you click **Manage Users** on for your environment, you will see a page with a list of the current App Users you can remove or edit:
+When you click **Manage Users** for your environment, you will see a popup with a list of the current App Users you can remove or edit:
 
 {{< figure src="/attachments/developerportal/collaborate/general-settings/app-user-management-users.png"   width="800"  >}}
 
@@ -76,9 +127,9 @@ To edit an App User's roles, click **Edit** by their name. Permissions for these
 If an App User has been granted access to an app environment through a [Group](/developerportal/control-center/#groups), only a Mendix Admin can remove them from that environment (by removing them from that group) or edit the roles granted by that group policy.
 {{% /alert %}}
 
-### 3.2 Invite Users
+### 4.2 Invite Users
 
-To invite new App Users to your app, click **Invite Users** on the **App User Management** page or on the page with a list of current App Users and follow these steps:
+To invite new App Users to your app, click **Invite Users** for that environment or via the **Manage Users** and follow these steps:
 
 1. Enter the email addresses of the end-users you want to invite.
 2.  Click **Include your app team** to include invitations to all the members of your [Team](/developerportal/collaborate/team/). This may be useful, because people invited to join your team are not added as App Users automatically.
@@ -91,7 +142,8 @@ The invitee will receive an email asking them to authorize access to their Mendi
 
 After they provide authorization, they will be brought to your deployed app.
 
-## 4 API Keys {#api-keys}
+
+## 5 API Keys {#api-keys}
 
 In **API Keys**, there is an overview of the API keys created for your app with the following information:
 
@@ -101,7 +153,7 @@ In **API Keys**, there is an overview of the API keys created for your app with 
 
 {{< figure src="/attachments/developerportal/collaborate/general-settings/keys.png"   width="800"  >}}
 
-To create a new app API key, click **Create API Key**  and follow these steps:
+To create a new app API key, click **Create New API Key**  and follow these steps:
 
 1.  Fill in the **API key name**.	
 2.  Click **Generate API Key** to be able to use the app API key.
@@ -114,31 +166,24 @@ You use these API keys to authenticate requests to the [Stories API](/apidocs-mx
 
 Click **Revoke** to delete an app API key.
 
-## 5 Editing App Info {#editing}
+
+## 6 Stories {#stories}
+
+Click the **Stories** tab to select the stories & planning tool to be used by your app. By default Mendix Stories are enabled for your app. 
+
+**More info coming soon!**
+
+
+{{< figure src="/attachments/developerportal/collaborate/general-settings/cloudsettings.png"   width="800"  >}}
+
+
+## 7 Managing Webhooks {#webhooks}
+
+Click the **Manage Webhooks** tab to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if [CLEVR](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app in the Developer Portal are then sent to that URL.
 
 {{% alert color="info" %}}
-Only users with the **App Settings** permission can edit the application information.
+Only users with the **App Settings** permission can manage webhooks.
 {{% /alert %}}
-
-Click **Edit App Info** to edit the following details:
-
-* The name and logo of the app
-* The **Description** of the app
-* The **App Contact**
-
-{{< figure src="/attachments/developerportal/collaborate/general-settings/edit.png"   width="650"  >}}
-
-For details on the **Deactivate App**, **Leave App**, and **Delete App** options, see [How to Leave & Delete an App](/developerportal/collaborate/leave-delete-app/).
-
-## 6 Managing Webhooks {#webhooks}
-
-Click **Manage Webhooks** to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if [CLEVR](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app in the Developer Portal are then sent to that URL.
-
-{{% alert color="info" %}}
-Only [Mendix Admins](/developerportal/control-center/#company) or users with the **App Settings** permission can manage webhooks.
-{{% /alert %}}
-
-On the **Webhooks** page, you can add a new webhook and edit or delete existing webhooks:
 
 {{< figure src="/attachments/developerportal/collaborate/general-settings/webhooks-list.png"   width="800"  >}}
 
@@ -160,9 +205,6 @@ To delete an existing webhook, click **Delete**.
 For details on the technical configuration of webhooks, see [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints/) in the *API Documentation*.
 {{% /alert %}}
 
-## 7 Leaving the App
-
-To leave the app, click **Leave App**. For details on leaving, deleting, and deactivating an app, see [How to Leave & Delete an App](/developerportal/collaborate/leave-delete-app/).
 
 ## 8 Read More
 

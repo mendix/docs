@@ -25,6 +25,10 @@ The following are the object activities you can use in your microflow or nanoflo
 * [Retrieve](/refguide/retrieve/) – gets one or more objects of an entity
 * [Rollback object](/refguide/rollback-object/) – undoes uncommitted changes made to an object
 
+{{% alert color="info" %}}
+Any changes made to an object are visible in all widgets. This is because changes are stored globally in the client.
+{{% /alert %}}
+
 ## 2 Read More
 
 * [Activities](/refguide/activities/)

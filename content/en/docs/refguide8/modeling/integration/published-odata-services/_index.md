@@ -4,8 +4,7 @@ url: /refguide8/published-odata-services/
 parent: "integration"
 tags: ["studio pro"]
 aliases:
-    - /refguide8/consumed-odata-services.html
-    - /refguide8/consumed-odata-services
+    - /refguide8/published-odata-services.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

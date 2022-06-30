@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "imap", "pop3", "email", "encrypt
 
 ## 1 Introduction
 
-The **Email Connector** allows you to send and receive emails on your own email server, and adds new features like sending signed and encrypted emails. It is available for Studio Pro [8.18.18](/releasenotes/studio-pro/8.18/) and above.
+The [Email Connector](https://marketplace.mendix.com/link/component/120739) allows you to send and receive emails on your own email server, and adds new features like sending signed and encrypted emails. It is available for Studio Pro [8.18.18](/releasenotes/studio-pro/8.18/) and above.
 
 ### 1.1 Features
 
@@ -54,7 +54,7 @@ If you already have these widgets in your app, and they are not up-to-date, you 
 
 ## 2 Setup in Studio Pro {#setup}
 
-After you install the module, configure the following in Studio Pro:
+After you install the [Email Connector](https://marketplace.mendix.com/link/component/120739), configure the following in Studio Pro:
 
 1. Provide a value for the **EncryptionKey** constant available under **USE_ME** folder for password storage.
 2. Launch the UI by using the **EmailConnector_OverviewPage** in the **USE_ME** folder.

@@ -48,7 +48,7 @@ The Technical Contact manages the technical deployment settings of the app. The 
 The responsibilities of a Technical Contact depend on whether you are hosting your app in the Mendix Cloud or on premises.
 
 {{% alert color="info" %}}
-You should provide Technical Contact with the Scrum Master role. Because the App Contact will be the contact for regular users, they will thus be able to perform app operations on behalf of all Scrum Masters.
+You should provide Technical Contact with the Scrum Master role. Because the Technical Contact will be the contact for regular users, they will thus be able to perform app operations on behalf of all Scrum Masters.
 {{% /alert %}}
 
 ### 4.1 Mendix Cloud Responsibilities

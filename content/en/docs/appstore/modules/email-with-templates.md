@@ -48,9 +48,16 @@ To configure this module, follow these steps:
 
 ### 2.1 Security
 
-For security reasons, it is highly recommended for the **Server configuration** to set the **Use SSL** option in combination with **Use SSL check server identity**.
+For security reasons, it is highly recommended for the **Server configuration** to set the **Use SSL** option in combination with **Use SSL check server identity**:
+
+*  If you incorporate the **Administration** snippet, make the configuration on the **Configuration** tab:
+
+    {{< figure src="/attachments/appstore/modules/email-with-templates/administration-snippet.png" >}}
+
+*  If you set up the module using the wizard, make the configuration in the wizard:
+
+    {{< figure src="/attachments/appstore/modules/email-with-templates/module-setup-step1.png" >}}
 
 ## 3 Read More
 
 * [Sending Email](/developerportal/deploy/sending-email/)
-

@@ -25,7 +25,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3. Setting up Language Change Mechanism {#set-up}
 
-We would be using 2 actions in a nanoflow mainly to set up a language change mechanism. 
+We would be using 2 nanoflow actions mainly to set up a language change mechanism. 
 
 {{% alert color="info" %}}
 

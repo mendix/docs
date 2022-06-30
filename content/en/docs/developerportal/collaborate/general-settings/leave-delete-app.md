@@ -32,7 +32,7 @@ For more information on roles, see [App Roles](/developerportal/collaborate/app-
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* To delete, or deactivate an app, have the **Scrum Master** role on your team (or a custom role with the **App Settings** permission)
+* To delete or deactivate an app, get the **Scrum Master** role in your team or a custom role with the **App Settings** permission
 
 ## 3 Leaving & Deleting (or Deactivating) an App
 
@@ -45,13 +45,14 @@ There are some important points to understand when you want to leave and/or dele
 If you want to leave and delete your app, follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com), click **Apps** in the top menu bar, and select the app that you want to leave.
+
 2. In the app's sidebar menu, select **Collaborate** > **General Settings**.
-3. At the  bottom of the General tab, click **Leave App**:
 
-	{{< figure src="/attachments/developerportal/collaborate/general-settings/leave-delete-app/leave-app.png" >}} 
+3. At the bottom of the **General** tab, click **Leave App**.
 
-4. If you leave an app that still has team members, you will leave the app directly after clicking **Leave App**. The app will still exist in the company and it will be available for other team members. If you want to return to the team, other team members can invite you to the app again.
-5. If you are the only/last member of the team, you will get a final confirmation message. The pop-up window states the app will be **permanently deleted**, when leaving as the last member. Confirm leaving and deleting the app by clicking **Leave and Delete App**. This change cannot be reverted and will be fully deleted from your company.
+If you leave an app that still has team members, you will leave the app directly after clicking **Leave App**. The app will still exist in the company, and it will be available for other team members. If you want to return to the team, other team members can invite you to the app again.
+
+If you are the only/last member of the team, you will get a final confirmation message. The pop-up window states the app will be **permanently deleted**, when leaving as the last member. Confirm leaving and deleting the app by clicking **Leave and Delete App**. This change cannot be reverted and will be fully deleted from your company.
 
 
 ## 4 Alternative Method

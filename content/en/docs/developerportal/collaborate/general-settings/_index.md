@@ -13,76 +13,59 @@ aliases:
 #The anchor #managing-app-users below is mapped from App > General > Settings > Manage App Users and the Mendix SSO module, so it should not be removed or changed.
 ---
 
-## Introduction
+## 1 Introduction
 
-The **General Settings** page presents an overview of your app with the following tabs:
+The **General Settings** page presents an overview of your app.
 
-* General
-* Cloud Settings
-* Access Management
-* API Keys
-* Stories
-* Webhooks
-
-{{< figure src="/attachments/developerportal/collaborate/general-settings/general-settings.png" width="800" >}}
-
+On the top of page, you can see the following items: the image of the app, the app name, and the company that owns the app. 
 
 {{% alert color="info" %}}
-Only users with the **App Settings** permission can see the tabs below. For default roles, only the **Scrum Master** has this permission. For more details, see the [Team Roles](/developerportal/collaborate/app-roles/#team-roles) section of *App Roles*.
+Only users with the **App Settings** permission can edit these items. For default roles, only the **Scrum Master** has this permission. For more details, see the [Team Roles](/developerportal/collaborate/app-roles/#team-roles) section of *App Roles*.
 {{% /alert %}}
 
-* Cloud Settings
-* API Keys
-* Stories
-* Webhooks
+{{< figure src="/attachments/developerportal/collaborate/general-settings/general-information.png"  >}}
+
+The **General Settings** page contains the following tabs:
+
+* **General**
+* **Cloud Settings** *
+* **Access Management**
+* **API Keys** *
+* **Stories** *
+* **Webhooks** *
+
+{{% alert color="info" %}}
+Tabs above with an asterisk (*) are only available for users with the **App Settings** permission.
+{{% /alert %}}
 
 
-## 1 General
+## 2 General
 
-In this tab you can find the following details:
+In this tab, you can find the following items:
 
-* A **Description** of the app
-* The **App ID**
-* The [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) for the app
-* **Danger Zone** 
+* **Description** of the app
+* **App ID**
+
+* [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) of the app
+* **Danger Zone**
+  * **Leave this app**
+  * **Deactivate this app**
+  * **Delete this app**
 
 {{% alert color="info" %}}
 Only users with the **App Settings** permission can deactivate or delete an app.
 {{% /alert %}}
 
-In the Danger Zone you can:
-* Leave the app, by clicking **Leave App**. 
-* Deactivate the app, by clicking **Deactivate App**
-* Delete the app, by clicking **Delete App**
-
 For details on leaving, deleting, and deactivating an app, see [How to Leave & Delete an App](/developerportal/collaborate/leave-delete-app/).
-
-
-## 2 Editing App Info {#editing}
-
-{{% alert color="info" %}}
-Only users with the **App Settings** permission can edit the application information.
-{{% /alert %}}
-
-Click the **Pencil** to edit the following details:
-
-* The **Name** of the app
-* The **Description** of the app
-
-By hovering over the **Image** you can edit and upload a new image.
-
-{{< figure src="/attachments/developerportal/collaborate/general-settings/edit.png"   width="650"  >}}
 
 
 ## 3 Cloud Settings
 
-Click the **Cloud Settings** tab to select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
+On the **Cloud Settings** tab, you can select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
 
 {{% alert color="info" %}}
 Only users with the **App Settings** permission can change cloud platforms.
 {{% /alert %}}
-
-{{< figure src="/attachments/developerportal/collaborate/general-settings/cloudsettings.png"   width="800"  >}}
 
 
 If you select a non-Mendix cloud platform like SAP, you will be redirected to a page to complete the setup. If you select Mendix Cloud, no additional setup is needed.
@@ -97,13 +80,17 @@ Specific steps for configuring different cloud platforms are provided here:
 
 ## 4 Access Management {#access-management}
 
-Click the **Access Management** tab to manage and invite App Users, who are end-users who can access the deployed app on specific environments to use it, test it, and provide feedback.
+On the **Access Management** tab, you can manage and invite app users. App users are end-users who can access the deployed app on specific environments. They can use and test your deployed app, and provide feedback.
+
+To manage users or invite users for an app deployed on a specific environment, click **Mange Users** or **Invite Users** for that environment. For more information, see the [Mange Users](#manage-users) and [Invite Users](#invite-users) section below.
+
+{{< figure src="/attachments/developerportal/collaborate/general-settings/app-user-management-environments.png"  >}}
 
 {{% alert color="info" %}}
 You can also manage app users from Studio, by clicking **Manage Users** on the **Settings > Roles and Permissions** page within Studio.
 {{% /alert %}}
 
-Here you will see a list of environments for your app. You will only be able to see environments that satisfy these requirements:
+On the tab, you can only see the environments that satisfy these requirements:
 
 * [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/) is implemented:
 	* In Studio, SSO is automatically implemented for your app by enabling security for your app – for details, see the [Security Overview](/studio/settings-security/#overview) section of *Security, Roles & Permissions*
@@ -111,28 +98,24 @@ Here you will see a list of environments for your app. You will only be able to 
 * If you manage user roles from Studio, your app should be published (for more information see the [Managing App Users](/studio/settings-security/#managing-app-users) section of *Security, Roles & Permissions* )
 * Your user role allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles/#user-management) section of *User Roles*)
 
-{{< figure src="/attachments/developerportal/collaborate/general-settings/app-user-management-environments.png"  width="400">}}
+### 4.1 Manage Users {#manage-users}
 
-### 4.1 Manage Users
+When you click **Manage Users** for your environment, a dialog box opens with a list of the current app users you can remove or edit:
 
-When you click **Manage Users** for your environment, you will see a popup with a list of the current App Users you can remove or edit:
+To remove an app user from the environment, click **Remove** by their name.
 
-{{< figure src="/attachments/developerportal/collaborate/general-settings/app-user-management-users.png"   width="800"  >}}
-
-To remove an App User from the environment, click **Remove** by their name.
-
-To edit an App User's roles, click **Edit** by their name. Permissions for these roles (for example, **User** or **Administrator**) correspond to what you have configured for your app's user roles in [App Security](/refguide/app-security/#user-roles) in Mendix Studio Pro or [Roles and Permissions](/studio/settings-security/#roles-and-permissions) in Mendix Studio. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
+To edit an app user's roles, click **Edit** by their name. Permissions for these roles (for example, **User** or **Administrator**) correspond to what you have configured for your app's user roles in [App Security](/refguide/app-security/#user-roles) in Mendix Studio Pro or [Roles and Permissions](/studio/settings-security/#roles-and-permissions) in Mendix Studio. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
 
 {{% alert color="info" %}}
-If an App User has been granted access to an app environment through a [Group](/developerportal/control-center/#groups), only a Mendix Admin can remove them from that environment (by removing them from that group) or edit the roles granted by that group policy.
+If an app user has been granted access to an app environment through a [group](/developerportal/control-center/#groups), only a Mendix Admin can remove them from that environment (by removing them from that group) or edit the roles granted by that group policy.
 {{% /alert %}}
 
-### 4.2 Invite Users
+### 4.2 Invite Users {#invite-users}
 
-To invite new App Users to your app, click **Invite Users** for that environment or via the **Manage Users** and follow these steps:
+To invite new app users to your app, click **Invite Users** for that environment or via the **Manage Users** and follow these steps:
 
 1. Enter the email addresses of the end-users you want to invite.
-2.  Click **Include your app team** to include invitations to all the members of your [Team](/developerportal/collaborate/team/). This may be useful, because people invited to join your team are not added as App Users automatically.
+2.  Click **Include your app team** to include invitations to all the members of your [Team](/developerportal/collaborate/team/). This may be useful, because people invited to join your team are not added as app users automatically.
 3. Click **Add to invitee list**.
 4. Select the role for the App User (for example, **User** or **Administrator**). Permissions for these roles correspond to what you have configured for your app's user roles in [App Security](/refguide/app-security/#user-roles) in Mendix Studio Pro or [Roles and Permissions](/studio/settings-security/#roles-and-permissions) in Mendix Studio. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
 5. Click **Next**.
@@ -169,12 +152,7 @@ Click **Revoke** to delete an app API key.
 
 ## 6 Stories {#stories}
 
-Click the **Stories** tab to select the stories & planning tool to be used by your app. By default Mendix Stories are enabled for your app. 
-
-**More info coming soon!**
-
-
-{{< figure src="/attachments/developerportal/collaborate/general-settings/cloudsettings.png"   width="800"  >}}
+On the **Stories** tab, you can select the stories & planning tool for the app. Once you select, everyone in your team can use the same stories & planning tool for this app. Mendix Stories is selected by default. 
 
 
 ## 7 Managing Webhooks {#webhooks}

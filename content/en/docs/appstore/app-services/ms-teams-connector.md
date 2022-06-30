@@ -204,7 +204,7 @@ Microsoft Teams supports [actionable message cards](https://docs.microsoft.com/e
 1. Go to the [Card Playground](https://messagecardplayground.azurewebsites.net/). This playground contains sample message cards. You can modify the JSON for any sample message card and view the corresponding generated message card on the fly.
 2.  Edit a message card sample as follows:
 
-    1. At the upper-right corner of the page, click **Select Sample** to open the drop-down list. 
+    1. At the upper-left corner of the page, click **Select Sample** to open the drop-down list. 
     2. Below the **Legacy MesssageCard samples** category, select a sample message card.
     
        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/sample-message-cards.png" >}}
@@ -225,7 +225,7 @@ Microsoft Teams supports [actionable message cards](https://docs.microsoft.com/e
        
 ### 4.3 Sending Message Using Microsoft Credentials
 
-Alongside the **Send Message to Webhook** activity, you can also find the **Send Message** activity in the microflow toolbox. You can use the Send Message** activity to send messages with Microflow credentials.
+Alongside the **Send Message to Webhook** activity, you can also find the **Send Message** activity in the microflow toolbox. You can use the **Send Message** activity to send messages with Microflow credentials.
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/activities-in-toolbox.png" >}}
 

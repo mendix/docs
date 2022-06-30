@@ -25,16 +25,16 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3. Setting up Language Change Mechanism {#set-up}
 
-We would be using 2 JavaScript actions mainly to set up a language change mechanism. 
+We would be using 2 actions in a nanoflow mainly to set up a language change mechanism. 
 
 {{% alert color="info" %}}
 
-**Clear cached session data** - Clears saved session data from the local storage for offline native app and PWAs. This JavaScript action is only compatible with Mendix client **9.14** or above. So, please ensure to use Mendix Studio Pro version **9.14.0** or higher.
+**Clear cached session data** - Clears saved session data from the local storage for offline native app and PWAs. This nanoflow action is only compatible with Mendix client **9.14** or above. So, please ensure to use Mendix Studio Pro version **9.14.0** or higher.
 
 **Reload** - Reloads web and native applications.
 {{% /alert %}}
 
-You can either add a new module to your existing project or create a new Studio Pro project from scratch. We would follow the steps by adding a new module as below:
+You can either add a new module to your existing project or create a new Studio Pro project using a **Blank Native Mobile App** template. We would follow the steps by adding a new module as below:
 
 
 1.  Add a new module **ChangeLanguage** to your project.

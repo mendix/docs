@@ -12,23 +12,33 @@ tags: ["Epics", "Sprint", "Developer Portal"]
 
 Epics enables your team members to collaborate efficiently during the app development process. It supports the Scrum workflow and Kanban workflow.
 
-### 1.1 Obtaining Access to Epics
+{{% alert color="info" %}}
+You can currently use Epics as well as [Stories](/developerportal/collaborate/stories/). However, we recommend you not to use both of them at the same time for one app project, since that will make data migration difficult later.
+{{% /alert %}}
 
-To obtain access to Epics, contact your Mendix Customer Success Manager.
+### 1.1 Getting Your Team Access to an App Project in Epics
 
-To open an app project in Epics, go to the [Developer Portal](https://sprintr.home.mendix.com/link/myapps) and open the app, then go to the [Stories](/developerportal/collaborate/stories/) page. On the top of the **Stories** page, there is a notification, as shown in the screenshot below. Then click **Check it Out** to open the app project in Epics.
+Only a Scrum Master can give the team access to an app project in Epics. To do so, the Scrum Master should open the app in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps), then go to the [General Settings](/developerportal/collaborate/general-settings/) page, then go to the [Stories](/developerportal/collaborate/general-settings/#stories) tab, and click **Set up**, as shown in the screenshot below. This gives everyone in the team access to this app project in Epics.
+
+{{< figure src="/attachments/developerportal/collaborate/epics/stories.png" >}}
+
+To give the team access to another app project in Epics, the Scrum Master needs to repeat this procedure.
+
+### 1.2 Opening an App Project in Epics
+
+Once you have access to an app project in Epics, you can open it there. To do so, open the app in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps), and then go to the [Stories](/developerportal/collaborate/stories/) page. You will see a notification on the top of the page, as shown in the screenshot below. Click **Check it Out** to open the app project.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/epics-check-it-out.png" >}}
 
-{{% todo %}}Check with Jelena the final way to access Epics, and whether Epic is added on the menu on the left side of the page.{{% / todo %}}
-
-Once you open an app project in Epics, you can easily switch to a different app project in Epics. To do so, click the name of the current app project on the upper-left corner, and then select a different app project from the drop-down list.
+After you open an app project in Epics, you can easily switch to other app projects that you have access to. To do so, click the name of the current app project on the upper-left corner, and then select a different app project from the drop-down list.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/switch-app.png" >}}
 
+## 2 Pages in Epics
+
 Epics has the following pages: **Board**, **Planning**, **Epics**, and **Archive**. Some pages show look different based on whether you work in the Scrum workflow or the Kanban workflow.
 
-## 2 Board {#board}
+### 2.1 The Board Page {#board}
 
 If you work in the Scrum workflow, the **Board** page gives an overview of your current sprint. At the top of the page, it shows the name of the sprint, when it ends, how many stories and points it has. Below, it shows the goal of the current sprint.
 
@@ -40,11 +50,9 @@ If you work in the Kanban workflow, the **Board** page gives an overview of all 
 
 You can create an epic or a story by clicking **Create Epic** or **Create Story** on the upper-right corner of the page. In the search box below, you can search stories based on story titles.
 
-{{% todo %}}Check with Jelena if more information can be used for search, for example, epic titles or labels.{{% / todo %}}
-
 {{< figure src="/attachments/developerportal/collaborate/epics/create-epic-story-search.png" >}}
 
-### 2.1 Swimlanes
+#### 2.1.1 Swimlanes
 
 On the **Board** page, the stories are grouped into different swimlanes based on their status. The two default swimlanes are **To Do** and **Done**. 
 
@@ -60,7 +68,7 @@ To rename, [archive](#archive), or delete a swimlane, click the *...* icon on th
 
 To move a swimlane, drag it to the new location.
 
-### 2.2 Story Cards
+#### 2.1.2 Story Cards
 
 On the **Board** page, each card represents a story.
 
@@ -96,7 +104,7 @@ To move a card within a swimlane or across swimlanes, drag the card to the new l
 
 Clicking the story card opens the [story details page](#story-details).
 
-### 2.3 Story Details Page {#story-details}
+#### 2.1.3 Story Details Page {#story-details}
 
 When you click the card of a story, the story details page opens and shows the following items:
 
@@ -119,7 +127,7 @@ When you click the card of a story, the story details page opens and shows the f
 
 {{% alert color="info" %}}To save any change on the story details page, except for comment, you must click **Save Story** at the bottom of the page.{{% /alert %}}
 
-## 3 Planning
+### 2.2 The Planning Page
 
 On the **Planning** page, you can switch between a Scrum workflow and a Kanban workflow by clicking the settings icon on the upper-right side of the screen. Which workflow you use also decides how the **Planning** page and the [Board](#board) page look.
 
@@ -130,8 +138,6 @@ If you use the Scrum workflow, the **Planning** page shows the following categor
 If you use the Kanban workflow, the **Planning** page shows the following categories: **To Do**, **Refinement**, and **Backlog**. 
 
 No matter which workflow you use, you can always create an epic or a story by clicking **Create Epic** or **Create Story** on the upper-right corner of the page. In the search box below, you can search stories based on the story title.
-
-{{% todo %}}Check with Jelena if more information can be used for search, for example, epic titles or labels.{{% / todo %}}
 
 Each row in a category shows the following information about a story:
 
@@ -163,7 +169,7 @@ To move a story, drag the row to a different category.
 
 Clicking a row opens the [story details](#story-details) page.
 
-## 4 Epics
+### 2.3 The Epics Page
 
 The **Epics** page shows all the epics for your current app project. 
 
@@ -180,7 +186,7 @@ You can create an epic by clicking **Create Epic** on the upper-right corner of 
 
 Clicking a row opens the [epic details](#epic-details) page.
 
-### 4.1 Epic Details Page {#epic-details}
+#### 2.3.1 Epic Details Page {#epic-details}
 
 If you click the row of an epic, the epic details page opens and shows the following items:
 
@@ -199,7 +205,7 @@ If you click the row of an epic, the epic details page opens and shows the follo
 
 {{% alert color="info" %}}To save any change on the epic details page, except for comment, you must click **Save Epic** at the bottom of the page.{{% /alert %}}
 
-## 5 Archive {#archive}
+### 2.4 The Archive Page {#archive}
 
 Every time you complete a sprint, all the stories that are **Done** are archived automatically. You can also archive a story and a swimlane manually by doing the following:
 
@@ -208,26 +214,26 @@ Every time you complete a sprint, all the stories that are **Done** are archived
 
 All the archived stories are shown on the **Archive** page. You can see the following information of an archived story:
 
-* Unique story ID – Clicking it shows the details of the story
-* Story title – Clicking it shows the details of the story.
-* Which sprint the story belongs to – Clicking it opens the [archived sprint details page](archived-sprint-details).
-* Linked epic – Clicking it shows the details of this epic.
-* Archive date and time – Clicking it shows the details of the story.
+* Unique story ID – Clicking it shows the story details.
+* Story title – Clicking it shows the story details.
+* Which sprint the story belongs to – Clicking it shows the [archived sprint details](archived-sprint-details).
+* Linked epic – Clicking it shows the epic details
+* Archive date and time – Clicking it shows the story details.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/archive.png" >}}
 
 You can search stories based on story titles in the search box.
 
-{{% todo %}}Check with Jelena if more information can be used for search, for example, epic titles or labels.{{% / todo %}}
+#### 2.4.1 Archived Sprint Details Page {#archived-sprint-details}
 
-### 5.1 Archived Sprint Details Page {#archived-sprint-details}
+When you click the sprint icon in a row of an archived story on the **Archived** page, you can see the following details of this sprint:
 
-When you click the sprint icon at the end of an archived story row, the archived sprint details page opens and shows the details of the sprint.
+* Sprint name
+* When this sprint was archived
+* When this sprint started and ended
 
-On the top, it shows the sprint name, the time when the sprint was archived, and the start time and the end time of the sprint. Below, it shows the following items:
-
-* **Sprint Goal** – the goal of this sprint
-* **Was the sprint goal reached?** – shows the answer provided by the person who ended the sprint
-* **Archived by** – person who ended the sprint
-* **Completed stories** – stories in this sprint that were completed
-* **Incomplete stories** – stories in this sprint that were not completed
+* Sprint goal
+* Whether the sprint goal was reached
+* Who archived the sprint, shown under **Archived by**
+* Stories that were completed, shown under **Completed Stories**
+* Stories that were not completed, shown under **Incomplete Stories**

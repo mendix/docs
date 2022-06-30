@@ -1,7 +1,6 @@
 ---
 title: "Toggle Grid Selector Checkbox Value"
 url: /addons/ats-addon/rg-one-toggle-grid-selector-checkbox-value/
-parent: "rg-one-grid-selector"
 ---
 
 ## 1 Description

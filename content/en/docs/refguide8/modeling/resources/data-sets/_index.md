@@ -1,7 +1,6 @@
 ---
 title: "Datasets"
 url: /refguide8/data-sets/
-parent: "resources"
 weight: 50
 tags: ["studio pro", "data set", "dataset"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

@@ -1,7 +1,6 @@
 ---
 title: "Supported Selenium Providers" 
 url: /addons/ats-addon/rg-two-supported-selenium-hub-provider/
-parent: "rg-two-test-run"
 ---
 
 ## 1 Supported Selenium Provider Options

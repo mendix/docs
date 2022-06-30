@@ -1,7 +1,6 @@
 ---
 title: "Set File Manager"
 url: /addons/ats-addon/rg-one-set-file-manager/
-parent: "rg-one-file-manager"
 ---
 
 ## 1 Description

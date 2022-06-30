@@ -1,7 +1,6 @@
 ---
 title: "Consumed OData Services"
 url: /refguide8/consumed-odata-services/
-parent: "integration"
 description: "Overview of consumed OData services for Studios"
 tags: ["studio pro"]
 ---

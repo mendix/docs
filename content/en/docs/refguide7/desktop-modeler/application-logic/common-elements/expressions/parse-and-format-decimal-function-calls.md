@@ -1,7 +1,6 @@
 ---
 title: "Parsing and Formatting Decimal Function Calls"
 url: /refguide7/parse-and-format-decimal-function-calls/
-parent: "expressions"
 ---
 
 For details on all the pattern possibilities, see [Class DecimalFormat](http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html).

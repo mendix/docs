@@ -1,7 +1,6 @@
 ---
 title: "XPath Operators"
 url: /refguide8/xpath-operators/
-parent: "xpath-constraints"
 tags: ["studio pro"]
 ---
 

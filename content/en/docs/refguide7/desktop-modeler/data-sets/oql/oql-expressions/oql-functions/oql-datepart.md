@@ -1,7 +1,6 @@
 ---
 title: "OQL DATEPART"
 url: /refguide7/oql-datepart/
-parent: "oql-functions"
 ---
 
 

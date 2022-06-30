@@ -3,7 +3,6 @@ title: "Restore a Backup Locally"
 url: /developerportal/operate/restore-backup-locally/
 # try using linktitle rather than having to rename everything to add the -a-
 url: /developerportal/operate/restore-backup-locally/
-parent: "backups"
 weight: 40
 description: "This page describes how to restore a backup."
 tags: ["Backup","Restore","Local","Developer Portal"]

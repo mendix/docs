@@ -1,7 +1,6 @@
 ---
 title: "Activities"
 url: /refguide/activities/
-parent: "microflows-and-nanoflows"
 weight: 40
 tags: ["studio pro", "microflows", "nanoflows", "activity"]
 ---

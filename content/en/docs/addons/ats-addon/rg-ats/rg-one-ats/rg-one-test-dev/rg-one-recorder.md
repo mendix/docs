@@ -1,7 +1,6 @@
 ---
 title: "Recorder"
 url: /addons/ats-addon/rg-one-recorder/
-parent: "rg-one-test-dev"
 weight: 2
 ---
 

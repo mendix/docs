@@ -1,7 +1,6 @@
 ---
 title: "Environment Details"
 url: /developerportal/deploy/environments-details/
-parent: "mendix-cloud-deploy"
 weight: 7
 description: "Describes the environmental details of your app and how to manage the environment."
 tags: ["Deploy","App","Environment","Developer Portal"]

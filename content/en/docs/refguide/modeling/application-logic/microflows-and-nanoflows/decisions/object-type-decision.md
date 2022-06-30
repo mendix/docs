@@ -1,7 +1,6 @@
 ---
 title: "Object Type Decision"
 url: /refguide/object-type-decision/
-parent: "decisions"
 weight: 2
 tags: ["studio pro", "object type decision", "decisions"]
 aliases:

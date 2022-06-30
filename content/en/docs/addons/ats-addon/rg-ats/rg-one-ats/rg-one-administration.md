@@ -1,7 +1,6 @@
 ---
 title: "Administration"
 url: /addons/ats-addon/rg-one-administration/
-parent: "rg-one-ats"
 ---
 
 ## 1 Introduction

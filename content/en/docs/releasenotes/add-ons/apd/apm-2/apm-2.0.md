@@ -1,7 +1,6 @@
 ---
 title: "2.0"
 url: /releasenotes/add-ons/apm-2.0/
-parent: "apm-2"
 ---
 
 ## 2.0.22 {#2022}

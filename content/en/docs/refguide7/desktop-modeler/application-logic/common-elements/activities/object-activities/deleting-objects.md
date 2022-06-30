@@ -1,7 +1,6 @@
 ---
 title: "Delete Object(s)"
 url: /refguide7/deleting-objects/
-parent: "object-activities"
 ---
 
 {{% alert color="info" %}}

@@ -1,7 +1,6 @@
 ---
 title: "Get Text"
 url: /addons/ats-addon/rg-one-get-text/
-parent: "rg-one-get"
 ---
 
 ## 1 Description

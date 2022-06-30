@@ -1,7 +1,6 @@
 ---
 title: "Nanoflows"
 url: /refguide8/nanoflows/
-parent: "application-logic"
 weight: 20
 description: "Presents an overview of all the elements that can be used in a nanoflow."
 tags: ["studio pro"]

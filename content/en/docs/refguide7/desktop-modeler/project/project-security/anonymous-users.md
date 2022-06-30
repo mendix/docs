@@ -1,7 +1,6 @@
 ---
 title: "Anonymous Users"
 url: /refguide7/anonymous-users/
-parent: "project-security"
 ---
 
 

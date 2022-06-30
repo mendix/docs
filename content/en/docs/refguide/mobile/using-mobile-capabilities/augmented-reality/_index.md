@@ -1,7 +1,6 @@
 ---
 title: "Augmented Reality"
 url: /refguide/mobile/using-mobile-capabilities/augmented-reality/
-parent: /refguide/mobile/using-mobile-capabilities/
 weight: 60
 description: Tutorials for setting up and using AR in Mendix Studio Pro.
 aliases:

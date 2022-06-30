@@ -1,7 +1,6 @@
 ---
 title: "Export With Mapping"
 url: /refguide/export-mapping-action/
-parent: "integration-activities"
 tags: ["studio pro", "integration activity", "export mapping action", "export to xml"]
 weight: 40
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

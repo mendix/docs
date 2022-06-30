@@ -1,7 +1,6 @@
 ---
 title: "General"
 url: /addons/ats-addon/ht-one-custom-action-general/
-parent: "ht-one-create-custom-actions"
 ---
 
 All the necessary information for the create-custom-action how-to's is found here:

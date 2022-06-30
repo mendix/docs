@@ -1,7 +1,6 @@
 ---
 title: "Buttons"
 url: /refguide/button-widgets/
-parent: "pages"
 weight: 40
 tags: ["studio pro", "button widgets", "buttons", "widget"]
 aliases:

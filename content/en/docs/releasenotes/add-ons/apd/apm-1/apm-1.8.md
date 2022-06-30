@@ -1,7 +1,6 @@
 ---
 title: "1.8"
 url: /releasenotes/add-ons/apm-1.8/
-parent: "apm-1"
 weight: 98
 ---
 

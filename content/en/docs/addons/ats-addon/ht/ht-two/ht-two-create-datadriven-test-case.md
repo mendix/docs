@@ -1,7 +1,6 @@
 ---
 title: "Create a Data-Driven Test Case"
 url: /addons/ats-addon/ht-two-create-datadriven-test-case/
-parent: "ht-two"
 description: "Describes how to create data and connect this to a test case."
 tags: ["ATS", "testing"]
 ---

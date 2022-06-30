@@ -1,7 +1,6 @@
 ---
 title: "Offline Synchronization"
 url: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/
-parent: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/
 weight: 20
 description: "Describes how and when synchronization occurs, and how to resolve sync errors."
 tags: ["offline", "offline-first"]

@@ -1,7 +1,6 @@
 ---
 title: "Progressive Web App"
 url: /refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/
-parent: /refguide/mobile/introduction-to-mobile-technologies/
 weight: 20
 aliases:
     - /refguide/progressive-web-app/

@@ -1,7 +1,6 @@
 ---
 title: "After Startup Error?"
 url: /addons/apd-addon/ig-one-after-startup-error/
-parent: "ig-one-installation-steps"
 ---
 
 Sometimes after startup an error in java occurs when Mendix generates a different parameter name in a different Mendix version. If this happens, let me know via apmtool@clevr.com, so CLEVR can rename the java action parameter that causes this.

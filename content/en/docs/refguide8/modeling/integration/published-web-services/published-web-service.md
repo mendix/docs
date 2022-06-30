@@ -1,7 +1,6 @@
 ---
 title: "Published Web Service"
 url: /refguide8/published-web-service/
-parent: "published-web-services"
 tags: ["studio pro"]
 ---
 

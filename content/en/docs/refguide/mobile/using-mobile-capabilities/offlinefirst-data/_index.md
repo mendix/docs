@@ -1,7 +1,6 @@
 ---
 title: "Offline-First Data"
 url: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/
-parent: /refguide/mobile/using-mobile-capabilities/
 weight: 10
 aliases:
     - /refguide/offline-first/

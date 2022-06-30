@@ -1,7 +1,6 @@
 ---
 title: "Microsoft Windows"
 url: /developerportal/deploy/deploy-mendix-on-microsoft-windows/
-parent: "on-premises-design"
 description: "How to install and configure Mendix on a system running Microsoft Windows"
 weight: 50
 tags: ["deploy", "Windows", "On Premises", "Microsoft", "Mendix Service Console", "IIS", "URL Rewrite", "Client Cache", "Reverse Inbound Proxy", "Host Header"]

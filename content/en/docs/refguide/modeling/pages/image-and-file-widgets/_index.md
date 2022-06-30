@@ -1,7 +1,6 @@
 ---
 title: "Images, Videos & Files"
 url: /refguide/image-and-file-widgets/
-parent: "pages"
 weight: 35
 tags: ["studio pro", "file widgets", "widget"]
 ---

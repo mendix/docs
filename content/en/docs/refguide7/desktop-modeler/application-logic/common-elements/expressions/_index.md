@@ -1,7 +1,6 @@
 ---
 title: "Expressions"
 url: /refguide7/expressions/
-parent: "common-elements"
 aliases:
     - /refguide7/microflow-expressions.html
     - /refguide7/microflow-expressions

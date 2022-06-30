@@ -1,7 +1,6 @@
 ---
 title: "Generate Code from the Model"
 url: /apidocs-mxsdk/mxsdk/generating-code-from-the-model/
-parent: "sdk-howtos"
 weight: 50
 ---
 

@@ -2,7 +2,6 @@
 title: "Mendix Cloud HTTP Request Headers"
 linktitle: "HTTP Request Headers"
 url: /developerportal/deploy/mendix-cloud-request-headers/
-parent: "mendix-cloud-deploy"
 weight: 36
 description: "Describes which HTTP request headers are available in the Mendix Cloud."
 tags: ["Deploy", "Mendix Cloud", "headers", "HTTP Request Headers", "X-Real-IP", "SSL-Protocol", "SSL-Cipher", "SSL-Client-S-DN"]

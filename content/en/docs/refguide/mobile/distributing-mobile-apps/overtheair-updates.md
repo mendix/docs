@@ -1,7 +1,6 @@
 ---
 title: "Updating Native Apps"
 url: /refguide/mobile/distributing-mobile-apps/overtheair-updates/
-parent: /refguide/mobile/distributing-mobile-apps/
 weight: 30
 description: "Describes enabling over the air updates using built-in functionality."
 tags: ["ota", "over the air", "update"]

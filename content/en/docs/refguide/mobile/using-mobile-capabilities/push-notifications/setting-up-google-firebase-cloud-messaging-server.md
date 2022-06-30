@@ -1,7 +1,6 @@
 ---
 title: "Part 3: Set Up the Google Firebase Cloud Messaging Server"
 url: /refguide/mobile/using-mobile-capabilities/push-notifications/setting-up-google-firebase-cloud-messaging-server/
-parent: /refguide/mobile/using-mobile-capabilities/push-notifications/
 weight: 40
 description: Tutorial for configuring push notifications.
 aliases:

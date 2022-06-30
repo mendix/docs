@@ -1,7 +1,6 @@
 ---
 title: "Export App Package"
 url: /refguide/export-app-package-dialog/
-parent: "file-menu"
 weight: 30
 tags: ["studio pro", "export app", "export app package"]
 aliases:

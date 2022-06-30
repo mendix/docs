@@ -1,7 +1,6 @@
 ---
 title: "Logs"
 url: /addons/apd-addon/rg-three-logs/
-parent: "rg-three-apd"
 ---
 
 ## 1 Logs Overview

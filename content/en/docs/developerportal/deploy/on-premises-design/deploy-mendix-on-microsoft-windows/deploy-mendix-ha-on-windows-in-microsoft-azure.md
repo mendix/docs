@@ -1,7 +1,6 @@
 ---
 title: "Deploy Mendix on Windows in Microsoft Azure"
 url: /developerportal/deploy/deploy-mendix-ha-on-windows-in-microsoft-azure/
-parent: "deploy-mendix-on-microsoft-windows"
 description: "How to install and configure Mendix in an HA setup on servers running Windows in Microsoft Azure"
 weight: 5
 tags: ["deploy", "Windows", "Azure", "HA", "High Availability", "Microsoft", "Mendix Service Console", "IIS"]

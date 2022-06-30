@@ -1,7 +1,6 @@
 ---
 title: "Browserstack Test Files"
 url: /addons/ats-addon/ht-two-browserstack-test-files/
-parent: "ht-two-upload-file-using-ats"
 ---
 
 ## 1 Windows XP

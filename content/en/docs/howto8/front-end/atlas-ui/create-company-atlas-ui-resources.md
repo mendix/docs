@@ -1,7 +1,6 @@
 ---
 title: "Create Company Atlas UI Resources"
 url: /howto8/front-end/create-company-atlas-ui-resources/
-parent: "atlas-ui"
 weight: 30
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---

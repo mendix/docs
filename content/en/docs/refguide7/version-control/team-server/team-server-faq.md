@@ -1,7 +1,6 @@
 ---
 title: "Team Server FAQ"
 url: /refguide7/team-server-faq/
-parent: "team-server"
 ---
 
 

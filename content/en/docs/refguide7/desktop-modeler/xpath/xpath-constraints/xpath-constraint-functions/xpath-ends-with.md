@@ -1,7 +1,6 @@
 ---
 title: "XPath ends-with"
 url: /refguide7/xpath-ends-with/
-parent: "xpath-constraint-functions"
 ---
 
 ## 1 Overview

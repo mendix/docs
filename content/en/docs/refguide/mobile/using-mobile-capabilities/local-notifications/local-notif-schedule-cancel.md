@@ -1,7 +1,6 @@
 ---
 title: "Part 5: Scheduling"
 url: /refguide/mobile/using-mobile-capabilities/local-notifications/local-notif-schedule-cancel/
-parent: /refguide/mobile/using-mobile-capabilities/local-notifications/
 weight: 50
 description: A tutorial for scheduling and cancelling push notifications.
 ---

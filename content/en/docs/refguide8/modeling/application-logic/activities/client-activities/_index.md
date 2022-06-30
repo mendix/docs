@@ -1,7 +1,6 @@
 ---
 title: "Client Activities"
 url: /refguide8/client-activities/
-parent: "activities"
 weight: 50
 tags: ["studio pro", "client activities", "activities"]
 ---

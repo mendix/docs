@@ -1,7 +1,6 @@
 ---
 title: "Download File"
 url: /refguide/download-file/
-parent: "client-activities"
 weight: 20
 tags: ["studio pro", "download file", "client activities"]
 aliases:

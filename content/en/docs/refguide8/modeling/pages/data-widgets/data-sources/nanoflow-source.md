@@ -1,7 +1,6 @@
 ---
 title: "Nanoflow Source"
 url: /refguide8/nanoflow-source/
-parent: "data-sources"
 tags: ["studio pro", "nanoflow source", "data source"]
 weight: 50
 ---

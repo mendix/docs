@@ -1,7 +1,6 @@
 ---
 title: "Recorder"
 url: /addons/ats-addon/rg-two-recorder/
-parent: "rg-two-ats"
 ---
 
 ## 1 Introduction

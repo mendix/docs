@@ -1,7 +1,6 @@
 ---
 title: "Environments"
 url: /addons/apd-addon/rg-three-environments/
-parent: "rg-three-apd"
 ---
 
 ## 1 Environments Overview

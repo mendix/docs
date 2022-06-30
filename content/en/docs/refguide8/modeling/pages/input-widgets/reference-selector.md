@@ -1,7 +1,6 @@
 ---
 title: "Reference Selector"
 url: /refguide8/reference-selector/
-parent: "input-widgets"
 weight: 70
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

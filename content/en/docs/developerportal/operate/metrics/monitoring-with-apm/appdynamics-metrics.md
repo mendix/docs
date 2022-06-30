@@ -1,7 +1,6 @@
 ---
 title: "AppDynamics for the Mendix Cloud"
 url: /developerportal/operate/appdynamics-metrics/
-parent: "metrics"
 weight: 10
 description: "How to configure Mendix Cloud v4 to enable monitoring and analysis with AppDynamics."
 tags: ["AppDynamics", "Mendix Cloud", "v4", "monitoring", "analysis"]

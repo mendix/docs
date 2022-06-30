@@ -1,7 +1,6 @@
 ---
 title: "OData Representation"
 url: /refguide7/odata-representation/
-parent: "published-odata-services"
 ---
 
 This document describes how entities are represented in a published OData service.

@@ -1,7 +1,6 @@
 ---
 title: "Set Checkbox Value"
 url: /addons/ats-addon/rg-one-set-checkbox-value/
-parent: "rg-one-input"
 ---
 
 ## 1 Description

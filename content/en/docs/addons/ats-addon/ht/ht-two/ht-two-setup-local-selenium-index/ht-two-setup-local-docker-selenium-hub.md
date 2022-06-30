@@ -1,7 +1,6 @@
 ---
 title: "Set Up a Local Docker Selenium Hub"
 url: /addons/ats-addon/ht-two-setup-local-docker-selenium-hub/
-parent: "ht-two-setup-local-selenium-index"
 description: "Describes the options to setup a local selenium solution."
 tags: ["ATS", "testing", "Selenium hub"]
 ---

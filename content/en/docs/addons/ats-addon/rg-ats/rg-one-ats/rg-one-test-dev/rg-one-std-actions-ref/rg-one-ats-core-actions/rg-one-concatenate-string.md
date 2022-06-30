@@ -1,7 +1,6 @@
 ---
 title: "Concatenate String"
 url: /addons/ats-addon/rg-one-concatenate-string/
-parent: "rg-one-ats-core-actions"
 ---
 
 ## 1 Description

@@ -1,7 +1,6 @@
 ---
 title: "Commit Object(s)"
 url: /refguide/committing-objects/
-parent: "object-activities"
 weight: 30
 tags: ["studio pro"]
 ---

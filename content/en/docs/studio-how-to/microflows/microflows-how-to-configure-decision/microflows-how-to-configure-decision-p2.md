@@ -1,7 +1,6 @@
 ---
 title: "Step 2: Embed the Microflow in Your App"
 url: /studio-how-to/microflows-how-to-configure-decision-p2/
-parent: "microflows-how-to-configure-decision"
 description: "This how to describes the process of configuring a decision in in Mendix Studio."
 weight: 20
 tags: ["studio", "microflows", "decision", "pages"]

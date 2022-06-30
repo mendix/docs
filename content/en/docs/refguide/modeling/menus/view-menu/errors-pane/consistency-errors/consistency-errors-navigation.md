@@ -1,7 +1,6 @@
 ---
 title: "Navigation Consistency Errors"
 url: /refguide/consistency-errors-navigation/
-parent: "consistency-errors"
 description: "Describes consistency errors in Mendix Studio Pro and the way to fix them."
 tags: ["Studio Pro", "consistency errors", "checks", "errors", "navigation"]
 #To update screenshots in this document, use the Consistency Errors app.

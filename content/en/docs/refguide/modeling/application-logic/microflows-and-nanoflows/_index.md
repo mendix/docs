@@ -1,7 +1,6 @@
 ---
 title: "Microflows & Nanoflows"
 url: /refguide/microflows-and-nanoflows/
-parent: "application-logic"
 weight: 10
 description: "Presents an overview of microflows and nanoflows."
 tags: ["studio pro", "microflow", "nanoflow"]

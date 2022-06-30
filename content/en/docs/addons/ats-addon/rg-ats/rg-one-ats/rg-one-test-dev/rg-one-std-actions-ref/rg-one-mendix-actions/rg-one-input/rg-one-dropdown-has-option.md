@@ -1,7 +1,6 @@
 ---
 title: "Dropdown has Option"
 url: /addons/ats-addon/rg-one-dropdown-has-option/
-parent: "rg-one-input"
 ---
 
 ## 1 Description

@@ -1,7 +1,6 @@
 ---
 title: "Navigation"
 url: /refguide/mobile/designing-mobile-user-interfaces/navigation/
-parent: /refguide/mobile/designing-mobile-user-interfaces/
 weight: 20
 description: "General information for native navigation in Mendix."
 tags: ["navigation", "profiles"]

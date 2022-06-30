@@ -1,7 +1,6 @@
 ---
 title: "Testing Native Apps"
 url: /refguide/mobile/distributing-mobile-apps/testing-mobile-apps/
-parent: /refguide/mobile/distributing-mobile-apps/
 weight: 50
 description: This guide will teach you how to write end-to-end tests once and run them on both platforms using Appium.
 aliases:

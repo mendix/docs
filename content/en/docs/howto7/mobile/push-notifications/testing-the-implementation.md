@@ -1,7 +1,6 @@
 ---
 title: "Test the Implementation"
 url: /howto7/mobile/testing-the-implementation/
-parent: "push-notifications"
 weight: 60
 tags: ["mobile", "push notification"]
 ---

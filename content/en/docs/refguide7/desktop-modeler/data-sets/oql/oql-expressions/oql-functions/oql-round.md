@@ -1,7 +1,6 @@
 ---
 title: "OQL ROUND"
 url: /refguide7/oql-round/
-parent: "oql-functions"
 ---
 
 

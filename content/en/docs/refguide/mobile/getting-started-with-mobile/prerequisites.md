@@ -1,7 +1,6 @@
 ---
 title: "Native App Prerequisites and Troubleshooting" 
 url: /refguide/mobile/getting-started-with-mobile/prerequisites/
-parent: /refguide/mobile/getting-started-with-mobile/
 weight: 10
 description: Troubleshoot common issues associated with building and running native mobile apps.
 aliases:

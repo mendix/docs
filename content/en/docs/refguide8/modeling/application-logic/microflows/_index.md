@@ -1,7 +1,6 @@
 ---
 title: "Microflows"
 url: /refguide8/microflows/
-parent: "application-logic"
 weight: 10
 description: "Presents an overview of all the elements that can be used in a microflow."
 tags: ["studio pro"]

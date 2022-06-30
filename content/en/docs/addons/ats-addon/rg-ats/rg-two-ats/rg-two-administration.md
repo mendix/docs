@@ -1,7 +1,6 @@
 ---
 title: "Administration"
 url: /addons/ats-addon/rg-two-administration/
-parent: "rg-two-ats"
 description: "Describes a tenant administrator role in ATS."
 tags: ["ats", "administrator", "administration"]
 ---

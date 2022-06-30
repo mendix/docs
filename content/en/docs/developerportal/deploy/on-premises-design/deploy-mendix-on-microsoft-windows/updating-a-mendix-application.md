@@ -1,7 +1,6 @@
 ---
 title: "MS Windows: Update a Mendix App"
 url: /developerportal/deploy/updating-a-mendix-application/
-parent: "deploy-mendix-on-microsoft-windows"
 weight: 20
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

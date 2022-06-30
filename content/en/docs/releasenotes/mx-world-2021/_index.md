@@ -113,7 +113,7 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | Smart app services integrated in workflows | Text to Speech |Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118409) (except in China)|
 | Smart app services integrated in workflows | Text Analytics |Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118412) (except in China)|
 | Smart app services integrated in workflows | Translation |Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118411)  (except in China)|
-| Smart app services integrated in workflows | General Purpose OCR | GA: Jun 2022 |
+| Smart app services integrated in workflows | General Purpose OCR | GA: Jul 2022 |
 
 ## 11 Hybrid Cloud Automation
 

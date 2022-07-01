@@ -35,9 +35,10 @@ The Email Connector includes the following features:
 Before you use the Email Connector, do the following:
 
 1. Download and [configure](/appstore/modules/model-reflection/#configuration) the [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module from the Mendix Marketplace.
+2. If you have existing email modules ([IMAP/POP3](/appstore/modules/imap/) or [Email with Templates](/appstore/modules/email-with-templates/)), you must remove these to be able to use this Email Connector.
 
 {{% alert color="warning" %}}
-Certain functionalities of the Email Connector will not work correctly if the **Mx Model Reflection** module is not configured.
+Certain functionalities of the Email Connector will not work correctly if the **Mx Model Reflection** module is not configured, or if you have not removed older email modules.
 {{% /alert %}}
 
 ### 1.3 Included Widgets

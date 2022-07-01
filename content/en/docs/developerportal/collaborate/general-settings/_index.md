@@ -76,7 +76,7 @@ Specific steps for configuring different cloud platforms are provided here:
 * [Mendix Private Cloud](/developerportal/deploy/private-cloud/)
 
 
-## 4 Access Management {#access-management}
+## 4 Access Management {#managing-app-users}
 
 On the **Access Management** tab, you can manage and invite app users. App users are end-users who can access the deployed app on specific environments. They can use and test your deployed app, and provide feedback.
 

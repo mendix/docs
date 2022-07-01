@@ -23,7 +23,7 @@ The roles defined in Developer Portal for an [app](/developerportal/#my-apps) an
 
 ## 2 Team Member
 
-If you want to join an a team, you have to ask a current team member (with the **Invite** permission) to send an invitation. Because team members are not visible to users outside that team, you can ask the [Technical Contact](#technical-contact) to send the invite. This means it is important the Technical Contact has the correct permissions to manage the app (for example, the **Scrum Master** role).
+If you want to join a team, you have to ask a current team member (with the **Invite** permission) to send an invitation. Since team members are not visible to users outside that team, you can ask the [Technical Contact](#technical-contact) to send the invite. This means it is important that the Technical Contact has the correct permissions to manage the app (for example, the **Scrum Master** role).
 
 ## 3 Team Roles {#team-roles}
 
@@ -43,13 +43,13 @@ When you view the [General Settings](/developerportal/settings/general-settings/
 
 {{< figure src="/attachments/developerportal/collaborate/team/app-roles/technical-contact.png" >}}
 
+{{% alert color="info" %}}
+You should provide Technical Contact with the Scrum Master role. Since the Technical Contact will be the contact for regular users, they thus should be able to perform app operations on behalf of all Scrum Masters.
+{{% /alert %}}
+
 The Technical Contact manages the technical deployment settings of the app. The Technical Contact can be responsible for [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) or various [deployment](/developerportal/deploy/) platforms. A Mendix application will always be set up and delivered with a Technical Contact assigned to it. The Technical Contact for a free App is assigned when the app is deployed for the first time. The Technical Contact needs an MxID before Mendix can activate a license for an application.
 
 The responsibilities of a Technical Contact depend on whether you are hosting your app in the Mendix Cloud or on premises.
-
-{{% alert color="info" %}}
-You should provide Technical Contact with the Scrum Master role. Because the Technical Contact will be the contact for regular users, they will thus be able to perform app operations on behalf of all Scrum Masters.
-{{% /alert %}}
 
 ### 4.1 Mendix Cloud Responsibilities
 

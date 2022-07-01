@@ -5,6 +5,7 @@ parent: "general-settings"
 weight: 1
 description: "Describes how to leave, delete, and deactivate an app in the Developer Portal."
 tags: ["app", "delete", "deactivate", "Developer Portal", "Scrum Master"]
+linktitle: "Leave & Delete an App"
 aliases:
     - /developerportal/settings/leave-delete-app
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

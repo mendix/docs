@@ -1,5 +1,5 @@
 ---
-title: "Leave, Delete, or Deactivate Apps"
+title: "Leave, Delete, or Deactivate an App"
 url: /developerportal/collaborate/leave-delete-app/
 weight: 1
 description: "Describes how to leave, delete, and deactivate an app in the Developer Portal."

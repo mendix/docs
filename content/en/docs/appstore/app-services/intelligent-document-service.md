@@ -116,19 +116,17 @@ You should use the marker tool properly – this is key to extracting data in hi
 
 #### 4.1.2 Procedure
 
-To train a document model, do as follows:
+##### 4.1.2.1 Uploading Sample Images in the Document Model Training Application {#update-sample-images}
 
-1.  Perform the following steps to log into the **Document Model Training** application:
+1.  Log into the **Document Model Training** application as follows:
 
     1. Log into the Marketplace with your Mendix account.
-
     2.  Go to **My Marketplace** and then do as follows:
 
         * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
         * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
 
     3. Click **Intelligent Document Service** to open the service management dashboard.
-
     4.  Click **Manage Instance** to open the **Document Model Training** application.
 
         {{< figure src="/attachments/appstore/app-services/intelligent-document-service/document-model-training-app.png" alt="Document model training app login page" >}}
@@ -152,7 +150,6 @@ To train a document model, do as follows:
     {{% alert color="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
 
 5. Wait until the **Import File** page opens.
-
 6.  Drag sample images in JPG, JPEG, BMP, or PNG format into the box where it says **Drag and drop your image files here**. You can also click **Browse** and select the files.
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/import-file-page.png" alt="Import File page" >}}
@@ -163,71 +160,107 @@ To train a document model, do as follows:
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-marker-and-ids-image-unmarked.png" alt="Add Marker and IDs page" >}}
 
-#### 4.1.3 Text Markers
-8.  To mark Text fields on an image, use the marker tool properly:
-    1. Click **Add Marker**. The **Mark Document** dialog box opens.
-    2.  In the **Choose fields to mark** pane, select a field of interest from which some meaningful data needs to be extracted.
+You can then proceed to mark the [text fields](#mark-text-fields) and [tables](#mark-tables) in a sample image.
 
-        {{% alert color="warning" %}}The areas you mark in this step determine where the document model will extract the data. Make sure that you mark the complete field area. Only in this way, will the document model read the complete field area and accurately extract a long value.{{% /alert %}}
+##### 4.1.2.2 Marking Text Fields in a Sample Image {#mark-text-fields}
 
-        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/mark-document-dialog-box.png" alt="Mark Document page" >}}
+After you [upload sample images](#update-sample-images) in the document model training application, you can mark the text fields in the sample images as follows:
 
-    3. On the right side, enter a **Marker Id** that is used for the area that you selected. 
-    4. Select "Text" as the **Marker Type** from dropdown.
-    5. Click **Generate Marker ID** to add the marker to the list of **Markers**.
- 
- #### 4.1.4 Table Markers
- 9. Tables are often used to organize and present information for ease of understanding and analysis. Marking "Table" data is different from marking Text fields. If there is a Table element in the document, then please follow these steps to train your document model for extracting table data.
+1. Click **Add Marker**. The **Mark Document** dialog box opens.
+2.  In the **Choose fields to mark** pane, select a field of interest from which some meaningful data needs to be extracted.
 
-     1. A Table is made up of rows and columns. The intersection of a row and column is called a cell. To train your model to extract data from Table structure, first you will have to define and denote the table from which you want to extract data.
-     2. Using the Marker tool, you can outline the table and create a Table type marker. Provide a valid name for the Marker and then select "Table" from the **Marker Type** dropdown. Refer the representative image below for defining the Table type marker.
-     
-     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-table-type-marker.png" alt="add table type marker" >}}
-     
-     3. Post the creation of Table marker, you will be navigated to another screen to define *markers for table*.
-     4. Choose a column of interest (e.g. First Name), including the column header, as shown in the image below.
-     
-     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-column-marker-for-table.png" alt="add column markers for the table" >}}
-     
-     5. Provide a name for this marker in the "Marker Name" field and choose "Column" from the selection type dropdown and click on "Add Selection".
-     6. Repeat above 2 steps to choose other column(s) of interest from the table and complete column marking.
-     7. Now you can proceed to marking the rows from the table. Choose the entire row using the marker tool and provide a valid name in the "Marker Name" field and choose "Row" from the selection type dropdown and click on "Add Selection". Refer the representative image below for marking a row from table.
-     
-     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-row-marker-for-table.png" alt="add row markers for the table" >}}
-     
-     8. Repeat step# 7 to choose all the remaining rows from the table and add their respective markers.
-     9. Please observe the Column and Row markers added into the **Markers** for Table component as shown in the image below.
-     
-     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/markers-of-table-component.png" alt="list of markers for the table" >}}
-     
-     10. Once the required columns and all the rows from the table are marked, you can click on **Save Table Selection** to save all the markers for the table.
+    {{% alert color="warning" %}}The areas you mark in this step determine where the document model will extract the data. Make sure that you mark the complete field area. Only in this way, will the document model read the complete field area and accurately extract a long value.{{% /alert %}}
 
- 10. To delete a marker from the **Markers** list, select the marker and click **Delete**.
- 11. When you add all the markers for this image, click **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.
+    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/mark-document-dialog-box.png" alt="Mark Document page" >}}
 
-        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-marker-and-ids-image-status-marked.png" alt="add markers and id status is marked" >}}
-        
-12. Repeat the steps above until you mark all the images, and then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
+3. On the right side, enter a **Marker Id** that is used for the area that you selected. 
+4. Select **Text** from drop-down list.
+5. Click **Generate Marker ID** to add the marker to the list of **Markers**.
+6. To delete a marker from the **Markers** list, select the marker and click **Delete**.
 
-13.  Wait until the **Status** of the model becomes **Published**. Once the model is published, this pop-up window opens:
+##### 4.1.2.3 Marking Tables in Sample Images {#mark-tables}
 
-    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/new-model-status-popup.png" alt="new model status included" >}}
+After you [upload sample images](#update-sample-images) in the document model training application, you can mark the tables in a sample image as follows:
 
-14. Click **Refresh** to see the status of the model. The model is ready to use once its **Status** changes to **Published**.
-15. If you wish to **Delete** a model irrespective of its status, you can click **...** from under the **Actions** column and select **Delete**. Click **Delete** in the confirmation window and the model will be deleted.
+
+1. Click **Add Marker**. The **Mark Document** dialog box opens.
+
+2. In the **Choose fields to mark** pane, select the table from which some meaningful data needs to be extracted.
+
+3. For **Marker Name**, enter a name for the marker.
+
+4. Select **Table** from the **Mark Type** drop-down list.
+
+5. Click **Generate Marker ID** to add the marker to the list of **Markers**.
+
+    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-table-type-marker.png">}}
+
+6. Click **Done**. Then you can mark every column and row of your interest one by one in the table.
+
+7. Mark the columns in the table as follows:
+
+     1. Mark the entire column using the marker tool.
+
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-column-marker-for-table.png" >}}
+
+    2. For **Marker Name**, enter a name for the marker.
+
+    3. Choose **Column** from the **Selection Type** drop-down list.
+
+    4. Click **Add Selection**.
+
+    5. Repeat steps above to mark other columns in the table.
+
+       {{% todo %}}What to do with Marker Type here?{{% /todo %}}
+
+8. Mark the rows in the table as follows:
+
+    1.  Mark the entire row using the marker tool.
+
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-row-marker-for-table.png" >}}
+
+    2. For **Marker Name**, enter a name for the marker.
+    3. Choose **Row** from the **Selection Type** drop-down list.
+    4. Click **Add Selection**.
+    5. Repeat steps above to mark other rows in the table.
+
+9. After you finish marking all the columns and rows, click **Table Component**.
+
+10. Check the column and row markers in the **Table Component** list. Make sure all the markers for the table are added.
+
+    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/markers-of-table-component.png" >}}
+
+11. Once the required columns and all the rows from the table are marked, click **Save Table Selection** to save all the markers for the table.
+
+You can then proceed to [finish the document model training](#finish-training).
+
+##### 4.1.2.4 Finishing the Document Model Training {#finish-training}
+
+1. After you add all the markers for the [text fields](#mark-text-fields) and [tables](#mark-tables) in this sample image, click **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.
+
+   {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-marker-and-ids-image-status-marked.png" >}}
+
+2. Repeat the steps above until you mark all the sample images, and then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
+
+3. Wait until the **Status** of the model becomes **Published**. Once the model is published, this pop-up window opens:
+
+   {{< figure src="/attachments/appstore/app-services/intelligent-document-service/new-model-status-popup.png" >}}
+
+4. Click **Refresh** to see the status of the model. The model is ready to use once its **Status** changes to **Published**.
+
+{{% alert color="info" %}} If you want to **Delete** a model irrespective of its status, click **...** under the **Actions** column, select **Delete**, and then click **Delete** in the confirmation window.{{% /alert %}}
 
 ### 4.2 Creating an Import Mapping{#mapping-file}
 
 You need to use an [import mapping](/refguide/mapping-documents/#import-mappings) to populate extracted data into an entity. If necessary, you can further process the entity with [event handlers](/refguide/event-handlers/).
 
 1.  To create an import mapping, you need a JSON structure. Perform the following steps to generate the JSON structure:
-    1. Log into the [Document Model Training](#document-model-training) application with your Mendix account.
-    
+    1. Log in to the [Document Model Training](#document-model-training) application with your Mendix account.
     2. Click **Environment** to show the **Existing Models** list.
-    3. Select your trained model. Make sure that the **Status** of the model is **Published**. Note down the **Model Id**. You will need it when you [extract data with the trained model ](#extraction-activity).
+    3. Select your trained model. Make sure that the **Status** of the model is **Published**. Note down the **Model Id**. You will need it when you [extract data with the trained model](#extraction-activity).
     4.  Click **...** in the **Actions** column of the published model and then click **Download JSON Structure**.
 
-        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/ids-download-json-structure.png" alt="" >}}
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/ids-download-json-structure.png" >}}
 
         The **Generate JSON Structure** dialog box opens.
     

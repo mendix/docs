@@ -17,13 +17,13 @@ aliases:
 
 The **General Settings** page presents an overview of your app.
 
-On the top of page, you can see the following items: the image of the app, the app name, and the company that owns the app. 
-
-{{% alert color="info" %}}
-Only users with the **App Settings** permission can edit these items. For default roles, only the **Scrum Master** has this permission. For more details, see the [Team Roles](/developerportal/collaborate/app-roles/#team-roles) section of *App Roles*.
-{{% /alert %}}
+On the top of page, you can see the image of the app, the app name, and the company that owns the app. 
 
 {{< figure src="/attachments/developerportal/collaborate/general-settings/general-information.png"  >}}
+
+{{% alert color="info" %}}
+Only users with the **App Settings** permission can edit the image and the app name.
+{{% /alert %}}
 
 The **General Settings** page contains the following tabs:
 
@@ -35,7 +35,7 @@ The **General Settings** page contains the following tabs:
 * **Webhooks** *
 
 {{% alert color="info" %}}
-Tabs above with an asterisk (*) are only available for users with the **App Settings** permission.
+Tabs with an asterisk (*) are only available for users with the **App Settings** permission.
 {{% /alert %}}
 
 
@@ -53,10 +53,8 @@ In this tab, you can find the following items:
   * **Delete this app**
 
 {{% alert color="info" %}}
-Only users with the **App Settings** permission can deactivate or delete an app.
+Only users with the **App Settings** permission can change the description of the app.<br/>Only users with the **App Settings** permission can deactivate or delete an app. For details, see [How to Leave, Delete, or Deactivate an App](/developerportal/collaborate/leave-delete-app/).
 {{% /alert %}}
-
-For details on leaving, deleting, and deactivating an app, see [How to Leave & Delete an App](/developerportal/collaborate/leave-delete-app/).
 
 
 ## 3 Cloud Settings
@@ -83,8 +81,6 @@ Specific steps for configuring different cloud platforms are provided here:
 On the **Access Management** tab, you can manage and invite app users. App users are end-users who can access the deployed app on specific environments. They can use and test your deployed app, and provide feedback.
 
 To manage users or invite users for an app deployed on a specific environment, click **Mange Users** or **Invite Users** for that environment. For more information, see the [Mange Users](#manage-users) and [Invite Users](#invite-users) section below.
-
-{{< figure src="/attachments/developerportal/collaborate/general-settings/app-user-management-environments.png"  >}}
 
 {{% alert color="info" %}}
 You can also manage app users from Studio, by clicking **Manage Users** on the **Settings > Roles and Permissions** page within Studio.
@@ -152,7 +148,7 @@ Click **Revoke** to delete an app API key.
 
 ## 6 Stories {#stories}
 
-On the **Stories** tab, you can select the stories & planning tool for the app. Once you select, everyone in your team can use the same stories & planning tool for this app. Mendix Stories is selected by default. 
+On the **Stories** tab, you can select the stories & planning tool for the app. Once you select a tool, everyone in your team can use the same tool for this app. By default Mendix [Stories](/developerportal/collaborate/stories/) is the selected tool.
 
 
 ## 7 Managing Webhooks {#webhooks}

@@ -145,7 +145,7 @@ You should use the marker tool properly – this is key to extracting data in hi
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/create-new-model-dialog-box.png" alt="Create New Model dialog box" >}}
 
-4.  Enter a unique **Model Name**. select a **Language**, and then click **Create Model**.
+4.  Enter a unique **Model Name**, select a **Language**, and then click **Create Model**.
 
     {{% alert color="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
 
@@ -160,7 +160,7 @@ You should use the marker tool properly – this is key to extracting data in hi
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-marker-and-ids-image-unmarked.png" alt="Add Marker and IDs page" >}}
 
-You can then proceed to mark the [text fields](#mark-text-fields) and/or [tables](#mark-tables) in a sample image.
+Then you can proceed to mark the [text fields](#mark-text-fields) and/or [tables](#mark-tables) in a sample image.
 
 ##### 4.1.2.2 Marking Text Fields in a Sample Image {#mark-text-fields}
 

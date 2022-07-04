@@ -168,13 +168,13 @@ After you [upload sample images](#update-sample-images) in the document model tr
 
 1. Click **Add Marker**. The **Mark Document** dialog box opens.
 
-2.  In the **Choose fields to mark** pane, select a field of interest from which some meaningful data needs to be extracted.
+2.  In the **Choose fields to mark** pane, select the text field from which data needs to be extracted.
 
     {{% alert color="warning" %}}The areas you mark in this step determine where the document model will extract the data. Make sure that you mark the complete field area. Only in this way, will the document model read the complete field area and accurately extract a long value.{{% /alert %}}
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/mark-document-dialog-box.png" alt="Mark Document page" >}}
 
-3. On the right side, enter a **Marker Id** that is used for the area that you selected. 
+3. On the right side, enter a **Marker Name** that is used for the text field that you selected. 
 
 4. Select **Text** from drop-down list.
 
@@ -182,7 +182,7 @@ After you [upload sample images](#update-sample-images) in the document model tr
 
     {{% alert color="info" %}}To delete a marker from the **Markers** list, select the marker and click **Delete**.{{% /alert %}}
 
-If you still need to [mark tables in sample images](#mark-tables), you can then proceed to do it. Otherwise, you can [finish the document model training](#finish-training).
+If you still need to [mark tables in sample images](#mark-tables), you can proceed to do it. Otherwise, you can [finish the document model training](#finish-training).
 
 ##### 4.1.2.3 Marking Tables in Sample Images {#mark-tables}
 
@@ -191,9 +191,9 @@ After you [upload sample images](#update-sample-images) in the document model tr
 
 1. Click **Add Marker**. The **Mark Document** dialog box opens.
 
-2. In the **Choose fields to mark** pane, select the table from which some meaningful data needs to be extracted.
+2. In the **Choose fields to mark** pane, select the table from which data needs to be extracted.
 
-3. For **Marker Name**, enter a name for the marker.
+3. On the right side, enter a **Marker Name** that is used for the table that you selected. 
 
 4. Select **Table** from the **Mark Type** drop-down list.
 
@@ -205,29 +205,32 @@ After you [upload sample images](#update-sample-images) in the document model tr
 
 7. Mark the columns in the table as follows:
 
-     1. Mark the entire column using the marker tool.
+     1. In the **Choose fields to mark** pane, select the column from which data needs to be extracted.
 
         {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-column-marker-for-table.png" >}}
 
-    2. For **Marker Name**, enter a name for the marker.
+     2. On the right side, enter a **Marker Name** that is used for the column that you selected. 
 
-    3. Choose **Column** from the **Selection Type** drop-down list.
+     3. Select **Column** from the **Selection Type** drop-down list.
 
-    4. Click **Add Selection**.
+     4. Select **Text** from the **Marker Type** drop-down list.
 
-    5. Repeat steps above to mark other columns in the table.
+     5. Click **Add Selection**.
 
-       {{% todo %}}What to do with Marker Type here?{{% /todo %}}
+     6. Repeat steps above to mark other columns in the table.
 
 8. Mark the rows in the table as follows:
 
-    1.  Mark the entire row using the marker tool.
+    1. In the **Choose fields to mark** pane, select the row from which data needs to be extracted.
 
-        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-row-marker-for-table.png" >}}
+       {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-row-marker-for-table.png" >}}
 
-    2. For **Marker Name**, enter a name for the marker.
-    3. Choose **Row** from the **Selection Type** drop-down list.
+    2. On the right side, enter a **Marker Name** that is used for the row that you selected. 
+
+    3. Select **Row** from the **Selection Type** drop-down list.
+
     4. Click **Add Selection**.
+
     5. Repeat steps above to mark other rows in the table.
 
 9. After you finish marking all the columns and rows, click **Table Component**.
@@ -238,7 +241,7 @@ After you [upload sample images](#update-sample-images) in the document model tr
 
 11. If all the required columns and the rows from the table are marked, click **Save Table Selection** to save all the markers for the table.
 
-If you still need to [mark text fields in sample images](#mark-text-fields), you can then proceed to do it. Otherwise, you can [finish the document model training](#finish-training).
+If you still need to [mark text fields in sample images](#mark-text-fields), you can proceed to do it. Otherwise, you can [finish the document model training](#finish-training).
 
 ##### 4.1.2.4 Finishing the Document Model Training {#finish-training}
 

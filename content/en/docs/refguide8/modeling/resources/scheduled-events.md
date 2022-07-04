@@ -107,7 +107,7 @@ parseInteger( formatDateTime( [%CurrentDateTime%], 'dd') ) = 15
 // This will run the scheduled event on the 1th and 15th of the month
 ```
 
-Or as [Herbert Vujik](https://mxforum.mendix.com/questions/6934/How-are-monthly-Scheduled-Events-planned#10518) suggests, use this expression for running it on the last day of the month:
+Or as [Herbert Vujik](https://forum.mendix.com/link/questions/6934) suggests, use this expression for running it on the last day of the month:
 
 ```java
 formatDateTime([%CurrentDateTime%], 'dd') = formatDateTime([%EndOfCurrentMonth%], 'dd') 

@@ -20,15 +20,12 @@ Here is an overview of what Chatbot contains:
 | [Predefined entities](#predefined-entities) | BotContext, BotConfig, LanguageConfig, Slot Argument, TestBotContext |
 | [Constants](#constants)                     | LicenseToken, TokenEndpoint      |
 | [Microflows](#microflows)                   | GetSlotArgument, StartService |
+| [Jave actions](#jave-actions) | CreateBotContext |
 | [Widgets](#widgets)                         | Chatbot, InputElement         |
-| Pages                             | ChatbotConsole                |
+| [Pages](#pages)                   | ChatbotConsole                |
 | [Enumerations](#enumerations)               | BotStatus, BuiltinIntent, BuiltinSlotType,LanguageStatus, Locale, SlotConstraint, SlotValueResolutionStrategy    |
 
 In most cases, you will only need what is contained in the **Chatbot** > **USE_ME** folder. The content in the **Chatbot** > **Internal** folder is for internal use only and you will not need it.
-
-The Chatbot module contains the ChatbotConsole page, which can define a chatbot in conversational UI with the local developer mode in Mendix Studio Pro. During the chatbot configuration, you need to use the provided template bot configuration or make a complete new design. The conversation bot design includes elements like, intent, utterance, prompt, slot, fulfillment. You can follow the [Designing Chatbot Content from Scratch in Your Browser](#design-chatbot-context) section to get to know how it works.
-
-{{< figure src="/attachments/appstore/app-services/chatbot/chatbotconsole-page.png" >}}
 
 ### 1.1 Typical Use Cases
 
@@ -193,111 +190,6 @@ The **GetSlotArgument** microflow takes **botContext** object and **slotName** a
 
 The **CreateBotContext** Java action takes **entityType** and **botName** as the input parameters. It creates bot and its associated context given the bot name and bot description. You could pass a microflow to initialize the context. {{% todo %}}Check the description{{% /todo %}}
 
-### 3.5 Enumerations {#enumerations}
-
-#### 3.5.1 BotStatus
-
-The **BotStatus** is an enumeration that incorporates all the status of your bot.
-
-| Caption | Name |
-| --- | --- |
-| Creating | Creating |
-| Initializing | Initializing |
-| Available | Available |
-| Failed | Failed |
-
-#### 3.5.2 BuiltinIntent
-
-The **BuiltinIntent** is an enumeration that incorporates all kinds of built-in intent.
-
-| Caption | Name |
-| --- | --- |
-| CancelIntent | Cancel |
-| FallbackIntent | Fallback |
-| HelpIntent | Help |
-| PauseIntent | Pause |
-| RepeatIntent | Repeat |
-| ResumeIntent | Resume |
-| StartOverIntent | StartOver |
-| StopIntent | Stop |
-
-#### 3.5.3 BuiltinSlotType
-
-The **BuiltinSlotType** is an enumeration that incorporates all kinds of built-in slot type.
-
-| Caption | Name |
-| --- | --- |
-| AlphaNumeric | AlphaNumeric |
-| City | City |
-| Country | Country |
-| Date | Date |
-| Duration | Duration |
-| EmailAddress | EmailAddress |
-| FirstName | FirstName |
-| LastName | LastName |
-| Number | Number |
-| Percentage | Percentage |
-| PhoneNumber | PhoneNumber |
-| State | State |
-| StreetName | StreetName |
-| Time | Time |
-
-#### 3.5.4 LanguageStatus
-
-The **LanguageStatus** is an enumeration that incorporates all the language status of your bot.
-
-| Caption | Name |
-| --- | --- |
-| Creating | Creating |
-| Initializing | Initializing |
-| Available | Available |
-| Failed | Failed |
-
-#### 3.5.5 Locale
-
-The **Locale** is an enumeration that incorporates all the language options of your bot.
-
-| Caption              | Name  |
-| --------------------- | ----- |
-| German(German)                | de_DE    |
-| English(Australia)            | en_AU    |
-| English(British)              | en_GB    |
-| English(US)                   | en_US    |
-| Spanish(Latin America)        | es_419   |
-| Spanish(Spain)                | es_ES    |
-| Spanish(US)                   | es_US    |
-| French(Canada)                | fr_CA    |
-| French(France)                | fr_FR    |
-| Italian(Italy)                | it_IT    |
-| Japanese(Japan)               | ja_JP    |
-
-#### 3.5.6 SlotConstraint
-
-The **SlotConstraint** is an enumeration that incorporates all the informations of your slot constraint.
-
-| Caption | Name |
-| --- | --- |
-| Required | Required |
-| Optional | Optional |
-
-#### 3.5.7 SlotValueResolutionStrategy
-
-The **SlotValueResolutionStrategy** is an enumeration that incorporates all the options of your slot value resolution.
-
-| Caption | Name |
-| --- | --- |
-| OriginalValue | OriginalValue |
-| TopResolution | TopResolution |
-
-#### 3.5.8 AddLanguageMethod
-
-The **AddLanguageMethod** is an enumeration that incorporates all the options to add language method
-
-| Caption | Name |
-| --- | --- |
-| Add a language from scratch | FromScratch |
-| Start with an example | FromExample |
-
 ### 3.5 Widgets {#widgets}
 
 #### 3.5.1 Chatbot {#chatbot}
@@ -347,9 +239,120 @@ The core widget required is the **Chatbot** widget. You can configure the follow
      * **Error** – sets a String attribute as the error message
      * **Action** – sets which action is executed when an error occurs
 
-### 3.6 Configuring the License Token {#configure-license-token}
+### 3.6 Pages {#pages}
 
-#### 3.6.1 For an App Run Locally or Deployed as a Mendix Free App
+The Chatbot module contains the ChatbotConsole page, which you can use to define a chatbot in conversational UI with the local developer mode in Mendix Studio Pro. During the chatbot configuration, you need to use the provided template bot configuration or make a complete new design. The conversation bot design includes elements such as intent, utterance, prompt, slot, and fulfillment. For more information, see the [Designing Chatbot Content from Scratch in Your Browser](#design-chatbot-context) section.
+
+{{< figure src="/attachments/appstore/app-services/chatbot/chatbotconsole-page.png" >}}
+
+### 3.7 Enumerations {#enumerations}
+
+#### 3.7.1 BotStatus
+
+The **BotStatus** is an enumeration that incorporates all the status of your bot.
+
+| Caption      | Name         |
+| ------------ | ------------ |
+| Creating     | Creating     |
+| Initializing | Initializing |
+| Available    | Available    |
+| Failed       | Failed       |
+
+#### 3.7.2 BuiltinIntent
+
+The **BuiltinIntent** is an enumeration that incorporates all kinds of built-in intent.
+
+| Caption         | Name      |
+| --------------- | --------- |
+| CancelIntent    | Cancel    |
+| FallbackIntent  | Fallback  |
+| HelpIntent      | Help      |
+| PauseIntent     | Pause     |
+| RepeatIntent    | Repeat    |
+| ResumeIntent    | Resume    |
+| StartOverIntent | StartOver |
+| StopIntent      | Stop      |
+
+#### 3.7.3 BuiltinSlotType
+
+The **BuiltinSlotType** is an enumeration that incorporates all kinds of built-in slot type.
+
+| Caption      | Name         |
+| ------------ | ------------ |
+| AlphaNumeric | AlphaNumeric |
+| City         | City         |
+| Country      | Country      |
+| Date         | Date         |
+| Duration     | Duration     |
+| EmailAddress | EmailAddress |
+| FirstName    | FirstName    |
+| LastName     | LastName     |
+| Number       | Number       |
+| Percentage   | Percentage   |
+| PhoneNumber  | PhoneNumber  |
+| State        | State        |
+| StreetName   | StreetName   |
+| Time         | Time         |
+
+#### 3.7.4 LanguageStatus
+
+The **LanguageStatus** is an enumeration that incorporates all the language status of your bot.
+
+| Caption      | Name         |
+| ------------ | ------------ |
+| Creating     | Creating     |
+| Initializing | Initializing |
+| Available    | Available    |
+| Failed       | Failed       |
+
+#### 3.7.5 Locale
+
+The **Locale** is an enumeration that incorporates all the language options of your bot.
+
+| Caption                | Name   |
+| ---------------------- | ------ |
+| German(German)         | de_DE  |
+| English(Australia)     | en_AU  |
+| English(British)       | en_GB  |
+| English(US)            | en_US  |
+| Spanish(Latin America) | es_419 |
+| Spanish(Spain)         | es_ES  |
+| Spanish(US)            | es_US  |
+| French(Canada)         | fr_CA  |
+| French(France)         | fr_FR  |
+| Italian(Italy)         | it_IT  |
+| Japanese(Japan)        | ja_JP  |
+
+#### 3.7.6 SlotConstraint
+
+The **SlotConstraint** is an enumeration that incorporates all the informations of your slot constraint.
+
+| Caption  | Name     |
+| -------- | -------- |
+| Required | Required |
+| Optional | Optional |
+
+#### 3.7.7 SlotValueResolutionStrategy
+
+The **SlotValueResolutionStrategy** is an enumeration that incorporates all the options of your slot value resolution.
+
+| Caption       | Name          |
+| ------------- | ------------- |
+| OriginalValue | OriginalValue |
+| TopResolution | TopResolution |
+
+#### 3.7.8 AddLanguageMethod
+
+The **AddLanguageMethod** is an enumeration that incorporates all the options to add language method
+
+| Caption                     | Name        |
+| --------------------------- | ----------- |
+| Add a language from scratch | FromScratch |
+| Start with an example       | FromExample |
+
+### 3.8 Configuring the License Token {#configure-license-token}
+
+#### 3.8.1 For an App Run Locally or Deployed as a Mendix Free App
 
 If you run your app locally or deploy it as a Mendix Free App, configure the license token in Studio Pro. Perform the following steps:
 
@@ -363,7 +366,7 @@ If you run your app locally or deploy it as a Mendix Free App, configure the lic
 
 6. When you finish building the app, click **Run Locally** to run your app locally or click **Run** to deploy it as a Mendix Free App. Then you can see the app service in your app.
 
-#### 3.6.2 For an App Deployed in the Mendix Cloud
+#### 3.8.2 For an App Deployed in the Mendix Cloud
 
 If you deploy your app in the Mendix Cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details/).
 
@@ -371,7 +374,7 @@ Before you deploy your app, configure the app **Constants** in the deployment pa
 
 If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app.
 
-#### 3.6.3 For an App Deployed in Your Own Environment
+#### 3.8.3 For an App Deployed in Your Own Environment
 
 If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](/developerportal/deploy/).
 

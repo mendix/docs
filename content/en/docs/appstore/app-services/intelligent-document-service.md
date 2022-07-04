@@ -160,7 +160,7 @@ You should use the marker tool properly – this is key to extracting data in hi
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-marker-and-ids-image-unmarked.png" alt="Add Marker and IDs page" >}}
 
-You can then proceed to mark the [text fields](#mark-text-fields) and [tables](#mark-tables) in a sample image.
+You can then proceed to mark the [text fields](#mark-text-fields) and/or [tables](#mark-tables) in a sample image.
 
 ##### 4.1.2.2 Marking Text Fields in a Sample Image {#mark-text-fields}
 
@@ -168,21 +168,21 @@ After you [upload sample images](#update-sample-images) in the document model tr
 
 1. Click **Add Marker**. The **Mark Document** dialog box opens.
 
-2. In the **Choose fields to mark** pane, select a field of interest from which some meaningful data needs to be extracted.
+2.  In the **Choose fields to mark** pane, select a field of interest from which some meaningful data needs to be extracted.
 
-   {{% alert color="warning" %}}The areas you mark in this step determine where the document model will extract the data. Make sure that you mark the complete field area. Only in this way, will the document model read the complete field area and accurately extract a long value.{{% /alert %}}
+    {{% alert color="warning" %}}The areas you mark in this step determine where the document model will extract the data. Make sure that you mark the complete field area. Only in this way, will the document model read the complete field area and accurately extract a long value.{{% /alert %}}
 
-   {{< figure src="/attachments/appstore/app-services/intelligent-document-service/mark-document-dialog-box.png" alt="Mark Document page" >}}
+    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/mark-document-dialog-box.png" alt="Mark Document page" >}}
 
 3. On the right side, enter a **Marker Id** that is used for the area that you selected. 
 
 4. Select **Text** from drop-down list.
 
-5. Click **Generate Marker ID** to add the marker to the list of **Markers**.
+5.  Click **Generate Marker ID** to add the marker to the list of **Markers**.
 
-{{% alert color="info" %}}To delete a marker from the **Markers** list, select the marker and click **Delete**.{{% /alert %}}
+    {{% alert color="info" %}}To delete a marker from the **Markers** list, select the marker and click **Delete**.{{% /alert %}}
 
-If you want to [mark tables in sample images](#mark-tables), you can then proceed to do it. Otherwise, you can [finish the document model training](#finish-training).
+If you still need to [mark tables in sample images](#mark-tables), you can then proceed to do it. Otherwise, you can [finish the document model training](#finish-training).
 
 ##### 4.1.2.3 Marking Tables in Sample Images {#mark-tables}
 
@@ -236,13 +236,13 @@ After you [upload sample images](#update-sample-images) in the document model tr
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/markers-of-table-component.png" >}}
 
-11. Once the required columns and all the rows from the table are marked, click **Save Table Selection** to save all the markers for the table.
+11. If all the required columns and the rows from the table are marked, click **Save Table Selection** to save all the markers for the table.
 
-If you want to [mark text fields in sample images](#mark-text-fields), you can then proceed to do it. Otherwise, you can [finish the document model training](#finish-training).
+If you still need to [mark text fields in sample images](#mark-text-fields), you can then proceed to do it. Otherwise, you can [finish the document model training](#finish-training).
 
 ##### 4.1.2.4 Finishing the Document Model Training {#finish-training}
 
-1. After you add all the markers for the [text fields](#mark-text-fields) and [tables](#mark-tables) in this sample image, click **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.
+1. After you add all the markers for the [text fields](#mark-text-fields) and/or [tables](#mark-tables) in this sample image, click **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.
 
    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-marker-and-ids-image-status-marked.png" >}}
 

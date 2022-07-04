@@ -29,8 +29,6 @@ Before starting this how-to, make sure you have the following prerequisites in p
 	{{% alert color="info" %}}Both the ATS Helper and the ATS Recorder only function in [Google Chrome](https://www.google.com/chrome/browser/). 
 	{{% /alert %}}
 
-{{% youtube C7GuDU9nePQ %}}
-
 ## 3 Installing the ATS Helper
 
 To install the ATS Helper, follow these steps:

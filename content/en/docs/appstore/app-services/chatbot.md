@@ -33,12 +33,10 @@ You can use this app service to build a chatbot app that can make human-like con
 
 ### 1.2 Features
 
-This app service enables doing the following:
-
-* Create a chatbot app to make human-like conversations with users via text messages in UI
+* Enable creating a chatbot app to make human-like conversations with users via text messages in UI
 * Support customizing chatbot intent actions
-* Easily add AI that understands users' intents and automates actions across many languages
-* Design and deploy omnichannel conversational AI with drag and drop
+* Allow you to easily add AI that understands users' intents and automates actions across many languages
+* Support designing and deploying omnichannel conversational AI with drag and drop
 
 ### 1.3 Prerequisites
 
@@ -91,14 +89,14 @@ A trial gives everyone in your company one-month access to the app service. The 
 
 #### 3.1.1 BotContext
 
-The **BotContext** is a context entity which captures all input and output info for the Chatbot widget. The context is uniquely identified by the bot name defined in the [Create Bot Context](#createbotcontext) activity .
+The **BotContext** is a context entity which captures all input and output info for the [Chatbot](#chatbot) widget. The context is uniquely identified by the bot name defined in the [Create Bot Context](#createbotcontext) activity .
 
 {{< figure src="/attachments/appstore/app-services/chatbot/botcontext.png" >}}
 
 | Attribute        | Data Type | Description|
 | ---------------- | ---- | -----------|
-| `Uid`   | String | The unique identifier of the bot context.  |
-| `LocaleId` | Enumeration | The enumeration to get or set the bot locale. |
+| `Uid`   | String | The unique identifier of the bot context  |
+| `LocaleId` | Enumeration | The enumeration to get or set the bot locale |
 
 #### 3.1.2 BotConfig
 
@@ -108,28 +106,28 @@ The **BotConfig** is a read-only entity that shows the context of a bot which pe
 
 | Attribute        | Data Type | Description|
 | ---------------- | ---- | -----------|
-| `Name`   | String | The name of the bot.  |
-| `Status` | Enumeration | The status of the bot. |
-| `Tag`    | String | The underlying cloud identifier, internal-use only. |
-| `Hash`   | String | The hash string to identify if bot configuration has been modified. |
+| `Name`   | String | The name of the bot  |
+| `Status` | Enumeration | The status of the bot |
+| `Tag`    | String | The underlying cloud identifier, internal-use only |
+| `Hash`   | String | The hash string to identify if bot configuration has been modified |
 
 #### 3.1.3 LanguageConfig
 
-The **LanguageConfig** is a read-only entity that shows the language configuration of bot.
+The **LanguageConfig** is a read-only entity that shows the language configuration of the bot.
 
 {{< figure src="/attachments/appstore/app-services/chatbot/languageconfig.png" >}}
 
 | Attribute        | Data Type | Description|
 | ---------------- | ---- | -----------|
-| `LocaleId`   | Enumeration | The identifier of the language and locale where this intent is used. All of the bots, slot types, and slots used by the intent must have the same locale.   |
-| `VoiceId` | String | The UUID of the voice object. |
-| `Status` | Enumeration | The status of the bot. |
-| `Tag`    | String | The underlying cloud identifier, internal-use only. |
-| `Hash`   | String | The hash string to identify if bot configuration has been modified. |
+| `LocaleId`   | Enumeration | The identifier of the language and locale where this intent is used{{% alert color="info" %}} All of the bots, slot types, and slots used by the intent must have the same locale.{{% /alert %}} |
+| `VoiceId` | String | The UUID of the voice object |
+| `Status` | Enumeration | The status of the bot |
+| `Tag`    | String | The underlying cloud identifier, internal-use only |
+| `Hash`   | String | The hash string to identify if bot configuration has been modified |
 
 #### 3.1.4 SlotArgument
 
-The **SlotArgument** is the entity that captures the user input value of slots for current fullfilled intent.
+The **SlotArgument** is the entity that captures the user input value of slots for the current fullfilled intent.
 
 {{< figure src="/attachments/appstore/app-services/chatbot/slotargument.png" >}}
 
@@ -146,7 +144,7 @@ The **TestBotContext** is the entity that shows the configuration of the test bo
 
 | Attribute        | Data Type | Description|
 | ---------------- | ---- | -----------|
-| `IsReady`   | Boolean | Whether the test bot is ready. |
+| `IsReady`   | Boolean | Whether the test bot is ready |
 
 #### 3.1.6 ClientConfig
 
@@ -156,8 +154,8 @@ The **ClientConfig** is the entity that shows the user data configurations.
 
 | Attribute        | Data Type | Description|
 | ---------------- | ---- | -----------|
-| `BotName`   | String | The name of the bot.    |
-| `SelectedLanguageLocale` | Enumeration | The selected language locale of the target bot. |
+| `BotName`   | String | The name of the bot    |
+| `SelectedLanguageLocale` | Enumeration | The selected language locale of the target bot |
 
 
 ### 3.2 Constants {#constants}
@@ -168,7 +166,7 @@ The **LicenseToken** constant provides a valid license token for an app that use
 
 #### 3.2.2 TokenEndpoint
 
-The **TokenEndpoint** constant provides a valid endpoint of security token service for the back-end authentication of the app service. The constant comes with a default value which points to the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
+The **TokenEndpoint** constant provides a valid endpoint of the security token service for the back-end authentication of the app service. The constant comes with a default value which points to the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
 
 ### 3.3 Microflows{#microflows}
 
@@ -180,7 +178,7 @@ The **StartService** microflow is a Java action which starts the Chatbot service
 
 #### 3.3.2 GetSlotArgument {#getslotargument}
 
-The **GetSlotArgument** microflow takes **botContext** object and **slotName** as the input parameters to extract the slot argument from the provided **botContext**.
+The **GetSlotArgument** microflow takes the **botContext** object and **slotName** as the input parameters to extract the slot argument from the provided **botContext**.
 
 {{< figure src="/attachments/appstore/app-services/chatbot/getslotargument.png" >}}
 
@@ -188,7 +186,7 @@ The **GetSlotArgument** microflow takes **botContext** object and **slotName** a
 
 #### 3.4.1 CreateBotContext {#createbotcontext}
 
-The **CreateBotContext** Java action takes **entityType** and **botName** as the input parameters. It creates bot and its associated context given the bot name and bot description. You could pass a microflow to initialize the context. {{% todo %}}Check the description{{% /todo %}}
+The **CreateBotContext** Java action takes **entityType** and **botName** as the input parameters. It creates bot and its associated context based on the bot name and bot description. You could pass a microflow to initialize the context. {{% todo %}}Check the description{{% /todo %}}
 
 ### 3.5 Widgets {#widgets}
 
@@ -200,10 +198,10 @@ The core widget required is the **Chatbot** widget. You can configure the follow
   * **Bot Context** – the current position of the bot that defines its possibilities and options, which changes every time the bot moves along the story and opens newly possible interactions as well as closes the previous ones
     * **Bot Context Uid** – the unique identifier for bot context
      * **Locale** – the active locale constant of the bot
-     * **Chatbot Mode** – the working mode for chatbot, which works in either text or audio
+     * **Chatbot Mode** – the working mode for the chatbot, which works in either text or audio
     
   * **Intents** – the intention behind each message that the chatbot receives, namely, what the user wants to get out of the interaction (for example, when a user says "I need new shoes", their intent is to order new shoes)
-    * **Intent actions** – the action lists of user intent
+    * **Intent actions** – the action lists of the user intent
          * **New** – creates a new intent action with the following settings:
              * **Name** – the name of intent
              * **Dialog action** – the action that is executed at every turn of the conversations; used to initialize values or validate user input
@@ -217,24 +215,24 @@ The core widget required is the **Chatbot** widget. You can configure the follow
     
   * **Options** – the setting options for chatbot conversational UI/UX
     * **Chatbot Mode**
-        * **Text **(default) – users can interact with the chatbot in text
+        * **Text **(default) – If selected, users can interact with the chatbot in text.
     
-        * **Audio** – users can interact with the chatbot in audio
+        * **Audio** – If selected, users can interact with the chatbot in audio.
     
      * **Use toggle button**
-        * **Yes** (default) – a toggle button is available to show or hide chat panel
+        * **Yes** (default) – If selected, a toggle button is available to show or hide chat panel.
     
-        * **No** (default) – no toggle button is available; the chat panel always available
+        * **No** (default) – If selected, no toggle button is available and the chat panel is always available.
     
      * **Show inspection panel**
-       * **True** – a flag is available to toggle the display of the inspection panel
-       * **False** (default) – no flag is available to toggle the display of the inspection panel
+       * **True** – If selected, a flag is available to toggle the display of the inspection panel.
+       * **False** (default) – If selected, no flag is available to toggle the display of the inspection panel.
     
   
 * **Events** tab
   * **On ready** – By binding a String attribute to the **Is ready** property, you can set this property to verify if the current bot is ready for conversing.
      * **Is ready** – a flag indicating if the current bot is ready for conversing
-     * **Action** – the action triggered when bot is ready
+     * **Action** – the action triggered when the bot is ready
   * **On error** – By binding a String attribute to the **Error** property, you can obtain the error message raised by the back-end service and set a custom action that is executed when an error occurs.
      * **Error** – sets a String attribute as the error message
      * **Action** – sets which action is executed when an error occurs
@@ -249,7 +247,7 @@ The Chatbot module contains the ChatbotConsole page, which you can use to define
 
 #### 3.7.1 BotStatus
 
-The **BotStatus** is an enumeration that incorporates all the status of your bot.
+The **BotStatus** is an Enumeration that incorporates all the statuses of your bot.
 
 | Caption      | Name         |
 | ------------ | ------------ |
@@ -260,7 +258,7 @@ The **BotStatus** is an enumeration that incorporates all the status of your bot
 
 #### 3.7.2 BuiltinIntent
 
-The **BuiltinIntent** is an enumeration that incorporates all kinds of built-in intent.
+The **BuiltinIntent** is an Enumeration that incorporates all kinds of built-in intents.
 
 | Caption         | Name      |
 | --------------- | --------- |
@@ -275,7 +273,7 @@ The **BuiltinIntent** is an enumeration that incorporates all kinds of built-in 
 
 #### 3.7.3 BuiltinSlotType
 
-The **BuiltinSlotType** is an enumeration that incorporates all kinds of built-in slot type.
+The **BuiltinSlotType** is an Enumeration that incorporates all kinds of built-in slot types.
 
 | Caption      | Name         |
 | ------------ | ------------ |
@@ -296,7 +294,7 @@ The **BuiltinSlotType** is an enumeration that incorporates all kinds of built-i
 
 #### 3.7.4 LanguageStatus
 
-The **LanguageStatus** is an enumeration that incorporates all the language status of your bot.
+The **LanguageStatus** is an Enumeration that incorporates all the language statuses of your bot.
 
 | Caption      | Name         |
 | ------------ | ------------ |
@@ -307,7 +305,7 @@ The **LanguageStatus** is an enumeration that incorporates all the language stat
 
 #### 3.7.5 Locale
 
-The **Locale** is an enumeration that incorporates all the language options of your bot.
+The **Locale** is an Enumeration that incorporates all the language options of your bot.
 
 | Caption                | Name   |
 | ---------------------- | ------ |
@@ -325,7 +323,7 @@ The **Locale** is an enumeration that incorporates all the language options of y
 
 #### 3.7.6 SlotConstraint
 
-The **SlotConstraint** is an enumeration that incorporates all the informations of your slot constraint.
+The **SlotConstraint** is an Enumeration that incorporates all the information of your slot constraint.
 
 | Caption  | Name     |
 | -------- | -------- |
@@ -334,7 +332,7 @@ The **SlotConstraint** is an enumeration that incorporates all the informations 
 
 #### 3.7.7 SlotValueResolutionStrategy
 
-The **SlotValueResolutionStrategy** is an enumeration that incorporates all the options of your slot value resolution.
+The **SlotValueResolutionStrategy** is an Enumeration that incorporates all the options of your slot value resolution.
 
 | Caption       | Name          |
 | ------------- | ------------- |
@@ -343,7 +341,7 @@ The **SlotValueResolutionStrategy** is an enumeration that incorporates all the 
 
 #### 3.7.8 AddLanguageMethod
 
-The **AddLanguageMethod** is an enumeration that incorporates all the options to add language method
+The **AddLanguageMethod** is an Enumeration that incorporates all the options to add a language method.
 
 | Caption                     | Name        |
 | --------------------------- | ----------- |
@@ -357,12 +355,16 @@ The **AddLanguageMethod** is an enumeration that incorporates all the options to
 If you run your app locally or deploy it as a Mendix Free App, configure the license token in Studio Pro. Perform the following steps:
 
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings/) dialog box.
+
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
+
 3. On the **Constants** tab, create a new constant with the predefined constant **Chatbot.LicenseToken**.
-4. Fill in the **Value** with the license token that you [obtained](#obtain-license-token).
-5.  Click **OK** to save the settings.
+
+4.  Fill in the **Value** with the license token that you [obtained](#obtain-license-token).
 
     {{< figure src="/attachments/appstore/app-services/chatbot/licensetoken-inmendix.png" >}}
+
+5. Click **OK** to save the settings.
 
 6. When you finish building the app, click **Run Locally** to run your app locally or click **Run** to deploy it as a Mendix Free App. Then you can see the app service in your app.
 
@@ -390,7 +392,7 @@ It can be useful to run the Chatbot service automatically when your app starts. 
 
 ### 4.2 Configuring Chatbot Design Time in Your Browser {#configure-chatbot-design-time}
 
-You can use the **ChatbotConsole** page in a module to design bot context. To let the **ChatbotConsole** page work, you need to take a few steps as follows:
+You can use the **ChatbotConsole** page in a module to design bot context. To let the **ChatbotConsole** page work, you need to perform the following steps:
 
 1. In the **App Explorer**, click **Navigation**. 
 2. Add the **ChatbotConsole** page as a new item in your [navigation profile](/refguide/navigation/#profiles).
@@ -404,7 +406,7 @@ You can use the **ChatbotConsole** page in a module to design bot context. To le
 2. Click **Create bot** on the page to start designing your own chatbot.
 3. Configure the bot settings with a bot name and a description, and then click **Next**.
 4. Configure **Add methods** to start with an example.
-4. Configure the bot languages settings with **Language details**, **Voice** and **Confidence score threshold**, and then click **Next**.
+4. Configure the bot languages settings with **Language details**, **Voice**, and **Confidence score threshold**, and then click **Next**.
 5. On the lower-right corner, click **Test**.
 7. Navigate to the **Bot Conversation** page to see if the whole bot workflow works.  
 
@@ -419,7 +421,7 @@ You can use the **ChatbotConsole** page in a module to design bot context. To le
 
     {{< figure src="/attachments/appstore/app-services/chatbot/bot-configuration.png" >}}
 
-4.  Configure the bot languages settings with **Language details**, **Voice** and **Confidence score threshold**, and then click **Next**.
+4.  Configure the bot languages settings with **Language details**, **Voice**, and **Confidence score threshold**, and then click **Next**.
 
     {{< figure src="/attachments/appstore/app-services/chatbot/add-language.png" >}}
 
@@ -429,12 +431,12 @@ You can use the **ChatbotConsole** page in a module to design bot context. To le
 
 7. In order to design a complete conversation flow, add **Sample utterance**, **Confirmation prompt**, and **Closing response** in the **Add intent** page.
 8. Fill **Intent details** with **Intent name** and **Description**.
-9. Add **Sample utterances** as an initial request. You can add more than one options in here.
-10. Add **Slots** with **Name**, **Slot type** and **Prompts** to define the values that users can supply for your intent variables.
+9. Add **Sample utterances** as an initial request. You can add more than one options here.
+10. Add **Slots** with **Name**, **Slot type**, and **Prompts** to define the values that users can supply for your intent variables.
 11. Add **Confirmation prompt** with **Message** and **Variations** in **Message group** to confirm the user intent.
 12. Add **Declination response** with **Message** and **Variations** in **Message group** to confirm the user intent when a user says no to the confirmation prompt.
-13. Add **Closing response** with **Message** and **Variations** in **Message group** to sent the response to the user after the intent is fulfilled.
-14. Click **Test** to run chatbot and navigate to the **Bot Conversation** page to see if the whole bot workflow works.  
+13. Add **Closing response** with **Message** and **Variations** in **Message group** to send the response to the user after the intent is fulfilled.
+14. Click **Test** to run the chatbot and navigate to the **Bot Conversation** page to see if the whole bot workflow works.  
 
 ### 4.5 Adding Intent Actions to Your Defined Chatbot
 
@@ -467,25 +469,25 @@ You can use the **ChatbotConsole** page in a module to design bot context. To le
 
     1. Name the microflow *OrderFlower*.
 
-    2. Right click to add a **Parameter**.
+    2. Right-click to add a **Parameter**.
 
-    3. Double-click the **Parameter** to set **BotContext** as **Data type** of output.
+    3. Double-click the **Parameter** to set **BotContext** as **Data type** of the output.
 
     4. Add a **Microflow call** activity, and configure the settings as follows:
 
-       1. Set **Microflow** to **GetSlotArgument** from **Chatbot** module.
+       1. Set **Microflow** to **GetSlotArgument** from the **Chatbot** > **USE_ME** folder.
        2. Change the parameter **botContext** to **$botContext**, and **slotName** to **FlowerType**.
        3. Click **OK** to save the changes.
 
     5. Add the second **Microflow call** activity, and configure the settings as follows:
 
-       1. Set **Microflow** to **GetSlotArgument** from Chatbot module.
+       1. Set **Microflow** to **GetSlotArgument** from the **Chatbot** > **USE_ME** folder.
        2. Change the parameter **botContext** to **$botContext**, and **slotName** to **PickupTime**.
        3. Click **OK** to save the changes.
 
     6. Add the third **Microflow call** activity, and configure the settings as follows:
 
-       1. Set **Microflow** to **GetSlotArgument** from **Chatbot** module.
+       1. Set **Microflow** to **GetSlotArgument** from the **Chatbot** > **USE_ME** folder.
        2. Change the parameter **botContext** to **$botContext**, and **slotName** as **PickupDate**.
        3. Click **OK** to save the changes.
 
@@ -517,7 +519,7 @@ You can use the **ChatbotConsole** page in a module to design bot context. To le
 
 7. Run your app locally. 
 
-8. Navigate to the bot conversation page and you can start your conversation with chatbot.
+8. Navigate to the bot conversation page. You can start your conversation with chatbot.
 
 ### 4.6 Handling Chatbot Events
 
@@ -541,7 +543,7 @@ For example, you can set up the **Action** to make the app show a pop-up window 
 
 By binding an attribute to the **Is ready** event, the app will trigger an action event when the bot is ready.
 
-**Is ready** takes a String attribute. You can define an attribute and bind this attribute to **Is ready**. In an app, when chatbot is running, a flag indicates if the current bot is ready for conversing. The app can trigger an action when the bot is ready. You can select the custom **Action** from a list of actions.
+**Is ready** takes a String attribute. You can define an attribute and bind this attribute to **Is ready**. In an app, when the chatbot is running, a flag indicates if the current bot is ready for conversing. The app can trigger an action when the bot is ready. You can select the custom **Action** from a list of actions.
 
 ### 4.7 Checking Statistics on the Usage Dashboard {#check-usage}
 

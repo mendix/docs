@@ -34,8 +34,6 @@ Before starting with this how-to, make sure you have the following prerequisites
 
 * Read [How to Create a Test Case](/addons/ats-addon/ht-two-create-a-test-case/)
 
-{{% youtube ucvD8cjo6JI %}}
-
 ## 3 Creating a Master Data Set within ATS
 
 The following steps explain how to create a master dataset within ATS. If you want to create a master dataset from an Excel file, please see chapter four.

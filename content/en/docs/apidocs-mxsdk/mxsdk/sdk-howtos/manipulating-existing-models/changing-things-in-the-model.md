@@ -1,7 +1,6 @@
 ---
 title: "Change Things in the Model"
 url: /apidocs-mxsdk/mxsdk/changing-things-in-the-model/
-parent: "manipulating-existing-models"
 ---
 
 ## 1 Introduction

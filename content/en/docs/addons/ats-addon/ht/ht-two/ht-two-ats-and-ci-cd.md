@@ -1,7 +1,6 @@
 ---
 title: "Use ATS in Combination with CI/CD"
 url: /addons/ats-addon/ht-two-ats-and-ci-cd/
-parent: "ht-two"
 description: "Describes how you can use ATS 2.0 in your CI/CD pipeline."
 tags: ["ATS", "testing", "CI/CD"]
 ---

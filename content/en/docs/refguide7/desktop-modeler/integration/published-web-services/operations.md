@@ -1,7 +1,6 @@
 ---
 title: "Operations"
 url: /refguide7/operations/
-parent: "published-web-services"
 ---
 
 

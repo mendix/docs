@@ -1,7 +1,6 @@
 ---
 title: "Function Reference"
 url: /addons/ats-addon/rg-two-function-reference/
-parent: "rg-two-ats"
 ---
 
 ## 1 Introduction

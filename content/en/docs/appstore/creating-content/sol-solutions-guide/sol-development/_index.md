@@ -1,7 +1,6 @@
 ---
 title: "Developing Solutions"
 url: /appstore/creating-content/sol-development/
-parent: "sol-solutions-guide"
 weight: 20
 description: "Presents documentation for developing solutions"
 tags: [ "solutions", "development", "adaptive solutions" ]

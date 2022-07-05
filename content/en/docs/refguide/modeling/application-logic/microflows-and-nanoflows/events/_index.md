@@ -1,7 +1,6 @@
 ---
 title: "Events"
 url: /refguide/events/
-parent: "microflows-and-nanoflows"
 weight: 90
 tags: ["studio pro", "event", "events"]
 ---

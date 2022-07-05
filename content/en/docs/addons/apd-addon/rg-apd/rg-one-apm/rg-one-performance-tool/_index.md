@@ -1,7 +1,6 @@
 ---
 title: "Performance Tool"
 url: /addons/apd-addon/rg-one-performance-tool/
-parent: "rg-one-apm"
 ---
 
 ## 1 Introduction

@@ -1,7 +1,6 @@
 ---
 title: "Set Up Your Development Environment"
 url: /apidocs-mxsdk/mxsdk/setting-up-your-development-environment/
-parent: "sdk-howtos"
 weight: 10
 ---
 

@@ -3,7 +3,6 @@ title: "Native Builder"
 url: /releasenotes/mobile/native-builder/
 category: "Mobile"
 weight: 11
-toc-level: 1
 description: "Native Builder release notes."
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---

@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "imap", "pop3", "email", "encrypt
 
 ## 1 Introduction
 
-The **Email Connector** allows you to send and receive emails on your own email server, and adds new features like sending signed and encrypted emails. It is available for Studio Pro [8.18.18](/releasenotes/studio-pro/8.18/) and above.
+The [Email Connector](https://marketplace.mendix.com/link/component/120739) allows you to send and receive emails on your own email server, and adds new features like sending signed and encrypted emails. It is available for Studio Pro [8.18.18](/releasenotes/studio-pro/8.18/) and above.
 
 ### 1.1 Features
 
@@ -35,12 +35,13 @@ The Email Connector includes the following features:
 Before you use the Email Connector, do the following:
 
 1. Download and [configure](/appstore/modules/model-reflection/#configuration) the [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module from the Mendix Marketplace.
+2. Remove any existing email modules ([IMAP/POP3](/appstore/modules/imap/) or [Email with Templates](/appstore/modules/email-with-templates/)).
 
 {{% alert color="warning" %}}
-Certain functionalities of the Email Connector will not work correctly if the **Mx Model Reflection** module is not configured.
+Certain functionalities of the Email Connector will not work correctly if the **Mx Model Reflection** module is not configured, or if you have not removed older email modules.
 {{% /alert %}}
 
-### 1.3 Included Widgets
+### 1.3 Included Widgets {#included-widgets}
 
 The following widgets are bundled in the module:
 * [HTML/JavaScript Snippet](/appstore/widgets/html-javascript-snippet/)
@@ -54,7 +55,7 @@ If you already have these widgets in your app, and they are not up-to-date, you 
 
 ## 2 Setup in Studio Pro {#setup}
 
-After you install the module, configure the following in Studio Pro:
+After you install the [Email Connector](https://marketplace.mendix.com/link/component/120739), configure the following in Studio Pro:
 
 1. Provide a value for the **EncryptionKey** constant available under **USE_ME** folder for password storage.
 2. Launch the UI by using the **EmailConnector_OverviewPage** in the **USE_ME** folder.
@@ -81,13 +82,13 @@ If you follow the wizard and if it fails to detect the email settings automatica
 
 In Studio Pro, you can use the `GetAutoConfig` Java action to get the all supported email configurations for the provided username. It will return results as `Email_Connector.EmailProvider`. Process the `Email_Connector.EmailProvider` records and get the desired configuration and create the `Email_Connector.EmailAccount`.
 
-### 3.2 Other Account Settings
+### 3.2 Other Account Settings {#other-account-settings}
 
 You can set up the following additional account settings:
 
 {{< figure src="/attachments/appstore/connectors/email-connector/other-account-settings.png" >}}
 
-* Subscribe to incoming emails – user can select this option to get notified about the new incoming emails for modeling use `SubscribeToIncomingEmail` Java action. Read more about this in the section below.
+* **Subscribe to incoming emails** – user can select this option to get notified about the new incoming emails for modeling use `SubscribeToIncomingEmail` Java action. Read more about this in the section below.
 
 {{% alert color="warning" %}}
 This is only supported for IMAP protocols, and some servers may not support it at all.
@@ -232,3 +233,8 @@ If you do not encrypt the password, all functions will still work as expected.
 * **Sample_ACT_SendEmailWithTemplate** – a microflow that helps you set up send email using the template
 * **SE_Cleanup** – a microflow that can be added to a schedule event and deletes email sent logs and sent emails of the past 30 days. The **EmailLogRetention** constant defines the amount of days to preserve messages.
 * **SE_SendQueuedEmails** - a microflow can be added to a schedule event which will send emails which are marked as **QueuedForSending**
+
+## 6 Troubleshooting
+
+* If you already have the [Included Widgets](#included-widgets) widgets in your app, and they are not up-to-date, you may get a `Some widgets can not be read` error when trying to run locally.
+* If the **Email Connector** page styling is affected as you select/view email messages, please turn on the **Sanitize email to prevent XSS attacks** option available in the [Account Settings](#other-account-settings). It is probably due to errors in the email message CSS, so this option should fix any issues. 

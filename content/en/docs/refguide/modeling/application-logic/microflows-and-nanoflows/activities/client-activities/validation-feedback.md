@@ -1,7 +1,6 @@
 ---
 title: "Validation Feedback"
 url: /refguide/validation-feedback/
-parent: "client-activities"
 weight: 70
 tags: ["studio pro", "validation feedback", "client activities"]
 aliases:

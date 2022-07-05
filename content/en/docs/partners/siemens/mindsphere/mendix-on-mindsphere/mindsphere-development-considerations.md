@@ -1,7 +1,6 @@
 ---
 title: "MindSphere Development Considerations"
 url: /partners/siemens/mindsphere-development-considerations/
-parent: "mendix-on-mindsphere"
 weight: 10
 description: "A description of some extra considerations to be taken into account when developing for deployment to MindSphere"
 tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Local", "Styling", "UI", "Icons", "Limitations", "Licensing", "Validation"]

@@ -1,7 +1,6 @@
 ---
 title: "Published OData Services"
 url: /refguide7/published-odata-services/
-parent: "integration"
 aliases:
     - /refguide7/consumed-odata-services.html
     - /refguide7/consumed-odata-services

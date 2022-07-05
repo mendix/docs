@@ -1,7 +1,6 @@
 ---
 title: "Common Properties"
 url: /refguide8/microflow-element-common-properties/
-parent: "application-logic"
 weight: 110
 tags: ["studio pro", "common properties", "microflow", "nanoflow"]
 ---

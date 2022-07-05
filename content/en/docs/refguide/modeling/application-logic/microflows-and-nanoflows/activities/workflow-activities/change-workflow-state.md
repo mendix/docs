@@ -1,7 +1,6 @@
 ---
 title: "Change Workflow State"
 url: /refguide/change-workflow-state/
-parent: "workflow-activities"
 weight: 20
 tags: ["studio pro", "user task", "workflow", "change workflow state", "workflow state"]
 ---

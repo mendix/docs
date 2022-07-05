@@ -1,7 +1,6 @@
 ---
 title: "XPath Day-from-DateTime"
 url: /refguide/xpath-day-from-datetime/
-parent: "xpath-constraint-functions"
 tags: ["studio pro"]
 ---
 

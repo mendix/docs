@@ -1,7 +1,6 @@
 ---
 title: "Delete External Object"
 url: /refguide/delete-external-object/
-parent: "external-object-activities"
 tags: ["studio pro", "integration activity", "delete external object"]
 ---
 {{% alert color="warning" %}}
@@ -33,3 +32,11 @@ Choose a variable that contains a single deletable external object.
 ### 2.2 Refresh in Client
 
 This setting defines how changes are reflected in the pages presented to the end-user. The default for this setting is *No*.
+
+## 3 After the Activity
+
+After this activity, the `$latestHttpResponse` variable (of the [HttpResponse](/refguide/http-request-and-response-entities/#http-response) type) is available to inspect the response returned by the service.
+
+{{% alert color="info" %}}
+The feature to set `$latestHttpResponse` was introduced in Studio Pro [9.15.0](/releasenotes/studio-pro/9.15/).
+{{% /alert %}}

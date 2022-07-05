@@ -1,7 +1,6 @@
 ---
 title: "Text"
 url: /refguide/text-widgets/
-parent: "pages"
 weight: 20
 tags: ["studio pro", "text widgets", "widget"]
 ---

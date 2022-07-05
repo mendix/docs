@@ -1,7 +1,6 @@
 ---
 title: "Native Template"
 url: /refguide/mobile/distributing-mobile-apps/building-native-apps/native-template
-parent: /refguide/mobile/distributing-mobile-apps/building-native-apps/
 weight: 50
 description: Description of the native template.
 aliases:

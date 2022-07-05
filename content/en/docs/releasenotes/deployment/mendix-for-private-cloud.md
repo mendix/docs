@@ -47,7 +47,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We refactored our internal build process - images now share layers as much as possible, reducing download sizes and making it easier to patch CVEs from the base OS layers.
 * A subset of Mendix for Private Cloud components are now available for the ARM64 architecture, allowing you to deploy Mendix apps to machines running Apple Silicon, Raspberry Pi 4, and server-grade ARM64 chips.
 
-##### Known Issue
+#### Known Issue
 
 This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 

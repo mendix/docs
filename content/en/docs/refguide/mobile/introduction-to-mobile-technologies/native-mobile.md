@@ -1,7 +1,6 @@
 ---
 title: "Native Mobile"
 url: /refguide/mobile/introduction-to-mobile-technologies/native-mobile/
-parent: /refguide/mobile/introduction-to-mobile-technologies/
 weight: 10
 aliases:
     - /refguide/native-mobile/

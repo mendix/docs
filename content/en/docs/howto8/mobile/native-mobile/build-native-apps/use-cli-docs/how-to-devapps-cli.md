@@ -1,7 +1,6 @@
 ---
 title: "Create a Custom Developer App with the Native Builder CLI"
 url: /howto8/mobile/how-to-devapps-cli/
-parent: "use-cli-docs"
 weight: 30
 description: A tutorial for creating custom developer apps.
 tags: ["native", "mobile", "developer", "native-builder", "developer app", "make it native"]

@@ -1,7 +1,6 @@
 ---
 title: "Export XML"
 url: /refguide7/export-xml/
-parent: "integration-activities"
 ---
 
 

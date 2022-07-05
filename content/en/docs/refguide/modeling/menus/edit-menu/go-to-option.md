@@ -1,7 +1,6 @@
 ---
 title: "Go to Option"
 url: /refguide/go-to-option/
-parent: "edit-menu"
 description: "Describes the Go to option in Mendix Studio Pro."
 weight: 40
 tags: ["app", "go to", "navigation", "usage"]

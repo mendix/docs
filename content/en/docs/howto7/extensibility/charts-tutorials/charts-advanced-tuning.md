@@ -1,7 +1,6 @@
 ---
 title: "Fine-Tune a Chart with Advanced Settings"
 url: /howto7/extensibility/charts-advanced-tuning/
-parent: "charts-tutorials"
 weight: 30
 description: "Describes the settings you can use to change chart layouts and types"
 tags: ["Desktop Modeler", "Charts", "Layout", "Chart Type"]

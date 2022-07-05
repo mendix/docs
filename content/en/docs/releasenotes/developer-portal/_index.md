@@ -17,6 +17,17 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### June 30th, 2022
+
+### Fixes
+
+* We introduced improvements in the performance of the [Feedback API](/apidocs-mxsdk/apidocs/feedback-api/).
+
+### New Features
+
+* We redesigned the [General](/developerportal/collaborate/general-settings/) settings section to make it more intuitive and user-friendly.
+* We prepared the integration of Studio Pro with our new project management tool, Epics (coming soon!).
+
 ### June 16th, 2022
 
 #### Fixes

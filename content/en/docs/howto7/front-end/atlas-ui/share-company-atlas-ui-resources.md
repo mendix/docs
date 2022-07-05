@@ -1,7 +1,6 @@
 ---
 title: "Share Company Atlas UI Resources"
 url: /howto7/front-end/share-company-atlas-ui-resources/
-parent: "atlas-ui"
 weight: 40
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---

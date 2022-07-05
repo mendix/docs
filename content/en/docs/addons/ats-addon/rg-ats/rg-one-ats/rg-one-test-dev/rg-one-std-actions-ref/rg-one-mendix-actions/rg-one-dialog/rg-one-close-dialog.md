@@ -1,7 +1,6 @@
 ---
 title: "Close Dialog"
 url: /addons/ats-addon/rg-one-close-dialog/
-parent: "rg-one-dialog"
 ---
 
 ## 1 Description

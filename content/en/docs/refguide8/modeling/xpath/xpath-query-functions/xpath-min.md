@@ -1,7 +1,6 @@
 ---
 title: "XPath Min"
 url: /refguide8/xpath-min/
-parent: "xpath-query-functions"
 tags: ["studio pro"]
 ---
 

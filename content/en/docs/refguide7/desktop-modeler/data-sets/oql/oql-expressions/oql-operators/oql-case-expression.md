@@ -1,7 +1,6 @@
 ---
 title: "OQL Case Expression"
 url: /refguide7/oql-case-expression/
-parent: "oql-operators"
 ---
 
 

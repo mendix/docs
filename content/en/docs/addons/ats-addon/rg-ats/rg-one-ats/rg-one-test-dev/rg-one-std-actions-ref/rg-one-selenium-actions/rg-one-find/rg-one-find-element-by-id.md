@@ -1,7 +1,6 @@
 ---
 title: "Find Element by ID"
 url: /addons/ats-addon/rg-one-find-element-by-id/
-parent: "rg-one-find"
 ---
 
 ## 1 Description

@@ -1,7 +1,6 @@
 ---
 title: "Create a Custom Developer App"
 url: /refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/
-parent: /refguide/mobile/distributing-mobile-apps/building-native-apps/
 weight: 40
 description: A tutorial for creating custom developer apps.
 aliases:

@@ -1,7 +1,6 @@
 ---
 title: "Get"
 url: /addons/ats-addon/rg-one-get/
-parent: "rg-one-selenium-actions"
 ---
 
 This section contains these documents:

@@ -1,7 +1,6 @@
 ---
 title: "Solve Known Git Issues"
 url: /howto/collaboration-requirements-management/troubleshoot-git-issues/
-parent: "on-premises-git-howto"
 description: "This document describes a list of problems and fixes for Git version control issues."
 tags: ["version control", "troubleshoot", "Studio Pro", "Git"]
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Create Custom Action Basics"
 url: /addons/ats-addon/ht-one-custom-action-basics/
-parent: "ht-one-create-custom-actions"
 ---
 
 ## 1 Introduction

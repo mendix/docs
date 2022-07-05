@@ -1,7 +1,6 @@
 ---
 title: "Transient Objects & Garbage Collecting"
 url: /refguide7/transient-objects-garbage-collecting/
-parent: "runtime-java"
 weight: 1
 description: "This page will explain the life cycle of both persistable and non-persistable objects, and how they flow through the platform memory."
 tags: ["persistable", "non-persistable", "transient", "objects", "garbage", "collecing"]

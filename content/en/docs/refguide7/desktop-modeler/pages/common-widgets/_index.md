@@ -1,7 +1,6 @@
 ---
 title: "Common Widgets"
 url: /refguide7/common-widgets/
-parent: "pages"
 ---
 
 

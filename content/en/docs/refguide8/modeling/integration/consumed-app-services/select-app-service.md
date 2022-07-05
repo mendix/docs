@@ -1,7 +1,6 @@
 ---
 title: "Select App Service"
 url: /refguide8/select-app-service/
-parent: "consumed-app-services"
 tags: ["studio pro"]
 ---
 

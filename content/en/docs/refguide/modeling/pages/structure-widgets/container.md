@@ -1,7 +1,6 @@
 ---
 title: "Container"
 url: /refguide/container/
-parent: "structure-widgets"
 weight: 20
 tags: ["studio pro", "container", "structure", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

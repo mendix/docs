@@ -1,7 +1,6 @@
 ---
 title: "Part 8: Send Notifications to Multiple Devices"
 url: /refguide/mobile/using-mobile-capabilities/push-notifications/notif-mult-devices/
-parent: /refguide/mobile/using-mobile-capabilities/push-notifications/
 weight: 90
 description: Learn to send notifications to multiple devices with the Native Mobile Builder.
 aliases:

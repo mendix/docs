@@ -1,7 +1,6 @@
 ---
 title: "Function API with Java"
 url: /addons/ats-addon/ov-function-api-java/
-parent: "ov-function-api"
 weight: 2
 ---
 

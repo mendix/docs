@@ -1,7 +1,6 @@
 ---
 title: "Mendix wait"
 url: /addons/ats-addon/rg-one-mendix-wait/
-parent: "rg-one-system"
 ---
 
 ## 1 Description

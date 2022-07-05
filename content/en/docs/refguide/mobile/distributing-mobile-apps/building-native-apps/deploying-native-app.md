@@ -1,7 +1,6 @@
 ---
 title: "Deploy Your First Mendix Native Mobile App"
 url: /refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/
-parent: /refguide/mobile/distributing-mobile-apps/building-native-apps/
 weight: 10
 description: Describes how to deploy your first Mendix native mobile app with the Mendix Native Mobile Builder.
 tags: ["native", "mobile", "deploy", "mendix native mobile builder", "builder", "appcenter"]
@@ -118,7 +117,7 @@ Next, do the following:
 	* Versions ranging from 0.5 to 0.9.x for beta releases
 	* Versions starting from 1.0.0 for release
 
-1. Fill in your **Runtime URL**. It can be the IP of your local machine if you plan on testing against a locally-running Studio Pro installation. If you already deployed your app to Mendix Cloud, you can point it to the URL of the deployed runtime as found in Cloud Portal (for example, "https://yourapp.mendixcloud.com".
+1. Fill in your **Runtime URL**. It can be the IP of your local machine if you plan on testing against a locally-running Studio Pro installation. If you already deployed your app to Mendix Cloud, you can point it to the URL of the deployed runtime as found in Cloud Portal (for example, `https://yourapp.mendixcloud.com`.
 1. Click the **Build** button to start the build.
 1.  The tool will set up your GitHub repository, commit your changes, configure App Center with two new apps (one for iOS and one for Android), and continue building your apps:
 

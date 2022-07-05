@@ -1,7 +1,6 @@
 ---
 title: "Click Drop-Down div Converter Split Button"
 url: /addons/ats-addon/rg-one-click-dropdown-div-converter-split-button/
-parent: "rg-one-dropdown-div-converter"
 ---
 
 ## 1 Description

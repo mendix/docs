@@ -1,7 +1,6 @@
 ---
 title: "XPath Keywords and System Variables"
 url: /refguide7/xpath-keywords-and-system-variables/
-parent: "xpath-constraints"
 ---
 
 ## 1 Overview

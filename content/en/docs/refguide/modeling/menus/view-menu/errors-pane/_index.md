@@ -1,7 +1,6 @@
 ---
 title: "Errors Pane"
 url: /refguide/errors-pane/
-parent: view-menu
 weight: 30
 description: "Describes the Errors pane in Mendix Studio Pro."
 tags: ["Studio Pro", "errors", "error list", "errors pane"]

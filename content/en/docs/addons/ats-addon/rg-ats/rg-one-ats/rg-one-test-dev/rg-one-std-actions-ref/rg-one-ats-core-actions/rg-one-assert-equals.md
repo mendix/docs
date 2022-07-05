@@ -1,7 +1,6 @@
 ---
 title: "Assert Equals"
 url: /addons/ats-addon/rg-one-assert-equals/
-parent: "rg-one-ats-core-actions"
 ---
 
 ## 1 Description

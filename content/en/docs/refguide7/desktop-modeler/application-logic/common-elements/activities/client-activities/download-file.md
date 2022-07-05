@@ -1,7 +1,6 @@
 ---
 title: "Download File"
 url: /refguide7/download-file/
-parent: "client-activities"
 aliases:
     - /refguide7/Download+File.html
     - /refguide7/Download+File

@@ -1,7 +1,6 @@
 ---
 title: "Database Source"
 url: /refguide8/database-source/
-parent: "data-sources"
 tags: ["studio pro", "database", "data source"]
 weight: 10
 ---

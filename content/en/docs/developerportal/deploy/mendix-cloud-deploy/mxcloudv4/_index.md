@@ -1,7 +1,6 @@
 ---
 title: "Mendix Cloud v4"
 url: /developerportal/deploy/mxcloudv4/
-parent: "mendix-cloud-deploy"
 weight: 50
 description: "Frequently asked questions about Mendix Cloud v4"
 tags: ["Cloud", "Mendix Cloud", "v4", "Version 4", "FAQ", "v3", "AWS", "Amazon Web Services", "Max file size"]

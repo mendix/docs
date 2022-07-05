@@ -1,7 +1,6 @@
 ---
 title: "Arithmetic expressions"
 url: /refguide7/arithmetic-expressions/
-parent: "expressions"
 ---
 
 

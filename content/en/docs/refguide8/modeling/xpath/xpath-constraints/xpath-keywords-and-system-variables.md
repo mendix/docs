@@ -1,7 +1,6 @@
 ---
 title: "XPath Keywords & System Variables"
 url: /refguide8/xpath-keywords-and-system-variables/
-parent: "xpath-constraints"
 tags: ["studio pro"]
 ---
 

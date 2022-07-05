@@ -1,7 +1,6 @@
 ---
 title: "Manual Test Steps"
 url: /addons/ats-addon/rg-one-manual-test-steps/
-parent: "rg-one-test-dev"
 weight: 3
 ---
 

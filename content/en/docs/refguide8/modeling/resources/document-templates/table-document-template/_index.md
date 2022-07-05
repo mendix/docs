@@ -1,7 +1,6 @@
 ---
 title: "Table (Document Template)"
 url: /refguide8/table-document-template/
-parent: "document-templates"
 aliases:
     - /refguide8/table-(document-template).html
     - /refguide8/Table+(document+template.html

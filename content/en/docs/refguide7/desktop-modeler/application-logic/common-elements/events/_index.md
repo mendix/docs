@@ -1,7 +1,6 @@
 ---
 title: "Events"
 url: /refguide7/events/
-parent: "common-elements"
 ---
 
 This section describes the events for microflows and nanoflows:

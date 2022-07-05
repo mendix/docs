@@ -1,7 +1,6 @@
 ---
 title: "OQL Case Expression"
 url: /refguide8/oql-case-expression/
-parent: "oql-operators"
 tags: ["studio pro"]
 ---
 

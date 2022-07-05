@@ -1,7 +1,6 @@
 ---
 title: "Style"
 url: /refguide7/style/
-parent: "document-templates"
 ---
 
 

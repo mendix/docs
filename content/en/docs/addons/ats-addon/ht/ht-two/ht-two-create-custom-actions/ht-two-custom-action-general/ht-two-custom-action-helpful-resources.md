@@ -1,7 +1,6 @@
 ---
 title: "Helpful Resources"
 url: /addons/ats-addon/ht-two-custom-action-helpful-resources/
-parent: "ht-two-custom-action-general"
 description: "This document describes helpful resources to use when creating custom actions."
 tags: ["ATS", "testing"]
 ---

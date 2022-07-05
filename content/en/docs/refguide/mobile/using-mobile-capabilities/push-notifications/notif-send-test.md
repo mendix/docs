@@ -1,7 +1,6 @@
 ---
 title: "Part 7: Send Your First Test Push Notification"
 url: /refguide/mobile/using-mobile-capabilities/push-notifications/notif-send-test/
-parent: /refguide/mobile/using-mobile-capabilities/push-notifications/
 weight: 80
 description: Tutorial for testing your push notifications.
 aliases:

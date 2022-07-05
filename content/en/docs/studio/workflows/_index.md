@@ -187,11 +187,12 @@ The elements of this section are described in the table below:
 
 | Element                                                      | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Start event                                                  | The starting point of a workflow. Workflows are triggered either by the [Call workflow](/studio/page-editor-widgets-events-section/#call-workflow) on-click event on pages or by the [Workflow call](/studio/microflows/#microflow-workflow-activities) action in microflows. <br />Click the start event to open [workflow properties](/studio/workflow-properties/). |
-| [Decision](/studio/workflows-general-activities/#decision)  | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
-| [Jump activity](/studio/workflows-general-activities/#jump) | Allows you to jump to other activities in the workflow.      |
-| [Parallel split](/studio/workflows-general-activities/#parallel-split) | Adds two or more parallel paths to your workflow.            |
-| [End activity](/studio/workflows-general-activities/#end)   | Ends the path of the workflow                                |
+| Start event                                                  | Start event is the starting point of a workflow. Workflows are triggered either by the [Call workflow](/studio/page-editor-widgets-events-section/#call-workflow) on-click event on pages or by the [Workflow call](/studio/microflows/#microflow-workflow-activities) action in microflows. <br />Click the start event to open [workflow properties](/studio/workflow-properties/). |
+| [Annotation](/studio/workflows-general-activities/#annotation) | **Annotation** is used to put comments to a flow.            |
+| [Decision](/studio/workflows-general-activities/#decision)   | **Decision** makes a choice based on a condition and follows one and only one of the outgoing paths. |
+| [Jump activity](/studio/workflows-general-activities/#jump)  | The **Jump** activity allows you to jump to other activities in the workflow. |
+| [Parallel split](/studio/workflows-general-activities/#parallel-split) | **Parallel split** adds two or more parallel paths to your workflow. |
+| [End activity](/studio/workflows-general-activities/#end)    | End activity ends the path of the workflow                   |
 
 ### 5.2 User Actions {#user-actions}
 

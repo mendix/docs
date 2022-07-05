@@ -1,7 +1,6 @@
 ---
 title: "Actions"
 url: /refguide8/actions/
-parent: "published-app-services"
 tags: ["studio pro"]
 ---
 

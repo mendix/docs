@@ -1,7 +1,6 @@
 ---
 title: "Two-Factor Authentication"
 url: /developerportal/deploy/two-factor-authentication/
-parent: "general"
 weight: 20
 description: "What is Two-Factor Authentication and how to set up and change it."
 tags: ["Authenticator","Developer Portal","Cloud","Permissions", "Google", "2FA", "Two-factor authentication", "SMS"]

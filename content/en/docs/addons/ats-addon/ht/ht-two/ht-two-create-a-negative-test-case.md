@@ -1,7 +1,6 @@
 ---
 title: "Create a Negative Test Case"
 url: /addons/ats-addon/ht-two-create-a-negative-test-case/
-parent: "ht-two"
 description: "Describes the steps for performing negative tests with ATS."
 tags: ["ATS", "testing"]
 ---

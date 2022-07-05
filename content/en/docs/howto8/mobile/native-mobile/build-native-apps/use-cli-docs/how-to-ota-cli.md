@@ -1,7 +1,6 @@
 ---
 title: "Release Over the Air Updates with App Center's CodePush using the CLI"
 url: /howto8/mobile/how-to-ota-cli/
-parent: "use-cli-docs"
 weight: 71
 description: A tutorial for pushing over the air updates (OTA).
 tags: ["native", "mobile", "ota", "native-builder", "over the air", "update"]

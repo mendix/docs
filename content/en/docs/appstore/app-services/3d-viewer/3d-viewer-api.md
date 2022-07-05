@@ -1,7 +1,6 @@
 ---
 title: "Use the 3D Viewer API"
 url: /appstore/app-services/3d-viewer-api/
-parent: "3d-viewer"
 description: "Describes how to use the 3D Viewer API"
 tags: ["3d visualization", "3d viewer", "cad", "app store", "marketplace", "component", "platform support"]
 ---

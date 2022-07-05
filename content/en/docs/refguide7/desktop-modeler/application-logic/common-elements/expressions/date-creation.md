@@ -1,7 +1,6 @@
 ---
 title: "Date Creation"
 url: /refguide7/date-creation/
-parent: "expressions"
 ---
 
 Date-type variables for a certain date can be created by using [parseDateTime](/refguide7/parse-and-format-date-function-calls/). This takes a date string and a format string as parameters and returns a date-type variable. For more details, see [parseDateTime](/refguide7/parse-and-format-date-function-calls/).

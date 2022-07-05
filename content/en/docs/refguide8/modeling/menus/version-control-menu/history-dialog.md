@@ -1,7 +1,6 @@
 ---
 title: "History"
 url: /refguide8/history-dialog/
-parent: "version-control-menu"
 weight: 50
 tags: ["studio pro"]
 ---

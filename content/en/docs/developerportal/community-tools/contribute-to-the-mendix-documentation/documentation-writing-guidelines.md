@@ -1,7 +1,6 @@
 ---
 title: "Documentation Writing Guidelines"
 url: /developerportal/community-tools/documentation-writing-guidelines/
-parent: "contribute-to-the-mendix-documentation"
 description: "Describes some guidelines to follow when contributing to the Mendix documentation."
 tags: ["documentation", "community"]
 ---

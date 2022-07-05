@@ -1,7 +1,6 @@
 ---
 title: "Published App Service"
 url: /refguide7/published-app-service/
-parent: "published-app-services"
 ---
 
 {{% alert color="info" %}}

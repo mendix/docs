@@ -1,7 +1,6 @@
 ---
 title: "Microflow Element Common Properties"
 url: /refguide7/microflow-element-common-properties/
-parent: "common-elements"
 ---
 
 ## 1 Introduction

@@ -1,7 +1,6 @@
 ---
 title: "Click/Doubleclick"
 url: /addons/ats-addon/rg-one-clickdoubleclick/
-parent: "rg-one-generic"
 ---
 
 ## 1 Description

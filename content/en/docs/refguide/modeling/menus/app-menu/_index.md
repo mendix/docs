@@ -1,7 +1,6 @@
 ---
 title: "App Menu"
 url: /refguide/app-menu/
-parent: "menus"
 description: "Describes the App Menu in Studio Pro."
 weight: 30
 tags: ["Studio Pro", "app menu", "top bar"]

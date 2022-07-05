@@ -1,7 +1,6 @@
 ---
 title: "MxAssist Performance Bot"
 url: /refguide/mx-assist-performance-bot/
-parent: "view-menu"
 weight: 50
 description: "Describes MxAssist Performance Bot in Mendix Studio Pro."
 tags: ["studio pro", "performance bot", mendix assist", "AI", "assist", "mx assist"]

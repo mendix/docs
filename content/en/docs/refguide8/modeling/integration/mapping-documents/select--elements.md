@@ -1,7 +1,6 @@
 ---
 title: "Select Elements"
 url: /refguide8/select--elements/
-parent: "mapping-documents"
 tags: ["studio pro"]
 aliases:
     - /refguide8/Select++Elements.html

@@ -1,7 +1,6 @@
 ---
 title: "Association Properties"
 url: /refguide/association-properties/
-parent: "associations"
 weight: 10
 tags: ["domain model", "association", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -75,7 +74,15 @@ For more information about association types, see the [Type](/refguide/associati
 
 This corresponds to the **Owner** property for **Reference sets**. See the [Owner](/refguide/association-member-properties/#owner) section of *Association Tab Properties* for a more detailed discussion of the impact of changing navigability.
 
-Despite it's name, navigability is usually only important when adding or changing associations. Making one object owner of an association does not prevent you reading the association from the non-owner end.
+Despite its name, navigability is usually only important when adding or changing associations. Making one object owner of an association does not prevent you reading the association from the non-owner end.
+
+#### 2.5.1 One-Way Navigable Associations {#one-way-navigable}
+
+One-way navigable associations are associations that allow navigation to associated entities only in a single direction: from parent to child. These associations are typically introduced by OData service integration, either through an external provider or the Mendix Data Hub, in [external entities](/refguide/external-entities/#associations). The major implications of one-way navigability are related to XPath use cases such as constraints and queries.
+
+You can retrieve data from all other domain model associations in both directions.
+
+One-way navigable associations are represented by a dashed arrow in Domain model editor. An icon shows the direction of its navigability.
 
 ### 2.6 Delete Behavior {#delete-behavior}
 

@@ -1,7 +1,6 @@
 ---
 title: "OQL Expressions"
 url: /refguide7/oql-expressions/
-parent: "oql"
 ---
 
 

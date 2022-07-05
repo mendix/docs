@@ -1,7 +1,6 @@
 ---
 title: "SAP HANA"
 url: /refguide7/saphana/
-parent: "data-storage"
 weight: 70
 ---
 

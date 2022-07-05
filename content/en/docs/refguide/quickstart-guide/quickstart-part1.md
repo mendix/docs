@@ -10,7 +10,7 @@ tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
 
 Get up and running with the Mendix Platform and start developing your first app in Mendix Studio Pro. This is Part 1 of the quickstart, where you will learn the basics of Studio Pro, handle data using the Domain Model, populate your app's pages with dynamic data, and create custom app logic using a microflow.
 
-When you complete Part 1, you will have an app that can capture and save images using dynamic data.
+When you complete Part 1, you will have a photo album app that will allow users to upload, edit, and display pictures so that their cherished memories will be preserved. This guide, Part 1, will show you how to build a responsive web app compatible with all desktop, tablet, and mobile browsers.
 
 [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. This tutorial will use Studio Pro version 9.12.1, but you can use a later version if you wish.
 
@@ -22,7 +22,8 @@ You will not need any additional software configured on your device in order to 
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
-* Create your [free account](https://signup.mendix.com/link/signup/?source=direct)⁠—which takes only two minutes to finish
+* Create your [free account](https://signup.mendix.com/link/signup/?source=quickstart-part1&medium=mxdocs
+)⁠—which takes only two minutes to finish
 * [Download](https://marketplace.mendix.com/index3.html) and [install](/howto/general/install/) Mendix Studio Pro
 * If you are working on a Mac, please complete [How To Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
@@ -42,6 +43,11 @@ Here you will choose an app starting point. It is key that you choose a starting
 
     {{< figure src="/attachments/refguide/quickstart-guide/part1/home-web.png" width="450px" alt="Home Web page">}}
 
+A page defines the end-user interface in a Mendix app. You can create and edit pages using the Page Editor. All pages are based on layouts and templates:
+
+* [Layouts](/refguide/layout/): define a page's structure (such as navigation element location, areas for content, and more)
+* [Templates](/refguide/page-templates/): are completely editable starting points for new pages, and you can also start with a blank template so you can build from scratch
+
 ## 3 Exploring Studio Pro
 
 Now that you have completed your first tasks in Studio Pro, this section will give you a quick and optional tour. If you know Studio Pro well already, you can skip this section.
@@ -60,7 +66,7 @@ At the bottom of Studio Pro you will find several panels:
 
 On the right side of Studio Pro you will find more panels:
 
-* **Data Hub**: displays [External Entities](/refguide/external-entities/) (entities from other apps) which are available for use in your app
+* **Data Hub**: displays [External Entities](/refguide/external-entities/) (entities from other apps) which are available for use in your app (you will not use this panel in this guide)
 * **Properties**: displays all the properties of the currently selected context element
 * **Toolbox**: a list of things you can add to the current document⁠—the **Toolbox** changes depending on context (it displays page elements while in the page editor or displays actions when editing a microflow or nanoflow)
 * **Connector**: quickly links data to pages⁠—using the connector you could drag an entity onto a data view or data grid to quickly display your app’s data on a page
@@ -116,7 +122,16 @@ Next you must add some attributes. Remember, your entity now inherits many prope
 
 ## 5 Creating Your App's User Interface
 
-Now that you have created your domain model, it’s time to create your app’s front end:
+Now that you have created your domain model, it is time to create your app’s front end. To do so, you will employ regular widgets and context widgets:
+
+* Widgets – Widgets are pre-made user interface components. Widget development in Mendix is based on React for both web and native mobile. A widget can either be a single visual component (like a button), or a collection of components grouped together for ease of use.
+* Context widgets – A context widget is a widget which displays data from the Domain Model. In Mendix there are four main context widgets: 
+    * [Data view](/refguide/data-view/): displays a single record
+    * [Data grid](/refguide/data-grid/): displays many records in a table format
+    * [List view](/refguide/list-view/): displays many records in a scrollable list
+    * [Template grid](/refguide/template-grid/): displays many records in configurable columns and rows
+
+Now it is time to build:
 
 1. Open the **Home_Web** page from the App Explorer. 
 1. Drag and drop a **Template Grid** from the **Toolbox** onto the page. 

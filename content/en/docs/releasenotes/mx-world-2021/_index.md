@@ -67,8 +67,8 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | Data widgets – Tree View | Released for GA on [Nov 16th, 2021](https://marketplace.mendix.com/link/component/116540https://marketplace.mendix.com/link/component/116540) |
 | Styling editor in Studio Pro | Released for GA on [Dec 17th, 2021](/releasenotes/studio-pro/9.9/) |
 | Multiple page parameters | GA: Sep 2022 |
-| Native mobile – simplified monitoring | GA: Jun 2022 |
-| Native mobile – file and image background sync | GA: Jun 2022 |
+| Native mobile – simplified monitoring | Sep 2022 |
+| Native mobile – file and image background sync | TBD |
 | Data widgets – Tree Table | GA: Sep 2022 |
 | Data widgets – Spread Sheet Grid | GA: Dec 2022 |
 

@@ -12,6 +12,12 @@ Get up and running with the Mendix Platform and start developing your first app 
 
 When you complete Part 1, you will have a photo album app that will allow users to upload, edit, and display pictures so that their cherished memories will be preserved. This guide, Part 1, will show you how to build a responsive web app compatible with all desktop, tablet, and mobile browsers.
 
+### 1.2 Getting to Know Mendix
+
+This tutorial will teach you several key Mendix concepts, such how to add an entity to the [domain model](/refguide/domain-model/) (a visual model that describes your app's information or data in an abstract way), create some basic pages which use building blocks and design properties, and model your first microflow. 
+
+A [microflow](/refguide/microflows/) is a visual way of expressing logic or code which is compiled into executable code at runtime. Microflows are commonly used to perform actions such as creating and changing objects, showing pages, and making choices.
+
 [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. This tutorial will use Studio Pro version 9.12.1, but you can use a later version if you wish.
 
 Every app created with us automatically provisions a [Free Cloud Environment](/developerportal/deploy/mendix-cloud-deploy/#free-app) the first time it is deployed, so you do not have to waste time provisioning a testing environment.

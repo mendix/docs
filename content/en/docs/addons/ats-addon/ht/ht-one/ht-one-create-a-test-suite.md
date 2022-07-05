@@ -28,7 +28,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To create a test suite, follow these steps:
 
-1.  Open your project in ATS and go to the **Repository**.
+1.  Open your app in ATS and go to the **Repository**.
 2.  Click **Add Test** inside the **Tests** tab:
     
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-suite/repository-add-test.png" >}}

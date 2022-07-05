@@ -13,7 +13,7 @@ If you run your application in a Mendix Modeler with emulated cloud security, yo
 
 Procedure to simulate cloud security plus APMAgent permissions:
 
-1.  Turn off the emulate cloud security option in project settings, active configuration, server tab
+1.  Turn off the emulate cloud security option in app settings, active configuration, server tab
 
     {{< figure src="/attachments/addons/apd-addon/ig/ig-one/ig-one-prerequisites/ig-one-java-security-settings/Java_Command_Line_Options.png" >}}
 

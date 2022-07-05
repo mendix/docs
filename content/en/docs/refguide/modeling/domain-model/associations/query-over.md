@@ -73,6 +73,10 @@ If the $ChosenFolder object has **Code** `202002141355334` and **Name** `SubFold
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/query-over/query-over-retrieve-reversed-tables.png" >}}
 
+Here is a video created by our community member [Mike Kumpf](https://developer.mendixcloud.com/link/profile/overview/1360) explaining the use of `reversed()` in an expression.
+
+{{% youtube 5tznw5ZUQgk %}}
+
 ### 2.3 Creating More Complex Queries {#more-complex}
 
 The previous example was a simple one. However the `[reversed()]` expression can be used in more complicated queries.

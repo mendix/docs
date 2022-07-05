@@ -404,7 +404,7 @@ Mendix for Private Cloud can create Services that are compatible with:
 * [AWS Network Load Balancer](https://docs.aws.amazon.com/eks/latest/userguide/network-load-balancing.html)
 * AWS Classic Load Balancer
 
-### 6.4 Service mesh support
+### 6.4 Service Mesh Support
 
 Starting with Mendix Operator v2.5.0, the following service meshes can be enabled for the entire Mendix for Private Cloud namespace:
 

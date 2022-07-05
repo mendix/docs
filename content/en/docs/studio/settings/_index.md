@@ -23,5 +23,5 @@ To open the **Settings**, click the gear icon in the left menu bar.
 
 * [Security, Roles & Permissions](/studio/settings-security/) – describes security in Mendix Studio, user roles and permissions for them
 * [Widget Overview](/studio/settings-widget-overview/) – describes settings for Mendix Marketplace and local widgets in your app
-* [App Languages](/studio/app-languages/) – explains how to translate you app to multiple languages
+* [App Languages](/studio/settings-languages/) – explains how to translate you app to multiple languages
 * [Mendix Version & Add-Ons](/studio/settings-version-and-add-ons/) – gives information on the version of your app and add-on modules, shows how to upgrade them

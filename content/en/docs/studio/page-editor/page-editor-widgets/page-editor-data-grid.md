@@ -70,7 +70,7 @@ The properties are described in the table below:
 | ------------------ | ------------------------------------------------------------ |
 | Attribute          | Determines which attribute of the object will be displayed in this column. Note that you need to configure the grid's data source first to select an attribute. For more information, see the [Data Source](#grid-data-source) section. |
 | Caption            | Defines which caption will be shown in the column header.    |
-| Translations       | Only available if multiple languages are set up in your app in Mendix Studio Pro. This option allows you to add translations of the button caption to other languages. For more information on how to add translations, see [Translating Your App to Multiple Languages](/studio/language-support/). |
+| Translations       | Only available if multiple languages are set up in your app in Mendix Studio Pro. This option allows you to add translations of the button caption to other languages. For more information on how to add translations, see [App Languages](/studio/settings-languages/). |
 | Width              | Displayed for **Column Width In** set to *Percentages*. Determines how much space in percentage the column should take. |
 | Fixed Width        | Displayed for **Column Width In** set to *Pixels*. Determines if this column should have a fixed width or use the available space. When enabled, you can type in the fixed width in **Width In Pixels** (see below). |
 | Width In Pixels    | Displayed only when **Fixed Width** is enabled. You can type in the value in this setting for the fixed column width. |

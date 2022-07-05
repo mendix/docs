@@ -19,7 +19,7 @@ Powered by AI and OCR technologies, the [Receipt Processing](https://marketplace
 ### 1.2 Limitation
 
 * Currently supported file formats:
-  * JPG, JPEG, BMP and PNG images
+  * Images in JPG, JPEG, BMP, and PNG
   * PDF documents
 
 ### 1.3 Prerequisites
@@ -135,11 +135,10 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
 ### 4.2 Extracting the Data with the Trained Document Model {#extraction-activity}
 
-1.  In the **Toolbox**, drag the **Receipt Processing** activity from the **Document Data Capture Service** category into your microflow.
+1. In the **Toolbox**, drag the **Receipt Processing** activity from the **Document Data Capture Service** category into your microflow.
+2.  Create a list of documents that inherit from `System.FileDocument`. Documents from where data is extracted should be passed as a list, as shown in the microflow.
 
     {{< figure src="/attachments/appstore/app-services/receipt-processing/receipt-processing-microflow.png" alt="receipt-processing-microflow" >}}
-
-2.  Create a list of document that inherits from `System.FileDocument`. Documents from where data is extracted should be passed as a list, as shown in the microflow above.
 
     {{% alert color="info" %}} The total size of the documents being passed for extraction should not exceed 20 MB. If you have multiple documents to extract data from, you can process them in smaller batches. {{% /alert %}}
 

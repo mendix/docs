@@ -16,6 +16,3 @@ Welcome to the Mendix quickstart guide for building an app. These tutorials will
 {{% alert type="info" %}}
 While you can start with Part 2, we recommend you at least read Part 1 to understand the basics of Mendix.
 {{% /alert %}}
-
-
-

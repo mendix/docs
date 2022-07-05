@@ -1039,7 +1039,7 @@ You can change the following options:
 * **runtimeAutomountServiceAccountToken**: – specify if Mendix app Pods should get a Kubernetes Service Account token; defaults to `false`; should be set to `true` when using Linkerd [Automatic Proxy Injection](https://linkerd.io/2.10/features/proxy-injection/) 
 * **runtimeDeploymentPodAnnotations**: – specify default annotations for Mendix app Pods
 
-### 5.3 Mendix app resource customization{#advanced-resource-customization}
+### 5.3 Mendix App Resource Customization{#advanced-resource-customization}
 
 The Deployment object that controls the pod of a given Mendix application contains user-editable options for fine-tuning the execution to the application's runtime resources.
 
@@ -1174,9 +1174,11 @@ If we are deploying a large application that takes much longer to start than the
 
 #### 5.3.2 Customize startupProbes for slow starting applications
 
-The `Startup probes` should be used when the application in your container could take a significant amount of time to reach its normal operating state. Applications that would crash or throw an error if they handled a liveness or readiness probe during startup need to be protected by a startup probe. This ensures the container doesn't enter a restart loop due to failing healthiness checks before it's finished launching. It is much better than increasing initialDelaySeconds on readiness or liveness probes. Hence, Startup probes provide a way to defer the execution of liveness and readiness probes until a container indicates it's able to handle them. Kubernetes won't direct the other probe types to a container if it has a startup probe that hasn't yet succeeded.
+If you want to wait before executing a liveness probe you should use `initialDelaySeconds` or a startupProbe.
 
-So, for below example:
+A startupProbe should be used when the application in your container could take a significant amount of time to reach its normal operating state. Applications that would crash or throw an error if they handled a liveness or readiness probe during startup need to be protected by a startupProbe. This ensures the container doesn't continually restart due to failing health checks before it has finished launching. Using a startupProbe is much better than increasing `initialDelaySeconds` on readiness or liveness probes. StartupProbes defer the execution of liveness and readiness probes until a container indicates it is able to handle them because Kubernetes doesn't direct the other probe types to the container if it has a startupProbe that hasn't yet succeeded.
+
+You can see an example of a startupProbe configuration below:
 
 ```yaml
 startupProbe:
@@ -1188,31 +1190,29 @@ startupProbe:
   periodSeconds: 10
 ```
 
-A shown above, the application will have a maximum of 5 minutes (30 * 10 = 300s) to finish its startup. Once the startup probe has succeeded once, the liveness probe takes over to provide a fast response to container deadlocks. If the startup probe never succeeds, the container is killed after 300s and subject to the pod's restartPolicy.
-
-If you want to wait before executing a liveness probe you should use initialDelaySeconds or a startupProbe.
+In this example, the application will have a maximum of 5 minutes (30 * 10 = 300s) to finish its startup. Once the startup probe has succeeded once, the liveness probe takes over to provide a fast response to container deadlocks. If the startup probe never succeeds, the container is killed after 300s and subject to the pod's restartPolicy.
 
 {{% alert color="info" %}}
-Startup probes - if misconfigured- can cause a loop of restarts. If we don't allow enough time for the startup probe to get a successful response, the kubelet might restart the container prematurely, causing a loop of restarts. Start up probes in Private cloud works from Operator 2.6.0 and above.
+If you misconfigure a startupProbe, for example you don't allow enough time for the startupProbe to succeed, the kubelet might restart the container prematurely. causing your container to continually restart.
+
+StartupProbes are available in the Mendix for Private Cloud Operator version 2.6.0 and above.
 {{% /alert %}}
 
-{{% alert color="info" %}}
-Startup probes was in beta mode in k8s version 1.19, and there can be some bugs on k8s side.
+{{% alert color="warning" %}}
+In Kubernetes version 1.19, startupProbes is still a [beta feature](https://kubernetes.io/blog/2020/08/21/moving-forward-from-beta/).
 {{% /alert %}}
 
+#### 5.3.3 Customize terminationGracePeriodSeconds for Gracefully Shutting Down the Application Pod
 
-#### 5.3.3 Customize terminationGracePeriodSeconds for gracefully shutting down the application pod
-
-With `TerminationGracePeriodSeconds`, the application is given a certain amount of time to terminate. This time can be configured using the terminationGracePeriodSeconds field in the pod's spec and the value is configured to 300 seconds. f your pod usually takes longer than 300 seconds to shut down, make sure you increase the grace period. You can do that by setting the terminationGracePeriodSeconds option in the Pod YAML.
+Using `terminationGracePeriodSeconds`, the application is given a certain amount of time to terminate. The default value is 300 seconds. This time can be configured using the `terminationGracePeriodSeconds` key in the pod's spec and so if your pod usually takes longer than 300 seconds to shut down, you can increase the grace period. You can do that by setting the `terminationGracePeriodSeconds` key in the pod YAML.
 
 ```yaml
 terminationGracePeriodSeconds: 300
 ```
 
 {{% alert color="info" %}}
-TerminationGracePeriodSeconds in Private cloud works from Operator 2.6.0 and above.
+The `terminationGracePeriodSeconds` setting is available in the Mendix for Private Cloud Operator version 2.6.0 and above.
 {{% /alert %}}
-
 
 #### 5.3.4 Customize Container Resources: Memory and CPU
 
@@ -1307,7 +1307,7 @@ spec:
 
 The following fields can be configured:
 
-* `Liveness` , `readiness` , `startupProbe` , `terminationGracePeriodSeconds`  – these are used for all Mendix app deployments in the namespace. Therefore, any changes made in the Deployments will be discarded and overwritten with values from `OperatorConfiguration` resource
+* `Liveness`, `readiness`, `startupProbe`, and `terminationGracePeriodSeconds` – these are used for all Mendix app deployments in the namespace — any changes made in the Deployments will be discarded and overwritten with values from the `OperatorConfiguration` resource
 * `sidecarResources` –  this is used for all m2ee-sidecar containers in the namespace
 * `metricsSidecarResources`: this is used for all m2ee-metrics containers in the namespace
 * `runtimeResources`: this is used for `mendix-runtime` containers in the namespace (but this is overwritten if the Mendix app CRD has a resources block)

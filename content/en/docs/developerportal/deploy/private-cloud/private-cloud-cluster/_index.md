@@ -1113,6 +1113,16 @@ spec:
           periodSeconds: 1
           successThreshold: 1
           timeoutSeconds: 1
+        startupProbe:
+            httpGet:
+              path: /
+              port: mendix-app
+              scheme: HTTP
+            timeoutSeconds: 1
+            periodSeconds: 25
+            successThreshold: 1
+            failureThreshold: 4
+        terminationGracePeriodSeconds: 300      
         resources:
           limits:
             cpu: 1
@@ -1162,7 +1172,49 @@ The following fields can be configured:
 If we are deploying a large application that takes much longer to start than the defined 60 seconds, we will observe it restarting multiple times. To solve this scenario we must edit field `initialDelaySeconds` for the **Liveness probe** to a substantially larger value.
 {{% /alert %}}
 
-#### 5.3.2 Customize Container Resources: Memory and CPU
+#### 5.3.2 Customize startupProbes for slow starting applications
+
+The `Startup probes` should be used when the application in your container could take a significant amount of time to reach its normal operating state. Applications that would crash or throw an error if they handled a liveness or readiness probe during startup need to be protected by a startup probe. This ensures the container doesn't enter a restart loop due to failing healthiness checks before it's finished launching. It is much better than increasing initialDelaySeconds on readiness or liveness probes. Hence, Startup probes provide a way to defer the execution of liveness and readiness probes until a container indicates it's able to handle them. Kubernetes won't direct the other probe types to a container if it has a startup probe that hasn't yet succeeded.
+
+So, for below example:
+
+```yaml
+startupProbe:
+  httpGet:
+    path: /
+    port: mendix-app
+    scheme: HTTP
+  failureThreshold: 30
+  periodSeconds: 10
+```
+
+A shown above, the application will have a maximum of 5 minutes (30 * 10 = 300s) to finish its startup. Once the startup probe has succeeded once, the liveness probe takes over to provide a fast response to container deadlocks. If the startup probe never succeeds, the container is killed after 300s and subject to the pod's restartPolicy.
+
+If you want to wait before executing a liveness probe you should use initialDelaySeconds or a startupProbe.
+
+{{% alert color="info" %}}
+Startup probes - if misconfigured- can cause a loop of restarts. If we don't allow enough time for the startup probe to get a successful response, the kubelet might restart the container prematurely, causing a loop of restarts. Start up probes in Private cloud works from Operator 2.6.0 and above.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+Startup probes was in beta mode in k8s version 1.19, and there can be some bugs on k8s side.
+{{% /alert %}}
+
+
+#### 5.3.3 Customize terminationGracePeriodSeconds for gracefully shutting down the application pod
+
+With `TerminationGracePeriodSeconds`, the application is given a certain amount of time to terminate. This time can be configured using the terminationGracePeriodSeconds field in the pod's spec and the value is configured to 300 seconds. f your pod usually takes longer than 300 seconds to shut down, make sure you increase the grace period. You can do that by setting the terminationGracePeriodSeconds option in the Pod YAML.
+
+```yaml
+terminationGracePeriodSeconds: 300
+```
+
+{{% alert color="info" %}}
+TerminationGracePeriodSeconds in Private cloud works from Operator 2.6.0 and above.
+{{% /alert %}}
+
+
+#### 5.3.4 Customize Container Resources: Memory and CPU
 
 Let us now analyze the `resources` section from the example application deployment, above:
 
@@ -1184,7 +1236,7 @@ The settings in the example above mean that
 * if the server node where a pod is running has enough of a given resource available the container can be granted resource than its `requests`
 * a container will never be granted more than its resource `limits`
 
-##### 5.3.2.1 Meaning of CPU
+##### 5.3.4.1 Meaning of CPU
 
 Limits and requests for CPU resources are measured in cpu units. One CPU, in this context, is equivalent to 1 vCPU/Core for cloud providers and 1 hyperthread on bare-metal Intel processors.
 
@@ -1192,7 +1244,7 @@ Fractional requests are allowed. For instance, in this example, we are requestin
 
 A precision finer than 1m is not allowed.
 
-##### 5.3.2.2 Meaning of Memory
+##### 5.3.4.2 Meaning of Memory
 
 Limits and requests for memory are measured in bytes. You can express memory as a plain integer or as a fixed-point number using one of these suffixes: E, P, T, G, M, K. You can also use the power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki. For example, the following represent roughly the same value: `128974848`, `129e6`, `129M`, `123Mi`
 
@@ -1202,7 +1254,7 @@ For instance, in the example above, we are requesting and limiting memory usage 
 Modifying the resource configuration should be performed carefully as that might have direct implications on the performance of your application, and the resource usage of the server node.
 {{% /alert %}}
 
-#### 5.3.3 Resource Definition via Operator Configuration Manifest
+#### 5.3.5 Resource Definition via Operator Configuration Manifest
 
 For a given namespace all the resource information is aggregated in the `mendix-operator-configuration` manifest. This centralizes and overrides all the configuration explained above. An example of the operator configuration manifest is given below.
 
@@ -1247,11 +1299,15 @@ spec:
   runtimeReadinessProbe:
     initialDelaySeconds: 5
     periodSeconds: 1
+  runtimeStartupProbe:
+    failureThreshold: 30
+    periodSeconds: 10
+  runtimeTerminationGracePeriodSeconds: 300    
 ```
 
 The following fields can be configured:
 
-* `Liveness` and `readiness` probes  – these are used for all Mendix app deployments in the namespace. Therefore, any changes made in the Deployments will be discarded and overwritten with values from `OperatorConfiguration` resource
+* `Liveness` , `readiness` , `startupProbe` , `terminationGracePeriodSeconds`  – these are used for all Mendix app deployments in the namespace. Therefore, any changes made in the Deployments will be discarded and overwritten with values from `OperatorConfiguration` resource
 * `sidecarResources` –  this is used for all m2ee-sidecar containers in the namespace
 * `metricsSidecarResources`: this is used for all m2ee-metrics containers in the namespace
 * `runtimeResources`: this is used for `mendix-runtime` containers in the namespace (but this is overwritten if the Mendix app CRD has a resources block)

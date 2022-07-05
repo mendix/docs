@@ -48,6 +48,8 @@ System texts are texts that are shown to the end-user by the server or the clien
 
 {{< figure src="/attachments/studio/settings/settings-languages/system-texts.png" >}}
 
+System texts have tokens that can be inserted into the text.  
+
 To translate a system text, do the following:
 
 1. Select the text you would like to translate.

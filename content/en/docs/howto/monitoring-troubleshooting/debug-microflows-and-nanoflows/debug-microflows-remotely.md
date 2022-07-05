@@ -107,6 +107,18 @@ If your application is on the SAP S/4 HANA cloud, you will need to set the passw
 
 4. Restart your application.
 
+#### 3.1.4 Obtain Debugging Credentials from Windows Mendix Service Console
+
+If your application is deployed to a Microsoft Windows environment, you will need to obtain the password from the Windows Mendix Service Console
+
+1. Start your app.
+
+2. Go to the **Advanced** menu of the Windows Mendix Service Console.
+
+3. Select **Enable debugging** and copy the password which is displayed in the popup.
+
+The debugger is available at `{appURL}/debugger/` using the default runtime server port.
+
 ### 3.2 How to Enable Cloud Debugging in Studio Pro
 
 Once you have the unique URL and password, there are two methods for connecting Studio Pro to the cloud environment. 

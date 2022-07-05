@@ -78,7 +78,7 @@ Look at the bottom dockable pane of Studio Pro:
 
 Here you will find several panels:
 
-* **Stories**: displays your active user stories added on your App’s Stories page in the Developer Portal
+* **Stories**: displays your active user stories added on your app’s Stories page in the Developer Portal
 * **Changes**: displays a list of all changes in the project since the last commit to the team server (also used to resolve conflicts with other team members when updating)
 * **Errors**: displays any errors found within your project (can also display deprecations and warnings)
 * **MxAssist Performance Bot**: an AI peer programmer bot which analyzes your app's model and identifies any issues which may negatively impact your app’s performance
@@ -109,7 +109,7 @@ The domain model is a visual representation of your app’s database. Each modul
 
 Domain models are comprised of entities similar to a table in traditional SQL. Entities have attributes (similar to fields), and they can relate to other entities (including ones in other modules or even other apps). They can relate to each other either as a one-to-one association, one-to-many, or many-to-many.
 
-When you run your app locally or deploy it for the first time,  the runtime compiles your app’s domain models and creates the underlying database. Any subsequent changes will be seen as updates to the database.
+When you run your app locally or deploy it for the first time, the runtime compiles your app’s domain models and creates the underlying database. Any subsequent changes will be seen as updates to the database.
 
 Mendix by default uses its own built-in HSSQL database, but Mendix also supports several alternative database types such as IBM DB2, PostgreSQL, Microsoft SQL Server, and others. 
 
@@ -148,7 +148,7 @@ Next you must add some attributes. Remember, your entity now inherits many prope
 
 ## 5 Creating Your App's User Interface
 
-Now that you have created your domain model, it is time to create your app’s front end. To do so, you will employ regular widgets and context widgets:
+Now that you have created your domain model, it is time to create your photo album app’s front end. To do so, you will employ regular widgets and context widgets:
 
 * Widgets – Widgets are pre-made user interface components. Widget development in Mendix is based on React for both web and native mobile. A widget can either be a single visual component (like a button), or a collection of components grouped together for ease of use.
 * Context widgets – A context widget is a widget which displays data from the Domain Model. In Mendix there are four main context widgets: 
@@ -157,7 +157,7 @@ Now that you have created your domain model, it is time to create your app’s f
     * [List view](/refguide/list-view/): displays many records in a scrollable list
     * [Template grid](/refguide/template-grid/): displays many records in configurable columns and rows
 
-Now it is time to build:
+Now it is time to build your photo album app:
 
 1. Open the **Home_Web** page from the App Explorer. 
 1. Drag and drop a **Template Grid** from the **Toolbox** onto the page. 
@@ -208,7 +208,7 @@ Your **Images** will now be displayed from the database, but the **Labels** on t
 
 ## 6 Defining Logic Using Microflows
 
-There is only one step left before you can run and test your app. You have created a place to store images and a page to display them on. Most of the functionality for creating, editing, and deleting images has been handled automatically. But what if you want your app to do some custom logic? For example, what if you wanted to validate that the user has entered text for the **Title** and **Description** fields before they click **Save**? In Mendix, you can achieve this using a Microflow.
+There is only one step left before you can run and test your photo album app app. You have created a place to store images and a page to display them on. Most of the functionality for creating, editing, and deleting images has been handled automatically. But what if you want your app to do some custom logic? For example, what if you wanted to validate that the user has entered text for the **Title** and **Description** fields before they click **Save**? In Mendix, you can achieve this using a Microflow.
 
 A microflow is a piece of custom logic which is represented visually in Business Process Model and Notation (BPMN). Think of a function in traditional code, except written visually. When your app compiles, it translates all your microflows into code executable by your browser. Microflows are based on Java and are executed on the server. This means an internet connection is required in order for it to execute. A microflow can only have one start point, but can often have multiple end points.
 
@@ -257,7 +257,7 @@ Finally we need to commit the image to the database, and then close the page:
 
 1. Add a **Close page** action to the end of the microflow to ensure the user is directed back to the home page after clicking **Save**. 
 
-You have finished your responsive app! You can run your app and test it by pressing <kbd>F5</kbd> or by clicking the green play icon in the top-right corner of Studio Pro (next to the **Publish** button):
+You have finished your responsive app! You can run your photo album app and test it by pressing <kbd>F5</kbd> or by clicking the green play icon in the top-right corner of Studio Pro (next to the **Publish** button):
 
 {{< figure src="/attachments/refguide/quickstart-guide/part1/complete.png" width="450px" alt="Run your app">}}
 

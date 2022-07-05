@@ -18,7 +18,9 @@ Powered by AI and OCR technologies, the [Receipt Processing](https://marketplace
 
 ### 1.2 Limitation
 
-* Currently only supports images in JPG and JPEG formats
+* Currently supported file formats:
+  * JPG, JPEG, BMP and PNG images
+  * PDF documents
 
 ### 1.3 Prerequisites
 
@@ -102,7 +104,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
         {{< figure src="/attachments/appstore/app-services/receipt-processing/rp-download-json-structure.png" alt="" >}}
     
         The **Generate JSON Structure** dialog box opens.
-    9.  Drag a sample receipt into the box where it says **Drag image files here**. You can also click **Browser** and select the file. The sample receipt should represent the receipts from which data will be extracted. You can also click the box and select the file.
+    9.  Drag a sample receipt into the box where it says **Drag and drop your documents here**. You can also click **Browser** and select the file. The sample receipt should represent the receipts from which data will be extracted. You can also click the box and select the file.
     
         {{< figure src="/attachments/appstore/app-services/receipt-processing/sample-extraction-dialog-box.png" alt="Sample Extraction dialog box" >}}
     
@@ -137,17 +139,17 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
     {{< figure src="/attachments/appstore/app-services/receipt-processing/receipt-processing-microflow.png" alt="receipt-processing-microflow" >}}
 
-2.  Create a list of image that inherits from `System.Image`. Images from where data is extracted should be passed as a list, as shown in the microflow above.
+2.  Create a list of document that inherits from `System.FileDocument`. Documents from where data is extracted should be passed as a list, as shown in the microflow above.
 
-    {{% alert color="info" %}} The total size of the images being passed for extraction should not exceed 20 MB. If you have multiple images to extract data from, you can process them in smaller batches. {{% /alert %}}
+    {{% alert color="info" %}} The total size of the documents being passed for extraction should not exceed 20 MB. If you have multiple documents to extract data from, you can process them in smaller batches. {{% /alert %}}
 
-    {{% alert color="info" %}}The number of images passed as a list in the microflow and processed by the **Receipt Processing** activity will be counted against the allocated quota for your provisioned instance.{{% /alert %}}
+    {{% alert color="info" %}}The number of documents passed as a list in the microflow and processed by the **Receipt Processing** activity will be counted against the allocated quota for your provisioned instance.{{% /alert %}}
 
 3.  Double-click the **Receipt Processing** activity to open the **Receipt Processing** dialog box.
 
     {{< figure src="/attachments/appstore/app-services/receipt-processing/receipt-processing-dialog-box.png" alt="Receipt Processing" >}}
 
-4. For **Image List**, click **Edit** to select the **Image List** which inherits from `System.Image`.
+4. For **Document List**, click **Edit** to select the **Document List** which inherits from `System.FileDocument`.
 5. For **Mapping**, **Select** the import mapping that you created to define how extracted data should be mapped into an entity.
 6. Click **OK** to save the changes and close the dialog box.
 

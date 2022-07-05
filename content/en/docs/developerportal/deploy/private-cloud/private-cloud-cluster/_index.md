@@ -1172,13 +1172,13 @@ The following fields can be configured:
 If we are deploying a large application that takes much longer to start than the defined 60 seconds, we will observe it restarting multiple times. To solve this scenario we must edit field `initialDelaySeconds` for the **Liveness probe** to a substantially larger value.
 {{% /alert %}}
 
-#### 5.3.2 Customize startupProbes for slow starting applications
+#### 5.3.2 Customize Startup Probes for slow starting applications
 
-If you want to wait before executing a liveness probe you should use `initialDelaySeconds` or a startupProbe.
+If you want to wait before executing a liveness probe you should use `initialDelaySeconds` or a startup probe.
 
-A startupProbe should be used when the application in your container could take a significant amount of time to reach its normal operating state. Applications that would crash or throw an error if they handled a liveness or readiness probe during startup need to be protected by a startupProbe. This ensures the container doesn't continually restart due to failing health checks before it has finished launching. Using a startupProbe is much better than increasing `initialDelaySeconds` on readiness or liveness probes. StartupProbes defer the execution of liveness and readiness probes until a container indicates it is able to handle them because Kubernetes doesn't direct the other probe types to the container if it has a startupProbe that hasn't yet succeeded.
+A startup probe should be used when the application in your container could take a significant amount of time to reach its normal operating state. Applications that would crash or throw an error if they handled a liveness or readiness probe during startup need to be protected by a startup probe. This ensures the container doesn't continually restart due to failing health checks before it has finished launching. Using a startup probe is much better than increasing `initialDelaySeconds` on readiness or liveness probes. Startup probes defer the execution of liveness and readiness probes until a container indicates it is able to handle them because Kubernetes doesn't direct the other probe types to the container if it has a startup probe that hasn't yet succeeded.
 
-You can see an example of a startupProbe configuration below:
+You can see an example of a startup probe configuration below:
 
 ```yaml
 startupProbe:
@@ -1190,16 +1190,16 @@ startupProbe:
   periodSeconds: 10
 ```
 
-In this example, the application will have a maximum of 5 minutes (30 * 10 = 300s) to finish its startup. Once the startup probe has succeeded once, the liveness probe takes over to provide a fast response to container deadlocks. If the startup probe never succeeds, the container is killed after 300s and subject to the pod's restartPolicy.
+In this example, the application will have a maximum of 5 minutes (30 * 10 = 300s) to finish its startup. Once the startup probe has succeeded once, the liveness probe takes over to provide a fast response to container deadlocks. If the startup probe never succeeds, the container is killed after 300s and subject to the pod's [restartPolicy](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy).
 
 {{% alert color="info" %}}
-If you misconfigure a startupProbe, for example you don't allow enough time for the startupProbe to succeed, the kubelet might restart the container prematurely. causing your container to continually restart.
+If you misconfigure a startup probe, for example you don't allow enough time for the startup probe to succeed, the kubelet might restart the container prematurely. causing your container to continually restart.
 
-StartupProbes are available in the Mendix for Private Cloud Operator version 2.6.0 and above.
+Startup probes are available in the Mendix for Private Cloud Operator version 2.6.0 and above.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-In Kubernetes version 1.19, startupProbes is still a [beta feature](https://kubernetes.io/blog/2020/08/21/moving-forward-from-beta/).
+In Kubernetes version 1.19, startup probes are still a [beta feature](https://kubernetes.io/blog/2020/08/21/moving-forward-from-beta/).
 {{% /alert %}}
 
 #### 5.3.3 Customize terminationGracePeriodSeconds for Gracefully Shutting Down the Application Pod

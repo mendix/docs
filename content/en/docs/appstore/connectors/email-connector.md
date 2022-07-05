@@ -88,7 +88,7 @@ You can set up the following additional account settings:
 
 {{< figure src="/attachments/appstore/connectors/email-connector/other-account-settings.png" >}}
 
-* Subscribe to incoming emails – user can select this option to get notified about the new incoming emails for modeling use `SubscribeToIncomingEmail` Java action. Read more about this in the section below.
+* **Subscribe to incoming emails** – user can select this option to get notified about the new incoming emails for modeling use `SubscribeToIncomingEmail` Java action. Read more about this in the section below.
 
 {{% alert color="warning" %}}
 This is only supported for IMAP protocols, and some servers may not support it at all.

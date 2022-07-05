@@ -237,4 +237,4 @@ If you do not encrypt the password, all functions will still work as expected.
 ## 6 Troubleshooting
 
 * If you already have the [Included Widgets](#included-widgets) widgets in your app, and they are not up-to-date, you may get a `Some widgets can not be read` error when trying to run locally.
-* If the email connector page styling is affected as you select/view email messages, please turn on the **Sanitize email to prevent XSS attacks** option available in the [Account Settings](#other-account-settings). It is most likely due probably due to errors in the email message CSS, so this option will improve any problematic code. 
+* If the **Email Connector** page styling is affected as you select/view email messages, please turn on the **Sanitize email to prevent XSS attacks** option available in the [Account Settings](#other-account-settings). It is probably due to errors in the email message CSS, so this option should fix any issues. 

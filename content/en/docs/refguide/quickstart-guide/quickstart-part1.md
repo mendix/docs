@@ -58,11 +58,25 @@ A page defines the end-user interface in a Mendix app. You can create and edit p
 
 Now that you have completed your first tasks in Studio Pro, this section will give you a quick and optional tour. If you know Studio Pro well already, you can skip this section.
 
-You can navigate through your app using the App Explorer, the window on the left side of your screen. This is where you can create and explore new documents and modules in your app. Any modules you download from the Marketplace will appear under **Marketplace Modules** > **App** section:
+Take a look at Studio Pro all at once. There is a lot of power here, but it can be confusing at first glance: 
 
 {{< figure src="/attachments/refguide/quickstart-guide/part1/tour.png" width="450px" alt="Marketplace Modules">}}
 
-At the bottom of Studio Pro you will find several panels:
+Luckily, it is easy to understand in sections. See the sections below for more information. For even more detail, see the [Studio Pro Overview](/refguide/studio-pro-overview/).
+
+### 3.1 App Structure on the Left
+
+You can navigate through your app using the App Explorer, the window on the left side of your screen. This is where you can create and explore new documents and modules in your app. Any modules you download from the Marketplace will appear under **Marketplace Modules** > **App** section:
+
+{{< figure src="/attachments/refguide/quickstart-guide/part1/tour-left.png" width="450px" alt="App Structure">}}
+
+### 3.2 Bottom Dockable Pane 
+
+Look at the bottom dockable pane of Studio Pro:
+
+{{< figure src="/attachments/refguide/quickstart-guide/part1/tour-bottom.png" width="450px" alt="Bottom Dockable Pane">}}
+
+Here you will find several panels:
 
 * **Stories**: displays your active user stories added on your App’s Stories page in the Developer Portal
 * **Changes**: displays a list of all changes in the project since the last commit to the team server (also used to resolve conflicts with other team members when updating)
@@ -70,7 +84,13 @@ At the bottom of Studio Pro you will find several panels:
 * **MxAssist Performance Bot**: an AI peer programmer bot which analyzes your app's model and identifies any issues which may negatively impact your app’s performance
 * **Console**: a live feed of your app’s console as the app runs (you can filter for additional log levels by clicking on the **Advanced** drop-down list)
 
-On the right side of Studio Pro you will find more panels:
+### 3.3 Right Dockable Pane 
+
+Look at the right dockable pane of Studio Pro:
+
+{{< figure src="/attachments/refguide/quickstart-guide/part1/tour-right.png" width="450px" alt="Right Dockable Pane">}}
+
+Here you will find more panels:
 
 * **Data Hub**: displays [External Entities](/refguide/external-entities/) (entities from other apps) which are available for use in your app (you will not use this panel in this guide)
 * **Properties**: displays all the properties of the currently selected context element

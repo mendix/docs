@@ -13,7 +13,7 @@ Powered by AI and OCR technologies, the [Receipt Processing](https://marketplace
 ### 1.1 Features
 
 * Pre-built, ready-to-implement receipt document models
-* Extract data from images of receipts in bulk and map data to an entity
+* Extract data from receipts in bulk and map data to an entity
 * Support [Mendix SSO](/appstore/modules/mendix-sso/)
 
 ### 1.2 Limitation
@@ -76,7 +76,7 @@ Before you deploy an app, you should configure the binding keys in your app as f
 
 ## 4. Usage
 
-To use the Receipt Processing app service, firstly create an [import mapping](#mapping-file), and then include the receipt processing service activity in your microflow. This microflow should be set up to accept trained model and images, extract data from the images in bulk and then map the data to an entity using the import mapping that you created.
+To use the Receipt Processing app service, firstly create an [import mapping](#mapping-file), and then include the receipt processing service activity in your microflow. This microflow should be set up to accept trained model and images/documents, extract data from the input files in bulk and then map the data to an entity using the import mapping that you created.
 
 ### 4.1 Creating an Import Mapping{#mapping-file}
 

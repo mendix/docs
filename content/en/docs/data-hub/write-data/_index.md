@@ -43,7 +43,7 @@ When you publish an entity in a published OData service, clients can read the da
 2. Select the **Customer** entity and click **Edit**.
 3. Select the checkboxes to indicate whether the entity should be **Insertable**, **Updatable**, and/or **Deletable**.
 
-## 4 Viewing OData Capabilities in Data Hub Catalog (#view-capabilities)
+## 4 Viewing OData Capabilities in Data Hub Catalog {#view-capabilities}
 
 The OData updatable capability pertains to the data in your app. The Data Hub Catalog provides an inventory of the metadata in your apps. In the Data Hub Catalog you can see the capabilities of entities, attributes, and associations. Changes to the data itself occur in Mendix apps themselves, not in the Data Hub Catalog.
 

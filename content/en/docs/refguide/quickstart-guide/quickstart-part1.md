@@ -68,7 +68,7 @@ Luckily, it is easy to understand in sections. See the sections below for more i
 
 You can navigate through your app using the App Explorer, the window on the left side of your screen. This is where you can create and explore new documents and modules in your app. Any modules you download from the Marketplace will appear under **Marketplace Modules** > **App** section:
 
-{{< figure src="/attachments/refguide/quickstart-guide/part1/tour-left.png" width="450px" alt="App Structure">}}
+{{< figure src="/attachments/refguide/quickstart-guide/part1/tour-left.png" alt="App Structure">}}
 
 ### 3.2 Bottom Dockable Pane 
 
@@ -88,7 +88,7 @@ Here you will find several panels:
 
 Look at the right dockable pane of Studio Pro:
 
-{{< figure src="/attachments/refguide/quickstart-guide/part1/tour-right.png" width="450px" alt="Right Dockable Pane">}}
+{{< figure src="/attachments/refguide/quickstart-guide/part1/tour-right.png" alt="Right Dockable Pane">}}
 
 Here you will find more panels:
 

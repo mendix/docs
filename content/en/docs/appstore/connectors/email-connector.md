@@ -41,7 +41,7 @@ Before you use the Email Connector, do the following:
 Certain functionalities of the Email Connector will not work correctly if the **Mx Model Reflection** module is not configured, or if you have not removed older email modules.
 {{% /alert %}}
 
-### 1.3 Included Widgets
+### 1.3 Included Widgets {#included-widgets}
 
 The following widgets are bundled in the module:
 * [HTML/JavaScript Snippet](/appstore/widgets/html-javascript-snippet/)
@@ -82,7 +82,7 @@ If you follow the wizard and if it fails to detect the email settings automatica
 
 In Studio Pro, you can use the `GetAutoConfig` Java action to get the all supported email configurations for the provided username. It will return results as `Email_Connector.EmailProvider`. Process the `Email_Connector.EmailProvider` records and get the desired configuration and create the `Email_Connector.EmailAccount`.
 
-### 3.2 Other Account Settings
+### 3.2 Other Account Settings {#other-account-settings}
 
 You can set up the following additional account settings:
 
@@ -233,3 +233,8 @@ If you do not encrypt the password, all functions will still work as expected.
 * **Sample_ACT_SendEmailWithTemplate** – a microflow that helps you set up send email using the template
 * **SE_Cleanup** – a microflow that can be added to a schedule event and deletes email sent logs and sent emails of the past 30 days. The **EmailLogRetention** constant defines the amount of days to preserve messages.
 * **SE_SendQueuedEmails** - a microflow can be added to a schedule event which will send emails which are marked as **QueuedForSending**
+
+## 6 Troubleshooting
+
+* If you already have the [Included Widgets](#included-widgets) widgets in your app, and they are not up-to-date, you may get a `Some widgets can not be read` error when trying to run locally.
+* If the email connector page styling is affected as you select/view email messages, please turn on the **Sanitize email to prevent XSS attacks** option available in the [Account Settings](#other-account-settings). It is most likely due probably due to errors in the email message CSS, so this option will improve any problematic code. 

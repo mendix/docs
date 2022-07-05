@@ -10,7 +10,13 @@ tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
 
 Get up and running with the Mendix Platform and start developing your first app in Mendix Studio Pro. This is Part 1 of the quickstart, where you will learn the basics of Studio Pro, handle data using the Domain Model, populate your app's pages with dynamic data, and create custom app logic using a microflow.
 
-When you complete Part 1, you will have an app that can capture and save images using dynamic data.
+When you complete Part 1, you will have a photo album app that will allow users to upload, edit, and display pictures so that their cherished memories will be preserved. This guide, Part 1, will show you how to build a responsive web app compatible with all desktop, tablet, and mobile browsers.
+
+### 1.2 Getting to Know Mendix
+
+This tutorial will teach you several key Mendix concepts, such how to add an entity to the [domain model](/refguide/domain-model/) (a visual model that describes your app's information or data in an abstract way), create some basic pages which use building blocks and design properties, and model your first microflow. 
+
+A [microflow](/refguide/microflows/) is a visual way of expressing logic or code which is compiled into executable code at runtime. Microflows are commonly used to perform actions such as creating and changing objects, showing pages, and making choices.
 
 [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. This tutorial will use Studio Pro version 9.12.1, but you can use a later version if you wish.
 
@@ -22,7 +28,8 @@ You will not need any additional software configured on your device in order to 
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
-* Create your [free account](https://signup.mendix.com/link/signup/?source=direct)⁠—which takes only two minutes to finish
+* Create your [free account](https://signup.mendix.com/link/signup/?source=quickstart-part1&medium=mxdocs
+)⁠—which takes only two minutes to finish
 * [Download](https://marketplace.mendix.com/index3.html) and [install](/howto/general/install/) Mendix Studio Pro
 * If you are working on a Mac, please complete [How To Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
@@ -42,25 +49,50 @@ Here you will choose an app starting point. It is key that you choose a starting
 
     {{< figure src="/attachments/refguide/quickstart-guide/part1/home-web.png" width="450px" alt="Home Web page">}}
 
+A page defines the end-user interface in a Mendix app. You can create and edit pages using the Page Editor. All pages are based on layouts and templates:
+
+* [Layouts](/refguide/layout/): define a page's structure (such as navigation element location, areas for content, and more)
+* [Templates](/refguide/page-templates/): are completely editable starting points for new pages, and you can also start with a blank template so you can build from scratch
+
 ## 3 Exploring Studio Pro
 
 Now that you have completed your first tasks in Studio Pro, this section will give you a quick and optional tour. If you know Studio Pro well already, you can skip this section.
 
-You can navigate through your app using the App Explorer, the window on the left side of your screen. This is where you can create and explore new documents and modules in your app. Any modules you download from the Marketplace will appear under **Marketplace Modules** > **App** section:
+Take a look at Studio Pro all at once. There is a lot of power here, but it can be confusing at first glance: 
 
 {{< figure src="/attachments/refguide/quickstart-guide/part1/tour.png" width="450px" alt="Marketplace Modules">}}
 
-At the bottom of Studio Pro you will find several panels:
+Luckily, it is easy to understand in sections. See the sections below for more information. For even more detail, see the [Studio Pro Overview](/refguide/studio-pro-overview/).
 
-* **Stories**: displays your active user stories added on your App’s Stories page in the Developer Portal
+### 3.1 App Structure on the Left
+
+You can navigate through your app using the App Explorer, the window on the left side of your screen. This is where you can create and explore new documents and modules in your app. Any modules you download from the Marketplace will appear under **Marketplace Modules** > **App** section:
+
+{{< figure src="/attachments/refguide/quickstart-guide/part1/tour-left.png" width="450px" alt="App Structure">}}
+
+### 3.2 Bottom Dockable Pane 
+
+Look at the bottom dockable pane of Studio Pro:
+
+{{< figure src="/attachments/refguide/quickstart-guide/part1/tour-bottom.png" width="450px" alt="Bottom Dockable Pane">}}
+
+Here you will find several panels:
+
+* **Stories**: displays your active user stories added on your app’s Stories page in the Developer Portal
 * **Changes**: displays a list of all changes in the project since the last commit to the team server (also used to resolve conflicts with other team members when updating)
 * **Errors**: displays any errors found within your project (can also display deprecations and warnings)
 * **MxAssist Performance Bot**: an AI peer programmer bot which analyzes your app's model and identifies any issues which may negatively impact your app’s performance
 * **Console**: a live feed of your app’s console as the app runs (you can filter for additional log levels by clicking on the **Advanced** drop-down list)
 
-On the right side of Studio Pro you will find more panels:
+### 3.3 Right Dockable Pane 
 
-* **Data Hub**: displays [External Entities](/refguide/external-entities/) (entities from other apps) which are available for use in your app
+Look at the right dockable pane of Studio Pro:
+
+{{< figure src="/attachments/refguide/quickstart-guide/part1/tour-right.png" width="450px" alt="Right Dockable Pane">}}
+
+Here you will find more panels:
+
+* **Data Hub**: displays [External Entities](/refguide/external-entities/) (entities from other apps) which are available for use in your app (you will not use this panel in this guide)
 * **Properties**: displays all the properties of the currently selected context element
 * **Toolbox**: a list of things you can add to the current document⁠—the **Toolbox** changes depending on context (it displays page elements while in the page editor or displays actions when editing a microflow or nanoflow)
 * **Connector**: quickly links data to pages⁠—using the connector you could drag an entity onto a data view or data grid to quickly display your app’s data on a page
@@ -77,7 +109,7 @@ The domain model is a visual representation of your app’s database. Each modul
 
 Domain models are comprised of entities similar to a table in traditional SQL. Entities have attributes (similar to fields), and they can relate to other entities (including ones in other modules or even other apps). They can relate to each other either as a one-to-one association, one-to-many, or many-to-many.
 
-When you run your app locally or deploy it for the first time,  the runtime compiles your app’s domain models and creates the underlying database. Any subsequent changes will be seen as updates to the database.
+When you run your app locally or deploy it for the first time, the runtime compiles your app’s domain models and creates the underlying database. Any subsequent changes will be seen as updates to the database.
 
 Mendix by default uses its own built-in HSSQL database, but Mendix also supports several alternative database types such as IBM DB2, PostgreSQL, Microsoft SQL Server, and others. 
 
@@ -116,7 +148,16 @@ Next you must add some attributes. Remember, your entity now inherits many prope
 
 ## 5 Creating Your App's User Interface
 
-Now that you have created your domain model, it’s time to create your app’s front end:
+Now that you have created your domain model, it is time to create your photo album app’s front end. To do so, you will employ regular widgets and context widgets:
+
+* Widgets – Widgets are pre-made user interface components. Widget development in Mendix is based on React for both web and native mobile. A widget can either be a single visual component (like a button), or a collection of components grouped together for ease of use.
+* Context widgets – A context widget is a widget which displays data from the Domain Model. In Mendix there are four main context widgets: 
+    * [Data view](/refguide/data-view/): displays a single record
+    * [Data grid](/refguide/data-grid/): displays many records in a table format
+    * [List view](/refguide/list-view/): displays many records in a scrollable list
+    * [Template grid](/refguide/template-grid/): displays many records in configurable columns and rows
+
+Now it is time to build your photo album app:
 
 1. Open the **Home_Web** page from the App Explorer. 
 1. Drag and drop a **Template Grid** from the **Toolbox** onto the page. 
@@ -167,7 +208,7 @@ Your **Images** will now be displayed from the database, but the **Labels** on t
 
 ## 6 Defining Logic Using Microflows
 
-There is only one step left before you can run and test your app. You have created a place to store images and a page to display them on. Most of the functionality for creating, editing, and deleting images has been handled automatically. But what if you want your app to do some custom logic? For example, what if you wanted to validate that the user has entered text for the **Title** and **Description** fields before they click **Save**? In Mendix, you can achieve this using a Microflow.
+There is only one step left before you can run and test your photo album app app. You have created a place to store images and a page to display them on. Most of the functionality for creating, editing, and deleting images has been handled automatically. But what if you want your app to do some custom logic? For example, what if you wanted to validate that the user has entered text for the **Title** and **Description** fields before they click **Save**? In Mendix, you can achieve this using a Microflow.
 
 A microflow is a piece of custom logic which is represented visually in Business Process Model and Notation (BPMN). Think of a function in traditional code, except written visually. When your app compiles, it translates all your microflows into code executable by your browser. Microflows are based on Java and are executed on the server. This means an internet connection is required in order for it to execute. A microflow can only have one start point, but can often have multiple end points.
 
@@ -216,7 +257,7 @@ Finally we need to commit the image to the database, and then close the page:
 
 1. Add a **Close page** action to the end of the microflow to ensure the user is directed back to the home page after clicking **Save**. 
 
-You have finished your responsive app! You can run your app and test it by pressing <kbd>F5</kbd> or by clicking the green play icon in the top-right corner of Studio Pro (next to the **Publish** button):
+You have finished your responsive app! You can run your photo album app and test it by pressing <kbd>F5</kbd> or by clicking the green play icon in the top-right corner of Studio Pro (next to the **Publish** button):
 
 {{< figure src="/attachments/refguide/quickstart-guide/part1/complete.png" width="450px" alt="Run your app">}}
 

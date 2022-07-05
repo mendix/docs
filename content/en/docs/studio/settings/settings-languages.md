@@ -26,7 +26,7 @@ Alternatively, you can click the currently selected language in the top menu bar
 
 ### 2.1 Manage Languages {#manage-languages}
 
-The **Manage Languages** tab shows the default language of your app and other languages that your app currently has. You can add or delete languages in and change the default language of the app.
+The **Manage Languages** tab shows the default language of your app and other languages that your app currently has. You can add or delete languages and change the default language of the app.
 
 The *default language* is the main language of your app. Texts that are not translated to other languages will be displayed in the default language. For example, your default language is English. If you switch to the Dutch language, add a button to a page, and do not translate the button caption, the caption will automatically display the text in the English language when you run the app. For more information, see the [Translating Your App to Multiple Languages](#translate) section below. 
 
@@ -48,7 +48,21 @@ System texts are texts that are shown to the end-user by the server or the clien
 
 {{< figure src="/attachments/studio/settings/settings-languages/system-texts.png" >}}
 
-System texts have tokens that can be inserted into the text.  
+Some system texts have tokens that can be inserted into the text. For example, when a user selects a file to upload to the app and the file is too large, you can display a message and add dynamic information about the size of the selected file and the maximum file size. This can be done by using tokens {selected file size} and {maximum file size}: 
+
+{{< figure src="/attachments/studio/settings/settings-languages/text-with-tokens.png" >}}
+
+If the item has tokens to use, the **Add Token** button is active; click it to display the list of all available tokens:
+
+{{< figure src="/attachments/studio/settings/settings-languages/select-token.png" >}}
+
+You are not required to use tokens, a text without them would also be a valid text. 
+
+{{% alert type="info" %}}
+
+System texts are not the same as [widgets and elements available for translation](#widgets-and-elements).
+
+{{% /alert %}}
 
 To translate a system text, do the following:
 
@@ -56,11 +70,30 @@ To translate a system text, do the following:
 
 2. Click the **Translations** drop-down list in the text box on the right:
 
-    {{< figure src="/attachments/studio/settings/settings-languages/translate-system-texts.png" >}}
+    {{< figure src="/attachments/studio/settings/settings-languages/translate-system-text.png" >}}
 
 3. Scroll through languages available in your app and type in translations for the text. The order you see languages in depends on the currently selected language in the top menu bar and to the default language.
 
-## 3 Switching the Currently Selected Language
+4. Write the text for the selected language. 
+
+5. If the system texts has tokens available, click the **Add Token** button to display dynamic information.
+
+6. In the **Select Token** dialog box, choose the token you would like to use in your translation and click **Select**. 
+
+The system text is translated. 
+
+## 3 Widgets and Elements Available for Translation {#widgets-and-elements}
+
+You can translate the following widgets and elements in your app:
+
+* [Button captions](/studio/page-editor-widgets-buttons/#general)
+* [Text widget](/studio/page-editor-widgets-text/#content)
+* [Data grid columns](/studio/page-editor-data-grid/#grid-columns)
+* [Menu items](/studio/navigation/#properties-of-menu-items)
+* Messages that are configured in **Show Message** actions of a microflow
+* [Enumeration](/studio/domain-models-enumeration/) texts
+
+## 4 Switching the Currently Selected Language
 
 You can switch the currently selected language in the top menu bar:
 
@@ -68,7 +101,7 @@ You can switch the currently selected language in the top menu bar:
 
 This setting switches languages in the app while you are editing it, it does not influence the language of the previewed/published app. A separate language drop-down list is available with the latest Atlas UI to switch languages in the previewed/published apps. If your app has only one language, the toggle is hidden. 
 
-## 4 Translating Your App to Multiple Languages {#translate}
+## 5 Translating Your App to Multiple Languages {#translate}
 
 When multiple languages are set up in your app, one language is set as the default language. All untranslated texts in other languages will be displayed in the default language when you run the app. When you change the text in the default language, all untranslated texts will automatically fall back to the changed text. 
 
@@ -91,18 +124,6 @@ If you add new widgets to your app while you are not in the default language, an
 {{< figure src="/attachments/studio/settings/settings-languages/current-language.png" >}}   
 
 To learn how to translate system texts, see the [System Texts](#system-texts) section above.
-
-
-## 5 Widgets and Elements Available for Translation
-
-You can translate the following widgets and elements in your app:
-
-* [Button captions](/studio/page-editor-widgets-buttons/#general)
-* [Text widget](/studio/page-editor-widgets-text/#content)
-* [Data grid columns](/studio/page-editor-data-grid/#grid-columns)
-* [Menu items](/studio/navigation/#properties-of-menu-items)
-* Messages that are configured in **Show Message** actions of a microflow
-* [Enumeration](/studio/domain-models-enumeration/) texts
 
 ## 6 Read More
 

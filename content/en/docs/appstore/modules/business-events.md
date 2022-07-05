@@ -26,15 +26,15 @@ Business events help you automate the resulting actions when something happens i
 To use the Business Events module, you will need the following:
 
 * Mendix 9.16 or higher
-* A license to the Mendix Event Broker (link to licensing/contact page?)
 * Two Mendix apps: one that *publishes* the Business Events and makes them available, and one that *subscribes* to the Business Events (you can have as many publishing and consuming apps as you require)
+* For working on production environment, a license to the Mendix Event Broker (link to licensing/contact page?)
 
 ### 1.3 Under the Hood: Mendix Event Broker
 
 The Mendix Event Broker is based on Kafka.
 
 * Events are published to a Kafka topic
-* Apps are subscribed to a Kafka topic to receive events, and messages use standard Cloud events payload format
+* Apps are subscribed to a Kafka topic to receive events, and messages use standard [CloudEvents payload format](https://github.com/cloudevents/spec/blob/v1.0.1/spec.md)
 
 #### 1.3.1 Event Broker Security
 
@@ -58,6 +58,8 @@ All events from free apps are published to one shared topic.
 To publish or consume business events, you must first download and import the [Mendix Business Events](https://marketplace.mendix.com/link/component/117555) module into your app.
 
 ### 2.1 Configure Local Deployments
+
+Use our [local setup for the event broker tool](https://github.com/mendix/event-broker-tools) to configure local deployments.
 
 Follow these steps to deploy locally. The settings are all located in the **_USE_ME/Constants** folder of the module.
 ![](https://paper-attachments.dropbox.com/s_5112255A543DA3FFC2AEF04899EBEAD5076372C39E9A1EE9612BC93B1906A44D_1653392738981_Screenshot+2022-05-24+at+13.39.55.png)
@@ -229,59 +231,12 @@ When you deploy your apps to the free cluster the Mendix Data Broker is provided
 
 For development and testing it may be useful to run all your apps on your local workstation, including the Data Broker. You can do this by create a Kafka cluster on your workstation. The simplest way to do this is by running Kafka through docker-compose.
 
-### 5.1 Running Kafka on Docker
-
-Docker-compose.yml file:
-
-
-
-    version: '3.7'
-    services:
-      zookeeper:
-        image: confluentinc/cp-zookeeper:latest
-        hostname: zookeeper
-        container_name: zookeeper    
-        environment:
-          ZOOKEEPER_CLIENT_PORT: 2181
-          ZOOKEEPER_TICK_TIME: 2000
-        ports:
-          - 22181:2181
-      
-      kafka:
-        image: confluentinc/cp-kafka:latest
-        hostname: kafka
-        container_name: kafka    
-        depends_on:
-          - zookeeper
-        ports:
-          - 29092:29092
-        environment:
-          KAFKA_BROKER_ID: 1
-          KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-          KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
-          KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
-          KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
-          KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-          KAFKA_DELETE_TOPIC_ENABLE: "true"
-          KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"   
-      
-      postgres:
-          image: postgres
-          hostname: postgres
-          container_name: postgres
-          restart: always
-          ports:
-            - "25432:5432"
-          environment:
-            POSTGRES_PASSWORD: mendix
-            POSTGRES_USER: mendix
+### 5.1 Using the business events local setup tool
 
   
 The last service in this configuration file, postgres, is not really required, but useful if you want to test with a postgres database on your workstation. You’ll have to specify this also in the runtime settings of your project (see [below](https://paper.dropbox.com/doc/DHBE-Business-Events-How-to-OBqExFSF3nYhDUcIYGtdB#:uid=125626315108995485696472&h2=3.-Use-postgresql-database-(op)).
   
 Start your docker cluster using the command `docker-compose up`. This will download or update all the required docker images and start Kafka.
-  
-![](https://paper-attachments.dropbox.com/s_307FBAE8C2AB34FD061619224B95DB95259A2BCA09F9A1C2E089C52788360E09_1641302425103_afbeelding.png)
 
 ### 5.2 Using PostgreSQL Database (Optional)
 
@@ -344,6 +299,6 @@ On the microflow, a log message action can be added after the start action in or
 
 ## 7 Known Issues
 
-* In Studio Pro 9.14.0, having an log activity in your after startup microflow results in an error when trying to build the app. You can work around this by removing the log activity in the after startup microflow.
+* In Studio Pro [9.14](//releasenotes/studio-pro/9.14/), having an log activity in your after startup microflow results in an error when trying to build the app. You can work around this by removing the log activity in the after startup microflow. This was fixed for Studio Pro [9.15](/releasenotes/studio-pro/9.15/) and above.
 
 

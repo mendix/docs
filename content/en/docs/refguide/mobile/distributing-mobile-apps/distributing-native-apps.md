@@ -35,27 +35,27 @@ To create a certificate signing request manually, follow these steps:
 2. Open a command line interface (CLI) such as Command Prompt. On most systems, you need to do this as an administrator (right-click the Windows start menu link and select **Run as Administrator**).
 3. Generate a private key with the OpenSSL program that you just installed. Replace `C:\OpenSSL` with where you installed OpenSSL in step 1. The private key file is stored at the location specified after the `-out` parameter. The following example will store the file in the root directory of your C: drive (you can change this to anything you want, just select a convenient place and keep track of where the file is stored): `"C:\OpenSSL\bin\openssl.exe" genrsa -out "C:\private.key" 2048`. The command will output "Generating RSA private key, 2048 bit long modulus" and lots of dots and plus signs.
 4. Generate a certificate signing request (CSR). The file is again stored in the same folder, but can be placed anywhere. Make sure to point to the private key file that was created in the previous step: `"C:\OpenSSL\bin\openssl.exe" req -new -key "C:\private.key" -out "C:\ios.csr"`. The command will print some text and then ask you for several different pieces of information related to your identity. Only the **Common Name** is relevant. Fill in your own name, so that the certificate is easily recognized later on after uploading it to the Apple Developer Member Center.
-5. Keep the command line open
+5. Keep you CLI open.
 
 The resulting *ios.csr* file must be uploaded to the Apple Developer Member Center to generate a signed certificate. Follow these steps to do that:
 
-1. Open the [Apple Developer (Create a New Certificate)](https://developer.apple.com/account/resources/certificates/add).
+1. In the Apple Developer Member Center click [Create a New Certificate](https://developer.apple.com/account/resources/certificates/add).
 2. Under **Software**, select **iOS App Development**.
-3. Click **Continue** again. You are now at step **Create a New Certificate**.
-4. Under **Upload a Certificate Signing Request**, click **Choose File ...**.
+3. Click **Continue** again. You are now at the **Create a New Certificate** step.
+4. Under **Upload a Certificate Signing Request**, click **Choose File**.
 5. Select the *ios.csr* certificate signing request file that you created.
 6. Click **Continue**. Apple will sign your CSR and make the signed certificate available for download.
-    *   If you are presented with a message that says that your certificate signing request is pending approval, you do not have enough rights. Ask the company account administrator to approve your certificate signing request.
+    * If you are presented with a message that says that your certificate signing request is pending approval, you do not have the required access rights. Ask your company account administrator to approve your certificate signing request.
 7. Click **Download** and store the *.cer* file on your disk at a convenient place (for example, next to the private key and CSR files).
 8. Click **Done**. The **iOS Certificates** overview page becomes visible again. Your new certificate should be in the list. Here, you can download it again, or you can revoke it (in case you lose the corresponding private key).
 
-The downloaded *ios_development.cer* and *private.key* file must be packaged 
+The downloaded *ios_development.cer* and *private.key* file must now be packaged:
 
-1. Return to the command line or open it again.
-2. Convert the downloaded certificate to pem format: `"C:\OpenSSL\bin\openssl.exe" x509 -in "C:\ios_development.cer" -inform der -out "C:\ios_development.pem"`.
-3. Package private key and certificate. The command will ask you for a password for the package. `"C:\OpenSSL\bin\openssl.exe" pkcs12 -export -inkey "C:\private.key" -in "C:\ios_development.pem" -out "C:\key_and_certificate.p12"`. The same password will be used later in The Mendix Native Mobile Builder.
+1. Return to your CLI.
+2. Convert the downloaded certificate to *pem* format with this command: `"C:\OpenSSL\bin\openssl.exe" x509 -in "C:\ios_development.cer" -inform der -out "C:\ios_development.pem"`.
+3. Package your private key and certificate. The command will ask you for a password for the package: `"C:\OpenSSL\bin\openssl.exe" pkcs12 -export -inkey "C:\private.key" -in "C:\ios_development.pem" -out "C:\key_and_certificate.p12"`. The same password will be used later by the Mendix Native Mobile Builder.
 
-The resulting *key_and_certificate.p12* will be used in The Mendix Native Mobile Builder for signing apps.
+The resulting *key_and_certificate.p12* will be used by the Mendix Native Mobile Builder to sign your apps.
 
 ### 2.3 Creating the Required Distribution Profile
 

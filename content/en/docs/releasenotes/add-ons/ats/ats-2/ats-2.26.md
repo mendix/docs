@@ -10,10 +10,10 @@ weight: 74
 
 ### Fixes
 
-* We fixed an issue about loss of dataset fields and parameters bindings with Custom Actions Copy/Paste and Duplicate.
-* The ATS prevents editing while updating the parameters to prevent possible data loss.
-* The ATS shows a waiting dialog while fetching the fields of the Custome Actions, this is quite usefull when there are lots of parameters in a Custom Action.
+* We fixed an issue about the loss of dataset fields and parameter bindings that occurred when copy-pasting or duplicating custom actions.
+* ATS now prevents editing while updating parameters to prevent possible data loss.
+* ATS now shows a waiting pop-up window while fetching the fields of custom actions, which can be useful when there are lots of parameters in a custom action.
 
 ### Improvements 
 
-* The ATS now support Mendix DataGrid version 2.
+* ATS now support [Data Grid 2](/appstore/modules/data-grid-2/).

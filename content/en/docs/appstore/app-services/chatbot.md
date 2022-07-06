@@ -27,18 +27,29 @@ Here is an overview of what Chatbot contains:
 
 In most cases, you will only need what is contained in the **Chatbot** > **USE_ME** folder. The content in the **Chatbot** > **Internal** folder is for internal use only and you will not need it.
 
-### 1.1 Typical Use Cases
+### 1.1 Chatbot Concepts
+
+* Bot – A bot contains all of the components of a conversation and can perform automated tasks using user input.
+* Intent – An intent represents a goal that the user of the bot wants to achieve, for example, buying flowers, scheduling a meeting, or book a hotel.
+* Utterance – An utterance is a spoken or typed phrase that invokes an intent. For example, "I want to book a hotel” or “I want to buy a plane ticket ” are two simple utterances.
+* Slots – Each slot is a piece of data that the user must supply in order to fulfill the intent. A travel bot could have slots for cities, countries, hotels, etc.
+* Slot type – Slot types define how information for each slot is processed. Each slot is mapped to a slot type. A slot type must have at least one value. 
+* Prompt – A prompt is a question that asks the user to supply data for a slot that is needed to fulfill an intent.
+* Fulfillment – Fulfillment is the business logic that realizes the intent of the user. 
+* Confidence score – If the confidence score is 0, it means no matching answer has been found; if the score is higher, it means there is more confidence in the matching answer.
+
+### 1.2 Typical Use Cases
 
 You can use this app service to build a chatbot app that can make human-like conversations with users via text messages or audio. You can also customize these chatbot intent actions in your Mendix app.
 
-### 1.2 Features
+### 1.3 Features
 
 * Enable creating a chatbot app to make human-like conversations with users via text messages in UI
 * Support customizing chatbot intent actions
 * Allow you to easily add AI that understands users' intents and automates actions across many languages
 * Support designing and deploying omnichannel conversational AI with drag and drop
 
-### 1.3 Prerequisites
+### 1.4 Prerequisites
 
 This app service can only be used with Studio Pro 9 versions starting with [9.12.0](/releasenotes/studio-pro/9.12/).
 

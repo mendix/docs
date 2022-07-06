@@ -119,6 +119,8 @@ If your application is deployed to a Microsoft Windows environment, you will nee
 
 The debugger is available at `{appURL}/debugger/` using the default runtime server port.
 
+If you are debugging your app running behind IIS, make sure the debugger path is forwarded to the right runtime location as described in the [Reverse Proxy Inbound Rules](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#reverse-proxy-rules) section of *Microsoft Windows – deploy*.
+
 ### 3.2 How to Enable Cloud Debugging in Studio Pro
 
 Once you have the unique URL and password, there are two methods for connecting Studio Pro to the cloud environment. 

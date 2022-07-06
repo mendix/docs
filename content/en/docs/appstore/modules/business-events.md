@@ -23,11 +23,14 @@ Business events help you automate the resulting actions when something happens i
 
 ### 1.2 Pre-Requisites
 
-To use the Business Events module, you will need the following:
+To use the Mendix Business Events module, you will need the following:
 
 * Mendix 9.16 or higher
 * Two Mendix apps: one that *publishes* the Business Events and makes them available, and one that *subscribes* to the Business Events (you can have as many publishing and consuming apps as you require)
-* For working on production environment, a license to the Mendix Event Broker (link to licensing/contact page?)
+
+To use Mendix Business Events on production environments, you will need the pre-requisites listed above in addition to the following:
+* A license to the Mendix Event Broker (link to licensing/contact page)
+* A Technical Contact must enable the Event Broker Service in the Environment Details
 
 ### 1.3 Under the Hood: Mendix Event Broker
 

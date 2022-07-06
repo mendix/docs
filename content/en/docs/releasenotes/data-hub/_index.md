@@ -17,7 +17,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 * The Catalog has gotten a mini makeover! 
      * The **Catalog** and **Curate** top menu items are now up in the bar at the top of the screen, the MxDock. 
-     * You can now navigate between a **Data View**, which gives you insights about a Data Source, and a **Landscape View**, which situates the Data Source in the landscape.
+     * In the **Catalog**, you can now navigate between a **Data View**, which gives you insights about a Data Source, and a **Landscape View**, which situates the Data Source in the landscape.
 * You can now filter the search results by CRUD capabilities.
 
 #### Fixes

@@ -35,7 +35,7 @@ To deploy an app to Tencent, you need the following:
 
     * You will be able to download Mendix Studio Pro, as part of your initial sign up:
        {{< figure src="/attachments/developerportal/deploy/tencent-deploy/download-studio-pro.png" >}}
-    You can also get a copy from the **Get Studio Pro** option in the **Switch to** menu at the top left of **App & Team Management**.
+    You can also get a copy from the **下载 Studio Pro** (Get Studio Pro) option in the **切换到** (Switch to) menu at the top left of **App & Team Management**.
 
 * A Mendix app created with Studio Pro
 
@@ -43,7 +43,7 @@ To deploy an app to Tencent, you need the following:
 
 ### 3.1 Cluster Overview {#overview}
 
-Go to the Cluster Manager page by clicking the **Switch to** menu and selecting **Cluster Manager**.
+Go to the Cluster Manager page by clicking the **切换到** (Switch to) menu and selecting **集群管理** (Cluster Manager).
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/cluster-manager-navigation.png" >}}
 

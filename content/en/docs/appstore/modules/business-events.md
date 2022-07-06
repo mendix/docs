@@ -31,23 +31,20 @@ To use the Business Events module, you will need the following:
 
 ### 1.3 Under the Hood: Mendix Event Broker
 
-The Mendix Event Broker is based on Kafka.
-
+The Mendix Event Broker is based on [Apache Kafka](https://kafka.apache.org/).
 * Events are published to a Kafka topic
 * Apps are subscribed to a Kafka topic to receive events, and messages use standard [CloudEvents payload format](https://github.com/cloudevents/spec/blob/v1.0.1/spec.md)
-
-#### 1.3.1 Event Broker Security
 
 There is a single Kafka broker for free apps, all your company free apps can connect
 * All free apps in your company publish and consume from the same Kafka broker
 * Events are publish to one shared Kafka topic
 * Any free app in your company can receive these events
 
-#### 1.3.2 Event Broker Topics and Channels
+#### 1.3.1 Event Broker Topics and Channels
 
 All events from free apps are published to one shared topic.
 
-#### 1.3.3 Event Broker Error Handling
+#### 1.3.2 Event Broker Error Handling
 
 * Events published are stored in a temporary entity table
 * If the publishing microflow fails and changes are rolled back, this also includes published events
@@ -61,7 +58,7 @@ To publish or consume business events, you must first download and import the [M
 
 Use our [local setup for the event broker tool](https://github.com/mendix/event-broker-tools) to configure local deployments.
 
-Follow these steps to deploy locally. The settings are all located in the **_USE_ME/Constants** folder of the module.
+You can also adjust the following settings located in the **_USE_ME/Constants** folder of the module:
 ![](https://paper-attachments.dropbox.com/s_5112255A543DA3FFC2AEF04899EBEAD5076372C39E9A1EE9612BC93B1906A44D_1653392738981_Screenshot+2022-05-24+at+13.39.55.png)
 {{< figure src="/attachments/appstore/modules/business-events/use-me-constants-folder.png" >}}
 
@@ -202,7 +199,7 @@ You need to specify the following fields in the consumed business event:
 
 ### 3.3 Dead Letter Queue for Failed Messages
 
-Every time a Business Event is consumed, it is transformed to match the Entity created as part of the Subscription. When the Entity within the Business Event has changed based on the imported contract, it can render the Entity unprocessable. In such a scenario the Business Event will fail into a **Dead Letter Queue** which contains the representation of the Entity within the data column.
+Every time a Business Event is consumed, it is transformed to match the Entity created as part of the Subscription. When the Entity within the Business Event has changed based on the imported contract, it can render the Entity unable to be processed. In such a scenario the Business Event will fail into a **Dead Letter Queue** which contains the representation of the Entity within the data column.
 
 ![](https://paper-attachments.dropbox.com/s_837CD31D54F4C06BA02DA31C3EBA5FE661BD1E8EE06F20FB2B3F3A0F07C6C051_1628256196736_image.png)
 
@@ -213,11 +210,7 @@ The most important fields in this entity to be checked when there are errors inc
 * `subject`
 * `data` 
 
-Use these fields to transform the payload back into a Mendix entity again. 
-
-If the subject is missing from the original event, the value will be an empty string. 
-
-If the consumed event does not has the correct format, the event won’t go to the dead letter queue but throw an error.
+Use these fields to transform the payload back into a Mendix entity again. If the subject is missing from the original event, the value will be an empty string. If the consumed event does not has the correct format, the event won’t go to the dead letter queue but throw an error.
 
 ## 4 Limitations {#limitations}
 
@@ -227,18 +220,19 @@ For Mendix Apps on Licensed Nodes there is no limit.
 
 ## 5 Local Testing
 
-When you deploy your apps to the free cluster the Mendix Data Broker is provided and configured automatically.
+When you deploy your apps to the free cluster, the Mendix Data Broker is provided and configured automatically.
 
 For development and testing it may be useful to run all your apps on your local workstation, including the Data Broker. You can do this by create a Kafka cluster on your workstation. The simplest way to do this is by running Kafka through docker-compose.
 
-### 5.1 Using the business events local setup tool
+### 5.1 Using the Business Events Local Setup Tool
 
+The [Business events local setup tool](https://github.com/mendix/event-broker-tools) helps you deploy locally by setting up a docker container with Kafka. This repository includes the required `docker-compose.yml` file.
   
-The last service in this configuration file, postgres, is not really required, but useful if you want to test with a postgres database on your workstation. You’ll have to specify this also in the runtime settings of your project (see [below](https://paper.dropbox.com/doc/DHBE-Business-Events-How-to-OBqExFSF3nYhDUcIYGtdB#:uid=125626315108995485696472&h2=3.-Use-postgresql-database-(op)).
+The last service in this configuration file, `postgres`, is not required, but it is useful if you want to test with a postgres database on your workstation. You will have to specify this also in the runtime settings of your project. For more information, see [5.2 Using PostgreSQL Database (Optional)](#postgres-db).
   
 Start your docker cluster using the command `docker-compose up`. This will download or update all the required docker images and start Kafka.
 
-### 5.2 Using PostgreSQL Database (Optional)
+### 5.2 Using PostgreSQL Database (Optional) {#postgres-db}
 
 You can configure the app you’re running in studio pro to use the postgres database created using docker. Remember to use a different database name for every app.
 
@@ -262,36 +256,32 @@ No, only a flat object. For complex data structures, provide an API where the co
 
 Business events can help you replicate data more efficiently, by ensuring you do not have to poll continuously. Instead, the consuming app only polls for new data if it receives a Business Event indicating that something has changed.  To share data it is still preferable to use OData or RESTful APIs as this is not the current purpose of Business Events.
 
-5.  Can I try Business Events locally before I deploy my app to Mendix Cloud?
-
-Yes, you can also try out the Business Event functionality and deploy locally by setting up a Docker container with Kafka. The repository with the required docker-compose file can be found [here](https://gitlab.rnd.mendix.com/platformcore/business-events-local-setup).
-
-6. Are Business Events guaranteed to be delivered only once?
+5. Are Business Events guaranteed to be delivered only once?
 
 The Outbox will publish each Business Event only once.  This however does not prevent business logic from sending duplicate messages to the Outbox. 
 
-7. Are business events guaranteed to be delivered in the original sequence?
+6. Are business events guaranteed to be delivered in the original sequence?
 
 Events will be delivered in the sequence that they where produced in.  The Mendix Business Events module however persists the event to the Entity table in this order.  Once the entity is persisted it triggers the microflow for the persisted entity.  A failure in the microflow can cause data to become out of sequence.  Event ordering is not currently a feature of Business Events.
 
-8. How do I detect and correct failed processing of received events?
+7. How do I detect and correct failed processing of received events?
 
 The Mendix Business Events module uses Mendix 9 Task queue to publish/consume events, so all the capabilities of observability of task queue can be used here as well.
 
-9. How do I configure which Kafka cluster to use?
+8. How do I configure which Kafka cluster to use?
 
 During modelling, you can use the constants described above to configure to a local or other Kafka. This does not transfer through to runtime. During runtime the configurations are provided during startup automatically since only Mendix Cloud is supported.
 
-10. How to delete / clean up events and tasks?
+9. How to delete / clean up events and tasks?
 
 This is something we are looking into, likely by default all will be deleted after some time, with some configuration to overwrite for advanced use cases.
 In the meantime, you could use scheduled event to clean up the events yourself. (Do make sure the consumer doesn’t need them anymore). For the task queue the Task Queue Helpers can be used.
 
-11. How do I know the event was successfully published?
+10. How do I know the event was successfully published?
 
 Messages are first queued within the Outbox for successful delivery as a Business Event.  Monitoring the Outbox entity will allow the developer to determine if there are unpublished Business Event Entities.
 
-12. How do I know events are consumed successfully?
+11. How do I know events are consumed successfully?
 
 The flow of events are controlled by the persistence of the event to the Consumed Business Event Entity as described above.  The flow will not continue in the case of such a failure.   They only cause for such failure would be databases related and thus exceptionally unlikely to occur.
 

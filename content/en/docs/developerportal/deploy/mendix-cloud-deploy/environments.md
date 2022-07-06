@@ -187,7 +187,15 @@ Here, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-
 
 For more information on managing node permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
-## 6 Read More 
+## 6 Services {#services}
+
+Here, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can decide which [App Services](/appstore/app-services/) can be used in environments of this app. The technical contact can only see services which have been enabled for their company in the [Control Center](/developerportal/control-center/).
+
+Team members who have permission to *Deploy, Publish, and Monitor* can see which App Services are enabled or disabled.
+
+Once a service has been enabled for an app, team members can selectively enable it for each [environment](/developerportal/deploy/environments-details/#services).
+
+## 7 Read More 
 
 * [Deploy and Manage](/developerportal/deploy/)
 * [Environment Details](/developerportal/deploy/environments-details/)

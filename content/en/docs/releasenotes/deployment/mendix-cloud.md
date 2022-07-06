@@ -17,6 +17,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### July 8th, 2022
+
+#### Improvements
+
+We added the ability to enable and disable App Services at an app and environment level.
+
 ### June 29th, 2022
 
 #### Improvements

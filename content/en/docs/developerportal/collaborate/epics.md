@@ -113,7 +113,7 @@ When you click the card of a story, the story details page opens and shows the f
 
   * You can link a story in the editor. To do so, type #, then start typing the story title, and then select the right story from the list.
 
-  * You can tag a person in the editor. To do so, type *@*, then start typing the person's name, and then select the right person from the list. Once you save the story, the system will send a notification to the tagged person.
+  * You can tag a person in the editor. To do so, type *@*, then start typing the person's name, and then select the right person from the list.
 
 * **Assign to** – You can assign the story to anybody who can access the app project in the Developer Portal.
 * **Status** – You can set the status to any of the category/swimlane names on the **Board** page and the **Planning** page.
@@ -195,7 +195,7 @@ If you click the row of an epic, the epic details page opens and shows the follo
 
   * You can link a story in the editor. To do so, type #, then start typing the story title, and then select the right story from the list.
 
-  * You can tag a person in the editor. To do so, type *@*, then start typing the person's name, and then select the right person from the list. Once you save the epic, the system will send a notification to the tagged person.
+  * You can tag a person in the editor. To do so, type *@*, then start typing the person's name, and then select the right person from the list.
 * **Assign to** – You can assign the epic to anybody who can access the app project in the Developer Portal.
 * **Tags** – You can add or remove tags. To create a new tag, type the new tag in the text box and then click **Create new "[tag name]"**.
 * **Attachments** – You can add attachments by clicking **+** below **Attachments**. 

@@ -137,9 +137,7 @@ To create a new app API key, click **Create New API Key**  and follow these step
 1.  Fill in the **API key name**.	
 2.  Click **Generate API Key** to be able to use the app API key.
 
-	{{% alert color="warning" %}}For security reasons, the app API key will only be displayed once, during **Step 2 of 2**. It will not be displayed again.
-	{{% /alert %}}
-	
+	{{% alert color="warning" %}}For security reasons, the app API key will only be displayed once, during **Step 2 of 2**. It will not be displayed again.{{% /alert %}}
 
 You use these API keys to authenticate requests to the [Stories API](/apidocs-mxsdk/apidocs/stories-api/).
 
@@ -148,9 +146,9 @@ Click **Revoke** to delete an app API key.
 
 ## 6 Stories {#stories}
 
-On the **Stories** tab, you can select the stories & planning tool for the app, for example [Epics](/developerportal/collaborate/epics). 
+On the **Stories** tab, you can select a planning tool for the app. By default [Stories](/developerportal/collaborate/stories/) is the selected tool. If you like, you can switch to [Epics](/developerportal/collaborate/epics/). Once you select a tool, everyone in your team can use the same tool for this app.
 
-Once you select a tool, everyone in your team can use the same tool for this app. By default Mendix [Stories](/developerportal/collaborate/stories/) is the selected tool.
+{{% alert color="info" %}}It is not yet possible to migrate the data from Stories into Epics, so we recommend you to use Epics for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.{{% /alert %}}
 
 
 ## 7 Managing Webhooks {#webhooks}

@@ -77,23 +77,16 @@ On the **Board** page, each card represents a story.
 A story card shows the following information:
 
 * Unique story ID, which consists of a prefix and a number (①)
-
 * Story title (②)
-
 * Epic related to the story (③)
-
 * Tags (④)
+*  Whether the story is about a feature or a bug – if it is about a feature, it shows a green star icon; and if it is about a bug, it shows a red bug icon (⑤)
 
-* Whether the story is about a feature or a bug – if it is about a feature, it shows a green star icon; and if it is about a bug, it shows a red bug icon (⑤)
-
-  {{< figure src="/attachments/developerportal/collaborate/epics/feature-bug.png" >}}
+    {{< figure src="/attachments/developerportal/collaborate/epics/feature-bug.png" >}}
 
 * Number of comments (⑥)
-
 * Number of tasks (⑦)
-
 * Points of the story (⑧)
-
 * To whom the story is assigned (⑨)
 
 To [archive](#archive) or delete a story, click the **...** icon on the upper-right corner of the card, and then select the corresponding option.
@@ -108,12 +101,11 @@ Clicking the story card opens the [story details page](#story-details).
 
 When you click the card of a story, the story details page opens and shows the following items:
 
-* **Description** – This is the description of the story.
-  * You can edit the description of the story by clicking **Edit Description** and make changes in the WYSIWYG editor. The editor supports different text formats, including code blocks.
+*  **Description** – This is the description of the story.
 
-  * You can link a story in the editor. To do so, type #, then start typing the story title, and then select the right story from the list.
-
-  * You can tag a person in the editor. To do so, type *@*, then start typing the person's name, and then select the right person from the list.
+    * You can edit the description of the story by clicking **Edit Description** and make changes in the WYSIWYG editor. The editor supports different text formats, including code blocks.
+    * You can link a story in the editor. To do so, type #, then start typing the story title, and then select the right story from the list.
+    * You can tag a person in the editor. To do so, type *@*, then start typing the person's name, and then select the right person from the list.
 
 * **Assign to** – You can assign the story to anybody who can access the app project in the Developer Portal.
 * **Status** – You can set the status to any of the category/swimlane names on the **Board** page and the **Planning** page.
@@ -142,21 +134,13 @@ No matter which workflow you use, you can always create an epic or a story by cl
 Each row in a category shows the following information about a story:
 
 * Whether the story is a bug or a feature
-
 * Unique story ID
-
 * Story title
-
 * Linked epic
-
 * Tags
-
 * Number of comments
-
 * Number of the tasks
-
 * Story points
-
 * To whom the story is assigned
 
 {{< figure src="/attachments/developerportal/collaborate/epics/story-kanban.png" >}}
@@ -190,12 +174,12 @@ Clicking a row opens the [epic details](#epic-details) page.
 
 If you click the row of an epic, the epic details page opens and shows the following items:
 
-* **Objective** – This is the description of the epic.
-  * You can edit the objective of the epic by clicking **Edit Objective** and make changes in the WYSIWYG editor. The editor supports different text formats, including code blocks.
+*  **Objective** – This is the description of the epic.
 
-  * You can link a story in the editor. To do so, type #, then start typing the story title, and then select the right story from the list.
+    * You can edit the objective of the epic by clicking **Edit Objective** and make changes in the WYSIWYG editor. The editor supports different text formats, including code blocks.
+    * You can link a story in the editor. To do so, type #, then start typing the story title, and then select the right story from the list.
+    * You can tag a person in the editor. To do so, type *@*, then start typing the person's name, and then select the right person from the list.
 
-  * You can tag a person in the editor. To do so, type *@*, then start typing the person's name, and then select the right person from the list.
 * **Assign to** – You can assign the epic to anybody who can access the app project in the Developer Portal.
 * **Tags** – You can add or remove tags. To create a new tag, type the new tag in the text box and then click **Create new "[tag name]"**.
 * **Attachments** – You can add attachments by clicking **+** below **Attachments**. 
@@ -217,7 +201,7 @@ All the archived stories are shown on the **Archive** page. You can see the foll
 * Unique story ID – Clicking it shows the story details.
 * Story title – Clicking it shows the story details.
 * Which sprint the story belongs to – Clicking it shows the [archived sprint details](#archived-sprint-details).
-* Linked epic – Clicking it shows the epic details
+* Linked epic – Clicking it shows the epic details.
 * Archive date and time – Clicking it shows the story details.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/archive.png" >}}
@@ -231,7 +215,6 @@ When you click the sprint icon in a row of an archived story on the **Archived**
 * Sprint name
 * When this sprint was archived
 * When this sprint started and ended
-
 * Sprint goal
 * Whether the sprint goal was reached
 * Who archived the sprint, shown under **Archived by**

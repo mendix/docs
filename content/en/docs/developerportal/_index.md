@@ -112,7 +112,7 @@ Clicking the question icon in the Developer Portal brings up the options Mendix 
 {{< figure src="/attachments/developerportal/developerportal-assistance.jpg" >}}
 
 * **Get Started with Mendix** – click this to check out [Mendix Basics](https://guidance.mendix.com/link/onboarding)
-* **What's New** – click this to see our [latest features](https://www.mendix.com/releases/)
+* **What's New?** – click this to see our [latest features](https://www.mendix.com/releases/)
 * **Ask the Community** – click this to go to the [Mendix Forum](https://forum.mendixcloud.com/)
 * **Share an Idea** – click this to share your idea on Mendix Forum
 * **Check the documentation** – click this to go to the [Mendix Documentation](https://docs.mendix.com/)

@@ -49,10 +49,11 @@ You can either add a new module to your existing app, or create a new Studio Pro
 		{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/03-microflow-retrieve-object.png"  alt="microflow retrieve object" width= "400" >}}
 
 	1. To set the selected language, you need to change the language for the current user: 
-		1. Call a **Change** object activity.
+		1. Call a **Change object** activity.
 		1. Select the **Input** as `currentUser (System.User)`. 
 		1. In the **Action** section, **Commit** should be set to `Yes` and **Refresh to client** set to `No`. 
-		1. Set the value of the member `System.User_Language` as the object retrieved earlier: **$SelectedLanguage**.
+		1. For **Member**, select `System.User_Language`.
+		1. For the value of that member, set it as the object retrieved earlier: `$SelectedLanguage`.
 		1. Your microflow should look like this:
 	
 		{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/04-microflow-language-change.png"  alt="microflow language change"  width= "400" >}}

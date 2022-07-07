@@ -92,7 +92,13 @@ To be able to use the data from your model in the REST service, you need to crea
 
 	{{< figure src="/attachments/howto/integration/publish-rest-service/RetrieveOrder.png" >}}
 
-11. <a name="eleven"></a>From the App Explorer, right-click the RESTExample module and select **Add other** > **Export Mapping** to add a new mapping named **EM_ExportOrder**:
+11. <a name="eleven"></a>Next, you want to ensure that JSON is generated. You can do this using [Export Mappings](/refguide/export-mappings/) or in a microflow. Steps 11-19 take you through the steps of building this Export Mapping.
+
+From the App Explorer, right-click the RESTExample module and select **Add other** > **Export Mapping** to add a new mapping named **EM_ExportOrder**.
+
+{{% alert color="info" %}}
+Creating an Export Mapping is not required because Mendix's published REST services support [content negotiation](https://nordicapis.com/content-negotiation/): the ability for clients to select the media type they want returned to the server. Follow the next steps in this document to learn how to set up Export Mapping in this case, but note that you can also return the list of objects from the microflow. The platform will export it in the format desired by the client, as indicated by the **Accept** header. The client can then specify if it wants to receive XML or JSON.
+{{% /alert %}}
 
 12. In the **Select schema elements for export mapping** dialog box, select the **Message definition** option, and then select the **MD_Orders** mapping created earlier via the **Select** button:
 

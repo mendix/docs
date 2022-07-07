@@ -30,36 +30,36 @@ Internationalization with Mendix's native apps is fairly simple. You will use tw
 {{% alert color="info" %}}
 This guide requires the following JavaScript actions: 
 
-* **Clear cached session data** – Clears saved session data from the local storage for offline native app and PWAs. This nanoflow action is only compatible with Mendix client **9.14** or above. So, please ensure to use Mendix Studio Pro version **9.14.0** or higher.
-* **Reload** – Reloads web and native applications.
+* **Clear cached session data** – This action clears saved session data from the local storage for offline native app and PWAs. This nanoflow action is only compatible with Studio Pro v9.14 and above. Therefore, please use Studio Pro v9.14.0 or above.
+* **Reload** – This action reloads web and native apps.
 {{% /alert %}}
 
 You can either add a new module to your existing app, or create a new Studio Pro app using a **Blank Native Mobile App** template and then adding a new module to it. Either way, your setup will begin with the same step and continue on accordingly:
 
-1. Add a new module **ChangeLanguage** to your app.
-1. Add a new microflow **ACT_Language_ChangeUserLangRuntime** in your module **ChangeLanguage** and configure it as:
-	1. Add a parameter called **LanguageCode** of data type `String`.
-	1. Now, retrieve the language that was selected by the user on the app.
+1. Add a new module *ChangeLanguage* to your app.
+1. Add a new microflow *ACT_Language_ChangeUserLangRuntime* to your **ChangeLanguage** module and configure it as such:
+	1. Add a parameter called *LanguageCode* of data type `String`.
+	1. Retrieve the language that was selected by the user on the app:
 		1. This can be done by using a **Retrieve** object activity.
 		1. Select the source as `Database` and entity `System.Language`.
-		1. As we need only one language, we would select range as `First` and pass the Xpath constraint as `[Code=$LanguageCode]`.
-		1. We can name this retrieved object as **SelectedLanguage**.
+		1. As you need only one language, select range as `First` and pass the XPath constraint as `[Code=$LanguageCode]`.
+		1. Name this retrieved object *SelectedLanguage*.
 		1. Your microflow should look like this:
 
 		{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/03-microflow-retrieve-object.png"  alt="microflow retrieve object" width= "650" >}}
 
-	1. To set the selected language, we need to change the language for the current user. 
+	1. To set the selected language, you need to change the language for the current user: 
 		1. Call a **Change** object activity.
 		1. Select the **Input** as `currentUser (System.User)`. 
-		1. In the **Action** section, **Commit** should be set to `Yes` and **Refresh to client** can be set to `No`. 
-		1. Set the value of the member `System.User_Language` as the object retrieved earlier namely **$SelectedLanguage**.
+		1. In the **Action** section, **Commit** should be set to `Yes` and **Refresh to client** set to `No`. 
+		1. Set the value of the member `System.User_Language` as the object retrieved earlier: **$SelectedLanguage**.
 		1. Your microflow should look like this:
 	
 		{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/04-microflow-language-change.png"  alt="microflow language change"  width= "650" >}}
 
-	1. Your microflow **ACT_Language_ChangeUserLangRuntime** is now ready to be called from a nanoflow **ACT_Language_ChangeUserLangDevice** which you will configure in the next step.
+Your microflow **ACT_Language_ChangeUserLangRuntime** is now ready to be called from a nanoflow **ACT_Language_ChangeUserLangDevice** which you will configure in the following steps:
 
-1.  Add a new nanoflow **ACT_Language_ChangeUserLangDevice** and configure it like this:
+1.  Add a new nanoflow *ACT_Language_ChangeUserLangDevice* and configure it like this:
 	1. Add a parameter called **SelectedLanguage** of data type `Object` and entity `System.Language`. This parameter would be the new language of the app as selected by the user.
 	1. Make a microflow call to **ACT_Language_ChangeUserLangRuntime** and configure it as described in *Step 2* above.
 	1. In a microflow call, pass the parameter of the type **SelectedLanguage/Code** as the argument. This microflow would set the language as selected by the user.

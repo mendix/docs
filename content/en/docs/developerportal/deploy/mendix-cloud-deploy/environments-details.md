@@ -539,6 +539,4 @@ For example, you may wish to use tags when logging with *Datadog*. You can find 
 
 ## 9 Services Tab{#services}
 
-You can enable and disable custom services for individual environments of your app. The service you want to enable must have been enabled for the app by its Technical Contact (see [Services](/developerportal/deploy/environments/#services) in the *Environments* documentation). 
-
-The change will be made the next time the app is started.
+You can enable and disable custom services for individual environments of your app. The service you want to enable must have been enabled for the app by its Technical Contact (see [Services](/developerportal/deploy/environments/#services) in the *Environments* documentation).

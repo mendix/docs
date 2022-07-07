@@ -216,7 +216,7 @@ All the archived stories are shown on the **Archive** page. You can see the foll
 
 * Unique story ID – Clicking it shows the story details.
 * Story title – Clicking it shows the story details.
-* Which sprint the story belongs to – Clicking it shows the [archived sprint details](archived-sprint-details).
+* Which sprint the story belongs to – Clicking it shows the [archived sprint details](#archived-sprint-details).
 * Linked epic – Clicking it shows the epic details
 * Archive date and time – Clicking it shows the story details.
 

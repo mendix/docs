@@ -10,33 +10,33 @@ tags: ["studio pro", "translation", "language", "multi lingual", "native", "tran
 
 ## 1 Introduction
 
-Would you like to provide your end-user with an easy option of changing the language on your application? Then in this tutorial, you will learn one of the methods to easily switch the interface language of your native app on your Android or iOS device.
+This internationalization guide explains how to give your end-user an easy way to change their native application's language. The user can do so directly on their Android or iOS device.
 
 ## 2 Prerequisites
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
-* Complete the [Prerequisites](/howto/mobile/deploying-native-app/#prerequisites) section of *How to Deploy Your First Mendix Native Mobile App*
-* Make sure your [Nanoflow Commons](/appstore/modules/nanoflow-commons/) module is up to date
 * Install Mendix Studio Pro version **9.14.0** or above
-* Set up the required [languages](/refguide/language-settings/) in Studio Pro. This tutorial has been configured with three languages as below:
+* Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploy Your First Mendix Native Mobile App*
+* Make sure your [Nanoflow Commons](/appstore/modules/nanoflow-commons/) module is up to date
+* Set up the required [languages](/refguide/language-settings/) in Studio Pro—this tutorial has been configured with three languages as below:
 
 	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/01-language-settings.png" alt="language settings"  width= "400" >}}
 
 ## 3 Setting up Language Change Mechanism {#set-up}
 
-You will use two nanoflow actions to set up most of your language change mechanism.
+Internationalization with Mendix's native apps is fairly simple. You will use two nanoflow actions to set up most of your language change mechanism.
 
 {{% alert color="info" %}}
-**Clear cached session data** - Clears saved session data from the local storage for offline native app and PWAs. This nanoflow action is only compatible with Mendix client **9.14** or above. So, please ensure to use Mendix Studio Pro version **9.14.0** or higher.
+This guide requires the following JavaScript actions: 
 
-**Reload** - Reloads web and native applications.
+* **Clear cached session data** – Clears saved session data from the local storage for offline native app and PWAs. This nanoflow action is only compatible with Mendix client **9.14** or above. So, please ensure to use Mendix Studio Pro version **9.14.0** or higher.
+* **Reload** – Reloads web and native applications.
 {{% /alert %}}
 
-You can either add a new module to your existing project or create a new Studio Pro project using a **Blank Native Mobile App** template. We would follow the steps by adding a new module as below:
+You can either add a new module to your existing app, or create a new Studio Pro app using a **Blank Native Mobile App** template and then adding a new module to it. Either way, your setup will begin with the same step and continue on accordingly:
 
-
-1. Add a new module **ChangeLanguage** to your project.
+1. Add a new module **ChangeLanguage** to your app.
 1. Add a new microflow **ACT_Language_ChangeUserLangRuntime** in your module **ChangeLanguage** and configure it as:
 	1. Add a parameter called **LanguageCode** of data type `String`.
 	1. Now, retrieve the language that was selected by the user on the app.
@@ -48,7 +48,7 @@ You can either add a new module to your existing project or create a new Studio 
 
 		{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/03-microflow-retrieve-object.png"  alt="microflow retrieve object" width= "650" >}}
 
-	3. To set the selected language, we need to change the language for the current user. 
+	1. To set the selected language, we need to change the language for the current user. 
 		1. Call a **Change** object activity.
 		1. Select the **Input** as `currentUser (System.User)`. 
 		1. In the **Action** section, **Commit** should be set to `Yes` and **Refresh to client** can be set to `No`. 

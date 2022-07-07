@@ -148,7 +148,9 @@ Click **Revoke** to delete an app API key.
 
 ## 6 Stories {#stories}
 
-On the **Stories** tab, you can select the stories & planning tool for the app. Once you select a tool, everyone in your team can use the same tool for this app. By default Mendix [Stories](/developerportal/collaborate/stories/) is the selected tool.
+On the **Stories** tab, you can select the stories & planning tool for the app, for example [Epics](/developerportal/collaborate/epics). 
+
+Once you select a tool, everyone in your team can use the same tool for this app. By default Mendix [Stories](/developerportal/collaborate/stories/) is the selected tool.
 
 
 ## 7 Managing Webhooks {#webhooks}

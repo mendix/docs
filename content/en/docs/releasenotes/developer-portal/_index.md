@@ -19,30 +19,29 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ### July 7th, 2022
 
-We have released a public beta of Epics, our brand new tool for agile planning. With Epics you will be able to:
+#### New Features
 
-* Map your exact development process with fully customizable swimlanes
-* Use scrum or kanban - we support both!
-* If you’re doing scrum, now you can set sprint goals and see all the basic sprint information on the board
-* Drag and drop stories on our brand new project board
-* Format stories in any way you want - you can add headers, links, code blocks, link specific stories and @mention people (notifications for this coming soon!)
-* Clone stories
-* Create and track progress of epics
-* Archive single stories or whole swimlanes
-* Easily search through your completed stories and get an overview of completed sprints in the archive
-* And much more
+*  We released Epics, our brand new tool for agile planning, for Public Beta usage. With Epics, you can:
 
-You can try it out for any Mendix app, your Scrum Master just needs to enable it in the General Settings. Instructions on how to do that, along with the full documentation can be found here: [https://docs.mendix.com/developerportal/collaborate/epics](/developerportal/collaborate/epics)
+    * Map your exact development process with fully customizable swimlanes
+    * Use Scrum or Kanban – we support both!
+    * Set sprint goals and see all the basic sprint information on the board – if you are using Scrum
+    * Drag and drop stories on our brand new project board
+    * Format stories in any way you want – for example, adding headers, links, and code blocks, linking specific stories, and using @ to mention people (notifications for this coming soon!)
+    * Clone stories
+    * Create and track the progress of epics
+    * Archive single stories or whole swimlanes
+    * Easily search through your completed stories and get an overview of completed sprints in the archive
 
-Please note: it is not yet possible to migrate the data from Stories into Epics, so we recommend using it for new projects or iterations first, that way you won’t have to worry about the stories in your current backlog.
+There are also many other features. For more information, see [Epics](/developerportal/collaborate/epics). You can try it out for any Mendix app. Your Scrum Master just needs to enable Epics in the [General Settings](/developerportal/collaborate/general-settings/#stories). Please note it is not yet possible to migrate the data from Stories into Epics, so we recommend using it for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.
 
 ### June 30th, 2022
 
-### Fixes
+#### Fixes
 
 * We introduced improvements in the performance of the [Feedback API](/apidocs-mxsdk/apidocs/feedback-api/).
 
-### New Features
+#### New Features
 
 * We redesigned the [General](/developerportal/collaborate/general-settings/) settings section to make it more intuitive and user-friendly.
 * We prepared the integration of Studio Pro with our new project management tool, Epics (coming soon!).

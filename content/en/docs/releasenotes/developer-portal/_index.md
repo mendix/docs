@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-*  We released [Epics](/developerportal/collaborate/epics), our brand new tool for agile planning, for Public Beta usage. Epics has many features. For example, you can:
+*  We released [Epics](/developerportal/collaborate/epics/), our brand new tool for agile planning, for Public Beta usage. Epics has many features. For example, you can:
 
     * Map your exact development process with fully customizable swimlanes
     * Use Scrum or Kanban – we support both!
@@ -101,7 +101,7 @@ You can try it out for any Mendix app. Your Scrum Master just needs to enable Ep
 	* There is a dedicated for page for your bookmarks
 	* Breadcrumb navigation
 	* Dedicated pages for Forum content you have interacted with (asked, answered, and commented for questions, and submitted and commented for ideas)
-  
+
 ### March 24th, 2022
 
 #### Improvements
@@ -194,7 +194,7 @@ You can try it out for any Mendix app. Your Scrum Master just needs to enable Ep
 		* Issuer: C = GB, ST = Greater Manchester, L = Salford, O = Sectigo Limited, CN = Sectigo RSA Domain Validation Secure Server CA
 		* Validity: Oct 29 00:00:00 2021 GMT - Oct 29 23:59:59 2022 GMT
 		* SHA-256 Fingerprint: `BF:AE:01:9F:93:5A:D9:92:35:B5:BA:9F:E4:AE:56:99:21:17:44:51:56:17:A2:11:A1:FE:3B:42:9C:B4:B6:70`
-    		* SHA-1 Fingerprint: `0F:3B:31:9F:86:6E:65:2D:5F:7A:EF:35:64:04:45:67:58:E4:ED:11`
+        		* SHA-1 Fingerprint: `0F:3B:31:9F:86:6E:65:2D:5F:7A:EF:35:64:04:45:67:58:E4:ED:11`
 	
 ### October 21st, 2021
 

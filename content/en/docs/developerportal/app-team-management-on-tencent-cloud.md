@@ -1,9 +1,9 @@
 ---
-title: "App & Team Management on Tencent Cloud Guide"
+title: "App & Team Management"
 url: /app-team-management/
 description: "Describes App & Team Management on Tencent Cloud, which is used by Chinese users."
 tags: ["mendix", "app & team management", "Tencent cloud"]
-weight: 30
+weight: 40
 no_list: false
 description_list: true
 cascade:
@@ -30,7 +30,7 @@ On the right side of the top bar, you can access and edit your profile.
 
 {{% todo %}}Check if this warning applies to ATM, too: A notification in the form of a red dot next to **Get Started with Mendix** will remain there for 30 days after your signup.{{% /todo %}}
 
-On the left side of the top bar, you open an access menu by clicking the **切换至** menu:
+On the left side of the top bar, you open an access menu by clicking the **切换到** menu:
 
 {{< figure src="/attachments/developerportal/atm-switch-to.png"   width="300"  >}}
 

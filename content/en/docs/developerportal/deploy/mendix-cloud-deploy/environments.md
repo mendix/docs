@@ -189,9 +189,11 @@ For more information on managing node permissions, see [Node Permissions](/devel
 
 ## 6 Services {#services}
 
-Here, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can decide which [App Services](/appstore/app-services/) can be used in environments of this app. The technical contact can only see services which have been enabled for their company in the [Control Center](/developerportal/control-center/).
+Here, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can decide which custom services can be used in environments of this app.
 
-Team members who have permission to *Deploy, Publish, and Monitor* can see which App Services are enabled or disabled.
+The technical contact can only see services which have been licensed for their company. If you want to license a service, you will have to raise a request with [Mendix Support](https://support.mendix.com). If the technical contact cannot enable the service, this means that it has previously been licensed but the license has expired.
+
+Team members who have permission to *Deploy, Publish, and Monitor* can see which services are enabled or disabled.
 
 Once a service has been enabled for an app, team members can selectively enable it for each [environment](/developerportal/deploy/environments-details/#services).
 

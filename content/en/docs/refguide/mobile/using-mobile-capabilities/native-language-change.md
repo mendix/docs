@@ -14,21 +14,20 @@ Would you like to provide your end-user with an easy option of changing the lang
 
 ## 2 Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this guide, make sure you have completed the following prerequisites:
 
 * Complete the [Prerequisites](/howto/mobile/deploying-native-app/#prerequisites) section of *How to Deploy Your First Mendix Native Mobile App*
 * Make sure your [Nanoflow Commons](/appstore/modules/nanoflow-commons/) module is up to date
 * Install Mendix Studio Pro version **9.14.0** or above
-* Setup required [languages](/refguide/language-settings/) in Studio Pro. This tutorial has been configured with 3 languages as below:
+* Set up the required [languages](/refguide/language-settings/) in Studio Pro. This tutorial has been configured with three languages as below:
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/01-language-settings.png" alt="language settings"  width= "700" >}}
+	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/01-language-settings.png" alt="language settings"  width= "400" >}}
 
 ## 3 Setting up Language Change Mechanism {#set-up}
 
-We would be using 2 nanoflow actions mainly to set up a language change mechanism. 
+You will use two nanoflow actions to set up most of your language change mechanism.
 
 {{% alert color="info" %}}
-
 **Clear cached session data** - Clears saved session data from the local storage for offline native app and PWAs. This nanoflow action is only compatible with Mendix client **9.14** or above. So, please ensure to use Mendix Studio Pro version **9.14.0** or higher.
 
 **Reload** - Reloads web and native applications.
@@ -38,42 +37,39 @@ You can either add a new module to your existing project or create a new Studio 
 
 
 1. Add a new module **ChangeLanguage** to your project.
-2. Add a new microflow **ACT_Language_ChangeUserLangRuntime** in your module **ChangeLanguage** and configure it as:
+1. Add a new microflow **ACT_Language_ChangeUserLangRuntime** in your module **ChangeLanguage** and configure it as:
 	1. Add a parameter called **LanguageCode** of data type `String`.
-	2. Now, retrieve the language that was selected by the user on the app.
-		* This can be done by using a **Retrieve** object activity.
-		* Select the source as `Database` and entity `System.Language`.
-		* As we need only one language, we would select range as `First` and pass the Xpath constraint as `[Code=$LanguageCode]`.
-		* We can name this retrieved object as **SelectedLanguage**.
-		* It should be modeled like the below:
+	1. Now, retrieve the language that was selected by the user on the app.
+		1. This can be done by using a **Retrieve** object activity.
+		1. Select the source as `Database` and entity `System.Language`.
+		1. As we need only one language, we would select range as `First` and pass the Xpath constraint as `[Code=$LanguageCode]`.
+		1. We can name this retrieved object as **SelectedLanguage**.
+		1. Your microflow should look like this:
 
-	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/03-microflow-retrieve-object.png"  alt="microflow retrieve object" width= "650" >}}
+		{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/03-microflow-retrieve-object.png"  alt="microflow retrieve object" width= "650" >}}
 
 	3. To set the selected language, we need to change the language for the current user. 
-		* So, call a **Change** object activity.
-		* Select the **Input** as `currentUser (System.User)`. 
-		* In the **Action** section, **Commit** should be set to `Yes` and **Refresh to client** can be set to `No`. 
-		* Now, set the value of the member `System.User_Language` as the object retrieved earlier namely **$SelectedLanguage**.
-		* It should be modeled like below:
+		1. Call a **Change** object activity.
+		1. Select the **Input** as `currentUser (System.User)`. 
+		1. In the **Action** section, **Commit** should be set to `Yes` and **Refresh to client** can be set to `No`. 
+		1. Set the value of the member `System.User_Language` as the object retrieved earlier namely **$SelectedLanguage**.
+		1. Your microflow should look like this:
 	
-	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/04-microflow-language-change.png"  alt="microflow language change"  width= "650" >}}
+		{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/04-microflow-language-change.png"  alt="microflow language change"  width= "650" >}}
 
-	4. Your microflow **ACT_Language_ChangeUserLangRuntime** is now ready to be called from a nanoflow **ACT_Language_ChangeUserLangDevice** which you will configure in the next step.
+	1. Your microflow **ACT_Language_ChangeUserLangRuntime** is now ready to be called from a nanoflow **ACT_Language_ChangeUserLangDevice** which you will configure in the next step.
 
-3.  Add a new nanoflow **ACT_Language_ChangeUserLangDevice** and configure it as:
+1.  Add a new nanoflow **ACT_Language_ChangeUserLangDevice** and configure it like this:
 	1. Add a parameter called **SelectedLanguage** of data type `Object` and entity `System.Language`. This parameter would be the new language of the app as selected by the user.
 	1. Make a microflow call to **ACT_Language_ChangeUserLangRuntime** and configure it as described in *Step 2* above.
 	1. In a microflow call, pass the parameter of the type **SelectedLanguage/Code** as the argument. This microflow would set the language as selected by the user.
 	1. Now we just need to clear the cached session from the local storage. We can simply call a JavaScript action **Clear cached session data**.
 	1. To load the new language, we need to refresh the application. This can be done by calling a JavaScript action **Reload**.
-	1. The nanoflow should be modeled like the below.
-
+	1. Your nanoflow should look like this:
 
 	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/02-nanoflow-language-change.png"  alt="nanoflow language change" width= "650" >}}
 
-
-4.  Add a new native page **Language_Overview** to your module called **ChangeLanguage**.
-
+1.  Add a new native page **Language_Overview** to your module called **ChangeLanguage**.
 	1.  Add a native **List View** by simply dragging from the toolbox to list all the available languages on the app. Configure it this way:
 		1. In the **Data source** tab, **Type** should be `Database`, **Entity** should be `System.Language`.
 		1. In the **General** tab, **On click** should be configured to call a nanoflow **ACT_Language_ChangeUserLangDevice**.
@@ -81,7 +77,6 @@ You can either add a new module to your existing project or create a new Studio 
 		*  You should get a dialog box asking **Do you want to automatically fill the contents of the list view?** Select `Yes`.
 		1. **List View** should be populated with 2 fields `{Code}` and `{Description}`.
 		1. We can delete the `{Code}` field.
-
 	1. Add a title called **Select language** as the selected language in Studio Pro is **English**.
 	1. Ensure the caption of the `{Description}` field in **ListView** is not empty. It should be mapped to the attribute `System.Language.Description` and be used as well.
 	1. Change to the second language in Studio Pro by going to menu **Language > Current Language > <second_language>**.
@@ -90,10 +85,9 @@ You can either add a new module to your existing project or create a new Studio 
 	1. Repeat the above steps to add a translation for the third language as well.
 	1. Set **Language_Overview** as the default home page of the navigation profile **Native mobile**.
 
-
 ## 4 Testing Language Switching {#testing}
 
-Now it is time to see the app in action. We can locally deploy and view the app on the **Make It Native 9** app. 
+Now it is time to see the app in action. To do this, locally deploy and view the app on the **Make It Native 9** app:
 
 1. Follow the steps in [Downloading and Installing the Make It Native App](https://docs.mendix.com/refguide/mobile/getting-started-with-mobile/#32-downloading-and-installing-the-make-it-native-app) to view on **Make It Native** app. 
 1. Once the app is running, you should be able to see the native **Language_Overview** page below on the **Make It Native 9** app.

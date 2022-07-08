@@ -38,9 +38,9 @@ You can then access the following parts of the Mendix Platform:
 
 * [Studio ](/studio/){{% todo %}}Check if the link to the existing Studio doc makes sense.{{% /todo %}}
 * **下载 Studio Pro** – opens the Studio Pro China Edition download page
-* **我的应用** – opens the page with a summary of your apps
-* **集群管理** – opens the page for [cluster management ](https://deploy.mendix.tencent-cloud.com/index.html) {{% todo %}}Check if some extra info can be added with a link to Tencent Deployment Docs.{{% /todo %}}
-* **应用市场** – opens the [Marketplace China Edition](https://marketplace.mendix.tencent-cloud.com/index.html)
+* **我的应用** – opens the page with [a summary of your apps](#my-apps)
+* **集群管理** – opens the page for [cluster management](https://deploy.mendix.tencent-cloud.com/index.html) {{% todo %}}Check if some extra info can be added with a link to Tencent Deployment Docs.{{% /todo %}}
+* **应用市场** – opens the [Marketplace China Edition](https://marketplace.mendix.tencent-cloud.com/index.html), where you can download all kinds of Marketplace components that can be used in Studio Pro China Edition
 * **文档** – opens [Mendix Docs](https://docs.mendix.com/)
 * **论坛** – opens [Community China edition](https://forum.mendix.tencent-cloud.com/)
 

@@ -28,7 +28,7 @@ Before starting this guide, make sure you have completed the following prerequis
 Internationalization with Mendix's native apps is fairly simple. You will use two nanoflow actions to set up most of your language change mechanism.
 
 {{% alert color="info" %}}
-This guide requires the following JavaScript actions: 
+This guide requires the following nanoflow actions: 
 
 * **Clear cached session data** – This action clears saved session data from the local storage for offline native app and PWAs. This nanoflow action is only compatible with Studio Pro v9.14 and above. Therefore, please use Studio Pro v9.14.0 or above.
 * **Reload** – This action reloads web and native apps.
@@ -66,8 +66,8 @@ First, add and configure a new nanoflow:
 	1. Add a parameter called **SelectedLanguage** of data type `Object` and entity `System.Language`. This parameter will be the new app language as selected by the user.
 	1. Make a microflow call to **ACT_Language_ChangeUserLangRuntime** and configure it the same way you configured [the microflow above](#micro-config).
 	1. In a microflow call, pass the parameter of the type **SelectedLanguage/Code** as the argument. This microflow sets the language as selected by the user.
-	1. Now the cached session needs to be cleared from local storage. Simply call a JavaScript action **Clear cached session data**.
-	1. To load the new language, you must refresh the app. This can be done by calling a JavaScript action **Reload**.
+	1. Now the cached session needs to be cleared from local storage. Simply call a nanoflow action **Clear cached session data**.
+	1. To load the new language, you must refresh the app. This can be done by calling a nanoflow action **Reload**.
 	1. Your nanoflow should look like this:
 
 	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/02-nanoflow-language-change.png"  alt="nanoflow language change" width= "650" >}}

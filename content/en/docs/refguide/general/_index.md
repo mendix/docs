@@ -4,7 +4,7 @@ url: /refguide/general/
 weight: 10
 no_list: false
 description_list: true
-tags: ["studio pro"]
+tags: ["studio pro", "system requirements", "install"]
 ---
 
 ## 1 Introduction

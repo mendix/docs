@@ -226,15 +226,15 @@ This may impact app performance.
 
 Refactor the microflow so that the Create/Update/Delete activities are closer the end event of the microflow.
 
-## 14 Order XPath parts around AND to be cheapest and most-specific first [MXP015] {#mxp015}
+## 14 Order XPath Parts Around AND: Cheapest and Most-Specific Parts First [MXP015] {#mxp015}
 
 An XPath expression that has more expensive or less-specific parts to the left of `and`, or to the left of a sequence of predicate parts (like `[part 1][part 2]`), may impact app performance.
 
 Depending on the data volume (100,000 items or more) and app usage, the functions `not()`, `contains(unlimited-string-attribute)` and `not(association)` are best placed to the right of the `and` keyword.
 
-Additionally, for data volume of millions of items, then placing more specific XPath steps first can mean less overall work for the database.
-By 'specific' we mean how many association steps are involved. For example, an XPath part that uses an association is more specific than an XPath part that directly accesses an attribute.
+Additionally, for data volume of millions of items, placing more specific XPath steps first can mean less overall work for the database.
+By "specific" we mean how many association steps are involved. For example, an XPath part that uses an association is more specific than an XPath part that directly accesses an attribute.
 
 ### 14.1 Steps to Fix
 
-Rearrange the parts of the XPath, so that the cheapest and most-specific parts are to the left of each `and`. Similarly, if using separate predicates like `[part 1][part 2]`, you can re-arrange the predicates to have optimal ordering.
+Rearrange the parts of the XPath, so that the cheapest and most-specific parts are to the left of each `and`. Similarly, if using separate predicates like `[part 1][part 2]`, you can rearrange the predicates to have optimal ordering.

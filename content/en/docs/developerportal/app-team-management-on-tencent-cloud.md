@@ -52,7 +52,3 @@ By clicking the ellipsis (**…**) in the app tile, you can quickly perform a nu
 * Open in app in Studio Pro
 * Archive the app – This allows you to archive the app, provided you are the only team member (you will be warned of the consequences and asked for confirmation before the app is deleted). Any apps you pin with the pin icon will appear in the **归档** tab. 
 * Delete the app – This allows you to delete your app, provided you are the only team member (you will be warned of the consequences and asked for confirmation before the app is deleted)
-
-## 4 Guide Categories
-
-The *Developer Portal Guide* is divided into the following categories:

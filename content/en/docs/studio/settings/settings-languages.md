@@ -12,7 +12,60 @@ tags: ["studio", "language", "lingual", "app language", "translate", "system tex
 
 Delivering your Mendix app in multiple languages is an important capability when you want to provide the same app to people speaking different languages. Using the language features of Mendix, you can quickly make your app multilingual and translate your page content to all configured languages. This means that texts that are presented to end-users, such as button captions, screen texts, menu items, can be translated to other languages than the default language.  
 
-## 2 App Languages Screen
+You can translate texts on pages, in the microflow editor, and use the **System Texts** tab. For more information, see [Widgets and Elements Available for Translation](#widgets-and-elements) and [System Texts](#system-texts) sections. 
+
+You can manage languages and translate system texts on the [App Languages](#app-languages) screen.
+
+## 2 Switching the Currently Selected Language
+
+You can switch the currently selected language in the top menu bar:
+
+{{< figure src="/attachments/studio/settings/settings-languages/selected-language.png" >}}
+
+This setting switches languages in the app while you are editing it, it does not influence the language of the previewed/published app. A separate language drop-down list is available with the latest Atlas UI to switch languages in the previewed/published apps. If your app has only one language, the toggle is hidden. 
+
+## 3 Translating Your App to Multiple Languages {#translate}
+
+When multiple languages are set up in your app, one language is set as the *default language*. All untranslated texts in other languages will be displayed in the default language when you run the app. When you change the text in the default language, all untranslated texts will automatically fall back to the changed text. For more information on how to change the default language, see the [Manage Languages](#manage-languages) section below.
+
+When working in a language which is not the default, you can identify texts that have not been translated yet on pages or in the microflow editor. These texts show the text in the default language between angle brackets. For example, `<Name>`. 
+
+You can replace the text with the appropriate translation for the currently selected language. To replace the text, do the following:
+
+1. Select the element and navigate to its properties. 
+
+2. Depending on the element, find the **Content**, **Caption**, or **Template** property and click the **Translations** drop-down list (for more information on what elements can be translated, see the [Widgets and Elements Available for Translation](#widgets-and-elements) section:
+
+   {{< figure src="/attachments/studio/settings/settings-languages/translations-drop-down.png" >}}
+
+3. You will see a drop-down list where you can scroll through languages available in your app and type in translations for the text. The order you see languages in depends on the currently selected language in the top menu bar and to the default language:
+
+   {{< figure src="/attachments/studio/settings/settings-languages/language-diagram.png" >}}   
+
+If you add new widgets to your app while you are not in the default language, any new translatable texts for those widgets will be added to the currently selected language. The text in the default language will either be left blank or will have the placeholder text for the widget:
+
+{{< figure src="/attachments/studio/settings/settings-languages/current-language.png" >}}   
+
+For more information on how to translate system texts, see the [System Texts](#system-texts) section below.
+
+### 3.1 Widgets and Elements Available for Translation {#widgets-and-elements}
+
+You can translate the following widgets and elements in your app:
+
+* [Button captions](/studio/page-editor-widgets-buttons/#general)
+* [Text widget](/studio/page-editor-widgets-text/#content)
+* [Data grid columns](/studio/page-editor-data-grid/#grid-columns)
+* [Menu items](/studio/navigation/#properties-of-menu-items)
+* Messages that are configured in **Show Message** actions of a microflow
+* [Enumeration](/studio/domain-models-enumeration/) texts
+
+{{% alert type="info" %}}
+
+Next to widgets and elements listed above, you can also translate [system texts](#system-texts). 
+
+{{% /alert %}}
+
+## 4 App Languages Screen
 
 The **App Languages** screens allows you to [manage languages](#manage-languages) and translate [system texts](##system-texts) – texts that are shown to the end-user by the server or the client. 
 
@@ -24,7 +77,7 @@ Alternatively, you can click the currently selected language in the top menu bar
 
 {{< figure src="/attachments/studio/settings/settings-languages/manage-languages.png" >}}
 
-### 2.1 Manage Languages {#manage-languages}
+### 4.1 Manage Languages {#manage-languages}
 
 The **Manage Languages** tab shows the default language of your app and other languages that your app currently has. You can add or delete languages and change the default language of the app.
 
@@ -42,7 +95,7 @@ Deleting a language from your app deletes all translations you provided on your 
 
 {{% /alert %}}
 
-### 2.2 System Texts {#system-texts}
+### 4.2 System Texts {#system-texts}
 
 System texts are texts that are shown to the end-user by the server or the client. They are translatable but you cannot change them in the page editor or the microflow editor while creating the app. An example of a system text is buttons in a data grid. You can change system texts and add translations for them on the **System Texts** tab: 
 
@@ -82,50 +135,7 @@ To translate a system text, do the following:
 
 The system text is translated. 
 
-## 3 Widgets and Elements Available for Translation {#widgets-and-elements}
-
-You can translate the following widgets and elements in your app:
-
-* [Button captions](/studio/page-editor-widgets-buttons/#general)
-* [Text widget](/studio/page-editor-widgets-text/#content)
-* [Data grid columns](/studio/page-editor-data-grid/#grid-columns)
-* [Menu items](/studio/navigation/#properties-of-menu-items)
-* Messages that are configured in **Show Message** actions of a microflow
-* [Enumeration](/studio/domain-models-enumeration/) texts
-
-## 4 Switching the Currently Selected Language
-
-You can switch the currently selected language in the top menu bar:
-
-{{< figure src="/attachments/studio/settings/settings-languages/selected-language.png" >}}
-
-This setting switches languages in the app while you are editing it, it does not influence the language of the previewed/published app. A separate language drop-down list is available with the latest Atlas UI to switch languages in the previewed/published apps. If your app has only one language, the toggle is hidden. 
-
-## 5 Translating Your App to Multiple Languages {#translate}
-
-When multiple languages are set up in your app, one language is set as the default language. All untranslated texts in other languages will be displayed in the default language when you run the app. When you change the text in the default language, all untranslated texts will automatically fall back to the changed text. 
-
-When working in a language which is not the default, you can identify texts that have not been translated yet. They show the text in the default language between angle brackets. For example, `<Name>`. 
-
-You can replace the text with the appropriate translation for the currently selected language. To replace the text, do the following:
-
-1. Select the element and navigate to its properties. 
-
-2. Depending on the element, find the **Content**, **Caption**, or **Template** property and click the **Translations** drop-down list:
-
-   {{< figure src="/attachments/studio/settings/settings-languages/translations-drop-down.png" >}}
-
-3. You will see a drop-down list where you can scroll through languages available in your app and type in translations for the text. The order you see languages in depends on the currently selected language in the top menu bar and to the default language:
-
-   {{< figure src="/attachments/studio/settings/settings-languages/language-diagram.png" >}}   
-
-If you add new widgets to your app while you are not in the default language, any new translatable texts for those widgets will be added to the currently selected language. The text in the default language will either be left blank or will have the placeholder text for the widget:
-
-{{< figure src="/attachments/studio/settings/settings-languages/current-language.png" >}}   
-
-To learn how to translate system texts, see the [System Texts](#system-texts) section above.
-
-## 6 Read More
+## 5 Read More
 
 * [General Info](/studio/general/)
 * [Language Menu](/refguide/translatable-texts/)

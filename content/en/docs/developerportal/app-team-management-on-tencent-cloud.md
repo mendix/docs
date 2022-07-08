@@ -18,17 +18,11 @@ cascade:
 
 The [App & Team Management](https://apps.mendix.tencent-cloud.com/) on Tencent Cloud is a component specifically launched for Chinese users. In App & Team Management, users can collaborate, deploy, and manage their apps, and manage their company and users. 
 
-{{% todo %}}Check if ATM has APIs, too.{{% /todo %}}
-
 ## 2 Navigation {#navigation}
 
 To create a new app click **创建应用**, which will open a page where you can choose a starting pointing for your new app.
 
 On the right side of the top bar, you can access and edit your profile.
-
-{{% todo %}}Check if this profile is synchronized with [Mendix Profile](/developerportal/community-tools/mendix-profile/).{{% /todo %}}
-
-{{% todo %}}Check if this warning applies to ATM, too: A notification in the form of a red dot next to **Get Started with Mendix** will remain there for 30 days after your signup.{{% /todo %}}
 
 On the left side of the top bar, you open an access menu by clicking the **切换到** menu:
 
@@ -36,7 +30,7 @@ On the left side of the top bar, you open an access menu by clicking the **切�
 
 You can then access the following parts of the Mendix Platform:
 
-* [Studio ](/studio/){{% todo %}}Check if the link to the existing Studio doc makes sense.{{% /todo %}}
+* [Studio ](/studio/)
 * **下载 Studio Pro** – opens the Studio Pro China Edition download page
 * **我的应用** – opens the page with [a summary of your apps](#my-apps)
 * **集群管理** – opens the page for [cluster management](https://deploy.mendix.tencent-cloud.com/index.html) {{% todo %}}Check if some extra info can be added with a link to Tencent Deployment Docs.{{% /todo %}}

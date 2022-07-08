@@ -37,7 +37,7 @@ This guide requires the following nanoflow actions:
 You can either add a new module to your existing app, or create a new Studio Pro app using a **Blank Native Mobile App** template and then adding a new module to it. Either way, your setup will begin with the same step and continue on accordingly:
 
 1. Add a new module *ChangeLanguage* to your app.
-1. <a name="micro-config"></a>Add a new microflow *ACT_Language_ChangeUserLangRuntime* to your **ChangeLanguage** module and configure it as such:
+1. Add a new microflow *ACT_Language_ChangeUserLangRuntime* to your **ChangeLanguage** module and configure it as such:
 	1. Add a parameter called *LanguageCode* of data type `String`.
 	1. Retrieve the language that was selected by the user on the app:
 		1. This can be done by using a **Retrieve** object activity.

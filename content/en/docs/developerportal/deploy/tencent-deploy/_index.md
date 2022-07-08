@@ -271,13 +271,14 @@ Alternatively, you can upload an existing MDA by clicking **上传**.
 {{% /alert %}}
 
 ### 4.2 Creating an Environment{#create-environment}
-When deploying your app for the first time, there will be no environments and no deployment packages available. The **环境概览** page for your app in the ATM will show you the current status.
 
-{{< figure src="/attachments/developerportal/deploy/tencent-deploy/environments-none.png" >}}
+When deploying your app for the first time, there will be no environment to deploy to. To create an environment, you will need to create a deployment package as described in [Creating a Deployment Package](#create-deployment-package), above.
 
-First you need to create an environment:
+1. Go to the **环境概览** page for your app in the ATM.
 
-1. Click **创建环境**.
+2. Click **创建环境**.
+
+    If there are no clusters available to you, you will have to create one or get access to an existing one before you can continue. You will be taken to the Cluster Manager page. See [Cluster and Namespace Management](#cluster-namespace), above, for information on the three ways you can get a cluster, then start this section again.
 
 2. A **UUID** will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 

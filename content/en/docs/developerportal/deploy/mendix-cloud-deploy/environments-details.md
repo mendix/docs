@@ -6,6 +6,7 @@ description: "Describes the environmental details of your app and how to manage 
 tags: ["Deploy","App","Environment","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #The anchor #connection-whitelist below is mapped from the Developer Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
+#The anchor #services below is mapped from the Developer Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -535,3 +536,7 @@ You can set tags on your environment. These are arbitrary strings that are not i
 * Tags can serve as selection criteria for grouping environments into a landscape management dashboard which can be used for third-party logging solutions
 
 For example, you may wish to use tags when logging with *Datadog*. You can find more information on this at [Getting started with tags](https://docs.datadoghq.com/tagging/) on the *Datadog* site.
+
+## 9 Services Tab{#services}
+
+You can enable and disable custom services for individual environments of your app. The service you want to enable must have been enabled for the app by its Technical Contact (see [Services](/developerportal/deploy/environments/#services) in the *Environments* documentation).

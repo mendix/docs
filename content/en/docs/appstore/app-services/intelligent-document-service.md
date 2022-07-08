@@ -110,7 +110,9 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
 #### 4.1.1 Guidelines for Improving the Accuracy of Data Extraction {#guidelines}
 
-You should use at least three to five samples to train your model to reach the higher accuracy of data extraction. The more samples that you use to train your model, the higher accuracy of data extraction you can achieve. However, all samples that are used for one training must have a similar structure. 
+You should use at least three to five sample images to train your model to reach the higher accuracy of data extraction. The more sample images that you use to train your model, the higher accuracy of data extraction you can achieve. However, all sample images that are used for one training must have a similar structure. 
+
+ If a table in the documents for extraction can have different numbers of rows, then make sure that the table in each sample image also have different number of rows.
 
 You should use the marker tool properly – this is key to extracting data in higher quality. The areas you mark determine where the document model will extract the data. Make sure that you mark the complete field area. Only in this way, will the document model read the complete field area and accurately extract a long value.
 
@@ -154,7 +156,7 @@ You should use the marker tool properly – this is key to extracting data in hi
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/import-file-page.png" alt="Import File page" >}}
 
-    {{% alert color="warning" %}}To reach the higher accuracy of data extraction, you should upload at least three samples to train your model, and all these images must have a similar structure.{{% /alert %}}
+    {{% alert color="info" %}}To reach the higher accuracy of data extraction, you should upload at least three to five sample images to train your model, and all these images must have a similar structure.<br/> If a table in the documents for extraction can have different numbers of rows, then make sure that the table in each sample image also have different number of rows.{{% /alert %}}
 
 7.  Click **Next**. The **Add Marker and IDs** page opens. The status of the images you imported shows **Not Marked**.
 

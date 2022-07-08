@@ -62,7 +62,7 @@ Your microflow **ACT_Language_ChangeUserLangRuntime** is now ready to be called 
 
 First, add and configure a new nanoflow:
 
-1.  Add a new nanoflow *ACT_Language_ChangeUserLangDevice* and configure it like this:
+1.  Add a new nanoflow *ACT_Language_ChangeUserLangDevice* to your module and configure it like this:
 	1. Add a parameter called **SelectedLanguage** of data type `Object` and entity `System.Language`. This parameter will be the new app language as selected by the user.
 	1. Make a microflow call to **ACT_Language_ChangeUserLangRuntime** and configure it the same way you configured [the microflow above](#micro-config).
 	1. In a microflow call, pass the parameter of the type **SelectedLanguage/Code** as the argument. This microflow sets the language as selected by the user.
@@ -70,7 +70,7 @@ First, add and configure a new nanoflow:
 	1. To load the new language, you must refresh the app. This can be done by calling a nanoflow action **Reload**.
 	1. Your nanoflow should look like this:
 
-	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/02-nanoflow-language-change.png"  alt="nanoflow language change" width= "650" >}}
+	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/02-nanoflow-language-change.png"  alt="nanoflow language change" width= "400" >}}
 
 Next, add a new native page:
 

@@ -17,11 +17,11 @@ The Mendix Platform on Tencent Cloud is branded as **Siemens Low-Code Platform**
 
 ## 1 Introduction
 
-To deploy apps to Tencent, you will first have to purchase your cloud resources. You can then manage these resources from within the Mendix Developer Portal as described below in [Cluster and Namespace Management](#cluster-namespace).
+To deploy apps to Tencent, you will first have to purchase your cloud resources. You can then manage these resources from within the Mendix ATM as described below in [Cluster and Namespace Management](#cluster-namespace).
 
 Once the cluster has been registered, and a namespace created, team members with *Deploy App* rights can create environments and deploy an app.
 
-This document explains how to use the Mendix Developer Portal to manage your clusters and namespaces, and deploy an app.
+This document explains how to use the Mendix ATM to manage your clusters and namespaces, and deploy an app.
 
 ## 2 Prerequisites for Deploying an App
 
@@ -33,9 +33,8 @@ To deploy an app to Tencent, you need the following:
 
 * Mendix Studio Pro China Edition
 
-    * You will be able to download Mendix Studio Pro, as part of your initial sign up:
-       {{< figure src="/attachments/developerportal/deploy/tencent-deploy/download-studio-pro.png" >}}
-    You can also get a copy from the **下载 Studio Pro** (Get Studio Pro) option in the **切换到** (Switch to) menu at the top left of **App & Team Management**.
+    * You will be able to download Mendix Studio Pro, as the first step of the onboarding during your initial sign up:
+    * You can also get a copy from the **下载 Studio Pro** option in the **切换到** menu at the top left of **App & Team Management**.
 
 * A Mendix app created with Studio Pro
 
@@ -43,13 +42,15 @@ To deploy an app to Tencent, you need the following:
 
 ### 3.1 Cluster Overview {#overview}
 
-Go to the Cluster Manager page by clicking the **切换到** (Switch to) menu and selecting **集群管理** (Cluster Manager).
+Go to the Cluster Manager page by clicking the **切换到** menu and selecting **集群管理**.
 
-{{< figure src="/attachments/developerportal/deploy/tencent-deploy/cluster-manager-navigation.png" >}}
+If you have not got any clusters, you will first have to purchase one. Alternatively, you can use a free trial cluster to try out the Siemens Low-Code Platform experience, or register your own cluster (running Kubernetes versions 1.19 to 1.22).
 
-If you have not got any Tencent clusters, you will first have to purchase one. You will see this page: click **[Go To Tencent Cloud Portal](https://cloud.tencent.com/solution/slp) "Siemens Low-Code Platform on Tencent Cloud"** to go to Tencent and purchase the necessary resources.
+* Click **[前往腾讯云门户网站](https://cloud.tencent.com/solution/slp)** to go to Tencent and purchase the necessary Siemens Low-Code Platform on Tencent Cloud resources.
+* Click **请求访问免费的应用集群** to request access to a free cluster to try out Siemens Low-Code Platform. You will need to create an app first, see [App & Team Management](/not/a/good/url) for more information.
+* Click **注册集群** to register an existing cluster to use for deploying your app.
 
-{{< figure src="/attachments/developerportal/deploy/tencent-deploy/purchase-resources.png" >}}
+{{% todo %}}Get access to a cluster to update UX descriptions and confirm flows{{% /todo %}}
 
 When you have one or more clusters, you can see a summary of them with all their namespaces and an indication of the namespace status and how long it has been running (Uptime).
 
@@ -204,7 +205,7 @@ You can invite additional members to the namespace, and configure their role dep
    
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/namespace-member-invite.png" >}}
 
-6. The next time the user signs in to the Mendix Developer Portal, they will be added to the namespace.
+6. The next time the user signs in to the Mendix ATM, they will be added to the namespace.
 
 ##### 3.3.2.2 Editing & Removing Members
 
@@ -218,7 +219,7 @@ If you want to change the rights for an existing member, you will have to remove
 
 #### 3.3.3 Operate {#operate}
 
-The **Operate** tab allows you to add a set of links which are used when users request a page from the Operate category for their app in the Developer Portal, as shown below.
+The **Operate** tab allows you to add a set of links which are used when users request a page from the Operate category for their app in the ATM, as shown below.
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image31.png" >}}
 
@@ -237,14 +238,46 @@ Open the **Operate** tab, enter the URLs relevant to your namespace, and click *
 
 ## 4 Deploying an App for the First Time
 
-### 4.1 Creating an Environment{#create-environment}
-When deploying your app for the first time, there will be no environments and no deployment packages available. The **Environments** page for your app in the Developer Portal will show you the current status.
+### 4.1 Creating a Deployment Package {#create-deployment-package}
+
+Before you can deploy your app, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
+
+{{% alert color="warning" %}}
+There is a limit of 200MB on the size of a deployment package which can be deployed on the Tencent Cloud.
+{{% /alert %}}
+
+1. On the **环境概览** page for your app in the ATM, click **从 Team Server 创建包**.
+   
+2. Select the branch which contains the commit for which you want to create a deployment package and click **下一步**.
+   
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image10.png" >}}
+
+3. Select the revision/commit for which you want to create a deployment package and click **下一步**.
+   
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image11.png" >}}
+
+4. Enter a **新版本** and **标签描述** according to your own deployment procedure.
+
+5. If you want to deploy and start your package immediately, check **自动部署** and an existing environment in **Environment for Autodeploy** if you want to deploy and start your package immediately. You need to make sure that the environment is ready using the techniques described in [Deploying the Deployment Package](#deploy-package), below, where you can also see how to deploy a deployment package manually.
+
+6. Click **Build this revision.**
+   
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image12.png" >}}
+
+7. Confirm the information message and you will be returned to the **环境概览** page.
+
+{{% alert color="info" %}}
+Alternatively, you can upload an existing MDA by clicking **上传**.
+{{% /alert %}}
+
+### 4.2 Creating an Environment{#create-environment}
+When deploying your app for the first time, there will be no environments and no deployment packages available. The **环境概览** page for your app in the ATM will show you the current status.
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/environments-none.png" >}}
 
 First you need to create an environment:
 
-1. Click **Create Environment**.
+1. Click **创建环境**.
 
 2. A **UUID** will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 
@@ -262,7 +295,7 @@ First you need to create an environment:
 
         {{% alert color="warning" %}}Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
 
-6. Click **Next**.
+6. Click **下一步**.
    
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/create-environment.png" >}}
 
@@ -295,39 +328,7 @@ First you need to create an environment:
 
 You will not be able to deploy to this environment until it has been fully prepared. This means that all the resource plans have been confirmed and that the placeholder app has been successfully deployed. See [Deploying the Deployment Package](#deploy-package), below, for instructions on how to check that the environment has been created successfully.
 
-### 4.2 Creating a Deployment Package {#create-deployment-package}
 
-Before you can deploy your app, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
-
-{{% alert color="warning" %}}
-There is a limit of 200MB on the size of a deployment package which can be deployed on the Tencent Cloud.
-{{% /alert %}}
-
-1. On the **Environments** page for your app in the Developer Portal, click **Create Package**.
-   
-    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image9.png" >}}
-
-2. Select the branch which contains the commit for which you want to create a deployment package and click **Next**.
-   
-    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image10.png" >}}
-
-3. Select the revision/commit for which you want to create a deployment package and click **Next**.
-   
-    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image11.png" >}}
-
-4. Enter a **New version** and **Tag description** according to your own deployment procedure.
-
-5. Select an environment in **Environment for Autodeploy** if you want to deploy and start your package immediately. You need to make sure that the environment is ready using the techniques described in [Deploying the Deployment Package](#deploy-package), below, where you can also see how to deploy a deployment package manually.
-
-6. Click **Build this revision.**
-   
-    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image12.png" >}}
-
-7. Confirm the information message and you will be returned to the **Environments** page.
-
-{{% alert color="info" %}}
-Alternatively, you can upload an existing MDA by clicking **Upload Package**.
-{{% /alert %}}
 
 ### 4.3 Deploying the Deployment Package{#deploy-package}
 
@@ -367,7 +368,7 @@ You will be taken to the Environment Details page for the selected environment. 
 
 ## 5 Environments Page
 
-The **Environments** page of the Developer Portal contains three sections:
+The **环境概览** page of the ATM contains three sections:
 
 * Deployment Package Repository
 * Environments
@@ -570,9 +571,9 @@ This allows you to change the password for the local admin user in your app with
 
 This deletes the environment — you will be asked to confirm this action.
 
-If the cluster is standalone, or the Mendix Gateway Agent is not connected for some other reason, you can still delete the environment information in the Developer Portal. However, the actual environment will not be deleted and you will have to do this manually.
+If the cluster is standalone, or the Mendix Gateway Agent is not connected for some other reason, you can still delete the environment information in the ATM. However, the actual environment will not be deleted and you will have to do this manually.
 
-If the environment cannot be deleted, you will receive a warning, but can go ahead and remove it from the Developer Portal.
+If the environment cannot be deleted, you will receive a warning, but can go ahead and remove it from the ATM.
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/delete-environment.png" >}}
 
@@ -622,7 +623,7 @@ On the **Log Levels** tab, you can change the log levels which are used for the 
 
 ### 6.6 TLS
 
-If you are using Mendix Operator version 1.5.0 or above, you can configure TLS for your environment from the Developer Portal.
+If you are using Mendix Operator version 1.5.0 or above, you can configure TLS for your environment from the ATM.
 
 In the TLS pane, you can choose whether to **Apply Default Configuration** or a **Custom TLS Configuration**. If you apply the default configuration, then the configuration made when you ran the configuration script for the namespace will be used.
 
@@ -664,7 +665,7 @@ All names beginning **mendix-** are reserved for use by the Tencent cluster.
 
 ### 7.2 Deleting Your App
 
-Delete all environments before you delete an app. If you delete an app which has environments on Tencent, you will not be able to reach the environments through the Developer Portal.
+Delete all environments before you delete an app. If you delete an app which has environments on Tencent, you will not be able to reach the environments through the ATM.
 
 ### 7.3 App Security and Production
 

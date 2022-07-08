@@ -81,13 +81,16 @@ Next, add a new native page:
 		1. Click on the **OK** button.
 			* You should get a dialog box asking **Do you want to automatically fill the contents of the list view?** Select `Yes`.
 		1. **List View** should be populated with two fields: `{Code}` and `{Description}`. Delete the `{Code}` field.
-	1. Add a title called *Select language*, as the selected language in Studio Pro is **English**.
-	1. Ensure the caption of the `{Description}` field in **ListView** is not empty. It should be mapped to the attribute `System.Language.Description` and be used as well.
+	1. Add a title called *Select language*, as the selected language in Studio Pro is **English**. You can use a **Text** widget, but anything with a string value is fine.
+	1. Ensure the caption of the `{Description}` field in **ListView** is not empty. It should be mapped to the attribute `System.Language.Description` with the `{1}` variable and be used as well.
 	1. Change to the second language in Studio Pro by going to menu **Language** > **Current Language** > `<second_language>`.
 	1. Add a translation of the title in a second language if not available.
 	1. Ensure again that the caption of the `{Description}` field in **ListView** is not empty. It should be mapped to the attribute `System.Language.Description` and be used as well.
 	1. Repeat the above steps to add a translation for the third language as well.
-	1. Set **Language_Overview** as the default home page of the **Native mobile** navigation profile.
+	1. Set **Language_Overview** as the default home page of the **Native mobile** navigation profile:
+		1. Open **Navigation** in the App Explorer.
+		1. Click the **Native mobile** tab.
+		1. Set **Language_Overview** as the default home page.
 
 ## 4 Testing Language Switching {#testing}
 

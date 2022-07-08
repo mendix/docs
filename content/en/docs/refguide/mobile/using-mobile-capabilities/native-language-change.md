@@ -75,13 +75,13 @@ First, add and configure a new nanoflow:
 Next, add a new native page:
 
 1.  Add a new native page **Language_Overview** to your module called **ChangeLanguage**.
+	1. Add a title called *Select language*, as the selected language in Studio Pro is **English**. You can use a **Text** widget, but anything with a string value is fine.
 	1.  Add a native **List View** by simply dragging from the toolbox to list all the available languages on the app. Configure it this way:
 		1. In the **Data source** tab, **Type** should be `Database`, **Entity** should be `System.Language`.
 		1. In the **General** tab, **On click** should be configured to call a nanoflow **ACT_Language_ChangeUserLangDevice**.
 		1. Click on the **OK** button.
 			* You should get a dialog box asking **Do you want to automatically fill the contents of the list view?** Select `Yes`.
 		1. **List View** should be populated with two fields: `{Code}` and `{Description}`. Delete the `{Code}` field.
-	1. Add a title called *Select language*, as the selected language in Studio Pro is **English**. You can use a **Text** widget, but anything with a string value is fine.
 	1. Ensure the caption of the `{Description}` field in **ListView** is not empty. It should be mapped to the attribute `System.Language.Description` with the `{1}` variable and be used as well.
 	1. Change to the second language in Studio Pro by going to menu **Language** > **Current Language** > `<second_language>`.
 	1. Add a translation of the title in a second language if not available.

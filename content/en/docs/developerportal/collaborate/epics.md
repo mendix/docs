@@ -99,14 +99,21 @@ Clicking the story card opens the [story details page](#story-details).
 
 #### 2.1.3 Story Details Page {#story-details}
 
-When you click the card of a story, the story details page opens and shows the following items:
+When you click the card of a story, the story details page opens.
+
+On the upper-right corner, there are three icons. You can click these icons to clone, [archive](#archive), and delete the story. You need to confirm your action after you click each icon.
+
+{{< figure src="/attachments/developerportal/collaborate/epics/story-details-page-icons.png" >}}
+
+{{% alert color="info" %}}The clone icon allows you to start creating a copy of the story – the title will be pre-filled as *Copy - [original story title]*, and all the other details will be pre-filled with the values from the original story.{{% /alert %}}
+
+The story details page shows the following items:
 
 *  **Description** – This is the description of the story.
 
     * You can edit the description of the story by clicking **Edit Description** and make changes in the WYSIWYG editor. The editor supports different text formats, including code blocks.
     * You can link a story in the editor. To do so, type #, then start typing the story title, and then select the right story from the list.
     * You can tag a person in the editor. To do so, type *@*, then start typing the person's name, and then select the right person from the list.
-
 * **Assign to** – You can assign the story to anybody who can access the app project in the Developer Portal.
 * **Status** – You can set the status to any of the category/swimlane names on the **Board** page and the **Planning** page.
 * **Tasks** – You can add a task by clicking **+ Add Task**. You can move the tasks by dragging them around.
@@ -117,7 +124,7 @@ When you click the card of a story, the story details page opens and shows the f
 * **Attached Files** – You can add attached files by clicking **+** below **Attached Files**. 
 * **Comment** – You can type your comment in the text box and then click **Post Your Comments** to save and post the comment.
 
-{{% alert color="info" %}}To save any change on the story details page, except for comment, you must click **Save Story** at the bottom of the page.{{% /alert %}}
+{{% alert color="info" %}}To save any change on the story details page, click **Save Story** at the bottom of the page.{{% /alert %}}
 
 ### 2.2 The Planning Page
 
@@ -172,7 +179,13 @@ Clicking a row opens the [epic details](#epic-details) page.
 
 #### 2.3.1 Epic Details Page {#epic-details}
 
-If you click the row of an epic, the epic details page opens and shows the following items:
+If you click the row of an epic, the epic details page opens. 
+
+On the upper-right corner, there is an ellipsis (**...**) icon. You can click this icon to delete the epic. You need to confirm your action after you click the icon.
+
+{{< figure src="/attachments/developerportal/collaborate/epics/epic-details-page-ellipsis.png" >}}
+
+The epic details page shows the following items:
 
 *  **Objective** – This is the description of the epic.
 
@@ -187,7 +200,7 @@ If you click the row of an epic, the epic details page opens and shows the follo
 * **Stories** – This lists all the open stories that are linked to this epic.
 * **Comment** – You can type your comment in the text box and then click **Post Your Comments** to save and post the comment.
 
-{{% alert color="info" %}}To save any change on the epic details page, except for comment, you must click **Save Epic** at the bottom of the page.{{% /alert %}}
+{{% alert color="info" %}}To save any change on the epic details page, click **Save Epic** at the bottom of the page.{{% /alert %}}
 
 ### 2.4 The Archive Page {#archive}
 

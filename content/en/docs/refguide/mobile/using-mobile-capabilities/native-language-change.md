@@ -3,7 +3,7 @@ title: "Internationalize Mobile Apps"
 url: /refguide/mobile/using-mobile-capabilities/native-language-change
 category: Mobile
 weight: 30
-description: "Allow your end-user to change the interface language on their mobile device within a Mendix mobile app."
+description: "This guide allows your end-user to change the interface language on their mobile device within a Mendix mobile app."
 tags: ["studio pro", "translation", "language", "multi lingual", "native", "translatable text", "mobile", "pwa"]
 ---
 
@@ -14,7 +14,7 @@ This internationalization guide explains how to give your end-user an easy way t
 
 This guide shows one of the ways to change the language on a *native* app. You can also apply this guide's mechanism to *all offline PWA profiles*. Please note that this guide's mechanism does not change the localization of an application because it depends on the settings of the device.
 
-To learn more about delivering your *web* app in multiple languages, see [How to Translate Your App Content](/howto/collaboration-requirements-management/translate-your-app-content/).
+While this guide gives your end-user the ability to switch their app's language, translation is a different issue. Translating native apps and PWAs actually works the same as it does for web apps. To learn more about app translation, see [How to Translate Your App Content](/howto/collaboration-requirements-management/translate-your-app-content/).
 
 ## 2 Prerequisites
 
@@ -26,7 +26,7 @@ Before starting this guide, make sure you have completed the following prerequis
 * Read the [Language Menu](/refguide/translatable-texts/) guide to understand the basics of the Mendix Language menu
 * Set up the required [languages](/refguide/language-settings/) in Studio Pro—this tutorial has been configured with three languages as below:
 
-	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/01-language-settings.png" alt="language settings"  width= "400" >}}
+	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/language-settings.png" alt="language settings"  width= "450" >}}
 
 ## 3 Setting up the Language Change Mechanism {#set-up}
 
@@ -53,7 +53,7 @@ You can either add a new module to your existing app, or create a new Studio Pro
 		1. Name this retrieved object *SelectedLanguage*.
 		1. Your microflow should look like this:
 
-		{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/03-microflow-retrieve-object.png"  alt="microflow retrieve object" width= "400" >}}
+			{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/microflow-retrieve-object.png"  alt="microflow retrieve object" width= "450" >}}
 
 	1. To set the selected language, you need to change the language for the current user: 
 		1. Call a **Change object** activity.
@@ -63,7 +63,7 @@ You can either add a new module to your existing app, or create a new Studio Pro
 		1. For the value of that member, set it as the object retrieved earlier: `$SelectedLanguage`.
 		1. Your microflow should look like this:
 	
-		{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/04-microflow-language-change.png"  alt="microflow language change"  width= "400" >}}
+		{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/microflow-language-change.png"  alt="microflow language change"  width= "500" >}}
 
 Your microflow **ACT_Language_ChangeUserLangRuntime** is now ready to be called from a nanoflow which you will configure in the following section.
 
@@ -79,7 +79,7 @@ Add and configure a new nanoflow:
 	1. To load the new language, you must refresh the app. This can be done by calling a nanoflow action **Reload**.
 	1. Your nanoflow should look like this:
 
-	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/02-nanoflow-language-change.png"  alt="nanoflow language change" width= "400" >}}
+		{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/nanoflow-language-change.png"  alt="nanoflow language change" width= "500" >}}
 
 ### 3.3 Adding the Native Page
 
@@ -112,20 +112,20 @@ To test your native app, locally deploy and view the app on the **Make It Native
 1. Follow the steps in [Downloading and Installing the Make It Native App](/refguide/mobile/getting-started-with-mobile/#download-min) to view your app in Mendix's Make It Native testing app. 
 1. Once the app is running, you should be able to see the native **Language_Overview** page:
 
-	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/05-device-language-overview-en.png"  alt="language overview english" width= "250" >}}
+	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/device-language-overview-en.png"  alt="language overview english" width= "250" >}}
 
 1. To change the language, do the following:
 	1. Tap **Dutch, Netherlands**.
 	1. The app should be reloaded automatically.
 	1. You should be able to see the title in the **Dutch** language:
 
-	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/06-device-language-overview-nl.png"  alt="language overview dutch" width= "250" >}}
+		{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/device-language-overview-nl.png"  alt="language overview dutch" width= "250" >}}
 
 Congratulations, you just implemented internationalization in your native app! Your users will appreciate the power of multiple languages at their fingertips. For more information about languages and Mendix, see the Read More section below.
 
-## 5 Read more
+## 5 Read More
 
-* [How To Use Translatable Validation Messages](/howto/logic-business-rules/translatable-validation-messages/)
+* [Use Translatable Validation Messages](/howto/logic-business-rules/translatable-validation-messages/)
 * [Language Menu](/refguide/translatable-texts/): gives more information on translating the languages of different Mendix UI elements
 * [Change Language by Clicking a Link](https://forum.mendixcloud.com/link/questions/91821): explanations and ideas on the Mendix forum for refreshing the page when the language is changed
 * [Anonymous User Journey](https://forum.mendixcloud.com/link/questions/91676): a discussion on the Mendix forum about switching languages for anonymous end-users

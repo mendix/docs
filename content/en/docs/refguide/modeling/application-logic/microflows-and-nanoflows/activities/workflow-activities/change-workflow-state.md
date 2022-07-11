@@ -8,7 +8,7 @@ tags: ["studio pro", "user task", "workflow", "change workflow state", "workflow
 {{% alert color="warning" %}}
 This activity can only be used in **Microflows**.
 
-This activity was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/#960). The **Retry workflow** option of this activity was introduced in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12/#9120). The **Unpause workflow** option was called **Resume workflow** in Studio Pro versions below 9.12.
+This activity was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/#960). The **Retry workflow** option of this activity was introduced in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12/#9120). The **Unpause workflow** option was called **Resume workflow** in Studio Pro versions below 9.12.0.
 {{% /alert %}}
 
 ## 1 Introduction

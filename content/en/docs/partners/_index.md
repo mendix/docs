@@ -2,13 +2,13 @@
 title: "Strategic Partners Guide"
 url: /partners/
 description: "Documentation for IBM, SAP, and Siemens widgets written and maintained by Mendix"
-tags: ["strategic partners", "ibm", "sap", "siemens"]
 weight: 45
 no_list: false
 description_list: true
 cascade:
     - space: "Strategic Partners Guide"
     - mendix_version: ""
+tags: ["strategic partners", "ibm", "sap", "siemens"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 

@@ -43,7 +43,7 @@ The Community Commons container project contains a variety of predesigned unit t
 * `StringToFile` – This stores a string in the provided file document. Multiple encodings are supported since version 7.4.1 of the module.
 * `StringFromFile` – This reads the contents from the provided file document and returns it as string. Multiple encodings are supported since version 7.4.1 of the module.
 * `StoreURLToFileDocument` – This retrieves a document from an URL using an `HTTP GET` request.
-* `DuplicateFileDocument` – This clones the contents of one file document into another.
+* `DuplicateFileDocument` – This clones the contents of one file document into another and instant commits the `cloneTarget`.
 * `GetFileSize` – This returns the file size of a file document in bytes.
 * `OverlayPdfDocument` – This overlays a generated PDF document with another PDF (containing the company stationary, for example).
 

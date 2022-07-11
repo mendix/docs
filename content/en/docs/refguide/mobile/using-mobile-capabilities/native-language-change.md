@@ -10,11 +10,11 @@ tags: ["studio pro", "translation", "language", "multi lingual", "native", "tran
 
 ## 1 Introduction
 
-This internationalization guide explains how to give your end-user an easy way to change their mobile application's language. The user can do so directly on their Android or iOS device.
+This internationalization guide explains how to give your end-user an easy way to change their mobile application's language. The user can do so directly on their Android or iOS device. 
 
-{{% alert color="info" %}}
-This guide shows one of the ways to change the language on a native app. You can also apply this guide's mechanism to all offline PWA profiles. Please note that this mechanism does not change the localization of an application because it depends on the settings of the device.
-{{% /alert %}}
+This guide shows one of the ways to change the language on a *native* app. You can also apply this guide's mechanism to *all offline PWA profiles*. Please note that this guide's mechanism does not change the localization of an application because it depends on the settings of the device.
+
+To learn more about delivering your *web* app in multiple languages, see [How to Translate Your App Content](/howto/collaboration-requirements-management/translate-your-app-content/).
 
 ## 2 Prerequisites
 
@@ -118,7 +118,7 @@ Congratulations, you just implemented internationalization in your native app! Y
 
 ## 5 Read more
 
-* [How to Translate Your App Content](/howto/collaboration-requirements-management/translate-your-app-content/): a worked example of adding a translation 
 * [How To Use Translatable Validation Messages](/howto/logic-business-rules/translatable-validation-messages/)
-* [Change language by clicking a link](https://forum.mendixcloud.com/link/questions/91821): explanations and ideas on the Mendix forum for refreshing the page when the language is changed
+* [Language Menu](/refguide/translatable-texts/): gives more information on translating the languages of different Mendix UI elements
+* [Change Language by Clicking a Link](https://forum.mendixcloud.com/link/questions/91821): explanations and ideas on the Mendix forum for refreshing the page when the language is changed
 * [Anonymous User Journey](https://forum.mendixcloud.com/link/questions/91676): a discussion on the Mendix forum about switching languages for anonymous end-users

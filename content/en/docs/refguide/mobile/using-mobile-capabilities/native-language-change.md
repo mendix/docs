@@ -28,7 +28,7 @@ Before starting this guide, make sure you have completed the following prerequis
 
 	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/01-language-settings.png" alt="language settings"  width= "400" >}}
 
-## 3 Setting up Language Change Mechanism {#set-up}
+## 3 Setting up the Language Change Mechanism {#set-up}
 
 Internationalization with Mendix's mobile apps is fairly simple. You will use two nanoflow actions to set up most of your language change mechanism.
 

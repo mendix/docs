@@ -20,7 +20,7 @@ The [App & Team Management](https://apps.mendix.tencent-cloud.com/) on Tencent C
 
 ## 2 Navigation {#navigation}
 
-To create a new app, click **创建应用**, which will open a page where you can choose a starting pointing for your new app.,,,,,
+To create a new app, click **创建应用**, which will open a page where you can choose a starting pointing for your new app.
 
 On the right side of the top bar, you can access and edit your profile.
 
@@ -42,7 +42,7 @@ You can then access the following parts of the Mendix Platform:
 
 This page shows you a summary of your apps:
 
-**激活** displays all the apps for which you are a [Team](/developerportal/collaborate/team/) member. Any apps you pin with the pin icon will appear in the **固定** tab. 
+The **激活** tab displays all the apps for which you are a [Team](/developerportal/collaborate/team/) member. Any apps you pin with the pin icon will appear in the **固定** tab. 
 
 Click an app tile to see more details about the app.
 

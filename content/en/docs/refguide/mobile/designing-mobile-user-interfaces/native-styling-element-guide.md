@@ -1673,7 +1673,7 @@ The widget’s style properties are as follows:
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `angle` | | Line of direction. Takes a value from `0` to `360`. A value of 0 is equivalent to top; increasing values rotate the design clockwise. |
-| `colorList` | [gradient_color_object](/refguide/native-styling-refguide/#gradient-color-object) | Passes the colors you want to display in an array. Example: `[{ color: "#fff", offset: 0 }, { color: "#000", offset: 1 }]` |
+| `colorList` | [gradient_color_object](#gradient-color-object) | Passes the colors you want to display in an array. Example: `[{ color: "#fff", offset: 0 }, { color: "#000", offset: 1 }]` |
 | `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
 | `opacity` | | Takes a value from `0` to `100`. The lower the value, the more transparent. |
 

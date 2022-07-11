@@ -23,6 +23,7 @@ Before starting this guide, make sure you have completed the following prerequis
 * Install Mendix Studio Pro version **9.14.0** or above
 * Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploy Your First Mendix Native Mobile App*
 * Make sure your [Nanoflow Commons](/appstore/modules/nanoflow-commons/) module is up to date
+* Read the [Language Menu](/refguide/translatable-texts/) guide to understand the basics of the Mendix Language menu
 * Set up the required [languages](/refguide/language-settings/) in Studio Pro—this tutorial has been configured with three languages as below:
 
 	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/01-language-settings.png" alt="language settings"  width= "400" >}}

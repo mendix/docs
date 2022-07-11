@@ -12,6 +12,10 @@ tags: ["studio pro", "translation", "language", "multi lingual", "native", "tran
 
 This internationalization guide explains how to give your end-user an easy way to change their mobile application's language. The user can do so directly on their Android or iOS device.
 
+{{% alert color="info" %}}
+This guide shows one of the ways to change the language on a native app. You can also apply this guide's mechanism to all offline PWA profiles. Please note that this mechanism does not change the localization of an application because it depends on the settings of the device.
+{{% /alert %}}
+
 ## 2 Prerequisites
 
 Before starting this guide, make sure you have completed the following prerequisites:
@@ -94,7 +98,9 @@ Next, add a new native page:
 
 ## 4 Testing Language Switching {#testing}
 
-Now it is time to see the app in action. To do this, locally deploy and view the app on the **Make It Native 9** app:
+Now it is time to see the app in action. If you are using a PWA, you can simply test in a web browser. 
+
+To test your native app, locally deploy and view the app on the **Make It Native 9** app:
 
 1. Follow the steps in [Downloading and Installing the Make It Native App](/refguide/mobile/getting-started-with-mobile/#download-min) to view your app in Mendix's Make It Native testing app. 
 1. Once the app is running, you should be able to see the native **Language_Overview** page:
@@ -107,10 +113,6 @@ Now it is time to see the app in action. To do this, locally deploy and view the
 	1. You should be able to see the title in the **Dutch** language:
 
 	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/06-device-language-overview-nl.png"  alt="language overview dutch" width= "250" >}}
-
-{{% alert color="info" %}}
-This is just one of the ways to change the language on a native app. You can also apply this mechanism to the offline PWA profiles. Please note that this mechanism does not change the localization of an application because it depends on the settings of the device.
-{{% /alert %}}
 
 Congratulations, you just implemented internationalization in your native app! Your users will appreciate the power of multiple languages at their fingertips. For more information about languages and Mendix, see the Read More section below.
 

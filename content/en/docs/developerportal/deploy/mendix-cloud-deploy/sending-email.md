@@ -12,7 +12,7 @@ aliases:
 ---
 
 {{% alert color="warning" %}}
-Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
+Our Mendix Cloud V3 is deprecated. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
 {{% /alert %}}
 
 ## 1 Introduction
@@ -55,6 +55,7 @@ Frequently used providers (A-Z) are:
 *   [Mailchimp Transactional Emails](https://mailchimp.com/features/transactional-email/) [[settings](https://mailchimp.com/developer/transactional/docs/fundamentals/)]
 *   [MailGun](https://mailgun.com/) [[settings](https://documentation.mailgun.com/en/latest/quickstart-sending.html#send-with-smtp-or-api)]
 *   [SendGrid](https://sendgrid.com/) [[settings](https://sendgrid.com/docs/ui/account-and-settings/mail/)]
+*   [Microsoft 365](https://www.office.com/) [[settings](https://docs.microsoft.com/en-us/exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-microsoft-365-or-office-365)]
 
 
 Many users of *Free Apps* use the settings of their own GMail account for convenience. There are many more email providers, most of which have SMTP compatibility.

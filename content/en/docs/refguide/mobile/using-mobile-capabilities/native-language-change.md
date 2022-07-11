@@ -39,7 +39,7 @@ This guide requires the following nanoflow actions:
 * **Reload** – This action reloads web and native apps.
 {{% /alert %}}
 
-### 3.1 Adding the Mobule and Microflow
+### 3.1 Adding the Module and Microflow
 
 You can either add a new module to your existing app, or create a new Studio Pro app using a **Blank Native Mobile App** template and then adding a new module to it. Either way, your setup will begin with the same step and continue on accordingly:
 

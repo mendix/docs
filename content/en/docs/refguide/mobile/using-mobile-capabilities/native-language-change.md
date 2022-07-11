@@ -1,16 +1,16 @@
 ---
-title: "Internationalize Native Mobile Apps"
+title: "Internationalize Mobile Apps"
 url: /refguide/mobile/using-mobile-capabilities/native-language-change
 category: Mobile
 weight: 30
-description: "Allow your end-user to change the interface language on their mobile device within a Mendix native mobile app."
-tags: ["studio pro", "translation", "language", "multi lingual", "native", "translatable text", "mobile"]
+description: "Allow your end-user to change the interface language on their mobile device within a Mendix mobile app."
+tags: ["studio pro", "translation", "language", "multi lingual", "native", "translatable text", "mobile", "pwa"]
 ---
 
 
 ## 1 Introduction
 
-This internationalization guide explains how to give your end-user an easy way to change their native application's language. The user can do so directly on their Android or iOS device.
+This internationalization guide explains how to give your end-user an easy way to change their mobile application's language. The user can do so directly on their Android or iOS device.
 
 ## 2 Prerequisites
 
@@ -25,7 +25,7 @@ Before starting this guide, make sure you have completed the following prerequis
 
 ## 3 Setting up Language Change Mechanism {#set-up}
 
-Internationalization with Mendix's native apps is fairly simple. You will use two nanoflow actions to set up most of your language change mechanism.
+Internationalization with Mendix's mobile apps is fairly simple. You will use two nanoflow actions to set up most of your language change mechanism.
 
 {{% alert color="info" %}}
 This guide requires the following nanoflow actions: 
@@ -109,7 +109,7 @@ Now it is time to see the app in action. To do this, locally deploy and view the
 	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/06-device-language-overview-nl.png"  alt="language overview dutch" width= "250" >}}
 
 {{% alert color="info" %}}
-This is just one of the ways to change the language on a native app. Please note that this mechanism does not change the localization of an application because it depends on the settings of the device.
+This is just one of the ways to change the language on a native app. You can also apply this mechanism to the offline PWA profiles. Please note that this mechanism does not change the localization of an application because it depends on the settings of the device.
 {{% /alert %}}
 
 Congratulations, you just implemented internationalization in your native app! Your users will appreciate the power of multiple languages at their fingertips. For more information about languages and Mendix, see the Read More section below.

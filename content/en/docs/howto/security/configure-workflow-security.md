@@ -99,7 +99,9 @@ You have configured new app roles for Facilities, Manager, and HR, and enabled t
 
 ## 4 Configuring Demo Users
 
-You need to create demo users for the newly created app roles to be able to test your app later. For more information, see the [Testing Workflow](#test-workflow) section. Follow the steps below: 
+You need to create demo users for the newly created app roles to be able to test your app. 
+
+Follow the steps below: 
 
 1. In the App Explorer, open **App** > **Security** > the **Demo users** tab. 
 1. Click **New**.

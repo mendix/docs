@@ -67,11 +67,13 @@ You can also see the activities logged for all you clusters by clicking **Activi
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/cluster-activity-logs.png" >}}
 
-The cluster overview will refresh automatically, but you can force a refresh by clicking **Refresh** at the top of the page.
+The cluster overview will refresh automatically, but you can force a refresh by clicking **刷新** at the top of the page.
+
+{{% todo %}}Need access as Cluster Manager to document this properly{{% /todo %}}
 
 ### 3.2 Cluster Details
 
-Click **Details** next to the cluster name to see information about the entire cluster.
+Click **详情** next to the cluster name to see information about the entire cluster.
 
 In the first tab you can see the **Namespaces** in the cluster and their current status. This duplicates the information you can see in the cluster overview.
 
@@ -111,7 +113,7 @@ The **Activity** tab shows all the activity for this cluster. It shows the same 
 
 If you are a member of a namespace, you can also manage a namespace in the cluster.
 
-Click the **Details** button for the namespace you want to manage.
+Click the **详情** button for the namespace you want to manage.
 
 On the namespace management page, there are a number of tabs which allow you to manage aspects of your namespace :
 
@@ -150,7 +152,7 @@ The **Apps** tab of namespace details lists all the apps which are deployed to t
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/namespace-apps.png" >}}
 
-If you are a team member of the app, click **Details** to go to the *Environment Details* page for that app.
+If you are a team member of the app, click **详情** to go to the *Environment Details* page for that app.
 
 {{% alert color="info" %}}
 You can only see the environment details of an app if you are a member of the app team with the appropriate authorization.
@@ -221,14 +223,12 @@ If you want to change the rights for an existing member, you will have to remove
 
 The **Operate** tab allows you to add a set of links which are used when users request a page from the Operate category for their app in the ATM, as shown below.
 
-{{< figure src="/attachments/developerportal/deploy/tencent-deploy/image31.png" >}}
-
 The following pages can be configured:
 
-* Metrics
-* Alerts
-* Logs
-* Backups
+* 指标
+* 告警
+* 日志
+* 备份
 
 The specification of these pages is optional.
 
@@ -241,6 +241,10 @@ Open the **Operate** tab, enter the URLs relevant to your namespace, and click *
 ### 4.1 Creating a Deployment Package {#create-deployment-package}
 
 Before you can deploy your app, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
+
+{{% alert color="info" %}}
+Follow the instructions below to create a deployment package from the Team Server. Alternatively, if you already have an MDA package, you can upload it by clicking **上传**.
+{{% /alert %}}
 
 {{% alert color="warning" %}}
 There is a limit of 200MB on the size of a deployment package which can be deployed on the Tencent Cloud.
@@ -258,19 +262,21 @@ There is a limit of 200MB on the size of a deployment package which can be deplo
 
 4. Enter a **新版本** and **标签描述** according to your own deployment procedure.
 
-5. If you want to deploy and start your package immediately, check **自动部署** and an existing environment in **Environment for Autodeploy** if you want to deploy and start your package immediately. You need to make sure that the environment is ready using the techniques described in [Deploying the Deployment Package](#deploy-package), below, where you can also see how to deploy a deployment package manually.
+5. If you want to deploy and start your package immediately, check **自动部署** and select an existing environment in **用于自动部署的环境**. You need to make sure that the environment is ready using the techniques described in [Deploying the Deployment Package](#deploy-package), below, where you can also see how to deploy a deployment package manually.
 
-6. Click **Build this revision.**
+6. Click **构建此修订版**
    
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image12.png" >}}
 
 7. Confirm the information message and you will be returned to the **环境概览** page.
 
-{{% alert color="info" %}}
-Alternatively, you can upload an existing MDA by clicking **上传**.
-{{% /alert %}}
-
 ### 4.2 Creating an Environment{#create-environment}
+
+{{% alert color="info" %}}
+If you request access to a free cluster you will not need to create your own environment, this will be done for you as part of the request you made. An environment will be created for you using the latest MDA package you created in [Creating a Deployment Package](#create-deployment-package), above.
+
+You can deploy updated deployment packages by following the instructions in [Deploying the Deployment Package](#deploy-package), below.
+{{% /alert %}}
 
 When deploying your app for the first time, there will be no environment to deploy to. To create an environment, you will need to create a deployment package as described in [Creating a Deployment Package](#create-deployment-package), above.
 
@@ -280,17 +286,20 @@ When deploying your app for the first time, there will be no environment to depl
 
     If there are no clusters available to you, you will have to create one or get access to an existing one before you can continue. You will be taken to the Cluster Manager page. See [Cluster and Namespace Management](#cluster-namespace), above, for information on the three ways you can get a cluster, then start this section again.
 
+{{% todo %}}What is the UUID in the ATM?
+Need to check this whole section, table, and images{{% /todo %}}
+
 2. A **UUID** will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 
     {{% alert color="info" %}}You can change the UUID if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.{{% /alert %}}
 
-3. Enter **Environment Name**, the name for the environment. The environment name can only contain lowercase (latin) letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
+3. Enter **环境名称**, the name for the environment. The environment name can only contain lowercase (latin) letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
 
 4. Use the drop-down **Select Namespace** to select an existing namespace. You will see all namespaces of which you are a member.
 
-5. Select the **Purpose**.
+5. Select the **目的**.
    
-    1. For development of the app, for example acceptance testing, choose **Development**.
+    1. For development of the app, for example acceptance testing, choose **开发环境**.
 
     2. For production deployment, select **Production**. If you select **Production**, then you will be asked for the **Subscription Secret** which you received when you purchased Tencent resources.
 
@@ -300,7 +309,7 @@ When deploying your app for the first time, there will be no environment to depl
    
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/create-environment.png" >}}
 
-7. Select **Core Resources**.
+7. Select **核心资源**.
 
     For core resources, there are two sets of values. The **Request** value is the amount of core resources which are initially requested. The **Limit** value is the maximum amount of resource that the environment can use.
 
@@ -315,9 +324,9 @@ When deploying your app for the first time, there will be no environment to depl
 
     Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* environment, otherwise you may run into problems running your app.
 
-8. Select a **Database plan** from the list of plans in the dropdown. This will have the format `db-plan-…` where the suffix reflects the environment.
+8. Select a **数据库计划** from the list of plans in the dropdown. This will have the format `db-plan-…` where the suffix reflects the environment.
 
-9. Select a **Storage plan** from the list of plans in the dropdown. This will have the format `file-plan-…` where the suffix reflects the environment.
+9. Select a **文件存储计划** from the list of plans in the dropdown. This will have the format `file-plan-…` where the suffix reflects the environment.
    
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image7.png" >}}
 
@@ -329,43 +338,37 @@ When deploying your app for the first time, there will be no environment to depl
 
 You will not be able to deploy to this environment until it has been fully prepared. This means that all the resource plans have been confirmed and that the placeholder app has been successfully deployed. See [Deploying the Deployment Package](#deploy-package), below, for instructions on how to check that the environment has been created successfully.
 
-
-
 ### 4.3 Deploying the Deployment Package{#deploy-package}
 
 You can also deploy an existing deployment package to an environment without having to create a new one. This also allows you to specify constant values and control scheduled events before the app is started.
 
-After creating an environment and deployment package (see [Creating an Environment](#create-environment) and [Creating a Deployment Package](#create-deployment-package), above) you will now have a deployment package and an environment. Check that there is a green tick next to the deployment package and the resources of the environment. If any of these have failed, try to create the environment or the deployment package again, and contact your cluster manager. If neither of these solves the problem. contact Tencent support using the **help** option in the [Tencent Cloud Console](https://console.cloud.tencent.com/).
+After creating an environment and deployment package (see [Creating an Environment](#create-environment) and [Creating a Deployment Package](#create-deployment-package), above) you will now have a deployment package and an environment with an app running in it. Check that there is a green tick next to the deployment package and the resources of the environment, as well as the build and runtime of the app. If any of these have failed, try to create the environment or the deployment package again, and contact your cluster manager. If neither of these solves the problem. contact Tencent support using the **help** option in the [Tencent Cloud Console](https://console.cloud.tencent.com/).
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image13.png" >}}
 
-You also need to check that the **PlaceholderMDA**, an initial app which is deployed by default to your environment, has successfully built and is running.
+If everything has been created successfully, and the app has been built and is running, you can deploy a new deployment package of your app by doing the following:
 
-{{< figure src="/attachments/developerportal/deploy/tencent-deploy/image14.png" >}}
+1. Click **部署** next to the deployment package you wish to deploy.
 
-If everything has been created successfully, and the PlaceholderMDA has been built and is running, you can deploy the deployment package of your app by doing the following:
+2. Confirm the **目标** environment (you can select a different one here if one is available).
 
-1. Click **Deploy** next to the deployment package you wish to deploy.
+3. Confirm that the **状态** is *准备好*.
 
-2. Confirm the **Target** environment (you can select a different one here if one is available).
-
-3. Confirm that the **Status** is *Ready*.
-
-4. Click **Transport**.
+4. Click **传输**.
    
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image15.png" >}}
 
-5. Change any constants in the **Constants** tab: select the constant you want to edit and then click **Edit**.
+5. Change any constants in the **常量** tab: select the constant you want to edit and then click **编辑**.
 
-6. Toggle any scheduled events in the **Scheduled Events** tab: select the scheduled event you want to enable or disable and click **Toggle**.
+6. Toggle any scheduled events in the **计划事件** tab: select the scheduled event you want to enable or disable and click **启停**.
 
-7. Click **Continue** to continue to the Start Application confirmation page.
-   
-    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image16.png" >}}
+7. Click **继续** to continue to the Start Application confirmation page.
 
-8. Click **Apply Changes** to deploy the application to the selected environment. The app will start automatically once the deployment is successful.
+8. Click **应用更改** to deploy the application to the selected environment. The app will start automatically once the deployment is successful.
 
 You will be taken to the Environment Details page for the selected environment. You can find information about managing your environment from this page in [Managing Your Environments from the Environment Details Page](#environment-details), below.
+
+{{% todo %}}Continue from here{{% /todo %}}
 
 ## 5 Environments Page
 
@@ -383,10 +386,10 @@ This lists the deployment packages which have been created for this app.
 
 There are five buttons:
 
-* Refresh
-* Create Package
-* Upload Package
-* Details
+* 刷新
+* 从 Team Server 创建包
+* 上传
+* 详情
 * Deploy
 
 These are described in more detail below.
@@ -405,7 +408,7 @@ This creates a new package as described in [Creating a Deployment Package](#crea
 
 #### 5.1.3 Upload Package
 
-This allows you to upload an MDA package you have already created. The uploaded package is added to the list of packages for the app and can be deployed in the same way as a package created using **Create Package**.
+This allows you to upload an MDA package you have already created. The uploaded package is added to the list of packages for the app and can be deployed in the same way as a package created using **从 Team Server 创建包**.
 
 #### 5.1.4 Details
 
@@ -436,7 +439,7 @@ For each environment, you can see a summary of the status of the resources and d
 You can perform the following actions:
 
 * **Add Environment**
-* View **Details**
+* View **详情**
 * Perform **Actions**
 
 These are described in more detail, below.
@@ -447,7 +450,7 @@ In addition, there are several indicators describing the status of the environme
 
 ##### 5.2.1.1 Network
 
-The **Network** indicator has the following values:
+The **网络** indicator has the following values:
 
 * Tick – the network is operational
 * Cross – the network is not operational
@@ -471,7 +474,7 @@ The **Database** indicator has the following values:
 
 ##### 5.2.1.4 Development
 
-The word **Development** indicates that this environment is set up for development.
+The word **开发环境** indicates that this environment is set up for development.
 
 The word changes to **Production** if the environment is set up for production.
 
@@ -492,7 +495,7 @@ This button contains a list of actions which you can perform quickly on the envi
 * **Start Application** (only shown if app is stopped) – allows you to start a stopped application
 * **Transport Package** – allows you to deploy the deployment package in the current environment to another environment within the app, or to redeploy it in the current environment
 * **Environment Logs** – takes you to the log page defined by the cluster manager when they registered the namespace
-* **Model Options** – allows you to change the running of scheduled events and the values of constants for your app by taking you to the **Model Options** tab of the **Environment Details** page
+* **模型选项** – allows you to change the running of scheduled events and the values of constants for your app by taking you to the **模型选项** tab of the **Environment Details** page
 * **Stop Application** (only shown if at least one replica is running) — stops the application by reducing the number of replicas to zero
 * **Delete Environment** – this deletes the environment (see [Current Limitations](#limitations), below, for additional details about what is deleted) — you will be asked to confirm this action
 
@@ -504,7 +507,7 @@ This section shows all the activities, such as creating environments and deployi
 
 ## 6 Managing Your Environments from the Environment Details Page{#environment-details}
 
-Each environment you create has an **Environment Details** page which allows you to monitor and manage your environments. You can reach this by clicking the **Details** button next to the environment you want to manage.
+Each environment you create has an **Environment Details** page which allows you to monitor and manage your environments. You can reach this by clicking the **详情** button next to the environment you want to manage.
 
 If you have any outstanding changes to your environment the page will display a warning message. If you click **Apply Changes**, the environment will be stopped and restarted.
 
@@ -544,7 +547,7 @@ There are also buttons which allow you to perform various actions on your app an
 
 ##### 6.1.3.1 Stop/Start Application
 
-If the app is not currently running (**Replicas Running** is set to *None*) you will see **Start** Application. Clicking this will immediately trigger the app to begin running by increasing the number of replicas.
+If the app is not currently running (**个副本正在运行** is set to *None*) you will see **Start** Application. Clicking this will immediately trigger the app to begin running by increasing the number of replicas.
 
 If the app is currently running, clicking **Stop Application** immediately stops the application by reducing the number of replicas to zero.
 
@@ -580,7 +583,7 @@ If the environment cannot be deleted, you will receive a warning, but can go ahe
 
 ##### 6.1.3.7 Change Purpose
 
-This enables you to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **Development** and the app will be deployed as an unlicensed App.
+This enables you to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **开发环境** and the app will be deployed as an unlicensed App.
 
 For production deployment, select **Production**. If you select **Production**, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. For the differences between unlicensed/test apps and licensed apps, see the [Free App](/developerportal/deploy/mendix-cloud-deploy/#free-app) section in *Mendix Cloud*.
 
@@ -590,35 +593,35 @@ Your app can only be deployed to a production environment if security is set on.
 
 ##### 6.1.3.8 Change Subscription Secret{#change-subscription-secret}
 
-If you select Production as the **purpose** of the app environment, then you will need to use a Subscription Secret which ensures that your app runs as a licensed app. If you need to enter or change the subscription secret, then you can do that here.
+If you select Production as the **目的** of the app environment, then you will need to use a Subscription Secret which ensures that your app runs as a licensed app. If you need to enter or change the subscription secret, then you can do that here.
 
 Subscription secrets are obtained from Tencent.
 
 ### 6.2 Model Options Tab
 
-The **Model Options** tab allows you to change the configuration of scheduled events and constants in your app.
+The **模型选项** tab allows you to change the configuration of scheduled events and constants in your app.
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image24.png" >}}
 
-To toggle any scheduled events, select the scheduled event you want to enable or disable and click **Toggle**.
+To toggle any scheduled events, select the scheduled event you want to enable or disable and click **启停**.
 
-To change any constants, select the constant you want to edit and then click **Edit**.
+To change any constants, select the constant you want to edit and then click **编辑**.
 
 ### 6.3 Network Tab
 
-On the **Network** tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections.
+On the **网络** tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections.
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/network-tab.png" >}}
 
 ### 6.4 Runtime Tab
 
-On the **Runtime** tab, you can change various runtime settings for your app environment. For more details of these, see the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details*.
+On the **运行时** tab, you can change various runtime settings for your app environment. For more details of these, see the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details*.
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/runtime-tab.png" >}}
 
 ### 6.5 Log Levels Tab
 
-On the **Log Levels** tab, you can change the log levels which are used for the log nodes in your app. For more details of these, see the [Log Levels Tab](/developerportal/deploy/environments-details/#log-levels) section of *Environment Details*.
+On the **日志级别** tab, you can change the log levels which are used for the log nodes in your app. For more details of these, see the [Log Levels Tab](/developerportal/deploy/environments-details/#log-levels) section of *Environment Details*.
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/log-levels-tab.png" >}}
 
@@ -626,7 +629,7 @@ On the **Log Levels** tab, you can change the log levels which are used for the 
 
 If you are using Mendix Operator version 1.5.0 or above, you can configure TLS for your environment from the ATM.
 
-In the TLS pane, you can choose whether to **Apply Default Configuration** or a **Custom TLS Configuration**. If you apply the default configuration, then the configuration made when you ran the configuration script for the namespace will be used.
+In the TLS pane, you can choose whether to **应用默认配置** or a **自定义 TLS 配置**. If you apply the default configuration, then the configuration made when you ran the configuration script for the namespace will be used.
 
 {{% alert color="info" %}}
 If you are using a version of Mendix Operator before 1.5.0, the settings in this tab will have no effect and the default configuration will be applied.
@@ -650,13 +653,15 @@ If you choose a custom TLS configuration, you will need to enter the following i
 
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/new-tls-key.png" >}}
 
-Click **Save** to confirm your new configuration.
+Click **保存并应用** to confirm your new configuration.
 
+{{% todo %}}Is it still necessary to say:
 You will receive a warning that you have made some changes. Click **Apply Changes** to restart the app and apply the changes.
+{{% /todo %}}
 
 ### 6.7 Debugger
 
-On the **Debugger** tab you can set up and view the credentials you need to debug your app when it is running on Tencent.
+On the **调试器** tab you can set up and view the credentials you need to debug your app when it is running on Tencent.
 
 ## 7 Current Limitations{#limitations}
 
@@ -670,22 +675,22 @@ Delete all environments before you delete an app. If you delete an app which has
 
 ### 7.3 App Security and Production
 
-If you attempt to deploy an app with security not set to production into a production environment you will not get an error, however the deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
+If you attempt to deploy an app with security not set to production into a production environment you will not get an error, however the deployment will appear to hang with **个副本正在运行** and **运行时** showing a spinner.
 
 ### 7.4 ApplicationRootUrl Needs to be Set Manually
 
 In some cases, your Mendix app will need to know its own URL - for example when using SSO or sending emails.
 
-For this to work properly, you need to set the [ApplicationRootUrl](/refguide/custom-settings/#general) **Custom Runtime Setting** in the **Runtime** tab to the app's URL.
+For this to work properly, you need to set the [ApplicationRootUrl](/refguide/custom-settings/#general) **自定义运行时设置** in the **运行时** tab to the app's URL.
 
 To add this setting:
 
-1. Copy the **App URL** value from the **General** tab.
-2. Switch to the **Runtime** tab.
-3. Add a **Custom Runtime Setting**: use `ApplicationRootUrl` as the **Setting** name and the URL you copied from **App URL** as the **New value**.
+1. Copy the **应用URL** value from the **常规设置** tab.
+2. Switch to the **运行时** tab.
+3. Add a **自定义运行时设置**: use `ApplicationRootUrl` as **设置** and the URL you copied from **应用URL** as the **值**.
 
 {{% alert color="info" %}}
-If you change **App URL** in the **General** tab, you should update the `ApplicationRootUrl` value as well.
+If you change **应用URL** in the **常规设置** tab, you should update the `ApplicationRootUrl` value as well.
 {{% /alert %}}
 
 ## 8 Troubleshooting
@@ -694,5 +699,5 @@ This section covers an issue which can arise where Mendix cannot recover automat
 
 ### 8.1 Status Reporting
 
-Under some circumstances changes in the status of the environment and its apps will not be updated automatically. To ensure you are seeing the current status, you may need to click the **Refresh** button on the screen (not the browser page refresh button).
+Under some circumstances changes in the status of the environment and its apps will not be updated automatically. To ensure you are seeing the current status, you may need to click the **刷新** button on the screen (not the browser page refresh button).
 

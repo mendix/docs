@@ -39,6 +39,8 @@ This guide requires the following nanoflow actions:
 * **Reload** – This action reloads web and native apps.
 {{% /alert %}}
 
+### 3.1 Adding the Mobule and Microflow
+
 You can either add a new module to your existing app, or create a new Studio Pro app using a **Blank Native Mobile App** template and then adding a new module to it. Either way, your setup will begin with the same step and continue on accordingly:
 
 1. Add a new module *ChangeLanguage* to your app.
@@ -63,9 +65,11 @@ You can either add a new module to your existing app, or create a new Studio Pro
 	
 		{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/04-microflow-language-change.png"  alt="microflow language change"  width= "400" >}}
 
-Your microflow **ACT_Language_ChangeUserLangRuntime** is now ready to be called from a nanoflow which you will configure in the following steps.
+Your microflow **ACT_Language_ChangeUserLangRuntime** is now ready to be called from a nanoflow which you will configure in the following section.
 
-First, add and configure a new nanoflow:
+### 3.2 Adding the Nanoflow
+
+Add and configure a new nanoflow:
 
 1.  Add a new nanoflow *ACT_Language_ChangeUserLangDevice* to your module and configure it like this:
 	1. Add a parameter called **SelectedLanguage** of data type `Object` and entity `System.Language`. This parameter will be the new app language as selected by the user.
@@ -77,7 +81,9 @@ First, add and configure a new nanoflow:
 
 	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/02-nanoflow-language-change.png"  alt="nanoflow language change" width= "400" >}}
 
-Next, add a new native page:
+### 3.3 Adding the Native Page
+
+Add a new native page:
 
 1.  Add a new native page **Language_Overview** to your module called **ChangeLanguage**.
 	1. Add a title called *Select language*, as the selected language in Studio Pro is **English**. You can use a **Text** widget, but anything with a string value is fine.

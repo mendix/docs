@@ -63,45 +63,43 @@ You can either add a new module to your existing app, or create a new Studio Pro
 		1. For the value of that member, set it as the object retrieved earlier: `$SelectedLanguage`.
 		1. Your microflow should look like this:
 	
-		{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/microflow-language-change.png"  alt="microflow language change"  width= "500" >}}
+			{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/microflow-language-change.png"  alt="microflow language change"  width= "500" >}}
 
 Your microflow **ACT_Language_ChangeUserLangRuntime** is now ready to be called from a nanoflow which you will configure in the following section.
 
 ### 3.2 Adding the Nanoflow
 
-Add and configure a new nanoflow:
+Add a new nanoflow *ACT_Language_ChangeUserLangDevice* to your module and configure it like this:
 
-1.  Add a new nanoflow *ACT_Language_ChangeUserLangDevice* to your module and configure it like this:
-	1. Add a parameter called **SelectedLanguage** of data type `Object` and entity `System.Language`. This parameter will be the new app language as selected by the user.
-	1. Make a microflow call to **ACT_Language_ChangeUserLangRuntime**, the microflow you made previously.
-	1. In that microflow call, click **Edit parameter value**, select **Expression**, and write `$SelectedLanguage/Code` as the expression. This microflow call now sets the language as selected by the user.
-	1. Now the cached session needs to be cleared from local storage. Simply call a nanoflow action **Clear cached session data**.
-	1. To load the new language, you must refresh the app. This can be done by calling a nanoflow action **Reload**.
-	1. Your nanoflow should look like this:
+1. Add a parameter called **SelectedLanguage** of data type `Object` and entity `System.Language`. This parameter will be the new app language as selected by the user.
+1. Make a microflow call to **ACT_Language_ChangeUserLangRuntime**, the microflow you made previously.
+1. In that microflow call, click **Edit parameter value**, select **Expression**, and write `$SelectedLanguage/Code` as the expression. This microflow call now sets the language as selected by the user.
+1. Now the cached session needs to be cleared from local storage. Simply call a nanoflow action **Clear cached session data**.
+1. To load the new language, you must refresh the app. This can be done by calling a nanoflow action **Reload**.
+1. Your nanoflow should look like this:
 
-		{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/nanoflow-language-change.png"  alt="nanoflow language change" width= "500" >}}
+	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/nanoflow-language-change.png"  alt="nanoflow language change" width= "500" >}}
 
 ### 3.3 Adding the Native Page
 
-Add a new native page:
+Add a new native page **Language_Overview** to your **ChangeLanguage** module, then do the following:
 
-1.  Add a new native page **Language_Overview** to your module called **ChangeLanguage**.
-	1. Add a title called *Select language*, as the selected language in Studio Pro is **English**. You can use a **Text** widget, but anything with a string value is fine.
-	1. Then underneath the title, add a native **List View** by simply dragging from the toolbox to list all the available languages on the app. Configure it this way:
-		1. In the **Data source** tab, **Type** should be `Database`, **Entity** should be `System.Language`.
-		1. In the **General** tab, **On click** should be configured to call a nanoflow **ACT_Language_ChangeUserLangDevice**.
-		1. Click on the **OK** button.
-			* You should get a dialog box asking **Do you want to automatically fill the contents of the list view?** Select `Yes`.
-		1. **List View** should be populated with two fields: `{Code}` and `{Description}`. Delete the `{Code}` field.
-	1. Ensure the caption of the `{Description}` field in **ListView** is not empty. It should be mapped to the attribute `System.Language.Description` with the `{1}` variable and be used as well.
-	1. Change to the second language in Studio Pro by going to menu **Language** > **Current Language** > `<second_language>`.
-	1. Add a translation of the title in a second language if not available.
-	1. Ensure again that the caption of the `{Description}` field in **ListView** is not empty. It should be mapped to the attribute `System.Language.Description` and be used as well.
-	1. Repeat the above steps to add a translation for the third language as well.
-	1. Set **Language_Overview** as the default home page of the **Native mobile** navigation profile:
-		1. Open **Navigation** in the App Explorer.
-		1. Click the **Native mobile** tab.
-		1. Set **Language_Overview** as the default home page.
+1. Add a title called *Select language*, as the selected language in Studio Pro is **English**. You can use a **Text** widget, but anything with a string value is fine.
+1. Then underneath the title, add a native **List View** by simply dragging from the toolbox to list all the available languages on the app. Configure it this way:
+	1. In the **Data source** tab, **Type** should be `Database`, **Entity** should be `System.Language`.
+	1. In the **General** tab, **On click** should be configured to call a nanoflow **ACT_Language_ChangeUserLangDevice**.
+	1. Click on the **OK** button.
+		* You should get a dialog box asking **Do you want to automatically fill the contents of the list view?** Select `Yes`.
+	1. **List View** should be populated with two fields: `{Code}` and `{Description}`. Delete the `{Code}` field.
+1. Ensure the caption of the `{Description}` field in **ListView** is not empty. It should be mapped to the attribute `System.Language.Description` with the `{1}` variable and be used as well.
+1. Change to the second language in Studio Pro by going to menu **Language** > **Current Language** > `<second_language>`.
+1. Add a translation of the title in a second language if not available.
+1. Ensure again that the caption of the `{Description}` field in **ListView** is not empty. It should be mapped to the attribute `System.Language.Description` and be used as well.
+1. Repeat the above steps to add a translation for the third language as well.
+1. Set **Language_Overview** as the default home page of the **Native mobile** navigation profile:
+	1. Open **Navigation** in the App Explorer.
+	1. Click the **Native mobile** tab.
+	1. Set **Language_Overview** as the default home page.
 
 ## 4 Testing Language Switching {#testing}
 

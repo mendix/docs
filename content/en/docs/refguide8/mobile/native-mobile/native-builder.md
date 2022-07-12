@@ -1,7 +1,6 @@
 ---
 title: "Native Builder (CLI)"
 url: /refguide8/native-builder/
-parent: "native-mobile"
 weight: 70
 tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter", "deprecated"]
 ---

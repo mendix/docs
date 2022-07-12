@@ -1,7 +1,6 @@
 ---
 title: "Map Automatically"
 url: /refguide7/map-automatically/
-parent: "mapping-documents"
 ---
 
 

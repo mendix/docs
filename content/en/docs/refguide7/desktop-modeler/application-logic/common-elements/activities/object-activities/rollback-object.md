@@ -1,7 +1,6 @@
 ---
 title: "Rollback Object"
 url: /refguide7/rollback-object/
-parent: "object-activities"
 ---
 
 ## 1 Introduction

@@ -1,7 +1,6 @@
 ---
 title: "Projects"
 url: /addons/ats-addon/rg-one-projects/
-parent: "rg-one-ats"
 ---
 
 ## 1 Introduction

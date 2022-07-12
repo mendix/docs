@@ -1,7 +1,6 @@
 ---
 title: "OQL Group by Clause"
 url: /refguide7/oql-group-by-clause/
-parent: "oql"
 ---
 
 

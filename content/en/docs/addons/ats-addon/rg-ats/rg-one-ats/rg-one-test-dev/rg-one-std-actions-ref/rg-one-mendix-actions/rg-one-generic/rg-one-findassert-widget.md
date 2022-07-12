@@ -1,7 +1,6 @@
 ---
 title: "Find/Assert Widget"
 url: /addons/ats-addon/rg-one-findassert-widget/
-parent: "rg-one-generic"
 ---
 
 ## 1 Description

@@ -1,7 +1,6 @@
 ---
 title: "Image Widgets"
 url: /studio7/page-editor-widgets-images/
-parent: "page-editor-widgets"
 description: "Describes image widgets in Mendix Studio."
 weight: 30
 tags: ["studio", "page editor", "image", "image widgets", "widgets"]

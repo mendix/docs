@@ -1,7 +1,6 @@
 ---
 title: "Distributing Native Apps"
 url: /refguide/mobile/distributing-mobile-apps/distributing-native-apps/
-parent: /refguide/mobile/distributing-mobile-apps/
 weight: 20
 description: "This guide will help you distribute a mobile app to a mobile app store."
 tags: ["distribution", "app store", "ios", "android"]
@@ -36,22 +35,27 @@ To create a certificate signing request manually, follow these steps:
 2. Open a command line interface (CLI) such as Command Prompt. On most systems, you need to do this as an administrator (right-click the Windows start menu link and select **Run as Administrator**).
 3. Generate a private key with the OpenSSL program that you just installed. Replace `C:\OpenSSL` with where you installed OpenSSL in step 1. The private key file is stored at the location specified after the `-out` parameter. The following example will store the file in the root directory of your C: drive (you can change this to anything you want, just select a convenient place and keep track of where the file is stored): `"C:\OpenSSL\bin\openssl.exe" genrsa -out "C:\private.key" 2048`. The command will output "Generating RSA private key, 2048 bit long modulus" and lots of dots and plus signs.
 4. Generate a certificate signing request (CSR). The file is again stored in the same folder, but can be placed anywhere. Make sure to point to the private key file that was created in the previous step: `"C:\OpenSSL\bin\openssl.exe" req -new -key "C:\private.key" -out "C:\ios.csr"`. The command will print some text and then ask you for several different pieces of information related to your identity. Only the **Common Name** is relevant. Fill in your own name, so that the certificate is easily recognized later on after uploading it to the Apple Developer Member Center.
+5. Keep your CLI open.
 
 The resulting *ios.csr* file must be uploaded to the Apple Developer Member Center to generate a signed certificate. Follow these steps to do that:
 
-1. Open the [Apple Developer Member Center](https://developer.apple.com/account/overview.action).
-2. Under **iOS, tvOS, watchOS**, click **Certificates, All**.
-3. In the **iOS Certificates** overview, click the plus button on the top-right. This will open the **Add iOS Certificate** wizard in the **Select Type** step with the caption "What type of certificate do you need?".
-    *   If the plus button is disabled (greyed out), you do not have enough rights. Ask the company account administrator to give you extra rights.
-4. Under **Development**, select **iOS Development Certificate**.
-5. Click **Continue**. You are now at step **About Creating a Certificate Signing Request (CSR)**. This page describes how to create a certificate signing request on Macs. You can ignore it.
-6. Click **Continue** again. You are now at step **Generate**, captioned **Generate your certificate**.
-7. Under **Upload CSR file**, click **Choose File ...**.
-8. Select the *ios.csr* certificate signing request file that you created.
-9. Click **Continue**. Apple will sign your CSR and make the signed certificate available for download.
-    *   If you are presented with a message that says that your certificate signing request is pending approval, you do not have enough rights. Ask the company account administrator to approve your certificate signing request.
-10. Click **Download** and store the *.cer* file on your disk at a convenient place (for example, next to the private key and CSR files).
-11. Click **Done**. The **iOS Certificates** overview page becomes visible again. Your new certificate should be in the list. Here, you can download it again, or you can revoke it (in case you lose the corresponding private key).
+1. In the Apple Developer Member Center click [Create a New Certificate](https://developer.apple.com/account/resources/certificates/add).
+2. Under **Software**, select **iOS App Development**.
+3. Click **Continue** again. You are now at the **Create a New Certificate** step.
+4. Under **Upload a Certificate Signing Request**, click **Choose File**.
+5. Select the *ios.csr* certificate signing request file that you created.
+6. Click **Continue**. Apple will sign your CSR and make the signed certificate available for download.
+    * If you are presented with a message that says that your certificate signing request is pending approval, you do not have the required access rights. Ask your company account administrator to approve your certificate signing request.
+7. Click **Download** and store the *.cer* file on your disk at a convenient place (for example, next to the private key and CSR files).
+8. Click **Done**. The **iOS Certificates** overview page becomes visible again. Your new certificate should be in the list. Here, you can download it again, or you can revoke it (in case you lose the corresponding private key).
+
+The downloaded *ios_development.cer* and *private.key* file must now be packaged:
+
+1. Return to your CLI.
+2. Convert the downloaded certificate to *pem* format with this command: `"C:\OpenSSL\bin\openssl.exe" x509 -in "C:\ios_development.cer" -inform der -out "C:\ios_development.pem"`.
+3. Package your private key and certificate. The command will ask you for a password for the package: `"C:\OpenSSL\bin\openssl.exe" pkcs12 -export -inkey "C:\private.key" -in "C:\ios_development.pem" -out "C:\key_and_certificate.p12"`. The same password will be used later by the Mendix Native Mobile Builder.
+
+The resulting *key_and_certificate.p12* will be used by the Mendix Native Mobile Builder to sign your apps.
 
 ### 2.3 Creating the Required Distribution Profile
 

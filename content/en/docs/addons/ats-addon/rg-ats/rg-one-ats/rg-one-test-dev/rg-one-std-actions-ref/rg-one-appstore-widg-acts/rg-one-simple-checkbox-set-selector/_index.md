@@ -1,7 +1,6 @@
 ---
 title: "Simple Checkbox Set Selector"
 url: /addons/ats-addon/rg-one-simple-checkbox-set-selector/
-parent: "rg-one-appstore-widg-acts"
 ---
 
 This section contains these documents:

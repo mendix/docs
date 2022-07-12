@@ -1,7 +1,6 @@
 ---
 title: "Widget Styling Guide"
 url: /refguide/mobile/designing-mobile-user-interfaces/widget-styling-guide/
-parent: /refguide/mobile/native-styling/
 weight: 45
 description: "This guide will contextualize the style elements Mendix uses in native mobile apps, as well as explain the classes and style properties of Mendix’s widgets."
 tags: ["widgets", "styling"]
@@ -528,7 +527,7 @@ The default class to style all reference selector inputs is named `ReferenceSele
 
 Images, videos & files help your user app manage images and other files. For more information on these widgets, see [Images, Videos & Files](/refguide/image-and-file-widgets/).
 
-### 7.2 Static Image {#image}
+### 7.1 Static Image {#image}
 
 The static image widget can be used to show a predefined image on a page, layout, or snippet. For more information on this widgets, see [Static Image](/refguide/image/). The widget’s style properties are as follows:
 
@@ -549,7 +548,7 @@ The static image widget can be used to show a predefined image on a page, layout
 
 The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `NativeDynamicImage` as described in the [Dynamic Image](#dynamic-image) section below.
 
-### 7.1 Dynamic Image {#dynamic-image}
+### 7.2 Dynamic Image {#dynamic-image}
 
 A dynamic image can be used to display an image. This widget supports the same style properties and structure as the [Static Image](#image) widget above.
 
@@ -1246,7 +1245,7 @@ A main object has four objects.
 | buttonContainer | This has all ViewStyle properties. | Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. |
 | container       | This has all ViewStyle properties. | Styles the wrapper view around the whole menu.     |
 
-#### BasicItemStyle
+#### 24.1 BasicItemStyle
 
 | Element                   | Style Properties |  Description                                      |
 | ---------------------------| ---- | ------------------------------------------------ |
@@ -1254,7 +1253,7 @@ A main object has four objects.
 | itemStyle | ItemStyle      | Styles the basic items.                         |
 | dividerColor | `string`      | Styles the divider color.                         |
 
-#### ItemStyle
+#### 24.2 ItemStyle
 
 | Element                | Style Properties                     | Description                                                                                      |
 | ----------------------------------------| ----- | ------------------------------------------------------------------------------------------------ |
@@ -1266,7 +1265,7 @@ A main object has four objects.
 | customStyle |  This has all TextStyle properties.                 | Styles all basic menu items which have the `custom` style selected.                                  |
 
 
-#### CustomItemStyle
+#### 24.3 CustomItemStyle
 
 | Element                   | Style Properties |  Description                                      |
 | ---------------------------| ---- | ------------------------------------------------ |
@@ -1326,7 +1325,7 @@ export myCarouselStyle = {
 | cardLayout | LayoutStyle | Styles the carousel when the layout is set to card  |
 | fullWidthLayout | LayoutStyle                             | Styles the carousel when the layout is set to full width.                 |
 
-#### LayoutStyle
+#### 25.1 LayoutStyle
 
 | Element                | Style Properties                               | Description                                                                                    |
 | -----------------------|-------------------------------- | ---------------------------------------------------------------------------------------------- |
@@ -1335,7 +1334,7 @@ export myCarouselStyle = {
 | indicator | `color: string`                             | Styles the loading indicator which will be shown while the carousel is loading.                 |
 | pagination | Pagination                                 | Styles pagination container, dots, active dots, and text.                                        |
 
-#### Pagination
+#### 25.2 Pagination
 
 | Element | Style Properties                                                                         | Description                                                                                                    |
 | ---------|------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
@@ -1656,21 +1655,40 @@ The default class to style all check box inputs is named `com_mendix_widget_nati
 
 ### 11.31 Background Gradient
 
-The background gradient widget allows you to apply a background that transitions between multiple colors in a linear direction..
+The background gradient widget allows you to apply a background that transitions between multiple colors in a linear direction.
 
 The widget’s style properties are as follows:
 
 ```xml
-<container>
-	content
-</container>
+<angle/>
+<colorList>
+	[
+		<gradient_color_object/>
+	]
+</colorList>
+<container/>
+<opacity/>
 ```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties. |        |
+| `angle` | | Line of direction. Takes a value from `0` to `360`. A value of 0 is equivalent to top; increasing values rotate the design clockwise. |
+| `colorList` | [gradient_color_object](#gradient-color-object) | Passes the colors you want to display in an array. Example: `[{ color: "#fff", offset: 0 }, { color: "#000", offset: 1 }]` |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `opacity` | | Takes a value from `0` to `100`. The lower the value, the more transparent. |
 
 The default class to style all background gradients is named `com_mendix_widget_native_backgroundgradient_BackgroundGradient`.
+
+#### 11.31.1 Background Gradient Types
+
+##### 11.31.1.1 gradient_color_object {#gradient-color-object}
+
+An object `{ color: string, offset: number }` that represents the color and the offset.
+
+| Name | Type | Description |
+| --- | --- | --- |
+| color | `string` | Colors can be passed in different formats. Valid color value formats are `#d0d0d0`, `rgb(115,155,155)`, or `rgba(195,226,226,0.5)` |
+| offset | `number` | A color-stop's value, followed by one or more optional stop positions (should be between `0.0` and `1.0`) |
 
 ### 11.32 Column Chart
 

@@ -17,6 +17,32 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### July 8th, 2022
+
+#### Improvements
+
+We added the ability to enable and disable additional services at an app and environment level.
+
+### June 29th, 2022
+
+#### Improvements
+
+**Update of `*.apps.ca-1a.mendixcloud.com` TLS certificate**
+
+We replaced the TLS certificate for `*.apps.ca-1a.mendixcloud.com` on June 29th, 2022. Browsers like Mozilla Firefox, Microsoft Edge, and Google Chrome automatically trust the new certificate. In those cases, there is nothing you have to do.
+
+Current Certificate Details: <https://crt.sh/?id=4793020705>
+
+New Certificate Details: <https://crt.sh/?id=6940447552>
+
+**Update of `*.apps.au-1a.mendixcloud.com` TLS certificate**
+
+We replaced the TLS certificate for `*.apps.au-1a.mendixcloud.com` on June 29th, 2022. Browsers like Mozilla Firefox, Microsoft Edge, and Google Chrome automatically trust the new certificate. In those cases, there is nothing you have to do.
+
+Current Certificate Details: <https://crt.sh/?id=4793020687>
+
+New Certificate Details: <https://crt.sh/?id=6940402070>
+
 ### June 15th, 2022
 
 #### Improvements

@@ -1,7 +1,6 @@
 ---
 title: "Part 4: Data"
 url: /refguide/mobile/using-mobile-capabilities/local-notifications/local-notif-data/
-parent: /refguide/mobile/using-mobile-capabilities/local-notifications/
 weight: 40
 description: A tutorial for integrating data into your push notifications.
 ---
@@ -16,10 +15,10 @@ Every entry in the Mendix database has an unique ID. If you want to pass an obje
 
 You will create the following things to send data to pages:
 
-* **Two entities** – *TestEntity* to test how to show particular object, and *Notification* to help pass data to your page
-* **One page** – *DetailTestEntity* which will be shown on tapping a notification
-* **One microflow** – *DS_TestEntity* to create dummy data for testing
-* **Three nanoflows** – *DS_Notification* to create a dummy notification object, *ACT_PassGUIDToNotification* to pass a GUID, and *On_tapNotification* to process data from your notification
+* **Two entities** – Create *TestEntity* to test how to show particular object, and *Notification* to help pass data to your page.
+* **One page** – Create *DetailTestEntity* which will be shown on tapping a notification.
+* **One microflow** – Create *DS_TestEntity* to create dummy data for testing.
+* **Three nanoflows** – Create *DS_Notification* to create a dummy notification object *ACT_PassGUIDToNotification* to pass a GUID, and *On_tapNotification* to process data from your notification.
 
 ## 2 Prerequisites
 
@@ -242,7 +241,7 @@ Now you will set up a data view on your home page.
 
 	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/notif-action-2.png" alt="notification action"   width="500"  >}}
 
-Great job! Now you will test your data notification functionality.
+Great job! Now test your data notification functionality:
 
 1. Start and load the app on your mobile device.
 2. Tap the button which sends a notification.

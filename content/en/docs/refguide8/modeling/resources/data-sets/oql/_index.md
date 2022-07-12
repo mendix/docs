@@ -1,7 +1,6 @@
 ---
 title: "OQL"
 url: /refguide8/oql/
-parent: "data-sets"
 tags: ["studio pro"]
 ---
 

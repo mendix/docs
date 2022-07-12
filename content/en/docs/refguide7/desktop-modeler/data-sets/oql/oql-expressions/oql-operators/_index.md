@@ -1,7 +1,6 @@
 ---
 title: "OQL Operators"
 url: /refguide7/oql-operators/
-parent: "oql-expressions"
 ---
 
 

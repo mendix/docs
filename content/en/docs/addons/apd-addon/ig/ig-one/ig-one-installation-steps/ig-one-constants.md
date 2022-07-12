@@ -1,7 +1,6 @@
 ---
 title: "Constants"
 url: /addons/apd-addon/ig-one-constants/
-parent: "ig-one-installation-steps"
 ---
 This appendix describes the constants used in the APMAgent. You are advised to use the defaults with the exception of the CompanyName constant.
 

@@ -1,7 +1,6 @@
 ---
 title: "Statistics Tool"
 url: /addons/apd-addon/rg-one-statistics-tool/
-parent: "rg-one-apm"
 ---
 
 ## 1 Intoduction

@@ -1,7 +1,6 @@
 ---
 title: "Mendix Single Sign-On"
 url: /developerportal/deploy/mendix-sso/
-parent: "mendix-cloud-deploy"
 weight: 70
 description: "Use the Mendix SSO module to add Single Sign-on to your app using the user's Mendix credentials"
 tags: ["SSO", "Single Sign-on", "Mendix credentials", "Mendix SSO"]

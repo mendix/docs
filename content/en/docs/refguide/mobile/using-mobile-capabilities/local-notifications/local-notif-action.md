@@ -1,7 +1,6 @@
 ---
 title: "Part 3: Actions"
 url: /refguide/mobile/using-mobile-capabilities/local-notifications/local-notif-action/
-parent: /refguide/mobile/using-mobile-capabilities/local-notifications/
 weight: 30
 description: A tutorial for making your push notifications trigger actions when tapped.
 ---

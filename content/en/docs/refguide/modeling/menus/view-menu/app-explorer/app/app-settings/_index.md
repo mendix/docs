@@ -1,7 +1,6 @@
 ---
 title: "App Settings"
 url: /refguide/app-settings/
-parent: "app"
 weight: 10
 description: "Settings which apply to the app as a whole."
 tags: ["app", "configuration", "runtime", "Studio Pro", "languages", "certificate", "theme", "hashing", "hashing algorithm"]

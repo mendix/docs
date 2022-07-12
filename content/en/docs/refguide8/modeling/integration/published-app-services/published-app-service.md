@@ -1,7 +1,6 @@
 ---
 title: "Published App Service"
 url: /refguide8/published-app-service/
-parent: "published-app-services"
 tags: ["studio pro"]
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Create a Backup"
 url: /developerportal/operate/create-backup/
-parent: "backups"
 weight: 10
 description: "This page describes how to create a backup."
 tags: ["Backup","Mendix Cloud","Developer Portal"]

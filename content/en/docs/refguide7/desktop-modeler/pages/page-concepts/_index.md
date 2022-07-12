@@ -1,7 +1,6 @@
 ---
 title: "Page Concepts"
 url: /refguide7/page-concepts/
-parent: "pages"
 weight: 5
 description: "Basic information on how pages are structured and ways to create an application flow."
 tags: ["Visibility", "editability", "Example", "Tags"]

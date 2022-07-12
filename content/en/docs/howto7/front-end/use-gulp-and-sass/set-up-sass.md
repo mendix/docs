@@ -1,7 +1,6 @@
 ---
 title: "Set Up Gulp & Sass"
 url: /howto7/front-end/set-up-sass/
-parent: "use-gulp-and-sass"
 weight: 1
 tags: ["gulp", "sass", "ux", "front end"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

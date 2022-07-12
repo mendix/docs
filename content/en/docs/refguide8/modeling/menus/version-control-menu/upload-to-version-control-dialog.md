@@ -1,7 +1,6 @@
 ---
 title: "Upload to Version Control Server"
 url: /refguide8/upload-to-version-control-dialog/
-parent: "version-control-menu"
 weight: 70
 tags: ["studio pro"]
 aliases:

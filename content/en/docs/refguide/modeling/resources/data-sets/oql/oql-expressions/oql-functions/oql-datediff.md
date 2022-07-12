@@ -1,7 +1,6 @@
 ---
 title: "OQL DATEDIFF"
 url: /refguide/oql-datediff/
-parent: "oql-functions"
 tags: ["studio pro"]
 ---
 

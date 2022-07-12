@@ -1,7 +1,6 @@
 ---
 title: "OQL Limit Clause"
 url: /refguide/oql-limit-clause/
-parent: "oql"
 tags: ["studio pro"]
 ---
 

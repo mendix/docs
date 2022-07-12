@@ -1,7 +1,6 @@
 ---
 title: "Events Section"
 url: /studio8/page-editor-widgets-events-section/
-parent: "page-editor-widgets"
 weight: 70
 description: "Describes the Events section in widgets properties in Mendix Studio."
 tags: ["studio", "page editor", "widgets", "on click action", "events"]

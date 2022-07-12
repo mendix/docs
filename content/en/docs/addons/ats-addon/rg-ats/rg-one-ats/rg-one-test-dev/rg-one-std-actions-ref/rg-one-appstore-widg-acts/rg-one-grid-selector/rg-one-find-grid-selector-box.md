@@ -1,7 +1,6 @@
 ---
 title: "Find Grid Selector Box"
 url: /addons/ats-addon/rg-one-find-grid-selector-box/
-parent: "rg-one-grid-selector"
 ---
 
 ## 1 Description

@@ -1,7 +1,6 @@
 ---
 title: "Enumerations in Expressions"
 url: /refguide7/enumerations-in-expressions/
-parent: "expressions"
 ---
 
 

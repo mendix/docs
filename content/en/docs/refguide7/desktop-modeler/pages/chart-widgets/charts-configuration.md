@@ -1,7 +1,6 @@
 ---
 title: "Chart Configuration"
 url: /refguide7/charts-configuration/
-parent: "chart-widgets"
 weight: 10
 tags: ["Charts", "Widgets", "Desktop Modeler", "Chart Configuration", "Configuration"]
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Published OData Services"
 url: /refguide8/published-odata-services/
-parent: "integration"
 tags: ["studio pro"]
 aliases:
     - /refguide8/consumed-odata-services.html

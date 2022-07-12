@@ -1,7 +1,6 @@
 ---
 title: "Job Configuration"
 url: /addons/ats-addon/rg-two-test-run-configuration/
-parent: "rg-two-test-run"
 ---
 
 ## 1 Introduction

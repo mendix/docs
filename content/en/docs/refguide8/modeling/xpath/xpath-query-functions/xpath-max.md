@@ -1,7 +1,6 @@
 ---
 title: "XPath Max"
 url: /refguide8/xpath-max/
-parent: "xpath-query-functions"
 tags: ["studio pro"]
 ---
 

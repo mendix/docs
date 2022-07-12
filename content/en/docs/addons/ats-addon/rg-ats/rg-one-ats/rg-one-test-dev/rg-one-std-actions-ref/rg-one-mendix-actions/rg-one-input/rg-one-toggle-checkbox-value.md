@@ -1,7 +1,6 @@
 ---
 title: "Toggle Checkbox Value"
 url: /addons/ats-addon/rg-one-toggle-checkbox-value/
-parent: "rg-one-input"
 ---
 
 ## 1 Description

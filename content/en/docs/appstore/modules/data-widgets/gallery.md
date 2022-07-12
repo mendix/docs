@@ -1,7 +1,6 @@
 ---
 title: "Gallery"
 url: /appstore/modules/gallery/
-parent: "data-widgets"
 description: "Describes the configuration and usage of the Gallery widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "gallery", "list view", "platform support"]
 

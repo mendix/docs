@@ -1,7 +1,6 @@
 ---
 title: "Logout"
 url: /addons/ats-addon/rg-one-logout/
-parent: "rg-one-generic"
 ---
 
 ## 1 Description

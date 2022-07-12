@@ -1,8 +1,7 @@
 ---
 title: "Content Security Policy"
 url: /refguide/mobile/using-mobile-capabilities/csp/
-parent: /refguide/mobile/using-mobile-capabilities/
-menu_order: 80
+weight: 80
 description: By employing a content security policy (CSP) in your app, you can protect it from malicious content which might try to take advantage of the app's trusted web page context.
 tags: ["security", "headers"]
 ---

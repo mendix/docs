@@ -1,7 +1,6 @@
 ---
 title: "Set ListView Search"
 url: /addons/ats-addon/rg-one-set-listview-search/
-parent: "rg-one-datagrid-templategrid-listview"
 ---
 
 ## 1 Description

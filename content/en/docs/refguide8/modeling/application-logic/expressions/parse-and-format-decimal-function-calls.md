@@ -1,7 +1,6 @@
 ---
 title: "Parse & Format Decimal Function Calls"
 url: /refguide8/parse-and-format-decimal-function-calls/
-parent: "expressions"
 weight: 150
 tags: ["studio pro", "expression", "parsing", "formatting"]
 ---

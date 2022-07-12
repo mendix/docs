@@ -1,7 +1,6 @@
 ---
 title: "Get Started with Atlas UI"
 url: /howto7/front-end/get-started-with-atlasui/
-parent: "atlas-ui"
 weight: 10
 tags: ["Atlas", "UI", "UX", "user experience", "Web Modeler"]
 ---

@@ -83,7 +83,7 @@ The actions available depend on the app selected:
 
 * **Edit in Mendix Studio**
 * **Edit in Mendix Studio Pro**
-* **Delete App** – allows you to delete your app, provided you are the only team member (you will be warned of the consequences and asked for confirmation before the app is deleted)
+* **Leave App** – allows you to leave the app
 
 To go to the [licensed environments](/developerportal/deploy/environments/) of your deployed app, click the cloud icon in the lower-right corner of the app tile.
 
@@ -111,12 +111,14 @@ Clicking the question icon in the Developer Portal brings up the options Mendix 
 
 {{< figure src="/attachments/developerportal/developerportal-assistance.jpg" >}}
 
+* **Get Started with Mendix** – click this to check out [Mendix Basics](https://guidance.mendix.com/link/onboarding)
+* **What's New?** – click this to see our [latest features](https://www.mendix.com/releases/)
 * **Ask the Community** – click this to go to the [Mendix Forum](https://forum.mendixcloud.com/)
+* **Share an Idea** – click this to share your idea on Mendix Forum
 * **Check the documentation** – click this to go to the [Mendix Documentation](https://docs.mendix.com/)
 * **Contact Mendix Support** – click this to go to [Mendix Support](https://support.mendix.com/)
 
 ## 6 Guide Categories
 
 The *Developer Portal Guide* is divided into the following categories:
-
 

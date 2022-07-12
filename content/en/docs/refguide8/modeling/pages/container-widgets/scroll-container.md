@@ -1,7 +1,6 @@
 ---
 title: "Scroll Container"
 url: /refguide8/scroll-container/
-parent: "container-widgets"
 weight: 50
 tags: ["studio pro", "scroll container", "container widget", "widget"]
 aliases:

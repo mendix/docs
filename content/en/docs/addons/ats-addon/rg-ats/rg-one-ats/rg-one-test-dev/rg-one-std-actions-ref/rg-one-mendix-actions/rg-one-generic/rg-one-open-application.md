@@ -1,7 +1,6 @@
 ---
 title: "Open Application"
 url: /addons/ats-addon/rg-one-open-application/
-parent: "rg-one-generic"
 ---
 
 ## 1 Description

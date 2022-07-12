@@ -1,7 +1,6 @@
 ---
 title: "Create Maintainable Test Cases"
 url: /addons/ats-addon/ht-two-create-extracted-actions/
-parent: "ht-two"
 description: "Describes how to create maintainable test cases in ATS."
 tags: ["ATS", "testing", "maintainability"]
 ---

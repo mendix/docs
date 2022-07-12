@@ -1,7 +1,6 @@
 ---
 title: "Offline Best Practices"
 url: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/
-parent: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/
 weight: 30
 description: "Describes how to make secure, high-performing offline-first apps."
 tags: ["offline", "offline-first"]
@@ -24,7 +23,7 @@ To ensure the best user experience for your Mendix application, follow these bes
 
 To avoid the problems mentioned above, we suggest following these best practices:
 
-* Do not remove, rename, or change the type of entities or their attributes in offline apps after your initial release — this may cause objects or values to be no longer accessible to offline users (if needed, you can do an "in-between" release that is still backwards-compatible, and then make the changes in the next release after all the apps are synchronized)
+* Do not remove, rename, or change the type of entities or their attributes in offline apps after your initial release—this may cause objects or values to be no longer accessible to offline users (if needed, you can do an "in-between" release that is still backwards-compatible, and then make the changes in the next release after all the apps are synchronized)
 * Do not delete objects which can be synced to offline users (this will result in lost changes on those objects when attempted to synchronize them)
 * Avoid using domain-level validation for offline entities – use nanoflows or input validation instead (it is also a good practice to validate again on the server using microflows)
 * When committing objects that are being referenced by other objects, make sure the other objects are also committed

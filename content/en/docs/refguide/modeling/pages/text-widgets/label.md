@@ -1,7 +1,6 @@
 ---
 title: "Label"
 url: /refguide/label/
-parent: "text-widgets"
 weight: 30
 tags: ["studio pro", "label", "text widgets"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

@@ -1,7 +1,6 @@
 ---
 title: "Branch Line Manager"
 url: /refguide/branch-line-manager-dialog/
-parent: "version-control-menu"
 weight: 80
 tags: ["studio pro", "manage branch lines", "branch line manager"]
 ---

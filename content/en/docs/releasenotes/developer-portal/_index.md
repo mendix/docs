@@ -17,6 +17,35 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### July 7th, 2022
+
+#### New Features
+
+*  We released [Epics](/developerportal/collaborate/epics/), our brand new tool for agile planning, for Public Beta usage. Epics has many features. For example, you can:
+
+    * Map your exact development process with fully customizable swimlanes
+    * Use Scrum or Kanban – we support both!
+    * Set sprint goals and see all the basic sprint information on the board – if you are using Scrum
+    * Drag and drop stories on our brand new project board
+    * Format stories in any way you want – for example, adding headers, links, and code blocks, linking specific stories, and using @ to mention people (notifications for this coming soon!)
+    * Clone stories
+    * Create and track the progress of epics
+    * Archive single stories or whole swimlanes
+    * Easily search through your completed stories and get an overview of completed sprints in the archive
+
+You can try it out for any Mendix app. Your Scrum Master just needs to enable Epics in the [General Settings](/developerportal/collaborate/general-settings/#stories). Please note it is not yet possible to migrate the data from Stories into Epics, so we recommend using it for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.
+
+### June 30th, 2022
+
+#### Fixes
+
+* We introduced improvements in the performance of the [Feedback API](/apidocs-mxsdk/apidocs/feedback-api/).
+
+#### New Features
+
+* We redesigned the [General](/developerportal/collaborate/general-settings/) settings section to make it more intuitive and user-friendly.
+* We prepared the integration of Studio Pro with our new project management tool, Epics (coming soon!).
+
 ### June 16th, 2022
 
 #### Fixes
@@ -72,7 +101,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 	* There is a dedicated for page for your bookmarks
 	* Breadcrumb navigation
 	* Dedicated pages for Forum content you have interacted with (asked, answered, and commented for questions, and submitted and commented for ideas)
-  
+
 ### March 24th, 2022
 
 #### Improvements
@@ -165,7 +194,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 		* Issuer: C = GB, ST = Greater Manchester, L = Salford, O = Sectigo Limited, CN = Sectigo RSA Domain Validation Secure Server CA
 		* Validity: Oct 29 00:00:00 2021 GMT - Oct 29 23:59:59 2022 GMT
 		* SHA-256 Fingerprint: `BF:AE:01:9F:93:5A:D9:92:35:B5:BA:9F:E4:AE:56:99:21:17:44:51:56:17:A2:11:A1:FE:3B:42:9C:B4:B6:70`
-    		* SHA-1 Fingerprint: `0F:3B:31:9F:86:6E:65:2D:5F:7A:EF:35:64:04:45:67:58:E4:ED:11`
+        		* SHA-1 Fingerprint: `0F:3B:31:9F:86:6E:65:2D:5F:7A:EF:35:64:04:45:67:58:E4:ED:11`
 	
 ### October 21st, 2021
 

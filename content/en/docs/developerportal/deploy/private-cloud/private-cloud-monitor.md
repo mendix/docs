@@ -1,7 +1,6 @@
 ---
 title: "Monitoring Environments in Mendix for Private Cloud"
 url: /developerportal/deploy/private-cloud-monitor/
-parent: "private-cloud"
 description: "Describes the processes for setting up a monitoring solution for Mendix environments in the Private Cloud"
 weight: 31
 tags: ["Monitor", "Logging", "Private Cloud", "Environment"]

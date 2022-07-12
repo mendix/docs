@@ -1,7 +1,6 @@
 ---
 title: "Structure for How-To's"
 url: /addons/ats-addon/ht-two-custom-action-howto-structure/
-parent: "ht-two-custom-action-general"
 description: "Explains the general structure of the how-to's for creating custom actions."
 tags: ["ATS", "testing"]
 ---

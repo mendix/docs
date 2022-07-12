@@ -1,7 +1,6 @@
 ---
 title: "Template Grid (Document Template)"
 url: /refguide7/template-grid-document-template/
-parent: "document-templates"
 aliases:
     - /refguide7/Template+Grid+(document+template).html
     - /refguide7/template-grid-(document-template).html

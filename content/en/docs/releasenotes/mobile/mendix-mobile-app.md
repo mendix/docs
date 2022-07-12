@@ -4,7 +4,6 @@ url: /releasenotes/mobile/mendix-mobile-app/
 category: "Mobile"
 weight: 20
 description: "These are the release notes for the Mendix Mobile app."
-toc-level: 1
 ---
 
 ## Android 4.7.1 / iOS 4.7.1

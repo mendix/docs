@@ -1,7 +1,6 @@
 ---
 title: "GitHub-Flavored Markdown"
 url: /refguide8/gfm-syntax/
-parent: "published-rest-service"
 weight: 70
 description: "Link to GitHub Guide to Mastering Markdown"
 tags: ["published REST", "GitHub", "Markdown", "studio pro"]

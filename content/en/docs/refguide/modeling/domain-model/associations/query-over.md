@@ -1,7 +1,6 @@
 ---
 title: "Querying Over Self-References"
 url: /refguide/query-over/
-parent: "associations"
 weight: 20
 tags: ["query", "self-reference", "association", "domain model"]
 ---
@@ -73,6 +72,10 @@ The `[reversed()]` expression can only be applied on self-references. When an as
 If the $ChosenFolder object has **Code** `202002141355334` and **Name** `SubFolder2` we have chosen the folder with **ID** `3`. The folder in the right-hand table, highlighted in orange, will be returned. The platform applies the constraint in reverse, on the left/child side of the association and returns the relevant ParentFolder.
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/query-over/query-over-retrieve-reversed-tables.png" >}}
+
+Here is a video created by our community member [Mike Kumpf](https://developer.mendixcloud.com/link/profile/overview/1360) explaining the use of `reversed()` in an expression.
+
+{{% youtube 5tznw5ZUQgk %}}
 
 ### 2.3 Creating More Complex Queries {#more-complex}
 

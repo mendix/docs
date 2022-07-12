@@ -1,7 +1,6 @@
 ---
 title: "JavaScript & TypeScript Resources"
 url: /apidocs-mxsdk/mxsdk/javascript-typescript-resources/
-parent: "sdk-refguide"
 weight: 2
 ---
 

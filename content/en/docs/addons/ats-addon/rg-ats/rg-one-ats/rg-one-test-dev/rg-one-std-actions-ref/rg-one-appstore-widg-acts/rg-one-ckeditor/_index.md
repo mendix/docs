@@ -1,7 +1,6 @@
 ---
 title: "CKEditor"
 url: /addons/ats-addon/rg-one-ckeditor/
-parent: "rg-one-appstore-widg-acts"
 ---
 
 This section contains these documents:

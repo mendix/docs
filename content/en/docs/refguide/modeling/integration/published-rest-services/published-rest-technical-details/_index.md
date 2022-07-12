@@ -1,7 +1,6 @@
 ---
 title: "Technical Details of Published REST"
 url: /refguide/published-rest-technical-details/
-parent: "published-rest-services"
 weight: 40
 description: "Landing page for technical details about aspects of Published REST"
 tags: ["HTTP Request", "Published REST", "Request Routing", "JSON Schema", "Swagger", "OpenApi", "Documentation", "custom authentication"]

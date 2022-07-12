@@ -1,7 +1,6 @@
 ---
 title: "Compatibility Table" 
 url: /addons/ats-addon/rg-two-provider_platform_browser_compatiblitiy_table/
-parent: "rg-two-test-run"
 ---
 
 ## 1 Introduction

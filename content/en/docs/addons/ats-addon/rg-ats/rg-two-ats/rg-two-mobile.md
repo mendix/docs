@@ -1,7 +1,6 @@
 ---
 title: "Mobile"
 url: /addons/ats-addon/rg-two-mobile/
-parent: "rg-two-ats"
 ---
 
 ## 1 Introduction

@@ -1,7 +1,6 @@
 ---
 title: "Set Up Selenium Locally"
 url: /addons/ats-addon/ht-two-setup-local-selenium-index/
-parent: "ht-two"
 ---
 
 These are the documents for setting up Selenium locally:

@@ -2,7 +2,6 @@
 title: "Restrict Access for Incoming Requests"
 linktitle: "Restrict Incoming Access"
 url: /developerportal/deploy/access-restrictions/
-parent: "mendix-cloud-deploy"
 weight: 36
 description: "How to limit access to your app using IP addresses and certificates"
 tags: ["incoming requests", "IP Range", "security", "paths", "URL", "certificate"]

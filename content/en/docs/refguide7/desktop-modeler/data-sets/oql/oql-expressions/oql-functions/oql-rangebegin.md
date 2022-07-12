@@ -1,7 +1,6 @@
 ---
 title: "OQL RANGEBEGIN"
 url: /refguide7/oql-rangebegin/
-parent: "oql-functions"
 ---
 
 

@@ -1,7 +1,6 @@
 ---
 title: "Edit button"
 url: /refguide7/edit-button/
-parent: "control-bar"
 ---
 
 {{% alert color="info" %}}

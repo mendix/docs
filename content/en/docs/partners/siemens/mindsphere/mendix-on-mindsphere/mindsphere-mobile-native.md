@@ -1,7 +1,6 @@
 ---
 title: "MindSphere Mobile Native"
 url: /partners/siemens/mindsphere-mobile-native/
-parent: "mendix-on-mindsphere"
 weight: 200
 description: "Explain how to create your own Native Mobile application for MindSphere and what needs to be considered for development"
 tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Local", "Styling", "UI", "Icons", "Limitations", "Licensing", "Validation", "Mobile Native"]

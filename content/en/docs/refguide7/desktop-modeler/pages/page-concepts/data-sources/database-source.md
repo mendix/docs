@@ -1,7 +1,6 @@
 ---
 title: "Database Source"
 url: /refguide7/database-source/
-parent: "data-sources"
 ---
 
 

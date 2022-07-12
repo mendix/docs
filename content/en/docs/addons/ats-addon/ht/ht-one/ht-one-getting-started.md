@@ -1,7 +1,6 @@
 ---
 title: "Get Started"
 url: /addons/ats-addon/ht-one-getting-started/
-parent: "ht-one"
 weight: 1
 description: "Describes the initial steps for automatically testing your apps using ATS."
 tags: ["ATS", "testing"]
@@ -27,8 +26,6 @@ Before starting with this how-to, make sure you have the following prerequisites
 * Your ATS instance
 * An application under test (AUT)
 * Selenium hub (for more information on the Selenium options, see [ATS Deployment](/addons/ats-addon/ov-deployment/))
-
-{{% youtube zJOpO0AymAg %}}
 
 ## 3 Creating a New Project {#CreatingNewProject}
 

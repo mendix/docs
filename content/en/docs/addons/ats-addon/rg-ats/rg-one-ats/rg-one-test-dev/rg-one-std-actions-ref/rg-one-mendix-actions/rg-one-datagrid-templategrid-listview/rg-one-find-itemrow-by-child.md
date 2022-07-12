@@ -1,7 +1,6 @@
 ---
 title: "Find Item/Row (by child element)"
 url: /addons/ats-addon/rg-one-find-itemrow-by-child/
-parent: "rg-one-datagrid-templategrid-listview"
 ---
 
 ## 1 Description

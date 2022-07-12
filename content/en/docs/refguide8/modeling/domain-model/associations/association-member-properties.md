@@ -1,7 +1,6 @@
 ---
 title: "Association Tab Properties"
 url: /refguide8/association-member-properties/
-parent: "associations"
 weight: 15
 tags: ["domain model", "association", "studio pro"]
 ---

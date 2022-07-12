@@ -1,7 +1,6 @@
 ---
 title: "Run Mendix on Kubernetes"
 url: /developerportal/deploy/run-mendix-on-kubernetes/
-parent: "docker-deploy"
 weight: 20
 tags: ["Kubernetes", "cloud", "deployment"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

@@ -1,7 +1,6 @@
 ---
 title: "Batch Translate"
 url: /refguide/batch-translate/
-parent: "translatable-texts"
 weight: 30
 tags: ["studio pro", "translation", "languages", "translatable text"]
 ---

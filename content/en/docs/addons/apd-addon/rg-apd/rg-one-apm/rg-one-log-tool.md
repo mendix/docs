@@ -1,7 +1,6 @@
 ---
 title: "Log Tool"
 url: /addons/apd-addon/rg-one-log-tool/
-parent: "rg-one-apm"
 ---
 
 ## 1 Introduction

@@ -1,7 +1,6 @@
 ---
 title: "Triggers"
 url: /addons/apd-addon/rg-one-triggers/
-parent: "rg-one-apm"
 ---
 
 ## 1 Introduction

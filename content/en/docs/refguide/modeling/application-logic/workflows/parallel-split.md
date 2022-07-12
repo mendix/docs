@@ -1,7 +1,6 @@
 ---
 title: "Parallel Split"
 url: /refguide/parallel-split/
-parent: "workflows"
 weight: 30
 tags: ["workflow", "workflows", "parallel split", "Studio Pro"]
 ---

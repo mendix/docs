@@ -1,7 +1,6 @@
 ---
 title: "Build a Mendix Native App Locally"
 url: /refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/
-parent: /refguide/mobile/distributing-mobile-apps/building-native-apps/
 weight: 20
 description: Describes how to build your first Mendix native mobile app locally using Mendix Native Mobile Builder.
 aliases:

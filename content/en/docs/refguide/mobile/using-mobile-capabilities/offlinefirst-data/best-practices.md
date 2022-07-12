@@ -1,7 +1,6 @@
 ---
 title: "Offline Best Practices"
 url: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/
-parent: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/
 weight: 30
 description: "Describes how to make secure, high-performing offline-first apps."
 tags: ["offline", "offline-first"]

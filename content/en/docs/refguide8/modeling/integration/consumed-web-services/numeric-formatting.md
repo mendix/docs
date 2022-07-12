@@ -1,7 +1,6 @@
 ---
 title: "Numeric Formatting"
 url: /refguide8/numeric-formatting/
-parent: "consumed-web-services"
 tags: ["studio pro"]
 ---
 

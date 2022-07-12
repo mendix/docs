@@ -1,7 +1,6 @@
 ---
 title: "Workflow Properties"
 url: /refguide/workflow-properties/
-parent: "workflows"
 weight: 10
 tags: ["workflow", "workflows", "workflow properties", "Studio Pro"]
 ---

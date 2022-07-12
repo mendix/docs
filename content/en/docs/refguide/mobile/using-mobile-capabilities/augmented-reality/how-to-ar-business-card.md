@@ -1,7 +1,6 @@
 ---
 title: "Create an AR Business Card"
 url: /refguide/mobile/using-mobile-capabilities/augmented-reality/how-to-ar-business-card/
-parent: /refguide/mobile/using-mobile-capabilities/augmented-reality/
 weight: 20
 description: In this guide you will make an augmented reality business card app.
 aliases:

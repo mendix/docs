@@ -1,7 +1,6 @@
 ---
 title: "Execute JavaScript Integer"
 url: /addons/ats-addon/rg-one-execute-javascript-integer/
-parent: "rg-one-selenium-actions"
 ---
 
 ## 1  Description

@@ -1,7 +1,6 @@
 ---
 title: "Dashboard"
 url: /addons/apd-addon/rg-two-dashboard/
-parent: "rg-two-apm"
 ---
 
 The dashboard of an environment shows real-time information regarding the following

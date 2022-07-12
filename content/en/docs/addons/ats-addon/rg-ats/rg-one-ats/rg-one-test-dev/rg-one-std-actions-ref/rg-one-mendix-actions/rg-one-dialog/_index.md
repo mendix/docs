@@ -1,7 +1,6 @@
 ---
 title: "Dialog"
 url: /addons/ats-addon/rg-one-dialog/
-parent: "rg-one-mendix-actions"
 ---
 
 ## 1 Introduction

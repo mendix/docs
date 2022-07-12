@@ -1,7 +1,6 @@
 ---
 title: "Deploy Your First Mendix Native Mobile App"
 url: /refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/
-parent: /refguide/mobile/distributing-mobile-apps/building-native-apps/
 weight: 10
 description: Describes how to deploy your first Mendix native mobile app with the Mendix Native Mobile Builder.
 tags: ["native", "mobile", "deploy", "mendix native mobile builder", "builder", "appcenter"]
@@ -23,7 +22,7 @@ The Mendix Native Mobile Builder does not currently support connections behind p
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
-* Mendix Studio Pro v8.15 and above installed using the online installer. The offline installer does not include the Mendix Native Mobile Builder dependency.
+* Install the [latest MTS version](/releasenotes/studio-pro/lts-mts/#mts) of Mendix Studio using the online installer. The offline installer does not include the Mendix Native Mobile Builder dependency.
 * Read [Get Started with Native Mobile](/refguide/mobile/getting-started-with-mobile/) to see how to create, style and debug an application with Mendix Studio Pro
 * Deploy your native mobile app to the cloud via Studio Pro and have the cloud address of your deployed application available
 * A [GitHub](https://github.com/) account.
@@ -118,7 +117,7 @@ Next, do the following:
 	* Versions ranging from 0.5 to 0.9.x for beta releases
 	* Versions starting from 1.0.0 for release
 
-1. Fill in your **Runtime URL**. It can be the IP of your local machine if you plan on testing against a locally-running Studio Pro installation. If you already deployed your app to Mendix Cloud, you can point it to the URL of the deployed runtime as found in Cloud Portal (for example, "https://yourapp.mendixcloud.com".
+1. Fill in your **Runtime URL**. It can be the IP of your local machine if you plan on testing against a locally-running Studio Pro installation. If you already deployed your app to Mendix Cloud, you can point it to the URL of the deployed runtime as found in Cloud Portal (for example, `https://yourapp.mendixcloud.com`.
 1. Click the **Build** button to start the build.
 1.  The tool will set up your GitHub repository, commit your changes, configure App Center with two new apps (one for iOS and one for Android), and continue building your apps:
 

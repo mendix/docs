@@ -1,7 +1,6 @@
 ---
 title: "CAB.11 - Find Item/Row by Unique Text Value"
 url: /addons/ats-addon/ht-one-cab-11-find-itemrow/
-parent: "ht-one-create-search-context-actions"
 description: "This how-to explains step by step how to create a Search Context action for finding an item/row by using a unique text value."
 tags: ["ATS", "testing"]
 ---

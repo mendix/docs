@@ -1,7 +1,6 @@
 ---
 title: "XPath True"
 url: /refguide/xpath-true/
-parent: "xpath-constraint-functions"
 tags: ["studio pro"]
 ---
 

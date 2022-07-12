@@ -1,7 +1,6 @@
 ---
 title: "Send Notifications to Multiple Devices"
 url: /howto8/mobile/notif-mult-devices/
-parent: "notifications"
 weight: 71
 description: Learn to send notifications to multiple devices with the Native Mobile Builder.
 tags: ["mobile", "push notification", "remote", "push", "notification"]

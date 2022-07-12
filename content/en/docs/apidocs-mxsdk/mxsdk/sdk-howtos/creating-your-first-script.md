@@ -1,7 +1,6 @@
 ---
 title: "Create Your First Script"
 url: /apidocs-mxsdk/mxsdk/creating-your-first-script/
-parent: "sdk-howtos"
 weight: 20
 ---
 

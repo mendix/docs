@@ -1,7 +1,6 @@
 ---
 title: "Oracle"
 url: /refguide/oracle/
-parent: "data-storage"
 weight: 60
 tags: ["studio pro", "database", "oracle"]
 ---

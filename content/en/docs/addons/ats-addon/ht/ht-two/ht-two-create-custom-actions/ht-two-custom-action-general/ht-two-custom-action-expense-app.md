@@ -1,7 +1,6 @@
 ---
 title: "Custom Action Expense App"
 url: /addons/ats-addon/ht-two-custom-action-expense-app/
-parent: "ht-two-custom-action-general"
 description: "Explains how to find and use the Custom Action App that is used in the how-to's."
 tags: ["ATS", "testing"]
 ---

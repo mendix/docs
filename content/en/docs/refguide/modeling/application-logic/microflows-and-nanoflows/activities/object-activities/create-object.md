@@ -1,7 +1,6 @@
 ---
 title: "Create Object"
 url: /refguide/create-object/
-parent: "object-activities"
 weight: 40
 tags: ["studio pro"]
 ---
@@ -99,3 +98,7 @@ Wherever an object is initialized, all the events are always executed. The defau
 	* This influences the behavior in the other object actions
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/create-object/18582173.png" >}}
+
+{{% alert color="info" %}}
+Any changes made to an object are visible in all widgets. This is because changes are stored globally in the client.
+{{% /alert %}}

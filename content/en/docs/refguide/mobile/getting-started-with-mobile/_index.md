@@ -47,7 +47,7 @@ To start a new app based on a template, follow these steps:
 
 At this point you have a running native mobile app. To view your app on a mobile device, however, you need to download the Make It Native app.
 
-### 3.2 Downloading and Installing the Make It Native App
+### 3.2 Downloading and Installing the Make It Native App {#download-min}
 
 #### 3.2.1 Downloading for Android
 

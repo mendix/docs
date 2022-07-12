@@ -1,7 +1,6 @@
 ---
 title: "Generate Document"
 url: /refguide/generate-document/
-parent: "activities"
 weight: 80
 description: "Describes generating documents from a microflow. "
 tags: ["PDF", "document", "document template", "HTML", "Microsoft Word", "ODT", "studio pro", "generate document"]

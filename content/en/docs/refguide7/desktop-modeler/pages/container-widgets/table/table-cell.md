@@ -1,7 +1,6 @@
 ---
 title: "Table cell"
 url: /refguide7/table-cell/
-parent: "table"
 ---
 
 

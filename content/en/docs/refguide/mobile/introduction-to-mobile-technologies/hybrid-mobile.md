@@ -1,7 +1,6 @@
 ---
 title: "Hybrid Mobile (Deprecated)"
 url: /refguide/mobile/introduction-to-mobile-technologies/hybrid-mobile/
-parent: /refguide/mobile/introduction-to-mobile-technologies/
 weight: 30
 description: Learn how to set up hybrid apps.
 aliases:

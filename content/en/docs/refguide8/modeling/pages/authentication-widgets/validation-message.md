@@ -1,7 +1,6 @@
 ---
 title: "Validation Message"
 url: /refguide8/validation-message/
-parent: "authentication-widgets"
 tags: ["studio pro", "validation message", "authentication widget", "authentication"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

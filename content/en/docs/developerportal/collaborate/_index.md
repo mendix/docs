@@ -5,7 +5,7 @@ description: "Describes the collaboration tools available in the Mendix Develope
 weight: 5
 no_list: false 
 description_list: true 
-tags: ["Developer Portal", "Sprint", "story", "stories", "buzz"]
+tags: ["developer portal", "sprint", "story", "stories", "buzz", "team", "app"]
 aliases:
     - /developerportal/develop/
     - /developerportal/settings/

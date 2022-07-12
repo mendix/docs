@@ -1,7 +1,6 @@
 ---
 title: "Data View (Document Template)"
 url: /refguide7/data-view-document-template/
-parent: "document-templates"
 aliases:
     - /refguide7/Data+View+(document+template).html
     - /refguide7/data-view-(document-template).html

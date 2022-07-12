@@ -1,7 +1,6 @@
 ---
 title: "Function API Reference"
 url: /addons/ats-addon/rg-two-function-api-reference/
-parent: "rg-two-function-api"
 ---
 
 ## Widget_Set {#Widget_Set}

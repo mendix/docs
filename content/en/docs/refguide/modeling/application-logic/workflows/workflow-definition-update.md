@@ -1,7 +1,6 @@
 ---
 title: "Updating Your Workflow Definition"
 url: /refguide/workflow-definition-update/
-parent: "workflows"
 weight: 60
 tags: ["workflow", "workflows", "versions", "update"]
 ---

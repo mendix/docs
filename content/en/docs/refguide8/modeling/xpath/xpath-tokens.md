@@ -1,7 +1,6 @@
 ---
 title: "XPath Tokens"
 url: /refguide8/xpath-tokens/
-parent: "xpath"
 tags: ["studio pro"]
 ---
 

@@ -4,7 +4,6 @@ url: /howto/general/install/
 category: "General Info"
 weight: 1
 description: "Follow this how-to to learn how to install Mendix Studio Pro."
-toc-level: "2"
 tags: ["studio pro", "install", "install studio pro", "download"]
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Backups API V1"
 url: /apidocs-mxsdk/apidocs/backups-api-v1/
-parent: "deploy-api"
 description: "An API to allow the triggering of backups creation, restore, download and to get information about existing snapshots."
 weight: 20
 ---

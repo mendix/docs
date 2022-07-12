@@ -2,7 +2,6 @@
 title: "Licensing Mendix Cloud Apps"
 url: /developerportal/deploy/licensing-apps/
 #New document which replaces four others
-parent: "mendix-cloud-deploy"
 weight: 15
 description: "Licensing apps for production by linking them to a licensed cloud node."
 tags: ["App", "Node", "Developer Portal", "Deploy", "Link", "Unlink", "Licensed", "Free App", "Upgrade", "Mendix Cloud", "v3", "v4"]

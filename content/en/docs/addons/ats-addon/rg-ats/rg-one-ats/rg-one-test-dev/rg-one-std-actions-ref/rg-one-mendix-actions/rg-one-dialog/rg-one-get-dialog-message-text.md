@@ -1,7 +1,6 @@
 ---
 title: "Get Dialog Message Text"
 url: /addons/ats-addon/rg-one-get-dialog-message-text/
-parent: "rg-one-dialog"
 ---
 
 ## 1 Description

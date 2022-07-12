@@ -1,7 +1,6 @@
 ---
 title: "Sort Bar"
 url: /refguide8/sort-bar/
-parent: "grids"
 weight: 50
 tags: ["studio pro", "sort bar", "grid"]
 aliases:

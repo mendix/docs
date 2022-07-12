@@ -298,6 +298,8 @@ To change the environment type filter, click **Filter**:
 
 In the **Filters** dialog box, check the **Environment Type** that you want to include in your search. Then click **Apply Filters**. The search results will only display results in the selected environments.
 
+You can also filter by CRUD (Creatable, Readable, Updatable, or Deletable) capabilities. See the [Viewing OData Capabilities in Data Hub Catalog](/data-hub/write-data/#view-capabilities) section of *Write Data to Another App* for more information.
+
 #### 3.4.3 Search Results {#search-results}
 
 The number of items satisfying the search criteria (search string plus filters) are shown in the search results list. The order of the items presented in the search results will be a combination of the following:

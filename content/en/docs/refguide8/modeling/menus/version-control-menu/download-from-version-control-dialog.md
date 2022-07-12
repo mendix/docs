@@ -1,7 +1,6 @@
 ---
 title: "Download from Version Control Server"
 url: /refguide8/download-from-version-control-dialog/
-parent: "version-control-menu"
 weight: 60
 tags: ["studio pro"]
 aliases:

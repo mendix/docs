@@ -1,7 +1,6 @@
 ---
 title: "XML Inheritance & Choice"
 url: /refguide8/xml-inheritance-and-choice/
-parent: "mapping-documents"
 tags: ["studio pro"]
 ---
 

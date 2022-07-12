@@ -1,7 +1,6 @@
 ---
 title: "Page Editor Consistency Errors"
 url: /refguide/consistency-errors-pages/
-parent: "consistency-errors"
 weight: 10
 description: "Describes consistency errors in Mendix Studio Pro and the way to fix them."
 tags: ["Studio Pro", "consistency errors", "checks", "errors", "pages"]

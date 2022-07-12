@@ -1,7 +1,6 @@
 ---
 title: "Which Recorder Should I Use?"
 url: /addons/ats-addon/rg-two-desktoprecorder/
-parent: "rg-two-recorder"
 ---
 
 ## 1 Introduction

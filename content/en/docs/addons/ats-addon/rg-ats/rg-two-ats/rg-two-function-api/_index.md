@@ -1,7 +1,6 @@
 ---
 title: "Function API"
 url: /addons/ats-addon/rg-two-function-api/
-parent: "rg-two-ats"
 ---
 
 ## 1 Introduction

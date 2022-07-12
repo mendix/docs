@@ -1,7 +1,6 @@
 ---
 title: "CAB.03 - Textbox"
 url: /addons/ats-addon/ht-one-cab-03-textbox/
-parent: "ht-one-crt-unsup-widg-acts"
 description: "Explains how to create an Unsupported Widget action for the Mendix text box widget."
 tags: ["ATS", "testing"]
 ---

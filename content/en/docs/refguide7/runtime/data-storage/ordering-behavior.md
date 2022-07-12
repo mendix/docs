@@ -1,7 +1,6 @@
 ---
 title: "Order By Behavior"
 url: /refguide7/ordering-behavior/
-parent: "data-storage"
 weight: 20
 ---
 

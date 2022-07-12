@@ -1,7 +1,6 @@
 ---
 title: "Execute Javascript String"
 url: /addons/ats-addon/rg-one-execute-javascript-string/
-parent: "rg-one-selenium-actions"
 ---
 
 ## 1 Description

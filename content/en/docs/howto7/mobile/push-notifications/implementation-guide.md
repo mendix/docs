@@ -1,7 +1,6 @@
 ---
 title: "Implement Push Notifications"
 url: /howto7/mobile/implementation-guide/
-parent: "push-notifications"
 weight: 10
 tags: ["mobile", "push notification"]
 ---

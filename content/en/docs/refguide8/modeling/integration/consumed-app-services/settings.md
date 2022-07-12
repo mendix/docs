@@ -1,7 +1,6 @@
 ---
 title: "Settings"
 url: /refguide8/settings/
-parent: "consumed-app-services"
 tags: ["studio pro"]
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Part 2: Badges"
 url: /refguide/mobile/using-mobile-capabilities/local-notifications/local-notif-badges/
-parent: /refguide/mobile/using-mobile-capabilities/local-notifications/
 weight: 20
 description: A tutorial for setting up badges for local push notifications.
 ---

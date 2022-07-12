@@ -1,7 +1,6 @@
 ---
 title: "Preferences"
 url: /refguide/preferences-dialog/
-parent: "edit-menu"
 weight: 50
 tags: ["studio pro", "preferences", "settings", "edit menu"]
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Assert BootstrapRTE Value"
 url: /addons/ats-addon/rg-one-assert-bootstraprte-value/
-parent: "rg-one-bootstraprte"
 ---
 
 ## 1 Description

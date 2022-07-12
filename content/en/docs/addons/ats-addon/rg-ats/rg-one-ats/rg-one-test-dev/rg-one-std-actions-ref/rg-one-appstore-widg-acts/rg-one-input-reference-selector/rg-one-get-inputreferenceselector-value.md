@@ -1,7 +1,6 @@
 ---
 title: "Get InputReferenceSelector Value"
 url: /addons/ats-addon/rg-one-get-inputreferenceselector-value/
-parent: "rg-one-input-reference-selector"
 ---
 
 ## 1 Description

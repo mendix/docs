@@ -1,7 +1,6 @@
 ---
 title: "Click Drop-Down div Converter Drop-Down Button"
 url: /addons/ats-addon/rg-one-click-dropdown-div-converter-dropdown-button/
-parent: "rg-one-dropdown-div-converter"
 ---
 
 ## 1 Description

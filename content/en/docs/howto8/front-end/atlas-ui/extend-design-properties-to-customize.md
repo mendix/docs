@@ -1,7 +1,6 @@
 ---
 title: "Extend Design Properties to Customize Your Studio Experience"
 url: /howto8/front-end/extend-design-properties-to-customize/
-parent: "atlas-ui"
 weight: 60
 tags: ["Atlas", "UI", "UX", "user experience", "Studio", "customize", "custom"]
 ---

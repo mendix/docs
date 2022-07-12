@@ -1,7 +1,6 @@
 ---
 title: "Results"
 url: /addons/ats-addon/rg-two-results/
-parent: "rg-two-ats"
 ---
 
 ## 1 Introduction

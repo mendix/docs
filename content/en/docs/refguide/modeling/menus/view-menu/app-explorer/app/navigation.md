@@ -1,7 +1,6 @@
 ---
 title: "Navigation"
 url: /refguide/navigation/
-parent: "app"
 weight: 20
 description: "Describes the concept of navigation in apps and the properties of a profile."
 tags: ["studio pro", "navigation"]

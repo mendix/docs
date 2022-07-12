@@ -1,7 +1,6 @@
 ---
 title: "Create a Data-Driven Test Case"
 url: /addons/ats-addon/ht-two-create-datadriven-test-case/
-parent: "ht-two"
 description: "Describes how to create data and connect this to a test case."
 tags: ["ATS", "testing"]
 ---
@@ -34,8 +33,6 @@ An example test case is used to illustrate how to connect the dataset to a test 
 Before starting with this how-to, make sure you have the following prerequisites in place:
 
 * Read [How to Create a Test Case](/addons/ats-addon/ht-two-create-a-test-case/)
-
-{{% youtube ucvD8cjo6JI %}}
 
 ## 3 Creating a Master Data Set within ATS
 

@@ -1,7 +1,6 @@
 ---
 title: "Published Web Service"
 url: /refguide7/published-web-service/
-parent: "published-web-services"
 ---
 
 ## 1 Introduction

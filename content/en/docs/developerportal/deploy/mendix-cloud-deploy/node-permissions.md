@@ -1,7 +1,6 @@
 ---
 title: "Node Permissions"
 url: /developerportal/deploy/node-permissions/
-parent: "mendix-cloud-deploy"
 weight: 18
 description: "The permission settings for your node."
 tags: ["Node","Permission","Developer Portal"]

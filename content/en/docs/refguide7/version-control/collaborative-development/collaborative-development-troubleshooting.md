@@ -1,7 +1,6 @@
 ---
 title: "Troubleshooting Collaborative Development"
 url: /refguide7/collaborative-development-troubleshooting/
-parent: "collaborative-development"
 description: "Describes troubleshooting for collaborative development between the Mendix Desktop Modeler and the Mendix Web Modeler"
 tags: ["desktop modeler", "collaborative development", "troubleshooting", "troubleshoot"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

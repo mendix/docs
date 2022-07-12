@@ -1,7 +1,6 @@
 ---
 title: "Test Run"
 url: /addons/ats-addon/rg-two-test-run/
-parent: "rg-two-ats"
 ---
 
 ## 1 Introduction

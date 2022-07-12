@@ -1,7 +1,6 @@
 ---
 title: "XPath Avg"
 url: /refguide8/xpath-avg/
-parent: "xpath-query-functions"
 tags: ["studio pro"]
 ---
 

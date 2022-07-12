@@ -1,7 +1,6 @@
 ---
 title: "XPath Query Functions"
 url: /refguide7/xpath-query-functions/
-parent: "xpath"
 ---
 
 The following XPath query aggregate functions are available:

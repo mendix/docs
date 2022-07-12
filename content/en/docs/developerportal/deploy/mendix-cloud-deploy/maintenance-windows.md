@@ -1,7 +1,6 @@
 ---
 title: "Maintenance Windows"
 url: /developerportal/deploy/maintenance-windows/
-parent: "mendix-cloud-deploy"
 weight: 33
 description: "How to configure the maintenance windows for your node environment."
 tags: ["Deploy","App","Developer Portal", "maintenance"]

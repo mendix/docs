@@ -1,7 +1,6 @@
 ---
 title: "Show Page"
 url: /refguide8/show-page/
-parent: "client-activities"
 weight: 50
 tags: ["studio pro", "show page", "client activity"]
 aliases:

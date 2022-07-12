@@ -1,7 +1,6 @@
 ---
 title: "Cast Object"
 url: /refguide7/cast-object/
-parent: "object-activities"
 tags: ["cast objects"]
 ---
 

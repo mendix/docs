@@ -1,7 +1,6 @@
 ---
 title: "Chart Configuration"
 url: /refguide8/charts-configuration/
-parent: "chart-widgets"
 weight: 10
 tags: ["Charts", "Widgets", "Studio Pro", "Chart Configuration", "Configuration"]
 ---

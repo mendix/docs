@@ -1,7 +1,6 @@
 ---
 title: "Commit Object(s)"
 url: /refguide7/committing-objects/
-parent: "object-activities"
 ---
 
 ## 1 Introduction

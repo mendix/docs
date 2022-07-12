@@ -1,7 +1,6 @@
 ---
 title: "Upload a File in Your App Using ATS"
 url: /addons/ats-addon/ht-two-upload-file-using-ats/
-parent: "ht-two"
 description: "Describes how to upload a file in your app using ATS and the restrictions it has."
 tags: ["ATS", "testing"]
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Test Development"
 url: /addons/ats-addon/rg-one-test-dev/
-parent: "rg-one-ats"
 ---
 
 These are the test development documents:

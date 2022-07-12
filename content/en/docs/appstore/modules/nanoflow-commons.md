@@ -13,11 +13,15 @@ The [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515/) mo
 
 | Category            | Action                       |
 | :------------------ | :--------------------------- |
-| Client activities   | Show confirmation            |
+| Client activities   | Hide progress                |
+|                     | Refresh entity               |
+|                     | Refresh object               |
+|                     | Reload                       |
+|                     | Show confirmation            |
+|                     | Show progress                |
 |                     | Sign in                      |
 |                     | Sign out                     |
-|                     | Show Process                 |
-|                     | Hide Process                 |
+|                     | Toggle sidebar               |
 | External activities | Call phone number            |
 |                     | Draft email                  |
 |                     | Navigate to                  |
@@ -27,16 +31,18 @@ The [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515/) mo
 |                     | Share                        |
 | Geolocation         | Geocode                      |
 |                     | Get current location         |
+|                     | Get current location with minimum accuracy |
 |                     | Request location permission  |
 |                     | Reverse geocode              |
-| Local storage       | Get storage item object      |
+| Local storage       | Check storage item exists    |
+|                     | Clear cached session data    |
+|                     | Get storage item object      |
 |                     | Get storage item object list |
 |                     | Get storage item string      |
 |                     | Remove storage item          |
 |                     | Set store item object        |
 |                     | Set storage item object list |
 |                     | Set storage item string      |
-|                     | Storage item exists          |
 | Other activities    | Generate unique ID           |
 |                     | Get guid                     |
 |                     | Get object by guid           |

@@ -16,7 +16,7 @@ For a deep-dive look into using this module, check out this video:
 {{< vidyard "GwE17mzGma5NAvDnXrVdFA" >}}
 
 {{% alert color="info" %}}
-This module will be deprecated in the coming months. Check out the [Email Connector](/appstore/creating-content/connectors/email-connector/) module for an alternative.
+This module will be deprecated in the coming months. Check out the [Email Connector](/appstore/connectors/email-connector/) module for an alternative.
 {{% /alert %}}
 
 ### 1.1 Typical Use Cases

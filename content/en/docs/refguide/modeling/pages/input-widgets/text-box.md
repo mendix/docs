@@ -47,7 +47,7 @@ Text box properties consist of the following sections:
 
 ### 2.1.1 Aria required
 
-In a textbox widget, when **Aria required** is set to **Yes** then a screen reader will read out the field that is required. When set to **No** then the screen reader will not read the field out.
+In a textbox widget, when **Aria required** is set to **Yes** then assistive technologies will read out the field that is required. When set to **No** then assistive technologies will not read the field out.
 
 #### 2.1.2 Autocomplete 
 

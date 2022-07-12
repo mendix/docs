@@ -45,13 +45,13 @@ Text box properties consist of the following sections:
 
 ### 2.1 Accessibility Section{#accessibility}
 
-#### 2.1.1 Autocomplete 
+### 2.1.1 Aria required
+
+In a textbox widget, when **Aria required** is set to **Yes** then a screen reader will read out the field that is required. When set to **No** then the screen reader will not read the field out.
+
+#### 2.1.2 Autocomplete 
 
 The autocomplete property specifies if a text box should have autocomplete enabled. The autocomplete attribute also improves the browser's ability to pre-populate fields with user-preferred values. For more information on how this helps you comply with accessibility guidelines, see the [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/#input-purposes)
-
-### 2.1.2 Screen reader caption
-
-### 2.1.3 Aria required
 
 ### 2.2 Common Section{#common}
 

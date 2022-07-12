@@ -488,7 +488,7 @@ Unlike the Custom Runtime Settings, most of the variables you add are chosen fro
 
 Select **Supported** and you can choose from the following variables:
 
-* **APPMETRICS_TARGET** – enables sending application runtime and custom business metrics to HTTP endpoints of different monitoring solutions, such as **InfluxDB**, while ignoring micrometer endpoints
+* **APPMETRICS_TARGET** – enables sending application runtime and custom business metrics to HTTP endpoints of different monitoring solutions, such as [InfluxDB](https://www.influxdata.com/), while ignoring micrometer endpoints
 * **DD_API_KEY** – the API key used with Datadog
 * **DD_LOG_LEVEL** – the log level of logging sent to Datadog
 * **DD_SITE** – directs metrics to a specific Datadog region

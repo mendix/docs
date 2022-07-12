@@ -32,7 +32,7 @@ The SAP Destination Service replaces the SAP Cloud Connector flag which was used
 
 ## 2 Using the OData Connector for SAP Solutions{#UsingtheSAPODataConnector}
 
-Once you have downloaded the OData Connector for SAP solutions from the Marketplace, it will be imported into your app. You will find it in the App Explorer **{App name}** > **Marketplace modules** > **SAPODataConnector**.
+Once you have downloaded the OData Connector for SAP solutions from the Marketplace, it will be imported into your app. You will find it in the App Explorer via **{App name}** > **Marketplace modules** > **SAPODataConnector**.
 
 ### 2.1 Microflow Actions
 

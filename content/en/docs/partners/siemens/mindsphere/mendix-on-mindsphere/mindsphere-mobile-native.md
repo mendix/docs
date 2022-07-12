@@ -29,7 +29,7 @@ This documentation is structured into two main parts:
 The setup of your development environment consists of the following steps:
 
 1. Register a new mobile app in Developer Cockpit
-2. Create a app based on the [Siemens MindSphere Mobile Starter Application](https://marketplace.mendix.com/link/component/118164)
+2. Create an app based on the [Siemens MindSphere Mobile Starter Application](https://marketplace.mendix.com/link/component/118164)
 3. Build your own development app
 4. Try it out
 
@@ -103,7 +103,7 @@ Create a new Mendix Team Server app based on the [Siemens MindSphere Mobile Star
 
 Now, you need to make some configuration changes in the app itself.
 
-In the app explorer open the configuration of the app store module **MindsphereSingleSignOn**:
+In the App Explorer open the configuration of the app store module **MindsphereSingleSignOn**:
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StudioPro_SSO_configuration.png" alt="Studio SSO configuration" >}}
 

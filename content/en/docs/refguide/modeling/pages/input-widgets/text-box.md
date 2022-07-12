@@ -45,7 +45,7 @@ Text box properties consist of the following sections:
 
 ### 2.1 Accessibility Section{#accessibility}
 
-### 2.1.1 Aria required
+### 2.1.1 Aria Required
 
 In a textbox widget, when **Aria required** is set to **Yes** then assistive technologies will read out the field that is required. When set to **No** then assistive technologies will not read the field out.
 

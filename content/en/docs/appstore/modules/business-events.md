@@ -26,11 +26,11 @@ Business events help you automate the resulting actions when something happens i
 To use the Mendix Business Events module, you will need the following:
 
 * Mendix 9.16 or higher
-* Two Mendix apps: one that *publishes* the Business Events and makes them available, and one that *subscribes* to the Business Events (you can have as many publishing and consuming apps as you require)
+* At least two Mendix apps: one that *publishes* the Business Events and makes them available, and one that *subscribes* to the Business Events (you can have as many publishing and consuming apps as you require)
 
 To use Mendix Business Events on production environments, you will need the pre-requisites listed above in addition to the following:
-* A license to the Mendix Event Broker (link to licensing/contact page)
-* A Technical Contact must enable the Event Broker Service in the Environment Details
+* A subscription to the Mendix Event Broker (link to licensing/contact page)
+* A Technical Contact must enable the Event Broker Service in the Environment Details section of every app involved
 
 ### 1.3 Under the Hood: Mendix Event Broker
 
@@ -43,15 +43,20 @@ There is a single Kafka broker for free apps, all your company free apps can con
 * Events are publish to one shared Kafka topic
 * Any free app in your company can receive these events
 
+For production apps, you need to have a Mendix Event Broker provisioned for your apps. This Event Broker is single tenant and will only be used by apps running on nodes provisioned for your company.
+
 #### 1.3.1 Event Broker Topics and Channels
 
-All events from free apps are published to one shared topic.
+All events from free apps are published to one shared topic. Events published by apps running on licensed nodes are published to their own channels. These channels, implemented as topics on Kafka, are automatically created upon deployment of the app publishing the events.
 
 #### 1.3.2 Event Broker Error Handling
 
+Event publishing is part of the transaction where the publishing occurs. This means that if you decide that something has gone wrong in your microflow logic, and you roll back all changes, the publishing of your events is also rolled back. No event will be sent to other apps.
+
+This is implemented as follows: 
 * Events published are stored in a temporary entity table
+* When your transactions are completed successfully, the events will be delivered to the Mendix Event Broker
 * If the publishing microflow fails and changes are rolled back, this also includes published events
-* A rollback will ensure publish events are not sent
 
 ## 2 Configuration
 
@@ -61,10 +66,12 @@ To publish or consume business events, you must first download and import the [M
 
 ### 2.1 Configure Local Deployments
 
-Use our [local setup for the event broker tool](https://github.com/mendix/event-broker-tools) to configure local deployments.
+For testing on your development workstation, you can run the Event Broker on your machine using Docker. The required configuration can be found in the [local setup for the event broker tool](https://github.com/mendix/event-broker-tools).
 
-You can also adjust the following settings located in the **_USE_ME/Constants** folder of the module:
+For local deployment, you need to adjust the following settings in the **_USE_ME/Constants** folder of the module:
 {{< figure src="/attachments/appstore/modules/business-events/use-me-constants-folder.png" >}}
+
+These constants are best configured using the **App Settings** configuration. In the constants tab, you can set the required values.
 
 Only the **ChannelName** and **ServerUrl** have to be specified.
 * **ChannelName**: `local`
@@ -99,28 +106,7 @@ The base values for your entity are taken from the **PublishedBusinessEvent** an
 3.  The text with the blue background above the entity tells you that it is a specialized entity based on the **PublishedBusinessEvent** entity in the **BusinessEvents** module.
 {{< figure src="/attachments/appstore/modules/business-events/specialized-entity.png" >}}
 
-#### 3.1.2 Import Publish Business Event Action
-
-The next stage is to import an action for publishing into the microflow(s) that will publish. The following has to be done for every microflow: 
-
-1.  Open the microflow where the Business Event will be published.
-2.  Include the entity of Business Event as a parameter to the microflow.
-3.  In the **Toolbox**, search for the **Publish business event** action and drag it and place it in your microflow. 
-{{< figure src="/attachments/appstore/modules/business-events/search-and-drag-pub-entity.png" >}}
-
-4.  Double click **Publish business event** to display the **Publish Business Event** property box: 
-{{< figure src="/attachments/appstore/modules/business-events/publish-business-event-property-box.png" >}}
-
-5.  Enter the following information:
-    - **Subject**: Fill in the subject. Subject can be anything you consider useful, it’s like a short description of what can be expected in the payload, similar to email subject. It will help subscribed apps decide if the event might be useful to them.
-    - **Event Data**: Select the entity that you want to publish in the service that will represent the Business event in the subscribers app. This should be an entity that you have configured to inherit from the `PublishedBusinessEvent` entity in step 1.
-    - **Task Queue/Output:** These values are not currently used for Business Events and should be left unchanged
-
-{{% alert color="info" %}}
-The *Publish Business Event* Java action will commit all event objects at the start of the publishing process as Outbox entity, this is an implementation detail. In case something goes wrong during the publishing process, a retry mechanism will be triggered for up to 48 hours.  If the publishing microflow fails, the entity in the Outbox will be rolled back as well.
-{{% /alert %}}
-
-#### 3.1.3 Create a Published Business Event Service
+#### 3.1.2 Create a Published Business Event Service
 
 A Published Business Event Service is the contract defining various events, like a REST API spec.
 
@@ -136,30 +122,36 @@ A Published Business Event Service is the contract defining various events, like
 4.  Select the entity that you would like to publish to add it to the Service.
 {{< figure src="/attachments/appstore/modules/business-events/select-entity-add-service.png" >}}
 
-5.  The Business Event with Attributes will now appear in the Service
+5.  The Business Event with Attributes will now appear in the Service.
 {{< figure src="/attachments/appstore/modules/business-events/event-with-attributes-in-service.png" >}}
 
-Once you have all of your entities linked into the Published Business Event Service, you can export it to be shared as an AsyncAPI contract in YAML format.
+Once you have all of your entities linked into the Published Business Event Service, you can export it to be shared as an Async API contract in YAML format.
 
-##### 3.1.3.1 Published Event Service Fields
+{{% alert color="info" %}}
+When deploying an app with one or more *Published Business Event* services, channels will be created in the Mendix Event Broker for every event part of the service. (This works similarly to how tables are created in a database for Persistent Entities.) If you reuse a module with publlished events in multiple apps, multiple independent channels will be created. Apps interested in receiving events will need to subscribe to every event/channel independently. 
+{{% /alert %}}
 
-When publishing an event you need to provide some context for the business event:
 
-* **service name** - service name allows you to group related events into logical services, like you do for REST or OData services. The sending app contains one or more services. This service name is used by subscribed apps to determine who send the event.
-* **Subject** - a text field that can be used to describe the event you’re publishing. This is similar to the subject of an email, and it serves the same purpose: Quickly determine which events are interesting to the receiving party without going through the entire event.
-* **Event name** - Indicates what event this is, for example Customer Support Ticket Filed Event, or Customer Support Ticket Solved Event, or Order Shipped, etc.
-* **Event data** - the actual event entity which contains the properties of the event.
+#### 3.1.3 Use Publish Business Event Activity
 
-#### 3.1.4 Required Entities in Domain Model
+The next stage is to add an activity for publishing into the microflow(s) that will publish. The following has to be done for e
+very microflow:
 
-Four entities are necessary to include in your domain model to publish business events: 
+1.  Open the microflow where the Business Event will be published.
+2.  Create an object of the Business Event you want to publish.
+3.  In the **Toolbox**, search for the **Publish business event** action and drag it and place it in your microflow.
+{{< figure src="/attachments/appstore/modules/business-events/search-and-drag-pub-entity.png" >}}
 
-{{< figure src="/attachments/appstore/modules/business-events/four-entities-in-domain-model.png" >}}
+4.  Double click **Publish business event** to display the **Publish Business Event** property box:
+{{< figure src="/attachments/appstore/modules/business-events/publish-business-event-property-box.png" >}}
 
-* **PublishedBusinessEvent:** this non-persistable entity has the fields settings that every published event will include. Every published business event will inherit from this entity. The three fields can be set from the Java Action. 
-* **ConsumedBusinessEvent:**  this entity has the fields that every consumed event will include. Every consumed business event will inherit from this entity. These fields will be set from the module, as will any additional fields that match with the payload of the event.
-* **DeadLetterQueue**: this persistant entity within the Domain Model of the Business Events Module is used for generating a historical record of events that are generated for Business Event activities that were not successful or had errors when received by the consumer and can be referred to for troubleshooting. 
-* **Outbox**:this entity is used to store the event prior to being sent.  This entity is connected to the microflow where a Business Event is triggered.  Should the Microflow fail, the entity will be removed as part of the same transaction.
+5.  Enter the following information:
+    * **Subject**: This can be anything you consider useful, like a short description of what can be expected in the payload, similar to email subject. It will help subscribed apps decide if the event might be useful to them.
+    * **Event Data**: Select the entity that you want to publish in the service that will represent the Business event in the subscribers app. This should be an entity that you have configured to inherit from the **PublishedBusinessEvent** entity in step 1.
+    * **Task Queue/Output:** These values are not currently used for Business Events and should be left unchanged.
+
+{{% alert color="info" %}}
+The *Publish Business Event* Activity will commit all event objects at the start of the publishing process as Outbox entity, this is an implementation detail. In case something goes wrong during the publishing process, a retry mechanism will be triggered for up to 48 hours.  If the publishing microflow fails, the entity in the Outbox will be rolled back as well.
 
 ### 3.2 Consuming Business Events
 
@@ -193,16 +185,21 @@ In order to start consuming a Business Event Contract, you first need to create 
 
 {{< figure src="/attachments/appstore/modules/business-events/payload-event-entity-3.png" >}}
 
-##### 3.2.1.1 Consumed Event Service Fields 
+#### 3.3 Business Event Entities
 
-You need to specify the following fields in the consumed business event:
+The Business Events module provides four entities:
 
-- **Service name** - from what service do you want to receive events?
-- **Event name** - what event do you want to receive?
-- **Event handler** - the microflow that needs to be executed for every event you receive.
-- **Subscribe from beginning** - The first time you deploy your application, do you want to receive all events that are available, including the historic ones, or only new events?
+{{< figure src="/attachments/appstore/modules/business-events/four-entities-in-domain-model.png" >}}
 
-### 3.3 Dead Letter Queue for Failed Messages
+* **PublishedBusinessEvent:** this non-persistable entity has the fields settings that every published event will include. Every published business event will inherit from this entity. The three fields can be set from the Java Action. * **ConsumedBusinessEvent:**  this entity has the fields that every consumed event will include. Every consumed business event will inherit from this entity. These fields will be set from the module, as will any additional fields that match with the payload of the event.
+* **DeadLetterQueue**: this persistant entity within the Domain Model of the Business Events Module is used for generating a historical record of events that are generated for Business Event activities that were not successful or had errors when received by the consumer and can be referred to for troubleshooting.
+* **Outbox**:this entity is used to store the event prior to being sent.  This entity is connected to the microflow where a Business Event is triggered.  Should the Microflow fail, the entity will be removed as part of the same transaction.
+
+The first you use to define what your published business events look like. The second defines what you want to receive from the business events you subscribe to.
+
+The third and fourth are internal entities defined by the business events module. You can query the DeadLetterQueue entity to determine which received events could not be processed.
+
+### 3.3.1 Dead Letter Queue for Failed Messages
 
 Every time a Business Event is consumed, it is transformed to match the Entity created as part of the Subscription. When the Entity within the Business Event has changed based on the imported contract, it can render the Entity unable to be processed. In such a scenario the Business Event will fail into a **Dead Letter Queue** which contains the representation of the Entity within the data column.
 

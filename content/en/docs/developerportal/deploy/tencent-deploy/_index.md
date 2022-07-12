@@ -50,7 +50,7 @@ If you have not got any clusters, you will first have to purchase one. Alternati
 * Click **请求访问免费的应用集群** to request access to a free cluster to try out Siemens Low-Code Platform. You will need to create an app first, see [App & Team Management](/not/a/good/url) for more information.
 * Click **注册集群** to register an existing cluster to use for deploying your app.
 
-{{% todo %}}Get access to a cluster to update UX descriptions and confirm flows{{% /todo %}}
+{{% todo %}}Update UX descriptions and confirm flows{{% /todo %}}
 
 When you have one or more clusters, you can see a summary of them with all their namespaces and an indication of the namespace status and how long it has been running (Uptime).
 
@@ -68,8 +68,6 @@ You can also see the activities logged for all you clusters by clicking **Activi
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/cluster-activity-logs.png" >}}
 
 The cluster overview will refresh automatically, but you can force a refresh by clicking **刷新** at the top of the page.
-
-{{% todo %}}Need access as Cluster Manager to document this properly{{% /todo %}}
 
 ### 3.2 Cluster Details
 
@@ -368,8 +366,6 @@ If everything has been created successfully, and the app has been built and is r
 
 You will be taken to the Environment Details page for the selected environment. You can find information about managing your environment from this page in [Managing Your Environments from the Environment Details Page](#environment-details), below.
 
-{{% todo %}}Continue from here{{% /todo %}}
-
 ## 5 Environments Page
 
 The **环境概览** page of the ATM contains three sections:
@@ -385,6 +381,8 @@ This lists the deployment packages which have been created for this app.
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image17.png" >}}
 
 There are five buttons:
+
+{{% todo %}}Should these be in English or in Chinese - and the sections (5.1.1 etc.) below?{{% /todo %}}
 
 * 刷新
 * 从 Team Server 创建包
@@ -420,9 +418,9 @@ The information shows here is labeled to help you. The indicators in the environ
 
 There are three additional actions you can take while looking at the deployment package details:
 
-* **Expand to view build output** – shows the output from the Mendix build
-* **Download Package** – allows you to download the deployment package and save it locally
-* **Delete Package** – deletes the deployment package – you will be asked to confirm this action
+* **展开以查看构建输出** – shows the output from the Mendix build
+* **下载包** – allows you to download the deployment package and save it locally
+* **删除包** – deletes the deployment package – you will be asked to confirm this action
 
 #### 5.1.5 Deploy
 
@@ -436,19 +434,39 @@ This section shows all the environments created for this app.
 
 For each environment, you can see a summary of the status of the resources and details of the package which is running in the environment (if there is one).
 
-You can perform the following actions:
+You can use one of the following buttons:
 
-* **Add Environment**
-* View **详情**
-* Perform **Actions**
+* **创建环境**
+* **详情**
+* **操作**
 
 These are described in more detail, below.
 
-In addition, there are several indicators describing the status of the environment.
+In addition, there are several indicators describing the status of the environment. These are described in [Environment Status Indicators](#environment-status), below.
 
-#### 5.2.1 Environment Status Indicators{#environment-status}
+#### 5.2.1 Add Environment
 
-##### 5.2.1.1 Network
+This adds a new environment as described in [Creating an Environment](#create-environment), above.
+
+#### 5.2.2 Details
+
+This opens the **环境详情** page which is described in more detail in [Managing Your Environments from the Environment Details Page](#environment-details), below.
+
+#### 5.2.3 Actions
+
+This button contains a list of actions which you can perform quickly on the environment. Most of these actions will be disabled if the app is currently starting or stopping. These actions are:
+
+* **设置为 Studio 部署目标** – sets this environment as the target if you publish the app from Studio
+* **启动应用** (only shown if app is stopped) – allows you to start a stopped application
+* **传输包** – allows you to deploy the deployment package in the current environment to another environment within the app, or to redeploy it in the current environment
+* **环境日志** – takes you to the log page defined by the cluster manager when they registered the namespace
+* **模型选项** – allows you to change the running of scheduled events and the values of constants for your app by taking you to the **模型选项** tab of the **环境详情** page
+* **停止应用** (only shown if at least one replica is running) — stops the application by reducing the number of replicas to zero
+* **删除环境** – this deletes the environment (see [Current Limitations](#limitations), below, for additional details about what is deleted) — you will be asked to confirm this action
+
+#### 5.2.4 Environment Status Indicators{#environment-status}
+
+##### 5.2.4.1 Network
 
 The **网络** indicator has the following values:
 
@@ -456,48 +474,31 @@ The **网络** indicator has the following values:
 * Cross – the network is not operational
 * Spinner – the network is being provisioned
 
-##### 5.2.1.2 Storage
+##### 5.2.4.2 Storage
 
-The **Storage** indicator has the following values:
+The **存储** indicator has the following values:
 
 * Tick – storage is provisioned
 * Cross – storage is not provisioned
 * Spinner – storage is being provisioned
 
-##### 5.2.1.3 Database
+##### 5.2.4.3 Database
 
-The **Database** indicator has the following values:
+The **数据库** indicator has the following values:
 
 * Tick – the database is provisioned
 * Cross – the database is not provisioned
 * Spinner – the database is being provisioned
 
-##### 5.2.1.4 Development
+##### 5.2.4.4 Development
 
 The word **开发环境** indicates that this environment is set up for development.
+
+{{% todo %}}Chinese for "Production"{{% /todo %}}
 
 The word changes to **Production** if the environment is set up for production.
 
 See [Creating an Environment](#create-environment), above, for more information.
-
-#### 5.2.2 Add Environment
-
-This adds a new environment as described in [Creating an Environment](#create-environment), above.
-
-#### 5.2.3 Details
-
-This opens the **Environment Details** page which is described in more detail in [Managing Your Environments from the Environment Details Page](#environment-details), below.
-
-#### 5.2.4 Actions
-
-This button contains a list of actions which you can perform quickly on the environment. Most of these actions will be disabled if the app is currently starting or stopping. These actions are:
-
-* **Start Application** (only shown if app is stopped) – allows you to start a stopped application
-* **Transport Package** – allows you to deploy the deployment package in the current environment to another environment within the app, or to redeploy it in the current environment
-* **Environment Logs** – takes you to the log page defined by the cluster manager when they registered the namespace
-* **模型选项** – allows you to change the running of scheduled events and the values of constants for your app by taking you to the **模型选项** tab of the **Environment Details** page
-* **Stop Application** (only shown if at least one replica is running) — stops the application by reducing the number of replicas to zero
-* **Delete Environment** – this deletes the environment (see [Current Limitations](#limitations), below, for additional details about what is deleted) — you will be asked to confirm this action
 
 ### 5.3 Activity
 
@@ -515,13 +516,13 @@ If you have any outstanding changes to your environment the page will display a 
 
 The environment details page consists of seven tabs:
 
-* General
-* Model Options
-* Network
-* Runtime
-* Log Levels
+* 常规设置
+* 模型选项
+* 网络
+* 运行时
+* 日志级别
 * TLS
-* Debugger
+* 调试器
 
 These tabs are described below.
 
@@ -544,6 +545,8 @@ This shows you the status of the environment and is the same as the status shown
 #### 6.1.3 Action Buttons
 
 There are also buttons which allow you to perform various actions on your app and environment. These are described in the sections below.
+
+{{% todo %}}Continue from here{{% /todo %}}
 
 ##### 6.1.3.1 Stop/Start Application
 

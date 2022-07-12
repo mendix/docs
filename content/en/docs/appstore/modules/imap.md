@@ -49,6 +49,33 @@ The **Account Settings** window includes the following options:
 * When **Replicate everything in [Folder Name]** is checked, then module will fetch all the emails (in order of oldest to newest) from that folder in batch size as mentioned in **Email Batch Size** configuration.
 * The **Timeout** field is the connection timeout for sending and receiving email operations. This can be set in the **Email Account** object.
 
+{{% alert color="info" %}}
+Some **Account Settings** might be unavailable in earlier Mendix versions.
+{{% /alert %}}
+
+### 2.2 Configuring Microsoft Azure Active Directory (AD) OAuth 2.0 {#configure-azure-ad}
+
+You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. You can only add one OAuth 2.0 configuration for each app.
+
+Click the green **+** button to add a new account, and select the option **Configure using Microsoft Azure AD**. If the account is already registered on the Azure portal, the required fields will already be filled in. If not, or if you need to make changes, you will need to register your app on the Azure portal.
+
+To register your app, follow Microsoft's [Tutorial: Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
+
+### 2.2.1 Enable Permissions
+
+On the [Azure portal](portal.azure.com), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
+
+### 2.2.2 Client and Tenant ID
+
+The **IMAP/POP3 Incoming Email** module requires a **Client ID** and **Tenant ID**. On the [Azure portal](portal.azure.com), click the **Overview** tab on the left sidebar and paste the values of the **Application (client) ID** and **Directory (tenant) ID** into the module **Account Settings**.
+
+### 2.2.3 Client Secret
+
+You will need to generate a client secret when you set up the authentication with Azure AD OAuth 2.0. 
+
+1. On the [Azure portal](portal.azure.com), click **Certificates & secrets** on the left sidebar. 
+2. Under the **Client secrets** tab, click **New client secret** and paste the ID into the module **Account Settings**.
+
 ## 3 Usage
 
 Using a Java action in a microflow requires an email account for input. Please make sure you configure the setup first. 

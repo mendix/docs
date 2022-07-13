@@ -56,16 +56,14 @@ When you have one or more clusters, you can see a summary of them with all their
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/cluster-overview.png" >}}
 
-Each cluster resource you purchase from Tencent automatically contains a number of *namespaces* and you will run your Mendix app inside one of these namespaces. The namespaces are designed to hold separate test, acceptance, and production versions of your app so that resource sharing between the versions is minimized.
+Each cluster resource you purchase from Tencent automatically contains a number of *命名空间* and you will run your Mendix app inside one of these namespaces. The namespaces are designed to hold separate test, acceptance, and production versions of your app so that resource sharing between the versions is minimized.
 
-You can also see the activities logged for all you clusters by clicking **Activity** at the top of the page. This shows the following:
+You can also see the activities logged for all you clusters by clicking **活动** at the top of the page. This shows the following:
 
 * When a cluster has been added
 * When a cluster description is added
 * When name of the cluster is changed
 * When cluster description is changed
-
-{{< figure src="/attachments/developerportal/deploy/tencent-deploy/cluster-activity-logs.png" >}}
 
 The cluster overview will refresh automatically, but you can force a refresh by clicking **刷新** at the top of the page.
 
@@ -73,26 +71,22 @@ The cluster overview will refresh automatically, but you can force a refresh by 
 
 Click **详情** next to the cluster name to see information about the entire cluster.
 
-In the first tab you can see the **Namespaces** in the cluster and their current status. This duplicates the information you can see in the cluster overview.
+In the **命名空间** tab you can see the **Namespaces** in the cluster and their current status. This duplicates the information you can see in the cluster overview.
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/cluster-details.png" >}}
 
 There are two other tabs:
 
-* **Cluster Managers** – where you can see other people who have access to the cluster and can manage them
-* **Activity** – where you can see the following actions on the entire cluster
+* 集群管理员 – where you can see other people who have access to the cluster and can manage them
+* 活动 – where you can see all the activities which have taken place on this cluster
 
-#### 3.2.1 Cluster Managers
+#### 3.2.1 Members
 
-The **Cluster Managers** tab will show you all the cluster managers for this cluster. The **STATUS** indicates whether the user has accepted an invitation.
+The **集群管理员** tab will show you all the cluster managers for this cluster. **状态** indicates whether the user has accepted an invitation.
 
-{{< figure src="/attachments/developerportal/deploy/tencent-deploy/cluster-managers.png" >}}
+Click **邀请集群管理员** to invite another Tencent user to manage this cluster. You will need to know the other person's Tencent ID to invite them.
 
-Click **Invite Cluster Manager** to invite another Tencent user to manage this cluster. You will need to know the other person's Tencent ID to invite them.
-
-Click **Invite** to confirm the invitation
-
-{{< figure src="/attachments/developerportal/deploy/tencent-deploy/cluster-manager-invite.png" >}}
+Click **发送邀请** to confirm the invitation
 
 {{% alert color="info" %}}
 When you invite a cluster manager, the user will have most of the access which the original cluster manager had, such as the abilities to add a member, change the permissions of the cluster member, and delete another cluster manager. 
@@ -103,10 +97,6 @@ The only limitations are that:
 * cluster managers who are added to the cluster cannot remove the cluster manager who purchased the cluster resources
 {{% /alert %}}
 
-#### 3.2.2 Activity
-
-The **Activity** tab shows all the activity for this cluster. It shows the same information as for the activities in the [Cluster Overview](#overview) but only for the currently displayed cluster.
-
 ### 3.3 Namespace Management
 
 If you are a member of a namespace, you can also manage a namespace in the cluster.
@@ -115,9 +105,12 @@ Click the **详情** button for the namespace you want to manage.
 
 On the namespace management page, there are a number of tabs which allow you to manage aspects of your namespace :
 
-* Apps
-* Members
-* Operate
+* 应用 – all the apps deployed in this namespace
+* 成员 – users who have access to this namespace
+* 操作 – links to pages where operational information is displayed
+* 计划 – manage database and file plans
+* 安装 - download installation files for the Mendix Operator
+* 附加信息 - information about the namespace
 
 See the sections below for more information.
 
@@ -142,13 +135,13 @@ You can also see an activity log containing the following information for all na
 * When a user is removed as a namespace member
 * When user's permission is changed in the namespace
 
-{{< figure src="/attachments/developerportal/deploy/tencent-deploy/namespace-activity-logs.png" >}}
-
 #### 3.3.1 Apps
 
-The **Apps** tab of namespace details lists all the apps which are deployed to this namespace.
+The **成员** tab of namespace details lists all the apps which are deployed to this namespace.
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/namespace-apps.png" >}}
+
+Click **配置** to make Pod, Ingress, or service annotations or configure runtime metrics for this environment.
 
 If you are a team member of the app, click **详情** to go to the *Environment Details* page for that app.
 
@@ -181,29 +174,25 @@ The following actions require the appropriate access to the namespace **and** ac
 * Manage Custom Runtime Settings
 * Manage Log levels
 
-The **Members** tab allows you to manage the list of members of the namespace and control what rights they have.
+The **成员** tab allows you to manage the list of members of the namespace and control what rights they have.
 
 ##### 3.3.2.1 Adding Members
 
 You can invite additional members to the namespace, and configure their role depending on what they should be allowed to do.
 
-1. The **Members** tab displays a list of current members (if any).
+1. The **成员** tab displays a list of current members (if any).
 
-2. Click **Invite Member**.
-   
-    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/namespace-members.png" >}}
+2. Click **邀请成员**.
 
-3. Enter the **Tencent ID** of the person you want to invite.
+3. Enter the **腾讯ID** of the person you want to invite.
 
 4. Give them the rights they need. This can be:
    
-    1. **Developer** – a standard set of rights needed by a developer, these are listed on the screen
-    2. **Administrator** – a standard set of rights needed by an administrator, these are listed on the screen
-    3. **Custom** – you can select a custom set of rights by checking the box next to each role you want to give to this person
+    1. **开发人员** – a standard set of rights needed by a developer, these are listed on the screen
+    2. **管理员** – a standard set of rights needed by an administrator, these are listed on the screen
+    3. **自定义** – you can select a custom set of rights by checking the box next to each role you want to give to this person
 
-5. Click **Invite** to send an invite to this person.
-   
-    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/namespace-member-invite.png" >}}
+5. Click **发送邀请** to send an invite to this person.
 
 6. The next time the user signs in to the Mendix ATM, they will be added to the namespace.
 
@@ -211,15 +200,15 @@ You can invite additional members to the namespace, and configure their role dep
 
 You can remove existing members.
 
-1. On the **Members** tab of the namespace details, click **Remove** next to the member you want to remove.
-        
-    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/namespace-member-remove.png" >}}
+{{% todo %}}What is remove member?{{% /todo %}}
+
+1. On the **成员** tab of the namespace details, click **Remove** next to the member you want to remove.
 
 If you want to change the rights for an existing member, you will have to remove them and then add them again with the updated rights.
 
 #### 3.3.3 Operate {#operate}
 
-The **Operate** tab allows you to add a set of links which are used when users request a page from the Operate category for their app in the ATM, as shown below.
+The **操作** tab allows you to add a set of links which are used when users request a page from the Operate category for their app in the ATM, as shown below.
 
 The following pages can be configured:
 
@@ -230,9 +219,19 @@ The following pages can be configured:
 
 The specification of these pages is optional.
 
-Open the **Operate** tab, enter the URLs relevant to your namespace, and click **Save** for each one.
+Open the **操作** tab, enter the URLs relevant to your namespace, and click **保存** for each one.
 
-{{< figure src="/attachments/developerportal/deploy/tencent-deploy/image32.png" >}}
+#### 3.3.4 Plan
+
+The Plans tab shows you the database and storage plans which are currently configured for your namespace. Here you can activate and deactivate individual plans.
+
+#### 3.3.5 Install
+
+This allows you to download the Mendix Configuration Tool by specifying the operating system of the local computer on which you are going to run it.
+
+#### 3.3.6 Additional Information
+
+Displays information about the namespace, such as software versions (for example, the Mendix Operator version).
 
 ## 4 Deploying an App for the First Time
 
@@ -284,34 +283,31 @@ When deploying your app for the first time, there will be no environment to depl
 
     If there are no clusters available to you, you will have to create one or get access to an existing one before you can continue. You will be taken to the Cluster Manager page. See [Cluster and Namespace Management](#cluster-namespace), above, for information on the three ways you can get a cluster, then start this section again.
 
-{{% todo %}}What is the UUID in the ATM?
-Need to check this whole section, table, and images{{% /todo %}}
+2. Choose the deployment package you want to use to create the environment and click **下一步**.
 
-2. A **UUID** will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
+2. A **内部名称** will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 
     {{% alert color="info" %}}You can change the UUID if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.{{% /alert %}}
 
 3. Enter **环境名称**, the name for the environment. The environment name can only contain lowercase (latin) letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
 
-4. Use the drop-down **Select Namespace** to select an existing namespace. You will see all namespaces of which you are a member.
+4. Use the drop-down **选择命名空间** to select an existing namespace. You will see all namespaces of which you are a member.
 
 5. Select the **目的**.
    
     1. For development of the app, for example acceptance testing, choose **开发环境**.
 
-    2. For production deployment, select **Production**. If you select **Production**, then you will be asked for the **Subscription Secret** which you received when you purchased Tencent resources.
+    2. For production deployment, select **生产环境**. If you select **生产环境**, then you will be asked for the **订阅密钥** which you received when you purchased Tencent resources.
 
         {{% alert color="warning" %}}Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
 
 6. Click **下一步**.
-   
-    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/create-environment.png" >}}
 
 7. Select **核心资源**.
 
-    For core resources, there are two sets of values. The **Request** value is the amount of core resources which are initially requested. The **Limit** value is the maximum amount of resource that the environment can use.
+    For core resources, there are two sets of values. The **请求** value is the amount of core resources which are initially requested. The **限制** value is the maximum amount of resource that the environment can use.
 
-    There are three pre-defined sets of resources, **Small**, **Medium**, and **Large**. Choosing these will set the **CPU** and **Memory** values automatically.
+    There are three pre-defined sets of resources, **小**, **中等**, and **大**. Choosing these will set the **CPU** and **Memory** values automatically.
 
     | **Name** | **CPU cores**: Limit | **Memory (Gb)**: Limit | **CPU cores**: Request | **Memory (Gb)**: Request |
     | --- | --- | --- | --- | --- |
@@ -320,19 +316,15 @@ Need to check this whole section, table, and images{{% /todo %}}
     | Large | 4 | 4 | 2 | 2 |
     | Custom | own choice | own choice | own choice | own choice |
 
-    Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* environment, otherwise you may run into problems running your app.
+    Alternatively, you can choose **自定义**, and enter your own requirements for **CPU** and **内存**. Ensure that these values are the same or greater than the values for a *小* environment, otherwise you may run into problems running your app.
 
 8. Select a **数据库计划** from the list of plans in the dropdown. This will have the format `db-plan-…` where the suffix reflects the environment.
 
 9. Select a **文件存储计划** from the list of plans in the dropdown. This will have the format `file-plan-…` where the suffix reflects the environment.
-   
-    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image7.png" >}}
 
-10. Click **Create Environment**.
+10. Click **创建环境**.
 
 11. You will see your new environment listed. An *in-progress* icon will be shows next to the resource plans until they have been provisioned.
-
-    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/environments-new.png" >}}
 
 You will not be able to deploy to this environment until it has been fully prepared. This means that all the resource plans have been confirmed and that the placeholder app has been successfully deployed. See [Deploying the Deployment Package](#deploy-package), below, for instructions on how to check that the environment has been created successfully.
 
@@ -494,9 +486,7 @@ The **数据库** indicator has the following values:
 
 The word **开发环境** indicates that this environment is set up for development.
 
-{{% todo %}}Chinese for "Production"{{% /todo %}}
-
-The word changes to **Production** if the environment is set up for production.
+The word changes to **生产环境** if the environment is set up for production.
 
 See [Creating an Environment](#create-environment), above, for more information.
 
@@ -504,13 +494,11 @@ See [Creating an Environment](#create-environment), above, for more information.
 
 This section shows all the activities, such as creating environments and deploying apps, which have taken place in this environment. You can sort the activities in either descending or ascending date and time order.
 
-{{< figure src="/attachments/developerportal/deploy/tencent-deploy/image20.png" >}}
-
 ## 6 Managing Your Environments from the Environment Details Page{#environment-details}
 
 Each environment you create has an **Environment Details** page which allows you to monitor and manage your environments. You can reach this by clicking the **详情** button next to the environment you want to manage.
 
-If you have any outstanding changes to your environment the page will display a warning message. If you click **Apply Changes**, the environment will be stopped and restarted.
+If you have any outstanding changes to your environment the page will display a warning message. If you click **应用更改**, the environment will be stopped and restarted.
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image21.png" >}}
 
@@ -546,13 +534,11 @@ This shows you the status of the environment and is the same as the status shown
 
 There are also buttons which allow you to perform various actions on your app and environment. These are described in the sections below.
 
-{{% todo %}}Continue from here{{% /todo %}}
-
 ##### 6.1.3.1 Stop/Start Application
 
-If the app is not currently running (**个副本正在运行** is set to *None*) you will see **Start** Application. Clicking this will immediately trigger the app to begin running by increasing the number of replicas.
+If the app is not currently running (**运行时** is shown in gray) you will see **启动应用**. Clicking this will immediately trigger the app to begin running by increasing the number of replicas.
 
-If the app is currently running, clicking **Stop Application** immediately stops the application by reducing the number of replicas to zero.
+If the app is currently running, clicking **停止应用** immediately stops the application by reducing the number of replicas to zero.
 
 ##### 6.1.3.2 Transport Package
 
@@ -560,9 +546,9 @@ Allows you to deploy the deployment package in the current environment to anothe
 
 ##### 6.1.3.3 Scale Application
 
-This allows you to scale your app by increasing the number of replicas.
+{{% todo %}}Need example of Scale Application{{% /todo %}}
 
-{{< figure src="/attachments/developerportal/deploy/tencent-deploy/image23.png" >}}
+This allows you to scale your app by increasing the number of replicas.
 
 To apply the new value, click **Restart the App and Scale**. Because you restart your app, it will be unavailable for a short time.
 
@@ -582,13 +568,11 @@ If the cluster is standalone, or the Mendix Gateway Agent is not connected for s
 
 If the environment cannot be deleted, you will receive a warning, but can go ahead and remove it from the ATM.
 
-{{< figure src="/attachments/developerportal/deploy/tencent-deploy/delete-environment.png" >}}
-
 ##### 6.1.3.7 Change Purpose
 
 This enables you to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **开发环境** and the app will be deployed as an unlicensed App.
 
-For production deployment, select **Production**. If you select **Production**, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. For the differences between unlicensed/test apps and licensed apps, see the [Free App](/developerportal/deploy/mendix-cloud-deploy/#free-app) section in *Mendix Cloud*.
+For production deployment, select **生产环境**. If you select **生产环境**, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. For the differences between unlicensed/test apps and licensed apps, see the [Free App](/developerportal/deploy/mendix-cloud-deploy/#free-app) section in *Mendix Cloud*.
 
 {{% alert color="warning" %}}
 Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
@@ -644,22 +628,16 @@ If you choose a custom TLS configuration, you will need to enter the following i
 
 * Enable TLS – is TLS enabled for this environment?
 
-    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/enable-tls.png" >}}
-
 * Use existing TLS secret or add new tls private key and certificate?
-
-    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/choose-secret.png" >}}
 
 * Existing Secret Name – if you choose an existing TLS secret then you will be asked to enter its name
 
 * TLS Private Key File and TLS Certificate File – if you choose to add a new key you will need to upload these two files
 
-    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/new-tls-key.png" >}}
-
 Click **保存并应用** to confirm your new configuration.
 
 {{% todo %}}Is it still necessary to say:
-You will receive a warning that you have made some changes. Click **Apply Changes** to restart the app and apply the changes.
+You will receive a warning that you have made some changes. Click **应用更改** to restart the app and apply the changes.
 {{% /todo %}}
 
 ### 6.7 Debugger

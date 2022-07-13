@@ -1,5 +1,6 @@
 ---
 title: "XSUAA Connector for SAP Business Technology Platform"
+linktitle: "XSUAA Connector for SAP BTP"
 url: /partners/sap/sap-xsuaa-connector/
 category: "SAP"
 weight: 40

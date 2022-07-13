@@ -1,5 +1,6 @@
 ---
 title: "Translating Your App to Multiple Languages"
+linktitle: "Translate App to Multiple Languages"
 url: /studio/language-support/
 category: "General Info"
 weight: 20

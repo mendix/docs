@@ -1,5 +1,6 @@
 ---
 title: "Set Up the Apple Push Notification Server"
+linktitle: "Apple Push Notification Server"
 url: /howto7/mobile/setting-up-apple-push-notification-server/
 weight: 30
 tags: ["mobile", "push notification", "apple", "server"]

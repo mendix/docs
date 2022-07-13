@@ -1,5 +1,6 @@
 ---
 title: "Configure a Form and Show Items Related to It"
+linktitle: "Configure Form & Show Items"
 url: /studio-how-to8/pages-how-to-configure-form/
 category: "Pages"
 description: "Describes how to configure a list of items in Mendix Studio."

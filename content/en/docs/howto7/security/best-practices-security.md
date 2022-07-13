@@ -1,5 +1,6 @@
 ---
 title: "Implement Best Practices for App Security"
+linktitle: "Best Practices for App Security"
 url: /howto7/security/best-practices-security/
 category: "Security"
 weight: 20

@@ -1,5 +1,6 @@
 ---
 title: "Fine-Tune a Chart with Advanced Settings"
+linktitle: "Chart Advanced Tuning"
 url: /howto7/extensibility/charts-advanced-tuning/
 weight: 30
 description: "Describes the settings you can use to change chart layouts and types"

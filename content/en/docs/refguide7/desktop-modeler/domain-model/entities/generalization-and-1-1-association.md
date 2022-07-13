@@ -1,5 +1,6 @@
 ---
 title: "Generalization & One-to-One Associations"
+linktitle: "Generalization & 1-to-1 Associations"
 url: /refguide7/generalization-and-1-1-association/
 weight: 5
 #tags: ["domain model", "association", "inheritance", "one-to-one", "generalization"]

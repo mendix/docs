@@ -1,5 +1,6 @@
 ---
 title: "Implement Mendix Best Practices for Development"
+linktitle: "Best Practices for Development"
 url: /howto8/general/dev-best-practices/
 category: "General Info"
 weight: 7

@@ -1,9 +1,9 @@
 ---
 title: "Client APIs Available to Pluggable Widgets"
+linktitle: "Client APIs"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/
 description: A guide for understanding the client APIs available to pluggable widgets.
 tags: ["Widget", "Pluggable",  "JavaScript"]
-
 weight: 20
 aliases:
  - /apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets

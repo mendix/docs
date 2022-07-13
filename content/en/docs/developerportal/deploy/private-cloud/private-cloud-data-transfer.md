@@ -1,5 +1,6 @@
 ---
 title: "Migrating data in Private Cloud environments (preview)"
+linktitle: "Migrate data (preview)"
 url: /developerportal/deploy/private-cloud-data-transfer/
 description: "Describes how to migrate data between Private Cloud environments"
 weight: 32

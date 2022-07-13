@@ -1,5 +1,6 @@
 ---
 title: "Integrate a Legacy System into a Mendix App"
+linktitle: "Legacy System in Mendix App"
 url: /howto7/integration/integrating-a-legacy-system-into-a-mendix-app/
 category: "Integration"
 weight: 1

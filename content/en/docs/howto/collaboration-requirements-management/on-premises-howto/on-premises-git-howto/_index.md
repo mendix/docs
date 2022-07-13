@@ -1,5 +1,6 @@
 ---
 title: "Work with Git On-Premises Version Control Server"
+linktitle: "Git On-Premises Version Control Server"
 url: /howto/collaboration-requirements-management/on-premises-git-howto/
 weight: 20
 tags: ["on-premises", "git", "version control"]

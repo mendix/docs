@@ -1,5 +1,6 @@
 ---
 title: "Configure Merge & Change Object Activities"
+linktitle: "Merge & Change Object Activities"
 url: /studio-how-to/microflows-how-to-merge-and-change-object/
 category: "Microflows"
 weight: 70

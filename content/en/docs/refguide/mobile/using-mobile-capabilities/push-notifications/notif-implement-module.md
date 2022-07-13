@@ -1,5 +1,6 @@
 ---
 title: "Part 2: Implement the Push Notifications Module"
+linktitle: "2. Push Notifications Module"
 url: /refguide/mobile/using-mobile-capabilities/push-notifications/notif-implement-module/
 weight: 30
 description: Tutorial for implementing the push notification module.

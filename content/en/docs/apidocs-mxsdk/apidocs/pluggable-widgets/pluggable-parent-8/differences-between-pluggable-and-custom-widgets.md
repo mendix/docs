@@ -1,5 +1,6 @@
 ---
 title: "Differences Between Pluggable and Custom Widgets"
+linktitle: "Pluggable & Custom Widget Differences"
 url: /apidocs-mxsdk/apidocs/differences-between-pluggable-and-custom-widgets/
 description: This document explains the differences between pluggable and custom widgets.
 tags: ["Widget", "Pluggable",  "JavaScript"]

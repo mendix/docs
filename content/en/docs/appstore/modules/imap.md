@@ -67,19 +67,19 @@ To register your app, follow Microsoft's [Tutorial: Register an app with Azure A
 
 ### 2.2.1 Enable Permissions
 
-On the [Azure portal](portal.azure.com), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
+On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
 
 {{< figure src="/attachments/appstore/modules/imap/azure-permissions.png" >}}
 
 ### 2.2.2 Client and Tenant ID
 
-The **IMAP/POP3 Incoming Email** module requires a **Client ID** and **Tenant ID**. On the [Azure portal](portal.azure.com), click the **Overview** tab on the left sidebar and paste the values of the **Application (client) ID** and **Directory (tenant) ID** into the module **Account Settings**.
+The **IMAP/POP3 Incoming Email** module requires a **Client ID** and **Tenant ID**. On the [Azure portal](https://portal.azure.com/), click the **Overview** tab on the left sidebar and paste the values of the **Application (client) ID** and **Directory (tenant) ID** into the module **Account Settings**.
 
 ### 2.2.3 Client Secret
 
 You will need to generate a client secret when you set up the authentication with Azure AD OAuth 2.0. 
 
-1. On the [Azure portal](portal.azure.com), click **Certificates & secrets** on the left sidebar. 
+1. On the [Azure portal](https://portal.azure.com/), click **Certificates & secrets** on the left sidebar. 
 2. Under the **Client secrets** tab, click **New client secret** and paste the ID into the module **Account Settings**.
 
 ### 2.2.4 After-Startup Microflow

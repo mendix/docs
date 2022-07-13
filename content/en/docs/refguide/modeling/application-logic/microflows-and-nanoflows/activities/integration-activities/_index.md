@@ -1,7 +1,6 @@
 ---
 title: "Integration Activities"
 url: /refguide/integration-activities/
-parent: "activities"
 weight: 60
 tags: ["studio pro"]
 ---

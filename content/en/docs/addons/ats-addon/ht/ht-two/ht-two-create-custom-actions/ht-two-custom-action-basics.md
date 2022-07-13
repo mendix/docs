@@ -1,7 +1,6 @@
 ---
 title: "Create Custom Action Basics"
 url: /addons/ats-addon/ht-two-custom-action-basics/
-parent: "ht-two-create-custom-actions"
 ---
 
 ## 1 Introduction

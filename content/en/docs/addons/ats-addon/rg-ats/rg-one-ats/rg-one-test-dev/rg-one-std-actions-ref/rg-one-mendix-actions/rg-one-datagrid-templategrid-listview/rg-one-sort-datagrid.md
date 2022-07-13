@@ -1,7 +1,6 @@
 ---
 title: "Sort DataGrid"
 url: /addons/ats-addon/rg-one-sort-datagrid/
-parent: "rg-one-datagrid-templategrid-listview"
 ---
 
 ## 1 Description

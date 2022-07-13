@@ -1,7 +1,6 @@
 ---
 title: "Set BooleanSlider Value"
 url: /addons/ats-addon/rg-one-set-booleanslider-value/
-parent: "rg-one-booleanslider"
 ---
 
 ## 1 Description

@@ -1,7 +1,6 @@
 ---
 title: "Using a Proxy to Call a Web Service"
 url: /refguide8/using-a-proxy-to-call-a-webservice/
-parent: "consumed-web-services"
 ---
 
 {{% alert color="info" %}}

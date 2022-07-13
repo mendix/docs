@@ -15,7 +15,7 @@ The [Mx Model Reflection](https://marketplace.mendix.com/link/component/69/) mod
 
 The typical usage scenario is selecting and showing entities from your domain model to use for another configuration. 
 
-## 2 Configuration
+## 2 Configuration {#configuration}
 
 After importing the module, add **USE ME** > **MxObjects_Overview** to the navigation of your app. Run your application for the synchronization. You are able to enable synchronization for each module. For both security and performance purposes, you do not want your entire domain model structure available in your app.
 

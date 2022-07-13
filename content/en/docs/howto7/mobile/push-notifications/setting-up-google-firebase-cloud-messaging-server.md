@@ -1,7 +1,6 @@
 ---
 title: "Set Up the Google Firebase Cloud Messaging Server"
 url: /howto7/mobile/setting-up-google-firebase-cloud-messaging-server/
-parent: "push-notifications"
 weight: 40
 tags: ["mobile", "push notification", "google", "firebase", "server"]
 ---
@@ -15,7 +14,7 @@ Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Be
 
 To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally/) for information on local building.
 
-To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps/).
+To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [Building Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/).
 {{% /alert %}}
 
 ## 2 Prerequisites

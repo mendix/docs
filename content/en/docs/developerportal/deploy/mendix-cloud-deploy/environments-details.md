@@ -1,12 +1,12 @@
 ---
 title: "Environment Details"
 url: /developerportal/deploy/environments-details/
-parent: "mendix-cloud-deploy"
 weight: 7
 description: "Describes the environmental details of your app and how to manage the environment."
 tags: ["Deploy","App","Environment","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #The anchor #connection-whitelist below is mapped from the Developer Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
+#The anchor #services below is mapped from the Developer Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -488,7 +488,7 @@ Unlike the Custom Runtime Settings, most of the variables you add are chosen fro
 
 Select **Supported** and you can choose from the following variables:
 
-* **APPMETRICS_TARGET** – setting this enables business events to be sent to a different monitoring solution from the technical events
+* **APPMETRICS_TARGET** – enables sending application runtime and custom business metrics to HTTP endpoints of different monitoring solutions, such as [InfluxDB](https://www.influxdata.com/), while ignoring micrometer endpoints
 * **DD_API_KEY** – the API key used with Datadog
 * **DD_LOG_LEVEL** – the log level of logging sent to Datadog
 * **DD_SITE** – directs metrics to a specific Datadog region
@@ -536,3 +536,7 @@ You can set tags on your environment. These are arbitrary strings that are not i
 * Tags can serve as selection criteria for grouping environments into a landscape management dashboard which can be used for third-party logging solutions
 
 For example, you may wish to use tags when logging with *Datadog*. You can find more information on this at [Getting started with tags](https://docs.datadoghq.com/tagging/) on the *Datadog* site.
+
+## 9 Services Tab{#services}
+
+You can enable and disable custom services for individual environments of your app. The service you want to enable must have been enabled for the app by its Technical Contact (see [Services](/developerportal/deploy/environments/#services) in the *Environments* documentation).

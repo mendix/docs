@@ -1,7 +1,6 @@
 ---
 title: "Debug a Hybrid Mobile App"
 url: /howto8/mobile/debug-a-mobile-app/
-parent: "hybrid-mobile"
 weight: 40
 description: "How to set up a mobile app to run from your local machine and debug using Mendix's tools"
 tags: ["mobile", "debug", "android", "ios"]

@@ -1,7 +1,6 @@
 ---
 title: "Delete Object(s)"
 url: /refguide/deleting-objects/
-parent: "object-activities"
 weight: 50
 tags: ["studio pro"]
 ---
@@ -61,7 +60,7 @@ If set to *Yes*, the deletion is reflected across the client, which includes rel
 
 When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
-For more information, see the [Microflows](/refguide/offline-first/#microflows) section of the *Offline-First Reference Guide*.
+For more information, see the see the [Microflows](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/#microflows) section of *Offline-First Data*.
 
 #### 3.2.3 Activity Used in a Nanoflow {#delete-in-nano}
 

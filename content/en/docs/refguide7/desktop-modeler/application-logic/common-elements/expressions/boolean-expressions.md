@@ -1,7 +1,6 @@
 ---
 title: "Boolean expressions"
 url: /refguide7/boolean-expressions/
-parent: "expressions"
 ---
 ### Boolean expressions
 

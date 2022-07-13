@@ -11,6 +11,19 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### June 30th, 2022
+
+#### Improvements
+
+* The Catalog has gotten a mini makeover! 
+     * The **Catalog** and **Curate** top menu items are now up in the bar at the top of the screen, the MxDock. 
+     * In the **Catalog**, you can now navigate between a **Data View**, which gives you insights about a Data Source, and a **Landscape View**, which situates the Data Source in the landscape.
+* You can now filter the search results by CRUD capabilities.
+
+#### Fixes
+
+* We fixed an error that occurred when filtering by *Environment* in the search pane.
+
 ### June 23rd, 2022
 
 #### Improvements

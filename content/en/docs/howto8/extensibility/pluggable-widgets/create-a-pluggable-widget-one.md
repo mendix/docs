@@ -1,7 +1,6 @@
 ---
 title: "Build a Pluggable Web Widget: Part 1"
 url: /howto8/extensibility/create-a-pluggable-widget-one/
-parent: "pluggable-widgets"
 weight: 10
 description: "This how-to will teach you to create a pluggable web widget."
 tags: ["widget", "pluggable", "JavaScript", "API", "JavaScript-API"]

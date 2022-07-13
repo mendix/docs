@@ -1,7 +1,6 @@
 ---
 title: "Order By Behavior"
 url: /refguide8/ordering-behavior/
-parent: "data-storage"
 tags: ["studio pro"]
 weight: 20
 ---

@@ -2,7 +2,6 @@
 title: "Technical Appendix: 2. Operator Flows"
 linktitle: "2. Operator Flows"
 url: /developerportal/deploy/private-cloud-technical-appendix-02/
-parent: "private-cloud-technical-appendix"
 description: "Describes which providers are supported by Mendix for Private Cloud"
 weight: 20
 tags: ["Private Cloud", "Technical Appendix"]

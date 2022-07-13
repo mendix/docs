@@ -1,7 +1,6 @@
 ---
 title: "Customize Styling"
 url: /howto/front-end/customize-styling-new/
-parent: "atlas-ui"
 weight: 20
 description: "This describes how developers can change apps styling and create re-usable styling."
 tags: ["build", "app", "studio", "studio pro", "style", "styling"]
@@ -584,7 +583,7 @@ When an end-user opens a Mendix app in an unsupported browser, a page is shown t
 
 By default, Atlas uses the font Open Sans, and the font files are loaded from the Google Fonts Content Delivery Network (CDN). While the Google Fonts CDN is convenient, you might need to change your font file service location.
 
-For example, you may need to change your font file service location in order to comply with stricter [CSP]( /refguide/progressive-web-app/csp/) policies, or if you cannot use Google Fonts CDN due to business requirements. Fortunately, you can serve fonts from your own local server instead of using the Google Fonts CDN using the sections below.
+For example, you may need to change your font file service location in order to comply with stricter [CSP](/refguide/mobile/using-mobile-capabilities/csp/) policies, or if you cannot use Google Fonts CDN due to business requirements. Fortunately, you can serve fonts from your own local server instead of using the Google Fonts CDN using the sections below.
 
 ### 11.1 Downloading Font Files
 

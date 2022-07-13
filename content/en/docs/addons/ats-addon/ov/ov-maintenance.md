@@ -1,7 +1,6 @@
 ---
 title: "Maintenance"
 url: /addons/ats-addon/ov-maintenance/
-parent: "ov"
 weight: 4
 ---
 

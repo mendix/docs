@@ -1,7 +1,6 @@
 ---
 title: "Load Test Recorder"
 url: /addons/apd-addon/rg-one-load-test-recorder/
-parent: "rg-one-apm"
 ---
 
 ## 1 Introduction

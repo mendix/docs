@@ -1,7 +1,6 @@
 ---
 title: "(Un)Mask Your Data"
 url: /addons/ats-addon/ht-two-mask-your-password/
-parent: "ht-two"
 description: "Describes the steps for unmasking your password in ATS."
 tags: ["ATS", "testing"]
 ---

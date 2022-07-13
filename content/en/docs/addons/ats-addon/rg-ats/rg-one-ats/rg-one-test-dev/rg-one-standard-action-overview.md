@@ -1,7 +1,6 @@
 ---
 title: "Standard Actions"
 url: /addons/ats-addon/rg-one-standard-action-overview/
-parent: "rg-one-test-dev"
 weight: 4
 ---
 

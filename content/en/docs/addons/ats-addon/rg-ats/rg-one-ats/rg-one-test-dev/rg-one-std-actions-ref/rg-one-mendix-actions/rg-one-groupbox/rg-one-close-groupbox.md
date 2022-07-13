@@ -1,7 +1,6 @@
 ---
 title: "Close GroupBox"
 url: /addons/ats-addon/rg-one-close-groupbox/
-parent: "rg-one-groupbox"
 ---
 
 ## 1 Description

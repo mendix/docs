@@ -1,7 +1,6 @@
 ---
 title: "XPath Source"
 url: /refguide/xpath-source/
-parent: "data-sources"
 tags: ["studio pro", "xpath", "xpath source", "data source", "data filter"]
 weight: 20
 ---

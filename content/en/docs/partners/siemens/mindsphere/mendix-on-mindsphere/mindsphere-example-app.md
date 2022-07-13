@@ -1,7 +1,6 @@
 ---
 title: "Use the Siemens MindSphere Operations Insight Example App"
 url: /partners/siemens/mindsphere-example-app/
-parent: "mendix-on-mindsphere"
 weight: 110
 tags: ["Siemens", "MindSphere", "Example", "Operations Insight", "Time Series", "REST", "API"]
 ---

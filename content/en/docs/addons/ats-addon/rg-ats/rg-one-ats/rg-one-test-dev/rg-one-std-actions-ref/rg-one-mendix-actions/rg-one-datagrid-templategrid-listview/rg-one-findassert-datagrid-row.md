@@ -1,7 +1,6 @@
 ---
 title: "Find/Assert DataGrid Row"
 url: /addons/ats-addon/rg-one-findassert-datagrid-row/
-parent: "rg-one-datagrid-templategrid-listview"
 ---
 
 ## 1 Description

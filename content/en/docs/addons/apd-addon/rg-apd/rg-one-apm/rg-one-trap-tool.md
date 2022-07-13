@@ -1,7 +1,6 @@
 ---
 title: "Trap Tool"
 url: /addons/apd-addon/rg-one-trap-tool/
-parent: "rg-one-apm"
 ---
 
 ## 1 Introduction

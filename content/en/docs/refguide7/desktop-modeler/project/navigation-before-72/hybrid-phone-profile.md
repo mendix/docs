@@ -1,7 +1,6 @@
 ---
 title: "Hybrid Phone Profile"
 url: /refguide7/hybrid-phone-profile/
-parent: "navigation-before-72"
 description: "Describes usage of the Hybrid Phone profile in a Mendix app for Mendix versions 7.0 and 7.1."
 ---
 

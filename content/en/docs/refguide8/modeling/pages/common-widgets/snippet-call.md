@@ -1,7 +1,6 @@
 ---
 title: "Snippet Call"
 url: /refguide8/snippet-call/
-parent: "common-widgets"
 weight: 40
 tags: ["studio pro", snippet call", "common widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

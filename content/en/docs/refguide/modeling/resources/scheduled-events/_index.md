@@ -1,7 +1,6 @@
 ---
 title: "Scheduled Events"
 url: /refguide/scheduled-events/
-parent: "resources"
 weight: 80
 description: "Options for configuring scheduled events"
 tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "scheduling issues", "time zones", "daylight saving"]

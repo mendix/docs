@@ -1,7 +1,6 @@
 ---
 title: "Mendix IP Addresses"
 url: /developerportal/deploy/mendix-ip-addresses/
-parent: "mendix-cloud-deploy"
 weight: 38
 description: "A list of static IP addresses used by the Mendix cloud"
 tags: ["Mendix cloud", "IP address", "Cloud Portal"]

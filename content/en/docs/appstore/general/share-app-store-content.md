@@ -163,6 +163,7 @@ A lead is a potential sales contact that expresses interest in your product or s
 
 * Solutions
 * Solution templates
+* App services
 * Platform services
 
 When prospective customers are interested in your product, they can leave their contact information using the Marketplace product listing. This is done by clicking a call-to-action button and filling in a form.

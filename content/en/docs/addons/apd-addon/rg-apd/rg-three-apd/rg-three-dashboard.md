@@ -1,7 +1,6 @@
 ---
 title: "Dashboard"
 url: /addons/apd-addon/rg-three-dashboard/
-parent: "rg-three-apd"
 ---
 
 The dashboard of an environment shows real-time information regarding the following:

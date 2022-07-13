@@ -1,7 +1,6 @@
 ---
 title: "Enumeration"
 url: /studio8/domain-models-enumeration/
-parent: "domain-models"
 description: "Describes enumerations in Mendix Studio."
 tags: ["studio", "domain model", "attributes", "enumeration"]
 ---

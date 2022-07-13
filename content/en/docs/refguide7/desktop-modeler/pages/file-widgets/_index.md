@@ -1,7 +1,6 @@
 ---
 title: "File Widgets"
 url: /refguide7/file-widgets/
-parent: "pages"
 ---
 
 

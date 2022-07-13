@@ -1,7 +1,6 @@
 ---
 title: "On Click Event"
 url: /refguide7/on-click-event/
-parent: "page-concepts"
 ---
 ### On click
 

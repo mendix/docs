@@ -1,7 +1,6 @@
 ---
 title: "Microsoft Windows"
 url: /developerportal/deploy/deploy-mendix-on-microsoft-windows/
-parent: "on-premises-design"
 description: "How to install and configure Mendix on a system running Microsoft Windows"
 weight: 50
 tags: ["deploy", "Windows", "On Premises", "Microsoft", "Mendix Service Console", "IIS", "URL Rewrite", "Client Cache", "Reverse Inbound Proxy", "Host Header"]
@@ -245,7 +244,7 @@ These instructions use port 8080, which is the default port. Please use the port
 {{% /alert %}}
 
 
-#### 5.5.1 Reverse Proxy Inbound Rules
+#### 5.5.1 Reverse Proxy Inbound Rules{#reverse-proxy-rules}
 
 You need to add a number of rules to configure the following request handlers.
 

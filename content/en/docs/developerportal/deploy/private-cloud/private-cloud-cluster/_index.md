@@ -1,7 +1,6 @@
 ---
 title: "Creating a Private Cloud Cluster"
 url: /developerportal/deploy/private-cloud-cluster/
-parent: "private-cloud"
 description: "Describes the processes for creating a Private Cloud cluster in the Mendix Developer Portal"
 weight: 10
 tags: ["Create", "Private Cloud", "Cluster", "Namespace"]

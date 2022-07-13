@@ -1,7 +1,6 @@
 ---
 title: "Long-Running Actions"
 url: /addons/apd-addon/rg-three-long-running-actions/
-parent: "rg-three-apd"
 ---
 
 After clicking the **Long running microflow** indicator, a pop-up window with long-running microflows is displayed:

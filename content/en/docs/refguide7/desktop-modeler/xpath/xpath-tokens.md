@@ -1,7 +1,6 @@
 ---
 title: "XPath Tokens"
 url: /refguide7/xpath-tokens/
-parent: "xpath"
 ---
 
 

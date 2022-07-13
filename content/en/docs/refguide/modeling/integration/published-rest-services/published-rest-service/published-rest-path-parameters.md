@@ -1,7 +1,6 @@
 ---
 title: "Published REST Path Parameters"
 url: /refguide/published-rest-path-parameters/
-parent: "published-rest-service"
 weight: 30
 tags: ["published REST", "path parameters", "Data and Time", "studio pro"]
 # combine this with published rest service

@@ -1,7 +1,6 @@
 ---
 title: "Configuring Hybrid Mobile Apps To Run Offline"
 url: /refguide8/configuring-hybrid-mobile-apps-to-run-offline/
-parent: "hybrid-mobile"
 tags: ["studio pro"]
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Structure"
 url: /refguide/structure-widgets/
-parent: "pages"
 weight: 25
 tags: ["studio pro", "container widget", "widget"]
 ---

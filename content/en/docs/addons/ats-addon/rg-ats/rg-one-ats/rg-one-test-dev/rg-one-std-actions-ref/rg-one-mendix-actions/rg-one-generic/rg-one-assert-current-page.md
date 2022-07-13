@@ -1,7 +1,6 @@
 ---
 title: "Assert Current Page"
 url: /addons/ats-addon/rg-one-assert-current-page/
-parent: "rg-one-generic"
 ---
 
 ## 1 Description

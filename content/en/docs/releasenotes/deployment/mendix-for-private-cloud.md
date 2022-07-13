@@ -13,7 +13,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
-### July  ???, 2022
+### July 12th, 2022
 
 #### Mendix Operator v2.6.0{#2.6.0}
 
@@ -23,7 +23,13 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We resolved an issue where the sidecar container didn’t process the shutdown signal, even when the app container was stopped (this meant that stopping an app took 30 seconds)
 * We have disabled the `enableServiceLinks` Kubernetes feature — this prevents app pods from receiving a list of all services running in a namespace through environment variables.
 * When connecting to the Development Portal, the Mendix Gateway Agent will now trust CAs specified through [Custom TLS](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#custom-tls)
-* We fixed an issue where the Operator was restarting the build pod when using AWS identity webhooks
+* We fixed an issue where the Operator was restarting the build pod when using AWS identity webhooks.
+
+### July 12th, 2022
+
+#### Portal Improvements
+
+* We fixed an issue where users were unable to see all the environments on the environment details page. (Ticket 151698)
 
 ### June 2nd, 2022 
 
@@ -59,7 +65,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We refactored our internal build process - images now share layers as much as possible, reducing download sizes and making it easier to patch CVEs from the base OS layers.
 * A subset of Mendix for Private Cloud components are now available for the ARM64 architecture, allowing you to deploy Mendix apps to machines running Apple Silicon, Raspberry Pi 4, and server-grade ARM64 chips.
 
-##### Known Issue
+#### Known Issue
 
 This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 

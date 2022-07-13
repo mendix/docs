@@ -1,7 +1,6 @@
 ---
 title: "Sort Bar"
 url: /refguide7/sort-bar/
-parent: "data-grid"
 aliases:
     - /refguide7/Sort+Bar.html
     - /refguide7/Sort+Bar

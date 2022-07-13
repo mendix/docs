@@ -1,7 +1,6 @@
 ---
 title: "Data view"
 url: /refguide7/data-view/
-parent: "data-widgets"
 tags: ["Page", "Display", "widget", "object"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

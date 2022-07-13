@@ -1,7 +1,6 @@
 ---
 title: "MindSphere IIoT for Makers"
 url: /partners/siemens/mindsphere-app-service/
-parent: "mindsphere"
 weight: 5
 description: "A description of some extra considerations to be taken into account when developing for deployment to MindSphere"
 tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Local", "Styling", "UI", "Icons", "Limitations", "Licensing", "Validation", "App Service", "IIoT"]

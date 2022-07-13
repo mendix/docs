@@ -1,7 +1,6 @@
 ---
 title: "Use the Charts Theme"
 url: /howto/front-end/charts-theme/
-parent: "charts-tutorials"
 weight: 40
 description: "Hos to set up a theme which will be applied to all the charts created with charts widgets in an app"
 tags: ["Charts", "Theme", "Widget", "Studio Pro"]

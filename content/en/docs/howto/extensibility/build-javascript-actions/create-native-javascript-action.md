@@ -1,7 +1,6 @@
 ---
 title: "Build JavaScript Actions for Native Mobile"
 url: /howto/extensibility/create-native-javascript-action/
-parent: "build-javascript-actions"
 weight: 30
 description: "This tutorial will teach you to build a JavaScript action for native mobile apps."
 tags: ["NFC", "Near Field Communication", "JavaScript", "native", "mobile"]
@@ -203,11 +202,11 @@ This dialog box is your phone's operating system recognizing the NFC tag. On And
 
 ### 3.6 Building a Native Custom Developer App {#custom-developer-app}
 
-When developing a native mobile app, you can use the [Make it Native](/refguide/getting-the-make-it-native-app/) app to quickly get started. However, this app is bundled with a limited number of functionalities. This tutorial's app requires an NFC module in order to access the native NFC capabilities. This can only be achieved by building a custom developer app. To build and install a custom developer app, follow the steps in [How to Create a Custom Developer App](/howto/mobile/how-to-devapps/).
+When developing a native mobile app, you can use the [Make it Native](/refguide/getting-the-make-it-native-app/) app to quickly get started. However, this app is bundled with a limited number of functionalities. This tutorial's app requires an NFC module in order to access the native NFC capabilities. This can only be achieved by building a custom developer app. To build and install a custom developer app, follow the steps in [Create a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/).
 
 ### 3.7 Testing the NFC Custom Developer App
 
-After you have finished the steps outlined in [How to Create a Custom Developer App](/howto/mobile/how-to-devapps/), try it out.
+After you have finished the steps outlined in [Create a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/), try it out.
 
 1. Open the app
 1. Tap **Scan tag**
@@ -309,11 +308,11 @@ Congratulations on making your own native JavaScript action! Please use your own
 
 Until this section, you have used a custom developer app to validate your application. When you want to distribute your app in the Google Play Store or Apple App Store, you have to make a build that includes the bundled Mendix app.
 
-For the full explanation on how to build, sign, and distribute your app to an app store see [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app/), as well as the tutorial's subsequent sections.
+For the full explanation on how to build, sign, and distribute your app to an app store see [Deploy Your First Mendix Native Mobile App](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/), as well as the tutorial's subsequent sections.
 
 ## 5 Read More
 
-* [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app/)
+* [How to Deploy Your First Mendix Native Mobile App](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/)
 * [JavaScript Actions Reference Guide](/refguide/javascript-actions/)
 * [How To Build JavaScript actions](/howto/extensibility/build-javascript-actions/)
 * [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/)

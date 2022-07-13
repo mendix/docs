@@ -11,6 +11,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### July 14th, 2022
+
+#### Improvements
+
+* When an Application, Environment or Data Source is deleted from the Data Hub by a user other than the Technical or Business owners, then the Technical and/or Business owner shall receive a notification about the deletion.
+
 ### June 30th, 2022
 
 #### Improvements

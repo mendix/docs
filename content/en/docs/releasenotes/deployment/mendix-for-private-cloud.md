@@ -25,8 +25,6 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * When connecting to the Development Portal, the Mendix Gateway Agent will now trust CAs specified through [Custom TLS](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#custom-tls)
 * We fixed an issue where the Operator was restarting the build pod when using AWS identity webhooks.
 
-### July 12th, 2022
-
 #### Portal Improvements
 
 * We fixed an issue where users were unable to see all the environments on the environment details page. (Ticket 151698)

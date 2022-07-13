@@ -24,7 +24,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * We removed the profile buzz page (if you are not sure what that is, now you know why we decided to remove it :)
 * We made some small improvements to the new general settings page
 
-P.S. Don't forget to try out Epics by enabling it on the General Settings page
+P.S. Don't forget to try out Epics - your scrum master can enable it on the General Settings page
 
 ### July 7th, 2022
 

@@ -84,6 +84,7 @@ In the sections below you can see the basic steps to get an app up and running o
 To build an Android app with Android Studio, do the following:
 
 1. Run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) in the app root to install the required dependencies.
+1. Run `npm run configure` to apply the configuration from the Mendix Native Mobile Builder to the app. 
 1. Open Android Studio.
 1. Select the `<Native Template root>/android` as the entry point for the app.
 1. After synchronizing the app your Android Studio should look something like this. **Do not accept any suggestions to update to latest Gradle or Kotlin version**:
@@ -109,6 +110,7 @@ To build an Android app with Android Studio, do the following:
 To build an iOS app with XCode, do the following:
 
 1. If you have not ran it yet, run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) in the app root to install the required dependencies.
+1. Also run `npm run configure` to apply the configuration from the Mendix Native Mobile Builder to the app. 
 1. Change directory by running `cd ios` and run `pod install` to install the iOS dependencies.
 
 	The iOS app is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see CocoaPods [documentation](https://cocoapods.org/#install).

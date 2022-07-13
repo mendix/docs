@@ -55,6 +55,10 @@ Some **Account Settings** might be unavailable in earlier Mendix versions.
 
 ### 2.2 Configuring Microsoft Azure Active Directory (AD) OAuth 2.0 {#configure-azure-ad}
 
+{{% alert color="warning" %}}
+This feature is currently only available with module version 4.1.0 for Studio Pro [7.23.31 (LTS)](/releasenotes/studio-pro/7.23/#72331), and will soon be available with other versions.
+{{% /alert %}}
+
 You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. You can only add one OAuth 2.0 configuration for each app.
 
 Click the green **+** button to add a new account, and select the option **Configure using Microsoft Azure AD**. If the account is already registered on the Azure portal, the required fields will already be filled in. If not, or if you need to make changes, you will need to register your app on the Azure portal.
@@ -64,6 +68,8 @@ To register your app, follow Microsoft's [Tutorial: Register an app with Azure A
 ### 2.2.1 Enable Permissions
 
 On the [Azure portal](portal.azure.com), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
+
+{{< figure src="/attachments/appstore/modules/imap/azure-permissions.png" >}}
 
 ### 2.2.2 Client and Tenant ID
 
@@ -75,6 +81,14 @@ You will need to generate a client secret when you set up the authentication wit
 
 1. On the [Azure portal](portal.azure.com), click **Certificates & secrets** on the left sidebar. 
 2. Under the **Client secrets** tab, click **New client secret** and paste the ID into the module **Account Settings**.
+
+### 2.2.4 After-Startup Microflow
+
+To configure the After-Startup microflow, do the following:
+
+1. In the **App Explorer**, go to **Settings** and open **App Settings**.
+2. Go to the **Runtime** tab.
+3. In **After-Startup**, select the **ASU_RegisterHandlers** microflow.
 
 ## 3 Usage
 

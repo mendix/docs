@@ -200,7 +200,7 @@ Microflows containing [unit tests](/howto/testing/testing-microflows-using-the-u
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
-| Unit Test       | TEST\_                |
+| Unit Test       | TEST\_ or UT_ (case-insensitive) |
 
 #### 3.4.9 Integration Microflows
 

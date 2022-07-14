@@ -219,7 +219,7 @@ To make a copy of the module, do the following:
 
 3. Copy the **MendixSSOUser** entity from the **MendixSSO** module domain model, to the domain model of your new module. In these examples it is called **CustomMendixSSOUser**.
 
-    {{% alert color="info" %}}You can also create an entity from scratch, provided is uses **System.User** as its generalization.{{% /alert %}}
+    {{% alert color="info" %}}You can also create an entity from scratch, provided it uses **System.User** as its generalization.{{% /alert %}}
 
 4. Set the entity **Access rules** for the **User** and **Administrator** module roles.
 
@@ -262,6 +262,10 @@ Mendix SSO will now use your new entity to administer the users. You can edit th
 {{% alert color="info" %}}
 Remember that data which comes from the end-user's Mendix ID via SSO (for example, **EmailAddress**) will overwrite any changes you make within your app.
 {{% /alert %}}
+
+#### 5.2.4 Using the microflows in the Administration module
+
+The [Administration](https://marketplace.mendix.com/link/component/23513) module contains a set of microflows to configure Mendix SSO to use **Administration.Account** as the user entity. Follow the instructions in [Using the Administration Module with Mendix SSO](https://docs.mendix.com/appstore/modules/administration/#3-using-the-administration-module-with-mendix-sso) to use the Administration module with Mendix SSO.
 
 ## 6 Tokens
 

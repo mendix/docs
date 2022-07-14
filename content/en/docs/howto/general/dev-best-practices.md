@@ -196,11 +196,11 @@ Your [app settings](/refguide/app-settings/) provide three events that can trigg
 
 #### 3.4.8 Unit Test Microflows
 
-Microflows containing unit tests should have the prefix **TEST_** or **UT_**. For more information about the Unit Testing module, see [Unit Testing](/appstore/modules/unit-testing/).
+Microflows containing unit tests should have the prefix **TEST_** or **UT_** (case-insensitive). For more information about the Unit Testing module, see [Unit Testing](/appstore/modules/unit-testing/).
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
-| Unit Test       | TEST\_ or UT_ (case-insensitive) |
+| Unit Test       | TEST\_ or UT_ |
 
 #### 3.4.9 Integration Microflows
 

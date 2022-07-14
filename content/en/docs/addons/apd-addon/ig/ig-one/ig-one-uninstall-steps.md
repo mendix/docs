@@ -36,7 +36,7 @@ CLEVR customized versions of Marketplace widgets:
 
 ## 5 Delete Permissions
 
-Delete permissions APMAgent.Admin from App security / user roles tab to a selected administrator role. On Edit of the last dialog Mendix will remove the permissions for you.
+Delete permissions APMAgent.Admin from app security / user roles tab to a selected administrator role. On Edit of the last dialog Mendix will remove the permissions for you.
 {{< figure src="/attachments/addons/apd-addon/ig/ig-one/ig-one-uninstall-steps/Delete_Permissions.png" >}}
 
 **_Note._** _If you added the Debug role, remove it now._

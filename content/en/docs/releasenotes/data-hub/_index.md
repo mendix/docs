@@ -11,13 +11,19 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### July 14th, 2022
+
+#### Improvements
+
+* When a user other than the Technical or Business Owner deletes an application, environment, or data source, the Technical and/or Business Owner will receive a notification. For more information on data source ownership, see the [Changing Owners of an App](/data-hub/data-hub-catalog/curate/#changing-owners) section of *Curate Registered Assets*.
+
 ### June 30th, 2022
 
 #### Improvements
 
 * The Catalog has gotten a mini makeover! 
      * The **Catalog** and **Curate** top menu items are now up in the bar at the top of the screen, the MxDock. 
-     * You can now navigate between a **Data View**, which gives you insights about a Data Source, and a **Landscape View**, which situates the Data Source in the landscape.
+     * In the **Catalog**, you can now navigate between a **Data View**, which gives you insights about a Data Source, and a **Landscape View**, which situates the Data Source in the landscape.
 * You can now filter the search results by CRUD capabilities.
 
 #### Fixes

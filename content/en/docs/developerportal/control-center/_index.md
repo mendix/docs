@@ -4,6 +4,8 @@ url: /developerportal/control-center/
 description: "Describes the Mendix Control Center, used for the governance of company members, apps, security, and cloud resources."
 tags: ["control center", "mendix admin", "developer portal", "role", "permissions", "fallback", "resource pack", "node", "offboard"]
 weight: 20
+no_list: false 
+description_list: true
 aliases:
     - /developerportal/company-app-roles/users.html
     - /developerportal/company-app-roles/users
@@ -218,9 +220,5 @@ An organization's Data Hub requires governance of the data-sharing policy down t
 
 For details on these tasks, see [Data Hub Administration](/developerportal/control-center/data-hub-admin/).
 
-## 12 Read More
+## 13 Documents in This Category
 
-* [How to Set Up an SSO (BYOIDP)](/developerportal/control-center/set-up-sso-byoidp/)
-* [Data Hub Administration](/developerportal/control-center/data-hub-admin/)
-* [Control Center and Mendix 8.18: The Right Amount of Control](https://www.mendix.com/blog/control-center-and-mendix-8-18-the-right-amount-of-control/)
-* [Govern and Scale your App Landscape with Mendix Control Center](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center)

@@ -2,8 +2,10 @@
 title: "Mendix Support"
 url: /developerportal/support/
 description: ""
-tags: ["Support", "SLA", "standard", "premium"]
 weight: 30
+no_list: false 
+description_list: true
+tags: ["support", "sla", "standard", "premier", "platform"]
 aliases:
     - /howtogeneral/support/index.html
 ---
@@ -239,7 +241,7 @@ Mendix Support needs application logs to diagnose these components. Because Mend
 This includes the implementation and configuration of features, and the data and files in the Mendix app itself.
 These components are not accessible for Mendix Support and issues in the application are out of the scope of Mendix Support, although we will gladly assist in case of questions.
 
-## 11 Main Documents in This Category
+## 11 Documents in This Category
 
 * [Prepare Your App for Support](/developerportal/support/prepare-your-app/) – shows you how to configure app authorization to select the affected app(s) in the Mendix Support Portal
 * [Submit a Support Request](/developerportal/support/submit-support-request/) – presents the details necessary for Mendix Support to process your request

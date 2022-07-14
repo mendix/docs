@@ -103,7 +103,7 @@ Create a new Mendix Team Server app based on the [Siemens MindSphere Mobile Star
 
 Now, you need to make some configuration changes in the app itself.
 
-In the App Explorer open the configuration of the app store module **MindsphereSingleSignOn**:
+In the **App Explorer** open the configuration of the app store module **MindsphereSingleSignOn**:
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StudioPro_SSO_configuration.png" alt="Studio SSO configuration" >}}
 

@@ -1,9 +1,7 @@
 ---
 title: "Studio Pro"
 url: /releasenotes/studio-pro/
-toc-level: 1
 description: "Presents all of the available release notes for Mendix Studio Pro."
-frontpage_featured: true
 weight: 5
 aliases:
     - /releasenotes/desktop-modeler/index.html

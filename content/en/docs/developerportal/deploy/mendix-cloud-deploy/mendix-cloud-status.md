@@ -1,7 +1,6 @@
 ---
 title: "Cloud Status: Mendix Cloud"
 url: /developerportal/deploy/mendix-cloud-status/
-parent: "mendix-cloud-deploy"
 weight: 21
 description: "Describes where to find the current status of the Mendix Cloud."
 tags: ["Status","Mendix Cloud","Developer Portal", "Issue", "Maintenance", "Subscribe"]

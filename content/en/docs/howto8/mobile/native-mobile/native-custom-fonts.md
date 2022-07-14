@@ -1,7 +1,6 @@
 ---
 title: "Add Fonts to Your Native Mobile App"
 url: /howto8/mobile/native-custom-fonts/
-parent: "native-mobile"
 weight: 42
 description: "This tutorial will teach you to enrich the design of your native mobile app with custom fonts."
 tags: ["mobile", "debug", "android", "ios", "native", "fonts"]

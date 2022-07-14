@@ -1,7 +1,6 @@
 ---
 title: "Finding the Action You Need"
 url: /addons/ats-addon/bp-one-finding-the-action-you-need/
-parent: "bp-one"
 ---
 
 ## 1 Introduction

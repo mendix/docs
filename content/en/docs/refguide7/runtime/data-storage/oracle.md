@@ -1,7 +1,6 @@
 ---
 title: "Oracle"
 url: /refguide7/oracle/
-parent: "data-storage"
 weight: 60
 ---
 

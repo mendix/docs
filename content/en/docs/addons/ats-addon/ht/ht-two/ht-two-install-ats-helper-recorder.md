@@ -1,7 +1,6 @@
 ---
 title: "Install ATS Helper & ATS Recorder"
 url: /addons/ats-addon/ht-two-install-ats-helper-recorder/
-parent: "ht-two"
 description: "Describes how to install the ATS Helper and the ATS Recorder tool."
 tags: ["ATS", "testing"]
 ---
@@ -25,8 +24,6 @@ Before starting this how-to, make sure you have the following prerequisites in p
 	{{% alert color="info" %}}  Both the ATS Helper and the ATS Recorder only work on a Mendix app.
 	{{% /alert %}}
 	
-	{{% youtube C7GuDU9nePQ %}}
-
 *   Google Chrome Browser
 
 	{{% alert color="info" %}}  Both the ATS Helper and the ATS Recorder only function in [Google Chrome](https://www.google.com/chrome/browser/). 

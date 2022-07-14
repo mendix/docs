@@ -1,7 +1,6 @@
 ---
 title: "APD 3 Installation Guide"
 url: /addons/apd-addon/ig-three/
-parent: "ig"
 weight: 1
 ---
 

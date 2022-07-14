@@ -1,7 +1,6 @@
 ---
 title: "Data View & List View Properties"
 url: /studio7/page-editor-data-view-list-view/
-parent: "page-editor-widgets"
 description: "Describes the data view and list view in the page editor of Mendix Studio."
 weight: 10
 tags: ["studio", "page editor", "pages", "data view", "list view"]

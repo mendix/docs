@@ -1,7 +1,6 @@
 ---
 title: "Published REST Services"
 url: /refguide/published-rest-services/
-parent: "integration"
 weight: 20
 description: "An overview of published REST services from Mendix apps"
 tags: ["publish", "REST service", "overview", "configuration"]

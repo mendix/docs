@@ -1,7 +1,6 @@
 ---
 title: "On Click Event & Events Section"
 url: /refguide/on-click-event/
-parent: "pages"
 weight: 130
 tags: ["studio pro", "events section", "properties", "widget", "on click", "action", "on click event"]
 aliases:
@@ -239,7 +238,7 @@ The **Create object** event creates a new object. The following properties are s
 The **Save changes** event commits all changes made on the page. The following properties are specific for this event:
 
 * **Close page** – specifies whether the current page should be closed.
-* **Auto-synchronize** – specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](/refguide/offline-first/). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [syncing it](/refguide/offline-first/#synchronization).
+* **Auto-synchronize** – specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](/refguide/offline-first/). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [synchronizing it](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/).
 
 This event cannot be used on pages that change [external entities](/refguide/external-entities/). Use the [Send External Object](/refguide/send-external-object/) activity to save changes to external entities.
 
@@ -263,7 +262,7 @@ Set the **Close page** property to indicate whether the current page should be c
 
 ### 3.11 Synchronize {#synchronize}
 
-The **Synchronize** event [synchronizes](/refguide/offline-first/#synchronization) the data stored locally on your device with the server database.
+The **Synchronize** event [synchronizes](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/) the data stored locally on your device with the server database.
 
 ### 3.12 Sign Out {#sign-out}
 

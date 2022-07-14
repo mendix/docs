@@ -1,7 +1,6 @@
 ---
 title: "Create a Basic Chart"
 url: /howto8/front-end/charts-basic-create/
-parent: "charts-tutorials"
 weight: 10
 description: "How to create a basic chart and configure the display options"
 tags: ["Charts", "Widgets", "Basic Chart", "Area Chart"]

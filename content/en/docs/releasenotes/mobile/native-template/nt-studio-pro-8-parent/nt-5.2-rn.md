@@ -1,10 +1,17 @@
 ---
 title: "Native Template 5.2"
 url: /releasenotes/mobile/nt-5.2-rn/
-parent: "nt-studio-pro-8-parent"
 weight: 10
 description: "Native Template 5.2 release notes."
 ---
+
+## 5.2.13
+
+**Release date: June 15th, 2022**
+
+### Fixes
+
+* We fixed an issue with the date picker not being visible in dark mode. (Tickets 120143, 122791, 122843)
 
 ## 5.2.12
 

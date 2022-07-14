@@ -1,7 +1,6 @@
 ---
 title: "MindSphere Mobile Native"
 url: /partners/siemens/mindsphere-mobile-native/
-parent: "mendix-on-mindsphere"
 weight: 200
 description: "Explain how to create your own Native Mobile application for MindSphere and what needs to be considered for development"
 tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Local", "Styling", "UI", "Icons", "Limitations", "Licensing", "Validation", "Mobile Native"]
@@ -10,13 +9,13 @@ tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Lo
 ## 1 Introduction
 
 This documentation describes the adaptations needed to develop Mendix native mobile apps for MindSphere. Native mobile apps do not render inside a web view - they use native UI elements. This enables fast performance, smooth animations, and allows access to all native device capabilities.
-Details about building native mobile apps with Mendix can be found in the [Native Mobile How Tos](/howto/mobile/native-mobile/) section.
+Details about building native mobile apps with Mendix can be found in [Building Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/).
 
 The [Siemens MindSphere Mobile Starter Application](https://marketplace.mendix.com/link/component/118164) is an app template which is based on the **Blank Native Mobile App** from Mendix and includes all you need to start developing a native mobile app for your MindSphere tenant.
 
 On a phone there is no MindSphere launchpad - therefore the app has to implement the login to MindSphere itself. The template contains a login page which is shown to the user at startup.
 The end-user signs in to MindSphere outside the native application, in a browser, and your app is started after a successful login via a "Deep Link". Details about this process can be found in [Developing Mobile Apps for MindSphere](https://developer.mindsphere.io/howto/howto-develop-mobile-app-with-mdsp.html) in the MindSphere documentation. But do not worry - the implementation is already part of the app template - just use it.
-To support deep links in your app, you have to create your own [Custom Development App](/howto/mobile/how-to-devapps/) and register a deep link corresponding to your app registration.
+To support deep links in your app, you have to create your own [Custom Development App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) and register a deep link corresponding to your app registration.
 
 As a prerequisite, we recommend that you follow the [build a native mobile inspection-app](https://academy.mendix.com/link/path/66/Build-a-Native-Mobile-Inspection-App) tutorial from the Mendix Academy to get yourself familiar with mobile app development.
 
@@ -130,7 +129,7 @@ In the **NativeMobile** folder:
 
 In this section you will create your own custom development app and register a deep link.
 
-In principle, you have to follow the description of how to create a [Custom Development App](/howto/mobile/how-to-devapps/), and install it on your device or emulator as described there. There is only one additional thing required for the MindSphere integration. The **custom_scheme** specified in the Developer Cockpit app registration process needs to be provided as the **Deep link** in the **App capabilities** section.
+In principle, you have to follow the description of how to create a [Custom Development App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/), and install it on your device or emulator as described there. There is only one additional thing required for the MindSphere integration. The **custom_scheme** specified in the Developer Cockpit app registration process needs to be provided as the **Deep link** in the **App capabilities** section.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StudioPro_NativeBuilder.png" alt="Studio SSO configuration" >}}
 

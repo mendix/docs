@@ -1,7 +1,6 @@
 ---
 title: "Debug Native Mobile Apps (Advanced)"
 url: /howto8/mobile/native-debug/
-parent: "build-native-apps"
 weight: 40
 description: A how-to for debugging native mobile apps using the Make It Native app.
 tags: ["native", "mobile", "debug", "Make It Native"]

@@ -1,7 +1,6 @@
 ---
 title: "Navigation Consistency Errors"
 url: /refguide7/consistency-errors-navigation/
-parent: "consistency-errors"
 description: "Describes consistency errors in the Mendix Desktop Modeler and the way to fix them."
 tags: ["desktop modeler", "consistency errors", "checks", "errors", "navigation"]
 ---

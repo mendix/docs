@@ -1,7 +1,6 @@
 ---
 title: "OQL From Clause"
 url: /refguide8/oql-from-clause/
-parent: "oql"
 tags: ["studio pro"]
 ---
 

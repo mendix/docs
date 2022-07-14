@@ -1,7 +1,6 @@
 ---
 title: "Rollback Object"
 url: /refguide/rollback-object/
-parent: "object-activities"
 weight: 70
 tags: ["studio pro"]
 ---
@@ -67,7 +66,7 @@ If set to *Yes*, the object is refreshed across the client, which includes reloa
 
 When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
-For more information, see the [Microflows](/refguide/offline-first/#microflows) section of the *Offline-First Reference Guide*.
+For more information, see the [Microflows](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/#microflows) section of *Offline-First Data*.
 
 #### 3.2.3 Action Is in a Nanoflow
 

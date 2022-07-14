@@ -1,7 +1,6 @@
 ---
 title: "Dropdown Div Converter"
 url: /addons/ats-addon/rg-one-dropdown-div-converter/
-parent: "rg-one-appstore-widg-acts"
 ---
 
 This section contains these documents:

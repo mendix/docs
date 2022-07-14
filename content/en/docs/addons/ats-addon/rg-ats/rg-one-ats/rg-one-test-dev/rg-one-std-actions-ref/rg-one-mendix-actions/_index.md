@@ -1,7 +1,6 @@
 ---
 title: "Mendix Actions"
 url: /addons/ats-addon/rg-one-mendix-actions/
-parent: "rg-one-std-actions-ref"
 ---
 
 **Mendix Actions** contains the following sections:

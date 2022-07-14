@@ -1,7 +1,6 @@
 ---
 title: "Language Settings"
 url: /refguide/language-settings/
-parent: "translatable-texts"
 weight: 10
 tags: ["studio pro", "translation", "languages", "translatable text", "add language", "date format", "completeness"]
 ---
@@ -34,7 +33,7 @@ You can add as many languages as you like from the list of supported languages b
 
 {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/add-language.png" >}}
 
-Most languages will be added with an empty dictionary, although some translations have already been set up in the Dutch dictionary.
+Most languages will be added with an empty dictionary, although some translations have already been set up in the Dutch dictionary. 
 
 ## 4 Advanced Language Settings{#advanced}
 

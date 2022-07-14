@@ -1,7 +1,6 @@
 ---
 title: "Deployment Options"
 url: /addons/ats-addon/ov-deployment/
-parent: "ov"
 weight: 3
 ---
 

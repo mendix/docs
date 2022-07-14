@@ -1,7 +1,6 @@
 ---
 title: "Scroll Container"
 url: /refguide7/scroll-container/
-parent: "container-widgets"
 aliases:
     - /refguide7/horizontal-split-pane.html
     - /refguide7/vertical-split-pane.html

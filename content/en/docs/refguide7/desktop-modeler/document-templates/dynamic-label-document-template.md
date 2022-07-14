@@ -1,7 +1,6 @@
 ---
 title: "Dynamic Label (Document Template)"
 url: /refguide7/dynamic-label-document-template/
-parent: "document-templates"
 aliases:
     - /refguide7/Dynamic+label+(document+template).html
     - /refguide7/dynamic-label-(document-template).html

@@ -1,7 +1,6 @@
 ---
 title: "Backups API V2"
 url: /apidocs-mxsdk/apidocs/backups-api/
-parent: "deploy-api"
 description: "An API to allow the triggering of backups creation, restore, download and to get information about existing snapshots."
 weight: 10
 ---
@@ -301,7 +300,7 @@ URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<Environment
 **Example Request**
 
 ```bash
-GET /api/v2/apps/543857rfds-dfsfsd12c5e24-3224d32eg/environments/cd5fc610-edb0-43c5-a374-0439a6411ace/snapshots/5f8ace23-19df-4134-bd67-c338142a6097/archives?data_type=database_only
+POST /api/v2/apps/543857rfds-dfsfsd12c5e24-3224d32eg/environments/cd5fc610-edb0-43c5-a374-0439a6411ace/snapshots/5f8ace23-19df-4134-bd67-c338142a6097/archives?data_type=database_only
 
 Host: deploy.mendix.com
 

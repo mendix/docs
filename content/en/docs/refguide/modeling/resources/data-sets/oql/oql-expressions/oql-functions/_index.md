@@ -1,7 +1,6 @@
 ---
 title: "OQL Functions"
 url: /refguide/oql-functions/
-parent: "oql-expressions"
 tags: ["studio pro"]
 ---
 

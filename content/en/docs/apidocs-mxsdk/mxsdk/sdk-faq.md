@@ -27,7 +27,10 @@ The initial app *.mpk* file that is uploaded is not allowed to exceed 250Mb (wit
 
 The maximum number of files allowed in a working copy is 10,000.
 
-### 1.6 Which Parts of the Mendix App Model Can I Access with the Model API?
+### 1.6 What Apps Can I Access With the Model API?
+You can access all apps stored on [Mendix Team Server](/developerportal/collaborate/team-server/). Apps stored elsewhere, for example in your on-premises Git server, cannot be accessed with the model API.
+
+### 1.7 Which Parts of the Mendix App Model Can I Access with the Model API?
 
 You can access every meta model element of your app model! That includes domain models, microflows, pages, integrations (consumed and published web services), Java actions, custom widgets, security constraints and so on. Anything you can access with Studio Pro - and all the technical details we abstract away from in the UI, but are part of the app model!
 

@@ -1,7 +1,6 @@
 ---
 title: "APD 3 Reference Guide"
 url: /addons/apd-addon/rg-three-apd/
-parent: "rg-apd"
 weight: 1
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "OData Query Options"
 url: /refguide7/odata-query-options/
-parent: "published-odata-services"
 tags: ["OData", "filter", "count", "sort", "select", "page"]
 ---
 

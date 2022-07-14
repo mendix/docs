@@ -1,7 +1,6 @@
 ---
 title: "Language Menu"
 url: /refguide/translatable-texts/
-parent: "menus"
 weight: 50
 tags: ["studio pro", "translation", "languages", "translatable text"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -37,6 +36,10 @@ When working in a language which is not the default, you can identify texts that
 If you edit your app to add new widgets while not in the default language, any new translatable texts for those widgets will be added to the current language. The text in the default language will either be left blank or will have the placeholder text for the widget.
 
 All untranslated texts will be displayed in the default language when you run the application.
+
+English (US) and Dutch translations are added by default even if you do not use these languages in your app. When you add a new element (for example, a button), it will get an English and Dutch translation in the system, but you will not see it until you add those languages. You may want to delete all English and Dutch translations if you do not plan to have your app in these languages. Before deleting English (US), make sure you have another default language set up. For more information on how to delete translations, see the [Delete](/refguide/language-operations/#delete) section in *Language Operations*.  
+
+If you plan to export your module/app as an add-on/solution, the best practice is to remove default Dutch translations to avoid confusion for your customers in case they plan to translate their app to Dutch. For more information, see the [Exporting Add-on Modules and Solutions](/refguide/configure-add-on-and-solution-modules/#export) section in *Configuring Add-on and Solution Modules for Publishing*.  
 
 {{% alert color="info" %}}
 If there is no text in the default language, the end-user will see `[no translation]`. If you want the text to be blank, set the default language text to be a space rather than empty.

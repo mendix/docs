@@ -1,7 +1,6 @@
 ---
 title: "Conditions"
 url: /refguide7/conditions/
-parent: "page-concepts"
 ---
 
 ## 1 Overview

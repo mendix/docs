@@ -1,7 +1,6 @@
 ---
 title: "Input Widgets"
 url: /refguide7/input-widgets/
-parent: "pages"
 ---
 
 

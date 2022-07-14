@@ -1,7 +1,6 @@
 ---
 title: "Find/Assert Menu Item"
 url: /addons/ats-addon/rg-one-findassert-menu-item/
-parent: "rg-one-navigation-menu"
 ---
 
 ## 1 Description

@@ -1,7 +1,6 @@
 ---
 title: "Monitoring Environments in Mendix for Private Cloud"
 url: /developerportal/deploy/private-cloud-monitor/
-parent: "private-cloud"
 description: "Describes the processes for setting up a monitoring solution for Mendix environments in the Private Cloud"
 weight: 31
 tags: ["Monitor", "Logging", "Private Cloud", "Environment"]
@@ -162,7 +161,7 @@ To monitor Mendix app environments, you will need to install a separate copy of 
 Use the following command to create a new project: replace `{project}` with the project name (for example `grafana`):
 
 ```shell
-oc create project {project}
+oc new-project {project}
 ```
 
 Use the following command to create a secret containing the Grafana admin password: replace `{project}` with the project name (for example `grafana`); `{username}` with the admin username (for example `admin`); and `{password}` with the admin password:

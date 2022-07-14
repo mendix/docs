@@ -1,7 +1,6 @@
 ---
 title: "APM 1 Installation Guide"
 url: /addons/apd-addon/ig-one/
-parent: "ig"
 weight: 2
 ---
 

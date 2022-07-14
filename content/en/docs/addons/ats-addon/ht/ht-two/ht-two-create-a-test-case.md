@@ -1,7 +1,6 @@
 ---
 title: "Create a Test Case"
 url: /addons/ats-addon/ht-two-create-a-test-case/
-parent: "ht-two"
 description: "Describes how to create a test case and add test steps."
 tags: ["ATS", "testing"]
 ---

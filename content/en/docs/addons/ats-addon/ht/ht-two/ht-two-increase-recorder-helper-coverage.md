@@ -1,7 +1,6 @@
 ---
 title: "Increase ATS Recorder and Helper Coverage"
 url: /addons/ats-addon/ht-two-increase-recorder-helper-coverage/
-parent: "ht-two"
 description: "Describes how to increase the ATS Recorder and Helper coverage of your application"
 tags: ["ATS", "testing"]
 ---

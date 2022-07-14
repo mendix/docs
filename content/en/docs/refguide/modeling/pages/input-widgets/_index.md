@@ -1,7 +1,6 @@
 ---
 title: "Input Elements"
 url: /refguide/input-widgets/
-parent: "pages"
 weight: 30
 description: "Widgets which can be added to pages to view and edit attributes of objects."
 tags: ["studio pro", "input elements", "widget", "reference selector", "reference set", "association", "edit", "data input"]

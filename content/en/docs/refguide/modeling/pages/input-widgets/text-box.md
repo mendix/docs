@@ -1,7 +1,6 @@
 ---
 title: "Text Box"
 url: /refguide/text-box/
-parent: "input-widgets"
 weight: 10
 tags: ["studio pro", "data"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -46,7 +45,11 @@ Text box properties consist of the following sections:
 
 ### 2.1 Accessibility Section{#accessibility}
 
-#### 2.1.1 Autocomplete 
+### 2.1.1 Aria Required
+
+In a textbox widget, when **Aria required** is set to **Yes** then assistive technologies will read out the field that is required. When set to **No** then assistive technologies will not read the field out.
+
+#### 2.1.2 Autocomplete 
 
 The autocomplete property specifies if a text box should have autocomplete enabled. The autocomplete attribute also improves the browser's ability to pre-populate fields with user-preferred values. For more information on how this helps you comply with accessibility guidelines, see the [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/#input-purposes)
 
@@ -142,7 +145,6 @@ Attributes of the data type `String` or `Hashed string` can have their value hid
 #### 2.8.2 Input Mask
 
 {{% alert color="info" %}}Input masks are not supported on native mobile pages.
-
 Input masks are designed for string data types. Be cautious when using them with numeric or hashed string data types.
 {{% /alert %}}
 
@@ -175,6 +177,14 @@ This property specifies the maximum number of characters that can be typed in th
 The placeholder text is shown when no text has been entered yet, or when a displayed attribute is empty.
 
 It can be used, for example, to give a hint to the end-user what kind of text should be entered.
+
+#### 2.8.5 AutoFocus {#autofocus}
+
+If `true`, the text area will be rendered focused with the device keyboard opened.
+
+{{% alert color="info" %}}
+This option is only available in native pages.
+{{% /alert %}}
 
 <a name="label-properties"></a>
 ### 2.9 Label Section{#label}

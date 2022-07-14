@@ -1,7 +1,6 @@
 ---
 title: "Page Resources"
 url: /refguide8/page-resources/
-parent: "pages"
 weight: 12
 tags: ["studio pro", "page resources"]
 ---

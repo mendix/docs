@@ -1,7 +1,6 @@
 ---
 title: "Environments"
 url: /developerportal/deploy/environments/
-parent: "mendix-cloud-deploy"
 weight: 5
 description: "List the environments in which your app is deployed. Also the starting point for managing existing environments and further deployments."
 tags: ["Deploy","App","Developer Portal"]
@@ -188,7 +187,17 @@ Here, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-
 
 For more information on managing node permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
-## 6 Read More 
+## 6 Services {#services}
+
+Here, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can decide which custom services can be used in environments of this app.
+
+The technical contact can only see services which have been licensed for their company. If you want to license a service, you will have to raise a request with [Mendix Support](https://support.mendix.com). If the technical contact cannot enable the service, this means that it has previously been licensed but the license has expired.
+
+Team members who have permission to *Deploy, Publish, and Monitor* can see which services are enabled or disabled.
+
+Once a service has been enabled for an app, team members can selectively enable it for each [environment](/developerportal/deploy/environments-details/#services).
+
+## 7 Read More 
 
 * [Deploy and Manage](/developerportal/deploy/)
 * [Environment Details](/developerportal/deploy/environments-details/)

@@ -1,7 +1,6 @@
 ---
 title: "Migrate From Atlas 2 To Atlas 3"
 url: /refguide/moving-from-atlas-2-to-3/
-parent: "moving-from-8-to-9"
 weight: 6
 tags: ["Atlas", "UI", "UX", "user experience", "design"]
 ---

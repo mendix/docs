@@ -1,7 +1,6 @@
 ---
 title: "Best Practices for Writing Custom Actions"
 url: /addons/ats-addon/rg-one-best-practices/
-parent: "rg-one-test-dev"
 weight: 6
 ---
 

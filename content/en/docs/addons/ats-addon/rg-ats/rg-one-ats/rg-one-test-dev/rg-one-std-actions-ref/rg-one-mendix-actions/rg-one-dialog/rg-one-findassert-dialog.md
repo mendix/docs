@@ -1,7 +1,6 @@
 ---
 title: "Find/Assert Dialog"
 url: /addons/ats-addon/rg-one-findassert-dialog/
-parent: "rg-one-dialog"
 ---
 
 ## 1 Description

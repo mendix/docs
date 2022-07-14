@@ -1,7 +1,6 @@
 ---
 title: "Test the Push Notifications Implementation"
 url: /howto8/mobile/testing-the-implementation/
-parent: "push-notifications"
 weight: 60
 tags: ["mobile", "push notification"]
 ---

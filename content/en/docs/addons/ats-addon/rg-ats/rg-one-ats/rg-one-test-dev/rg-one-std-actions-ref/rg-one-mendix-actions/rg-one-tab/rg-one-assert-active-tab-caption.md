@@ -1,7 +1,6 @@
 ---
 title: "Assert Active Tab Caption"
 url: /addons/ats-addon/rg-one-assert-active-tab-caption/
-parent: "rg-one-tab"
 ---
 
 ## 1 Description

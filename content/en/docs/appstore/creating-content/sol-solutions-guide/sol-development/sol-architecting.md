@@ -2,7 +2,6 @@
 title: "Architecting Adaptive Solutions"
 url: /appstore/creating-content/sol-architecting/
 linktitle: "Architecting Solutions"
-parent: "sol-development"
 weight: 1
 description: "Architect a solution for adaptation"
 tags: [ "solutions", "adaptive solutions", "architecting solutions" ]

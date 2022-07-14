@@ -1,7 +1,6 @@
 ---
 title: "Local Profile"
 url: /addons/ats-addon/rg-two-profile/
-parent: "rg-two-ats"
 description: "Describes a local profile in ATS."
 tags: ["ats", "profile", "password"]
 ---

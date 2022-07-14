@@ -1,7 +1,6 @@
 ---
 title: "Set Up the Google Firebase Cloud Messaging Server"
 url: /howto8/mobile/setting-up-google-firebase-cloud-messaging-server/
-parent: "notifications"
 weight: 55
 tags: ["mobile", "push notification", "google", "firebase", "server"]
 ---

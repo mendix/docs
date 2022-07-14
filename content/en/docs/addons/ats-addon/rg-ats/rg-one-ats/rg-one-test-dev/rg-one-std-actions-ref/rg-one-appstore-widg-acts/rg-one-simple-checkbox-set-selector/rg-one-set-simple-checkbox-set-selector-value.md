@@ -1,7 +1,6 @@
 ---
 title: "Set Simple Checkbox Set Selector Value"
 url: /addons/ats-addon/rg-one-set-simple-checkbox-set-selector-value/
-parent: "rg-one-simple-checkbox-set-selector"
 ---
 
 ## 1 Description

@@ -1,7 +1,6 @@
 ---
 title: "Configurations"
 url: /refguide/configuration/
-parent: "app-settings"
 tags: ["studio pro", "configurations", "configuration"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -70,7 +69,7 @@ Only use this functionality if you know exactly what you are doing. Wrong values
 
 {{% /alert %}}
 
-Each custom setting consists of a name and a value. For example, to enable persistent sessions you add a custom setting with name `PersistentSessions` and value `true`.
+Each custom setting consists of a name and a value. For example, to set the hash algorithm to BCRYPT you add a custom setting with name `HashAlgorithm` and value `BCRYPT`.
 
 For settings overview, see [Runtime Customization](/refguide/custom-settings/).
 

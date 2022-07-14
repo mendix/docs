@@ -1,7 +1,6 @@
 ---
 title: "Drop-Down"
 url: /addons/ats-addon/rg-two-drop-down/
-parent: "rg-two-ats"
 ---
 
 A drop-down menu defines a list of options for an action input parameter. This means that you can only choose from the provided options. For example, the status of an order can be Open, Closed, or In Progress.

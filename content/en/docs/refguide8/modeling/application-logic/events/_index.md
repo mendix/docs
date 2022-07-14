@@ -1,7 +1,6 @@
 ---
 title: "Events"
 url: /refguide8/events/
-parent: "application-logic"
 weight: 90
 tags: ["studio pro", "event", "events"]
 ---

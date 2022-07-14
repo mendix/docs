@@ -1,7 +1,6 @@
 ---
 title: "Performance Recorder"
 url: /addons/apd-addon/rg-three-recorder/
-parent: "rg-three-apd"
 ---
 
 ## 1 Introduction

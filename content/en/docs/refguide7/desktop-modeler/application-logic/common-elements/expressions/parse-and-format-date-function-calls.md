@@ -1,7 +1,6 @@
 ---
 title: "Parse & Format Date Function Calls"
 url: /refguide7/parse-and-format-date-function-calls/
-parent: "expressions"
 description: "Describes the functions for parsing datetimes from strings using a specified pattern or producing a string from a datetime in Mendix."
 ---
 

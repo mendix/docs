@@ -17,9 +17,47 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
-### June ????, 2022
+### July ????, 2022
 
 * We have introduced support for runtime application logs to be sent from Mendix Cloud V4 to [Splunk Cloud Platform](/developerportal/operate/splunk-metrics/).
+
+### July 8th, 2022
+
+#### Improvements
+
+We added the ability to enable and disable additional services at an app and environment level.
+
+### June 29th, 2022
+
+#### Improvements
+
+**Update of `*.apps.ca-1a.mendixcloud.com` TLS certificate**
+
+We replaced the TLS certificate for `*.apps.ca-1a.mendixcloud.com` on June 29th, 2022. Browsers like Mozilla Firefox, Microsoft Edge, and Google Chrome automatically trust the new certificate. In those cases, there is nothing you have to do.
+
+Current Certificate Details: <https://crt.sh/?id=4793020705>
+
+New Certificate Details: <https://crt.sh/?id=6940447552>
+
+**Update of `*.apps.au-1a.mendixcloud.com` TLS certificate**
+
+We replaced the TLS certificate for `*.apps.au-1a.mendixcloud.com` on June 29th, 2022. Browsers like Mozilla Firefox, Microsoft Edge, and Google Chrome automatically trust the new certificate. In those cases, there is nothing you have to do.
+
+Current Certificate Details: <https://crt.sh/?id=4793020687>
+
+New Certificate Details: <https://crt.sh/?id=6940402070>
+
+### June 15th, 2022
+
+#### Improvements
+
+* We have enabled a Web Application Firewall (WAF) service for the licensed regions of the Mendix Cloud. See the [release note for March 30th](#waf) for more information over WAF.
+
+    | Region | Date Enabled |
+    | --- | --- |
+    | Asia Pacific | June 13th |
+    | US and Canada | June 14th |
+    | EU and UK | June 15th |
 
 ### June 2nd, 2022
 
@@ -63,7 +101,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We now show deactivated users on the [Node Permissions](/developerportal/deploy/node-permissions/) page for consistency with the [Team](/developerportal/collaborate/team/) page.
 
-### March 30th, 2022
+### March 30th, 2022{#waf}
 
 #### Improvements
 

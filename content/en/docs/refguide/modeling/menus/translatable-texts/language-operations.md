@@ -1,7 +1,6 @@
 ---
 title: "Language Operations"
 url: /refguide/language-operations/
-parent: "translatable-texts"
 weight: 40
 tags: ["studio pro", "translation", "languages", "translatable text"]
 ---
@@ -61,7 +60,7 @@ Texts that are absent in the source language will be absent in the destination l
 
 Select the **Source language** and the **Destination language** from the  drop-down menus.
 
-### 3.4 Delete
+### 3.4 Delete {#delete}
 
 **Delete** deletes all the texts in a selected language. 
 

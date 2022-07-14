@@ -17,7 +17,7 @@ The version of MxBuild which you need is dependent on the version of the Mendix 
 
 A build number is included in the version, and this has to be included in the link path mentioned above — for example`8.12.1.3458` is the 3458 build of the 8.12.1 Studio Pro release.
 
-You can find the build number in path of your Mendix installation (for example if your installation looks like this `C:\Program Files\Mendix\8.12.1.3458`, use this URL to get your files: https://cdn.mendix.com/runtime/mxbuild-8.12.1.3458.tar.gz).
+You can find the build number in path of your Mendix installation (for example if your installation looks like this `C:\Program Files\Mendix\8.12.1.3458`, use this URL to get your files: [https://cdn.mendix.com/runtime/mxbuild-8.12.1.3458.tar.gz](https://cdn.mendix.com/runtime/mxbuild-8.12.1.3458.tar.gz)).
 
 Any public version of Studio Pro in this  [Studio Pro Releases List](https://marketplace.mendix.com/link/studiopro/) will allow you to download MxBuild files. If you experience trouble downloading files, make sure your build is listed there.
 

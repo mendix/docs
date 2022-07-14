@@ -1,7 +1,6 @@
 ---
 title: "New Project"
 url: /refguide8/new-project/
-parent: "file-menu"
 weight: 10
 description: "This document describes the New Project (New App) flow and the App Settings dialog box."
 tags: ["studio pro", "create app", "new app", "new project", "creating new app"]

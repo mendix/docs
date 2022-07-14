@@ -1,7 +1,6 @@
 ---
 title: "Definitions"
 url: /addons/ats-addon/ht-one-custom-action-definitions/
-parent: "ht-one-custom-action-general"
 description: "Explains the different types of custom actions."
 tags: ["ATS", "testing"]
 ---

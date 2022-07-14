@@ -1,7 +1,6 @@
 ---
 title: "1.10"
 url: /releasenotes/add-ons/apm-1.10/
-parent: "apm-1"
 weight: 96
 ---
 

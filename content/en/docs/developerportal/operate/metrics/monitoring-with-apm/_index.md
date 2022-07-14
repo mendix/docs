@@ -20,7 +20,7 @@ Monitoring using an APM tool is only available to apps running on Mendix Cloud v
 
 [Datadog](https://www.datadoghq.com/) logging and application metrics are supported in Mendix version 7.15 and above.
 
-[Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) is supported in Mendix version 9.7 and above for analyzing runtime application logs.
+[Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) is supported for analyzing runtime application logs.
 {{% /alert %}}
 
 This document explains what information can be provided to a Saas-based data analytics platform.

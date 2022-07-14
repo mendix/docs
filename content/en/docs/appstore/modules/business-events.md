@@ -13,6 +13,8 @@ The [Mendix Business Events](https://marketplace.mendix.com/link/component/11755
 
 The key difference between Mendix Business Events and traditional communication between apps, like REST or Web Services, is that there is no direct communication between the different apps. Applications publish events to the Mendix Event Broker, or subscribe to events with the Mendix Event Broker.
 
+Currently, Mendix Business Events can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), with all other deployment models expected in forthcoming releases.
+
 ### 1.1 Typical Use Cases
 
 Business events help you automate the resulting actions when something happens in your organization. The following are examples of when business events can be useful:
@@ -214,13 +216,21 @@ The most important fields in this entity to be checked when there are errors inc
 
 Use these fields to transform the payload back into a Mendix entity again. If the subject is missing from the original event, the value will be an empty string. If the consumed event does not has the correct format, the event won’t go to the dead letter queue but throw an error.
 
-## 4 Limitations {#limitations}
+## 4 Deployment
 
-In the **Mendix Free App** environment, there is a limit of 1000 events per day. 
+To deploy to production, you must have a subscription to the Mendix Event Broker (link to licensing/contact page).
+
+Additionally, a Technical Contact must enable the Event Broker Service in the [Environment Details](/developerportal/deploy/environments-details/) section of every app involved. See the [Services](/developerportal/deploy/environments/#services) section of *Environments* for more information.
+
+Mendix Business Events can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), with all other deployment models expected in forthcoming releases.
+
+## 5 Limitations {#limitations}
+
+In the **Mendix Free App** environment, there is a limit of 1000 eventsper app per day. 
 
 For Mendix Apps on Licensed Nodes there is no limit. 
 
-## 5 Local Testing
+## 6 Local Testing
 
 When you deploy your apps to the free cluster, the Mendix Data Broker is provided and configured automatically.
 

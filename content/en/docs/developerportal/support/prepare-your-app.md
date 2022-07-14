@@ -8,7 +8,7 @@ tags: ["on-premises", "support"]
 aliases:
     - /developerportal/support/change-affected-apps.html
     - /developerportal/support/change-affected-apps
-	- /developerportal/support/prepare-your-project/
+    - /developerportal/support/prepare-your-project/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -47,7 +47,7 @@ In OQL, parameters can be called using a **$** symbol, for example: **$Month**.
 A parameter has the following configurable properties:
 
 * **Name** – This is the name of the parameter.
-* **Type** – The type of the parameter can be: **Boolean**, **Date and time**, **Enumeration**, **Decimal**, **Integer/Long**, or **String**.
+* **Type** – The type of the parameter can be: **Boolean**, **Date and time**, **Enumeration**, **Decimal**, **Integer/Long**, or **Object**.
 * **Constraints** – The constraints on a parameter influence which values can be selected for parameter input values by the end-user. Constraints can be associated with [user roles](/refguide/user-roles/) in dataset security. There are two types of constraints: 
   * Ranges which apply to numeric and date parameters
   * XPath constraints which apply to object parameters

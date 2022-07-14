@@ -1,7 +1,6 @@
 ---
 title: "Cell (Document Template)"
 url: /refguide7/cell-document-template/
-parent: "row-document-template"
 aliases:
     - /refguide7/Cell+(document+template).html
     - /refguide7/cell-(document-template).html

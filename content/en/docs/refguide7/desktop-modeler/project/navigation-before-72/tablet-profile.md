@@ -1,7 +1,6 @@
 ---
 title: "Tablet Profile"
 url: /refguide7/tablet-profile/
-parent: "navigation-before-72"
 description: "Describes usage of the Tablet profile in a Mendix app for Mendix versions 7.0 and 7.1."
 ---
 

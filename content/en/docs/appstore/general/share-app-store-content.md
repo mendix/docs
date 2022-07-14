@@ -157,7 +157,25 @@ These licenses should only be used when the component is developed and released 
 | **SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL** | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | (As per governing terms & conditions) |
 | **SDISW End-User License Agreement for Mendix Sample Apps** | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/general/share-app-store-content/cross-mark.svg" >}} | (As per governing terms & conditions) |
 
-#### 4.2.3 Finishing Up
+#### 4.2.3 Generating New Leads {#lead-generation}
+
+A lead is a potential sales contact that expresses interest in your product or service. Lead routing is the end-to-end process of collecting the leads and distributing them to you. It is possible to configure lead routing for the following content types in the Marketplace:
+
+* Solutions
+* Solution templates
+* App services
+* Platform services
+
+When prospective customers are interested in your product, they can leave their contact information using the Marketplace product listing. This is done by clicking a call-to-action button and filling in a form.
+
+You can configure the name of your **Call-to-action (CTA)** button from the following choices: 
+
+* **Contact Us**, **Notify Me**, and **Request Demo** – requires the email address that will receive the customer information
+* **Download** – no lead routing is established, but customers can directly download your product.
+
+In the **Provide one or more emails** field, you must specify the email address(es) where notifications and information can be sent.
+
+#### 4.2.4 Finishing Up
 
 To finish up configuring this page, follow these steps:
 
@@ -263,6 +281,15 @@ Review and approval by Mendix is required only for the first version of a public
 {{% /alert %}}
 
 ## 5 Updating Existing Marketplace Content {#updating}
+
+After you publish a component in the Mendix Marketplace, it is your responsibility to make sure that components are updated on a regular cadence. This is important so that components work with the latest versions of dependencies (especially Mendix Studio Pro), and it is required so Mendix can ensure the quality of components in the Marketplace. This means you need to monitor, maintain, and evolve the component so that the Marketplace listing is more noticeable, you can build user loyalty, and you can maintain the good reputation of your company. If the component is not updated regularly, the Marketplace listing will be analyzed for removal from public visibility.
+
+Mendix expects the following updates for all Platform-supported, Community-supported, and Premium components:
+
+* Bug fixes
+* New features
+* Feature removal
+* Compatiblity updates with the latest Studio Pro version and other dependencies
 
 To update content that has already been published, follow these steps:
 

@@ -1,7 +1,6 @@
 ---
 title: "XPath Starts-With"
 url: /refguide/xpath-starts-with/
-parent: "xpath-constraint-functions"
 tags: ["studio pro"]
 ---
 

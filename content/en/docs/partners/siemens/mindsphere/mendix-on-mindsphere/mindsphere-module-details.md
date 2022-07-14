@@ -1,7 +1,6 @@
 ---
 title: "MindSphere Module Details"
 url: /partners/siemens/mindsphere-module-details/
-parent: "mendix-on-mindsphere"
 weight: 20
 description: "A detailed description of the modules which are required for deployment to MindSphere"
 tags: ["MindSphere"]

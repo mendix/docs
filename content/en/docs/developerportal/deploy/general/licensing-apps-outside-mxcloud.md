@@ -1,7 +1,6 @@
 ---
 title: "Licensing Apps"
 url: /developerportal/deploy/licensing-apps-outside-mxcloud/
-parent: "general"
 weight: 5
 description: "How to apply licenses to apps which are outside Mendix Cloud"
 tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "SAP", "IBM", "Siemens MindSphere"]

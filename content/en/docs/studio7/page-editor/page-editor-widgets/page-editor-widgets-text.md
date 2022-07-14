@@ -1,7 +1,6 @@
 ---
 title: "Text Widgets"
 url: /studio7/page-editor-widgets-text/
-parent: "page-editor-widgets"
 description: "Describes typography widgets in Mendix Studio."
 weight: 40
 tags: ["studio", "page editor", "typography", "text widgets", "widgets"]

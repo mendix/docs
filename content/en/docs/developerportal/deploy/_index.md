@@ -4,6 +4,8 @@ url: /developerportal/deploy/
 weight: 10
 description: "Deployment section of the Developer Portal Guide: How to deploy Mendix apps to different environments and how to manage those deployments."
 weight: 5
+no_list: false 
+description_list: true
 tags: ["Deploy","Manage", "Mendix Cloud", "IBM", "SAP", "Cloud Foundry", "Kubernetes", "On-premises", "Environment", "Mendix Cloud Dedicated"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
@@ -15,6 +17,12 @@ tags: ["Deploy","Manage", "Mendix Cloud", "IBM", "SAP", "Cloud Foundry", "Kubern
 ## 1 Introduction
 
 A Mendix application can be deployed in different ways. You can deploy to your local machine for development and testing. You can deploy to the Mendix cloud, which is the default location for both free and licensed apps. You can also deploy to IBM Cloud, SAP Business Technology (SAP BTP) Platform, Cloud Foundry-based platforms, Docker containers, Azure, or to a server you configured yourself.
+
+{{% alert color="warning" %}}
+* Each app can only be deployed to one type of target platform (for example Mendix Cloud nodes) in addition to local testing
+* Some features which rely on the target platform can work differently depending on what is supported (for example in Cloud Foundry, Kubernetes, or Windows server)
+    * If you want to use a particular feature, check that it is supported by your chosen target platform
+{{% /alert %}}
 
 This section of the *Developer Portal Guide* contains step-by-step instructions, and additional reference material, to help you to deploy and manage your Mendix apps in the cloud or on premises. It is split into a number of sections:
 
@@ -98,4 +106,3 @@ You can bring your Mendix app to Industrial Edge, the SIEMENS platform to host a
 To find out how to do this, read [Mendix Applications on Industrial Edge](/developerportal/deploy/mendix-app-on-industrial-edge/).
 
 ## 13 Documents in This Category
-

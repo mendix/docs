@@ -1,7 +1,6 @@
 ---
 title: "OQL Where Clause"
 url: /refguide7/oql-where-clause/
-parent: "oql"
 ---
 
 

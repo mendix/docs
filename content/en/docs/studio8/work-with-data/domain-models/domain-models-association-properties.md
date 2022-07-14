@@ -1,7 +1,6 @@
 ---
 title: "Associations"
 url: /studio8/domain-models-association-properties/
-parent: "domain-models"
 description: "Describes the association properties in Mendix Studio."
 tags: ["studio", "domain model"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

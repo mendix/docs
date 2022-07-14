@@ -1,7 +1,6 @@
 ---
 title: "Settings"
 url: /addons/apd-addon/rg-three-settings/
-parent: "rg-three-apd"
 ---
 
 ## 1 Introduction

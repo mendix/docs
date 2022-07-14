@@ -1,7 +1,6 @@
 ---
 title: "Datadog for the Mendix Cloud"
 url: /developerportal/operate/datadog-metrics/
-parent: "metrics"
 weight: 20
 description: "How to configure Mendix Cloud v4 to enable monitoring and analysis with Datadog."
 tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis"]
@@ -34,13 +33,10 @@ If you are new to Datadog, you will need to get an account first.
 
 1. Go to the Datadog site (for example, [https://www.datadoghq.com/](https://www.datadoghq.com/)) and choose **GET STARTED FREE**.
 2. Enter your Datadog account details. Once you have entered your details you cannot continue until you have set up your agent.
-3.  Choose the option **From Source**.
+3. Select one of the installation instructions presented on the *Install your first Datadog Agent* page.
+4. Copy the value of the api key shown in the install script. This can have a different name, depending on the agent being installed – for example `api-key`, `datadog_api_key`, `DD_API_KEY`, and so forth.
 
-    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/from-source.png" alt="The From Source option on the Agent setup screen" >}}
-
-4.  Copy the value of *DD_API_KEY* key shown on the install script.
-
-    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/dd-api-key.png" alt="Source install script shows DD_API_KEY=your API key" >}}
+    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/dd-api-key.png" alt="Agent script shows your API key" >}}
 
 5. You now need to use this API key with your app: see [Connect Node to Datadog](#connect-node).
 

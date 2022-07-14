@@ -1,7 +1,6 @@
 ---
 title: "APM 1 Reference Guide"
 url: /addons/apd-addon/rg-one-apm/
-parent: "rg-apd"
 weight: 2
 ---
 

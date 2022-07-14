@@ -1,7 +1,6 @@
 ---
 title: "History Dialog"
 url: /refguide7/history-dialog/
-parent: "dialogs"
 ---
 ## 1 Introduction
 

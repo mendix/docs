@@ -1,7 +1,6 @@
 ---
 title: "XML Inheritance and Choice"
 url: /refguide7/xml-inheritance-and-choice/
-parent: "mapping-documents"
 ---
 
 ## 1 Obtaining an Object by Entity specialization

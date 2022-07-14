@@ -1,7 +1,6 @@
 ---
 title: "Debug Microflows Remotely"
 url: /howto/monitoring-troubleshooting/debug-microflows-remotely/
-parent: "debug-microflows-and-nanoflows"
 tags: ["monitoring", "troubleshooting", "debug", "microflow", "remote"]
 ---
 
@@ -107,6 +106,20 @@ If your application is on the SAP S/4 HANA cloud, you will need to set the passw
     {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/debug-microflows-remotely/debugger-settings-saps4hana.png" alt="SAP Cockpit showing user-provided variables" >}}
 
 4. Restart your application.
+
+#### 3.1.4 Obtain Debugging Credentials from Windows Mendix Service Console
+
+If your application is deployed to a Microsoft Windows environment, you will need to obtain the password from the Windows Mendix Service Console
+
+1. Start your app.
+
+2. Go to the **Advanced** menu of the Windows Mendix Service Console.
+
+3. Select **Enable debugging** and copy the password which is displayed in the popup.
+
+The debugger is available at `{appURL}/debugger/` using the default runtime server port.
+
+If you are debugging your app running behind IIS, make sure the debugger path is forwarded to the right runtime location as described in the [Reverse Proxy Inbound Rules](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#reverse-proxy-rules) section of *Microsoft Windows – deploy*.
 
 ### 3.2 How to Enable Cloud Debugging in Studio Pro
 

@@ -1,7 +1,6 @@
 ---
 title: "Import Project Package"
 url: /refguide7/import-project-package-dialog/
-parent: "dialogs"
 ---
 
 ## 1 Introduction

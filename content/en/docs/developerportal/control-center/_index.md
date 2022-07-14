@@ -4,6 +4,8 @@ url: /developerportal/control-center/
 description: "Describes the Mendix Control Center, used for the governance of company members, apps, security, and cloud resources."
 tags: ["control center", "mendix admin", "developer portal", "role", "permissions", "fallback", "resource pack", "node", "offboard"]
 weight: 20
+no_list: false 
+description_list: true
 aliases:
     - /developerportal/company-app-roles/users.html
     - /developerportal/company-app-roles/users
@@ -39,44 +41,85 @@ These are some examples of what you can find on the dashboard:
 
 ## 3 Apps {#apps}
 
-On the **Active Apps** tab of this page, you can see a list of the active apps that belong to your company. The **Deactivated Apps** tab lists your company's deactivated apps. The following details apply to deactivated apps:
+### 3.1 Active Apps Tab and Deactivated Apps Tab
 
-* A deactivated app still exists in the company, but it is invisible to regular users
-* You can only deactivate Free Apps that are not attached to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) nodes
+#### 3.1.1 Overview of Apps {#overview}
 
-When you click an app name, a pop-up window opens with the app profile. You have options to directly **Deactivate App** and **Delete App** in this window. The window has the following tabs:
+On the **Active Apps** tab and the **Deactivated Apps** tab, you can see an overview of the active and deactivated apps that belong to your company.
 
-* **App Info** – this tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings/) page for your app in the Developer Portal
-* **Members** – this tab presents the active members and external members of the app
-	* You can directly deactivate a member from the app by clicking their name and selecting **Deactivate Member**
-	* For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/collaborate/team/#managing) page
-	* As a Mendix Admin, you can also add yourself to a team via this page
-* **App Roles** –  this tab presents the team roles defined via the **Default App Roles** tab and/or customized for a particular app
 
-When you select one or more apps via the check boxes on the **Active Apps** or **Deactivated Apps** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating/activating apps, and deleting apps.
+When you select one or more apps via the check boxes in the list, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating apps (on the **Active Apps** tab) or activating apps (on the **Deactivated Apps** tab), and deleting an app.
 
-The **Default App Roles** tab shows the default [team roles](/developerportal/collaborate/app-roles/#team-roles) assigned for every new app created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/collaborate/team-server/) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) information.
+{{% alert color="info" %}}
+Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on the Mendix Cloud. On the overview tab, you can only deactivate or activate up to 20 apps and delete one app in one go.
+{{% /alert %}}
+
+The consequences of deactivating and deleting an app are as below:
+
+|                                                              | Consequences of deactivating an app                          | Consequences of deleting an app                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Project code repository stays persistent                     | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+| Project members can access the project code repository       | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+| App project stays persistent                                 | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+| Project members can access the app project in the Developer Portal | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+| Cloud environment stays persistent                           | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+
+#### 3.1.2 App Details Page {#app-details}
+
+If you click the name of an app in the overview list, a page opens and shows the details of this app.
+
+If the app is not a licensed app, you can see the **...** icon on the upper-right corner of the page. If the app is active, then you have the options to deactivate the app and delete the app; and if the app is deactivated, then you have the options to activate the app and delete the app.
+
+{{% alert color="info" %}}
+Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on the Mendix Cloud. For the consequences of these operations, see the table in the [Overview of Apps](#overview) section.
+{{% /alert %}} 
+
+The app details page has the following tabs:
+
+* **App Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings/) page for your app in the Developer Portal.
+*  **Members** – This tab presents the internal members and external members of the app.
+
+    * You can directly deactivate an internal member from the app by clicking their name and selecting **Deactivate Member**.
+    * For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/collaborate/team/#managing) page.
+      * As a Mendix Admin, you can also add yourself to a team via this page.
+* **Environments** – This tab shows all the Mendix Cloud environments.
+    * You can delete a free Mendix Cloud environment on this tab. Once the free environment is deleted, all data will be removed; however, the project members can still access the associated project and app repository in the Developer Portal.
+* **App Roles** – This tab presents the team roles defined via the **Default App Roles** tab and/or customized for a particular app
+
+### 3.2 Default App Roles Tab
+
+The **Default App Roles** tab shows the default [team roles](/developerportal/collaborate/app-roles/#team-roles) assigned for every new app created in your company. Hovering over a role brings up options to **Delete** and **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/collaborate/team-server/) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) information.
 
 {{< figure src="/attachments/developerportal/control-center/roles.jpg" >}}
 
 ## 4 Members {#members}
 
-Members are users who can view and/or edit an app. On the **Active Members** tab, you can see the active members of your company who can access certain apps: 
+Members are users who can view and/or edit an app.
 
-{{< figure src="/attachments/developerportal/control-center/members.jpg" >}}
+### 4.1 Active Members Tab and Deactivated Members Tab
 
-When you click a company member's name, a pop-up window opens with their member profile. The profile displays the **Apps** of which they are a member as well as their **App role** for each app. Click an app name to go to its [app profile](#apps) pop-up window.
+On the **Active Members** tab and the **Deactivated Members** tab, you can see an overview of the active and deactivated members of your company.
 
-On the **Deactivated Members** tab, you can see former members of your company who have been deactivated.
+When you click a member's name, a pop-up window opens with their member profile. The profile displays the apps of which they are a member as well as their **App role** for each app. Click an app name to go to the [details page](#app-details) of this app.
 
-On the **External Members** tab, you can see the members outside of your company who have access to at least one of your company apps.
+When you select members in the lists on these tabs, a context menu appears with options for exporting member details to an *.xlsx* file and deactivating (on the **Active Members** tab) or activating (on the **Deactivated Members** tab) members.
 
-When you select members in the lists on these tabs, a context menu appears with options for exporting member details to an *.xlsx* file and deactivating/activating members.
-
-For security reasons, deactivating an employee that is leaving your company is recommended (if the employee returns to your company, they can be activated as a member again).
+For security reasons, we recommend that you deactivate an employee that is leaving your company (if the employee returns to your company, they can be activated as a member again).
 
 {{% alert color="info" %}}
 You cannot deactivate yourself.
+{{% /alert %}}
+
+### 4.2 External Members Tab
+
+On the **External Members** tab, you can see the members outside of your company who have access to at least one of your company apps.
+
+When you click a member's name, a pop-up window opens with their member profile. The profile displays the apps of which they are a member as well as their **App role** for each app. Click an app name to go to the [details page](#app-details) of this app.
+
+When you select members in the lists, a context menu appears with options for exporting member details to an *.xlsx* file.
+
+{{% alert color="info" %}}
+You cannot activate/deactivate external members, because they belong to a different company than you.
 {{% /alert %}}
 
 ## 5 Groups {#groups}
@@ -177,9 +220,5 @@ An organization's Data Hub requires governance of the data-sharing policy down t
 
 For details on these tasks, see [Data Hub Administration](/developerportal/control-center/data-hub-admin/).
 
-## 12 Read More
+## 13 Documents in This Category
 
-* [How to Set Up an SSO (BYOIDP)](/developerportal/control-center/set-up-sso-byoidp/)
-* [Data Hub Administration](/developerportal/control-center/data-hub-admin/)
-* [Control Center and Mendix 8.18: The Right Amount of Control](https://www.mendix.com/blog/control-center-and-mendix-8-18-the-right-amount-of-control/)
-* [Govern and Scale your App Landscape with Mendix Control Center](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center)

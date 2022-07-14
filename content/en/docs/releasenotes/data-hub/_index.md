@@ -11,6 +11,43 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### July 14th, 2022
+
+#### Improvements
+
+* When a user other than the Technical or Business Owner deletes an application, environment, or data source, the Technical and/or Business Owner will receive a notification. For more information on data source ownership, see the [Changing Owners of an App](/data-hub/data-hub-catalog/curate/#changing-owners) section of *Curate Registered Assets*.
+
+### June 30th, 2022
+
+#### Improvements
+
+* The Catalog has gotten a mini makeover! 
+     * The **Catalog** and **Curate** top menu items are now up in the bar at the top of the screen, the MxDock. 
+     * In the **Catalog**, you can now navigate between a **Data View**, which gives you insights about a Data Source, and a **Landscape View**, which situates the Data Source in the landscape.
+* You can now filter the search results by CRUD capabilities.
+
+#### Fixes
+
+* We fixed an error that occurred when filtering by *Environment* in the search pane.
+
+### June 23rd, 2022
+
+#### Improvements
+
+* Consumed data sources that have been deleted are now indicated in the [Landscape](/data-hub/data-hub-landscape/).
+* Existing endpoints that are not present in a `PUT` call of the **Registration API** will be deleted. Check out the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html), or read the documentation in the [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) section of *Data Hub APIs*.
+* The `app_uuid` is now present in the `409 CONFLICT` response from **Registration API** when registering an environment on a location that is already in use. 
+
+#### Fixes
+
+* We fixed an issue where *Popular* tags were not displayed on the home page for users without curation rights.
+
+### June 16th, 2022
+
+#### Improvements
+
+* We improved the UI performance during registration of large contracts.
+
 ### June 2nd, 2022
 
 #### Improvements

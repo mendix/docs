@@ -1,7 +1,6 @@
 ---
 title: "Show Home Page"
 url: /refguide7/show-home-page/
-parent: "client-activities"
 aliases:
     - /refguide7/Show+Home+Page.html
     - /refguide7/Show+Home+Page

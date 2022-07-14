@@ -1,7 +1,6 @@
 ---
 title: "Focus WebElement"
 url: /addons/ats-addon/rg-one-focus-webelement/
-parent: "rg-one-system"
 ---
 
 ## 1 Description

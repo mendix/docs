@@ -1,7 +1,6 @@
 ---
 title: "OQL Functions"
 url: /refguide7/oql-functions/
-parent: "oql-expressions"
 ---
 
 

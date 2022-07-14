@@ -1,7 +1,6 @@
 ---
 title: "Set Up a Local Selenium Hub"
 url: /addons/ats-addon/ht-two-setup-local-selenium-hub/
-parent: "ht-two-setup-local-selenium-index"
 description: "Describes how to set up a local selenium hub."
 tags: ["ATS", "testing", "Selenium hub"]
 ---

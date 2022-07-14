@@ -42,13 +42,14 @@ Once a model is published, you can download the JSON structure of this model, an
 
 ### 1.2 Features
 
-* Extract data from images in bulk and map data to an entity
+* Extract data from images ( in JPG, JPEG, BMP, and PNG formats) in bulk and map data to an entity
+* Extract data from a single-page PDF document
 * Train a model using sample images by marking specific areas in images
 * Support [Mendix SSO](/appstore/modules/mendix-sso/)
 
 ### 1.3 Limitation
 
-* Currently only supports images in JPG and JPEG formats
+* Currently images used for the training of the model should be in JPG, JPEG, BMP, or PNG format.
 
 ### 1.4 Prerequisites
 
@@ -109,25 +110,25 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
 #### 4.1.1 Guidelines for Improving the Accuracy of Data Extraction {#guidelines}
 
-You should use at least three samples to train your model to reach the higher accuracy of data extraction. The more samples that you use to train your model, the higher accuracy of data extraction you can achieve. However, all samples that are used for one training must have a similar structure. 
+You should use at least three to five sample images to train your model to reach the higher accuracy of data extraction. The more sample images that you use to train your model, the higher accuracy of data extraction you can achieve. However, all sample images that are used for one training must have a similar structure. 
+
+ If a table in the documents for extraction can have different numbers of rows, then make sure that the table in each sample image also have different number of rows.
 
 You should use the marker tool properly – this is key to extracting data in higher quality. The areas you mark determine where the document model will extract the data. Make sure that you mark the complete field area. Only in this way, will the document model read the complete field area and accurately extract a long value.
 
 #### 4.1.2 Procedure
 
-To train a document model, do as follows:
+##### 4.1.2.1 Uploading Sample Images in the Document Model Training Application {#update-sample-images}
 
-1.  Perform the following steps to log into the **Document Model Training** application:
+1.  Log into the **Document Model Training** application as follows:
 
     1. Log into the Marketplace with your Mendix account.
-
     2.  Go to **My Marketplace** and then do as follows:
 
         * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
         * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
 
     3. Click **Intelligent Document Service** to open the service management dashboard.
-
     4.  Click **Manage Instance** to open the **Document Model Training** application.
 
         {{< figure src="/attachments/appstore/app-services/intelligent-document-service/document-model-training-app.png" alt="Document model training app login page" >}}
@@ -146,62 +147,135 @@ To train a document model, do as follows:
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/create-new-model-dialog-box.png" alt="Create New Model dialog box" >}}
 
-4.  Enter a unique **Model Name**. select a **Language**, and then click **Create Model**.
+4.  Enter a unique **Model Name**, select a **Language**, and then click **Create Model**.
 
     {{% alert color="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
 
 5. Wait until the **Import File** page opens.
-
-6.  Drag sample images in JPG or JPEG format into the box where it says **Drag image files here**. You can also click **Browse** and select the files.
+6.  Drag sample images in JPG, JPEG, BMP, or PNG format into the box where it says **Drag and drop your image files here**. You can also click **Browse** and select the files.
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/import-file-page.png" alt="Import File page" >}}
 
-    {{% alert color="warning" %}}To reach the higher accuracy of data extraction, you should upload at least three samples to train your model, and all these images must have a similar structure.{{% /alert %}}
+    {{% alert color="info" %}}To reach the higher accuracy of data extraction, you should upload at least three to five sample images to train your model, and all these images must have a similar structure.<br/> If a table in the documents for extraction can have different numbers of rows, then make sure that the table in each sample image also have different number of rows.{{% /alert %}}
 
 7.  Click **Next**. The **Add Marker and IDs** page opens. The status of the images you imported shows **Not Marked**.
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-marker-and-ids-image-unmarked.png" alt="Add Marker and IDs page" >}}
 
-8.  To mark an image, use the marker tool properly:
-    1. Click **Add Marker**. The **Mark Document** dialog box opens.
-    2.  In the **Mark the fields to be extracted** pane, select a field of interest from which some meaningful data needs to be extracted.
+Then you can proceed to mark the [text fields](#mark-text-fields) and/or [tables](#mark-tables) in a sample image.
 
-        {{% alert color="warning" %}}The areas you mark in this step determine where the document model will extract the data. Make sure that you mark the complete field area. Only in this way, will the document model read the complete field area and accurately extract a long value.{{% /alert %}}
+##### 4.1.2.2 Marking Text Fields in a Sample Image {#mark-text-fields}
 
-        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/mark-document-dialog-box.png" alt="Mark Document page" >}}
+After you [upload sample images](#update-sample-images) in the document model training application, you can mark the text fields in the sample images as follows:
 
-    3. On the right side, enter a **Marker Id** that is used for the area that you selected. 
-    4. Select the **Marker Type**.
-    5. Click **Add Marker** to add the marker to the list of **Markers**.
-    6. To delete a marker from the **Markers** list, select the marker and click **Delete**.
-    7.  When you add all the markers for this image, click **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.
+1. Click **Add Marker**. The **Mark Document** dialog box opens.
 
-        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-marker-and-ids-image-status-marked.png" alt="add markers and id status is marked" >}}
+2.  In the **Choose fields to mark** pane, select the text field from which data needs to be extracted.
 
-    8. Repeat the steps above until you mark all the images, and then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
+    {{% alert color="warning" %}}The areas you mark in this step determine where the document model will extract the data. Make sure that you mark the complete field area. Only in this way, will the document model read the complete field area and accurately extract a long value.{{% /alert %}}
 
-9.  Wait until the **Status** of the model becomes **Published**. Once the model is published, this pop-up window opens:
+    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/mark-document-dialog-box.png" alt="Mark Document page" >}}
 
-    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/new-model-status-popup.png" alt="new model status included" >}}
+3. On the right side, enter a **Marker Name** that is used for the text field that you selected. 
 
-10. Click **Refresh** to see the status of the model. The model is ready to use once its **Status** changes to **Published**.
+4. Select **Text** from drop-down list.
+
+5.  Click **Generate Marker ID** to add the marker to the list of **Markers**.
+
+    {{% alert color="info" %}}To delete a marker from the **Markers** list, select the marker and click **Delete**.{{% /alert %}}
+
+If you still need to [mark tables in sample images](#mark-tables), you can proceed to do it. Otherwise, you can [finish the document model training](#finish-training).
+
+##### 4.1.2.3 Marking Tables in Sample Images {#mark-tables}
+
+After you [upload sample images](#update-sample-images) in the document model training application, you can mark the tables in a sample image as follows:
+
+
+1. Click **Add Marker**. The **Mark Document** dialog box opens.
+
+2. In the **Choose fields to mark** pane, select the table from which data needs to be extracted.
+
+3. On the right side, enter a **Marker Name** that is used for the table that you selected. 
+
+4. Select **Table** from the **Mark Type** drop-down list.
+
+5. Click **Generate Marker ID** to add the marker to the list of **Markers**.
+
+    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-table-type-marker.png">}}
+
+6. Click **Done**. Then you can mark every column and row of your interest one by one in the table.
+
+7. Mark the columns in the table as follows:
+
+     1. In the **Choose fields to mark** pane, select the column from which data needs to be extracted.
+
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-column-marker-for-table.png" >}}
+
+     2. On the right side, enter a **Marker Name** that is used for the column that you selected. 
+
+     3. Select **Column** from the **Selection Type** drop-down list.
+
+     4. Select **Text** from the **Marker Type** drop-down list.
+
+     5. Click **Add Selection**.
+
+     6. Repeat steps above to mark other columns in the table.
+
+8. Mark the rows in the table as follows:
+
+    1. In the **Choose fields to mark** pane, select the row from which data needs to be extracted.
+
+       {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-row-marker-for-table.png" >}}
+
+    2. On the right side, enter a **Marker Name** that is used for the row that you selected. 
+
+    3. Select **Row** from the **Selection Type** drop-down list.
+
+    4. Click **Add Selection**.
+
+    5. Repeat steps above to mark other rows in the table.
+
+9. After you finish marking all the columns and rows, click **Table Component**.
+
+10. Check the column and row markers in the **Table Component** list. Make sure all the markers for the table are added.
+
+    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/markers-of-table-component.png" >}}
+
+11. If all the required columns and the rows from the table are marked, click **Save Table Selection** to save all the markers for the table.
+
+If you still need to [mark text fields in sample images](#mark-text-fields), you can proceed to do it. Otherwise, you can [finish the document model training](#finish-training).
+
+##### 4.1.2.4 Finishing the Document Model Training {#finish-training}
+
+1. After you add all the markers for the [text fields](#mark-text-fields) and/or [tables](#mark-tables) in this sample image, click **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.
+
+   {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-marker-and-ids-image-status-marked.png" >}}
+
+2. Repeat the steps above until you mark all the sample images, and then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
+
+3. Wait until the **Status** of the model becomes **Published**. Once the model is published, this pop-up window opens:
+
+   {{< figure src="/attachments/appstore/app-services/intelligent-document-service/new-model-status-popup.png" >}}
+
+4. Click **Refresh** to see the status of the model. The model is ready to use once its **Status** changes to **Published**.
+
+{{% alert color="info" %}} If you want to **Delete** a model irrespective of its status, click **...** under the **Actions** column, select **Delete**, and then click **Delete** in the confirmation window.{{% /alert %}}
 
 ### 4.2 Creating an Import Mapping{#mapping-file}
 
 You need to use an [import mapping](/refguide/mapping-documents/#import-mappings) to populate extracted data into an entity. If necessary, you can further process the entity with [event handlers](/refguide/event-handlers/).
 
 1.  To create an import mapping, you need a JSON structure. Perform the following steps to generate the JSON structure:
-    1. Log into the [Document Model Training](#document-model-training) application with your Mendix account.
-    
+    1. Log in to the [Document Model Training](#document-model-training) application with your Mendix account.
     2. Click **Environment** to show the **Existing Models** list.
-    3. Select your trained model. Make sure that the **Status** of the model is **Published**. Note down the **Model Id**. You will need it when you [extract data with the trained model ](#extraction-activity).
+    3. Select your trained model. Make sure that the **Status** of the model is **Published**. Note down the **Model Id**. You will need it when you [extract data with the trained model](#extraction-activity).
     4.  Click **...** in the **Actions** column of the published model and then click **Download JSON Structure**.
 
-        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/ids-download-json-structure.png" alt="" >}}
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/ids-download-json-structure.png" >}}
 
         The **Generate JSON Structure** dialog box opens.
     
-    5.  Drag one of the sample images, which you used to train the document model, into the box where it says **Drag image files here**. You can also click **Browse** and select the file.
+    5.  Drag one of the sample images which you used to train the document model or a single-page PDF document into the box where it says **Drag and drop your files here**. You can also click **Browse** and select the file.
     
         {{< figure src="/attachments/appstore/app-services/intelligent-document-service/sample-extraction-dialog-box.png" alt="Sample Extraction dialog box" >}}
     
@@ -235,18 +309,18 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/intelligent-document-microflow.png" alt="intelligent-document-microflow" >}}
 
-2.  Create a list of image that inherits from `System.Image`. Images from where data are extracted should be passed as a list, as shown in the microflow above.
+2.  Create a list of documents that inherits from `System.FileDocument`. Documents from where data are extracted should be passed as a list, as shown in the microflow above.
 
-    {{% alert color="info" %}} The total size of the images being passed for extraction should not exceed 20 MB. If you have multiple images to extract data from, you can process them in smaller batches. {{% /alert %}}
+    {{% alert color="info" %}} The total size of the documents being passed for extraction should not exceed 20 MB. If you have multiple documents to extract data from, you can process them in smaller batches. {{% /alert %}}
 
-    {{% alert color="info" %}}The number of images passed as a list in the microflow and processed by the **Intelligent Document Service** activity will be counted against the allocated quota for your provisioned instance.{{% /alert %}}
+    {{% alert color="info" %}}The number of documents passed as a list in the microflow and processed by the **Intelligent Document Service** activity will be counted against the allocated quota for your provisioned instance.{{% /alert %}}
 
 3.  Double-click the **Intelligent Document Service** activity to open the dialog box.
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/intelligent-document-service-dialog-box.png" alt="Intelligent Document Service dialog box" >}}
 
 4. For **Model Id**, click **Edit** to enter the **Model Id** of your model.
-5. For **Image List**, click **Edit** to select the **Image List** which inherits from `System.Image`.
+5. For **Document List**, click **Edit** to select the **Document List** which inherits from `System.FileDocument`.
 6. For **Mapping**, **Select** the import mapping that you created to define how extracted data should be mapped into an entity.
 7. Click **OK** to save the changes and close the dialog box.
 

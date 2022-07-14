@@ -1,7 +1,6 @@
 ---
 title: "Use Precondition in Test Cases"
 url: /addons/ats-addon/ht-two-use-precondition-in-test-cases/
-parent: "ht-two"
 description: "Describes how to use precondition in test cases in ATS"
 tags: ["ATS", "testing"]
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Tree Node"
 url: /appstore/modules/tree-node/
-parent: "data-widgets"
 description: "Describes the purpose, features, and configurations of the Tree Node widget which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "tree node", "bootstrap", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

@@ -13,19 +13,21 @@ Powered by AI and OCR technologies, the [Receipt Processing](https://marketplace
 ### 1.1 Features
 
 * Pre-built, ready-to-implement receipt document models
-* Extract data from images of receipts in bulk and map data to an entity
+* Extract data from receipts in bulk and map data to an entity
 * Support [Mendix SSO](/appstore/modules/mendix-sso/)
 
 ### 1.2 Limitation
 
-* Currently only supports images in JPG and JPEG formats
+* Currently supported file formats:
+  * Images in JPG, JPEG, BMP, and PNG
+  * PDF documents
 
 ### 1.3 Prerequisites
 
 This app service works best with Studio Pro 8 versions starting with [8.18.15](/releasenotes/studio-pro/8.18/#81815) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0/).
 * For optimal recognition results, make sure that documents with small fonts have high resolutions:
-  * If images are made using a scanner, it is recommended to use 300 dpi for texts in font size 10 pt or larger and 400-600 dpi for texts in font size 9 pt or smaller.
-  * If images are taken using a digital camera, it is recommend to use at least a 5-megapixel sensor with auto focusing and flash disabling features, fit the page entirely within the camera frame, and distribute lighting evenly across the page to avoid any dark areas or shadows on the image.
+  * If images/documents are made using a scanner, it is recommended to use 300 dpi for texts in font size 10 pt or larger and 400-600 dpi for texts in font size 9 pt or smaller.
+  * If images/documents are taken using a digital camera, it is recommend to use at least a 5-megapixel sensor with auto focusing and flash disabling features, fit the page entirely within the camera frame, and distribute lighting evenly across the page to avoid any dark areas or shadows on the image/document.
 
 
 ## 2 Installation
@@ -74,7 +76,7 @@ Before you deploy an app, you should configure the binding keys in your app as f
 
 ## 4. Usage
 
-To use the Receipt Processing app service, firstly create an [import mapping](#mapping-file), and then include the receipt processing service activity in your microflow. This microflow should be set up to accept trained model and images, extract data from the images in bulk and then map the data to an entity using the import mapping that you created.
+To use the Receipt Processing app service, firstly create an [import mapping](#mapping-file), and then include the receipt processing service activity in your microflow. This microflow should be set up to accept trained model and images/documents, extract data from the input files in bulk and then map the data to an entity using the import mapping that you created.
 
 ### 4.1 Creating an Import Mapping{#mapping-file}
 
@@ -102,7 +104,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
         {{< figure src="/attachments/appstore/app-services/receipt-processing/rp-download-json-structure.png" alt="" >}}
     
         The **Generate JSON Structure** dialog box opens.
-    9.  Drag a sample receipt into the box where it says **Drag image files here**. You can also click **Browser** and select the file. The sample receipt should represent the receipts from which data will be extracted. You can also click the box and select the file.
+    9.  Drag a sample receipt into the box where it says **Drag and drop your documents here**. You can also click **Browser** and select the file. The sample receipt should represent the receipts from which data will be extracted. You can also click the box and select the file.
     
         {{< figure src="/attachments/appstore/app-services/receipt-processing/sample-extraction-dialog-box.png" alt="Sample Extraction dialog box" >}}
     
@@ -133,21 +135,20 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
 ### 4.2 Extracting the Data with the Trained Document Model {#extraction-activity}
 
-1.  In the **Toolbox**, drag the **Receipt Processing** activity from the **Document Data Capture Service** category into your microflow.
+1. In the **Toolbox**, drag the **Receipt Processing** activity from the **Document Data Capture Service** category into your microflow.
+2.  Create a list of documents that inherit from `System.FileDocument`. Documents from where data is extracted should be passed as a list, as shown in the microflow.
 
     {{< figure src="/attachments/appstore/app-services/receipt-processing/receipt-processing-microflow.png" alt="receipt-processing-microflow" >}}
 
-2.  Create a list of image that inherits from `System.Image`. Images from where data is extracted should be passed as a list, as shown in the microflow above.
+    {{% alert color="info" %}} The total size of the documents being passed for extraction should not exceed 20 MB. If you have multiple documents to extract data from, you can process them in smaller batches. {{% /alert %}}
 
-    {{% alert color="info" %}} The total size of the images being passed for extraction should not exceed 20 MB. If you have multiple images to extract data from, you can process them in smaller batches. {{% /alert %}}
-
-    {{% alert color="info" %}}The number of images passed as a list in the microflow and processed by the **Receipt Processing** activity will be counted against the allocated quota for your provisioned instance.{{% /alert %}}
+    {{% alert color="info" %}}The number of documents passed as a list in the microflow and processed by the **Receipt Processing** activity will be counted against the allocated quota for your provisioned instance.{{% /alert %}}
 
 3.  Double-click the **Receipt Processing** activity to open the **Receipt Processing** dialog box.
 
     {{< figure src="/attachments/appstore/app-services/receipt-processing/receipt-processing-dialog-box.png" alt="Receipt Processing" >}}
 
-4. For **Image List**, click **Edit** to select the **Image List** which inherits from `System.Image`.
+4. For **Document List**, click **Edit** to select the **Document List** which inherits from `System.FileDocument`.
 5. For **Mapping**, **Select** the import mapping that you created to define how extracted data should be mapped into an entity.
 6. Click **OK** to save the changes and close the dialog box.
 

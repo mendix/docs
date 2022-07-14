@@ -1,7 +1,6 @@
 ---
 title: "Simple Menu Bar"
 url: /refguide7/simple-menu-bar/
-parent: "menu-widgets"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

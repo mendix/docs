@@ -1,7 +1,6 @@
 ---
 title: "Browser Recorder Results"
 url: /addons/apd-addon/rg-three-browser-recorder-results/
-parent: "rg-three-recorder"
 ---
 
 ## 1 Introduction

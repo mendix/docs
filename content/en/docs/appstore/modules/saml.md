@@ -75,11 +75,12 @@ There are different versions of the module, depending on which version of Mendix
 ## 2 Installation
 
 1. Configure the **Startup** microflow to run as the startup microflow. This microflow will initialize the custom request handler `/SSO/` (please note the importance of using the final `/` for all instances of `/SSO/`), validate all IdP configurations, and prepare the configuration entities required during the configuration.
+    {{% alert color="info" %}}If you have set up path based access restrictions in your cloud (for example [Path-Based Access Restrictions](/developerportal/deploy/environments-details/#path-based-restrictions) in the Mendix Cloud), ensure that access to `/SSO/` is allowed.{{% /alert %}}
 2. Add the **OpenConfiguration** microflow to the navigation, and then allow the administrator to access this page.
 3.  Review and configure all the constants:
-	* **DefaultLoginPage** – You can specify another login page here (for example, configuring the *index.html* page to redirect to `/SSO/`). This constant is only used when the login process fails. When the end-user cannot be authenticated in Mendix, they are presented with a page. If this constant is specified, a button will appear, and by clicking this button, you will be redirected to the default login page (for example, *index.html* or *login.html*).
-	* **DefaultLogoutPage** – Removing the sign-out button is recommended, but if you choose to keep it, the end-user will be redirected to a page. You can choose where the end-user is redirected to (for example, back to `/SSO/` or your *login.html* page). Every user signed in via SAML is redirected to this location when they are logged out.
-	* **SSOLandingPage** – You can specify a different landing page here (for example, redirecting each user accessing the application URL to the SAML login). This requires you to change the *index.html* page by adding `<meta http-equiv="refresh" content="0;URL=/SSO/" />` (so the end-user does not end up on *index.html* again after a login attempt).  By changing this constant to `/index3.html`, the end-user will land on *index3.html* instead of *index.html*.  In this case, you will of course need to add an *index3.html* page to your theme (and you can copy the original *index.html* into *index3.html*).
+	* **DefaultLoginPage** – You can specify a different login page here for when the login process fails. When the end-user cannot be authenticated in the external Identity Provider, a button will appear, and by clicking this button, they will be redirected to the specified login page. If this is left blank, an unauthenticated user will be redirected to `/login.html`.
+	* **DefaultLogoutPage** – Removing the sign-out button is recommended, but if you choose to keep it, the end-user will be redirected to a page. You can choose where the end-user is redirected to (for example, back to `/SSO/` or your `login.html` page). Every user signed in via SAML is redirected to this location when they are logged out.
+	* **SSOLandingPage** – Set this if you redirect the `index.html` to log into your app automatically. See [Using SSOLandingPage](#ssolandingpage) for further information about this.
 	* **HybridAppLoginTimeOutInMinutes** – If you are using a [hybrid mobile](/refguide/hybrid-mobile/) app and have the **com.mendix.webui.HybridAppLoginTimeOut** [custom runtime setting](/refguide/custom-settings/#web-client-settings) configured to customize the expiration of mobile authentication tokens, you will have to set the value of the **HybridAppLoginTimeOutInMinutes** constant to match the value of the custom runtime setting. When you use the SAML module for SSO in your Mendix app, the authentication token is not created by the Mendix runtime, which uses the custom runtime setting. Instead, the authentication token is created by the Java code in the SAML module. This Java code does not have access to the custom runtime setting value, and thus requires the constant value to be set. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires mobile authentication tokens to be enabled in your [IdP Configuration](#additional-functionality) as well as changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix & SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
 		* If you use the default login handler in your hybrid app, you must change the **com.mendix.webui.HybridAppLoginTimeOut** custom runtime setting to change the validity of the authentication token used by the hybrid mobile app.
 		* If you use the SAML module in your hybrid app, you must change the **SAML20.HybridAppLoginTimeOutInMinutes** constant to change the validity of the authentication token used by the hybrid mobile app.
@@ -88,9 +89,21 @@ There are different versions of the module, depending on which version of Mendix
         {{% alert color="warning" %}}Hybrid mobile apps are deprecated in Mendix version 9{{% /alert %}}
 4. Sign in to the application and configure the SAML module.
 
+### 2.1 Using SSOLandingPage{#ssolandingpage}
+
+You can use SSO to automatically sign users in to your app by redirecting every user accessing the default page of the Mendix app (`index.html`) to the Mendix `/SSO/` endpoint. You do this by changing the `index.html` page by adding `<meta http-equiv="refresh" content="0;URL=/SSO/" />`. If you do this without any other changes, the app will come back to `index.html` which will be redirected again to single sign on.
+
+**SSOLandingPage** specifies a different landing page so the end-user does not end up on `index.html` again after a login attempt.  We recommend that you change this constant to `/index3.html` and create an `index3.html` page in your `/theme` folder and copy contents of the original `index.html` (without the added redirect) into it. The authenticated end-user will then land on `index3.html` which will then display the content of the app. If the user authentication fails, the user will be directed to the **DefaultLoginPage** instead. 
+
 ## 3 Configuration
 
-Before any IdP can be configured, you need to configure the service provider (SP), which is your current application. The SP configuration allows you to configure some basic information for the SP metadata file. This information will be be available in the IdP for the reference of the IdP administrator.
+To configure SAML, start your app and navigate to the **OpenConfiguration** microflow which you added to the navigation.
+
+You can now finish configuring your SAML module in your app by reviewing/updating the Service Provider (SP), and creating/updating the IdP configuration.
+
+### 3.1 Configuring Service Provider
+
+Before any IdP can be configured, you need to configure the SP, which is your current application. The SP configuration allows you to configure some basic information for the SP metadata file. This information will be be available in the IdP for the reference of the IdP administrator.
 
 {{% alert color="info" %}}
 The base URL used for the links in your SP metadata is determined by the **Application Root URL** [custom runtime setting](/refguide/custom-settings/#general) of your app. Change the value for this runtime setting to change the base URL of the links in your SP metadata. After changing the **Application Root URL** setting, you have to import the SP metadata into your IdP again.
@@ -100,40 +113,59 @@ You can choose what you want to enter for the entity ID, organization, and conta
 
 * **Allow IdP Discovery** – When using multiple IdPs, this determines whether you allow users to get a list of all available IdPs if they have not specified a specific IdP in the login request. When going to `/SSO/`, if you have only one active IdP, the module will use the active IdP by default. If you have multiple IdPs, it is required to include the IdP in the URL. This can be done by using the URL */SSO/login/[IdP Alias]*  or */SSO/login?_idp_id=[IdP_Alias]*.
 * **Keep Log Files** – All login attempts are tracked in the **SAMLRequest** and **SSOLog** entities. This attribute configures how long those records are kept before removing them. A scheduled event runs daily to remove all the files outside that date range. This value is mandatory. When keeping it 0, all records will be removed daily.
-* **Use Encryption** (key length: **No Encryption**, **1024bit Encryption**, **2048bit Encryption**; encryption method: **SHA1 / SHA256**) – This allows the encryption of any messages being sent from the SP to the IdP. If encryption is chosen, all the messages going out to the IdP will be encrypted, and a self-signed certificate will be generated and stored in the keystore. Changing the encryption requires all IdPs to re-import the new metadata file.
-* **KeyStore** – All the certificates required for encryption are stored in the keystore. Resetting the keystore or uploading another keystore will require all the IdPs to import the new metadata file. If you use a custom keystore, make sure the alias of the keystore is the same as the SP entity ID. In addition, make sure the new keystore password is set in the `KeystorePassword` constant.
+* **Use Encryption** (key length: **No Encryption**, **1024bit Encryption**, **2048bit Encryption**; encryption method: **SHA1 / SHA256**) – This allows the encryption of any messages being sent from the SP to the IdP. This is in addition to the encryption provided by using a secure HTTPS connection. If encryption is chosen, all the messages going out to the IdP will be encrypted, and a self-signed certificate will be generated and stored in the key store. Changing the encryption requires all IdPs to re-import the new metadata file.
 
-Accessing the metadata can be done by downloading the XML file or by opening `http://www.app.com/SSO/metadata`.
+If encryption is enabled, all the certificates required for encryption are stored in the key store. When you choose **Use encryption** a key store is automatically created using the URL of the application, or the custom entity Id, and shown as the **Key store alias**. See [Managing the Key Store](#keystore), below, for more key store options.
 
-### 3.1 Creating a New IdP Configuration
+Accessing the metadata for the SP can be done either by clicking **Download SP Metadata** to download the XML file or by opening `http://<Application Root URL>/SSO/metadata` for your app's URL.
+
+#### 3.1.1 Managing the Key Store{#keystore}
+
+You can usually leave the key store settings as the default. However, there may be a requirement to use a specific key store.
 
 {{% alert color="warning" %}}
-If you have multiple IdPs, please make sure each IdP has a unique **Entity descriptor**. If you add multiple IdPs with the same entity descriptor, you might experience unexpected behavior where a different SSO configuration is selected than the alias provided.
+Resetting the key store or uploading another key store will require all the IdPs to import the new metadata file. 
 {{% /alert %}}
 
-When creating a new IdP configuration, you are guided through a workflow to help you configure everything required for the IdP configuration. Each option in the workflow is explained below.
+Click **Upload** to upload a key store file. Use the **Entity Id** as the the alias of the key store.
 
-Upon completing these steps, you only need to send the metadata file to the IdP and have them configure the authentication on their end. 
+You can download the key store file and use it when configuring other SAML SPs by clicking **Download**.
+
+{{% alert color="info" %}}
+Remember to set the new key store password in the `KeystorePassword` constant of your app.
+{{% /alert %}}
+
+To return the key store settings to their defaults, click **Reset**.
 
 ### 3.2 Configuring the IdP-Specific Settings
 
 Each IdP (entity descriptor) should have its own configuration set. Every IdP can be configured and enabled separately. All changes made in the configuration are immediately applied when you save the configuration. 
 
-#### 3.2.1 General
+#### 3.2.1 Creating a New IdP Configuration
+
+{{% alert color="warning" %}}
+If you have multiple IdPs, please make sure each IdP has a unique **Entity descriptor**. If you add multiple IdPs with the same entity descriptor, you might experience unexpected behavior where a different SSO configuration is selected than the alias provided.
+{{% /alert %}}
+
+When creating a new IdP configuration, you are guided through a workflow to help you configure everything required for the IdP configuration. Each option in the workflow is explained below, and can be changed by editing an existing IdP Configuration.
+
+Upon completing these steps, you only need to send the SP metadata file to the IdP and have them configure the authentication on their end. 
+
+#### 3.2.2 General
 
 * **Alias** – The alias will be used in the URL of the application to indicate the IdP configuration that should be used during login. There are no validations on this field (besides that it is required). But you should make sure that this alias is compatible with usage in an URL (meaning, no `/`, `&`, `?`, or special character that could get lost in the communication).
 * **Log SAML Requests** – Determines whether all requests and login attempts should be logged and stored in an entity.
 
-#### 3.2.2 Identity Provider Metadata
+#### 3.2.3 Identity Provider Metadata
 
 * **IdP Metadata Location** – The module is capable of re-importing all IdP metadata files on a daily basis. You can also choose to import the metadata from a file.
 	* **Metadata Overview** – This overview shows all the information that has been found in the IdP metadata information. It is usually not necessary to do anything here, but it can be useful in order to review the possible IdP and SP configuration options.
 
 {{% alert color="info" %}}
-If you want to automatically synchronize the IdP metadata, go to **\_USE ME** > **Scheduled Events** in the **App Explorer**, double-click **SE_SynchronizeIdPMetadata** and select **Yes** for **Enabled** to enable the automatic synchronization of the IdP metadata. 
+If you want to automatically synchronize the IdP metadata, make sure the **SE_SynchronizeIdPMetadata** [scheduled event](/refguide/scheduled-events/) is enabled. This is in the **\_USE ME** > **Scheduled Events** folder of the SAML module.
 {{% /alert %}}
 
-#### 3.2.3 User Provisioning 
+#### 3.2.4 User Provisioning 
 
 * **Uses InCommon Federation Standard** – IdPs that use the InCommon standard often do not specify the assertion attributes. When following the InCommon standard, a fixed set of assertion attributes will be available to choose from later.
 * **Identifying Assertion** (aka "Principal Key") – Specifies which of the assertion attributes identifies the user name.

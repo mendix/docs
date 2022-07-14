@@ -1,7 +1,6 @@
 ---
 title: "Stories Pane"
 url: /refguide/stories-pane/
-parent: view-menu
 weight: 60
 description: "Describes the Stories pane in Mendix Studio Pro."
 tags: ["Studio Pro", "stories", "stories pane"]

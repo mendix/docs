@@ -1,7 +1,6 @@
 ---
 title: "Set Up your Personal Access Token"
 url: /apidocs-mxsdk/mxsdk/setup-your-pat/
-parent: "sdk-howtos"
 weight: 11
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Report Widgets"
 url: /refguide8/report-widgets/
-parent: "pages"
 weight: 50
 tags: ["studio pro", "report widgets", "report", "widgets", "data set"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

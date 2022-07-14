@@ -5,7 +5,6 @@ tags: ["security", "security advisories", "cve", "cvss", "ssa", "siemens securit
 weight: 50
 #notoc: true
 #layout: wide
-#toc-level: "3"
 ---
 
 ## 1 Introduction
@@ -22,6 +21,11 @@ Siemens publishes their CVEs on the second Tuesday of every month.
 
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
+| <a name="34466"></a>CVE-2022-34466 | 6.5 | [Expression Injection Vulnerability in Mendix Applications](https://cert-portal.siemens.com/productcert/pdf/ssa-492173.pdf) | See the SSA description for remediation details. |
+| <a name="31257"></a>CVE-2022-31257 | 4.9 | [Improper Access Control Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-433782.pdf) | See the SSA description for remediation details. |
+| CVE-2022-34467 | 6.5 | [XML Entity Expansion Injection Vulnerability in Mendix Excel Importer Module](https://cert-portal.siemens.com/productcert/pdf/ssa-610768.pdf) | See the SSA description for remediation details. |
+| CVE-2022-32285 | 8.3 | [Privilege Escalation Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/pdf/ssa-740594.pdf) | See the SSA description for remediation details. |
+| CVE-2022-32286 | 7.6 | [Privilege Escalation Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/pdf/ssa-740594.pdf) | See the SSA description for remediation details. |
 | <a name="25650"></a>CVE-2022-25650 | 3.1 | [Improper Access Control Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-870917.pdf) | See the SSA description for remediation details. |
 | <a name="27241"></a>CVE-2022-27241 | 5.3 | [Information Disclosure Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-414513.pdf) | See the SSA description for remediation details. |
 | CVE-2022-26313 | 9.1 | [Vulnerability in Mendix Forgot Password Marketplace Module](https://cert-portal.siemens.com/productcert/pdf/ssa-134279.pdf) | See the SSA description for remediation details. |

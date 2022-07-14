@@ -1,7 +1,6 @@
 ---
 title: "Document Templates"
 url: /refguide8/document-templates/
-parent: "resources"
 weight: 90
 tags: ["studio pro", "document template"]
 aliases:

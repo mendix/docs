@@ -1,7 +1,6 @@
 ---
 title: "Radio Buttons"
 url: /refguide8/radio-buttons/
-parent: "input-widgets"
 weight: 50
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

@@ -1,7 +1,6 @@
 ---
 title: "Add a Native Mobile App"
 url: /refguide/quickstart-part2/
-parent: "_index"
 weight: 20
 description: "Learn the basics of making a native mobile app."
 tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
@@ -11,9 +10,20 @@ tags: ["microflows", "widgets", "app", "nanoflow", "app development"]
 
 This document is Part 2 of the [Quickstart](/refguide/quickstart-guide/) guide for building an app. Here you will be adding on to the app created in [Part 1: Build a Responsive Web App](/refguide/quickstart-part1/). If you decided to skip Part 1, you can [download a copy of its completed app package](https://quickstartguidev1.s3.eu-west-2.amazonaws.com/Quickstart_App.mpk) in order to start this document right away.
 
-In this document you will learn to use a native mobile navigation profile. You will create a small native mobile app to take pictures and upload them to the same database so they can be viewed in a browser or in a native app on your mobile device. You will also use the Make it Native app to test your app on a mobile device.
+In this document you will learn to use a native mobile navigation profile. Apps built in the native mobile profile are typically installed natively on your iOS or Android device (usually via an app store).
 
-Mendix native mobile apps are native mobile apps based on React Native. These apps use native UI elements which means faster performance and advanced features like gesture functionality (swiping, multi-tap, and more), and improved access to device functionalities like geolocation and the camera. Native mobile apps are offline first and only fetch data from the server when programmed to do so.
+### 1.2 Getting to Know Native Mobile
+
+You will create a small native mobile app which adds on to the app made in Part 1. The native app will take pictures and upload them to the same database as before so they can be viewed in a browser or in a native app on your mobile device. You will also use the Make it Native app to test your app on a mobile device.
+
+Mendix native mobile apps are native mobile apps based on React Native. These apps use native UI elements which means faster performance and advanced features like gesture functionality (swiping, multi-tap, and more), and improved access to device functionalities like geolocation and the camera. 
+
+Native mobile apps are offline first and only fetch data from the server when programmed to do so. By completing this guide, you will become acquainted with the following Mendix native mobile concepts:
+
+* [Offline-first design](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/)
+* [Data synchronization](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/) between mobile devices and web apps
+* [Nanoflows](/refguide/nanoflows/): the native mobile JavaScript equivalent to microflows)
+* Using custom [JavaScript actions](/refguide/javascript-actions/) in your nanoflows
 
 ## 2 Prerequisites
 
@@ -157,7 +167,7 @@ All done! You can now run your app and test all the features you have built. To 
 
     {{< figure src="/attachments/refguide/quickstart-guide/part2/min-qr.png" width="300px" alt="Scan QR code">}}
 
-This will automatically begin testing. If you have issues, see [Troubleshoot Common Native Mobile Issues](/howto/mobile/common-issues/) for troubleshooting information.
+This will automatically begin testing. If you have issues, see [this troubleshooting guide](/refguide/mobile/getting-started-with-mobile/prerequisites/) for troubleshooting information.
 
 When we tested our native mobile photo app, we were lucky to sight a stegosaurus nearby:
 
@@ -171,7 +181,7 @@ After taking a photo with your native mobile app and tapping the **Save** button
 
 Congratulations on successfully completing Part 2 of the quickstart guide! You are definitely on your way to succeed with the Mendix Platform.
 
-For more information on building and deploying apps with Mendix, see [Build Native Apps](/howto/mobile/build-native-apps/). Put simply, Mendix lets you [build an app for distribution](/howto/mobile/deploying-native-app/) and get it running on a native device. After you develop further, you can [debug native app issues](/howto/mobile/native-debug/) to improve your users' experience. Then, you can add [custom fonts](/howto/mobile/native-custom-fonts/) to make your app feel more like your brand. And if you ever need help, we have [troubleshooting help](/howto/mobile/common-issues/) for you just in case.
+For more information on building and deploying apps with Mendix, see [Building Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/). Put simply, Mendix lets you [build an app for distribution](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and get it running on a native device. After you develop further, you can [debug native app issues](/refguide/mobile/distributing-mobile-apps/native-debug/) to improve your users' experience. Then, you can add [custom fonts](/refguide/mobile/designing-mobile-user-interfaces/images-icons-and-fonts/) to make your app feel more like your brand. And if you ever need help, we have [troubleshooting help](/refguide/mobile/getting-started-with-mobile/prerequisites/) for you just in case.
 
 ## 5 Read More
 

@@ -1,7 +1,6 @@
 ---
 title: "Maintenance of SQL Server"
 url: /developerportal/deploy/microsoft-sql-server-maintenance/
-parent: "mendix-on-windows-microsoft-sql-server"
 weight: 40
 ---
 

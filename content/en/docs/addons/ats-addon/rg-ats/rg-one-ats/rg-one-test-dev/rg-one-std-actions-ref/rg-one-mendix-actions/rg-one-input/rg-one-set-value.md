@@ -1,7 +1,6 @@
 ---
 title: "Set Value"
 url: /addons/ats-addon/rg-one-set-value/
-parent: "rg-one-input"
 ---
 
 ## 1 Description

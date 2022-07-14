@@ -1,7 +1,6 @@
 ---
 title: "Workflow Consistency Errors"
 url: /studio/consistency-errors-workflows/
-parent: "consistency-errors"
 weight: 05
 description: "Describes workflow consistency errors in Mendix Studio and the way to fix them."
 tags: ["studio", "consistency errors", "checks", "errors", "workflows"]

@@ -1,7 +1,6 @@
 ---
 title: "Create Object"
 url: /refguide8/create-object/
-parent: "object-activities"
 weight: 40
 tags: ["studio pro"]
 ---

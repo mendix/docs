@@ -1,7 +1,6 @@
 ---
 title: "Workflows"
 url: /refguide/workflows/
-parent: "application-logic"
 weight: 20
 tags: ["workflow", "workflows", "Studio Pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -34,6 +33,7 @@ The elements of this category are described in the table below:
 | Graphic                                                     | Element                           | Description                                                  |
 | ----------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------ |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/start-event.png" alt="Start Event" >}}    | Start event                    | The starting point of a workflow. Workflows are triggered either by the [Call workflow](/refguide/on-click-event/#call-workflow) on-click event on pages or by the [Workflow call](/refguide/workflow-call/) action in microflows. <br />Click the start event to open [workflow properties](/refguide/workflow-properties/). |
+| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/annotation.png" alt="Annotation" >}} | Annotation | An annotation is an element that can be used to put comments to a flow. For example, you can add a comment for your team that one of the user tasks needs to be changed later. <br />You can add annotations to the workflow or to individual activities. To add the annotation to the workflow, drag and drop the annotation in the editor's working area. To add the annotation to the activity, drag and drop it inside the activity. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/decision.png" alt="Decision" >}}             | [Decision](/refguide/decision-in-workflows/) | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/parallel-split.png" alt="Parallel Split" >}} | [Parallel split](/refguide/parallel-split/)  | Adds two parallel paths to your workflow.                    |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/jump.png" alt="Jump Activity" >}}            | [Jump](/refguide/jump-activity/)             | Allows you to jump to other activities in the workflow.      |

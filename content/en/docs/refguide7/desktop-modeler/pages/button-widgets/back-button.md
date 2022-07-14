@@ -1,7 +1,6 @@
 ---
 title: "Close Page Button"
 url: /refguide7/back-button/
-parent: "button-widgets"
 ---
 
 Pressing this button will close the pop-up for pop-up pages, or navigate to the previously visited page for content pages.

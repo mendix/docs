@@ -1,7 +1,6 @@
 ---
 title: "List View"
 url: /refguide/list-view/
-parent: "data-widgets"
 weight: 40
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -14,6 +13,12 @@ A list view shows a list of objects. For example, you can display a list of all 
 {{< figure src="/attachments/refguide/modeling/pages/data-widgets/list-view/list-view-example-profile.png" >}} 
 
 Each object is shown using a template. This template is defined by placing widgets inside the list view's drop-zone. The list of objects shown is determined by a [data source](#data-source).
+
+{{% alert color="warning" %}}
+The list view provides its own scrolling behavior in native apps. Consequently, you cannot place a list view inside a scroll view in native apps. Furthermore, you cannot place input widgets below a list view in native apps.
+
+To address this issue, you can use the repeater widget from [Native Mobile Resources](/appstore/modules/native-mobile-resources/) instead.
+{{% /alert %}}
 
 ## 2 Properties
 

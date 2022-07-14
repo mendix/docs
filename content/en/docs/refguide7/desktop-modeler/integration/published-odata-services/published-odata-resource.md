@@ -1,7 +1,6 @@
 ---
 title: "Published OData Resource"
 url: /refguide7/published-odata-resource/
-parent: "published-odata-services"
 ---
 {{% alert color="warning" %}}
 

@@ -1,7 +1,6 @@
 ---
 title: "Button Widgets"
 url: /refguide7/button-widgets/
-parent: "pages"
 aliases:
     - /refguide7/sign-out-button.html
     - /refguide7/sign-out-button

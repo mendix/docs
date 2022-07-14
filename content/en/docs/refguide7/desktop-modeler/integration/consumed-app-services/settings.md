@@ -1,7 +1,6 @@
 ---
 title: "Settings"
 url: /refguide7/settings/
-parent: "consumed-app-services"
 ---
 
 {{% alert color="info" %}}

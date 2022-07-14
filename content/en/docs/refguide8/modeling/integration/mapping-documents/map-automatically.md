@@ -1,7 +1,6 @@
 ---
 title: "Map Automatically"
 url: /refguide8/map-automatically/
-parent: "mapping-documents"
 tags: ["studio pro"]
 ---
 

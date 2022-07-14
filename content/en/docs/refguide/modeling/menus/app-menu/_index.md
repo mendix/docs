@@ -1,7 +1,6 @@
 ---
 title: "App Menu"
 url: /refguide/app-menu/
-parent: "menus"
 description: "Describes the App Menu in Studio Pro."
 weight: 30
 tags: ["Studio Pro", "app menu", "top bar"]
@@ -35,7 +34,7 @@ The **Check Widgets** option checks that the widgets you have implemented in the
 
 ### 2.5 Convert Classes to Design Properties
 
-The **Convert classes to design properties** option allows you to convert classes in widgets into design properties to assist in changing the widget styling. See [How To Implement Native Mobile Styling](/howto/mobile/native-styling/) for more information.
+The **Convert classes to design properties** option allows you to convert classes in widgets into design properties to assist in changing the widget styling. See [Native Styling](/refguide/mobile/designing-mobile-user-interfaces/native-styling/) for more information.
 
 ## 3 Synchronize App Directory {#synchronize}
 

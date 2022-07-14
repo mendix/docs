@@ -1,7 +1,6 @@
 ---
 title: "Operations"
 url: /refguide/operations/
-parent: "published-web-services"
 tags: ["studio pro"]
 ---
 

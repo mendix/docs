@@ -1,7 +1,6 @@
 ---
 title: "Document Template"
 url: /refguide7/document-template/
-parent: "document-templates"
 ---
 
 

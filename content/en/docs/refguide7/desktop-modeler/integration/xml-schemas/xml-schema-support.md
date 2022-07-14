@@ -1,7 +1,6 @@
 ---
 title: "XML Schema Support"
 url: /refguide7/xml-schema-support/
-parent: "xml-schemas"
 ---
 
 

@@ -1,7 +1,6 @@
 ---
 title: "Find Element by CSS"
 url: /addons/ats-addon/rg-one-find-element-by-css/
-parent: "rg-one-find"
 ---
 
 ## 1 Description

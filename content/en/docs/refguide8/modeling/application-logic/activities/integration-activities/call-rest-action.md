@@ -1,7 +1,6 @@
 ---
 title: "Call REST Service"
 url: /refguide8/call-rest-action/
-parent: "integration-activities"
 tags: ["studio pro", "integration activity", "call rest service"]
 weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

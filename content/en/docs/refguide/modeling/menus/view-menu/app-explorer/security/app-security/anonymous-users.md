@@ -1,7 +1,6 @@
 ---
 title: "Anonymous Users"
 url: /refguide/anonymous-users/
-parent: "app-security"
 weight: 40
 tags: ["studio pro", "anonymous users", "app security", "security"]
 ---

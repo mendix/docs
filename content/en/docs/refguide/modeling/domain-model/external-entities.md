@@ -1,7 +1,6 @@
 ---
 title: "External Entities"
 url: /refguide/external-entities/
-parent: "domain-model"
 weight: 15
 tags: ["domain model", "entity", "entities", "attribute", "external entities", "even handler", "access rule", "studio pro", "consumed OData Service"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -26,7 +25,7 @@ To add an external entity to your app model, follow these steps:
 
 1. In the the Domain Model of you app model search in the **Data Hub** pane for the entity or data source that you want to use in your app. 
 
-    {{% alert color="info" %}}In the [Data Hub Catalog](/data-hub/data-hub-catalog/search/), an OData service may be registered mulitple times with different version numbers or deployed to different environments, all exposing the entity (dataset)) that you may want to use. Search the Data Hub Catalog first and find the one most relevant to the requirements for your app.{{% /alert %}}
+    {{% alert color="info" %}}In the [Data Hub Catalog](/data-hub/data-hub-catalog/search/), an OData service may be registered multiple times with different version numbers or deployed to different environments, all exposing the entity (dataset) that you may want to use. Search the Data Hub Catalog first and find the one most relevant to the requirements for your app.{{% /alert %}}
 
 3. Drag and drop the entity in the Domain Model. 
 
@@ -106,10 +105,13 @@ The **Edit Attribute** box can be used for specifying a local name for the attri
 
 This tab displays the associations that the external entity has with other entities that are exposed in the same service and also any associations that have been made with local entities. For further details on association properties in Studio Pro see [Association Tab Properties](/refguide/association-member-properties/).
 
+If the entity contains [one-way navigable associations](/refguide/association-properties/#one-way-navigable), there is a note at the top of the dialog box. 
+
 {{< figure src="/attachments/refguide/modeling/domain-model/external-entities/external-entity-associations.png" alt="Edit attributes" >}}
 
 The following apply for all associations with the external entity:
 
+**Navigability icon** – an icon indicating whether an association is [one-way navigable](/refguide/association-properties/#one-way-navigable)
 **Name** – name of the association as displayed in the current app
 **Type** – read-only for associations between two external entities
 **Owner** – read-only for associations between two external entities
@@ -139,6 +141,10 @@ When you **Edit** an association that is included for two entities exposed in th
 * **Summary** – read-only description of the association from the originating app
 * **Multiplicity** – read-only multiplicity values from the originating app
 * **Documentation** – go to this tab to add a local description for the external entity association
+
+If the association is [one-way navigable](/refguide/association-properties/#one-way-navigable), there is a note at the top of the dialog box.
+
+{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/association-properties-one-way-navigable.png" alt="Edit external associations one-way navigable" >}}
 
 ### 2.3.2 Connecting Two External Entities
 

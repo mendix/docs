@@ -1,7 +1,6 @@
 ---
 title: "Part 1: Local Notifications"
 url: /howto8/mobile/native-local-notifications/
-parent: "local-notif-parent"
 weight: 10
 description: A tutorial for setting up local push notifications which do not use an internet connection.
 tags: ["mobile", "push notification", "local", "push", "notification"]

@@ -1,7 +1,6 @@
 ---
 title: "Chart Advanced Cheat Sheet"
 url: /refguide7/charts-advanced-cheat-sheet/
-parent: "chart-widgets"
 weight: 20
 tags: ["Charts", "Advanced", "Desktop Modeler", "Layout Controls", "Data Properties", "Series Properties"]
 ---

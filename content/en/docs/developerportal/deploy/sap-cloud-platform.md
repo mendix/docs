@@ -612,6 +612,7 @@ This database service should not be unbound from your environment: see [Services
 
 To get help to create the configuration file, click the **Configurator** button.
 
+
 On the new page which is displayed you can set the required values for your **SAP Hyperscaler PostgreSQL** database. Tooltips describe the values which you need to provide. 
 
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/postgresql-configurator.png" >}}
@@ -672,6 +673,43 @@ For trial accounts which do have the **SAP HANA Schemas & HDI Containers (Trial)
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/hanatrial-schema.png" >}}
 
 If your trial account does not include `hanatrial-schema`, you will get an error when you try to deploy your Mendix app saying that *provisioning has failed because service hanatrial with plan schema is not found*.
+
+#### 8.2.3 SAP HANA Performance Tuning
+
+If your SAP HANA database has performance issues, you may be able to improve performance by performing the following tuning.
+
+1. Obtain the following service binding credentials from the SAP BTP Cockpit, or via the cli:
+
+    * host
+    * url
+    * schema
+    * password
+    * user
+        {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/binding-credentials.png" >}}
+2. Go to the [runtime tab](#runtime-tab) of your app environment
+3. Enter the following unsupported environment variables with the associated values, using the values taken from the service binding credentials:
+    | Variable | Value |
+    | --- | --- |
+    | MXRUNTIME_DatabaseHost | {host} |
+    | MXRUNTIME_DatabaseJdbcUrl | {url} + `&nonBlockingIO=false&timeZonePerObject=false&packetSize=130000&closeHandlesByCleaner=false&transactionalLobs=false&maxLazyDroppedStatements=100&statementCacheSize=500&deferredPrepared=true` |
+    | MXRUNTIME_DatabaseName | {schema} |
+    | MXRUNTIME_DatabasePassword | {password} |
+    | MXRUNTIME_DatabaseUserName | {user} |
+    | MXRUNTIME_DatabaseType | `SAPHANA` |
+4. Go to the [general tab](#general-tab) and restart your app to apply the changes.
+
+The additional parameters that you added to the url in the `MXRUNTIME_DatabaseJdbcUrl` will set the following tuning parameters:
+
+| Parameter | Value |
+| --- | --- |
+| closeHandlesByCleaner | false |
+| deferredPrepare | true |
+| maxLazyDroppedStatements | 100 |
+| nonBlockingIO | false |
+| packetSize | 130000 |
+| statementCacheSize | 500 |
+| timeZonePerObject | false |
+| transactionalLobs | false |
 
 ## 9 Issues
 

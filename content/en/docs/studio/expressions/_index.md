@@ -36,8 +36,6 @@ Expressions can be used for the following activities in a microflow:
 *  [Decision](/studio/microflows-decision/)
 *  End Event
 
-For more information on setting and changing values for microflow activities, see [Set & Change a Value for Different Activities in the Microflows](/studio/microflows-setting-and-changing-value/).
-
 ## 2 Writing an Expression
 
 Named items in microflows and workflows (for example, objects, lists, or variables) can be called in an expression by inserting the name of the item and adding a dollar sign (for example,  `$Customer` could refer to an object named `Customer`).
@@ -176,9 +174,22 @@ The list of expressions that are used in Studio the most is represented below. F
 * [`addDays`](/refguide/add-date-function-calls/) – adds days to a date
 * [`addWeeks`](/refguide/add-date-function-calls/) – adds weeks to a date
 * [`addMonths`](/refguide/add-date-function-calls/) – adds months to a date
+* [`addQuarters`](/refguide/add-date-function-calls/) – adds quarters to a date
 * [`addYears`](/refguide/add-date-function-calls/) – adds years to a date
 
-### 3.11 Parse & Format Decimal Function Calls
+### 3.11 Subtract Date Function Calls
+
+* [`subtractMilliseconds`](/refguide/subtract-date-function-calls/) – subtracts milliseconds from a date
+* [`subtractSeconds`](/refguide/subtract-date-function-calls/) – subtracts seconds from a date
+* [`subtractMinutes`](/refguide/subtract-date-function-calls/) – subtracts minutes from a date
+* [`subtractHours`](/refguide/subtract-date-function-calls/) – subtracts hours from a date
+* [`subtractDays`](/refguide/subtract-date-function-calls/) – subtracts days from a date
+* [`subtractWeeks`](/refguide/subtract-date-function-calls/) – subtracts weeks from a date
+* [`subtractMonths`](/refguide/subtract-date-function-calls/)  – subtracts months from a date
+* [`subtractQuarters`](/refguide/subtract-date-function-calls/) – subtracts quarters from a date
+* [`subtractYears`](/refguide/subtract-date-function-calls/) – subtracts years from a date
+
+### 3.12 Parse & Format Decimal Function Calls
 
 * [`formatDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a decimal to a string 
 
@@ -186,5 +197,4 @@ The list of expressions that are used in Studio the most is represented below. F
 
 * [Microflows](/studio/microflows/)
 * [Workflows](/studio/workflows/)
-* [Set & Change a Value for Different Activities in the Microflows](/studio/microflows-setting-and-changing-value/)
 * [Expressions](/refguide/expressions/)

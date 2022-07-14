@@ -1,7 +1,6 @@
 ---
 title: "Layout Widgets"
 url: /refguide7/layout-widgets/
-parent: "pages"
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Prepare Your App for Support"
-url: /developerportal/support/prepare-your-project/
+url: /developerportal/support/prepare-your-app/
 category: "Mendix Support"
 weight: 1
 description: "Describes what you need to do with an on-premises app to prepare it for Mendix Support."
@@ -8,6 +8,7 @@ tags: ["on-premises", "support"]
 aliases:
     - /developerportal/support/change-affected-apps.html
     - /developerportal/support/change-affected-apps
+	- /developerportal/support/prepare-your-project/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

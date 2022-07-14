@@ -167,21 +167,21 @@ Your app is now configured to use Mendix Single Sign-on when it is deployed to t
 
 ## 5 Customizing Mendix SSO {#customizing}
 
-{{% alert color="warning" %}}
-This section only applies to version 2 of Mendix SSO. The administration functionality is removed and the domain model has changed in Mendix SSO v3.0 and above.
-{{% /alert %}}
-
 {{% alert color="info" %}}
 In version 2 of the [Mendix SSO module](/appstore/modules/mendix-sso/) there was a default implementation of end-user administration. This had dependencies on specific versions of Atlas UI and was removed so that Mendix SSO v3.0 and above retains compatibility with all Mendix apps, whichever UI they are using.
 {{% /alert %}}
 
-This section explains how to use this in your apps, and how to base your own administration module on this section if you want to do things in a different way.
+This section explains how to use this in your apps, and how to base your own user administration module on this section if you want to do things in a different way.
 
-There are two ways you can modify the Mendix SSO module. You can use snippets from the Marketplace module Mendix SSO in your pages, or you can modify the Mendix SSO module in any way you like to support your end-user administration requirements.
+There are three ways you can modify the Mendix SSO module. You can use snippets from the Marketplace module Mendix SSO in your pages, you can modify the Mendix SSO module in any way you like to support your end-user administration requirements, or you can use the microflows available in the Administration module.
 
-These two ways are described below.
+These three ways are described below.
 
 ### 5.1 Using Snippets
+
+{{% alert color="warning" %}}
+This section only applies to version 2 of Mendix SSO. The administration functionality is removed and the domain model has changed in Mendix SSO v3.0 and above.
+{{% /alert %}}
 
 The default Mendix SSO implementation is based on snippets. You can use these snippets in your own pages to customize the administration of the end-users. If you look at how they are used in the default implementation, you can see how to use them in your own pages. The snippets are:
 
@@ -263,7 +263,7 @@ Mendix SSO will now use your new entity to administer the users. You can edit th
 Remember that data which comes from the end-user's Mendix ID via SSO (for example, **EmailAddress**) will overwrite any changes you make within your app.
 {{% /alert %}}
 
-#### 5.2.4 Using the microflows in the Administration module
+### 5.3 Using the Administration module
 
 The [Administration](https://marketplace.mendix.com/link/component/23513) module contains a set of microflows to configure Mendix SSO to use **Administration.Account** as the user entity. Follow the instructions in [Using the Administration Module with Mendix SSO](https://docs.mendix.com/appstore/modules/administration/#3-using-the-administration-module-with-mendix-sso) to use the Administration module with Mendix SSO.
 

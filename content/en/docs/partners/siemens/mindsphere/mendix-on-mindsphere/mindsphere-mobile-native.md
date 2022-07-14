@@ -202,7 +202,7 @@ The **Siemens MindSphere SSO** module provides a couple of nanoflows which shoul
 
 ### 3.1 Authentication
 
-Authentication is based on the usage of **Anonymous** users and is enabled in the app securities.
+Authentication is based on the usage of **Anonymous** users and is enabled in the **App Security** dialog box.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StudioPro_Security_Anonymous.png" alt="StudioPro" >}}
 

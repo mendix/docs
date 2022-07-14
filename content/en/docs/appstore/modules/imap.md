@@ -63,26 +63,30 @@ You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0
 
 Click the green **+** button to add a new account, and select the option **Configure using Microsoft Azure AD**. If the account is already registered on the Azure portal, the required fields will already be filled in. If not, or if you need to make changes, you will need to register your app on the Azure portal.
 
+### 2.2.1 Registering Your App on the Azure Portal
+
 To register your app, follow Microsoft's [Tutorial: Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
 
-### 2.2.1 Enable Permissions
+While registering, set the callback URL to `https://(yourapp_domain)/callback/azure`.
+
+### 2.2.2 Enable Permissions in the Azure Portal
 
 On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
 
 {{< figure src="/attachments/appstore/modules/imap/azure-permissions.png" >}}
 
-### 2.2.2 Client and Tenant ID
+### 2.2.3 Locating the Client and Tenant ID
 
 The **IMAP/POP3 Incoming Email** module requires a **Client ID** and **Tenant ID**. On the [Azure portal](https://portal.azure.com/), click the **Overview** tab on the left sidebar and paste the values of the **Application (client) ID** and **Directory (tenant) ID** into the module **Account Settings**.
 
-### 2.2.3 Client Secret
+### 2.2.4 Generating a Client Secret
 
 You will need to generate a client secret when you set up the authentication with Azure AD OAuth 2.0. 
 
 1. On the [Azure portal](https://portal.azure.com/), click **Certificates & secrets** on the left sidebar. 
 2. Under the **Client secrets** tab, click **New client secret** and paste the ID into the module **Account Settings**.
 
-### 2.2.4 After-Startup Microflow
+### 2.2.5 Configure After-Startup Microflow
 
 To configure the After-Startup microflow, do the following:
 

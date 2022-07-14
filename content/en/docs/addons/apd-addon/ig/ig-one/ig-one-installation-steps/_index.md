@@ -14,7 +14,7 @@ Did you commit your work to the team server? And did you make a database backup?
 
 {{< figure src="/attachments/addons/apd-addon/ig/ig-one/ig-one-installation-steps/Commit.png" >}}
 
-If you don't have an SVN client like Tortoise SVN installed, make a copy of the widgets folder in your app.
+If you don't have an SVN client like Tortoise SVN installed, make a copy of the widgets folder in your project.
 
 ## 3 Import Module APMAgent
 
@@ -36,7 +36,7 @@ If you are not using only **English, United States**, copy the **English, United
 
 ## 5 Add Permissions
 
-Add `APMAgent.Admin` permissions to the app **Security** > **User roles** tab for a selected administrator role.
+Add `APMAgent.Admin` permissions to the project **Security** > **User roles** tab for a selected administrator role.
 
 {{< figure src="/attachments/addons/apd-addon/ig/ig-one/ig-one-installation-steps/Add_Permissions.png" >}}
 
@@ -64,7 +64,7 @@ Call `APMAgent\USE_ME\AfterStartup` from an after startup microflow. This featur
 
 Call `APMAgent\USE_ME\BeforeShutdown` from a before shutdown microflow.
 
-You can find the AfterStartup and BeforeShutdown microflows in the app settings.
+You can find the AfterStartup and BeforeShutdown microflows in the project settings.
 
 {{< figure src="/attachments/addons/apd-addon/ig/ig-one/ig-one-installation-steps/Project_Settings_After_Startup.png" >}}
 

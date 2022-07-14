@@ -13,7 +13,7 @@ This chapter describes the uninstallation of the APM tool. The optional in this 
 Did you commit your work to the team server? And did you make a database backup?
 {{< figure src="/attachments/addons/apd-addon/ig/ig-one/ig-one-uninstall-steps/Delete_Module.png" >}}
 
-If you don't have installed an SVN client like Tortoise SVN make a copy of the widgets folder in your app.
+If you don't have installed an SVN client like Tortoise SVN make a copy of the widgets folder in your project.
 
 ## 3 Delete Module APMAgent
 
@@ -36,7 +36,7 @@ CLEVR customized versions of Marketplace widgets:
 
 ## 5 Delete Permissions
 
-Delete permissions APMAgent.Admin from app security / user roles tab to a selected administrator role. On Edit of the last dialog Mendix will remove the permissions for you.
+Delete permissions APMAgent.Admin from project security / user roles tab to a selected administrator role. On Edit of the last dialog Mendix will remove the permissions for you.
 {{< figure src="/attachments/addons/apd-addon/ig/ig-one/ig-one-uninstall-steps/Delete_Permissions.png" >}}
 
 **_Note._** _If you added the Debug role, remove it now._
@@ -51,7 +51,7 @@ Delete the APM Tools item that calls "APMAgent/USE_ME/IVK_OpenConsole" from navi
 
 Remove the microflow call action to APMAgent\USE_ME\AfterStartup from an after startup microflow. This feature is runtime configurable and by default none of the tools are started.
 Remove the microflow call action to APMAgent\USE_ME\BeforeShutdown from a before shutdown microflow.
-You can find the AfterStartup and BeforeShutdown microflows in the app settings.
+You can find the AfterStartup and BeforeShutdown microflows in the project settings.
 
 {{< figure src="/attachments/addons/apd-addon/ig/ig-one/ig-one-uninstall-steps/Revert_After_Startup.png" >}}
 

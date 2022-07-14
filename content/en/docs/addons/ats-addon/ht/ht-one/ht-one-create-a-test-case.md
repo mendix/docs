@@ -29,7 +29,7 @@ Before starting with this how-to, make sure you have the following prerequisites
 
 To create a test case, follow these steps:
 
-1. Open your app in ATS and go to the **Repository**.
+1. Open your project in ATS and go to the **Repository**.
 2. Click **Add Test** inside the **Tests** tab:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/repository-add-test-case.png" >}}

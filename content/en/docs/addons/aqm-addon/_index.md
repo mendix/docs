@@ -20,7 +20,7 @@ The general notion of software quality embraces a variety of quality aspects, of
 * Mendix AQM supports self-service onboarding of new AQM apps for existing customers via Mendix Support
 * Mendix AQM is part of our Mendix pricelist – for more information or activation, please contact your Mendix Customer Success Manager or Sales
 * Detailed documentation is available via the complementary Sigrid Academy
-* Mendix AQM dashboard reports are generated every night based on the latest version in your Team Server
+* Mendix AQM dashboard reports are generated every night based on the latest version in your Project Team Server
   * By default, the Mendix AQM reports are based on the main line in your app's Team Server
   * We are building CI support for Mendix that will allow you to run AQM in your Mendix CI pipeline (for more information, see [SigridCI](https://github.com/Software-Improvement-Group/sigridci))
 

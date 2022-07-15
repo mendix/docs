@@ -1,28 +1,20 @@
 ---
 title: "App & Team Management"
-url: /app-team-management/
+url: /developerportal/app-team-management/
 description: "Describes App & Team Management on Tencent Cloud, which is used by Chinese users."
-tags: ["mendix", "app & team management", "Tencent cloud"]
 weight: 40
-no_list: false
-description_list: true
-cascade:
-    - space: "Developer Portal Guide"
-    - mendix_version: ""
-#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#This document is mapped to the landing page, update the link there if renaming or moving the doc file.
+tags: ["mendix", "app & team management", "Tencent cloud"]
 ---
 
-## 1 What Is the APP & Team Management
+## 1 What Is APP & Team Management
 
-The [App & Team Management](https://apps.mendix.tencent-cloud.com/) on Tencent Cloud is a platform specifically launched for Chinese users. In App & Team Management, users can collaborate, deploy, and manage their apps, and manage their company and users. 
+[App & Team Management](https://apps.mendix.tencent-cloud.com/) on Tencent Cloud is a platform specifically launched for Chinese users. In App & Team Management, users can collaborate, deploy, and manage their apps, and manage their company and users. 
 
 ## 2 Navigation {#navigation}
 
 To create a new app, click **创建应用**, which will open a page where you can choose a starting pointing for your new app.
 
-On the right side of the top bar, you can access and edit your profile.
+On the right side of the top bar, you can access and edit your profile by clicking your avatar and then selecting **查看您的个人资料**.
 
 On the left side of the top bar, you open an access menu by clicking the **切换到** menu:
 

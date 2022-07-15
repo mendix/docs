@@ -43,7 +43,7 @@ The app preview is your personal preview of the app. Hence, only users logged in
 Published app is the real app that you and your end-users will access and use. When you publish your app, you deploy it to a cloud environment. A cloud environment is a location in the cloud that can host your app, and deployment is a process to put the latest version of your app in that location. For more technical information, see [Environments](/developerportal/deploy/environments/) in the *Developer Portal Guide*.
 
 {{% alert color="info" %}}
-For Studio China Edition, before you can publish your app, first you need to create an environment. 
+For Studio China Edition, before you can publish your app, first you need to [create an environment](/developerportal/deploy/tencent-deploy/#create-environment). 
 {{% /alert %}}
 
 To publish your application, follow these steps:

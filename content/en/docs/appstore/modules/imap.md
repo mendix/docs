@@ -56,7 +56,7 @@ Some **Account Settings** might be unavailable in earlier Mendix versions.
 ### 2.2 Configuring Microsoft Azure Active Directory (AD) OAuth 2.0 {#configure-azure-ad}
 
 {{% alert color="warning" %}}
-This feature is currently only available with module version 4.1.0 for Studio Pro [7.23.31 (LTS)](/releasenotes/studio-pro/7.23/#72331), and will soon be available with other versions.
+This feature is for Studio Pro [7.23)](/releasenotes/studio-pro/7.23/) and above, and will soon be available with other versions.
 {{% /alert %}}
 
 You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. You can only add one OAuth 2.0 configuration for each app.
@@ -67,7 +67,7 @@ Click the green **+** button to add a new account, and select the option **Confi
 
 To register your app, follow Microsoft's [Tutorial: Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
 
-While registering, set the callback URL to `https://(yourapp_domain)/callback/azure`.
+While registering, set the redirect URI to `https://(yourapp_domain)/callback/azure`.
 
 ### 2.2.2 Enable Permissions in the Azure Portal
 

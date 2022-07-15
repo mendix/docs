@@ -1,6 +1,6 @@
 ---
 title: "Drag Microflows & Pages into a Microflow"
-linktitle: "Drag Items into Microflow"
+linktitle: "Drag App Documents into Microflow"
 url: /howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/
 category: "Logic & Business Rules"
 weight: 4

@@ -1,5 +1,5 @@
 ---
-title: "MS Windows: Activate a Mendix License on Microsoft Windows"
+title: "Activate a Mendix License on Microsoft Windows"
 linktitle: "MS Windows: Activate Mendix License"
 url: /developerportal/deploy/activate-a-mendix-license-on-microsoft-windows/
 weight: 10

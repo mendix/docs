@@ -17,6 +17,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### July 14th, 2022
+
+#### Improvements
+
+* We removed the profile buzz page.
+* We made some small improvements to the **General Settings** page.
+
 ### July 7th, 2022
 
 #### New Features

@@ -1,6 +1,6 @@
 ---
 title: "Set Up a GitHub Repo to Publish a Marketplace Item"
-linktitle: "GitHub Repo to Publish Marketplace Item"
+linktitle: "Publish from GitHub to Marketplace"
 url: /howto/collaboration-requirements-management/set-up-repo/
 category: "Collaboration"
 weight: 30

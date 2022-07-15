@@ -8,7 +8,7 @@ tags: ["mendix", "app & team management", "Tencent cloud"]
 
 ## 1 What Is APP & Team Management
 
-[App & Team Management](https://apps.mendix.tencent-cloud.com/) on Tencent Cloud is a platform specifically launched for Chinese users. In App & Team Management, users can collaborate, deploy, and manage their apps, and manage their company and users. 
+[App & Team Management](https://apps.mendix.tencent-cloud.com/) on Tencent Cloud is a platform specifically launched for Chinese users. In App & Team Management, users can collaborate, deploy, and manage their apps.
 
 ## 2 Navigation {#navigation}
 

@@ -2,7 +2,7 @@
 title: "Tencent Cloud (腾讯云)"
 url: /developerportal/deploy/tencent-deploy/
 category: "Deployment"
-description: "Describes the processes for deploying a Mendix app to the Tencent Cloud"
+description: "Describes the processes for deploying a Siemens Low Code Platform app to the Tencent Cloud"
 weight: 45
 tags: ["Deploy", "Tencent", "Environment", "Cluster", "Namespace"]
 ---
@@ -12,31 +12,31 @@ tags: ["Deploy", "Tencent", "Environment", "Cluster", "Namespace"]
 {{% /alert %}}
 
 {{% alert color="info" %}}
-The Mendix Platform on Tencent Cloud is branded as **Siemens Low-Code Platform**.
+**Siemens Low-Code Platform** is called **Mendix** in other parts of the documentation.
 {{% /alert %}}
 
 ## 1 Introduction
 
-To deploy apps to Tencent, you will first have to purchase your cloud resources. You can then manage these resources from within the Mendix ATM as described below in [Cluster and Namespace Management](#cluster-namespace).
+To deploy apps to Tencent, you will first have to purchase your cloud resources. You can then manage these resources from within App & Team Management (ATM) of Siemens Low Code Platform as described below in [Cluster and Namespace Management](#cluster-namespace).
 
 Once the cluster has been registered, and a namespace created, team members with *Deploy App* rights can create environments and deploy an app.
 
-This document explains how to use the Mendix ATM to manage your clusters and namespaces, and deploy an app.
+This document explains how to use ATM to manage your clusters and namespaces, and deploy an app.
 
 ## 2 Prerequisites for Deploying an App
 
 To deploy an app to Tencent, you need the following:
 
-* A Mendix account set up with your Tencent ID
+* A Siemens Low Code Platform account set up with your Tencent ID
 
 * A cluster and namespace purchased from Tencent (see [Cluster and Namespace Management](#cluster-namespace), below)
 
-* Mendix Studio Pro China Edition
+* Siemens Low Code Platform Studio Pro China Edition
 
-    * You will be able to download Mendix Studio Pro, as the first step of the onboarding during your initial sign up:
+    * You will be able to download Siemens Low Code Platform Studio Pro, as the first step of the onboarding during your initial sign up.
     * You can also get a copy from the **下载 Studio Pro** option in the **切换到** menu at the top left of **App & Team Management**.
 
-* A Mendix app created with Studio Pro
+* A Siemens Low Code Platform app created with Studio Pro
 
 ## 3 Cluster and Namespace Management{#cluster-namespace}
 
@@ -50,13 +50,11 @@ If you have not got any clusters, you will first have to purchase one. Alternati
 * Click **请求访问免费的应用集群** to request access to a free cluster to try out Siemens Low-Code Platform. You will need to create an app first, see [App & Team Management](/not/a/good/url) for more information.
 * Click **注册集群** to register an existing cluster to use for deploying your app.
 
-{{% todo %}}Update UX descriptions and confirm flows{{% /todo %}}
-
-When you have one or more clusters, you can see a summary of them with all their namespaces and an indication of the namespace status and how long it has been running (Uptime).
+When you have one or more clusters, you can see a summary of them with all their namespaces and an indication of the namespace status and how long it has been running (**上线时间**).
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/cluster-overview.png" >}}
 
-Each cluster resource you purchase from Tencent automatically contains a number of *命名空间* and you will run your Mendix app inside one of these namespaces. The namespaces are designed to hold separate test, acceptance, and production versions of your app so that resource sharing between the versions is minimized.
+Each cluster resource you purchase from Tencent automatically contains a number of *namespaces* and you will run your Siemens Low Code Platform app inside one of these namespaces. The namespaces are designed to hold separate test, acceptance, and production versions of your app so that resource sharing between the versions is minimized.
 
 You can also see the activities logged for all you clusters by clicking **活动** at the top of the page. This shows the following:
 
@@ -71,14 +69,14 @@ The cluster overview will refresh automatically, but you can force a refresh by 
 
 Click **详情** next to the cluster name to see information about the entire cluster.
 
-In the **命名空间** tab you can see the **Namespaces** in the cluster and their current status. This duplicates the information you can see in the cluster overview.
+In the **命名空间** tab you can see the namespaces in the cluster and their current status. This duplicates the information you can see in the cluster overview.
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/cluster-details.png" >}}
 
 There are two other tabs:
 
-* 集群管理员 – where you can see other people who have access to the cluster and can manage them
-* 活动 – where you can see all the activities which have taken place on this cluster
+* **集群管理员** – where you can see other people who have access to the cluster and can manage them
+* **活动** – where you can see all the activities which have taken place on this cluster
 
 #### 3.2.1 Members
 
@@ -105,12 +103,12 @@ Click the **详情** button for the namespace you want to manage.
 
 On the namespace management page, there are a number of tabs which allow you to manage aspects of your namespace :
 
-* 应用 – all the apps deployed in this namespace
-* 成员 – users who have access to this namespace
-* 操作 – links to pages where operational information is displayed
-* 计划 – manage database and file plans
-* 安装 - download installation files for the Mendix Operator
-* 附加信息 - information about the namespace
+* **应用** – all the apps deployed in this namespace
+* **成员** – users who have access to this namespace
+* **操作** – links to pages where operational information is displayed
+* **计划** – manage database and file plans
+* **安装** - download installation files for the Operator
+* **附加信息** - information about the namespace
 
 See the sections below for more information.
 
@@ -137,7 +135,7 @@ You can also see an activity log containing the following information for all na
 
 #### 3.3.1 Apps
 
-The **成员** tab of namespace details lists all the apps which are deployed to this namespace.
+The **应用** tab of namespace details lists all the apps which are deployed to this namespace.
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/namespace-apps.png" >}}
 
@@ -151,7 +149,7 @@ You can only see the environment details of an app if you are a member of the ap
 
 #### 3.3.2 Members{#members}
 
-By default, the cluster manager, who created the cluster in Mendix, and anyone added as a cluster manager can invite and manage users of the cluster and its namespaces.
+By default, the cluster manager, who created the cluster in Siemens Low Code Platform, and anyone added as a cluster manager can invite and manage users of the cluster and its namespaces.
 
 The following rights are available to the person who purchased the cluster resources, and members of a namespace with appropriate authorization:
 
@@ -180,21 +178,21 @@ The **成员** tab allows you to manage the list of members of the namespace and
 
 You can invite additional members to the namespace, and configure their role depending on what they should be allowed to do.
 
-1. The **成员** tab displays a list of current members (if any).
+The **成员** tab displays a list of current members (if any).
 
-2. Click **邀请成员**.
+1. Click **邀请成员**.
 
-3. Enter the **腾讯ID** of the person you want to invite.
+2. Enter the **腾讯ID** of the person you want to invite.
 
-4. Give them the rights they need. This can be:
+3. Give them the rights they need. This can be:
    
     1. **开发人员** – a standard set of rights needed by a developer, these are listed on the screen
     2. **管理员** – a standard set of rights needed by an administrator, these are listed on the screen
     3. **自定义** – you can select a custom set of rights by checking the box next to each role you want to give to this person
 
-5. Click **发送邀请** to send an invite to this person.
+4. Click **发送邀请** to send an invite to this person.
 
-6. The next time the user signs in to the Mendix ATM, they will be added to the namespace.
+5. The next time the user signs in to ATM, they will be added to the namespace.
 
 ##### 3.3.2.2 Editing & Removing Members
 
@@ -212,10 +210,10 @@ The **操作** tab allows you to add a set of links which are used when users re
 
 The following pages can be configured:
 
-* 指标
-* 告警
-* 日志
-* 备份
+* **指标**
+* **告警**
+* **日志**
+* **备份**
 
 The specification of these pages is optional.
 
@@ -227,11 +225,11 @@ The Plans tab shows you the database and storage plans which are currently confi
 
 #### 3.3.5 Install
 
-This allows you to download the Mendix Configuration Tool by specifying the operating system of the local computer on which you are going to run it.
+This allows you to download the Configuration Tool by specifying the operating system of the local computer on which you are going to run it.
 
 #### 3.3.6 Additional Information
 
-Displays information about the namespace, such as software versions (for example, the Mendix Operator version).
+Displays information about the namespace, such as software versions (for example, the Operator version).
 
 ## 4 Deploying an App for the First Time
 
@@ -261,7 +259,7 @@ There is a limit of 200MB on the size of a deployment package which can be deplo
 
 5. If you want to deploy and start your package immediately, check **自动部署** and select an existing environment in **用于自动部署的环境**. You need to make sure that the environment is ready using the techniques described in [Deploying the Deployment Package](#deploy-package), below, where you can also see how to deploy a deployment package manually.
 
-6. Click **构建此修订版**
+6. Click **构建此修订版**.
    
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image12.png" >}}
 
@@ -279,21 +277,21 @@ When deploying your app for the first time, there will be no environment to depl
 
 1. Go to the **环境概览** page for your app in the ATM.
 
-2. Click **创建环境**.
+1. Click **创建环境**.
 
     If there are no clusters available to you, you will have to create one or get access to an existing one before you can continue. You will be taken to the Cluster Manager page. See [Cluster and Namespace Management](#cluster-namespace), above, for information on the three ways you can get a cluster, then start this section again.
 
-2. Choose the deployment package you want to use to create the environment and click **下一步**.
+1. Choose the deployment package you want to use to create the environment and click **下一步**.
 
-2. A **内部名称** will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
+    A **内部名称** will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 
     {{% alert color="info" %}}You can change the UUID if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.{{% /alert %}}
 
-3. Enter **环境名称**, the name for the environment. The environment name can only contain lowercase (latin) letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
+1. Enter **环境名称**, the name for the environment. The environment name can only contain lowercase (latin) letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
 
-4. Use the drop-down **选择命名空间** to select an existing namespace. You will see all namespaces of which you are a member.
+1. Use the drop-down **选择命名空间** to select an existing namespace. You will see all namespaces of which you are a member.
 
-5. Select the **目的**.
+1. Select the **目的**.
    
     1. For development of the app, for example acceptance testing, choose **开发环境**.
 
@@ -301,13 +299,15 @@ When deploying your app for the first time, there will be no environment to depl
 
         {{% alert color="warning" %}}Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
 
-6. Click **下一步**.
+1. Click **下一步**.
 
-7. Select **核心资源**.
+1. Select **核心资源**.
 
     For core resources, there are two sets of values. The **请求** value is the amount of core resources which are initially requested. The **限制** value is the maximum amount of resource that the environment can use.
 
     There are three pre-defined sets of resources, **小**, **中等**, and **大**. Choosing these will set the **CPU** and **Memory** values automatically.
+
+    {{% todo %}}I think some of this table should be translated - but what?{{% /todo %}}
 
     | **Name** | **CPU cores**: Limit | **Memory (Gb)**: Limit | **CPU cores**: Request | **Memory (Gb)**: Request |
     | --- | --- | --- | --- | --- |
@@ -316,15 +316,15 @@ When deploying your app for the first time, there will be no environment to depl
     | Large | 4 | 4 | 2 | 2 |
     | Custom | own choice | own choice | own choice | own choice |
 
-    Alternatively, you can choose **自定义**, and enter your own requirements for **CPU** and **内存**. Ensure that these values are the same or greater than the values for a *小* environment, otherwise you may run into problems running your app.
+    Alternatively, you can choose **自定义**, and enter your own requirements for **CPU** and **内存**. Ensure that these values are the same or greater than the values for a 小 environment, otherwise you may run into problems running your app.
 
-8. Select a **数据库计划** from the list of plans in the dropdown. This will have the format `db-plan-…` where the suffix reflects the environment.
+1. Select a **数据库计划** from the list of plans in the dropdown. This will have the format `db-plan-…` where the suffix reflects the environment.
 
-9. Select a **文件存储计划** from the list of plans in the dropdown. This will have the format `file-plan-…` where the suffix reflects the environment.
+1. Select a **文件存储计划** from the list of plans in the dropdown. This will have the format `file-plan-…` where the suffix reflects the environment.
 
-10. Click **创建环境**.
+1. Click **创建环境**.
 
-11. You will see your new environment listed. An *in-progress* icon will be shows next to the resource plans until they have been provisioned.
+You will see your new environment listed. An *in-progress* icon will be shows next to the resource plans until they have been provisioned.
 
 You will not be able to deploy to this environment until it has been fully prepared. This means that all the resource plans have been confirmed and that the placeholder app has been successfully deployed. See [Deploying the Deployment Package](#deploy-package), below, for instructions on how to check that the environment has been created successfully.
 
@@ -376,11 +376,11 @@ There are five buttons:
 
 {{% todo %}}Should these be in English or in Chinese - and the sections (5.1.1 etc.) below?{{% /todo %}}
 
-* 刷新
-* 从 Team Server 创建包
-* 上传
-* 详情
-* Deploy
+* **刷新**
+* **从 Team Server 创建包**
+* **上传**
+* **详情**
+* **部署**
 
 These are described in more detail below.
 
@@ -410,7 +410,7 @@ The information shows here is labeled to help you. The indicators in the environ
 
 There are three additional actions you can take while looking at the deployment package details:
 
-* **展开以查看构建输出** – shows the output from the Mendix build
+* **展开以查看构建输出** – shows the output from the build process
 * **下载包** – allows you to download the deployment package and save it locally
 * **删除包** – deletes the deployment package – you will be asked to confirm this action
 
@@ -496,7 +496,7 @@ This section shows all the activities, such as creating environments and deployi
 
 ## 6 Managing Your Environments from the Environment Details Page{#environment-details}
 
-Each environment you create has an **Environment Details** page which allows you to monitor and manage your environments. You can reach this by clicking the **详情** button next to the environment you want to manage.
+Each environment you create has an **环境详情** page which allows you to monitor and manage your environments. You can reach this by clicking the **详情** button next to the environment you want to manage.
 
 If you have any outstanding changes to your environment the page will display a warning message. If you click **应用更改**, the environment will be stopped and restarted.
 
@@ -504,13 +504,13 @@ If you have any outstanding changes to your environment the page will display a 
 
 The environment details page consists of seven tabs:
 
-* 常规设置
-* 模型选项
-* 网络
-* 运行时
-* 日志级别
-* TLS
-* 调试器
+* **常规设置**
+* **模型选项**
+* **网络**
+* **运行时**
+* **日志级别**
+* **TLS**
+* **调试器**
 
 These tabs are described below.
 
@@ -564,7 +564,7 @@ This allows you to change the password for the local admin user in your app with
 
 This deletes the environment — you will be asked to confirm this action.
 
-If the cluster is standalone, or the Mendix Gateway Agent is not connected for some other reason, you can still delete the environment information in the ATM. However, the actual environment will not be deleted and you will have to do this manually.
+If the cluster is standalone, or the Gateway Agent is not connected for some other reason, you can still delete the environment information in the ATM. However, the actual environment will not be deleted and you will have to do this manually.
 
 If the environment cannot be deleted, you will receive a warning, but can go ahead and remove it from the ATM.
 
@@ -580,7 +580,7 @@ Your app can only be deployed to a production environment if security is set on.
 
 ##### 6.1.3.8 Change Subscription Secret{#change-subscription-secret}
 
-If you select Production as the **目的** of the app environment, then you will need to use a Subscription Secret which ensures that your app runs as a licensed app. If you need to enter or change the subscription secret, then you can do that here.
+If you select *Production* as the **目的** of the app environment, then you will need to use a Subscription Secret which ensures that your app runs as a licensed app. If you need to enter or change the subscription secret, then you can do that here.
 
 Subscription secrets are obtained from Tencent.
 
@@ -614,12 +614,12 @@ On the **日志级别** tab, you can change the log levels which are used for th
 
 ### 6.6 TLS
 
-If you are using Mendix Operator version 1.5.0 or above, you can configure TLS for your environment from the ATM.
+If you are using Operator version 1.5.0 or above, you can configure TLS for your environment from the ATM.
 
 In the TLS pane, you can choose whether to **应用默认配置** or a **自定义 TLS 配置**. If you apply the default configuration, then the configuration made when you ran the configuration script for the namespace will be used.
 
 {{% alert color="info" %}}
-If you are using a version of Mendix Operator before 1.5.0, the settings in this tab will have no effect and the default configuration will be applied.
+If you are using a version of Operator before 1.5.0, the settings in this tab will have no effect and the default configuration will be applied.
 {{% /alert %}}
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/tls-configuration.png" >}}
@@ -646,7 +646,7 @@ On the **调试器** tab you can set up and view the credentials you need to deb
 
 ## 7 Current Limitations{#limitations}
 
-### 7.1 Reserved Names for Mendix Apps{#reserved-names}
+### 7.1 Reserved Names for Siemens Low Code Platform Apps{#reserved-names}
 
 All names beginning **mendix-** are reserved for use by the Tencent cluster.
 
@@ -660,7 +660,7 @@ If you attempt to deploy an app with security not set to production into a produ
 
 ### 7.4 ApplicationRootUrl Needs to be Set Manually
 
-In some cases, your Mendix app will need to know its own URL - for example when using SSO or sending emails.
+In some cases, your Siemens Low Code Platform app will need to know its own URL - for example when using SSO or sending emails.
 
 For this to work properly, you need to set the [ApplicationRootUrl](/refguide/custom-settings/#general) **自定义运行时设置** in the **运行时** tab to the app's URL.
 
@@ -676,7 +676,7 @@ If you change **应用URL** in the **常规设置** tab, you should update the `
 
 ## 8 Troubleshooting
 
-This section covers an issue which can arise where Mendix cannot recover automatically and manual intervention may be required.
+This section covers an issue which can arise where Siemens Low Code Platform cannot recover automatically and manual intervention may be required.
 
 ### 8.1 Status Reporting
 

@@ -221,15 +221,15 @@ Open the **操作** tab, enter the URLs relevant to your namespace, and click **
 
 #### 3.3.4 Plan
 
-The Plans tab shows you the database and storage plans which are currently configured for your namespace. Here you can activate and deactivate individual plans.
+The **计划** tab shows you the database and storage plans which are currently configured for your namespace. Here you can activate and deactivate individual plans.
 
 #### 3.3.5 Install
 
-This allows you to download the Configuration Tool by specifying the operating system of the local computer on which you are going to run it.
+The **安装** tab allows you to download the Configuration Tool by specifying the operating system of the local computer on which you are going to run it.
 
 #### 3.3.6 Additional Information
 
-Displays information about the namespace, such as software versions (for example, the Operator version).
+The **附加信息** tab displays information about the namespace, such as software versions (for example, the Operator version).
 
 ## 4 Deploying an App for the First Time
 

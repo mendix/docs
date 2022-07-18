@@ -29,14 +29,14 @@ To deploy an app to Tencent, you need the following:
 
 * A Siemens Low Code Platform account set up with your Tencent ID
 
-* A cluster and namespace purchased from Tencent (see [Cluster and Namespace Management](#cluster-namespace), below)
+* A cluster and namespace (see [Cluster and Namespace Management](#cluster-namespace), below)
 
-* Siemens Low Code Platform Studio Pro China Edition
+* You can use Siemens Low Code Platform Studio to create your app online, but if you want to use Siemens Low Code Platform Studio Pro China Edition
 
     * You will be able to download Siemens Low Code Platform Studio Pro, as the first step of the onboarding during your initial sign up.
     * You can also get a copy from the **下载 Studio Pro** option in the **切换到** menu at the top left of **App & Team Management**.
 
-* A Siemens Low Code Platform app created with Studio Pro
+* A Siemens Low Code Platform app created with Studio or Studio Pro
 
 ## 3 Cluster and Namespace Management{#cluster-namespace}
 
@@ -54,7 +54,7 @@ When you have one or more clusters, you can see a summary of them with all their
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/cluster-overview.png" >}}
 
-Each cluster resource you purchase from Tencent automatically contains a number of *namespaces* and you will run your Siemens Low Code Platform app inside one of these namespaces. The namespaces are designed to hold separate test, acceptance, and production versions of your app so that resource sharing between the versions is minimized.
+Each cluster resource you purchase from Tencent automatically contains a number of namespaces and you will run your Siemens Low Code Platform app inside one of these namespaces. The namespaces are designed to hold separate test, acceptance, and production versions of your app so that resource sharing between the versions is minimized.
 
 You can also see the activities logged for all you clusters by clicking **活动** at the top of the page. This shows the following:
 
@@ -141,13 +141,15 @@ The **应用** tab of namespace details lists all the apps which are deployed to
 
 Click **配置** to make Pod, Ingress, or service annotations or configure runtime metrics for this environment.
 
-If you are a team member of the app, click **详情** to go to the *Environment Details* page for that app.
+If you are a team member of the app, click **详情** to go to the **环境详情** page for that app.
 
 {{% alert color="info" %}}
 You can only see the environment details of an app if you are a member of the app team with the appropriate authorization.
 {{% /alert %}}
 
 #### 3.3.2 Members{#members}
+
+The **成员** tab allows you to manage the list of members of the namespace and control what rights they have.
 
 By default, the cluster manager, who created the cluster in Siemens Low Code Platform, and anyone added as a cluster manager can invite and manage users of the cluster and its namespaces.
 
@@ -171,8 +173,6 @@ The following actions require the appropriate access to the namespace **and** ac
 * Manage TLS configurations
 * Manage Custom Runtime Settings
 * Manage Log levels
-
-The **成员** tab allows you to manage the list of members of the namespace and control what rights they have.
 
 ##### 3.3.2.1 Adding Members
 
@@ -307,8 +307,6 @@ When deploying your app for the first time, there will be no environment to depl
 
     There are three pre-defined sets of resources, **小**, **中等**, and **大**. Choosing these will set the **CPU** and **Memory** values automatically.
 
-    {{% todo %}}I think some of this table should be translated - but what?{{% /todo %}}
-
     | **Name** | **CPU cores**: Limit | **Memory (Gb)**: Limit | **CPU cores**: Request | **Memory (Gb)**: Request |
     | --- | --- | --- | --- | --- |
     | Small | 1 | 0.5 | 0.1 | 0.5 |
@@ -362,19 +360,17 @@ You will be taken to the Environment Details page for the selected environment. 
 
 The **环境概览** page of the ATM contains three sections:
 
-* Deployment Package Repository
-* Environments
-* Activity
+* **部署包仓库**
+* **环境**
+* **活动日志**
 
 ### 5.1 Deployment Package Repository
 
-This lists the deployment packages which have been created for this app.
+The **部署包仓库** section lists the deployment packages which have been created for this app.
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image17.png" >}}
 
 There are five buttons:
-
-{{% todo %}}Should these be in English or in Chinese - and the sections (5.1.1 etc.) below?{{% /todo %}}
 
 * **刷新**
 * **从 Team Server 创建包**
@@ -386,7 +382,7 @@ These are described in more detail below.
 
 #### 5.1.1 Refresh
 
-Sometimes the page will not be automatically refreshed with the latest information. Click this button to update the information on the page.
+Sometimes the page will not be automatically refreshed with the latest information. Click **刷新** to update the information on the page.
 
 {{% alert color="info" %}}
 Using the browser refresh button will take you away from this environments page, so use this button instead.
@@ -394,15 +390,15 @@ Using the browser refresh button will take you away from this environments page,
 
 #### 5.1.2 Create Package
 
-This creates a new package as described in [Creating a Deployment Package](#create-deployment-package), above.
+The **从 Team Server 创建包** button creates a new package as described in [Creating a Deployment Package](#create-deployment-package), above.
 
 #### 5.1.3 Upload Package
 
-This allows you to upload an MDA package you have already created. The uploaded package is added to the list of packages for the app and can be deployed in the same way as a package created using **从 Team Server 创建包**.
+The **上传** button allows you to upload an MDA package you have already created. The uploaded package is added to the list of packages for the app and can be deployed in the same way as a package created using **从 Team Server 创建包**.
 
 #### 5.1.4 Details
 
-This displays details of the deployment package.
+The **详情** button displays details of the deployment package.
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image18.png" >}}
 
@@ -416,7 +412,7 @@ There are three additional actions you can take while looking at the deployment 
 
 #### 5.1.5 Deploy
 
-This deploys the package to an existing environment as described in [Deploying the Deployment Package](#deploy-package), above.
+The **部署** button deploys the package to an existing environment as described in [Deploying the Deployment Package](#deploy-package), above.
 
 ### 5.2 Environments {#environments}
 
@@ -438,15 +434,15 @@ In addition, there are several indicators describing the status of the environme
 
 #### 5.2.1 Add Environment
 
-This adds a new environment as described in [Creating an Environment](#create-environment), above.
+The **创建环境** button adds a new environment as described in [Creating an Environment](#create-environment), above.
 
 #### 5.2.2 Details
 
-This opens the **环境详情** page which is described in more detail in [Managing Your Environments from the Environment Details Page](#environment-details), below.
+The **详情** button opens the **环境详情** page which is described in more detail in [Managing Your Environments from the Environment Details Page](#environment-details), below.
 
 #### 5.2.3 Actions
 
-This button contains a list of actions which you can perform quickly on the environment. Most of these actions will be disabled if the app is currently starting or stopping. These actions are:
+THe **操作** button opens a list of actions which you can perform quickly on the environment. Most of these actions will be disabled if the app is currently starting or stopping. These actions are:
 
 * **设置为 Studio 部署目标** – sets this environment as the target if you publish the app from Studio
 * **启动应用** (only shown if app is stopped) – allows you to start a stopped application
@@ -492,7 +488,7 @@ See [Creating an Environment](#create-environment), above, for more information.
 
 ### 5.3 Activity
 
-This section shows all the activities, such as creating environments and deploying apps, which have taken place in this environment. You can sort the activities in either descending or ascending date and time order.
+The **活动日志** section shows all the activities, such as creating environments and deploying apps, which have taken place in this environment. You can sort the activities in either descending or ascending date and time order.
 
 ## 6 Managing Your Environments from the Environment Details Page{#environment-details}
 
@@ -516,7 +512,7 @@ These tabs are described below.
 
 ### 6.1 General Tab
 
-The general tab shows information about your running app.
+The **常规设置** tab shows information about your running app.
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image22.png" >}}
 
@@ -524,11 +520,11 @@ Most of the information is self-explanatory, but the status information gives yo
 
 #### 6.1.1 Loaded Deployment Details > Status
 
-This status shows you the following information – how many replicas are running, whether there was a successful build, and how long since the app was last started.
+The **状态** status in **部署详细信息** shows you the following information – how many replicas are running, whether there was a successful build, and how long since the app was last started.
 
 #### 6.1.2 Environment Details > Status
 
-This shows you the status of the environment and is the same as the status shown on the Environments page and described in [Environment Status Indicators](#environment-status), above.
+The **状态** status in **环境详情** shows you the status of the environment and is the same as the status shown on the Environments page and described in [Environment Status Indicators](#environment-status), above.
 
 #### 6.1.3 Action Buttons
 
@@ -542,27 +538,25 @@ If the app is currently running, clicking **停止应用** immediately stops the
 
 ##### 6.1.3.2 Transport Package
 
-Allows you to deploy the deployment package in the current environment to another environment within the app, or to redeploy it in the current environment. See [Deploying the Deployment Package](#deploy-package), above, for more information.
+The **传输包** button allows you to deploy the deployment package in the current environment to another environment within the app, or to redeploy it in the current environment. See [Deploying the Deployment Package](#deploy-package), above, for more information.
 
 ##### 6.1.3.3 Scale Application
 
-{{% todo %}}Need example of Scale Application{{% /todo %}}
-
-This allows you to scale your app by increasing the number of replicas.
+The **伸缩应用** button allows you to scale your app by increasing the number of replicas.
 
 To apply the new value, click **Restart the App and Scale**. Because you restart your app, it will be unavailable for a short time.
 
 ##### 6.1.3.4 Clear Admin Password
 
-This allows you to clear the password for the local admin user in your app to disable the user without having to clear it in Studio Pro and redeploy the app.
+The **清除管理员密码** button allows you to clear the password for the local admin user in your app to disable the user without having to clear it in Studio Pro and redeploy the app.
 
 ##### 6.1.3.5 Change Admin Password{#change-admin-password}
 
-This allows you to change the password for the local admin user in your app without having to change it in Studio Pro and redeploy the app.
+The **更改管理员密码** button allows you to change the password for the local admin user in your app without having to change it in Studio Pro and redeploy the app.
 
 ##### 6.1.3.6 Delete Environment
 
-This deletes the environment — you will be asked to confirm this action.
+The **删除环境** button deletes the environment — you will be asked to confirm this action.
 
 If the cluster is standalone, or the Gateway Agent is not connected for some other reason, you can still delete the environment information in the ATM. However, the actual environment will not be deleted and you will have to do this manually.
 
@@ -570,7 +564,7 @@ If the environment cannot be deleted, you will receive a warning, but can go ahe
 
 ##### 6.1.3.7 Change Purpose
 
-This enables you to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **开发环境** and the app will be deployed as an unlicensed App.
+You can use the **编辑** button for **目的** to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **开发环境** and the app will be deployed as an unlicensed App.
 
 For production deployment, select **生产环境**. If you select **生产环境**, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. For the differences between unlicensed/test apps and licensed apps, see the [Free App](/developerportal/deploy/mendix-cloud-deploy/#free-app) section in *Mendix Cloud*.
 
@@ -580,7 +574,9 @@ Your app can only be deployed to a production environment if security is set on.
 
 ##### 6.1.3.8 Change Subscription Secret{#change-subscription-secret}
 
-If you select *Production* as the **目的** of the app environment, then you will need to use a Subscription Secret which ensures that your app runs as a licensed app. If you need to enter or change the subscription secret, then you can do that here.
+{{% todo %}}What does "edit subscription secret" look like?{{% /todo %}}
+
+If you select production as the **目的** of the app environment, then you will need to use a Subscription Secret which ensures that your app runs as a licensed app. If you need to enter or change the subscription secret, then you can do that here.
 
 Subscription secrets are obtained from Tencent.
 

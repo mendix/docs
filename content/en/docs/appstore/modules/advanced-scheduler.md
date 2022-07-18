@@ -13,6 +13,8 @@ tags: ["marketplace", "marketplace component", "platform support"]
 
 ### 2.1 Resources Tab
 
+This tab contains the following items:
+
 * **Resources Datasource**
 * **Resource ID**
 * **Resource title**

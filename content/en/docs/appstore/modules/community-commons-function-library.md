@@ -17,18 +17,14 @@ All the functions in this package can be invoked using a [Java action call](/ref
 
 The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`. This is used in the `MergeMultiplePdfs` Java action to restrict the number of PDFs processed at the same time. The default restriction is 10 files at once for Mendix Cloud v4-compatibility. If you need to merge more than 10 files, increase the number here. Setting the value to `<= 0` means unlimited.
 
-## 3 Testing
+## 3 Function List
 
-The Community Commons container project contains a variety of predesigned unit tests. To use these tests, download the [Unit Testing](/appstore/modules/unit-testing/) module from the Mendix Marketplace. This module has a dependency on the [Object Handling](/appstore/modules/object-handling/) module, so that module should also be imported to your app if you want to run the tests.
-
-## 4 Function List
-
-### 4.1 Batches
+### 3.1 Batches
 
 * `RecommitInBatches` – Given an XPath and a batch size, this commits all the matching objects in batches of the given size.
 * `DeleteAll` – This removes all instances of a certain domain object type using batches.
 
-### 4.2 DateTime
+### 3.2 DateTime
 
 * `DateTimeToLong` – This converts a DateTime to a Unix timestamp (Milliseconds from 1-1-1970).
 * `LongToDateTime` – This converts a Unix timestamp(ms) to a DateTime object.
@@ -36,7 +32,7 @@ The Community Commons container project contains a variety of predesigned unit t
 * `MonthsBetween` – This calculates the number of months between two dates.
 * `GetIntFromDateTime` – This extracts a part of a date (year, month, or day) to an integer.
 
-### 4.3 Files
+### 3.3 Files
 
 * `Base64DecodeToFile` – This stores a base 64-encoded string plain in the provided target file document.
 * `Base64EncodeFile` – This converts an un-encoded file to a base 64-encoded string.
@@ -47,13 +43,13 @@ The Community Commons container project contains a variety of predesigned unit t
 * `GetFileSize` – This returns the file size of a file document in bytes.
 * `OverlayPdfDocument` – This overlays a generated PDF document with another PDF (containing the company stationary, for example).
 
-### 4.4 Logging
+### 3.4 Logging
 
 * `CreateLogNode` – This initializes a log node without having a log line.
 * `TimeMeasureStart` – This sets the start for timing something and prints the result to the log.
 * `TimeMeasureEnd` – This sets the end for timing something and prints the result to the log, and returns the time taken in milliseconds.
 
-### 4.5 Misc
+### 3.5 Misc
 
 * `AssertTrue` – This is shorthand for checking something and throwing an error if that something is not true. This function saves creating three microflow items for things that MUST be true.
 * `CreateUserIfNotExists` – This microflow creates a user with a predefined password and role. This is useful during startup for integration purposes. The user always gets updated, even if the user already exists.
@@ -66,7 +62,7 @@ The Community Commons container project contains a variety of predesigned unit t
 * `ThrowWebserviceException` – This throws an exception, which can be very useful if the microflow is called by a web service. If you throw this kind of exception, a fault message will be generated in the output (instead of a "501 Internal server" error).
 * `GetDefaultLanguage` – This gets the language object for the default language as defined in the model.
 
-### 4.6 Execute Microflow
+### 3.6 Execute Microflow
 
 * `executeMicroflowAsUser` – This executes the given microflow as if the `$currentuser` is the provided user (delegation).
 * `RunMicroflowAsyncInQueue` – This runs a microflow asynchronously (meaning, this function immediately returns and schedules the microflow to be run in the near future). The queue guarantees a first-come-first-serve order of the microflows, and only one action is served at a time. The microflow is run with system rights in its own transaction. This is very useful for running heavy microflows in the background.
@@ -74,7 +70,7 @@ The Community Commons container project contains a variety of predesigned unit t
 * `executeMicroflowInBatches`  – This performs a batch operation on a large dataset by invoking the microflow on small sub-sets of the data, each with its own database transaction.
 * `recommitInBatches` – This recommits (with events) all the s returned by an XPath query. This is recommended for migration scenarios.
 
-### 4.7 ORM
+### 3.7 ORM
 
 * `CommitWithoutEvents` – This commits an object but without events.
 * <a name="clone"></a>`Clone` – This clones the objects.
@@ -91,14 +87,14 @@ The Community Commons container project contains a variety of predesigned unit t
 * `EndTransaction` – This commits the transaction, which will end the transaction or remove a save point from the queue if the transaction is nested.
 * `StartTransaction` – This starts a transaction. If a transaction is already started for this context, a savepoint will be added.
 
-### 4.8 Regexes
+### 3.8 Regexes
 
 * `EmailAddressRegex` – This is an email address regular expression that is not too restrictive.
 * `GUIDOrEmpty` – This is the same as `GUIDRegex` (below), but it accepts an empty string as well.
 * `GUIDRegex` – This supports alphanumeric characters, dashes, and underscores.
 * `Identifier` – This is an identifier.
 
-### 4.9 StringUtils
+### 3.9 StringUtils
 
 * `Hash` – This hashes a value using the SHA-256 hash algorithm.
 * `HTMLEncode` – This encodes a string to HTML entities so that they can be displayed in the browser without breaking any layout.
@@ -128,31 +124,25 @@ The Community Commons container project contains a variety of predesigned unit t
 * `SubstringBefore` – This returns the sub-string of a string before the first occurrence of a given separator.
 * `SubstringBeforeLast` – Returns the sub-string of a string before the last occurrence of a given separator.
 
-## 5 Important When Updating
+## 4 Important When Updating
 
-### 5.1 Deprecated Function Removal
+### 4.1 Deprecated Function Removal
 
 The `RegexTest` function had been deprecated, because you could use the `isMatch()` function in microflow expressions instead. In version 8.0.1 of this module, this function was removed.
 
-### 5.2 Deleting Obsolete Dependencies First
+### 4.2 Deleting Obsolete Dependencies First
 
 As of version 7.2.0 of this module, it is highly recommended that you manually remove all the *jar* files that have an accompanying *.CommunityCommons.RequiredLib* file from the **userlib** folder before importing the module into Studio Pro. Otherwise, you may encounter strange compilation or runtime errors.
 
-### 5.3 Java 8
+### 4.3 Java 8
 
 As of version 7.2.0 of this module, some Java 8-native APIs are utilized that replace functionality that was previously imported from external libraries. This means that for upgrading, Java 8 is a minimum requirement! You can change your JDK directory in Studio Pro via **Edit** > **Preferences**. As of [Studio Pro 8](/releasenotes/studio-pro/8.0/), AdoptOpenJDK 11 is supported.
 
-### 5.4 Breaking Change to XSSSanitize
+### 4.4 Breaking Change to XSSSanitize
 
 In order to mitigate some security vulnerabilities in dependent libraries, in version 7.2.0 of this module, the XSSSanitize action was re-implemented using the [OWASP Java HTML Sanitizer](https://github.com/OWASP/java-html-sanitizer) library. This means that any usage of this action in your app needs to be reconfigured. It now takes six policy parameters, of which at least one must be non-empty. Make sure that the non-applicable policy parameters are explicitly filled in with the value `empty`. Possible policy values are defined in the `SanitizerPolicy` enumeration. The meaning of the policies are defined in [Class Sanitizers](https://static.javadoc.io/com.googlecode.owasp-java-html-sanitizer/owasp-java-html-sanitizer/20180219.1/org/owasp/html/Sanitizers.html).
 
-### 5.5 Gradle
-
-In version 7.2.0 of this module, we introduced a new way of dependency management using a Gradle build file. Unfortunately, this does not mean that obsolete JARs are automatically deleted from your apps' **userlib** folders when you import this module into your app model.
-
-To download the dependencies and copy them to the **userlib** folder of the Community Commons container project, execute `gradle prepareDeps` from the command line. Afterwards, you will be able to export a *CommunityCommons.mpk* module from the Community Commons main project. Select only the dependencies listed below in the [Dependencies](#dependencies) section as dependencies in **userlib** for the exported module.
-
-### 5.6 Dependencies {#dependencies}
+### 4.5 Dependencies {#dependencies}
 
 For security reasons, Guava was upgraded to version 27 in version 7.4.0 of this module. This unfortunately means a number of new required JARs in the **userlib** folder.
 
@@ -168,11 +158,11 @@ For security reasons, Guava was upgraded to version 27 in version 7.4.0 of this 
 * *guava-27.0-jre.jar*
 * *owasp-java-html-sanitizer-20181114.1.jar*
 
-## 6 Limitations {#limitations}
+## 5 Limitations {#limitations}
 
 * [Generalizations](/refguide/generalization-and-association/) are not supported (specifically in the [Clone](#clone) and [DeepClone](#deepclone) functions).
 
-## 7 Read More
+## 6 Read More
 
 * [How to Implement Community Best Practices for App Performance](/howto/general/community-best-practices-for-app-performance/)
 * [How to Implement Best Practices for App Security](/howto/security/best-practices-security/)

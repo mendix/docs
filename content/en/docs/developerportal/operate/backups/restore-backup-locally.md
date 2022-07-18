@@ -72,7 +72,7 @@ If you have downloaded a full backup, this will also have been archived as a *.t
 After the backup has been restored as a local Postgres database, you have to link the database to Studio Pro. This tells Studio Pro to use the database that you have just created in PostgreSQL, rather than the database that was originally created with the app.
 
 1. Open your app in **Studio Pro**.
-2. Open **App... > Settings** from the **App Explorer**.
+2. Open **App > Settings** from the **App Explorer**.
 
     {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/app-settings.png" >}}
 

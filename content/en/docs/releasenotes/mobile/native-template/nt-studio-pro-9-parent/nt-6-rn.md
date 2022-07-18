@@ -10,13 +10,13 @@ description: "Native Template 6 release notes."
 
 ### Improvements
 
-* We updated the minimum version of iOS to 14 (Ticket 152476)
-* We updated the version of react-native-vector-icons to 9.1.0
+* We updated the iOS minimum version to 14. (Ticket 152476)
+* We updated the version of react-native-vector-icons to 9.1.0.
 
 ### Fixes
 
-* We remove QUERY_ALL_PACKAGES permission for Android apps (Ticket 152645)
-* We fixed an issue while building iOS apps in AppCenter (Ticket 154462)
+* We removed the QUERY_ALL_PACKAGES permission for Android apps. (Ticket 152645)
+* We fixed an issue while building iOS apps in AppCenter. (Ticket 154462)
 
 ## 6.2.22
 

@@ -30,7 +30,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Getting the OData Connector for SAP Solutions Module
 
-To be able to use the OData Connector; first create your project. Inside, navigate to the Mendix Marketplace to download the [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525/Mendix/SAP-OData-Connector) module. You will then find this module in your app's Marketplace modules.
+To be able to use the OData Connector; first create your app. Inside, navigate to the Mendix Marketplace to download the [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525/Mendix/SAP-OData-Connector) module. You will then find this module in your app's Marketplace modules.
 
 For more information, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
 
@@ -68,7 +68,7 @@ In this example, you will display a list of products from the GWSAMPLE_BASIC ODa
 
 13. Open your app in Mendix Studio Pro.
 
-14. Right-click the project in the **App Explorer** and select **Import module package…**.
+14. Right-click the app in the **App Explorer** and select **Import module package…**.
 
     {{< figure src="/attachments/partners/sap/use-sap-odata-connector/import-module.png" >}}
 

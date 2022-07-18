@@ -23,7 +23,7 @@ The only reason to deviate from this is when your connector requires a certain p
 
 Create a Mendix app in Studio Pro with the main connector module and a testing module. You can also optionally add an example module showing some use cases.
 
-* Name the *main module* how you want it to appear in apps after others import your module. This module will contain all the logic to let your connector function in projects that import it.
+* Name the *main module* how you want it to appear in apps after others import your module. This module will contain all the logic to let your connector function in apps that import it.
 * The *testing module* has microflows, pages, and Java code to test your module's functionality without having to add the test logic to the module that you will later export and publish.
 * The *example module* can be published next to the main connector module to help end-users better understand the implementation of your connector module, or to try it out without having to do too much configuration from the start.
 
@@ -44,12 +44,12 @@ Your **App Explorer** should look like this after initial setup:
 {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/app-initial-setup.png" >}}
 
 {{% alert color="info" %}}
-This project folder structure example is based on the **Blank Web App** starter app and contains Mendix Marketplace modules that your project might not have. The important Marketplace module that is shown is the [Unit Testing](/appstore/modules/unit-testing/) module for testing purposes.
+This app folder structure example is based on the **Blank Web App** starter app and contains Mendix Marketplace modules that your app might not have. The important Marketplace module that is shown is the [Unit Testing](/appstore/modules/unit-testing/) module for testing purposes.
 {{% /alert %}}
 
 #### 2.2.2 App Root Setup {#root-setup}
 
-We recommend that you add additional folders to the root of your project (on disk). These include the following:
+We recommend that you add additional folders to the root of your app (on disk). These include the following:
 * **DIST** – contains the releases of your module kept for reference
 * **MarketplaceResources** – contains all the assets used in the Mendix Marketplace (except for the release packages), including screenshots, videos, and reference documents
 

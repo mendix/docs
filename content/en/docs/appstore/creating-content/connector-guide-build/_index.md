@@ -84,7 +84,7 @@ When creating a new Mendix connector, it is advised to have an app in which you 
 
 To start setting up your app, open Studio Pro and do the following:
 
-1.  Create a [New App](/refguide/new-project/) for your connector.
+1.  Create a [New App](/refguide/new-app/) for your connector.
 2.  Create a module to contain your connector. To do this, right-click anywhere in the **App Explorer** outside of existing modules and choose **Add Module**.
     
      {{< figure src="/attachments/appstore/creating-content/connector-guide-build/add-module.png" >}}

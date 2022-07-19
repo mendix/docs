@@ -30,9 +30,9 @@ You can then access the following parts of the Mendix Platform:
 * **文档** – opens [Mendix Docs](https://docs.mendix.com/)
 * **论坛** – opens [Community China edition](https://forum.mendix.tencent-cloud.com/)
 
-## 3 我的应用 {#my-apps}
+## 3 My Apps {#my-apps}
 
-This page shows you a summary of your apps:
+The **我的应用** page shows you a summary of your apps.
 
 The **激活** tab displays all the apps for which you are a [Team](/developerportal/collaborate/team/) member. Any apps you pin with the pin icon will appear in the **固定** tab. 
 

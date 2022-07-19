@@ -33,7 +33,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](https:
 
 To use the Administration module with Mendix SSO, perform the following steps:
 
-1. Make sure that your project contains the [Mendix SSO](https://marketplace.mendix.com/link/component/111349) module. If your project does not contain the Mendix SSO module yet, import the module from the [Marketplace](https://marketplace.mendix.com/link/component/111349).
+1. Make sure that your project contains the Mendix SSO module. If it doesn't, import the [Mendix SSO](https://marketplace.mendix.com/link/component/111349) module from the Marketplace.
 
 2. Configure the **MendixSSO_AfterStartup** microflow from the Administration module as the [after startup](/refguide/app-settings/#after-startup) microflow. If there is already an after startup microflow, do not replace it, but add the **MendixSSO_AfterStartup** microflow as a sub-microflow in the existing microflow.
 

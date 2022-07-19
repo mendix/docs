@@ -62,6 +62,10 @@ Virtually all certificate formats can be converted to the PKCS12 format. For mor
 *   [Create a pkcs12 (.pfx or .p12) from OpenSSL files (.pem , .cer, .crt, ...)](https://www.tbs-certificates.co.uk/FAQ/en/288.html)
 *   [openssl](https://www.openssl.org/docs/manmaster/man1/openssl.html)
 
+{{% alert color="warning" %}}
+If you use [OpenSSL for Windows](https://slproweb.com/products/Win32OpenSSL.html), please use **version 1.x**.
+{{% /alert %}}
+
 You can upload a PKCS12 file by following these steps:
 
 1. In the [Developer Portal](http://sprintr.home.mendix.com), go to the **Deploy** tab of the **Environments** page, and click the **Details** of the desired environment.

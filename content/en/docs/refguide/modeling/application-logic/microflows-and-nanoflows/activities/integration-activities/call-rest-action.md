@@ -225,7 +225,7 @@ This attribute is filled when one of the following scenarios occur:
 * The **Response handling** is **Store in an HTTP response** and the call succeeded
 * The **Store message body in $latestHttpResponse variable** option in the **Error handling** section is checked and the call failed
 
-This variable can be accessed from any microflow action in the scope.
+This variable can be accessed from any microflow action in the [scope](/refguide/objects-and-caching/#scope-tracking).
 
 #### 7.3.2  Store Message Body in $latestHttpResponse Variable {#latesthttpresponse}
 

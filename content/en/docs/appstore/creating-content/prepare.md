@@ -182,8 +182,7 @@ As a helping hand, the checklist below presents the final items to consider when
 
 * Include a *README* snippet and *USEME* folders that will help with using the content.
 * Make sure there are no unnecessary dependencies bundled when exporting the module from Studio Pro. For example, if the module only mentions needing a *.jar* file named *fancystuff.jar* but the *userlib* folder includes 10 other *.jar* files, remove these unnecessary dependencies.
-* If you try to manipulate the Mendix Marketplace system (for example, by stealing user data, copying another developer’s work, or manipulating ratings), your content will be removed from the Marketplace.
-* Update your content regularly and support it as defined in its SLA. To ensure the quality of Marketplace content, Mendix monitors the status of content, and we will contact you if our data suggests your content is due for an update.
+* If you try to manipulate the Mendix Marketplace system (for example, by stealing user data, copyiyour content is due for an update.
 
 **Picking a license** 
 

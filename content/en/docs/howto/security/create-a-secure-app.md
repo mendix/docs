@@ -214,6 +214,10 @@ To create access roles for the User module role, follow these steps:
     * **Allow creating new objects**: false
     * **Allow deleting existing objects**: false
     * **Default rights for new members**: **Read**
+    {{% alert color="warning" %}}
+    Be careful when setting default rights. As teams grow, it might not be possible to pay attention to this setting.
+    {{% /alert %}}
+
     
     {{< figure src="/attachments/howto/security/create-a-secure-app/18581535.png" >}}
 

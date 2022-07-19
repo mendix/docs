@@ -63,7 +63,7 @@ Virtually all certificate formats can be converted to the PKCS12 format. For mor
 *   [openssl](https://www.openssl.org/docs/manmaster/man1/openssl.html)
 
 {{% alert color="warning" %}}
-If you use [OpenSSL for Windows](https://slproweb.com/products/Win32OpenSSL.html), please use **version 1.x**.
+If you use [OpenSSL for Windows](https://slproweb.com/products/Win32OpenSSL.html), please use the latest patch release of **version 1.x**.
 {{% /alert %}}
 
 You can upload a PKCS12 file by following these steps:

@@ -30,7 +30,8 @@ While the data that should be viewable and editable in which role is application
 * Attributes determined by the system (like the status of an order) should never be writeable
 * If an anonymous user is allowed to create objects, constrain these objects to the owner (an anonymous user is actually a **System.User** object created on the fly)
 * Do not set a default rule for read-and-write access – this forces you to think about each attribute that is added to an entity
-* Constraints on widgets in pages should filter out irrelevant data for the context of the page, but not be used as a measure of security
+* Security constraints should be formed as entity access rules
+* Constraints on widgets in pages should not be used as a measure of security, but can filter out irrelevant data for the context of the page
 * Keep your attributes editable within data views, because if an access rule prohibits write access, your client will display it as non-editable – this way you are aware of the (correct) working of an access rule
 
 ## 3 Avoiding Injection

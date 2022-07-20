@@ -1,5 +1,6 @@
 ---
 title: "Part 5: Implement Push Notifications in Your Native App"
+linktitle: "5. Push Notifications in Native App"
 url: /refguide/mobile/using-mobile-capabilities/push-notifications/notif-implement-native/
 weight: 60
 description: Tutorial for implementing push notifications in a native app.

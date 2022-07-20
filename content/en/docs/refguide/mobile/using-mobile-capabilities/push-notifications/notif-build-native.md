@@ -1,5 +1,6 @@
 ---
 title: "Part 6: Build a Native App with Push Notifications Enabled"
+linktitle: "6. Native App with Push Notifications"
 url: /refguide/mobile/using-mobile-capabilities/push-notifications/notif-build-native/
 weight: 70
 description: Tutorial for building a native app with push notifications enabled.

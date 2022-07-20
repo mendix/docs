@@ -1,5 +1,6 @@
 ---
 title: "Build JavaScript Actions: Part 1 (Basic)"
+linktitle: "1. Build JavaScript Actions"
 url: /howto8/extensibility/write-javascript-actions/
 weight: 10
 description: "This how-to will teach you to create a JavaScript action."

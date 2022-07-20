@@ -1,5 +1,6 @@
 ---
 title: "Troubleshooting IIS (Internet Information Services) "
+linktitle: "Troubleshooting IIS"
 url: /developerportal/deploy/troubleshooting-iis/
 description: "Help on fixing issues with Microsoft IIS, including the use of application logs and other troubleshooting features"
 weight: 40

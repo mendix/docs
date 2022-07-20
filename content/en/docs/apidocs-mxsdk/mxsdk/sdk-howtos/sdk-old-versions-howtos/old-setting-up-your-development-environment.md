@@ -1,5 +1,6 @@
 ---
 title: "Set Up Your Development Environment (Old Versions)"
+linktitle: "Set Up Development Environment"
 url: /apidocs-mxsdk/mxsdk/old-setting-up-your-development-environment/
 weight: 1
 ---

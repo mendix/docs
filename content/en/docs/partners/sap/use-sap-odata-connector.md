@@ -1,5 +1,6 @@
 ---
 title: "Use the OData Connector for SAP Solutions"
+linktitle: "Use OData Connector for SAP Solutions"
 url: /partners/sap/use-sap-odata-connector/
 category: "SAP"
 weight: 15

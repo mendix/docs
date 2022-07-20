@@ -1,5 +1,6 @@
 ---
 title: "Model Changes When Security Is Enabled in Studio"
+linktitle: "Model Changes When Security Enabled"
 url: /refguide/studio-security-enabled/
 description: "Describes checks and changes in the app when security is enabled in Mendix Studio."
 tags: ["studio pro", "security", "studio"]

@@ -1,5 +1,6 @@
 ---
 title: "Moving from Desktop Modeler Version 7 to Studio Pro 8"
+linktitle: "Desktop Modeler 7 to Studio Pro 8"
 url: /refguide8/moving-from-7-to-8/
 category: "General Info"
 weight: 20

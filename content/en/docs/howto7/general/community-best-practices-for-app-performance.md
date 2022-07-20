@@ -1,5 +1,6 @@
 ---
 title: "Implement Community Best Practices for App Performance"
+linktitle: "Best Practices for App Performance"
 url: /howto7/general/community-best-practices-for-app-performance/
 category: "General"
 weight: 4

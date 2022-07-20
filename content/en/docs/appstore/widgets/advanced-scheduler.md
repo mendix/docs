@@ -50,7 +50,7 @@ This tab contains the following items:
           * **Edit** – open the **Edit List of Data Sources** Item window where you can edit the selected data source
           * **Move up** – moves up the selected data source
           * **Move down** – moves down the selected data source
-        * **UI **tab
+        * **UI** tab
           * **Event Title** – the title of the event
           * **Tooltip content** – the content of the tooltip of the event
           * **Classname** – the classname of the event, which can be used to do proper styling of an event
@@ -85,7 +85,7 @@ This tab contains the following items:
 
 * **Scheduler End Date** – the end date of the scheduler 
 
-* **On changed time window **– sets an action that is triggered if the time window is changed
+* **On changed time window** – sets an action that is triggered if the time window is changed
 
 * **Views** – shows a list of views that are available
   * **New **– opens the **Edit Views Item** window where you can add a new view with the following items:

@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We removed **My Activity Overview** from the [settings page](developerportal/community-tools/mendix-profile/#settings) for your Mendix Profile.
+* We removed **My Activity Overview** from the [settings page](/developerportal/community-tools/mendix-profile/#settings) for your Mendix Profile.
 * We redesigned the [Pending App Invites](/developerportal/community-tools/mendix-profile/#pending-app-invites) section and added it as a new menu item to the settings page for your Mendix Profile.
 * We improved the warning messages when you leave or delete an app.
 

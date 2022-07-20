@@ -351,9 +351,9 @@ API tokens help when securing an API. But an API payload sent in plain text coul
 
 #### 5.3.3 OAuth
 
-OAuth comes in two types. In the first, the user does a login to the service providing the OAuth authentication to give access to their data on a per-user basis. The second type provides a public and private key with access tokens for server-to-server communication. 
+OAuth comes in two types. In the first, an Authorization Code flow, the user does a login to the service providing the OAuth authentication to give access to their data on a per-user basis. The second type, with Client Credentials, provides a public and private key with access tokens for server-to-server communication. 
 
-OAuth is a very secure method, because the secret key is never exchanged during API requests. As long as you store the secret key safely in your own app, it will not be possible to hijack your credentials for the API provider. 
+OAuth is a secure, because the secret key is never exchanged during API requests. As long as you store the secret key safely in your own app, it will not be possible to hijack your credentials for the API provider if you are using HTTPS.
 
 #### 5.3.4 SAML
 The [SAML](/appstore/modules/saml/) module, available on the Mendix Marketplace, can be used as a replacement or extension of your supported authentication methods.

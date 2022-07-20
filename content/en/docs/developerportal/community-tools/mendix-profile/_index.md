@@ -260,7 +260,7 @@ For more information, see the following:
 
 ### 10.6 Pending App Invites {#pending-app-invites}
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/pending-app-invites.png"   width="500" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-profile/pending-app-invites.png" >}}
 
 In this section, you can view the app invitations you have sent and received. There are two types of invitations:
 

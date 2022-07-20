@@ -2,7 +2,7 @@
 title: "General Purpose OCR"
 url: /appstore/app-services/general-purpose-ocr/
 category: "App Services"
-description: "This document describes the configuration and usage of the General Purpose OCR app service， which can help you extract text, tables, and barcodes from images or PDF documents, and get output in XML formats in bulk."
+description: "This document describes the configuration and usage of the General Purpose OCR app service，which can help you extract text, tables, and barcodes from images or PDF documents, and get output in XML formats in bulk."
 tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
@@ -25,7 +25,7 @@ The [General Purpose Optical Character Recognition (OCR)](https://marketplace.me
 
 ### 1.3 Prerequisites
 
-* This app service works best with Studio Pro 8 versions starting with [8.18.15](/releasenotes/studio-pro/8.18/#81815) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0/).
+* This app service works best with Studio Pro 8 versions starting with [8.18.18](/releasenotes/studio-pro/8.18/#81818) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0/).
 
 ## 2 Installation
 
@@ -65,31 +65,31 @@ To download and install the General Purpose OCR app service in your app, follow 
 
 ### 3.1 Domain Model
 
-This section describes how data are stored in the pre-configured domain model, which is included in this module.
+This section describes how extracted data is stored in the pre-configured domain model, which is included in this module.
 
 Below is a sample document:
 
 {{< figure src="/attachments/appstore/app-services/general-purpose-ocr/sample-document.png" >}}
 
-Below is the pre-configured domain model, which can be used for extracted data:
+Below is the pre-configured domain model, which can be used for storing extracted data:
 
 {{< figure src="/attachments/appstore/app-services/general-purpose-ocr/domain-model.png" >}}
 
 The **ExtractionResponse** entity will be created automatically for storing the response from the backend API call. The **ExtractionResponse** entity has the **Status** attribute, which indicates the status of the extraction. The value of the **Status** can be **IN_PROGRESS**, **COMPLETED**, or **FAILED**. The **ExtractionResponse** entity is associated with the **Output** entity.
 
-The **Output** entity is further divided into two domains **Aborted** and **Extracted**.
+The **Output** entity is further associated with **Aborted** and **Extracted** entities.
 
 Documents which are not successfully extracted in the backend API call due to errors or exceptions are stored inside the **AbortedDocument** entity. The **AbortedDocument** entity stores the **DocumentId** attribute and the **Name** attribute of the corresponding aborted documents.
 
-Documents which are successfully extracted in the backend API call are stored inside the **ExtractedDocument** entity. The **ExtractedDocument** entity contains the **DocumentID** attribute and the **Name** attribute of the corresponding documents, and is associated with the **Content** entity.
+Documents which are successfully extracted in the backend API call are stored inside the **ExtractedDocument** entity. The **ExtractedDocument** entity contains the **DocumentId** attribute and the **Name** attribute of the corresponding documents, and is associated with the **Content** entity.
 
 The **Content** entity is in the XML format. 
 
-A document can have multiple pages, so there is a **Page** entity. A page can contain multiple blocks, so there is a **Block** entity, which has a **BlockType** attribute. The **BlockType** attribute can have one of these three values: **Text**, **Table**, and **Barcode**. The document is further divided based on the value of **BlockType**.
+A document can have multiple pages, so there is an association with **Page** entity. A page can be associated with multiple blocks, so there is **Block** entity, which has a **BlockType** attribute. The **BlockType** attribute can either be **Text** or **Table** or **Barcode** and this **BlockType** attribute determines where the extracted data ends-up.
 
-If the block is text or a barcode, it is associated with a **Text** entity, which is associated with a **Paragraph** entity. A paragraph can have multiple lines, so the **Paragraph** entity has a **LineContent** attribute.
+If the block is text or a barcode, it is associated with a **Text** entity, which is associated with a **Paragraph** entity. A paragraph can have multiple lines, so the **Paragraph** entity has **LineContent** and **Confidence** attribute. LineContent attribute contains the actual extracted data; and **Confidence** attribute contains the confidence level of the extracted **LineContent**.
 
-If the block is a table,  it is associated with a **Row** entity, as a table can be divided multiple rows. A row can have multiple cells and text, so there is a **CellText** entity. A cell can contain multiple paragraphs, so there is **CellParagraph** entity. A paragraph can have multiple lines, so **CellParagraph** entity has a **LineContent** attribute. The **LineContent** attribute contains the actual data.
+If the block is a table, it is associated with a **Row** entity. A table can have multiple rows and a row can have multiple cells. So the **Row** entity is associated with **Cell** and further the **Cell** is associated with **CellText** entity. A cell can contain actual data and this data can span multiple lines, so a **CellParagraph** entity has **LineContent** and **Confidence** attribute. The **LineContent** attribute contains the actual data while **Confidence** attribute indicates the confidence level of extracted cell **LineContent**.
 
 ### 3.2 Configuring the Binding Keys {#configure-keys}
 
@@ -101,7 +101,8 @@ Before you deploy an app, you should configure the binding keys in your app as f
 
 ## 4 Usage
 
-To use the General Purpose OCR, first create an [import mapping](/refguide/import-mappings/) that defines how to map extracted data from documents to an entity, and then include the General Purpose OCR or the General Purpose OCR in Background activity in a microflow. This microflow should be set up to accept your input documents, extract data from the documents in bulk, and then map the data to an entity using the import mapping that you created.
+General Purpose OCR activity is provided in two variants; **General Purpose OCR** and **General Purpose OCR in Background**. As the name suggests, the GPO in Background calls the backend API in asynchronous mode and returns the result by populating ExtractionResponse hierarchy which can be further processed by another custom microflow developed by Maker. General Purpose OCR activity calls the backend API in Synchronous mode and returns the result after processing the backend extraction. For using any of the activity variant a microflow should be set up to accept your input documents.
+Along with the input "Document List", Maker can specify another boolean attribute called **Enable confidence**. The default value of this boolean attribute is **false**. By setting this boolean to **true**, you can retrieve the confidence level of extracted data. As the "LineContent" leaf node which actually contains the data, the confidence is returned for the LineContent and not on per character or per word level.
 
 ### 4.1 Extracting Data
 
@@ -113,11 +114,11 @@ To extract the data, perform the following steps:
 
        {{< figure src="/attachments/appstore/app-services/general-purpose-ocr/microflow-gpo.png" >}}
 
-   *  The **General Purpose OCR  In Background** activity has an asynchronous behaviour, which provides a microflow that further takes the response of the data extraction results as a parameter and will use the results further
+   *  The **General Purpose OCR  In Background** activity has an asynchronous behaviour. You need to provide a microflow that will further process the response of the data extraction result along with the input parameter used in that microflow. 
 
        {{< figure src="/attachments/appstore/app-services/general-purpose-ocr/microflow-gpo-in-background.png" >}}
 
-2. Create a list of documents that inherits from `System.FileDocument`. Documents from which data are extracted should be passed as a list, as shown in the microflows above.
+2. Create a list of documents that inherits from 'System.FileDocument' to be passed as first argument (*Document list*) to GPO activity.
 
 3. Double-click the **General Purpose OCR** activity or the **General Purpose OCR in Background** activity to open the dialog box.
 
@@ -132,15 +133,17 @@ To extract the data, perform the following steps:
 
 To configure the activity, perform the following steps:
 
-1. For **Document List**, click **Edit** and select the **Document List** which inherits from `System.FileDocument`. 
-2. For **Use return value**, if you want to use the response results, select **Yes**; otherwise, select **No**. The Boolean value indicates whether you accept or decline the request for data extraction.
-3.  For **Object name**, enter the response object of the **ExtractionResponse** entity. You need to check the **Status** attribute of this entity, and based on its value, retrieve the extraction results from the associated entities. Possible values of **Status** are as follows:
+1. For **Document List**, click **Edit** and select the **Document List** which inherits from `System.FileDocument`.
+2. Set the value for **Enable confidence**. Default value is *false*, setting this value to *true* will enable the backend API to return the confidence level of extracted LineContent data.
+3. For **Use return value**, if you want to use the response results, select **Yes**; otherwise, select **No**. The Boolean value indicates whether you would like to make use of the returned value further in your processing.
+4.  The output of the GPO extraction activity will be an instance of **ExtractionResponse** entity. You need to check the **Status** attribute of this entity, and based on its value, retrieve the extraction results from the associated entities. Possible values of **Status** are as follows:
    
     - **IN_PROGRESS**
     - **COMPLETED**
     - **FAILED**
 
-4. Click **OK** to save the changes.
+5. Provide a name for **ExtractionResponse** object in the **Object name** field. 
+6. Click **OK** to save the changes.
 
 #### 4.1.2 Configuring the General Purpose OCR In Background Activity (Asynchronous Behavior){#general-purpose-ocr-in-background-activity}
 
@@ -149,13 +152,13 @@ To configure the activity, perform the following steps:
 To configure the activity, perform the following steps:
 
 1. For **Document List**, click **Edit** and select the **Document List** which inherits from `System.FileDocument`.
-2.  For **Extraction Result Microflow**, click **Select** and select the **Microflow** that you created to takesthe response of the data extraction results.
+2. For **Extraction Result Microflow**, click **Select** and select the **Microflow** that you have created to process the result of data extraction.
 
     {{% alert type="info" %}}This microflow will be called internally from the java action once the extraction result is received from backend, and this extraction result will be passed as a parameter to this selected microflow.{{% /alert %}}
 
-3. For **Microflow Input Parameter**, click **Edit** and enter a string as the name of the input parameter for the microflow. This should be the name of the parameter of the object from **GPO.ExtractionResponse** used in the microflow that you set for **Extraction Result Microflow**.
-4. For **Use return value**, if you want to use the response results, select **Yes**; otherwise, select **No**. The Boolean value indicates whether you accept or decline the request for data extraction.
-5. For **Variable name**, enter **ReturnValueName**.
+3. For **Microflow Input Parameter**, click **Edit** and enter the name of the input parameter used in the microflow you specified above (*Extraction Result Microflow*). This should be the name of the parameter of type **GPO.ExtractionResponse**.
+4. For **Use return value**, if you want to use the response results, select **Yes**; otherwise, select **No**. The Boolean value indicates whether you would like to make use of the returned value further in your processing.
+5. As this activity variant calls the backend APIs in an Asynchronous fashion, the return value is a boolean indicating if the request was accepted or rejected. Provide a name for **Variable name** field which will contain return value.
 6. Click **OK** to save the changes.
 
 ### 4.2 Checking Statistics on the Usage Dashboard

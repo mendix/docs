@@ -79,4 +79,4 @@ The following log nodes are used by Mendix when writing log messages.
 
 ## 5 Sending Log Messages to Runtime
 
-The native client stores log messages locally on the device. When sending logs to the runtime option is enabled, the native client will attempt to send log messages in batches of **100** messages. If there is network connectivity, once the log messages have been successfully sent to the runtime these log messages will be cleared from the device.
+The native client stores log messages locally on the device. When sending logs to the runtime option is enabled, the native client will attempt to send log messages in batches of **100** messages or after 1 hour from the time these log messages were occurred. If there is a network connectivity, once the log messages have been successfully sent to the runtime these log messages will be cleared from the device.

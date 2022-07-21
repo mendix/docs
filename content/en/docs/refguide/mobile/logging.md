@@ -24,7 +24,7 @@ Please note that after enabling or disabling sending logs to runtime, you must c
 ## 3 Log Levels
 
 {{% alert color="warning" %}}
-Please note that at the moment only `Information` and `Warning` log levels are supported. Support for other log levels will be added in the future.
+Please note that at the moment only `Information` and above log levels are supported. Support for other log levels will be added in the future.
 {{% /alert %}}
 
 // TODO: this piece is a duplicate of log levels in  `/refguide/runtime/loggin` can we create a structure to reuse that, check with tech writers team. 

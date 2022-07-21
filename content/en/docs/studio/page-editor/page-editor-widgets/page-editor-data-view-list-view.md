@@ -46,7 +46,7 @@ The data source determines which object will be shown in the data view. For gene
 | Microflow            | A data source that runs a selected microflow and displays a return value. For more technical information, see [Microflow Source](/refguide/microflow-source/) in the *Studio Pro Guide*. |
 | List widget          | A data source that allows a data view to display detailed information on an object in the list widget (list view) on the same page. For more technical information, see [Listen To Widget Source](/refguide/listen-to-grid-source/) in the *Studio Pro Guide*. |
 
-When selecting an entity for the **Context** data source, you can choose to **Generate contents of data view**. This means that the data view will be automatically filled with input widgets that correlate with each attribute of the entity. For example, if you select the *Customer* entity that has *FullName* and *Address* attributes of string types, the data view will get two text boxes labelled *FullName* and *Address*.
+When selecting an entity for the **Context** data source, you can choose to **Generate contents of data view**. This means that the data view will be automatically filled with input widgets that correlate with each attribute of the entity. For example, if you select the *Customer* entity that has *FullName* and *Address* attributes of string types, the data view will get two [text box widgets](/studio/page-editor-widgets-input-elements/) labelled *FullName* and *Address*.
 
 ### 2.2 General Section {#general-section-data-view}
 

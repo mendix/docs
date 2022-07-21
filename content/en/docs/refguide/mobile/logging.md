@@ -9,7 +9,7 @@ aliases:
 ---
 ## 1 Introduction
 
-In Mendix Studio Pro v9.16 and above native mobile apps are able to send logs to [MxRuntime](refguide/runtime/). Read this guide for logging configuration information.
+In Mendix Studio Pro v9.16 and above native mobile apps are able to send logs to [Mendix Runtime](refguide/runtime/). Read this guide for logging configuration information.
 
 ## 2 Enable Native App Logging
 

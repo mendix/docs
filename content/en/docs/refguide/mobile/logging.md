@@ -63,17 +63,17 @@ The following log nodes are used by Mendix when writing log messages.
 
 | Log Node | Description
 | --- | --- |
-| Client_Auth | Logs messages related to the different authentication state & actions of the user.|
 | Client_AppCenter| Logs messages related to the state and phases of over-the-air updates by AppCenter. |
+| Client_Auth | Logs messages related to the different authentication state & actions of the user.|
 | Client | The default log node when no log node is provided. |
-| Client_OTA | Logs messages related to the state and phases of over-the-air updates by Mendix OTA. |
-| Client_SelectiveSync | Logs message related to selective synchronization, like the different synchronization phases, the count of objects have been synchronized, how long did it take, ..etc. |
-| Client_Nanoflow | Logs messages related to nanoflows being executed.|  
-| Client_NanoflowDebugger | Logs messages related to different steps and available variables while debugging a nanoflow. |
 | Client_Database | Logs messages related to different read/write operation on the local database. |
 | Client_FileSystem | Logs messages related to different read/write operation on the local file system (for example downloading a file and store it in the file system, moving a file, or removing a file.)|
+| Client_Nanoflow | Logs messages related to nanoflows being executed.|  
+| Client_NanoflowDebugger | Logs messages related to different steps and available variables while debugging a nanoflow. |
 | Client_Navigation | Logs messages related to the navigation behavior in the app. |
 | Client_Network | Logs messages related to the different interaction between the client and runtime over the network |
+| Client_OTA | Logs messages related to the state and phases of over-the-air updates by Mendix OTA. |
+| Client_SelectiveSync | Logs message related to selective synchronization, like the different synchronization phases, the count of objects have been synchronized, how long did it take, ..etc. |
 | Client_Startup | Logs messages related to client startup phase. |
 | Client_Synchronization | Logs messages related to full synchronization action and its phases. |
 

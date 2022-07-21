@@ -11,6 +11,10 @@ aliases:
 
 In Mendix Studio Pro v9.16 and above native mobile apps are able to send logs to [Mendix Runtime](refguide/runtime/). Read this guide for logging configuration information.
 
+{{% alert color="info" %}}
+Please note that native client logs will not appear directly in the cloud portal logs overview before they are sent to [Mendix Runtime](refguide/runtime/), for more information please refer to [Sending Log Messages To Runtime](#sending-client-log-nodes-to-runtime).
+{{% /alert %}}
+
 ## 2 Enable Native App Logging
 
 Sending logs from native apps is disabled by default. However, sending logs can be enabled from your [native phone profile](refguide/navigation/#native-phone) by selecting the **Enable sending logs to runtime** checkbox inside the **Logging** group box.
@@ -77,6 +81,6 @@ The following log nodes are used by Mendix when writing log messages.
 | Client_Startup | Logs messages related to client startup phase. |
 | Client_Synchronization | Logs messages related to full synchronization action and its phases. |
 
-## 5 Sending Log Messages to Runtime
+## 5 Sending Log Messages To Runtime {#sending-client-log-nodes-to-runtime}
 
 The native client stores log messages locally on the device. When sending logs to the runtime option is enabled, the native client will attempt to send log messages in batches of **100** messages or after 1 hour from the time these log messages were occurred therefore these clint log nodes will not appear directly in the cloud portal logs overview before they are sent. If there is a network connectivity, once the log messages have been successfully sent to the runtime these log messages will be cleared from the device.

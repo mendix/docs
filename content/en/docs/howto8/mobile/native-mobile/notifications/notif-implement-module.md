@@ -1,5 +1,6 @@
 ---
 title: "Implement the Push Notifications Module"
+linktitle: "Push Notifications Module"
 url: /howto8/mobile/notif-implement-module/
 weight: 54
 description: Tutorial for implementing the push notification module.

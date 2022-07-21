@@ -1,5 +1,6 @@
 ---
 title: "Application Autoscaler for SAP Business Technology Platform"
+linktitle: "Application Autoscaler for SAP BTP"
 url: /partners/sap/sap-autoscaler/
 category: "SAP"
 weight: 47

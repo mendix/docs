@@ -61,7 +61,7 @@ To automatically start this module, follow these steps:
 
 1. Create a **Startup** microflow and add the **Viewer3D/USE_ME/VisServerAction** and **Viewer3D_TC/USE_ME/VisServerAction_TC** Java actions to the microflow.
 2. Set the return type as Boolean with a **Value** of **true**.
-3. Set the microflow as the after-startup step via **Project Settings** > **Runtime** > **After startup**.
+3. Set the microflow as the after-startup step via **App Settings** > **Runtime** > **After startup**.
 4.  Double-click the **Visualization Server** Java action and make sure the **Http endpoint** is set as `@Viewer3D.HttpEndpoint`:
 
 	{{< figure src="/attachments/appstore/app-services/3d-viewer/3d-viewer-for-teamcenter/teamcenter-startupflow.jpg" alt="teamcenter-startupflow" >}}

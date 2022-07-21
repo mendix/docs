@@ -101,8 +101,6 @@ And voila! A screenshot of the current page is created, which you can choose to 
 When you have left your feedback, you need to exit the feedback mode by clicking **Exit Feedback Mode**:
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/exit-feedback-mode.png" >}}
 
-For details on how to see all the [Feedback](/developerportal/collaborate/feedback/) you have submitted, see the [Feedback](/developerportal/community-tools/mendix-profile/#feedback) section of Mendix Profile.
-
 ### 3.3 Upgrading the Widget 
 
 To upgrade your Mendix Feedback widget, follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/#update-module). You can encounter the following error: 

@@ -1,5 +1,6 @@
 ---
 title: "Using Command Line to Deploy a Mendix App to a Private Cloud Cluster"
+linktitle: "Use CLI to Deploy"
 url: /developerportal/deploy/private-cloud-operator/
 description: "Describes the processes for using the Mendix Operator directly to deploy a Mendix app in the Private Cloud"
 weight: 30

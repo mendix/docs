@@ -1,5 +1,6 @@
 ---
 title: "Build JavaScript Actions: Part 2 (Advanced)"
+linktitle: "2. Build JavaScript Actions"
 url: /howto/extensibility/write-javascript-github/
 weight: 20
 description: "This advanced how-to will teach you to make a JavaScript action which can search for GitHub users."

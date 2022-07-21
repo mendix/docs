@@ -1,5 +1,6 @@
 ---
 title: "Configure a List and View List Item Details on One Page"
+linktitle: "Configure List & View Details on 1 Page"
 url: /studio-how-to/pages-how-to-configure-list-and-details-on-one-page/
 description: "Describes how to configure a list of items in Mendix Studio."
 weight: 20

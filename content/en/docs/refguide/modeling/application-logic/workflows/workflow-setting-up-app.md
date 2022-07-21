@@ -1,5 +1,6 @@
 ---
 title: "Adding a Workflow to an Existing App: Setting Up the Basics"
+linktitle: "Add Workflow to Existing App: Basics"
 url: /refguide/workflow-setting-up-app/
 description: "Describes how to use Workflow Commons in an existing app in Mendix Studio Pro."
 weight: 55

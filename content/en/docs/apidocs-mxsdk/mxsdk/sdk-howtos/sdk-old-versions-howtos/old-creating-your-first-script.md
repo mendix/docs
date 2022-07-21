@@ -1,5 +1,6 @@
 ---
 title: "Create Your First Script (Old Versions)"
+linktitle: "Create Your First Script"
 url: /apidocs-mxsdk/mxsdk/old-creating-your-first-script/
 weight: 2
 ---

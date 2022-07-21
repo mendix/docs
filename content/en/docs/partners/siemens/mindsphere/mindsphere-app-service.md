@@ -109,7 +109,7 @@ To access your IoT data using the OData technology provided by the Mendix Data H
 1. In the last step you can specify the following:
     * Save your contract (always enabled).
     * Download your contract – if you want to store the contract yourself or you want to use it with an OData provider other than the Mendix Data Hub
-    * Publish the contract to the Mendix Data Hub – you must do this if you want to use the asset information within your Mendix project; it is therefore preselected
+    * Publish the contract to the Mendix Data Hub – you must do this if you want to use the asset information within your Mendix app; it is therefore preselected
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_wizard_step3.png" alt="asset-manager" >}}
 
@@ -218,7 +218,7 @@ However, authentication will only be successful if the correct credentials are p
 
 ### 6.1 Authenticating During Development
 
-When you are developing your app, you can set the **ClientID** and **ClientSecret** constants within the app. You can also override these by using different [Configurations](/refguide/configuration/) within your project settings.
+When you are developing your app, you can set the **ClientID** and **ClientSecret** constants within the app. You can also override these by using different [Configurations](/refguide/configuration/) within your app settings.
 
 For security, the values of these constants should not be included when you deploy the app.
 

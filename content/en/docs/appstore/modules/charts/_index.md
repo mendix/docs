@@ -266,12 +266,12 @@ To update your charts widget follow sections below.
 In this section you will make a backup of your current app. If something goes wrong, you always may restore previous files and start again. You do not need to back up your entire app, you only need to make a copy of your **<YOUR_APP>/widgets** folder.
 
 {{% alert color="info" %}} 
-You can use **App** > **Show App Directory in Explorer** command from app menu to open you project in file manager. 
+You can use **App** > **Show App Directory in Explorer** command from app menu to open your app in file manager. 
 {{% /alert%}}
 
 Make a copy of your **widgets** folder in your app folder called *widgets - Copy*:
 
-{{< figure src="/attachments/appstore/modules/charts/copy-widgets-folder.png" width="450px" alt="File manager window with list of Mendix project files and directories and two directories is being selected: widgets and widgets - Copy" >}}
+{{< figure src="/attachments/appstore/modules/charts/copy-widgets-folder.png" width="450px" alt="File manager window with list of Mendix app files and directories and two directories is being selected: widgets and widgets - Copy" >}}
 
 Now your should have two folders: **widgets** and **widgets - Copy**.
 

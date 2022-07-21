@@ -1,5 +1,6 @@
 ---
 title: "Release Over the Air Updates with App Center's CodePush"
+linktitle: "Over the Air Updates with CodePush"
 url: /howto8/mobile/how-to-ota/
 weight: 71
 description: A tutorial for pushing over the air updates (OTA) using App Center's CodePush.

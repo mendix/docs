@@ -13,7 +13,7 @@ tags: ["SAP", "OData", "integration", "SAP services", "BAPI"]
 
 SAP data models reflect an OData service or BAPI from SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, and SAP S/4HANA Cloud.
 
-Handcrafting a Mendix domain model for these services would be a lot of work. The Model Creator for SAP Integrations automates this process by creating a Mendix module for the selected service containing the Mendix domain model which can be imported in your project. The data model also contains additional information such as the URL of the exposed endpoint, a list of collections in the service, and a list of functions provided by the service.
+Handcrafting a Mendix domain model for these services would be a lot of work. The Model Creator for SAP Integrations automates this process by creating a Mendix module for the selected service containing the Mendix domain model which can be imported in your app. The data model also contains additional information such as the URL of the exposed endpoint, a list of collections in the service, and a list of functions provided by the service.
 
 For a BAPI service you will need to download a BAPI Schema. See [Create a Mendix BAPI Module Using the Model Creator](#create-bapi-module) for information on how to use the BAPI Schema.
 
@@ -289,19 +289,19 @@ Use [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com
 
 ## 5 Using the Data Model Module in a Mendix App{#Using}
 
-Now you have a Mendix module ready to import into your project.
+Now you have a Mendix module ready to import into your app.
 
-1. Open the project which you created as a prerequisite.
+1. Open the app which you created as a prerequisite.
 
-2. Right-click your project in the **App Explorer** and select **Import module package...**.
+2. Right-click your app in the **App Explorer** and select **Import module package...**.
 
     {{< figure src="/attachments/partners/sap/use-sap-model-creator/import_module_package.png" >}}
 
 3. Use the navigation dialog to find your module, which will have the suffix **.mpk**.
 
-    You now have your service module, for example **GWSAMPLE_BASIC**, available in your project ready to use in combination with the OData Connector for SAP solutions.
+    You now have your service module, for example **GWSAMPLE_BASIC**, available in your app ready to use in combination with the OData Connector for SAP solutions.
 
-    {{< figure src="/attachments/partners/sap/use-sap-model-creator/project_explorer.png" >}}
+    {{< figure src="/attachments/partners/sap/use-sap-model-creator/app_explorer.png" >}}
 
 {{% alert color="warning" %}}
 Do not change the names of entities, attributes, or associations in the Domain Model of the module; they need to match the names used by the SAP OData service for the OData Connector for SAP solutions to work correctly.

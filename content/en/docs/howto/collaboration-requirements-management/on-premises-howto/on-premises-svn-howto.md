@@ -1,5 +1,6 @@
 ---
 title: "Work with SVN On-Premises Version Control Server"
+linktitle: "SVN On-Premises Version Control Server"
 url: /howto/collaboration-requirements-management/on-premises-svn-howto/
 weight: 10
 tags: ["on-premises", "svn", "version control"]

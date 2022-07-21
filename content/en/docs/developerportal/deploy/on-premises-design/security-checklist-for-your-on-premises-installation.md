@@ -1,5 +1,6 @@
 ---
 title: "Security for Your On-Premises Installation"
+linktitle: "On-Premises Installation Security"
 url: /developerportal/deploy/security-checklist-for-your-on-premises-installation/
 description: "A checklist for implementing security when deploying Mendix on premises"
 weight: 10

@@ -1,5 +1,6 @@
 ---
 title: "Building, Testing, and Distributing Apps"
+linktitle: "Build, Test, Distribute Apps"
 url: /refguide/mobile/distributing-mobile-apps/
 category: Mobile
 weight: 50

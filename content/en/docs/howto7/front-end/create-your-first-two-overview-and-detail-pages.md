@@ -1,5 +1,6 @@
 ---
 title: "Create Your First Two Overview & Detail Pages"
+linktitle: "Create Overview & Detail Pages"
 url: /howto7/front-end/create-your-first-two-overview-and-detail-pages/
 category: "Front End"
 weight: 20

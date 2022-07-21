@@ -165,6 +165,8 @@ The **Toolbox** tab contains elements that you can drag and drop on to a microfl
 * [Workflow Administration](#workflow-administration)
 * [Variable Activities](#microflow-variable-activities)
 
+Microflow and Java actions can be exposed in Studio Pro as custom actions for the microflow toolbox  in both Studio and Studio Pro. This feature can be used when you would like to provide a set of standard actions specific to your company to developers. For example, you can distribute a set of communication actions using your company’s specific e-mail connector. Actions that are exposed appear in the custom category in the **Toolbox**. For more information on exposing a microflow or Java action in Studio Pro, see the [Expose as Microflow Action](/refguide/microflow/#expose-as-microflow) section in *Microflow Properties* and  the [Expose as Microflow Action](/refguide/java-actions/#expose-microflow-action) section in *Java Actions*.
+
 ### 4.1 General {#microflow-general-section}
 
 The **General** section contains various elements, such as a parameter and an end event: 

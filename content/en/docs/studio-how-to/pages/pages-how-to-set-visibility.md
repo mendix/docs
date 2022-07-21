@@ -1,5 +1,6 @@
 ---
 title: "Show Fields Only When Certain Conditions Are Met"
+linktitle: "Show Fields on Conditions"
 url: /studio-how-to/pages-how-to-set-visibility/
 category: "Pages"
 description: "Describes how to set conditional visibility in Mendix Studio."

@@ -1,5 +1,6 @@
 ---
 title: "Extend Your Application with Custom Java"
+linktitle: "Extend App with Custom Java"
 url: /howto/logic-business-rules/extending-your-application-with-custom-java/
 category: "Logic & Business Rules"
 weight: 120

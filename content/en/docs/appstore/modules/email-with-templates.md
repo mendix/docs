@@ -62,41 +62,35 @@ For security reasons, it is highly recommended for the **Server configuration** 
 
     {{< figure src="/attachments/appstore/modules/email-with-templates/module-setup-step1.png" >}}
 
-## 3 Usage in Studio Pro 7 and 8
+## 3 Usage 
 
-This document reflects usage of the **Email with Templates** module for the latest Mendix version. There are some differences to note when using the module with Studio Pro 7 and Studio Pro 8.
-
-### 3.1 Additional Requirements
-
-You will need to import the [Encryption](/appstore/modules/encryption/) module to use the **Email with Templates** module in your app in Studio Pro 7 and 8.
-
-### 3.2 Configuring Microsoft Azure Active Directory (AD) OAuth 2.0 {#configure-azure-ad}
+### 3.1 Configuring Microsoft Azure Active Directory (AD) OAuth 2.0 {#configure-azure-ad}
 
 {{% alert color="warning" %}}
-This feature is supported for Studio Pro [7.23)](/releasenotes/studio-pro/7.23/) and subsequent version of Studio Pro 7, and will soon be available for Studio Pro 8 and Studio Pro 9.
+This feature is supported for Studio Pro [7.23)](/releasenotes/studio-pro/7.23/) and subsequent version of Studio Pro 7, and will soon be available for Studio Pro 8.
 {{% /alert %}}
 
 You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. You can only add one OAuth 2.0 configuration for each app.
 
 Click the green **+** button to add a new account, and select the option **Configure using Microsoft Azure AD**. If the account is already registered on the Azure portal, the required fields will already be filled in. If not, or if you need to make changes, you will need to register your app on the Azure portal.
 
-#### 3.2.1 Registering Your App on the Azure Portal
+#### 3.1.1 Registering Your App on the Azure Portal
 
 To register your app, follow Microsoft's [Tutorial: Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
 
 While registering, set the redirect URI to `https://(yourapp_domain)/callback/azure`.
 
-### 3.2.2 Enable Permissions in the Azure Portal
+### 3.1.2 Enable Permissions in the Azure Portal
 
 On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
 
 {{< figure src="/attachments/appstore/modules/imap/azure-permissions.png" >}}
 
-#### 3.2.3 Client ID, Tenant ID, and Client Secret 
+#### 3.1.3 Client ID, Tenant ID, and Client Secret 
 
 The **Email with Templates** module requires a **Client ID**, **Tenant ID** and **Client Secret**. These will be available on the [Azure portal](https://portal.azure.com/) once you have registered your app.
 
-#### 3.2.4 Configure After-Startup Microflow
+#### 3.1.4 Configure After-Startup Microflow
 
 To configure the After-Startup microflow in Studio Pro, do the following:
 

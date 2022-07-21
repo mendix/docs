@@ -67,7 +67,7 @@ For security reasons, it is highly recommended for the **Server configuration** 
 ### 3.1 Configuring Microsoft Azure Active Directory (AD) OAuth 2.0 {#configure-azure-ad}
 
 {{% alert color="warning" %}}
-This feature is supported for Studio Pro [7.23)](/releasenotes/studio-pro/7.23/) and subsequent version of Studio Pro 7, and will soon be available for Studio Pro 8.
+This feature is supported for Studio Pro [7.23)](/releasenotes/studio-pro/7.23/).
 {{% /alert %}}
 
 You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. You can only add one OAuth 2.0 configuration for each app.

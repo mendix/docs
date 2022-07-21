@@ -55,7 +55,9 @@ This list gives an overview of all published attributes and associations.
 
 ## 3 Settings
 
-### 3.1 OData Version
+### 3.1 Configuration
+
+### 3.1.1 OData Version
 
 You can choose between OData 4 (recommended) and OData 3. One of the main differences is that OData 4 services return results in JSON, and OData 3 services return results in XML.
 
@@ -63,9 +65,25 @@ You can choose between OData 4 (recommended) and OData 3. One of the main differ
 This setting was introduced in Studio Pro [9.4.0](/releasenotes/studio-pro/9.4/). In earlier versions, all published OData services were OData 3.
 {{% /alert %}}
 
-### 3.2 Associations
+### 3.1.2 Associations
 
 You can select how you want to represent associations. For more information, see the [Associations](/refguide/odata-representation/#associations) section of *OData Representation*.
+
+### 3.2 Export
+
+In this section you can save the different representations of the service to file.
+
+#### 3.2.1 Service feed
+
+The service feed, available in XML and JSON, contains a list of the published entities.
+
+#### 3.2.2 Metadata
+
+The $metadata XML file contains the service's contract in OData's [CSDL](https://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/odata-csdl-xml-v4.01.html) format.
+
+#### 3.2.3 OpenApi
+
+The OpenApi JSON file contains the service's REST contract in [OpenApi](https://www.openapis.org/) format.
 
 ### 3.3 Security {#security}
 

@@ -84,7 +84,7 @@ While registering, set the redirect URI to `https://(yourapp_domain)/callback/az
 
 On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
 
-{{< figure src="/attachments/appstore/modules/imap/azure-permissions.png" >}}
+{{< figure src="/attachments/appstore/modules/email-with-templates/permissions-sending-email.png" >}}
 
 #### 3.1.3 Client ID, Tenant ID, and Client Secret 
 

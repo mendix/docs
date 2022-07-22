@@ -17,7 +17,7 @@ Since we are using an application to connect to the database we don’t want to 
 
 Select the application database as the default database.
 
-{{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/mendix-on-windows-microsoft-sql-server/setting-up-the-database-user/18580674.png" >}}
+{{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/setting-up-the-database-user/18580674.png" >}}
 
 ## 2 Server Roles
 
@@ -25,13 +25,13 @@ The user does not require any special server roles. SQL server requires every us
 
 You can find more information about the authorization level of the server roles on this page: [Server-level roles](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles?view=sql-server-ver15) in the Microsoft SQL documentation.
 
-{{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/mendix-on-windows-microsoft-sql-server/setting-up-the-database-user/18580673.png" >}}
+{{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/setting-up-the-database-user/18580673.png" >}}
 
 ## 3 User Mapping
 
 With the User Mapping properties you can grant the user access to the different database. We suggest you use one account per Mendix application. So this means that the user you are creating should only have access to one single application database. 
 
-{{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/mendix-on-windows-microsoft-sql-server/setting-up-the-database-user/18580672.png" >}}
+{{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/setting-up-the-database-user/18580672.png" >}}
 
 The Mendix Runtime keeps the database consistent. This means that the runtime validates the database structure at the start-up and automatically generates the SQL scripts to update the table structure. The Mendix Service Console provides you with the option to execute these scripts directly on the database. The Mendix Runtime requires the usage of the schema ‘dbo’
 
@@ -46,7 +46,7 @@ Additionally, to start the application from a new `.mda` file the `view definiti
 
 Allow the user to connect to the database. If the user is Denied the privilege to connect to the engine you won’t be able to connect with your application. The credentials used for your application should have the privilege to access the database through a normal login. Otherwise SQL Server considers your account disabled. 
 
-{{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/mendix-on-windows-microsoft-sql-server/setting-up-the-database-user/18580671.png" >}}
+{{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/setting-up-the-database-user/18580671.png" >}}
 
 ## 5 Read More
 

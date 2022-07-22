@@ -197,12 +197,12 @@ config:
   # MD049/emphasis-style - Emphasis style should be consistent
   MD049:
     # Emphasis style should be consistent
-    style: "consistent"
+    style: "asterisk"
 
   # MD050/strong-style - Strong style should be consistent
   MD050:
     # Strong style should be consistent
-    style: "consistent"
+    style: "asterisk"
 
   # MD051/link-fragments - Link fragments should be valid
   MD051: true

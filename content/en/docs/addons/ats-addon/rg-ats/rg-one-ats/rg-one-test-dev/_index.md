@@ -8,7 +8,7 @@ These are the test development documents:
 *   [Object Types in ATS](/addons/ats-addon/rg-one-object-types-in-the-ats/)
 *   [Recorder](/addons/ats-addon/rg-one-recorder/)
 *   [Manual Test Steps](/addons/ats-addon/rg-one-manual-test-steps/)
-*   [Standard Actions](/addons/ats-addon/rg-one-std-actions-ref/)
+*   [Standard Actions](/addons/ats-addon/rg1-std-acts/)
 *   [Custom Actions](/addons/ats-addon/rg-one-custom-actions/)
 *   [Best Practices for Writing Custom Actions](/addons/ats-addon/rg-one-best-practices/)
 *   [Selectors](/addons/ats-addon/rg-one-selectors/)

@@ -9,16 +9,18 @@ tags: ["test", "testing", "microflow", "unit testing"]
 
 ## 1 Introduction
 
-To smarten up your app with business logic you can use microflows. To verify that your microflow works as expected you can create unit tests using the Unit Testing module. The Unit Testing module provides an easy to use interface to manage and run unit tests. The module supports unit tests that are created using microflows and unit tests that are created using JUnit.
+Verify that your [microflow](/refguide/microflows/) works as expected by creating unit tests with the Unit Testing module. 
+
+The Unit Testing module provides a user-friendly interface to manage and run unit tests. The module supports unit tests that are created using microflows and unit tests that are created using JUnit.
 
 This how-to will teach you how to do the following:
 
 * Set up the Unit Testing module
 * Create a microflow unit test
 
-## 2 Preparation
+## 2 Prerequisites
 
-Before you can start with this how-to, make sure you have completed the following prerequisites:
+Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Download [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/)
 * Review the Marketplace components used in this how-to:
@@ -29,31 +31,27 @@ Before you can start with this how-to, make sure you have completed the followin
     | [Community Commons Function Library](/appstore/modules/community-commons-function-library/) | 8.1.0 |
     | [Object Handling](/appstore/modules/object-handling/) | 3.0.0 |
 
-	{{% alert color="warning" %}}All the images, names, and steps in this how-to are based on the Marketplace component versions listed above. When using later versions of this content, images and/or names on your screen may be different than what is used in this how-to.
+	{{% alert color="info" %}}All the images, names, and steps in this how-to are based on the Marketplace component versions listed above. When using later versions of this content, images and/or names on your screen may be different than what is used in this how-to.
 	{{% /alert %}}
 
-## 3 The Unit Testing Module
+## 3 Setting up the Unit Testing Module
 
 In this chapter you will set up the unit testing module and run the example tests.
 
-1. Create a new app.
-2. Download the [Unit Testing](/appstore/modules/unit-testing/) module.
-3. Download the [Community Commons Function Library](/appstore/modules/community-commons-function-library/) module.
-4. Download the [Object Handling](/appstore/modules/object-handling/) module.
-5.  Open the **Settings** of the app.
-6. Click the **Runtime** tab.
-7. Click the **Select** button to select an **After startup** microflow:
+1. Create a [new app](/refguide/new-app/).
+2. Download and install the [Unit Testing](/appstore/modules/unit-testing/) module.
+3. Download and install the [Community Commons Function Library](/appstore/modules/community-commons-function-library/) module.
+4. Download and install the [Object Handling](/appstore/modules/object-handling/) module.
+5. In the App Explorer, expand the **App {App name}** node, and then click **Settings**.
+6. On the **Runtime** tab of the **App settings** dialog box, select the **After startup** microflow, as in the following figure:
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580370.png" >}}
 
-8.  Select the **Startup** microflow from **Unit Testing** > **USE ME** > **Microflows**:
-
-	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580369.png" >}}
-
+8. Click **Unit Testing > _USE ME > Microflows > Startup**, and then click **Select**.
 9. Click **OK**.
-10. Open the **Navigation** of the app.
-11. Click **New item** to add a new item to the menu.
-12. Enter _UnitTestOverview_ in the **Caption** field.
+10. In the App Explorer, under the **App {App name}** node, click **Navigation**.
+11. In the **Menu** section, click **New item**.
+12. In the **Caption** field, enter *UnitTestOverview*.
 13. Select **Call a microflow** for the **On click** action, and then select the **UnitTestOverview** microflow:
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580363.png" >}}

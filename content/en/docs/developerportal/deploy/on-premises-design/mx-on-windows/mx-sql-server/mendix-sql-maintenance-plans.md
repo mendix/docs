@@ -25,7 +25,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * For the purpose of this how-to, the following Mendix SQL data structure will be used, so please adapt the folder tree according to your organization's data structure:
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/mendix-sql-maintenance-plans/18580650.jpg" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mx-sql-server/mendix-sql-maintenance-plans/18580650.jpg" >}}
 
 * Make sure the SQL Server Agent Service is running, preferably using the Mendix service account for authentication
 * Consider the amount of soft backups that need to be kept
@@ -41,12 +41,12 @@ To add a task step, follow these steps:
 
 1. Drag the corresponding item from the **Maintenance Plan Tasks** toolbox:
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/mendix-sql-maintenance-plans/18580649.jpg" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mx-sql-server/mendix-sql-maintenance-plans/18580649.jpg" >}}
 
 2. Drag connecting lines between the items to initiate a sequence of events.
 3. To change a notification job from **Success** (which is the default connector) to **Failure**, right-click the connecting line and choose **Failure**:
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/mendix-sql-maintenance-plans/18580648.jpg" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mx-sql-server/mendix-sql-maintenance-plans/18580648.jpg" >}}
 
 ### 3.2 Notifications
 
@@ -56,20 +56,20 @@ To configure notifications, follow these steps:
 2. Create an SQL operator (SQL Server Agent). The operator will receive maintenance notifications.
 3. Right-click **DatabaseMail** and select **Configure Database Mail**:
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/mendix-sql-maintenance-plans/18580653.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mx-sql-server/mendix-sql-maintenance-plans/18580653.png" >}}
 
 4. Choose a valid e-mail sender address (for example, *mendix_sql@yourdomainname.com*)
 5. Make sure the e-mail profile is set to both **Public** and **Default Profile**:
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/mendix-sql-maintenance-plans/18580663.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mx-sql-server/mendix-sql-maintenance-plans/18580663.png" >}}
 
 6. Verify your e-mail configuration by sending a test email:
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/mendix-sql-maintenance-plans/18580662.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mx-sql-server/mendix-sql-maintenance-plans/18580662.png" >}}
 
 7. Next, create two maintenance plans:
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/mendix-sql-maintenance-plans/18580661.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mx-sql-server/mendix-sql-maintenance-plans/18580661.png" >}}
 
     For the sake of uniformity, the plan names **MP_SYSDB** and **MP_USERDB** will be used throughout this document. Changing the plan names to a different convention will not influence the functionality of the plan.
 
@@ -86,12 +86,12 @@ This is the pattern for a notification:
 
 In this section, you are going to create a new maintenance plan called **MP_USERDB** containing subplans:
 
-{{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/mendix-sql-maintenance-plans/18580660.png" >}}
+{{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mx-sql-server/mendix-sql-maintenance-plans/18580660.png" >}}
 
 1. Create a subplan called **backup database (full)**.
 2. Schedule the plan to run every working day at 22:00 (or whatever time does not conflict with your external backup application):
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/mendix-sql-maintenance-plans/18580667.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mx-sql-server/mendix-sql-maintenance-plans/18580667.png" >}}
 
 3. Choose to back up to disk.
 4. Back up to *X:\sqldata\backup*.
@@ -102,7 +102,7 @@ In this section, you are going to create a new maintenance plan called **MP_USER
 9. Create a subplan called **backup database (trn)**.
 10. Schedule the plan to run every working day, as often as is necessary. If hourly backups are run, database recovery will be possible per hour. When run with a smaller interval, database recovery to a more recent point in time will be possible. High volume databases that perform many hourly transactions should back up more often than lesser-used databases.
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/mendix-sql-maintenance-plans/18580666.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mx-sql-server/mendix-sql-maintenance-plans/18580666.png" >}}
 
 11. Choose **Transaction Log** for the backup **Type**.
 12. Choose to back up to disk.
@@ -114,18 +114,18 @@ In this section, you are going to create a new maintenance plan called **MP_USER
 18. Create a subplan called **weekly maintenance**.
 19. Schedule the plan to run every Sunday at 01:00 (or whatever time the application is least used):
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/mendix-sql-maintenance-plans/18580665.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mx-sql-server/mendix-sql-maintenance-plans/18580665.png" >}}
 
 20. Set **Change free space per page percentage to: 10%** and select **Keep index online while reindexing** (please note that this option will only work in enterprise versions of Microsoft SQL server):
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/mendix-sql-maintenance-plans/18580659.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mx-sql-server/mendix-sql-maintenance-plans/18580659.png" >}}
 
 21. Create a subplan called **daily maintenance**.
 22. Schedule to run every Tuesday till Friday at 02:00 (or whatever working days apply for your organization):
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/mendix-sql-maintenance-plans/18580668.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mx-sql-server/mendix-sql-maintenance-plans/18580668.png" >}}
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/mendix-sql-maintenance-plans/18580658.png" >}} .
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mx-sql-server/mendix-sql-maintenance-plans/18580658.png" >}} .
 
 {{% alert color="info" %}}
 
@@ -137,12 +137,12 @@ You should adapt the times set to your desired backup retention time. The cleanu
 
 In this section, you are going to create a new maintenance plan called **MP_SYSDB** containing the following subplans:
 
-{{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/mendix-sql-maintenance-plans/18580652.png" >}}
+{{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mx-sql-server/mendix-sql-maintenance-plans/18580652.png" >}}
 
 1. Create a subplan called **backup database (full)**.
 2. Schedule this to run Tuesday through Friday at 02:00 (or whatever working days apply for your organization):
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/mendix-sql-maintenance-plans/18580654.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mx-sql-server/mendix-sql-maintenance-plans/18580654.png" >}}
 
 3. Select to back up to disk.
 4. Back up to *d:\sqldata\backup*.
@@ -153,11 +153,11 @@ In this section, you are going to create a new maintenance plan called **MP_SYSD
 9. Create a subplan called **weekly maintenance**.
 10. Schedule this to run every Sunday at 01:00:
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/mendix-sql-maintenance-plans/18580651.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mx-sql-server/mendix-sql-maintenance-plans/18580651.png" >}}
 
 11. Set the rebuild index task to reorganize pages with the **Default free space per page** and select **Keep index online while indexing**:
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mendix-on-windows-microsoft-sql-server/mendix-sql-maintenance-plans/18580655.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/mx-on-windows/mx-sql-server/mendix-sql-maintenance-plans/18580655.png" >}}
 
 ## 4 Read More
 

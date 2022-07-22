@@ -15,7 +15,7 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 #### Fixes
 
-* We fixed an issue with AppCenter not accepting dots in the App name (Ticket 153722, 154433, 154489, 154814)
+* We fixed an issue with AppCenter not accepting periods in app names. (Ticket 153722, 154433, 154489, 154814)
 
 ### Release 1.0.120
 

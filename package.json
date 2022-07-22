@@ -22,6 +22,7 @@
   "homepage": "https://github.com/mendix/docs#readme",
   "devDependencies": {
     "autoprefixer": "^10.3.1",
+    "markdownlint-cli2": "^0.4.0",
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1"
   }

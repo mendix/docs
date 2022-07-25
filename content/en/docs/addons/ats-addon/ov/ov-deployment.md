@@ -273,11 +273,13 @@ Before you start, make sure that your server has internet access to download the
         - SCREEN_WIDTH=1920
         - SCREEN_DEPTH=24
     ```
+
 5. Start up the Selenium grid with this command:
 
     ```sh
     docker-compose up -d
     ```
+
 6. You now have a grid running on `http://myserver:4444/wd/hub`. Attached to this grid are two nodes: one for Chrome and one for Firefox. You can easiliy scale by starting new nodes with a simple command. This example will start up a second node for both Firefox and Chrome:
 
     ```sh
@@ -287,4 +289,3 @@ Before you start, make sure that your server has internet access to download the
 #### 6.4.2 Firewall Configuration
 
 The firewall should accept TCP connections from the internet on port 4444 (the standard port for Selenium Server). This port should forward to your Selenium Server.
-

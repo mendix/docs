@@ -44,13 +44,13 @@ The following steps describe how to start the Selenium hub:
 1. Go to the folder and open a command box (Shift+Right click and choose Open command window here)
 2. Start your Selenium hub (version number can be different):
 
-    ```
+    ```sh
     java -jar selenium-server-standalone-3.8.1.jar -role hub
     ```
 
     You should see logging like this:
 
-    ```
+    ```sh
     C:\Selenium>java -jar selenium-server-standalone-3.8.1.jar -role hub
     11:30:27.208 INFO - Selenium build info: version: '3.8.1', revision: '6e95a6684b'
     11:30:27.208 INFO - Launching Selenium Grid hub
@@ -80,13 +80,13 @@ The following steps describe how to start the node with three Chrome and three F
 1. Go to the folder and open a command box (Shift+Right click and choose the **Open command** window here)
 2. Start the node:
 
-    ```
+    ```sh
    java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe  -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar selenium-    server-standalone-3.8.1.jar -role node -hub http://localhost:4444/grid/register -browser "browserName=firefox, maxInstances=3"  -browser "browserName=chrome, maxInstances=3"
     ```
 
     The output should look something like this:
 
-    ```
+    ```sh
     C:\Selenium>java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe  -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -   jar selenium-server-standalone-3.8.1.jar -role node -hub http://localhost:4444/grid/register -browser "browserName=firefox,    maxInstances=3"  -browser "browserName=chrome, maxInstances=3"
     13:12:18.198 INFO - Selenium build info: version: '3.8.1', revision: '6e95a6684b'
     13:12:18.198 INFO - Launching a Selenium Grid node
@@ -138,7 +138,8 @@ The following steps describe how to start the selenium hub and the node with a J
 1. Create JSON files in the created folder:
 
     *gridHubConfig.json*:
-    ```
+
+    ```json
        {
         "port": 4444,
         "newSessionWaitTimeout": -1,
@@ -154,10 +155,10 @@ The following steps describe how to start the selenium hub and the node with a J
         "timeout": 1800
        }
     ```
-        
+
     *node.json*:
 
-    ```
+    ```json
        {
         "capabilities":
         [
@@ -193,13 +194,13 @@ The following steps describe how to start the selenium hub and the node with a J
 
 2. Start the hub:
 
-    ```
+    ```sh
     java -jar selenium-server-standalone-3.8.1.jar -role hub -hubConfig gridHubConfig.json
     ```
 
 3. Start the node:
 
-    ```
+    ```sh
     java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar selenium- server-standalone-3.8.1.jar -role node -nodeConfig node.json   
     ```
 
@@ -209,7 +210,7 @@ The following steps describe how to create a batch file to start up everything a
 
 1. Create start.bat:
 
-    ```
+    ```bat
     start /B java -jar C:\Selenium\selenium-server-standalone-3.8.1.jar -role hub -hubConfig C:\Selenium \gridHubConfig.json
     timeout /t 10
     start /B java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar  C:\Selenium\selenium-server-standalone-3.8.1.jar -role node -nodeConfig C:\Selenium\node.json
@@ -218,7 +219,7 @@ The following steps describe how to create a batch file to start up everything a
 
 2. Start from the cmd box:
 
-    ```
+    ```sh
     start.bat
     ```
 

@@ -156,7 +156,7 @@ These are the different data types in ATS:
 | Boolean | A truth value. | true, false |
 | Date/Time | A point in time consisting of a date and a time component accurate up to the millisecond. | Tuesday 13 June 2017, 16:17:44 |
 | Web Element | Represents a DOM element. | (*See the image below this table.*)|
-| Undefined | Lets the user choose the data type. | Choose _String_ for "Helloworld!" |
+| Undefined | Lets the user choose the data type. | Choose *String* for "Helloworld!" |
 | Enumeration | One of the values of the given enumeration. | Red, Green, Blue; Todo, Running, Done |
 | Float | **The Float type is deprecated and should not be used.** | N/A |
 | Currency | **The Currency type is deprecated and should not be used** | N/A |

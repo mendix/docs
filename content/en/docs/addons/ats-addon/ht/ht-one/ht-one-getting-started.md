@@ -39,7 +39,7 @@ To create a new project, follow these steps:
 
       {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/create-new-project.png" >}}
 
-2.  Enter the following information about your project:
+2. Enter the following information about your project:
 
       Field | Description
       --- | ---
@@ -50,7 +50,7 @@ To create a new project, follow these steps:
       **Project Users** | Enter the people that need access to this project. This project will then appear in their **My Projects** menu. You can always edit this later. There are two different roles for a project user: a **Tester** can only test, create tests, and monitor results; a **Project Administrator** has the same rights as the tester but has also editing rights to the configuration settings of a project.
       **Action Libraries** | Make sure that the action libraries **Core** and **Mendix** are included. Please note that without libraries, it is not possible to select actions for the test script. For more information on action libraries, see [Standard Actions Reference](/addons/ats-addon/rg-one-std-actions-ref/).
 
-3.  Click **Save & Open** at the bottom of the page to open the **Project Dashboard**.
+3. Click **Save & Open** at the bottom of the page to open the **Project Dashboard**.
 
       {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/project-dashboard-empty.png" >}}
 
@@ -80,7 +80,7 @@ To add a new Selenium hub, follow these steps:
 
       {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/selenium-hub-dialog.png" >}}
 
-2.  Set the following parameters:
+2. Set the following parameters:
 
       Field | Description
       --- | ---
@@ -102,7 +102,7 @@ To add a new application, follow these steps:
 
       {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/application-dialog.png" >}}
 
-2.  Set the following parameters:
+2. Set the following parameters:
 
       Field | Description
       --- | ---
@@ -143,10 +143,10 @@ To create a test case, follow these steps:
 4. Click **Create**.
 5. When the **Test Case** page opens, you are now in the actual test case. In the top left corner of the page, you can see the name and description of your test case. The **Test Case** page also displays the following buttons:
 
-      * **Run** – brings you to the **Run Configuration** screen
-      * **Quickrun** – immediately executes a test case with the last set of run configurations (use this option to check your test case while building)
-      * **Export** – exports the test case as a XML file (this file can be uploaded into another ATS environment)
-      * **PDF** – extracts a PDF report of your test case
+    * **Run** – brings you to the **Run Configuration** screen
+    * **Quickrun** – immediately executes a test case with the last set of run configurations (use this option to check your test case while building)
+    * **Export** – exports the test case as a XML file (this file can be uploaded into another ATS environment)
+    * **PDF** – extracts a PDF report of your test case
 
 {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/test-case-page.png" >}}
 
@@ -172,16 +172,16 @@ To use the recorder function, follow these steps:
 1. Click **Record** while inside a test case in ATS, which opens the **Recording Session** page. On this page you can manage your recording sessions.
 2. You can now open the Mendix application you want to test in another tab of the browser and start testing the application manually. The test steps you take will now be recorded and saved in the chosen test case.
 
-      {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/recording-session-cp.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/recording-session-cp.png" >}}
 
-3.  Click **Save** to save your actions for this event.
+3. Click **Save** to save your actions for this event.
 
-      Field | Description
-      --- | ---
-      **Recorded event** | All the registered clicks/entering text will show up here in the sequence where they were done. Select an event to open the **Action mapping** menu of that particular event. The ATS Recorder selects the actions for you.
-      **Action mapping** | This shows all the available actions for this event. Click  **Select** if you want to choose a different action.
+    Field | Description
+    --- | ---
+    **Recorded event** | All the registered clicks/entering text will show up here in the sequence where they were done. Select an event to open the **Action mapping** menu of that particular event. The ATS Recorder selects the actions for you.
+    **Action mapping** | This shows all the available actions for this event. Click  **Select** if you want to choose a different action.
 
-      {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/recorded-test-steps.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/recorded-test-steps.png" >}}
 
 All the test steps are numbered for easy identification. The up and down arrows can be used to change the sequence of the test steps. You can **delete**, **copy** or **paste** a selected test step. With the **Extract action**, you can combine actions of multiple steps into one step. Select the steps you want to combine and click **Extract action**. For more information on extracting an action, see [Custom Action](/addons/ats-addon/rg-one-custom-actions/).
 
@@ -222,9 +222,9 @@ To create a test suite, follow these steps:
 4. Click **Create**. 
 5. The **Test Suite** page looks similar to the **Test Case** page, but with fewer options. The **Test Suite** page also displays the following buttons:
 
-      * **Run** – takes you to the **Run configuration** screen
-      * **Quickrun** – immediately executes a test suite with the last set of run configurations (use this option to check your test case while building)
-      * **Export** – exports the test suite as a XML file (this file can be uploaded into another ATS environment)
+    * **Run** – takes you to the **Run configuration** screen
+    * **Quickrun** – immediately executes a test suite with the last set of run configurations (use this option to check your test case while building)
+    * **Export** – exports the test suite as a XML file (this file can be uploaded into another ATS environment)
 
 {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/test-suite-page.png" >}}
 

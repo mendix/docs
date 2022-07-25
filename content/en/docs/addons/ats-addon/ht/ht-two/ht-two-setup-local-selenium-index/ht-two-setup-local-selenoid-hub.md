@@ -31,7 +31,7 @@ The following steps describe how to install the hub and nodes with Docker-Compos
 2. Create a folder or directory to place your video files.
 3. Create a *browsers.json* in your folder/directory (/docker)
 
-    ```
+    ```json
       {
            "firefox": {
                    "default": "58.0",
@@ -60,9 +60,9 @@ The following steps describe how to install the hub and nodes with Docker-Compos
 
 4. Create a docker-compose.yml in your folder/directory (/docker)
 
-    ```
-   version: '3'
-   services:
+    ```yml
+    version: '3'
+    services:
      selenoid:
        network_mode: bridge
        image: aerokube/selenoid
@@ -80,7 +80,7 @@ The following steps describe how to install the hub and nodes with Docker-Compos
 
 5. Open a console and give the following commands to pull the images first:
 
-    ```
+    ```bash
    sudo docker pull selenoid/chrome:65.0
    sudo docker pull selenoid/firefox:58.0
    sudo docker pull selenoid/video-recorder
@@ -89,7 +89,7 @@ The following steps describe how to install the hub and nodes with Docker-Compos
 
 6. Open a console and give the following command from the folder/directory where you placed your docker-compose.yml:
 
-    ```
+    ```bash
     sudo docker-compose up -d
         
     Starting docker_selenoid_1 ... done
@@ -97,16 +97,16 @@ The following steps describe how to install the hub and nodes with Docker-Compos
 
 7. After it started, you can check the status of the container
 
-    ```
+    ```bash
     sudo docker-compose ps
          Name                     Command               State           Ports         
-   ---------------------------------------------------------------------
-   docker_selenoid_1   /usr/bin/selenoid -conf /e ...   Up      0.0.0.0:4444->4444/tcp
+    ---------------------------------------------------------------------
+    docker_selenoid_1   /usr/bin/selenoid -conf /e ...   Up      0.0.0.0:4444->4444/tcp
     ```
 
 8. To check the status of the hub:
 
-    ```
+    ```bash
     curl -s http://localhost:4444/status
 
     {"total":5,"used":0,"queued":0,"pending":0,"browsers":{"chrome":{"65.0":{}},"firefox":{"58.0":{}}}}
@@ -125,7 +125,7 @@ In case you want to record your test case as a video follow these steps:
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/add_capability.png" >}}
 
 2. Once the test case finishes you can find your video in: `http://yourmachinenameorIP:4444/video`. The video shows as "session-id.mp4"
-3.  (Optional:) You can give the video file a custom name by adding another Custom Capability: **VideoName** with a string, for example **MyTestVideo.mp4** (don't forget the .mp4!)
+3. (Optional:) You can give the video file a custom name by adding another Custom Capability: **VideoName** with a string, for example **MyTestVideo.mp4** (don't forget the .mp4!)
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/video_name.png" >}}
 
@@ -137,7 +137,7 @@ To install a hub with a Portal for "Live-View" you need a different *browsers.js
 
 1. Create a *browsers.json* with VNC browser image:
 
-    ```
+    ```json
     {
            "firefox": {
                    "default": "58.0",
@@ -166,7 +166,7 @@ To install a hub with a Portal for "Live-View" you need a different *browsers.js
 
 2. Create a docker-compose.yml with added selenoid UI for the portal:
 
-    ```
+    ```yml
     version: '3'
     services:
      selenoid:
@@ -195,7 +195,7 @@ To install a hub with a Portal for "Live-View" you need a different *browsers.js
 
 3. Pull the images first
 
-    ```
+    ```bash
     sudo docker pull selenoid/vnc:chrome_65.0
     sudo docker pull selenoid/vnc:firefox_58.0
     sudo docker pull aerokube/selenoid-ui
@@ -203,7 +203,7 @@ To install a hub with a Portal for "Live-View" you need a different *browsers.js
 
 4. Start the hub
 
-    ```
+    ```bash
     # sudo docker-compose up -d
 
     Creating docker_selenoid_1 ... done

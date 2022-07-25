@@ -10,10 +10,10 @@ This document describes the installation and uninstallation of the APM tool. The
 
 Read all the details here:
 
-*   [Prerequisites](/addons/apd-addon/ig-one-prerequisites/)
-*   [Installation Steps](/addons/apd-addon/ig-one-installation-steps/)
-*   [Upgrade Steps](/addons/apd-addon/ig-one-upgrade-steps/)
-*   [Uninstall Steps](/addons/apd-addon/ig-one-uninstall-steps/)
+* [Prerequisites](/addons/apd-addon/ig-one-prerequisites/)
+* [Installation Steps](/addons/apd-addon/ig-one-installation-steps/)
+* [Upgrade Steps](/addons/apd-addon/ig-one-upgrade-steps/)
+* [Uninstall Steps](/addons/apd-addon/ig-one-uninstall-steps/)
 
 ## 2 Installation for the Experienced User
 

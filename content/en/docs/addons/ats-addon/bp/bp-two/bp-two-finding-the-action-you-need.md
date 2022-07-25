@@ -84,7 +84,7 @@ If you cannot find a widget because it has no unique name or because it is not s
 
 In ATS, there are many actions for clicking a widget, from generically clicking a widget to clicking a specific data grid row. The first part of this section explains the generic action for clicking a widget, and the second part explains the actions that conduct a more specific click. The last part of the section provides a summary of the first two parts. The magic word while searching for an action that can click something is "Click."
 
- ### 3.1 Generic Action
+### 3.1 Generic Action
 
 When you want to click a widget, the main choice is always the [Click Widget](/addons/ats-addon/rg-one-click-widget/) action. It clicks the widget you need using the `mx-name` of the widget.
 
@@ -372,7 +372,7 @@ For generating values or information, you should follow the first two parts of t
 It all comes down to following these steps to achieve the right result
 
 1. Use the ATS Recorder. If the ATS Recorder does not work, go to step 2 below.
-2.  If the ATS Recorder does not work, that does not also mean that ATS cannot interact with the widget. Select the action that goes with the task you want to perform:
+2. If the ATS Recorder does not work, that does not also mean that ATS cannot interact with the widget. Select the action that goes with the task you want to perform:
 
      Task                             | Action |
     ----------------------------------|:------:|
@@ -384,7 +384,7 @@ It all comes down to following these steps to achieve the right result
      Generating values/information    | See [6 Generating Values/Information](#GeneratingValuesInformation) for more information |
 
     If these do not work because you do not have an `mx-name` or they don't cover the task, go to step 3 below.
-3.  If your task is not covered by the generic action, use the following search terms depending on your task:
+3. If your task is not covered by the generic action, use the following search terms depending on your task:
 
      Task                             | Search Term |
     ----------------------------------|:------:|

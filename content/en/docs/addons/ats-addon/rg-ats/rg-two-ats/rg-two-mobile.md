@@ -81,21 +81,23 @@ Follow these steps to do so:
 1. Open Chrome.
 2. Press **F12** to open the DevTools.
 3. Press **F1** to open the **Settings** dialog box.
-4.  Select the **Devices** tab:
+4. Select the **Devices** tab:
 
     {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-mobile/chrome-settings-1.png" >}}
-    
+
 5. Select **Add custom device**.
 6. Set the following properties:
+
     * **Device name** to *ATS mobile*
     * **Width** to *540*
     * **Height** to *960*
     * **Device type** to *Mobile (no touch)*
-    * **User agent string** to *Mozilla/5.0 (Linux; Android 7.0; SM-G930V Build/NRD90M) AppleWebKit/537.36 (KHTML,  like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36*
-7.  Select **Add**.
+    * **User agent string** to *Mozilla/5.0 (Linux; Android 7.0; SM-G930V Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36*
+
+7. Select **Add**.
 
     {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-mobile/chrome-settings-2.png" >}}
-    
+
 8. Close the Settings and the DevTools by clicking the **X** button in the top right corner twice.
 
 ## 3 Running a Test Case on a Mobile Device

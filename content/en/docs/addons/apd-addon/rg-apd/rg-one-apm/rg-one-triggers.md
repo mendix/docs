@@ -68,9 +68,9 @@ The continuation tab enables configuration of what happens after the trigger has
 
 You can:
 
-*  Do **Nothing**, which means just keep on checking and executing the trigger
-*  **Stop**, which means that the trigger will fire once and then disable itself
-*  **Pause**, which means you can define a period in which the trigger will not fire again
+* Do **Nothing**, which means just keep on checking and executing the trigger
+* **Stop**, which means that the trigger will fire once and then disable itself
+* **Pause**, which means you can define a period in which the trigger will not fire again
 
 This is to prevent, for example, a large amount of emails when the CPU usage is high.
 

@@ -67,4 +67,3 @@ The APM manager runs automatic cleanups. These remove monitoring data automatica
 Data can be preserved using the push-pin button. This prevents automatic cleanup.
 
 Environments are automatically deleted if they are not used for a year.
-

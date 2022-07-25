@@ -9,9 +9,9 @@ Clicks a Menu Item in a Navigation Tree, Menu Bar and Simple Menu Bar.
 
 ## 2 Supported Widgets
 
- + NavigationTree
- + MenuBar
- + SimpleMenuBar
+* NavigationTree
+* MenuBar
+* SimpleMenuBar
 
 ## 3 Usage
 

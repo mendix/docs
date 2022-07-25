@@ -9,11 +9,11 @@ Use the Performance Tool to measure individual microflows and break them up into
 
 The performance tool consists of:
 
-- [Recorder](#recorder)
-- [Filter](#filter)
-- [Options](#options)
-- [Show recorded](#show-recorded)
-- [Advanced usage](#advanced)
+* [Recorder](#recorder)
+* [Filter](#filter)
+* [Options](#options)
+* [Show recorded](#show-recorded)
+* [Advanced usage](#advanced)
 
 ## 2 Recorder {#recorder}
 
@@ -58,9 +58,9 @@ When **Record SQL statements** is enabled SQL statements are recorded by the Men
 Changes to the options are applied to the Performance Tool if the button **Save, apply filter & close**
 is used.
 
-*   If record SQL statements is unchecked while running, recording of SQL statements is cancelled.
-*   If the record SQL statements is checked while running, recording of SQL statements is started.
-*   If the thresholds are increased, the already recorded microflows and/or SQL statements are filtered to match the new threshold.
+* If record SQL statements is unchecked while running, recording of SQL statements is cancelled.
+* If the record SQL statements is checked while running, recording of SQL statements is started.
+* If the thresholds are increased, the already recorded microflows and/or SQL statements are filtered to match the new threshold.
 
 ## 4 Options {#options}
 
@@ -77,9 +77,9 @@ You can define a **Max Processing Delay (ms)**. When the processing delay is hig
 
 Changes to the options are applied to the Performance Tool if the button **Save** (when not running) or **Save & apply** (when running) is used.
 
-*   If record SQL statements is unchecked while running, recording of SQL statements is cancelled.
-*   If the record SQL statements is checked while running, recording of SQL statements is started.
-*   If the thresholds are increased, the already recorded microflows and/or SQL statements are filtered to match the new threshold
+* If record SQL statements is unchecked while running, recording of SQL statements is cancelled.
+* If the record SQL statements is checked while running, recording of SQL statements is started.
+* If the thresholds are increased, the already recorded microflows and/or SQL statements are filtered to match the new threshold
 
 ## 5 Show Recorded {#show-recorded}
 

@@ -16,7 +16,7 @@ Please note the following current limitations regarding native client logs:
 * Native client logs will not appear directly in the cloud portal logs overview before they are sent to [Mendix Runtime](refguide/runtime/), for more information see [Sending Log Messages To Runtime](#sending-client-log-nodes-to-runtime)
 {{% /alert %}}
 
-## 2 Enable Native App Logging
+## 2 Enabling Native App Logging
 
 Sending logs from native apps is disabled by default. However, sending logs can be enabled from your [native phone profile](refguide/navigation/#native-phone) by selecting the **Enable sending logs to runtime** checkbox inside the **Logging** group box.
 

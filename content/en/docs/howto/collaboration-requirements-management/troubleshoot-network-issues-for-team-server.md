@@ -1,5 +1,6 @@
 ---
 title: "Troubleshoot Network Issues for Connecting to the Team Server"
+linktitle: "Team Server Network Issues"
 url: /howto/collaboration-requirements-management/troubleshoot-network-issues-for-team-server/
 category: "Collaboration"
 weight: 14

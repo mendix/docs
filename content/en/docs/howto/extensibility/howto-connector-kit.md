@@ -5,9 +5,6 @@ category: "Extensibility"
 description: "Describes creating custom Microflow actions using Java."
 weight: 80
 tags: ["java", "connector kit", "microflow action", "parameter type", "generic actions", "type parameters", "mappings", "java action"]
-output:
-  word_document: default
-  html_document: default
 #To update screenshots of these microflows in Studio Pro, use the SlackRekognition-main-master app, which is saved locally in Other Resources > Documentation Backups (No Update).
 ---
 

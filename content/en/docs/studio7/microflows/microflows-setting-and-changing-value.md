@@ -1,5 +1,6 @@
 ---
 title: "Set & Change a Value for Different Activities in the Microflows"
+linktitle: "Set & Change Value"
 url: /studio7/microflows-setting-and-changing-value/
 category: "Microflows"
 weight: 50

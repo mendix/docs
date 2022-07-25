@@ -1,5 +1,6 @@
 ---
 title: "Install the ATS Helper and the ATS Recorder"
+linktitle: "Install ATS Helper & Recorder"
 url: /addons/ats-addon/ht-one-install-ats-helper-recorder/
 weight: 2
 description: "Describes how to install the ATS Helper and the ATS Recorder tool."

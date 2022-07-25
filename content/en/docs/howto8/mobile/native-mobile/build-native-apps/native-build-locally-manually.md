@@ -1,5 +1,6 @@
 ---
 title: "Build a Mendix Native Mobile App Locally Manually"
+linktitle: "Local Native Mobile App Manual Build"
 url: /howto8/mobile/native-build-locally-manually/
 weight: 30
 description: Describes how to build your first Mendix native mobile app locally manually.

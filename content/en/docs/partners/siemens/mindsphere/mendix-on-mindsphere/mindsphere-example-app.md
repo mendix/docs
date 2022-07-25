@@ -1,5 +1,6 @@
 ---
 title: "Use the Siemens MindSphere Operations Insight Example App"
+linktitle: "Siemens MindSphere Operations Insight App"
 url: /partners/siemens/mindsphere-example-app/
 weight: 110
 tags: ["Siemens", "MindSphere", "Example", "Operations Insight", "Time Series", "REST", "API"]

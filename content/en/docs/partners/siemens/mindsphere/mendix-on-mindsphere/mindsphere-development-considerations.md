@@ -95,7 +95,7 @@ If you do **not** restage your app, it will continue to run using the old values
 
 **Mendix Constants**
 
-Your project will define the default values for [constants](/refguide/constants/). You can override these default values with Cloud Foundry environment variables. To do this, you need to replace the dot with an underscore and prefix the name with `MX_`. For example, a constant `MyConstant` in module `MyModule` (that is, `MyModule.MyConstant`), in app `MyApp` could be set to `ABC123` like this:
+Your app will define the default values for [constants](/refguide/constants/). You can override these default values with Cloud Foundry environment variables. To do this, you need to replace the dot with an underscore and prefix the name with `MX_`. For example, a constant `MyConstant` in module `MyModule` (that is, `MyModule.MyConstant`), in app `MyApp` could be set to `ABC123` like this:
 
 ```bash
     cf set-env MyApp MX_MyModule_MyConstant "ABC123"
@@ -138,7 +138,7 @@ This will use the credentials you have set up under **App Credentials** in the *
 {{% alert color="info" %}}
 **Tip:** Use the autofill feature based on a local environment variable for the *Client Secret*.
 
-Storing the *Client Secret* inside the project is, from a security perspective, not a good idea. A better approach is to use a local environment variable. Create a user-specific environment variable with *Variable name* equal to your *Client ID* value and the *Variable value* equal to your *Client Secret* value. See step 6 below for information on how to get these values.
+Storing the *Client Secret* inside the app is, from a security perspective, not a good idea. A better approach is to use a local environment variable. Create a user-specific environment variable with *Variable name* equal to your *Client ID* value and the *Variable value* equal to your *Client Secret* value. See step 6 below for information on how to get these values.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/envvariables.png"   width="50%"  >}}
 

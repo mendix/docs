@@ -1,5 +1,6 @@
 ---
 title: "Register Non-OData Resources in the Data Hub Catalog"
+linktitle: "Register Non-OData Resources"
 url: /data-hub/data-hub-catalog/register-non-odata-resources/
 category: "Data Hub Catalog"
 weight: 40

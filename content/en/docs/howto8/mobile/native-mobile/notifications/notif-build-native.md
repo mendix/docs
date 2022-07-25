@@ -1,5 +1,6 @@
 ---
 title: "Build a Native App with Push Notifications Enabled"
+linktitle: "Native App with Push Notifications"
 url: /howto8/mobile/notif-build-native/
 weight: 60
 description: Tutorial for building a native app with push notifications enabled.

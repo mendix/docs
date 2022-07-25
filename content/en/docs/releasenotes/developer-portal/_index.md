@@ -17,6 +17,19 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### July 21st, 2022
+
+#### Improvements
+
+* We removed **My Activity Overview** from the **Account Settings** page.
+* We redesigned the [Pending App Invites](/developerportal/community-tools/mendix-profile/#pending-app-invites) section and added it as a new menu item to the **Account Settings** page.
+* We improved the warning messages when you leave or delete an app.
+
+#### Fixes
+
+* We fixed an issue where apps on the **Company Apps** page would not be displayed properly.
+* We fixed an issue that would cause an error when you edit a very long app name or description on the **General Settings** page.
+
 ### July 14th, 2022
 
 #### Improvements

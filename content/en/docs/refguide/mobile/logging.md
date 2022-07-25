@@ -33,7 +33,7 @@ Please note that after enabling or disabling sending logs to runtime, you must c
 - `Crash` logs are not supported currently.
 {{% /alert %}}
 
-// TODO: this piece is a duplicate of log levels in  `/refguide/runtime/loggin` can we create a structure to reuse that, check with tech writers team. 
+For more information, see the [Log Levels](/refguide/logging/#log-levels) section of *Logging*.
 
 ### 3.1 Critical
 

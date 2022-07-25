@@ -1,9 +1,0 @@
-body {
-    &.test {
-        .menu {
-            @include modifier('draft') {
-                display: block;
-            }
-        }
-    }
-}

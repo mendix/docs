@@ -1,0 +1,105 @@
+//
+// Style Markdown content
+//
+
+.td-content {
+    order: 1;
+    margin-left: 2rem; // NK - custom edit
+    max-width: 90%;  // NK - fixed width of all content to 90%
+
+    p, li, td {
+        font-weight: $font-weight-body-text;
+    }
+
+    // NK - custom additions for margin styling in lists
+    li p:first-child {
+        margin-bottom: 0.25rem;
+    }
+    li p:not(:first-child), li figure, li .alert {
+        margin-bottom: 0.5rem;
+    }
+
+    > h1 {
+        font-weight: $font-weight-normal; // NK - adjusted for use with multiple Noto Sans weights
+        margin-bottom: 1rem;
+        font-size: 2rem; // NK - custom edit
+    }
+
+    > h2 {
+        margin-bottom: 1rem;
+        font-size: 1.7rem; // NK - custom edit
+    }
+
+    > h2:not(:first-child) {
+        margin-top: 1.5rem; // NK - decrease space between sections
+    }
+
+    > h2 + h3 {
+         margin-top: 1.5rem; // NK - decrease space between sections
+    }
+
+    > h3, > h4, > h5, > h6 {
+        margin-bottom: 1rem;
+        margin-top: 1.5rem; // NK - decrease space between sections
+    }
+
+    img {
+        @extend .img-fluid;
+    }
+
+    // NK - removed '>' before table so the styling applies to all table elements in td-content, not just direct children
+    table {
+        @extend .table-striped;
+
+        @extend .table-responsive;
+
+        @extend .table;
+    }
+
+    > blockquote {
+        padding: 0 0 0 1rem;
+        margin-bottom: $spacer;
+        color: $gray-600;
+        border-left: 6px solid $secondary;
+    }
+
+    > ul li, > ol li {
+        margin-bottom: .25rem;
+    }
+
+    /* ordered lists inside ordered lists will be displayed using letters */
+    ol ol {
+        list-style-type: lower-alpha;
+        padding-left: 2rem; // NK - decrease indent
+    }
+    ul ol, ul ul, ol ul {
+        padding-left: 2rem; // NK - decrease indent
+    }
+
+
+    strong {
+        font-weight: $font-weight-bold;
+    }
+
+    > pre, > .highlight, > .lead, > h1, > h2, > ul, > ol, > p, > blockquote, > dl dd, .footnotes, > .alert {
+        @extend .td-max-width-on-larger-screens;
+    }
+
+    .alert:not(:first-child) {
+        margin-top: 2 * $spacer;
+        margin-bottom: 2 * $spacer;
+    }
+
+    .lead {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.td-title {
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 3rem;
+    }
+}

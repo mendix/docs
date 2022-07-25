@@ -1,0 +1,21 @@
+# Merges with _default/config.toml if --environment master
+# Need to set _merge = 'deep' to overwrite original value
+# =============================================================
+
+baseURL = "https://docs.mendix.com/"
+title = "Mendix Documentation"
+
+# MvM - add line below to output MxDocsAlgolia at root of /public (master only)
+[outputs]
+    _merge = 'shallow'
+    home = ["MxDocsAlgolia"]
+
+# MvM - MxDocsAlgolia outputFormats parameters - to generate Algolia for Mendix
+[outputFormats]
+    _merge = 'shallow'
+	[outputFormats.MxDocsAlgolia]
+		baseName = "mxdocsalgolia" # specifies how to look for Hugo layout for this output format
+		isPlainText = true # specifies GoLang’s plain text parser for the layout, preventing automatic HTML formatting in JSON
+		mediaType = "application/json" # file output type
+		notAlternative = true # excludes from looping over .AlternativeOutputFormats page variable
+

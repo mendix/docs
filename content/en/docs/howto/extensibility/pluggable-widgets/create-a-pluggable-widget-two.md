@@ -325,7 +325,7 @@ Until now the components did not keep any state. Each keystroke passed through t
             </Fragment>;
         }
         private isReadOnly(): boolean {
-        this.props.textAttribute.readOnly;
+        return this.props.textAttribute.readOnly;
         }
         private onLeave(value: string, isChanged: boolean): void {
             if (!isChanged) {

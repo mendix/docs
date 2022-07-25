@@ -36,7 +36,7 @@ This is the basic information required for a ticket:
 * A detailed description of the exact error
 * A detailed description of the action that was performed when the error was received
 * A description of the desired goal (optional)
-* The affected app (for more information, see [How to Prepare Your App for Support](/developerportal/support/prepare-your-project/))
+* The affected app (for more information, see [How to Prepare Your App for Support](/developerportal/support/prepare-your-app/))
 
 To submit a request with Mendix Support, follow these steps:
 
@@ -131,7 +131,7 @@ Depending on the type of request, providing attachments and additional informati
 
 ### 5.1 Attachments
 
-You can add large attachments such as project files to the request. Please note that Mendix recommends not attaching any files that contain personal identifiable data, credit card information, or other sensitive data.
+You can add large attachments such as app files to the request. Please note that Mendix recommends not attaching any files that contain personal identifiable data, credit card information, or other sensitive data.
 
 {{% alert color="info" %}}
 Attachments added to Mendix Support requests will be automatically deleted after 365 days.
@@ -142,7 +142,7 @@ Attachments added to Mendix Support requests will be automatically deleted after
 * Log file (*.txt*)
 * Date and time of the incident
 
-### 5.3 Team Server Problems & Project Issues
+### 5.3 Team Server Problems & App Issues
 
 * [App ID](/developerportal/settings/general-settings/)
 
@@ -150,14 +150,14 @@ Attachments added to Mendix Support requests will be automatically deleted after
 
 * Mendix Studio type (Studio or Studio Pro)
 * Mendix version
-* Test project (for details, see [How To Export A Mendix App Package](/refguide/export-project-package-dialog/))
+* Test app (for details, see [How To Export A Mendix App Package](/refguide/export-app-package-dialog/))
 * Reproducible steps
 
 ### 5.5 Marketplace Content Problems & Module, Widget & Theme Issues
 
 * Name of the Marketplace component
 * Mendix version
-* Test project (for details, see [How To Export A Mendix App Package](/refguide/export-project-package-dialog/))
+* Test app (for details, see [How To Export A Mendix App Package](/refguide/export-app-package-dialog/))
 * Reproducible steps
 
 {{% alert color="info" %}}

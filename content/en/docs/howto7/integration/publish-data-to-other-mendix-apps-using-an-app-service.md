@@ -1,5 +1,6 @@
 ---
 title: "Publish Data to Other Mendix Apps Using an App Service"
+linktitle: "Publish Data Using App Service"
 url: /howto7/integration/publish-data-to-other-mendix-apps-using-an-app-service/
 category: "Integration"
 weight: 14

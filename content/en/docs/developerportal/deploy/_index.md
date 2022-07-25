@@ -33,9 +33,11 @@ This section of the *Developer Portal Guide* contains step-by-step instructions,
 
 ## 2 Run Locally or Preview
 
-### 2.1 Studio Pro
+### 2.1 Studio Pro {#run-in-studio-pro}
 
 In *Studio Pro*, you can click the play button (▶) in the toolbar to run your app locally. Use the **View** button to directly jump to see your app running in your browser at *localhost*.
+
+To speed up the development process, most changes you make within Studio Pro will use "Instant Update" to be reflected immediately in the locally-running app. However, some changes (such as changes to the domain model) will need the whole app to be restarted.
 
 ### 2.2 Studio
 

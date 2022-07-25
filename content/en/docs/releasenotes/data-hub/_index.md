@@ -11,6 +11,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### July 14th, 2022
+
+#### Improvements
+
+* When a user other than the Technical or Business Owner deletes an application, environment, or data source, the Technical and/or Business Owner will receive a notification. For more information on data source ownership, see the [Changing Owners of an App](/data-hub/data-hub-catalog/curate/#changing-owners) section of *Curate Registered Assets*.
+
 ### June 30th, 2022
 
 #### Improvements

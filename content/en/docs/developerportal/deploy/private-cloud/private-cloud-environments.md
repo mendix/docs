@@ -1,5 +1,6 @@
 ---
 title: "Environment Planning for Private Cloud Clusters"
+linktitle: "Environment Planning"
 url: /developerportal/deploy/private-cloud-environments/
 description: "Best Practices for Private Cloud Environments"
 weight: 40

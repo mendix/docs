@@ -36,7 +36,7 @@ Use the [Unit Testing](https://marketplace.mendix.com/link/component/390/) modul
 
 ## 3 Usage
 
-To run a unit test, first navigate to the test suite overview on the left side of the page. A test suite reflects all the unit tests that are available in a module of your project. When you select  a test suite, all the unit tests inside the suite are displayed, including their last result, if applicable.
+To run a unit test, first navigate to the test suite overview on the left side of the page. A test suite reflects all the unit tests that are available in a module of your app. When you select  a test suite, all the unit tests inside the suite are displayed, including their last result, if applicable.
 
 Click **Run all module tests** to run all the unit tests in all the suites or all the unit tests in the selected suite. When the unit tests are running, the progress will be tracked.
 
@@ -48,7 +48,7 @@ When a unit test has been run, additional details about the test result will app
 
 ### 4.1 Creating Microflow Unit Tests
 
-To create a new microflow test in a module, just add a microflow with a name that starts with **Test** or **UT** (case-insensitive). A test microflow should have no input arguments and either no result type, a Boolean result type, or a string result type. For string results, a non-empty string is interpreted as an error message. A microflow without a return type is considered to be successful as long as no exceptions are thrown.
+To create a new microflow test in a module, just add a microflow with a name that starts with **TEST_** or **UT_** (case-insensitive). A test microflow should have no input arguments and either no result type, a Boolean result type, or a string result type. For string results, a non-empty string is interpreted as an error message. A microflow without a return type is considered to be successful as long as no exceptions are thrown.
 
 In addition, it is possible to create a **Setup** and **TearDown** microflow per module. Those microflows are invoked once before and after each test run (regardless of whether the test run consists of one or multiple unit tests).
 

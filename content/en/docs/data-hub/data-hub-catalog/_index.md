@@ -2,8 +2,10 @@
 title: "Data Hub Catalog"
 url: /data-hub/data-hub-catalog/
 description: "Introduces the processes and properties of Mendix Data Hub."
-tags: ["data hub", "data hub catalog"]
 weight: 30
+no_list: false 
+description_list: true 
+tags: ["data hub", "data hub catalog"]
 ---
 
 ## 1 Introduction
@@ -71,7 +73,6 @@ OData services can be registered in the Data Hub in the following ways:
 
 You can add tags and descriptions, edit app owners, and toggle discoverability to ensure the right people find your service. For more details, see [How to Curate Registered Assets](/data-hub/data-hub-catalog/curate/).
 
-
 ## 4 Information Available in the Data Hub Catalog
 
 In the Data Hub Catalog, all the information for registered assets is displayed in the [Catalog search details](/data-hub/data-hub-catalog/search/#search-details) screen. This information comes from the metadata in the OData service contract, and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners, [Data Hub curators](/data-hub/#curator), and [Mendix Admins](/data-hub/#admin).
@@ -90,11 +91,4 @@ The information that is registered for data sources and exposed datasets are as 
 	{{% alert color="info" %}}
   If significant changes are made in the service which would break any consuming apps, then good practice dictates that the service is deployed to a different endpoint with a major update in the version number. In this case the service will be listed twice for the two different endpoints. For more information see [Semantic numbering](/refguide/consumed-odata-service/#semantic) in *Consumed OData Service*. {{% /alert %}}
 
-## 5 Main Documents in This Category
-
-* [How to Search for Registered Assets](/data-hub/data-hub-catalog/search/) – describes search and asset details
-* [How to Consume Registered Assets](/data-hub/data-hub-catalog/consume/) – gives general information on consuming registered datasets
-* [How to Register OData Resources in the Data Hub Catalog](/data-hub/data-hub-catalog/register-data/) – describes how to register OData resources in the Data Hub Catalog: through the Mendix Cloud, using the Registration API, or in the UI form
-* [How to Register Non-OData Resources in the Data Hub Catalog](/data-hub/data-hub-catalog/register-non-odata-resources/) – describes ways to register non-OData resources in the Data Hub Catalog
-* [How to Curate Registered Assets](/data-hub/data-hub-catalog/curate/) – describes the curate functions for managing assets
-* [Data Accessibility and Security](/data-hub/data-hub-catalog/security/) – describes access to datasets and security
+## 5 Documents in This Category

@@ -4,6 +4,20 @@ url: /releasenotes/mobile/nt-6-rn/
 weight: 10
 description: "Native Template 6 release notes."
 ---
+## 6.2.23
+
+**Release date: July 18th, 2022**
+
+### Improvements
+
+* We updated the iOS minimum version to 14. (Ticket 152476)
+* We updated the version of react-native-vector-icons to 9.1.0.
+
+### Fixes
+
+* We removed the QUERY_ALL_PACKAGES permission for Android apps. (Ticket 152645)
+* We fixed an issue while building iOS apps in AppCenter. (Ticket 154462)
+
 ## 6.2.22
 
 **Release date: June 2nd, 2022**

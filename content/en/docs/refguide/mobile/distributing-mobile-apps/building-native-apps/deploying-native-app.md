@@ -1,5 +1,6 @@
 ---
 title: "Deploy Your First Mendix Native Mobile App"
+linktitle: "Deploy Mendix Native Mobile App"
 url: /refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/
 weight: 10
 description: Describes how to deploy your first Mendix native mobile app with the Mendix Native Mobile Builder.
@@ -22,7 +23,7 @@ The Mendix Native Mobile Builder does not currently support connections behind p
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
-* Mendix Studio Pro v8.15 and above installed using the online installer. The offline installer does not include the Mendix Native Mobile Builder dependency.
+* Install the [latest MTS version](/releasenotes/studio-pro/lts-mts/#mts) of Mendix Studio using the online installer. The offline installer does not include the Mendix Native Mobile Builder dependency.
 * Read [Get Started with Native Mobile](/refguide/mobile/getting-started-with-mobile/) to see how to create, style and debug an application with Mendix Studio Pro
 * Deploy your native mobile app to the cloud via Studio Pro and have the cloud address of your deployed application available
 * A [GitHub](https://github.com/) account.

@@ -1,5 +1,6 @@
 ---
 title: "Extend Design Properties to Customize Your Web Modeler Experience"
+linktitle: "Extend Design Properties"
 url: /howto7/front-end/extend-design-properties-to-customize-the-web-modeler-experience/
 weight: 60
 tags: ["Atlas", "UI", "UX", "user experience", "customize", "custom", "studio"]

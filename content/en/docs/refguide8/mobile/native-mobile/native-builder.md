@@ -371,7 +371,7 @@ The Native Template is tightly tied to the version of Studio Pro you are running
 
 **Unable to Commit {build number}** — Something went wrong while communicating with GitHub. Verify your connection, check that GitHub is available, and try running Native Builder again.
 
-### 6.2 App Center Errors
+### 6.2 App Center Errors {#app-center-errors}
 
 **Invalid API Token** — Your API token is invalid. Follow the [App Center Token](/howto8/mobile/deploying-native-app/#appcenter-token) section in *How to Deploy Your First Mendix Native Mobile App* and provide the API token to Native Builder.
 

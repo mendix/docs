@@ -69,7 +69,7 @@ The microflows *DS_MindSphereAccessToken* and *DS_GetAccessTokenForScheduledEven
 
 #### 2.2.1 RegisterSingleSignOn
 
-This microflow must be added as the *After startup* microflow or added as a sub-microflow to an existing after startup microflow. You can do this on the *Runtime* tab of the *Project > Settings* dialog, accessed through the *App Explorer* dock.
+This microflow must be added as the *After startup* microflow or added as a sub-microflow to an existing after startup microflow. You can do this on the *Runtime* tab of the **App** > **Settings** dialog, accessed through the *App Explorer* dock.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-module-details/image4.png" alt="App settings dialog" >}}
 
@@ -197,11 +197,11 @@ The changes are required to support:
 * XSRF – MindSphere needs to receive an XSRF token to work with your app
 * SSO login – the login process needs to be adjusted to support Single Sign-on
 
-The modified `index.html` file can be found in the /themesource/siemens_mindsphere_web_content/public folder of your project app.
+The modified `index.html` file can be found in the /themesource/siemens_mindsphere_web_content/public folder of your app.
 
 ### 4.3 mindspherelogin.html
 
-The Siemens MindSphere Starter Application, example apps, and Siemens MindSphere Web Content have a `mindspherelogin.html` file which replaces the standard Mendix `login.html` file to allow SSO integration with MindSphere. This can be found in the /themesource/siemens_mindsphere_web_content/public folder of your project app.
+The Siemens MindSphere Starter Application, example apps, and Siemens MindSphere Web Content have a `mindspherelogin.html` file which replaces the standard Mendix `login.html` file to allow SSO integration with MindSphere. This can be found in the /themesource/siemens_mindsphere_web_content/public folder of your app.
 
 ### 4.4 Error pages
 

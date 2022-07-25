@@ -1,5 +1,6 @@
 ---
 title: "Work with On-Premises Version Control Server"
+linktitle: "On-Premises Version Control Server"
 url: /howto/collaboration-requirements-management/on-premises-howto/
 category: "Collaboration"
 weight: 60

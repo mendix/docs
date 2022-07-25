@@ -1,5 +1,6 @@
 ---
 title: "Build a Pluggable Web Widget: Part 2 (Advanced)"
+linktitle: "2. Build Pluggable Web Widget"
 url: /howto/extensibility/create-a-pluggable-widget-two/
 weight: 20
 description: "This how-to will teach you how to add advanced features to your TextBox input widget."
@@ -324,7 +325,7 @@ Until now the components did not keep any state. Each keystroke passed through t
             </Fragment>;
         }
         private isReadOnly(): boolean {
-        this.props.textAttribute.readOnly;
+        return this.props.textAttribute.readOnly;
         }
         private onLeave(value: string, isChanged: boolean): void {
             if (!isChanged) {
@@ -543,7 +544,7 @@ Explaining the code:
 
 ### 3.7 Grouping and System Properties
 
-All pluggable widgets will automatically benefit from the `Visibility` property, which can be used to set the [conditional visibility](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#visibility) of a widget. Within *widget.xml*, property groups can be used to move a property to a specific tab or place properties in a group. For more detailed information on property groups, see the (Property Groups)[/apidocs-mxsdk/apidocs/pluggable-widgets#property-groups] section of the *Pluggable Widgets API Documentation*.
+All pluggable widgets will automatically benefit from the `Visibility` property, which can be used to set the [conditional visibility](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#visibility) of a widget. Within *widget.xml*, property groups can be used to move a property to a specific tab or place properties in a group. For more detailed information on property groups, see the [Property Groups](/apidocs-mxsdk/apidocs/pluggable-widgets/#property-groups) section of the *Pluggable Widgets API Documentation*.
 
 To apply this knowledge, reorganize the `properties` section in *TextBox.xml* to make the properties look like the core text box properties (which you can see after double-clicking the widget):
 

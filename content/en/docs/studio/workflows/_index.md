@@ -177,6 +177,8 @@ The **Toolbox** tab contains elements that you can drag and drop on a path. Belo
 * [User actions](#user-actions)
 * [System actions](#system)
 
+A microflow action can be exposed in Studio Pro as a custom action in the workflow toolbox in both Studio and Studio Pro. This functionality is particularly useful if you plan to reuse the microflow logic several times. Actions that are exposed appear in the custom category in the **Toolbox**. For more information on exposing a microflow action in the workflow toolbox, see [How to Add a Custom Action to the Workflow Toolbox](/howto/logic-business-rules/add-action-to-workflow-toolbox/) in *Studio Pro 9 How-tos*.
+
 ### 5.1 General {#general}
 
 Elements in the **General** section help you control the workflow path, for example, add parallel paths or end them:

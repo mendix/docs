@@ -1,5 +1,6 @@
 ---
 title: "Create Your First Microflow: Hello World!"
+linktitle: "Your First Microflow"
 url: /howto7/logic-business-rules/create-your-first-microflow-hello-world/
 category: "Logic & Business Rules"
 weight: 1

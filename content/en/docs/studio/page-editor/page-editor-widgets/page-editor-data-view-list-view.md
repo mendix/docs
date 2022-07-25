@@ -32,10 +32,8 @@ Data view consists of the following properties:
 
 * [Conditional Visibility](#visibility-data-view)
 
-* [Design](#design-section-data-view)
+* [Design](#design-section-data-view)  
 
-    
-    
     {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-data-view-list-view/data-view-properties.png"   width="250"  >}}
 
 ### 2.1 Data Source Section {#data-source-data-view} 
@@ -44,9 +42,11 @@ The data source determines which object will be shown in the data view. For gene
 
 | Data Source Property | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
-| Context              | A data source determining that wherever you are opening the page from, you are passing the selected object. For example, when you add the **Show Page** activity in the microflow, you select the page and the object to pass. (For more information on the microflows, see [Microflows](/studio/microflows/).) That means that when the page is opened in the microflow, the object of this type is provided and will be shown in the data view on the page. For more technical information on the context source, see [Context Source](/refguide/context-source/) in the *Studio Pro Guide*. |
+| Context              | A data source determining that when the page is opened, it expects the selected object to be passed to it. Data views with this data source get the object from the context. You select an entity for this data source and data from this entity will be shown in the data view. <br />If your data view is placed inside another data container, for example, inside a list view, you can also select an entity that has associations with the entity of this list view. <br />For more technical information on the context source, see [Context Source](/refguide/context-source/) in the *Studio Pro Guide*. |
 | Microflow            | A data source that runs a selected microflow and displays a return value. For more technical information, see [Microflow Source](/refguide/microflow-source/) in the *Studio Pro Guide*. |
 | List widget          | A data source that allows a data view to display detailed information on an object in the list widget (list view) on the same page. For more technical information, see [Listen To Widget Source](/refguide/listen-to-grid-source/) in the *Studio Pro Guide*. |
+
+When selecting an entity for the **Context** data source, you can choose to **Generate contents of data view**. This means that the data view will be automatically filled with input widgets that correlate with each attribute of the entity. For example, if you select the *Customer* entity that has *FullName* and *Address* attributes of string types, the data view will get two [text box widgets](/studio/page-editor-widgets-input-elements/) labelled *FullName* and *Address*.
 
 ### 2.2 General Section {#general-section-data-view}
 

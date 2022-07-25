@@ -1,5 +1,6 @@
 ---
 title: "Implement Best Practices for JavaScript Actions"
+linktitle: "JavaScript Actions Best Practices"
 url: /howto/extensibility/best-practices-javascript-actions/
 category: "Extensibility"
 weight: 60

@@ -30,6 +30,9 @@ Add a *.gitignore* file to make sure you keep your repo clean.
 
 When making a new widget, use the [Widget Boilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate) from GitHub. This has everything you need to start developing a Mendix widget.
 
+The Widget Boilerplate uses the (to be) depricated Dojo Framework.
+{: .alert .alert-warning}
+
 ## 5 Releases
 
 If you want to make a new release for the Mendix Marketplace, start with a new tag on the appropriate commit on the master or release branch. From these tags, you can create a [new release in GitHub](https://help.github.com/articles/creating-releases). In this release, set your release notes (which you can then use for the Marketplace release as well) and provide an official name. If you add the *.mpk* file as a binary file to the release tag, the Mendix Marketplace will automatically sync the *.mpk* to your new draft:

@@ -57,12 +57,12 @@ The **App Explorer** shows an icon in front of items (documents, folders, and mo
 
 | Icon | Meaning |
 | --- | --- |
-| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/688173.png" >}} | Nothing happened to this item. It is unchanged with the respect to the original. |
-| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/688172.png" >}} | You modified this item (as in, document, folder or module). |
-| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/688175.png" >}} | You added this item. |
-| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/688174.png" >}} | You moved this item to another position in the app tree. |
-| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/688164.png" >}} | You deleted this item. |
-| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/688165.png" >}} | You and somebody else made conflicting changes to this item. For more information, see the [Dealing With Conflicts](#conflicts) section below. |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/no-changes.png" >}} | Nothing happened to this item. It is unchanged with the respect to the original. |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-modified.png" >}} | You modified this item (as in, document, folder or module). |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-added.png" >}} | You added this item. |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-moved.png" >}} | You moved this item to another position in the app tree. |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-deleted.png" >}} | You deleted this item. |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-conflicting.png" >}} | You and somebody else made conflicting changes to this item. For more information, see the [Dealing With Conflicts](#conflicts) section below. |
 
 {{% alert color="info" %}}
 There is only room for one icon and if a document is both modified and moved it is shown as modified.
@@ -97,7 +97,7 @@ Committing results in a new revision in the repository. You can add the followin
 * A textual message. This should be a summary of the changes you made
 * A list of Developer Portal stories that relate to the commit. A small commit will probably relate to one story. Studio Pro shows stories that are in the current Sprint and do not have a status of *Done*. Adding the story to the commit will not change the state of the Developer Portal story. Setting the status to 'Done' must be done manually and depends on your *definition of done*.
 
-    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-02-21_13-50-03.png" >}}
+    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog.png" >}}
 
 Studio Pro also attaches some information automatically:
 
@@ -150,7 +150,7 @@ The revisions are shown in reverse chronological order (newest is at top of list
 
 Select a revision to see additional details such as related Developer Portal stories, changed documents, Studio Pro version and changes on disk. Icons summarize the kinds of changes that happened in the app.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-02-21_14-06-46.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/history-of-dialog.png" >}}
 
 ## 5 Reverting Changes
 
@@ -198,7 +198,7 @@ You can resolve an app conflict by choosing **Tasks > Use mine** or by deleting 
 
 A repository can contain a number of development lines. Each development line offers independent development from the other development lines. In the simple case there is just one development line called the main line (called 'trunk' in subversion). All development then happens inside that one line.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/688156.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/main-branch-line.png" >}}
 
 It is often convenient to have more than one development line. For example, one development line for fixing bugs in the currently deployed version of your app and another line where you develop new functionality. If you then find a bug in the deployed version you can fix it in the corresponding development line irrespective of the state of the development line where new functionality is developed. See [Version Control](/refguide/version-control/) for more information about branches.
 
@@ -229,7 +229,7 @@ Another reason for creating a branch is to develop a big new feature without int
 
 Firstly, select **Version Control > Manage Branch Lines...** and create a branch from a revision of the main line.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-02-28_13-50-39.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/create-branch-line-dialog.png" >}}
 
 Now work on the branch until the feature is done and commit the completed work.
 
@@ -330,13 +330,13 @@ When it creates the package, Studio Pro will also create a tag representing this
 
 If you are using the Mendix Cloud you can choose **App** > **Deploy to Licensed Cloud Node** to deploy a specific version.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-02-21_17-05-05.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/deploy-to-cloud.png" >}}
 
 #### 8.3.2 Creating a Deployment Package from a Specific Version
 
 If you are using a different hosting environment, you create a deployment package using the menu item **App** > **Create Deployment Package**.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-02-28_13-44-04.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/create-deployment-package.png" >}}
 
 ## 9 Working Outside Studio Pro {#working-outside-studio-pro}
 

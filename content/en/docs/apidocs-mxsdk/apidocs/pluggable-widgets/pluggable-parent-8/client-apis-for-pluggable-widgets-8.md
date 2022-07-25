@@ -93,8 +93,8 @@ Though the type definition above looks complex, it is fairly simply to use becau
 * When `status` is `ValueStatus.Available`, then the dynamic value has sufficient information to be computed, and the result is exposed in `value`.
 * When `status` is `ValueStatus.Unavailable`, then the dynamic value does not have such information such as when a parent Data view’s Data source has returned nothing. The `value` is then always `undefined`.
 * When `status` is `ValueStatus.Loading`, then the dynamic value is awaiting for the required information to arrive. This happens when a parent Data view is either waiting for its object to load or is reloading it due to a [refresh in client](/refguide/change-object/#refresh-in-client).
-	* In case a dynamic value was previously in a `ValueStatus.Available` state, then the previous `value` is still returned. This is done so that a component can keep showing the previous value if it doesn’t need to handle `Loading` explicitly. This prevents flickering: a state when a displayed value rapidly changes between loading and not loading several times.
-	* In other cases, the `value` is `undefined`. This is a common situation while a page is still being loaded.
+    * In case a dynamic value was previously in a `ValueStatus.Available` state, then the previous `value` is still returned. This is done so that a component can keep showing the previous value if it doesn’t need to handle `Loading` explicitly. This prevents flickering: a state when a displayed value rapidly changes between loading and not loading several times.
+    * In other cases, the `value` is `undefined`. This is a common situation while a page is still being loaded.
 
 ### 4.3 EditableValue {#editable-value}
 
@@ -213,11 +213,9 @@ export interface ListValue {
 }
 ```
 
-
 When a `datasource` property with `isList="true"` is configured for a widget, the client component gets a list of objects represented as a `ListValue`. This type allows detailed access to a data source, and enables control over the limit and offset of items represented in the list.
 
 However it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`attribute`](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#attribute), [`action`](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#action) or [`widgets`](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#widgets).
-
 
 ### 4.8 ListActionValue {#listactionvalue}
 
@@ -228,7 +226,6 @@ export type ListActionValue = (item: ObjectItem) => ActionValue;
 ```
 
 In order to call an action on a particular item of a `ListValue` first an instance of `ActionValue` should be obtained by calling `ListActionValue` with the item. See an example below.
-
 
 Assuming widget properties are confgured as follows:
 
@@ -266,7 +263,6 @@ Due to a technical limitation it is not yet possible to edit attributes obtained
 
 In order to work with the attribute value of a particular item of a `ListValue` first an instance of `EditableValue` should be obtained by calling `ListAttributeValue` with the item. See an example below.
 
-
 Assuming widget properties are configured as follows (with an attribute of type `string`):
 
 ```ts
@@ -284,7 +280,6 @@ const attributeValue = this.props.myAttributeOnDatasource(this.props.myDataSourc
 
 Note: in this code sample checks of status of `myDataSource` and availability of items are omitted for simplicity. See [EditableValue section](#editable-value) for more information about usage of `EditableValue`.
 
-
 ### 4.10 ListWidgetValue {#listwidgetvalue}
 
 `ListWidgetValue` represents a [widget property](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#widgets) that is linked to a data source. 
@@ -294,7 +289,6 @@ This allows the client component to render child widgets with items from a `List
 ```ts
 export type ListWidgetValue = (item: ObjectItem) => ReactNode;
 ```
-
 
 For clarity, consider the following example using `ListValue` together with the `widgets` property type. When the `widgets` property named `myWidgets` is configured to be tied to a `datasource` named `myDataSource`, the client component props appear as follows:
 
@@ -310,7 +304,6 @@ Because of the above configurations, the client component may render every insta
 ```ts
 this.props.myDataSource.items.map(i => this.props.myWidgets(i));
 ```
-
 
 ### 4.11 ListExpressionValue {#listexpressionvalue}
 
@@ -339,7 +332,6 @@ The following code sample shows how to get a `DynamicValue` that represents the 
 ```ts
 const expressionValue = this.props.myDataSource.myExpressionOnDatasource(this.props.myDataSource.item[0]);
 ```
-
 
 ## 5 Exposed Modules
 

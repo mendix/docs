@@ -28,6 +28,7 @@ The initial app *.mpk* file that is uploaded is not allowed to exceed 250Mb (wit
 The maximum number of files allowed in a working copy is 10,000.
 
 ### 1.6 What Apps Can I Access With the Model API?
+
 You can access all apps stored on [Mendix Team Server](/developerportal/collaborate/team-server/). Apps stored elsewhere, for example in your on-premises Git server, cannot be accessed with the model API.
 
 ### 1.7 Which Parts of the Mendix App Model Can I Access with the Model API?
@@ -38,11 +39,11 @@ When analyzing app models this gives you a lot of power: you can access every ti
 
 However, because we provide full read-write access, you can also break the model easily. We have taken measures against this, of course, and most of the meta model is safe to use. However, we recommend only doing read access actions on the following specific meta model components, because it is easy to create an invalid model:
 
-*   Consumed and published web services
-*   XML schemas
-*   Import and export mappings
-*   Custom widgets
-*   Rest services: PublishedRestService is an unsupported, experimental feature.
+* Consumed and published web services
+* XML schemas
+* Import and export mappings
+* Custom widgets
+* Rest services: PublishedRestService is an unsupported, experimental feature.
 
 When changing these components, make sure to use the [reverse engineering tool](/apidocs-mxsdk/mxsdk/generating-code-from-the-model/) to increase your chances of successfully building a script that creates valid models.
 

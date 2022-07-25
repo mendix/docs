@@ -1,10 +1,10 @@
 ---
-title: "Configure Security for a Workflow Process"
-url: /howto/security/configure-workflow-security/
-category: "Security"
-description: "Describes how to configure a workflow in Mendix Studio Pro."
-weight: 15
-tags: ["studio pro", "workflow", "task", "onboarding"]
+title: "Configuring Security for a Workflow Process"
+url: /refguide/workflow-security/
+linktitle: "Configuring Workflow Security"
+description: "Describes how to configure security for a workflow in Mendix Studio Pro."
+weight: 50
+tags: ["studio pro", "workflow", "task", "security", "workflow security"]
 ---
 
 ## 1 Introduction 
@@ -49,7 +49,7 @@ If the user does not see the user task, check the following:
 
     2. If a current user is assigned, the workflow is in progress, but its state is incompatible or failed.
 
-        {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/microflow-example.png" alt="Microflow Example" >}}
+        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-security/system-workflow-user-task.png" alt="XPath for the Workflow User Task Entity in the System Module" >}}
 
 
 

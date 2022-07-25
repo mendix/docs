@@ -569,7 +569,7 @@ The **Usage Dashboard** shows the real-time statistics about the usage of an app
 3. Find **3D Viewer** in the list.
 4. Click **Usage Dashboard** to show the usage details.
 
-### 5.9 Set preferences {#Set preferences}
+### 5.9 Set preferences {#set-preferences}
 
 You can change the setting of the preference widget to customize the behavior of the model and setup to your requirements.
 

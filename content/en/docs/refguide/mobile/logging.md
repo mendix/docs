@@ -9,8 +9,11 @@ tags: ["native", "logging", "troubleshooting"]
 
 In Mendix Studio Pro v9.16 and above native mobile apps are able to send logs to [Mendix Runtime](refguide/runtime/). Read this guide for logging configuration information.
 
-{{% alert color="info" %}}
-Please note that native client logs will not appear directly in the cloud portal logs overview before they are sent to [Mendix Runtime](refguide/runtime/), for more information please refer to [Sending Log Messages To Runtime](#sending-client-log-nodes-to-runtime).
+{{% alert color="warning" %}}
+Please note the following current limitations regarding native client logs:
+- Only the following log levels are supported currently: `information, warning, critical and error`
+- `Crash` logs are not supported currently.
+- Native client logs will not appear directly in the cloud portal logs overview before they are sent to [Mendix Runtime](refguide/runtime/), for more information please refer to [Sending Log Messages To Runtime](#sending-client-log-nodes-to-runtime).
 {{% /alert %}}
 
 ## 2 Enable Native App Logging
@@ -26,7 +29,8 @@ Please note that after enabling or disabling sending logs to runtime, you must c
 ## 3 Log Levels
 
 {{% alert color="warning" %}}
-Please note that at the moment only `Information` and above log levels are supported. Support for other log levels will be added in the future.
+- Please note that at the moment only `information, warning, critical and error` log levels are supported. Support for other log levels will be added in the future.
+- `Crash` logs are not supported currently.
 {{% /alert %}}
 
 // TODO: this piece is a duplicate of log levels in  `/refguide/runtime/loggin` can we create a structure to reuse that, check with tech writers team. 

@@ -9,164 +9,51 @@ tags: ["studio pro", "workflow", "task", "onboarding"]
 
 ## 1 Introduction 
 
-Workflow is a new visual language in Mendix Studio Pro and Mendix Studio that allows you to build extendable processes. It is fully integrated with other visual languages, such as microflow editor and page editor. 
+When configuring security for workflows, you need to set up the following:
 
-This how-to explains how to build an employee onboarding process using the workflow editor. 
+* Entity access
+* Page access
+* User assignment
 
-This how-to will teach you how to do the following:
+Combination of entity access, page access, and user assignment property help you make sure that the right users will be able to view user tasks and their data.
 
-* Create user roles
-* Create demo users
-* Configure entity access 
+## 2 Configuring Entity Access
 
-The how-to describes the following use case: 
+If a user does not have an access to an entity, this means they have no access to entity data. You can allow users to **Create**, **Read**, **Write** and/or **Delete** objects of the entity. If a user should be able to see the page with user tasks assigned to them, the **Read** access is sufficient. If a user needs to add, change, and/or delete data, you should allow **Create**, **Write**, and **Delete** objects for the corresponding user role. You can also configure an XPath for detailed access rules. 
 
-You would like to build an employee onboarding process. At first, an HR specialist needs to initiate the onboarding process for a new employee. The employee's manager then steps in and select devices for the employee. The manager also needs to specify whether the new hire is working from the office or home. The Facilities department will then need to prepare a workspace. Depending on where the new hire works from (the office or home), the Facilities department will either prepare a desk or ship the devices to the employee's address. 
+For more information on the entity access, see the [Entity Access vs. Page Access](/refguide/security/#entity-vs-page-access) section in *Security* and the [Entity Access](/refguide/module-security/#entity-access) section in *Module Security*.
 
-## 2 Prerequisites
+## 3 Configuring Page Access
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+For each user task you create a dedicated page where users can view their **Task inbox** and interact with tasks. These pages are also added to the menu bar, which is optimized so that only pages that the user has access to are visible. 
 
-* Your app has the following [Workflow Commons](https://marketplace.mendix.com/link/component/117066) module. Fore more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app/). 
+The combination of entity access and page access makes sure that only dedicated users can open a user task page and view data from it. 
 
-* Make sure your app has Atlas 3. As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas_Core, Atlas_Web_Content, and DataGrid.
+## 4 Configuring User Assignment
 
-* Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows/). 
+In the workflow properties, you specify what user is assigned to the task by writing an XPath. You can specify that only a certain user role can be assigned, for example, a user from an IT department. 
 
-* Make sure that the **User entity** is set to *Administration.Account* in your [App Settings](/refguide/app-settings/#workflows) > **Workflows** tab. 
+## 5 Why Does Not User See the User Task?
 
-* Make sure that the domain model of the module you are working in looks the following way:
+If the user does not see the user task, check the following:
 
-    {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/domain-model.png" alt="Domain Model" >}}
+1. Make sure they have at least the **Read** access for the entity set for the **WorkflowContext** parameter. 
 
-* Make sure you have the following enumerations configured:
+2. Make sure that the user role has the page access for the page configured for the user task.
 
-    * The PhoneModel enumeration:
+3. Make sure that the XPath does not restrict the user role in viewing the task.
 
-        {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/enumeration-phone-model.png" >}}
+4. The XPath of the System.WorkflowUserTask entity has filters that prevent users viewing a task:
 
-    * The LaptopModel enumeration:
+    1. The workflow is progress and the current user is the targeted user.
 
-        {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/enumeration-laptop-model.png" >}}
+    2. If a current user is assigned, the workflow is in progress, but its state is incompatible or failed.
 
+        {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/microflow-example.png" alt="Microflow Example" >}}
 
-## 3 Configuring User Roles
 
-Administrator and User roles are part of your app by default. Now you need to create three app roles for a manager, Facilities, and HR and configure them correctly. 
 
-Do the following:
+ 
 
-1. In the App Explorer, open **App** > **Security** and set security to **Production**.
 
-2. Open the **User roles** tab and click **New**. 
 
-3. In the **Add User Role** dialog box, set the **Name** to **Facilities** and make sure that only MyFirstModule is selected, as you do not need to create a specific Facilities role for all modules. 
-
-4. Click **OK**.
-
-5. You need to assign the **User** user role to Facilities for all other modules. Double-click the newly created Facilities role.
-
-6. In the **User Role** dialog box, click **Edit** in the **Module roles** section.
-
-    {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/edit-module-roles.png" >}}
-
-7. In the **Select Module Roles** dialog box, tick the User role for Administration and WorkflowCommons modules where no role is selected and click **OK**:
-
-    {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/modules-roles.png" alt="Module Roles" >}}
-
-8. Confirm your choice by clicking **OK**.
-
-9. Repeat steps 2-8 to create and configure the Manager role.
-
-10. Repeat steps 2-8 to create and configure the HR role.
-
-11. You already have the Administrator role by default, now you need to enable this role to monitor workflows, view their progress, and manage their settings in your app. Do the following:
-
-      1. In the **User roles** tab, double-click Administrator.
-
-      2. In the **User Role** dialog box, click **Edit** in the **Module roles** section. 
-
-      3. In the **Select Module Roles**, find the WorkflowCommons module and select the Administrator role:
-
-         {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/workflow-commons-admin.png" alt="Selecting Workflow Commons Administrator"   width="450"  >}}
-
-      4. Confirm your choice by clicking **OK**.
-
-12. Click **OK** to save changes to security.
-
-You have configured new app roles for Facilities, Manager, and HR, and enabled the Administrator role to monitor workflows, view their progress, and change their settings. 
-
-
-## 4 Configuring Demo Users
-
-You need to create demo users for the newly created app roles to be able to test your app. 
-
-Follow the steps below: 
-
-1. In the App Explorer, open **App** > **Security** > the **Demo users** tab. 
-1. Click **New**.
-2. In the **Add Demo User** dialog box, set the **User name** to **demo_facilities**.
-3. Set the same entity you selected for the **User entity** setting in  [App Settings](/refguide/app-settings/#workflows) > **Workflows** tab: set **Entity** to **Administration.Account**.
-4. Assign the corresponding user role in the **User roles** section: select the **Facilities** role and click **OK**.
-6. Repeat steps 2-5 to add the **demo_manager** demo user.
-7. Repeat steps 2-5 to add the **demo_hr** demo user.
-
-You have configured demo users for your app. 
-
-## 5 Configuring Entity Access
-
-The next step in setting up security is to configure the entity access otherwise you might run into consistency errors and the users of your app may see too much or too little information. For more information on what the entity access is, see the [Entity Access](/refguide/module-security/#entity-access) section in *Module Security*. Follow the steps below:
-
-1. Open the domain model.
-
-2. Double-click the **EmployeeOnboarding** entity to open its properties.
-
-3. In the **Properties** dialog box, open the **Access rules** tab and click **New** to create a rule for the HR role:
-
-    {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/entity-properties.png" alt="Entity Properties" >}} 
-
-4. In the **New Access rule** dialog box, do the following:
-
-    1. In the **Rule applies to the following modules** section, select the **HR** role.
-
-    2. In the **Create and delete rights** section, select **Allow creating new objects**. This allows HR to start the workflow. 
-
-    3. In the **Member read and write rights** section, click **Set all to Read**. As the HR needs only to start the workflow, but not to change any employee information, **Read** rights are sufficient for all attributes of the entity. 
-
-        {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/access-rules-hr.png" alt="Access Rules for the HR role" >}}
-
-    4. Click **OK** to save settings.
-
-5. In the **Access rules** tab, click **New** again to create rule for the Manager role.
-
-     1. In the **Rule applies to the following modules** section, select the **Manager** role.
-
-    2. In the **Member read and write rights** section, click the drop-down list for the **FullName** attribute and select **Read**. 
-    
-    3. As the Manager should be able to select where the new employee is working from and devices that they need, set the **WFH**, **PhoneModel**, and **LaptopModel** to **Read,Write**.
-    
-    4. Set the **FirstDay** attribute to **Read**.
-
-        {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/access-rules-manager.png" alt="Access Rules for the Manager Role" >}}
-
-    4. Click **OK** to save settings.
-
-7. In the **Access rules** tab, click **New** again to create rule for Facilities and User roles.
-
-    1. In the **Rule applies to the following modules** section, select  **Facilities** and **User** roles.
-
-    2. In the **Member read and write rights** section, click **Set all to Read**.
-    
-        {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/access-rules-facilities-and-user.png" alt="Access Rules for the Manager Role" >}}
-        
-    3. Click **OK** to save settings.
-
-
-8. Click **OK** in the **Properties** dialog box.
-
-You have set up the entity access. 
-
-
-## 6 Read More
-
-* [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app/)

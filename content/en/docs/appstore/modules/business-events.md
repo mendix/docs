@@ -32,7 +32,7 @@ To use the Mendix Business Events module, you will need the following:
 
 To use Mendix Business Events on production environments, you will need the pre-requisites listed above in addition to the following:
 * A subscription to the Mendix Event Broker (link to licensing/contact page)
-* A Technical Contact must enable the Event Broker Service in the Environment Details section of every app involved
+* A Technical Contact must enable the Event Broker Service in the [Services](/developerportal/deploy/mendix-cloud-deploy/environments/#service) tab of the [Environment Details](/developerportal/deploy/mendix-cloud-deploy/environments-details/#services) page of every app involved
 
 ### 1.3 Under the Hood: Mendix Event Broker
 
@@ -201,7 +201,7 @@ The first you use to define what your published business events look like. The s
 
 The third and fourth are internal entities defined by the business events module. You can query the DeadLetterQueue entity to determine which received events could not be processed.
 
-### 3.3.1 Dead Letter Queue for Failed Messages
+### 3.3.1 Dead Letter Queue for Failed Messages {#dead-letter-queue}
 
 Every time a Business Event is consumed, it is transformed to match the Entity created as part of the Subscription. When the Entity within the Business Event has changed based on the imported contract, it can render the Entity unable to be processed. In such a scenario the Business Event will fail into a **Dead Letter Queue** which contains the representation of the Entity within the data column.
 
@@ -297,7 +297,7 @@ Messages are first queued within the Outbox for successful delivery as a Busines
 
 The flow of events are controlled by the persistence of the event to the Consumed Business Event Entity as described above.  The flow will not continue in the case of such a failure.   They only cause for such failure would be databases related and thus exceptionally unlikely to occur.
 
-On the microflow, a log message action can be added after the start action in order to track the movement. Please refer to section 7 describing the Dead Letter queue.
+On the microflow, a log message action can be added after the start action in order to track the movement. Please refer to the [Dead Letter Queue for Failed Messages](#dead-letter-queue) section for more information..
 
 ## 7 Known Issues
 

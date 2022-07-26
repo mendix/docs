@@ -385,7 +385,6 @@ You can perform the following actions from this screen:
 * **Name** – the name of the association that is exposed in the OData service contract.
 * **Navigates to** – the dataset the association is made with. Click the link to see the details of the associated dataset in the Catalog.
 
-
 ### 3.6 Metadata Panel {#metadata}
 
 The metadata panel at the right of the asset details screen displays details from the OData service metadata contract and values that have been curated in the Data Hub Catalog:

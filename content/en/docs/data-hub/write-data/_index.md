@@ -27,7 +27,6 @@ Note the following terminology differences described in the table below:
 | Update   | Updatable  |
 | Delete   | Deletable  |
 
-
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:

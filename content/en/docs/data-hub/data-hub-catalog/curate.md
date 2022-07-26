@@ -52,8 +52,8 @@ When a data source is selected in the **Search Results**, the following options 
 
 * **Edit Metadata** – edit the description of the data source and datasets, add tags, or specify business and technical owners and add change the application icon
 * [Discoverable/Validated](#discoverability) – set the **Discoverable** and **Validated** settings for the data source from the drop-down menu
-   * **Discoverable** – defines whether the service is visible and can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source
-   * **Validate** – indicates that the data source and datasets have been validated
+    * **Discoverable** – defines whether the service is visible and can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source
+    * **Validate** – indicates that the data source and datasets have been validated
 * **Delete Data Source** – allows Owners to delete their own data sources, while Curators or Admins can delete any data sources in the company
 
 When a dataset is selected in the **Search Results**, the **Edit Dataset Details** option is displayed for editing the dataset and attribute descriptions.
@@ -67,7 +67,7 @@ You can curate Application Details from the **Application Details** screen as fo
 1. In the **Curation Bar** click **Edit** > **Edit Metadata** > **Application Details**.
 2. The **Application Metadata** screen is displayed:
 
-   {{< figure src="/attachments/data-hub/data-hub-catalog/curate/application-metadata-screen.png" alt="app metadata screen" >}}
+    {{< figure src="/attachments/data-hub/data-hub-catalog/curate/application-metadata-screen.png" alt="app metadata screen" >}}
 
 ### 4.1 Changing Owners of an App {#changing-owners}
 
@@ -131,7 +131,7 @@ When you want to upload a custom icon or image, the following apply:
 
 * The *minimum* recommended size of the image is 64 pixels x 64 pixels. You can crop larger images and files, and select the area you want to display during the upload operation.
 
-   {{% alert color="info" %}}If smaller images are selected, they will be expanded to meet the 64 x 64 size which may result in degradation of image quality. Ensure that your original file meets the recommendations for an optimal display.{{% /alert %}}
+    {{% alert color="info" %}}If smaller images are selected, they will be expanded to meet the 64 x 64 size which may result in degradation of image quality. Ensure that your original file meets the recommendations for an optimal display.{{% /alert %}}
 
 * Custom icons that are uploaded will be saved to the **Icon Library** and can be used for other apps.
 

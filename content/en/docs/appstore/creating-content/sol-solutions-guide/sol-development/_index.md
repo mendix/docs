@@ -18,4 +18,3 @@ Then, continue reading about [Applying IP Protection](/appstore/creating-content
 
 * [Architecting Adaptive Solutions](/appstore/creating-content/sol-architecting/)
 * [Applying IP Protection](/appstore/creating-content/sol-ip-protection/)
-

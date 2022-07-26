@@ -52,4 +52,5 @@ In order to overwrite the default star icon, add these classes to your app theme
   content: "\e034"; /* flag icon */
  }
 ```
+
 The `rating-flag` class should be added to the widget configuration on the **Common** tab.

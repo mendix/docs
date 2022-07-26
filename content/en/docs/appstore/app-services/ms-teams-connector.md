@@ -8,10 +8,10 @@ tags: ["marketplace", "marketplace component", "app service", "microsoft", "micr
 ---
 
 ## 1 Introduction
+
 The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service enables sending messages and actionable message cards to a Microsoft Teams channel automatically. You can add and configure the app service in a microflow. Once the microflow that uses the app service is triggered, your app asynchronously sends out the message to the Microsoft Teams channel. 
 
 This app service is an [add-on module](/refguide/consume-add-on-modules-and-solutions/).
-
 
 ### 1.1 Typical Use Cases
 
@@ -54,7 +54,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 6. Click the link in the email to go to the [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) page and log in there. This page shows all the products that you have trials for.
 7. Click **Microsoft Teams Connector** to open the service management dashboard.
 8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create the **LicenseSecret** and the **LicenseKey**. Save them somewhere safe. Later you will need to [configure the LicenseSecret and the LicenseKey](/appstore/app-services/intelligent-document-service/#configure-keys) in your app.
-   
+
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/binding-key-generation.png" >}}
 
 #### 2.1.2 Starting a Subscription
@@ -88,10 +88,10 @@ Before you deploy an app, you should configure the binding keys in your app as f
 2. On the **Configurations**, click **Edit**. The **Edit Configuration** dialog box opens.
 3. Go to the **Constants** tab.
 4. Click **New**. The **Select Constant** dialog box opens.
-5.  Go to **MicrosoftTeamsConnectorModule** > **Configurations**. You can see **LicenseSecret** and **LicenseKey** are defined as constants. 
+5. Go to **MicrosoftTeamsConnectorModule** > **Configurations**. You can see **LicenseSecret** and **LicenseKey** are defined as constants. 
 
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/configuring-license-keys.png" >}}
-    
+
 6. Select **LicenseSecret**.
 7. In the **New Constant Value** dialog box, enter the **Value** of the LicenseSecret you got.
 8. Click **OK** to save the settings and closes the dialog box.
@@ -141,14 +141,14 @@ Before you deploy an app, you should configure the binding keys in your app as f
     {{% alert color="info" %}}Each **Webhook URL** you add is counted as utilization towards the allocated app service quota. If a **Webhook URL** is incorrect, you can click the **...** icon and then edit or delete the Webhook.{{% /alert %}}     
 
 13. Copy the **Webhook ID** as follows:
-    1.  Hover over the **...** icon in the **Action** column to open the pop-up menu.
-       
+    1. Hover over the **...** icon in the **Action** column to open the pop-up menu.
+
         {{< figure src="/attachments/appstore/app-services/ms-teams-connector/edit-webhook-popup.png" >}}
-        
-    2.  Click **Copy**. A pop-up window opens and shows the name of the Webhook that you have copied.
-       
+
+    2. Click **Copy**. A pop-up window opens and shows the name of the Webhook that you have copied.
+
         {{< figure src="/attachments/appstore/app-services/ms-teams-connector/copied-popup.png" >}}
-       
+
         {{% alert color="note" %}}You can select **Edit** or **Delete** to edit or delete a Webhook.{{% /alert %}}
 
 ### 4.2 Sending Message to a Teams Channel
@@ -164,30 +164,30 @@ You can use the **Send Message to Webhook** activity in a microflow to send mess
    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/connector-in-microflow.png" >}}
 
 2. Double-click the **Send Message to Webhook** activity to open the **Send Message to Webhook** dialog box.
-3.  Specify the following settings with expression syntax:
+3. Specify the following settings with expression syntax:
 
     {{% alert color="warning" %}}All parameters are mandatory. Setting any value to be empty or **none** will cause an error.{{% /alert %}}
 
     1. Set the **webhookId** parameter to the **Webhook ID** generated in the Communication Services Console.
-    2.  For **Message type**, select **Text** or **Card** from the drop-down list:
-       
-        *  If you want to send a message as plain text or in HTML or markdown formatting, select **Text**.
+    2. For **Message type**, select **Text** or **Card** from the drop-down list:
+
+        * If you want to send a message as plain text or in HTML or markdown formatting, select **Text**.
 
             {{% alert color="info" %}}Fore more information about HTML and markdown tags supported by Microsoft Teams, see [Format Cards in Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format).{{% /alert %}}
-        
+
         * If you want to use an actionable message card as a message, select **Card**.
-        
+
             {{% alert color="info" %}}Fore more information about message cards, see [Building a Message Card](#build-message-card).{{% /alert %}}
-      
-    3.  For the **Message** parameter, set up the message content in the String format. Below is an example:
-      
+
+    3. For the **Message** parameter, set up the message content in the String format. Below is an example:
+
         {{< figure src="/attachments/appstore/app-services/ms-teams-connector/html-message.png" >}}
 
          The example above will render in the Microsoft Teams channel like this:
 
         {{< figure src="/attachments/appstore/app-services/ms-teams-connector/html-output.png" >}}
 
-    4.  Click **OK** to save the changes and close the dialog box.
+    4. Click **OK** to save the changes and close the dialog box.
 
 After the **Send Message to Webhook** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the Microsoft Teams channel. When the message is sent successfully, the activity returns a **SendMessageReponse** object. The **SendMessageReponse** entity for this object comes with the module and is pre-defined:
 
@@ -202,27 +202,27 @@ After the **Send Message to Webhook** activity is configured, once the microflow
 Microsoft Teams supports [actionable message cards](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference). You can build a message card and send it to a Microsoft Teams channel using the Microsoft Teams connector. To build a message card, perform the following steps:
 
 1. Go to the [Card Playground](https://messagecardplayground.azurewebsites.net/). This playground contains sample message cards. You can modify the JSON for any sample message card and view the corresponding generated message card on the fly.
-2.  Edit a message card sample as follows:
+2. Edit a message card sample as follows:
 
     1. At the upper-left corner of the page, click **Select Sample** to open the drop-down list. 
     2. Below the **Legacy MesssageCard samples** category, select a sample message card.
-    
+
        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/sample-message-cards.png" >}}
-    
+
        {{% alert color="info" %}}Do not select any sample card above the **Legacy MessageCard samples**. They are adaptive cards, which do not work with the Microsoft Teams connector.{{% /alert %}}
-    
+
     3. Edit the sample message card. The preview of your message card is on the right side of the page. 
 
        Below is the basic structure of a message card and the corresponding fields in JSON:
-    
+
        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/card-json-structure.png" >}}
-    
+
        The example above with **Add a comment action** expanded looks like this:
 
        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/add-a-comment-expanded.png" >}}
-    
+
        {{% alert color="info" %}}For more information about the design of a message card, see [Design guidelines](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference#design-guidelines). {{% /alert %}}
-       
+
 ### 4.3 Sending Message Using Microsoft Credentials
 
 Alongside the **Send Message to Webhook** activity, you can also find the **Send Message** activity in the microflow toolbox. You can use the **Send Message** activity to send messages with Microflow credentials.
@@ -247,7 +247,7 @@ Alongside the **Send Message to Webhook** activity, you can also find the **Send
     2. For **Supported account types**, select **Accounts in this organizational directory only**.
     3. For **Redirect URI**, select **Web** in the drop-down list first, and then enter the redirect URI (or reply URL) for your application in the text box. Use this format: `[base URL of your app]/link/[deeplink name]`, for example, https://contosoapp1/link/auth. This link must be set as per deep link configuration.
     4. Make a note of the URI that you entered in the step above, as you will need it later for configuration.
-    5.  Select **Register** to register the new registration.
+    5. Select **Register** to register the new registration.
 
         {{< figure src="/attachments/appstore/app-services/ms-teams-connector/register-an-application.png" >}}
 
@@ -269,7 +269,7 @@ Alongside the **Send Message to Webhook** activity, you can also find the **Send
 
 #### 4.3.2 Configuring Constants
 
-1.  If you have not configured the LicenseSecret and the LicenseKey, [configure](#configure-keys) them.
+1. If you have not configured the LicenseSecret and the LicenseKey, [configure](#configure-keys) them.
 
     {{% alert color="info" %}}You only need to configure LicenseSecret and LicenseKey once. Once they are configured, you can use both the **Send Message** and Send **MessagetoWebhook** activities.{{% /alert %}}
 
@@ -286,16 +286,17 @@ Alongside the **Send Message to Webhook** activity, you can also find the **Send
 
 4. In the **App Explorer**, click **Settings** to open the **App Settings** dialog box.
 
-5.  Go to the **Runtime** tab, and set **After startup** to the **StartupMicroflow** from the **MicrosoftTeamsConnector** module.
+5. Go to the **Runtime** tab, and set **After startup** to the **StartupMicroflow** from the **MicrosoftTeamsConnector** module.
 
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/after-startup.png" >}}
 
 6. In the **App Explorer**, click **Navigation** to open the **Navigation** page.
-7.  Configure the **Default home page** option to execute a microflow that will display your application's home page. The activity that shows the home page must be preceded by a microflow call named **Configure_HomePage_Prerequisite**, which is available in the **MicrosoftTeamsConnector** module.
+7. Configure the **Default home page** option to execute a microflow that will display your application's home page. The activity that shows the home page must be preceded by a microflow call named **Configure_HomePage_Prerequisite**, which is available in the **MicrosoftTeamsConnector** module.
 
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/configure-home-page-microflow.png" >}}
 
 #### 4.3.4 Obtaining the Channel Link on Microsoft Teams{#obtain-channel-link}
+
 One of the input items required for the **Send Message** activity is the channel link. To get this link for your channel, do as follows:
 
 1. Open Microsoft Teams.
@@ -319,20 +320,20 @@ A pop-up window opens and shows containing the channel link.
    {{% alert color="warning" %}}All parameters are mandatory. Setting any value to be empty or **none** will cause an error.{{% /alert %}}
 
    1. Set the **channelLink** parameter with the [channel link that you obtained](#obtain-channel-link) from Microsoft Teams.
-   2.  For **Message type**, select **Text** or **Card** using the Enumeration **Message_Types** from the **MicrosoftTeamsConnector** module.
+   2. For **Message type**, select **Text** or **Card** using the Enumeration **Message_Types** from the **MicrosoftTeamsConnector** module.
 
        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/message-type.png" >}}  
 
-       *  If you want to send a message as plain text or in HTML or markdown formatting, select **Text**.
+       * If you want to send a message as plain text or in HTML or markdown formatting, select **Text**.
 
            {{% alert color="info" %}}Fore more information about HTML and markdown tags supported by Microsoft Teams, see [Format Cards in Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format).{{% /alert %}}
-       
-       *  If you want to send a card designed using HTML and text, select **Card**.
+
+       * If you want to send a card designed using HTML and text, select **Card**.
 
            {{% alert color="info" %}}Fore more information on designing message cards, see [Building a Message Card using HTML](https://docs.microsoft.com/en-us/graph/api/chatmessage-post?view=graph-rest-beta&tabs=http#example-3-send-message-that-contains-cards).{{% /alert %}}
 
    3. For the **Message** parameter, set up the message content as a String value. 
-   4.  Click **OK** to save the changes and close the dialog box.
+   4. Click **OK** to save the changes and close the dialog box.
 
        {{% alert color="warning" %}}All parameters are mandatory. Setting any value to be empty or **none** will cause an error.{{% /alert %}}
 
@@ -344,9 +345,9 @@ After the **Send Message** activity is configured, once triggered, the activity 
 
 * If the message could not be sent, the value of the **SendMessageReponse** attribute is `false`.  Then you should execute the **SignIn Microflow** to log in using your Microsoft credentials. The microflow below shows one of the approaches to use the **SignIn Microflow** effectively. Introduce a decision activity after **SendMessage** activity that checks the **SentMessage** attribute value. If the value is false, then execute the **SignIn Microflow** activity.
 
-  {{< figure src="/attachments/appstore/app-services/ms-teams-connector/sign-in-microflow.png" >}}
+    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/sign-in-microflow.png" >}}
 
-  {{% alert color="info" %}}Once you are logged in by using the **SignInMicroflow** activity, you need to call this microflow again to send the message.{{% /alert %}}
+    {{% alert color="info" %}}Once you are logged in by using the **SignInMicroflow** activity, you need to call this microflow again to send the message.{{% /alert %}}
 
 ## 5 Checking Statistics Using the Usage Dashboard {#statistics}
 
@@ -355,13 +356,13 @@ The **Usage Dashboard** shows the real-time statistics about the usage of an app
 1. Log into the Marketplace.
 2. Go to **My Marketplace** and then do as follows:
 
-   * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
-   * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+    * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+    * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
 3. Find **Microsoft Teams connector** in the list.
 4. Click **Usage Dashboard** to see the following statistics:
-   * **This Month** – shows usage statistics for the current month
-   * **Last Month** – shows usage statistics for last month
-   * **Total** – shows usage statistics from the start of the subscription date to today
+    * **This Month** – shows usage statistics for the current month
+    * **Last Month** – shows usage statistics for last month
+    * **Total** – shows usage statistics from the start of the subscription date to today
 
 ## 6 Troubleshooting
 

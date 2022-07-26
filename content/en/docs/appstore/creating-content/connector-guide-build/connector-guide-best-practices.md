@@ -37,10 +37,9 @@ We recommend that the *main module* for your connector include the following:
         * As an alternative to the version constant, you can place a subfolder with the version indication
 * **Private** (folder)– indicates what other developers should not touch when implementing your module by placing all of that logic in this folder
 * **UseMe** (folder) – contains everything the implementing developer could use to implement your module in their application, and might include subfolders for **Microflows**, **Pages**, **Snippets**, **Templates**, and **Constants**
-  
 
 Your **App Explorer** should look like this after initial setup:
-    
+
 {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/app-initial-setup.png" >}}
 
 {{% alert color="info" %}}
@@ -50,6 +49,7 @@ This app folder structure example is based on the **Blank Web App** starter app 
 #### 2.2.2 App Root Setup {#root-setup}
 
 We recommend that you add additional folders to the root of your app (on disk). These include the following:
+
 * **DIST** – contains the releases of your module kept for reference
 * **MarketplaceResources** – contains all the assets used in the Mendix Marketplace (except for the release packages), including screenshots, videos, and reference documents
 
@@ -90,24 +90,24 @@ Mendix apps should focus on solving the business requirements. Generic technical
 
 You can extend your app to work with Java and Gradle.
 
-1.   Add an **Implementation** folder next to other app folders. 
+1. Add an **Implementation** folder next to other app folders. 
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/implementation-folder.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/implementation-folder.png" >}}
 
-2.   Set up an  **Implementation** folder as a Gradle `java-library` project. For details, see Gradle documentation on [Building Java Libraries Sample](https://docs.gradle.org/current/samples/sample_building_java_libraries.html#run_the_init_task). This is the expansion of the **Implementation** folder:
+2. Set up an  **Implementation** folder as a Gradle `java-library` project. For details, see Gradle documentation on [Building Java Libraries Sample](https://docs.gradle.org/current/samples/sample_building_java_libraries.html#run_the_init_task). This is the expansion of the **Implementation** folder:
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/gradle-library.png" >}}
-     
-     The **Implementation** folder is now a self contained Gradle project which can be opened in any IDE which understands Gradle and expanded with any code you like.
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/gradle-library.png" >}}
 
-3.   Build the **Implementation** folder and place the resulting *.jar* to the **userlib** folder. 
+    The **Implementation** folder is now a self contained Gradle project which can be opened in any IDE which understands Gradle and expanded with any code you like.
 
-     If your implementation has additional dependencies, consider creating one `fat jar`  containing all dependent *.jar* files.     
+3. Build the **Implementation** folder and place the resulting *.jar* to the **userlib** folder. 
+
+    If your implementation has additional dependencies, consider creating one `fat jar`  containing all dependent *.jar* files.     
 {{% alert color="info" %}}
 All modules have their *.jar* files in the **userlib** folder. In order to specify that this *.jar* is being used by your connector module, add an additional text file named `<jar-file-name>-<modulename>.requiredLib` .
 {{% /alert %}}
 
-4.   After implementation libraries are placed into the **userlib** folder, they are available in the Mendix application classpath so they can be used in a Java action in your connector module.
+4. After implementation libraries are placed into the **userlib** folder, they are available in the Mendix application classpath so they can be used in a Java action in your connector module.
 
 You can also also extend your app with Gradle and add the **Implementation** project as a sub-module. In this case, your implementation project becomes part of your Mendix app. You can use it in Java actions without having to copy the *.jar* files to the **userlib** folder. 
 
@@ -146,7 +146,6 @@ As stated in the [Main Connector Module Setup](#main-setup) section, each connec
 When exposing your microflows and Java actions, you need to ensure that end-users will be able to find them easily. As an example, take a look at how the category, icon, and name are listed for platform-supported items. Add documentation to your input parameters and for the full Java action/Microflow. This is part of the platform end-users will be able to access easily while using your Java action/microflow activities.
 
 For page templates, make sure to use a representative image, define a category that makes sense based on your module usage, and give a name that makes the template easily recognizable.
-
 
 ### 3.3 Logging
 
@@ -237,35 +236,35 @@ Using constants is the way to deal with configuration that aligns with the [Twel
 
 When you are looking for a simple configuration, such as a URL, username, or password, you can use [constants](/refguide/constants/). Constants are ideal for simple flat configurations.
 
-##### 4.1.1 Simple Configuration with a Free App Environment
+#### 4.1.1 Simple Configuration with a Free App Environment
 
 When using constants in combination with a Free App, you can use the settings profile to allow for different configuration.
 
-1.   Create a constant.
+1. Create a constant.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-constant.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-constant.png" >}}
 
-2.   Set the value of the constant to the value you want to use in your free cloud node.
+2. Set the value of the constant to the value you want to use in your free cloud node.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-value.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-value.png" >}}
 
-3.   Open your application **Settings**. Click **Duplicate** or **New** to create a new configuration for your local usage.
+3. Open your application **Settings**. Click **Duplicate** or **New** to create a new configuration for your local usage.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-settings.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-settings.png" >}}
 
-4.   In your configuration, open the **Constants** tab and click **New**.
+4. In your configuration, open the **Constants** tab and click **New**.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-new-constants.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-new-constants.png" >}}
 
-5.   Look up and select your constant.
+5. Look up and select your constant.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-select-constant.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-select-constant.png" >}}
 
-6.   Change the configuration value of your constant to the value you want to use on your local environment.
+6. Change the configuration value of your constant to the value you want to use on your local environment.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-change-value.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-change-value.png" >}}
 
-7.   Save all configuration and publish your application to your free node. When you run locally, Studio Pro will now use the **Active** configuration, while the free cloud node will keep using the value you specified in the **App Explorer**.
+7. Save all configuration and publish your application to your free node. When you run locally, Studio Pro will now use the **Active** configuration, while the free cloud node will keep using the value you specified in the **App Explorer**.
 
 ### 4.2 Complex Configuration
 
@@ -293,23 +292,23 @@ The following are the advantages of complex configuration:
 
 The following steps walk you through complex configuration: 
 
-1.   Set up a **Configuration** entity.
+1. Set up a **Configuration** entity.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/complex-config-entity.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/complex-config-entity.png" >}}
 
-2.   Create the microflow. Have a single microflow called **DS_GetOrCreateSettings** that is the only place in your application to acquire your settings. This microflow would retrieve your settings from the database and creates it if this does exist with appropriate default values.
+2. Create the microflow. Have a single microflow called **DS_GetOrCreateSettings** that is the only place in your application to acquire your settings. This microflow would retrieve your settings from the database and creates it if this does exist with appropriate default values.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/complex-config-create-microflow.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/complex-config-create-microflow.png" >}}
 
-3.   Set up security on the entity and the microflow.
+3. Set up security on the entity and the microflow.
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/complex-config-security.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/complex-config-security.png" >}}
 
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/complex-config-security-2.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/complex-config-security-2.png" >}}
 
-4.   Set up the administrator page. Have an administration page to manage the configuration. For maximum reusability, have all configuration settings available in a single snippet so your consumer can combine all admin sections from all components into a single area in their application.
+4. Set up the administrator page. Have an administration page to manage the configuration. For maximum reusability, have all configuration settings available in a single snippet so your consumer can combine all admin sections from all components into a single area in their application.
 
-5.   Encrypt the password and other sensitive information.
+5. Encrypt the password and other sensitive information.
 
 ##### 4.2.3.1 Further Considerations
 
@@ -356,6 +355,7 @@ OAuth comes in two types. In the first, the user does a login to the service pro
 OAuth is a very secure method, because the secret key is never exchanged during API requests. As long as you store the secret key safely in your own app, it will not be possible to hijack your credentials for the API provider. 
 
 #### 5.3.4 SAML
+
 The [SAML](/appstore/modules/saml/) module, available on the Mendix Marketplace, can be used as a replacement or extension of your supported authentication methods.
 
 ## 6 Testing {#testing}
@@ -365,12 +365,15 @@ You can test Mendix by calling microflows with the [Unit Testing](/appstore/modu
 As with any automated testing, it is a great supplement for capturing known, expected behavior. For capturing known unknowns and unknown unknowns, we recommend risk-based exploratory testing.
 
 ### 6.1 Testing Microflows
+
 Use the Mendix app where you built the module to test your module. The Unit Testing module can help call microflows and actions to aid in testing. See [How to Test Microflows Using the Unit Testing Module](/howto/testing/testing-microflows-using-the-unittesting-module/) for more information.
 
 ### 6.2 Java Unit Tests {#unit-testing}
+
 Java unit tests are a good way to automate the testing of your Java code. This is helpful when you extend your Mendix app or connector with Java actions.
 
 #### 6.2.1 Java Unit Testing Tools
+
 The following tools are part of the testing process of custom Java code in your Mendix app:
 
 * [JUnit](https://junit.org/junit5/) — This allows you to run Java unit tests easily.

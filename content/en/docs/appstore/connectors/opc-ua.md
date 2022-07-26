@@ -41,23 +41,23 @@ Only one of the options can be in use at a time. Which option to use is determin
 
 1. Limited value types
 
-   Currently only the following value types are implemented to be written to the node in the OPC UA Server: Boolean, Int16, UInt16, Int32, Int64, Float, Double, and String.
-   
-   Reading has been tested for limited data types. During reading and subscribing, all return values are casted to String through a simple `toString()` method. This implementation works well for Boolean and the Int values, but has not been tested for all data types. 
+    Currently only the following value types are implemented to be written to the node in the OPC UA Server: Boolean, Int16, UInt16, Int32, Int64, Float, Double, and String.
+
+    Reading has been tested for limited data types. During reading and subscribing, all return values are casted to String through a simple `toString()` method. This implementation works well for Boolean and the Int values, but has not been tested for all data types. 
 
 1. High-availability architecture (no horizontal scaling support)
 
-   At this point, this connector replies completely on storing configuration in the Server memory and only supports running on a single container instance. If you use scaling and run multiple parallel instances of the application, the module may generate exceptions and loose messages. 
+    At this point, this connector replies completely on storing configuration in the Server memory and only supports running on a single container instance. If you use scaling and run multiple parallel instances of the application, the module may generate exceptions and loose messages. 
 
 1. Complex events on nodes
 
-   Subscriptions are only possible on value changes of nodes. At this time, events or aggregates are not implemented yet. The connector supports all data types. Any OPC UA type is received and passed as a String to the evaluating microflow.
+    Subscriptions are only possible on value changes of nodes. At this time, events or aggregates are not implemented yet. The connector supports all data types. Any OPC UA type is received and passed as a String to the evaluating microflow.
 
 1. Advanced settings on monitored items
 
-   OPC UA offers fine-grained control over how values are shared with this Client. At this time all monitored items are set up with identical default parameters, and these can not yet be influenced. The default parameters come from the Apache Milo library. 
+    OPC UA offers fine-grained control over how values are shared with this Client. At this time all monitored items are set up with identical default parameters, and these can not yet be influenced. The default parameters come from the Apache Milo library. 
 
-   Some examples of the default values are:` SamplingInterval: 500ms`; `RequestedPublishingInterval: 500ms`; `QueueSize: 10`; `DiscardOldest: true`. This will get a guaranteed value every 500 ms, and stores a maximum of 10 values in the queue. If the queue fills up, it will discard the oldest and keep the latest 10 values only.
+    Some examples of the default values are:`SamplingInterval: 500ms`; `RequestedPublishingInterval: 500ms`; `QueueSize: 10`; `DiscardOldest: true`. This will get a guaranteed value every 500 ms, and stores a maximum of 10 values in the queue. If the queue fills up, it will discard the oldest and keep the latest 10 values only.
 
 ### 1.3 Prerequisites
 
@@ -86,7 +86,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
     This setting is only used by the OPC UA Server. See the OPC UA Specification for more details.
 
-4.  If you use subscriptions, set up the **After startup** and **Before shutdown** microflows in your [App Settings](/refguide/app-settings/) as follows: set the **After startup** microflow to **ASu_ReintializeSubscriptions** in the USE_ME folder, and set the **Before shutdown** microflow to **BSd_GracefullyShutdownSubscriptions** in the USE_ME folder.
+4. If you use subscriptions, set up the **After startup** and **Before shutdown** microflows in your [App Settings](/refguide/app-settings/) as follows: set the **After startup** microflow to **ASu_ReintializeSubscriptions** in the USE_ME folder, and set the **Before shutdown** microflow to **BSd_GracefullyShutdownSubscriptions** in the USE_ME folder.
 
     {{% alert color="info" %}}If you do not set up the **After startup** microflow, subscriptions will not reconnect after a reboot. If you do not set up the **Before shutdown** microflow, the Server will keep the old subscriptions potentially up to a few hours, and send duplicate messages for this period of time, which can cause exceptions in the Client.{{% /alert %}}
 
@@ -107,15 +107,15 @@ For each OPC UA Server, the following information will need to be stored in an *
 * **ServerID** (String) – The short nickname assigned to the Server for identification, which is primarily used for error and log messages.
 * **URL** (String) – The full URL of the OPC UA Server, for example, `opc.tcp://localhost:53530/OPCUA/SimulationServer`
 * **Username** (String) – The username used if **AuthenticatioType** is **CREDENTIALS**
-*  **Password** (String) – The password for the username used if **AuthenticatioType** is **CREDENTIALS**, only used for data-entry
+* **Password** (String) – The password for the username used if **AuthenticatioType** is **CREDENTIALS**, only used for data-entry
 
-   {{% alert color="info" %}}Once saved, this field is reset.{{% /alert %}}
+    {{% alert color="info" %}}Once saved, this field is reset.{{% /alert %}}
 
 * **Password_Encrypted** (String) – a password for the username, automatically encrypted from **Password**
 * **AuthenticationType** (Enumeration) – the type of authentication required for this Server: **NONe**, **CREDENTIALS**, or **CERTIFICATE**
 * **CertificatePassword** (String) – the certificate password required if **AuthenticatioType** is **CERTIFICATE**, only used for data-entry.
 
-   {{% alert color="info" %}}Once saved, this field is reset.{{% /alert %}}
+    {{% alert color="info" %}}Once saved, this field is reset.{{% /alert %}}
 
 * **CertificatePassword_Encrypted** (String) – a password for the certificate, automatically encrypted from **CertificatePassword**
 
@@ -133,7 +133,7 @@ The **Browse** action allows you to browse the nodes within the OPC UA Server. T
 
 * **Opc UA Server cfg** – an object of the entity type **OpcUaServerCfg**, which contains the configuration of the Server to which the request is made
 * **Node id** – the node ID from which you want to browse to its children
-  
+
     {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example: `ns=4;id=3`.
     When **Is Root** is set to **true**, leave this value empty.{{% /alert %}}
 
@@ -214,13 +214,14 @@ The configuration of the action is as follows:
 * **Opc ua Server cfg** – an object of entity type **OpcUaServerCfg** containing the configuration of the Server to which the request is made
 * **Node id** – the ID of the node you want to subscribe to
 
-  {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example, `ns=4;id=3`.{{% /alert %}}
+    {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example, `ns=4;id=3`.{{% /alert %}}
+
 * **On message microflow** – defines a microflow to be run every time a message is received from the subscribed service; required to have one input parameter of the **OpcUaClientMx.Message** type and no output.
 * **Subscription** (optional) – passes a **Subscription** entity to have more control over the frequency in which messages are sent to the Client. Leave this parameter blank to let the module setup the subscription.
 * **Use return value**
 
-  * **Yes** – This returns an object of type **MonitoredItem** which defines the new subscription and can be used in the microflow
-  * **No** – This does not return an object, and the returned object should not be changed or committed, but can be associated to for your administration and logic.
+    * **Yes** – This returns an object of type **MonitoredItem** which defines the new subscription and can be used in the microflow
+    * **No** – This does not return an object, and the returned object should not be changed or committed, but can be associated to for your administration and logic.
 
 * **Object name** – the name assigned to the variable containing the return value  
 
@@ -232,9 +233,7 @@ The configuration of the action is as follows:
 
 Information about nodes which are subscribed to is stored in the **MonitoredItem** entity associated with the **OpcUaServerCfg** Server configuration and the **Subscription** entity.  
 
-
 {{< figure src="/attachments/appstore/connectors/opc-ua/monitoreditem.png" alt="The subscription entity" width="300" >}}
-
 
 An object is created for each node you request to monitor, and contains the following information:
 
@@ -252,9 +251,7 @@ Information about unique subscriptions that are active with the OPC UA Server. T
 
 The subscription reflects the connection configuration with the OPC UA Server. 
 
-
 {{< figure src="/attachments/appstore/connectors/opc-ua/subscription.png" alt="The subscription entity" width="300" >}}
-
 
 This is the only object from the OpcUaClientMx domain that you should create from a microflow, you can create, change, and commit this before passing it into the **Subscribe** action. If you choose to leave the parameter empty, then an object is created automatically for each node you request to monitor. The entity contains the following information:
 
@@ -275,9 +272,8 @@ You can configure if the unsubscribe is permanent (and records are removed) or i
 * **Opc ua Server cfg** – an object of entity type **OpcUaServerCfg** containing the configuration of the Server to which the request is made
 * **Monitored item ID** – the ID of the item which is being monitored by the subscription — this is held as the **MonitoredItemID** in the **Subscription** entity
 * **RestartSubscriptionOnNextReboot** – Indicates if the registration entities should be kept by this action
-  * True – the **MonitoredItem** and **Subscription** will be kept in the database and their **Status** will be changed to **New**
-  * False – the **Status** of the monitored item will become **Deleted** and the module will automatically remove the entities from the database
-
+    * True – the **MonitoredItem** and **Subscription** will be kept in the database and their **Status** will be changed to **New**
+    * False – the **Status** of the monitored item will become **Deleted** and the module will automatically remove the entities from the database
 
 #### 4.2.5 Writing Data to a Node{#write}
 
@@ -290,11 +286,11 @@ If nothing is returned, the action was successful; and if the OPC UA Server refu
 
 * **NodeId** –  the ID of the node you want to write to
 
-  {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example, `ns=4;id=3`.{{% /alert %}}
+    {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example, `ns=4;id=3`.{{% /alert %}}
 
 * **Value to write** – the new value which you want to set for this node; can be any supported type (see the limitations for all types that are currently supported)
 
-  {{% alert color="info" %}}Make sure the value can easily be parsed as the type, i.e. Doubles must be formatted as 0.0, Integers may not have a decimal point, etc.{{% /alert %}}
+    {{% alert color="info" %}}Make sure the value can easily be parsed as the type, i.e. Doubles must be formatted as 0.0, Integers may not have a decimal point, etc.{{% /alert %}}
 
 ### 4.3 Pages
 
@@ -342,7 +338,7 @@ Test Messaging:
 
 * **NodeId** – the ID of the node you want to use
 
-  {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example, `ns=4;id=3`.{{% /alert %}}
+    {{% alert color="info" %}}Use the full node ID as referenced by the OPC UA Server. This is generally a combination of the namespace URI and identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation Client), and the **Browse** function returns this same value for each node. Example, `ns=4;id=3`.{{% /alert %}}
 * **Value to write** – the value to write to a node when the **Write** button is clicked; should be blank if you want to execute any of the other actions.
 * **Result** – the resulting JSON string from performing any of the four test actions, which shows the full response from the OPC UA Server, the connector might at relevant details in case of an error. 
 * **Read** – executes the [Read action](#read)
@@ -377,18 +373,21 @@ The purpose of this tab is to show the subscriptions with their current publishi
 ## 5 Troubleshooting
 
 ### 5.1 `ClosedChannelException`
+
 When getting a `ClosedChannelException` like the partial stacktrace below, you will need to include the certificates of your OPC UA Server in the runtime configuration. This requires you to upload your Server certificate in the Mendix Runtime Settings. 
 
-      com.mendix.core.CoreRuntimeException: com.mendix.systemwideinterfaces.MendixRuntimeException: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.nio.channels.ClosedChannelException
-         at com.mendix.basis.actionmanagement.ActionManager.executeSync(ActionManager.scala:84)
-         
+```sh {linenos=false}
+    com.mendix.core.CoreRuntimeException: com.mendix.systemwideinterfaces.MendixRuntimeException: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.nio.channels.ClosedChannelException
+        at com.mendix.basis.actionmanagement.ActionManager.executeSync(ActionManager.scala:84)
+
       Caused by: com.mendix.systemwideinterfaces.MendixRuntimeException: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.nio.channels.ClosedChannelException
-         at com.mendix.util.classloading.Runner.withContextClassLoader(Runner.java:23)
-    
+        at com.mendix.util.classloading.Runner.withContextClassLoader(Runner.java:23)
+
       Caused by: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.nio.channels.ClosedChannelException
-         at opcuaclientmx.impl.OpcUaClientManager.buildNewClient(OpcUaClientManager.java:74)
-    
+        at opcuaclientmx.impl.OpcUaClientManager.buildNewClient(OpcUaClientManager.java:74)
+
       Caused by: java.util.concurrent.ExecutionException: java.nio.channels.ClosedChannelException
+```
 
 ### 5.2 `no UserTokenPolicy with UserTokenType.UserName found`
 
@@ -397,17 +396,19 @@ This can be caused by one of the following reasons:
 * The Server is expecting a username, but you do not have one configured in your Server configuration
 * You have configured to authenticate with a username and a password, but the Server does not have that enabled. You should then use **NONE** or **CERTIFICATE** as **AuthenticationType**.
 
-      com.mendix.core.CoreRuntimeException: com.mendix.systemwideinterfaces.MendixRuntimeException: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.lang.Exception: no UserTokenPolicy with UserTokenType.UserName found
-         at com.mendix.basis.actionmanagement.ActionManager.executeSync(ActionManager.scala:84)
-        
+```sh {linenos=false}
+    com.mendix.core.CoreRuntimeException: com.mendix.systemwideinterfaces.MendixRuntimeException: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.lang.Exception: no UserTokenPolicy with UserTokenType.UserName found
+        at com.mendix.basis.actionmanagement.ActionManager.executeSync(ActionManager.scala:84)
+
       Caused by: com.mendix.systemwideinterfaces.MendixRuntimeException: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.lang.Exception: no UserTokenPolicy with UserTokenType.UserName found
-         at com.mendix.util.classloading.Runner.withContextClassLoader(Runner.java:23)
-        
+        at com.mendix.util.classloading.Runner.withContextClassLoader(Runner.java:23)
+
       Caused by: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.lang.Exception: no UserTokenPolicy with UserTokenType.UserName found
-         at opcuaclientmx.impl.OpcUaClientManager.buildNewClient(OpcUaClientManager.java:86)
-        
+        at opcuaclientmx.impl.OpcUaClientManager.buildNewClient(OpcUaClientManager.java:86)
+
       Caused by: java.util.concurrent.ExecutionException: java.lang.Exception: no UserTokenPolicy with UserTokenType.UserName found
-         at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+        at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+```
 
 ## 6 OPC UA Client Example Implementation{#example-implementation}
 

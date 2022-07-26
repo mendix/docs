@@ -20,15 +20,15 @@ The Email Connector includes the following features:
 * Set up email templates
 * Actions that can be performed after receiving emails:
     * Delete from server
-     * Move to a folder (for example, an archive)
+    * Move to a folder (for example, an archive)
 * Subscribe to incoming email
-     * Supports the IMAP and IMAPS protocol only
-     * A microflow can be configured to execute for new incoming email
+    * Supports the IMAP and IMAPS protocol only
+    * A microflow can be configured to execute for new incoming email
 * Unsubscribe from incoming email
-     * Removes the subscription (if it exists)
+    * Removes the subscription (if it exists)
 * Supported protocols:
-     * POP3 and POP3S
-     * IMAP and IMAPS
+    * POP3 and POP3S
+    * IMAP and IMAPS
 
 ### 1.2 Prerequisites
 
@@ -44,6 +44,7 @@ Certain functionalities of the Email Connector will not work correctly if the **
 ### 1.3 Included Widgets {#included-widgets}
 
 The following widgets are bundled in the module:
+
 * [HTML/JavaScript Snippet](/appstore/widgets/html-javascript-snippet/)
 * [Format String](/appstore/widgets/format-string/)
 * [Rich Text](/appstore/widgets/rich-text/)
@@ -60,7 +61,6 @@ After you install the [Email Connector](https://marketplace.mendix.com/link/comp
 1. Provide a value for the **EncryptionKey** constant available under **USE_ME** folder for password storage.
 2. Launch the UI by using the **EmailConnector_OverviewPage** in the **USE_ME** folder.
 3. Link [User Roles](/refguide/user-roles/) in app **Security** to ensure that the configuration page displays when you locally run the app.
-
 
 ## 3 Email Account Configuration {#accountconfig}
 
@@ -96,8 +96,8 @@ This is only supported for IMAP protocols, and some servers may not support it a
 
 * **Sanitize email to prevent XSS attacks** – option to enable the removal of malicious scripts to prevent XSS attacks. This option is unselected by default. To learn more about this option, see [Sanitize untrusted HTML (to prevent XSS)](https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer).
 * **Replicate everything in 'X' folder** – option to fetch emails
-     * When this setting is not selected, the connector will fetch the number of emails mentioned in the **Number of emails to retrieve from server** configuration based on the selected **Fetch strategy**
-     * When this setting is selected, checked then module will fetch all the emails (in order of oldest to newest) from that folder in batch size as mentioned in **Email Batch Size** configuration
+    * When this setting is not selected, the connector will fetch the number of emails mentioned in the **Number of emails to retrieve from server** configuration based on the selected **Fetch strategy**
+    * When this setting is selected, checked then module will fetch all the emails (in order of oldest to newest) from that folder in batch size as mentioned in **Email Batch Size** configuration
 * **Timeout** – the connection timeout for send email/receive emails operations. This can be set in the **Email Account** object.
 
 ## 4 Usage
@@ -149,6 +149,7 @@ In Studio Pro, you can configure this with the **SNIP_EmailTemplate_Overview** u
 When modeling your app in Studio Pro, use the  **SendEmailWithTemplate** Java action.
 
 The input parameters are the following:
+
 * **Data Object** – entity object from which you want to extract the placeholder tokens
 * **Email account** – email account consisting of outgoing email configuration
 * **Email template** – email template from which email message object is created and sent
@@ -195,13 +196,13 @@ When duplicating this microflow, do not change the input parameter name and data
 {{% /alert %}}
 
 * **onSubscriptionStateChangedMicroflow** – a microflow that will be triggered when subscription state is changed state can any of the following:
-     * `SUBSCRIPTIONFAILED`
-     * `CONNECTIONTOSERVERLOST`
-     * `CONNECTIONRETRYEXHAUSTED`
-     Make sure that microflow is accepting the string parameters `State` and `Comment`. Refer to the sample microflow **OCH_SubscriptionStateChanged**.
-     {{% alert color="warning" %}}
-     When duplicating this microflow, do not change input parameters’ name and data type.
-    {{% /alert %}}
+    * `SUBSCRIPTIONFAILED`
+    * `CONNECTIONTOSERVERLOST`
+    * `CONNECTIONRETRYEXHAUSTED`
+
+    Make sure that microflow is accepting the string parameters `State` and `Comment`. Refer to the sample microflow **OCH_SubscriptionStateChanged**.
+
+    {{% alert color="warning" %}}When duplicating this microflow, do not change input parameters’ name and data type.{{% /alert %}}
 
 {{% alert color="info" %}}
 Before subscribing to incoming email, it is recommended to attempt to unsubscribe from incoming email so that application will not end up having duplicate subscription for a single email account. The complete flow of subscription is shown in the microflow **ACT_SubscribeForEmailNotification**.

@@ -23,16 +23,16 @@ This module will be deprecated in the coming months. Check out the [Email Connec
 
 * Configuration of multiple accounts
 * Supported protocols:
-	* POP3 and POP3S
-	* IMAP and IMAPS
+    * POP3 and POP3S
+    * IMAP and IMAPS
 * Actions to be performed after receiving emails:
-	* Delete from server
-	* Move to a folder (for example, an archive)
+    * Delete from server
+    * Move to a folder (for example, an archive)
 * Subscribe to incoming email
-	* Supports the IMAP and IMAPS protocol only
-	* A microflow can be configured to execute for new incoming email
+    * Supports the IMAP and IMAPS protocol only
+    * A microflow can be configured to execute for new incoming email
 * Unsubscribe from incoming email
-	* Removes the subscription (if it exists)
+    * Removes the subscription (if it exists)
 
 ## 2 Configuration
 

@@ -31,8 +31,8 @@ You can use the [Database Replication](https://marketplace.mendix.com/link/compo
 
 * [Mx Model Reflection](/appstore/modules/model-reflection/) module – this module is required in order to configure the mapping between the Excel columns and the domain model
 * The *replication.jar* file (supplied in the *.mpk* file)
-	* Make sure you remove any older versions of *replication.jar* before installing this module (if you update, you do not need to remove the library anymore)
-	* If you have an old *replication.jar file* and are using the [Excel Importer](/appstore/modules/excel-importer/), update this module as well, since you need Excel Importer 3.0 or higher when using this module
+    * Make sure you remove any older versions of *replication.jar* before installing this module (if you update, you do not need to remove the library anymore)
+    * If you have an old *replication.jar file* and are using the [Excel Importer](/appstore/modules/excel-importer/), update this module as well, since you need Excel Importer 3.0 or higher when using this module
 
 ## 2 Configuration
 

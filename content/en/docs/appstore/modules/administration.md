@@ -13,17 +13,17 @@ The [Administration](https://marketplace.mendix.com/link/component/23513) module
 
 ## 1.1 Features
 
-- Support managing user accounts
-- Provide a read-only overview to show the following information
-  - all active sessions
-  - all schedules events
-  - all runtime instances
-- Support viewing runtime statistics
+* Support managing user accounts
+* Provide a read-only overview to show the following information
+    * all active sessions
+    * all schedules events
+    * all runtime instances
+* Support viewing runtime statistics
 
 ## 1.2 Dependencies
 
-- [Atlas UI Resources](https://marketplace.mendix.com/link/component/104730)
-- [Mendix SSO](https://marketplace.mendix.com/link/component/111349)
+* [Atlas UI Resources](https://marketplace.mendix.com/link/component/104730)
+* [Mendix SSO](https://marketplace.mendix.com/link/component/111349)
 
 ## 2. Installation
 

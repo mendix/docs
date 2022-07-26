@@ -57,4 +57,3 @@ Export the module for the Marketplace, including the dependent *userlib* content
 ```bash
 $ gradle extractModule
 ```
-

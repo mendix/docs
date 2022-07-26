@@ -4,6 +4,17 @@ url: /releasenotes/mobile/nt-6-rn/
 weight: 10
 description: "Native Template 6 release notes."
 ---
+## 6.2.24
+
+**Release date: July 26th, 2022**
+
+### Fixes
+
+* We fixed an issue while uploading an iOS application to App Store (Ticket 160571)
+* We fixed crashes on Xiaomi smartphones (Tickets 147158, 147350)
+* We fixed an issue while building Android apps on AppCenter
+
+
 ## 6.2.23
 
 **Release date: July 18th, 2022**

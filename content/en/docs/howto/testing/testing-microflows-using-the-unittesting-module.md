@@ -16,7 +16,7 @@ The Unit Testing module provides a user-friendly interface to manage and run uni
 This how-to will teach you how to do the following:
 
 * Set up the Unit Testing module
-* Create a microflow unit test
+* Unit-test a microflow
 
 ## 2 Prerequisites
 
@@ -36,7 +36,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Setting up the Unit Testing Module
 
-In this chapter you will set up the unit testing module and run the example tests.
+To set up the unit testing module and run the example tests, follow these steps:
 
 1. Create a [new app](/refguide/new-app/).
 2. Download and install the [Unit Testing](/appstore/modules/unit-testing/) module.
@@ -52,87 +52,104 @@ In this chapter you will set up the unit testing module and run the example test
 10. In the App Explorer, under the **App {App name}** node, click **Navigation**.
 11. In the **Menu** section, click **New item**.
 12. In the **Caption** field, enter *UnitTestOverview*.
-13. Select **Call a microflow** for the **On click** action, and then select the **UnitTestOverview** microflow:
+13. In the **On click** field, select **Call a microflow**, and then select the **UnitTestOverview** microflow, as in the following figure:
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580363.png" >}}
 
-14. Click **OK**:
-
-	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580362.png" >}}
-
+14. Click **OK**.
 15. Run the app locally.
-16. Go to `http://localhost:8080/index.html`.
-17. Click **UnitTestOverview** in the navigation.
+16. Go to [http://localhost:8080/index.html](http://localhost:8080/index.html).
+17. In the navigation pane, click **UnitTestOverview**.
+
+	The app shows the **UnitTesting** page, as in the following figure:
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580341.png" >}}
 
-	On the left side of the page, two buttons are shown. When you click **Run all module tests**, all the unit tests are executed (with check mark icons). When you click **Reset all tests**, the status of the tests change to not executed (with question mark icons).
+	You can use this page to execute unit tests, or to reset the test status back to not executed. Use the left-side navigation pane to select a module that contains unit tests. In this scenario, **Unit Testing** is the only module that contains unit tests. 
 
-	Beneath these buttons, the modules that contain unit tests are shown. To begin with and in this scenario, **Unit Testing** is the only module that contains unit tests. When you click a module, all the unit tests of the module are shown.
+18. Ensure that the **Rollback microflow tests after execution** check box is selected.
 
-	If you want to save all the changes made in the microflow to the database, you need to clear the **Rollback microflow tests after execution** box. Keep the box checked if you want to roll back all the changes.
+	{{% alert color="warning" %}}If the check box is cleared, all changes made by the microflows that you test are saved to the database. This can result in populating the database with unwanted test data. As a best practice, do not clear the check box unless it is required by your specific use case.
+	{{% /alert %}} 
 
-	On the right side of the page, the unit tests of the selected module are shown. In this scenario, five main unit tests are shown. When you click **Run module tests**, all the unit tests are executed. When you click **Run test** next to a unit test, only that unit test is executed.
+19. Validate that the Unit Testing module is correctly set up by running the **UnitTesting.Test_ValidUnitTest** test. 
 
-18. Click **Run Test** for **UnitTesting.Test_ValidUnitTest**. The color of the test case changes to red if failed and to green if passed:
+	The color of the test case changes to red if the test fails, and to green if it passes, as in the following figure:
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580358.png" >}}
 
-19. Click **Details** for Unit Testing.TestValidUnitTest to see the relevant details of the test case:
+20. To view detailed test results, in the **UnitTesting.Test_ValidUnitTest** row, click **Details**.
 
-	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580340.png" >}}
+## 4 Unit-testing a Microflow
 
-## 4 Creating a Microflow Test
+In this section, you will learn how to create and run a microflow unit test.
 
-In this section, you will learn how to create a microflow test. To create a new microflow test in a module, you need to add a microflow with a name that starts with *Test*. A test microflow should have no input arguments and a Boolean or string as the result type. For a Boolean result type, true means success, false means the test failed. For a string result type, any non-empty string indicates a failed test.
+### 4.1 Creating a Sample Microflow for Testing
 
-### 4.1 Creating a Microflow
+Optionally, create a sample microflow that you can then test with unit testing. In a real-life scenario, the steps below may be different, depending on the microflow that you want to create.
 
-To create the microflow, follow these steps:
+To create a sample microflow for testing, follow these steps:
 
-1.  Create a new enumeration and name it *Level* with three enumeration values: *Junior*, *Medior*, and *Senior*.
+1.  [Create a new enumeration](/studio/domain-models-enumeration/#create-new-enumeration) with the following parameters:
+	* **Name** – *Level*
+	* **Enumeration values** – *Junior*, *Medior*, and *Senior*, as in the following figure:
   
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580356.png" >}}
 
 2.  Open the domain model of **MyFirstModule**.
-3.  Create a new entity, name it *Employee*, and add two attributes: *Name* (of the **String** type) and *Level* ( of the  **Enumeration** > **Level** type).
+3.  [Create a new entity](/studio/domain-models/#adding-new-entities) with the following parameters:
+	* **Name** – *Employee*
+	* **Attributes** – *Name* (of the **String** type) and *Level* ( of the  **Enumeration** > **Level** type), as in the following figure:
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580355.png" >}}
 
-4.  Create a microflow called **Promote** that looks like this:
+4.  Create a microflow called **Promote** that changes the Level parameter for the Employee entity based on the enumeration, as in the following figure:
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/promote.jpg" >}}
 
-### 4.2 Creating a Unit Test
+### 4.2 Creating a Unit Test Microflow
 
-1. Add a new folder to MyFirstModule and name it _UnitTests_.
-2. Add a new microflow to the **UnitTests** folder and name it *Test_PromoteEmployeeToJunior*.
-3. Add one input parameter to the microflow for **Employee**.
-4. Add a new **Create object** activity for the **Employee** entity and set **Commit** to **Yes**.
-5. Add a new **Member** with *John* set for **Name**:
+This sub-section describes how to create a microflow test. In a real-life scenario, the steps below may be different, depending on the microflow that you want to test. If you need to adapt the microflow test to your requirements, bear in mind the following considerations:
+
+* The test microflow name must start with *Test*, for example *Test_RegisterTrainee*.
+* The microflow should have no input arguments.
+* The result type must be set to one of the following types:
+	* Boolean - For this result type, a *true* result means that the test succeeded, while a *false* result means that the test failed.
+	* String - For this result type, any non-empty string indicates a failed test.
+
+To create a sample test microflow, follow these steps:
+
+1. In the left-side navigation pane, right-click on **MyFirstModule**, and then click **Add folder**. 
+2. In the **Name** field, enter *UnitTests*.
+3. Right-click on the **UnitTests** folder, and then click **Add folder**.
+4. In the **Name** field, enter *Test_PromoteEmployeeToJunior*.
+5. In the new microflow, add **Employee** as an input parameter.
+6. Add a new **Create object** activity for the **Employee** entity. 
+7. In the **Commit** section of the activity, select **Yes**.
+8. Add a new **Member** with *John* set for **Name**:
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580353.png" >}}
 
-6. Now, you need to call the **Promote** microflow with the **Employee** object you just created. So, add a new activity of the **Microflow call** type, select the **Promote** microflow, and enter `$NewEmployee` for the argument:
+9. Now, you need to call the **Promote** microflow with the **Employee** object you just created. So, add a new activity of the **Microflow call** type, select the **Promote** microflow, and enter `$NewEmployee` for the argument:
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580352.png" >}}
 
-7. Now, the the employee needs to be promoted to the right level. Add a new activity of the **Microflow call** type and select the**UnitTesting.AssertTrue1** microflow.
-8. Set the argument of **ValueToAssert** parameter to `$NewEmployee/Level = MyFirstModule.Level.Junior`:
+10. Now, the the employee needs to be promoted to the right level. Add a new activity of the **Microflow call** type and select the**UnitTesting.AssertTrue1** microflow.
+11. Set the argument of **ValueToAssert** parameter to `$NewEmployee/Level = MyFirstModule.Level.Junior`:
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580344.png" >}}
 
-9. Right-click the **AssertTrue1** activity you just configured, select **Edit caption**, then enter *Promoted to Junior?* for the new caption.
-10. For failed tests, the last step information can be very useful. You can provide this information in your microflow by calling the **ReportStep** sub-microflow. So, add a new activity of the **Microflow call** type between **Create Employee** and **Promote** and select the **UnitTesting.ReportStep** microflow.
-11. Set the argument of parameter **Message** to `'Employee created'`.
-12. Add a new activity of the **Microflow call** type between **Promote** and **Promoted to Junior?** and select the **UnitTesting.ReportStep** microflow .
-13. Set the argument of parameter **Message** to `'Employee promoted'`.
-14. Double-click the **End event**, select **Boolean** as the return **Type**, and enter `true` as the **Return value**.
-15. The microflow should look like the model below:
+12. Right-click the **AssertTrue1** activity you just configured, select **Edit caption**, then enter *Promoted to Junior?* for the new caption.
+13. For failed tests, the last step information can be very useful. You can provide this information in your microflow by calling the **ReportStep** sub-microflow. So, add a new activity of the **Microflow call** type between **Create Employee** and **Promote** and select the **UnitTesting.ReportStep** microflow.
+14. Set the argument of parameter **Message** to `'Employee created'`.
+15. Add a new activity of the **Microflow call** type between **Promote** and **Promoted to Junior?** and select the **UnitTesting.ReportStep** microflow .
+16. Set the argument of parameter **Message** to `'Employee promoted'`.
+17. Double-click the **End event**, select **Boolean** as the return **Type**, and enter `true` as the **Return value**.
+18. The microflow should look like the model below:
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/promotetojunior.jpg" >}}
 
-16. Create three more test microflows as shown below:
+19. Create three more test microflows as shown below:
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/promotetomedior.jpg" >}}
 	
@@ -140,15 +157,15 @@ To create the microflow, follow these steps:
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/stillsenior.jpg" >}}	
 
-17. Run the app locally and view it. 
-18. Click **UnitTestOverview** in the navigation, and click **MyFirstModule** in the list of modules that contain one or more test cases:
+20. Run the app locally and view it. 
+21. Click **UnitTestOverview** in the navigation, and click **MyFirstModule** in the list of modules that contain one or more test cases:
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580348.png" >}}
 
 	This will display all the test cases for **MyFirstModule**.
 
-19. Verify the **Rollback microflow tests after execution** box is checked.
-20. Click **Run all module tests**. All the test cases should pass.
+22. Verify the **Rollback microflow tests after execution** box is checked.
+23. Click **Run all module tests**. All the test cases should pass.
 
 Congratulations! You created your first unit tests using the Unit Testing module.
 

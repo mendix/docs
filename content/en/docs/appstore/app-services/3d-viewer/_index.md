@@ -49,7 +49,7 @@ This app service enables doing the following:
 * Create 2D markup on model 
 * Take snapshot of a model 
 * Perform 3D measurement on distance, angle, area, radius, and length
-* Set filter options for PMI and save as personal preference
+* Set filter options for PMI and save as personal preferences
 
 ### 1.3 Limitations {#limitations}
 
@@ -281,11 +281,13 @@ No specific configuration is needed. With this widget, you can measure the dista
 
 ##### 4.6.2.7 Preference {#preference}
 
-This widget enables setting and saving your personal preferences, only options for PMI filter are supported currently.
+This widget enables setting and saving your personal preferences.
+
+{{% alert color="info" %}}Only options for PMI filter are supported currently.{{% /alert %}}
 
 Place this widget inside of a [Container3D](#container3d) widget. A [Viewer](#viewer) widget should be present in the same Container3D widget so that you can use the options provided in the widget to filter PMI of the model.
 
-With this widget, you can check different PMI entity types, model view and design group, those selected will not be loaded. For details on how this widget behaves in an app, see the [Set preferences](#set-preferences) section below.
+With this widget, you can select different PMI entity types, model view, and design group. Those selected will not be loaded. For details on how this widget behaves in an app, see the [Set preferences](#set-preferences) section below.
 
 #### 4.6.3 Toolbar Widgets
 
@@ -569,17 +571,13 @@ The **Usage Dashboard** shows the real-time statistics about the usage of an app
 3. Find **3D Viewer** in the list.
 4. Click **Usage Dashboard** to show the usage details.
 
-### 5.9 Set preferences {#set-preferences}
+### 5.9 Setting Preferences {#set-preferences}
 
-You can change the setting of the preference widget to customize the behavior of the model and setup to your requirements.
-
-The sections below present operations within the Preference widget
+You can change the setting of the Preference widget to customize the behavior of the model and setup to your requirements.
 
 {{< figure src="/attachments/appstore/app-services/3d-viewer/preferences-general.png" alt="preferences-general" >}}
 
-#### Preference Tab
-
-* **PMI** – set filter options for PMI
+On the **PMI** tab, you can set filter options for PMI and click **Ok** to save the changes. The items that you selected will not be loaded.
 
 ## 6 Read More
 

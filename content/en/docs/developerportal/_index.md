@@ -28,6 +28,10 @@ To create a new app click **Create App**, which will open a page where you can c
 
 On the right side of the top bar, you can search and access your [Mendix Profile](/developerportal/community-tools/mendix-profile/). You can also click the **+** icon to create a new app.
 
+{{% alert color="info" %}}
+A notification in the form of a red dot next to **Get Started with Mendix** will remain there for 30 days after your signup.
+{{% /alert %}}
+
 On the left side of the top bar, you open an access menu by clicking the **Switch to** menu:
 
 {{< figure src="/attachments/developerportal/switcher.png"   width="300"  >}}
@@ -119,10 +123,6 @@ Clicking the question icon in the Developer Portal brings up the options Mendix 
 Clicking the notifications icon shows all the notifications that you have received.
 
 {{< figure src="/attachments/developerportal/notifications-icon.png" >}}
-
-{{% alert color="info" %}}
-A notification in the form of a red dot next to **Get Started with Mendix** will remain there for 30 days after your signup.
-{{% /alert %}}
 
 To configure what types of notifications you receive, click the settings icon and configure the settings in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
 

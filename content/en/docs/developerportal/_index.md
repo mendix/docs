@@ -124,7 +124,7 @@ Clicking the notification icon shows all the notifications that you have receive
 A notification in the form of a red dot next to **Get Started with Mendix** will remain there for 30 days after your signup.
 {{% /alert %}}
 
-You can receive notifications from all your apps. To configure what types of notifications you receive, click the settings icon and configure the settings in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
+To configure what types of notifications you receive, click the settings icon and configure the settings in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
 
 {{< figure src="/attachments/developerportal/notification-settings-icon.png" >}}
 

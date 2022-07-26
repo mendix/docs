@@ -116,9 +116,9 @@ Clicking the question icon in the Developer Portal brings up the options Mendix 
 
 ## 6 Notifications
 
-Clicking the notification icon shows all the notifications that you have received.
+Clicking the notifications icon shows all the notifications that you have received.
 
-{{< figure src="/attachments/developerportal/notification-icon.png" >}}
+{{< figure src="/attachments/developerportal/notifications-icon.png" >}}
 
 {{% alert color="info" %}}
 A notification in the form of a red dot next to **Get Started with Mendix** will remain there for 30 days after your signup.

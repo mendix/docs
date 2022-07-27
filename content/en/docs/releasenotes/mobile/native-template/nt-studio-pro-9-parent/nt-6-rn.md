@@ -10,10 +10,9 @@ description: "Native Template 6 release notes."
 
 ### Fixes
 
-* We fixed an issue while uploading an iOS application to App Store (Ticket 160571)
-* We fixed crashes on Xiaomi smartphones (Tickets 147158, 147350)
-* We fixed an issue while building Android apps on AppCenter
-
+* We fixed an issue affecting iOS apps uploading to the App Store. (Ticket 160571)
+* We fixed an issue with crashes affecting Xiaomi smartphones. (Tickets 147158, 147350)
+* We fixed an issue affecting iOS apps building in AppCenter.
 
 ## 6.2.23
 
@@ -27,7 +26,7 @@ description: "Native Template 6 release notes."
 ### Fixes
 
 * We removed the QUERY_ALL_PACKAGES permission for Android apps. (Ticket 152645)
-* We fixed an issue while building iOS apps in AppCenter. (Ticket 154462)
+* We fixed an issue affecting iOS apps building in AppCenter. (Ticket 154462)
 
 ## 6.2.22
 

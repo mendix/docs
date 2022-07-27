@@ -259,49 +259,49 @@ You can configure the app running in Studio Pro to use the postgres database cre
 
 1. Can I undo a Publish Event action in case my microflow fails?
 
-Yes. If you do a rollback in an error handler, the business event will not be sent to other applications.
+   Yes. If you do a rollback in an error handler, the business event will not be sent to other applications.
 
 2. Can I publish my own events from other software directly to a Kafka topic?
 
-No, that is currently not supported. 
+   No, that is currently not supported. 
 
 3. Can I send related or associated objects as a single Business Event?
 
-No, only a flat object. For complex data structures, provide an API where the consuming app can retrieve the complex structure upon retrieval of a Business Event. Alternatively, you can use a string attribute in the Business Event to store JSON or XML using mappings.
+   No, only a flat object. For complex data structures, provide an API where the consuming app can retrieve the complex structure upon retrieval of a Business Event. Alternatively, you can use a string attribute in the Business Event to store JSON or XML using mappings.
 
 4.  I want to replicate data between my Mendix apps. Should I use Business Events?
 
-Business Events can help you replicate data more efficiently by ensuring you do not have to poll continuously. Instead, the consuming app only polls for new data if it receives a Business Event indicating that something has changed.  To share data, it is still preferable to use OData or RESTful APIs, as this is not the current purpose of Business Events.
+    Business Events can help you replicate data more efficiently by ensuring you do not have to poll continuously. Instead, the consuming app only polls for new data if it receives a Business Event indicating that something has changed.  To share data, it is still preferable to use OData or RESTful APIs, as this is not the current purpose of Business Events.
 
 5.  Are Business Events guaranteed to be delivered only once?
 
-The **Outbox** will publish each Business Event only once.  This does not prevent business logic from sending duplicate messages to the [Outbox](#be-entities). 
+    The **Outbox** will publish each Business Event only once.  This does not prevent business logic from sending duplicate messages to the [Outbox](#be-entities). 
 
 6.  Are Business Events guaranteed to be delivered in the original sequence?
 
-Events will be delivered in the sequence they are produced. The Mendix Business Events module, however, persists the event to the **Entity** table in this order. Once the entity is persisted it triggers the microflow for the persisted entity. A failure in the microflow can cause data to become out of sequence. Event ordering is not currently a feature of Mendix Business Events.
+    Events will be delivered in the sequence they are produced. The Mendix Business Events module, however, persists the event to the **Entity** table in this order. Once the entity is persisted it triggers the microflow for the persisted entity. A failure in the microflow can cause data to become out of sequence. Event ordering is not currently a feature of Mendix Business Events.
 
 7.  How do I detect and correct failed processing of received events?
 
-The Mendix Business Events module uses [Task Queue](/refguide/task-queue/) to publish and consume events, so all the capabilities of observability of task queue can be used here as well.
+    The Mendix Business Events module uses [Task Queue](/refguide/task-queue/) to publish and consume events, so all the capabilities of observability of task queue can be used here as well.
 
 8.  How do I configure which Kafka cluster to use?
 
-During modelling, you can use the **Constants** described in the [Configuring Local Deployments](#config-local-deployment) section to configure to a local or other Kafka. This does not transfer through to runtime. During runtime, the configurations are provided during startup automatically, since only Mendix Cloud is supported.
+    During modelling, you can use the **Constants** described in the [Configuring Local Deployments](#config-local-deployment) section to configure to a local or other Kafka. This does not transfer through to runtime. During runtime, the configurations are provided during startup automatically, since only Mendix Cloud is supported.
 
 9.  How do I delete or clean up events and tasks?
 
-This will be implemented in a forthcoming release. In the meantime, you could use scheduled event to clean up the events yourself (make sure the consumer doesn’t need them anymore). For the task queue, the **Task Queue Helpers**, a module linked in [Task Queue](/refguide/task-queue/), can be used.
+    This will be implemented in a forthcoming release. In the meantime, you could use scheduled event to clean up the events yourself (make sure the consumer doesn’t need them anymore). For the task queue, the **Task Queue Helpers**, a module linked in [Task Queue](/refguide/task-queue/), can be used.
 
-10.  How do I know the event was successfully published?
+10. How do I know the event was successfully published?
 
-Messages are first queued within the **Outbox** for successful delivery as a Business Event.  Monitoring the **Outbox** entity will allow the developer to determine if there are unpublished Business Event Entities. See the [Business Event Entities](#be-entities) for more information on the **Outbox**.
+    Messages are first queued within the **Outbox** for successful delivery as a Business Event.  Monitoring the **Outbox** entity will allow the developer to determine if there are unpublished Business Event Entities. See the [Business Event Entities](#be-entities) for more information on the **Outbox**.
  
-1.  How do I know events are consumed successfully?
+11. How do I know events are consumed successfully?
 
-The flow of events are controlled by the persistence of the event to the Consumed Business Event Entity (see [Business Event Entities](#be-entities)).  The flow will not continue in the case of such a failure.   They only cause for such failure would be database-related and unlikely to occur.
+    The flow of events are controlled by the persistence of the event to the Consumed Business Event Entity (see [Business Event Entities](#be-entities)).  The flow will not continue in the case of such a failure.   They only cause for such failure would be database-related and unlikely to occur.
 
-On the microflow, a log message action can be added after the start action in order to track the movement. Refer to the [Dead Letter Queue for Failed Messages](#dead-letter-queue) section for more information.
+    On the microflow, a log message action can be added after the start action in order to track the movement. Refer to the [Dead Letter Queue for Failed Messages](#dead-letter-queue) section for more information.
 
 ## 7 Known Issues
 

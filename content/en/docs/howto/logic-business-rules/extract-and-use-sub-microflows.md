@@ -36,7 +36,7 @@ To extract the validation steps to a sub-microflow, follow these steps:
 
     {{< figure src="/attachments/howto/logic-business-rules/extract-and-use-sub-microflows/18581020.png" >} alt="Selecting an area to use as a sub-microflow" }
 
-2. Right-click an item in the selection, and then select **Extract submicroflow...**, as in the following figure:
+2. Right-click an item in the selection, and then select **Extract submicroflow**, as in the following figure:
 
     {{< figure src="/attachments/howto/logic-business-rules/extract-and-use-sub-microflows/18581018.png" >} alt="Selecting the Extract submicroflow menu option" }
 

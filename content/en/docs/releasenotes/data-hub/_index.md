@@ -15,11 +15,11 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Improvements
 
-* Company administrators are now able to off-board external participants from their company's Data Hub Catalog, using the Control Center. 
+* Company administrators can now remove external participants from their company's Data Hub Catalog. To do so, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
 
 #### Fixes
 
-* We fixed an error that occured, if the Business Owner field was initially empty, user was unable to assign a new Business Owner.
+* We fixed an error that occured when the **Business Owner** field was initially left empty, and users could not assign a new **Business Owner** in subsequent attempts.
 
 ### July 14th, 2022
 

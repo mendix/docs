@@ -114,8 +114,8 @@ This section describes how to create a microflow test for the sample microflow d
 * The test microflow name must start with *Test*, for example *Test_RegisterTrainee*.
 * The microflow should have no input arguments.
 * The result type must be set to one of the following types:
-	* Boolean – For this result type, a *true* result means that the test succeeded, while a *false* result means that the test failed.
-	* String – For this result type, any non-empty string indicates a failed test.
+	* **Boolean** – For this result type, a *true* result means that the test succeeded, while a *false* result means that the test failed.
+	* **String** – For this result type, any non-empty string indicates a failed test.
 * As a best practice, do not test every microflow in your application. Instead, test the most used or most complex microflows.
 * You can create a Setup and TearDown microflow in each module. The Setup microflow is invoked once before each test run, and the TearDown microflow is invoked once after each test run, regardless of whether the test run consists of one or multiple unit tests.
 

@@ -65,7 +65,7 @@ To set up the unit testing module and run the example tests, follow these steps:
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580341.png" alt="A view of the UnitTesting page and default tests" >}}
 
-	You can use this page to execute unit tests, or to reset the test status back to not executed. Use the left-side navigation pane to select a module that contains unit tests. In this scenario, **Unit Testing** is the only module that contains unit tests. 
+	You can use this page to execute unit tests, or to reset the test status back to not executed. Use the left-side navigation pane to select a module that contains unit tests. In this scenario, **UnitTesting** is the only module that contains unit tests. 
 
 18. Ensure that the **Rollback microflow tests after execution** check box is selected.
 

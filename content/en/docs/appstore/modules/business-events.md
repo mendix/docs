@@ -32,7 +32,7 @@ You must purchase a license to the [Mendix Event Broker](#event-broker) to run a
 To use the Mendix Business Events module, you will need the following:
 
 * Mendix 9.14 or higher
-* At least two Mendix apps: one that *publishes* the Business Events and makes them available, and one that *subscribes* to the Business Events (you can have as many publishing and consuming apps as you require)
+* At least two Mendix apps: one that publishes the Business Events and makes them available, and one that subscribes to the Business Events (you can have as many publishing and consuming apps as you require)
 
 To use Mendix Business Events on production environments, you will need the pre-requisites listed above in addition to the following:
 * A subscription to the Mendix Event Broker (link to licensing/contact page)
@@ -46,14 +46,14 @@ The Mendix Event Broker is based on [Apache Kafka](https://kafka.apache.org/).
 * Events are published to a Kafka topic
 * Apps are subscribed to a Kafka topic to receive events, and messages use standard [CloudEvents payload format](https://github.com/cloudevents/spec/blob/v1.0.1/spec.md)
 
-There is a single Kafka broker for free apps, all your company free apps can connect
-* All free apps in your company publish and consume from the same Kafka broker
+There is a single Kafka broker for Free Apps that all your company Free Apps can connect to.
+* All Free Apps in your company publish and consume from the same Kafka broker
 * Events are published to one shared Kafka topic
-* Any free app in your company can receive these events
+* Any Free App in your company can receive these events
 
 #### 1.3.1 Event Broker Topics and Channels
 
-All events from free apps are published to one shared topic. Events published by apps running on licensed nodes are published to their own channels. These channels, implemented as topics on Kafka, are automatically created upon deployment of the app publishing the events.
+For licensed users, all events from Free Apps are published to one shared topic. Events published by apps running on licensed nodes are published to their own channels. These channels, implemented as topics on Kafka, are automatically created upon deployment of the app publishing the events.
 
 #### 1.3.2 Event Broker Error Handling
 
@@ -81,9 +81,10 @@ These constants are best configured using the **App Settings** configuration. In
 
 Only the **ChannelName** and **ServerUrl** have to be specified.
 * **ChannelName**: `local`
-* On Windows, **ServerUrl**: `localhost:9092`
-* Running Docker on MacOS and StudioPro on Windows via parallels, **ServerUrl**: `10.211.55.2:9094`
-* Running Docker on Linux and StudioPro on Windows via VirtualBox/KVM, **ServerUrl**: `<IP ADDRESS>:9094`
+* **ServerUrl**: 
+* On Windows: `localhost:9092`
+* Running Docker on MacOS and StudioPro on Windows via Parallels: `10.211.55.2:9094`
+* Running Docker on Linux and StudioPro on Windows via VirtualBox/KVM: `<IP ADDRESS>:9094`
 
 ### 2.2 Change Logging Interval (Optional)
 
@@ -283,7 +284,7 @@ The **Outbox** will publish each Business Event only once.  This does not preven
 
 6. Are Business Events guaranteed to be delivered in the original sequence?
 
-Events will be delivered in the sequence they are produced.  The **Mendix Business Events** module, however, persists the event to the **Entity** table in this order.  Once the entity is persisted it triggers the microflow for the persisted entity. A failure in the microflow can cause data to become out of sequence. Event ordering is not currently a feature of Mendix Business Events.
+Events will be delivered in the sequence they are produced.  The Mendix Business Events module, however, persists the event to the **Entity** table in this order.  Once the entity is persisted it triggers the microflow for the persisted entity. A failure in the microflow can cause data to become out of sequence. Event ordering is not currently a feature of Mendix Business Events.
 
 7. How do I detect and correct failed processing of received events?
 
@@ -293,7 +294,7 @@ The Mendix Business Events module uses [Task Queue](/refguide/task-queue/) to pu
 
 During modelling, you can use the **Constants** described in the [Configure Local Deployments](#config-local-deployment) section to configure to a local or other Kafka. This does not transfer through to runtime. During runtime, the configurations are provided during startup automatically, since only Mendix Cloud is supported.
 
-9. How to delete or clean up events and tasks?
+9. How do I delete or clean up events and tasks?
 
 This will be implemented in a forthcoming release. In the meantime, you could use scheduled event to clean up the events yourself (make sure the consumer doesn’t need them anymore). For the task queue, the **Task Queue Helpers**, a module linked in [Task Queue](/refguide/task-queue/), can be used.
 
@@ -305,9 +306,9 @@ Messages are first queued within the **Outbox** for successful delivery as a Bus
 
 The flow of events are controlled by the persistence of the event to the Consumed Business Event Entity (see [Business Event Entities](#be-entities)).  The flow will not continue in the case of such a failure.   They only cause for such failure would be database-related and unlikely to occur.
 
-On the microflow, a log message action can be added after the start action in order to track the movement. Please refer to the [Dead Letter Queue for Failed Messages](#dead-letter-queue) section for more information..
+On the microflow, a log message action can be added after the start action in order to track the movement. Refer to the [Dead Letter Queue for Failed Messages](#dead-letter-queue) section for more information.
 
 ## 7 Known Issues
 
-* In Studio Pro [9.14](//releasenotes/studio-pro/9.14/), having an log activity in your after startup microflow results in an error when trying to build the app. You can work around this by removing the log activity in the after startup microflow. This was fixed for Studio Pro [9.15](/releasenotes/studio-pro/9.15/) and above.
+* In Studio Pro [9.14](//releasenotes/studio-pro/9.14/), having a log activity in your after-startup microflow results in an error when trying to build the app. You can work around this by removing the log activity in the after-startup microflow. This was fixed for Studio Pro [9.15](/releasenotes/studio-pro/9.15/) and above.
 

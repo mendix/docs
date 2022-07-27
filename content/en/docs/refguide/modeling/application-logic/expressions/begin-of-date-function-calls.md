@@ -14,9 +14,9 @@ The first parameter can be an attribute of an entity of type **Date and time**, 
 
 You can also calculate the end of a time period from the specified date. For more information, see [End-of Date Function Calls](/refguide/end-of-date-function-calls/).
 
-## 2 BeginOfDay
+## 2 beginOfDay
 
-The `BeginOfDay` function calculates the beginning of the day compared to the initial date.
+The `beginOfDay` function calculates the beginning of the day compared to the initial date.
 
 ### 2.1 Input Parameters
 
@@ -39,7 +39,7 @@ The output is described in the table below:
 If you use the following input:
 
 ```java {linenos=false}
-BeginOfDay(dateTime(2007, 2, 7, 1, 1))
+beginOfDay(dateTime(2007, 2, 7, 1, 1))
 ```
 
 The output is:
@@ -48,9 +48,9 @@ The output is:
 "Wed Feb 07 00:00 CET 2007"
 ```
 
-## 3 BeginOfWeek
+## 3 beginOfWeek
 
-The `BeginOfWeek` function calculates the beginning of the week compared to the initial date.
+The `beginOfWeek` function calculates the beginning of the week compared to the initial date.
 
 ### 3.1 Input Parameters
 
@@ -73,7 +73,7 @@ The output is described in the table below:
 If you use the following input:
 
 ```java {linenos=false}
-BeginOfWeek(dateTime(2007, 2, 7, 1, 1))
+beginOfWeek(dateTime(2007, 2, 7, 1, 1))
 ```
 
 The output is:
@@ -82,9 +82,9 @@ The output is:
 "Sun Feb 04 00:00 CET 2007"
 ```
 
-## 4 BeginOfMonth
+## 4 beginOfMonth
 
-The `BeginOfMonth` function calculates the beginning of the month compared to the initial date.
+The `beginOfMonth` function calculates the beginning of the month compared to the initial date.
 
 ### 4.1 Input Parameters
 
@@ -107,7 +107,7 @@ The output is described in the table below:
 If you use the following input:
 
 ```java {linenos=false}
-BeginOfMonth(dateTime(2007, 2, 7, 1, 1))
+beginOfMonth(dateTime(2007, 2, 7, 1, 1))
 ```
 
 The output is:
@@ -116,9 +116,9 @@ The output is:
 "Thu Feb 01 00:00 CET 2007"
 ```
 
-## 5 BeginOfYear
+## 5 beginOfYear
 
-The `BeginOfYear` function calculates the beginning of the year compared to the initial date.
+The `beginOfYear` function calculates the beginning of the year compared to the initial date.
 
 ### 5.1 Input Parameters
 
@@ -141,7 +141,7 @@ The output is described in the table below:
 If you use the following input:
 
 ```java {linenos=false}
-BeginOfYear(dateTime(2007, 2, 7, 1, 1))
+beginOfYear(dateTime(2007, 2, 7, 1, 1))
 ```
 
 The output is:

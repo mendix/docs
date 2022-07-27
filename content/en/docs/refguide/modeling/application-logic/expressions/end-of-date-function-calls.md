@@ -14,9 +14,9 @@ The first parameter can be an attribute of an entity of type **Date and time**, 
 
 You can also calculate the end of a time period from the specified date. For more information, see [Begin-of Date Function Calls](/refguide/begin-of-date-function-calls/).
 
-## 2 EndOfDay
+## 2 endOfDay
 
-The `EndOfDay` function calculates the end of the day compared to the initial date.
+The `endOfDay` function calculates the end of the day compared to the initial date.
 
 ### 2.1 Input Parameters
 
@@ -37,7 +37,7 @@ The output is described in the table below:
 ### 2.3 Example
 
 ```java {linenos=false}
-EndOfDay(dateTime(2007, 2, 7, 1, 1))
+endOfDay(dateTime(2007, 2, 7, 1, 1))
 ```
 
 The output is:
@@ -47,9 +47,9 @@ The output is:
 ```
 
 
-## 3 EndOfWeek
+## 3 endOfWeek
 
-The `EndOfWeek` function calculates the end of the week compared to the initial date.
+The `endOfWeek` function calculates the end of the week compared to the initial date.
 
 ### 3.1 Input Parameters
 
@@ -70,7 +70,7 @@ The output is described in the table below:
 ### 3.3 Example
 
 ```java {linenos=false}
-EndOfWeek(dateTime(2007, 2, 7, 1, 1, 1))
+endOfWeek(dateTime(2007, 2, 7, 1, 1, 1))
 ```
 
 The output is:
@@ -79,9 +79,9 @@ The output is:
 "Sat Feb 10 23:59 CET 2007"
 ```
 
-## 4 EndOfMonth
+## 4 endOfMonth
 
-The `EndOfMonth` function calculates the end of the month compared to the initial date.
+The `endOfMonth` function calculates the end of the month compared to the initial date.
 
 ### 4.1 Input Parameters
 
@@ -102,7 +102,7 @@ The output is described in the table below:
 ### 4.3 Example
 
 ```java {linenos=false}
-EndOfMonth(dateTime(2007, 2, 7, 1, 1, 1))
+endOfMonth(dateTime(2007, 2, 7, 1, 1, 1))
 ```
 
 The output is:
@@ -111,9 +111,9 @@ The output is:
 "Wed Feb 28 23:59 CET 2007"
 ```
 
-## 5 EndOfYear
+## 5 endOfYear
 
-The `EndOfYear` function calculates the end of the year compared to the initial date.
+The `endOfYear` function calculates the end of the year compared to the initial date.
 
 ### 5.1 Input Parameters
 
@@ -134,7 +134,7 @@ The output is described in the table below:
 ### 5.3 Example
 
 ```java {linenos=false}
-EndOfYear(dateTime(2007, 2, 7, 1, 1, 1))
+endOfYear(dateTime(2007, 2, 7, 1, 1, 1))
 ```
 
 The output is:

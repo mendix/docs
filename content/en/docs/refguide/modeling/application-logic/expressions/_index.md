@@ -132,7 +132,21 @@ This way the first statement gets evaluated.
 * [`dateTime`](/refguide/date-creation/) – creating a date value using the server's calendar
 * [`dateTimeUTC`](/refguide/date-creation/) – creating a date value using the UTC calendar
 
-## 11 Between Date Function Calls
+## 11 Begin-of Date Function Calls
+
+* [`BeginOfDay`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the day compared to the initial date
+* [`BeginOfWeek`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the week compared to the initial date
+* [`BeginOfMonth`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the month compared to the initial date
+* [`BeginOfYear`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the year compared to the initial date
+
+## 12 End-of Date Function Calls
+
+* [`EndOfDay`](/refguide/end-of-date-function-calls/) – calculates the end of the day compared to the initial date
+* [`EndOfWeek`](/refguide/end-of-date-function-calls/) – calculates the end of the week compared to the initial date
+* [`EndOfMonth`](/refguide/end-of-date-function-calls/) – calculates the end of the month compared to the initial date
+* [`EndOfYear`](/refguide/end-of-date-function-calls/) – calculates the end of the year compared to the initial date
+
+## 13 Between Date Function Calls
 
 * [`millisecondsBetween`](/refguide/between-date-function-calls/) – the milliseconds between two dates
 * [`secondsBetween`](/refguide/between-date-function-calls/) – the seconds between two dates
@@ -143,7 +157,7 @@ This way the first statement gets evaluated.
 * [`calendarMonthsBetween`](/refguide/between-date-function-calls/) - the months between two dates
 * [`calendarYearsBetween`](/refguide/between-date-function-calls/) - the years between two dates
 
-## 12 Add Date Function Calls
+## 14 Add Date Function Calls
 
 * [`addMilliseconds`](/refguide/add-date-function-calls/) – adds milliseconds to a date
 * [`addSeconds`](/refguide/add-date-function-calls/) – adds seconds to a date
@@ -160,7 +174,7 @@ This way the first statement gets evaluated.
 * [`addYears`](/refguide/add-date-function-calls/) – adds years to a date
 * [`addYearsUTC`](/refguide/add-date-function-calls/) – adds years to a date using the UTC calendar
 
-## 13 Subtract Date Function Calls
+## 15 Subtract Date Function Calls
 
 * [`subtractMilliseconds`](/refguide/subtract-date-function-calls/) – subtracts milliseconds from a date
 * [`subtractSeconds`](/refguide/subtract-date-function-calls/) – subtracts seconds from a date
@@ -177,7 +191,7 @@ This way the first statement gets evaluated.
 * [`subtractYears`](/refguide/subtract-date-function-calls/) – subtracts years from a date
 * [`subtractYearsUTC`](/refguide/subtract-date-function-calls/) – subtracts years from a date using the UTC calendar
 
-## 14 Trim to Date
+## 16 Trim to Date
 
 * [`trimToSeconds`](/refguide/trim-to-date/) – trims to seconds
 * [`trimToMinutes`](/refguide/trim-to-date/) – trims to minutes
@@ -190,20 +204,20 @@ This way the first statement gets evaluated.
 * [`trimToYears`](/refguide/trim-to-date/) – trims to years
 * [`trimToYearsUTC`](/refguide/trim-to-date/) – trims to years using the UTC calendar
 
-## 15 To String
+## 17 To String
 
 See [To String](/refguide/to-string/) for details.
 
-## 16 Parse Integer
+## 18 Parse Integer
 
 See [Parse Integer](/refguide/parse-integer/) for details.
 
-## 17 Parse & Format Decimal Function Calls
+## 19 Parse & Format Decimal Function Calls
 
 * [`parseDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a string to a decimal
 * [`formatDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a decimal to a string
 
-## 18 Parse & Format Date Function Calls
+## 20 Parse & Format Date Function Calls
 
 * [`parseDateTime[UTC]`](/refguide/parse-and-format-date-function-calls/) – converts a string to a date value
 * [`formatDateTime[UTC]`](/refguide/parse-and-format-date-function-calls/) – converts a date value to a string
@@ -212,7 +226,7 @@ See [Parse Integer](/refguide/parse-integer/) for details.
 * [`dateTimeToEpoch`](/refguide/parse-and-format-date-function-calls/) – converts a date to a long
 * [`epochToDateTime`](/refguide/parse-and-format-date-function-calls/) – converts a long to a date
 
-## 19 Enumerations in Expressions
+## 21 Enumerations in Expressions
 
 * [`getCaption`](/refguide/enumerations-in-expressions/) – gets the caption of an enumeration value in current language
 * [`getKey`](/refguide/enumerations-in-expressions/) – gets the technical name of an enumeration value

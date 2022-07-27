@@ -1,6 +1,8 @@
 ---
 title: "Begin-of Date Function Calls"
 url: /refguide/begin-of-date-function-calls/
+weight: 95
+description: Describes begin-of date function calls in Studio Pro expressions.
 tags: ["studio pro", "expressions", "begin-of date function"]
 ---
 
@@ -8,13 +10,13 @@ tags: ["studio pro", "expressions", "begin-of date function"]
 
 Begin-of date function calls calculate the beginning of the day, week, month, or year and return the value.
 
-The first parameter can be an attribute of a domain model entity of type **Date and time**, a variable of type **Date and time**, or a **Date and time** value created using a [Date Creation](/refguide/date-creation/) function.
+The first parameter can be an attribute of an entity of type **Date and time**, a variable of type **Date and time**, or a **Date and time** value created using a [Date Creation](/refguide/date-creation/) function.
 
 You can also calculate the end of a time period from the specified date. For more information, see [End-of Date Function Calls](/refguide/end-of-date-function-calls/).
 
 ## 2 BeginOfDay
 
-The `BeginOfDay` function calculates the beginning of the day compared to the inputted date.
+The `BeginOfDay` function calculates the beginning of the day compared to the initial date.
 
 ### 2.1 Input Parameters
 
@@ -36,23 +38,23 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 BeginOfDay(dateTime(2007, 2, 7, 1, 1))
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Wed Feb 07 00:00 CET 2007"
 ```
 
 ## 3 BeginOfWeek
 
-The `BeginOfWeek` function calculates the beginning of the week compared to the inputted date.
+The `BeginOfWeek` function calculates the beginning of the week compared to the initial date.
 
 ### 3.1 Input Parameters
 
-The input parameters are described in the table below:
+Input parameters are described in the table below:
 
 | Value                                  | Type          |
 | -------------------------------------- | ------------- |
@@ -70,19 +72,19 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 BeginOfWeek(dateTime(2007, 2, 7, 1, 1))
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Sun Feb 04 00:00 CET 2007"
 ```
 
 ## 4 BeginOfMonth
 
-The `BeginOfMonth` function calculates the beginning of the month compared to the inputted date.
+The `BeginOfMonth` function calculates the beginning of the month compared to the initial date.
 
 ### 4.1 Input Parameters
 
@@ -104,19 +106,19 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 BeginOfMonth(dateTime(2007, 2, 7, 1, 1))
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Thu Feb 01 00:00 CET 2007"
 ```
 
 ## 5 BeginOfYear
 
-The `BeginOfYear` function calculates the beginning of the year compared to the inputted date.
+The `BeginOfYear` function calculates the beginning of the year compared to the initial date.
 
 ### 5.1 Input Parameters
 
@@ -138,12 +140,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 BeginOfYear(dateTime(2007, 2, 7, 1, 1))
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Mon Jan 01 00:00 CET 2007"
 ```
+
+## 6 Read More
+
+* [Date Creation](/refguide/date-creation/)
+* [End-of Date Function Calls](/refguide/end-of-date-function-calls/)

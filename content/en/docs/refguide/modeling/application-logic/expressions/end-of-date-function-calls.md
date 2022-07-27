@@ -1,6 +1,8 @@
 ---
 title: "End-of Date Function Calls"
-url: /refguide/begin-of-date-function-calls/
+url: /refguide/end-of-date-function-calls/
+weight: 98
+description: Describes end-of date function calls in Studio Pro expressions.
 tags: ["studio pro", "expressions", "end-of date function"]
 ---
 
@@ -8,13 +10,13 @@ tags: ["studio pro", "expressions", "end-of date function"]
 
 End-of date function calls calculate the end of the day, week, month, or year and return the value.
 
-The first parameter can be an attribute of a domain model entity of type **Date and time**, a variable of type **Date and time**, or a **Date and time** value created using a [Date Creation](/refguide/date-creation/) function.
+The first parameter can be an attribute of an entity of type **Date and time**, a variable of type **Date and time**, or a **Date and time** value created using a [Date Creation](/refguide/date-creation/) function.
 
 You can also calculate the end of a time period from the specified date. For more information, see [Begin-of Date Function Calls](/refguide/begin-of-date-function-calls/).
 
 ## 2 EndOfDay
 
-The `EndOfDay` function calculates the end of the day compared to the inputted date.
+The `EndOfDay` function calculates the end of the day compared to the initial date.
 
 ### 2.1 Input Parameters
 
@@ -34,20 +36,20 @@ The output is described in the table below:
 
 ### 2.3 Example
 
-```java
+```java {linenos=false}
 EndOfDay(dateTime(2007, 2, 7, 1, 1))
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Wed Feb 07 23:59 CET 2007"
 ```
 
 
 ## 3 EndOfWeek
 
-The `EndOfWeek` function calculates the end of the week compared to the inputted date.
+The `EndOfWeek` function calculates the end of the week compared to the initial date.
 
 ### 3.1 Input Parameters
 
@@ -67,19 +69,19 @@ The output is described in the table below:
 
 ### 3.3 Example
 
-```java
+```java {linenos=false}
 EndOfWeek(dateTime(2007, 2, 7, 1, 1, 1))
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Sat Feb 10 23:59 CET 2007"
 ```
 
 ## 4 EndOfMonth
 
-The `EndOfMonth` function calculates the end of the month compared to the inputted date.
+The `EndOfMonth` function calculates the end of the month compared to the initial date.
 
 ### 4.1 Input Parameters
 
@@ -99,19 +101,19 @@ The output is described in the table below:
 
 ### 4.3 Example
 
-```java
+```java {linenos=false}
 EndOfMonth(dateTime(2007, 2, 7, 1, 1, 1))
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Wed Feb 28 23:59 CET 2007"
 ```
 
 ## 5 EndOfYear
 
-The `EndOfYear` function calculates the end of the year compared to the inputted date.
+The `EndOfYear` function calculates the end of the year compared to the initial date.
 
 ### 5.1 Input Parameters
 
@@ -131,12 +133,17 @@ The output is described in the table below:
 
 ### 5.3 Example
 
-```java
+```java {linenos=false}
 EndOfYear(dateTime(2007, 2, 7, 1, 1, 1))
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Mon Dec 31 23:59 CET 2007"
 ```
+
+## 6 Read More
+
+* [Date Creation](/refguide/date-creation/)
+* [Begin-of Date Function Calls](/refguide/begin-of-date-function-calls/)

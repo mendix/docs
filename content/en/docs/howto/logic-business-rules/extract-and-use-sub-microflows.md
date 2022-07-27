@@ -26,7 +26,7 @@ This how-to will teach you how to do the following:
 
 You can create a sub-microflow by extracting a part of an existing microflow. The following example microflow checks to see if a registration has a trainee assigned and a registration date. If the registration passes both of these checks, the registration is committed to the database.
 
-{{< figure src="/attachments/howto/logic-business-rules/extract-and-use-sub-microflows/18581021.png" > alt="An example of a complex microflow for validating an object and committing it to a database" }}
+{{< figure src="/attachments/howto/logic-business-rules/extract-and-use-sub-microflows/18581021.png" alt="An example of a complex microflow for validating an object and committing it to a database" >}}
 
 In this scenario, it makes sense to create a sub-microflow for the validation steps. If you do this, you can reuse this sub-microflow in other microflows where you need to validate a registration again.
 
@@ -34,11 +34,11 @@ To extract the validation steps to a sub-microflow, follow these steps:
 
 1. Select the area that you want to capture and use as a sub-microflow, as in the following figure:
 
-    {{< figure src="/attachments/howto/logic-business-rules/extract-and-use-sub-microflows/18581020.png" > alt="Selecting an area to use as a sub-microflow" }}
+    {{< figure src="/attachments/howto/logic-business-rules/extract-and-use-sub-microflows/18581020.png" alt="Selecting an area to use as a sub-microflow" >}}
 
 2. Right-click an item in the selection, and then select **Extract submicroflow**, as in the following figure:
 
-    {{< figure src="/attachments/howto/logic-business-rules/extract-and-use-sub-microflows/18581018.png" > alt="Selecting the Extract submicroflow menu option" }}
+    {{< figure src="/attachments/howto/logic-business-rules/extract-and-use-sub-microflows/18581018.png" alt="Selecting the Extract submicroflow menu option" >}}
 
 3.  In the **Add microflow** dialogue box, enter a name for the sub-microflow.
 
@@ -49,14 +49,14 @@ To extract the validation steps to a sub-microflow, follow these steps:
 
 5. Open the sub-microflow by right-clicking the sub-microflow action and selecting **Go to microflow**, as in the following figure:
 
-    {{< figure src="/attachments/howto/logic-business-rules/extract-and-use-sub-microflows/18581016.png" > alt="Multiple actions replaced with a microflow action on the canvas" }}
+    {{< figure src="/attachments/howto/logic-business-rules/extract-and-use-sub-microflows/18581016.png" alt="Multiple actions replaced with a microflow action on the canvas" >}}
 
 6. Make any other required configuration changes. 
 
 {{% alert color="info" %}}
 In this example, the sub-microflow does not return anything, so the sub-microflow call cannot be used in the **Is Valid?** check that immediately follows it. To stop or continue your microflow based on the sub-microflow's outcome, right-click the **Create Boolean Variable** activity and select **Set $isValid as return value**.
 
-{{< figure src="/attachments/howto/logic-business-rules/extract-and-use-sub-microflows/18581015.png" > alt="Sample sub-microflow for registration validation" }}
+{{< figure src="/attachments/howto/logic-business-rules/extract-and-use-sub-microflows/18581015.png" alt="Sample sub-microflow for registration validation" >}}
 {{% /alert %}}
 
 ### 2.1 Troubleshooting sub-microflow creation
@@ -76,7 +76,7 @@ To reuse an existing microflow, follow these steps:
 1. In the App Explorer, find the microflow that you want to reuse as a sub-microflow.
 2. Drag and drop it onto the canvas of another microflow, as in the following figure:
 
-{{< figure src="/attachments/howto/logic-business-rules/extract-and-use-sub-microflows/18580991.gif" > alt="Dragging a microflow onto the canvas of another microflow" }}
+{{< figure src="/attachments/howto/logic-business-rules/extract-and-use-sub-microflows/18580991.gif" alt="Dragging a microflow onto the canvas of another microflow" >}}
 
 ## 5 Read More
 

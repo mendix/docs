@@ -59,8 +59,8 @@ For client certificates, only the Public-Key Cryptography Standard #12 (PKCS12) 
 
 Virtually all certificate formats can be converted to the PKCS12 format. For more information, see the following:
 
-*   [Create a pkcs12 (.pfx or .p12) from OpenSSL files (.pem , .cer, .crt, ...)](https://www.tbs-certificates.co.uk/FAQ/en/288.html)
-*   [openssl](https://www.openssl.org/docs/manmaster/man1/openssl.html)
+* [Create a pkcs12 (.pfx or .p12) from OpenSSL files (.pem , .cer, .crt, ...)](https://www.tbs-certificates.co.uk/FAQ/en/288.html)
+* [openssl](https://www.openssl.org/docs/manmaster/man1/openssl.html)
 
 {{% alert color="warning" %}}
 If you use [OpenSSL for Windows](https://slproweb.com/products/Win32OpenSSL.html), please use the latest patch release of **version 1.x**.
@@ -72,7 +72,7 @@ You can upload a PKCS12 file by following these steps:
 
 2. Select the **Network** tab of an application environment.
 
-3.  Below **Outgoing Connections Certificates** click **Add Client Certificate**.
+3. Below **Outgoing Connections Certificates** click **Add Client Certificate**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/certificates/certificate.png" >}}
 

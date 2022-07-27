@@ -80,7 +80,7 @@ A story card shows the following information:
 * Story title (②)
 * Epic related to the story (③)
 * Tags (④)
-*  Whether the story is about a feature or a bug – if it is about a feature, it shows a green star icon; and if it is about a bug, it shows a red bug icon (⑤)
+* Whether the story is about a feature or a bug – if it is about a feature, it shows a green star icon; and if it is about a bug, it shows a red bug icon (⑤)
 
     {{< figure src="/attachments/developerportal/collaborate/epics/feature-bug.png" >}}
 
@@ -109,7 +109,7 @@ On the upper-right corner, there are three icons. You can click these icons to c
 
 The story details page shows the following items:
 
-*  **Description** – This is the description of the story.
+* **Description** – This is the description of the story.
 
     * You can edit the description of the story by clicking **Edit Description** and make changes in the WYSIWYG editor. The editor supports different text formats, including code blocks.
     * You can link a story in the editor. To do so, type #, then start typing the story title, and then select the right story from the list.
@@ -187,7 +187,7 @@ On the upper-right corner, there is an ellipsis (**...**) icon. You can click th
 
 The epic details page shows the following items:
 
-*  **Objective** – This is the description of the epic.
+* **Objective** – This is the description of the epic.
 
     * You can edit the objective of the epic by clicking **Edit Objective** and make changes in the WYSIWYG editor. The editor supports different text formats, including code blocks.
     * You can link a story in the editor. To do so, type #, then start typing the story title, and then select the right story from the list.

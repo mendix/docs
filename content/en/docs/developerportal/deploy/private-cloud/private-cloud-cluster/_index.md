@@ -44,11 +44,11 @@ Should you consider using a connected environment, the following URLs should be 
 ### 3.1 Creating a Cluster{#create-cluster}
 
 1. Click **Cloud Settings** on the **General Settings** page of your Mendix app.
-    
+
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image2.png" >}}
 
 2. Click **Mendix for Private Cloud**.
-    
+
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image3.png" >}}
 
 3. Click **Set up Mendix for Private Cloud**.
@@ -68,9 +68,9 @@ Should you consider using a connected environment, the following URLs should be 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image6.png" >}}
 
 7. Enter the following information:
-    
+
     1. **Name** – The name you want to give the cluster you are creating.
-  
+
     2. **Type** – choose the correct type for your cluster. See [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) for more information.
 
     3. **Description** – an optional description of the cluster which will be displayed under the cluster name in the cluster manager.
@@ -134,7 +134,7 @@ Now you can download the Configuration Tool by doing the following:
 
     {{% alert color="info" %}}Mendix Operator version 2.\*.\* supports Kubernetes versions 1.19 and later. Mendix Operator version 1.12.\* supports Kubernetes versions 1.12 through 1.21. Choose the latest version that is supported by your Kubernetes cluster.{{% /alert %}}
 
-    {{% alert color="info" %}}Versions earlier than 1.9.0 are only available to allow _configuration_ of previously installed Mendix Operator versions.{{% /alert %}}
+    {{% alert color="info" %}}Versions earlier than 1.9.0 are only available to allow *configuration* of previously installed Mendix Operator versions.{{% /alert %}}
 
     {{% alert color="warning" %}}Once you've installed a certain version of the Mendix Operator into any namespace in the cluster, you should not install older versions of the Mendix Operator into the same cluster, including other namespaces.{{% /alert %}}
 
@@ -750,13 +750,13 @@ For **Google Cloud Container Registry**, the supported authentication is [worklo
 * `Kubernetes Service Account`: the kubernetes service account that will be created and annotated with your google service account during post configuration. You need to [bind](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) the kubernetes service account to your google service account.
 
     Below is an example how to bind a google cloud service account to a kubernetes service account:
+
     ```shell
     gcloud iam service-accounts add-iam-policy-binding \
             --role roles/iam.workloadIdentityUser \
             --member "serviceAccount:PROJECT_ID.svc.id.goog[K8S_NAMESPACE/KSA_NAME]" \
             GSA_NAME@PROJECT_ID.iam.gserviceaccount.com
     ```
-
 
 #### 4.3.3 Proxy{#proxy}
 
@@ -777,7 +777,7 @@ Hosts which should be excluded from proxying are specified as:
 * a domain name with a leading "." matches subdomains only
 
     For example "foo.com" matches "foo.com" and "bar.foo.com"; ".y.com" matches "x.y.com" but not "y.com".
- 
+
 For more information about how to use this field, see the [http proxy documentation used by the Configuration Tool](https://pkg.go.dev/golang.org/x/net/http/httpproxy).
 
 #### 4.3.4 Custom TLS{#custom-tls}
@@ -793,33 +793,37 @@ If Mendix for Private Cloud needs to communicate with external services, some of
 In order for the Mendix Operator to trust such certificates, you need to add their root CAs to the Mendix Operator configuration.
 
 1. In another terminal, prepare the Kubernetes secret containing the custom root CAs list:
-   1. Create a `custom.crt` file, containing the public keys of all custom (private) CAs that Mendix for Private Cloud should trust:
-       ```
-       # Private CA 1
-       -----BEGIN CERTIFICATE-----
+    1. Create a `custom.crt` file, containing the public keys of all custom (private) CAs that Mendix for Private Cloud should trust:
+
+        ```
+        # Private CA 1
+        -----BEGIN CERTIFICATE-----
+        [...]
+        -----END CERTIFICATE-----
+        # Private CA 2
+        -----BEGIN CERTIFICATE-----
        [...]
-       -----END CERTIFICATE-----
-       # Private CA 2
-       -----BEGIN CERTIFICATE-----
-       [...]
-       -----END CERTIFICATE-----
-       ```
-       (concatenate all the public keys from custom CAs into one `custom.crt` file, separating them with line breaks and optional comments).
-   2. Load the file into a Secret (replace `{namespace}` with the namespace where the Operator is installed, and `{secret}` with the name of the Secret to create, for example, `mendix-custom-ca`):
+        -----END CERTIFICATE-----
+        ```
+
+        (concatenate all the public keys from custom CAs into one `custom.crt` file, separating them with line breaks and optional comments).
+    2. Load the file into a Secret (replace `{namespace}` with the namespace where the Operator is installed, and `{secret}` with the name of the Secret to create, for example, `mendix-custom-ca`):
 
         For OpenShift:
-        ```shell
+
+        ```shell {linenos=false}
         oc -n {namespace} create secret generic {secret} --from-file=custom.crt=custom.crt
         ```
 
         For Kubernetes:
-        ```shell
+
+        ```shell {linenos=false}
         kubectl -n {namespace} create secret generic {secret} --from-file=custom.crt=custom.crt
         ```
 
 2. Paste the name of this `custom.crt` secret (the `{secret}` used in the commands above) into the **CA Certificates Secret Name** field (for example, `mendix-custom-ca`):
-   
-   {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/custom-tls-config.png" alt="Custom TLS configuration" >}}
+    
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/custom-tls-config.png" alt="Custom TLS configuration" >}}
 
 These custom CAs will be trusted by:
 
@@ -880,13 +884,13 @@ To start editing the `OperatorConfiguration`, use the following commands (replac
 
 For OpenShift:
 
-```shell
+```shell {linenos=false}
 oc -n {namespace} edit operatorconfiguration mendix-operator-configuration
 ```
 
 For Kubernetes:
 
-```shell
+```shell {linenos=false}
 kubectl -n {namespace} edit operatorconfiguration mendix-operator-configuration
 ```
 
@@ -1008,7 +1012,6 @@ You can change the following options:
 * **serviceType**: - can be used to specify the Service type, possible options are `ClusterIP` and `LoadBalancer`; if not specified, Services will be created with the `ClusterIP` type
 * **servicePorts**: - can be used to specify a list of custom ports for the Service; if not specified, Services will use be created with port `8080`
 
-
 {{% alert color="info" %}}
 When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
 {{% /alert %}}
@@ -1043,7 +1046,8 @@ You can change the following options:
 The Deployment object that controls the pod of a given Mendix application contains user-editable options for fine-tuning the execution to the application's runtime resources.
 
 The Deployment object as a name in the following format:
-```
+
+```shell {linenos=false}
 <internal environment name>-master
 ```
 
@@ -1205,7 +1209,7 @@ In Kubernetes version 1.19, startup probes are still a [beta feature](https://ku
 
 Using `terminationGracePeriodSeconds`, the application is given a certain amount of time to terminate. The default value is 300 seconds. This time can be configured using the `terminationGracePeriodSeconds` key in the pod's spec and so if your pod usually takes longer than 300 seconds to shut down, you can increase the grace period. You can do that by setting the `terminationGracePeriodSeconds` key in the pod YAML.
 
-```yaml
+```yaml {linenos=false}
 terminationGracePeriodSeconds: 300
 ```
 
@@ -1434,7 +1438,7 @@ Horizontal pod autoscaling can be combined with cluster autoscaling, so that the
 
 To enable horizontal pod autoscaling for an environment, run the following command:
 
-```shell
+```shell {linenos=false}
 kubectl -n {namespace} autoscale mendixapp {envname} --cpu-percent=50 --min=1 --max=10
 ```
 
@@ -1443,7 +1447,7 @@ Use `--cpu-percent` to specify the target CPU usage, and `--min` `--max` to spec
 
 To configure additional horizontal pod autoscaling, run the following command:
 
-```shell
+```shell {linenos=false}
 kubectl -n {namespace} edit horizontalpodautoscaling {envname}
 ```
 
@@ -1641,21 +1645,19 @@ The **Members** tab allows you to manage the list of members of the namespace an
 You can invite additional members to the namespace, and configure their role depending on what they should be allowed to do.
 
 1. The **Members** tab displays a list of current members (if any).
-
 2. Click **Invite Member**.
-    
+
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image28.png" >}}
 
 3. Enter the **Email** of the person you want to invite.
-
 4. Give them the rights they need. This can be:
-    
+
     1. **Developer** – a standard set of rights needed by a developer, these are listed on the screen
     2. **Administrator** – a standard set of rights needed by an administrator, these are listed on the screen
     3. **Custom** – you can select a custom set of rights by checking the box next to each role you want to give to this person
 
 5. Click **Send Invite** to send an invite to this person.
-    
+
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image29.png" >}}
 
 6. The user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
@@ -1665,13 +1667,11 @@ You can invite additional members to the namespace, and configure their role dep
 You can change the access rights for, or completely remove, existing members.
 
 1. Click **Edit** next to the member you want to change.
-
 2. Either:
-    
+
     1. Make changes and click **Save**.
-    
     2. Click **Remove member** to remove this member completely. You will be asked to confirm this action.
-        
+
         {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image30.png" >}}
 
 #### 6.2.3 Operate {#operate}

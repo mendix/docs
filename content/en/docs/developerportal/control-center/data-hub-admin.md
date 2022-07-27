@@ -54,7 +54,7 @@ On this tab, you can do the following:
 * **Add Owner** – add new owners by filling in their name and email address; new owners will be listed as the business or technical owner for registered assets
 * **Edit** – edit the details of listed owners (hover over the row to see the actions)
 * **Delete** – delete names from the list
-	* Note that if a custom owner is removed from the list, they will also be removed from any registered assets where they were set as the owner, which means that the asset will not have a contact
+    * Note that if a custom owner is removed from the list, they will also be removed from any registered assets where they were set as the owner, which means that the asset will not have a contact
 
 ## 4 External Users {#external-users}
 

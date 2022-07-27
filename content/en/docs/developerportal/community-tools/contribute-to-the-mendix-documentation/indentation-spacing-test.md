@@ -127,6 +127,7 @@ DO NOT USE TABS
 
 1. First list item
 2. Second list item
+
 ```
 Code blocks do NOT need a line break to work. Not part of list indent.
 ```
@@ -135,6 +136,7 @@ Code blocks do NOT need a line break to work. Not part of list indent.
 
 1. First list item
 2. Second list item
+
     ```
     Code blocks do NOT need trailing spaces to be indented.
     Indents must be spaces, not tabs, otherwise a bug shows in rendering an extra '`' symbol.

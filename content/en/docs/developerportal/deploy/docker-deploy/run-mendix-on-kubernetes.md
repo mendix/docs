@@ -336,19 +336,19 @@ spec:
 
 Deploy the service:
 
-```bash
+```bash {linenos=false}
 kubectl create -f mendix-app-service.yaml
 ```
 
 Check if the application is running using the command:
 
-```bash
+```bash {linenos=false}
 minikube service mendix-app-service
 ```
 
 To get the URL to the application on Minikube, execute this command and open the link in your browser:
 
-```bash
+```bash {linenos=false}
 minikube service mendix-app-service --url
 ```
 
@@ -358,4 +358,3 @@ Congratulations! You have deployed your first Mendix app in Kubernetes.
 
 * [Docker: Deploy](/developerportal/deploy/docker-deploy/)
 * [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack)
-

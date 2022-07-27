@@ -31,7 +31,7 @@ Within a team, there are predefined roles that can be provisioned to team member
 * Who can edit the backlog and current [Sprint](/developerportal/collaborate/stories/)
 * Who can edit the app model
 * Who has the correct [node permissions](/developerportal/deploy/node-permissions/) for access to the node information
-	* Note that node permissions must be provisioned by the [Technical Contact](#technical-contact)
+    * Note that node permissions must be provisioned by the [Technical Contact](#technical-contact)
 * Who can change the app's [general settings](/developerportal/settings/general-settings/)
 
 Scrum Masters can edit and create new team roles on the [Team](/developerportal/collaborate/team/) page, and Mendix Admins can edit and create new team roles within the company in [Control Center](/developerportal/control-center/).
@@ -79,7 +79,7 @@ If you are the current Technical Contact for an app, make another team member th
 
 1. Navigate to **Deploy** > **Environments**.
 2. Select the [Permissions](/developerportal/deploy/environments/#permissions) tab.
-3.  Click **Change to Technical Contact** for the team member who should be the new Technical Contact. You may have to authenticate first to perform this action. If so, click **Change to Technical Contact** again after successful authentication to finish this action.
+3. Click **Change to Technical Contact** for the team member who should be the new Technical Contact. You may have to authenticate first to perform this action. If so, click **Change to Technical Contact** again after successful authentication to finish this action.
 
 {{% alert color="info" %}}
 The Technical Contact will be changed for all environments..

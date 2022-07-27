@@ -113,4 +113,3 @@ See [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/)
 ### 5.3 Use a PAT for the Project API
 
 See [Projects API](/apidocs-mxsdk/apidocs/projects-api/)
-

@@ -112,6 +112,7 @@ A timing/histogram value for REST requests.
 ##### 4.1.1.4 mx.client.time
 
 The time it takes to handle a request to a request handler used by the web UI. You can get results for all of the following types of request
+
 * REST, ODATA, SOAP **doc** requests
 * `/xas` requests (general queries for data in data grids, sending changes to the server, and triggering the execution of microflows)
 * File upload/download requests
@@ -218,6 +219,7 @@ The following Mendix *activities* can be passed:
 * `CallWebService`
 * `ImportWithMapping`
 * `ExportWithMapping`
+
 </details>
 
 **Example**
@@ -259,7 +261,7 @@ You pass the configuration to the metrics agent by adding a *Custom Runtime Sett
 2. Click **Details** next to the environment you have configured for Datadog.
 3. Add a **Custom Environment Variable** *METRICS_AGENT_CONFIG* with the value of the JSON required for your configuration.
 
-	{{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog_metricsagentconfig.png" >}}
+    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog_metricsagentconfig.png" >}}
 
 4. Click **Save**.
 5. Restart your app to apply the new settings if you have already connected your node to your data analytics. If you are in the process of connecting your node, you must *redeploy* your application to apply the changes.

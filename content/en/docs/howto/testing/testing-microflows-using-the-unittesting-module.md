@@ -109,7 +109,7 @@ To create a sample microflow for testing, follow these steps:
 
 ### 4.2 Creating a Unit Test Microflow
 
-This section describes how to create a microflow test for the sample microflow described in the [Creating a Sample Microflow for Testing](/#HowtoCreateSampleMicroflow) section above. In a real-life scenario, the steps below may be different, depending on the microflow that you want to test. If you need to adapt the microflow test to your requirements, bear in mind the following considerations:
+This section describes how to create a microflow test for the sample microflow described in the [Creating a Sample Microflow for Testing](#HowtoCreateSampleMicroflow) section above. In a real-life scenario, the steps below may be different, depending on the microflow that you want to test. If you need to adapt the microflow test to your requirements, bear in mind the following considerations:
 
 * The test microflow name must start with *Test*, for example *Test_RegisterTrainee*.
 * The microflow should have no input arguments.

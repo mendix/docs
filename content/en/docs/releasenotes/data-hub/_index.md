@@ -11,6 +11,16 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### July 28th, 2022
+
+#### Improvements
+
+* Company administrators are now able to off-board external participants from their company's Data Hub Catalog, using the Control Center. 
+
+#### Fixes
+
+* We fixed an error that occured, if the Business Owner field was initially empty, user was unable to assign a new Business Owner.
+
 ### July 14th, 2022
 
 #### Improvements

@@ -23,6 +23,10 @@ Business events help you automate the resulting actions when something happens i
 * Making an appointment with a service provider in an appointment app, then needing it to be added to the scheduling app of the service provider
 * Customers placing an order in a webshop, and other apps need to take follow-up actions like scheduling shipment, sending the invoice, and reordering inventory stock
 
+{{% alert color="warning" %}}
+You must purchase a license to the [Mendix Event Broker](#event-broker) to run apps with this module on production. 
+{{% /alert %}}
+
 ### 1.2 Pre-Requisites
 
 To use the Mendix Business Events module, you will need the following:
@@ -34,7 +38,9 @@ To use Mendix Business Events on production environments, you will need the pre-
 * A subscription to the Mendix Event Broker (link to licensing/contact page)
 * A Technical Contact must enable the Event Broker Service in the [Services](/developerportal/deploy/mendix-cloud-deploy/environments/#service) tab of the [Environment Details](/developerportal/deploy/mendix-cloud-deploy/environments-details/#services) page of every app involved (still being discussed; details coming soon)
 
-### 1.3 Under the Hood: Mendix Event Broker
+### 1.3 Licensing the Mendix Event Broker {#event-broker}
+
+For production apps, you need to have a Mendix Event Broker provisioned for your apps. This Event Broker is single-tenant and will only be used by apps running on nodes provisioned for your company. Licenses are available for all regions, but once selected, you can only run on a single region (no multi-region support).
 
 The Mendix Event Broker is based on [Apache Kafka](https://kafka.apache.org/).
 * Events are published to a Kafka topic
@@ -44,8 +50,6 @@ There is a single Kafka broker for free apps, all your company free apps can con
 * All free apps in your company publish and consume from the same Kafka broker
 * Events are published to one shared Kafka topic
 * Any free app in your company can receive these events
-
-For production apps, you need to have a Mendix Event Broker provisioned for your apps. This Event Broker is single tenant and will only be used by apps running on nodes provisioned for your company.
 
 #### 1.3.1 Event Broker Topics and Channels
 

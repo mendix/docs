@@ -28,7 +28,7 @@ To make changes to an existing repository, follow these guidelines:
 
 * Create a new branch from where you want to base your work on your fork (this is usually the repository's **master** branch)
 * To quickly create a branch based on **master**, use `git checkout -b fix/master/my_contribution master`
-	* Avoid working directly on the **master** branch
+    * Avoid working directly on the **master** branch
 * Make commits of logical units
 * Check for unnecessary whitespace with `git diff --check` before committing
 * Make sure you have added the necessary tests for your changes

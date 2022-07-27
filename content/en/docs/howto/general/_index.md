@@ -13,4 +13,3 @@ tags: ["studio pro", "how-to", "general"]
 Learn some basics about starting to model a Mendix app with the introductory how-to's in this category.
 
 ## 2 Documents in This Category
-

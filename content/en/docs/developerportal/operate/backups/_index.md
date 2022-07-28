@@ -39,6 +39,7 @@ The **Start Time** of nightly backups in UTC is shown below. The **Local Time** 
 | Tokyo | Osaka | 16:00 | 01:00 | 1 hour |
 | N. Virginia | N. California | 05:00 | 00:00 | 4 hours |
 | Canada | Oregon | 05:00 | 00:00 | 1 hours |
+| Mumbai | Signapore | 19:30 | 01:00 | 1 hours |
 
 Nightly backups will start once an app has been successfully deployed to, and started in, the environment.
 

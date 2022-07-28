@@ -2,18 +2,18 @@
 title: "External Entities"
 url: /refguide/external-entities/
 weight: 15
-tags: ["domain model", "entity", "entities", "attribute", "external entities", "even handler", "access rule", "studio pro", "consumed OData Service"]
+tags: ["domain model", "entity", "entities", "attribute", "external entities", "event handler", "access rule", "studio pro", "consumed OData Service"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 ## 1 Introduction
 
 External entities can be added to the Domain Model through the [Data Hub pane](/refguide/data-hub-pane/). They are displayed as *purple* entity containers in the Domain Model. External entities represent the link to the datasets that are made available through the shared data sources registered in [Mendix Data Hub](/data-hub/). Data sources are collections of entity sets (that are referred to as datasets) are published in OData services. 
 
-Datasets are maintained and updated in the source application. You can integrate or *consume* these datasets through external entities in your app development, and any changes to the data in the originating app is automatically updated in the consuming apps. 
+Datasets are maintained and updated in the source application. You can integrate or consume these datasets through external entities in your app development, and any changes to the data in the originating app is automatically updated in the consuming apps. 
 
-External entities can be used with local entities, however, as the datasets are maintained in the source applications, not all properties can be changed in the consuming app.
+External entities can be used with local entities. However, as the datasets are maintained in the source applications, not all properties can be changed in the consuming app.
 
-To follow how to add external entites from the **Data Hub** pane see [Adding External Entities](#adding-external-entities).
+To follow how to add external entities from the **Data Hub** pane, see [Adding External Entities](#adding-external-entities).
 
 {{% alert color="info" %}}
 A license is required to use Mendix Data Hub and connect to external data sources through consumed OData services in your apps.

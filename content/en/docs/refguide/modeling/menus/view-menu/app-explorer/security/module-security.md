@@ -28,7 +28,7 @@ A module role has the following properties:
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/security/module-security/module-roles-tab.png" >}}
 
-## 2 Page Access
+## 2 Page Access {#page-access}
 
 **Page Access** defines which pages are visible to each role. The **Page access** tab is displayed as a matrix showing pages and modules roles. You can choose to show the unused pages in the matrix or hide them by enabling/disabling the **Show unused pages** setting. 
 

@@ -10,11 +10,11 @@ weight: 73
 
 ### Fixes
 
-* Fixed issue causing 'Assert Value' to fail due to new lines mismatch
-* Fixed Switch widget not being recorded in Mendix 9
-* Fixed Set Value and Get Value
-* Fixed clicking on navigation menu not being recorded in Mendix 9
+* We fixed an issue that caused **Assert Value** to fail due to the mismatch of new lines.
+* We fixed **Set Value** and **Get Value**.
+* We fixed the Switch widget not being recorded in Studio Pro 9.
+* We fixed an issue where clicking the navigation menu was not recorded in Studio Pro 9.
 
 ### Improvements 
 
-* Added execution support for TreeNode and Gallery widgets (Data Widgets from the AppStore)
+* We added execution support for the Tree Node and Gallery Marketplace widgets.

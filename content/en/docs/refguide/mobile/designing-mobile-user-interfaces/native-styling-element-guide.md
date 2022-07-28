@@ -1601,7 +1601,7 @@ The default class to style all Pie/Doughnut Chart widgets is named `com_mendix_w
 
 ### 11.30 Switch
 
-A switch input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a switch widget looks by default:
+A switch input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a Switch widget looks by default:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/check-box.png" alt="check box"   width="350"  >}}
 

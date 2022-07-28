@@ -145,7 +145,26 @@ During the synchronization, changed and new objects are committed. An object's s
 
 {{% alert color="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server. To prevent data loss, the attribute values for such objects are stored in the `System.SynchronizationError` entity (since Mendix 8.12).  {{% /alert %}}
 
-#### 2.6.3 Dangling References {#dangling-references}
+#### 2.6.3 Broken/missing file contents
+The client downloads the contents of file objects during synchronization. Errors may occur while downloading a file. Some cases are listed below.
+
+- Missing file content on the server
+- Generic error on the server while processing the file download request
+- Connection-related issues (no connection, connection reset etc.)
+
+In this case, the synchronization fails. When it fails due to a connection error - the client/user can retry. The root cause must be fixed if it fails for other reasons, such as broken file content.
+
+{{% alert color="info" %}}
+Starting with Mendix 9.17, the client handles the file download errors gracefully.
+
+When a connection error occurs while downloading a file, the synchronization fails as before. The nanoflow or end-user can retry later when there the connection is stable.
+
+The client will skip the file object and continue synchronization for any other error. The file object will not be available in the local database until the root cause is fixed, ensuring that the local database and file system is consistent. The client will also log the following trace log:
+
+> Could not download the file content for the object with guid "GUID" due to an error. This may be due to broken file content on the server. Synchronization will continue and ignore this object
+{{% /alert %}}
+
+#### 2.6.4 Dangling References {#dangling-references}
 
 During synchronization the server performs referential integrity validation of the new or changed objects that are being synchronized to the server. his validation ensures that none of the synchronized objects have associations pointing to an object that exists only on the device. If an association does not satisfy this condition, it is a dangling reference.
 

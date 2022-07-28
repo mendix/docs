@@ -231,6 +231,10 @@ If you do not encrypt the password, all functions will still work as expected.
 
 Emails can be queued for sending at a later time. You can send the messages in the **Queued** folder at any time. If sending queued messages fails, the connector will automatically try resending. On the third attempt, any messages that are still failing will move from the **Queued** folder to the **Failed** folder.
 
+### 4.8 Attachments
+
+
+
 ## 5 Key Microflows
 
 * **Sample_ASU_SubscribeForEmailNotification** - an after startup microflow which will subscribe to email notification based on account settings

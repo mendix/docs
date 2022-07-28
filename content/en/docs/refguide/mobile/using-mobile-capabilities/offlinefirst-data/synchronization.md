@@ -160,7 +160,7 @@ In Mendix Studio Pro v9.17 and above, the client handles file download errors gr
 
 The client will skip the file object and continue synchronization for any other error. The file object will not be available in the local database until the root cause is fixed, ensuring that the local database and file system is consistent. The client will also log the following trace log:
 
-"Could not download the file content for the object with guid "GUID" due to an error. This may be due to broken file content on the server. Synchronization will continue and ignore this object."
+"Could not download the file content for the object with guid {OBJECT-GUID} due to an error. This may be due to broken file content on the server. Synchronization will continue and ignore this object."
 {{% /alert %}}
 
 #### 2.6.4 Dangling References {#dangling-references}

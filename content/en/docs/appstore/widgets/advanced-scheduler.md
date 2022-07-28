@@ -19,7 +19,48 @@ The [Advanced Scheduler]() enables you to load events and visualize them.
 
 ### 2.2 Configuring the Scheduler Widget
 
-#### 2.2.1 Resources Tab
+#### 2.2.1 Views Tab
+
+* **Scheduler Start Date** – the start date of the scheduler 
+
+* **Scheduler End Date** – the end date of the scheduler 
+
+* **On changed time window** – sets an action that is triggered if the time window is changed
+
+* **Views** – shows a list of views that are available
+  * **New **– opens the **Edit Views Item** window where you can add a new view with the following items:
+
+    * **ID of the view** – the ID used to define a view
+
+    * **Name of the view** – the name of the view
+
+    * **Default or Custom view** – selects whether to use one of the following default views or a custom view 
+
+      * **Day**, **Week**, **Month**, **Year** – default views
+
+      * **Custom** – custom view
+
+        * **Unit of time** – the unit of time use for the timeline of the custom view
+
+        * **Visible timeline** – defines how many units of time are visible in the time window
+
+        * **On prev/next button skip** – defines how many units of time are skipped when you click the previous button (<**)** or the next button (**>**)
+
+  * **Delete** – deletes the selected view
+
+  * **Edit** – opens the **Edit Views Item** window where you can edit the selected view
+
+  * **Move up** – moves up the selected view
+
+  * **Move down** – moves down the selected view
+
+* **Selected View** – {{% todo %}}What is this  exactly?{{% /todo %}}
+
+* **Fixed Timeline**
+  * **Yes** – If selected, you cannot change the timeline.
+  * **No** – If selected, you can scroll to a date within two years before and after the current date.
+
+#### 2.2.2 Resources Tab
 
 This tab contains the following items:
 
@@ -32,7 +73,7 @@ This tab contains the following items:
 * **Resource height** – the height of the resource
 * **On Click** – sets an action that is triggered when the resource is clicked
 
-#### 2.2.2 Events Tab
+#### 2.2.3 Events Tab
 
 *  **List of Data sources** – shows a list of data sources of events
     *  **New** – opens the **Edit List of Data Sources** Item window where you can add a new event with the following settings:
@@ -69,7 +110,7 @@ This tab contains the following items:
 *  **New Start Event**
 * **New End Event**
 
-#### 2.2.3 Rosters Tab
+#### 2.2.4 Rosters Tab
 
 * **Datasource** – sets the data source for the roster
 * **Resource ID** – sets the resource ID for the roster
@@ -79,47 +120,6 @@ This tab contains the following items:
 * **ClassName** – the classname of the roster, which can be used to do proper styling of a roster {{% todo %}}different from the explanation on the UI. Double check with the dev.{{% /todo %}}
   * If left empty, the value is set to *event-type-default*.
 
-#### 2.2.4 Views Tab
-
-* **Scheduler Start Date** – the start date of the scheduler 
-
-* **Scheduler End Date** – the end date of the scheduler 
-
-* **On changed time window** – sets an action that is triggered if the time window is changed
-
-* **Views** – shows a list of views that are available
-  * **New **– opens the **Edit Views Item** window where you can add a new view with the following items:
-  
-    * **ID of the view** – the ID used to define a view
-  
-    * **Name of the view** – the name of the view
-  
-    * **Default or Custom view** – selects whether to use one of the following default views or a custom view 
-  
-      * **Day**, **Week**, **Month**, **Year** – default views
-  
-      * **Custom** – custom view
-  
-        * **Unit of time** – the unit of time use for the timeline of the custom view
-  
-        * **Visible timeline** – defines how many units of time are visible in the time window
-  
-        * **On prev/next button skip** – defines how many units of time are skipped when you click the previous button (<**)** or the next button (**>**)
-  
-  * **Delete** – deletes the selected view
-  
-  * **Edit** – opens the **Edit Views Item** window where you can edit the selected view
-  
-  * **Move up** – moves up the selected view
-  
-  * **Move down** – moves down the selected view
-  
-* **Selected View** – {{% todo %}}What is this  exactly?{{% /todo %}}
-
-* **Fixed Timeline**
-  * **Yes** – If selected, you cannot change the timeline.
-  * **No** – If selected, you can scroll to a date within two years before and after the current date.
-
 #### 2.2.5 UI Tab
 
 * **Today button**  – changes the text shown on the **Today** button, for example, to the translation of "today" in a different language
@@ -128,6 +128,8 @@ This tab contains the following items:
   * **No** – If selected, the navigation is visible.
 
 #### 2.2.6 Common Tab
+
+For more information, see [Common Section](https://docs.mendix.com/refguide/common-widget-properties/#common-properties) in *Properties Common in the Page Editor*.
 
 #### 2.2.7 Appearance Tab
 

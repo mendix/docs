@@ -56,7 +56,7 @@ This is the host name and port number of the server on which your database is ru
 
 #### 2.1.3 Name & Instance Name
 
-This is the name and instance name of the database schema to connect to. The **Instance name** is optional.
+This is the name and instance name of the database to connect to. The **Instance name** is optional.
 
 #### 2.1.4 Username & Password
 

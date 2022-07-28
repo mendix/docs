@@ -144,7 +144,7 @@ When the module is running, you can create templates to use for a specific email
 
 In Studio Pro, you can configure this with the **SNIP_EmailTemplate_Overview** use this snippet to configure this functionality.
 
-#### 4.3.1 Sending an email with a template
+#### 4.3.1 Sending an Email with a Template
 
 When modeling your app in Studio Pro, use the  **SendEmailWithTemplate** Java action.
 
@@ -226,6 +226,10 @@ In most cases, following the steps in the [Setup in Studio Pro](#setup) and [Ema
 When modelling your app in Studio Pro, use the [Create Object](/refguide/create-object/) activity to create the account, and then include the **Encrypt** Java action included in the Email Connector. The **Encrypt** Java action takes a *plain string* parameter and an *encryption key* of 32 characters. 
 
 If you do not encrypt the password, all functions will still work as expected.
+
+### 4.7 Queuing Emails
+
+Emails can be queued for sending at a later time. You can send the messages in the **Queued** folder at any time. If sending queued messages fails, the connector will automatically try resending. On the third attempt, any messages that are still failing will move from the **Queued** folder to the **Failed** folder.
 
 ## 5 Key Microflows
 

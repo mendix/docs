@@ -1,9 +1,9 @@
 ---
 title: "Share the Development Database"
-url: /howto/collaboration-requirements-management/sharing-the-development-database/
+url: /howto/data-models/sharing-the-development-database/
 category: "Collaboration"
-weight: 40
-tags: ["studio pro"]
+weight: 9
+tags: ["studio pro", "database"]
 ---
 
 ## 1 Introduction
@@ -121,6 +121,4 @@ Make sure the names of the databases are not the same or make a copy of your own
 ## 9 Read More
 
 *   [Stories](/developerportal/collaborate/stories/)
-*   [Contributing to a GitHub repository](/howto/collaboration-requirements-management/contribute-to-a-github-repository/)
-*   [Set Up a GitHub Repo to Publish a Marketplace Item](/howto/collaboration-requirements-management/set-up-repo/)
 *   [Version Control](/refguide/version-control/)

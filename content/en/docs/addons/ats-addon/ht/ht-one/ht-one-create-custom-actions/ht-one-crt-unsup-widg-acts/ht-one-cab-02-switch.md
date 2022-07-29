@@ -1,13 +1,13 @@
 ---
 title: "CAB.02 - Switch"
 url: /addons/ats-addon/ht-one-cab-02-switch/
-description: "This how-to explains step by step how to create an Unsupported Widget action for the Mendix switch widget."
+description: "This how-to explains step by step how to create an Unsupported Widget action for the Mendix Switch widget."
 tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction
 
-This how-to explains how to create an unsupported widget action for the Mendix switch widget. In a standard situation, the first step is to check if ATS supports the widget.
+This how-to explains how to create an unsupported widget action for the Mendix Switch widget. In a standard situation, the first step is to check if ATS supports the widget.
 
 The how-to assumes that you must build your own action. 
 
@@ -49,7 +49,7 @@ To define the user approach, follow these steps:
 
 In the previous section, you wrote down the user approach for the Mendix Switch widget. Now you must create this approach in ATS with actions. Create a new action for the next steps.
 
-1.  Look for the element in the debugger ATS needs to click. ATS always clicks in the middle of an element, keep this in mind while looking for the element to click. You must start by checking the parent element, which is always the element with `mx-name-` when building an unsupported widget action. If the widget does not have `mx-name-`, look for the highest `div` element that is still referencing the widget. The parent element of the switch widget has `mx-name-switch1` in the debugger:
+1.  Look for the element in the debugger ATS needs to click. ATS always clicks in the middle of an element, keep this in mind while looking for the element to click. You must start by checking the parent element, which is always the element with `mx-name-` when building an unsupported widget action. If the widget does not have `mx-name-`, look for the highest `div` element that is still referencing the widget. The parent element of the Switch widget has `mx-name-switch1` in the debugger:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-02-switch/highlighted-switch-mxname-debugger.png" >}}
 

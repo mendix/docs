@@ -19,9 +19,9 @@ Mendix Studio Pro comes with the mx command-line tool. The executable `mx.exe` f
 
 The mx tool performs the commands described below.
 
-### 3.1 mx check Command [version 9.10+]
+### 3.1 mx check Command [version 9.10+] {#check}
 
-The `mx check` command checks the app MPR file for issues such as Errors, Warnings or Deprecations.
+The `mx check` command checks the app MPR file for issues such as Errors, Warnings, Deprecations, or Performance Recommendations.
 
 {{% alert color="info" %}}
 The MPR file must be the same version as mx.
@@ -40,6 +40,7 @@ The `OPTIONS` are described in the table below:
 | `--help` | `-h` | Displays the help text and exits. |
 | `--warnings` | `-w` | Include warnings in the output |
 | `--deprecations` | `-d` | Include deprecations in the output |
+| `--performance` | `-p` | [version 9.16+] Include performance checks in the output (performance recommendations are only output if there are no errors) |
 
 {{% alert color="info" %}}
 Errors in the MPR are always reported.
@@ -55,7 +56,9 @@ Examples of commands are described in the table below:
 | --- | --- |
 | `mx check --help` | Displays the help text for the check command. |
 | `mx check C:\MxProjects\App-main\App-main.mpr` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors. |
-| `mx check C:\MxProjects\App-main\App-main.mpr --warnings --deprecations` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors, warnings and deprecations. |
+| `mx check C:\MxProjects\App-main\App-main.mpr -p` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors and performance recommendations. |
+| `mx check C:\MxProjects\App-main\App-main.mpr --warnings --deprecations` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors, warnings, and deprecations. |
+| `mx check C:\MxProjects\App-main\App-main.mpr -w -d -p` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors, warnings, deprecations, and performance recommendations. |
 
 #### 3.1.3 Return Codes
 
@@ -67,8 +70,9 @@ Return codes are described in the table below:
 | 1 | Errors were found. |
 | 2 | Warnings were found. |
 | 4 | Deprecations were found. |
+| 8 | Performance recommendations were found. |
 
-Those values are logically OR combined to indicate when there are a mix of errors, warnings, deprecations.
+Those values are logically OR combined to indicate when there are a mix of errors, warnings, deprecations, or performance recommendations.
 
 For example:
 - 3 if errors and warnings found

@@ -42,4 +42,4 @@ You should link this to the upcoming Mendix Marketplace release by mentioning th
 
 *   [Contributing to a GitHub repository](/howto/collaboration-requirements-management/contribute-to-a-github-repository/)
 *   [Version Control](/refguide/version-control/)
-*   [Sharing the Development Database](/howto/collaboration-requirements-management/sharing-the-development-database/)
+*   [Sharing the Development Database](/howto/data-models/sharing-the-development-database/)

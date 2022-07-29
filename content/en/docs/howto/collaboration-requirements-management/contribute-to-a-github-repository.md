@@ -48,4 +48,4 @@ To submit changes, follow these guidelines:
 * [Stories](/developerportal/collaborate/stories/)
 * [Set Up a GitHub Repo to Publish a Marketplace Item](/howto/collaboration-requirements-management/set-up-repo/)
 * [Version Control](/refguide/version-control/)
-* [Share the Development Database](/howto/collaboration-requirements-management/sharing-the-development-database/)
+* [Share the Development Database](/howto/data-models/sharing-the-development-database/)

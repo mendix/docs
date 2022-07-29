@@ -13,8 +13,8 @@ Once you created some pages, it is important that your users can access them. Fo
 
 Before starting this how-to make sure you have completed the following prerequisites:
 
-*   [Create a basic data layer](/howto8/data-models/create-a-basic-data-layer/)
-*   [Create your first two Overview and Detail pages](/howto8/front-end/create-your-first-two-overview-and-detail-pages/)
+* [Create a basic data layer](/howto8/data-models/create-a-basic-data-layer/)
+* [Create your first two Overview and Detail pages](/howto8/front-end/create-your-first-two-overview-and-detail-pages/)
 
 ## 3 Setting a Default Home Page {#home}
 
@@ -28,7 +28,7 @@ Note that the **Default home page** setting is overridden by a **Role-based home
 
 Do the following:
 
-1.  Open **Project** > **Navigation**.
+1. Open **Project** > **Navigation**.
 
     {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/open-navigation.jpg" >}}
 
@@ -41,7 +41,6 @@ Do the following:
     2. Click **OK**.
 
 3. In **Home pages** > **Default home page**, click **Select**.
-
 4. Select the page you want to use as the default home page. The example below uses *Homepage_Web*:
 
     {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/select-home-page.jpg" >}}
@@ -62,20 +61,20 @@ In many cases you would like users with different roles to see different home pa
 
 Follow the steps below:
 
-1.  Open the **Navigation** editor.
-2.  Open the profile type depending on the interface type you are working on. 
-3.  In **Home pages** > **Role-based home pages**, click **Edit**.
-4.  In the **Role-based home pages** dialog box, click **New**.
-5.  Select a user role to create a new setting, for example, select the **Administrator** role:
+1. Open the **Navigation** editor.
+2. Open the profile type depending on the interface type you are working on. 
+3. In **Home pages** > **Role-based home pages**, click **Edit**.
+4. In the **Role-based home pages** dialog box, click **New**.
+5. Select a user role to create a new setting, for example, select the **Administrator** role:
 
     {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/select-user-role.png" >}}
 
-6.  Click **Select**.
-7.  After you have selected the user role, click the **Select target** button.
+6. Click **Select**.
+7. After you have selected the user role, click the **Select target** button.
 
     {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/select-target.png" >}}
 
-8.  Select the home page for selected user role, for example, the **Account_Overview** page:
+8. Select the home page for selected user role, for example, the **Account_Overview** page:
 
     {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/select-page.png" >}}
 
@@ -87,15 +86,15 @@ Now every time a user with the **Administrator** user signs in to the applicatio
 
 You can create menu items for your navigation. Do the following:
 
-1.  Open the **Navigation** editor.
-2.  Open the profile type depending on the interface type you are working on. 
-3.  In the **Menu** section, click **New item** to create a top level menu item. 
-5.  Enter a **Caption** for your menu item. In the example below, the menu item is named *Customer Overview* after a page this menu item will open.
-6.  Select a page or microflow as a target:
+1. Open the **Navigation** editor.
+2. Open the profile type depending on the interface type you are working on. 
+3. In the **Menu** section, click **New item** to create a top level menu item. 
+4. Enter a **Caption** for your menu item. In the example below, the menu item is named *Customer Overview* after a page this menu item will open.
+5. Select a page or microflow as a target:
 
     {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/new-menu-item.png" >}}
 
-7.  Click **OK** to save the menu item.
+6. Click **OK** to save the menu item.
 
 In the overview of menu items you can see the name of the menu item, the target page/microflow, and the user role are the necessary settings to be configured for the menu item. The user roles are derived from the [page and microflow access settings](/refguide8/module-security/). 
 
@@ -106,17 +105,15 @@ You can restructure the menu by dragging and dropping menu items.
 Now that you have created a menu structure it is time to start using it on pages. Do the following:
 
 1. Open a page.
-
-2.  Click **Add widget** and select **Menu bar**:
+2. Click **Add widget** and select **Menu bar**:
 
     {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/select-menu-bar.png" >}}
 
-3.  Select a place on the page to add the widget.
+3. Select a place on the page to add the widget.
 
     {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/add-widget.png" >}}
 
 4. Open the **Properties** pane.
-
 5. In **General** > **Menu source**, select **Project navigation**. This is the navigation structure defined in the navigation editor. (You can also add additional menu structures using menu documents.)
 
     {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/menu-bar-properties.jpg" >}}

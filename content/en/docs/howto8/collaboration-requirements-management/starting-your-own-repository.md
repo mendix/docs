@@ -37,6 +37,6 @@ You should link this to the upcoming Mendix Marketplace release by mentioning th
 
 ## 6 Read More
 
-*   [Contributing to a GitHub repository](/howto8/collaboration-requirements-management/contribute-to-a-github-repository/)
-*   [Version Control](/refguide8/version-control/)
-*   [Sharing the Development Database](/howto8/collaboration-requirements-management/sharing-the-development-database/)
+* [Contributing to a GitHub repository](/howto8/collaboration-requirements-management/contribute-to-a-github-repository/)
+* [Version Control](/refguide8/version-control/)
+* [Sharing the Development Database](/howto8/collaboration-requirements-management/sharing-the-development-database/)

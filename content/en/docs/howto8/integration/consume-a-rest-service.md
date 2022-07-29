@@ -22,7 +22,6 @@ This how-to will teach you how to do the following:
 Creating a published REST service on top of the system you want to integrate with is outside the scope of this how-to; for instructions on how to do this, refer to the configuration of your non-Mendix Platform.
 {{% /alert %}}
 
-
 ## 2 Creating a JSON Structure
 
 If the system you want to integrate into your app has the functionality for exposing its data to REST services, you can integrate it easily into your Mendix app using consume REST service. Each system has a different JSON structure based on internal data models. 
@@ -71,27 +70,18 @@ In this section, you will create an entity that represents this input and associ
 To add an input entity to the domain model, follow these steps:
 
 1. In the **Project Explorer**, double-click the **Domain Model**.
-
 2. Rename **Root** to **Summary**.
-
 3. From the **Toolbox**, drag an **Entity** into the domain model.
-
 4. Double-click the entity and enter *Input* for the **Name**.
-
 5. For **Persistable**, select **No**.
-
 6. On the **Attributes** tab, click **New** to add a string attribute and name it *Title*.
-
 7. Click **OK**.
-
 8. Drag an association from **Input** to **Summary**.
 
     {{< figure src="/attachments/howto8/integration/consume-a-rest-service/domain-model.png" >}}
-   
+
 9. Go to the **Import_mapping** and from the **Connector** pane drag **Input** as the input parameter for the input mapping.
-
 10. Double-click **Summary**.
-
 11. In the **Map entity 'Summary from the object element 'Summary** dialog box, **Set association** to **Yes** and select the **RESTconsume_input_Summary** for the **Association** to have the import mapping set the association:
 
     {{< figure src="/attachments/howto8/integration/consume-a-rest-service/map-entity-from-input-mapping.png" >}}

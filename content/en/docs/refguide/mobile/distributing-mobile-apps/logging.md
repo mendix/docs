@@ -1,7 +1,7 @@
 ---
 title: "Logging In Native Apps"
-url: /refguide/mobile/logging/
-weight: 30
+url: /refguide/mobile/distributing-mobile-apps/logging/
+weight: 39
 description: "Describes using logging in native mobile apps"
 tags: ["native", "logging", "troubleshooting"]
 ---
